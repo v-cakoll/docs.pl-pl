@@ -11,19 +11,19 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: 48cb59dfc0871822bfcff5e16d4283008a411479
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 41cabcbce13409b0842cbbd625028b51d32d59d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701219"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926983"
 ---
-# <a name="sharedlisteners-element"></a>\<sharedListeners > Element
-Zawiera dowolnego źródła i elementu śledzenia można odwoływać się do obiektów nasłuchujących.  Te odbiorniki nie otrzymasz żadnych śladów domyślnie i nie jest możliwe pobrać te odbiorniki w czasie wykonywania. Odbiorniki zidentyfikowane jako współdzielonych detektorów można dodać do źródła lub śledzenie według nazwy.  
+# <a name="sharedlisteners-element"></a>\<sharedListeners, element >
+Zawiera detektory, do których może odwoływać się każdy element źródłowy lub Trace.  Te odbiorniki nie odbierają domyślnie żadnych śladów i nie można ich pobrać w czasie wykonywania. Odbiorniki identyfikowane jako odbiorniki udostępnione mogą być dodawane do źródeł lub śladów według nazwy.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<system.diagnostics>  
-\<sharedListeners>  
+\<sharedListeners >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,22 +43,22 @@ Zawiera dowolnego źródła i elementu śledzenia można odwoływać się do obi
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|Dodaje odbiornik do `sharedListeners` kolekcji.|  
+|[\<add>](add-element-for-listeners-for-trace.md)|Dodaje odbiornik do `sharedListeners` kolekcji.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
 |`Configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`system.diagnostics`|Określa element root dla sekcji konfiguracyjnej platformy ASP.NET.|  
+|`system.diagnostics`|Określa element główny dla sekcji konfiguracji ASP.NET.|  
   
 ## <a name="remarks"></a>Uwagi  
- Dodanie detektora do kolekcji współdzielonych detektorów nie powoduje on aktywny odbiornik. Jego musi nadal będzie dodawany do źródła śledzenia lub śledzenia przez dodanie jej do `Listeners` kolekcji dla tego elementu śledzenia. Klasy odbiornika w programie .NET Framework pochodzić od <xref:System.Diagnostics.TraceListener> klasy.  
+ Dodanie odbiornika do kolekcji udostępnionych odbiorników nie powoduje aktywnego odbiornika. Nadal musi być dodany do źródła śledzenia lub śledzenia przez dodanie go do `Listeners` kolekcji dla tego elementu śledzenia. Klasy odbiornika w .NET Framework pochodne od <xref:System.Diagnostics.TraceListener> klasy.  
   
- Ten element może być użyty w pliku konfiguracji komputera (Machine.config) i pliku konfiguracji aplikacji.  
+ Ten element może być używany w pliku konfiguracji komputera (Machine. config) i w pliku konfiguracji aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak używać `<sharedListeners>` elementu do dodania odbiornika `console` do `Listeners` kolekcji dla obu <xref:System.Diagnostics.TraceSource> i <xref:System.Diagnostics.Trace> klasy. Odbiornik śledzenia konsoli zapisuje informacje śledzenia do konsoli, za pośrednictwem wywołania do jednej <xref:System.Diagnostics.TraceSource> lub <xref:System.Diagnostics.Trace>.  
+ Poniższy przykład pokazuje, jak użyć elementu, `<sharedListeners>` aby dodać odbiornik `console` do `Listeners` kolekcji dla <xref:System.Diagnostics.TraceSource> klas i <xref:System.Diagnostics.Trace> . Odbiornik śledzenia konsoli zapisuje informacje o śledzeniu do konsoli za pomocą wywołań do <xref:System.Diagnostics.TraceSource> lub <xref:System.Diagnostics.Trace>.  
   
 ```xml  
 <configuration>  
@@ -91,5 +91,5 @@ Zawiera dowolnego źródła i elementu śledzenia można odwoływać się do obi
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Diagnostics.TraceListener>
-- [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [Obiekty nasłuchujące śledzenie](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Schemat ustawień śledzenia i debugowania](index.md)
+- [Obiekty nasłuchujące śledzenie](../../../debug-trace-profile/trace-listeners.md)

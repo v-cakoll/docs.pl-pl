@@ -9,12 +9,12 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: e7287d3f-59ee-448f-b7fe-b640508501a5
-ms.openlocfilehash: c7291de223a0cce5a2af1dbd4fecf394ad7c8a1d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dbaf2dd6834bfdabc717e63c32309086bc8aed3a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794514"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947586"
 ---
 # <a name="microsoftvisualstudioactivitiesasrclientactivitybuilder"></a>Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder
 Ta klasa służy do tworzenia i konfigurowania <xref:System.Activities.ActivityBuilder> obiektu, który dostarcza dane do działania przepływu pracy.  
@@ -27,5 +27,5 @@ public class ClientActivityBuilder
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder-build.md)
-- [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder-ctor.md)
+- [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build](microsoft-visualstudio-activities-asr-clientactivitybuilder-build.md)
+- [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor](microsoft-visualstudio-activities-asr-clientactivitybuilder-ctor.md)

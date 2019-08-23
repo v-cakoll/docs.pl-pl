@@ -9,31 +9,31 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], setting current cell
 - cells [Windows Forms], getting and setting current
 ms.assetid: b0e41e57-493a-4bd0-9376-a6f76723540c
-ms.openlocfilehash: f60acbfa73ef363d58c57e1c01bdce8cf3337e48
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 670708f342e1cd1ac495c215b7508093349ac2e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619665"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933700"
 ---
 # <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a>Instrukcje: pobieranie i ustawianie bieżącej komórki w kontrolce DataGridView formularzy systemu Windows
-Interakcja z <xref:System.Windows.Forms.DataGridView> często wymaga się, że programowo odkryjesz komórki, która jest obecnie aktywna. Również może być konieczna zmiana bieżącej komórki. Możesz wykonywać te zadania za pomocą <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> właściwości.  
+Interakcja z <xref:System.Windows.Forms.DataGridView> często wymaga, aby programowo wykryć, która komórka jest obecnie aktywna. Może być również konieczne Zmiana bieżącej komórki. Te zadania można wykonać przy użyciu <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> właściwości.  
   
 > [!NOTE]
->  Nie można ustawić bieżącej komórki w wierszu lub kolumnie, który ma jej <xref:System.Windows.Forms.DataGridViewBand.Visible%2A> właściwością `false`.  
+> Nie można ustawić bieżącej komórki w wierszu lub kolumnie, która ma <xref:System.Windows.Forms.DataGridViewBand.Visible%2A> `false`ustawioną właściwość.  
   
- W zależności od <xref:System.Windows.Forms.DataGridView> trybu zaznaczania kontrolki, zmieniania bieżącej komórki dokonać zmian. Aby uzyskać więcej informacji, zobacz [tryby wyboru w kontrolce DataGridView formularzy Windows Forms](selection-modes-in-the-windows-forms-datagridview-control.md).  
+ W zależności <xref:System.Windows.Forms.DataGridView> od trybu zaznaczania kontrolki Zmiana bieżącej komórki może zmienić zaznaczenie. Aby uzyskać więcej informacji, zobacz [Tryby wyboru w kontrolce DataGridView Windows Forms](selection-modes-in-the-windows-forms-datagridview-control.md).  
   
-### <a name="to-get-the-current-cell-programmatically"></a>Aby programowo uzyskać bieżącej komórki  
+### <a name="to-get-the-current-cell-programmatically"></a>Aby programowo pobrać bieżącą komórkę  
   
-- Użyj <xref:System.Windows.Forms.DataGridView> kontrolki <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> właściwości.  
+- <xref:System.Windows.Forms.DataGridView> Użyj właściwości<xref:System.Windows.Forms.DataGridView.CurrentCell%2A> kontrolki.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#080](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#080)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#080](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#080)]  
   
-### <a name="to-set-the-current-cell-programmatically"></a>Aby programowo ustawić bieżącej komórki  
+### <a name="to-set-the-current-cell-programmatically"></a>Aby programowo ustawić bieżącą komórkę  
   
-- Ustaw <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> właściwość <xref:System.Windows.Forms.DataGridView> kontroli. W poniższym przykładzie kodu bieżącej komórki jest równa 0, kolumna 1 wiersz.  
+- <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> Ustaw Właściwość<xref:System.Windows.Forms.DataGridView> formantu. W poniższym przykładzie kodu bieżąca komórka jest ustawiona na wiersz 0, kolumna 1.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#085](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#085)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#085](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#085)]  
@@ -41,11 +41,11 @@ Interakcja z <xref:System.Windows.Forms.DataGridView> często wymaga się, że p
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- <xref:System.Windows.Forms.Button> kontrolki o nazwie `getCurrentCellButton` i `setCurrentCellButton`. W elemencie wizualnym C#, należy dołączyć <xref:System.Windows.Forms.Control.Click> zdarzenia dla każdego przycisku do obsługi skojarzone ze zdarzeniem w przykładowym kodzie.  
+- <xref:System.Windows.Forms.Button>kontrolki `getCurrentCellButton` nazwane `setCurrentCellButton`i. W wizualizacji C#, należy dołączyć <xref:System.Windows.Forms.Control.Click> zdarzenia dla każdego przycisku do skojarzonego programu obsługi zdarzeń w przykładowym kodzie.  
   
-- A <xref:System.Windows.Forms.DataGridView> formantu o nazwie `dataGridView1`.  
+- Kontrolka o `dataGridView1`nazwie. <xref:System.Windows.Forms.DataGridView>  
   
-- Odwołuje się do <xref:System?displayProperty=nameWithType> i <xref:System.Windows.Forms?displayProperty=nameWithType> zestawów.  
+- Odwołania do <xref:System?displayProperty=nameWithType> zestawów i <xref:System.Windows.Forms?displayProperty=nameWithType> .  
   
 ## <a name="see-also"></a>Zobacz także
 

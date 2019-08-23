@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b30919f6d89f151a93fc46407165279187ef6e4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d6e5beabb5ac1b5a4b2a34ae8e18b7fad7c86504
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749487"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959049"
 ---
 # <a name="ihosttaskmanagerreverseenterruntime-method"></a>IHostTaskManager::ReverseEnterRuntime — Metoda
-Powiadamia hosta, że wywołanie odbywa się na środowisko uruchomieniowe języka wspólnego (CLR) z kodem niezarządzanym.  
+Powiadamia hosta, że wywołanie jest nawiązywane w środowisku uruchomieniowym języka wspólnego (CLR) z kodu niezarządzanego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,28 +37,28 @@ HRESULT ReverseEnterRuntime ();
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`ReverseEnterRuntime` pomyślnie zwrócił.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
-|HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
-|E_OUTOFMEMORY|Nie ma wystarczającej ilości pamięci jest dostępny w celu zakończenia alokacji żądanego zasobu.|  
+|S_OK|`ReverseEnterRuntime`pomyślnie zwrócono.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
+|HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie jest już możliwe do użycia w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|E_OUTOFMEMORY|Za mało dostępnej pamięci, aby zakończyć żądaną alokację zasobów.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli wywołanie do środowiska CLR jest z sekwencji, które powstały w kodzie zarządzanym, każdy wywołanie `ReverseEnterRuntime` odnosi się do wywołania [reverseleaveruntime —](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md).  
+ Jeśli wywołanie do środowiska CLR zostanie wykonane z sekwencji, która pochodzi z kodu zarządzanego, każde wywołanie `ReverseEnterRuntime` odpowiada wywołaniu [ReverseLeaveRuntime —](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md).  
   
 > [!NOTE]
->  Wywołania mogą pochodzić z niezarządzanego kodu bez zagnieżdżenie. W tym przypadku jest Brak wywołania [enterruntime —](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [leaveruntime —](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md), lub `ReverseLeaveRuntime`, a liczba wywołań `ReverseEnterRuntime` nie równa się liczba wywołań `ReverseLeaveRuntime`.  
+> Wywołania mogą pochodzić z niezarządzanego kodu bez zagnieżdżenia. W tym przypadku nie istnieje wywołanie metody [EnterRuntime —](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [LeaveRuntime —](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)lub `ReverseLeaveRuntime`, `ReverseEnterRuntime` a liczba wywołań nie jest równa liczbie wywołań do `ReverseLeaveRuntime`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówki** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteki** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

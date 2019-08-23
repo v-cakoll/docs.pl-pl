@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d27799e427efd3659dc2864e7d1e8e2061c5c19
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ac7014962b99ac167e8192c13b2bae5ca92470f0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780775"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948526"
 ---
 # <a name="ihostiocompletionmanagerinitializehostoverlapped-method"></a>IHostIoCompletionManager::InitializeHostOverlapped — Metoda
-Zapewnia możliwość zainicjowania wszelkie niestandardowe dane do dołączenia do systemu Win32 hosta `OVERLAPPED` strukturę, która jest używana dla żądań asynchronicznych We/Wy.  
+Udostępnia hostowi możliwość zainicjowania dowolnych danych niestandardowych w celu dołączenia `OVERLAPPED` do struktury Win32, która jest używana na potrzeby asynchronicznych żądań we/wy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,36 +37,36 @@ HRESULT InitializeHostOverlapped (
   
 ## <a name="parameters"></a>Parametry  
  `pvOverlapped`  
- [in] Wskaźnik do Win32 `OVERLAPPED` struktury, które mają zostać dołączone do żądania We/Wy.  
+ podczas Wskaźnik do struktury Win32 `OVERLAPPED` , który ma zostać dołączony do żądania we/wy.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`InitializeHostOverlapped` pomyślnie zwrócił.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
-|HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
-|E_OUTOFMEMORY|Za mało dostępnej pamięci na przydzielić żądanego zasobu.|  
+|S_OK|`InitializeHostOverlapped`pomyślnie zwrócono.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
+|HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie jest już możliwe do użycia w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|E_OUTOFMEMORY|Za mało dostępnej pamięci, aby przydzielić żądany zasób.|  
   
 ## <a name="remarks"></a>Uwagi  
- Platforma Windows funkcji Użyj `OVERLAPPED` struktura do przechowywania stanu dla żądań asynchronicznych We/Wy. CLR wywołuje `InitializeHostOverlapped` metody, aby zapewnić możliwość dołączenia niestandardowe dane do hosta `OVERLAPPED` wystąpienia.  
+ Funkcje platformy systemu Windows używają `OVERLAPPED` struktury do przechowywania stanu asynchronicznych żądań we/wy. Środowisko CLR wywołuje `InitializeHostOverlapped` metodę, aby umożliwić hostowi dołączenie danych niestandardowych `OVERLAPPED` do wystąpienia.  
   
 > [!IMPORTANT]
->  Aby przejść do początku ich bloku danych niestandardowych, hosty należy ustawić przesunięcie do rozmiaru `OVERLAPPED` struktury (`sizeof(OVERLAPPED)`).  
+> Aby przejść do początku swojego niestandardowego bloku danych, hosty muszą ustawić przesunięcie na rozmiar `OVERLAPPED` struktury (`sizeof(OVERLAPPED)`).  
   
- Zwracana wartość wynosząca E_OUTOFMEMORY wskazuje, że host nie może zainicjować swoich danych niestandardowych. W tym przypadku CLR zgłasza błąd i nie powiedzie się wywołanie.  
+ Wartość zwracana przez E_OUTOFMEMORY wskazuje, że host nie zainicjuje swoich niestandardowych danych. W takim przypadku środowisko CLR zgłasza błąd i nie wywołuje wywołania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówki** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteki** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

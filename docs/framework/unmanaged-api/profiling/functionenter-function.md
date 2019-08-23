@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9279e50630ea074b70955ca8ed218cd39a613b58
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 354736890a4b042a8da5e747a0ab6ea3777e398e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781287"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952905"
 ---
 # <a name="functionenter-function"></a>FunctionEnter — Funkcja
-Powiadamia program profilujący, że formant jest przekazywany do funkcji.  
+Powiadamia profiler, że sterowanie jest przesyłane do funkcji.  
   
 > [!NOTE]
->  `FunctionEnter` Funkcja jest przestarzała w programie .NET Framework w wersji 2.0 i jego użycia spowoduje naliczenie opłaty za spadek wydajności. Użyj [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) zamiast tego funkcji.  
+> `FunctionEnter` Funkcja jest przestarzała w .NET Framework w wersji 2,0, a jej użycie spowoduje spadek wydajności. Zamiast tego użyj funkcji [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,29 +39,29 @@ void __stdcall FunctionEnter (
   
 ## <a name="parameters"></a>Parametry  
  `funcID`  
- [in] Identyfikator funkcji, do której kontrola jest przekazywana.  
+ podczas Identyfikator funkcji, do której jest przenoszona kontrola.  
   
 ## <a name="remarks"></a>Uwagi  
- `FunctionEnter` Funkcji jest wywołanie zwrotne; należy go zaimplementować. Należy użyć implementacji `__declspec`(`naked`) atrybuty klasy magazynu.  
+ `FunctionEnter` Funkcja jest wywołaniem zwrotnym, należy ją zaimplementować. Implementacja musi używać `__declspec`atrybutu klasy magazynu`naked`().  
   
  Aparat wykonywania nie zapisuje żadnych rejestrów przed wywołaniem tej funkcji.  
   
-- Przy uruchamianiu musisz najpierw zapisać wszystkich rejestrów, z których korzysta Licencjobiorca, łącznie z programami znajdującymi się na jednostki zmiennoprzecinkowej (FPU).  
+- We wpisie należy zapisać wszystkie używane rejestry, w tym te w jednostce zmiennoprzecinkowej (FPU).  
   
-- Na zakończenie możesz przywrócić stosu, usuwanie, wyłączanie wszystkich parametrów, które zostały wypchnięte przez wywołującego.  
+- Po zakończeniu należy przywrócić stos, usuwanie wyłączyć wszystkie parametry, które zostały wypchnięte przez jego obiekt wywołujący.  
   
- Implementacja `FunctionEnter` nie powinny blokować, ponieważ zostanie opóźnione, wyrzucanie elementów bezużytecznych. Implementacja nie powinien podejmować wyrzucania elementów bezużytecznych, ponieważ stos może nie być w stanie przyjaznego dla kolekcji wyrzucania elementów. Jeśli próba zostanie podjęta wyrzucania elementów bezużytecznych, środowisko uruchomieniowe spowoduje zablokowanie aż do `FunctionEnter` zwraca.  
+ Implementacja `FunctionEnter` nie powinna być blokowana, ponieważ spowoduje opóźnienie wyrzucania elementów bezużytecznych. Implementacja nie powinna podejmować próby wyrzucania elementów bezużytecznych, ponieważ stos może nie znajdować się w stanie przyjaznym do wyrzucania elementów bezużytecznych. W przypadku próby wyrzucania elementów bezużytecznych środowisko uruchomieniowe `FunctionEnter` zostanie zablokowane do momentu powracania.  
   
- Ponadto `FunctionEnter` funkcji nie mogą wywoływać kodu zarządzanego lub w dowolnym Przyczyna sposób alokacji pamięci zarządzanej.  
+ `FunctionEnter` Ponadto funkcja nie może wywołać kodu zarządzanego lub w jakikolwiek sposób może spowodować alokację pamięci zarządzanej.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl  
+ **Nagłówki** CorProf.idl  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** 1.1, 1.0  
+ **.NET Framework wersje:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Zobacz także
 

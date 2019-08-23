@@ -8,82 +8,82 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: 6175e60b1dbdbdb31500f484da24b0f94990b2d6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8ae651b3085b39673a51cf8d5f65e9bfb9da87d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663344"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962040"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Instrukcje: implementowanie weryfikowania za pomocą kontrolki DataGrid
-<xref:System.Windows.Controls.DataGrid> Control umożliwia wykonywanie walidacji na poziomie komórki i wierszy. Z weryfikacją poziomie komórki sprawdzania poprawności poszczególnych właściwości powiązany obiekt danych po użytkownik aktualizuje wartość. Z weryfikacją na poziomie wiersza Sprawdź wszystkie dane obiektów po użytkownik zatwierdzenia zmian w wierszu. Można również przekazać niestandardowe wizualną opinię błędy sprawdzania poprawności lub użyć domyślnej wizualną opinię, <xref:System.Windows.Controls.DataGrid> zawiera formant.  
+<xref:System.Windows.Controls.DataGrid> Kontrolka umożliwia wykonywanie walidacji zarówno na poziomie komórki, jak i w wierszu. Walidacja na poziomie komórki polega na sprawdzeniu poprawności poszczególnych właściwości powiązanego obiektu danych, gdy użytkownik aktualizuje wartość. Za pomocą walidacji na poziomie wierszy można sprawdzać poprawność wszystkich obiektów danych, gdy użytkownik zatwierdzi zmiany w wierszu. Możesz również dostarczyć dostosowaną wizualną opinię na temat błędów walidacji lub użyć domyślnej wizualizacji, <xref:System.Windows.Controls.DataGrid> którą zapewnia formant.  
   
- W poniższych procedurach opisano sposób zastosowania reguły sprawdzania poprawności <xref:System.Windows.Controls.DataGrid> powiązania i dostosowywanie wizualną opinię.  
+ Poniższe procedury opisują sposób stosowania reguł walidacji do <xref:System.Windows.Controls.DataGrid> powiązań i dostosowywania wizualizacji wizualnej.  
   
 ### <a name="to-validate-individual-cell-values"></a>Aby sprawdzić poprawność wartości poszczególnych komórek  
   
-- Określ jedną lub więcej reguł sprawdzania poprawności w powiązaniu używane z kolumną. Jest to podobne do sprawdzania poprawności danych w kontrolkach prosty, zgodnie z opisem w [Przegląd wiązanie danych](../data/data-binding-overview.md).  
+- Określ co najmniej jedną regułę walidacji dla powiązania używanego z kolumną. Jest to podobne do sprawdzania poprawności danych w prostych kontrolkach, zgodnie z opisem w temacie [powiązanie danych — omówienie](../data/data-binding-overview.md).  
   
-     W poniższym przykładzie przedstawiono <xref:System.Windows.Controls.DataGrid> formantu o cztery kolumny powiązane z różnymi właściwościami obiektu biznesowego. Określ trzy kolumny <xref:System.Windows.Controls.ExceptionValidationRule> , ustawiając <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> właściwość `true`.  
+     Poniższy przykład pokazuje <xref:System.Windows.Controls.DataGrid> kontrolkę z czterema kolumnami związanymi z różnymi właściwościami obiektu biznesowego. Trzy kolumny określają <xref:System.Windows.Controls.ExceptionValidationRule> przez <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> ustawienie właściwości na `true`.  
   
      [!code-xaml[DataGrid_Validation#BasicXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/window1.xaml#basicxaml)]  
   
-     Gdy użytkownik wprowadza wartość jest nieprawidłowa (na przykład nie jest liczbą całkowitą w kolumnie Identyfikator kursu), zostanie wyświetlone czerwone obramowanie, która wokół komórki. Można zmienić tej opinii do sprawdzania poprawności domyślnej zgodnie z opisem w poniższej procedurze.  
+     Gdy użytkownik wprowadzi nieprawidłową wartość (na przykład niebędącą liczbą całkowitą w kolumnie Identyfikator kursu), wokół komórki pojawia się czerwone obramowanie. Możesz zmienić te domyślne informacje zwrotne, zgodnie z opisem w poniższej procedurze.  
   
-### <a name="to-customize-cell-validation-feedback"></a>Aby dostosować komórki sprawdzania poprawności opinii  
+### <a name="to-customize-cell-validation-feedback"></a>Aby dostosować opinię na temat walidacji komórki  
   
-- W kolumnie ustaw <xref:System.Windows.Controls.DataGridBoundColumn.EditingElementStyle%2A> właściwości stylu właściwe dla kolumny w formancie edycji. Ponieważ formanty edycji są tworzone w czasie wykonywania, nie można użyć <xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType> dołączona właściwość, jak w przypadku prostych kontrolek.  
+- Ustaw <xref:System.Windows.Controls.DataGridBoundColumn.EditingElementStyle%2A> właściwość kolumny na styl odpowiedni dla kontrolki edycji kolumny. Ponieważ kontrolki edycji są tworzone w czasie wykonywania, nie można użyć <xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType> dołączonej właściwości, tak jak w przypadku formantów prostych.  
   
-     Poniższy przykład aktualizuje poprzedniego przykładu, dodając stylu błędu współużytkowane przez trzy kolumny przy użyciu reguł sprawdzania poprawności. Gdy użytkownik wprowadza wartość jest nieprawidłowa, styl zmienia kolor tła komórek i dodaje etykietkę narzędzia. Zwróć uwagę na użycie wyzwalacza, aby ustalić, czy jest to błąd sprawdzania poprawności. Jest to wymagane, ponieważ obecnie nie ma błędów dedykowanych szablonu dla komórek.  
+     Poniższy przykład aktualizuje poprzedni przykład, dodając styl błędu współużytkowany przez trzy kolumny z regułami walidacji. Gdy użytkownik wprowadzi nieprawidłową wartość, styl zmienia kolor tła komórki i dodaje etykietkę narzędzia. Zwróć uwagę na użycie wyzwalacza, aby określić, czy wystąpił błąd walidacji. Jest to wymagane, ponieważ dla komórek nie ma obecnie dedykowanego szablonu błędu.  
   
      [!code-xaml[DataGrid_Validation#CellValidationXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#cellvalidationxaml)]  
   
-     Możesz zaimplementować bardziej dokładne dostosowanie, zastępując <xref:System.Windows.Controls.DataGridColumn.CellStyle%2A> używane przez wartość z kolumny.  
+     Można zaimplementować bardziej rozległe dostosowanie, zastępując <xref:System.Windows.Controls.DataGridColumn.CellStyle%2A> użycie kolumny.  
   
-### <a name="to-validate-multiple-values-in-a-single-row"></a>Aby sprawdzić poprawność wielu wartości w jednym wierszu  
+### <a name="to-validate-multiple-values-in-a-single-row"></a>Aby sprawdzić poprawność wielu wartości w pojedynczym wierszu  
   
-1. Implementowanie <xref:System.Windows.Controls.ValidationRule> podklasy, która sprawdza wiele właściwości powiązany obiekt danych. W swojej <xref:System.Windows.Controls.ValidationRule.Validate%2A> rzutowania implementacji metody `value` wartości parametru <xref:System.Windows.Data.BindingGroup> wystąpienia. Mogą uzyskiwać dostęp do obiektu danych za pośrednictwem <xref:System.Windows.Data.BindingGroup.Items%2A> właściwości.  
+1. Zaimplementuj <xref:System.Windows.Controls.ValidationRule> podklasę sprawdzającą wiele właściwości powiązanego obiektu danych. W implementacji `value`metodynależy rzutować wartość parametru na <xref:System.Windows.Data.BindingGroup> wystąpienie. <xref:System.Windows.Controls.ValidationRule.Validate%2A> Następnie można uzyskać dostęp do obiektu danych za pomocą <xref:System.Windows.Data.BindingGroup.Items%2A> właściwości.  
   
-     Poniższy przykład ilustruje ten proces, aby sprawdzić czy `StartDate` wartości właściwości dla `Course` obiekt jest wcześniejsza niż jego `EndDate` wartości właściwości.  
+     Poniższy przykład ilustruje ten proces, aby sprawdzić, `StartDate` czy wartość `Course` właściwości obiektu jest wcześniejsza niż jego `EndDate` wartość właściwości.  
   
      [!code-csharp[DataGrid_Validation#CourseValidationRule](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#coursevalidationrule)]
      [!code-vb[DataGrid_Validation#CourseValidationRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#coursevalidationrule)]  
   
-2. Dodaj regułę walidacji do <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> kolekcji. <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> Właściwości zapewnia bezpośredni dostęp do <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> właściwość <xref:System.Windows.Data.BindingGroup> wystąpienia, który grupuje wszystkie powiązania, które są używane przez kontrolkę.  
+2. Dodaj regułę walidacji do <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> kolekcji. Właściwość zapewnia bezpośredni dostęp <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> do właściwości <xref:System.Windows.Data.BindingGroup> wystąpienia, które grupuje wszystkie powiązania używane przez formant. <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A>  
   
-     Poniższy przykład ustawia <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> właściwości w XAML. <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> Właściwość jest ustawiona na <xref:System.Windows.Controls.ValidationStep.UpdatedValue> tak, aby sprawdzanie występuje tylko wtedy, gdy powiązany obiekt danych jest aktualizowany.  
+     Poniższy przykład ustawia <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> właściwość w języku XAML. Właściwość jest ustawiona na <xref:System.Windows.Controls.ValidationStep.UpdatedValue> tak, aby Walidacja była wykonywana dopiero po zaktualizowaniu powiązanego obiektu danych. <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>  
   
      [!code-xaml[DataGrid_Validation#RowValidationRulesXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#rowvalidationrulesxaml)]  
   
-     Gdy użytkownik określi datę końcową, która jest wcześniejsza niż data rozpoczęcia, nagłówek wiersza jest wyświetlany czerwony wykrzyknik (!). Można zmienić tej opinii do sprawdzania poprawności domyślnej zgodnie z opisem w poniższej procedurze.  
+     Gdy użytkownik określi datę końcową wcześniejszą niż data rozpoczęcia, w nagłówku wiersza pojawi się czerwony wykrzyknik (!). Możesz zmienić te domyślne informacje zwrotne, zgodnie z opisem w poniższej procedurze.  
   
-### <a name="to-customize-row-validation-feedback"></a>Aby dostosować wiersz sprawdzania poprawności opinii  
+### <a name="to-customize-row-validation-feedback"></a>Aby dostosować opinię dotyczącą weryfikacji wierszy  
   
-- Ustaw <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType> właściwości. Ta właściwość umożliwia dostosowanie opinii walidacji wiersza dla poszczególnych <xref:System.Windows.Controls.DataGrid> kontrolki. Może również wpływać na wiele formantów, za pomocą styl niejawny wierszy można ustawić <xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType> właściwości.  
+- <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType> Ustaw właściwość. Ta właściwość umożliwia dostosowanie informacji zwrotnych dotyczących sprawdzania poprawności wierszy <xref:System.Windows.Controls.DataGrid> dla poszczególnych kontrolek. Możesz również mieć wpływ na wiele formantów przy użyciu niejawnego stylu wiersza do <xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType> ustawiania właściwości.  
   
-     Poniższy przykład zastępuje domyślny wiersz sprawdzania poprawności opinii bardziej widoczny wskaźnik. Po użytkownik wprowadzi nieprawidłową wartość, w nagłówku wiersza pojawi się czerwone kółko z białym znakiem wykrzyknika. Operacja wykonywana dla wierszy i komórek błędy sprawdzania poprawności. Komunikat o błędzie skojarzony jest wyświetlany w etykietce narzędzia.  
+     W poniższym przykładzie jest zastępowana domyślna opinia weryfikacji wiersza z bardziej widocznym wskaźnikiem. Gdy użytkownik wprowadzi nieprawidłową wartość, w nagłówku wiersza pojawia się czerwony okrąg z białym znakiem wykrzyknika. Dzieje się tak w przypadku błędów walidacji wierszy i komórek. Skojarzony komunikat o błędzie jest wyświetlany w etykietce narzędzia.  
   
      [!code-xaml[DataGrid_Validation#RowValidationFeedbackXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#rowvalidationfeedbackxaml)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono pełny pokaz weryfikacji wierszy i komórek. `Course` Klasa udostępnia przykładowy obiekt danych, który implementuje <xref:System.ComponentModel.IEditableObject> obsługi transakcji. <xref:System.Windows.Controls.DataGrid> Kontroli wchodzi w interakcję z <xref:System.ComponentModel.IEditableObject> aby umożliwić użytkownikom cofnąć zmiany, naciskając klawisz ESC.  
+ Poniższy przykład zawiera kompletną demonstrację dla walidacji komórek i wierszy. Klasa zawiera przykładowy obiekt danych, który implementuje <xref:System.ComponentModel.IEditableObject> obsługę transakcji. `Course` Formant współdziała z <xref:System.ComponentModel.IEditableObject> programem, aby umożliwić użytkownikom przywracanie zmian przez naciśnięcie klawisza ESC. <xref:System.Windows.Controls.DataGrid>  
   
 > [!NOTE]
->  Jeśli używasz języka Visual Basic w pierwszym wierszu pliku MainWindow.xaml, Zastąp `x:Class="DataGridValidation.MainWindow"` z `x:Class="MainWindow"`.  
+> Jeśli używasz Visual Basic, w pierwszym wierszu MainWindow. XAML Zastąp `x:Class="DataGridValidation.MainWindow"` ciąg opcją. `x:Class="MainWindow"`  
   
- Aby przetestować sprawdzania poprawności, spróbuj wykonać następujące czynności:  
+ Aby przetestować sprawdzanie poprawności, spróbuj wykonać następujące czynności:  
   
-- W kolumnie Identyfikator kursu wprowadź wartość nie jest liczbą całkowitą.  
+- W kolumnie Identyfikator kursu wprowadź wartość różną od liczby całkowitej.  
   
-- W kolumnie daty zakończenia wprowadź datę, która jest wcześniejsza niż data rozpoczęcia.  
+- W kolumnie Data końcowa wprowadź datę wcześniejszą niż data rozpoczęcia.  
   
-- Usuń wartość w identyfikator kursu, Data rozpoczęcia lub datę zakończenia.  
+- Usuń wartość w polu Identyfikator kursu, datę rozpoczęcia lub datę zakończenia.  
   
-- Aby cofnąć to wartość nieprawidłowa komórka, umieść kursor w komórce i naciśnij klawisz ESC.  
+- Aby cofnąć nieprawidłową wartość komórki, umieść kursor z powrotem w komórce i naciśnij klawisz ESC.  
   
-- Aby cofnąć zmiany dla całego wiersza po bieżącej komórki w trybie edycji, naciśnij dwa razy klawisz ESC.  
+- Aby cofnąć zmiany dla całego wiersza, gdy bieżąca komórka jest w trybie edycji, naciśnij dwukrotnie klawisz ESC.  
   
-- Gdy wystąpi błąd sprawdzania poprawności, przesuń wskaźnik myszy nad wskaźnikiem w nagłówku wiersza, aby wyświetlić komunikat o błędzie skojarzony.  
+- Gdy wystąpi błąd walidacji, Przenieś wskaźnik myszy nad wskaźnikiem w nagłówku wiersza, aby zobaczyć skojarzony komunikat o błędzie.  
   
  [!code-csharp[DataGrid_Validation#FullCode](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#fullcode)]
  [!code-vb[DataGrid_Validation#FullCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#fullcode)]  

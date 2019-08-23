@@ -2,20 +2,20 @@
 title: Komunikacja jednokierunkowa
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-ms.openlocfilehash: e82034a79610ea7956b3ef07508295578461de1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0035b64b14b0d32f39974e8eaa28242290d665c0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008036"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957244"
 ---
 # <a name="one-way"></a>Komunikacja jednokierunkowa
-Niniejszy przykład pokazuje usługi skontaktuj się z operacji usługi jednokierunkowej. Klient nie czeka na zakończenie, jak w przypadku operacji dwukierunkowe usługi przy użyciu operacji usługi. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i używa `wsHttpBinding` powiązania. Usługi w tym przykładzie to aplikacja konsoli Self-Hosted umożliwia obserwowanie usługa, która odbiera i przetwarza żądania. Klient jest również Aplikacja konsoli.  
+Ten przykład pokazuje kontakt z usługą z jednokierunkowymi operacjami usługi. Klient nie czeka na zakończenie operacji usługi, podobnie jak w przypadku operacji dwukierunkowych usługi. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i używa `wsHttpBinding` powiązania. Usługa w tym przykładzie to samodzielna aplikacja konsolowa, która umożliwia obserwowanie usługi, która odbiera i przetwarza żądania. Klient jest również aplikacją konsolową.  
   
 > [!NOTE]
->  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Aby utworzyć kontrakt usługi jednokierunkowej, definiowanie kontraktu usługi, usługi, zastosuj <xref:System.ServiceModel.OperationContractAttribute> klasy do każdej operacji, a następnie ustaw <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> do `true` jak pokazano w poniższym przykładowym kodzie:  
+ Aby utworzyć kontrakt usługi jednokierunkowej, zdefiniuj kontrakt usługi, Zastosuj <xref:System.ServiceModel.OperationContractAttribute> klasę do każdej operacji i `true` ustaw wartość <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> tak, jak pokazano w poniższym przykładowym kodzie:  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -32,7 +32,7 @@ public interface IOneWayCalculator
 }  
 ```  
   
- Aby zademonstrować, że klient nie czeka na zakończenie operacji usługi, kod usługi, w tym przykładzie implementuje pięciu sekund opóźnienia, jak pokazano w poniższym przykładowym kodzie:  
+ Aby zademonstrować, że klient nie czeka na zakończenie operacji usługi, kod usługi w tym przykładzie implementuje pięć-sekundowe opóźnienie, jak pokazano w poniższym przykładowym kodzie:  
   
 ```csharp
 // This service class implements the service contract.  
@@ -54,9 +54,9 @@ public class CalculatorService : IOneWayCalculator
   
  Gdy klient wywołuje usługę, wywołanie zwraca bez oczekiwania na zakończenie operacji usługi.  
   
- Po uruchomieniu przykładu, działania klienta i usługi są wyświetlane w oknach konsoli usługi i klienta. Możesz zobaczyć komunikaty odbierania usługi z klienta. Naciśnij klawisz ENTER w każdego okna konsoli, aby zamknąć usługę i klienta.  
+ Po uruchomieniu przykładu działania klienta i usługi są wyświetlane zarówno w systemie, jak i w oknach konsoli klienta. Możesz zobaczyć, że usługa odbiera komunikaty od klienta. Naciśnij klawisz ENTER w każdym oknie konsoli, aby zamknąć usługę i klienta.  
   
- Klient zakończy się wcześniej usługi, prezentacja, że klient nie czeka na zakończenie operacji usługi jednokierunkowej. Dane wyjściowe klienta jest następujący:  
+ Klient kończy pracę przed usługą, pokazując, że klient nie czeka na zakończenie operacji jednokierunkowej usługi. Dane wyjściowe klienta są następujące:  
   
 ```console  
 Add(100,15.99)  
@@ -67,7 +67,7 @@ Divide(22,7)
 Press <ENTER> to terminate client.  
 ```  
   
- Następujące dane wyjściowe usługi jest wyświetlany:  
+ Wyświetlane są następujące dane wyjściowe usługi:  
   
 ```console  
 The service is ready.  
@@ -84,24 +84,24 @@ Processing Divide(22,7) - result: 3.14285714285714
 ```  
   
 > [!NOTE]
->  Zgodnie z definicją, HTTP jest protokół żądanie/odpowiedź; Po wysłaniu żądania, odpowiedź jest zwracana. Ta zasada obowiązuje nawet w przypadku operacji usługi jednokierunkowej, który jest dostępny za pośrednictwem protokołu HTTP. Po wywołaniu operacji usługa zwraca kod stanu HTTP 202, zanim została wykonana operacja usługi. Ten kod stanu oznacza, że żądanie zostało zaakceptowane do przetwarzania, ale przetwarzanie nie zostało jeszcze zakończone. Klient, który wywołał operację blokuje, dopóki nie odbierze odpowiedzi 202 z usługi. Może to spowodować niektóre nieoczekiwane zachowanie, gdy wiele jednokierunkowe komunikaty są wysyłane przy użyciu powiązania, który jest skonfigurowany do używania sesji. `wsHttpBinding` Powiązania używanego w tym przykładzie jest skonfigurowany do używania sesji, aby domyślnie ustanawiania kontekstu zabezpieczeń. Domyślnie komunikaty w sesji dotrą do celu w kolejności, w której są wysyłane. W związku z tym gdy drugi komunikat w sesji są wysyłane, nie został przetworzony aż pierwszy komunikat został przetworzony. Z tego powodu jest, że klient nie otrzyma odpowiedzi 202 wiadomości do momentu zakończenia przetwarzania poprzedni komunikat. Klient w związku z tym wydaje się blok przy każdym wywołaniu kolejna operacja. Aby uniknąć tego zachowania, ten przykład umożliwia skonfigurowanie środowiska uruchomieniowego do wysyłania komunikatów jednocześnie w celu odrębnych wystąpień do przetworzenia. Przykładowe zestawy <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> do `PerCall` tak, aby każdy komunikat mogą być przetwarzane przez inne wystąpienie. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> ustawiono `Multiple` umożliwia więcej niż jeden wątek do wysyłania wiadomości w czasie.  
+> HTTP to, według definicji, protokołu żądania/odpowiedzi; Po wykonaniu żądania zwracana jest odpowiedź. Jest to prawdziwe nawet dla jednokierunkowej operacji usługi, która jest udostępniona za pośrednictwem protokołu HTTP. Po wywołaniu operacji usługa zwraca kod stanu HTTP 202 przed wykonaniem operacji usługi. Ten kod stanu oznacza, że żądanie zostało zaakceptowane do przetworzenia, ale przetwarzanie nie zostało jeszcze zakończone. Klient, który wywołał bloki operacji, dopóki nie odbierze odpowiedzi 202 od usługi. Może to spowodować pewne nieoczekiwane zachowanie, gdy wiele komunikatów jednokierunkowych jest wysyłanych przy użyciu powiązania, które jest skonfigurowane do korzystania z sesji. `wsHttpBinding` Powiązanie używane w tym przykładzie jest skonfigurowane tak, aby domyślnie używać sesji w celu ustanowienia kontekstu zabezpieczeń. Domyślnie komunikaty w sesji są gwarantowane w kolejności, w jakiej są wysyłane. W związku z tym, gdy wysyłany jest drugi komunikat w sesji, nie jest przetwarzany do momentu przetworzenia pierwszego komunikatu. Wynika to z tego, że klient nie otrzymuje odpowiedzi 202 na komunikat do momentu ukończenia przetwarzania poprzedniego komunikatu. W związku z tym klient jest blokowany dla każdego kolejnego wywołania operacji. Aby uniknąć tego zachowania, ten przykład umożliwia skonfigurowanie środowiska uruchomieniowego do wysyłania komunikatów współbieżnie do różnych wystąpień do przetworzenia. Przykład ustawia <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> się tak `PerCall` , aby każdy komunikat mógł być przetwarzany przez inne wystąpienie. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>jest ustawiona na `Multiple` tak, aby umożliwić wysyłanie komunikatów jednocześnie więcej niż jeden wątek.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
->  Przed uruchomieniem klienta i zamknąć klienta przed zamknięciem usługi, należy uruchomić usługę. Umożliwia to uniknięcie wyjątek klienta, gdy klient nie można zamknąć sesji zabezpieczeń nie pozostawia żadnych śladów, ponieważ usługa został usunięty.  
+> Uruchom usługę przed uruchomieniem klienta i wyłącz klienta przed zamknięciem usługi. Pozwala to uniknąć wyjątku klienta, gdy klient nie może prawidłowo zamknąć sesji zabezpieczeń, ponieważ usługa zniknęła.  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Oneway`  

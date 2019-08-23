@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 2c4e7213ddcffdb026d3d6e6b339bfc91b3c27c6
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 3ac7d79660830601ca69951e56763fc923692b0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400775"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958787"
 ---
 # <a name="xaml-syntax-in-detail"></a>Szczegóły składni XAML
 Ten temat definiuje warunki, które są używane do opisywania elementów składni języka XAML. Te warunki są często używane w całej pozostałej części tej dokumentacji, zarówno w przypadku dokumentacji WPF, jak i dla innych struktur, które używają języka XAML lub podstawowych pojęć XAML włączonych przez obsługę języka XAML na poziomie system. XAML. W tym temacie opisano podstawową terminologię wprowadzoną w temacie [Omówienie języka XAML (WPF)](xaml-overview-wpf.md).  
@@ -86,7 +86,7 @@ Ten temat definiuje warunki, które są używane do opisywania elementów skład
  Składnia atrybutu jest składnią znaczników XAML, która ustawia wartość właściwości przez zadeklarowanie atrybutu w istniejącym elemencie obiektu. Nazwa atrybutu musi być zgodna z nazwą elementu członkowskiego CLR właściwości klasy, która wykonuje kopię zapasową odpowiedniego elementu obiektu. Po nazwie atrybutu następuje operator przypisania (=). Wartość atrybutu musi być ciągiem ujętym w cudzysłów.  
   
 > [!NOTE]
->  Możesz użyć przemiennych cudzysłowów, aby umieścić znak cudzysłowu w atrybucie. Na przykład można użyć pojedynczego cudzysłowu jako środka do zadeklarowania ciągu, który zawiera znak cudzysłowu. Bez względu na to, czy są używane pojedyncze, czy podwójne cudzysłowy, należy użyć pasującej pary do otwierania i zamykania ciągu wartości atrybutu. Istnieją także sekwencje unikowe lub inne techniki umożliwiające pracę z ograniczeniami między znakami narzuconymi przez określoną składnię XAML. Zobacz [jednostki znaków XML i XAML](../../xaml-services/xml-character-entities-and-xaml.md).  
+> Możesz użyć przemiennych cudzysłowów, aby umieścić znak cudzysłowu w atrybucie. Na przykład można użyć pojedynczego cudzysłowu jako środka do zadeklarowania ciągu, który zawiera znak cudzysłowu. Bez względu na to, czy są używane pojedyncze, czy podwójne cudzysłowy, należy użyć pasującej pary do otwierania i zamykania ciągu wartości atrybutu. Istnieją także sekwencje unikowe lub inne techniki umożliwiające pracę z ograniczeniami między znakami narzuconymi przez określoną składnię XAML. Zobacz [jednostki znaków XML i XAML](../../xaml-services/xml-character-entities-and-xaml.md).  
   
  Aby można było ustawić za pomocą składni atrybutów, właściwość musi być publiczna i musi mieć możliwość zapisu. Wartość właściwości w systemie typu zapasowego musi być typem wartości lub musi być typem referencyjnym, który może być skonkretyzowany lub przywoływany przez procesor XAML podczas uzyskiwania dostępu do odpowiedniego typu kopii zapasowej.  
   
@@ -108,7 +108,7 @@ Ten temat definiuje warunki, które są używane do opisywania elementów skład
 #### <a name="enumeration-attribute-values"></a>Wartości atrybutów wyliczenia  
  Wyliczenia w języku XAML są przetwarzane wewnętrznie przez analizatory kodu XAML, a elementy członkowskie wyliczenia należy określić, określając nazwę ciągu jednego z nazwanych stałych wyliczeniowych.  
   
- W przypadku wartości wyliczenia nieflagowe zachowanie natywne polega na przetwarzaniu ciągu wartości atrybutu i rozwiązaniu go z jedną z wartości wyliczenia. Nie należy określać wyliczenia w wyliczeniu formatu. *Wartość*, jak w kodzie. Zamiast tego należy określić tylko *wartość*, a *Wyliczenie* jest wywnioskowane według typu właściwości, która jest ustawiana. Jeśli określisz atrybut w wyliczeniu.  Formularz *wartości* nie zostanie poprawnie rozwiązany.  
+ W przypadku wartości wyliczenia nieflagowe zachowanie natywne polega na przetwarzaniu ciągu wartości atrybutu i rozwiązaniu go z jedną z wartości wyliczenia. Nie należy określać wyliczenia w wyliczeniuformatu. *Wartość*, jak w kodzie. Zamiast tego należy określić tylko *wartość*, a *Wyliczenie* jest wywnioskowane według typu właściwości, która jest ustawiana. Jeśli określisz atrybut w wyliczeniu. Formularz *wartości* nie zostanie poprawnie rozwiązany.  
   
  W przypadku wyliczeń flagwise zachowanie jest oparte na <xref:System.Enum.Parse%2A?displayProperty=nameWithType> metodzie. Można określić wiele wartości dla wyliczenia flagwise, oddzielając poszczególne wartości przecinkami. Nie można jednak łączyć wartości wyliczenia, które nie są flagwise. Na przykład nie można użyć składni przecinka, aby próbować utworzyć obiekt <xref:System.Windows.Trigger> , który działa na wielu warunkach wyliczenia nieflagi:  
   
@@ -130,7 +130,7 @@ Ten temat definiuje warunki, które są używane do opisywania elementów skład
   
  Można również nazwać każde zdarzenie z dowolnego obiektu, który jest dostępny za pośrednictwem domyślnej przestrzeni nazw, przy użyciu *atrybutu TypeName*. częściowo kwalifikowana nazwa *zdarzenia* ; Ta składnia obsługuje dołączanie programów obsługi dla zdarzeń kierowanych, w których program obsługi ma obsługiwać routing zdarzeń z elementów podrzędnych, ale element nadrzędny nie ma także tego zdarzenia w tabeli elementów członkowskich. Ta składnia przypomina załączoną składnię zdarzenia, ale wydarzenie to nie jest zdarzeniem true. Zamiast tego odwołujesz się do zdarzenia z kwalifikowaną nazwą. Aby uzyskać więcej informacji, zobacz [Omówienie zdarzeń kierowanych](routed-events-overview.md).  
   
- W niektórych scenariuszach nazwy właściwości są czasami podawane jako wartość atrybutu, a nie nazwa atrybutu. Ta nazwa właściwości może również zawierać kwalifikatory, takie jak właściwość określona w formularzu OwnerType . *dependencypropertyname*. Ten scenariusz jest typowy podczas pisania stylów lub szablonów w języku XAML. Reguły przetwarzania dla nazw właściwości, które są podane jako wartość atrybutu, są różne i podlegają typowi właściwości ustawianej lub przez zachowania konkretnych podsystemów WPF. Aby uzyskać szczegółowe informacje, zobacz [Style i tworzenia szablonów](../controls/styling-and-templating.md).  
+ W niektórych scenariuszach nazwy właściwości są czasami podawane jako wartość atrybutu, a nie nazwa atrybutu. Ta nazwa właściwości może również zawierać kwalifikatory, takie jak właściwość określona w formularzu OwnerType. *dependencypropertyname*. Ten scenariusz jest typowy podczas pisania stylów lub szablonów w języku XAML. Reguły przetwarzania dla nazw właściwości, które są podane jako wartość atrybutu, są różne i podlegają typowi właściwości ustawianej lub przez zachowania konkretnych podsystemów WPF. Aby uzyskać szczegółowe informacje, zobacz [Style i tworzenia szablonów](../controls/styling-and-templating.md).  
   
  Innym sposobem użycia nazw właściwości jest to, kiedy wartość atrybutu opisuje relację właściwości. Ta funkcja jest używana do wiązania danych i dla obiektów docelowych scenorysu i jest włączona przez <xref:System.Windows.PropertyPath> klasę i jej konwerter typów. Aby zapoznać się z bardziej szczegółowym opisem semantyki wyszukiwania, zobacz [składnia języka XAML PropertyPath](propertypath-xaml-syntax.md).  
   
@@ -169,7 +169,7 @@ Ten temat definiuje warunki, które są używane do opisywania elementów skład
  Niejawny element kolekcji tworzy element członkowski w reprezentacji drzewa logicznego, chociaż nie jest wyświetlany w znaczniku jako element. Zazwyczaj Konstruktor typu nadrzędnego wykonuje Tworzenie wystąpienia kolekcji, która jest jedną z jej właściwości, a początkowo pusta kolekcja jest częścią drzewa obiektów.  
   
 > [!NOTE]
->  Lista ogólna i interfejsy słownika (<xref:System.Collections.Generic.IList%601> i <xref:System.Collections.Generic.IDictionary%602>) nie są obsługiwane na potrzeby wykrywania kolekcji. Można jednak użyć <xref:System.Collections.Generic.List%601> klasy jako klasy bazowej, ponieważ implementuje <xref:System.Collections.IList> ona bezpośrednio lub <xref:System.Collections.Generic.Dictionary%602> jako klasę bazową, ponieważ implementuje <xref:System.Collections.IDictionary> ją bezpośrednio.  
+> Lista ogólna i interfejsy słownika (<xref:System.Collections.Generic.IList%601> i <xref:System.Collections.Generic.IDictionary%602>) nie są obsługiwane na potrzeby wykrywania kolekcji. Można jednak użyć <xref:System.Collections.Generic.List%601> klasy jako klasy bazowej, ponieważ implementuje <xref:System.Collections.IList> ona bezpośrednio lub <xref:System.Collections.Generic.Dictionary%602> jako klasę bazową, ponieważ implementuje <xref:System.Collections.IDictionary> ją bezpośrednio.  
   
  Na stronach referencyjnych platformy .NET dla typów kolekcji, ta składnia z świadomym pominięciem elementu Object dla kolekcji jest czasami notowana w sekcjach składni XAML jako niejawna składnia kolekcji.  
   
@@ -247,7 +247,7 @@ Ten temat definiuje warunki, które są używane do opisywania elementów skład
  Aby uzyskać więcej informacji na temat przestrzeni nazw XAML, zobacz [przestrzenie nazw XAML i mapowanie przestrzeni nazw dla języka XAML WPF](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 <a name="markup_extensions"></a>   
-## <a name="markup-extensions"></a>Rozszerzenia znaczników  
+## <a name="markup-extensions"></a>Rozszerzenia struktury znaczników  
  XAML definiuje jednostkę programowania rozszerzenia znaczników, która umożliwia wyjście z normalnego obsługi procesora XAML wartości atrybutów ciągów lub elementów obiektów, i rozszerza przetwarzanie do klasy zapasowej. Znak, który identyfikuje rozszerzenie znaczników dla procesora XAML, gdy jest używana składnia atrybutu jest otwierającym nawiasem klamrowym ({), po którym następuje dowolny znak inny niż zamykający nawias klamrowy (}). Pierwszy ciąg po otwierającym nawiasie klamrowym musi odwoływać się do klasy, która zapewnia określone zachowanie rozszerzenia, gdzie odwołanie może pominąć podciąg "rozszerzenie", jeśli podciąg jest częścią prawdziwej nazwy klasy. Po wykonaniu tej operacji może pojawić się pojedyncze miejsce, a następnie każdy pomyślny znak jest używany jako dane wejściowe przez implementację rozszerzenia, aż do momentu zakończenia zamykającego nawiasu klamrowego.  
   
  Implementacja języka XAML platformy .NET używa <xref:System.Windows.Markup.MarkupExtension> klasy abstrakcyjnej jako podstawy dla wszystkich rozszerzeń znaczników obsługiwanych przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] program oraz inne struktury lub technologie. Rozszerzenia znaczników, które [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] są przeznaczone do implementowania, często mają na celu umożliwienie odwoływania się do innych istniejących obiektów lub do wykonywania odroczonych odwołań do obiektów, które będą oceniane w czasie wykonywania. Na przykład proste powiązanie danych WPF jest realizowane przez określenie `{Binding}` rozszerzenia znacznika zamiast wartości, która zwykle przyjmuje dana właściwość. Wiele rozszerzeń znaczników WPF włącza składnię atrybutu dla właściwości, gdzie składnia atrybutu nie może być w innym przypadku możliwa. Na przykład <xref:System.Windows.Style> obiekt jest stosunkowo skomplikowanym typem, który zawiera zagnieżdżoną serię obiektów i właściwości. Style w WPF są zwykle definiowane jako zasób w <xref:System.Windows.ResourceDictionary>, a następnie przywoływane przez jeden z dwóch rozszerzeń znaczników WPF, które żądają zasobu. Rozszerzenie znaczników służy do obliczania wartości właściwości do wyszukiwania zasobów i umożliwia podanie wartości <xref:System.Windows.FrameworkElement.Style%2A> właściwości, pobierając typ <xref:System.Windows.Style>, w składni atrybutów, jak w poniższym przykładzie:  
@@ -270,7 +270,7 @@ Ten temat definiuje warunki, które są używane do opisywania elementów skład
   
 <a name="attached_events"></a>   
 ## <a name="attached-events"></a>Dołączone zdarzenia  
- Dołączone zdarzenia to inne koncepcje programowania wprowadzone w języku XAML, w którym zdarzenia mogą być definiowane przez określony typ, ale programy obsługi mogą być dołączane do dowolnego elementu obiektu. W implementacji WOF często typ, który definiuje dołączone zdarzenie, jest typem statycznym, który definiuje usługę i czasami te dołączone zdarzenia są udostępniane przez alias zdarzenia kierowanego w typach, które uwidaczniają usługę. Procedury obsługi dla dołączonych zdarzeń są określane za poorednictwem składni atrybutów. Podobnie jak w przypadku dołączonych zdarzeń, składnia atrybutu jest rozwinięta dla dołączonych zdarzeń, aby zezwolić na *Właściwość TypeName*. Nazwa *zdarzenia użycie,* gdzie *TypeName* jest klasą `Remove` , która `Add` zapewnia metody dostępu do obsługi zdarzeń dla dołączonej infrastruktury zdarzeń,  a EventName jest nazwą zdarzenia.  
+ Dołączone zdarzenia to inne koncepcje programowania wprowadzone w języku XAML, w którym zdarzenia mogą być definiowane przez określony typ, ale programy obsługi mogą być dołączane do dowolnego elementu obiektu. W implementacji WOF często typ, który definiuje dołączone zdarzenie, jest typem statycznym, który definiuje usługę i czasami te dołączone zdarzenia są udostępniane przez alias zdarzenia kierowanego w typach, które uwidaczniają usługę. Procedury obsługi dla dołączonych zdarzeń są określane za poorednictwem składni atrybutów. Podobnie jak w przypadku dołączonych zdarzeń, składnia atrybutu jest rozwinięta dla dołączonych zdarzeń, aby zezwolić na *Właściwość TypeName*. Nazwa zdarzenia użycie, gdzie *TypeName* jest klasą `Remove` , która `Add` zapewnia metody dostępu do obsługi zdarzeń dla dołączonej infrastruktury zdarzeń, a EventName jest nazwą zdarzenia.  
   
 <a name="anatomy_of_a_xaml_page_root_element"></a>   
 ## <a name="anatomy-of-a-xaml-root-element"></a>Anatomia elementu głównego XAML  
@@ -305,13 +305,13 @@ Ten temat definiuje warunki, które są używane do opisywania elementów skład
  <xref:System.Windows.Controls.Label>jest kolejną klasą <xref:System.Windows.Controls.Control>pochodną i jeśli została określona `Label.Background` w <xref:System.Windows.Controls.Label> elemencie Object, to użycie będzie działało. Jednak ponieważ <xref:System.Windows.Controls.Label> nie jest klasą ani <xref:System.Windows.Controls.Button>klasą bazową, określone zachowanie procesora XAML jest następnie przetwarzane `Label.Background` jako dołączona właściwość. `Label.Background`nie jest dołączoną właściwością i to użycie kończy się niepowodzeniem.  
   
 ### <a name="basetypenamemembername-property-elements"></a>Basename. MemberName — elementy właściwości  
- W analogiczny sposób do metody *TypeName*. *element MemberName* działa w przypadku składni atrybutów, *BaseType*.  składnia MemberName działa dla składni elementu właściwości. Na przykład następująca składnia działa:  
+ W analogiczny sposób do metody *TypeName*. *element MemberName* działa w przypadku składni atrybutów, *BaseType*. składnia MemberName działa dla składni elementu właściwości. Na przykład następująca składnia działa:  
   
  [!code-xaml[XAMLOvwSupport#GoofyPE](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#goofype)]  
   
  W tym miejscu element Property został podany jako `Control.Background` , chociaż element Property został zawarty w. `Button`  
   
- Ale podobnie jak *TypeName*.  formularz MemberName dla atrybutów, *basename*. *element MemberName* ma słabą styl w znacznikach i należy go unikać.  
+ Ale podobnie jak *TypeName*. formularz MemberName dla atrybutów, *basename*. *element MemberName* ma słabą styl w znacznikach i należy go unikać.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -2,19 +2,19 @@
 title: 'Instrukcje: tworzenie usługi transakcyjnej'
 ms.date: 03/30/2017
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-ms.openlocfilehash: 7f7f060db5a4ffd66524e220e3e3291debd8a3fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be364e7638394a30c199b05dd15ef4c44e18e688
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787598"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964016"
 ---
 # <a name="how-to-create-a-transactional-service"></a>Instrukcje: tworzenie usługi transakcyjnej
-Niniejszy przykład pokazuje różne aspekty Tworzenie usługi transakcyjnej i użycie transakcji zainicjowanych przez klienta do koordynowania operacji usługi.  
+W tym przykładzie przedstawiono różne aspekty tworzenia usługi transakcyjnej oraz użycie transakcji zainicjowanej przez klienta w celu koordynowania operacji usługi.  
   
 ### <a name="creating-a-transactional-service"></a>Tworzenie usługi transakcyjnej  
   
-1. Tworzenie kontraktu usługi i dodawanie adnotacji do operacji z odpowiednie ustawienie z <xref:System.ServiceModel.TransactionFlowOption> wyliczenia przychodzących wymagania dotyczące transakcji. Należy zauważyć, że możesz również umieścić <xref:System.ServiceModel.TransactionFlowAttribute> w klasie usługi wdrażane. Dzięki temu dla pojedynczej implementacji interfejsu, użyj tych ustawień transakcji, zamiast każdego wdrożenia.  
+1. Utwórz kontrakt usługi i Dodaj adnotację do operacji z wymaganym ustawieniem z <xref:System.ServiceModel.TransactionFlowOption> wyliczenia, aby określić wymagania dotyczące transakcji przychodzących. Należy zauważyć, że można również umieścić <xref:System.ServiceModel.TransactionFlowAttribute> w implementowanej klasie usług. Dzięki temu pojedyncze implementacje interfejsu mogą korzystać z tych ustawień transakcji zamiast każdej implementacji.  
   
     ```csharp
     [ServiceContract]  
@@ -31,7 +31,7 @@ Niniejszy przykład pokazuje różne aspekty Tworzenie usługi transakcyjnej i u
     }  
     ```  
   
-2. Tworzenie klasy implementacji i używanie <xref:System.ServiceModel.ServiceBehaviorAttribute> aby opcjonalnie określić <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> i <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A>. Należy zauważyć, że w wielu przypadkach domyślna <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> 60 sekund, a wartość domyślna <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> z `Unspecified` są odpowiednie. Dla każdej operacji, można użyć <xref:System.ServiceModel.OperationBehaviorAttribute> atrybutu, aby określić, czy praca wykonywana w metodzie powinny być wykonywane w ramach zakresu zakres transakcji, zgodnie z wartością <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> atrybutu. W tym przypadku transakcji używane dla `Add` metody jest taka sama jak obowiązkowe transakcji przychodzących, która przepływa między klientem i umożliwiający transakcji `Subtract` metoda jest taki sam jak transakcji, jeśli jeden zostało przekazane klient lub niejawnie, jak i lokalnie utworzono nową transakcję.  
+2. Utwórz klasę implementacji i Użyj <xref:System.ServiceModel.ServiceBehaviorAttribute> , aby opcjonalnie <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> określić i <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A>. Należy zauważyć, że w wielu przypadkach wartość domyślna <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> to 60 sekund i wartość `Unspecified` Domyślna <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> to. Dla każdej operacji można użyć <xref:System.ServiceModel.OperationBehaviorAttribute> atrybutu, aby określić, czy prace wykonywane w ramach metody powinny należeć do zakresu transakcji zgodnie z wartością <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> atrybutu. W takim przypadku transakcja użyta dla `Add` metody jest taka sama jak obowiązkowa transakcja przychodząca, która jest przepływa z klienta, a transakcja użyta `Subtract` dla metody jest taka sama jak transakcja przychodząca, jeśli została przepływa od klienta lub nowej niejawnie i lokalnie utworzonej transakcji.  
   
     ```csharp
     [ServiceBehavior(  
@@ -65,7 +65,7 @@ Niniejszy przykład pokazuje różne aspekty Tworzenie usługi transakcyjnej i u
     }  
     ```  
   
-3. W pliku konfiguracji, określania, czy kontekst transakcji należy przepływ i protokołów, które ma być używany w tym celu należy skonfigurować powiązania. Aby uzyskać więcej informacji, zobacz [Konfiguracja transakcji modelu ServiceModel](servicemodel-transaction-configuration.md). W szczególności, typ powiązania jest określony w elemencie punktu końcowego `binding` atrybutu. [ \<Punktu końcowego >](../../configure-apps/file-schema/wcf/endpoint-element.md) element zawiera `bindingConfiguration` atrybut, który odwołuje się do konfiguracji powiązania o nazwie `transactionalOleTransactionsTcpBinding`, jak pokazano na poniższym Przykładowa konfiguracja.  
+3. Skonfiguruj powiązania w pliku konfiguracji, określając, że kontekst transakcji powinien być przepływem, i protokoły, które mają być używane w tym celu. Aby uzyskać więcej informacji, zobacz [Konfiguracja transakcji ServiceModel](servicemodel-transaction-configuration.md). W każdym przypadku typ powiązania jest określony w `binding` atrybucie elementu punktu końcowego. Element > `bindingConfiguration` `transactionalOleTransactionsTcpBinding`punktu końcowego zawiera atrybut odwołujący się do konfiguracji powiązania o nazwie, jak pokazano w poniższej konfiguracji przykładowej. [ \<](../../configure-apps/file-schema/wcf/endpoint-element.md)  
   
     ```xml  
     <service name="CalculatorService">  
@@ -77,7 +77,7 @@ Niniejszy przykład pokazuje różne aspekty Tworzenie usługi transakcyjnej i u
     </service>  
     ```  
   
-     Przepływ transakcji jest włączona na poziomie konfiguracji za pomocą `transactionFlow` atrybut i Protokół transakcji jest określony, przy użyciu `transactionProtocol` atrybutu, jak pokazano na następującej konfiguracji.  
+     Przepływ transakcji jest włączony na poziomie konfiguracji przy użyciu `transactionFlow` atrybutu, a protokół transakcji jest określany `transactionProtocol` przy użyciu atrybutu, jak pokazano w poniższej konfiguracji.  
   
     ```xml  
     <bindings>  
@@ -91,7 +91,7 @@ Niniejszy przykład pokazuje różne aspekty Tworzenie usługi transakcyjnej i u
   
 ### <a name="supporting-multiple-transaction-protocols"></a>Obsługa wielu protokołów transakcji  
   
-1. Aby uzyskać optymalną wydajność należy użyć protokołu OleTransactions dla scenariuszy obejmujących klienta i usługi napisane przy użyciu usługi Windows Communication Foundation (WCF). Jednak protokół WS-AtomicTransaction (WS-AT) jest przydatne w scenariuszach, gdy wymagane jest współdziałanie ze stosów protokołu innych firm. Można skonfigurować usługi WCF do akceptowania oba protokoły, zapewniając wiele punktów końcowych przy użyciu odpowiednich powiązań związane z protokołem, jak pokazano w poniższym Przykładowa konfiguracja.  
+1. Aby uzyskać optymalną wydajność, należy użyć protokołu OleTransactions na potrzeby scenariuszy obejmujących klienta i usługę zapisaną przy użyciu Windows Communication Foundation (WCF). Jednak protokół WS-AtomicTransaction (WS-AT) jest użyteczny w scenariuszach, gdy wymagane jest współdziałanie z stosami protokołu innych firm. Usługi WCF można skonfigurować tak, aby akceptowały oba protokoły, dostarczając wiele punktów końcowych z odpowiednimi powiązaniami specyficznymi dla protokołu, jak pokazano w poniższej konfiguracji przykładowej.  
   
     ```xml  
     <service name="CalculatorService">  
@@ -108,7 +108,7 @@ Niniejszy przykład pokazuje różne aspekty Tworzenie usługi transakcyjnej i u
     </service>  
     ```  
   
-     Protokół transakcji jest określony, przy użyciu `transactionProtocol` atrybutu. Jednak ten atrybut jest nieobecne z dostarczanych przez system `wsHttpBinding`, ponieważ to powiązanie można używać tylko protokołu WS-AT.  
+     Protokół transakcji jest określony przy użyciu `transactionProtocol` atrybutu. Jednak ten atrybut jest nieobecny w dostarczonych `wsHttpBinding`przez system, ponieważ to powiązanie może korzystać tylko z protokołu WS-AT.  
   
     ```xml  
     <bindings>  
@@ -126,7 +126,7 @@ Niniejszy przykład pokazuje różne aspekty Tworzenie usługi transakcyjnej i u
   
 ### <a name="controlling-the-completion-of-a-transaction"></a>Kontrolowanie ukończenia transakcji  
   
-1. Domyślnie operacji WCF automatycznego ukończenia transakcji, jeśli nie nieobsłużone wyjątki są zgłaszane. To zachowanie można zmienić za pomocą <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> właściwości i <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> metody. Podczas operacji musi występować w tej samej transakcji jako inna operacja (na przykład dla operacji debetowych i środków), można wyłączyć zachowanie automatycznego uzupełniania, ustawiając <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> właściwość `false` jak pokazano w następującym `Debit` przykład operacji. Transakcji `Debit` używa operacja zakończy się aż do metody z <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> właściwością `true` nosi nazwę, jak pokazano w operacji `Credit1`, lub gdy <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> metoda jest wywoływana, aby wyraźnie oznaczyć jako ukończony, jak pokazano w operacji transakcji `Credit2`. Należy pamiętać, że operacje dwóch środki są wyświetlane w celach ilustracyjnych i że pojedynczy środki operacji byłoby bardziej typowego.  
+1. Domyślnie operacje WCF automatycznie uzupełniają transakcje, jeśli nie zostaną zgłoszone żadne Nieobsłużone wyjątki. To zachowanie można zmodyfikować przy użyciu <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> właściwości <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> i metody. Gdy operacja jest wymagana w ramach tej samej transakcji co inna operacja (na przykład Debet i kredyt), można wyłączyć zachowanie autouzupełniania, ustawiając <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> właściwość na `false` tak, jak pokazano w poniższej tabeli.`Debit` przykład operacji. Transakcja, której `Debit` używa operacja, nie zostanie zakończona do momentu wywołania <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> metody z ustawioną `true` właściwością, jak <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> pokazano w operacji `Credit1`, lub gdy wywoływana jest metoda, aby jawnie oznaczyć transakcja jako kompletna, jak pokazano w operacji `Credit2`. Należy zauważyć, że dwie operacje kredytowe są przedstawiane na potrzeby ilustracji i że pojedyncze operacje kredytowe byłyby bardziej typowe.  
   
     ```csharp
     [ServiceBehavior]  
@@ -162,7 +162,7 @@ Niniejszy przykład pokazuje różne aspekty Tworzenie usługi transakcyjnej i u
     }  
     ```  
   
-2. Na potrzeby korelacji transakcji, ustawienie <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> właściwość `false` wymaga użycia sesji powiązania. Wymóg ten jest określony za pomocą `SessionMode` właściwość <xref:System.ServiceModel.ServiceContractAttribute>.  
+2. Na potrzeby korelacji transakcji ustawienie <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> `false` właściwości wymaga użycia powiązania sesji. To wymaganie jest określone za `SessionMode` pomocą właściwości <xref:System.ServiceModel.ServiceContractAttribute>w.  
   
     ```csharp
     [ServiceContract(SessionMode = SessionMode.Required)]  
@@ -182,7 +182,7 @@ Niniejszy przykład pokazuje różne aspekty Tworzenie usługi transakcyjnej i u
   
 ### <a name="controlling-the-lifetime-of-a-transactional-service-instance"></a>Kontrolowanie okresu istnienia wystąpienia usługi transakcyjnej  
   
-1. Korzysta z usługi WCF <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> właściwości w celu określenia, czy podstawowe wystąpienie usługi jest wydane po zakończeniu transakcji. Ponieważ jest to `true`, chyba że skonfigurowano inaczej, zachowanie aktywacji programu WCF wystawach efektywne i przewidywalne "just-in-time". Wywołań do usługi kolejnych transakcji zapewnione zostaną nowe wystąpienie usługi z nie pozostałości transakcji poprzedniego stanu. Chociaż często jest to przydatne, czasami możesz chcieć zarządzania stanem w wystąpieniu usługi poza ukończenia transakcji. Przykłady tego byłoby w przypadku stanu wymagane lub dojścia do zasobów kosztowne można pobrać lub odtworzenia. Można to zrobić, ustawiając <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> właściwość `false`. Z tym ustawieniem wystąpienie i każdy stan skojarzony będą dostępne w kolejnych wywołaniach. Korzystając z tego, dokładnie rozważyć do kiedy i jak stanu i transakcje zostaną wyczyszczone i zakończone. W poniższym przykładzie pokazano, jak to zrobić poprzez utrzymywanie wystąpienie z `runningTotal` zmiennej.  
+1. Funkcja WCF używa <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> właściwości, aby określić, czy bazowe wystąpienie usługi jest wydawany po zakończeniu transakcji. Ponieważ ta wartość domyślna `true`to, o ile nie zostanie skonfigurowany w inny sposób, usługa WCF wykazuje wydajne i przewidywalne zachowanie aktywacji "just-in-Time". Wywołania usługi w kolejnej transakcji są gwarantowane nowym wystąpieniem usługi bez postanowień poprzedniego stanu transakcji. Chociaż jest to często przydatne, czasami warto zachować stan w ramach wystąpienia usługi poza ukończeniem transakcji. Przykłady tego stanu byłyby kosztowne do pobrania lub odtworzenia zasobów. Można to zrobić, ustawiając <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> właściwość na. `false` W przypadku tego ustawienia wystąpienie i wszystkie powiązane Stany będą dostępne po kolejnych wywołaniach. W tym celu należy zwrócić szczególną uwagę na to, kiedy i w jaki sposób stan i transakcje zostaną wyczyszczone i zakończone. Poniższy przykład demonstruje, jak to zrobić, utrzymując wystąpienie ze `runningTotal` zmienną.  
   
     ```csharp
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  
@@ -217,4 +217,4 @@ Niniejszy przykład pokazuje różne aspekty Tworzenie usługi transakcyjnej i u
     ```  
   
     > [!NOTE]
-    >  Ponieważ okres istnienia wystąpienia jest zachowanie wewnętrznych z usługą i kontrolowany za pośrednictwem <xref:System.ServiceModel.ServiceBehaviorAttribute> , nie modyfikacji konfiguracji usługi lub kontraktu usługi jest wymagana właściwość można ustawić zachowanie wystąpienia. Ponadto podczas transmisji będzie zawierać nie reprezentację.
+    > Ponieważ okres istnienia wystąpienia jest zachowaniem wewnętrznym dla usługi i kontrolowanym przez <xref:System.ServiceModel.ServiceBehaviorAttribute> właściwość, nie jest wymagane żadne modyfikacje w konfiguracji usługi lub kontrakcie usługi, aby można było ustawić zachowanie wystąpienia. Ponadto drut nie będzie zawierał żadnych reprezentacji.

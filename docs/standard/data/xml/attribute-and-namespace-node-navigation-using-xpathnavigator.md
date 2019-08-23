@@ -5,22 +5,22 @@ ms.technology: dotnet-standard
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f2be5881a7f663b13dd13ffc0e0faf88afd7efc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4188896fb36d8535f86b245c3b1942f5a058da9b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647960"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936833"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>Nawigacja po atrybutach i przestrzeni nazw węzła przy użyciu klasy XPathNavigator
-<xref:System.Xml.XPath.XPathNavigator> Klasa oferuje dwa rodzaje metod nawigowania, pierwszy zestaw znaleziony w [węzła zestawu nawigacji przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) tematu, są używane do nawigacji *zestaw węzłów* w <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> obiektu. Drugi zestaw, opisane w tym temacie służą do nawigacji *węzłów atrybutu i przestrzeni nazw* w <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> obiektu.  
+<xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> [](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) Klasa zawiera dwa zestawy metod nawigacji, pierwszy zestaw, który znajduje się w obszarze nawigacji zestawu węzłów za pomocą elementu XPathNavigator, służy do nawigowania po zestawach węzłów w obiekcie lub. <xref:System.Xml.XPath.XPathNavigator> Drugi zestaw, opisany w tym temacie, służy do nawigowania po *węzłach atrybutów i przestrzeni nazw* <xref:System.Xml.XPath.XPathDocument> w <xref:System.Xml.XmlDocument> obiekcie or.  
   
-## <a name="attribute-node-navigation"></a>Nawigacja węzłów atrybutu  
- Atrybuty to właściwości elementu, nie elementów podrzędnych elementu. Ta różnica jest ważna, ze względu na metody <xref:System.Xml.XPath.XPathNavigator> klasy służące do nawigacji węzłów równorzędnych, nadrzędnych i podrzędnych.  
+## <a name="attribute-node-navigation"></a>Nawigacja węzła atrybutu  
+ Atrybuty są właściwościami elementu, a nie elementem podrzędnym elementu. Ta różnica jest ważna, ponieważ metody <xref:System.Xml.XPath.XPathNavigator> klasy używane do nawigowania w węzłach równorzędnych, nadrzędnych i podrzędnych.  
   
- Na przykład <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> i <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> metod nie są używane do nawigacji z elementu, atrybutu lub między atrybutami. Zamiast tego atrybuty mają różne metody nawigacji.  
+ Na przykład <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> metody i <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> nie są używane do nawigowania po elemencie do atrybutu lub między atrybutami. Zamiast tego atrybuty mają różne metody nawigacji.  
   
- Poniżej przedstawiono atrybut metody nawigacji <xref:System.Xml.XPath.XPathNavigator> klasy.  
+ Poniżej przedstawiono metody <xref:System.Xml.XPath.XPathNavigator> nawigacji atrybutów klasy.  
   
 - <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A>  
   
@@ -28,17 +28,17 @@ ms.locfileid: "64647960"
   
 - <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A>  
   
- Jeśli bieżący węzeł jest elementem, możesz użyć <xref:System.Xml.XPath.XPathNavigator.HasAttributes%2A> właściwości, aby zobaczyć, czy istnieją jakiekolwiek atrybuty skojarzone z elementem. Po wiadomo, że element ma atrybuty, istnieje kilka metod uzyskania dostępu do atrybutów. Aby pobrać jeden atrybut z elementu, użyj <xref:System.Xml.XPath.XPathNavigator.GetAttribute%2A> metody. Aby przenieść <xref:System.Xml.XPath.XPathNavigator> do określonego atrybutu, należy użyć <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A> metody. Można również wykonać iterację przez każdego atrybutu element przy użyciu <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A> metody następuje wielu wywołań <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A> metody.  
+ Gdy bieżącym węzłem jest element, można użyć <xref:System.Xml.XPath.XPathNavigator.HasAttributes%2A> właściwości, aby sprawdzić, czy istnieją atrybuty skojarzone z elementem. Gdy wiadomo, że element ma atrybuty, istnieje wiele metod uzyskiwania dostępu do atrybutów. Aby pobrać pojedynczy atrybut z elementu, użyj <xref:System.Xml.XPath.XPathNavigator.GetAttribute%2A> metody. Aby przenieść <xref:System.Xml.XPath.XPathNavigator> do określonego atrybutu, <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A> Użyj metody. Można również <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A> <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A> wykonać iterację każdego atrybutu elementu przy użyciu metody, a następnie wiele wywołań metody.  
   
 > [!NOTE]
->  Gdy <xref:System.Xml.XPath.XPathNavigator> obiektu jest ustawiony na węzeł atrybutu lub nazw <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> i <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> metody zawsze zwracają `false`, i nie mają wpływu na pozycję <xref:System.Xml.XPath.XPathNavigator>. Wyjątki są <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>, i <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A> metody.  
+> <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A> <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A> <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A> <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A> <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A> `false` <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> Gdy obiekt jest umieszczony w węźle atrybutu lub przestrzeni nazw, metody<xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> ,,,, i zawsze zwracają, <xref:System.Xml.XPath.XPathNavigator> i nie mają wpływu na pozycję <xref:System.Xml.XPath.XPathNavigator>. Wyjątkami są <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>metody, <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>, i <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A> .  
   
-## <a name="namespace-node-navigation"></a>Nawigacja węzłów Namespace  
- Każdy element ma skojarzony zestaw przestrzeni nazw węzłów, jednej dla każdego prefiksu unikatowych nazw, który jest powiązany z przestrzeni nazw URI w zakresie elementu (łącznie z prefiksem XML powiązany z `http://www.w3.org/XML/1998/namespace` przestrzeń nazw, która została niejawnie zadeklarowana w każdym dokumencie XML) i jeden dla domyślny obszar nazw, jeśli znajduje się w zakresie dla elementu. Element jest elementem nadrzędnym każdego z tych węzłów nazw; jednak węzła obszaru nazw nie jest elementem podrzędnym odpowiedniego elementu nadrzędnego.  
+## <a name="namespace-node-navigation"></a>Nawigowanie po węźle przestrzeni nazw  
+ Każdy element ma skojarzony zestaw węzłów przestrzeni nazw, jeden dla każdego odrębnego prefiksu przestrzeni nazw, który jest powiązany z identyfikatorem URI przestrzeni nazw w zakresie dla elementu (łącznie z prefiksem XML związanym `http://www.w3.org/XML/1998/namespace` z przestrzenią nazw, która jest niejawnie zadeklarowana w każdym dokumencie XML). i jeden dla domyślnej przestrzeni nazw, jeśli jest w zakresie dla elementu. Element jest elementem nadrzędnym każdego z tych węzłów nazw; jednak węzła obszaru nazw nie jest elementem podrzędnym odpowiedniego elementu nadrzędnego.  
   
- Podobnie jak w przypadku atrybutów, <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> i <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> metod nie są używane do nawigacji z elementu do węzła obszaru nazw lub między węzły przestrzeni nazw. Zamiast tego węzły przestrzeni nazw mają różne metody nawigacji.  
+ Podobnie jak w przypadku atrybutów <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> , <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> metody i nie są używane do nawigowania z elementu do węzła obszaru nazw lub między węzłami przestrzeni nazw. Zamiast tego węzły przestrzeni nazw mają różne metody nawigacji.  
   
- Poniżej przedstawiono przestrzeń nazw metody nawigacji <xref:System.Xml.XPath.XPathNavigator> klasy.  
+ Poniżej przedstawiono metody <xref:System.Xml.XPath.XPathNavigator> nawigacji przestrzeni nazw klasy.  
   
 - <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A>  
   
@@ -46,15 +46,15 @@ ms.locfileid: "64647960"
   
 - <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>  
   
- Istnieje co najmniej jeden węzeł przestrzeni nazw w zakresie dla każdego elementu w dokumencie XML. Jest to węzeł przestrzeni nazw z prefiksem `xml` i identyfikator URI przestrzeni nazw `http://www.w3.org/XML/1998/namespace`. Aby pobrać identyfikator URI w zakresie, w szczególności prefiks przestrzeni nazw, należy użyć <xref:System.Xml.XPath.XPathNavigator.GetNamespace%2A> metody. Aby przenieść <xref:System.Xml.XPath.XPathNavigator> obiektu użycia określonej przestrzeni nazw węzła <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A> metody. Można również iteracja każdego węzła obszaru nazw, w zakresie dla elementu za pomocą <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> metody następuje wielu wywołań <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> metody.  
+ W zakresie dla każdego elementu w dokumencie XML zawsze występuje co najmniej jeden węzeł przestrzeni nazw. Jest to węzeł przestrzeni nazw z prefiksem `xml` i identyfikatorem `http://www.w3.org/XML/1998/namespace`URI przestrzeni nazw. Aby pobrać identyfikator URI przestrzeni nazw w zakresie o określonym prefiksie, użyj <xref:System.Xml.XPath.XPathNavigator.GetNamespace%2A> metody. Aby przenieść <xref:System.Xml.XPath.XPathNavigator> obiekt do określonego węzła obszaru nazw, <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A> Użyj metody. Można również wykonać iterację dla każdego węzła przestrzeni nazw w zakresie dla elementu przy użyciu <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> metody, a po niej wiele wywołań <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> metody.  
   
 > [!NOTE]
->  Gdy <xref:System.Xml.XPath.XPathNavigator> obiektu jest ustawiony na węzeł atrybutu lub nazw <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> i <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> metody zawsze zwracają `false`, i nie mają wpływu na pozycję <xref:System.Xml.XPath.XPathNavigator>. Wyjątki są <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>, i <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A> metody.  
+> <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A> <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A> <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A> <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A> <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A> `false` <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> Gdy obiekt jest umieszczony w węźle atrybutu lub przestrzeni nazw, metody<xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> ,,,, i zawsze zwracają, <xref:System.Xml.XPath.XPathNavigator> i nie mają wpływu na pozycję <xref:System.Xml.XPath.XPathNavigator>. Wyjątkami są <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>metody, <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>, i <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A> .  
   
 ### <a name="the-xpathnamespacescope-enumeration"></a>Wyliczenie XPathNamespaceScope  
- Podczas przechodzenia węzły przestrzeni nazw <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> i <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> można wywołać metody <xref:System.Xml.XPath.XPathNamespaceScope> parametru. Te metody będą działały inaczej niż ich odpowiedniki o nazwie bez parametrów. <xref:System.Xml.XPath.XPathNamespaceScope> Wyliczenie ma wartości <xref:System.Xml.XPath.XPathNamespaceScope.All>, <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>, lub <xref:System.Xml.XPath.XPathNamespaceScope.Local>.  
+ Podczas nawigowania po węzłach <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> przestrzeni <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> nazw metody i <xref:System.Xml.XPath.XPathNamespaceScope> mogą być wywoływane z parametrem. Metody te zachowują się inaczej niż ich odpowiedniki wywołane bez parametrów. Wyliczenie zawiera <xref:System.Xml.XPath.XPathNamespaceScope.All>wartości ,<xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>, lub <xref:System.Xml.XPath.XPathNamespaceScope.Local>. <xref:System.Xml.XPath.XPathNamespaceScope>  
   
- W poniższych przykładach pokazano, jakie przestrzenie nazw są zwracane przez <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> i <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> metod na różnych zakresów w dokumentach XML.  
+ W poniższych przykładach pokazano, jakie przestrzenie nazw <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> są <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> zwracane przez metody i w różnych zakresach w dokumencie XML.  
   
 ```xml  
 <root>  
@@ -64,18 +64,18 @@ ms.locfileid: "64647960"
 </root>  
 ```  
   
- Sekwencja przestrzeni nazw (przestrzeń nazw <xref:System.Xml.XPath.XPathNavigator> jest umieszczony na po wywołaniu <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> metody następuje szereg wywołań do <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> metody) jest następujący.  
+ Sekwencja przestrzeni nazw (przestrzeń nazw <xref:System.Xml.XPath.XPathNavigator> umieszczona po <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> wywołaniu metody, a następnie <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> seria wywołań metody) jest następująca.  
   
-- Ustawiony na `element2`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"`, i `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
+- Po ustawieniu `element2`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"`, i `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
   
-- Ustawiony na `element1`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"`, i `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
+- Po ustawieniu `element1`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"`, i `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
   
-- Ustawiony na `root`: `xmlns:xml="http://www.w3.org/XML/1998/namespace".`  
+- Po ustawieniu `root`:`xmlns:xml="http://www.w3.org/XML/1998/namespace".`  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator> Klasa zwraca węzły przestrzeni nazw w kolejności odwrotnej dokumentu. W związku z tym <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> zasadniczo przechodzi do ostatniego węzła obszaru nazw w bieżącym zakresie.  
+> <xref:System.Xml.XPath.XPathNavigator> Klasa zwraca węzły przestrzeni nazw w kolejności odwrotnego dokumentu. W związku <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> z tym, zasadniczo przenoszone do ostatniego węzła przestrzeni nazw w bieżącym zakresie.  
   
- W poniższych przykładach pokazano, jakie przestrzenie nazw są zwracane przez <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> i <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> metod z <xref:System.Xml.XPath.XPathNamespaceScope> wyliczenie określona w różnych zakresów w dokumentach XML.  
+ W poniższych przykładach pokazano, jakie przestrzenie nazw <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> są <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> zwracane przez metody <xref:System.Xml.XPath.XPathNamespaceScope> i z wyliczeniem określonym w różnych zakresach w dokumencie XML.  
   
 ```xml  
 <root xmlns="http://www.contoso.com" xmlns:a="http://www.contoso.com/a" xmlns:b="http://www.contoso.com/b">  
@@ -85,16 +85,16 @@ ms.locfileid: "64647960"
 </root>  
 ```  
   
- Ustawiony na `child2`, sekwencji nazw (przestrzeń nazw <xref:System.Xml.XPath.XPathNavigator> jest umieszczony na po wywołaniu <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> metody następuje szereg wywołań do <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> metody) jest następująca.  
+ Po włączeniu `child2`kolejność przestrzeni nazw ( <xref:System.Xml.XPath.XPathNavigator> przestrzeń nazw <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> umieszczona po wywołaniu metody, <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> a następnie seria wywołań metody) jest następująca.  
   
-- <xref:System.Xml.XPath.XPathNamespaceScope.All>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"`, `xmlns="http://www.contoso.com"`, i `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
+- <xref:System.Xml.XPath.XPathNamespaceScope.All>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, ,,`xmlns=""`, i .`xmlns:xml="http://www.w3.org/XML/1998/namespace"` `xmlns:b="http://www.contoso.com/b"` `xmlns:a="http://www.contoso.com/a"` `xmlns="http://www.contoso.com"`  
   
-- <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"`, i `xmlns="http://www.contoso.com"`.  
+- <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, ,,`xmlns=""`i .`xmlns="http://www.contoso.com"` `xmlns:b="http://www.contoso.com/b"` `xmlns:a="http://www.contoso.com/a"`  
   
 - <xref:System.Xml.XPath.XPathNamespaceScope.Local>: `xmlns:c="urn:c"`.  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator> Klasa zwraca węzły przestrzeni nazw w kolejności odwrotnej dokumentu. W związku z tym <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> zasadniczo przechodzi do ostatniego węzła obszaru nazw w bieżącym zakresie.  
+> <xref:System.Xml.XPath.XPathNavigator> Klasa zwraca węzły przestrzeni nazw w kolejności odwrotnego dokumentu. W związku <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> z tym, zasadniczo przenoszone do ostatniego węzła przestrzeni nazw w bieżącym zakresie.  
   
 ## <a name="see-also"></a>Zobacz także
 

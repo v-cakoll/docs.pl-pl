@@ -2,17 +2,17 @@
 title: Proces zakupów firmowych
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 83290245dd203d4bb63c96e94ca6bdafee4ecffb
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: d019c1915e691fcba00fa8f1b0884a898ce02fab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876173"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951527"
 ---
 # <a name="corporate-purchase-process"></a>Proces zakupów firmowych
-W tym przykładzie przedstawiono sposób tworzenia bardzo podstawowe żądania dla procesu zakupu propozycji (RFP) na podstawie z automatycznego najlepszym wyborem propozycji. Łączy ona <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, i <xref:System.Activities.Statements.ForEach%601> i niestandardowe działanie, aby utworzyć przepływ pracy, który reprezentuje proces.
+Ten przykład pokazuje, jak utworzyć bardzo podstawowe żądania zakupu na podstawie oferty (RFP) z automatycznym najlepszym wyborem oferty. Łączy <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>i iniestandardowąaktywnośćdotworzeniaprzepływupracy,któryreprezentujeproces.<xref:System.Activities.Statements.ForEach%601>
 
- W tym przykładzie zawiera aplikacji klienckiej ASP.NET, która umożliwia wchodzenie w interakcje z procesem jako uczestnicy różnych (jako oryginalnego zleceniodawcy lub określonego dostawcy).
+ Ten przykład zawiera aplikację kliencką ASP.NET, która umożliwia współpracę z procesem jako różnych uczestników (jako oryginalny obiekt żądający lub określony dostawca).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -30,145 +30,145 @@ W tym przykładzie przedstawiono sposób tworzenia bardzo podstawowe żądania d
 
 - Trwałość.
 
-- Trwałość informatycznych.
+- Trwałość schematized.
 
-- Śledzenie.
+- Pochodzenia.
 
-- Do śledzenia.
+- Funkcja.
 
-- Hosting [!INCLUDE[wf1](../../../../includes/wf1-md.md)] w różnych klientów (aplikacje sieci Web ASP.NET i WinForms aplikacji).
+- Hosting [!INCLUDE[wf1](../../../../includes/wf1-md.md)] w różnych klientach (ASP.NET aplikacje sieci Web i aplikacje WinForms).
 
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
+> `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
 ## <a name="description-of-the-process"></a>Opis procesu  
- Niniejszy przykład pokazuje implementację programu Windows Workflow Foundation (WF) w celu zbierania propozycji od dostawców na potrzeby ogólnego firmy.  
+ Ten przykład pokazuje implementację programu Windows Workflow Foundation (WF) do zbierania propozycji od dostawców dla firmy ogólnej.  
   
-1. Pracownik firmy X tworzy żądanie propozycji (RFP).  
+1. Pracownik firmy X tworzy żądanie oferty (RFP).  
   
-    1. Typy pracowników RFP tytuł i opis.  
+    1. Typy pracowników w tytule i opisie RFP.  
   
-    2. Pracownik wybiera dostawców, które chce zaprosić do przesyłania propozycji.  
+    2. Pracownik wybiera dostawców, którzy chcą zaprosić do przesyłania propozycji.  
   
-2. Pracownik przesyła propozycji.  
+2. Pracownik przesyła propozycję.  
   
     1. Tworzone jest wystąpienie przepływu pracy.  
   
-    2. Przepływ pracy czeka, aż wszyscy dostawcy do przedstawienia ich propozycji.  
+    2. Przepływ pracy czeka, aż wszyscy dostawcy przesłali swoje propozycje.  
   
-3. Po otrzymaniu wszystkich propozycji przepływ pracy wykonuje iterację przez wszystkie odebrane propozycje i wybiera najlepszą z nich.  
+3. Po otrzymaniu wszystkich propozycji przepływ pracy iteruje przez wszystkie otrzymane propozycje i wybiera najlepszy.  
   
-    1. Każdy dostawca ma reputację (w tym przykładzie są przechowywane na liście reputację w VendorRepository.cs).  
+    1. Każdy dostawca ma reputację (ten przykład zapisuje listę reputacji w VendorRepository.cs).  
   
-    2. Łączna wartość propozycji jest określana przez (wartość wpisana w przez dostawcę) * (Dostawca w zarejestrowany reputacji) / 100.  
+    2. Łączna wartość propozycji jest określana przez (wartość wpisaną przez dostawcę) * (zarejestrowana reputacja dostawcy)/100.  
   
-4. Oryginalny osoby żądającej widoczne przesłane propozycji. Najlepszą propozycję są prezentowane w specjalnej sekcji w raporcie.  
+4. Oryginalny obiekt żądający może zobaczyć wszystkie przesłane wnioski. Najlepsza propozycja jest przedstawiona w specjalnej sekcji w raporcie.  
   
-## <a name="process-definition"></a>Definicji procesu  
- Podstawowe zasady logiczne próbki używa <xref:System.Activities.Statements.ParallelForEach%601> działanie, które oczekuje na oferty z każdego dostawcy (przy użyciu niestandardowego działania, który tworzy zakładki) i rejestruje propozycji dostawcy jako RFP (przy użyciu <xref:System.Activities.Statements.InvokeMethod> działanie).  
+## <a name="process-definition"></a>Definicja procesu  
+ Podstawowa logika przykładu używa <xref:System.Activities.Statements.ParallelForEach%601> działania, które czeka na oferty od każdego dostawcy (przy użyciu niestandardowego działania, które tworzy zakładkę), i rejestruje propozycję dostawcy jako RFP ( <xref:System.Activities.Statements.InvokeMethod> przy użyciu działania).  
   
- Przykład następnie iterację przez wszystkie odebrane propozycji przechowywane w `RfpRepository`, obliczania skorygowany wartości (przy użyciu <xref:System.Activities.Statements.Assign> działania i <xref:System.Activities.Expressions> działania), i jeśli skorygowaną wartość jest lepsza niż poprzedniej ofercie najlepsze, Przypisuje nową wartość jako najlepszą ofertę (przy użyciu <xref:System.Activities.Statements.If> i <xref:System.Activities.Statements.Assign> działań).  
+ Następnie próbka wykonuje iterację we wszystkich odebranych propozycjach przechowywanych `RfpRepository`w, obliczaniu wartości skorygowanej ( <xref:System.Activities.Statements.Assign> przy użyciu <xref:System.Activities.Expressions> działania i działań), a jeśli skorygowana wartość jest lepsza niż poprzednia Najlepsza oferta, przypisuje nową wartość jako najlepszą ofertę (przy użyciu <xref:System.Activities.Statements.If> i <xref:System.Activities.Statements.Assign> działania).  
   
 ## <a name="projects-in-this-sample"></a>Projekty w tym przykładzie  
  Ten przykład zawiera następujące projekty.  
   
 |Projekt|Opis|  
 |-------------|-----------------|  
-|Wspólne|Obiekty jednostki, używane w ramach procesu (żądanie propozycji, dostawcy i propozycje dostawcy).|  
-|WfDefinition|Definicja procesu (jako [!INCLUDE[wf1](../../../../includes/wf1-md.md)] program) i host (`PurchaseProcessHost`) używane przez aplikacje klienckie do tworzenia i używania wystąpienia przepływu pracy procesu zakupu.|  
-|Klient sieci Web|Aplikacja klienta platformy ASP.NET, która umożliwia użytkownikom tworzenia i uczestniczyć w procesie zakupu wystąpień. Używa innych utworzonych niestandardowo hosta do interakcji z aparatu przepływu pracy.|  
-|WinFormsClient|Aplikacja kliencka Windows Forms, który umożliwia użytkownikom tworzenia i uczestniczyć w procesie zakupu wystąpień. Używa innych utworzonych niestandardowo hosta do interakcji z aparatu przepływu pracy.|  
+|Wspólne|Obiekty jednostek używane w procesie (żądanie oferty, dostawcy i propozycja dostawcy).|  
+|WfDefinition|Definicja procesu (jako [!INCLUDE[wf1](../../../../includes/wf1-md.md)] program) i hosta (`PurchaseProcessHost`) używanego przez aplikacje klienckie do tworzenia i używania wystąpień przepływu pracy procesu zakupu.|  
+|Klient sieci Web|Aplikacja kliencka ASP.NET, która umożliwia użytkownikom tworzenie i uczestnictwo w wystąpieniach procesu zakupu. Używa niestandardowego hosta, aby móc korzystać z aparatu przepływu pracy.|  
+|WinFormsClient|Windows Forms aplikacji klienckiej, która umożliwia użytkownikom tworzenie wystąpień procesu zakupu i uczestnictwo w nich. Używa niestandardowego hosta, aby móc korzystać z aparatu przepływu pracy.|  
   
 ### <a name="wfdefinition"></a>WfDefinition  
- Poniższa tabela zawiera opis najważniejszych pliki w projekcie WfDefinition.  
+ Poniższa tabela zawiera opis najważniejszych plików w projekcie WfDefinition.  
   
 |Plik|Opis|  
 |----------|-----------------|  
-|IPurchaseProcessHost.cs|Interfejs dla hosta przepływu pracy.|  
-|PurchaseProcessHost.cs|Implementacja hosta przepływu pracy. Host abstrakcję szczegółów środowiska wykonawczego przepływów pracy i jest używany w aplikacjach klienckich do ładowania, uruchamiania i interakcję z `PurchaseProcess` wystąpienia przepływu pracy.|  
-|PurchaseProcessWorkflow.cs|Działanie, które zawiera definicję przepływu pracy procesu zakupu (pochodzi od klasy <xref:System.Activities.Activity>).<br /><br /> Działania, które wynikają z <xref:System.Activities.Activity> compose funkcji przez łączenie istniejących niestandardowe działania i działania z [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] biblioteki działań. Złożenia te działania to najprostszy sposób tworzenia funkcji niestandardowych.|  
-|WaitForVendorProposal.cs|To niestandardowe działanie jest pochodną <xref:System.Activities.NativeActivity> i tworzy nazwany zakładki, która musi zostać wznowiony później przez dostawcę podczas przesyłania propozycji.<br /><br /> Działań, które wynikają z <xref:System.Activities.NativeActivity>, podobne do tych, które wynikają z <xref:System.Activities.CodeActivity>, utworzenia imperatywne funkcji przez zastąpienie <xref:System.Activities.NativeActivity.Execute%2A>, również ma dostęp do wszystkich funkcji środowiska wykonawczego przepływów pracy za pośrednictwem <xref:System.Activities.ActivityContext> , które pobiera przekazany do `Execute` metody. Ten kontekst obsługuje planowanie i anulowanie podrzędnych utrwalić nie działań, Konfigurowanie strefy (w których środowisko uruchomieniowe nie pozostania danych przepływu pracy, takich jak transakcje niepodzielne bloki wykonywania), a <xref:System.Activities.Bookmark> obiektów (uchwyty wznawianie wstrzymana przepływów pracy).|  
-|TrackingParticipant.cs|A <xref:System.Activities.Tracking.TrackingParticipant> który odbiera wszystkie zdarzenia śledzenia i zapisuje je do pliku tekstowego.<br /><br /> Śledzenie uczestników są dodawane do wystąpienia przepływu pracy jako rozszerzenia.|  
-|XmlWorkflowInstanceStore.cs|Niestandardowy <xref:System.Runtime.DurableInstancing.InstanceStore> który zapisuje aplikacji przepływu pracy z plikami XML.|  
-|XmlPersistenceParticipant.cs|Niestandardowy <xref:System.Activities.Persistence.PersistenceParticipant> wystąpienia żądania dla propozycji który zapisuje do pliku XML.|  
-|AsyncResult.cs / CompletedAsyncResult.cs|Klasy pomocnika do implementowania wzorca asynchronicznego w składnikach trwałości.|  
+|IPurchaseProcessHost.cs|Interfejs hosta przepływu pracy.|  
+|PurchaseProcessHost.cs|Implementacja hosta dla przepływu pracy. Host stanowi streszczenie szczegółów środowiska uruchomieniowego przepływu pracy i jest używany we wszystkich aplikacjach klienckich do ładowania, uruchamiania i współdziałania z `PurchaseProcess` wystąpieniami przepływu pracy.|  
+|PurchaseProcessWorkflow.cs|Działanie, które zawiera definicję przepływu pracy procesu zakupu (pochodzi z <xref:System.Activities.Activity>).<br /><br /> Działania, które pochodzą <xref:System.Activities.Activity> od funkcji redagowania przez złożenie istniejących działań niestandardowych i działań [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] z biblioteki działań. Montaż tych działań jest najbardziej podstawowym sposobem na tworzenie funkcji niestandardowych.|  
+|WaitForVendorProposal.cs|To działanie niestandardowe pochodzi z <xref:System.Activities.NativeActivity> i tworzy nazwę zakładki, która musi zostać wznowiona później przez dostawcę podczas przesyłania propozycji.<br /><br /> Działania, które pochodzą <xref:System.Activities.NativeActivity>z, takie jak te, <xref:System.Activities.CodeActivity>które pochodzą z, tworzą bezwzględne funkcje przez zastępowanie <xref:System.Activities.NativeActivity.Execute%2A>, ale również mają dostęp do wszystkich funkcji środowiska uruchomieniowego przepływu pracy za pośrednictwem <xref:System.Activities.ActivityContext> , który pobiera przeszedł do `Execute` metody. Ten kontekst obsługuje planowanie i anulowanie działań podrzędnych, Konfigurowanie stref braku trwałego (bloków wykonywania, w których środowisko uruchomieniowe nie utrwala danych przepływu pracy, takich jak transakcje niepodzielne), oraz <xref:System.Activities.Bookmark> obiektów (uchwytów dla wznawianie wstrzymanych przepływów pracy).|  
+|TrackingParticipant.cs|A <xref:System.Activities.Tracking.TrackingParticipant> który odbiera wszystkie zdarzenia śledzenia i zapisuje je w pliku tekstowym.<br /><br /> Śledzenie uczestników jest dodawane do wystąpienia przepływu pracy jako rozszerzenia.|  
+|XmlWorkflowInstanceStore.cs|Niestandardowa <xref:System.Runtime.DurableInstancing.InstanceStore> , która zapisuje aplikacje przepływu pracy w plikach XML.|  
+|XmlPersistenceParticipant.cs|Niestandardowa <xref:System.Activities.Persistence.PersistenceParticipant> , która zapisuje wystąpienie żądania zaprojektowania w pliku XML.|  
+|AsyncResult.cs/CompletedAsyncResult.cs|Klasy pomocnika do implementowania wzorca asynchronicznego w składnikach trwałości.|  
   
 ### <a name="common"></a>Wspólne  
- Poniższa tabela zawiera opis najważniejszych klasy w projekcie wspólnej.  
+ Poniższa tabela zawiera opis najważniejszych klas w projekcie wspólnym.  
   
 |Class|Opis|  
 |-----------|-----------------|  
-|Dostawcy|Dostawca, który przesyła propozycje propozycji w żądaniu.|  
-|RequestForProposal|Żądanie do składania wniosków (RFP) to zaproszenie dla dostawców, którzy mają możliwość przesyłania propozycji dla określonego produktu lub usługi.|  
-|VendorProposal|Wniosek dostawcy do konkretnych RFP.|  
-|VendorRepository|Repozytorium dostawców. Ta implementacja zawiera kolekcję w pamięci wystąpień dostawcy i metod udostępniania tych wystąpień.|  
-|RfpRepository|Repozytorium żądania do składania wniosków. Ta implementacja zawiera używa Linq to XML w pliku XML żądania dla propozycji generowane przez informatycznych trwałości kwerendy. |  
-|IOHelper|Ta klasa obsługuje wszystkie problemy I dotyczących wejścia/wyjścia (folderów, ścieżek i itd.)|  
+|Dostawcy|Dostawca, który przesyła wnioski w żądaniach dotyczących propozycji.|  
+|RequestForProposal|Prośba o propozycje propozycji (RFP) to zaproszenie dla dostawców do przesyłania wniosków dotyczących określonego asortymentu lub usługi.|  
+|VendorProposal|Propozycja przedstawiona przez dostawcę do konkretnej RFPu.|  
+|VendorRepository|Repozytorium dostawców. Ta implementacja zawiera kolekcję wystąpień dostawcy i metod w celu udostępnienia tych wystąpień w pamięci.|  
+|RfpRepository|Repozytorium żądań dla propozycji. Ta implementacja zawiera użycie LINQ to XML do wysyłania zapytań do pliku XML żądań dotyczących propozycji wygenerowanych przez trwałość schematized. |  
+|IOHelper|Ta klasa obsługuje wszystkie problemy związane z we/wy (foldery, ścieżki itd.).|  
   
 ### <a name="web-client"></a>Klient sieci Web  
- Poniższa tabela zawiera opis najważniejszych stron sieci Web w projekcie sieci Web klienta.  
+ Poniższa tabela zawiera opis najważniejszych stron sieci Web w projekcie klienta sieci Web.  
   
 |Plik|Opis|  
 |-|-|  
-|CreateRfp.aspx|Tworzy i przesyła nowe żądanie do składania wniosków.|  
-|Default.aspx|Pokazuje wszystkich aktywnych i zakończonych żądań do składania wniosków.|  
-|GetVendorProposal.aspx|Pobiera propozycji od dostawcy w żądaniu konkretnych propozycji. Ta strona jest używane tylko przez dostawców.|  
-|ShowRfp.aspx|Pokaż wszystkie informacje o żądaniu konkurs (propozycji odebrane, dat, wartości i innych informacji). Ta strona jest używana tylko przez autora żądania dla propozycji.|  
+|CreateRfp.aspx|Tworzy i przesyła nowe żądanie dotyczące propozycji.|  
+|Default.aspx|Pokazuje wszystkie aktywne i zakończone żądania dla propozycji.|  
+|GetVendorProposal.aspx|Pobiera propozycję od dostawcy w konkretnym żądaniu na potrzeby składania propozycji. Ta strona jest używana tylko przez dostawców.|  
+|ShowRfp.aspx|Pokaż wszystkie informacje na temat żądania propozycji (odebrane propozycje, daty, wartości i inne informacje). Ta strona jest używana tylko przez twórcę żądania propozycji.|  
   
 ### <a name="winforms-client"></a>Klient WinForms  
- Poniższa tabela zawiera opis najważniejszych formularze w projekcie Windows Forms.  
+ Poniższa tabela zawiera opis najważniejszych formularzy w projekcie win Forms.  
   
 |Formularz|Opis|  
 |-|-|  
-|NewRfp|Tworzy i przesyła nowe żądanie do składania wniosków.|  
-|ShowProposals|Pokaż wszystkich aktywnych i zakończonych żądań do składania wniosków. **Uwaga:**  Może być konieczne kliknięcie **Odśwież** przycisku w interfejsie użytkownika, aby zobaczyć zmiany w tym ekranie, po utworzeniu lub zmodyfikować żądanie dla propozycji.|  
-|SubmitProposal|Uzyskać propozycji od dostawcy w żądaniu konkretnych propozycji. To okno jest używane tylko przez dostawców.|  
-|ViewRfp|Pokaż wszystkie informacje o żądaniu konkurs (propozycji odebrane, dat, wartości i innych informacji). To okno jest używana tylko przez autora żądania do składania wniosków.|  
+|NewRfp|Tworzy i przesyła nowe żądanie dotyczące propozycji.|  
+|ShowProposals|Pokaż wszystkie aktywne i zakończone żądania dla propozycji. **Uwaga:**  Może być konieczne kliknięcie przycisku **Odśwież** w interfejsie użytkownika, aby zobaczyć zmiany na tym ekranie po utworzeniu lub zmodyfikowaniu żądania dla propozycji.|  
+|SubmitProposal|Uzyskaj propozycję od dostawcy w konkretnym żądaniu na potrzeby składania ofert. To okno jest używane tylko przez dostawców.|  
+|ViewRfp|Pokaż wszystkie informacje na temat żądania propozycji (odebrane propozycje, daty, wartości i inne informacje). To okno jest używane tylko przez twórcę żądania do składania wniosków.|  
   
-### <a name="persistence-files"></a>Trwałe pliki  
- W poniższej tabeli przedstawiono pliki generowane przez dostawcę trwałości (`XmlPersistenceProvider`) znajdują się w ścieżce folderu tymczasowego bieżącego systemu (przy użyciu <xref:System.IO.Path.GetTempPath%2A>). Plik śledzenia jest tworzony w bieżącej ścieżce wykonywania.  
+### <a name="persistence-files"></a>Pliki trwałości  
+ W poniższej tabeli przedstawiono pliki wygenerowane przez dostawcę trwałości (`XmlPersistenceProvider`) znajdują się w ścieżce do tymczasowego folderu systemowego (przy użyciu programu <xref:System.IO.Path.GetTempPath%2A>). Plik śledzenia jest tworzony w bieżącej ścieżce wykonania.  
   
 |Nazwa pliku|Opis|Ścieżka|  
 |-|-|-|  
-|rfps.xml|Plik XML z wszystkich aktywnych i zakończonych żądań do składania wniosków.|<xref:System.IO.Path.GetTempPath%2A>|  
-|[identyfikator instanceid]|Ten plik zawiera wszystkie informacje na temat wystąpienia przepływu pracy.<br /><br /> Ten plik został wygenerowany przez implementację informatycznych trwałości (PersistenceParticipant w XmlPersistenceProvider).|<xref:System.IO.Path.GetTempPath%2A>|  
-|[instanceId].tracking|Plik tekstowy, wszystkie zdarzenia, które wystąpiły w ciągu konkretne wystąpienie.<br /><br /> Ten plik jest generowany przez TrackingParticipant.|<xref:System.IO.Path.GetTempPath%2A>|  
-|PurchaseProcess.Tracing.TraceLog.txt|Plik śledzenia generowane przez przepływ pracy na podstawie parametrów konfiguracji w pliku App.config lub Web.config plików.|Bieżąca ścieżka wykonywania|  
+|RFPs. XML|Plik XML ze wszystkimi aktywnymi i zakończonymi żądaniami dotyczącymi propozycji.|<xref:System.IO.Path.GetTempPath%2A>|  
+|Identyfikator wystąpienia|Ten plik zawiera wszystkie informacje dotyczące wystąpienia przepływu pracy.<br /><br /> Ten plik jest generowany przez implementację trwałości schematized (PersistenceParticipant w XmlPersistenceProvider).|<xref:System.IO.Path.GetTempPath%2A>|  
+|[instanceId].tracking|Plik tekstowy ze wszystkimi zdarzeniami, które wystąpiły w konkretnym wystąpieniu.<br /><br /> Ten plik jest generowany przez TrackingParticipant.|<xref:System.IO.Path.GetTempPath%2A>|  
+|PurchaseProcess. Tracing. TraceLog. txt|Plik śledzenia generowany przez przepływ pracy na podstawie parametrów konfiguracyjnych w plikach App. config lub Web. config.|Bieżąca ścieżka wykonywania|  
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
-1. Za pomocą programu Visual Studio 2010, otwórz plik rozwiązania PurchaseProcess.sln.  
+1. Za pomocą programu Visual Studio 2010 Otwórz plik rozwiązania PurchaseProcess. sln.  
   
-2. Aby wykonać projektu sieci Web klienta, otwórz **Eksploratora rozwiązań** i kliknij prawym przyciskiem myszy **klienta sieci Web** projektu. Wybierz **Ustaw jako projekt startowy**.  
+2. Aby wykonać projekt klienta sieci Web, Otwórz **Eksplorator rozwiązań** i kliknij prawym przyciskiem myszy projekt **klienta sieci Web** . Wybierz pozycję **Ustaw jako projekt startowy**.  
   
-3. Aby wykonać projekt klienta WinForms, otwórz **Eksploratora rozwiązań** i kliknij prawym przyciskiem myszy **WinForms klienta** projektu. Wybierz **Ustaw jako projekt startowy**.  
+3. Aby wykonać projekt klienta WinForms, Otwórz **Eksplorator rozwiązań** i kliknij prawym przyciskiem myszy projekt **WinForms Client** . Wybierz pozycję **Ustaw jako projekt startowy**.  
   
 4. Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.  
   
-5. Aby uruchomić rozwiązanie, naciśnij kombinację klawiszy CTRL + F5.  
+5. Aby uruchomić rozwiązanie, naciśnij klawisze CTRL + F5.  
   
 ### <a name="web-client-options"></a>Opcje klienta sieci Web  
   
-- **Utwórz nowy RFP**: Tworzy nowe żądanie propozycji (RFP) i rozpoczyna proces zakupu przepływu pracy.  
+- **Utwórz nowy RFP**: Tworzy nowe żądanie dotyczące propozycji (RFP) i uruchamia przepływ pracy procesu zakupu.  
   
-- **Odśwież**: Odświeża listę aktywnych i RFPs zostało zakończone w głównym oknie.  
+- **Odśwież**: Odświeża listę aktywnych i zakończonych RFPs w oknie głównym.  
   
-- **Widok**: Zostanie wyświetlona zawartość istniejącego RFP. Dostawcy mogą przesyłać propozycje ich (Jeśli zaproszenie lub RFP nie zostało zakończone.).  
+- **Widok**: Pokazuje zawartość istniejącego RFP. Dostawcy mogą przesyłać swoje propozycje (jeśli zaproszeni lub RFP nie zostały zakończone).  
   
-- Wyświetl jako: Użytkownik ma dostęp RFP przy użyciu różnych tożsamości, wybierając odpowiednią uczestnikiem **Wyświetl jako** pola kombi w siatce RFPs active.  
+- Wyświetl jako: Użytkownik może uzyskać dostęp do RFP przy użyciu różnych tożsamości, wybierając żądanego uczestnika w **widoku** pole kombi w aktywnej siatce RFPs.  
   
 ### <a name="winforms-client-options"></a>Opcje klienta WinForms  
   
-- **Utwórz RFP**: Tworzy nowe żądanie propozycji (RFP) i rozpoczyna proces zakupu przepływu pracy.  
+- **Utwórz RFP**: Tworzy nowe żądanie dotyczące propozycji (RFP) i uruchamia przepływ pracy procesu zakupu.  
   
-- **Odśwież**: Odświeża listę aktywnych i RFPs zostało zakończone w głównym oknie.  
+- **Odśwież**: Odświeża listę aktywnych i zakończonych RFPs w oknie głównym.  
   
-- **Wyświetl RFP**: Zostanie wyświetlona zawartość istniejącego RFP. Dostawcy mogą przesyłać propozycje ich (Jeśli zaproszenie lub RFP nie zostało zakończone.)  
+- **Wyświetl RFP**: Pokazuje zawartość istniejącego RFP. Dostawcy mogą przesyłać swoje propozycje (jeśli nie zakończył się zaproszenie lub RFP)  
   
-- **Połącz się jako**: Użytkownik ma dostęp RFP przy użyciu różnych tożsamości, wybierając odpowiednią uczestnikiem **Wyświetl jako** pola kombi w siatce RFPs active.
+- **Połącz jako**: Użytkownik może uzyskać dostęp do RFP przy użyciu różnych tożsamości, wybierając żądanego uczestnika w **widoku** pole kombi w aktywnej siatce RFPs.

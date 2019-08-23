@@ -2,47 +2,47 @@
 title: Niestandardowy element przechwytujący komunikaty
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 530c626a1f134190bb90fcee3a4e3bbba91d9516
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: dfff099a6bf45911f9327622a84a8803ad7dd0ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878307"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953674"
 ---
 # <a name="custom-message-interceptor"></a>Niestandardowy element przechwytujący komunikaty
-Niniejszy przykład pokazuje użycie kanału modelu rozszerzalności. W szczególności pokazuje sposób implementacji element niestandardowego powiązania, który pokazuje tworzenie fabryki kanałów i odbiorniki kanałów, aby przechwycić wszystkie komunikaty przychodzące i wychodzące w określonym punkcie w stosie czasu wykonywania. Przykład zawiera również klienta i serwera, które przedstawiają korzystanie z tych niestandardowych fabryk.  
+Ten przykład ilustruje użycie modelu rozszerzalności kanałów. W szczególności pokazano, jak zaimplementować niestandardowy element powiązania, który tworzy fabryki kanałów i odbiorniki kanałów do przechwytywania wszystkich komunikatów przychodzących i wychodzących w konkretnym momencie w stosie czasu wykonywania. Przykład zawiera również klienta i serwer, który pokazuje użycie tych niestandardowych fabryk.  
   
- W tym przykładzie zarówno klient, jak i usługi są programy konsoli (.exe). Klient i usługa zarówno wprowadzić korzystanie z typowych biblioteki (.dll), który zawiera element niestandardowego powiązania i powiązane obiekty środowiska wykonawczego.  
+ W tym przykładzie zarówno klient, jak i usługa są programami konsolowymi (. exe). Klient i usługa korzystają ze wspólnej biblioteki (. dll), która zawiera niestandardowy element powiązania i powiązane z nim obiekty czasu wykonywania.  
   
 > [!NOTE]
->  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- Przykład w tym artykule opisano zalecane procedury tworzenia niestandardowym kanale warstwowych w Windows Communication Foundation (WCF), używając struktura kanału i zgodnie z najlepszymi rozwiązaniami WCF. Kroki, aby utworzyć niestandardowy kanał warstwowe są następujące:  
+ W przykładzie opisano zalecaną procedurę tworzenia niestandardowego kanału warstwowego w Windows Communication Foundation (WCF), przy użyciu struktury kanału oraz najlepszych rozwiązań w zakresie usług WCF. Poniżej przedstawiono procedurę tworzenia niestandardowego kanału warstwowego:  
   
-1. Zdecyduj, które kształty kanału usługi fabryki kanałów i będzie obsługiwać odbiornika kanałów.  
+1. Określ, które kształty kanałów będą obsługiwane przez fabrykę kanałów i odbiornik kanału.  
   
-2. Tworzenie fabryki kanałów i odbiornik kanału, który obsługuje kształty kanału.  
+2. Utwórz fabrykę kanałów i odbiornik kanału obsługujący kształty kanałów.  
   
-3. Dodaj element powiązania, który dodaje niestandardowy kanał warstwowej stos kanału.  
+3. Dodaj element powiązania, który dodaje niestandardowy kanał warstwowy do stosu kanału.  
   
-4. Dodaj sekcję rozszerzenia elementu powiązania do udostępnienia nowego elementu powiązania do konfiguracji systemu.  
+4. Dodaj sekcję rozszerzenie elementu powiązania, aby udostępnić nowy element powiązania do systemu konfiguracji.  
   
 ## <a name="channel-shapes"></a>Kształty kanału  
- Pierwszym krokiem podczas zapisywania w niestandardowym kanale warstwowej jest podjęcie decyzji, które kształty są wymagane dla kanału. Dla naszych Inspektor wiadomości, firma Microsoft wspiera dowolnego kształtu, który obsługuje warstwy poniżej nam (na przykład, jeśli można tworzyć warstwy poniżej nam <xref:System.ServiceModel.Channels.IOutputChannel> i <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, a następnie możemy także ujawniać <xref:System.ServiceModel.Channels.IOutputChannel> i <xref:System.ServiceModel.Channels.IDuplexSessionChannel>).  
+ Pierwszym krokiem w przypadku pisania niestandardowego kanału warstwowego jest określenie, które kształty są wymagane dla kanału. W naszym Inspektorze komunikatów obsługujemy dowolny kształt, który obsługuje warstwa poniżej US (na przykład jeśli warstwa poniżej Stanów Zjednoczonych może kompilować <xref:System.ServiceModel.Channels.IOutputChannel> i <xref:System.ServiceModel.Channels.IDuplexSessionChannel> <xref:System.ServiceModel.Channels.IOutputChannel> <xref:System.ServiceModel.Channels.IDuplexSessionChannel>).  
   
-## <a name="channel-factory-and-listener-factory"></a>Fabryka kanałów i fabryki odbiornika  
- Następnym krokiem w niestandardowym kanale warstwowej pisaniu jest utworzenie implementacji klasy <xref:System.ServiceModel.Channels.IChannelFactory> kanały klientów i z <xref:System.ServiceModel.Channels.IChannelListener> kanałach usługi.  
+## <a name="channel-factory-and-listener-factory"></a>Fabryka kanałów i fabryka odbiorników  
+ Następnym krokiem w przypadku pisania niestandardowego kanału warstwowego jest utworzenie implementacji <xref:System.ServiceModel.Channels.IChannelFactory> dla kanałów klienta <xref:System.ServiceModel.Channels.IChannelListener> i kanałów usługi.  
   
- W ramach tych zajęć wewnętrzna fabryka i odbiornik i delegować wszystkie elementy oprócz `OnCreateChannel` i `OnAcceptChannel` wywołania wewnętrzna fabryka i odbiornika.  
+ Klasy te przyjmują wewnętrzną fabrykę i odbiornik oraz umożliwiają delegowanie `OnCreateChannel` wszystkich `OnAcceptChannel` wywołań, ale do wewnętrznej fabryki i odbiornika.  
   
 ```  
 class InterceptingChannelFactory<TChannel> : ChannelFactoryBase<TChannel>  
@@ -52,24 +52,24 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>Dodawanie elementu powiązania  
- Przykładowa aplikacja definiuje element powiązania niestandardowego: `InterceptingBindingElement`. `InterceptingBindingElement` Trwa `ChannelMessageInterceptor` jako dane wejściowe i używa tych informacji `ChannelMessageInterceptor` do manipulowania wiadomości, które przechodzą przez go. Jest to jedyna klasa, która musi być publiczny. Fabryka, odbiornik i kanałów wszystkie można wewnętrznych implementacji interfejsów publicznych czasu wykonywania.  
+ Przykład definiuje niestandardowy element powiązania: `InterceptingBindingElement`. `InterceptingBindingElement`przyjmuje jako dane wejściowe i używa tego `ChannelMessageInterceptor` do manipulowania wiadomościami, które przechodzą przez nią. `ChannelMessageInterceptor` Jest to jedyna klasa, która musi być publiczna. Fabryki, odbiornik i kanały mogą być wewnętrznymi implementacjami publicznych interfejsów czasu wykonywania.  
   
 ```  
 public class InterceptingBindingElement : BindingElement  
 ```  
   
-## <a name="adding-configuration-support"></a>Dodanie obsługi konfiguracji  
- Można zintegrować z usługą Konfiguracja powiązania, biblioteka definiuje obsługi sekcji konfiguracji powiązania sekcji rozszerzenia elementu. Pliki konfiguracji klienta i serwera, należy zarejestrować rozszerzenie elementu powiązania przy użyciu systemu konfiguracji. Implementujące obiekty, które chcesz udostępnić ich elementu powiązania do konfiguracji systemu może pochodzić z tej klasy.  
+## <a name="adding-configuration-support"></a>Dodawanie obsługi konfiguracji  
+ W celu zintegrowania z konfiguracją powiązań Biblioteka definiuje procedurę obsługi sekcji konfiguracji jako element powiązania sekcji rozszerzenia. Pliki konfiguracji klienta i serwera muszą rejestrować rozszerzenie elementu powiązania z systemem konfiguracji. Realizatorzy, którzy chcą uwidocznić swój element powiązania w systemie konfiguracji, mogą pochodzić od tej klasy.  
   
 ```  
 public abstract class InterceptingElement : BindingElementExtensionElement { ... }  
 ```  
   
 ## <a name="adding-policy"></a>Dodawanie zasad  
- Do integracji z naszego systemu zasad `InterceptingBindingElement` implementuje IPolicyExportExtension celu sygnalizowania, że firma Microsoft powinny uczestniczyć w Generowanie zasad. Aby obsługiwać zasady importowania na wygenerowanego klienta, użytkownik może zarejestrować klasy pochodnej z `InterceptingBindingElementImporter` i zastąpić `CreateMessageInterceptor`(), aby wygenerować ich włączone zasady `ChannelMessageInterceptor` klasy.  
+ Aby przeprowadzić integrację z naszym systemem `InterceptingBindingElement` zasad, program implementuje IPolicyExportExtension, aby sygnalizować, że będziemy uczestniczyć w generowaniu zasad. Aby umożliwić obsługę importowania zasad na wygenerowanym kliencie, użytkownik może zarejestrować klasę `InterceptingBindingElementImporter` pochodną i zastąpić `CreateMessageInterceptor`() w celu wygenerowania klasy z obsługą `ChannelMessageInterceptor` zasad.  
   
-## <a name="example-droppable-message-inspector"></a>Przykład: Inspektor droppable wiadomości  
- Zawarte w przykładzie jest przykładem implementacji `ChannelMessageInspector` która powoduje porzucenie wiadomości.  
+## <a name="example-droppable-message-inspector"></a>Przykład: Inspektor komunikatów droppable  
+ W przykładzie przedstawiono przykładową implementację `ChannelMessageInspector` , która odrzuca komunikaty.  
   
 ```  
 class DroppingServerElement : InterceptingElement  
@@ -81,7 +81,7 @@ class DroppingServerElement : InterceptingElement
 }  
 ```  
   
- Można do niego dostęp z konfiguracji w następujący sposób:  
+ Możesz uzyskać do niego dostęp z konfiguracji w następujący sposób:  
   
 ```xml  
 <configuration>  
@@ -99,7 +99,7 @@ class DroppingServerElement : InterceptingElement
 </configuration>  
 ```  
   
- Na kliencie i serwerze umożliwiają wstawianie niestandardowych fabryk najniższy poziom ich stosów kanał w czasie wykonywania (na wyższym poziomie transportu) Ta sekcja konfiguracji nowo utworzony.  
+ Zarówno klient, jak i serwer używają tej nowo utworzonej sekcji konfiguracji, aby wstawić niestandardowe fabryki do najniższego poziomu swoich stosów kanałów czasu wykonywania (powyżej poziomu transportu).  
   
 ```xml  
 <customBinding>  
@@ -110,9 +110,9 @@ class DroppingServerElement : InterceptingElement
 </customBinding>  
 ```  
   
- Klient używa `MessageInterceptor` biblioteki, aby dodać niestandardowy nagłówek do nawet numerowane wiadomości. Usługa korzysta z drugiej strony `MessageInterceptor` biblioteki, aby usunąć wszystkie komunikaty, które nie mają tego pliku nagłówkowego specjalne.  
+ Klient używa `MessageInterceptor` biblioteki programu w celu dodania niestandardowego nagłówka do parzystych wiadomości. Usługa z drugiej strony używa `MessageInterceptor` biblioteki do usuwania wszelkich komunikatów, które nie mają tego nagłówka specjalnego.  
   
- Następujące dane wyjściowe z klienta powinien być widoczny po uruchomieniu usługi, a następnie klienta.  
+ Po uruchomieniu usługi należy zobaczyć następujące dane wyjściowe klienta programu, a następnie klienta.  
   
 ```  
 Reporting the next 10 wind speed  
@@ -134,7 +134,7 @@ Server dropped a message.
 Press ENTER to shut down client  
 ```  
   
- Klient raportuje 10 prędkość wiatru różnych do usługi, ale tylko połowę je za pomocą specjalnych nagłówków tagów.  
+ Klient raportuje 10 różnych szybkości wiatru do usługi, ale tylko Tagi mające połowę z nagłówka specjalnego.  
   
  W usłudze powinny zostać wyświetlone następujące dane wyjściowe:  
   
@@ -145,18 +145,18 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
 5 wind speed reports have been received.  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Instalowanie programu ASP.NET 4.0, używając następującego polecenia.  
+1. Zainstaluj ASP.NET 4,0 przy użyciu następującego polecenia.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-5. Uruchom najpierw Service.exe, a następnie uruchom Client.exe się i obejrzyj oba okna konsoli danych wyjściowych.  
+5. Uruchom najpierw program Service. exe, a następnie uruchom program Client. exe i obejrzyj oba okna konsoli dla danych wyjściowych.  

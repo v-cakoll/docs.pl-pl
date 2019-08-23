@@ -2,21 +2,21 @@
 title: <security> dla <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-ms.openlocfilehash: acb4d04663d841a9b494153caa180855959c145e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1bbc3a460ce707e71b72a469af2e03acd8dc79e5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670511"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936686"
 ---
-# <a name="security-of-netmsmqbinding"></a>\<Zabezpieczenia > z \<netMsmqBinding >
-Definiuje ustawienia zabezpieczeń dla powiązanie usługi MSMQ. Określa, czy włączono transportu lub zabezpieczeń protokołu SOAP, a jeśli tak, jakie poziomy tryb i ochrona uwierzytelniania są używane.  
+# <a name="security-of-netmsmqbinding"></a>\<> \<zabezpieczeń usługi msmqbinding >
+Definiuje ustawienia zabezpieczeń dla powiązania usługi MSMQ. Określa, czy zabezpieczenia transportu lub protokołu SOAP są włączone i, jeśli tak, jakiego trybu uwierzytelniania i poziomów ochrony są używane.  
   
  \<system.ServiceModel>  
-\<powiązania >  
+\<> powiązań  
 \<netMsmqBinding>  
-\<Powiązanie >  
-\<security>  
+\<> powiązania  
+\<> zabezpieczeń  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,20 +38,20 @@ Definiuje ustawienia zabezpieczeń dla powiązanie usługi MSMQ. Określa, czy w
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|tryb|Określa typ bezpieczeństwa, kontrolujące integralności, poufności i uwierzytelniania. Prawidłowe wartości są następujące:<br /><br /> -Brak: Powoduje to wyłączenie zabezpieczeń.<br />-Transport: Ochrona i uwierzytelniania są oferowane przez transportu. Dotyczy to zabezpieczeń wiadomości między menedżerami kolejki dwa. Nie ma żadnych zabezpieczeń udostępniane między aplikacją i Menedżer kolejki. Istniejące aplikacje usługi Msmq są funkcjonalnie równoważne z tym typem tryb zabezpieczeń.<br />-Komunikat o błędzie: Określa kompleksowe zabezpieczenia aplikacji. Nie ma żadnych zabezpieczeń będzie oferowana w cenie warstwy transportowej. Jest to podobne do zabezpieczeń oferowanych przez inne standardowe powiązania.<br />-Zarówno: Zapewnia bezpieczeństwo na transport i Warstwa obsługi wiadomości SOAP. Te same poświadczenia jest wymagana na obu poziomach.<br /><br /> Wartość domyślna to transportu. Ten atrybut jest typu <xref:System.ServiceModel.NetMsmqSecurityMode>.|  
+|tryb|Określa typ zabezpieczeń, który kontroluje integralność, poufność i uwierzytelnianie. Prawidłowe wartości to:<br /><br /> Dawaj Spowoduje to wyłączenie zabezpieczeń.<br />Transportu Ochrona i uwierzytelnianie są oferowane przez transport. Ma to zastosowanie do zabezpieczeń komunikatów między dwoma menedżerami kolejki. Nie ma żadnych zabezpieczeń oferowanych między aplikacją a menedżerem kolejki. Istniejące aplikacje MSMQ są funkcjonalnie równoważne z tego typu trybem zabezpieczeń.<br />Pojawi Określa zabezpieczenia aplikacji końcowej. Warstwa transportu nie oferuje żadnych zabezpieczeń. Jest to podobne do zabezpieczeń oferowanych przez inne powiązania standardowe.<br />Jedn Oferuje zabezpieczenia zarówno dla warstwy transportu, jak i protokołu SOAP. To samo poświadczenie jest wymagane na poziomie.<br /><br /> Wartością domyślną jest transport. Ten atrybut jest typu <xref:System.ServiceModel.NetMsmqSecurityMode>.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-netmsmqbinding.md)|Określa ustawienia zabezpieczenia wiadomości protokołu SOAP. Ten element jest typu <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement>.|  
-|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-netmsmqbinding.md)|Definiuje ustawienia zabezpieczenia transportu usługi MSMQ. Ten element jest typu <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
+|[\<message>](message-of-netmsmqbinding.md)|Definiuje ustawienia zabezpieczeń wiadomości protokołu SOAP. Ten element jest typu <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement>.|  
+|[\<> transportu](transport-of-netmsmqbinding.md)|Definiuje ustawienia zabezpieczeń dla transportu MSMQ. Ten element jest typu <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|powiązanie|Element powiązania [ \<netMsmqBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|  
+|powiązanie|Element Binding elementu [ \<webmsmqbinding >](netmsmqbinding.md)|  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -59,9 +59,9 @@ Definiuje ustawienia zabezpieczeń dla powiązanie usługi MSMQ. Określa, czy w
 - <xref:System.ServiceModel.NetMsmqBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetMsmqBindingElement.Security%2A>
 - <xref:System.ServiceModel.NetMsmqSecurity>
-- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
-- [Kolejki programu WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [Zabezpieczanie usług i klientów](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<> powiązania](../../../misc/binding.md)
+- [Kolejki programu WCF](../../../wcf/feature-details/queues-in-wcf.md)

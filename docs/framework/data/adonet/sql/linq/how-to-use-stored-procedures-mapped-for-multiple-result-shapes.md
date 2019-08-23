@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2b84dfe-7fec-489a-92de-45215cec4518
-ms.openlocfilehash: 406e44a0ee3b086ceb47b25a80c4fd0ff5a92607
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22614be8e53d975c4efdf7004f41906c58639c61
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902658"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938696"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Instrukcje: Używanie procedur składowanych zamapowanych na wiele kształtów wyników
-Podczas procedury składowanej może zwrócić wielu kształtów wyników, zwracany typ nie silnie typizowane do projekcji pojedynczego kształtu. Mimo że [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wygenerować wszystkich typów projekcji możliwe, nie wiedzieć, kolejność, w której zostanie zwrócony.  
+Gdy procedura składowana może zwracać wiele kształtów wyników, typ zwracany nie może być jednoznacznie wpisany do pojedynczego kształtu projekcji. Chociaż [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] program może generować wszystkie możliwe typy projekcji, nie może znać kolejności, w której zostaną zwrócone.  
   
- Natomiast tego scenariusza za pomocą procedur składowanych, które tworzą wielu kształtów wyników po kolei. Aby uzyskać więcej informacji, zobacz [jak: Używanie procedur składowanych zmapowanych do sekwencyjnych kształtów wyników](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md).  
+ Ten scenariusz należy wykonać z procedurami składowanymi, które tworzą sekwencyjnie wiele kształtów wynikowych. Aby uzyskać więcej informacji, zobacz [jak: Użyj procedur składowanych mapowanych na sekwencyjne kształty](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)wynikowe.  
   
- <xref:System.Data.Linq.Mapping.ResultTypeAttribute> Atrybut jest stosowany do procedur przechowywanych, które zwraca wiele typów wyników do określenia zestawu typów, które może zwracać procedury.  
+ Ten <xref:System.Data.Linq.Mapping.ResultTypeAttribute> atrybut jest stosowany do procedur składowanych, które zwracają wiele typów wyników, aby określić zestaw typów, które może zwracać procedura.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie kodu SQL kształtu wynik zależy od danych wejściowych (`shape =1` lub `shape = 2`). Nie wiesz, projekcji, które zostaną zwrócone najpierw.  
+ W poniższym przykładzie kodu SQL kształt wynik zależy od danych wejściowych (`shape =1` lub `shape = 2`). Nie wiesz, która projekcja zostanie najpierw zwrócona.  
   
 ```  
 CREATE PROCEDURE VariableResultShapes(@shape int)  
@@ -35,10 +35,10 @@ else if(@shape = 2)
  [!code-vb[DLinqSprox#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/northwind-sprox.vb#4)]  
   
 ## <a name="example"></a>Przykład  
- Aby wykonać tę procedurę składowaną należy użyć kodu podobnego do następującego.  
+ Aby wykonać tę procedurę składowaną, należy użyć kodu podobnego do poniższego.  
   
 > [!NOTE]
->  Należy użyć <xref:System.Data.Linq.IMultipleResults.GetResult%2A> wzorca, aby uzyskać moduł wyliczający odpowiedniego typu, w oparciu o swojej wiedzy na temat procedury składowanej.  
+> Aby uzyskać moduł wyliczający poprawnego typu, należy użyć <xref:System.Data.Linq.IMultipleResults.GetResult%2A> wzorca w zależności od wiedzy procedury składowanej.  
   
  [!code-csharp[DLinqSprox#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/Program.cs#5)]
  [!code-vb[DLinqSprox#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#5)]  

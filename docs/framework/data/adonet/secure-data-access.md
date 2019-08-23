@@ -2,90 +2,90 @@
 title: Bezpieczny dostęp do danych
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 32106f83785759f4e9aaadcf2198afdcdb24363d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7aa68842ab3733943f84e9d6d9157f7a3d65cac7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664223"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963139"
 ---
 # <a name="secure-data-access"></a>Bezpieczny dostęp do danych
-Aby pisać bezpieczny kod, ADO.NET, musisz znać mechanizmy zabezpieczeń dostępnych w podstawowym magazynie danych lub bazy danych. Należy również wziąć pod uwagę ryzyko związane z innych funkcji lub składniki, które Twoja aplikacja może zawierać.  
+Aby napisać bezpieczny kod ADO.NET, należy zapoznać się z mechanizmami zabezpieczeń dostępnymi w podstawowym magazynie danych lub w bazie danych. Należy również wziąć pod uwagę implikacje zabezpieczeń innych funkcji lub składników, które może zawierać aplikacja.  
   
 ## <a name="authentication-authorization-and-permissions"></a>Uwierzytelnianie, autoryzacja i uprawnienia  
- Podczas nawiązywania połączenia z programem Microsoft SQL Server, można użyć uwierzytelniania Windows, znany także jako zintegrowanych zabezpieczeń, która korzysta z tożsamości w bieżącym aktywnym użytkownikiem Windows, a nie przekazywanie identyfikator użytkownika i hasło. Zdecydowanie zaleca korzystania z uwierzytelniania Windows, ponieważ poświadczenia użytkownika nie są widoczne w parametrach połączenia. Jeśli nie możesz użyć uwierzytelniania Windows do łączenia z programem SQL Server, rozważ tworzenia parametrów połączenia w czasie wykonywania za pomocą <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
+ Podczas nawiązywania połączenia z usługą Microsoft SQL Server można używać uwierzytelniania systemu Windows, znanego również jako zabezpieczenia zintegrowane, które korzysta z tożsamości bieżącego aktywnego użytkownika systemu Windows zamiast przekazywania identyfikatora użytkownika i hasła. Korzystanie z uwierzytelniania systemu Windows jest zdecydowanie zalecane, ponieważ poświadczenia użytkownika nie są ujawniane w parametrach połączenia. Jeśli nie można użyć uwierzytelniania systemu Windows w celu nawiązania połączenia z SQL Server, rozważ utworzenie parametrów połączenia w czasie <xref:System.Data.SqlClient.SqlConnectionStringBuilder>wykonywania przy użyciu.  
   
- Poświadczenia używane do uwierzytelniania muszą być obsługiwane inaczej w zależności od typu aplikacji. Na przykład w aplikacji Windows Forms, użytkownik może być monit o podanie informacji uwierzytelniania lub poświadczenia Windows użytkownika mogą być używane. Jednak aplikacja sieci Web, który jest często uzyskuje dostęp do danych przy użyciu poświadczeń dostarczonych przez samą aplikację, a nie przez użytkownika.  
+ Poświadczenia używane do uwierzytelniania muszą być obsługiwane w różny sposób w zależności od typu aplikacji. Na przykład w aplikacji Windows Forms użytkownik może zostać poproszony o podanie informacji dotyczących uwierzytelniania lub można użyć poświadczeń systemu Windows użytkownika. Jednak aplikacja sieci Web często uzyskuje dostęp do danych przy użyciu poświadczeń dostarczonych przez samą aplikację, a nie przez użytkownika.  
   
- Po uwierzytelnieniu użytkowników zakres ich działania zależą od uprawnień, którym przyznano im. Zawsze postępuj zgodnie z zasadą najniższych uprawnień i udzielić tylko te uprawnienia, które są jest to absolutnie konieczne.  
+ Po uwierzytelnieniu użytkowników zakres ich działań zależy od uprawnień, które zostały im przyznane. Zawsze stosuj zasadę najniższych uprawnień i przyznaj tylko uprawnienia, które są absolutnie niezbędne.  
   
- Aby uzyskać więcej informacji zobacz następujące zasoby.  
-  
-|Zasób|Opis|  
-|--------------|-----------------|  
-|[Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)|W tym artykule opisano najlepsze rozwiązania dotyczące zabezpieczeń i technik do ochrony informacji o połączeniu, takich jak za pomocą konfiguracji chronionej do szyfrowania parametrów połączenia.|  
-|[Zalecenia dotyczące strategii dostępu do danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Zawiera zalecenia dotyczące uzyskiwania dostępu do danych i wykonywania operacji w bazie danych.|  
-|[Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md)|W tym artykule opisano sposób tworzenia parametrów połączenia z danych wejściowych użytkownika w czasie wykonywania.|  
-|[Przegląd zabezpieczeń serwera SQL](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|W tym artykule opisano architekturę zabezpieczeń programu SQL Server.|  
-  
-## <a name="parameterized-commands-and-sql-injection"></a>Sparametryzowanych poleceń i wstrzykiwanie kodu SQL  
- Używanie poleceń sparametryzowanych pomaga zabezpieczyć się przed atakami polegającymi na iniekcji SQL, w których osoba atakująca "wprowadza" polecenie do instrukcji SQL zabezpieczenia naruszeń na serwerze. Poleceń sparametryzowanych zabezpieczyć się przed ataku polegającego na iniekcji SQL, zapewniając, że wartości odebranych ze źródła zewnętrznego są przekazywane jako tylko wartości i nie jest częścią instrukcji języka Transact-SQL. W wyniku polecenia języka Transact-SQL do wartości nie są wykonywane w źródle danych. Przeciwnie są obliczane wyłącznie jako wartość parametru. Oprócz zabezpieczeń zapewnianych poleceń sparametryzowanych zapewniają wygodną metodę służący do organizowania wartości przekazane za pomocą instrukcji języka Transact-SQL lub procedury składowanej.  
-  
- Aby uzyskać więcej informacji na temat korzystania z poleceń sparametryzowanych zobacz następujące zasoby.  
+ Aby uzyskać więcej informacji, zobacz następujące zasoby.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Parametry elementu DataAdapter](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|Opisuje sposób używania parametrów za pomocą `DataAdapter`.|  
-|[Modyfikowanie danych za pomocą procedur składowanych](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|W tym artykule opisano, jak określić parametry i uzyskać wartość zwracaną.|  
-|[Zarządzanie uprawnieniami za pomocą procedur składowanych w programie SQL Server](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|W tym artykule opisano, jak hermetyzują dostęp do danych za pomocą procedur składowanych serwera SQL Server.|  
+|[Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)|Opisuje najlepsze rozwiązania w zakresie zabezpieczeń i techniki ochrony informacji o połączeniach, takich jak używanie konfiguracji chronionej do szyfrowania parametrów połączenia.|  
+|[Zalecenia dotyczące strategii dostępu do danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Zawiera zalecenia dotyczące uzyskiwania dostępu do danych i wykonywania operacji bazy danych.|  
+|[Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md)|Opisuje sposób tworzenia parametrów połączenia z danych wejściowych użytkownika w czasie wykonywania.|  
+|[Przegląd zabezpieczeń serwera SQL](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|Opisuje SQL Server architekturę zabezpieczeń.|  
   
-## <a name="script-exploits"></a>Luki w zabezpieczeniach skryptu  
- Wykorzystanie skryptu jest inna forma iniekcji używającej złośliwego znaków wstawione do strony sieci Web. Przeglądarka nie można zweryfikować wstawione znaki i będzie przetwarzać je jako część strony.  
+## <a name="parameterized-commands-and-sql-injection"></a>Polecenia sparametryzowane i iniekcja kodu SQL  
+ Używanie sparametryzowanych poleceń pomaga chronić przed atakami polegającymi na iniekcji SQL, w których osoba atakująca "wprowadza" polecenie do instrukcji SQL, która narusza zabezpieczenia na serwerze. Sparametryzowane polecenia Guard przed atakami polegającymi na iniekcji SQL przez zapewnienie, że wartości otrzymywane ze źródła zewnętrznego są przesyłane jako tylko wartości, a nie częścią instrukcji języka Transact-SQL. W związku z tym polecenia języka Transact-SQL wstawione do wartości nie są wykonywane w źródle danych. Zamiast tego są oceniane wyłącznie jako wartość parametru. Oprócz korzyści z zabezpieczeń, polecenia sparametryzowane zapewniają wygodną metodę organizowania wartości przekazaną za pomocą instrukcji języka Transact-SQL lub procedury składowanej.  
   
- Aby uzyskać więcej informacji zobacz następujące zasoby.  
-  
-|Zasób|Opis|  
-|--------------|-----------------|  
-|[Przegląd luki w zabezpieczeniach skryptu](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|W tym artykule opisano sposób zabezpieczyć się przed skryptów i instrukcji SQL luki w zabezpieczeniach.|  
-  
-## <a name="probing-attacks"></a>Badanie ataków  
- Osoby atakujące często używają informacji z wyjątku, takie jak nazwa serwera, bazy danych lub tabeli, aby zainstalować ataku w systemie. Ponieważ wyjątki mogą zawierać określone informacje na temat aplikacji lub źródła danych, można zabezpieczyć ze źródłem danych i aplikacji lepiej chroniony przez tylko udostępnianie istotnych informacji klientowi.  
-  
- Aby uzyskać więcej informacji zobacz następujące zasoby.  
+ Aby uzyskać więcej informacji na temat korzystania z sparametryzowanych poleceń, zobacz następujące zasoby.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Podstawowe założenia obsługi wyjątków](../../../../docs/standard/exceptions/exception-handling-fundamentals.md)|W tym artykule opisano podstawowe rodzaje try/catch/finally strukturalna Obsługa wyjątków.|  
-|[Najlepsze rozwiązania dotyczące wyjątków](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|W tym artykule opisano najlepsze rozwiązania dotyczące obsługi wyjątków.|  
+|[Parametry elementu DataAdapter](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|Opisuje sposób używania parametrów z `DataAdapter`.|  
+|[Modyfikowanie danych za pomocą procedur składowanych](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|Opisuje sposób określania parametrów i uzyskiwania wartości zwracanej.|  
+|[Zarządzanie uprawnieniami za pomocą procedur składowanych w programie SQL Server](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|Opisuje sposób korzystania z procedur składowanych SQL Server w celu hermetyzacji dostępu do danych.|  
   
-## <a name="protecting-microsoft-access-and-excel-data-sources"></a>Ochrona programu Microsoft Access i źródła danych programu Excel  
- Program Microsoft Access i Microsoft Excel może działać jako magazyn danych na potrzeby aplikacji ADO.NET, gdy wymagania dotyczące zabezpieczeń są minimalne lub nie istnieje. Ich funkcje bezpieczeństwa, zostaną zastosowane na przed intruzami, ale nie należy polegać na więcej niż zniechęcić meddling przez użytkowników w organizacji uninformed. Pliki danych fizycznych dostępu i programu Excel istnieje w systemie plików, a musi być dostępna dla wszystkich użytkowników. To sprawia, że ich narażone na ataki, mogącymi skutkować kradzieżą lub utraty danych, ponieważ pliki można łatwo skopiować lub zmodyfikować. Gdy wymagana jest niezawodne zabezpieczenia, użyj programu SQL Server lub innej bazy danych, które są oparte na serwerze plików danych fizycznych których nie można odczytać z systemu plików.  
+## <a name="script-exploits"></a>Luki w zabezpieczeniach skryptów  
+ Wykorzystanie skryptów jest kolejną formą iniekcji, która używa złośliwych znaków wstawianych do strony sieci Web. Przeglądarka nie sprawdza poprawności wstawionych znaków i przetworzy je jako część strony.  
   
- Aby uzyskać więcej informacji na temat ochrony danych programu Access i program Excel zobacz następujące zasoby.  
+ Aby uzyskać więcej informacji, zobacz następujące zasoby.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Zagadnienia dotyczące zabezpieczeń i wskazówki dotyczące programu Access 2007](https://go.microsoft.com/fwlink/?LinkId=98354)|W tym artykule opisano technik zabezpieczeń dla programu Access 2007 takich szyfrowania plików, administrowanie hasła, Konwersja bazy danych do nowego formatu ACCDB i ACCDE i przy użyciu innych opcji zabezpieczeń.|  
-|[Opis roli pliki informacji o grupie roboczej w zabezpieczenia dostępu](https://support.microsoft.com/kb/305542)|Wyjaśniono, roli i relacji tego pliku w usłudze security 2003 dostępu.|  
-|[Często zadawane pytania dotyczące zabezpieczeń firmy Microsoft dostęp dla programu Microsoft Access w wersji 2.0 za pomocą 2000](https://go.microsoft.com/fwlink/?LinkId=47698)|Wersja do pobrania dostępu firmy Microsoft Security — często zadawane pytania.|  
+|[Omówienie luk w zabezpieczeniach](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|Opisuje sposób zabezpieczania przed skryptami i programami wykorzystującymi luki w zabezpieczeniach języka SQL.|  
+  
+## <a name="probing-attacks"></a>Ataki na sondowanie  
+ Osoby atakujące często wykorzystują informacje z wyjątku, takie jak nazwa serwera, bazy danych lub tabeli, w celu zainstalowania ataku w systemie. Ponieważ wyjątki mogą zawierać określone informacje o aplikacji lub źródle danych, można pomóc zapewnić lepszą ochronę aplikacji i źródła danych przez ujawnienie do klienta najważniejszych informacji.  
+  
+ Aby uzyskać więcej informacji, zobacz następujące zasoby.  
+  
+|Zasób|Opis|  
+|--------------|-----------------|  
+|[Podstawy obsługi wyjątków](../../../standard/exceptions/exception-handling-fundamentals.md)|Opisuje podstawowe formy obsłudze wyjątków try/catch/finally.|  
+|[Najlepsze rozwiązania dotyczące wyjątków](../../../standard/exceptions/best-practices-for-exceptions.md)|W tym artykule opisano najlepsze rozwiązania dotyczące obsługi wyjątków.|  
+  
+## <a name="protecting-microsoft-access-and-excel-data-sources"></a>Ochrona dostępu do źródeł danych programu Microsoft Access i programu Excel  
+ Program Microsoft Access i program Microsoft Excel mogą działać jako magazyn danych dla aplikacji ADO.NET, gdy wymagania dotyczące zabezpieczeń są minimalne lub nieistniejące. Ich funkcje zabezpieczeń są skuteczne dla Deterrence, ale nie powinny być używane na potrzeby wykonywania więcej niż zniechęcić meddling przez użytkowników nieposiadających informacji. Pliki danych fizycznych dla programu Access i programu Excel istnieją w systemie plików i muszą być dostępne dla wszystkich użytkowników. Sprawia to, że są one podatne na ataki, które mogą spowodować kradzież lub utratę danych, ponieważ pliki mogą być łatwo kopiowane lub zmieniane. Gdy wymagane są niezawodne zabezpieczenia, należy użyć SQL Server lub innej bazy danych opartej na serwerze, w której pliki danych fizycznych nie są odczytywane z systemu plików.  
+  
+ Aby uzyskać więcej informacji na temat ochrony dostępu i danych programu Excel, zobacz następujące zasoby.  
+  
+|Zasób|Opis|  
+|--------------|-----------------|  
+|[Zagadnienia dotyczące zabezpieczeń i wskazówki dotyczące dostępu 2007](https://go.microsoft.com/fwlink/?LinkId=98354)|Opisuje techniki zabezpieczeń dotyczące dostępu 2007, takich jak szyfrowanie plików, administrowanie hasłami, konwertowanie baz danych do nowych formatów ACCDB i ACCDe oraz korzystanie z innych opcji zabezpieczeń.|  
+|[Informacje o roli plików informacyjnych grupy roboczej w zabezpieczeniach dostępu](https://support.microsoft.com/kb/305542)|Wyjaśnia rolę i relację pliku informacji o grupie roboczej w programie Access 2003 zabezpieczenia.|  
+|[Często zadawane pytania dotyczące zabezpieczeń programu Microsoft Access dla programu Microsoft Access w wersji 2,0 do 2000](https://go.microsoft.com/fwlink/?LinkId=47698)|Wersja do pobrania, często zadawane pytania dotyczące zabezpieczeń programu Microsoft Access.|  
 ## <a name="enterprise-services"></a>Enterprise Services  
- COM + zawiera własny model zabezpieczeń, która opiera się na konta Windows NT i personifikacji wątku/procesu. <xref:System.EnterpriseServices> Przestrzeń nazw zapewnia otoki, które umożliwiają aplikacji platformy .NET do integracji aplikacji kod zarządzanego przy użyciu zabezpieczeń usług COM + za pośrednictwem <xref:System.EnterpriseServices.ServicedComponent> klasy.  
+ COM+ zawiera własny model zabezpieczeń, który opiera się na kontach systemu Windows NT i personifikacji procesu/wątku. Przestrzeń nazw zawiera otoki, które umożliwiają aplikacjom .NET integrację kodu zarządzanego z usługami zabezpieczeń modelu <xref:System.EnterpriseServices.ServicedComponent> com+ za pomocą klasy. <xref:System.EnterpriseServices>  
   
- Aby uzyskać więcej informacji zobacz następujące zasoby.  
+ Aby uzyskać więcej informacji, zobacz następujący zasób.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Zabezpieczenia oparte na rolach](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/s6y8k15h(v=vs.71))|W tym artykule omówiono sposób integracji aplikacji kod zarządzanego przy użyciu usług zabezpieczeń modelu COM +.|  
+|[Zabezpieczenia oparte na rolach](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/s6y8k15h(v=vs.71))|W tym artykule omówiono sposób integrowania kodu zarządzanego z usługami zabezpieczeń modelu COM+.|  
   
 ## <a name="interoperating-with-unmanaged-code"></a>Współdziałanie z kodem niezarządzanym  
- .NET Framework oferuje interakcji z niezarządzanego kodu, w tym modelu COM składników modelu COM + usług, zewnętrzne biblioteki typów i wielu usług systemu operacyjnego. Praca z kodem niezarządzanym obejmuje wydostawać obwodu zabezpieczeń dla kodu zarządzanego. Zarówno kod, jak i wszelki kod, który ją wywołuje musi mieć niezarządzanych uprawnień kodu (<xref:System.Security.Permissions.SecurityPermission> z <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> określono flagę). Niezarządzanego kodu można wprowadzać luk w zabezpieczeniach niezamierzone do aplikacji. W związku z tym należy unikać współdziałanie z kodem niezarządzanym, chyba że jest to absolutnie konieczne.  
+ .NET Framework zapewnia interakcję z niezarządzanym kodem, w tym składniki COM, usługi COM+, zewnętrzne biblioteki typów i wiele usług systemu operacyjnego. Praca z kodem niezarządzanym polega na przejściu poza obwód zabezpieczeń dla kodu zarządzanego. Zarówno kod, jak i dowolny kod, który wywołuje go musi mieć uprawnienia<xref:System.Security.Permissions.SecurityPermission> <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> do kodu niezarządzanego (z określoną flagą). Kod niezarządzany może wprowadzić niezamierzone luki w zabezpieczeniach do aplikacji. W związku z tym należy unikać współdziałania z kodem niezarządzanym, chyba że jest to absolutnie konieczne.  
   
- Aby uzyskać więcej informacji zobacz następujące zasoby.  
+ Aby uzyskać więcej informacji, zobacz następujące zasoby.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Współdziałanie z kodem niezarządzanym](../../../../docs/framework/interop/index.md)|Zawiera tematów opisujących sposób udostępnianie składników COM programowi .NET Framework oraz udostępnianie składników .NET Framework dla modelu COM.|
-|[Zaawansowane współdziałanie modeli COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Zawiera tematy zaawansowane, takie jak podstawowe zestawy międzyoperacyjne, wątków i przekazywanie niestandardowe.|
+|[Współdziałanie z kodem niezarządzanym](../../../../docs/framework/interop/index.md)|Zawiera tematy opisujące, jak uwidocznić składniki COM w .NET Framework i jak uwidocznić składniki .NET Framework do modelu COM.|
+|[Zaawansowana współdziałanie COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Zawiera zaawansowane tematy, takie jak podstawowe zestawy międzyoperacyjności, wątkowość i organizowanie niestandardowe.|
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -94,4 +94,4 @@ Aby pisać bezpieczny kod, ADO.NET, musisz znać mechanizmy zabezpieczeń dostę
 - [Zalecenia dotyczące strategii dostępu do danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

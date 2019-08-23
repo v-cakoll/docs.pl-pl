@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Etykieta instrukcji (Visual Basic)'
+title: 'Instrukcje: Instrukcje etykiet (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - colons (:)
@@ -7,30 +7,30 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: cbb80d94dc8280aa67859c89daad1520ce4e9669
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b442b5a0ad731cfc490a7387c78ac9279dddaf0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648749"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961321"
 ---
-# <a name="how-to-label-statements-visual-basic"></a>Instrukcje: Etykieta instrukcji (Visual Basic)
-Bloki instrukcji składają się z wierszy kodu, rozdzielone średnikami. Wiersze kodu poprzedzone identyfikujący ciąg lub liczba całkowita, są określane jako *etykietą*. Etykiety instrukcji są używane w sposób znaczyć linię kodu w celu identyfikowania go do użycia przy użyciu instrukcji takich jak `On Error Goto`.  
+# <a name="how-to-label-statements-visual-basic"></a>Instrukcje: Instrukcje etykiet (Visual Basic)
+Bloki instrukcji składają się z wierszy kodu rozdzielanych średnikami. Wiersze kodu poprzedzone ciągiem identyfikującym lub liczbą całkowitą są określane jako *etykiety*. Etykiety instrukcji są używane do oznaczania wiersza kodu w celu zidentyfikowania go do użycia z instrukcjami takimi jak `On Error Goto`.  
   
- Etykiety mogą być albo prawidłowych identyfikatorów języka Visual Basic — takich jak te, które identyfikują programistyczny — lub literały całkowite. Etykieta musi znajdować się na początku wiersza kodu źródłowego i musi być następuje dwukropek, niezależnie od tego, czy następuje instrukcji w tym samym wierszu.  
+ Etykiety mogą być prawidłowymi identyfikatorami Visual Basic, takimi jak te, które identyfikują elementy programowania — lub literały całkowite. Etykieta musi znajdować się na początku wiersza kodu źródłowego i musi następować dwukropek, niezależnie od tego, czy występuje instrukcja w tym samym wierszu.  
   
- Kompilator identyfikuje etykiety, sprawdzając, czy początek wiersza pasuje do żadnego identyfikatora już zdefiniowane. Jeśli nie, kompilator zakłada, że jest etykietę.  
+ Kompilator identyfikuje etykiety, sprawdzając, czy początek wiersza pasuje do żadnego już zdefiniowanego identyfikatora. Jeśli nie, kompilator zakłada, że jest to etykieta.  
   
- Etykiety mają własnej przestrzeni deklaracji i nie kolidują z innymi identyfikatorami. Zakres etykiety jest treści metody. Deklaracja etykieta ma pierwszeństwo przed w każdej sytuacji niejednoznaczne.  
+ Etykiety mają własne miejsce deklaracji i nie zakłócają innych identyfikatorów. Zakres etykiety jest treścią metody. Deklaracja etykiety ma pierwszeństwo w każdej niejednoznacznej sytuacji.  
   
 > [!NOTE]
->  Etykiety mogą służyć tylko w instrukcji wykonywalnych wewnątrz metody.  
+> Etykiet można używać tylko w instrukcjach wykonywalnych wewnątrz metod.  
   
-### <a name="to-label-a-line-of-code"></a>Aby dodać etykietę wiersza kodu  
+### <a name="to-label-a-line-of-code"></a>Aby oznaczyć wiersz kodu  
   
-- Umieść identyfikator, następuje dwukropek, na początku wiersza kodu źródłowego.  
+- Umieść identyfikator, po którym następuje dwukropek, na początku wiersza kodu źródłowego.  
   
-     Na przykład następujące wiersze kodu są oznaczone za pomocą `Jump` i `120`odpowiednio:  
+     Na przykład następujące wiersze kodu mają etykiety `Jump` i `120`, odpowiednio:  
   
      [!code-vb[VbVbalrStatements#708](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#708)]  
   

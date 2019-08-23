@@ -18,22 +18,22 @@ helpviewer_keywords:
 - output, network tracing
 - method invocations
 ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
-ms.openlocfilehash: 45ec7b83824777c594b966a38d2b7fcd4f63b596
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d556bc3b8746fe2d05a8e225b91ecf59bd404fd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642077"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963942"
 ---
 # <a name="network-tracing-in-the-net-framework"></a>Śledzenie sieci w .NET Framework
 Mechanizm śledzenia sieci w środowisku .NET Framework umożliwia dostęp do informacji o wywołaniach metod i ruchu sieciowym generowanym przez zarządzaną aplikację. Funkcja ułatwia debugowanie aplikacji na etapie ich tworzenia oraz analizowanie już wdrożonych aplikacji. Dane wyjściowe funkcji śledzenia sieci można adaptować, dostosowując je do różnych scenariuszy fazy programowania i środowiska produkcyjnego.  
   
- Aby włączyć śledzenie sieci w środowisku .NET Framework, należy wskazać miejsce docelowe danych wyjściowych funkcji oraz dodać jej ustawienia konfiguracyjne do pliku konfiguracyjnego aplikacji lub maszyny. Opisy plików konfiguracyjnych i sposób ich użycia można znaleźć [pliki konfiguracyjne](../../../docs/framework/configure-apps/index.md). Aby uzyskać informacje o włączaniu funkcji śledzenia sieci, zobacz [Enabling Network Tracing](../../../docs/framework/network-programming/enabling-network-tracing.md). Aby uzyskać informacje o ustawieniach, które należy dodać do pliku konfiguracji, zobacz [jak: Konfigurowanie śledzenia sieci](../../../docs/framework/network-programming/how-to-configure-network-tracing.md).  
+ Aby włączyć śledzenie sieci w środowisku .NET Framework, należy wskazać miejsce docelowe danych wyjściowych funkcji oraz dodać jej ustawienia konfiguracyjne do pliku konfiguracyjnego aplikacji lub maszyny. Opisy plików konfiguracji i sposobu ich użycia można znaleźć w temacie [pliki konfiguracji](../../../docs/framework/configure-apps/index.md). Informacje o sposobie włączania funkcji śledzenia sieci znajdują się w temacie [Włączanie śledzenia sieci](../../../docs/framework/network-programming/enabling-network-tracing.md). Aby uzyskać informacje o ustawieniach, które należy dodać do pliku konfiguracji, zobacz [How to: Skonfiguruj śledzenie](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)sieci.  
   
- Gdy śledzenie jest włączone, można przechwycić informacje śledzenia generowane przez **przestrzeni nazw System.Net** klasy. Do składowych klasy sieciowej generujących dane ze śledzenia obowiązuje następująca uwaga zawarta w sekcji Uwaga w dokumentacji biblioteki klas środowiska NET Framework:  
+ Po włączeniu śledzenia można przechwytywać informacje o śledzeniu, które są wyprowadzane przez klasy **System.NET** . Do składowych klasy sieciowej generujących dane ze śledzenia obowiązuje następująca uwaga zawarta w sekcji Uwaga w dokumentacji biblioteki klas środowiska NET Framework:  
   
 > [!NOTE]
->  Ten element członkowski generuje informacje ze śledzenia pod warunkiem włączenia funkcji śledzenia sieci w aplikacji. Aby dowiedzieć się więcej, zobacz Śledzenie sieci.  
+> Ten element członkowski generuje informacje ze śledzenia pod warunkiem włączenia funkcji śledzenia sieci w aplikacji. Aby dowiedzieć się więcej, zobacz Śledzenie sieci.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -2,44 +2,44 @@
 title: 'Instrukcje: Używanie filtrów'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 42145e58eb35233aefb8f7805570d329abb7d71a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6c357f2f410362d56fc931529a9fe731df0a477e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645500"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968767"
 ---
 # <a name="how-to-use-filters"></a>Instrukcje: Używanie filtrów
-W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji routingu, który używa wielu filtrów. W tym przykładzie komunikaty są kierowane do dwie implementacje usługi Kalkulator, regularCalc i roundingCalc. Zarówno implementacje obsługują te same operacje; Jednak w jednej usłudze zaokrągla wszystkie obliczenia do najbliższej wartości całkowitej przed zwróceniem. Aplikacja kliencka musi być w stanie wskazać, czy ma być używany zaokrąglania wersję usługi; Jeśli brak preferencji Usługa bazy danych jest wyrażona wiadomość jest równoważone między obiema usługami. Operacje udostępniane przez obie te usługi są:  
+W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji routingu korzystającej z wielu filtrów. W tym przykładzie komunikaty są kierowane do dwóch implementacji usługi kalkulatora, regularCalc i roundingCalc. Obie implementacje obsługują te same operacje; Jednak jedna usługa zaokrągla wszystkie obliczenia do najbliższej wartości całkowitej przed zwróceniem. Aplikacja kliencka musi być w stanie wskazać, czy ma być używana zaokrąglana wersja usługi. Jeśli preferencja usługi nie jest określona, komunikat jest równoważony między obiema usługami. Operacje udostępniane przez obie usługi są następujące:  
   
 - Dodaj  
   
-- Odejmowanie  
+- Odjęt  
   
-- Mnożenie  
+- Mnożenia  
   
-- Dzielenie  
+- Mieszczon  
   
- Ponieważ obie te usługi implementuje te same operacje, nie można użyć filtru akcji, ponieważ z akcją określoną w komunikacie nie jest unikatowa. Zamiast tego należy wykonać dodatkową pracę, aby upewnić się, że komunikaty są kierowane do odpowiednich punktów końcowych.  
+ Ponieważ obie usługi implementują te same operacje, nie można użyć filtru akcji, ponieważ akcja określona w komunikacie nie będzie unikatowa. Zamiast tego należy wykonać dodatkowe czynności, aby upewnić się, że komunikaty są kierowane do odpowiednich punktów końcowych.  
   
-### <a name="determine-unique-data"></a>Określić unikatowe dane  
+### <a name="determine-unique-data"></a>Określanie unikatowych danych  
   
-1. Ponieważ zarówno implementacji usługi obsługi tych samych operacji i są zasadniczo identyczne inne niż dane, które zwracają, podstawowy dane zawarte w wiadomości wysyłanych z aplikacji klienckich nie jest unikatowy, aby możliwe było określić, jak kierować żądanie. Ale jeśli aplikacja kliencka dodaje wartości nagłówka do wiadomości, następnie można użyć tej wartości można określić, jak powinny być kierowane wiadomości.  
+1. Ponieważ oba implementacje usług obsługują te same operacje i są zasadniczo identyczne jak dane, które zwracają, dane podstawowe zawarte w komunikatach wysyłanych z aplikacji klienckich nie są wystarczająco unikatowe, aby umożliwić określenie sposobu kierowania żądając. Jeśli jednak aplikacja kliencka dodaje do wiadomości unikatową wartość nagłówka, można użyć tej wartości, aby określić sposób, w jaki komunikat powinien być kierowany.  
   
-     Na przykład jeśli aplikacja kliencka potrzebuje komunikat, który ma zostać przetworzony przez zaokrąglania Kalkulator, dodaje niestandardowego nagłówka przy użyciu następującego kodu:  
+     W tym przykładzie, jeśli aplikacja kliencka wymaga przetworzenia komunikatu przez kalkulator zaokrąglenia, dodaje niestandardowy nagłówek przy użyciu następującego kodu:  
   
     ```csharp  
     messageHeadersElement.Add(MessageHeader.CreateHeader("RoundingCalculator",   
                                    "http://my.custom.namespace/", "rounding"));  
     ```  
   
-     Można teraz umożliwia sprawdzanie komunikatów dla tego pliku nagłówkowego filtr XPath i kierowanie komunikatów w postaci zawierający nagłówek usługą roundCalc.  
+     Można teraz użyć filtru XPath do sprawdzenia komunikatów dla tego nagłówka i trasy komunikatów zawierających nagłówek do usługi roundCalc.  
   
-2. Ponadto usługa routingu udostępnia dwa punkty końcowe usług wirtualnych, które mogą być używane z Nazwapunktukoncowego, EndpointAddress, lub PrefixEndpointAddress filtrów jednoznacznie kierowanie komunikatów przychodzących do implementacji określonego Kalkulator, oparta na punkcie końcowym do której aplikacja kliencka wysyła żądanie.  
+2. Dodatkowo usługa routingu udostępnia dwa punkty końcowe usługi wirtualnej, które mogą być używane z filtrami EndpointName, EndpointAddress lub PrefixEndpointAddress w celu jednoznacznej trasy komunikatów przychodzących do określonej implementacji kalkulatora na podstawie punktu końcowego , do którego aplikacja kliencka przesyła żądanie.  
   
-### <a name="define-endpoints"></a>Punkty końcowe  
+### <a name="define-endpoints"></a>Definiuj punkty końcowe  
   
-1. Podczas definiowania punktów końcowych używanych przez usługę routingu, najpierw należy określić kształt kanał używany przez klientów i usług. W tym scenariuszu usług docelowych użyć wzorca "żądanie-odpowiedź", więc <xref:System.ServiceModel.Routing.IRequestReplyRouter> jest używany. W poniższym przykładzie zdefiniowano punktów końcowych usługi udostępniane przez usługę routingu.  
+1. Podczas definiowania punktów końcowych używanych przez usługę routingu należy najpierw określić kształt kanału używanego przez klientów i usługi. W tym scenariuszu zarówno usługi docelowe używają wzorca żądania-odpowiedzi, więc <xref:System.ServiceModel.Routing.IRequestReplyRouter> jest używany. W poniższym przykładzie zdefiniowano punkty końcowe usługi udostępniane przez usługę routingu.  
   
     ```xml  
     <services>  
@@ -71,9 +71,9 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji
     </services>  
     ```  
   
-     W przypadku tej konfiguracji usługa routingu udostępnia trzy oddzielne punkty końcowe. W zależności od opcji środowiska wykonawczego aplikacja kliencka wysyła komunikaty do jednego z tych adresów. Komunikaty przychodzące w jednym z punktów końcowych usługi "wirtualne" ("zaokrąglania/Kalkulator" lub "zwykłych/Kalkulator") są przekazywane do odpowiedniej implementacji kalkulatora. Jeśli aplikacja kliencka nie wysyła żądanie do określonego punktu końcowego, komunikat jest skierowana do endpoint ogólne. Niezależnie od tego punktu końcowego wybrana aplikacja kliencka może też dołączyć niestandardowy nagłówek, aby wskazać, że komunikat powinien być przekazywany do zaokrąglenia implementacji kalkulatora.  
+     W przypadku tej konfiguracji usługa routingu ujawnia trzy oddzielne punkty końcowe. W zależności od opcji w czasie wykonywania aplikacja kliencka wysyła komunikaty do jednego z tych adresów. Komunikaty docierające do jednego z "wirtualnych" punktów końcowych usługi ("zaokrąglenie/Kalkulator" lub "regularne/Kalkulator") są przekazywane do odpowiedniej implementacji kalkulatora. Jeśli aplikacja kliencka nie wyśle żądania do określonego punktu końcowego, komunikat zostanie rozkierowany do ogólnego punktu końcowego. Niezależnie od wybranego punktu końcowego aplikacja kliencka może również dołączyć nagłówek niestandardowy, aby wskazać, że wiadomość powinna być przekazywana do implementacji kalkulatora zaokrąglenia.  
   
-2. W poniższym przykładzie zdefiniowano punktów końcowych klienta (docelowy), które usługa routingu kieruje komunikaty.  
+2. W poniższym przykładzie zdefiniowano punkty końcowe klienta (miejsce docelowe), do których usługa routingu kieruje komunikaty.  
   
     ```xml  
     <client>  
@@ -89,11 +89,11 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji
     </client>  
     ```  
   
-     Te punkty końcowe są używane w tabeli filtru do wskazania docelowy punkt końcowy, który jest wysyłany komunikat w przypadku, gdy pasuje do określonego filtru.  
+     Te punkty końcowe są używane w tabeli filtrów, aby wskazać docelowy punkt końcowy, do którego komunikat jest wysyłany, gdy jest zgodny z określonym filtrem.  
   
-### <a name="define-filters"></a>Zdefiniuj filtry  
+### <a name="define-filters"></a>Definiuj filtry  
   
-1. Aby rozesłać komunikaty oparte na niestandardowy nagłówek "RoundingCalculator", który aplikacja kliencka dodaje do komunikatu, należy zdefiniować filtr, który używa kwerendy XPath Aby sprawdzić obecność tego pliku nagłówkowego. Ponieważ tego pliku nagłówkowego jest definiowana za pomocą niestandardowej przestrzeni nazw, należy również dodać wpis przestrzeni nazw, który definiuje prefiksem niestandardowej przestrzeni nazw "niestandardowy", który jest używany w zapytaniu XPath. W poniższym przykładzie zdefiniowano niezbędne sekcji routingu, przestrzeń nazw tabeli i filtr XPath.  
+1. Aby przesłać komunikaty na podstawie niestandardowego nagłówka "RoundingCalculator", który aplikacja kliencka dodaje do wiadomości, zdefiniuj filtr, który używa zapytania XPath do sprawdzenia obecności tego nagłówka. Ponieważ ten nagłówek jest definiowany przy użyciu niestandardowej przestrzeni nazw, należy również dodać wpis przestrzeni nazw, który definiuje niestandardowy prefiks przestrzeni nazw "Custom", który jest używany w zapytaniu XPath. W poniższym przykładzie zdefiniowano niezbędną sekcję routingu, tabelę przestrzeni nazw oraz filtr XPath.  
   
     ```xml  
     <routing>  
@@ -110,21 +110,21 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji
     </routing>  
     ```  
   
-     To **MessageFilter** szuka RoundingCalculator nagłówka wiadomości, która zawiera wartość "zaokrąglania". Tego pliku nagłówkowego jest ustawionego przez klienta, aby wskazać, czy komunikat powinien być kierowane do usługi roundingCalc.  
+     Ta **MessageFilter** szuka nagłówka RoundingCalculator w komunikacie zawierającym wartość "rounding". Ten nagłówek jest ustawiany przez klienta w celu wskazania, że komunikat powinien być kierowany do usługi roundingCalc.  
   
     > [!NOTE]
-    > Prefiks przestrzeni nazw s12 jest zdefiniowana w przestrzeni nazw tabeli i reprezentuje obszar nazw `http://www.w3.org/2003/05/soap-envelope`.
+    > Prefiks przestrzeni nazw S12 jest definiowany domyślnie w tabeli przestrzeni nazw i reprezentuje przestrzeń nazw `http://www.w3.org/2003/05/soap-envelope`.
   
-2. Należy także zdefiniować filtry, które poszukują komunikatów odebranych w dwóch punktach końcowych wirtualnej. Pierwszy wirtualnego punkt końcowy jest punktem końcowym "zwykłych/Kalkulator". Klient może wysyłać żądania do tego punktu końcowego, aby wskazać, czy komunikat powinien być kierowane do usługi regularCalc. Następująca konfiguracja definiuje filtr, który używa <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> ustalenie, jeśli wiadomość dotarła za pośrednictwem punktu końcowego o nazwie określonej w danych filtru.  
+2. Należy również zdefiniować filtry, które szukają komunikatów odebranych w dwóch wirtualnych punktach końcowych. Pierwszy wirtualny punkt końcowy to punkt końcowy "Regular/Kalkulator". Klient może wysyłać żądania do tego punktu końcowego, aby wskazać, że komunikat powinien być kierowany do usługi regularCalc. Poniższa konfiguracja definiuje filtr, który używa <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> do określenia, czy komunikat dotarł do punktu końcowego o nazwie określonej w danych filtru.  
   
     ```xml  
     <!--define an endpoint name filter looking for messages that show up on the virtual regular calculator endpoint-->  
     <filter name="EndpointNameFilter" filterType="EndpointName" filterData="calculatorEndpoint"/>  
     ```  
   
-     Jeśli komunikat jest odbierany przez punkt końcowy usługi o nazwie "calculatorEndpoint", ten filtr daje w wyniku `true`.  
+     Jeśli komunikat jest odbierany przez punkt końcowy usługi o nazwie "calculatorEndpoint", ten filtr szacuje `true`wartość.  
   
-3. Następnie zdefiniuj filtr, który wygląda dla wiadomości wysyłanych na adres roundingEndpoint. Klient może wysyłać żądania do tego punktu końcowego, aby wskazać, czy komunikat powinien być kierowane do usługi roundingCalc. Następująca konfiguracja definiuje filtr, który używa <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> ustalenie, jeśli wiadomość dotarła do endpoint "zaokrąglania/Kalkulator".  
+3. Następnie zdefiniuj filtr, który szuka komunikatów wysyłanych na adres roundingEndpoint. Klient może wysyłać żądania do tego punktu końcowego, aby wskazać, że komunikat powinien być kierowany do usługi roundingCalc. Poniższa konfiguracja definiuje filtr, który używa w <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> celu ustalenia, czy wiadomość dotarła do punktu końcowego "zaokrąglenie/kalkulatora".  
   
     ```xml  
     <!--define a filter looking for messages that show up with the address prefix.  The corresponds to the rounding calc virtual endpoint-->  
@@ -132,17 +132,17 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     Gdy wiadomość zostaje odebrana w adres który rozpoczyna się od `http://localhost/routingservice/router/rounding/` daje w wyniku tego filtru, a następnie **true**. Ponieważ adres bazowy używany przez tę konfigurację `http://localhost/routingservice/router` i adres określony dla roundingEndpoint jest "zaokrąglania/Kalkulator" pełny adres używany do komunikowania się z tym punktem końcowym `http://localhost/routingservice/router/rounding/calculator`, który pasuje do tego filtru.  
+     Jeśli otrzymasz komunikat o adresie zaczynającym `http://localhost/routingservice/router/rounding/` się od, ten filtr zwróci **wartość true**. Ponieważ adres podstawowy używany przez tę konfigurację jest `http://localhost/routingservice/router` i adresem określonym dla roundingEndpoint jest "zaokrąglenie/Kalkulator", pełny adres używany do komunikacji z tym punktem końcowym jest `http://localhost/routingservice/router/rounding/calculator`zgodny z tym filtrem.  
   
     > [!NOTE]
-    >  Filtr PrefixEndpointAddress nie może oszacować nazwy hosta podczas wykonywania dopasowanie, ponieważ w jednym hoście mogą się odwoływać przy użyciu różnych nazw hostów, które mogą wszystkie prawidłowe metody odwoływania się do hosta z aplikacji klienckiej. Na przykład wszystkie poniższe może odnosić się do tego samego hosta:  
+    > Filtr PrefixEndpointAddress nie oblicza nazwy hosta podczas dopasowywania, ponieważ pojedynczy host może być określony przy użyciu różnych nazw hostów, które mogą być prawidłowymi sposobami odwoływania się do hosta z aplikacji klienckiej. Na przykład wszystkie następujące elementy mogą odnosić się do tego samego hosta:  
     >   
     > - localhost  
     > - 127.0.0.1  
     > - `www.contoso.com`  
     > - ContosoWeb01  
   
-4. Ostatni filtr musi obsługiwać routing komunikaty przychodzące w punkcie końcowym ogólnego bez niestandardowego nagłówka. W tym scenariuszu komunikaty powinny alternatywne między usługami regularCalc i roundingCalc. Aby obsługiwać routing "działanie okrężne" tych wiadomości, użyj niestandardowy filtr, który umożliwia jedno wystąpienie filtru do dopasowania dla każdego komunikatu przetworzone.  Poniżej definiuje dwa wystąpienia RoundRobinMessageFilter, które są zgrupowane razem do wskazania, że powinien alternatywny między sobą.  
+4. Filtr końcowy musi obsługiwać Routing komunikatów, które docierają do ogólnego punktu końcowego bez niestandardowego nagłówka. W tym scenariuszu komunikaty powinny być zastępowane przez usługi regularCalc i roundingCalc. Aby zapewnić obsługę routingu "Round Robin" tych komunikatów, należy użyć filtru niestandardowego, który umożliwia dopasowanie jednego wystąpienia filtru dla każdego przetworzonego komunikatu.  Poniżej zdefiniowano dwa wystąpienia RoundRobinMessageFilter, które są pogrupowane w celu wskazania, że powinny one być różne od siebie.  
   
     ```xml  
     <!-- Set up the custom message filters.  In this example,   
@@ -156,16 +156,16 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji
                     filterData="group1"/>  
     ```  
   
-     W czasie wykonywania filtru tego typu przełącza między wszystkie wystąpienia zdefiniowany filtr tego typu, które są skonfigurowane jako tej samej grupie w jednej kolekcji. Powoduje to, że komunikaty przetwarzane przez ten filtr niestandardowy do alternatywnego między zwracanie `true` dla `RoundRobinFilter1` i `RoundRobinFilter2`.  
+     W czasie wykonywania ten filtr typu alternatywy między wszystkimi zdefiniowanymi wystąpieniami filtru tego typu, które są skonfigurowane jako ta sama Grupa w jednej kolekcji. Powoduje to `true` `RoundRobinFilter1` , że komunikaty przetwarzane przez ten filtr niestandardowy do alternatywy między `RoundRobinFilter2`zwracanymi a i.  
   
-### <a name="define-filter-tables"></a>Definiowanie tabel filtru  
+### <a name="define-filter-tables"></a>Definiowanie tabel filtrów  
   
-1. Aby skojarzyć z filtrami z punktów końcowych klienta właściwy, trzeba je umieścić w tabeli filtru. Ten przykładowy scenariusz używa także ustawienia priorytetu filtr, który jest ustawienie opcjonalne, które można określić kolejność, w jakiej są przetwarzane filtrów. Jeśli żaden priorytet filtru zostanie określony, wszystkie filtry są obliczane jednocześnie.  
+1. Aby skojarzyć filtry z określonymi punktami końcowymi klienta, należy umieścić je w tabeli filtrów. W tym przykładowym scenariuszu są używane również ustawienia priorytetu filtru, które jest ustawieniem opcjonalnym umożliwiającym wskazanie kolejności przetwarzania filtrów. Jeśli nie określono priorytetu filtru, wszystkie filtry są oceniane jednocześnie.  
   
     > [!NOTE]
-    >  Podczas określania priorytetu filtr umożliwia pozwala kontrolować kolejność, w której filtry są przetwarzane, jego może niekorzystnie wpłynąć na wydajność usługi routingu. Jeśli to możliwe, należy utworzyć logikę filtrowania tak, aby korzystanie z priorytetów filtru nie jest wymagana.  
+    > Chociaż określenie priorytetu filtru pozwala kontrolować kolejność przetwarzania filtrów, może niekorzystnie wpłynąć na wydajność usługi routingu. Jeśli to możliwe, Utwórz logikę filtru, aby użycie priorytetów filtru nie jest wymagane.  
   
-     Poniżej definiuje tabelę filtru i dodaje "Obiekt XPathFilter" wcześniej zdefiniowaną w tabeli o priorytecie 2. Ten wpis określa również, że jeśli `XPathFilter` odpowiada komunikatu, komunikat będą kierowane do `roundingCalcEndpoint`.  
+     Poniższy schemat definiuje tabelę filtrów i dodaje element "obiekt XPathFilter" zdefiniowany wcześniej do tabeli o priorytecie 2. Ten wpis określa również, że jeśli `XPathFilter` dopasowuje komunikat, komunikat zostanie rozesłany `roundingCalcEndpoint`do.  
   
     ```xml  
     <routing>  
@@ -184,9 +184,9 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji
     </routing>  
     ```  
   
-     Podczas określania priorytetu filtru, najwyższy priorytet filtry są obliczane jako pierwsze. Jeśli co najmniej jeden filtr na poziomie określonym priorytecie są zgodne, zostanie ono ocenione żadnych filtrów na niższych poziomach priorytetu. W tym scenariuszu 2 ma najwyższy priorytet, które są określone i jest to jedyny wpis filtru na tym poziomie.  
+     Podczas określania priorytetu filtru najpierw są oceniane filtry o najwyższym priorytecie. Jeśli co najmniej jeden filtr o określonym poziomie priorytetu jest zgodny, nie będą oceniane żadne filtry o niższych poziomach. W tym scenariuszu wartość 2 to najwyższy określony priorytet i jest to jedyna pozycja filtru na tym poziomie.  
   
-2. Wpisy filtrów zdefiniowano należy sprawdzać, gdy wiadomość zostaje odebrana w określonym punkcie końcowym, sprawdzając nazwę punktu końcowego lub prefiks adresu. Następujące wpisy Dodaj oba te wpisy filtru do tabeli filtru i skojarzyć je z docelowych punktów końcowych, które wiadomości będą kierowane do. Te filtry są ustawione na priorytet 1 w celu wskazania, że mogą uruchamiać tylko jeśli poprzednie filtr XPath nie był zgodny komunikat.  
+2. Zdefiniowano wpisy filtru, aby sprawdzić, czy wiadomość została odebrana w określonym punkcie końcowym przez sprawdzenie nazwy punktu końcowego lub prefiksu adresu. Poniższe wpisy umożliwiają dodanie obu tych wpisów filtru do tabeli filtrów i skojarzenie ich z docelowym miejscem końcowym, do którego zostanie rozesłany komunikat. Te filtry mają ustawiony priorytet 1, aby wskazać, że powinny być uruchamiane tylko wtedy, gdy poprzedni filtr XPath nie jest zgodny z komunikatem.  
   
     ```xml  
     <!--if the header wasn't there, send the message based on which virtual endpoint it arrived at-->  
@@ -195,9 +195,9 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji
     <add filterName="PrefixAddressFilter" endpointName="roundingCalcEndpoint" priority="1"/>  
     ```  
   
-     Ponieważ te filtry mają priorytet filtru 1, ich będzie być oceniany tylko jeśli filtr na poziomie priorytetu 2 nie jest zgodny komunikat. Ponadto ponieważ oba filtry mają ten sam poziom priorytetu one zostaną ocenione jednocześnie. Ponieważ zarówno filtry wykluczają się wzajemnie, jest możliwe tylko jedna lub druga do dopasowania komunikatu.  
+     Ponieważ te filtry mają priorytet filtru 1, będą oceniane tylko wtedy, gdy filtr na poziomie priorytetu 2 nie jest zgodny z komunikatem. Ponadto, ponieważ oba filtry mają taki sam poziom priorytetu, będą oceniane jednocześnie. Ponieważ oba filtry wykluczają się wzajemnie, możliwe jest tylko jedno lub drugie, aby dopasować komunikat.  
   
-3. Jeśli komunikat nie pasuje do żadnego z poprzednim filtrom, komunikat zostało odebrane za pośrednictwem punktu końcowego Usługa ogólna i zawarte nie informacje nagłówka, która wskazuje, gdzie w celu kierowania go. Te komunikaty są mają być obsługiwane przez filtr niestandardowy, który równoważy ich między usługami dwóch kalkulatora. Poniższy przykład pokazuje, jak dodać wpisy filtr do filtru tabeli; Każdy filtr jest skojarzony z jedną z dwóch docelowych punktów końcowych.  
+3. Jeśli komunikat nie jest zgodny z żadnym z poprzednich filtrów, komunikat został odebrany za pomocą punktu końcowego usługi ogólnej i nie zawierał informacji nagłówka wskazujących, gdzie należy je przekierować. Te komunikaty mają być obsługiwane przez filtr niestandardowy, który równoważy obciążenie między obiema usługami kalkulatora. Poniższy przykład ilustruje sposób dodawania wpisów filtru do tabeli filtrów; Każdy filtr jest skojarzony z jednym z dwóch docelowych punktów końcowych.  
   
     ```xml  
     <!--if none of the other filters have matched,   
@@ -208,11 +208,11 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji
     <add filterName="RoundRobinFilter2" endpointName="roundingCalcEndpoint" priority="0"/>  
     ```  
   
-     Ponieważ te wpisy określić priorytet 0, ich będzie być oceniany tylko jeśli żaden filtr o wyższym priorytecie jest zgodny komunikat. Ponadto ponieważ oba mają ten sam priorytet, ocenia się je jednocześnie.  
+     Ponieważ te wpisy określają priorytet 0, będą oceniane tylko wtedy, gdy żaden filtr o wyższym priorytecie nie jest zgodny z komunikatem. Ponadto, ponieważ oba mają ten sam priorytet, są one oceniane jednocześnie.  
   
-     Jak wspomniano wcześniej, filtr niestandardowy używany przez te definicje filtrów oblicza tylko jeden lub inne, `true` dla każdego komunikatu odebranego. Ponieważ tylko dwa filtry są definiowane za pomocą tego samego ustawienia w określonej grupie za pomocą tego filtru, powoduje, że usługa routingu przełącza między wysłaniem regularCalcEndpoint i RoundingCalcEndpoint.  
+     Jak wspomniano wcześniej, filtr niestandardowy używany przez te definicje filtru oblicza tylko jedną lub drugą `true` wartość dla każdego odebranego komunikatu. Ponieważ tylko dwa filtry są zdefiniowane przy użyciu tego filtru, z tym samym ustawieniem określonej grupy, efektem jest to, że usługa routingu jest alternatywna dla wysyłania do regularCalcEndpoint i RoundingCalcEndpoint.  
   
-4. Do analizowania wiadomości te filtry, tabelę filtru najpierw należy skojarzyć z punktami końcowymi usługi, które będą używane do odbierania komunikatów.  Poniższy przykład pokazuje jak skojarzyć tabeli routingu za pomocą punktów końcowych usługi za pomocą zachowania routingu:  
+4. Aby można było oszacować komunikaty względem filtrów, tabela filtrów musi być najpierw skojarzona z punktami końcowymi usługi, które będą używane do odbierania komunikatów.  W poniższym przykładzie pokazano, jak skojarzyć tabelę routingu z punktami końcowymi usługi przy użyciu zachowania routingu:  
   
     ```xml  
     <behaviors>  
@@ -226,7 +226,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji
     ```  
   
 ## <a name="example"></a>Przykład  
- Poniżej znajduje się pełna lista pliku konfiguracji.  
+ Poniżej znajduje się kompletna lista plików konfiguracyjnych.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

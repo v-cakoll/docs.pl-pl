@@ -5,44 +5,44 @@ helpviewer_keywords:
 - selection [Windows Forms], modes in DataGridView control
 - DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
-ms.openlocfilehash: 79e13e65938252015e43b59a962d40f20963a5df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dfe26e4749e6bff2d0ccdff47c6ea0b301880772
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902671"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960468"
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Tryby wyboru w formancie DataGridView formularzy systemu Windows
-Czasami aplikacja do wykonania akcji, w zależności od wyborów użytkownika w ramach <xref:System.Windows.Forms.DataGridView> kontroli. W zależności od akcji można ograniczyć rodzajów wyboru, które są możliwe. Na przykład załóżmy, że aplikację można wydrukować raport dla obecnie wybranego rekordu. W takich przypadkach możesz chcieć skonfigurować <xref:System.Windows.Forms.DataGridView> kontrolki tak, aby klikanie wiersz zawsze wybiera cały wiersz, i tak aby tylko jeden wiersz jednocześnie można wybrać.  
+Czasami aplikacja ma wykonywać działania w oparciu o wybory użytkownika w <xref:System.Windows.Forms.DataGridView> kontrolce. W zależności od akcji można ograniczyć wybór możliwy do wyboru. Załóżmy na przykład, że aplikacja może wydrukować raport dla aktualnie wybranego rekordu. W takim przypadku można skonfigurować <xref:System.Windows.Forms.DataGridView> kontrolkę tak, aby kliknięcia w dowolnym miejscu w wierszu zawsze zaznaczają cały wiersz i tak, aby można było wybrać tylko jeden wiersz naraz.  
   
- Można określić opcji dozwolone przez ustawienie <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType> jedną z następujących właściwości <xref:System.Windows.Forms.DataGridViewSelectionMode> wartości wyliczenia.  
+ Można określić opcje dozwolone przez ustawienie <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType> właściwości na jedną z następujących <xref:System.Windows.Forms.DataGridViewSelectionMode> wartości wyliczenia.  
   
-|Wartość DataGridViewSelectionMode|Opis|  
+|DataGridViewSelectionMode wartość|Opis|  
 |-------------------------------------|-----------------|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>|Kliknij komórkę, aby zaznaczyć go. Nagłówki wierszy i kolumn nie można używać do wyboru.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>|Kliknij komórkę, aby zaznaczyć go. Kliknij nagłówek kolumny, aby zaznaczyć całą kolumnę. Nagłówki kolumn nie można użyć do sortowania.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>|Kliknij komórkę lub nagłówek kolumny, aby zaznaczyć całą kolumnę. Nagłówki kolumn nie można użyć do sortowania.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>|Kliknij komórkę lub nagłówek wiersza, aby zaznaczyć cały wiersz.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>|Domyślny tryb wyboru. Kliknij komórkę, aby zaznaczyć go. Kliknij nagłówek wiersza, aby zaznaczyć cały wiersz.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>|Kliknięcie komórki spowoduje jej wybranie. Nagłówki wierszy i kolumn nie mogą być używane do zaznaczania.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>|Kliknięcie komórki spowoduje jej wybranie. Kliknięcie nagłówka kolumny powoduje wybranie całej kolumny. Nagłówki kolumn nie mogą być używane do sortowania.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>|Kliknięcie komórki lub nagłówka kolumny powoduje zaznaczenie całej kolumny. Nagłówki kolumn nie mogą być używane do sortowania.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>|Kliknięcie komórki lub nagłówka wiersza powoduje zaznaczenie całego wiersza.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>|Domyślny tryb zaznaczania. Kliknięcie komórki spowoduje jej wybranie. Kliknięcie nagłówka wiersza powoduje zaznaczenie całego wiersza.|  
   
 > [!NOTE]
->  Zmiana trybu zaznaczania w czasie wykonywania, automatycznie wyczyści bieżące zaznaczenie.  
+> Zmiana trybu wyboru w czasie wykonywania automatycznie czyści bieżące zaznaczenie.  
   
- Domyślnie użytkownicy mogą wybrać wiele wierszy, kolumny lub komórki, przeciągając myszą, naciskając klawisz CTRL lub SHIFT podczas zaznaczania, aby rozszerzyć lub zmodyfikować zaznaczenie lub klikając komórkę nagłówka w lewym górnym rogu, aby zaznaczyć wszystkie komórki w formancie. Aby temu zapobiec, należy ustawić <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> właściwość `false`.  
+ Domyślnie użytkownicy mogą zaznaczyć wiele wierszy, kolumn lub komórek przeciągając myszą, naciskając klawisz CTRL lub SHIFT podczas zaznaczania lub modyfikowania zaznaczenia lub klikając komórkę nagłówka w lewym górnym rogu, aby zaznaczyć wszystkie komórki w formancie. Aby uniknąć tego zachowania, należy ustawić <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> właściwość na `false`.  
   
- <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> i <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> tryby Zezwalaj użytkownikom na usuwanie wierszy, zaznaczając je i naciskając klawisz DELETE. Użytkownicy mogą usuwać wiersze, tylko wtedy, gdy bieżącej komórki nie jest w trybie edycji <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> właściwość jest ustawiona na `true`, i źródła danych obsługuje usuwania wiersza oparte na użytkownika. Należy pamiętać, te ustawienia nie uniemożliwiają usunięcie programowe wiersza.  
+ Tryby <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> i<xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> umożliwiają użytkownikom usuwanie wierszy, zaznaczając je i naciskając klawisz Delete. Użytkownicy mogą usuwać wiersze tylko wtedy, gdy bieżąca komórka nie jest w trybie edycji, <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> właściwość jest ustawiona na `true`, a bazowe źródło danych obsługuje usuwanie wierszy sterowane przez użytkownika. Należy zauważyć, że te ustawienia nie uniemożliwiają programowego usuwania wierszy.  
   
-## <a name="programmatic-selection"></a>Wybór programowy  
- Bieżący tryb wyboru ogranicza zachowanie programowy wybór, a także wybór użytkownika. Bieżące zaznaczenie można zmienić programowo przez ustawienie `Selected` właściwość żadnych komórek, wierszy lub kolumn w <xref:System.Windows.Forms.DataGridView> kontroli. Możesz również wybrać wszystkie komórki w formancie za pośrednictwem <xref:System.Windows.Forms.DataGridView.SelectAll%2A> metody, w zależności od trybu wyboru. Aby wyczyścić zaznaczenie, należy użyć <xref:System.Windows.Forms.DataGridView.ClearSelection%2A> metody.  
+## <a name="programmatic-selection"></a>Wybór programistyczny  
+ Tryb bieżącego wyboru ogranicza zachowanie wyboru programistycznego, a także wybór użytkownika. Bieżące zaznaczenie można zmienić programowo przez ustawienie `Selected` właściwości dowolnych komórek, wierszy lub kolumn znajdujących <xref:System.Windows.Forms.DataGridView> się w kontrolce. Możesz również zaznaczyć wszystkie komórki w kontrolce za pomocą <xref:System.Windows.Forms.DataGridView.SelectAll%2A> metody, w zależności od trybu zaznaczania. Aby wyczyścić zaznaczenie, użyj <xref:System.Windows.Forms.DataGridView.ClearSelection%2A> metody.  
   
- Jeśli <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> właściwość jest ustawiona na `true`, możesz dodać <xref:System.Windows.Forms.DataGridView> elementy, aby je lub usuń zaznaczenie, zmieniając `Selected` właściwości elementu. W przeciwnym razie ustawienie `Selected` właściwość `true` dla jednego elementu automatycznie usuwa innych elementów z zaznaczenia.  
+ Jeśli właściwość jest ustawiona na `true`, można dodawać <xref:System.Windows.Forms.DataGridView> elementy do zaznaczenia lub z nich `Selected` usuwać, zmieniając właściwość elementu. <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> W przeciwnym razie ustawienie `Selected` `true` właściwości dla jednego elementu automatycznie usunie inne elementy z zaznaczenia.  
   
- Należy pamiętać, że zmiana wartości <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> właściwość nie ma wpływu na bieżące zaznaczenie.  
+ Należy zauważyć, że zmiana wartości <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> właściwości nie powoduje zmiany bieżącego zaznaczenia.  
   
- Możesz pobrać zbiór aktualnie zaznaczonych komórek, wierszy lub kolumn za pomocą <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>, <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>, i <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> właściwości <xref:System.Windows.Forms.DataGridView> kontroli. Uzyskiwanie dostępu do tych właściwości jest nieefektywne, w przypadku wybrania każdej komórki w formancie. Aby uniknąć w tym przypadku spadek wydajności, należy użyć <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A> metoda pierwszy. Ponadto dostęp do tych kolekcji, aby określić liczbę wybranych komórek, wierszy lub kolumn może być mało wydajne. Zamiast tego należy używać <xref:System.Windows.Forms.DataGridView.GetCellCount%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A>, lub <xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A> metody, przekazując <xref:System.Windows.Forms.DataGridViewElementStates.Selected> wartość.  
+ Można pobrać kolekcję obecnie zaznaczonych komórek, wierszy <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>lub kolumn za pomocą właściwości <xref:System.Windows.Forms.DataGridView> , <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>i <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> kontrolki. Dostęp do tych właściwości jest nieefektywny, gdy jest zaznaczona każda komórka w kontrolce. Aby uniknąć spadek wydajności w tym przypadku, należy najpierw użyć <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A> metody. Ponadto uzyskanie dostępu do tych kolekcji pozwala określić liczbę wybranych komórek, wierszy lub kolumn, które mogą być niewydajne. Zamiast <xref:System.Windows.Forms.DataGridView.GetCellCount%2A>tego należy użyć metody, <xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A>, lub <xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A> , przekazując <xref:System.Windows.Forms.DataGridViewElementStates.Selected> wartość.  
   
 > [!TIP]
->  Przykładowy kod, który demonstruje użycie programowe zaznaczonych komórek można znaleźć w <xref:System.Windows.Forms.DataGridView> klasa — Przegląd.  
+>  Przykładowy kod, który demonstruje użycie programistyczne wybranych komórek, można znaleźć w <xref:System.Windows.Forms.DataGridView> temacie Omówienie klasy.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -51,4 +51,4 @@ Czasami aplikacja do wykonania akcji, w zależności od wyborów użytkownika w 
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>
 - <xref:System.Windows.Forms.DataGridViewSelectionMode>
 - [Wybór i używanie schowka za pomocą kontrolki DataGridView formularzy Windows Forms](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
-- [Instrukcje: Ustawianie trybu zaznaczania kontrolki DataGridView formularzy Windows Forms](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)
+- [Instrukcje: Ustawianie trybu zaznaczania Windows Forms formancie DataGridView](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)

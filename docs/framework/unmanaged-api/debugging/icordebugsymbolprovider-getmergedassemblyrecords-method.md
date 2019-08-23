@@ -1,18 +1,18 @@
 ---
-title: ICorDebugSymbolProvider::GetMergedAssemblyRecords Method
+title: 'ICorDebugSymbolProvider:: GetMergedAssemblyRecords, Metoda'
 ms.date: 03/30/2017
 ms.assetid: cc4c510d-550d-4941-af34-81987caf3425
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b436bd844f917aab3c653428c7cd38809be870b8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9f7859b095d80edb5592af1386457ad72b85bc48
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771387"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957388"
 ---
-# <a name="icordebugsymbolprovidergetmergedassemblyrecords-method"></a>ICorDebugSymbolProvider::GetMergedAssemblyRecords Method
-Pobiera rekordy symboli dla wszystkich zestawów scalone.  
+# <a name="icordebugsymbolprovidergetmergedassemblyrecords-method"></a>ICorDebugSymbolProvider:: GetMergedAssemblyRecords, Metoda
+Pobiera rekordy symboli dla wszystkich scalonych zestawów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,27 +26,27 @@ HRESULT GetMergedAssemblyRecords(
   
 ## <a name="parameters"></a>Parametry  
  `cRequestedRecords`  
- [in] Liczba żądanych rekordów symboli.  
+ podczas Liczba żądanych rekordów symboli.  
   
  `pcFetchedRecords`  
- [out] Wskaźnik do liczby rekordów symbol pobierane przez metodę.  
+ określoną Wskaźnik do liczby rekordów symboli pobranych przez metodę.  
   
  `pRecords`  
- Wskaźnik do tablicy [ICorDebugMergedAssemblyRecord](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md) obiektów.  
+ Wskaźnik do tablicy obiektów [ICorDebugMergedAssemblyRecord](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md) .  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

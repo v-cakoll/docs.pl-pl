@@ -5,58 +5,58 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: e0f2c6300f8dccb8cc316527af9c75f6a40ff2df
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 75cb5ea166c36de5c0921fbbd830021719497cda
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661895"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963861"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Zwracanie lub pomijanie elementów w sekwencji
-Użyj <xref:System.Linq.Queryable.Take%2A> operatora zwracają danej liczby elementów w sekwencji, a następnie pominąć resztę.  
+Użyj operatora <xref:System.Linq.Queryable.Take%2A> , aby zwrócić daną liczbę elementów w sekwencji, a następnie pominąć resztę.  
   
- Użyj <xref:System.Linq.Queryable.Skip%2A> operator, aby pominąć danej liczby elementów w sekwencji, a następnie wróć resztę.  
+ Użyj operatora <xref:System.Linq.Queryable.Skip%2A> , aby pominąć daną liczbę elementów w sekwencji, a następnie zwrócić resztę.  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A> i <xref:System.Linq.Enumerable.Skip%2A> mają pewne ograniczenia, gdy są one używane w kwerendach do programu SQL Server 2000. Aby uzyskać więcej informacji, zobacz wpis "Pomiń i Pobierz wyjątki w programie SQL Server 2000 do niego dostępu" w [Rozwiązywanie problemów](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+> <xref:System.Linq.Enumerable.Take%2A>i <xref:System.Linq.Enumerable.Skip%2A> mają pewne ograniczenia, gdy są używane w zapytaniach do SQL Server 2000. Aby uzyskać więcej informacji, zobacz wpis "Pomiń i przejmowanie wyjątków w SQL Server 2000" w [temacie Rozwiązywanie problemów](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wykonuje translację <xref:System.Linq.Queryable.Skip%2A> przy użyciu podzapytania SQL `NOT EXISTS` klauzuli. Tłumaczenie ma następujące ograniczenia:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]tłumaczy przy użyciu podzapytania z klauzulą SQL `NOT EXISTS`. <xref:System.Linq.Queryable.Skip%2A> To tłumaczenie ma następujące ograniczenia:  
   
-- Argument musi być ustawiony. Multisets nie są obsługiwane, nawet wtedy, gdy określona.  
+- Argument musi być zestawem. Zestawy wielozbiorowe nie są obsługiwane, nawet jeśli są uporządkowane.  
   
-- Wygenerowane zapytanie może być znacznie bardziej skomplikowane niż zapytanie wygenerowane dla podstawowego zapytania, na którym <xref:System.Linq.Queryable.Skip%2A> jest stosowany. Taki poziom złożoności może spowodować spadek wydajności lub nawet limitu czasu.  
+- Wygenerowane zapytanie może być znacznie bardziej złożone niż zapytanie wygenerowane dla zapytania bazowego, na <xref:System.Linq.Queryable.Skip%2A> którym jest stosowane. Taka złożoność może spowodować spadek wydajności lub nawet przekroczenie limitu czasu.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto `Take` zaznacz pierwsze pięć `Employees` zatrudnienia. Należy zauważyć, że kolekcja jest najpierw posortowane według `HireDate`.  
+ Poniższy przykład używa `Take` do wybierania pierwszych pięciu `Employees` zatrudnianych. Należy pamiętać, że kolekcja jest najpierw sortowana według `HireDate`.  
   
  [!code-csharp[DLinqQueryExamples#16](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#16)]
  [!code-vb[DLinqQueryExamples#16](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#16)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto <xref:System.Linq.Queryable.Skip%2A> zaznacz wszystkie regiony z wyjątkiem 10 najbardziej kosztowne `Products`.  
+ Poniższy przykład używa <xref:System.Linq.Queryable.Skip%2A> do zaznaczania wszystkiego z wyjątkiem 10 `Products`.  
   
  [!code-csharp[DLinqQueryExamples#17](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#17)]
  [!code-vb[DLinqQueryExamples#17](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#17)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład łączy <xref:System.Linq.Queryable.Skip%2A> i <xref:System.Linq.Queryable.Take%2A> metody w celu pominięcia 50 pierwszych rekordów, a następnie wróć dalej 10.  
+ Poniższy przykład łączy <xref:System.Linq.Queryable.Skip%2A> metody i <xref:System.Linq.Queryable.Take%2A> , aby pominąć pierwsze 50 rekordów, a następnie zwrócić następny 10.  
   
  [!code-csharp[DLinqQueryExamples#18](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#18)]
  [!code-vb[DLinqQueryExamples#18](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#18)]  
   
- <xref:System.Linq.Queryable.Take%2A> i <xref:System.Linq.Queryable.Skip%2A> operacje są dobrze zdefiniowane wyłącznie w odniesieniu do uporządkowanej zestawów. Semantyka nieuporządkowane zestawy lub multisets jest niezdefiniowane.  
+ <xref:System.Linq.Queryable.Take%2A>operacje <xref:System.Linq.Queryable.Skip%2A> i są dobrze zdefiniowane tylko względem uporządkowanych zestawów. Semantyka nieuporządkowanych zestawów lub zestawów wielozbiorówowych jest niezdefiniowana.  
   
- Ze względu na ograniczenia w kolejności w programie SQL [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] spróbuje przenieść porządkowanie argument <xref:System.Linq.Queryable.Take%2A> lub <xref:System.Linq.Queryable.Skip%2A> operatora wynik operatora.  
+ Ze względu na ograniczenia związane z kolejnością [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] w programie SQL, program próbuje przenieść argument <xref:System.Linq.Queryable.Take%2A> operatora or <xref:System.Linq.Queryable.Skip%2A> do wyniku operatora.  
   
 > [!NOTE]
->  Tłumaczenie jest inny dla programu SQL Server 2000 i SQL Server 2005. Jeśli planujesz używać <xref:System.Linq.Queryable.Skip%2A> z zapytaniem o dowolnej złożoności, użyj programu SQL Server 2005.  
+> Tłumaczenie jest różne dla SQL Server 2000 i SQL Server 2005. Jeśli planujesz używać <xref:System.Linq.Queryable.Skip%2A> zapytania o dowolnej złożoności, użyj SQL Server 2005.  
   
- Należy wziąć pod uwagę następujące [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapytania dla programu SQL Server 2000:  
+ Rozważ następujące [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapytanie dla SQL Server 2000:  
   
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Przenosi, to porządkowanie-to-end w języku SQL w następujący sposób:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]przenosi porządkowanie do końca kodu SQL w następujący sposób:  
   
 ```  
 SELECT TOP 1 [t0].[CustomerID], [t0].[CompanyName],  
@@ -74,9 +74,9 @@ WHERE (NOT (EXISTS(
 ORDER BY [t0].[CustomerID]  
 ```  
   
- Gdy <xref:System.Linq.Queryable.Take%2A> i <xref:System.Linq.Queryable.Skip%2A> są połączone, wszystkie określonej kolejności, muszą być zgodne. W przeciwnym wypadku wyniki są niezdefiniowane.  
+ Gdy <xref:System.Linq.Queryable.Take%2A> i<xref:System.Linq.Queryable.Skip%2A> są połączone łańcuchowo, cała określona kolejność musi być spójna. W przeciwnym razie wyniki są niezdefiniowane.  
   
- Do nieujemnej wartości, stałe argumentów całkowitych na podstawie SQL specyfikacji, zarówno <xref:System.Linq.Queryable.Take%2A> i <xref:System.Linq.Queryable.Skip%2A> są dobrze zdefiniowane.  
+ W przypadku nieujemnych, stałych argumentów całkowitych opartych na specyfikacji SQL <xref:System.Linq.Queryable.Take%2A> , <xref:System.Linq.Queryable.Skip%2A> obie i są dobrze zdefiniowane.  
   
 ## <a name="see-also"></a>Zobacz także
 

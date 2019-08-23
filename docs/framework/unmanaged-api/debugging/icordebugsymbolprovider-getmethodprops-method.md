@@ -1,18 +1,18 @@
 ---
-title: Metoda ICorDebugSymbolProvider::GetMethodProps
+title: 'ICorDebugSymbolProvider:: GetMethodProps —, Metoda'
 ms.date: 03/30/2017
 ms.assetid: 8f836b80-b7a5-460b-bf76-5f0e45652aea
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f6971c7991f5e54973d96d9b3f662b54be564d9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 95610bc527b8f5b90df906b6260eb636d61dbcd8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771330"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957306"
 ---
-# <a name="icordebugsymbolprovidergetmethodprops-method"></a>Metoda ICorDebugSymbolProvider::GetMethodProps
-Zwraca informacje o właściwości metody, takie jak metody token metadanych oraz informacje o jego parametrów ogólnych, biorąc pod uwagę względnych adresów wirtualnych (RVA) w tej metodzie.  
+# <a name="icordebugsymbolprovidergetmethodprops-method"></a>ICorDebugSymbolProvider:: GetMethodProps —, Metoda
+Zwraca informacje o właściwościach metody, takich jak token metadanych metody i informacje o jego ogólnych parametrach, w którym znajduje się względny adres wirtualny (RVA) w tej metodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -29,37 +29,37 @@ HRESULT GetMethodProps(
   
 ## <a name="parameters"></a>Parametry  
  `codeRVA`  
- [in] Względny adres wirtualny w metodzie o tym, jakie informacje są do pobrania.  
+ podczas Względny adres wirtualny w metodzie, o które informacje mają być pobierane.  
   
  `pMethodToken`  
- [out] Wskaźnik do metody token metadanych.  
+ określoną Wskaźnik do tokenu metadanych metody.  
   
  `pcGenericParams`  
- [out] Wskaźnik do liczby parametrów ogólnych skojarzone z tą metodą.  
+ określoną Wskaźnik do liczby parametrów ogólnych skojarzonych z tą metodą.  
   
  `cbSignature`  
- [in] Rozmiar `signature` tablicy. Zobacz sekcję Uwagi.  
+ podczas Rozmiar `signature` tablicy. Zobacz sekcję Uwagi.  
   
  `pcbSignature`  
- [out] Wskaźnik do rozmiaru zwracanego `signature` tablicy.  
+ określoną Wskaźnik do rozmiaru zwróconej `signature` tablicy.  
   
  `signature`  
- [out] Buforu, który zawiera sygnatury elementu typespec wszystkich parametrów ogólnych.  
+ określoną Bufor, który przechowuje sygnatury elementu TypeSpec wszystkich parametrów ogólnych.  
   
 ## <a name="remarks"></a>Uwagi  
- Aby uzyskać wymagany rozmiar metody `signature` tablicy, należy ustawić `cbSignature` argument 0 i `signature` do **null**. Po powrocie z metody `pcbSignature` będzie zawierać liczbę bajtów wymaganą dla `signature` tablicy.  
+ Aby uzyskać wymagany `signature` rozmiar tablicy metody, należy `cbSignature` ustawić argument na 0 i `signature` na **wartość null**. Gdy metoda zwraca, `pcbSignature` będzie zawierać liczbę bajtów wymaganych `signature` przez tablicę.  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

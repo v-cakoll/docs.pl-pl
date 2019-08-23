@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: be82b64581ee178b463950d4b8cdae1f98949161
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 43b0ddc8f683e7069207bbb1c47af73976bc4a5a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545301"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958548"
 ---
 # <a name="printing-overview"></a>Przegląd Drukowanie
 W przypadku Microsoft .NET Framework deweloperzy aplikacji korzystający z Windows Presentation Foundation (WPF) mają bogaty nowy zestaw interfejsów API zarządzania systemem drukowania i drukowania. Niektóre z tych ulepszeń systemu drukowania są również dostępne dla deweloperów tworzących [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacje i deweloperów korzystających z kodu niezarządzanego. [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] Podstawą tej nowej funkcji jest nowy [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] format pliku [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] i ścieżka wydruku.  
@@ -35,11 +35,11 @@ W przypadku Microsoft .NET Framework deweloperzy aplikacji korzystający z Windo
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>Ścieżka wydruku XPS  
- Ścieżka wydruku w formacie XML Paper Specification (XPS) to nowa [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] funkcja, która ponownie definiuje sposób obsługi drukowania w aplikacjach systemu Windows. Ponieważ [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] program może zastąpić język prezentacji dokumentu (taki jak RTF), format buforu wydruku (na przykład WMF) i język opisu strony (na przykład PCL lub PostScript); Nowa ścieżka wydruku zachowuje format XPS z publikacji aplikacji do ostateczne przetwarzanie w sterowniku drukarki lub urządzeniu.  
+ Ścieżka wydruku w formacie XML Paper Specification (XPS) to nowa funkcja systemu Windows, która ponownie definiuje sposób obsługi drukowania w aplikacjach systemu Windows. Ponieważ [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] program może zastąpić język prezentacji dokumentu (taki jak RTF), format buforu wydruku (na przykład WMF) i język opisu strony (na przykład PCL lub PostScript); Nowa ścieżka wydruku zachowuje format XPS z publikacji aplikacji do ostateczne przetwarzanie w sterowniku drukarki lub urządzeniu.  
   
  Ścieżka wydruku XPS jest tworzona na podstawie modelu sterownika drukarki XPS (XPsDrv), który zapewnia kilka korzyści dla deweloperów, takich jak [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] drukowanie, ulepszona obsługa kolorów oraz znacznie ulepszona wydajność drukowania. (Aby uzyskać więcej informacji na temat XPSDrv, zobacz [dokumentację zestawu Windows Driver Kit](/windows-hardware/drivers/)).  
   
- Operacja bufora wydruku dla dokumentów XPS jest zasadniczo taka sama jak w poprzednich wersjach systemu Windows. Ulepszono jednak obsługę ścieżki drukowania XPS oprócz istniejącej ścieżki drukowania GDI. Nowa ścieżka wydruku natywnie zużywa plik buforu XPS. Sterowniki drukarki trybu użytkownika napisano dla poprzednich wersji programu [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] będą nadal działały, ale sterownik drukarki XPS (XPsDrv) jest wymagany, aby można było użyć ścieżki drukowania XPS.  
+ Operacja bufora wydruku dla dokumentów XPS jest zasadniczo taka sama jak w poprzednich wersjach systemu Windows. Ulepszono jednak obsługę ścieżki drukowania XPS oprócz istniejącej ścieżki drukowania GDI. Nowa ścieżka wydruku natywnie zużywa plik buforu XPS. Gdy sterowniki drukarki trybu użytkownika napisano dla poprzednich wersji systemu Windows, będą nadal działały, sterownik drukarki XPS (XPSDrv) jest wymagany, aby można było użyć ścieżki wydruku XPS.  
   
  Zalety ścieżki drukowania XPS są istotne i obejmują:  
   

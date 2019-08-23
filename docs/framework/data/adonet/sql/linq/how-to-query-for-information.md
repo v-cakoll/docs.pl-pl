@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e538d288-2070-40ca-9da6-4fbc68cd6ad0
-ms.openlocfilehash: aedf89f1e570b34d31050fabb91842cefe351488
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2987e43c83bf84e32cd05a870b24da40dd37d8b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033738"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943553"
 ---
 # <a name="how-to-query-for-information"></a>Instrukcje: Zapytanie dotyczące informacji
-Zapytania w programie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] należy użyć tej samej składni jako zapytania w [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]. Jedyną różnicą jest to, że obiekty do którego odwołuje się [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapytania są mapowane do elementów w bazie danych. Aby uzyskać więcej informacji, zobacz [wprowadzenie do zapytań LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
+Zapytania w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] programie używają tej samej składni co zapytania [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]w. Jedyną różnicą jest to, że obiekty, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] do których odwołują się zapytania, są mapowane na elementy w bazie danych. Aby uzyskać więcej informacji, zobacz [wprowadzenie do zapytań LINQC#()](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] przekłada zapytania, który zapisane na równoważne zapytania SQL, a następnie wysyła je do serwera w celu przetworzenia.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]tłumaczy zapytania zapisane w równoważne zapytania SQL i wysyła je do serwera w celu przetworzenia.  
   
- Niektóre funkcje [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] zapytania mogą potrzebować szczególną uwagę w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji. Aby uzyskać więcej informacji, zobacz [kwestie dotyczące zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md).  
+ Niektóre funkcje [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] zapytań mogą wymagać specjalnej uwagi w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacjach. Aby uzyskać więcej informacji, zobacz [pojęcia dotyczące zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md).  
   
 ## <a name="example"></a>Przykład  
- Następujące zapytanie pyta, czy lista klienci z Londynu. W tym przykładzie `Customers` jest tabela w bazie danych Northwind.  
+ Poniższe zapytanie pyta o listę klientów z usługi Londyn. W tym przykładzie `Customers` jest to tabela w przykładowej bazie danych Northwind.  
   
  [!code-csharp[DLinqQuerying#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQuerying/cs/Program.cs#1)]
  [!code-vb[DLinqQuerying#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#1)]  

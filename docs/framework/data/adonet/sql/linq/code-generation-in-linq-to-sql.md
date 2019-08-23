@@ -2,12 +2,12 @@
 title: Generowanie kodu w składniku LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 63ac0f50b34a5e5d8739adbeb70f2412960227c3
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 12470a8c14e0a41eb6e06fc5d4ba63c12924330b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666128"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939176"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>Generowanie kodu w składniku LINQ to SQL
 Można wygenerować kod reprezentujący bazę danych za pomocą Object Relational Designer lub narzędzia wiersza polecenia SQLMetal. W obu przypadkach generowanie kodu kompleksowego występuje w trzech etapach:  
@@ -32,7 +32,7 @@ Można wygenerować kod reprezentujący bazę danych za pomocą Object Relationa
  Odróżnij ten plik definicji schematu od pliku definicji schematu, który jest używany do sprawdzania poprawności zewnętrznego pliku mapowania. Aby uzyskać więcej informacji, zobacz [Mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)).  
   
 > [!NOTE]
->  Użytkownicy programu Visual Studio również znajdą ten plik XSD w oknie dialogowym schematy XML jako "DbmlSchema. xsd". Aby prawidłowo użyć pliku XSD do walidacji pliku DBML, zobacz [How to: Sprawdź poprawność DBML i](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)zewnętrznych plików mapowania.  
+> Użytkownicy programu Visual Studio również znajdą ten plik XSD w oknie dialogowym schematy XML jako "DbmlSchema. xsd". Aby prawidłowo użyć pliku XSD do walidacji pliku DBML, zobacz [How to: Sprawdź poprawność DBML i](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)zewnętrznych plików mapowania.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  

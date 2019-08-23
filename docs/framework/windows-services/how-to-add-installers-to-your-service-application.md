@@ -11,58 +11,58 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: af56e01c1c8c1e23bb80413ce6f52a5f6d467b4b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 335bff660e401d8fbaf531f1c1f3ccc166d1c70a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914124"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952510"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Instrukcje: Dodawanie instalatorów od aplikacji usług
-Program Visual Studio jest dostarczany składników instalacji, które można zainstalować zasoby skojarzone ze swoimi aplikacjami usługi. Składniki instalacyjne zarejestrować pojedynczą usługę w systemie, do którego jest w trakcie instalacji i umożliwić Menedżera sterowania usługami wiedzieć, że Usługa istnieje. Podczas pracy z aplikacją usługi, możesz wybrać link w oknie dialogowym właściwości, aby automatycznie dodać odpowiednie pliki instalacyjne do projektu.  
+Program Visual Studio jest dostarczany ze składnikami instalacji, które mogą instalować zasoby skojarzone z aplikacjami usługi. Składniki instalacji rejestrują poszczególne usługi w systemie, w którym jest instalowana, i pozwalają menedżerowi sterowania usługami znać, że usługa istnieje. Podczas pracy z aplikacją usługi można wybrać łącze w okno Właściwości, aby automatycznie dodać odpowiednie Instalatory do projektu.  
   
 > [!NOTE]
->  Wartości właściwości dla usługi są kopiowane z klasy usługi do klasy Instalatora. Po aktualizacji wartości właściwości w klasie usługi, nie są one automatycznie aktualizowane w Instalatorze.  
+> Wartości właściwości usługi są kopiowane z klasy usługi do klasy Instalatora. W przypadku zaktualizowania wartości właściwości w klasie usług nie są one automatycznie aktualizowane w instalatorze.  
   
- Po dodaniu Instalatora do projektu nową klasę (która domyślnie jest o nazwie `ProjectInstaller`) jest tworzony w projekcie i wystąpienia instalacji odpowiednie składniki są tworzone w obrębie tej. Ta klasa działa jako centralny punkt dla wszystkich składników instalacji wymaga projektu. Na przykład jeśli dodać drugą usługę do aplikacji i kliknij łącze Dodaj Instalatora, nie jest tworzony drugi klasa Instalatora; Zamiast tego składnika instalacyjnymi dodatkowe usługi drugi zostanie dodany do istniejącej klasy.  
+ Po dodaniu Instalatora do projektu w projekcie zostanie utworzona nowa klasa (która domyślnie nosi nazwę `ProjectInstaller`), a w nim zostaną utworzone wystąpienia odpowiednich składników instalacyjnych. Ta klasa działa jako punkt centralny dla wszystkich składników instalacji potrzebnych przez projekt. Jeśli na przykład dodasz drugą usługę do aplikacji i klikniesz link Dodaj Instalatora, nie zostanie utworzona druga Klasa Instalatora; Zamiast tego niezbędny dodatkowy składnik instalacyjny dla drugiej usługi jest dodawany do istniejącej klasy.  
   
- Nie musisz wykonać specjalne pisania w ramach programów instalacyjnych, aby poprawnie zainstalować usług. Jednak czasami konieczne może być zmodyfikowania zawartości pliki instalacyjne, jeśli trzeba dodać specjalne funkcje do procesu instalacji.  
+ Nie trzeba wykonywać żadnych specjalnych kodowania w ramach instalatorów, aby zapewnić prawidłowe działanie usług. Jednak czasami trzeba zmodyfikować zawartość instalatorów, jeśli trzeba dodać specjalną funkcjonalność do procesu instalacji.  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
+> Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-add-installers-to-your-service-application"></a>Aby dodać instalatorów od aplikacji usług  
+### <a name="to-add-installers-to-your-service-application"></a>Aby dodać Instalatory do aplikacji usługi  
   
-1. W **Eksploratora rozwiązań**, dostępu **projektowania** widoku dla usługi, dla którego chcesz dodać jako składnik instalacji.  
+1. W **Eksplorator rozwiązań**dostęp do widoku **projektu** dla usługi, dla której chcesz dodać składnik instalacji.  
   
-2. Kliknij tło projektanta aby wybrać usługę, a nie jakąkolwiek jej zawartość.  
+2. Kliknij tło projektanta, aby wybrać samą usługę, a nie jej zawartość.  
   
-3. Za pomocą projektanta w fokus, kliknij prawym przyciskiem myszy, a następnie kliknij **Dodaj Instalatora**.  
+3. Korzystając z projektanta w fokusie, kliknij prawym przyciskiem myszy, a następnie kliknij polecenie **Dodaj Instalatora**.  
   
-     Nowa klasa `ProjectInstaller`i dwa składniki: Instalacja <xref:System.ServiceProcess.ServiceProcessInstaller> i <xref:System.ServiceProcess.ServiceInstaller>, są dodawane do projektu i wartości właściwości dla usługi są kopiowane do składników.  
+     Nowa klasa, `ProjectInstaller`i dwa składniki instalacyjne, <xref:System.ServiceProcess.ServiceProcessInstaller> i <xref:System.ServiceProcess.ServiceInstaller>, są dodawane do projektu, a wartości właściwości usługi są kopiowane do składników programu.  
   
-4. Kliknij przycisk <xref:System.ServiceProcess.ServiceInstaller> składnika i sprawdź, czy wartość <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> właściwość jest ustawiona na taką samą wartość jak <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> właściwość samą usługę.  
+4. Kliknij składnik i sprawdź, czy wartość <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> właściwości jest ustawiona na taką samą wartość jak <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> właściwość w samej usłudze. <xref:System.ServiceProcess.ServiceInstaller>  
   
-5. Aby określić, jak można uruchomić usługi, kliknij przycisk <xref:System.ServiceProcess.ServiceInstaller> składnika i ustaw <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> właściwość odpowiednią wartość.  
+5. Aby określić, jak zostanie uruchomiona usługa, kliknij <xref:System.ServiceProcess.ServiceInstaller> składnik i <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> ustaw właściwość na odpowiednią wartość.  
   
     |Wartość|Wynik|  
     |-----------|------------|  
-    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|Usługę można ręcznie uruchomić po zakończeniu instalacji. Aby uzyskać więcej informacji, zobacz [jak: Uruchamianie usług](../../../docs/framework/windows-services/how-to-start-services.md).|  
-    |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|Usługa zostanie uruchomiona przez siebie przy każdym ponownym uruchomieniu komputera.|  
+    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|Usługa musi zostać uruchomiona ręcznie po zakończeniu instalacji. Aby uzyskać więcej informacji, zobacz [jak: Uruchom usługi](../../../docs/framework/windows-services/how-to-start-services.md).|  
+    |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|Usługa rozpocznie się za każdym razem, gdy komputer zostanie uruchomiony ponownie.|  
     |<xref:System.ServiceProcess.ServiceStartMode.Disabled>|Nie można uruchomić usługi.|  
   
-6. Aby ustalić kontekstu zabezpieczeń, w którym będzie uruchamiany usługi, kliknij przycisk <xref:System.ServiceProcess.ServiceProcessInstaller> składnika i ustawianie wartości odpowiednich właściwości. Aby uzyskać więcej informacji, zobacz [jak: Określanie kontekstu zabezpieczeń dla usług](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md).  
+6. Aby określić kontekst zabezpieczeń, w którym zostanie uruchomiona usługa, kliknij <xref:System.ServiceProcess.ServiceProcessInstaller> składnik i ustaw odpowiednie wartości właściwości. Aby uzyskać więcej informacji, zobacz [jak: Określ kontekst zabezpieczeń usług](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md).  
   
-7. Zastąp wszystkie metody, dla których trzeba wykonać niestandardowych.  
+7. Zastąp wszystkie metody, dla których należy wykonać przetwarzanie niestandardowe.  
   
-8. Wykonaj kroki od 1 do 7 dla każdego dodatkowe usługi w projekcie.  
+8. Wykonaj kroki od 1 do 7 dla każdej dodatkowej usługi w projekcie.  
   
     > [!NOTE]
-    >  Dla każdej dodatkowej usługi w projekcie, należy dodać kolejny <xref:System.ServiceProcess.ServiceInstaller> składnika w projekcie `ProjectInstaller` klasy. <xref:System.ServiceProcess.ServiceProcessInstaller> Składnika dodanej w kroku 3 pracuje ze wszystkimi programów instalacyjnych poszczególnych usług w projekcie.  
+    > Dla każdej dodatkowej usługi w projekcie należy dodać dodatkowy <xref:System.ServiceProcess.ServiceInstaller> składnik do `ProjectInstaller` klasy projektu. <xref:System.ServiceProcess.ServiceProcessInstaller> Składnik dodany w kroku 3 współdziała ze wszystkimi instalacjami poszczególnych usług w projekcie.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [Instrukcje: Instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
-- [Instrukcje: Uruchamianie usług](../../../docs/framework/windows-services/how-to-start-services.md)
+- [Instrukcje: Uruchom usługi](../../../docs/framework/windows-services/how-to-start-services.md)
 - [Instrukcje: Określanie kontekstu zabezpieczeń dla usług](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)

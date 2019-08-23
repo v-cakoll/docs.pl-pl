@@ -9,75 +9,75 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: dc297bd35d7bfdb25fc50135b8e684e1b9452cb2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 054beab97a77bd466d2c3d8c734e37f8ded7eb62
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592586"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945271"
 ---
 # <a name="data-contract-known-types"></a>Znane typy kontraktów danych
-<xref:System.Runtime.Serialization.KnownTypeAttribute> Klasy pozwala na określenie z wyprzedzeniem, typy, które należy wziąć pod uwagę podczas deserializacji. Aby uzyskać przykład pracy, zobacz [znane typy](../../../../docs/framework/wcf/samples/known-types.md) przykład.  
+<xref:System.Runtime.Serialization.KnownTypeAttribute> Klasa pozwala określić z wyprzedzeniem typy, które powinny być brane pod uwagę podczas deserializacji. Aby zapoznać się z przykładem roboczym, zobacz przykład [znanych typów](../../../../docs/framework/wcf/samples/known-types.md) .  
   
- Zwykle podczas przekazywania parametrów i zwracanych wartości między klientem a usługą, oba punkty końcowe współdziel kontraktów danych danych przekazywanych. Jednak to nie jest wymagane w następujących okolicznościach:  
+ Zwykle podczas przekazywania parametrów i zwracanych wartości między klientem a usługą oba punkty końcowe współdzielą wszystkie Kontrakty danych do przesłania. Nie dotyczy to jednak następujących sytuacji:  
   
-- Kontrakt przesłanych danych jest tworzony na podstawie umowy oczekiwanych danych. Aby uzyskać więcej informacji, zobacz sekcję dotyczącą dziedziczenie w [równoważność kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). W takim przypadku przesyłanych danych ma te same dane Umowę zgodnie z oczekiwaniami, odbieranie punktu końcowego.  
+- Kontrakt wysłanych danych pochodzi od oczekiwanego kontraktu danych. Aby uzyskać więcej informacji, zapoznaj się z sekcją dotyczącej dziedziczenia w obszarze [równoważności kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md). W takim przypadku przesyłane dane nie mają tego samego kontraktu danych zgodnie z oczekiwaniami w punkcie końcowym odbioru.  
   
-- Deklarowany typ informacji przekazywanych jest interfejs, w przeciwieństwie do klasy, struktury lub wyliczenia. W związku z tym go nie może być znane z wyprzedzeniem typu czy implementuje interfejs są faktycznie przesyłane i w związku z tym, odbieranie punktu końcowego ustalić wcześniej kontraktu danych dla przesyłanych danych.  
+- Zadeklarowany typ dla przekazywanych informacji jest interfejsem, a nie z klasą, strukturą lub wyliczeniem. W związku z tym nie może być znany z wyprzedzeniem, który typ implementujący interfejs jest faktycznie wysyłany i dlatego punkt końcowy odbiorcy nie może określić z wyprzedzeniem kontraktu danych dla przesyłanych danych.  
   
-- Deklarowany typ informacji przekazywanych jest <xref:System.Object>. Ponieważ każdy typ dziedziczy z <xref:System.Object>i go nie może być znane z wyprzedzeniem typy są faktycznie przesyłane, odbieranie punkt końcowy nie może ustalić z wyprzedzeniem kontraktu danych dla przesyłanych danych. To jest szczególnym przypadkiem pierwszego elementu: Co kontraktu danych pochodzi z domyślnej umowy puste dane, który jest generowany dla <xref:System.Object>.  
+- Zadeklarowany typ dla przekazywanych informacji to <xref:System.Object>. Ponieważ każdy typ dziedziczy z <xref:System.Object>i nie może być znany z wyprzedzeniem, który jest faktycznie wysyłany, punkt końcowy odbiorcy nie może określić z wyprzedzeniem kontraktu danych dla przesyłanych danych. Jest to specjalny przypadek pierwszego elementu: Wszystkie Kontrakty danych pochodzą z domyślnego, pustego kontraktu danych wygenerowanego dla <xref:System.Object>.  
   
-- Niektóre typy, które obejmują typów programu .NET Framework, mieć elementy członkowskie, które należą do jednej z trzech powyższych kategorii. Na przykład <xref:System.Collections.Hashtable> używa <xref:System.Object> przechowywanie rzeczywistych obiektów w tablicy skrótów. Podczas serializacji tych typów, po stronie odbierającej nie może ustalić z wyprzedzeniem kontraktu danych dla tych członków.  
+- Niektóre typy, które obejmują .NET Framework typy, mają składowe, które znajdują się w jednej z powyższych trzech kategorii. Na przykład program <xref:System.Collections.Hashtable> używa <xref:System.Object> do przechowywania rzeczywistych obiektów w tabeli skrótów. Podczas serializacji tych typów Strona otrzymująca nie może określić z wyprzedzeniem kontraktu danych dla tych członków.  
   
-## <a name="the-knowntypeattribute-class"></a>Klasa KnownTypeAttribute  
- Dane odebrane na odbieranie punktu końcowego, środowisko wykonawcze programu WCF próbuje zdeserializowanie danych do wystąpienia typu wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR). Typ, który zostanie uruchomiony do deserializacji jest wybierany sprawdzając pierwszego komunikatu przychodzącego do ustalenia danych umowę które treści wiadomości są zgodne. Następnie aparat deserializacji próbuje odnaleźć typu CLR, który implementuje kontraktu danych, zgodny z treści wiadomości. Zestaw typów Release candidate, które umożliwiają aparatu deserializacji w trakcie tego procesu jest określany jako zestaw Deserializator "znanych typów."  
+## <a name="the-knowntypeattribute-class"></a>Klasa KnownTypeattribute  
+ Gdy dane docierają do odbiorczego punktu końcowego, środowisko uruchomieniowe WCF próbuje zdeserializować dane do wystąpienia aparatu plików wykonywalnych języka wspólnego (CLR). Typ, który jest skonkretyzowany dla deserializacji jest wybierany przez pierwsze Inspekcja komunikatu przychodzącego, aby określić kontrakt danych, do którego zawartość wiadomości jest zgodna. Aparat deserializacji próbuje znaleźć typ CLR, który implementuje kontrakt danych zgodny z zawartością wiadomości. Zestaw typów kandydujących, które mogą być używane przez aparat deserializacji w trakcie tego procesu, jest nazywany zestawem "znanych typów".  
   
- Jednym ze sposobów, aby umożliwić aparatu deserializacji wiedzieć o typie jest przy użyciu <xref:System.Runtime.Serialization.KnownTypeAttribute>. Nie można zastosować atrybut do poszczególnych elementów członkowskich danych, tylko typy kontraktu danych całego. Atrybut jest stosowany do *typu zewnętrznego* , może być klasą lub strukturą. W jej najprostsze użycie stosowanie atrybutu określa typ jako "znanych type". Powoduje to, że znany typ jako część zestawu znanych typów, zawsze wtedy, gdy obiekt typu zewnętrznego lub wykonać deserializacji dowolny obiekt określony przez jego członków. Więcej niż jeden <xref:System.Runtime.Serialization.KnownTypeAttribute> atrybut można stosować do tego samego typu.  
+ Jednym ze sposobów na umożliwienie aparatowi deserializacji informacji o typie jest użycie <xref:System.Runtime.Serialization.KnownTypeAttribute>. Nie można zastosować atrybutu do poszczególnych składowych danych, tylko do typów kontraktu danych całych. Ten atrybut jest stosowany do *typu zewnętrznego* , który może być klasą lub strukturą. W najbardziej podstawowym użyciu, zastosowanie atrybutu określa typ jako "znany typ". Powoduje to, że znany typ jest częścią zestawu znanych typów za każdym razem, gdy obiekt typu zewnętrznego lub dowolnego obiektu, do którego odwołuje się jego składowe, jest deserializowany. Do tego samego <xref:System.Runtime.Serialization.KnownTypeAttribute> typu można zastosować więcej niż jeden atrybut.  
   
 ## <a name="known-types-and-primitives"></a>Znane typy i elementy podstawowe  
- Typy pierwotne, a także niektórych typów traktowane jako elementy podstawowe (na przykład <xref:System.DateTime> i <xref:System.Xml.XmlElement>) są zawsze "Nieznany" i nigdy nie muszą być dodane za pomocą tego mechanizmu. Jednak tablic prymitywnych typów muszą być dodane jawnie. Większość kolekcji są uważane za równoważne do tablic. (Inne niż ogólne kolekcje są uważane za równoważne do tablic <xref:System.Object>). Na przykład przy użyciu podstawowych, pierwotnych tablice i kolekcje pierwotnych, zobacz przykład 4.  
+ Typy pierwotne, a także niektóre typy traktowane jako elementy pierwotne (na przykład <xref:System.DateTime> i <xref:System.Xml.XmlElement>) są zawsze "znane" i nigdy nie muszą być dodawane przez ten mechanizm. Jednakże tablice typów pierwotnych muszą być dodawane jawnie. Większość kolekcji jest traktowana jako odpowiednik tablic. (Kolekcje inne niż ogólne są uważane za równoważne tablicom <xref:System.Object>). Aby zapoznać się z przykładem typów pierwotnych, tablic podstawowych i kolekcji pierwotnych, zobacz przykład 4.  
   
 > [!NOTE]
->  W przeciwieństwie do innych typów pierwotnych <xref:System.DateTimeOffset> struktura nie jest znany typ domyślnie, dlatego należy ręcznie dodać do listy znanych typów.  
+> W <xref:System.DateTimeOffset> przeciwieństwie do innych typów pierwotnych, struktura nie jest typem znanym domyślnie, więc należy ją dodać ręcznie do listy znanych typów.  
   
 ## <a name="examples"></a>Przykłady  
- W poniższych przykładach pokazano <xref:System.Runtime.Serialization.KnownTypeAttribute> klasy w użyciu.  
+ W poniższych przykładach <xref:System.Runtime.Serialization.KnownTypeAttribute> przedstawiono klasę używaną.  
   
 #### <a name="example-1"></a>Przykład 1  
- Istnieją trzy klasy przy użyciu relacji dziedziczenia.  
+ Istnieją trzy klasy z relacją dziedziczenia.  
   
  [!code-csharp[C_KnownTypeAttribute#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#1)]
  [!code-vb[C_KnownTypeAttribute#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#1)]  
   
- Następujące `CompanyLogo` klasy może być Zserializowany, ale nie można zdeserializować, jeśli `ShapeOfLogo` element członkowski jest ustawiany na `CircleType` lub `TriangleType` obiektu, ponieważ aparat deserializacji nie rozpoznaje wszystkie typy z nazw kontraktu danych " Koło"lub"Trójkąt".  
+ Następująca `CompanyLogo` Klasa może być serializowana, ale nie można jej zdeserializować, `ShapeOfLogo` Jeśli element członkowski `CircleType` jest ustawiony `TriangleType` na albo obiekt, ponieważ aparat deserializacji nie rozpoznaje żadnych typów z nazwami kontraktu danych " Okrąg "lub" trójkąta ".  
   
  [!code-csharp[C_KnownTypeAttribute#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#2)]
  [!code-vb[C_KnownTypeAttribute#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#2)]  
   
- Poprawny sposób zapisu `CompanyLogo` typu jest wyświetlana w poniższym kodzie.  
+ Poprawna Metoda pisania `CompanyLogo` typu jest pokazana w poniższym kodzie.  
   
  [!code-csharp[C_KnownTypeAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#3)]
  [!code-vb[C_KnownTypeAttribute#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#3)]  
   
- Zawsze, gdy typu zewnętrznego `CompanyLogo2` jest przeprowadzona, aparat deserializacji wie o `CircleType` i `TriangleType` i dlatego jest w stanie znaleźć pasujące typy kontraktów danych "Koło" i "Trójkąt".  
+ Za każdym razem, `CompanyLogo2` gdy typ zewnętrzny jest deserializowany, aparat deserializacji wie `CircleType` o `TriangleType` i i, w związku z tym, może znaleźć pasujące typy kontraktów danych "Circle" i "Trójkąty".  
   
 #### <a name="example-2"></a>Przykład 2  
- W poniższym przykładzie mimo że zarówno `CustomerTypeA` i `CustomerTypeB` mają `Customer` kontraktu danych, wystąpienie `CustomerTypeB` jest tworzony w każdym przypadku, gdy `PurchaseOrder` jest przeprowadzona, ponieważ tylko `CustomerTypeB` znanego Aparat deserializacji.  
+ W poniższym przykładzie, pomimo tego, że `CustomerTypeA` oba `CustomerTypeB` i mają `Customer` umowę danych `PurchaseOrder` , wystąpienie `CustomerTypeB` jest tworzone za każdym razem, gdy jest deserializowany, ponieważ `CustomerTypeB` jest znane tylko dla aparat deserializacji.  
   
  [!code-csharp[C_KnownTypeAttribute#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#4)]
  [!code-vb[C_KnownTypeAttribute#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#4)]  
   
 #### <a name="example-3"></a>Przykład 3  
- W poniższym przykładzie <xref:System.Collections.Hashtable> jej zawartość są przechowywane wewnętrznie jako <xref:System.Object>. Aby pomyślnie zdeserializowanie tablicy skrótów, aparat deserializacji trzeba znać zestaw możliwych typów, które mogą wystąpić, istnieje. W tym przypadku wiemy z wyprzedzeniem tylko `Book` i `Magazine` obiekty są przechowywane w `Catalog`, więc te są dodawane przy użyciu <xref:System.Runtime.Serialization.KnownTypeAttribute> atrybutu.  
+ W poniższym przykładzie zawartość jest <xref:System.Collections.Hashtable> przechowywana wewnętrznie jako. <xref:System.Object> Aby pomyślnie deserializować tablicę skrótów, aparat deserializacji musi znać zestaw możliwych typów, które mogą wystąpić w tym miejscu. W takim przypadku `Book` wiemy, że tylko `Magazine` `Catalog`obiekty są przechowywane w, dlatego są one dodawane przy użyciu <xref:System.Runtime.Serialization.KnownTypeAttribute> atrybutu.  
   
  [!code-csharp[C_KnownTypeAttribute#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#5)]
  [!code-vb[C_KnownTypeAttribute#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#5)]  
   
 #### <a name="example-4"></a>Przykład 4  
- W poniższym przykładzie kontraktu danych przechowuje liczbę i operacji do wykonania na liczbę. `Numbers` Element członkowski danych może być liczbą całkowitą, tablicy liczb całkowitych, lub <xref:System.Collections.Generic.List%601> zawierający liczb całkowitych.  
+ W poniższym przykładzie kontrakt danych przechowuje liczbę i operację do wykonania na numerze. Składowa danych może być liczbą całkowitą, tablicą liczb całkowitych <xref:System.Collections.Generic.List%601> lub zawierającą liczby całkowite. `Numbers`  
   
 > [!CAUTION]
->  Ta opcja zadziała tylko po stronie klienta Jeśli narzędzia SVCUTIL. Plik EXE jest używany do generowania serwera proxy usługi WCF. NARZĘDZIA SVCUTIL. Plik EXE pobiera metadane z usługi, w tym wszystkie znane typy. Bez tych informacji klienta nie będzie można wykonać deserializacji typów.  
+>  Ta wartość będzie działała tylko po stronie klienta, jeśli SVCUTIL. Plik EXE jest używany do generowania serwera proxy WCF. Svcutil. EXE pobiera metadane z usługi, w tym wszystkie znane typy. Bez tych informacji klient nie będzie mógł deserializować typów.  
   
  [!code-csharp[C_KnownTypeAttribute#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#6)]
  [!code-vb[C_KnownTypeAttribute#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#6)]  
@@ -87,31 +87,31 @@ ms.locfileid: "65592586"
  [!code-csharp[C_KnownTypeAttribute#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#7)]
  [!code-vb[C_KnownTypeAttribute#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#7)]  
   
-## <a name="known-types-inheritance-and-interfaces"></a>Znanych typów, dziedziczenie i interfejsy  
- Jeśli znany typ jest skojarzony z określonego typu, w którym używana jest `KnownTypeAttribute` , znany typ jest również skojarzony z wszystkich typów pochodnych tego typu. Zobacz na przykład, poniższy kod.  
+## <a name="known-types-inheritance-and-interfaces"></a>Znane typy, dziedziczenie i interfejsy  
+ Gdy znany typ jest skojarzony z określonym typem przy użyciu `KnownTypeAttribute` atrybutu, znany typ jest również skojarzony ze wszystkimi typami pochodnymi tego typu. Na przykład zapoznaj się z poniższym kodem.  
   
  [!code-csharp[C_KnownTypeAttribute#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#8)]
  [!code-vb[C_KnownTypeAttribute#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#8)]  
   
- `DoubleDrawing` Klasy nie wymaga `KnownTypeAttribute` atrybutu `Square` i `Circle` w `AdditionalShape` pola, ponieważ klasa bazowa (`Drawing`) ma już te atrybuty zastosowane.  
+ `Circle` Klasanie`Drawing`wymaga, `Square` aby atrybut był używany i w polu,ponieważklasabazowa()majużzastosowaneteatrybuty.`AdditionalShape` `KnownTypeAttribute` `DoubleDrawing`  
   
- Znane typy mogą zostać skojarzone tylko z klas i struktur, interfejsów nie.  
+ Znane typy można kojarzyć tylko z klasami i strukturami, a nie interfejsami.  
   
-## <a name="known-types-using-open-generic-methods"></a>Znane typy, za pomocą otwartych metod ogólnych  
- Może być konieczne dodanie typem ogólnym jako znanego typu. Jednak to otwarty typ ogólny nie można przekazać jako parametru `KnownTypeAttribute` atrybutu.  
+## <a name="known-types-using-open-generic-methods"></a>Znane typy używające otwartych metod ogólnych  
+ Może być konieczne dodanie typu ogólnego jako znanego typu. Jednak otwarty typ generyczny nie może być przekazywać jako parametr do `KnownTypeAttribute` atrybutu.  
   
- Ten problem można rozwiązać za pomocą alternatywny mechanizm: Napisanie metody, która zwraca listę typów, aby dodać do kolekcji znanych typów. Nazwa metody jest następnie określony jako argument ciągu `KnownTypeAttribute` atrybut ze względu na pewne ograniczenia.  
+ Ten problem można rozwiązać przy użyciu alternatywnego mechanizmu: Napisz metodę, która zwraca listę typów, które mają zostać dodane do kolekcji znanych typów. Nazwa metody jest następnie określona jako argument ciągu dla `KnownTypeAttribute` atrybutu z powodu pewnych ograniczeń.  
   
- Metoda musi istnieć na typ, do którego `KnownTypeAttribute` atrybut jest stosowany, muszą być statyczne, należy zaakceptować żadnych parametrów i musi zwracać obiekt, który można przypisać do <xref:System.Collections.IEnumerable> z <xref:System.Type>.  
+ Metoda musi istnieć w typie, do którego `KnownTypeAttribute` zastosowano atrybut, musi być statyczna, nie może akceptować parametrów i musi zwracać obiekt, <xref:System.Type>do <xref:System.Collections.IEnumerable> którego można przypisać.  
   
- Nie można łączyć `KnownTypeAttribute` atrybutu o nazwie metody i `KnownTypeAttribute` atrybuty z typami rzeczywistymi do tego samego typu. Ponadto nie można zastosować więcej niż jedną `KnownTypeAttribute` nazwą metody do tego samego typu.  
+ Nie można połączyć `KnownTypeAttribute` atrybutu z nazwą metody i `KnownTypeAttribute` atrybutami o rzeczywistych typach tego samego typu. Ponadto nie można zastosować więcej niż jednego `KnownTypeAttribute` z nazwą metody do tego samego typu.  
   
- Zobacz następujące klasy.  
+ Zapoznaj się z następującą klasą.  
   
  [!code-csharp[C_KnownTypeAttribute#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#9)]
  [!code-vb[C_KnownTypeAttribute#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#9)]  
   
- `theDrawing` Pole zawiera wystąpienia klasy generycznej `ColorDrawing` i klasę ogólną `BlackAndWhiteDrawing`, które dziedziczą z klasy rodzajowej `Drawing`. Normalnie oba muszą zostać dodane do znanych typów, ale poniżej nie jest prawidłową składnię dla atrybutów.  
+ Pole zawiera wystąpienia klasy `ColorDrawing` generycznej i klasy `BlackAndWhiteDrawing`generycznej, które dziedziczą z klasy `Drawing`generycznej. `theDrawing` Zwykle obydwie muszą być dodawane do znanych typów, ale Poniższa składnia nie jest prawidłową składnią dla atrybutów.  
   
 ```csharp  
 // Invalid syntax for attributes:  
@@ -125,15 +125,15 @@ ms.locfileid: "65592586"
 ' KnownType(GetType(BlackAndWhiteDrawing(Of T)))>  
 ```  
   
- W związku z tym metoda musi zostać utworzona do tych typów zwracanych. Poprawny sposób pisania tego typu, następnie jest wyświetlany w poniższym kodzie.  
+ W tym celu należy utworzyć metodę, aby zwracała te typy. Prawidłowy sposób zapisu tego typu, a następnie pokazano w poniższym kodzie.  
   
  [!code-csharp[C_KnownTypeAttribute#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#10)]
  [!code-vb[C_KnownTypeAttribute#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#10)]  
   
-## <a name="additional-ways-to-add-known-types"></a>Dodatkowe sposoby dodawania znane typy  
- Ponadto można dodać znanych typów za pomocą pliku konfiguracji. Jest to przydatne, gdy nie mają kontroli nad typ, który wymaga znanych typów do odpowiednich deserializacji, np. gdy przy użyciu innych firm wpisz biblioteki za pomocą programu Windows Communication Foundation (WCF).  
+## <a name="additional-ways-to-add-known-types"></a>Dodatkowe sposoby dodawania znanych typów  
+ Ponadto znane typy można dodawać za pomocą pliku konfiguracji. Jest to przydatne, gdy nie kontrolujesz typu wymagającego znanych typów do właściwej deserializacji, na przykład w przypadku używania bibliotek typów innych firm z Windows Communication Foundation (WCF).  
   
- Następujący plik konfiguracji pokazuje sposób określania znanego typu w pliku konfiguracji.  
+ Poniższy plik konfiguracji przedstawia sposób określenia znanego typu w pliku konfiguracji.  
   
  `<configuration>`  
   
@@ -165,7 +165,7 @@ ms.locfileid: "65592586"
   
  `</configuration>`  
   
- W tej konfiguracji pliku typu kontraktu danych, nazywane `MyCompany.Library.Shape` jest zadeklarowany ma `MyCompany.Library.Circle` jako znanego typu.  
+ W poprzednim pliku konfiguracji typ kontraktu danych o nazwie `MyCompany.Library.Shape` jest zadeklarowany `MyCompany.Library.Circle` jako znany typ.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -12,111 +12,111 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: b0213ddfd8197ffabcbeb1cd5fc78e517920b8fe
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: fa30b7860bd8afdb68b0b54cd8d40f3e1ec86077
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690450"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949130"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Instrukcje: Tworzenie dodatku, który jest interfejsem użytkownika
-Ten przykład przedstawia sposób tworzenia dodatku, który jest Windows Presentation Foundation (WPF), która jest hostowana przez oddzielną aplikację WPF.  
+Ten przykład pokazuje, jak utworzyć dodatek, który jest Windows Presentation Foundation (WPF), który jest obsługiwany przez aplikację autonomiczną WPF.  
   
- Dodatek jest interfejs użytkownika, który jest formanty użytkownika WPF. Zawartość kontrolki użytkownika nie ma jednego przycisku, po kliknięciu wyświetla okno komunikatu. Aplikacja autonomiczna WPF obsługuje dodatków interfejsu użytkownika jako zawartość okna głównego aplikacji.  
+ Dodatek to interfejs użytkownika, który jest formantem użytkownika WPF. Zawartość kontrolki użytkownika to pojedynczy przycisk, który po kliknięciu wyświetla okno komunikatu. Aplikacja autonomiczna WPF obsługuje interfejs użytkownika dodatku jako zawartość głównego okna aplikacji.  
   
  **Wymagania wstępne**  
   
- W tym przykładzie wyróżnia rozszerzenia WPF model dodatku .NET Framework, które umożliwiają w tym scenariuszu i przyjęto założenie, że:  
+ W tym przykładzie wyróżniono rozszerzenia WPF do modelu dodatku .NET Framework, który umożliwia ten scenariusz, i przyjmuje następujące elementy:  
   
-- Znajomość środowiska .NET Framework — w modelu, w tym potoku dodatku i rozwoju hosta. Jeśli nie jesteś zaznajomiony z tych pojęć, zobacz [dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Aby uzyskać samouczek, który przedstawia implementację potoku dodatku i aplikacji hosta, zobacz [instruktażu: Tworzenie aplikacji rozszerzalnej](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
+- Znajomość modelu dodatku .NET Framework, w tym potoku, dodatku i opracowywania hosta. Jeśli nie znasz tych pojęć, zobacz [Dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Aby zapoznać się z samouczkiem, który ilustruje implementację potoku, dodatek i aplikację hosta, zobacz [Przewodnik: Tworzenie aplikacji](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))rozszerzalnej.  
   
-- Wiedza na temat rozszerzenia WPF model dodatku .NET Framework. Zobacz [Przegląd dodatki WPF](wpf-add-ins-overview.md).  
+- Znajomość rozszerzeń WPF do modelu dodatku .NET Framework. Zobacz [Omówienie dodatków WPF](wpf-add-ins-overview.md).  
   
 ## <a name="example"></a>Przykład  
- Aby utworzyć dodatek, który jest interfejsem użytkownika WPF wymaga określonego kodu dla każdy z segmentów potoku dodatku i aplikacji hosta.  
+ Aby utworzyć dodatek, który jest interfejsem użytkownika WPF, wymaga określonego kodu dla każdego segmentu potoku, dodatku i aplikacji hosta.  
 
 <a name="Contract"></a>   
-## <a name="implementing-the-contract-pipeline-segment"></a>Implementowanie segmentów potoku kontraktu
+## <a name="implementing-the-contract-pipeline-segment"></a>Implementowanie segmentu potoku kontraktu
 
-Gdy dodatek jest interfejsem użytkownika, należy zaimplementować kontrakt dla dodatku <xref:System.AddIn.Contract.INativeHandleContract>. W tym przykładzie `IWPFAddInContract` implementuje <xref:System.AddIn.Contract.INativeHandleContract>, jak pokazano w poniższym kodzie.  
+Gdy dodatek jest interfejsem użytkownika, kontrakt dla dodatku musi być zaimplementowany <xref:System.AddIn.Contract.INativeHandleContract>. W przykładzie `IWPFAddInContract` implementuje <xref:System.AddIn.Contract.INativeHandleContract>, jak pokazano w poniższym kodzie.  
   
 [!code-csharp[SimpleAddInIsAUISample#ContractCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]
 [!code-vb[SimpleAddInIsAUISample#ContractCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/Contracts/IWPFAddInContract.vb#contractcode)]
 
 <a name="AddInViewPipeline"></a>   
-## <a name="implementing-the-add-in-view-pipeline-segment"></a>Implementowanie segmentów potoku dodatku widoku
+## <a name="implementing-the-add-in-view-pipeline-segment"></a>Implementowanie segmentu potoku widoku dodatku
 
-Ponieważ dodatek jest implementowany jako podklasą <xref:System.Windows.FrameworkElement> typu widoku dodatku musi również podklasy <xref:System.Windows.FrameworkElement>. Poniższy kod przedstawia widok dodatku kontraktu, zaimplementowane jako `WPFAddInView` klasy.  
+Ponieważ dodatek jest zaimplementowany jako podklasa <xref:System.Windows.FrameworkElement> typu, widok dodatku musi być również podklasą. <xref:System.Windows.FrameworkElement> Poniższy kod przedstawia widok dodatku kontraktu wdrożony jako `WPFAddInView` Klasa.  
   
 [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
 [!code-vb[SimpleAddInIsAUISample#AddInViewCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/AddInViews/WPFAddInView.vb#AddInViewCode)]  
   
-W tym miejscu widoku dodatku jest tworzony na podstawie <xref:System.Windows.Controls.UserControl>. W związku z tym, Dodaj w interfejsie użytkownika powinien również pochodzić od <xref:System.Windows.Controls.UserControl>.  
+W tym miejscu widok dodatku pochodzi od <xref:System.Windows.Controls.UserControl>. W związku z tym interfejs użytkownika dodatku powinien również pochodzić od <xref:System.Windows.Controls.UserControl>.  
   
 <a name="AddInSideAdapter"></a>
-## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>Implementowanie segmentów potoku dodać strony karty
+## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>Implementowanie segmentu potoku karty dodatku
 
-Podczas gdy kontrakt jest <xref:System.AddIn.Contract.INativeHandleContract>, dodatek jest <xref:System.Windows.FrameworkElement> (zgodnie z określonym segmentów potoku dodatku widoku). W związku z tym <xref:System.Windows.FrameworkElement> muszą zostać skonwertowane do <xref:System.AddIn.Contract.INativeHandleContract> przed przekroczeniem granic izolacji. Ta praca jest wykonywana przez siebie w Dodaj kartę przez wywołanie metody <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, jak pokazano w poniższym kodzie.  
+Gdy kontrakt to <xref:System.AddIn.Contract.INativeHandleContract>, dodatek <xref:System.Windows.FrameworkElement> to (zgodnie z definicją segmentu potoku widoku). W związku z <xref:System.Windows.FrameworkElement> tym, należy przekonwertować <xref:System.AddIn.Contract.INativeHandleContract> na wartość przed przekroczeniem granicy izolacji. Ta operacja jest wykonywana przez adapter dodatku, wywołując <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, jak pokazano w poniższym kodzie.  
   
 [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
 [!code-vb[SimpleAddInIsAUISample#AddInSideAdapterCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.vb#addinsideadaptercode)]
 
-W modelu dodatków gdzie dodatek zwraca interfejs użytkownika (zobacz [Tworzenie dodatku, zwraca interfejs użytkownika](how-to-create-an-add-in-that-returns-a-ui.md)), przekonwertować karty dodatku <xref:System.Windows.FrameworkElement> do <xref:System.AddIn.Contract.INativeHandleContract> przez wywołanie metody <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> również musi zostać wywołany w tym modelu, chociaż należy zaimplementować metodę, z którego można zapisywać jej wywołania kodu. Możesz to zrobić przez zastąpienie <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> i wdrażanie kodu, który wywołuje <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> Jeśli kod, który wywołuje <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> oczekuje <xref:System.AddIn.Contract.INativeHandleContract>. W tym przypadku obiekt wywołujący będzie adapter po stronie hosta, co zostało omówione w kolejnej podsekcji.  
+W modelu dodatku, w którym dodatek zwraca interfejs użytkownika (zobacz [Tworzenie dodatku, który zwraca interfejs użytkownika](how-to-create-an-add-in-that-returns-a-ui.md)), adapter dodatku został przekonwertowany <xref:System.Windows.FrameworkElement> na obiekt <xref:System.AddIn.Contract.INativeHandleContract> przez wywoływanie <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>musi być również wywoływana w tym modelu, chociaż należy zaimplementować metodę, z której należy napisać kod w celu wywołania go. Można to zrobić, zastępując <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> i implementując kod, który wywołuje <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> , gdy wywoływany <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> kod oczekuje na <xref:System.AddIn.Contract.INativeHandleContract>. W takim przypadku obiekt wywołujący będzie adapterem po stronie hosta, który jest pokryty w kolejnej podsekcji.  
   
 > [!NOTE]
->  Musisz także Przesłoń <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> w tym modelu Włączanie przełączania między aplikacją hosta interfejsu użytkownika i interfejsu użytkownika dodatku. Aby uzyskać więcej informacji, zobacz temat "WPF dodatku ograniczenia" w [Przegląd dodatki WPF](wpf-add-ins-overview.md).  
+> Należy również przesłonić <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> ten model, aby włączyć funkcję tabulacji między interfejsem użytkownika aplikacji hosta i interfejsem użytkownika dodatku. Aby uzyskać więcej informacji, zobacz "ograniczenia dodatku WPF" w temacie [Omówienie dodatków WPF](wpf-add-ins-overview.md).  
   
-Ponieważ karta add w side implementuje interfejs, który pochodzi od klasy <xref:System.AddIn.Contract.INativeHandleContract>, trzeba będzie również zaimplementować <xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>, mimo że to jest ignorowany podczas <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> zostanie zastąpiona.  
+Ponieważ karta dodatku implementuje interfejs, który pochodzi z <xref:System.AddIn.Contract.INativeHandleContract>, należy również zaimplementować <xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>, chociaż jest on ignorowany, gdy <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> jest zastępowany.  
   
 <a name="HostViewPipeline"></a>   
-## <a name="implementing-the-host-view-pipeline-segment"></a>Implementowanie segmentów potoku widok hosta
+## <a name="implementing-the-host-view-pipeline-segment"></a>Implementowanie segmentu potoku widoku hosta
 
-W tym modelu aplikacja hosta zazwyczaj oczekuje, że widok hosta jako <xref:System.Windows.FrameworkElement> podklasę. Adaptery po stronie hosta muszą być konwertowane <xref:System.AddIn.Contract.INativeHandleContract> do <xref:System.Windows.FrameworkElement> po <xref:System.AddIn.Contract.INativeHandleContract> przecina granicę izolacji. Ponieważ metoda nie jest wywoływana przez hosta aplikacji w celu uzyskania <xref:System.Windows.FrameworkElement>, widoku hosta musi "return" <xref:System.Windows.FrameworkElement> przez umieszczenie go. W związku z tym, w widoku hosta muszą pochodzić od podklasą <xref:System.Windows.FrameworkElement> , mogą zawierać innych interfejsów użytkownika, takie jak <xref:System.Windows.Controls.UserControl>. Poniższy kod przedstawia widok hosta umowy, zaimplementowane jako `WPFAddInHostView` klasy.  
+W tym modelu aplikacja hosta zwykle oczekuje, że widok hosta będzie <xref:System.Windows.FrameworkElement> podklasą. Karta po stronie hosta musi <xref:System.AddIn.Contract.INativeHandleContract> zostać przeprowadzona konwersja do a <xref:System.Windows.FrameworkElement> po <xref:System.AddIn.Contract.INativeHandleContract> przekroczeniu granicy izolacji. Ponieważ metoda nie jest wywoływana przez aplikację hosta w celu uzyskania <xref:System.Windows.FrameworkElement>, widok hosta musi "zwrócić <xref:System.Windows.FrameworkElement> ", zawierający go. W związku z tym widok hosta musi pochodzić od podklasy <xref:System.Windows.FrameworkElement> , która może zawierać inne interfejsów użytkownika, na przykład. <xref:System.Windows.Controls.UserControl> Poniższy kod przedstawia widok hosta kontraktu wdrożony jako `WPFAddInHostView` Klasa.  
 
 [!code-csharp[WPFAddInHostView class](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/HostViews/WPFAddInHostView.cs#HostViewCode)]
 [!code-vb[WPFAddInHostView class](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/HostViews/WPFAddInHostView.vb#HostViewCode)]
 
 <a name="HostSideAdapter"></a>   
-## <a name="implementing-the-host-side-adapter-pipeline-segment"></a>Implementowanie segmentów potoku adaptery po stronie hosta
+## <a name="implementing-the-host-side-adapter-pipeline-segment"></a>Implementowanie segmentu potoku karty po stronie hosta
 
-Podczas gdy kontrakt jest <xref:System.AddIn.Contract.INativeHandleContract>, oczekuje, że aplikacja hosta <xref:System.Windows.Controls.UserControl> (jak określono w widoku hosta). W związku z tym <xref:System.AddIn.Contract.INativeHandleContract> muszą zostać skonwertowane do <xref:System.Windows.FrameworkElement> po przekroczeniu granic izolacji, zanim zostanie ustawiona jako zawartość widoku hosta (która jest pochodną <xref:System.Windows.Controls.UserControl>).  
+Gdy kontrakt jest <xref:System.AddIn.Contract.INativeHandleContract>aplikacją, aplikacja hosta oczekuje <xref:System.Windows.Controls.UserControl> (jak określono w widoku hosta). W <xref:System.AddIn.Contract.INativeHandleContract> związku z tym, należy przekonwertować <xref:System.Windows.FrameworkElement> na wartość po przekroczeniu granicy izolacji przed ustawieniem jako zawartość widoku hosta (który pochodzi z <xref:System.Windows.Controls.UserControl>).  
   
-Ta praca odbywa się przez adapter po stronie hosta, jak pokazano w poniższym kodzie.  
+Ta operacja jest wykonywana przez kartę po stronie hosta, jak pokazano w poniższym kodzie.  
 
 [!code-csharp[Host-side adapter](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/HostSideAdapters/WPFAddIn_ContractToViewHostSideAdapter.cs#HostSideAdapterCode)]
 [!code-vb[Host-side adapter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/HostSideAdapters/WPFAddIn_ContractToViewHostSideAdapter.vb#HostSideAdapterCode)]
 
-Jak widać, adapter po stronie hosta uzyskuje <xref:System.AddIn.Contract.INativeHandleContract> przez wywołanie metody karty add w side <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> — metoda (jest to punkt gdzie <xref:System.AddIn.Contract.INativeHandleContract> przecina granicę izolacji).  
+Jak widać, adapter po stronie hosta uzyskuje <xref:System.AddIn.Contract.INativeHandleContract> przez wywołanie <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> metody karty dodatku ( <xref:System.AddIn.Contract.INativeHandleContract> jest to punkt, w którym przecina granicę izolacji).  
   
-Adaptery po stronie hosta następnie konwertuje <xref:System.AddIn.Contract.INativeHandleContract> do <xref:System.Windows.FrameworkElement> przez wywołanie metody <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. Na koniec <xref:System.Windows.FrameworkElement> jest ustawiony jako zawartość widoku hosta.  
+Następnie karta po stronie hosta konwertuje <xref:System.AddIn.Contract.INativeHandleContract> do a <xref:System.Windows.FrameworkElement> przez wywołanie <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. Na <xref:System.Windows.FrameworkElement> koniec jest ustawiony jako zawartość widoku hosta.  
   
 <a name="AddIn"></a>   
-## <a name="implementing-the-add-in"></a>Wdrażanie dodatku programu
+## <a name="implementing-the-add-in"></a>Implementowanie dodatku
 
-Karta Dodaj w side i wyświetlanie dodatku w miejscu dodatek może być implementowana przez pochodząca z widoku dodatku, jak pokazano w poniższym kodzie.  
+Po zastosowaniu dostosowanej karty i widoku dodatku można zaimplementować ten dodatek, pobierając go z widoku dodatku, jak pokazano w poniższym kodzie.  
 
 [!code-csharp[Add-in implementation](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/WPFAddIn1/AddInUI.xaml.cs#AddInCodeBehind)]
 [!code-vb[Add-in implementation](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/WPFAddIn1/AddInUI.xaml.vb#AddInCodeBehind)]
 
-W tym przykładzie widać, co ciekawe zaletą tego modelu: deweloperzy w dodatku wystarczy do zaimplementowania dodatku (ponieważ jest to również interfejs użytkownika), a nie klasy dodatku i dodatków interfejsu użytkownika.  
+Z tego przykładu można zobaczyć jedną ciekawą korzyść tego modelu: deweloperzy dodatków muszą tylko zaimplementować dodatek (ponieważ jest również interfejsem użytkownika), a nie zarówno klasę dodatku, jak i interfejs użytkownika dodatku.  
   
 <a name="HostApp"></a>
-## <a name="implementing-the-host-application"></a>Wdrażanie aplikacji hosta
+## <a name="implementing-the-host-application"></a>Implementowanie aplikacji hosta
 
-Adaptery po stronie hosta i widok hosta utworzony aplikacji hosta umożliwia model dodatku .NET Framework Otwórz potok i uzyskać widok hosta dodatków. Te kroki są wyświetlane w poniższym kodzie.  
+Po utworzeniu karty sieciowej i widoku hosta po stronie hosta aplikacja hosta może użyć modelu dodatku .NET Framework, aby otworzyć potok i uzyskać widok hosta dodatku. Te kroki przedstawiono w poniższym kodzie.  
 
 [!code-csharp[Acquiring a host view of the add-in](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Host/MainWindow.xaml.cs#GetUICode)]
 [!code-vb[Acquiring a host view of the add-in](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/Host/MainWindow.xaml.vb#GetUICode)]
 
-Aplikacja hosta używa typowy kod model dodatku .NET Framework do aktywowania dodatku, niejawnie zwracające widoku hosta aplikacji hosta. Aplikacja hosta następnie wyświetla widok hosta (czyli <xref:System.Windows.Controls.UserControl>) z <xref:System.Windows.Controls.Grid>.  
+Aplikacja hosta używa typowego kodu modelu dodatku .NET Framework w celu aktywowania dodatku, który niejawnie zwraca widok hosta do aplikacji hosta. Następnie aplikacja hosta wyświetla widok hosta (który jest <xref:System.Windows.Controls.UserControl>) <xref:System.Windows.Controls.Grid>z.  
   
- Kod dla przetwarzania interakcji z interfejsem użytkownika dodatku działa w dodatku w domenie aplikacji. Interakcje te obejmują:  
+ Kod służący do przetwarzania interakcji z interfejsem użytkownika dodatku działa w domenie aplikacji dodatku. Te interakcje obejmują następujące elementy:  
   
-- Obsługa <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń.  
+- <xref:System.Windows.Controls.Button> Obsługa<xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzenia.  
   
-- Wyświetlanie <xref:System.Windows.MessageBox>.  
+- <xref:System.Windows.MessageBox>Wyświetlanie.  
   
- To działanie jest całkowicie odizolowana od aplikacji hosta.  
+ To działanie jest całkowicie odizolowane od aplikacji hosta.  
   
 ## <a name="see-also"></a>Zobacz także
 

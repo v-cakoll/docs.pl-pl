@@ -7,12 +7,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: ff43fa1d3019af5cd08f86704a05531120201d17
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: fdaa4b511b18495d2a35f72ee017a01aab0b4ee8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596022"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922056"
 ---
 # <a name="using-properties-c-programming-guide"></a>Używanie właściwości (Przewodnik programowania w języku C#)
 Właściwości łączą aspekty obu pól i metod. Dla użytkownika obiektu Właściwość wydaje się być polem, a dostęp do właściwości wymaga tej samej składni. Do realizatora klasy, właściwość to jeden lub dwa bloki kodu reprezentujące akcesor [Get](../../language-reference/keywords/get.md) i/lub [zestaw](../../language-reference/keywords/set.md) metod dostępu. Blok kodu dla `get` metody dostępu jest wykonywany, gdy właściwość jest odczytana; blok kodu `set` dla metody dostępu jest wykonywany, gdy do właściwości zostanie przypisana nowa wartość. Właściwość bez `set` metody dostępu jest traktowana jako tylko do odczytu. Właściwość bez `get` metody dostępu jest traktowana jako tylko do zapisu. Właściwość, która ma obu metod dostępu jest do odczytu i zapisu.  
@@ -44,7 +44,7 @@ Właściwości łączą aspekty obu pól i metod. Dla użytkownika obiektu Wła�
   
  [!code-csharp[csProgGuideProperties#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#10)]  
   
- `get` Metody dostępu można użyć do zwrócenia wartości pola lub obliczenia jej i zwrócenia. Przykład:  
+ `get` Metody dostępu można użyć do zwrócenia wartości pola lub obliczenia jej i zwrócenia. Na przykład:  
   
  [!code-csharp[csProgGuideProperties#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#11)]  
   
@@ -55,7 +55,7 @@ Właściwości łączą aspekty obu pól i metod. Dla użytkownika obiektu Wła�
   
  [!code-csharp[csProgGuideProperties#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#12)]  
   
- Podczas przypisywania wartości do właściwości `set` metoda dostępu jest wywoływana przy użyciu argumentu, który zapewnia nową wartość. Przykład:  
+ Podczas przypisywania wartości do właściwości `set` metoda dostępu jest wywoływana przy użyciu argumentu, który zapewnia nową wartość. Na przykład:  
   
  [!code-csharp[csProgGuideProperties#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#13)]  
   
@@ -71,7 +71,7 @@ Właściwości łączą aspekty obu pól i metod. Dla użytkownika obiektu Wła�
  Właściwość zastępująca Właściwość wirtualną może być również [zapieczętowana](../../language-reference/keywords/sealed.md), określając, że dla klas pochodnych nie jest już wirtualna. Wreszcie właściwość może być zadeklarowana jako [abstract](../../language-reference/keywords/abstract.md). Oznacza to, że nie ma implementacji w klasie, a klasy pochodne muszą zapisywać własne implementacje. Aby uzyskać więcej informacji na temat tych opcji, zobacz [klasy abstrakcyjne i zapieczętowane oraz składowe klas](./abstract-and-sealed-classes-and-class-members.md).  
   
 > [!NOTE]
->  Wystąpił błąd podczas używania modyfikatora [Virtual](../../language-reference/keywords/virtual.md), [abstract](../../language-reference/keywords/abstract.md)lub [override](../../language-reference/keywords/override.md) w metodzie dostępu właściwości statycznej [](../../language-reference/keywords/static.md) .  
+> Wystąpił błąd podczas używania modyfikatora [Virtual](../../language-reference/keywords/virtual.md), [abstract](../../language-reference/keywords/abstract.md)lub [override](../../language-reference/keywords/override.md) w metodzie dostępu właściwości statycznej [](../../language-reference/keywords/static.md) .  
   
 ## <a name="example"></a>Przykład  
  Ten przykład ilustruje właściwości wystąpienia, statyczne i tylko do odczytu. Akceptuje nazwę pracownika z klawiatury, zwiększa `NumberOfEmployees` się o 1 i wyświetla nazwę i numer pracownika.  

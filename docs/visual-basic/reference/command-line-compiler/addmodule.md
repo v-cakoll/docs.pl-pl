@@ -6,15 +6,15 @@ helpviewer_keywords:
 - addmodule compiler option [Visual Basic]
 - -addmodule compiler option [Visual Basic]
 ms.assetid: fb4b89d4-4926-4f20-868d-427fa28497b2
-ms.openlocfilehash: 2de5fe82f1969a2fdb305d45951d7d698252c0c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e0915a2534f950cec074632a59750c3f96b679d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61839225"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962459"
 ---
 # <a name="-addmodule"></a>-addmodule
-Powoduje, że kompilator udostępnia wszystkie informacje z określonego pliku lub plików dostępnych do aktualnie kompilowanemu projektowi typu.  
+Powoduje, że kompilator udostępnił wszystkie informacje o typie z określonych plików dla aktualnie kompilowanego projektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -24,34 +24,34 @@ Powoduje, że kompilator udostępnia wszystkie informacje z określonego pliku l
   
 ## <a name="arguments"></a>Argumenty  
  `fileList`  
- Wymagana. Rozdzielana przecinkami lista plików, które zawierają metadanych, ale nie zawierają zestawu manifestów. Nazwy plików zawierające spacje powinny być ujęte w znaki cudzysłowu ("").  
+ Wymagane. Rozdzielana przecinkami lista plików, które zawierają metadane, ale nie zawierają manifestów zestawów. Nazwy plików zawierające spacje powinny być ujęte w znaki cudzysłowu ("").  
   
 ## <a name="remarks"></a>Uwagi  
- Pliki według `fileList` parametr musi zostać utworzona z `-target:module` opcji lub innego kompilatora równoważna `-target:module`.  
+ Pliki wymienione przez `fileList` parametr muszą zostać utworzone `-target:module` przy użyciu opcji lub innego kompilatora, który `-target:module`jest odpowiednikiem.  
   
- Wszystkie moduły dodawane z `-addmodule` musi znajdować się w tym samym katalogu co plik wyjściowy w czasie wykonywania. Oznacza to, że można określić modułu w dowolnym katalogu, w czasie kompilacji, ale moduł musi znajdować się w katalogu aplikacji w czasie wykonywania. Jeśli tak nie jest, możesz uzyskać <xref:System.TypeLoadException> błędu.  
+ Wszystkie dodane `-addmodule` moduły muszą znajdować się w tym samym katalogu, co plik wyjściowy w czasie wykonywania. Oznacza to, że można określić moduł w dowolnym katalogu w czasie kompilacji, ale moduł musi znajdować się w katalogu aplikacji w czasie wykonywania. Jeśli tak nie jest, zostanie wyświetlony <xref:System.TypeLoadException> komunikat o błędzie.  
   
- Jeśli określisz (jawnie lub niejawnie) wszelkie[-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) opcji innych niż `-target:module` z `-addmodule`, pliki są przekazywane do `-addmodule` stają się częścią zestawu projektu. Zestaw jest wymagany do uruchomienia pliku wyjściowego, który ma jeden lub więcej plików dodane przy użyciu `-addmodule`.  
+ Jeśli określisz (niejawnie lub jawnie) opcję docelową[(Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) inną `-target:module` niż `-addmodule`with, pliki przekazywane do `-addmodule` zestawu projektu stają się częścią. Zestaw jest wymagany do uruchomienia pliku wyjściowego, który ma co najmniej jeden plik, który został `-addmodule`dodany za pomocą.  
   
- Użyj [/Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) można zaimportować metadanych z pliku, który zawiera zestaw.  
+ Użyj [/Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) do zaimportowania metadanych z pliku, który zawiera zestaw.  
   
 > [!NOTE]
->  `-addmodule` Opcja nie jest dostępne w środowisku programowania Visual Studio; jest dostępna tylko podczas kompilowania kodu w wierszu polecenia.  
+> `-addmodule` Opcja jest niedostępna w środowisku deweloperskim programu Visual Studio. jest ona dostępna tylko podczas kompilowania z wiersza polecenia.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod tworzy moduł.  
   
  [!code-vb[VbVbalrCompiler#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#47)]  
   
- Poniższy kod importuje typów modułów.  
+ Poniższy kod importuje typy modułu.  
   
  [!code-vb[VbVbalrCompiler#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#48)]  
   
- Po uruchomieniu `t1`, wyświetla `802`.  
+ Po uruchomieniu `t1`programu jest to wyjście `802`.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [— Odwołanie (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

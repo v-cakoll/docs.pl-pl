@@ -2,26 +2,26 @@
 title: 'Wzorce projektowania: Publikowanie/subskrybowanie oparte na liście'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 1b99908c1b83bb0d75e295b7a12e8c5933fe86a1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cf6fe2da3101918e25aa9548fd18973088f348a7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650126"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961743"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Wzorce projektowania: Publikowanie/subskrybowanie oparte na liście
-W tym przykładzie pokazano wzorzec listy publikowanie/subskrybowanie oparte na zaimplementowane jako program Windows Communication Foundation (WCF).  
+Ten przykład ilustruje wzorzec publikowania/subskrybowania opartego na liście wdrożony jako program Windows Communication Foundation (WCF).  
   
 > [!NOTE]
->  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Wzorzec projektowy listy publikowanie/subskrybowanie oparte na opisanej w publikacji Microsoft Patterns i praktyk, [wzorce integracji](https://go.microsoft.com/fwlink/?LinkId=95894). Wzorzec publikowania/subskrybowania przekazuje informacje do kolekcji adresatów, do których masz subskrypcję tematu informacji. Oparte na liście publikowania/subskrybowania utrzymuje listę subskrybentów. W przypadku informacji, aby udostępnić kopię są wysyłane do każdego subskrybenta na liście. W tym przykładzie przedstawiono dynamiczny oparte na liście publikowania/subskrybowania wzorzec, gdzie klienci mogą subskrybowanie lub anulować subskrypcję tak często, zgodnie z potrzebami.  
+ Wzorzec projektowy publikowania/subskrybowania opartego na liście jest opisany w artykule wzorce firmy Microsoft dotyczące publikacji & praktyk, [wzorców integracji](https://go.microsoft.com/fwlink/?LinkId=95894). Wzorzec publikowania/subskrybowania przekazuje informacje do kolekcji adresatów, którzy subskrybują temat informacji. Publikowanie/subskrybowanie oparte na liście zachowuje listę subskrybentów. Gdy są informacje do udostępnienia, kopia jest wysyłana do każdego subskrybenta na liście. Ten przykład ilustruje dynamiczny wzorzec publikowania/subskrybowania opartego na listach, w którym klienci mogą subskrybować lub anulować subskrypcję, tak często, jak jest to wymagane.  
   
- Listy publikowanie/subskrybowanie oparte na przykład składa się z klientem, usługi i program źródła danych. Może to być więcej niż jednego klienta i uruchomiony więcej niż jeden program źródła danych. Klienci subskrybowania usługi, otrzymywać powiadomienia i anulowanie subskrypcji. Programy źródłowe dane wysłać informacje do usługi, które mają być współużytkowane przez wszystkich bieżących subskrybentów.  
+ Przykład publikowania/subskrybowania opartego na liście składa się z klienta, usługi i programu źródła danych. Może istnieć więcej niż jeden klient i więcej niż jeden uruchomiony program źródła danych. Klienci subskrybują usługę, odbierają powiadomienia i anulują subskrypcję. Programy ze źródeł danych wysyłają do usługi informacje, które mają być współużytkowane z bieżącymi subskrybentami.  
   
- W tym źródle próbki, klienta i dane są programy konsoli (pliki .exe), a Usługa biblioteki (.dll) hostowanych w Internet Information Services (IIS). Działanie źródłowego klienta i dane są wyświetlane na pulpicie.  
+ W tym przykładzie klient i źródło danych to programy konsolowe (pliki. exe), a usługa to biblioteka (. dll) hostowana w Internet Information Services (IIS). Na pulpicie są widoczne działania klienta i źródła danych.  
   
- Usługa używa komunikację dupleksową. `ISampleContract` Kontraktu usługi jest łączyć z `ISampleClientCallback` kontrakt wywołania zwrotnego. Usługa implementuje operacje usługi subskrypcji i Anuluj subskrypcję, na których klienci używają chcesz dołączyć lub opuścić listy subskrybentów. Implementuje również usługę `PublishPriceChange` operacji usługi, która wywołuje program źródła danych, do świadczenia usług o nowe informacje. Implementuje program kliencki `PriceChange` operacji usługi, która wywołuje usługę w celu powiadomienia wszyscy subskrybenci zmiany ceny.  
+ Usługa używa komunikacji dwukierunkowej. Kontrakt usługi jest sparowany `ISampleClientCallback` z kontraktem wywołania zwrotnego. `ISampleContract` Usługa implementuje operacje subskrybowania i anulowania subskrypcji, których klienci używają do przyłączania lub opuszczania listy subskrybentów. Usługa implementuje `PublishPriceChange` również operację usługi, która jest wywoływana przez program źródła danych w celu zapewnienia usłudze nowych informacji. Program kliencki implementuje `PriceChange` operację usługi, która jest wywoływana przez usługę w celu powiadomienia wszystkich subskrybentów o zmianie cen.  
   
 ```  
 // Create a service contract and define the service operations.  
@@ -46,7 +46,7 @@ public interface ISampleClientContract
 }  
 ```  
   
- Usługa używa zdarzenia .NET Framework jako mechanizm poinformowanie wszyscy subskrybenci o nowe informacje. Gdy klient dołącza usługi przez wywołującego Subskrybuj, zawiera program obsługi zdarzeń. Gdy klient opuszcza, anulowań subskrypcji swojego programu obsługi zdarzeń ze zdarzenia. Gdy źródło danych wywołuje usługę do zgłaszania zmian cen, usługa wywołuje zdarzenie. Każde wystąpienie usługi, jeden dla każdego klienta, który przyłącza i powoduje, że ich procedury obsługi zdarzeń wykonać to wywołanie. Każdy program obsługi zdarzeń przekazuje informacje do klienta za pośrednictwem jego funkcję wywołania zwrotnego.  
+ Usługa używa zdarzenia .NET Framework jako mechanizmu do informowania wszystkich subskrybentów o nowych informacjach. Gdy klient przyłącza się do usługi przez wywołanie funkcji Subskrybuj, zapewnia obsługę zdarzeń. Po opuszczeniu klient anulował subskrypcję jego programu obsługi zdarzeń ze zdarzenia. Gdy źródło danych wywoła usługę w celu zgłoszenia zmiany ceny, usługa zgłasza zdarzenie. To wywołuje każde wystąpienie usługi, jeden dla każdego klienta, który ma subskrypcję, i powoduje wykonanie przez nich programów obsługi zdarzeń. Każdy program obsługi zdarzeń przekazuje informacje do klienta za pomocą funkcji wywołania zwrotnego.  
   
 ```  
 public class PriceChangeEventArgs : EventArgs  
@@ -108,55 +108,55 @@ public class PriceChangeEventArgs : EventArgs
     }  
 ```  
   
- Po uruchomieniu przykładu, należy uruchomić kilka klientów. Klienci subskrybowania usługi. Następnie uruchom program źródła danych, który wysyła informacje do usługi. Usługa przekazuje informacje do wszystkich subskrybentów. Mogą zobaczyć aktywność na każdy klient konsoli potwierdzenie Odebrano informacje. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
+ Po uruchomieniu przykładu należy uruchomić kilku klientów. Klienci subskrybują usługę. Następnie uruchom program źródła danych, który wysyła informacje do usługi. Usługa przekazuje informacje do wszystkich subskrybentów. Na każdej konsoli klienta można sprawdzić, czy informacje zostały odebrane. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.  
   
 ### <a name="to-set-up-and-build-the-sample"></a>Aby skonfigurować i skompilować przykład  
   
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Aby uruchomić przykład na tym samym komputerze  
   
-1. Test, czy można uzyskać dostęp do usługi, za pomocą przeglądarki, wpisując następujący adres: `http://localhost/servicemodelsamples/service.svc`. Strona potwierdzenia powinna być wyświetlana w odpowiedzi.  
+1. Sprawdź, czy możesz uzyskać dostęp do usługi przy użyciu przeglądarki, wprowadzając następujący adres: `http://localhost/servicemodelsamples/service.svc`. W odpowiedzi powinna zostać wyświetlona strona potwierdzenia.  
   
-2. Uruchom Client.exe z \client\bin\\, jest dostępna z folderu specyficzny dla języka. Aktywność klienta jest wyświetlany w oknie konsoli klienta. Uruchom kilka klientów.  
+2. Uruchom program Client. exe z\\\client\bin, z poziomu folderu specyficznego dla języka. Aktywność klienta jest wyświetlana w oknie konsoli klienta. Uruchom kilku klientów.  
   
-3. Uruchom Datasource.exe z \datasource\bin\\, jest dostępna z folderu specyficzny dla języka. W oknie konsoli wyświetlane jest działanie źródła danych. Gdy źródło danych wysyła informacje do usługi, powinien zostać przekazany do każdego klienta.  
+3. Uruchom polecenie DataSource. exe z\\\datasource\bin, z poziomu folderu specyficznego dla języka. Działanie źródła danych jest wyświetlane w oknie konsoli. Gdy źródło danych wyśle informacje do usługi, powinna zostać przeniesiona do każdego klienta.  
   
-4. W przypadku klienta, źródła danych i usługi, programy nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Jeśli klient, źródło danych i programy usług nie będą mogły się komunikować, zobacz Wskazówki dotyczące [rozwiązywania problemów z przykładami programu WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-### <a name="to-run-the-sample-across-machines"></a>Do uruchomienia przykładu na komputerach  
+### <a name="to-run-the-sample-across-machines"></a>Aby uruchomić przykład na wielu maszynach  
   
-1. Skonfiguruj komputer usługi:  
+1. Skonfiguruj maszynę usługi:  
   
-    1. Na komputerze usługi należy utworzyć katalog wirtualny o nazwie ServiceModelSamples. Zadanie wsadowe pliku Setupvroot.bat z [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) może służyć do tworzenia katalogu na dysku i katalogu wirtualnego.  
+    1. Na maszynie usługi Utwórz katalog wirtualny o nazwie ServiceModelSamples. Plik wsadowy Setupvroot. bat z [procedury konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) można użyć do utworzenia katalogu dysku i katalogu wirtualnego.  
   
-    2. Skopiuj pliki programu usługi z %SystemDrive%\Inetpub\wwwroot\servicemodelsamples ServiceModelSamples katalogu wirtualnego na maszynie usługi. Pamiętaj uwzględnić pliki w katalogu \bin.  
+    2. Skopiuj pliki programu usługi z%SystemDrive%\Inetpub\wwwroot\servicemodelsamples do katalogu wirtualnego ServiceModelSamples na maszynie usługi. Pamiętaj o uwzględnieniu plików w katalogu \Bin.  
   
-    3. Test, aby uzyskać dostęp do usługi z komputera klienckiego za pomocą przeglądarki.  
+    3. Sprawdź, czy możesz uzyskać dostęp do usługi z komputera klienckiego za pomocą przeglądarki.  
   
-2. Konfigurowanie komputerów klienckich:  
+2. Skonfiguruj komputery klienckie:  
   
-    1. Skopiuj pliki programu klienta z folderu \client\bin\ w folderze specyficzny dla języka na komputerach klienckich.  
+    1. Skopiuj pliki programu klienckiego z folderu \client\bin\, w obszarze folder specyficzny dla języka, do komputerów klienckich.  
   
-    2. W każdym pliku konfiguracji klienta należy zmienić wartość adresu definicji punktu końcowego, aby dopasować nowy adres usługi. Zastąp wszystkie odwołania do "localhost" w pełni kwalifikowaną nazwę domeny w adresie.  
+    2. W każdym pliku konfiguracyjnym klienta Zmień wartość adresu definicji punktu końcowego, aby odpowiadała nowemu adresowi usługi. Zastąp wszystkie odwołania do "localhost" z w pełni kwalifikowaną nazwą domeny w adresie.  
   
-3. Skonfiguruj maszyny źródła danych:  
+3. Skonfiguruj maszynę źródła danych:  
   
-    1. Skopiuj pliki programu źródła danych z folderu \datasource\bin\ w folderze specyficzny dla języka na maszynie źródłowej danych.  
+    1. Skopiuj pliki programu źródła danych z folderu \datasource\bin\, w obszarze folder specyficzny dla języka, do maszyny źródła danych.  
   
-    2. W pliku konfiguracji źródła danych Zmień wartość adresu definicji punktu końcowego, aby dopasować nowy adres usługi. Zastąp wszystkie odwołania do "localhost" w pełni kwalifikowaną nazwę domeny w adresie.  
+    2. W pliku konfiguracji źródła danych Zmień wartość adresu definicji punktu końcowego, aby odpowiadała nowemu adresowi usługi. Zastąp wszystkie odwołania do "localhost" z w pełni kwalifikowaną nazwą domeny w adresie.  
   
-4. Na komputerach klienckich należy uruchomić Client.exe z poziomu wiersza polecenia.  
+4. Na komputerach klienckich Uruchom program Client. exe z wiersza polecenia.  
   
-5. Na maszynie źródłowej danych uruchom Datasource.exe z poziomu wiersza polecenia.  
+5. Na maszynie źródła danych Uruchom plik DataSource. exe z wiersza polecenia.  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  

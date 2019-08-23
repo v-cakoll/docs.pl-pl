@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 6ab547951b00cc4a479034129254e4060486348d
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 16f4155cefea20868185febb3d2a566dc1524cc4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817953"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956284"
 ---
 # <a name="wpf-windows-overview"></a>Przegląd Okna WPF
 Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundation (WPF) za pomocą systemu Windows. Głównym celem okna jest hostowanie zawartości, która wizualizuje dane i umożliwia użytkownikom współdziałanie z danymi. Aplikacje [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] autonomiczne zapewniają własne okna przy <xref:System.Windows.Window> użyciu klasy. Ten temat wprowadza <xref:System.Windows.Window> przede wszystkim podstawowe informacje na temat tworzenia i zarządzania oknami w aplikacjach autonomicznych.  
   
 > [!NOTE]
->  Aplikacje hostowane [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] w przeglądarce, [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] w tym [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] i luźne strony, nie zapewniają własnych okien. Zamiast tego są one hostowane w systemie Windows udostępnianym przez program Windows Internet Explorer. Zobacz [Omówienie aplikacji przeglądarki XAML w języku WPF](wpf-xaml-browser-applications-overview.md).  
+> Aplikacje hostowane [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] w przeglądarce, [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] w tym [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] i luźne strony, nie zapewniają własnych okien. Zamiast tego są one hostowane w systemie Windows udostępnianym przez program Windows Internet Explorer. Zobacz [Omówienie aplikacji przeglądarki XAML w języku WPF](wpf-xaml-browser-applications-overview.md).  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Klasa okna  
@@ -88,14 +88,14 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
   
  Aby umożliwić [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] wspólne współdziałanie pliku znaczników i pliku związanego z kodem, wymagane są następujące elementy:  
   
-- W znaczniku `Window` element musi `x:Class` zawierać atrybut. Po skompilowaniu aplikacji istnienie `x:Class` w pliku znaczników powoduje [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] utworzenie `partial` klasy, która pochodzi od <xref:System.Windows.Window> i ma nazwę, która jest określona przez `x:Class` atrybut. Wymaga to dodania [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] deklaracji przestrzeni nazw [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dla schematu ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ). Wygenerowana `partial` Klasa `InitializeComponent` implementuje metodę, która jest wywoływana, aby zarejestrować zdarzenia i ustawić właściwości zaimplementowane w znaczniku.  
+- W znaczniku `Window` element musi `x:Class` zawierać atrybut. Po skompilowaniu aplikacji `x:Class` istnienie w pliku znaczników powoduje, że program Microsoft Build Engine (MSBuild) `partial` tworzy klasę, która pochodzi od <xref:System.Windows.Window> i `x:Class` ma nazwę, która jest określona przez atrybut. Wymaga to dodania [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] deklaracji przestrzeni nazw [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dla schematu ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ). Wygenerowana `partial` Klasa `InitializeComponent` implementuje metodę, która jest wywoływana, aby zarejestrować zdarzenia i ustawić właściwości zaimplementowane w znaczniku.  
   
 - W kodzie, Klasa musi być `partial` klasą o tej samej nazwie, która jest określona `x:Class` przez atrybut w znaczniku i musi pochodzić od <xref:System.Windows.Window>. Pozwala to skojarzyć plik związany z kodem z `partial` klasą wygenerowaną dla pliku znaczników podczas kompilowania aplikacji (zobacz Kompilowanie [aplikacji WPF](building-a-wpf-application-wpf.md)).  
   
 - W kodzie, <xref:System.Windows.Window> Klasa musi implementować konstruktora, który `InitializeComponent` wywołuje metodę. `InitializeComponent`jest implementowana przez wygenerowaną `partial` klasę pliku znaczników do rejestrowania zdarzeń i ustawiania właściwości, które są zdefiniowane w znaczniku.  
   
 > [!NOTE]
->  Po dodaniu nowego <xref:System.Windows.Window> elementu do projektu za pomocą [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]programu, <xref:System.Windows.Window> jest zaimplementowany przy użyciu znaczników i kodu, i zawiera konfigurację niezbędną do utworzenia skojarzenia między plikami znaczników i kodu jako opisano tutaj.  
+> Po dodaniu nowego <xref:System.Windows.Window> elementu do projektu za pomocą [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]programu, <xref:System.Windows.Window> jest zaimplementowany przy użyciu znaczników i kodu, i zawiera konfigurację niezbędną do utworzenia skojarzenia między plikami znaczników i kodu jako opisano tutaj.  
   
  W przypadku tej konfiguracji można skupić się na definiowaniu wyglądu okna w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczniku i wdrażaniu jego zachowania w kodzie. W poniższym przykładzie pokazano okno z przyciskiem, zaimplementowane w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczniku i program obsługi zdarzeń dla <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzenia przycisku zaimplementowanego w kodzie.  
   
@@ -106,13 +106,13 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
   
 <a name="ConfiguringWindowForMSBuild"></a>   
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Konfigurowanie definicji okna dla programu MSBuild  
- Sposób implementacji okna decyduje o [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]sposobie jego konfiguracji. Dla okna, które jest zdefiniowane przy użyciu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników i kodu:  
+ Sposób implementacji okna decyduje o sposobie jego konfiguracji dla programu MSBuild. Dla okna, które jest zdefiniowane przy użyciu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników i kodu:  
   
-- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]Pliki znaczników są konfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` elementy.  
+- Pliki znaczników XAML są konfigurowane jako elementy `Page` programu MSBuild.  
   
-- Pliki związane z kodem są konfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` elementy.  
+- Pliki związane z kodem są konfigurowane jako elementy `Compile` programu MSBuild.  
   
- Jest to pokazane w następującym [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] pliku projektu.  
+ Jest to pokazane w następującym pliku projektu programu MSBuild.  
   
 ```xml  
 <Project ...  
@@ -149,7 +149,7 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
  Okno otwierane przez wywołanie <xref:System.Windows.Window.Show%2A> jest oknem niemodalnym, co oznacza, że aplikacja działa w trybie, który umożliwia użytkownikom aktywowanie innych okien w tej samej aplikacji.  
   
 > [!NOTE]
->  <xref:System.Windows.Window.ShowDialog%2A>jest wywoływana, aby otworzyć okna, takie jak okna dialogowe modalnie. Aby uzyskać więcej informacji, zobacz [Omówienie okien](dialog-boxes-overview.md) dialogowych.  
+> <xref:System.Windows.Window.ShowDialog%2A>jest wywoływana, aby otworzyć okna, takie jak okna dialogowe modalnie. Aby uzyskać więcej informacji, zobacz [Omówienie okien](dialog-boxes-overview.md) dialogowych.  
   
  Gdy <xref:System.Windows.Window.Show%2A> jest wywoływana, okno wykonuje działanie inicjalizacji przed wyświetleniem infrastruktury, która pozwala na odbieranie danych przez użytkownika. Po zainicjowaniu <xref:System.Windows.Window.SourceInitialized> okna zdarzenie jest wywoływane i wyświetlane jest okno.  
   
@@ -205,7 +205,7 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
  Gdy okno jest otwierane po raz pierwszy, przechodzi do aktywnego okna (chyba że jest wyświetlane <xref:System.Windows.Window.ShowActivated%2A> z ustawioną na `false`). *Aktywne okno* to okno, które aktualnie przechwytywa dane wprowadzane przez użytkownika, takie jak naciśnięcia klawiszy i kliknięć myszą. Gdy okno zostanie uaktywnione, wywołuje <xref:System.Windows.Window.Activated> zdarzenie.  
   
 > [!NOTE]
->  Gdy okno jest otwierane po raz pierwszy <xref:System.Windows.FrameworkElement.Loaded> , <xref:System.Windows.Window.ContentRendered> zdarzenia i <xref:System.Windows.Window.Activated> są wywoływane dopiero po wywołaniu zdarzenia. Z tego względu okno może być efektywnie uważane za otwarte, <xref:System.Windows.Window.ContentRendered> gdy zostanie zgłoszone.  
+> Gdy okno jest otwierane po raz pierwszy <xref:System.Windows.FrameworkElement.Loaded> , <xref:System.Windows.Window.ContentRendered> zdarzenia i <xref:System.Windows.Window.Activated> są wywoływane dopiero po wywołaniu zdarzenia. Z tego względu okno może być efektywnie uważane za otwarte, <xref:System.Windows.Window.ContentRendered> gdy zostanie zgłoszone.  
   
  Gdy okno zostanie uaktywnione, użytkownik może aktywować inne okno w tej samej aplikacji lub aktywować inną aplikację. W takim przypadku aktywne okno zostanie zdezaktywowane i wygeneruje <xref:System.Windows.Window.Deactivated> zdarzenie. Podobnie, gdy użytkownik wybierze aktualnie dezaktywowane okno, okno zostanie ponownie uaktywnione i <xref:System.Windows.Window.Activated> zostanie zgłoszone.  
   
@@ -221,7 +221,7 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
  Jeśli zadanie w tle zakończy pracę, okno może chcieć pilnie powiadomić użytkownika przez wywołanie <xref:System.Windows.Window.Activate%2A> metody. Jeśli użytkownik jest w trakcie działania z inną aplikacją aktywowaną <xref:System.Windows.Window.Activate%2A> , gdy jest wywoływana, zostanie uaktywniony przycisk paska zadań okna. Jeśli użytkownik korzysta z bieżącej aplikacji, <xref:System.Windows.Window.Activate%2A> nastąpi przełączenie okna na pierwszy plan.  
   
 > [!NOTE]
->  Aktywację zakresu aplikacji można obsługiwać przy użyciu <xref:System.Windows.Application.Activated?displayProperty=nameWithType> zdarzeń i. <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType>  
+> Aktywację zakresu aplikacji można obsługiwać przy użyciu <xref:System.Windows.Application.Activated?displayProperty=nameWithType> zdarzeń i. <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType>  
   
 <a name="Closing_a_Window"></a>   
 ### <a name="closing-a-window"></a>Zamykanie okna  
@@ -262,9 +262,9 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
  Jeśli <xref:System.Windows.Window.Closing> program nie jest obsługiwany lub jest obsługiwany, ale nie został anulowany, okno zostanie zamknięte. Tuż przed faktycznym zamknięciem <xref:System.Windows.Window.Closed> okna jest zgłaszane. W tym momencie nie można uniemożliwić zamykania okna.  
   
 > [!NOTE]
->  Aplikację można skonfigurować do automatycznego zamykania w momencie zamknięcia okna aplikacji głównej (zobacz <xref:System.Windows.Application.MainWindow%2A>) lub ostatniego zamknięcia okna. Aby uzyskać szczegółowe informacje <xref:System.Windows.Application.ShutdownMode%2A>, zobacz.  
+> Aplikację można skonfigurować do automatycznego zamykania w momencie zamknięcia okna aplikacji głównej (zobacz <xref:System.Windows.Application.MainWindow%2A>) lub ostatniego zamknięcia okna. Aby uzyskać szczegółowe informacje <xref:System.Windows.Application.ShutdownMode%2A>, zobacz.  
   
- Okno może być jawnie zamykane za pomocą mechanizmów dostępnych w obszarach nieklienta i klienta, a okno może być również niejawnie zamknięte w wyniku zachowania w innych częściach aplikacji lub [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], w tym:  
+ Okno może być jawnie zamykane za pomocą mechanizmów dostępnych w obszarach nieklienta i klienta, a okno może być również niejawnie zamknięte w wyniku zachowania w innych częściach aplikacji lub systemu Windows, w tym:  
   
 - Użytkownik wylogowuje się lub zamknie system Windows.  
   
@@ -275,7 +275,7 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
 - <xref:System.Windows.Application.Shutdown%2A>jest wywoływana.  
   
 > [!NOTE]
->  Nie można otworzyć ponownie okna po jego zamknięciu.  
+> Nie można otworzyć ponownie okna po jego zamknięciu.  
   
 <a name="Window_Lifetime_Events"></a>   
 ### <a name="window-lifetime-events"></a>Zdarzenia okresu istnienia okna  
@@ -377,7 +377,7 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
  Okno z zmaksymalizowanym stanem rozwija się do maksymalnego rozmiaru, który może być, co będzie tak duże, jak jego <xref:System.Windows.FrameworkElement.MaxWidth%2A>właściwości, <xref:System.Windows.FrameworkElement.MaxHeight%2A>i. <xref:System.Windows.Window.SizeToContent%2A> Jak okno zminimalizowane, nie można zmienić rozmiaru zmaksymalizowanego okna przy użyciu uchwytu zmiany rozmiaru lub przeciągając obramowanie.  
   
 > [!NOTE]
->  Wartości <xref:System.Windows.Window.Top%2A> ,<xref:System.Windows.Window.Left%2A>, i<xref:System.Windows.FrameworkElement.Height%2A> właściwości okna zawsze reprezentują wartości dla normalnego stanu, nawet gdy okno jest obecnie zmaksymalizowane lub zminimalizowane. <xref:System.Windows.FrameworkElement.Width%2A>  
+> Wartości <xref:System.Windows.Window.Top%2A> ,<xref:System.Windows.Window.Left%2A>, i<xref:System.Windows.FrameworkElement.Height%2A> właściwości okna zawsze reprezentują wartości dla normalnego stanu, nawet gdy okno jest obecnie zmaksymalizowane lub zminimalizowane. <xref:System.Windows.FrameworkElement.Width%2A>  
   
  Stan okna można skonfigurować przez ustawienie jego <xref:System.Windows.Window.WindowState%2A> właściwości, która może mieć jedną z następujących <xref:System.Windows.WindowState> wartości wyliczenia:  
   

@@ -6,35 +6,35 @@ helpviewer_keywords:
 - Explorer-style applications [Windows Forms], creating
 - Windows Forms controls, filling client area
 ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
-ms.openlocfilehash: d015dce7307bec092f6da1dc5ee31691a6baf1f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: dc514fd8b9b7a17bf07a878e42729db4187d2b82
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941504"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963628"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>Instrukcje: dokowanie kontrolek w Formularzach systemu Windows
-Można dokowanie formantów do krawędzi formularza lub je wypełnić kontener formantu (formularza lub kontrolki kontenera). Na przykład Windows Explorer dokowane jego <xref:System.Windows.Forms.TreeView> kontrolki do lewej części okna i jego <xref:System.Windows.Forms.ListView> kontrolki po prawej stronie okna. Użyj <xref:System.Windows.Forms.Control.Dock%2A> właściwości dla wszystkich widocznych kontrolek Windows Forms do definiowania tryb dokowania.  
+Możesz zadokować kontrolki do krawędzi formularza lub popełniać kontener formantu (formularz lub kontrolka kontenera). Na przykład Eksplorator Windows dockuje swój <xref:System.Windows.Forms.TreeView> formant po lewej stronie okna i jego <xref:System.Windows.Forms.ListView> kontrolkę po prawej stronie okna. <xref:System.Windows.Forms.Control.Dock%2A> Użyj właściwości dla wszystkich widocznych kontrolek Windows Forms, aby zdefiniować tryb dokowania.  
   
 > [!NOTE]
->  Formanty są zadokowane w odwrotnej kolejności.  
+> Kontrolki są zadokowane w odwrotnej kolejności z.  
   
- <xref:System.Windows.Forms.Control.Dock%2A> Właściwość wchodzi w interakcję z <xref:System.Windows.Forms.Control.AutoSize%2A> właściwości. Aby uzyskać więcej informacji, zobacz [AutoSize właściwość — omówienie](autosize-property-overview.md).  
+ <xref:System.Windows.Forms.Control.Dock%2A> Właściwość współdziała zwłaściwością<xref:System.Windows.Forms.Control.AutoSize%2A> . Aby uzyskać więcej informacji, zobacz [Omówienie właściwości AutoSize](autosize-property-overview.md).  
   
-### <a name="to-dock-a-control"></a>Aby zadokować kontrolki  
+### <a name="to-dock-a-control"></a>Aby zadokować formant  
   
-1. Wybierz formant, który chcesz zadokować.  
+1. Wybierz kontrolkę, która ma zostać zadokowany.  
   
-2. W oknie dialogowym właściwości kliknij strzałkę po prawej stronie <xref:System.Windows.Forms.Control.Dock%2A> właściwości.  
+2. W okno właściwości kliknij strzałkę znajdującą się po prawej stronie <xref:System.Windows.Forms.Control.Dock%2A> właściwości.  
   
-     Zostanie wyświetlony Edytor, pokazujący szereg pola reprezentujące krawędzie i środek formularza.  
+     Wyświetlany jest Edytor, który pokazuje serię pól reprezentujących krawędzie i orodek formularza.  
   
-3. Kliknij przycisk, który reprezentuje krawędzi formularza, które chcesz zadokować formantu. Aby wypełnić zawartość formularza kontrolki lub kontrolki kontenera, kliknij pole Centrum. Kliknij przycisk **(Brak)** wyłączyć dokowania.  
+3. Kliknij przycisk, który reprezentuje krawędź formularza, w której chcesz zadokować formant. Aby wypełnić zawartość formularza kontrolki lub kontrolki kontenera, kliknij pole środkowe. Kliknij pozycję **(brak)** , aby wyłączyć dokowanie.  
   
-     Kontrolka jest automatycznie dopasowane granice zadokowany krawędzi.  
+     Rozmiar formantu jest automatycznie zmieniany w celu dopasowania do granic zadokowanej krawędzi.  
   
     > [!NOTE]
-    >  Musi być dziedziczone formantów `Protected` aby można było bez możliwości dokowania. Aby zmienić poziom dostępu formantu, ustaw jego **modyfikator** właściwości w oknie dialogowym właściwości.  
+    > Dziedziczone kontrolki muszą `Protected` mieć możliwość zadokowania. Aby zmienić poziom dostępu kontrolki, ustaw jej właściwość **modyfikującą** w okno właściwości.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -43,7 +43,7 @@ Można dokowanie formantów do krawędzi formularza lub je wypełnić kontener f
 - [Etykietowanie pojedynczych kontrolek formularzy Windows Forms i określanie skrótów dla nich](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)
 - [Kontrolki formularzy Windows Forms według funkcji](windows-forms-controls-by-function.md)
-- [Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w kontrolce FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
 - [Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
 - [AutoSize, właściwość — omówienie](autosize-property-overview.md)
-- [Instrukcje: Zakotwiczenia formantów na formularzach Windows Forms](how-to-anchor-controls-on-windows-forms.md)
+- [Instrukcje: Kontrolki kotwicowe na Windows Forms](how-to-anchor-controls-on-windows-forms.md)

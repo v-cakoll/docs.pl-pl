@@ -8,33 +8,33 @@ helpviewer_keywords:
 - animation [WPF], Storyboards
 - Storyboards [WPF], animation
 ms.assetid: f4a314e9-1da2-4367-85fc-1232487efa7a
-ms.openlocfilehash: f6064368b4f5e4fa8324b4039d734d4430cd9174
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a7a2656d84d37d3e2726df009a07ccf29661df07
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761211"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963042"
 ---
 # <a name="how-to-animate-a-property-by-using-a-storyboard"></a>Instrukcje: Animowanie właściwości przy użyciu scenorysu
-W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.Storyboard> animować właściwości. Aby animować właściwość przy użyciu <xref:System.Windows.Media.Animation.Storyboard>, utworzyć animację dla każdej właściwości, który chcesz animować, a także utworzyć <xref:System.Windows.Media.Animation.Storyboard> zawierać animacji.  
+Ten przykład pokazuje, <xref:System.Windows.Media.Animation.Storyboard> jak używać do animowania właściwości. Aby animować właściwość przy użyciu <xref:System.Windows.Media.Animation.Storyboard>, Utwórz animację dla każdej właściwości, którą chcesz animować, a także <xref:System.Windows.Media.Animation.Storyboard> Utwórz, aby zawierała animacje.  
   
- Typ właściwości określa typ animacji do użycia. Na przykład, aby animować właściwości, która przyjmuje <xref:System.Double> wartości, należy użyć <xref:System.Windows.Media.Animation.DoubleAnimation>. <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> i <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> dołączonych właściwości określają obiektu i właściwości, do którego zastosowano animacji.  
+ Typ właściwości określa typ animacji, która ma zostać użyta. Na przykład, aby animować właściwość, która pobiera <xref:System.Double> wartości, <xref:System.Windows.Media.Animation.DoubleAnimation>Użyj. <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> I<xref:System.Windows.Media.Animation.Storyboard.TargetProperty> dołączone właściwości określają obiekt i właściwość, do których zastosowano animację.  
   
- Aby rozpocząć scenorysu w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], użyj <xref:System.Windows.Media.Animation.BeginStoryboard> akcji i <xref:System.Windows.EventTrigger>. <xref:System.Windows.EventTrigger> Rozpoczyna się <xref:System.Windows.Media.Animation.BeginStoryboard> akcję, gdy zdarzenie jest określony przez jego <xref:System.Windows.EventTrigger.RoutedEvent%2A> właściwość występuje. <xref:System.Windows.Media.Animation.BeginStoryboard> Rozpoczyna się akcja <xref:System.Windows.Media.Animation.Storyboard>.  
+ Aby rozpocząć scenorys w programie [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], <xref:System.Windows.Media.Animation.BeginStoryboard> należy użyć akcji i <xref:System.Windows.EventTrigger>. Rozpoczyna akcję, gdy występuje zdarzenie określone za pomocą jego <xref:System.Windows.EventTrigger.RoutedEvent%2A> właściwości. <xref:System.Windows.Media.Animation.BeginStoryboard> <xref:System.Windows.EventTrigger> <xref:System.Windows.Media.Animation.BeginStoryboard> Akcja<xref:System.Windows.Media.Animation.Storyboard>uruchamia.  
   
- W poniższym przykładzie użyto <xref:System.Windows.Media.Animation.Storyboard> obiektów animować dwa <xref:System.Windows.Controls.Button> kontrolki. Aby pierwszy przycisk, zmienić rozmiar, jego <xref:System.Windows.FrameworkElement.Width%2A> jest animowany. Aby drugi przycisk, zmienić kolor, <xref:System.Windows.Media.SolidColorBrush.Color%2A> właściwość <xref:System.Windows.Media.SolidColorBrush> służy do ustawiania <xref:System.Windows.Controls.Control.Background%2A> przycisku, który jest animowany.  
+ Poniższy przykład używa <xref:System.Windows.Media.Animation.Storyboard> obiektów do animacji dwóch <xref:System.Windows.Controls.Button> kontrolek. Aby zmienić rozmiar pierwszego przycisku, jest on <xref:System.Windows.FrameworkElement.Width%2A> animowany. Aby zmienić kolor drugiego przycisku, <xref:System.Windows.Media.SolidColorBrush.Color%2A> Właściwość <xref:System.Windows.Media.SolidColorBrush> <xref:System.Windows.Controls.Control.Background%2A> jest używana do ustawiania animowanego przycisku.  
   
 ## <a name="example"></a>Przykład  
  [!code-xaml[AnimatePropertyStoryboards#1](~/samples/snippets/xaml/VS_Snippets_Wpf/AnimatePropertyStoryboards/XAML/StoryboardExample.xaml#1)]  
   
 > [!NOTE]
->  Mimo że animacje mogą kierować zarówno <xref:System.Windows.FrameworkElement> obiektów, takich jak <xref:System.Windows.Controls.Control> lub <xref:System.Windows.Controls.Panel>i <xref:System.Windows.Freezable> obiektów, takich jak <xref:System.Windows.Media.Brush> lub <xref:System.Windows.Media.Transform>, tylko w ramach elementy mają <xref:System.Windows.FrameworkElement.Name%2A> właściwości. Aby przypisać nazwę do freezable, dzięki czemu może być kierowany przez animację, należy użyć [x: Name — dyrektywa](../../xaml-services/x-name-directive.md), jak pokazano w poprzednim przykładzie.  
+> Chociaż animacje mogą dotyczyć zarówno <xref:System.Windows.FrameworkElement> obiektu, <xref:System.Windows.Controls.Control> jak <xref:System.Windows.Controls.Panel>i <xref:System.Windows.Media.Brush> , jak i <xref:System.Windows.Freezable> obiektu <xref:System.Windows.FrameworkElement.Name%2A> , takiego jak lub <xref:System.Windows.Media.Transform>, tylko elementy struktury mają właściwość. Aby przypisać nazwę do elementu Freezable, który może być celem animacji, użyj [dyrektywy x:Name](../../xaml-services/x-name-directive.md), jak pokazano w poprzednim przykładzie.  
   
- Jeśli używasz kodu, należy utworzyć <xref:System.Windows.NameScope> dla <xref:System.Windows.FrameworkElement> i Zarejestruj nazwy obiektów, aby animować z tym <xref:System.Windows.FrameworkElement>. Aby rozpocząć animacji w kodzie, użyj <xref:System.Windows.Media.Animation.BeginStoryboard> akcji z <xref:System.Windows.EventTrigger>. Opcjonalnie można użyć procedury obsługi zdarzeń i <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> metody <xref:System.Windows.Media.Animation.Storyboard>. Poniższy przykład pokazuje, jak używać <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> metody.  
+ Jeśli używasz kodu, musisz utworzyć <xref:System.Windows.NameScope> <xref:System.Windows.FrameworkElement> dla a i zarejestrować nazwy obiektów, które <xref:System.Windows.FrameworkElement>mają być animowane. Aby uruchomić animacje w kodzie, użyj <xref:System.Windows.Media.Animation.BeginStoryboard> akcji <xref:System.Windows.EventTrigger>z. Opcjonalnie można użyć programu obsługi zdarzeń i <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> <xref:System.Windows.Media.Animation.Storyboard>metody. Poniższy przykład pokazuje, <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> jak używać metody.  
   
  [!code-csharp[AnimatePropertyStoryboards#11](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimatePropertyStoryboards/CSharp/StoryboardExample.cs#11)]
  [!code-vb[AnimatePropertyStoryboards#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AnimatePropertyStoryboards/VisualBasic/StoryboardExample.vb#11)]  
   
- Aby uzyskać więcej informacji na temat animacji i scenorysów, zobacz [Przegląd animacja](animation-overview.md).  
+ Aby uzyskać więcej informacji na temat animacji i scenorysów, zobacz [Omówienie animacji](animation-overview.md).  
   
- W przypadku użycia kodu nie są ograniczone do korzystania z <xref:System.Windows.Media.Animation.Storyboard> obiektów, aby animować właściwości. Aby uzyskać więcej informacji i przykładów, zobacz [animować właściwości bez użycia scenorysu](how-to-animate-a-property-without-using-a-storyboard.md) i [animować właściwość przy użyciu AnimationClock](how-to-animate-a-property-by-using-an-animationclock.md).
+ Jeśli używasz kodu, nie możesz używać <xref:System.Windows.Media.Animation.Storyboard> obiektów w celu animowania właściwości. Aby uzyskać więcej informacji i przykładów, zobacz [Animuj a Property bez używania scenorysu](how-to-animate-a-property-without-using-a-storyboard.md) i [Animuj Właściwość za pomocą AnimationClock](how-to-animate-a-property-by-using-an-animationclock.md).

@@ -10,48 +10,48 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: be8b299c99515394bc676cfd7a715cb82ac4d58c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e5242c07179501e6b39840a36f8dd6364d65b84
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051111"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918346"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>Instrukcje: Weryfikowanie i scalanie elementów PrintTickets
-[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Schematu drukowania](https://go.microsoft.com/fwlink/?LinkId=186397) obejmuje elastyczna i rozszerzalna <xref:System.Printing.PrintCapabilities> i <xref:System.Printing.PrintTicket> elementów. Pierwsza wyszczególniono możliwości drukarki, a jego Określa, jak urządzenia powinny używać tych możliwości w odniesieniu do określonej sekwencji dokumentów, dokument lub pojedynczej strony.  
+Schemat drukowania zawiera elastyczne i rozszerzalne <xref:System.Printing.PrintCapabilities> elementy i <xref:System.Printing.PrintTicket> . [](https://go.microsoft.com/fwlink/?LinkId=186397) [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] Dawniej wyszczególniono możliwości urządzenia drukującego i te informacje określają, jak urządzenie powinno korzystać z tych funkcji w odniesieniu do określonej sekwencji dokumentów, pojedynczego dokumentu lub pojedynczej strony.  
   
- Typowe sekwencji zadań dla aplikacji, która obsługuje drukowanie byłoby w następujący sposób.  
+ Typową sekwencją zadań dla aplikacji, która obsługuje drukowanie, będzie następująca.  
   
-1. Określ drukarkę możliwości.  
+1. Określ możliwości drukarki.  
   
-2. Konfigurowanie <xref:System.Printing.PrintTicket> na korzystanie z tych funkcji.  
+2. Skonfiguruj, <xref:System.Printing.PrintTicket> aby korzystać z tych funkcji.  
   
 3. Sprawdź poprawność <xref:System.Printing.PrintTicket>.  
   
  W tym artykule pokazano, jak to zrobić.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie prostego, jesteśmy zainteresowani tylko tego, czy drukarka może obsługiwać dupleksu — drukowania dwustronnego. Główne kroki są następujące.  
+ W prostym przykładzie interesuje tylko, czy drukarka może obsługiwać dupleks — drukowanie dwustronne. Główne kroki są następujące.  
   
-1. Pobierz <xref:System.Printing.PrintCapabilities> obiekt z <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> metody.  
+1. <xref:System.Printing.PrintCapabilities> Pobierz obiekt <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> za pomocą metody.  
   
-2. Test na obecność możliwości, które chcesz. W poniższym przykładzie przetestujemy <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> właściwość <xref:System.Printing.PrintCapabilities> obiektu na obecność możliwość drukowania po obu stronach arkusz papieru, "Włączanie strony" długo po stronie arkusza. Ponieważ <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> jest kolekcją, używamy `Contains` metody <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>.  
+2. Przetestuj obecność potrzebnej możliwości. W poniższym przykładzie przetestujemy <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> Właściwość <xref:System.Printing.PrintCapabilities> obiektu w celu wykrycia możliwości drukowania na obu stronach arkusza papieru z "wyłączaniem strony" wzdłuż długiej krawędzi arkusza. Ponieważ <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> jest kolekcją, `Contains` używana jest metoda <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>.  
   
     > [!NOTE]
-    >  Ten krok nie jest bezwzględnie konieczne. <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> Metodę poniżej zostanie zaewidencjonowany przez każde żądanie <xref:System.Printing.PrintTicket> z możliwościami drukarki. Jeśli żądana funkcja nie jest obsługiwana przez drukarkę, sterownik drukarki zostanie zastąpiony przez żądanie alternatywnych w <xref:System.Printing.PrintTicket> zwracany przez metodę.  
+    > Ten krok nie jest ściśle konieczny. Użyta poniżej <xref:System.Printing.PrintTicket> <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> metoda sprawdzi każde żądanie w odniesieniu do możliwości drukarki. Jeśli żądana funkcja nie jest obsługiwana przez drukarkę, sterownik drukarki zastępuje alternatywne żądanie w <xref:System.Printing.PrintTicket> zwracanym przez metodę.  
   
-3. Jeśli drukarka obsługuje dupleksu, przykładowy kod tworzy <xref:System.Printing.PrintTicket> która poprosi o podanie dupleksu. Ale aplikacja nie określa każdej drukarki możliwe ustawienie dostępne w <xref:System.Printing.PrintTicket> elementu. Byłoby marnotrawstwa programisty i godziny programu. Zamiast tego kod ustawia tylko żądanie dupleksu, a następnie scala to <xref:System.Printing.PrintTicket> z istniejącym, w pełni skonfigurowane i sprawdzeniu poprawności <xref:System.Printing.PrintTicket>, w tym przypadku użytkownika domyślnego <xref:System.Printing.PrintTicket>.  
+3. Jeśli drukarka obsługuje dupleks, przykładowy kod tworzy <xref:System.Printing.PrintTicket> monit o dupleks. Jednak aplikacja nie określa wszystkich możliwych ustawień drukarki dostępnych w <xref:System.Printing.PrintTicket> elemencie. To wasteful zarówno programisty, jak i program. Zamiast tego, kod ustawia tylko żądanie dupleksowania, a następnie scala ten <xref:System.Printing.PrintTicket> element z istniejącym, w pełni skonfigurowanym i zweryfikowanym, <xref:System.Printing.PrintTicket>w tym przypadku, w tym <xref:System.Printing.PrintTicket>przypadku, z wartością domyślną użytkownika.  
   
-4. W związku z tym przykład wywołuje <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> metody do scalenia z nowej, minimalnymi <xref:System.Printing.PrintTicket> z domyślną użytkownika <xref:System.Printing.PrintTicket>. Spowoduje to zwrócenie <xref:System.Printing.ValidationResult> zawierającego nowe <xref:System.Printing.PrintTicket> jako jeden z jego właściwości.  
+4. W związku z tym przykład wywołuje <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> metodę, aby scalić nowe, minimalne, <xref:System.Printing.PrintTicket> z wartością domyślną <xref:System.Printing.PrintTicket>użytkownika. Zwraca wartość <xref:System.Printing.ValidationResult> , która zawiera nową <xref:System.Printing.PrintTicket> jako jedną z jej właściwości.  
   
-5. Następnie testy próbki nowy <xref:System.Printing.PrintTicket> dupleksu żądań. Jeśli tak jest, następnie próbki sprawia, że nowy bilet drukowania domyślny dla użytkownika. Jeśli w kroku 2 powyżej miał pozostawiono i drukarki nie obsługują dupleksu długo po stronie, a następnie spowodowałaby testu `false`. (Zobacz uwagi powyżej).  
+5. Następnie próbka przetestuje, <xref:System.Printing.PrintTicket> czy nowe żądania są dwustronne. Jeśli tak, wówczas przykład tworzy nowy domyślny bilet drukowania dla użytkownika. Jeśli krok 2 został pozostawiony, a drukarka nie obsłużył dupleksu wzdłuż długiej strony, test miałby wynik `false`. (Zobacz uwagi powyżej).  
   
-6. Ostatnim krokiem istotne jest aby zatwierdzić zmiany <xref:System.Printing.PrintQueue.UserPrintTicket%2A> właściwość <xref:System.Printing.PrintQueue> z <xref:System.Printing.PrintQueue.Commit%2A> metody.  
+6. Ostatni znaczący krok polega na zatwierdzeniu zmiany <xref:System.Printing.PrintQueue.UserPrintTicket%2A> właściwości <xref:System.Printing.PrintQueue> przy użyciu <xref:System.Printing.PrintQueue.Commit%2A> metody.  
   
  [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
  [!code-vb[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
   
- Dlatego, że możesz szybko przetestować, w tym przykładzie, do końca znajduje się poniżej. Utwórz projekt i przestrzeń nazw, a następnie wklej fragmenty kodu w tym artykule, w bloku przestrzeni nazw.  
+ Dzięki temu możesz szybko przetestować ten przykład, pozostała część jest przedstawiona poniżej. Utwórz projekt i przestrzeń nazw, a następnie wklej fragmenty kodu z tego artykułu do bloku przestrzeni nazw.  
   
  [!code-csharp[PrintTicketManagment#UIForMergeAndValidatePTUtility](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#uiformergeandvalidateptutility)]
  [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
@@ -67,4 +67,4 @@ ms.locfileid: "62051111"
 - <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
 - [Dokumenty w WPF](documents-in-wpf.md)
 - [Przegląd drukowania](printing-overview.md)
-- [Drukuj schematu](https://go.microsoft.com/fwlink/?LinkId=186397)
+- [Drukuj schemat](https://go.microsoft.com/fwlink/?LinkId=186397)

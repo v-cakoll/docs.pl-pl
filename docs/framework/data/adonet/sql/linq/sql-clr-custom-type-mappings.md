@@ -2,34 +2,34 @@
 title: Mapowanie niestandardowego typu SQL CLR
 ms.date: 03/30/2017
 ms.assetid: d916c7fb-4b56-4214-acbe-5e23365047b2
-ms.openlocfilehash: bc92d54cad6a977268ef3f000c684d5f195a933d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5aff9a78349cbf9443c5b663a41d7c13a109e625
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037053"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945044"
 ---
 # <a name="sql-clr-custom-type-mappings"></a>Mapowanie niestandardowego typu SQL CLR
-Typ mapowania między programu SQL Server i środowisko uruchomieniowe języka wspólnego (CLR) automatycznie jest określona, korzystając z narzędzia wiersza polecenia SQLMetal Object Relational Designer (O/R Designer).  
+Mapowanie typu między SQL Server i środowiska uruchomieniowego języka wspólnego (CLR) jest automatycznie określane przy użyciu narzędzia wiersza polecenia SQLMetal Object Relational Designer (Projektant O/R).  
   
- Podczas wykonywania dostosowane mapowania tych narzędzi przypisać domyślne mapowanie typu zgodnie z opisem w [mapowanie typu SQL CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md). Na typ mapowania inaczej niż te ustawienia domyślne, należy wykonać pewne dostosowania mapowania typów.  
+ Gdy nie jest wykonywane żadne dostosowane mapowanie, te narzędzia przypisują domyślne mapowania typów zgodnie z opisem w [mapowaniu typu SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md). Jeśli chcesz pisać mapowania inaczej niż te wartości domyślne, musisz wykonać pewne dostosowania mapowań typów.  
   
- Podczas dostosowywania mapowania typów, zalecanym podejściem jest aby wprowadzić zmiany w pliku DBML pośrednie. Następnie dostosowanego pliku DBML powinna służyć podczas tworzenia możesz kodu i mapowania plików za pomocą SQLMetal lub O/R Designer.  
+ W przypadku dostosowywania mapowań typów Zalecanym podejściem jest wprowadzenie zmian w pliku DBML pośrednim. Następnie dostosowany plik DBML powinien być używany podczas tworzenia kodu i mapowania plików za pomocą projektanta SQLMetal lub O/R.  
   
- Gdy tworzenia wystąpienia <xref:System.Data.Linq.DataContext> obiektu z kodu i mapowania plików <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metoda tworzy bazę danych w oparciu mapowania typów, które są określone. Jeśli nie ma żadnych CLR `type` atrybuty określone w mapowaniach, będą używane domyślne mapowania typu.  
+ Po utworzeniu wystąpienia <xref:System.Data.Linq.DataContext> obiektu z plików <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> kodu i mapowania Metoda tworzy bazę danych w oparciu o określone mapowania typu. Jeśli w mapowaniu nie określono `type` żadnych atrybutów CLR, zostaną użyte domyślne mapowania typu.  
   
-## <a name="customization-with-sqlmetal-or-or-designer"></a>Dostosowywanie za pomocą SQLMetal lub Relational Designer  
- Program SQLMetal i O/R Designer może automatycznie tworzyć model obiektu, który zawiera mapowania informacje o typie wewnątrz lub na zewnątrz pliku kodu. Ponieważ te pliki są zastępowane przez program SQLMetal lub O/R Designer, zawsze możesz ponownie utworzyć mapowania, zalecane podejście do określania mapowanie niestandardowego typu jest dostosowywanie za pomocą pliku DBML.  
+## <a name="customization-with-sqlmetal-or-or-designer"></a>Dostosowywanie za pomocą projektanta SQLMetal lub O/R  
+ Za pomocą narzędzia SQLMetal i projektanta O/R można automatycznie utworzyć model obiektów, który zawiera informacje o mapowaniu typu wewnątrz lub na zewnątrz pliku kodu. Ponieważ te pliki są zastępowane przez projektanta SQLMetal lub O/R, za każdym razem, gdy utworzysz mapowania, Zalecanym podejściem do określenia mapowań typów niestandardowych jest dostosowanie pliku DBML.  
   
- Aby dostosować mapowanie typu SQLMetal lub O/R Designer, należy najpierw wygenerować za pomocą pliku DBML. Przed wygenerowaniem plik kodu lub pliku mapowania, zmodyfikowanie pliku DBML, aby zidentyfikować mapowania żądanego typu. Za pomocą SQLMetal, należy ręcznie zmienić `Type` i `DbType` atrybutów w dostosowania mapowania typu za pomocą pliku DBML. Za pomocą Projektanta obiektów relacyjnych można wprowadzić zmiany w projektancie. Aby uzyskać więcej informacji na temat za pomocą Projektanta obiektów relacyjnych, zobacz [LINQ to SQL Tools w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Aby dostosować mapowania typów za pomocą projektanta SQLMetal lub O/R, najpierw wygeneruj plik DBML. Następnie przed wygenerowaniem pliku kodu lub pliku mapowania zmodyfikuj plik DBML, aby zidentyfikować żądane mapowania typu. W przypadku SQLMetal należy ręcznie zmienić `Type` atrybuty i `DbType` w pliku DBML, aby umożliwić dostosowanie mapowania typu. Za pomocą projektanta O/R można wprowadzać zmiany w projektancie. Aby uzyskać więcej informacji o korzystaniu z projektanta O/R, zobacz [narzędzia LINQ to SQL w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 > [!NOTE]
->  Niektóre mapowania typu może spowodować wyjątki utraty danych lub przepełnienie podczas tłumaczenia do lub z bazy danych. Dokładnie przejrzyj macierzy zachowanie mapowanie typu wykonawcze w [mapowanie typu SQL CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) przed wykonaniem wszelkich dostosowań.  
+> Niektóre mapowania typów mogą spowodować przepełnienie lub wyjątki utraty danych podczas tłumaczenia do bazy danych lub z niej. Uważnie Przejrzyj macierz zachowania w czasie wykonywania mapowania typów w [mapowaniu typu SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) przed wprowadzeniem jakichkolwiek dostosowań.  
   
- Mapowanie typu dostosowania zostały rozpoznane przez program SQLMetal lub O/R Designer, należy upewnić się, że te narzędzia są dostarczane ze ścieżką do niestandardowego pliku DBML podczas generowania pliku kodu lub pliku mapowania zewnętrznych. Chociaż nie jest to wymagane do dostosowywania mapowania typu, zalecane jest zawsze rozdzielić dane mapowania typu z pliku kodu i wygenerować dodatkowe typ zewnętrzny plik mapowania. To spowoduje, że pewną elastyczność, nie wymagając rekompilować pliku kodu.  
+ Aby dostosowanie mapowania typu zostało rozpoznane przez projektanta SQLMetal lub O/R, należy się upewnić, że te narzędzia są dostarczane ze ścieżką do niestandardowego pliku DBML podczas generowania pliku kodu lub zewnętrznego pliku mapowania. Chociaż nie jest to wymagane do dostosowywania mapowania typów, zaleca się, aby zawsze oddzielić informacje o mapowaniu typu z pliku kodu i wygenerować dodatkowy plik mapowania typu zewnętrznego. Wykonanie tej czynności pozostawi pewnej elastyczności, nie wymagając, aby plik kodu został ponownie skompilowany.  
   
-## <a name="incorporating-database-changes"></a>Dołączanie zmian w bazie danych  
- Po zmianie bazy danych, należy zaktualizować pliku DBML, aby odzwierciedlać wprowadzone zmiany. Jednym ze sposobów, aby zrobić to automatyczne tworzenie nowego pliku DBML, a następnie ponownie wykonaj dostosowania mapowania typu. Alternatywnie możesz porównać nowego pliku DBML i dostosowanego pliku DBML i zaktualizować niestandardowego pliku DBML ręcznie, aby odzwierciedlić zmianę w bazie danych.  
+## <a name="incorporating-database-changes"></a>Uwzględnianie zmian w bazie danych  
+ Gdy baza danych ulegnie zmianie, należy zaktualizować plik DBML w celu odzwierciedlenia tych zmian. Jednym ze sposobów jest automatyczne utworzenie nowego pliku DBML, a następnie ponowne przeprowadzenie dostosowań mapowania typu. Alternatywnie można porównać różnice między nowym plikiem DBML i dostosowanym plikiem DBML i ręcznie zaktualizować niestandardowy plik DBML w celu odzwierciedlenia zmian w bazie danych.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -6,36 +6,36 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: f888923736d384af2c6d955a126bacacb16113af
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a5fcceb3c39092deaa4a9dca258ba60117019c36
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651149"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961218"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie serwera
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych <xref:System.Windows.Automation> w przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]programie, [Zobacz interfejs API usługi Windows Automation: Automatyzacja](https://go.microsoft.com/fwlink/?LinkID=156746)interfejsu użytkownika.  
   
- W tej sekcji opisano, jak do implementowania dostawcy automatyzacji interfejsu użytkownika po stronie serwera dla formantu niestandardowego.  
+ W tej sekcji opisano sposób implementacji dostawcy automatyzacji interfejsu użytkownika po stronie serwera dla kontrolki niestandardowej.  
   
- Implementacja dla elementów Windows Presentation Foundation (WPF) i innych niż-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elementów (takich jak zaprojektowana z myślą o [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) różni się. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elementy zapewnia pomoc techniczną dla [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] przez klasę pochodną <xref:System.Windows.Automation.Peers.AutomationPeer>. Non -[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elementy zapewniają pomoc techniczną za pomocą implementacji interfejsów dostawcy.  
+ Implementacja elementu Windows Presentation Foundation (WPF) i elementów niebędących[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elementami (takich jak te przeznaczone dla [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]programu) jest zasadniczo różna. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]elementy zapewniają obsługę [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] za pośrednictwem klasy <xref:System.Windows.Automation.Peers.AutomationPeer>pochodnej. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Elementy inne niż elementów zapewniają obsługę za pomocą implementacji interfejsów dostawcy.  
   
 <a name="Security_Considerations"></a>   
 ## <a name="security-considerations"></a>Zagadnienia dotyczące zabezpieczeń  
- Powinien być zapisywany dostawcy, dzięki czemu mogą one działać w środowisku częściowego zaufania. Ponieważ UIAutomationClient.dll nie jest skonfigurowany do uruchamiania w częściowej relacji zaufania, kod dostawcy nie może odwoływać się tego zestawu. Jeśli tak jest, dzięki czemu kod może uruchamiać w środowisku pełnego zaufania, ale następnie nie działać w środowisku częściowego zaufania.  
+ Należy napisać dostawców, aby mogły one działać w środowisku częściowego zaufania. Ponieważ UIAutomationClient. dll nie jest skonfigurowany do uruchamiania w ramach częściowej relacji zaufania, kod dostawcy nie powinien odwoływać się do tego zestawu. W takim przypadku kod może działać w środowisku z pełnym zaufaniem, ale kończy się niepowodzeniem w środowisku częściowego zaufania.  
   
- W szczególności należy używać pola z klas w UIAutomationClient.dll, takich jak te w <xref:System.Windows.Automation.AutomationElement>. Zamiast tego należy użyć równoważne pola z klas w UIAutomationTypes.dll, takich jak <xref:System.Windows.Automation.AutomationElementIdentifiers>.  
+ W szczególności nie należy używać pól z klas w UIAutomationClient. dll, takich jak te w <xref:System.Windows.Automation.AutomationElement>. Zamiast tego należy użyć odpowiednich pól z klas w UIAutomationTypes. dll, takich jak <xref:System.Windows.Automation.AutomationElementIdentifiers>.  
   
 <a name="Provider_Implementation_by_WPF_Elements"></a>   
-## <a name="provider-implementation-by-windows-presentation-foundation-elements"></a>Implementacja dostawcy przez elementy programu Windows Presentation Foundation  
- Aby uzyskać więcej informacji na ten temat, zobacz [automatyzacji interfejsu użytkownika formantu niestandardowego WPF](../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md).  
+## <a name="provider-implementation-by-windows-presentation-foundation-elements"></a>Implementacja dostawcy przez Windows Presentation Foundation elementy  
+ Aby uzyskać więcej informacji na temat tego tematu, zobacz [Automatyzacja interfejsu użytkownika dla kontrolki NIESTANDARDOWEJ WPF](../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md).  
   
 <a name="Provider_Implementation_by_non_WPF_Elements"></a>   
-## <a name="provider-implementation-by-non-wpf-elements"></a>Implementacja dostawcy przez elementy innego niż WPF  
- Niestandardowe kontrolki, które nie są częścią [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] framework, ale są zapisywane w kodzie zarządzanym (w większości przypadków są to [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] formantów), zapewnia pomoc techniczną dla [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] poprzez implementację interfejsów. Każdy element musi implementować co najmniej jeden z interfejsów wymienionych w pierwszej tabeli w następnej sekcji. Ponadto jeśli element obsługuje jeden lub więcej wzorców kontrolek, musi implementować odpowiedni interfejs dla każdego — wzorzec kontrolki.  
+## <a name="provider-implementation-by-non-wpf-elements"></a>Implementacja dostawcy przez elementy inne niż WPF  
+ Niestandardowe kontrolki, które nie są częścią [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] struktury, ale są zapisywane w kodzie zarządzanym (najczęściej są to [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] kontrolki [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ), zapewniają obsługę przez implementację interfejsów. Każdy element musi implementować co najmniej jeden interfejs wymieniony w pierwszej tabeli w następnej sekcji. Ponadto, jeśli element obsługuje jeden lub więcej wzorców kontrolek, musi zaimplementować odpowiedni interfejs dla każdego wzorca kontroli.  
   
- Twoje [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] projekt dostawcy musi odwoływać się do następujących zestawów:  
+ Projekt [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dostawcy musi odwoływać się do następujących zestawów:  
   
 - UIAutomationProviders.dll  
   
@@ -49,37 +49,37 @@ ms.locfileid: "64651149"
   
 |Interface|Opis|  
 |---------------|-----------------|  
-|<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>|Oferuje funkcję dla prostych formantem obsługiwanym w oknie, takie jak obsługa wzorców kontrolki i właściwości.|  
-|<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>|Dziedziczy <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>. Dodaje funkcjonalność dotyczącą elementu w kontrolce złożone, w tym nawigacji w obrębie fragmentu, ustawienie fokusu i zwraca prostokąt otaczający element.|  
-|<xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>|Dziedziczy <xref:System.Windows.Automation.Provider.IRawElementProviderFragment>. Dodaje funkcjonalność dotyczącą elementu głównego w kontrolce złożonych tym lokalizowania elementu podrzędnego na określonych współrzędnych i ustawiania stanu koncentracji uwagi dla całego formantu.|  
+|<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>|Oferuje funkcje prostej kontrolki hostowanej w oknie, w tym obsługę wzorców i właściwości formantów.|  
+|<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>|Dziedziczy z <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>. Dodaje funkcje dla elementu w kontrolce złożonej, w tym nawigację w obrębie fragmentu, ustawienie fokusu i zwrócenie obwiedni elementu.|  
+|<xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>|Dziedziczy z <xref:System.Windows.Automation.Provider.IRawElementProviderFragment>. Dodaje funkcje dla elementu głównego w kontrolce złożonej, w tym lokalizowanie elementu podrzędnego w określonych współrzędnych i Ustawianie stanu fokusu dla całej kontrolki.|  
   
- Następujące interfejsy zapewniają dodatkowe funkcje, ale nie są wymagane do zaimplementowania.  
+ Poniższe interfejsy oferują dodane funkcje, ale nie są wymagane do wdrożenia.  
   
 |Interface|Opis|  
 |---------------|-----------------|  
-|<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|Umożliwia dostawcy do śledzenia żądań dla zdarzeń.|  
-|<xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride>|Umożliwia zmianę położenia okienkowych elementów w obrębie [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa fragmentu.|  
+|<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|Umożliwia dostawcy śledzenie żądań zdarzeń.|  
+|<xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride>|Umożliwia zmianę położenia elementów opartych na oknach w [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewie fragmentu.|  
   
- Wszystkie interfejsy w <xref:System.Windows.Automation.Provider> przestrzeni nazw służą do obsługi wzorzec kontroli.  
+ Wszystkie inne interfejsy w <xref:System.Windows.Automation.Provider> przestrzeni nazw są przeznaczone do obsługi wzorców kontrolek.  
   
 <a name="Requirements_for_Non_WPF_Providers"></a>   
-### <a name="requirements-for-non-wpf-providers"></a>Wymagania dotyczące dostawców innych niż WPF  
- W celu komunikowania się z [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], kontrolki, należy zaimplementować następujące główne obszary funkcji:  
+### <a name="requirements-for-non-wpf-providers"></a>Wymagania dla dostawców nienależących do platformy WPF  
+ W celu komunikowania się [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]z programem kontrola musi implementować następujące główne obszary funkcjonalności:  
   
 |Funkcja|Implementacja|  
 |-------------------|--------------------|  
-|Udostępnianie dostawcy do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|W odpowiedzi na wiadomość WM_GETOBJECT wysyłany do okna kontrolki, zwraca obiekt, który implementuje <xref:System.Windows.Automation.Provider.IRawElementProviderSimple> (lub interfejs pochodny). Dla fragmentów musi to być dostawcy dla głównego fragmentu.|  
-|Podaj wartości właściwości|Implementowanie <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A> świadczenia lub wartości zastępcze.|  
-|Włącz klienta wchodzić w interakcje z kontrolką|Implementować interfejsy, które obsługują wzorce kontrolki, takie jak <xref:System.Windows.Automation.Provider.IInvokeProvider>. Zwróć tych dostawców wzorca w danej implementacji <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A>.|  
-|Wywoływanie zdarzeń|Wywołanie jednej z metod statycznych <xref:System.Windows.Automation.Provider.AutomationInteropProvider> aby wywołać zdarzenie, które klient może nasłuchiwać.|  
-|Włączanie nawigacji i koncentrujących się w obrębie fragmentu|Implementowanie <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> dla każdego elementu w obrębie fragmentu. (Nie jest konieczny dla elementów, które nie należą do fragmentu.)|  
-|Włącz ukierunkowywanie i lokalizację elementu podrzędnego w fragmentu|Implementowanie <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>. (Nie jest konieczny dla elementów, które są nie fragmentu katalogów głównych.)|  
+|Uwidacznianie dostawcy[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|W odpowiedzi na komunikat WM_GETOBJECT, który jest wysyłany do okna sterowania, zwróć obiekt implementujący <xref:System.Windows.Automation.Provider.IRawElementProviderSimple> (lub interfejs pochodny). Dla fragmentów, musi to być dostawca dla katalogu głównego fragmentów.|  
+|Podaj wartości właściwości|Zaimplementuj <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A> , aby podać lub zastąpić wartości.|  
+|Zezwalaj klientowi na współpracującie z kontrolką|Implementuj interfejsy obsługujące wzorce kontroli, takie jak <xref:System.Windows.Automation.Provider.IInvokeProvider>. Zwróć tych dostawców wzorców w implementacji programu <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A>.|  
+|Zgłoś zdarzenia|Wywołaj jedną z metod <xref:System.Windows.Automation.Provider.AutomationInteropProvider> statycznych, aby zgłosić zdarzenie, dla którego klient może nasłuchiwać.|  
+|Włączanie nawigacji i skoncentrowanie się na fragmentach|Zaimplementuj <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> dla każdego elementu w fragmencie. (Niepotrzebne dla elementów, które nie są częścią fragmentu).|  
+|Włącz skoncentrowanie i lokalizację elementu podrzędnego w fragmencie|Implementacja <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>. (Niepotrzebne dla elementów, które nie mają fragmentów głównych).|  
   
 <a name="Property_Values_in_Non_WPF_Providers"></a>   
-### <a name="property-values-in-non-wpf-providers"></a>Wartości właściwości w dostawcy innego niż WPF  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dostawców w przypadku kontrolek niestandardowych musi obsługiwać niektórych właściwości, których można użyć systemu automatyzacji, a także aplikacji klienckich. Dla elementów, które są hostowane w systemie windows (parametrów hWnd) [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] można pobrać niektórych właściwości z domyślnego dostawcę okna, ale musisz uzyskać inne od dostawcy niestandardowego.  
+### <a name="property-values-in-non-wpf-providers"></a>Wartości właściwości w dostawcach spoza WPF  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]dostawcy formantów niestandardowych muszą obsługiwać pewne właściwości, które mogą być używane przez system automatyzacji, a także przez aplikacje klienckie. W przypadku elementów, które są hostowane w systemie Windows ( [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] HWND), program może pobrać niektóre właściwości z domyślnego dostawcy okien, ale muszą uzyskać innych od dostawcy niestandardowego.  
   
- Dostawców dla formantów HWND na podstawie zazwyczaj trzeba podać następujące właściwości (identyfikowanych na podstawie wartości pól):  
+ Dostawcy formantów opartych na HWND nie muszą zazwyczaj podawać następujących właściwości (identyfikowanych przez wartości pól):  
   
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>  
   
@@ -102,71 +102,71 @@ ms.locfileid: "64651149"
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> Prosty element lub fragment hostowanych w oknie głównym są uzyskiwane z okna; jednak podać własne identyfikatory fragmentu elementy poniżej katalogu głównego (na przykład elementy listy w polu listy). Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.  
+> W <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> oknie uzyskano prosty element lub fragment, który znajduje się w oknie, ale elementy fragmentów znajdujące się poniżej elementu głównego (takie jak elementy listy w polu listy) muszą podawać własne identyfikatory. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.  
 >   
->  <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> Ma zostać zwrócony dla dostawców hostowanych w [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] kontroli. Domyślny dostawca okno może być w tym przypadku nie można pobrać poprawną wartość.  
+>  Powinna zostać zwrócona dla dostawców hostowanych [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] w formancie. <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> W takim przypadku domyślny dostawca okna może nie być w stanie pobrać poprawnej wartości.  
 >   
->  <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> Zwykle jest dostarczana przez dostawcę hosta. Na przykład, jeśli formant niestandardowy jest tworzony na podstawie <xref:System.Windows.Forms.Control>, nazwa pochodzi od `Text` właściwości formantu.  
+>  <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> Jest zazwyczaj dostarczany przez dostawcę hosta. Na przykład, Jeśli kontrolka niestandardowa pochodzi <xref:System.Windows.Forms.Control>od, nazwa pochodzi `Text` od właściwości formantu.  
   
- Przykładowy kod, zobacz [właściwości od dostawcy automatyzacji interfejsu użytkownika zwrot](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md).  
+ Na przykład kod, zobacz [zwracają właściwości z dostawcy automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md).  
   
 <a name="Events_in_Non_WPF_Providers"></a>   
-### <a name="events-in-non-wpf-providers"></a>Zdarzenia w WPF innych dostawców  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dostawców powinny wywoływać zdarzenia, aby powiadomić klienta aplikacje o zmianach w stan interfejsu użytkownika. Następujące metody umożliwiają wywoływanie zdarzeń.  
+### <a name="events-in-non-wpf-providers"></a>Zdarzenia w dostawcach innych niż WPF  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]dostawcy powinni zgłaszać zdarzenia w celu powiadomienia aplikacji klienckich o zmianach w stanie interfejsu użytkownika. Następujące metody są używane do wywoływania zdarzeń.  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationEvent%2A>|Wywołuje różne wydarzeń, takich jak zdarzenia wyzwolone przez wzorce kontrolki.|  
-|<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent%2A>|Zgłasza zdarzenie, gdy [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości została zmieniona.|  
-|<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseStructureChangedEvent%2A>|Zgłasza zdarzenie, gdy struktury [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa został zmieniony; na przykład poprzez usunięcie lub dodanie elementu.|  
+|<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationEvent%2A>|Wywołuje różne zdarzenia, w tym zdarzenia wyzwalane przez wzorce kontrolek.|  
+|<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent%2A>|Podnosi zdarzenie po [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zmianie właściwości.|  
+|<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseStructureChangedEvent%2A>|Podnosi zdarzenie po zmianie struktury [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa, na przykład przez usunięcie lub dodanie elementu.|  
   
- Zdarzenie ma na celu powiadomić klienta czegoś protokole [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)], czy działanie jest wyzwalane przez [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sam system. Na przykład, zdarzenie, które są identyfikowane za pomocą <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> powinien być wywoływany, gdy kontrolka jest wywoływana za pośrednictwem danych wejściowych użytkownika bezpośrednich lub za pośrednictwem wywołania aplikacji klienta <xref:System.Windows.Automation.InvokePattern.Invoke%2A>.  
+ Celem zdarzenia jest powiadomienie klienta o jakimś miejscu [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)], niezależnie od tego, czy działanie jest wyzwalane [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] przez sam system. Na przykład zdarzenie identyfikowane przez <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> powinna być wywoływane za każdym razem, gdy kontrolka jest wywoływana, przez bezpośrednie dane wejściowe użytkownika lub przez wywołanie <xref:System.Windows.Automation.InvokePattern.Invoke%2A>aplikacji klienckiej.  
   
- Aby zoptymalizować wydajność, Dostawca można selektywnie wywoływanie zdarzeń lub Zgłoś Brak zdarzeń na wszystkich, jeśli żadna aplikacja klienta nie jest zarejestrowany do ich odbierania. Następujące metody są używane do optymalizacji.  
+ Aby zoptymalizować wydajność, dostawca może wybiórczo zgłaszać zdarzenia lub nie zgłaszać żadnych zdarzeń, jeśli żadna aplikacja kliencka nie zostanie zarejestrowana. Następujące metody są używane do optymalizacji.  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|<xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A>|Ta właściwość statyczna Określa, czy wszystkie aplikacje klienckie subskrybowany przez [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdarzenia.|  
-|<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|Implementacja dostawcy tego interfejsu w folderze głównym fragmentu umożliwia zalecana, gdy klienci rejestrować i wyrejestrowywać programy obsługi zdarzeń dla zdarzenia na fragment.|  
+|<xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A>|Ta właściwość statyczna określa, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] czy wszystkie aplikacje klienckie subskrybują zdarzenia.|  
+|<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|Implementacja tego interfejsu w ramach dostawcy w katalogu głównym fragmentów umożliwia jego doradzanie, gdy klienci rejestrują i wyrejestrowujeją programy obsługi zdarzeń dla zdarzeń w fragmencie.|  
   
 <a name="Non_WPF_Provider_Navigation"></a>   
-### <a name="non-wpf-provider-navigation"></a>Nawigacja dostawcy innego niż WPF  
- Dostawców na potrzeby proste formanty, takie jak niestandardowy przycisk hostowanych w oknie (HWND) nie ma potrzeby obsługi nawigacji w obrębie [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa. Nawigacja do i z elementem jest obsługiwany przez domyślnego dostawcę dla okna hosta, które określono w implementacji <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>. Podczas implementowania dostawcy dla złożonych kontrolek niestandardowych, jednak musi obsługiwać nawigacji między węzeł główny fragmentu i jego obiektów podrzędnych oraz między węzłami tego samego poziomu.  
+### <a name="non-wpf-provider-navigation"></a>Nawigacja dostawcy spoza WPF  
+ Dostawcy formantów prostych, takich jak niestandardowy przycisk hostowany w oknie (HWND), nie muszą obsługiwać nawigowania w obrębie [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa. Nawigacja do i z elementu jest obsługiwana przez domyślnego dostawcę okna hosta, który jest określony w implementacji <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>. W przypadku zaimplementowania dostawcy dla złożonej kontrolki niestandardowej, należy jednak obsługiwać nawigację między węzłem głównym fragmentu i jego elementami podrzędnymi oraz między węzłami elementów równorzędnych.  
   
 > [!NOTE]
->  Elementy fragmentu innym niż katalog główny musi zwracać `null` odwoływać się z <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>, ponieważ nie są one bezpośrednio hostowane w oknie, a nie domyślny dostawca może obsługiwać nawigacji do i z nich.  
+> Elementy fragmentu innego niż główny muszą zwracać `null` odwołanie z <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>, ponieważ nie są bezpośrednio hostowane w oknie, a żaden dostawca domyślny nie może obsługiwać nawigowania do i z nich.  
   
- Struktura fragmentu zależy od implementacji <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A>. Dla każdego kierunku z każdego fragmentu, możliwe, ta metoda zwraca obiekt dostawcy dla elementu w tym kierunku. Jeśli nie ma żadnego elementu, w tym kierunku, metoda zwraca `null` odwołania.  
+ Struktura fragmentu jest określana przez implementację programu <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A>. Dla każdego możliwego kierunku z każdego fragmentu ta metoda zwraca obiekt dostawcy dla elementu w tym kierunku. Jeśli w tym kierunku nie ma elementu, metoda zwraca `null` odwołanie.  
   
- Główny fragmentu obsługuje nawigacji tylko do elementów podrzędnych. Na przykład pole listy zwraca pierwszy element na liście po kierunek <xref:System.Windows.Automation.Provider.NavigateDirection.FirstChild>i ostatniego elementu, który ma kierunek <xref:System.Windows.Automation.Provider.NavigateDirection.LastChild>. Główny fragment nie obsługuje Nawigacja do elementu nadrzędnego lub elementów równorzędnych; jest to obsługiwane przez dostawcę okna hosta.  
+ Element główny fragmentu obsługuje nawigację tylko do elementów podrzędnych. Na przykład pole listy zwraca pierwszy element na liście, gdy kierunek jest <xref:System.Windows.Automation.Provider.NavigateDirection.FirstChild>i ostatni element, gdy kierunek jest. <xref:System.Windows.Automation.Provider.NavigateDirection.LastChild> Element główny fragmentu nie obsługuje nawigacji do elementów nadrzędnych ani równorzędnych; jest to obsługiwane przez dostawcę okna hosta.  
   
- Elementy fragmentu, które nie są głównymi musi obsługiwać nawigacji do elementu nadrzędnego, a także do wszystkich elementów równorzędnych i elementy podrzędne, które mają.  
+ Elementy fragmentu, który nie jest elementem głównym, muszą obsługiwać nawigację do elementu nadrzędnego oraz do wszelkich elementów równorzędnych i ich elementów podrzędnych.  
   
 <a name="Non_WPF_Provider_Reparenting"></a>   
-### <a name="non-wpf-provider-reparenting"></a>Dostawca nie WPF zmiana elementu nadrzędnego  
- Wyskakujące okienka są faktycznie najwyższego poziomu systemu windows, a więc domyślnie są wyświetlane w [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa jako elementy podrzędne pulpitu. W wielu przypadkach jednak wyskakujące okienka są logicznie dzieci niektóre inne kontrolki. Na przykład listy rozwijanej pola kombi są logicznie podrzędne pola kombi. Podobnie okno podręczne menu logicznie jest elementem podrzędnym elementu menu. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zapewnia obsługę nadrzędne wyskakującego okienka, aby były wyświetlane jako elementy podrzędne formant.  
+### <a name="non-wpf-provider-reparenting"></a>Obiekt nadrzędny dostawcy spoza platformy WPF  
+ Okna podręczne są w rzeczywistości oknami najwyższego poziomu, a więc domyślnie są wyświetlane w [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewie jako elementy podrzędne pulpitu. W wielu przypadkach okna podręczne są jednak logicznie elementami podrzędnymi innej kontrolki. Na przykład lista rozwijana pola kombi jest logicznie elementem podrzędnym pola kombi. Analogicznie, okno podręczne menu jest logicznie elementem podrzędnym menu. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]zapewnia pomoc techniczną do ponownego nadrzędnego wyskakujących okienek, aby były one elementami podrzędnymi powiązanej kontrolki.  
   
- Aby zmienić elementu nadrzędnego okno podręczne:  
+ Aby zmienić nadrzędny okna podręcznego:  
   
-1. Tworzenie dostawcy dla tego okna. Wymaga to, że klasy okna podręcznego jest znana z wyprzedzeniem.  
+1. Utwórz dostawcę dla okna podręcznego. Wymaga to, aby Klasa okna podręcznego była znana z góry.  
   
-2. Zaimplementuj wszystkie właściwości i wzorce w zwykły sposób tym okno podręczne, tak, jakby była kontroli samodzielną.  
+2. Zaimplementuj wszystkie właściwości i wzorce w zwykły sposób dla tego okna podręcznego, tak jakby były one kontrolką we własnym zakresie.  
   
-3. Implementowanie <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A> właściwości, tak że zwraca wartość uzyskana z <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>, gdzie parametr jest uchwyt okna podręcznego okna.  
+3. Zaimplementuj <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>właściwość, aby zwracała wartość uzyskaną z, gdzie parametr jest dojściem okna podręcznego. <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>  
   
-4. Implementowanie <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A> dla tego okna i jego obiektu nadrzędnego, tak że nawigacja odbywa się prawidłowo z logiczną elementu nadrzędnego do podrzędnych logicznego oraz między elementami podrzędnymi tego samego poziomu.  
+4. Zaimplementuj <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A> dla okna podręcznego i jego elementu nadrzędnego, aby Nawigacja była prawidłowo obsługiwana z logicznego elementu nadrzędnego do logicznych elementów podrzędnych i między równorzędnymi elementami podrzędnymi.  
   
- Gdy [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] napotka oknie podręcznym rozpoznaje nawigacji jest przesłaniana z domyślnego i nakłada się na oknie podręcznym po napotkaniu się jako element podrzędny pulpitu. Zamiast tego węzła tylko będzie dostępny za pośrednictwem tego fragmentu.  
+ Gdy [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] pojawia się okno podręczne, rozpoznaje, że nawigacja jest zastępowana domyślnie, i pomija okna podręcznego, gdy zostanie on wyświetlony jako element podrzędny pulpitu. Zamiast tego węzeł będzie dostępny tylko za pomocą fragmentu.  
   
- Zmiana elementu nadrzędnego nie jest odpowiednia w sytuacjach, w którym formant może obsługiwać oknem każdej klasy. Na przykład pasek pomocniczy umożliwia hostowanie dowolnego typu HWND w jego pasma. Obsługa tych przypadków [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] obsługuje alternatywnej formy relokacji HWND, zgodnie z opisem w następnej sekcji.  
+ Obiekt nadrzędny nie jest odpowiedni dla przypadków, gdy kontrolka może obsługiwać okno dowolnej klasy. Na przykład paska pomocniczego może hostować dowolny typ HWND w swoich pasmach. Aby obsłużyć te [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] przypadki, program obsługuje alternatywną formę relokacji elementu HWND, jak opisano w następnej sekcji.  
   
 <a name="Non_WPF_Provider_Repositioning"></a>   
-### <a name="non-wpf-provider-repositioning"></a>Dostawca nie WPF zmiana położenia  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] fragmenty mogą zawierać dwóch lub więcej elementów, które każdy znajdują się w oknie (HWND). Ponieważ każdy HWND ma swój własny domyślnego dostawcę, który uwzględnia HWND, aby być obiektem podrzędnym obiektu zawierającego HWND, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa domyślnie pokaże parametrów hWnd we fragmencie jako elementy podrzędne okna nadrzędnego. W większości przypadków jest to pożądane zachowania, ale czasami może ona prowadzić do wprowadzenia w błąd, ponieważ jest niezgodna Struktura logiczna [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
+### <a name="non-wpf-provider-repositioning"></a>Zmiana położenia dostawcy spoza WPF  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]fragmenty mogą zawierać co najmniej dwa elementy, które są zawarte w oknie (HWND). Ponieważ każdy HWND ma własnego domyślnego dostawcę, który uważa, że właściwość HWND ma być elementem podrzędnym zawierającej HWND [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , drzewo domyślnie pokaże HWND w fragmencie jako elementy podrzędne okna nadrzędnego. W większości przypadków jest to pożądane zachowanie, ale czasami może prowadzić do pomyłki, ponieważ nie pasuje do struktury [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]logicznej.  
   
- Dobrym przykładem jest formantem paska pomocniczego. Pasek pomocniczy zawiera przedziałami, które z kolei może zawierać kontrolkę na podstawie HWND, takie jak pasek narzędzi, pole edycji lub pola kombi. Domyślny dostawca okna dla paska pomocniczego HWND zobaczy kontroli poza pasmem parametrów hWnd jako elementy podrzędne oraz dostawcy paska pomocniczego widzi grup jako elementy podrzędne. Ponieważ dostawca HWND dostawcy paska pomocniczego współpracującą i łączenia ich elementy podrzędne, grup i kontrolę opartą na HWND są traktowane jako elementy podrzędne paska pomocniczego. Logicznie jednak tylko paski powinna zostać wyświetlona jako elementy podrzędne paska pomocniczego, a każdy dostawca poza pasmem powinny być połączone z domyślnego dostawcę HWND dla formantu, który zawiera.  
+ Dobrym przykładem jest formant paska pomocniczego. Paska pomocniczego zawiera pasma, z których każdy może z kolei zawierać kontrolkę opartą na elemencie HWND, taką jak pasek narzędzi, pole edycji lub pole kombi. Domyślny dostawca okna dla paska pomocniczego HWND widzi kontrolki przedziału jako elementy podrzędne, a dostawca paska pomocniczego widzi paski jako elementy podrzędne. Ze względu na to, że dostawca HWND i dostawca paska pomocniczego działają wspólnie i łącząc ich elementy podrzędne, zarówno te, jak i kontrolki oparte na elemencie HWND, są wyświetlane jako elementy podrzędne paska pomocniczego. Logicznie jednak tylko paski powinny być wyświetlane jako elementy podrzędne paska pomocniczego, a każdy dostawca pasm powinien być połączony z domyślnym dostawcą HWND dla kontrolki, która zawiera.  
   
- Aby to osiągnąć, dostawcy głównego fragmentu dla paska pomocniczego ujawnia zestaw elementów podrzędnych reprezentujący pasma. Każdego pasma ma jednego dostawcę, który może narazić właściwości i wzorce. W jego implementacja obiektu <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>, dostawca poza pasmem zwraca domyślny dostawca okna dla kontrolki HWND, który uzyskuje się przez wywołanie metody <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>, przekazując uchwyt okna formantu. Na koniec implementuje dostawcy głównego fragmentu dla paska pomocniczego <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> interfejsu, a w jego implementacja obiektu <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> zwraca dostawcę odpowiednie poza pasmem dla formantu zawartego w określonym HWND.  
+ Aby to osiągnąć, główny dostawca fragmentów dla paska pomocniczego uwidacznia zestaw elementów podrzędnych reprezentujących pasma. Każda grupa ma jednego dostawcę, który może uwidaczniać właściwości i wzorce. W jego implementacji <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>dostawca pasma zwraca domyślnego dostawcę okna dla elementu HWND formantu, który uzyskuje przez wywołanie <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>, przekazanie do uchwytu okna kontrolki. Na koniec główny dostawca fragmentów paska pomocniczego implementuje <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> interfejs, a w jego <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> implementacji zwraca odpowiedniego dostawcę pasma dla kontrolki zawartej w określonym elemencie HWND.  
   
 ## <a name="see-also"></a>Zobacz także
 

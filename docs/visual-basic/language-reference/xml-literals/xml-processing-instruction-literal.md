@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XML processing instruction literal [Visual Basic]
 - processing instruction literal [Visual Basic]
 ms.assetid: cef4f7f8-0011-4f64-8602-795077ad4f15
-ms.openlocfilehash: 3fbb16a4d47801b671d37566573215d3a57afff1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c589d3f4ac6bbb9aa9b2b8f2535888bddbf9c934
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938609"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958478"
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>Literał instrukcji przetwarzającej kod XML (Visual Basic)
-Literał reprezentujący <xref:System.Xml.Linq.XProcessingInstruction> obiektu.  
+Literał reprezentujący <xref:System.Xml.Linq.XProcessingInstruction> obiekt.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,37 +26,37 @@ Literał reprezentujący <xref:System.Xml.Linq.XProcessingInstruction> obiektu.
   
 ## <a name="parts"></a>Części  
  `<?`  
- Wymagana. Oznacza początek literał instrukcji przetwarzania XML.  
+ Wymagany. Wskazuje początek literału instrukcji przetwarzania XML.  
   
  `piName`  
- Wymagana. Nadaj nazwę wskazującą, która aplikacja przetwarzanie instrukcji celów. Nie może zaczynać od "xml" lub "XML".  
+ Wymagana. Nazwa wskazująca, która aplikacja jest celem instrukcji przetwarzania. Nie można rozpocząć od "XML" lub "XML".  
   
  `piData`  
- Opcjonalna. Ciąg wskazujący, jak aplikacja objęte `piName` powinien przetworzyć dokumentu XML.  
+ Opcjonalna. Ciąg wskazujący sposób przetwarzania dokumentu XML `piName` przez aplikację, do której należy aplikacja.  
   
  `?>`  
  Wymagana. Oznacza koniec instrukcji przetwarzania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- <xref:System.Xml.Linq.XProcessingInstruction> Obiektu.  
+ <xref:System.Xml.Linq.XProcessingInstruction> Obiekt.  
   
 ## <a name="remarks"></a>Uwagi  
- Literały instrukcji przetwarzania XML wskazują, jak aplikacje należy przetworzyć dokumentu XML. Podczas ładowania dokumentu XML aplikacji Aplikacja może sprawdzać, czy instrukcje przetwarzania XML w celu ustalenia sposobu przetwarzania dokumentu. Aplikacja interpretuje słowa kluczowe znaczenie `piName` i `piData`.  
+ Literały instrukcji przetwarzania XML wskazują, w jaki sposób aplikacje powinny przetwarzać dokument XML. Gdy aplikacja ładuje dokument XML, aplikacja może sprawdzić instrukcje przetwarzania XML, aby określić sposób przetwarzania dokumentu. Aplikacja interpretuje znaczenie `piName` i `piData`.  
   
- Literał dokumentu XML używa składni, która jest podobna do instrukcji przetwarzania XML. Aby uzyskać więcej informacji, zobacz [literał dokumentu XML](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
-  
-> [!NOTE]
->  `piName` Element nie może rozpoczynać się ciągi "xml" lub "XML", ponieważ Specyfikacja XML 1.0 rezerwuje tych identyfikatorów.  
-  
- Można przypisać literał instrukcji przetwarzania XML do zmiennej lub ją dołączyć literał dokumentu XML.  
+ Literał dokumentu XML używa składni podobnej do tej instrukcji przetwarzania XML. Aby uzyskać więcej informacji, zobacz [literał dokumentu XML](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
   
 > [!NOTE]
->  Literał XML może obejmować wiele wierszy, bez konieczności używania znaków kontynuacji wiersza. Dzięki temu można skopiować zawartość z dokumentu XML i wklej go bezpośrednio w programie Visual Basic.  
+> `piName` Element nie może rozpoczynać się od ciągu "XML" lub "XML", ponieważ specyfikacja XML 1,0 rezerwuje te identyfikatory.  
   
- Kompilator Visual Basic konwertuje literał instrukcji przetwarzania XML do wywołania <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> konstruktora.  
+ Do zmiennej można przypisać literał instrukcji przetwarzania XML lub dodać go do literału dokumentu XML.  
+  
+> [!NOTE]
+> Literał XML może obejmować wiele wierszy bez znaków kontynuacji wiersza. Dzięki temu można skopiować zawartość z dokumentu XML i wkleić ją bezpośrednio do programu Visual Basic.  
+  
+ Kompilator Visual Basic konwertuje literał instrukcji przetwarzania XML na wywołanie <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> konstruktora.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy instrukcja przetwarzania zidentyfikowanie arkusza stylów dla dokumentu XML.  
+ Poniższy przykład tworzy instrukcję przetwarzania identyfikującą arkusz stylów dla dokumentu XML.  
   
  [!code-vb[VbXMLSamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#28)]  
   
@@ -65,4 +65,4 @@ Literał reprezentujący <xref:System.Xml.Linq.XProcessingInstruction> obiektu.
 - <xref:System.Xml.Linq.XProcessingInstruction>
 - [Literał dokumentu XML](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
 - [Literały XML](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Tworzenie XML w Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Tworzenie kodu XML w Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

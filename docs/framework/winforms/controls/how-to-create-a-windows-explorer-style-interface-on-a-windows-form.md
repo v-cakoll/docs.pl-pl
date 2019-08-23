@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: db2c5431dfb0156c1508a18ef13d2af80eb4981b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 34a5cd735c350688d9e83003806668e213932c85
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039532"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960628"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Instrukcje: tworzenie interfejsu w stylu Eksploratora Windows na formularzu systemu Windows
 Eksplorator Windows to typowy wybór interfejsu użytkownika dla aplikacji ze względu na jego gotowość.
@@ -35,7 +35,7 @@ Eksplorator Windows to typowy wybór interfejsu użytkownika dla aplikacji ze wz
 3. Zaznacz wszystkie trzy kontrolki, naciskając klawisz CTRL i klikając je. Po wybraniu <xref:System.Windows.Forms.SplitContainer> kontrolki kliknij pasek podziału zamiast paneli.
 
     > [!NOTE]
-    >  Nie należy używać polecenia **Zaznacz wszystko** w menu **Edycja** . Jeśli to zrobisz, właściwość wymagana w następnym kroku nie zostanie wyświetlona w oknie **Właściwości** .
+    > Nie należy używać polecenia **Zaznacz wszystko** w menu **Edycja** . Jeśli to zrobisz, właściwość wymagana w następnym kroku nie zostanie wyświetlona w oknie **Właściwości** .
 
 4. W oknie **Właściwości** ustaw właściwość <xref:System.Windows.Forms.SplitContainer.Dock%2A> na <xref:System.Windows.Forms.DockStyle.Fill>.
 
@@ -44,7 +44,7 @@ Eksplorator Windows to typowy wybór interfejsu użytkownika dla aplikacji ze wz
      W formularzu zostanie wyświetlony dwuczęściowy interfejs użytkownika, podobny do tego w Eksploratorze Windows.
 
     > [!NOTE]
-    >  Po przeciągnięciu rozdzielacza panele zmienią się.
+    > Po przeciągnięciu rozdzielacza panele zmienią się.
 
 ## <a name="see-also"></a>Zobacz także
 

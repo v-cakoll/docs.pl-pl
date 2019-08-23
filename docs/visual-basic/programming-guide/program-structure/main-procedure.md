@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: b6c8ec4052d834d410df7fef12e59434f5fdfb44
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 19c6fcb04a373d782db3deafc732f69bf20e7f0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039982"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962773"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Procedura główna w Visual Basic
 Każda aplikacja Visual Basic musi zawierać procedurę o nazwie `Main`. Ta procedura służy jako punkt wyjścia i ogólna kontrola aplikacji. .NET Framework wywołuje `Main` procedurę po załadowaniu aplikacji i jest gotowa do przekazania kontroli do niej. Jeśli tworzysz aplikację Windows Forms, musisz napisać `Main` procedurę dla aplikacji, które działają samodzielnie.
@@ -33,7 +33,7 @@ Każda aplikacja Visual Basic musi zawierać procedurę o nazwie `Main`. Ta proc
  Istnieją cztery sposoby zadeklarować `Main` procedurę. Może przyjmować argumenty i nie może zwracać wartości.
 
 > [!NOTE]
->  Jeśli deklarujesz `Main` w klasie, musisz `Shared` użyć słowa kluczowego. W module `Main` nie musi być `Shared`.
+> Jeśli deklarujesz `Main` w klasie, musisz `Shared` użyć słowa kluczowego. W module `Main` nie musi być `Shared`.
 
 - Najprostszym sposobem jest zadeklarowanie `Sub` procedury, która nie przyjmuje argumentów ani nie zwraca wartości.
 

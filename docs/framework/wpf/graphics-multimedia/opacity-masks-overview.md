@@ -6,12 +6,12 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 76ec595b1d2cc732e1c8bc2dc2ca6def904bf94c
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: d0fea1aac4efb17811404ce45769615bb2e7234f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545343"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929662"
 ---
 # <a name="opacity-masks-overview"></a>Przegląd Masek krycia
 Maski kryjące umożliwiają udostępnianie części elementu lub wizualizacji jako przezroczyste lub częściowo przezroczyste. Aby utworzyć maskę nieprzezroczystości, należy <xref:System.Windows.Media.Brush> zastosować <xref:System.Windows.UIElement.OpacityMask%2A> do właściwości elementu lub <xref:System.Windows.Media.Visual>.  Pędzel jest mapowany do elementu lub wizualizacji, a wartość nieprzezroczystości każdego koloru pędzla jest używana do określenia nieprzezroczystości każdego odpowiadającego piksela elementu lub wizualizacji.  
@@ -25,7 +25,7 @@ Maski kryjące umożliwiają udostępnianie części elementu lub wizualizacji j
  Maska nieprzezroczystości działa przez mapowanie jej zawartości do elementu lub wizualizacji. Kanał alfa każdego z pikseli pędzla jest następnie używany do określenia nieprawidłowej przejrzystości elementu lub odpowiednich pikseli wizualizacji; rzeczywisty kolor pędzla jest ignorowany. Jeśli dana część pędzla jest przezroczysta, odpowiednia część elementu lub wizualizacji staną się przezroczyste. Jeśli dana część pędzla jest nieprzezroczysta, przezroczystość odpowiedniej części elementu lub wizualizacji nie jest zmieniana. Nieprzezroczystość określona przez maskę nieprzezroczystości jest łączona z wszystkimi ustawieniami nieprzezroczystości obecnymi w elemencie lub wizualizacji. Na przykład, jeśli element ma wartość 25 procent nieprzezroczystości, a maska nieprzezroczystości jest stosowana, która przechodzi z całkowitego kryjącego do pełnego przezroczystości, wynikiem jest element, który przechodzi od przezroczystości 25 procent do pełnego przezroczystości.  
   
 > [!NOTE]
->  Chociaż przykłady w tym omówieniu pokazują użycie masek kryjących elementów obrazu, maska kryjąca może być stosowana do dowolnego elementu lub <xref:System.Windows.Media.Visual>, w tym paneli i kontrolki.  
+> Chociaż przykłady w tym omówieniu pokazują użycie masek kryjących elementów obrazu, maska kryjąca może być stosowana do dowolnego elementu lub <xref:System.Windows.Media.Visual>, w tym paneli i kontrolki.  
   
  Maski nieprzezroczystości są używane do tworzenia interesujących efektów wizualnych, takich jak tworzenie obrazów lub przycisków, które stopniowo rozjaśniają się z widoku, dodawanie tekstury do elementów lub łączenie gradientów w celu tworzenia powierzchni przypominających. Na poniższej ilustracji przedstawiono użycie maski kryjącej. Tło z modułem sprawdzonym służy do pokazywania przezroczystych części maski.  
   

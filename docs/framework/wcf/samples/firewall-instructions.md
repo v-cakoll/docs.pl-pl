@@ -2,89 +2,89 @@
 title: Instrukcje dotyczące zapory
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 06e5ba64ab0ec3558e4c773c9cb21f961384e0c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5e557963c415cf39c4f25b4854c9863652201146
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650039"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961405"
 ---
 # <a name="firewall-instructions"></a>Instrukcje dotyczące zapory
-Należy włączyć kilka portów i programów w zaporze, aby mógł działać przykładów Windows Communication Foundation (WCF). Wiele przykładów komunikują się przy użyciu portów z zakresu 8000-8003 i portu 9000. Zapora jest włączona domyślnie i uniemożliwia dostęp do tych portów. Aby włączyć zaporę dla próbki, wykonaj jedną z następujących procedur, w zależności od wymagań i środowisko zabezpieczeń:  
+Należy włączyć kilka portów lub programów w zaporze, aby umożliwić działanie przykładów Windows Communication Foundation (WCF). Wiele przykładów komunikuje się za pomocą portów z zakresu 8000-8003 i portu 9000. Zapora jest domyślnie włączona i uniemożliwia dostęp do tych portów. Aby włączyć zaporę dla przykładów, wykonaj jedną z następujących procedur, w zależności od wymagań i środowiska zabezpieczeń:  
   
-- Option 1: Włącz interakcyjne przykładów podczas pracy. Wprowadzone żadne zmiany zaawansowane konfiguracja zapory i przejdź do rozpocząć tworzenie i uruchamianie przykładów programu. Po uruchomieniu przykładu **Alert zabezpieczeń Windows** pojawi się okno dialogowe. Z przykładowego program można dodać interaktywnie do listy odblokowane. Przy użyciu tej procedury trzeba ponownie uruchom przykład.  
+- Option 1: Interaktywnie Włącz próbki w trakcie działania. Nie wprowadzaj żadnych zmian w konfiguracji zapory i Kontynuuj, aby rozpocząć Kompilowanie i uruchamianie przykładów. Po uruchomieniu przykładu zostanie wyświetlone okno dialogowe **alert zabezpieczeń systemu Windows** . Przykładowy program można następnie dodać interaktywnie do listy odblokowanej. Korzystając z tej procedury, może być konieczne ponowne uruchomienie przykładu.  
   
-- Option 2: Włącz przykładowe programy z wyprzedzeniem. Rozpocznij **Panelu sterowania zapory Windows** apletu i Włącz przykładowe programy plan do uruchomienia. Należy najpierw utworzyć programy, dzięki czemu istnieją pliki wykonywalne. Bardziej szczegółowe instrukcje można znaleźć w poniższej procedurze.  
+- Opcja 2: Włącz z wyprzedzeniem przykładowe programy. Uruchom aplet **Panelu sterowania Zapory systemu Windows** i Włącz przykładowe programy, które zamierzasz uruchomić. Musisz najpierw skompilować programy, aby pliki wykonywalne istniały. Bardziej szczegółowe instrukcje można znaleźć w poniższej procedurze.  
   
-- Opcja 3: Włącz zakres portów z wyprzedzeniem. Rozpocznij **zapory Windows** **Panelu sterowania** apletu i Włącz porty 80, 443, 8000 8003 oraz 9000, które są używane przez próbki. Bardziej szczegółowe instrukcje można znaleźć w poniższej procedurze. Ta opcja jest mniej bezpieczna niż inne, ponieważ zezwala ona na dowolnym programowi na używanie tych portów, a nie tylko przykłady.  
+- Opcja 3: Włącz z wyprzedzeniem zakres portów. Uruchom aplet **Panelu sterowania** **zapory systemu Windows** i włącz porty 80, 443, 8000-8003 i 9000, które są używane przez przykłady. Bardziej szczegółowe instrukcje można znaleźć w poniższej procedurze. Ta opcja jest mniej bezpieczna niż w przypadku innych, ponieważ umożliwia każdemu programowi korzystanie z tych portów, a nie tylko przykładów.  
   
- Jeśli masz pewności, której procedury należy użyć, wybierz opcję pierwszym. Jeśli korzystasz z zapory, od innego dostawcy, konieczne może wprowadzić zmiany podobne.  
+ Jeśli nie masz pewności, której procedury użyć, wybierz pierwszą opcję. Jeśli używasz zapory od innego dostawcy, może być konieczne wprowadzenie podobnych zmian.  
   
 > [!IMPORTANT]
->  Zmiana konfiguracji zapory ma wpływ na bezpieczeństwo. Zaleca się zapisanie zmian upewnij i usuń je, po zakończeniu pracy z przykładów.  
+>  Zmiana konfiguracji zapory wpływa na bezpieczeństwo. Zalecamy zapisanie wprowadzonych zmian i ich usunięcie po zakończeniu pracy z przykładami.  
   
-### <a name="to-enable-samples-programs-in-advance"></a>Aby włączyć programy przykłady z wyprzedzeniem  
+### <a name="to-enable-samples-programs-in-advance"></a>Aby włączyć z wyprzedzeniem programy próbne  
   
-1. Skompiluj przykład.  
+1. Kompiluj przykład.  
   
-2. Kliknij przycisk **Start**, kliknij przycisk **Uruchom**i wpisz `firewall.cpl`. Spowoduje to otwarcie **Panelu sterowania zapory Windows** apletu.  
+2. Kliknij przycisk **Start**, kliknij pozycję **Uruchom**, `firewall.cpl`a następnie wpisz polecenie. Spowoduje to otwarcie apletu **Panelu sterowania Zapory systemu Windows** .  
   
     > [!NOTE]
-    >  Musi mieć uprawnienia do zmiany ustawień zapory, aby uruchomić przykłady, które muszą mieć możliwość komunikowania się przez zaporę Windows. Jeśli niektóre ustawienia zapory są niedostępne, a komputer jest podłączony do domeny, administrator systemu może kontrolowanie tych ustawień za pomocą zasad grupy.  
+    >  Musisz mieć uprawnienia do zmiany ustawień zapory, aby uruchamiać próbki, które wymagają możliwości komunikowania się przez zaporę systemu Windows. Jeśli niektóre ustawienia zapory są niedostępne, a komputer jest połączony z domeną, administrator systemu może kontrolować te ustawienia za pomocą zasady grupy.  
   
-3. Wykonaj jedną z następujących czynności określonego działania umożliwiające programu przez zaporę Windows:  
+3. Wykonaj jedną z następujących czynności, aby umożliwić programowi za pomocą zapory systemu Windows:  
   
-    - Windows 7 lub Windows Server 2008 r2, wybierz polecenie **Zezwalaj programowi lub funkcję przez zaporę Windows**. Kliknij przycisk **zmiany ustawień**, Zezwalaj na **inny Program...** .  
+    - W systemie Windows 7 lub Windows Server 2008 R2 kliknij opcję **Zezwól programowi lub funkcji za pomocą zapory systemu Windows**. Kliknij pozycję **Zmień ustawienia**, Zezwól na **inny program...** .  
   
-    - Na [!INCLUDE[wv](../../../../includes/wv-md.md)] lub [!INCLUDE[lserver](../../../../includes/lserver-md.md)], kliknij przycisk **Zezwól programu przez zaporę Windows**.  
+    - W [!INCLUDE[wv](../../../../includes/wv-md.md)] systemie [!INCLUDE[lserver](../../../../includes/lserver-md.md)]lub kliknij opcję **Zezwól programowi na korzystanie z zapory systemu Windows**.  
   
-4. Na **wyjątki** kliknij pozycję **Dodaj Program**.  
+4. Na karcie **wyjątki** kliknij pozycję **Dodaj program**.  
   
-5. Kliknij przycisk **Przeglądaj** i wybierz plik wykonywalny próbki mają być uruchamiane.  
+5. Kliknij przycisk **Przeglądaj** i wybierz plik wykonywalny przykładu, który ma zostać uruchomiony.  
   
-6. Powtórz kroki 4 i 5, aż zostaną dodane pliki wykonywalne przykładów, które mają być uruchamiane.  
+6. Powtórz kroki 4 i 5, dopóki nie dodasz plików wykonywalnych ze wszystkich przykładów, które planujesz uruchomić.  
   
-7. Kliknij przycisk **OK** zamknąć aplet Zapora.  
+7. Kliknij przycisk **OK** , aby zamknąć aplet Zapora.  
   
-### <a name="to-enable-a-port-range-in-advance"></a>Aby włączyć zakres portów z wyprzedzeniem  
+### <a name="to-enable-a-port-range-in-advance"></a>Aby włączyć z wyprzedzeniem zakres portów  
   
-1. Kliknij przycisk **Start**, kliknij przycisk **Uruchom**i wpisz `firewall.cpl`. Spowoduje to otwarcie **Panelu sterowania zapory Windows** apletu.  
+1. Kliknij przycisk **Start**, kliknij pozycję **Uruchom**, `firewall.cpl`a następnie wpisz polecenie. Spowoduje to otwarcie apletu **Panelu sterowania Zapory systemu Windows** .  
   
-2. Windows 7 lub Windows Server 2008 R2 wykonaj następujące kroki.  
+2. W systemie Windows 7 lub Windows Server 2008 R2 wykonaj następujące kroki.  
   
-    1. Kliknij przycisk **Zaawansowane ustawienia** w lewej kolumnie okna zapory Windows.  
+    1. Kliknij pozycję **Ustawienia zaawansowane** w lewej kolumnie okna Zapora systemu Windows.  
   
-    2. Kliknij przycisk **reguły ruchu przychodzącego** w lewej kolumnie.  
+    2. W lewej kolumnie kliknij pozycję **reguły ruchu przychodzącego** .  
   
-    3. Kliknij przycisk **nowe reguły** w prawej kolumnie.  
+    3. Kliknij pozycję **nowe reguły** w prawej kolumnie.  
   
-    4. Wybierz **portu** i kliknij przycisk **dalej**.  
+    4. Wybierz pozycję **port** , a następnie kliknij przycisk **dalej**.  
   
-    5. Wybierz **TCP** i wprowadź `8000, 8001, 8002, 8003, 9000, 80, 443` w **określone porty lokalne** pola.  
+    5. Wybierz opcję **TCP** i `8000, 8001, 8002, 8003, 9000, 80, 443` wprowadź w polu **określone porty lokalne** .  
   
     6. Kliknij przycisk **Dalej**.  
   
-    7. Wybierz **Zezwalaj na połączenie**i kliknij przycisk **dalej** .  
+    7. Wybierz opcję **Zezwalaj na połączenie**, a następnie kliknij przycisk **dalej** .  
   
-    8. Wybierz **domeny** i **prywatnej**i kliknij przycisk **dalej**.  
+    8. Wybierz pozycję **domena** i **prywatny**, a następnie kliknij przycisk **dalej**.  
   
-    9. Nazwa ta reguła `WCF-WF 4.0 Samples`i kliknij przycisk **Zakończ**.  
+    9. Nadaj nazwę regule `WCF-WF 4.0 Samples`i kliknij przycisk **Zakończ**.  
   
-    10. Kliknij przycisk **reguł dla ruchu wychodzącego** i powtórz kroki od c-h.  
+    10. Kliknij pozycję **reguły ruchu** wychodzącego i powtórz kroki od c do h.  
   
-3. Na [!INCLUDE[wv](../../../../includes/wv-md.md)] lub [!INCLUDE[lserver](../../../../includes/lserver-md.md)], wykonaj następujące kroki.  
+3. W [!INCLUDE[wv](../../../../includes/wv-md.md)] systemie [!INCLUDE[lserver](../../../../includes/lserver-md.md)]lub wykonaj poniższe kroki.  
   
-    1. Kliknij przycisk **Zezwól programu przez zaporę Windows**.  
+    1. Kliknij pozycję **Zezwól programowi przez zaporę systemu Windows**.  
   
-    2. Na **wyjątki** kliknij pozycję **Dodaj Port**.  
+    2. Na karcie **wyjątki** kliknij pozycję **Dodaj port**.  
   
-    3. Wprowadź nazwę, wprowadź numer portu 8000, a następnie wybierz **TCP** opcji.  
+    3. Wprowadź nazwę, wprowadź 8000 jako numer portu, a następnie wybierz opcję **TCP** .  
   
-    4. Kliknij przycisk **zmiana zakresu** przycisku Wybierz **Moja sieć** jedyną opcją (podsieć), a następnie kliknij przycisk **OK**.  
+    4. Kliknij przycisk **Zmień zakres** , wybierz opcję tylko **moja sieć** (podsieć), a następnie kliknij przycisk **OK**.  
   
-    5. Powtórz kroki od b do d dla portów 8001, 8002 8003, 9000, 80 i 443.  
+    5. Powtórz kroki od b do d dla portów 8001, 8002, 8003, 9000, 80 i 443.  
   
-4. Kliknij przycisk **OK** zamknąć aplet Zapora.  
+4. Kliknij przycisk **OK** , aby zamknąć aplet Zapora.  
   
 > [!NOTE]
->  Po zakończeniu pracy z próbki, należy usunąć wszelkie wyjątki zapory. Aby to zrobić, otwórz **Panelu sterowania zapory Windows** apletu i Usuń wszystkie programy lub portu wpisów, które zostały dodane przez poprzedniej procedury.
+> Usuń wszystkie wyjątki zapory po zakończeniu pracy z przykładami. W tym celu należy otworzyć aplet **Panelu sterowania Zapory systemu Windows** i usunąć wszystkie programy lub wpisy portów, które zostały dodane przez poprzednie procedury.

@@ -10,20 +10,20 @@ helpviewer_keywords:
 - Windows Service applications, troubleshooting
 ms.assetid: 45c48e2e-b97d-44bc-8896-14f328e0ce33
 author: ghogen
-ms.openlocfilehash: f75a2f33ecde408d2d8e2f2343197ba56c4b8c21
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d04a0ddcef9ff7c31abd422f7f9fba34e804d2b1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925102"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935410"
 ---
 # <a name="troubleshooting-service-application-wont-install"></a>Rozwiązywanie problemów: Aplikacja usług nie instaluje się
-Jeśli Twoja aplikacja usługi nie zainstaluje się poprawnie, sprawdź, upewnij się, że <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> właściwość klasy usługi jest ustawiona na tę samą wartość, pokazane w Instalatorze za daną usługę. Wartość musi być taka sama w obu przypadkach, w kolejności dla usługi w taki sposób poprawnie zainstalować.  
+Jeśli aplikacja usługi nie zostanie prawidłowo zainstalowana, upewnij się, że <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> właściwość klasy usługi jest ustawiona na taką samą wartość jak w instalatorze dla tej usługi. Wartość musi być taka sama w obu wystąpieniach, aby można było poprawnie zainstalować usługę.  
   
 > [!NOTE]
->  Można również przeglądać dzienniki instalacji, aby uzyskać opinie na temat procesu instalacji.  
+> Możesz również zapoznać się z dziennikami instalacji, aby uzyskać informacje na temat procesu instalacji.  
   
- Również należy sprawdzić, czy masz inną usługę o takiej samej nazwie już zainstalowane. Nazwy usług musi być unikatowa instalacja się powiodła.  
+ Należy również sprawdzić, czy masz już zainstalowaną inną usługę o tej samej nazwie. Aby instalacja powiodła się, nazwy usług muszą być unikatowe.  
   
 ## <a name="see-also"></a>Zobacz także
 

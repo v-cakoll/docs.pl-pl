@@ -13,38 +13,38 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-ms.openlocfilehash: ac2f89619c3e87ebfe5e568bbf27274834b0866d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9900b96bf04668805b841c842f7c625b86e76d39
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012454"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960550"
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Instrukcje: uruchamianie procedur w ustalonych odstępach czasu za pomocą składnika Timer formularzy systemu Windows
-Czasami warto utworzyć procedurę, która działa w określonych odstępach czasu, aż do zakończenia pętli lub, które jest uruchamiane po upływie Ustaw interwał czasu. <xref:System.Windows.Forms.Timer> Składnika sprawia, że taka procedura jest możliwe.  
+Czasami warto utworzyć procedurę, która jest uruchamiana w określonych przedziałach czasowych, dopóki pętla nie zostanie zakończona lub uruchomiona, gdy upłynie ustawiony interwał czasu. Składnik <xref:System.Windows.Forms.Timer> ten wykonuje taką procedurę.  
   
- Ten składnik jest przeznaczony dla środowiska Windows Forms. Jeśli potrzebujesz czasomierza, która jest odpowiednia w środowisku serwera, zobacz [wprowadzenie do serwerowych czasomierzy](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
+ Ten składnik jest przeznaczony dla środowiska Windows Formsowego. Jeśli potrzebujesz czasomierza odpowiedniego dla środowiska serwera, zobacz [wprowadzenie do czasomierzy oparte na serwerze](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
   
 > [!NOTE]
->  Istnieją pewne ograniczenia w przypadku korzystania z <xref:System.Windows.Forms.Timer> składnika. Aby uzyskać więcej informacji, zobacz [ograniczenia właściwości Interval składnika Timer formularzy Windows](limitations-of-the-timer-component-interval-property.md).  
+> Korzystanie z <xref:System.Windows.Forms.Timer> składnika ma pewne ograniczenia. Aby uzyskać więcej informacji, zobacz [ograniczenia właściwości Interval składnika czasomierza Windows Forms](limitations-of-the-timer-component-interval-property.md).  
   
-## <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>Do uruchamiania procedur w ustalonych odstępach czasu za pomocą składnika Timer  
+## <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>Aby uruchomić procedurę w ustalonych odstępach czasu za pomocą składnika Timer  
   
-1. Dodaj <xref:System.Windows.Forms.Timer> do formularza. Zobacz w poniższej sekcji przykład ilustrację jak to zrobić programowo. Programu Visual Studio zapewnia również obsługę dodawania składników do formularza. Zobacz też [jak: Dodawanie formantów bez interfejsu użytkownika do formularzy Windows Forms](how-to-add-controls-without-a-user-interface-to-windows-forms.md).  
+1. <xref:System.Windows.Forms.Timer> Dodaj do formularza. Zapoznaj się z poniższą sekcją przykładową, aby zapoznać się z tym, jak to zrobić programowo. Program Visual Studio obsługuje także dodawanie składników do formularza. Zapoznaj [się również z tematem: Dodaj kontrolki bez interfejsu użytkownika do Windows Forms](how-to-add-controls-without-a-user-interface-to-windows-forms.md).  
   
-2. Ustaw <xref:System.Windows.Forms.Timer.Interval%2A> właściwości (w milisekundach) dla czasomierza. Ta właściwość określa, ile czasu upłynie, zanim procedury po ponownym uruchomieniu.  
+2. <xref:System.Windows.Forms.Timer.Interval%2A> Ustaw właściwość (w milisekundach) dla czasomierza. Ta właściwość określa, ile czasu będzie upłynąć przed ponownym uruchomieniem procedury.  
   
     > [!NOTE]
-    >  Im częściej odbywa się zdarzenie czasomierza, większą ilość czasu procesora jest używany w zakresie reagowania na zdarzenia. Może to spowolnić ogólną wydajność. Nie należy ustawiać mniejszy przedział, niż potrzebujesz.  
+    > Im częściej występuje zdarzenie czasomierza, tym więcej czasu procesora jest używany w odpowiedzi na zdarzenie. Może to spowolnić ogólną wydajność. Nie ustawiaj interwału krótszego niż jest to potrzebne.  
   
-3. Wpisz odpowiedni kod w <xref:System.Windows.Forms.Timer.Tick> programu obsługi zdarzeń. Kod pisany w tym przypadku będzie uruchamiany w momencie z interwałem określonym w <xref:System.Windows.Forms.Timer.Interval%2A> właściwości.  
+3. Zapisz odpowiedni kod w programie <xref:System.Windows.Forms.Timer.Tick> obsługi zdarzeń. Kod napisany w tym zdarzeniu będzie uruchamiany z interwałem określonym we <xref:System.Windows.Forms.Timer.Interval%2A> właściwości.  
   
-4. Ustaw <xref:System.Windows.Forms.Timer.Enabled%2A> właściwości `true` do uruchomienia czasomierza. <xref:System.Windows.Forms.Timer.Tick> Zdarzenie zostanie uruchomiony występuje, procedura w określonych interwałach.  
+4. Ustaw właściwość na `true` , aby uruchomić czasomierz. <xref:System.Windows.Forms.Timer.Enabled%2A> <xref:System.Windows.Forms.Timer.Tick> Zdarzenie rozpocznie się, uruchamiając procedurę w określonym interwale.  
   
-5. W odpowiednim czasie, należy ustawić <xref:System.Windows.Forms.Timer.Enabled%2A> właściwość `false` przestanie procedury z ponownym uruchomieniem. Ustawienie interwału `0` nie spowoduje zatrzymania czasomierza.  
+5. W odpowiednim momencie Ustaw <xref:System.Windows.Forms.Timer.Enabled%2A> właściwość na `false` , aby zatrzymać procedurę od nowa. Ustawienie interwału `0` nie powoduje zatrzymania czasomierza.  
   
 ## <a name="example"></a>Przykład  
- W pierwszym przykładzie kodu będzie śledził porę dnia zastosowaniem jednosekundowych przyrostów. Używa ona <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Label>, a <xref:System.Windows.Forms.Timer> składnika w formularzu. <xref:System.Windows.Forms.Timer.Interval%2A> Właściwość jest ustawiona na 1000 (równe 1 sekundy). W <xref:System.Windows.Forms.Timer.Tick> zdarzenia podpis etykiety jest ustawiona na bieżącą godzinę. Po kliknięciu przycisku <xref:System.Windows.Forms.Timer.Enabled%2A> właściwość jest ustawiona na `false`, zatrzymania czasomierza aktualizowania podpis etykiety. Poniższy przykład kodu wymaga formularza z <xref:System.Windows.Forms.Button> formantu o nazwie `Button1`, <xref:System.Windows.Forms.Timer> formantu o nazwie `Timer1`, a <xref:System.Windows.Forms.Label> formantu o nazwie `Label1`.  
+ Ten pierwszy przykład kodu śledzi godzinę pierwszego przyrostu. Używa <xref:System.Windows.Forms.Button>elementu <xref:System.Windows.Forms.Timer> , a i składnika w formularzu. <xref:System.Windows.Forms.Label> <xref:System.Windows.Forms.Timer.Interval%2A> Właściwość jest ustawiona na 1000 (równa 1 sekunda). W takim <xref:System.Windows.Forms.Timer.Tick> przypadku podpis etykiety jest ustawiany na bieżącą godzinę. Gdy przycisk zostanie kliknięty, <xref:System.Windows.Forms.Timer.Enabled%2A> właściwość jest ustawiona na, zatrzymywanie czasomierza w celu `false`zaktualizowania napisu etykiety. Poniższy przykład kodu wymaga <xref:System.Windows.Forms.Button> formularza z kontrolką o nazwie `Button1`, <xref:System.Windows.Forms.Timer> kontrolce o nazwie `Timer1`i <xref:System.Windows.Forms.Label> kontrolki o nazwie `Label1`.  
   
 ```vb  
 Private Sub InitializeTimer()  
@@ -149,7 +149,7 @@ private:
 ```  
   
 ## <a name="example"></a>Przykład  
- Ten drugi przykładowy kod uruchamia procedurę co 600 milisekund do momentu zakończenia pętli. Poniższy przykład kodu wymaga formularza z <xref:System.Windows.Forms.Button> formantu o nazwie `Button1`, <xref:System.Windows.Forms.Timer> formantu o nazwie `Timer1`, a <xref:System.Windows.Forms.Label> formantu o nazwie `Label1`.  
+ Ten drugi przykład kodu uruchamia procedurę co 600 milisekund do momentu zakończenia pętli. Poniższy przykład kodu wymaga <xref:System.Windows.Forms.Button> formularza z kontrolką o nazwie `Button1`, <xref:System.Windows.Forms.Timer> kontrolce o nazwie `Timer1`i <xref:System.Windows.Forms.Label> kontrolki o nazwie `Label1`.  
   
 ```vb  
 ' This variable will be the loop counter.  

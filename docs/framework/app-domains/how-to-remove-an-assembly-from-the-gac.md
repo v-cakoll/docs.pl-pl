@@ -13,46 +13,46 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bfa0cd7041f61e9848804f74d59b85a60450ea92
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 66df15f7a33acac85804d6abf2e2878c1132f5d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593580"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921467"
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Instrukcje: Usuwanie zestawu z globalnej pamięci podręcznej zestawów
-Istnieją dwa sposoby, aby usunąć zestaw z globalnej pamięci podręcznej zestawów (GAC):  
+Istnieją dwa sposoby usuwania zestawu z globalnej pamięci podręcznej zestawów (GAC):  
   
-- Za pomocą [narzędzia Globalna pamięć podręczna zestawów (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md). Ta opcja służy do odinstalowania zestawów, które zostały umieszczone w pamięci podręcznej GAC, podczas opracowywania i testowania.  
+- Za pomocą [Narzędzia globalnej pamięci podręcznej zestawów (Gacutil. exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md). Za pomocą tej opcji można odinstalować zestawy, które zostały umieszczone w pamięci GAC podczas tworzenia i testowania.  
   
-- Za pomocą [Instalatora Windows](/windows/desktop/Msi/windows-installer-portal). Tej opcji należy używać do odinstalowania zestawów podczas testowania pakietów instalacyjnych, a dla systemów produkcyjnych.  
+- Za pomocą [Instalator Windows](/windows/desktop/Msi/windows-installer-portal). Tej opcji należy używać do odinstalowywania zestawów podczas testowania pakietów instalacyjnych i systemów produkcyjnych.  
   
-### <a name="removing-an-assembly-with-gacutilexe"></a>Usuwanie zestawu z Gacutil.exe  
+### <a name="removing-an-assembly-with-gacutilexe"></a>Usuwanie zestawu za pomocą gacutil. exe  
   
 1. W wierszu polecenia wpisz następujące polecenie:  
   
-     **Gacutil – u** \< *nazwy zestawu*>  
+     **Gacutil – u** \< *Nazwa zestawu*>  
   
-     W tym poleceniu *nazwy zestawu* to nazwa zestawu, aby usunąć z globalnej pamięci podręcznej.  
+     W tym poleceniu *Nazwa zestawu* to nazwa zestawu, który ma zostać usunięty z globalnej pamięci podręcznej zestawów.  
   
     > [!WARNING]
-    >  Nie należy używać Gacutil.exe można usunąć zestawów na systemy produkcyjne ze względu na możliwość, że zestaw nadal może być wymagane przez niektóre aplikacje. Zamiast tego należy użyć Instalatora Windows, który przechowuje licznik odwołań dla każdego zestawu, który instaluje go w pamięci GAC.  
+    >  Nie należy używać programu Gacutil. exe do usuwania zestawów w systemach produkcyjnych ze względu na możliwość, że zestaw nadal może być wymagany przez niektóre aplikacje. Zamiast tego należy użyć Instalator Windows, która zachowuje liczbę odwołań dla każdego zestawu instalowanego w pamięci podręcznej GAC.  
   
- W następującym przykładzie usunięto zestaw o nazwie `hello.dll` z globalnej pamięci podręcznej.  
+ Poniższy przykład usuwa zestaw o nazwie `hello.dll` z globalnej pamięci podręcznej zestawów.  
   
 ```  
 gacutil -u hello  
 ```  
   
-### <a name="removing-an-assembly-with-windows-installer"></a>Usuwanie zestawu za pomocą Instalatora Windows  
+### <a name="removing-an-assembly-with-windows-installer"></a>Usuwanie zestawu z Instalator Windows  
   
-1. Z **programy i funkcje** aplikacji w **Panelu sterowania**, wybierz aplikację, która ma zostać odinstalowany. Jeśli pakiet instalacyjny umieszczone zestawów w pamięci podręcznej GAC, Instalator Windows spowoduje usunięcie ich, jeśli nie są one używane przez inną aplikację.  
+1. W aplikacji **programy i funkcje** w **Panelu sterowania**wybierz aplikację, którą chcesz odinstalować. Jeśli pakiet instalacyjny zawiera zestawy w pamięci podręcznej GAC, Instalator Windows usunie je, jeśli nie są używane przez inną aplikację.  
   
     > [!NOTE]
-    >  Instalator Windows przechowuje licznik odwołań do zestawów zainstalowane w GAC. Zestaw zostanie usunięty z pamięci podręcznej GAC, tylko wtedy, gdy jego licznik odwołań osiągnie zero, co oznacza, że nie jest używany przez dowolną aplikację, instalowane przez pakiet Instalatora Windows.  
+    > Instalator Windows utrzymuje liczbę odwołań dla zestawów zainstalowanych w pamięci podręcznej GAC. Zestaw jest usuwany z pamięci GAC tylko wtedy, gdy jego licznik odwołań osiągnie wartość zero, co oznacza, że nie jest używany przez żadną aplikację zainstalowaną przez pakiet Instalator Windows.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Praca z zestawami i globalną pamięcią podręczną zestawów](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
-- [Instrukcje: Instalowanie zestawu w globalnej pamięci podręcznej](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)
+- [Instrukcje: Instalowanie zestawu w globalnej pamięci podręcznej zestawów](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)
 - [Gacutil.exe (narzędzie Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)

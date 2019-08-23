@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Przerywanie i łączenie instrukcji w Code (Visual Basic)'
+title: 'Instrukcje: Przerwij i Połącz instrukcje w kodzie (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb._
@@ -21,40 +21,40 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: d3656b924ebaca67c90dc602701c4cef9ce088b4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 745974523bd747dd23f3cfaf7cb70bb6cd4513f0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648781"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946200"
 ---
-# <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Instrukcje: Przerywanie i łączenie instrukcji w Code (Visual Basic)
-Podczas pisania kodu, można utworzyć w czasie długich instrukcji, które wymagają przewijanie w poziomie w edytorze kodu. Mimo że to nie ma wpływu na sposób działania kodu, jego utrudnia nikogo odczytać kodu znajdującego się na monitor. W takich przypadkach należy rozważyć podzielenie pojedynczej instrukcji długich na kilka wierszy.  
+# <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Instrukcje: Przerwij i Połącz instrukcje w kodzie (Visual Basic)
+Podczas pisania kodu można czasami tworzyć długie instrukcje, które wymagają przewijania w poziomie w edytorze kodu. Chociaż nie ma to wpływu na sposób działania kodu, utrudnia użytkownikowi lub innym osobom odczytywanie kodu w postaci, w jakiej jest wyświetlany na monitorze. W takich przypadkach należy rozważyć rozdzielenie pojedynczej długiej instrukcji na kilka wierszy.  
   
-### <a name="to-break-a-single-statement-into-multiple-lines"></a>Aby przerwać pojedynczej instrukcji wiele wierszy  
+### <a name="to-break-a-single-statement-into-multiple-lines"></a>Aby przerwać pojedynczą instrukcję do wielu wierszy  
   
-- Użyj znaku kontynuacji wiersza, który jest znakiem podkreślenia (`_`), w momencie, dla której ma zostać na podział wiersza. Znak podkreślenia należy natychmiast poprzedzone spację i bezpośrednio po nim terminator wiersza (powrót karetki).  
+- Użyj znaku kontynuacji wiersza, który jest podkreśleniem (`_`), w punkcie, w którym ma zostać przerwana linia. Znak podkreślenia musi być bezpośrednio poprzedzony spacją i natychmiast po nim znak terminatora wiersza (znak powrotu karetki).  
   
     > [!NOTE]
-    >  W niektórych przypadkach Jeśli pominięto znak kontynuacji wiersza, kompilator Visual Basic będą nadal w następnym wierszu kodu niejawnie instrukcji. Aby uzyskać listę elementy składni, dla których można pominąć znak kontynuacji wiersza, zobacz "Niejawnej kontynuacji wiersza" w [instrukcji](../../../visual-basic/programming-guide/language-features/statements.md).  
+    > W niektórych przypadkach, jeśli pominięto znak kontynuacji wiersza, kompilator Visual Basic niejawnie kontynuuje instrukcję w następnym wierszu kodu. Aby uzyskać listę elementów składni, dla których można pominąć znak kontynuacji wiersza, zobacz "niejawne kontynuacja wiersza" [](../../../visual-basic/programming-guide/language-features/statements.md)w instrukcjach.  
   
-     W poniższym przykładzie instrukcja jest dzielony na cztery wiersze ze znakami kontynuacji wiersza przerywa wszystkie, ale ostatni wiersz.  
+     W poniższym przykładzie instrukcja jest dzielona na cztery wiersze z znakami kontynuacji wiersza kończącymi wszystkie oprócz ostatniego wiersza.  
   
      [!code-vb[VbVbcnConventions#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#20)]  
   
-     Za pomocą tej sekwencji sprawia, że Twój kod łatwiejsza do odczytania, zarówno online, jak i kiedy wydrukowany.  
+     Użycie tej sekwencji sprawia, że kod będzie łatwiejszy do odczytania, zarówno w trybie online, jak i podczas drukowania.  
   
-     Znak kontynuacji wiersza musi być ostatnim znakiem w wierszu. Nie można wykonać to z jakichkolwiek innych czynności w tym samym wierszu.  
+     Znak kontynuacji wiersza musi być ostatnim znakiem w wierszu. Nie można wykonać kolejnej czynności w tym samym wierszu.  
   
-     Istnieje pewne ograniczenia, do których można użyć znaku kontynuacji wiersza; na przykład nie można go użyć w środku nazwę argumentu. Możesz przerwać listy argumentów znakiem kontynuacji wiersza, ale poszczególne nazwy argumentów musi pozostać bez zmian.  
+     Istnieją pewne ograniczenia, w których można użyć znaku kontynuacji wiersza; na przykład nie można użyć go w środku nazwy argumentu. Możesz przerwać listę argumentów za pomocą znaku kontynuacji wiersza, ale poszczególne nazwy argumentów muszą pozostać nienaruszone.  
   
-     Komentarz nie może kontynuować, za pomocą znaku kontynuacji wiersza. Kompilator nie zbadać znaki w komentarzu do specjalnego znaczenia. Komentarz do wielu linii, powtórz symbol komentarza (`'`) w każdym wierszu.  
+     Nie można kontynuować komentarza przy użyciu znaku kontynuacji wiersza. Kompilator nie bada znaków w komentarzu pod kątem specjalnego znaczenia. W przypadku komentarza z wieloma wierszami należy powtórzyć symbol`'`komentarza () w każdym wierszu.  
   
- Mimo że zaleca się umieszczenie każdej instrukcji w osobnym wierszu, Visual Basic umożliwia również umieścić użycie wielu instrukcji w tym samym wierszu.  
+ Chociaż umieszczenie każdej instrukcji w osobnym wierszu jest zalecaną metodą, Visual Basic umożliwia również umieszczenie wielu instrukcji w tym samym wierszu.  
   
-### <a name="to-place-multiple-statements-on-the-same-line"></a>Aby umieścić użycie wielu instrukcji w tym samym wierszu  
+### <a name="to-place-multiple-statements-on-the-same-line"></a>Aby umieścić wiele instrukcji w tym samym wierszu  
   
-- Instrukcje należy oddzielić średnikiem (`:`), jak w poniższym przykładzie.  
+- Rozdziel instrukcje średnikami (`:`), jak w poniższym przykładzie.  
   
      [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]  
   

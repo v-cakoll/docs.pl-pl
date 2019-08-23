@@ -6,16 +6,16 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 3fb5d1107a2dacdc4dfd2210322c312becdfd90b
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: d973dd59c1f0612962b89775e1fb2cf6bdd756ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566946"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953931"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Korzystanie z automatyzacji interfejsu użytkownika do testów automatycznych
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych <xref:System.Windows.Automation> w przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]programie, [Zobacz interfejs API usługi Windows Automation: Automatyzacja](https://go.microsoft.com/fwlink/?LinkID=156746)interfejsu użytkownika.  
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych <xref:System.Windows.Automation> w przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]programie, [Zobacz interfejs API usługi Windows Automation: Automatyzacja](https://go.microsoft.com/fwlink/?LinkID=156746)interfejsu użytkownika.  
   
  W tym omówieniu opisano [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] , jak program może być przydatny jako platforma dostępu programistycznego w scenariuszach zautomatyzowanych testów.  
   
@@ -26,7 +26,7 @@ ms.locfileid: "69566946"
  Zarówno dostawca, jak i klient muszą zaimplementować [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , aby był on przydatny jako narzędzie do testowania automatycznego. Dostawcy automatyzacji interfejsu użytkownika to takie aplikacje, jak program Microsoft Word, program Excel i inne aplikacje lub formanty innych firm oparte [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] na systemie operacyjnym. Klienci automatyzacji interfejsu użytkownika obejmują automatyczne Skrypty testowe i aplikacje technologii pomocniczych.  
   
 > [!NOTE]
->  Zamiarem tego omówienia jest zaprezentowanie nowych i ulepszonych funkcji automatycznego testowania programu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Ten przegląd nie jest przeznaczony do udostępniania informacji o funkcjach ułatwień dostępu i nie będzie mógł uzyskać dostępu, jeśli jest to konieczne.  
+> Zamiarem tego omówienia jest zaprezentowanie nowych i ulepszonych funkcji automatycznego testowania programu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Ten przegląd nie jest przeznaczony do udostępniania informacji o funkcjach ułatwień dostępu i nie będzie mógł uzyskać dostępu, jeśli jest to konieczne.  
   
 <a name="Using_UI_Automation_During_Development"></a>   
 ## <a name="ui-automation-in-a-provider"></a>Automatyzacja interfejsu użytkownika w dostawcy  
@@ -35,7 +35,7 @@ ms.locfileid: "69566946"
  Po zidentyfikowaniu tych kluczowych akcji należy zaimplementować odpowiednie [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wzorce kontroli (czyli wzorce kontrolki, które duplikują funkcje i zachowanie [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elementu). Na przykład interakcja użytkownika z kontrolką pola kombi (na przykład okna dialogowego uruchamiania) zwykle polega na rozwijaniu i zwijaniu pola kombi, aby ukryć lub wyświetlić listę elementów, wybierając element z tej listy lub dodając nową wartość za pomocą wprowadzania z klawiatury.  
   
 > [!NOTE]
->  W przypadku innych modeli ułatwień dostępu deweloperzy muszą zbierać informacje bezpośrednio z poszczególnych przycisków, menu lub innych kontrolek. Niestety, każdy typ kontrolki zawiera dziesiątki drobnych różnic. Innymi słowy, mimo że dziesięć odmian przycisku może działać w ten sam sposób i wykonać tę samą funkcję, muszą one być traktowane jako unikatowe formanty. Nie ma możliwości, aby wiedzieć, że te kontrolki są funkcjonalnie równoważne. Wzorce formantów zostały opracowane w celu reprezentowania tych typowych zachowań kontroli. Aby uzyskać więcej informacji, zobacz [Wzorce formantów automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
+> W przypadku innych modeli ułatwień dostępu deweloperzy muszą zbierać informacje bezpośrednio z poszczególnych przycisków, menu lub innych kontrolek. Niestety, każdy typ kontrolki zawiera dziesiątki drobnych różnic. Innymi słowy, mimo że dziesięć odmian przycisku może działać w ten sam sposób i wykonać tę samą funkcję, muszą one być traktowane jako unikatowe formanty. Nie ma możliwości, aby wiedzieć, że te kontrolki są funkcjonalnie równoważne. Wzorce formantów zostały opracowane w celu reprezentowania tych typowych zachowań kontroli. Aby uzyskać więcej informacji, zobacz [Wzorce formantów automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
   
 <a name="Implementing_UI_Automation"></a>   
 ### <a name="implementing-ui-automation"></a>Implementowanie automatyzacji interfejsu użytkownika  
@@ -79,7 +79,7 @@ ms.locfileid: "69566946"
  Jednoznacznie identyfikuje element automatyzacji na podstawie jego elementów równorzędnych. <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>nie jest zlokalizowany, w przeciwieństwie do właściwości <xref:System.Windows.Automation.AutomationElement.NameProperty> , takiej jak zwykle jest lokalizowany, jeśli produkt zostanie wysłany w wielu językach. Zobacz [Używanie właściwości AutomationID](../../../docs/framework/ui-automation/use-the-automationid-property.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>nie gwarantuje unikatowej tożsamości w całym drzewie automatyzacji. Na przykład aplikacja może zawierać formant menu z wieloma elementami menu najwyższego poziomu, które z kolei mają wiele elementów menu podrzędnych. Te elementy menu pomocniczego mogą być identyfikowane przez schemat generyczny, taki jak "Item1 —, Item 2, Item3 — itp.", co umożliwia duplikowanie identyfikatorów dla elementów podrzędnych w elementach menu najwyższego poziomu.  
+> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>nie gwarantuje unikatowej tożsamości w całym drzewie automatyzacji. Na przykład aplikacja może zawierać formant menu z wieloma elementami menu najwyższego poziomu, które z kolei mają wiele elementów menu podrzędnych. Te elementy menu pomocniczego mogą być identyfikowane przez schemat generyczny, taki jak "Item1 —, Item 2, Item3 — itp.", co umożliwia duplikowanie identyfikatorów dla elementów podrzędnych w elementach menu najwyższego poziomu.  
   
 #### <a name="controltype"></a>ControlType  
  Identyfikuje typ formantu reprezentowanego przez element automatyzacji. Istotne informacje można wywnioskować na podstawie wiedzy o typie formantu. Zobacz [typy formantów automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md).  

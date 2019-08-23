@@ -2,144 +2,144 @@
 title: Obsługa nowych funkcji w programie Workflow Foundation 4.5 w rehostowanym projektancie przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 70e4a8580a8b383bdd4e5e5299bcc5210f3210dc
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
-ms.translationtype: MT
+ms.openlocfilehash: 69c3577c82c7a0899fb94461255721f4b2ab3ecd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423962"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913702"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Obsługa nowych funkcji w programie Workflow Foundation 4.5 w rehostowanym projektancie przepływu pracy
-Windows Workflow Foundation (WF) w .NET Framework 4.5 wprowadzono wiele nowych funkcji, w tym kilka ulepszeń środowiska projektanta przepływu pracy. W tym temacie przedstawiono, które z tych funkcji są obsługiwane w rehostowanym projektancie i te, które nie są obecnie obsługiwane.
+Windows Workflow Foundation (WF) w .NET Framework 4,5 wprowadzono wiele nowych funkcji, w tym kilka ulepszeń środowiska projektanta przepływu pracy. Ten temat zawiera szczegółowe informacje o tych funkcjach, które są obsługiwane w projektancie przeszukanym i które nie są obecnie obsługiwane.
 
 > [!NOTE]
->  Aby uzyskać listę wszystkich nowych funkcji Windows Workflow Foundation (WF), wprowadzone w programie .NET Framework 4.5, w tym te, które są powiązane z rehostowanie projektanta, zobacz [What's New in Windows Workflow Foundation w .NET 4.5](whats-new-in-wf-in-dotnet.md).
+> Aby uzyskać listę wszystkich nowych funkcji Windows Workflow Foundation (WF) wprowadzonych w .NET Framework 4,5, w tym tych, które nie są związane z rehostem projektanta, zobacz artykuł [co nowego w Windows Workflow Foundation w programie .net 4,5](whats-new-in-wf-in-dotnet.md).
 
 ## <a name="activities"></a>Kategoria Activities
- Wbudowana biblioteka działań zawiera nowe działania i nowe funkcje dla istniejących działań. Wszystkie te nowe działania są obsługiwane w rehostowanym projektancie. Aby uzyskać więcej informacji na temat tych nowych działań, zobacz [działania](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) części [What's New in Windows Workflow Foundation w .NET 4.5](whats-new-in-wf-in-dotnet.md).
+ Wbudowana Biblioteka działań zawiera nowe działania i nowe funkcje dla istniejących działań. Wszystkie te nowe działania są obsługiwane w projektancie przeprowadzonym przez hosta. Aby uzyskać więcej informacji na temat tych nowych działań, zobacz sekcję [działania](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) w artykule [co nowego w Windows Workflow Foundation w programie .NET 4,5](whats-new-in-wf-in-dotnet.md).
 
 ## <a name="c-expressions"></a>Wyrażenia języka C#
- Przed .NET Framework 4.5 wszystkie wyrażenia w przepływach pracy można tylko napisane w języku Visual Basic. W programie .NET Framework 4.5 wyrażeń języka Visual Basic są używane tylko w przypadku projektów utworzonych za pomocą języka Visual Basic. Projekty języka Visual C# teraz używać języka C# dla wyrażenia. Podczas tworzenia przepływów pracy w programie Visual Studio 2012, w pełni funkcjonalny edytor wyrażeń języka C# znajduje się które możliwości, takie jak intellisense i wyróżnianie gramatyki. Przepływ pracy projektów języka C# utworzone w poprzednich wersjach, które używają wyrażeń języka Visual Basic będą nadal działać.
+ Przed .NET Framework 4,5 wszystkie wyrażenia w przepływach pracy mogą być zapisywane tylko w Visual Basic. W .NET Framework 4,5 wyrażenia Visual Basic są używane tylko dla projektów utworzonych przy użyciu Visual Basic. Projekty C# wizualizacji teraz C# używają wyrażeń. Podczas tworzenia przepływów pracy w programie Visual Studio 2012 jest C# dostępny w pełni funkcjonalny Edytor wyrażeń, który zawiera funkcje, takie jak wyróżnianie gramatyki i technologia IntelliSense. C#projekty przepływu pracy utworzone w poprzednich wersjach, które używają wyrażeń Visual Basic, nadal będą działały.
 
 > [!WARNING]
->  Wyrażeń języka C# nie są obsługiwane w rehostowanym projektancie.
+>  C#wyrażenia nie są obsługiwane w projektancie przeszukanym.
 
-## <a name="new-designer-capabilities"></a>Nowe funkcje projektanta
+## <a name="new-designer-capabilities"></a>Nowe możliwości projektanta
 
 ### <a name="designer-search"></a>Wyszukiwanie projektanta
- [Szybkie znajdowanie](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) i [Znajdź w plikach](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) funkcje wprowadzone w programie .NET Framework 4.5 nie są obsługiwane w rehostowanym projektancie. `Toolbox` Wyszukiwanie jest obsługiwane w rehostowanym projektancie. Aby uzyskać więcej informacji o tych funkcjach, zobacz [wyszukiwania projektanta](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch).
+ Funkcje [szybkiego znajdowania](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) i [znajdowania plików](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) wprowadzone w .NET Framework 4,5 nie są obsługiwane w projektancie przewidzianym przez hosta. `Toolbox` Wyszukiwanie jest obsługiwane w projektancie przeszukiwanym. Aby uzyskać więcej informacji na temat tych funkcji, zobacz [Wyszukiwanie projektanta](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch).
 
 > [!WARNING]
->  [Szybkie wyszukiwanie](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) i [Znajdź w plikach](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) nie są obsługiwane w rehostowanym projektancie.
+>  [Szybkie znajdowanie](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) i [Znajdowanie plików](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) nie są obsługiwane w projektancie przeszukiwanym.
 
-### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>Usuń element menu kontekstowego w Projektancie zmienną i argument
- W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], zmienne i argumenty można usunąć tylko w projektancie, za pomocą klawiatury. Począwszy od programu .NET Framework 4.5, zmienne i argumenty mogą zostać usunięte za pomocą menu kontekstowego. Ta funkcja jest obsługiwana w rehostowanym projektancie.
+### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>Usuń element menu kontekstowego w programie Variable i Konstruktor argumentów
+ W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]programie zmienne i argumenty można usunąć tylko w projektancie przy użyciu klawiatury. Począwszy od .NET Framework 4,5, zmienne i argumenty można usuwać za pomocą menu kontekstowego. Ta funkcja jest obsługiwana w projektancie przehostowanym.
 
- Poniższy zrzut ekranu przedstawia zmienną i argument menu kontekstowe projektanta.
+ Poniższy zrzut ekranu przedstawia menu kontekstowe dla zmiennej i argumentu projektanta.
 
- ![Zmienna i Menu kontekstowego projektanta argumentów](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
+ ![Menu kontekstowe projektanta zmiennych i argumentów](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
 
-### <a name="auto-surround-with-sequence"></a>Auto umieszczanie w sekwencji
- Od przepływu pracy lub niektóre działania kontenera (takie jak <xref:System.Activities.Statements.NoPersistScope>) może zawierać tylko jednej jednostki działania, dodawanie drugiego działania wymagane dla deweloperów usunąć pierwsze działanie, Dodaj <xref:System.Activities.Statements.Sequence> działania, a następnie dodaj oba działań działanie w sekwencji. Począwszy od programu .NET Framework 4.5, podczas dodawania drugiego działania do powierzchni projektanta `Sequence` działanie zostanie automatycznie utworzone do opakowania obu działań. Ta funkcja jest obsługiwana w rehostowanym projektancie.
+### <a name="auto-surround-with-sequence"></a>Funkcja autoprzestrzenny z sekwencją
+ Ponieważ przepływ pracy lub pewne działania kontenera (takie jak <xref:System.Activities.Statements.NoPersistScope>) mogą zawierać tylko jedno działanie dotyczące treści, dodanie drugiego działania wymagało od dewelopera usunięcia pierwszego działania, <xref:System.Activities.Statements.Sequence> dodania działania, a następnie dodania obu działań do działanie sekwencji. Począwszy od .NET Framework 4,5, podczas dodawania drugiego działania do powierzchni `Sequence` projektanta zostanie automatycznie utworzone działanie umożliwiające zawinięcie obu działań. Ta funkcja jest obsługiwana w projektancie przehostowanym.
 
- Poniższy zrzut ekranu przedstawia `WriteLine` działania w `Body` z `NoPersistScope`.
+ Poniższy zrzut ekranu przedstawia `WriteLine` działanie `Body` w `NoPersistScope`.
 
- ![Działanie WriteLine w treści działanie NoPersistScope.](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-write-line-activity.png)
+ ![Działanie WriteLine w treści działania NoPersistScope.](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-write-line-activity.png)
 
- Poniższy zrzut ekranu przedstawia utworzone automatycznie `Sequence` działania w `Body` po drugiej `WriteLine` jest spadła poniżej pierwszej.
+ Poniższy zrzut ekranu przedstawia działanie utworzone `Sequence` automatycznie w czasie, `Body` gdy drugi `WriteLine` zostanie porzucony poniżej pierwszego.
 
- ![Automatycznie utworzone sekwencji w treści NoPersistScope.](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-sequence-activity.png)
+ ![Automatycznie utworzona sekwencja w treści NoPersistScope.](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-sequence-activity.png)
 
-### <a name="pan-mode"></a>Tryb Pan
- Aby łatwiej przejść z dużych przepływów pracy w projektancie, można włączyć tryb Przesuń, umożliwiając deweloperom kliknij i przeciągnij, aby przenieść widocznej części przepływu pracy, zamiast konieczności używania pasków przewijania. Przycisk, aby uaktywnić tryb panoramowanie jest w prawym dolnym rogu projektanta. Ta funkcja jest obsługiwana w rehostowanym projektancie.
+### <a name="pan-mode"></a>Tryb kadrowania
+ Aby łatwiej nawigować do dużego przepływu pracy w projektancie, można włączyć tryb kadrowania, co umożliwia deweloperom kliknięcie i przeciągnięcie go w celu przeniesienia widocznej części przepływu pracy zamiast używania pasków przewijania. Przycisk służący do uaktywniania trybu kadrowania znajduje się w prawym dolnym rogu projektanta. Ta funkcja jest obsługiwana w projektancie przehostowanym.
 
- Poniższy zrzut ekranu przedstawia przycisk przesunięcie, który znajduje się w prawym dolnym rogu projektanta przepływów pracy.
+ Poniższy zrzut ekranu przedstawia przycisk przesuń znajdujący się w prawym dolnym rogu projektanta przepływu pracy.
 
- ![Pan wyróżnionym w Projektancie przepływu pracy.](./media/wf-features-in-the-rehosted-workflow-designer/pan-button-workflow-designer.png)
+ ![Przycisk kadrowania wyróżniony w Projektancie przepływu pracy.](./media/wf-features-in-the-rehosted-workflow-designer/pan-button-workflow-designer.png)
 
- Środkowy przycisk myszy lub spacji może również służyć do Przesuń w Projektancie przepływu pracy.
+ Do kadrowania projektanta przepływu pracy można również użyć środkowego przycisku myszy lub paska spacji.
 
-### <a name="multi-select"></a>Możliwość wielokrotnego wyboru
- Wiele działań można wybrać w tym samym czasie, przeciągając prostokąt wokół nich (gdy nie jest włączony tryb pan) i, przytrzymując klawisz Ctrl i kliknij żądany działania po kolei. Ta funkcja jest obsługiwana w rehostowanym projektancie.
+### <a name="multi-select"></a>Wybór wieloznaczny
+ Jednocześnie można wybrać wiele działań, przeciągając wokół nich prostokąt (gdy tryb panoramowania nie jest włączony) lub przytrzymując klawisz Ctrl i klikając żądane działania po jednym z nich. Ta funkcja jest obsługiwana w projektancie przehostowanym.
 
- Wielokrotny działania można też przeciąganie i upuszczanie w Projektancie i może również przetwarzanie za pomocą menu kontekstowego.
+ W projektancie można również przeciągać i upuszczać wiele opcji, a także korzystać z menu kontekstowego.
 
-### <a name="outline-view-of-workflow-items"></a>Wyświetlanie konspektu elementów przepływu pracy
- Aby ułatwić hierarchiczne przepływów pracy można przejść, składniki przepływu pracy są wyświetlane w widoku konspektu stylu drzewa. Wyświetlanie konspektu jest wyświetlany w **konspekt dokumentu** widoku. Aby otworzyć ten widok w programie Visual Studio z górnego menu, wybierz **widoku**, **Windows inne**, **konspekt dokumentu**, lub naciśnij klawisze Ctrl W U. Klikając węzeł w widoku konspektu spowoduje przejście do odpowiadającego im działania w Projektancie przepływów pracy i widoku konspektu zostaną zaktualizowane w celu wyświetlenia działań, które są wybrane w projektancie. Ta funkcja jest obsługiwana w rehostowanym projektancie.
+### <a name="outline-view-of-workflow-items"></a>widok konspektu elementów przepływu pracy
+ W celu ułatwienia nawigacji hierarchicznych przepływów pracy składniki przepływu pracy są wyświetlane w widoku konspektu w stylu drzewa. Widok konspektu jest wyświetlany w widoku **konspektu dokumentu** . Aby otworzyć ten widok w programie Visual Studio, w menu u góry wybierz pozycję **Widok**, **inne okna**, **Konspekt dokumentu**lub naciśnij klawisze Ctrl W, U. Kliknięcie węzła w widoku konspektu spowoduje przejście do odpowiedniego działania w Projektancie przepływu pracy, a widok konspektu zostanie zaktualizowany w celu wyświetlenia działań wybranych w projektancie. Ta funkcja jest obsługiwana w projektancie przehostowanym.
 
- Poniższy zrzut ekranu przedstawiający ukończony przepływ pracy z [Samouczek wprowadzający](getting-started-tutorial.md) Pokazuje widok konspektu sekwencyjnego przepływu pracy.
+ Poniższy zrzut ekranu ukończonego przepływu pracy w [samouczku wprowadzenie](getting-started-tutorial.md) przedstawia widok konspektu z sekwencyjnym przepływem pracy.
 
- ![Zrzut ekranu przedstawiający widok konspektu z sekwencyjnego przepływu pracy w programie Visual Studio](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
+ ![Zrzut ekranu przedstawiający widok konspektu z sekwencyjnym przepływem pracy w programie Visual Studio](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
 
-### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>Większa kontrola nad widoczność pasek powłoki i nagłówek elementów
- W rehostowanym projektancie niektóre standardowych kontrolek interfejsu użytkownika nie może mieć znaczenie dla danego przepływu pracy i może być wyłączona. W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], to dostosowanie jest obsługiwana tylko przez pasek powłoki w dolnej części projektanta. W programie .NET Framework 4.5 widoczność powłoki elementy nagłówka w górnej części projektanta może być regulowany poprzez ustawienie <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> z odpowiednią <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> wartość.
+### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>Większa kontrola widoczności paska powłoki i elementów nagłówka
+ W nieobsługiwanym projektancie niektóre standardowe kontrolki interfejsu użytkownika mogą nie mieć znaczenia dla danego przepływu pracy i mogą być wyłączone. W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]programie to dostosowanie jest obsługiwane tylko przez pasek powłoki w dolnej części projektanta. W .NET Framework 4,5 widoczność elementów nagłówka powłoki w górnej części projektanta można dostosować, ustawiając <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> odpowiednią <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> wartość.
 
-### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a>Automatyczne łączenie i automatyczne wstawianie w przepływach pracy schematu blokowego i automatu stanów
- W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], musiały ręcznie dodawać połączeń między węzłami w przepływie pracy schematu blokowego. W programie .NET Framework 4.5 Flowchart i automatu stanów węzły mają automatycznie połączyć z punkty, które stają się widoczne, gdy działanie zostanie przeciągnięty z przybornika na powierzchni projektowej. Upuszczanie działania na jednym z tych punktów automatycznie dodaje działanie oraz niezbędne połączenie.
+### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a>AutoConnect i autoinsert w schemacie blokowym i przepływie pracy automatu Stanów
+ W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]programie połączenia między węzłami w przepływie pracy Flowchart musiały zostać dodane ręcznie. W .NET Framework 4,5, schemat blokowy i węzły automatu Stanów mają punkty AutoConnect, które stają się widoczne po przeciągnięciu działania z przybornika na powierzchnię projektanta. Porzucenie działania jednego z tych punktów powoduje automatyczne dodanie działania wraz z wymaganym połączeniem.
 
- Poniższy zrzut ekranu przedstawia punkty załącznika, które stają się widoczne, gdy działanie zostanie przeciągnięty z przybornika.
+ Poniższy zrzut ekranu przedstawia punkty załącznika, które stają się widoczne po przeciągnięciu działania z przybornika.
 
- ![Schemat blokowy start węzła przedstawiający automatycznie połączyć z punktów](./media/wf-features-in-the-rehosted-workflow-designer/auto-connect-points-start-node.png)
+ ![Węzeł początkowy Flowchart przedstawiający punkty AutoConnect](./media/wf-features-in-the-rehosted-workflow-designer/auto-connect-points-start-node.png)
 
- Działania również można przeciągać połączeń między węzłami schemat blokowy i Stanami automatyczne wstawianie węzła między dwóch pozostałych węzłach. Poniższy zrzut ekranu przedstawia wyróżnione linii łączącej, gdzie można przeciągnąć z przybornika i porzucić działania.
+ Działania można również przeciągać do połączeń między węzłami i Stanami schematu blokowego, aby wstawić węzeł między dwoma innymi węzłami. Poniższy zrzut ekranu pokazuje wyróżnioną linię łączącą, w której działania mogą być przeciągane z przybornika i upuszczane.
 
- ![Automatyczne wstawianie uchwytu upuszczanie działania](./media/wf-features-in-the-rehosted-workflow-designer/auto-insert-connecting-line.png)
+ ![Wstawianie dojścia do usuwania działań](./media/wf-features-in-the-rehosted-workflow-designer/auto-insert-connecting-line.png)
 
- Automatyczne łączenie i automatyczne wstawianie są obsługiwane w rehostowanym projektancie.
+ Funkcja AutoConnect i funkcja autoinsert są obsługiwane w projektancie przeszukanym.
 
 ### <a name="designer-annotations"></a>Adnotacje projektanta
- W celu ułatwienia tworzenia większych przepływów pracy, Projektant obsługuje dodawanie adnotacji, aby ułatwić śledzenie procesu projektowania. Adnotację można dodać do działań, Stany, węzłów schematu blokowego, zmienne i argumenty. Poniższy zrzut ekranu przedstawia menu kontekstowe służy do dodawania adnotacji do projektanta.
+ Aby ułatwić tworzenie większych przepływów pracy, Projektant obsługuje teraz Dodawanie adnotacji, aby ułatwić śledzenie procesu projektowania. Adnotację można dodać do działań, Stanów, węzłów schematu blokowego, zmiennych i argumentów. Poniższy zrzut ekranu przedstawia menu kontekstowe używane do dodawania adnotacji do projektanta.
 
- ![Zrzut ekranu przedstawiający menu dodawania notacji.](./media/wf-features-in-the-rehosted-workflow-designer/designer-annotations-context-menu.png)
+ ![Zrzut ekranu pokazujący menu dodawania notacji.](./media/wf-features-in-the-rehosted-workflow-designer/designer-annotations-context-menu.png)
 
- Adnotacje projektanta są obsługiwane w rehostowanym projektancie.
+ Adnotacje projektanta są obsługiwane w projektancie przeszukanym.
 
-### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a>Definiowanie oraz stosowanie ActivityDelegate obiektów w Projektancie
- Działania w [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] używane <xref:System.Activities.ActivityDelegate> obiekty do udostępnienia punktami wykonania, gdy inne części przepływu pracy można wchodzić w interakcje z wykonywania przepływu pracy, ale zazwyczaj przy użyciu tych punktów wykonywania wymagana ilość kodu. W tej wersji deweloperzy mogą zdefiniować i stosowanie delegowania działania, za pomocą projektanta przepływów pracy. Aby uzyskać więcej informacji, zobacz [jak: Definiowanie i stosowanie delegowania działania w Projektancie przepływu pracy](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).
+### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a>Definiowanie i używanie obiektów ActivityDelegate w projektancie
+ Działania w [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] używanych <xref:System.Activities.ActivityDelegate> obiektach umożliwiają uwidocznienie punktów wykonywania, w których inne części przepływu pracy mogą współdziałać z wykonywaniem przepływu pracy, ale używanie tych punktów wykonania zwykle wymagało odpowiedniej ilości kodu. W tej wersji deweloperzy mogą definiować i korzystać z delegatów działań za pomocą projektanta przepływu pracy. Aby uzyskać więcej informacji, zobacz [jak: Zdefiniuj i korzystaj z delegatów działań w](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer)Projektant przepływu pracy.
 
- Działania delegatach są obsługiwane w rehostowanym projektancie.
+ Delegaty działań są obsługiwane w projektancie przeszukanym.
 
-### <a name="build-time-validation"></a>Sprawdzanie poprawności w czasie kompilacji
- W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], błędy sprawdzania poprawności przepływu pracy nie traktowane jako błędy kompilacji podczas kompilacji projektu przepływu pracy. Oznacza to, tworzenia przepływu pracy projektu może zakończyć się pomyślnie, nawet wtedy, gdy wystąpiły błędy sprawdzania poprawności przepływu pracy. W .NET Framework 4.5 błędy walidacji przepływu pracy spowodować błąd kompilacji.
+### <a name="build-time-validation"></a>Weryfikacja czasu kompilacji
+ W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]programie błędy walidacji przepływu pracy nie były zliczane jako błędy kompilacji podczas kompilacji projektu przepływu pracy. W ten sposób Kompilowanie projektu przepływu pracy może się powieść, nawet jeśli wystąpiły błędy sprawdzania poprawności przepływu pracy. W .NET Framework 4,5 błędy walidacji przepływu pracy powodują niepowodzenie kompilacji.
 
 > [!WARNING]
->  Czas kompilacji sprawdzania poprawności nie jest obsługiwana w rehostowanym projektancie.  
+>  Walidacja czasu kompilacji nie jest obsługiwana w projektancie przehostowanym.  
   
-### <a name="design-time-background-validation"></a>Sprawdzanie poprawności tła w czasie projektowania  
- W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], przepływy pracy zostały zweryfikowane jako proces pierwszoplanowy może potencjalnie zablokować interfejsu użytkownika podczas procesu weryfikacji złożone i czasochłonne. Teraz walidacji przepływu pracy odbywa się na wątku w tle, dzięki czemu interfejs użytkownika nie jest zablokowany.  
+### <a name="design-time-background-validation"></a>Walidacja w tle w czasie projektowania  
+ W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]programie przepływy pracy zostały zweryfikowane jako proces pierwszego planu, który może potencjalnie blokować interfejs użytkownika w trakcie skomplikowanych lub czasochłonnych procesów weryfikacji. Sprawdzanie poprawności przepływu pracy odbywa się teraz w wątku w tle, dzięki czemu interfejs użytkownika nie jest blokowany.  
   
- Sprawdzanie poprawności tła w czasie projektowania jest obsługiwana w rehostowanym projektancie.  
+ Walidacja w czasie projektowania w tle jest obsługiwana w projektancie przehostowanym.  
   
-### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a>Wyświetlanie stanu znajduje się w innej lokalizacji w plikach XAML  
- W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], informacje o stanie widoku dla przepływu pracy są przechowywane w pliku XAML w wielu różnych lokalizacjach. Jest to wygodne, dla deweloperów, którzy chcą bezpośrednio odczytywać XAML lub napisać kod, aby usunąć informacje o stanie widoku. W .NET Framework 4.5 wyświetlanie informacji o stanie w pliku XAML jest serializowany jako osobny element w pliku XAML.  Deweloperzy można łatwo zlokalizować i edytować informacje o stanie widoku działania lub całkowicie usunąć stan widoku.  
+### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a>Stan widoku znajdujący się w oddzielnej lokalizacji w plikach XAML  
+ W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]programie Informacje o stanie widoku dla przepływu pracy są przechowywane w pliku XAML w wielu różnych lokalizacjach. Jest to niewygodne dla deweloperów, którzy chcą bezpośrednio czytać dane XAML, lub napisać kod, aby usunąć informacje o stanie widoku. W .NET Framework 4,5 informacje o stanie widoku w pliku XAML są serializowane jako osobny element w pliku XAML.  Deweloperzy mogą łatwo lokalizować i edytować informacje o stanie widoku działania lub całkowicie usunąć stan widoku.  
   
- Ta funkcja jest obsługiwana w rehostowanym projektancie przepływu pracy.  
+ Ta funkcja jest obsługiwana w Projektancie przepływów pracy przehostowanej.  
   
-### <a name="opt-in-for-workflow-45-features-in-rehosted-designer"></a>Zoptymalizowany pod kątem w funkcji Workflow 4.5 w rehostowanym projektancie  
- Aby zachować zgodność z poprzednimi wersjami, niektóre nowe funkcje zawarte w .NET Framework 4.5 nie są włączone domyślnie w rehostowanym projektancie. To, aby upewnić się, że istniejące aplikacje korzystające z rehostowanym projektancie nie są uszkodzone przez aktualizację do najnowszej wersji. Aby włączyć nowe funkcje w rehostowanym projektancie, ustaw wartość <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> do ".Net Framework 4.5", lub ustawić poszczególnych członków <xref:System.Activities.Presentation.DesignerConfigurationService> można włączać poszczególne funkcje.  
+### <a name="opt-in-for-workflow-45-features-in-rehosted-designer"></a>Możliwość uczestnictwa w funkcjach przepływu pracy w programie Workflow 4,5 w projektancie przeszukanym  
+ Aby zachować zgodność z poprzednimi wersjami, niektóre nowe funkcje zawarte w .NET Framework 4,5 nie są domyślnie włączone w projektancie przeszukanym. Jest to konieczne, aby upewnić się, że istniejące aplikacje korzystające z przeszukanego projektanta nie są uszkodzone przez aktualizację do najnowszej wersji. Aby włączyć nowe funkcje w projektancie ponownie hostowanym, ustaw <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> wartość ".NET Framework 4,5" lub ustaw poszczególnych <xref:System.Activities.Presentation.DesignerConfigurationService> członków, aby włączyć poszczególne funkcje.  
   
 ## <a name="new-workflow-development-models"></a>Nowe modele projektowania przepływu pracy  
- Oprócz schemat blokowy i modele programowania sekwencyjnego przepływu pracy ta wersja zawiera przepływy pracy automatu stanów i usług przepływu pracy z wymogiem wcześniejszego zawarcia kontraktu.  
+ Poza schematem blokowym i modelami programowania sekwencyjnego przepływu pracy ta wersja obejmuje przepływy pracy automatu stanów i usługi przepływu pracy pierwszego kontraktu.  
   
-### <a name="state-machine-workflows"></a>Przepływy pracy automatu stanów  
- Przepływy pracy automatu stanów zostały wprowadzone w ramach programu .NET Framework 4.0.1 w [programu Microsoft .NET Framework 4 platformy Update 1](https://go.microsoft.com/fwlink/?LinkID=215092). Ta aktualizacja zawierała kilka nowych klas i działań, które mogą deweloperom tworzenie przepływów pracy automatu stanów. Te klasy i działania zostały zaktualizowane w .NET Framework 4.5. Aktualizacje obejmują:  
+### <a name="state-machine-workflows"></a>Przepływy pracy automatu Stanów  
+ Przepływy pracy automatu Stanów zostały wprowadzone w ramach .NET Framework 4.0.1 w [ramach aktualizacji platformy Microsoft .NET Framework 4](https://go.microsoft.com/fwlink/?LinkID=215092). Ta aktualizacja zawiera kilka nowych klas i działań, które pozwalają deweloperom tworzyć przepływy pracy automatu Stanów. Te klasy i działania zostały zaktualizowane dla .NET Framework 4,5. Aktualizacje obejmują:  
   
-1. Możliwość ustawienia punktów przerwania na Stanach  
+1. Możliwość ustawiania punktów przerwania na Stanach  
   
 2. Możliwość kopiowania i wklejania przejść w Projektancie przepływu pracy  
   
-3. Wsparcie tworzenia udostępnionych przejść wyzwalaczy  
+3. Obsługa tworzenia przejść wyzwalaczy udostępnionych przez projektanta  
   
-4. Działania używany do tworzenia przepływów pracy automatu stanów, w tym: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State>, i <xref:System.Activities.Statements.Transition>  
+4. Działania służące do tworzenia przepływów pracy automatu <xref:System.Activities.Statements.StateMachine>Stanów, w tym:, <xref:System.Activities.Statements.State>, i<xref:System.Activities.Statements.Transition>  
   
- Poniższy zrzut ekranu przedstawia przepływ pracy automatu stanu ukończenia od [Samouczek wprowadzający](getting-started-tutorial.md) kroku [jak: Tworzenie przepływu pracy automatu stanów](how-to-create-a-state-machine-workflow.md).  
+ Poniższy zrzut ekranu przedstawia ukończony przepływ pracy automatu Stanów z samouczka [ [wprowadzenie](getting-started-tutorial.md) krok: Utwórz przepływ pracy](how-to-create-a-state-machine-workflow.md)automatu Stanów.  
   
- ![Ilustracja przedstawiająca przepływ pracy automatu stanu ukończenia.](./media/wf-features-in-the-rehosted-workflow-designer/complete-state-machine-workflow.jpg)  
+ ![Ilustracja przedstawiająca ukończony przepływ pracy automatu Stanów.](./media/wf-features-in-the-rehosted-workflow-designer/complete-state-machine-workflow.jpg)  
   
- Aby uzyskać więcej informacji na temat tworzenia przepływów pracy automatu stanów, zobacz [przepływów pracy automatu stanów](state-machine-workflows.md). Przepływy pracy automatu stanów są obsługiwane w rehostowanym projektancie.  
+ Aby uzyskać więcej informacji o tworzeniu przepływów pracy automatu Stanów, zobacz [przepływy pracy automatu Stanów](state-machine-workflows.md). Przepływy pracy automatu Stanów są obsługiwane w projektancie przeszukanym.  
   
-### <a name="contract-first-workflow-development"></a>Projektowanie przepływów pracy z wymogiem wcześniejszego zawarcia kontraktu  
- Narzędzie tworzenia przepływu pracy z wymogiem wcześniejszego zawarcia kontraktu umożliwia deweloperom projektowanie najpierw kontrakt w kodzie, a następnie za pomocą kilku kliknięć w programie Visual Studio automatycznie wygenerować szablon działania w przyborniku, reprezentujący każdej operacji. Działania te są następnie używane do tworzenia przepływu pracy, który implementuje operacje zdefiniowane przez umowę. Projektant przepływu pracy zostanie przeprowadzona Weryfikacja usługi przepływu pracy, aby upewnić się, czy te operacje są wykonywane, i podpis przepływu pracy odpowiada sygnatury Umowa. Deweloper można również skojarzyć usługi przepływu pracy z kolekcją zaimplementowane kontrakty. Aby uzyskać więcej informacji na temat opracowywania rozwiązań usługi przepływu pracy z wymogiem wcześniejszego zawarcia kontraktu, zobacz [jak: Tworzenie usługi przepływu pracy, który wykorzystuje istniejący kontrakt usługi](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+### <a name="contract-first-workflow-development"></a>Programowanie — pierwszy przepływ pracy  
+ Narzędzie do tworzenia przepływów pracy pierwszego kontraktu pozwala deweloperowi na zaprojektowanie kontraktu w kodzie, a następnie za pomocą kilku kliknięć w programie Visual Studio, automatyczne wygenerowanie szablonu działania w przyborniku reprezentującym każdą operację. Te działania są następnie używane do tworzenia przepływu pracy, który implementuje operacje zdefiniowane przez umowę. Projektant przepływu pracy sprawdza poprawność usługi przepływu pracy, aby upewnić się, że te operacje są zaimplementowane, a sygnatura przepływu pracy jest zgodna z podpisem kontraktu. Deweloper może również skojarzyć usługę przepływu pracy z kolekcją wdrożonych kontraktów. Aby uzyskać więcej informacji na temat tworzenia usługi przepływu pracy w pierwszej [kolejności, zobacz How to: Utwórz usługę przepływu pracy, która korzysta z istniejącego kontraktu](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)usługi.  
   
 > [!WARNING]
->  Projektowanie przepływów pracy z wymogiem wcześniejszego zawarcia kontraktu nie jest obsługiwana w Projektancie przepływu pracy.
+>  Opracowywanie kontraktu — pierwszy przepływ pracy nie jest obsługiwany w Projektancie przepływu pracy.

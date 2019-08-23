@@ -2,20 +2,20 @@
 title: <serviceSecurityAudit>
 ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-ms.openlocfilehash: 384a1cdb6d39f4d6ecd2353a15c0da7c6d2e82bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1fcc59550904a34eced8e87fa9bc54a334acd03
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758122"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937174"
 ---
 # <a name="servicesecurityaudit"></a>\<serviceSecurityAudit>
 Określa ustawienia, które włączają inspekcję zdarzeń zabezpieczeń podczas operacji usługi.  
   
  \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<serviceBehaviors>  
-\<zachowanie >  
+\<> zachowania  
 \<serviceSecurityAudit>  
   
 ## <a name="syntax"></a>Składnia  
@@ -34,10 +34,10 @@ Określa ustawienia, które włączają inspekcję zdarzeń zabezpieczeń podcza
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|auditLogLocation|Określa lokalizację dziennika inspekcji. Prawidłowe wartości są następujące:<br /><br /> — Wartość domyślna: Zdarzenia zabezpieczeń są zapisywane w dzienniku aplikacji na Windows XP, a w dzienniku zdarzeń w systemie Windows Server 2003 i Windows Vista.<br />— Aplikacja: Zdarzenia inspekcji są zapisywane w dzienniku zdarzeń aplikacji.<br />-Zabezpieczeń: Zdarzenia inspekcji są zapisywane w dzienniku zdarzeń zabezpieczeń.<br /><br /> Wartością domyślną jest domyślna. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.AuditLogLocation>.|  
-|suppressAuditFailure|Wartość logiczna określająca zachowanie w sytuacji pominięcia błędów zapisu do dziennika inspekcji.<br /><br /> Aplikacje powinny być powiadamiany o błędów zapisu do dziennika inspekcji. Jeśli aplikacja nie jest przeznaczony do obsługi błędów inspekcji, należy użyć tego atrybutu, aby pominąć błędy podczas zapisywania do dziennika inspekcji.<br /><br /> Jeśli ten atrybut jest `true`, wyjątki inne niż OutOfMemoryException, stackoverflowexception —, ThreadAbortException i ArgumentException, które są wynikiem próby zapisania zdarzeń inspekcji są obsługiwane przez system i nie są propagowane do aplikacja. Jeśli ten atrybut jest `false`, wszystkie wyjątki, które są wynikiem próby zapisu zdarzenia inspekcji są przekazywane do aplikacji.<br /><br /> Wartość domyślna to `true`.|  
-|serviceAuthorizationAuditLevel|Określa typy zdarzeń autoryzacji, które są rejestrowane w dzienniku inspekcji. Prawidłowe wartości są następujące:<br /><br /> -Brak: Brak inspekcji zdarzeń autoryzacji usługi jest wykonywane.<br />-Sukcesu: Tylko pomyślne usługi autoryzacji zdarzenia są poddawane inspekcji.<br />-Nie powiodła się: Tylko usługi autoryzacji zdarzenia błędów są poddawane inspekcji.<br />-SuccessOrFailure: Sukcesów i niepowodzeń zdarzenia autoryzacji usługi są poddawane inspekcji.<br /><br /> Wartość domyślna to Brak. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.AuditLevel>.|  
-|messageAuthenticationAuditLevel|Określa typ zarejestrowanych zdarzeń inspekcji uwierzytelniania wiadomości. Prawidłowe wartości są następujące:<br /><br /> -Brak: Zdarzenia inspekcji nie są generowane.<br />-Sukcesu: Rejestrowane są tylko zdarzenia (m.in. Weryfikacja podpisu wiadomości, szyfrowania i walidacji tokenów pełnej weryfikacji) zabezpieczeń.<br />-Nie powiodła się: Rejestrowane są tylko zdarzenia błędu.<br />-SuccessOrFailure: Sukcesów i niepowodzeń zdarzenia są rejestrowane.<br /><br /> Wartość domyślna to Brak. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.AuditLevel>.|  
+|auditLogLocation|Określa lokalizację dziennika inspekcji. Prawidłowe wartości to:<br /><br /> Wartooć Zdarzenia zabezpieczeń są zapisywane w dzienniku aplikacji w systemie Windows XP i w dzienniku zdarzeń w systemach Windows Server 2003 i Windows Vista.<br />Aplikacja Zdarzenia inspekcji są zapisywane w dzienniku zdarzeń aplikacji.<br />Bezpieczeństw Zdarzenia inspekcji są zapisywane w dzienniku zdarzeń zabezpieczeń.<br /><br /> Wartość domyślna to default. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.AuditLogLocation>.|  
+|suppressAuditFailure|Wartość logiczna określająca zachowanie w przypadku pomijania błędów zapisu do dziennika inspekcji.<br /><br /> Aplikacje powinny być powiadamiane o błędach zapisu do dziennika inspekcji. Jeśli aplikacja nie jest zaprojektowana do obsługi błędów inspekcji, należy użyć tego atrybutu, aby pominąć błędy podczas zapisywania w dzienniku inspekcji.<br /><br /> Jeśli ten atrybut jest `true`, wyjątki inne niż OutOfMemoryException, StackOverflowException, ThreadAbortException i ArgumentException, które wynikają z próby zapisu zdarzeń inspekcji, są obsługiwane przez system i nie są propagowane do Aplikacja. Jeśli ten atrybut ma `false`wartość, wszystkie wyjątki, które wynikają z próby zapisu zdarzeń inspekcji, są przesyłane do aplikacji.<br /><br /> Wartość domyślna to `true`.|  
+|serviceAuthorizationAuditLevel|Określa typy zdarzeń autoryzacji, które są rejestrowane w dzienniku inspekcji. Prawidłowe wartości to:<br /><br /> Dawaj Inspekcja zdarzeń autoryzacji usługi nie jest przeprowadzana.<br />Prawnego Inspekcja jest przeprowadzana tylko przez pomyślne zdarzenia autoryzacji usługi.<br />Spraw Inspekcja zdarzeń autoryzacji usługi nie jest przeprowadzana.<br />- SuccessOrFailure: Inspekcja zdarzeń autoryzacji sukcesów i niepowodzeń podlega inspekcji.<br /><br /> Wartość domyślna to Brak. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.AuditLevel>.|  
+|messageAuthenticationAuditLevel|Określa typ zarejestrowanych zdarzeń inspekcji uwierzytelniania wiadomości. Prawidłowe wartości to:<br /><br /> Dawaj Nie są generowane żadne zdarzenia inspekcji.<br />Prawnego Rejestrowane są tylko udane zabezpieczenia (pełna Walidacja, w tym weryfikacja podpisu komunikatu, szyfrowanie i sprawdzanie poprawności tokenu).<br />Spraw Rejestrowane są tylko zdarzenia niepowodzeń.<br />- SuccessOrFailure: Rejestrowane są zdarzenia sukces i niepowodzenie.<br /><br /> Wartość domyślna to Brak. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.AuditLevel>.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -46,20 +46,20 @@ Określa ustawienia, które włączają inspekcję zdarzeń zabezpieczeń podcza
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<zachowanie >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
+|[\<> zachowania](behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten element konfiguracji służy do inspekcji zdarzeń uwierzytelniania Windows Communication Foundation (WCF). Po włączeniu inspekcji można przeprowadzać inspekcję uwierzytelniania powodzeniem lub niepowodzeniem prób (lub obu). Zdarzenia są zapisywane do jednej z trzech dzienników zdarzeń: aplikacji, zabezpieczeń lub domyślny dziennik dla wersji systemu operacyjnego. Dzienniki zdarzeń wszystkich można wyświetlić za pomocą Podglądu zdarzeń Windows.  
+ Ten element konfiguracji jest używany do inspekcji zdarzeń uwierzytelniania Windows Communication Foundation (WCF). Gdy inspekcja jest włączona, może być przeprowadzana inspekcja nieudanych lub nieudanych prób uwierzytelnienia (lub obydwu). Zdarzenia są zapisywane w jednym z trzech dzienników zdarzeń: aplikacji, zabezpieczeń lub dziennika domyślnego dla wersji systemu operacyjnego. Wszystkie dzienniki zdarzeń można wyświetlić za pomocą podglądu zdarzeń systemu Windows.  
   
- Aby uzyskać szczegółowy przykład przy użyciu tego elementu konfiguracji, zobacz [zachowanie inspekcji usługi](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md).  
+ Aby zapoznać się ze szczegółowym przykładem użycia tego elementu konfiguracji, zapoznaj się z tematem [zachowanie inspekcji usługi](../../../wcf/samples/service-auditing-behavior.md).  
   
- Domyślnie Windows XP zdarzenia inspekcji są widoczne w dzienniku aplikacji; w systemie Windows Server 2003 i Windows Vista, zdarzenia inspekcji są widoczne w dzienniku zabezpieczeń. Lokalizacja zdarzenia inspekcji można określić, ustawiając `auditLogLocation` atrybutu "Aplikacja" lub "Zabezpieczenia". Aby uzyskać więcej informacji, zobacz [jak: Inspekcja zdarzeń zabezpieczeń](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md). Jeśli zdarzenia są zapisywane w dzienniku zabezpieczeń, LocalSecurityPolicy -> Włącz dostęp do obiektów powinna być ustawiona na "Powodzenie" i "Niepowodzenie".  
+ Domyślnie w systemie Windows XP zdarzenia inspekcji mogą być widoczne w dzienniku aplikacji. w systemie Windows Server 2003 i Windows Vista zdarzenia inspekcji mogą być widoczne w dzienniku zabezpieczeń. Lokalizację zdarzeń inspekcji można określić przez ustawienie `auditLogLocation` atrybutu na wartość "aplikacja" lub "zabezpieczenia". Aby uzyskać więcej informacji, zobacz [jak: Inspekcja zdarzeń](../../../wcf/feature-details/how-to-audit-wcf-security-events.md)zabezpieczeń. Jeśli zdarzenia są zapisywane w dzienniku zabezpieczeń, LocalSecurityPolicy-> Włącz dostęp do obiektu powinien być ustawiony dla "powodzenie" i "Niepowodzenie".  
   
- Podczas wyszukiwania w dzienniku zdarzeń, źródła zdarzeń inspekcji jest "ServiceModel inspekcji 3.0.0.0". Rekordy inspekcji uwierzytelniania wiadomości mają kategorię "MessageAuthentication", a rekordy inspekcji autoryzacji usługi kategorią "ServiceAuthorization".  
+ Podczas przeglądania dziennika zdarzeń źródło zdarzeń inspekcji ma wartość "ServiceModel Audit 3.0.0.0". Rekordy inspekcji uwierzytelniania komunikatów mają kategorię "MessageAuthentication", podczas gdy rekordy inspekcji autoryzacji usług mają kategorię "ServiceAuthorization".  
   
- Zdarzeń inspekcji uwierzytelniania wiadomości obejmują, czy wiadomość została naruszona, czy komunikat utracił ważność i tego, czy klient może uwierzytelniać w usłudze. Zapewniają one informacji na temat tego, czy uwierzytelnianie zakończyło się pomyślnie lub nie powiodło się wraz z tożsamością klienta i punktu końcowego wiadomość została wysłana do wraz z akcji skojarzonych z wiadomością.  
+ Zdarzenia inspekcji uwierzytelniania komunikatów dotyczą tego, czy wiadomość została naruszona, czy wiadomość wygasła i czy klient może uwierzytelniać się w usłudze. Dostarczają informacji na temat tego, czy uwierzytelnianie zakończyło się powodzeniem, czy niepowodzeniem wraz z tożsamością klienta i punktem końcowym, do którego wiadomość została wysłana, wraz z akcją skojarzoną z wiadomością.  
   
- Zdarzenia inspekcji autoryzacji usługi obejmują decyzja przez Menedżera usług autoryzacji. Zapewniają one informacji na temat tego, czy Autoryzacja powiodła się lub nie powiodło się, wraz z tożsamością klienta, punktu końcowego wiadomość została wysłana do akcji skojarzonych z wiadomością identyfikator kontekst autoryzacji, który został wygenerowany z przychodząca wiadomość i typ Menedżera autoryzacji, który podjęła decyzję dostępu.  
+ Zdarzenia inspekcji autoryzacji usługi obejmują decyzje dotyczące autoryzacji podejmowane przez Menedżera autoryzacji usług. Dostarczają informacji na temat tego, czy autoryzacja zakończyła się powodzeniem, czy niepowodzeniem wraz z tożsamością klienta, punkt końcowy, do którego wiadomość została wysłana, Akcja skojarzona z komunikatem, identyfikator kontekstu autoryzacji, który został wygenerowany z komunikat przychodzący i typ Menedżera autoryzacji, który dokonał decyzji o dostępie.  
   
 ## <a name="example"></a>Przykład  
   
@@ -82,7 +82,7 @@ Określa ustawienia, które włączają inspekcję zdarzeń zabezpieczeń podcza
 
 - <xref:System.ServiceModel.Configuration.ServiceSecurityAuditElement>
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
-- [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Inspekcja](../../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [Instrukcje: Inspekcja zdarzeń zabezpieczeń](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
-- [Zachowanie inspekcji usługi](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md)
+- [Zachowania zabezpieczeń](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [Inspekcja](../../../wcf/feature-details/auditing-security-events.md)
+- [Instrukcje: Inspekcja zdarzeń zabezpieczeń](../../../wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [Zachowanie inspekcji usługi](../../../wcf/samples/service-auditing-behavior.md)

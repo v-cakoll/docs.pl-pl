@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5070dba7e7e1218fedf24d350c0461a1cd3835e1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fc3ec00f11582ede1dc4b3d481a4eb9dcc4dd1d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755511"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963916"
 ---
 # <a name="icorprofilercallback2survivingreferences-method"></a>ICorProfilerCallback2::SurvivingReferences — Metoda
-Raportuje układ obiektów w stercie wyrzucania elementów bezużytecznych bez kondensowania w wyniku.  
+Raportuje układ obiektów w stercie w wyniku niekompaktowego wyrzucania elementów bezużytecznych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,45 +40,45 @@ HRESULT SurvivingReferences(
   
 ## <a name="parameters"></a>Parametry  
  `cSurvivingObjectIDRanges`  
- [in] Liczba bloków ciągłych obiektów, które przetrwały wyrzucanie elementów bezużytecznych bez kondensowania w wyniku. Oznacza to, że wartość `cSurvivingObjectIDRanges` jest rozmiarem `objectIDRangeStart` i `cObjectIDRangeLength` tablic, które magazynu `ObjectID` i długość, odpowiednio dla każdego bloku obiektów.  
+ podczas Liczba bloków ciągłych obiektów, które przeżyły jako wynik niekompaktowego wyrzucania elementów bezużytecznych. Oznacza to `cSurvivingObjectIDRanges` , że wartość jest rozmiarem `objectIDRangeStart` tablic i `cObjectIDRangeLength` , które przechowują `ObjectID` odpowiednio długość i dla każdego bloku obiektów.  
   
- Następne dwa argumenty `SurvivingReferences` są tablicami równoległych. Innymi słowy `objectIDRangeStart` i `cObjectIDRangeLength` dotyczą tego samego bloku ciągłych obiektów.  
+ Dwa następne argumenty `SurvivingReferences` są równoległymi tablicami. Innymi słowy `objectIDRangeStart` i `cObjectIDRangeLength` dotyczy tego samego bloku sąsiadujących obiektów.  
   
  `objectIDRangeStart`  
- [in] Tablica `ObjectID` wartości, z których każdy jest początkowy adres bloku ciągłych, obiekty aktywne w pamięci.  
+ podczas Tablica `ObjectID` wartości, z których każdy jest adresem początkowym bloku ciągłego, na żywo obiektów w pamięci.  
   
  `cObjectIDRangeLength`  
- [in] Tablica liczb całkowitych, z których każdy jest rozmiar sprawny bloku ciągłych obiektów w pamięci.  
+ podczas Tablica liczb całkowitych, z których każdy jest rozmiarem ciągłego bloku ciągłych obiektów w pamięci.  
   
- Rozmiar jest określony dla każdego bloku, w której podano odwołanie w `objectIDRangeStart` tablicy.  
+ Dla każdego bloku, do którego odwołuje `objectIDRangeStart` się tablica, jest określony rozmiar.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!IMPORTANT]
->  Ta metoda zgłasza rozmiary jako `MAX_ULONG` dla obiektów, które są większe niż 4 GB na platformach 64-bitowych. W przypadku obiektów, które są większe niż 4 GB, użyj [icorprofilercallback4::survivingreferences2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md) metody zamiast tego.  
+> Ta metoda zgłasza rozmiary `MAX_ULONG` dla obiektów, które są większe niż 4 GB na platformach 64-bitowych. W przypadku obiektów, które są większe niż 4 GB, zamiast tego użyj metody [ICorProfilerCallback4:: SurvivingReferences2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md) .  
   
- Elementy `objectIDRangeStart` i `cObjectIDRangeLength` tablic powinien być interpretowany w następujący sposób w celu określenia, czy obiekt przetrwały wyrzucanie elementów bezużytecznych. Przyjęto założenie, że `ObjectID` wartość (`ObjectID`) znajduje się w następującym zakresie:  
+ Elementy `objectIDRangeStart` tablic i `cObjectIDRangeLength` powinny być interpretowane w następujący sposób, aby określić, czy obiekt przeżyje odzyskiwanie pamięci. Załóżmy, że `ObjectID` wartość (`ObjectID`) znajduje się w następującym zakresie:  
   
  `ObjectIDRangeStart[i]` <= `ObjectID` < `ObjectIDRangeStart[i]` + `cObjectIDRangeLength[i]`  
   
- Dla dowolnej wartości `i` znajdujący się w następującym zakresie, obiekt ma przetrwały wyrzucanie elementów bezużytecznych:  
+ Dla każdej wartości `i` , która znajduje się w następującym zakresie, obiekt przeżyły odzyskiwanie pamięci:  
   
  0 <= `i` < `cSurvivingObjectIDRanges`  
   
- Wyrzucanie elementów bezużytecznych bez kondensowania odzyskuje pamięć zajęta przez obiekty "martwe", ale nie compact zwolnione miejsca. W rezultacie pamięci jest zwracany do sterty, ale żadne obiekty "na żywo" są przenoszone.  
+ Niekompaktowe wyrzucanie elementów bezużytecznych przejmuje pamięć zajmowaną przez obiekty "martwe", ale nie kompaktuje ilości wolnego miejsca. W efekcie do sterty jest zwracana pamięć, ale nie są przenoszone żadne obiekty "na żywo".  
   
- Środowisko uruchomieniowe języka wspólnego (CLR) wywołuje `SurvivingReferences` dla bez kondensowania wyrzucania elementów bezużytecznych. Do kompaktowania wyrzucania elementów bezużytecznych [icorprofilercallback::movedreferences —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) zamiast tego wywoływany jest. Pojedynczy wyrzucania elementów bezużytecznych może być kompaktowania jeden generacji i bez kondensowania dla innego. Wyrzucanie elementów bezużytecznych na dowolnym konkretnej generacji, program profilujący wyświetlany żaden `SurvivingReferences` wywołanie zwrotne lub `MovedReferences` wywołania zwrotnego, ale nie oba.  
+ Wywołania `SurvivingReferences` środowiska uruchomieniowego języka wspólnego (CLR) dla niekompaktowych kolekcji elementów bezużytecznych. W przypadku kompaktowania kolekcji elementów bezużytecznych zamiast niej wywoływana jest [ICorProfilerCallback:: MovedReferences —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) . Pojedyncze wyrzucanie elementów bezużytecznych może być kompaktowania dla jednej generacji i niekompaktowania dla innych. W przypadku wyrzucania elementów bezużytecznych na określonej generacji Profiler otrzyma `SurvivingReferences` wywołanie zwrotne `MovedReferences` lub wywołanie zwrotne, ale nie oba.  
   
- Wiele `SurvivingReferences` wywołań zwrotnych mogą odebranych podczas określonego wyrzucania elementów bezużytecznych, ze względu na ograniczone wewnętrznego buforowania, wiele wątków raportowania w przypadku serwer wyrzucania elementów bezużytecznych i innych powodów. W przypadku wielu wywołań zwrotnych podczas wyrzucania elementów bezużytecznych, informacje są zbiorczej — wszystkie odwołania, które są zgłaszane w dowolnym `SurvivingReferences` wywołania zwrotnego przetrwać wyrzucania elementów bezużytecznych.  
+ Podczas `SurvivingReferences` konkretnego wyrzucania elementów bezużytecznych może zostać odebranych wiele wywołań zwrotnych z powodu ograniczonego wewnętrznego buforowania, wiele wątków zgłasza w przypadku wyrzucania elementów bezużytecznych serwera i z innych przyczyn. W przypadku wielu wywołań zwrotnych podczas wyrzucania elementów bezużytecznych informacje są kumulowane — wszystkie odwołania, które są `SurvivingReferences` zgłaszane w przypadku wywołania zwrotnego w czasie odzyskiwania pamięci.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówki** CorProf. idl, CorProf. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -2,22 +2,22 @@
 title: <transport> dla <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: 9b6f548515afbba5068659bd5c6f7f2b33f80cda
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5dbc55db25c0c49d72ec2cd8dd1041a3f8705d8e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788287"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940646"
 ---
-# <a name="transport-of-peertransport"></a>\<transport > z \<peerTransport >
-Określa typ transportu dla zabezpieczonych wiadomości wysłanych przez elementy równorzędne skonfigurowany tym wiązaniem.  
+# <a name="transport-of-peertransport"></a>\<Transport > \<peerTransport >
+Określa typ transportu zabezpieczonych komunikatów wysyłanych przez elementy równorzędne skonfigurowane przy użyciu tego powiązania.  
   
  \<system.serviceModel>  
-\<powiązania >  
+\<> powiązań  
 \<customBinding>  
-\<Powiązanie >  
+\<> powiązania  
 \<peerTransport>  
-\<security>  
+\<> zabezpieczeń  
 \<transport>  
   
 ## <a name="syntax"></a>Składnia  
@@ -29,20 +29,20 @@ Określa typ transportu dla zabezpieczonych wiadomości wysłanych przez element
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
   
 ### <a name="attributes"></a>Atrybuty  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|credentialType|Opcjonalna. Określa typ poświadczenia używane do weryfikowania komunikaty wysyłane za pomocą transportu elementu równorzędnego. Ten atrybut jest typu <xref:System.ServiceModel.PeerTransportCredentialType>.|  
+|credentialType|Opcjonalny. Określa typ poświadczeń używanych do weryfikowania komunikatów wysyłanych z transportem równorzędnym. Ten atrybut jest typu <xref:System.ServiceModel.PeerTransportCredentialType>.|  
   
-## <a name="credentialtype-attribute"></a>credentialType Attribute  
+## <a name="credentialtype-attribute"></a>CredentialType — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Certyfikat|Uwierzytelnianie transportu kanał elementu równorzędnego wymaga X509 certyfikatu.|  
-|Hasło|Uwierzytelnianie transportu kanał elementu równorzędnego wymaga prawidłowego hasła.|  
+|Certyfikatu|Uwierzytelnianie w ramach transportu kanału równorzędnego wymaga certyfikatu x509.|  
+|Hasło|Uwierzytelnianie transportu kanału równorzędnego wymaga poprawnego hasła.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -51,10 +51,10 @@ Określa typ transportu dla zabezpieczonych wiadomości wysłanych przez element
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|Definiuje ustawienia zabezpieczeń transport elementu równorzędnego.|  
+|[\<> zabezpieczeń](security-of-peertransport.md)|Definiuje ustawienia zabezpieczeń dla transportu równorzędnego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten element jest ustawiona tylko wtedy, gdy atrybut tryb [ \<zabezpieczeń >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md) ustawiono `Transport` lub `TransportWithMessageCredential`.  
+ Ten element jest ustawiany tylko wtedy, gdy atrybut `Transport` `TransportWithMessageCredential` [ \<Mode > zabezpieczeń](security-of-peertransport.md) jest ustawiony na lub.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -62,10 +62,10 @@ Określa typ transportu dla zabezpieczonych wiadomości wysłanych przez element
 - <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
 - <xref:System.ServiceModel.PeerTransportSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Zabezpieczenia transportu](../../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [Transporty](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Wybieranie transportu](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Zabezpieczenia transportu](../../../wcf/feature-details/transport-security.md)
+- [Transporty](../../../wcf/feature-details/transports.md)
+- [Wybieranie transportu](../../../wcf/feature-details/choosing-a-transport.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Rozszerzanie powiązań](../../../wcf/extending/extending-bindings.md)
+- [Powiązania niestandardowe](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

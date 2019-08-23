@@ -11,46 +11,46 @@ helpviewer_keywords:
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d984257958354eb2c6be6aa57d8b68ca39039edc
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 283fc91762bc4065bd9bd09efaa2bc0061451ef9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632803"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962727"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Instrukcje: Tworzenie pliku dokumentacji XML przy użyciu modelu CodeDOM
-CodeDOM może służyć do tworzenia kodu, który generuje dokumentacji XML. Proces obejmuje tworzenie wykresu CodeDOM, który zawiera komentarze dokumentacji XML: generowanie kodu i kompilowania wygenerowanego kodu przy użyciu opcji kompilatora, który tworzy dane wyjściowe XML dokumentacji.  
+CodeDOM można użyć do utworzenia kodu, który generuje dokumentację XML. Proces obejmuje tworzenie wykresu CodeDOM, który zawiera komentarze dokumentacji XML, generowanie kodu i kompilowanie wygenerowanego kodu z opcją kompilatora, która tworzy dane wyjściowe dokumentacji XML.  
   
-### <a name="to-create-a-codedom-graph-that-contains-xml-documentation-comments"></a>Aby utworzyć wykres CodeDOM, który zawiera komentarze dokumentacji XML  
+### <a name="to-create-a-codedom-graph-that-contains-xml-documentation-comments"></a>Aby utworzyć wykres CodeDOM zawierający komentarze dokumentacji XML  
   
-1. Utwórz <xref:System.CodeDom.CodeCompileUnit> zawierający wykres CodeDOM dla przykładowej aplikacji.  
+1. <xref:System.CodeDom.CodeCompileUnit> Utwórz zawierający wykres CodeDOM dla przykładowej aplikacji.  
   
-2. Użyj <xref:System.CodeDom.CodeCommentStatement.%23ctor%2A> konstruktora z `docComment` parametr `true` do tworzenia elementów komentarzy dokumentacji XML i tekst.  
+2. Użyj konstruktora z parametrem ustawionym na `true` , aby utworzyć elementy komentarza dokumentacji XML i tekst. `docComment` <xref:System.CodeDom.CodeCommentStatement.%23ctor%2A>  
   
      [!code-csharp[CodeDomHelloWorldSample#4](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#4)]
      [!code-vb[CodeDomHelloWorldSample#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#4)]  
   
-### <a name="to-generate-the-code-from-the-codecompileunit"></a>Aby wygenerować kod z elementu CodeCompileUnit  
+### <a name="to-generate-the-code-from-the-codecompileunit"></a>Aby wygenerować kod z CodeCompileUnit  
   
-1. Użyj <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> metodę, aby wygenerować kod i utworzyć plik źródłowy do skompilowania.  
+1. <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> Użyj metody, aby wygenerować kod i utworzyć plik źródłowy do skompilowania.  
   
      [!code-csharp[CodeDomHelloWorldSample#5](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#5)]
      [!code-vb[CodeDomHelloWorldSample#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#5)]  
   
 ### <a name="to-compile-the-code-and-generate-the-documentation-file"></a>Aby skompilować kod i wygenerować plik dokumentacji  
   
-1. Dodaj **/doc** opcji kompilatora <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> właściwość <xref:System.CodeDom.Compiler.CompilerParameters> i przekazać obiekt do <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A> metodę w celu utworzenia pliku dokumentacji XML, gdy kod jest kompilowany.  
+1. Dodaj opcję kompilatora **/doc** <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> do właściwości <xref:System.CodeDom.Compiler.CompilerParameters> <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A> obiektu i przekaż obiekt do metody, aby utworzyć plik dokumentacji XML podczas kompilowania kodu.  
   
      [!code-csharp[CodeDomHelloWorldSample#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#6)]
      [!code-vb[CodeDomHelloWorldSample#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#6)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu tworzy wykres CodeDOM z komentarzami dokumentacji, generuje plik kodu z wykresu i kompiluje plik oraz skojarzonego pliku dokumentacji XML.  
+ Poniższy przykład kodu tworzy wykres CodeDOM z komentarzami dokumentacji, generuje plik kodu z Grafu i kompiluje plik i tworzy skojarzony plik dokumentacji XML.  
   
  [!code-csharp[CodeDomHelloWorldSample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#1)]
  [!code-vb[CodeDomHelloWorldSample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#1)]  
   
- Przykład kodu tworzy w następującej dokumentacji XML w pliku HelloWorldDoc.xml.  
+ W przykładzie kodu jest tworzona następująca dokumentacja XML w pliku HelloWorldDoc. XML.  
   
 ```xml  
 <?xml version="1.0" ?>   
@@ -77,10 +77,10 @@ CodeDOM może służyć do tworzenia kodu, który generuje dokumentacji XML. Pro
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
-- Poniższy przykład kodu wymaga `FullTrust` zestawu uprawnień Wykonywanie pomyślnie.  
+- Ten przykład kodu wymaga `FullTrust` pomyślnego wykonania zestawu uprawnień.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentowanie kodu za pomocą XML](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [Komentarze dokumentacji XML](~/docs/csharp/programming-guide/xmldoc/index.md)
+- [Dokumentowanie kodu za pomocą XML](../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [Komentarze dokumentacji XML](../../csharp/programming-guide/xmldoc/index.md)
 - [Dokumentacja XML](/cpp/ide/xml-documentation-visual-cpp)

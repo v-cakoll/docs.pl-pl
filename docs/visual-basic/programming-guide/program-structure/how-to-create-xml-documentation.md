@@ -1,40 +1,40 @@
 ---
-title: 'Instrukcje: Tworzenie dokumentacji XML w Visual Basic'
+title: 'Instrukcje: Utwórz dokumentację XML w Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
-ms.openlocfilehash: 95f6c5b23deadc16eb1e81f274e2cc5149598fb7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9380c23ab6cfdbecd519926229b45ed863f07f9e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050440"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947713"
 ---
-# <a name="how-to-create-xml-documentation-in-visual-basic"></a>Instrukcje: Tworzenie dokumentacji XML w Visual Basic
-W tym przykładzie przedstawiono sposób dodawania komentarzy dokumentacji XML w kodzie.  
+# <a name="how-to-create-xml-documentation-in-visual-basic"></a>Instrukcje: Utwórz dokumentację XML w Visual Basic
+Ten przykład pokazuje, jak dodać komentarze dokumentacji XML do kodu.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-xml-documentation-for-a-type-or-member"></a>Aby utworzyć dokumentacji XML dla typu lub składowej  
+### <a name="to-create-xml-documentation-for-a-type-or-member"></a>Aby utworzyć dokumentację XML dla typu lub elementu członkowskiego  
   
-1. W **Edytor kodu**, umieść kursor w wierszu powyżej typu lub elementu członkowskiego, dla której chcesz utworzyć dokumentacji.  
+1. W **edytorze kodu**Umieść kursor w wierszu powyżej typu lub elementu członkowskiego, dla którego chcesz utworzyć dokumentację.  
   
-2. Typ `'''` (trzy znaki pojedynczego cudzysłowu).  
+2. Wpisz `'''` (trzy znaki pojedynczego cudzysłowu).  
   
-     Szkielet XML dla typu lub elementu członkowskiego zostanie dodany do **Edytor kodu**.  
+     Szkielet XML dla typu lub elementu członkowskiego jest dodawany w **edytorze kodu**.  
   
-3. Dodaj informacje opisowe między odpowiednie tagi.  
+3. Dodaj opisowe informacje między odpowiednimi tagami.  
   
     > [!NOTE]
-    >  Jeśli dodasz dodatkowe wiersze w bloku dokumentacji XML, musi zaczynać się każdy wiersz `'''`.  
+    > Jeśli dodasz dodatkowe linie w bloku dokumentacji XML, każdy wiersz musi rozpoczynać `'''`się od.  
   
-4. Dodaj dodatkowy kod, który używa typu lub elementu członkowskiego przy użyciu nowych komentarzy dokumentacji XML.  
+4. Dodaj dodatkowy kod, który używa typu lub elementu członkowskiego z nowymi komentarzami dokumentacji XML.  
   
-     Funkcja IntelliSense wyświetla tekst z \<podsumowania > tag w przypadku typu lub elementu członkowskiego.  
+     Funkcja IntelliSense wyświetla tekst ze \<znacznika > podsumowania dla typu lub elementu członkowskiego.  
   
-5. Skompiluj kod, aby wygenerować plik XML zawierający komentarze dokumentacji. Aby uzyskać więcej informacji, zobacz [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+5. Skompiluj kod w celu wygenerowania pliku XML zawierającego Komentarze do dokumentacji. Aby uzyskać więcej informacji, zobacz [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

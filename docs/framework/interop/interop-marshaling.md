@@ -8,130 +8,130 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d6ddc2978078fd307ad79cffe14d53619d8be9e
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 20766f4f7971d8aa304c7c3eead94f089f059d64
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469715"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946715"
 ---
 # <a name="interop-marshaling"></a>Organizowanie międzyoperacyjne
-<a name="top"></a> Marshaling międzyoperacyjny decyduje o tym, jak dane są przekazywane w metodzie argumentów i zwracanych wartości między zarządzanymi i niezarządzanymi pamięci podczas wywołania. Marshaling międzyoperacyjny jest czynnością środowiska wykonawczego, wykonywane przez usługę organizowania wykonywalnych języka wspólnego.  
+<a name="top"></a>Organizowanie międzyoperacyjności reguluje sposób przekazywania danych w argumentach metod i zwraca wartości między zarządzaną i niezarządzaną pamięcią podczas wywołań. Organizowanie międzyoperacyjności to działanie czasu wykonywania wykonywane przez usługę Marshaling środowiska uruchomieniowego języka wspólnego.  
   
- Większość typów danych mają wspólne reprezentacji w pamięci zarządzanych i niezarządzanych. Organizator międzyoperacyjny obsługuje następujące typy dla Ciebie. Inne typy może być niejednoznaczne lub nie jest reprezentowana w ogóle w pamięci zarządzanej.  
+ Większość typów danych ma wspólne reprezentacje w pamięci zarządzanej i niezarządzanej. Organizator międzyoperacyjny obsługuje te typy. Inne typy mogą być niejednoznaczne lub niereprezentowane w całości w pamięci zarządzanej.  
   
- Niejednoznaczny typ może mieć wiele reprezentacji niezarządzanych, mapowane na jeden typ zarządzany, albo brakuje informacji o typie, takich jak rozmiar tablicy. Niejednoznacznych typów Organizator zawiera reprezentację domyślne i Reprezentacje alternatywne, w których istnieje wiele reprezentacji. Możesz podać jawne instrukcje można organizatora, w jaki jest do organizowania niejednoznaczny typ.  
+ Niejednoznaczny typ może mieć wiele niezarządzanych reprezentacji, które są mapowane na pojedynczy typ zarządzany lub brakujące informacje o typie, takie jak rozmiar tablicy. Dla niejednoznacznych typów, organizator udostępnia domyślną reprezentację i alternatywne reprezentacje, w których istnieje wiele reprezentacji. Możesz dostarczyć jawne instrukcje do organizatora, w jaki sposób ma on zorganizować niejednoznaczny typ.  
   
- Ten przegląd zawiera następujące sekcje:  
+ To omówienie zawiera następujące sekcje:  
   
-- [Wywołanie platformy i modele międzyoperacyjnego modelu COM](#platform_invoke_and_com_interop_models)  
+- [Wywołania platformy i modele międzyoperacyjności modelu COM](#platform_invoke_and_com_interop_models)  
   
-- [Marshaling i Apartamentach COM](#marshaling_and_com_apartments)  
+- [Organizowanie i apartamentach COM](#marshaling_and_com_apartments)  
   
-- [Kierowanie wywołań zdalnych](#marshaling_remote_calls)  
+- [Kierowanie zdalnych wywołań](#marshaling_remote_calls)  
   
 - [Tematy pokrewne](#related_topics)  
   
 - [Dokumentacja](#reference)  
   
 <a name="platform_invoke_and_com_interop_models"></a>   
-## <a name="platform-invoke-and-com-interop-models"></a>Wywołanie platformy i modele międzyoperacyjnego modelu COM  
- Środowisko uruchomieniowe języka wspólnego zawiera dwa mechanizmy współdziałanie z kodem niezarządzanym:  
+## <a name="platform-invoke-and-com-interop-models"></a>Wywołania platformy i modele międzyoperacyjności modelu COM  
+ Środowisko uruchomieniowe języka wspólnego udostępnia dwa mechanizmy współdziałania z niezarządzanym kodem:  
   
-- Wywołanie platformy, które umożliwia kodowi zarządzanemu wywoływania funkcji wyeksportowanych z biblioteką niezarządzaną.  
+- Wywołanie platformy, które umożliwia kodowi zarządzanemu wywoływanie funkcji wyeksportowanych z niezarządzanej biblioteki.  
   
-- Usługa międzyoperacyjna modelu COM, który umożliwia interakcję z obiektami Component Object Model (COM) za pośrednictwem interfejsów kodu zarządzanego.  
+- Międzyoperacyjność modelu COM, która umożliwia współdziałanie kodu zarządzanego z obiektami Component Object Model (COM) za pomocą interfejsów.  
   
- Wywołanie obie platformy i COM międzyoperacyjny Użyj marshaling międzyoperacyjny dokładnie przenoszenie argumenty metody między obiekt wywołujący i obiekt wywoływany i z powrotem, jeśli wymagane. Jak pokazano na poniższej ilustracji, wywołania platformy przepływy wywołanie metody z kodu zarządzanego do kodu niezarządzanego i nigdy nie inny sposób, chyba że [funkcji wywołania zwrotnego](callback-functions.md) są zaangażowani. Mimo że wywołanie platformy wywołania mogą przepływać tylko z kodu zarządzanego do kodu niezarządzanego, dane mogą przepływać w obu kierunkach, jako parametry wejściowe i wyjściowe. Wywołań metod międzyoperacyjnego modelu COM może przepływać w obu kierunkach.  
+ Zarówno wywołanie platformy, jak i międzyoperacyjność modelu COM używają organizowania międzyoperacyjnego do dokładnego przenoszenia argumentów metody między obiektem wywołującym i wywoływanym z powrotem, w razie potrzeby. Jak widać na poniższej ilustracji, wywołanie metody wywołuje metodę przepływów z zarządzanego do kodu niezarządzanego i nigdy nie w inny sposób, z wyjątkiem sytuacji, gdy są używane [funkcje wywołania zwrotnego](callback-functions.md) . Mimo że wywołania wywołania platformy mogą przepływać tylko z kodu zarządzanego do niezarządzanego, dane mogą być przesyłane w obu kierunkach jako parametry wejściowe lub wyjściowe. Wywołania metod międzyoperacyjnych modelu COM mogą przepływać w dowolnym kierunku.  
   
- ![Wywołanie platformy](./media/interop-marshaling/interop-marshaling-invoke-and-com.png "wywołania platformy i wywołania międzyoperacyjnego modelu COM przepływu")  
+ ![Wywołanie platformy] Wywołanie (./media/interop-marshaling/interop-marshaling-invoke-and-com.png "platformy i przepływ wywołań międzyoperacyjnych modelu COM")  
   
- Na najniższym poziomie zarówno mechanizmów używać tego samego międzyoperacyjnego organizowanie usług. Jednak niektóre typy danych są obsługiwane wyłącznie przez COM interop lub wywołania platformy. Aby uzyskać więcej informacji, zobacz [domyślne zachowanie Marshalingu](default-marshaling-behavior.md).  
+ Na najniższym poziomie oba mechanizmy korzystają z tej samej usługi organizowania międzyoperacyjnego. Niektóre typy danych są jednak obsługiwane wyłącznie przez międzyoperacyjność modelu COM lub wywołanie platformy. Aby uzyskać szczegółowe informacje, zobacz [domyślne zachowanie organizowania](default-marshaling-behavior.md).  
   
  [Powrót do początku](#top)  
   
 <a name="marshaling_and_com_apartments"></a>   
-## <a name="marshaling-and-com-apartments"></a>Marshaling i Apartamentach COM  
- Organizator międzyoperacyjny kieruje dane między stosie uruchomieniowym wspólnego języka i niezarządzanym stosu. Marshaling występuje zawsze, gdy obiektami wywołującym i wywoływanym nie może działać na tym samym wystąpieniu danych. Organizator międzyoperacyjny umożliwia obiektami wywołującym i wywoływanym były widoczne dla działających na tych samych danych, nawet jeśli mają własne kopię danych.  
+## <a name="marshaling-and-com-apartments"></a>Organizowanie i apartamentach COM  
+ Organizator międzyoperacyjny kierujący dane między stertą środowiska uruchomieniowego języka wspólnego i niezarządzaną stertą. Kierowanie odbywa się zawsze wtedy, gdy obiekt wywołujący i wywoływany nie mogą działać na tym samym wystąpieniu danych. Organizator międzyoperacyjny sprawia, że jest możliwe, że obiekt wywołujący i wywoływany przez nie działa na tych samych danych, nawet jeśli mają własną kopię danych.  
   
- COM ma również organizatora, który kieruje dane między apartamentach COM lub różnych procesów COM. Przy wywoływaniu między kodem zarządzanym i niezarządzanym w obrębie tego samego apartamentu COM, organizator międzyoperacyjny jest tylko organizatora zaangażowane. Przy wywoływaniu między kodem zarządzanym i kodu niezarządzanego w różnych apartamentu COM lub innego procesu, organizator międzyoperacyjny i Organizator modelu COM są zaangażowane.  
+ Model COM ma również organizatora, który kierujący dane między modelami COM apartamentach lub różnymi procesami COM. Podczas wywoływania między kodem zarządzanym i niezarządzanym w ramach tej samej komórki COM Organizator międzyoperacyjny jest tym jedynym organizatorem. Podczas wywoływania kodu zarządzanego i niezarządzanego kodu w innej komórkowym modelu COM lub innym procesie, są to między innymi Organizator międzyoperacyjny i organizator COM.  
   
-### <a name="com-clients-and-managed-servers"></a>Klienci COM i serwerów zarządzanych  
- Wyeksportowane serwera zarządzanego z biblioteki typów są rejestrowane przez [Regasm.exe (narzędzie rejestracji zestawów)](../tools/regasm-exe-assembly-registration-tool.md) ma `ThreadingModel` wpis rejestru równa `Both`. Ta wartość wskazuje, że serwer można aktywować apartamentem jednowątkowym (przedziale STA) lub wielowątkowe apartamentu (MTA). Obiekt serwera jest tworzony w tej samej apartamentu jako obiektu wywołującego, jak pokazano w poniższej tabeli.  
+### <a name="com-clients-and-managed-servers"></a>Klienci COM i serwery zarządzane  
+ Wyeksportowany serwer zarządzany z biblioteką typów zarejestrowanego przez [Regasm. exe (Narzędzie rejestracji zestawów)](../tools/regasm-exe-assembly-registration-tool.md) ma `ThreadingModel` wpis rejestru ustawiony na `Both`. Ta wartość wskazuje, że serwer można aktywować w komórce jednowątkowej (STA) lub w wielowątkowej komórce (MTA). Obiekt serwera jest tworzony w tym samym elemencie Apartment co jego obiekt wywołujący, jak pokazano w poniższej tabeli.  
   
-|Klient modelu COM|Serwer .NET|Charakteryzuje się wymaganiami|  
+|Klient COM|Serwer .NET|Wymagania dotyczące organizowania|  
 |----------------|-----------------|-----------------------------|  
-|STA|`Both` becomes STA.|Marshaling tego samego typu apartment.|  
-|MTA|`Both` becomes MTA.|Marshaling tego samego typu apartment.|  
+|STA|`Both`zmieni się na STA.|Kierowanie między komórkami.|  
+|MTA|`Both`przechodzi do MTA.|Kierowanie między komórkami.|  
   
- Ponieważ klient i serwer znajdują się w tej samej typu apartment, interop marshaling usługi automatycznie obsługuje marshaling wszystkich danych. Poniższa ilustracja przedstawia międzyoperacyjny usługi organizowania działające między zarządzanymi i niezarządzanymi stosów w ramach tego samego typu apartment styl modelu COM.  
+ Ponieważ klient i serwer znajdują się w tej samej apartamentie, usługa Marshaling Interop automatycznie obsługuje wszystkie kierowanie danych. Na poniższej ilustracji przedstawiono usługę Marshaling Interop działającą między stertami zarządzanymi i niezarządzanymi w ramach tego samego apartamentu COM.  
   
- ![Marshaling międzyoperacyjny między zarządzane i niezarządzane stosów](./media/interop-marshaling/interop-heaps-managed-and-unmanaged.gif "tego samego apartamentu marshaling procesu")  
+ ![Organizowanie międzyoperacyjnego między stertami zarządzanymi i] niezarządzanymi (./media/interop-marshaling/interop-heaps-managed-and-unmanaged.gif "Proces organizowania tego samego typu Apartment")  
   
- Jeśli planujesz eksportu serwera zarządzanego, należy pamiętać, określa, czy klient modelu COM apartamentu serwera. Serwerów zarządzanych, wywoływany przez klient modelu COM, zainicjować w MTA musi zapewnić bezpieczeństwo wątkowe.  
+ Jeśli planujesz wyeksportować serwer zarządzany, należy pamiętać, że klient COM określa Apartament serwera. Zarządzany serwer wywoływany przez klienta COM zainicjowany w MTA musi zapewnić bezpieczeństwo wątku.  
   
-### <a name="managed-clients-and-com-servers"></a>Zarządzanych klientów i serwerów COM  
- Ustawieniem domyślnym dla klientów zarządzanych apartamentach jest MTA; Typ aplikacji klient modelu .NET można jednak zmienić domyślne ustawienie. Na przykład ustawienie typu apartment klienta Visual Basic jest komórce jednowątkowej Możesz użyć <xref:System.STAThreadAttribute?displayProperty=nameWithType>, <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> właściwości lub <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> właściwość, aby sprawdzić i zmienić ustawienia typu apartment klient zarządzany.  
+### <a name="managed-clients-and-com-servers"></a>Zarządzani klienci i serwery COM  
+ Ustawieniem domyślnym dla zarządzanego klienta apartamentach jest MTA; Jednak typ aplikacji klienta .NET może zmienić ustawienie domyślne. Na przykład ustawienie Apartment Visual Basic Client to STA. Aby przejrzeć i zmienić <xref:System.STAThreadAttribute?displayProperty=nameWithType>ustawienie apartamentu zarządzanego <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> klienta <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, można użyć <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> właściwości,, lub właściwości.  
   
- Tworzenie składnika ustawienie koligacji wątku serwera COM. W poniższej tabeli przedstawiono kombinacje ustawień apartamentu dla klientów programu .NET i serwerów COM. Pokazuje również, wynikowy marshaling wymagania dotyczące kombinacje.  
+ Autor składnika ustawia koligację wątku serwera COM. W poniższej tabeli przedstawiono kombinacje ustawień Apartment dla klientów .NET i serwerów COM. Przedstawiono w nim również wyniki związane z kierowaniem dla kombinacji.  
   
-|Klient .NET|Serwer COM|Charakteryzuje się wymaganiami|  
+|Klient .NET|Serwer COM|Wymagania dotyczące organizowania|  
 |-----------------|----------------|-----------------------------|  
-|MTA (ustawienie domyślne)|MTA<br /><br /> STA|Marshaling międzyoperacyjny.<br /><br /> Współdziałanie i organizowanie COM.|  
-|STA|MTA<br /><br /> STA|Współdziałanie i organizowanie COM.<br /><br /> Marshaling międzyoperacyjny.|  
+|MTA (domyślnie)|MTA<br /><br /> STA|Organizowanie międzyoperacyjnych.<br /><br /> Współdziałanie i kierowanie modelu COM.|  
+|STA|MTA<br /><br /> STA|Współdziałanie i kierowanie modelu COM.<br /><br /> Organizowanie międzyoperacyjnych.|  
   
- Gdy klienta zarządzanego i niezarządzanego serwera są tego samego typu apartment, współdziałanie marshaling usługi obsługuje kierowanie wszystkich danych. Jednak jeśli klienta i serwera są inicjowane w apartamentach różnych, kierowanie modelu COM jest również wymagane. Na poniższej ilustracji pokazano elementy wywołania typu apartment krzyżowe.  
+ Gdy zarządzany klient i serwer niezarządzany znajdują się w tym samym elemencie Apartment, usługa Marshaling Interop obsługuje wszystkie dane dotyczące organizowania. Jednak po zainicjowaniu klienta i serwera w różnych apartamentach jest również wymagane kierowanie modelu COM. Na poniższej ilustracji przedstawiono elementy wywołania między komórkami.  
   
- ![COM marshaling](./media/interop-marshaling/single-process-across-multi-apartment.gif "apartamentu dla wielu wywołań między klient modelu .NET i obiektu COM")  
+ ![Kierowanie modelu COM](./media/interop-marshaling/single-process-across-multi-apartment.gif "Wywołanie między komórkami między klientem .net a obiektem com")  
   
- Dla typu apartment między organizowanie, należy wykonać następujące:  
+ W przypadku organizowania między komórkami można wykonać następujące czynności:  
   
-- Zaakceptuj obciążenie szeregowanie między apartamentu, który jest widoczne tylko wtedy, gdy istnieje wiele wywołań przez granicę. Należy zarejestrować biblioteki typów składnika modelu COM dla wywołań do pomyślnie przekroczenia granic typu apartment.  
+- Zaakceptuj obciążenie związane z kierowaniem między komórkami, co jest zauważalne tylko wtedy, gdy na granicy występuje wiele wywołań. Należy zarejestrować bibliotekę typów składnika COM dla wywołań, aby pomyślnie przekroczyć granicę apartamentu.  
   
-- Zmiany głównego wątku, ustawiając wątku klienta STA i MTA. Na przykład jeśli Twoja C# klient wywołuje wiele składników STA COM, możesz uniknąć apartamentu między organizowanie, ustawiając wątku głównego w komórce jednowątkowej  
+- Zmień główny wątek przez ustawienie wątku klienta na STA lub MTA. Na przykład jeśli C# klient wywołuje wiele składników com sta, można uniknąć organizowania między komórkami, ustawiając wątek główny na sta.  
   
     > [!NOTE]
-    >  Gdy wątek C# klienta jest ustawiona na STA, wywołania składników MTA COM będzie wymagać między apartamentu marshaling.  
+    > Gdy wątek C# klienta ma ustawioną wartość sta, wywołania do składników com MTA będą wymagały organizowania między komórkami.  
   
- Aby uzyskać instrukcje dotyczące jawne wybranie ustawienia modelu typu apartment, zobacz [zarządzane i niezarządzane wątkowości](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100)).  
+ Aby uzyskać instrukcje dotyczące jawnego wybierania modelu Apartment, zobacz [wątki zarządzane i niezarządzane](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100)).  
   
  [Powrót do początku](#top)  
   
 <a name="marshaling_remote_calls"></a>   
-## <a name="marshaling-remote-calls"></a>Kierowanie wywołań zdalnych  
- Podobnie jak w przypadku wielu apartamentu organizowanie, kierowanie modelu COM jest zaangażowana w każdym wywołaniu między kodem zarządzanym i niezarządzanym zawsze wtedy, gdy obiekty znajdują się w osobnych procesach. Na przykład:  
+## <a name="marshaling-remote-calls"></a>Kierowanie zdalnych wywołań  
+ Podobnie jak w przypadku organizowania między komórkami, kierowanie odbywa się w każdym wywołaniu między kodem zarządzanym i niezarządzanym za każdym razem, gdy obiekty znajdują się w osobnych procesach. Na przykład:  
   
-- Klient modelu COM, który wywołuje serwerów zarządzanych na zdalnym hoście używa rozproszonych (DCOM).  
+- Klient COM, który wywołuje serwer zarządzany na hoście zdalnym, używa rozproszonego modelu COM (DCOM).  
   
-- Klient zarządzany, który wywołuje serwer COM, na zdalnym hoście używa protokołu DCOM.  
+- Zarządzany klient, który wywołuje serwer COM na hoście zdalnym, korzysta z modelu DCOM.  
   
- Na poniższej ilustracji przedstawiono marshaling międzyoperacyjny jak i kierowanie modelu COM zapewniają kanałów komunikacyjnych granice procesu i hosta.  
+ Na poniższej ilustracji przedstawiono, jak kierowanie międzyoperacyjności i kierowanie modelu COM zapewniają kanały komunikacji między procesami i granicami hosta.  
   
- ![COM marshaling](./media/interop-marshaling/interop-and-com-marshaling.gif "szeregowanie między procesami")  
+ ![Kierowanie modelu COM](./media/interop-marshaling/interop-and-com-marshaling.gif "Kierowanie między procesami")  
   
-### <a name="preserving-identity"></a>Zachowywanie tożsamości  
- Środowisko uruchomieniowe języka wspólnego zachowuje tożsamość odwołania zarządzane i niezarządzane. Poniższa ilustracja przedstawia przepływ bezpośrednimi odwołaniami niezarządzane (górny wiersz) i bezpośredniego zarządzanych odwołania (dolny wiersz) granice procesu i hosta.  
+### <a name="preserving-identity"></a>Zachowanie tożsamości  
+ Środowisko uruchomieniowe języka wspólnego zachowuje tożsamość odwołań zarządzanych i niezarządzanych. Na poniższej ilustracji przedstawiono przepływ bezpośrednich odwołań niezarządzanych (górny wiersz) i bezpośrednie zarządzane odwołania (ostatni wiersz) między procesem i granicami hosta.  
   
- ![Wywoływana otoka COM i wywoływana otoka środowiska uruchomieniowego](./media/interop-marshaling/interop-direct-ref-across-process.gif "odwołania przechodzi przez granice procesu i hosta")  
+ Otoka, która umożliwia wywoływanie ![com](./media/interop-marshaling/interop-direct-ref-across-process.gif "Przekazywanie odwołań między procesami i granicami hosta")  
   
  Na tej ilustracji:  
   
-- Niezarządzany klient pobiera odwołanie do obiektu COM z obiektu zarządzanego, która pobiera odwołanie z hosta zdalnego. Mechanizm komunikacji zdalnej jest model DCOM.  
+- Niezarządzany Klient pobiera odwołanie do obiektu COM z zarządzanego obiektu, który pobiera to odwołanie z hosta zdalnego. Mechanizm komunikacji zdalnej jest modelem DCOM.  
   
-- Klient zarządzany pobiera odwołanie do zarządzanego obiektu z obiektu COM, który pobiera odwołanie z hosta zdalnego. Mechanizm komunikacji zdalnej jest model DCOM.  
+- Zarządzany Klient pobiera odwołanie do obiektu zarządzanego z obiektu COM, który pobiera to odwołanie z hosta zdalnego. Mechanizm komunikacji zdalnej jest modelem DCOM.  
   
     > [!NOTE]
-    >  Musi być zarejestrowana wyeksportowanej biblioteki typów z serwerów zarządzanych.  
+    > Eksportowana biblioteka typów serwera zarządzanego musi być zarejestrowana.  
   
- Liczba procesów granic między obiektami wywołującym i wywoływanym nie ma znaczenia; Ten sam bezpośredniego odwołuje się do występuje wywołań w procesie i spoza procesu.  
+ Liczba granic procesów między obiektem wywołującym i wywoływanym jest istotna; ten sam bezpośredni odwołujący występuje dla wywołań przetwarzanych i pozaprocesowych.  
   
-### <a name="managed-remoting"></a>Zarządzanych usług zdalnych  
- Środowisko wykonawcze zapewnia również zarządzanych usług zdalnych, używane do ustanawiania kanału komunikacyjnego między obiektami zarządzanej granice procesu i hosta. Zarządzane komunikacji zdalnej może obsłużyć zapory między składnikami komunikujące się, jak pokazano na następującym rysunku.  
+### <a name="managed-remoting"></a>Zarządzane komunikacja zdalna  
+ Środowisko uruchomieniowe zapewnia również zarządzane połączenia zdalne, których można użyć do ustanowienia kanału komunikacyjnego między obiektami zarządzanymi w granicach procesu i hosta. Zarządzane komunikacja zdalna może obsługiwać zaporę między składnikami komunikacji, jak pokazano na poniższej ilustracji.  
   
- ![Protokół SOAP lub TcpChannel](./media/interop-marshaling/interop-remote-soap-or-tcp.gif "zdalnego wywołania przez zapory za pomocą protokołu SOAP lub klasy TcpChannel")  
-Zdalne wywołania przez zapory za pomocą protokołu SOAP lub klasy TcpChannel  
+ ![Protokół SOAP lub TcpChannel](./media/interop-marshaling/interop-remote-soap-or-tcp.gif "Zdalne wywołania między zaporami przy użyciu protokołu SOAP lub klasy TcpChannel")  
+Zdalne wywołania między zaporami przy użyciu protokołu SOAP lub klasy TcpChannel  
   
- Niektóre wywołania niezarządzanych może channeled za pośrednictwem protokołu SOAP, takie jak wywołania między obsługiwanych składników i modelu COM.  
+ Niektóre niezarządzane wywołania można obsłużyć za pośrednictwem protokołu SOAP, takiego jak wywołania między składnikami usług i COM.  
   
  [Powrót do początku](#top)  
   
@@ -140,15 +140,15 @@ Zdalne wywołania przez zapory za pomocą protokołu SOAP lub klasy TcpChannel
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Domyślne zachowanie marshalingu](default-marshaling-behavior.md)|W tym artykule opisano reguły, które międzyoperacyjny usługa kierowania używa do organizowania danych.|  
-|[Marshaling danych w wywołaniu platformy](marshaling-data-with-platform-invoke.md)|W tym artykule opisano, jak deklarować parametrów metod i przekazywać argumenty do funkcji eksportowanych przez niezarządzanych bibliotek.|  
-|[Marshaling danych za pomocą modelu COM](marshaling-data-with-com-interop.md)|Opisuje sposób dostosowywania otoki COM, aby zmienić zachowanie organizowania.|  
-|[Instrukcje: Migrowanie zarządzanego kodu DCOM do WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|W tym artykule opisano, jak przeprowadzić migrację z modelu DCOM do WCF.|  
-|[Instrukcje: Mapa wyników HRESULT i wyjątków](how-to-map-hresults-and-exceptions.md)|W tym artykule opisano sposób mapowania niestandardowej wyjątków na wartości HRESULT i zapewnia pełną mapowania od każdego HRESULT do jej klasy porównywalne wyjątków w programie .NET Framework.|  
-|[Międzyoperacyjne używanie typów ogólnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|W tym artykule opisano akcje, które są obsługiwane w przypadku współdziałania COM za pomocą typów ogólnych.|  
-|[Współdziałanie z kodem niezarządzanym](index.md)|Opisuje współdziałanie usługi udostępniane przez środowisko uruchomieniowe języka wspólnego.|  
-|[Zaawansowane współdziałanie modeli COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Zawiera łącza do dodatkowych informacji o dołączaniu składników COM do aplikacji środowiska .NET Framework.|  
-|[Zagadnienia dotyczące projektowania do celów międzyoperacyjności](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|Zawiera wskazówki dotyczące pisania zintegrowane składników COM.|  
+|[Domyślne zachowanie marshalingu](default-marshaling-behavior.md)|Opisuje reguły, których usługa Marshaling Interop używa do organizowania danych.|  
+|[Marshaling danych w wywołaniu platformy](marshaling-data-with-platform-invoke.md)|Opisuje sposób deklarowania parametrów metody i przekazywania argumentów do funkcji wyeksportowanych przez niezarządzane biblioteki.|  
+|[Marshaling danych za pomocą modelu COM](marshaling-data-with-com-interop.md)|Opisuje sposób dostosowywania otok COM w celu zmiany sposobu organizowania zachowań.|  
+|[Instrukcje: Migrowanie kodu zarządzanego DCOM do programu WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|Opisuje sposób migrowania z modelu DCOM do programu WCF.|  
+|[Instrukcje: Mapuj HRESULTs i Exceptions](how-to-map-hresults-and-exceptions.md)|Opisuje sposób mapowania niestandardowych wyjątków na HRESULTs i zapewnia pełne mapowanie z każdego HRESULT do jego porównywalnej klasy wyjątku w .NET Framework.|  
+|[Współdziałanie przy użyciu typów ogólnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|Opisuje, które akcje są obsługiwane w przypadku używania typów ogólnych do współdziałania z modelem COM.|  
+|[Współdziałanie z kodem niezarządzanym](index.md)|Opisuje usługi współdziałania udostępniane przez środowisko uruchomieniowe języka wspólnego.|  
+|[Zaawansowana współdziałanie COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Zawiera łącza do dodatkowych informacji na temat dołączania składników COM do aplikacji .NET Framework.|  
+|[Zagadnienia dotyczące projektowania operacji międzyoperacyjnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|Zawiera wskazówki dotyczące pisania zintegrowanych składników COM.|  
   
  [Powrót do początku](#top)  
   

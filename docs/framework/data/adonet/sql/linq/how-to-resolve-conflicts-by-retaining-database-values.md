@@ -5,37 +5,37 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b475cf72-9e64-4f6e-99c1-af7737bc85ef
-ms.openlocfilehash: 8440ffe61e254403357970d771aea207a6eb6092
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 828f0a21ca1ea4155f31dfbc87b01dc8c4b81e40
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037665"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928735"
 ---
 # <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>Instrukcje: Rozwiązywanie konfliktów z zachowaniem wartości bazy danych
-Aby uzgodnić różnice między wartościami oczekiwanymi i rzeczywistymi bazy danych, zanim spróbujesz ponownie prześlij zmiany, możesz użyć <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> do przechowywania wartości znajdujących się w bazie danych. Bieżące wartości w modelu obiektów następnie zostaną zastąpione. Aby uzyskać więcej informacji, zobacz [optymistycznej współbieżności: Omówienie](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
+Aby uzgodnić różnice między oczekiwanymi i rzeczywistymi wartościami bazy danych przed próbą ponownego przesłania zmian, można użyć <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> programu w celu zachowania wartości znalezionych w bazie danych. Bieżące wartości w modelu obiektów są następnie zastępowane. Aby uzyskać więcej informacji, [Zobacz optymistyczne współbieżność: Przegląd](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
   
 > [!NOTE]
->  We wszystkich przypadkach rekordu na komputerze klienckim najpierw są odświeżane poprzez pobranie zaktualizowanych danych z bazy danych. Ta akcja gwarantuje, że następnej próbie aktualizacji zakończy się niepowodzeniem na tych samych kontroli współbieżności.  
+> We wszystkich przypadkach rekord na kliencie jest najpierw odświeżany przez pobranie zaktualizowanych danych z bazy danych. Ta akcja zapewnia, że kolejna próba aktualizacji nie powiedzie się na tych samych kontrolach współbieżności.  
   
 ## <a name="example"></a>Przykład  
- W tym scenariuszu <xref:System.Data.Linq.ChangeConflictException> wyjątek jest zgłaszany, gdy użytkownik User1 próbuje przesłać zmiany, ponieważ użytkownik2, w tym samym czasie została zmieniona kolumny Asystenta ustawień i działu. W poniższej tabeli przedstawiono tę sytuację.  
+ W tym scenariuszu <xref:System.Data.Linq.ChangeConflictException> wyjątek jest zgłaszany, gdy Użytkownik1 próbuje przesłać zmiany, ponieważ w międzyczasie została zmieniona kolumna asystenta i działu. W poniższej tabeli przedstawiono sytuację.  
   
-||maszyny wirtualnej|Asystenta ustawień|Dział|  
+||maszyny wirtualnej|Pomocnik|Dział|  
 |------|-------------|---------------|----------------|  
-|Oryginalny stan bazy danych po otrzymaniu kwerendy od użytkownika Użytkownik1 i Użytkownik2.|Alfreds|Maria|Sprzedaż|  
-|Użytkownik1 przygotowuje się do przesyłania tych zmian.|Alfred||Marketing|  
-|UŻYTKOWNIK2 zostało już przesłane te zmiany.||Mary|Usługa|  
+|Oryginalny stan bazy danych podczas wykonywania zapytania przez Użytkownik1 i.|Alfreds|Maria|Sprzedaż|  
+|Użytkownik1 przygotowuje się do przesłania tych zmian.|Alfred||Marketing|  
+|Do tego celu zostały już przesłane te zmiany.||Anna|Usługa|  
   
- Użytkownik1 decyduje rozwiązać ten konflikt przez nowszą wartości z bazy danych, zastąpienie bieżących wartości w modelu obiektów.  
+ Użytkownik1 decyduje się rozwiązać ten konflikt, mając nowsze wartości bazy danych zastępują bieżące wartości w modelu obiektów.  
   
- Gdy użytkownik User1 rozwiązuje konflikt przy użyciu <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues>, wynik w bazie danych jest w następujący sposób w tabeli:  
+ Gdy Użytkownik1 rozwiązuje konflikt przy użyciu <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues>, wynik w bazie danych jest następujący w tabeli:  
   
-||maszyny wirtualnej|Asystenta ustawień|Dział|  
+||maszyny wirtualnej|Pomocnik|Dział|  
 |------|-------------|---------------|----------------|  
-|Nowy stan po rozwiązywania konfliktów.|Alfreds<br /><br /> (oryginalny)|Mary<br /><br /> (od Użytkownik2)|Usługa<br /><br /> (od Użytkownik2)|  
+|Nowy stan po rozwiązaniu konfliktu.|Alfreds<br /><br /> oryginalnego|Anna<br /><br /> (od b do)|Usługa<br /><br /> (od b do)|  
   
- Poniższy przykład kodu pokazuje, jak zastąpić bieżące wartości w modelu obiektów z wartościami bazy danych. (Nie inspekcji lub niestandardową obsługę konflikty poszczególnym członkom występuje.)  
+ Poniższy przykładowy kod pokazuje, jak zastąpić bieżące wartości w modelu obiektów wartościami bazy danych. (Żadna Inspekcja lub Niestandardowa obsługa konfliktów poszczególnych członków nie występuje).  
   
  [!code-csharp[System.Data.Linq.RefreshMode#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.refreshmode/cs/program.cs#1)]
  [!code-vb[System.Data.Linq.RefreshMode#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#1)]  

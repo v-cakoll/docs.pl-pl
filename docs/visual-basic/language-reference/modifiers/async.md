@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: cf2c62878e8902afa9455c789d41393b73110172
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 6a3d9c8eb8e5929796683bd0bb50159ca0c69f1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434055"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959866"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
 Modyfikator wskazuje, że metoda lub [wyrażenie lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) , które modyfikuje jest asynchroniczne. `Async` Takie metody są nazywane metodami *asynchronicznymi*.  
@@ -20,7 +20,7 @@ Modyfikator wskazuje, że metoda lub [wyrażenie lambda](../../../visual-basic/p
  Metoda async zapewnia wygodny sposób wykonywania potencjalnie długotrwałych zadań bez blokowania wątku wywołującego. Obiekt wywołujący metodę Async może wznowić swoją pracę bez oczekiwania na zakończenie metody asynchronicznej.  
   
 > [!NOTE]
->  Słowa kluczowe `Await` i zostały wprowadzone w programie Visual Studio 2012. `Async` Aby zapoznać się z wprowadzeniem do programowania asynchronicznego, zobacz [programowanie asynchroniczne z Async i await](../../../visual-basic/programming-guide/concepts/async/index.md).  
+> Słowa kluczowe `Await` i zostały wprowadzone w programie Visual Studio 2012. `Async` Aby zapoznać się z wprowadzeniem do programowania asynchronicznego, zobacz [programowanie asynchroniczne z Async i await](../../../visual-basic/programming-guide/concepts/async/index.md).  
   
  Poniższy przykład pokazuje strukturę metody asynchronicznej. Według Konwencji nazwy metod asynchronicznych kończą się na "Async".  
   
@@ -47,7 +47,7 @@ End Function
  `Async` Słowo kluczowe jest niezastrzeżonym słowem kluczowym. Jest to słowo kluczowe, gdy modyfikuje metodę lub wyrażenie lambda. We wszystkich innych kontekstach jest interpretowana jako identyfikator.  
   
 ## <a name="return-types"></a>Typy zwracane  
- Metoda async to <xref:System.Threading.Tasks.Task> procedura [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) lub procedura, która ma zwracany typ lub. [](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) <xref:System.Threading.Tasks.Task%601> Metoda nie może deklarować żadnych parametrów [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) .  
+ Metoda async to procedura [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) lub procedura, która ma [](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) <xref:System.Threading.Tasks.Task> zwracany typ lub. <xref:System.Threading.Tasks.Task%601> Metoda nie może deklarować żadnych parametrów [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) .  
   
  Określono `Task(Of TResult)` dla zwracanego typu metody asynchronicznej, jeśli instrukcja [Return](../../../visual-basic/language-reference/statements/return-statement.md) metody ma operand typu TResult. Należy użyć `Task` , jeśli podczas kończenia metody nie zostanie zwrócona wartość znacząca. Oznacza to, że `Task`wywołanie metody zwraca, ale `Task` gdy zostanie zakończone, każda `Await` instrukcja oczekująca `Task` nie tworzy wartości wyniku.  
   

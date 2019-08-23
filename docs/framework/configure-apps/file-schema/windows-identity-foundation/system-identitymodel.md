@@ -3,15 +3,15 @@ title: <system.identityModel>
 ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
-ms.openlocfilehash: 2f0040fb7084b9d53adbd1a114f1cfc62d58e5a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 286ae88946692e6894ca3c7ee9e1348415c84ade
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793760"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943603"
 ---
 # <a name="systemidentitymodel"></a>\<system.identityModel>
-Udostępnia konfigurację dla Włączanie opcji Windows Identity Foundation (WIF) w aplikacjach.  
+Zapewnia konfigurację umożliwiającą włączanie opcji Windows Identity Foundation (WIF) w aplikacjach.  
   
  \<system.identityModel>  
   
@@ -32,7 +32,7 @@ Udostępnia konfigurację dla Włączanie opcji Windows Identity Foundation (WIF
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Określa ustawienia tożsamości na poziomie usługi.|  
+|[\<identityConfiguration>](identityconfiguration.md)|Określa ustawienia tożsamości na poziomie usług.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -41,10 +41,10 @@ Udostępnia konfigurację dla Włączanie opcji Windows Identity Foundation (WIF
 |`<configuration>`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
   
 ## <a name="remarks"></a>Uwagi  
- Dodaj `<system.identityModel>` sekcję do pliku konfiguracji, aby skonfigurować usługi lub aplikacji do korzystania z usługi Windows Identity Foundation (WIF). `<system.identityModel>` Element jest reprezentowany przez <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> klasy.  
+ `<system.identityModel>` Dodaj sekcję do pliku konfiguracji, aby skonfigurować usługę lub aplikację do korzystania z programu Windows Identity Foundation (WIF). Element jest reprezentowany <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> przez klasę. `<system.identityModel>`  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak dodać `<system.identityModel>` sekcję do pliku konfiguracji. Należy najpierw dodać konfiguracji sekcji i przestrzeń nazw deklaracji w obszarze `<configSections>` elementu. Następnie można dodać `<system.IdentityModel>` elementu do pliku konfiguracji w celu określenia co najmniej jedna konfiguracja tożsamości.  
+ Poniższy przykład pokazuje, jak dodać `<system.identityModel>` sekcję do pliku konfiguracji. Najpierw należy dodać sekcję konfiguracyjną i deklarację przestrzeni nazw w `<configSections>` ramach elementu. Następnie można dodać `<system.IdentityModel>` element do pliku konfiguracji, aby określić co najmniej jedną konfigurację tożsamości.  
   
 ```xml  
 <configuration>  

@@ -2,68 +2,68 @@
 title: 'Instrukcje: blokowanie punktów końcowych w przedsiębiorstwie'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: ae4884cb0dcc1b1bdf81d98a9c7a7a87e836af1b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6a74df56d4c283569988d310b2a501e6440f58ca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606240"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951653"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Instrukcje: blokowanie punktów końcowych w przedsiębiorstwie
-Dla dużych przedsiębiorstw często wymagają, że aplikacje są opracowywane zgodne z zasadami zabezpieczeń organizacji. Temacie opisano kroki umożliwiające tworzenie i instalowanie klienta weryfikacji punktu końcowego, który może służyć do sprawdzania poprawności wszystkie aplikacje klienckie usługi Windows Communication Foundation (WCF) zainstalowane na komputerach.  
+Duże przedsiębiorstwa często wymagają, aby aplikacje były opracowywane pod kątem zgodności z zasadami zabezpieczeń przedsiębiorstwa. W poniższych tematach omówiono sposób tworzenia i instalowania modułu sprawdzania poprawności punktu końcowego klienta, który może służyć do sprawdzania poprawności wszystkich aplikacji klienckich Windows Communication Foundation (WCF) zainstalowanych na komputerach.  
   
- W tym przypadku modułu sprawdzania poprawności jest moduł weryfikacji klienta, ponieważ to zachowanie punktu końcowego jest dodawany do klienta [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sekcji w pliku machine.config. WCF ładuje wspólnego zachowania punktu końcowego tylko dla aplikacji klienckich i ładuje wspólnego zachowania usługi tylko dla aplikacji usługi. Aby zainstalować tego samego modułu weryfikacji dla aplikacji usług, moduł weryfikacji musi być zachowania usługi. Aby uzyskać więcej informacji, zobacz [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sekcji.  
+ W takim przypadku moduł sprawdzania poprawności jest modułem sprawdzania poprawności klienta, ponieważ to zachowanie punktu końcowego jest dodawane do sekcji [ \<> CommonBehaviors](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) klienta w pliku Machine. config. Funkcja WCF ładuje typowe zachowania punktów końcowych tylko dla aplikacji klienckich i ładuje wspólne zachowania usługi tylko dla aplikacji usługi. Aby można było zainstalować ten sam moduł sprawdzania poprawności dla aplikacji usługi, moduł sprawdzania poprawności musi być zachowaniem usługi. Aby uzyskać więcej informacji, zobacz [ \<sekcję > CommonBehaviors](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) .  
   
 > [!IMPORTANT]
->  Zachowania usługi lub punkt końcowy nie jest oznaczony atrybutem <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atrybutu (APTCA), które są dodawane do [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sekcję pliku konfiguracji nie są uruchamiane, gdy aplikacja zostanie uruchomiona w częściowej relacji zaufania środowiska i żaden wyjątek jest zgłaszany w takiej sytuacji. Aby wymusić uruchomienie wspólny zbiór wykonywanych czynności takich jak moduły weryfikacji, należy:  
+> Zachowania usługi lub punktu końcowego nie są oznaczone <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atrybutem (APTCA), które są dodawane [ \<do sekcji CommonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) pliku konfiguracji nie są uruchamiane, gdy aplikacja działa w środowisku częściowego zaufania, a nie wyjątek jest zgłaszany w przypadku wystąpienia tego problemu. Aby wymusić uruchamianie typowych zachowań, takich jak walidatori, należy wykonać jedną z:  
 >   
->  --Oznacz swoje wspólnego zachowania za pomocą <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atrybutu, dzięki czemu można uruchomić, gdy wdrożony jako aplikacja częściowego zaufania. Należy pamiętać, że wpis rejestru można ustawić na komputerze, aby zapobiec oznaczone APTCA zestawy uruchamianie...  
+>  --Oznacz wspólne zachowanie przy użyciu <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atrybutu, aby można go było uruchomić w przypadku wdrożenia jako częściowo zaufanej aplikacji. Zwróć uwagę na to, że wpis rejestru można ustawić na komputerze, aby zapobiec uruchamianiu zestawów oznaczonych przez APTCA.  
 >   
->  — Upewnij się, że jeśli aplikacja jest wdrażana jako w pełni zaufanych aplikacji, użytkownicy nie mogą modyfikować ustawienia zabezpieczeń dostępu kodu, aby uruchomić aplikację w środowisku częściowego zaufania. Jeśli tak jest, więc, niestandardowego modułu weryfikacji nie działa i nie jest zgłaszany żaden wyjątek. Jednym ze sposobów to zapewnić, można zobaczyć `levelfinal` opcji za pomocą [narzędzie zasad zabezpieczeń dostępu kodu (Caspol.exe)](https://go.microsoft.com/fwlink/?LinkId=248222).  
+>  --Upewnij się, że jeśli aplikacja jest wdrożona jako w pełni zaufana aplikacja, której użytkownicy nie mogą modyfikować ustawień zabezpieczeń dostępu do kodu w celu uruchamiania aplikacji w środowisku częściowej relacji zaufania. Jeśli tak się stanie, niestandardowy moduł sprawdzania poprawności nie zostanie uruchomiony i nie zostanie zgłoszony żaden wyjątek. Aby zapewnić tę możliwość, zobacz `levelfinal` opcję używanie [narzędzia zasad zabezpieczeń dostępu kodu (Caspol. exe)](https://go.microsoft.com/fwlink/?LinkId=248222).  
 >   
->  Aby uzyskać więcej informacji, zobacz [częściowego zaufania najlepszych rozwiązań](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md) i [obsługiwane scenariusze wdrażania](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md).  
+>  Aby uzyskać więcej informacji, zobacz [częściowe najlepsze rozwiązania zaufania](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md) i [obsługiwane scenariusze wdrażania](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md).  
   
-### <a name="to-create-the-endpoint-validator"></a>Aby utworzyć punkt końcowy modułu sprawdzania poprawności  
+### <a name="to-create-the-endpoint-validator"></a>Aby utworzyć moduł sprawdzania poprawności punktu końcowego  
   
-1. Tworzenie <xref:System.ServiceModel.Description.IEndpointBehavior> czynności żądaną sprawdzania poprawności w <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A> metody. Poniższy kod zawiera przykład. ( `InternetClientValidatorBehavior` Jest pobierana z [weryfikacji zabezpieczeń](../../../../docs/framework/wcf/samples/security-validation.md) próbki.)  
+1. Utwórz element <xref:System.ServiceModel.Description.IEndpointBehavior> z żądanymi krokami walidacji <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A> w metodzie. Poniższy kod zawiera przykład. (Jest pobierany z przykładu [weryfikacji zabezpieczeń).](../../../../docs/framework/wcf/samples/security-validation.md) `InternetClientValidatorBehavior`  
   
      [!code-csharp[LockdownValidation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorbehavior.cs#2)]  
   
-2. Utwórz nową <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> które rejestruje moduł weryfikacji punktu końcowego utworzonego w kroku 1. Poniższy przykład kodu pokazuje to. (Trwa oryginalny kod w tym przykładzie [weryfikacji zabezpieczeń](../../../../docs/framework/wcf/samples/security-validation.md) przykładowe.)  
+2. Utwórz nowy <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> , który rejestruje moduł walidacji punktu końcowego utworzony w kroku 1. Poniższy przykład kodu pokazuje to. (Oryginalny kod dla tego przykładu znajduje się w przykładowej [weryfikacji zabezpieczeń](../../../../docs/framework/wcf/samples/security-validation.md) ).  
   
      [!code-csharp[LockdownValidation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorelement.cs#3)]  
   
-3. Upewnij się, że skompilowany zestaw jest podpisany silną nazwą. Aby uzyskać więcej informacji, zobacz [narzędzie silnych nazw (SN. Z rozszerzeniem EXE)](https://go.microsoft.com/fwlink/?LinkId=248217) i polecenia kompilatora dla danego języka.  
+3. Upewnij się, że skompilowany zestaw jest podpisany przy użyciu silnej nazwy. Aby uzyskać szczegółowe informacje, zobacz [Narzędzie silnej nazwy (SN). EXE)](https://go.microsoft.com/fwlink/?LinkId=248217) i poleceń kompilatora dla danego języka.  
   
-### <a name="to-install-the-validator-into-the-target-computer"></a>Aby zainstalować moduł weryfikacji do komputera docelowego  
+### <a name="to-install-the-validator-into-the-target-computer"></a>Aby zainstalować moduł sprawdzania poprawności na komputerze docelowym  
   
-1. Zainstaluj punkt końcowy modułu sprawdzania poprawności, przy użyciu odpowiedniego mechanizmu. W przedsiębiorstwie to może być za pomocą zasad grupy i Systems Management Server (SMS).  
+1. Zainstaluj moduł sprawdzania poprawności punktu końcowego przy użyciu odpowiedniego mechanizmu. W przedsiębiorstwie może być używane zasady grupy i Systems Management Server (SMS).  
   
-2. Zainstaluj silnej nazwy zestawu w globalnej pamięci podręcznej przy użyciu [Gacutil.exe (Global Assembly Cache Tool)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
+2. Zainstaluj zestaw o silnej nazwie w globalnej pamięci podręcznej zestawów przy użyciu programu [Gacutil. exe (Global Assembly Cache Tool)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
   
-3. Użyj <xref:System.Configuration?displayProperty=nameWithType> typów w przestrzeni nazw, aby:  
+3. Użyj typów <xref:System.Configuration?displayProperty=nameWithType> przestrzeni nazw, aby:  
   
-    1. Dodaj rozszerzenie [ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md) sekcji przy użyciu w pełni kwalifikowaną nazwę typu i Zablokuj elementu.  
+    1. Dodaj rozszerzenie do [ \<sekcji BehaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md) przy użyciu w pełni kwalifikowanej nazwy typu i Zablokuj element.  
   
          [!code-csharp[LockdownValidation#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#5)]  
   
-    2. Dodany element zachowanie `EndpointBehaviors` właściwość [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sekcji, a następnie zablokować element. (Aby zainstalować moduł weryfikacji w usłudze, muszą być modułu sprawdzania poprawności <xref:System.ServiceModel.Description.IServiceBehavior> i dodane do `ServiceBehaviors` właściwości.) Poniższy przykład kodu pokazuje właściwa konfiguracja po wykonaniu kroków. i b. przy użyciu jedynym wyjątkiem, że istnieje nie silnej nazwy.  
+    2. Dodaj element Behavior do `EndpointBehaviors` właściwości [ \<CommonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) i Zablokuj element. (Aby zainstalować moduł sprawdzania poprawności w usłudze, moduł sprawdzania poprawności musi być <xref:System.ServiceModel.Description.IServiceBehavior> i dodany `ServiceBehaviors` do właściwości). Poniższy przykład kodu pokazuje odpowiednią konfigurację po wykonaniu kroków a. i b., z wyłącznym wyjątkiem, że nie ma silnej nazwy.  
   
          [!code-csharp[LockdownValidation#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#6)]  
   
-    3. Zapisz plik machine.config. Poniższy kod wykonuje wszystkie zadania w kroku 3, ale zapisuje kopię pliku machine.config zmodyfikowany lokalnie.  
+    3. Zapisz plik machine.config. Poniższy przykład kodu wykonuje wszystkie zadania w kroku 3, ale zapisuje kopię lokalnie zmodyfikowanego pliku Machine. config.  
   
          [!code-csharp[LockdownValidation#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#7)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje sposób dodawania wspólnego zachowania do pliku machine.config i Zapisz kopię na dysku. `InternetClientValidatorBehavior` Jest pobierana z [weryfikacji zabezpieczeń](../../../../docs/framework/wcf/samples/security-validation.md) próbki.  
+ Poniższy przykład kodu pokazuje, jak dodać typowe zachowanie do pliku Machine. config i zapisać kopię na dysku. Jest pobierana z przykładu [weryfikacji zabezpieczeń.](../../../../docs/framework/wcf/samples/security-validation.md) `InternetClientValidatorBehavior`  
   
  [!code-csharp[LockdownValidation#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#1)]  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- Można również zaszyfrować elementy pliku konfiguracji. Aby uzyskać więcej informacji zobacz sekcję Zobacz też.  
+ Można również zaszyfrować elementy pliku konfiguracji. Aby uzyskać więcej informacji, zobacz sekcję Zobacz też.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Szyfrowanie przy użyciu interfejsu DPAPI elementy pliku konfiguracji](https://go.microsoft.com/fwlink/?LinkId=94954)
-- [Szyfrowanie przy użyciu RSA elementy pliku konfiguracji](https://go.microsoft.com/fwlink/?LinkId=94955)
+- [Szyfrowanie elementów pliku konfiguracji przy użyciu funkcji DPAPI](https://go.microsoft.com/fwlink/?LinkId=94954)
+- [Szyfrowanie elementów pliku konfiguracji przy użyciu RSA](https://go.microsoft.com/fwlink/?LinkId=94955)

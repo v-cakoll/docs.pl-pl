@@ -8,23 +8,23 @@ helpviewer_keywords:
 - KnownTypes
 - <declaredTypes> element
 ms.assetid: f35184e4-9d9e-4d37-8fb4-d5b58220eb3e
-ms.openlocfilehash: 8919ee717012f8badcf7015bf8d850ed431c5943
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cef34a8836c7b17fe9a85cac190090f42653df14
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701167"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919255"
 ---
-# <a name="declaredtypes"></a><span data-ttu-id="9a943-101">\<declaredTypes ></span><span class="sxs-lookup"><span data-stu-id="9a943-101">\<declaredTypes></span></span>
-<span data-ttu-id="9a943-102">Zawiera znane typy, które <xref:System.Runtime.Serialization.DataContractSerializer> używa podczas deserializacji.</span><span class="sxs-lookup"><span data-stu-id="9a943-102">Contains the known types that the <xref:System.Runtime.Serialization.DataContractSerializer> uses when deserializing.</span></span>  
+# <a name="declaredtypes"></a><span data-ttu-id="2abca-101">\<declaredTypes ></span><span class="sxs-lookup"><span data-stu-id="2abca-101">\<declaredTypes></span></span>
+<span data-ttu-id="2abca-102">Zawiera znane typy <xref:System.Runtime.Serialization.DataContractSerializer> używane podczas deserializacji.</span><span class="sxs-lookup"><span data-stu-id="2abca-102">Contains the known types that the <xref:System.Runtime.Serialization.DataContractSerializer> uses when deserializing.</span></span>  
   
- <span data-ttu-id="9a943-103">Aby uzyskać więcej informacji na temat kontraktów danych i znanych typów, zobacz [znane typy kontraktu danych](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span><span class="sxs-lookup"><span data-stu-id="9a943-103">For more information about data contracts and known types, see [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span></span>  
+ <span data-ttu-id="2abca-103">Aby uzyskać więcej informacji na temat kontraktów danych i znanych typów, zobacz [znane typy kontraktu danych](../../../wcf/feature-details/data-contract-known-types.md).</span><span class="sxs-lookup"><span data-stu-id="2abca-103">For more information about data contracts and known types, see [Data Contract Known Types](../../../wcf/feature-details/data-contract-known-types.md).</span></span>  
   
- <span data-ttu-id="9a943-104">system.runtime.serialization</span><span class="sxs-lookup"><span data-stu-id="9a943-104">system.runtime.serialization</span></span>  
-<span data-ttu-id="9a943-105">\<dataContractSerializer></span><span class="sxs-lookup"><span data-stu-id="9a943-105">\<dataContractSerializer></span></span>  
-<span data-ttu-id="9a943-106">\<declaredTypes ></span><span class="sxs-lookup"><span data-stu-id="9a943-106">\<declaredTypes></span></span>  
+ <span data-ttu-id="2abca-104">system.runtime.serialization</span><span class="sxs-lookup"><span data-stu-id="2abca-104">system.runtime.serialization</span></span>  
+<span data-ttu-id="2abca-105">\<dataContractSerializer></span><span class="sxs-lookup"><span data-stu-id="2abca-105">\<dataContractSerializer></span></span>  
+<span data-ttu-id="2abca-106">\<declaredTypes ></span><span class="sxs-lookup"><span data-stu-id="2abca-106">\<declaredTypes></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a943-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="9a943-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2abca-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="2abca-107">Syntax</span></span>  
   
 ```xml  
 <configuration>
@@ -42,29 +42,29 @@ ms.locfileid: "61701167"
 </configuration>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="9a943-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="9a943-108">Attributes and Elements</span></span>  
- <span data-ttu-id="9a943-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="9a943-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2abca-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="2abca-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="2abca-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="2abca-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="9a943-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="9a943-110">Attributes</span></span>  
- <span data-ttu-id="9a943-111">Brak.</span><span class="sxs-lookup"><span data-stu-id="9a943-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="2abca-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="2abca-110">Attributes</span></span>  
+ <span data-ttu-id="2abca-111">Brak.</span><span class="sxs-lookup"><span data-stu-id="2abca-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="9a943-112">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="9a943-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="2abca-112">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="2abca-112">Child Elements</span></span>  
   
-|<span data-ttu-id="9a943-113">Element</span><span class="sxs-lookup"><span data-stu-id="9a943-113">Element</span></span>|<span data-ttu-id="9a943-114">Opis</span><span class="sxs-lookup"><span data-stu-id="9a943-114">Description</span></span>|  
+|<span data-ttu-id="2abca-113">Element</span><span class="sxs-lookup"><span data-stu-id="2abca-113">Element</span></span>|<span data-ttu-id="2abca-114">Opis</span><span class="sxs-lookup"><span data-stu-id="2abca-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="9a943-115">\<add></span><span class="sxs-lookup"><span data-stu-id="9a943-115">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)|<span data-ttu-id="9a943-116">Dodaje typy, które wymagają znane typy.</span><span class="sxs-lookup"><span data-stu-id="9a943-116">Adds types that require known types.</span></span>|  
+|[<span data-ttu-id="2abca-115">\<add></span><span class="sxs-lookup"><span data-stu-id="2abca-115">\<add></span></span>](add-of-declaredtypes-element.md)|<span data-ttu-id="2abca-116">Dodaje typy, które wymagają znanych typów.</span><span class="sxs-lookup"><span data-stu-id="2abca-116">Adds types that require known types.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="9a943-117">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="9a943-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="2abca-117">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="2abca-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="9a943-118">Element</span><span class="sxs-lookup"><span data-stu-id="9a943-118">Element</span></span>|<span data-ttu-id="9a943-119">Opis</span><span class="sxs-lookup"><span data-stu-id="9a943-119">Description</span></span>|  
+|<span data-ttu-id="2abca-118">Element</span><span class="sxs-lookup"><span data-stu-id="2abca-118">Element</span></span>|<span data-ttu-id="2abca-119">Opis</span><span class="sxs-lookup"><span data-stu-id="2abca-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="9a943-120">\<dataContractSerializer></span><span class="sxs-lookup"><span data-stu-id="9a943-120">\<dataContractSerializer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|<span data-ttu-id="9a943-121">Zawierająca dane konfiguracyjne <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="9a943-121">Contains configuration data for the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>|  
+|[<span data-ttu-id="2abca-120">\<dataContractSerializer></span><span class="sxs-lookup"><span data-stu-id="2abca-120">\<dataContractSerializer></span></span>](datacontractserializer-of-system-runtime-serialization.md)|<span data-ttu-id="2abca-121">Zawiera dane konfiguracji dla programu <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="2abca-121">Contains configuration data for the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9a943-122">Uwagi</span><span class="sxs-lookup"><span data-stu-id="9a943-122">Remarks</span></span>  
- <span data-ttu-id="9a943-123">Aby uzyskać więcej informacji na temat znanych typów, zobacz [znane typy kontraktu danych](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) i <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="9a943-123">For more information about known types, see [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) and <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2abca-122">Uwagi</span><span class="sxs-lookup"><span data-stu-id="2abca-122">Remarks</span></span>  
+ <span data-ttu-id="2abca-123">Aby uzyskać więcej informacji na temat znanych typów, zobacz [znane typy kontraktu danych](../../../wcf/feature-details/data-contract-known-types.md) i <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="2abca-123">For more information about known types, see [Data Contract Known Types](../../../wcf/feature-details/data-contract-known-types.md) and <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9a943-124">Przykład</span><span class="sxs-lookup"><span data-stu-id="9a943-124">Example</span></span>  
- <span data-ttu-id="9a943-125">Następujący kod XML przedstawiono typy zadeklarowane i znanych typów, które dodano do `DataContractSerializer` elementu.</span><span class="sxs-lookup"><span data-stu-id="9a943-125">The following XML code shows declared types and known types added to a `DataContractSerializer` element.</span></span> <span data-ttu-id="9a943-126">W przykładzie pokazano trzy typy dodawany.</span><span class="sxs-lookup"><span data-stu-id="9a943-126">The example shows three types being added.</span></span> <span data-ttu-id="9a943-127">Pierwszy to typ niestandardowy o nazwie "Orders", który używa znany typ o nazwie "Item".</span><span class="sxs-lookup"><span data-stu-id="9a943-127">The first is a custom type named "Orders" that uses a known type named "Item".</span></span> <span data-ttu-id="9a943-128">Drugi zadeklarowany typ jest <xref:System.Collections.Generic.List%601> , który używa `Item` jako znanego typu.</span><span class="sxs-lookup"><span data-stu-id="9a943-128">The second declared type is a <xref:System.Collections.Generic.List%601> that uses `Item` as a known type.</span></span> <span data-ttu-id="9a943-129">Na koniec trzeciego zadeklarowany typ jest <xref:System.Collections.Generic.Dictionary%602>.</span><span class="sxs-lookup"><span data-stu-id="9a943-129">Finally the third declared type is a <xref:System.Collections.Generic.Dictionary%602>.</span></span> <span data-ttu-id="9a943-130"><xref:System.Collections.Generic.Dictionary%602> Typem klasy jest typ ogólny, z parametrami typu dwa.</span><span class="sxs-lookup"><span data-stu-id="9a943-130">The <xref:System.Collections.Generic.Dictionary%602> class type is a generic type, with two type parameters.</span></span> <span data-ttu-id="9a943-131">Pierwszy reprezentuje klucz, a druga wartość.</span><span class="sxs-lookup"><span data-stu-id="9a943-131">The first represents the key and the second represents the value.</span></span> <span data-ttu-id="9a943-132">W poniższym przykładzie dodano <xref:System.Collections.Generic.List%601> drugiego typu (wartość) do listy znanych typów.</span><span class="sxs-lookup"><span data-stu-id="9a943-132">The following example adds a <xref:System.Collections.Generic.List%601> of the second type (the value) to the list of known types.</span></span> <span data-ttu-id="9a943-133">Należy użyć `index` atrybutu, aby określić które parametr typu do użycia w znanego typu.</span><span class="sxs-lookup"><span data-stu-id="9a943-133">You must use the `index` attribute to specify which type parameter to use in the known type.</span></span> <span data-ttu-id="9a943-134">W tym przypadku typ wartości jest wskazywany przez indeks atrybut ustawiony na wartość "1" (kolekcja jest liczony od zera).</span><span class="sxs-lookup"><span data-stu-id="9a943-134">In this case, the value type is indicated by the index attribute set to "1" (the collection is zero-based).</span></span>  
+## <a name="example"></a><span data-ttu-id="2abca-124">Przykład</span><span class="sxs-lookup"><span data-stu-id="2abca-124">Example</span></span>  
+ <span data-ttu-id="2abca-125">Poniższy kod XML przedstawia zadeklarowane typy i znane typy dodawane do `DataContractSerializer` elementu.</span><span class="sxs-lookup"><span data-stu-id="2abca-125">The following XML code shows declared types and known types added to a `DataContractSerializer` element.</span></span> <span data-ttu-id="2abca-126">W przykładzie pokazano trzy typy, które są dodawane.</span><span class="sxs-lookup"><span data-stu-id="2abca-126">The example shows three types being added.</span></span> <span data-ttu-id="2abca-127">Pierwszy jest typem niestandardowym o nazwie "Orders", który używa znanego typu o nazwie "Item".</span><span class="sxs-lookup"><span data-stu-id="2abca-127">The first is a custom type named "Orders" that uses a known type named "Item".</span></span> <span data-ttu-id="2abca-128">Drugi zadeklarowany typ jest <xref:System.Collections.Generic.List%601> wykorzystywany `Item` jako typ znany.</span><span class="sxs-lookup"><span data-stu-id="2abca-128">The second declared type is a <xref:System.Collections.Generic.List%601> that uses `Item` as a known type.</span></span> <span data-ttu-id="2abca-129">Na koniec trzeci zadeklarowany typ to <xref:System.Collections.Generic.Dictionary%602>.</span><span class="sxs-lookup"><span data-stu-id="2abca-129">Finally the third declared type is a <xref:System.Collections.Generic.Dictionary%602>.</span></span> <span data-ttu-id="2abca-130">Typ <xref:System.Collections.Generic.Dictionary%602> klasy jest typem ogólnym z dwoma parametrami typu.</span><span class="sxs-lookup"><span data-stu-id="2abca-130">The <xref:System.Collections.Generic.Dictionary%602> class type is a generic type, with two type parameters.</span></span> <span data-ttu-id="2abca-131">Pierwszy reprezentuje klucz, a drugi reprezentuje wartość.</span><span class="sxs-lookup"><span data-stu-id="2abca-131">The first represents the key and the second represents the value.</span></span> <span data-ttu-id="2abca-132">Poniższy przykład dodaje <xref:System.Collections.Generic.List%601> typ sekundy (wartość) do listy znanych typów.</span><span class="sxs-lookup"><span data-stu-id="2abca-132">The following example adds a <xref:System.Collections.Generic.List%601> of the second type (the value) to the list of known types.</span></span> <span data-ttu-id="2abca-133">Należy użyć atrybutu, `index` aby określić, który parametr typu ma być używany w znanym typie.</span><span class="sxs-lookup"><span data-stu-id="2abca-133">You must use the `index` attribute to specify which type parameter to use in the known type.</span></span> <span data-ttu-id="2abca-134">W takim przypadku typ wartości jest wskazywany przez atrybut indeksu ustawiony na wartość "1" (kolekcja jest różna od zera).</span><span class="sxs-lookup"><span data-stu-id="2abca-134">In this case, the value type is indicated by the index attribute set to "1" (the collection is zero-based).</span></span>  
   
 ```xml  
 <configuration>
@@ -88,9 +88,9 @@ ms.locfileid: "61701167"
 </configuration>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9a943-135">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9a943-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2abca-135">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2abca-135">See also</span></span>
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [<span data-ttu-id="9a943-136">\<dataContractSerializer></span><span class="sxs-lookup"><span data-stu-id="9a943-136">\<dataContractSerializer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
-- [<span data-ttu-id="9a943-137">Znane typy kontraktów danych</span><span class="sxs-lookup"><span data-stu-id="9a943-137">Data Contract Known Types</span></span>](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [<span data-ttu-id="9a943-138">\<add></span><span class="sxs-lookup"><span data-stu-id="9a943-138">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+- [<span data-ttu-id="2abca-136">\<dataContractSerializer></span><span class="sxs-lookup"><span data-stu-id="2abca-136">\<dataContractSerializer></span></span>](datacontractserializer-element.md)
+- [<span data-ttu-id="2abca-137">Znane typy kontraktów danych</span><span class="sxs-lookup"><span data-stu-id="2abca-137">Data Contract Known Types</span></span>](../../../wcf/feature-details/data-contract-known-types.md)
+- [<span data-ttu-id="2abca-138">\<add></span><span class="sxs-lookup"><span data-stu-id="2abca-138">\<add></span></span>](add-of-declaredtypes-element.md)

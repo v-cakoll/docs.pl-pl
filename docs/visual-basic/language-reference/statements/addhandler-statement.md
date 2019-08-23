@@ -1,5 +1,5 @@
 ---
-title: AddHandler — instrukcja (Visual Basic)
+title: AddHandler — Instrukcja (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.AddHandlerMethod
@@ -8,45 +8,45 @@ f1_keywords:
 helpviewer_keywords:
 - AddHandler statement [Visual Basic]
 ms.assetid: cfe69799-2a0f-42c0-a99e-09fed954da01
-ms.openlocfilehash: 1e8d8f512f163d82f074a5ad53fbb38a10904dfa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9913cd682e52562422ba140e27187d37c592684
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054305"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928939"
 ---
-# <a name="addhandler-statement"></a><span data-ttu-id="f9944-102">AddHandler — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="f9944-102">AddHandler Statement</span></span>
-<span data-ttu-id="f9944-103">Kojarzy zdarzenie z programem obsługi zdarzeń w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="f9944-103">Associates an event with an event handler at run time.</span></span>  
+# <a name="addhandler-statement"></a><span data-ttu-id="8c355-102">AddHandler — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="8c355-102">AddHandler Statement</span></span>
+<span data-ttu-id="8c355-103">Kojarzy zdarzenie z programem obsługi zdarzeń w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="8c355-103">Associates an event with an event handler at run time.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f9944-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="f9944-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8c355-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="8c355-104">Syntax</span></span>  
   
 ```  
 AddHandler event, AddressOf eventhandler  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="f9944-105">Części</span><span class="sxs-lookup"><span data-stu-id="f9944-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="8c355-105">Części</span><span class="sxs-lookup"><span data-stu-id="8c355-105">Parts</span></span>  
 |||
 |---|---|
-|<span data-ttu-id="f9944-106">zdarzenie</span><span class="sxs-lookup"><span data-stu-id="f9944-106">event</span></span>|<span data-ttu-id="f9944-107">Nazwa zdarzenia do obsługi.</span><span class="sxs-lookup"><span data-stu-id="f9944-107">The name of the event to handle.</span></span>|  
-|`eventhandler`|<span data-ttu-id="f9944-108">Nazwa procedury, która obsługuje zdarzenie.</span><span class="sxs-lookup"><span data-stu-id="f9944-108">The name of a procedure that handles the event.</span></span>|
+|<span data-ttu-id="8c355-106">zdarzenie</span><span class="sxs-lookup"><span data-stu-id="8c355-106">event</span></span>|<span data-ttu-id="8c355-107">Nazwa zdarzenia do obsłużenia.</span><span class="sxs-lookup"><span data-stu-id="8c355-107">The name of the event to handle.</span></span>|  
+|`eventhandler`|<span data-ttu-id="8c355-108">Nazwa procedury, która obsługuje zdarzenie.</span><span class="sxs-lookup"><span data-stu-id="8c355-108">The name of a procedure that handles the event.</span></span>|
 |||
   
-## <a name="remarks"></a><span data-ttu-id="f9944-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="f9944-109">Remarks</span></span>  
- <span data-ttu-id="f9944-110">Instrukcje `AddHandler` i `RemoveHandler` umożliwiają uruchamianie i zatrzymywanie obsługi zdarzeń w dowolnym czasie podczas wykonywania programu.</span><span class="sxs-lookup"><span data-stu-id="f9944-110">The `AddHandler` and `RemoveHandler` statements allow you to start and stop event handling at any time during program execution.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8c355-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="8c355-109">Remarks</span></span>  
+ <span data-ttu-id="8c355-110">Instrukcje `AddHandler` i `RemoveHandler` umożliwiają uruchamianie i zatrzymywanie obsługi zdarzeń w dowolnym czasie podczas wykonywania programu.</span><span class="sxs-lookup"><span data-stu-id="8c355-110">The `AddHandler` and `RemoveHandler` statements allow you to start and stop event handling at any time during program execution.</span></span>  
   
- <span data-ttu-id="f9944-111">Podpis procedury `eventhandler` musi być zgodny z podpisem zdarzenia `event`.</span><span class="sxs-lookup"><span data-stu-id="f9944-111">The signature of the `eventhandler` procedure must match the signature of the event `event`.</span></span>  
+ <span data-ttu-id="8c355-111">Podpis procedury `eventhandler` musi być zgodny z podpisem zdarzenia `event`.</span><span class="sxs-lookup"><span data-stu-id="8c355-111">The signature of the `eventhandler` procedure must match the signature of the event `event`.</span></span>  
   
- <span data-ttu-id="f9944-112">Zarówno słowo kluczowe `Handles`, jak i instrukcja `AddHandler` umożliwiają określenie konkretnych procedur do obsługi konkretnych zdarzeń, ale występują tu pewne różnice.</span><span class="sxs-lookup"><span data-stu-id="f9944-112">The `Handles` keyword and the `AddHandler` statement both allow you to specify that particular procedures handle particular events, but there are differences.</span></span> <span data-ttu-id="f9944-113">Instrukcja `AddHandler` łączy procedury ze zdarzeniami w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="f9944-113">The `AddHandler` statement connects procedures to events at run time.</span></span> <span data-ttu-id="f9944-114">Słowa kluczowego `Handles` należy użyć podczas definiowania procedury, aby określić, że ma ona obsługiwać konkretne zdarzenie.</span><span class="sxs-lookup"><span data-stu-id="f9944-114">Use the `Handles` keyword when defining a procedure to specify that it handles a particular event.</span></span> <span data-ttu-id="f9944-115">Aby uzyskać więcej informacji, zobacz artykuł [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)</span><span class="sxs-lookup"><span data-stu-id="f9944-115">For more information, see [Handles](../../../visual-basic/language-reference/statements/handles-clause.md).</span></span>  
+ <span data-ttu-id="8c355-112">Zarówno słowo kluczowe `Handles`, jak i instrukcja `AddHandler` umożliwiają określenie konkretnych procedur do obsługi konkretnych zdarzeń, ale występują tu pewne różnice.</span><span class="sxs-lookup"><span data-stu-id="8c355-112">The `Handles` keyword and the `AddHandler` statement both allow you to specify that particular procedures handle particular events, but there are differences.</span></span> <span data-ttu-id="8c355-113">Instrukcja `AddHandler` łączy procedury ze zdarzeniami w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="8c355-113">The `AddHandler` statement connects procedures to events at run time.</span></span> <span data-ttu-id="8c355-114">Słowa kluczowego `Handles` należy użyć podczas definiowania procedury, aby określić, że ma ona obsługiwać konkretne zdarzenie.</span><span class="sxs-lookup"><span data-stu-id="8c355-114">Use the `Handles` keyword when defining a procedure to specify that it handles a particular event.</span></span> <span data-ttu-id="8c355-115">Aby uzyskać więcej informacji, zobacz artykuł [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)</span><span class="sxs-lookup"><span data-stu-id="8c355-115">For more information, see [Handles](../../../visual-basic/language-reference/statements/handles-clause.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f9944-116">W przypadku zdarzeń niestandardowych instrukcja `AddHandler` wywołuje metodę dostępu zdarzenia `AddHandler`.</span><span class="sxs-lookup"><span data-stu-id="f9944-116">For custom events, the `AddHandler` statement invokes the event's `AddHandler` accessor.</span></span> <span data-ttu-id="f9944-117">Aby uzyskać więcej informacji na temat zdarzeń niestandardowych, zobacz artykuł [Instrukcja Event](../../../visual-basic/language-reference/statements/event-statement.md)</span><span class="sxs-lookup"><span data-stu-id="f9944-117">For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).</span></span>  
+> <span data-ttu-id="8c355-116">W przypadku zdarzeń niestandardowych instrukcja `AddHandler` wywołuje metodę dostępu zdarzenia `AddHandler`.</span><span class="sxs-lookup"><span data-stu-id="8c355-116">For custom events, the `AddHandler` statement invokes the event's `AddHandler` accessor.</span></span> <span data-ttu-id="8c355-117">Aby uzyskać więcej informacji na temat zdarzeń niestandardowych, zobacz artykuł [Instrukcja Event](../../../visual-basic/language-reference/statements/event-statement.md)</span><span class="sxs-lookup"><span data-stu-id="8c355-117">For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f9944-118">Przykład</span><span class="sxs-lookup"><span data-stu-id="f9944-118">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="8c355-118">Przykład</span><span class="sxs-lookup"><span data-stu-id="8c355-118">Example</span></span>  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  
   
-## <a name="see-also"></a><span data-ttu-id="f9944-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f9944-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8c355-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="8c355-119">See also</span></span>
 
-- [<span data-ttu-id="f9944-120">RemoveHandler, instrukcja</span><span class="sxs-lookup"><span data-stu-id="f9944-120">RemoveHandler Statement</span></span>](../../../visual-basic/language-reference/statements/removehandler-statement.md)
-- [<span data-ttu-id="f9944-121">Handles</span><span class="sxs-lookup"><span data-stu-id="f9944-121">Handles</span></span>](../../../visual-basic/language-reference/statements/handles-clause.md)
-- [<span data-ttu-id="f9944-122">Event, instrukcja</span><span class="sxs-lookup"><span data-stu-id="f9944-122">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)
-- [<span data-ttu-id="f9944-123">Zdarzenia</span><span class="sxs-lookup"><span data-stu-id="f9944-123">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [<span data-ttu-id="8c355-120">RemoveHandler, instrukcja</span><span class="sxs-lookup"><span data-stu-id="8c355-120">RemoveHandler Statement</span></span>](../../../visual-basic/language-reference/statements/removehandler-statement.md)
+- [<span data-ttu-id="8c355-121">Handles</span><span class="sxs-lookup"><span data-stu-id="8c355-121">Handles</span></span>](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [<span data-ttu-id="8c355-122">Event, instrukcja</span><span class="sxs-lookup"><span data-stu-id="8c355-122">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)
+- [<span data-ttu-id="8c355-123">Zdarzenia</span><span class="sxs-lookup"><span data-stu-id="8c355-123">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)

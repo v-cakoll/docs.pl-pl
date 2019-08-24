@@ -8,33 +8,37 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-ms.openlocfilehash: 0cb63be6774fd82cd94a1bc59b8a1025efa47df5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 02c40e310778bd476742f62ee8b9d8598b084a53
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966580"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015853"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>Instrukcje: dziedziczenie z klasy kontrolek
+
 Jeśli chcesz utworzyć pełną kontrolkę niestandardową do użycia w formularzu systemu Windows, należy dziedziczyć z <xref:System.Windows.Forms.Control> klasy. Chociaż dziedziczenie z <xref:System.Windows.Forms.Control> klasy wymaga wykonania większej liczby zaplanowanych i implementacji, zapewnia również największą gamę opcji. Podczas dziedziczenia z <xref:System.Windows.Forms.Control>, dziedziczysz bardzo podstawową funkcję, która sprawia, że formanty działają. Funkcja niezależna od <xref:System.Windows.Forms.Control> klasy obsługuje wprowadzanie danych przez użytkownika za pomocą klawiatury i myszy, definiuje granice i rozmiar kontrolki, udostępnia uchwyt systemu Windows i zapewnia obsługę komunikatów i zabezpieczenia. Nie zawiera żadnego malowania, co w tym przypadku jest rzeczywistym renderowaniem interfejsu graficznego formantu lub nie zawiera żadnych określonych funkcji interakcji użytkownika. Wszystkie te aspekty należy dostarczyć za poorednictwem niestandardowego kodu.
 
 ## <a name="to-create-a-custom-control"></a>Aby utworzyć kontrolkę niestandardową
 
-1. Utwórz nową **aplikację systemu Windows** lub projekt **biblioteki formantów systemu Windows** .
+1. W programie Visual Studio Utwórz nową **aplikację systemu Windows** lub projekt **biblioteki formantów systemu Windows** .
 
 2. W menu **projekt** wybierz polecenie **Dodaj klasę**.
 
 3. W oknie dialogowym **Dodaj nowy element** kliknij przycisk **kontrolka**niestandardowa.
 
-     Do projektu zostanie dodany nowy formant niestandardowy.
+   Do projektu zostanie dodany nowy formant niestandardowy.
 
-4. Naciśnij klawisz F7, aby otworzyć **Edytor kodu** dla kontrolki niestandardowej.
+4. Naciśnij klawisz **F7** , aby otworzyć **Edytor kodu** dla kontrolki niestandardowej.
 
 5. Znajdź metodę, która będzie pusta, z wyjątkiem wywołania <xref:System.Windows.Forms.Control.OnPaint%2A> metody klasy bazowej. <xref:System.Windows.Forms.Control.OnPaint%2A>
 
 6. Zmodyfikuj kod w celu uwzględnienia dowolnego niestandardowego malowania dla kontrolki.
 
-     Aby uzyskać informacje na temat pisania kodu w celu renderowania grafiki dla kontrolek, zobacz [malowanie i renderowanie kontrolek niestandardowych](custom-control-painting-and-rendering.md).
+   Aby uzyskać informacje na temat pisania kodu w celu renderowania grafiki dla kontrolek, zobacz [malowanie i renderowanie kontrolek niestandardowych](custom-control-painting-and-rendering.md).
 
 7. Zaimplementuj wszelkie niestandardowe metody, właściwości lub zdarzenia, które mają być dołączone przez formant.
 

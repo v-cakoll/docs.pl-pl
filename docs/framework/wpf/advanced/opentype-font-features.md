@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: 7d73176a68d8b4b19b6c980ef52e1f47408127fb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3f1f0698afce6e64711e37ac60d0662d65bbee6b
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933689"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016139"
 ---
 # <a name="opentype-font-features"></a>OpenType funkcje czcionki
 
@@ -22,7 +22,7 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>Format czcionki OpenType  
- Format czcionki OpenType to rozszerzenie [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] formatu czcionki, umożliwiające dodanie obsługi danych czcionki PostScript. Format czcionki OpenType został opracowany wspólnie przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] program i firmę Adobe Corporation. Czcionki OpenType i usługi systemu operacyjnego, które obsługują czcionki OpenType, umożliwiają użytkownikom prostą metodę instalowania i używania czcionek, niezależnie od tego, czy [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] czcionki zawierają kontury czy CFF (PostScript).  
+ Format czcionki OpenType to rozszerzenie [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] formatu czcionki, umożliwiające dodanie obsługi danych czcionki PostScript. Format czcionki OpenType został opracowany wspólnie przez firmę Microsoft i firmę Adobe Corporation. Czcionki OpenType i usługi systemu operacyjnego, które obsługują czcionki OpenType, umożliwiają użytkownikom prostą metodę instalowania i używania czcionek, niezależnie od tego, czy [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] czcionki zawierają kontury czy CFF (PostScript).  
   
  Format czcionki OpenType rozwiązuje następujące wyzwania dla deweloperów:  
   

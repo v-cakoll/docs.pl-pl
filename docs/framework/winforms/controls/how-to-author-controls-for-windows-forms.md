@@ -6,19 +6,19 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 0804b9824b84a32bdd79c763031a3de4ffa54099
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 45a6ae68102204ad8506027065c2676e02fdd7a3
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039877"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015918"
 ---
-# <a name="how-to-author-controls-for-windows-forms"></a>Instrukcje: kontrolki autoryzacji dla formularzy systemu Windows
+# <a name="how-to-author-controls-for-windows-forms"></a>Instrukcje: Kontrolki autora dla Windows Forms
 
 Kontrolka reprezentuje graficzny link między użytkownikiem a programem. Kontrolka może udostępniać lub przetwarzać dane, akceptować wprowadzanie danych przez użytkownika, odpowiadać na zdarzenia lub wykonywać dowolną liczbę innych funkcji, które łączą użytkownika i aplikację. Ponieważ kontrolka jest zasadniczo składnikiem interfejsu graficznego, może służyć dowolnej funkcji, która robi składnik, a także zapewnia interakcję z użytkownikiem. Formanty są tworzone w celu obsłużenia określonych celów, a formanty tworzenia są po prostu innym zadaniem programistycznym. Z tego względu poniższe kroki przedstawiają przegląd procesu tworzenia kontroli. Linki zawierają dodatkowe informacje dotyczące poszczególnych kroków.
-
-> [!NOTE]
-> Jeśli chcesz utworzyć kontrolkę niestandardową do użycia w formularzach sieci Web, zobacz [Tworzenie niestandardowych kontrolek serwera ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).
 
 ## <a name="to-author-a-control"></a>Aby utworzyć kontrolkę
 
@@ -42,7 +42,7 @@ Kontrolka reprezentuje graficzny link między użytkownikiem a programem. Kontro
 
 6. Jeśli formant dziedziczy z <xref:System.Windows.Forms.UserControl>, można przetestować jego zachowanie w czasie wykonywania przez skompilowanie projektu kontrolki i uruchomienie go w **kontenerze testów UserControl**. Aby uzyskać więcej informacji, zobacz [jak: Przetestuj zachowanie elementu UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)w czasie wykonywania.
 
-7. Możesz również testować i debugować kontrolkę, tworząc nowy projekt, taki jak aplikacja systemu Windows i umieszczając go w kontenerze. Ten proces jest przedstawiany jako część [przewodnika: Tworzenie złożonego formantu z Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md).
+7. Możesz również testować i debugować kontrolkę, tworząc nowy projekt, taki jak aplikacja systemu Windows i umieszczając go w kontenerze. Ten proces jest przedstawiany jako część [przewodnika: Tworzenie złożonego formantu](walkthrough-authoring-a-composite-control-with-visual-csharp.md).
 
 8. Podczas dodawania każdej funkcji Dodaj funkcje do projektu testowego, aby skorzystać z nowych funkcji.
 
@@ -52,8 +52,6 @@ Kontrolka reprezentuje graficzny link między użytkownikiem a programem. Kontro
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik: Tworzenie złożonego formantu z Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Przewodnik: Dziedziczenie z kontrolki Windows Forms z Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
 - [Instrukcje: Dziedzicz z klasy UserControl](how-to-inherit-from-the-usercontrol-class.md)
 - [Instrukcje: Dziedzicz z klasy kontrolki](how-to-inherit-from-the-control-class.md)
 - [Instrukcje: Dziedzicz z istniejących kontrolek Windows Forms](how-to-inherit-from-existing-windows-forms-controls.md)

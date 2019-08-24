@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 7c83cfa22770695861b07e3bff29a38fcd125dd2
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: b4ae0d03c0207413d826e62de1d157f938b4d775
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545238"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016131"
 ---
 # <a name="typography-in-wpf"></a>Typografia w WPF
 W tym temacie przedstawiono główne funkcje typograficzne programu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Te funkcje obejmują ulepszoną jakość i wydajność renderowania tekstu, obsługę typografii OpenType, ulepszony międzynarodowy tekst, rozszerzoną obsługę czcionek oraz nowe interfejsy programowania aplikacji tekstowych (API).  
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Ulepszona jakość i wydajność tekstu  
- Tekst w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programie jest renderowany przy użyciu technologii Microsoft ClearType, która zwiększa czytelność i czytelność tekstu. Technologia ClearType jest technologią oprogramowania opracowaną przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] program, która zwiększa czytelność tekstu w istniejących LCDS (w przypadku wyświetlaczy Liquid Crystal), takich jak ekrany laptopów, urządzenia Pocket PC i monitory płaskoekranowe. Technologia ClearType używa renderowania w pikselach, co pozwala na wyświetlanie tekstu z większą dokładnością do jego prawdziwego kształtu przez wyrównanie znaków w ułamkowej części piksela. Dodatkowe rozwiązanie zwiększa ostrość niewielkich szczegółów w wyświetlaniu tekstu, ułatwiając odczytywanie ich w dłuższym czasie. Innym ulepszeniem technologii ClearType [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w programie jest wygładzanie kierunku y, co umożliwia wygładzanie wierzchołków i dolnych krzywych w znakach tekstowych. Aby uzyskać więcej informacji na temat funkcji ClearType, zobacz [Omówienie technologii ClearType](cleartype-overview.md).  
+ Tekst w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programie jest renderowany przy użyciu technologii Microsoft ClearType, która zwiększa czytelność i czytelność tekstu. Technologia ClearType jest technologią oprogramowania opracowaną przez firmę Microsoft, która zwiększa czytelność tekstu w istniejących LCDs (w przypadku wyświetlaczy Liquid Crystal), takich jak ekrany laptopów, urządzenia Pocket PC i monitory płaskoekranowe. Technologia ClearType używa renderowania w pikselach, co pozwala na wyświetlanie tekstu z większą dokładnością do jego prawdziwego kształtu przez wyrównanie znaków w ułamkowej części piksela. Dodatkowe rozwiązanie zwiększa ostrość niewielkich szczegółów w wyświetlaniu tekstu, ułatwiając odczytywanie ich w dłuższym czasie. Innym ulepszeniem technologii ClearType [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w programie jest wygładzanie kierunku y, co umożliwia wygładzanie wierzchołków i dolnych krzywych w znakach tekstowych. Aby uzyskać więcej informacji na temat funkcji ClearType, zobacz [Omówienie technologii ClearType](cleartype-overview.md).  
   
  ![Tekst z wygładzaniem kierunku x w technologii ClearType](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 Tekst z wygładzaniem kierunku y w technologii ClearType  
@@ -29,7 +29,7 @@ Tekst z wygładzaniem kierunku y w technologii ClearType
   
 <a name="Rich_Typography"></a>   
 ## <a name="rich-typography"></a>Bogaty Typografia  
- Format czcionki OpenType jest rozszerzeniem [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] formatu czcionki. Format czcionki OpenType został opracowany wspólnie przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] program i Adobe i oferuje bogaty asortyment zaawansowanych funkcji typograficznych. <xref:System.Windows.Documents.Typography> Obiekt ujawnia wiele zaawansowanych funkcji czcionek OpenType, takich jak alternatywy stylistyczne i znaki kaligraficzne. Windows SDK zawiera zestaw przykładowych czcionek OpenType, które są zaprojektowane z rozbudowanymi funkcjami, takimi jak czcionki Pericles i Pescadero. Aby uzyskać więcej informacji, zobacz [przykładowy pakiet czcionek OpenType](sample-opentype-font-pack.md).  
+ Format czcionki OpenType jest rozszerzeniem [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] formatu czcionki. Format czcionki OpenType został opracowany wspólnie przez firmę Microsoft i firmę Adobe oraz oferuje bogaty asortyment zaawansowanych funkcji typograficznych. <xref:System.Windows.Documents.Typography> Obiekt ujawnia wiele zaawansowanych funkcji czcionek OpenType, takich jak alternatywy stylistyczne i znaki kaligraficzne. Windows SDK zawiera zestaw przykładowych czcionek OpenType, które są zaprojektowane z rozbudowanymi funkcjami, takimi jak czcionki Pericles i Pescadero. Aby uzyskać więcej informacji, zobacz [przykładowy pakiet czcionek OpenType](sample-opentype-font-pack.md).  
   
  Czcionka Pericles OpenType zawiera dodatkowe glify, które udostępniają alternatywy stylistyczne dla standardowego zestawu symboli. Następujący tekst zawiera stylistyczne glify alternatywne.  
   

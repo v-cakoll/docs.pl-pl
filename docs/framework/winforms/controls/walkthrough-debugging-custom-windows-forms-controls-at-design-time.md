@@ -15,62 +15,49 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: 39adcbd6d915f8b086df7e425efbe08ae8680a45
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 824d8a7de8e9e37899cb84d6cee9621f84a5bc65
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882460"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015697"
 ---
-# <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Przewodnik: debugowanie niestandardowych kontrolek formularzy systemu Windows w czasie projektowania
+# <a name="walkthrough-debug-custom-windows-forms-controls-at-design-time"></a>Przewodnik: Debuguj niestandardowe kontrolki Windows Forms w czasie projektowania
 
-Kiedy tworzysz formant niestandardowy, będzie często jest konieczne do debugowania zachowania w czasie projektowania. Jest to szczególnie istotne w przypadku tworzenia niestandardowego projektanta dla formantu niestandardowego. Aby uzyskać więcej informacji, zobacz [instruktażu: Tworzenie Windows Forms kontroli wykorzystującego funkcje czasu projektowania w programie Visual Studio](creating-a-wf-control-design-time-features.md).
+Podczas tworzenia kontrolki niestandardowej często okaże się, że konieczne jest debugowanie zachowania w czasie projektowania. Jest to szczególnie ważne w przypadku tworzenia niestandardowego projektanta dla kontrolki niestandardowej. Aby uzyskać szczegółowe informacje [, zobacz Przewodnik: Tworzenie kontrolki Windows Forms, która wykorzystuje funkcje](creating-a-wf-control-design-time-features.md)czasu projektowania programu Visual Studio.
 
-Kontrolki niestandardowe przy użyciu programu Visual Studio umożliwia debugowanie tak samo, jak debuguje się inne klasy .NET Framework. Różnica polega na to, że będziesz debugował osobnego wystąpienia programu Visual Studio, który jest uruchomiony kod kontrolki niestandardowej
-
-Zadania zilustrowane w tym przewodniku obejmują:
-
-- Tworzenie projektu Windows Forms do hostowania formantu niestandardowego
-
-- Tworzenie projektu biblioteki kontrolek
-
-- Dodawanie właściwości do kontrolki niestandardowej
-
-- Dodawanie niestandardowego formantu do formularza hosta
-
-- Konfigurowanie projektu dla debugowania w czasie projektowania
-
-- Debugowanie niestandardowego formantu w czasie projektowania
-
-Gdy skończysz, masz zrozumienia zadań niezbędnych do debugowania zachowania w czasie projektowania formantu niestandardowego.
+Kontrolki niestandardowe można debugować przy użyciu programu Visual Studio, podobnie jak w przypadku debugowania innych klas .NET Framework. Różnica polega na tym, że debugujesz osobne wystąpienie programu Visual Studio, na którym działa kod kontrolki niestandardowej.
 
 ## <a name="create-the-project"></a>Utwórz projekt
 
-Pierwszym krokiem jest utworzenie projektu aplikacji. Użyjesz tego projektu do kompilowania aplikacji, który jest hostem kontrolki niestandardowej.
+Pierwszym krokiem jest utworzenie projektu aplikacji. Ten projekt będzie używany do kompilowania aplikacji, która hostuje kontrolkę niestandardową.
 
-W programie Visual Studio Utwórz projekt aplikacji Windows o nazwie "DebuggingExample" (**pliku** > **New** > **projektu**  >  **Visual C#**  lub **języka Visual Basic** > **Classic Desktop** > **Windows Forms aplikacji**).
+W programie Visual Studio Utwórz projekt aplikacji systemu Windows, a następnie nadaj mu nazwę **DebuggingExample**.
 
-## <a name="create-the-control-library-project"></a>Utwórz projekt Biblioteka formantów
+## <a name="create-the-control-library-project"></a>Tworzenie projektu biblioteki formantów
 
-1. Dodaj **Biblioteka formantów Windows** projektu do rozwiązania.
+1. Dodaj projekt **biblioteki formantów systemu Windows** do rozwiązania.
 
-2. Dodaj nową **UserControl** elementu do projektu DebugControlLibrary. Aby uzyskać więcej informacji, zobacz [jak: Dodaj nowe elementy projektu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)). Nazwij nowy plik źródłowy podstawowego elementu "DebugControl".
+2. Dodaj nowy element **UserControl** do projektu DebugControlLibrary. Nadaj mu nazwę **DebugControl**.
 
-3. Za pomocą **Eksploratora rozwiązań**, usunąć projekt domyślny formant przez usunięcie pliku kodu z podstawowej nazwy "`UserControl1`". Aby uzyskać więcej informacji, zobacz [jak: Usuń Delete i wykluczyć elementy](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).
+3. W **Eksplorator rozwiązań**usuń domyślną kontrolkę projektu, usuwając plik kodu z podstawową nazwą UserControl1.
 
 4. Skompiluj rozwiązanie.
 
 ## <a name="checkpoint"></a>Punkt kontrolny
 
-W tym momencie można wyświetlić niestandardową kontrolkę w **przybornika**.
+W tym momencie będzie można zobaczyć kontrolkę niestandardową w przyborniku.
 
-Aby sprawdzić postęp, Znajdź Nowa karta o nazwie **składniki DebugControlLibrary** i kliknij, aby go zaznaczyć. Po otwarciu, zobaczysz kontrolki wymieniony jako **DebugControl** z domyślną ikonę obok niej.
+Aby sprawdzić postęp, Znajdź nową kartę o nazwie **DebugControlLibrary Components** i kliknij, aby ją zaznaczyć. Gdy zostanie otwarty, zobaczysz swój formant jako **DebugControl** z domyślną ikoną obok niej.
 
 ## <a name="add-a-property-to-your-custom-control"></a>Dodawanie właściwości do kontrolki niestandardowej
 
-Aby zademonstrować, że formant niestandardowy kod jest uruchamiany w czasie projektowania, możesz dodać właściwość i ustaw punkt przerwania w kodzie, który implementuje właściwości.
+Aby zademonstrować, że kod kontrolki niestandardowej jest uruchomiony w czasie projektowania, należy dodać właściwość i ustawić punkt przerwania w kodzie implementującym właściwość.
 
-1. Otwórz **DebugControl** w **Edytor kodu**. Dodaj następujący kod do definicji klasy:
+1. Otwórz **DebugControl** w **edytorze kodu**. Dodaj następujący kod do definicji klasy:
 
     ```vb
     Private demoStringValue As String = Nothing
@@ -106,64 +93,62 @@ Aby zademonstrować, że formant niestandardowy kod jest uruchamiany w czasie pr
 
 2. Skompiluj rozwiązanie.
 
-## <a name="add-your-custom-control-to-the-host-form"></a>Dodawanie niestandardowego formantu do formularza hosta
+## <a name="add-your-custom-control-to-the-host-form"></a>Dodawanie kontrolki niestandardowej do formularza hosta
 
-Do debugowania zachowania w czasie projektowania niestandardową kontrolkę, spowoduje umieszczenie wystąpienia klasy kontrolki niestandardowej w formularzu hosta.
+Aby debugować zachowanie w czasie projektowania kontrolki niestandardowej, należy umieścić wystąpienie niestandardowej klasy kontrolek w formularzu hosta.
 
-1. W projekcie "DebuggingExample" Otwórz formularz Form1 w **Windows Forms Designer**.
+1. W projekcie "DebuggingExample" Otwórz formularz Form1 w **Projektant formularzy systemu Windows**.
 
-2. W **przybornika**, otwórz **składniki DebugControlLibrary** kartę, a następnie przeciągnij **DebugControl** wystąpienia do formularza.
+2. W **przyborniku**Otwórz kartę **składniki DebugControlLibrary** i przeciągnij wystąpienie **DebugControl** na formularz.
 
-3. Znajdź `DemoString` właściwości niestandardowe w **właściwości** okna. Należy pamiętać, że można zmienić jego wartość, jak w przypadku wszystkich innych właściwości. Należy również zauważyć, że w przypadku `DemoString` właściwości jest zaznaczone, ciąg opisu właściwości, pojawia się w dolnej części **właściwości** okna.
+3. Znajdź właściwość niestandardową w oknie **właściwości.** `DemoString` Należy pamiętać, że można zmienić jej wartość tak jak każda inna właściwość. Należy również zauważyć, że `DemoString` po wybraniu właściwości ciąg opisu właściwości pojawia się u dołu okna **Właściwości** .
 
-## <a name="set-up-the-project-for-design-time-debugging"></a>Konfigurowanie projektu dla debugowania w czasie projektowania
+## <a name="set-up-the-project-for-design-time-debugging"></a>Konfigurowanie projektu na potrzeby debugowania w czasie projektowania
 
-Do debugowania zachowania w czasie projektowania formantu niestandardowego, będzie debugować osobnego wystąpienia programu Visual Studio, który jest uruchomiony formantu niestandardowego kodu.
+Aby debugować zachowanie w czasie projektowania kontrolki niestandardowej, należy debugować osobne wystąpienie programu Visual Studio, na którym działa kod kontrolki niestandardowej.
 
-1. Kliknij prawym przyciskiem myszy **DebugControlLibrary** projektu w **Eksploratora rozwiązań** i wybierz **właściwości**.
+1. Kliknij prawym przyciskiem myszy projekt **DebugControlLibrary** w **Eksplorator rozwiązań** a następnie wybierz pozycję **Właściwości**.
 
-2. W **DebugControlLibrary** arkusza właściwości, wybierz opcję **debugowania** kartę.
+2. Na arkuszu właściwości **DebugControlLibrary** wybierz kartę **debugowanie** .
 
-     W **Akcja uruchamiania** zaznacz **uruchomienia programu zewnętrznego**. Można więc debugowanie osobnego wystąpienia programu Visual Studio, kliknij przycisk wielokropka (![przycisk wielokropka (...) w oknie dialogowym właściwości programu Visual Studio.](./media/visual-studio-ellipsis-button.png)) przycisk, aby przejść do środowiska IDE programu Visual Studio. Nazwa pliku wykonywalnego jest **devenv.exe**, a jeśli został zainstalowany w lokalizacji domyślnej, jego ścieżka jest %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe.
+     W sekcji **Akcja początkowa** wybierz pozycję **Uruchom program zewnętrzny**. Debugujesz osobne wystąpienie programu Visual Studio, więc kliknij![przycisk wielokropka (przycisk wielokropka (...) w okno właściwości programu Visual Studio](./media/visual-studio-ellipsis-button.png)), aby wyszukać środowisko IDE programu Visual Studio. Nazwa pliku wykonywalnego to **devenv. exe**, a jeśli została zainstalowana w lokalizacji domyślnej, jego ścieżka to *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\\\<Edition > \Common7\IDE*.
 
-3. Kliknij przycisk **OK** , aby zamknąć okno dialogowe.
+3. Wybierz **przycisk OK** , aby zamknąć okno dialogowe.
 
-4. Kliknij prawym przyciskiem myszy **DebugControlLibrary** projektu, a następnie wybierz **Ustaw jako projekt startowy** umożliwiające tej konfiguracji debugowania.
+4. Kliknij prawym przyciskiem myszy projekt **DebugControlLibrary** i wybierz pozycję **Ustaw jako projekt startowy** , aby włączyć tę konfigurację debugowania.
 
-## <a name="debug-your-custom-control-at-design-time"></a>Debugowanie niestandardowego formantu w czasie projektowania
+## <a name="debug-your-custom-control-at-design-time"></a>Debuguj kontrolkę niestandardową w czasie projektowania
 
-Teraz można przystąpić do debugowania niestandardową kontrolkę, jak działa w trybie projektowania. Podczas uruchamiania sesji debugowania, zostanie utworzone nowe wystąpienie programu Visual Studio, a następnie użyje ładowanie rozwiązań "DebuggingExample". Po otwarciu formularza Form1 w **projektanta formularzy**, wystąpienie niestandardową kontrolkę zostanie utworzona i zostanie uruchomione.
+Teraz możesz przystąpić do debugowania kontrolki niestandardowej, która jest uruchamiana w trybie projektowania. Po uruchomieniu sesji debugowania zostanie utworzone nowe wystąpienie programu Visual Studio i zostanie ono użyte do załadowania rozwiązania "DebuggingExample". Po otwarciu formularza Form1 w **projektancie formularzy**wystąpienie kontrolki niestandardowej zostanie utworzone i rozpocznie działanie.
 
-1. Otwórz **DebugControl** pliku źródłowego w **Edytor kodu** i umieść punkt przerwania na `Set` akcesor `DemoString` właściwości.
+1. Otwórz plik źródłowy **DebugControl** w **edytorze kodu** i umieść `Set` punkt przerwania w metodzie dostępu `DemoString` do właściwości.
 
-2. Naciśnij klawisz F5, aby rozpocząć sesję debugowania. Należy pamiętać, że tworzone jest nowe wystąpienie programu Visual Studio. Można rozróżnić wystąpień na dwa sposoby:
+2. Naciśnij klawisz **F5** , aby rozpocząć sesję debugowania. Zostanie utworzone nowe wystąpienie programu Visual Studio. Wystąpienia można rozróżnić na dwa sposoby:
 
-    - Wystąpienie debugowania zawiera wyraz **systemem** na pasku tytułu
+    - W wystąpieniu debugowania jest **uruchomione** słowo na pasku tytułu
 
-    - Wystąpienie debugowania ma **Start** znajdujący się na jej **debugowania** narzędzi wyłączone
+    - Na wystąpieniu debugowania jest wyłączony przycisk **Start** na pasku narzędzi **debugowania**
 
-     Punkt przerwania jest ustawiony za wystąpienie debugowania.
+   Punkt przerwania jest ustawiany w wystąpieniu debugowania.
 
-3. Nowe wystąpienie programu Visual Studio Otwórz rozwiązanie "DebuggingExample". Rozwiązanie można łatwo znaleźć, wybierając **ostatnich projektów** z **pliku** menu. Plik rozwiązania "DebuggingExample.sln" będą wyświetlane zgodnie z ostatnio używanych plików.
+3. W nowym wystąpieniu programu Visual Studio Otwórz rozwiązanie "DebuggingExample". Możesz łatwo znaleźć rozwiązanie, wybierając pozycję **ostatnie projekty** z menu **plik** . Plik rozwiązania "DebuggingExample. sln" będzie wyświetlany jako ostatnio używany plik.
 
-4. Otwórz formularz Form1 w **projektanta formularzy** i wybierz **DebugControl** kontroli.
+4. Otwórz formularz Form1 w **projektancie formularzy** i wybierz formant **DebugControl** .
 
-5. Zmień wartość właściwości `DemoString` właściwości. Pamiętaj, że po zatwierdzeniu zmiany wystąpienie debugowania programu Visual Studio uzyskuje fokus wykonywania zatrzymuje się na punkt przerwania. Możesz pojedynczy krok za pomocą metody dostępu właściwości podobnie jak usługi będzie inny kod.
+5. Zmień wartość `DemoString` właściwości. Po zatwierdzeniu zmiany wystąpienie debugowania programu Visual Studio uzyskuje fokus i wykonywanie zostaje zatrzymane w punkcie przerwania. Można wykonać jeden krok przez metodę dostępu do właściwości tak samo jak w przypadku każdego innego kodu.
 
-6. Po zakończeniu sesji debugowania możesz wyjść, odrzucanie hostowanej wystąpieniu programu Visual Studio lub klikając **Zatrzymaj debugowanie** przycisk wystąpienie debugowania.
+6. Aby zatrzymać debugowanie, Zamknij hostowane wystąpienie programu Visual Studio lub wybierz przycisk **Zatrzymaj debugowanie** w wystąpieniu debugowania.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Teraz, aby można było debugować Kontrolki niestandardowe, w czasie projektowania, istnieje wiele możliwości rozszerzania kontroli nad interakcji ze środowiskiem IDE programu Visual Studio.
+Teraz, gdy można debugować niestandardowe kontrolki w czasie projektowania, istnieje wiele możliwości rozszerzania interakcji kontrolki ze środowiskiem IDE programu Visual Studio.
 
-- Możesz użyć <xref:System.ComponentModel.Component.DesignMode%2A> właściwość <xref:System.ComponentModel.Component> klasy pisanie kodu, który będzie wykonywać tylko w czasie projektowania. Aby uzyskać więcej informacji, zobacz <xref:System.ComponentModel.Component.DesignMode%2A>.
+- Za pomocą <xref:System.ComponentModel.Component.DesignMode%2A> właściwości <xref:System.ComponentModel.Component> klasy można napisać kod, który będzie wykonywany tylko w czasie projektowania. Aby uzyskać szczegółowe informacje <xref:System.ComponentModel.Component.DesignMode%2A>, zobacz.
 
-- Istnieje kilka atrybutów można zastosować do właściwości formantu do manipulowania interakcji kontrolki niestandardowej za pomocą projektanta. Można znaleźć tych atrybutów w <xref:System.ComponentModel?displayProperty=nameWithType> przestrzeni nazw.
+- Istnieje kilka atrybutów, które można zastosować do właściwości kontrolki, aby manipulować interakcją kontrolki niestandardowej z projektantem. Te atrybuty można znaleźć w <xref:System.ComponentModel?displayProperty=nameWithType> przestrzeni nazw.
 
-- Możesz napisać niestandardowego projektanta dla niestandardowej kontrolki. Zapewnia pełną kontrolę nad środowiskiem projektowania przy użyciu rozszerzonego infrastruktury projektanta udostępnianych przez program Visual Studio. Aby uzyskać więcej informacji, zobacz [instruktażu: Tworzenie Windows Forms kontroli wykorzystującego funkcje czasu projektowania w programie Visual Studio](creating-a-wf-control-design-time-features.md).
+- Można napisać niestandardowy Projektant dla kontrolki niestandardowej. Zapewnia to pełną kontrolę nad doświadczeniem projektowym przy użyciu rozszerzalnej infrastruktury projektanta uwidocznionej przez program Visual Studio. Aby uzyskać szczegółowe informacje [, zobacz Przewodnik: Tworzenie kontrolki Windows Forms, która wykorzystuje funkcje](creating-a-wf-control-design-time-features.md)czasu projektowania programu Visual Studio.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik: Tworzenie kontrolki formularzy Windows wykorzystującego funkcje czasu projektowania w programie Visual Studio](creating-a-wf-control-design-time-features.md)
-- [Instrukcje: Dostęp do usługi w czasie projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171822(v=vs.120))
-- [Instrukcje: Dostęp do obsługi w czasie projektowania w formularzach Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171827(v=vs.120))
+- [Przewodnik: Tworzenie kontrolki Windows Forms, która wykorzystuje funkcje czasu projektowania programu Visual Studio](creating-a-wf-control-design-time-features.md)

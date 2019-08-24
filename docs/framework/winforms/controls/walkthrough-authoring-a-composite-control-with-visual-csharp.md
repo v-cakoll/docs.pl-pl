@@ -1,6 +1,8 @@
 ---
 title: 'Przewodnik: tworzenie kontrolki złożonej za pomocą Visual C#'
 ms.date: 03/30/2017
+dev_langs:
+- CSharp
 helpviewer_keywords:
 - custom controls [C#]
 - user controls [Windows Forms], creating with Visual C#
@@ -8,43 +10,44 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: 1de1ff4147ddb8cb3316795aefd38622de205a73
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: d1af6c0e013f82569eed8d085df0249f4fb991bb
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950049"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015681"
 ---
-# <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>Przewodnik: Tworzenie kontrolki złożonej za pomocą języka Visual C\#
+# <a name="walkthrough-author-a-composite-control-with-c"></a>Przewodnik: Tworzenie kontrolki złożonej przy użyciu języka C\#
 
 Kontrolki złożone zapewniają metodę, za pomocą której można tworzyć i ponownie używać niestandardowych interfejsów graficznych. Formant złożony jest zasadniczo składnikiem z reprezentacją wizualną. W związku z tym może składać się z co najmniej jednego Windows Forms kontrolek, składników lub bloków kodu, który może zwiększyć funkcjonalność, sprawdzając dane wejściowe użytkownika, modyfikując właściwości wyświetlania lub wykonując inne zadania wymagane przez autora. Kontrolki złożone mogą być umieszczane na Windows Forms w taki sam sposób jak w przypadku innych kontrolek. W pierwszej części tego przewodnika utworzysz prostą kontrolkę złożoną o nazwie `ctlClock`. W drugiej części przewodnika rozszerzono funkcjonalność programu `ctlClock` przez dziedziczenie.
 
-## <a name="creating-the-project"></a>Tworzenie projektu
+## <a name="create-the-project"></a>Tworzenie projektu
 
 Podczas tworzenia nowego projektu należy określić jego nazwę, aby ustawić główną przestrzeń nazw, nazwę zestawu i nazwę projektu, i upewnić się, że składnik domyślny będzie w poprawnej przestrzeni nazw.
 
 ### <a name="to-create-the-ctlclocklib-control-library-and-the-ctlclock-control"></a>Aby utworzyć bibliotekę kontrolek ctlClockLib i formant ctlClock
 
-1. W menu **plik** wskaż polecenie **Nowy**, a następnie kliknij pozycję **projekt** , aby otworzyć okno dialogowe **Nowy projekt** .
-
-2. Z listy projektów wizualizacji C# wybierz szablon projektu **Biblioteka formantów Windows Forms** , wpisz `ctlClockLib` w polu **Nazwa** , a następnie kliknij przycisk **OK**.
+1. W programie Visual Studio Utwórz nowy projekt **biblioteki formantów Windows Forms** i nadaj mu nazwę **ctlClockLib**.
 
      Nazwa projektu, `ctlClockLib`, również jest domyślnie przypisana do głównej przestrzeni nazw. Główna przestrzeń nazw służy do kwalifikowania nazw składników w zestawie. Na przykład jeśli dwa zestawy dostarczają składniki o nazwie `ctlClock`, można `ctlClock` określić składnik przy użyciu`ctlClockLib.ctlClock.`
 
-3. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy pozycję **UserControl1.cs**, a następnie kliknij polecenie **Zmień nazwę**. Zmień nazwę pliku na `ctlClock.cs`. Kliknij przycisk **tak** po wyświetleniu monitu, jeśli chcesz zmienić nazwy wszystkich odwołań do elementu kodu "UserControl1".
+2. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **UserControl1.cs**, a następnie kliknij polecenie **Zmień nazwę**. Zmień nazwę pliku na `ctlClock.cs`. Kliknij przycisk **tak** po wyświetleniu monitu, jeśli chcesz zmienić nazwy wszystkich odwołań do elementu kodu "UserControl1".
 
     > [!NOTE]
     > Domyślnie formant złożony dziedziczy z <xref:System.Windows.Forms.UserControl> klasy dostarczonej przez system. <xref:System.Windows.Forms.UserControl> Klasa zawiera funkcje wymagane przez wszystkie kontrolki złożone i implementuje standardowe metody i właściwości.
 
-4. W menu **plik** kliknij polecenie **Zapisz wszystko** , aby zapisać projekt.
+3. W menu **plik** kliknij polecenie **Zapisz wszystko** , aby zapisać projekt.
 
-## <a name="adding-windows-controls-and-components-to-the-composite-control"></a>Dodawanie formantów i składników systemu Windows do kontrolki złożonej
+## <a name="add-windows-controls-and-components-to-the-composite-control"></a>Dodawanie formantów i składników systemu Windows do kontrolki złożonej
 
 Interfejs wizualny jest istotną częścią formantu złożonego. Ten interfejs wizualny jest implementowany przez dodanie jednego lub większej liczby kontrolek systemu Windows do powierzchni projektanta. Poniższa prezentacja zawiera kontrolki systemu Windows w kontrolce złożonej i pisanie kodu w celu zaimplementowania funkcji.
 
 ### <a name="to-add-a-label-and-a-timer-to-your-composite-control"></a>Aby dodać etykietę i czasomierz do kontrolki złożonej
 
-1. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy pozycję **ctlClock.cs**, a następnie kliknij pozycję **Projektant widoków**.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **ctlClock.cs**, a następnie kliknij pozycję **Projektant widoków**.
 
 2. W **przyborniku**rozwiń węzeł **formanty wspólne** , a następnie kliknij dwukrotnie pozycję **etykieta**.
 
@@ -89,13 +92,13 @@ Interfejs wizualny jest istotną częścią formantu złożonego. Ten interfejs 
 
 9. W menu **plik** kliknij polecenie **Zapisz wszystko** , aby zapisać projekt.
 
-## <a name="adding-properties-to-the-composite-control"></a>Dodawanie właściwości do kontrolki złożonej
+## <a name="add-properties-to-the-composite-control"></a>Dodawanie właściwości do kontrolki złożonej
 
 Kontrolka zegara hermetyzuje <xref:System.Windows.Forms.Label> obecnie formant <xref:System.Windows.Forms.Timer> i składnik, z których każdy ma własny zestaw właściwości. Chociaż poszczególne właściwości tych kontrolek nie będą dostępne dla kolejnych użytkowników kontrolki, można utworzyć i uwidocznić właściwości niestandardowe przez napisanie odpowiednich bloków kodu. Poniższa procedura obejmuje dodanie do kontrolki właściwości, które umożliwiają użytkownikowi zmianę koloru tła i tekstu.
 
 ### <a name="to-add-a-property-to-your-composite-control"></a>Aby dodać właściwość do kontrolki złożonej
 
-1. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy pozycję **ctlClock.cs**, a następnie kliknij pozycję **Wyświetl kod**.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **ctlClock.cs**, a następnie kliknij pozycję **Wyświetl kod**.
 
      Zostanie otwarty **Edytor kodu** dla kontrolki.
 
@@ -108,7 +111,7 @@ Kontrolka zegara hermetyzuje <xref:System.Windows.Forms.Label> obecnie formant <
 
      Te instrukcje tworzą zmienne prywatne, które będą używane do przechowywania wartości właściwości, które mają zostać utworzone.
 
-3. Wpisz następujący kod poniżej deklaracji zmiennych z kroku 2.
+3. Wprowadź lub wklej następujący kod poniżej deklaracji zmiennych z kroku 2.
 
     ```csharp
     // Declares the name and type of the property.
@@ -146,25 +149,25 @@ Kontrolka zegara hermetyzuje <xref:System.Windows.Forms.Label> obecnie formant <
 
 4. W menu **plik** kliknij polecenie **Zapisz wszystko** , aby zapisać projekt.
 
-## <a name="testing-the-control"></a>Testowanie kontrolki
+## <a name="test-the-control"></a>Testowanie kontrolki
 
 Formanty nie są aplikacjami autonomicznymi; muszą być hostowane w kontenerze. Przetestuj zachowanie w czasie wykonywania formantu i wykonuj jego właściwości za pomocą **kontenera testów UserControl**. Aby uzyskać więcej informacji, zobacz [jak: Przetestuj zachowanie elementu UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)w czasie wykonywania.
 
 ### <a name="to-test-your-control"></a>Aby przetestować kontrolkę
 
-1. Naciśnij klawisz F5, aby skompilować projekt i uruchomić formant w **kontenerze Test UserControl**.
+1. Naciśnij klawisz **F5** , aby skompilować projekt i uruchomić formant w **kontenerze Test UserControl**.
 
 2. W siatce właściwości kontenera testów Znajdź `ClockBackColor` właściwość, a następnie wybierz właściwość, aby wyświetlić paletę kolorów.
 
 3. Wybierz kolor, klikając go.
 
-     Kolor tła kontrolki zmieni się na wybrany kolor.
+   Kolor tła kontrolki zmieni się na wybrany kolor.
 
 4. Użyj podobnej sekwencji zdarzeń, aby sprawdzić, czy `ClockForeColor` Właściwość działa zgodnie z oczekiwaniami.
 
-     W tej sekcji i w powyższych sekcjach pokazano, jak można łączyć składniki i formanty systemu Windows z kodem i opakowaniem, aby zapewnić niestandardowe funkcje w formie złożonego formantu. Wiesz już, jak uwidocznić właściwości w kontrolce złożonej oraz jak przetestować swój formant po jego zakończeniu. W następnej sekcji dowiesz się, jak utworzyć Dziedziczony formant złożony, używając `ctlClock` jako podstawy.
+   W tej sekcji i w powyższych sekcjach pokazano, jak można łączyć składniki i formanty systemu Windows z kodem i opakowaniem, aby zapewnić niestandardowe funkcje w formie złożonego formantu. Wiesz już, jak uwidocznić właściwości w kontrolce złożonej oraz jak przetestować swój formant po jego zakończeniu. W następnej sekcji dowiesz się, jak utworzyć Dziedziczony formant złożony, używając `ctlClock` jako podstawy.
 
-## <a name="inheriting-from-a-composite-control"></a>Dziedziczenie z kontrolki złożonej
+## <a name="inherit-from-a-composite-control"></a>Dziedzicz z kontrolki złożonej
 
 W poprzednich sekcjach przedstawiono sposób łączenia formantów, składników i kodu systemu Windows z kontrolkami złożonymi do wielokrotnego użytku. Formant złożony może być teraz używany jako podstawa, na której można skompilować inne kontrolki. Proces wyprowadzania klasy z klasy bazowej nosi nazwę *dziedziczenia*. W tej sekcji utworzysz formant złożony o nazwie `ctlAlarmClock`. Ten formant będzie pochodzący z jego formantu `ctlClock`nadrzędnego. Dowiesz się, jak zwiększyć funkcjonalność `ctlClock` przez zastępowanie metod nadrzędnych i dodawanie nowych metod i właściwości.
 
@@ -172,7 +175,7 @@ Pierwszym krokiem tworzenia dziedziczonej kontrolki jest uzyskanie jej z element
 
 ### <a name="to-create-the-inherited-control"></a>Aby utworzyć Dziedziczony formant
 
-1. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy pozycję **ctlClockLib**, wskaż polecenie **Dodaj**, a następnie kliknij pozycję **Kontrola użytkownika**.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **ctlClockLib**, wskaż polecenie **Dodaj**, a następnie kliknij pozycję **Kontrola użytkownika**.
 
      **Dodaj nowy element** zostanie otwarte okno dialogowe.
 
@@ -184,18 +187,18 @@ Pierwszym krokiem tworzenia dziedziczonej kontrolki jest uzyskanie jej z element
 
 4. W obszarze **Nazwa składnika**kliknij dwukrotnie pozycję **ctlClock**.
 
-5. W Eksplorator rozwiązań Przeglądaj bieżące projekty.
+5. W **Eksplorator rozwiązań**Przeglądaj bieżące projekty.
 
     > [!NOTE]
     > Plik o nazwie **ctlAlarmClock.cs** został dodany do bieżącego projektu.
 
-### <a name="adding-the-alarm-properties"></a>Dodawanie właściwości alarmu
+### <a name="add-the-alarm-properties"></a>Dodaj właściwości alarmu
 
 Właściwości są dodawane do dziedziczonej kontrolki w taki sam sposób, w jaki są dodawane do kontrolki złożonej. Teraz użyj składni deklaracji właściwości, aby dodać dwie właściwości do kontrolki: `AlarmTime`, w której będzie przechowywana wartość daty i godziny, w której ma się pojawić alarm, i `AlarmSet`wskazująca, czy alarm jest ustawiony.
 
 #### <a name="to-add-properties-to-your-composite-control"></a>Aby dodać właściwości do kontrolki złożonej
 
-1. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy pozycję **ctlAlarmClock**, a następnie kliknij pozycję **Wyświetl kod**.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **ctlAlarmClock**, a następnie kliknij pozycję **Wyświetl kod**.
 
 2. `public class` Znajdź instrukcję. Zwróć uwagę, że kontrolka `ctlClockLib.ctlClock`dziedziczy z. Poniżej otwierającego nawiasu klamrowego (`{)` instrukcja wpisz poniższy kod.
 
@@ -228,13 +231,13 @@ Właściwości są dodawane do dziedziczonej kontrolki w taki sam sposób, w jak
     }
     ```
 
-### <a name="adding-to-the-graphical-interface-of-the-control"></a>Dodawanie do interfejsu graficznego formantu
+### <a name="add-to-the-graphical-interface-of-the-control"></a>Dodaj do interfejsu graficznego formantu
 
 Formant dziedziczony ma interfejs wizualny, który jest identyczny z kontrolką, z której dziedziczy. Posiada te same kontrolki elementów, jak jej kontrolki nadrzędne, ale właściwości kontrolek elementów nie będą dostępne, chyba że zostały one jawnie ujawnione. Można dodać do interfejsu graficznego dziedziczonego formantu złożonego w taki sam sposób, jak w przypadku dowolnej kontrolki złożonej. Aby kontynuować dodawanie do interfejsu wizualizacji zegara alarmu, należy dodać kontrolkę etykieta, która będzie Flash, gdy alarm jest dźwiękowy.
 
 #### <a name="to-add-the-label-control"></a>Aby dodać kontrolkę etykieta
 
-1. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy pozycję **ctlAlarmClock**, a następnie kliknij pozycję **Projektant widoków**.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **ctlAlarmClock**, a następnie kliknij pozycję **Projektant widoków**.
 
      Projektant do `ctlAlarmClock` otwarcia w oknie głównym.
 
@@ -257,7 +260,7 @@ Formant dziedziczony ma interfejs wizualny, który jest identyczny z kontrolką,
     |**TextAlign**|`MiddleCenter`|
     |**Widać**|`false`|
 
-### <a name="adding-the-alarm-functionality"></a>Dodawanie funkcji alarmu
+### <a name="add-the-alarm-functionality"></a>Dodawanie funkcji alarmu
 
 W poprzednich procedurach dodano właściwości i kontrolkę, która spowoduje włączenie funkcji alarmu w formancie złożonym. W ramach tej procedury dodasz kod w celu porównania bieżącego czasu z czasem alarmu i, jeśli są one takie same, do nabłysku alarmu. Poprzez zastąpienie `timer1_Tick` `ctlAlarmClock` metody i dodanie do niej dodatkowego kodu, można zwiększyć możliwości programu, zachowując wszystkie nieodłączne funkcje programu `ctlClock`. `ctlClock`
 
@@ -317,7 +320,7 @@ W poprzednich procedurach dodano właściwości i kontrolkę, która spowoduje w
 
 #### <a name="to-implement-the-shutoff-method"></a>Aby zaimplementować metodę ShutOff
 
-1. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy pozycję **ctlAlarmClock.cs**, a następnie kliknij pozycję **Projektant widoków**.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **ctlAlarmClock.cs**, a następnie kliknij pozycję **Projektant widoków**.
 
      Zostanie otwarty projektant.
 
@@ -346,21 +349,21 @@ W poprzednich procedurach dodano właściwości i kontrolkę, która spowoduje w
 
 5. W menu **plik** kliknij polecenie **Zapisz wszystko** , aby zapisać projekt.
 
-### <a name="using-the-inherited-control-on-a-form"></a>Używanie dziedziczonej kontrolki w formularzu
+### <a name="use-the-inherited-control-on-a-form"></a>Używanie dziedziczonej kontrolki w formularzu
 
-Można testować Dziedziczony formant w taki sam sposób, `ctlClock`w jaki przetestowano formant klasy bazowej: Naciśnij klawisz F5, aby skompilować projekt i uruchomić formant w **kontenerze Test UserControl**. Aby uzyskać więcej informacji, zobacz [jak: Przetestuj zachowanie elementu UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)w czasie wykonywania.
+Można testować Dziedziczony formant w taki sam sposób, `ctlClock`w jaki przetestowano formant klasy bazowej: Naciśnij klawisz **F5** , aby skompilować projekt i uruchomić formant w **kontenerze Test UserControl**. Aby uzyskać więcej informacji, zobacz [jak: Przetestuj zachowanie elementu UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)w czasie wykonywania.
 
 Aby można było użyć formantu, musisz go hostować w formularzu. Podobnie jak w przypadku standardowej kontroli złożonej, Dziedziczony formant złożony nie może być autonomiczny i musi być hostowany w formie lub w innym kontenerze. Ponieważ `ctlAlarmClock` ma większą głębię funkcjonalności, wymagany jest dodatkowy kod do przetestowania. Ta procedura polega na napisaniu prostego programu w celu przetestowania funkcji programu `ctlAlarmClock`. Napisz kod `AlarmTime` `ctlAlarmClock`, aby ustawić i wyświetlić właściwość, i przetestować jej funkcje.
 
 #### <a name="to-build-and-add-your-control-to-a-test-form"></a>Aby skompilować i dodać formant do formularza testowego
 
-1. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy pozycję **ctlClockLib**, a następnie kliknij pozycję **Kompiluj**.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **ctlClockLib**, a następnie kliknij pozycję **Kompiluj**.
 
-2. Dodaj nowy projekt **aplikacji systemu Windows** do rozwiązania i nadaj mu `Test`nazwę.
+2. Dodaj nowy projekt **aplikacji systemu Windows** do rozwiązania i nadaj mu nazwę **test**.
 
-3. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy węzeł **odwołania** dla projektu testowego. Kliknij przycisk **Dodaj odwołanie** , aby wyświetlić okno dialogowe **Dodawanie odwołania** . Kliknij kartę z etykietą **projekty**. Projekt zostanie wyświetlony na liście **Nazwa projektu.** `ctlClockLib` Kliknij dwukrotnie projekt, aby dodać odwołanie do projektu testowego.
+3. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy węzeł **odwołania** dla projektu testowego. Kliknij przycisk **Dodaj odwołanie** , aby wyświetlić okno dialogowe **Dodawanie odwołania** . Kliknij kartę z etykietą **projekty**. Projekt zostanie wyświetlony na liście **Nazwa projektu.** `ctlClockLib` Kliknij dwukrotnie projekt, aby dodać odwołanie do projektu testowego.
 
-4. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy pozycję **test**, a następnie kliknij polecenie **Kompiluj**.
+4. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **test**, a następnie kliknij polecenie **Kompiluj**.
 
 5. W **przyborniku**rozwiń węzeł **składniki ctlClockLib** .
 
@@ -395,7 +398,7 @@ Aby można było użyć formantu, musisz go hostować w formularzu. Podobnie jak
     }
     ```
 
-12. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy pozycję **test**, a następnie kliknij pozycję **Ustaw jako projekt startowy**.
+12. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **test**, a następnie kliknij pozycję **Ustaw jako projekt startowy**.
 
 13. Na **debugowania** menu, kliknij przycisk **Rozpocznij debugowanie**.
 
@@ -409,7 +412,7 @@ Aby można było użyć formantu, musisz go hostować w formularzu. Podobnie jak
 
 16. Wyłącz alarm, klikając pozycję `btnAlarmOff`. Teraz możesz zresetować alarm.
 
-     W tym instruktażu przedstawiono szereg kluczowych pojęć. Wiesz już, jak utworzyć formant złożony przez połączenie formantów i składników do kontenera kontroli złożonej. Wiesz już, jak dodać właściwości do kontrolki i napisać kod w celu zaimplementowania funkcji niestandardowych. W ostatniej sekcji pokazano, jak zwiększyć funkcjonalność danego formantu złożonego przez dziedziczenie i zmienić funkcjonalność metod hosta, zastępując te metody.
+W tym artykule omówiono szereg kluczowych pojęć. Wiesz już, jak utworzyć formant złożony przez połączenie formantów i składników do kontenera kontroli złożonej. Wiesz już, jak dodać właściwości do kontrolki i napisać kod w celu zaimplementowania funkcji niestandardowych. W ostatniej sekcji pokazano, jak zwiększyć funkcjonalność danego formantu złożonego przez dziedziczenie i zmienić funkcjonalność metod hosta, zastępując te metody.
 
 ## <a name="see-also"></a>Zobacz także
 

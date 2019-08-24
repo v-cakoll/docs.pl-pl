@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 8b33ac800144577ba5f8610afdc50a1ba56eec0f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 948d147a0990961a8706298f1112f85882e30119
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937708"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015618"
 ---
 # <a name="globalization-for-wpf"></a>Globalizacja dla WPF
 Ten temat zawiera informacje o problemach, które należy wziąć pod [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uwagę podczas pisania aplikacji dla globalnego rynku. Elementy programowania globalizacji są zdefiniowane w [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] programie w programie. `System.Globalization`
@@ -143,7 +143,7 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>Wielojęzyczny interfejs użytkownika
- Wielojęzycznego interfejsu użytkownika (MUI) to [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] obsługa przełączania [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] się z jednego języka do innego. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aplikacja używa modelu zestawu do obsługi interfejsu MUI. Jedna aplikacja zawiera zestawy, które są niezależne od języka, a także zestawy zasobów satelitarnych zależne od języka. Punkt wejścia jest zarządzany. EXE w zestawie głównym.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]moduł ładujący zasoby korzysta z [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]Menedżera zasobów do obsługi wyszukiwania i powrotu zasobów. Zestawy satelickie dla wielu języków współpracują z tym samym zestawem głównym. Załadowany zestaw zasobów zależy <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> od bieżącego wątku.
+ Wielojęzycznego interfejsu użytkownika (MUI) to pomoc techniczna firmy Microsoft do [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] przełączania się z jednego języka do innego. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aplikacja używa modelu zestawu do obsługi interfejsu MUI. Jedna aplikacja zawiera zestawy, które są niezależne od języka, a także zestawy zasobów satelitarnych zależne od języka. Punkt wejścia jest zarządzany. EXE w zestawie głównym.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]moduł ładujący zasoby korzysta z [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]Menedżera zasobów do obsługi wyszukiwania i powrotu zasobów. Zestawy satelickie dla wielu języków współpracują z tym samym zestawem głównym. Załadowany zestaw zasobów zależy <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> od bieżącego wątku.
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>Lokalizowalny interfejs użytkownika

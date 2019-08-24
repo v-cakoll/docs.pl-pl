@@ -11,92 +11,93 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: 1f1412f03f912c0142b08d5ad8581e421252cfb3
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 2fbb0715d148b443b1eca8f400e4ad43eb51fa43
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882361"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015734"
 ---
-# <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>Przewodnik: serializowanie kolekcji standardowych typów za pomocą DesignerSerializationVisibilityAttribute
+# <a name="walkthrough-serialize-collections-of-standard-types"></a>Przewodnik: Serializacja kolekcji typów standardowych
 
-Kontrolki niestandardowe czasami udostępni kolekcji jako właściwość. W tym instruktażu przedstawiono sposób użycia <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> klasy do kontrolowania, jak kolekcja jest serializowany w czasie projektowania. Stosowanie <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> wartości właściwości z kolekcji zapewnia właściwość będzie serializowana.
+Niestandardowe kontrolki będą czasami uwidaczniać kolekcję jako właściwość. W tym instruktażu pokazano, <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> jak używać klasy do kontrolowania, w jaki sposób kolekcja jest serializowana w czasie projektowania. <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> Zastosowanie wartości do właściwości kolekcji gwarantuje, że właściwość zostanie zserializowana.
 
-Aby skopiować kod, w tym temacie na jednej liście, zobacz [jak: Serializowanie kolekcji standardowych typów za pomocą DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).
+Aby skopiować kod w tym temacie jako pojedynczą listę, zobacz [How to: Serializacja kolekcji typów standardowych z za pomocą DesignerSerializationVisibilityAttribute](/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
+Aby ukończyć ten przewodnik, potrzebujesz programu Visual Studio.
 
-## <a name="create-a-control-with-a-serializable-collection"></a>Tworzenie formantu za pomocą kolekcji serializacji
+## <a name="create-a-control-with-a-serializable-collection"></a>Tworzenie kontrolki z kolekcją możliwy do serializacji
 
-Pierwszym krokiem jest, aby utworzyć formant, który jest możliwy do serializacji kolekcji jako właściwość. Możesz edytować zawartość tej kolekcji przy użyciu **— Edytor kolekcji**, który jest dostępny z **właściwości** okna.
+Pierwszym krokiem jest utworzenie kontrolki, która ma kolekcję z możliwością serializacji jako właściwość. Zawartość tej kolekcji można edytować za pomocą **edytora kolekcji**, do którego można uzyskać dostęp z okna **Właściwości** .
 
-1. W programie Visual Studio Utwórz projekt Biblioteka formantów Windows o nazwie `SerializationDemoControlLib`. Aby uzyskać więcej informacji, zobacz [szablon biblioteki kontrolki Windows](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).
+1. W programie Visual Studio Utwórz projekt biblioteki formantów systemu Windows, a następnie nadaj mu nazwę **SerializationDemoControlLib**.
 
-2. Zmień nazwę `UserControl1` do `SerializationDemoControl`. Aby uzyskać więcej informacji, zobacz [symbolu kodu Refaktoryzacja zmiany nazwy](/visualstudio/ide/reference/rename).
+2. Zmień `UserControl1` nazwę `SerializationDemoControl`na. Aby uzyskać więcej informacji, zobacz [zmiana nazwy kodu refaktoryzacji](/visualstudio/ide/reference/rename).
 
-3. W **właściwości** okna, ustaw wartość <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> właściwość `10`.
+3. W oknie **Właściwości** ustaw wartość <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> właściwości na **10**.
 
-4. Miejsce <xref:System.Windows.Forms.TextBox> w kontrolce `SerializationDemoControl`.
+4. <xref:System.Windows.Forms.TextBox> Umieść formant`SerializationDemoControl`w.
 
-5. Wybierz <xref:System.Windows.Forms.TextBox> kontroli. W **właściwości** okna, ustaw następujące właściwości.
+5. <xref:System.Windows.Forms.TextBox> Zaznacz kontrolkę. W oknie **Właściwości** ustaw następujące właściwości.
 
     |Właściwość|Zmień na|
     |--------------|---------------|
-    |**Wielowierszowy**|`true`|
-    |**Dock**|<xref:System.Windows.Forms.DockStyle.Fill>|
+    |**Multiline**|`true`|
+    |**Zadokuj**|<xref:System.Windows.Forms.DockStyle.Fill>|
     |**Paski przewijania**|<xref:System.Windows.Forms.ScrollBars.Vertical>|
     |**ReadOnly**|`true`|
 
-6. W **Edytor kodu**, Zadeklaruj pola tablicy ciągów o nazwie `stringsValue` w `SerializationDemoControl`.
+6. W **edytorze kodu**Zadeklaruj pole tablicy ciągów o nazwie `stringsValue` w. `SerializationDemoControl`
 
      [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#4)]
      [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#4)]
      [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#4)]
 
-7. Zdefiniuj `Strings` właściwość `SerializationDemoControl`.
+7. `Strings` Zdefiniuj Właściwość`SerializationDemoControl`w.
 
    > [!NOTE]
-   > <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> Wartość jest używana do włączenia serializacji kolekcji.
+   > <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> Wartość jest używana do włączania serializacji kolekcji.
 
    [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#5)]
    [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#5)]
    [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#5)]
 
-8. Naciśnij klawisz **F5** skompilować projekt i uruchomić Twoją kontrolą w **UserControl — kontener testowy**.
+8. Naciśnij klawisz **F5** , aby skompilować projekt i uruchomić formant w **kontenerze Test UserControl**.
 
-9. Znajdź `Strings` właściwość <xref:System.Windows.Forms.PropertyGrid> z **UserControl — kontener testowy**. Kliknij przycisk `Strings` właściwości, następnie kliknij przycisk wielokropka (![przycisk wielokropka (...) w oknie dialogowym właściwości programu Visual Studio.](./media/visual-studio-ellipsis-button.png)) przycisk, aby otworzyć **Edytor kolekcji ciągów**.
+9. Znajdź właściwość **Strings** w <xref:System.Windows.Forms.PropertyGrid> **kontenerze testów UserControl**. Wybierz właściwość **Strings** , a następnie wybierz przycisk wielokropka (![przycisk wielokropka (...) w okno właściwości programu Visual Studio](./media/visual-studio-ellipsis-button.png)), aby otworzyć **Edytor kolekcji ciągów**.
 
-10. Wprowadź kilka ciągów w **Edytor kolekcji ciągów**. Oddziel je, naciskając klawisz **Enter** klucza na końcu każdego ciągu. Kliknij przycisk **OK** po zakończeniu wprowadzania ciągów znaków.
+10. Wprowadź kilka ciągów w **edytorze kolekcji ciągów**. Należy je oddzielić, naciskając klawisz **Enter** na końcu każdego ciągu. Po zakończeniu wprowadzania ciągów kliknij przycisk **OK** .
 
    > [!NOTE]
-   > Ciągi wpisany są wyświetlane w <xref:System.Windows.Forms.TextBox> z `SerializationDemoControl`.
+   > Wpisane ciągi są wyświetlane w <xref:System.Windows.Forms.TextBox>. `SerializationDemoControl`
 
-## <a name="serializing-a-collection-property"></a>Serializowanie właściwości kolekcji
+## <a name="serialize-a-collection-property"></a>Serializacja właściwości kolekcji
 
-Aby sprawdzić zachowanie serializacji kontrolki, będzie umieścić go w formularzu i zmieniać zawartość kolekcji przy użyciu **— Edytor kolekcji**. Można wyświetlić stan kolekcji serializacji, analizując specjalny plik projektanta, do którego **Windows Forms Designer** emituje kod.
+Aby przetestować zachowanie serializacji formantu, należy umieścić go w formularzu i zmienić zawartość kolekcji z **Edytor kolekcji**. Możesz zobaczyć serializowany stan kolekcji, przeglądając specjalny plik projektanta, do którego **Projektant formularzy systemu Windows** emituje kod.
 
-### <a name="to-serialize-a-collection"></a>Do serializacji kolekcji
+1. Dodaj projekt aplikacji systemu Windows do rozwiązania. Nadaj nazwę projektowi `SerializationDemoControlTest`.
 
-1. Dodaj projekt aplikacji Windows do rozwiązania. Nadaj projektowi nazwę `SerializationDemoControlTest`.
+2. W **przyborniku**Znajdź kartę o nazwie **składniki SerializationDemoControlLib**. Na tej karcie znajdziesz `SerializationDemoControl`. Aby uzyskać więcej informacji, [zobacz Przewodnik: Automatyczne wypełnianie przybornika składnikami](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)niestandardowymi.
 
-2. W **przybornika**, Znajdź kartę o nazwie **składniki SerializationDemoControlLib**. Na tej karcie można znaleźć `SerializationDemoControl`. Aby uzyskać więcej informacji, zobacz [instruktażu: Automatyczne zapełnianie przybornika składnikami niestandardowymi](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).
+3. `SerializationDemoControl` Umieść w formularzu.
 
-3. Miejsce `SerializationDemoControl` w formularzu.
+4. Znajdź właściwość w oknie **właściwości.** `Strings` Kliknij właściwość, a następnie kliknij![przycisk wielokropka (przycisk wielokropka (...) w okno właściwości programu Visual](./media/visual-studio-ellipsis-button.png)Studio.), aby otworzyć **Edytor kolekcji ciągów.** `Strings`
 
-4. Znajdź `Strings` właściwość **właściwości** okna. Kliknij przycisk `Strings` właściwości, następnie kliknij przycisk wielokropka (![przycisk wielokropka (...) w oknie dialogowym właściwości programu Visual Studio.](./media/visual-studio-ellipsis-button.png)) przycisk, aby otworzyć **Edytor kolekcji ciągów**.
-
-5. Wpisz kilka ciągów w **Edytor kolekcji ciągów**. Oddziel je, naciskając klawisz ENTER na końcu każdego ciągu. Kliknij przycisk **OK** po zakończeniu wprowadzania ciągów znaków.
+5. Wpisz kilka ciągów w **edytorze kolekcji ciągów**. Należy je oddzielić przez naciśnięcie klawisza **Enter** na końcu każdego ciągu. Po zakończeniu wprowadzania ciągów kliknij przycisk **OK** .
 
 > [!NOTE]
-> Ciągi wpisany są wyświetlane w <xref:System.Windows.Forms.TextBox> z `SerializationDemoControl`.
+> Wpisane ciągi są wyświetlane w <xref:System.Windows.Forms.TextBox>. `SerializationDemoControl`
 
-1. W **Eksploratora rozwiązań**, kliknij przycisk **Pokaż wszystkie pliki** przycisku.
+6. W **Eksplorator rozwiązań**kliknij przycisk **Pokaż wszystkie pliki** .
 
-2. Otwórz **Form1** węzła. Podrzędne jest plik o nazwie **Form1.Designer.cs** lub **Form1.Designer.vb**. Jest to plik, do którego **Windows Forms Designer** emituje kod reprezentujący stan projektowania formularza i jego formantów podrzędnych. Otwórz ten plik w **Edytor kodu**.
+7. Otwórz węzeł **Form1** . Poniżej znajduje się plik o nazwie **Form1.Designer.cs** lub **Form1. Designer. vb**. Jest to plik, do którego **Projektant formularzy systemu Windows** emituje kod reprezentujący stan czasu projektowania formularza i jego formantów podrzędnych. Otwórz ten plik w **edytorze kodu**.
 
-3. Otwórz region o nazwie **kod wygenerowany przez projektanta formularzy Windows** i Znajdź sekcję etykietą **serializationDemoControl1**. Pod tą etykietą jest kod reprezentujący Zserializowany stan kontrolki. Ciągi wpisywane w kroku 5 są wyświetlane w przypisaniu do `Strings` właściwości. W poniższych przykładach kodu w języku C# i Visual Basic, Pokaż kod podobny do będzie wyświetlanych Jeśli wpisano ciągi "red", "pomarańczowy" i "żółty".
+8. Otwórz region o nazwie **kod wygenerowany przez projektanta formularzy systemu Windows** i Znajdź sekcję zatytułowaną **serializationDemoControl1**. Poniżej znajduje się kod reprezentujący serializowany stan kontrolki. Ciągi wpisane w kroku 5 pojawiają się w przypisaniu do `Strings` właściwości. Poniższe przykłady kodu w C# i Visual Basic pokazują kod podobny do tego, co zobaczysz, jeśli wpisano ciągi "Red", "pomarańczowy" i "żółty".
 
     ```csharp
     this.serializationDemoControl1.Strings = new string[] {
@@ -109,7 +110,7 @@ Aby sprawdzić zachowanie serializacji kontrolki, będzie umieścić go w formul
     Me.serializationDemoControl1.Strings = New String() {"red", "orange", "yellow"}
     ```
 
-4. W **Edytor kodu**, zmień wartość właściwości <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> na `Strings` właściwość <xref:System.ComponentModel.DesignerSerializationVisibility.Hidden>.
+9. W **edytorze kodu**Zmień wartość <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> `Strings` właściwości <xref:System.ComponentModel.DesignerSerializationVisibility.Hidden>na.
 
     ```csharp
     [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
@@ -119,26 +120,24 @@ Aby sprawdzić zachowanie serializacji kontrolki, będzie umieścić go w formul
     <DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)> _
     ```
 
-5. Ponownie skompiluj rozwiązanie i powtórz kroki 3 i 4.
+10. Skompiluj ponownie rozwiązanie i powtórz kroki 3 i 4.
 
 > [!NOTE]
-> W tym przypadku **Windows Forms Designer** emituje żadnego przypisania `Strings` właściwości.
+> W takim przypadku **Projektant formularzy systemu Windows** emituje brak przypisania do `Strings` właściwości.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Wiesz, jak do serializacji kolekcji standardowych typów, należy wziąć pod uwagę integrowanie Kontrolki niestandardowe głębiej środowisku czasu projektowania. W poniższych tematach opisano, jak poprawić integracji czasu projektowania dla kontrolek niestandardowych:
+Gdy wiesz, jak serializować kolekcję typów standardowych, rozważ integrację formantów niestandardowych w środowisku czasu projektowania. W poniższych tematach opisano sposób ulepszania integracji niestandardowych kontrolek w czasie projektowania:
 
-- [Architektura czasu projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))
+- [Architektura czasu projektowania](/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))
 
 - [Atrybuty w kontrolkach formularzy Windows Forms](attributes-in-windows-forms-controls.md)
 
-- [Przegląd serializacji projektanta](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
+- [Omówienie serializacji projektanta](/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
 
-- [Przewodnik: Tworzenie kontrolki formularzy Windows wykorzystującego funkcje czasu projektowania w programie Visual Studio](creating-a-wf-control-design-time-features.md)
+- [Przewodnik: Tworzenie kontrolki Windows Forms, która wykorzystuje funkcje czasu projektowania programu Visual Studio](creating-a-wf-control-design-time-features.md)
 
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>
-- [Przegląd serializacji projektanta](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
-- [Instrukcje: Serializowanie kolekcji standardowych typów za pomocą DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))
 - [Przewodnik: Automatyczne zapełnianie przybornika składnikami niestandardowymi](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

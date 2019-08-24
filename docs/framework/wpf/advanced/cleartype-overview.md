@@ -5,19 +5,19 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 11019d564e7e658b745aec4254ad9a0c582b8416
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dbef816a995d9f4909a887f017da29bab6fc3702
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964932"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015640"
 ---
 # <a name="cleartype-overview"></a>ClearType — Przegląd
 Ten temat zawiera omówienie technologii Microsoft ClearType, która znajduje się w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Omówienie technologii  
- Technologia ClearType jest technologią oprogramowania opracowaną przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] program, która zwiększa czytelność tekstu w istniejących LCDS (w przypadku wyświetlaczy Liquid Crystal), takich jak ekrany laptopów, urządzenia Pocket PC i monitory płaskoekranowe.  Technologia ClearType działa przez uzyskanie dostępu do poszczególnych elementów pasków kolorów w pionie w każdym piksel ekranu LCD. Przed użyciem technologii ClearType najmniejszy poziom szczegółowości wyświetlany przez komputer był pojedynczy piksel, ale dzięki technologii ClearType działającej na monitorze LCD można teraz wyświetlać funkcje tekstu jako małe jako ułamek o szerokości pikseli. Dodatkowe rozwiązanie zwiększa ostrość niewielkich szczegółów w wyświetlaniu tekstu, ułatwiając odczytywanie ich w dłuższym czasie.  
+ Technologia ClearType jest technologią oprogramowania opracowaną przez firmę Microsoft, która zwiększa czytelność tekstu w istniejących LCDs (w przypadku wyświetlaczy Liquid Crystal), takich jak ekrany laptopów, urządzenia Pocket PC i monitory płaskoekranowe.  Technologia ClearType działa przez uzyskanie dostępu do poszczególnych elementów pasków kolorów w pionie w każdym piksel ekranu LCD. Przed użyciem technologii ClearType najmniejszy poziom szczegółowości wyświetlany przez komputer był pojedynczy piksel, ale dzięki technologii ClearType działającej na monitorze LCD można teraz wyświetlać funkcje tekstu jako małe jako ułamek o szerokości pikseli. Dodatkowe rozwiązanie zwiększa ostrość niewielkich szczegółów w wyświetlaniu tekstu, ułatwiając odczytywanie ich w dłuższym czasie.  
   
  Technologia ClearType dostępna w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] programie to najnowsza generacja technologii ClearType, która ma kilka ulepszeń w porównaniu z wersją w systemie Microsoft Windows GDI (GDI).  
   

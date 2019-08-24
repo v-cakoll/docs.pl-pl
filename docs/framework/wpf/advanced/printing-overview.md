@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 43b0ddc8f683e7069207bbb1c47af73976bc4a5a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bfac0248e6d9dae3ef87f43b2c713e1dc64a9464
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958548"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016116"
 ---
 # <a name="printing-overview"></a>Przegląd Drukowanie
 W przypadku Microsoft .NET Framework deweloperzy aplikacji korzystający z Windows Presentation Foundation (WPF) mają bogaty nowy zestaw interfejsów API zarządzania systemem drukowania i drukowania. Niektóre z tych ulepszeń systemu drukowania są również dostępne dla deweloperów tworzących [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacje i deweloperów korzystających z kodu niezarządzanego. [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] Podstawą tej nowej funkcji jest nowy [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] format pliku [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] i ścieżka wydruku.  
@@ -64,7 +64,7 @@ W przypadku Microsoft .NET Framework deweloperzy aplikacji korzystający z Windo
   
  Aby umożliwić korzystanie z drukarek opartych na XPsDrv przez [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplikacje i Windows Forms, sterownik drukarki XPS (XPsDrv) obsługuje konwersję formatu GDI na format XPS. Model XPsDrv zapewnia również konwerter dla formatu XPS na format GDI, dzięki czemu [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplikacje mogą drukować [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] dokumenty. W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] przypadku aplikacji Konwersja formatu XPS do interfejsu GDI jest wykonywana automatycznie <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> przez i <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> metody <xref:System.Windows.Xps.XpsDocumentWriter> klasy za każdym razem, gdy docelowa kolejka wydruku operacji zapisu nie ma sterownika XPsDrv. (Windows Forms aplikacje nie mogą [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] drukować dokumentów).  
   
- Poniższa ilustracja przedstawia podsystem drukowania i definiuje części dostarczone przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]program oraz części zdefiniowane przez dostawców oprogramowania i sprzętu:  
+ Poniższa ilustracja przedstawia podsystem drukowania i definiuje części dostarczone przez firmę Microsoft oraz części zdefiniowane przez dostawców oprogramowania i sprzętu:  
   
  ![Zrzut ekranu przedstawia system drukowania XPS.](./media/printing-overview/xml-paper-specification-print-system.png)  
   

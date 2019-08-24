@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: de523a42f1274784a92243735a8c239a6b5bcff1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f2af32315f8f955495c51f2928c2b8eed5350759
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960227"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016084"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Ustawienie rejestru renderowania grafiki
 Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ustawień rejestru renderowania grafiki, które mają wpływ na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje.  
@@ -70,7 +70,7 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|String|  
   
- W listopadzie 2004 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] wydano nową wersję wytycznych dotyczących testowania sterowników; sterowniki napisywane po tej dacie oferują lepszą stabilność. Domyślnie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] program użyje potoku przyspieszania sprzętowego dla tych sterowników i powróci do renderowania oprogramowania dla sterowników XPDM opublikowanych przed tą datą.  
+ W listopadzie 2004 firma Microsoft opublikowała nową wersję wytycznych dotyczących testowania sterowników; Sterowniki zapisywane po tej dacie oferują lepszą stabilność. Domyślnie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] program użyje potoku przyspieszania sprzętowego dla tych sterowników i powróci do renderowania oprogramowania dla sterowników XPDM opublikowanych przed tą datą.  
   
  **Wymagane ustawienie daty sterownika wideo** pozwala określić alternatywną minimalną datę dla sterowników XPDM. Należy określić datę wcześniejszą niż listopad, 2004, jeśli masz pewność, że sterownik wideo jest wystarczająco stabilny do obsługi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   

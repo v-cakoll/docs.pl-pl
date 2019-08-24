@@ -8,44 +8,48 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-ms.openlocfilehash: c06639ef2f2ced8bd128adea636efe8be1715764
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 4a9a4b9bc15d2579837c3f4969a8d85293f10967
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931021"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015670"
 ---
-# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>Przewodnik: Dziedziczenie z kontrolki Windows Forms przy użyciu języka Visual C\#
+# <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>Przewodnik: Dziedzicz z kontrolki Windows Forms przy użyciu języka C\#
+
 Za pomocą C#wizualizacji można tworzyć zaawansowane niestandardowe kontrolkiprzez dziedziczenie. Za pomocą dziedziczenia można tworzyć kontrolki, które zachowują wszystkie nieodłączne funkcje standardowych formantów Windows Forms, ale również zawierają funkcje niestandardowe. W tym instruktażu utworzysz prostą dziedziczoną kontrolkę o nazwie `ValueButton`. Ten przycisk dziedziczy funkcje ze standardowego formantu Windows Forms <xref:System.Windows.Forms.Button> i uwidacznia właściwość niestandardową o nazwie. `ButtonValue`
 
-## <a name="creating-the-project"></a>Tworzenie projektu
- Podczas tworzenia nowego projektu należy określić jego nazwę, aby ustawić główną przestrzeń nazw, nazwę zestawu i nazwę projektu oraz upewnić się, że domyślny składnik będzie w poprawnej przestrzeni nazw.
+## <a name="create-the-project"></a>Tworzenie projektu
+
+Podczas tworzenia nowego projektu należy określić jego nazwę, aby ustawić główną przestrzeń nazw, nazwę zestawu i nazwę projektu oraz upewnić się, że domyślny składnik będzie w poprawnej przestrzeni nazw.
 
 ### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a>Aby utworzyć bibliotekę kontrolek ValueButtonLib i formant ValueButton
 
-1. W menu **plik** wskaż polecenie **Nowy** , a następnie kliknij pozycję **projekt** , aby otworzyć okno dialogowe **Nowy projekt** .
-
-2. Wybierz szablon projektu **Biblioteka formantów Windows Forms** z listy projektów C# wizualizacji, a następnie wpisz `ValueButtonLib` w polu **Nazwa** .
+1. W programie Visual Studio Utwórz nowy projekt **biblioteki formantów Windows Forms** i nadaj mu nazwę **ValueButtonLib**.
 
      Nazwa projektu, `ValueButtonLib`, również jest domyślnie przypisana do głównej przestrzeni nazw. Główna przestrzeń nazw służy do kwalifikowania nazw składników w zestawie. Na przykład jeśli dwa zestawy dostarczają składniki o nazwie `ValueButton`, można `ValueButton` określić składnik przy użyciu `ValueButtonLib.ValueButton`. Aby uzyskać więcej informacji, zobacz [przestrzenie nazw](../../../csharp/programming-guide/namespaces/index.md).
 
-3. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **UserControl1.cs**, a następnie wybierz polecenie **Zmień nazwę** z menu skrótów. Zmień nazwę pliku na `ValueButton.cs`. Kliknij przycisk **tak** po wyświetleniu monitu, jeśli chcesz zmienić nazwy wszystkich odwołań do elementu kodu '`UserControl1`'.
+2. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **UserControl1.cs**, a następnie wybierz polecenie **Zmień nazwę** z menu skrótów. Zmień nazwę pliku na **ValueButton.cs**. Kliknij przycisk **tak** po wyświetleniu monitu, jeśli chcesz zmienić nazwy wszystkich odwołań do elementu kodu '`UserControl1`'.
 
-4. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **ValueButton.cs** i wybierz polecenie **Wyświetl kod**.
+3. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **ValueButton.cs** i wybierz polecenie **Wyświetl kod**.
 
-5. `class` Znajdź <xref:System.Windows.Forms.UserControl> <xref:System.Windows.Forms.Button>wiersz instrukcji i Zmień typ, z którego dziedziczy `public partial class ValueButton`ten formant. Dzięki temu Odziedziczone kontrolki dziedziczą wszystkie funkcje <xref:System.Windows.Forms.Button> formantu.
+4. `class` Znajdź <xref:System.Windows.Forms.UserControl> <xref:System.Windows.Forms.Button>wiersz instrukcji i Zmień typ, z którego dziedziczy `public partial class ValueButton`ten formant. Dzięki temu Odziedziczone kontrolki dziedziczą wszystkie funkcje <xref:System.Windows.Forms.Button> formantu.
 
-6. W **Eksplorator rozwiązań**otwórz węzeł **ValueButton.cs** , aby wyświetlić plik kodu wygenerowany przez projektanta, **ValueButton.Designer.cs**. Otwórz ten plik w **edytorze kodu**.
+5. W **Eksplorator rozwiązań**otwórz węzeł **ValueButton.cs** , aby wyświetlić plik kodu wygenerowany przez projektanta, **ValueButton.Designer.cs**. Otwórz ten plik w **edytorze kodu**.
 
-7. Znajdź metodę i Usuń wiersz, który <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> przypisuje właściwość. `InitializeComponent` Ta właściwość nie istnieje w <xref:System.Windows.Forms.Button> kontrolce.
+6. Znajdź metodę i Usuń wiersz, który <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> przypisuje właściwość. `InitializeComponent` Ta właściwość nie istnieje w <xref:System.Windows.Forms.Button> kontrolce.
 
-8. Z menu **plik** wybierz polecenie **Zapisz wszystko** , aby zapisać projekt.
+7. Z menu **plik** wybierz polecenie **Zapisz wszystko** , aby zapisać projekt.
 
     > [!NOTE]
     > Projektant wizualny nie jest już dostępny. <xref:System.Windows.Forms.Button> Ponieważ kontrolka wykonuje własne malowanie, nie można modyfikować jej wyglądu w projektancie. Jego reprezentacja wizualna będzie dokładnie taka sama jak Klasa, która dziedziczy z (czyli), <xref:System.Windows.Forms.Button>chyba że zostanie zmodyfikowana w kodzie. Można nadal dodawać składniki, które nie mają elementów interfejsu użytkownika, do powierzchni projektowej.
 
-## <a name="adding-a-property-to-your-inherited-control"></a>Dodawanie właściwości do kontrolki dziedziczonej
- Jednym z możliwych użycia dziedziczonych kontrolek Windows Forms jest utworzenie kontrolek, które są identyczne w wyglądzie i działaniu standardowych kontrolek Windows Forms, ale Uwidacznianie właściwości niestandardowych. W tej sekcji dodasz właściwość o nazwie `ButtonValue` do kontrolki.
+## <a name="add-a-property-to-your-inherited-control"></a>Dodawanie właściwości do kontrolki dziedziczonej
+
+Jednym z możliwych użycia dziedziczonych kontrolek Windows Forms jest utworzenie kontrolek, które są identyczne w wyglądzie i działaniu standardowych kontrolek Windows Forms, ale Uwidacznianie właściwości niestandardowych. W tej sekcji dodasz właściwość o nazwie `ButtonValue` do kontrolki.
 
 ### <a name="to-add-the-value-property"></a>Aby dodać właściwość Value
 
@@ -77,14 +81,13 @@ Za pomocą C#wizualizacji można tworzyć zaawansowane niestandardowe kontrolkip
 
 3. Z menu **plik** wybierz polecenie **Zapisz wszystko** , aby zapisać projekt.
 
-## <a name="testing-your-control"></a>Testowanie kontrolki
- Formanty nie są projektami autonomicznymi; muszą być hostowane w kontenerze. W celu przetestowania kontrolki musisz dostarczyć projekt testowy, aby uruchomić go w programie. Należy również udostępnić formant dla projektu testowego przez skompilowanie (skompilowanie). W tej sekcji utworzysz swój formant i przetestujesz go w formularzu systemu Windows.
+## <a name="test-the-control"></a>Testowanie kontrolki
+
+Formanty nie są projektami autonomicznymi; muszą być hostowane w kontenerze. W celu przetestowania kontrolki musisz dostarczyć projekt testowy, aby uruchomić go w programie. Należy również udostępnić formant dla projektu testowego przez skompilowanie (skompilowanie). W tej sekcji utworzysz swój formant i przetestujesz go w formularzu systemu Windows.
 
 ### <a name="to-build-your-control"></a>Aby skompilować swój formant
 
-1. Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.
-
-     Kompilacja powinna zakończyć się powodzeniem bez błędów lub ostrzeżeń kompilatora.
+Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**. Kompilacja powinna zakończyć się powodzeniem bez błędów lub ostrzeżeń kompilatora.
 
 ### <a name="to-create-a-test-project"></a>Aby utworzyć projekt testowy
 
@@ -92,11 +95,11 @@ Za pomocą C#wizualizacji można tworzyć zaawansowane niestandardowe kontrolkip
 
 2. Wybierz węzeł **systemu Windows** znajdujący się pod węzłem **wizualizacji C#**  , a następnie kliknij pozycję **Windows Forms aplikacji**.
 
-3. W polu **Nazwa** wpisz `Test`.
+3. W polu **Nazwa** wprowadź **test**.
 
 4. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy węzeł **odwołania** dla projektu testowego, a następnie wybierz polecenie **Dodaj odwołanie** z menu skrótów, aby wyświetlić okno dialogowe **Dodawanie odwołania** .
 
-5. Kliknij kartę z etykietą **projekty**. Projekt zostanie wyświetlony na liście **Nazwa projektu.** `ValueButtonLib` Kliknij dwukrotnie projekt, aby dodać odwołanie do projektu testowego.
+5. Kliknij kartę z etykietą **projekty**. Projekt ValueButtonLib zostanie wyświetlony na liście **Nazwa projektu**. Kliknij dwukrotnie projekt, aby dodać odwołanie do projektu testowego.
 
 6. W **Eksplorator rozwiązań** kliknij prawym przyciskiem myszy pozycję **Testuj** i wybierz polecenie **Kompiluj**.
 
@@ -104,15 +107,15 @@ Za pomocą C#wizualizacji można tworzyć zaawansowane niestandardowe kontrolkip
 
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **Form1.cs** i wybierz polecenie **View Designer** z menu skrótów.
 
-2. W **przyborniku**kliknij pozycję **składniki ValueButtonLib**. Kliknij dwukrotnie pozycję **ValueButton**.
+2. W **przyborniku**wybierz pozycję **składniki ValueButtonLib**. Kliknij dwukrotnie pozycję **ValueButton**.
 
      **ValueButton** pojawia się w formularzu.
 
 3. Kliknij prawym przyciskiem myszy **ValueButton** i wybierz polecenie **Właściwości** z menu skrótów.
 
-4. W oknie **Właściwości** , przejrzyj właściwości tej kontrolki. Należy zauważyć, że są one takie same jak właściwości udostępniane przez standardowy przycisk, z tą różnicą, że istnieje `ButtonValue`dodatkowa właściwość.
+4. W oknie **Właściwości** , przejrzyj właściwości tej kontrolki. Należy zauważyć, że są one takie same jak właściwości udostępniane przez standardowy przycisk, z tą różnicą, że istnieje dodatkowa Właściwość ButtonValue.
 
-5. Ustaw `ButtonValue` właściwość `5`.
+5. Ustaw właściwość **ButtonValue** na **5**.
 
 6. Na karcie **wszystkie Windows Forms** przybornika kliknijdwukrotnie pozycję <xref:System.Windows.Forms.Label> **etykieta** , aby dodać kontrolkę do formularza.
 

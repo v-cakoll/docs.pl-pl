@@ -10,18 +10,18 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: dfc1f023e9d1adce73a28f475f3796b4f7231ff8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f7d69f299b0b7638d6f8052e6aa0e77fac39c8e4
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960336"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016097"
 ---
 # <a name="packaging-fonts-with-applications"></a>Pakowanie czcionek z aplikacjami
 Ten temat zawiera omówienie sposobu tworzenia pakietów czcionek w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.  
   
 > [!NOTE]
-> Podobnie jak w przypadku większości typów oprogramowania, pliki czcionek są licencjonowane, a nie sprzedawane. Licencje, które regulują korzystanie z czcionek, różnią się od dostawcy do dostawcy, ale ogólnie w większości licencji, [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] w tym w odniesieniu do czcionek dostarczanych z aplikacjami i oknami, nie umożliwiają osadzania czcionek w aplikacjach ani w inny sposób Ponowna dystrybucja. W związku z tym deweloper jest odpowiedzialny za zapewnienie, że masz wymagane prawa do licencji dla dowolnej czcionki osadzonej w aplikacji lub w inny sposób.  
+> Podobnie jak w przypadku większości typów oprogramowania, pliki czcionek są licencjonowane, a nie sprzedawane. Licencje, które regulują korzystanie z czcionek, różnią się od dostawcy do dostawcy, ale ogólnie w większości licencji, łącznie z tymi, które obejmują czcionki firmy Microsoft w aplikacjach i Windows, nie umożliwiają osadzania czcionek w aplikacjach ani redystrybucji. W związku z tym deweloper jest odpowiedzialny za zapewnienie, że masz wymagane prawa do licencji dla dowolnej czcionki osadzonej w aplikacji lub w inny sposób.  
 
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>Wprowadzenie do tworzenia pakietów czcionek  

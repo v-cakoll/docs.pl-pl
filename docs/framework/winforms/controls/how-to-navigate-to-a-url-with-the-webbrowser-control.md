@@ -12,35 +12,35 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], navigating to URLs
 - examples [Windows Forms], WebBrowser control
 ms.assetid: b3ec38cb-f509-4d0b-bd79-9f3611259c62
-ms.openlocfilehash: bee16a388d823f74bc9c88bc34b510d2a5907393
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b6c1255fa17d91daaa73001fea04f26e73dba0ae
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649219"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015829"
 ---
 # <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a>Instrukcje: nawigowanie do adresu URL za pomocą kontrolki WebBrowser
-Poniższy przykład kodu pokazuje, jak nawigować po <xref:System.Windows.Forms.WebBrowser> kontroli na określony adres URL.  
-  
- Aby określić, kiedy nowy dokument jest w pełni załadowane, obsługi <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> zdarzeń. Demonstracyjne tego zdarzenia, zobacz [jak: Drukowanie za pomocą formantu WebBrowser](how-to-print-with-a-webbrowser-control.md).  
-  
-## <a name="example"></a>Przykład  
-  
-```vb  
-Me.webBrowser1.Navigate("http://www.microsoft.com")  
-```  
-  
-```csharp  
-this.webBrowser1.Navigate("http://www.microsoft.com");  
-```  
-  
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Ten przykład wymaga:  
-  
-- A <xref:System.Windows.Forms.WebBrowser> formantu o nazwie `webBrowser1`.  
-  
-- Odwołuje się do `System` i `System.Windows.Forms` zestawów.  
-  
+Poniższy przykład kodu demonstruje sposób nawigowania <xref:System.Windows.Forms.WebBrowser> kontrolki do określonego adresu URL.
+
+ Aby określić, kiedy nowy dokument jest w pełni załadowany, obsłużyć <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> zdarzenie. Aby zapoznać się z prezentacją tego zdarzenia [, zobacz How to: Drukuj z kontrolką](how-to-print-with-a-webbrowser-control.md)WebBrowser.
+
+## <a name="example"></a>Przykład
+
+```vb
+Me.webBrowser1.Navigate("http://www.microsoft.com")
+```
+
+```csharp
+this.webBrowser1.Navigate("http://www.microsoft.com");
+```
+
+## <a name="compiling-the-code"></a>Kompilowanie kodu
+ Ten przykład wymaga:
+
+- Kontrolka o `webBrowser1`nazwie. <xref:System.Windows.Forms.WebBrowser>
+
+- Odwołania do `System` zestawów i `System.Windows.Forms` .
+
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.WebBrowser>
@@ -48,4 +48,4 @@ this.webBrowser1.Navigate("http://www.microsoft.com");
 - <xref:System.Windows.Forms.WebBrowser.Navigating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.WebBrowser.Navigated?displayProperty=nameWithType>
 - [WebBrowser, kontrolka](webbrowser-control-windows-forms.md)
-- [Instrukcje: Drukowanie za pomocą formantu WebBrowser](how-to-print-with-a-webbrowser-control.md)
+- [Instrukcje: Drukowanie za pomocą kontrolki WebBrowser](how-to-print-with-a-webbrowser-control.md)

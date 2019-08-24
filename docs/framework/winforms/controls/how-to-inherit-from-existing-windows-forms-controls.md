@@ -8,19 +8,23 @@ helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
-ms.openlocfilehash: 9ac18fae126425126712dafeb80f05663dfc2ebc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 0571bd6b169b94b1626bffb0d0793bbb22a93ba0
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966586"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015866"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Instrukcje: dziedziczenie z istniejących kontrolek formularzy systemu Windows
+
 Jeśli chcesz zwiększyć funkcjonalność istniejącej kontrolki, można utworzyć kontrolkę pochodzącą od istniejącej kontrolki przez dziedziczenie. Podczas dziedziczenia z istniejącej kontrolki dziedziczą wszystkie funkcje i właściwości wizualne tej kontrolki. Na przykład jeśli tworzysz kontrolkę, która dziedziczy z <xref:System.Windows.Forms.Button>, Nowa kontrolka będzie wyglądać i działać tak samo jak w przypadku kontrolki standardowej. <xref:System.Windows.Forms.Button> Następnie można zwiększyć lub zmodyfikować funkcjonalność nowej kontrolki przez implementację niestandardowych metod i właściwości. W niektórych kontrolkach można także zmienić wygląd dziedziczonej kontrolki, zastępując jej <xref:System.Windows.Forms.Control.OnPaint%2A> metodę.
 
 ## <a name="to-create-an-inherited-control"></a>Aby utworzyć formant dziedziczony
 
-1. Utwórz nowy projekt **aplikacji Windows Forms** .
+1. W programie Visual Studio Utwórz nowy projekt **aplikacji Windows Forms** .
 
 2. W menu **projekt** wybierz polecenie **Dodaj nowy element**.
 
@@ -30,9 +34,10 @@ Jeśli chcesz zwiększyć funkcjonalność istniejącej kontrolki, można utworz
 
      Do projektu zostanie dodany nowy formant niestandardowy.
 
-4. Jeśli używasz Visual Basic, w górnej części **Eksplorator rozwiązań**kliknij przycisk **Pokaż wszystkie pliki**. Rozwiń CustomControl1. vb, a następnie otwórz CustomControl1. Designer. vb w edytorze kodu.
+4. Jeśli używasz:
 
-5. Jeśli używasz programu C#, Otwórz CustomControl1.cs w edytorze kodu.
+   - Visual Basic w górnej części **Eksplorator rozwiązań**kliknij przycisk **Pokaż wszystkie pliki**. Rozwiń CustomControl1. vb, a następnie otwórz CustomControl1. Designer. vb w edytorze kodu.
+   - C#Otwórz CustomControl1.cs w edytorze kodu.
 
 6. Znajdź deklarację klasy, która dziedziczy z <xref:System.Windows.Forms.Control>.
 
@@ -86,6 +91,5 @@ Jeśli chcesz zwiększyć funkcjonalność istniejącej kontrolki, można utworz
 - [Instrukcje: Dziedzicz z klasy kontrolki](how-to-inherit-from-the-control-class.md)
 - [Instrukcje: Dziedzicz z klasy UserControl](how-to-inherit-from-the-usercontrol-class.md)
 - [Instrukcje: Kontrolki autora dla Windows Forms](how-to-author-controls-for-windows-forms.md)
-- [Rozwiązywanie problemów z dziedziczonymi programami obsługi zdarzeń w Visual Basic](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [Przewodnik: Dziedziczenie z kontrolki Windows Forms z Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [Przewodnik: Dziedziczenie z kontrolki Windows Forms za pomocą wizualizacjiC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Rozwiązywanie problemów z dziedziczonymi programami obsługi zdarzeń w Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Przewodnik: Dziedziczenie z kontrolki Windows Forms](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

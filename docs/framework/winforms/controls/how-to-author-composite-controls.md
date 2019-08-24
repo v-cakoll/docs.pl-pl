@@ -7,23 +7,23 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: 7b0ee8efa62175e2ced2a810ca6dd76e8adc103b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 08cb07ceebf08b3096415f9b7370e2d955152cb6
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039895"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015935"
 ---
-# <a name="how-to-author-composite-controls"></a>Instrukcje: autoryzowanie kontrolek złożonych
+# <a name="how-to-author-composite-controls"></a>Instrukcje: Tworzenie złożonych kontrolek
 
 Kontrolki złożone mogą być stosowane na wiele sposobów. Można je tworzyć w ramach projektu aplikacji klasycznych systemu Windows i używać ich tylko na formularzach w projekcie. Można też tworzyć je w projekcie biblioteki formantów systemu Windows, kompilować projekt do zestawu i używać kontrolek w innych projektach. Można nawet dziedziczyć z nich i użyć dziedziczenia wizualnego, aby szybko dostosować je do specjalnych celów.
 
-> [!NOTE]
-> Jeśli chcesz utworzyć formant złożony do użycia w formularzach sieci Web, zobacz [Tworzenie niestandardowych kontrolek serwera ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).
-
 ## <a name="to-author-a-composite-control"></a>Aby utworzyć formant złożony
 
-1. W programie Visual Studio Utwórz nowy projekt **aplikacji systemu Windows** o `DemoControlHost`nazwie.
+1. W programie Visual Studio Utwórz nowy projekt **aplikacji systemu Windows** , a następnie nadaj mu nazwę **DemoControlHost**.
 
 2. W menu **projekt** kliknij polecenie **Dodaj kontrolkę użytkownika**.
 
@@ -79,10 +79,8 @@ Kontrolki złożone mogą być stosowane na wiele sposobów. Można je tworzyć 
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik: Tworzenie złożonego formantu z Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Przewodnik: Tworzenie formantu złożonego za pomocą wizualizacjiC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [Przewodnik: Dziedziczenie z kontrolki Windows Forms z Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [Przewodnik: Dziedziczenie z kontrolki Windows Forms za pomocą wizualizacjiC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Przewodnik: Tworzenie kontrolki złożonej](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Przewodnik: Dziedziczenie z kontrolki Windows Forms](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
 - [Zalecenia dotyczące typu kontrolki](control-type-recommendations.md)
 - [Instrukcje: Kontrolki autora dla Windows Forms](how-to-author-controls-for-windows-forms.md)
 - [Różne typy kontrolek niestandardowych](varieties-of-custom-controls.md)

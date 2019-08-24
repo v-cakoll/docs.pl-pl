@@ -6,18 +6,18 @@ helpviewer_keywords:
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-ms.openlocfilehash: 148d99713b6e6379893701b8f217a7d7546decd9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 960d30f4e484238e9e7c23741578650a8c3005c8
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952539"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987147"
 ---
 # <a name="how-to-create-windows-services"></a>Instrukcje: Tworzenie usług systemu Windows
 Podczas tworzenia usługi można użyć szablonu projektu programu Visual Studio o nazwie **Usługa systemu Windows**. Ten szablon automatycznie wykonuje większość pracy za Ciebie, odwołując się do odpowiednich klas i przestrzeni nazw, konfigurując dziedziczenie z klasy podstawowej dla usług i zastępując kilka metod, które mogą zostać przesłonięte.  
   
 > [!WARNING]
->  Szablon projektu usług systemu Windows nie jest dostępny w wersji Express programu Visual Studio.  
+> Szablon projektu usług systemu Windows nie jest dostępny w wersji Express programu Visual Studio.  
   
  Aby utworzyć usługę funkcjonalną, należy co najmniej:  
   

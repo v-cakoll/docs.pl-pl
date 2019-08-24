@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91a5095a44f992cb677e0a519372026730a787ab
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: c15b2c27e51557494f10c2445d75a4bd56c47f91
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923779"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987242"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Co nowego w .NET Framework
 
@@ -472,7 +472,7 @@ Program NET Framework 4.7.2 dodaje obsługę dla Always Encrypted opartych na en
 
 - <xref:System.Data.SqlClient.SqlEnclaveAttestationParameters>, która zapewnia parametry zaświadczania używane przez SQL Server do uzyskiwania informacji wymaganych do wykonania określonego protokołu zaświadczania.
 
-Następnie plik konfiguracji aplikacji określa konkretną implementację klasy abstrakcyjnej <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> , która udostępnia funkcje dostawcy enklawy. Na przykład:
+Następnie plik konfiguracji aplikacji określa konkretną implementację klasy abstrakcyjnej <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> , która udostępnia funkcje dostawcy enklawy. Przykład:
 
 ```xml
 <configuration>
@@ -605,7 +605,7 @@ Ponadto najważniejszym fokusem w .NET Framework 4.7.1 jest ulepszony ułatwieni
 
 **Obsługa .NET Standard 2,0**
 
-[.NET Standard](~/docs/standard/net-standard.md) definiuje zestaw interfejsów API, które muszą być dostępne dla każdej implementacji platformy .NET, która obsługuje tę wersję Standard. .NET Framework 4.7.1 w pełni obsługuje .NET Standard 2,0 i dodaje [około 200 interfejsów API](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt) , które są zdefiniowane w .NET Standard 2,0 i brakuje ich w .NET Framework 4.6.1, 4.6.2 i 4,7. (Należy zauważyć, że te wersje .NET Framework obsługują .NET Standard 2,0 tylko wtedy, gdy w systemie docelowym wdrożono również dodatkowe pliki obsługi .NET Standard). Aby uzyskać więcej informacji, zobacz "BCL-.NET Standard 2,0 Support" w blogu [.NET Framework środowiska uruchomieniowego 4.7.1 i kompilatora](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) .
+[.NET Standard](../../standard/net-standard.md) definiuje zestaw interfejsów API, które muszą być dostępne dla każdej implementacji platformy .NET, która obsługuje tę wersję Standard. .NET Framework 4.7.1 w pełni obsługuje .NET Standard 2,0 i dodaje [około 200 interfejsów API](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt) , które są zdefiniowane w .NET Standard 2,0 i brakuje ich w .NET Framework 4.6.1, 4.6.2 i 4,7. (Należy zauważyć, że te wersje .NET Framework obsługują .NET Standard 2,0 tylko wtedy, gdy w systemie docelowym wdrożono również dodatkowe pliki obsługi .NET Standard). Aby uzyskać więcej informacji, zobacz "BCL-.NET Standard 2,0 Support" w blogu [.NET Framework środowiska uruchomieniowego 4.7.1 i kompilatora](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) .
 
 **Obsługa konstruktorów konfiguracji**
 
@@ -623,7 +623,7 @@ Począwszy od .NET Framework 4.7.1, <xref:System.ValueTuple?displayProperty=name
 
 **Obsługa odwołań tylko do odczytu**
 
-.NET Framework 4.7.1 dodaje <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>. Ten atrybut jest używany przez kompilatory języka do oznaczania elementów członkowskich, które mają zwracane typy lub parametry odwołania tylko do odczytu. Aby uzyskać więcej informacji, zobacz "kompilator--support for ReadOnlyReferences" w wpisie .NET Framework w blogu [środowiska uruchomieniowego 4.7.1 i funkcji kompilatora](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) . Aby uzyskać informacje na temat zwracanych wartości, zobacz odwołania do zwracanych wartości [orazC# wartości lokalne ref (Przewodnik)](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) i [ref Return (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md).
+.NET Framework 4.7.1 dodaje <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>. Ten atrybut jest używany przez kompilatory języka do oznaczania elementów członkowskich, które mają zwracane typy lub parametry odwołania tylko do odczytu. Aby uzyskać więcej informacji, zobacz "kompilator--support for ReadOnlyReferences" w wpisie .NET Framework w blogu [środowiska uruchomieniowego 4.7.1 i funkcji kompilatora](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) . Aby uzyskać informacje na temat zwracanych wartości, zobacz odwołania do zwracanych wartości [orazC# wartości lokalne ref (Przewodnik)](../../csharp/programming-guide/classes-and-structs/ref-returns.md) i [ref Return (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md).
 
 <a name="clr" />
 
@@ -655,7 +655,7 @@ ASP.NET przetwarza żądania we wstępnie zdefiniowanym potoku zawierającym 23 
 
 **Opcje wyznaczania wartości skrótu SHA-2 dla poświadczeń uwierzytelniania ASP.NET Forms**
 
-W .NET Framework 4,7 i wcześniejszych wersjach ASP.NET zezwolenie deweloperom na przechowywanie poświadczeń użytkownika z użyciem skrótów haseł w plikach konfiguracji przy użyciu algorytmu MD5 lub SHA1. Począwszy od .NET Framework 4.7.1, ASP.NET obsługuje również nowe bezpieczne opcje skrótu SHA-2, takie jak SHA256, SHA384 i SHA512. Algorytm SHA1 pozostaje domyślny, a w pliku konfiguracyjnym sieci Web można zdefiniować niedomyślnego algorytmu wyznaczania wartości skrótu. Na przykład:
+W .NET Framework 4,7 i wcześniejszych wersjach ASP.NET zezwolenie deweloperom na przechowywanie poświadczeń użytkownika z użyciem skrótów haseł w plikach konfiguracji przy użyciu algorytmu MD5 lub SHA1. Począwszy od .NET Framework 4.7.1, ASP.NET obsługuje również nowe bezpieczne opcje skrótu SHA-2, takie jak SHA256, SHA384 i SHA512. Algorytm SHA1 pozostaje domyślny, a w pliku konfiguracyjnym sieci Web można zdefiniować niedomyślnego algorytmu wyznaczania wartości skrótu. Przykład:
 
 ```xml
 <system.web>
@@ -970,7 +970,7 @@ Aby rozwiązać ten wpływ na .NET Framework 4.6.2, do klasy <xref:System.Securi
 
 Biblioteka kryptografii systemu Windows (CNG) dodaliśmy obsługę przechowywania utrwalonych kluczy symetrycznych i używania kluczy symetrycznych przechowywanych sprzętowo, a .NET Framework 4.6.2, że deweloperzy mogą korzystać z tej funkcji.  Ponieważ pojęcie nazw kluczy i dostawców kluczy jest specyficzne dla implementacji, użycie tej funkcji wymaga użycia konstruktora konkretnych typów implementacji zamiast preferowanego podejścia do fabryki (na przykład wywoływanie `Aes.Create`).
 
-Obsługa szyfrowania symetrycznego klucza istnieje dla algorytmów AES (<xref:System.Security.Cryptography.AesCng>) i 3DES (<xref:System.Security.Cryptography.TripleDESCng>). Przykład:
+Obsługa szyfrowania symetrycznego klucza istnieje dla algorytmów AES (<xref:System.Security.Cryptography.AesCng>) i 3DES (<xref:System.Security.Cryptography.TripleDESCng>). Na przykład:
 
 ```csharp
 public static byte[] EncryptDataWithPersistedKey(byte[] data, byte[] iv)

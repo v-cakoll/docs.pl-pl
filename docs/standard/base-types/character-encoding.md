@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 8beaddf6439b8c3bc8f7971786e36fdb576e9b6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 82b936b753dff4230be6162583a50524e8c5254b
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934889"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987181"
 ---
 # <a name="character-encoding-in-net"></a>Kodowanie znaków w programie .NET
 Znaki to abstrakcyjne jednostki, które mogą być reprezentowane na wiele różnych sposobów. Kodowanie znaków to system, który par każdy znak w obsługiwanym zestawie znaków z wartością reprezentującą ten znak. Na przykład kod Morse jest kodowaniem znaków, które par każdy znak w alfabecie łaciński z wzorcem kropek i łączników, które są odpowiednie do przesyłania przez linie telegraficzne. Kodowanie znaków dla komputerów par każdy znak w obsługiwanym zestawie znaków o wartości liczbowej, która reprezentuje ten znak. Kodowanie znaków ma dwa odrębne składniki:  
@@ -31,7 +31,7 @@ Znaki to abstrakcyjne jednostki, które mogą być reprezentowane na wiele róż
  Kodowanie znaków zawiera opis reguł, za pomocą których koder i dekoder mają działać. Na przykład <xref:System.Text.UTF8Encoding> Klasa opisuje reguły kodowania do i dekodowania z, 8-bitowy format transformacji Unicode (UTF-8), który używa jednego do czterech bajtów do reprezentowania pojedynczego znaku Unicode. Kodowanie i dekodowanie może również obejmować walidację. Na przykład Klasa sprawdza <xref:System.Text.UnicodeEncoding> wszystkie surogaty, aby upewnić się, że stanowią poprawne pary surogatów. (Para zastępcza składa się z znaku z punktem kodu, który mieści się w zakresie od U + D800 do U + DBFF, po którym następuje znak z punktem kodu, który mieści się w zakresie od U + DC00 do U + DFFF).  Strategia rezerwowa określa, jak koder obsługuje nieprawidłowe znaki lub jak dekoder obsługuje nieprawidłowe bajty.  
   
 > [!WARNING]
->  Klasy kodowania .NET umożliwiają przechowywanie i konwertowanie danych znakowych. Nie powinny być używane do przechowywania danych binarnych w postaci ciągów. W zależności od użytego kodowania Konwertowanie danych binarnych na format ciągu z klasami kodowania może spowodować nieoczekiwane zachowanie i generować niedokładne lub uszkodzone dane. Aby przekonwertować dane binarne na postać ciągu, użyj <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> metody.  
+> Klasy kodowania .NET umożliwiają przechowywanie i konwertowanie danych znakowych. Nie powinny być używane do przechowywania danych binarnych w postaci ciągów. W zależności od użytego kodowania Konwertowanie danych binarnych na format ciągu z klasami kodowania może spowodować nieoczekiwane zachowanie i generować niedokładne lub uszkodzone dane. Aby przekonwertować dane binarne na postać ciągu, użyj <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> metody.  
   
  Platforma .NET używa kodowania UTF-16 (reprezentowanego przez <xref:System.Text.UnicodeEncoding> klasę) do reprezentowania znaków i ciągów. Aplikacje przeznaczone dla środowiska uruchomieniowego języka wspólnego używają koderów do mapowania reprezentacji znaków Unicode obsługiwanych przez środowisko uruchomieniowe języka wspólnego do innych schematów kodowania. Używają dekoderów do mapowania znaków z kodowania innych niż Unicode na Unicode.  
   

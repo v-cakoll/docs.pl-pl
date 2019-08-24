@@ -2,18 +2,18 @@
 title: Przepływy transakcji do i z usług przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: 7926c5a8ce1ca1ba3e24c4d1681ae12c18039924
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ae99c53bbb859f3ade075d4d60ad2ae7e5e7272b
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963340"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988809"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Przepływy transakcji do i z usług przepływu pracy
 Usługi przepływu pracy i klienci mogą uczestniczyć w transakcjach.  Aby operacja usługi stała się częścią otoczenia transakcji, umieść <xref:System.ServiceModel.Activities.Receive> działanie <xref:System.ServiceModel.Activities.TransactedReceiveScope> w ramach działania. Wszystkie wywołania wykonane przez <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.SendReply> lub działania w ramach <xref:System.ServiceModel.Activities.TransactedReceiveScope> programu zostaną również wykonane w obrębie transakcji otoczenia. Aplikacja kliencka przepływu pracy może utworzyć otoczenia transakcji przy użyciu <xref:System.Activities.Statements.TransactionScope> operacji działania i wywołania usługi przy użyciu transakcji otoczenia. W tym temacie omówiono tworzenie usługi przepływu pracy i klienta przepływu pracy, który uczestniczy w transakcjach.  
   
 > [!WARNING]
->  Jeśli wystąpienie usługi przepływu pracy jest załadowane w ramach transakcji, a przepływ pracy <xref:System.Activities.Statements.Persist> zawiera działanie, wystąpienie przepływu pracy zostanie zablokowane do momentu przełączenia transakcji.  
+> Jeśli wystąpienie usługi przepływu pracy jest załadowane w ramach transakcji, a przepływ pracy <xref:System.Activities.Statements.Persist> zawiera działanie, wystąpienie przepływu pracy zostanie zablokowane do momentu przełączenia transakcji.  
   
 > [!IMPORTANT]
 > Za każdym razem, <xref:System.ServiceModel.Activities.TransactedReceiveScope> gdy jest używany, zaleca się umieszczenie wszystkich odbiorów w <xref:System.ServiceModel.Activities.TransactedReceiveScope> przepływie pracy w ramach działań.  

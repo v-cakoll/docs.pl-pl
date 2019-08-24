@@ -3,12 +3,12 @@ title: <cookieHandler>
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 6c62100b2445ae10a83ebd9e7d154a6e2aa14e0b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 1c044f7346fabc77d7744f42c5bfd3d86d72402e
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942799"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988347"
 ---
 # <a name="cookiehandler"></a>\<cookieHandler>
 Konfiguruje <xref:System.IdentityModel.Services.CookieHandler> <xref:System.IdentityModel.Services.SessionAuthenticationModule> , że program (sam) używa do odczytu i zapisu plików cookie.  
@@ -77,7 +77,7 @@ Konfiguruje <xref:System.IdentityModel.Services.CookieHandler> <xref:System.Iden
  Poniższy kod XML pokazuje `<cookieHandler>` element. W tym przykładzie, ponieważ `mode` atrybut nie jest określony, domyślny program obsługi plików cookie będzie używany przez sam. Jest to wystąpienie <xref:System.IdentityModel.Services.ChunkedCookieHandler> klasy. Ponieważ element `<chunkedCookieHandler>` podrzędny nie jest określony, zostanie użyty domyślny rozmiar fragmentu. Protokół HTTPS nie będzie wymagany, `requireSsl` ponieważ atrybut jest ustawiony. `false`  
   
 > [!WARNING]
->  W tym przykładzie protokół HTTPS nie jest wymagany do zapisywania plików cookie sesji. Jest to spowodowane tym `requireSsl` , że atrybut `<cookieHandler>` w elemencie jest ustawiony `false`na. To ustawienie nie jest zalecane w przypadku większości środowisk produkcyjnych, ponieważ może stanowić zagrożenie bezpieczeństwa.  
+> W tym przykładzie protokół HTTPS nie jest wymagany do zapisywania plików cookie sesji. Jest to spowodowane tym `requireSsl` , że atrybut `<cookieHandler>` w elemencie jest ustawiony `false`na. To ustawienie nie jest zalecane w przypadku większości środowisk produkcyjnych, ponieważ może stanowić zagrożenie bezpieczeństwa.  
   
 ```xml  
 <cookieHandler requireSsl="false" />  

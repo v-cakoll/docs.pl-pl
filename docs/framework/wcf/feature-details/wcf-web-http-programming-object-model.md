@@ -2,15 +2,15 @@
 title: Model obiektowy programowania protokołu HTTP sieci Web w programie WCF
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: 2401a8a051ed4dcd386c7794a2197672709ea423
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 43ec16927c703ca373eaa4299093503b2fab2266
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487692"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988564"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Model obiektowy programowania protokołu HTTP sieci Web w programie WCF
-Usługi WCF WEB HTTP programowania modelu pozwala deweloperom na Uwidacznianie usług Windows Communication Foundation (WCF) w sieci Web za pomocą podstawowego żądania HTTP bez protokołu SOAP. WCF WEB HTTP programowania modelu została stworzona na podstawie istniejącego modelu rozszerzalności programu WCF. Definiuje następujące klasy:  
+Model programowania HTTP sieci WEB w programie WCF umożliwia deweloperom udostępnianie usług sieci Web Windows Communication Foundation (WCF) za pośrednictwem podstawowych żądań HTTP bez konieczności stosowania protokołu SOAP. Model programowania HTTP sieci WEB w programie WCF jest oparty na istniejącym modelu rozszerzalności WCF. Definiuje następujące klasy:  
   
  **Model programowania:**  
   
@@ -22,7 +22,7 @@ Usługi WCF WEB HTTP programowania modelu pozwala deweloperom na Uwidacznianie u
   
 - <xref:System.ServiceModel.Web.WebServiceHost>  
   
- **Kanały i wysyłający infrastruktury:**  
+ **Infrastruktura kanałów i dyspozytorów:**  
   
 - <xref:System.ServiceModel.WebHttpBinding>  
   
@@ -39,65 +39,65 @@ Usługi WCF WEB HTTP programowania modelu pozwala deweloperom na Uwidacznianie u
 - <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
   
 ## <a name="aspnetcacheprofileattribute"></a>AspNetCacheProfileAttribute  
- <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, Po zastosowaniu do operacji usługi wskazuje ASP.NET dane wyjściowe profil pamięci podręcznej w pliku konfiguracji, które mają być używane przez do pamięci podręcznej odpowiedzi z operacji w wyjściowej pamięci podręcznej programu ASP .NET. Ta właściwość ma tylko jeden parametr, nazwa profilu pamięci podręcznej, który określa ustawienia pamięci podręcznej w pliku konfiguracji.  
+ W przypadku zastosowania do operacji usługi program wskazuje w pliku konfiguracji wyjściowy profil pamięci podręcznej ASP.NET, który powinien być używany przez programdobuforowaniaodpowiedzizoperacjiwwyjściowejpamięcipodręcznejASP.NET.<xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> Ta właściwość przyjmuje tylko jeden parametr, nazwa profilu pamięci podręcznej, która określa ustawienia pamięci podręcznej w pliku konfiguracji.  
   
 ## <a name="webgetattribute"></a>WebGetAttribute  
- <xref:System.ServiceModel.Web.WebGetAttribute> Atrybut jest używany do oznaczania operacji usługi jako jeden, który odpowiada na żądania HTTP GET. To zachowanie operacji pasywnym ( <xref:System.ServiceModel.Description.IOperationBehavior> metody nic nie rób) dodająca metadanych opis operacji. Stosowanie <xref:System.ServiceModel.Web.WebGetAttribute> nie ma wpływu, chyba że zachowania wygląda dla tych metadanych w opisie działania (w szczególności <xref:System.ServiceModel.Description.WebHttpBehavior>) jest dodawany do kolekcji zachowania usługi. <xref:System.ServiceModel.Web.WebGetAttribute> Atrybut przyjmuje następujące parametry opcjonalne pokazano w poniższej tabeli.  
+ Ten <xref:System.ServiceModel.Web.WebGetAttribute> atrybut służy do oznaczania operacji usługi, która odpowiada na żądania HTTP GET. Jest to zachowanie operacji pasywnej ( <xref:System.ServiceModel.Description.IOperationBehavior> metody nic nie rób), które dodaje metadane do opisu operacji. Zastosowanie nie <xref:System.ServiceModel.Description.WebHttpBehavior>ma żadnego efektu, chyba że zachowanie, które szuka tych metadanych w opisie operacji (w tym celu) jest dodawane do kolekcji zachowań usługi. <xref:System.ServiceModel.Web.WebGetAttribute> Ten <xref:System.ServiceModel.Web.WebGetAttribute> atrybut przyjmuje parametry opcjonalne pokazane w poniższej tabeli.  
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|`BodyStyle`|Określa, czy do opakowania żądań i odpowiedzi wysyłane do i odbierane z operacji usługi, który jest stosowany.|  
-|`RequestFormat`|Określa, jak są sformatowane komunikaty żądania.|  
-|`ResponseFormat`|Określa, jak są sformatowane wiadomości odpowiedzi.|  
-|`UriTemplate`|Określa szablon identyfikatora URI, który kontroluje, jakie żądania HTTP są mapowane do operacji usługi, który jest stosowany.|  
+|`BodyStyle`|Określa, czy należy zawijać żądania i odpowiedzi wysyłane do i odbierane z operacji usługi, do której ma zastosowanie atrybut.|  
+|`RequestFormat`|Kontroluje sposób formatowania komunikatów żądania.|  
+|`ResponseFormat`|Kontroluje sposób formatowania komunikatów odpowiedzi.|  
+|`UriTemplate`|Określa szablon identyfikatora URI, który kontroluje, jakie żądania HTTP są mapowane do operacji usługi, do której jest stosowany atrybut.|  
   
 ## <a name="webhttpbinding"></a>WebHttpBinding  
- <xref:System.ServiceModel.WebHttpBinding> Klasy zawiera obsługę XML, JSON i nieprzetworzone dane binarne, przy użyciu <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>. Składa się z <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement> i <xref:System.ServiceModel.WebHttpSecurity> obiektu. <xref:System.ServiceModel.WebHttpBinding> Jest przeznaczony do użycia w połączeniu z <xref:System.ServiceModel.Description.WebHttpBehavior>.  
+ Klasa obejmuje obsługę danych XML, JSON i nieprzetworzone dane binarne <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>przy użyciu. <xref:System.ServiceModel.WebHttpBinding> Składa się z <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement> i <xref:System.ServiceModel.WebHttpSecurity> obiektu. Program jest przeznaczony do użycia w połączeniu z. <xref:System.ServiceModel.Description.WebHttpBehavior> <xref:System.ServiceModel.WebHttpBinding>  
   
 ## <a name="webinvokeattribute"></a>WebInvokeAttribute  
- <xref:System.ServiceModel.Web.WebInvokeAttribute> Atrybutu jest podobny do <xref:System.ServiceModel.Web.WebGetAttribute>, ale jest używany do oznaczania operacji usługi, ponieważ taki, który odpowiada HTTP inne niż GET żądań. To zachowanie operacji pasywnym ( <xref:System.ServiceModel.Description.IOperationBehavior> metody nic nie rób) dodająca metadanych opis operacji. Stosowanie <xref:System.ServiceModel.Web.WebInvokeAttribute> nie ma wpływu, chyba że zachowania wygląda dla tych metadanych w opisie działania (w szczególności <xref:System.ServiceModel.Description.WebHttpBehavior>) jest dodawany do kolekcji zachowania usługi.  
+ Ten <xref:System.ServiceModel.Web.WebInvokeAttribute> atrybut jest podobny <xref:System.ServiceModel.Web.WebGetAttribute>do, ale jest używany do oznaczania operacji usługi, która odpowiada na żądania HTTP inne niż get. Jest to zachowanie operacji pasywnej ( <xref:System.ServiceModel.Description.IOperationBehavior> metody nic nie rób), które dodaje metadane do opisu operacji. Zastosowanie nie <xref:System.ServiceModel.Description.WebHttpBehavior>ma żadnego efektu, chyba że zachowanie, które szuka tych metadanych w opisie operacji (w tym celu) jest dodawane do kolekcji zachowań usługi. <xref:System.ServiceModel.Web.WebInvokeAttribute>  
   
- <xref:System.ServiceModel.Web.WebInvokeAttribute> Atrybut przyjmuje następujące parametry opcjonalne pokazano w poniższej tabeli.  
+ Ten <xref:System.ServiceModel.Web.WebInvokeAttribute> atrybut przyjmuje parametry opcjonalne pokazane w poniższej tabeli.  
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|`BodyStyle`|Określa, czy do opakowania żądań i odpowiedzi wysyłane do i odbierane z operacji usługi, który jest stosowany.|  
-|`Method`|Określa metodę HTTP, który jest mapowany operacji usługi.|  
-|`RequestFormat`|Określa, jak są sformatowane komunikaty żądania.|  
-|`ResponseFormat`|Określa, jak są sformatowane wiadomości odpowiedzi.|  
-|`UriTemplate`|Określa szablon identyfikatora URI, który kontroluje, jakie żądania GET są mapowane do operacji usługi, który jest stosowany.|  
+|`BodyStyle`|Określa, czy należy zawijać żądania i odpowiedzi wysyłane do i odbierane z operacji usługi, do której ma zastosowanie atrybut.|  
+|`Method`|Określa metodę HTTP, do której jest zamapowana operacja usługi.|  
+|`RequestFormat`|Kontroluje sposób formatowania komunikatów żądania.|  
+|`ResponseFormat`|Kontroluje sposób formatowania komunikatów odpowiedzi.|  
+|`UriTemplate`|Określa szablon identyfikatora URI, który kontroluje, jakie żądania GET są mapowane do operacji usługi, do której jest stosowany atrybut.|  
   
 ## <a name="uritemplate"></a>UriTemplate  
- <xref:System.UriTemplate> Klasa umożliwia zdefiniowanie zestawu strukturalnie podobne identyfikatorów URI. Szablony składają się z dwóch części, ścieżkę i zapytanie. Ścieżka składa się z szeregu segmentów rozdzielonych ukośnikiem (/). Każdy z segmentów może mieć wartości literału, wartość zmiennej (napisanego w nawiasy klamrowe {[}], ograniczone do dopasowania zawartości dokładnie jednego segmentu) lub symbol wieloznaczny (zapisane jako znak gwiazdki [\*], który dopasowuje "pozostałą część ścieżki"), który musi znajdować się na końca ścieżki. Można całkowicie pominąć wyrażenia zapytania. Jeśli jest obecny, określa nieuporządkowaną serii par nazwa/wartość. Elementy wyrażenia zapytania mogą być albo literał pary (? x = 2) lub pary zmiennej (? x = {*wartość*}). Także niesparowane wartości nie są dozwolone. <xref:System.UriTemplate> jest używana wewnętrznie przez usługi WCF WEB HTTP programowania Model do określonych identyfikatorów URI lub grup identyfikatory URI są mapowane na operacje usługi.  
+ <xref:System.UriTemplate> Klasa umożliwia zdefiniowanie zestawu podobnych identyfikatorów URI. Szablony składają się z dwóch części, ścieżki i zapytania. Ścieżka składa się z serii segmentów rozdzielonych ukośnikiem (/). Każdy segment może mieć wartość literału, wartość zmiennej (zapisaną w nawiasach klamrowych [{}], ograniczona do zawartości dokładnie jednego segmentu) lub symbol wieloznaczny (zapisany jako gwiazdka [\*], który pasuje do "reszty ścieżki"), która musi być wyświetlana w koniec ścieżki. Wyrażenie zapytania można całkowicie pominąć. Jeśli jest obecny, określa nieuporządkowaną serię par nazwa/wartość. Elementy wyrażenia zapytania mogą być parami literałów (? x = 2) lub par zmiennych (? x = {*Value*}). Niesparowane wartości są niedozwolone. <xref:System.UriTemplate>jest używany wewnętrznie przez model programowania HTTP sieci WEB w programie WCF do mapowania określonych identyfikatorów URI lub grup identyfikatorów URI na operacje usługi.  
   
 ## <a name="uritemplatetable"></a>UriTemplateTable  
- <xref:System.UriTemplateTable> Klasa reprezentuje zestaw asocjacyjnych <xref:System.UriTemplate> obiekty powiązane z obiektu dewelopera jego wybranie. Dzięki temu można dopasować Release candidate Uniform Resource Identifier (URI) szablonów w zestawie i pobrać dane skojarzone z szablonami dopasowania. <xref:System.UriTemplateTable> jest używana wewnętrznie przez usługi WCF WEB HTTP programowania Model do określonych identyfikatorów URI lub grup identyfikatory URI są mapowane na operacje usługi.  
+ Klasa reprezentuje zestaw asocjacyjny obiektów powiązanych z obiektem wyboru dewelopera. <xref:System.UriTemplate> <xref:System.UriTemplateTable> Pozwala dopasować identyfikatory URI (Uniform Resource Identifier) kandydatów do szablonów w zestawie i pobrać dane skojarzone z pasującymi szablonami. <xref:System.UriTemplateTable>jest używany wewnętrznie przez model programowania HTTP sieci WEB w programie WCF do mapowania określonych identyfikatorów URI lub grup identyfikatorów URI na operacje usługi.  
   
 ## <a name="webservicehost"></a>WebServiceHost  
- <xref:System.ServiceModel.Web.WebServiceHost> Rozszerza <xref:System.ServiceModel.ServiceHost> ułatwiają hostowanie usługi sieci Web stylu protokołem SOAP. Jeśli <xref:System.ServiceModel.Web.WebServiceHost> wykryje brak punktów końcowych w opisie usługi automatycznie tworzy domyślny punkt końcowy na adres podstawowy usługi. Podczas tworzenia domyślnego punktu końcowego HTTP, <xref:System.ServiceModel.Web.WebServiceHost> także wyłącza stronę pomocy protokołu HTTP i funkcje GET usługi sieci Web Services Description Language (WSDL), więc punkt końcowy metadanych nie kolidują z domyślnego punktu końcowego HTTP. <xref:System.ServiceModel.Web.WebServiceHost> gwarantuje również, że wszystkie punkty końcowe korzystające <xref:System.ServiceModel.WebHttpBinding> mają wymaganych <xref:System.ServiceModel.Description.WebHttpBehavior> dołączone. Na koniec <xref:System.ServiceModel.Web.WebServiceHost> automatycznie konfiguruje powiązanie punktu końcowego do pracy z skojarzone ustawienia zabezpieczeń Internet Information Services (IIS), gdy są używane w bezpieczny katalog wirtualny.  
+ <xref:System.ServiceModel.Web.WebServiceHost>rozszerza, <xref:System.ServiceModel.ServiceHost> aby ułatwić Hostowanie usługi w stylu sieci Web bez protokołu SOAP. Jeśli <xref:System.ServiceModel.Web.WebServiceHost> w opisie usługi nie znaleziono żadnych punktów końcowych, program automatycznie utworzy domyślny punkt końcowy na adresie podstawowym usługi. Podczas tworzenia domyślnego punktu końcowego http program wyłącza <xref:System.ServiceModel.Web.WebServiceHost> również stronę pomocy http i funkcję pobierania Web Services Description Language (WSDL), dzięki czemu punkt końcowy metadanych nie zakłóca domyślnego punktu końcowego http. <xref:System.ServiceModel.Web.WebServiceHost>zapewnia również, że wszystkie punkty końcowe <xref:System.ServiceModel.WebHttpBinding> , które używają <xref:System.ServiceModel.Description.WebHttpBehavior> , mają wymagany dołączony. Na koniec <xref:System.ServiceModel.Web.WebServiceHost> program automatycznie konfiguruje powiązanie punktu końcowego, aby działał przy użyciu skojarzonych ustawień zabezpieczeń Internet Information Services (IIS), gdy są używane w bezpiecznym katalogu wirtualnym.  
   
 ## <a name="webservicehostfactory"></a>WebServiceHostFactory  
- <xref:System.ServiceModel.Activation.WebServiceHostFactory> Klasa jest używana do dynamicznego tworzenia <xref:System.ServiceModel.Web.WebServiceHost> gdy usługa jest obsługiwana w ramach usług Internet Information Services (IIS) lub Windows Process Activation Service (WAS). W przeciwieństwie do samodzielnie hostowanej usługi, których tworzy wystąpienie aplikacji macierzystej <xref:System.ServiceModel.Web.WebServiceHost>, usługi IIS hostowanej w ramach lub został klasa jest używana do tworzenia <xref:System.ServiceModel.Web.WebServiceHost> dla usługi. <xref:System.ServiceModel.Activation.WebServiceHostFactory.CreateServiceHost%28System.Type%2CSystem.Uri%5B%5D%29> Metoda jest wywoływana po odebraniu żądania przychodzące dla usługi.  
+ Klasa jest używana do dynamicznego tworzenia, <xref:System.ServiceModel.Web.WebServiceHost> gdy usługa jest hostowana w Internet Information Services (IIS) lub usługa aktywacji procesów systemu Windows (was). <xref:System.ServiceModel.Activation.WebServiceHostFactory> W przeciwieństwie do usługi samodzielnej <xref:System.ServiceModel.Web.WebServiceHost>, w której aplikacja hostingu tworzy wystąpienia, usługi hostowane w usługach IIS lub używała tej klasy do <xref:System.ServiceModel.Web.WebServiceHost> utworzenia dla usługi. <xref:System.ServiceModel.Activation.WebServiceHostFactory.CreateServiceHost%28System.Type%2CSystem.Uri%5B%5D%29> Metoda jest wywoływana w przypadku otrzymania żądania przychodzącego dla usługi.  
   
 ## <a name="webhttpbehavior"></a>WebHttpBehavior  
- <xref:System.ServiceModel.Description.WebHttpBehavior> Klasa dostarcza niezbędne elementy formatujące, operacja selektory i tak dalej, wymagane do obsługi stylu sieci Web w warstwie modelu usługi. Ten sposób jest implementowany jako zachowanie punktu końcowego (używane w połączeniu z <xref:System.ServiceModel.WebHttpBinding>) i pozwala elementy formatujące i selektory operację, należy określić dla każdego punktu końcowego, który umożliwia tym samym implementacji service uwidaczniają punkty końcowe protokołu SOAP i POX.  
+ <xref:System.ServiceModel.Description.WebHttpBehavior> Klasa dostarcza niezbędne elementy formatujące, selektory operacji i tak dalej, które są wymagane do obsługi usługi w stylu sieci Web w warstwie modelu usług. Jest to implementowane jako zachowanie punktu końcowego (używane w połączeniu z <xref:System.ServiceModel.WebHttpBinding>) i pozwala na określenie programów formatującego i selektorów operacji dla każdego punktu końcowego, co umożliwia tej samej implementacji usługi Uwidacznianie punktów końcowych protokołu SOAP i POX.  
   
 ### <a name="extending-webhttpbehavior"></a>Rozszerzanie WebHttpBehavior  
- <xref:System.ServiceModel.Description.WebHttpBehavior> jest rozszerzalny za pomocą pewnej liczby metod wirtualnych: <xref:System.ServiceModel.Description.WebHttpBehavior.GetOperationSelector%28System.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, i <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>. Deweloperzy mogą wyprowadzić klasę z <xref:System.ServiceModel.Description.WebHttpBehavior> i zastąpić te metody, aby dostosować zachowanie domyślne.  
+ <xref:System.ServiceModel.Description.WebHttpBehavior>jest <xref:System.ServiceModel.Description.WebHttpBehavior.GetOperationSelector%28System.ServiceModel.Description.ServiceEndpoint%29>rozszerzalny przy użyciu wielu metod wirtualnych:, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29> <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, i <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>. Deweloperzy mogą dziedziczyć klasy z <xref:System.ServiceModel.Description.WebHttpBehavior> i przesłonić te metody, aby dostosować zachowanie domyślne.  
   
- <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> Jest przykładem rozszerzanie <xref:System.ServiceModel.Description.WebHttpBehavior>. <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> Umożliwia punktów końcowych usług Windows Communication Foundation (WCF), aby otrzymywać żądania HTTP od klienta ASP.NET AJAX oparte na przeglądarce. [AJAX usługi za pomocą żądania HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) znajduje się przykład za pomocą tego punktu rozszerzalności.  
+ Jest to przykład rozszerzania <xref:System.ServiceModel.Description.WebHttpBehavior>. <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>umożliwia punktom końcowym Windows Communication Foundation (WCF) odbieranie żądań HTTP z klienta ASP.NET AJAX opartego na przeglądarce. Przykładem użycia tego punktu rozszerzalności jest [Usługa AJAX korzystająca z protokołu HTTP Post](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) .  
   
 > [!WARNING]
->  Korzystając z <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>, <xref:System.UriTemplate> nie są obsługiwane w ramach <xref:System.ServiceModel.Web.WebGetAttribute> lub <xref:System.ServiceModel.Web.WebInvokeAttribute> atrybutów.  
+> W przypadku korzystania <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>z <xref:System.UriTemplate> , nie są obsługiwane <xref:System.ServiceModel.Web.WebGetAttribute> w <xref:System.ServiceModel.Web.WebInvokeAttribute> ani atrybuty.  
   
 ## <a name="webhttpdispatchoperationselector"></a>WebHttpDispatchOperationSelector  
- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector> Klasy używa <xref:System.UriTemplate> i <xref:System.UriTemplateTable> klasy wysyłanie wywołań do operacji usługi.  
+ Klasa używa <xref:System.UriTemplate> klas i<xref:System.UriTemplateTable> do wysyłania wywołań do operacji usługi. <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
   
 ## <a name="compatibility"></a>Zgodność  
- WCF WEB HTTP programowania modelu nie korzysta z opartej na protokole SOAP wiadomości i dlatego nie obsługuje protokołu WS-* protokołów. Można jednak udostępnić ten sam kontrakt przez dwa różne punkt końcowy: ją przy użyciu protokołu SOAP, a inne nie przy użyciu protokołu SOAP. Zobacz [jak: Ujawnianie kontraktu klientom internetowym i SOAP](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) przykład.  
+ Model programowania HTTP sieci WEB w programie WCF nie korzysta z komunikatów opartych na protokole SOAP, dlatego nie obsługuje protokołów WS-*. Można jednak uwidocznić ten sam kontrakt przez dwa różne punkty końcowe: jeden przy użyciu protokołu SOAP, a drugi nie używa protokołu SOAP. Zobacz [How to: Na przykład uwidocznienie kontraktu dla klientów](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) protokołu SOAP i sieci Web.  
   
 ## <a name="security"></a>Zabezpieczenia  
- Ponieważ WCF WEB HTTP modelu programowania nie obsługuje protokołu WS-* protokołów, jedynym sposobem, aby zabezpieczyć usługi sieci Web oparta na sieci WEB HTTP modelu programowania programu WCF jest do udostępnienia usługi za pomocą protokołu SSL. Aby uzyskać więcej informacji o konfigurowaniu protokołu SSL za pomocą usług IIS 7.0 zobacz [Implementowanie protokołu SSL w usługach IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
+ Ponieważ model programowania HTTP sieci WEB w programie WCF nie obsługuje protokołów WS-*, jedynym sposobem zabezpieczenia usługi sieci Web opartej na modelu programowania HTTP sieci WEB w programie WCF jest udostępnienie usługi przy użyciu protokołu SSL. Aby uzyskać więcej informacji na temat konfigurowania protokołu SSL w usługach IIS 7,0, zobacz [jak zaimplementować protokół SSL w usługach IIS](https://go.microsoft.com/fwlink/?LinkId=131613) .  
   
 ## <a name="see-also"></a>Zobacz także
 

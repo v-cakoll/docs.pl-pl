@@ -4,68 +4,68 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c6f1a2d23d5f33ba7e4f0d51f795e75d7cf785e
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 7545e1d7079664fd8706bdddac2ff3c8ebc27c7f
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052451"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988291"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)
 
-Dyrektywy środowiska uruchomieniowego (. rd.xml) plik znajduje się plik konfiguracyjny XML, który określa, czy elementy wyznaczonej programu są dostępne w celu odbicia. Poniżej przedstawiono przykładowy plik dyrektywy środowiska uruchomieniowego:
+Plik dyrektywy środowiska uruchomieniowego (. Rd. xml) jest plikiem konfiguracji XML, który określa, czy wyszukane elementy programu są dostępne do odbicia. Oto przykład pliku dyrektywy środowiska uruchomieniowego:
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
-<Application>
-  <Namespace Name="Contoso.Cloud.AppServices" Serialize="Required Public" />
-  <Namespace Name="ContosoClient.ViewModels" Serialize="Required Public" />
-  <Namespace Name="ContosoClient.DataModel" Serialize="Required Public" />
-  <Namespace Name="Contoso.Reader.UtilityLib" Serialize="Required Public" />
+  <Application>
+    <Namespace Name="Contoso.Cloud.AppServices" Serialize="Required Public" />
+    <Namespace Name="ContosoClient.ViewModels" Serialize="Required Public" />
+    <Namespace Name="ContosoClient.DataModel" Serialize="Required Public" />
+    <Namespace Name="Contoso.Reader.UtilityLib" Serialize="Required Public" />
 
-  <Namespace Name="System.Collections.ObjectModel" >
-    <TypeInstantiation Name="ObservableCollection"
-          Arguments="ContosoClient.DataModel.ProductItem" Serialize="Public" />
-    <TypeInstantiation Name="ReadOnlyObservableCollection"
-          Arguments="ContosoClient.DataModel.ProductGroup" Serialize="Public" />
-  </Namespace>
-</Application>
+    <Namespace Name="System.Collections.ObjectModel" >
+      <TypeInstantiation Name="ObservableCollection"
+            Arguments="ContosoClient.DataModel.ProductItem" Serialize="Public" />
+      <TypeInstantiation Name="ReadOnlyObservableCollection"
+            Arguments="ContosoClient.DataModel.ProductGroup" Serialize="Public" />
+    </Namespace>
+  </Application>
 </Directives>
 ```
 
-## <a name="the-structure-of-a-runtime-directives-file"></a>Struktura pliku dyrektyw środowiska uruchomieniowego
+## <a name="the-structure-of-a-runtime-directives-file"></a>Struktura pliku dyrektywy środowiska uruchomieniowego
 
-Dyrektywy środowiska uruchomieniowego plików używa `http://schemas.microsoft.com/netfx/2013/01/metadata` przestrzeni nazw.
+Plik dyrektywy środowiska uruchomieniowego używa `http://schemas.microsoft.com/netfx/2013/01/metadata` przestrzeni nazw.
 
-Element główny jest [dyrektywy](../../../docs/framework/net-native/directives-element-net-native.md) elementu. Może zawierać zero lub więcej [biblioteki](../../../docs/framework/net-native/library-element-net-native.md) elementy i zero lub jeden [aplikacji](../../../docs/framework/net-native/application-element-net-native.md) elementu, jak pokazano na następującej strukturze. Atrybuty [aplikacji](../../../docs/framework/net-native/application-element-net-native.md) elementu można zdefiniować całej aplikacji w czasie wykonywania odbicia zasad lub może służyć jako kontener dla elementów podrzędnych. [Biblioteki](../../../docs/framework/net-native/library-element-net-native.md) elementu, z drugiej strony, to po prostu kontener. Elementy podrzędne [aplikacji](../../../docs/framework/net-native/application-element-net-native.md) i [biblioteki](../../../docs/framework/net-native/library-element-net-native.md) zdefiniować elementy, typy, metody, pola, właściwości i zdarzenia, które są dostępne w celu odbicia.
+Elementem głównym jest element [dyrektywy](../../../docs/framework/net-native/directives-element-net-native.md) . Może zawierać zero lub więcej elementów [biblioteki](../../../docs/framework/net-native/library-element-net-native.md) oraz zero lub jeden element [aplikacji](../../../docs/framework/net-native/application-element-net-native.md) , jak pokazano w poniższej strukturze. Atrybuty elementu [aplikacji](../../../docs/framework/net-native/application-element-net-native.md) mogą definiować zasady odbicia w środowisku uruchomieniowym dla całej aplikacji lub mogą one stanowić kontener dla elementów podrzędnych. Element [biblioteki](../../../docs/framework/net-native/library-element-net-native.md) , z drugiej strony, jest po prostu kontenerem. Elementy podrzędne [aplikacji](../../../docs/framework/net-native/application-element-net-native.md) i [biblioteki](../../../docs/framework/net-native/library-element-net-native.md) definiują typy, metody, pola, właściwości i zdarzenia, które są dostępne do odbicia.
 
-Aby uzyskać informacje, wybierz elementy z następującej struktury, lub zobacz [elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md). W następującej hierarchii wielokropka oznacza struktury cyklicznej. Informacje w nawiasach wskazują, czy ten element jest opcjonalne lub wymagane, a jeśli jest używany, ile wystąpień (jednej lub wielu) są dozwolone.
+Aby uzyskać informacje referencyjne, wybierz elementy z następującej struktury lub zobacz [elementy dyrektywy środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md). W poniższej hierarchii wielokropek oznacza strukturę cykliczną. Informacje w nawiasach wskazują, czy ten element jest opcjonalny, czy wymagany, a jeśli jest używany, ile wystąpień (jeden lub wiele) jest dozwolonych.
 
-[Dyrektywy](../../../docs/framework/net-native/directives-element-net-native.md) [1:1] [aplikacji](../../../docs/framework/net-native/application-element-net-native.md) [0:1] [zestawu](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]. . .
-[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0:M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (skonstruowany typ rodzajowy) [0:M]. . .
-[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]. . .
-[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0:M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (skonstruowany typ rodzajowy) [0:M]. . .
-[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0:M] [podtypy](../../../docs/framework/net-native/subtypes-element-net-native.md) (podklasy typu zawierającego) [O:1] [typu](../../../docs/framework/net-native/type-element-net-native.md) [0:M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (skonstruowany typ rodzajowy) [0:M]. . .
-[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (typ zawierający jest atrybut) [O:1] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M] [metoda](../../../docs/framework/net-native/method-element-net-native.md) [0:M] [parametru](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M] [ TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (skonstruowany metody ogólnej) [0:M] [właściwość](../../../docs/framework/net-native/property-element-net-native.md) [0:M] [Pola](../../../docs/framework/net-native/field-element-net-native.md) [0:M] [zdarzeń](../../../docs/framework/net-native/event-element-net-native.md) [0:M] [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (skonstruowany typ rodzajowy) [0:M] [typu](../../../docs/framework/net-native/type-element-net-native.md) [0:M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (skonstruowany typ rodzajowy) [0:M]. . .
-[Metoda](../../../docs/framework/net-native/method-element-net-native.md) [0:M] [parametru](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M] [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) () skonstruowany metody ogólnej) [0:M] [właściwość](../../../docs/framework/net-native/property-element-net-native.md) [0:M] [pola](../../../docs/framework/net-native/field-element-net-native.md) [0:M] [zdarzeń](../../../docs/framework/net-native/event-element-net-native.md) [0:M] [biblioteki](../../../docs/framework/net-native/library-element-net-native.md) [0:M] [Zestawu](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]. . .
-[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0:M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (skonstruowany typ rodzajowy) [0:M]. . .
-[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]. . .
-[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0:M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (skonstruowany typ rodzajowy) [0:M]. . .
-[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0:M] [podtypy](../../../docs/framework/net-native/subtypes-element-net-native.md) (podklasy typu zawierającego) [O:1] [typu](../../../docs/framework/net-native/type-element-net-native.md) [0:M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (skonstruowany typ rodzajowy) [0:M]. . .
-[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (typ zawierający jest atrybut) [O:1] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M] [metoda](../../../docs/framework/net-native/method-element-net-native.md) [0:M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (skonstruowany ogólny Metoda) [0:M] [właściwość](../../../docs/framework/net-native/property-element-net-native.md) [0:M] [pola](../../../docs/framework/net-native/field-element-net-native.md) [0:M] [zdarzeń](../../../docs/framework/net-native/event-element-net-native.md) [0:M] [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (skonstruowany typ rodzajowy) [0: M] [typu](../../../docs/framework/net-native/type-element-net-native.md) [0:M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (skonstruowany typ rodzajowy) [0:M]. . .
-[Metoda](../../../docs/framework/net-native/method-element-net-native.md) [0:M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (skonstruowany metody ogólnej) [0:M] [właściwość](../../../docs/framework/net-native/property-element-net-native.md) [0:M] [pola](../../../docs/framework/net-native/field-element-net-native.md) [0:M] [zdarzeń](../../../docs/framework/net-native/event-element-net-native.md)[0:M]
+[Dyrektywy](../../../docs/framework/net-native/directives-element-net-native.md) [1:1] [aplikacja](../../../docs/framework/net-native/application-element-net-native.md) [0:1] [zestaw](../../../docs/framework/net-native/assembly-element-net-native.md) [0: m] [przestrzeń nazw](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m]. . .
+[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. . .
+[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
+[Przestrzeń nazw](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M] [Przestrzeń nazw](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M]. . .
+[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. . .
+[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
+[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M] [Podtypy](../../../docs/framework/net-native/subtypes-element-net-native.md) (podklasy typu zawierającego) [O:1] [Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. . .
+[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
+[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (zawierający typ jest atrybutem) [O:1] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [Metoda](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [Parametr](../../../docs/framework/net-native/parameter-element-net-native.md) [0: M] [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: M] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (konstrukcja metody ogólnej) [0: M] [Właściwość](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [Pole](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [Zdarzenie](../../../docs/framework/net-native/event-element-net-native.md) [0: M] [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M] [Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. . .
+[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
+[Metoda](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [Parametr](../../../docs/framework/net-native/parameter-element-net-native.md) [0: M] [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: M] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (konstrukcja metody ogólnej) [0: M] [Właściwość](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [Pole](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [Zdarzenie](../../../docs/framework/net-native/event-element-net-native.md) [0: M] [Biblioteka](../../../docs/framework/net-native/library-element-net-native.md) [0: M] [Zestaw](../../../docs/framework/net-native/assembly-element-net-native.md) [0: M] [Przestrzeń nazw](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M]. . .
+[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. . .
+[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
+[Przestrzeń nazw](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M] [Przestrzeń nazw](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M]. . .
+[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. . .
+[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
+[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M] [Podtypy](../../../docs/framework/net-native/subtypes-element-net-native.md) (podklasy typu zawierającego) [O:1] [Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. . .
+[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
+[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (zawierający typ jest atrybutem) [O:1] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [Metoda](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (konstrukcja metody ogólnej) [0: M] [Właściwość](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [Pole](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [Zdarzenie](../../../docs/framework/net-native/event-element-net-native.md) [0: M] [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M] [Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. . .
+[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
+[Metoda](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (konstrukcja metody ogólnej) [0: M] [Właściwość](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [Pole](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [Zdarzenie](../../../docs/framework/net-native/event-element-net-native.md) [0: M]
 
-[Aplikacji](../../../docs/framework/net-native/application-element-net-native.md) element może mieć żadnych atrybutów lub może być atrybutów zasad omówione w [sekcji dyrektywy i zasad środowiska uruchomieniowego](#Directives).
+Element [aplikacji](../../../docs/framework/net-native/application-element-net-native.md) nie może mieć żadnych atrybutów lub atrybuty zasad mogą być omówione w [sekcji dyrektywy i zasad środowiska uruchomieniowego](#Directives).
 
-A [biblioteki](../../../docs/framework/net-native/library-element-net-native.md) element ma jeden atrybut `Name`, który określa nazwę biblioteki lub zestawu bez jego rozszerzenie pliku. Na przykład następująca [biblioteki](../../../docs/framework/net-native/library-element-net-native.md) element ma zastosowanie do zestawu o nazwie Extensions.dll.
+Element [biblioteki](../../../docs/framework/net-native/library-element-net-native.md) ma jeden atrybut, `Name`, który określa nazwę biblioteki lub zestawu, bez rozszerzenia pliku. Na przykład poniższy element [biblioteki](../../../docs/framework/net-native/library-element-net-native.md) ma zastosowanie do zestawu o nazwie Extensions. dll.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -80,57 +80,57 @@ A [biblioteki](../../../docs/framework/net-native/library-element-net-native.md)
 
 <a name="Directives"></a>
 
-## <a name="runtime-directives-and-policy"></a>Dyrektywy środowiska uruchomieniowego i zasady
+## <a name="runtime-directives-and-policy"></a>Dyrektywy i zasady środowiska uruchomieniowego
 
-[Aplikacji](../../../docs/framework/net-native/application-element-net-native.md) samego elementu i elementy podrzędne [biblioteki](../../../docs/framework/net-native/library-element-net-native.md) i [aplikacji](../../../docs/framework/net-native/application-element-net-native.md) elementy express zasad; oznacza to, określają sposób, w którym można zastosować aplikacji odbicia do elementu programu. Typ zasad jest definiowany przez atrybut elementu (na przykład `Serialize`). Wartość zasad jest definiowany przez wartość atrybutu (na przykład `Serialize="Required"`).
+Sam element [aplikacji](../../../docs/framework/net-native/application-element-net-native.md) i elementy podrzędne [biblioteki](../../../docs/framework/net-native/library-element-net-native.md) i elementów [aplikacji](../../../docs/framework/net-native/application-element-net-native.md) Express Policy; oznacza to, że definiują sposób, w jaki aplikacja może zastosować odbicie do elementu programu. Typ zasad jest definiowany przez atrybut elementu (na przykład `Serialize`). Wartość zasad jest definiowana przez wartość atrybutu (na przykład `Serialize="Required"`).
 
-Wszelkie zasady określone przez atrybut elementu ma zastosowanie do wszystkich elementów podrzędnych, które określać wartości dla tej zasady. Na przykład, jeśli zasady jest określona przez [typu](../../../docs/framework/net-native/type-element-net-native.md) elementy, które zasady mają zastosowanie do wszystkich zawartych typów i członków, dla których zasady nie jest jawnie określona.
+Wszelkie zasady określone przez atrybut elementu mają zastosowanie do wszystkich elementów podrzędnych, które nie określają wartości dla tych zasad. Na przykład jeśli zasady są określone przez element [typu](../../../docs/framework/net-native/type-element-net-native.md) , te zasady mają zastosowanie do wszystkich typów i elementów członkowskich, dla których zasady nie są jawnie określone.
 
-Zasady, które mogą być wyrażone według [aplikacji](../../../docs/framework/net-native/application-element-net-native.md), [zestawu](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [ Podtypy](../../../docs/framework/net-native/subtypes-element-net-native.md), i [typu](../../../docs/framework/net-native/type-element-net-native.md) elementy różni się od zasad, które mogą być wyrażone dla poszczególnych elementów członkowskich (przez [metoda](../../../docs/framework/net-native/method-element-net-native.md), [właściwość](../../../docs/framework/net-native/property-element-net-native.md), [Pola](../../../docs/framework/net-native/field-element-net-native.md), i [zdarzeń](../../../docs/framework/net-native/event-element-net-native.md) elementów).
+Zasady, które mogą być wyrażone przez [aplikację](../../../docs/framework/net-native/application-element-net-native.md), [zestaw](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [przestrzeń nazw](../../../docs/framework/net-native/namespace-element-net-native.md), [podtypy](../../../docs/framework/net-native/subtypes-element-net-native.md)i elementy [typu](../../../docs/framework/net-native/type-element-net-native.md) , różnią się od zasad, które mogą być wyrażone dla poszczególnych członków (przez [Metoda](../../../docs/framework/net-native/method-element-net-native.md), [Właściwość](../../../docs/framework/net-native/property-element-net-native.md), [pole](../../../docs/framework/net-native/field-element-net-native.md)i elementy [zdarzenia](../../../docs/framework/net-native/event-element-net-native.md) ).
 
 ### <a name="specifying-policy-for-assemblies-namespaces-and-types"></a>Określanie zasad dla zestawów, przestrzeni nazw i typów
 
-[Aplikacji](../../../docs/framework/net-native/application-element-net-native.md), [zestawu](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [podtypy](../../../docs/framework/net-native/subtypes-element-net-native.md)i [ Typ](../../../docs/framework/net-native/type-element-net-native.md) elementy obsługuje następujących typów zasad:
+Elementy [Application](../../../docs/framework/net-native/application-element-net-native.md), [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [podtyp](../../../docs/framework/net-native/subtypes-element-net-native.md)i [Type](../../../docs/framework/net-native/type-element-net-native.md) obsługują następujące typy zasad:
 
-- `Activate`. kontroluje dostęp do środowiska uruchomieniowego do konstruktorów, aby włączyć aktywacji wystąpień.
+- `Activate`. Kontroluje dostęp środowiska uruchomieniowego do konstruktorów, aby umożliwić aktywację wystąpień.
 
-- `Browse`. Kontroluje, wykonanie zapytania dotyczącego informacji o elementach programu, ale nie uwzględnia żadnych dostęp do środowiska uruchomieniowego.
+- `Browse`. Steruje wykonywaniem zapytań dotyczących informacji o elementach programu, ale nie umożliwia dostępu do środowiska uruchomieniowego.
 
-- `Dynamic`. Kontroluje dostęp do środowiska uruchomieniowego do wszystkich typów elementów członkowskich, konstruktorzy, metody, pola, właściwości i zdarzenia, w tym umożliwiające programowanie dynamiczne.
+- `Dynamic`. Kontroluje dostęp środowiska uruchomieniowego do wszystkich elementów członkowskich typu, takich jak konstruktory, metody, pola, właściwości i zdarzenia, aby umożliwić programowanie dynamiczne.
 
-- `Serialize`. Kontroluje dostęp do środowiska uruchomieniowego do konstruktorów, pola i właściwości, aby umożliwić wystąpienia typu, może być serializowany i przez bibliotek innych firm, takich jak serializator Newtonsoft JSON.
+- `Serialize`. Kontroluje dostęp środowiska uruchomieniowego do konstruktorów, pól i właściwości, aby umożliwić Serializowanie i Serializowanie wystąpień typu przez biblioteki innych firm, takie jak serializator JSON Newtonsoft.
 
-- `DataContractSerializer`. Określa zasady do serializacji, który używa <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> klasy.
+- `DataContractSerializer`. Kontroluje zasady dla serializacji, która używa <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> klasy.
 
-- `DataContractJsonSerializer`. Określa zasady dla serializacji JSON, który używa <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> klasy.
+- `DataContractJsonSerializer`. Kontroluje zasady dla serializacji JSON używającej <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> klasy.
 
-- `XmlSerializer`. Określa zasady dla serializacji XML, który używa <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> klasy.
+- `XmlSerializer`. Kontroluje zasady dla serializacji XML, która używa <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> klasy.
 
-- `MarshalObject`. Określa zasady dla marshaling typów referencyjnych WinRT i modelu COM.
+- `MarshalObject`. Kontroluje zasady dotyczące organizowania typów odwołań do WinRT i COM.
 
-- `MarshalDelegate`. Określa zasady kierowanie typy delegatów jako wskaźniki funkcji do kodu macierzystego.
+- `MarshalDelegate`. Steruje zasadami organizowania typów delegatów jako wskaźników funkcji do kodu natywnego.
 
-- `MarshalStructure` . Określa zasady marshalingu struktur do kodu macierzystego.
+- `MarshalStructure` . Steruje zasadami organizowania struktur w kodzie natywnym.
 
-Dostępne są następujące ustawienia skojarzone z następujących typów zasad:
+Ustawienia skojarzone z tymi typami zasad są następujące:
 
-- `All`. Włącz zasady dla wszystkich typów i elementów członkowskich, które nie powoduje usunięcia łańcucha narzędzi.
+- `All`. Włącz zasady dla wszystkich typów i elementów członkowskich, które nie są usuwane przez łańcuch narzędzi.
 
-- `Auto`. Użyj zachowania domyślnego. (Nie należy określać zasady jest równoznaczne z ustawieniem tej zasady `Auto` Jeśli te zasady nie zostanie zastąpiona, na przykład przez element nadrzędny.)
+- `Auto`. Użyj zachowania domyślnego. (Nieokreślanie zasad jest równoznaczne z ustawieniem tych zasad `Auto` , chyba że te zasady zostaną zastąpione, na przykład przez element nadrzędny).
 
-- `Excluded`. Wyłącz zasady dla elementu programu.
+- `Excluded`. Wyłącz zasady dla elementu program.
 
-- `Public`. Włącz zasady, które dla publiczne typy lub członków, chyba że łańcucha narzędzi Określa, że składowa nie jest konieczne i w związku z tym powoduje jej usunięcie. (W tym drugim przypadku należy użyć `Required Public` do upewnij się, że składowa jest przechowywana możliwości odbicia.)
+- `Public`. Włącz zasady dla typów publicznych lub członków, chyba że łańcuch narzędzi nie ustali, że element członkowski jest niepotrzebny i usuwa go. (W tym drugim przypadku należy użyć `Required Public` , aby upewnić się, że element członkowski jest przechowywany i ma możliwości odbicia).
 
-- `PublicAndInternal`. Włącz zasady dla publicznych i wewnętrznych typów ani elementów członkowskich, jeśli łańcuch narzędzi nie powoduje usunięcia ich.
+- `PublicAndInternal`. Włącz zasady dla typów publicznych i wewnętrznych lub członków, jeśli łańcuch narzędzi nie zostanie usunięty.
 
-- `Required Public`. Wymagają łańcucha narzędzi zapewnienie publicznego typów i członków, czy są one używane, a następnie włączyć ją dla nich.
+- `Required Public`. Należy wymagać łańcucha narzędzi, aby zachować publiczne typy i członków, niezależnie od tego, czy są one używane, i włączyć dla nich zasady.
 
-- `Required PublicAndInternal`. Wymagają łańcucha narzędzi, aby zachować typów publicznych i wewnętrznych i członków, czy są one używane, a następnie włączyć ją dla nich.
+- `Required PublicAndInternal`. Wymagaj, aby łańcuch narzędzi zachował typy publiczne i wewnętrzne oraz członków, niezależnie od tego, czy są one używane, i Włącz dla nich zasady.
 
-- `Required All`. Wymagają łańcucha narzędzi, aby zachować wszystkie typy i elementy członkowskie, czy są one używane, a następnie włączyć ją dla nich.
+- `Required All`. Wymagaj łańcucha narzędzi, aby zachować wszystkie typy i członków, niezależnie od tego, czy są one używane, i Włącz dla nich zasady.
 
-Na przykład następujący plik dyrektywy środowiska uruchomieniowego definiuje zasady dla wszystkich typów i elementów członkowskich w zestawie DataClasses.dll. Umożliwia ona odbicia dla serializacji wszystkie właściwości publiczne umożliwia przeglądanie dla wszystkich typów i składowych typu umożliwia aktywację dla wszystkich typów (z powodu `Dynamic` atrybut) i umożliwia odbicia dla wszystkich typów publicznych i elementów członkowskich.
+Na przykład następujące pliki dyrektywy środowiska uruchomieniowego definiują zasady dla wszystkich typów i elementów członkowskich w zestawie DataClasses. dll. Umożliwia odbicie dla serializacji wszystkich właściwości publicznych, umożliwia przeglądanie dla wszystkich typów i elementów członkowskich typu, umożliwia aktywację dla wszystkich typów (z `Dynamic` powodu atrybutu) i umożliwia odbicie dla wszystkich typów publicznych i członków.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -145,53 +145,53 @@ Na przykład następujący plik dyrektywy środowiska uruchomieniowego definiuje
 </Directives>
 ```
 
-### <a name="specifying-policy-for-members"></a>Określanie zasad dla elementów członkowskich
+### <a name="specifying-policy-for-members"></a>Określanie zasad dla członków
 
-[Właściwość](../../../docs/framework/net-native/property-element-net-native.md) i [pola](../../../docs/framework/net-native/field-element-net-native.md) elementy obsługuje następujących typów zasad:
+Elementy [Właściwości](../../../docs/framework/net-native/property-element-net-native.md) i [pól](../../../docs/framework/net-native/field-element-net-native.md) obsługują następujące typy zasad:
 
-- `Browse` -Określa, wykonanie zapytania dotyczącego informacji na temat tego elementu członkowskiego, ale nie uwzględnia żadnych dostęp do środowiska uruchomieniowego.
+- `Browse`-Kontroluje zapytania w celu uzyskania informacji dotyczących tego elementu członkowskiego, ale nie umożliwia dostępu do środowiska uruchomieniowego.
 
-- `Dynamic` -Kontroluje dostęp do środowiska uruchomieniowego do wszystkich typów elementów członkowskich, konstruktorzy, metody, pola, właściwości i zdarzenia, w tym umożliwiające programowanie dynamiczne. Kontroluje również wykonanie zapytania dotyczącego informacji na temat typu zawierającego.
+- `Dynamic`-Kontroluje dostęp środowiska uruchomieniowego do wszystkich elementów członkowskich typu, takich jak konstruktory, metody, pola, właściwości i zdarzenia, aby umożliwić programowanie dynamiczne. Steruje także wykonywaniem zapytań dotyczących informacji o typie zawierającym.
 
-- `Serialize` -Kontroluje dostęp do środowiska uruchomieniowego do elementu członkowskiego, aby umożliwić wystąpień typu serializacji i deserializacji, biblioteki, takie jak serializator Newtonsoft JSON. Te zasady mogą dotyczyć konstruktorów, pola i właściwości.
+- `Serialize`-Kontroluje dostęp środowiska uruchomieniowego do elementu członkowskiego, aby umożliwić serializacji i deserializacji wystąpień typu przez biblioteki, takie jak serializator JSON Newtonsoft. Te zasady można stosować do konstruktorów, pól i właściwości.
 
-[Metoda](../../../docs/framework/net-native/method-element-net-native.md) i [zdarzeń](../../../docs/framework/net-native/event-element-net-native.md) elementy obsługuje następujących typów zasad:
+Elementy [Method](../../../docs/framework/net-native/method-element-net-native.md) i [Event](../../../docs/framework/net-native/event-element-net-native.md) obsługują następujące typy zasad:
 
-- `Browse` — Kontroluje tworzenie zapytań dotyczących informacji na temat tego elementu członkowskiego, ale nie włączysz dostęp do dowolnego środowiska uruchomieniowego.
+- `Browse`-Kontroluje zapytania o informacje dotyczące tego elementu członkowskiego, ale nie włącza żadnego dostępu do środowiska uruchomieniowego.
 
-- `Dynamic` -Kontroluje dostęp do środowiska uruchomieniowego do wszystkich typów elementów członkowskich, konstruktorzy, metody, pola, właściwości i zdarzenia, w tym umożliwiające programowanie dynamiczne. Kontroluje również wykonanie zapytania dotyczącego informacji na temat typu zawierającego.
+- `Dynamic`-Kontroluje dostęp środowiska uruchomieniowego do wszystkich elementów członkowskich typu, takich jak konstruktory, metody, pola, właściwości i zdarzenia, aby umożliwić programowanie dynamiczne. Steruje także wykonywaniem zapytań dotyczących informacji o typie zawierającym.
 
- Dostępne są następujące ustawienia skojarzone z następujących typów zasad:
+ Ustawienia skojarzone z tymi typami zasad są następujące:
 
-- `Auto` -Używaj domyślnego zachowania. (Nie należy określać zasady jest równoznaczne z ustawieniem tej zasady `Auto` chyba, że coś, co zastępuje ją.)
+- `Auto`— Użyj zachowania domyślnego. (Nieokreślanie zasad jest równoznaczne z ustawieniem tych zasad `Auto` , chyba że coś zastępuje je).
 
-- `Excluded` -Nigdy nie zawierają metadanych dla elementu członkowskiego.
+- `Excluded`-Nigdy nie dołączaj metadanych dla elementu członkowskiego.
 
-- `Included` -Włącz zasady, jeśli typ nadrzędny znajduje się w danych wyjściowych.
+- `Included`-Włącz zasady, jeśli typ nadrzędny jest obecny w danych wyjściowych.
 
-- `Required` — Wymagają łańcucha narzędzi, aby zachować ten element członkowski nawet wtedy, gdy jest używana i włączona zasada.
+- `Required`-Wymagaj łańcucha narzędzi, aby zachować ten element członkowski nawet wtedy, gdy jest nieużywany, i Włącz dla niego zasady.
 
-## <a name="runtime-directives-file-semantics"></a>Semantykę plików dyrektywy środowiska uruchomieniowego
+## <a name="runtime-directives-file-semantics"></a>Semantyka plików dyrektyw środowiska uruchomieniowego
 
-Zasady mogą być definiowane jednocześnie dla elementów wyższego poziomu i niższego poziomu. Na przykład zasad można zdefiniować dla zestawu, a także w niektórych typów zawartych w tym zestawie. Jeśli określony element niższego poziomu nie jest reprezentowane, dziedziczy zasady jego elementu nadrzędnego. Na przykład jeśli `Assembly` element jest obecny, ale `Type` elementy nie są określone zasady w `Assembly` element ma zastosowanie do poszczególnych typów w zestawie. Wiele elementów, można także zastosować zasady do tego samego elementu programu. Przykładowo oddzielne [zestawu](../../../docs/framework/net-native/assembly-element-net-native.md) elementów może zdefiniować tego samego elementu zasad dla tego samego zestawu inaczej. W poniższych sekcjach opisano, jak zasady dla danego typu zostanie rozwiązany w tych przypadkach.
+Zasady można definiować jednocześnie dla elementów wyższego poziomu i niższego poziomu. Na przykład można zdefiniować zasady dla zestawu i dla niektórych typów zawartych w tym zestawie. Jeśli określony element niższego poziomu nie jest reprezentowany, dziedziczy on zasady jego elementu nadrzędnego. Na przykład jeśli `Assembly` element jest obecny, ale `Type` elementy nie są, zasady określone w `Assembly` elemencie mają zastosowanie do każdego typu w zestawie. Wiele elementów może również stosować zasady do tego samego elementu programu. Na przykład oddzielne elementy [zestawu](../../../docs/framework/net-native/assembly-element-net-native.md) mogą definiować ten sam element zasad dla tego samego zestawu inaczej. W poniższych sekcjach wyjaśniono, w jaki sposób zasady dla określonego typu są rozwiązywane w tych przypadkach.
 
-A [typu](../../../docs/framework/net-native/type-element-net-native.md) lub [metoda](../../../docs/framework/net-native/method-element-net-native.md) elementu dla typu ogólnego lub metody stosuje swoje zasady do wszystkich wystąpień, które nie mają własnych zasad. Na przykład `Type` element, który określa zasady dla <xref:System.Collections.Generic.List%601> ma zastosowanie do wszystkich wystąpień skonstruowanego typu ogólnego, chyba że zostanie on przesłonięty dla określonego skonstruowany typ rodzajowy (takie jak `List<Int32>`) przez `TypeInstantiation` elementu. W przeciwnym razie elementy Zdefiniuj zasady dla elementu programu o nazwie.
+[Typ](../../../docs/framework/net-native/type-element-net-native.md) lub element [metody](../../../docs/framework/net-native/method-element-net-native.md) typu ogólnego lub metody stosuje zasady do wszystkich wystąpień, które nie mają własnych zasad. Na przykład `Type` element określający <xref:System.Collections.Generic.List%601> zasady dotyczą wszystkich skonstruowanych wystąpień tego typu ogólnego, chyba że zostanie przesłonięty dla określonego konstruowanego `List<Int32>`typu ogólnego (takiego `TypeInstantiation` jak) przez element. W przeciwnym razie elementy definiują zasady dla elementu programu o nazwie.
 
-Gdy element jest niejednoznaczny, aparat wyszukuje dopasowań, a jeśli zostaną znalezione dokładne dopasowanie, użyje on. W przypadku odnalezienia wielu dopasowań, nastąpi ostrzeżenia lub błędu.
+Gdy element jest niejednoznaczny, aparat szuka pasujących elementów i jeśli znajdzie dokładne dopasowanie, użyje go. Jeśli znajdzie wiele dopasowań, pojawi się ostrzeżenie lub błąd.
 
-### <a name="if-two-directives-apply-policy-to-the-same-program-element"></a>Jeśli dwie dyrektywy zastosowanie zasad do tego samego elementu programu
+### <a name="if-two-directives-apply-policy-to-the-same-program-element"></a>Jeśli dwie dyrektywy stosują zasady do tego samego elementu programu
 
-Jeśli dwa elementy w plikach dyrektywy środowiskiem uruchomieniowym w różnych próbuje ustawić ten sam typ zasad dla tego samego elementu programu (na przykład zestawu lub typ) na różne wartości, ten konflikt został rozwiązany w następujący sposób:
+Jeśli dwa elementy w różnych dyrektywach środowiska uruchomieniowego próbują ustawić ten sam typ zasad dla tego samego elementu programu (na przykład zestawu lub typu) do różnych wartości, konflikt zostanie rozwiązany w następujący sposób:
 
-1. Jeśli `Excluded` element jest obecny, ma pierwszeństwo.
+1. `Excluded` Jeśli element jest obecny, ma pierwszeństwo.
 
-2. `Required` pierwszeństwo ma ponad nie `Required`.
+2. `Required`ma pierwszeństwo przed `Required`.
 
-3. `All` ma pierwszeństwo przed `PublicAndInternal`, który ma pierwszeństwo przed `Public`.
+3. `All`ma pierwszeństwo `PublicAndInternal`przed, który ma `Public`pierwszeństwo przed.
 
-4. Wszystkie jawne ustawienie ma pierwszeństwo przed `Auto`.
+4. Każde ustawienie jawne ma pierwszeństwo `Auto`przed.
 
-Na przykład, jeśli jeden projekt obejmuje następujące dwa pliki dyrektyw środowiska uruchomieniowego, zasada serializacji dla DataClasses.dll jest ustawiona na wartość oba `Required Public` i `All`. W tym przypadku zasada serializacji będą rozpoznawane jako `Required All`.
+Na przykład jeśli pojedynczy projekt zawiera następujące dwa pliki dyrektywy środowiska uruchomieniowego, zasady serializacji dla DataClasses. dll są ustawione na `Required Public` i. `All` W takim przypadku zasady serializacji byłyby rozpoznawane jako `Required All`.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -215,13 +215,13 @@ Na przykład, jeśli jeden projekt obejmuje następujące dwa pliki dyrektyw śr
 </Directives>
 ```
 
-Jednak jeśli dwie dyrektywy w pliku dyrektyw środowiska uruchomieniowego pojedynczego próbuje ustawić ten sam typ zasad dla tego samego elementu programu, narzędzie definicji schematu XML Wyświetla komunikat o błędzie.
+Jeśli jednak dwie dyrektywy w jednym pliku dyrektywy środowiska uruchomieniowego próbują ustawić ten sam typ zasad dla tego samego programu, narzędzie definicji schematu XML wyświetli komunikat o błędzie.
 
-### <a name="if-child-and-parent-elements-apply-the-same-policy-type"></a>Jeśli elementami nadrzędnymi i podrzędnymi zastosować ten sam typ zasad
+### <a name="if-child-and-parent-elements-apply-the-same-policy-type"></a>Jeśli elementy podrzędne i nadrzędne stosują ten sam typ zasad
 
-Elementy podrzędne zastąpienia ich elementów nadrzędnych, w tym `Excluded` ustawienie. Zastępowanie jest głównym powodem, aby określić `Auto`.
+Elementy podrzędne przesłaniają elementy nadrzędne, w `Excluded` tym ustawienie. Zastępowanie jest głównym powodem, który ma zostać `Auto`określony.
 
-W poniższym przykładzie ustawienie dla wszystkich elementów w zasad serializacji `DataClasses` który nie znajduje się w `DataClasses.ViewModels` będzie `Required Public`i wszystko, co znajduje się w obu `DataClasses` i `DataClasses.ViewModels` będzie `All`.
+W poniższym przykładzie ustawienie zasad `DataClasses` serializacji dla wszystkiego w tym elemencie `DataClasses.ViewModels` nie `Required Public`jest, a `All`wszystko to w obu `DataClasses` i `DataClasses.ViewModels` .
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -236,9 +236,9 @@ W poniższym przykładzie ustawienie dla wszystkich elementów w zasad serializa
 </Directives>
 ```
 
-### <a name="if-open-generics-and-instantiated-elements-apply-the-same-policy-type"></a>Jeśli otwarte typy ogólne i wystąpień elementów zastosować ten sam typ zasad
+### <a name="if-open-generics-and-instantiated-elements-apply-the-same-policy-type"></a>Jeśli otwarte elementy generyczne i wystąpienia mają zastosowanie tego samego typu zasad
 
-W poniższym przykładzie `Dictionary<int,int>` przypisano `Browse` zasady tylko wtedy, gdy aparat kolejny powód, aby nadać mu `Browse` zasad, (która mogłaby być domyślne zachowanie); co inne wystąpienia <xref:System.Collections.Generic.Dictionary%602> będzie miał wszystkie jej członków można przeglądać.
+W `Dictionary<int,int>` poniższym przykładzie `Browse` zasady są przypisywane tylko wtedy, gdy silnik ma kolejną przyczynę, `Browse` aby nadać mu zasady (które w przeciwnym razie byłyby <xref:System.Collections.Generic.Dictionary%602> zachowaniem domyślnym); każde inne wystąpienie będzie miało wszystkie jego członkowie umożliwia przeglądania.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -257,161 +257,161 @@ W poniższym przykładzie `Dictionary<int,int>` przypisano `Browse` zasady tylko
 </Directives>
 ```
 
-### <a name="how-policy-is-inferred"></a>Jak wynika zasad
+### <a name="how-policy-is-inferred"></a>Jak zasady są wywnioskowane
 
-Każdy typ zasad ma inny zestaw reguł, które określają, jak obecności tego typu zasad wpływa inne konstrukcje.
+Każdy typ zasad ma inny zestaw reguł, które określają, jak obecność tego typu zasad ma wpływ na inne konstrukcje.
 
-#### <a name="the-effect-of-browse-policy"></a>Efekt zasad przeglądania
+#### <a name="the-effect-of-browse-policy"></a>Efekt przeglądania zasad
 
-Stosowanie `Browse` zasad z typem obejmuje następujące zmiany zasad:
+`Browse` Zastosowanie zasad do typu obejmuje następujące zmiany zasad:
 
-- Typ bazowy tego typu jest oznaczona za pomocą `Browse` zasad.
+- Typ podstawowy typu jest oznaczony przy użyciu `Browse` zasad.
 
-- Jeśli typ jest skonkretyzowany ogólny, bez wystąpień wersji typu, jest oznaczona za pomocą `Browse` zasad.
+- Jeśli typ jest ogólnym wystąpieniem, niewystępująca wersja typu jest oznaczona przy użyciu `Browse` zasad.
 
-- Jeśli typ jest delegatem, `Invoke` metoda w typie jest oznaczona atrybutem `Dynamic` zasad.
+- Jeśli typ jest delegatem, `Invoke` Metoda typu jest oznaczona `Dynamic` przy użyciu zasad.
 
-- Każdy interfejs typu jest oznaczona za pomocą `Browse` zasad.
+- Każdy interfejs typu jest oznaczony przy użyciu `Browse` zasad.
 
-- Typ każdego atrybutu stosowane do typu jest oznaczona za pomocą `Browse` zasad.
+- Typ każdego atrybutu zastosowanego do typu jest oznaczony przy użyciu `Browse` zasad.
 
-- W przypadku typu ogólnego poszczególnych typów ograniczeń, jest oznaczona za pomocą `Browse` zasad.
+- Jeśli typ jest ogólny, każdy typ ograniczenia jest oznaczony przy użyciu `Browse` zasad.
 
-- W przypadku typu ogólnego są oznaczone typów, na których zostanie uruchomiony, typ `Browse` zasad.
+- Jeśli typ jest ogólny, typy, w których tworzone jest wystąpienie typu są oznaczone `Browse` zasadami.
 
-Stosowanie `Browse` zasady z metodą obejmuje następujące zmiany zasad:
+`Browse` Zastosowanie zasad do metody obejmuje następujące zmiany zasad:
 
-- Każdy typ parametru metody oznaczonej przy użyciu `Browse` zasad.
+- Każdy typ parametru metody jest oznaczony przy użyciu `Browse` zasad.
 
-- Zwracany typ metody oznaczonej przy użyciu `Browse` zasad.
+- Zwracany typ metody jest oznaczony przy użyciu `Browse` zasad.
 
-- Typ zawierający metody oznaczonej przy użyciu `Browse` zasad.
+- Typ zawierający metodę jest oznaczony przy użyciu `Browse` zasad.
 
-- Jeśli metoda jest skonkretyzowany metody rodzajowej, metoda ogólny bez wystąpień jest oznaczony za pomocą `Browse` zasad.
+- Jeśli metoda jest wystąpieniem metody generycznej, Metoda niebędąca wystąpieniem jest oznaczona przy użyciu `Browse` zasad.
 
-- Typ każdego zastosowany do metody oznaczonej przy użyciu `Browse` zasad.
+- Typ każdego atrybutu zastosowanego do metody jest oznaczony przy użyciu `Browse` zasad.
 
-- Jeśli metoda jest ogólna, każdy typ ograniczenia jest oznaczona za pomocą `Browse` zasad.
+- Jeśli metoda jest ogólna, każdy typ ograniczenia jest oznaczony przy użyciu `Browse` zasad.
 
-- Jeśli metoda jest ogólna, typów, na których zostanie uruchomiony, metoda są oznaczone `Browse` zasad.
+- Jeśli metoda jest ogólna, typy, w których tworzone jest wystąpienie metody są oznaczone `Browse` zasadami.
 
-Stosowanie `Browse` zasad do pola obejmuje następujące zmiany zasad:
+`Browse` Zastosowanie zasad do pola obejmuje następujące zmiany zasad:
 
-- Typ atrybutu, każda zastosowana do pola jest oznaczona za pomocą `Browse` zasad.
+- Typ każdego atrybutu zastosowanego do pola jest oznaczony przy użyciu `Browse` zasad.
 
-- Typ pola jest oznaczona za pomocą `Browse` zasad.
+- Typ pola jest oznaczony przy użyciu `Browse` zasad.
 
-- Typ, do której należy pole jest oznaczona za pomocą `Browse` zasad.
+- Typ, do którego należy pole, jest oznaczony przy użyciu `Browse` zasad.
 
-#### <a name="the-effect-of-dynamic-policy"></a>Efekt zasad dynamiczne
+#### <a name="the-effect-of-dynamic-policy"></a>Efekt zasad dynamicznych
 
-Stosowanie `Dynamic` zasad z typem obejmuje następujące zmiany zasad:
+`Dynamic` Zastosowanie zasad do typu obejmuje następujące zmiany zasad:
 
-- Typ bazowy tego typu jest oznaczona za pomocą `Dynamic` zasad.
+- Typ podstawowy typu jest oznaczony przy użyciu `Dynamic` zasad.
 
-- Jeśli typ jest skonkretyzowany ogólny, bez wystąpień wersji typu, jest oznaczona za pomocą `Dynamic` zasad.
+- Jeśli typ jest ogólnym wystąpieniem, niewystępująca wersja typu jest oznaczona przy użyciu `Dynamic` zasad.
 
-- Jeśli typ jest typem delegowanym `Invoke` metoda w typie jest oznaczona atrybutem `Dynamic` zasad.
+- Jeśli typ jest typem delegata, `Invoke` Metoda typu jest oznaczona `Dynamic` przy użyciu zasad.
 
-- Każdy interfejs typu jest oznaczona za pomocą `Browse` zasad.
+- Każdy interfejs typu jest oznaczony przy użyciu `Browse` zasad.
 
-- Typ każdego atrybutu stosowane do typu jest oznaczona za pomocą `Browse` zasad.
+- Typ każdego atrybutu zastosowanego do typu jest oznaczony przy użyciu `Browse` zasad.
 
-- W przypadku typu ogólnego poszczególnych typów ograniczeń, jest oznaczona za pomocą `Browse` zasad.
+- Jeśli typ jest ogólny, każdy typ ograniczenia jest oznaczony przy użyciu `Browse` zasad.
 
-- W przypadku typu ogólnego są oznaczone typów, na których zostanie uruchomiony, typ `Browse` zasad.
+- Jeśli typ jest ogólny, typy, w których tworzone jest wystąpienie typu są oznaczone `Browse` zasadami.
 
-Stosowanie `Dynamic` zasady z metodą obejmuje następujące zmiany zasad:
+`Dynamic` Zastosowanie zasad do metody obejmuje następujące zmiany zasad:
 
-- Każdy typ parametru metody oznaczonej przy użyciu `Browse` zasad.
+- Każdy typ parametru metody jest oznaczony przy użyciu `Browse` zasad.
 
-- Zwracany typ metody oznaczonej przy użyciu `Dynamic` zasad.
+- Zwracany typ metody jest oznaczony przy użyciu `Dynamic` zasad.
 
-- Typ zawierający metody oznaczonej przy użyciu `Dynamic` zasad.
+- Typ zawierający metodę jest oznaczony przy użyciu `Dynamic` zasad.
 
-- Jeśli metoda jest skonkretyzowany metody rodzajowej, metoda ogólny bez wystąpień jest oznaczony za pomocą `Browse` zasad.
+- Jeśli metoda jest wystąpieniem metody generycznej, Metoda niebędąca wystąpieniem jest oznaczona przy użyciu `Browse` zasad.
 
-- Typ każdego zastosowany do metody oznaczonej przy użyciu `Browse` zasad.
+- Typ każdego atrybutu zastosowanego do metody jest oznaczony przy użyciu `Browse` zasad.
 
-- Jeśli metoda jest ogólna, każdy typ ograniczenia jest oznaczona za pomocą `Browse` zasad.
+- Jeśli metoda jest ogólna, każdy typ ograniczenia jest oznaczony przy użyciu `Browse` zasad.
 
-- Jeśli metoda jest ogólna, typów, na których zostanie uruchomiony, metoda są oznaczone `Browse` zasad.
+- Jeśli metoda jest ogólna, typy, w których tworzone jest wystąpienie metody są oznaczone `Browse` zasadami.
 
-- Metoda może być wywoływany przez `MethodInfo.Invoke`, i tworzenia delegata staje się możliwe poprzez <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType>.
+- Metoda może być wywoływana przez `MethodInfo.Invoke`, a tworzenie delegatów jest możliwe przez. <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType>
 
-Stosowanie `Dynamic` zasad do pola obejmuje następujące zmiany zasad:
+`Dynamic` Zastosowanie zasad do pola obejmuje następujące zmiany zasad:
 
-- Typ atrybutu, każda zastosowana do pola jest oznaczona za pomocą `Browse` zasad.
+- Typ każdego atrybutu zastosowanego do pola jest oznaczony przy użyciu `Browse` zasad.
 
-- Typ pola jest oznaczona za pomocą `Dynamic` zasad.
+- Typ pola jest oznaczony przy użyciu `Dynamic` zasad.
 
-- Typ, do której należy pole jest oznaczona za pomocą `Dynamic` zasad.
+- Typ, do którego należy pole, jest oznaczony przy użyciu `Dynamic` zasad.
 
 #### <a name="the-effect-of-activation-policy"></a>Efekt zasad aktywacji
 
-Zastosowanie zasad aktywacji z typem obejmuje następujące zmiany zasad:
+Zastosowanie zasad aktywacji do typu wiąże się z następującymi zmianami zasad:
 
-- Jeśli typ jest skonkretyzowany ogólny, bez wystąpień wersji typu, jest oznaczona za pomocą `Browse` zasad.
+- Jeśli typ jest ogólnym wystąpieniem, niewystępująca wersja typu jest oznaczona przy użyciu `Browse` zasad.
 
-- Jeśli typ jest typem delegowanym `Invoke` metoda w typie jest oznaczona atrybutem `Dynamic` zasad.
+- Jeśli typ jest typem delegata, `Invoke` Metoda typu jest oznaczona `Dynamic` przy użyciu zasad.
 
-- Konstruktory tego typu są oznaczone `Activation` zasad.
+- Konstruktory typu są oznaczone `Activation` zasadami.
 
-Stosowanie `Activation` zasady z metodą obejmuje następujące zmiany zasad:
+`Activation` Zastosowanie zasad do metody obejmuje następujące zmiany zasad:
 
-- Konstruktor może być wywoływany przez <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=nameWithType> i <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> metody. W przypadku metod `Activation` zasady wpływają tylko konstruktory.
+- Konstruktor może być wywoływany przez <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=nameWithType> metody i. <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> W przypadku metod `Activation` zasady mają wpływ tylko na konstruktory.
 
-Stosowanie `Activation` zasada do pola nie ma znaczenia.
+`Activation` Zastosowanie zasad do pola nie ma żadnego skutku.
 
-#### <a name="the-effect-of-serialize-policy"></a>Efekt zasad serializacja
+#### <a name="the-effect-of-serialize-policy"></a>Efekt serializacji zasad
 
-`Serialize` Zasad umożliwia korzystanie z typowych serializatory oparty na odbiciu. Jednak ponieważ wzorców dostępu dokładne odbicie serializatory firm innych niż Microsoft nie są znane do firmy Microsoft, ta zasada może nie być całkowicie skuteczne.
+`Serialize` Zasady umożliwiają korzystanie z typowych serializatorów opartych na odbiciach. Jednak ze względu na to, że wzorce dostępu do odbicia dla serializatorów firm innych niż Microsoft nie są znane firmie Microsoft, te zasady mogą nie być całkowicie skuteczne.
 
-Stosowanie `Serialize` zasad z typem obejmuje następujące zmiany zasad:
+`Serialize` Zastosowanie zasad do typu obejmuje następujące zmiany zasad:
 
-- Typ bazowy tego typu jest oznaczona za pomocą `Serialize` zasad.
+- Typ podstawowy typu jest oznaczony przy użyciu `Serialize` zasad.
 
-- Jeśli typ jest skonkretyzowany ogólny, bez wystąpień wersji typu, jest oznaczona za pomocą `Browse` zasad.
+- Jeśli typ jest ogólnym wystąpieniem, niewystępująca wersja typu jest oznaczona przy użyciu `Browse` zasad.
 
-- Jeśli typ jest typem delegowanym `Invoke` metoda w typie jest oznaczona atrybutem `Dynamic` zasad.
+- Jeśli typ jest typem delegata, `Invoke` Metoda typu jest oznaczona `Dynamic` przy użyciu zasad.
 
-- Jeśli typ jest wyliczeniem, tablicy tego typu jest oznaczona za pomocą `Serialize` zasad.
+- Jeśli typ jest wyliczeniem, tablica typu jest oznaczona przy użyciu `Serialize` zasad.
 
-- Jeśli typ implementuje <xref:System.Collections.Generic.IEnumerable%601>, `T` jest oznaczona za pomocą `Serialize` zasad.
+- Jeśli typ implementuje <xref:System.Collections.Generic.IEnumerable%601>, `T` jest oznaczony przy użyciu `Serialize` zasad.
 
-- Jeśli typ jest <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IList%601>, <xref:System.Collections.Generic.ICollection%601>, <xref:System.Collections.Generic.IReadOnlyCollection%601>, lub <xref:System.Collections.Generic.IReadOnlyList%601>, następnie `T[]` i <xref:System.Collections.Generic.List%601> oznaczone `Serialize` zasadami, ale nie elementy członkowskie typu interfejsu są oznaczone `Serialize`zasad.
+- Jeśli typ ma <xref:System.Collections.Generic.IEnumerable%601>wartość, <xref:System.Collections.Generic.IList%601>, <xref:System.Collections.Generic.ICollection%601> ,,<xref:System.Collections.Generic.IReadOnlyList%601>lub ,`T[]` i<xref:System.Collections.Generic.List%601> jest oznaczony`Serialize` przy użyciu zasad., ale żaden element członkowski typu interfejsu nie jest oznaczony za pomocą <xref:System.Collections.Generic.IReadOnlyCollection%601> `Serialize`zasady.
 
-- Jeśli typ jest <xref:System.Collections.Generic.List%601>, nie elementy członkowskie tego typu są oznaczone `Serialize` zasad.
+- Jeśli typ ma wartość <xref:System.Collections.Generic.List%601>, żadne elementy członkowskie tego typu nie są oznaczone `Serialize` zasadami.
 
-- Jeśli typ jest <xref:System.Collections.Generic.IDictionary%602>, <xref:System.Collections.Generic.Dictionary%602> jest oznaczona za pomocą `Serialize` zasad. ale nie elementy członkowskie tego typu są oznaczone `Serialize` zasad.
+- Jeśli typ ma <xref:System.Collections.Generic.IDictionary%602>wartość, <xref:System.Collections.Generic.Dictionary%602> jest oznaczony przy użyciu `Serialize` zasad. ale żadne elementy członkowskie tego typu nie są oznaczone `Serialize` zasadami.
 
-- Jeśli typ jest <xref:System.Collections.Generic.Dictionary%602>, nie elementy członkowskie tego typu są oznaczone `Serialize` zasad.
+- Jeśli typ ma wartość <xref:System.Collections.Generic.Dictionary%602>, żadne elementy członkowskie tego typu nie są oznaczone `Serialize` zasadami.
 
-- Jeśli typ implementuje <xref:System.Collections.Generic.IDictionary%602>, `TKey` i `TValue` są oznaczone `Serialize` zasad.
+- Jeśli <xref:System.Collections.Generic.IDictionary%602>typ implementuje `TKey` i`TValue`jest oznaczony przy użyciu zasad.`Serialize`
 
-- Każdy Konstruktor, każda metoda dostępu do właściwości i każde pole jest oznaczona za pomocą `Serialize` zasad.
+- Każdy Konstruktor, każdy akcesor właściwości i każde pole jest oznaczone `Serialize` zasadami.
 
-Stosowanie `Serialize` zasady z metodą obejmuje następujące zmiany zasad:
+`Serialize` Zastosowanie zasad do metody obejmuje następujące zmiany zasad:
 
-- Typ zawierający jest oznaczona za pomocą `Serialize` zasad.
+- Typ zawierający jest oznaczony przy użyciu `Serialize` zasad.
 
-- Zwracany typ metody oznaczonej przy użyciu `Serialize` zasad.
+- Zwracany typ metody jest oznaczony przy użyciu `Serialize` zasad.
 
-Stosowanie `Serialize` zasad do pola obejmuje następujące zmiany zasad:
+`Serialize` Zastosowanie zasad do pola obejmuje następujące zmiany zasad:
 
-- Typ zawierający jest oznaczona za pomocą `Serialize` zasad.
+- Typ zawierający jest oznaczony przy użyciu `Serialize` zasad.
 
-- Typ pola jest oznaczona za pomocą `Serialize` zasad.
+- Typ pola jest oznaczony przy użyciu `Serialize` zasad.
 
-#### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>Efekt zasad XmlSerializer, DataContractSerializer i klasa DataContractJsonSerializer
+#### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>Wpływ zasad XmlSerializer, DataContractSerializer i Klasa DataContractJsonSerializer
 
-W odróżnieniu od `Serialize` zasad, które mają być oparty na odbiciu serializatory, <xref:System.Xml.Serialization.XmlSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer>, i <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> zasady są używane do włączenia zbiór serializatory, które są znane z łańcucha narzędzi .NET Native. Serializatory te nie są implementowane przy użyciu odbicia, ale zestaw typów, które może być serializowany w czasie wykonywania, jest określana w podobny sposób jak typy, które są reflectable.
+W przeciwieństwie `Serialize` do zasad, które są przeznaczone dla serializatorów opartych na odbiciach <xref:System.Runtime.Serialization.DataContractSerializer> <xref:System.Xml.Serialization.XmlSerializer>, zasady <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> , i są używane do włączania zestawu serializatorów, które są znane do łańcucha narzędzi .NET Native. Te serializacji nie są implementowane przy użyciu odbicia, ale zestaw typów, które mogą być serializowane w czasie wykonywania, jest określany w podobny sposób, jak typy, które są odzwierciedlane.
 
-Zastosowanie jednej z tych zasad do typu umożliwia typu, który ma być serializowany z pasujących serializatora. Ponadto wszystkie typy, które mechanizm serializacji statycznie można określić jako wymagające serializacji również podlegać serializacji.
+Zastosowanie jednej z tych zasad do typu umożliwia serializacji typu przy użyciu pasującego serializatora. Ponadto wszelkie typy, które aparat serializacji może statycznie określić, ponieważ wymaganie serializacji również będzie możliwe do serializacji.
 
 Te zasady nie mają wpływu na metody lub pola.
 
-Aby uzyskać więcej informacji, zobacz sekcję "Różnice w Serializatory" w [Migrowanie Your Windows Store aplikacji platformy .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).
+Aby uzyskać więcej informacji, zobacz sekcję "różnice w Serializatorach" w temacie [Migrowanie aplikacji ze sklepu Windows do .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).
 
 ## <a name="see-also"></a>Zobacz także
 

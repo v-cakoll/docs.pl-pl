@@ -8,34 +8,28 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: acc329c8e61b4638b2f373860f5f13b8a98dece9
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 681ae11052216c610d2f3ac7cf8846153d6a341c
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211628"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987023"
 ---
-# <a name="how-to-set-grid-options-for-all-windows-forms"></a>Instrukcje: ustawianie opcji siatki dla wszystkich formularzy systemu Windows
+# <a name="how-to-set-grid-options-for-all-windows-forms"></a>Instrukcje: Ustawianie opcji siatki dla wszystkich Windows Forms
 
-Stają się używane do pracy w środowisku programowania Visual Studio, można ustawić preferencje dotyczące wszystkich formularzy i projektów, nad którymi pracujesz w programie Windows Forms Designer.
+Tak samo jak w przypadku pracy w środowisku deweloperskim programu Visual Studio, można ustawić preferencje dla wszystkich formularzy i projektów, z którymi pracujesz w Projektant formularzy systemu Windows.
 
-## <a name="set-global-windows-forms-options"></a>Ustaw opcje globalne Windows Forms
+## <a name="set-global-windows-forms-options"></a>Ustawianie opcji Windows Forms globalnych
 
-1. W programie Visual Studio z **narzędzia** menu, wybierz opcję **opcje**.
+1. W programie Visual Studio w menu **Narzędzia** wybierz pozycję **Opcje**.
 
-2. W okienku po lewej stronie **opcje** okno dialogowe, kliknij przycisk **Windows Forms Designer**.
+2. W lewym okienku okna dialogowego **Opcje** kliknij przycisk **Projektant formularzy systemu Windows**.
 
-   W okienku po prawej stronie w obszarze **ustawienia układu** nagłówka, możesz ustawić domyślne ustawienia siatki dla wszystkich nowych formularzy, należy utworzyć. Te ustawienia obejmują rozmiar siatki, czy formanty mają być przyciągane do niego i czy są to domyślne. Ponadto, możesz wybrać między **SnapToGrid** i **linii przyciągania** trybami układów. Aby uzyskać więcej informacji na temat linii przyciągania, zobacz [instruktażu: Rozmieszczanie formantów Windows Forms za pomocą linii przyciągania](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).
+   W okienku po prawej stronie nagłówka **Ustawienia układu** można ustawić domyślne ustawienia siatki dla wszystkich tworzonych formularzy. Te ustawienia obejmują rozmiar siatki, określa, czy kontrolki są przyciągane do niego, oraz czy są domyślnie włączone. Ponadto można wybrać tryb układu **SnapToGrid** i **linii wyrównania** . Aby uzyskać więcej informacji na temat linii wyrównania [, zobacz Przewodnik: Rozmieszczanie kontrolek na Windows Forms](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)przy użyciu linii wyrównania.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą linii przyciągania](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Ogólne, Windows Forms Designer, okno dialogowe Opcje](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
-- [Kontrolki formularzy Windows Forms](index.md)
-- [Instrukcje: Dodawanie formantów do formularzy Windows Forms](how-to-add-controls-to-windows-forms.md)
-- [Rozmieszczanie kontrolek na formularzach Windows Forms](arranging-controls-on-windows-forms.md)
-- [Instrukcje: Ustawianie kolejności tabulacji na formularzach Windows Forms](how-to-set-the-tab-order-on-windows-forms.md)
-- [Instrukcje: Ustawianie tekstu wyświetlanego przez kontrolki formularzy Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Umieszczanie kontrolek na formularzach Windows Forms](putting-controls-on-windows-forms.md)
-- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)
-- [Kontrolki formularzy Windows Forms według funkcji](windows-forms-controls-by-function.md)
+- [Opcje: Projektant formularzy systemu Windows](/visualstudio/ide/reference/options-windows-forms-designer)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 4007a04bf3bd2b130e978415722b0e5b7769cc25
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 210d15187cd539cdae6e38fdcb708b4b9f81c073
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953269"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988321"
 ---
 # <a name="handling-datatable-events"></a>Obsługa zdarzeń elementu DataTable
 <xref:System.Data.DataTable> Obiekt zawiera serię zdarzeń, które mogą być przetwarzane przez aplikację. W poniższej tabeli opisano `DataTable` zdarzenia.  
@@ -33,7 +33,7 @@ ms.locfileid: "69953269"
 > Większość operacji, które dodają lub usuwają wiersze, `ColumnChanged` nie `ColumnChanging` powodują zdarzeń i. `ColumnChanged` `ColumnChanging` `Auto` `DiffGram` `DiffGram`Jednak metoda wykonuje podnoszenie`XmlReadMode` i zdarzenia, chyba że jest ustawiona na lub jest ustawiona na, gdy dokument XML jest odczytywany. `ReadXml`  
   
 > [!WARNING]
->  Uszkodzenie danych może wystąpić, `DataSet` `RowChanged` Jeśli dane są modyfikowane w przypadku, gdy zdarzenie jest zgłaszane. Wyjątek nie zostanie zgłoszony, jeśli wystąpi takie uszkodzenie danych.  
+> Uszkodzenie danych może wystąpić, `DataSet` `RowChanged` Jeśli dane są modyfikowane w przypadku, gdy zdarzenie jest zgłaszane. Wyjątek nie zostanie zgłoszony, jeśli wystąpi takie uszkodzenie danych.  
   
 ## <a name="additional-related-events"></a>Dodatkowe powiązane zdarzenia  
  <xref:System.Data.DataTable.Constraints%2A> Właściwość<xref:System.Data.ConstraintCollection> przechowuje wystąpienie. <xref:System.Data.ConstraintCollection> Klasa<xref:System.Data.ConstraintCollection.CollectionChanged> ujawnia zdarzenie. To zdarzenie jest wyzwalane, gdy ograniczenie zostanie dodane, zmodyfikowane lub usunięte z `ConstraintCollection`.  
@@ -71,7 +71,7 @@ ms.locfileid: "69953269"
 > Zmiany w kolumnach wyrażeń nigdy nie `DataTable` powodują zdarzeń. Zmiany w kolumnach wyrażeń powodują `DataView` podnoszenie `DataRowView` i zdarzenia. Kolumny wyrażeń mogą mieć zależności dla wielu innych kolumn i mogą być oceniane wiele razy podczas jednej `DataRow` operacji. Każde obliczenie wyrażenia wywołuje zdarzenia, a pojedyncza `DataRow` operacja może spowodować wygenerowanie `PropertyChanged` wielu `ListChanged` i zdarzeń w przypadku, gdy dotyczy kolumn wyrażeń, może także uwzględniać wiele zdarzeń dla tej samej kolumny wyrażenia.  
   
 > [!WARNING]
->  Nie <xref:System.NullReferenceException> zgłaszaj `RowChanged` w ramach procedury obsługi zdarzeń. Jeśli jest zgłaszany `RowChanged` w ramach zdarzenia `DataTable`, `DataTable` zostanie uszkodzona. <xref:System.NullReferenceException>  
+> Nie <xref:System.NullReferenceException> zgłaszaj `RowChanged` w ramach procedury obsługi zdarzeń. Jeśli jest zgłaszany `RowChanged` w ramach zdarzenia `DataTable`, `DataTable` zostanie uszkodzona. <xref:System.NullReferenceException>  
   
 ### <a name="example"></a>Przykład  
  Poniższy `RowChanged`przykład ilustruje sposób tworzenia obsługi zdarzeń dla zdarzeń `ColumnChanged` `RowDeleting` `RowDeleted` `RowChanging` ,`ColumnChanging`,,,,,, i `TableClearing`. `TableNewRow` `TableCleared` Każdy program obsługi zdarzeń wyświetla dane wyjściowe w oknie konsoli, gdy jest on uruchamiany.  

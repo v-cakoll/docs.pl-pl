@@ -15,15 +15,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ac90473a0bf15173683c45abc8e4a840ea7e733
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5832ec095ea0e96327f6a9636193da9c0c8a5dd2
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946437"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988263"
 ---
 # <a name="icordebugilframe3getreturnvalueforiloffset-method"></a>ICorDebugILFrame3::GetReturnValueForILOffset — Metoda
-Pobiera obiekt "ICorDebugValue", która hermetyzuje wartość zwracaną przez funkcję.  
+Pobiera obiekt "ICorDebugValue", który hermetyzuje zwracaną wartość funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,38 +39,38 @@ HRESULT GetReturnValueForILOffset(
  Przesunięcie IL. Zobacz sekcję Uwagi.  
   
  `ppReturnValue`  
- Wskaźnik na adres obiektu interfejsu "ICorDebugValue", który zawiera informacje o wartości zwracanego wywołania funkcji.  
+ Wskaźnik do adresu obiektu interfejsu "ICorDebugValue", który zawiera informacje o zwracanej wartości wywołania funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda jest używana wraz z [ICorDebugCode3::GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) metodę, aby uzyskać wartość zwracaną przez metodę. Jest to szczególnie użyteczne w przypadku metod, których wartości zwracane są ignorowane, jak poniższe dwa przykłady kodu. Pierwszy przykład wywołuje <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> metody, ale ignoruje wartość zwracaną metody.  
+ Ta metoda jest używana razem z metodą [ICorDebugCode3:: GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) w celu uzyskania wartości zwracanej przez metodę. Jest to szczególnie przydatne w przypadku metod, których wartości zwracane są ignorowane, jak w poniższych dwóch przykładach kodu. Pierwszy przykład wywołuje <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> metodę, ale ignoruje wartość zwracaną metody.  
   
  [!code-csharp[Unmanaged.Debugging.MRV#1](../../../../samples/snippets/csharp/VS_Snippets_CLR/unmanaged.debugging.mrv/cs/mrv1.cs#1)]
  [!code-vb[Unmanaged.Debugging.MRV#1](../../../../samples/snippets/visualbasic/VS_Snippets_CLR/unmanaged.debugging.mrv/vb/mrv1.vb#1)]  
   
- Drugi przykład przedstawia znacznie bardziej powszechny problem związany z debugowaniem. Ponieważ metoda jest używana jako argument w wywołaniu metody, jego wartość zwracana jest dostępna tylko wtedy, gdy debugger przeprowadza metodę wywołania. W wielu przypadkach szczególnie w przypadku, gdy wywoływana metoda jest zdefiniowana w zewnętrznej bibliotece, która nie jest możliwe.  
+ Drugi przykład ilustruje znacznie bardziej typowy problem w debugowaniu. Ponieważ metoda jest używana jako argument w wywołaniu metody, jego wartość zwracana jest dostępna tylko wtedy, gdy debuger przeprowadzi procedurę przez wywołaną metodę. W wielu przypadkach, szczególnie gdy wywołana metoda jest zdefiniowana w zewnętrznej bibliotece, która nie jest możliwa.  
   
  [!code-csharp[Unmanaged.Debugging.MRV#2](../../../../samples/snippets/csharp/VS_Snippets_CLR/unmanaged.debugging.mrv/cs/mrv2.cs#2)]
  [!code-vb[Unmanaged.Debugging.MRV#2](../../../../samples/snippets/visualbasic/VS_Snippets_CLR/unmanaged.debugging.mrv/vb/mrv2.vb#2)]  
   
- W przypadku przekazania [ICorDebugCode3::GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) metody przesunięcia języka pośredniego do witryny wywołania funkcji, zwraca jedno lub więcej przesunięć natywnych. Debuger może następnie ustawić punkty przerwania na tych macierzystych przesunięciach w funkcji. Kiedy debuger uderza w jeden z punktów przerwania, możesz następnie przekazać samo przesunięcie IL, które przekazałeś do tej metody, aby uzyskać wartość zwracaną. Debuger powinien następnie wyczyść wszystkie ustawione punkty przerwania.  
+ W przypadku przekazania metody [ICorDebugCode3:: GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) przesunięcie Il do witryny wywołania funkcji zwraca jedno lub więcej przesunięć natywnych. Debuger może następnie ustawić punkty przerwania dla tych natywnych przesunięć w funkcji. Gdy debuger trafi jeden z punktów przerwania, można następnie przekazać to samo przesunięcie IL przekazane do tej metody w celu uzyskania wartości zwracanej. Debuger powinien następnie wyczyścić wszystkie ustawione punkty przerwania.  
   
 > [!WARNING]
->  [ICorDebugCode3::GetReturnValueLiveOffset Method](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) i `ICorDebugILFrame3::GetReturnValueForILOffset` metody umożliwiają uzyskanie informacji o wartości zwracanej tylko dla typów odwołania. Trwa pobieranie informacji o wartości zwracanej z typów wartości (czyli wszystkich typów, które wynikają z <xref:System.ValueType>) nie jest obsługiwane.  
+> Metody i `ICorDebugILFrame3::GetReturnValueForILOffset` metody [ICorDebugCode3:: GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) umożliwiają uzyskanie informacji o wartości zwracanej tylko dla typów referencyjnych. Pobieranie informacji o wartości zwracanej z typów wartości (to oznacza, że wszystkie typy <xref:System.ValueType>pochodne od) nie są obsługiwane.  
   
- Przesunięcie IL określone przez `ILOffset` parametr powinien być wyświetlany witryny wywołania funkcji, a obiekt debugowany powinien zostać zatrzymany w punkcie przerwania ustawionym na przesunięciu macierzystym zwracanym przez [ICorDebugCode3::GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) — metoda dla tego samego przesunięcia IL. Jeśli obiekt debugowany nie zostanie zatrzymany w poprawnej lokalizacji dla określonego przesunięcia języka Pośredniego, interfejs API nie powiedzie się.  
+ Przesunięcie Il określone przez `ILOffset` parametr powinno znajdować się w witrynie wywołania funkcji, a debugowanego obiektu powinna zostać zatrzymana w punkcie przerwania ustawionym w natywnym przesunięciu zwróconym przez metodę [ICorDebugCode3:: GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) dla tego samego przesunięcia Il. Jeśli debugowanego obiektu nie zostanie zatrzymana w prawidłowej lokalizacji określonego przesunięcia IL, interfejs API nie powiedzie się.  
   
  Jeśli wywołanie funkcji nie zwraca wartości, interfejs API nie powiedzie się.  
   
- `ICorDebugILFrame3::GetReturnValueForILOffset` Metoda jest dostępna tylko na podstawie x86 i AMD64 systemów.  
+ Ta `ICorDebugILFrame3::GetReturnValueForILOffset` Metoda jest dostępna tylko w systemach opartych na architekturze x86 i amd64.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

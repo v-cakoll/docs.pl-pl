@@ -2,12 +2,12 @@
 title: Obsługa wielu wiązań witryny usług IIS
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
-ms.openlocfilehash: 3a4c9a55a8479980bd12333278d8a1e28f2ca775
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a1fc2de3a10641dfc1c6181c7258bd4160f900e2
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943053"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988643"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>Obsługa wielu wiązań witryny usług IIS
 W przypadku hostowania usługi Windows Communication Foundation (WCF) w obszarze Internet Information Services (IIS) 7,0 możesz chcieć podać wiele adresów bazowych, które używają tego samego protokołu w tej samej lokacji. Dzięki temu ta sama usługa może odpowiadać na wiele różnych identyfikatorów URI. Jest to przydatne, gdy chcesz hostować usługę, która nasłuchuje `http://www.contoso.com` w `http://contoso.com`systemach i. Warto również utworzyć usługę mającą adres podstawowy dla użytkowników wewnętrznych oraz oddzielny adres podstawowy dla użytkowników zewnętrznych. Na przykład: `http://internal.contoso.com` i `http://www.contoso.com`.  
@@ -27,4 +27,4 @@ W przypadku hostowania usługi Windows Communication Foundation (WCF) w obszarze
  Określenie wielu adresów bazowych dla tej samej witryny ma wpływ na zawartość strony pomocy programu WCF, importowanie schematu oraz informacje WSDL/MEX wygenerowane przez usługę. Na stronie pomocy programu WCF zostanie wyświetlony wiersz polecenia służący do generowania klienta WCF, który może komunikować się z usługą. Ten wiersz polecenia zawiera tylko pierwszy adres określony w powiązaniu IIS dla witryny sieci Web. Podobnie podczas importowania schematu używane są tylko pierwsze adresy podstawowe określone w powiązaniu IIS. Dane WSDL i MEX zawierają wszystkie adresy podstawowe określone w powiązaniach usług IIS.  
   
 > [!WARNING]
->  Oznacza to, że jeśli usługa ma dwa adresy podstawowe, jeden dla użytkowników wewnętrznych i jeden dla użytkowników zewnętrznych, oba są określone w informacjach WSDL/MEX generowanych przez usługę.
+> Oznacza to, że jeśli usługa ma dwa adresy podstawowe, jeden dla użytkowników wewnętrznych i jeden dla użytkowników zewnętrznych, oba są określone w informacjach WSDL/MEX generowanych przez usługę.

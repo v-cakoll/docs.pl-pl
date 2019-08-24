@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 7ee603fa5350ef81c6d32d2f22119bbe526295df
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: d20afc6e8a950035cc3c0bf010504d42f401bfbb
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912618"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987516"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Instrukcje: dodawanie kontrolek do formularzy systemu Windows
 Większość formularzy służy do dodawania kontrolek do powierzchni formularza w celu zdefiniowania interfejsu użytkownika. *Kontrolka* to składnik formularza służący do wyświetlania informacji lub akceptowania danych wejściowych użytkownika. Aby uzyskać więcej informacji na temat kontrolek, zobacz [Windows Forms Controls](index.md).
@@ -89,7 +89,6 @@ Większość formularzy służy do dodawania kontrolek do powierzchni formularza
 ## <a name="see-also"></a>Zobacz także
 
 - [Kontrolki formularzy Windows Forms](index.md)
-- [Rozmieszczanie kontrolek na formularzach Windows Forms](arranging-controls-on-windows-forms.md)
 - [Instrukcje: Zmień rozmiar kontrolek na Windows Forms](how-to-resize-controls-on-windows-forms.md)
 - [Instrukcje: Ustawianie tekstu wyświetlanego przez kontrolkę Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)

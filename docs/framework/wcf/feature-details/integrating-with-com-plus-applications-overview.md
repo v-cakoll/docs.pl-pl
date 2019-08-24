@@ -5,101 +5,101 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: fbe1617aa8ade89258bb7f4b46180b5e18805e3a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 75711ea534907e5692d97e0ec5f290e03fb75235
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590541"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69988691"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Przegląd integrowania z aplikacjami COM+
-Windows Communication Foundation (WCF) zapewnia bogate środowisko tworzenia aplikacji rozproszonych. Jeśli już używasz logiki oparty na komponentach aplikacji hostowanej w modelu COM +, można użyć programu WCF do rozszerzenia Twojej istniejącej logiki, a nie po prostu go do. Typowym scenariuszem jest, gdy chcesz udostępnić istniejącej logiki biznesowej modelu COM + lub korporacyjnych usług za pośrednictwem usług sieci Web.  
+Windows Communication Foundation (WCF) oferuje bogate środowisko do tworzenia aplikacji rozproszonych. Jeśli korzystasz już z logiki aplikacji opartej na składnikach hostowanej w modelu COM+, możesz użyć programu WCF do rozbudowania istniejącej logiki zamiast konieczności jej ponownego zapisywania. Typowym scenariuszem jest udostępnienie istniejącej logiki biznesowej usług modelu COM+ lub przedsiębiorstwa za pomocą usług sieci Web.  
   
- Gdy interfejs składnika COM + jest widoczny jako usługi sieci Web, Specyfikacja i umowy te usługi są określane przez automatyczne mapowanie, które jest wykonywane w czasie inicjowania aplikacji. Na poniższej liście przedstawiono modelu koncepcyjnego dla tego mapowania:  
+ Gdy interfejs składnika modelu COM+ jest udostępniany jako usługa sieci Web, Specyfikacja i Umowa tych usług są określane przez automatyczne mapowanie, które jest wykonywane podczas inicjacji aplikacji. Na poniższej liście przedstawiono model koncepcyjny dla tego mapowania:  
   
-- Jedna usługa jest zdefiniowana dla każdej narażonych klasy COM.  
+- Jedna usługa jest definiowana dla każdej uwidocznionej klasy COM.  
   
-- Kontrakt usługi pochodzi bezpośrednio z definicji interfejsu wybranego składnika, z możliwością wyłączenia metody zdefiniowane w konfiguracji.  
+- Kontrakt usługi jest wyprowadzany bezpośrednio z definicji interfejsu wybranego składnika z możliwością wykluczenia metody zdefiniowanej w konfiguracji.  
   
-- Operacje w tej Umowy są uzyskiwane bezpośrednio z metod w definicji interfejsu składnika.  
+- Operacje w tym kontrakcie są wyprowadzane bezpośrednio z metod w definicji interfejsu składnika.  
   
-- Parametry te operacje są wyprowadzane bezpośrednio z typu współdziałania COM, który odnosi się do składnika parametrów metody.  
+- Parametry dla tych operacji są wyprowadzane bezpośrednio z typu współdziałania COM, który odnosi się do parametrów metody składnika.  
   
- Domyślny adres i powiązania transportu dla usługi znajdują się w pliku konfiguracji usługi, ale są ponownie skonfigurowane jako wymagane.  
+ Domyślne adresy i powiązania transportu dla usługi są podane w pliku konfiguracji usługi, ale można je zmienić w razie potrzeby.  
   
 > [!NOTE]
->  Kontrakty dotyczące uwidocznionych usług sieci Web pozostaje niezmienna, tak długo, jak interfejsy modelu COM + i konfiguracji pozostają niezmienione. Modyfikacja kilka interfejsów nie jest aktualizowane automatycznie dostępne usługi i wymaga ponownego uruchamiania narzędzia konfiguracji modelu usług COM + (ComSvcConfig.exe).  
+> Umowy dotyczące uwidocznionych usług sieci Web pozostają stałe, o ile interfejsy i konfiguracje modelu COM+ pozostaną bez zmian. Modyfikacja kilku interfejsów nie powoduje automatycznej aktualizacji dostępnych usług i wymaga ponownego uruchomienia narzędzia konfiguracji modelu usług modelu COM+ (ComSvcConfig. exe).  
   
- Wymagania dotyczące uwierzytelniania i autoryzacji w aplikacji COM + i jego składników w dalszym ciągu wymuszane, gdy jest używana jako usługę sieci Web.  
+ Wymagania dotyczące uwierzytelniania i autoryzacji aplikacji modelu COM+ i jej składników nadal są wymuszane, gdy są używane jako usługa sieci Web.  
   
- Jeżeli obiekt wywołujący inicjuje transakcja usługi sieci Web, składniki oznaczone jako transakcyjnych zarejestrować się w tym zakresie transakcji.  
+ Jeśli obiekt wywołujący inicjuje transakcję usługi sieci Web, składniki oznaczone jako Rejestracja transakcyjna w ramach tego zakresu transakcji.  
   
- Poniższe kroki są wymagane do udostępnienia interfejs składnika COM + jako usługę sieci Web bez konieczności modyfikacji składnika:  
+ Poniższe kroki są wymagane do udostępnienia interfejsu składnika modelu COM+ jako usługi sieci Web bez modyfikowania składnika:  
   
-1. Ustal, czy interfejs składnika COM + mogą udostępniony jako usługa sieci Web.  
+1. Ustal, czy interfejs składnika modelu COM+ może być ujawniony jako usługa sieci Web.  
   
 2. Wybierz odpowiedni tryb hostingu.  
   
-3. Aby dodać usługę sieci Web dla interfejsu, należy użyć narzędzia konfiguracji modelu usług COM + (ComSvcConfig.exe). Aby uzyskać więcej informacji o sposobie używania ComSvcConfig.exe, zobacz [jak: Używanie narzędzia konfiguracji modelu usług COM +](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
+3. Użyj narzędzia konfiguracji modelu usług modelu COM+ (ComSvcConfig. exe), aby dodać usługę sieci Web dla interfejsu. Aby uzyskać więcej informacji o sposobach korzystania z programu ComSvcConfig. [exe, zobacz How to: Użyj narzędzia](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)konfiguracji modelu usług modelu com+.  
   
-4. Skonfiguruj ustawienia dodatkowe usługi w pliku konfiguracyjnym aplikacji. Aby uzyskać więcej informacji na temat konfigurowania składnika zobacz [jak: Konfigurowanie ustawień usługi COM +](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
+4. Skonfiguruj dodatkowe ustawienia usługi w pliku konfiguracji aplikacji. Aby uzyskać więcej informacji o konfigurowaniu składnika, zobacz [How to: Skonfiguruj ustawienia](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)usługi com+.  
   
-## <a name="supported-interfaces"></a>Obsługiwanymi interfejsami  
- Istnieją pewne ograniczenia dotyczące typów interfejsów, które są dostępne jako usługę sieci Web. Następujące typy interfejsów nie są obsługiwane:  
+## <a name="supported-interfaces"></a>Obsługiwane interfejsy  
+ Istnieją pewne ograniczenia dotyczące typu interfejsów, które mogą być udostępniane jako usługa sieci Web. Następujące typy interfejsów nie są obsługiwane:  
   
-- Interfejsy, które przekazuj odwołania do obiektów jako parametrów - następujące podejście odwołanie do obiektu ograniczony zostanie omówione w sekcji ograniczoną obsługę odwołanie do obiektu.  
+- Interfejsy, które przekazują odwołania do obiektów jako parametry — opisane poniżej ograniczone podejście do odwołania do obiektu jest opisana w sekcji Obsługa odwołań do obiektów ograniczonych.  
   
-- Interfejsy, które przekazywania typów, które nie są zgodne z konwersji współdziałania modelu COM programu .NET Framework.  
+- Interfejsy, które przechodzą typy, które nie są zgodne z .NET Framework konwersji współdziałania COM.  
   
-- Interfejsy na potrzeby aplikacji, które mają włączone w przypadku hostowania w modelu COM + Tworzenie pul aplikacji.  
+- Interfejsy dla aplikacji, które mają włączone buforowanie aplikacji, gdy są hostowane przez model COM+.  
   
-- Interfejsy składników, które są oznaczone jako prywatne do aplikacji.  
+- Interfejsy składników, które są oznaczone jako prywatne dla aplikacji.  
   
-- Infrastruktura interfejsów modelu COM +.  
+- Interfejsy infrastruktury modelu COM+.  
   
-- Interfejsy z poziomu aplikacji systemu.  
+- Interfejsy z aplikacji systemowej.  
   
-- Interfejsy ze składników usług dla przedsiębiorstw, które nie zostały dodane do globalnej pamięci podręcznej.  
+- Interfejsy ze składników usług przedsiębiorstwa, które nie zostały dodane do globalnej pamięci podręcznej zestawów.  
   
-### <a name="limited-object-reference-support"></a>Obsługa odwołań ograniczonych obiektów  
- Ponieważ liczba składników modelu COM + wdrożone za pomocą obiektów parametrów odwołania, na przykład zwraca obiekt zestawu rekordów ADO integracja modelu COM + zawiera ograniczoną obsługę parametrów odwołanie do obiektu. Obsługa jest ograniczona do obiektów, które implementują `IPersistStream` interfejsu COM. Obejmuje obiekty zestawu rekordów ADO i można zaimplementować dla obiektów COM z określonych aplikacji.  
+### <a name="limited-object-reference-support"></a>Obsługa odwołań do ograniczonego obiektu  
+ Ze względu na to, że wiele wdrożonych składników modelu COM+ używa obiektów według parametrów odwołań, takich jak zwracanie obiektu zestawu rekordów ADO, integracja modelu COM+ obejmuje ograniczoną obsługę parametrów odwołań do obiektów. Obsługa jest ograniczona do obiektów, które implementują `IPersistStream` interfejs com. Obejmuje to obiekty zestawu rekordów ADO i można zaimplementować dla obiektów COM specyficznych dla aplikacji.  
   
- Aby włączyć obsługę tego, udostępnia narzędzia ComSvcConfig.exe **allowreferences** przełącznika, który powoduje wyłączenie parametru podpis metody regularnego i sprawdza, czy działa narzędzie, aby upewnić się, że nie są używane parametry odwołanie do obiektu . Ponadto, typy obiektów, które są przekazywane jako parametry należy o nazwie i zidentyfikowane w ciągu <`persistableTypes`> element konfiguracji, który jest elementem podrzędnym <`comContract`> element.  
+ Aby włączyć tę obsługę, narzędzie ComSvcConfig. exe udostępnia przełącznik **allowreferences** , który wyłącza parametr sygnatury metody regularnej i sprawdza, czy narzędzie jest uruchamiane, aby upewnić się, że parametry odwołania do obiektu nie są używane. Ponadto typy obiektów, które są przekazywane jako parametry, muszą być nazwane i identyfikowane w elemencie konfiguracji`persistableTypes`> <, który jest elementem podrzędnym elementu <`comContract`>.  
   
- Gdy ta funkcja jest używana, używa usługi integracji COM + `IPersistStream` interfejsu do serializacji lub deserializacji wystąpienia obiektu. Jeśli wystąpienie obiektu nie obsługuje `IPersistStream`, zgłaszany jest wyjątek.  
+ Gdy ta funkcja jest używana, usługa integracji modelu COM+ używa `IPersistStream` interfejsu do serializacji lub deserializacji wystąpienia obiektu. Jeśli wystąpienie obiektu nie obsługuje `IPersistStream`, zgłaszany jest wyjątek.  
   
- W aplikacji klienckiej, metody na <xref:System.ServiceModel.ComIntegration.PersistStreamTypeWrapper> obiekt może być używany do przekazania obiektu w usłudze i podobnie można pobrać obiektu.  
+ W aplikacji klienckiej metody na <xref:System.ServiceModel.ComIntegration.PersistStreamTypeWrapper> obiekcie mogą służyć do przekazywania obiektu w usłudze i w sposób podobny do pobierania obiektu.  
   
 > [!NOTE]
->  Ze względu na charakter niestandardowej i specyficzne dla platformy podejście serializacji jest najlepszym rozwiązaniem w przypadku użycia między klientami programu WCF i usługi WCF.  
+> Ze względu na niestandardową i specyficzną dla platformy sposób podejścia serializacji najlepiej jest to rozwiązanie do użycia między klientami programu WCF i usługami WCF.  
   
 ## <a name="selecting-the-hosting-mode"></a>Wybieranie trybu hostingu  
- COM + uwidacznia usług sieci Web na jeden z następujących trybów hostingu:  
+ Model COM+ uwidacznia usługi sieci Web w jednym z następujących trybów hostingu:  
   
-- COM+-hosted  
+- Obsługiwane przez model COM+  
   
-     Usługa sieci Web jest hostowana w ramach aplikacji dedykowanego modelu COM + procesu serwera (Dllhost.exe). Ten tryb wymaga aplikacji, aby jawnie uruchomić przed może odbierać żądania usługi sieci Web. COM + opcji "Uruchom jako usługa NT" lub "Pozostaw uruchomiony podczas bezczynności" może służyć do uniemożliwić bezczynności zamknięcie aplikacji i usług. Ten tryb zapewnia usługi sieci Web i dostępu DCOM dla aplikacji serwera.  
+     Usługa sieci Web jest hostowana w ramach dedykowanego procesu serwera COM+ aplikacji (dllhost. exe). Ten tryb wymaga, aby aplikacja była jawnie uruchamiana, zanim będzie mogła odbierać żądania usługi sieci Web. Opcje modelu COM+ "Uruchom jako usługa NT" lub "Pozostaw działające w trybie bezczynności" mogą służyć do zapobiegania bezczynnemu zamknięciu aplikacji i jej usług. Ten tryb zapewnia dostęp usługi sieci Web i modelu DCOM do aplikacji serwera.  
   
 - Hostowane w sieci Web  
   
-     Usługa sieci Web jest hostowana w ramach procesu roboczego serwera sieci Web. Ten tryb nie wymaga modelu COM + na aktywny, po odebraniu początkowego żądania. Jeśli aplikacja nie jest aktywny, po odebraniu tego żądania, automatycznie została aktywowana przed rozpoczęciem przetwarzania żądania. W tym trybie również zapewnia usługi sieci Web i dostępu DCOM dla aplikacji serwera, ale powoduje, że przeskoku proces w przypadku żądań usług sieci Web. Wymaga to zazwyczaj kliencie, aby umożliwić personifikacji. W programie WCF, można to zrobić za pomocą <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> właściwość <xref:System.ServiceModel.Security.WindowsClientCredential> klasy, który jest dostępny jako właściwość ogólnego <xref:System.ServiceModel.ChannelFactory%601> klasy, jak również <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> wartość wyliczenia.  
+     Usługa sieci Web jest hostowana w procesie roboczym serwera sieci Web. Ten tryb nie wymaga aktywności modelu COM+ po odebraniu początkowego żądania. Jeśli aplikacja nie jest aktywna po odebraniu tego żądania, zostanie ona automatycznie aktywowana przed przetworzeniem żądania. Ten tryb zapewnia także dostęp usługi sieci Web i modelu DCOM do aplikacji serwera, ale powoduje przeskok procesu do żądań usług sieci Web. Zwykle wymaga to włączenia personifikacji przez klienta. W programie WCF można to zrobić <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> z właściwością <xref:System.ServiceModel.Security.WindowsClientCredential> klasy, do której uzyskuje się dostęp jako właściwość klasy generycznej <xref:System.ServiceModel.ChannelFactory%601> , a także <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> wartości wyliczenia.  
   
-- Hostowane w sieci Web w procesie  
+- W procesie hostowanym w sieci Web  
   
-     Usługa sieci Web i logiki aplikacji modelu COM + znajdują się w ramach procesu roboczego serwera sieci Web. Zapewnia to automatyczną aktywację w trybie hostowanej w sieci Web bez powodowania przeskoku proces w przypadku żądań usług sieci Web. Wadą jest to, że aplikacja serwera nie są dostępne za pośrednictwem modelu DCOM.  
+     Usługa sieci Web i logika aplikacji modelu COM+ są hostowane w procesie roboczym serwera sieci Web. Zapewnia to automatyczną aktywację trybu hostowanego w sieci Web bez powodowania przeskoków procesów dla żądań usług sieci Web. Wadą jest to, że nie można uzyskać dostępu do aplikacji serwera za pomocą modelu DCOM.  
   
 ### <a name="security-considerations"></a>Zagadnienia dotyczące zabezpieczeń  
- Podobnie jak inne usługi WCF ustawienia zabezpieczeń dla narażonych usługi są zarządzane za pomocą ustawień konfiguracji dla kanału WCF. Tradycyjne ustawień zabezpieczeń modelu DCOM, takich jak ustawienia uprawnień dla komputera modelu DCOM nie są wymuszane. Aby wymusić ról aplikacji modelu COM +, autoryzacji "kontroli dostępu na poziomie składnika" musi być włączona dla tego składnika.  
+ Podobnie jak w przypadku innych usług WCF, ustawienia zabezpieczeń dla uwidocznionej usługi są zarządzane za pomocą ustawień konfiguracji kanału WCF. Tradycyjne ustawienia zabezpieczeń DCOM, takie jak ustawienia uprawnień na poziomie komputera DCOM nie są wymuszane. Aby wymusić role aplikacji modelu COM+, należy włączyć autoryzację "sprawdzanie dostępu na poziomie składnika" dla składnika.  
   
- Korzystanie z powiązania niezabezpieczonych można pozostawić komunikacji otwarte do manipulowania lub ujawnienie informacji. Aby temu zapobiec, zaleca się, że używasz bezpiecznego powiązania.  
+ Użycie niezabezpieczonego powiązania może pozostawiać komunikację otwartą przed naruszeniem lub ujawnieniem informacji. Aby tego uniknąć, zalecamy użycie bezpiecznego powiązania.  
   
- Dla modelu COM +-tryby hostowanej, która jest hostowana w sieci Web, aplikacje klienckie należy zezwolić na działanie procesu serwera personifikować użytkownika klienta. Można to zrobić w klientach usługi WCF, ustawiając poziom personifikacji <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>.  
+ W przypadku trybów hostowanych przez model COM+ i sieci Web aplikacje klienckie muszą zezwalać procesowi serwera na personifikowanie użytkownika klienta. Można to zrobić na klientach programu WCF, ustawiając poziom personifikacji <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>na.  
   
- Za pomocą usług Internet Information Services (IIS) lub Windows Process Activation Service (WAS) przy użyciu protokołu HTTP narzędzia Httpcfg.exe może służyć do rezerwowania adresu punktu końcowego transportu. W innych konfiguracjach jest ważne, aby zapewnić ochronę przed usług nieautoryzowany, które działają jako zamierzone usługi. Aby uniemożliwić nieautoryzowane usługi zaczynając od żądanego punktu końcowego, uzasadnione usługi można skonfigurować do uruchamiania jako usługi NT. Dzięki temu uzasadnione usługi oświadczenie adresu punktu końcowego przed dowolnych usług nieautoryzowany.  
+ W przypadku usług Internet Information Services (IIS) lub Windows Process Activation Service (WAS) przy użyciu transportu HTTP narzędzie Httpcfg. exe może służyć do rezerwowania adresu punktu końcowego transportu. W innych konfiguracjach ważne jest ochronę przed nieautoryzowanymi usługami, które działają jako zamierzona usługa. Aby zapobiec uruchamianiu nieautoryzowanej usługi w żądanym punkcie końcowym, można skonfigurować legalną usługę do uruchamiania jako usługa NT. Dzięki temu uprawniony usługa może przejąć adres punktu końcowego przed wszelkimi nieautoryzowanymi usługami.  
   
- Podczas udostępniania aplikacji modelu COM + o skonfigurowanych ról modelu COM + jako usługa hostowana w sieci Web, "Uruchom usługi IIS konto procesu", należy dodać do jednej z ról aplikacji. To konto, zwykle o nazwie IWAM_machinename, należy dodać umożliwia zamknięcie czyste obiektów po użyciu. To konto nie może być przyznany dodatkowych uprawnień.  
+ Podczas udostępniania aplikacji modelu COM+ ze skonfigurowanymi rolami modelu COM+ jako usługą hostowaną w sieci Web należy dodać do jednej z ról aplikacji opcję "Uruchom konto procesu IIS". Należy dodać to konto, zazwyczaj o nazwie IWAM_machinename, aby włączyć czyste zamknięcie obiektów po użyciu. Kontu nie należy przyznawać żadnych dodatkowych uprawnień.  
   
- Nie można użyć modelu COM + odtwarzanie procesów funkcji w zintegrowanej aplikacji. Jeśli aplikacja jest skonfigurowana do użycia, odtwarzanie procesów i składniki są uruchomione w procesie hostowanych modelu COM +, nie można uruchomić usługi. To wymaganie nie obejmuje usług przy użyciu trybu w trakcie hostowanych w sieci Web, ponieważ nie są stosowane ustawienia odtwarzania procesu.  
+ Funkcji odtwarzania procesów COM+ nie można używać w aplikacjach zintegrowanych. Jeśli aplikacja jest skonfigurowana do korzystania z odtwarzania procesów, a składniki są uruchomione w procesie hostowanym przez model COM+, uruchomienie usługi nie powiedzie się. To wymaganie nie obejmuje usług korzystających z trybu online hostowanych w sieci Web, ponieważ nie są stosowane ustawienia odtwarzania procesów.  
   
 ## <a name="see-also"></a>Zobacz także
 

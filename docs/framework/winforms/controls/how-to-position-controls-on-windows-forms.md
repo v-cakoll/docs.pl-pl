@@ -15,38 +15,41 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-ms.openlocfilehash: 241edbe60c327493c9123c6cf7bdc19b7ba2b724
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 1cc2cb4c749b7290a6edf914a8e6a697006ef43c
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211652"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987076"
 ---
-# <a name="how-to-position-controls-on-windows-forms"></a>Instrukcje: kontrolki pozycji na formularzach systemu Windows
+# <a name="how-to-position-controls-on-windows-forms"></a>Instrukcje: Kontrolki położenia na Windows Forms
 
-Położenie formantów, za pomocą projektanta formularzy Windows w programie Visual Studio lub określić <xref:System.Windows.Forms.Control.Location%2A> właściwości.
+Aby określić położenie formantów, użyj Projektant formularzy systemu Windows w programie Visual Studio lub Określ <xref:System.Windows.Forms.Control.Location%2A> właściwość.
 
-## <a name="position-a-control-on-the-design-surface-of-the-windows-forms-designer"></a>Położenie formantu na powierzchni projektowej projektanta Windows Forms
+## <a name="position-a-control-on-the-design-surface-of-the-windows-forms-designer"></a>Umieść kontrolkę na powierzchni projektowej Projektant formularzy systemu Windows
 
-W programie Visual Studio przeciągnij go do odpowiedniej lokalizacji za pomocą myszy.
+W programie Visual Studio przeciągnij formant do odpowiedniej lokalizacji za pomocą myszy.
 
 > [!NOTE]
-> Wybierz kontrolkę i przenieś ją za pomocą strzałki kluczy, aby umieść ją na bardziej precyzyjne. Ponadto *linii przyciągania* ułatwienie umieszczenie kontrolki dokładnie w formularzu. Aby uzyskać więcej informacji, zobacz [instruktażu: Rozmieszczanie formantów Windows Forms za pomocą linii przyciągania](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).
+> Zaznacz kontrolkę i przenieś ją przy użyciu klawiszy strzałek, aby dokładniej umieścić ją na pozycji. Ponadto *linii wyrównania* ułatwiają precyzyjne umieszczanie kontrolek w formularzu. Aby uzyskać więcej informacji, [zobacz Przewodnik: Rozmieszczanie kontrolek na Windows Forms](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)przy użyciu linii wyrównania.
 
-## <a name="position-a-control-using-the-properties-window"></a>Położenie formantu w oknie właściwości
+## <a name="position-a-control-using-the-properties-window"></a>Ustawianie kontrolki przy użyciu okno Właściwości
 
-1. W programie Visual Studio kliknij formant, który ma zostać ustawiony.
+1. W programie Visual Studio Wybierz kontrolkę, którą chcesz umieścić.
 
-2. W **właściwości** okna, typ wartości <xref:System.Windows.Forms.Control.Location%2A> właściwości, oddzielając wartości przecinkami, aby ustalić położenie kontrolki wewnątrz jej kontenera.
+2. W oknie **Właściwości** wprowadź wartości dla <xref:System.Windows.Forms.Control.Location%2A> właściwości, oddzielone przecinkami, aby umieścić formant w kontenerze.
 
-     Pierwsza liczba (X) jest odległość między lewą krawędzią kontenera; Druga liczba (Y) jest odległość od górnej krawędzi obszaru kontenera (w pikselach).
+   Pierwsza liczba (X) to odległość od lewej krawędzi kontenera; Druga liczba (Y) to odległość od górnego obramowania obszaru kontenera (w pikselach).
 
-    > [!NOTE]
-    > Można rozwinąć <xref:System.Windows.Forms.Control.Location%2A> właściwość do typu **X** i **Y** wartości indywidualnie.
+   > [!NOTE]
+   > Można rozwinąć <xref:System.Windows.Forms.Control.Location%2A> właściwość, aby wpisać wartości **X** i **Y** osobno.
 
-## <a name="position-a-control-programmatically"></a>Położenie formantu programowe
+## <a name="position-a-control-programmatically"></a>Programowo ustawić kontrolkę
 
-1. Ustaw <xref:System.Windows.Forms.Control.Location%2A> właściwości formantu, aby <xref:System.Drawing.Point>.
+1. Ustaw właściwość formantu na <xref:System.Drawing.Point>. <xref:System.Windows.Forms.Control.Location%2A>
 
     ```vb
     Button1.Location = New Point(100, 100)
@@ -60,7 +63,7 @@ W programie Visual Studio przeciągnij go do odpowiedniej lokalizacji za pomocą
     button1->Location = Point(100, 100);
     ```
 
-2. Zmień współrzędną X lokalizacji kontrolki przy użyciu <xref:System.Windows.Forms.Control.Left%2A> podwłaściwości.
+2. Zmień współrzędną X lokalizacji kontrolki za pomocą <xref:System.Windows.Forms.Control.Left%2A> właściwości Subproperty.
 
     ```vb
     Button1.Left = 300
@@ -74,9 +77,9 @@ W programie Visual Studio przeciągnij go do odpowiedniej lokalizacji za pomocą
     button1->Left = 300;
     ```
 
-## <a name="increment-a-controls-location-programmatically"></a>Zwiększ położenie formantu programowe
+## <a name="increment-a-controls-location-programmatically"></a>Programowo Zwiększ lokalizację kontrolki
 
-Ustaw <xref:System.Windows.Forms.Control.Left%2A> właściwości podrzędnej, aby zwiększyć współrzędną X formantu.
+<xref:System.Windows.Forms.Control.Left%2A> Ustaw właściwość Subproperty, aby zwiększyć współrzędną X formantu.
 
 ```vb
 Button1.Left += 200
@@ -91,16 +94,15 @@ button1->Left += 200;
 ```
 
 > [!NOTE]
-> Użyj <xref:System.Windows.Forms.Control.Location%2A> właściwość umożliwiająca ustawienie kontrolki X i Y umieszcza jednocześnie. Aby ustawić położenie indywidualnie, należy użyć formantu <xref:System.Windows.Forms.Control.Left%2A> (**X**) lub <xref:System.Windows.Forms.Control.Top%2A> (**Y**) podwłaściwości. Nie należy próbować niejawnie Ustaw współrzędne X i Y <xref:System.Drawing.Point> strukturę, która reprezentuje przycisk lokalizacji, ponieważ ta struktura zawiera kopię współrzędnych przycisku.
+> Użyj właściwości <xref:System.Windows.Forms.Control.Location%2A> , aby jednocześnie ustawić współrzędne X i Y kontrolki. Aby ustawić położenie indywidualnie, użyj podwłaściwości kontrolki <xref:System.Windows.Forms.Control.Left%2A> (**X**) lub <xref:System.Windows.Forms.Control.Top%2A> (**Y**). Nie należy próbować niejawnie ustawić współrzędnych <xref:System.Drawing.Point> X i Y struktury reprezentującej lokalizację przycisku, ponieważ ta struktura zawiera kopię współrzędnych przycisku.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Kontrolki formularzy Windows Forms](index.md)
-- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą linii przyciągania](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Rozmieszczanie kontrolek na formularzach Windows Forms](arranging-controls-on-windows-forms.md)
+- [Przewodnik: Rozmieszczanie kontrolek na Windows Forms przy użyciu linii wyrównania](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Przewodnik: Rozmieszczanie kontrolek na Windows Forms przy użyciu TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Przewodnik: Rozmieszczanie kontrolek na Windows Forms przy użyciu FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Etykietowanie pojedynczych kontrolek formularzy Windows Forms i określanie skrótów dla nich](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)
 - [Kontrolki formularzy Windows Forms według funkcji](windows-forms-controls-by-function.md)
-- [Instrukcje: Ustawianie lokalizacji ekranu formularzy Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/52aha046(v=vs.100))
+- [Instrukcje: Ustaw lokalizację ekranu Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/52aha046(v=vs.100))

@@ -2,12 +2,12 @@
 title: Obsługa nowych funkcji w programie Workflow Foundation 4.5 w rehostowanym projektancie przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 69c3577c82c7a0899fb94461255721f4b2ab3ecd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 20623c8d2f6bf66d2668fd07b0acae67865a3235
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913702"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987226"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Obsługa nowych funkcji w programie Workflow Foundation 4.5 w rehostowanym projektancie przepływu pracy
 Windows Workflow Foundation (WF) w .NET Framework 4,5 wprowadzono wiele nowych funkcji, w tym kilka ulepszeń środowiska projektanta przepływu pracy. Ten temat zawiera szczegółowe informacje o tych funkcjach, które są obsługiwane w projektancie przeszukanym i które nie są obecnie obsługiwane.
@@ -22,7 +22,7 @@ Windows Workflow Foundation (WF) w .NET Framework 4,5 wprowadzono wiele nowych f
  Przed .NET Framework 4,5 wszystkie wyrażenia w przepływach pracy mogą być zapisywane tylko w Visual Basic. W .NET Framework 4,5 wyrażenia Visual Basic są używane tylko dla projektów utworzonych przy użyciu Visual Basic. Projekty C# wizualizacji teraz C# używają wyrażeń. Podczas tworzenia przepływów pracy w programie Visual Studio 2012 jest C# dostępny w pełni funkcjonalny Edytor wyrażeń, który zawiera funkcje, takie jak wyróżnianie gramatyki i technologia IntelliSense. C#projekty przepływu pracy utworzone w poprzednich wersjach, które używają wyrażeń Visual Basic, nadal będą działały.
 
 > [!WARNING]
->  C#wyrażenia nie są obsługiwane w projektancie przeszukanym.
+> C#wyrażenia nie są obsługiwane w projektancie przeszukanym.
 
 ## <a name="new-designer-capabilities"></a>Nowe możliwości projektanta
 
@@ -30,7 +30,7 @@ Windows Workflow Foundation (WF) w .NET Framework 4,5 wprowadzono wiele nowych f
  Funkcje [szybkiego znajdowania](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) i [znajdowania plików](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) wprowadzone w .NET Framework 4,5 nie są obsługiwane w projektancie przewidzianym przez hosta. `Toolbox` Wyszukiwanie jest obsługiwane w projektancie przeszukiwanym. Aby uzyskać więcej informacji na temat tych funkcji, zobacz [Wyszukiwanie projektanta](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch).
 
 > [!WARNING]
->  [Szybkie znajdowanie](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) i [Znajdowanie plików](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) nie są obsługiwane w projektancie przeszukiwanym.
+> [Szybkie znajdowanie](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) i [Znajdowanie plików](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) nie są obsługiwane w projektancie przeszukiwanym.
 
 ### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>Usuń element menu kontekstowego w programie Variable i Konstruktor argumentów
  W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]programie zmienne i argumenty można usunąć tylko w projektancie przy użyciu klawiatury. Począwszy od .NET Framework 4,5, zmienne i argumenty można usuwać za pomocą menu kontekstowego. Ta funkcja jest obsługiwana w projektancie przehostowanym.
@@ -103,7 +103,7 @@ Windows Workflow Foundation (WF) w .NET Framework 4,5 wprowadzono wiele nowych f
  W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]programie błędy walidacji przepływu pracy nie były zliczane jako błędy kompilacji podczas kompilacji projektu przepływu pracy. W ten sposób Kompilowanie projektu przepływu pracy może się powieść, nawet jeśli wystąpiły błędy sprawdzania poprawności przepływu pracy. W .NET Framework 4,5 błędy walidacji przepływu pracy powodują niepowodzenie kompilacji.
 
 > [!WARNING]
->  Walidacja czasu kompilacji nie jest obsługiwana w projektancie przehostowanym.  
+> Walidacja czasu kompilacji nie jest obsługiwana w projektancie przehostowanym.  
   
 ### <a name="design-time-background-validation"></a>Walidacja w tle w czasie projektowania  
  W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]programie przepływy pracy zostały zweryfikowane jako proces pierwszego planu, który może potencjalnie blokować interfejs użytkownika w trakcie skomplikowanych lub czasochłonnych procesów weryfikacji. Sprawdzanie poprawności przepływu pracy odbywa się teraz w wątku w tle, dzięki czemu interfejs użytkownika nie jest blokowany.  
@@ -142,4 +142,4 @@ Windows Workflow Foundation (WF) w .NET Framework 4,5 wprowadzono wiele nowych f
  Narzędzie do tworzenia przepływów pracy pierwszego kontraktu pozwala deweloperowi na zaprojektowanie kontraktu w kodzie, a następnie za pomocą kilku kliknięć w programie Visual Studio, automatyczne wygenerowanie szablonu działania w przyborniku reprezentującym każdą operację. Te działania są następnie używane do tworzenia przepływu pracy, który implementuje operacje zdefiniowane przez umowę. Projektant przepływu pracy sprawdza poprawność usługi przepływu pracy, aby upewnić się, że te operacje są zaimplementowane, a sygnatura przepływu pracy jest zgodna z podpisem kontraktu. Deweloper może również skojarzyć usługę przepływu pracy z kolekcją wdrożonych kontraktów. Aby uzyskać więcej informacji na temat tworzenia usługi przepływu pracy w pierwszej [kolejności, zobacz How to: Utwórz usługę przepływu pracy, która korzysta z istniejącego kontraktu](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)usługi.  
   
 > [!WARNING]
->  Opracowywanie kontraktu — pierwszy przepływ pracy nie jest obsługiwany w Projektancie przepływu pracy.
+> Opracowywanie kontraktu — pierwszy przepływ pracy nie jest obsługiwany w Projektancie przepływu pracy.

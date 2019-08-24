@@ -10,27 +10,27 @@ helpviewer_keywords:
 ms.assetid: 1167cfe6-c8aa-4096-94ba-c66c3a4edf4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fd67d5f0cb5af33dc2b79f86148557a0dca6ec4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 026c7d2be678c4b6aeed4e2e6f9eb43283cd04c1
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638934"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988455"
 ---
 # <a name="how-to-combine-parallel-and-sequential-linq-queries"></a>Instrukcje: Łączenie równoległych i sekwencyjnych zapytań LINQ
-W tym przykładzie pokazano, jak używać <xref:System.Linq.ParallelEnumerable.AsSequential%2A> metodę, aby nakazać PLINQ przetwarzają wszystkie kolejne operatory w zapytaniu sekwencyjnie. Mimo że zazwyczaj mniejsza niż równoległego przetwarzania sekwencyjnych czasami jest niezbędnych do wyprodukowania poprawne wyniki.  
+W tym przykładzie pokazano, <xref:System.Linq.ParallelEnumerable.AsSequential%2A> jak za pomocą metody poinstruować PLINQ, aby przetwarzać wszystkie kolejne operatory w kwerendzie sekwencyjnie. Chociaż przetwarzanie sekwencyjne jest ogólnie wolniejsze niż równoległe, czasami konieczne jest wygenerowanie poprawnych wyników.  
   
 > [!WARNING]
->  W tym przykładzie jest jedynie do zademonstrowania określonych użycia i może nie działać szybciej niż równoważna sekwencyjnego LINQ do kwerendy obiekty. Aby uzyskać więcej informacji na temat przyspieszenie zobacz [ogólne informacje o przyspieszeniach w PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+> Ten przykład jest przeznaczony do zademonstrowania użycia i może nie działać szybciej niż równoważne LINQ to Objects sekwencyjne zapytanie. Aby uzyskać więcej informacji na temat przyspieszenie, zobacz [Opis przyspieszenie w PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano jeden scenariusz, w którym <xref:System.Linq.ParallelEnumerable.AsSequential%2A> jest wymagany, a mianowicie zachować kolejność, który został ustanowiony klauzuli poprzedniego zapytania.  
+ W poniższym przykładzie przedstawiono jeden scenariusz, w <xref:System.Linq.ParallelEnumerable.AsSequential%2A> którym jest to wymagane, czyli zachowanie kolejności, która została ustanowiona w poprzedniej klauzuli zapytania.  
   
  [!code-csharp[PLINQ#24](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#24)]
  [!code-vb[PLINQ#24](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#24)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Aby skompilować i uruchomić ten kod, wklej go do [próbka danych PLINQ](../../../docs/standard/parallel-programming/plinq-data-sample.md) projektu, Dodaj wiersz w celu wywołania metody z `Main`, i naciśnij klawisz F5.  
+ Aby skompilować i uruchomić ten kod, wklej go do projektu [przykładu danych PLINQ](../../../docs/standard/parallel-programming/plinq-data-sample.md) , Dodaj wiersz do wywołania metody z `Main`, a następnie naciśnij klawisz F5.  
   
 ## <a name="see-also"></a>Zobacz także
 

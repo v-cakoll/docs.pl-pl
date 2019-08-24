@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11777f21d34da8b529352122bbf185f1938d3eb5
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: df8f82605118f1af0f085aef6e76c1e4bedb2904
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567230"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69988155"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>Pakowanie zestawu .NET Framework dla modelu COM
 
@@ -33,13 +33,13 @@ Deweloperzy COM mogą skorzystać z następujących informacji o zarządzanych t
 
   Niektóre typy zarządzane są niewidoczne dla modelu COM. Niektóre są widoczne, ale nie mogą być możliwe do utworzenia; a niektóre są widoczne i możliwe do utworzenia. Zestaw może składać się z dowolnej kombinacji typów niewidocznych, widocznych, niemożliwych do utworzenia i do utworzenia. Aby uzyskać kompletność, zidentyfikuj typy w zestawie, które zamierzasz uwidocznić dla modelu COM, zwłaszcza gdy te typy są podzbiorem typów ujawnionych dla .NET Framework.
 
-  Aby uzyskać dodatkowe informacje, zobacz [kwalifikowanie typów .NET do](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)międzyoperacyjności.
+  Aby uzyskać dodatkowe informacje, zobacz [kwalifikowanie typów .NET do](../../standard/native-interop/qualify-net-types-for-interoperation.md)międzyoperacyjności.
 
 - Instrukcje dotyczące obsługi wersji
 
   Klasy zarządzane implementujące interfejs klasy (interfejs oparty na modelu COM Interop) podlegają ograniczeniom dotyczącym wersji.
 
-  Aby uzyskać wskazówki dotyczące używania interfejsu klasy, zobacz [wprowadzenie do interfejsu klasy](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface).
+  Aby uzyskać wskazówki dotyczące używania interfejsu klasy, zobacz [wprowadzenie do interfejsu klasy](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface).
 
 - Instrukcje dotyczące wdrażania
 
@@ -94,8 +94,8 @@ Klasa znajdująca się w przestrzeni nazw **System. Runtime. Interop** konwertuj
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
 - [Udostępnianie składników .NET Framework modelowi COM](exposing-dotnet-components-to-com.md)
-- [Kwalifikowanie typów .NET do międzyoperacyjności](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
-- [Wprowadzenie do interfejsu klasy](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
+- [Kwalifikowanie typów .NET do międzyoperacyjności](../../standard/native-interop/qualify-net-types-for-interoperation.md)
+- [Wprowadzenie do interfejsu klasy](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
 - [Zagadnienia dotyczące zabezpieczeń zestawów](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe (eksporter biblioteki typów)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Rejestrowanie zestawów do użycia z modelem COM](registering-assemblies-with-com.md)

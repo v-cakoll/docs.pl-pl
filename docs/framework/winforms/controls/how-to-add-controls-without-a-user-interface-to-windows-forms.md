@@ -14,39 +14,39 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 49bf927085d29b60c1d9cf5d61df3894495349db
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: bc1f844e5a2cf4d4f3b64ebf20e935f36ff85e12
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65210410"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987085"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Instrukcje: dodawanie kontrolek bez interfejsu użytkownika do formularzy systemu Windows
 
-Niewizualne kontrolki (lub składnika) zapewnia funkcje aplikacji. W przeciwieństwie do innych formantów składniki nie udostępniają interfejs użytkownika dla użytkownika i dlatego nie powinny być wyświetlane na powierzchni projektanta formularzy Windows. Po dodaniu składnika do formularza Windows Forms Designer przedstawia o zmiennych rozmiarach na pasku w dolnej części formularza, w którym są wyświetlane wszystkie składniki. Po dodaniu kontrolki do zasobnika składnika można wybrać składnik i ustaw jego właściwości, tak jak inne kontrolki, w formularzu.
+Niewizualny formant (lub składnik) zapewnia funkcjonalność aplikacji. W przeciwieństwie do innych kontrolek składniki nie udostępniają użytkownikowi interfejsu użytkownika, więc nie muszą być wyświetlane na powierzchni Projektant formularzy systemu Windows. Po dodaniu składnika do formularza Projektant formularzy systemu Windows wyświetla zasobnik o zmiennym rozmiarze w dolnej części formularza, w którym są wyświetlane wszystkie składniki. Po dodaniu kontrolki do zasobnika składników można wybrać składnik i ustawić jego właściwości, tak jak każda inna kontrolka w formularzu.
 
-## <a name="add-a-component-to-a-windows-form"></a>Dodaj składnik do formularza Windows
+## <a name="add-a-component-to-a-windows-form"></a>Dodawanie składnika do formularza systemu Windows
 
-1. Otwórz formularz w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie formularzy Windows w Projektancie](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).
+1. Otwórz formularz w programie Visual Studio. Aby uzyskać szczegółowe informacje [, zobacz How to: Wyświetl Windows Forms w projektancie](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).
 
-2. W **przybornika**, kliknij składnik i przeciągnij go do formularza.
+2. W **przyborniku**kliknij składnik i przeciągnij go do formularza.
 
-     Składnik jest wyświetlana w zasobniku składnika.
+     Składnik zostanie wyświetlony na pasku składnika.
 
-Ponadto składniki można dodać do formularza w czasie wykonywania. To typowy scenariusz, szczególnie, ponieważ składniki nie mają visual wyrażenia, w przeciwieństwie do formantów, które mają interfejs użytkownika. W poniższym przykładzie <xref:System.Windows.Forms.Timer> składnik zostanie dodany w czasie wykonywania. (Należy pamiętać, że program Visual Studio zawiera szereg różnych czasomierzy; w przypadku używania formularzy Windows <xref:System.Windows.Forms.Timer> składnika. Aby uzyskać więcej informacji na temat różnych czasomierzy w programie Visual Studio, zobacz [wprowadzenie do serwerowych czasomierzy](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).)
+Ponadto składniki mogą być dodawane do formularza w czasie wykonywania. Jest to typowy scenariusz, szczególnie ze względu na to, że składniki nie mają wyrażenia wizualnego, w przeciwieństwie do kontrolek, które mają interfejs użytkownika. W poniższym <xref:System.Windows.Forms.Timer> przykładzie składnik jest dodawany w czasie wykonywania. (Należy zauważyć, że program Visual Studio zawiera szereg różnych czasomierzy; w tym przypadku należy użyć <xref:System.Windows.Forms.Timer> składnika Windows Forms. Aby uzyskać więcej informacji na temat różnych czasomierzy w programie Visual Studio, zobacz [wprowadzenie do czasomierzy oparte na serwerze](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).)
 
 > [!CAUTION]
-> Składniki często mają właściwości specyficzne dla kontrolki, które muszą być ustawione dla składnika działał efektywnie. W przypadku właściwości <xref:System.Windows.Forms.Timer> poniżej składnika, ustawić `Interval` właściwości. Pamiętaj, podczas dodawania składników do projektu, należy ustawić właściwości niezbędne do tego składnika.
+> Składniki często mają właściwości specyficzne dla kontrolki, które muszą być ustawione, aby składnik działał efektywnie. W przypadku <xref:System.Windows.Forms.Timer> składnika poniżej ustawia się `Interval` właściwość. Należy pamiętać, że podczas dodawania składników do projektu ustawiane są właściwości niezbędne dla tego składnika.
 
-## <a name="add-a-component-to-a-windows-form-programmatically"></a>Dodaj składnik do formularza Windows programowe
+## <a name="add-a-component-to-a-windows-form-programmatically"></a>Programistyczne Dodawanie składnika do formularza systemu Windows
 
-1. Utwórz wystąpienie obiektu <xref:System.Windows.Forms.Timer> klasy w kodzie.
+1. Utwórz wystąpienie <xref:System.Windows.Forms.Timer> klasy w kodzie.
 
-2. Ustaw `Interval` właściwości, aby ustalić czas między taktami czasomierza.
+2. Ustaw właściwość `Interval` , aby określić czas między taktami czasomierza.
 
-3. Skonfiguruj inne wymagane właściwości składnika.
+3. Skonfiguruj inne niezbędne właściwości składnika.
 
-     Poniższy kod ilustruje tworzenie <xref:System.Windows.Forms.Timer> z jego `Interval` zestawu właściwości.
+     Poniższy kod przedstawia tworzenie elementu <xref:System.Windows.Forms.Timer> `Interval` z zestawem właściwości.
 
     ```vb
     Public Sub CreateTimer()
@@ -75,14 +75,13 @@ Ponadto składniki można dodać do formularza w czasie wykonywania. To typowy s
     ```
 
     > [!IMPORTANT]
-    > Na komputerze lokalnym to zagrożenie bezpieczeństwa, za pośrednictwem sieci może narazić, odwołując się do złośliwego elementu UserControl. Powinien to być jedynie kwestią w przypadku złośliwe osoby tworzącej szkodliwe kontrolka niestandardowa, a następnie przez Ciebie przez pomyłkę dodawania do projektu.
+    > Komputer lokalny może być narażony na zagrożenia bezpieczeństwa przez sieć, odwołując się do złośliwego elementu UserControl. Może to stanowić problem tylko w przypadku złośliwej osoby, która tworzy szkodliwą kontrolkę niestandardową, a następnie nie dodawaj jej do projektu.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Kontrolki formularzy Windows Forms](index.md)
-- [Instrukcje: Dodawanie formantów do formularzy Windows Forms](how-to-add-controls-to-windows-forms.md)
-- [Instrukcje: Dodawanie kontrolek ActiveX do formularzy Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
-- [Instrukcje: Kopiowanie formantów pomiędzy formularzami Windows](how-to-copy-controls-between-windows-forms.md)
+- [Instrukcje: Dodawanie formantów do Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Instrukcje: Dodaj kontrolki ActiveX do Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
 - [Umieszczanie kontrolek na formularzach Windows Forms](putting-controls-on-windows-forms.md)
 - [Etykietowanie pojedynczych kontrolek formularzy Windows Forms i określanie skrótów dla nich](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)

@@ -2,12 +2,12 @@
 title: Obsługa buforowania dla opartych na protokole HTTP usług sieci Web programu WCF
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: a6a03f20fa6a853f813dc9eff3a4202ab18cad90
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 655e8807a78d542cd7fa586eca3750507891f74b
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952667"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988775"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Obsługa buforowania dla opartych na protokole HTTP usług sieci Web programu WCF
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]umożliwia korzystanie z mechanizmu deklaracyjnej pamięci podręcznej, który jest już dostępny w ASP.NET w usługach HTTP sieci Web WCF. Pozwala to na buforowanie odpowiedzi z operacji usługi HTTP sieci Web w programie WCF. Gdy użytkownik wysyła HTTP GET do usługi skonfigurowanej do buforowania, ASP.NET wysyła do tyłu buforowaną odpowiedź i metoda usługi nie jest wywoływana. Gdy pamięć podręczna zostanie wygaśnie, następnym razem, gdy użytkownik wyśle HTTP GET, wywoływana jest metoda usługi i odpowiedź jest ponownie buforowana. Aby uzyskać więcej informacji o pamięci podręcznej ASP.NET, zobacz [buforowanie ASP.NET — Omówienie](https://go.microsoft.com/fwlink/?LinkId=152534)  
@@ -40,7 +40,7 @@ public class Service
 ```
   
 > [!WARNING]
->  Jeśli tryb zgodności ASP.NET nie jest włączony i <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> zostanie zgłoszony wyjątek.  
+> Jeśli tryb zgodności ASP.NET nie jest włączony i <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> zostanie zgłoszony wyjątek.  
   
  Nazwa profilu pamięci podręcznej określona <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> w identyfikatorze identyfikuje profil pamięci podręcznej, który jest dodawany do pliku konfiguracyjnego Web. config. Profil pamięci podręcznej jest zdefiniowany za pomocą`outputCacheSetting`elementu w < >, jak pokazano w poniższym przykładzie konfiguracji.  
   

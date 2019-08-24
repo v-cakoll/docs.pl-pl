@@ -2,12 +2,12 @@
 title: Konfigurowanie usługi współużytkowania portów Net.TCP
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: c5dc80391ec5f655fadd31c59eef76015b9965d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 70ebaeb8b41b0191e0352b5ef6a4b1913994100c
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949616"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988220"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Konfigurowanie usługi współużytkowania portów Net.TCP
 Samoobsługowe usługi korzystające z transportu net. TCP mogą kontrolować kilka ustawień zaawansowanych, takich jak `ListenBacklog` i `MaxPendingAccepts`, które określają zachowanie bazowego gniazda TCP używanego do komunikacji sieciowej. Jednak te ustawienia dla każdego gniazda są stosowane tylko na poziomie powiązania, Jeśli powiązanie transportowe ma wyłączone Udostępnianie portów, które jest domyślnie włączone.  
@@ -59,7 +59,7 @@ Samoobsługowe usługi korzystające z transportu net. TCP mogą kontrolować ki
 > W [!INCLUDE[wv](../../../../includes/wv-md.md)] systemach z włączoną funkcją kontroli konta użytkownika (UAC) Użytkownicy lokalni wymagają podwyższonego poziomu uprawnień nawet wtedy, gdy ich konto jest członkiem grupy Administratorzy. Aby umożliwić tym użytkownikom korzystanie z usługi udostępniania portów bez podniesienia uprawnień, identyfikator SID użytkownika (lub identyfikator SID grupy, w której użytkownik jest członkiem) musi zostać jawnie dodany do \<sekcji allowAccounts > pliku SMSvcHost. exe. config.  
   
 > [!WARNING]
->  Domyślny plik SMSvcHost. exe. config określa niestandardową `etwProviderId` , aby zapobiec zakłócaniu śledzenia przez program SMSvcHost. exe.  
+> Domyślny plik SMSvcHost. exe. config określa niestandardową `etwProviderId` , aby zapobiec zakłócaniu śledzenia przez program SMSvcHost. exe.  
   
 ## <a name="see-also"></a>Zobacz także
 

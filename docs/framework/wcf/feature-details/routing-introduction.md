@@ -2,12 +2,12 @@
 title: Wprowadzenie do routingu
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: cc9298c96a5d1dc60ae1f9982b21ce7a160aacbd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: eaf09c0d724521c3c69fde0e90ecd7cd5aadb253
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933967"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988665"
 ---
 # <a name="routing-introduction"></a>Wprowadzenie do routingu
 Usługa routingu oferuje ogólny, podłączany pośrednik protokołu SOAP, który umożliwia kierowanie komunikatów na podstawie treści wiadomości. Za pomocą usługi routingu można utworzyć złożoną logikę routingu, która umożliwia implementowanie scenariuszy, takich jak agregacja usług, przechowywanie wersji usług, routing priorytetów i Routing multiemisji. Usługa routingu oferuje również obsługę błędów, która pozwala na skonfigurowanie list punktów końcowych kopii zapasowych, do których komunikaty są wysyłane w przypadku wystąpienia błędu podczas wysyłania do podstawowego docelowego punktu końcowego.  
@@ -395,7 +395,7 @@ using (ServiceHost serviceHost =
  Personifikacja w usłudze routingu wymaga użycia personifikacji ASP.NET w trybie zgodności ASP.NET lub użycia poświadczeń systemu Windows, które zostały skonfigurowane w celu zezwolenia na personifikację. Aby uzyskać więcej informacji na temat trybu zgodności ASP.NET, zobacz [usługi WCF i ASP.NET](wcf-services-and-aspnet.md).  
   
 > [!WARNING]
->  Usługa routingu WCF nie obsługuje personifikacji z uwierzytelnianiem podstawowym.  
+> Usługa routingu WCF nie obsługuje personifikacji z uwierzytelnianiem podstawowym.  
   
  Aby użyć personifikacji ASP.NET w usłudze routingu, Włącz tryb zgodności ASP.NET w środowisku hostingu usługi. Usługa routingu została już oznaczona jako zezwalająca na tryb zgodności ASP.NET, a personifikacja zostanie automatycznie włączona. Personifikacja jest jedynym obsługiwanym wykorzystaniem integracji ASP.NET z usługą routingu.  
   

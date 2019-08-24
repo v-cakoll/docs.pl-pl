@@ -2,12 +2,12 @@
 title: Asynchroniczne typy zwracane (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: ef059eca9b97ed0c7c4fdf5a82389eff816d53b6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f331546026ac6b0799947611b54e9a147a6fe7f1
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958222"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988841"
 ---
 # <a name="async-return-types-visual-basic"></a>Asynchroniczne typy zwracane (Visual Basic)
 Metody asynchroniczne mają trzy możliwe typy zwracane: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, i void. W Visual Basic typ zwracany void jest zapisywana jako procedura [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) . Aby uzyskać więcej informacji na temat metod asynchronicznych, zobacz [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
@@ -57,7 +57,7 @@ Dim result1 As Integer = Await TaskOfT_MethodAsync()
  Można lepiej zrozumieć `TaskOfT_MethodAsync` `Await`, jak to się dzieje, oddzielając wywołanie od aplikacji, jak pokazano w poniższym kodzie. Wywołanie metody `TaskOfT_MethodAsync` , która nie jest bezpośrednio oczekiwane `Task(Of Integer)`, zwraca, jak oczekiwano od deklaracji metody. Zadanie jest przypisane do `integerTask` zmiennej w przykładzie. Ponieważ `integerTask` jest,zawiera<xref:System.Threading.Tasks.Task%601.Result> właściwość typu `TResult`. <xref:System.Threading.Tasks.Task%601> W tym przypadku TResult reprezentuje typ Integer. Gdy `Await` jest stosowany do `integerTask`, wyrażenie await oblicza `integerTask`zawartość <xref:System.Threading.Tasks.Task%601.Result%2A> właściwości. Wartość jest przypisana do `result2` zmiennej.  
   
 > [!WARNING]
->  <xref:System.Threading.Tasks.Task%601.Result%2A> Właściwość jest właściwością blokującą. Jeśli spróbujesz uzyskać dostęp do niego przed ukończeniem zadania, wątek, który jest obecnie aktywny, jest blokowany do momentu zakończenia zadania, a wartość jest dostępna. W większości przypadków należy uzyskać dostęp do wartości przy użyciu `Await` zamiast bezpośrednio uzyskać dostęp do właściwości.  
+> <xref:System.Threading.Tasks.Task%601.Result%2A> Właściwość jest właściwością blokującą. Jeśli spróbujesz uzyskać dostęp do niego przed ukończeniem zadania, wątek, który jest obecnie aktywny, jest blokowany do momentu zakończenia zadania, a wartość jest dostępna. W większości przypadków należy uzyskać dostęp do wartości przy użyciu `Await` zamiast bezpośrednio uzyskać dostęp do właściwości.  
   
 ```vb  
 ' Call and await in separate statements.  

@@ -2,54 +2,54 @@
 title: Punkt końcowy kontroli przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
-ms.openlocfilehash: 781a7cefaeeb8cd9cd21298471c59de2e7815244
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 3c826147d9d3ad452957230adb8f32659b4d1352
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66424016"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988548"
 ---
 # <a name="workflow-control-endpoint"></a>Punkt końcowy kontroli przepływu pracy
-Punkt końcowy kontroli przepływu pracy umożliwia deweloperom wywołanie operacji kontroli na zdalne sterowanie wystąpienia przepływu pracy, hostowane przy użyciu <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Ta funkcja może służyć do programowo wykonywać operacje kontroli, takie jak wstrzymać, wznowić i zakończyć.  
+Punkt końcowy sterowania przepływem pracy umożliwia deweloperom wywoływanie operacji sterowania zdalnego sterowania wystąpieniami <xref:System.ServiceModel.Activities.WorkflowServiceHost>przepływu pracy hostowanymi przy użyciu. Ta funkcja może służyć do programistycznego wykonywania operacji sterowania, takich jak Wstrzymywanie, wznawianie i przerywanie.  
   
 > [!WARNING]
->  Jeśli przy użyciu punkt końcowy kontroli przepływu pracy w ramach transakcji i przepływu pracy kontrolowany zawiera <xref:System.Activities.Statements.Persist> działania spowoduje zablokowanie wystąpienia przepływu pracy, dopóki nie upłynie limit czasu transakcji.  
+> W przypadku korzystania z punktu końcowego sterowania przepływem pracy w ramach transakcji i kontrolowanego <xref:System.Activities.Statements.Persist> przepływu pracy, wystąpienie przepływu pracy będzie blokowane do momentu przełączenia transakcji.  
   
-## <a name="workflow-instance-management"></a>Zarządzanie wystąpieniami przepływu pracy  
- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Określa nową umowę o nazwie <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. Ten kontrakt definiuje szereg kontroli operacje, które pozwalają zdalnie sterować wystąpienia przepływu pracy pracujących na <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> jest standardowy punkt końcowy, który zawiera implementację <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> kontraktu. <xref:System.ServiceModel.Activities.WorkflowControlClient> to klasa, która służy do wysyłania operacje kontroli do <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>.  
+## <a name="workflow-instance-management"></a>Zarządzanie wystąpieniem przepływu pracy  
+ [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]definiuje nowy kontrakt o nazwie <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. Ta umowa definiuje szereg operacji sterowania, które umożliwiają zdalne sterowanie wystąpieniami przepływu pracy hostowanych <xref:System.ServiceModel.Activities.WorkflowServiceHost>przez program. <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>jest standardowym punktem końcowym, który zapewnia implementację <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> kontraktu. <xref:System.ServiceModel.Activities.WorkflowControlClient>jest klasą, która jest używana do wysyłania operacji kontroli do <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>.  
   
- Wystąpienia przepływu pracy może mieć jeden z następujących stanów:  
+ Wystąpienia przepływu pracy mogą być w jednym z następujących stanów:  
   
  Aktywne  
- Stan wystąpienia przepływu pracy przed osiągnięciem przez nią stanu ukończenia, a jeśli go nie jest w stanie wstrzymania. W tym stanie wystąpienia przepływu pracy jest uruchamiany i przetwarza komunikaty aplikacji.  
+ Stan wystąpienia przepływu pracy, zanim osiągnie on stan ukończenia i gdy nie jest w stanie wstrzymania. W tym stanie wystąpienie przepływu pracy uruchamia i przetwarza komunikaty aplikacji.  
   
  Suspended  
- Wystąpienie przepływu pracy znajduje się w tym stanie nie jest uruchamiany, nawet w przypadku działania, które nie zostały uruchomione, uruchamiania lub częściowo zostały uruchomione.  
+ W tym stanie wystąpienie przepływu pracy nie działa, nawet jeśli istnieją działania, które nie zostały uruchomione lub częściowo uruchomione.  
   
  Zakończone  
- Końcowy stan wystąpienia przepływu pracy. Wystąpienie przepływu pracy nie można uruchomić po osiągnięciu stanu ukończenia.  
+ Końcowy stan wystąpienia przepływu pracy. Nie można uruchomić wystąpienia przepływu pracy po osiągnięciu stanu ukończenia.  
   
 ## <a name="iworkflowinstancemanagement"></a>IWorkflowInstanceManagement  
- <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> Interfejs definiuje zestaw operacji kontroli z wersjami synchroniczne i asynchroniczne. Transakcyjne wersje wymagają użycia obsługujących transakcja powiązania. W poniższej tabeli wymieniono obsługiwane operacje kontroli.  
+ <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> Interfejs definiuje zestaw operacji sterowania z synchronicznymi i asynchronicznymi wersjami. Wersje transakcyjne wymagają użycia powiązania z obsługą transakcji. Poniższa tabela zawiera listę obsługiwanych operacji sterowania.  
   
-|Operacja kontroli|Opis|  
+|Operacja sterowania|Opis|  
 |-----------------------|-----------------|  
-|Przerwij|Wymuszone zatrzymuje wykonywania wystąpienia przepływu pracy.|  
-|Anuluj|Przechodzi wystąpienia przepływu pracy ze stanu active lub wstrzymane do stanu ukończenia.|  
-|Uruchom|Umożliwia wystąpienia przepływu pracy do wykonania.|  
-|Wstrzymywanie|Przejście ze stanu aktywnego wystąpienia przepływu pracy do stanu wstrzymania.|  
-|Zakończenie|Przechodzi wystąpienia przepływu pracy ze stanu active lub wstrzymane do stanu ukończenia.|  
-|Anulować zawieszenie użytkownika|Przejście ze stanu wstrzymania wystąpienia przepływu pracy do stanu aktywna.|  
-|TransactedCancel|Wykonuje operację anulowania w ramach transakcji (przekazane w od klienta lub utworzone lokalnie). Jeśli system obsługuje trwałość stanu wystąpienia przepływu pracy, wystąpienie przepływu pracy musi zostać utrwalona, podczas wykonywania tej operacji.|  
-|TransactedRun|Wykonuje operację wykonywania w ramach transakcji (przekazane w od klienta lub utworzone lokalnie). Jeśli system obsługuje trwałość stanu wystąpienia przepływu pracy, wystąpienie przepływu pracy musi zostać utrwalona, podczas wykonywania tej operacji.|  
-|TransactedSuspend|Wykonuje operację zawieszania w ramach transakcji (przekazane w od klienta lub utworzone lokalnie). Jeśli system obsługuje trwałość stanu wystąpienia przepływu pracy, wystąpienie przepływu pracy musi zostać utrwalona, podczas wykonywania tej operacji.|  
-|TransactedTerminate|Wykonuje operację przerwania w ramach transakcji (przekazane w od klienta lub utworzone lokalnie). Jeśli system obsługuje trwałość stanu wystąpienia przepływu pracy, wystąpienie przepływu pracy musi zostać utrwalona, podczas wykonywania tej operacji.|  
-|TransactedUnsuspend|Wykonuje operację wstrzymanie w ramach transakcji (przekazane w od klienta lub utworzone lokalnie). Jeśli system obsługuje trwałość stanu wystąpienia przepływu pracy, wystąpienie przepływu pracy musi zostać utrwalona, podczas wykonywania tej operacji.|  
+|Przerwij|Wymuszone zatrzymywanie wykonywania wystąpienia przepływu pracy.|  
+|Anuluj|Przejście wystąpienia przepływu pracy ze stanu aktywnego lub wstrzymanego do stanu ukończone.|  
+|Uruchom|Oferuje wystąpienie przepływu pracy, które można wykonać.|  
+|Wstrzymywanie|Przejście wystąpienia przepływu pracy ze stanu aktywnego do stanu wstrzymania.|  
+|Kończyć|Przejście wystąpienia przepływu pracy ze stanu aktywnego lub wstrzymanego do stanu ukończone.|  
+|Anuluj zawieszenie|Przechodzi do stanu aktywności wystąpienia przepływu pracy ze stanu wstrzymania.|  
+|TransactedCancel|Wykonuje operację anulowania w ramach transakcji (przechodzącą z klienta lub utworzoną lokalnie). Jeśli system utrzymuje trwały stan wystąpienia przepływu pracy, wystąpienie przepływu pracy musi być utrwalone podczas wykonywania tej operacji.|  
+|TransactedRun|Wykonuje operację uruchamiania w ramach transakcji (przepływanej z klienta lub utworzona lokalnie). Jeśli system utrzymuje trwały stan wystąpienia przepływu pracy, wystąpienie przepływu pracy musi być utrwalone podczas wykonywania tej operacji.|  
+|TransactedSuspend|Wykonuje operację wstrzymania w ramach transakcji (przechodzącą z klienta lub utworzoną lokalnie). Jeśli system utrzymuje trwały stan wystąpienia przepływu pracy, wystąpienie przepływu pracy musi być utrwalone podczas wykonywania tej operacji.|  
+|TransactedTerminate|Wykonuje operację przerwania w ramach transakcji (przepływanej z klienta lub utworzona lokalnie). Jeśli system utrzymuje trwały stan wystąpienia przepływu pracy, wystąpienie przepływu pracy musi być utrwalone podczas wykonywania tej operacji.|  
+|TransactedUnsuspend|Wykonuje operację wstrzymywania zawieszenia w ramach transakcji (z poziomu klienta lub utworzoną lokalnie). Jeśli system utrzymuje trwały stan wystąpienia przepływu pracy, wystąpienie przepływu pracy musi być utrwalone podczas wykonywania tej operacji.|  
   
- <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> Umowy nie zapewnia sposób utworzenia nowego wystąpienia przepływu pracy, tylko do zarządzania istniejącego wystąpienia przepływu pracy. Aby uzyskać więcej informacji na temat zdalnego tworzenia nowego wystąpienia przepływu pracy, zobacz [rozszerzalność hosta usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
+ <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> Kontrakt nie zapewnia metody tworzenia nowego wystąpienia przepływu pracy, tylko w celu zarządzania istniejącymi wystąpieniami przepływu pracy. Aby uzyskać więcej informacji na temat zdalnego tworzenia nowego wystąpienia przepływu pracy, zobacz [Rozszerzalność hosta usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
   
 ## <a name="workflowcontrolendpoint"></a>WorkflowControlEndpoint  
- <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> jest to standardowy punkt końcowy ze stałym kontraktem <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. Po dodaniu do <xref:System.ServiceModel.Activities.WorkflowServiceHost> wystąpienia, może to punkt końcowy, a następnie używane do wysyłania poleceń do dowolnego wystąpienia przepływu pracy pracujących na wystąpienie hosta. Aby uzyskać więcej informacji na temat standardowych punktów końcowych, zobacz [standardowe punkty końcowe](../../../../docs/framework/wcf/feature-details/standard-endpoints.md).  
+ <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>jest standardowym punktem końcowym ze stałą umową <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. Po dodaniu do <xref:System.ServiceModel.Activities.WorkflowServiceHost> wystąpienia ten punkt końcowy może zostać użyty do wysłania operacji polecenia do dowolnego wystąpienia przepływu pracy hostowanego przez wystąpienie hosta. Aby uzyskać więcej informacji na temat standardowych punktów końcowych, zobacz [standardowe punkty końcowe](../../../../docs/framework/wcf/feature-details/standard-endpoints.md).  
   
 ## <a name="workflowcontrolclient"></a>WorkflowControlClient  
- <xref:System.ServiceModel.Activities.WorkflowControlClient> to klasa, która umożliwia wysyłanie komunikatów sterowania <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> na <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Zawiera metody dla każdej operacji obsługiwanych przez <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> kontraktu, z wyjątkiem Operacje transakcyjne. <xref:System.ServiceModel.Activities.WorkflowControlClient> używa otoczenia transakcji, aby określić, czy można używać operacji transakcyjnych.
+ <xref:System.ServiceModel.Activities.WorkflowControlClient>jest klasą, która umożliwia wysyłanie komunikatów kontroli do <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>. <xref:System.ServiceModel.Activities.WorkflowServiceHost> Zawiera ona metodę dla każdej operacji obsługiwanej przez <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> kontrakt z wyjątkiem operacji transakcyjnych. <xref:System.ServiceModel.Activities.WorkflowControlClient>używa otoczenia transakcji, aby określić, czy należy użyć operacji transakcyjnej.

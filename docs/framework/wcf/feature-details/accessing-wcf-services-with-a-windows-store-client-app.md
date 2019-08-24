@@ -2,12 +2,12 @@
 title: Dostęp do usług WCF za pomocą aplikacji klienckiej ze Sklepu Windows
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: a2f1ef37914c932801699bb2f9c2323dd0408e7f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9316a46f809eec21f73e8eeadb49baf1748c6ca0
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964966"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988256"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Dostęp do usług WCF za pomocą aplikacji klienckiej ze Sklepu Windows
 System Windows 8 wprowadza nowy typ aplikacji o nazwie aplikacje ze sklepu Windows. Te aplikacje są projektowane wokół interfejsu ekranu dotykowego. .NET Framework 4,5 umożliwia aplikacjom ze sklepu Windows wywoływanie usług WCF.  
@@ -19,7 +19,7 @@ System Windows 8 wprowadza nowy typ aplikacji o nazwie aplikacje ze sklepu Windo
 > Użyj interfejsów API zespalania zamiast tych, które są udostępniane przez platformę WCF. Aby uzyskać więcej informacji, zobacz [interfejs API zespalania programu WinRT](https://go.microsoft.com/fwlink/?LinkId=236265)  
   
 > [!WARNING]
->  Dodawanie odwołania do usługi sieci Web do składnika środowisko wykonawcze systemu Windows przy użyciu Dodaj odwołanie do usługi nie jest obsługiwane.  
+> Dodawanie odwołania do usługi sieci Web do składnika środowisko wykonawcze systemu Windows przy użyciu Dodaj odwołanie do usługi nie jest obsługiwane.  
   
 ### <a name="supported-bindings"></a>Obsługiwane powiązania  
  W aplikacjach ze sklepu Windows obsługiwane są następujące powiązania WCF:  
@@ -104,7 +104,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 3. XmlSerializer  
   
 > [!WARNING]
->  Implementacja obiektu XmlDictionaryWriter. Write (DateTime) teraz zapisuje obiekt DateTime jako ciąg.  
+> Implementacja obiektu XmlDictionaryWriter. Write (DateTime) teraz zapisuje obiekt DateTime jako ciąg.  
   
 ### <a name="security"></a>Zabezpieczenia  
 
@@ -154,7 +154,7 @@ Następujące typy poświadczeń klienta są obsługiwane w aplikacjach ze sklep
  Zalecamy tylko Definiowanie asynchronicznych operacji usługi przy użyciu wzorca asynchronicznego opartego na zadaniach. Dzięki temu aplikacje ze sklepu Windows pozostają w stanie reagować podczas wywoływania operacji usługi.  
   
 > [!WARNING]
->  Chociaż wyjątek nie zostanie wygenerowany, jeśli zdefiniujesz operację synchroniczną, zdecydowanie zaleca się tylko zdefiniowanie operacji asynchronicznych.  
+> Chociaż wyjątek nie zostanie wygenerowany, jeśli zdefiniujesz operację synchroniczną, zdecydowanie zaleca się tylko zdefiniowanie operacji asynchronicznych.  
   
 ### <a name="calling-wcf-services-from-windows-store-applications"></a>Wywoływanie usług WCF z aplikacji ze sklepu Windows  
  Jak wspomniano wcześniej, przed całą konfiguracją należy wykonać w kodzie w metodzie GetBindingForEndpoint w wygenerowanej klasie proxy. Wywoływanie operacji usługi odbywa się tak samo jak wywołanie metody asynchronicznej opartej na zadaniach, jak pokazano w poniższym fragmencie kodu.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: d9c3492e50a5eba741fa6e241f6b2c57fde35ef0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 14bf9c89fd7142746b93cc45af6c2152e8700571
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952927"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988544"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operacje synchroniczne i asynchroniczne
 W tym temacie omówiono implementowanie i wywoływanie asynchronicznych operacji usługi.  
@@ -56,7 +56,7 @@ W tym temacie omówiono implementowanie i wywoływanie asynchronicznych operacji
 3. Wzorzec asynchroniczny IAsyncResult  
   
 #### <a name="task-based-asynchronous-pattern"></a>Wzorzec asynchroniczny oparty na zadaniach  
- Wzorzec asynchroniczny oparty na zadaniach jest preferowanym sposobem implementacji operacji asynchronicznych, ponieważ jest najłatwiejszym i najbardziej prostym do przodu. Aby użyć tej metody, wystarczy zaimplementować operację usługi i określić zwracany typ zadania\<T >, gdzie T jest typem zwracanym przez operację logiczną. Przykład:  
+ Wzorzec asynchroniczny oparty na zadaniach jest preferowanym sposobem implementacji operacji asynchronicznych, ponieważ jest najłatwiejszym i najbardziej prostym do przodu. Aby użyć tej metody, wystarczy zaimplementować operację usługi i określić zwracany typ zadania\<T >, gdzie T jest typem zwracanym przez operację logiczną. Na przykład:  
   
 ```csharp  
 public class SampleService:ISampleService   
@@ -76,7 +76,7 @@ public class SampleService:ISampleService
  Operacja SampleMethodTaskAsync zwraca ciąg zadania\<> ponieważ operacja logiczna zwraca ciąg. Aby uzyskać więcej informacji na temat wzorca asynchronicznego opartego na zadaniach, zobacz [wzorzec asynchroniczny oparty](https://go.microsoft.com/fwlink/?LinkId=232504)na zadaniach.  
   
 > [!WARNING]
->  W przypadku korzystania ze wzorca asynchronicznego opartego na zadaniach T:System.AggregateException może być zgłaszane, jeśli wystąpi wyjątek podczas oczekiwania na zakończenie operacji. Ten wyjątek może wystąpić w przypadku klienta lub usług  
+> W przypadku korzystania ze wzorca asynchronicznego opartego na zadaniach T:System.AggregateException może być zgłaszane, jeśli wystąpi wyjątek podczas oczekiwania na zakończenie operacji. Ten wyjątek może wystąpić w przypadku klienta lub usług  
   
 #### <a name="event-based-asynchronous-pattern"></a>Wzorzec asynchroniczny oparty na zdarzeniach  
  Usługa, która obsługuje wzorzec asynchroniczny oparty na zdarzeniach, będzie mieć co najmniej jedną operację o nazwie MethodNameAsync. Te metody mogą dublować wersje synchroniczne, które wykonują tę samą operację na bieżącym wątku. Klasa może również mieć zdarzenie MethodNameCompleted i może mieć metodę MethodNameAsyncCancel (lub po prostu CancelAsync). Klient chcący wywołać operację określi procedurę obsługi zdarzeń, która ma być wywoływana po zakończeniu operacji,  

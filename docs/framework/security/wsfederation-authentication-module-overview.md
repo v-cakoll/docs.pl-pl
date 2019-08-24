@@ -3,12 +3,12 @@ title: Omówienie modułu uwierzytelniania WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 0873e878fca3fe9723c23f78d647aa443f6d0152
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9ade6b0d9e4aadb353ca148f868d548fbaacfbc3
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915519"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987700"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Omówienie modułu uwierzytelniania WSFederation
 Windows Identity Foundation (WIF) obejmuje obsługę uwierzytelniania federacyjnego w aplikacjach ASP.NET za pomocą modułu uwierzytelniania WS-Federation (WS-Farma). Ten temat pomoże Ci zrozumieć, jak działa uwierzytelnianie federacyjne i jak z niego korzystać.  
@@ -99,7 +99,7 @@ Windows Identity Foundation (WIF) obejmuje obsługę uwierzytelniania federacyjn
  W poniższym kodzie XML przedstawiono konfigurację aplikacji jednostki uzależnionej ASP.NET (RP). Sekcje konfiguracji <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> i są dodawane do elementu.`<configSections>` <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> Elementy sam i WS-Farma są dodawane do modułów HTTP w ramach `<system.webServer>` / elementu. `<modules>` Na koniec składniki WIF są `<system.identityModel>` konfigurowane pod / `<identityConfiguration>` elementami i `<system.identityModel.services>` / .`<federationConfiguration>` Ta konfiguracja określa procedurę obsługi plików cookie fragmentarycznego, ponieważ jest to domyślna procedura obsługi plików cookie, a w `<cookieHandler>` elemencie nie określono typu procedury obsługi plików cookie.  
   
 > [!WARNING]
->  W poniższym przykładzie zarówno `requireHttps` atrybut `<wsFederation>` elementu, `<cookieHandler>` jak i `requireSsl` atrybut elementu są `false`. Stanowi to potencjalne zagrożenie dla bezpieczeństwa. W środowisku produkcyjnym należy ustawić `true`obie te wartości.  
+> W poniższym przykładzie zarówno `requireHttps` atrybut `<wsFederation>` elementu, `<cookieHandler>` jak i `requireSsl` atrybut elementu są `false`. Stanowi to potencjalne zagrożenie dla bezpieczeństwa. W środowisku produkcyjnym należy ustawić `true`obie te wartości.  
   
 ```xml  
 <configuration>  

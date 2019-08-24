@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 345b5028ccc5c24bd60cf7ecbd2610b27f44b8b9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 463d2fc374870661185a625a0b07a102aa54498c
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968683"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988615"
 ---
 # <a name="transport-security-overview"></a>Przegląd zabezpieczeń transportu
 Mechanizmy zabezpieczeń transportu w programie Windows Communication Foundation (WCF) zależą od powiązań i używanego transportu. Na przykład w przypadku korzystania z <xref:System.ServiceModel.WSHttpBinding> klasy transport jest http, a podstawowym mechanizmem zabezpieczania transportu jest SSL (SSL) za pośrednictwem protokołu HTTP, powszechnie nazywanego https. W tym temacie omówiono główne mechanizmy zabezpieczeń transportu używane w powiązaniach dostarczonych przez system w systemie WCF.  
@@ -19,7 +19,7 @@ Mechanizmy zabezpieczeń transportu w programie Windows Communication Foundation
 > Gdy zabezpieczenia SSL są używane z .NET Framework 3,5 i nowsze, klient WCF używa zarówno certyfikatów pośrednich w magazynie certyfikatów, jak i certyfikatów pośrednich odebranych podczas negocjowania protokołu SSL w celu przeprowadzenia walidacji łańcucha certyfikatów w usłudze certyfikatu. .NET Framework 3,0 używa tylko certyfikatów pośrednich zainstalowanych w lokalnym magazynie certyfikatów.  
   
 > [!WARNING]
->  W przypadku korzystania z <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> zabezpieczeń transportu właściwość może być zastępowana. Aby tego uniknąć, <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> należy ustawić na. <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType> <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>to zachowanie usługi, które można ustawić w opisie usługi.  
+> W przypadku korzystania z <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> zabezpieczeń transportu właściwość może być zastępowana. Aby tego uniknąć, <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> należy ustawić na. <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType> <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>to zachowanie usługi, które można ustawić w opisie usługi.  
   
 ## <a name="basichttpbinding"></a>BasicHttpBinding  
  Domyślnie <xref:System.ServiceModel.BasicHttpBinding> Klasa nie zapewnia zabezpieczeń. To powiązanie jest przeznaczone do współdziałania z dostawcami usług sieci Web, które nie implementują zabezpieczeń. Można jednak włączyć zabezpieczenia, ustawiając <xref:System.ServiceModel.BasicHttpSecurity.Mode%2A> właściwość na dowolną wartość z wyjątkiem. <xref:System.ServiceModel.BasicHttpSecurityMode.None> Aby włączyć zabezpieczenia transportu, ustaw właściwość na <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  

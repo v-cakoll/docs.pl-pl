@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 62d14b422ccaf963c5488498be430a0a9c4770c7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 4ff02c5856e4ee48c8e5cf375cc68d92c76737c7
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928023"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988394"
 ---
 # <a name="64-bit-applications"></a>Aplikacje 64-bitowe
 Podczas kompilowania aplikacji można określić, że powinna być uruchamiana w systemie operacyjnym Windows 64-bitowym jako aplikacja natywna lub w emulatorze WOW64 (Windows 32-bit w systemie Windows 64-bit). Emulator WOW64 to środowisko zgodności, które umożliwia uruchamianie aplikacji 32-bitowych w systemie 64-bitowym. Emulator WOW64 jest uwzględniony we wszystkich 64-bitowych wersjach systemu operacyjnego Windows.  
@@ -56,8 +56,8 @@ Podczas kompilowania aplikacji można określić, że powinna być uruchamiana w
   
 |Compiler|Opcja kompilatora|  
 |--------------|---------------------|  
-|Visual Basic|[/platform (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/platform.md)|  
-|Visual C#|[/platform (C# opcje kompilatora)](~/docs/csharp/language-reference/compiler-options/platform-compiler-option.md)|  
+|Visual Basic|[/platform (Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
+|Visual C#|[/platform (C# opcje kompilatora)](../csharp/language-reference/compiler-options/platform-compiler-option.md)|  
 |Visual C++|Możesz tworzyć aplikacje platform-niezależny od, Microsoft pośredniego języka (MSIL) za pomocą **/CLR: Safe**. Aby uzyskać więcej informacji, zobacz [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Wizualizacja C++ zawiera oddzielny kompilator dla każdego 64-bitowego systemu operacyjnego. Aby uzyskać więcej informacji na temat sposobu użycia C++ wizualizacji do tworzenia natywnych aplikacji działających w 64-bitowym systemie operacyjnym Windows, zobacz [64-bitowe programowanie](/cpp/build/configuring-programs-for-64-bit-visual-cpp).|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Określanie stanu pliku .exe lub pliku .dll  

@@ -6,29 +6,27 @@ helpviewer_keywords:
 - layout [Windows Forms], resizing
 - layout [Windows Forms], child controls
 ms.assetid: 5a5723ff-34e0-4b6f-a57b-be4ebe35cb34
-ms.openlocfilehash: a65b3c2b596a2d88ce4236aeadd86993bb268aa6
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 84e662e0bd2689115abe128c6442e4462eed3e18
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039785"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987043"
 ---
-# <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>Instrukcje: ponowne przypisywanie istniejących kontrolek do innego elementu nadrzędnego
+# <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>Instrukcje: Przypisz ponownie istniejące kontrolki do innego elementu nadrzędnego
+
 Kontrolki, które istnieją w formularzu, można przypisać do nowej kontrolki kontenera.
 
-## <a name="to-reassign-existing-controls-to-a-different-parent"></a>Aby ponownie przypisać istniejące kontrolki do innego elementu nadrzędnego
+1. W programie Visual Studio przeciągnij trzy <xref:System.Windows.Forms.Button> kontrolki z **przybornika** na formularz. Umieść je blisko siebie, ale pozostaw nie wyrównane.
 
-1. Przeciągnij trzy <xref:System.Windows.Forms.Button> kontrolki z **przybornika** na formularz.
-
-     Umieść je blisko siebie, ale pozostaw nie wyrównane.
-
-2. W **przyborniku**kliknij <xref:System.Windows.Forms.FlowLayoutPanel> ikonę kontrolki.
-
-     Nie przeciągaj ikony na formularz.
+2. W **przyborniku**kliknij <xref:System.Windows.Forms.FlowLayoutPanel> ikonę kontrolki. (Nie przeciągaj ikony na formularz).
 
 3. Przesuń wskaźnik myszy blisko trzech <xref:System.Windows.Forms.Button> kontrolek.
 
-     Wskaźnik zmieni się w krzyżyk z <xref:System.Windows.Forms.FlowLayoutPanel> dołączoną ikoną kontrolki.
+   Wskaźnik zmieni się w krzyżyk z <xref:System.Windows.Forms.FlowLayoutPanel> dołączoną ikoną kontrolki.
 
 4. Kliknij i przytrzymaj przycisk myszy.
 
@@ -38,12 +36,11 @@ Kontrolki, które istnieją w formularzu, można przypisać do nowej kontrolki k
 
 7. Zwolnij przycisk myszy.
 
-     Trzy <xref:System.Windows.Forms.Button> kontrolki są teraz wstawiane <xref:System.Windows.Forms.FlowLayoutPanel> do kontrolki.
+   Trzy <xref:System.Windows.Forms.Button> kontrolki są teraz wstawiane <xref:System.Windows.Forms.FlowLayoutPanel> do kontrolki.
 
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [Rozmieszczanie kontrolek na formularzach Windows Forms](arranging-controls-on-windows-forms.md)
 - [Przewodnik: Rozmieszczanie kontrolek na Windows Forms przy użyciu TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [Przewodnik: Rozmieszczanie kontrolek na Windows Forms przy użyciu linii wyrównania](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

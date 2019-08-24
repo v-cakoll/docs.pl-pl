@@ -2,29 +2,29 @@
 title: Używanie elementu NetHttpBinding
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: 5090cfdfeb068acda1e1092e408f3cd747c574c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f908361c5f9152d333daaf5e3ee90de3b1b89e9
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932564"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988632"
 ---
 # <a name="using-the-nethttpbinding"></a>Używanie elementu NetHttpBinding
-<xref:System.ServiceModel.NetHttpBinding> jest przeznaczony dla korzystanie z usług HTTP i WebSocket powiązanie i używa kodowania binarnego domyślnie. <xref:System.ServiceModel.NetHttpBinding> wykryje, czy jest używana za pomocą kontraktu dwukierunkowego lub kontraktu "żądanie odpowiedź" i zmianę jej zachowania, aby dopasować — go będzie używany protokół HTTP dla kontraktów "żądanie odpowiedź" i technologia WebSockets kontrakty dwukierunkowe. To zachowanie można przesłonić przy użyciu <xref:System.ServiceModel.Channels.WebSocketTransportUsage> ustawienia:  
+<xref:System.ServiceModel.NetHttpBinding>to powiązanie przeznaczone do konsumowania usług HTTP lub WebSocket i domyślnie używa kodowania binarnego. <xref:System.ServiceModel.NetHttpBinding>Program wykrywa, czy jest używany z kontraktem typu żądanie-odpowiedź, czy z umową dupleksową, i zmienia jego zachowanie na zgodne — będzie używać protokołu HTTP dla kontraktów żądania i odpowiedzi oraz dla kontraktów dwukierunkowych. To zachowanie można zastąpić przy użyciu <xref:System.ServiceModel.Channels.WebSocketTransportUsage> ustawienia:  
   
-1. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Always> -Wymusza WebSockets ma być używany, nawet w przypadku kontraktów "żądanie odpowiedź".  
+1. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Always>— Spowoduje to wymuszenie użycia obiektów WebSockets nawet w przypadku kontraktów żądanie-odpowiedź.  
   
-2. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Never> Zapobiega — używana przez protokół WebSockets. Podjęto próbę użycia kontrakt dupleksowy, to ustawienie powoduje wyjątek.  
+2. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Never>— Uniemożliwia korzystanie z obiektów WebSockets. Próba użycia kontraktu dupleksowego z tym ustawieniem spowoduje wyjątek.  
   
-3. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.WhenDuplex> -Jest wartością domyślną i zachowuje się zgodnie z powyższym opisem.  
+3. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.WhenDuplex>— Jest to wartość domyślna i zachowuje się zgodnie z powyższym opisem.  
   
- <xref:System.ServiceModel.NetHttpBinding> niezawodne sesje obsługuje zarówno w trybie HTTP, jak i w trybie protokołu WebSocket. W WebSocket trybu sesji są dostarczane przez transportu.  
+ <xref:System.ServiceModel.NetHttpBinding>obsługuje niezawodne sesje w trybie HTTP i w trybie WebSocket. W przypadku sesji trybu WebSocket są udostępniane przez transport.  
   
 > [!WARNING]
->  Korzystając z <xref:System.ServiceModel.NetHttpBinding> i powiązania tryb transferu jest równa TransferMode.Streamed, dużych strumieni może spowodować, że zakleszczenie i limit czasu spowoduje wywołanie. Aby obejść ten problem wysyłać mniejszych wiadomości, lub użyj elementy TransferMode.Buffered.  
+> W przypadku korzystania <xref:System.ServiceModel.NetHttpBinding> z i elementu BindingMode ma ustawioną wartość TransferMode. streamd, duże strumienie mogą spowodować zakleszczenie i wywołanie zostanie przekroczenie limitu czasu. Aby obejść ten problem, Wyślij mniejsze wiadomości lub użyj przetransfermode. Buffered.  
   
-## <a name="configuring-a-service-to-use-nethttpbinding"></a>Konfigurowanie usługi do użycia NetHttpBinding  
- <xref:System.ServiceModel.NetHttpBinding> Może być skonfigurowane tak samo jak wszystkie inne powiązanie. Poniższy fragment kodu konfiguracji przedstawia sposób konfigurowania usługi WCF, za pomocą <xref:System.ServiceModel.NetHttpBinding>.  
+## <a name="configuring-a-service-to-use-nethttpbinding"></a>Konfigurowanie usługi do korzystania z protokołu HttpBinding  
+ <xref:System.ServiceModel.NetHttpBinding> Można skonfigurować takie same jak inne powiązania. Poniższy fragment konfiguracji ilustruje sposób konfigurowania usługi WCF w <xref:System.ServiceModel.NetHttpBinding>usłudze.  
   
 ```xml  
 <system.serviceModel>  
@@ -49,7 +49,7 @@ ms.locfileid: "61932564"
   </system.serviceModel>  
 ```  
   
- Poniższy fragment kodu przedstawia sposób dodawania <xref:System.ServiceModel.NetHttpBinding> w kodzie.  
+ Poniższy fragment kodu pokazuje, <xref:System.ServiceModel.NetHttpBinding> jak dodać kod w kodzie.  
   
 ```csharp  
 ServiceHost svchost = new ServiceHost(typeof(Service1), baseAddress);  

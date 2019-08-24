@@ -7,44 +7,44 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f87fb330fbea1344cc8532519d358fe8580a9fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f283aad7c6727aff111aaaf78beb1e8da4b45898
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592707"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988371"
 ---
 # <a name="strong-named-assemblies"></a>Zestawy o silnych nazwach
-Nazewnictwo silne zestawu tworzy unikatową tożsamość dla zestawu i może zapobiec konfliktom zestawu.  
+Silne nazewnictwo zestawu tworzy unikatową tożsamość zestawu i może uniemożliwiać konflikty zestawów.  
   
-## <a name="what-makes-a-strong-named-assembly"></a>Co sprawia, że zestawu z silną nazwą?  
- Zestaw o nazwie silne jest generowany przy użyciu klucza prywatnego odpowiadającego kluczowi publicznemu rozpowszechniać za pomocą zestawu i samego montażu. Zestaw zawiera manifest zestawu, który zawiera nazwy i wartości skrótów wszystkich plików, wchodzące w skład zestawu. Zestawy, które mają taką samą nazwę silne powinny być identyczne.  
+## <a name="what-makes-a-strong-named-assembly"></a>Co sprawia, że zestaw o silnej nazwie?  
+ Zestaw o silnej nazwie jest generowany przy użyciu klucza prywatnego, który odnosi się do klucza publicznego dystrybuowanego z zestawem, i samego zestawu. Zestaw zawiera manifest zestawu, który zawiera nazwy i skróty wszystkich plików, które tworzą zestaw. Zestawy, które mają taką samą silną nazwę, powinny być identyczne.  
   
- Zestawy o silnych nazwach mogą się przy użyciu programu Visual Studio lub narzędzie wiersza polecenia. Aby uzyskać więcej informacji, zobacz [jak: Podpisywanie zestawu silną nazwą](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md) lub [Sn.exe (narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).  
+ Zestawy o silnych nazwach można używać przy użyciu programu Visual Studio lub narzędzia wiersza polecenia. Aby uzyskać więcej informacji, zobacz [jak: Podpisz zestaw za pomocą silnej](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md) nazwy lub [SN. exe (Narzędzie silnej nazwy)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).  
   
- Po utworzeniu zestawu z silną nazwą zawiera zwykły tekst nazwę zestawu, numer wersji, informacji o kulturze opcjonalne, podpis cyfrowy i klucz publiczny, który odnosi się do prywatnego klucza używanego do podpisywania.  
+ Gdy tworzony jest zestaw o silnej nazwie, zawiera prostą nazwę tekstu zestawu, numer wersji, opcjonalne informacje o kulturze, podpis cyfrowy i klucz publiczny, który odpowiada kluczowi prywatnemu służącemu do podpisywania.  
   
 > [!WARNING]
->  Nie należy polegać na silne nazwy dla zabezpieczeń. Zapewniają one tylko unikatową tożsamość.  
+> Nie należy polegać na silnych nazwach zabezpieczeń. Zapewniają one tylko unikatową tożsamość.  
   
-## <a name="why-strong-name-your-assemblies"></a>Dlaczego silnej nazwy zestawów?  
- Gdy odwołujesz się zestawu z silną nazwą, można oczekiwać, że niektóre korzyści, takie jak przechowywanie wersji i nazewnictwa ochrony. Zestawy o silnych nazwach można zainstalować w globalnej pamięci podręcznej zestawów, który jest wymagany do obsługi niektórych scenariuszy.  
+## <a name="why-strong-name-your-assemblies"></a>Dlaczego warto silne nazwy zestawów?  
+ W przypadku odwoływania się do zestawu o silnej nazwie można oczekiwać pewnych korzyści, takich jak przechowywanie wersji i ochrona nazw. Zestawy o silnych nazwach można zainstalować w globalnej pamięci podręcznej zestawów, która jest wymagana do obsługi niektórych scenariuszy.  
   
  Zestawy o silnych nazwach są przydatne w następujących scenariuszach:  
   
-- Aby włączyć swoje zestawy odwoływać się zestawów o silnych nazwach lub chcesz nadać `friend` dostęp do Twoich zestawów od innych zestawów o silnych nazwach.  
+- Chcesz umożliwić odwołujące się do zestawów za pomocą zestawów o silnych nazwach lub chcesz udzielić `friend` dostępu do zestawów z innych zestawów o silnych nazwach.  
   
-- Aplikacja potrzebuje dostępu do różnych wersji tego samego zestawu. Oznacza to, że potrzebujesz różnych wersji zestawu do załadowania obok siebie w tej samej domenie aplikacji, bez powodowania konfliktów. Na przykład jeśli istnieją inne rozszerzenia interfejsu API w zestawach, które mają tej samej prostej nazwie, silne nazwy zapewnia unikatową tożsamość dla każdej wersji zestawu.  
+- Aplikacja musi mieć dostęp do różnych wersji tego samego zestawu. Oznacza to, że potrzebujesz różnych wersji zestawu do załadowania obok siebie w tej samej domenie aplikacji bez konfliktu. Jeśli na przykład istnieją różne rozszerzenia interfejsu API w zestawach o tej samej prostej nazwie, silne nazewnictwo zapewnia unikatową tożsamość dla każdej wersji zestawu.  
   
-- Czy chcesz mieć negatywny wpływ na wydajność aplikacji przy użyciu swoim zestawie, więc chcesz zestawie, który ma być niezależne od domeny. Wymaga to silne nazwy, ponieważ zestaw niezależne od domeny musi być zainstalowany w globalnej pamięci podręcznej.  
+- Nie chcesz negatywnie wpływać na wydajność aplikacji przy użyciu zestawu, więc chcesz, aby zestaw był neutralny dla domeny. Wymaga to silnej nazwy, ponieważ zestaw neutralny dla domeny musi być zainstalowany w globalnej pamięci podręcznej zestawów.  
   
-- Jeśli chcesz scentralizować obsługi dla aplikacji, stosując zasady wydawcy, oznacza to zestaw musi być zainstalowany w globalnej pamięci podręcznej.  
+- Jeśli chcesz scentralizować obsługę aplikacji przez zastosowanie zasad wydawcy, oznacza to, że zestaw musi być zainstalowany w globalnej pamięci podręcznej zestawów.  
   
- Jeśli jesteś deweloperem typu open source i korzystać z zalet tożsamości zestawu z silną nazwą, należy wziąć pod uwagę ewidencjonowanie klucz prywatny skojarzone z zestawem w systemie kontroli źródła.  
+ Jeśli jesteś deweloperem typu "open source" i chcesz, aby tożsamość była korzystna dla zestawu o silnej nazwie, rozważ sprawdzenie klucza prywatnego skojarzonego z zestawem w systemie kontroli źródła.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)
-- [Instrukcje: Podpisywanie zestawu silną nazwą](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- [Instrukcje: Podpisz zestaw silną nazwą](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
 - [Sn.exe (narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [Tworzenie i używanie zestawów o silnej nazwie](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

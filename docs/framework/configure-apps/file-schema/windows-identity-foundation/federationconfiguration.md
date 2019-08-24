@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: 53d6bdb34ded52e49fcc8c5de98fcd45ddabadaa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: c4dbb31bb7961f0d33df9d1faee8fe36ecb520a3
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942778"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988329"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 <xref:System.IdentityModel.Services.SessionAuthenticationModule> Konfiguruje <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) i (sam), gdy jest używane uwierzytelnianie federacyjne za pośrednictwem protokołu WS-Federation. Konfiguruje <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> podczas korzystania z lub <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> klasy w celu zapewnienia kontroli dostępu opartej na oświadczeniach. <xref:System.Security.Claims.ClaimsAuthorizationManager>  
@@ -32,16 +32,16 @@ ms.locfileid: "69942778"
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|nazwa|Nazwa tego elementu konfiguracji federacyjnej. Ten atrybut obejmuje głównie punkt rozszerzalności dla przyszłych protokołów. Opcjonalna.|  
+|nazwa|Nazwa tego elementu konfiguracji federacyjnej. Ten atrybut obejmuje głównie punkt rozszerzalności dla przyszłych protokołów. Opcjonalny.|  
 |identityConfigurationName|Nazwa sekcji konfiguracji tożsamości określona w [ \<elemencie IdentityConfiguration >](identityconfiguration.md) do użycia. Jeśli ten atrybut nie jest określony, zostanie użyta domyślna sekcja konfiguracji tożsamości. Opcjonalny.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<cookieHandler>](cookiehandler.md)|Konfiguruje obsługę plików cookie używaną przez SAM. Opcjonalna.|  
-|[\<> serviceCertificate](servicecertificate.md)|Konfiguruje certyfikat używany do szyfrowania i odszyfrowywania tokenów. Opcjonalny.|  
-|[\<wsFederation>](wsfederation.md)|Konfiguruje moduł uwierzytelniania WS-Federation (WSFAM). Opcjonalny.|  
+|[\<cookieHandler>](cookiehandler.md)|Konfiguruje obsługę plików cookie używaną przez SAM. Opcjonalny.|  
+|[\<> serviceCertificate](servicecertificate.md)|Konfiguruje certyfikat używany do szyfrowania i odszyfrowywania tokenów. Opcjonalna.|  
+|[\<wsFederation>](wsfederation.md)|Konfiguruje moduł uwierzytelniania WS-Federation (WSFAM). Opcjonalna.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -74,7 +74,7 @@ ms.locfileid: "69942778"
  Poniższy kod XML przedstawia `<federationConfiguration>` element określający ustawienia dla WSFAM i określa, że domyślny program obsługi plików cookie (wystąpienie <xref:System.IdentityModel.Services.ChunkedCookieHandler> klasy) będzie używany przez sam.  
   
 > [!WARNING]
->  W tym przykładzie żadna procedura obsługi plików cookie i WSFAM nie jest wymagana do korzystania z protokołu HTTPS. Jest to spowodowane tym `requireHttps` , że atrybut `<wsFederation>` elementu `<cookieHandlerElement>` i `requireSsl` atrybutu na `false`. Te ustawienia nie są zalecane w przypadku większości środowisk produkcyjnych, ponieważ mogą one stanowić zagrożenie dla bezpieczeństwa.  
+> W tym przykładzie żadna procedura obsługi plików cookie i WSFAM nie jest wymagana do korzystania z protokołu HTTPS. Jest to spowodowane tym `requireHttps` , że atrybut `<wsFederation>` elementu `<cookieHandlerElement>` i `requireSsl` atrybutu na `false`. Te ustawienia nie są zalecane w przypadku większości środowisk produkcyjnych, ponieważ mogą one stanowić zagrożenie dla bezpieczeństwa.  
   
 ```xml  
 <system.identityModel.services>  

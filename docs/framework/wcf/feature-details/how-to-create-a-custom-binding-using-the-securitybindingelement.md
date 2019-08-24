@@ -7,30 +7,30 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: 76fd6ad954b2cf004c6fdfcf51ef0c619e8c3892
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: da67d923b36d673c87c90ba79b72ad4e1fc64a0c
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662790"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988753"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Instrukcje: tworzenie niestandardowego wiązania za pomocą elementu SecurityBindingElement
-Windows Communication Foundation (WCF) obejmuje kilka powiązania dostarczane przez system, które można skonfigurować, ale nie zapewniają pełną elastyczność podczas konfigurowania wszystkich opcji zabezpieczeń, które obsługuje usługi WCF. W tym temacie pokazano, jak utworzyć niestandardowego powiązania bezpośrednio z poziomu powiązania poszczególnych elementów i opisano niektóre ustawienia zabezpieczeń, które można określić podczas tworzenia takiego powiązania. Aby uzyskać więcej informacji na temat tworzenia powiązań niestandardowych, zobacz [rozszerzanie powiązań](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+Windows Communication Foundation (WCF) zawiera kilka powiązań dostarczonych przez system, które można skonfigurować, ale nie zapewniają pełnej elastyczności podczas konfigurowania wszystkich opcji zabezpieczeń obsługiwanych przez funkcję WCF. W tym temacie pokazano, jak utworzyć niestandardowe powiązanie bezpośrednio z poszczególnych elementów powiązania i podświetlić niektóre ustawienia zabezpieczeń, które można określić podczas tworzenia takiego powiązania. Aby uzyskać więcej informacji na temat tworzenia powiązań niestandardowych, zobacz [Rozszerzanie powiązań](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
->  <xref:System.ServiceModel.Channels.SecurityBindingElement> nie obsługuje <xref:System.ServiceModel.Channels.IDuplexSessionChannel> kanału kształtu, który jest używany domyślny kanał kształt przez TCP podczas transportu <xref:System.ServiceModel.TransferMode> ustawiono <xref:System.ServiceModel.TransferMode.Buffered>. Należy ustawić <xref:System.ServiceModel.TransferMode> do <xref:System.ServiceModel.TransferMode.Streamed> aby można było używać <xref:System.ServiceModel.Channels.SecurityBindingElement> w tym scenariuszu.  
+> <xref:System.ServiceModel.Channels.SecurityBindingElement>nie obsługuje <xref:System.ServiceModel.Channels.IDuplexSessionChannel> kształtu kanału, czyli domyślnego kształtu kanału, który jest używany przez transport TCP, gdy <xref:System.ServiceModel.TransferMode> jest ustawiony na <xref:System.ServiceModel.TransferMode.Buffered>. Aby można było <xref:System.ServiceModel.TransferMode> użyć <xref:System.ServiceModel.TransferMode.Streamed> <xref:System.ServiceModel.Channels.SecurityBindingElement> w tym scenariuszu, należy ustawić wartość.  
   
-## <a name="creating-a-custom-binding"></a>Tworzenie powiązania niestandardowego  
- W programie WCF składają się wszystkie powiązania z *elementów wiązania*. Każdy element powiązania jest pochodną <xref:System.ServiceModel.Channels.BindingElement> klasy. Standardowa powiązania dostarczane przez system elementy powiązania są tworzone i konfigurowane dla Ciebie, mimo że można dostosowywać niektóre ustawienia właściwości.  
+## <a name="creating-a-custom-binding"></a>Tworzenie niestandardowego powiązania  
+ W programie WCF wszystkie powiązania składają się z *elementów powiązania*. Każdy element powiązania pochodzi od <xref:System.ServiceModel.Channels.BindingElement> klasy. W przypadku standardowych powiązań dostarczanych przez system elementy powiązania są tworzone i konfigurowane dla Ciebie, chociaż można dostosować niektóre ustawienia właściwości.  
   
- W przeciwieństwie do tworzenia niestandardowego powiązania, elementy powiązania są tworzone i konfigurowane i <xref:System.ServiceModel.Channels.CustomBinding> jest tworzona na podstawie elementy wiązania.  
+ W przeciwieństwie do tworzenia niestandardowego powiązania, elementy powiązania są tworzone i konfigurowane oraz <xref:System.ServiceModel.Channels.CustomBinding> tworzony jest z elementów powiązania.  
   
- Aby to zrobić, Dodaj elementy powiązania poszczególnych kolekcji reprezentowany przez wystąpienie <xref:System.ServiceModel.Channels.BindingElementCollection> klasy, a następnie ustaw `Elements` właściwość `CustomBinding` taki sam jak ten obiekt. Należy dodać elementy powiązania w następującej kolejności: Przepływ transakcji, niezawodnej sesji, zabezpieczeń, złożonego dupleks, jednokierunkowe zabezpieczeń Stream, kodowanie komunikatu i transportu. Należy zauważyć, że nie wszystkie elementy na liście są wymagane w każde powiązanie.  
+ W tym celu należy dodać pojedyncze elementy powiązania do kolekcji reprezentowanej przez wystąpienie <xref:System.ServiceModel.Channels.BindingElementCollection> klasy, a następnie `Elements` ustawić właściwość `CustomBinding` równą temu obiektowi. Należy dodać elementy powiązania w następującej kolejności: Przepływ transakcji, Niezawodna sesja, zabezpieczenia, kompozytowe drukowanie dwustronne, jednokierunkowe, zabezpieczenia strumieniowe, kodowanie komunikatów i transport. Należy zauważyć, że nie wszystkie elementy powiązania wymienione w każdym powiązaniu są wymagane.  
   
 ## <a name="securitybindingelement"></a>SecurityBindingElement  
- Trzy elementy powiązania odnoszą się do komunikatu zabezpieczenia na poziomie, z których pochodzi od <xref:System.ServiceModel.Channels.SecurityBindingElement> klasy. Są trzy <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, i <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> Służy do zapewnienia bezpieczeństwa w trybie mieszanym. Inne elementy są używane, gdy warstwa komunikatów gwarantuje bezpieczeństwo.  
+ Trzy elementy powiązań odnoszą się do zabezpieczeń na poziomie komunikatów, z których wszystkie <xref:System.ServiceModel.Channels.SecurityBindingElement> pochodzą z klasy. Trzy <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>i. <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> Służy do zapewnienia zabezpieczeń w trybie mieszanym. Pozostałe dwa elementy są używane, gdy warstwa komunikatów zapewnia zabezpieczenia.  
   
- Dodatkowe klasy są używane, gdy została podana zabezpieczeń na poziomie transportu:  
+ Dodatkowe klasy są używane, gdy zapewnione są zabezpieczenia na poziomie transportu:  
   
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
@@ -38,69 +38,69 @@ Windows Communication Foundation (WCF) obejmuje kilka powiązania dostarczane pr
   
 - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
-## <a name="required-binding-elements"></a>Wymagane elementów wiązania  
- Istnieją dużą liczbę elementów możliwe powiązanie, które mogą być połączone w powiązaniu. Nie wszystkie te kombinacje są prawidłowe. W tej sekcji opisano wymagane elementy, które muszą być obecne w powiązaniu zabezpieczeń.  
+## <a name="required-binding-elements"></a>Wymagane elementy powiązania  
+ Istnieje duża liczba możliwych do powiązania elementów, które można połączyć w powiązanie. Nie wszystkie te kombinacje są prawidłowe. W tej sekcji opisano wymagane elementy, które muszą być obecne w powiązaniu zabezpieczeń.  
   
- Nieprawidłowy zabezpieczeń powiązania zależą od wielu czynników, w tym następujące:  
+ Prawidłowe powiązania zabezpieczeń są zależne od wielu czynników, w tym:  
   
 - Tryb zabezpieczeń.  
   
 - Protokół transportowy.  
   
-- Wymiany komunikatów (MEP) określone w umowie.  
+- Wzorzec wymiany komunikatów (unikatowy MEP) określony w umowie.  
   
- W poniższej tabeli przedstawiono konfiguracje prawidłowego powiązania elementu stosu dla każdej kombinacji poprzedniego czynników. Należy pamiętać, że są one minimalnych wymagań. Możesz dodać dodatkowe elementy do powiązania, np. komunikat o kodowanie elementy wiązania, elementy powiązania transakcji i inne elementy wiązania.  
+ W poniższej tabeli przedstawiono prawidłowe konfiguracje stosu elementów powiązania dla każdej kombinacji powyższych czynników. Należy pamiętać, że są to minimalne wymagania. Można dodać do powiązania dodatkowe elementy powiązania, takie jak elementy powiązania kodowania komunikatów, elementy powiązania transakcji i inne elementy powiązania.  
   
-|Tryb zabezpieczeń|Transport|Wymiany komunikatów kontraktu|Wymiany komunikatów kontraktu|Wymiany komunikatów kontraktu|  
+|Tryb zabezpieczeń|Transportu|Wzorzec wymiany komunikatów kontraktu|Wzorzec wymiany komunikatów kontraktu|Wzorzec wymiany komunikatów kontraktu|  
 |-------------------|---------------|---------------------------------------|---------------------------------------|---------------------------------------|  
 |||`Datagram`|`Request Reply`|`Duplex`|  
-|Transport|Https||||  
+|Transportu|Schemat||||  
 |||OneWayBindingElement|||  
 |||HttpsTransportBindingElement|HttpsTransportBindingElement||  
 ||TCP||||  
 |||OneWayBindingElement|||  
-|||Protokół SSL lub Windows StreamSecurityBindingElement|Protokół SSL lub Windows StreamSecurityBindingElement|Protokół SSL lub Windows StreamSecurityBindingElement|  
+|||Protokół SSL lub StreamSecurityBindingElement systemu Windows|Protokół SSL lub StreamSecurityBindingElement systemu Windows|Protokół SSL lub StreamSecurityBindingElement systemu Windows|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
-|Message|Http|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement|Element SymmetricSecurityBindingElement (tryb uwierzytelniania = mechanizmu SecureConversation)|  
+|Message|Http|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement (tryb uwierzytelniania = SecureConversation)|  
 |||||CompositeDuplexBindingElement|  
 |||OneWayBindingElement||OneWayBindingElement|  
 |||HttpTransportBindingElement|HttpTransportBindingElement|HttpTransportBindingElement|  
-||Tcp|SecurityBindingElement|SecurityBindingElement|Element SymmetricSecurityBindingElement (tryb uwierzytelniania = mechanizmu SecureConversation)|  
+||Tcp|SecurityBindingElement|SecurityBindingElement|SymmetricSecurityBindingElement (tryb uwierzytelniania = SecureConversation)|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
-|Mieszany (transportu z poświadczeniami komunikatu)|Https|TransportSecurityBindingElement|TransportSecurityBindingElement||  
+|Mieszany (transport z poświadczeniami wiadomości)|Schemat|TransportSecurityBindingElement|TransportSecurityBindingElement||  
 |||OneWayBindingElement|||  
 |||HttpsTransportBindingElement|HttpsTransportBindingElement||  
-||TCP|TransportSecurityBindingElement|Element SymmetricSecurityBindingElement (tryb uwierzytelniania = mechanizmu SecureConversation)|Element SymmetricSecurityBindingElement (tryb uwierzytelniania = mechanizmu SecureConversation)|  
+||TCP|TransportSecurityBindingElement|SymmetricSecurityBindingElement (tryb uwierzytelniania = SecureConversation)|SymmetricSecurityBindingElement (tryb uwierzytelniania = SecureConversation)|  
 |||OneWayBindingElement|||  
-|||Protokół SSL lub Windows StreamSecurityBindingElement|Protokół SSL lub Windows StreamSecurityBindingElement|Protokół SSL lub Windows StreamSecurityBindingElement|  
+|||Protokół SSL lub StreamSecurityBindingElement systemu Windows|Protokół SSL lub StreamSecurityBindingElement systemu Windows|Protokół SSL lub StreamSecurityBindingElement systemu Windows|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
   
- Należy zauważyć, że istnieje wiele konfigurowalnych ustawień na SecurityBindingElements. Aby uzyskać więcej informacji, zobacz [tryby uwierzytelniania elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
+ Należy pamiętać, że na SecurityBindingElements istnieje wiele konfigurowalnych ustawień. Aby uzyskać więcej informacji, zobacz [elementu SecurityBindingElement Authentication Modes](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   
- Aby uzyskać więcej informacji, zobacz [Secure rozmowy i zabezpieczanie sesji](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).  
+ Aby uzyskać więcej informacji, zobacz [bezpieczne konwersacje i bezpieczne sesje](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).  
   
 ## <a name="procedures"></a>Procedury  
   
-#### <a name="to-create-a-custom-binding-that-uses-a-symmetricsecuritybindingelement"></a>Aby utworzyć niestandardowego powiązania, który używa element SymmetricSecurityBindingElement  
+#### <a name="to-create-a-custom-binding-that-uses-a-symmetricsecuritybindingelement"></a>Tworzenie niestandardowego powiązania korzystającego z SymmetricSecurityBindingElement  
   
-1. Utwórz wystąpienie obiektu <xref:System.ServiceModel.Channels.BindingElementCollection> klasy o nazwie `outputBec`.  
+1. Utwórz wystąpienie <xref:System.ServiceModel.Channels.BindingElementCollection> klasy o nazwie `outputBec`.  
   
-2. Wywołanie metody statycznej `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`, która zwraca wystąpienie <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> klasy.  
+2. Wywołaj metodę `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`statyczną, która zwraca wystąpienie <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> klasy.  
   
-3. Dodaj <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> do kolekcji (`outputBec`) przez wywołanie metody `Add` metody <xref:System.Collections.ObjectModel.Collection%601> z <xref:System.ServiceModel.Channels.BindingElement> klasy.  
+3. `outputBec` `Add` Dodaj do kolekcji () przez<xref:System.Collections.ObjectModel.Collection%601> wywołanie metody<xref:System.ServiceModel.Channels.BindingElement>klasy. <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
   
-4. Utwórz wystąpienie obiektu <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> klasy i dodać go do kolekcji (`outputBec`). Określa kodowanie używanym przez wiązanie.  
+4. Utwórz wystąpienie <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> klasy i Dodaj je do kolekcji (`outputBec`). Określa kodowanie używane przez powiązanie.  
   
-5. Tworzenie <xref:System.ServiceModel.Channels.HttpTransportBindingElement> i dodaj go do kolekcji (`outputBec`). To ustawienie określa, że powiązanie korzysta z protokołu HTTP.  
+5. Utwórz i dodaj go do kolekcji (`outputBec`). <xref:System.ServiceModel.Channels.HttpTransportBindingElement> Oznacza to, że powiązanie korzysta z transportu HTTP.  
   
-6. Tworzenie nowego niestandardowego powiązania, tworząc wystąpienie <xref:System.ServiceModel.Channels.CustomBinding> klasy i przekazywanie kolekcji `outputBec` do konstruktora.  
+6. Utwórz nowe niestandardowe powiązanie, tworząc wystąpienie <xref:System.ServiceModel.Channels.CustomBinding> klasy i przekazując kolekcję `outputBec` do konstruktora.  
   
-7. Wynikowy niestandardowego powiązania udostępnia wiele takie same charakterystyki jak standardowy <xref:System.ServiceModel.WSHttpBinding>. Określa zabezpieczenia na poziomie komunikatu i poświadczenia Windows, ale wyłącza bezpiecznych sesji, wymaga poświadczeń usługi określonego poza pasmem, a nie szyfruje podpisów. Ostatni mogą być kontrolowane tylko przez ustawienie <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> właściwości, jak pokazano w kroku 4. Pozostałe dwa można sterować przy użyciu ustawień w powiązaniu standardowych.  
+7. Wyniki niestandardowe powiązania mają wiele takich samych cech jak standard <xref:System.ServiceModel.WSHttpBinding>. Określa zabezpieczenia na poziomie wiadomości i poświadczenia systemu Windows, ale wyłącza bezpieczne sesje, wymaga podania poświadczeń usługi poza pasmem i nie szyfruje podpisów. Ostatni można kontrolować tylko przez ustawienie <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> właściwości, jak pokazano w kroku 4. Pozostałe dwa mogą być kontrolowane przy użyciu ustawień dla standardowego powiązania.  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- W poniższym przykładzie przedstawiono pełny funkcja tworzenia niestandardowego powiązania, który używa <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+ Poniższy przykład zawiera kompletną funkcję do tworzenia niestandardowego powiązania, które używa <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[c_CustomBinding#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#20)]

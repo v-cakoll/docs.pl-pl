@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: c66ca9356d1db157688349dfeea4270001513e0b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a6bbc2fe4bf68b50153075a251d23deebda78de5
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949206"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988656"
 ---
 # <a name="serialization-and-deserialization"></a>Serializacja i deserializacja
 Windows Communication Foundation (WCF) zawiera nowy aparat serializacji, <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> Tłumaczy między obiektami .NET Framework i XML, w obu kierunkach. W tym temacie wyjaśniono, jak działa serializator.  
@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) zawiera nowy aparat serializacji, <xref:S
  WCF zawiera również serializator pomocnika, <xref:System.Runtime.Serialization.NetDataContractSerializer>. Jest podobna <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> do i<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serializatorów, ponieważ również emituje .NET Framework nazw typów w ramach serializowanych danych. <xref:System.Runtime.Serialization.NetDataContractSerializer> Jest on używany, gdy te same typy są udostępniane na serializacji i zakończenia deserializacji. Zarówno, <xref:System.Runtime.Serialization.DataContractSerializer> <xref:System.Runtime.Serialization.XmlObjectSerializer>jak i <xref:System.Runtime.Serialization.NetDataContractSerializer> pochodna z wspólnej klasy bazowej,.  
   
 > [!WARNING]
->  <xref:System.Runtime.Serialization.DataContractSerializer> Serializacji ciągów zawierających znaki kontrolne o wartości szesnastkowej poniżej 20 jako jednostki XML. Może to spowodować problem z klientem innym niż WCF podczas wysyłania takich danych do usługi WCF.  
+> <xref:System.Runtime.Serialization.DataContractSerializer> Serializacji ciągów zawierających znaki kontrolne o wartości szesnastkowej poniżej 20 jako jednostki XML. Może to spowodować problem z klientem innym niż WCF podczas wysyłania takich danych do usługi WCF.  
   
 ## <a name="creating-a-datacontractserializer-instance"></a>Tworzenie wystąpienia DataContractSerializer  
  Konstruowanie wystąpienia <xref:System.Runtime.Serialization.DataContractSerializer> jest ważnym krokiem. Po przygotowaniu nie można zmienić żadnych ustawień.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 39b48e7a0a296c2f4a4a2be76e0663ea3018e453
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: d9453f931bba9b1d3b5db3b4f80aa365677c0b76
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928177"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988422"
 ---
 # <a name="strings-c-programming-guide"></a>Ciągi (Przewodnik programowania w języku C#)
 Ciąg jest obiektem typu <xref:System.String> , którego wartością jest Text. Wewnętrznie tekst jest przechowywany jako sekwencyjna kolekcja <xref:System.Char> obiektów tylko do odczytu. Na końcu C# ciągu nie ma znaku zamykającego wartości null; w związku C# z tym ciąg może zawierać dowolną liczbę osadzonych znaków null (' \ 0 '). Właściwość ciągu reprezentuje `Char` liczbę obiektów, które zawiera, a nie liczbę znaków Unicode. <xref:System.String.Length%2A> Aby uzyskać dostęp do poszczególnych punktów kodu Unicode w ciągu, użyj <xref:System.Globalization.StringInfo> obiektu.  
@@ -68,7 +68,7 @@ Ciąg jest obiektem typu <xref:System.String> , którego wartością jest Text. 
 |\x|Sekwencja unikowa Unicode podobna do "\u" z wyjątkiem zmiennej długości|`\xH[H][H][H]`zakresu 0 — FFFF; przykład: `\x00E7` or `\x0E7` lub `\xE7` = "ç")|  
   
 > [!WARNING]
->  Przy użyciu `\x` sekwencji unikowej i określania mniej niż 4 cyfry szesnastkowe, jeśli znaki, które bezpośrednio podążają za sekwencją ucieczki, są prawidłowymi cyframi szesnastkowymi (tj. 0-9, a-f i a-f), będą interpretowane jako część sekwencji ucieczki. Na przykład `\xA1` tworzy "&#161;", który jest punktem kodu U + 00A1. Jeśli jednak następny znak to "a" lub "a", wówczas sekwencja ucieczki będzie interpretowana jako `\xA1A` "&#x0A1A;", która jest punktem kodu U + 0A1A. W takich przypadkach, określenie wszystkich 4 cyfr szesnastkowych (np `\x00A1` .) uniemożliwi wszelkie możliwe Błędne interpretacje.  
+> Przy użyciu `\x` sekwencji unikowej i określania mniej niż 4 cyfry szesnastkowe, jeśli znaki, które bezpośrednio podążają za sekwencją ucieczki, są prawidłowymi cyframi szesnastkowymi (tj. 0-9, a-f i a-f), będą interpretowane jako część sekwencji ucieczki. Na przykład `\xA1` tworzy "&#161;", który jest punktem kodu U + 00A1. Jeśli jednak następny znak to "a" lub "a", wówczas sekwencja ucieczki będzie interpretowana jako `\xA1A` "&#x0A1A;", która jest punktem kodu U + 0A1A. W takich przypadkach, określenie wszystkich 4 cyfr szesnastkowych (np `\x00A1` .) uniemożliwi wszelkie możliwe Błędne interpretacje.  
   
 > [!NOTE]
 > W czasie kompilacji ciągi Verbatim są konwertowane na zwykłe ciągi ze wszystkimi tymi samymi sekwencjami ucieczki. W związku z tym, jeśli w oknie Czujka debugera zostanie wyświetlony ciąg Verbatim, zobaczysz znaki ucieczki, które zostały dodane przez kompilator, a nie wersję Verbatim z kodu źródłowego. Na przykład ciąg `@"C:\files.txt"` Verbatim pojawi się w oknie czujki jako "C:\\\files.txt".  

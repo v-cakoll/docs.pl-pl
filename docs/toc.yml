@@ -440,6 +440,28 @@
           href: core/porting/winforms.md
         - name: Przenoszenie projektów WPF
           href: core/porting/wpf.md
+    - name: Ładowanie zależności
+      items:
+        - name: Omówienie
+          href: core/dependency-loading/overview.md
+        - name: Informacje o elemencie AssemblyLoadContext
+          href: core/dependency-loading/understanding-assemblyloadcontext.md
+        - name: Ładowanie szczegółów
+          items:
+            - name: Domyślne sondowanie zależności
+              href: core/dependency-loading/default-probing.md
+            - name: Ładowanie zestawów zarządzanych
+              href: core/dependency-loading/loading-managed.md
+            - name: Ładowanie zestawów satelickich
+              href: core/dependency-loading/loading-resources.md
+            - name: Ładowanie bibliotek niezarządzanych
+              href: core/dependency-loading/loading-unmanaged.md
+        - name: Samouczki
+          items:
+            - name: Tworzenie aplikacji platformy .NET Core za pomocą wtyczek
+              href: core/tutorials/creating-app-with-plugin-support.md
+            - name: Sposób używania i debugowania funkcji zwolnienia zestawu w programie .NET Core
+              href: standard/assembly/unloadability-howto.md
     - name: Kompilacja platformy .NET Core ze źródła
       href: core/build/index.md
       items:

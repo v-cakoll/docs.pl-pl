@@ -10,296 +10,296 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 8008feb91a72353a74a647cf79bcecbf7023f962
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: bf4617d838ba7f02523d7bbdbb57932c033f4a9e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410555"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958674"
 ---
-# <a name="dialog-boxes-overview"></a>Okna dialogowe — omówienie
-Aplikacje autonomiczne zwykle mają okno główne, czy oba powoduje wyświetlenie danych głównych, względem której aplikacja działa i uwidacznia funkcje przetwarzania tych danych za pośrednictwem [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mechanizmów, takich jak pasek menu, paski narzędzi i pasków stanu. — Prosta aplikacja może również wyświetlić dodatkowe okna, wykonaj następujące czynności:  
+# <a name="dialog-boxes-overview"></a>Okna dialogowe — Omówienie
+Aplikacje autonomiczne zwykle mają główne okno, które wyświetla główne dane, nad którymi działa aplikacja, i udostępnia funkcje do przetwarzania tych danych za pomocą [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mechanizmów, takich jak paski menu, paski narzędzi i paski stanu. Nieuproszczona aplikacja może również wyświetlać dodatkowe okna, aby wykonać następujące czynności:  
   
-- Wyświetl szczegółowe informacje dla użytkowników.  
+- Wyświetl konkretne informacje dla użytkowników.  
   
 - Zbierz informacje od użytkowników.  
   
-- Wyświetlanie i zbierania informacji.  
+- Wyświetla i zbiera informacje.  
   
- Tego rodzaju systemu windows, są znane jako *okna dialogowe*, istnieją dwa typy: modalne i niemodalne.  
+ Te typy okien są znane jako *okna dialogowe*, a istnieją dwa typy: modalne i niemodalne.  
   
- A *modalne* zostanie wyświetlone okno dialogowe przez funkcję, gdy funkcja będzie potrzebowała dodatkowych danych od użytkownika, aby kontynuować. Ponieważ funkcja jest zależna od modalne okno dialogowe na potrzeby zbierania danych, okno modalne okno dialogowe zapobiega także użytkownika aktywowanie innych okien w aplikacji, gdy pozostaje on otwartych. W większości przypadków modalne okno dialogowe pozwala użytkownikowi na sygnał, gdy została zakończona z modalne okno dialogowe, naciskając klawisz albo **OK** lub **anulować** przycisku. Naciśnięcie klawisza **OK** przycisk wskazuje, że użytkownik wprowadził dane i chce, aby z funkcji, aby kontynuować przetwarzanie za pomocą tych danych. Naciśnięcie klawisza **anulować** przycisk oznacza, że użytkownik chce, aby zatrzymać funkcji wykonywania całkowicie. Najbardziej typowe przykłady modalne okna dialogowe są wyświetlane na otwieranie, zapisywanie i drukowanie danych.  
+ *Modalne* okno dialogowe jest wyświetlane przez funkcję, gdy funkcja wymaga dodatkowych danych od użytkownika, aby kontynuować. Ponieważ funkcja jest zależna od modalnego okna dialogowego do zbierania danych, modalne okno dialogowe uniemożliwia również użytkownikowi aktywowanie innych okien w aplikacji, gdy pozostanie otwarte. W większości przypadków modalne okno dialogowe umożliwia użytkownikowi sygnalizowanie po zakończeniu pracy z modalnym oknem dialogowym przez naciśnięcie przycisku **OK** lub **Anuluj** . Naciśnięcie przycisku **OK** oznacza, że użytkownik wprowadził dane i chce, aby funkcja kontynuowała przetwarzanie za pomocą tych danych. Naciśnięcie przycisku **Anuluj** oznacza, że użytkownik chce zatrzymać wykonywanie funkcji całkowicie. Najbardziej typowe przykłady modalnych okien dialogowych są wyświetlane, aby otwierać, zapisywać i drukować dane.  
   
- A *niemodalne* okno dialogowe z drugiej strony, nie uniemożliwia użytkownikowi aktywowanie inne okna, gdy jest on otwarty. Na przykład jeśli użytkownik chce wyszukać wystąpienia określonego wyrazu w dokumencie, okno główne często otworzy okno dialogowe, aby poprosić użytkownika programu word, które szukają. Od znajdowanie słowo nie uniemożliwia użytkownikowi edytowania dokumentu, jednak okno dialogowe nie musi być modalne. Co najmniej zapewnia niemodalnego okna dialogowego **Zamknij** przycisk, aby zamknąć okno dialogowe i mogą dostarczać dodatkowych przycisków do wykonania określonych funkcji, takich jak **Znajdź następny** przycisk, aby znaleźć następnego word, który odpowiadającego kryteriom wyszukiwania, wyszukiwania programu word.  
+ Niemodalne okno dialogowe, z drugiej strony, nie uniemożliwia użytkownikowi aktywowania innych okien, gdy jest otwarty. Na przykład, jeśli użytkownik chce znaleźć wystąpienia określonego wyrazu w dokumencie, okno główne często otwiera okno dialogowe z monitem o wyszukanie użytkownika. Ponieważ znalezienie słowa nie zapobiega edytowaniu dokumentu przez użytkownika, okno dialogowe nie musi być modalne. Niemodalne okno dialogowe z co najmniej udostępnia przycisk **Zamknij** , aby zamknąć okno dialogowe i może udostępnić dodatkowe przyciski do wykonywania określonych funkcji, takich jak przycisk **Znajdź dalej** , aby znaleźć następny wyraz, który pasuje do kryteriów wyszukiwania szukanych wyrazów.  
   
- Windows Presentation Foundation (WPF) pozwala utworzyć kilka typów okien dialogowych, w tym okna komunikatów, wspólne okna dialogowe i niestandardowych okien dialogowych. W tym temacie omówiono poszczególnych usług i [przykładowe okno dialogowe](https://go.microsoft.com/fwlink/?LinkID=159984) zawiera przykłady dopasowania.  
+ Windows Presentation Foundation (WPF) umożliwia tworzenie kilku typów okien dialogowych, w tym pól komunikatów, wspólnych okien dialogowych i niestandardowych okien dialogowych. W tym temacie omówiono każdy i [przykład okna dialogowego](https://go.microsoft.com/fwlink/?LinkID=159984) zawiera pasujące przykłady.  
 
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>Okna komunikatów  
- A *okno komunikatu* to okno dialogowe, który może służyć do wyświetlania informacji tekstowych i Zezwalaj użytkownikom na podejmowanie decyzji za pomocą przycisków. Na poniższej ilustracji przedstawiono okno komunikatu, który wyświetla informacje tekstowe, zadaje pytanie i zapewnia użytkownikowi dostęp do trzech przycisków, aby znaleźć odpowiedź na pytanie.  
+ *Okno komunikatu* to okno dialogowe, za pomocą którego można wyświetlić informacje tekstowe i umożliwić użytkownikom podejmowanie decyzji przy użyciu przycisków. Na poniższej ilustracji przedstawiono okno komunikatu, które wyświetla informacje tekstowe, prosi o pytanie i udostępnia użytkownikowi trzy przyciski, aby odpowiedzieć na pytanie.  
   
- ![Edytor tekstów okno dialogowe z pytaniem, czy chcesz zapisać zmiany w dokumencie, zanim aplikacja zostanie zamknięta.](./media/dialog-boxes-overview/word-processor-dialog.png)  
+ ![Okno dialogowe Edytor tekstów z pytaniem, czy chcesz zapisać zmiany w dokumencie przed zamknięciem aplikacji.](./media/dialog-boxes-overview/word-processor-dialog.png)  
   
- Aby utworzyć okno komunikatu, należy użyć <xref:System.Windows.MessageBox> klasy. <xref:System.Windows.MessageBox> Umożliwia skonfigurowanie tekst okno komunikatu, tytuł, ikona i przyciski, za pomocą kodu, jak pokazano poniżej.  
+ Aby utworzyć okno komunikatu, użyj <xref:System.Windows.MessageBox> klasy. <xref:System.Windows.MessageBox>umożliwia skonfigurowanie tekstu, tytułu, ikony i przycisków okna komunikatu przy użyciu kodu, takiego jak poniższy.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
   
- Aby wyświetlić okno komunikatu, należy wywołać `static` <xref:System.Windows.MessageBox.Show%2A> metody, jak pokazano w poniższym kodzie.  
+ Aby wyświetlić okno komunikatu, należy wywołać `static` <xref:System.Windows.MessageBox.Show%2A> metodę, jak pokazano w poniższym kodzie.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowcodebehind)]  
   
- Gdy kod, który wyświetli okno wiadomości musi wykrywania i przetwarzania przez użytkownika decyzji (który przycisk został naciśnięty), ten kod można sprawdzić wynik okno komunikatu, jak pokazano w poniższym kodzie.  
+ Gdy kod, który pokazuje okno komunikatu, musi wykryć i przetworzyć decyzję użytkownika (który został naciśnięty przycisk), kod może sprawdzić wynik okna komunikatu, jak pokazano w poniższym kodzie.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowandresultcodebehind1)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowandresultcodebehind1)]  
   
- Aby uzyskać więcej informacji na temat korzystania z okna komunikatów, zobacz <xref:System.Windows.MessageBox>, [przykładowe MessageBox](https://go.microsoft.com/fwlink/?LinkID=160023), i [przykładowe okno dialogowe](https://go.microsoft.com/fwlink/?LinkID=159984).  
+ Aby uzyskać więcej informacji na temat korzystania z okien <xref:System.Windows.MessageBox>komunikatów, zobacz, [przykład MessageBox](https://go.microsoft.com/fwlink/?LinkID=160023)i [okna dialogowego](https://go.microsoft.com/fwlink/?LinkID=159984).  
   
- Mimo że <xref:System.Windows.MessageBox> mogą oferować interfejs użytkownika okno dialogowe prosty, zaletą korzystania z <xref:System.Windows.MessageBox> jest to jedyny typ okna, które mogą być wyświetlane przez aplikacje, które są uruchamiane w piaskownicy zabezpieczenia częściowej relacji zaufania (zobacz [zabezpieczeń](../security-wpf.md)), takich jak [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
+ Chociaż <xref:System.Windows.MessageBox> może oferować proste środowisko użytkownika okna dialogowego, zaletą korzystania <xref:System.Windows.MessageBox> z programu jest tylko typ okna, który może być pokazywany przez aplikacje działające w obszarze piaskownicy zabezpieczeń częściowej relacji zaufania (zobacz [zabezpieczenia](../security-wpf.md)), np [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
- Większość okien dialogowych wyświetlania i zbieranie danych bardziej skomplikowane niż suma okno komunikatu, łącznie z tekstem, wybór (pola wyboru) wzajemnie wykluczających się zaznaczenie (przycisków radiowych) i listy wyboru (pola listy, pola kombi, pola listy rozwijanej). W tym przypadku Windows Presentation Foundation (WPF) zawiera kilka typowych okien dialogowych i pozwala na tworzenie własnych okien dialogowych, mimo że używanie jednego jest ograniczony do aplikacji działających z pełnym zaufaniem.  
+ Większość okien dialogowych wyświetla i zbiera bardziej złożone dane niż wynik okna komunikatu, w tym tekst, zaznaczenie (pola wyboru), wzajemnie wykluczające się zaznaczenie (przyciski radiowe) i wybór listy (pola listy, pola kombi, pola listy rozwijanej). Dla tych Windows Presentation Foundation (WPF) udostępnia kilka wspólnych okien dialogowych i umożliwia tworzenie własnych okien dialogowych, chociaż korzystanie z nich jest ograniczone do aplikacji działających z pełnym zaufaniem.  
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>Wspólne okna dialogowe  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] implementuje wiele okien dialogowych wielokrotnego użytku, które są wspólne dla wszystkich aplikacji, w tym okna dialogowe Otwieranie plików, zapisywanie plików i drukowania. Ponieważ te okna dialogowe są implementowane przez system operacyjny, mogą być współdzielone wśród wszystkich aplikacji działających w systemie operacyjnym, co pomaga użytkownikom środowisko spójności; w przypadku znanych przy użyciu okna dialogowego dostarczane przez system operacyjny, w jednej aplikacji użytkownicy nie muszą dowiedzieć się, jak za pomocą tego okna dialogowego w innych aplikacjach. Ponieważ te okna dialogowe są dostępne dla wszystkich aplikacji, a ponieważ pomagają zapewnić spójne środowisko użytkownika, są znane jako *wspólne okna dialogowe*.  
+ System Windows implementuje różne okna dialogowe wielokrotnego użytku, które są wspólne dla wszystkich aplikacji, w tym okna dialogowe do otwierania plików, zapisywania plików i drukowania. Ponieważ te okna dialogowe są implementowane przez system operacyjny, mogą być współużytkowane przez wszystkie aplikacje działające w systemie operacyjnym, co pomaga zapewnić spójność środowiska użytkownika. gdy użytkownicy znają korzystanie z okna dialogowego dostarczonego przez system operacyjny w jednej aplikacji, nie muszą dowiedzieć się, jak korzystać z tego okna dialogowego w innych aplikacjach. Ponieważ te okna dialogowe są dostępne dla wszystkich aplikacji, a ponieważ zapewniają spójne środowisko użytkownika, są one znane jako *wspólne okna dialogowe*.  
   
- Windows Presentation Foundation (WPF) hermetyzuje otwartego pliku, Zapisz plik i drukowanie wspólnych okien dialogowych i udostępnia je jako zarządzanych klas do użycia w aplikacji autonomicznej. Ten temat zawiera krótkie omówienie każdego z nich.  
+ Windows Presentation Foundation (WPF) hermetyzuje okna dialogowe Otwórz plik, Zapisz plik i Drukuj, które udostępniają je jako klasy zarządzane do użycia w aplikacjach autonomicznych. Ten temat zawiera krótkie omówienie każdego z nich.  
   
 <a name="Open_File_Dialog"></a>   
-### <a name="open-file-dialog"></a>Okno dialogowe Otwieranie pliku  
- Okno dialogowe Otwieranie pliku pokazano na poniższym rysunku, służy funkcji otwierania pliku do pobierania nazwę pliku, aby otworzyć.  
+### <a name="open-file-dialog"></a>Otwórz okno dialogowe pliku  
+ Okno dialogowe Otwórz plik, pokazane na poniższym rysunku, jest używane przez funkcję otwierania plików do pobrania nazwy pliku do otwarcia.  
   
- ![Otwarte okno dialogowe wskazuje lokalizację, aby pobrać plik.](./media/dialog-boxes-overview/open-file-dialog-box.png)  
+ ![Otwarte okno dialogowe pokazujące lokalizację, w której ma zostać pobrany plik.](./media/dialog-boxes-overview/open-file-dialog-box.png)  
   
- Wspólne okno dialogowe Otwieranie pliku jest implementowany jako <xref:Microsoft.Win32.OpenFileDialog> klasy i znajduje się w <xref:Microsoft.Win32> przestrzeni nazw. Poniższy kod przedstawia sposób tworzenia, konfigurowania i jeden oraz sposób przetwarzania wyniku.  
+ Okno dialogowe Common Open File jest zaimplementowane jako <xref:Microsoft.Win32.OpenFileDialog> Klasa i znajduje się <xref:Microsoft.Win32> w przestrzeni nazw. Poniższy kod pokazuje, jak tworzyć, konfigurować i wyświetlać je oraz jak przetwarzać wynik.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#OpenFileDialogBoxCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#openfiledialogboxcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#OpenFileDialogBoxCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#openfiledialogboxcodebehind)]  
   
- Aby uzyskać więcej informacji w oknie dialogowym otwartego pliku, zobacz <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>.  
+ Aby uzyskać więcej informacji na temat okna dialogowego Otwórz plik, <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>Zobacz.  
   
 > [!NOTE]
->  <xref:Microsoft.Win32.OpenFileDialog> może służyć do bezpiecznego pobierania nazwy plików według działających z częściowej relacji zaufania (zobacz [zabezpieczeń](../security-wpf.md)).  
+> <xref:Microsoft.Win32.OpenFileDialog>może służyć do bezpiecznego pobierania nazw plików przez aplikacje działające z częściowym zaufaniem (zobacz [zabezpieczenia](../security-wpf.md)).  
   
 <a name="Save_File_Dialog"></a>   
 ### <a name="save-file-dialog-box"></a>Zapisz Plik — Okno dialogowe  
- Zapisz plik, okno dialogowe, pokazane na poniższej ilustracji jest używany przez funkcje zapisywania pliku pobrać nazwy pliku do zapisywania.  
+ Okno dialogowe Zapisz plik, pokazane na poniższym rysunku, jest używane przez funkcję zapisywania plików do pobrania nazwy pliku do zapisania.  
   
- ![Zapisz jako okno dialogowe wskazuje lokalizację, aby zapisać plik.](./media/dialog-boxes-overview/save-file-dialog-box.png)  
+ ![Okno dialogowe Zapisz jako z lokalizacją, w której ma zostać zapisany plik.](./media/dialog-boxes-overview/save-file-dialog-box.png)  
   
- Typowe, Zapisz plik, okno dialogowe jest implementowany jako <xref:Microsoft.Win32.SaveFileDialog> klasy i znajduje się w <xref:Microsoft.Win32> przestrzeni nazw. Poniższy kod przedstawia sposób tworzenia, konfigurowania i jeden oraz sposób przetwarzania wyniku.  
+ Okno dialogowe często zapisywanego pliku jest zaimplementowane jako <xref:Microsoft.Win32.SaveFileDialog> Klasa i znajduje się <xref:Microsoft.Win32> w przestrzeni nazw. Poniższy kod pokazuje, jak tworzyć, konfigurować i wyświetlać je oraz jak przetwarzać wynik.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#SaveFileDialogBoxCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#savefiledialogboxcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#SaveFileDialogBoxCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#savefiledialogboxcodebehind)]  
   
- Aby uzyskać więcej informacji na temat zapisywania pliku okno dialogowe, zobacz <xref:Microsoft.Win32.SaveFileDialog?displayProperty=nameWithType>.  
+ Aby uzyskać więcej informacji na temat okna dialogowego Zapisywanie pliku, <xref:Microsoft.Win32.SaveFileDialog?displayProperty=nameWithType>Zobacz.  
   
 <a name="Print_Dialog"></a>   
 ### <a name="print-dialog-box"></a>Drukuj — Okno dialogowe
 
-Okno dialogowe drukowania, pokazano na poniższym rysunku, służy funkcja drukowania można wybrać i skonfigurować drukarki, użytkownik chce drukowanie danych do.  
+Okno dialogowe Drukowanie, pokazane na poniższym rysunku, jest używane przez funkcję drukowania do wybierania i konfigurowania drukarki, do której użytkownik chce drukować dane.  
   
-![Zrzut ekranu pokazujący okno dialogowe drukowania.](./media/dialog-boxes-overview/print-data-dialog-box.png)  
+![Zrzut ekranu przedstawiający okno dialogowe Drukowanie.](./media/dialog-boxes-overview/print-data-dialog-box.png)  
   
-Wspólne okno dialogowe drukowania jest implementowany jako <xref:System.Windows.Controls.PrintDialog> klasy i znajduje się w <xref:System.Windows.Controls> przestrzeni nazw. Poniższy kod przedstawia sposób tworzenia, konfigurowania i jeden.  
+Wspólne okno dialogowe drukowania jest zaimplementowane jako <xref:System.Windows.Controls.PrintDialog> Klasa i znajduje się <xref:System.Windows.Controls> w przestrzeni nazw. Poniższy kod przedstawia sposób tworzenia, konfigurowania i wyświetlania jednego z nich.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#PrintDialogBoxCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#printdialogboxcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#PrintDialogBoxCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#printdialogboxcodebehind)]  
   
- Aby uzyskać więcej informacji na temat okna dialogowego drukowania, zobacz <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>. Aby uzyskać szczegółowe omówienie drukowania w WPF, zobacz [Omówienie drukowania](../advanced/printing-overview.md).  
+ Aby uzyskać więcej informacji na temat okna dialogowego drukowanie, <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>Zobacz. Aby uzyskać szczegółowe omówienie drukowania w WPF, zobacz [Omówienie drukowania](../advanced/printing-overview.md).  
   
 <a name="Custom_Dialog_Boxes"></a>   
-## <a name="custom-dialog-boxes"></a>Niestandardowych okien dialogowych
+## <a name="custom-dialog-boxes"></a>Niestandardowe okna dialogowe
 
-Natomiast wspólne okna dialogowe są przydatne, jeśli jest to możliwe, należy użyć, nie obsługują one wymagania okna dialogowe specyficznego dla domeny. W takich przypadkach należy utworzyć własne okna dialogowe. Jak zobaczymy, okno dialogowe jest oknem za pomocą zachowań specjalnych. <xref:System.Windows.Window> implementuje te zachowania i w związku z tym, możesz użyć <xref:System.Windows.Window> do tworzenia niestandardowych modalne i Niemodalne okna dialogowe.  
+Chociaż wspólne okna dialogowe są przydatne i powinny być używane, jeśli jest to możliwe, nie obsługują wymagań okien dialogowych specyficznych dla domeny. W takich przypadkach należy utworzyć własne okna dialogowe. Jak zobaczymy, okno dialogowe jest oknem z zachowaniem specjalnym. <xref:System.Windows.Window>implementuje te zachowania i, w związku z tym, <xref:System.Windows.Window> służy do tworzenia niestandardowych modalnych i niemodalnych okien dialogowych.  
   
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
-### <a name="creating-a-modal-custom-dialog-box"></a>Tworzenie modalnych niestandardowe okno dialogowe
+### <a name="creating-a-modal-custom-dialog-box"></a>Tworzenie modalnego niestandardowego okna dialogowego
 
-W tym temacie pokazano, jak używać <xref:System.Windows.Window> do utworzenia z implementacją okno typowej modalnego okna dialogowego za pomocą `Margins` okno dialogowe, na przykład (zobacz [przykładowe okno dialogowe](https://go.microsoft.com/fwlink/?LinkID=159984)). `Margins` Na poniższej ilustracji przedstawiono okno dialogowe.  
+W tym temacie przedstawiono sposób użycia <xref:System.Windows.Window> programu do tworzenia typowej implementacji modalnego okna dialogowego `Margins` przy użyciu okna dialogowego jako przykładu (zobacz [przykład okna dialogowego](https://go.microsoft.com/fwlink/?LinkID=159984)). To `Margins` okno dialogowe jest pokazane na poniższym rysunku.  
   
- ![Okno dialogowe marginesy z pola do definiowania lewy margines, górny margines, prawy margines i dolny margines.](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
+ ![Okno dialogowe marginesów z polami do definiowania lewego marginesu, górnego marginesu, prawego marginesu i dolnego marginesu.](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
-#### <a name="configuring-a-modal-dialog-box"></a>Konfigurowanie modalne okno dialogowe
+#### <a name="configuring-a-modal-dialog-box"></a>Konfigurowanie modalnego okna dialogowego
 
-Interfejs użytkownika dla typowych okno dialogowe obejmuje następujące funkcje:  
+Interfejs użytkownika typowego okna dialogowego zawiera następujące elementy:  
   
-- Różne formanty, które są wymagane, aby zebrać pożądane dane.  
+- Różne kontrolki, które są wymagane do zebrania żądanych danych.  
   
-- **OK** przycisku przez użytkowników, kliknij, aby zamknąć okno dialogowe, wróć do funkcji i kontynuować przetwarzanie.  
+- Kliknij przycisk **OK** , aby zamknąć okno dialogowe, Wróć do funkcji i Kontynuuj przetwarzanie.  
   
-- A **anulować** przycisku, który użytkownicy kliknąć, aby zamknąć okno dialogowe i zatrzymać funkcji z dalszego przetwarzania.  
+- Przycisk **Anuluj** kliknięty przez użytkowników, aby zamknąć okno dialogowe i zatrzymać funkcję od dalszej obróbki.  
   
-- A **Zamknij** przycisk na pasku tytułu.  
+- Przycisk **Zamknij** na pasku tytułu.  
   
 - Ikona.  
   
-- **Minimalizuj**, **Maksymalizuj**, i **przywrócić** przycisków.  
+- Przyciski **Minimalizuj**, **Maksymalizuj**i **Przywróć** .  
   
-- A **systemu** menu Minimalizuj, Maksymalizuj, przywracania i zamknąć okno dialogowe.  
+- Menu **systemowe** umożliwiające minimalizowanie, zmaksymalizowanie, przywrócenie i zamknięcie okna dialogowego.  
   
-- Pozycja w górę i w środku okna, które są otwarte okno dialogowe.  
+- Pozycja powyżej i w środku okna, które otworzyło okno dialogowe.  
   
-- Zdolność do rozmiaru, jeśli jest to możliwe, aby uniemożliwić okna dialogowego za mały i zapewnienie użytkownikowi przydatne domyślny rozmiar. Wymaga to ustawienie domyślne i minimalne wymiary.  
+- Możliwość zmiany rozmiaru w miarę możliwości, aby zapobiec zbyt małym oknem okna dialogowego i zapewnić użytkownikowi przydatny rozmiar domyślny. Wymaga to ustawienia domyślnego i minimalnego wymiaru.  
   
-- Klawisz ESC jako skrót klawiaturowy, który powoduje, że **anulować** naciśnięcia przycisku. Możesz to zrobić, ustawiając <xref:System.Windows.Controls.Button.IsCancel%2A> właściwość **anulować** przycisk, aby `true`.  
+- Klawisz ESC jako skrót klawiaturowy, który powoduje naciśnięcie przycisku **Anuluj** . W tym celu należy ustawić <xref:System.Windows.Controls.Button.IsCancel%2A> właściwość przycisku **Anuluj** na. `true`  
   
-- Klawisz ENTER (lub RETURN) jako skrót klawiaturowy, który powoduje, że **OK** naciśnięcia przycisku. Możesz to zrobić, ustawiając <xref:System.Windows.Controls.Button.IsDefault%2A> właściwość **OK** przycisk `true`.  
+- Klawisz ENTER (lub RETURN) jako skrót klawiaturowy, który powoduje naciśnięcie przycisku **OK** . W tym celu należy ustawić <xref:System.Windows.Controls.Button.IsDefault%2A> właściwość przycisku `true`OK.  
   
-Poniższy kod przedstawia tę konfigurację.  
+Poniższy kod ilustruje tę konfigurację.  
   
 [!code-xaml[MarginsDialogBox XAML file](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml?range=1-16,106-112)]  
 
 [!code-csharp[MarginsDialogBox C# code-behind](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs?range=1-12,67-68)]
 [!code-vb[MarginsDialogBox VB code-behind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb?range=1-11,61-62)]  
   
-Środowisko użytkownika dla okna dialogowego również rozszerza się na pasku menu, okna, które otwiera okno dialogowe. Po uruchomieniu funkcji, która wymaga interakcji z użytkownikiem za pomocą okna dialogowego, zanim będzie można kontynuować funkcji elementu menu element menu dla funkcji mają wielokropek w jej nagłówku, jak pokazano poniżej.  
+Środowisko użytkownika dla okna dialogowego rozciąga się również na pasek menu okna dialogowego, które otwiera okno dialogowe. Gdy element menu uruchamia funkcję, która wymaga interakcji użytkownika za pomocą okna dialogowego, zanim będzie można kontynuować działanie, element menu dla funkcji będzie miał wielokropek w nagłówku, jak pokazano poniżej.  
   
 [!code-xaml[Menu bar of MainWindow.Xaml file](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml#L26-L27)]  
   
-Wielokropek element menu działa funkcja, która wyświetla okno dialogowe, które nie wymaga interakcji użytkownika, takich jak okno dialogowe informacje, nie jest wymagana.  
+Gdy element menu uruchamia funkcję, która wyświetla okno dialogowe, które nie wymaga interakcji z użytkownikiem, takie jak okno dialogowe informacje, wielokropek nie jest wymagany.  
   
-#### <a name="opening-a-modal-dialog-box"></a>Otwieranie modalne okno dialogowe
+#### <a name="opening-a-modal-dialog-box"></a>Otwieranie modalnego okna dialogowego
 
-Okno dialogowe zwykle znajduje się w wyniku użytkownika, wybierając element menu do wykonywania funkcji specyficznych dla domeny, takie jak ustawianie marginesów dokumentu w edytorze tekstu. Wyświetlanie okna jako okno dialogowe przypomina przedstawiający okno normalne, mimo że wymaga konfiguracji specyficznej dla okno dialogowe dodatkowe. Cały proces tworzenia wystąpienia, konfigurowanie i otwiera okno dialogowe przedstawiono w poniższym kodzie.  
+Okno dialogowe jest zwykle wyświetlane jako wynik użytkownika, który wybiera element menu do wykonania funkcji specyficznej dla domeny, na przykład ustawiając marginesy dokumentu w edytorze tekstów. Wyświetlanie okna jako okno dialogowe jest podobne do wyświetlania normalnego okna, chociaż wymaga dodatkowej konfiguracji specyficznej dla okna dialogowego. W poniższym kodzie pokazano cały proces tworzenia wystąpienia, konfigurowania i otwierania okna dialogowego.  
   
 [!code-csharp[Opening a modal dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs?range=1-11,78-88,193-195)]
 [!code-vb[Opening a modal dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb?range=1-9,58-67,130-132)]  
 
-W tym miejscu kod przekazuje informacje domyślne (bieżący marginesy) do okna dialogowego. Ustawia również <xref:System.Windows.Window.Owner%2A?displayProperty=nameWithType> właściwości z odwołaniem do okna, które jest wyświetlane okno dialogowe. Ogólnie rzecz biorąc, zawsze należy ustawić właściciela dla okna dialogowego, aby zapewnić związanych z zachowania okna, które są wspólne dla wszystkich oknach dialogowych (zobacz [Przegląd Windows WPF](wpf-windows-overview.md) Aby uzyskać więcej informacji).
+W tym miejscu kod przekazuje domyślne informacje (bieżące marginesy) do okna dialogowego. Ustawia <xref:System.Windows.Window.Owner%2A?displayProperty=nameWithType> również właściwość z odwołaniem do okna, które jest wyświetlane okno dialogowe. Ogólnie rzecz biorąc, należy zawsze ustawić właściciela dla okna dialogowego, aby podać zachowania związane ze stanem okna, które są wspólne dla wszystkich okien dialogowych (zobacz [Omówienie systemu Windows WPF](wpf-windows-overview.md) , aby uzyskać więcej informacji).
 
 > [!NOTE]
-> Należy dostarczyć właściciela do obsługi automatyzacji interfejsu użytkownika dla okien dialogowych (zobacz [Przegląd automatyzacji interfejsu użytkownika](../../ui-automation/ui-automation-overview.md)).
+> Musisz podać właściciela, aby obsługiwał automatyzację interfejsu użytkownika (UI) dla okien dialogowych (zobacz [Automatyzacja interfejsu](../../ui-automation/ui-automation-overview.md)użytkownika).
 
-Po skonfigurowaniu okno dialogowe wyświetleniem trybie modalnym przez wywołanie metody <xref:System.Windows.Window.ShowDialog%2A> metody.  
+Po skonfigurowaniu okna dialogowego zostanie ono wyświetlone w <xref:System.Windows.Window.ShowDialog%2A> sposób modalny przez wywołanie metody.  
   
-#### <a name="validating-user-provided-data"></a>Sprawdzanie poprawności danych wprowadzonych przez użytkownika
+#### <a name="validating-user-provided-data"></a>Sprawdzanie poprawności danych dostarczonych przez użytkownika
 
-Gdy zostanie otwarte okno dialogowe, a użytkownik udostępnia wymaganych danych, okno dialogowe jest odpowiedzialny za zapewnienie, że podane dane są prawidłowe, z następujących powodów:  
+Gdy okno dialogowe zostanie otwarte, a użytkownik poda wymagane dane, okno dialogowe jest odpowiedzialne za upewnienie się, że podane dane są prawidłowe z następujących powodów:  
   
-- Z punktu widzenia zabezpieczeń wszystkie dane wejściowe powinny być weryfikowane.  
+- Z punktu widzenia zabezpieczeń należy sprawdzić poprawność wszystkich danych wejściowych.  
   
-- Z punktu widzenia specyficzne dla domeny sprawdzanie poprawności danych zapobiega błędne dane przetwarzane przez kod, który potencjalnie może zgłaszać wyjątki.  
+- W perspektywie specyficznej dla domeny weryfikacja danych uniemożliwia przetwarzanie błędnych danych przez kod, co może potencjalnie zgłosić wyjątki.  
   
-- Z punktu widzenia środowisko użytkownika okno dialogowe może pomóc użytkownikom, pokazując, dane, które wprowadzono jest nieprawidłowy.  
+- Z perspektywy użytkownika, okno dialogowe może ułatwić użytkownikom wyświetlanie, które wprowadzone przez siebie dane są nieprawidłowe.  
   
-- Z punktu widzenia wydajności sprawdzania poprawności danych w aplikacji wielowarstwowej pozwala zmniejszyć liczbę wystąpień komunikacji dwustronnej między klientem i warstwy aplikacji, szczególnie w przypadku, gdy aplikacja składa się z usługami sieci Web lub na serwerze baz danych.  
+- Z punktu widzenia wydajności sprawdzanie poprawności danych w aplikacji wielowarstwowej może zmniejszyć liczbę rund między klientem a warstwami aplikacji, zwłaszcza gdy aplikacja składa się z usług sieci Web lub baz danych opartych na serwerze.  
 
-Aby sprawdzić poprawność powiązanej kontrolki na platformie WPF, należy zdefiniować reguły sprawdzania poprawności i skojarzyć ją z powiązania. Reguła poprawności jest klasę niestandardową, która pochodzi od klasy <xref:System.Windows.Controls.ValidationRule>. W poniższym przykładzie pokazano reguły sprawdzania poprawności `MarginValidationRule`, która sprawdza, czy jest wiązana wartość <xref:System.Double> i znajduje się w określonym zakresie.  
+Aby sprawdzić poprawność kontroli powiązanej w WPF, należy zdefiniować regułę walidacji i skojarzyć ją z powiązaniem. Reguła walidacji jest klasą niestandardową, <xref:System.Windows.Controls.ValidationRule>która pochodzi od. Poniższy przykład pokazuje regułę `MarginValidationRule`walidacji, która sprawdza, czy wartość związana <xref:System.Double> jest i znajduje się w określonym zakresie.  
 
 [!code-csharp[Margin validation rules](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginValidationRule.cs)]
 [!code-vb[Margin validation rules](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginValidationRule.vb)]  
 
-W tym kodzie logikę walidacji reguły sprawdzania poprawności jest implementowany przez zastąpienie <xref:System.Windows.Controls.ValidationRule.Validate%2A> metody, która sprawdza poprawność danych i zwraca odpowiednią <xref:System.Windows.Controls.ValidationResult>.  
+W tym kodzie logika walidacji reguły walidacji jest implementowana przez zastąpienie <xref:System.Windows.Controls.ValidationRule.Validate%2A> metody, która sprawdza poprawność danych i zwraca odpowiednią. <xref:System.Windows.Controls.ValidationResult>  
 
-Aby skojarzyć regułę sprawdzania poprawności z powiązanej kontrolki, należy użyć następujących znaczników.  
+Aby skojarzyć regułę walidacji z kontrolką powiązaną, należy użyć następującego znacznika.  
   
 [!code-xaml[Associating a validation rule with a control](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml?range=1-16,57-68,111-112)]
 
-Po weryfikacji jest skojarzona dana reguła, WPF automatycznie zastosować go podczas wprowadzania danych do powiązanej kontrolki. Gdy formant zawiera nieprawidłowe dane, WPF będą wyświetlane czerwone obramowanie wokół nieprawidłowej kontrolki, jak pokazano na poniższej ilustracji.  
+Po skojarzeniu reguły walidacji program WPF automatycznie zastosuje ją po wprowadzeniu danych do kontrolki powiązanej. Gdy kontrolka zawiera nieprawidłowe dane, WPF wyświetli czerwone obramowanie wokół nieprawidłowej kontrolki, jak pokazano na poniższej ilustracji.  
   
-![Okno dialogowe marginesy z czerwonym obramowaniem wartość Nieprawidłowy lewy margines.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
+![Okno dialogowe marginesów z czerwonym obramowaniem wokół nieprawidłowej wartości lewego marginesu.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
 
-WPF nie ogranicza użytkownika do nieprawidłowej kontrolki, dopóki nie wprowadzono prawidłowe dane. Jest to dobry zachowanie dla okna dialogowego; Użytkownik powinien móc swobodnie Przejdź formantów w oknie dialogowym, czy dane są prawidłowe. Oznacza to jednak użytkownik może wprowadzić nieprawidłowe dane, a następnie naciśnij klawisz **OK** przycisku. Z tego powodu kod musi także sprawdzić poprawność wszystkich kontrolek w oknie dialogowym przypadku **OK** naciśnięciu przycisku obsługi <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń.  
+Funkcja WPF nie ogranicza użytkownika do nieprawidłowej kontrolki, dopóki nie wprowadzili prawidłowych danych. Jest to dobre zachowanie w przypadku okna dialogowego; Użytkownik powinien mieć możliwość swobodnego nawigowania po kontrolkach w oknie dialogowym, niezależnie od tego, czy dane są prawidłowe. Oznacza to jednak, że użytkownik może wprowadzić nieprawidłowe dane i nacisnąć przycisk **OK** . Z tego powodu kod musi również sprawdzać poprawność wszystkich kontrolek w oknie dialogowym po naciśnięciu przycisku **OK** przez obsługę <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzenia.  
   
 [!code-csharp[Validating all controls in a dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs?range=1-8,26-29,33-68)]
 [!code-vb[Validating all controls in a dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb?range=1-8,27-29,33-62)]  
 
-Ten kod wylicza wszystkie obiekty zależności, w oknie i, jeśli są nieprawidłowe (zwrócone przez <xref:System.Windows.Controls.Validation.GetHasError%2A>, nieprawidłowy formant uzyskuje fokus, `IsValid` metoda zwraca `false`, i okno jest uznawane za nieprawidłowe.  
+Ten kod wylicza wszystkie obiekty zależności w oknie i, jeśli są nieprawidłowe (zwracane przez <xref:System.Windows.Controls.Validation.GetHasError%2A>, nieprawidłowa kontrolka pobiera fokus `IsValid` , metoda zwraca `false`, a okno jest uznawane za nieprawidłowe.  
   
-Gdy okno dialogowe jest prawidłowy, można bezpiecznie zamknąć i wrócić. W ramach procesu zwrotu musi ona zwrócony wynik do funkcji wywołującej.  
+Gdy okno dialogowe jest prawidłowe, może je bezpiecznie zamknąć i zwrócić. W ramach procesu powrotu musi zwrócić wynik do funkcji wywołującej.  
   
-#### <a name="setting-the-modal-dialog-result"></a>Ustawianie wyniku modalne okno dialogowe
+#### <a name="setting-the-modal-dialog-result"></a>Ustawianie wyniku dialogu modalnego
 
-Otwierając okno dialogowe przy użyciu <xref:System.Windows.Window.ShowDialog%2A> to zasadniczo, takie jak wywołanie metody: kod, który otwierane przy użyciu okno dialogowe <xref:System.Windows.Window.ShowDialog%2A> czeka, aż do <xref:System.Windows.Window.ShowDialog%2A> zwraca. Gdy <xref:System.Windows.Window.ShowDialog%2A> zwraca, kod, który wymaga o nazwie zdecydować, czy kontynuować przetwarzanie lub zatrzymać przetwarzanie, na podstawie od tego, czy użytkownik nacisnął klawisz **OK** przycisk lub **anulować** przycisku. W celu ułatwienia tej decyzji, okno dialogowe musi zwracać wybrany przez użytkownika jako <xref:System.Boolean> wartość, która jest zwracana z <xref:System.Windows.Window.ShowDialog%2A> metody.  
+Otwieranie okna dialogowego przy użyciu <xref:System.Windows.Window.ShowDialog%2A> programu jest zasadniczo podobne do wywołania metody: kod, który otworzył okno dialogowe przy użyciu <xref:System.Windows.Window.ShowDialog%2A> polecenia czeka <xref:System.Windows.Window.ShowDialog%2A> do momentu, aż zwróci. Gdy <xref:System.Windows.Window.ShowDialog%2A> zwraca, kod, który wywołał, musi zdecydować, czy kontynuować przetwarzanie czy zatrzymać przetwarzanie, w zależności od tego, czy użytkownik naciśnie przycisk **OK** , czy przycisk **Anuluj** . Aby ułatwić tę decyzję, okno dialogowe musi zwrócić wybór użytkownika jako <xref:System.Boolean> wartość, która jest zwracana <xref:System.Windows.Window.ShowDialog%2A> z metody.  
 
-Gdy **OK** kliknięto przycisk <xref:System.Windows.Window.ShowDialog%2A> powinna zwrócić `true`. Jest to osiągane przez ustawienie <xref:System.Windows.Window.DialogResult%2A> właściwości okna dialogowego pole, kiedy **OK** przycisku.  
+Po kliknięciu <xref:System.Windows.Window.ShowDialog%2A> przycisku OK powinna zostać zwrócona `true`wartość. Jest to osiągane przez ustawienie <xref:System.Windows.Window.DialogResult%2A> właściwości okna dialogowego, gdy kliknięto przycisk **OK** .  
 
 [!code-csharp[Responding to the OK button](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs?range=1-8,25-27,32-33,67-68)]
 [!code-vb[Responding to the OK button](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb?range=1-8,27,31-33,61-62)]  
 
-Należy pamiętać, że ustawienie <xref:System.Windows.Window.DialogResult%2A> właściwości również powoduje, że okna zamknięte automatycznie, która eliminuje potrzebę jawnego wywoływania <xref:System.Windows.Window.Close%2A>.  
+Należy zauważyć, że <xref:System.Windows.Window.DialogResult%2A> ustawienie właściwości powoduje również Automatyczne zamknięcie okna, co pozwala uniknąć konieczności jawnego wywołania. <xref:System.Windows.Window.Close%2A>  
   
-Gdy **anulować** kliknięto przycisk <xref:System.Windows.Window.ShowDialog%2A> powinna zwrócić `false`, co wymaga także ustawienia <xref:System.Windows.Window.DialogResult%2A> właściwości.  
+Po kliknięciu <xref:System.Windows.Window.ShowDialog%2A> przycisku Anuluj powinna zostać zwrócona `false`wartość, która wymaga również ustawienia <xref:System.Windows.Window.DialogResult%2A> właściwości.  
   
 [!code-csharp[Responding to the Cancel button](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs?range=1-8,19-24,67-68)]
 [!code-vb[Responding to the Cancel button](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb?range=1-8,22-25,61-62)]  
 
-Gdy przycisk <xref:System.Windows.Controls.Button.IsCancel%2A> właściwość jest ustawiona na `true` i użytkownik naciśnie opcję **anulować** przycisku lub klawisz ESC <xref:System.Windows.Window.DialogResult%2A> jest automatycznie ustawiana na `false`. Następujące znaczniki ma taki sam skutek jak kod powyżej, bez konieczności obsługi <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń.  
+Gdy <xref:System.Windows.Controls.Button.IsCancel%2A> właściwość przycisku jest ustawiona na `true` , a użytkownik naciśnie przycisk **Anuluj** lub klawisz ESC, <xref:System.Windows.Window.DialogResult%2A> jest automatycznie ustawiana na. `false` Następujący znacznik ma ten sam skutek jak poprzedni kod, bez konieczności obsłużenia <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzenia.  
   
 [!code-xaml[Markup instead of handling the Click event](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml#L109-L109)]  
 
-Okno dialogowe jest automatycznie zwraca `false` po naciśnięciu klawisza **Zamknij** przycisk na pasku tytułu lub wybierze **Zamknij** element menu z **systemu** menu.  
+Okno dialogowe jest automatycznie zwracane `false` , gdy użytkownik naciśnie przycisk **Zamknij** na pasku tytułu lub wybierze element menu **Zamknij** z menu **systemowego** .  
 
-#### <a name="processing-data-returned-from-a-modal-dialog-box"></a>Przetwarzanie danych zwróconych z modalne okno dialogowe  
+#### <a name="processing-data-returned-from-a-modal-dialog-box"></a>Przetwarzanie danych zwróconych z modalnego okna dialogowego  
 
-Gdy <xref:System.Windows.Window.DialogResult%2A> jest ustawiony przez okno dialogowe funkcji, który je otworzył można uzyskać wyniku okna dialogowego, sprawdzając <xref:System.Windows.Window.DialogResult%2A> właściwości podczas <xref:System.Windows.Window.ShowDialog%2A> zwraca.  
+Gdy <xref:System.Windows.Window.DialogResult%2A> jest ustawiony za pomocą okna dialogowego, funkcja, która otworzyła go, może uzyskać wynik okna dialogowego, sprawdzając <xref:System.Windows.Window.DialogResult%2A> właściwość po <xref:System.Windows.Window.ShowDialog%2A> powrocie.  
   
 [!code-csharp[Processing data returned from the modal dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs?range=1-10,77-79,89-96,194-195)]
 [!code-vb[Processing data returned from the modal dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb?range=1-9,58,69-73,131-132)]
 
-Jeśli w wyniku okna dialogowego `true`, funkcja używa, jako wskaźnik do pobierania i przetwarzania danych przez użytkownika.  
+Jeśli wynik okna dialogowego to `true`, funkcja używa tej funkcji jako wskaźnika do pobierania i przetwarzania danych dostarczonych przez użytkownika.  
   
 > [!NOTE]
-> Po <xref:System.Windows.Window.ShowDialog%2A> zostanie zwrócone, nie można ponownie otworzyć okno dialogowe. Zamiast tego należy utworzyć nowe wystąpienie.
+> Po <xref:System.Windows.Window.ShowDialog%2A> powrocie nie można otworzyć okna dialogowego. Zamiast tego należy utworzyć nowe wystąpienie.
 
-Jeśli w wyniku okna dialogowego `false`, funkcja powinien kończyć się odpowiednio przetwarzania.  
+Jeśli zostanie `false`wyświetlony wynik okna dialogowego, funkcja powinna zostać odpowiednio zakończona.  
   
 <a name="Creating_a_Modeless_Custom_Dialog_Box"></a>   
-### <a name="creating-a-modeless-custom-dialog-box"></a>Tworzenie niemodalnego okna dialogowego niestandardowe
+### <a name="creating-a-modeless-custom-dialog-box"></a>Tworzenie niemodalnego niestandardowego okna dialogowego
 
-Niemodalne okno dialogowe, takie jak pokazano na poniższym rysunku, okno dialogowe Znajdź ma taki sam wygląd podstawowe jako modalne okno dialogowe.  
+Niemodalne okno dialogowe, takie jak okno dialogowe Znajdź pokazane na poniższej ilustracji ma ten sam wygląd, jak modalne okno dialogowe.  
 
-![Zrzut ekranu pokazujący okno dialogowe Znajdź.](./media/dialog-boxes-overview/find-modeless-dialog-box.png)  
+![Zrzut ekranu przedstawiający okno dialogowe Znajdowanie.](./media/dialog-boxes-overview/find-modeless-dialog-box.png)  
 
-Jednak to zachowanie jest nieco inna, zgodnie z opisem w poniższych sekcjach.  
+Zachowanie jest jednak nieco inne, zgodnie z opisem w poniższych sekcjach.  
   
 #### <a name="opening-a-modeless-dialog-box"></a>Otwieranie niemodalnego okna dialogowego
 
-Niemodalne okno dialogowe jest otwarty przez wywołanie metody <xref:System.Windows.Window.Show%2A> metody.  
+Niemodalne okno dialogowe jest otwierane przez <xref:System.Windows.Window.Show%2A> wywołanie metody.  
 
 [!code-xaml[XAML to define a modeless dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml#L21-L22)]  
  
 [!code-csharp[Opening a modeless dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs?range=1-10,65-76,194-195)]
 [!code-vb[Openng a modeless dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb?range=1-9,18-23,131,132)]  
 
-W odróżnieniu od <xref:System.Windows.Window.ShowDialog%2A>, <xref:System.Windows.Window.Show%2A> zwraca natychmiast. W związku z tym wywoływania okna nie wiadomo, kiedy niemodalnego okna dialogowego jest zamknięty i, w związku z tym, nie może określić, kiedy należy sprawdzić wyniku okna dialogowego lub pobieranie danych z okna dialogowego do dalszego przetwarzania. Okno dialogowe musi utworzyć alternatywny sposób, aby zwrócić dane do wywoływania okna do przetworzenia.  
+W przeciwieństwie <xref:System.Windows.Window.Show%2A> do <xref:System.Windows.Window.ShowDialog%2A>, zwraca natychmiast. W związku z tym okno wywołujące nie może stwierdzić, kiedy okno dialogowe niemodalne jest zamknięte i w związku z tym nie wie, kiedy sprawdzać wynik okna dialogowego lub pobrać dane z okna dialogowego w celu dalszej obróbki. Zamiast tego okno dialogowe musi utworzyć alternatywny sposób zwrócenia danych do okna wywołującego w celu przetworzenia.  
   
-#### <a name="processing-data-returned-from-a-modeless-dialog-box"></a>Przetwarzanie dane zwrócone z niemodalnego okna dialogowego  
+#### <a name="processing-data-returned-from-a-modeless-dialog-box"></a>Przetwarzanie danych zwróconych z niemodalnego okna dialogowego  
 
-W tym przykładzie `FindDialogBox` może zwracać jedną lub więcej Znajdź wyniki do głównego okna, w zależności od tekstu wyszukane bez żadnych szczególnych częstotliwość. Podobnie jak w przypadku modalne okno dialogowe, niemodalne okno dialogowe może zwrócić wyniki za pomocą właściwości. Jednak okno, które jest właścicielem okna dialogowego musi wiedzieć, kiedy mają być sprawdzane tych właściwości. Jest jednym ze sposobów, aby włączyć tę opcję dla okna dialogowego zaimplementować zdarzenie, które jest wywoływane zawsze wtedy, gdy zostanie znaleziony tekst. `FindDialogBox` implementuje `TextFoundEvent` w tym celu, który po raz pierwszy wymaga delegata.  
+W tym przykładzie `FindDialogBox` może zwrócić jeden lub więcej wyników wyszukiwania do okna głównego, w zależności od wyszukiwanego tekstu bez żadnej konkretnej częstotliwości. Podobnie jak w przypadku modalnego okna dialogowego, niemodalne okno dialogowe może zwracać wyniki przy użyciu właściwości. Jednak okno, które jest właścicielem okna dialogowego, musi wiedzieć, kiedy należy sprawdzić te właściwości. Jednym ze sposobów na włączenie tego okna dialogowego jest zaimplementowanie zdarzenia, które jest zgłaszane po każdym znalezieniu tekstu. `FindDialogBox``TextFoundEvent` implementuje do tego celu, który najpierw wymaga delegata.  
 
 [!code-csharp[The TextFoundEventHandler delegate](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/TextFoundEventHandler.cs)]
 [!code-vb[The TextFoundEventHandler delegate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/TextFoundEventHandler.vb)]  
 
-Za pomocą `TextFoundEventHandler` delegować, `FindDialogBox` implementuje `TextFoundEvent`.
+Przy użyciu `TextFoundEventHandler` `FindDialogBox` delegata implementuje. `TextFoundEvent`
   
 [!code-csharp[The TextFound event](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-17,125-126)]
 [!code-vb[The TextFound event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-15,102-103)]
 
-W związku z tym `Find` może zgłosić zdarzenie, gdy zostanie znaleziony w wynikach wyszukiwania.  
+W związku z `Find` tym, może zgłosić zdarzenie po znalezieniu wyniku wyszukiwania.  
   
 [!code-csharp[Raising the TextFound event](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-9,50-52,91-94,124-127)]
 [!code-vb[Raising the TextFound event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-9,15,60-64,102-103)]  
 
-Okno właściciela musi zarejestrować się i obsługiwać to zdarzenie.
+Okno właściciela musi być następnie zarejestrowane w usłudze i obsłużyć to zdarzenie.
 
 [!code-csharp[Registering and handling the event](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs?range=1-10,184-195)]
 [!code-vb[Registering and handling the event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb?range=1-9,126-132)]  
 
 #### <a name="closing-a-modeless-dialog-box"></a>Zamykanie niemodalnego okna dialogowego
 
-Ponieważ <xref:System.Windows.Window.DialogResult%2A> musi być ustawiony, może zostać zamknięty niemodalnego okna dialogowego za pomocą systemu zapewniają mechanizmy, w tym następujące:  
+Ponieważ <xref:System.Windows.Window.DialogResult%2A> nie musi być ustawiony, niemodalne okno dialogowe można zamknąć przy użyciu mechanizmów zapewniania systemu, w tym następujących:  
   
-- Klikając **Zamknij** przycisk na pasku tytułu.  
+- Kliknij przycisk **Zamknij** na pasku tytułu.  
   
-- Naciskając klawisze ALT + F4.  
+- Naciśnij klawisze ALT + F4.  
   
-- Wybieranie **Zamknij** z **systemu** menu.  
+- Wybierz pozycję **Zamknij** z menu **systemowego** .  
   
-Alternatywnie, można wywołać kod <xref:System.Windows.Window.Close%2A> podczas **Zamknij** przycisku.  
+Alternatywnie kod może wywołać <xref:System.Windows.Window.Close%2A> , gdy kliknięto przycisk **Zamknij** .  
 
 [!code-csharp[Calling the Close method](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-9,119-126)]
 [!code-vb[Calling the Close method](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-9,99-103)]  
@@ -307,4 +307,4 @@ Alternatywnie, można wywołać kod <xref:System.Windows.Window.Close%2A> podcza
 ## <a name="see-also"></a>Zobacz także
 
 - [Okno podręczne — omówienie](../controls/popup-overview.md)
-- [Przykładowe okno dialogowe](https://go.microsoft.com/fwlink/?LinkID=159984)
+- [Przykład okna dialogowego](https://go.microsoft.com/fwlink/?LinkID=159984)

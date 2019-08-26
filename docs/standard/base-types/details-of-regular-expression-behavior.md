@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb43554d53051ce02a296f225c68c74352add5ed
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 7ceee0c228000982be83c79fed2f7af43712b3ae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567482"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963396"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Szczegóły zachowania dotyczącego wyrażeń regularnych
 Aparat wyrażeń regularnych .NET Framework to wsteczny odpowiednik wyrażenia regularnego, który zawiera tradycyjny, Niedeterministyczny aparat usługi Automation (NFA), taki jak używany przez język Perl, Python, Emacs: i TCL. Odróżnia to od szybszego, ale bardziej ograniczone, czyste wyrażenie regularne deterministycznie skończone usługi Automation (DFA), takie jak te, które znajdują się w AWK, egrep lub Lex. Odróżnia to również od standaryzacji, ale wolniejsze, NFAs POSIX. W poniższej sekcji opisano trzy typy aparatów wyrażeń regularnych i wyjaśniono, dlaczego wyrażenia regularne w .NET Framework są implementowane przy użyciu tradycyjnego aparatu NFA.  
@@ -31,7 +31,7 @@ Aparat wyrażeń regularnych .NET Framework to wsteczny odpowiednik wyrażenia r
  Tradycyjne aparaty NFA są preferowane przez programistów, ponieważ oferują większą kontrolę nad dopasowaniem ciągu niż aparaty DFA lub POSIX NFA. Mimo że w najgorszym przypadku mogą one działać wolno, można przełączać je, aby znaleźć dopasowania w liniowym lub wieloznacznym czasie, używając wzorców, które zmniejszają niejasności i ograniczają wycofywanie. Inaczej mówiąc, chociaż silniki NFAją wydajność wymiany dla mocy i elastyczności, w większości przypadków oferuje ona akceptowalną wydajność, jeśli wyrażenie regularne jest dobrze zapisywane i unika przypadków, w których wycofywanie obniża wydajność.  
   
 > [!NOTE]
->  Aby uzyskać informacje o tym, jak spadek wydajności spowodowany przez nadmierne wycofywanie i sposoby rozłożenia wyrażenia regularnego do obejść, zobacz wycofywanie. [](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)  
+> Aby uzyskać informacje o tym, jak spadek wydajności spowodowany przez nadmierne wycofywanie i sposoby rozłożenia wyrażenia regularnego do obejść, zobacz wycofywanie. [](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)  
   
 ## <a name="net-framework-engine-capabilities"></a>Możliwości aparatu .NET Framework  
  Aby skorzystać z zalet tradycyjnego aparatu NFA, aparat wyrażeń regularnych .NET Framework zawiera kompletny zestaw konstrukcji umożliwiających programistom sterownie aparatem wycofywania. Konstrukcje te mogą służyć do szybszego znajdowania dopasowania lub w celu uzyskania określonych rozszerzeń dla innych.  

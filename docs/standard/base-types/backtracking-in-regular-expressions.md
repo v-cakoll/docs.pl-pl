@@ -20,18 +20,18 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 289b6997a4d17463072418fbf17f5f99874f4988
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 0831a22b0c1d3333cc37f86a764006c934597390
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "66378167"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968560"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Śledzenie wsteczne w wyrażeniach regularnych
 <a name="top"></a>Wycofywanie występuje, gdy wzorzec wyrażenia regularnego zawiera opcjonalne [Kwantyfikatory](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) lub [konstrukcje warunkowe](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), a aparat wyrażeń regularnych powraca do poprzedniego zapisanego stanu, aby kontynuować wyszukiwanie zgodności. Wycofywanie stanowi podstawę dużych możliwości wyrażeń regularnych, ponieważ dzięki niemu wyrażenia oferują duże możliwości i są elastyczne, a także umożliwiają dopasowywanie bardzo złożonych wzorców. Jednocześnie te możliwości są obciążone kosztami. Wycofywanie często jest najważniejszym czynnikiem wpływającym na wydajność aparatu wyrażeń regularnych. Na szczęście deweloper ma kontrolę nad zachowaniem aparatu wyrażeń regularnych i sposobem użycia wycofywania. W tym temacie opisano zasadę działania wycofywania i możliwości sterowania nim.  
   
 > [!NOTE]
->  Ogólnie rzecz biorąc, Niedeterministyczny usługi Automation (NFA), taki jak aparat wyrażeń regularnych programu .NET, jest odpowiedzialny za efektywne, szybkie wyrażenia regularne na deweloperach.  
+> Ogólnie rzecz biorąc, Niedeterministyczny usługi Automation (NFA), taki jak aparat wyrażeń regularnych programu .NET, jest odpowiedzialny za efektywne, szybkie wyrażenia regularne na deweloperach.  
   
  Ten temat zawiera następujące sekcje:  
   
@@ -133,7 +133,7 @@ ms.locfileid: "66378167"
  Począwszy od .NET Framework 4,5, można ustawić wartość limitu czasu reprezentującą najdłuższy interwał, przez który aparat wyrażeń regularnych będzie wyszukiwać pojedyncze dopasowanie, zanim porzuca próbę i zgłosi <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> wyjątek. Należy określić interwał limitu czasu, dostarczając <xref:System.TimeSpan> wartość <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> do konstruktora dla wyrażeń regularnych wystąpienia. Ponadto każda metoda dopasowania do wzorca statycznego ma Przeciążenie z <xref:System.TimeSpan> parametrem, który pozwala określić wartość limitu czasu. Domyślnie interwał limitu czasu jest ustawiony na <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> , a aparat wyrażeń regularnych nie przekroczy limitu czasu.  
   
 > [!IMPORTANT]
->  Zalecane jest, aby zawsze ustawić interwał limitu czasu, jeśli w wyrażeniu regularnym jest stosowane wycofywanie.  
+> Zalecane jest, aby zawsze ustawić interwał limitu czasu, jeśli w wyrażeniu regularnym jest stosowane wycofywanie.  
   
  <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> Wyjątek oznacza, że aparat wyrażeń regularnych nie mógł znaleźć dopasowania w określonym interwale limitu czasu, ale nie wskazuje dlaczego wyjątek został zgłoszony. Przyczyną może być nadmierne wycofywanie, ale możliwe jest też, że ustawiono zbyt krótki interwał limitu czasu w stosunku do obciążenia systemu w chwili zgłoszenia wyjątku. Podczas obsługi tego wyjątku można określić, że nie mają być wykonywane kolejne porównania z ciągiem wejściowym, albo zwiększyć interwał limitu czasu i ponowić próbę wykonania operacji dopasowywania.  
   

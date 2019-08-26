@@ -13,12 +13,12 @@ ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
-ms.openlocfilehash: c782ab0ce5886a95c8c914930d80d66b4839b9b8
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 8d887bb32d1bdd398353d00aba16c2cc8adfcacb
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "64634721"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988819"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Najlepsze rozwiązania dotyczące wyrażeń regularnych w programie .NET
 <a name="top"></a>Aparat wyrażeń regularnych w programie .NET to zaawansowane, w pełni funkcjonalne narzędzie, które przetwarza tekst na podstawie dopasowania do wzorców zamiast porównywania i dopasowywania tekstu w postaci literału. W większości przypadków dopasowanie do wzorca przebiega szybko i skutecznie. Jednak w niektórych przypadkach aparat wyrażeń regularnych może okazać się bardzo wolny. W skrajnych przypadkach może nawet pozornie przestać odpowiadać, ponieważ przetwarza stosunkowo mało danych wejściowych w ciągu kilku godzin lub nawet dni.  
@@ -54,7 +54,7 @@ ms.locfileid: "64634721"
  Ostatni typ tekstu jest szczególnie problematyczny dla wyrażeń regularnych, które zostały napisane do obsługi ograniczonych danych wejściowych. Jeśli to wyrażenie regularne opiera się również na rozbudowanej operacji wycofywania, aparat wyrażeń regularnych może poświęcać niezależny czas (w niektórych przypadkach, wiele godzin lub dni) przetwarzanie pozornie niewielkiej ilości tekstu. [](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)  
   
 > [!WARNING]
->  W poniższym przykładzie użyto wyrażenia regularnego, które jest podatne na nadmierne korzystanie z wycofywania, przez co istnieje duże prawdopodobieństwo odrzucenia prawidłowych adresów e-mail. Nie należy stosować go w procedurze weryfikacji adresów e-mail. Jeśli chcesz, aby wyrażenie regularne, które sprawdza poprawność adresów e-mail [, zapoznaj się z tematem How to: Sprawdź, czy ciągi są w prawidłowym](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)formacie poczty e-mail.  
+> W poniższym przykładzie użyto wyrażenia regularnego, które jest podatne na nadmierne korzystanie z wycofywania, przez co istnieje duże prawdopodobieństwo odrzucenia prawidłowych adresów e-mail. Nie należy stosować go w procedurze weryfikacji adresów e-mail. Jeśli chcesz, aby wyrażenie regularne, które sprawdza poprawność adresów e-mail [, zapoznaj się z tematem How to: Sprawdź, czy ciągi są w prawidłowym](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)formacie poczty e-mail.  
   
  Rozważmy na przykład bardzo często używane, ale wyjątkowo problematyczne wyrażenie regularne służące do weryfikacji aliasów adresów e-mail. Wyrażenie `^[0-9A-Z]([-.\w]*[0-9A-Z])*$` regularne jest zapisywane w celu przetworzenia, co oznacza, że jest to prawidłowy adres e-mail, który składa się z znaku alfanumerycznego, po którym następuje zero lub więcej znaków, które mogą być alfanumeryczne, kropki lub łączniki. Wyrażenie regularne musi być zakończone znakiem alfanumerycznym. Jednak, jak pokazuje poniższy przykład, mimo że wyrażenie regularne obsługuje z łatwością prawidłowe dane wejściowe, jego wydajność jest nieefektywna podczas przetwarzania niemal prawidłowych danych wejściowych.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "64634721"
  W serca. Model obiektów wyrażeń regularnych sieci jest <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> klasą, która reprezentuje aparat wyrażeń regularnych. Często jeden największy czynnik wpływający na wydajność wyrażeń regularnych jest sposobem, w <xref:System.Text.RegularExpressions.Regex> jaki aparat jest używany. Definiowanie wyrażenia regularnego polega na ścisłym sprzęganiu aparatu wyrażeń regularnych z wzorcem wyrażenia regularnego. Ten proces sprzęgania, niezależnie od tego, czy <xref:System.Text.RegularExpressions.Regex> obejmuje utworzenie wystąpienia obiektu przez przekazanie jego konstruktora wzorca wyrażenia regularnego, czy wywołanie metody statycznej przez przekazanie jej wzorca wyrażenia regularnego wraz z ciągiem do analizy, jest z konieczności kosztowna.  
   
 > [!NOTE]
->  Aby zapoznać się z bardziej szczegółowym omówieniem implikacji wydajności przy użyciu interpretowanych i skompilowanych [wyrażeń regularnych, zobacz Optymalizowanie wydajności wyrażeń regularnych, część II: Przejęcie opłaty](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) za wycofywanie w blogu zespołu BCL.  
+> Aby zapoznać się z bardziej szczegółowym omówieniem implikacji wydajności przy użyciu interpretowanych i skompilowanych [wyrażeń regularnych, zobacz Optymalizowanie wydajności wyrażeń regularnych, część II: Przejęcie opłaty](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) za wycofywanie w blogu zespołu BCL.  
   
  Można sprzęgnąć aparat wyrażeń regularnych z konkretnym wzorcem wyrażenia regularnego, a następnie użyć aparatu, aby dopasować tekst na kilka sposobów:  
   
@@ -93,7 +93,7 @@ ms.locfileid: "64634721"
  Sposób, w jaki są wywoływane metody dopasowywania wyrażeń regularnych, może mieć znaczący wpływ na działanie aplikacji. W poniższych sekcjach omówiono, kiedy używać wywołań metod statycznych oraz interpretowanych i skompilowanych wyrażeń regularnych, aby poprawić wydajność aplikacji.  
   
 > [!IMPORTANT]
->  Jeśli to samo wyrażenie regularne jest używane wielokrotnie w wywołaniach metod lub jeśli obiekty wyrażeń regularnych są często używane w aplikacji, sposób wywoływania metody (statyczny, interpretowany, skompilowany) znacząco wpływa na wydajność.  
+> Jeśli to samo wyrażenie regularne jest używane wielokrotnie w wywołaniach metod lub jeśli obiekty wyrażeń regularnych są często używane w aplikacji, sposób wywoływania metody (statyczny, interpretowany, skompilowany) znacząco wpływa na wydajność.  
   
 ### <a name="static-regular-expressions"></a>Statyczne wyrażenia regularne  
  Statyczne metody wyrażeń regularnych są zalecane jako alternatywa dla wielokrotnego tworzenia wystąpienia obiektu wyrażenia regularnego z tym samym wyrażeniem regularnym. W przeciwieństwie do wzorców wyrażeń regularnych używanych przez obiekty wyrażeń regularnych, kody operacji lub skompilowana składnia języka Microsoft Intermediate Language (MSIL) z wzorców używanych w wywołaniach metod wystąpień są buforowane wewnętrznie przez aparat wyrażeń regularnych.  
@@ -177,7 +177,7 @@ ms.locfileid: "64634721"
  Zazwyczaj aparat wyrażeń regularnych używa progresji liniowej do przechodzenia przez ciąg wejściowy i porównywania go ze wzorcem wyrażenia regularnego. Jednak gdy nieokreślone Kwantyfikatory, takie `*`jak `+`, i `?` są używane we wzorcu wyrażenia regularnego, aparat wyrażeń regularnych może dać część udanych częściowych dopasowań i powrócić do wcześniej zapisanego stanu Aby wyszukać pomyślne dopasowanie dla całego wzorca. Proces ten jest znany pod nazwą wycofywania.  
   
 > [!NOTE]
->  Aby uzyskać więcej informacji na temat wycofywania, zobacz [Szczegóły zachowania wyrażenia regularnego](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) i wycofywania. [](../../../docs/standard/base-types/backtracking-in-regular-expressions.md) Aby uzyskać szczegółowe omówienie wycofywania, zobacz [Optymalizowanie wydajności wyrażeń regularnych, część II: Przejęcie opłaty](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) za wycofywanie w blogu zespołu BCL.  
+> Aby uzyskać więcej informacji na temat wycofywania, zobacz [Szczegóły zachowania wyrażenia regularnego](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) i wycofywania. [](../../../docs/standard/base-types/backtracking-in-regular-expressions.md) Aby uzyskać szczegółowe omówienie wycofywania, zobacz [Optymalizowanie wydajności wyrażeń regularnych, część II: Przejęcie opłaty](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) za wycofywanie w blogu zespołu BCL.  
   
  Obsługa wycofywania daje wyrażeniom regularnym duże możliwości i elastyczność. Dodatkowo odpowiedzialność za kontrolowanie operacji aparatu wyrażeń regularnych spada na deweloperów wyrażeń regularnych. Ponieważ deweloperzy często nie są tego świadomi, błędne użycie wycofywania lub nadmierne poleganie na wycofywaniu często odgrywa najbardziej znaczącą rolę w zmniejszeniu wydajności wyrażeń regularnych. W scenariuszu najgorszego przypadku czas wykonywania może podwajać się dla każdego dodatkowego znaku w ciągu wejściowym. W rzeczywistości przy nadmiernym wykorzystaniu wycofywania łatwo jest stworzyć programowy odpowiednik pętli nieskończonej, jeżeli dane wejściowe niemal pasują do wzorca wyrażenia regularnego; przetwarzanie relatywnie krótkiego ciągu wejściowego może zająć aparatowi wyrażeń regularnych kilka godzin, a nawet dni.  
   
@@ -200,7 +200,7 @@ ms.locfileid: "64634721"
  W wielu przypadkach wycofywanie jest niezbędne dla dopasowania wzorca wyrażenia regularnego do tekstu wejściowego. Należy pamiętać, że nadmierne używanie wycofywania może poważnie obniżyć wydajność i stworzyć wrażanie, ze aplikacja przestała odpowiadać. W szczególności ma to miejsce, kiedy kwantyfikatory są zagnieżdżane i tekst, który pasuje do zewnętrznego podwyrażenia, jest podzbiorem tekstu, który pasuje do wewnętrznego podwyrażenia.  
   
 > [!WARNING]
->  Oprócz unikania nadmiernego wykorzystania wycofywania należy używać funkcji limitu czasu, aby zagwarantować, że nadmierne używanie wycofywania nie obniży poważnie wydajności wyrażeń regularnych. Aby uzyskać więcej informacji, zobacz sekcję [użycie wartości limitu czasu](#Timeouts) .  
+> Oprócz unikania nadmiernego wykorzystania wycofywania należy używać funkcji limitu czasu, aby zagwarantować, że nadmierne używanie wycofywania nie obniży poważnie wydajności wyrażeń regularnych. Aby uzyskać więcej informacji, zobacz sekcję [użycie wartości limitu czasu](#Timeouts) .  
   
  Na przykład wzorzec `^[0-9A-Z]([-.\w]*[0-9A-Z])*\$$` wyrażenia regularnego jest przeznaczony do dopasowania do numeru części, który składa się z co najmniej jednego znaku alfanumerycznego. Jakiekolwiek dodatkowe znaki mogą być znakami alfanumerycznymi, łącznikami, podkreśleniami lub kropkami, ale ostatni znak musi być alfanumeryczny. Znak dolara przerywa numer części. W niektórych przypadkach ten wzorzec wyrażenia regularnego może wykazywać bardzo niską wydajność, ponieważ Kwantyfikatory są zagnieżdżone, a ponieważ `[0-9A-Z]` Podwyrażenie jest podzbiorem podwyrażenia `[-.\w]*`.  
   

@@ -1,48 +1,48 @@
 ---
-title: Wprowadzenie do C# — interakcyjne samouczki
-description: Dowiedz się, C# w przeglądarce i Rozpocznij pracę ze środowiskiem programistycznym
-ms.date: 01/30/2018
+title: Wprowadzenie do C# interaktywnych samouczków
+description: Zapoznaj się C# z przeglądarką i Rozpocznij pracę z własnym środowiskiem programistycznym
+ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 580339f6724066c9fb33ee734ff35a34081e1426
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 65526dcf04525f3f2afb358a5b6289ff8bba7de8
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634495"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015007"
 ---
 # <a name="introduction-to-c"></a>Wprowadzenie do języka C\#
 
-Wprowadzenie do — Zapraszamy C# samouczków. One rozpoczynać się interakcyjne lekcji, które można uruchomić w przeglądarce.
+Zapraszamy do wprowadzenia do C# samouczków. Rozpoczynają się one od interaktywnych lekcji, które można uruchomić w przeglądarce.
 
-Pierwszy lekcji opisano C# pojęć przy użyciu małych fragmentów kodu. Poznasz podstawy C# składni i sposób pracy z typami danych, takich jak ciągi, liczby i wartości logiczne. To wszystkie interaktywne, a użytkownik będzie pisanie i uruchamianie kodu w ciągu kilku minut. Te lekcje pierwszy założono nie uprzednia umiejętność programowania lub C# języka.
+Pierwsze lekcje objaśniają C# koncepcje dotyczące korzystania z małych fragmentów kodu. Poznasz podstawy C# składni i sposób pracy z typami danych, takimi jak ciągi, liczby i wartości logiczne. Jest to wszystko interaktywne, a ty będziesz pisać i uruchamiać kod w ciągu kilku minut. W tych pierwszej lekcji nie założono wcześniej znajomości programowania lub C# języka.
 
-Wprowadzających samouczków po lekcji Witaj, świecie są dostępne, za pomocą środowiska online przeglądarki lub [w środowisku projektowym lokalnego](local-environment.md). Na koniec każdego samouczka zdecyduj, czy chcesz kontynuować z następnej lekcji online lub na własnym komputerze. Brak łącza, aby skonfigurować środowisko i przejdź do następnego samouczka na komputerze.
+Wszystkie samouczki wprowadzające po lekcji Hello world są dostępne przy użyciu przeglądarki online lub [własnego lokalnego środowiska deweloperskiego](local-environment.md). Na końcu każdego samouczka zdecyduje się, czy chcesz przejść do następnej lekcji w trybie online, czy na własnej maszynie. Istnieją linki ułatwiające skonfigurowanie środowiska i kontynuowanie następnego samouczka na komputerze.
 
 ## <a name="hello-worldhello-worldyml"></a>[Hello World](hello-world.yml)
 
-W [Witaj, świecie](hello-world.yml) samouczka, utworzysz najbardziej podstawowym C# program. Dowiesz się o `string` typu i sposób pracy z tekstem.
+W samouczku [Hello World](hello-world.yml) utworzysz najbardziej podstawowy C# program. Poznasz `string` typ i sposób pracy z tekstem.
 
 ## <a name="numbers-in-cnumbers-in-csharpyml"></a>[Liczby w języku C#](numbers-in-csharp.yml)
 
-W [liczby w elemencie C# ](numbers-in-csharp.yml) samouczka, dowiesz się, jak komputery przechowujące liczby oraz sposób wykonywania obliczeń na różne typy liczbowe. Poznasz podstawy zaokrąglania oraz sposób wykonywania obliczeń matematycznych za pomocą C#. W tym samouczku jest również dostępna [do uruchomienia lokalnie na swojej maszynie](numbers-in-csharp-local.md).
+W [numerach w C# ](numbers-in-csharp.yml) samouczku dowiesz się, jak komputery są przechowywane w liczbie i jak wykonywać obliczenia przy użyciu różnych typów liczbowych. Poznasz podstawy zaokrąglania i sposób wykonywania obliczeń matematycznych za pomocą C#. Ten samouczek jest również dostępny [do uruchamiania lokalnego na komputerze](numbers-in-csharp-local.md).
 
-W tym samouczku założono, że zakończono [Witaj, świecie](hello-world.yml) lekcji.
+W tym samouczku założono, że zakończono lekcji [Witaj świecie](hello-world.yml) .
 
 ## <a name="branches-and-loopsbranches-and-loopsyml"></a>[Gałęzie i pętle](branches-and-loops.yml)
 
-[Gałęzie i pętle](branches-and-loops.yml) samouczek omawia podstawowe informacje dotyczące wybierania różnych ścieżek wykonywania kodu na podstawie wartości przechowywane w zmiennych. Poznasz podstawy przepływu sterowania, która jest podstawą jak programy podejmowanie decyzji i wybierz różne akcje. W tym samouczku jest również dostępna [do uruchomienia lokalnie na swojej maszynie](branches-and-loops-local.md).
+Samouczek [rozgałęzienia i pętle](branches-and-loops.yml) uczy się podstaw wyboru różnych ścieżek wykonywania kodu na podstawie wartości przechowywanych w zmiennych. Nauczysz się podstaw przepływu sterowania, który jest podstawą sposobu podejmowania decyzji przez programy i wybierania różnych akcji. Ten samouczek jest również dostępny [do uruchamiania lokalnego na komputerze](branches-and-loops-local.md).
 
-W tym samouczku założono, że zakończono [Witaj, świecie](hello-world.yml) i [liczby w elemencie C# ](numbers-in-csharp.yml) lekcje.
+W tym samouczku przyjęto założenie, że zakończysz [Witaj świecie](hello-world.yml) i [numery w C# ](numbers-in-csharp.yml) lekcji.
 
-## <a name="list-collectionlist-collectionyml"></a>[Lista kolekcji](list-collection.yml)
+## <a name="list-collectionlist-collectionyml"></a>[Kolekcja list](list-collection.yml)
 
-[Listy kolekcji](list-collection.yml) lekcji przedstawi Przewodnik po typ kolekcji listy, który przechowuje sekwencji danych. Dowiesz się, jak dodać i usunąć elementy, wyszukiwać elementy i sortowanie listy. Dowiesz się o różnych rodzajów list. W tym samouczku jest również dostępna [do uruchomienia lokalnie na swojej maszynie](arrays-and-collections.md).
+Lekcja [kolekcji list](list-collection.yml) zawiera Przewodnik typu kolekcji list, który przechowuje sekwencje danych. Dowiesz się, jak dodawać i usuwać elementy, wyszukiwać elementy i sortować listy. Poznasz różne rodzaje list. Ten samouczek jest również dostępny [do uruchamiania lokalnego na komputerze](arrays-and-collections.md).
 
-Ten samouczek zakłada, Zakończono lekcje wymienionych powyżej.
+W tym samouczku założono, że zostały zakończone lekcje wymienione powyżej.
 
 ## <a name="introduction-to-classesintroduction-to-classesmd"></a>[Wprowadzenie do klas](introduction-to-classes.md)
 
-W tym samouczku końcowego jest dostępna tylko do uruchamiania na komputerze przy użyciu własnego lokalnego środowiska deweloperskiego i .NET Core.
-Można będzie tworzenie aplikacji konsolowej, a podstawowe funkcje zorientowane obiektowo, które są częścią C# języka.
+Ten końcowy samouczek jest dostępny tylko do uruchamiania na komputerze przy użyciu własnego lokalnego środowiska deweloperskiego i platformy .NET Core.
+Utworzysz aplikację konsolową i zobaczysz podstawowe funkcje zorientowane obiektowo, które są częścią tego C# języka.
 
-W tym samouczku przyjęto założenie, zostały ukończone online wprowadzających samouczków i po zainstalowaniu [zestawu .NET Core SDK](https://www.microsoft.com/net/download) i [programu Visual Studio Code](https://code.visualstudio.com/).
+W tym samouczku założono, że zakończono pracę z samouczkami wprowadzającymi w trybie online, a zainstalowano [zestaw .NET Core SDK](https://www.microsoft.com/net/download) i [Visual Studio Code](https://code.visualstudio.com/).

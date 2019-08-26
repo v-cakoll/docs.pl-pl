@@ -1,33 +1,28 @@
-- name: Formanty formularzy systemu Windows
+- name: Kontrolki Windows Forms
   href: index.md
   items:
-    - name: Rozmieszczanie formantów na formularzach systemu Windows
-      href: arranging-controls-on-windows-forms.md
+    - name: Rozmieszczanie kontrolek na formularzach Windows Forms
       items:
-        - name: 'Instrukcje: wyrównywanie kontrolek na formularzach systemu Windows'
+        - name: 'Instrukcje: Wyrównywanie wielu kontrolek'
           href: how-to-align-multiple-controls-on-windows-forms.md
-        - name: 'Instrukcje: kotwiczenie kontrolek na formularzach systemu Windows'
+        - name: 'Instrukcje: Kotwiczenie kontrolek'
           href: how-to-anchor-controls-on-windows-forms.md
-        - name: 'Instrukcje: kopiowanie kontrolek pomiędzy formularzami systemu Windows'
-          href: how-to-copy-controls-between-windows-forms.md
-        - name: 'Instrukcje: dokowanie kontrolek w Formularzach systemu Windows'
+        - name: 'Instrukcje: Dokowanie kontrolek'
           href: how-to-dock-controls-on-windows-forms.md
-        - name: 'Instrukcje: tworzenie warstw obiektów na formularzach systemu Windows'
+        - name: 'Instrukcje: Obiekty układu'
           href: how-to-layer-objects-on-windows-forms.md
-        - name: 'Instrukcje: blokowanie kontrolek do formularzy systemu Windows'
+        - name: 'Instrukcje: Blokowanie kontrolek'
           href: how-to-lock-controls-to-windows-forms.md
-        - name: 'Instrukcje: kontrolki pozycji na formularzach systemu Windows'
+        - name: 'Instrukcje: Pozycjonowanie kontrolek'
           href: how-to-position-controls-on-windows-forms.md
-        - name: 'Instrukcje: zmienianie rozmiaru kontrolek na formularzach systemu Windows'
+        - name: 'Instrukcje: Zmiana rozmiaru kontrolek'
           href: how-to-resize-controls-on-windows-forms.md
         - name: 'Instrukcje: ustawianie opcji siatki dla wszystkich formularzy systemu Windows'
           href: how-to-set-grid-options-for-all-windows-forms.md
-        - name: 'Instrukcje: ustawianie kolejności tabulacji na formularzach systemu Windows'
+        - name: 'Instrukcje: Ustawianie kolejności tabulacji'
           href: how-to-set-the-tab-order-on-windows-forms.md
-        - name: 'Przewodnik: rozmieszczanie kontrolek w formularzach systemu Windows za pomocą linii przyciągania'
+        - name: 'Przewodnik: Rozmieszczanie kontrolek przy użyciu linii wyrównania'
           href: walkthrough-arranging-controls-on-windows-forms-using-snaplines.md
-        - name: 'Instrukcje: aranżowanie kontrolek z liniami przyciągania oraz siatki w formularzach systemu Windows'
-          href: how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms.md
         - name: 'Instrukcje: ponowne przypisywanie istniejących kontrolek do innego elementu nadrzędnego'
           href: how-to-reassign-existing-controls-to-a-different-parent.md
         - name: 'Przewodnik: tworzenie kontrolek formularzy systemu Windows z uzupełnieniem, marginesami oraz właściwościami AutoSize'
@@ -35,15 +30,15 @@
     - name: Umieszczanie formantów na formularzach systemu Windows
       href: putting-controls-on-windows-forms.md
       items:
-        - name: 'Instrukcje: dodawanie kontrolek do formularzy systemu Windows'
+        - name: 'Instrukcje: Dodawanie kontrolek'
           href: how-to-add-controls-to-windows-forms.md
-        - name: 'Instrukcje: dodawanie kontrolek bez interfejsu użytkownika do formularzy systemu Windows'
+        - name: 'Instrukcje: Dodawanie kontrolek bez interfejsu użytkownika'
           href: how-to-add-controls-without-a-user-interface-to-windows-forms.md
         - name: 'Instrukcje: dodawanie do lub usuwanie z kolekcji kontrolek w czasie wykonywania'
           href: how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md
         - name: 'Przewodnik: automatyczne zapełnianie Przybornika składnikami niestandardowymi'
           href: walkthrough-automatically-populating-the-toolbox-with-custom-components.md
-        - name: 'Instrukcje: dodawanie kontrolek ActiveX do formularzy systemu Windows'
+        - name: 'Instrukcje: Dodawanie kontrolek ActiveX'
           href: how-to-add-activex-controls-to-windows-forms.md
         - name: Uwagi odnośnie do hostowania kontrolki ActiveX na formularzu systemu Windows
           href: considerations-when-hosting-an-activex-control-on-a-windows-form.md
@@ -140,7 +135,7 @@
               href: how-to-designate-a-windows-forms-button-as-the-cancel-button.md
             - name: 'Instrukcje: wyznaczanie przycisku formularzy systemu Windows na przycisk Anuluj przy użyciu narzędzia Projektant'
               href: designate-a-wf-button-as-the-cancel-button-using-the-designer.md
-            - name: 'Instrukcje: odpowiadanie na kliknięcia przycisków formularzy systemu Windows'
+            - name: 'Instrukcje: Reagowanie na kliknięcia kontrolki Button'
               href: how-to-respond-to-windows-forms-button-clicks.md
             - name: Sposoby wyboru kontrolki przycisku formularzy systemu Windows
               href: ways-to-select-a-windows-forms-button-control.md
@@ -149,9 +144,9 @@
           items:
             - name: 'CheckBox, kontrolka — omówienie'
               href: checkbox-control-overview-windows-forms.md
-            - name: 'Instrukcje: odpowiadanie na kliknięcia elementu CheckBox formularzy systemu Windows'
+            - name: 'Instrukcje: Reagowanie na kliknięcia kontrolki CheckBox'
               href: how-to-respond-to-windows-forms-checkbox-clicks.md
-            - name: 'Instrukcje: ustawianie opcji za pomocą kontrolek CheckBox formularzy systemu Windows'
+            - name: 'Instrukcje: Ustawianie opcji za pomocą kontrolek CheckBox'
               href: how-to-set-options-with-windows-forms-checkbox-controls.md
         - name: 'CheckedListBox, kontrolka'
           href: checkedlistbox-control-windows-forms.md
@@ -330,9 +325,9 @@
                   href: how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md
                 - name: 'Instrukcje: dodawanie niepowiązanych kolumn do powiązanej z danymi kontrolki DataGridView formularzy systemu Windows'
                   href: unbound-column-to-a-data-bound-datagridview.md
-                - name: 'Instrukcje: powiązanie obiektów z kontrolkami DataGridView formularzy systemu Windows'
+                - name: 'Instrukcje: Wiązanie obiektów z kontrolkami DataGridView'
                   href: how-to-bind-objects-to-windows-forms-datagridview-controls.md
-                - name: 'Instrukcje: uzyskiwanie dostępu do obiektów powiązanych z wierszami kontrolki DataGridView formularzy systemu Windows'
+                - name: 'Instrukcje: Uzyskiwanie dostępu do obiektów powiązanych z wierszami kontrolki DataGridView'
                   href: how-to-access-objects-bound-to-windows-forms-datagridview-rows.md
                 - name: 'Instrukcje: uzyskiwanie dostępu do obiektów na liście rozwijanej DataGridViewComboBoxCell formularzy systemu Windows'
                   href: access-objects-in-a-wf-datagridviewcomboboxcell-drop-down-list.md
@@ -462,7 +457,7 @@
           items:
             - name: 'DomainUpDown, kontrolka — omówienie'
               href: domainupdown-control-overview-windows-forms.md
-            - name: 'Instrukcje: dodawanie w sposób programowy elementów do kontrolki DomainUpDown formularzy systemu Windows'
+            - name: 'Instrukcje: Programowanie dodawanie elementów do kontrolki DomainUpDown'
               href: how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md
             - name: 'Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki DomainUpDown'
               href: how-to-remove-items-from-windows-forms-domainupdown-controls.md

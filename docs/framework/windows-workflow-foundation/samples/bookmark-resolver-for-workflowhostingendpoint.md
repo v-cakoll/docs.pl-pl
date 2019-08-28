@@ -2,12 +2,12 @@
 title: Program rozpoznawania zakładek dla WorkflowHostingEndpoint
 ms.date: 03/30/2017
 ms.assetid: 97fd5816-935e-4625-ad04-e6f6befa07de
-ms.openlocfilehash: 017c5f959ed109ffe9b5e5c4bf2b9de9d04fdcdb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e5a8adc73ba08007802eeb3b66de27098c688d84
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964941"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044327"
 ---
 # <a name="bookmark-resolver-for-workflowhostingendpoint"></a>Program rozpoznawania zakładek dla WorkflowHostingEndpoint
 W tym przykładzie pokazano, <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> jak można użyć programu <xref:System.ServiceModel.Activities.WorkflowServiceHost> z programem w celu utworzenia wystąpień przepływu pracy.  
@@ -33,8 +33,8 @@ W tym przykładzie pokazano, <xref:System.ServiceModel.Activities.WorkflowHostin
 > [!IMPORTANT]
 > Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\CreationEndpoint`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\CreationEndpoint`

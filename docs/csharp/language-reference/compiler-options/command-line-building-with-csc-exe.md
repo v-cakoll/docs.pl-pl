@@ -5,17 +5,18 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 54306c79bc2856996925756ee4261fbe67692aea
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 9dcc1837ca9c5c1fae3cd6a2a9d03b7e80423627
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606980"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040383"
 ---
 # <a name="command-line-build-with-cscexe"></a>Kompilacja z wiersza polecenia za pomocą pliku CSC. exe
+
 C# Kompilator można wywołać, wpisując nazwę pliku wykonywalnego (*CSC. exe*) w wierszu polecenia.
 
-W przypadku korzystania z okna **wiersz polecenia dla deweloperów dla programu Visual Studio** wszystkie wymagane zmienne środowiskowe są ustawiane dla Ciebie. Aby uzyskać informacje na temat sposobu uzyskiwania dostępu do tego narzędzia, zobacz temat [wiersz polecenia dla deweloperów for Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md) . 
+W przypadku korzystania z okna **wiersz polecenia dla deweloperów dla programu Visual Studio** wszystkie wymagane zmienne środowiskowe są ustawiane dla Ciebie. Aby uzyskać informacje na temat sposobu uzyskiwania dostępu do tego narzędzia, zobacz temat [wiersz polecenia dla deweloperów for Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md) .
 
 Jeśli używasz standardowego okna wiersza polecenia, musisz dostosować ścieżkę przed wywołaniem pliku *CSC. exe* z dowolnego podkatalogu na komputerze. Należy również uruchomić *vsvars32. bat* , aby ustawić odpowiednie zmienne środowiskowe do obsługi kompilacji w wierszu polecenia. Aby uzyskać więcej informacji na temat *vsvars32. bat*, w tym instrukcje dotyczące sposobu znajdowania i uruchamiania [, zobacz How to: Ustawianie zmiennych środowiskowych dla wiersza](./how-to-set-environment-variables-for-the-visual-studio-command-line.md)polecenia programu Visual Studio.
 
@@ -26,7 +27,7 @@ Można również użyć programu MSBuild do programistycznego kompilowania C# pr
 Plik wykonywalny *CSC. exe* zazwyczaj znajduje się w folderze Microsoft. NET\Framework\\ *\<w wersji >* w katalogu *systemu Windows* . Jego lokalizacja może się różnić w zależności od dokładnej konfiguracji określonego komputera. Jeśli na komputerze zainstalowano więcej niż jedną wersję .NET Framework, znajdziesz wiele wersji tego pliku. Aby uzyskać więcej informacji na temat takich instalacji, zobacz [How to: Określanie, które wersje .NET Framework są zainstalowane](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).
 
 > [!TIP]
->  Podczas kompilowania projektu przy użyciu programu Visual Studio IDE, można wyświetlić polecenie **CSC** i skojarzone z nim opcje kompilatora w oknie **danych wyjściowych** . Aby wyświetlić te informacje, postępuj zgodnie z [instrukcjami w temacie How to: Wyświetlanie, zapisywanie i konfigurowanie plików](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log) dziennika kompilacji, aby zmienić poziom szczegółowości danych dziennika na **normalny** lub **szczegółowy**. Po odbudowaniu projektu Przeszukaj okno **dane wyjściowe** dla **CSC** , aby znaleźć wywołanie C# kompilatora.
+> Podczas kompilowania projektu przy użyciu programu Visual Studio IDE, można wyświetlić polecenie **CSC** i skojarzone z nim opcje kompilatora w oknie **danych wyjściowych** . Aby wyświetlić te informacje, postępuj zgodnie z [instrukcjami w temacie How to: Wyświetlanie, zapisywanie i konfigurowanie plików](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log) dziennika kompilacji, aby zmienić poziom szczegółowości danych dziennika na **normalny** lub **szczegółowy**. Po odbudowaniu projektu Przeszukaj okno **dane wyjściowe** dla **CSC** , aby znaleźć wywołanie C# kompilatora.
 
  **W tym temacie**
 
@@ -59,7 +60,7 @@ C# Kompilator używa następujących reguł, gdy interpretuje argumenty podane w
 - Kompiluje *File.Cser* tworzenia *pliku. exe*:
 
 ```console
-csc File.cs 
+csc File.cs
 ```
 
 - Kompiluje plik File.cs *. dll*:

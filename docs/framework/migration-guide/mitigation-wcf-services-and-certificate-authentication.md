@@ -1,58 +1,61 @@
 ---
-title: 'Środki zaradcze: Usługi WCF i uwierzytelnianie certyfikatu'
+title: Środki zaradcze Usługi WCF i uwierzytelnianie certyfikatów
 ms.date: 03/30/2017
 ms.assetid: ef19c91a-b9df-4bf0-a28e-eb1e99c4bc95
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f94cabb482a237395854fcdc91df476c567069c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b6ad11d4295be3a5bfd590d9cef1926f6676f2b1
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599507"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70043227"
 ---
-# <a name="mitigation-wcf-services-and-certificate-authentication"></a>Środki zaradcze: Usługi WCF i uwierzytelnianie certyfikatu
-.NET Framework 4.6 dodaje protokołu TLS 1.1 i TLS 1.2, do listy domyślnych protokołu SSL usługi WCF. Gdy zarówno klienta, jak i serwera zainstalować program .NET Framework 4.6 lub nowszy, protokołu TLS 1.2 jest używana do negocjacji.  
-  
-## <a name="impact"></a>Wpływ  
- Protokół TLS 1.2 nie obsługuje uwierzytelnianie certyfikatu MD5. W rezultacie jeśli klient używa certyfikatu SSL, który używa algorytmu wyznaczania wartości skrótu MD5, klient WCF nie uda się nawiązać usługi WCF. Aby uzyskać więcej informacji, zobacz [środki zaradcze: Usługi WCF i uwierzytelnianie certyfikatu](../../../docs/framework/migration-guide/mitigation-wcf-services-and-certificate-authentication.md).  
-  
-## <a name="mitigation"></a>Ograniczenie  
- Ten problem można obejść, czemu klienta programu WCF można nawiązywać połączenia z serwerem usługi WCF, wykonując następujące czynności:  
-  
-- Zaktualizuj certyfikat, aby nie używać algorytmu MD5. Jest to zalecane rozwiązanie.  
-  
-- Jeśli dynamicznie powiązanie nie jest skonfigurowany w kodzie źródłowym, należy zaktualizować plik konfiguracji aplikacji do używania protokołu TLS 1.1 lub wcześniejszej wersji protokołu. Dzięki temu można w dalszym ciągu używać certyfikatu przy użyciu algorytmu wyznaczania wartości skrótu MD5.  
-  
-    > [!CAUTION]
-    >  To rozwiązanie nie jest zalecane, ponieważ certyfikat przy użyciu algorytmu wyznaczania wartości skrótu MD5 jest uznawany za niebezpieczne.  
-  
-     Następujący plik konfiguracji ma następujące efekty:  
-  
-    ```xml  
-    <configuration>  
-        <system.serviceModel>  
-            <bindings>  
-                <netTcpBinding>  
-                    <binding>  
-                        <security mode= "None|Transport|Message|TransportWithMessageCredential" >  
-                            <transport clientCredentialType="None|Windows|Certificate"  
-                                                protectionLevel="None|Sign|EncryptAndSign"  
-                                                sslProtocols="Ssl3|Tls1|Tls11">  
-                            </transport>  
-                        </security>  
-                    </binding>  
-                </netTcpBinding>  
-            </bindings>  
-        </system.ServiceModel>  
-    </configuration>  
-    ```  
-  
-- Jeśli wiązanie dynamiczne jest skonfigurowany w kodzie źródłowym, należy zaktualizować <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=nameWithType> właściwości, aby korzystała z protokołu TLS 1.1 (<xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=nameWithType>) lub starszej wersji protokołu w kodzie źródłowym.  
-  
-    > [!CAUTION]
-    >  To rozwiązanie nie jest zalecane, ponieważ certyfikat przy użyciu algorytmu wyznaczania wartości skrótu MD5 jest uznawany za niebezpieczne.  
-  
+# <a name="mitigation-wcf-services-and-certificate-authentication"></a>Środki zaradcze Usługi WCF i uwierzytelnianie certyfikatów
+
+.NET Framework 4,6 dodaje protokoły TLS 1,1 i TLS 1,2 do listy domyślnych protokołu SSL WCF. Gdy komputery klienckie i serwery mają zainstalowany .NET Framework 4,6 lub nowszy, protokół TLS 1,2 jest używany do negocjacji.
+
+## <a name="impact"></a>Wpływ
+
+Protokół TLS 1,2 nie obsługuje uwierzytelniania certyfikatów MD5. W związku z tym, jeśli klient korzysta z certyfikatu SSL, który używa algorytmu MD5 do mieszania, klient programu WCF nie będzie mógł nawiązać połączenia z usługą WCF. Aby uzyskać więcej informacji, [Zobacz Ograniczanie: Usługi WCF i uwierzytelnianie](../../../docs/framework/migration-guide/mitigation-wcf-services-and-certificate-authentication.md)certyfikatów.
+
+## <a name="mitigation"></a>Ograniczenie
+
+Ten problem można obejść, aby klient programu WCF mógł połączyć się z serwerem WCF, wykonując jedną z następujących czynności:
+
+- Zaktualizuj certyfikat, aby nie używał algorytmu MD5. Jest to zalecane rozwiązanie.
+
+- Jeśli powiązanie nie jest konfigurowane dynamicznie w kodzie źródłowym, zaktualizuj plik konfiguracji aplikacji tak, aby korzystał z protokołu TLS 1,1 lub starszej wersji. Dzięki temu można nadal używać certyfikatu z algorytmem wyznaczania wartości skrótu MD5.
+
+  > [!CAUTION]
+  > To obejście nie jest zalecane, ponieważ certyfikat z algorytmem wyznaczania wartości skrótu MD5 jest uznawany za niezabezpieczony.
+
+  Następujący plik konfiguracji wykonuje następujące czynności:
+
+  ```xml
+  <configuration>
+      <system.serviceModel>
+          <bindings>
+              <netTcpBinding>
+                  <binding>
+                      <security mode= "None|Transport|Message|TransportWithMessageCredential" >
+                          <transport clientCredentialType="None|Windows|Certificate"
+                                              protectionLevel="None|Sign|EncryptAndSign"
+                                              sslProtocols="Ssl3|Tls1|Tls11">
+                          </transport>
+                      </security>
+                  </binding>
+              </netTcpBinding>
+          </bindings>
+      </system.ServiceModel>
+  </configuration>
+  ```
+
+- Jeśli powiązanie jest konfigurowane dynamicznie w kodzie źródłowym, należy zaktualizować <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=nameWithType> Właściwość tak, aby używała protokołu TLS 1,1 (<xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=nameWithType>) lub starszej wersji w kodzie źródłowym.
+
+  > [!CAUTION]
+  > To obejście nie jest zalecane, ponieważ certyfikat z algorytmem wyznaczania wartości skrótu MD5 jest uznawany za niezabezpieczony.
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Zmiany środowiska uruchomieniowego](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)

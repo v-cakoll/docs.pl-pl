@@ -2,40 +2,40 @@
 title: Niestandardowe śledzenie
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: fff88c50dd2004d4491e050258ef760c033f6de5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b53b22b485a7ac340821073d2f2914b13a7b7011
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622562"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044301"
 ---
 # <a name="custom-tracking"></a>Niestandardowe śledzenie
-W tym przykładzie pokazano, jak tworzenie niestandardowego uczestnika śledzenia i zapisać zawartość danych śledzenia do konsoli. Ponadto w przykładzie pokazano jak emitowanie <xref:System.Activities.Tracking.CustomTrackingRecord> danych zdefiniowane przez obiekty użytkownika jest wypełniony. Filtry uczestnika śledzenia opartych na konsoli <xref:System.Activities.Tracking.TrackingRecord> obiektów emitowanych przez przepływ pracy korzystający z profilu śledzenia obiekt utworzony w kodzie.
+Ten przykład pokazuje, jak utworzyć niestandardowego uczestnika śledzenia i zapisać zawartość śledzenia danych w konsoli programu. Ponadto przykład pokazuje, jak emitować <xref:System.Activities.Tracking.CustomTrackingRecord> obiekty wypełnione danymi zdefiniowanymi przez użytkownika. Uczestnik śledzenia oparty na konsoli filtruje <xref:System.Activities.Tracking.TrackingRecord> obiekty emitowane przez przepływ pracy przy użyciu obiektu profil śledzenia utworzonego w kodzie.
 
-## <a name="sample-details"></a>Przykład szczegółów
- Windows Workflow Foundation (WF) zapewnia infrastrukturę śledzenia do śledzenia wykonywania wystąpienia przepływu pracy. Środowisko uruchomieniowe śledzenia implementuje wystąpienia przepływu pracy, aby emitować zdarzenia związane z cyklem życia przepływu pracy, zdarzenia z działań przepływu pracy i zdarzenia niestandardowe śledzenia. W poniższej tabeli przedstawiono podstawowe składniki infrastruktury śledzenia.
+## <a name="sample-details"></a>Przykładowe szczegóły
+ Windows Workflow Foundation (WF) oferuje infrastrukturę śledzenia do śledzenia wykonywania wystąpienia przepływu pracy. Środowisko uruchomieniowe śledzenia implementuje wystąpienie przepływu pracy, aby emitować zdarzenia związane z cyklem życia przepływu pracy, zdarzenia z działań przepływu pracy i niestandardowe zdarzenia śledzenia. W poniższej tabeli przedstawiono podstawowe składniki infrastruktury śledzenia.
 
 |Składnik|Opis|
 |---------------|-----------------|
-|Śledzenie czasu wykonywania|Zapewnia infrastrukturę, aby emitować rekordów śledzenia.|
-|Uczestnicy śledzenia|Używa rekordów śledzenia. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] dostarczany z śledzenia uczestnika, który zapisuje rekordy śledzenia jako zdarzenia śledzenie zdarzeń dla Windows (ETW).|
-|Profil śledzenia|Mechanizm filtrowania, który umożliwia śledzenia uczestnika do subskrybowania dla podzbioru rekordów śledzenia emitowane z wystąpienia przepływu pracy.|
+|Śledzenie środowiska uruchomieniowego|Udostępnia infrastrukturę do emisji rekordów śledzenia.|
+|Śledzenie uczestników|Używa rekordów śledzenia. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]dostarcza uczestnika śledzenia, który zapisuje rekordy śledzenia jako zdarzenia śledzenia zdarzeń systemu Windows (ETW).|
+|Profil śledzenia|Mechanizm filtrowania umożliwiający uczestnikom śledzenia subskrybowanie podzbioru rekordów śledzenia emitowanych z wystąpienia przepływu pracy.|
 
- W poniższej tabeli przedstawiono rekordów śledzenia emitowane przez środowisko wykonawcze przepływów pracy.
+ W poniższej tabeli przedstawiono szczegółowe informacje o rekordach śledzenia, które są emitowane przez środowisko uruchomieniowe przepływu pracy.
 
 |Rekord śledzenia|Opis|
 |---------------------|-----------------|
-|Rekordy śledzenia wystąpienia przepływu pracy.|W tym artykule opisano cyklu życia wystąpienia przepływu pracy. Na przykład rekord wystąpienia jest emitowane, gdy przepływ pracy rozpoczyna się lub kończy.|
-|Stan śledzenia rekordów działań.|Szczegóły wykonania działania. Te informacje wskazują stan działania przepływu pracy, takie jak kiedy zaplanowano działania lub po zakończeniu działania lub kiedy zostanie wygenerowany błąd.|
-|Zakładki wznowienie rekordów.|Emitowane przy każdym zakładki w ramach wystąpienie przepływu pracy zostanie wznowione.|
-|Niestandardowe rekordy śledzenia.|Tworzenie przepływu pracy można utworzyć niestandardowe rekordy śledzenia i emitować je w ramach działania niestandardowego.|
+|Rekordy śledzenia wystąpienia przepływu pracy.|Opisuje cykl życia wystąpienia przepływu pracy. Na przykład rekord wystąpienia jest emitowany, gdy przepływ pracy zostanie uruchomiony lub zakończony.|
+|Rekordy śledzenia stanu działania.|Szczegóły wykonywania działania. Te rekordy wskazują stan działania przepływu pracy, np. Kiedy działanie zostało zaplanowane lub gdy działanie zostało zakończone lub gdy zostanie zgłoszony błąd.|
+|Rekord wznowienia zakładki.|Emitowane za każdym razem, gdy zostanie wznowiona Zakładka w wystąpieniu przepływu pracy.|
+|Niestandardowe rekordy śledzenia.|Autor przepływu pracy może tworzyć niestandardowe rekordy śledzenia i emitować je w ramach działania niestandardowego.|
 
- Uczestnik śledzenia subskrybuje dla podzbioru emitowany <xref:System.Activities.Tracking.TrackingRecord> obiektów przy użyciu profilów śledzenia. Profil śledzenia zawiera śledzenia zapytań, zezwalających na subskrypcji dla śledzenia określonego typu rekordu. Śledzenie profile można określić w kodzie lub w konfiguracji.
+ Uczestnik śledzenia subskrybuje podzestaw wyemitowanych <xref:System.Activities.Tracking.TrackingRecord> obiektów przy użyciu profilów śledzenia. Profil śledzenia zawiera kwerendy śledzenia, które umożliwiają subskrybowanie określonego typu rekordu śledzenia. Profile śledzenia można określić w kodzie lub w konfiguracji.
 
-### <a name="custom-tracking-participant"></a>Niestandardowego uczestnika śledzenia
- Uczestnik śledzenia interfejsu API umożliwia rozszerzenie środowiska uruchomieniowego śledzenia z uczestnika śledzenia dostarczone przez użytkownika, który może zawierać niestandardowej logiki do obsługi <xref:System.Activities.Tracking.TrackingRecord> obiektów emitowanych przez środowisko wykonawcze przepływów pracy.
+### <a name="custom-tracking-participant"></a>Uczestnik śledzenia niestandardowego
+ Interfejs API uczestnika śledzenia umożliwia rozszerzenie środowiska uruchomieniowego śledzenia przy użyciu dostarczonego przez użytkownika uczestnika śledzenia, który może <xref:System.Activities.Tracking.TrackingRecord> zawierać logikę niestandardową do obsługi obiektów emitowanych przez środowisko uruchomieniowe przepływu pracy.
 
- Można zapisać do śledzenia uczestnika użytkownik musi implementować <xref:System.Activities.Tracking.TrackingParticipant>. W szczególności <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> metoda musi być implementowana przez uczestnikiem niestandardowe. Ta metoda jest wywoływana, gdy <xref:System.Activities.Tracking.TrackingRecord> są emitowane przez środowisko wykonawcze przepływów pracy.
+ Aby napisać uczestnika śledzenia, należy wdrożyć <xref:System.Activities.Tracking.TrackingParticipant>użytkownika. <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> Metoda musi być implementowana przez uczestnika niestandardowego. Ta metoda jest wywoływana, gdy <xref:System.Activities.Tracking.TrackingRecord> element jest emitowany przez środowisko uruchomieniowe przepływu pracy.
 
 ```csharp
 public abstract class TrackingParticipant
@@ -47,7 +47,7 @@ public abstract class TrackingParticipant
 }
 ```
 
- Pełną śledzenia uczestnika, który jest wdrażany w pliku ConsoleTrackingParticipant.cs. Poniższy przykład kodu jest <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> metodę dla niestandardowego uczestnika śledzenia.
+ Pełny Uczestnik śledzenia jest implementowany w pliku ConsoleTrackingParticipant.cs. Poniższy przykład kodu jest <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> metodą niestandardowego uczestnika śledzenia.
 
 ```csharp
 protected override void Track(TrackingRecord record, TimeSpan timeout)
@@ -93,7 +93,7 @@ protected override void Track(TrackingRecord record, TimeSpan timeout)
 }
 ```
 
- Poniższy przykład kodu dodaje uczestnika konsoli do wywoływania przepływu pracy.
+ Poniższy przykład kodu dodaje uczestnika konsoli do przepływu pracy źródło.
 
 ```csharp
 ConsoleTrackingParticipant customTrackingParticipant = new ConsoleTrackingParticipant()
@@ -107,14 +107,14 @@ WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());
 invoker.Extensions.Add(customTrackingParticipant);
 ```
 
-### <a name="emitting-custom-tracking-records"></a>Emitowanie niestandardowe rekordy śledzenia
- Niniejszy przykład pokazuje także możliwość emisji <xref:System.Activities.Tracking.CustomTrackingRecord> obiektów z działanie niestandardowego przepływu pracy:
+### <a name="emitting-custom-tracking-records"></a>Emitowanie niestandardowych rekordów śledzenia
+ Ten przykład ilustruje również możliwość emisji <xref:System.Activities.Tracking.CustomTrackingRecord> obiektów z niestandardowego działania przepływu pracy:
 
-- <xref:System.Activities.Tracking.CustomTrackingRecord> Obiekty są tworzone i wypełniane przy użyciu danych zdefiniowane przez użytkownika, którego pożądany jest emitowane z rekordem.
+- <xref:System.Activities.Tracking.CustomTrackingRecord> Obiekty są tworzone i wypełniane danymi zdefiniowanymi przez użytkownika, które są wymagane do emisji z rekordem.
 
-- <xref:System.Activities.Tracking.CustomTrackingRecord> Są emitowane przez wywołanie metody śledzenia <xref:System.Activities.ActivityContext>.
+- Jest emitowany przez wywołanie metody <xref:System.Activities.ActivityContext>śledzenia. <xref:System.Activities.Tracking.CustomTrackingRecord>
 
- W poniższym przykładzie pokazano sposób emitować <xref:System.Activities.Tracking.CustomTrackingRecord> obiektów w ramach działań niestandardowych.
+ W poniższym przykładzie pokazano, jak emitować <xref:System.Activities.Tracking.CustomTrackingRecord> obiekty w niestandardowym działaniu.
 
 ```csharp
 // Create the Custom Tracking Record
@@ -133,21 +133,21 @@ context.Track(customRecord);
 
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
 
-1. Za pomocą programu Visual Studio 2010, otwórz plik rozwiązania CustomTrackingSample.sln.
+1. Za pomocą programu Visual Studio 2010 Otwórz plik rozwiązania CustomTrackingSample. sln.
 
 2. Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.
 
-3. Aby uruchomić rozwiązanie, naciśnij kombinację klawiszy CTRL + F5.
+3. Aby uruchomić rozwiązanie, naciśnij klawisze CTRL + F5.
 
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przykłady monitorowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Przykłady monitorowania oprogramowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

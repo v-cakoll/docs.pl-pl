@@ -2,87 +2,90 @@
 title: Anonse — przykład
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: 895043976fd39ac0057c8dbc1c7daf0394393984
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1acf51ebe36872424be1e0fdda65a7d18aa737f2
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002758"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045795"
 ---
 # <a name="announcements-sample"></a>Anonse — przykład
-W tym przykładzie pokazano, jak korzystać z funkcji ogłoszenie funkcji odnajdywania. Anonse Zezwól usługom do wysłania komunikatów Anons, które zawierają metadane dotyczące usługi. Domyślnie ogłoszenie hello jest wysyłany podczas uruchamiania usługi i ogłoszenie bye jest wysyłana, gdy usługa kończy pracę. Anonse te mogą być multiemisji lub mogą być wysyłane point-to-point. W tym przykładzie składa się z dwóch projektów usługi i klienta.  
-  
-## <a name="service"></a>Usługa  
- Ten projekt zawiera Kalkulator samodzielnie hostowanej usługi. W `Main` metoda, host usługi jest tworzona i punkt końcowy usługi jest dodawany do niego. Następnie <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> zostanie utworzony. Aby włączyć anonsów, punkt końcowy ogłoszenie musi zostać dodany do <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>. W tym przypadku standardowy punkt końcowy przy użyciu protokołu UDP multiemisji jest dodawany jako punkt końcowy anonsu. Emituje to anonsów, za pośrednictwem dobrze znanego adresu protokołu UDP.  
-  
+
+Ten przykład pokazuje, jak używać funkcji anonsu funkcji odnajdywania. Anonsy umożliwiają usługom wysyłanie komunikatów anonsu zawierających metadane dotyczące usługi. Domyślnie anons powitalny jest wysyłany podczas uruchamiania usługi i wysyłany jest anons bye po zamknięciu usługi. Anonse mogą być multiemisje lub mogą być wysyłane jako punkt-punkt. Ten przykład składa się z dwóch projektów usługi i klienta.
+
+## <a name="service"></a>Usługa
+
+Ten projekt zawiera samohostowaną usługę kalkulatora. `Main` W metodzie zostanie utworzony host usługi i do niego zostanie dodany punkt końcowy usługi. <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> Następnie jest tworzony. Aby włączyć Anonsy, należy dodać punkt końcowy anonsu do <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>. W tym przypadku standardowym punktem końcowym przy użyciu multiemisji UDP jest dodawany jako punkt końcowy anonsu. Emituje anonse za pośrednictwem dobrze znanego adresu UDP.
+
 ```csharp
-Uri baseAddress = new Uri("http://localhost:8000/" + Guid.NewGuid().ToString());  
-  
-// Create a ServiceHost for the CalculatorService type.  
-using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress))  
-{  
-     serviceHost.AddServiceEndpoint(typeof(ICalculatorService), new WSHttpBinding(), String.Empty);  
-  
-     ServiceDiscoveryBehavior serviceDiscoveryBehavior = new ServiceDiscoveryBehavior();  
-  
-     // Announce the availability of the service over UDP multicast  
-    serviceDiscoveryBehavior.AnnouncementEndpoints.Add(new UdpAnnouncementEndpoint());  
-  
-    // Make the service discoverable over UDP multicast.  
-    serviceHost.Description.Behaviors.Add(serviceDiscoveryBehavior);                  
-    serviceHost.AddServiceEndpoint(new UdpDiscoveryEndpoint());  
-    serviceHost.Open();  
-    // ...  
-}  
-```  
-  
-## <a name="client"></a>Klient  
- W tym projekcie, należy pamiętać, że hosty klienta <xref:System.ServiceModel.Discovery.AnnouncementService>. Ponadto dwa delegaty są rejestrowane zdarzenia. Zdarzenia te określają, klient działanie po odebraniu anonsów online i offline.  
-  
+Uri baseAddress = new Uri("http://localhost:8000/" + Guid.NewGuid().ToString());
+
+// Create a ServiceHost for the CalculatorService type.
+using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress))
+{
+     serviceHost.AddServiceEndpoint(typeof(ICalculatorService), new WSHttpBinding(), String.Empty);
+
+     ServiceDiscoveryBehavior serviceDiscoveryBehavior = new ServiceDiscoveryBehavior();
+
+     // Announce the availability of the service over UDP multicast
+    serviceDiscoveryBehavior.AnnouncementEndpoints.Add(new UdpAnnouncementEndpoint());
+
+    // Make the service discoverable over UDP multicast.
+    serviceHost.Description.Behaviors.Add(serviceDiscoveryBehavior);
+    serviceHost.AddServiceEndpoint(new UdpDiscoveryEndpoint());
+    serviceHost.Open();
+    // ...
+}
+```
+
+## <a name="client"></a>Klient
+
+W tym projekcie należy zauważyć, że klient obsługuje <xref:System.ServiceModel.Discovery.AnnouncementService>. Co więcej, dwa Delegaty są rejestrowane ze zdarzeniami. Te zdarzenia określają, co klient wykonuje po odebraniu anonsów online i offline.
+
 ```csharp
-// Create an AnnouncementService instance  
-AnnouncementService announcementService = new AnnouncementService();  
-  
-// Subscribe the announcement events  
-announcementService.OnlineAnnouncementReceived += OnOnlineEvent;  
-announcementService.OfflineAnnouncementReceived += OnOfflineEvent;  
-```  
-  
- `OnOnlineEvent` i `OnOfflineEvent` metody obsługi komunikatów Anons hello i bye odpowiednio.  
-  
+// Create an AnnouncementService instance
+AnnouncementService announcementService = new AnnouncementService();
+
+// Subscribe the announcement events
+announcementService.OnlineAnnouncementReceived += OnOnlineEvent;
+announcementService.OfflineAnnouncementReceived += OnOfflineEvent;
+```
+
+Metody `OnOnlineEvent` i`OnOfflineEvent` obsługują odpowiednio Komunikaty anonsu Hello i bye.
+
 ```csharp
-static void OnOnlineEvent(object sender, AnnouncementEventArgs e)  
-{  
-    Console.WriteLine();              
-    Console.WriteLine("Received an online announcement from {0}:", e.AnnouncementMessage.EndpointDiscoveryMetadata.Address);  
-PrintEndpointDiscoveryMetadata(e.AnnouncementMessage.EndpointDiscoveryMetadata);  
-}  
-  
-static void OnOfflineEvent(object sender, AnnouncementEventArgs e)  
-{  
-    Console.WriteLine();  
-    Console.WriteLine("Received an offline announcement from {0}:", e.AnnouncementMessage.EndpointDiscoveryMetadata.Address);  
-            PrintEndpointDiscoveryMetadata(e.AnnouncementMessage.EndpointDiscoveryMetadata);  
-}  
-```  
-  
-#### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
-  
-1. W tym przykładzie użyto punktów końcowych HTTP i przeprowadzić to przykład, odpowiednie listy ACL adresu URL muszą zostać dodane zobacz [Konfigurowanie protokołów HTTP i HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) Aby uzyskać szczegółowe informacje. Wykonując następujące polecenie w podwyższonym poziomem uprawnień, należy dodać odpowiednie listy ACL. Można zastąpić Twoja domena i nazwa użytkownika o wprowadzenie następujących argumentów, jeśli polecenie nie działa, ponieważ jest. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
-  
-2. Skompiluj rozwiązanie.  
-  
-3. Uruchom aplikację client.exe.  
-  
-4. Uruchom aplikację service.exe. Należy zauważyć, że klient odbierze anonsu online.  
-  
-5. Zamknij aplikację service.exe. Należy pamiętać, że klient otrzymuje powiadomienia w trybie offline.  
-  
+static void OnOnlineEvent(object sender, AnnouncementEventArgs e)
+{
+    Console.WriteLine();
+    Console.WriteLine("Received an online announcement from {0}:", e.AnnouncementMessage.EndpointDiscoveryMetadata.Address);
+PrintEndpointDiscoveryMetadata(e.AnnouncementMessage.EndpointDiscoveryMetadata);
+}
+
+static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
+{
+    Console.WriteLine();
+    Console.WriteLine("Received an offline announcement from {0}:", e.AnnouncementMessage.EndpointDiscoveryMetadata.Address);
+            PrintEndpointDiscoveryMetadata(e.AnnouncementMessage.EndpointDiscoveryMetadata);
+}
+```
+
+#### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
+
+1. Ten przykład korzysta z punktów końcowych HTTP i do uruchamiania tego przykładu należy dodać odpowiednie listy ACL adresów URL, aby uzyskać szczegółowe informacje, zobacz [Konfigurowanie protokołu HTTP i https](https://go.microsoft.com/fwlink/?LinkId=70353) . Wykonanie następującego polecenia z podwyższonym poziomem uprawnień powinno spowodować dodanie odpowiednich list ACL. Można zastąpić domenę i nazwę użytkownika dla następujących argumentów, jeśli polecenie nie działa zgodnie z oczekiwaniami. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`
+
+2. Skompiluj rozwiązanie.
+
+3. Uruchom aplikację Client. exe.
+
+4. Uruchom aplikację Service. exe. Zwróć uwagę, że klient otrzymuje Anons online.
+
+5. Zamknij aplikację Service. exe. Zwróć uwagę, że klient otrzymuje anons w trybie offline.
+
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Announcements`  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Announcements`

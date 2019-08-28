@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 3badda7afeb25b44b0de574f97452d05efe75bfc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 07f0e5dc232411633626add460ffc29cc7a79d81
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962286"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044353"
 ---
 # <a name="how-to-run-a-workflow"></a>Instrukcje: Uruchamianie przepływu pracy
 Ten temat jest kontynuacją samouczka Windows Workflow Foundation wprowadzenie i zawiera opis sposobu tworzenia hosta przepływu pracy i uruchamiania przepływu pracy zdefiniowanego w poprzednich [procedurach: Utwórz temat przepływu](how-to-create-a-workflow.md) pracy.
@@ -28,7 +28,7 @@ Ten temat jest kontynuacją samouczka Windows Workflow Foundation wprowadzenie i
 2. Kliknij prawym przyciskiem myszy rozwiązanie **WF45GettingStartedTutorial** w **Eksplorator rozwiązań** a następnie wybierz pozycję **Dodaj**, **Nowy projekt**.  
   
     > [!TIP]
-    >  Jeśli okno **Eksplorator rozwiązań** nie jest wyświetlane, wybierz pozycję **Eksplorator rozwiązań** z menu **Widok** .
+    > Jeśli okno **Eksplorator rozwiązań** nie jest wyświetlane, wybierz pozycję **Eksplorator rozwiązań** z menu **Widok** .
 
 3. W **zainstalowanym** węźle wybierz pozycję **C#Wizualizacja**, **przepływ pracy** (lub **Visual Basic**, **przepływ pracy**).
 
@@ -46,7 +46,7 @@ Ten temat jest kontynuacją samouczka Windows Workflow Foundation wprowadzenie i
 1. Kliknij dwukrotnie pozycję **program.cs** lub **Module1. vb** w **Eksplorator rozwiązań** , aby wyświetlić kod.
 
     > [!TIP]
-    >  Jeśli okno **Eksplorator rozwiązań** nie jest wyświetlane, wybierz pozycję **Eksplorator rozwiązań** z menu **Widok** .
+    > Jeśli okno **Eksplorator rozwiązań** nie jest wyświetlane, wybierz pozycję **Eksplorator rozwiązań** z menu **Widok** .
 
      Ponieważ ten projekt został utworzony przy użyciu szablonu **aplikacji konsoli przepływu pracy** , **program.cs** lub **Module1. vb** zawiera następujący podstawowy kod hostingu przepływu pracy.
 

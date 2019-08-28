@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 08/21/2019
-ms.openlocfilehash: 5f9d7026b270a010d2ba5d4b1165728a100ab6ed
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f62afe79ec3ace98a3bd8997e20672bef81b89c4
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922564"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037837"
 ---
 # <a name="whats-new-in-net-core-30-preview-8"></a>Co nowego w programie .NET Core 3,0 (wersja zapoznawcza 8)
 
@@ -430,7 +430,7 @@ Program .NET Core 3,0 zwiększa natywną międzyoperacyjność interfejsu API.
 
 ### <a name="type-nativelibrary"></a>Wpisz: NativeLibrary
 
-<xref:System.Runtime.InteropServices.NativeLibrary?displayProperty=nameWithType>zapewnia hermetyzację do ładowania biblioteki natywnej (przy użyciu tej samej logiki obciążenia co .NET Core P/Invoke) i udostępniającej odpowiednie funkcje pomocnika, `getSymbol`takie jak. Aby zapoznać się z przykładowym kodem, zobacz [Demonstracja DLLMap](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin).
+<xref:System.Runtime.InteropServices.NativeLibrary?displayProperty=nameWithType>zapewnia hermetyzację do ładowania biblioteki natywnej (przy użyciu tej samej logiki obciążenia co .NET Core P/Invoke) i udostępniającej odpowiednie funkcje pomocnika, `getSymbol`takie jak. Aby zapoznać się z przykładowym kodem, zobacz [Demonstracja DLLMap](https://github.com/dotnet/samples/tree/master/core/extensions/DllMapDemo).
 
 ### <a name="windows-native-interop"></a>Windows Native Interop
 

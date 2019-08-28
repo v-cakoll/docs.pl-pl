@@ -2,12 +2,12 @@
 title: Zabezpieczenia odnajdywania — przykład
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 8512dbddc5d27e75d98d281c0bdccf142a113d7f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dfc0dfcd3b4d814a158b328ef202d5438e583a8c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961723"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039814"
 ---
 # <a name="discovery-security-sample"></a>Zabezpieczenia odnajdywania — przykład
 Specyfikacja odnajdywania nie wymaga, aby punkty końcowe, które uczestniczą w procesie odnajdywania, były bezpieczne. Udoskonalenie komunikatów odnajdowania z zabezpieczeniami zmniejszają różne rodzaje ataków (zmiana komunikatów, odmowa usługi, powtarzanie, fałszowanie). Ten przykład implementuje niestandardowe kanały, które obliczają i weryfikują sygnatury komunikatów przy użyciu formatu podpisu kompaktowego (opisanego w sekcji 8,2 specyfikacji WS-Discovery). Przykład obsługuje [specyfikację odnajdywania 2005](https://go.microsoft.com/fwlink/?LinkId=177912) i [wersję 1,1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -67,10 +67,10 @@ Specyfikacja odnajdywania nie wymaga, aby punkty końcowe, które uczestniczą w
 3. Po wykonaniu przykładu wykonaj skrypt Oczyść. bat, który usuwa certyfikaty utworzone dla tego przykładu.  
   
 > [!IMPORTANT]
->  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  

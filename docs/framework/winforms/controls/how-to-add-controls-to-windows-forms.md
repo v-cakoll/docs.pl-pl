@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: d20afc6e8a950035cc3c0bf010504d42f401bfbb
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: bfe9449ecc862c361719d27dba2f5ed9af563957
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987516"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046051"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Instrukcje: dodawanie kontrolek do formularzy systemu Windows
+
 Większość formularzy służy do dodawania kontrolek do powierzchni formularza w celu zdefiniowania interfejsu użytkownika. *Kontrolka* to składnik formularza służący do wyświetlania informacji lub akceptowania danych wejściowych użytkownika. Aby uzyskać więcej informacji na temat kontrolek, zobacz [Windows Forms Controls](index.md).
 
 ## <a name="to-draw-a-control-on-a-form"></a>Aby narysować kontrolkę w formularzu
@@ -27,7 +28,7 @@ Większość formularzy służy do dodawania kontrolek do powierzchni formularza
 
 3. Na formularzu kliknij miejsce w lewym górnym rogu kontrolki, a następnie przeciągnij do miejsca, w którym ma się znajdować prawy dolny róg kontrolki.
 
-     Kontrolka zostanie dodana do formularza z określoną lokalizacją i rozmiarem.
+    Kontrolka zostanie dodana do formularza z określoną lokalizacją i rozmiarem.
 
     > [!NOTE]
     > Każdy formant ma zdefiniowany rozmiar domyślny. Możesz dodać formant do formularza w domyślnym rozmiarze kontrolki, przeciągając go z przybornika do formularza .
@@ -38,12 +39,12 @@ Większość formularzy służy do dodawania kontrolek do powierzchni formularza
 
 2. W **przyborniku**kliknij żądany formant i przeciągnij go do formularza.
 
-     Kontrolka jest dodawana do formularza w określonej lokalizacji w domyślnym rozmiarze.
+    Kontrolka jest dodawana do formularza w określonej lokalizacji w domyślnym rozmiarze.
 
     > [!NOTE]
     > Możesz dwukrotnie kliknąć kontrolkę w przyborniku, aby dodać ją do lewego górnego rogu formularza w domyślnym rozmiarze.
 
-     Kontrolki można także dynamicznie dodawać do formularza w czasie wykonywania. W poniższym przykładzie <xref:System.Windows.Forms.TextBox> kodu formant zostanie dodany do formularza, <xref:System.Windows.Forms.Button> gdy zostanie kliknięty formant.
+    Kontrolki można także dynamicznie dodawać do formularza w czasie wykonywania. W poniższym przykładzie <xref:System.Windows.Forms.TextBox> kodu formant zostanie dodany do formularza, <xref:System.Windows.Forms.Button> gdy zostanie kliknięty formant.
 
     > [!NOTE]
     > Poniższa procedura wymaga istnienia formularza z kontrolką `Button1` **przycisku** , która jest już umieszczona w nim.
@@ -84,7 +85,7 @@ Większość formularzy służy do dodawania kontrolek do powierzchni formularza
     > Możesz również dodać kod, aby zainicjować inne właściwości formantu.
 
     > [!IMPORTANT]
-    >  Komputer lokalny może być narażony na zagrożenia bezpieczeństwa przez sieć, odwołując się do `UserControl`złośliwej. Może to stanowić problem tylko w przypadku złośliwej osoby, która tworzy szkodliwą kontrolkę niestandardową, a następnie nie dodawaj jej do projektu.
+    > Komputer lokalny może być narażony na zagrożenia bezpieczeństwa przez sieć, odwołując się do `UserControl`złośliwej. Może to stanowić problem tylko w przypadku złośliwej osoby, która tworzy szkodliwą kontrolkę niestandardową, a następnie nie dodawaj jej do projektu.
 
 ## <a name="see-also"></a>Zobacz także
 

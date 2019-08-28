@@ -2,12 +2,12 @@
 title: Migrowanie z programu .NET Remoting do programu WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 71e26ddd93605b02031aecba280e382528378ba6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c42255a14a23cb50f3fe8be434efab4af7361daa
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943036"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045854"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrowanie z programu .NET Remoting do programu WCF
 W tym artykule opisano sposób migracji aplikacji, która używa usług komunikacji zdalnej .NET do korzystania z Windows Communication Foundation (WCF). Porównuje podobne koncepcje tych produktów, a następnie opisuje sposób wykonywania kilku typowych scenariuszy komunikacji zdalnej w programie WCF.  
@@ -466,7 +466,7 @@ public class RemotingServer : MarshalByRefObject
    ```  
   
     > [!TIP]
-    >  Zwróć uwagę, że obiekt sesji jest oznaczony za pomocą elementu [ServiceContract], co sprawia, że jest to normalny interfejs usługi WCF. Ustawienie właściwości SessionMode wskazuje, że będzie ona usługą sesji. W programie WCF sesja jest sposobem skorelowania wielu wiadomości przesyłanych między dwoma punktami końcowymi. Oznacza to, że gdy klient uzyska połączenie z tą usługą, zostanie ustanowiona sesja między klientem a serwerem. Klient będzie używać jednego unikatowego wystąpienia obiektu po stronie serwera dla wszystkich jego interakcji w ramach jednej sesji.  
+    > Zwróć uwagę, że obiekt sesji jest oznaczony za pomocą elementu [ServiceContract], co sprawia, że jest to normalny interfejs usługi WCF. Ustawienie właściwości SessionMode wskazuje, że będzie ona usługą sesji. W programie WCF sesja jest sposobem skorelowania wielu wiadomości przesyłanych między dwoma punktami końcowymi. Oznacza to, że gdy klient uzyska połączenie z tą usługą, zostanie ustanowiona sesja między klientem a serwerem. Klient będzie używać jednego unikatowego wystąpienia obiektu po stronie serwera dla wszystkich jego interakcji w ramach jednej sesji.  
   
 2. Następnie musimy wprowadzić implementację tego interfejsu usługi. Wskazując, że za pomocą [ServiceBehavior] i ustawiając właściwość InstanceContextmode, będziemy informować, że firma Microsoft chce użyć unikatowego wystąpienia tego typu dla każdej sesji.  
   

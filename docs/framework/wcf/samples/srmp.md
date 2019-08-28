@@ -2,50 +2,50 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 92a0bac3cf6ac6b57792419c913ec481ff0ee6c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e3015e7185fd52a1161b91c74dee57f694fbeebd
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007841"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044717"
 ---
 # <a name="srmp"></a>SRMP
-W tym przykładzie pokazano, jak wykonać transakcyjnych w kolejce komunikacji przy użyciu usługi kolejkowania komunikatów (MSMQ) za pośrednictwem protokołu HTTP.  
+Ten przykład pokazuje, jak przeprowadzić komunikację z kolejką w kolejce przy użyciu usługi kolejkowania komunikatów (MSMQ) za pośrednictwem protokołu HTTP.  
   
- W komunikacie w kolejce klient komunikuje się z usługą przy użyciu kolejki. Mówiąc ściślej klient wysyła komunikaty do kolejki. Usługa odbiera komunikaty z kolejki. Usługi i klienta w związku z tym, nie musi być uruchomiona w tym samym czasie do komunikowania się za pomocą kolejki.  
+ W kolejce komunikacja klient komunikuje się z usługą przy użyciu kolejki. Dokładniej, klient wysyła komunikaty do kolejki. Usługa odbiera komunikaty z kolejki. W związku z tym usługa i klient nie muszą być uruchomione w tym samym czasie w celu komunikowania się przy użyciu kolejki.  
   
- Usługi MSMQ umożliwia korzystanie z protokołu HTTP (w tym użycie protokołu HTTPS), aby wysyłać komunikaty do kolejki. W tym przykładzie firma Microsoft pokazują, czy przy użyciu usługi Windows Communication Foundation (WCF) w kolejce komunikacji oraz jak wysyłać komunikaty za pośrednictwem protokołu HTTP. Usługa MSMQ używa protokołu o nazwie SRMP, czyli opartego na protokole SOAP protokół komunikacji za pośrednictwem protokołu HTTP.  
+ Usługa MSMQ umożliwia wysyłanie komunikatów do kolejki przy użyciu protokołu HTTP (łącznie z użyciem protokołu HTTPS). W tym przykładzie pokazano, jak używać funkcji komunikacji z kolejką Windows Communication Foundation (WCF) oraz jak wysyłać komunikaty za pośrednictwem protokołu HTTP. Usługa MSMQ korzysta z protokołu o nazwie SRMP, czyli protokołu opartego na protokole SOAP do komunikacji za pośrednictwem protokołu HTTP.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-4. Przed uruchomieniem przykładu **Dodaj/Usuń składniki Windows**, upewnij się, że usługa MSMQ jest zainstalowana z obsługą protokołu HTTP. Instalowanie obsługi HTTP automatycznie instaluje Internet Information Services (IIS) i dodaje obsługę protokołu w usługach IIS dla usługi MSMQ.  
+4. Przed uruchomieniem przykładu w obszarze **Dodawanie/usuwanie składników systemu Windows**upewnij się, że usługa MSMQ jest zainstalowana z obsługą protokołu HTTP. Zainstalowanie obsługi protokołu HTTP powoduje automatyczne zainstalowanie Internet Information Services (IIS) i dodanie obsługi protokołu w usługach IIS dla usługi MSMQ.  
   
-5. Jeśli chcesz mieć pewność, że HTTP jest używany do komunikacji, można włączyć usługi MSMQ do pracy w trybie zaostrzonym. Daje to gwarancję, że żadnych komunikatów do kolejkach obsługiwanych na maszynie mogą pojawić się za pomocą transportu dowolnego innego niż HTTP.  
+5. Jeśli chcesz mieć pewność, że protokół HTTP jest używany do komunikacji, możesz włączyć usługę MSMQ do działania w trybie zaostrzonym. Pozwala to zagwarantować, że żadne komunikaty do żadnej kolejki hostowanej na komputerze nie mogą zostać dostarczone przy użyciu żadnego transportu innego niż HTTP.  
   
-6. Po wybraniu usługi MSMQ do pracy w trybie zaostrzonym komputer wymaga ponownego rozruchu na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
+6. Po wybraniu usługi MSMQ do uruchomienia w trybie zaostrzonym maszyna wymaga ponownego uruchomienia [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]systemu.  
   
 7. Uruchom usługę.  
   
-8. Uruchom klienta. Upewnij się, że zmienisz adres punktu końcowego, aby wskazywał nazwę komputera lub adres IP zamiast nazwy localhost. Klient wysyła komunikat i kończy pracę.  
+8. Uruchom klienta programu. Upewnij się, że adres punktu końcowego został zmieniony tak, aby wskazywał nazwę lub adres IP maszyny zamiast hosta lokalnego. Klient wysyła komunikat i kończy pracę.  
   
 ## <a name="requirements"></a>Wymagania  
- Aby uruchomić ten przykład, usługi IIS musi być zainstalowany zarówno usługi, jak i na komputerach klienckich, oprócz usługi MSMQ.  
+ Aby można było uruchomić ten przykład, usługi IIS muszą być zainstalowane na komputerach klienckich i klientach oprócz usługi MSMQ.  
   
 ## <a name="demonstrates"></a>Demonstracje  
- W przykładzie pokazano WCF wysyłanie wiadomości przy użyciu usługi MSMQ za pośrednictwem protokołu HTTP w kolejce. Jest to tak zwane SRMP komunikatów. Gdy wiadomość w kolejce są wysyłane, usługi MSMQ na wysyłanie przeniesień maszyny komunikaty odbierający Menedżer kolejki przy użyciu transportu TCP lub HTTP. Wybierając SRMP, użytkownik wskazuje wybór HTTP jako transportu do kolejki transferu. Zabezpieczanie SRMP umożliwia korzystanie z protokołu HTTPS.  
+ Przykład ilustruje wysyłanie komunikatów w kolejce WCF przy użyciu usługi MSMQ za pośrednictwem protokołu HTTP. Jest to również nazywane wiadomościami SRMP. Po wysłaniu komunikatu w kolejce usługa MSMQ na komputerze wysyłającym przesyła komunikaty do Menedżera kolejki odbioru przez TCP lub HTTP. Po wybraniu opcji SRMP użytkownik wskazuje wybór protokołu HTTP jako transportu do przeniesienia kolejki. Funkcja SRMP Secure umożliwia korzystanie z protokołu HTTPS.  
   
 ## <a name="example"></a>Przykład  
- Przykładowy kod jest oparty na przykład transakcyjne. Jak wysyłać komunikat do kolejki i odebrania komunikatu z kolejki, używając SRMP jest taka sama jak wysyłanie i odbieranie wiadomości przy użyciu natywnego protokołu.  
+ Przykładowy kod jest oparty na przykładach transakcyjnych. Jak wysłać komunikat do kolejki i odebrać komunikat z kolejki przy użyciu protokołu SRMP jest taka sama jak wysyłanie i odbieranie komunikatów przy użyciu natywnych protokołów.  
   
- Konfiguracja klienta jest zmieniany na wskazują wybór protokół transferu kolejki. Protokół transferu kolejki może być jednym z natywnych, SRMP lub SrmpSecure. Domyślnie protokół transferu jest Native. Klient i usługa określ w konfiguracji, aby użyć SRMP w tym przykładzie.  
+ Konfiguracja klienta zostanie zmieniona, aby wskazać wybór protokołu transferu kolejki. Protokół transferu kolejki może być jednym z natywnych, SRMP lub SrmpSecure. Domyślnie protokół transferu jest natywny. Klient i usługa Określ w konfiguracji, aby użyć SRMP w tym przykładzie.  
   
- Istnieją ograniczenia dotyczące SRMP w odniesieniu do zabezpieczeń transportu. Zabezpieczenia transportu usługi MSMQ domyślne wymaga usługi Active Directory, która wymaga, że Menedżer kolejki wysyłania i odbierania menedżera kolejek znajdują się w tej samej domenie Windows. To nie jest możliwe podczas wysyłania komunikatów za pośrednictwem protokołu HTTP granic. W efekcie domyślnych zabezpieczeń transportu nie działa. Zabezpieczenia transportu musi być równa certyfikatu, jeśli pożądane jest zabezpieczeń transportu. Zabezpieczenia komunikatów również może służyć do zabezpieczenia wiadomości. W tym przykładzie zabezpieczeń transportu i komunikatów jest wyłączona do zilustrowania SRMP komunikatów.  
+ W odniesieniu do zabezpieczeń transportu istnieją ograniczenia dotyczące protokołu SRMP. Domyślne zabezpieczenia transportu usługi MSMQ wymagają Active Directory, które wymagają, aby Menedżer kolejki wysyłania i Menedżer kolejki odbiorczej znajdowały się w tej samej domenie systemu Windows. Nie jest to możliwe w przypadku wysyłania komunikatów za pośrednictwem granicy protokołu HTTP. W związku z tym domyślne zabezpieczenia transportu nie działają. Zabezpieczenia transportu muszą być ustawione na wartość certyfikat, jeśli są wymagane zabezpieczenia transportu. Zabezpieczenia komunikatów mogą również służyć do zabezpieczania wiadomości. W tym przykładzie zabezpieczenia transportu i komunikatów są wyłączone w celu zilustrowania wiadomości SRMP.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -75,7 +75,7 @@ W tym przykładzie pokazano, jak wykonać transakcyjnych w kolejce komunikacji p
 </configuration>  
 ```  
   
- Działa aplikacja przykładowa daje następujące wyniki.  
+ Uruchomienie przykładu daje następujące dane wyjściowe.  
   
 ```  
 Processing Purchase Order: 556b70be-31ee-4a3b-8df4-ed5e538015a4   
@@ -88,10 +88,10 @@ OrderDetails
 ```  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\SRMP`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\SRMP`  

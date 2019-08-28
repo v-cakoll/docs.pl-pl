@@ -2,21 +2,21 @@
 title: WebContentTypeMapper — przykład
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: 381fc4a3084b1a2620384a04de85b9085e02ae16
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b15651859fd17673caf898df02c2b74a85d7612
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006322"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038540"
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper — przykład
-Niniejszy przykład pokazuje jak mapować nowych typów zawartości do formatów treści komunikat usług Windows Communication Foundation (WCF).  
+Ten przykład pokazuje, jak mapować nowe typy zawartości na formaty treści wiadomości Windows Communication Foundation (WCF).  
   
- <xref:System.ServiceModel.Description.WebHttpEndpoint> Element zapewnia Ci dostęp w sieci Web koder komunikatów, co pozwala WCF do odbierania JSON, XML lub nieprzetworzone komunikaty binarne na ten sam punkt końcowy. Koder Określa format treści wiadomości, sprawdzając typ zawartości HTTP żądania. W tym przykładzie przedstawiono <xref:System.ServiceModel.Channels.WebContentTypeMapper> klasy, która pozwala użytkownikowi na kontrolowanie mapowanie między typu zawartości i format treści.  
+ Element <xref:System.ServiceModel.Description.WebHttpEndpoint> jest elementem kodera komunikatów sieci Web, który umożliwia platformie WCF odbieranie komunikatów JSON, XML lub nieprzetworzonych danych binarnych w tym samym punkcie końcowym. Koder określa format treści wiadomości, sprawdzając zawartość HTTP-Type żądania. Ten przykład wprowadza <xref:System.ServiceModel.Channels.WebContentTypeMapper> klasę, która umożliwia użytkownikowi kontrolowanie mapowania między typem zawartości i formatem treści.  
   
- Usługi WCF zapewnia zestawem mapowań domyślnych typów zawartości. Na przykład `application/json` mapuje do formatu JSON i `text/xml` mapuje do pliku XML. Typ zawartości, która nie została zamapowana na JSON lub XML jest mapowany na pierwotnych format binarny.  
+ Funkcja WCF udostępnia zestaw domyślnych mapowań dla typów zawartości. Na przykład `application/json` mapuje do formatu JSON `text/xml` i mapuje do formatu XML. Wszystkie typy zawartości, które nie są zamapowane na notację JSON lub XML, są mapowane na format nieprzetworzonych danych binarnych.  
   
- W niektórych przypadkach (na przykład interfejsy API wypychania stylu) dla deweloperów usługi nie kontroluje zawartości typ zwracany przez klienta. Na przykład klienci mogą zwracać dane JSON jako `text/javascript` zamiast `application/json`. W tym przypadku deweloperów usługi należy podać typ, który pochodzi od klasy <xref:System.ServiceModel.Channels.WebContentTypeMapper> poprawnie, jak pokazano w poniższym przykładowym kodzie obsługi danego typu zawartości.  
+ W niektórych scenariuszach (na przykład interfejsów API wypychania) Deweloper usługi nie kontroluje typu zawartości zwracanej przez klienta. Na przykład klienci mogą zwrócić kod JSON jako `text/javascript` `application/json`zamiast. W takim przypadku deweloper usług musi dostarczyć typ, który pochodzi od <xref:System.ServiceModel.Channels.WebContentTypeMapper> , aby prawidłowo obsłużyć dany typ zawartości, jak pokazano w poniższym przykładowym kodzie.  
   
 ```  
 public class JsonContentTypeMapper : WebContentTypeMapper  
@@ -36,9 +36,9 @@ public class JsonContentTypeMapper : WebContentTypeMapper
 }  
 ```  
   
- Typ musi przesłonić metodę <xref:System.ServiceModel.Channels.WebContentTypeMapper.GetMessageFormatForContentType%28System.String%29> metody. Metoda musi zwrócić `contentType` argumentów i zwracanego jedną z następujących wartości: <xref:System.ServiceModel.Channels.WebContentFormat.Json>, <xref:System.ServiceModel.Channels.WebContentFormat.Xml>, <xref:System.ServiceModel.Channels.WebContentFormat.Raw>, lub <xref:System.ServiceModel.Channels.WebContentFormat.Default>. Zwracanie <xref:System.ServiceModel.Channels.WebContentFormat.Default> odracza do domyślnych mapowań kodera komunikatów w sieci Web. W poprzednim kodzie przykładowe `text/javascript` zawartości typu jest mapowany do formatu JSON i innych mapowaniach pozostają niezmienione.  
+ Typ musi przesłaniać <xref:System.ServiceModel.Channels.WebContentTypeMapper.GetMessageFormatForContentType%28System.String%29> metodę. Metoda musi `contentType` oszacować argument i zwracać jedną z następujących wartości: <xref:System.ServiceModel.Channels.WebContentFormat.Xml> <xref:System.ServiceModel.Channels.WebContentFormat.Json>,, <xref:System.ServiceModel.Channels.WebContentFormat.Raw>, lub <xref:System.ServiceModel.Channels.WebContentFormat.Default>. Zwracanie <xref:System.ServiceModel.Channels.WebContentFormat.Default> wartości do domyślnych mapowań kodera komunikatów sieci Web. W poprzednim przykładowym kodzie `text/javascript` typ zawartości jest mapowany na format JSON, a wszystkie inne mapowania pozostają bez zmian.  
   
- Aby użyć `JsonContentTypeMapper` klasy, należy użyć następującego w z pliku Web.config:  
+ Aby użyć `JsonContentTypeMapper` klasy, użyj następującego w pliku Web. config:  
   
 ```xml  
 <system.serviceModel>  
@@ -50,21 +50,21 @@ public class JsonContentTypeMapper : WebContentTypeMapper
 </system.serviceModel>  
 ```  
   
- Aby sprawdzić wymagania dotyczące korzystania z JsonContentTypeMapper, usuń atrybut zamapował z powyższych pliku konfiguracji. Strona klienta ładuje się podczas próby użycia `text/javascript` do wysyłania zawartości do formatu JSON.  
+ Aby sprawdzić wymagania dotyczące używania JsonContentTypeMapper, Usuń atrybut contentTypeMapper z powyższego pliku konfiguracji. Nie można załadować strony klienta podczas próby wysłania zawartości JSON `text/javascript` przy użyciu programu.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Skompiluj rozwiązanie WebContentTypeMapperSample.sln, zgodnie z opisem w [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Skompiluj rozwiązanie WebContentTypeMapperSample. sln zgodnie z opisem w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Przejdź do `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (nie należy otwierać JCTMClientPage.htm w przeglądarce z katalogu projektu).  
+3. Przejdź do `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (nie otwieraj JCTMClientPage. htm w przeglądarce z katalogu projektu).  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Ajax\WebContentTypeMapper`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Ajax\WebContentTypeMapper`  

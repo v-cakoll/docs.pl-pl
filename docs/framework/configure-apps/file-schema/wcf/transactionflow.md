@@ -2,12 +2,12 @@
 title: <transactionFlow>
 ms.date: 03/30/2017
 ms.assetid: 8c7b4c5b-ace3-4fe3-89ff-7b13c9aacd13
-ms.openlocfilehash: 206a684e1279871eee4aed95a087921123f8efb9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2d1008a4308c9fda5d2291ce704d1f19205e996a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918658"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041256"
 ---
 # <a name="transactionflow"></a>\<transactionFlow >
 Określa obsługę przepływu transakcji dla niestandardowego powiązania.  
@@ -46,7 +46,7 @@ Określa obsługę przepływu transakcji dla niestandardowego powiązania.
  Ten element umożliwia włączenie lub wyłączenie przychodzącego przepływu transakcji w ustawieniach powiązań punktu końcowego, a także określenie żądanego formatu protokołu dla transakcji przychodzących. Aby uzyskać więcej informacji na temat korzystania z tego elementu konfiguracji, zobacz [Konfiguracja transakcji ServiceModel](../../../wcf/feature-details/servicemodel-transaction-configuration.md) i [Włączanie przepływu transakcji](../../../wcf/feature-details/enabling-transaction-flow.md).  
   
 > [!CAUTION]
->  W przypadku korzystania `OleTransactions` z protokołu do przepływu transakcji z punktu końcowego do punktu końcowego limit czasu transakcji może zostać utracony, jeśli docelowy punkt końcowy próbuje ponownie przepływać `OleTransactions`przy użyciu dowolnego protokołu innego niż. Może to spowodować, że wszystkie węzły wyższego poziomu po przejściu OleTransactions do limitu czasu później niż oczekiwano.  
+> W przypadku korzystania `OleTransactions` z protokołu do przepływu transakcji z punktu końcowego do punktu końcowego limit czasu transakcji może zostać utracony, jeśli docelowy punkt końcowy próbuje ponownie przepływać `OleTransactions`przy użyciu dowolnego protokołu innego niż. Może to spowodować, że wszystkie węzły wyższego poziomu po przejściu OleTransactions do limitu czasu później niż oczekiwano.  
   
 ## <a name="see-also"></a>Zobacz także
 

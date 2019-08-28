@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
-ms.openlocfilehash: 5f60bcdb02f61d39711115b07ba989229e39c28c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1faed5717c65c4973c3f1965df649df6f2e24722
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929132"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045901"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>Instrukcje: publikowanie metadanych dla usługi przy użyciu kodu
 Jest to jeden z dwóch tematów, które omawiają Publikowanie metadanych dla usługi Windows Communication Foundation (WCF). Istnieją dwa sposoby, aby określić, w jaki sposób usługa powinna publikować metadane przy użyciu pliku konfiguracji i przy użyciu kodu. W tym temacie przedstawiono sposób publikowania metadanych dla usługi przy użyciu kodu.  
   
 > [!CAUTION]
->  W tym temacie przedstawiono sposób publikowania metadanych w niezabezpieczony sposób. Dowolny klient może pobrać metadane z usługi. Jeśli wymagasz, aby usługa opublikowała metadane w bezpieczny sposób. Zobacz [Niestandardowy bezpieczny punkt końcowy metadanych](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
+> W tym temacie przedstawiono sposób publikowania metadanych w niezabezpieczony sposób. Dowolny klient może pobrać metadane z usługi. Jeśli wymagasz, aby usługa opublikowała metadane w bezpieczny sposób. Zobacz [Niestandardowy bezpieczny punkt końcowy metadanych](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
   
  Aby uzyskać więcej informacji na temat publikowania metadanych w pliku konfiguracji, [zobacz How to: Publikowanie metadanych dla usługi za pomocą pliku](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)konfiguracji. Publikowanie metadanych umożliwia klientom Pobieranie metadanych przy użyciu żądania GET WS-transfer lub żądania HTTP/GET przy użyciu `?wsdl` ciągu zapytania. Aby upewnić się, że kod działa, należy utworzyć podstawową usługę WCF. W poniższym kodzie znajduje się podstawowa usługa samodzielna.  
   

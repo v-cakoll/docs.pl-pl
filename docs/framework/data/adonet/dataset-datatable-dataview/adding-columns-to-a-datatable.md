@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 2e7008f6693d7d76520a7ff6ae9172e28e4990c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 77bf117b8835623d768f8b8b0ec3e4195174cad7
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207009"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70043948"
 ---
 # <a name="adding-columns-to-a-datatable"></a>Dodawanie kolumn do elementu DataTable
-A <xref:System.Data.DataTable> zawiera zbiór <xref:System.Data.DataColumn> obiektów, odwołuje się **kolumn** właściwości tabeli. Ta kolekcja kolumn, wraz ze wszystkimi ograniczeniami definiuje schemat lub strukturę tabeli.  
+A <xref:System.Data.DataTable> zawiera<xref:System.Data.DataColumn> kolekcję obiektów, do których odwołuje się Właściwość **kolumn** tabeli. Ta kolekcja kolumn, wraz z wszelkimi ograniczeniami, definiuje schemat, czyli strukturę tabeli.  
   
- Możesz utworzyć **DataColumn** obiektów w tabeli za pomocą **DataColumn** konstruktora, lub przez wywołanie **Dodaj** metody **kolumn**właściwości tabeli, który jest <xref:System.Data.DataColumnCollection>. **Dodaj** metoda przyjmuje opcjonalny **ColumnName**, **DataType**, i **wyrażenie** argumentów i tworzy nową  **DataColumn** jako członka kolekcji. Akceptuje ona również, istniejące **DataColumn** obiektu i dodaje go do kolekcji i zwraca odwołanie do dodany **DataColumn** Jeśli jest to wymagane. Ponieważ **DataTable** obiekty nie są specyficzne dla dowolnego źródła danych, typów programu .NET Framework są używane podczas określania typu danych **DataColumn**.  
+ Tworzysz obiekty **DataColumn** w tabeli przy użyciu konstruktora DataColumn lub wywołując metodę **Add** właściwości Columns tabeli, która jest. <xref:System.Data.DataColumnCollection> Metoda **Add** akceptuje opcjonalne argumenty **ColumnName**, **DataType**i **Expression** i tworzy nową **kolumnę DataColumn** jako element członkowski kolekcji. Akceptuje również istniejący obiekt **DataColumn** i dodaje go do kolekcji i zwraca odwołanie do dodanej **kolumny** , jeśli jest to wymagane. Ponieważ obiekty **DataTable** nie są specyficzne dla żadnego źródła danych, typy .NET Framework są używane podczas określania typu danych w **kolumnie DataColumn**.  
   
- W poniższym przykładzie dodano cztery kolumny w celu **DataTable**.  
+ Poniższy przykład dodaje cztery kolumny do **elementu DataTable**.  
   
 ```vb  
 Dim workTable As DataTable = New DataTable("Customers")  
@@ -44,12 +44,12 @@ workTable.Columns.Add("CustFName", typeof(String));
 workTable.Columns.Add("Purchases", typeof(Double));  
 ```  
   
- W tym przykładzie należy zauważyć, że właściwości **CustID** kolumna są ustawione na Zezwalaj **DBNull** wartości i ograniczyć wartości, które mają być unikatowe. Jednak jeśli zdefiniujesz **CustID** kolumny jako kolumny klucza podstawowego tabeli **AllowDBNull** właściwość zostanie automatycznie ustawiony w pozycji **false** i **Unikatowe** właściwość zostanie automatycznie ustawiony w pozycji **true**. Aby uzyskać więcej informacji, zobacz [Definiowanie kluczy podstawowych](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
+ W przykładzie należy zauważyć, że właściwości kolumny **CustId** są ustawione tak, aby nie zezwalały na wartości **DBNull** i ograniczać wartości jako unikatowe. Jednak w przypadku zdefiniowania kolumny **CustId** jako kolumny klucza podstawowego tabeli Właściwość **AllowDBNull** zostanie automatycznie ustawiona na **wartość false** , a właściwość **Unique** zostanie automatycznie ustawiona na **wartość true**. Aby uzyskać więcej informacji, zobacz [Definiowanie kluczy podstawowych](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
   
 > [!CAUTION]
->  Jeśli nie podano nazwy kolumny dla kolumny, kolumna jest otrzymuje nazwę przyrostowe domyślne kolumny*N,* począwszy od "Kolumna1", gdy jest ona dodawana do **DataColumnCollection**. Firma Microsoft zaleca, aby unikać konwencji nazewnictwa "kolumna*N*" po użytkownik poda nazwę kolumny, ponieważ nazwa podana może spowodować konflikt z istniejącą nazwą kolumny domyślne w **DataColumnCollection**. Jeśli podana nazwa już istnieje, zostanie zgłoszony wyjątek.  
+> Jeśli nie podano nazwy kolumny dla kolumny, kolumna otrzymuje przyrostową domyślną nazwę kolumny*N,* rozpoczynając od "Kolumna1", gdy zostanie dodana do elementu DataColumnCollection. Zalecamy uniknięcie konwencji nazewnictwa "Column*N*" w przypadku podania nazwy kolumny, ponieważ dostarczona nazwa może powodować konflikt z istniejącą domyślną nazwą kolumny w elemencie DataColumnCollection. Jeśli podana nazwa już istnieje, zgłaszany jest wyjątek.  
   
- Jeśli używasz <xref:System.Xml.Linq.XElement> jako <xref:System.Data.DataColumn.DataType%2A> z <xref:System.Data.DataColumn> w <xref:System.Data.DataTable>, serializacji XML nie będzie działać podczas odczytywania danych. Na przykład, jeśli możesz zapisać <xref:System.Xml.XmlDocument> przy użyciu `DataTable.WriteXml` metoda po serializacji XML jest dodatkowe nadrzędnym w <xref:System.Xml.Linq.XElement>. Aby obejść ten problem, należy użyć <xref:System.Data.SqlTypes.SqlXml> wpisz zamiast <xref:System.Xml.Linq.XElement>. `ReadXml` i `WriteXml` działają prawidłowo z <xref:System.Data.SqlTypes.SqlXml>.  
+ Jeśli używasz <xref:System.Xml.Linq.XElement> programu <xref:System.Data.DataColumn.DataType%2A> jako <xref:System.Data.DataColumn> elementu w<xref:System.Data.DataTable>, serializacja XML nie będzie działała podczas odczytywania danych. Na przykład jeśli piszesz a <xref:System.Xml.XmlDocument> przy `DataTable.WriteXml` użyciu metody, po serializacji do kodu XML istnieje <xref:System.Xml.Linq.XElement>dodatkowy węzeł nadrzędny w obiekcie. Aby obejść ten problem, użyj <xref:System.Data.SqlTypes.SqlXml> typu <xref:System.Xml.Linq.XElement>zamiast. `ReadXml`i `WriteXml` działają poprawnie z <xref:System.Data.SqlTypes.SqlXml>.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -58,4 +58,4 @@ workTable.Columns.Add("Purchases", typeof(Double));
 - <xref:System.Data.DataTable>
 - [Definicja schematu elementu DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
 - [Elementy DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

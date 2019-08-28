@@ -2,35 +2,35 @@
 title: Aktywacja UDP
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 127516b79bcb15406bfade09bc1309e55aac3dcf
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 13444ab1be440c8e1a5f945cd512afa33772ea57
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881006"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044640"
 ---
 # <a name="udp-activation"></a>Aktywacja UDP
-Ten przykład jest oparty na [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) próbki. Rozszerza [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) próbki do obsługi aktywacji procesu przy użyciu Windows Process Activation Service (WAS).  
+Ten przykład jest oparty na [transportach: Przykład](../../../../docs/framework/wcf/samples/transport-udp.md) protokołu UDP. Rozszerza [transport: Przykład](../../../../docs/framework/wcf/samples/transport-udp.md) protokołu UDP do obsługi aktywacji procesów przy użyciu usługi aktywacji procesów systemu Windows (was).  
   
- Przykład składa się z trzech głównych części:  
+ Przykład składa się z trzech głównych elementów:  
   
-- UDP protokołu aktywator, procesem autonomicznym, która odbiera komunikaty protokołu UDP w imieniu aplikacji, które mają być aktywowany.  
+- Aktywator protokołu UDP, autonomiczny proces odbierający komunikaty UDP w imieniu aplikacji, które mają zostać aktywowane.  
   
-- Klient, który używa niestandardowego transportu UDP do wysyłania wiadomości.  
+- Klient korzystający z transportu niestandardowego UDP do wysyłania komunikatów.  
   
-- Usługa (hostowane w procesie roboczym aktywowany przez WAS), która odbiera komunikaty za pośrednictwem protokołu UDP transportu niestandardowych.  
+- Usługa (hostowana w procesie roboczym aktywowana przez usługę WAS), która odbiera komunikaty za pośrednictwem transportu niestandardowego protokołu UDP.  
   
 ## <a name="udp-protocol-activator"></a>Aktywator protokołu UDP  
- Aktywator protokołu UDP jest mostem między klientem usługi WCF i usługi WCF. Umożliwia przesyłanie danych za pośrednictwem protokołu UDP w warstwie transportowej. Ma dwie główne funkcje:  
+ Aktywator protokołu UDP jest mostkiem między klientem programu WCF a usługą WCF. Zapewnia ona komunikację z danymi za pomocą protokołu UDP w warstwie transportowej. Ma dwie główne funkcje:  
   
-- BYŁO odbiornika karty (LA), który współpracuje z WAS do aktywowania procesów w odpowiedzi na wiadomości przychodzące.  
+- Adapter odbiornika (LA), który współpracuje z programem, można aktywować procesy w odpowiedzi na komunikaty przychodzące.  
   
-- Odbiornik protokołu UDP, który akceptuje komunikaty protokołu UDP w imieniu aplikacji, które mają być aktywowany.  
+- Odbiornik protokołu UDP, który akceptuje komunikaty UDP w imieniu aplikacji, które mają zostać aktywowane.  
   
- Aktywator musi działać jako autonomiczna programu na komputerze z serwerem. Zazwyczaj karty listener WAS (na przykład NetTcpActivator i NetPipeActivator) są implementowane w usługach Windows długoterminowych. Jednak dla prostoty i jasności ten przykład implementuje aktywatora protokołu jako oddzielną aplikację.  
+ Aktywator musi być uruchomiony jako program autonomiczny na komputerze serwera. Zazwyczaj były to karty odbiornika (takie jak NetTcpActivator i NetPipeActivator), które są implementowane w długotrwałych usługach systemu Windows. Jednak w przypadku uproszczenia i przejrzystości ten przykład implementuje aktywatora protokołu jako autonomiczną aplikację.  
   
-### <a name="was-listener-adapter"></a>ZOSTAŁ Adapter odbiornika  
- Adapter odbiornika zostało protokołu UDP został zaimplementowany w `UdpListenerAdapter` klasy. To jest moduł, który wchodzi w interakcję z WAS do wykonywania aktywacji aplikacji dla protokołu UDP. Jest to osiągane przez wywołanie następujące interfejsy API hostem sieci Web:  
+### <a name="was-listener-adapter"></a>Adapter odbiornika  
+ Adapter odbiornika dla UDP został zaimplementowany w `UdpListenerAdapter` klasie. Jest to moduł, który współdziała z programem, aby przeprowadzić aktywację aplikacji dla protokołu UDP. Jest to osiągane przez wywołanie następujących interfejsów API webhost:  
   
 - `WebhostRegisterProtocol`  
   
@@ -40,29 +40,29 @@ Ten przykład jest oparty na [transportu: UDP](../../../../docs/framework/wcf/sa
   
 - `WebhostCloseAllListenerChannelInstances`  
   
- Po wywołaniu początkowo `WebhostRegisterProtocol`, karta odbiornika odbiera wywołania zwrotnego `ApplicationCreated` z WAS dla wszystkich aplikacji zarejestrowanych w pliku applicationHost.config (znajdujący się w % windir%\system32\inetsrv). W tym przykładzie będziemy obsługiwać aplikacje przy użyciu protokołu UDP (identyfikatorem protokołu jako "net.udp"), włączone. Inne implementacje może obsługiwać to inaczej w przypadku takich implementacje odpowiadanie na dynamiczną konfigurację zmian w aplikacji (na przykład aplikacja przejście z wyłączonego na włączony).  
+ Po wstępnej `WebhostRegisterProtocol`wywołaniu Adapter odbiornika odbiera wywołanie zwrotne `ApplicationCreated` od dla wszystkich aplikacji zarejestrowanych w pliku ApplicationHost. config (znajdującym się w%windir%\system32\inetsrv). W tym przykładzie obsługujemy tylko aplikacje z protokołem UDP (z identyfikatorem protokołu "net. UDP"). Inne implementacje mogą być obsługiwane inaczej, jeśli takie implementacje odpowiadają na dynamiczne zmiany konfiguracji aplikacji (np. przejście aplikacji z wyłączone na włączone).  
   
- Podczas wywołania zwrotnego `ConfigManagerInitializationCompleted` zostanie odebrana, oznacza to, tym WAS zakończy wszystkie powiadomienia dotyczące inicjowania protokołu. W tej chwili adapter odbiornika jest gotowy do przetwarzania żądań aktywacji.  
+ Po odebraniu `ConfigManagerInitializationCompleted` wywołania zwrotnego wskazuje, że zostało zakończone wszystkie powiadomienia o zainicjowaniu protokołu. W tej chwili Adapter odbiornika jest gotowy do przetwarzania żądań aktywacji.  
   
- Gdy nowe żądanie jest dostępna w aplikacji po raz pierwszy, wywołuje adapter odbiornika `WebhostOpenListenerChannelInstance` do WAS, który rozpoczyna się proces roboczy, jeśli nie jest jeszcze uruchomiona. Następnie są ładowane obsługi protokołu i umożliwić komunikację między kartą odbiornik i aplikacji wirtualnej.  
+ Gdy nowe żądanie jest uruchamiane po raz pierwszy dla aplikacji, Adapter odbiornika wywołuje `WebhostOpenListenerChannelInstance` program, który uruchamia proces roboczy, jeśli nie został jeszcze uruchomiony. Następnie programy obsługi protokołów są ładowane, a komunikacja między kartą odbiornika i aplikacją wirtualną może zostać uruchomiona.  
   
- Adapter odbiornika jest zarejestrowany w %SystemRoot%\System32\inetsrv\ApplicationHost.config w <`listenerAdapters`> sekcji, jako pokazano poniżej:  
+ Karta odbiornika jest zarejestrowana w%systemroot%\System32\inetsrv\ApplicationHost.config w sekcji > <`listenerAdapters`w następujący sposób:  
   
 ```xml  
 <add name="net.udp" identity="S-1-5-21-2127521184-1604012920-1887927527-387045" />  
 ```  
   
 ### <a name="protocol-listener"></a>Odbiornik protokołu  
- Odbiornik protokołu UDP jest modułem wewnątrz aktywatora protokołu, który nasłuchuje w punkcie końcowym protokołu UDP w imieniu aplikacji wirtualnej. Jest zaimplementowana w klasie `UdpSocketListener`. Punkt końcowy jest reprezentowany jako `IPEndpoint` dla której są wyodrębniane numer portu z powiązania protokołu dla witryny.  
+ Odbiornik protokołu UDP jest modułem w ramach aktywatora protokołu, który nasłuchuje w punkcie końcowym UDP w imieniu aplikacji wirtualnej. Jest zaimplementowana w klasie `UdpSocketListener`. Punkt końcowy jest reprezentowany jako `IPEndpoint` , dla którego jest wyodrębniany numer portu z powiązania protokołu dla lokacji.  
   
 ### <a name="control-service"></a>Usługa sterowania  
- W tym przykładzie używamy usługi WCF do komunikowania się między aktywator i proces roboczy WAS. Usługa, która znajduje się w aktywator nosi nazwę usługi kontroli.  
+ W tym przykładzie używamy funkcji WCF do komunikacji między aktywatorem a procesem roboczym. Usługa, która znajduje się w aktywatora, nazywa się usługą kontroli.  
   
-## <a name="protocol-handlers"></a>Programy obsługi protokołu  
- Po wywołania adapter odbiornika `WebhostOpenListenerChannelInstance`, menedżera procesów WAS rozpoczyna się proces roboczy, jeśli nie została uruchomiona. Menedżer aplikacji wewnątrz procesu roboczego ładuje obsługi protokołu procesu (PPH) UDP, z tym żądaniem, w tym `ListenerChannelId`. PPH w wywołaniach włącza `IAdphManager`.`StartAppDomainProtocolListenerChannel` Aby uruchomić UDP AppDomain protokołu obsługi (ADPH).  
+## <a name="protocol-handlers"></a>Programy obsługi protokołów  
+ Gdy Adapter odbiornika wywoła wywołanie `WebhostOpenListenerChannelInstance`, Menedżer przetworzenia przetwarza proces roboczy, jeśli nie został uruchomiony. Menedżer aplikacji wewnątrz procesu roboczego ładuje program obsługi protokołu UDP (PPH) żądania `ListenerChannelId`. PPH w programie włącza wywołania `IAdphManager`.`StartAppDomainProtocolListenerChannel` Aby uruchomić procedurę obsługi protokołu UDP AppDomain (ADPH).  
   
 ## <a name="hostedudptransportconfiguration"></a>HostedUDPTransportConfiguration  
- Informacje jest zarejestrowany w pliku Web.config w następujący sposób:  
+ Informacje są rejestrowane w pliku Web. config w następujący sposób:  
   
 ```xml  
 <serviceHostingEnvironment>  
@@ -70,58 +70,58 @@ Ten przykład jest oparty na [transportu: UDP](../../../../docs/framework/wcf/sa
 </serviceHostingEnvironment>  
 ```  
   
-## <a name="special-setup-for-this-sample"></a>Specjalnej konfiguracji dla tego przykładu  
- W tym przykładzie można tylko skompilować i uruchomić na Windows Vista, Windows Server 2008 lub Windows 7. Do uruchomienia przykładu, należy najpierw uzyskać wszystkie składniki poprawnie skonfigurowane. Wykonaj następujące kroki, aby zainstalować przykład.  
+## <a name="special-setup-for-this-sample"></a>Specjalna instalacja dla tego przykładu  
+ Ten przykład może być zbudowany i uruchamiany tylko w systemie Windows Vista, Windows Server 2008 lub Windows 7. Aby uruchomić przykład, należy najpierw pobrać wszystkie składniki skonfigurowane prawidłowo. Wykonaj poniższe kroki, aby zainstalować przykład.  
   
-#### <a name="to-set-up-this-sample"></a>Aby skonfigurować w tym przykładzie  
+#### <a name="to-set-up-this-sample"></a>Aby skonfigurować ten przykład  
   
-1. Instalowanie programu ASP.NET 4.0, używając następującego polecenia.  
+1. Zainstaluj ASP.NET 4,0 przy użyciu następującego polecenia.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Skompiluj projekt w systemie Windows Vista. Po kompilacji również wykonuje następujące operacje w fazie po kompilacji:  
+2. Skompiluj projekt w systemie Windows Vista. Po kompilacji wykonuje także następujące operacje w fazie po kompilacji:  
   
-    - Instaluje powiązania protokołu UDP do lokacji "Domyślna witryna sieci Web".  
+    - Instaluje powiązanie UDP z witryną "Default Web Site".  
   
-    - Tworzy aplikację wirtualną "ServiceModelSamples" wskaż ścieżkę fizyczną: "% SystemDrive%\inetpub\wwwroot\servicemodelsamples".  
+    - Tworzy aplikację wirtualną "ServiceModelSamples" w celu wskazywania ścieżki fizycznej: "%SystemDrive%\inetpub\wwwroot\servicemodelsamples".  
   
-    - Umożliwia ona także protokół "net.udp" dla tej aplikacji wirtualnej.  
+    - Włącza również protokół "net. UDP" dla tej aplikacji wirtualnej.  
   
-3. Uruchom aplikację interfejsu użytkownika "WasNetActivator.exe". Kliknij przycisk **instalacji** kartę, zaznacz następujące pola wyboru, a następnie kliknij przycisk **zainstalować** je zainstalować:  
+3. Uruchom aplikację interfejsu użytkownika "WasNetActivator. exe". Kliknij kartę **Instalator** , zaznacz następujące pola wyboru, a następnie kliknij przycisk **Instaluj** , aby je zainstalować:  
   
-    - Adapter odbiornika protokołu UDP  
+    - Adapter odbiornika UDP  
   
-    - Programy obsługi protokołu UDP  
+    - Procedury obsługi protokołu UDP  
   
-4. Kliknij przycisk **aktywacji** kartę aplikacji interfejsu użytkownika "WasNetActivator.exe". Kliknij przycisk **Start** przycisk, aby uruchomić odbiornik karty. Teraz można przystąpić do uruchomienia programu.  
+4. Kliknij kartę **Aktywacja** aplikacji interfejsu użytkownika "WasNetActivator. exe". Kliknij przycisk **Uruchom** , aby uruchomić Adapter odbiornika. Teraz można przystąpić do uruchamiania programu.  
   
     > [!NOTE]
-    >  Po zakończeniu tego przykładu, należy uruchomić Cleanup.bat, aby usunąć powiązanie net.udp z "Domyślna witryna sieci Web".  
+    > Po zakończeniu pracy z tym przykładem należy uruchomić polecenie Oczyść. bat, aby usunąć powiązanie net. UDP z "domyślnej witryny sieci Web".  
   
-## <a name="sample-usage"></a>Przykładowe zastosowanie  
- Po kompilacji dostępne są cztery różne pliki binarne wygenerowane:  
+## <a name="sample-usage"></a>Przykładowe użycie  
+ Po kompilacji są generowane cztery różne pliki binarne:  
   
-- Client.exe: Kod klienta. App.config jest kompilowany do pliku konfiguracji klienta Client.exe.config.  
+- Client. exe: Kod klienta. Plik App. config jest kompilowany do pliku konfiguracji klienta Client. exe. config.  
   
-- UDPActivation.dll: Biblioteka, która zawiera wszystkie główne implementacji protokołu UDP.  
+- UDPActivation. dll: Biblioteka, która zawiera wszystkie główne implementacje protokołu UDP.  
   
-- Service.dll: W kodzie usługi. To jest kopiowany do katalogu \bin zestawu ServiceModelSamples pakiecie aplikacji wirtualnej. Plik usługi jest Service.svc i plik konfiguracji jest plik Web.config. Po kompilacji, są kopiowane do następującej lokalizacji: % SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.  
+- Usługa. dll: Kod usługi. Jest on kopiowany do katalogu \Bin aplikacji wirtualnej ServiceModelSamples. Plik usługi to Service. svc, a plik konfiguracji to Web. config. Po kompilacji są one kopiowane do następującej lokalizacji:%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.  
   
 - WasNetActivator: Program aktywatora UDP.  
   
-- Upewnij się, że wszystkie wymagane elementy zostały zainstalowane poprawnie. Poniższe kroki pokazują jak do uruchomienia przykładu:  
+- Upewnij się, że wszystkie wymagane elementy są poprawnie zainstalowane. Poniższe kroki pokazują, jak uruchomić przykład:  
   
-1. Upewnij się, że zostały uruchomione następujące usługi Windows:  
+1. Upewnij się, że następujące usługi systemu Windows zostały uruchomione:  
   
-    - Usługi Windows Process Activation Service (WAS).  
+    - Usługa aktywacji procesów systemu Windows (WAS).  
   
-    - Internetowe usługi informacyjne (IIS): W3SVC.  
+    - Internet Information Services (IIS): W3SVC.  
   
-2. Następnie uruchom aktywator WasNetActivator.exe. W obszarze **aktywacji** karta, jedynym protokołem **UDP**, jest zaznaczony na liście rozwijanej. Kliknij przycisk **Start** przycisk, aby uruchomić aktywatora.  
+2. Następnie uruchom aktywatora, WasNetActivator. exe. Na karcie **Aktywacja** na liście rozwijanej jest wybierany tylko protokół **UDP**. Kliknij przycisk **Uruchom** , aby uruchomić aktywatora.  
   
-3. Po rozpoczęciu aktywator może uruchamiać kod klienta, uruchamiając Client.exe z okna poleceń. Poniżej przedstawiono przykładowe dane wyjściowe:  
+3. Po uruchomieniu aktywatora można uruchomić kod klienta, uruchamiając program Client. exe z okna polecenia. Oto przykładowe dane wyjściowe:  
   
     ```  
     Testing Udp Activation.  
@@ -154,10 +154,10 @@ Ten przykład jest oparty na [transportu: UDP](../../../../docs/framework/wcf/sa
     ```  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\UdpActivation`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\UdpActivation`  

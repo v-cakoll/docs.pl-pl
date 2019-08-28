@@ -2,12 +2,12 @@
 title: Element formatujący operacji i selektor operacji
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 977a759b2c3f6d803879fc640439cd0b3465ffbf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5853a791a92535c970f8010dd08d42e10292ffa8
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965590"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039031"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Element formatujący operacji i selektor operacji
 Ten przykład pokazuje, w jaki sposób punkty rozszerzalności Windows Communication Foundation (WCF) mogą być używane do zezwalania na dane komunikatów w innym formacie niż oczekiwany przez WCF. Domyślnie `soap:body` elementy formatujące WCF oczekują parametrów metody, które mają być zawarte w elemencie. W przykładzie przedstawiono sposób implementacji niestandardowego programu formatującego operacji, który analizuje dane parametrów z ciągu zapytania HTTP GET, a następnie wywołuje metody przy użyciu tych danych.  
@@ -162,13 +162,13 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
  Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Wszystkie cztery operacje (Dodawanie, odejmowanie, mnożenie i dzielenie) muszą się zakończyć pomyślnie.  
   
 > [!IMPORTANT]
->  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Formatters\QueryStringFormatter`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Formatters\QueryStringFormatter`  
   
 ##### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   

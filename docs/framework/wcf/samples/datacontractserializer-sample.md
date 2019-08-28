@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
-ms.openlocfilehash: e4a3779b8351ae30f7c316d37952f208a287d5e0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 675b6b8a177fe5851c2abd1f785ac617de2cf37d
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961816"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045072"
 ---
 # <a name="datacontractserializer-sample"></a>Przykład elementu DataContractSerializer
 Przykład DataContractSerializer pokazuje <xref:System.Runtime.Serialization.DataContractSerializer>, który wykonuje ogólne usługi serializacji i deserializacji dla klas kontraktu danych. Przykład tworzy `Record` obiekt, serializować go do strumienia pamięci i deserializacji strumień pamięci z powrotem do innego `Record` obiektu, aby <xref:System.Runtime.Serialization.DataContractSerializer>pokazać użycie. Następnie próbka serializować `Record` Obiekt przy użyciu binarnego składnika zapisywania, aby zademonstrować, jak moduł zapisujący ma wpływ na serializacji.  
@@ -133,10 +133,10 @@ Press <ENTER> to terminate client.
 3. Aby uruchomić przykład, uruchom klienta z wiersza polecenia, wpisując client\bin\client.exe.  
   
 > [!IMPORTANT]
->  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractSerializer`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractSerializer`  

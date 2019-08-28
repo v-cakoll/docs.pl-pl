@@ -2,12 +2,12 @@
 title: Komunikacja dwukierunkowa
 ms.date: 03/30/2017
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-ms.openlocfilehash: 297e9af98f6fe39fb2cca4b5d0350c293177b173
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 379197ee3dc041351f0b13ad1e336824a0f411ed
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941010"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038708"
 ---
 # <a name="two-way-communication"></a>Komunikacja dwukierunkowa
 W tym przykładzie pokazano, jak wykonać transakcyjne dwukierunkowe połączenia w kolejce za pośrednictwem usługi MSMQ. Ten przykład używa `netMsmqBinding` powiązania. W takim przypadku usługa to samodzielna aplikacja konsolowa, która umożliwia obserwowanie usługi do odebrania komunikatów umieszczonych w kolejce.  
@@ -225,7 +225,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
 3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    >  Jeśli używasz programu Svcutil. exe do ponownego wygenerowania konfiguracji dla tego przykładu, pamiętaj o zmodyfikowaniu nazw punktów końcowych w konfiguracji klienta, aby odpowiadały kodowi klienta.  
+    > Jeśli używasz programu Svcutil. exe do ponownego wygenerowania konfiguracji dla tego przykładu, pamiętaj o zmodyfikowaniu nazw punktów końcowych w konfiguracji klienta, aby odpowiadały kodowi klienta.  
   
  Domyślnie z opcją <xref:System.ServiceModel.NetMsmqBinding>jest włączona funkcja zabezpieczenia transportu. Istnieją dwie istotne właściwości zabezpieczenia transportu usługi MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> a <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` tryb uwierzytelniania jest ustawiony na `Windows` wartość, a poziom ochrony jest ustawiony na `Sign`. Aby usługa MSMQ zapewniała funkcję uwierzytelniania i podpisywania, musi być częścią domeny, a dla usługi MSMQ należy zainstalować opcję Integracja z usługą Active Directory. Jeśli ten przykład zostanie uruchomiony na komputerze, który nie spełnia tych kryteriów, wystąpi błąd.  
   
@@ -320,13 +320,13 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
 4. Przed uruchomieniem przykładu należy zmienić konfigurację na serwerze i kliencie programu.  
   
     > [!NOTE]
-    >  `security mode` Ustawienieodpowiada<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> ustawieniu lub<xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> zabezpieczeniana`None`. `None` `Message`  
+    > `security mode` Ustawienieodpowiada<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> ustawieniu lub<xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> zabezpieczeniana`None`. `None` `Message`  
   
 > [!IMPORTANT]
->  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  

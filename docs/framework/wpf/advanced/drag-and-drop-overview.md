@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: e8e8b294e05579a91a4557b23be6c65f4d619167
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bb5766a3efc38750458ef0d354e8a2e3ab204000
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940879"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046406"
 ---
 # <a name="drag-and-drop-overview"></a>Przegląd Przeciąganie i upuszczanie
 Ten temat zawiera omówienie obsługi przeciągania i upuszczania w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacjach. Przeciąganie i upuszczanie często odnosi się do metody transferu danych, która polega na użyciu myszy (lub innego urządzenia wskazującego), aby wybrać jeden lub więcej obiektów, przeciągając je na wybrane miejsce docelowe [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]upuszczania w i upuszczając je.  
@@ -166,7 +166,7 @@ Ten temat zawiera omówienie obsługi przeciągania i upuszczania w [!INCLUDE[TL
  <xref:System.Windows.DragDrop.QueryContinueDrag> Zdarzenie jest zgłaszane w sposób ciągły podczas przeciągania źródła przeciągania. Możesz obsłużyć to zdarzenie, aby określić, jaka akcja powoduje zakończenie operacji przeciągania i upuszczania na podstawie stanu klawiszy ESC, SHIFT, CTRL i ALT, jak również stanu przycisków myszy. Domyślna procedura obsługi dla tego zdarzenia powoduje anulowanie operacji przeciągania i upuszczania w przypadku naciśnięcia klawisza ESC i odrzucenie danych po udostępnieniu przycisku myszy.  
   
 > [!CAUTION]
->  Te zdarzenia są stale zgłaszane podczas operacji przeciągania i upuszczania. W związku z tym należy unikać zadań intensywnie korzystających z zasobów w programach obsługi zdarzeń.  Na przykład użyj buforowanego kursora zamiast tworzenia nowego kursora przy każdym <xref:System.Windows.DragDrop.GiveFeedback> wywołaniu zdarzenia.  
+> Te zdarzenia są stale zgłaszane podczas operacji przeciągania i upuszczania. W związku z tym należy unikać zadań intensywnie korzystających z zasobów w programach obsługi zdarzeń.  Na przykład użyj buforowanego kursora zamiast tworzenia nowego kursora przy każdym <xref:System.Windows.DragDrop.GiveFeedback> wywołaniu zdarzenia.  
   
 ### <a name="enabling-an-element-to-be-a-drop-target"></a>Włączanie elementu jako miejsca docelowego upuszczania  
  Obiekt, który jest obiektem docelowym upuszczania, jest odpowiedzialny za:  

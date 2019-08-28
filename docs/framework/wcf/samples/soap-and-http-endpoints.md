@@ -2,65 +2,65 @@
 title: Punkty końcowe protokołów SOAP i HTTP
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: c07391ccd1f8db6e5d2cb6e0c24fc06152d7517f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6fdd3bf4fb1712b181e753d1223df2709673b51e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617522"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045493"
 ---
 # <a name="soap-and-http-endpoints"></a>Punkty końcowe protokołów SOAP i HTTP
-W tym przykładzie pokazano, jak zaimplementować usługę opartego na protokole RPC i udostępnić ją w formacie protokołu SOAP i format "Zwykłego starego kodu XML" (POX) za pomocą modelu programowania w sieci Web WCF. Zobacz [podstawowa usługa HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) próbki, aby uzyskać więcej informacji o wiązaniu HTTP dla usługi. Ten przykład koncentruje się na szczegółowe informacje, które odnoszą się do udostępniania tej samej usługi za pośrednictwem protokołu SOAP i HTTP z użyciem różnych powiązania.  
+Ten przykład pokazuje, jak wdrożyć usługę opartą na protokole RPC i udostępnić ją w formacie protokołu SOAP oraz formacie "zwykły stary kod XML" (POX) przy użyciu modelu programowania sieci Web WCF. Zapoznaj się z przykładem [podstawowej usługi http](../../../../docs/framework/wcf/samples/basic-http-service.md) , aby uzyskać więcej informacji na temat powiązania HTTP dla usługi. Ten przykład koncentruje się na szczegółach odnoszących się do ujawnienia tej samej usługi za pośrednictwem protokołów SOAP i HTTP przy użyciu różnych powiązań.  
   
 ## <a name="demonstrates"></a>Demonstracje  
- Udostępnianie usługi RPC za pośrednictwem protokołu SOAP i HTTP przy użyciu usługi WCF.  
+ Uwidacznianie usługi RPC za pośrednictwem protokołu SOAP i protokołu HTTP przy użyciu programu WCF.  
   
-## <a name="discussion"></a>Dyskusja  
- Ten przykład zawiera dwa składniki: projekt aplikacji sieci Web (usługa), który zawiera usługi WCF i aplikacji konsoli (klient), który wywołuje operacje usługi za pomocą powiązań protokołu SOAP i HTTP.  
+## <a name="discussion"></a>Dyskusji  
+ Ten przykład składa się z dwóch składników: projektu aplikacji sieci Web (usługi), który zawiera usługę WCF i aplikację konsoli (klienta), która wywołuje operacje usługi przy użyciu powiązań protokołu SOAP i HTTP.  
   
- Usługa WCF przedstawia działanie 2-`GetData` i `PutData` — która echo ciąg, który został przekazany jako dane wejściowe. Operacje usługi jest oznaczony za pomocą <xref:System.ServiceModel.Web.WebGetAttribute> i <xref:System.ServiceModel.Web.WebInvokeAttribute>. Te atrybuty kontrolować projekcji HTTP tych operacji. Ponadto jest oznaczony za pomocą <xref:System.ServiceModel.OperationContractAttribute>, co pozwala na ujawnianie za pośrednictwem powiązania protokołu SOAP. Usługa `PutData` metoda zgłasza wyjątek <xref:System.ServiceModel.Web.WebFaultException>, który zostaje przesłane ponownie przy użyciu protokołu HTTP, przy użyciu kodu stanu HTTP i pobiera wysyłane z powrotem za pośrednictwem protokołu SOAP, jako protokołu SOAP.  
+ Usługa WCF ujawnia dwie operacje —`GetData` i `PutData` — które Echo ciąg, który został przesłany jako dane wejściowe. Do operacji usługi są dodawaj <xref:System.ServiceModel.Web.WebGetAttribute> adnotacje <xref:System.ServiceModel.Web.WebInvokeAttribute>i. Te atrybuty kontrolują projekcję HTTP tych operacji. Ponadto są one opatrzone adnotacjami <xref:System.ServiceModel.OperationContractAttribute>, co umożliwia ich uwidocznienie za pośrednictwem powiązań protokołu SOAP. `PutData` Metoda usługi zgłasza, że jest <xref:System.ServiceModel.Web.WebFaultException>wysyłana za pośrednictwem protokołu HTTP przy użyciu kodu stanu HTTP i jest wysyłana za pośrednictwem protokołu SOAP jako błąd protokołu SOAP.  
   
- Plik Web.config służy do konfigurowania usługi WCF z punktami końcowymi 3:  
+ Plik Web. config konfiguruje usługę WCF z trzema punktami końcowymi:  
   
-- Punkt końcowy ~/service.svc/mex, który udostępnia metadane usługi dla dostępu przez klientów opartej na protokole SOAP.  
+- Punkt końcowy/Service.svc/Mex, który uwidacznia metadane usługi dla dostępu przez klientów opartych na protokole SOAP.  
   
-- Punkt końcowy ~/service.svc/http, która umożliwia klientom dostęp do usługi za pomocą powiązania protokołu HTTP.  
+- /Service.svc/http punkt końcowy, który umożliwia klientom dostęp do usługi przy użyciu powiązania HTTP.  
   
-- Punkt końcowy ~/service.svc/soap, który umożliwia klientom dostęp do usługi za pośrednictwem powiązania protokołu HTTP przy użyciu protokołu SOAP.  
+- /Service.svc/SOAP punkt końcowy, który umożliwia klientom dostęp do usługi przy użyciu powiązania protokołu SOAP over HTTP.  
   
- Punkt końcowy HTTP jest skonfigurowany przy użyciu <`webHttp`> Standardowy punkt końcowy, który ma `helpEnabled` równa `true`. Co w efekcie Usługa udostępnia stronę pomocy XHTML oparte na ~/service.svc/http/help używanego przez klientów opartych na protokole HTTP można uzyskiwać dostęp do usługi.  
+ Punkt końcowy HTTP jest skonfigurowany przy użyciu <`webHttp`> standardowego punktu końcowego, `helpEnabled` który ma `true`ustawioną wartość. W związku z tym usługa uwidacznia stronę pomocy opartą na XHTML w lokalizacji ~/Service.svc/http/help, że klienci korzystający z protokołu HTTP mogą uzyskać dostęp do usługi.  
   
- Pokazuje projekt klienta, uzyskiwanie dostępu do usługi przy użyciu serwera proxy protokołu SOAP (wygenerowanych za pośrednictwem **Dodaj odwołanie do usługi**) i uzyskiwania dostępu do usługi za pomocą <xref:System.Net.WebClient>.  
+ Projekt klienta pokazuje dostęp do usługi przy użyciu serwera proxy SOAP (generowanego za pośrednictwem **Dodaj odwołanie do usługi**) i uzyskując dostęp do usługi przy użyciu <xref:System.Net.WebClient>programu.  
   
- Przykład składa się z usługą hostowanych w sieci Web i aplikacji konsoli. Po uruchomieniu aplikacji konsolowej klienta zgłasza żądania do usługi i zapisuje odpowiednie informacje z odpowiedzi w oknie konsoli.  
+ Przykład składa się z usługi hostowanej w sieci Web i aplikacji konsolowej. Gdy aplikacja konsolowa zostanie uruchomiona, klient wysyła żądania do usługi i zapisuje odpowiednie informacje z odpowiedzi do okna konsoli.  
   
 #### <a name="to-run-the-sample"></a>Aby uruchomić przykład  
   
-1. Otwórz rozwiązanie dla przykładowej punktów końcowych HTTP i SOAP.  
+1. Otwórz rozwiązanie dla przykładu punktów końcowych protokołu SOAP i HTTP.  
   
-2. Naciśnij klawisze CTRL + SHIFT + B, aby skompilować rozwiązanie.  
+2. Naciśnij kombinację klawiszy CTRL + SHIFT + B, aby skompilować rozwiązanie.  
   
-3. Jeśli nie jest jeszcze otwarty, naciśnij klawisze CTRL + W, S, aby otworzyć **Eksploratora rozwiązań** okna.  
+3. Jeśli nie jest jeszcze otwarty, naciśnij klawisze CTRL + W, aby otworzyć okno **Eksplorator rozwiązań** .  
   
-4. Z **Eksploratora rozwiązań** okna, kliknij prawym przyciskiem myszy **usługi** projektu, umieść kursor nad **debugowania** menu kontekstowego, aby **uruchomić nowy Wystąpienie** zostanie wyświetlone menu kontekstowe. Kliknij przycisk **Uruchom nowe wystąpienie**. Spowoduje to uruchomienie oprogramowania ASP.NET development server, który hostuje usługę.  
+4. W oknie **Eksplorator rozwiązań** kliknij prawym przyciskiem myszy projekt **usługi** i umieść kursor nad opcją menu kontekstowego **debugowania** , aby pojawiło się menu kontekstowe **Uruchom nowe wystąpienie** . Kliknij przycisk **Uruchom nowe wystąpienie**. Spowoduje to uruchomienie serwera deweloperskiego ASP.NET, który jest hostem usługi.  
   
-5. Z okna Eksploratora rozwiązań kliknij prawym przyciskiem myszy projekt klienta i umieść kursor nad **debugowania** menu kontekstowego, aby **Uruchom nowe wystąpienie** zostanie wyświetlone menu kontekstowe. Kliknij przycisk **Uruchom nowe wystąpienie**.  
+5. W Eksplorator rozwiązań Windows, kliknij prawym przyciskiem myszy projekt klienta i umieść kursor nad opcją menu kontekstowego **debugowania** , aby pojawiło się menu kontekstowe **Uruchom nowe wystąpienie** . Kliknij przycisk **Uruchom nowe wystąpienie**.  
   
-6. Okna konsoli klienta pojawia się i zawiera identyfikator URI uruchomioną usługę i identyfikator URI elementu HTML pomocy strony dla uruchomionej usługi. W dowolnym momencie możesz wyświetlić stronę pomocy HTML, wpisując identyfikator URI strony pomocy w przeglądarce.  
+6. Zostanie wyświetlone okno konsoli klienta z identyfikatorem URI uruchomionej usługi oraz identyfikatorem URI strony pomocy HTML dla działającej usługi. W dowolnym momencie możesz wyświetlić stronę pomocy HTML, wpisując identyfikator URI strony pomocy w przeglądarce.  
   
-7. Po uruchomieniu przykładu klienta zapisuje stan bieżącego działania.  
+7. W miarę uruchamiania przykładu klient zapisuje stan bieżącego działania.  
   
-8. Naciśnij dowolny klawisz, aby zakończyć aplikację konsoli klienta.  
+8. Naciśnij dowolny klawisz, aby zakończyć aplikację konsolową klienta.  
   
 9. Naciśnij klawisze SHIFT + F5, aby zatrzymać debugowanie usługi.  
   
-10. W obszarze powiadomień Windows kliknij prawym przyciskiem myszy ikonę serwera rozwoju platformy ASP.NET, a następnie wybierz **zatrzymać** z menu kontekstowego.  
+10. W obszarze powiadomień systemu Windows kliknij prawym przyciskiem myszy ikonę ASP.NET Development Server i wybierz polecenie **stop** z menu kontekstowego.  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\SoapAndHttpEndpoints`
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\SoapAndHttpEndpoints`

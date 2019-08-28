@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: a6bbc2fe4bf68b50153075a251d23deebda78de5
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 085186eae034314437d5a0c1fe90e6cdf6902c5e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988656"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045852"
 ---
 # <a name="serialization-and-deserialization"></a>Serializacja i deserializacja
 Windows Communication Foundation (WCF) zawiera nowy aparat serializacji, <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> Tłumaczy między obiektami .NET Framework i XML, w obu kierunkach. W tym temacie wyjaśniono, jak działa serializator.  
@@ -138,7 +138,7 @@ Windows Communication Foundation (WCF) zawiera nowy aparat serializacji, <xref:S
 - Ta funkcja może spowodować wolniejsze działanie serializacji i deserializacji. Chociaż dane nie muszą być replikowane, w tym trybie należy wykonać dodatkowe porównania obiektów.  
   
 > [!CAUTION]
->  Gdy tryb jest włączony, jest szczególnie ważne, aby `maxItemsInObjectGraph` ustawić wartość w prawidłowym limicie przydziału. `preserveObjectReferences` Ze względu na sposób obsługi tablic w tym trybie, osoba atakująca może łatwo utworzyć małą złośliwą wiadomość, która powoduje, że duże użycie pamięci jest `maxItemsInObjectGraph` ograniczone tylko przez przydział.  
+> Gdy tryb jest włączony, jest szczególnie ważne, aby `maxItemsInObjectGraph` ustawić wartość w prawidłowym limicie przydziału. `preserveObjectReferences` Ze względu na sposób obsługi tablic w tym trybie, osoba atakująca może łatwo utworzyć małą złośliwą wiadomość, która powoduje, że duże użycie pamięci jest `maxItemsInObjectGraph` ograniczone tylko przez przydział.  
   
 ### <a name="specifying-a-data-contract-surrogate"></a>Określanie surogatu kontraktu danych  
  Niektóre `DataContractSerializer` przeciążenia konstruktora `dataContractSurrogate` mają parametr, który może być ustawiony na `null`. W przeciwnym razie można użyć jej do określenia *surogatu kontraktu danych*, który jest typem, który implementuje <xref:System.Runtime.Serialization.IDataContractSurrogate> interfejs. Następnie można użyć interfejsu do dostosowania procesu serializacji i deserializacji. Aby uzyskać więcej informacji, zobacz [surogaty kontraktu danych](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).  

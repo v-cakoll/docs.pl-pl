@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 3f1c1beda7519a113ea15c5fed84bcb017afae12
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 451f9581ae997ad86fee968fa978713db2049455
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962349"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044387"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Instrukcje: Tworzenie przepływu pracy automatu stanów
 Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z działań niestandardowych. W tym temacie przedstawiono procedurę tworzenia przepływu pracy, który używa zarówno wbudowanych działań, jak <xref:System.Activities.Statements.StateMachine> działania, jak i działań niestandardowych, z poprzednich [metod: Utwórz temat działania](how-to-create-an-activity.md) . Przepływ pracy modeluje grę z liczbą odgadnąć.  
@@ -52,7 +52,7 @@ Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z dział
 9. Kliknij pozycję **Utwórz zmienną**.  
   
     > [!TIP]
-    >  Jeśli nie zostanie wyświetlone pole **Utwórz zmienną** , kliknij <xref:System.Activities.Statements.StateMachine> działanie na powierzchni projektanta przepływu pracy, aby je wybrać.  
+    > Jeśli nie zostanie wyświetlone pole **Utwórz zmienną** , kliknij <xref:System.Activities.Statements.StateMachine> działanie na powierzchni projektanta przepływu pracy, aby je wybrać.  
   
 10. Wpisz `Guess` w polu **Nazwa** , wybierz wartość **Int32** z listy rozwijanej **Typ zmiennej** , a następnie naciśnij klawisz ENTER, aby zapisać zmienną.  
   
@@ -67,7 +67,7 @@ Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z dział
 1. Kliknij pozycję **State1** , aby ją zaznaczyć. W **oknie właściwości**Zmień wartość parametru **DisplayName** na `Initialize Target`.  
   
     > [!TIP]
-    >  Jeśli **okno właściwości** nie jest wyświetlane, wybierz pozycję **okno właściwości** w menu **Widok** .  
+    > Jeśli **okno właściwości** nie jest wyświetlane, wybierz pozycję **okno właściwości** w menu **Widok** .  
   
 2. Kliknij dwukrotnie nowo zmieniono nazwę stanu **docelowego inicjalizacji** w Projektancie przepływu pracy, aby go rozwinąć.  
   
@@ -82,7 +82,7 @@ Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z dział
     ```  
   
     > [!TIP]
-    >  Jeśli okno **Przybornik** nie jest wyświetlane, wybierz pozycję **Przybornik** z menu **Widok** .  
+    > Jeśli okno **Przybornik** nie jest wyświetlane, wybierz pozycję **Przybornik** z menu **Widok** .  
   
 4. Wróć do widoku ogólnego automatu stanów w Projektancie przepływów pracy, klikając pozycję **StateMachine** w obszarze odsyłanie w górnej części projektanta przepływu pracy.  
   

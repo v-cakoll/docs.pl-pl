@@ -2,12 +2,12 @@
 title: Zasady ochrony rozszerzonej
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: 0e6c2bdac3880b12a1b447fe3caf07c4a81a8d80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c7c2e85872c158facb2de91a7413ac5a04491d7f
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961483"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044984"
 ---
 # <a name="extended-protection-policy"></a>Zasady ochrony rozszerzonej
 Ochrona rozszerzona to inicjatywa zabezpieczeń chroniąca przed atakami typu man-in-the-Middle (MITM). Atak MITM polega na zagrożeniu bezpieczeństwa, w którym MITM Pobiera poświadczenia klienta i przekazuje je do serwera.  
@@ -55,10 +55,10 @@ Ochrona rozszerzona to inicjatywa zabezpieczeń chroniąca przed atakami typu ma
 12. Uruchom klienta programu. Klient komunikuje się z usługą, która ustanawia bezpieczny kanał i używa ochrony rozszerzonej.  
   
 > [!IMPORTANT]
->  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Security\ExtendedProtection`
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Security\ExtendedProtection`

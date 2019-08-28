@@ -23,36 +23,36 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-ms.openlocfilehash: 7642aea72ddaa3789dba3b2328f271afcb92a16a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a1b4869588c8dd030cf6276969063ec99b79e33
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610552"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046585"
 ---
 # <a name="declared-element-names-visual-basic"></a>Zadeklarowane nazwy elementów (Visual Basic)
-Każdy element zadeklarowany ma nazwę, nazywany również *identyfikator*, czyli kod używa się do niego.  
+Każdy zadeklarowany element ma nazwę, nazywaną również *identyfikatorem*, który jest używany przez kod do odwoływania się do niego.  
   
-## <a name="rules"></a>reguły  
- Nazwa elementu w języku Visual Basic musi być zgodna z następującymi zasadami:  
+## <a name="rules"></a>Przepisy  
+ Nazwa elementu w Visual Basic musi być zgodna z następującymi regułami:  
   
 - Musi zaczynać się od litery lub znaku podkreślenia (`_`).  
   
-- Musi ona zawierać tylko znaki alfabetu, cyfry i znaki podkreślenia.  
+- Musi zawierać tylko znaki alfanumeryczne, cyfry dziesiętne i podkreślenia.  
   
-- Jeśli zaczyna się od znaku podkreślenia musi zawierać co najmniej jeden znak alfabetu lub cyfrę dziesiętną.  
+- Musi zawierać co najmniej jedną literę lub cyfrę dziesiętną, jeśli zaczyna się od znaku podkreślenia.  
   
 - Nie może być dłuższa niż 1023 znaków.  
   
- Limit długości 1023 znaków ma również zastosowanie do całego ciągu w pełni kwalifikowana nazwa, takich jak `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`.  
+ Limit długości 1023 znaków ma zastosowanie również do całego ciągu w pełni kwalifikowanej nazwy, na przykład `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`.  
   
- Poniższy przykład przedstawia niektóre nazwy prawidłowego elementu.  
+ Poniższy przykład pokazuje nieprawidłowe nazwy elementów.  
   
  `aB123__45`  
   
  `_567`  
   
- Poniższy przykład przedstawia niektóre nazwy nieprawidłowy element. Pierwszy zawiera tylko znak podkreślenia, drugi zaczyna się od cyfry dziesiętne, a trzeci zawiera nieprawidłowy znak ($).  
+ W poniższym przykładzie przedstawiono niektóre nieprawidłowe nazwy elementów. Pierwszy zawiera tylko podkreślenie, drugi zaczyna się cyfrą dziesiętną, a trzecia zawiera nieprawidłowy znak ($).  
   
  `' Three INVALID element names`  
   
@@ -63,31 +63,31 @@ Każdy element zadeklarowany ma nazwę, nazywany również *identyfikator*, czyl
  `xyz$wv`  
   
 > [!CAUTION]
->  Nazwy elementów rozpoczynające się od podkreślenia (`_`) nie są częścią [niezależność od języka i składniki niezależne od języka](../../../../standard/language-independence-and-language-independent-components.md) (CLS), dzięki czemu kod zgodny ze specyfikacją CLS nie można użyć składnika, który definiuje takich nazw. Podkreślenia w innym miejscu, w nazwie elementu jest jednak zgodny ze specyfikacją CLS.  
+> Nazwy elementów zaczynające się od znaku podkreślenia (`_`) nie są częścią niezależną od [języka i składników niezależnych od języka](../../../../standard/language-independence-and-language-independent-components.md) (CLS), więc kod zgodny ze specyfikacją CLS nie może używać składnika, który definiuje takie nazwy. Jednakże podkreślenie w każdym innym miejscu w nazwie elementu jest zgodne ze specyfikacją CLS.  
   
-### <a name="name-length-guidelines"></a>Wytyczne dotyczące długość nazwy  
- Jako to w praktyce Twoja nazwa powinna być możliwie krótkie podczas identyfikacji nadal wyraźnie rodzaj elementu. To zwiększa czytelność kodu i zmniejsza rozmiar wiersza długości i pliku źródłowego.  
+### <a name="name-length-guidelines"></a>Wskazówki dotyczące długości nazwy  
+ Ze względu na to, że Twoja nazwa powinna być tak krótka, jak to możliwe, podczas gdy nadal jasno identyfikuje charakter elementu. Poprawia to czytelność kodu i zmniejsza długość wiersza i rozmiar pliku źródłowego.  
   
- Z drugiej strony Twoja nazwa nie powinna być zbyt krótki, że nie odpowiednio opisano element reprezentuje i jak Twój kod używający tych informacji. Jest to ważne dla czytelności kodu. Jeśli ktoś inny spróbuje go zrozumieć lub samodzielnie przeglądasz go przez długi czas, po jego autorem, odpowiedni element nazw można zapisać znaczną ilość czasu.  
+ Z drugiej strony, Twoja nazwa nie powinna być tak krótka, aby nie opisująca znaczenia elementu i sposobu jego użycia przez kod. Jest to ważne dla czytelności kodu. Jeśli ktoś inny próbuje zrozumieć ten element, lub jeśli ty przeglądasz ją przez długi czas po jego zapisaniu, odpowiednie nazwy elementów mogą zaoszczędzić znaczną ilość czasu.  
   
-## <a name="escaped-names"></a>Nazwy wyjścia  
- Ogólnie rzecz biorąc, nazwa elementu nie może odpowiadać dowolnych słów kluczowych, zastrzeżone w języku Visual Basic, takie jak `Case` lub `Friend`. Jednakże można zdefiniować *poprzedzone znakiem zmiany znaczenia nazwa*, która jest ujęta w nawiasy kwadratowe (`[ ]`). Nazwa o zmienionym znaczeniu może odnosić się słowa kluczowego języka Visual Basic, ponieważ nawiasy, usuń wszelkie niejednoznaczności. Możesz także użyć nawiasów, gdy odwołujesz się do nazwy w dalszej części kodu.  
+## <a name="escaped-names"></a>Nazwy o zmienionym znaczeniu  
+ Ogólnie rzecz biorąc, nazwa elementu nie może być zgodna ze słowami kluczowymi zarezerwowanych przez `Case` Visual Basic `Friend`, takich jak lub. Można jednak zdefiniować *nazwę ucieczki*, która jest ujęta w nawiasy kwadratowe`[ ]`(). Nazwa o zmienionym znaczeniu może być zgodna ze słowem kluczowym Visual Basic, ponieważ nawiasy usuwają dowolną niejednoznaczność. Możesz również użyć nawiasów, gdy odwołujesz się do nazwy w dalszej części kodu.  
   
- Ogólnie rzecz biorąc, należy używać nazwy wyjścia tylko wtedy, gdy:  
+ Ogólnie rzecz biorąc należy używać nazw unikowych tylko wtedy, gdy:  
   
-- Kod został zmigrowany z poprzedniej wersji programu Visual Basic, który nie zarezerwować słowa kluczowego jako nazwy; lub  
+- Twój kod został zmigrowany z poprzedniej wersji Visual Basic, która nie zarezerwował słowa kluczowego używanego jako nazwa; oraz  
   
-- Pracujesz z kodu napisanego w innym języku, w którym dane słowo kluczowe nie jest zarezerwowana.  
+- Pracujesz z kodem zapisanym w innym języku, w którym określone słowo kluczowe nie jest zarezerwowane.  
   
- W przeciwnym razie należy rozważyć, jeśli jego nazwa jest w konflikcie ze słowem kluczowym, zmiana nazwy elementu. Zintegrowane środowisko programistyczne (IDE) zapewnia prosty sposób, aby to zrobić. Aby uzyskać więcej informacji, zobacz [Refactoring](/visualstudio/vb-ide/refactoring-vb).  
+ W przeciwnym razie należy rozważyć zmianę nazwy elementu, jeśli jego nazwa powoduje konflikt ze słowem kluczowym. Zintegrowane środowisko programistyczne (IDE) zapewnia łatwy sposób wykonania tej czynności. Aby uzyskać więcej informacji, [](/visualstudio/vb-ide/refactoring-vb)zobacz Refaktoryzacja.  
   
 ## <a name="case-sensitivity-in-names"></a>Rozróżnianie wielkości liter w nazwach  
- Nazwy elementów w języku Visual Basic jest rozróżniana wielkość liter. Oznacza to, że gdy kompilator porównuje dwie nazwy, które różnią się alfabetyczne tylko wielkością liter, interpretuje je jako tej samej nazwie. Na przykład, które uzna za `ABC` i `abc` do odwoływania się do tego samego elementu zadeklarowane.  
+ W nazwach elementów w Visual Basic nie jest rozróżniana wielkość liter. Oznacza to, że gdy kompilator porównuje dwie nazwy, które różnią się tylko wielkością liter, interpretuje je jako tę samą nazwę. Na przykład uważa `ABC` i `abc` odwołuje się do tego samego zadeklarowanego elementu.  
   
- Środowisko uruchomieniowe języka wspólnego (CLR) używa jednak powiązania z uwzględnieniem wielkości liter. W związku z tym podczas tworzenia zestawu lub biblioteki DLL i był dostępny dla innych zestawów, nazwy nie są już bez uwzględniania wielkości liter. Na przykład, jeśli zdefiniujesz klasę z elementu o nazwie `ABC`, i innych zestawów, należy użyć klasy za pomocą środowiska uruchomieniowego języka wspólnego, ich musi odwoływać się do elementu jako `ABC`. Jeśli są później ponownie skompilować klasy i Zmień nazwę elementu do `abc`, zestawy, przy użyciu klasy nie będzie można uzyskać dostępu do tego elementu. W związku z tym po zwolnieniu zaktualizowanej wersji zestawu, nie należy zmieniać wielkość liter alfabetu wszelkie publiczne elementy.  
+ Jednak środowisko uruchomieniowe języka wspólnego (CLR) używa powiązania z rozróżnianiem wielkości liter. W związku z tym, podczas tworzenia zestawu lub biblioteki DLL i udostępnienia go innym zestawom nazwy nie są dłuższe. Na przykład, jeśli zdefiniujesz klasę z elementem o nazwie `ABC`, a inne zestawy używają klasy za pomocą środowiska uruchomieniowego języka wspólnego, muszą odwoływać się do elementu jako. `ABC` Jeśli następnie ponownie skompilujesz klasę i zmienisz nazwę elementu na `abc`, inne zestawy używające klasy nie będą miały już dostępu do tego elementu. W związku z tym po wydaniu zaktualizowanej wersji zestawu nie należy zmieniać wielkości liter każdego z elementów publicznych.  
   
 ## <a name="names-and-locales"></a>Nazwy i ustawienia regionalne  
- Porównanie nazw jest niezależne od ustawień regionalnych. Jeśli dwie nazwy są zgodne w jednym ustawień regionalnych, mają gwarancję, że odpowiada we wszystkich ustawieniach regionalnych.  
+ Porównanie nazw jest niezależne od ustawień regionalnych. Jeśli dwie nazwy są zgodne z jednym ustawieniem regionalnym, są one gwarantowane do dopasowania we wszystkich ustawieniach regionalnych.  
   
 ## <a name="see-also"></a>Zobacz także
 

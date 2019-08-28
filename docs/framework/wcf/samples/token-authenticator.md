@@ -2,35 +2,35 @@
 title: Wystawca uwierzytelnienia tokenów
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: fecb9197409f2e486288d40b80ce1abbbbb78fe2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a8a8713cd35e73b5126dadd7e0e17a3f8304188b
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593485"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045458"
 ---
 # <a name="token-authenticator"></a>Wystawca uwierzytelnienia tokenów
-Ten przykład demonstruje sposób implementacji niestandardowego wystawcy uwierzytelniania tokenu. Wystawcy uwierzytelnienia tokenu w Windows Communication Foundation (WCF) służy do sprawdzania poprawności tokenu użytego komunikatem, weryfikowanie, czy jest spójny i uwierzytelniania tożsamości skojarzonych z tokenem.
+Ten przykład pokazuje, jak zaimplementować niestandardowy wystawca uwierzytelnienia tokenów. Wystawca uwierzytelnienia w programie Windows Communication Foundation (WCF) służy do sprawdzania poprawności tokenu użytego w komunikacie, weryfikowania, czy jest on spójny, i uwierzytelniania tożsamości skojarzonej z tokenem.
 
- Niestandardowe uwierzytelnienia tokenu są przydatne w wielu przypadkach, takich jak:
+ Niestandardowe wystawcy tokenów są przydatne w różnych przypadkach, takich jak:
 
-- Jeśli chcesz przesłonić domyślny mechanizm uwierzytelniania, skojarzone z tokenem.
+- Jeśli chcesz zastąpić domyślny mechanizm uwierzytelniania skojarzony z tokenem.
 
-- Kiedy tworzysz niestandardowy token.
+- Podczas kompilowania niestandardowego tokenu.
 
- W tym przykładzie pokazano poniżej:
+ W tym przykładzie przedstawiono następujące elementy:
 
-- Jak klienta można uwierzytelniać za pomocą pary nazwy użytkownika i hasła.
+- Jak klient może uwierzytelniać za pomocą pary username/Password.
 
-- Jak serwer może sprawdzić poprawności poświadczeń klienta przy użyciu niestandardowego wystawcy uwierzytelniania tokenu.
+- Jak serwer może sprawdzać poprawność poświadczeń klienta przy użyciu niestandardowego wystawcy uwierzytelnienia tokenu.
 
-- Jak kod usługi WCF wiąże się przy użyciu niestandardowego wystawcy uwierzytelniania tokenu.
+- Sposób powiązania kodu usługi WCF z niestandardowym wystawcą uwierzytelnienia.
 
-- W jaki sposób serwer może zostać uwierzytelniony przy użyciu certyfikatu X.509 serwera.
+- Jak można uwierzytelniać serwer przy użyciu certyfikatu X. 509 serwera.
 
- Niniejszy przykład pokazuje również, jak tożsamości elementu wywołującego jest dostępny z WCF po zakończeniu procesu niestandardowe uwierzytelnianie przy użyciu tokenów.
+ Ten przykład pokazuje również, jak tożsamość wywołującego jest dostępna z programu WCF po procesie uwierzytelniania tokenu niestandardowego.
 
- Usługa udostępnia jeden punkt końcowy do komunikacji z usługą zdefiniowane przy użyciu pliku konfiguracji App.config. Punkt końcowy składa się z adresu, powiązanie i kontrakt. Powiązanie jest skonfigurowane przy użyciu standardowego `wsHttpBinding`, tryb zabezpieczeń, ustawiono na komunikat — domyślny tryb `wsHttpBinding`. W tym przykładzie ustawia standard `wsHttpBinding` do korzystania z uwierzytelniania nazwy użytkownika klienta. Usługa konfiguruje również certyfikat usługi przy użyciu `serviceCredentials` zachowanie. `securityCredentials` Zachowanie pozwala określić certyfikat usługi. Certyfikat usługi jest używany przez klienta do uwierzytelniania usługi, a także zapewnienia ochrony wiadomości. Następująca konfiguracja odwołuje się do certyfikatu localhost, instalowana podczas instalacji przykładowej zgodnie z opisem w poniższych instrukcjach instalacji.
+ Usługa udostępnia jeden punkt końcowy do komunikacji z usługą, zdefiniowany przy użyciu pliku konfiguracji App. config. Punkt końcowy składa się z adresu, powiązania i kontraktu. Powiązanie jest skonfigurowane ze standardem `wsHttpBinding`, z trybem zabezpieczeń ustawionym na komunikat — domyślny tryb. `wsHttpBinding` Ten przykład ustawia standard `wsHttpBinding` do korzystania z uwierzytelniania nazwy użytkownika klienta. Usługa konfiguruje również certyfikat usługi przy użyciu `serviceCredentials` zachowania. `securityCredentials` Zachowanie pozwala określić certyfikat usługi. Certyfikat usługi jest używany przez klienta do uwierzytelniania usługi i zapewniania ochrony komunikatów. Następująca konfiguracja odwołuje się do certyfikatu localhost zainstalowanego podczas konfiguracji przykładowej zgodnie z opisem w poniższych instrukcjach dotyczących instalacji.
 
 ```xml
 <system.serviceModel>
@@ -81,7 +81,7 @@ Ten przykład demonstruje sposób implementacji niestandardowego wystawcy uwierz
   </system.serviceModel>
 ```
 
- Konfiguracja punktu końcowego klienta składa się z nazwy konfiguracji adresu bezwzględnego dla punktu końcowego usługi, powiązanie i zamówienia. Klient powiązanie skonfigurowano odpowiednie `Mode` i `clientCredentialType`.
+ Konfiguracja punktu końcowego klienta składa się z nazwy konfiguracji, adresu bezwzględnego dla punktu końcowego usługi, powiązania i kontraktu. Powiązanie klienta jest skonfigurowane z odpowiednimi `Mode` i. `clientCredentialType`
 
 ```xml
 <system.serviceModel>
@@ -106,7 +106,7 @@ Ten przykład demonstruje sposób implementacji niestandardowego wystawcy uwierz
   </system.serviceModel>
 ```
 
- Implementacja klienta ustawia nazwę użytkownika i hasło do użycia.
+ Implementacja klienta ustawia nazwę użytkownika i hasło, które mają być używane.
 
 ```
 static void Main()
@@ -118,12 +118,12 @@ static void Main()
 }
 ```
 
-## <a name="custom-token-authenticator"></a>Niestandardowego wystawcy uwierzytelniania tokenu
- Poniższe kroki umożliwiają tworzenie niestandardowego wystawcy uwierzytelniania tokenu:
+## <a name="custom-token-authenticator"></a>Niestandardowe wystawcy uwierzytelniania tokenów
+ Aby utworzyć niestandardowy wystawca uwierzytelnienia tokenów, wykonaj następujące kroki:
 
-1. Napisać niestandardowego wystawcy uwierzytelniania tokenu.
+1. Napisz niestandardowy wystawca uwierzytelnienia.
 
-     Przykład implementuje niestandardowe wystawcy uwierzytelnienia tokenu, który sprawdza, czy nazwa użytkownika ma format prawidłowy adres e-mail. Pochodzi <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator>. Najważniejszą metodą w tej klasie jest <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%28System.String%2CSystem.String%29>. W przypadku tej metody wystawcy uwierzytelnienia weryfikuje format nazwy użytkownika oraz że nazwa hosta nie jest z domeny nieautoryzowanych. Jeśli oba warunki są spełnione, a następnie zwraca kolekcję tylko do odczytu <xref:System.IdentityModel.Policy.IAuthorizationPolicy> wystąpień, które jest następnie używany w celu dostarczania oświadczeń, które reprezentują informacje przechowywane w tokenie nazwy użytkownika.
+     Przykład implementuje niestandardowy wystawca uwierzytelnienia tokenów, który sprawdza, czy nazwa użytkownika ma prawidłowy format wiadomości e-mail. Dziedziczy <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator>. Najważniejszym sposobem w tej klasie jest <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%28System.String%2CSystem.String%29>. W tej metodzie wystawca uwierzytelnienia weryfikuje format nazwy użytkownika, a także że nazwa hosta nie pochodzi z nieautoryzowanej domeny. W przypadku spełnienia obu warunków funkcja zwraca kolekcję <xref:System.IdentityModel.Policy.IAuthorizationPolicy> wystąpień tylko do odczytu, która jest używana do dostarczania oświadczeń, które reprezentują informacje przechowywane wewnątrz tokenu username.
 
     ```
     protected override ReadOnlyCollection<IAuthorizationPolicy> ValidateUserNamePasswordCore(string userName, string password)
@@ -140,9 +140,9 @@ static void Main()
     }
     ```
 
-2. Podaj zasady autoryzacji, który jest zwracany przez niestandardowego wystawcy uwierzytelniania tokenu.
+2. Podaj zasady autoryzacji, które są zwracane przez niestandardowy wystawca uwierzytelnienia.
 
-     W tym przykładzie zawiera własną implementację <xref:System.IdentityModel.Policy.IAuthorizationPolicy> o nazwie `UnconditionalPolicy` zwracającego zestawu oświadczeń i tożsamości, które zostały przekazane do niego w jego konstruktorze.
+     Ten przykład zawiera własną implementację <xref:System.IdentityModel.Policy.IAuthorizationPolicy> o nazwie `UnconditionalPolicy` , która zwraca zestaw oświadczeń i tożsamości, które zostały do niego przesłane w konstruktorze.
 
     ```
     class UnconditionalPolicy : IAuthorizationPolicy
@@ -210,9 +210,9 @@ static void Main()
     }
     ```
 
-3. Napisać niestandardowy token Menedżer zabezpieczeń.
+3. Napisz niestandardowego menedżera tokenów zabezpieczających.
 
-     <xref:System.IdentityModel.Selectors.SecurityTokenManager> Służy do tworzenia <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> dla konkretnego <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> obiekty, które są przekazywane do niego w `CreateSecurityTokenAuthenticator` metody. Menedżer tokenów zabezpieczeń umożliwia również tworzenie dostawcy tokenów i tokenów serializatory, ale te nie są objęte tego przykładu. W tym przykładzie Menedżer tokenów zabezpieczeń niestandardowe dziedziczy <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> klasy i zastąpień `CreateSecurityTokenAuthenticator` żądana jest metoda do zwrócenia wystawcy uwierzytelniania tokenu niestandardowej nazwy użytkownika, jeśli przekazany wymagania tokenu wskazać, że uwierzytelniania nazwy użytkownika.
+     Służy do <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> tworzenia dla określonych obiektów, które są do niego przenoszone w metodzie.`CreateSecurityTokenAuthenticator` <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> <xref:System.IdentityModel.Selectors.SecurityTokenManager> Menedżer tokenów zabezpieczających jest również używany do tworzenia dostawców tokenów i serializatorów tokenów, ale nie są one objęte tym przykładem. W tym przykładzie niestandardowy Menedżer tokenów zabezpieczających dziedziczy z <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> klasy i `CreateSecurityTokenAuthenticator` przesłania metodę w celu zwrócenia niestandardowej wystawcy tokenów username, gdy spełnione wymagania dotyczące tokenu wskazują, że żądanie uwierzytelnienia nazwy użytkownika jest wymagane.
 
     ```
     public class MySecurityTokenManager : ServiceCredentialsSecurityTokenManager
@@ -240,9 +240,9 @@ static void Main()
     }
     ```
 
-4. Wpisz poświadczenia usługi niestandardowych.
+4. Napisz niestandardowe poświadczenie usługi.
 
-     Klasa poświadczenia usługi jest używana do reprezentowania poświadczenia, które są skonfigurowane dla usługi i tworzy zabezpieczeń Menedżer tokenów, który jest używany do uzyskiwania wystawców uwierzytelnienia tokenu, dostawcy tokenów i tokenów serializatory.
+     Klasa poświadczeń usługi służy do reprezentowania poświadczeń skonfigurowanych dla usługi i tworzy Menedżera tokenów zabezpieczających, który jest używany do uzyskiwania wystawców tokenów, dostawców tokenów i serializatorów tokenów.
 
     ```
     public class MyUserNameCredential : ServiceCredentials
@@ -266,9 +266,9 @@ static void Main()
     }
     ```
 
-5. Skonfiguruj usługę pod kątem używania poświadczeń usługi niestandardowych.
+5. Skonfiguruj usługę tak, aby korzystała z poświadczeń usługi niestandardowej.
 
-     Aby usługi w celu używania poświadczeń usługa niestandardowa możemy usunąć domyślną klasę poświadczeń usługi po przechwyceniu certyfikat usługi, która jest już wstępnie skonfigurowane w domyślnych poświadczeń usługi, a następnie skonfigurować nowe poświadczenie usługi wystąpienie do używania certyfikatów wstępnie skonfigurowane usługi i dodaj to nowe wystąpienie poświadczeń usługi do zachowania usługi.
+     Aby usługa mogła korzystać z poświadczeń usługi niestandardowej, należy usunąć domyślną klasę poświadczeń usługi po przechwyceniu certyfikatu usługi, który został już wstępnie skonfigurowany w domyślnym poświadczenia usługi, i skonfigurować nowe poświadczenie usługi wystąpienie, aby użyć wstępnie skonfigurowanych certyfikatów usługi i dodać to nowe wystąpienie poświadczeń usługi do zachowań usługi.
 
     ```
     ServiceCredentials sc = serviceHost.Credentials;
@@ -279,7 +279,7 @@ static void Main()
     serviceHost.Description.Behaviors.Add(serviceCredential);
     ```
 
- Aby wyświetlić informacje dotyczące obiektu wywołującego, można użyć <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> jak pokazano w poniższym kodzie. <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> Zawiera oświadczenia informacje dotyczące bieżącego obiektu wywołującego.
+ Aby wyświetlić informacje o wywołującym, można użyć <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> , jak pokazano w poniższym kodzie. <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> Zawiera informacje o oświadczeniach dotyczących bieżącego obiektu wywołującego.
 
 ```
 static void DisplayIdentityInformation()
@@ -290,16 +290,16 @@ static void DisplayIdentityInformation()
 }
 ```
 
- Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.
+ Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.
 
-## <a name="setup-batch-file"></a>Instalacyjny plik wsadowy
- Plik wsadowy Setup.bat jest dołączone do tego przykładu umożliwia skonfigurowanie serwera za pomocą odpowiednich certyfikatów do uruchomienia samodzielnie hostowanej aplikacji, która wymaga serwera zabezpieczeń opartego na certyfikatach. Ten plik wsadowy muszą zostać zmodyfikowane, działają na różnych komputerach lub działać w przypadku innych obsługiwanych.
+## <a name="setup-batch-file"></a>Plik wsadowy konfiguracji
+ Plik wsadowy Setup. bat dołączony do tego przykładu umożliwia skonfigurowanie serwera z odpowiednimi certyfikatami w celu uruchomienia aplikacji samohostowanej wymagającej zabezpieczeń opartych na certyfikatach serwera. Ten plik wsadowy należy zmodyfikować, aby mógł działać na różnych komputerach lub działać w nieobsługiwanym przypadku.
 
- Poniżej zawiera krótkie omówienie różne sekcje w plikach wsadowych, dzięki czemu można modyfikować do uruchomienia w odpowiedniej konfiguracji.
+ Poniżej przedstawiono krótkie omówienie różnych sekcji plików wsadowych, dzięki czemu można je zmodyfikować do uruchamiania w odpowiedniej konfiguracji.
 
 - Tworzenie certyfikatu serwera.
 
-     Następujące wiersze z pliku wsadowego Setup.bat jest utworzenie certyfikatu serwera, który ma być używany. `%SERVER_NAME%` Zmienna Określa nazwę serwera. Zmieniać tej zmiennej do określenia nazwy serwera. Domyślnie ten plik wsadowy jest localhost.
+     Poniższe wiersze z pliku wsadowego Setup. bat tworzą certyfikat serwera do użycia. `%SERVER_NAME%` Zmienna określa nazwę serwera. Zmień tę zmienną, aby określić własną nazwę serwera. Wartość domyślna w tym pliku wsadowym to localhost.
 
     ```
     echo ************
@@ -311,58 +311,58 @@ static void DisplayIdentityInformation()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
-- Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta.
+- Instalowanie certyfikatu serwera w magazynie zaufanych certyfikatów klienta.
 
-     Przechowywać następujące wiersze w Setup.bat jest kopia pliku wsadowego certyfikatu serwera do klienta zaufanych osób. Ten krok jest wymagany, ponieważ generowaną przez Makecert.exe certyfikaty nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony firmy Microsoft — w tym kroku zapełnianie magazynu certyfikatów klienta z certyfikatu serwera nie jest wymagane.
+     Następujące wiersze w pliku wsadowym Setup. bat kopiują certyfikat serwera do magazynu zaufanych osób klienta. Ten krok jest wymagany, ponieważ certyfikaty wygenerowane przez Makecert. exe nie są niejawnie zaufane przez system klienta. Jeśli masz już certyfikat, który znajduje się w zaufanym certyfikacie głównym klienta — na przykład certyfikat wystawiony przez firmę Microsoft — ten krok zapełniania magazynu certyfikatów klienta z certyfikatem serwera nie jest wymagany.
 
     ```
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
     > [!NOTE]
-    >  Instalacyjny plik wsadowy jest przeznaczony do uruchamiania z wierszem polecenia Windows SDK. Wymaga to, że zmienna środowiskowa MSSDK odwołują się do katalogu, w którym jest zainstalowany zestaw SDK. Ta zmienna środowiskowa jest automatycznie ustawiana w wierszu polecenia Windows SDK.
+    > Plik wsadowy instalacji został zaprojektowany tak, aby można go było uruchomić z poziomu wiersza polecenia Windows SDK. Wymaga, aby zmienna środowiskowa MSSDK wskazywała katalog, w którym zainstalowano zestaw SDK. Ta zmienna środowiskowa jest ustawiana automatycznie w wierszu polecenia Windows SDK.
 
 #### <a name="to-set-up-and-build-the-sample"></a>Aby skonfigurować i skompilować przykład
 
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Aby uruchomić przykład na tym samym komputerze
 
-1. Uruchom Setup.bat z folderu instalacji przykładowej w wierszu polecenia programu Visual Studio 2012 otwartych z uprawnieniami administratora. Spowoduje to zainstalowanie wszystkich certyfikatów, które są wymagane do uruchomienia przykładu.
+1. Uruchom setup. bat z przykładowego folderu instalacyjnego w wierszu polecenia programu Visual Studio 2012 otwartym z uprawnieniami administratora. Spowoduje to zainstalowanie wszystkich certyfikatów wymaganych do uruchomienia przykładu.
 
     > [!NOTE]
-    >  Plik wsadowy Setup.bat jest przeznaczony do uruchamiania z programu Visual Studio 2012 wiersz polecenia. Ustaw w Visual Studio 2012 Command Prompt punkty do katalogu, który zawiera pliki wykonywalne wymagane przez skrypt Setup.bat jest zmiennej środowiskowej PATH.  
+    > Plik wsadowy Setup. bat został zaprojektowany do uruchamiania z wiersza polecenia programu Visual Studio 2012. Zmienna środowiskowa PATH ustawiona w wierszu polecenia programu Visual Studio 2012 wskazuje katalog zawierający pliki wykonywalne wymagane przez skrypt Setup. bat.  
   
-2. Uruchom service.exe z service\bin.  
+2. Uruchom usługę Service. exe z service\bin.  
   
-3. Uruchom client.exe z \client\bin. Aktywność klienta jest wyświetlany w aplikacji konsolowej klienta.  
+3. Uruchamianie programu Client. exe z \client\bin. Aktywność klienta jest wyświetlana w aplikacji konsoli klienta.  
   
-4. Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Jeśli klient i usługa nie mogą się komunikować, zobacz Wskazówki dotyczące [rozwiązywania problemów z przykładami programu WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-#### <a name="to-run-the-sample-across-computers"></a>Do uruchomienia przykładu na komputerach  
+#### <a name="to-run-the-sample-across-computers"></a>Aby uruchomić przykład na wielu komputerach  
   
-1. Utwórz katalog na komputerze usługi, aby pliki binarne usługi.  
+1. Utwórz katalog na komputerze usługi dla plików binarnych usługi.  
   
-2. Skopiuj pliki programu usługi do katalogu usługi na komputerze usługi. Także skopiować pliki Setup.bat i Cleanup.bat na komputerze usługi.  
+2. Skopiuj pliki programu Service Files do katalogu usługi na komputerze usługi. Skopiuj także pliki Setup. bat i Oczyść. bat do komputera usługi.  
   
-3. Musi mieć certyfikat serwera o nazwie podmiotu, który zawiera w pełni kwalifikowana nazwa domeny komputera. Plik App.config usługi należy zaktualizować w celu odzwierciedlenia tej nowej nazwy certyfikatu. Możesz je utworzyć za pomocą Setup.bat, jeśli ustawisz `%SERVER_NAME%` zmiennych hosta w pełni kwalifikowaną nazwę komputera, na którym uruchomiona jest usługa. Należy zauważyć, że plik Setup.bat jest należy uruchomić z wiersza polecenia dla deweloperów programu Visual Studio otwartych z uprawnieniami administratora.  
+3. Musisz mieć certyfikat serwera z nazwą podmiotu zawierającą w pełni kwalifikowaną nazwę domeny komputera. Plik App. config usługi musi zostać zaktualizowany w celu odzwierciedlenia tej nowej nazwy certyfikatu. Można go utworzyć przy użyciu Setup. bat, jeśli ustawisz `%SERVER_NAME%` zmienną na w pełni kwalifikowaną nazwę hosta komputera, na którym zostanie uruchomiona usługa. Należy pamiętać, że plik Setup. bat musi być uruchamiany z wiersz polecenia dla deweloperów dla programu Visual Studio otwartego z uprawnieniami administratora.  
   
-4. Skopiuj certyfikat serwera w magazynie CurrentUser TrustedPeople klienta. Nie trzeba to zrobić, z wyjątkiem sytuacji, gdy certyfikat serwera jest wystawiony przez klienta zaufanego wystawcy.  
+4. Skopiuj certyfikat serwera do magazynu CurrentUser-TrustedPeople klienta. Nie trzeba tego robić, chyba że certyfikat serwera zostanie wystawiony przez zaufanego wystawcy klienta.  
   
-5. W pliku App.config na komputerze usługi Zmień wartość z adresu podstawowego, aby określić nazwę komputera w pełni kwalifikowaną, zamiast nazwy localhost.  
+5. W pliku App. config na komputerze usługi Zmień wartość adresu podstawowego, aby określić w pełni kwalifikowaną nazwę komputera zamiast hosta lokalnego.  
   
-6. Na komputerze usługi service.exe należy uruchomić z wiersza polecenia.  
+6. Na komputerze usługi Uruchom program Service. exe z wiersza polecenia.  
   
-7. Skopiuj pliki programu klienta z folderu \client\bin\ w folderze specyficzny dla języka na komputerze klienckim.  
+7. Skopiuj pliki programu klienckiego z folderu \client\bin\, w obszarze folder specyficzny dla języka, do komputera klienckiego.  
   
-8. W pliku Client.exe.config na komputerze klienckim należy zmienić wartość adresu punktu końcowego, aby dopasować nowy adres usługi.  
+8. W pliku Client. exe. config na komputerze klienckim Zmień wartość adresu punktu końcowego, aby odpowiadała nowemu adresowi usługi.  
   
-9. Na komputerze klienckim należy uruchomić Client.exe z poziomu wiersza polecenia.  
+9. Na komputerze klienckim uruchom program Client. exe z wiersza polecenia.  
   
-10. Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+10. Jeśli klient i usługa nie mogą się komunikować, zobacz Wskazówki dotyczące [rozwiązywania problemów z przykładami programu WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-#### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić zasoby po próbki  
+#### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić po przykładzie  
   
-1. Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  
+1. Uruchom Oczyść. bat w folderze Samples po zakończeniu uruchamiania przykładu.  

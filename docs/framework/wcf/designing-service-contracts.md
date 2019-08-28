@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-ms.openlocfilehash: ddaa49e65a164c7bf074a541c9a4df8f3dace1d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a764b18cc3016610b8a149631b4de89923a7a5b4
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965615"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040616"
 ---
 # <a name="designing-service-contracts"></a>Projektowanie kontraktów usług
 W tym temacie opisano kontrakty usługi, sposób ich definiowania, dostępne operacje (oraz implikacje wymiany komunikatów), typy danych, które są używane, a także inne problemy, które ułatwiają projektowanie operacji, które spełniają wymagania związane z Twoim scenariuszem.  
@@ -146,7 +146,7 @@ Sub Hello (ByVal greeting As String)
  Aby zapoznać się z przykładem tworzenia usługi i klienta, który uzyskuje dostęp do tej usługi [, zobacz How to: Utwórz umowę](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md) dupleksową i [instrukcje: Uzyskaj dostęp do usług za pomocą](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)kontraktu dupleksowego. Aby uzyskać przykład roboczy, zobacz [Duplex](../../../docs/framework/wcf/samples/duplex.md). Aby uzyskać więcej informacji o problemach z używaniem umów dupleksowych, zobacz [usługi dupleksowe](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   
 > [!CAUTION]
->  Gdy usługa otrzymuje komunikat dupleksowy, przegląda `ReplyTo` element w tym komunikacie przychodzącym, aby określić, gdzie należy wysłać odpowiedź. Jeśli kanał używany do odbierania wiadomości nie jest zabezpieczony, niezaufanego klienta może wysłać złośliwy komunikat z maszyną `ReplyTo`docelową, co prowadzi do odmowy usługi (DOS) tej maszyny docelowej.  
+> Gdy usługa otrzymuje komunikat dupleksowy, przegląda `ReplyTo` element w tym komunikacie przychodzącym, aby określić, gdzie należy wysłać odpowiedź. Jeśli kanał używany do odbierania wiadomości nie jest zabezpieczony, niezaufanego klienta może wysłać złośliwy komunikat z maszyną `ReplyTo`docelową, co prowadzi do odmowy usługi (DOS) tej maszyny docelowej.  
   
 ##### <a name="out-and-ref-parameters"></a>Parametry out i ref  
  W `in` większości przypadków można używać parametrów (`ByVal` w Visual Basic) i `out` i `ref` parametrów (`ByRef` w Visual Basic). Ponieważ oba `out` parametry `ref` i wskazują, że dane są zwracane z operacji, sygnatura operacji, taka jak poniżej, określa, że operacja żądania/odpowiedzi jest wymagana, nawet jeśli sygnatura operacji zwraca `void`.  

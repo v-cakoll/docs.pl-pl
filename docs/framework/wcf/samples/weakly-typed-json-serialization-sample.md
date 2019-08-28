@@ -2,12 +2,12 @@
 title: Przykład serializacji kodu JSON ze słabą kontrolą typów
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: 2a01ba9be5b7939729548863769f4b85f8123dd4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f41a71641ca655d9bf95104643385a56792b41bc
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966698"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045417"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Przykład serializacji kodu JSON ze słabą kontrolą typów
 Podczas serializowania typu zdefiniowanego przez użytkownika do określonego formatu sieci lub deserializacji formatu sieci z powrotem do typu zdefiniowanego przez użytkownika, dany typ zdefiniowany przez użytkownika musi być dostępny zarówno dla usługi, jak i dla klienta. Zwykle w tym <xref:System.Runtime.Serialization.DataContractAttribute> celu atrybut jest stosowany do tych typów zdefiniowanych przez użytkownika, <xref:System.Runtime.Serialization.DataMemberAttribute> a atrybut jest stosowany do ich członków. Ten mechanizm stosuje się również podczas pracy z obiektami JavaScript Object Notation (JSON), zgodnie z opisem w [temacie How to: Serializowanie i deserializacja](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)danych JSON.  
@@ -132,10 +132,10 @@ My favorite bands are Band ABC and Band XYZ.
 3. Uruchom rozwiązanie.  
   
 > [!IMPORTANT]
->  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  

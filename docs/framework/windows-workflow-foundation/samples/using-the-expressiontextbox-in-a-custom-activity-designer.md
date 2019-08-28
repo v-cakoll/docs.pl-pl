@@ -2,28 +2,28 @@
 title: Używanie elementu ExpressionTextBox w projektancie działań niestandardowych
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
-ms.openlocfilehash: c85254f1ae7ba8a269568cf1a14acf367b595e33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bfac07d64cd5e30c3475d4e269c16597905ea829
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004760"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045357"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>Używanie elementu ExpressionTextBox w projektancie działań niestandardowych
-Ten przykład ilustruje sposób używania <xref:System.Activities.Presentation.View.ExpressionTextBox> w Projektancie działań niestandardowych. Niestandardowe działanie `MultiAssign`, przypisuje dwóch wartości ciągu do dwóch zmiennych ciągu. Niektóre <xref:System.Activities.Presentation.View.ExpressionTextBox> powiązać formanty <xref:System.Activities.InArgument>s, a niektóre powiązać <xref:System.Activities.OutArgument>s.
+Ten przykład pokazuje, <xref:System.Activities.Presentation.View.ExpressionTextBox> jak używać w niestandardowym projektancie działań. Działanie niestandardowe, `MultiAssign`, przypisuje dwie wartości ciągu do dwóch zmiennych ciągu. Niektóre <xref:System.Activities.Presentation.View.ExpressionTextBox> formanty są powiązane <xref:System.Activities.InArgument>z s i z pewnymi powiązaniami z <xref:System.Activities.OutArgument>.
 
-## <a name="sample-details"></a>Przykład szczegółów
- `ArgumentToExpressionConverter` Jest konwertera typów używane podczas tworzenia powiązania wyrażeń do argumentów. `ConverterParameter` Musi być równa `In` lub `Out` odpowiednio. `InOut` nie jest obsługiwane.
+## <a name="sample-details"></a>Przykładowe szczegóły
+ `ArgumentToExpressionConverter` Jest konwerterem typów używanym podczas wiązania wyrażeń z argumentami. Wartość musi być ustawiona na `In` lub `Out` odpowiednio. `ConverterParameter` `InOut`nie jest obsługiwana.
 
- `UseLocationExpression` Atrybut jest używany na `OutArgument`s, aby określić, że wyrażenie powinny być wyrażenie L-wartość ("po lewej stronie wartość" lub "lokalizacji wartość"). W większości przypadków wyrażenie L-wartością jest prawidłowym identyfikatorem języka Visual Basic, używany do wskazania, że `OutArgument` zwracana jest nazwa zmiennej lub argumentu.
+ Ten `UseLocationExpression` atrybut jest używany w `OutArgument`s, aby określić, że wyrażenie powinno być wyrażeniem L-wartości ("lewa wartość" lub "wartość lokalizacji"). W większości przypadków wyrażenie L-wartości jest prawidłowym identyfikatorem Visual Basic używanym do wskazania, że `OutArgument` zwracana jest nazwa zmiennej lub argumentu.
 
- `MaxLines` Ma ustawioną wartość atrybutu w tym przykładzie i `MinLines` nie jest ustawiona. Oznacza to, że <xref:System.Activities.Presentation.View.ExpressionTextBox> ma stały rozmiar jeden wiersz, niezależnie od ilości tekst wpisany przez użytkownika. Aby umożliwić <xref:System.Activities.Presentation.View.ExpressionTextBox> się zwiększać w celu dopasowania danych wejściowych użytkownika, ustaw `MaxLines` większa `MinLines`.
+ Atrybut jest ustawiony na jeden w tym przykładzie i `MinLines` nie jest ustawiony. `MaxLines` Oznacza to, że <xref:System.Activities.Presentation.View.ExpressionTextBox> jest to stały rozmiar jednego wiersza niezależnie od ilości tekstu wpisanego przez użytkownika. Aby umożliwić <xref:System.Activities.Presentation.View.ExpressionTextBox> powiększanie się w celu dopasowania danych przez użytkownika, `MinLines`ustaw wartość `MaxLines` większą niż.
 
- Elementu ExpressionTextBox może być powiązana tylko z argumentów i nie można powiązać z właściwości aparatu CLR.
+ Element ExpressionTextBox może być powiązany tylko z argumentami i nie można go powiązać z właściwościami środowiska CLR.
 
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
 
-1. Za pomocą programu Visual Studio 2010, otwórz plik ExpressionTextBoxSample.sln.
+1. Za pomocą programu Visual Studio 2010 Otwórz plik ExpressionTextBoxSample. sln.
 
 2. Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.
 
@@ -31,20 +31,20 @@ Ten przykład ilustruje sposób używania <xref:System.Activities.Presentation.V
 
 1. Dodaj nową aplikację konsoli przepływu pracy do rozwiązania.
 
-2. Dodaj odwołanie do **ExpressionTextBoxSample** projektu z nowy projekt aplikacji konsoli przepływu pracy.
+2. Dodaj odwołanie do projektu **ExpressionTextBoxSample** z nowego projektu aplikacji konsolowej przepływu pracy.
 
 3. Skompiluj rozwiązanie.
 
-4. Przeciągnij **MultiAssign** działania z przybornika i upuść go w przepływie pracy.
+4. Przeciągnij działanie **wieloprzypisane** z przybornika i upuść je w przepływie pracy.
 
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\ExpressionTextBox`  
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\ExpressionTextBox`  
   
 ## <a name="see-also"></a>Zobacz także
 

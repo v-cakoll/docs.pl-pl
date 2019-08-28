@@ -2,12 +2,12 @@
 title: Federacja — przykład
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 10087c4c18a4bc24dd36d814619fc265f9987c8c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d3a326f08e78edb79908485361f161c1b6da6625
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961428"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044976"
 ---
 # <a name="federation-sample"></a>Federacja — przykład
 Ten przykład pokazuje zabezpieczenia federacyjne.  
@@ -89,7 +89,7 @@ Ten przykład pokazuje zabezpieczenia federacyjne.
 1. Otwórz okno polecenia zestawu SDK. W przykładowej ścieżce uruchom setup. bat. Spowoduje to utworzenie katalogów wirtualnych wymaganych dla przykładu i zainstalowanie wymaganych certyfikatów z odpowiednimi uprawnieniami.  
   
     > [!NOTE]
-    >  Plik wsadowy Setup. bat został zaprojektowany tak, aby można go było uruchomić z poziomu wiersza polecenia Windows SDK. Wymaga, aby zmienna środowiskowa MSSDK wskazywała katalog, w którym zainstalowano zestaw SDK. Ta zmienna środowiskowa jest ustawiana automatycznie w wierszu polecenia Windows SDK. W [!INCLUDE[wv](../../../../includes/wv-md.md)]systemie należy upewnić się, że zgodność z zarządzaniem usługami IIS 6,0 jest zainstalowana, ponieważ konfiguracja używa skryptów administratora usług IIS. Uruchomienie skryptu konfiguracji w [!INCLUDE[wv](../../../../includes/wv-md.md)] programie wymaga uprawnień administratora.  
+    > Plik wsadowy Setup. bat został zaprojektowany tak, aby można go było uruchomić z poziomu wiersza polecenia Windows SDK. Wymaga, aby zmienna środowiskowa MSSDK wskazywała katalog, w którym zainstalowano zestaw SDK. Ta zmienna środowiskowa jest ustawiana automatycznie w wierszu polecenia Windows SDK. W [!INCLUDE[wv](../../../../includes/wv-md.md)]systemie należy upewnić się, że zgodność z zarządzaniem usługami IIS 6,0 jest zainstalowana, ponieważ konfiguracja używa skryptów administratora usług IIS. Uruchomienie skryptu konfiguracji w [!INCLUDE[wv](../../../../includes/wv-md.md)] programie wymaga uprawnień administratora.  
   
 2. Otwórz FederationSample. sln w programie Visual Studio i wybierz opcję **Kompiluj rozwiązanie** z menu **kompilacja** . Powoduje to utworzenie wspólnych plików projektu, usług księgarni, księgarni STS, HomeRealm STS i wdrożenie ich w usługach IIS. Powoduje to również kompilację aplikacji klienckiej księgarni i umieszczenie pliku wykonywalnego BookStoreClient. exe w folderze FederationSample\BookStoreClient\bin\Debug.  
   
@@ -102,17 +102,17 @@ Ten przykład pokazuje zabezpieczenia federacyjne.
      Przykład jest skonfigurowany tak, aby zezwalał użytkownikom na kupowanie książek o kosztach $15 lub mniejszych. Podjęto próbę zakupu książek, które są droższe niż $15 wyniki w przypadku otrzymania przez klienta komunikatu o odmowie dostępu od usługi książki.  
   
     > [!NOTE]
-    >  Przykład nie aktualizuje limitu kredytowego użytkownika po zakupie. Można wielokrotnie kupować książki w ramach limitu kredytu użytkownika (ustalonego).  
+    > Przykład nie aktualizuje limitu kredytowego użytkownika po zakupie. Można wielokrotnie kupować książki w ramach limitu kredytu użytkownika (ustalonego).  
   
 #### <a name="to-clean-up"></a>Aby oczyścić  
   
 1. Uruchom Oczyść. bat. Spowoduje to usunięcie katalogów wirtualnych, które zostały utworzone podczas konfiguracji, a także spowoduje usunięcie certyfikatów zainstalowanych podczas instalacji.  
   
 > [!IMPORTANT]
->  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  

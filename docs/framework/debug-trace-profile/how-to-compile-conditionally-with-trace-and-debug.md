@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: df1f1c7e28464781a73a0939c3413f4c9d620d7d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1692b93e09ec972e537e4a375774eeeb865bd58c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942386"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70043429"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Instrukcje: Kompilowanie warunkowe ze śledzeniem i debugowaniem
 Podczas debugowania aplikacji podczas opracowywania dane wyjściowe śledzenia i debugowania są przechodzą do okna danych wyjściowych w programie Visual Studio. Aby jednak uwzględnić funkcje śledzenia we wdrożonej aplikacji, należy skompilować aplikacje Instrumentacji przy włączonej dyrektywie kompilatora **śledzenia** . Pozwala to na skompilowanie kodu śledzenia w wydanej wersji aplikacji. Jeśli nie włączysz dyrektywy **Trace** , cały kod śledzenia zostanie zignorowany podczas kompilacji i nie zostanie uwzględniony w kodzie wykonywalnym, który zostanie wdrożony.  
@@ -55,7 +55,7 @@ Podczas debugowania aplikacji podczas opracowywania dane wyjściowe śledzenia i
      Dla C#: **CSC-r:System.dll-d:Trace-d:Debug = false MyApplication.cs**  
   
     > [!TIP]
-    >  Aby skompilować więcej niż jeden plik aplikacji, pozostaw puste miejsce między nazwami plików, na przykład **MyApplication1. vb MyApplication2. vb MyApplication3. vb** lub **MyApplication1.cs MyApplication2.cs MyApplication3.cs**.  
+    > Aby skompilować więcej niż jeden plik aplikacji, pozostaw puste miejsce między nazwami plików, na przykład **MyApplication1. vb MyApplication2. vb MyApplication3. vb** lub **MyApplication1.cs MyApplication2.cs MyApplication3.cs**.  
   
      Znaczenie dyrektyw kompilacji warunkowej używanych w powyższych przykładach jest następujące:  
   

@@ -4,51 +4,51 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: 766b95163f164ec76135b964115069b6855ceebf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 07c215d373e4ac1cbadf82a48b8cb3d90efdbdb4
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750675"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040560"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Zmienna obiektu lub zmienna bloku With nie jest ustawiona
-Odwołuje się do nieprawidłowego obiektu zmiennej.   Ten błąd może wystąpić z kilku powodów:
+Odwołuje się do nieprawidłowej zmiennej obiektu.   Ten błąd może wystąpić z kilku powodów:
 
-- Zmienna została zadeklarowana bez określania typu. Jeśli zmienna jest zadeklarowana bez określania typu, jego wartość domyślna to typ `Object`.
+- Zmienna została zadeklarowana bez określenia typu. Jeśli zmienna jest zadeklarowana bez określenia typu, wartość domyślna to Type `Object`.
 
-    Na przykład, Zmienna zadeklarowana ze `Dim x` byłoby typu `Object;` Zmienna zadeklarowana ze `Dim x As String` byłoby typu `String`.
+    Na `Dim x` przykład zmienna zadeklarowana jako powinna być typu `Object;` zmienna zadeklarowana z `Dim x As String` być typu `String`.
 
     > [!TIP]
-    >  `Option Strict` Instrukcji nie zezwalają na niejawnego wpisywania, które spowodowało, że `Object` typu. Jeżeli pominięto ten typ, wystąpi błąd kompilacji. Zobacz [Option Strict — instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md).
+    > Instrukcja nie zezwala na niejawne wpisanie, które powoduje `Object` wystąpienie typu. `Option Strict` Jeśli pominięto typ, wystąpi błąd w czasie kompilacji. Zobacz [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md).
 
-- Podjęto próbę odwołują się do obiektu, który został ustawiony na `Nothing`.
+- Próbujesz odwołać się do obiektu, który został ustawiony na `Nothing`.
 
-- Podjęto próbę uzyskania dostępu do elementu zmienną tablicy, która nie została prawidłowo zadeklarowana.
+- Próbujesz uzyskać dostęp do elementu zmiennej tablicowej, która nie została prawidłowo zadeklarowana.
 
-    Na przykład Tablica zadeklarowana jako `products() As String` wyzwoli ten błąd, jeśli zostanie podjęta próba odwołania się do elementu tablicy `products(3) = "Widget"`. Tablica nie ma żadnych elementów i jest traktowany jako obiekt.
+    Na przykład tablica zadeklarowana jako `products() As String` spowoduje wyzwolenie błędu w przypadku próby odwołania się do elementu tablicy. `products(3) = "Widget"` Tablica nie ma elementów i jest traktowana jako obiekt.
 
-- Podjęto próbę dostępu do kodu w ramach `With...End With` blokowania, zanim blok został zainicjowany.   A `With...End With` bloku musi zostać zainicjowany, wykonując `With` instrukcji punktu wejścia.
+- Próbujesz uzyskać dostęp do kodu w `With...End With` bloku przed zainicjowaniem bloku.   Blok musi być zainicjowany przez `With` wykonanie punktu wejścia instrukcji. `With...End With`
 
 > [!NOTE]
-> We wcześniejszych wersjach programu Visual Basic lub VBA ten błąd również została wyzwolona przez przypisywanie wartości do zmiennej bez użycia `Set` — słowo kluczowe (`x = "name"` zamiast `Set x = "name"`). `Set` — Słowo kluczowe nie jest już prawidłowy w języku Visual Basic .net.
+> We wcześniejszych wersjach Visual Basic lub VBA ten błąd został również wyzwolony przez przypisanie wartości do zmiennej bez użycia `Set` słowa kluczowego (`x = "name"` zamiast `Set x = "name"`). `Set` Słowo kluczowe nie jest już prawidłowe w Visual Basic .NET.
 
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-1. Ustaw `Option Strict` do `On` , dodając następujący kod na początku pliku:
+1. Ustaw `Option Strict` na`On` , dodając następujący kod na początku pliku:
 
     ```vb
     Option Strict On
     ```
 
-    Kiedy uruchamiasz projekt, błąd kompilatora pojawią się w **lista błędów** dla dowolnej zmiennej, która została określona bez typu.
+    Po uruchomieniu projektu, w **Lista błędów** dla każdej zmiennej, która została określona bez typu, pojawi się błąd kompilatora.
 
-2. Jeśli nie chcesz umożliwić `Option Strict`, wyszukiwanie w kodzie żadnych zmiennych, które zostały określone bez typu (`Dim x` zamiast `Dim x As String`) i Dodaj zamierzony typ oświadczenia.
+2. Jeśli nie chcesz włączać `Option Strict`, przeszukaj kod pod kątem zmiennych, które zostały określone bez typu (`Dim x` zamiast `Dim x As String`) i Dodaj odpowiedni typ do deklaracji.
 
-3. Upewnij się, że nie są odwołujesz się do zmiennej obiektu, który został ustawiony na `Nothing`.  Wyszukiwanie w kodzie słowa kluczowego `Nothing`i popraw swój kod, aby obiekt nie jest ustawiony na `Nothing` dopóki po ma on wywołany.
+3. Upewnij się, że nie odwołujesz się do zmiennej obiektu, która `Nothing`została ustawiona na.  Przeszukaj kod słowa kluczowego `Nothing`i popraw kod, tak aby obiekt nie był ustawiony na `Nothing` wartość until po odwołaniu się do niego.
 
-4. Upewnij się, że wszystkie zmienne tablicy są wymiary przed można uzyskiwać do nich dostęp. Po utworzeniu tablicy można przypisać wymiaru (`Dim x(5) As String` zamiast `Dim x() As String`), lub użyj `ReDim` słowo kluczowe, aby ustawić wymiary tablicy, zanim zostanie najpierw uzyskać do niego dostęp.
+4. Przed uzyskaniem dostępu należy się upewnić, że wszystkie zmienne tablic są wymiarami. Można przypisać wymiar, gdy najpierw utworzysz tablicę (`Dim x(5) As String` `Dim x() As String`zamiast `ReDim` ) lub użyć słowa kluczowego, aby ustawić Wymiary tablicy przed pierwszym uzyskaniem do niej dostępu.
 
-5. Upewnij się, że Twoje `With` bloku jest inicjowany przez wykonanie `With` instrukcji punktu wejścia.
+5. Upewnij się, `With` że blok jest zainicjowany przez `With` wykonanie punktu wejścia instrukcji.
 
 ## <a name="see-also"></a>Zobacz także
 

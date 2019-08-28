@@ -2,12 +2,12 @@
 title: Obsługa tokenów
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: a8464d7f32b52152b5371ff9edbb396578df6a57
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 14cc7bed55d41352acd93d4443b20f8bda966263
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964475"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044628"
 ---
 # <a name="supporting-tokens"></a>Obsługa tokenów
 Przykład tokenów pomocniczych pokazuje, jak dodać dodatkowe tokeny do wiadomości, która korzysta z protokołu WS-Security. Przykład dodaje binarny token zabezpieczający X. 509 oprócz tokenu zabezpieczeń nazwy użytkownika. Token jest przesyłany z klienta do usługi, a część wiadomości jest podpisywana przy użyciu klucza prywatnego skojarzonego z tokenem zabezpieczeń X. 509 w celu potwierdzenia posiadania certyfikatu X. 509 do odbiorcy. Jest to przydatne w przypadku, gdy wymagane jest posiadanie wielu oświadczeń skojarzonych z komunikatem w celu uwierzytelnienia lub autoryzacji nadawcy. Usługa implementuje kontrakt definiujący wzorzec komunikacji żądanie-odpowiedź.
@@ -425,7 +425,7 @@ iisreset
 1. Uruchom setup. bat z przykładowego folderu instalacyjnego w wierszu polecenia programu Visual Studio 2012 z uprawnieniami administratora. Spowoduje to zainstalowanie wszystkich certyfikatów wymaganych do uruchomienia przykładu.
 
     > [!NOTE]
-    >  Plik wsadowy Setup. bat został zaprojektowany do uruchamiania z wiersza polecenia programu Visual Studio 2012. Zmienna środowiskowa PATH ustawiona w wierszu polecenia programu Visual Studio 2012 wskazuje katalog zawierający pliki wykonywalne wymagane przez skrypt Setup. bat. Pamiętaj o usunięciu certyfikatów, uruchamiając Oczyść. bat po zakończeniu z przykładem. Inne przykłady zabezpieczeń używają tych samych certyfikatów.  
+    > Plik wsadowy Setup. bat został zaprojektowany do uruchamiania z wiersza polecenia programu Visual Studio 2012. Zmienna środowiskowa PATH ustawiona w wierszu polecenia programu Visual Studio 2012 wskazuje katalog zawierający pliki wykonywalne wymagane przez skrypt Setup. bat. Pamiętaj o usunięciu certyfikatów, uruchamiając Oczyść. bat po zakończeniu z przykładem. Inne przykłady zabezpieczeń używają tych samych certyfikatów.  
   
 2. Uruchamianie programu Client. exe z \client\bin. Aktywność klienta jest wyświetlana w aplikacji konsoli klienta.  
   

@@ -2,35 +2,35 @@
 title: Używanie kanału klienta odnajdywania
 ms.date: 03/30/2017
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
-ms.openlocfilehash: 298cafe34b20a3644f967acf15f831be5b0b90ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b6bb38298b47b822a15fee92038a1d6beb15df3
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932695"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045254"
 ---
 # <a name="using-the-discovery-client-channel"></a>Używanie kanału klienta odnajdywania
-Podczas pisania aplikacji klienta WCF, musisz znać adres punktu końcowego usługi, którą wywołujesz. W wielu sytuacjach adres punktu końcowego usługi nie jest znana z wyprzedzeniem lub adres usługi zmienia się wraz z upływem czasu. Kanału klienta odnajdywania umożliwia pisanie aplikacji klienta WCF, opisano usługi, którą chcesz się połączyć, a kanału klienta automatycznie wysyła żądania sondowania. Gdy usługa odpowie, kanału klienta odnajdywania pobiera adres punktu końcowego usługi z odpowiedzi na sondę i używa go do wywołania tej usługi.  
+Podczas pisania aplikacji klienckiej WCF należy znać adres punktu końcowego wywoływanej usługi. W wielu sytuacjach adres punktu końcowego usługi nie jest znany z góry lub adres usługi zmienia się w miarę upływu czasu. Kanał klienta odnajdywania umożliwia napisanie aplikacji klienckiej WCF, określenie usługi, która ma zostać wywołana, a kanał klienta automatycznie wysyła żądanie sondowania. Gdy usługa odpowiada, kanał klienta odnajdowania Pobiera adres punktu końcowego dla usługi z odpowiedzi sondy i używa jej do wywoływania usługi.  
   
 ## <a name="using-the-discovery-client-channel"></a>Używanie kanału klienta odnajdywania  
- Aby korzystać z kanałem klienta odnajdywania, dodaje wystąpienie <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> do stosu kanału klienta. Możesz też użyć <xref:System.ServiceModel.Discovery.DynamicEndpoint> i <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> jest automatycznie dodawany do wiązania, jeśli nie jeszcze nie istnieje.  
+ Aby użyć kanału klienta odnajdywania, Dodaj wystąpienie <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> do stosu kanału klienta. Alternatywnie można użyć, <xref:System.ServiceModel.Discovery.DynamicEndpoint> <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> a a jest automatycznie dodawany do powiązania, jeśli jeszcze nie istnieje.  
   
 > [!CAUTION]
->  Zalecane jest, <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> jest elementem najważniejsze na stosie kanału klienta. Dowolny element powiązania, który jest dodawany w górnej części <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> musi upewnij się, że <xref:System.ServiceModel.ChannelFactory> lub tworzy kanał nie używa adresu punktu końcowego lub `Via` adresu (przekazany do `CreateChannel` metoda), ponieważ nie może zawierać poprawny adres.  
+> Zaleca się, aby <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> jest elementem najwyższego poziomu na stosie kanału klienta. Każdy element powiązania, który jest <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> dodawany na górze musi upewnić się, że lub tworzony przez <xref:System.ServiceModel.ChannelFactory> niego kanał nie używa adresu punktu końcowego lub `Via` adresu (przekazaną `CreateChannel` do metody), ponieważ mogą nie zawierać poprawnych Ulica.  
   
  <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> Klasa zawiera dwie właściwości publiczne:  
   
-1. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>, który jest używany do opisu usługi ma zostać wywołana.  
+1. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>, który jest używany do opisywania usługi, która ma zostać wywołana.  
   
-2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> który określa punkt końcowy odnajdowania do wysyłania wiadomości odnajdywania.  
+2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A>Określa punkt końcowy odnajdywania, do którego mają być wysyłane komunikaty wykrywania.  
   
- <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> Właściwość umożliwia określenie kontraktu usługi, którego szukasz, wszystkie wymagane zakres identyfikatorów URI, a maksymalna liczba czas na próby otwarcia kanału. Typ kontraktu jest określony przez wywołanie konstruktora <xref:System.ServiceModel.Discovery.FindCriteria>. Zakres identyfikatorów URI mogą być dodawane do <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A> właściwości. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> Właściwości można określić maksymalną liczbę wyników, w którym klient próbuje nawiązać połączenie. Po otrzymaniu odpowiedzi sondy klient spróbuje otworzyć kanału przy użyciu adresu punktu końcowego z odpowiedzi na sondę. Jeśli wystąpi wyjątek Klient przechodzi do następnego odpowiedzi sondowania, oczekiwania na odpowiedzi więcej do odbioru, jeśli to konieczne. Kontynuuje to zrobić, dopóki kanał zostanie pomyślnie otwarty lub osiągnięto maksymalną liczbę wyników. Aby uzyskać więcej informacji o tych ustawieniach, zobacz <xref:System.ServiceModel.Discovery.FindCriteria>.  
+ <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> Właściwość pozwala określić szukany kontrakt usługi, wszystkie wymagane identyfikatory URI zakresu oraz maksymalną liczbę godzin, które należy podjąć w celu otwarcia kanału. Typ kontraktu jest określony przez wywołanie konstruktora <xref:System.ServiceModel.Discovery.FindCriteria>. Identyfikatory URI zakresu można dodać do <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A> właściwości. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> Właściwość pozwala określić maksymalną liczbę wyników, z którymi klient próbuje nawiązać połączenie. Po otrzymaniu odpowiedzi sondy klient próbuje otworzyć kanał przy użyciu adresu punktu końcowego z odpowiedzi na sondę. Jeśli wystąpi wyjątek, klient przechodzi do następnej odpowiedzi sondy, czekając na odebranie większej liczby odpowiedzi w razie potrzeby. Kontynuuje to działanie do momentu pomyślnego otwarcia kanału lub osiągnięcia maksymalnej liczby wyników. Aby uzyskać więcej informacji na temat tych ustawień <xref:System.ServiceModel.Discovery.FindCriteria>, zobacz.  
   
- <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> Właściwość pozwala określić punkt końcowy odnajdywania do użycia. Zazwyczaj jest to <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, ale może być dowolnym prawidłowego punktu końcowego.  
+ <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> Właściwość pozwala określić punkt końcowy odnajdywania do użycia. Zwykle jest <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>to, ale może być dowolnym prawidłowym punktem końcowym.  
   
- Podczas tworzenia powiązania na potrzeby komunikacji z usługą, należy uważać, aby użyć dokładnie tego samego powiązania jako usługa. Jedyną różnicą jest to klient powiązania ma <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> górze stosu. Jeśli usługa używa jednego z powiązań dostarczanych przez system, Utwórz nowe <xref:System.ServiceModel.Channels.CustomBinding> i przekazać powiązania dostarczane przez system do <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> konstruktora. Następnie można dodać <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> przez wywołanie metody `Insert` na <xref:System.ServiceModel.Channels.CustomBinding.Elements%2A> właściwości.  
+ Podczas tworzenia powiązania, które ma być używane do komunikacji z usługą, należy zachować ostrożność, aby użyć dokładnie tego samego powiązania co usługa. Jedyną różnicą jest to, że powiązanie klienta <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> znajduje się na szczycie stosu. Jeśli usługa używa jednego z powiązań dostarczonych przez system, należy utworzyć nowe <xref:System.ServiceModel.Channels.CustomBinding> i przekazać <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> do konstruktora powiązanie dostarczone przez system. Następnie można dodać <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> metodę przez wywołanie `Insert` <xref:System.ServiceModel.Channels.CustomBinding.Elements%2A> właściwości.  
   
- Po dodaniu <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> do wiązania i skonfigurować go, można utworzyć wystąpienia klasy klienta WCF, otwórz go, a wywołać jego metody. W poniższym przykładzie użyto kanału klienta odnajdywania w celu odnalezienia usługi WCF, która implementuje `ICalculator` klasy (używane w ramach samouczka Wprowadzenie usługi WCF) i wywołuje jego `Add` metody.  
+ Po dodaniu <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> do powiązania i skonfigurowaniu go można utworzyć wystąpienie klasy klienta WCF, otworzyć ją i wywołać jej metody. W poniższym przykładzie użyto kanału klienta odnajdywania w celu odnalezienia usługi WCF implementującej `ICalculator` klasę (używanej w samouczku wprowadzenie WCF) i wywołania jej `Add` metody.  
   
 ```  
 // Create the DiscoveryClientBindingElement  
@@ -59,5 +59,5 @@ catch (EndpointNotFoundException ex)
 }  
 ```  
   
-## <a name="security-and-the-discovery-client-channel"></a>Zabezpieczenia i kanału klienta odnajdywania  
- Korzystając z kanałem klienta odnajdywania, określania dwa punkty końcowe. Jeden służy do odnajdywania wiadomości, zwykle <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, a drugi to punkt końcowy aplikacji. Podczas implementowania bezpiecznej usłudze, należy uważać, aby zabezpieczyć zarówno punkty końcowe. Aby uzyskać więcej informacji na temat zabezpieczeń, zobacz [zabezpieczania usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).
+## <a name="security-and-the-discovery-client-channel"></a>Zabezpieczenia i kanał klienta odnajdywania  
+ W przypadku korzystania z kanału klienta odnajdywania są określane dwa punkty końcowe. Jest on używany w przypadku komunikatów odnajdywania <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, zwykle, a drugi jest punktem końcowym aplikacji. Podczas implementowania bezpiecznej usługi należy zachować ostrożność, aby zabezpieczyć oba punkty końcowe. Aby uzyskać więcej informacji na temat zabezpieczeń, zobacz [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 571b049300a7c7de963bd762e0266f66060479fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c9ab95124264b2b59be77695755ab1d1f1c3b1aa
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927995"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040734"
 ---
 # <a name="application-domains"></a>Domeny aplikacji
 
@@ -145,7 +145,7 @@ COMPLUS_LoaderOptimization = 1
  W przypadku ustawienia wartości 1 Flaga środowiska COMPLUS_LoaderOptimization wymusza załadowanie przez hosta środowiska uruchomieniowego wszystkich zestawów w sposób nieneutralny dla domeny, znany jako SingleDomain. SingleDomain nie ładuje żadnych zestawów jako neutralnych dla domen, z wyjątkiem mscorlib, który jest zawsze ładowany jako neutralny dla domeny. To ustawienie nosi nazwę pojedynczej domeny, ponieważ jest często używane, gdy host uruchamia tylko jedną aplikację w procesie.  
   
 > [!CAUTION]
->  Flaga środowiska COMPLUS_LoaderOptimization została zaprojektowana tak, aby była używana w scenariuszach diagnostycznych i testowych. Włączenie flagi może spowodować poważne spowolnienie i zwiększenie użycia pamięci.  
+> Flaga środowiska COMPLUS_LoaderOptimization została zaprojektowana tak, aby była używana w scenariuszach diagnostycznych i testowych. Włączenie flagi może spowodować poważne spowolnienie i zwiększenie użycia pamięci.  
   
 ### <a name="code-example"></a>Przykład kodu
 

@@ -2,32 +2,32 @@
 title: Projektanci niestandardowych elementów złożonych — prezenter elementu przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: 0eb2ce0ca7e5d2ffd7ddd9a3d582783b4610427a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 239f7ccd81d5bb60eed32298220df215b09e3e47
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622608"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038372"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>Projektanci niestandardowych elementów złożonych — prezenter elementu przepływu pracy
-<xref:System.Activities.Presentation.WorkflowItemPresenter> Typ klucza w WF projektanta modelu programowania umożliwiający tworzenie "strefy listy" gdzie można umieścić dowolne działanie. W tym przykładzie przedstawiono sposób tworzenia projektanta działań, który uwypukli najistotniejsze takiej "listy strefy."
+<xref:System.Activities.Presentation.WorkflowItemPresenter> Jest to typ klucza w modelu programowania projektanta WF, który umożliwia tworzenie "upuszczania strefy", gdzie można umieścić dowolne działanie. Ten przykład pokazuje, jak utworzyć projektanta działań, który ma takie same "strefy upuszczania".
 
- W tym przykładzie przedstawiono:
+ Ten przykład ilustruje:
 
 ## <a name="demonstrates"></a>Demonstracje
 
-- Tworzenie niestandardowego projektanta działań z <xref:System.Activities.Presentation.WorkflowItemPresenter>.
+- Tworzenie niestandardowego projektanta działań za pomocą <xref:System.Activities.Presentation.WorkflowItemPresenter>.
 
-- Rejestrowanie niestandardowego projektanta, przy użyciu magazynu metadanych.
+- Rejestrowanie niestandardowego projektanta przy użyciu magazynu metadanych.
 
-- Programowania rehostowanym przybornika w sposób deklaratywny i obowiązkowo.
+- Programowanie przehostowanego paska narzędzi w sposób deklaratywny i niezbędny.
 
-## <a name="sample-details"></a>Przykład szczegółów
- W tym przykładzie kod:
+## <a name="sample-details"></a>Przykładowe szczegóły
+ Kod dla tego przykładu pokazuje:
 
-- Niestandardowego projektanta działań zaprojektowano pod kątem `SimpleNativeActivity` klasy.
+- Projektant działań niestandardowych został skompilowany dla `SimpleNativeActivity` klasy.
 
-- Tworzenie niestandardowego projektanta działań z <xref:System.Activities.Presentation.WorkflowItemPresenter>.
+- Tworzenie niestandardowego projektanta działań za pomocą <xref:System.Activities.Presentation.WorkflowItemPresenter>.
 
 ```xaml
 <sap:ActivityDesigner x:Class="Microsoft.Samples.UsingWorkflowItemPresenter.SimpleNativeDesigner"
@@ -63,7 +63,7 @@ ms.locfileid: "64622608"
 </sap:ActivityDesigner>
 ```
 
- Zwróć uwagę na użycie powiązanie danych WPF można powiązać `ModelItem.Body`. `ModelItem` jest to właściwość na <xref:System.Activities.Presentation.ActivityDesigner> odwołujący się do obiektu źródłowego projektanta jest używany, w tym przypadku **SimpleNativeActivity**.
+ Zwróć uwagę na użycie powiązania danych WPF do powiązania `ModelItem.Body`. `ModelItem`jest właściwością <xref:System.Activities.Presentation.ActivityDesigner> , która odwołuje się do obiektu bazowego, który jest używany przez projektanta, w tym przypadku **SimpleNativeActivity**.
 
 #### <a name="to-setup-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład
 
@@ -72,13 +72,13 @@ ms.locfileid: "64622608"
 2. Naciśnij klawisz F5, aby skompilować i uruchomić aplikację.
 
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
   
 ## <a name="see-also"></a>Zobacz także
 

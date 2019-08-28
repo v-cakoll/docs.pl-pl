@@ -2,12 +2,12 @@
 title: Używanie liczników wydajności
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 2d714af8802bd290b54d0bf3667220b25b24c3fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 724580c1725cf6513e1d85f03b0abfdefb4d040a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966766"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044533"
 ---
 # <a name="using-performance-counters"></a>Używanie liczników wydajności
 W tym przykładzie pokazano, jak uzyskać dostęp do liczników wydajności Windows Communication Foundation (WCF) oraz jak tworzyć liczniki wydajności zdefiniowane przez użytkownika. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -44,14 +44,14 @@ W tym przykładzie pokazano, jak uzyskać dostęp do liczników wydajności Wind
 1. Uruchom narzędzie Monitor wydajności, klikając przycisk **Start**, **Uruchom polecenie...** , `perfmon` wprowadź i kliknij przycisk **OK,** lub z panelu sterowania wybierz pozycję **Narzędzia administracyjne** , a następnie kliknij dwukrotnie pozycję **wydajność**.  
   
     > [!NOTE]
-    >  Nie można dodać liczników do momentu uruchomienia przykładowego kodu.  
+    > Nie można dodać liczników do momentu uruchomienia przykładowego kodu.  
   
 2. Usuń liczniki wydajności, które znajdują się na liście, zaznaczając je i naciskając klawisz Delete.  
   
 3. Dodaj liczniki WCF, klikając prawym przyciskiem myszy okienko wykresu i wybierając polecenie **Dodaj liczniki**. W oknie dialogowym **Dodawanie liczników** wybierz pozycję **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 lub ServiceModelService 3.0.0.0** w polu listy rozwijanej obiekt wydajności. Wybierz liczniki, które chcesz wyświetlić z listy.  
   
     > [!NOTE]
-    >  Brak liczników wydajności programu WCF dla usługi, jeśli na komputerze nie są uruchomione żadne usługi WCF.  
+    > Brak liczników wydajności programu WCF dla usługi, jeśli na komputerze nie są uruchomione żadne usługi WCF.  
   
 ### <a name="to-use-the-configuration-editor-to-enable-counters"></a>Aby włączyć liczniki przy użyciu edytora konfiguracji  
   
@@ -68,13 +68,13 @@ W tym przykładzie pokazano, jak uzyskać dostęp do liczników wydajności Wind
 6. Zapisz plik konfiguracji i Zamknij Edytor.  
   
 > [!IMPORTANT]
->  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   
 ## <a name="see-also"></a>Zobacz także
 

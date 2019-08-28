@@ -2,30 +2,30 @@
 title: Niestandardowe kryteria znajdowania
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
-ms.openlocfilehash: 7409539c823243a783cacd4e04d6fab225b606cc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 236cce194d89409ab19732c239459418cddd251b
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650187"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039943"
 ---
 # <a name="custom-find-criteria"></a>Niestandardowe kryteria znajdowania
-Niniejszy przykład pokazuje, jak utworzyć niestandardowy zakres dopasowanie przy użyciu logiki i jak wdrożyć usługę odnajdywania niestandardowych. Klienci używają niestandardowy zakres funkcji dopasowywania, aby dostosować i dalszych są oparte na funkcji Znajdź dostarczane przez system odnajdowania usługi WCF. Scenariusz, który opisano w tym przykładzie jest następująca:  
+Ten przykład pokazuje, jak utworzyć niestandardowe dopasowanie zakresu przy użyciu logiki i jak wdrożyć niestandardową usługę odnajdywania. Klienci korzystają z funkcji dopasowywania zakresów niestandardowych w celu udoskonalenia i dalszej kompilacji na podstawie udostępnianej przez system funkcji odnajdowania usługi WCF. Ten przykład obejmuje następujące zagadnienia:  
   
 1. Klient szuka usługi kalkulatora.  
   
-2. Aby zawęzić wyszukiwanie, klient musi używać niestandardowego zakresu regułę dopasowania.  
+2. Aby uściślić wyszukiwanie, klient musi używać niestandardowej reguły dopasowywania zakresu.  
   
-3. Zgodnie z regułą usługa odpowiada klient jeśli jej punkt końcowy zgodny z dowolnym z zakresów określonych przez klienta.  
+3. Zgodnie z tą regułą usługa reaguje z powrotem do klienta, jeśli jego punkt końcowy jest zgodny z dowolnym z zakresów określonych przez klienta.  
   
 ## <a name="demonstrates"></a>Demonstracje  
   
-- Tworzenie usługi odnajdywanie niestandardowe.  
+- Tworzenie niestandardowej usługi odnajdywania.  
   
-- Implementowanie dopasowanie niestandardowy zakres przez algorytm.  
+- Implementowanie niestandardowego dopasowania zakresu przez algorytm.  
   
-## <a name="discussion"></a>Dyskusja  
- Klient jest wyszukiwanie typu "Lub" spełniające kryteria. Usługa odpowiada ponownie, jeśli zakresy na jego punkty końcowe pasuje do żadnego z zakresów określonych przez klienta. W takim przypadku klient szuka usługi Kalkulator, które ma jakiekolwiek z zakresów na poniższej liście:  
+## <a name="discussion"></a>Dyskusji  
+ Klient szuka kryteriów dopasowania typu "lub". Usługa reaguje ponownie, jeśli zakresy w punktach końcowych pasują do dowolnego z zakresów dostarczonych przez klienta. W takim przypadku klient szuka usługi kalkulatora, która ma dowolne z zakresów na poniższej liście:  
   
 1. `net.tcp://Microsoft.Samples.Discovery/RedmondLocation`  
   
@@ -33,25 +33,25 @@ Niniejszy przykład pokazuje, jak utworzyć niestandardowy zakres dopasowanie pr
   
 3. `net.tcp://Microsoft.Samples.Discovery/PortlandLocation`  
   
- Aby to osiągnąć, klient określa, że usługi do użycia niestandardowego zakresu reguły dopasowania, przekazując dopasowanie niestandardowy zakres według identyfikatora URI. W celu ułatwienia dopasowywania niestandardowy zakres, usługi, należy użyć usługę odnajdywania niestandardowych, która rozumie reguły dopasowania niestandardowy zakres i skojarzonej logiki pasującego implementuje.  
+ Aby to osiągnąć, klient kieruje usługi do użycia niestandardowej reguły dopasowywania zakresu przez przekazanie w niestandardowym zakresie według identyfikatora URI. Aby ułatwić dopasowanie zakresu niestandardowego, usługa musi używać niestandardowej usługi odnajdywania, która rozumie regułę niestandardowego dopasowania zakresu i implementuje skojarzoną logikę zgodną.  
   
- W projekcie klienta Otwórz plik Program.cs. Należy pamiętać, że `ScopeMatchBy` pole `FindCriteria` obiekt jest ustawiony do określonego identyfikatora URI. Ten identyfikator jest wysyłane do usługi. Jeśli usługa nie rozpoznaje tej reguły, ignoruje żądanie Znajdź klienta.  
+ W projekcie klienta Otwórz plik Program.cs. Należy zauważyć, `ScopeMatchBy` że pole `FindCriteria` obiektu jest ustawione na określony identyfikator URI. Ten identyfikator jest wysyłany do usługi. Jeśli usługa nie rozpoznaje tej reguły, zignoruje żądanie wyszukiwania klienta.  
   
- Otwórz projekt usługi. Trzy pliki są używane do implementowania usługi odnajdywania niestandardowe:  
+ Otwórz projekt usługi. Do zaimplementowania niestandardowej usługi odnajdywania są używane trzy pliki:  
   
-1. **AsyncResult.cs**: Jest to implementacja `AsyncResult` metod odnajdywania jest to wymagane.  
+1. **AsyncResult.cs**: Jest to implementacja `AsyncResult` , która jest wymagana przez metody odnajdywania.  
   
-2. **CustomDiscoveryService.cs**: Ten plik implementuje usługę odnajdywanie niestandardowe. Rozszerza implementację <xref:System.ServiceModel.Discovery.DiscoveryService> klasy i zastępuje niezbędne metody. Należy pamiętać, implementacja <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A> metody. Metoda sprawdza, czy dopasowanie niestandardowy zakres przez regułę został określony przez klienta. Jest to ten sam niestandardowy identyfikator URI, który klient określony wcześniej. Jeśli określono niestandardową regułę, ścieżka kodu, która implementuje logikę dopasowania "Lub" jest zakończony.  
+2. **CustomDiscoveryService.cs**: Ten plik implementuje niestandardową usługę odnajdywania. Implementacja rozszerza <xref:System.ServiceModel.Discovery.DiscoveryService> klasę i zastępuje wymagane metody. Zanotuj implementację <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A> metody. Metoda sprawdza, czy niestandardowy dopasowanie zakresu według reguły został określony przez klienta. Jest to ten sam niestandardowy identyfikator URI, który został wcześniej określony przez klienta. Jeśli zostanie określona reguła niestandardowa, następuje ścieżka kodu implementująca logikę dopasowania "OR".  
   
-     Tę logikę niestandardowego przechodzi przez wszystkie zakresy na każdym z punktów końcowych, które usługa ma. Jeśli żadnego z zakresów punktu końcowego pasuje do żadnego z zakresów określonych przez klienta, Usługa odnajdywania dodaje punkt końcowy do odpowiedzi, który jest wysyłany do klienta.  
+     Ta niestandardowa logika przechodzi przez wszystkie zakresy w każdym punkcie końcowym, który ma usługa. Jeśli którykolwiek z zakresów punktu końcowego jest zgodny z dowolnym z zakresów dostarczonych przez klienta, usługa odnajdywania dodaje ten punkt końcowy do odpowiedzi wysyłanej do klienta.  
   
-3. **CustomDiscoveryExtension.cs**: Ostatnim krokiem we wdrażaniu usługi odnajdywania jest połączyć tej implementacji niestandardowego odnajdywały usługę host usługi. Klasa pomocnika używana w tym miejscu jest `CustomDiscoveryExtension` klasy. Ta klasa rozszerza <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> klasy. Użytkownik musi przesłonić metodę <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> metody. W tym przypadku metoda zwraca wystąpienie usługę odnajdywania niestandardowej, która została utworzona wcześniej. `PublishedEndpoints` jest <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> zawierający wszystkie punkty końcowe aplikacji, które są dodawane do <xref:System.ServiceModel.ServiceHost>. Usługa odnajdywania niestandardowy używa tej wartości do wypełniania listy wewnętrznej. Użytkownik może dodać inne metadane punktu końcowego.  
+3. **CustomDiscoveryExtension.cs**: Ostatnim krokiem implementowania usługi odnajdywania jest połączenie tej implementacji niestandardowej usługi odnajdywania z hostem usługi. Użyta w tym miejscu Klasa pomocnika jest `CustomDiscoveryExtension` klasą. Ta Klasa rozszerza <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> klasę. Użytkownik musi zastąpić <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> metodę. W takim przypadku metoda zwraca wystąpienie niestandardowej usługi odnajdywania, która została utworzona wcześniej. `PublishedEndpoints`zawiera wszystkie punkty końcowe aplikacji, które są dodawane <xref:System.ServiceModel.ServiceHost>do. <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> Usługa odnajdywania niestandardowego używa tego do wypełniania listy wewnętrznej. Użytkownik może również dodać inne metadane punktu końcowego.  
   
- Wreszcie Otwórz plik Program.cs. Należy pamiętać, że zarówno <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> i `CustomDiscoveryExtension` są dodawane do hosta. Gdy odbywa się i host ma punkt końcowy, względem którego ma zostać odbierać komunikaty odnajdywania, aplikacja może użyć usługi odnajdywania niestandardowych.  
+ Na koniec Otwórz Program.cs. Należy zauważyć, że <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> oba `CustomDiscoveryExtension` elementy i są dodawane do hosta. Gdy to zrobisz, a host ma punkt końcowy, w którym będą odbierane komunikaty odnajdowania, aplikacja może używać niestandardowej usługi odnajdywania.  
   
- Sprawdź, czy klient jest w stanie znaleźć tę usługę, nie wiedząc o tym adresu.  
+ Zwróć uwagę, że klient może znaleźć usługę bez znajomości jej adresu.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
 1. Otwórz rozwiązanie, które zawiera projekt.  
   
@@ -59,13 +59,13 @@ Niniejszy przykład pokazuje, jak utworzyć niestandardowy zakres dopasowanie pr
   
 3. Uruchom aplikację usługi.  
   
-4. Uruchom aplikację klienta.  
+4. Uruchom aplikację kliencką.  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\CustomFindCriteria`
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\CustomFindCriteria`

@@ -2,63 +2,63 @@
 title: Śledzenie SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: b69336e9a6fd0d3cf91c2a187412638d08490eea
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 24cc484bf11d7cedab949d61c63f805a28a9f849
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66491083"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038055"
 ---
 # <a name="sql-tracking"></a>Śledzenie SQL
-W tym przykładzie pokazano, jak napisać uczestnikiem niestandardowe śledzenia SQL, który zapisuje rekordy śledzenia bazą danych SQL. Windows Workflow Foundation (WF) zapewnia wgląd w wykonywania wystąpienia przepływu pracy śledzenia przepływu pracy. Środowisko uruchomieniowe śledzenia emituje przepływu pracy śledzenia rekordów podczas wykonywania przepływu pracy. Aby uzyskać więcej informacji na temat śledzenia przepływu pracy, zobacz [przepływu pracy i śledzenie](../workflow-tracking-and-tracing.md).
+Ten przykład pokazuje, jak napisać niestandardowego uczestnika śledzenia SQL, który zapisuje rekordy śledzenia do bazy danych SQL. Windows Workflow Foundation (WF) oferuje śledzenie przepływów pracy, aby uzyskać wgląd w wykonywanie wystąpienia przepływu pracy. Środowisko uruchomieniowe śledzenia emituje rekordy śledzenia przepływu pracy podczas wykonywania przepływu pracy. Aby uzyskać więcej informacji na temat śledzenia przepływu pracy, zobacz [śledzenie i śledzenie przepływu pracy](../workflow-tracking-and-tracing.md).
 
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
 
-1. Sprawdź, zainstalowany jest program SQL Server 2008, SQL Server 2008 Express lub nowszej. Skrypty w pakiecie z przykładem założono korzystanie z wystąpienia programu SQL Express na komputerze lokalnym. Jeśli masz inne wystąpienie, zmodyfikuj skrypty związane z bazy danych przed uruchomieniem przykładu.
+1. Sprawdź, czy masz SQL Server 2008, SQL Server 2008 Express lub nowszy. Skrypty spakowane z przykładem zakładają użycie wystąpienia programu SQL Express na komputerze lokalnym. Jeśli istnieje inne wystąpienie, przed uruchomieniem przykładu należy zmodyfikować skrypty powiązane z bazą danych.
 
-2. Utwórz bazę danych śledzenia programu SQL Server, uruchamiając Trackingsetup.cmd w katalogu skryptów (\WF\Basic\Tracking\SqlTracking\CS\Scripts). Spowoduje to utworzenie bazy danych o nazwie TrackingSample.
+2. Utwórz bazę danych śledzenia SQL Server, uruchamiając Trackingsetup. cmd w katalogu scripts (\WF\Basic\Tracking\SqlTracking\CS\Scripts). Spowoduje to utworzenie bazy danych o nazwie TrackingSample.
 
     > [!NOTE]
-    >  Skrypt tworzy bazę danych w domyślnym wystąpieniu programu SQL Express. Jeśli chcesz zainstalować je na inne wystąpienie bazy danych, zmodyfikuj skrypt Trackingsetup.cmd.  
+    > Skrypt tworzy bazę danych w domyślnym wystąpieniu programu SQL Express. Jeśli chcesz zainstalować ją w innym wystąpieniu bazy danych, Edytuj skrypt Trackingsetup. cmd.  
   
-3. Otwórz SqlTrackingSample.sln w programie Visual Studio 2010.  
+3. Otwórz SqlTrackingSample. sln w programie Visual Studio 2010.  
   
-4. Naciśnij klawisze CTRL + SHIFT + B, aby skompilować rozwiązanie.  
+4. Naciśnij kombinację klawiszy CTRL + SHIFT + B, aby skompilować rozwiązanie.  
   
 5. Naciśnij klawisz F5, aby uruchomić aplikację.  
   
-     Okno przeglądarki otwiera i pokazuje katalog zawierający informacje o aplikacji.  
+     Zostanie otwarte okno przeglądarki i zostanie wyświetlona lista katalogów dla aplikacji.  
   
-6. W przeglądarce kliknij przycisk StockPriceService.xamlx.  
+6. W przeglądarce kliknij pozycję StockPriceService. xamlx.  
   
-7. W przeglądarce pojawi się stronie StockPriceService zawiera usługę lokalnego adresu WSDL. Skopiuj ten adres.  
+7. W przeglądarce zostanie wyświetlona strona StockPriceService, która zawiera adres WSDL usługi lokalnej. Kopiuj ten adres.  
   
-     Na przykład adres WSDL Usługa lokalna `http://localhost:65193/StockPriceService.xamlx?wsdl`.  
+     Przykładem adresu WSDL usługi lokalnej jest `http://localhost:65193/StockPriceService.xamlx?wsdl`.  
   
-8. Za pomocą Eksploratora plików, uruchom klienta testowego WCF (WcfTestClient.exe). Znajduje się on w katalogu programu Microsoft Visual Studio 10.0\Common7\IDE.  
+8. Korzystając z Eksploratora plików, uruchom klienta testowego WCF (WcfTestClient. exe). Znajduje się w katalogu Microsoft Visual Studio 10.0 \ Common7\IDE.  
   
-9. W kliencie testowym WCF kliknij **pliku** menu, a następnie wybierz **Dodaj usługę**. Wklej adres lokalnej usługi w polu tekstowym. Kliknij przycisk **OK** aby zamknąć okno dialogowe.  
+9. W kliencie testowym WCF kliknij menu **plik** i wybierz polecenie **Dodaj usługę**. Wklej adres usługi lokalnej do pola tekstowego. Kliknij przycisk **OK** , aby zamknąć okno dialogowe.  
   
-10. W kliencie testowym WCF, kliknij dwukrotnie **GetStockPrice**. Spowoduje to otwarcie `GetStockPrice` operacji, która przyjmuje jeden parametr, typ wartości `Contoso` i kliknij przycisk **Invoke**.  
+10. W kliencie testowym WCF kliknij dwukrotnie pozycję **GetStockPrice**. Spowoduje to otwarcie `GetStockPrice` operacji, która przyjmuje jeden parametr, wpisz wartość `Contoso` i kliknij przycisk **Wywołaj**.  
   
-11. Rekordów emitowany śledzenia są zapisywane w bazie danych SQL. Aby wyświetlić rekordy śledzenia, należy otworzyć TrackingSample bazy danych w programie SQL Management Studio i przejdź do tabel. Aby uzyskać więcej informacji na temat programu SQL Server Management Studio, zobacz [wprowadzenie do programu SQL Server Management Studio](https://go.microsoft.com/fwlink/?LinkId=165645). SQL Server 2008 Management Studio Express można pobrać [tutaj](https://go.microsoft.com/fwlink/?LinkId=180520). Uruchamianie zapytania select w tabelach wyświetla dane przechowywane w tabelach odpowiednich rekordów śledzenia.  
+11. Wysyłane rekordy śledzenia są zapisywane w bazie danych SQL. Aby wyświetlić rekordy śledzenia, Otwórz bazę danych TrackingSample w programie SQL Management Studio i przejdź do tabel. Aby uzyskać więcej informacji na temat SQL Server Management Studio, zobacz [wprowadzenie SQL Server Management Studio](https://go.microsoft.com/fwlink/?LinkId=165645). SQL Server 2008 Management Studio Express można pobrać [tutaj](https://go.microsoft.com/fwlink/?LinkId=180520). Uruchomienie zapytania SELECT w tabelach wyświetla dane w rekordach śledzenia przechowywanych w odpowiednich tabelach.  
   
-#### <a name="to-uninstall-the-sample"></a>Aby odinstalować próbki  
+#### <a name="to-uninstall-the-sample"></a>Aby odinstalować przykład  
   
-1. Uruchom skrypt theTrackingcleanup.cmd w katalogu próbki (\WF\Basic\Tracking\SqlTracking).  
+1. Uruchom skrypt theTrackingcleanup. cmd w katalogu przykładowym (\WF\Basic\Tracking\SqlTracking).  
   
     > [!NOTE]
-    >  Trackingcleanup.cmd próbuje usunąć bazę danych programu SQL Express komputera lokalnego. Jeśli używasz innego wystąpienia programu SQL server, należy edytować Trackingcleanup.cmd.
+    > Trackingcleanup. cmd próbuje usunąć bazę danych w lokalnym komputerze SQL Express. Jeśli używasz innego wystąpienia programu SQL Server, Edytuj Trackingcleanup. cmd.
 
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\SqlTracking`  
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\SqlTracking`  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przykłady monitorowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Przykłady monitorowania oprogramowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

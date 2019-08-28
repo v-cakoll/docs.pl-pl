@@ -2,12 +2,12 @@
 title: Komunikacja jednokierunkowa
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-ms.openlocfilehash: 0035b64b14b0d32f39974e8eaa28242290d665c0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f392fad0461dab4dff6e5e4efe0070d7017a700b
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957244"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039043"
 ---
 # <a name="one-way"></a>Komunikacja jednokierunkowa
 Ten przykład pokazuje kontakt z usługą z jednokierunkowymi operacjami usługi. Klient nie czeka na zakończenie operacji usługi, podobnie jak w przypadku operacji dwukierunkowych usługi. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i używa `wsHttpBinding` powiązania. Usługa w tym przykładzie to samodzielna aplikacja konsolowa, która umożliwia obserwowanie usługi, która odbiera i przetwarza żądania. Klient jest również aplikacją konsolową.  
@@ -98,10 +98,10 @@ Processing Divide(22,7) - result: 3.14285714285714
 > Uruchom usługę przed uruchomieniem klienta i wyłącz klienta przed zamknięciem usługi. Pozwala to uniknąć wyjątku klienta, gdy klient nie może prawidłowo zamknąć sesji zabezpieczeń, ponieważ usługa zniknęła.  
   
 > [!IMPORTANT]
->  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Oneway`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Oneway`  

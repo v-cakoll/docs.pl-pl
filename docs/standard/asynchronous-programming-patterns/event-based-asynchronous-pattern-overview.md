@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 7dba7afe9ab0348082ec9538b268a387b64ad050
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 05b5ab19c5206395ab138465eccf2035b5cebe3e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950691"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046484"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Asynchroniczny wzorzec oparty na zdarzeniach — przegląd
 Aplikacje, które jednocześnie wykonują wiele zadań, jeszcze nie reagują na interakcję użytkownika, często wymagają projektu, który używa wielu wątków. <xref:System.Threading> Przestrzeń nazw zawiera wszystkie narzędzia niezbędne do tworzenia aplikacji wielowątkowych o wysokiej wydajności, ale używanie tych narzędzi skutecznie wymaga znaczących doświadczeń z obsługą wielowątkowych oprogramowania. W przypadku stosunkowo prostych aplikacji wielowątkowych składnik ten <xref:System.ComponentModel.BackgroundWorker> oferuje proste rozwiązanie. W przypadku bardziej zaawansowanych aplikacji asynchronicznych Rozważ zaimplementowanie klasy zgodnej ze wzorcem asynchronicznym opartym na zdarzeniach.  
@@ -45,7 +45,7 @@ Aplikacje, które jednocześnie wykonują wiele zadań, jeszcze nie reagują na 
  Wzorzec asynchroniczny oparty na zdarzeniach wymaga anulowania operacji asynchronicznej, a <xref:System.Windows.Forms.PictureBox> kontrolka obsługuje to wymaganie <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> za pomocą metody. Wywołanie <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> przesyła żądanie zatrzymania oczekującego pobrania i po anulowaniu <xref:System.Windows.Forms.PictureBox.LoadCompleted> zadania zostanie zgłoszone zdarzenie.  
   
 > [!CAUTION]
->  Możliwe jest, że pobieranie zakończy się tak samo jak <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> żądanie, dlatego <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> może nie odzwierciedlać żądania anulowania. Ta sytuacja jest nazywana *sytuacją wyścigu* i jest typowym problemem w programowaniu wielowątkowym. Aby uzyskać więcej informacji o problemach w programowaniu wielowątkowym, zobacz temat [zarządzane wątki](../../../docs/standard/threading/managed-threading-best-practices.md)z najlepszymi rozwiązaniami.  
+> Możliwe jest, że pobieranie zakończy się tak samo jak <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> żądanie, dlatego <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> może nie odzwierciedlać żądania anulowania. Ta sytuacja jest nazywana *sytuacją wyścigu* i jest typowym problemem w programowaniu wielowątkowym. Aby uzyskać więcej informacji o problemach w programowaniu wielowątkowym, zobacz temat [zarządzane wątki](../../../docs/standard/threading/managed-threading-best-practices.md)z najlepszymi rozwiązaniami.  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>Charakterystyki wzorca asynchronicznego opartego na zdarzeniach  
  Wzorzec asynchroniczny oparty na zdarzeniach może potrwać kilka form, w zależności od złożoności operacji obsługiwanych przez konkretną klasę. Najprostsze klasy mogą mieć pojedynczą metodę**asynchroniczną** MethodName oraz odpowiednie zdarzenie**ukończenia** MethodName. Bardziej złożone klasy mogą mieć kilka metod asynchronicznych _MethodName_ , z których każda ma odpowiednie zdarzenie _MethodName_**ukończone** , a także synchroniczne wersje tych metod. Klasy mogą opcjonalnie obsługiwać anulowanie, Raportowanie postępu i przyrostowe wyniki dla każdej metody asynchronicznej.  

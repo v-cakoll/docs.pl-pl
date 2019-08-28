@@ -8,123 +8,123 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: ef48ff1bbf79be981b8b8d4148f818fe40b72353
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d134b8c8ef202a91b35ad8645bf63622b5e8030
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64632182"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040843"
 ---
 # <a name="anonymous-types-visual-basic"></a>Typy anonimowe (Visual Basic)
-Visual Basic obsługuje typy anonimowe, które pozwalają na tworzenie obiektów bez konieczności pisania definicji klasy dla typu danych. Zamiast tego kompilator generuje klasę dla Ciebie. Klasa nie ma użytecznych nazw, dziedziczy bezpośrednio z <xref:System.Object>i zawiera właściwości określone w odwołaniu do obiektu. Ponieważ nazwa typu danych nie jest określona, nazywa się *typu anonimowego*.  
+Visual Basic obsługuje typy anonimowe, które umożliwiają tworzenie obiektów bez konieczności pisania definicji klasy dla typu danych. Zamiast tego kompilator generuje klasę dla Ciebie. Klasa nie ma użytecznych nazw, dziedziczy bezpośrednio z <xref:System.Object>i zawiera właściwości określone w deklaracji obiektu. Ponieważ nazwa typu danych nie jest określona, jest określana jako *Typ anonimowy*.  
   
- Poniższy przykład deklaruje i tworzy zmienną `product` jako wystąpienie typu anonimowego, który ma dwie właściwości `Name` i `Price`.  
+ Poniższy przykład deklaruje i tworzy zmienną `product` jako wystąpienie typu anonimowego, który ma dwie właściwości, `Name` i `Price`.  
   
  [!code-vb[VbVbalrAnonymousTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#1)]  
   
- A *wyrażeniu zapytania* używa typów anonimowych połączyć kolumny danych, wybrana przez zapytanie. Nie można zdefiniować typ wyniku z wyprzedzeniem, ponieważ nie można przewidzieć kolumn, które może wybrać określone zapytanie. Typy anonimowe umożliwiają pisanie zapytań, który wybiera dowolną liczbę kolumn, w dowolnej kolejności. Kompilator tworzy typ danych, który pasuje do określonych właściwości i w określonej kolejności.  
+ *Wyrażenie zapytania* używa typów anonimowych do łączenia kolumn danych wybranych przez zapytanie. Nie można zdefiniować typu wyniku z wyprzedzeniem, ponieważ nie można przewidzieć kolumn, które mogą zostać wybrane dla konkretnego zapytania. Typy anonimowe umożliwiają pisanie zapytania, które wybiera dowolną liczbę kolumn w dowolnej kolejności. Kompilator tworzy typ danych, który jest zgodny z określonymi właściwościami i określoną kolejnością.  
   
- W poniższych przykładach `products` znajduje się lista obiektów produktu, z których każdy zawiera wiele właściwości. Zmienna `namePriceQuery` zawiera definicję zapytanie, które, gdy jest wykonywany, zwraca kolekcję wystąpień typ anonimowy, który ma dwie właściwości `Name` i `Price`.  
+ W poniższych przykładach `products` jest listą obiektów produktu, z których każdy ma wiele właściwości. Zmienna `namePriceQuery` przechowuje definicję zapytania, które po jego wykonaniu zwraca kolekcję wystąpień typu anonimowego, który ma dwie właściwości, `Name` i `Price`.  
   
  [!code-vb[VbVbalrAnonymousTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#2)]  
   
- Zmienna `nameQuantityQuery` zawiera definicję zapytanie, które, gdy jest wykonywany, zwraca kolekcję wystąpień typ anonimowy, który ma dwie właściwości `Name` i `OnHand`.  
+ Zmienna `nameQuantityQuery` przechowuje definicję zapytania, które po jego wykonaniu zwraca kolekcję wystąpień typu anonimowego, który ma dwie właściwości, `Name` i `OnHand`.  
   
  [!code-vb[VbVbalrAnonymousTypes#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#3)]  
   
- Aby uzyskać więcej informacji na temat kod utworzony przez kompilator dla typu anonimowego, zobacz [definicja typu anonimowego](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).  
+ Aby uzyskać więcej informacji na temat kodu utworzonego przez kompilator dla typu anonimowego, zobacz [definicja typu anonimowego](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).  
   
 > [!CAUTION]
->  Nazwa typu anonimowego jest kompilatora generowane i mogą się różnić od kompilacji do kompilacji. Kod powinien używać lub nie polegają na nazwę typu anonimowego, ponieważ nazwa mogą ulec zmianie, gdy projekt jest kompilowany ponownie.  
+> Nazwa typu anonimowego jest generowana przez kompilator i może się różnić od kompilacji do kompilacji. Kod nie powinien używać nazwy typu anonimowego ani polegać na niej, ponieważ nazwa może ulec zmianie podczas ponownej kompilacji projektu.  
   
 ## <a name="declaring-an-anonymous-type"></a>Deklarowanie typu anonimowego  
- Deklaracja typu anonimowego wystąpienia używa listy inicjalizatora w celu określenia właściwości typu. W przypadku deklarowania typu anonimowego, nie innych klas elementów takich jak metody lub zdarzenia, można określić tylko właściwości. W poniższym przykładzie `product1` jest wystąpieniem typu anonimowego, który ma dwie właściwości: `Name` i `Price`.  
+ Deklaracja wystąpienia typu anonimowego używa listy inicjatorów do określenia właściwości typu. Podczas deklarowania typu anonimowego można określić tylko właściwości, a nie inne elementy klasy, takie jak metody lub zdarzenia. W poniższym przykładzie `product1` jest wystąpienie typu anonimowego, który ma dwie właściwości: `Name` i `Price`.  
   
  [!code-vb[VbVbalrAnonymousTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#4)]  
   
- Po wyznaczeniu właściwości jako właściwości klucza, można użyć ich do porównywania dwóch wystąpień typu anonimowego pod kątem równości. Jednak nie można zmienić wartości właściwości klucza. Sekcja właściwości klucza w dalszej części tego tematu, aby uzyskać więcej informacji.  
+ Jeśli wyznaczysz właściwości jako właściwości klucza, możesz użyć ich do porównania dwóch anonimowych wystąpień typu dla równości. Nie można jednak zmienić wartości właściwości klucza. Aby uzyskać więcej informacji, zobacz sekcję właściwości klucza w dalszej części tego tematu.  
   
- Należy zauważyć, że deklarowanie wystąpienie typu anonimowego jest podobne do deklarowania wystąpienia typu o nazwie za pomocą inicjatora obiektów:  
+ Należy zauważyć, że deklarowanie wystąpienia typu anonimowego jest podobne do deklarującego wystąpienia nazwanego typu za pomocą inicjatora obiektów:  
   
  [!code-vb[VbVbalrAnonymousTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#5)]  
   
- Aby uzyskać więcej informacji na temat innych sposobów, aby określić właściwości typu anonimowego, zobacz [jak: Wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
+ Aby uzyskać więcej informacji na temat innych metod określania właściwości typu anonimowego [, zobacz How to: Wnioskowanie nazw właściwości i typów w deklaracjach](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)typu anonimowego.  
   
 ## <a name="key-properties"></a>Właściwości klucza  
- Właściwości klucza różnią się od niekluczowych właściwości na kilka sposobów podstawowe:  
+ Właściwości klucza różnią się od właściwości niebędących kluczami na kilka podstawowych sposobów:  
   
-- Tylko wartości właściwości klucza są porównywane w celu ustalenia, czy dwa wystąpienia są takie same.  
+- Tylko wartości właściwości klucza są porównywane w celu określenia, czy dwa wystąpienia są równe.  
   
-- Wartości właściwości klucza są przeznaczone tylko do odczytu i nie można jej zmienić.  
+- Wartości właściwości klucza są tylko do odczytu i nie można ich zmienić.  
   
-- Tylko wartości kluczy właściwości znajdują się w algorytmie kod generowany przez kompilator wyznaczania wartości skrótu dla typu anonimowego.  
+- Tylko wartości właściwości klucza są zawarte w algorytmie kodu skrótu wygenerowanego przez kompilator dla typu anonimowego.  
   
 ### <a name="equality"></a>Równości  
- Wystąpień typów anonimowych może być taki sam, tylko wtedy, gdy są one wystąpień tego samego typu anonimowego. Kompilator traktuje dwa wystąpienia jako wystąpień tego samego typu, jeśli są spełnione następujące warunki:  
+ Wystąpienia typów anonimowych mogą być równe tylko wtedy, gdy są wystąpieniami tego samego typu anonimowego. Kompilator traktuje dwa wystąpienia jako wystąpienia tego samego typu, jeśli spełniają następujące warunki:  
   
-- Są one zadeklarowane w tym samym zestawie.  
+- Są one deklarowane w tym samym zestawie.  
   
-- Ich właściwości takich samych nazwach takich samych typach wykrywany i są deklarowane w tej samej kolejności. Nazwa porównania nie jest rozróżniana wielkość liter.  
+- Ich właściwości mają takie same nazwy, te same wywnioskowane typy i są deklarowane w tej samej kolejności. W porównaniach nazw nie jest rozróżniana wielkość liter.  
   
-- Te same właściwości w każdym są oznaczone jako właściwości klucza.  
+- Te same właściwości w każdej z nich są oznaczane jako właściwości klucza.  
   
-- Co najmniej jedna właściwość w każdej deklaracji jest właściwość klucza.  
+- Co najmniej jedna właściwość w każdej deklaracji jest właściwością klucza.  
   
- Wystąpienie anonimowe typy, które nie ma klucza właściwości jest taki sam, tylko do samego siebie.  
+ Wystąpienie typów anonimowych, które nie ma właściwości klucza, jest równe tylko sobie.  
   
  [!code-vb[VbVbalrAnonymousTypes#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#6)]  
   
- Dwa wystąpienia tego samego typu anonimowego są równe, jeśli wartości ich właściwości klucza są takie same. Poniższe przykłady ilustrują, jak równości jest testowana.  
+ Dwa wystąpienia tego samego typu anonimowego są równe, jeśli wartości właściwości klucza są równe. W poniższych przykładach pokazano, jak równość jest testowana.  
   
  [!code-vb[VbVbalrAnonymousTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#7)]  
   
 ### <a name="read-only-values"></a>Wartości tylko do odczytu  
- Nie można zmienić wartości właściwości klucza. Na przykład w `prod8` w poprzednim przykładzie `Name` i `Price` pola są `read-only`, ale `OnHand` można zmienić.  
+ Nie można zmienić wartości właściwości klucza. Na przykład `prod8` w poprzednim przykładzie `Price` `Name` pola i są `read-only`, ale `OnHand` można je zmienić.  
   
  [!code-vb[VbVbalrAnonymousTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#8)]  
   
-## <a name="anonymous-types-from-query-expressions"></a>Anonimowe typy w wyrażeniach zapytań  
- Wyrażenia zapytań nie zawsze należy wymagać utworzenia typy anonimowe. Jeśli to możliwe, używają istniejącego typu do przechowywania danych kolumny. Dzieje się tak, gdy kwerenda zwraca albo całego rekordy ze źródła danych lub tylko jedno pole z każdego rekordu. W poniższych przykładach kodu `customers` to zbiór obiektów `Customer` klasy. Klasa ma wiele właściwości i może zawierać co najmniej jeden z nich, które znajdują się w wyniku zapytania w dowolnej kolejności. W pierwszych dwóch przykładach nie typy anonimowe są wymagane, ponieważ zapytania wybierz elementy nazwane typy:  
+## <a name="anonymous-types-from-query-expressions"></a>Typy anonimowe z wyrażeń zapytania  
+ Wyrażenia zapytań nie zawsze wymagają tworzenia typów anonimowych. Jeśli to możliwe, używa istniejącego typu do przechowywania danych kolumny. Dzieje się tak, gdy zapytanie zwraca wszystkie rekordy ze źródła danych lub tylko jedno pole z każdego rekordu. W poniższym przykładzie kodu, `customers` jest kolekcją obiektów `Customer` klasy. Klasa ma wiele właściwości i można w dowolnej kolejności uwzględnić jeden lub więcej z nich w wyniku zapytania. W pierwszych dwóch przykładach nie są wymagane żadne typy anonimowe, ponieważ zapytania wybierają elementy nazwanych typów:  
   
-- `custs1` zawiera kolekcję parametrów, ponieważ `cust.Name` jest ciągiem.  
+- `custs1`zawiera kolekcję ciągów, ponieważ `cust.Name` jest ciągiem.  
   
      [!code-vb[VbVbalrAnonymousTypes#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#30)]  
   
-- `custs2` zawiera kolekcję `Customer` obiektów, ponieważ każdy element obiektu `customers` jest `Customer` obiektu, a cały element jest wybrany przez zapytanie.  
+- `custs2`zawiera kolekcję `Customer` obiektów, ponieważ każdy `customers` element jest `Customer` obiekt, a cały element jest wybierany przez zapytanie.  
   
      [!code-vb[VbVbalrAnonymousTypes#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#31)]  
   
- Jednak odpowiednie nazwane typy nie są zawsze dostępne. Możesz chcieć wybierz nazwy klientów i adresy jeden cel, numery identyfikatorów klientów i lokalizacji do innej i nazw klientów, adresów i historie zamówienia dla innego. Typy anonimowe umożliwiają wybrać dowolną kombinację właściwości, w dowolnej kolejności bez pierwszy deklarowania nowego typu nazwanego na potrzeby przechowywania wyniku. Zamiast tego kompilator tworzy dla każdej kompilacji właściwości typu anonimowego. Następujące zapytanie wybiera tylko przez klienta nazwa i numer identyfikacyjny każdego z nich `Customer` obiektu `customers`. W związku z tym kompilator tworzy typ anonimowy, który zawiera tylko te dwie właściwości.  
+ Jednak odpowiednie nazwane typy nie są zawsze dostępne. Możesz chcieć wybrać nazwy i adresy klientów w jednym celu, numery IDENTYFIKACYJNe klienta i lokalizacje dla innych, nazwy klientów, adresy i historie uporządkowane. Typy anonimowe umożliwiają wybranie dowolnej kombinacji właściwości w dowolnej kolejności, bez uprzedniego deklarowania nowego typu nazwanego do przechowywania wyniku. Zamiast tego kompilator tworzy typ anonimowy dla każdej kompilacji właściwości. Poniższe zapytanie wybiera tylko nazwę klienta i numer identyfikacyjny z każdego `Customer` obiektu w. `customers` W związku z tym kompilator tworzy typ anonimowy, który zawiera tylko te dwie właściwości.  
   
  [!code-vb[VbVbalrAnonymousTYpes#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#32)]  
   
- Nazwy i typy danych właściwości typu anonimowego są pobierane z argumentów `Select`, `cust.Name` i `cust.ID`. Właściwości w typ anonimowy, który jest tworzony przez zapytanie są zawsze właściwości klucza. Gdy `custs3` jest wykonywany w następującym `For Each` pętli, wynik jest kolekcją wystąpień typu anonimowego z dwóch właściwości klucza, `Name` i `ID`.  
+ Zarówno nazwy, jak i typy danych właściwości w typie anonimowym są pobierane z argumentów do `Select`, `cust.Name` i `cust.ID`. Właściwości typu anonimowego, który jest tworzony przez zapytanie, są zawsze właściwościami klucza. Gdy `custs3` jest wykonywane w następującej `For Each` pętli, wynik jest kolekcją wystąpień typu anonimowego `Name` z dwoma kluczowymi właściwościami i `ID`.  
   
  [!code-vb[VbVbalrAnonymousTypes#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#33)]  
   
- Elementy w kolekcji, reprezentowane przez `custs3` są silnie typizowane i można użyć funkcji IntelliSense, nawigowanie po dostępnych właściwości i sprawdź ich typy.  
+ Elementy w kolekcji reprezentowane przez `custs3` są silnie wpisane i można używać funkcji IntelliSense do nawigowania po dostępnych właściwościach i weryfikowania ich typów.  
   
  Aby uzyskać więcej informacji, zobacz [wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
   
-## <a name="deciding-whether-to-use-anonymous-types"></a>Podjęcie decyzji o użyciu typy anonimowe  
- Przed przystąpieniem do tworzenia obiektów jako wystąpienia klasy anonimowe, należy wziąć pod uwagę niezależnie czy dotyczyć to najlepsze rozwiązanie. Na przykład jeśli chcesz utworzyć obiekt tymczasowy powiązanych danych, a użytkownik nie ma potrzeby dla innych pól i metod, które mogą zawierać pełnej klasy, typu anonimowego jest doskonałym rozwiązaniem. Typy anonimowe są również wygodne, jeśli ma inny zestaw właściwości dla każdej deklaracji lub jeśli chcesz zmienić kolejność właściwości. Jednakże jeśli projekt zawiera kilka obiektów, które mają te same właściwości w ustalonej kolejności, można zadeklarować je łatwiej przy użyciu typu nazwanego konstruktora klasy. Na przykład za pomocą odpowiedniego konstruktora, łatwiej jest zadeklarować kilka wystąpień `Product` klasy nie można zadeklarować kilka wystąpień typu anonimowego.  
+## <a name="deciding-whether-to-use-anonymous-types"></a>Decydowanie o tym, czy mają być używane typy anonimowe  
+ Przed utworzeniem obiektu jako wystąpieniem klasy anonimowej, należy rozważyć, czy jest to najlepsza opcja. Na przykład, jeśli chcesz utworzyć tymczasowy obiekt, aby zawierał powiązane dane, i nie ma potrzeby dla innych pól i metod, które może zawierać kompletna Klasa, typ anonimowy jest dobrym rozwiązaniem. Typy anonimowe są również wygodne, jeśli chcesz wybrać różne właściwości dla każdej deklaracji, lub jeśli chcesz zmienić kolejność właściwości. Jeśli jednak projekt zawiera kilka obiektów, które mają te same właściwości, w ustalonej kolejności można zadeklarować je łatwiej przy użyciu nazwanego typu z konstruktorem klasy. Na przykład, z odpowiednim konstruktorem, łatwiej jest zadeklarować kilka wystąpień `Product` klasy, niż ma zadeklarować kilka wystąpień typu anonimowego.  
   
  [!code-vb[VbVbalrAnonymousTypes#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#9)]  
   
- Inną zaletą nazwane typy to, że kompilator może przechwycić przypadkowym błędne nazwę właściwości. W poprzednich przykładach `firstProd2`, `secondProd2`, i `thirdProd2` mają być wystąpieniami tego samego typu anonimowego. Jednak jeśli przypadkowo zadeklarować `thirdProd2` w jednym z następujących sposobów będzie inny niż jego typ `firstProd2` i `secondProd2`.  
+ Inną zaletą typów nazwanych jest to, że kompilator może przechwytywać przypadkowe błędne wpisywanie nazwy właściwości. W poprzednich przykładach `firstProd2` `secondProd2`,, i `thirdProd2` mają być wystąpieniami tego samego typu anonimowego. Jeśli jednak przypadkowo zadeklarujesz `thirdProd2` w jeden z następujących sposobów, jego typ będzie inny niż `firstProd2` w przypadku i `secondProd2`.  
   
  [!code-vb[VbVbalrAnonymousTypes#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#10)]  
   
- Co ważniejsze ma ograniczeń dotyczących używania typy anonimowe, które nie dotyczą wystąpień nazwanych typów. `firstProd2`, `secondProd2`, i `thirdProd2` wystąpień tego samego typu anonimowego. Jednak nazwę udostępnionego typu anonimowego jest niedostępna i nie może występować, gdzie nazwa typu, który jest oczekiwany w kodzie. Na przykład typ anonimowy nie może służyć do definiowania podpis metody, aby zadeklarować innej zmiennej lub pola lub w dowolnym deklaracji typu. W rezultacie typy anonimowe nie są odpowiednie w przypadku udostępniania informacji o różnych metod.  
+ Co ważniejsze, istnieją ograniczenia dotyczące użycia anonimowych typów, które nie mają zastosowania do wystąpień nazwanych typów. `firstProd2`, `secondProd2`, i `thirdProd2` są wystąpieniami tego samego typu anonimowego. Jednak nazwa udostępnionego typu anonimowego jest niedostępna i nie może się pojawić w przypadku, gdy w kodzie nie oczekiwano nazwy typu. Na przykład typu anonimowego nie można użyć do zdefiniowania podpisu metody, do deklarowania innej zmiennej lub pola lub deklaracji typu. W związku z tym typy anonimowe nie są odpowiednie w przypadku konieczności udostępniania informacji między metodami.  
   
 ## <a name="an-anonymous-type-definition"></a>Definicja typu anonimowego  
- W odpowiedzi na deklarację wystąpienia typu anonimowego kompilator utworzy nową definicję klasy, która zawiera określone właściwości.  
+ W odpowiedzi na deklarację wystąpienia typu anonimowego kompilator tworzy nową definicję klasy, która zawiera określone właściwości.  
   
- Jeśli typ anonimowy zawiera co najmniej jedną właściwość klucza, definicja zastępuje trzech członków dziedziczonych po elemencie <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, i <xref:System.Object.ToString%2A>. Kod generowany testowanie równości i określania, że wartość Kod skrótu uwzględnia tylko właściwości klucza. Jeśli typu anonimowego nie zawiera żadnych właściwości klucza, tylko <xref:System.Object.ToString%2A> zostanie zastąpiona. Jawnie nazwane właściwości typu anonimowego nie może powodować konflikt z tych metod wygenerowany. Oznacza to, że nie można użyć `.Equals`, `.GetHashCode`, lub `.ToString` nazwę właściwości.  
+ Jeśli typ anonimowy zawiera co najmniej jedną właściwość klucza, definicja przesłania <xref:System.Object>trzy składowe dziedziczone z: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, i <xref:System.Object.ToString%2A>. Kod przeznaczony do testowania równości i określania wartości kodu skrótu uwzględnia tylko właściwości klucza. Jeśli typ anonimowy nie zawiera właściwości klucza, tylko <xref:System.Object.ToString%2A> jest zastępowany. Właściwości jawnie nazwane typu anonimowego nie mogą powodować konfliktu z tymi wygenerowanymi metodami. Oznacza to, że nie można `.Equals`użyć `.GetHashCode` `.ToString` właściwości.  
   
- Definicji typu anonimowego, które mają co najmniej jeden klucz właściwości również implementują <xref:System.IEquatable%601?displayProperty=nameWithType> interfejsu, gdzie `T` to rodzaj typu anonimowego.  
+ Definicje typu anonimowego, które mają co najmniej jedną właściwość klucza, <xref:System.IEquatable%601?displayProperty=nameWithType> również implementują `T` interfejs, gdzie jest typem typu anonimowego.  
   
- Aby uzyskać więcej informacji na temat kod utworzony przez kompilator i funkcje zastąpionych metod zobacz [definicja typu anonimowego](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).  
+ Aby uzyskać więcej informacji na temat kodu utworzonego przez kompilator i funkcji przesłoniętych metod, zobacz [definicja typu anonimowego](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

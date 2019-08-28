@@ -2,25 +2,25 @@
 title: Śledzenie danych analitycznych programu WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 95a4335ef41240e8cc85c06b7997c12d98800b1d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ba4f1778059f7b960eebd42822048fa031e6961e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624236"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044545"
 ---
 # <a name="wcf-analytic-tracing"></a>Śledzenie danych analitycznych programu WCF
-W tym przykładzie przedstawiono sposób dodawania własnych zdarzeń śledzenia w strumieniu analityczne śladów, które zapisuje ETW w Windows Communication Foundation (WCF) [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Śledzenie analityczne są przeznaczone do ułatwiają Uzyskaj wgląd w swoje usługi bez konieczności płacenia spadek wysokiej wydajności. Ten przykład ilustruje sposób używania <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> interfejsy API w celu zapisu zdarzenia, które integrują się z usługi WCF.  
+Ten przykład pokazuje, jak dodać własne zdarzenia śledzenia do strumienia śladów analitycznych, które Windows Communication Foundation (WCF) zapisu w funkcji ETW [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]w programie. Śledzenie analityczne ma na celu ułatwienie wglądu w swoje usługi bez konieczności ponoszenia dużej wydajności. Ten przykład pokazuje, <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> jak używać interfejsów API do pisania zdarzeń, które integrują się z usługami WCF.  
   
- Aby uzyskać więcej informacji na temat <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> interfejsów API, zobacz <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
+ Aby uzyskać więcej informacji na <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> temat interfejsów API <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>, zobacz.  
   
- Aby dowiedzieć się więcej na temat śledzenia zdarzeń w Windows, zobacz [poprawić debugowania i dostrajania wydajności za pomocą funkcji ETW](https://go.microsoft.com/fwlink/?LinkId=166488).  
+ Aby dowiedzieć się więcej na temat śledzenia zdarzeń w systemie Windows, zobacz [ulepszanie debugowania i dostrajania wydajności za pomocą funkcji ETW](https://go.microsoft.com/fwlink/?LinkId=166488).  
   
-## <a name="disposing-eventprovider"></a>Usuwanie EventProvider  
- W tym przykładzie użyto <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> klasy, która implementuje <xref:System.IDisposable?displayProperty=nameWithType>. Podczas implementowania śledzenia dla usługi WCF, jest prawdopodobne, że możesz korzystać z <xref:System.Diagnostics.Eventing.EventProvider>firmy zasoby dotyczące okresu istnienia usługi. Z tego powodu i czytelności, w tym przykładzie nigdy nie usuwa opakowany <xref:System.Diagnostics.Eventing.EventProvider>. Jeśli zaistnieje usługa ma różne wymagania dotyczące śledzenia i użytkownik musi dysponować tego zasobu, a następnie należy zmodyfikować w tym przykładzie, zgodnie z najlepszymi rozwiązaniami do usuwania niezarządzanych zasobów. Aby uzyskać więcej informacji dotyczących usuwania niezarządzanych zasobów, zobacz [Implementing a Dispose Method](https://go.microsoft.com/fwlink/?LinkId=166436).  
+## <a name="disposing-eventprovider"></a>EventProvider usuwania  
+ Ten przykład używa <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> klasy, która implementuje <xref:System.IDisposable?displayProperty=nameWithType>. Podczas wdrażania śledzenia dla usługi WCF prawdopodobnie można używać <xref:System.Diagnostics.Eventing.EventProvider>zasobów przez okres istnienia usługi. Z tego powodu, i dla czytelności, ten przykład nigdy nie usuwa opakowanej <xref:System.Diagnostics.Eventing.EventProvider>. Jeśli z jakiegoś powodu usługa ma inne wymagania dotyczące śledzenia i musisz usunąć ten zasób, należy zmodyfikować ten przykład zgodnie z najlepszymi rozwiązaniami dotyczącymi usuwania niezarządzanych zasobów. Aby uzyskać więcej informacji o usuwaniu niezarządzanych zasobów, zobacz [implementowanie metody Dispose](https://go.microsoft.com/fwlink/?LinkId=166436).  
   
-## <a name="self-hosting-vs-web-hosting"></a>Hostingu samodzielnego programu vs. Hosting sieci Web  
- W przypadku usług hostowanych w sieci Web śledzenia analitycznego usługi WCF w zapewniają polem o nazwie "HostReference", który jest używany do identyfikowania usługi, która jest emitowanie danych śledzenia. Ślady rozszerzonego użytkownika mogą uczestniczyć w tym modelu, a w tym przykładzie przedstawiono najlepsze rozwiązania, aby to zrobić. Format hosta sieci Web odwołać, kiedy potoku "&#124;" znaków nie są wyświetlane w wynikowym ciągu może być jednym z następujących czynności:  
+## <a name="self-hosting-vs-web-hosting"></a>Samodzielne hosting a Hosting w sieci Web  
+ W przypadku usług hostowanych w sieci Web dane śledzenia analityczne programu WCF zawierają pole o nazwie "HostReference", które służy do identyfikowania usługi emitującej dane śledzenia. Rozszerzone ślady użytkownika mogą uczestniczyć w tym modelu, a w tym przykładzie przedstawiono najlepsze rozwiązania w zakresie tego działania. Format odwołania do hosta sieci Web, gdy potoku "&#124;" rzeczywiście występuje w ciągu wynikiem może być jedną z następujących wartości:  
   
 - Jeśli aplikacja nie znajduje się w katalogu głównym.  
   
@@ -30,93 +30,93 @@ W tym przykładzie przedstawiono sposób dodawania własnych zdarzeń śledzenia
   
      \<SiteName>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
- Samodzielnie hostowany usług ślady analitycznych programu WCF na nie wypełnić pole "HostReference". `WCFUserEventProvider` Klasy, w tym przykładzie działa spójne, gdy jest używane przez usługę samodzielnie hostowanej.  
+ W przypadku usług samodzielnych dane śledzenia analityczne WCF nie wypełniają pola "HostReference". `WCFUserEventProvider` Klasa w tym przykładzie zachowuje spójność, gdy jest używana przez usługę samodzielną.  
   
 ## <a name="custom-event-details"></a>Szczegóły zdarzenia niestandardowego  
- Manifest dostawcy zdarzeń funkcji ETW firmy WCF definiuje trzy zdarzenia, które mają być emitowane przez autorów usługi WCF z kodem usługi. W poniższej tabeli przedstawiono podział trzy zdarzenia.  
+ Manifest dostawcy zdarzeń ETW WCF definiuje trzy zdarzenia, które są przeznaczone do emitowania przez autorów usług WCF z poziomu kodu usługi. W poniższej tabeli przedstawiono podział trzech zdarzeń.  
   
 |Zdarzenie|Opis|Identyfikator zdarzenia|  
 |-----------|-----------------|--------------|  
-|UserDefinedInformationEventOccurred|Emituj tego zdarzenia, kiedy coś Uwaga odbywa się w Twojej usługi, która nie jest problemem. Na przykład może emitować zdarzenia po pomyślnym nawiązywania połączenia z bazą danych.|301|  
-|UserDefinedWarningOccurred|Emituj to zdarzenie, gdy wystąpi problem, który może spowodować awarię w przyszłości. Na przykład może emitować zdarzenia ostrzeżenia, gdy połączenie z bazą danych nie powiedzie się, ale udało Ci się odzyskać, nastąpi powrót do magazynu nadmiarowego danych.|302|  
-|UserDefinedErrorOccurred|Emituj tego zdarzenia, kiedy usługi nie powiedzie się działać zgodnie z oczekiwaniami. Na przykład wyemituj zdarzenie, jeśli połączenie z bazą danych nie powiedzie się i nie można pobrać danych z innych miejscach.|303|  
+|UserDefinedInformationEventOccurred|Emituj to zdarzenie, gdy coś uwagi wystąpi w usłudze, która nie jest problemem. Na przykład można wyemitować zdarzenie po pomyślnym wykonaniu wywołania do bazy danych.|301|  
+|UserDefinedWarningOccurred|Emituj to zdarzenie, gdy wystąpi problem, który może spowodować wystąpienie błędu w przyszłości. Można na przykład wyemitować zdarzenie ostrzeżenia, gdy wywołanie do bazy danych zakończy się niepowodzeniem, ale było możliwe odzyskanie ich przez powracanie do nadmiarowego magazynu danych.|302|  
+|UserDefinedErrorOccurred|Emituj to zdarzenie, gdy usługa nie będzie działać zgodnie z oczekiwaniami. Można na przykład wyemitować zdarzenie, jeśli wywołanie do bazy danych zakończy się niepowodzeniem i nie można było pobrać danych z innych lokalizacji.|303|  
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
-1. Za pomocą programu Visual Studio 2012, otwórz plik rozwiązania WCFAnalyticTracingExtensibility.sln.  
+1. Za pomocą programu Visual Studio 2012 Otwórz plik rozwiązania WCFAnalyticTracingExtensibility. sln.  
   
 2. Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.  
   
-3. Aby uruchomić rozwiązanie, naciśnij kombinację klawiszy CTRL + F5.  
+3. Aby uruchomić rozwiązanie, naciśnij klawisze CTRL + F5.  
   
-     W przeglądarce internetowej kliknij **Calculator.svc**. Identyfikator URI dokumentu WSDL usługi powinna zostać wyświetlona w przeglądarce. Skopiuj ten identyfikator URI.  
+     W przeglądarce sieci Web kliknij pozycję **Kalkulator. svc**. Identyfikator URI dokumentu WSDL dla usługi powinien pojawić się w przeglądarce. Skopiuj ten identyfikator URI.  
   
-4. Uruchom klienta testowego WCF (WcfTestClient.exe).  
+4. Uruchom klienta testowego WCF (WcfTestClient. exe).  
   
-     Testowy klient WCF (WcfTestClient.exe) znajduje się w `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`. Katalog instalacji programu Visual Studio 2012 domyślny jest `C:\Program Files\Microsoft Visual Studio 10.0`.  
+     Klient testowy WCF (WcfTestClient. exe) znajduje się w lokalizacji `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`. Domyślny katalog instalacji programu Visual Studio 2012 to `C:\Program Files\Microsoft Visual Studio 10.0`.  
   
-5. W kliencie testowym WCF, należy dodać usługę, wybierając **pliku**, a następnie **Dodaj usługę**.  
+5. W ramach klienta testowego WCF Dodaj usługę, wybierając pozycję **plik**, a następnie **Dodaj usługę**.  
   
-     W polu wejściowym, należy dodać adres punktu końcowego.  
+     Dodaj adres punktu końcowego w polu wejściowym.  
   
-6. Kliknij przycisk **OK** aby zamknąć okno dialogowe.  
+6. Kliknij przycisk **OK** , aby zamknąć okno dialogowe.  
   
-     Usługa ICalculator zostanie dodany do okienka po lewej stronie w obszarze **Moje projekty usług**.  
+     Usługa ICalculator jest dodawana w lewym okienku w obszarze **Moje projekty usług**.  
   
 7. Otwórz aplikację Podgląd zdarzeń.  
   
-     Przed wywołaniem usługi, Uruchom Podgląd zdarzeń i upewnij się, że w dzienniku zdarzeń nasłuchuje śledzenia zdarzeń wysyłanego z usługi WCF.  
+     Przed wywołaniem usługi Uruchom Podgląd zdarzeń i upewnij się, że dziennik zdarzeń nasłuchuje zdarzeń śledzenia emitowanych z usługi WCF.  
   
-8. Z **Start** menu, wybierz opcję **narzędzia administracyjne**, a następnie **Podgląd zdarzeń**. Włącz **analityczne** i **debugowania** dzienniki.  
+8. Z menu **Start** wybierz pozycję **Narzędzia administracyjne**, a następnie **Podgląd zdarzeń**. Włącz dzienniki **analityczne** i **debugowania** .  
   
-9. W widoku drzewa w Podglądzie zdarzeń, przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, a następnie **Aplikacje serwera aplikacji**. Kliknij prawym przyciskiem myszy **aplikacje serwera aplikacji**, wybierz opcję **widoku**, a następnie **Pokaż analityczne i debugowania dzienniki**.  
+9. W widoku drzewa w Podgląd zdarzeń przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, a następnie **aplikacje serwera aplikacji**. Kliknij prawym przyciskiem myszy pozycję **serwer aplikacji — aplikacje**, wybierz polecenie **Widok**, a następnie **Pokaż dzienniki analityczne i debugowania**.  
   
-     Upewnij się, że **Pokaż analityczne i debugowania dzienniki** opcja jest zaznaczona. Włącz **analityczne** dziennika.  
+     Upewnij się, że jest zaznaczona opcja **Pokaż dzienniki analityczne i debugowania** . Włącz dziennik **analityczny** .  
   
-     W widoku drzewa w Podglądzie zdarzeń, przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**,  **Aplikacje serwera aplikacji**, a następnie **analityczne**. Kliknij prawym przyciskiem myszy **analityczne** i wybierz **Włącz dziennik**.  
+     W widoku drzewa w Podgląd zdarzeń przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, **serwer aplikacji-aplikacje**, a następnie wybierz pozycję **analityczne**. Kliknij prawym przyciskiem myszy pozycję **analityczne** i wybierz pozycję **Włącz dziennik**.  
   
-10. Przetestuj usługę za pomocą klienta testowego WCF.  
+10. Przetestuj usługę przy użyciu klienta testowego WCF.  
   
-    1. W kliencie testowym WCF, kliknij dwukrotnie **Add()** węźle ICalculator usługi.  
+    1. W kliencie testowym WCF kliknij dwukrotnie pozycję **Dodaj ()** w węźle usługi ICalculator.  
   
-         **Add()** metoda pojawia się w okienku po prawej stronie, z dwoma parametrami.  
+         Metoda **Add ()** zostanie wyświetlona w okienku po prawej stronie z dwoma parametrami.  
   
-    2. Wpisz 2 jako pierwszy parametr i 3 dla drugiego parametru.  
+    2. Wpisz wartość 2 jako pierwszy parametr i 3 dla drugiego parametru.  
   
-    3. Kliknij przycisk **Invoke** było wywołanie metody.  
+    3. Kliknij pozycję Wywołaj, aby wywołać metodę.  
   
-11. Przejdź do **Podgląd zdarzeń** okna, w którym jest już otwarte. Przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, **aplikacji Aplikacje serwera**.  
+11. Przejdź do okna **Podgląd zdarzeń** , które zostało już otwarte. Przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, **serwer aplikacji — aplikacje**.  
   
-12. Kliknij prawym przyciskiem myszy **analityczne** a następnie wybierz węzeł **Odśwież**.  
+12. Kliknij prawym przyciskiem myszy węzeł analityczny i wybierz polecenie **Odśwież**.  
   
      Zdarzenia są wyświetlane w okienku po prawej stronie.  
   
-13. Znajdź zdarzenie o identyfikatorze 303 i go dwukrotnie, aby otworzyć go i sprawdź jego zawartość.  
+13. Znajdź zdarzenie o IDENTYFIKATORze 303 i kliknij je dwukrotnie, aby otworzyć i sprawdzić jego zawartość.  
   
-     To zdarzenie zostały wyemitowane przez `Add()` metody usługi ICalculator i ma ładunek równa "2 + 3 = 5".  
+     To zdarzenie zostało wyemitowane przez `Add()` metodę usługi ICalculator i ma ładunek równe "2 + 3 = 5".  
   
-#### <a name="to-clean-up-optional"></a>Aby wyczyścić (opcjonalnie)  
+#### <a name="to-clean-up-optional"></a>Aby oczyścić (opcjonalnie)  
   
 1. Otwórz **Podgląd zdarzeń**.  
   
-2. Przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, a następnie  **Aplikacje serwera**. Kliknij prawym przyciskiem myszy **analityczne** i wybierz **wyłączanie dziennika**.  
+2. Przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, a następnie **aplikacje aplikacji**. Kliknij prawym przyciskiem myszy pozycję **analityczne** i wybierz polecenie **Wyłącz dziennik**.  
   
-3. Przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**,  **Aplikacje serwera**, a następnie **analityczne**. Kliknij prawym przyciskiem myszy **analityczne** i wybierz **Wyczyść dziennik**.  
+3. Przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, **aplikacja-serwer-aplikacje**, a następniewybierz pozycję analityczne. Kliknij prawym przyciskiem myszy pozycję **analityczne** i wybierz pozycję **Wyczyść dziennik**.  
   
-4. Kliknij przycisk **wyczyść** można wyczyścić zdarzenia.  
+4. Kliknij przycisk **Wyczyść** , aby wyczyścić zdarzenia.  
   
 ## <a name="known-issue"></a>Znany problem  
- Jest to znany problem w **Podgląd zdarzeń** go mogą spowodować awarię zdekodować zdarzenia ETW. Może zostać wyświetlony komunikat o błędzie informujący, że: "Opisu Identyfikatora zdarzenia \<id > ze źródła, nie można odnaleźć aplikacji serwera firmy Microsoft-Windows-aplikacji. Składnik, który wywołuje to zdarzenie nie jest zainstalowany na komputerze lokalnym albo instalacja jest uszkodzona. Można zainstalować lub naprawić składnik na komputerze lokalnym." Jeśli wystąpi ten błąd, wybierz **Odśwież** z **akcje** menu. Następnie należy się poprawnie dekodowane zdarzenia.  
+ Istnieje znany problem w **Podgląd zdarzeń** , w którym może nie można zdekodować zdarzeń ETW. Może zostać wyświetlony komunikat o błędzie informujący o tym, że: "Opis identyfikatora \<zdarzenia > ze źródła Microsoft-Windows-Application Server — nie można odnaleźć aplikacji. Składnik, który wywołuje to zdarzenie, nie jest zainstalowany na komputerze lokalnym lub instalacja jest uszkodzona. Można zainstalować lub naprawić składnik na komputerze lokalnym ". Jeśli ten błąd wystąpi, wybierz pozycję **Odśwież** z menu **Akcje** . Zdarzenie powinno zostać następnie odpowiednio zdekodowane.  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przykłady monitorowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Przykłady monitorowania oprogramowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

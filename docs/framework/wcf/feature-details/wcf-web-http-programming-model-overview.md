@@ -2,12 +2,12 @@
 title: Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: e63a6c4a68da2b7e51dc1fc24353922912262806
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 8c13ad943bf4ef272c28266e12e175a0a21d5d40
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988572"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045230"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF
 Model programowania HTTP sieci WEB w programie Windows Communication Foundation (WCF) udostępnia podstawowe elementy wymagane do kompilowania usług HTTP sieci WEB za pomocą programu WCF. Usługi HTTP sieci WEB w programie WCF są przeznaczone do uzyskiwania dostępu do szerokiego zakresu potencjalnych klientów, w tym przeglądarek sieci Web, i mają następujące unikatowe wymagania:  
@@ -23,7 +23,7 @@ Model programowania HTTP sieci WEB w programie Windows Communication Foundation 
  Nie ma żadnych dodatkowych ograniczeń dotyczących typów danych, które mogą być zwracane z usługi HTTP w sieci WEB. Dowolny możliwy do serializacji typ można zwrócić z operacji usługi HTTP w sieci WEB. Ponieważ operacje usługi HTTP w sieci WEB mogą być wywoływane przez przeglądarkę sieci Web, istnieje ograniczenie, jakie typy danych można określić w adresie URL. Aby uzyskać więcej informacji na temat typów obsługiwanych domyślnie, zobacz sekcję **parametry ciągu zapytania UriTemplate i adresy URL** poniżej. Zachowanie domyślne można zmienić, dostarczając własną implementację T:System.ServiceModel.Dispatcher.QueryStringConverter, która określa sposób konwersji parametrów określonych w adresie URL do rzeczywistego typu parametru. Aby uzyskać więcej informacji, zobacz<xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
 > [!CAUTION]
->  Usługi z modelem programowania HTTP sieci WEB w programie WCF nie używają komunikatów protokołu SOAP. Ponieważ protokół SOAP nie jest używany, nie można używać funkcji zabezpieczeń udostępnianych przez program WCF. Można jednak korzystać z zabezpieczeń opartych na transportach przez Hostowanie usługi przy użyciu protokołu HTTPS. Aby uzyskać więcej informacji na temat zabezpieczeń WCF, zobacz [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+> Usługi z modelem programowania HTTP sieci WEB w programie WCF nie używają komunikatów protokołu SOAP. Ponieważ protokół SOAP nie jest używany, nie można używać funkcji zabezpieczeń udostępnianych przez program WCF. Można jednak korzystać z zabezpieczeń opartych na transportach przez Hostowanie usługi przy użyciu protokołu HTTPS. Aby uzyskać więcej informacji na temat zabezpieczeń WCF, zobacz [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
 > [!WARNING]
 > Zainstalowanie rozszerzenia WebDAV dla usług IIS może spowodować zwrócenie błędu HTTP 405 przez usługi sieci Web, ponieważ rozszerzenie WebDAV próbuje obsłużyć wszystkie żądania PUT. Aby obejść ten problem, możesz odinstalować rozszerzenie WebDAV lub wyłączyć rozszerzenie WebDAV dla witryny sieci Web. Aby uzyskać więcej informacji, zobacz [IIS i WebDAV](https://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  

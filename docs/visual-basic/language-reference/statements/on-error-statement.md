@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: df2bd232a870e17eeb5106cf0b60a9e77641969d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4474b217147aca74f2c6e5376c8f55318a05bf4a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963531"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046511"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error — Instrukcja (Visual Basic)
 Włącza procedurę obsługi błędów i określa lokalizację procedury w ramach procedury; można również użyć, aby wyłączyć procedurę obsługi błędu. `On Error` Instrukcja jest używana w obsłudze błędów bez struktury i może być używana zamiast strukturalnej obsługi wyjątków. [Strukturalna obsługa wyjątków](../../../standard/exceptions/index.md) jest wbudowana w platformę .NET, jest zwykle wydajniejsza i dlatego jest zalecana w przypadku obsługi błędów środowiska uruchomieniowego w aplikacji.
@@ -104,7 +104,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  [!code-vb[VbVbalrErrorHandling#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#19)]
 
 > [!CAUTION]
->  Błędy systemowe podczas wywołań bibliotek dołączanych dynamicznie (dll) systemu Windows nie powodują wymuszania wyjątków i nie można ich zalewkować przy użyciu nadlewek Visual Basic błędów. Podczas wywoływania funkcji DLL, należy sprawdzić każdą wartość zwracaną dla sukcesu lub niepowodzenia (zgodnie ze specyfikacją interfejsu API), a w przypadku niepowodzenia Sprawdź wartość we `Err` `LastDLLError` właściwości obiektu.
+> Błędy systemowe podczas wywołań bibliotek dołączanych dynamicznie (dll) systemu Windows nie powodują wymuszania wyjątków i nie można ich zalewkować przy użyciu nadlewek Visual Basic błędów. Podczas wywoływania funkcji DLL, należy sprawdzić każdą wartość zwracaną dla sukcesu lub niepowodzenia (zgodnie ze specyfikacją interfejsu API), a w przypadku niepowodzenia Sprawdź wartość we `Err` `LastDLLError` właściwości obiektu.
 
 ## <a name="example"></a>Przykład
  Ten przykład najpierw używa instrukcji `On Error GoTo` , aby określić lokalizację procedury obsługi błędów w ramach procedury. W przykładzie próba podzielenia przez zero spowoduje wygenerowanie błędu o numerze 6. Błąd jest obsługiwany w procedurze obsługi błędów, a następnie formant jest zwracany do instrukcji, która spowodowała błąd. `On Error GoTo 0` Instrukcja powoduje wyłączenie zalewkowania błędów. `On Error Resume Next` Następnie instrukcja jest używana do opóźniania zalewkowania błędów, dzięki czemu kontekst dla błędu generowanego przez następną instrukcję może być znany dla niektórych. Należy pamiętać `Err.Clear` , że służy do `Err` czyszczenia właściwości obiektu po obsłudze błędu.

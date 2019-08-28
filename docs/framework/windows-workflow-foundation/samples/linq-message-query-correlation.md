@@ -2,43 +2,43 @@
 title: Korelacja zapytania komunikatów LINQ
 ms.date: 03/30/2017
 ms.assetid: b746872e-57b1-4514-b337-53398a0e0deb
-ms.openlocfilehash: 5e979e6539d94d15b74f1da14f7082431ed2ff8c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b758296970340890403557770f91237c953f5d91
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622715"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038143"
 ---
 # <a name="linq-message-query-correlation"></a>Korelacja zapytania komunikatów LINQ
-W tym przykładzie pokazano, jak zrobić korelacja oparta na zawartości, przy użyciu niestandardowego <xref:System.ServiceModel.Dispatcher.MessageQuery> wdrożenia, a nie dostarczane przez system <xref:System.ServiceModel.XPathMessageQuery>.  
+Ten przykład pokazuje, jak przeprowadzić korelację opartą na zawartości przy <xref:System.ServiceModel.Dispatcher.MessageQuery> użyciu niestandardowej implementacji, w przeciwieństwie do dostarczonych <xref:System.ServiceModel.XPathMessageQuery>przez system.  
   
 ## <a name="demonstrates"></a>Demonstracje  
- Niestandardowe <xref:System.ServiceModel.Dispatcher.MessageQuery>, na podstawie zawartości korelacji.  
+ Niestandardowa <xref:System.ServiceModel.Dispatcher.MessageQuery>korelacja oparta na zawartości.  
   
-## <a name="discussion"></a>Dyskusja  
- W tym przykładzie pokazano, jak rozszerzyć <xref:System.ServiceModel.Dispatcher.MessageQuery> klasy bazowej na potrzeby korelacji. Implementacja niestandardowa `LinqMessageQuery`, umożliwia użytkownikom podanie XName można znaleźć w wiadomości przy użyciu XLinq. Dane pobrane przez zapytanie jest używany w celu utworzenia klucza korelacji wysyłać komunikaty do wystąpienia przepływu pracy odpowiednie.  
+## <a name="discussion"></a>Dyskusji  
+ Ten przykład pokazuje, <xref:System.ServiceModel.Dispatcher.MessageQuery> jak rozłożyć z klasy podstawowej na potrzeby korelacji. Implementacja niestandardowa `LinqMessageQuery`, umożliwia użytkownikom udostępnianie XName w wiadomości przy użyciu XLinq. Dane pobierane przez zapytanie są używane do tworzenia klucza korelacji do wysyłania komunikatów do odpowiedniego wystąpienia przepływu pracy.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Ten przykład przedstawia usługi przepływu pracy za pomocą punktów końcowych HTTP. Można dodać do uruchomienia tego przykładowego, odpowiednie listy ACL adresu URL (zobacz [Konfigurowanie protokołów HTTP i HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) szczegóły), albo przez uruchomienie programu Visual Studio jako Administrator, wykonując następujące polecenie w wierszu podwyższonym poziomem uprawnień, aby dodać odpowiednie listy ACL. Upewnij się, Twoja domena i nazwa użytkownika są zastępowane.  
+1. Ten przykład uwidacznia usługę przepływu pracy za pomocą punktów końcowych HTTP. Aby uruchomić ten przykład, należy dodać odpowiednie listy ACL adresów URL (zobacz [Konfigurowanie protokołu HTTP i https](https://go.microsoft.com/fwlink/?LinkId=70353) w celu uzyskania szczegółowych informacji), uruchamiając program Visual Studio jako administrator lub wykonując następujące polecenie w wierszu polecenia z podwyższonym poziomem uprawnień, aby dodać odpowiednie listy ACL. Upewnij się, że Twoja domena i nazwa użytkownika zostały zastąpione.  
   
     ```  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
     ```  
   
-2. Po dodaniu listy ACL adresu URL, wykonaj następujące kroki.  
+2. Po dodaniu list ACL adresów URL wykonaj następujące czynności.  
   
     1. Skompiluj rozwiązanie.  
   
-    2. Ustawianie wielu projektów uruchamiania, kliknij prawym przyciskiem myszy rozwiązanie i wybierając **Ustaw projekty startowe**. Dodaj **usługi** i **klienta** (w tej kolejności) jako wiele projektów uruchamiania.  
+    2. Aby ustawić wiele projektów uruchomieniowych, kliknij prawym przyciskiem myszy rozwiązanie i wybierz polecenie **Ustaw projekty startowe**. Dodaj **usługę** i **klienta** (w tej kolejności) jako wiele projektów początkowych.  
   
-    3. Uruchom aplikację. W konsoli klienta zawiera przepływu pracy, wysyłanie zamówienie i odbieranie identyfikator zamówienia zakupu oraz później potwierdzania zamówienia. Przedział czasu usługi pokaże przetwarzanych żądań.  
+    3. Uruchom aplikację. W konsoli klienta programu jest wyświetlany przepływ pracy, który wysyła zamówienie i pobiera identyfikator zamówienia zakupu, a następnie potwierdza zamówienie. W oknie usługi zostaną wyświetlone żądania przetwarzane.  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\LinqMessageQueryCorrelation`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\LinqMessageQueryCorrelation`

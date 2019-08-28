@@ -2,29 +2,29 @@
 title: Ładowanie z pliku XAML
 ms.date: 03/30/2017
 ms.assetid: 1f103ef6-7bed-4f16-ae52-9e665c5a43d7
-ms.openlocfilehash: e0cac1b6dfb9568ba08079cf5194b3432eea856f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2f45beb398e6d6b91bf7444dd590b862ff8c7515
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637717"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038084"
 ---
 # <a name="load-from-xaml"></a>Ładowanie z pliku XAML
-W tym przykładzie pokazano, jak załadować dynamicznie XAML przepływu pracy bez konieczności uruchamiania narzędzia XamlBuildTask. Przykład wywołuje <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> metody. Próbka jest aplikacja kliencka Windows Presentation Foundation (WPF), który ładuje przepływów pracy XAML przy użyciu <xref:System.Activities.XamlIntegration.ActivityXamlServices> klasy i wykonuje je. Po zostały już załadowane, za pomocą <xref:System.Activities.XamlIntegration.ActivityXamlServices> klasy <xref:System.Activities.DynamicActivity%601> jest zwracany, które mogą być wykonywane.
+Ten przykład ilustruje sposób dynamicznego ładowania przepływu pracy XAML bez konieczności uruchamiania narzędzia XamlBuildTask. Zamiast tego, przykład wywołuje <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> metodę. Przykładem jest aplikacja kliencka Windows Presentation Foundation (WPF), która ładuje przepływy pracy <xref:System.Activities.XamlIntegration.ActivityXamlServices> XAML przy użyciu klasy i wykonuje je. Po ich załadowaniu przy użyciu <xref:System.Activities.XamlIntegration.ActivityXamlServices> klasy zostanie zwrócona wartość <xref:System.Activities.DynamicActivity%601> , która może zostać wykonana.
 
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
 
-1. Za pomocą programu Visual Studio 2010, otwórz plik rozwiązania LoadFromXAML.sln.
+1. Za pomocą programu Visual Studio 2010 Otwórz plik rozwiązania LoadFromXAML. sln.
 
 2. Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.
 
-3. Aby uruchomić rozwiązanie, naciśnij kombinację klawiszy CTRL + F5.
+3. Aby uruchomić rozwiązanie, naciśnij klawisze CTRL + F5.
 
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\DynamicActivity\LoadFromXAML`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\DynamicActivity\LoadFromXAML`

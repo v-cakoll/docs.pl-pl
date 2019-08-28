@@ -2,23 +2,23 @@
 title: Wysyłanie według elementu treści
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: ff82ab027ff66b1c4c7433ea77efa6c34ccae088
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f1ff6d099ad0aee0c17b011000fe78f961293a82
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990291"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039762"
 ---
 # <a name="dispatch-by-body-element"></a>Wysyłanie według elementu treści
-Ten przykład demonstruje sposób implementacji alternatywnego algorytmu do przypisywania komunikatów przychodzących do operacji.  
+Ten przykład pokazuje, jak zaimplementować alternatywny algorytm przypisywania komunikatów przychodzących do operacji.  
   
- Domyślnie dyspozytora modelu usługi wybierze metodę obsługi odpowiednie dla wiadomości przychodzących, w oparciu o wiadomości WS-Addressing "Action" nagłówek lub równoważnych informacji w żądaniu HTTP SOAP.  
+ Domyślnie Dyspozytor modelu usług wybiera odpowiednią metodę obsługi dla komunikatu przychodzącego na podstawie nagłówka "Akcja" WS-Addressing "lub równoważne informacje w żądaniu protokołu HTTP SOAP.  
   
- Niektóre SOAP 1.1 Web services stosów, które nie podlegają WS-I Basic Profile 1.1 wytycznych, nie wysyła komunikaty w oparciu o identyfikator URI akcji, ale raczej oparty na nazwy kwalifikowanej XML pierwszego elementu w treści protokołu SOAP. Podobnie po stronie klienta, te stosów może wysyłać komunikatów za pomocą pustego lub dowolnego HTTP SoapAction nagłówka, który był dozwolony przez specyfikację SOAP 1.1.  
+ Niektóre stosy usług sieci Web SOAP 1,1, które nie są zgodne z wytycznymi dotyczącymi profilu WS-I Basic 1,1 nie wysyłają komunikatów na podstawie identyfikatora URI akcji, ale raczej na podstawie kwalifikowanej nazwy XML pierwszego elementu wewnątrz treści protokołu SOAP. Podobnie po stronie klienta te stosy mogą wysyłać komunikaty z pustym lub dowolnym nagłówkiem HTTP SoapAction, który był dozwolony przez specyfikację protokołu SOAP 1,1.  
   
- Aby zmienić sposób komunikaty są wysyłane do metod, implementuje próbki <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> interfejs rozszerzalności `DispatchByBodyElementOperationSelector`. Ta klasa wybiera operacje oparte na pierwszy element w treści wiadomości.  
+ Aby zmienić sposób wysyłania komunikatów do metod, przykład implementuje <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> interfejs rozszerzalności `DispatchByBodyElementOperationSelector`na. Ta klasa wybiera operacje na podstawie pierwszego elementu treści komunikatu.  
   
- Konstruktor klasy oczekuje słownik wypełniane przy użyciu pary `XmlQualifiedName` i ciągi znaków, według której kwalifikowanych nazw wskazuje nazwę pierwszego elementu podrzędnego w treści protokołu SOAP i ciągi wskazują pasujące nazwy operacji. `defaultOperationName` Jest nazwą operacji, która odbiera wszystkie komunikaty, które nie mogą być dopasowywane do tego słownika:  
+ Konstruktor klasy oczekuje słownika zawierającego pary `XmlQualifiedName` i ciągi, według których kwalifikowane nazwy wskazują nazwę pierwszego elementu podrzędnego treści protokołu SOAP, a ciągi wskazują pasującą nazwę operacji. `defaultOperationName` Jest nazwą operacji, która odbiera wszystkie komunikaty, które nie mogą być dopasowane do tego słownika:  
   
 ```csharp
 class DispatchByBodyElementOperationSelector : IDispatchOperationSelector  
@@ -34,9 +34,9 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
 }
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> implementacje są bardzo proste tworzenie, ponieważ istnieje tylko jedna metoda w interfejsie: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Zadania tej metody jest sprawdzanie wiadomości przychodzących i zwraca ciąg, która jest równa nazwę metody w kontrakcie usługi na bieżący punkt końcowy.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>implementacje są bardzo proste, ponieważ istnieje tylko jedna metoda w interfejsie: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Zadaniem tej metody jest zbadanie komunikatu przychodzącego i zwrócenie ciągu, który jest równy nazwie metody w kontrakcie usługi dla bieżącego punktu końcowego.  
   
- W tym przykładzie pobiera selektor operacji <xref:System.Xml.XmlDictionaryReader> komunikatu przychodzącego treści za pomocą <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>. Ta metoda już umieszcza czytelnika na pierwszy element podrzędny w treści wiadomości, tak, aby wystarczające, aby uzyskać nazwę bieżącego elementu i identyfikator URI przestrzeni nazw, a także połączyć je w `XmlQualifiedName` następnie używany do wyszukiwania odpowiednich operacji Słownik utrzymywane przez selektor operacji.  
+ W tym przykładzie selektor operacji uzyskuje <xref:System.Xml.XmlDictionaryReader> dla treści wiadomości przychodzącej przy użyciu. <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> Ta metoda już umieszcza czytnik w pierwszym elemencie podrzędnym treści komunikatu, tak aby można było uzyskać nazwę bieżącego elementu i identyfikator URI przestrzeni nazw, a następnie połączyć je do obiektu `XmlQualifiedName` , który jest następnie używany do wyszukiwania odpowiedniej operacji z słownik przechowywany przez selektor operacji.  
   
 ```csharp
 public string SelectOperation(ref System.ServiceModel.Channels.Message message)  
@@ -56,7 +56,7 @@ public string SelectOperation(ref System.ServiceModel.Channels.Message message)
 }  
 ```  
   
- Dostęp do treści wiadomości z <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> lub dowolnej z metod, które zapewniają dostęp do zawartości w treści komunikatu powoduje, że komunikat, który ma zostać oznaczony jako "przeczytane", co oznacza, że wiadomość jest nieprawidłowy w przypadku dalszego przetwarzania. W związku z tym selektor operacji tworzy kopię wiadomości przychodzących za pomocą metody pokazano w poniższym kodzie. Ponieważ pozycja czytnik nie został zmieniony podczas inspekcji, mogą być przywoływane przez nowo utworzony komunikat do której właściwości wiadomości i nagłówki komunikatów także są kopiowane, co skutkuje dokładną oryginalnego komunikatu:  
+ Uzyskiwanie dostępu do treści <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> wiadomości za pomocą lub dowolnych innych metod zapewniających dostęp do zawartości treści wiadomości powoduje, że komunikat zostanie oznaczony jako "read" (odczyt), co oznacza, że komunikat jest nieprawidłowy do dalszej obróbki. W związku z tym selektor operacji tworzy kopię komunikatu przychodzącego za pomocą metody pokazanej w poniższym kodzie. Ponieważ pozycja czytnika nie została zmieniona podczas inspekcji, może odwoływać się do nowo utworzonego komunikatu, do którego są również kopiowane właściwości wiadomości i nagłówki wiadomości, co powoduje dokładne klonowanie oryginalnej wiadomości:  
   
 ```csharp
 private Message CreateMessageCopy(Message message,   
@@ -69,14 +69,14 @@ private Message CreateMessageCopy(Message message,
 }  
 ```  
   
-## <a name="adding-an-operation-selector-to-a-service"></a>Dodawanie selektor operacji usługi  
- Selektory operacji wysyłania usługi są rozszerzeniami do dyspozytora Windows Communication Foundation (WCF). Wybierania metody na kanał wywołania zwrotnego kontrakty dwukierunkowe, są również selektorów operacji klienta, co sprawdza się w dużej mierze jak selektory operacji wysyłania opisane w tym miejscu, ale które nie są jawnie wymienione w tym przykładzie.  
+## <a name="adding-an-operation-selector-to-a-service"></a>Dodawanie selektora operacji do usługi  
+ Selektory operacji wysyłania usług są rozszerzeniami do dyspozytora Windows Communication Foundation (WCF). W przypadku wybierania metod w kanale wywołania zwrotnego w ramach kontraktów dupleksowych istnieją również selektory operacji klienta, które działają bardzo podobnie do selektorów operacji wysyłania opisanych tutaj, ale które nie zostały jawnie omówione w tym przykładzie.  
   
- Podobnie jak większość rozszerzeń modelu usługi selektory operacji wysyłania są dodawane do dyspozytora za pomocą zachowań. A *zachowanie* jest obiekt konfiguracji, który dodaje jedno lub więcej rozszerzeń środowiska uruchomieniowego wysyłania (lub środowiska uruchomieniowego klienta) lub w przeciwnym razie zmiany jej ustawień.  
+ Takie jak większość rozszerzeń modelu usług, selektory operacji wysyłania są dodawane do dyspozytora przy użyciu zachowań. *Zachowanie* jest obiektem konfiguracji, który dodaje jeden lub więcej rozszerzeń do środowiska uruchomieniowego wysyłania (lub do środowiska uruchomieniowego klienta) lub w inny sposób zmienia jego ustawienia.  
   
- Ponieważ selektory operacji mają zakres kontraktu, jest odpowiednie zachowanie, aby zaimplementować tutaj <xref:System.ServiceModel.Description.IContractBehavior>. Ponieważ interfejs jest implementowany w <xref:System.Attribute> klasy pochodnej jak pokazano w poniższym kodzie, zachowanie może deklaratywne dodane do wszelkich kontraktu usługi. Zawsze, gdy <xref:System.ServiceModel.ServiceHost> jest otwarty i środowiska uruchomieniowego wysyłania jest wbudowany, wszystkie zachowania znaleziono jako atrybuty kontrakty, operacji i implementacji usługi lub jako element w konfiguracji usługi są automatycznie dodawane, a następnie poproszony o Współtworzenie rozszerzenia lub zmodyfikować domyślną konfigurację.  
+ Ponieważ selektory operacji mają zakres kontraktu, odpowiednie zachowanie, które należy zaimplementować, to <xref:System.ServiceModel.Description.IContractBehavior>. Ponieważ interfejs jest implementowany w <xref:System.Attribute> klasie pochodnej, jak pokazano w poniższym kodzie, zachowanie można deklaratywnie dodać do dowolnego kontraktu usługi. Za każdym razem, gdy jestotwarty,aśrodowiskouruchomieniowewysyłaniazostałoskompilowane,wszystkiezachowaniawykrytejakoatrybutywramachkontraktów,operacjiiimplementacjiusługlubjakoelementwkonfiguracjiusługisąautomatyczniedodawane,anastępniezadawanemonityo<xref:System.ServiceModel.ServiceHost> Tworzenie rozszerzeń lub modyfikowanie konfiguracji domyślnej.  
   
- Celu skrócenia programu, poniższy fragment kodu przedstawia tylko implementacji metody <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A>, która ma wpływ zmian w konfiguracji dyspozytora w tym przykładzie. Inne metody nie są wyświetlane, ponieważ powrócą do wywołującego bez wykonywania pracy.  
+ W przypadku zwięzłości Poniższy fragment kodu pokazuje tylko implementację metody <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A>, która wpływa na zmiany konfiguracji dyspozytora w tym przykładzie. Inne metody nie są wyświetlane, ponieważ zwracają do obiektu wywołującego bez wykonywania żadnej pracy.  
   
 ```csharp
 [AttributeUsage(AttributeTargets.Class|AttributeTargets.Interface)]  
@@ -87,11 +87,11 @@ class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior
     // public void Validate(...)  
 ```  
   
- Po pierwsze, <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A> implementacja ustawia słownik wyszukiwania selektor operacji przez Iterowanie po <xref:System.ServiceModel.Description.OperationDescription> elementów w punkcie końcowym usługi <xref:System.ServiceModel.Description.ContractDescription>. Następnie każdy opis operacji jest sprawdzane pod kątem obecności `DispatchBodyElementAttribute` zachowanie, implementacja <xref:System.ServiceModel.Description.IOperationBehavior> również zdefiniowanego w tym przykładzie. Ta klasa jest również zachowanie, jest w stanie pasywnym i nie wpływa aktywnie zmiany konfiguracji do środowiska uruchomieniowego wysyłania. Zwróć wszystkie jego metody do obiektu wywołującego bez żadnych akcji. Zachowanie operacji istnieje tylko dlatego, że metadane wymagane dla nowego wysyłania mechanizmu, a mianowicie kwalifikowana nazwa elementu body w których wystąpienie operacji jest zaznaczone, może być skojarzony z odpowiednich operacji.  
+ Najpierw implementacja powoduje skonfigurowanie słownika wyszukiwania dla selektora operacji przez iterację <xref:System.ServiceModel.Description.OperationDescription> elementów <xref:System.ServiceModel.Description.ContractDescription>w punkcie końcowym usługi. <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A> Następnie każdy opis operacji jest sprawdzany pod kątem obecności `DispatchBodyElementAttribute` zachowania, a <xref:System.ServiceModel.Description.IOperationBehavior> implementacja, która jest również zdefiniowana w tym przykładzie. Chociaż ta klasa jest również zachowaniem, jest pasywna i nie wprowadza żadnych zmian w konfiguracji w czasie wykonywania wysyłania. Wszystkie jego metody zwracają do obiektu wywołującego bez podejmowania żadnych działań. Zachowanie tej operacji istnieje tylko wtedy, gdy metadane wymagane dla nowego mechanizmu wysyłania, czyli kwalifikowana nazwa elementu treści, dla którego wystąpienie operacji jest zaznaczone, mogą być skojarzone z odpowiednimi operacjami.  
   
- Jeśli zostanie znaleziony takie zachowanie, parę wartości utworzone na podstawie nazwy kwalifikowanej XML (`QName` właściwości) i nazwa operacji (`Name` właściwość) zostanie dodany do słownika.  
+ Jeśli takie zachowanie zostanie znalezione, para wartości utworzona na podstawie kwalifikowanej nazwy XML (`QName` Property) i nazwy operacji (`Name` Property) zostanie dodana do słownika.  
   
- Po słowniku zapełnieniu nowej `DispatchByBodyElementOperationSelector` jest skonstruowany przy użyciu tych informacji i Ustaw jako selektor operacji wysyłania środowiska uruchomieniowego:  
+ Po wypełnieniu słownika zostanie utworzony nowy `DispatchByBodyElementOperationSelector` z tymi informacjami i ustawiony jako selektor operacji dla środowiska uruchomieniowego wysyłania:  
   
 ```csharp
 public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.DispatchRuntime dispatchRuntime)  
@@ -117,12 +117,12 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
 }  
 ```  
   
-## <a name="implementing-the-service"></a>Wdrażanie usługi  
- Zachowanie zaimplementowane w tym przykładzie bezpośrednio wpływa na sposób komunikaty z sieci są interpretowane i wysyłane, które są funkcjami kontraktu usługi. W związku z tym zachowanie powinny zostać zadeklarowane na poziomie kontraktu usługi w celu wykonania usługi, który zdecydował się go użyć.  
+## <a name="implementing-the-service"></a>Implementowanie usługi  
+ Zachowanie zaimplementowane w tym przykładzie bezpośrednio wpływa na sposób interpretowania i wysyłania komunikatów z sieci, która jest funkcją kontraktu usługi. W związku z tym zachowanie powinno być zadeklarowane na poziomie kontraktu usługi w każdej implementacji usługi, która wybierze jej użycie.  
   
- Stosuje usługa projekt przykładowy `DispatchByBodyElementBehaviorAttribute` umowę zachowania do `IDispatchedByBody` umowy oraz etykiety dla tych dwóch operacji `OperationForBodyA()` i `OperationForBodyB()` z `DispatchBodyElementAttribute` zachowanie operacji. Po otwarciu usługi hosta dla usługi, który implementuje ten kontrakt metadanych jest pobierana przez konstruktora dyspozytora w sposób opisany wcześniej.  
+ Przykładowa usługa `DispatchByBodyElementBehaviorAttribute` projektu stosuje zachowanie kontraktu `IDispatchedByBody` do kontraktu usługi i etykiety każdej z tych `DispatchBodyElementAttribute` dwóch operacji `OperationForBodyA()` oraz `OperationForBodyB()` z zachowaniem operacji. W przypadku otwarcia hosta usługi dla usługi implementującej ten kontrakt te metadane są pobierane przez konstruktora dyspozytora zgodnie z wcześniejszym opisem.  
   
- Selektor operacji wywołuje wyłącznie zależnie od elementu treści komunikatu i ignoruje "Action", dlatego jest wymagany stwierdzić, środowisko uruchomieniowe nie Sprawdź nagłówek "Action" w odpowiedzi zwrócony, przypisując symbol wieloznaczny "*" Aby `ReplyAction` właściwość <xref:System.ServiceModel.OperationContractAttribute>. Ponadto jest wymagane do operacji domyślnej, która ma właściwość "Action" do symbolu wieloznacznego "\*". Operacja domyślne odbiera wszystkie komunikaty, które nie mogą być wysyłane i nie ma `DispatchBodyElementAttribute`:  
+ Ponieważ selektor operacji jest wysyłany wyłącznie na podstawie treści wiadomości i ignoruje "działanie", jest wymagane, aby poinformować środowisko uruchomieniowe, aby nie sprawdzać nagłówka "Action" na zwracanych odpowiedzi, przypisując symbol wieloznaczny "* `ReplyAction` " właściwości <xref:System.ServiceModel.OperationContractAttribute>. Ponadto wymagane jest posiadanie domyślnej operacji, która ma właściwość "Action" ustawioną na symbol wieloznaczny "\*". Operacja domyślna odbiera wszystkie komunikaty, których nie można wysłać, i nie ma `DispatchBodyElementAttribute`:  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),  
@@ -140,12 +140,12 @@ public interface IDispatchedByBody
 }  
 ```  
   
- Przykładowe zastosowanie usługi jest bardzo proste. EVERY — metoda opakowuje odebranego komunikatu do komunikatu odpowiedzi i zwraca go do klienta.  
+ Przykładowa implementacja usługi jest prosta. Każda metoda zawija odebrany komunikat do komunikatu odpowiedzi i odsyła go z powrotem do klienta.  
   
-## <a name="running-and-building-the-sample"></a>Uruchamianie i budowanie przykładu  
- Po uruchomieniu przykładu, treść odpowiedzi operacji są wyświetlane w oknie konsoli klienta podobne do następujących danych wyjściowych (sformatowanych).  
+## <a name="running-and-building-the-sample"></a>Uruchamianie i Tworzenie przykładu  
+ Po uruchomieniu przykładu zawartość treści odpowiedzi operacji zostanie wyświetlona w oknie konsoli klienta podobne do następujących (sformatowane) danych wyjściowych.  
   
- Klient wysyła wiadomości do usługi której ciała treści, nazwie elementu `bodyA`, `bodyB`, i `bodyX`, odpowiednio. Ponieważ może zostać odroczony z poprzednich opis i kontrakt usługi pokazano, przychodzącego komunikatu o `bodyA` element jest wysyłane do `OperationForBodyA()` metody. Ponieważ nie istnieje żadne miejsce docelowe nie jawnego wysłania komunikatu z `bodyX` elementu body komunikat jest wysyłany do `DefaultOperation()`. Każdej operacji usługi opakowuje treści odebranego komunikatu do określonej metody element i zwraca wartość, która jest przeprowadzane w celu skorelowania danych wejściowych i wyjściowych komunikatów wyraźnie dla tego przykładu:  
+ Klient wysyła trzy komunikaty do usługi, której treść składa się `bodyA`, `bodyB`i `bodyX`odpowiednio. Jak można wywnioskować na podstawie poprzedniego opisu i podanego kontraktu usługi, komunikat `bodyA` przychodzący do elementu jest wysyłany `OperationForBodyA()` do metody. Ze względu na to, że dla komunikatu z `bodyX` elementem Body nie istnieje jawny cel wysyłania, komunikat jest wysyłany `DefaultOperation()`do. Każda operacja usługi zawija treść otrzymanego komunikatu do elementu specyficznego dla metody i zwraca go, co jest gotowe do skorelowania komunikatów wejściowych i wyjściowych w tym przykładzie:  
   
 ```xml  
 <?xml version="1.0" encoding="IBM437"?>  
@@ -162,19 +162,19 @@ public interface IDispatchedByBody
 </replyDefault>  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  

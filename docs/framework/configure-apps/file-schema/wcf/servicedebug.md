@@ -2,12 +2,12 @@
 title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: cbeb0d254bf6716296f34020ea8796885e0f368a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5ca1d4e7f9107c798213d760d9780dbeded9eae0
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936267"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041266"
 ---
 # <a name="servicedebug"></a>\<serviceDebug>
 Określa funkcje debugowania i pomocy dla usługi Windows Communication Foundation (WCF).  
@@ -62,7 +62,7 @@ Określa funkcje debugowania i pomocy dla usługi Windows Communication Foundati
  Ustawienie `includeExceptionDetailInFaults` umożliwia usłudze zwrócenie dowolnego wyjątku, który jest generowany przez kod aplikacji, nawet jeśli wyjątek nie <xref:System.ServiceModel.FaultContractAttribute>jest zadeklarowany przy użyciu. `true` To ustawienie jest przydatne w przypadku debugowania, gdy serwer zgłasza nieoczekiwany wyjątek. Korzystając z tego atrybutu, zwracana jest serializowana forma nieznanego wyjątku i można zapoznać się z większą liczbą szczegółów wyjątku.  
   
 > [!CAUTION]
->  Zwrócenie informacji o wyjątku zarządzanym do klientów może stanowić zagrożenie bezpieczeństwa, ponieważ szczegóły wyjątku ujawniają informacje o implementacji wewnętrznej usługi, która może być używana przez nieautoryzowanych klientów. Ze względu na problemy związane z bezpieczeństwem zdecydowanie zaleca się wykonanie tych czynności tylko w scenariuszach z kontrolowanym debugowaniem. Po wdrożeniu aplikacji należy ustawić wartość `includeExceptionDetailInFaults`. `false`  
+> Zwrócenie informacji o wyjątku zarządzanym do klientów może stanowić zagrożenie bezpieczeństwa, ponieważ szczegóły wyjątku ujawniają informacje o implementacji wewnętrznej usługi, która może być używana przez nieautoryzowanych klientów. Ze względu na problemy związane z bezpieczeństwem zdecydowanie zaleca się wykonanie tych czynności tylko w scenariuszach z kontrolowanym debugowaniem. Po wdrożeniu aplikacji należy ustawić wartość `includeExceptionDetailInFaults`. `false`  
   
  Aby uzyskać szczegółowe informacje o problemach z zabezpieczeniami związanymi z wyjątkiem zarządzanym, zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../wcf/specifying-and-handling-faults-in-contracts-and-services.md). Aby uzyskać przykład kodu, zobacz [zachowanie debugowania usługi](../../../wcf/samples/service-debug-behavior.md).  
   

@@ -2,119 +2,121 @@
 title: Fabryka kanałów i buforowanie
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-ms.openlocfilehash: 94b3cb22c76a215944d044db0f4392005e49f2ad
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 98b77071204e2c2f98609e6c5bb1ca84a896dd58
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645418"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040200"
 ---
 # <a name="channel-factory-and-caching"></a>Fabryka kanałów i buforowanie
-Aplikacje klienta WCF <xref:System.ServiceModel.ChannelFactory%601> klasy, aby utworzyć kanał komunikacji z usługą WCF.  Tworzenie <xref:System.ServiceModel.ChannelFactory%601> wystąpień powoduje pewne nadmiarowe obciążenie, ponieważ obejmuje ona następujące operacje:  
-  
-- Konstruowanie <xref:System.ServiceModel.Description.ContractDescription> drzewa  
-  
-- Odzwierciedlenie wszystkich wymaganych typów CLR  
-  
-- Konstruowanie stosu kanału  
-  
-- Usuwanie zasobów  
-  
- Aby zminimalizować ten narzut, WCF może buforować fabryki kanałów, korzystając z serwera proxy klienta WCF.  
-  
+
+Aplikacje klienckie programu WCF używają <xref:System.ServiceModel.ChannelFactory%601> klasy do tworzenia kanału komunikacyjnego z usługą WCF.  Tworzenie <xref:System.ServiceModel.ChannelFactory%601> wystąpień wiąże się z pewnym obciążeniem, ponieważ obejmuje następujące operacje:
+
+- Konstruowanie <xref:System.ServiceModel.Description.ContractDescription> drzewa
+
+- Odzwierciedlanie wszystkich wymaganych typów CLR
+
+- Konstruowanie stosu kanału
+
+- Usuwanie zasobów
+
+Aby zminimalizować obciążenie, usługa WCF może buforować fabryki kanałów w przypadku korzystania z serwera proxy klienta WCF.
+
 > [!TIP]
->  Masz bezpośrednią kontrolę nad tworzenie fabryki kanałów, gdy używasz <xref:System.ServiceModel.ChannelFactory%601> klasy bezpośrednio.  
-  
- Proxy klienta WCF wygenerowane z [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) są uzyskiwane z <xref:System.ServiceModel.ClientBase%601>. <xref:System.ServiceModel.ClientBase%601> Definiuje statycznego <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> właściwość, która definiuje zachowanie pamięci podręcznej fabryki kanału. Ustawienia pamięci podręcznej są wykonywane dla określonego typu. Na przykład ustawienie `ClientBase<ITest>.CacheSettings` jedną z wartości zdefiniowanych poniżej wpłynie tylko tych proxy/element ClientBase typu `ITest`. Ustawienie pamięci podręcznej dla określonego <xref:System.ServiceModel.ClientBase%601> jest niezmienny zaraz po utworzeniu pierwszego wystąpienia serwera proxy/element ClientBase.  
-  
-## <a name="specifying-caching-behavior"></a>Określanie zachowania buforowania  
- Zachowanie buforowania jest określany przez ustawienie <xref:System.ServiceModel.ClientBase%601.CacheSetting> właściwość na jedną z następujących wartości.  
-  
-|Ustawienie wartości w pamięci podręcznej|Opis|  
-|-------------------------|-----------------|  
-|<xref:System.ServiceModel.CacheSetting.AlwaysOn>|Wszystkie wystąpienia elementu <xref:System.ServiceModel.ClientBase%601> w domenie aplikacji mogą brać udział w pamięci podręcznej. Deweloper ustalono, że nie nie skutki dla bezpieczeństwa negatywnie do buforowania. Pamięć podręczna będzie nie można wyłączyć nawet wtedy, gdy "istotnymi dla zabezpieczeń" właściwości <xref:System.ServiceModel.ClientBase%601> są dostępne. Właściwości "istotnymi dla zabezpieczeń" <xref:System.ServiceModel.ClientBase%601> są <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>, <xref:System.ServiceModel.ClientBase%601.Endpoint%2A> i <xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A>.|  
-|<xref:System.ServiceModel.CacheSetting.Default>|Tylko wystąpienia <xref:System.ServiceModel.ClientBase%601> utworzone na podstawie punktów końcowych zdefiniowanych w konfiguracji, pliki uczestniczyć w pamięci podręcznej w domenie aplikacji. Wszystkie wystąpienia <xref:System.ServiceModel.ClientBase%601> utworzony programowo w ramach tej domeny aplikacji nie będzie uczestniczyć w pamięci podręcznej. Ponadto pamięć podręczna zostanie wyłączony dla wystąpienia programu <xref:System.ServiceModel.ClientBase%601> po żadnej z jej właściwości "istotnymi dla zabezpieczeń" jest dostępny.|  
-|<xref:System.ServiceModel.CacheSetting.AlwaysOff>|Buforowanie jest wyłączone dla wszystkich wystąpień <xref:System.ServiceModel.ClientBase%601> określonego typu w ramach aplikacji domeny w danym.|  
-  
- Poniższe fragmenty kodu przedstawiają sposób użycia <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> właściwości.  
-  
-```csharp  
-class Program   
-{   
-   static void Main(string[] args)   
-   {   
-      ClientBase<ITest>.CacheSettings = CacheSettings.AlwaysOn;   
-      foreach (string msg in messages)   
-      {   
-         using (TestClient proxy = new TestClient (new BasicHttpBinding(), new EndpointAddress(address)))   
-         {   
-            // ...  
-            proxy.Test(msg);   
-            // ...  
-         }   
-      }   
-   }   
-}  
-// Generated by SvcUtil.exe     
-public partial class TestClient : System.ServiceModel.ClientBase, ITest { }  
-```  
-  
- W kodzie powyżej, wszystkie wystąpienia elementu `TestClient` użyje tych samych fabryki kanałów.  
-  
-```csharp  
-class Program   
-{   
-   static void Main(string[] args)   
-   {   
-      ClientBase.CacheSettings = CacheSettings.Default;   
-      int i = 1;   
-      foreach (string msg in messages)   
-      {   
-         using (TestClient proxy = new TestClient ("MyEndpoint", new EndpointAddress(address)))   
-         {   
-            if (i == 4)   
-            {   
-               ServiceEndpoint endpoint = proxy.Endpoint;   
-               ... // use endpoint in some way   
-            }   
-            proxy.Test(msg);   
-         }   
-         i++;   
-   }   
-}   
-  
-// Generated by SvcUtil.exe     
-public partial class TestClient : System.ServiceModel.ClientBase, ITest {}  
-```  
-  
- W przykładzie powyżej, wszystkie wystąpienia elementu `TestClient` użyje tych samych fabryki kanałów, z wyjątkiem wystąpienia #4. Wystąpienie #4 użyje fabryki kanałów, który jest tworzony w szczególności w ramach jego użycia. To ustawienie będzie działać dla scenariuszy, w których danego punktu końcowego wymaga różnych typach ustawień zabezpieczeń z innych punktów końcowych tego samego typu fabryki kanału (w tym przypadku `ITest`).  
-  
-```csharp  
-class Program   
-{   
-   static void Main(string[] args)   
-   {   
-      ClientBase.CacheSettings = CacheSettings.AlwaysOff;   
-      foreach (string msg in messages)   
-      {   
-         using (TestClient proxy = new TestClient ("MyEndpoint", new EndpointAddress(address)))   
-         {   
-            proxy.Test(msg);   
-         }           
-      }   
-   }  
-}  
-  
-// Generated by SvcUtil.exe   
-public partial class TestClient : System.ServiceModel.ClientBase, ITest {}  
-```  
-  
- W przykładzie powyżej, wszystkie wystąpienia elementu `TestClient` użyć różnych kanałów fabryk. Jest to przydatne, gdy każdy punkt końcowy ma inne wymagania dotyczące zabezpieczeń i nie ma sensu do pamięci podręcznej.  
-  
+> Użytkownik ma bezpośrednią kontrolę nad tworzeniem fabryki kanałów w przypadku bezpośredniego <xref:System.ServiceModel.ChannelFactory%601> używania klasy.
+
+Serwery proxy klienta WCF generowane za pomocą [Narzędzia do przesyłania metadanych programu ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pochodzą od <xref:System.ServiceModel.ClientBase%601>. <xref:System.ServiceModel.ClientBase%601>definiuje Właściwość statyczną <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> , która definiuje zachowanie buforowania fabryki kanałów. Ustawienia pamięci podręcznej dla określonego typu. Na przykład ustawienie `ClientBase<ITest>.CacheSettings` jednej z wartości zdefiniowanych poniżej będzie miało wpływ tylko na te dane typu `ITest`proxy/ClientBase. Ustawienie pamięci podręcznej dla <xref:System.ServiceModel.ClientBase%601> konkretnego elementu jest niezmienne, gdy tylko zostanie utworzony pierwszy wystąpienie serwera proxy/elementu ClientBase.
+
+## <a name="specifying-caching-behavior"></a>Określanie zachowania buforowania
+
+Zachowanie buforowania jest określone przez ustawienie <xref:System.ServiceModel.ClientBase%601.CacheSetting> właściwości na jedną z następujących wartości.
+
+|Wartość ustawienia pamięci podręcznej|Opis|
+|-------------------------|-----------------|
+|<xref:System.ServiceModel.CacheSetting.AlwaysOn>|Wszystkie wystąpienia <xref:System.ServiceModel.ClientBase%601> w domenie aplikacji mogą brać udział w pamięci podręcznej. Deweloper stwierdził, że nie ma żadnych niepożądanych implikacji w zabezpieczeniach do buforowania. Buforowanie nie zostanie wyłączone, nawet jeśli są dostępne właściwości "poufne dla <xref:System.ServiceModel.ClientBase%601> zabezpieczeń". Właściwości "z <xref:System.ServiceModel.ClientBase%601> uwzględnieniem zabezpieczeń" są <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>, <xref:System.ServiceModel.ClientBase%601.Endpoint%2A> i <xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A>.|
+|<xref:System.ServiceModel.CacheSetting.Default>|Tylko wystąpienia <xref:System.ServiceModel.ClientBase%601> utworzone z punktów końcowych zdefiniowanych w plikach konfiguracji uczestniczą w pamięci podręcznej w domenie aplikacji. Wszystkie wystąpienia <xref:System.ServiceModel.ClientBase%601> utworzone programowo w tej domenie aplikacji nie będą uczestniczyły w pamięci podręcznej. Ponadto buforowanie zostanie wyłączone dla wystąpienia <xref:System.ServiceModel.ClientBase%601> po uzyskaniu dostępu do wszystkich właściwości "z uwzględnieniem zabezpieczeń".|
+|<xref:System.ServiceModel.CacheSetting.AlwaysOff>|Buforowanie jest wyłączone dla wszystkich wystąpień <xref:System.ServiceModel.ClientBase%601> określonego typu w danej domenie aplikacji.|
+
+Poniższe fragmenty kodu ilustrują sposób użycia <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> właściwości.
+
+```csharp
+class Program
+{
+   static void Main(string[] args)
+   {
+      ClientBase<ITest>.CacheSettings = CacheSettings.AlwaysOn;
+      foreach (string msg in messages)
+      {
+         using (TestClient proxy = new TestClient (new BasicHttpBinding(), new EndpointAddress(address)))
+         {
+            // ...
+            proxy.Test(msg);
+            // ...
+         }
+      }
+   }
+}
+// Generated by SvcUtil.exe
+public partial class TestClient : System.ServiceModel.ClientBase, ITest { }
+```
+
+W powyższym kodzie wszystkie wystąpienia programu `TestClient` będą używały tej samej fabryki kanałów.
+
+```csharp
+class Program
+{
+   static void Main(string[] args)
+   {
+      ClientBase.CacheSettings = CacheSettings.Default;
+      int i = 1;
+      foreach (string msg in messages)
+      {
+         using (TestClient proxy = new TestClient ("MyEndpoint", new EndpointAddress(address)))
+         {
+            if (i == 4)
+            {
+               ServiceEndpoint endpoint = proxy.Endpoint;
+               ... // use endpoint in some way
+            }
+            proxy.Test(msg);
+         }
+         i++;
+   }
+}
+
+// Generated by SvcUtil.exe
+public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
+```
+
+W powyższym przykładzie wszystkie wystąpienia `TestClient` mogą korzystać z tej samej fabryki kanałów, z wyjątkiem #4 wystąpienia. Wystąpienie #4 będzie używać fabryki kanałów, która została utworzona w celu użycia. To ustawienie będzie działało w scenariuszach, w których konkretny punkt końcowy wymaga różnych ustawień zabezpieczeń z innych punktów końcowych tego samego typu fabryki kanału (w `ITest`tym przypadku).
+
+```csharp
+class Program
+{
+   static void Main(string[] args)
+   {
+      ClientBase.CacheSettings = CacheSettings.AlwaysOff;
+      foreach (string msg in messages)
+      {
+         using (TestClient proxy = new TestClient ("MyEndpoint", new EndpointAddress(address)))
+         {
+            proxy.Test(msg);
+         }
+      }
+   }
+}
+
+// Generated by SvcUtil.exe
+public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
+```
+
+W powyższym przykładzie wszystkie wystąpienia `TestClient` byłyby używają różnych fabryk kanałów. Jest to przydatne, gdy każdy punkt końcowy ma inne wymagania dotyczące zabezpieczeń i nie ma sensu buforowania.
+
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ServiceModel.ClientBase%601>
 - [Kompilowanie klientów](../../../../docs/framework/wcf/building-clients.md)
 - [Klienci](../../../../docs/framework/wcf/feature-details/clients.md)
 - [Uzyskiwanie dostępu do usług za pomocą klienta WCF](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
-- [Instrukcje: Używanie elementu ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [Instrukcje: Korzystanie z elementu ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

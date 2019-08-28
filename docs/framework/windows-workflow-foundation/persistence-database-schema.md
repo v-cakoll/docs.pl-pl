@@ -2,12 +2,12 @@
 title: Schemat bazy danych stanów trwałych
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 384a9aceaf0b5619bbc4eca5929b6e6d7855e3d3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 65d8b2f7a6283d65823e1a186239d398ee4a530a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962880"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038338"
 ---
 # <a name="persistence-database-schema"></a>Schemat bazy danych stanów trwałych
 W tym temacie opisano widoki publiczne obsługiwane przez magazyn wystąpień przepływu pracy SQL.  
@@ -44,7 +44,7 @@ W tym temacie opisano widoki publiczne obsługiwane przez magazyn wystąpień pr
 |Poprawki|BigInt|Numer poprawki wersji przepływu pracy.|  
   
 > [!CAUTION]
->  Widok **wystąpień** zawiera również wyzwalacz usuwania. Użytkownicy z odpowiednimi uprawnieniami mogą wykonywać instrukcje usuwania względem tego widoku, który wymusił wymuszenie usunięcia wystąpień przepływu pracy z bazy danych. Zalecamy usunięcie bezpośrednio z widoku tylko w ostatnim przypadku, ponieważ usunięcie wystąpienia z poniżej środowiska uruchomieniowego przepływu pracy może spowodować niezamierzone konsekwencje. Zamiast tego należy użyć punktu końcowego zarządzania wystąpieniem przepływu pracy, aby zakończyć działanie wystąpienia przepływu pracy. Jeśli chcesz usunąć dużą liczbę wystąpień z widoku, upewnij się, że nie ma aktywnych środowisk uruchomieniowych, które mogą działać na tych wystąpieniach.  
+> Widok **wystąpień** zawiera również wyzwalacz usuwania. Użytkownicy z odpowiednimi uprawnieniami mogą wykonywać instrukcje usuwania względem tego widoku, który wymusił wymuszenie usunięcia wystąpień przepływu pracy z bazy danych. Zalecamy usunięcie bezpośrednio z widoku tylko w ostatnim przypadku, ponieważ usunięcie wystąpienia z poniżej środowiska uruchomieniowego przepływu pracy może spowodować niezamierzone konsekwencje. Zamiast tego należy użyć punktu końcowego zarządzania wystąpieniem przepływu pracy, aby zakończyć działanie wystąpienia przepływu pracy. Jeśli chcesz usunąć dużą liczbę wystąpień z widoku, upewnij się, że nie ma aktywnych środowisk uruchomieniowych, które mogą działać na tych wystąpieniach.  
   
 ## <a name="servicedeployments-view"></a>Widok ServiceDeployments  
  Widok ServiceDeployments zawiera informacje o wdrożeniu dla wszystkich hostowanych usług przepływu pracy w sieci Web (IIS/was). Każde wystąpienie przepływu pracy, które jest hostowane w sieci Web, będzie zawierało element **ServiceDeploymentId** , który odwołuje się do wiersza w tym widoku.  

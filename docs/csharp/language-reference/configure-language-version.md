@@ -2,16 +2,18 @@
 title: C#Obsługa wersji języka — C# Przewodnik
 description: Dowiedz się, C# w jaki sposób wersja językowa jest określana na podstawie projektu, i różne wartości, które można dostosować ręcznie do programu.
 ms.date: 07/10/2019
-ms.openlocfilehash: 744cec0aac21f743648cccbdc93cf2977c32d644
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: fae36f5305e23fbfa1c55c5881e37391670f93ab
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796531"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040349"
 ---
 # <a name="c-language-versioning"></a>C#przechowywanie wersji języka
 
-C# Kompilator Określa domyślną wersję językową opartą na docelowej platformie lub strukturach projektu. Jest to spowodowane tym C# , że język może mieć funkcje, które są zależne od typów lub składników środowiska uruchomieniowego, które nie są dostępne w każdej implementacji platformy .NET. Zapewnia to również, że dla każdego elementu docelowego projektu jest tworzona z myślą o największej zgodnej wersji językowej.
+Najnowszy C# kompilator Określa domyślną wersję językową opartą na docelowej platformie lub strukturach projektu. Jest to spowodowane tym C# , że język może mieć funkcje, które są zależne od typów lub składników środowiska uruchomieniowego, które nie są dostępne w każdej implementacji platformy .NET. Zapewnia to również, że dla każdego elementu docelowego projektu jest tworzona z myślą o największej zgodnej wersji językowej.
+
+Reguły w tym artykule mają zastosowanie do kompilatora dostarczonego z programem Visual Studio 2019 lub zestawem SDK programu .NET Core 3,0. C# Kompilatory, które są częścią instalacji programu Visual Studio 2017 lub starszej wersji zestaw .NET Core SDK C# wersje Target 7,0 domyślnie. 
 
 ## <a name="defaults"></a>Wartość domyślna
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 0a8d10b9d6ae80bb4fa38445e0335151661c41eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7581031b022c9c53568a616de66584be9ef7229c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918138"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041190"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Buforowanie połączenia z programem SQL Server (ADO.NET)
 Połączenie z serwerem bazy danych zwykle składa się z kilku czasochłonnych kroków. Musi zostać ustanowiony kanał fizyczny, taki jak gniazdo lub nazwany potok, początkowe uzgadnianie z serwerem, muszą być przeanalizowane informacje o parametrach połączenia, połączenie musi być uwierzytelniane przez serwer. bieżąca transakcja i tak dalej.  
@@ -67,7 +67,7 @@ using (SqlConnection connection = new SqlConnection(
  Połączenie pulę spełnia żądania połączeń przez ponowne przypisanie połączeń po ich ponownym wydaniu do puli. Jeśli maksymalny rozmiar puli został osiągnięty i nie jest dostępne żadne możliwe połączenie, żądanie jest umieszczane w kolejce. Pulę próbuje odnowić wszelkie połączenia do momentu osiągnięcia limitu czasu (wartość domyślna to 15 sekund). Jeśli pulę nie może spełnić żądania przed upływem limitu czasu połączenia, zostanie zgłoszony wyjątek.  
   
 > [!CAUTION]
->  Zdecydowanie zalecamy, aby zawsze zamykać połączenie po zakończeniu korzystania z niego, aby połączenie zostało zwrócone do puli. Można to zrobić `Close` przy użyciu albo metod `Connection` lub `Dispose` przez otwarcie C#wszystkich `Using` połączeń wewnątrz `using` instrukcji w lub instrukcji w Visual Basic. Połączenia, które nie zostały jawnie zamknięte, mogą nie zostać dodane lub zwrócone do puli. Aby uzyskać więcej informacji, zobacz [using instrukcji](../../../csharp/language-reference/keywords/using-statement.md) lub [How to: Usuń zasób](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) systemowy dla Visual Basic.  
+> Zdecydowanie zalecamy, aby zawsze zamykać połączenie po zakończeniu korzystania z niego, aby połączenie zostało zwrócone do puli. Można to zrobić `Close` przy użyciu albo metod `Connection` lub `Dispose` przez otwarcie C#wszystkich `Using` połączeń wewnątrz `using` instrukcji w lub instrukcji w Visual Basic. Połączenia, które nie zostały jawnie zamknięte, mogą nie zostać dodane lub zwrócone do puli. Aby uzyskać więcej informacji, zobacz [using instrukcji](../../../csharp/language-reference/keywords/using-statement.md) lub [How to: Usuń zasób](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) systemowy dla Visual Basic.  
   
 > [!NOTE]
 > `Close` Nie wywołuj `Finalize` ani `Dispose` w`Connection`, a`DataReader`, ani żadnego innego obiektu zarządzanego w metodzie klasy. W finalizatorze zwalniane są tylko niezarządzane zasoby, które są własnością klasy bezpośrednio. Jeśli Klasa nie jest własnością żadnych niezarządzanych zasobów, nie Uwzględniaj `Finalize` metody w definicji klasy. Aby uzyskać więcej informacji, zobacz [odzyskiwanie pamięci](../../../standard/garbage-collection/index.md).  

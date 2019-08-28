@@ -15,78 +15,79 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: 9a4f5a98c9fea9658d9d9a400faa773b78a12f3a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c5d88e4942d96ee12e8b9f40156090c874386668
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638315"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046266"
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Instrukcje: zapisywanie plików za pomocą kontrolki RichTextBox formularzy systemu Windows
-Formularze Windows <xref:System.Windows.Forms.RichTextBox> kontroli można zapisać informacji wyświetlanych w jednym z kilku formatów:  
-  
-- Zwykły tekst  
-  
-- Zwykły tekst w formacie Unicode  
-  
-- Format tekstu sformatowanego (RTF)  
-  
-- RTF spacji zamiast obiektów OLE  
-  
-- Zwykły tekst z reprezentacji tekstowej obiektów OLE  
-  
- Aby zapisać plik, należy wywołać <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> metody. Można również użyć **SaveFile** metody, aby zapisać dane w strumieniu. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
-  
-### <a name="to-save-the-contents-of-the-control-to-a-file"></a>Aby zapisać zawartości formantu w pliku  
-  
-1. Określ ścieżkę do pliku do zapisania.  
-  
-     Aby to zrobić w aplikacji rzeczywistych, zazwyczaj używasz <xref:System.Windows.Forms.SaveFileDialog> składnika. Aby uzyskać przegląd, zobacz [savefiledialog — informacje o składniku](savefiledialog-component-overview-windows-forms.md).  
-  
-2. Wywołaj <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> metody <xref:System.Windows.Forms.RichTextBox> kontrolki, określając plik, aby zapisać i opcjonalnie typu pliku. Jeśli chcesz wywołać metodę z nazwą pliku jako argument tylko, plik zostanie zapisany jako RTF. Aby określić inny typ pliku, należy wywołać metodę z wartością <xref:System.Windows.Forms.RichTextBoxStreamType> wyliczenia jako swój drugi argument.  
-  
-     W poniższym przykładzie ścieżkę zestawu dla lokalizacji pliku RTF jest **Moje dokumenty** folderu. Ta lokalizacja jest używana, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać tego folderu. Wybranie tej lokalizacji również umożliwia użytkownikom z poziomami dostępu minimalny system bezpiecznego uruchamiania aplikacji. W poniższym przykładzie przyjęto założenie, formularz z <xref:System.Windows.Forms.RichTextBox> formant został już dodany.  
-  
-    ```vb  
-    Public Sub SaveFile()  
-       ' You should replace the bold file name in the   
-       ' sample below with a file name of your own choosing.  
-       RichTextBox1.SaveFile(System.Environment.GetFolderPath _  
-       (System.Environment.SpecialFolder.Personal) _  
-       & "\Testdoc.rtf", _  
-          RichTextBoxStreamType.RichNoOleObjs)  
-    End Sub  
-    ```  
-  
-    ```csharp  
-    public void SaveFile()  
-    {  
-       // You should replace the bold file name in the   
-       // sample below with a file name of your own choosing.  
-       // Note the escape character used (@) when specifying the path.  
-       richTextBox1.SaveFile(System.Environment.GetFolderPath  
-       (System.Environment.SpecialFolder.Personal)  
-       + @"\Testdoc.rtf",  
-          RichTextBoxStreamType.RichNoOleObjs);  
-    }  
-    ```  
-  
-    ```cpp  
-    public:  
-       void SaveFile()  
-       {  
-          // You should replace the bold file name in the   
-          // sample below with a file name of your own choosing.  
-          richTextBox1->SaveFile(String::Concat  
-             (System::Environment::GetFolderPath  
-             (System::Environment::SpecialFolder::Personal),  
-             "\\Testdoc.rtf"), RichTextBoxStreamType::RichNoOleObjs);  
-       }  
-    ```  
-  
+
+Formant Windows Forms <xref:System.Windows.Forms.RichTextBox> może zapisywać informacje wyświetlane w jednym z kilku formatów:
+
+- Zwykły tekst
+
+- Zwykły tekst Unicode
+
+- Format tekstu sformatowanego (RTF)
+
+- RTF z miejscami zamiast obiektów OLE
+
+- Zwykły tekst z reprezentacją tekstową obiektów OLE
+
+Aby zapisać plik, wywołaj <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> metodę. Możesz również użyć metody **SaveFile** , aby zapisać dane w strumieniu. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
+
+### <a name="to-save-the-contents-of-the-control-to-a-file"></a>Aby zapisać zawartość kontrolki do pliku
+
+1. Określ ścieżkę pliku, który ma zostać zapisany.
+
+    Aby to zrobić w aplikacji w świecie rzeczywistym, zazwyczaj używany jest <xref:System.Windows.Forms.SaveFileDialog> składnik. Aby zapoznać się z omówieniem, zobacz [Omówienie składnika SaveFileDialog](savefiledialog-component-overview-windows-forms.md).
+
+2. Wywołaj <xref:System.Windows.Forms.RichTextBox> metodę kontrolki, określając plik do zapisania i opcjonalnie typ pliku. <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> W przypadku wywołania metody z nazwą pliku jako jedynego argumentu, plik zostanie zapisany w formacie RTF. Aby określić inny typ pliku, wywołaj metodę z wartością <xref:System.Windows.Forms.RichTextBoxStreamType> wyliczenia jako jej drugi argument.
+
+    W poniższym przykładzie ścieżką ustawioną dla lokalizacji pliku tekstu sformatowanego jest folder **Moje dokumenty** . Ta lokalizacja jest używana, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać ten folder. Wybranie tej lokalizacji pozwala również użytkownikom z minimalnymi poziomami dostępu do systemu w celu bezpiecznego uruchomienia aplikacji. W poniższym przykładzie założono, że formularz <xref:System.Windows.Forms.RichTextBox> z kontrolką został już dodany.
+
+    ```vb
+    Public Sub SaveFile()
+       ' You should replace the bold file name in the
+       ' sample below with a file name of your own choosing.
+       RichTextBox1.SaveFile(System.Environment.GetFolderPath _
+       (System.Environment.SpecialFolder.Personal) _
+       & "\Testdoc.rtf", _
+          RichTextBoxStreamType.RichNoOleObjs)
+    End Sub
+    ```
+
+    ```csharp
+    public void SaveFile()
+    {
+       // You should replace the bold file name in the
+       // sample below with a file name of your own choosing.
+       // Note the escape character used (@) when specifying the path.
+       richTextBox1.SaveFile(System.Environment.GetFolderPath
+       (System.Environment.SpecialFolder.Personal)
+       + @"\Testdoc.rtf",
+          RichTextBoxStreamType.RichNoOleObjs);
+    }
+    ```
+
+    ```cpp
+    public:
+       void SaveFile()
+       {
+          // You should replace the bold file name in the
+          // sample below with a file name of your own choosing.
+          richTextBox1->SaveFile(String::Concat
+             (System::Environment::GetFolderPath
+             (System::Environment::SpecialFolder::Personal),
+             "\\Testdoc.rtf"), RichTextBoxStreamType::RichNoOleObjs);
+       }
+    ```
+
     > [!IMPORTANT]
-    >  W tym przykładzie tworzy nowy plik, jeśli go jeszcze nie istnieje. Jeśli aplikacja musi utworzyć plik, ta aplikacja musi mieć dostęp do tworzenia folderu. Uprawnienia są ustawiane przy użyciu list kontroli dostępu. Jeśli plik już istnieje, aplikacja musi jedynie dostęp do zapisu, mniejsze uprawnienia. W przypadku, gdy jest to możliwe, bezpieczniej jest tworzyć plik podczas wdrożenia i tylko przyznać dostęp do odczytu do pojedynczego pliku zamiast tworzyć dostępu do folderu. Ponadto jest bardziej bezpieczne, można zapisać danych do folderów użytkowników niż do folderu głównego lub do folderu Program Files.  
-  
+    > Ten przykład tworzy nowy plik, jeśli plik jeszcze nie istnieje. Jeśli aplikacja musi utworzyć plik, aplikacja musi mieć dostęp do tego folderu. Uprawnienia są ustawiane przy użyciu list kontroli dostępu. Jeśli plik już istnieje, aplikacja musi mieć tylko uprawnienia do zapisu, które ma mniejsze uprawnienia. Jeśli to możliwe, bezpieczniejsze jest tworzenie pliku podczas wdrażania i udzielanie dostępu do odczytu tylko do jednego pliku, a nie tworzenie dostępu do folderu. Ponadto bardziej bezpieczne jest zapisanie danych do folderów użytkowników niż folder główny lub folder Program Files.
+
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>

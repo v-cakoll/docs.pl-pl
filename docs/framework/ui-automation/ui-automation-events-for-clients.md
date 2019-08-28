@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 3bb41fa476f15c5fc16a942cc0c82fd8e0aba7bb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b56fc09b33a846fe94a52e19dc4b9c806d79c121
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911671"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044104"
 ---
 # <a name="ui-automation-events-for-clients"></a>Właściwości zdarzeń automatyzacji interfejsu użytkownika dla klientów
 > [!NOTE]
@@ -44,7 +44,7 @@ ms.locfileid: "69911671"
 > Aby przetworzyć zdarzenia zamknięte z okna, należy rzutować typ argumentu, który jest przesyłany <xref:System.Windows.Automation.WindowClosedEventArgs>do procedury obsługi zdarzeń jako. Ponieważ element okna nie jest już prawidłowy, nie można `sender` użyć parametru do pobierania informacji; Użyj <xref:System.Windows.Automation.WindowClosedEventArgs.GetRuntimeId%2A> zamiast niego. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]  
   
 > [!CAUTION]
->  Jeśli aplikacja może odbierać zdarzenia ze swoich własnych [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]potrzeb, nie należy używać [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] wątku aplikacji do subskrybowania zdarzeń ani do anulowania subskrypcji. Wykonanie tej czynności może prowadzić do nieprzewidywalnego zachowania. Aby uzyskać więcej informacji, zobacz temat [problemy z wątkem automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
+> Jeśli aplikacja może odbierać zdarzenia ze swoich własnych [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]potrzeb, nie należy używać [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] wątku aplikacji do subskrybowania zdarzeń ani do anulowania subskrypcji. Wykonanie tej czynności może prowadzić do nieprzewidywalnego zachowania. Aby uzyskać więcej informacji, zobacz temat [problemy z wątkem automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
   
  Po zamknięciu lub gdy [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdarzenia nie są już potrzebne dla aplikacji, klienci automatyzacji interfejsu użytkownika powinni wywołać jedną z poniższych metod.  
   

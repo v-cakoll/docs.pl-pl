@@ -19,24 +19,25 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bcc451903f7fbf7f82e2ed64834d26e605a0c069
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a964e73cc41cebad33a3edc34b89ef240fbc62c8
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705626"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040855"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>Instrukcje: Kompilacja zestawów wieloplikowych
-W tym artykule wyjaśniono, jak utworzyć zestaw wieloplikowy i zawiera kod, który ilustruje każdy krok w procedurze.
+
+W tym artykule opisano sposób tworzenia zestawu wieloplikowego i zawiera kod, który ilustruje każdy krok w procedurze.
 
 > [!NOTE]
-> Visual Studio IDE dla C# i Visual Basic należy używać tylko do tworzenia zespołów pojedynczego pliku. Jeśli chcesz utworzyć zestawy wieloplikowe, musisz podać kompilatorów wiersza polecenia lub programu Visual Studio z programem Visual C++.
+> Środowisko IDE programu Visual Studio C# dla i Visual Basic może być używane tylko do tworzenia zestawów jednoplikowych. Jeśli chcesz utworzyć zestawy wieloplikowe, musisz użyć kompilatorów wiersza polecenia lub programu Visual Studio z wizualizacją C++.
 
 ### <a name="to-create-a-multifile-assembly"></a>Aby utworzyć zestaw wieloplikowy
 
-01. Kompiluj wszystkie pliki zawierające przestrzenie nazw przywoływany przez inne moduły w zestawie do modułów kodu. Domyślnym rozszerzeniem dla modułów kodu jest .netmodule.
+01. Kompiluj wszystkie pliki, które zawierają przestrzenie nazw, do których odwołują się inne moduły w zestawie, do modułów kodu. Domyślnym rozszerzeniem modułów kodu jest. module.
 
-    Na przykład, załóżmy, że `Stringer` plik ma przestrzeń nazwy wywołaną `myStringer`, która zawiera klasę o nazwie `Stringer`. `Stringer` Klasa zawiera metodę o nazwie `StringerMethod` , zapisuje pojedynczy wiersz do konsoli.
+    Załóżmy na przykład, że `Stringer` plik ma przestrzeń nazw o nazwie `myStringer`, która zawiera klasę o nazwie `Stringer`. Klasa zawiera metodę o nazwie `StringerMethod` , która zapisuje jeden wiersz w konsoli. `Stringer`
 
     [!code-cpp[Conceptual.Assembly.Multifile#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/stringer.cpp#1)]
     [!code-csharp[Conceptual.Assembly.Multifile#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/stringer.cs#1)]
@@ -48,11 +49,11 @@ W tym artykule wyjaśniono, jak utworzyć zestaw wieloplikowy i zawiera kod, kt�
     [!code-csharp[Conceptual.Assembly.Multifile#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/stringer.cs#2)]
     [!code-vb[Conceptual.Assembly.Multifile#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/stringer.vb#2)]
 
-    Określanie *modułu* parametrem **t:** opcji kompilatora wskazuje, że pliku powinna być skompilowana jako moduł, a nie jako zespół. Kompilator generuje moduł o nazwie `Stringer.netmodule`, który może być dodany do zestawu.
+    Określenie parametru *modułu* z opcją **/t:** kompilator wskazuje, że plik powinien zostać skompilowany jako moduł, a nie jako zestaw. Kompilator tworzy moduł o nazwie `Stringer.netmodule`, który można dodać do zestawu.
 
-02. Kompiluj wszystkie inne moduły, stosując niezbędne opcje kompilatora w celu wskazania innych modułów, do których istnieją odwołania w kodzie. Ten krok używa **/addmodule** — opcja kompilatora.
+02. Kompiluj wszystkie inne moduły przy użyciu niezbędnych opcji kompilatora, aby wskazać inne moduły, do których istnieją odwołania w kodzie. W tym kroku jest stosowana opcja kompilatora **/addmodule** .
 
-    W poniższym przykładzie moduł kodu o nazwie `Client` ma punkt wejścia `Main` metodę, która odwołuje się do metody w `Stringer.dll` modułu utworzonego w kroku 1.
+    W poniższym przykładzie moduł kodu o nazwie `Client` ma metodę punktu `Main` wejścia, która `Stringer.dll` odwołuje się do metody w module utworzonym w kroku 1.
 
     [!code-cpp[Conceptual.Assembly.Multifile#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#3)]
     [!code-csharp[Conceptual.Assembly.Multifile#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#3)]
@@ -64,42 +65,38 @@ W tym artykule wyjaśniono, jak utworzyć zestaw wieloplikowy i zawiera kod, kt�
     [!code-csharp[Conceptual.Assembly.Multifile#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#4)]
     [!code-vb[Conceptual.Assembly.Multifile#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#4)]
 
-    Określ **/t:module** opcji, ponieważ ten moduł zostanie dodany do zestawu w przyszłym kroku. Określ **/addmodule** opcji, ponieważ kod w `Client` odwołuje się do przestrzeni nazwy utworzonej przez kod w `Stringer.netmodule`. Kompilator generuje moduł o nazwie `Client.netmodule` zawiera odwołanie do innego modułu `Stringer.netmodule`.
+    Określ opcję **/t: module** , ponieważ ten moduł zostanie dodany do zestawu w przyszłym kroku. Określ opcję **/addmodule** , ponieważ kod w `Client` odwołuje się do przestrzeni nazw utworzonej przez kod w. `Stringer.netmodule` Kompilator tworzy moduł o nazwie `Client.netmodule` , który zawiera odwołanie do innego `Stringer.netmodule`modułu.
 
     >[!NOTE]
-    >C# I Kompilatory języka Visual Basic obsługują bezpośrednio tworzenie zespołów wieloplikowych przy użyciu następujących dwóch różnych składni.
+    >Kompilatory C# i Visual Basic obsługują bezpośrednie tworzenie zestawów wieloplikowych przy użyciu następujących dwóch różnych składni.
     >
-    >- Dwie kompilacje tworzą zestaw dwóch plików:
+    >- Dwie kompilacje tworzą zestaw dwóch plików:[!code-cpp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#5)]
+    >  [!code-csharp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#5)]
+    >  [!code-vb[Conceptual.Assembly.Multifile#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#5)]
     >
-    >    [!code-cpp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#5)]
-    >    [!code-csharp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#5)]
-    >    [!code-vb[Conceptual.Assembly.Multifile#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#5)]
-    >
-    >- Jeden Kompilacja tworzy zestaw dwóch plików:
-    >
-    >    [!code-cpp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#6)]
-    >    [!code-csharp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#6)]
-    >    [!code-vb[Conceptual.Assembly.Multifile#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#6)]
+    >- Jedna kompilacja tworzy zestaw dwóch plików:[!code-cpp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#6)]
+    >  [!code-csharp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#6)]
+    >  [!code-vb[Conceptual.Assembly.Multifile#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#6)]
 
-03. Użyj [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) do tworzenia pliku wyjściowego, który zawiera manifest zestawu. Ten plik zawiera informacje dotyczące wszystkich modułów lub zasobów, które są częścią zestawu.
+03. Użyj [konsolidatora zestawu (Al. exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) , aby utworzyć plik wyjściowy, który zawiera manifest zestawu. Ten plik zawiera informacje referencyjne dotyczące wszystkich modułów lub zasobów, które są częścią zestawu.
 
     W wierszu polecenia wpisz następujące polecenie:
 
-    **Al** \< *Nazwa modułu*> \<*Nazwa modułu*>... **/ main:**\<*nazwę metody*> **/out:**\<*nazwy pliku*>   **/target :**\<*typ pliku zestawu*>
+    **Al***Nazwa*modułunazw> modułów>... \<\< **/Main:** \<*Nazwa***metody/out:** nazwa pliku/Target:\<*Typ pliku* zestawu\<> > >
 
-    W tym poleceniu *Nazwa modułu* argumenty określają nazwę każdego modułu, aby uwzględnić w zestawie. **/Main:** opcja określa nazwę metody punktu wejścia w zestawie. **/Out:** opcja określa nazwę pliku wyjściowego, który zawiera metadane zestawu. **/Target:** opcja określa, że zestaw jest plik wykonywalny (.exe) aplikacji konsoli, plikiem wykonywalnym (.exe) Windows lub plikiem biblioteki (.lib).
+    W tym poleceniu argumenty *nazwy modułu* określają nazwę każdego modułu, który ma zostać uwzględniony w zestawie. **/Main:** opcja określa nazwę metody, która jest punktem wejścia zestawu. **/Out:** opcja określa nazwę pliku wyjściowego, który zawiera metadane zestawu. **/Target:** opcja określa, że zestaw to plik wykonywalny aplikacji konsoli (exe), plik wykonywalny systemu Windows (. win) lub plik biblioteki (. lib).
 
-    W poniższym przykładzie Al.exe tworzy zestaw, który jest wykonywalną aplikacją konsoli o nazwie `myAssembly.exe`. Aplikacja składa się z dwóch modułów o nazwie `Client.netmodule` i `Stringer.netmodule`, a pliku wykonywalnego o nazwie `myAssembly.exe,` zawierającą tylko metadane zestawu. Punkt wejścia zestawu jest `Main` metody w klasie `MainClientApp`, który znajduje się w `Client.dll`.
+    W poniższym przykładzie Al. exe tworzy zestaw, który jest plikiem wykonywalnym aplikacji konsoli o nazwie `myAssembly.exe`. Aplikacja składa się z dwóch modułów `Client.netmodule` o `Stringer.netmodule`nazwie i, a plik wykonywalny o nazwie `myAssembly.exe,` , który zawiera tylko metadane zestawu. Punkt wejścia zestawu jest `Main` metodą w klasie `MainClientApp`, która znajduje się w `Client.dll`.
 
     ```
     al Client.netmodule Stringer.netmodule /main:MainClientApp.Main /out:myAssembly.exe /target:exe
     ```
 
-    Możesz użyć [MSIL Disassembler (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) Aby sprawdzić zawartość zestawu lub określić, czy plik jest zestawem lub modułem.
+    Aby sprawdzić zawartość zestawu lub określić, czy plik jest zestawem lub modułem, można użyć [Dezasembler MSIL (Ildasm. exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) .
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)
-- [Instrukcje: Wyświetlanie zawartości zestawu](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)
+- [Instrukcje: Wyświetl zawartość zestawu](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)
 - [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Zestawy wieloplikowe](../../../docs/framework/app-domains/multifile-assemblies.md)

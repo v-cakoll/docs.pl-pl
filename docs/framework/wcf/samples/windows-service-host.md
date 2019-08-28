@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: 6339666d80de6c40b390683c1dabe6925053d30d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2f2024a984111a826adab31ca15f1a46f9733de5
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942297"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045405"
 ---
 # <a name="windows-service-host"></a>Host usług systemu Windows
 Ten przykład pokazuje usługę Windows Communication Foundation (WCF) hostowaną w usłudze zarządzanej systemu Windows. Usługi systemu Windows są kontrolowane za pomocą apletu usługi w **Panelu sterowania** i można je skonfigurować do automatycznego uruchamiania po ponownym uruchomieniu systemu. Przykład składa się z programu klienckiego i programu usług systemu Windows. Usługa jest zaimplementowana jako program. exe i zawiera swój własny kod hostingu. W innych środowiskach hostingu, takich jak usługi aktywacji procesów systemu Windows (WAS) lub Internet Information Services (IIS), nie trzeba pisać kodu hostingu.
@@ -19,13 +19,13 @@ Ten przykład pokazuje usługę Windows Communication Foundation (WCF) hostowan�
 > Procedura konfiguracji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.
 
 > [!IMPORTANT]
->  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WindowsService`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WindowsService`  
   
  Po skompilowaniu tej usługi należy ją zainstalować za pomocą narzędzia Installutil. exe, takiego jak jakakolwiek inna usługa systemu Windows. Jeśli chcesz wprowadzić zmiany w usłudze, musisz najpierw ją odinstalować za pomocą `installutil /u`usługi. Pliki Setup. bat i Oczyść. bat dołączone do tego przykładu są poleceniami służącymi do instalowania i uruchamiania usługi systemu Windows oraz do zamykania i odinstalowywania usługi systemu Windows. Usługa WCF może odpowiedzieć tylko na klientów, jeśli usługa systemu Windows jest uruchomiona. Jeśli zatrzymasz usługę systemu Windows przy użyciu apletu usługi w **Panelu sterowania** i uruchomisz klienta, <xref:System.ServiceModel.EndpointNotFoundException> wystąpi wyjątek, gdy klient próbuje uzyskać dostęp do usługi. Po ponownym uruchomieniu usługi systemu Windows, gdy ponownie zostanie uruchomiony klient, komunikacja powiedzie się.  
   

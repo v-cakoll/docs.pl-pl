@@ -2,12 +2,12 @@
 title: Transakcje rozproszone
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: f5ed99928534dc31832ac0baf1bb1bfa7e83ded2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 60a455d51d7ae80f5434f9564ca7416c70bef9f5
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956756"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041247"
 ---
 # <a name="distributed-transactions"></a>Transakcje rozproszone
 Transakcja to zestaw powiązanych zadań zakończonych powodzeniem (zatwierdzanie) lub niepowodzenie (przerwanie) jako jednostki, między innymi. *Transakcja rozproszona* to transakcja, która ma wpływ na kilka zasobów. Aby transakcja rozproszona została zatwierdzona, wszyscy uczestnicy muszą zagwarantować, że jakakolwiek zmiana danych będzie trwała. Zmiany muszą zostać zachowane niezależnie awarie systemu lub inne nieprzewidziane zdarzenia. Jeśli nawet pojedynczy uczestnik nie wykona tej gwarancji, cała transakcja zakończy się niepowodzeniem, a wszelkie zmiany danych w zakresie transakcji zostaną wycofane.  
@@ -39,7 +39,7 @@ Transakcja to zestaw powiązanych zadań zakończonych powodzeniem (zatwierdzani
 > Gdy połączenie zostanie jawnie zarejestrowane w transakcji, nie można go wyrejestrować lub zarejestrować w innej transakcji do momentu zakończenia pierwszej transakcji.  
   
 > [!CAUTION]
->  `EnlistTransaction`zgłasza wyjątek, jeśli połączenie już rozpoczęło transakcję przy użyciu <xref:System.Data.Common.DbConnection.BeginTransaction%2A> metody połączenia. Jeśli jednak transakcja jest transakcją lokalną uruchomioną w źródle danych (na przykład w przypadku wykonywania instrukcji BEGIN TRANSACTION jawnie używającej <xref:System.Data.SqlClient.SqlCommand>), `EnlistTransaction` program wycofa transakcję lokalną i zarejestrowany w istniejącej dystrybucji transakcja zgodnie z żądaniem. Nie otrzymasz powiadomienia, że lokalna transakcja została wycofana, i musi zarządzać wszelkimi lokalnymi transakcjami, <xref:System.Data.Common.DbConnection.BeginTransaction%2A>które nie zostały rozpoczęte przy użyciu. Jeśli używasz dostawca danych .NET Framework dla SQL Server (`SqlClient`) z SQL Server, próba zarejestrowania spowoduje zgłoszenie wyjątku. Wszystkie inne przypadki nie zostaną wykryte.  
+> `EnlistTransaction`zgłasza wyjątek, jeśli połączenie już rozpoczęło transakcję przy użyciu <xref:System.Data.Common.DbConnection.BeginTransaction%2A> metody połączenia. Jeśli jednak transakcja jest transakcją lokalną uruchomioną w źródle danych (na przykład w przypadku wykonywania instrukcji BEGIN TRANSACTION jawnie używającej <xref:System.Data.SqlClient.SqlCommand>), `EnlistTransaction` program wycofa transakcję lokalną i zarejestrowany w istniejącej dystrybucji transakcja zgodnie z żądaniem. Nie otrzymasz powiadomienia, że lokalna transakcja została wycofana, i musi zarządzać wszelkimi lokalnymi transakcjami, <xref:System.Data.Common.DbConnection.BeginTransaction%2A>które nie zostały rozpoczęte przy użyciu. Jeśli używasz dostawca danych .NET Framework dla SQL Server (`SqlClient`) z SQL Server, próba zarejestrowania spowoduje zgłoszenie wyjątku. Wszystkie inne przypadki nie zostaną wykryte.  
   
 ## <a name="promotable-transactions-in-sql-server"></a>Promocja transakcji w SQL Server  
  SQL Server obsługuje operacje promocji, w których lokalna transakcja uproszczona może zostać automatycznie podwyższona do transakcji rozproszonej tylko wtedy, gdy jest to wymagane. Transakcja promocji nie wywołuje dodanego nakładu transakcji rozproszonej, chyba że jest wymagane dodatkowe obciążenie. Aby uzyskać więcej informacji i przykład kodu, zobacz [System. Transactions Integration with SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  

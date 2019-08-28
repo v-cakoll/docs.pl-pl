@@ -2,42 +2,44 @@
 title: Podstawowa usługa HTTP
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: 247fedac339ebb22a6ef3b3e84f557451ecaaf1a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec716b41efb3dde6e5afdb386d797e402d924b56
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002654"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045159"
 ---
 # <a name="basic-http-service"></a>Podstawowa usługa HTTP
-Ten przykład demonstruje sposób implementacji usługi oparte na protokole HTTP, opartego na protokole RPC — co jest często określany jako usługa "POX" (zwykłe stare XML) — przy użyciu modelu programowania REST Windows Communication Foundation (WCF). Ten przykład zawiera dwa składniki: samodzielnie hostowana usługa HTTP programu WCF (Service.cs) i aplikacji konsoli (Program.cs), która tworzy usługę i wykonywania wywołań do niego.  
-  
-## <a name="sample-details"></a>Przykład szczegółów  
- Usługa WCF udostępnia operacje 2 `EchoWithGet` i `EchoWithPost`, która zwraca ciąg, który został przekazany jako dane wejściowe.  
-  
- `EchoWithGet` Operacji jest oznaczony za pomocą <xref:System.ServiceModel.Web.WebGetAttribute>, co oznacza, że operacja przetwarza HTTP `GET` żądań. Ponieważ <xref:System.ServiceModel.Web.WebGetAttribute> bez określenia <xref:System.UriTemplate>, operacja oczekuje, że ciąg wejściowy przekazać za pomocą parametru ciągu zapytania o nazwie `s`. Należy pamiętać, że format identyfikatora URI, który oczekuje, że usługi można dostosować przy użyciu <xref:System.ServiceModel.Web.WebGetAttribute.UriTemplate%2A> właściwości.  
-  
- `EchoWithPost` Operacji jest oznaczony za pomocą <xref:System.ServiceModel.Web.WebInvokeAttribute>, co oznacza brak `GET` operacji (ma efekty uboczne). Ponieważ <xref:System.ServiceModel.Web.WebInvokeAttribute> bez określenia `Method`, operacja przetwarza HTTP `POST` żądania, które mają ten ciąg w treści żądania (w formacie XML, na przykład). Należy pamiętać, że metoda HTTP i format identyfikatora URI żądania można dostosować za pomocą <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> i <xref:System.ServiceModel.Web.WebInvokeAttribute.UriTemplate> właściwości odpowiednio.  
-  
- Plik App.config Konfiguruje usługi WCF z domyślną <xref:System.ServiceModel.Description.WebHttpEndpoint> zawierający <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> właściwością `true`. W rezultacie, infrastruktura WCF tworzy automatycznego na podstawie kodu HTML na stronie pomocy `http://localhost:8000/Customers/help` zawierające informacje dotyczące sposobu konstruowania żądania HTTP do usługi i sposobu korzystania z usługi odpowiedzi HTTP.  
-  
- Plik program.cs pokazuje, jak fabryka kanałów WCF może służyć do wykonywania wywołań do usługi i przetwarzanie odpowiedzi. Należy pamiętać, że jest to tylko jeden sposób uzyskiwania dostępu do usługi WCF. Istnieje również możliwość uzyskania dostępu do usługi przy użyciu innych klas .NET Framework, takich jak <xref:System.Net.HttpWebRequest> i <xref:System.Net.WebClient>.
-  
- Przykład składa się samodzielnie hostowana usługa i klient że uruchamiane zarówno w aplikacji konsoli. Po uruchomieniu aplikacji konsolowej klienta zgłasza żądania do usługi i zapisuje odpowiednie informacje z odpowiedzi w oknie konsoli.  
-  
-#### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
-  
-1. Otwórz rozwiązanie, podstawowe przykładowej usługi Http. Podczas uruchamiania programu Visual Studio 2012, należy uruchomić jako administrator na potrzeby przykładu zostać pomyślnie uruchomiony. W tym celu kliknij prawym przyciskiem myszy ikonę programu Visual Studio 2012 i wybierając polecenie **Uruchom jako Administrator** z menu kontekstowego.  
-  
-2. Naciśnij klawisze CTRL + SHIFT + B, Skompiluj rozwiązanie, a następnie naciśnij klawisz Ctrl + F5, aby uruchomić aplikację konsoli bez debugowania. W oknie konsoli pojawia się i zawiera identyfikator URI uruchomioną usługę i identyfikator URI elementu HTML pomocy strony dla uruchomionej usługi. W dowolnym momencie możesz wyświetlić stronę pomocy HTML, wpisując identyfikator URI strony pomocy w przeglądarce. Po uruchomieniu przykładu klienta zapisuje stan bieżącego działania.  
-  
-3. Naciśnij dowolny klawisz, aby zakończyć próbki.  
-  
+
+W tym przykładzie pokazano, jak zaimplementować usługę opartą na protokole HTTP, która jest nazywana "POX" (zwykła stara usługa XML), korzystając z modelu programowania REST programu Windows Communication Foundation (WCF). Ten przykład składa się z dwóch składników: samodzielnej usługi HTTP WCF (Service.cs) i aplikacji konsolowej (Program.cs), która tworzy usługę i wysyła do niej wywołania.
+
+## <a name="sample-details"></a>Przykładowe szczegóły
+
+Usługa WCF ujawnia dwie operacje `EchoWithGet` i `EchoWithPost`, która zwraca ciąg, który został przekazano jako dane wejściowe.
+
+Operacja jest oznaczona adnotacją <xref:System.ServiceModel.Web.WebGetAttribute>, co oznacza, że operacja przetwarza żądania HTTP `GET`. `EchoWithGet` Ponieważ nie określa jawnie, Operacja oczekuje, że ciąg wejściowy zostanie przekazana przy użyciu parametru ciągu zapytania o nazwie `s`. <xref:System.UriTemplate> <xref:System.ServiceModel.Web.WebGetAttribute> Należy pamiętać, że format identyfikatora URI, którego oczekuje usługa, można dostosować przy użyciu <xref:System.ServiceModel.Web.WebGetAttribute.UriTemplate%2A> właściwości.
+
+Operacja jest oznaczona adnotacją <xref:System.ServiceModel.Web.WebInvokeAttribute>, co `GET` oznacza, że nie jest operacją (ma efekty uboczne). `EchoWithPost` Ponieważ nie określa jawnie, operacja przetwarza żądania HTTP `POST` , które zawierają ciąg w treści żądania (na przykład w formacie XML. `Method` <xref:System.ServiceModel.Web.WebInvokeAttribute> Należy pamiętać, że metoda HTTP i format identyfikatora URI dla żądania można dostosować odpowiednio przy użyciu <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> właściwości i. <xref:System.ServiceModel.Web.WebInvokeAttribute.UriTemplate>
+
+Plik App. config konfiguruje usługę WCF z wartością domyślną <xref:System.ServiceModel.Description.WebHttpEndpoint> , która <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> ma ustawioną `true`właściwość. W efekcie Infrastruktura WCF tworzy automatycznie opartą na języku HTML stronę `http://localhost:8000/Customers/help` pomocy, która zawiera informacje na temat sposobu konstruowania żądań HTTP do usługi i korzystania z odpowiedzi HTTP usługi.
+
+Program.cs demonstruje, jak fabryka kanałów WCF może służyć do wykonywania wywołań do usługi i przetwarzania odpowiedzi. Należy pamiętać, że jest to tylko jeden sposób na dostęp do usługi WCF. Istnieje również możliwość uzyskiwania dostępu do usługi przy użyciu innych klas .NET Framework, <xref:System.Net.HttpWebRequest> takich <xref:System.Net.WebClient>jak i.
+
+Przykład składa się z samodzielnej usługi i klienta uruchamianego w aplikacji konsolowej. Gdy aplikacja konsolowa zostanie uruchomiona, klient wysyła żądania do usługi i zapisuje odpowiednie informacje z odpowiedzi do okna konsoli.
+
+#### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
+
+1. Otwórz rozwiązanie dla przykładu podstawowej usługi http. Podczas uruchamiania programu Visual Studio 2012 należy uruchomić jako administrator, aby przykład mógł zostać pomyślnie wykonany. W tym celu kliknij prawym przyciskiem myszy ikonę programu Visual Studio 2012 i wybierz polecenie **Uruchom jako administrator** z menu kontekstowego.
+
+2. Naciśnij kombinację klawiszy CTRL + SHIFT + B, aby skompilować rozwiązanie, a następnie naciśnij klawisze CTRL + F5, aby uruchomić aplikację konsolową bez debugowania. Zostanie wyświetlone okno konsoli z identyfikatorem URI uruchomionej usługi oraz identyfikatorem URI strony pomocy HTML dla działającej usługi. W dowolnym momencie możesz wyświetlić stronę pomocy HTML, wpisując identyfikator URI strony pomocy w przeglądarce. W miarę uruchamiania przykładu klient zapisuje stan bieżącego działania.
+
+3. Naciśnij dowolny klawisz, aby zakończyć próbkę.
+
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`

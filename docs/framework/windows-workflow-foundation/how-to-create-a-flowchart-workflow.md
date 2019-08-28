@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 6d67629503d5acfeff7e14e1889a047444a8d399
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3afac76fc977f992e780d2ebe302c1ed94568835
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962394"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044397"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>Instrukcje: Tworzenie przepływu pracy schematu blokowego
 Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z działań niestandardowych. W tym temacie przedstawiono procedurę tworzenia przepływu pracy, który używa zarówno wbudowanych działań, jak <xref:System.Activities.Statements.Flowchart> działania, jak i działań niestandardowych, z poprzednich [metod: Utwórz temat działania](how-to-create-an-activity.md) . Przepływ pracy modeluje grę z liczbą odgadnąć.  
@@ -52,7 +52,7 @@ Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z dział
 9. Kliknij pozycję **Utwórz zmienną**.  
   
     > [!TIP]
-    >  Jeśli nie zostanie wyświetlone pole **Utwórz zmienną** , kliknij <xref:System.Activities.Statements.Flowchart> działanie na powierzchni projektanta przepływu pracy, aby je wybrać.  
+    > Jeśli nie zostanie wyświetlone pole **Utwórz zmienną** , kliknij <xref:System.Activities.Statements.Flowchart> działanie na powierzchni projektanta przepływu pracy, aby je wybrać.  
   
 10. Wpisz `Guess` w polu **Nazwa** , wybierz wartość **Int32** z listy rozwijanej **Typ zmiennej** , a następnie naciśnij klawisz ENTER, aby zapisać zmienną.  
   
@@ -80,7 +80,7 @@ Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z dział
     ```  
   
     > [!TIP]
-    >  Jeśli okno **Przybornik** nie jest wyświetlane, wybierz pozycję **Przybornik** z menu **Widok** .  
+    > Jeśli okno **Przybornik** nie jest wyświetlane, wybierz pozycję **Przybornik** z menu **Widok** .  
   
 3. Przeciągnij działanie **monitu** z sekcji **NumberGuessWorkflowActivities** w przyborniku, upuść je poniżej akcji **Przypisz** z poprzedniego kroku, a następnie połącz działanie monitu z przypisaniem działania. Istnieją trzy sposoby łączenia tych dwóch działań. Pierwszy sposób polega na nawiązaniu połączenia w trakcie upuszczania działania **monitu** w przepływie pracy. Przeciągając działanie monitu do przepływu pracy, umieść je nad przydziałem **Assign** i upuść je na jednym z czterech trójkątów, które pojawiają się, gdy działanie **monitu** znajduje się nad przypisaniem. Drugi sposób polega na porzucenia działania **monitu** na przepływ pracy w odpowiedniej lokalizacji. Następnie przesuń wskaźnik myszy nad działanie przypisywania i przeciągnij jeden z prostokątów, które pojawiają się w dół do działania **monitu** . Przeciągnij myszą tak, aby linia łącząca z działania **Assign** łączyła się z jednym z prostokątów działania **monitu** , a następnie zwolnij przycisk myszy. Trzeci sposób jest bardzo podobny do pierwszego, z tą różnicą, że zamiast przeciągać działanie **monitu** z **przybornika**, przeciągasz go z jego lokalizacji na powierzchni projektowej przepływu pracy, przesuwaj go na działanie przypisywania i upuść je na jedną z widoczne trójkąty.  
   
@@ -95,7 +95,7 @@ Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z dział
     ```  
   
     > [!TIP]
-    >  Jeśli **okno właściwości** nie jest wyświetlane, wybierz pozycję **okno właściwości** w menu **Widok** .  
+    > Jeśli **okno właściwości** nie jest wyświetlane, wybierz pozycję **okno właściwości** w menu **Widok** .  
   
 5. Przeciągnij działanie **Przypisz** z sekcji elementy **pierwotne** w przyborniku i połącz je przy użyciu jednej z metod opisanych w poprzednim kroku, tak aby była niższa od działania **monitu** .  
   
@@ -114,7 +114,7 @@ Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z dział
 8. Przeciągnij kolejną aktywność **FlowDecision** z **przybornika** i upuść ją poniżej pierwszego. Połącz dwa działania, przeciągając od prostokąta, który jest oznaczony jako **false** w górnym działaniu **FlowDecision** do prostokąta w górnej części drugiego działania **FlowDecision** .  
   
     > [!TIP]
-    >  Jeśli nie widzisz etykiet **prawda** i **Fałsz** w **FlowDecision**, umieść wskaźnik myszy nad **FlowDecisionem**.  
+    > Jeśli nie widzisz etykiet **prawda** i **Fałsz** w **FlowDecision**, umieść wskaźnik myszy nad **FlowDecisionem**.  
   
 9. Kliknij drugie działanie **FlowDecision** , aby je wybrać. W **oknie właściwości**wpisz następujące wyrażenie w polu wartość właściwości **warunek** .  
   

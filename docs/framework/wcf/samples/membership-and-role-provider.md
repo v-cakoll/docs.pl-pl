@@ -2,12 +2,12 @@
 title: Dostawca członkostwa i ról
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 894fcef0cbb25f85043aa6f5c55c45bae5161546
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 139d85a1ec36509690f35f24c7ddf04716a7e909
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948548"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039435"
 ---
 # <a name="membership-and-role-provider"></a>Dostawca członkostwa i ról
 Przykład członkostwa i dostawcy ról pokazuje, jak usługa może używać członkostwa ASP.NET i dostawców ról do uwierzytelniania i autoryzowania klientów.  
@@ -123,10 +123,10 @@ Przykład członkostwa i dostawcy ról pokazuje, jak usługa może używać czł
 2. Upewnij się, że skonfigurowano [bazę danych ASP.NET usługi aplikacji](https://go.microsoft.com/fwlink/?LinkId=94997).  
   
     > [!NOTE]
-    >  Jeśli używasz wersji SQL Server Express, nazwa serwera to .\SQLEXPRESS. Ten serwer powinien być używany podczas konfigurowania bazy danych ASP.NET Usługi aplikacji, a także parametrów połączenia Web. config.  
+    > Jeśli używasz wersji SQL Server Express, nazwa serwera to .\SQLEXPRESS. Ten serwer powinien być używany podczas konfigurowania bazy danych ASP.NET Usługi aplikacji, a także parametrów połączenia Web. config.  
   
     > [!NOTE]
-    >  Konto procesu roboczego ASP.NET musi mieć uprawnienia do bazy danych utworzonej w tym kroku. Użyj narzędzia sqlcmd lub SQL Server Management Studio, aby to zrobić.  
+    > Konto procesu roboczego ASP.NET musi mieć uprawnienia do bazy danych utworzonej w tym kroku. Użyj narzędzia sqlcmd lub SQL Server Management Studio, aby to zrobić.  
   
 3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, należy wykonać poniższe instrukcje.  
   

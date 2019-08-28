@@ -2,38 +2,38 @@
 title: Przykład dyspozytora tabeli UriTemplate
 ms.date: 03/30/2017
 ms.assetid: 3b32975d-ba90-4c5c-83bc-2fbb48f11c0c
-ms.openlocfilehash: 4c5f7172543f575655faafad781a272e355224b6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 724a13504cea2672aef7ff155fbbff055aac34e6
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662417"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044591"
 ---
 # <a name="uritemplate-table-dispatcher-sample"></a>Przykład dyspozytora tabeli UriTemplate
-<xref:System.UriTemplateTable> Klasa udostępnia struktury tabeli asocjacyjnych słownika podobne do pracy z zestawem <xref:System.UriTemplate> wystąpień. W tym przykładzie przedstawiono podstawowe aparatu dispatching utworzone przy użyciu `UriTemplateTable`, typowy scenariusz użycia dla `UriTemplateTable` klasy.  
+Klasa zawiera strukturę tabeli asocjacyjnej, która umożliwia pracę z <xref:System.UriTemplate> zestawem wystąpień. <xref:System.UriTemplateTable> W tym przykładzie przedstawiono podstawowy aparat wysyłania, który został utworzony `UriTemplateTable`przy użyciu, typowy scenariusz użycia `UriTemplateTable` dla klasy.  
   
- Niniejszy przykład pokazuje następujące kluczowe pojęcia związane z `UriTemplateTable` klasy:  
+ Ten przykład ilustruje następujące kluczowe pojęcia dotyczące `UriTemplateTable` klasy:  
   
-- Kojarzenie obiektów delegowanych z `UriTemplates` w `UriTemplateTable`.  
+- Kojarzenie delegatów za `UriTemplates` pomocą elementu `UriTemplateTable`w.  
   
-- Za pomocą <xref:System.UriTemplateTable.MatchSingle%2A> uzyskać prawidłowe procedury obsługi delegata dla określonego identyfikatora URI.  
+- Korzystanie <xref:System.UriTemplateTable.MatchSingle%2A> z programu w celu uzyskania poprawnego delegata programu obsługi dla określonego identyfikatora URI.  
   
-- Wywołanie delegata obsługi do przetwarzania żądania.  
+- Wywoływanie delegata procedury obsługi w celu przetworzenia żądania.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+2. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\UriTemplateDispatcher`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\UriTemplateDispatcher`  
   
 ## <a name="see-also"></a>Zobacz także
 

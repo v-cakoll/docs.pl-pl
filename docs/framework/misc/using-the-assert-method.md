@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b5a13b362f565cfae9247908bcf3cf35c899ae4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e2a86fbcd78c6768a91cc0d12e45053f8da6cdec
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910719"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041152"
 ---
 # <a name="using-the-assert-method"></a>Korzystanie z metody Assert
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -31,7 +31,7 @@ ms.locfileid: "69910719"
  <xref:System.Security.CodeAccessPermission.Assert%2A>to metoda, która może być wywoływana dla klas uprawnień dostępu kodu i <xref:System.Security.PermissionSet> klasy. Za pomocą potwierdzeń można włączyć kod (i obiekty podrzędne wywołujące), aby wykonać akcje, do których Twój kod ma uprawnienia, ale jego obiekty wywołujące mogą nie mieć uprawnień do wykonania. Potwierdzenie zabezpieczeń zmienia normalny proces wykonywany przez środowisko uruchomieniowe podczas sprawdzania zabezpieczeń. Po podaniu uprawnienia Nakazuje systemowi zabezpieczeń, aby nie sprawdzać obiektów wywołujących kod dla potwierdzonego uprawnienia.  
   
 > [!CAUTION]
->  Należy uważnie używać potwierdzeń, ponieważ mogą one otwierać otwory zabezpieczające i podważać mechanizm środowiska uruchomieniowego w celu wymuszenia ograniczeń zabezpieczeń.  
+> Należy uważnie używać potwierdzeń, ponieważ mogą one otwierać otwory zabezpieczające i podważać mechanizm środowiska uruchomieniowego w celu wymuszenia ograniczeń zabezpieczeń.  
   
  Potwierdzenia są przydatne w sytuacjach, w których biblioteka wywołuje kod niezarządzany lub wykonuje wywołanie, które wymaga uprawnień, które nie są oczywiście powiązane z zamierzonym użyciem biblioteki. Na przykład, cały kod zarządzany, który wywołuje w kodzie niezarządzanym, musi mieć **SecurityPermission** z określoną flagą **UnmanagedCode** . Kod, który nie pochodzi z komputera lokalnego, na przykład kod pobrany z lokalnego intranetu, nie zostanie domyślnie udzielony. W związku z tym, aby kod pobrany z lokalnego intranetu mógł wywołać bibliotekę, która używa kodu niezarządzanego, musi mieć uprawnienie potwierdzone przez bibliotekę. Ponadto niektóre biblioteki mogą wykonywać wywołania, które nie są widoczne dla obiektów wywołujących i wymagają specjalnych uprawnień.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69910719"
  Załóżmy na przykład, że Klasa wysoce zaufanej biblioteki ma metodę, która usuwa pliki. Uzyskuje dostęp do pliku, wywołując niezarządzaną funkcję Win32. Obiekt wywołujący wywołuje metodę **usuwania** kodu, przekazując nazwę pliku do usunięcia, C:\test.txt. W ramach metody **delete** kod tworzy <xref:System.Security.Permissions.FileIOPermission> obiekt reprezentujący dostęp do zapisu do C:\test.txt. (Dostęp do zapisu jest wymagany do usunięcia pliku). Kod następnie wywołuje bezwzględne sprawdzenie zabezpieczeń, wywołując metodę **żądania** obiektu **FileIOPermission** . Jeśli jeden z obiektów wywołujących w stosie wywołań nie ma tego uprawnienia, <xref:System.Security.SecurityException> jest zgłaszany. Jeśli żaden wyjątek nie zostanie zgłoszony, wiadomo, że wszyscy wywołujący mają prawo dostępu do C:\Test.txt. Ponieważ sądzisz, że większość obiektów wywołujących nie będzie miała uprawnień dostępu do kodu niezarządzanego, kod następnie tworzy <xref:System.Security.Permissions.SecurityPermission> obiekt, który reprezentuje prawo do wywoływania kodu niezarządzanego i wywołuje metodę **Assert** obiektu. Na koniec wywołuje niezarządzaną funkcję Win32 w celu usunięcia C:\Text.txt i zwraca kontrolę do obiektu wywołującego.  
   
 > [!CAUTION]
->  Musisz się upewnić, że Twój kod nie używa potwierdzeń w sytuacjach, w których kod może być używany przez inny kod w celu uzyskania dostępu do zasobu chronionego przez żądane uprawnienie. Na przykład w kodzie, który zapisuje do pliku, którego nazwa jest określona przez obiekt wywołujący jako parametr, nie **FileIOPermission** do zapisu w plikach, ponieważ kod może być otwarty do niewłaściwego użycia przez inną firmę.  
+> Musisz się upewnić, że Twój kod nie używa potwierdzeń w sytuacjach, w których kod może być używany przez inny kod w celu uzyskania dostępu do zasobu chronionego przez żądane uprawnienie. Na przykład w kodzie, który zapisuje do pliku, którego nazwa jest określona przez obiekt wywołujący jako parametr, nie **FileIOPermission** do zapisu w plikach, ponieważ kod może być otwarty do niewłaściwego użycia przez inną firmę.  
   
  W przypadku użycia bezwzględnej składni zabezpieczenia wywoływanie metody **Assert** dla wielu uprawnień w tej samej metodzie powoduje zgłoszenie wyjątku zabezpieczeń. Zamiast tego należy utworzyć obiekt **PermissionSet** , przekazać mu poszczególne uprawnienia, które mają zostać wywołane, a następnie wywołać metodę **Assert** dla obiektu **PermissionSet** . Metodę **Assert** można wywołać więcej niż raz w przypadku użycia deklaratywnej składni zabezpieczenia.  
   

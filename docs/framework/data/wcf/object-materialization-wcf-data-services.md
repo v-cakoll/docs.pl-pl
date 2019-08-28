@@ -1,51 +1,52 @@
 ---
-title: Materializacja obiektu (WCF Data Services)
+title: Obiekt materializację (Usługi danych programu WCF)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: f4789b3bfd5f9810a9abc870518add9b4a0a045b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d45d472a2996c0b501af70a0a2a6d2d669dedb4d
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645535"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70043535"
 ---
-# <a name="object-materialization-wcf-data-services"></a>Materializacja obiektu (WCF Data Services)
-Kiedy używasz **Dodaj odwołanie do usługi** okno dialogowe, aby używać [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych w aplikacji klienta opartego na programie .NET Framework, klas danych równoważne są generowane dla każdego typu jednostki w modelu danych udostępnianych przez źródło danych. Aby uzyskać więcej informacji, zobacz [Generowanie biblioteki klienta usługi danych](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). Jednostki danych zwracanych przez zapytanie jest zmaterializowany do wystąpienia jednego z tych klas usługi danych wygenerowanego klienta. Aby uzyskać informacji na temat opcji scalania i rozwiązanie tożsamości dla śledzonych obiektów, zobacz [zarządzanie kontekstem usługi danych](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).  
-  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia także zdefiniować własne klas usługi danych klienta, a nie przy użyciu klas danych generowanych przez narzędzie. Dzięki temu można użyć własnych klas danych, nazywane również "old zwykłego obiektu CLR" klas danych (POCO). Korzystając z tych typów danych niestandardowych klas, powinien atrybutu klasy danych z oboma <xref:System.Data.Services.Common.DataServiceKeyAttribute> lub <xref:System.Data.Services.Common.DataServiceEntityAttribute> i upewnij się, że typ nazwy o nazwach klienta dopasowanie typu w modelu danych usługi danych.  
-  
- Gdy biblioteka otrzyma komunikat odpowiedzi zapytania, go materializuje dane zwrócone z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych do wystąpień danych klienta, klas usług, które są typu zapytania. Ogólny proces materializowanie tych obiektów, jest następujący:  
-  
-1. Biblioteka klienta odczytuje typu serializacji z `entry` element komunikat odpowiedzi z kanału informacyjnego i próbuje utworzyć nowe wystąpienie poprawnego typu w jednym z następujących sposobów:  
-  
-    - Gdy typ zadeklarowany w źródle danych ma taką samą nazwę jak typ <xref:System.Data.Services.Client.DataServiceQuery%601>, nowe wystąpienie tego typu jest tworzona przy użyciu pustego konstruktora.  
-  
-    - Gdy typ zadeklarowany w źródle danych ma taką samą nazwę jak typ, który jest tworzony na podstawie typu <xref:System.Data.Services.Client.DataServiceQuery%601>, nowe wystąpienie tego typu pochodnego jest tworzona przy użyciu pustego konstruktora.  
-  
-    - Gdy typ zadeklarowany w źródle danych nie można dopasować do typu <xref:System.Data.Services.Client.DataServiceQuery%601> lub dowolne typy pochodne, nowe wystąpienie typu kwerendy jest tworzona przy użyciu pustego konstruktora.  
-  
-    - Gdy <xref:System.Data.Services.Client.DataServiceContext.ResolveType%2A> właściwość jest ustawiona, podane delegata jest wywoływana, aby zastąpić domyślne mapowanie na podstawie nazwy typu i nowe wystąpienie klasy typ zwracany przez <xref:System.Func%602> zostanie utworzona. Jeśli ten delegat zwraca wartość null, tworzone jest nowe wystąpienie, typu kwerendy. Może być wymagane do zastąpienia domyślnego mapowania nazwy na podstawie nazwy typu do obsługi scenariuszy dziedziczenia.  
-  
-2. Biblioteka klienta odczytuje wartość identyfikatora URI z `id` elementu `entry`, czyli wartość tożsamości podmiotu. Chyba że <xref:System.Data.Services.Client.DataServiceContext.MergeOption%2A> wartość <xref:System.Data.Services.Client.MergeOption.NoTracking> jest używany, wartość tożsamości jest używane do śledzenia obiektu w <xref:System.Data.Services.Client.DataServiceContext>. Wartość tożsamości umożliwia również zagwarantować, że tylko pojedynczy element tworzone jest wystąpienie, nawet wtedy, gdy jednostki są zwracane wielokrotnie w odpowiedzi na zapytanie.  
-  
-3. Biblioteka klienta odczytuje właściwości z kanału informacyjnego wpisu i ustaw odpowiednie właściwości nowo utworzony obiekt. Jeśli obiekt, który ma taką samą wartość tożsamość, już występuje w <xref:System.Data.Services.Client.DataServiceContext>, właściwości są ustawione na podstawie <xref:System.Data.Services.Client.MergeOption> ustawienie <xref:System.Data.Services.Client.DataServiceContext>. Odpowiedź może zawierać wartości właściwości, dla których odpowiadającą właściwość nie występuje w typ klienta. W takiej sytuacji działania zależą od wartości <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> właściwość <xref:System.Data.Services.Client.DataServiceContext>. Jeśli ta właściwość jest równa `true`, brakująca właściwość jest ignorowana. W przeciwnym wypadku zgłaszany jest błąd. Właściwości są ustawione w następujący sposób:  
-  
-    - Właściwości skalarne są ustawione na wartość odpowiadająca we wpisie w komunikacie odpowiedzi.  
-  
-    - Złożonych właściwości można ustawić nowe wystąpienie typu złożonego, które są konfigurowane przy użyciu właściwości typu złożonego z odpowiedzi.  
-  
-    - Właściwości nawigacji, które zwracają zbiór powiązanych jednostek są ustawiane w ramach nowego lub istniejącego wystąpienia <xref:System.Collections.Generic.ICollection%601>, gdzie `T` jest typem powiązanej jednostki. Ta kolekcja jest pusta, chyba że powiązane obiekty zostały załadowane do <xref:System.Data.Services.Client.DataServiceContext>. Aby uzyskać więcej informacji, zobacz [ładowanie zawartości odroczone](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).  
-  
-        > [!NOTE]
-        >  Gdy klas danych wygenerowanego klienta obsługuje powiązanie danych, właściwości nawigacji zwrócić wystąpienia <xref:System.Data.Services.Client.DataServiceCollection%601> klasy zamiast tego. Aby uzyskać więcej informacji, zobacz [powiązanie danych z kontrolkami](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  
-  
-4. <xref:System.Data.Services.Client.DataServiceContext.ReadingEntity> Zdarzenie jest wywoływane.  
-  
-5. Biblioteka klienta dołącza obiekt do <xref:System.Data.Services.Client.DataServiceContext>. Obiekt nie jest dołączony, kiedy <xref:System.Data.Services.Client.MergeOption> jest <xref:System.Data.Services.Client.MergeOption.NoTracking>.  
-  
+# <a name="object-materialization-wcf-data-services"></a>Obiekt materializację (Usługi danych programu WCF)
+
+W przypadku korzystania z okna dialogowego **Dodaj odwołanie do usługi** do korzystania [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] z kanału informacyjnego w aplikacji klienckiej opartej na .NET Framework są generowane równoważne klasy danych dla każdego typu jednostki w modelu danych udostępnionym przez kanał informacyjny. Aby uzyskać więcej informacji, zobacz [generowanie biblioteki klienta usługi danych](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). Dane jednostki, które są zwracane przez zapytanie, są uwzględniane w wystąpieniu jednej z wygenerowanych klas usługi danych klienta. Aby uzyskać informacje na temat opcji scalania i rozpoznawania tożsamości dla śledzonych obiektów, zobacz [zarządzanie kontekstem usługi danych](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).
+
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]umożliwia także Definiowanie własnych klas usługi danych klienta zamiast używać klas danych generowanych przez narzędzie. Umożliwia to korzystanie z własnych klas danych, nazywanych również "zwykłymi klasami danych CLR" (POCO). W przypadku korzystania z tych typów niestandardowych klas danych należy przypisać klasę danych z <xref:System.Data.Services.Common.DataServiceKeyAttribute> lub <xref:System.Data.Services.Common.DataServiceEntityAttribute> i upewnić się, że nazwy typów na klientach są zgodne z nazwami typów w modelu danych usługi danych.
+
+Gdy biblioteka otrzyma komunikat odpowiedzi na zapytanie, materializuje zwrócone dane ze [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych do wystąpień klas usługi danych klienta, które są typu zapytania. Ogólny proces materializacji tych obiektów jest następujący:
+
+1. Biblioteka kliencka odczytuje Zserializowany typ z `entry` elementu w kanale informacyjnym komunikatu odpowiedzi i próbuje utworzyć nowe wystąpienie poprawnego typu w jeden z następujących sposobów:
+
+    - Gdy typ zadeklarowany w kanale informacyjnym ma taką samą nazwę jak typ <xref:System.Data.Services.Client.DataServiceQuery%601>, nowe wystąpienie tego typu jest tworzone za pomocą pustego konstruktora.
+
+    - Gdy typ zadeklarowany w źródle danych ma taką samą nazwę jak typ, który pochodzi od typu <xref:System.Data.Services.Client.DataServiceQuery%601>, nowe wystąpienie tego typu pochodnego jest tworzone za pomocą pustego konstruktora.
+
+    - Gdy typ zadeklarowany w kanale informacyjnym nie może być dopasowany do <xref:System.Data.Services.Client.DataServiceQuery%601> typu lub dowolnego typu pochodnego, nowe wystąpienie typu zapytania jest tworzone za pomocą pustego konstruktora.
+
+    - Gdy właściwość jest ustawiona, dostarczony delegat jest wywoływany w celu przesłania domyślnego mapowania typu opartego na nazwie i nowego wystąpienia typu zwracanego <xref:System.Func%602> przez. <xref:System.Data.Services.Client.DataServiceContext.ResolveType%2A> Jeśli delegat zwraca wartość null, zamiast tego zostanie utworzone nowe wystąpienie typu zapytania. Może być wymagane przesłonięcie domyślnego mapowania nazw typów opartych na nazwach w celu obsługi scenariuszy dziedziczenia.
+
+2. Biblioteka kliencka odczytuje wartość identyfikatora URI z `id` elementu `entry`, który jest wartością tożsamości jednostki. <xref:System.Data.Services.Client.DataServiceContext.MergeOption%2A> Jeśli <xref:System.Data.Services.Client.DataServiceContext>wartość nie jest używana, wartość tożsamości służy do śledzenia obiektu w obiekcie. <xref:System.Data.Services.Client.MergeOption.NoTracking> Wartość tożsamości jest również używana do zagwarantowania, że jest tworzone tylko pojedyncze wystąpienie jednostki, nawet jeśli jednostka jest zwracana wiele razy w odpowiedzi na zapytanie.
+
+3. Biblioteka kliencka odczytuje właściwości z wpisu kanału informacyjnego i ustawia odpowiednie właściwości dla nowo utworzonego obiektu. Gdy obiekt mający taką samą wartość tożsamości występuje już w <xref:System.Data.Services.Client.DataServiceContext>, właściwości są ustawiane na podstawie <xref:System.Data.Services.Client.MergeOption> ustawienia <xref:System.Data.Services.Client.DataServiceContext>. Odpowiedź może zawierać wartości właściwości, dla których odpowiednia właściwość nie występuje w typie klienta. W takim przypadku akcja zależy od wartości <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> właściwości. <xref:System.Data.Services.Client.DataServiceContext> Gdy ta właściwość jest ustawiona na `true`, Brakująca właściwość jest ignorowana. W przeciwnym razie zostanie zgłoszony błąd. Właściwości są ustawiane w następujący sposób:
+
+    - Właściwości skalarne są ustawiane na odpowiadającą jej wartość we wpisie w komunikacie odpowiedzi.
+
+    - Właściwości złożone są ustawiane na nowe wystąpienie typu złożonego, które są ustawiane przy użyciu właściwości typu złożonego z odpowiedzi.
+
+    - Właściwości nawigacji, które zwracają kolekcję powiązanych jednostek <xref:System.Collections.Generic.ICollection%601>, są ustawiane na nowe lub istniejące wystąpienie, gdzie `T` jest typem powiązanej jednostki. Ta kolekcja jest pusta, chyba że powiązane obiekty zostały załadowane do <xref:System.Data.Services.Client.DataServiceContext>. Aby uzyskać więcej informacji, zobacz [ładowanie odroczonej zawartości](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).
+
+      > [!NOTE]
+      > Gdy wygenerowane klasy danych klienta obsługują powiązanie danych, w zamian zwraca wystąpienia <xref:System.Data.Services.Client.DataServiceCollection%601> klasy. Aby uzyskać więcej informacji, zobacz [Powiązywanie danych z kontrolkami](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).
+
+4. <xref:System.Data.Services.Client.DataServiceContext.ReadingEntity> Zdarzenie jest zgłaszane.
+
+5. Biblioteka klienta dołącza obiekt do <xref:System.Data.Services.Client.DataServiceContext>. Obiekt nie jest dołączany, <xref:System.Data.Services.Client.MergeOption> gdy <xref:System.Data.Services.Client.MergeOption.NoTracking>jest.
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Wykonywanie zapytań do usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

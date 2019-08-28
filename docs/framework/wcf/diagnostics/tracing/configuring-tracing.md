@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: b433263cc4d72b6418cf75c278316444c83ada8c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bc23aff2f049f205d02e2fb1b5f8798c7f6a9931
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933506"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044234"
 ---
 # <a name="configuring-tracing"></a>Konfigurowanie śledzenia
 W tym temacie opisano sposób włączania śledzenia, konfigurowania źródeł śledzenia w celu emitowania śladów i ustawiania poziomów śledzenia, ustawiania śledzenia aktywności i propagacji w celu obsługi korelacji kompleksowych wyników śledzenia oraz ustawiania detektorów śledzenia dostępu do śladów.  
@@ -145,7 +145,7 @@ W tym temacie opisano sposób włączania śledzenia, konfigurowania źródeł �
  Można również programowo skonfigurować odbiornik śledzenia. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie i Inicjowanie odbiorników](https://go.microsoft.com/fwlink/?LinkId=94648) śledzenia i [Tworzenie niestandardowych TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239).  
   
 > [!CAUTION]
->  Ponieważ `System.Diagnostics.XmlWriterTraceListener` nie jest bezpieczny wątkowo, Źródło śledzenia może blokować zasoby wyłącznie podczas wyprowadzania śladów. Gdy wiele wątków wyprowadza ślady do źródła śledzenia skonfigurowanego do korzystania z tego odbiornika, może wystąpić rywalizacja o zasoby, co powoduje znaczący problem z wydajnością. Aby rozwiązać ten problem, należy zaimplementować niestandardowy odbiornik, który jest bezpieczny dla wątków.  
+> Ponieważ `System.Diagnostics.XmlWriterTraceListener` nie jest bezpieczny wątkowo, Źródło śledzenia może blokować zasoby wyłącznie podczas wyprowadzania śladów. Gdy wiele wątków wyprowadza ślady do źródła śledzenia skonfigurowanego do korzystania z tego odbiornika, może wystąpić rywalizacja o zasoby, co powoduje znaczący problem z wydajnością. Aby rozwiązać ten problem, należy zaimplementować niestandardowy odbiornik, który jest bezpieczny dla wątków.  
   
 ## <a name="trace-level"></a>Poziom śledzenia  
  Poziom śledzenia jest kontrolowany przez `switchValue` ustawienie źródła śledzenia. Dostępne poziomy śledzenia są opisane w poniższej tabeli.  
@@ -164,7 +164,7 @@ W tym temacie opisano sposób włączania śledzenia, konfigurowania źródeł �
  Poziomy od pełnych do krytyczne są ułożone na siebie nawzajem, to znaczy, że każdy poziom śledzenia obejmuje wszystkie poziomy powyżej, z wyjątkiem poziomu wyłączonego. Na przykład odbiornik nasłuchujący na poziomie ostrzeżeń odbiera dane śledzenia krytyczne, błąd i ostrzeżenie. Poziom wszystko obejmuje zdarzenia z pełnymi zdarzeniami śledzenia krytycznego i działania.  
   
 > [!CAUTION]
->  Informacje, pełne i ActivityTracing poziomy generują wiele śladów, co może negatywnie wpłynąć na przepływność komunikatów, jeśli wszystkie dostępne zasoby są używane na komputerze.  
+> Informacje, pełne i ActivityTracing poziomy generują wiele śladów, co może negatywnie wpłynąć na przepływność komunikatów, jeśli wszystkie dostępne zasoby są używane na komputerze.  
   
 ## <a name="configuring-activity-tracing-and-propagation-for-correlation"></a>Konfigurowanie śledzenia działań i propagacji dla korelacji  
  `activityTracing` Wartość określona`switchValue` dla atrybutu służy do włączania śledzenia aktywności, która emituje ślady dla granic działań i transferów w punktach końcowych.  

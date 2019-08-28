@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: 6fd504269ae9afbfd02b58276582a644674e1e0f
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 32df98852b28963ffb748895156f7d9977c74b92
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040324"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046149"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Przewodnik: Demonstrowanie dziedziczenia Visual
 
@@ -35,19 +35,19 @@ W tym instruktażu przedstawiono różnicę między kontrolkami prywatnymi i chr
 > [!CAUTION]
 > Nie wszystkie formanty obsługują dziedziczenie wizualne z formularza podstawowego. Następujące kontrolki nie obsługują scenariusza opisanego w tym instruktażu:
 >
->  <xref:System.Windows.Forms.WebBrowser>
+> - <xref:System.Windows.Forms.WebBrowser>
 >
->  <xref:System.Windows.Forms.ToolStrip>
+> - <xref:System.Windows.Forms.ToolStrip>
 >
->  <xref:System.Windows.Forms.ToolStripPanel>
+> - <xref:System.Windows.Forms.ToolStripPanel>
 >
->  <xref:System.Windows.Forms.TableLayoutPanel>
+> - <xref:System.Windows.Forms.TableLayoutPanel>
 >
->  <xref:System.Windows.Forms.FlowLayoutPanel>
+> - <xref:System.Windows.Forms.FlowLayoutPanel>
 >
->  <xref:System.Windows.Forms.DataGridView>
+> - <xref:System.Windows.Forms.DataGridView>
 >
->  Te kontrolki w dziedziczonym formularzu są zawsze tylko do odczytu, niezależnie od używanej modyfikatora (`private`, `protected`lub `public`).
+> Te kontrolki w dziedziczonym formularzu są zawsze tylko do odczytu, niezależnie od używanej modyfikatora (`private`, `protected`lub `public`).
 
 ## <a name="create-a-class-library-project-containing-a-base-form"></a>Tworzenie projektu biblioteki klas zawierającego formularz podstawowy
 
@@ -61,7 +61,7 @@ W tym instruktażu przedstawiono różnicę między kontrolkami prywatnymi i chr
 
 5. Z menu **plik** wybierz polecenie **Zapisz wszystko** , aby zapisać projekt i pliki w domyślnej lokalizacji.
 
- Dwie następne procedury umożliwiają dodanie przycisków do formularza podstawowego. Aby zademonstrować dziedziczenie wizualne, nadajesz przyciskom różne poziomy dostępu `Modifiers` , ustawiając ich właściwości.
+Dwie następne procedury umożliwiają dodanie przycisków do formularza podstawowego. Aby zademonstrować dziedziczenie wizualne, nadajesz przyciskom różne poziomy dostępu `Modifiers` , ustawiając ich właściwości.
 
 ## <a name="add-a-button-that-inheritors-of-the-base-form-can-modify"></a>Dodaj przycisk, który może modyfikować dziedziczenie formularza podstawowego
 
@@ -135,7 +135,7 @@ W tym instruktażu przedstawiono różnicę między kontrolkami prywatnymi i chr
 
 5. Otwórz Dziedziczony formularz (**Form2**) w projektancie, klikając go dwukrotnie, jeśli nie jest jeszcze otwarty.
 
-     W projektancie przyciski dziedziczone mają symbol (![Zrzut ekranu przedstawiający symbol dziedziczenia Visual Basic.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) w górnym rogu wskazujące, że są dziedziczone.
+    W projektancie przyciski dziedziczone mają symbol (![Zrzut ekranu przedstawiający symbol dziedziczenia Visual Basic.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) w górnym rogu wskazujące, że są dziedziczone.
 
 6. Wybierz przycisk **powiedz Hello** i obserwuj uchwyty zmiany rozmiaru. Ponieważ ten przycisk jest chroniony, dziedziczenia można przenieść, zmienić jego rozmiar, zmienić jego podpis i wprowadzić inne modyfikacje.
 

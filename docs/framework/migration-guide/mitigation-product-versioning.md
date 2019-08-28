@@ -1,44 +1,47 @@
 ---
-title: 'Środki zaradcze: Wersjonowanie produktu'
+title: Środki zaradcze Przechowywanie wersji produktu
 ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d76615b5bd4d140917b84a52f7d1c251ca32302f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8f6016fc43700fda36c6d94408019d25f89bb36b
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489990"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044209"
 ---
-# <a name="mitigation-product-versioning"></a>Środki zaradcze: Wersjonowanie produktu
-W .NET Framework 4.6 lub nowszy przechowywanie wersji produktu została zmieniona z poprzednich wersji programu .NET Framework (.NET Framework 4, 4.5, 4.5.1 i 4.5.2).  
-  
-## <a name="product-versioning-changes"></a>Zmiany wersji produktu  
- Poniżej przedstawiono szczegółowe zmiany:  
-  
-- Wartość `Version` wpis `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` klucz został zmieniony na `4.6.` *xxxxx* dla programu .NET Framework 4.6 i jego wydania punktowe i `4.7.` *xxxxx* dla. .NET Framework 4.7. W .NET Framework 4.5, 4.5.1 i 4.5.2, miał format `4.5.` *xxxxx*.  
-  
-- Wersji plików i produktów w przypadku plików .NET Framework została zmieniona z wcześniejszej schemat przechowywania wersji `4.0.30319.x` do `4.6.X.0` dla programu .NET Framework 4.6 i jego wydania punktowe i `4.7.X.0` dla programu .NET Framework 4.7 i jego punktu wydania. Możesz zobaczyć te nowe wartości, podczas wyświetlania pliku **właściwości** po prawym przyciskiem myszy w pliku.  
-  
-- <xref:System.Reflection.AssemblyFileVersionAttribute> i <xref:System.Reflection.AssemblyInformationalVersionAttribute> atrybuty dla zestawów zarządzanych ma <xref:System.Version> wartości w formularzu `4.6.X.0` dla programu .NET Framework 4.6 i jego wydania punktowe, i `4.7.X.0` dla programu .NET Framework 4.7.  
-  
-- Począwszy od programu .NET Framework 4.6, <xref:System.Environment.Version%2A?displayProperty=nameWithType> właściwość zwraca ciąg wersji Naprawiono `4.0.30319.42000`. W .NET Framework 4, 4.5, 4.5.1 i 4.5.2, zwraca ciągi wersji w formacie `4.0.30319.xxxxx` gdzie `xxxxx` jest mniejsza niż 42000 (na przykład "4.0.30319.18010"). Należy pamiętać, że nie zaleca się kod aplikacji, biorąc wszelkie nowe zależności <xref:System.Environment.Version%2A?displayProperty=nameWithType> właściwości.
-  
-### <a name="handling-the-product-versioning-changes"></a>Obsługa zmiany wersji produktu  
- Ogólnie rzecz biorąc należy zależne aplikacje zalecane techniki wykrywania takich zadań jak wersję środowiska uruchomieniowego programu .NET Framework i katalog instalacyjny:  
-  
-- Aby wykryć wersji środowiska uruchomieniowego programu .NET Framework, zobacz [jak: Określanie, które wersje programu .NET Framework są zainstalowane](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).  
-  
-- Aby określić ścieżkę instalacji dla programu .NET Framework, należy użyć wartości `InstallPath` wpis `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` klucza.  
-  
-    > [!IMPORTANT]
-    >  Jest nazwą podklucza `NET Framework Setup`, a nie `.NET Framework Setup`.  
-  
-- Aby określić ścieżkę katalogu do .NET Framework środowisko uruchomieniowe języka wspólnego, należy wywołać <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetRuntimeDirectory%2A?displayProperty=nameWithType> metody.  
-  
-- Aby uzyskać wersję środowiska CLR, należy wywołać <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion%2A?displayProperty=nameWithType> metody.   Dla programu .NET Framework 4 i jego punktu zwalnia (.NET Framework 4.5, 4.5.1, 4.5.2 i .NET Framework 4.6, 4.6.1, 4.6.2 i 4.7), zwraca ciąg `v4.0.30319`.  
-  
+# <a name="mitigation-product-versioning"></a>Środki zaradcze Przechowywanie wersji produktu
+
+W .NET Framework 4,6 i nowszych wersja produktu zmieniła się z poprzednich wersji .NET Framework (.NET Framework 4, 4,5, 4.5.1 i 4.5.2).
+
+## <a name="product-versioning-changes"></a>Zmiany wersji produktu
+
+Poniżej przedstawiono szczegółowe zmiany:
+
+- Wartość `Version` wpisu `4.7.` `4.6.` w kluczu zmieniła się na XXXXX dla .NET Framework 4,6 i jego wydań punktów oraz do XXXXX dla .NET Framework 4,7. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` W .NET Framework 4,5, 4.5.1 i 4.5.2 ma format `4.5.` *XXXXX*.
+
+- Wersja plików i produktów dla plików .NET Framework zmieniła się ze schematu wcześniejszej wersji programu `4.0.30319.x` na `4.6.X.0` dla .NET Framework 4,6 i jego wydań `4.7.X.0` punktów, a w przypadku .NET Framework 4,7 i jego wydań punktów. Te nowe wartości są widoczne podczas przeglądania **Właściwości** pliku po kliknięciu prawym przyciskiem myszy pliku.
+
+- <xref:System.Version> `4.7.X.0` `4.6.X.0` Atrybuty i dla<xref:System.Reflection.AssemblyInformationalVersionAttribute> zestawów zarządzanych mają wartości w postaci dla .NET Framework 4,6 i jego wydań punktów oraz dla .NET Framework 4,7. <xref:System.Reflection.AssemblyFileVersionAttribute>
+
+- Począwszy od .NET Framework 4,6, <xref:System.Environment.Version%2A?displayProperty=nameWithType> Właściwość zwraca ciąg `4.0.30319.42000`stałej wersji. W .NET Framework 4, 4,5, 4.5.1 i 4.5.2 zwraca ciągi wersji w formacie `4.0.30319.xxxxx` , gdzie `xxxxx` jest mniejsza niż 42000 (na przykład "4.0.30319.18010"). Należy pamiętać, że kod aplikacji nie jest zalecany we <xref:System.Environment.Version%2A?displayProperty=nameWithType> właściwości.
+
+### <a name="handling-the-product-versioning-changes"></a>Obsługa zmian wersji produktu
+
+Ogólnie rzecz biorąc aplikacje powinny zależeć od zalecanych technik wykrywania takich elementów jak wersja środowiska uruchomieniowego .NET Framework i katalogu instalacyjnego:
+
+- Aby wykryć wersję środowiska uruchomieniowego .NET Framework, zobacz [How to: Ustal, które wersje .NET Framework są](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)zainstalowane.
+
+- Aby określić ścieżkę instalacji .NET Framework, użyj wartości `InstallPath` wpisu `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` w kluczu.
+
+  > [!IMPORTANT]
+  > Nazwa podklucza `NET Framework Setup`to, `.NET Framework Setup`nie.
+
+- Aby określić ścieżkę katalogu do .NET Framework środowiska uruchomieniowego języka wspólnego, wywołaj <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetRuntimeDirectory%2A?displayProperty=nameWithType> metodę.
+
+- Aby uzyskać wersję środowiska CLR, wywołaj <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion%2A?displayProperty=nameWithType> metodę.   W przypadku .NET Framework 4 i jego wydań (.NET Framework 4,5, 4.5.1, 4.5.2 i .NET Framework 4,6, 4.6.1, 4.6.2 i 4,7) zwraca ciąg `v4.0.30319`.
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Zmiany środowiska uruchomieniowego](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)

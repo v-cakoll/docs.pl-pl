@@ -9,18 +9,18 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 71b2b1d32c06afca4abd89df4f6449dacb32046c
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 74f834261d464430547ba3e1113db0ea780f593e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988528"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044442"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Instrukcje: Debugowanie aplikacji usług systemu Windows
 Usługa musi być uruchomiona w kontekście menedżera kontroli usług, a nie z poziomu programu Visual Studio. Z tego powodu debugowanie usługi nie jest tak proste jak debugowanie innych typów aplikacji programu Visual Studio. Aby debugować usługę, należy ją uruchomić, a następnie dołączyć debuger do procesu, w którym jest uruchomiony. Następnie można debugować aplikację przy użyciu wszystkich standardowych funkcji debugowania programu Visual Studio.  
   
 > [!CAUTION]
->  Nie należy dołączać do procesu, chyba że wiesz, co to jest proces, i zrozumieć konsekwencje dołączenia do tego procesu i prawdopodobnie go zabijania. Na przykład jeśli dołączysz do procesu WinLogon, a następnie zatrzymasz debugowanie, system zostanie zatrzymany, ponieważ nie może działać bez usługi WinLogon.  
+> Nie należy dołączać do procesu, chyba że wiesz, co to jest proces, i zrozumieć konsekwencje dołączenia do tego procesu i prawdopodobnie go zabijania. Na przykład jeśli dołączysz do procesu WinLogon, a następnie zatrzymasz debugowanie, system zostanie zatrzymany, ponieważ nie może działać bez usługi WinLogon.  
   
  Debuger można dołączyć tylko do działającej usługi. Proces załącznika przerywa bieżące działanie usługi; w rzeczywistości nie zatrzymuje ani nie wstrzymuje przetwarzania usługi. Oznacza to, że jeśli usługa jest uruchomiona po rozpoczęciu debugowania, nadal jest technicznie w stanie uruchomienia podczas debugowania, ale jego przetwarzanie zostało wstrzymane.  
   
@@ -55,7 +55,7 @@ Usługa musi być uruchomiona w kontekście menedżera kontroli usług, a nie z 
 8. W sekcji **dostępne procesy** wybierz proces dla usługi, a następnie wybierz pozycję **Dołącz**.  
   
     > [!TIP]
-    >  Ten proces będzie mieć taką samą nazwę jak plik wykonywalny dla usługi.  
+    > Ten proces będzie mieć taką samą nazwę jak plik wykonywalny dla usługi.  
   
      **Dołączyć do procesu** pojawi się okno dialogowe.  
   

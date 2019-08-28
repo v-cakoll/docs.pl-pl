@@ -2,12 +2,12 @@
 title: Instrukcje dotyczące zapory
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 5e557963c415cf39c4f25b4854c9863652201146
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c07d17ebb6bbefa78d12bb128e354112311891a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961405"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044950"
 ---
 # <a name="firewall-instructions"></a>Instrukcje dotyczące zapory
 Należy włączyć kilka portów lub programów w zaporze, aby umożliwić działanie przykładów Windows Communication Foundation (WCF). Wiele przykładów komunikuje się za pomocą portów z zakresu 8000-8003 i portu 9000. Zapora jest domyślnie włączona i uniemożliwia dostęp do tych portów. Aby włączyć zaporę dla przykładów, wykonaj jedną z następujących procedur, w zależności od wymagań i środowiska zabezpieczeń:  
@@ -21,7 +21,7 @@ Należy włączyć kilka portów lub programów w zaporze, aby umożliwić dzia�
  Jeśli nie masz pewności, której procedury użyć, wybierz pierwszą opcję. Jeśli używasz zapory od innego dostawcy, może być konieczne wprowadzenie podobnych zmian.  
   
 > [!IMPORTANT]
->  Zmiana konfiguracji zapory wpływa na bezpieczeństwo. Zalecamy zapisanie wprowadzonych zmian i ich usunięcie po zakończeniu pracy z przykładami.  
+> Zmiana konfiguracji zapory wpływa na bezpieczeństwo. Zalecamy zapisanie wprowadzonych zmian i ich usunięcie po zakończeniu pracy z przykładami.  
   
 ### <a name="to-enable-samples-programs-in-advance"></a>Aby włączyć z wyprzedzeniem programy próbne  
   
@@ -30,7 +30,7 @@ Należy włączyć kilka portów lub programów w zaporze, aby umożliwić dzia�
 2. Kliknij przycisk **Start**, kliknij pozycję **Uruchom**, `firewall.cpl`a następnie wpisz polecenie. Spowoduje to otwarcie apletu **Panelu sterowania Zapory systemu Windows** .  
   
     > [!NOTE]
-    >  Musisz mieć uprawnienia do zmiany ustawień zapory, aby uruchamiać próbki, które wymagają możliwości komunikowania się przez zaporę systemu Windows. Jeśli niektóre ustawienia zapory są niedostępne, a komputer jest połączony z domeną, administrator systemu może kontrolować te ustawienia za pomocą zasady grupy.  
+    > Musisz mieć uprawnienia do zmiany ustawień zapory, aby uruchamiać próbki, które wymagają możliwości komunikowania się przez zaporę systemu Windows. Jeśli niektóre ustawienia zapory są niedostępne, a komputer jest połączony z domeną, administrator systemu może kontrolować te ustawienia za pomocą zasady grupy.  
   
 3. Wykonaj jedną z następujących czynności, aby umożliwić programowi za pomocą zapory systemu Windows:  
   

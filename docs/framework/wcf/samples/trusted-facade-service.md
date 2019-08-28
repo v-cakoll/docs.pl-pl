@@ -2,36 +2,36 @@
 title: Zaufana usługa fasady
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 27e541c0c9738e93678d32081e49798944160715
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ea2aa3840c48ba24bafeee3f10d0cb903b25dcac
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665975"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045435"
 ---
 # <a name="trusted-facade-service"></a>Zaufana usługa fasady
-Ten przykładowy scenariusz pokazuje, jak przepływ informacji o tożsamości wywołującego z jednej usługi do innego za pomocą usługi Windows Communication Foundation (WCF) infrastruktura zabezpieczeń.  
+W tym scenariuszu przedstawiono sposób przepływu informacji o tożsamości wywołującego z jednej usługi do innej przy użyciu infrastruktury zabezpieczeń Windows Communication Foundation (WCF).  
   
- Jest wspólny wzorzec projektowania, aby udostępnić funkcje udostępniane przez usługi w sieci publicznej przy użyciu usługi fasady. Usługa fasady zazwyczaj znajduje się w sieci obwodowej (znany także jako DMZ, strefa zdemilitaryzowana i podsieć ekranowana) i komunikuje się za pomocą usługi zaplecza, która implementuje logikę biznesową i ma dostęp do danych wewnętrznych. Kanał komunikacyjny między usługą fasady i usługą zaplecza przechodzi przez zaporę i jest zwykle ograniczony tylko do jednego celu.  
+ Typowym wzorcem projektu jest udostępnienie funkcjonalności oferowanej przez usługę do sieci publicznej za pomocą usługi fasadowej. Usługa elewacji zwykle znajduje się w sieci obwodowej (znanej także jako Strefa DMZ, zdemilitaryzowana Zone i podsieć z osłoną) i komunikuje się z usługą zaplecza, która implementuje logikę biznesową i ma dostęp do danych wewnętrznych. Kanał komunikacyjny między usługą fasady a usługą zaplecza przechodzi przez zaporę i jest zwykle ograniczony tylko do jednego celu.  
   
- W tym przykładzie składa się z następujących składników:  
+ Ten przykład składa się z następujących składników:  
   
-- Kalkulator klienta  
+- Klient kalkulatora  
   
-- Usługa fasady Kalkulator  
+- Usługa "elewacja" usługi Kalkulator  
   
-- Kalkulator usługi zaplecza  
+- Usługa zaplecza programu Kalkulator  
   
- Usługa fasady jest odpowiedzialna za weryfikowanie żądania i uwierzytelniania obiektu wywołującego. Po pomyślnym uwierzytelnieniu i sprawdzania poprawności przesyła żądanie do usługi zaplecza przy użyciu kanału komunikacyjnego kontrolowany w sieci obwodowej z siecią wewnętrzną. Jako część żądania przekazywane usługa fasady zawiera informacje o tożsamości elementu wywołującego, tak aby usługi wewnętrznej bazy danych można użyć tych informacji w zakresie przetwarzania. Tożsamość obiektu wywołującego jest przesyłane przy użyciu `Username` tokenu zabezpieczającego w komunikacie `Security` nagłówka. W przykładzie użyto infrastruktura zabezpieczeń programu WCF do przesyłania i wyodrębnić te informacje z `Security` nagłówka.  
+ Usługa fasady jest odpowiedzialna za sprawdzenie poprawności żądania i uwierzytelnienie obiektu wywołującego. Po pomyślnym uwierzytelnieniu i sprawdzeniu zostanie przekazane żądanie do usługi wewnętrznej bazy danych przy użyciu kontrolowanego kanału komunikacyjnego z sieci obwodowej do sieci wewnętrznej. W ramach przekazanego żądania usługa elewacji zawiera informacje o tożsamości wywołującego, dzięki czemu usługa zaplecza może używać tych informacji w jego przetwarzaniu. Tożsamość obiektu wywołującego jest przekazywana przy `Username` użyciu tokenu zabezpieczającego wewnątrz `Security` nagłówka komunikatu. Przykład używa infrastruktury zabezpieczeń WCF do przesyłania i wyodrębniania tych informacji z `Security` nagłówka.  
   
 > [!IMPORTANT]
->  Usługi wewnętrznej bazy danych i relacje zaufania usługi fasady do uwierzytelniania obiektu wywołującego. W związku z tym usługa zaplecza nie uwierzytelnia obiektu wywołującego ponownie; informacje o tożsamości, usługa fasady w żądaniu przekazywane go używa. Ze względu na tę relację zaufania usługi wewnętrznej bazy danych muszą zostać uwierzytelnione Usługa fasady, aby upewnić się, że przekazany dalej komunikat pochodzi z zaufanego źródła — w tym przypadku usługa fasady.  
+> Usługa zaplecza ufa usłudze elewacji do uwierzytelniania obiektu wywołującego. W związku z tym usługa zaplecza nie uwierzytelnia ponownie obiektu wywołującego; używa on informacji o tożsamości dostarczonych przez usługę elewacji w żądaniu przekazywanym dalej. Ze względu na tę relację zaufania usługa zaplecza musi uwierzytelnić usługę elewacji, aby upewnić się, że przekazany komunikat pochodzi z zaufanego źródła — w tym przypadku usługi elewacji.  
   
 ## <a name="implementation"></a>Implementacja  
- W tym przykładzie istnieją dwie ścieżki komunikacji. Najpierw jest między klientem a usługa fasady drugą jest wartość między usługą fasady i usługą zaplecza.  
+ W tym przykładzie istnieją dwie ścieżki komunikacji. Po pierwsze jest między klientem a usługą elewacji drugi między usługą elewacji a usługą zaplecza.  
   
-### <a name="communication-path-between-client-and-faade-service"></a>Ścieżka komunikacji między klientem a usługą fasady  
- Korzysta z klienta do ścieżki komunikacji usługi fasady `wsHttpBinding` z `UserName` typu poświadczeń klienta. Oznacza to, że klient używa nazwy użytkownika i hasło do uwierzytelniania usługa fasady i usługa fasady używa certyfikatu X.509 do uwierzytelniania klienta. Konfiguracja powiązania wygląda podobnie jak w poniższym przykładzie.  
+### <a name="communication-path-between-client-and-faade-service"></a>Ścieżka komunikacji między klientem a usługą elewacji  
+ Klient do ścieżki komunikacji usługi elewacji używa `wsHttpBinding` `UserName` z typem poświadczeń klienta. Oznacza to, że klient używa nazwy użytkownika i hasła do uwierzytelniania w usłudze elewacji, a usługa fasada używa certyfikatu X. 509 do uwierzytelniania na kliencie. Konfiguracja powiązania wygląda podobnie do poniższego przykładu.  
   
 ```xml  
 <bindings>  
@@ -45,7 +45,7 @@ Ten przykładowy scenariusz pokazuje, jak przepływ informacji o tożsamości wy
 </bindings>  
 ```  
   
- Usługa fasady uwierzytelnia wywołującemu, korzystając z niestandardowego `UserNamePasswordValidator` implementacji. Dla celów demonstracyjnych uwierzytelniania tylko zapewnia zgodność nazwy użytkownika wywołującego prezentowane hasła. W rzeczywistych sytuacji prawdopodobnie uwierzytelnieniu użytkownika przy użyciu usługi Active Directory lub niestandardowego dostawcy członkostwa ASP.NET. Implementacja modułu sprawdzania poprawności, który znajduje się w `FacadeService.cs` pliku.  
+ Usługa elewacji uwierzytelnia obiekt wywołujący przy użyciu `UserNamePasswordValidator` implementacji niestandardowej. W celach demonstracyjnych uwierzytelnianie gwarantuje, że nazwa użytkownika wywołującego jest zgodna z przedstawionym hasłem. W świecie rzeczywistym użytkownik jest prawdopodobnie uwierzytelniany przy użyciu Active Directory lub niestandardowego dostawcy członkostwa ASP.NET. Implementacja modułu sprawdzania poprawności znajduje się w `FacadeService.cs` pliku.  
   
 ```  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
@@ -63,7 +63,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 }  
 ```  
   
- Niestandardowy moduł sprawdzania poprawności jest skonfigurowana do używania wewnątrz `serviceCredentials` zachowanie w pliku konfiguracji usługi fasady. To zachowanie umożliwia również konfigurowanie certyfikacie X.509.  
+ Niestandardowy moduł sprawdzania poprawności jest skonfigurowany do użycia wewnątrz `serviceCredentials` zachowania w pliku konfiguracji usługi elewacji. To zachowanie służy również do konfigurowania certyfikatu X. 509 usługi.  
   
 ```xml  
 <behaviors>  
@@ -92,8 +92,8 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 </behaviors>  
 ```  
   
-### <a name="communication-path-between-faade-service-and-backend-service"></a>Ścieżka komunikacji między usługą fasady i usługi zaplecza  
- Usługa fasady do ścieżki komunikacji usługi wewnętrznej bazy danych używa `customBinding` składający się z kilku elementów powiązania. Dwie rzeczy w ramach tego powiązania. Usługa ta uwierzytelnia usługa fasady i usługi zaplecza, aby upewnić się, że komunikacja jest bezpieczna i pochodzi z zaufanego źródła. Ponadto również przesyła tożsamości elementu wywołującego początkowej wewnątrz `Username` tokenu zabezpieczającego. W tym przypadku tylko nazwy użytkownika wywołującego początkowej są przesyłane do usługi zaplecza, hasło nie znajduje się w komunikacie. Jest to spowodowane usługi wewnętrznej bazy danych i relacje zaufania usługi fasady do uwierzytelniania obiektu wywołującego przed przekazaniem żądania do niego. Ponieważ usługa fasady uwierzytelnia do usługi zaplecza, usługi zaplecza mogą ufać informacji zawartych w żądaniu przesyłanych dalej.  
+### <a name="communication-path-between-faade-service-and-backend-service"></a>Ścieżka komunikacji między usługą elewacji a usługą zaplecza  
+ Podnosząca się do ścieżki komunikacji usługi wewnętrznej bazy danych `customBinding` używa, która składa się z kilku elementów powiązania. To powiązanie wykonuje dwie rzeczy. Usługa ta uwierzytelnia usługę fasady i usługę zaplecza, aby upewnić się, że komunikacja jest bezpieczna i pochodzi z zaufanego źródła. Ponadto również przesyła początkową tożsamość obiektu wywołującego wewnątrz `Username` tokenu zabezpieczającego. W takim przypadku tylko nazwa użytkownika początkowego obiektu wywołującego jest przesyłana do usługi wewnętrznej bazy danych, a hasło nie jest uwzględniane w komunikacie. Wynika to z faktu, że usługa zaplecza ufa usłudze elewacji do uwierzytelniania obiektu wywołującego przed przekazaniem do niego żądania. Ponieważ usługa fasady jest uwierzytelniana w usłudze wewnętrznej bazy danych, usługa zaplecza może ufać informacjom zawartym w żądaniu przekazywanym dalej.  
   
  Poniżej znajduje się Konfiguracja powiązania dla tej ścieżki komunikacji.  
   
@@ -109,11 +109,11 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 </bindings>  
 ```  
   
- [ \<Zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) element powiązania dba o przesyłania nazwy użytkownika i wyodrębniania początkowego obiektu wywołującego. [ \<WindowsStreamSecurity >](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md) i [ \<tcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) obsługi uwierzytelniania usługi frontonu i wewnętrznej bazy danych i ochrona wiadomości.  
+ Element powiązania [> zabezpieczeńbierzepoduwagępoczątkowątransmisjęiwyodrębnianienazwyużytkownika.\<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) WindowsStreamSecurity > i [ tcpTransport>znichkorzystaćzuwierzytelnianiaelewacjiiusługzapleczaorazochronykomunikatów\<](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) . [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)  
   
- Do przesyłania żądania, fasady implementacji usługi należy podać username początkowego wywołującego, tak że infrastruktura zabezpieczeń programu WCF można umieścić ten przekazany dalej komunikat. Username początkowego wywołującego znajduje się w implementacji usługi fasady ustawiając w `ClientCredentials` właściwość w wystąpieniu serwera proxy klienta usługi fasady używa do komunikowania się z usługą zaplecza.  
+ Aby przesłać dalej żądanie, implementacja nieelewacji usługi musi dostarczyć nazwę użytkownika początkowego wywołującego, aby infrastruktura zabezpieczeń WCF mogła je umieścić w przekazywanym komunikacie. Początkowa nazwa użytkownika wywołującego jest udostępniana w implementacji usługi fasadowej przez ustawienie jej we `ClientCredentials` właściwości w wystąpieniu serwera proxy klienta, która elewacji usługi używa do komunikowania się z usługą zaplecza.  
   
- Poniższy kod przedstawia sposób `GetCallerIdentity` metoda jest implementowana w usłudze fasady. Inne metody używają tego samego wzorca.  
+ Poniższy kod pokazuje, jak `GetCallerIdentity` Metoda jest zaimplementowana w usłudze elewacji. Inne metody używają tego samego wzorca.  
   
 ```  
 public string GetCallerIdentity()  
@@ -126,9 +126,9 @@ public string GetCallerIdentity()
 }  
 ```  
   
- Jak pokazano w poprzednim kodzie, hasło nie jest ustawiona na `ClientCredentials` , tylko nazwy użytkownika ustawiono właściwość. Infrastruktura zabezpieczeń WCF tworzy token zabezpieczający nazwy użytkownika bez hasła w tym przypadku, co jest dokładnie co jest wymagane w tym scenariuszu.  
+ Jak pokazano w poprzednim kodzie, hasło nie jest ustawione dla `ClientCredentials` właściwości, tylko nazwa użytkownika jest ustawiona. Infrastruktura zabezpieczeń WCF tworzy w tym przypadku token zabezpieczający username bez hasła, co jest dokładnie wymagane w tym scenariuszu.  
   
- W usłudze zaplecza informacji zawartych w tokenie zabezpieczającym nazwa użytkownika musi zostać uwierzytelnione. Domyślnie zabezpieczeń WCF próbuje mapowanie użytkownika do konta Windows przy użyciu podanego hasła. W tym przypadku jest nie podano hasła i usługi wewnętrznej bazy danych nie jest wymagane do uwierzytelniania nazwy użytkownika, ponieważ uwierzytelnianie zostało już wykonane przez usługa fasady. Aby zaimplementować tę funkcję w programie WCF, niestandardowe `UserNamePasswordValidator` zostanie podana, tylko wymusza, że nazwa użytkownika jest określona w tokenie i niewykonywanie żadnego dodatkowego uwierzytelniania.  
+ W usłudze zaplecza informacje zawarte w tokenie zabezpieczeń username muszą zostać uwierzytelnione. Domyślnie zabezpieczenia WCF próbują zmapować użytkownika na konto systemu Windows przy użyciu podanego hasła. W takim przypadku nie podano hasła i usługa zaplecza nie jest wymagana do uwierzytelnienia nazwy użytkownika, ponieważ uwierzytelnianie zostało już wykonane przez usługę elewacji. W celu zaimplementowania tej funkcji w programie `UserNamePasswordValidator` WCF zostanie udostępniona niestandardowa, która wymusza, że nazwa użytkownika jest określona w tokenie i nie wykonuje dodatkowego uwierzytelniania.  
   
 ```  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
@@ -149,7 +149,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 }  
 ```  
   
- Niestandardowy moduł sprawdzania poprawności jest skonfigurowana do używania wewnątrz `serviceCredentials` zachowanie w pliku konfiguracji usługi fasady.  
+ Niestandardowy moduł sprawdzania poprawności jest skonfigurowany do użycia wewnątrz `serviceCredentials` zachowania w pliku konfiguracji usługi elewacji.  
   
 ```xml  
 <behaviors>  
@@ -166,7 +166,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 </behaviors>  
 ```  
   
- Aby wyodrębnić informacje nazwy użytkownika i informacje o koncie usługi zaufanej fasady, korzysta z implementacji usługi zaplecza `ServiceSecurityContext` klasy. Poniższy kod przedstawia sposób, w jaki `GetCallerIdentity` metoda jest implementowana.  
+ Aby wyodrębnić informacje o nazwie użytkownika i informacje o koncie usługi zaufanej elewacji, implementacja usługi wewnętrznej bazy `ServiceSecurityContext` danych używa klasy. Poniższy kod pokazuje, `GetCallerIdentity` jak metoda jest zaimplementowana.  
   
 ```  
 public string GetCallerIdentity()  
@@ -209,10 +209,10 @@ public string GetCallerIdentity()
 }  
 ```  
   
- Informacje o koncie usługi fasady jest wyodrębniany przy użyciu `ServiceSecurityContext.Current.WindowsIdentity` właściwości. Aby uzyskać dostęp do informacji o obiekcie wywołującym początkowej, używa usługi wewnętrznej bazy danych `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` właściwości. Szuka `Identity` oświadczenie z typem `Name`. To oświadczenie jest generowany automatycznie przez infrastrukturę zabezpieczeń programu WCF z informacji zawartych w `Username` tokenu zabezpieczającego.  
+ Informacje o koncie usługi fasady są wyodrębniane `ServiceSecurityContext.Current.WindowsIdentity` przy użyciu właściwości. Aby uzyskać dostęp do informacji o początkowym wywołującym, usługa zaplecza używa `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` właściwości. Szuka `Identity` on zgłoszenia z typem `Name`. To zgłoszenie jest generowane automatycznie przez infrastrukturę zabezpieczeń WCF z informacji zawartych w `Username` tokenie zabezpieczającym.  
   
-## <a name="running-the-sample"></a>Działa aplikacja przykładowa  
- Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta. Można naciśnij klawisz ENTER w oknach konsoli usługi frontonu i zaplecza, aby zamknąć usługi.  
+## <a name="running-the-sample"></a>Uruchamianie przykładu  
+ Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu. Aby zamknąć usługi, możesz nacisnąć klawisz ENTER w oknach konsoli usługi elewacji i zaplecza.  
   
 ```  
 Username authentication required.  
@@ -230,13 +230,13 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- Plik wsadowy Setup.bat jest dołączone do zaufanych fasady przykładowy scenariusz umożliwia skonfigurowanie serwera przy użyciu certyfikatu odpowiedniego do uruchamiania usługi fasady wymagającego opartego na certyfikatach zabezpieczeń, aby uwierzytelniać się klient. Zapoznaj się z procedurą konfiguracji na końcu tego tematu, aby uzyskać szczegółowe informacje.  
+ Plik wsadowy Setup. bat dołączony do zaufanego przykładowego scenariusza zaufana fasady umożliwia skonfigurowanie serwera z odpowiednim certyfikatem w celu uruchomienia usługi fasady wymagającej zabezpieczeń opartych na certyfikatach do samodzielnego uwierzytelnienia klienta. Aby uzyskać szczegółowe informacje, zobacz procedurę instalacji na końcu tego tematu.  
   
- Poniżej zawiera krótkie omówienie różnych sekcji w plikach wsadowych.  
+ Poniżej przedstawiono krótkie omówienie różnych sekcji plików wsadowych.  
   
 - Tworzenie certyfikatu serwera.  
   
-     Następujące wiersze z pliku wsadowego Setup.bat jest utworzenie certyfikatu serwera, który ma być używany.  
+     Poniższe wiersze z pliku wsadowego Setup. bat tworzą certyfikat serwera do użycia.  
   
     ```  
     echo ************  
@@ -248,45 +248,45 @@ Press <ENTER> to terminate client.
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
-     `%SERVER_NAME%` Zmienna Określa nazwę serwera — wartość domyślna to hosta lokalnego. Certyfikat jest przechowywany w magazynie LocalMachine.  
+     `%SERVER_NAME%` Zmienna określa nazwę serwera — wartość domyślna to localhost. Certyfikat jest przechowywany w magazynie LocalMachine.  
   
-- Instalowanie usługi fasady certyfikat do magazynu zaufanych certyfikatów klienta.  
+- Instalowanie certyfikatu usługi elewacji w zaufanym magazynie certyfikatów klienta.  
   
-     Następujący wiersz kopiuje usługa fasady certyfikat w magazynie zaufanych osób klienta. Ten krok jest wymagany, ponieważ generowaną przez Makecert.exe certyfikaty nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony przez Microsoft — w tym kroku zapełnianie magazynu certyfikatów klienta z certyfikatu serwera nie jest wymagane.  
+     Poniższy wiersz umożliwia skopiowanie certyfikatu usługi elewacji do magazynu zaufanych osób klienta. Ten krok jest wymagany, ponieważ certyfikaty wygenerowane przez Makecert. exe nie są niejawnie zaufane przez system klienta. Jeśli masz już certyfikat, który znajduje się w zaufanym certyfikacie głównym klienta — na przykład certyfikat wystawiony przez firmę Microsoft — ten krok zapełniania magazynu certyfikatów klienta z certyfikatem serwera nie jest wymagany.  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 #### <a name="to-run-the-sample-on-the-same-machine"></a>Aby uruchomić przykład na tym samym komputerze  
   
-1. Upewnij się, że ścieżka zawiera folder, w którym znajduje się Makecert.exe.  
+1. Upewnij się, że ścieżka zawiera folder, w którym znajduje się Makecert. exe.  
   
-2. Uruchom Setup.bat jest z poziomu folderu instalacji przykładowej. Spowoduje to zainstalowanie wszystkich certyfikatów, które są wymagane do uruchomienia przykładu.  
+2. Uruchom setup. bat z przykładowego folderu instalacyjnego. Spowoduje to zainstalowanie wszystkich certyfikatów wymaganych do uruchomienia przykładu.  
   
-3. Uruchom BackendService.exe \BackendService\bin katalog w oknie konsoli oddzielne  
+3. Uruchom BackendService. exe z katalogu \BackendService\bin w osobnym oknie konsoli  
   
-4. Uruchom FacadeService.exe \FacadeService\bin katalog w oknie konsoli oddzielne  
+4. Uruchom FacadeService. exe z katalogu \FacadeService\bin w osobnym oknie konsoli  
   
-5. Uruchom Client.exe z \client\bin. Aktywność klienta jest wyświetlany w aplikacji konsolowej klienta.  
+5. Uruchamianie programu Client. exe z \client\bin. Aktywność klienta jest wyświetlana w aplikacji konsoli klienta.  
   
-6. Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+6. Jeśli klient i usługa nie mogą się komunikować, zobacz Wskazówki dotyczące [rozwiązywania problemów z przykładami programu WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-#### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić zasoby po próbki  
+#### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić po przykładzie  
   
-1. Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  
+1. Uruchom Oczyść. bat w folderze Samples po zakończeniu uruchamiania przykładu.  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  

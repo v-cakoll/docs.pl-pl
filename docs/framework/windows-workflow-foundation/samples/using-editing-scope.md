@@ -2,43 +2,43 @@
 title: Używanie zakresu edycji
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
-ms.openlocfilehash: d1e251abf2dd4d3f7ca15d66a4f5ea96e273a351
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 386c94e5c6761bb704efc9e48723d0e91a4aaf6b
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623823"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037800"
 ---
 # <a name="using-editing-scope"></a>Używanie zakresu edycji
-Niniejszy przykład pokazuje jak dzielić na partie zestaw zmian, dzięki czemu mogą zostać cofnięte w pojedynczą jednostkę atomic. Domyślnie akcje wykonywane przez autora projektanta działań są automatycznie zintegrowane system Cofnij/Ponów.  
+Ten przykład pokazuje, jak utworzyć wsadowy zestaw zmian, aby można je było cofnąć w pojedynczej niepodzielnej jednostce. Domyślnie akcje podejmowane przez autora projektanta działań są automatycznie integrowane z systemem cofania/ponawiania.  
   
 ## <a name="demonstrates"></a>Demonstracje  
- Edytowanie zakresu i Cofnij i ponów.  
+ Edytowanie zakresu i cofanie i ponawianie.  
   
-## <a name="discussion"></a>Dyskusja  
- W tym przykładzie pokazano, jak zestaw zmian do partii <xref:System.Activities.Presentation.Model.ModelItem> drzewa w pojedynczą jednostkę pracy. Należy pamiętać, że podczas tworzenia wiązania do <xref:System.Activities.Presentation.Model.ModelItem> wartości bezpośrednio z projektanta WPF, zmiany zostaną zastosowane automatycznie. Niniejszy przykład pokazuje, co należy zrobić po wielu do uwzględnienia w partii zmian przy użyciu kodu imperatywnego, zamiast pojedynczej zmiany.  
+## <a name="discussion"></a>Dyskusji  
+ Ten przykład pokazuje, jak wsadowo zestaw zmian <xref:System.Activities.Presentation.Model.ModelItem> w drzewie w ramach pojedynczej jednostki pracy. Należy pamiętać, że podczas <xref:System.Activities.Presentation.Model.ModelItem> tworzenia powiązań z wartościami bezpośrednio z projektanta WPF zmiany są stosowane automatycznie. Ten przykład pokazuje, co należy zrobić, gdy wiele zmian jest wykonywanych za pomocą bezwzględnego kodu, a nie pojedynczej zmiany.  
   
- W tym przykładzie trzy czynności są dodawane. Po rozpoczęciu edycji <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> jest wywoływana w wystąpieniu <xref:System.Activities.Presentation.Model.ModelItem>. Zmiany wprowadzone do <xref:System.Activities.Presentation.Model.ModelItem> drzewa w ramach tego zakresu edycji są przetwarzane wsadowo. <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> Polecenie <xref:System.Activities.Presentation.Model.EditingScope>, który może służyć do kontrolowania tego wystąpienia. Albo <xref:System.Activities.Presentation.Model.EditingScope.OnComplete%2A> lub <xref:System.Activities.Presentation.Model.EditingScope.OnRevert%2A> może być wywoływana albo zatwierdzenia lub Przywróć zakresu edycji.  
+ W tym przykładzie dodano trzy działania. Po rozpoczęciu <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> edycji jest wywoływana w <xref:System.Activities.Presentation.Model.ModelItem>wystąpieniu. Zmiany wprowadzone <xref:System.Activities.Presentation.Model.ModelItem> w drzewie w tym zakresie edycji są przetwarzane wsadowo. Polecenie zwraca element <xref:System.Activities.Presentation.Model.EditingScope>, który może służyć do kontrolowania tego wystąpienia. <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> <xref:System.Activities.Presentation.Model.EditingScope.OnComplete%2A> Lub<xref:System.Activities.Presentation.Model.EditingScope.OnRevert%2A> można wywołać w celu zatwierdzenia lub przywrócenia zakresu edycji.  
   
- Można także zagnieżdżać <xref:System.Activities.Presentation.Model.EditingScope> obiektów, które umożliwia wielu zestawów zmiany mają być śledzone jako część większych edycji zakres i można sterować oddzielnie. Scenariusz, w którym mogą korzystać z tej funkcji będzie podczas zmiany z wiele okien dialogowych musi być zadeklarowane lub przywrócić oddzielnie, w przypadku wszystkich zmian, które są traktowane jako jednej niepodzielnej operacji. W tym przykładzie są ułożone, za pomocą edycji zakresy <xref:System.Collections.ObjectModel.ObservableCollection%601> typu <xref:System.Activities.Presentation.Model.ModelEditingScope>. <xref:System.Collections.ObjectModel.ObservableCollection%601> Jest używany, dzięki czemu można zaobserwować głębokość zagnieżdżenia na powierzchni projektowej.  
+ Można również zagnieżdżać <xref:System.Activities.Presentation.Model.EditingScope> obiekty, co pozwala na śledzenie wielu zestawów zmian w ramach większego zakresu edycji i może być sterowane pojedynczo. Scenariusz, który może używać tej funkcji, będzie miał zastosowanie, gdy zmiany z wielu okien dialogowych muszą zostać zatwierdzone lub cofnięte oddzielnie, przy czym wszystkie zmiany są traktowane jako pojedyncza operacja niepodzielna. W tym przykładzie zakresy edycji są ułożone przy użyciu <xref:System.Collections.ObjectModel.ObservableCollection%601> typu. <xref:System.Activities.Presentation.Model.ModelEditingScope> <xref:System.Collections.ObjectModel.ObservableCollection%601> Jest używany, aby głębokość zagnieżdżenia mogła być obserwowana na powierzchni projektanta.  
   
-## <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+## <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Tworzenie i uruchamianie aplikacji przykładowej, a następnie użyj przycisków po lewej stronie, aby zmodyfikować przepływ pracy.  
+1. Kompiluj i uruchamiaj przykład, a następnie użyj przycisków po lewej stronie, aby zmodyfikować przepływ pracy.  
   
-2. Kliknij przycisk **Otwórz zakresu edycji**.  
+2. Kliknij pozycję **Otwórz zakres edytowania**.  
   
-    1. To polecenie wymaga <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> , tworzy zakresu edycji i wypycha go na stosie edycji.  
+    1. To polecenie wywołuje <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> , aby utworzyć zakres edycji i wypchnąć go na stos edycji.  
   
-    2. Trzy czynności zostaną następnie dodane do wybranych <xref:System.Activities.Presentation.Model.ModelItem>. Należy pamiętać, że jeśli zakresu edycji nie był on otwarty przy użyciu <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, trzy nowe działania zostanie wyświetlony na kanwie projektanta. Ponieważ ta operacja jest nadal oczekujące w ramach <xref:System.Activities.Presentation.Model.EditingScope>, Projektant nie jest jeszcze zaktualizowane.  
+    2. Następnie zostaną dodane trzy działania do wybranego <xref:System.Activities.Presentation.Model.ModelItem>. Należy pamiętać, że jeśli zakres edycji nie został otwarty za <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>pomocą programu, na kanwie projektanta zostaną wyświetlone trzy nowe działania. Ponieważ ta operacja nadal oczekuje w programie <xref:System.Activities.Presentation.Model.EditingScope>, Projektant nie został jeszcze zaktualizowany.  
   
-3. Naciśnij klawisz **Zamknij zakresu edycji** zatwierdzić zakresu edycji. Trzy czynności są wyświetlane w projektancie.  
+3. Naciśnij klawisz **Zamknij edytowanie zakresu** , aby zatwierdzić zakres edycji. W projektancie pojawiają się trzy działania.  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\UsingEditingScope`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\UsingEditingScope`

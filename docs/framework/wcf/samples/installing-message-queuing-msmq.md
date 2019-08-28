@@ -2,12 +2,12 @@
 title: Instalowanie usługi kolejkowania komunikatów (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 42e66029f8538877ded424f72cb6c829444d1ee0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 118143f2d434e9f4399c3e9141743fc0254b61ab
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935994"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039626"
 ---
 # <a name="installing-message-queuing-msmq"></a>Instalowanie usługi kolejkowania komunikatów (MSMQ)
 W poniższych procedurach pokazano, jak zainstalować usługę kolejkowania komunikatów 4,0 i kolejkowanie komunikatów 3,0.  
@@ -54,7 +54,7 @@ W poniższych procedurach pokazano, jak zainstalować usługę kolejkowania komu
 3. Wybierz pozycję Kolejkowanie komunikatów i kliknij pozycję **szczegóły**.  
   
     > [!NOTE]
-    >  Jeśli używasz programu, wybierz opcję serwer aplikacji, aby uzyskać dostęp do usługi kolejkowania komunikatów. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]  
+    > Jeśli używasz programu, wybierz opcję serwer aplikacji, aby uzyskać dostęp do usługi kolejkowania komunikatów. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]  
   
 4. Upewnij się, że opcja obsługa protokołu HTTP usługi MSMQ została wybrana na stronie szczegółów.  
   

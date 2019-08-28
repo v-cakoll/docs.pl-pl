@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, getting control patterns
 - getting, control patterns
 ms.assetid: 006c54c9-50bf-48d9-a855-9d62eb95603a
-ms.openlocfilehash: 8987526a572d3c9a239885407c19bd1ad3674f0e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7b194d9430f27fb85723a91f5786ed11a60bfa85
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968995"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040981"
 ---
 # <a name="get-supported-ui-automation-control-patterns"></a>Pobierz obsługiwane wzorce kontrolek automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "69968995"
 2. Wywołanie <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> w celu pobrania wszystkich wzorców kontrolek z elementu.  
   
 > [!CAUTION]
->  Zdecydowanie zaleca się, aby klient nie był używany <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>. Wydajność może być poważnie narażona na to, <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> że ta metoda wywołuje wewnętrznie dla każdego istniejącego wzorca kontrolki. Jeśli to możliwe, klient powinien wywołać <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> kluczowe wzorce.  
+> Zdecydowanie zaleca się, aby klient nie był używany <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>. Wydajność może być poważnie narażona na to, <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> że ta metoda wywołuje wewnętrznie dla każdego istniejącego wzorca kontrolki. Jeśli to możliwe, klient powinien wywołać <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> kluczowe wzorce.  
   
 ### <a name="obtain-a-specific-control-pattern"></a>Uzyskiwanie określonego wzorca kontroli  
   

@@ -4,12 +4,12 @@ description: Dowiedz się, jak wdrożyć aplikację platformy .NET dla Apache Sp
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: ca9e93a413622c84325ca9fc8bac17268b990c5a
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 77c2d93ae324b6acbf8fc8dc25cd3e4d1a652f48
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "69577060"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107354"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>Wdrażanie aplikacji platformy .NET dla Apache Spark w kostkach
 
@@ -18,17 +18,17 @@ W tym samouczku przedstawiono sposób wdrażania programu .NET dla aplikacji Apa
 Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 
 > [!div class="checklist"]
-> * Przygotuj pakiet Microsoft. Spark. Worker
-> * Publikowanie aplikacji platformy .NET Spark
-> * Wdrażanie aplikacji w kostkach danych
-> * Uruchamianie aplikacji
+> - Przygotuj pakiet Microsoft. Spark. Worker
+> - Publikowanie aplikacji platformy .NET Spark
+> - Wdrażanie aplikacji w kostkach danych
+> - Uruchamianie aplikacji
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
 Przed rozpoczęciem wykonaj następujące czynności:
 
-* Pobierz [interfejs wiersza polecenia](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html)datakosteks.
-* Pobierz [Install-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) na komputer lokalny. Jest to skrypt pomocnika używany później do kopiowania programu .NET pod kątem Apache Spark plików zależnych do węzłów procesu roboczego klastra platformy Spark.
+- Pobierz [interfejs wiersza polecenia](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html)datakosteks.
+- Pobierz [Install-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) na komputer lokalny. Jest to skrypt pomocnika używany później do kopiowania programu .NET pod kątem Apache Spark plików zależnych do węzłów procesu roboczego klastra platformy Spark.
 
 ## <a name="prepare-worker-dependencies"></a>Przygotowanie zależności procesu roboczego
 
@@ -62,9 +62,9 @@ Przed rozpoczęciem wykonaj następujące czynności:
 
 4. Przekaż następujące polecenie do rozproszonego systemu plików (na przykład DBFS), do którego klaster ma dostęp:
 
-   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: Ten plik JAR jest dołączany jako część pakietu NuGet [Microsoft. Spark](https://www.nuget.org/packages/Microsoft.Spark/) i znajduje się w katalogu danych wyjściowych kompilacji aplikacji.
-   * `<your app>.zip`
-   * Pliki (takie jak pliki zależności lub typowe dane dostępne dla każdego pracownika) lub zestawy (takie jak biblioteki DLL, które zawierają zdefiniowane przez użytkownika funkcje lub biblioteki, od których zależy aplikacja), zostaną umieszczone w katalogu roboczym każdego wykonawcy.
+   - `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: Ten plik JAR jest dołączany jako część pakietu NuGet [Microsoft. Spark](https://www.nuget.org/packages/Microsoft.Spark/) i znajduje się w katalogu danych wyjściowych kompilacji aplikacji.
+   - `<your app>.zip`
+   - Pliki (takie jak pliki zależności lub typowe dane dostępne dla każdego pracownika) lub zestawy (takie jak biblioteki DLL, które zawierają zdefiniowane przez użytkownika funkcje lub biblioteki, od których zależy aplikacja), zostaną umieszczone w katalogu roboczym każdego wykonawcy.
 
 ## <a name="deploy-to-databricks"></a>Wdrażanie w usłudze Databricks
 

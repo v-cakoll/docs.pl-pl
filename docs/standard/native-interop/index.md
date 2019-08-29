@@ -1,33 +1,33 @@
 ---
-title: Współdziałanie natywne — .NET
-description: Dowiedz się, jak współpracować z usługą składnikami macierzystymi na platformie .NET.
+title: Natywna współdziałanie — .NET
+description: Dowiedz się, jak interfejsować ze składnikami macierzystymi w programie .NET.
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: b01ea9c17db6da32755309d9c1c2359cecaa1155
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 3ca213bc7228d2e4337607df2d47b334c5bea14f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062714"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106807"
 ---
 # <a name="native-interoperability"></a>Współdziałanie natywne
 
-Następujące artykuły pokazują różne sposoby wykonywania "interoperacyjności macierzystej" na platformie .NET.
+W poniższych artykułach przedstawiono różne sposoby wykonywania "natywnych współdziałania" w programie .NET.
 
-Istnieje kilka powodów dlaczego warto mogą wywoływać kodu natywnego:
+Istnieje kilka przyczyn, dla których chcesz wywołać kod natywny:
 
-* Systemy operacyjne są dostarczane z dużą liczbą interfejsów API, które nie są obecne w bibliotekach klas zarządzanych. Podstawowy przykład w tym scenariuszu będzie dostęp do sprzętu lub systemu operacyjnego, funkcji zarządzania.
-* Podczas komunikowania się z innymi składnikami, które lub może tworzyć interfejsy ABI stylu języka C (natywnych interfejsów ABI), takie jak kod Java, który jest uwidaczniany za pomocą [interfejsem Java Native Interface (JNI)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) lub dowolnym innym języku zarządzanych, które może powodować składnika macierzystego.
-* W Windows większość oprogramowania instalowanego, takich jak pakiet Microsoft Office rejestruje składników COM, które reprezentują swoich programów i umożliwiają deweloperom Automatyzowanie je lub używać ich. Wymaga to interoperacyjności macierzystej.
+- Systemy operacyjne korzystają z dużej liczby interfejsów API, które nie znajdują się w zarządzanych bibliotekach klas. Głównym przykładem tego scenariusza będzie dostęp do funkcji zarządzania sprzętem lub systemem operacyjnym.
+- Komunikacja z innymi składnikami, które mają lub mogą tworzyć interfejsy ABI w stylu C (natywny interfejsy ABI), takie jak kod Java, który jest udostępniany za pośrednictwem [natywnego interfejsu Java (JNI)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) lub dowolnego innego języka zarządzanego, który może generować składnik macierzysty.
+- W systemie Windows większość oprogramowania instalowanego, takiego jak pakiet Microsoft Office, rejestruje składniki COM, które reprezentują swoje programy, i umożliwia deweloperom ich automatyzację lub korzystanie z nich. Wymaga to również natywnej współdziałania.
 
-Poprzedniej liście nie obejmuje wszystkich potencjalnych sytuacji i scenariusze, w których deweloper może chcesz/podobne/potrzebę do połączenia interfejsem z składnikami macierzystymi. Biblioteka klas programu .NET, na przykład korzysta z obsługi interoperacyjności macierzystej zaimplementować podejście liczbę interfejsów API, takich jak obsługa konsoli i manipulowania, dostęp do systemu plików i inne. Jest jednak należy pamiętać, że jest dostępna opcja w razie potrzeby.
+Poprzednia lista nie obejmuje wszystkich potencjalnych sytuacji i scenariuszy, w których deweloper powinien chcieć/lubić, jak ma to być interfejs ze składnikami macierzystymi. Biblioteka klas .NET, na przykład, używa natywnej obsługi współdziałania w celu zaimplementowania uczciwej liczby interfejsów API, takich jak obsługa konsoli i manipulowanie, dostęp do systemu plików i inne. Należy jednak pamiętać, że w razie potrzeby jest dostępna opcja.
 
 > [!NOTE]
-> Większość przykładów w tej sekcji zostaną przedstawione na potrzeby wszystkich trzech obsługiwanych platform dla platformy .NET Core (Windows, Linux i macOS). Kilka przykładów krótki i opisowy tylko jeden przykład jest jednak wyświetlany korzystający Windows nazwy plików i rozszerzenia (czyli "dll" jak biblioteki). Nie oznacza to, że te funkcje nie są dostępne w systemie Linux lub macOS, została wykonana jedynie dla wygody sake.
+> Większość przykładów w tej sekcji zostanie przedstawionych dla wszystkich trzech obsługiwanych platform dla platformy .NET Core (Windows, Linux i macOS). Jednakże w przypadku niektórych krótkich i ilustracyjnych przykładów jest wyświetlany tylko jeden przykład, w którym są używane nazwy i rozszerzenia systemu Windows (czyli "dll" dla bibliotek). Nie oznacza to, że te funkcje nie są dostępne w systemie Linux lub macOS, zostały wykonane tylko w celu wygody.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Wywołanie platformy (P/Invoke)](pinvoke.md)
-- [Marshaling typów](type-marshaling.md)
-- [Współdziałanie natywne najlepszych rozwiązań](best-practices.md)
+- [Kierowanie typów](type-marshaling.md)
+- [Najlepsze rozwiązania w zakresie współdziałania natywnego](best-practices.md)

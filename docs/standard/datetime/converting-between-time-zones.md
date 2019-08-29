@@ -1,5 +1,5 @@
 ---
-title: Konwertowanie godzin między strefami czasowymi
+title: Konwertowanie czasów między strefami czasowymi
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,108 +14,108 @@ helpviewer_keywords:
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e08e90f61429f01f360808866fdc3d963323ba23
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5b78e3985169954d71b479aa2e8a034f61afc01
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61901823"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106967"
 ---
-# <a name="converting-times-between-time-zones"></a>Konwertowanie godzin między strefami czasowymi
+# <a name="converting-times-between-time-zones"></a>Konwertowanie czasów między strefami czasowymi
 
-Staje się coraz ważniejsze dla każdej aplikacji, która współdziała z datami i godzinami, aby obsłużyć różnic między strefami czasowymi. Aplikacji nie jest już można założyć, że cały czas mogą być wyrażone według czasu lokalnego, który jest czas dostępny z <xref:System.DateTime> struktury. Na przykład strony sieci Web, która wyświetla bieżący czas w części Wschodniej Stanów Zjednoczonych będzie brakuje wiarygodności do klientów w Azji Wschodniej. W tym temacie wyjaśniono, jak przekonwertować godzin między strefami czasowymi, a także sposób konwertowania <xref:System.DateTimeOffset> wartości, które ma ograniczone rozpoznawanie strefy czasowej.
+Staje się coraz bardziej ważna dla wszystkich aplikacji, które współdziałają z datami i godzinami w celu obsługi różnic między strefami czasowymi. Aplikacja nie może już zakładać, że wszystkie godziny mogą być wyrażone w lokalnym czasie, który jest czasem dostępnym ze <xref:System.DateTime> struktury. Na przykład strona sieci Web, która wyświetla bieżący czas w środkowej części Stany Zjednoczone nie będzie mieć wiarygodności dla klienta w Azji Wschodniej. W tym temacie wyjaśniono, jak konwertować czasy z jednej strefy czasowej na inną, a także jak <xref:System.DateTimeOffset> konwertować wartości, które mają ograniczoną świadomość strefy czasowej.
 
 ## <a name="converting-to-coordinated-universal-time"></a>Konwertowanie na uniwersalny czas koordynowany
 
-Uniwersalny czas koordynowany (UTC) jest wysokiej precyzji, atomic czasu standardowego. Stref czasowych na świecie są wyrażane jako dodatnie lub ujemne przesunięcie względem czasu UTC. W związku z tym UTC zawiera rodzaj strefy czasowej bezpłatne lub strefy czasowej neutralne godzina. Użycie czasu UTC jest zalecane, gdy wartość typu date i ważne jest, przenośność czasu na komputerach. (Szczegóły i inne najlepsze rozwiązania przy użyciu daty i godziny można znaleźć [kodowania najlepszych rozwiązań za pomocą daty/godziny w programie .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973825(v=msdn.10)).) Konwertowanie poszczególnych stref czasowych UTC ułatwia porównania czas.
+Uniwersalny czas koordynowany (UTC) to standard czasu o dużej precyzji. Strefy czasowe na świecie są wyrażane jako dodatnie lub ujemne przesunięcia z czasu UTC. W ten sposób czas UTC zapewnia niezależny od strefy czasowej lub neutralną strefę czasową. Korzystanie z czasu UTC jest zalecane, gdy ważna jest data i godzina przenośna między komputerami. (Aby uzyskać szczegółowe informacje i inne najlepsze rozwiązania przy użyciu daty i godziny, zobacz [najlepsze rozwiązania dotyczące kodowania przy użyciu daty i godziny w .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973825(v=msdn.10))). Przekonwertowanie poszczególnych stref czasowych na czas UTC ułatwia porównanie czasu.
 
 > [!NOTE]
-> Można również wykonać serializację <xref:System.DateTimeOffset> strukturę, aby jednoznacznie reprezentują pojedynczy punkt w czasie. Ponieważ <xref:System.DateTimeOffset> obiektów przechowywanie wartości daty i godziny, wraz z jego przesunięcie względem czasu UTC, zawsze reprezentują określonego punktu w czasie w relacji na czas UTC.
+> Można również serializować <xref:System.DateTimeOffset> strukturę w sposób niejednoznaczny reprezentujący pojedynczy punkt w czasie. Ponieważ <xref:System.DateTimeOffset> obiekty przechowują wartość daty i godziny wraz z przesunięciem od czasu UTC, zawsze reprezentują określony punkt w czasie w zależności od czasu UTC.
 
-Najprostszym sposobem konwersji czasu UTC jest wywołać `static` (`Shared` w języku Visual Basic) <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType> metody. Dokładne konwersji, wykonywane przez metodę zależy od wartości `dateTime` parametru <xref:System.DateTime.Kind%2A> właściwości, jak pokazano w poniższej tabeli.
+Najprostszym sposobem przekonwertowania czasu na czas UTC jest wywołanie `static` metody (`Shared` w Visual Basic) <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType> . Dokładna konwersja wykonywana przez metodę zależy od wartości `dateTime` <xref:System.DateTime.Kind%2A> właściwości parametru, jak pokazano w poniższej tabeli.
 
 | `DateTime.Kind`            | Konwersja                                                                     |
 | -------------------------- | ------------------------------------------------------------------------------ |
-| `DateTimeKind.Local`       | Konwertuje czas lokalny na czas UTC.                                                    |
-| `DateTimeKind.Unspecified` | Przyjęto założenie, `dateTime` parametr jest czasem lokalnym i Konwertuje czas lokalny na czas UTC. |
-| `DateTimeKind.Utc`         | Zwraca `dateTime` parametru bez zmian.                                    |
+| `DateTimeKind.Local`       | Konwertuje czas lokalny na UTC.                                                    |
+| `DateTimeKind.Unspecified` | Przyjęto `dateTime` , że parametr jest czasem lokalnym i konwertuje czas lokalny na UTC. |
+| `DateTimeKind.Utc`         | `dateTime` Zwraca parametr bez zmian.                                    |
 
-Poniższy kod konwertuje bieżącego czasu lokalnego na UTC i wyświetla wynik do konsoli.
+Poniższy kod konwertuje bieżący czas lokalny na UTC i wyświetla wynik w konsoli programu.
 
 [!code-csharp[System.TimeZone2.Concepts#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#6)]
 [!code-vb[System.TimeZone2.Concepts#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#6)]
 
-Jeśli wartość daty i godziny nie reprezentuje czas lokalny lub czasu UTC, <xref:System.DateTime.ToUniversalTime%2A> metoda zwróci prawdopodobnie błędne wyniki. Można jednak użyć <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> metodę, aby przekonwertować datę i godzinę z określonej strefy czasowej. (Aby uzyskać szczegółowe informacje dotyczące pobierania <xref:System.TimeZoneInfo> obiekt, który reprezentuje docelowa strefa czasowa, zobacz [znajdowanie stref czasowych zdefiniowanych w systemie lokalnym](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md).) Poniższy kod używa <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> metodę, aby przekonwertować wschodni czas standardowy względem czasu UTC.
+Jeśli wartość daty i godziny nie reprezentuje czasu lokalnego lub czasu UTC, <xref:System.DateTime.ToUniversalTime%2A> Metoda prawdopodobnie zwróci błędny wynik. Można jednak użyć <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> metody, aby przekonwertować datę i godzinę z określonej strefy czasowej. (Aby uzyskać szczegółowe informacje na <xref:System.TimeZoneInfo> temat pobierania obiektu, który reprezentuje docelową strefę czasową, zobacz [Znajdowanie stref czasowych zdefiniowanych w systemie lokalnym](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)). Poniższy kod używa <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> metody do konwersji wschodniego czasu standardowego na UTC.
 
 [!code-csharp[System.TimeZone2.Concepts#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#7)]
 [!code-vb[System.TimeZone2.Concepts#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#7)]
 
-Należy zauważyć, że ta metoda wyrzuca <xref:System.ArgumentException> Jeśli <xref:System.DateTime> obiektu <xref:System.DateTime.Kind%2A> właściwości i strefy czasowej są niezgodne. Występuje niezgodność, jeśli <xref:System.DateTime.Kind%2A> właściwość <xref:System.DateTimeKind.Local?displayProperty=nameWithType> ale <xref:System.TimeZoneInfo> obiekt nie reprezentuje lokalnej strefy czasowej, lub jeśli <xref:System.DateTime.Kind%2A> właściwość jest <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> ale <xref:System.TimeZoneInfo> obiektu nie jest równa <xref:System.TimeZoneInfo.Utc?displayProperty=nameWithType>.
+Należy zauważyć, że ta metoda <xref:System.ArgumentException> zgłasza, <xref:System.DateTime> Jeśli <xref:System.DateTime.Kind%2A> właściwość obiektu i strefa czasowa są niezgodne. Niezgodność <xref:System.DateTime.Kind%2A> występuje <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> <xref:System.TimeZoneInfo> <xref:System.TimeZoneInfo.Utc?displayProperty=nameWithType> <xref:System.DateTime.Kind%2A> ,jeśli<xref:System.DateTimeKind.Local?displayProperty=nameWithType> właściwość jest, ale obiekt nie reprezentuje lokalnej strefy czasowej lub jeśli właściwość jest, ale obiektniejestrówny.<xref:System.TimeZoneInfo>
 
-Podjąć wszystkie te metody <xref:System.DateTime> wartości jako parametrów i zwrotu <xref:System.DateTime> wartość. Dla <xref:System.DateTimeOffset> wartości <xref:System.DateTimeOffset> ma strukturę <xref:System.DateTimeOffset.ToUniversalTime%2A> wystąpienia metody, która konwertuje datę i godzinę bieżącego wystąpienia względem czasu UTC. Poniższy przykład wywołuje <xref:System.DateTimeOffset.ToUniversalTime%2A> metodę konwersji czasu lokalnego oraz kilka innych razy uniwersalnego czasu koordynowanego (UTC).
+Wszystkie te metody przyjmują <xref:System.DateTime> wartości jako parametry i <xref:System.DateTime> zwracają wartość. W <xref:System.DateTimeOffset> przypadku wartości <xref:System.DateTimeOffset> struktura ma <xref:System.DateTimeOffset.ToUniversalTime%2A> metodę wystąpienia, która konwertuje datę i godzinę bieżącego wystąpienia na czas UTC. Poniższy przykład wywołuje <xref:System.DateTimeOffset.ToUniversalTime%2A> metodę w celu przekonwertowania czasu lokalnego i kilku innych czasów na uniwersalny czas koordynowany (UTC).
 
 [!code-csharp[System.DateTimeOffset.Methods#16](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Methods/cs/Methods.cs#16)]
 [!code-vb[System.DateTimeOffset.Methods#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Methods/vb/Methods.vb#16)]
 
-## <a name="converting-utc-to-a-designated-time-zone"></a>Konwertowanie wyznaczonym strefy czasowej UTC
+## <a name="converting-utc-to-a-designated-time-zone"></a>Konwertowanie czasu UTC na wydaną strefę czasową
 
-Aby dokonać konwersji czasu UTC na czas lokalny, zobacz sekcję "konwersji czasu UTC na czas lokalny", poniżej. Aby dokonać konwersji czasu UTC na czas w dowolnej strefie czasowej, wyznaczony, należy wywołać <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A> metody. Ta metoda przyjmuje dwa parametry:
+Aby skonwertować czasu UTC na czas lokalny, zapoznaj się z sekcją "Konwertowanie czasu UTC na czas lokalny" poniżej. Aby skonwertować czas UTC na godzinę w dowolnej wyznaczonej strefie czasowej, wywołaj <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A> metodę. Metoda przyjmuje dwa parametry:
 
-* UTC do przekonwertowania. Musi to być <xref:System.DateTime> wartości, których <xref:System.DateTime.Kind%2A> właściwość jest ustawiona na `Unspecified` lub `Utc`.
+- Czas UTC do przekonwertowania. Musi to być <xref:System.DateTime> wartość, której <xref:System.DateTime.Kind%2A> właściwość jest ustawiona na `Unspecified` lub `Utc`.
 
-* Strefa czasowa UTC, aby przekonwertować.
+- Strefa czasowa do przekonwertowania czasu UTC na.
 
-Poniższy kod konwertuje UTC Środkowa (czas standardowy).
+Poniższy kod konwertuje czas UTC do centralnego czasu standardowego.
 
 [!code-csharp[System.TimeZone2.Concepts#8](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#8)]
 [!code-vb[System.TimeZone2.Concepts#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#8)]
 
-## <a name="converting-utc-to-local-time"></a>Konwertowanie UTC na czas lokalny
+## <a name="converting-utc-to-local-time"></a>Konwertowanie czasu UTC na czas lokalny
 
-Aby dokonać konwersji czasu UTC na czas lokalny, należy wywołać <xref:System.DateTime.ToLocalTime%2A> metody <xref:System.DateTime> obiektu którego ma zostać przekonwertowany. Dokładne zachowanie metody zależy od wartości obiektu <xref:System.DateTime.Kind%2A> właściwości, jak pokazano w poniższej tabeli.
+Aby skonwertować czasu UTC na czas lokalny, wywołaj <xref:System.DateTime.ToLocalTime%2A> metodę <xref:System.DateTime> obiektu, którego czas chcesz skonwertować. Dokładne zachowanie metody zależy od wartości <xref:System.DateTime.Kind%2A> właściwości obiektu, jak pokazano w poniższej tabeli.
 
 | `DateTime.Kind`            | Konwersja                                                                               |
 | -------------------------- | ---------------------------------------------------------------------------------------- |
-| `DateTimeKind.Local`       | Zwraca <xref:System.DateTime> wartości bez zmian.                                      |
-| `DateTimeKind.Unspecified` | Zakłada się, że <xref:System.DateTime> wartość jest czasem UTC i konwertuje UTC na czas lokalny. |
-| `DateTimeKind.Utc`         | Konwertuje <xref:System.DateTime> wartość na czas lokalny.                                 |
+| `DateTimeKind.Local`       | <xref:System.DateTime> Zwraca wartość bez zmian.                                      |
+| `DateTimeKind.Unspecified` | Przyjęto założenie, że <xref:System.DateTime> wartość jest UTC i konwertowany czasu UTC na czas lokalny. |
+| `DateTimeKind.Utc`         | <xref:System.DateTime> Konwertuje wartość na czas lokalny.                                 |
 
 > [!NOTE]
-> <xref:System.TimeZone.ToLocalTime%2A?displayProperty=nameWithType> Metody zachowuje się tak samo `DateTime.ToLocalTime` metody. Trwa jeden parametr, czyli wartość daty i godziny do przekonwertowania.
+> Metoda zachowuje się identycznie z `DateTime.ToLocalTime`metodą. <xref:System.TimeZone.ToLocalTime%2A?displayProperty=nameWithType> Przyjmuje jeden parametr, który jest wartością daty i godziny do przekonwertowania.
 
-Czas, w dowolnym wyznaczonym strefie czasowej można przekonwertować na czas lokalny, używając `static` (`Shared` w języku Visual Basic) <xref:System.TimeZoneInfo.ConvertTime%2A?displayProperty=nameWithType> metody. Ta technika jest omówiona w następnej sekcji.
+Możesz również skonwertować czas w każdej określonej strefie czasowej na czas lokalny przy użyciu `static` metody (`Shared` w Visual Basic) <xref:System.TimeZoneInfo.ConvertTime%2A?displayProperty=nameWithType> . Ta technika została omówiona w następnej sekcji.
 
-## <a name="converting-between-any-two-time-zones"></a>Konwertowanie pomiędzy wszelkie dwie strefy czasowe
+## <a name="converting-between-any-two-time-zones"></a>Konwertowanie między dowolnymi dwiema strefami czasowymi
 
-Można wykonywać konwersje między wszystkie dwóch stref czasowych przy użyciu jednej z następujących dwóch `static` (`Shared` w języku Visual Basic) metody <xref:System.TimeZoneInfo> klasy:
+Można dokonać konwersji między dowolnymi dwoma strefami czasowymi przy użyciu jednej `static` z`Shared` następujących dwóch metod (w <xref:System.TimeZoneInfo> Visual Basic) klasy:
 
-* <xref:System.TimeZoneInfo.ConvertTime%2A>
+- <xref:System.TimeZoneInfo.ConvertTime%2A>
 
-  Ta metoda parametry mają wartość daty i godziny, aby dokonać konwersji, `TimeZoneInfo` obiekt, który reprezentuje strefy czasowej w wartości daty i godziny i `TimeZoneInfo` obiekt, który reprezentuje strefy czasowej można przekonwertować wartości daty i godziny do.
+  Parametry tej metody to wartość daty i godziny do przekonwertowania, `TimeZoneInfo` obiekt, który reprezentuje strefę czasową wartości daty i godziny `TimeZoneInfo` oraz obiekt, który reprezentuje strefę czasową do przekonwertowania wartości daty i godziny na.
 
-* <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A>
+- <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A>
 
-  Ta metoda parametry są daty i czasu wartość do przekonwertowania, identyfikator daty i strefy czasowej z wartości godziny oraz identyfikator strefy czasowej można przekonwertować wartości daty i godziny, aby.
+  Parametry tej metody są wartościami daty i godziny do przekonwertowania, identyfikatorem strefy czasowej wartości daty i godziny oraz identyfikatorem strefy czasowej do przekonwertowania wartości daty i godziny na.
 
-Obie metody wymagają, aby <xref:System.DateTime.Kind%2A> właściwości wartości daty i godziny, aby przekonwertować i <xref:System.TimeZoneInfo> identyfikator obiektu lub strefy czasowej, który reprezentuje jego strefa czasowa odnoszą się do siebie nawzajem. W przeciwnym razie <xref:System.ArgumentException> zgłaszany. Na przykład jeśli `Kind` właściwości wartości daty i godziny `DateTimeKind.Local`, jest zgłaszany wyjątek, jeśli `TimeZoneInfo` obiekt przekazany jako parametr do metody nie jest równa `TimeZoneInfo.Local`. Również jest zgłaszany wyjątek, jeśli identyfikator, który został przekazany jako parametr do metody nie jest równa `TimeZoneInfo.Local.Id`.
+Obie metody wymagają, <xref:System.DateTime.Kind%2A> aby Właściwość daty i godziny była konwertowana <xref:System.TimeZoneInfo> oraz identyfikator obiektu lub strefy czasowej, który reprezentuje strefę czasową, odpowiada siebie. W przeciwnym razie jest zgłaszany. <xref:System.ArgumentException> Na przykład jeśli `Kind` Właściwość daty i godziny ma `DateTimeKind.Local`wartość, `TimeZoneInfo` wyjątek jest zgłaszany, jeśli obiekt przeszedł jako `TimeZoneInfo.Local`parametr do metody nie jest równy. Wyjątek jest zgłaszany również wtedy, gdy identyfikator przesłany jako parametr do metody nie jest równy `TimeZoneInfo.Local.Id`.
 
-W poniższym przykładzie użyto <xref:System.TimeZoneInfo.ConvertTime%2A> metod konwertowania z Hawaje (czas standardowy) na czas lokalny.
+W poniższym przykładzie użyto <xref:System.TimeZoneInfo.ConvertTime%2A> metody do konwersji z "hawajski" czasu standardowego na czas lokalny.
 
 [!code-csharp[System.TimeZone2.Concepts#9](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#9)]
 [!code-vb[System.TimeZone2.Concepts#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#9)]
 
 ## <a name="converting-datetimeoffset-values"></a>Konwertowanie wartości DateTimeOffset
 
-Wartości daty i godziny, które są reprezentowane przez <xref:System.DateTimeOffset> obiekty nie są w pełni strefy czasowej wiedzieć, ponieważ obiekt jest oddzielone od strefy czasowej w momencie konkretyzacji. Jednak w wielu przypadkach aplikacji po prostu musi przekonwertować datę i czas oparty na dwa różne przesunięcia względem czasu UTC, a nie na godzinę w szczególności stref czasowych. Aby wykonać tę konwersję, należy wywołać bieżącego wystąpienia <xref:System.DateTimeOffset.ToOffset%2A> metody. Pojedynczy parametr metody jest przesunięcie nowe wartość daty i godziny, metoda jest do zwrócenia.
+Wartości daty i godziny reprezentowane przez <xref:System.DateTimeOffset> obiekty nie są w pełni obsługiwane przez strefę, ponieważ obiekt jest nieskojarzony ze strefą czasową podczas tworzenia wystąpienia. Jednak w wielu przypadkach aplikacja po prostu musi przekonwertować datę i godzinę na podstawie dwóch różnych przesunięć od czasu UTC, a nie w określonych strefach czasowych. Aby wykonać tę konwersję, można wywołać <xref:System.DateTimeOffset.ToOffset%2A> metodę bieżącego wystąpienia. Pojedynczy parametr metody jest przesunięciem nowej wartości daty i godziny, która ma zostać zwrócona przez metodę.
 
-Na przykład, jeśli data i godzina użytkownika żądanie dla strony sieci Web jest znany i jest serializowana jako ciąg w formacie MM/dd/rrrr hh: mm: zzzz, następujące `ReturnTimeOnServer` metoda konwertuje tej wartości daty i godziny na datę i godzinę na serwerze sieci Web.
+Jeśli na przykład data i godzina żądania użytkownika dla strony sieci Web jest znana i jest serializowana jako ciąg w formacie mm/dd/rrrr hh: mm: SS zzzz, następująca `ReturnTimeOnServer` Metoda konwertuje wartość daty i godziny na serwer sieci Web.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/TimeConversions.cs#1)]
 [!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions.vb#1)] 
 
-Jeśli metoda jest przekazywany ciąg "1/9/2007 5:32:07-05: 00", która reprezentuje datę i godzinę w strefie czasowej pięć godziny wcześniejszy niż w formacie UTC, zwraca 1/9/2007 3:32:07: 00 -07:00 serwerem znajdującym się w Stanach Zjednoczonych Pacyficznego standardowa strefy czasowej.
+Jeśli metoda jest przenoszona jako ciąg "9/1/2007 5:32:07 -05:00", który reprezentuje datę i godzinę w strefie czasowej 5 godzin wcześniejszą niż UTC, zwraca 9/1/2007 3:32:07 AM-07:00 dla serwera znajdującego się w Stanach Zjednoczonych Standardowa strefa czasowa (pacyficzny).
 
-<xref:System.TimeZoneInfo> Klasa zawiera także przeciążenia <xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType> metodę, która wykonuje konwersjami stref czasowych przy użyciu <xref:System.DateTimeOffset.ToOffset(System.TimeSpan)> wartości. Parametry metody są <xref:System.DateTimeOffset> wartość i odwołania do strefy czasowej, do której ma być przekonwertowany czasu. Wywołanie metody zwraca <xref:System.DateTimeOffset> wartość. Na przykład `ReturnTimeOnServer` metody w poprzednim przykładzie można dopasować w następujący sposób, aby wywołać <xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29> metody.
+Klasa zawiera również Przeciążenie <xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType> metody, która wykonuje konwersje strefy czasowej z <xref:System.DateTimeOffset.ToOffset(System.TimeSpan)> wartościami. <xref:System.TimeZoneInfo> Parametry metody są <xref:System.DateTimeOffset> wartością i odwołaniem do strefy czasowej, do której ma zostać przekonwertowany czas. Wywołanie metody zwraca <xref:System.DateTimeOffset> wartość. Na przykład `ReturnTimeOnServer` metodę w poprzednim przykładzie można napisać ponownie w następujący sposób, aby <xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29> wywołać metodę.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/timeconversions2.cs#2)]
 [!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions2.vb#2)]

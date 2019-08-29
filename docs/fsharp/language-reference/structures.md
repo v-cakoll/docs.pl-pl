@@ -2,12 +2,12 @@
 title: Struktury
 description: Dowiedz się F# więcej o strukturze, typ obiektu kompaktowego jest często bardziej wydajny niż Klasa dla typów z niewielką ilością danych i prostym zachowaniem.
 ms.date: 05/16/2016
-ms.openlocfilehash: e638b450fe43e0993c9980cade246c3f26d25e2d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1e9652cc4776e4d1d52eb20e41b6dd87a6c5ba05
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630773"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106823"
 ---
 # <a name="structures"></a>Struktury
 
@@ -66,10 +66,10 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 Struktura "`byref`like" w F# jest typem wartości związanym ze stosem. Nigdy nie jest przydzielany na zarządzanym stosie. `byref`Struktura przypominająca podobne rozwiązanie jest przydatna w programowaniu o wysokiej wydajności, ponieważ jest wymuszana z zestawem silnych sprawdzeń i bez przechwycenia. Reguły są następujące:
 
-* Mogą one być używane jako parametry funkcji, parametry metody, zmienne lokalne, Metoda Return.
-* Nie mogą być statyczne ani składowe wystąpień klasy ani normalnej struktury.
-* Nie mogą być przechwytywane przez żadną konstrukcję`async` zamknięcia (metody lub wyrażenia lambda).
-* Nie mogą być używane jako parametr generyczny.
+- Mogą one być używane jako parametry funkcji, parametry metody, zmienne lokalne, Metoda Return.
+- Nie mogą być statyczne ani składowe wystąpień klasy ani normalnej struktury.
+- Nie mogą być przechwytywane przez żadną konstrukcję`async` zamknięcia (metody lub wyrażenia lambda).
+- Nie mogą być używane jako parametr generyczny.
 
 Chociaż te reguły bardzo zdecydowanie ograniczają użycie, robią to w celu zapewnienia bezpieczeństwa obliczeń o wysokiej wydajności w bezpieczny sposób.
 

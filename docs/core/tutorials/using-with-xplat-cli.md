@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 88e9501a776a026a311c5002674c15acf2324f2b
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: a680a4b58927d915e887eea43a72983a5b349682
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868592"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105051"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Rozpoczynanie pracy z platformą .NET Core w systemie Windows/Linux/macOS przy użyciu wiersza polecenia
 
@@ -47,8 +47,8 @@ Wykonajmy szybkie wskazówki:
 
    Plik projektu określa wszystko, co jest potrzebne do przywrócenia zależności i skompilowania programu.
 
-   * `OutputType` Tag określa, że tworzysz plik wykonywalny, innymi słowy, Aplikacja konsolowa.
-   * Tag `TargetFramework` określa, która implementacja platformy .NET jest docelowa. W zaawansowanym scenariuszu można określić wiele platform docelowych i skompilować je do wszystkich w ramach jednej operacji. W tym samouczku dojdziemy do kompilowania tylko dla platformy .NET Core 2,1.
+   - `OutputType` Tag określa, że tworzysz plik wykonywalny, innymi słowy, Aplikacja konsolowa.
+   - Tag `TargetFramework` określa, która implementacja platformy .NET jest docelowa. W zaawansowanym scenariuszu można określić wiele platform docelowych i skompilować je do wszystkich w ramach jednej operacji. W tym samouczku dojdziemy do kompilowania tylko dla platformy .NET Core 2,1.
 
    `Program.cs`:
 

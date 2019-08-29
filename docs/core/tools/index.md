@@ -1,105 +1,105 @@
 ---
-title: Narzędzia programu .NET core interfejsu wiersza polecenia (CLI)
-description: Przegląd funkcji i narzędzi .NET Core interfejsu wiersza polecenia (CLI).
+title: Narzędzia interfejsu wiersza polecenia (CLI) platformy .NET Core
+description: Omówienie narzędzi i funkcji interfejsu wiersza polecenia (CLI) platformy .NET Core.
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: ff96023dd0b161271e146f7a7e69924c9db9e769
-ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
+ms.openlocfilehash: 20a083f3e7496521243bebd6585a48c8a562c548
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67569517"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105047"
 ---
-# <a name="net-core-command-line-interface-cli-tools"></a>Narzędzia interfejsu wiersza polecenia (CLI) platformy .NET core
+# <a name="net-core-command-line-interface-cli-tools"></a>Narzędzia interfejsu wiersza polecenia (CLI) platformy .NET Core
 
-Interfejsu wiersza polecenia (CLI) platformy .NET Core to nowe łańcucha narzędzi i platform do tworzenia aplikacji .NET. Interfejs wiersza polecenia jest podstawę, na które narzędzia wyższego poziomu, takie jak umieścić zintegrowanych środowisk projektowych (IDE), edytory i koordynatorów kompilacji.
+Interfejs wiersza polecenia platformy .NET Core (CLI) to nowe Międzyplatformowe łańcucha narzędzi do tworzenia aplikacji platformy .NET. Interfejs wiersza polecenia jest podstawą, na której można zawiesić narzędzia wyższego poziomu, takie jak zintegrowane środowiska deweloperskie (środowisk IDE), Edytory i koordynatorzy kompilacji.
 
 ## <a name="installation"></a>Instalacja
 
-Użyj natywnych instalatorów lub za pomocą skryptów powłoki instalacji:
+Użyj natywnych instalatorów lub użyj skryptów powłoki instalacji:
 
-* Natywnych instalatorów są używane przede wszystkim na maszynach dewelopera i natywne za każdym obsługiwanych platform Zainstaluj mechanizm, na przykład DEB pakiety na pakiety MSI lub Ubuntu na Windows. Te pliki instalacyjne zainstalować i skonfigurować środowisko do użycia przez dewelopera, ale wymagają uprawnień administratora na komputerze. Możesz wyświetlić instrukcje dotyczące instalacji w [Przewodnik instalacji platformy .NET Core](https://aka.ms/dotnetcoregs).
-* Skrypty powłoki są głównie używane do konfigurowania serwerów kompilacji lub gdy chcesz zainstalować narzędzia bez uprawnień administracyjnych. Zainstaluj skrypty wymagań wstępnych nie należy instalować na komputerze, który musi zostać zainstalowany ręcznie. Aby uzyskać więcej informacji, zobacz [zainstalować temat referencyjny skryptu](dotnet-install-script.md). Aby uzyskać informacji na temat sposobu konfigurowania interfejsu wiersza polecenia na serwerze kompilacji ciągłej integracji (CI), zobacz [przy użyciu zestawu .NET Core SDK i narzędzia w ciągłej integracji (CI)](using-ci-with-cli.md).
+- Natywne Instalatory są używane przede wszystkim na maszynach deweloperskich i używają natywnego mechanizmu instalacji na platformie, na przykład DEB pakiety w pakietach Ubuntu i MSI w systemie Windows. Te Instalatory instalują i konfigurują środowisko do natychmiastowego użytku przez dewelopera, ale wymagają uprawnień administracyjnych na komputerze. Instrukcje dotyczące instalacji można wyświetlić w podręczniku [instalacji programu .NET Core](https://aka.ms/dotnetcoregs).
+- Skrypty powłoki są używane głównie do konfigurowania serwerów kompilacji lub do instalowania narzędzi bez uprawnień administracyjnych. Skrypty instalacji nie instalują wstępnie wymaganych składników na komputerze, które należy zainstalować ręcznie. Aby uzyskać więcej informacji, zobacz [temat informacje o skrypcie instalacji](dotnet-install-script.md). Aby uzyskać informacje na temat sposobu konfigurowania interfejsu wiersza polecenia na serwerze kompilacji ciągłej integracji (CI), zobacz [używanie zestaw .NET Core SDK i narzędzi w ciągłej integracji (ci)](using-ci-with-cli.md).
 
-Domyślnie interfejs wiersza polecenia instaluje w sposób side-by-side (SxS) tak wielu wersji narzędzi interfejsu wiersza polecenia mogą współistnieć na jednym komputerze. Określenie, która wersja jest używana na komputerze, gdzie jest zainstalowanych wiele wersji zostało wyjaśnione bardziej szczegółowo w [sterownika](#driver) sekcji.
+Domyślnie interfejs wiersza polecenia jest instalowany w sposób równoległy (SxS), dzięki czemu wiele wersji narzędzi interfejsu wiersza polecenia może współistnieć na jednej maszynie. Określanie, która wersja jest używana na komputerze, na którym zainstalowano wiele wersji, wyjaśniono bardziej szczegółowo w sekcji [sterownika](#driver) .
 
-## <a name="cli-commands"></a>Polecenia interfejsu wiersza polecenia
+## <a name="cli-commands"></a>Poleceń interfejsu wiersza polecenia
 
 Następujące polecenia są instalowane domyślnie:
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-**Podstawowe polecenia**
+**Polecenia podstawowe**
 
-* [new](dotnet-new.md)
-* [restore](dotnet-restore.md)
-* [Kompilacja](dotnet-build.md)
-* [publish](dotnet-publish.md)
-* [run](dotnet-run.md)
-* [Test](dotnet-test.md)
-* [vstest](dotnet-vstest.md)
-* [pakiet](dotnet-pack.md)
-* [Migracja](dotnet-migrate.md)
-* [czyszczenie](dotnet-clean.md)
-* [sln](dotnet-sln.md)
-* [Pomoc](dotnet-help.md)
-* [store](dotnet-store.md)
+- [new](dotnet-new.md)
+- [restore](dotnet-restore.md)
+- [utworzenia](dotnet-build.md)
+- [publish](dotnet-publish.md)
+- [run](dotnet-run.md)
+- [badan](dotnet-test.md)
+- [VSTest](dotnet-vstest.md)
+- [pakiet](dotnet-pack.md)
+- [dokonać](dotnet-migrate.md)
+- [czyst](dotnet-clean.md)
+- [sln](dotnet-sln.md)
+- [Pomoc](dotnet-help.md)
+- [zachować](dotnet-store.md)
 
 **Polecenia modyfikacji projektu**
 
-* [Dodaj pakiet](dotnet-add-package.md)
-* [Dodawanie odwołania](dotnet-add-reference.md)
-* [Usuń pakiet](dotnet-remove-package.md)
-* [Usuwanie odwołań](dotnet-remove-reference.md)
-* [Odwołanie do listy](dotnet-list-reference.md)
+- [Dodaj pakiet](dotnet-add-package.md)
+- [Dodaj odwołanie](dotnet-add-reference.md)
+- [Usuń pakiet](dotnet-remove-package.md)
+- [Usuń odwołanie](dotnet-remove-reference.md)
+- [odwołanie do listy](dotnet-list-reference.md)
 
-**Zaawansowane polecenia**
+**Polecenia Zaawansowane**
 
-* [Usuń nuget](dotnet-nuget-delete.md)
-* [Zmienne lokalne nuget](dotnet-nuget-locals.md)
-* [nuget wypychania](dotnet-nuget-push.md)
-* [msbuild](dotnet-msbuild.md)
-* [skrypt instalacji DotNet](dotnet-install-script.md)
+- [Usuwanie NuGet](dotnet-nuget-delete.md)
+- [Ustawienia regionalne NuGet](dotnet-nuget-locals.md)
+- [wypychanie NuGet](dotnet-nuget-push.md)
+- [msbuild](dotnet-msbuild.md)
+- [skrypt instalacji dotnet](dotnet-install-script.md)
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-**Podstawowe polecenia**
+**Polecenia podstawowe**
 
-* [new](dotnet-new.md)
-* [restore](dotnet-restore.md)
-* [Kompilacja](dotnet-build.md)
-* [publish](dotnet-publish.md)
-* [run](dotnet-run.md)
-* [Test](dotnet-test.md)
-* [vstest](dotnet-vstest.md)
-* [pakiet](dotnet-pack.md)
-* [Migracja](dotnet-migrate.md)
-* [czyszczenie](dotnet-clean.md)
-* [sln](dotnet-sln.md)
+- [new](dotnet-new.md)
+- [restore](dotnet-restore.md)
+- [utworzenia](dotnet-build.md)
+- [publish](dotnet-publish.md)
+- [run](dotnet-run.md)
+- [badan](dotnet-test.md)
+- [VSTest](dotnet-vstest.md)
+- [pakiet](dotnet-pack.md)
+- [dokonać](dotnet-migrate.md)
+- [czyst](dotnet-clean.md)
+- [sln](dotnet-sln.md)
 
 **Polecenia modyfikacji projektu**
 
-* [Dodaj pakiet](dotnet-add-package.md)
-* [Dodawanie odwołania](dotnet-add-reference.md)
-* [Usuń pakiet](dotnet-remove-package.md)
-* [Usuwanie odwołań](dotnet-remove-reference.md)
-* [Odwołanie do listy](dotnet-list-reference.md)
+- [Dodaj pakiet](dotnet-add-package.md)
+- [Dodaj odwołanie](dotnet-add-reference.md)
+- [Usuń pakiet](dotnet-remove-package.md)
+- [Usuń odwołanie](dotnet-remove-reference.md)
+- [odwołanie do listy](dotnet-list-reference.md)
 
-**Zaawansowane polecenia**
+**Polecenia Zaawansowane**
 
-* [Usuń nuget](dotnet-nuget-delete.md)
-* [Zmienne lokalne nuget](dotnet-nuget-locals.md)
-* [nuget wypychania](dotnet-nuget-push.md)
-* [msbuild](dotnet-msbuild.md)
-* [skrypt instalacji DotNet](dotnet-install-script.md)
+- [Usuwanie NuGet](dotnet-nuget-delete.md)
+- [Ustawienia regionalne NuGet](dotnet-nuget-locals.md)
+- [wypychanie NuGet](dotnet-nuget-push.md)
+- [msbuild](dotnet-msbuild.md)
+- [skrypt instalacji dotnet](dotnet-install-script.md)
 
 ---
 
-Interfejs wiersza polecenia przyjmuje model rozszerzeń, który umożliwia określenie dodatkowych narzędzi dla projektów. Aby uzyskać więcej informacji, zobacz [modelu rozszerzeń interfejsu wiersza polecenia platformy .NET Core](extensibility.md) tematu.
+Interfejs wiersza polecenia przyjmuje model rozszerzalności, który pozwala określić dodatkowe narzędzia dla projektów. Aby uzyskać więcej informacji, zobacz temat dotyczący [modelu rozszerzalności interfejs wiersza polecenia platformy .NET Core](extensibility.md) .
 
-## <a name="command-structure"></a>Struktura polecenia
+## <a name="command-structure"></a>Struktura poleceń
 
-Struktura polecenia interfejsu wiersza polecenia składa się z [sterownika ("dotnet")](#driver), [polecenie](#command)i ewentualnie polecenia [argumenty](#arguments) i [opcje](#options). Zostanie wyświetlony ten wzorzec w przypadku większości operacji interfejsu wiersza polecenia, takie jak tworzenie nowej aplikacji konsoli i uruchamiając go z poziomu wiersza polecenia jako następujące polecenia, Pokaż podczas wykonywania z katalogu o nazwie *moja_aplikacja*:
+Struktura poleceń interfejsu wiersza polecenia składa się ze [sterownika ("dotnet")](#driver), [polecenia](#command)oraz możliwych [argumentów](#arguments) i [opcji](#options)polecenia. Ten wzorzec jest widoczny w większości operacji interfejsu wiersza polecenia, takich jak tworzenie nowej aplikacji konsolowej i uruchamianie jej z poziomu wiersza poleceń, ponieważ następujące polecenia pokazują, że są wykonywane z katalogu o nazwie *my_app*:
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
@@ -122,35 +122,35 @@ dotnet /build_output/my_app.dll
 
 ### <a name="driver"></a>Sterownik
 
-Nosi nazwę sterownika [dotnet](dotnet.md) i ma dwa odpowiedzialności, albo uruchamianie [zależny od struktury aplikacji](../deploying/index.md) lub wykonywania polecenia. 
+Sterownik nosi nazwę [dotnet](dotnet.md) i ma dwie obowiązki, uruchamiają [aplikację zależną od platformy](../deploying/index.md) lub wykonując polecenie. 
 
-Uruchamianie aplikacji zależny od struktury, na przykład określić aplikację po sterownika, `dotnet /path/to/my_app.dll`. Podczas wykonywania polecenia z folderu, w którym znajduje się biblioteki DLL z aplikacji, po prostu wykonaj `dotnet my_app.dll`. Jeśli chcesz użyć określonej wersji środowiska uruchomieniowego programu .NET Core, użyj `--fx-version <VERSION>` opcji (zobacz [polecenia dotnet](dotnet.md) odwołania).
+Aby uruchomić aplikację zależną od platformy, należy określić aplikację po stronie sterownika, na przykład `dotnet /path/to/my_app.dll`. Gdy wykonujesz polecenie z folderu, w którym znajduje się biblioteka DLL aplikacji, po prostu wykonaj `dotnet my_app.dll`. Jeśli chcesz użyć określonej wersji środowiska uruchomieniowego platformy .NET Core, użyj `--fx-version <VERSION>` opcji (zobacz informacje dotyczące [polecenia dotnet](dotnet.md) ).
 
-Podczas dostarczania polecenia do sterownika, `dotnet.exe` rozpoczyna się proces wykonywania polecenia interfejsu wiersza polecenia. Na przykład:
+Po podaniu polecenia do sterownika program `dotnet.exe` uruchamia proces wykonywania poleceń interfejsu wiersza polecenia. Na przykład:
 
 ```bash
 > dotnet build
 ```
 
-Po pierwsze sterownik Określa wersję zestawu SDK do użycia. Jeśli ma nie ["global.json"](global-json.md), służy najnowszą wersję zestawu SDK, które są dostępne. Może to być w wersji zapoznawczej albo stabilną wersję, w zależności od tego, co to jest najnowsze na komputerze.  Po określeniu wersji zestawu SDK wykonuje polecenie.
+Najpierw sterownik Określa wersję zestawu SDK do użycia. Jeśli nie ma pliku ["Global. JSON"](global-json.md), używana jest Najnowsza wersja zestawu SDK. Może to być wersja zapoznawcza lub stabilna, w zależności od tego, co jest najnowsze na komputerze.  Po ustaleniu wersji zestawu SDK wykonuje polecenie.
 
 ### <a name="command"></a>Polecenie
 
-Polecenie wykonuje akcję. Na przykład `dotnet build` kompilowany jest kod. `dotnet publish` publikuje kodu. Polecenia są implementowane jako aplikacji konsoli za pomocą `dotnet {command}` Konwencji.
+Polecenie wykonuje akcję. Na przykład `dotnet build` kompiluje kod. `dotnet publish`publikuje kod. Polecenia są implementowane jako Aplikacja konsolowa przy użyciu `dotnet {command}` Konwencji.
 
 ### <a name="arguments"></a>Argumenty
 
-Argumenty, które należy przekazać w wierszu polecenia są argumenty polecenia wywoływane. Na przykład podczas wykonywania `dotnet publish my_app.csproj`, `my_app.csproj` argument określa projekt do publikowania i jest przekazywany do `publish` polecenia.
+Argumenty przekazywane do wiersza polecenia są argumentami wywoływanego polecenia. Na przykład podczas wykonywania `dotnet publish my_app.csproj` `my_app.csproj` argument wskazuje projekt do opublikowania `publish` i jest przesyłany do polecenia.
 
 ### <a name="options"></a>Opcje
 
-Opcje, które należy przekazać w wierszu polecenia są opcje polecenia wywoływane. Na przykład podczas wykonywania `dotnet publish --output /build_output`, `--output` opcję i jej wartość są przekazywane do `publish` polecenia.
+Opcje, które są przekazywane w wierszu polecenia są opcje wywoływanego polecenia. Na przykład podczas wykonywania `dotnet publish --output /build_output` `--output` , opcja i jej `publish` wartość są przesyłane do polecenia.
 
-## <a name="migration-from-projectjson"></a>Migracja z pliku project.json
+## <a name="migration-from-projectjson"></a>Migracja z pliku Project. JSON
 
-Jeśli używasz narzędzia do tworzenia w wersji 2 *project.json*— na podstawie projektów, zapoznaj się z [migracji dotnet](dotnet-migrate.md) zawiera informacje na temat migracji projektu do programu MSBuild / *.csproj*do użytku z wersji narzędzia. Dla platformy .NET Core projektów utworzonych przed wydaniem narzędzi w wersji 2, ręcznie zaktualizować projekt, postępując zgodnie ze wskazówkami w [migrowanie ze środowiska DNX, .NET Core interfejsu wiersza polecenia (project.json)](../migration/from-dnx.md) , a następnie użyj `dotnet migrate` lub bezpośrednio uaktualnienia Twoich projektów.
+Jeśli użyto narzędzi w wersji zapoznawczej 2 do tworzenia projektów opartych na pliku *Project. JSON*, zapoznaj się z tematem Migrowanie środowiska [dotnet](dotnet-migrate.md) , aby uzyskać informacje na temat migrowania projektu do programu MSBuild/ *. csproj* do użytku z narzędziami Release. W przypadku projektów .NET Core utworzonych przed wydaniem narzędzia do wersji zapoznawczej 2 należy ręcznie zaktualizować projekt zgodnie ze wskazówkami zawartymi w sekcji [Migrowanie z środowiska DNX do interfejs wiersza polecenia platformy .NET Core (Project. JSON)](../migration/from-dnx.md) , a następnie użyć `dotnet migrate` lub bezpośrednio uaktualnić projekty.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [/ interfejsu wiersza polecenia DotNet repozytorium GitHub](https://github.com/dotnet/cli/)
-- [Przewodnik instalacji platformy .NET core](https://aka.ms/dotnetcoregs)
+- [Repozytorium dotnet/CLI usługi GitHub](https://github.com/dotnet/cli/)
+- [Przewodnik instalacji programu .NET Core](https://aka.ms/dotnetcoregs)

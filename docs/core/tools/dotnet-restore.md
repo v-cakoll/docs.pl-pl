@@ -2,12 +2,12 @@
 title: polecenie dotnet restore
 description: Informacje o sposobie przywracania zależności i narzędzi specyficznych dla projektu przy użyciu polecenia dotnet restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: 17bbbe33e7cb7b13d6fb1c0e44bb77dd2bbe7020
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 347ad691b8d439fdf1696f790d4a838a73c57b5a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626354"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105152"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -55,15 +55,15 @@ Zachowanie `dotnet restore` polecenia ma wpływ na ustawienia w pliku *NuGet. co
 
 Istnieją trzy określone ustawienia, które `dotnet restore` ignorują:
 
-* [bindingRedirects](/nuget/schema/nuget-config-file#bindingredirects-section)
+- [bindingRedirects](/nuget/schema/nuget-config-file#bindingredirects-section)
 
   Przekierowania powiązań nie działają z `<PackageReference>` elementami i .NET Core obsługuje `<PackageReference>` tylko elementy dla pakietów NuGet.
 
-* [Narzędzie](/nuget/schema/nuget-config-file#solution-section)
+- [Narzędzie](/nuget/schema/nuget-config-file#solution-section)
 
   To ustawienie dotyczy programu Visual Studio i nie ma zastosowania do programu .NET Core. Platforma .NET Core nie używa `packages.config` pliku, a zamiast `<PackageReference>` tego używa elementów dla pakietów NuGet.
 
-* [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
+- [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
 
   To ustawienie nie ma zastosowania, ponieważ [NuGet nie obsługuje jeszcze weryfikacji](https://github.com/NuGet/Home/issues/7939) zaufanych pakietów przez wiele platform.
 

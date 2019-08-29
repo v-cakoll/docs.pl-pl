@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4471e4feffb23b7f256ada2116444aaa7899e209
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 1bdbe31e16408da2d7dfe17941c90a022f3d8c32
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611445"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107147"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Przewidywanie cen przy użyciu regresji z konstruktorem modelu
 
@@ -21,12 +21,12 @@ Szablon prognozowania cen konstruktora modeli może być używany w każdym scen
 
 Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
-> * Przygotuj i poznanie danych
-> * Wybierz scenariusz
-> * Ładowanie danych
-> * Uczenie modelu
-> * Oceń model
-> * Używanie modelu dla prognoz
+> - Przygotuj i poznanie danych
+> - Wybierz scenariusz
+> - Ładowanie danych
+> - Uczenie modelu
+> - Oceń model
+> - Używanie modelu dla prognoz
 
 > [!NOTE]
 > Konstruktor modeli jest obecnie w wersji zapoznawczej.
@@ -59,13 +59,13 @@ Każdy wiersz w `taxi-fare-train.csv` zestawie danych zawiera szczegółowe info
 
     Podany zestaw danych zawiera następujące kolumny:
 
-    * **vendor_id:** Identyfikator dostawcy taksówki jest funkcją.
-    * **rate_code:** Typ szybkości podróży z taksówką jest funkcją.
-    * **passenger_count:** Liczba pasażerów w podróży to funkcja.
-    * **trip_time_in_secs:** Czas trwania podróży.
-    * **trip_distance:** Odległość podróży to funkcja.
-    * **payment_type:** Forma płatności (karta kasowa lub kredytowa) to funkcja.
-    * **fare_amount:** Łączna liczba płatnych opłat za taksówkę to etykieta.
+    - **vendor_id:** Identyfikator dostawcy taksówki jest funkcją.
+    - **rate_code:** Typ szybkości podróży z taksówką jest funkcją.
+    - **passenger_count:** Liczba pasażerów w podróży to funkcja.
+    - **trip_time_in_secs:** Czas trwania podróży.
+    - **trip_distance:** Odległość podróży to funkcja.
+    - **payment_type:** Forma płatności (karta kasowa lub kredytowa) to funkcja.
+    - **fare_amount:** Łączna liczba płatnych opłat za taksówkę to etykieta.
 
 `label` Jest to kolumna, która ma zostać przewidywalna. Podczas wykonywania zadania regresji celem jest przewidywanie wartości liczbowej. W tym scenariuszu prognozowania cen jest przewidywany koszt najazdy z taksówką. W związku z tym **fare_amount** jest etykietą. Identyfikowane `features` są dane wejściowe, które dają model do `label`przewidywania. W takim przypadku pozostałe kolumny są używane jako funkcje lub dane wejściowe do przewidywania kwoty opłat.
 
@@ -190,12 +190,12 @@ Jeśli musisz odwoływać się do wygenerowanych projektów w późniejszym czas
 
 W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
-> * Przygotuj i poznanie danych
-> * Wybierz scenariusz
-> * Ładowanie danych
-> * Uczenie modelu
-> * Oceń model
-> * Używanie modelu dla prognoz
+> - Przygotuj i poznanie danych
+> - Wybierz scenariusz
+> - Ładowanie danych
+> - Uczenie modelu
+> - Oceń model
+> - Używanie modelu dla prognoz
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 

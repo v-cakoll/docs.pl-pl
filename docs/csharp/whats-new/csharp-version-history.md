@@ -3,12 +3,12 @@ title: Historia C# - C# Przewodnik
 description: Jak wygląda ten język we wcześniejszych wersjach i jak został on rozwijający od?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 8230efcbcdd67cc99f321efc6509df3665d9f2f7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 9962dcb0192fb27ff21b24e985a6a897703720c7
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363879"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105681"
 ---
 # <a name="the-history-of-c"></a>Historia języka C\#
 
@@ -19,11 +19,11 @@ Ten artykuł zawiera historię poszczególnych głównych wersji C# języka. C# 
 
 Narzędzia C# kompilacji uwzględniają najnowszą wersję językową wersji językowej. Między wersjami głównymi mogą występować wersje punktów, które opisano w innych artykułach w tej sekcji. Aby użyć najnowszych funkcji w wersji próbnej, należy [skonfigurować wersję języka kompilatora](../language-reference/configure-language-version.md) i wybrać wersję. Istnieją trzy wersje punktów od C# 7,0:
 
-* [C# 7.3](csharp-7-3.md):
+- [C# 7.3](csharp-7-3.md):
   - C#7,3 jest dostępna począwszy od [programu Visual Studio 2017 w wersji 15,7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) i [.NET Core 2,1 SDK](../../core/whats-new/dotnet-core-2-1.md).
-* [C# 7.2](csharp-7-2.md):
+- [C# 7.2](csharp-7-2.md):
   - C#7,2 jest dostępna począwszy od [programu Visual Studio 2017 w wersji 15,5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)i [.NET Core 2,0 SDK](../../core/whats-new/dotnet-core-2-0.md).
-* [C# 7.1](csharp-7-1.md):
+- [C# 7.1](csharp-7-1.md):
   - C#7,1 jest dostępna począwszy od [programu Visual Studio 2017 w wersji 15,3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) i [.NET Core 2,0 SDK](../../core/whats-new/dotnet-core-2-0.md).
 
 ## <a name="c-version-10"></a>C#Wersja 1,0
@@ -124,7 +124,7 @@ C#wersja 5,0 była skoncentrowaną wersją języka. Niemal cały nakład pracy z
 
 ### <a name="see-also"></a>Zobacz też
 
-* [Projekt kodu: Atrybuty informacji o wywołującym w C# 5,0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+- [Projekt kodu: Atrybuty informacji o wywołującym w C# 5,0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 Atrybut informacje o wywołującym pozwala łatwo pobrać informacje dotyczące kontekstu, w którym jest wykonywane, bez konieczności przeliczania się na tonę standardowego kodu odbicia. Ma wiele użycia w zadaniach diagnostycznych i dzienników.
 

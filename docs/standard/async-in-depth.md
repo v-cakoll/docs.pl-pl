@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 6f1900eaabafe2931d88959bf79bf4ca1f5bc98b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 776949e86f6eb3fa6a193b303f4c731e20bac1a5
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666581"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107311"
 ---
 # <a name="async-in-depth"></a>Na poziomie Async
 
@@ -21,8 +21,8 @@ Pisanie we/wy i kod asynchroniczny związany z PROCESORem jest prosty przy użyc
 
 Zadania są konstrukcjami używanymi do implementowania elementu, który jest znany jako [model obietnicy współbieżności](https://en.wikipedia.org/wiki/Futures_and_promises).  W krótkim czasie oferują one "obietnice", które będą wykonywane w późniejszym momencie, co pozwala na koordynowanie z obietnicą za pomocą czystego interfejsu API.
 
-* `Task`reprezentuje pojedynczą operację, która nie zwraca wartości.
-* `Task<T>`reprezentuje pojedynczą operację, która zwraca wartość typu `T`.
+- `Task`reprezentuje pojedynczą operację, która nie zwraca wartości.
+- `Task<T>`reprezentuje pojedynczą operację, która zwraca wartość typu `T`.
 
 Ważne jest, aby zwrócić uwagę na zadania jako abstrakcje pracy wykonywanej asynchronicznie, a *nie* abstrakcję w wątkach. Domyślnie zadania są wykonywane w bieżącym wątku i delegowanie pracy do systemu operacyjnego, zgodnie z potrzebami. Opcjonalnie zadania mogą być jawnie wymagane do uruchomienia w osobnym wątku za pośrednictwem `Task.Run` interfejsu API.
 
@@ -90,9 +90,9 @@ Chociaż powyższe może wydawać się bardzo dużo pracy, gdy jest mierzony w w
 
 0-1————————————————————————————————————————————————–2-3
 
-* Czas spędzony w `0` punktach `1` to wszystko do momentu, aż Metoda asynchroniczna przeniesie kontrolę do obiektu wywołującego.
-* Czas spędzony od `1` punktów `2` na to czas spędzony na operacji we/wy bez kosztu procesora.
-* Na koniec czas spędzony przez `2` punkty `3` na przekazanie kontroli (i potencjalnie wartości) do metody asynchronicznej, w której punkt jest wykonywany ponownie.
+- Czas spędzony w `0` punktach `1` to wszystko do momentu, aż Metoda asynchroniczna przeniesie kontrolę do obiektu wywołującego.
+- Czas spędzony od `1` punktów `2` na to czas spędzony na operacji we/wy bez kosztu procesora.
+- Na koniec czas spędzony przez `2` punkty `3` na przekazanie kontroli (i potencjalnie wartości) do metody asynchronicznej, w której punkt jest wykonywany ponownie.
 
 ### <a name="what-does-this-mean-for-a-server-scenario"></a>Co to znaczy dla scenariusza serwera?
 

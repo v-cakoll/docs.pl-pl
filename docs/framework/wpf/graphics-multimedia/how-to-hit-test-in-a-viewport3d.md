@@ -9,26 +9,23 @@ helpviewer_keywords:
 - hit tests [WPF], for 3-D visuals
 - Viewport3D [WPF]
 ms.assetid: 42bfbd99-c7c6-43f1-940b-90448faa412e
-ms.openlocfilehash: c3238161a01df67b05be6284b8eed61981ff3974
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 54d3ee859a50ed348308b083c48f2dd73d312bbe
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947332"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106940"
 ---
 # <a name="how-to-hit-test-in-a-viewport3d"></a>Instrukcje: Przeprowadzanie testu trafienia w elemencie Viewport3D
-W tym przykładzie pokazano, jak trafień badania 3D elementów wizualnych w <xref:System.Windows.Controls.Viewport3D>.  
+Ten przykład pokazuje, <xref:System.Windows.Controls.Viewport3D>jak trafić test dla wizualizacji 3W w.  
   
- Ponieważ <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> zwraca informacje o 2D i 3D, istnieje możliwość iteracyjnego przeglądania wyników testu do odczytu tylko 3D wyników.  
+ Ponieważ <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> zwraca informacje 2D i 3D, możliwe jest przeprowadzenie iteracji przez wyniki testu w celu odczytu tylko wyników 3W.  
   
  [!code-csharp[HitTest3D#HitTest3D3DN4](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn4)]
  [!code-vb[HitTest3D#HitTest3D3DN4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn4)]  
   
- <xref:System.Windows.Media.HitTestResultBehavior> Poniższy kod określa, jak są przetwarzane wyników testu trafienia.  `UpdateResultInfo` i `UpdateMaterial` metod zdefiniowane lokalnie.  
+ <xref:System.Windows.Media.HitTestResultBehavior> W poniższym kodzie opisano sposób przetwarzania wyników testów trafień.  `UpdateResultInfo`i `UpdateMaterial` są metodami zdefiniowanymi lokalnie.  
   
  [!code-csharp[HitTest3D#HitTest3D3DN5](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn5)]
  [!code-vb[HitTest3D#HitTest3D3DN5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn5)]  
-  
-## <a name="see-also"></a>Zobacz także
-
-- [3-w trafienie w próbce testowej](https://go.microsoft.com/fwlink/?LinkID=159959)
+ 

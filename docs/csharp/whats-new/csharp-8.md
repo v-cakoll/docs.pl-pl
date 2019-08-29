@@ -2,12 +2,12 @@
 title: Co nowego w C# 8,0 — C# Przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8,0. Ten artykuł jest aktualny w wersji zapoznawczej 5.
 ms.date: 02/12/2019
-ms.openlocfilehash: bf67baba926effd012ae01d3d802ba921e41ad5a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 14c86fe4b1ecd1c89ebbbb082c5c9956bc51e03e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363897"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105512"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego w C# 8,0
 
@@ -16,10 +16,10 @@ Istnieje wiele ulepszeń C# języka, który można wypróbować już.
 - [Elementy członkowskie tylko do odczytu](#readonly-members)
 - [Domyślne elementy członkowskie interfejsu](#default-interface-members)
 - [Ulepszenia dopasowania wzorców](#more-patterns-in-more-places):
-  * [Przełącz wyrażenia](#switch-expressions)
-  * [Wzorce właściwości](#property-patterns)
-  * [Wzorce krotek](#tuple-patterns)
-  * [Wzorce pozycyjne](#positional-patterns)
+  - [Przełącz wyrażenia](#switch-expressions)
+  - [Wzorce właściwości](#property-patterns)
+  - [Wzorce krotek](#tuple-patterns)
+  - [Wzorce pozycyjne](#positional-patterns)
 - [Korzystanie z deklaracji](#using-declarations)
 - [Statyczne funkcje lokalne](#static-local-functions)
 - [Nierozporządzalne struktury ref](#disposable-ref-structs)
@@ -206,7 +206,7 @@ Komunikaty wskazują zwycięzcę. Przypadek odrzucania reprezentuje trzy kombina
 
 ### <a name="positional-patterns"></a>Wzorce pozycyjne
 
-Niektóre typy obejmują `Deconstruct` metodę, która dekonstrukcjauje swoje właściwości do zmiennych dyskretnych. Gdy metoda jest dostępna, można użyć wzorców pozycyjnych do inspekcji właściwości obiektu i używania tych właściwości dla wzorca.  `Deconstruct`  Rozważmy następujące `Point` klasy, które `Deconstruct` obejmują metodę tworzenia zmiennych dyskretnych dla `X` i `Y`:
+Niektóre typy obejmują `Deconstruct` metodę, która dekonstrukcjauje swoje właściwości do zmiennych dyskretnych. Gdy metoda jest dostępna, można użyć wzorców pozycyjnych do inspekcji właściwości obiektu i używania tych właściwości dla wzorca. `Deconstruct`  Rozważmy następujące `Point` klasy, które `Deconstruct` obejmują metodę tworzenia zmiennych dyskretnych dla `X` i `Y`:
 
 ```csharp
 public class Point

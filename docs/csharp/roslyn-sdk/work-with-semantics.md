@@ -1,58 +1,58 @@
 ---
-title: Praca z zestawu SDK platformy kompilatora .NET semantycznego modelu analizy biznesowej
-description: Ten przegląd zawiera opis typów, używaną do manipulowania semantycznego modelu kodu.
+title: Współpracuj z modelem semantycznym zestawu .NET Compiler Platform SDK
+description: Ten przegląd zawiera informacje o typie używanym do zrozumienia i manipulowania semantycznym modelem kodu.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: cf34e2ab9688325f58cb54755db4142a883fca77
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c594447bb553f488d60fe83900e2f141608b570f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706640"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105672"
 ---
 # <a name="work-with-semantics"></a>Korzystanie z semantyki
 
-[Drzewa składni](work-with-syntax.md) reprezentują leksykalne i składniowych struktury kodu źródłowego. Mimo że te informacje tylko jest wystarczająca do opisywania, deklaracje i logiki w źródle, nie jest wystarczająco dużo informacji do identyfikacji, co jest ono przywoływane. Nazwa może reprezentować:
+[Drzewa składni](work-with-syntax.md) reprezentują strukturę leksykalną i składnię kodu źródłowego. Chociaż te informacje są wystarczająco wystarczające, aby opisać wszystkie deklaracje i logikę w źródle, nie ma wystarczających informacji do zidentyfikowania elementów, do których się odwołuje. Nazwa może reprezentować:
 
 - Typ
-- Pola
+- pole
 - Metoda
 - Zmienna lokalna
 
-Mimo że każdy z nich jest jednoznacznie inny, określania, który z nich odpowiadającym faktycznie odnosi się do często wymaga głębokiego zrozumienie reguły języka. 
+Chociaż każda z nich jest unikatowa, określenie, który z nich rzeczywiście odwołuje się często, wymaga dokładnego poznania reguł języka. 
 
-Istnieją elementy programu reprezentowane w kodzie źródłowym i programów znajdują się wcześniej skompilowanych bibliotek, spakowane w zestawie plików. Brak kodu źródłowego i w związku z tym żadnych węzłów składni lub drzewa, są dostępne dla zestawów, programy nadal mogą odwoływać się do elementów wewnątrz nich.
+Istnieją elementy programu reprezentowane w kodzie źródłowym, a programy mogą odwoływać się również do wcześniej skompilowanych bibliotek, spakowanych w plikach zestawu. Chociaż nie ma kodu źródłowego i w związku z tym nie są dostępne żadne węzły ani drzewa składni, programy nadal mogą odwoływać się do elementów wewnątrz nich.
 
-W przypadku tych zadań należy **semantycznego modelu analizy biznesowej**.
+Dla tych zadań wymagany jest **model semantyczny**.
 
-Oprócz modelu składni kodu źródłowego modelu semantycznego hermetyzuje reguły języka, co zapewnia łatwy sposób poprawnie zgodne identyfikatory z elementem odpowiedniego programu, do którego nastąpiło odwołanie.
+Oprócz modelu składni kodu źródłowego, model semantyczny hermetyzuje reguły języka, dzięki czemu można łatwo dopasować identyfikatory do poprawnego elementu programu, którego dotyczy odwołanie.
 
 ## <a name="compilation"></a>Kompilacja
 
-Kompilacja jest reprezentacją wszystko, co jest potrzebne do kompilowania C# program lub Visual Basic, który zawiera wszystkie odwołania do zestawów, opcje kompilatora i plików źródłowych. 
+Kompilacja to reprezentacja wszystkiego potrzebnego do skompilowania programu C# lub Visual Basic, który obejmuje wszystkie odwołania do zestawu, opcje kompilatora i pliki źródłowe. 
 
-Ponieważ te informacje w jednym miejscu, elementy zawarte w kodzie źródłowym można opisane bardziej szczegółowo. Kompilacja reprezentuje każdego deklarowanego typu, elementu członkowskiego lub zmiennej jako symbol separatora. Kompilacja zawiera szereg metod, które ułatwiają znajdowanie i odnoszą się symboli, które mają została zadeklarowana w kodzie źródłowym lub importowany jako metadane z zestawu.
+Ze względu na to, że wszystkie te informacje znajdują się w jednym miejscu, elementy zawarte w kodzie źródłowym można opisać bardziej szczegółowo. Kompilacja reprezentuje każdy zadeklarowany typ, element członkowski lub zmienną jako symbol. Kompilacja zawiera różne metody, które ułatwiają znalezienie i powiązanie symboli, które zostały zadeklarowane w kodzie źródłowym lub zaimportowane jako metadane z zestawu.
 
-Podobnie jak drzewa składni, kompilacje są niezmienne. Po utworzeniu kompilacji, nie można zmienić przez nikogo, który może być używany z. Jednak można utworzyć nowej kompilacji z istniejącej kompilacji, określając zmiany, jak można to zrobić. Na przykład może utworzyć kompilacji, która jest taka sama w sposób, co jako istniejące kompilacji, z wyjątkiem może zawierać dodatkowe pliku lub zestawu odwołania do źródła.
+Kompilacje przypominają drzewa składniowe. Po utworzeniu kompilacji nie można jej zmienić przez Ciebie lub inną osobę, która może być udostępniana przez użytkownika. Można jednak utworzyć nową kompilację z istniejącej kompilacji, określając zmianę w taki sam sposób. Można na przykład utworzyć kompilację, która jest taka sama w każdym sposobie jak istniejąca kompilacja, z wyjątkiem, że może zawierać dodatkowy plik źródłowy lub odwołanie do zestawu.
 
 ## <a name="symbols"></a>Symbole
 
-Symbol reprezentuje element distinct zadeklarowane na podstawie kodu źródłowego lub importowane z zestawu jako metadane. Co przestrzeni nazw, typu, metody, właściwości, pola, zdarzenia, parametr lub zmienna lokalna jest reprezentowany przez symbol. 
+Symbol reprezentuje element DISTINCT zadeklarowany przez kod źródłowy lub zaimportowany z zestawu jako metadanych. Każda przestrzeń nazw, typ, metoda, właściwość, pole, zdarzenie, parametr lub zmienna lokalna jest reprezentowane przez symbol. 
 
-Różne metody i właściwości <xref:Microsoft.CodeAnalysis.Compilation> wpisz pomóc w znalezieniu symboli. Na przykład można znaleźć symbolu dla zadeklarowanym typem według nazwy pospolitej metadanych. Można również uzyskać dostęp tabeli symboli całego jako drzewo symboli umieszczone w globalnej przestrzeni nazw.
+Różne metody i właściwości <xref:Microsoft.CodeAnalysis.Compilation> typu pomagają znaleźć symbole. Na przykład, można znaleźć symbol dla zadeklarowanego typu według nazwy pospolitej metadanych. Możesz również uzyskać dostęp do całej tabeli symboli jako drzewa symboli, które zostały odblokowane przez globalną przestrzeń nazw.
 
-Symbole również zawierać dodatkowe informacje, które kompilator określa ze źródła lub metadane, takie jak inne odwołania symboli. Każdy rodzaj symbolu jest reprezentowany przez oddzielny interfejs pochodną <xref:Microsoft.CodeAnalysis.ISymbol>, każda z metod i właściwości ze szczegółami dotyczącymi informacje zebrane przez kompilator. Wiele z tych właściwości bezpośrednio odwoływać innych symboli. Na przykład <xref:Microsoft.CodeAnalysis.IMethodSymbol.ReturnType?displayProperty=nameWithType> właściwość zawiera informacje, symbol rzeczywisty typ, który odwołuje się do deklaracji metody.
+Symbole zawierają również dodatkowe informacje, które kompilator określa ze źródła lub metadanych, takich jak inne symbole, do których istnieją odwołania. Każdy rodzaj symbolu jest reprezentowany przez oddzielny interfejs pochodny <xref:Microsoft.CodeAnalysis.ISymbol>od, każdy z własnymi metodami i właściwościami zawierającymi szczegóły informacji zebranych przez kompilator. Wiele z tych właściwości bezpośrednio odwołuje się do innych symboli. Na przykład <xref:Microsoft.CodeAnalysis.IMethodSymbol.ReturnType?displayProperty=nameWithType> Właściwość informuje symbol rzeczywistego typu, który odwołuje się do deklaracji metody.
 
-Symbole przedstawiają reprezentację wspólnej przestrzeni nazw, typów i członków, między kodem źródłowym i metadanych. Na przykład, metody, która została zadeklarowana w kodzie źródłowym i metody, które zostały zaimportowane z metadanych są zarówno reprezentowane przez <xref:Microsoft.CodeAnalysis.IMethodSymbol> z tymi samymi właściwościami.
+Symbole przedstawiają wspólną reprezentację przestrzeni nazw, typów i elementów członkowskich, między kodem źródłowym a metadanymi. Na przykład Metoda zadeklarowana w kodzie źródłowym i metoda, która została zaimportowana z metadanych, są reprezentowane przez obiekt <xref:Microsoft.CodeAnalysis.IMethodSymbol> z tymi samymi właściwościami.
 
-Symbole są podobne do systemu typów CLR reprezentowany przez <xref:System.Reflection> interfejsu API, ale one są bardziej rozbudowane, modelują one więcej niż tylko typy. Przestrzenie nazw, zmienne lokalne i etykiety są wszystkie symbole. Ponadto symbole są reprezentacją koncepcje językowe i nie pojęcia dotyczące środowiska CLR. Jest dużo nakładają się na siebie, ale istnieje wiele również istotne różnice. Na przykład metoda iteratora jest w C# lub Visual Basic to pojedynczy symbol. Jednakże gdy metoda iteratora jest tłumaczona na metadanych CLR, jest typem i na wiele sposobów.
+Symbole są podobne do koncepcji systemu typów CLR w postaci reprezentowanej przez <xref:System.Reflection> interfejs API, ale są bogatsze w modelu, który modeluje więcej niż tylko typy. Przestrzenie nazw, zmienne lokalne i etykiety to wszystkie symbole. Ponadto symbole są reprezentacją pojęć języka, a nie pojęć środowiska CLR. Istnieje wiele nakładających się różnic, ale istnieją także liczne znaczące różnice. Na przykład Metoda iteratora w C# lub Visual Basic jest pojedynczym symbolem. Jednak gdy metoda iteratora jest tłumaczona na metadane CLR, jest to typ i wiele metod.
 
-## <a name="semantic-model"></a>Semantyczny model analizy biznesowej
+## <a name="semantic-model"></a>Model semantyczny
 
-Model semantyczny reprezentuje wszystkie informacje semantyczne jednym pliku źródłowym. Służy do odnajdywania następujące czynności: 
+Model semantyczny reprezentuje wszystkie informacje semantyczne dla pojedynczego pliku źródłowego. Można go użyć do odnalezienia następujących danych: 
 
-* Symbole, do których odwołuje się w określonym miejscu w źródle.
-* Wynikowy typ dowolne wyrażenie.
-* Testy diagnostyczne, które są błędy i ostrzeżenia.
-* Jak zmienne przenoszone do regionów źródłowych.
-* Odpowiedzi na pytania bardziej spekulacyjnego.
+- Symbole przywoływane w określonej lokalizacji w źródle.
+- Wynikowy typ dowolnego wyrażenia.
+- Wszystkie diagnostyki, które są błędami i ostrzeżeniami.
+- Sposób przepływu zmiennych w i poza regiony źródła.
+- Odpowiedzi na bardziej spekulacyjne pytania.

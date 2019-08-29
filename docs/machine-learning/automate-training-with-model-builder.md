@@ -4,12 +4,12 @@ description: Jak korzystać z konstruktora modelu ML.NET w celu automatycznego u
 author: natke
 ms.date: 08/07/2019
 ms.custom: overview
-ms.openlocfilehash: a871c3a3751a93bdf0104c873215b164616f0664
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 715c9f5854d9691fd9fc2cd771d38456405836ec
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611467"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104844"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Co to jest Konstruktor modelu i jak to działa?
 
@@ -28,7 +28,7 @@ Nie musisz uczyć się uczenia maszynowego, aby korzystać z konstruktora modeli
 
 W celu wygenerowania modelu uczenia maszynowego dla aplikacji można przenieść wiele różnych scenariuszy do programu model Builder.
 
-Scenariusz to opis typu przewidywania, które chcesz wprowadzić przy użyciu danych. Na przykład:
+Scenariusz to opis typu przewidywania, które chcesz wprowadzić przy użyciu danych. Przykład:
 - przewidywanie przyszłego wolumenu sprzedaży produktu na podstawie historycznych danych sprzedaży
 - Klasyfikuj mową jako dodatnie lub ujemne na podstawie recenzji klienta
 - Wykryj, czy transakcja bankowa jest fałszywa
@@ -133,11 +133,11 @@ Konstruktor modelu dzieli dane szkoleniowe na zestaw szkoleniowy i zestaw testow
 
 Jeśli Ocena wydajności modelu nie jest tak dobra, jak chcesz, możesz:
 
-* Uczenie przez dłuższy czas. Przez automatyczny aparat uczenia maszynowego, aby wypróbować więcej algorytmów i ustawień.
+- Uczenie przez dłuższy czas. Przez automatyczny aparat uczenia maszynowego, aby wypróbować więcej algorytmów i ustawień.
 
-* Dodaj więcej danych. Czasami ilość danych nie wystarcza do uczenia modelu uczenia maszynowego o wysokiej jakości.
+- Dodaj więcej danych. Czasami ilość danych nie wystarcza do uczenia modelu uczenia maszynowego o wysokiej jakości.
 
-* Zrównoważ dane. W przypadku zadań klasyfikacji upewnij się, że zestaw szkoleniowy jest zrównoważony w różnych kategoriach. Na przykład jeśli masz cztery klasy do 100 przykładów szkoleniowych, a dwie pierwszej klasy (tag1 i tag2) są używane do 90 rekordów, ale pozostałe dwa (tag3 i tag4) są używane tylko dla pozostałych 10 rekordów, brak zrównoważonych danych może spowodować, że model będzie niezawodny ectly predykcyjny tag3 lub tag4.
+- Zrównoważ dane. W przypadku zadań klasyfikacji upewnij się, że zestaw szkoleniowy jest zrównoważony w różnych kategoriach. Na przykład jeśli masz cztery klasy do 100 przykładów szkoleniowych, a dwie pierwszej klasy (tag1 i tag2) są używane do 90 rekordów, ale pozostałe dwa (tag3 i tag4) są używane tylko dla pozostałych 10 rekordów, brak zrównoważonych danych może spowodować, że model będzie niezawodny ectly predykcyjny tag3 lub tag4.
 
 ## <a name="code"></a>Kod
 

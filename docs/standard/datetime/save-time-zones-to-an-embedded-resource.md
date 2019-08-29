@@ -12,73 +12,73 @@ helpviewer_keywords:
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c67a97193d186275e6a788f6b18bbc17c535f367
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ca39d989cc7bc16ec2678ba5fa53710899f3ac4
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912707"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107160"
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Instrukcje: Zapisywanie stref czasowych w zasobie osadzonym
 
-Często uwzględniających strefy czasowe aplikacji wymaga obecności daną strefę czasową. Jednakże ponieważ dostępność poszczególnych <xref:System.TimeZoneInfo> obiektów zależy od informacji przechowywanych w rejestrze systemu lokalnego, nawet zwyczajowo dostępnych stref czasowych mogą być nieobecne. Ponadto informacje o niestandardowych stref czasowych są tworzone za pomocą <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> metoda nie jest przechowywany wraz z innymi informacjami strefy czasowej w rejestrze. Aby upewnić się, że tych stref czasowych są dostępne, gdy są potrzebne, można je zapisać, szeregując je i je później przywrócić przez ich deserializacji.
+Aplikacja obsługująca strefy czasowej często wymaga obecności określonej strefy czasowej. Jednak ze względu na dostępność poszczególnych <xref:System.TimeZoneInfo> obiektów zależy od informacji przechowywanych w rejestrze systemu lokalnego, nawet w przypadku nieobecności zwykle dostępnych stref czasowych. Ponadto informacje o niestandardowych strefach czasowych utworzonych za pomocą <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> metody nie są przechowywane z innymi informacjami o strefie czasowej w rejestrze. Aby upewnić się, że te strefy czasowe są dostępne, gdy są potrzebne, można je zapisać przez serializację ich, a następnie przywrócić je przez ich deserializacji.
 
-Zazwyczaj serializacji <xref:System.TimeZoneInfo> obiekt występuje oprócz aplikacji uwzględniających strefy czasowe. W zależności od magazynu danych, używane do przechowywania Zserializowany <xref:System.TimeZoneInfo> obiektów, może być serializowany danych strefa czasowa, jako część procedury lub instalacyjnego (na przykład, gdy dane są przechowywane w kluczu rejestru aplikacji) lub jako część procedury narzędzia, która jest uruchamiana przed ostatnim aplikacja jest kompilowana, (na przykład, kiedy serializowane dane są przechowywane w pliku zasobów (.resx) XML platformy .NET).
+Zazwyczaj Serializacja <xref:System.TimeZoneInfo> obiektu występuje poza aplikacją obsługującą informacje o strefie czasowej. W zależności od magazynu danych używanego do przechowywania serializowanych <xref:System.TimeZoneInfo> obiektów dane strefy czasowej mogą być serializowane w ramach procedury instalacji lub instalacji (na przykład gdy dane są przechowywane w kluczu aplikacji rejestru) lub w ramach procedury narzędziowej uruchomionej Przed skompilowaniem końcowej aplikacji (na przykład gdy serializowane dane są przechowywane w pliku zasobów XML programu .NET (resx)).
 
-Oprócz pliku zasobów, który jest kompilowany razem z aplikacją kilka innych magazynów danych może służyć do informacji o strefie czasowej. Należą do nich między innymi:
+Oprócz pliku zasobów, który jest kompilowany z aplikacją, można użyć kilku innych magazynów danych na potrzeby informacji o strefie czasowej. Należą do nich między innymi:
 
-* Rejestr. Należy pamiętać, że aplikacja powinna używać podkluczy klucza własnej aplikacji do przechowywania danych niestandardowa strefa czasowa, a nie przy użyciu podkluczy HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time strefy.
+- Rejestr. Należy pamiętać, że aplikacja powinna używać podkluczy własnego klucza aplikacji do przechowywania niestandardowych danych strefy czasowej, a nie przy użyciu podkluczy strefy HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time.
 
-* Pliki konfiguracji.
+- Pliki konfiguracji.
 
-* Inne pliki systemowe.
+- Inne pliki systemowe.
 
-### <a name="to-save-a-time-zone-by-serializing-it-to-a-resx-file"></a>Aby zapisać strefy czasowej, szeregując go na plik Resx
+### <a name="to-save-a-time-zone-by-serializing-it-to-a-resx-file"></a>Aby zapisać strefę czasową przez serializację jej do pliku resx
 
-1. Pobieranie istniejącej strefy czasowej, lub Utwórz nową strefę czasu.
+1. Pobierz istniejącą strefę czasową lub Utwórz nową strefę czasową.
 
-   Aby pobrać istniejącej strefy czasowej, zobacz [jak: Uzyskiwanie dostępu do wstępnie zdefiniowanych obiektów stref UTC i czasem lokalnym](../../../docs/standard/datetime/access-utc-and-local.md) i [jak: Tworzenie wystąpień obiektów TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md).
+   Aby pobrać istniejącą strefę czasową, [zobacz How to: Dostęp do wstępnie zdefiniowanych obiektów](../../../docs/standard/datetime/access-utc-and-local.md) czasu UTC i lokalnej strefy czasowej oraz [instrukcje: Utwórz wystąpienie obiektu](../../../docs/standard/datetime/instantiate-time-zone-info.md)TimeZoneInfo.
 
-   Aby utworzyć nowej strefy czasowej, wywołaj jednego z przeciążeń <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> metody. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie stref czasowych bez reguł korygowania](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) i [jak: Tworzenie stref czasowych przy użyciu reguł korygowania](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
+   Aby utworzyć nową strefę czasową, wywołaj jedno z przeciążeń <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> metody. Aby uzyskać więcej informacji, zobacz [jak: Utwórz strefy czasowe bez reguł](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) dostosowywania [i instrukcje: Utwórz strefy czasowe z regułami](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)korekty.
 
 2. Wywołaj <xref:System.TimeZoneInfo.ToSerializedString%2A> metodę, aby utworzyć ciąg, który zawiera dane strefy czasowej.
 
-3. Utwórz wystąpienie <xref:System.IO.StreamWriter> obiektu, podając nazwę i opcjonalnie ścieżkę pliku ResX można <xref:System.IO.StreamWriter> konstruktora klasy.
+3. Utwórz wystąpienie <xref:System.IO.StreamWriter> obiektu, podając nazwę i opcjonalnie ścieżkę pliku resx do konstruktora klasy. <xref:System.IO.StreamWriter>
 
-4. Utwórz wystąpienie <xref:System.Resources.ResXResourceWriter> obiektu przez przekazanie <xref:System.IO.StreamWriter> obiekt <xref:System.Resources.ResXResourceWriter> konstruktora klasy.
+4. Tworzenie wystąpienia <xref:System.IO.StreamWriter>obiektuprzez przekazanie obiektu do <xref:System.Resources.ResXResourceWriter> konstruktora klasy. <xref:System.Resources.ResXResourceWriter>
 
-5. Przebieg strefę czasową serializować ciągu do <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> metody.
+5. Przekaż Zserializowany ciąg strefy czasowej do <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> metody.
 
 6. Wywołaj <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> metody.
 
 7. Wywołaj <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> metody.
 
-8. Zamknij <xref:System.IO.StreamWriter> obiektu przez wywołanie jego <xref:System.IO.StreamWriter.Close%2A> metody.
+8. Zamknij obiekt, wywołując jego <xref:System.IO.StreamWriter.Close%2A> metodę. <xref:System.IO.StreamWriter>
 
-9. Dodaj plik Resx wygenerowane do projektu programu Visual Studio w aplikacji.
+9. Dodaj wygenerowany plik resx do projektu programu Visual Studio aplikacji.
 
-10. Za pomocą **właściwości** okna w programie Visual Studio, upewnij się, że plik Resx **Build Action** właściwość jest ustawiona na **zasób osadzony**.
+10. Korzystając z okna **Właściwości** w programie Visual Studio, upewnij się, że właściwość **Akcja kompilacji** pliku resx jest ustawiona na **zasób osadzony**.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład szereguje <xref:System.TimeZoneInfo> obiekt, który reprezentuje Środkowa (czas standardowy) i <xref:System.TimeZoneInfo> obiekt, który reprezentuje czas Antarktyda, stacja Palmer .NET XML pliku zasobu, który nosi nazwę SerializedTimeZones.resx. Środkowy czas standardowy zwykle definiuje się w rejestrze. Antarktyda, stacja Palmer jest niestandardowa strefa czasowa.
+Poniższy przykład serializacji <xref:System.TimeZoneInfo> obiekt reprezentujący środkowy czas standardowy <xref:System.TimeZoneInfo> oraz obiekt, który reprezentuje stacji Palmer, Antarktyda czas do pliku zasobów XML programu .NET o nazwie SerializedTimeZones. resx. Środkowy czas standardowy jest zwykle definiowany w rejestrze; Stacja Palmer, Antarktyda to niestandardowa strefa czasowa.
 
 [!code-csharp[TimeZone2.Serialization#1](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#1)]
 [!code-vb[TimeZone2.Serialization#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#1)]
 
-W tym przykładzie serializuje <xref:System.TimeZoneInfo> obiektów, tak aby były dostępne w pliku zasobów w czasie kompilacji.
+Ten przykład serializacji <xref:System.TimeZoneInfo> obiektów, aby były dostępne w pliku zasobów w czasie kompilacji.
 
-Ponieważ <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> metoda dodaje informacje o nagłówku pełną plikowi zasób XML platformy .NET, nie można dodać zasoby do istniejącego pliku. Przykład wykonuje tę przez sprawdzenie, czy plik SerializedTimeZones.resx, i jeśli istnieje, przechowywaniu wszystkich jej zasobów innych niż dwa serializacji strefach czasowych prawidłowo ogólnego <xref:System.Collections.Generic.Dictionary%602> obiektu. Istniejący plik jest usuwany i istniejące zasoby są dodawane do nowego pliku SerializedTimeZones.resx. Dane serializowane strefa czasowa jest także dodawane do tego pliku.
+<xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> Ponieważ Metoda dodaje kompletne informacje nagłówka do pliku zasobów XML programu .NET, nie można go użyć do dodania zasobów do istniejącego pliku. Przykład obsługuje to poprzez sprawdzenie pliku SerializedTimeZones. resx i, jeśli istnieje, przechowywanie wszystkich zasobów innych niż dwie serializowane strefy czasowe do obiektu ogólnego <xref:System.Collections.Generic.Dictionary%602> . Istniejący plik zostanie usunięty, a istniejące zasoby zostaną dodane do nowego pliku SerializedTimeZones. resx. Do tego pliku dodawane są również dane serializowanej strefy czasowej.
 
-Klucz (lub **nazwa**) pola zasobów nie może zawierać spacji osadzonych. <xref:System.String.Replace%28System.String%2CSystem.String%29> Metoda jest wywoływana, aby usunąć wszystkie spacje w identyfikatorach strefę czasową, przed przypisaniem do pliku zasobów.
+Pola klucza (lub **nazwy**) zasobów nie mogą zawierać spacji osadzonych. <xref:System.String.Replace%28System.String%2CSystem.String%29> Metoda jest wywoływana, aby usunąć wszystkie osadzone spacje w identyfikatorach strefy czasowej przed ich przypisaniem do pliku zasobów.
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
 Ten przykład wymaga:
 
-* Odwołanie do System.Windows.Forms.dll i System.Core.dll dodania do projektu.
+- Że odwołanie do System. Windows. Forms. dll i system. Core. dll zostało dodane do projektu.
 
-* Czy następujących przestrzeni nazw można zaimportować:
+- Że importowane są następujące przestrzenie nazw:
 
   [!code-csharp[TimeZone2.Serialization#2](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#2)]
   [!code-vb[TimeZone2.Serialization#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#2)]

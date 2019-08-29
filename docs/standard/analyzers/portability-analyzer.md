@@ -4,12 +4,12 @@ description: Dowiedz się, jak używać narzędzia analizatora przenośności pl
 ms.date: 07/18/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 32b4f980061b0975c413a8cde436074f76cfabc9
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: fdd2e9f288649b35b778b5da505408822e0ea8fe
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433952"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107506"
 ---
 # <a name="the-net-portability-analyzer"></a>Analizator przenośności platformy .NET
 
@@ -17,11 +17,11 @@ Czy chcesz, aby biblioteki obsługiwały wiele platform? Chcesz zobaczyć, ile p
 
 ## <a name="common-targets"></a>Wspólne elementy docelowe
 
-* [.NET Core](../../core/index.md): Program ma projektowanie modularne, wykorzystuje równolegle i ukierunkowane scenariusze dla wielu platform. Obok siebie można zastosować nowe wersje platformy .NET Core bez przerywania innych aplikacji. Jeśli chcesz przenieść aplikację do platformy .NET Core obsługującej wiele platform, jest to zalecany element docelowy. 
-* . [Standard NET](../../standard/net-standard.md): Obejmuje interfejsy API .NET Standard dostępne we wszystkich implementacjach platformy .NET. Jeśli chcesz, aby Twoja biblioteka działała na wszystkich platformach obsługiwanych przez platformę .NET, jest to zalecane.  
-* [ASP.NET Core](/aspnet/core): Nowoczesne środowisko sieci Web oparte na platformie .NET Core. Jeśli chcesz przenieść aplikację sieci Web do programu .NET Core w celu obsługi wielu platform, jest to zalecane miejsce docelowe.
-* [Rozszerzenia platformy](../../core/porting/windows-compat-pack.md).NET Core +: Zawiera interfejsy API platformy .NET Core oprócz pakietu zgodności systemu Windows, który zapewnia wiele .NET Framework dostępnych technologii. Jest to zalecany element docelowy do przenoszenia aplikacji z .NET Framework do platformy .NET Core w systemie Windows.
-* .NET Standard i [rozszerzenia platformy](../../core/porting/windows-compat-pack.md): Program zawiera .NET Standard interfejsy API oprócz pakietu zgodności systemu Windows, który zapewnia wiele .NET Framework dostępnych technologii. Jest to zalecany element docelowy do przenoszenia biblioteki z .NET Framework do platformy .NET Core w systemie Windows.
+- [.NET Core](../../core/index.md): Program ma projektowanie modularne, wykorzystuje równolegle i ukierunkowane scenariusze dla wielu platform. Obok siebie można zastosować nowe wersje platformy .NET Core bez przerywania innych aplikacji. Jeśli chcesz przenieść aplikację do platformy .NET Core obsługującej wiele platform, jest to zalecany element docelowy. 
+- . [Standard NET](../../standard/net-standard.md): Obejmuje interfejsy API .NET Standard dostępne we wszystkich implementacjach platformy .NET. Jeśli chcesz, aby Twoja biblioteka działała na wszystkich platformach obsługiwanych przez platformę .NET, jest to zalecane.  
+- [ASP.NET Core](/aspnet/core): Nowoczesne środowisko sieci Web oparte na platformie .NET Core. Jeśli chcesz przenieść aplikację sieci Web do programu .NET Core w celu obsługi wielu platform, jest to zalecane miejsce docelowe.
+- [Rozszerzenia platformy](../../core/porting/windows-compat-pack.md).NET Core +: Zawiera interfejsy API platformy .NET Core oprócz pakietu zgodności systemu Windows, który zapewnia wiele .NET Framework dostępnych technologii. Jest to zalecany element docelowy do przenoszenia aplikacji z .NET Framework do platformy .NET Core w systemie Windows.
+- .NET Standard i [rozszerzenia platformy](../../core/porting/windows-compat-pack.md): Program zawiera .NET Standard interfejsy API oprócz pakietu zgodności systemu Windows, który zapewnia wiele .NET Framework dostępnych technologii. Jest to zalecany element docelowy do przenoszenia biblioteki z .NET Framework do platformy .NET Core w systemie Windows.
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>Jak używać analizatora przenośności platformy .NET
 
@@ -38,9 +38,9 @@ Aby analizować cały projekt w programie Visual Studio, kliknij prawym przycisk
 
 Możesz również użyć [aplikacji konsolowej ApiPort](https://aka.ms/apiportdownload). 
 
-* Wpisz następujące polecenie, aby przeanalizować bieżący katalog:`ApiPort.exe analyze -f .`
-* Aby przeanalizować określoną listę plików DLL, wpisz następujące polecenie:`ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
-* Uruchom `ApiPort.exe -?` , aby uzyskać więcej pomocy
+- Wpisz następujące polecenie, aby przeanalizować bieżący katalog:`ApiPort.exe analyze -f .`
+- Aby przeanalizować określoną listę plików DLL, wpisz następujące polecenie:`ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
+- Uruchom `ApiPort.exe -?` , aby uzyskać więcej pomocy
 
 Zaleca się zawrzeć wszystkie powiązane pliki exe i dll, które mają być używane, i które mają być używane do portów, a także wykluczenie plików, od których zależy aplikacja, ale nie do portów. Zapewni to najbardziej odpowiedni raport dotyczący przenośności.  
 

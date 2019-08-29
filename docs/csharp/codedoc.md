@@ -1,226 +1,226 @@
 ---
-title: Dokumentowanie kodu przy użyciu komentarzy XML
-description: Dowiedz się, jak dokumentowanie kodu za pomocą komentarzy dokumentacji XML do generowania pliku dokumentacji XML w czasie kompilacji.
+title: Dokumentowanie kodu za pomocą komentarzy XML
+description: Dowiedz się, jak udokumentować kod za pomocą komentarzy dokumentacji XML i generować plik dokumentacji XML w czasie kompilacji.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 17a6beabf7e8a917c461dae4d92f1cfbb0d9de71
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b6744921f4703f53a16b6bdadcfbf375c2fb3332
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633739"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104771"
 ---
-# <a name="documenting-your-code-with-xml-comments"></a>Dokumentowanie kodu przy użyciu komentarzy XML
+# <a name="documenting-your-code-with-xml-comments"></a>Dokumentowanie kodu za pomocą komentarzy XML
 
-Komentarze dokumentacji XML są specjalnym rodzajem komentarz, dodanych wcześniej definicji typu zdefiniowanego przez użytkownika lub elementu członkowskiego.
-Są one specjalne, ponieważ mogą być przetwarzane przez kompilator do generowania pliku dokumentacji XML w czasie kompilacji.
-Plik XML wygenerowanego przez kompilator mogą być dystrybuowane wraz z Twojego zestawu platformy .NET tak, aby program Visual Studio i innych środowisk IDE umożliwia IntelliSense Wyświetlanie skróconych informacji dotyczących typów ani elementów członkowskich. Ponadto plik XML mogą być uruchamiane za pomocą takich narzędzi [DocFX](https://dotnet.github.io/docfx/) i [Sandcastle](https://github.com/EWSoftware/SHFB) do generowania dokumentacja interfejsu API witryn sieci Web.
+Komentarze dokumentacji XML są specjalnym rodzajem komentarza, który został dodany powyżej definicji dowolnego typu lub elementu członkowskiego zdefiniowanego przez użytkownika.
+Są one specyficzne, ponieważ mogą być przetwarzane przez kompilator w celu wygenerowania pliku dokumentacji XML w czasie kompilacji.
+Plik XML wygenerowany przez kompilator może być dystrybuowany wraz z zestawem .NET, dzięki czemu program Visual Studio i inne środowisk IDE mogą używać funkcji IntelliSense do wyświetlania szybkich informacji o typach lub elementach członkowskich. Ponadto plik XML mogą być uruchamiane za pomocą takich narzędzi [DocFX](https://dotnet.github.io/docfx/) i [Sandcastle](https://github.com/EWSoftware/SHFB) do generowania dokumentacja interfejsu API witryn sieci Web.
 
-Komentarze dokumentacji XML, podobnie jak wszystkie inne komentarze są ignorowane przez kompilator.
+Komentarze dokumentacji XML, podobnie jak wszystkie inne komentarze, są ignorowane przez kompilator.
 
-Aby wygenerować plik XML w czasie kompilacji, wykonując jedną z następujących czynności:
+Plik XML można wygenerować w czasie kompilacji, wykonując jedną z następujących czynności:
 
-- Jeśli tworzysz aplikację za pomocą programu .NET Core z poziomu wiersza polecenia, możesz dodać [elementu DocumentationFile](/visualstudio/msbuild/common-msbuild-project-properties) do `<PropertyGroup>` sekcji w pliku projektu csproj. Poniższy przykład generuje plik XML w katalogu projektu o takiej samej nazwie głównego pliku zestawu:
+- Jeśli tworzysz aplikację przy użyciu platformy .NET Core z wiersza polecenia, możesz dodać [element DocumentationFile](/visualstudio/msbuild/common-msbuild-project-properties) do `<PropertyGroup>` sekcji pliku projektu. csproj. Poniższy przykład generuje plik XML w katalogu projektu z tą samą nazwą pliku głównego co zestaw:
 
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
    ```
 
-   Można również określić dokładną bezwzględną lub względną ścieżkę i nazwę pliku XML. Poniższy przykład generuje plik XML, w tym samym katalogu co wersja do debugowania aplikacji:
+   Można również określić dokładną ścieżkę bezwzględną lub względną i nazwę pliku XML. Poniższy przykład generuje plik XML w tym samym katalogu, w którym znajduje się wersja do debugowania aplikacji:
 
    ```xml
    <DocumentationFile>bin\Debug\netcoreapp2.1\App.xml</DocumentationFile>
    ```
 
-- Jeśli tworzysz aplikację przy użyciu programu Visual Studio kliknij prawym przyciskiem myszy projekt i wybierz pozycję **właściwości**. W oknie dialogowym właściwości wybierz **kompilacji** kartę i sprawdź **pliku dokumentacji XML**. Można również zmienić lokalizację, do której kompilator zapisuje plik.
+- Jeśli tworzysz aplikację przy użyciu programu Visual Studio, kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Właściwości**. W oknie dialogowym właściwości wybierz kartę **kompilacja** i sprawdź **plik dokumentacji XML**. Możesz również zmienić lokalizację, w której kompilator zapisuje plik.
 
-- Jeśli kompilujesz aplikację .NET Framework z poziomu wiersza polecenia Dodaj [/doc — opcja kompilatora](language-reference/compiler-options/doc-compiler-option.md) podczas kompilowania kodu.  
+- Jeśli kompilujesz aplikację .NET Framework z wiersza polecenia, należy dodać [opcję kompilatora/doc](language-reference/compiler-options/doc-compiler-option.md) podczas kompilowania.  
 
-Komentarze dokumentacji XML używać Potrójna ukośników (`///`) i XML sformatowane treść komentarza. Na przykład:
+Komentarze dokumentacji XML używają potrójnych ukośników (`///`) i treści komentarzy w formacie XML. Na przykład:
 
 [!code-csharp[XML Documentation Comment](../../samples/snippets/csharp/concepts/codedoc/xml-comment.cs)]
 
-## <a name="walkthrough"></a>Przewodnik
+## <a name="walkthrough"></a>Instruktaż
 
-Przejdźmy teraz przez dokumentowanie biblioteki matematyczne wykraczającego poza podstawowe ułatwia zrozumienie współtworzyć także nowych deweloperów i deweloperzy innych firm mogą korzystać.
+Zapoznaj się z dokumentem bardzo podstawową bibliotekę matematyczną, aby ułatwić nowym deweloperom zrozumienie/współtworzenie i współdziałanie z innymi programistami.
 
-Oto kod biblioteki matematyczne proste:
+Oto kod dla prostej biblioteki matematycznej:
 
 [!code-csharp[Sample Library](../../samples/snippets/csharp/concepts/codedoc/sample-library.cs)]
 
-Biblioteka przykładowe obsługuje cztery główne operacje arytmetyczne `add`, `subtract`, `multiply` i `divide` na `int` i `double` typy danych.
+Biblioteka Przykładowa obsługuje cztery główne operacje `add`arytmetyczne, `multiply` `subtract`, `divide` oraz `int` typy `double` danych i.
 
-Teraz chcesz mieć możliwość tworzenia dokument referencyjny dotyczący interfejsu API z poziomu kodu dla deweloperów innych firm, którzy użyj biblioteki, ale nie masz dostępu do kodu źródłowego.
-Jak wspomniano wcześniej tagów dokumentacji XML można to osiągnąć. Możesz teraz zostaną wprowadzone do standardowych tagów XML C# kompilator obsługuje.
+Teraz chcesz mieć możliwość utworzenia dokumentu referencyjnego interfejsu API na podstawie kodu dla deweloperów innych firm, którzy korzystają z biblioteki, ale nie mają dostępu do kodu źródłowego.
+Jak wspomniano wcześniej Tagi dokumentacji XML, można użyć w tym celu. Teraz będziesz wprowadzać do standardowych tagów XML obsługiwanych przez C# kompilator.
 
-## <a name="summary"></a>\<Summary >
+## <a name="summary"></a>\<summary>
 
-`<summary>` Znacznik dodaje krótki informacji na temat typu lub elementu członkowskiego.
-Zademonstruję jego użycie przez dodanie jej do `Math` klasy definicji i pierwszy `Add` metody. Możesz zastosować je do pozostałej części kodu.
+`<summary>` Tag dodaje krótkie informacje dotyczące typu lub składowej.
+Pokażę swoje użycie przez dodanie go do `Math` definicji klasy i pierwszej `Add` metody. Śmiało, aby zastosować go do pozostałej części kodu.
 
 [!code-csharp[Summary Tag](../../samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
-`<summary>` Tag jest bardzo ważna, a firma Microsoft zaleca, aby uwzględniać go, ponieważ jego zawartość jest podstawowym źródłem informacji typu lub elementu członkowskiego w technologii IntelliSense lub dokument referencyjny dotyczący interfejsu API.
+`<summary>` Tag jest bardzo istotny i zalecamy dołączenie go, ponieważ jego zawartość jest podstawowym źródłem informacji o typie lub elemencie członkowskim w technologii IntelliSense lub dokumentacji interfejsu API.
 
-## <a name="remarks"></a>\<Remarks >
+## <a name="remarks"></a>\<uwagi >
 
-`<remarks>` Tag uzupełnia informacje dotyczące typów ani elementów członkowskich, `<summary>` zawiera tag. W tym przykładzie będzie po prostu dodaj go do klasy.
+Tag uzupełnia informacje o typach lub elementach członkowskich udostępnianych `<summary>` przez tag. `<remarks>` W tym przykładzie wystarczy dodać go do klasy.
 
 [!code-csharp[Remarks Tag](../../samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
 
 ## <a name="returns"></a>\<returns>
 
-`<returns>` Tagu w tym artykule opisano wartość zwracaną deklaracji metody.
-Jak poprzednio, w poniższym przykładzie pokazano `<returns>` tag pierwszego `Add` metody. Możesz tworzyć takie same, o innych metodach.
+`<returns>` Tag opisuje wartość zwracaną deklaracji metody.
+Tak jak wcześniej Poniższy przykład ilustruje `<returns>` tag w pierwszej `Add` metodzie. Można to zrobić w innych metodach.
 
 [!code-csharp[Returns Tag](../../samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
 
 ## <a name="value"></a>\<value>
 
-`<value>` Tag jest podobne do `<returns>` tagów, z tą różnicą, że zostanie on użyty do właściwości.
-Zakładając, że Twoje `Math` biblioteki miały statyczny właściwość o nazwie `PI`, poniżej przedstawiono, jak skorzystać z tego tagu:
+Tag jest podobny `<returns>` do znacznika, z tą różnicą, że jest używany do właściwości. `<value>`
+Zakładając, że w `PI` bibliotecezostaławywołanawłaściwośćstatyczna,Otojakużywaćtegotagu:`Math`
 
 [!code-csharp[Value Tag](../../samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
 
 ## <a name="example"></a>\<przykład >
 
-Możesz użyć `<example>` tag, aby uwzględnić przykładem w dokumentacji XML.
-Wiąże się to przy użyciu elementu podrzędnego `<code>` tagu.
+`<example>` Używasz znacznika, aby dołączyć przykład do dokumentacji XML.
+Obejmuje to użycie znacznika podrzędnego `<code>` .
 
 [!code-csharp[Example Tag](../../samples/snippets/csharp/concepts/codedoc/example-tag.cs)]
 
-`code` Tag zachowuje podziały wierszy i wcięć przykłady dłużej.
+`code` Tag zachowuje podziały wierszy i wcięcia dla dłuższych przykładów.
 
 ## <a name="para"></a>\<para>
 
-Możesz użyć `<para>` tag, aby formatować takiej treści, w ramach jego tagu nadrzędnym. `<para>` jest zazwyczaj używany wewnątrz znacznik, taki jak `<remarks>` lub `<returns>`, aby podzielić tekstu akapitów.
-Zawartość można formatować `<remarks>` tag dla swojej definicji klasy.
+`<para>` Tag służy do formatowania zawartości w tagu nadrzędnym. `<para>`jest zwykle używany wewnątrz tagu, takiego jak `<remarks>` lub `<returns>`, aby podzielić tekst na akapity.
+Można sformatować zawartość `<remarks>` tagu w definicji klasy.
 
 [!code-csharp[Para Tag](../../samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
 
 ## <a name="c"></a>\<c>
 
-Pracując nadal na temat formatowania, użyj `<c>` tag do oznaczania część tekstu jako kod.
-Jest on podobny do `<code>` tagu, ale wbudowanego. Może to być przydatne, gdy chcesz wyświetlić przykład szybki kod jako część zawartości tagu.
-Zaktualizujmy w dokumentacji dotyczącej `Math` klasy.
+Nadal w temacie formatowania, `<c>` używasz znacznika do oznaczania części tekstu jako kodu.
+Jest to takie samo `<code>` , jak tag, ale wbudowane. Jest to przydatne, gdy chcesz pokazać przykładowy kod jako część zawartości znacznika.
+Zaktualizujmy dokumentację dla `Math` klasy.
 
 [!code-csharp[C Tag](../../samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
 
-## <a name="exception"></a>\<wyjątku >
+## <a name="exception"></a>\<> wyjątku
 
-Za pomocą `<exception>` tagu, umożliwiają deweloperom wiedzieć, czy metoda może zgłosić określonych wyjątków.
-Spojrzenie na Twoje `Math` biblioteki, możesz zobaczyć, że oba `Add` metody zgłosić wyjątek, jeśli określony warunek jest spełniony. Nie jest tak oczywiste, że całkowitą `Divide` metoda generuje również Jeśli `b` parametr ma wartość zero. Teraz należy dodać wyjątek dokumentacji do tej metody.
+Korzystając ze `<exception>` znacznika, poinformuj deweloperów, że metoda może zgłosić określone wyjątki.
+Patrząc na `Math` bibliotekę, można zobaczyć, że obie metody `Add` zgłaszają wyjątek w przypadku spełnienia określonego warunku. Chociaż nie jest to oczywiste, jest to, `Divide` że metoda Integer zgłasza również, `b` Jeśli parametr ma wartość zero. Teraz Dodaj dokumentację wyjątku do tej metody.
 
 [!code-csharp[Exception Tag](../../samples/snippets/csharp/concepts/codedoc/exception-tag.cs)]
 
-`cref` Atrybutu reprezentuje odwołanie do wyjątek, który jest dostępny w bieżącym środowisku kompilacji.
-Może to być dowolny typ zdefiniowany w projekcie lub przywoływanego zestawu. Kompilator zgłosi ostrzeżenie, jeśli jego wartość nie jest możliwe.
+Ten `cref` atrybut reprezentuje odwołanie do wyjątku, który jest dostępny w bieżącym środowisku kompilacji.
+Może to być dowolny typ zdefiniowany w projekcie lub przywoływanym zestawie. Kompilator wyświetli ostrzeżenie, jeśli nie można rozpoznać jego wartości.
 
 ## <a name="see"></a>\<see>
 
-`<see>` Tagu umożliwia tworzenie łączem do strony dokumentacji dla innego elementu kodu. W naszym następnym przykładzie utworzymy łączem między tymi dwoma `Add` metody.
+`<see>` Tag umożliwia utworzenie linku kliknięcia do strony dokumentacji dla innego elementu kodu. W następnym przykładzie utworzymy link do kliknięcia między tymi dwoma `Add` metodami.
 
 [!code-csharp[See Tag](../../samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
 
-`cref` Jest **wymagane** atrybut, który reprezentuje odwołanie do typu lub jego elementu członkowskiego, który jest dostępny w bieżącym środowisku kompilacji.
-Może to być dowolny typ zdefiniowany w projekcie lub przywoływanego zestawu.
+Jest to wymagany atrybut, który reprezentuje odwołanie do typu lub jego elementu członkowskiego, który jest dostępny w bieżącym środowisku kompilacji. `cref`
+Może to być dowolny typ zdefiniowany w projekcie lub przywoływanym zestawie.
 
 ## <a name="seealso"></a>\<seealso>
 
-Możesz użyć `<seealso>` tagu w taki sam sposób jak `<see>` tagu. Jedyna różnica polega na tym, że jego zawartość zwykle znajduje się w sekcji "Zobacz też". W tym miejscu dodamy `seealso` tagiem na liczbę całkowitą `Add` metodę, aby odwoływać się do innych metod w klasie, które akceptują parametry liczby całkowitej:
+Używasz znacznika w taki sam sposób `<see>` jak tag. `<seealso>` Jedyną różnicą jest to, że jej zawartość jest zwykle umieszczana w sekcji "Zobacz też". Tutaj dodamy `seealso` znacznik metody całkowitej `Add` , aby odwołać się do innych metod w klasie, która akceptuje parametry całkowite:
 
 [!code-csharp[Seealso Tag](../../samples/snippets/csharp/concepts/codedoc/seealso-tag.cs)]
 
-`cref` Atrybutu reprezentuje odwołanie do typu lub jego elementu członkowskiego, który jest dostępny w bieżącym środowisku kompilacji.
-Może to być dowolny typ zdefiniowany w projekcie lub przywoływanego zestawu.
+Ten `cref` atrybut reprezentuje odwołanie do typu lub jego elementu członkowskiego, który jest dostępny w bieżącym środowisku kompilacji.
+Może to być dowolny typ zdefiniowany w projekcie lub przywoływanym zestawie.
 
 ## <a name="param"></a>\<param>
 
-Możesz użyć `<param>` tag do opisania parametrów metody. Poniżej przedstawiono przykład podwójnego `Add` metody: Opisuje tagu określono parametr w **wymagane** `name` atrybutu.
+`<param>` Tag służy do opisywania parametrów metody. Oto przykładowa Metoda podwójna `Add` : Parametr opisany w opisie jest określony w **wymaganym** `name` atrybucie.
 
 [!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
-## <a name="typeparam"></a>\<typeparam>
+## <a name="typeparam"></a>\<typeparam >
 
-Możesz użyć `<typeparam>` tag, podobnie jak `<param>` tagu, ale dla ogólnego deklaracji typu lub metody do opisania parametr ogólny.
-Szybkie metodę rodzajową, aby dodać swoje `Math` klasy, aby sprawdzić, czy jeden ilość jest większy niż inny.
+Używasz znacznika podobnie jak tag, `<param>` ale dla typu ogólnego lub deklaracji metody, aby opisać parametr generyczny. `<typeparam>`
+Dodaj szybką metodę rodzajową do `Math` klasy, aby sprawdzić, czy jedna ilość jest większa niż inna.
 
 [!code-csharp[Typeparam Tag](../../samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
 
 ## <a name="paramref"></a>\<paramref>
 
-Czasami może być w trakcie opisujące metoda wykonuje w jakie mogą być `<summary>` tagu, na które może chcieć odwołać się do parametru. `<paramref>` Tag jest doskonale sprawdza się właśnie to. Spróbujmy na podstawie aktualizacji podsumowania naszych double `Add` metody. Podobnie jak `<param>` Nazwa parametru jest określona w tagu **wymagane** `name` atrybutu.
+Czasami może być w środku opisującym opisywanie metody, która może być `<summary>` tagiem, i można utworzyć odwołanie do parametru. Ten `<paramref>` tag jest świetny dla samego siebie. Zaktualizujmy podsumowanie naszej metody opartej na `Add` podwójnej precyzji. Podobnie jak `<param>` w przypadku znacznika Nazwa parametru jest określona w **wymaganym** `name` atrybucie.
 
 [!code-csharp[Paramref Tag](../../samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
 ## <a name="typeparamref"></a>\<typeparamref>
 
-Możesz użyć `<typeparamref>` tag, podobnie jak `<paramref>` tagu, ale dla ogólnego deklaracji typu lub metody do opisania parametr ogólny.
-Można użyć tej samej metody rodzajowej, utworzone wcześniej.
+Używasz znacznika podobnie jak tag, `<paramref>` ale dla typu ogólnego lub deklaracji metody, aby opisać parametr generyczny. `<typeparamref>`
+Możesz użyć tej samej metody generycznej, która została wcześniej utworzona.
 
 [!code-csharp[Typeparamref Tag](../../samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
 
 ## <a name="list"></a>\<list>
 
-Możesz użyć `<list>` tag o dokumentacji formatu listy uporządkowanej, listę nieuporządkowaną lub tabeli.
-Wprowadź nieuporządkowaną listę każdej operacji matematycznych swoje `Math` biblioteka obsługuje.
+`<list>` Tag służy do formatowania informacji dokumentacji jako listy uporządkowanej, listy nieuporządkowanej lub tabeli.
+Utwórz nieuporządkowaną listę każdej operacji matematycznej obsługiwanej `Math` przez bibliotekę.
 
 [!code-csharp[List Tag](../../samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
-Można wprowadzić uporządkowanej liście lub tabeli, zmieniając `type` atrybutu `number` lub `table`, odpowiednio.
+Można utworzyć uporządkowaną listę lub tabelę, zmieniając `type` odpowiednio atrybut na `number` lub `table`.
 
-### <a name="putting-it-all-together"></a>Łączenie wszystkiego razem
+### <a name="putting-it-all-together"></a>Umieszczanie wszystkich razem
 
-Jeśli już a następnie w tym samouczku i zastosowano tagów w kodzie, gdy jest to konieczne, kodu powinien teraz wyglądać podobnie do poniższej:
+Jeśli wykonano ten samouczek i zastosowano znaczniki do kodu w razie potrzeby, kod powinien teraz wyglądać podobnie do poniższego:
 
 [!code-csharp[Tagged Library](../../samples/snippets/csharp/concepts/codedoc/tagged-library.cs)]
 
-W kodzie można wygenerować szczegółową dokumentację witryny sieci Web z odsyłacze możesz klikać. Ale one zmierzyła się z innym problemem: kod stał się trudny do odczytania.
-Istnieje wiele informacji do przesiania, że będzie to być okropnej dla każdego dewelopera, który chce przyczyniają się do tego kodu.
-Szczęście jest tag XML, które mogą ułatwić pracę z tym:
+Z poziomu kodu można wygenerować szczegółową witrynę sieci Web, która została ukończona z kliknięciami odwołania krzyżowego. Ale nastąpiło inne zagadnienie: Twój kod stał się trudno odczytać.
+Istnieje dużo informacji do przesiania przez to, że jest to okropnej dla każdego dewelopera, który chce współtworzyć ten kod.
+Thankfully istnieje tag XML, który może pomóc Ci w poradzić sobie z:
 
-## <a name="include"></a>\<include>
+## <a name="include"></a>\<Uwzględnij >
 
-`<include>` Znacznik umożliwia Zobacz komentarze w osobnym pliku XML, które opisują typy i elementy członkowskie w kodzie źródłowym, w przeciwieństwie do wprowadzania komentarzy dokumentacji bezpośrednio w pliku kodu źródłowego.
+`<include>` Tag umożliwia odwoływanie się do komentarzy w osobnym pliku XML, który opisuje typy i elementy członkowskie w kodzie źródłowym, zamiast umieszczania komentarzy do dokumentacji bezpośrednio w pliku kodu źródłowego.
 
-Teraz możesz zacząć przenieść wszystkie tagi XML w osobnym pliku XML o nazwie `docs.xml`. Swobodnie nazwę pliku, co tylko chcesz.
+Teraz można przenieść wszystkie tagi XML do oddzielnego pliku XML o nazwie `docs.xml`. Możesz nawiązać dowolną nazwę pliku.
 
 [!code-xml[Sample XML](../../samples/snippets/csharp/concepts/codedoc/include.xml)]
 
-W powyższym kodzie XML komentarze dokumentacji każdego elementu członkowskiego są wyświetlane bezpośrednio wewnątrz tagu o nazwie po ich działania. Możesz wybrać własne strategii.
-Teraz, gdy komentarz XML w oddzielnym pliku, zobaczmy, jak Twój kod może się bardziej czytelny przy użyciu `<include>` tag:
+W powyższym kodzie XML komentarze dokumentacji każdego członka są wyświetlane bezpośrednio wewnątrz tagu o nazwie po tym, co robią. Możesz wybrać własną strategię.
+Teraz, gdy masz Komentarze XML w osobnym pliku, zobaczmy, jak kod może być bardziej czytelny przy użyciu `<include>` tagu:
 
 [!code-csharp[Include Tag](../../samples/snippets/csharp/concepts/codedoc/include-tag.cs)]
 
-I są dostępne: naszego kodu jest do odczytu i utracono żadnych informacji o dokumentacji.
+Jest to możliwe: kod jest z powrotem odczytywany, a informacje o dokumentacji nie zostały utracone.
 
-`file` Atrybut reprezentuje nazwę pliku XML zawierającego dokumentację.
+Ten `file` atrybut reprezentuje nazwę pliku XML zawierającego dokumentację.
 
-`path` Atrybutu reprezentuje [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) zapytania `tag name` obecne w określonym `file`.
+Ten `path` atrybut reprezentuje zapytanie [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) do `tag name` elementu obecnego w określonym `file`.
 
-`name` Atrybut reprezentuje określenie nazwy w tagu, który poprzedza komentarze.
+Ten `name` atrybut reprezentuje specyfikator nazwy w tagu, który poprzedza Komentarze.
 
-`id` Atrybut, który może być używany zamiast `name` reprezentuje identyfikator tagu, który poprzedza komentarze.
+Atrybut, który może być użyty zamiast `name` reprezentuje identyfikator tagu, który poprzedza Komentarze. `id`
 
 ### <a name="user-defined-tags"></a>Tagi zdefiniowane przez użytkownika
 
-Wszystkie tagi opisanych powyżej reprezentują te, które są rozpoznawane przez kompilator języka C#. Jednak użytkownik będzie mógł zdefiniować własne tagi.
-Narzędzia, takie jak rozwiązania Sandcastle przenieść pomocy technicznej dla dodatkowego tagów, takich jak [ `<event>` ](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm), [ `<note>` ](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm) nawet pomocy technicznej i [dokumentowanie przestrzenie nazw](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
-Niestandardowy lub narzędzia do generowania dokumentacji wewnętrznych można również za pomocą standardowych tagów i może być obsługiwanych wiele formatów danych wyjściowych z kodu HTML na format PDF.
+Wszystkie Tagi podane powyżej reprezentują te, które są rozpoznawane przez C# kompilator. Jednak użytkownik może definiować własne znaczniki.
+Narzędzia takie jak Sandcastle zapewniają obsługę dodatkowych tagów, [`<event>`](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm)takich [`<note>`](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm) jak, a nawet obsługują [dokumentowanie przestrzeni nazw](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
+Niestandardowe i wewnętrzne narzędzia do generowania dokumentacji mogą również być używane ze znacznikami standardowymi i można obsługiwać wiele formatów wyjściowych z formatu HTML do pliku PDF.
 
 ## <a name="recommendations"></a>Zalecenia
 
-Dokumentowanie kodu jest zalecane w przypadku wielu powodów. Poniżej przedstawiono kilka najlepszych zasad, ogólnych scenariuszy przypadków użycia, rzeczy, które przydatnych podczas korzystając z dokumentacji XML tagów w kodzie języka C#.
+Dokumentowanie kodu jest zalecane z wielu powodów. Poniżej przedstawiono niektóre najlepsze rozwiązania, ogólne scenariusze przypadków użycia i informacje, które należy znać w przypadku używania tagów dokumentacji XML w C# kodzie.
 
-* Dla spójności wszystkie publicznie widoczne typy i składowe powinny być udokumentowane. Jeśli musisz to zrobić, wykonaj to wszystko.
-* Prywatne elementy członkowskie można również opisane, przy użyciu komentarzy XML. Jednak to uwidacznia przebiega (potencjalnie poufnych) biblioteki.
-* W ramach absolutnego minimum, typy i składowe powinny mieć `<summary>` tag, ponieważ jego zawartość jest wymagane dla funkcji IntelliSense.
-* Tekst dokumentacji zapisywane są postaci kompletnych zdań, kończąc na stopnie.
-* Klasy częściowe są w pełni obsługiwane, a informacje o dokumentacji, będą połączone w pojedynczy wpis dla danego typu.
-* Kompilator sprawdza składnię `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>` i `<typeparam>` tagów.
-- Kompilator sprawdza poprawność parametrów, które zawierają ścieżki do plików i odwołań pozwalającą na inne części kodu.
+- Ze względu na spójność wszystkich publicznie widocznych typów i ich członków należy udokumentować. Jeśli to konieczne, zrób wszystko.
+- Prywatne elementy członkowskie mogą być również udokumentowane przy użyciu komentarzy XML. Jednak spowoduje to uwidocznienie wewnętrznej (potencjalnie poufnej) pracy biblioteki.
+- W przypadku braku systemu operacyjnego typy i ich elementy członkowskie powinny mieć `<summary>` tag, ponieważ jego zawartość jest wymagana przez funkcję IntelliSense.
+- Tekst dokumentacji należy napisać przy użyciu kompletnych zdań kończących się pełnym zatrzymywaniem.
+- Klasy częściowe są w pełni obsługiwane, a informacje o dokumentacji są łączone w jeden wpis dla tego typu.
+- Kompilator weryfikuje `<exception>`składnię tagów, `<include>`, `<param>`, `<see>` `<seealso>` i .`<typeparam>`
+- Kompilator sprawdza poprawność parametrów zawierających ścieżki plików i odwołania do innych części kodu.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Komentarze dokumentacji XML (C# Programming Guide)](programming-guide/xmldoc/index.md)
-- [Tagi zalecane dla komentarzy do dokumentacji (C# Programming Guide)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [Komentarze dokumentacji XML (C# Przewodnik programowania)](programming-guide/xmldoc/index.md)
+- [Zalecane Tagi dla komentarzy do dokumentacjiC# (Przewodnik programowania)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

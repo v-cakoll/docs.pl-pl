@@ -1,20 +1,21 @@
 ---
-title: Zasoby szkoleniowe maszyny
-description: Zapoznaj się z tych zasobów strukturze ML.NET uzyskanymi niestandardowe tworzenie rozwiązań sztucznej Inteligencji i integracji w aplikacjach .NET.
+title: Zasoby uczenia maszynowego
+description: Zapoznaj się z tymi zasobami ML.NET, aby ułatwić tworzenie niestandardowych rozwiązań AI i integrację z aplikacjami platformy .NET.
 ms.custom: seodec18
-ms.date: 03/01/2019
-ms.openlocfilehash: 9a4c0633034a73f2531aea19c2efe23ff6b41cef
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 08/26/2019
+ms.openlocfilehash: c33494f3c5144ad20c6317d18b13a6775cd01299
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645136"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106832"
 ---
-# <a name="machine-learning-resources"></a>Zasoby szkoleniowe maszyny 
+# <a name="machine-learning-resources"></a>Zasoby uczenia maszynowego 
 
-Następujące [strukturze ML.NET](../index.yml) zasoby mogą być przydatne do tworzenia niestandardowych rozwiązań sztucznej Inteligencji i integrowanie aplikacji .NET:
+Następujące zasoby [ml.NET](../index.yml) mogą być przydatne do tworzenia niestandardowych rozwiązań AI i integrowania ich z aplikacjami .NET:
 
-- [Machine learning słownik](glossary.md): zawiera ważne usługi machine learning definicje terminów.
-- [Podstawy uczenia maszynowego](basics.md): łącza do zasoby szkoleniowe umożliwiające Rozpoczynanie pracy z usługą machine learning.
-- [Zadania uczenia maszynowego](tasks.md): w tym artykule opisano różne usługi machine learning scenariuszy użycia, obsługiwanych przez strukturze ML.NET.
-- [Przekształcenia danych](transforms.md): zawiera omówienie przekształcenia danych obsługiwanych przez strukturze ML.NET.
+- [Słownik uczenia maszynowego](glossary.md): zawiera ważne definicje warunków uczenia maszynowego.
+- [Podstawowe informacje](basics.md)dotyczące uczenia maszynowego: zawiera linki do zasobów szkoleniowych, które umożliwiają rozpoczęcie pracy z uczeniem maszynowym.
+- [Zadania uczenia maszynowego](tasks.md): opisuje różne scenariusze użycia uczenia maszynowego obsługiwane przez ml.NET.
+- [System typów IDataView](https://xadupre.github.io/machinelearningext/mlnetdocs/idataviewtypesystem.html): zawiera szczegółowy opis interfejsu [IDataView](xref:Microsoft.ML.IDataView) i jego systemu typów.
+- [Przekształcenia danych](transforms.md): zawiera omówienie transformacji danych obsługiwanych przez ml.NET.

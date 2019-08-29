@@ -2,12 +2,12 @@
 title: Co nowego w C# 7,1
 description: Omówienie nowych funkcji w C# 7,1.
 ms.date: 04/09/2019
-ms.openlocfilehash: 18306da709ea30f03f6c42b4a917e9b39695eb16
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ee68cbf129d02fc58155a603d6a3f63cfb182cd0
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796594"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105552"
 ---
 # <a name="whats-new-in-c-71"></a>Co nowego w C# 7,1
 
@@ -17,13 +17,13 @@ C#7,1 dodaje element konfiguracji [wyboru wersji języka](../language-reference/
 
 Nowe funkcje języka w tej wersji są następujące:
 
-* [`async``Main` Metoda](#async-main)
+- [`async``Main` Metoda](#async-main)
   - Punkt wejścia dla aplikacji może mieć `async` modyfikator.
-* [`default`wyrażenia literału](#default-literal-expressions)
+- [`default`wyrażenia literału](#default-literal-expressions)
   - Można użyć domyślnych wyrażeń literałów w wyrażeniach wartości domyślnych, gdy można wywnioskować typ docelowy.
-* [Wywnioskowane nazwy elementów krotki](#inferred-tuple-element-names)
+- [Wywnioskowane nazwy elementów krotki](#inferred-tuple-element-names)
   - Nazwy elementów krotki można wywnioskować na podstawie inicjalizacji krotki w wielu przypadkach.
-* [Dopasowanie wzorca dla parametrów typu ogólnego](#pattern-matching-on-generic-type-parameters)
+- [Dopasowanie wzorca dla parametrów typu ogólnego](#pattern-matching-on-generic-type-parameters)
   - Wyrażeń dopasowania wzorców można używać w zmiennych, których typem jest parametr typu ogólnego.
 
 Na koniec kompilator ma dwie opcje `-refout` i `-refonly` umożliwia wygenerowanie [zestawu odwołań](#reference-assembly-generation).

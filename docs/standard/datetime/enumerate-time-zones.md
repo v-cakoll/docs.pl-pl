@@ -11,61 +11,61 @@ helpviewer_keywords:
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82898e80f5acb2cb0dcab65390701efc8d48115b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: afc3b57659dd6719f72cefba8a6d2f1abe08c0d0
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586565"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106651"
 ---
 # <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Instrukcje: Wyliczanie stref czasowych na komputerze
 
-Działają z wyznaczonym strefy czasowej wymaga, aby dowiedzieć się, że strefa czasowa dostępna w systemie. Systemów operacyjnych Windows XP i Windows Vista te informacje są przechowywane w rejestrze. Jednak mimo że łączna liczba stref czasowych, które istnieją na całym świecie jest duża, Rejestr zawiera informacje na temat tylko ich podzestaw ich. Ponadto rejestr, sama jest dynamiczne struktury, których zawartość mogą ulec zmianie zamierzone i przypadkowych. W rezultacie aplikacji nie zawsze zakładaj, że to daną strefę czasową zdefiniowane i dostępne w systemie. Pierwszym krokiem dla wielu aplikacji, które korzystają z aplikacji informacje o strefie czasowej jest ustalenie, czy wymagane stref czasowych są dostępne w systemie lokalnym lub aby nadać użytkownikowi listę stref czasowych, które można wybierać. Wymaga to, że aplikacja wyliczanie stref czasowych zdefiniowanych w systemie lokalnym.
+Pomyślnie praca z wydaną strefą czasową wymaga, aby informacje o tej strefie czasowej były dostępne dla systemu. Te informacje są przechowywane w rejestrze w systemach operacyjnych Windows XP i Windows Vista. Mimo że łączna liczba stref czasowych istniejących na całym świecie jest duża, Rejestr zawiera informacje dotyczące tylko podzbioru. Ponadto sam rejestr jest strukturą dynamiczną, której zawartość podlega zarówno celowej, jak i przypadkowej zmianie. W związku z tym aplikacja nie zawsze zakłada, że określona strefa czasowa jest zdefiniowana i dostępna w systemie. Pierwszym krokiem dla wielu aplikacji, które korzystają z aplikacji informacji o strefie czasowej, jest określenie, czy wymagane strefy czasowe są dostępne w systemie lokalnym, czy też użytkownik może wyświetlić listę stref czasowych, z których należy wybrać. Wymaga to wyliczenia stref czasowych zdefiniowanych w systemie lokalnym.
 
 > [!NOTE]
-> Jeśli aplikacja wymaga obecności daną strefę czasową, która nie może być zdefiniowana w systemie lokalnym, aplikacja zapewnia jego obecność serializację i deserializację informacji o strefie czasowej. Następnie można dodać strefę czasową na formant listy tak, aby go wybrać użytkowników aplikacji. Aby uzyskać więcej informacji, zobacz [jak: Zapisywanie stref czasowych w zasobie osadzonym](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) i [jak: Przywracanie stref czasowych z zasobu osadzonego](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
+> Jeśli aplikacja korzysta z obecności określonej strefy czasowej, która może nie być zdefiniowana w systemie lokalnym, aplikacja może zapewnić swoją obecność, serializacji i deserializacji informacji o strefie czasowej. Można następnie dodać strefę czasową do kontrolki listy, aby użytkownik mógł ją wybrać. Aby uzyskać szczegółowe informacje [, zobacz How to: Zapisz strefy czasowe w osadzonym](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) zasobie i [instrukcje: Przywróć strefy czasowe z zasobu](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)osadzonego.
 
-### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>Aby wykazywanie stref czasowych w systemie lokalnym
+### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>Aby wyliczyć strefy czasowe obecne w systemie lokalnym
 
-1. Wywołaj <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> metody. Metoda ta zwraca ogólnego <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> zbiór <xref:System.TimeZoneInfo> obiektów. Wpisy w kolekcji są sortowane według ich <xref:System.TimeZoneInfo.DisplayName%2A> właściwości. Na przykład:
+1. Wywołaj <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> metody. Metoda zwraca ogólną <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> <xref:System.TimeZoneInfo> kolekcję obiektów. Wpisy w kolekcji są sortowane według ich <xref:System.TimeZoneInfo.DisplayName%2A> właściwości. Na przykład:
 
    [!code-csharp[System.TimeZone2.Concepts#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#1)]
    [!code-vb[System.TimeZone2.Concepts#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#1)]
 
-2. Wyliczanie poszczególnych <xref:System.TimeZoneInfo> obiektów w kolekcji przy użyciu `foreach` pętli (w języku C#) lub `For Each`...`Next` Pętla (w języku Visual Basic), a potrzeby przetwarzania dla każdego obiektu. Na przykład, poniższy kod wylicza <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> zbiór <xref:System.TimeZoneInfo> obiekty zwracane w kroku 1 i wyświetla nazwę wyświetlaną w poszczególnych strefach czasowych na konsoli.
+2. Wyliczanie pojedynczych <xref:System.TimeZoneInfo> obiektów w kolekcji przy `foreach` użyciu pętli C# `For Each`(w) lub...`Next` Pętla (w Visual Basic) i wykonywanie wszelkich niezbędnych operacji przetwarzania dla każdego obiektu. Na przykład poniższy kod wylicza <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> <xref:System.TimeZoneInfo> kolekcję obiektów zwróconych w kroku 1 i wyświetla nazwę wyświetlaną każdej strefy czasowej w konsoli.
 
    [!code-csharp[System.TimeZone2.Concepts#12](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#12)]
    [!code-vb[System.TimeZone2.Concepts#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#12)]
 
-### <a name="to-present-the-user-with-a-list-of-time-zones-present-on-the-local-system"></a>Aby przedstawić użytkownikowi listę stref czasowych w systemie lokalnym
+### <a name="to-present-the-user-with-a-list-of-time-zones-present-on-the-local-system"></a>Aby przedstawić użytkownikowi listę stref czasowych obecnych w systemie lokalnym
 
-1. Wywołaj <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> metody. Metoda ta zwraca ogólnego <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> zbiór <xref:System.TimeZoneInfo> obiektów.
+1. Wywołaj <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> metody. Metoda zwraca ogólną <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> <xref:System.TimeZoneInfo> kolekcję obiektów.
 
-2. Przypisz zbiorze zwróconym w kroku 1, aby `DataSource` właściwości programu Windows forms czy ASP.NET, formant listy.
+2. Przypisz kolekcję zwróconą w kroku 1 do `DataSource` właściwości kontrolki listy Windows Forms lub ASP.NET.
 
-3. Pobieranie <xref:System.TimeZoneInfo> obiekt, który został wybrany przez użytkownika.
+3. <xref:System.TimeZoneInfo> Pobierz obiekt wybrany przez użytkownika.
 
-Przykład stanowi ilustrację dla aplikacji Windows.
+Przykład zawiera ilustrację dla aplikacji systemu Windows.
 
 ## <a name="example"></a>Przykład
 
-W przykładzie uruchomiono aplikację Windows, która wyświetla stref czasowych zdefiniowanych w systemie, w polu listy. Przykład następnie wyświetla okno dialogowe, która zawiera wartość <xref:System.TimeZoneInfo.DisplayName%2A> właściwości obiektu strefę czasową wybranego przez użytkownika.
+Przykład uruchamia aplikację systemu Windows, która wyświetla strefy czasowe zdefiniowane w systemie w polu listy. W tym przykładzie zostanie wyświetlone okno dialogowe zawierające wartość <xref:System.TimeZoneInfo.DisplayName%2A> właściwości obiektu strefy czasowej wybranego przez użytkownika.
 
 [!code-csharp[System.TimeZone2.Concepts#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#2)]
 [!code-vb[System.TimeZone2.Concepts#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#2)]
 
-Najbardziej listę formantów (takie jak <xref:System.Windows.Forms.ListBox?displayProperty=nameWithType> lub <xref:System.Web.UI.WebControls.BulletedList?displayProperty=nameWithType> kontroli) umożliwiają przypisywanie to zbiór zmiennych obiektu do ich `DataSource` tak długo, jak implementuje tej kolekcji właściwość <xref:System.Collections.IEnumerable> interfejsu. (Ogólnego <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> klasy robi to.) Aby wyświetlić wybranego obiektu w kolekcji, kontrolka wywołuje tego obiektu `ToString` metodę, aby wyodrębnić ciąg, który jest używany do reprezentowania obiektu. W przypadku właściwości <xref:System.TimeZoneInfo> obiektów `ToString` metoda zwraca <xref:System.TimeZoneInfo> nazwę wyświetlaną obiektu (wartość jego <xref:System.TimeZoneInfo.DisplayName%2A> właściwości).
+Większość formantów list (takich <xref:System.Windows.Forms.ListBox?displayProperty=nameWithType> jak lub <xref:System.Web.UI.WebControls.BulletedList?displayProperty=nameWithType> kontrolka) umożliwia przypisanie kolekcji zmiennych obiektów do ich `DataSource` <xref:System.Collections.IEnumerable> właściwości, o ile ta kolekcja implementuje interfejs. (Klasa ogólna <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> robi to). Aby wyświetlić pojedynczy obiekt w kolekcji, formant wywołuje `ToString` metodę tego obiektu w celu wyodrębnienia ciągu, który jest używany do reprezentowania obiektu. W przypadku <xref:System.TimeZoneInfo> obiektów `ToString` Metoda zwraca <xref:System.TimeZoneInfo> nazwę wyświetlaną obiektu (wartość <xref:System.TimeZoneInfo.DisplayName%2A> właściwości).
 
 > [!NOTE]
-> Ponieważ kontrolki listy wywołań obiektu `ToString` metody, można przypisać zbiór <xref:System.TimeZoneInfo> obiekty do kontroli, mają kontrolę, wyświetlić nazwę opisową dla każdego obiektu, a następnie pobrać <xref:System.TimeZoneInfo> obiekt, który został wybrany przez użytkownika. Eliminuje to potrzebę, aby wyodrębnić parametry dla każdego obiektu w kolekcji, należy przypisać ciągu do kolekcji, która z kolei jest przypisany do kontrolki `DataSource` właściwości pobrania parametrów użytkownik wybrał, a następnie użyj tych parametrów, aby wyodrębnić obiektu czy opisano w nim. 
+> Ponieważ formanty list wywołują `ToString` metodę obiektu, można przypisać <xref:System.TimeZoneInfo> kolekcję obiektów do kontrolki, mieć formant, aby wyświetlał zrozumiałą nazwę dla każdego <xref:System.TimeZoneInfo> obiektu i pobrać obiekt wybrany przez użytkownika. Eliminuje to potrzebę wyodrębnienia ciągu dla każdego obiektu w kolekcji, przypisanie ciągu do kolekcji, która jest przypisana do `DataSource` właściwości kontrolki, pobranie ciągu wybranego przez użytkownika, a następnie użycie tego ciągu do wyodrębnienia obiektu to opisano. 
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
 Ten przykład wymaga:
 
-* Czy następujących przestrzeni nazw można zaimportować:
+- Że importowane są następujące przestrzenie nazw:
 
-  <xref:System> (w kodzie języka C#)
+  <xref:System>(w C# kodzie)
 
   <xref:System.Collections.ObjectModel>
 

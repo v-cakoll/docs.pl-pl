@@ -3,12 +3,12 @@ title: C#Typy i zmienne — Przewodnik po C# języku
 description: Dowiedz się więcej na temat definiowania typów i deklarowania zmiennych wC#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: f06894d986973e4394b0586906d67ef41a9d9152
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 22a91b101d5361091b09217d4562703851c86940
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "67661068"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105588"
 ---
 # <a name="types-and-variables"></a>Typy i zmienne
 
@@ -18,31 +18,31 @@ C#typy wartości są dalej podzielone na *typy proste*, *typy*wyliczeniowe, *typ
 
 Poniżej przedstawiono omówienie C#systemu typu.
 
-* [Typy wartości][ValueTypes]
+- [Typy wartości][ValueTypes]
   - [Typy proste][SimpleTypes]
-    * Całkowita część ze `sbyte`znakiem `int`:, `short`,,`long`
-    * Całka bez `byte`znaku `ushort`: `uint`,,,`ulong`
-    * Znaki Unicode:`char`
-    * Binarny zmiennoprzecinkowy IEEE: `float`,`double`
-    * Zmiennoprzecinkowa liczba dziesiętna o dużej precyzji:`decimal`
-    * Typu`bool`
+    - Całkowita część ze `sbyte`znakiem `int`:, `short`,,`long`
+    - Całka bez `byte`znaku `ushort`: `uint`,,,`ulong`
+    - Znaki Unicode:`char`
+    - Binarny zmiennoprzecinkowy IEEE: `float`,`double`
+    - Zmiennoprzecinkowa liczba dziesiętna o dużej precyzji:`decimal`
+    - Typu`bool`
   - [Typy wyliczeniowe][EnumTypes]
-    * Typy formularza zdefiniowane przez użytkownika`enum E {...}`
+    - Typy formularza zdefiniowane przez użytkownika`enum E {...}`
   - [Typy struktur][StructTypes]
-    * Typy formularza zdefiniowane przez użytkownika`struct S {...}`
+    - Typy formularza zdefiniowane przez użytkownika`struct S {...}`
   - [Typy wartości null][NullableTypes]
-    * Rozszerzenia wszystkich innych typów wartości z `null` wartością
-* [Typy odwołań][ReferenceTypes]
+    - Rozszerzenia wszystkich innych typów wartości z `null` wartością
+- [Typy odwołań][ReferenceTypes]
   - [Typy klas][ClassTypes]
-    * Ostateczna Klasa bazowa dla wszystkich innych typów:`object`
-    * Ciągi Unicode:`string`
-    * Typy formularza zdefiniowane przez użytkownika`class C {...}`
+    - Ostateczna Klasa bazowa dla wszystkich innych typów:`object`
+    - Ciągi Unicode:`string`
+    - Typy formularza zdefiniowane przez użytkownika`class C {...}`
   - [Typy interfejsów][InterfaceTypes]
-    * Typy formularza zdefiniowane przez użytkownika`interface I {...}`
+    - Typy formularza zdefiniowane przez użytkownika`interface I {...}`
   - [Typy tablic][ArrayTypes]
-    * Pojedyncze i wielowymiarowe, na przykład `int[]` i`int[,]`
+    - Pojedyncze i wielowymiarowe, na przykład `int[]` i`int[,]`
   - [Typy delegatów][DelegateTypes]
-    * Typy formularza zdefiniowane przez użytkownika`delegate int D(...)`
+    - Typy formularza zdefiniowane przez użytkownika`delegate int D(...)`
 
 [ValueTypes]: ../language-reference/keywords/value-types-table.md
 [SimpleTypes]: ../language-reference/keywords/value-types.md#simple-types
@@ -89,19 +89,19 @@ C#ujednolicony system typów efektywnie oznacza, że typy wartości mogą stać 
 
 W programie istnieją różne rodzaje *zmiennych* , w C#tym pola, elementy tablicy, zmienne lokalne i parametry. Zmienne reprezentują lokalizacje przechowywania, a Każda zmienna ma typ, który określa, jakie wartości mogą być przechowywane w zmiennej, jak pokazano poniżej.
 
-* Typ wartości niedopuszczający wartości null
+- Typ wartości niedopuszczający wartości null
   - Wartość tego dokładnego typu
-* Typ wartości null
+- Typ wartości null
   - `null` Wartość lub wartość tego dokładnego typu
-* object
+- object
   - `null` Odwołanie, odwołanie do obiektu dowolnego typu odwołania lub odwołanie do wartości opakowanej dowolnego typu wartości
-* Typ klasy
+- Typ klasy
   - `null` Odwołanie, odwołanie do wystąpienia tego typu klasy lub odwołanie do wystąpienia klasy pochodzącej od tego typu klasy
-* Typ interfejsu
+- Typ interfejsu
   - `null` Odwołanie, odwołanie do wystąpienia typu klasy implementującego ten typ interfejsu lub odwołanie do wartości opakowanej typu wartości implementującej ten typ interfejsu
-* Typ tablicy
+- Typ tablicy
   - `null` Odwołanie, odwołanie do wystąpienia tego typu tablicy lub odwołanie do wystąpienia zgodnego typu tablicy
-* Typ delegata
+- Typ delegata
   - `null` Odwołanie lub odwołanie do wystąpienia zgodnego typu delegata
 
 > [!div class="step-by-step"]

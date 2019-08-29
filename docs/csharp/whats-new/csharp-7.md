@@ -1,135 +1,135 @@
 ---
-title: Co nowego w języku C# 7.0 — przewodnik po języku C#
-description: Zapoznaj się z omówieniem nowych funkcji w wersji 7.0 C# języka.
+title: Co nowego w C# 7,0 — C# Przewodnik
+description: Zapoznaj się z omówieniem nowych funkcji w wersji 7,0 C# języka.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 58d43167341b69e7e9ac67024e9993cf51c26c0b
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 148ecdf7a3a99ac73132593272ecff3a5bb4195e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347457"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105712"
 ---
-# <a name="whats-new-in-c-70"></a>Co nowego w języku C# 7.0
+# <a name="whats-new-in-c-70"></a>Co nowego w C# 7,0
 
-C# 7.0 dodaje wiele nowych funkcji do języka C#:
-* [`out` Zmienne](#out-variables)
-  - Można zadeklarować `out` wartości wbudowanych jako argumenty do metody, gdzie są używane.
-* [Krotki](#tuples)
-  - Można tworzyć lekkie, bez nazwy typów, które zawierają wiele pola publiczne. Kompilatory i narzędzia IDE zrozumieć semantykę tych typów.
-* [Odrzucenia](#discards)
-  - Odrzuca są tymczasowego, tylko do zapisu zmienne używane w przypisania, jeśli nie dba o wartość przypisana. Są one najbardziej użyteczne, gdy dekonstrukcja krotek i typy zdefiniowane przez użytkownika, a także podczas wywoływania metody z `out` parametrów.
-* [Dopasowanie do wzorca](#pattern-matching)
-  - Można utworzyć logikę rozgałęziania, na podstawie dowolnego typu i wartości elementów członkowskich tych typów.
-* [`ref` Zmienne lokalne i](#ref-locals-and-returns)
-  - Metoda zmienne lokalne i wartości zwracane mogą być odwołania do innych magazynów.
-* [Funkcje lokalne](#local-functions)
-  - Można zagnieżdżać funkcji w innych funkcjach, aby ograniczyć ich zakres i widoczność.
-* [Więcej elementy członkowskie z wyrażeniem](#more-expression-bodied-members)
-  - Zwiększył się listę elementów członkowskich, które można tworzyć za pomocą wyrażeń.
-* [`throw` Expressions](#throw-expressions)
-  - W konstrukcji kodu, które wcześniej nie były dozwolone, ponieważ może generować wyjątki `throw` został instrukcję.
-* [Uogólnionego asynchroniczne typy zwracane](#generalized-async-return-types)
-  - Metody zadeklarowane za pomocą `async` modyfikator może zwrócić inne typy oprócz `Task` i `Task<T>`.
-* [Ulepszenia składni literału liczbowego](#numeric-literal-syntax-improvements)
-  - Nowe tokeny poprawić czytelność dla stałych numerycznych.
+C#7,0 dodaje wiele nowych funkcji do C# języka:
+- [`out`modyfikacj](#out-variables)
+  - Można zadeklarować `out` wartości jako argumenty metody, gdzie są używane.
+- [Krotki](#tuples)
+  - Można tworzyć lekkie, nienazwane typy, które zawierają wiele pól publicznych. Narzędzia kompilatora i IDE rozumieją semantykę tych typów.
+- [Odrzucenia](#discards)
+  - Odrzucenia są tymczasowymi zmiennymi tylko do zapisu, które są używane w przypisaniach, gdy nie ma opieki nad przypisaną wartością. Są one najbardziej przydatne podczas dekonstrukcji krotek i typów zdefiniowanych przez użytkownika, a także podczas wywoływania metod z `out` parametrami.
+- [Dopasowanie do wzorca](#pattern-matching)
+  - Można utworzyć logikę rozgałęziania na podstawie dowolnego typu i wartości elementów członkowskich tych typów.
+- [`ref`zmienne lokalne i zwraca](#ref-locals-and-returns)
+  - Zmienne lokalne metody i zwracane wartości mogą być odwołaniami do innego magazynu.
+- [Funkcje lokalne](#local-functions)
+  - Funkcje w innych funkcjach można zagnieżdżać w celu ograniczenia ich zakresu i widoczności.
+- [Więcej składowych wyrażeń](#more-expression-bodied-members)
+  - Lista elementów członkowskich, które mogą zostać utworzone przy użyciu wyrażeń.
+- [`throw`Wyrażeń](#throw-expressions)
+  - Można zgłosić wyjątki w konstrukcjach kodu, które wcześniej nie były `throw` dozwolone, ponieważ była instrukcją.
+- [Uogólnione asynchroniczne typy zwracane](#generalized-async-return-types)
+  - Metody zadeklarowane za `async` pomocą modyfikatora mogą zwracać inne typy `Task` oprócz i `Task<T>`.
+- [Udoskonalenia składni literału liczbowego](#numeric-literal-syntax-improvements)
+  - Nowe tokeny zwiększają czytelność dla stałych numerycznych.
 
-W dalszej części tego artykułu zawiera omówienie każdej funkcji. Dowiesz się jej uzasadnienie, dla każdej funkcji. Dowiesz się, aby składnia. Możesz zapoznać się z tych funkcji w środowisku przy użyciu `dotnet try` narzędzie globalne:
+Pozostała część tego artykułu zawiera omówienie każdej funkcji. Dla każdej funkcji znajdziesz jej uzasadnienie. Poznasz składnię. Te funkcje można eksplorować w środowisku za pomocą `dotnet try` narzędzia globalnego:
 
-1. Zainstaluj [spróbuj dotnet](https://github.com/dotnet/try/blob/master/README.md#setup) narzędzie globalne.
-1. Klonuj [dotnet/try-samples](https://github.com/dotnet/try-samples) repozytorium.
-1. Ustaw bieżący katalog *csharp7* podkatalog *try-samples* repozytorium.
+1. Zainstaluj narzędzie [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) Global.
+1. Sklonuj repozytorium [dotnet/try-Samples](https://github.com/dotnet/try-samples) .
+1. Ustaw bieżący katalog na podkatalog *csharp7* dla repozytorium *try-Samples* .
 1. Uruchom `dotnet try`.
 
-## <a name="out-variables"></a>`out` Zmienne
+## <a name="out-variables"></a>`out`modyfikacj
 
-Istniejące składnia, która obsługuje `out` parametry została ulepszona w tej wersji. Możesz teraz zadeklarować `out` zmiennych w liście argumentów wywołania metody, zamiast pisania instrukcji deklaracji oddzielnych:
+Istniejąca składnia, która `out` obsługuje parametry, została ulepszona w tej wersji. Można teraz zadeklarować `out` zmienne na liście argumentów wywołania metody, zamiast pisać oddzielne oświadczenie deklaracji:
 
 [!code-csharp[OutVariableDeclarations](~/samples/snippets/csharp/new-in-7/program.cs#OutVariableDeclarations "Out variable declarations")]
 
-Możesz chcieć określić typ `out` zmiennych w celu uściślenia, jak pokazano powyżej. Język obsługuje jednak przy użyciu niejawnie typizowanej zmiennej lokalnej:
+Możesz chcieć określić typ `out` zmiennej dla przejrzystości, jak pokazano powyżej. Język obsługuje jednak użycie niejawnie wpisanej zmiennej lokalnej:
 
 [!code-csharp[OutVarVariableDeclarations](~/samples/snippets/csharp/new-in-7/program.cs#OutVarVariableDeclarations "Implicitly typed Out variable")]
 
-* Kod jest łatwiejsza do odczytania.
-  - Można zadeklarować zmiennej poza, której używasz, nie w kolejnym wierszu powyżej.
-* Nie ma potrzeby, aby przypisać wartość początkową.
-  - DEKLARUJĄC `out` zmiennej, w przypadku, gdy jest używany w wywołaniu metody, nie można przypadkowo używać go przed przypisaniem go.
+- Kod jest łatwiejszy do odczytania.
+  - Można zadeklarować zmienną out tam, gdzie ją używasz, a nie w innym wierszu powyżej.
+- Nie trzeba przypisywać wartości początkowej.
+  - Deklarując `out` zmienną, w której jest używana w wywołaniu metody, nie można go przypadkowo użyć przed przypisaniem.
 
 ## <a name="tuples"></a>Krotki
 
-C# zapewnia rozbudowane składni klas i struktur, który służy do wyjaśnienia intencji Twojego projektu. Jednak czasami takiej składni sformatowanego wymaga dodatkowej pracy dzięki korzyściom z minimalnym. Często mogą zapisywać metod wymagających prostą strukturę zawierających więcej niż jednego elementu danych. Do obsługi tych scenariuszy *krotek* zostały dodane do języka C#. Kolekcje są strukturami danych uproszczone, zawierające wiele pól do reprezentowania składowych danych.
-Pola nie są weryfikowane i nie można definiować własnych metod.
+C#zawiera rozbudowaną składnię dla klas i struktur, które są używane do wyjaśnienia zamiaru projektowania. Jednak czasami rozbudowana Składnia wymaga dodatkowej pracy z minimalną korzyścią. Często możesz pisać metody, które potrzebują prostej struktury zawierającej więcej niż jeden element danych. Aby obsługiwać te scenariusze, *krotki* zostały dodane do C#. Krotki są lekkimi strukturami danych, które zawierają wiele pól do reprezentowania elementów członkowskich danych.
+Pola nie są zweryfikowane i nie można definiować własnych metod
 
 > [!NOTE]
-> Spójne kolekcje były dostępne przed języka C# 7.0, ale zostały mało wydajne i miał Brak obsługi języka.
-> Oznacza to, że elementy krotki mogą być przywoływane tylko jako `Item1`, `Item2` i tak dalej. C# 7.0 wprowadza obsługę krotek, co umożliwia semantycznego nazwy pól krotki przy użyciu typy krotki nowe, bardziej wydajne.
+> Krotki były dostępne przed C# 7,0, ale były niewydajne i nie obsługiwały języka.
+> Oznacza to, `Item1` `Item2` że elementy krotki mogą być przywoływane tylko jako i tak dalej. C#7,0 wprowadza obsługę języków dla krotek, co umożliwia używanie nazw semantycznych dla pól krotki przy użyciu nowych, wydajniejszych typów krotek.
 
-Możesz utworzyć krotki przez przypisywanie wartości do każdego członka i opcjonalnie podania semantycznego nazwy do każdego z członków spójnej kolekcji:
+Można utworzyć krotkę, przypisując wartość do każdego elementu członkowskiego, a opcjonalnie dostarczając nazwy semantyczne dla każdego z elementów członkowskich krotki:
 
 [!code-csharp[NamedTuple](~/samples/snippets/csharp/new-in-7/program.cs#NamedTuple "Named tuple")]
 
-`namedLetters` Krotka zawiera pola określone jako `Alpha` i `Beta`. Te nazwy istnieje tylko w czasie kompilacji i nie są zachowywane, na przykład podczas sprawdzania spójna kolekcja znajdująca się w czasie wykonywania przy użyciu odbicia.
+Krotka zawiera pola, które są `Alpha` określane jako i `Beta`. `namedLetters` Te nazwy istnieją tylko w czasie kompilacji i nie są zachowywane, na przykład podczas sprawdzania krotki przy użyciu odbicia w czasie wykonywania.
 
-W przypisaniu spójnej kolekcji można również określić nazwy pól po prawej stronie przypisania:
+W przypisaniu spójnej kolekcji można także określić nazwy pól po prawej stronie przypisania:
 
 [!code-csharp[ImplicitNamedTuple](~/samples/snippets/csharp/new-in-7/program.cs#ImplicitNamedTuple "Implicitly named tuple")]
 
-Mogą wystąpić sytuacje, gdy zachodzi potrzeba rozpakować elementy członkowskie spójnej kolekcji, które zostały zwrócone z metody.  Możecie od zadeklarowania zmiennych osobne dla każdej wartości w spójnej kolekcji. Nazywa się to rozpakowywania *dekonstrukcja* spójnej kolekcji:
+Mogą wystąpić sytuacje, w których chcesz rozpakować elementy członkowskie spójnej kolekcji, która została zwrócona z metody.  Można to zrobić przez zadeklarowanie oddzielnych zmiennych dla każdej wartości w spójnej kolekcji. To rozpakowanie nosi nazwę *dekonstrukcja* krotki:
 
 [!code-csharp[CallingWithDeconstructor](~/samples/snippets/csharp/new-in-7/program.cs#CallingWithDeconstructor "Deconstructing a tuple")]
 
-Możesz też podać podobne dekonstrukcja dla dowolnego typu na platformie .NET. Piszesz `Deconstruct` metodę jako składową klasy. Czy `Deconstruct` metoda zawiera zbiór `out` argumenty dla każdej właściwości, które mają zostać wyodrębnione. Należy wziąć pod uwagę to `Point` klasę, która zapewnia metody deconstructor, która wyodrębnia `X` i `Y` współrzędnych:
+Można także zapewnić podobną dekonstrukcję dla dowolnego typu w programie .NET. Należy napisać `Deconstruct` metodę jako element członkowski klasy. Ta `Deconstruct` Metoda zapewnia `out` zestaw argumentów dla każdej właściwości, które mają zostać wyodrębnione. Rozważmy `Point` tę klasę, która zapewnia metodę dekonstruktora, która `X` wyodrębnia `Y` współrzędne i:
 
 [!code-csharp[PointWithDeconstruction](~/samples/snippets/csharp/new-in-7/point.cs#PointWithDeconstruction "Point with deconstruction method")]
 
-Można wyodrębnić poszczególne pola, przypisując `Point` do krotki:
+Poszczególne pola można wyodrębnić, przypisując `Point` do krotki:
 
 [!code-csharp[DeconstructPoint](~/samples/snippets/csharp/new-in-7/program.cs#DeconstructPoint "Deconstruct a point")]
 
-Możesz dowiedzieć się w bardziej szczegółowe informacje o krotek w [artykułu krotek](../tuples.md).
+Więcej informacji na temat spójnych krotek można znaleźć w [artykule krotkis](../tuples.md).
 
 ## <a name="discards"></a>Odrzucenia
 
-Często podczas dekonstrukcja krotki lub wywołanie metody z `out` parametrami, jest zmuszony do definiowania zmiennej z żądanymi wartościami nie interesuje i nie będą używane. C# dodaje obsługę *odrzuca* do obsługi tego scenariusza. Odrzucenia to zmienna tylko do zapisu, którego nazwa jest `_` (znaki podkreślenia); można przypisać wszystkie wartości, które zamierzasz odrzucić do jednej zmiennej. Odrzucenia przypomina nieprzypisanej zmiennej; Oprócz instrukcji przypisania odrzuceń, nie można użyć w kodzie.
+Często podczas dekonstruowania krotki lub wywoływania metody z `out` parametrami należy wymusić zdefiniowanie zmiennej, której wartość nie ma znaczenia, i nie zamierza się jej używać. C#dodaje obsługę odrzutów, aby obsłużyć ten scenariusz. Odrzucanie to zmienna tylko do zapisu, której nazwa `_` to (znak podkreślenia); można przypisać wszystkie wartości, które mają zostać odrzucone do pojedynczej zmiennej. Odrzucenie przypomina przypisaną zmienną; poza instrukcją przypisania nie można używać odrzucania w kodzie.
 
-Odrzuca są obsługiwane w następujących scenariuszach:
+Odrzucenia są obsługiwane w następujących scenariuszach:
 
-* Gdy dekonstrukcja krotek lub typy zdefiniowane przez użytkownika.
-* Podczas wywoływania metody z [się](../language-reference/keywords/out-parameter-modifier.md) parametrów.
-* We wzorcu, dopasowanie operację, podając [jest](../language-reference/keywords/is.md) i [Przełącz](../language-reference/keywords/switch.md) instrukcji.
-* Jako identyfikator autonomicznej, aby jawnie Zidentyfikuj wartość do przypisania jako odrzucenia.
+- Podczas dekonstrukcji krotek lub typów zdefiniowanych przez użytkownika.
+- Podczas wywoływania metod z parametrami [out](../language-reference/keywords/out-parameter-modifier.md) .
+- W operacji dopasowania wzorca z instrukcjami with [](../language-reference/keywords/is.md) i [Switch](../language-reference/keywords/switch.md) .
+- Jako identyfikator autonomiczny, gdy chcesz jawnie określić wartość przypisania jako odrzucenie.
 
-W poniższym przykładzie zdefiniowano `QueryCityDataForYears` metodę, która zwraca 6-spójną kolekcją, która zawiera dane jako uczestnik w mieście dla dwóch różnych latach. Wywołanie metody w przykładzie dotyczy tylko wartości dwóch populacji zwracany przez metodę i dlatego traktuje pozostałe wartości w spójnej kolekcji, ponieważ odrzuca, gdy jej deconstructs spójnej kolekcji.
+W poniższym przykładzie zdefiniowano `QueryCityDataForYears` metodę, która zwraca 6-krotkę zawierającą dane dla miasta na dwa różne lata. Wywołanie metody w przykładzie jest rozważane tylko z dwiema wartościami populacji zwracanymi przez metodę i dlatego traktują pozostałe wartości w spójnej kolekcji jako odrzucane podczas dekonstruowania krotki.
 
 [!code-csharp[Tuple-discard](~/samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
-Aby uzyskać więcej informacji, zobacz [odrzuca](../discards.md).
+Aby uzyskać więcej informacji, [](../discards.md)Zobacz odrzucanie.
 
 ## <a name="pattern-matching"></a>Dopasowanie do wzorca
 
-*Dopasowanie wzorca* jest funkcją, która pozwala na implementowanie metody wysyłania we właściwościach innych niż typ obiektu. Prawdopodobnie znasz metodę alokacji na podstawie typu obiektu. Programowanie zorientowane obiektowo, wirtualnych i zastąpienie metody zawiera składni języka, aby zaimplementować metodę wysyłania na podstawie typu obiektu. Podstawowe i pochodne klasy dostarczać różne implementacje.
-Wyrażenia dopasowania wzorca rozszerzyć tę koncepcję, dzięki czemu można łatwo zaimplementować podobnych wzorców wysyłania dla typów i elementów danych, które nie są powiązane przez hierarchię dziedziczenia.
+*Dopasowywanie do wzorców* to funkcja, która umożliwia implementowanie metody wysyłania we właściwościach innych niż typ obiektu. Prawdopodobnie znasz już metodę wysyłania metody na podstawie typu obiektu. W programowaniu zorientowanym obiektowo metody wirtualne i przesłonięcia zapewniają składnię języka, aby zaimplementować metodę wysyłania na podstawie typu obiektu. Klasy podstawowe i pochodne zapewniają różne implementacje.
+Wyrażenia dopasowania wzorców poszerzają tę koncepcję, aby można było łatwo zaimplementować podobne wzorce wysyłania dla typów i elementów danych, które nie są związane z hierarchią dziedziczenia.
 
-Obsługa dopasowania do wzorca `is` wyrażeń i `switch` wyrażenia. Każdy umożliwia zapoznanie się obiekt i jego właściwości w celu stwierdzenia, jeśli ten obiekt spełnia wzorzec używanych. Możesz użyć `when` — słowo kluczowe, aby określić dodatkowe reguły do wzorca.
+Dopasowywanie wzorców `is` obsługuje wyrażenia `switch` i wyrażenia. Każdy umożliwia inspekcję obiektu i jego właściwości w celu ustalenia, czy ten obiekt spełnia oczekiwany wzorzec. Użyj słowa kluczowego, `when` aby określić dodatkowe reguły do wzorca.
 
-`is` Wyrażenia wzorca rozszerza znanej [ `is` operator](../language-reference/keywords/is.md#pattern-matching-with-is) można wysłać zapytania do obiektu o jej typ i przypisz wynik w jednej instrukcji. Poniższy kod umożliwia sprawdzenie, czy zmienna `int`, a jeśli tak, dodaje ją do sumy bieżącej:
+Wyrażenie wzorca rozszerza znanego [ `is` operatora](../language-reference/keywords/is.md#pattern-matching-with-is) w celu zbadania obiektu o jego typie i przypisuje wynik w jednej instrukcji. `is` Poniższy kod sprawdza `int`, czy zmienna jest, i jeśli tak, dodaje ją do bieżącej sumy:
 
 ```csharp
 if (input is int count)
     sum += count;
 ```
 
-Ulepszenia pokazano w powyższym przykładzie małych `is` wyrażenia. Możesz przetestować względem typów wartości, a także typy odwołań i pomyślnego wyniku można przypisać do nowej zmiennej poprawnego typu.
+Powyższy mały przykład ilustruje ulepszenia `is` wyrażenia. Można testować względem typów wartości, a także typów referencyjnych, a następnie można przypisać prawidłowy wynik do nowej zmiennej poprawnego typu.
 
-Wyrażenie dopasowania przełącznika ma dobrze znanej składni, w oparciu o `switch` instrukcja jest już częścią C# języka. Instrukcja switch zaktualizowane ma kilka nowych konstrukcji:
+Wyrażenie dopasowania przełącznika ma znaną składnię opartą na instrukcji, `switch` która jest już częścią C# języka. Zaktualizowana instrukcja SWITCH zawiera kilka nowych konstrukcji:
 
-- Typ zarządzania `switch` wyrażenia nie jest już ograniczony do typów całkowitych `Enum` typów `string`, lub typ dopuszczający wartość null, jednego z tych typów. Dowolny typ mogą być używane.
-- Możesz przetestować typ `switch` wyrażenie w każdym `case` etykiety. Podobnie jak w przypadku `is` wyrażenie nowej zmiennej może przypisać do tego typu.
-- Możesz dodać `when` klauzuli w celu dalszego testowania warunków w tej zmiennej.
-- Kolejność `case` ważne jest teraz etykiety. Pierwszej gałęzi, aby dopasować jest wykonywana. inne są pomijane.
+- Typ `switch` decydujący wyrażenia nie jest już ograniczony do typów całkowitych, `Enum` typów, `string`lub typu dopuszczającego wartość null odpowiadającego jednemu z tych typów. Można użyć dowolnego typu.
+- Możesz przetestować typ `switch` wyrażenia w każdej `case` etykiecie. Podobnie jak w `is` przypadku wyrażenia, można przypisać nową zmienną do tego typu.
+- Można dodać `when` klauzulę do dalszych warunków testowania dla tej zmiennej.
+- Kolejność `case` etykiet jest teraz ważna. Pierwsza gałąź do dopasowania jest wykonywana; pozostałe są pomijane.
 
-Poniższy kod demonstruje te nowe funkcje:
+Poniższy kod ilustruje następujące nowe funkcje:
 
 ```csharp
 public static int SumPositiveNumbers(IEnumerable<object> sequence)
@@ -160,104 +160,104 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
 }
 ```
 
-- `case 0:` jest dobrze znanych wzór stałej.
-- `case IEnumerable<int> childSequence:` jest to wzorzec typu.
-- `case int n when n > 0:` jest to wzorzec typu przy użyciu dodatkowego `when` warunku.
-- `case null:` jest wzorcem o wartości null.
-- `default:` jest to przypadek domyślny znanych.
+- `case 0:`jest znanym wzorcem stałej.
+- `case IEnumerable<int> childSequence:`jest wzorcem typu.
+- `case int n when n > 0:`jest wzorcem typu z dodatkowym `when` warunkiem.
+- `case null:`jest wzorcem o wartości null.
+- `default:`jest znanym domyślnym przypadkiem.
 
-Dowiedz się więcej na temat dopasowywania do wzorca w [wzorzec dopasowywania w C# ](../pattern-matching.md).
+Więcej informacji na temat dopasowywania wzorców w [ C# ](../pattern-matching.md)programie można znaleźć w temacie.
 
-## <a name="ref-locals-and-returns"></a>Zmienne lokalne ref i zwraca
+## <a name="ref-locals-and-returns"></a>Ref locales i Returns
 
-Ta funkcja umożliwia algorytmy, które używają i zwracać odwołań do zmiennych określonych gdzie indziej. Przykładem jest praca z macierzy dużych i znajdowanie w jednej lokalizacji, z określoną wspólną charakterystykę. Zwraca następującą metodę **odwołania** do tego magazynu w macierzy:
+Ta funkcja włącza algorytmy, które używają i zwracają odwołania do zmiennych zdefiniowanych w innym miejscu. Jeden przykład pracuje z dużymi macierzami i odnajduje jedną lokalizację z określonymi cechami. Poniższa metoda zwraca **odwołanie** do tego magazynu w macierzy:
 
 [!code-csharp[FindReturningRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#FindReturningRef "Find returning by reference")]
 
-Można zadeklarować wartość zwracana jako `ref` i zmodyfikować tę wartość w macierzy, jak pokazano w poniższym kodzie:
+Można zadeklarować wartość zwracaną jako `ref` i zmodyfikować tę wartość w macierzy, jak pokazano w poniższym kodzie:
 
 [!code-csharp[AssignRefReturn](~/samples/snippets/csharp/new-in-7/Program.cs#AssignRefReturn "Assign ref return")]
 
-C# Język ma kilka reguł, które można chronić przed używaniem `ref` zmiennych lokalnych i zwraca:
+C# Język ma kilka reguł, które chronią przed niektórymi `ref` niektórymi zasadami przy użyciu zmiennych lokalnych i zwraca:
 
-* Należy dodać `ref` słowa kluczowego w podpisie metody i do wszystkich `return` instrukcji w metodzie.
-  - Dzięki temu clear, metoda zwraca wartość przez odwołanie w całej metody.
-* A `ref return` można przypisać do zmiennej wartości lub `ref` zmiennej.
-  - Obiekt wywołujący kontroluje, czy wartość zwracana jest kopiowana, czy nie. Pominięcie `ref` modyfikator podczas przypisywania zwracana wartość wskazuje, że obiekt wywołujący chce kopię wartości, a nie odwołanie do magazynu.
-* Nie można przypisać wartość zwracaną standardową metodę, aby `ref` zmiennej lokalnej.
-  - Które nie zezwalają na instrukcjach, takich jak `ref int i = sequence.Count();`
-* Nie można zwrócić `ref` do zmiennej, którego okres istnienia nie wykracza poza wykonywanie metody.
-  - Oznacza to, że nie można zwrócić odwołanie do zmiennej lokalnej lub zmienną o zakresie podobne.
-* `ref` Zmienne lokalne i nie można używać metod asynchronicznych.
-  - Kompilator nie wiadomo, jeśli przywoływany została ustawiona zmienna końcowej wartości po powrocie z metody asynchronicznej.
+- Należy dodać `ref` słowo kluczowe do sygnatury metody i do wszystkich `return` instrukcji w metodzie.
+  - Dzięki temu czyszczenie metody następuje przez odwołanie w całej metodzie.
+- A `ref return` może być przypisana do zmiennej wartości `ref` lub zmiennej.
+  - Obiekt wywołujący kontroluje, czy wartość zwracana jest kopiowana, czy nie. `ref` Pominięcie modyfikatora podczas przypisywania wartości zwracanej wskazuje, że obiekt wywołujący chce mieć kopię wartości, a nie odwołanie do magazynu.
+- Nie można przypisać wartości zwracanej metody standardowej do `ref` zmiennej lokalnej.
+  - Nie zezwala na instrukcje, takie jak`ref int i = sequence.Count();`
+- Nie można zwrócić `ref` do zmiennej, której okres istnienia nie przekracza wykonywania metody.
+  - Oznacza to, że nie można zwrócić odwołania do zmiennej lokalnej lub zmiennej o podobnym zakresie.
+- `ref`elementy locale i Returns nie mogą być używane z metodami asynchronicznymi.
+  - Kompilator nie może wiedzieć, czy przywoływana zmienna została ustawiona na jej końcową wartość, gdy Metoda asynchroniczna zwraca.
 
-Dodatkowo zmienne lokalne ref i ref zwraca umożliwia algorytmy, które są bardziej wydajne, unikając kopiowania wartości lub wykonywanie operacji dereferencji wiele razy.
+Dodanie elementów lokalnych ref i Return ref umożliwia stosowanie algorytmów, które są bardziej wydajne przez uniknięcie kopiowania wartości lub wielokrotne wykonywanie operacji usuwania odwołań.
 
-Dodawanie `ref` wartość zwracana jest [źródła zmiany zgodne](version-update-considerations.md#source-compatible-changes). Kompiluje istniejący kod, ale odwołania zwracana wartość jest kopiowany po przypisaniu. Obiekty wywołujące muszą zaktualizować magazyn dla zwracanej wartości `ref` zmienną lokalną, aby przechowywać zwracany jako odwołanie.
+Dodanie `ref` do wartości zwracanej jest zmianą zgodną ze [źródłem](version-update-considerations.md#source-compatible-changes). Istniejący kod kompiluje, ale zwracana wartość Ref jest kopiowana po przypisaniu. Obiekty wywołujące muszą zaktualizować magazyn dla wartości zwracanej do `ref` zmiennej lokalnej, aby można było przechowywać zwrot jako odwołanie.
 
-Aby uzyskać więcej informacji, zobacz [ref — słowo kluczowe](../language-reference/keywords/ref.md) artykułu.
+Aby uzyskać więcej informacji, zobacz artykuł [słowo kluczowe ref](../language-reference/keywords/ref.md) .
 
 ## <a name="local-functions"></a>Funkcje lokalne
 
-Wiele projektów dla klasy zawierają metody, które są wywoływane z tylko jedną lokalizację. Te dodatkowe metody prywatnej Zachowaj każdej metody niewielkiego i skupionego projektu. *Funkcje lokalne* umożliwiają deklarowanie metody w kontekście innej metody. Funkcje lokalne ułatwiają czytelnicy klasy wyświetlić tylko wywołać lokalnego metody z kontekstu, w którym jest zdeklarowana.
+Wiele projektów klas obejmuje metody, które są wywoływane tylko z jednej lokalizacji. Te dodatkowe metody prywatne przechowują każdą metodę na małe i skoncentrowane. *Funkcje lokalne* umożliwiają deklarowanie metod wewnątrz kontekstu innej metody. Funkcje lokalne ułatwiają czytelnikom klasy sprawdzenie, czy metoda lokalna jest wywoływana tylko z kontekstu, w którym jest zadeklarowana.
 
-Istnieją dwie typowe przypadki użycia dla funkcji lokalnych: metody iteratora publicznych i metod asynchronicznych publicznych. Oba rodzaje metod wygenerować kod, który zgłasza błędy nowsze niż programiści mogą oczekiwać. W metodzie iteratora wszelkie wyjątki pojawiają się tylko podczas wywoływania kodu, który wylicza zwracanej sekwencji. W metodach asynchronicznych wyjątków tylko obserwuje się kiedy zwracanego `Task` jest oczekiwane. W poniższym przykładzie pokazano oddzielający Walidacja parametru od implementacji iteratora, przy użyciu funkcji lokalnego:
+Istnieją dwa typowe przypadki użycia funkcji lokalnych: metody iteratora publicznego i publiczne metody async. Oba typy metod generują kod, który zgłasza błędy później niż programiści mogą oczekiwać. W metodach iteratora wszystkie wyjątki są obserwowane tylko podczas wywoływania kodu, który wylicza zwracaną sekwencję. W metodach asynchronicznych wszelkie wyjątki są przestrzegane tylko wtedy `Task` , gdy zwracane jest oczekiwane. Poniższy przykład ilustruje oddzielanie walidacji parametrów od implementacji iteratora przy użyciu funkcji lokalnej:
 
 [!code-csharp[22_IteratorMethodLocal](~/samples/snippets/csharp/new-in-7/Iterator.cs#IteratorMethodLocal "Iterator method with local function")]
 
-Można zastosować za pomocą tej samej techniki `async` metod w celu zapewnienia, że wynikające z walidacji argumentów zgłaszania wyjątków przed rozpoczęciem pracy asynchronicznej:
+Ta sama technika może być stosowana z `async` metodami, aby zapewnić, że wyjątki wynikające z walidacji argumentów są zgłaszane przed rozpoczęciem pracy asynchronicznej:
 
 [!code-csharp[TaskExample](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 > [!NOTE]
-> Niektóre projekty, które są obsługiwane przez funkcje lokalne mogą być również wykonywane przy użyciu *wyrażeń lambda*. Te zainteresowane można [Dowiedz się więcej o różnicach](../local-functions-vs-lambdas.md)
+> Niektóre projekty, które są obsługiwane przez funkcje lokalne, można również zrealizować przy użyciu *wyrażeń lambda*. Zainteresowane osoby mogą dowiedzieć [się więcej na temat różnic](../local-functions-vs-lambdas.md)
 
-## <a name="more-expression-bodied-members"></a>Więcej elementy członkowskie z wyrażeniem
+## <a name="more-expression-bodied-members"></a>Więcej składowych wyrażeń
 
-C# 6 wprowadzono [elementy członkowskie z wyrażeniem](csharp-6.md#expression-bodied-function-members) dla elementów członkowskich i właściwości tylko do odczytu. C# 7.0 rozwija dozwolonych elementów członkowskich, które można zaimplementować jako wyrażenia. W języku C# 7.0, można zaimplementować *konstruktory*, *finalizatory*, i `get` i `set` metod dostępu na *właściwości* i *indeksatorów* . Poniższy kod przedstawia przykłady każdego z nich:
+C#6 wprowadzono [składowe z wyrażeniami](csharp-6.md#expression-bodied-function-members) dla funkcji Członkowskich i właściwości tylko do odczytu. C#7,0 rozwija dozwolone elementy członkowskie, które mogą być zaimplementowane jako wyrażenia. W C# 7,0 można zaimplementować konstruktory, *finalizatory* `get` i `set` metody dostępu do *Właściwości* i indeksatorów. Poniższy kod przedstawia przykłady każdego z nich:
 
 [!code-csharp[ExpressionBodiedMembers](~/samples/snippets/csharp/new-in-7/expressionmembers.cs#ExpressionBodiedEverything "new expression-bodied members")]
 
 > [!NOTE]
-> W tym przykładzie nie potrzebuje finalizatora, jednak wyświetleniem pokazano składnię. Nie należy implementować finalizator w klasie, chyba że jest to niezbędne zwolnić niezarządzane zasoby. Należy również rozważyć użycie <xref:System.Runtime.InteropServices.SafeHandle> klasy zamiast na zarządzaniu bezpośrednio niezarządzane zasoby.
+> Ten przykład nie wymaga finalizatora, ale jest pokazywany do zademonstrowania składni. Nie należy implementować finalizatora w klasie, chyba że konieczne jest zwolnienie niezarządzanych zasobów. Należy również rozważyć użycie <xref:System.Runtime.InteropServices.SafeHandle> klasy zamiast bezpośrednio zarządzać niezarządzanymi zasobami.
 
-Te nowe lokalizacje dla elementy członkowskie z wyrażeniem reprezentują ważnym kamieniem milowym dla C# języka: Te funkcje zostały zaimplementowane przez członków społeczności nad typu open-source [Roslyn](https://github.com/dotnet/Roslyn) projektu.
+Te nowe lokalizacje dla elementów członkowskich, których dotyczy wyrażenie, C# reprezentują ważne punkty kontrolne dla języka: Te funkcje zostały zaimplementowane przez członków społeczności pracujących w projekcie [Roslyn](https://github.com/dotnet/Roslyn) typu open source.
 
-Zmiana metody do elementu członkowskiego zabudowanego wyrażenie jest [binarne zmiany zgodne](version-update-considerations.md#binary-compatible-changes).
+Zmiana metody na wyrażenie składowane składowej jest zgodną [](version-update-considerations.md#binary-compatible-changes)z binarną zmianą.
 
 ## <a name="throw-expressions"></a>Wyrażenia throw
 
-W języku C# `throw` zawsze było instrukcję. Ponieważ `throw` jest instrukcją nie wyrażenie wystąpiły C# konstrukcje, których nie używasz go. Uwzględnione są niektóre wyrażenia lambda, wyrażenia warunkowe i wyrażenia łączące wartości null. Dodanie elementy członkowskie z wyrażeniem dodanie większej liczby lokalizacji gdzie `throw` wyrażeń może okazać się przydatne. Dzięki czemu można tworzyć dowolne te konstrukcje C# wprowadza 7.0 [ *wyrażeń throw*](../language-reference/keywords/throw.md#the-throw-expression).
+W C#programie `throw` , zawsze jest instrukcją. Ponieważ `throw` jest instrukcją, a nie wyrażeniem, istnieją C# konstrukcje, w których nie można było ich użyć. Uwzględnione wyrażenia warunkowe, wyrażenia łączenia o wartości null i niektóre wyrażenia lambda. Dodanie elementów członkowskich będących członkami wyrażeń dodaje więcej lokalizacji, w `throw` których wyrażenia byłyby przydatne. Aby można było napisać dowolny z tych konstrukcji, C# 7,0 wprowadza [wyrażenia throw](../language-reference/keywords/throw.md#the-throw-expression).
 
-To dodawanie ułatwia pisanie kodu oparte na wyrażeniach więcej. Nie potrzebujesz dodatkowych instrukcji sprawdzania błędów.
+To dodanie ułatwia zapisanie więcej kodu opartego na wyrażeniach. Nie potrzebujesz dodatkowych instrukcji do sprawdzania błędów.
 
-## <a name="generalized-async-return-types"></a>Uogólnionego asynchroniczne typy zwracane
+## <a name="generalized-async-return-types"></a>Uogólnione asynchroniczne typy zwracane
 
-Zwracanie `Task` obiekt z metody asynchronicznej może prowadzić do wąskich gardeł wydajności w niektórych ścieżek. `Task` jest typem referencyjnym, więc za jego pomocą oznacza przydzielanie obiektu. W przypadkach, w którym metoda jest zadeklarowana za pomocą `async` modyfikator zwraca wynik pamięci podręcznej lub zakończeniu synchronicznie, dodatkowe alokacji może stać się koszt znaczną ilość czasu, w sekcji krytycznych wydajność kodu. Może być kosztowne, jeśli te przydziały występują w ścisłej pętli.
+`Task` Zwrócenie obiektu z metod asynchronicznych może spowodować wąskie gardła wydajności w określonych ścieżkach. `Task`to typ referencyjny, dlatego użycie go oznacza przydzielenie obiektu. W przypadkach, gdy metoda zadeklarowana za `async` pomocą modyfikatora zwraca zbuforowany wynik lub wykonuje synchronicznie, dodatkowe alokacje mogą stać się ważnym kosztem w przypadku krytycznych sekcji kodu. Może być kosztowna, jeśli te przydziały występują w ścisłych pętlach.
 
-Nowa funkcja języka oznacza, że metoda asynchroniczna, zwracane typy nie są ograniczone do `Task`, `Task<T>`, i `void`. Zwrócony typ nadal musi spełniać wzorca asynchronicznego, co oznacza `GetAwaiter` metody muszą być dostępne. Przykład jednego konkretnego `ValueTask` typ został dodany do programu .NET framework, aby skorzystać z tej nowej funkcji języka:
+Nowa funkcja języka oznacza, że zwracane typy metod asynchronicznych nie są `Task`ograniczone `Task<T>`do, `void`, i. Zwracany typ musi nadal spełniać wzorzec asynchroniczny, co oznacza, `GetAwaiter` że metoda musi być dostępna. W jednym z konkretnych przykładów `ValueTask` typ został dodany do programu .NET Framework, aby można było korzystać z tej nowej funkcji języka:
 
 [!code-csharp[UsingValueTask](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#UsingValueTask "Using ValueTask")]
 
 > [!NOTE]
-> Dodaj pakiet NuGet [ `System.Threading.Tasks.Extensions` ](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) aby można było używać <xref:System.Threading.Tasks.ValueTask%601> typu.
+> Aby można było użyć tego [`System.Threading.Tasks.Extensions`](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) <xref:System.Threading.Tasks.ValueTask%601> typu, należy dodać pakiet NuGet.
 
-To rozszerzenie jest najbardziej użyteczne dla autorów biblioteki uniknąć przyznawania `Task` w wydajności kodu krytycznego.
+To ulepszenie jest najbardziej przydatne w przypadku autorów bibliotek, aby uniknąć `Task` alokowania w kodzie krytycznym wydajności.
 
-## <a name="numeric-literal-syntax-improvements"></a>Ulepszenia składni literału liczbowego
+## <a name="numeric-literal-syntax-improvements"></a>Udoskonalenia składni literału liczbowego
 
-Misreading stałych numerycznych może utrudnić rozumienie kodu, odczytując je po raz pierwszy. Masek bitowych lub innych symboliczne wartości są podatne na nieporozumienia. C#7.0 zawiera dwie nowe funkcje, aby zapisać numery w najbardziej czytelny sposób związane z zamierzonym użyciem: *literały binarne*, i *separatory cyfr*.
+Nieodczytanie stałych numerycznych może utrudnić zrozumienie kodu podczas odczytywania go po raz pierwszy. Maski bitowe lub inne wartości symboliczne są podatne na nieporozumienia. C#7,0 obejmuje dwie nowe funkcje do zapisu liczb w najbardziej czytelny sposób dla zamierzonego użycia: *literały binarne*oraz *separatory cyfr*.
 
-Czasów przy tworzeniu masek bitowych lub zawsze wtedy, gdy binarna reprezentacja liczby sprawia, że najbardziej czytelne kodu, zapisać tę liczbę w pliku binarnego:
+Dla tych czasów podczas tworzenia masek bitowych lub za każdym razem, gdy binarna reprezentacja liczby sprawia, że jest to najbardziej czytelny kod, Zapisz ten numer w postaci binarnej:
 
 [!code-csharp[ThousandSeparators](~/samples/snippets/csharp/new-in-7/Program.cs#ThousandSeparators "Thousands separators")]
 
-`0b` Na początku stała wskazuje, że liczba jest zapisywany jako wartości binarnej. Binarne wartości można uzyskać długości, więc jest często łatwiej zobaczyć wzorców bitowych, wprowadzając `_` jako separator cyfr, jak pokazano powyżej w stałej binarnego. Separator cyfr może występować w dowolnym miejscu w stałej. W przypadku podstawowej liczb 10, jest często używa się tysięcy separatora:
+`0b` Na początku stała wskazuje, że liczba jest zapisywana jako liczba binarna. Liczby binarne mogą być długie, więc często łatwiej jest zobaczyć wzorce bitowe, wprowadzając `_` jako separator cyfr, jak pokazano powyżej w stałej binarnej. Separator cyfr może pojawić się w dowolnym miejscu w stałej. W przypadku numerów podstawowych 10 często należy używać jej jako separatora tysięcy:
 
 [!code-csharp[LargeIntegers](~/samples/snippets/csharp/new-in-7/Program.cs#LargeIntegers "Large integer")]
 
-Separator cyfr, może być używany z `decimal`, `float`, i `double` również typy:
+Separator cyfr może być używany z `decimal`, `float`i `double` również typy:
 
 [!code-csharp[OtherConstants](~/samples/snippets/csharp/new-in-7/Program.cs#OtherConstants "non-integral constants")]
 
-Razem wzięte, można zadeklarować stałych numerycznych za pomocą znacznie więcej czytelności.
+Ze sobą można zadeklarować stałe liczbowe o znacznie większej czytelności.

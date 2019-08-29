@@ -2,12 +2,12 @@
 title: Odwołanie do słowa kluczowego
 description: Znajdź linki do informacji o wszystkich słowach F# kluczowych języka.
 ms.date: 05/16/2016
-ms.openlocfilehash: 680b270a99eff7aa98652579d2fd31b4b05080ca
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 8c2df9d081caae48489e3e316ca158f3b9106efb
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733481"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107040"
 ---
 # <a name="keyword-reference"></a>Odwołanie do słowa kluczowego
 
@@ -92,44 +92,44 @@ W poniższej tabeli przedstawiono wszystkie F# słowa kluczowe w kolejności alf
 
 Następujące tokeny są zastrzeżone w F# programie, ponieważ są słowami kluczowymi w języku ocaml:
 
-* `asr`
-* `land`
-* `lor`
-* `lsl`
-* `lsr`
-* `lxor`
-* `mod`
-* `sig`
+- `asr`
+- `land`
+- `lor`
+- `lsl`
+- `lsr`
+- `lxor`
+- `mod`
+- `sig`
 
 Jeśli używasz `--mlcompatibility` opcji kompilatora, powyższe słowa kluczowe są dostępne do użycia jako identyfikatory.
 
 Następujące tokeny są zastrzeżone jako słowa kluczowe do przyszłego rozwinięcia F# języka:
 
-* `atomic`
-* `break`
-* `checked`
-* `component`
-* `const`
-* `constraint`
-* `constructor`
-* `continue`
-* `eager`
-* `event`
-* `external`
-* `functor`
-* `include`
-* `method`
-* `mixin`
-* `object`
-* `parallel`
-* `process`
-* `protected`
-* `pure`
-* `sealed`
-* `tailcall`
-* `trait`
-* `virtual`
-* `volatile`
+- `atomic`
+- `break`
+- `checked`
+- `component`
+- `const`
+- `constraint`
+- `constructor`
+- `continue`
+- `eager`
+- `event`
+- `external`
+- `functor`
+- `include`
+- `method`
+- `mixin`
+- `object`
+- `parallel`
+- `process`
+- `protected`
+- `pure`
+- `sealed`
+- `tailcall`
+- `trait`
+- `virtual`
+- `volatile`
 
 ## <a name="see-also"></a>Zobacz także
 

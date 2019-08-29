@@ -2,12 +2,12 @@
 title: Parametry i argumenty
 description: Dowiedz F# się więcej o obsłudze języków do definiowania parametrów i przekazywania argumentów do funkcji, metod i właściwości.
 ms.date: 05/16/2016
-ms.openlocfilehash: 561cefb1d437b2f38f6ee4ca37cd955235ca06fa
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 67e82d031c4b22bc30a6f278d9698298ccff2e21
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627316"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106604"
 ---
 # <a name="parameters-and-arguments"></a>Parametry i argumenty
 
@@ -163,9 +163,9 @@ W takim przypadku kompilator generuje ostrzeżenie i całkowicie zignoruje oba a
 
 Przekazywanie F# wartości przez odwołanie obejmuje [ByRef](byrefs.md), które są zarządzanymi typami wskaźników. Wskazówki dotyczące używanego typu są następujące:
 
-* Użyj `inref<'T>` , jeśli musisz tylko odczytać wskaźnik.
-* Użyj `outref<'T>` , jeśli musisz tylko pisać na wskaźniku.
-* Użyj `byref<'T>` , jeśli musisz zarówno czytać, jak i zapisywać na wskaźniku.
+- Użyj `inref<'T>` , jeśli musisz tylko odczytać wskaźnik.
+- Użyj `outref<'T>` , jeśli musisz tylko pisać na wskaźniku.
+- Użyj `byref<'T>` , jeśli musisz zarówno czytać, jak i zapisywać na wskaźniku.
 
 ```fsharp
 let example1 (x: inref<int>) = printfn "It's %d" x

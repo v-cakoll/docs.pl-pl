@@ -2,12 +2,12 @@
 title: polecenie dotnet publish
 description: Dotnet publish polecenie publikuje projekt platformy .NET Core w katalogu.
 ms.date: 05/29/2018
-ms.openlocfilehash: 8cefeae17e464e14abc54dce1feb414a72c44164
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 972937ac1bc32b3749d4e1b6b8874c3516f5680c
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331033"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105135"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -49,10 +49,10 @@ dotnet publish [-h|--help]
 
 `dotnet publish`kompiluje aplikację, odczytuje ją z zależności określonych w pliku projektu i publikuje zestaw plików w katalogu. Dane wyjściowe obejmują następujące zasoby:
 
-* Kod języka pośredniego (IL) w zestawie z rozszerzeniem *dll* .
-* plik *. deps. JSON* zawiera wszystkie zależności projektu.
-* plik *. runtimeconfig. JSON* określa współużytkowany środowisko uruchomieniowe oczekiwane przez aplikację, a także inne opcje konfiguracji środowiska uruchomieniowego (na przykład typ wyrzucania elementów bezużytecznych).
-* Zależności aplikacji, które są kopiowane z pamięci podręcznej NuGet do folderu danych wyjściowych.
+- Kod języka pośredniego (IL) w zestawie z rozszerzeniem *dll* .
+- plik *. deps. JSON* zawiera wszystkie zależności projektu.
+- plik *. runtimeconfig. JSON* określa współużytkowany środowisko uruchomieniowe oczekiwane przez aplikację, a także inne opcje konfiguracji środowiska uruchomieniowego (na przykład typ wyrzucania elementów bezużytecznych).
+- Zależności aplikacji, które są kopiowane z pamięci podręcznej NuGet do folderu danych wyjściowych.
 
 Dane `dotnet publish` wyjściowe polecenia są gotowe do wdrożenia w systemie hostingu (na przykład na serwerze, komputerze, Mac, laptopie) do wykonania. Jest to jedyna oficjalnie obsługiwana metoda przygotowania aplikacji do wdrożenia. W zależności od typu wdrożenia, który jest określany przez projekt, system hostingu może lub nie ma zainstalowanego udostępnionego środowiska uruchomieniowego platformy .NET Core. Aby uzyskać więcej informacji, zobacz [wdrażanie aplikacji .NET Core](../deploying/index.md). Aby uzyskać strukturę katalogów opublikowanej aplikacji, zobacz [Struktura katalogów](/aspnet/core/hosting/directory-structure).
 

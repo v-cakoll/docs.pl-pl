@@ -3,15 +3,15 @@ title: 'Samouczek: Wykrywanie obiektów przy użyciu głębokiej nauki z ONNX i 
 description: W tym samouczku przedstawiono sposób użycia wstępnie przeszkolonego modelu uczenia głębokiego ONNX w ML.NET do wykrywania obiektów w obrazach.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 08/01/2019
+ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e44ea5795beb90bafe3faf0bafb463d49ba1fc41
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: deb7258326428cca01ea8734e0dc010c29177cfa
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868724"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106858"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Samouczek: Wykrywanie obiektów przy użyciu ONNX w ML.NET
 
@@ -21,11 +21,11 @@ Uczenie modelu wykrywania obiektów od podstaw wymaga ustawienia milionów param
 
 Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
-> * Omówienie problemu
-> * Dowiedz się, co ONNX i jak działa z ML.NET
-> * Zrozumienie modelu
-> * Ponownie Użyj wstępnie nauczonego modelu
-> * Wykrywanie obiektów z załadowanym modelem
+> - Omówienie problemu
+> - Dowiedz się, co ONNX i jak działa z ML.NET
+> - Zrozumienie modelu
+> - Ponownie Użyj wstępnie nauczonego modelu
+> - Wykrywanie obiektów z załadowanym modelem
 
 ## <a name="pre-requisites"></a>Wymagania wstępne
 
@@ -117,7 +117,7 @@ Teraz, gdy masz ogólne informacje o tym, co ONNX się i jak mała YOLOv2 dział
 
 Otwórz plik *program.cs* i Dodaj następujące dodatkowe `using` instrukcje na początku pliku:
 
-[!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L1-L9)]
+[!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L1-L7)]
 
 Następnie zdefiniuj ścieżki różnych zasobów. 
 
@@ -125,7 +125,7 @@ Następnie zdefiniuj ścieżki różnych zasobów.
 
     [!code-csharp [GetAbsolutePath](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L66-L74)]
 
-1. Następnie wewnątrz `Main` metody Utwórz pola do przechowywania lokalizacji zasobów:
+1. Następnie wewnątrz `Main` metody Utwórz pola do przechowywania lokalizacji zasobów.
 
     [!code-csharp [AssetDefinition](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L17-L21)]
 
@@ -178,76 +178,6 @@ Utwórz klasę predykcyjną w katalogu *struktury* danych.
 
 [!code-csharp [InitMLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L24)]
 
-### <a name="add-helper-methods"></a>Dodawanie metod pomocnika
-
-Po przeprowadzeniu prognozy, często nazywanej ocenianiem i przetworzeniu danych wyjściowych, pola ograniczenia muszą być rysowane na obrazie. Aby to zrobić, Dodaj metodę o nazwie `DrawBoundingBox` do `GetAbsolutePath` metody insode of *program.cs*.
-
-```csharp
-private static void DrawBoundingBox(string inputImageLocation, string outputImageLocation, string imageName, IList<YoloBoundingBox> filteredBoundingBoxes)
-{
-
-}
-```
-
-Najpierw Załaduj obraz i uzyskaj wymiary wysokości i szerokości w `DrawBoundingBox` metodzie.
-
-[!code-csharp [LoadImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L78-L81)]
-
-Następnie utwórz pętlę for-each, aby wykonać iterację każdego z pól powiązanych wykrytych przez model.
-
-```csharp
-foreach (var box in filteredBoundingBoxes)
-{
-
-}
-```
-
-Wewnątrz pętli for-each należy uzyskać wymiary powiązanego pola.
-
-[!code-csharp [GetBBoxDimensions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L86-L89)]
-
-Ponieważ wymiary pola ograniczenia odpowiadają na dane wejściowe `416 x 416`modelu, Skaluj Wymiary pola ograniczenia w celu dopasowania do rzeczywistego rozmiaru obrazu.
-
-[!code-csharp [ScaleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L92-L95)]
-
-Następnie zdefiniuj szablon dla tekstu, który będzie apear powyżej każdego pola ograniczenia. Tekst będzie zawierać klasę obiektu wewnątrz odpowiedniego pola ograniczenia, a także wiarygodność.
-
-[!code-csharp [DefineBBoxText](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L98)]
-
-Aby rysować na obrazie, przekonwertuj go na [`Graphics`](xref:System.Drawing.Graphics) obiekt.
-
-```csharp
-using (Graphics thumbnailGraphic = Graphics.FromImage(image))
-{
-    
-}
-```
-
-[`Graphics`](xref:System.Drawing.Graphics) W bloku `using` kodu Dostosuj ustawienia obiektu graficznego.
-
-[!code-csharp [TuneGraphicSettings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L102-L104)]
-
-Poniżej Ustaw opcje czcionki i koloru dla pola tekst i granice.
-
-[!code-csharp [SetColorOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L106-L114)]
-
-Utwórz i Wypełnij prostokąt powyżej pola ograniczenia, aby zawierać tekst przy użyciu [`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*) metody. Pomoże to zwiększyć kontrast tekstu i poprawić czytelność.
-
-[!code-csharp [DrawTextBackground](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L117)]
-
-Następnie należy narysować tekst i obwiednię obrazu przy użyciu [`DrawString`](xref:System.Drawing.Graphics.DrawString*) metod i. [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle*)
-
-[!code-csharp [DrawClassAndBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L118-L121)]
-
-Poza pętlą for-each Dodaj kod, aby zapisać obrazy w `outputDirectory`.
-
-[!code-csharp [SaveImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L125-L130)]
-
-Aby uzyskać dodatkowe informacje o tym, że aplikacja przeprowadza prognozowanie zgodnie z oczekiwaniami w czasie wykonywania, `LogDetectedObjects` Dodaj metodę `DrawBoundingBox` wywołana poniżej metody w pliku *program.cs* , aby wypróbować wykryte obiekty do konsoli.
-
-[!code-csharp [LogOuptuts](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
-
-Obie te metody będą przydatne, gdy model wygenerował dane wyjściowe i zostały przetworzone. Najpierw Utwórz funkcję do przetwarzania danych wyjściowych modelu.
 
 ## <a name="create-a-parser-to-post-process-model-outputs"></a>Tworzenie analizatora danych wyjściowych modelu po procesie
 
@@ -344,7 +274,7 @@ Teraz, gdy tworzone są klasy wymiarów i pól powiązanych, czas na utworzenie 
     - `CELL_HEIGHT`to wysokość jednej komórki w siatce obrazu.
     - `channelStride`jest pozycją początkową bieżącej komórki siatki.
 
-    Gdy model ocenia obraz, dzieli `416px x 416px`dane wejściowe na siatkę komórek o `13 x 13`rozmiarze. Każda komórka zawiera `32px x 32px`. W każdej komórce istnieją 5 pól, które zawierają 5 funkcji (x, y, Szerokość, wysokość, pewność). Ponadto każde pole ograniczenia zawiera prawdopodobieństwo dla każdej klasy, która w tym przypadku jest równa 20. W związku z tym każda komórka zawiera 125 fragmenty informacji (5 funkcji + 20 prawdopodobieństwa dotyczącej klasy). 
+    Gdy model wykonuje prognozę, znaną również jako ocenianie, dzieli `416px x 416px` obraz wejściowy na siatkę komórek o `13 x 13`rozmiarze. Każda komórka zawiera `32px x 32px`. W każdej komórce istnieją 5 pól, które zawierają 5 funkcji (x, y, Szerokość, wysokość, pewność). Ponadto każde pole ograniczenia zawiera prawdopodobieństwo dla każdej klasy, która w tym przypadku jest równa 20. W związku z tym każda komórka zawiera 125 fragmenty informacji (5 funkcji + 20 prawdopodobieństwa dotyczącej klasy). 
 
 Utwórz listę kotwic poniżej `channelStride` dla wszystkich 5 pól ograniczenia:
 
@@ -560,7 +490,7 @@ Podobnie jak w przypadku przetwarzania końcowego, należy wykonać kilka krokó
 
     [!code-csharp [LoadModelLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L47-L49)]
 
-    Potoki ml.NET zazwyczaj oczekują, że dane będą działać [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) przy wywołaniu metody. W takim przypadku zostanie użyty proces podobny do szkoleń. Ponieważ jednak żadne rzeczywiste szkolenie nie jest wykonywane, można go użyć jako pustego [`IDataView`](xref:Microsoft.ML.IDataView). Utwórz nowy [`IDataView`](xref:Microsoft.ML.IDataView) dla potoku z pustej listy.
+    Potoki ml.NET muszą znać schemat danych do działania, gdy [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) wywoływana jest metoda. W takim przypadku zostanie użyty proces podobny do szkoleń. Ponieważ jednak żadne rzeczywiste szkolenie nie jest wykonywane, można go użyć jako pustego [`IDataView`](xref:Microsoft.ML.IDataView). Utwórz nowy [`IDataView`](xref:Microsoft.ML.IDataView) dla potoku z pustej listy.
 
     [!code-csharp [LoadEmptyIDV](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L52)]    
 
@@ -608,7 +538,13 @@ Prawie gotowe! Teraz czas, aby można było go używać.
 
 ## <a name="detect-objects"></a>Wykryj obiekty
 
-Po zakończeniu wszystkich czynności konfiguracyjnych czas na wykrycie niektórych obiektów. Wewnątrz metody klasy program.cs Dodaj instrukcję try-catch. `Main`
+Po zakończeniu wszystkich czynności konfiguracyjnych czas na wykrycie niektórych obiektów. Zacznij od dodania odwołań do scorer i analizatora w klasie *program.cs* .
+
+[!code-csharp [ReferenceScorerParser](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L8-L9)]
+
+### <a name="score-and-parse-model-outputs"></a>Wyniki modelu oceny i analizy
+
+Wewnątrz metody klasy program.cs Dodaj instrukcję try-catch. `Main`
 
 ```csharp
 try
@@ -633,7 +569,78 @@ Teraz czas wykonywania kroku po przetworzeniu. Utwórz wystąpienie `YoloOutputP
 
 [!code-csharp [ParsePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L39-L44)]
 
-Po przetworzeniu danych wyjściowych modelu czas na narysowanie pól związanych z obrazami. Utwórz pętlę for, aby wykonać iterację każdego obrazu z wynikami.
+Po przetworzeniu danych wyjściowych modelu czas na narysowanie pól związanych z obrazami. 
+
+### <a name="visualize-predictions"></a>Wizualizuj przewidywania
+
+Po dokonaniu oceny przez model obrazów i danych wyjściowych pola ograniczenia muszą być rysowane na obrazie. Aby to zrobić, Dodaj metodę o nazwie `DrawBoundingBox` `GetAbsolutePath` poniżej metody w *program.cs*.
+
+```csharp
+private static void DrawBoundingBox(string inputImageLocation, string outputImageLocation, string imageName, IList<YoloBoundingBox> filteredBoundingBoxes)
+{
+
+}
+```
+
+Najpierw Załaduj obraz i uzyskaj wymiary wysokości i szerokości w `DrawBoundingBox` metodzie.
+
+[!code-csharp [LoadImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L78-L81)]
+
+Następnie utwórz pętlę for-each, aby wykonać iterację każdego z pól powiązanych wykrytych przez model.
+
+```csharp
+foreach (var box in filteredBoundingBoxes)
+{
+
+}
+```
+
+Wewnątrz pętli for-each należy uzyskać wymiary powiązanego pola.
+
+[!code-csharp [GetBBoxDimensions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L86-L89)]
+
+Ponieważ wymiary pola ograniczenia odpowiadają na dane wejściowe `416 x 416`modelu, Skaluj Wymiary pola ograniczenia w celu dopasowania do rzeczywistego rozmiaru obrazu.
+
+[!code-csharp [ScaleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L92-L95)]
+
+Następnie zdefiniuj szablon dla tekstu, który będzie apear powyżej każdego pola ograniczenia. Tekst będzie zawierać klasę obiektu wewnątrz odpowiedniego pola ograniczenia, a także wiarygodność.
+
+[!code-csharp [DefineBBoxText](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L98)]
+
+Aby rysować na obrazie, przekonwertuj go na [`Graphics`](xref:System.Drawing.Graphics) obiekt.
+
+```csharp
+using (Graphics thumbnailGraphic = Graphics.FromImage(image))
+{
+    
+}
+```
+
+[`Graphics`](xref:System.Drawing.Graphics) W bloku `using` kodu Dostosuj ustawienia obiektu graficznego.
+
+[!code-csharp [TuneGraphicSettings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L102-L104)]
+
+Poniżej Ustaw opcje czcionki i koloru dla pola tekst i granice.
+
+[!code-csharp [SetColorOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L106-L114)]
+
+Utwórz i Wypełnij prostokąt powyżej pola ograniczenia, aby zawierać tekst przy użyciu [`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*) metody. Pomoże to zwiększyć kontrast tekstu i poprawić czytelność.
+
+[!code-csharp [DrawTextBackground](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L117)]
+
+Następnie należy narysować tekst i obwiednię obrazu przy użyciu [`DrawString`](xref:System.Drawing.Graphics.DrawString*) metod i. [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle*)
+
+[!code-csharp [DrawClassAndBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L118-L121)]
+
+Poza pętlą for-each Dodaj kod, aby zapisać obrazy w `outputDirectory`.
+
+[!code-csharp [SaveImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L125-L130)]
+
+Aby uzyskać dodatkowe informacje o tym, że aplikacja przeprowadza prognozowanie zgodnie z oczekiwaniami w czasie wykonywania `LogDetectedObjects` , Dodaj `DrawBoundingBox` metodę o nazwie do metody w pliku *program.cs* , aby wyszukać wykryte obiekty do konsoli.
+
+[!code-csharp [LogOuptuts](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
+
+Teraz, gdy masz metody pomocnika do tworzenia opinii wizualnych na podstawie prognoz, Dodaj pętlę for, aby wykonać iterację każdego obrazu z wynikami.
 
 ```csharp
 for (var i = 0; i < images.Count(); i++)
@@ -650,7 +657,7 @@ Poniżej można używać `DrawBoundingBox` metody do rysowania pól ograniczenia
 
 [!code-csharp [DrawBBoxes](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L52)]
 
-Na koniec Dodaj kilka logiki rejestrowania za pomocą `LogDetectedObjects` metody.
+Na koniec Użyj `LogDetectedObjects` metody, aby wyprowadzić przewidywania do konsoli.
 
 [!code-csharp [LogPredictionsOutput](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L54)]
 
@@ -704,11 +711,11 @@ Kod źródłowy dla tego samouczka można znaleźć w repozytorium [dotnet/Sampl
 
 W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
-> * Omówienie problemu
-> * Dowiedz się, co ONNX i jak działa z ML.NET
-> * Zrozumienie modelu
-> * Ponownie Użyj wstępnie nauczonego modelu
-> * Wykrywanie obiektów z załadowanym modelem
+> - Omówienie problemu
+> - Dowiedz się, co ONNX i jak działa z ML.NET
+> - Zrozumienie modelu
+> - Ponownie Użyj wstępnie nauczonego modelu
+> - Wykrywanie obiektów z załadowanym modelem
 
 Zapoznaj się z przykładem repozytorium Machine Learning Samples w witrynie GitHub, aby poznać próbkę wykrywania rozwiniętych obiektów.
 > [!div class="nextstepaction"]

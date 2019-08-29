@@ -8,55 +8,55 @@ helpviewer_keywords:
 ms.assetid: bca874ee-5b68-4654-8bbd-3711220ef332
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70c73de068e067501cd4b1e5f80f85639e790ee2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: bf97f1a08c6df13ce639466fc07472926c63987f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586390"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106623"
 ---
 # <a name="how-to-let-users-resolve-ambiguous-times"></a>Instrukcje: Pozwalanie użytkownikom na rozwiązywanie niejednoznacznych wartości czasu
 
-Niejednoznaczny czas to czas, który mapuje do więcej niż jeden uniwersalnego czasu koordynowanego (UTC). Występuje ona, gdy czas zegara jest uwzględniany w czasie, takie jak podczas przechodzenia na strefę czasową czasu jego (czas standardowy). Podczas obsługi niejednoznaczny czas, możesz wykonać jedną z następujących czynności:
+Niejednoznaczny czas to czas, który jest mapowany na więcej niż jeden uniwersalny czas koordynowany (UTC). Występuje, gdy czas zegara jest dostosowywany do tyłu, na przykład podczas przejścia od czasu letniego strefy czasowej do czasu standardowego. Podczas obsługi niejednoznacznego czasu można wykonać jedną z następujących czynności:
 
-* Niejednoznaczny czas w przypadku elementu danych wprowadzonych przez użytkownika, można pozostawić go do użytkownika, aby rozstrzygnąć niejednoznaczność.
+- Jeśli niejednoznaczny czas to element danych wprowadzonych przez użytkownika, można opuścić go użytkownikowi, aby rozwiązać niejednoznaczność.
 
-* Należy z założenia na temat sposobu mapowania czasu UTC. Na przykład można założyć, że że niejednoznaczny czas jest zawsze wyrażona w strefie czasowej (czas standardowy).
+- Założenie założeń dotyczących sposobu mapowania czasu na czas UTC. Na przykład można założyć, że niejednoznaczny czas jest zawsze wyrażony w czasie standardowym strefy czasowej.
 
-W tym temacie przedstawiono sposób umożliwiają użytkownikowi rozwiązać niejednoznaczny czas.
+W tym temacie pokazano, jak zezwolić użytkownikowi na rozwiązywanie niejednoznacznego czasu.
 
-### <a name="to-let-a-user-resolve-an-ambiguous-time"></a>Aby umożliwić użytkownikowi rozwiązać niejednoznaczny czas
+### <a name="to-let-a-user-resolve-an-ambiguous-time"></a>Aby pozwolić użytkownikowi na rozwiązywanie niejednoznacznego czasu
 
-1. Rozpoczynanie daty i godziny, danych wejściowych przez użytkownika.
+1. Pobierz datę i godzinę wprowadzania danych przez użytkownika.
 
-2. Wywołaj <xref:System.TimeZoneInfo.IsAmbiguousTime%2A> metodę pozwala ustalić, czy czas jest niejednoznaczna.
+2. Wywołaj <xref:System.TimeZoneInfo.IsAmbiguousTime%2A> metodę, aby określić, czy czas jest niejednoznaczny.
 
-3. Jeśli czas jest niejednoznaczny, należy wywołać <xref:System.TimeZoneInfo.GetAmbiguousTimeOffsets%2A> metodę, która pobierze tablicę <xref:System.TimeSpan> obiektów. Każdy element w tablicy zawiera przesunięcie czasu UTC, który można mapować niejednoznaczny czas.
+3. Jeśli czas jest niejednoznaczny, wywołaj <xref:System.TimeZoneInfo.GetAmbiguousTimeOffsets%2A> metodę, aby pobrać <xref:System.TimeSpan> tablicę obiektów. Każdy element w tablicy zawiera przesunięcie czasu UTC, do którego można mapować niejednoznaczny czas.
 
-4. Poinformuj użytkowników wybierz żądaną przesunięcie.
+4. Zezwalaj użytkownikowi na wybranie żądanego przesunięcia.
 
-5. Uzyskaj Data i Godzina UTC przez odjęcie przesunięcie wybranego przez użytkownika od czasu lokalnego.
+5. Pobierz datę i godzinę UTC, odejmując przesunięcie wybrane przez użytkownika od czasu lokalnego.
 
-6. Wywołaj `static` (`Shared` w języku Visual Basic .NET) <xref:System.DateTime.SpecifyKind%2A> metodę, aby ustawić UTC daty i godziny wartości <xref:System.DateTime.Kind%2A> właściwość <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>.
+6. `Shared` <xref:System.DateTime.SpecifyKind%2A> <xref:System.DateTime.Kind%2A> Wywołaj metodę <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>(w Visual Basic .NET), aby ustawić właściwość Data i godzina UTC na wartość. `static`
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład monituje użytkownika o wprowadź datę i godzinę, a jeśli jest niejednoznaczny, umożliwia użytkownikowi wybranie czasu UTC, który mapuje niejednoznaczny czas.
+Poniższy przykład powoduje, że użytkownik wprowadza datę i godzinę oraz, jeśli jest niejednoznaczny, umożliwia użytkownikowi wybranie czasu UTC, który jest mapowany na.
 
 [!code-csharp[System.TimeZone2.Concepts#11](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#11)]
 [!code-vb[System.TimeZone2.Concepts#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#11)]
 
-Podstawowy przykład kodu wykorzystuje tablicę <xref:System.TimeSpan> obiektów, aby wskazać możliwe przesunięcia niejednoznaczny czas względem czasu UTC. Jednak te przesunięcia prawdopodobnie nie jest zrozumiały dla użytkownika. Wyjaśnienie przesunięcia, kod również uwagi, czy przesunięcie reprezentuje strefy czasu lokalnego (czas standardowy) lub jego czasu letniego. Kod określa, które jest w warstwie standardowa, a które czas letni porównując przesunięcie z wartością <xref:System.TimeZoneInfo.BaseUtcOffset%2A> właściwości. Ta właściwość wskazuje różnicę między czasem UTC i strefy czasowej (czas standardowy).
+Rdzeń przykładowego kodu używa tablicy <xref:System.TimeSpan> obiektów, aby wskazać możliwe przesunięcie niejednoznaczny czas od czasu UTC. Jednak te przesunięcia są mało znaczące dla użytkownika. Aby wyjaśnić znaczenie przesunięć, kod również zawiera informacje o tym, czy przesunięcie reprezentuje czas standardowy czasu standardowego lub czasu letniego. Kod określa, który czas jest standardowy i czas jest okresowy, porównując przesunięcie z wartością <xref:System.TimeZoneInfo.BaseUtcOffset%2A> właściwości. Ta właściwość wskazuje różnicę między czasem UTC i strefą czasową (czas standardowy).
 
-W tym przykładzie wszystkie odwołania do lokalnej strefy czasowej są nawiązywane przy użyciu <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> właściwości; czas lokalny strefy nigdy nie jest przypisany do zmiennej obiektu. Jest zalecanym rozwiązaniem, ponieważ wywołanie <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> metoda unieważnia żadnych obiektów przypisanych do lokalnej strefy czasowej.
+W tym przykładzie wszystkie odwołania do lokalnej strefy czasowej są tworzone przez <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> Właściwość; lokalna strefa czasowa nigdy nie jest przypisana do zmiennej obiektu. Jest to zalecane rozwiązanie, ponieważ wywołanie <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> metody unieważnia wszystkie obiekty, do których jest przypisana lokalna strefa czasowa.
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
 Ten przykład wymaga:
 
-* Czy <xref:System> zaimportowane wraz z przestrzeni nazw `using` — instrukcja (wymagane w kodzie języka C#).
+- Że przestrzeń nazw ma zostać zaimportowana `using` przy użyciu instrukcji C# (wymaganej w kodzie). <xref:System>
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)
-- [Instrukcje: Rozwiązywanie niejednoznacznych wartości czasu](../../../docs/standard/datetime/resolve-ambiguous-times.md)
+- [Instrukcje: Rozwiązywanie niejednoznacznych czasów](../../../docs/standard/datetime/resolve-ambiguous-times.md)

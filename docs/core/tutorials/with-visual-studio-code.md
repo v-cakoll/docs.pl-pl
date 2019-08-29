@@ -1,98 +1,98 @@
 ---
 title: Wprowadzenie do języka C# i programu Visual Studio Code
-description: Informacje o sposobie tworzenia i debugowania pierwszej aplikacji platformy .NET Core w języku C# za pomocą programu Visual Studio Code.
+description: Dowiedz się, jak utworzyć i debugować pierwszą aplikację platformy .NET C# Core w programie przy użyciu Visual Studio Code.
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 1268a943d7cbf1033531a6c51f42c6fd672eaed3
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 910545a99f9d014ae572fbe95c93cdb44a69db99
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401835"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105105"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Wprowadzenie do języka C# i programu Visual Studio Code
 
-.NET core udostępnia szybka, modularna platforma do tworzenia aplikacji działających w Windows, Linux i macOS. Użyj programu Visual Studio Code z rozszerzeniem języka C#, aby uzyskać Zaawansowane edytowanie z pełnym wsparciem dla języka C# IntelliSense (uzupełnianie kodu inteligentnych) i debugowania.
+Program .NET Core zapewnia szybką i modularną platformę do tworzenia aplikacji działających w systemach Windows, Linux i macOS. Użyj Visual Studio Code z rozszerzeniem C# , aby uzyskać zaawansowane środowisko edycji z pełną obsługą C# technologii IntelliSense (inteligentnych uzupełniania kodu) i debugowania.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-1. Zainstaluj [programu Visual Studio Code](https://code.visualstudio.com/).
-2. Zainstaluj [platformy .NET Core SDK](https://www.microsoft.com/net/download/core).
-3. Zainstaluj [rozszerzenie języka C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) dla programu Visual Studio Code. Aby uzyskać więcej informacji na temat instalowania rozszerzeń w programie Visual Studio Code, zobacz [Portal Marketplace z rozszerzeniami kodu programu VS](https://code.visualstudio.com/docs/editor/extension-gallery).
+1. Zainstaluj [Visual Studio Code](https://code.visualstudio.com/).
+2. Zainstaluj [zestaw .NET Core SDK](https://www.microsoft.com/net/download/core).
+3. Zainstaluj [ C# rozszerzenie](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) dla Visual Studio Code. Aby uzyskać więcej informacji na temat sposobu instalowania rozszerzeń na Visual Studio Code, zobacz [vs Code rozszerzenia Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery).
 
 ## <a name="hello-world"></a>Witaj Świecie
 
-Zacznijmy od prostego programu "Hello World" na platformie .NET Core:
+Zacznijmy od prostego programu "Hello world" na platformie .NET Core:
 
 1. Otwórz projekt:
 
-    * Open Visual Studio Code.
-    * Kliknij ikonę Explorer z menu po lewej stronie, a następnie kliknij przycisk **Otwórz Folder**.
-    * Wybierz **pliku** > **Otwórz Folder** z menu głównego, aby otworzyć folder dla której projekt C# w, a następnie kliknij przycisk **wybierz Folder**. W tym przykładzie tworzymy folderem naszego projektu o nazwie *HelloWorld*.
+    - Otwórz Visual Studio Code.
+    - Kliknij ikonę Eksploratora w menu po lewej stronie, a następnie kliknij polecenie **Otwórz folder**.
+    - Wybierz pozycję **plik** > **Otwórz folder** z menu głównego, aby otworzyć folder, w którym C# ma się znajdować projekt, a następnie kliknij pozycję **Wybierz folder**. W naszym przykładzie tworzymy folder dla naszego projektu o nazwie *HelloWorld*.
 
-      ![Visual Studio Code Otwórz folder.](media/with-visual-studio-code/vs-code-open-folder.png)
+      ![Visual Studio Code Otwórz folder](media/with-visual-studio-code/vs-code-open-folder.png)
 
-2. Inicjowanie projektu C#:
-    * Otworzyć zintegrowany Terminal programu z Visual Studio Code, wybierając **widoku** > **zintegrowany Terminal** z menu głównego.
-    * W oknie terminalu wpisz `dotnet new console`.
-    * To polecenie umożliwia utworzenie `Program.cs` plik w folderze przy użyciu programu proste "Hello World", została ona już zapisana, wraz z plikiem projektu C# o nazwie `HelloWorld.csproj`.
+2. Zainicjuj C# projekt:
+    - Otwórz zintegrowany terminal z Visual Studio Code, wybierając opcję **Wyświetl** > **zintegrowany terminal** z menu głównego.
+    - W oknie terminalu wpisz `dotnet new console`polecenie.
+    - To polecenie tworzy `Program.cs` plik w folderze z prostym, już zapisanym programem "Hello World", wraz z plikiem C# projektu o nazwie `HelloWorld.csproj`.
 
-      ![Nowe polecenie dotnet](media/with-visual-studio-code/dotnet-new-command.png)
+      ![Polecenie dotnet New](media/with-visual-studio-code/dotnet-new-command.png)
 
-3. Aby usunąć zasoby kompilacji:
+3. Rozpoznaj zasoby kompilacji:
 
-    * Aby uzyskać **platformy .NET Core 1.x**, typ `dotnet restore`. Uruchamianie `dotnet restore` zapewnia dostęp do wymaganych pakietów .NET Core, które są wymagane do kompilowania projektu.
+    - W przypadku **platformy .NET Core 1. x**wpisz `dotnet restore`polecenie. Uruchomienie `dotnet restore` zapewnia dostęp do wymaganych pakietów .NET Core, które są potrzebne do skompilowania projektu.
 
-      ![Polecenie restore dotnet](media/with-visual-studio-code/dotnet-restore-command.png)
+      ![dotnet restore polecenie](media/with-visual-studio-code/dotnet-restore-command.png)
 
       [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-4. Uruchom program "Hello World":
+4. Uruchom program "Hello world":
 
-    * Typ `dotnet run`.
+    - Typ `dotnet run`.
 
-      ![Polecenia dotnet, uruchom polecenie](media/with-visual-studio-code/dotnet-run-command.png)
+      ![Polecenie dotnet Run](media/with-visual-studio-code/dotnet-run-command.png)
 
-Możesz też obejrzeć krótki samouczek wideo, aby uzyskać dalszą pomoc Instalatora na [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS), lub [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).
+Możesz również obejrzeć krótki samouczek wideo dotyczący dalszej instalacji [systemu Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS)lub [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).
 
 ## <a name="debug"></a>Debugowanie
 
-1. Otwórz *Program.cs* , klikając ją. Przy pierwszym otwarciu pliku C# w programie Visual Studio Code [technologię OmniSharp](https://www.omnisharp.net/) ładuje w edytorze.
+1. Otwórz *program.cs* , klikając go. Przy pierwszym otwarciu C# pliku w Visual Studio Code, [OmniSharp](https://www.omnisharp.net/) ładuje się w edytorze.
 
     ![Otwórz plik Program.cs](media/with-visual-studio-code/open-program-cs.png)
 
-2. Visual Studio Code powinien zostać wyświetlony monit można dodać brakujące zasoby do tworzenia i debugowania aplikacji. Wybierz **tak**.
+2. Visual Studio Code powinien monitować o dodanie brakujących zasobów do kompilowania i debugowania aplikacji. Wybierz pozycję **tak**.
 
-    ![Monituj o brakujących zasobów](media/with-visual-studio-code/missing-assets.png)
+    ![Monituj o brakujące zasoby](media/with-visual-studio-code/missing-assets.png)
 
-3. Aby otworzyć widok debugowania, kliknij ikonę debugowanie z menu po lewej stronie.
+3. Aby otworzyć widok debugowanie, kliknij ikonę debugowania w menu po lewej stronie.
 
-    ![Otwórz kartę debugowania w programie Visual Studio Code](media/with-visual-studio-code/open-debug-tab.png)
+    ![Otwórz kartę debugowanie w Visual Studio Code](media/with-visual-studio-code/open-debug-tab.png)
 
-4. Znajdź zieloną strzałkę w górnej części okienka. Upewnij się, ma listę rozwijaną obok niego `.NET Core Launch (console)` wybrane.
+4. Znajdź zieloną strzałkę w górnej części okienka. Upewnij się, że lista rozwijana obok niej została `.NET Core Launch (console)` wybrana.
 
-    ![Wybieranie platformy .NET Core w programie Visual Studio Code](media/with-visual-studio-code/select-net-core.png)
+    ![Wybieranie platformy .NET Core w Visual Studio Code](media/with-visual-studio-code/select-net-core.png)
 
-5. Dodaj punkt przerwania do projektu, klikając **marginesu edytora**, która jest miejsce po lewej stronie numery wierszy w edytorze, obok wiersza 9, lub Przesuń kursor tekst w wierszu 9 w edytorze i naciśnij klawisz <kbd>F9</kbd>.
+5. Dodaj punkt przerwania do projektu, klikając **margines edytora**, który jest odstępem po lewej stronie numerów wierszy w edytorze, obok pozycji wiersz 9 lub Przenieś kursor tekstu do wiersza 9 w edytorze i naciśnij klawisz <kbd>F9</kbd>.
 
-    ![Ustawienie punktu przerwania](media/with-visual-studio-code/set-breakpoint-vs-code.png)
+    ![Ustawianie punktu przerwania](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
-6. Aby rozpocząć debugowanie, wybierz <kbd>F5</kbd> lub zieloną strzałkę. Debuger zatrzymuje wykonanie programu, po osiągnięciu punktu przerwania ustawione w poprzednim kroku.
-    * Podczas debugowania, można wyświetlać swoje zmienne lokalne w górnym okienku po lewej stronie, lub za pomocą konsoli debugowania.
+6. Aby rozpocząć debugowanie, wybierz <kbd>F5</kbd> lub zieloną strzałkę. Debuger przerywa wykonywanie programu po osiągnięciu punktu przerwania ustawionego w poprzednim kroku.
+    - Podczas debugowania można wyświetlić zmienne lokalne w lewym górnym okienku lub użyć konsoli debugowania.
 
-7. Wybierz niebieską strzałką u góry, aby kontynuować debugowanie lub wybrać czerwony kwadrat u góry, aby zatrzymać.
+7. Wybierz niebieską strzałkę u góry, aby kontynuować debugowanie, lub zaznacz czerwony kwadrat u góry, aby go zatrzymać.
 
-    ![Uruchamianie i debugowanie w programie Visual Studio Code](media/with-visual-studio-code/run-debug-vs-code.png)
+    ![Uruchamianie i debugowanie w Visual Studio Code](media/with-visual-studio-code/run-debug-vs-code.png)
 
 > [!TIP]
-> Aby uzyskać więcej informacji i rozwiązywanie problemów z porad na temat platformy .NET Core debugowania przy użyciu technologię OmniSharp w programie Visual Studio Code, zobacz [instrukcje dotyczące konfigurowania debugera platformy .NET Core](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
+> Aby uzyskać więcej informacji i porady dotyczące rozwiązywania problemów dotyczących debugowania .NET Core za pomocą OmniSharp w Visual Studio Code, zobacz [instrukcje dotyczące konfigurowania debugera .NET Core](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
 ## <a name="add-a-class"></a>Dodawanie klasy
 
-1. Aby dodać nowe kliknij prawym przyciskiem myszy klasy w Eksploratorze programu VSCode i wybierz **nowy plik**. Spowoduje to dodanie nowego pliku do folderu otwartych w VSCode.
-2. Nadaj plikowi nazwę `MyClass.cs`. Musisz zapisać ją z `.cs` rozszerzenia na końcu, aby mogła zostać rozpoznany jako plik csharp.
-3. Dodaj poniższy kod, aby tworzenie swojej pierwszej klasy. Upewnij się, że zawiera poprawną przestrzeń nazw, więc możesz odwoływać się do niej z usługi `Program.cs` pliku.
+1. Aby dodać nową klasę, kliknij prawym przyciskiem myszy w Eksploratorze programu vscode i wybierz polecenie **nowy plik**. Spowoduje to dodanie nowego pliku do folderu, który został otwarty w programu vscode.
+2. Nazwij plik `MyClass.cs`. Musisz zapisać go z `.cs` rozszerzeniem na końcu, aby można go było rozpoznać jako plik CSharp.
+3. Dodaj poniższy kod, aby utworzyć swoją pierwszą klasę. Upewnij się, że dołączysz poprawną przestrzeń nazw, aby można było `Program.cs` odwołać się do niej z pliku.
 
     ``` csharp
     using System;
@@ -109,7 +109,7 @@ Możesz też obejrzeć krótki samouczek wideo, aby uzyskać dalszą pomoc Insta
     }
     ```
 
-4. Wywoływanie nowej klasie z głównej metody w `Program.cs` , dodając poniższy kod.
+4. Wywołaj nową klasę z metody Main w programie `Program.cs` , dodając Poniższy kod.
 
     ```csharp
     using System;
@@ -127,7 +127,7 @@ Możesz też obejrzeć krótki samouczek wideo, aby uzyskać dalszą pomoc Insta
     }
     ```
 
-5. Zapisz zmiany, a następnie ponownie uruchom program. Nowa wiadomość powinna zostać wyświetlona z dołączonym ciągiem.
+5. Zapisz zmiany i ponownie uruchom program. Nowy komunikat powinien pojawić się z dołączonym ciągiem.
 
     ```console
     > dotnet run
@@ -136,11 +136,11 @@ Możesz też obejrzeć krótki samouczek wideo, aby uzyskać dalszą pomoc Insta
 
 ## <a name="faq"></a>Najczęściej zadawane pytania
 
-### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Brakiem wymagane zasoby do tworzenia i debugowania języka C# w programie Visual Studio Code. Moje debugera jest wyświetlany komunikat "Brak konfiguracji".
+### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Nie mam wymaganych zasobów do kompilowania i debugowania C# w Visual Studio Code. My Debugger brzmi "Brak konfiguracji".
 
-Rozszerzenia programu Visual Studio kodu C# można wygenerować zasoby do tworzenia i debugowania dla Ciebie. Visual Studio Code jest wyświetlany monit o generowanie tych zasobów, przy pierwszym otwarciu projektu C#. Jeśli nie Generuj elementy zawartości, to nadal można uruchomić tego polecenia, otwierając paletę poleceń (**Widok > paletę poleceń**) i wprowadzając polecenie "> .NET: Wygenerować zasoby kompilacji i debugowania". Wybranie tej generuje .vscode pliku launch.json i tasks.json pliki konfiguracji, które należy.
+Rozszerzenie Visual Studio Code C# może generować zasoby do kompilowania i debugowania. Visual Studio Code poprosi o wygenerowanie tych zasobów przy pierwszym otwarciu C# projektu. Jeśli zasoby nie zostały jeszcze wygenerowane, możesz uruchomić to polecenie, otwierając paletę poleceń (**wyświetl > palecie poleceń**) i wpisując "> .NET: Generuj zasoby dla kompilacji i debugowania. Wybranie tej opcji spowoduje wygenerowanie plików konfiguracyjnych. programu vscode, Launch. JSON i Tasks. JSON, które są potrzebne.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Konfigurowanie programu Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
-- [Debugowanie w programie Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)
+- [Konfigurowanie Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
+- [Debugowanie w Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)

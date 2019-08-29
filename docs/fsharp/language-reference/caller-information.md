@@ -1,19 +1,19 @@
 ---
-title: Informacje o wywołującym
-description: Opisuje sposób używania Caller — atrybuty Argument informacji, aby uzyskać informacje o wywołującym z metody.
+title: Informacje o obiekcie wywołującym
+description: Opisuje sposób używania atrybutów argumentów informacji o wywołującym do uzyskiwania informacji o wywołującym z metody.
 ms.date: 04/25/2017
-ms.openlocfilehash: 13092df453b684d3ed4a93c842ea49c066157cb6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7bbc3830a95bd25cfc2fb369b204d367b775815
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703169"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106584"
 ---
-# <a name="caller-information"></a>Informacje o wywołującym
+# <a name="caller-information"></a>Informacje o obiekcie wywołującym
 
 Przy użyciu atrybutów informacji o obiekcie wywołującym można uzyskać informacje o obiekcie wywołującym metodę. Można uzyskać ścieżkę pliku kodu źródłowego, numer wiersza kodu źródłowego i nazwę elementu członkowskiego obiektu wywołującego. Te informacje są przydatne do śledzenia, debugowania i tworzenia narzędzi diagnostycznych.
 
-Aby uzyskać te informacje, należy użyć atrybutów stosowanych do opcjonalnych parametrów, z których każdy ma wartość domyślną. W poniższej tabeli przedstawiono atrybuty informacji o obiekcie wywołującym, które są zdefiniowane w [System.Runtime.CompilerServices](/dotnet/api/system.runtime.compilerservices) przestrzeni nazw:
+Aby uzyskać te informacje, należy użyć atrybutów stosowanych do opcjonalnych parametrów, z których każdy ma wartość domyślną. W poniższej tabeli wymieniono atrybuty informacji o wywołującym, które są zdefiniowane w przestrzeni nazw [System. Runtime. CompilerServices](/dotnet/api/system.runtime.compilerservices) :
 
 |Atrybut|Opis|Typ|
 |---------|-----------|----|
@@ -23,7 +23,7 @@ Aby uzyskać te informacje, należy użyć atrybutów stosowanych do opcjonalnyc
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak można wykorzystać te atrybuty do śledzenia obiekt wywołujący.
+Poniższy przykład pokazuje, jak można użyć tych atrybutów do śledzenia obiektu wywołującego.
 
 ```fsharp
 open System.Diagnostics
@@ -43,20 +43,20 @@ type Tracer() =
 
 ## <a name="remarks"></a>Uwagi
 
-Caller — atrybuty informacji dotyczą wyłącznie następujące parametry opcjonalne. Atrybuty informacji o obiekcie wywołującym spowodować, że kompilator, aby zapisać odpowiednie wartości dla każdego opcjonalnego parametru dekorowane za pomocą atrybutów informacji o obiekcie wywołującym.
+Atrybuty informacji o wywołującym mogą być stosowane tylko do parametrów opcjonalnych. Atrybuty informacji o wywołującym powodują, że kompilator zapisuje odpowiednią wartość dla każdego opcjonalnego parametru uzupełnionego atrybutem informacje o wywołującym.
 
-Wartości informacji o obiekcie wywołującym są emitowane jako literały do języka pośredniego (IL, Intermediate Language) w czasie kompilacji. W przeciwieństwie do wyników [ślad stosu](/dotnet/api/system.diagnostics.stacktrace) właściwość dla wyjątków, na wyniki nie ma wpływu zasłanianie.
+Wartości informacji o obiekcie wywołującym są emitowane jako literały do języka pośredniego (IL, Intermediate Language) w czasie kompilacji. W przeciwieństwie do wyników właściwości [ślad stosu](/dotnet/api/system.diagnostics.stacktrace) dla wyjątków, nie ma to wpływu na wyniki.
 
 Można jawnie dostarczyć opcjonalne argumenty do sterowania informacjami o obiekcie wywołującym lub ukryć te informacje.
 
 ## <a name="member-names"></a>Nazwy elementów członkowskich
 
-Możesz użyć [ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) atrybutu, aby uniknąć określania nazwy elementu członkowskiego jako `String` argument wywoływanej metody. Korzystając z tej techniki, można uniknąć problemu, który Refaktoryzacja zmiany nazwy nie zmienia `String` wartości. Jest to szczególnie przydatne w następujących zadaniach:
+Możesz użyć atrybutu, [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) aby uniknąć określania nazwy elementu członkowskiego `String` jako argumentu wywoływanej metody. Korzystając z tej techniki, można uniknąć problemu, którego zmiana nazwy Refaktoryzacja nie zmienia `String` wartości. Jest to szczególnie przydatne w następujących zadaniach:
 
-* Używanie procedur do śledzenia i diagnostycznych.
-* Implementowanie [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) interfejs podczas wiązania danych. Ten interfejs umożliwia właściwości obiektu powiadamianie powiązanego formantu, że właściwość zmieniła się, dzięki czemu formant może wyświetlić zaktualizowane informacje. Bez [ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) atrybutu, należy określić nazwę właściwości jako literał.
+- Używanie procedur do śledzenia i diagnostycznych.
+- Implementowanie interfejsu [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) podczas wiązania danych. Ten interfejs umożliwia właściwości obiektu powiadamianie powiązanego formantu, że właściwość zmieniła się, dzięki czemu formant może wyświetlić zaktualizowane informacje. [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) Bez atrybutu, należy określić nazwę właściwości jako literału.
 
-Na poniższym wykresie przedstawiono elementu członkowskiego nazw, które są zwracane, gdy używasz atrybutu CallerMemberName.
+Poniższy wykres pokazuje nazwy elementów członkowskich, które są zwracane w przypadku używania atrybutu CallerMemberName.
 
 |Wywołanie ma miejsce w|Wynikowa nazwa elementu członkowskiego|
 |-------------------|------------------|
@@ -71,5 +71,5 @@ Na poniższym wykresie przedstawiono elementu członkowskiego nazw, które są z
 ## <a name="see-also"></a>Zobacz także
 
 - [Atrybuty](attributes.md)
-- [Argumenty nazwane](parameters-and-arguments.md#named-arguments)
-- [Następujące parametry opcjonalne](parameters-and-arguments.md#optional-parameters)
+- [Nazwane argumenty](parameters-and-arguments.md#named-arguments)
+- [Parametry opcjonalne](parameters-and-arguments.md#optional-parameters)

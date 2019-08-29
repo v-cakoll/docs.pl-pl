@@ -2,12 +2,12 @@
 title: Debugowanie drzew wyrażeń w programie Visual StudioC#()
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: 19d00aaa99c7ef08e291337f38bf74a3beac12b0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 43091d11dfc1fae3e6f047f35b61e992c5aaf50b
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595224"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104904"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Debugowanie drzew wyrażeń w programie Visual StudioC#()
 Można analizować strukturę i zawartość drzew wyrażeń podczas debugowania aplikacji. Aby uzyskać szybki przegląd struktury drzewa wyrażeń, można użyć `DebugView` właściwości, która reprezentuje drzewa wyrażeń [przy użyciu specjalnej składni](debugview-syntax.md). (Uwaga, `DebugView` która jest dostępna tylko w trybie debugowania).  
@@ -20,11 +20,11 @@ Ponieważ `DebugView` jest ciągiem, można użyć [wbudowanego wizualizatora te
 
 Alternatywnie można zainstalować i używać wizualizatora [niestandardowego](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data) dla drzew wyrażeń, takich jak:
 
-* Możliwe do [odczytu wyrażenia](https://github.com/agileobjects/ReadableExpressions) ([Licencja mit](https://github.com/agileobjects/ReadableExpressions/blob/master/LICENSE.md), dostępna w [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1232914.ReadableExpressionsVisualizers)), renderuje drzewo wyrażenia jako C# kod:
+- Możliwe do [odczytu wyrażenia](https://github.com/agileobjects/ReadableExpressions) ([Licencja mit](https://github.com/agileobjects/ReadableExpressions/blob/master/LICENSE.md), dostępna w [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1232914.ReadableExpressionsVisualizers)), renderuje drzewo wyrażenia jako C# kod:
 
   ![Wizualizator wyrażeń do odczytu](media/debugging-expression-trees-in-visual-studio/readable_expressions_visualizer.png)
 
-* [Wizualizator drzewa wyrażeń](https://github.com/zspitz/ExpressionToString#visual-studio-debugger-visualizer-for-expression-trees) ([Licencja mit](https://github.com/zspitz/ExpressionToString/blob/master/LICENSE)), udostępnia widok graficzny drzewa wyrażenia, jego właściwości i powiązane obiekty:
+- [Wizualizator drzewa wyrażeń](https://github.com/zspitz/ExpressionToString#visual-studio-debugger-visualizer-for-expression-trees) ([Licencja mit](https://github.com/zspitz/ExpressionToString/blob/master/LICENSE)), udostępnia widok graficzny drzewa wyrażenia, jego właściwości i powiązane obiekty:
 
   ![Wizualizator ExpressionToString](media/debugging-expression-trees-in-visual-studio/expression_to_string_visualizer.png)
 

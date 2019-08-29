@@ -1,61 +1,61 @@
 ---
-title: Co nowego w języku C# 7.2
-description: Omówienie nowych funkcji w języku C# 7.2.
+title: Co nowego w C# 7,2
+description: Omówienie nowych funkcji w C# 7,2.
 ms.date: 08/16/2017
-ms.openlocfilehash: 79402c9b569cb6848aaf240d83ba71338d525b35
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: a2010b2bda769a625deb545964a2cc127aaf2e06
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347412"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105745"
 ---
-# <a name="whats-new-in-c-72"></a>Co nowego w języku C# 7.2
+# <a name="whats-new-in-c-72"></a>Co nowego w C# 7,2
 
-C# 7.2 jest innej wersji punkt, który dodaje wiele użytecznych funkcji.
-Jeden motywu w tej wersji pracuje wydajniej typów wartości, unikając niepotrzebnego kopiowania lub alokacji.
+C#7,2 to inna wersja punktu, która dodaje wiele przydatnych funkcji.
+Jeden motyw dla tej wersji działa wydajniej z typami wartości poprzez uniknięcie niepotrzebnych kopii lub przydziałów.
 
-Pozostałe funkcje są przydatne do być funkcji.
+Pozostałe funkcje są małe, całkiem-do-mają funkcje.
 
-Używa języka C# 7.2 [wybór wersji języka](../language-reference/configure-language-version.md) element konfiguracji, aby wybrać wersję językową kompilatora.
+C#7,2 używa elementu konfiguracja [wyboru wersji języka](../language-reference/configure-language-version.md) , aby wybrać wersję języka kompilatora.
 
-Dostępne są następujące nowe funkcje języka w tej wersji:
+Nowe funkcje języka w tej wersji są następujące:
 
-* [Techniki do pisania kodu efektywne bezpieczne](#safe-efficient-code-enhancements)
-  - Kombinacja ulepszenia składni, które umożliwiają pracę z typów wartości za pomocą semantyki odwołania.
-* [Argumenty nazwane inne niż końcowe](#non-trailing-named-arguments)
-  - Argumenty nazwane może następować argumentów pozycyjnych.
-* [Wiodące znaki podkreślenia w literałach numerycznych](#leading-underscores-in-numeric-literals)
-  - Literały numeryczne, mogą teraz zawierać podkreśleniami wiodącymi przed wszystkie cyfry drukowanych.
-* [`private protected` Modyfikator dostępu](#private-protected-access-modifier)
-  - `private protected` Modyfikator dostępu umożliwia dostęp do klas pochodnych tego samego zestawu.
-* [Warunkowe `ref` wyrażeń](#conditional-ref-expressions)
-  - Wynik wyrażenia warunkowego (`?:`) teraz może być odwołaniem.
+- [Techniki pisania bezpiecznego wydajnego kodu](#safe-efficient-code-enhancements)
+  - Kombinacja ulepszeń składni, które umożliwiają pracę z typami wartości przy użyciu semantyki referencyjnej.
+- [Argumenty nazwane inne niż końcowe](#non-trailing-named-arguments)
+  - Po nazwanych argumentach mogą występować argumenty pozycyjne.
+- [Wiodące znaki podkreślenia w literałach numerycznych](#leading-underscores-in-numeric-literals)
+  - Literały numeryczne mogą teraz zawierać podkreślenia wiodące przed wszelkimi drukowanymi cyframi.
+- [`private protected`Modyfikator dostępu](#private-protected-access-modifier)
+  - Modyfikator `private protected` dostępu umożliwia dostęp do klas pochodnych w tym samym zestawie.
+- [Wyrażenia `ref` warunkowe](#conditional-ref-expressions)
+  - Wynik wyrażenia warunkowego (`?:`) może teraz być odwołaniem.
 
-W dalszej części tego artykułu zawiera omówienie każdej funkcji. Dowiesz się jej uzasadnienie, dla każdej funkcji. Dowiesz się, aby składnia. Możesz zapoznać się z tych funkcji w środowisku przy użyciu `dotnet try` narzędzie globalne:
+Pozostała część tego artykułu zawiera omówienie każdej funkcji. Dla każdej funkcji znajdziesz jej uzasadnienie. Poznasz składnię. Te funkcje można eksplorować w środowisku za pomocą `dotnet try` narzędzia globalnego:
 
-1. Zainstaluj [spróbuj dotnet](https://github.com/dotnet/try/blob/master/README.md#setup) narzędzie globalne.
-1. Klonuj [dotnet/try-samples](https://github.com/dotnet/try-samples) repozytorium.
-1. Ustaw bieżący katalog *csharp7* podkatalog *try-samples* repozytorium.
+1. Zainstaluj narzędzie [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) Global.
+1. Sklonuj repozytorium [dotnet/try-Samples](https://github.com/dotnet/try-samples) .
+1. Ustaw bieżący katalog na podkatalog *csharp7* dla repozytorium *try-Samples* .
 1. Uruchom `dotnet try`.
 
-## <a name="safe-efficient-code-enhancements"></a>Ulepszenia bezpieczne efektywnego kodu
+## <a name="safe-efficient-code-enhancements"></a>Bezpieczne usprawnienia kodu
 
-Funkcje językowe, które wprowadzono w 7.2 pozwalają pracować z typami wartości podczas korzystania z semantyką odwołań. Są one przeznaczone do zwiększenia wydajności, minimalizując kopiowania typów wartości bez powodowania alokacji pamięci, związanych z użyciem typów odwołań. Funkcje obejmują:
+Funkcje języka wprowadzone w 7,2 umożliwiają współpracę z typami wartości przy użyciu semantyki odwołań. Są one przeznaczone do zwiększania wydajności poprzez minimalizowanie kopiowania typów wartości bez ponoszenia alokacji pamięci skojarzonej z użyciem typów referencyjnych. Funkcje obejmują:
 
-- `in` Modyfikator parametrów, aby określić, że argument jest przekazywany przez odwołanie, ale nie jest modyfikowany przez metodę o nazwie. Dodawanie `in` modyfikator do argumentu jest [źródła zmiany zgodne](version-update-considerations.md#source-compatible-changes).
-- `ref readonly` Modyfikator na zwraca metodę, aby wskazać, że metoda zwraca wartość przez odwołanie, ale nie zezwala na operacje zapisu do tego obiektu. Dodawanie `ref readonly` modyfikator jest [źródła zmiany zgodne](version-update-considerations.md#source-compatible-changes), jeśli zwracana jest przypisany do wartości. Dodawanie `readonly` modyfikator do istniejącego `ref` zwracany jest instrukcja [niezgodna zmiana](version-update-considerations.md#incompatible-changes). Wymaga ona wywołań zaktualizować deklaracji `ref` zmienne lokalne, aby uwzględnić `readonly` modyfikator.
-- `readonly struct` Deklaracji, aby wskazać, że struktury jest niemodyfikowalna i mają być przekazywane jako `in` parametru do metody jego elementu członkowskiego. Dodawanie `readonly` modyfikator do istniejącej deklaracji struktury jest [binarne zmiany zgodne](version-update-considerations.md#binary-compatible-changes).
-- `ref struct` Deklaracji, aby wskazać, że typ struktury uzyskuje dostęp do pamięci zarządzanej bezpośrednio i muszą zawsze być stosu przydzielone. Dodawanie `ref` modyfikator do istniejącego `struct` deklaracja jest [niezgodna zmiana](version-update-considerations.md#incompatible-changes). Element `ref struct` nie może być składową klasy ani używane w innych lokalizacjach, w którym może zostać przydzielone na stercie.
+- `in` Modyfikator parametrów, aby określić, że argument jest przesyłany przez odwołanie, ale nie modyfikowane przez wywołaną metodę. Dodanie modyfikatora do argumentu jest zgodną [zmianą źródłową.](version-update-considerations.md#source-compatible-changes) `in`
+- `ref readonly` Modyfikator metody zwraca, aby wskazać, że metoda zwraca swoją wartość przez odwołanie, ale nie zezwala na zapis w tym obiekcie. Dodanie modyfikatora jest zgodną ze [źródłem zmian](version-update-considerations.md#source-compatible-changes), jeśli powrót jest przypisany do wartości. `ref readonly` Dodanie modyfikatora do istniejącej `ref` instrukcji return jest niezgodną zmianą. [](version-update-considerations.md#incompatible-changes) `readonly` Wymaga, `ref` `readonly` aby wywołujący zaktualizował deklarację zmiennych lokalnych w celu uwzględnienia modyfikatora.
+- Deklaracja wskazująca, że struktura jest niezmienna i powinna zostać przeniesiona `in` jako parametr do metod składowych. `readonly struct` Dodanie modyfikatora do istniejącej deklaracji struktury jest zgodną [binarną zmianą.](version-update-considerations.md#binary-compatible-changes) `readonly`
+- `ref struct` Deklaracja wskazująca, że typ struktury bezpośrednio uzyskuje dostęp do pamięci zarządzanej i zawsze musi mieć przydzieloną stos. Dodanie modyfikatora do istniejącej `struct` deklaracji jest niezgodną zmianą. [](version-update-considerations.md#incompatible-changes) `ref` Element `ref struct` a nie może być składową klasy ani używać w innych lokalizacjach, w których może być przydzielony na stercie.
 
-Możesz przeczytać więcej na temat wszystkich tych zmian w [pisanie kodu efektywne bezpieczne](../write-safe-efficient-code.md).
+Więcej informacji na temat tych zmian można znaleźć w artykule [pisanie bezpiecznego wydajnego kodu](../write-safe-efficient-code.md).
 
 ## <a name="non-trailing-named-arguments"></a>Argumenty nazwane inne niż końcowe
 
-Wywołania metody mogą teraz używać argumentów nazwanych, które poprzedzają argumenty pozycyjne, gdy te argumenty nazwane są właściwe pozycje. Aby uzyskać więcej informacji, zobacz [nazwane i opcjonalne argumenty](../programming-guide/classes-and-structs/named-and-optional-arguments.md).
+Wywołania metod mogą teraz używać nazwanych argumentów, które poprzedzają argumenty pozycyjne, gdy te nazwane argumenty znajdują się w poprawnych pozycjach. Aby uzyskać więcej informacji [, zobacz Argumenty nazwane i opcjonalne](../programming-guide/classes-and-structs/named-and-optional-arguments.md).
 
 ## <a name="leading-underscores-in-numeric-literals"></a>Wiodące znaki podkreślenia w literałach numerycznych
 
-Nie zezwalaj na implementację obsługę separatory cyfr w języku C# 7.0 `_` jako pierwszy znak w wartości literału. Hex i literały liczbowe binarne mogą teraz zaczynają się od `_`.
+Implementacja obsługi separatorów cyfr w C# 7,0 nie zezwala `_` na pierwszy znak wartości literału. Szesnastkowe i binarne literały numeryczne mogą teraz zaczynać `_`się od.
 
 Na przykład:
 
@@ -63,20 +63,20 @@ Na przykład:
 int binaryValue = 0b_0101_0101;
 ```
 
-## <a name="private-protected-access-modifier"></a>_prywatny chroniony_ modyfikator dostępu
+## <a name="_private-protected_-access-modifier"></a>modyfikator _prywatnego_ dostępu chronionego
 
-New — modyfikator dostępu złożone: `private protected` wskazuje, czy członek mogą być używane przez zawierający klasy lub klas pochodnych, które są zadeklarowane w tym samym zestawie. Gdy `protected internal` zezwala na dostęp przez klasy pochodne lub klasy, które znajdują się w tym samym zestawie `private protected` ogranicza dostęp do typów pochodnych zadeklarowanych w tym samym zestawie.
+Nowy modyfikator dostępu złożonego: `private protected` wskazuje, że element członkowski może być dostępny przez zawiera klasy lub klasy pochodne, które są zadeklarowane w tym samym zestawie. Zezwala na dostęp przez klasy pochodne lub klasy, które znajdują się w tym `private protected` samym zestawie, ogranicza dostęp do typów pochodnych zadeklarowanych w tym samym zestawie. `protected internal`
 
-Aby uzyskać więcej informacji, zobacz [modyfikatorach dostępu](../language-reference/keywords/access-modifiers.md) w dokumentacji języka.
+Aby uzyskać więcej informacji, zobacz [Modyfikatory dostępu](../language-reference/keywords/access-modifiers.md) w dokumentacji języka.
 
-## <a name="conditional-ref-expressions"></a>Warunkowe `ref` wyrażeń
+## <a name="conditional-ref-expressions"></a>Wyrażenia `ref` warunkowe
 
-Na koniec wyrażenie warunkowe może dać wynik ref, zamiast wynik wartości. Na przykład należy napisać poniższe polecenie, aby pobrać odwołanie do pierwszego elementu w jednym z dwóch tablic:
+Na koniec wyrażenie warunkowe może generować wynik ref zamiast wyniku wartości. Na przykład Napisz następujące polecenie, aby pobrać odwołanie do pierwszego elementu w jednej z dwóch tablic:
 
 ```csharp
 ref var r = ref (arr != null ? ref arr[0] : ref otherArr[0]);
 ```
 
-Zmienna `r` jest odwołaniem do pierwszej wartości albo `arr` lub `otherArr`.
+Zmienna `r` jest odwołaniem do pierwszej wartości `arr` z lub `otherArr`.
 
-Aby uzyskać więcej informacji, zobacz [operator warunkowy (?:) ](../language-reference/operators/conditional-operator.md) w dokumentacji języka.
+Aby uzyskać więcej informacji, zobacz [operator warunkowy (?:)](../language-reference/operators/conditional-operator.md) w dokumentacji języka.

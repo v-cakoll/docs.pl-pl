@@ -4,12 +4,12 @@ description: Opis szczegółów algorytmu ładowania zestawu satelickiego w prog
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: bd703bc9f2c9af1f8ba3c6c892f963efc679d14b
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: bfdc1d8179d46a13b3d137a87397fa3e573da33c
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70017339"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105315"
 ---
 # <a name="satellite-assembly-loading-algorithm"></a>Algorytm ładowania zestawu satelitarnego
 
@@ -32,8 +32,8 @@ Proces rezerwowy zasobów platformy .NET Core obejmuje następujące kroki:
 1. `active` Określ<xref:System.Runtime.Loader.AssemblyLoadContext> wystąpienie. We wszystkich przypadkach `active` wystąpienie jest <xref:System.Runtime.Loader.AssemblyLoadContext>zestawem wykonawczym.
 
 2. `active` Wystąpienie próbuje załadować zestaw satelicki dla wymaganej kultury w kolejności priorytetu przez:
-    * Sprawdzanie jego pamięci podręcznej.
-    * Sprawdzanie katalogu aktualnie wykonywanego zestawu dla podkatalogu zgodnego z żądanym <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> (na przykład `es-MX`).
+    - Sprawdzanie jego pamięci podręcznej.
+    - Sprawdzanie katalogu aktualnie wykonywanego zestawu dla podkatalogu zgodnego z żądanym <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> (na przykład `es-MX`).
 
         > [!NOTE]
         > Ta funkcja nie została zaimplementowana w środowisku .NET Core przed 3,0.
@@ -43,13 +43,13 @@ Proces rezerwowy zasobów platformy .NET Core obejmuje następujące kroki:
         > - Dokładnie dopasowanie wielkości liter.
         > - Małymi literami.
 
-    * `active` Jeśli<xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> jest wystąpieniem, uruchamiając domyślną logikę [sondowania zestawu dla satelity (zasobu)](default-probing.md#satellite-resource-assembly-probing) .
+    - `active` Jeśli<xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> jest wystąpieniem, uruchamiając domyślną logikę [sondowania zestawu dla satelity (zasobu)](default-probing.md#satellite-resource-assembly-probing) .
 
-    * Wywoływanie <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType> funkcji.
+    - Wywoływanie <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType> funkcji.
 
-    * Podnoszenie <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> poziomu zdarzenia.
+    - Podnoszenie <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> poziomu zdarzenia.
 
-    * Podnoszenie <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> poziomu zdarzenia.
+    - Podnoszenie <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> poziomu zdarzenia.
 
 3. Jeśli jest ładowany zestaw satelicki:
    - <xref:System.AppDomain.AssemblyLoad?displayProperty=nameWithType> Zdarzenie jest zgłaszane.

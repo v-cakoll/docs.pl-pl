@@ -1,63 +1,63 @@
 ---
-title: Podwyższonego poziomu dostępu dla polecenia dotnet
-description: Poznaj najlepsze rozwiązania dla polecenia dotnet, wymagających podwyższonego poziomu dostępu.
+title: Dostęp z podwyższonym poziomem uprawnień dla poleceń dotnet
+description: Zapoznaj się z najlepszymi rozwiązaniami dotyczącymi poleceń dotnet wymagających podwyższonego poziomu dostępu.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: 3d874a76eadbf5330c4e5efe4e86bfeca0a9b504
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: b57e434fbb29a9c85ddf5086888a5291c7767ac9
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410645"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105074"
 ---
-# <a name="elevated-access-for-dotnet-commands"></a>Podwyższonego poziomu dostępu dla polecenia dotnet
+# <a name="elevated-access-for-dotnet-commands"></a>Dostęp z podwyższonym poziomem uprawnień dla poleceń dotnet
 
-Najlepszych praktyk tworzenia oprogramowania przewodnik deweloperów oprogramowania, wymagającego najmniejszą ilością uprawnień do zapisu. Jednak niektóre programy, takie jak narzędzia monitorowania wydajności, wymaga uprawnień administratora z powodu zasad systemu operacyjnego. Poniższe wskazówki opisano obsługiwane scenariusze dotyczące pisania oprogramowania za pomocą programu .NET Core. 
+Wskazówki dotyczące tworzenia oprogramowania — Przewodnik po tworzeniu oprogramowania wymagającego najmniejszego poziomu uprawnień. Jednak niektóre programy, takie jak narzędzia do monitorowania wydajności, wymagają uprawnień administratora z powodu reguł systemu operacyjnego. Poniższe wskazówki opisują obsługiwane scenariusze pisania oprogramowania przy użyciu programu .NET Core. 
 
-Następujące polecenia mogą być uruchamiane z podwyższonym poziomem uprawnień:
+Następujące polecenia można uruchomić z podwyższonym poziomem uprawnień:
 
-- `dotnet tool` polecenia takie jak [instalacji narzędzi dotnet](dotnet-tool-install.md).
+- `dotnet tool`polecenia, takie jak [Instalacja narzędzia dotnet](dotnet-tool-install.md).
 - `dotnet run --no-build`
 
-Nie zaleca się uruchamiania innych poleceń z podwyższonym poziomem uprawnień. W szczególności, nie zaleca się podniesienie uprawnień za pomocą poleceń korzystających z programu MSBuild, takich jak [dotnet restore](dotnet-restore.md), [kompilacji dotnet](dotnet-build.md), i [dotnet, uruchom](dotnet-run.md). Podstawowym problemem jest problemów z zarządzaniem uprawnieniami, gdy użytkownik przechodzi i z powrotem między głównym i ograniczeniami konta po wydaniu polecenia dotnet. Może się okazać jako użytkowników z ograniczeniami, nie masz dostępu do pliku, utworzone przez użytkownika głównego. Sposoby, aby rozwiązać ten problem, ale są one zbędne zagłębieniem się w pierwszej kolejności.
+Nie zalecamy uruchamiania innych poleceń z podwyższonym poziomem uprawnień. W szczególności nie zaleca się podniesienia uprawnień za pomocą poleceń korzystających z programu MSBuild, takich jak [dotnet Restore](dotnet-restore.md), [kompilacja dotnet](dotnet-build.md)i [uruchomienie dotnet](dotnet-run.md). Podstawowym problemem jest problemy z zarządzaniem uprawnieniami, gdy użytkownik przechodzi między głównym i ograniczonym kontem po wydaniu polecenia dotnet. Może się okazać, że użytkownik z ograniczeniami nie ma dostępu do pliku skompilowanego przez użytkownika root. Istnieją sposoby rozwiązania tej sytuacji, ale nie są one potrzebne do pierwszego miejsca.
 
-Możesz uruchamiać polecenia jako użytkownik główny, tak długo, jak nie przejścia i z powrotem między głównym i konta z ograniczeniami. Na przykład kontenery platformy Docker jako użytkownik główny domyślnie uruchamiane, dzięki czemu mają one Cecha ta.
+Polecenia można uruchamiać jako główne, o ile nie przechodzą z powrotem między głównym i ograniczonym kontem. Na przykład kontenery platformy Docker są domyślnie uruchamiane jako główne, więc mają tę cechę.
 
-## <a name="global-tool-installation"></a>Instalowanie narzędzi globalne
+## <a name="global-tool-installation"></a>Instalacja narzędzia globalnego
 
-Poniższe instrukcje przedstawiają zalecaną metodą instalacji, uruchom i odinstalować narzędzia platformy .NET Core, które wymagają podniesionego poziomu uprawnień do wykonania.
+Poniższe instrukcje przedstawiają zalecaną metodę instalowania, uruchamiania i odinstalowywania narzędzi .NET Core, które wymagają podniesionych uprawnień do wykonania.
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-### <a name="install-the-global-tool"></a>Zainstaluj narzędzie globalne
+### <a name="install-the-global-tool"></a>Instalowanie narzędzia globalnego
 
-Jeśli folder `%ProgramFiles%\dotnet-tools` już istnieje, wykonaj następujące czynności, aby sprawdzić, czy grupa "Użytkownicy", ma uprawnienia do zapisu lub modyfikowania tego katalogu:
+Jeśli folder `%ProgramFiles%\dotnet-tools` już istnieje, wykonaj poniższe czynności, aby sprawdzić, czy grupa "Użytkownicy" ma uprawnienia do zapisywania lub modyfikowania tego katalogu:
 
-* Kliknij prawym przyciskiem myszy `%ProgramFiles%\dotnet-tools` i wybierz polecenie **właściwości**. **Wspólne właściwości** zostanie otwarte okno dialogowe. 
-* Wybierz **zabezpieczeń** kartę. W obszarze **nazwy grupy lub użytkownika**, sprawdź, czy grupa "Użytkownicy", ma uprawnienia do zapisu lub modyfikowania katalogu. 
-* Jeśli grupy "Użytkownicy" można zapisać lub zmodyfikować katalogu, należy użyć nazwy z innym katalogiem podczas instalowania narzędzi zamiast *narzędzi dotnet*.
+- Kliknij prawym przyciskiem `%ProgramFiles%\dotnet-tools` myszy folder i wybierz polecenie **Właściwości**. Zostanie otwarte okno dialogowe **wspólne właściwości** . 
+- Wybierz kartę **zabezpieczenia** . W obszarze **nazwy grup lub użytkowników**Sprawdź, czy grupa "Użytkownicy" ma uprawnienia do zapisywania lub modyfikowania katalogu. 
+- Jeśli grupa "Użytkownicy" może zapisywać lub modyfikować katalog, użyj innej nazwy katalogu podczas instalowania narzędzi, a nie *narzędzi dotnet*.
 
-Aby zainstalować narzędzia, uruchom następujące polecenie w wierszu polecenia z podwyższonym poziomem uprawnień. Utworzy on *narzędzi dotnet* folderu podczas instalacji.
+Aby zainstalować narzędzia, uruchom następujące polecenie w wierszu polecenia z podwyższonym poziomem uprawnień. Podczas instalacji zostanie utworzony folder *narzędzi dotnet* .
 
 ```cmd
 dotnet tool install PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools".
 ```
 
-### <a name="run-the-global-tool"></a>Uruchom narzędzie globalnej
+### <a name="run-the-global-tool"></a>Uruchamianie narzędzia globalnego
 
-**Opcja 1** użycie pełnej ścieżki w wierszu polecenia z podwyższonym poziomem uprawnień:
+**Opcja 1** Użyj pełnej ścieżki z podniesionym poziomem uprawnień:
 
 ```cmd
 "%ProgramFiles%\dotnet-tools\TOOLCOMMAND"
 ```
 
-**Opcja 2** Dodaj nowo utworzony folder do `%Path%`. Wystarczy wykonać tę operację na raz.
+**Opcja 2** Dodaj nowo utworzony folder do `%Path%`programu. Tę operację należy wykonać tylko raz.
 
 ```cmd
 setx Path "%Path%;%ProgramFiles%\dotnet-tools\"
 ```
 
-A następnie uruchom za pomocą:
+I uruchom z:
 
 ```cmd
 TOOLCOMMAND
@@ -81,22 +81,22 @@ dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 
 ---
 
-## <a name="local-tools"></a>Narzędzia do lokalnego
+## <a name="local-tools"></a>Narzędzia lokalne
 
-Lokalne narzędzia są w zakresie na drzewie podkatalogu dla poszczególnych użytkowników. Po uruchomieniu z podwyższonym poziomem uprawnień, lokalnego narzędzia udostępnianie środowisku użytkowników z ograniczeniami do środowiska z podniesionymi uprawnieniami. W systemie Linux i macOS powoduje to pliki, ustawiania z dostępem tylko do użytkownika głównego. Gdy użytkownik przejdzie do konta z ograniczeniami, użytkownik nie jest już można uzyskać dostęp lub zapisu do plików. Dlatego zainstalowanie narzędzi, które wymagają podniesionych uprawnień jako narzędzia do lokalnego nie jest zalecane. Zamiast tego należy użyć `--tool-path` opcja i poprzedniej wskazówki dotyczące narzędzi globalnego.
+Narzędzia lokalne są objęte zakresem drzewa dla każdego użytkownika. W przypadku korzystania z podwyższonego poziomu uprawnień narzędzia lokalne udostępniają środowisko użytkownika z ograniczeniami do środowiska z podwyższonym poziomem uprawnień. W systemie Linux i macOS w wyniku tego są ustawiane pliki z dostępem tylko do użytkownika root. Jeśli użytkownik przełączy się z powrotem do konta z ograniczeniami, użytkownik nie będzie mógł uzyskać dostępu do plików ani zapisywać do nich. Instalowanie narzędzi wymagających podniesienia uprawnień jako lokalnych narzędzi nie jest zalecane. Zamiast tego należy użyć `--tool-path` opcji i poprzednich wytycznych dla narzędzi globalnych.
 
-## <a name="elevation-during-development"></a>Podniesienie uprawnień w czasie projektowania
+## <a name="elevation-during-development"></a>Podniesienie uprawnień podczas opracowywania
 
-Podczas tworzenia aplikacji może być konieczne podwyższonego poziomu dostępu, aby przetestować aplikację. Ten scenariusz jest typowe w przypadku aplikacji IoT, np. Firma Microsoft zaleca tworzenie aplikacji bez podniesienia uprawnień, a następnie uruchom go z podniesionymi. Istnieje kilka wzorców w następujący sposób:
+Podczas programowania może być potrzebny podwyższony poziom dostępu do testowania aplikacji. Ten scenariusz jest typowy dla aplikacji IoT, na przykład. Zalecamy, aby skompilować aplikację bez podniesienia uprawnień, a następnie uruchomić ją z podniesionymi uprawnieniami. Istnieje kilka wzorców:
 
-- Przy użyciu wygenerowany plik wykonywalny (zapewnia najlepszą wydajność uruchamiania):
+- Przy użyciu wygenerowanego pliku wykonywalnego (zapewnia najlepszą wydajność uruchamiania):
 
    ```bash
    dotnet build
    sudo ./bin/Debug/netcoreapp3.0/APPLICATIONNAME
    ```
     
-- Za pomocą [dotnet, uruchom](dotnet-run.md) polecenia `—no-build` flagę, aby uniknąć generowania nowych danych binarnych:
+- Za pomocą polecenia [dotnet Run](dotnet-run.md) z `—no-build` flagą, aby uniknąć generowania nowych plików binarnych:
 
    ```bash
    dotnet build
@@ -105,4 +105,4 @@ Podczas tworzenia aplikacji może być konieczne podwyższonego poziomu dostępu
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Omówienie narzędzia globalnej platformy .NET core](global-tools.md)
+- [Globalne narzędzia platformy .NET Core — Omówienie](global-tools.md)

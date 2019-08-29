@@ -4,12 +4,12 @@ description: Dowiedz się, jak przenieść projekty biblioteki z .NET Framework 
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: c7a770ba2da8c245ba9140852fc7c2a33a55f7a2
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3e3c613f6be50ae5ff2b07052c7c1bced2047855
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660701"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105289"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Porty .NET Framework biblioteki do programu .NET Core
 
@@ -113,11 +113,11 @@ Istnieje duże podejście do powyższego podejścia dla poszczególnych projekt�
 Najlepszym sposobem, aby upewnić się, że wszystko działa, gdy Port został przetestowany w celu przetestowania kodu podczas jego portów do .NET Core. W tym celu należy użyć platformy testowania, która kompiluje i uruchamia testy dla platformy .NET Core. Obecnie są dostępne trzy opcje:
 
 - [xUnit](https://xunit.github.io/)
-  * [Wprowadzenie](https://xunit.github.io/docs/getting-started-dotnet-core.html)
-  * [Narzędzie do konwersji projektu MSTest na xUnit](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
+  - [Wprowadzenie](https://xunit.github.io/docs/getting-started-dotnet-core.html)
+  - [Narzędzie do konwersji projektu MSTest na xUnit](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
 - [NUnit](https://nunit.org/)
-  * [Wprowadzenie](https://github.com/nunit/docs/wiki/Installation)
-  * [Wpis w blogu dotyczący migracji z MSTest do NUnit](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
+  - [Wprowadzenie](https://github.com/nunit/docs/wiki/Installation)
+  - [Wpis w blogu dotyczący migracji z MSTest do NUnit](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
 - [MSTest](https://docs.microsoft.com/visualstudio/test/unit-test-basics)
 
 ## <a name="recommended-approach-to-porting"></a>Zalecane podejście do przenoszenia

@@ -1,106 +1,106 @@
 ---
-title: Jak są wersjonowane środowisko uruchomieniowe programu .NET Core i zestawu SDK
-description: W tym artykule dowiesz się, jak zestaw .NET Core SDK i środowisko uruchomieniowe są wersjonowane (podobne do semantycznego versioning).
+title: Jak działa wersja środowiska uruchomieniowego .NET Core i zestawu SDK
+description: W tym artykule omówiono sposób wersji zestaw .NET Core SDK i środowiska uruchomieniowego (podobnie jak w przypadku wersji semantycznych).
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: e060eac3a63ff869a2fe51fae0166b75329fcb49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcf74f6fa892446555541f13a33130a93787cf70
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646868"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104954"
 ---
-# <a name="overview-of-how-net-core-is-versioned"></a>Omówienie sposobu platformy .NET Core jest wersjonowany
+# <a name="overview-of-how-net-core-is-versioned"></a>Omówienie wersji platformy .NET Core
 
-.NET core odnosi się do środowiska uruchomieniowego programu .NET Core i .NET Core SDK, który zawiera narzędzia potrzebne do tworzenia aplikacji. Zestawów .NET core SDK są przeznaczone do pracy z poprzednich wersji środowiska uruchomieniowego programu .NET Core. W tym artykule wyjaśniono, środowisko uruchomieniowe i strategii wersji zestawu SDK. Wyjaśnienie numery wersji dla platformy .NET Standard można znaleźć w artykule Przedstawiamy [.NET Standard](../../standard/net-standard.md#net-implementation-support).
+.NET Core odwołuje się do środowiska uruchomieniowego .NET Core i zestaw .NET Core SDK, które zawiera narzędzia potrzebne do tworzenia aplikacji. Zestawy SDK platformy .NET Core są przeznaczone do pracy z dowolną poprzednią wersją środowiska uruchomieniowego platformy .NET Core. W tym artykule opisano strategię środowiska uruchomieniowego i wersji zestawu SDK. Informacje o numerach wersji .NET Standard można znaleźć w artykule wprowadzającym [.NET Standard](../../standard/net-standard.md#net-implementation-support).
 
-Środowisko uruchomieniowe programu .NET Core i .NET Core SDK dodania nowych funkcji w różnych stawki — ogólnie rzecz biorąc .NET Core SDK zawiera szybko zaktualizować narzędzia więcej niż środowisko uruchomieniowe programu .NET Core zmiany środowiska uruchomieniowego, którego używasz w środowisku produkcyjnym.
+Środowisko uruchomieniowe platformy .NET Core i zestaw .NET Core SDK dodawać nowe funkcje z zastosowaniem różnych stawek ogólnie zestaw .NET Core SDK udostępniają zaktualizowane narzędzia szybciej niż środowisko uruchomieniowe programu .NET Core zmienia środowisko uruchomieniowe używane w środowisku produkcyjnym.
 
-## <a name="versioning-details"></a>Szczegóły wersji
+## <a name="versioning-details"></a>Szczegóły dotyczące wersji
 
-".NET Core 2.1" odnosi się do numer wersji środowiska uruchomieniowego programu .NET Core. Środowisko uruchomieniowe programu .NET Core zawiera główny/drobnych/patch sposobem przechowywania wersji, który następuje po [wersji semantycznej](#semantic-versioning).
+".NET Core 2,1" odwołuje się do numeru wersji środowiska uruchomieniowego platformy .NET Core. Środowisko uruchomieniowe programu .NET Core ma rozwiązane podstawowe/drobne/poprawka do wersji, która następuje po [wersji semantycznej](#semantic-versioning).
 
-.NET Core SDK nie postępuj zgodnie z semantyki przechowywania wersji. .NET Core SDK zwalnia szybciej, a jego wersji muszą komunikować się wyrównany środowiska uruchomieniowego i zestawu SDK własnych niewielkie i poprawki wersji. Pierwsze dwa stanowiska wersji zestawu .NET Core SDK są zablokowane do środowiska uruchomieniowego .NET Core ona udostępniona. Każda wersja zestawu SDK można tworzyć aplikacje, dla tego środowiska uruchomieniowego lub dowolnej starszej wersji.
+Zestaw .NET Core SDK nie jest zgodna z wersją semantyczną. Zestaw .NET Core SDK wersje szybsze i jego wersje muszą komunikować się zarówno z wyrównanym środowiskiem uruchomieniowym, jak i wersjami pomocniczymi i poprawkami zestawu SDK. Pierwsze dwa pozycje wersji zestaw .NET Core SDK są blokowane dla środowiska uruchomieniowego platformy .NET Core wydanego za pomocą programu. Każda wersja zestawu SDK może tworzyć aplikacje dla tego środowiska uruchomieniowego lub dowolnej niższej wersji.
 
-Trzeci położenie numer wersji zestawu SDK komunikuje się oba pomocnicze i poprawianie numer. Wersja pomocnicza jest pomnożona przez 100. Podrzędny numer wersji 1, poprawki w wersji 2 jest przedstawiany jako 102. Dwie cyfry końcowe reprezentują numer poprawki. Wersja platformy .NET Core 2.2 może na przykład utworzyć wersji, takich jak Poniższa:
+Trzecia pozycja numeru wersji zestawu SDK komunikuje się zarówno z literą, jak i numerem poprawki. Wersja pomocnicza jest mnożona przez 100. Wersja pomocnicza 1, Poprawka wersja 2 byłaby reprezentowana jako 102. Ostatnie dwie cyfry reprezentują numer poprawki. Na przykład wydanie programu .NET Core 2,2 może tworzyć wersje, takie jak Następująca tabela:
 
-| Zmiana                | Środowisko uruchomieniowe programu .NET core | .NET core SDK (*) |
+| Zmiana                | Środowisko uruchomieniowe platformy .NET Core | Zestaw .NET Core SDK (*) |
 |-----------------------|-------------------|-------------------|
 | Wersja początkowa       | 2.2.0             | 2.2.100           |
 | Poprawka zestawu SDK             | 2.2.0             | 2.2.101           |
-| Środowisko uruchomieniowe i zestaw SDK poprawki | 2.2.1             | 2.2.102           |
+| Środowisko uruchomieniowe i poprawka zestawu SDK | 2.2.1             | 2.2.102           |
 | Zmiana funkcji zestawu SDK    | 2.2.1             | 2.2.200           |
 
-(\*) Ten wykres używa przyszłych 2.2 środowisko uruchomieniowe programu .NET Core co w przykładzie, ponieważ historyczne artefaktu przeznaczone pierwszy zestaw SDK dla platformy .NET Core 2.1 jest 2.1.300. Aby uzyskać więcej informacji, zobacz [wybór wersji platformy .NET Core](selection.md).
+(\*) Ten wykres używa przyszłych 2,2 środowiska uruchomieniowego platformy .NET Core jako przykładu, ponieważ artefakt historyczny mający pierwszy zestaw SDK dla platformy .NET Core 2,1 to 2.1.300. Aby uzyskać więcej informacji, zobacz [wybór wersji platformy .NET Core](selection.md).
 
-UWAGI:
+O
 
-* Jeśli zestaw SDK zawiera 10 aktualizacje funkcji przed aktualizacją funkcji środowiska uruchomieniowego, numery wersji przejdą do serii 1000 z międzynarodowymi numerami identyfikującymi takich jak 2.2.1000 jako wydawanie funkcji od 2.2.900. Ta sytuacja nie jest wystąpienie jest oczekiwane.
-* 99 poprawkami wydań, bez wydawania funkcji nie zostanie wykonana. Jeśli ten numer zbliża się do wydania, wymusza wersji funkcji.
+- Jeśli zestaw SDK ma 10 aktualizacji funkcji przed aktualizacją funkcji środowiska uruchomieniowego, numery wersji są przydzielone do serii 1000 z liczbami takimi jak 2.2.1000 jako wersja funkcji po 2.2.900. Ta sytuacja nie powinna wystąpić.
+- 99 wersje poprawek bez wydania funkcji nie zostaną wykonane. Jeśli wersja zbliża się do tej liczby, wymusza wydanie funkcji.
 
-Można zobaczyć więcej szczegółów, w początkowej wniosek na [dotnet/projekty](https://github.com/dotnet/designs/pull/29) repozytorium.
+Więcej szczegółów można znaleźć w wstępnej propozycji w repozytorium [dotnet/Designing](https://github.com/dotnet/designs/pull/29) .
 
-## <a name="semantic-versioning"></a>Przechowywanie wersji semantyczne
+## <a name="semantic-versioning"></a>Wersja semantyczna
 
-.NET Core *środowiska uruchomieniowego* około działa zgodnie z [Semantic Versioning (SemVer)](https://semver.org/), przyjęcie użytkowania `MAJOR.MINOR.PATCH` przechowywania wersji, użycie różnych części numeru wersji w celu opisania stopnia i typ Zmiana.
+*Środowisko uruchomieniowe* programu .NET Core jest w przybliżeniu zgodne z [wersją semantyki (SemVer)](https://semver.org/), `MAJOR.MINOR.PATCH` przy użyciu różnych części numeru wersji do opisania stopnia i typu zmiany.
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 ```
 
-Opcjonalny `PRERELEASE` i `BUILDNUMBER` części nigdy nie są częścią obsługiwanych wersji i istnieją tylko na nocnych kompilacji, lokalne kompilacje z celów źródła i nieobsługiwane wersje zapoznawcze.
+Opcjonalne `PRERELEASE` i`BUILDNUMBER` części nie są nigdy częścią obsługiwanych wersji i istnieją tylko w przypadku nocnych kompilacji, lokalne kompilacje ze źródłowych elementów docelowych i nieobsługiwane wersje wersji zapoznawczej.
 
-### <a name="understand-runtime-version-number-changes"></a>Omówienie zmiany numeru wersji środowiska uruchomieniowego
+### <a name="understand-runtime-version-number-changes"></a>Informacje o zmianach numeru wersji środowiska uruchomieniowego
 
-`MAJOR` jest zwiększany, gdy:
+`MAJOR`jest zwiększana, gdy:
 
-* Znaczących zmianach produkt lub nowym kierunku produktu.
-* Powodująca niezgodność zmiany zostały pobrane. Istnieje wysoka pasek z zaakceptowania zmian powodujących niezgodność.
-* Stara wersja nie jest już obsługiwana.
-* Nowsze `MAJOR` przyjmuje się wersja istniejące zależności.
+- Wprowadzono znaczące zmiany w produkcie lub nowy kierunek produktu.
+- Wprowadzono istotne zmiany. Istnieje wysoki poziom akceptowania istotnych zmian.
+- Stara wersja nie jest już obsługiwana.
+- Przyjęto `MAJOR` nowszą wersję istniejącej zależności.
 
-`MINOR` jest zwiększany, gdy:
+`MINOR`jest zwiększana, gdy:
 
-* Publiczny obszar powierzchni interfejsu API jest dodawany.
-* Nowe zachowanie jest dodawany.
-* Nowsze `MINOR` przyjmuje się wersja istniejące zależności.
-* Wprowadzono nowe zależności.
+- Dodano publiczny obszar powierzchni interfejsu API.
+- Zostanie dodane nowe zachowanie.
+- Przyjęto `MINOR` nowszą wersję istniejącej zależności.
+- Zostanie wprowadzona nowa zależność.
 
-`PATCH` jest zwiększany, gdy:
+`PATCH`jest zwiększana, gdy:
 
-* Poprawki zostały wprowadzone.
-* Zostanie dodana jego obsługa dla nowszej platformy.
-* Nowsze `PATCH` przyjmuje się wersja istniejące zależności.
-* Inne zmiany nie mieści się jednego z poprzednich przypadków.
+- Wprowadzono poprawki błędów.
+- Dodano obsługę nowszej platformy.
+- Przyjęto `PATCH` nowszą wersję istniejącej zależności.
+- Jakakolwiek inna zmiana nie pasuje do jednego z poprzednich przypadków.
 
-W przypadku wielu zmian najwyższy element wpływ poszczególnych zmian jest zwiększany, a poniższych jest resetowany do zera. Na przykład, gdy `MAJOR` jest zwiększany `MINOR` i `PATCH` jest resetowany do zera. Gdy `MINOR` jest zwiększany `PATCH` jest resetowany do zera trochę `MAJOR` nie została zmieniona po lewej.
+W przypadku zmiany wielu zmian najwyższy element, na który wpływają poszczególne zmiany, jest zwiększany, a następujące są resetowane do zera. Na przykład gdy `MAJOR` jest zwiększana, `MINOR` i `PATCH` są resetowane do zera. Gdy `MINOR` jest zwiększana, `PATCH` jest resetowana do zera `MAJOR` , podczas gdy pozostaje nienaruszony.
 
 ## <a name="version-numbers-in-file-names"></a>Numery wersji w nazwach plików
 
-Pliki pobierane dla platformy .NET Core przeniesienia wersji, na przykład `dotnet-sdk-2.1.300-win10-x64.exe`.
+Pliki pobrane dla platformy .NET Core przenoszą wersję, na przykład `dotnet-sdk-2.1.300-win10-x64.exe`.
 
-### <a name="preview-versions"></a>Wersje (wersja zapoznawcza)
+### <a name="preview-versions"></a>Wersje zapoznawcze
 
-Wersji zapoznawczych mają `-preview[number]-([build]|"final")` dołączany do wersji. Na przykład `2.0.0-preview1-final`.
+Wersje zapoznawcze mają `-preview[number]-([build]|"final")` dołączony do wersji. Na przykład `2.0.0-preview1-final`.
 
-### <a name="servicing-versions"></a>Obsługa wersji
+### <a name="servicing-versions"></a>Wersje obsługi
 
-Po wydaniu trafia, gałęzie wydań jest ogólnie Zatrzymaj tworzenie codzienne kompilacje i zamiast tego zaczniesz tworzenie obsługi kompilacji. Wersje obsługi mają `-servicing-[number]` dołączany do wersji. Na przykład `2.0.1-servicing-006924`.
+Po wyjściu z wersji, gałęzie wydań zwykle zatrzymują codzienne kompilacje i zamiast tego uruchamiają kompilacje obsługi. Wersje obsługujące zostały `-servicing-[number]` dołączone do wersji. Na przykład `2.0.1-servicing-006924`.
 
-## <a name="relationship-to-net-standard-versions"></a>Relacja do wersji .NET Standard
+## <a name="relationship-to-net-standard-versions"></a>Relacja z wersjami .NET Standard
 
-.NET standard składa się z zestawu odwołania platformy .NET. Wiele implementacji są specyficzne dla poszczególnych platform. Zestaw odwołania zawiera definicji interfejsów API platformy .NET, które są dostępne w ramach danej wersji .NET Standard. Każda implementacja spełnia .NET Standard kontraktu na danej platformie. Można znaleźć więcej informacji na temat .NET Standard w artykule na [.NET Standard](../../standard/net-standard.md) w przewodniku programu .NET.
+.NET Standard składa się z zestawu odwołań platformy .NET. Istnieje wiele implementacji specyficznych dla każdej platformy. Zestaw odwołań zawiera definicję interfejsów API platformy .NET, które są częścią danej .NET Standard wersji. Każda implementacja spełnia umowę .NET Standard na określonej platformie. Więcej informacji na temat .NET Standard można znaleźć w artykule na [.NET Standard](../../standard/net-standard.md) w przewodniku po platformie .NET.
 
-.NET Standard używa zestawu odwołania `MAJOR.MINOR` schematu przechowywania wersji. `PATCH` poziom nie jest przydatne dla platformy .NET Standard, ponieważ udostępnia tylko specyfikację interfejsu API (nie implementacji), a następnie zgodnie z definicją wszelkie zmiany interfejsu API reprezentuje zmianę zestawu funkcji i dlatego nową `MINOR` wersji.
+Zestaw odwołań .NET Standard używa `MAJOR.MINOR` schematu przechowywania wersji. `PATCH`poziom nie jest użyteczny w przypadku .NET Standard, ponieważ uwidacznia tylko specyfikację interfejsu API (bez implementacji) i według definicji jakakolwiek zmiana w interfejsie API będzie reprezentować zmianę zestawu funkcji i `MINOR` w związku z tym nową wersją.
 
-Implementacje na każdej z platform mogą być aktualizowane, zazwyczaj w ramach wersji platformy i w związku z tym nie oczywisty dla programistów przy użyciu platformy .NET Standard na tej platformie.
+Implementacje na każdej platformie mogą być aktualizowane, zazwyczaj jako część wersji platformy, i nie są widoczne dla programistów używających .NET Standard na tej platformie.
 
-Każda wersja programu .NET Core implementuje wersji programu .NET Standard. Zaimplementowanie wersji .NET Standard oznacza pomocy technicznej dla wcześniejszych wersji programu .NET Standard. Wersja platformy .NET standard i .NET Core niezależnie. Jest zbieżność, że zestaw .NET Core 2.0 implementuje .NET Standard 2.0. .NET core 2.1 implementuje również .NET Standard 2.0. .NET core będzie obsługiwać przyszłych wersjach programu .NET Standard, gdy tylko zostaną udostępnione.
+Każda wersja programu .NET Core implementuje wersję .NET Standard. Zaimplementowanie wersji .NET Standard oznacza obsługę wcześniejszych wersji .NET Standard. Niezależna wersja .NET Standard i .NET Core. Jest to współdziałanie, które program .NET Core 2,0 implementuje .NET Standard 2,0. Platforma .NET Core 2,1 implementuje również .NET Standard 2,0. Platforma .NET Core będzie obsługiwała przyszłe wersje .NET Standard, gdy staną się dostępne.
 
 | .NET Core | .NET Standard |
 |-----------|---------------|
-| 1.0       | do wersji 1.6     |
+| 1.0       | do 1,6     |
 | 2.0       | do 2,0     |
 | 2.1       | do 2,0     |
 
@@ -108,6 +108,6 @@ Każda wersja programu .NET Core implementuje wersji programu .NET Standard. Zai
 
 - [Platformy docelowe](../../standard/frameworks.md)
 - [Tworzenie pakietów dystrybucji platformy .NET Core](../build/distribution-packaging.md)
-- [.NET core pomocy technicznej cyklu życia faktu arkusza](https://www.microsoft.com/net/core/support)
-- [Wiązanie wersji programu .NET core 2 +](https://github.com/dotnet/designs/issues/3)
-- [Obrazy platformy docker dla platformy .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/)
+- [Arkusz faktów cyklu życia obsługi .NET Core](https://www.microsoft.com/net/core/support)
+- [Powiązanie z platformą .NET Core 2 +](https://github.com/dotnet/designs/issues/3)
+- [Obrazy platformy Docker dla programu .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/)

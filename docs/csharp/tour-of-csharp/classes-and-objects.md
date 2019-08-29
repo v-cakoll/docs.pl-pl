@@ -3,12 +3,12 @@ title: Klasy i obiekty w C# przewodniku dotyczące C# języka
 description: Jesteś nowym C#? Przeczytaj ten przegląd klas, obiektów i dziedziczenia
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: ff83a3198c6c9fb4c4a438d2486614a211c913ec
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: be8e760b19b7ca5305918ecfdbf9ad797d7e76b2
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971456"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105634"
 ---
 # <a name="classes-and-objects"></a>Klasy i obiekty
 
@@ -32,42 +32,42 @@ Elementy członkowskie klasy są statycznymi elementami członkowskimi lub wyst�
 
 Poniżej przedstawiono omówienie rodzajów elementów członkowskich, które może zawierać Klasa.
 
-* Stałe
+- Stałe
   - Wartości stałe skojarzone z klasą
-* Pola
+- Pola
   - Zmienne klasy
-* Metody
+- Metody
   - Obliczenia i akcje, które mogą być wykonywane przez klasę
-* Właściwości
+- Właściwości
   - Akcje skojarzone z odczytem i pisaniem nazwanych właściwości klasy
-* Indeksatory
+- Indeksatory
   - Akcje skojarzone z wystąpieniami indeksowania klasy, takimi jak tablica
-* Zdarzenia
+- Zdarzenia
   - Powiadomienia, które mogą zostać wygenerowane przez klasę
-* Operatory
+- Operatory
   - Konwersje i operatory wyrażeń obsługiwane przez klasę
-* Konstruktorów
+- Konstruktorów
   - Akcje wymagane do zainicjowania wystąpień klasy lub samej klasy
-* Finalizatory
+- Finalizatory
   - Akcje do wykonania przed trwałe odrzuceniem wystąpień klasy
-* Types
+- Types
   - Zagnieżdżone typy zadeklarowane przez klasę
 
 ## <a name="accessibility"></a>Ułatwienia dostępu
 
 Każdy element członkowski klasy ma skojarzoną dostępność, która kontroluje regiony tekstu programu, które mogą uzyskać dostęp do elementu członkowskiego. Istnieje sześć możliwych form ułatwień dostępu. Poniżej przedstawiono podsumowanie tych informacji.
 
-* `public`
+- `public`
   - Dostęp nie jest ograniczony
-* `protected`
+- `protected`
   - Dostęp ograniczony do tej klasy lub klas pochodnych od tej klasy
-* `internal`
+- `internal`
   - Dostęp ograniczony do bieżącego zestawu (. exe,. dll itp.)
-* `protected internal`
+- `protected internal`
   - Dostęp ograniczony do klasy zawierającej, klasy pochodne z klasą zawierającą lub klasy w tym samym zestawie
-* `private`
+- `private`
   - Dostęp ograniczony do tej klasy
-* `private protected`
+- `private protected`
   - Dostęp ograniczony do zawierającej klasy lub klas pochodnych z typu zawierającego w tym samym zestawie
 
 ## <a name="type-parameters"></a>Parametry typu
@@ -258,7 +258,7 @@ Metody dostępu właściwości mogą być wirtualne. Gdy Deklaracja właściwoś
 
 *Indeksator* jest członkiem, który umożliwia indeksowanie obiektów w taki sam sposób jak w przypadku tablicy. Indeksator jest zadeklarowany jak właściwość, z tą różnicą, że `this` po nazwie składowej następuje lista parametrów zapisywana między `[` ogranicznikami i `]`. Parametry są dostępne w metodach dostępu indeksatora. Podobnie jak w przypadku właściwości, indeksatory mogą być tylko do odczytu i zapisu, tylko do odczytu i do zapisu, a Akcesory dla indeksatora mogą być wirtualne.
 
-Klasa deklaruje pojedynczy indeksator do odczytu i zapisu, który `int` pobiera parametr. `MyList<T>` Indeksator umożliwia indeksowanie `MyList<T>` wystąpień z `int` wartościami. Na przykład:
+Klasa deklaruje pojedynczy indeksator do odczytu i zapisu, który `int` pobiera parametr. `MyList<T>` Indeksator umożliwia indeksowanie `MyList<T>` wystąpień z `int` wartościami. Przykład:
 
 [!code-csharp[ListExample3](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L109-L117)]
 

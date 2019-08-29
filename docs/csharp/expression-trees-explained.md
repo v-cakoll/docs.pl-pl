@@ -1,48 +1,48 @@
 ---
 title: Drzewa wyrażeń — objaśnienie
-description: Informacje na temat drzew wyrażeń i jak są one przydatne do przekształcania algorytmy dla zewnętrznych wykonania i kontroli kodu przed jej wykonanie.
+description: Dowiedz się więcej o drzewach wyrażeń i sposobach ich użycia podczas tłumaczenia algorytmów wykonywania zewnętrznego i sprawdzania kodu przed jego wykonaniem.
 ms.date: 06/20/2016
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: 3bad826bb58ff361688d3e13497343661e7edbd3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5d4b2ad54fab547567d430f11a31542a11d03f3
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646608"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104796"
 ---
 # <a name="expression-trees-explained"></a>Drzewa wyrażeń — objaśnienie
 
-[Poprzednie — omówienie](expression-trees.md)
+[Poprzedni — przegląd](expression-trees.md)
 
-Drzewo wyrażenia jest strukturą danych, który definiuje kodu. Są one oparte na tych samych struktur, które kompilator używa do analizowania kodu i generuje skompilowanych danych wyjściowych. Omówione w tym samouczku, można zauważyć znacznej liczby podobieństwa między drzew wyrażeń i typy używane w interfejsach API Roslyn do tworzenia [analizatory i CodeFixes](https://github.com/dotnet/roslyn-analyzers).
-(Analizatory i CodeFixes są pakiety NuGet, przeprowadzania analizy statycznej kodu, które może sugerować potencjalne rozwiązania dla deweloperów). Podstawowe koncepcje są podobne, a wynik końcowy to struktura danych, która umożliwia zbadanie kodu źródłowego w znaczący sposób. Jednak drzew wyrażeń są oparte na zupełnie innego zestawu klas i interfejsów API niż interfejsów API Roslyn.
+Drzewo wyrażenia jest strukturą danych, która definiuje kod. Są one oparte na tych samych strukturach, których kompilator używa do analizowania kodu i generowania skompilowanych danych wyjściowych. Po przeczytaniu tego samouczka zobaczysz dość znaczące różnice między drzewami wyrażeń a typami używanymi w interfejsach API Roslyn do budowania analizatorów [i CodeFixes](https://github.com/dotnet/roslyn-analyzers).
+(Analizatory i CodeFixes są pakietami NuGet, które wykonują analizę statyczną w kodzie i mogą sugerować potencjalne poprawki dla deweloperów). Pojęcia są podobne, a wynik końcowy to struktura danych, która umożliwia badanie kodu źródłowego w zrozumiały sposób. Jednak drzewa wyrażeń opierają się na zupełnie innym zestawie klas i interfejsów API niż interfejsy API Roslyn.
 
-Oto prosty przykład.
+Przyjrzyjmy się prostemu przykładowi.
 Oto wiersz kodu:
 
 ```csharp
 var sum = 1 + 2;
 ```
 
-W przypadku analizowania to jako drzewa wyrażenie drzewa zawiera kilka węzłów.
-Węzeł najbardziej zewnętrznej jest deklaracja zmiennej instrukcji z przypisaniem (`var sum = 1 + 2;`) tego węzła najbardziej zewnętrznej zawiera kilka węzłów podrzędnych: deklaracja zmiennej, operator przypisania i wyrażenie reprezentujące po prawej stronie znaku równości. Czy wyrażenie jest dalsze podzielone na wyrażeniach, które reprezentują operacja dodawania i lewy i prawy argumenty operacji dodawania.
+Jeśli przeanalizować ten element jako drzewo wyrażenia, drzewo zawiera kilka węzłów.
+Zewnętrzny węzeł jest instrukcją deklaracji zmiennej z przypisaniem`var sum = 1 + 2;`(), która znajduje się na zewnątrz węzła, zawiera kilka węzłów podrzędnych: Deklaracja zmiennej, operator przypisania i wyrażenie reprezentujące prawą stronę znaku równości. To wyrażenie jest dalej podzielona na wyrażenia, które reprezentują operację dodawania, oraz lewy i prawy operand dodawania.
 
-Teraz nieco bardziej do szczegółów wyrażeń, które składają się po prawej stronie znaku równości.
-Wyrażenie jest `1 + 2`. To wyrażenia binarnego. Dokładniej mówiąc jest to wyrażenie binarne dodawania. Wyrażenie binarne dodanie ma dwa elementy podrzędne, reprezentujący lewy i prawy węzłów wyrażenie dodawania. W tym miejscu oba węzły są stałe wyrażenia: Lewy operand jest wartością `1`, prawy operand jest to wartość `2`.
+Przejdźmy do bardziej szczegółowych informacji w wyrażeniach, które składają się z prawej strony znaku równości.
+Wyrażenie jest `1 + 2`. To jest wyrażenie binarne. Dokładniej mówiąc, jest to binarne wyrażenie dodawania. Wyrażenie dodawania binarnego ma dwa elementy podrzędne, reprezentujące lewe i prawe węzły wyrażenia dodawania. W tym miejscu oba węzły są wyrażeniami stałymi: Lewy operand jest wartością `1`, a prawy operand jest wartością. `2`
 
-Wizualnie całą instrukcję jest drzewo: Możesz rozpoczynają się od węzła głównego i przesyłane do każdego węzła w drzewie Aby wyświetlić kod, który tworzy instrukcji:
+Wizualnie cała instrukcja jest drzewem: Można zacząć od węzła głównego i poruszać się do każdego węzła w drzewie, aby wyświetlić kod, który wykonuje instrukcję:
 
-- Deklaracja zmiennej instrukcji z przypisaniem (`var sum = 1 + 2;`)
-  * Deklaracja niejawnego typu zmiennej (`var sum`)
-    - Słowa kluczowego var niejawne (`var`)
-    - Nazwa zmiennej deklaracji (`sum`)
-  * Operator przypisania (`=`)
-  * Wyrażenie binarne dodawania (`1 + 2`)
+- Instrukcja deklaracji zmiennej z przypisaniem (`var sum = 1 + 2;`)
+  - Niejawna deklaracja typu`var sum`zmiennej ()
+    - Niejawne słowo`var`kluczowe var ()
+    - Deklaracja nazwy zmiennej (`sum`)
+  - Operator przypisania (`=`)
+  - Wyrażenie dodawania binarnego`1 + 2`()
     - Lewy operand (`1`)
     - Operator dodawania (`+`)
     - Prawy operand (`2`)
 
-Może to wyglądać skomplikowane, ale możliwości są ogromne. Następujące ten sam proces możesz rozłożyć części wyrażenia dużo bardziej skomplikowany. Należy wziąć pod uwagę następujące wyrażenie:
+Może to wyglądać skomplikowanie, ale jest bardzo wydajne. Wykonując ten sam proces, można rozłożyć znacznie bardziej skomplikowane wyrażenia. Rozważ następujące wyrażenie:
 
 ```csharp
 var finalAnswer = this.SecretSauceFunction(
@@ -51,22 +51,22 @@ var finalAnswer = this.SecretSauceFunction(
     MoreSecretSauce('A', DateTime.Now, true);
 ```
 
-Powyższe wyrażenie jest również deklaracji zmiennej z przydziałem.
-W tym wypadku po prawej stronie przypisania jest dużo bardziej skomplikowany drzewa.
-Nie zamierzam rozłożyć to wyrażenie, ale należy wziąć pod uwagę, co może być w różnych węzłach. Brak wywołania metody, przy użyciu bieżącego obiektu jako odbiornik, który ma jawnie `this` odbiornik, który nie jest. Brak wywołania metody, przy użyciu innych obiektów odbiorcy, stałe argumentów o różnych typach. A na koniec jest operator binarny dodawania. W zależności od typu zwracanego `SecretSauceFunction()` lub `MoreSecretSauce()`, tego operatora binarnego dodawania może być wywołanie metody do operatora dodawania zgodnym z przesłoniętą rozpoznawania do wywołania metody statycznej operatora binarnego dodawania zdefiniowanej dla klasy.
+Wyrażenie powyżej jest również deklaracją zmiennej z przypisaniem.
+W tym przypadku prawa strona przypisania jest znacznie bardziej skomplikowanym drzewem.
+Nie mierzę rozłożyć tego wyrażenia, ale warto rozważyć, jakie mogą być różne węzły. Istnieją wywołania metod używające bieżącego obiektu jako odbiornika, który ma jawny `this` odbiornik, taki, który nie jest. Istnieją wywołania metod używające innych obiektów odbiornika, a istnieją stałe argumenty różnych typów. Na koniec istnieje binarny operator dodawania. W zależności od typu `SecretSauceFunction()` zwracanego lub `MoreSecretSauce()`, ten operator dodawania binarnego może być wywołaniem metody do zastąpionego operatora dodawania, rozpoznawania do wywołania metody statycznej do operatora dodawania binarnego zdefiniowanego dla klasy.
 
-Pomimo tego postrzegany złożoności powyższe wyrażenie tworzy strukturę drzewa, którego nastąpi przejście, jak łatwo, jak pierwszy przykład. Można zachować przechodzenie węzłów podrzędnych można znaleźć węzły liści w wyrażeniu. Węzły nadrzędne będzie odwołują się do ich elementy podrzędne, a każdy węzeł ma właściwość, która opisuje, w jaki rodzaj węzła jest.
+Pomimo tej postrzeganej złożoności wyrażenie powyżej tworzy strukturę drzewa, którą można łatwo nawigować jako pierwszą próbkę. Aby znaleźć węzły liścia w wyrażeniu, można kontynuować przechodzenie między węzłami podrzędnymi. Węzły nadrzędne będą mieć odwołania do ich elementów podrzędnych, a każdy węzeł ma właściwość opisującą rodzaj węzła.
 
-Struktura drzewa wyrażenie jest bardzo spójne. Gdy znasz już podstawy, można zrozumieć nawet najbardziej złożonego kodu, gdy jest przedstawiana jako drzewo wyrażenia. Elegancji w strukturze danych wyjaśnia sposób, w jaki C# kompilatora można analizować najbardziej złożone C# programów i Utwórz odpowiednie dane wyjściowe z kodu źródłowego skomplikowane.
+Struktura drzewa wyrażenia jest bardzo spójna. Po ustaleniu podstawowych informacji można zrozumieć nawet najbardziej skomplikowany kod, gdy jest reprezentowany jako drzewo wyrażenia. Elegancji w strukturze danych wyjaśnia, jak C# kompilator może analizować najbardziej złożone C# programy i tworzyć prawidłowe dane wyjściowe z tego złożonego kodu źródłowego.
 
-Gdy zapoznanie się ze struktury drzewa wyrażeń, możesz znaleźć, wiedzy, które zostały zgromadzone szybko umożliwia pracę z wielu bardziej zaawansowanych scenariuszy. Brak niwelujące w drzewach wyrażeń.
+Po zapoznaniu się ze strukturą drzew wyrażeń, zobaczysz, że uzyskana wiedza szybko umożliwia pracę z wieloma bardziej zaawansowanymi scenariuszami. Istnieją bardzo niesamowite możliwości dla drzew wyrażeń.
 
-Oprócz tłumaczenia algorytmów do wykonania w innych środowiskach, drzew wyrażeń może służyć ułatwiające zapis algorytmy, które inspekcji kodu przed jego wykonaniem. Można napisać metodę, której argumenty są wyrażeniami i Sprawdź te wyrażenia przed wykonaniem kodu. Drzewo wyrażenia jest pełną reprezentację kod: możesz zobaczyć wartości dowolne wyrażenie podrzędne.
-Możesz zobaczyć nazwy metod i właściwości. Wartość dowolnego wyrażenia stałe są widoczne.
-Można także przekonwertować drzewo wyrażenia na delegata pliku wykonywalnego i wykonywania kodu.
+Oprócz tłumaczenia algorytmów do wykonania w innych środowiskach, drzewa wyrażeń mogą ułatwić pisanie algorytmów, które sprawdzają kod przed jego wykonaniem. Można napisać metodę, której argumenty są wyrażeniami, a następnie przeanalizować te wyrażenia przed wykonaniem kodu. Drzewo wyrażenia jest pełną reprezentacją kodu: można zobaczyć wartości dowolnego wyrażenia podrzędnego.
+Można zobaczyć nazwy metod i właściwości. Możesz zobaczyć wartość dowolnych wyrażeń stałych.
+Można również przekonwertować drzewo wyrażenia na delegata pliku wykonywalnego i wykonać kod.
 
-Interfejsy API dla drzew wyrażeń umożliwiają tworzenie drzewa, które reprezentują prawie konstrukcji prawidłowy kod. Jednak aby zachować tak proste, jak to możliwe, niektóre C# idiomy nie można utworzyć w drzewo wyrażenia. Przykładem jest wyrażenia asynchroniczne (przy użyciu `async` i `await` słów kluczowych). Jeśli Twoje potrzeby wymagają algorytmy asynchroniczne, będziesz potrzebować do manipulowania `Task` obiektów bezpośrednio, zamiast polegać na temat obsługi kompilatora. Innym jest podczas tworzenia pętli. Zazwyczaj można tworzyć przy użyciu `for`, `foreach`, `while` lub `do` pętli. Jak zobaczysz [dalej w tej serii](expression-trees-building.md), interfejsy API dla drzew wyrażeń obsługuje wyrażenie jednej pętli z `break` i `continue` wyrażeń, które kontrolują, powtarzając pętli.
+Interfejsy API dla drzew wyrażeń umożliwiają tworzenie drzew, które reprezentują niemal dowolną prawidłową konstrukcję kodu. Aby jednak zapewnić jak najłatwą możliwość, niektóre C# idiomy nie mogą być tworzone w drzewie wyrażenia. Przykładem są wyrażenia asynchroniczne (przy użyciu `async` słów `await` kluczowych i). Jeśli wymagane są algorytmy asynchroniczne, należy manipulować `Task` obiektami bezpośrednio, a nie polegać na obsłudze kompilatora. Innym jest w tworzeniu pętli. Zazwyczaj można je utworzyć `for`za pomocą pętli `while` , `foreach`lub `do` . Jak widać [w dalszej części tej serii](expression-trees-building.md), interfejsy API dla drzew wyrażeń obsługują pojedyncze wyrażenie pętli, z `break` i `continue` wyrażeń, które kontrolują powtarzanie pętli.
 
-Jedyną operacją, której nie można wykonać, jest zmodyfikowanie drzewo wyrażenia.  Drzewa wyrażeń są danymi niezmiennymi struktury. Chcąc mutować (Zmień) wyrażenie drzewa, należy utworzyć nowe drzewo, który jest kopią oryginał, ale o odpowiednie zmiany.
+Jedną z tych czynności nie można modyfikować drzewo wyrażenia.  Drzewa wyrażeń są niezmiennymi strukturami danych. Jeśli chcesz zmodyfikować (zmienić) drzewo wyrażenia, musisz utworzyć nowe drzewo, które jest kopią oryginału, ale wraz z żądanymi zmianami.
 
-[Dalej — Typy platform obsługujące drzewa wyrażeń](expression-classes.md)
+[Typy "Next--Framework" obsługujące drzewa wyrażeń](expression-classes.md)

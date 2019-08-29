@@ -19,60 +19,60 @@ helpviewer_keywords:
 ms.assetid: 4028b310-e7ce-49d4-a646-1e83bfaf6f9d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d783f9e0d098e472dcf67aea394804d6eef2662
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea44b29eaa0273baadbf02093108bc4da912a3e5
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026526"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106743"
 ---
 # <a name="saving-and-restoring-time-zones"></a>Zapisywanie i przywracanie stref czasowych
 
-<xref:System.TimeZoneInfo> Klasy opiera się na rejestru w celu pobrania danych wstępnie zdefiniowane strefy czasowej. Jednak rejestru jest strukturą dynamicznych. Ponadto informacje o strefie czasowej, który zawiera rejestr jest używany przez system operacyjny głównie w celu obsługi korektę czasu i konwersje w bieżącym roku. To ma dwie główne wpływ na aplikacje oparte na danych dokładne strefa czasowa:
+<xref:System.TimeZoneInfo> Klasa opiera się na rejestrze, aby pobrać wstępnie zdefiniowane dane strefy czasowej. Rejestr jest jednak strukturą dynamiczną. Ponadto informacje o strefie czasowej, które zawiera rejestr, są używane przez system operacyjny głównie do obsługi korekt czasowych i konwersji w bieżącym roku. Ma to dwie główne konsekwencje dla aplikacji, które opierają się na dokładnych danych strefy czasowej:
 
-* Strefa czasowa, która jest wymagana przez aplikację może nie być zdefiniowana w rejestrze lub mógł zostać zmieniona lub usunięta z rejestru.
+- Strefa czasowa wymagana przez aplikację może nie być zdefiniowana w rejestrze lub zmieniono nazwę lub usunięto ją z rejestru.
 
-* Strefa czasowa, która jest zdefiniowana w rejestrze może brakuje informacji na temat reguł określonego korygowania, które są niezbędne do konwersjami stref czasowych historycznych.
+- Strefa czasowa zdefiniowana w rejestrze może nie mieć informacji o konkretnych regułach korekty, które są niezbędne do historycznych konwersji stref czasowych.
 
-<xref:System.TimeZoneInfo> Klasy adresy te ograniczenia, za pośrednictwem Obsługa (zapisywanie) serializacji i deserializacji (Trwa przywracanie) danych w strefie czasowej.
+<xref:System.TimeZoneInfo> Klasa eliminuje te ograniczenia w ramach obsługi serializacji (zapisywania) i deserializacji (Przywracanie) danych strefy czasowej.
 
-## <a name="time-zone-serialization-and-deserialization"></a>Strefa czasowa serializacji i deserializacji
+## <a name="time-zone-serialization-and-deserialization"></a>Serializacja i deserializacja strefy czasowej
 
-Zapisywanie i przywracanie na strefę czasową, serializacja i Deserializacja danych strefy czasowej obejmuje tylko dwie wywołania metody:
+Zapisywanie i przywracanie strefy czasowej przez Serializowanie i deserializacja danych strefy czasowej obejmuje tylko dwa wywołania metody:
 
-* Może wykonywać serializację <xref:System.TimeZoneInfo> obiektu przez wywołanie metody tego obiektu <xref:System.TimeZoneInfo.ToSerializedString%2A> metody. Metoda nie przyjmuje żadnych parametrów i zwraca ciąg, który zawiera informacje o strefie czasowej.
+- <xref:System.TimeZoneInfo> Obiekt można serializować, wywołując <xref:System.TimeZoneInfo.ToSerializedString%2A> metodę tego obiektu. Metoda nie przyjmuje parametrów i zwraca ciąg, który zawiera informacje o strefie czasowej.
 
-* Może wykonywać deserializację <xref:System.TimeZoneInfo> obiekt Zserializowany ciągu, przekazując ciąg do `static` (`Shared` w języku Visual Basic) <xref:System.TimeZoneInfo.FromSerializedString%2A?displayProperty=nameWithType> metody.
+- Można zdeserializować <xref:System.TimeZoneInfo> obiekt z ciągu serializowanego, przekazując ten ciąg `static` do metody (`Shared` w Visual Basic) <xref:System.TimeZoneInfo.FromSerializedString%2A?displayProperty=nameWithType> .
 
 ## <a name="serialization-and-deserialization-scenarios"></a>Scenariusze serializacji i deserializacji
 
-Możliwość zapisywania (lub serializować) <xref:System.TimeZoneInfo> obiekt na ciąg i przywrócić (lub deserializować) w celu późniejszego użycia zwiększa elastyczność i narzędzia <xref:System.TimeZoneInfo> klasy. W tej sekcji sprawdza, czy niektóre przypadki, w których są najbardziej przydatne serializacji i deserializacji.
+Możliwość zapisywania (lub serializacji) <xref:System.TimeZoneInfo> obiektu w ciągu i przywracania (lub deserializacji) do późniejszego użycia zwiększa zarówno narzędzie, jak i elastyczność <xref:System.TimeZoneInfo> klasy. Ta sekcja analizuje niektóre sytuacje, w których Serializacja i deserializacja są najbardziej przydatne.
 
-### <a name="serializing-and-deserializing-time-zone-data-in-an-application"></a>Serializacja i Deserializacja danych strefy czasowej w aplikacji
+### <a name="serializing-and-deserializing-time-zone-data-in-an-application"></a>Serializowanie i deserializacja danych strefy czasowej w aplikacji
 
-Kiedy jest potrzebny, można przywrócić Zserializowany strefy czasowej z ciągu. Aplikacja to zrobić, jeśli strefa czasowa, pobrać z rejestru nie jest w stanie poprawnie przekonwertować daty i godziny w zakresie określonej daty. Na przykład strefa czasowa danych w rejestrze systemu Windows XP obsługuje regułę pojedynczego dopasowania, a stref czasowych zdefiniowanych w rejestrze systemu Windows Vista, zwykle zawierają informacje o dwóch reguł korygowania. Oznacza to, że konwersje historycznych czasu mogą być niedokładne. Serializacja i Deserializacja danych strefy czasowej może obsłużyć tego ograniczenia.
+Serializowana strefa czasowa może zostać przywrócona z ciągu, gdy jest to konieczne. Aplikacja może to zrobić, jeśli strefa czasowa pobierana z rejestru nie może prawidłowo przekonwertować daty i godziny w określonym zakresie dat. Na przykład dane strefy czasowej w rejestrze systemu Windows XP obsługują jedną regułę korygowania, podczas gdy strefy czasowe zdefiniowane w rejestrze systemu Windows Vista zwykle zawierają informacje o dwóch regułach korekty. Oznacza to, że konwersje czasu historycznego mogą być niedokładne. Serializacja i deserializacja danych strefy czasowej może obsłużyć to ograniczenie.
 
-W poniższym przykładzie niestandardową <xref:System.TimeZoneInfo> zdefiniowano klasę, która nie zawiera żadnych reguł dopasowania do reprezentowania Stanów Zjednoczonych Wschodni czas standardowy strefy z 1883 1917 przed wprowadzeniem zmiany czasu w Stanach Zjednoczonych. Niestandardowa strefa czasowa jest serializowany w zmiennej, która ma zakres globalny. Metoda konwersji strefy czasowej, `ConvertUtcTime`, jest przekazywany czas uniwersalny czas koordynowany (UTC), aby przekonwertować. Jeśli daty i godziny występuje w 1917 lub starszym, niestandardowa Eastern Standard strefa czasowa jest przywracana z serializowanej ciągu i zastępuje strefy czasowej, pobrać z rejestru.
+W poniższym przykładzie Klasa niestandardowa <xref:System.TimeZoneInfo> , która nie ma reguł dostosowawczych, jest definiowana do reprezentowania Stanów Zjednoczonych Niestandardowa strefa czasowa od 1883 do 1917 przed wprowadzeniem czasu letniego w Stany Zjednoczone. Niestandardowa strefa czasowa jest serializowana w zmiennej z zakresem globalnym. Metoda konwersji strefy czasowej, `ConvertUtcTime`,,, jest przenoszona do konwersji na czasy uniwersalnego czasu koordynowanego (UTC). Jeśli data i godzina występuje w 1917 lub wcześniejszych, niestandardowa Wschodnia strefa czasowa jest przywracana z serializowanego ciągu i zastępuje strefę czasową pobieraną z rejestru.
 
 [!code-csharp[System.TimeZone2.Serialization.1#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Serialization.1/cs/Serialization.cs#1)]
 [!code-vb[System.TimeZone2.Serialization.1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Serialization.1/vb/Serialization.vb#1)]
 
-### <a name="handling-time-zone-exceptions"></a>Obsługa wyjątków na strefę czasową
+### <a name="handling-time-zone-exceptions"></a>Obsługa wyjątków strefy czasowej
 
-Ponieważ rejestr jest strukturą dynamiczne, jego zawartość podlegają przypadkowego lub celowego modyfikacji. Oznacza to, że strefy czasowej, która powinna być zdefiniowana w rejestrze i jest to wymagane dla aplikacji, aby pomyślnie wykonać może nie występować. Bez pomocy technicznej dla strefy czasowej serializacji i deserializacji, ma mały wyboru, aby obsłużyć wynikowy <xref:System.TimeZoneNotFoundException> przez zakończeniem aplikacji. Jednak przy użyciu strefy czasowej serializacji i deserializacji, które ułatwią Ci obsługę nieoczekiwany <xref:System.TimeZoneNotFoundException> , przywracając wymagane strefy czasowej z serializacji ciąg, a aplikacja będzie nadal działać.
+Ponieważ rejestr jest strukturą dynamiczną, jej zawartość podlega przypadkowej lub celowej modyfikacji. Oznacza to, że może brakować strefy czasowej, która powinna być zdefiniowana w rejestrze i która jest wymagana do pomyślnego wykonania aplikacji. Bez obsługi serializacji i deserializacji strefy czasowej masz niewielki wybór, ale aby obsługiwać wyniki <xref:System.TimeZoneNotFoundException> , kończąc aplikację. Jednak przy użyciu serializacji i deserializacji strefy czasowej można obsłużyć nieoczekiwane <xref:System.TimeZoneNotFoundException> , przywracając wymaganą strefę czasową z serializowanego ciągu, a aplikacja będzie nadal działać.
 
-Poniższy przykład tworzy i serializuje niestandardowe centralnej standardowa strefy czasowej. Próbuje pobrać centralnej standardowa strefy czasowej z rejestru. Jeśli operacja pobierania zgłasza albo <xref:System.TimeZoneNotFoundException> lub <xref:System.InvalidTimeZoneException>, obsługa wyjątków deserializuje strefy czasowej.
+Poniższy przykład tworzy i deserializacji niestandardowej centralnej strefy czasowej. Następnie próbuje pobrać centralną standardową strefę czasową z rejestru. Jeśli operacja pobierania zgłasza albo <xref:System.TimeZoneNotFoundException> <xref:System.InvalidTimeZoneException>lub, program obsługi wyjątków deserializacji strefę czasową.
 
 [!code-csharp[System.TimeZone2.Serialization.2#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Serialization.2/cs/Serialization2.cs#1)]
 [!code-vb[System.TimeZone2.Serialization.2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Serialization.2/vb/Serialization2.vb#1)]
 
-### <a name="storing-a-serialized-string-and-restoring-it-when-needed"></a>Przechowywanie serializacji ciągu i przywracania go w razie
+### <a name="storing-a-serialized-string-and-restoring-it-when-needed"></a>Przechowywanie serializowanego ciągu i przywracanie go w razie konieczności
 
-Poprzednie przykłady ma przechowywane informacje o strefie czasowej do zmiennej ciągu i przywrócono ją w razie. Jednak ciąg, który zawiera Zserializowany razem, gdy informacje o strefie sam można przechowywać w niektórych nośnika magazynowania, takie jak zewnętrznego pliku, plik zasobów osadzonych w aplikacji lub w rejestrze. (Zwróć uwagę, że informacje o niestandardowych stref czasowych powinny znajdować się niezależnie od strefy czasowej systemu kluczy rejestru).
+Poprzednie przykłady zawierają informacje o strefie czasowej w zmiennej ciągu i przywrócone w razie potrzeby. Jednak ciąg, który zawiera serializowane informacje o strefie czasowej, może być przechowywany w pewnym nośniku magazynującym, takim jak plik zewnętrzny, plik zasobów osadzony w aplikacji lub w rejestrze. (Należy pamiętać, że informacje o niestandardowych strefach czasowych powinny być przechowywane niezależnie od kluczy strefy czasowej systemu w rejestrze).
 
-Również przechowywanie ciągu Zserializowany strefę czasową w ten sposób oddziela procedurę tworzenia strefy czasowej z samej aplikacji. Na przykład procedury tworzenia strefy czasowej można wykonać i utworzyć plik danych, który zawiera informacje o strefie czasowej historyczne, które aplikacja może użyć. Plik danych może być, a następnie można zainstalować za pomocą aplikacji, można go otworzyć i co najmniej jeden z jego stref czasowych może być zdeserializowany, gdy aplikacja wymaga ich.
+Przechowywanie serializowanego ciągu strefy czasowej również oddziela procedurę tworzenia strefy czasowej od samej aplikacji. Na przykład można wykonać procedurę tworzenia strefy czasowej i utworzyć plik danych zawierający historyczne informacje o strefie czasowej, które mogą być używane przez aplikację. Plik danych może być następnie instalowany z aplikacją i może być otwarty, a co najmniej jedna strefa czasowa może zostać odszeregowana, gdy aplikacja tego wymaga.
 
-Na przykład, korzystającą z zasobu osadzonego w celu przechowywania danych serializacji strefę czasową, zobacz [jak: Zapisywanie stref czasowych w zasobie osadzonym](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) i [jak: Przywracanie stref czasowych z zasobu osadzonego](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
+Aby uzyskać przykład, który używa zasobu osadzonego do przechowywania danych strefy czasowej, [zobacz How to: Zapisz strefy czasowe w osadzonym](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) zasobie i [instrukcje: Przywróć strefy czasowe z zasobu](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)osadzonego.
 
 ## <a name="see-also"></a>Zobacz także
 

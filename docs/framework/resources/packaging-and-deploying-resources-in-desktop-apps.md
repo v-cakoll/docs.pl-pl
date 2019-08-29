@@ -1,5 +1,5 @@
 ---
-title: Opakowanie i wdrażanie zasobów w aplikacjach .NET
+title: Pakowanie i wdrażanie zasobów w aplikacjach .NET
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -28,97 +28,97 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d636496599d4419518ce53c956c83f6ae175aa8
-ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
+ms.openlocfilehash: 4092d8694bdb896db1332bd73afae3f62bba36cf
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67135659"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105912"
 ---
-# <a name="packaging-and-deploying-resources-in-net-apps"></a>Opakowanie i wdrażanie zasobów w aplikacjach .NET
+# <a name="packaging-and-deploying-resources-in-net-apps"></a>Pakowanie i wdrażanie zasobów w aplikacjach .NET
 
-Aplikacje polegają na .NET Framework Menedżera zasobów, reprezentowane przez <xref:System.Resources.ResourceManager> klasy w celu pobrania zlokalizowanych zasobów. Menedżer zasobów przyjęto założenie, że modelu topologi gwiaździstej umożliwia tworzenie pakietów i wdrażanie zasobów. Piasta to główny zestaw, który zawiera kod wykonywalny nielokalizowanych i zasoby dla jednej kultury, o nazwie zero lub kultury domyślnej. Domyślną kulturę używaną jest rezerwowego kulturą aplikacji; jest kultury, którego zasoby są używane, jeśli nie można odnaleźć zlokalizowanych zasobów. Każdej szprysze nawiązuje połączenie z zestawem satelickim, która zawiera zasoby dla jednej kultury, ale nie zawiera żadnego kodu.
+Aplikacje są zależne od Menedżer zasobów .NET Framework, reprezentowane przez <xref:System.Resources.ResourceManager> klasę, aby pobrać zlokalizowane zasoby. Menedżer zasobów zakłada, że model gwiazdy jest używany do pakowania i wdrażania zasobów. Koncentrator jest głównym zestawem, który zawiera Niezlokalizowany kod wykonywalny i zasoby dla pojedynczej kultury, nazywane kulturą neutralną lub domyślną. Domyślna kultura jest kulturą rezerwową dla aplikacji; jest kulturą, której zasoby są używane, jeśli nie można znaleźć zlokalizowanych zasobów. Każdy szprych nawiązuje połączenie z zestawem satelickim zawierającym zasoby dla jednej kultury, ale nie zawiera kodu.
 
-Istnieje kilka zalet tego modelu:
+Ten model ma kilka zalet:
 
-- Po wdrożeniu aplikacji możesz stopniowo dodawać zasoby dla nowych języków. Ponieważ dalszy rozwój specyficznych dla kultury zasobów może wymagać znacznej ilości czasu, dzięki temu można najpierw wersji głównej aplikacji i dostarczenia specyficznych dla kultury zasobów w późniejszym terminie.
+- Po wdrożeniu aplikacji można stopniowo dodawać zasoby dla nowych kultur. W związku z tym, że dalsze Programowanie zasobów specyficznych dla kultury może wymagać znacznego czasu, to pozwala na pierwsze wydanie głównej aplikacji oraz dostarczanie zasobów specyficznych dla kultury w późniejszym terminie.
 
-- Możesz zaktualizować i zmienić zestawy satelickie aplikacji bez konieczności ponownego kompilowania aplikacji.
+- Można aktualizować i zmieniać zestawy satelickie aplikacji bez konieczności ponownego kompilowania aplikacji.
 
-- Aplikacja musi załadować tylko te zestawy satelickie, które zawierają zasoby wymagane dla danej kultury. Może to znacznie zmniejszyć użycia zasobów systemowych.
+- Aplikacja musi ładować tylko te zestawy satelickie, które zawierają zasoby wymagane dla określonej kultury. Może to znacznie zmniejszyć wykorzystanie zasobów systemowych.
 
- Istnieją jednak również wady do tego modelu:
+ Jednak istnieją także wady tego modelu:
 
-- Muszą zarządzać wiele zestawów zasobów.
+- Należy zarządzać wieloma zestawami zasobów.
 
-- Początkowy koszt testowania aplikacji zwiększa, ponieważ należy przetestować kilka konfiguracji. Należy pamiętać, że w długim okresie będzie łatwiejsze i mniej kosztowna przetestować jedną podstawową aplikację za pomocą kilku satelity, niż można przetestować i obsługa kilka wersji międzynarodowej równoległych.
+- Początkowy koszt testowania aplikacji wzrasta, ponieważ należy przetestować kilka konfiguracji. Należy pamiętać, że w długim okresie będzie łatwiejsze i tańsze przetestowanie jednej podstawowej aplikacji z kilkoma satelitami, niż testowanie i obsługa kilku równoległych wersji międzynarodowych.
 
 ## <a name="resource-naming-conventions"></a>Konwencje nazewnictwa zasobów
 
-Podczas pakowania zasobów aplikacji możesz nazwać je przy użyciu konwencji nazewnictwa zasobów, których oczekuje środowiska uruchomieniowego języka wspólnego. Środowisko uruchomieniowe identyfikuje zasób za pomocą nazwy kultury. Każda kultura otrzymuje unikatową nazwę, która zwykle jest kombinacją nazwy kultury dwie litery, małe litery, skojarzone z językiem i w razie potrzeby, nazwa przeszczepiania dwie litery, wielkie litery skojarzone z kraju lub regionu. Nazwa przeszczepiania jest zgodna nazwa kultury, oddzielone kreską (-). Przykłady obejmują ja-JP w języku japońskim, ponieważ używany w Japonii, en US, dla języka angielskiego, ponieważ używany w USA, de-DE, dla języka niemieckiego jak używany w Niemczech lub de-AT dla języka niemieckiego jak używany w Austria. Zobacz **tagu języka** kolumny w [listę nazw języka i regionu, obsługiwany przez Windows](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Nazwy kultury, należy wykonać standardów opracowanych przez [BCP 47](https://tools.ietf.org/html/bcp47).
+Podczas pakowania zasobów aplikacji należy nadać im nazwy przy użyciu konwencji nazewnictwa zasobów, których oczekuje środowisko uruchomieniowe języka wspólnego. Środowisko uruchomieniowe identyfikuje zasób według jego nazwy kultury. Każda kultura ma unikatową nazwę, która zwykle jest kombinacją dwuliterowej nazwy kultury, która jest skojarzona z językiem i, w razie potrzeby, z dwuliterową nazwą podkultury Wielkiej, skojarzoną z danym krajem lub regionem. Nazwa kultury jest zgodna z nazwą kultury, oddzieloną kreską (-). Przykłady obejmują ja-JP dla języka japońskiego w Japonii, en-US dla języka angielskiego w Stany Zjednoczone, de-DE dla języka niemieckiego w Niemczech lub w odniesieniu do języka niemieckiego, który jest mówiony w Austrii. Zobacz kolumnę **tag języka** na [liście nazw języków/regionów obsługiwanych przez system Windows](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Nazwy kultur są zgodne ze standardem zdefiniowanym przez [BCP 47](https://tools.ietf.org/html/bcp47).
 
 > [!NOTE]
-> Aby uzyskać informacje o tworzeniu plików zasobów, zobacz [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) i [tworzenie zestawów satelickich](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).
+> Informacje o tworzeniu plików zasobów można znaleźć w temacie [Tworzenie plików zasobów](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) i [Tworzenie zestawów satelickich](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).
 
 <a name="cpconpackagingdeployingresourcesanchor1"></a>
 
 ## <a name="the-resource-fallback-process"></a>Proces bazowy zasobu
 
-Model gwiazdy do pakowania i wdrażania zasobów używa procesu bazowego można zlokalizować odpowiednich zasobów. Jeśli aplikacja żąda zlokalizowany zasób, który jest niedostępny, środowisko uruchomieniowe języka wspólnego wyszukuje hierarchii kultur odpowiedni zasób rezerwowy, która najlepiej pasuje do aplikacji użytkownika przez żądania i zgłasza wyjątek, tylko jako w ostateczności. Na każdym poziomie hierarchii Jeśli odpowiedni zasób zostanie znaleziony, środowisko wykonawcze używa go. Jeśli zasób nie zostanie znaleziony, wyszukiwanie jest kontynuowane na następnym poziomie.
+Model gwiazdy do pakowania i wdrażania zasobów używa procesu rezerwowego do lokalizowania odpowiednich zasobów. Jeśli aplikacja żąda zlokalizowanego zasobu, który jest niedostępny, środowisko uruchomieniowe języka wspólnego przeszukuje hierarchię kultur dla odpowiedniego zasobu rezerwowego, który najlepiej pasuje do żądania application's użytkownika i zgłasza wyjątek tylko jako Ostatni etap. Na każdym poziomie hierarchii, jeśli zostanie znaleziony odpowiedni zasób, środowisko uruchomieniowe użyje go. Jeśli zasób nie zostanie znaleziony, wyszukiwanie będzie kontynuowane na następnym poziomie.
 
-Aby poprawić wydajność wyszukiwania, zastosuj <xref:System.Resources.NeutralResourcesLanguageAttribute> atrybutu do swojego głównego zestawu i przekaż mu nazwę neutralny język, który będzie działać z zestawu głównego.
+Aby zwiększyć wydajność wyszukiwania, Zastosuj <xref:System.Resources.NeutralResourcesLanguageAttribute> atrybut do głównego zestawu i przekaż mu nazwę języka neutralnego, który będzie współpracować z głównym zestawem.
 
-### <a name="net-framework-resource-fallback-process"></a>Proces bazowy zasobu .NET framework
+### <a name="net-framework-resource-fallback-process"></a>Proces rezerwowy zasobów .NET Framework
 
-Proces bazowy zasobu .NET Framework obejmuje następujące czynności:
+Proces rezerwowy zasobów .NET Framework obejmuje następujące kroki:
 
 > [!TIP]
-> Można użyć [ \<relativebindforresources — >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) element konfiguracji, aby zoptymalizować proces bazowy zasobu i proces, za pomocą której środowisko uruchomieniowe sondy zestawów zasobów. Aby uzyskać więcej informacji, zobacz [optymalizowanie procesu uwierzytelniania rezerwowego zasobów](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#Optimizing) sekcji.
+> Aby zoptymalizować proces rezerwowy zasobów i proces [ \<](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) , w którym sondy środowiska uruchomieniowego dla zestawów zasobów, może być możliwe użycie elementu konfiguracji > relativeBindForResources. Aby uzyskać więcej informacji, zobacz sekcję [Optymalizacja procesu rezerwowego zasobów](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#Optimizing) .
 
-1. Po pierwsze sprawdza środowisko uruchomieniowe [globalnej pamięci podręcznej](../../../docs/framework/app-domains/gac.md) dla zestawu, który odpowiada żądaną kulturę dla swojej aplikacji.
+1. Środowisko uruchomieniowe najpierw sprawdza [globalną pamięć podręczną zestawów](../../../docs/framework/app-domains/gac.md) dla zestawu, który jest zgodny z żądaną kulturą dla aplikacji.
 
-     Zestawy zasobów, które są współużytkowane przez wiele aplikacji mogą być przechowywane w globalnej pamięci podręcznej. To zwalnia z konieczności dołączania określone zestawy zasobów w strukturze katalogów o każdej utworzonej aplikacji. Jeśli środowisko uruchomieniowe wykryje odwołanie do zestawu, wyszukuje zestaw dla żądanego zasobu. Jeśli znajdzie wejścia w zestawie używa żądanego zasobu. Jeśli wpis nie zostanie znaleziona, kontynuuje wyszukiwanie.
+     Globalna pamięć podręczna zestawów może przechowywać zestawy zasobów, które są współużytkowane przez wiele aplikacji. Pozwala to na dołączenie określonych zestawów zasobów do struktury katalogów każdej utworzonej aplikacji. Jeśli środowisko uruchomieniowe odnajdzie odwołanie do zestawu, przeszukuje zestaw dla żądanego zasobu. Jeśli odnajdzie wpis w zestawie, używa żądanego zasobu. Jeśli nie znajdzie wpisu, kontynuuje wyszukiwanie.
 
-2. Środowisko uruchomieniowe sprawdza następnie katalog zawierający obecnie wykonywany zestaw dla podkatalogu, który odpowiada żądaną kulturę. Jeśli znajdzie podkatalogu, wyszukuje tym podkatalogu dla zestawu prawidłowego satelity dla żądanego kultury. Środowisko uruchomieniowe wyszukuje zestawu satelickiego dla żądanego zasobu. Jeśli znajdzie zasobu w zestawie używa go. Jeśli zasób nie zostanie znaleziona, kontynuuje wyszukiwanie.
+2. Następnie środowisko uruchomieniowe sprawdza katalog aktualnie wykonywanego zestawu dla podkatalogu, który jest zgodny z żądaną kulturą. Jeśli odnajdzie podkatalog, przeszukuje ten podkatalog dla prawidłowego zestawu satelickiego dla wymaganej kultury. Środowisko uruchomieniowe następnie przeszukuje zestaw satelicki dla żądanego zasobu. W przypadku znalezienia zasobu w zestawie zostanie on użyty. Jeśli zasób nie zostanie znaleziony, będzie kontynuował wyszukiwanie.
 
-3. Środowisko uruchomieniowe obok kwerendy Instalatora Windows, aby określić, czy w zestawie satelickim można zainstalować na żądanie. Jeśli tak, obsługuje instalację, ładuje zestaw, a na koniec przeszukuje go lub żądany zasób. Jeśli znajdzie zasobu w zestawie używa go. Jeśli zasób nie zostanie znaleziona, kontynuuje wyszukiwanie.
+3. Środowisko uruchomieniowe następnym zażąda Instalator Windows, aby określić, czy zestaw satelicki ma być zainstalowany na żądanie. Jeśli tak, obsługuje instalację, ładuje zestaw i przeszukuje go lub żądany zasób. W przypadku znalezienia zasobu w zestawie zostanie on użyty. Jeśli zasób nie zostanie znaleziony, będzie kontynuował wyszukiwanie.
 
-4. Środowisko wykonawcze zgłasza <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzenie, aby wskazać, że nie można odnaleźć zestawu satelickiego. Jeśli wybierzesz obsłużyć zdarzenie, obsługi zdarzenia może zwrócić odwołanie do zestawu satelickiego, którego zasoby będzie służyć do wyszukiwania. W przeciwnym razie zwraca program obsługi zdarzeń `null` i wyszukiwanie jest kontynuowane.
+4. Środowisko uruchomieniowe podnosi <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzenie, aby wskazać, że nie można znaleźć zestawu satelickiego. Jeśli zdecydujesz się obsłużyć zdarzenie, program obsługi zdarzeń może zwrócić odwołanie do zestawu satelickiego, którego zasoby będą używane do wyszukiwania. W przeciwnym razie program obsługi zdarzeń `null` zwraca i wyszukiwanie będzie kontynuowane.
 
-5. Wyszukuje następny środowiska uruchomieniowego globalnej pamięci podręcznej ponownie, tym razem dla zestawu nadrzędnego żądaną kulturę. Jeśli istnieje nadrzędny zestawu w globalnej pamięci podręcznej, środowisko uruchomieniowe wyszukuje zestaw dla żądanego zasobu.
+5. Następnie środowisko uruchomieniowe ponownie przeszukuje globalną pamięć podręczną zestawów, tym razem dla zestawu nadrzędnego żądanej kultury. Jeśli zestaw nadrzędny istnieje w globalnej pamięci podręcznej zestawów, środowisko uruchomieniowe przeszukuje zestaw dla żądanego zasobu.
 
-     Kultura nadrzędna jest zdefiniowany jako odpowiednie kultury rezerwowej. Ponieważ warunkiem, że dowolny zasób jest zostanie zgłoszony wyjątek, należy wziąć pod uwagę elementów nadrzędnych, podczas tworzenia rezerwowego. Ten proces umożliwia do ponownego użycia zasobów. Określony zasób na poziomie nadrzędnym powinny obejmować tylko wtedy, gdy kultury podrzędnych nie trzeba lokalizować żądanego zasobu. Na przykład, jeśli użytkownik poda zestawów satelickich dla `en` (neutralny język angielski) `en-GB` (w języku angielskim jak używany w Wielkiej Brytanii), a `en-US` (w języku angielskim jak używany w Stanach Zjednoczonych), `en` satelitarnej zawiera typowe terminologii i `en-GB` i `en-US` satelity, mogły udostępnić zastąpień dla tych warunków, które różnią się.
+     Kultura nadrzędna jest definiowana jako odpowiednia kultura rezerwowa. Rozważ użycie obiektów nadrzędnych jako kandydatów Fallback, ponieważ dostarczenie dowolnego zasobu jest preferowane do zgłaszania wyjątku. Ten proces pozwala również ponownie wykorzystać zasoby. Określony zasób powinien znajdować się na poziomie nadrzędnym tylko wtedy, gdy Kultura podrzędna nie musi lokalizować żądanego zasobu. Na przykład, jeśli dostarczasz zestawy satelickie `en` dla (neutralnego alfabetu angielskiego), `en-GB` (angielski jako mówiony w Zjednoczonym `en-US` Królestwie) i (angielski `en` jako mówiony w Stany Zjednoczone), Satelita będzie zawierać wspólne Terminologia i `en-US` satelity `en-GB` mogą zapewnić przesłonięcia tylko te warunki, które różnią się od siebie.
 
-6. Środowisko uruchomieniowe sprawdza następnie katalog zawierający obecnie wykonywany zestaw, aby zobaczyć, czy zawiera on katalog nadrzędny. Jeśli w katalogu nadrzędnym istnieje, środowisko uruchomieniowe wyszukuje katalogu zestaw prawidłowego satelity dla kultury nadrzędnej. Jeśli znajdzie zestawu, środowisko uruchomieniowe wyszukuje zestaw dla żądanego zasobu. Jeśli znajdzie zasobu, używa go. Jeśli zasób nie zostanie znaleziona, kontynuuje wyszukiwanie.
+6. Następnie środowisko uruchomieniowe sprawdza katalog aktualnie wykonywanego zestawu, aby zobaczyć, czy zawiera katalog nadrzędny. Jeśli katalog nadrzędny istnieje, środowisko uruchomieniowe przeszukuje katalog pod kątem prawidłowego zestawu satelickiego dla kultury nadrzędnej. Jeśli odnajdzie zestaw, środowisko uruchomieniowe przeszukuje zestaw dla żądanego zasobu. W przypadku znalezienia zasobu zostanie on użyty. Jeśli zasób nie zostanie znaleziony, będzie kontynuował wyszukiwanie.
 
-7. Środowisko uruchomieniowe obok kwerendy Instalatora Windows, aby ustalić, czy zestawu satelickiego nadrzędny ma zostać zainstalowany na żądanie. Jeśli tak, obsługuje instalację, ładuje zestaw, a na koniec przeszukuje go lub żądany zasób. Jeśli znajdzie zasobu w zestawie używa go. Jeśli zasób nie zostanie znaleziona, kontynuuje wyszukiwanie.
+7. Środowisko uruchomieniowe następnym zapytaniem Instalator Windows, aby określić, czy nadrzędny zestaw satelicki ma być zainstalowany na żądanie. Jeśli tak, obsługuje instalację, ładuje zestaw i przeszukuje go lub żądany zasób. W przypadku znalezienia zasobu w zestawie zostanie on użyty. Jeśli zasób nie zostanie znaleziony, będzie kontynuował wyszukiwanie.
 
-8. Środowisko wykonawcze zgłasza <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzenie, aby wskazać, że nie można znaleźć odpowiedni zasób rezerwowy. Jeśli wybierzesz obsłużyć zdarzenie, obsługi zdarzenia może zwrócić odwołanie do zestawu satelickiego, którego zasoby będzie służyć do wyszukiwania. W przeciwnym razie zwraca program obsługi zdarzeń `null` i wyszukiwanie jest kontynuowane.
+8. Środowisko uruchomieniowe podnosi <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzenie, aby wskazać, że nie można znaleźć odpowiedniego zasobu rezerwowego. Jeśli zdecydujesz się obsłużyć zdarzenie, program obsługi zdarzeń może zwrócić odwołanie do zestawu satelickiego, którego zasoby będą używane do wyszukiwania. W przeciwnym razie program obsługi zdarzeń `null` zwraca i wyszukiwanie będzie kontynuowane.
 
-9. Wyszukuje następny środowiska uruchomieniowego nadrzędnego zestawów, tak jak poprzednie trzy kroki przy użyciu wielu potencjalnych poziomów. Każda kultura ma tylko jedną jednostkę nadrzędną, która jest zdefiniowana przez <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=nameWithType> właściwości, ale element nadrzędny może mieć własną nadrzędnej. Wyszukaj nadrzędnego kulturami zatrzymuje się podczas kultury <xref:System.Globalization.CultureInfo.Parent%2A> właściwość zwraca <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>; na zasób rezerwowy Niezmienna kultura nie jest uważany za kultury nadrzędnej lub kultury, które mogą istnieć zasoby.
+9. Środowisko uruchomieniowe następnym szuka zestawów nadrzędnych, jak w poprzednich trzech krokach, za pomocą wielu potencjalnych poziomów. Każda kultura ma tylko jeden element nadrzędny, który jest zdefiniowany przez <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=nameWithType> właściwość, ale element nadrzędny może mieć własny element nadrzędny. Wyszukiwanie kultur nadrzędnych jest przerywane, gdy <xref:System.Globalization.CultureInfo.Parent%2A> właściwość kultury zwraca <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>; w przypadku powrotu do zasobów Niezmienna kultura nie jest uważana za kulturę nadrzędną ani kulturę, która może mieć zasoby.
 
-10. Jeśli nadal nie można odnaleźć zasobu został przeszukane kultury, który pierwotnie został określony i wszystkich elementów nadrzędnych, zasobów dla kultury domyślnej (rezerwowego) jest używany. Zazwyczaj zasobów dla kultury domyślnej znajdują się w zestawie aplikacji głównej. Jednakże, można określić wartość <xref:System.Resources.UltimateResourceFallbackLocation.Satellite> dla <xref:System.Resources.NeutralResourcesLanguageAttribute.Location%2A> właściwość <xref:System.Resources.NeutralResourcesLanguageAttribute> atrybutu, aby wskazać, że ultimate lokalizacji rezerwowej dla zasobów zestawu satelickiego zamiast zestawu głównego.
+10. Jeśli kultura, która była pierwotnie określona i wszystkie elementy nadrzędne zostały przeszukane, a zasób nadal nie został znaleziony, używana jest wartość domyślna kultury (Fallback). Zazwyczaj zasoby dla kultury domyślnej są zawarte w głównym zestawie aplikacji. Można jednak określić wartość <xref:System.Resources.UltimateResourceFallbackLocation.Satellite> <xref:System.Resources.NeutralResourcesLanguageAttribute.Location%2A> dla właściwości <xref:System.Resources.NeutralResourcesLanguageAttribute> atrybutu, aby wskazać, że ostateczna lokalizacja rezerwowa dla zasobów jest zestawem satelity, a nie głównym zestawem.
 
     > [!NOTE]
-    > Zasób domyślny jest tylko zasób, który może być skompilowana przy użyciu zestawu głównego. Chyba że określisz zestawu satelickiego przy użyciu <xref:System.Resources.NeutralResourcesLanguageAttribute> atrybutu jest ostateczny powrót (końcowy element nadrzędny). Dlatego zaleca się zawsze zawierać domyślny zestaw zasobów w swoim zestawie głównym. Pozwala to zapobiec wyjątki od zgłaszane. Przez dołączenie zasobu domyślnego, pliku, który zapewnia rezerwowe dla wszystkich zasobów i upewnij się, że co najmniej jeden zasób jest zawsze istnieje dla użytkownika, nawet jeśli nie jest kulturalnie określonych.
+    > Domyślny zasób jest jedynym zasobem, który można skompilować przy użyciu głównego zestawu. Jeśli nie określisz zestawu satelickiego przy użyciu <xref:System.Resources.NeutralResourcesLanguageAttribute> atrybutu, jest to ostateczna rezerwa (końcowy element nadrzędny). Dlatego zaleca się, aby zawsze zawierać domyślny zestaw zasobów w zestawie głównym. Pomaga to zapobiegać zgłaszaniu wyjątków. Przez dołączenie zasobu domyślnego, plik dostarcza rezerwę dla wszystkich zasobów i gwarantuje, że co najmniej jeden zasób jest zawsze obecny dla użytkownika, nawet jeśli nie jest specyficzny dla kultury.
 
-11. Na koniec, jeśli środowisko wykonawcze nie znajduje się zasób dla domyślnej kultury (rezerwowego) <xref:System.Resources.MissingManifestResourceException> lub <xref:System.Resources.MissingSatelliteAssemblyException> jest zgłaszany wyjątek, aby wskazać, że nie można odnaleźć zasobu.
+11. Na koniec Jeśli środowisko uruchomieniowe nie znajdzie zasobu dla kultury domyślnej (rezerwowej), <xref:System.Resources.MissingManifestResourceException> zostanie zgłoszony wyjątek lub <xref:System.Resources.MissingSatelliteAssemblyException> , aby wskazać, że nie można znaleźć zasobu.
 
-Załóżmy na przykład żądania aplikacji zasobu zlokalizowane dla hiszpański (Meksyk) ( `es-MX` kultury). Środowisko uruchomieniowe najpierw szuka globalnej pamięci podręcznej zestawu, który odpowiada `es-MX`, ale nie można go odnaleźć. Środowisko uruchomieniowe wyszukuje katalog zawierający obecnie wykonywany zestaw dla `es-MX` katalogu. Jeśli nie, środowisko uruchomieniowe wyszukuje global assembly cache ponownie zestawu nadrzędnego, który odzwierciedla odpowiednie kultury rezerwowej — w tym przypadku `es` (hiszpański). Jeżeli zestaw nadrzędnego nie zostanie znaleziony, środowisko uruchomieniowe wyszukuje wszystkie potencjalne poziomy zestawów nadrzędnego dla `es-MX` kulturze, aż do znalezienia odpowiedniego zasobu. Jeśli zasób nie zostanie znaleziona, środowisko uruchomieniowe używa zasobów dla kultury domyślnej.
+Załóżmy na przykład, że aplikacja żąda zasobu zlokalizowanego w języku hiszpańskim (Meksyk) ( `es-MX` kultura). Środowisko uruchomieniowe najpierw przeszukuje globalną pamięć podręczną zestawów dla `es-MX`zestawu, który pasuje, ale go nie znalazł. Środowisko uruchomieniowe następnie przeszukuje katalog aktualnie wykonywanego zestawu dla `es-MX` katalogu. Niepowodzenie oznacza, że środowisko uruchomieniowe ponownie przeszukuje globalną pamięć podręczną zestawów dla zestawu nadrzędnego, który odzwierciedla odpowiednią kulturę rezerwową — w tym przypadku `es` (hiszpański). Jeśli zestaw nadrzędny nie zostanie znaleziony, środowisko uruchomieniowe przeszukuje wszystkie potencjalne poziomy zestawów nadrzędnych dla `es-MX` kultury do momentu znalezienia odpowiedniego zasobu. Jeśli zasób nie zostanie znaleziony, środowisko uruchomieniowe użyje zasobu dla kultury domyślnej.
 
 <a name="Optimizing"></a>
 
-#### <a name="optimizing-the-net-framework-resource-fallback-process"></a>Optymalizowanie procesu bazowego zasobu .NET Framework
+#### <a name="optimizing-the-net-framework-resource-fallback-process"></a>Optymalizowanie procesu rezerwowego .NET Framework zasobów
 
-W następujących warunkach można zoptymalizować ten proces, za pomocą której środowisko uruchomieniowe wyszukuje zasobów w zestawach satelickich
+W następujących warunkach można zoptymalizować proces, za pomocą którego środowisko uruchomieniowe wyszukuje zasoby w zestawach satelickich
 
-- Zestawy satelickie są wdrażane w tej samej lokalizacji co zestaw kodu. Jeśli zainstalowano zestaw kodu w [Global Assembly Cache](../../../docs/framework/app-domains/gac.md), zestawy satelickie są również zainstalowane w globalnej pamięci podręcznej. Jeśli zestaw kodu jest zainstalowana w katalogu, zestawy satelickie są instalowane w folderach specyficzne dla kultury tego katalogu.
+- Zestawy satelickie są wdrażane w tej samej lokalizacji co zestaw kodu. Jeśli zestaw kodu jest zainstalowany w [globalnej pamięci podręcznej zestawów](../../../docs/framework/app-domains/gac.md), zestawy satelickie są również zainstalowane w globalnej pamięci podręcznej zestawów. Jeśli zestaw kodu jest zainstalowany w katalogu, zestawy satelickie są instalowane w folderach specyficznych dla kultury tego katalogu.
 
-- Nie zainstalowano zestawów satelickich na żądanie.
+- Zestawy satelickie nie są zainstalowane na żądanie.
 
-- Kod aplikacji nie obsługuje <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzeń.
+- Kod aplikacji nie <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> obsługuje zdarzenia.
 
-Optymalizowanie sondy dla zestawów satelickich, umieszczając [ \<relativebindforresources — >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) elementu i ustawienie jej `enabled` atrybutu `true` w pliku konfiguracyjnym aplikacji, jak pokazano w poniższym przykładzie.
+Możesz zoptymalizować sondę dla zestawów satelitarnych, dołączając [ \<element relativeBindForResources >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) i ustawiając jego `enabled` atrybut na `true` w pliku konfiguracyjnym aplikacji, jak pokazano na poniższej liście przyklad.
 
 ```xml
 <configuration>
@@ -128,100 +128,100 @@ Optymalizowanie sondy dla zestawów satelickich, umieszczając [ \<relativebindf
 </configuration>
 ```
 
-Zoptymalizowane sondy dla zestawów satelickich to funkcja opcjonalna. Oznacza to, że środowisko uruchomieniowe następujące kroki opisane w temacie [proces bazowy zasobu](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1) chyba że [ \<relativebindforresources — >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) element znajduje się w konfiguracji aplikacji plik i jego `enabled` ma ustawioną wartość atrybutu `true`. Jeśli jest to możliwe, proces badania zestawu satelickiego zmienia się w następujący sposób:
+Optymalizacja pod kątem zestawów satelitarnych to funkcja opcjonalna. Oznacza to, że środowisko uruchomieniowe postępuje zgodnie z krokami opisanymi w [procesie rezerwowym zasobu](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1) , chyba że [ \<element relativeBindForResources >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) jest obecny w `enabled` pliku konfiguracji aplikacji, a jego atrybut jest ustawiony do `true`programu. W takim przypadku proces sondowania dla zestawu satelickiego jest modyfikowany w następujący sposób:
 
-- Środowisko wykonawcze używa lokalizacji zestawu kodu nadrzędnego sondowania dla zestawu satelickiego. Jeśli zestaw nadrzędnego jest zainstalowany w globalnej pamięci podręcznej, środowisko uruchomieniowe sondy w pamięci podręcznej, ale nie w katalogu aplikacji. Jeśli zestaw nadrzędnego jest instalowany w katalogu aplikacji, środowisko uruchomieniowe sondy w katalogu aplikacji, ale nie w globalnej pamięci podręcznej.
+- Środowisko uruchomieniowe używa lokalizacji zestawu kodu nadrzędnego do sondowania dla zestawu satelickiego. Jeśli zestaw nadrzędny jest zainstalowany w globalnej pamięci podręcznej zestawów, sondy środowiska uruchomieniowego w pamięci podręcznej, ale nie w katalogu aplikacji. Jeśli zestaw nadrzędny jest zainstalowany w katalogu aplikacji, sondy środowiska uruchomieniowego w katalogu aplikacji, ale nie w globalnej pamięci podręcznej zestawów.
 
-- Środowisko wykonawcze nie kwerendy Instalatora Windows do instalowania zestawów satelickich na żądanie.
+- Środowisko uruchomieniowe nie wykonuje zapytania do Instalator Windows na potrzeby instalacji zestawów satelitarnych na żądanie.
 
-- W przypadku niepowodzenia sondowania dla zestawu określonego zasobu środowiska uruchomieniowego nie zgłaszała <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzeń.
+- Jeśli sonda dla określonego zestawu zasobów ulegnie awarii, środowisko uruchomieniowe nie zgłasza <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzenia.
 
-### <a name="net-core-resource-fallback-process"></a>Proces bazowy zasobu .NET core
+### <a name="net-core-resource-fallback-process"></a>Proces rezerwowy zasobów platformy .NET Core
 
-Proces bazowy zasobu .NET Core obejmuje następujące czynności:
+Proces rezerwowy zasobów platformy .NET Core obejmuje następujące kroki:
 
-1. Środowisko uruchomieniowe podejmie próbę załadowania zestawu satelickiego dla kultury żądanej.
-     * Sprawdza, czy katalog zawierający obecnie wykonywany zestaw dla podkatalogu, który odpowiada żądaną kulturę. Jeśli znajdzie podkatalogu, wyszukuje tym podkatalogu zestaw prawidłowego satelity dla żądanego kultury i ładuje je.
-
-       > [!NOTE]
-       > W systemach operacyjnych z systemami plików rozróżniana wielkość liter (oznacza to, Linux i macOS) kultury nazwy podkatalogu wyszukiwania jest uwzględniana wielkość liter. Nazwę podkatalogu muszą dokładnie odpowiadać wielkości liter <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> (na przykład `es` lub `es-MX`).
+1. Środowisko uruchomieniowe próbuje załadować zestaw satelicki dla wymaganej kultury.
+     - Sprawdza katalog aktualnie wykonywanego zestawu dla podkatalogu, który jest zgodny z żądaną kulturą. Jeśli odnajdzie podkatalog, przeszukuje ten podkatalog dla prawidłowego zestawu satelickiego dla wymaganej kultury i ładuje go.
 
        > [!NOTE]
-       > Jeśli programista ma pochodne kontekstu ładowania zestawów niestandardowych z <xref:System.Runtime.Loader.AssemblyLoadContext>, ta sytuacja jest skomplikowane. Jeśli wykonywanie zestaw został załadowany w kontekście niestandardowych, środowisko uruchomieniowe ładuje zestawu satelickiego do niestandardowych kontekstu. Szczegółowe informacje wykraczają poza zakres tego dokumentu. Zobacz <xref:System.Runtime.Loader.AssemblyLoadContext>.
+       > W systemach operacyjnych z systemami plików z uwzględnieniem wielkości liter (czyli Linux i macOS) Wyszukiwanie w podkatalogu nazw kultur jest rozróżniana wielkość liter. Nazwa podkatalogu musi dokładnie pasować do wielkości liter <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> (na `es` przykład lub `es-MX`).
 
-     * Jeśli złożyć Satelita nie została znaleziona, <xref:System.Runtime.Loader.AssemblyLoadContext> zgłasza <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> zdarzenie, aby wskazać, że nie można odnaleźć zestawu satelickiego. Jeśli wybierzesz obsłużyć zdarzenie, obsługi zdarzenia można załadować i zwrócić odwołanie do zestawu satelickiego.
-     * Jeśli zestawu satelickiego nadal nie została znaleziona, AssemblyLoadContext powoduje elementu AppDomain w celu wyzwolenia <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzenie, aby wskazać, że nie można odnaleźć zestawu satelickiego. Jeśli wybierzesz obsłużyć zdarzenie, obsługi zdarzenia można załadować i zwrócić odwołanie do zestawu satelickiego.
+       > [!NOTE]
+       > Jeśli programista poprowadził niestandardowy kontekst ładowania zestawu od <xref:System.Runtime.Loader.AssemblyLoadContext>, sytuacja jest skomplikowana. Jeśli zestaw wykonawczy został załadowany do kontekstu niestandardowego, środowisko uruchomieniowe ładuje zestaw satelicki do niestandardowego kontekstu. Szczegóły znajdują się poza zakresem tego dokumentu. Zobacz <xref:System.Runtime.Loader.AssemblyLoadContext>.
 
-2. Jeśli zostanie znaleziony zestawu satelickiego, środowisko uruchomieniowe wyszukuje dla żądanego zasobu. Jeśli znajdzie zasobu w zestawie używa go. Jeśli zasób nie zostanie znaleziona, kontynuuje wyszukiwanie.
+     - Jeśli nie można odnaleźć asemblera satelitarnego, <xref:System.Runtime.Loader.AssemblyLoadContext> <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> wywołuje zdarzenie, aby wskazać, że nie można znaleźć zestawu satelickiego. Jeśli zdecydujesz się obsłużyć zdarzenie, program obsługi zdarzeń może załadować i zwrócić odwołanie do zestawu satelickiego.
+     - Jeśli zestaw satelicki nadal nie został znaleziony, AssemblyLoadContext powoduje, że obiekt <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> AppDomain wyzwala zdarzenie, aby wskazać, że nie można znaleźć zestawu satelickiego. Jeśli zdecydujesz się obsłużyć zdarzenie, program obsługi zdarzeń może załadować i zwrócić odwołanie do zestawu satelickiego.
+
+2. W przypadku znalezienia zestawu satelickiego środowisko uruchomieniowe przeszukuje go w poszukiwaniu żądanego zasobu. W przypadku znalezienia zasobu w zestawie zostanie on użyty. Jeśli zasób nie zostanie znaleziony, będzie kontynuował wyszukiwanie.
 
      > [!NOTE]
-     > Można znaleźć zasobu w zestawie satelickim, środowisko uruchomieniowe szuka pliku zasobów, żądane przez <xref:System.Resources.ResourceManager> dla bieżącego <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType>. W pliku zasobów wyszukuje nazwa żądanego zasobu. Jeśli albo nie zostanie znaleziony, zasób jest traktowana jako nie można odnaleźć.
+     > Aby znaleźć zasób w ramach zestawu satelickiego, środowisko uruchomieniowe wyszukuje plik zasobów żądany przez <xref:System.Resources.ResourceManager> dla bieżącego. <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> W pliku zasobów szuka żądanej nazwy zasobu. Jeśli nie zostanie znaleziony, zasób jest traktowany jako nieodnaleziony.
 
-3. Środowisko uruchomieniowe wyszukuje obok zestawów kultury nadrzędnej przy użyciu wielu potencjalnych poziomów, każdorazowo, powtarzając kroki 1 i 2.
+3. Środowisko uruchomieniowe następnym szuka zestawów kultur nadrzędnych za pomocą wielu możliwych poziomów, za każdym razem, gdy powtarzają się kroki 1 & 2.
 
-     Kultura nadrzędna jest zdefiniowany jako odpowiednie kultury rezerwowej. Ponieważ warunkiem, że dowolny zasób jest zostanie zgłoszony wyjątek, należy wziąć pod uwagę elementów nadrzędnych, podczas tworzenia rezerwowego. Ten proces umożliwia do ponownego użycia zasobów. Określony zasób na poziomie nadrzędnym powinny obejmować tylko wtedy, gdy kultury podrzędnych nie trzeba lokalizować żądanego zasobu. Na przykład, jeśli użytkownik poda zestawów satelickich dla `en` (neutralny język angielski) `en-GB` (w języku angielskim jak używany w Wielkiej Brytanii), a `en-US` (w języku angielskim jak używany w Stanach Zjednoczonych), `en` satelitarnej zawiera typowe terminologii i `en-GB` i `en-US` satelity zapewnia zastąpień dla tych warunków, które różnią się.
+     Kultura nadrzędna jest definiowana jako odpowiednia kultura rezerwowa. Rozważ użycie obiektów nadrzędnych jako kandydatów Fallback, ponieważ dostarczenie dowolnego zasobu jest preferowane do zgłaszania wyjątku. Ten proces pozwala również ponownie wykorzystać zasoby. Określony zasób powinien znajdować się na poziomie nadrzędnym tylko wtedy, gdy Kultura podrzędna nie musi lokalizować żądanego zasobu. Na przykład, jeśli dostarczasz zestawy satelickie `en` dla (neutralnego alfabetu angielskiego), `en-GB` (angielski jako mówiony w Zjednoczonym `en-US` Królestwie) i (angielski `en` jako mówiony w Stany Zjednoczone), Satelita zawiera wspólną Terminologia i satelity dostarczają zastąpień tylko dla tych warunków, które się różnią. `en-US` `en-GB`
 
-     Każda kultura ma tylko jedną jednostkę nadrzędną, która jest zdefiniowana przez <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=nameWithType> właściwości, ale element nadrzędny może mieć własną nadrzędnej. Wyszukaj nadrzędnego kulturami zatrzymuje się podczas kultury <xref:System.Globalization.CultureInfo.Parent%2A> właściwość zwraca <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Zasoby rezerwowe Niezmienna kultura nie uznaje się kultury nadrzędnej lub kultury, które mogą istnieć zasoby.
+     Każda kultura ma tylko jeden element nadrzędny, który jest zdefiniowany przez <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=nameWithType> właściwość, ale element nadrzędny może mieć własny element nadrzędny. Wyszukiwanie kultur nadrzędnych jest przerywane, gdy <xref:System.Globalization.CultureInfo.Parent%2A> właściwość kultury zwraca wartość. <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> W przypadku rezerwy zasobów Niezmienna kultura nie jest uważana za kulturę nadrzędną ani kulturę, która może mieć zasoby.
 
-4. Jeśli nadal nie można odnaleźć zasobu został przeszukane kultury, który pierwotnie został określony i wszystkich elementów nadrzędnych, zasobów dla kultury domyślnej (rezerwowego) jest używany. Zazwyczaj zasobów dla kultury domyślnej znajdują się w zestawie aplikacji głównej. Jednakże, można określić wartość <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty.nameWithType> dla <xref:System.Resources.NeutralResourcesLanguageAttribute.Location%2A> właściwość, aby wskazać, że ultimate lokalizacji rezerwowej dla zasobów zestawu satelickiego zamiast zestawu głównego.
+4. Jeśli kultura, która była pierwotnie określona i wszystkie elementy nadrzędne zostały przeszukane, a zasób nadal nie został znaleziony, używana jest wartość domyślna kultury (Fallback). Zazwyczaj zasoby dla kultury domyślnej są zawarte w głównym zestawie aplikacji. Można jednak określić wartość <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty.nameWithType> <xref:System.Resources.NeutralResourcesLanguageAttribute.Location%2A> właściwości, aby wskazać, że ostateczna lokalizacja rezerwowa dla zasobów jest zestawem satelity, a nie głównym zestawem.
 
     > [!NOTE]
-    > Zasób domyślny jest tylko zasób, który może być skompilowana przy użyciu zestawu głównego. Chyba że określisz zestawu satelickiego przy użyciu <xref:System.Resources.NeutralResourcesLanguageAttribute> atrybutu jest ostateczny powrót (końcowy element nadrzędny). Dlatego zaleca się zawsze zawierać domyślny zestaw zasobów w swoim zestawie głównym. Pozwala to zapobiec wyjątki od zgłaszane. Umieszczając domyślnego pliku zasobów, podaj rezerwowe dla wszystkich zasobów i upewnij się, że co najmniej jeden zasób zawsze jest obecny dla użytkownika, nawet jeśli nie jest kulturalnie określone.
+    > Domyślny zasób jest jedynym zasobem, który można skompilować przy użyciu głównego zestawu. Jeśli nie określisz zestawu satelickiego przy użyciu <xref:System.Resources.NeutralResourcesLanguageAttribute> atrybutu, jest to ostateczna rezerwa (końcowy element nadrzędny). Dlatego zaleca się, aby zawsze zawierać domyślny zestaw zasobów w zestawie głównym. Pomaga to zapobiegać zgłaszaniu wyjątków. Dołączając domyślny plik zasobów, należy podać rezerwę dla wszystkich zasobów i upewnić się, że co najmniej jeden zasób jest zawsze obecny dla użytkownika, nawet jeśli nie jest specyficzny dla kultury.
 
-5. Na koniec, jeśli środowisko wykonawcze nie znajdzie plik zasobów dla domyślnej kultury (rezerwowego) <xref:System.Resources.MissingManifestResourceException> lub <xref:System.Resources.MissingSatelliteAssemblyException> jest zgłaszany wyjątek, aby wskazać, że nie można odnaleźć zasobu. Jeśli zostanie znaleziony plik zasobów, ale nie ma żądanego zasobu żądania zwraca `null`.
+5. Na koniec Jeśli środowisko uruchomieniowe nie odnajdzie pliku zasobów dla kultury domyślnej (rezerwowej), zostanie <xref:System.Resources.MissingManifestResourceException> zgłoszony <xref:System.Resources.MissingSatelliteAssemblyException> wyjątek lub, aby wskazać, że nie można odnaleźć zasobu. Jeśli plik zasobów zostanie znaleziony, ale żądany zasób nie jest obecny, żądanie zwróci wartość `null`.
 
 ### <a name="ultimate-fallback-to-satellite-assembly"></a>Ostateczny powrót do zestawu satelickiego
 
-Opcjonalnie można usunąć zasoby z głównego zestawu i określ, czy środowisko uruchomieniowe powinny zostać załadowane nastąpiło przejście do zasobów z zestawem satelickim, który odpowiada określonej kultury. Aby kontrolować proces rezerwowy, należy użyć <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29?displayProperty=nameWithType> Konstruktor i podać wartość <xref:System.Resources.UltimateResourceFallbackLocation> parametr, który określa, czy Menedżera zasobów należy wyodrębnić zasoby rezerwowe z głównym zestawie lub zestawie satelickim.
+Opcjonalnie można usunąć zasoby z głównego zestawu i określić, że środowisko uruchomieniowe ma ładować ostateczne zasoby rezerwowe z zestawu satelitarnego, który odpowiada określonej kulturze. Aby kontrolować proces rezerwowy, należy użyć <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29?displayProperty=nameWithType> konstruktora i podać wartość <xref:System.Resources.UltimateResourceFallbackLocation> parametru, który określa, czy Menedżer zasobów powinien wyodrębnić zasoby rezerwowe z zestawu głównego lub z zestawu satelickiego.
 
-W poniższym przykładzie .NET Framework używa <xref:System.Resources.NeutralResourcesLanguageAttribute> atrybutu, aby przechowywać zasoby rezerwowe aplikacji w zestawie satelickim francuski (`fr`) języka. Przykład ma dwa pliki zasobów w formacie tekstowym, definiujące zasób w postaci pojedynczego ciągu o nazwie `Greeting`. Po pierwsze, resources.fr.txt, zawiera zasób języka francuskiego.
+Poniższy .NET Framework przykład używa <xref:System.Resources.NeutralResourcesLanguageAttribute> atrybutu do przechowywania rezerwowych zasobów aplikacji w zestawie satelickim dla języka francuskiego (`fr`). Przykład ma dwa pliki zasobów tekstowych, które definiują pojedynczy zasób ciągu o nazwie `Greeting`. Pierwszy z zasobów. fr. txt zawiera zasób języka francuskiego.
 
 ```
 Greeting=Bon jour!
 ```
 
-Drugi, resources,ru.txt, zawiera zasób języka rosyjskiego.
+Drugi, zasoby, ru. txt, zawiera zasób języka rosyjskiego.
 
 ```
 Greeting=Добрый день
 ```
 
-Te dwa pliki są kompilowane do plików Resources, uruchamiając [generator plików zasobów (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) z wiersza polecenia. Zasoby języka francuskiego polecenie to:
+Te dwa pliki są kompilowane do plików Resources, uruchamiając [Generator plików zasobów (Resgen. exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) z wiersza polecenia. Dla zasobu języka francuskiego polecenie to:
 
 **resgen.exe resources.fr.txt**
 
-Zasoby języka rosyjskiego polecenie to:
+Dla zasobu języka rosyjskiego polecenie to:
 
 **resgen.exe resources.ru.txt**
 
-Pliki Resources są osadzone w bibliotekach dołączanych dynamicznie, uruchamiając [konsolidator zestawów (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) polecenia wiersza dla zasobu języka francuskiego w następujący sposób:
+Pliki resources są osadzane w bibliotekach dołączanych dynamicznie przez uruchomienie [konsolidatora zestawu (Al. exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) z wiersza polecenia dla zasobu języka francuskiego w następujący sposób:
 
 **al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll**
 
-i zasobu języka rosyjskiego w następujący sposób:
+i dla zasobu języka rosyjskiego w następujący sposób:
 
 **al /t:lib /embed:resources.ru.resources /culture:ru /out:ru\Example1.resources.dll**
 
-Kod źródłowy aplikacji znajduje się w pliku o nazwie Example1.cs lub Example1.vb. Zawiera ona <xref:System.Resources.NeutralResourcesLanguageAttribute> atrybutu, aby wskazać, że domyślny zasób aplikacji znajduje się w podkatalogu fr. Tworzy wystąpienie usługi Resource Manager, pobiera wartość `Greeting` zasobu i wyświetla go w konsoli.
+Kod źródłowy aplikacji znajduje się w pliku o nazwie Example1.cs lub example1. vb. Zawiera <xref:System.Resources.NeutralResourcesLanguageAttribute> atrybut wskazujący, że domyślny zasób aplikacji znajduje się w podkatalogu fr. Tworzy wystąpienie Menedżer zasobów, pobiera wartość `Greeting` zasobu i wyświetla go w konsoli programu.
 
 [!code-csharp[Conceptual.Resources.Packaging#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.packaging/cs/example1.cs#1)]
 [!code-vb[Conceptual.Resources.Packaging#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.packaging/vb/example1.vb#1)]
 
-Następnie można skompilować kod źródłowy języka C# z wiersza polecenia w następujący sposób:
+Następnie można skompilować C# kod źródłowy z wiersza polecenia w następujący sposób:
 
 ```console
 csc Example1.cs
 ```
 
-Polecenia dla kompilatora języka Visual Basic jest bardzo podobne:
+Polecenie dla kompilatora Visual Basic jest bardzo podobne:
 
 ```console
 vbc Example1.vb
 ```
 
-Ponieważ nie istnieją żadne zasoby osadzone w głównym zestawie, nie masz można skompilować przy użyciu `/resource` przełącznika.
+Ponieważ nie ma żadnych zasobów osadzonych w zestawie głównym, nie trzeba kompilować przy użyciu `/resource` przełącznika.
 
-Po uruchomieniu tego przykładu z systemu, w której język jest inna niż rosyjski wyświetla następujące dane wyjściowe:
+Po uruchomieniu przykładu z systemu, którego język to coś innego niż rosyjski, wyświetla następujące dane wyjściowe:
 
 ```
 Bon jour!
@@ -229,7 +229,7 @@ Bon jour!
 
 ## <a name="suggested-packaging-alternative"></a>Sugerowane alternatywne opakowanie
 
-Ograniczenia czasu i budżetu może uniemożliwić tworzenie zestaw zasobów do każdej przeszczepiania, którą obsługuje aplikacja. Zamiast tego można utworzyć zestawu satelickiego pojedynczej kultury nadrzędnej, czy wszystkie powiązane podhodowli może użyć. Można na przykład można podać jako pojedynczy angielskiej satelicki (en) pobierany przez użytkowników, którzy żądają specyficzne dla regionu angielski zasobów i zestawem pojedynczego satelickim niemiecki (de) dla użytkowników, którzy żądają niemieckiego zasoby specyficzne dla regionu. Na przykład żądania dla języka niemieckiego jak używany w Niemczech (de-DE), Austria (de-AT), a także Szwajcarii (de-CH) może spowodować powrót do zestawu satelickiego niemiecki (de). Domyślne zasoby są końcowego rezerwowe, powinien być zasoby, które będzie wymagane przez większość użytkowników aplikacji, więc wybrać dokładnie te zasoby. Ta metoda służy do wdrażania zasobów, które są mniej kulturalnie określonych, ale mogą znacznie zmniejszyć koszty lokalizacja Twojej aplikacji.
+Ograniczenia czasu lub budżetu mogą uniemożliwiać utworzenie zestawu zasobów dla każdej podkultury obsługiwanej przez aplikację. Zamiast tego można utworzyć pojedynczy zestaw satelicki dla kultury nadrzędnej, którego mogą używać wszystkie powiązane podkultury. Można na przykład dostarczyć pojedynczy angielski zestaw satelicki (EN), który jest pobierany przez użytkowników, którzy żądają zasobów w języku angielskim specyficznym dla regionu, oraz jednego zestawu satelickiego dla Niemiec (de) dla użytkowników żądających zasobów niemieckich specyficznych dla regionu. Na przykład żądania dotyczące języka niemieckiego w Niemczech (de-DE), Austrii (de-AT) i Szwajcarii (de-CH) zostałyby przywrócone do niemieckiego zestawu satelickiego (de). Domyślne zasoby są końcową rezerwą i dlatego powinny być zasobami, które będą wymagane przez większość użytkowników aplikacji, dlatego należy starannie wybierać te zasoby. Takie podejście wdraża zasoby, które są mniej specyficzne dla kultury, ale znacznie zmniejsza koszty lokalizacji aplikacji.
 
 ## <a name="see-also"></a>Zobacz także
 

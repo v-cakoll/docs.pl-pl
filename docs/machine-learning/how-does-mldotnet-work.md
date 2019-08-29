@@ -1,17 +1,17 @@
 ---
 title: Co to jest ML.NET i jak to działa?
 description: ML.NET umożliwia dodawanie uczenia maszynowego do aplikacji .NET, w scenariuszach w trybie online lub offline. Dzięki tej możliwości można dokonać automatycznych prognoz przy użyciu danych dostępnych dla aplikacji bez konieczności podłączania do sieci w celu użycia ML.NET. W tym artykule objaśniono podstawowe informacje dotyczące uczenia maszynowego w programie ML.NET.
-ms.date: 07/17/2019
+ms.date: 08/26/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 23e71e86b75854042068b6a68f90cf995749ee58
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: af91819c66a2376f446d0f18537d2f6e718b446e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331583"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104896"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Co to jest ML.NET i jak to działa?
 
@@ -114,7 +114,7 @@ Każdy opis transakcji jest podzielony na zestaw funkcji przez usunięcie zbędn
 
 ![Model klasyfikacji tekstu](./media/text-classification-model.svg)
 
-Model cen domu i model klasyfikacji tekstu to modele liniowe  . W zależności od charakteru danych i rozwiązywanego problemu można także używać modeli **drzewa decyzyjnego** , **ogólnych modeli dodatków** i innych. Więcej informacji o modelach można znaleźć w części [zadania](./resources/tasks.md).
+Model cen domu i model klasyfikacji tekstu to modele liniowe . W zależności od charakteru danych i rozwiązywanego problemu można także używać modeli **drzewa decyzyjnego** , **ogólnych modeli dodatków** i innych. Więcej informacji o modelach można znaleźć w części [zadania](./resources/tasks.md).
 
 ## <a name="data-preparation"></a>Przygotowywanie danych
 
@@ -132,7 +132,7 @@ Po przeprowadzeniu szkolenia modelu wiesz, jak dobrze będzie w przyszłości pr
 
 Każdy typ zadania uczenia maszynowego ma metryki używane do oszacowania dokładności i dokładności modelu względem zestawu danych testowych.
 
-W naszym przykładzie cen domu użyto zadania regresji  . Aby oszacować model, Dodaj następujący kod do oryginalnego przykładu.
+W naszym przykładzie cen domu użyto zadania regresji . Aby oszacować model, Dodaj następujący kod do oryginalnego przykładu.
 
 ```csharp
         HouseData[] testHouseData =
@@ -229,7 +229,7 @@ Można przekształcać dane wejściowe w prognozy zbiorcze lub pojedyncze dane w
 
 Na początku potoku uczenia maszynowego ML.NET są obiekty [DataView](xref:Microsoft.ML.IDataView) .
 
-Każda transformacja w potoku ma schemat wejściowy (nazwy danych, typy i rozmiary, których transformacja oczekuje na dane wejściowe); oraz schemat danych wyjściowych (nazwy danych, typy i rozmiary generowane przez transformację po przekształceniu). 
+Każda transformacja w potoku ma schemat wejściowy (nazwy danych, typy i rozmiary, których transformacja oczekuje na dane wejściowe); oraz schemat danych wyjściowych (nazwy danych, typy i rozmiary generowane przez transformację po przekształceniu). Poniższy dokument zawiera szczegółowy opis [interfejsu IDataView oraz jego systemu typów](https://xadupre.github.io/machinelearningext/mlnetdocs/idataviewtypesystem.html).
 
 Jeśli schemat danych wyjściowych z jednego przekształcenia w potoku nie jest zgodny ze schematem wejściowym kolejnej transformacji, ML.NET zgłosi wyjątek.
 

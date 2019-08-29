@@ -2,15 +2,15 @@
 title: 'Samouczek: Tworzenie zalecenia dotyczącego filmu — factorization macierzy'
 description: W tym samouczku przedstawiono sposób tworzenia zalecenia dotyczącego filmu z ML.NET w aplikacji konsolowej .NET Core. Kroki używają C# i programu Visual Studio 2019.
 author: briacht
-ms.date: 07/09/2019
+ms.date: 08/26/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 82da512d437ed2c5c28601c34687494b8be4d046
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 97bdef3daa296dcb88cbb158a14668205df6fee3
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666687"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107253"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Samouczek: Tworzenie zalecenia dotyczącego filmu przy użyciu narzędzia Matrix factorizaton z ML.NET
 
@@ -160,7 +160,7 @@ Dane w ML.NET są reprezentowane jako [Klasa IDataView](xref:Microsoft.ML.IDataV
 
 [LoadFromTextFile ()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) definiuje schemat danych i odczytuje w pliku. Przyjmuje zmienne ścieżki danych i zwraca `IDataView`. W takim przypadku należy podać ścieżkę do `Test` plików i `Train` wskazać zarówno nagłówek pliku tekstowego (tak, aby można było poprawnie używać nazw kolumn), jak i separator danych znak przecinka (domyślny separator jest tabulatorem).
 
-Dodaj następujące `Main()` dwa wiersze kodu w metodzie, aby `LoadData()` wywołać metodę i zwrócić `Train` dane i `Test` :
+`Main()` Dodaj następujący kod w metodzie, aby `LoadData()` wywołać metodę i zwrócić `Train` dane i `Test` :
 
 [!code-csharp[LoadDataMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadDataMain "Add LoadData method to Main")]
 

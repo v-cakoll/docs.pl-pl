@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 074b97f29946390170abe3c40d71d2ee2cb214ce
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 9f165ab5b79abbc2b5464f40a27a580d26af163a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666478"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106952"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>Używanie obiektów implementujących interfejs IDisposable
 
 Moduł zbierający elementy bezużyteczne środowiska uruchomieniowego języka wspólnego ponownie przejmuje pamięć używaną przez zarządzane obiekty, ale typy korzystające z zasobów niezarządzanych implementują <xref:System.IDisposable> interfejs, aby umożliwić odzyskanie pamięci przydzielonej do tych niezarządzanych zasobów. Po zakończeniu korzystania z obiektu, który implementuje <xref:System.IDisposable>, należy wywołać <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementację obiektu. Można to zrobić na jeden z dwóch sposobów:  
   
-* C# `Using` Za pomocą instrukcjilub`using` instrukcji Visual Basic.  
+- C# `Using` Za pomocą instrukcjilub`using` instrukcji Visual Basic.  
   
-* Przez implementację `try/finally` bloku.  
+- Przez implementację `try/finally` bloku.  
 
 ## <a name="the-using-statement"></a>Instrukcja using
 
@@ -49,9 +49,9 @@ Instrukcja umożliwia także uzyskanie wielu zasobów w pojedynczej instrukcji, 
 
 Zamiast zawijać `try/finally` blok `using` w instrukcji, możesz wybrać opcję bezpośredniego wdrożenia `try/finally` bloku. Może to wynikać z osobistego stylu kodowania albo mieć jedną z następujących przyczyn:  
   
-* Aby dołączyć `catch` blok obsługujący wyjątki zgłoszone `try` w bloku. W przeciwnym razie wszelkie wyjątki zgłoszone `using` przez instrukcję są nieobsługiwane, ponieważ są to wyjątki zgłoszone `using` w bloku, jeśli `try/catch` blok nie jest obecny.  
+- Aby dołączyć `catch` blok obsługujący wyjątki zgłoszone `try` w bloku. W przeciwnym razie wszelkie wyjątki zgłoszone `using` przez instrukcję są nieobsługiwane, ponieważ są to wyjątki zgłoszone `using` w bloku, jeśli `try/catch` blok nie jest obecny.  
   
-* Aby utworzyć wystąpienie obiektu, który <xref:System.IDisposable> implementuje, którego zakres nie jest lokalny dla bloku, w którym jest zadeklarowany.  
+- Aby utworzyć wystąpienie obiektu, który <xref:System.IDisposable> implementuje, którego zakres nie jest lokalny dla bloku, w którym jest zadeklarowany.  
   
 Poniższy przykład jest podobny do poprzedniego przykładu, z tą różnicą, że `try/catch/finally` używa bloku do tworzenia wystąpienia, używania i usuwania <xref:System.IO.StreamReader> obiektu oraz do obsługi <xref:System.IO.StreamReader> wszelkich wyjątków zgłoszonych przez konstruktora i jego <xref:System.IO.StreamReader.ReadToEnd%2A> metodę. Należy zauważyć, że kod w `finally` bloku sprawdza, czy obiekt, który <xref:System.IDisposable> implementuje `null` , <xref:System.IDisposable.Dispose%2A> nie jest przed wywołaniem metody. Niewykonanie tej czynności może spowodować <xref:System.NullReferenceException> wyjątek w czasie wykonywania.  
   

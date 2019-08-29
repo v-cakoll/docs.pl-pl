@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 403b1759164d588cb5af49c6cb05e001b030235f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c0e188286821f0e3822fde4af74a1561edfbb868
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963602"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107273"
 ---
 # <a name="auto-generate-a-binary-classifier-using-the-cli"></a>Automatycznie Generuj klasyfikator binarny przy użyciu interfejsu wiersza polecenia
 
@@ -19,11 +19,11 @@ Dowiedz się, jak używać interfejsu wiersza polecenia ML.NET, aby automatyczni
 
 W tym samouczku wykonasz następujące czynności:
 > [!div class="checklist"]
-> * Przygotuj dane dla wybranego zadania uczenia maszynowego
-> * Uruchom polecenie "mlnet autouczenie" w interfejsie wiersza polecenia
-> * Przejrzyj wyniki metryki jakości
-> * Poznaj wygenerowany C# kod, aby użyć modelu w aplikacji
-> * Eksploruj wygenerowany C# kod, który został użyty do uczenia modelu
+> - Przygotuj dane dla wybranego zadania uczenia maszynowego
+> - Uruchom polecenie "mlnet autouczenie" w interfejsie wiersza polecenia
+> - Przejrzyj wyniki metryki jakości
+> - Poznaj wygenerowany C# kod, aby użyć modelu w aplikacji
+> - Eksploruj wygenerowany C# kod, który został użyty do uczenia modelu
 
 > [!NOTE]
 > Ten temat odnosi się do narzędzia interfejsu wiersza polecenia ML.NET, które jest obecnie dostępne w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, zapoznaj [się z wprowadzeniem do ml.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
@@ -259,11 +259,11 @@ Należy porównać wybrane algorytmy i konfigurację potoku w samouczku z kodem 
 
 W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
-> * Przygotuj dane dla wybranego zadania ML (problem do rozwiązania)
-> * Uruchom polecenie "mlnet autouczenie" w narzędziu interfejsu wiersza polecenia
-> * Przejrzyj wyniki metryki jakości
-> * Poznaj wygenerowany C# kod, aby uruchomić model (kod do użycia w aplikacji użytkownika końcowego)
-> * Eksploruj wygenerowany C# kod, który został użyty do uczenia modelu "Najlepsza jakość" (cele uczenia)
+> - Przygotuj dane dla wybranego zadania ML (problem do rozwiązania)
+> - Uruchom polecenie "mlnet autouczenie" w narzędziu interfejsu wiersza polecenia
+> - Przejrzyj wyniki metryki jakości
+> - Poznaj wygenerowany C# kod, aby uruchomić model (kod do użycia w aplikacji użytkownika końcowego)
+> - Eksploruj wygenerowany C# kod, który został użyty do uczenia modelu "Najlepsza jakość" (cele uczenia)
 
 > [!div class="nextstepaction"]
 > [Automatyzacja szkoleń modeli przy użyciu interfejsu wiersza polecenia ML.NET](../automate-training-with-cli.md)

@@ -4,12 +4,12 @@ description: Opis szczegółów algorytmu ładowania zestawu zarządzanego w pro
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: f368e2c20039f8679186a8d806850c9c92be8d3a
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: bf95cbd0eebed064f0198ae9b0f7a4288a938f8a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70017336"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105368"
 ---
 # <a name="managed-assembly-loading-algorithm"></a>Algorytm ładowania zestawu zarządzanego
 
@@ -48,20 +48,20 @@ Poniższy algorytm opisuje sposób ładowania zarządzanego zestawu przez środo
     - Zobacz powyższą tabelę.
 
 2. Dla metod, aktywny <xref:System.Runtime.Loader.AssemblyLoadContext> ładuje zestaw. `Load-by-name` W kolejności priorytetu według:
-    * `cache-by-name`Sprawdzanie.
+    - `cache-by-name`Sprawdzanie.
 
-    * Wywoływanie <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType> funkcji.
+    - Wywoływanie <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType> funkcji.
 
-    * Sprawdzanie pamięci podręcznej [](default-probing.md#managed-assembly-default-probing) wystąpieńiuruchamianiedomyślnejlogikisondowaniazestawu<xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> zarządzanego.
+    - Sprawdzanie pamięci podręcznej [](default-probing.md#managed-assembly-default-probing) wystąpieńiuruchamianiedomyślnejlogikisondowaniazestawu<xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> zarządzanego.
 
-    * Podnoszenie <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> poziomu zdarzenia dla aktywnego AssemblyLoadContext.
+    - Podnoszenie <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> poziomu zdarzenia dla aktywnego AssemblyLoadContext.
 
-    * Podnoszenie <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> poziomu zdarzenia.
+    - Podnoszenie <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> poziomu zdarzenia.
 
 3. W przypadku innych typów obciążeń `active` <xref:System.Runtime.Loader.AssemblyLoadContext> ładuje zestaw. W kolejności priorytetu według:
-    * `cache-by-name`Sprawdzanie.
+    - `cache-by-name`Sprawdzanie.
 
-    * Ładowanie z określonej ścieżki lub pierwotnego obiektu zestawu.
+    - Ładowanie z określonej ścieżki lub pierwotnego obiektu zestawu.
 
 4. W obu przypadkach, jeśli zestaw jest nowo załadowany, wówczas:
    - <xref:System.AppDomain.AssemblyLoad?displayProperty=nameWithType> Zdarzenie jest zgłaszane.

@@ -1,8 +1,8 @@
 ---
-title: Odbicie w oprogramowaniu .NET Framework
+title: Odbicie w programie .NET
 ms.date: 03/30/2017
 helpviewer_keywords:
-- assemblies [.NET Framework], reflection
+- assemblies [.NET], reflection
 - EventInfo class, reflection
 - common language runtime, reflection
 - FieldInfo class, reflection
@@ -23,14 +23,14 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8d34c5386d0ede578fec097279e9de135f4b6cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 56c3b536954118b80db2ae7f2f0d0ffdc74bac68
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940034"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133741"
 ---
-# <a name="reflection-in-the-net-framework"></a>Odbicie w oprogramowaniu .NET Framework
+# <a name="reflection-in-net"></a>Odbicie w programie .NET
 Klasy w <xref:System.Reflection> przestrzeni nazw, w połączeniu z <xref:System.Type?displayProperty=nameWithType>, umożliwiają uzyskanie informacji o załadowanych [zestawach](../app-domains/assemblies-in-the-common-language-runtime.md) i typach zdefiniowanych w nich, takich jak [klasy](../../standard/base-types/common-type-system.md#classes), [interfejsy](../../standard/base-types/common-type-system.md#interfaces)i [typy wartości](../../csharp/language-reference/keywords/value-types.md). Można również użyć odbicia do tworzenia wystąpień typów w czasie wykonywania oraz do wywoływania i uzyskiwania dostępu do nich. Aby zapoznać się z tematami dotyczącymi konkretnych aspektów odbicia, zobacz [Tematy pokrewne](#related_topics) na końcu tego omówienia.
   
  Moduł ładujący [środowiska uruchomieniowego języka wspólnego](../../standard/clr.md) zarządza [domenami aplikacji](../../../docs/framework/app-domains/application-domains.md), które stanowią zdefiniowane granice wokół obiektów, które mają ten sam zakres aplikacji. Zarządzanie obejmuje ładowanie każdego zestawu do odpowiedniej domeny aplikacji i sterowanie układem pamięci hierarchii typów w ramach każdego zestawu.  
@@ -62,9 +62,9 @@ Klasy w <xref:System.Reflection> przestrzeni nazw, w połączeniu z <xref:System
  Istnieją inne zastosowania do odbicia. Kompilatory dla języków takich jak JScript używają odbicia do konstruowania tabel symboli. Klasy w <xref:System.Runtime.Serialization> przestrzeni nazw używają odbicia, aby uzyskać dostęp do danych i określić, które pola mają być utrwalane. Klasy w <xref:System.Runtime.Remoting> przestrzeni nazw używają odbicia pośrednio przy użyciu serializacji.  
   
 ## <a name="runtime-types-in-reflection"></a>Typy środowiska uruchomieniowego w odbiciu  
- Odbicie zawiera klasy, takie <xref:System.Type> jak <xref:System.Reflection.MethodInfo>i, do reprezentowania typów, elementów członkowskich, parametrów i innych jednostek kodu. Niemniej jednak w przypadku użycia odbicia nie pracuje bezpośrednio z tymi klasami, z których większość`MustInherit` jest abstrakcyjna (w Visual Basic). Zamiast tego pracujesz z typami dostarczanymi przez środowisko uruchomieniowe języka wspólnego (CLR).  
+ Odbicie zawiera klasy, takie <xref:System.Type> jak <xref:System.Reflection.MethodInfo>i, do reprezentowania typów, elementów członkowskich, parametrów i innych jednostek kodu. Jednak w przypadku używania odbicia nie można bezpośrednio korzystać z tych klas, z których większość jest abstrakcyjna (`MustInherit` w Visual Basic). Zamiast tego pracujesz z typami dostarczanymi przez środowisko uruchomieniowe języka wspólnego (CLR).  
   
- Na przykład, gdy używasz C# `typeof` operatora (`GetType` w Visual Basic) do uzyskania <xref:System.Type> obiektu, obiekt jest naprawdę a `RuntimeType`. `RuntimeType`pochodzi z <xref:System.Type>i zapewnia implementacje wszystkich metod abstrakcyjnych.  
+ Na przykład, gdy używasz C# `typeof` operatora (`GetType` w Visual Basic) do uzyskania <xref:System.Type> obiektu, obiekt jest naprawdę a `RuntimeType`. `RuntimeType`pochodzi z <xref:System.Type> i zapewnia implementacje wszystkich metod abstrakcyjnych.  
   
  Te klasy środowiska uruchomieniowego`Friend` są `internal` (w Visual Basic). Nie są one udokumentowane niezależnie od ich klas bazowych, ponieważ ich zachowanie zostało opisane w dokumentacji klasy bazowej.  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0eab81c3cad67c2b7fdd7ba42294864acd4a554
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 5cacccc182b3361ffd635f2b5f32ce8c17100d08
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046560"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133634"
 ---
 # <a name="custom-numeric-format-strings"></a>Niestandardowe ciągi formatujące liczby
 
@@ -32,7 +32,7 @@ Można utworzyć ciąg niestandardowego formatu liczb, który składa się z jed
 Niestandardowe ciągi formatujące liczb są obsługiwane przez niektóre przeciążenia `ToString` metody wszystkich typów liczbowych. Na przykład można podać ciąg formatu liczbowego do <xref:System.Int32.ToString%28System.String%29> metod <xref:System.Int32> i <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> typu. Niestandardowe ciągi formatujące są również obsługiwane przez [funkcję formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md).NET, która jest używana przez niektóre `Write` <xref:System.Console> i `WriteLine` <xref:System.String.Format%2A?displayProperty=nameWithType> metody klasy i <xref:System.IO.StreamWriter> , metody i <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> Metoda. Funkcja [interpolacji ciągów](../../csharp/language-reference/tokens/interpolated.md) obsługuje również niestandardowe ciągi formatujące liczby.
 
 > [!TIP]
-> Możesz pobrać [Narzędzie formatowania](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), aplikację, która umożliwia zastosowanie ciągów formatu do wartości liczbowych lub daty i godziny, a następnie wyświetla ciąg wynikowy.
+> Możesz pobrać **Narzędzie formatowania**, aplikację .net Core Windows Forms, która umożliwia stosowanie ciągów formatowania do wartości liczbowych lub daty i godziny i wyświetla ciąg wynikowy. Kod źródłowy jest dostępny dla [C#](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) i [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb).
 
 <a name="table"></a>W poniższej tabeli opisano niestandardowe specyfikatory formatu liczbowego i przedstawiono przykładowe dane wyjściowe generowane przez każdy specyfikator formatu. Zapoznaj się z sekcją [uwagi](#NotesCustomFormatting) , aby uzyskać dodatkowe informacje na temat używania ciągów niestandardowego formatu liczb, oraz sekcję [przykładową](#example) dla obszernej ilustracji dotyczącej ich używania.
 
@@ -293,4 +293,5 @@ W poniższym przykładzie pokazano dwa ciągi niestandardowego formatu liczb. W 
 - [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)
 - [Standardowe ciągi formatujące liczby](../../../docs/standard/base-types/standard-numeric-format-strings.md)
 - [Instrukcje: Uzupełnij liczbę zerami wiodącymi](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
-- [Przykład: Narzędzie do formatowania .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+- [Przykład: Narzędzie do formatowania narzędzi systemu .NET CoreC#()](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
+- [Przykład: Narzędzie formatowania programu .NET Core WinForms (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)

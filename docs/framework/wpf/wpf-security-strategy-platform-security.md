@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 65725851cb413e28ceff0d1c9c4b62b76c4fff18
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 44f98a6d7bf8358baf3b123b2d3b1d13009098a6
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817883"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133760"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia zabezpieczeń WPF - zabezpieczenia platformy
 Chociaż Windows Presentation Foundation (WPF) oferuje różne usługi zabezpieczeń, wykorzystuje również funkcje zabezpieczeń podstawowej platformy, w tym system operacyjny, środowisko CLR i program Internet Explorer. Te warstwy łączą się [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] , aby zapewnić mocny, kompleksowy model zabezpieczeń, który podejmuje próbę uniknięcia wszelkich Single Point of Failure, jak pokazano na poniższej ilustracji:  
@@ -33,7 +33,7 @@ Chociaż Windows Presentation Foundation (WPF) oferuje różne usługi zabezpiec
 
 <a name="Operating_System_Security"></a>   
 ## <a name="operating-system-security"></a>Zabezpieczenia systemu operacyjnego  
- Minimalny poziom systemu operacyjnego, który jest wymagany przez [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] program to. [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] Rdzeń programu [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] zapewnia kilka funkcji zabezpieczeń, które tworzą podstawę zabezpieczeń dla wszystkich aplikacji systemu Windows, w tym tych [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]utworzonych za pomocą programu. [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]obejmuje funkcje zabezpieczeń programu i zwiększa ich [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] liczbę. W tym temacie omówiono zakres tych funkcji zabezpieczeń, które są ważne dla [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]programu, a także [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] integrację z nimi w celu zapewnienia dalszej ochrony szczegółowej.  
+Rdzeń systemu Windows zawiera kilka funkcji zabezpieczeń, które tworzą podstawę zabezpieczeń dla wszystkich aplikacji systemu Windows, w tym tych utworzonych za pomocą WPF. W tym temacie omówiono zakres tych funkcji zabezpieczeń, które są ważne dla platformy WPF, a także sposób, w jaki WPF integrują się z nimi w celu zapewnienia dalszej ochrony szczegółowej.  
   
 <a name="Microsoft_Windows_XP_Service_Pack_2__SP2_"></a>   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
@@ -57,21 +57,21 @@ Chociaż Windows Presentation Foundation (WPF) oferuje różne usługi zabezpiec
   
 <a name="Windows_Vista"></a>   
 ### <a name="windows-vista"></a>Windows Vista  
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] użytkownicy mogą korzystać z dodatkowych ulepszeń zabezpieczeń systemu operacyjnego, takich jak "dostęp użytkownika z najwyższymi uprawnieniami", sprawdzanie integralności kodu i izolacja uprawnień.  
+Użytkownicy WPF w systemie Windows Vista będą korzystać z dodatkowych ulepszeń zabezpieczeń systemu operacyjnego, takich jak "dostęp użytkownika z najwyższymi uprawnieniami", sprawdzanie integralności kodu i izolacja uprawnień.  
   
 #### <a name="user-account-control-uac"></a>Kontrola konta użytkownika (UAC)  
  Obecnie użytkownicy systemu Windows mogą uruchamiać się z uprawnieniami administratora, ponieważ wiele aplikacji wymaga ich do instalacji lub wykonania albo obu tych metod. Przykładem może być zapisanie domyślnych ustawień aplikacji do rejestru.  
   
  Uruchamianie z uprawnieniami administratora naprawdę oznacza, że aplikacje są wykonywane z procesów, które mają uprawnienia administratora. Wpływem bezpieczeństwa tego jest to, że dowolny złośliwy kod, który przejmuje proces z uprawnieniami administratora, będzie automatycznie dziedziczyć te uprawnienia, w tym dostęp do krytycznych zasobów systemu.  
   
- Jednym ze sposobów ochrony przed tym zagrożeniem bezpieczeństwa jest uruchomienie aplikacji z najmniejszą ilością wymaganych uprawnień. Jest to nazywane zasadą najniższych uprawnień i jest podstawową funkcją [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] systemu operacyjnego. Ta funkcja jest nazywana kontrolą konta użytkownika (UAC) i jest używana przez [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] funkcję UAC na dwa kluczowe sposoby:  
+ Jednym ze sposobów ochrony przed tym zagrożeniem bezpieczeństwa jest uruchomienie aplikacji z najmniejszą ilością wymaganych uprawnień. Jest to nazywane zasadą najniższych uprawnień i jest podstawową funkcją systemu operacyjnego Windows. Ta funkcja jest nazywana kontrolą konta użytkownika (UAC) i jest używana przez funkcję UAC systemu Windows na dwa sposoby:  
   
 - Aby domyślnie uruchamiać większość aplikacji z uprawnieniami funkcji Kontrola konta użytkownika, nawet jeśli użytkownik jest administratorem. tylko aplikacje, które wymagają uprawnień administratora, będą uruchamiane z uprawnieniami administratora. Aby można było uruchamiać z uprawnieniami administracyjnymi, aplikacje muszą być jawnie oznaczone w manifeście aplikacji lub jako wpis w zasadach zabezpieczeń.  
   
 - Zapewnianie rozwiązań zgodności, takich jak wirtualizacja. Przykładowo wiele aplikacji próbuje zapisywać w lokalizacjach z ograniczeniami, takimi jak C:\Program Files. W przypadku aplikacji uruchamianych w ramach funkcji Kontrola konta użytkownika istnieje alternatywna lokalizacja dla poszczególnych użytkowników, która nie wymaga uprawnień administratora do zapisu w usłudze. W przypadku aplikacji uruchamianych w ramach funkcji UAC funkcja Kontrola konta użytkownika umożliwia wirtualizację C:\Program Files w taki sposób, że aplikacje, które zauważają, że zapisu są w rzeczywistości zapisywane do alternatywnej lokalizacji na użytkownika. Ten rodzaj pracy zgodności umożliwia systemowi operacyjnemu uruchamianie wielu aplikacji, które nie mogły wcześniej działać w funkcji Kontrola konta użytkownika.  
   
 #### <a name="code-integrity-checks"></a>Sprawdzanie integralności kodu  
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]zapewnia lepszą kontrolę integralności kodu, aby zapobiec wprowadzaniu złośliwego kodu do plików systemowych lub jądra w czasie ładowania/uruchamiania. Powoduje to przekroczenie ochrony plików systemowych.  
+ System Windows Vista zawiera dokładniejsze testy integralności kodu, które ułatwiają wprowadzanie złośliwego kodu do plików systemowych lub jądra w czasie ładowania/uruchamiania. Powoduje to przekroczenie ochrony plików systemowych.  
   
 <a name="Limited_Rights_Process_for_Browser_Hosted_Applications"></a>   
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>Ograniczony proces uprawnień dla aplikacji hostowanych w przeglądarce  

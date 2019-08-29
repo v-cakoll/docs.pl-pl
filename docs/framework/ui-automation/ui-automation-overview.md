@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: af4abf060e9a8606f69a94f27ecd76487a2ff51c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 968660f2fa043ee4028cb144f368d9380729ffef
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914593"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133801"
 ---
 # <a name="ui-automation-overview"></a>Przegląd automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -26,9 +26,9 @@ ms.locfileid: "69914593"
   
  Aplikacje klienckie automatyzacji interfejsu użytkownika mogą być zapisywane z gwarancją, że będą działać w wielu strukturach. Podstawowe maskuje wszelkie różnice w strukturach, które podstawą różne [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]fragmenty. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Na `Content` przykład [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Właściwość [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>przycisku `Caption` , właściwość `ALT` przycisku i właściwość obrazu HTML są zamapowane na pojedynczą właściwość, w tym widoku. [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]zapewnia pełną funkcjonalność w [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)]i [!INCLUDE[TLA2#tla_winnetsvrfam](../../../includes/tla2sharptla-winnetsvrfam-md.md)].  
+Automatyzacja interfejsu użytkownika zapewnia pełną funkcjonalność obsługiwanych systemów operacyjnych Windows, na których działa .NET Framework (zobacz [.NET Framework wymagania systemowe](../get-started/system-requirements.md) lub wersje platformy .NET Core, począwszy od platformy .net Core 3,0.  
   
- Dostawcy automatyzacji interfejsu użytkownika oferują pewne wsparcie dla aplikacji klienckich Microsoft Active Accessibility przy użyciu wbudowanej usługi mostkowania.  
+ Dostawcy automatyzacji interfejsu użytkownika oferują pewne wsparcie dla aplikacji klienckich Microsoft Active Accessibility za pomocą wbudowanej usługi mostkowania.  
   
 <a name="Providers_and_Clients"></a>   
 ## <a name="providers-and-clients"></a>Dostawcy i klienci  

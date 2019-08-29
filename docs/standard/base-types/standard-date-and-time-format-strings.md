@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 247a77eb2fc5341f611e86f920daac488015a680
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c8a4c1c9450d624b6c4903f9f7978e931e74551c
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040471"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133825"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standardowe ciągi formatujące datę i godzinę
 
@@ -32,7 +32,7 @@ W ciągu standardowego formatu daty i godziny pojedynczy specyfikator formatu je
 - Aby zdefiniować tekstową reprezentację wartości daty i godziny, która może zostać przekonwertowana <xref:System.DateTime> na <xref:System.DateTimeOffset> wartość lub przez operację analizowania.
 
 > [!TIP]
-> Możesz pobrać [Narzędzie formatowania](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), aplikację, która umożliwia zastosowanie ciągów formatu do wartości liczbowych lub daty i godziny, a następnie wyświetla ciąg wynikowy.
+> Możesz pobrać **Narzędzie formatowania**, aplikację .net Core Windows Forms, która umożliwia stosowanie ciągów formatowania do wartości liczbowych lub daty i godziny i wyświetla ciąg wynikowy. Kod źródłowy jest dostępny dla [C#](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) i [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb).
 
 Standardowe ciągi formatujące datę i godzinę mogą być używane z <xref:System.DateTime> obu <xref:System.DateTimeOffset> i wartości.
 
@@ -454,4 +454,5 @@ Na formatowanie mają wpływ właściwości bieżącego <xref:System.Globalizati
 - <xref:System.DateTimeOffset?displayProperty=nameWithType>
 - [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)
 - [Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
-- [Przykład: Narzędzie do formatowania .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+- [Przykład: Narzędzie do formatowania narzędzi systemu .NET CoreC#()](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
+- [Przykład: Narzędzie formatowania programu .NET Core WinForms (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)

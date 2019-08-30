@@ -24,7 +24,7 @@
               href: keywords/char.md
             - name: enum
               href: keywords/enum.md
-            - name: struktura
+            - name: 'struktura '
               href: keywords/struct.md
         - name: Typy odwołań
           items:
@@ -85,6 +85,7 @@
           href: keywords/abstract.md
         - name: async
           href: keywords/async.md
+          displayName: await
         - name: const
           href: keywords/const.md
         - name: zdarzenie
@@ -201,10 +202,6 @@
           href: keywords/new-constraint.md
         - name: gdzie
           href: keywords/where-generic-type-constraint.md
-    - name: Słowa kluczowe operatora
-      items:
-        - name: await
-          href: keywords/await.md
     - name: Słowa kluczowe dostępu
       items:
         - name: base
@@ -327,6 +324,9 @@
     - name: '::, operator'
       href: operators/namespace-alias-qualifier.md
       displayName: 'namespace alias qualifier, global namespace'
+    - name: await — operator
+      href: operators/await.md
+      displayName: async
     - name: operator domyślny
       href: operators/default.md
       displayName: 'default value, default literal, type default'

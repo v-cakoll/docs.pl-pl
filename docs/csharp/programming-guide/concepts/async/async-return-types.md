@@ -2,12 +2,12 @@
 title: Asynchroniczne typy zwracane (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: f40592038ce16173e6dced5e8bcb914cfeb1b1f5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c0dae6b4357ce89325ecb9b7d70ffd79f4e9417
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922039"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168400"
 ---
 # <a name="async-return-types-c"></a>Asynchroniczne typy zwracane (C#)
 Metody asynchroniczne mogą mieć następujące typy zwracane:
@@ -31,7 +31,7 @@ W poniższym przykładzie `GetLeisureHours` Metoda async `return` zawiera instru
   
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1.cs)]
 
-Gdy `GetLeisureHours` jest wywoływana z w wyrażeniu await `ShowTodaysInfo` w metodzie, wyrażenie await pobiera `leisureHours`wartość całkowitą (wartość), która `GetLeisureHours` jest przechowywana w zadaniu zwróconym przez metodę. Aby uzyskać więcej informacji na temat wyrażeń await, zobacz [await](../../../language-reference/keywords/await.md).  
+Gdy `GetLeisureHours` jest wywoływana z w wyrażeniu await `ShowTodaysInfo` w metodzie, wyrażenie await pobiera `leisureHours`wartość całkowitą (wartość), która `GetLeisureHours` jest przechowywana w zadaniu zwróconym przez metodę. Aby uzyskać więcej informacji na temat wyrażeń await, zobacz [await](../../../language-reference/operators/await.md).  
   
 Można lepiej zrozumieć `GetLeisureHours` `await`, jak to się dzieje, oddzielając wywołanie od aplikacji, jak pokazano w poniższym kodzie. Wywołanie metody `GetLeisureHours` , która nie jest bezpośrednio oczekiwane `Task<int>`, zwraca, jak oczekiwano od deklaracji metody. Zadanie jest przypisane do `integerTask` zmiennej w przykładzie. Ponieważ `integerTask` jest,zawiera<xref:System.Threading.Tasks.Task%601.Result> właściwość typu `TResult`. <xref:System.Threading.Tasks.Task%601> W tym przypadku `TResult` reprezentuje typ Integer. Gdy `await` jest stosowany do `integerTask`, wyrażenie await oblicza `integerTask`zawartość <xref:System.Threading.Tasks.Task%601.Result%2A> właściwości. Wartość jest przypisana do `ret` zmiennej.  
   
@@ -83,4 +83,4 @@ Platforma .NET udostępnia <xref:System.Threading.Tasks.ValueTask%601?displayPro
 - [Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą AsyncC#i Await ()](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Przepływ sterowania w programach asynchronicznychC#()](./control-flow-in-async-programs.md)
 - [async](../../../language-reference/keywords/async.md)
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)

@@ -1,48 +1,48 @@
 ---
-title: Wyjaśniono, określane są przewidywania modelu przy użyciu permutacji funkcji znaczenie
-description: Zrozumieć znaczenie funkcji modeli za pomocą permutacji funkcji znaczenie w strukturze ML.NET
-ms.date: 05/02/2019
+title: Wyjaśnij przewidywania modelu przy użyciu ważności funkcji permutacji
+description: Zrozumienie znaczenia funkcji dla modeli o ważności funkcji permutacji w ML.NET
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 1037a1f1c21ef2c9b9a87a070a7d2003c1e76eb4
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 9617582c79b2278e3a68e7acf84568247b81eca1
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307369"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167656"
 ---
-# <a name="explain-model-predictions-using-permutation-feature-importance"></a>Wyjaśniono, określane są przewidywania modelu przy użyciu permutacji funkcji znaczenie
+# <a name="explain-model-predictions-using-permutation-feature-importance"></a>Wyjaśnij przewidywania modelu przy użyciu ważności funkcji permutacji
 
-Dowiedz się, jak wyjaśniono w strukturze ML.NET usługi machine learning określane są przewidywania modelu zrozumienie, jakie funkcje wkład prognozy przy użyciu znaczenie funkcji permutacji (PFI).
+Dowiedz się, jak wyjaśnić przewidywania modelu uczenia maszynowego ML.NET przez zrozumienie, jakie funkcje muszą być przewidywaniami przy użyciu funkcji permutacji (PFI).
 
-Modele uczenia maszynowego są często uważane za czarne pola, które pobrać dane wejściowe i generować dane wyjściowe. Kroki pośrednie lub interakcji między funkcje, które mają wpływ na dane wyjściowe rzadko są zrozumiałe. Ponieważ usługi machine learning zostanie wprowadzona inne aspekty codzienności, takich jak opieka zdrowotna, jest priorytetowe znaczenie, aby zrozumieć, dlaczego usługi machine learning model sprawia, że decyzje robi. Na przykład jeśli diagnozować zostaną wprowadzone przez model usługi machine learning, profesjonalistów z branży opieki zdrowotnej muszą mieć możliwość przejrzenia czynniki, które pojawiły się w tworzenie tego diagnozować. Podając odpowiednie Diagnostyka może spowodować, że doskonałe różnica od tego, czy pacjent ma szybkiego odzyskiwania, czy nie. Im wyższy poziom explainability w modelu większą pewnością specjalistów opieki zdrowotnej więc o zaakceptowanie lub odrzucenie decyzje przez model.
+Modele uczenia maszynowego często są uważane za czarne pola, które pobierają dane wyjściowe i generują wyjście. Pośrednie kroki lub interakcje między funkcjami, które mają wpływ na dane wyjściowe są rzadko zrozumiałe. Ponieważ uczenie maszynowe jest wprowadzane do większej liczby aspektów codziennego okresu istnienia, takiego jak opieka zdrowotna, ma największe znaczenie, aby zrozumieć, dlaczego model uczenia maszynowego podejmuje podejmowane decyzje. Na przykład jeśli diagnozy są dokonywane przez model uczenia maszynowego, specjaliści ds. opieki zdrowotnej muszą zapoznać się ze wskaźnikami, które zapoznają się w celu rozwiązania tego problemu. Zapewnienie właściwej diagnostyki może być świetnym rozwiązaniem w zakresie tego, czy pacjent ma szybkie odzyskiwanie, czy nie. W związku z tym wyższy poziom wyjaśnień w modelu, pracownicy służby zdrowia większego zaufania muszą zaakceptować lub odrzucić decyzje podjęte przez model.
 
-Różnych technik przetwarzania są używane do wyjaśnienia modeli, z których jedna jest PFI. PFI to technika używana do wyjaśnienia modeli klasyfikacji i regresji, które są INSPIROWANE przez [firmy Breiman *lasów Random* dokument](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf)(patrz sekcja 10). Na wysokim poziomie jak działa polega na losowo rekonfiguracja danych jedną funkcję na raz dla całego zestawu danych i obliczanie, zmniejsza ilość Metryka wydajności zainteresowania. Im więcej zmian, niezwykle ważne jest tej funkcji. 
+Różne techniki są używane do wyjaśnienia modeli, z których jeden jest PFI. PFI jest techniką używaną do wyjaśnienia modeli klasyfikacji i regresji, które są sponsorowane przez [papier *losowy lasów* Breiman](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf)(patrz sekcja 10). Na wysokim poziomie, w jaki działa, jest to spowodowane losowo Shuffling danych jedną funkcją w danym czasie dla całego zestawu danych i obliczaniem, ile metryki wydajności zmniejsza się odsetki. Im większa zmiana, tym bardziej ważna jest funkcja. 
 
-Ponadto przez wyróżnienie najważniejszych funkcji, konstruktorzy modelu skupić się na za pomocą podzestawu bardziej zrozumiały funkcje, które potencjalnie może zmniejszyć hałasu i czasu szkoleń.
+Ponadto poprzez wyróżnienie najważniejszych funkcji konstruktory modeli mogą skupić się na użyciu podzestawu bardziej znaczących funkcji, które mogą potencjalnie zmniejszyć liczbę szumów i czas uczenia.
 
 ## <a name="load-the-data"></a>Ładowanie danych
 
-Funkcje zestawu danych używanego w tym przykładzie są w kolumnach 1 – 12. Celem jest przewidzieć `Price`. 
+Funkcje w zestawie danych, które są używane na potrzeby tego przykładu, znajdują się w kolumnach 1-12. Celem jest przewidywanie `Price`. 
 
 | Kolumna | Funkcja | Opis 
 | --- | --- | --- |
-| 1 | CrimeRate | Stawki na mieszkańca przestępstw.
-| 2 | ResidentialZones | Rezydentna stref miejskiej
-| 3 | CommercialZones | Rezydentna spoza strefy w miejscowości
-| 4 | NearWater | Bliskość treści limitu górnego
+| 1 | CrimeRate | Wskaźnik przestępczości na mieszkańca
+| 2 | ResidentialZones | Strefy mieszkalne w mieście
+| 3 | CommercialZones | Strefy niemieszkalne w mieście
+| 4 | NearWater | Bliskość wody
 | 5 | ToxicWasteLevels | Poziomy toksyczności (PPM)
-| 6 | AverageRoomNumber | Średnia liczba pokojach w domu
-| 7 | HomeAge | Wiek głównej
-| 8 | BusinessCenterDistance | Odległość do najbliższej district biznesowych
-| 9 | HighwayAccess | Bliskość autostrady
-| 10 | TaxRate | Stawka podatku właściwości
-| 11 | StudentTeacherRatio | Współczynnik uczniów i nauczycieli
-| 12 | PercentPopulationBelowPoverty | Procent populacji życia poniżej ubóstwa
-| 13 | Cena | Cena miejsce, w którym
+| 6 | AverageRoomNumber | Średnia liczba pokojów w domu
+| 7 | Strona główna | Wiek domu
+| 8 | BusinessCenterDistance | Odległość z najbliższym okręgiem biznesowym
+| 9 | HighwayAccess | Bliskość autostrad
+| 10 | TaxRate | Stawka podatku własności
+| 11 | StudentTeacherRatio | Stosunek uczniów do nauczycieli
+| 12 | PercentPopulationBelowPoverty | Procent populacji zamieszkania poniżej ubóstwa
+| 13 | Cena | Cena domu
 
-Poniżej przedstawiono przykładowy zestaw danych:
+Poniżej przedstawiono przykład zestawu danych:
 
 ```text
 1,24,13,1,0.59,3,96,11,23,608,14,13,32
@@ -50,7 +50,7 @@ Poniżej przedstawiono przykładowy zestaw danych:
 2,98,16,1,0.25,10,5,1,8,689,13,36,12
 ```
 
-Dane w tym przykładzie można modelować przez klasę, takie jak `HousingPriceData`:
+Dane w tym przykładzie można modelować według klasy, takiej jak `HousingPriceData` i załadowanej [`IDataView`](xref:Microsoft.ML.IDataView)do.
 
 ```csharp
 class HousingPriceData
@@ -97,11 +97,9 @@ class HousingPriceData
 }
 ```
 
-Załaduj dane do [ `IDataView` ](xref:Microsoft.ML.IDataView).
-
 ## <a name="train-the-model"></a>Uczenie modelu
 
-Poniższy przykład kodu ilustruje proces uczenia modelu regresji liniowej do prognozowania cen domu.
+Poniższy przykład kodu ilustruje proces uczenia modelu regresji liniowej w celu przewidywania cen dla domu.
 
 ```csharp
 // 1. Get the column name of input features.
@@ -128,9 +126,9 @@ var sdcaEstimator = mlContext.Regression.Trainers.Sdca();
 var sdcaModel = sdcaEstimator.Fit(preprocessedTrainData);
 ```
 
-## <a name="explain-the-model-with-permutation-feature-importance-pfi"></a>Wyjaśniono modelu przy użyciu znaczenie funkcji permutacji (PFI)
+## <a name="explain-the-model-with-permutation-feature-importance-pfi"></a>Wyjaśnij model z ważnością funkcji permutacji (PFI)
 
-Używane w strukturze ML.NET [ `PermutationFeatureImportance` ](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) metoda odpowiedniego zadania.
+W ml.NET Użyj [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) metody dla odpowiedniego zadania.
 
 ```csharp
 ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance = 
@@ -139,9 +137,9 @@ ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance =
         .PermutationFeatureImportance(sdcaModel, preprocessedTrainData, permutationCount:3);
 ```
 
-Wynik za pomocą [ `PermutationFeatureImportance` ](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) na zestaw danych szkoleniowych [ `ImmutableArray` ](xref:System.Collections.Immutable.ImmutableArray) z [ `RegressionMetricsStatistics` ](xref:Microsoft.ML.Data.RegressionMetricsStatistics) obiektów. [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) zapewnia wiele uwagi na statystyki zbiorcze, takie jak średnia i odchylenie standardowe [ `RegressionMetrics` ](xref:Microsoft.ML.Data.RegressionMetrics) liczbą permutacji określony przez `permutationCount` parametru.
+Wynik użycia [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) w zestawie danych szkoleniowych [`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray) jest [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) obiektem. [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics)zapewnia statystykę podsumowania, na przykład odchylenie średnie i standardowe dla [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) wielu obserwacji równych liczbie permutacji określonych `permutationCount` przez parametr.
 
-Ważność, lub w tym przypadku bezwzględne spadek R-kwadrat metryki obliczana na podstawie [ `PermutationFeatureImportance` ](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) następnie może zostać określona od najważniejszych do najmniej ważne.  
+Istotność, czyli w tym przypadku średni spadek średniej wartości R-kwadratowej obliczony przez [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) może następnie być uporządkowany od najważniejszych do najmniej istotnych.  
 
 ```csharp
 // Order features by importance
@@ -158,21 +156,21 @@ foreach (var feature in featureImportanceMetrics)
 }
 ```
 
-Drukowanie wartości dla każdej funkcji `featureImportanceMetrics` wygeneruje dane wyjściowe podobne do poniższych. Należy pamiętać, który powinien powinna się pojawić różne wyniki, ponieważ różnią się te wartości na podstawie danych, które posiadają.  
+Drukowanie wartości dla każdej z funkcji w programie `featureImportanceMetrics` spowoduje wygenerowanie danych wyjściowych podobnych do poniższych. Należy pamiętać, że powinny być widoczne różne wyniki, ponieważ te wartości różnią się w zależności od danych, które są podane.  
 
-| Funkcja | Zmiany do R-kwadrat |
+| Funkcja | Zmień na R-kwadratowy |
 |:--|:--:|
-HighwayAccess       |   -0.042731
-StudentTeacherRatio |   -0.012730
+HighwayAccess       |   -0,042731
+StudentTeacherRatio |   -0,012730
 BusinessCenterDistance| -0.010491
 TaxRate             |   -0.008545
-AverageRoomNumber   |   -0.003949
-CrimeRate           |   -0.003665
-CommercialZones     |   0.002749
-HomeAge             |   -0.002426
-ResidentialZones    |   -0.002319
-NearWater           |   0.000203
-PercentPopulationLivingBelowPoverty|    0.000031
-ToxicWasteLevels    |   -0.000019
+AverageRoomNumber   |   -0,003949
+CrimeRate           |   -0,003665
+CommercialZones     |   0,002749
+Strona główna             |   -0,002426
+ResidentialZones    |   -0,002319
+NearWater           |   0,000203
+PercentPopulationLivingBelowPoverty|    0,000031
+ToxicWasteLevels    |   -0,000019
 
-Biorąc przyjrzeć się pięć najważniejszych funkcji dla tego zestawu danych, cena domu prognozowane przez ten model ma wpływ swoją bliskość autostrady, stosunek nauczyciel uczniów szkół w obszarze, odległości między elementami pracy główne centra stawka podatku właściwości i Średnia liczba pokojach w domu.
+Zapoznaj się z pięcioma najważniejszymi funkcjami tego zestawu danych, Cena domu przewidywanego przez ten model ma wpływ na bliskość autostrad, współczynnika nauczycieli uczniów w terenie, bliskość głównych centrów zatrudnienia, stawka podatku własności i Średnia liczba pokojów w domu.

@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 723f07fb3fb4eda1c0071eec2b1d012948a10f77
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 08b5dee94a9a23fdd1c9e635aa2ef848f59e86cf
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666557"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169134"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Wykorzystywanie wzorca asynchronicznego opartego na zadaniach
 
 Korzystając ze wzorca asynchronicznego opartego na zadaniach (TAP) do pracy z operacjami asynchronicznymi, można użyć wywołań zwrotnych, aby osiągnąć oczekiwanie bez blokowania.  W przypadku zadań jest to realizowane za poorednictwem metod, <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>takich jak. Obsługa asynchroniczna oparta na języku ukrywa wywołania zwrotne przez umożliwienie wykonywania operacji asynchronicznych w ramach normalnego przepływu sterowania, a kod wygenerowany przez kompilator zapewnia tę samą obsługę na poziomie interfejsu API.
 
 ## <a name="suspending-execution-with-await"></a>Wstrzymywanie wykonywania za pomocą oczekiwania
- Począwszy od .NET Framework 4,5, można użyć słowa kluczowego [await](../../csharp/language-reference/keywords/await.md) w C# i [operatora await](../../visual-basic/language-reference/operators/await-operator.md) w Visual Basic do asynchronicznego oczekiwania <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> obiektów. Gdy oczekujesz <xref:System.Threading.Tasks.Task> `await` , wyrażenie jest typu `void`. Gdy oczekujesz <xref:System.Threading.Tasks.Task%601> `await` , wyrażenie jest typu `TResult`. `await` Wyrażenie musi wystąpić wewnątrz treści metody asynchronicznej. Aby uzyskać więcej informacji C# na temat obsługi języka Visual Basic w .NET Framework 4,5, zobacz specyfikacje C# języka i Visual Basic.
+ Począwszy od .NET Framework 4,5, można użyć słowa kluczowego [await](../../csharp/language-reference/operators/await.md) w C# i [operatora await](../../visual-basic/language-reference/operators/await-operator.md) w Visual Basic do asynchronicznego oczekiwania <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> obiektów. Gdy oczekujesz <xref:System.Threading.Tasks.Task> `await` , wyrażenie jest typu `void`. Gdy oczekujesz <xref:System.Threading.Tasks.Task%601> `await` , wyrażenie jest typu `TResult`. `await` Wyrażenie musi wystąpić wewnątrz treści metody asynchronicznej. Aby uzyskać więcej informacji C# na temat obsługi języka Visual Basic w .NET Framework 4,5, zobacz specyfikacje C# języka i Visual Basic.
 
  W obszarze okładek funkcja await instaluje wywołanie zwrotne dla zadania przy użyciu kontynuacji.  To wywołanie zwrotne wznawia metodę asynchroniczną w punkcie zawieszenia. Po wznowieniu metody asynchronicznej, jeśli oczekiwana operacja zakończyła się pomyślnie i była <xref:System.Threading.Tasks.Task%601> `TResult` , jest zwracana.  Wyjątek jest zgłaszany w przypadku <xref:System.Threading.Tasks.TaskStatus.Canceled> , gdy oczekiwano w stanie. <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> <xref:System.OperationCanceledException>  Jeśli w <xref:System.Threading.Tasks.TaskStatus.Faulted> stanie zakończyło się oczekiwanie, wyjątek, który spowodował błąd, jest zgłaszany. <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> Błąd `Task` może być spowodowany przez wiele wyjątków, ale propagowany jest tylko jeden z tych wyjątków. <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> Jednak Właściwość<xref:System.AggregateException> zwraca wyjątek, który zawiera wszystkie błędy.
 

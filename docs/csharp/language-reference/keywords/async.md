@@ -9,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: e0c8f52193639c067252878127ee95a0897b9582
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 71e3781b08bca3441dbd55704bcb0f7de635097e
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922442"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168648"
 ---
 # <a name="async-c-reference"></a>async (odwołanie w C#)
 
@@ -27,7 +27,7 @@ public async Task<int> ExampleMethodAsync()
 }  
 ```  
 
-Jeśli dopiero zaczynasz programowanie asynchroniczne lub nie wiesz, jak Metoda async używa `await` słowa kluczowego, aby wykonać potencjalnie długotrwałe działania bez blokowania wątku wywołującego, przeczytaj wprowadzenie do [programowania asynchronicznego przy użyciu Async i Oczekiwanie](../../programming-guide/concepts/async/index.md). Poniższy kod znajduje się w metodzie asynchronicznej i wywołuje <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> metodę: 
+Jeśli dopiero zaczynasz programowanie asynchroniczne lub nie wiesz, w jaki sposób Metoda async używa [ `await` operatora](../operators/await.md) , aby wykonać potencjalnie długotrwałą działanie bez blokowania wątku wywołującego, przeczytaj wprowadzenie do [programowania asynchronicznego przy użyciu Async i await](../../programming-guide/concepts/async/index.md). Poniższy kod znajduje się w metodzie asynchronicznej i wywołuje <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> metodę:
   
 ```csharp  
 string contents = await httpClient.GetStringAsync(requestUrl);  
@@ -87,6 +87,6 @@ Aby uzyskać więcej informacji i przykładów, zobacz [asynchroniczne typy zwra
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
-- [await](./await.md)
+- [await](../operators/await.md)
 - [Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą Async i await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programowanie asynchroniczne z Async i Await](../../programming-guide/concepts/async/index.md)

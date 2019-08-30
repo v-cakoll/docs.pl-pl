@@ -1,32 +1,32 @@
 ---
-title: Opublikowane dane wyjściowe za pomocą polecenia dotnet vstest testowania
-description: Dowiedz się, jak uruchomić testy na opublikowane bibliotek, zamiast w kodzie źródłowym, za pomocą polecenia dotnet vstest.
+title: Testowanie opublikowanych danych wyjściowych przy użyciu VSTest dotnet
+description: Dowiedz się, jak uruchamiać testy w opublikowanych bibliotekach, a nie w kodzie źródłowym, za pomocą polecenia dotnet VSTest.
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 660b966c6d02353b855e5728094083042a561558
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ac03053bc762d0176e087545871ca8a145cd41e
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665822"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168297"
 ---
-# <a name="test-published-output-with-dotnet-vstest"></a>Opublikowane dane wyjściowe za pomocą polecenia dotnet vstest testowania
+# <a name="test-published-output-with-dotnet-vstest"></a>Testowanie opublikowanych danych wyjściowych przy użyciu VSTest dotnet
 
-Można uruchomić testy na już opublikowane dane wyjściowe, za pomocą `dotnet vstest` polecenia. Funkcja będzie działać na xUnit, MSTest i NUnit testów. Po prostu zlokalizuj plik DLL, które było częścią opublikowane dane wyjściowe i uruchom:
+Można uruchomić testy dla już opublikowanych danych wyjściowych za pomocą `dotnet vstest` polecenia. Będzie to działało na testach xUnit, MSTest i NUnit. Po prostu zlokalizuj plik DLL, który był częścią opublikowanych danych wyjściowych, i uruchom:
 
-```
+```console
 dotnet vstest <MyPublishedTests>.dll
 ```
 
-gdzie `<MyPublishedTests>` jest nazwą projektu testowego opublikowane.
+Gdzie `<MyPublishedTests>` to nazwa opublikowanego projektu testowego.
 
 ## <a name="example"></a>Przykład
 
-Poniższe polecenia pokazują, Uruchamianie testów w opublikowanej pliku DLL.
+Poniższe polecenia przedstawiają uruchamianie testów w opublikowanej bibliotece DLL.
 
-```
+```console
 dotnet new mstest -o MyProject.Tests
 cd MyProject.Tests
 dotnet publish -o out
@@ -34,10 +34,10 @@ dotnet vstest out/MyProject.Tests.dll
 ```
 
 > [!NOTE]
-> Uwaga: Jeśli aplikacja jest przeznaczony dla struktury w innych niż `netcoreapp` nadal można uruchomić `dotnet vstest` polecenia, przekazując docelowej platformy framework za pomocą flagi framework. Na przykład `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`. W programie Visual Studio 2017 Update 5 żądaną framework jest wykrywany automatycznie.
+> Uwaga: Jeśli aplikacja jest ukierunkowana na platformę inną `netcoreapp` niż nadal można `dotnet vstest` uruchomić polecenie, przekazując w platformę docelową flagę platformy. Na przykład `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`. W programie Visual Studio 2017 Update 5 żądana platforma jest wykrywana automatycznie.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Testowanie jednostek za pomocą polecenia dotnet test i struktury xUnit](unit-testing-with-dotnet-test.md)
-- [Testowanie jednostek za pomocą polecenia dotnet test i NUnit](unit-testing-with-nunit.md)
-- [Testowanie jednostek za pomocą polecenia dotnet test i struktury MSTest](unit-testing-with-mstest.md)
+- [Testowanie jednostkowe za pomocą testu dotnet i xUnit](unit-testing-with-dotnet-test.md)
+- [Testowanie jednostkowe za pomocą testu dotnet i NUnit](unit-testing-with-nunit.md)
+- [Testowanie jednostkowe za pomocą testu dotnet i MSTest](unit-testing-with-mstest.md)

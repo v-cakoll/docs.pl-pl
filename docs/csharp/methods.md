@@ -1,96 +1,96 @@
 ---
-title: Metody — przewodnik języka C#
-description: Przegląd metod, parametry metody i wartości zwracane metody
+title: Metody — C# Przewodnik
+description: Przegląd metod, parametrów metody i wartości zwracanych metody
 author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 0decc563fdcf068c0b9dc88a55b2bd6f4e3657cd
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: b95818e06d37b0e98bf55428ff97dd476f92fac7
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025095"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168514"
 ---
 # <a name="methods"></a>Metody
 
-Metoda jest blokiem kodu, który zawiera szereg instrukcji. Program powoduje, że instrukcji do wykonania przez wywołanie metody i określenie argumentów wymaganej metody. W języku C# co instrukcja wykonanych odbywa się w kontekście metody. `Main` Metoda jest punkt wejścia dla każdej aplikacji C# i jest wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR), gdy program jest uruchomiony.
+Metoda jest blokiem kodu, który zawiera serie instrukcji. Program powoduje wykonanie instrukcji przez wywołanie metody i określenie wszelkich wymaganych argumentów metody. W C#programie Każda wykonana instrukcja jest wykonywana w kontekście metody. Metoda jest punktem wejścia dla każdej C# aplikacji i jest wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR), gdy program jest uruchomiony. `Main`
 
 > [!NOTE]
-> W tym temacie omówiono metody o nazwie. Aby uzyskać informacje na temat funkcji anonimowych zobacz [funkcjami anonimowymi](programming-guide/statements-expressions-operators/anonymous-functions.md).
+> W tym temacie omówiono nazwane metody. Aby uzyskać informacje na temat funkcji anonimowych, zobacz [funkcje anonimowe](programming-guide/statements-expressions-operators/anonymous-functions.md).
 
 Ten temat zawiera następujące sekcje:
 
-- [Podpisy metod](#signatures)
+- [Sygnatury metod](#signatures)
 - [Wywołanie metody](#invocation)
-- [Metody dziedziczone i zastąpiona](#inherited)
+- [Dziedziczone i zastąpione metody](#inherited)
 - [Przekazywanie parametrów](#passing)
-  - [Przekazywanie parametrów przez wartość](#byval)
-  - [Przekazywanie parametrów przez odwołanie](#byref)
-  - [Parameter — tablice](#paramarray)
+  - [Przekazywanie parametrów według wartości](#byval)
+  - [Przekazywanie parametrów według odwołania](#byref)
+  - [Tablice parametrów](#paramarray)
 - [Opcjonalne parametry i argumenty](#optional)
 - [Wartości zwracane](#return)
-- [Metody rozszerzenia](#extension)
+- [Metody rozszerzające](#extension)
 - [Metody asynchroniczne](#async)
 - [Elementy członkowskie z wyrażeniem w treści](#expr)
 - [Iteratory](#iterators)
 
 <a name="signatures"></a>
 
-## <a name="method-signatures"></a>Podpisy metod
+## <a name="method-signatures"></a>Sygnatury metod
 
-Metody są deklarowane w `class` lub `struct` przez określenie:
+Metody są zadeklarowane w `class` lub `struct` przez określenie:
 
-- Opcjonalny dostęp na poziomie, takich jak `public` lub `private`. Wartość domyślna to `private`.
-- Modyfikatory opcjonalne, takie jak `abstract` lub `sealed`.
-- Wartość zwracana lub `void` Jeśli metoda nie ma żadnego.
+- Opcjonalny poziom dostępu, taki jak `public` lub. `private` Wartość domyślna to `private`.
+- Opcjonalne modyfikatory, takie `abstract` jak `sealed`lub.
+- Wartość zwracana lub `void` , jeśli metoda nie ma wartości none.
 - Nazwa metody.
-- Wszystkie parametry metody. Parametry metody są ujęte w nawiasy i są oddzielone przecinkami. Pustych nawiasów zwykłych wskazują, że metoda nie wymaga parametrów.
+- Dowolne parametry metody. Parametry metody są ujęte w nawiasy i są rozdzielone przecinkami. Puste nawiasy wskazują, że metoda nie wymaga żadnych parametrów.
 
-Te elementy tworzą razem podpis metody.
+Te części wspólnie tworzą sygnaturę metody.
 
 > [!NOTE]
-> Zwracany typ metody nie jest część podpisu metody na potrzeby przeciążenie metody. Jednak jest część podpisu metody podczas określania zgodności między delegata i metody, która wskazuje.
+> Zwracany typ metody nie jest częścią podpisu metody do celów przeciążania metody. Jednakże jest częścią podpisu metody podczas określania zgodności między delegatem a metodą, do której wskazuje.
 
-W poniższym przykładzie zdefiniowano klasę o nazwie `Motorcycle` zawiera pięć metod:
+W poniższym przykładzie zdefiniowano klasę o `Motorcycle` nazwie, która zawiera pięć metod:
 
 [!code-csharp[csSnippets.Methods#40](../../samples/snippets/csharp/concepts/methods/methods40.cs#40)]
 
-Należy pamiętać, że `Motorcycle` klasa zawiera metody przeciążonej, `Drive`. Dwie metody mają taką samą nazwę, ale należy zróżnicować za jego typy parametrów.
+Należy zauważyć, `Motorcycle` że Klasa zawiera przeciążoną metodę `Drive`,. Dwie metody mają taką samą nazwę, ale muszą być zróżnicowane według ich typów parametrów.
 
 <a name="invocation"></a>
 
 ## <a name="method-invocation"></a>Wywołanie metody
 
-Metody mogą być albo *wystąpienia* lub *statyczne*. Wywoływanie metody wystąpienia wymaga utworzenia wystąpienia obiektu, a następnie wywołać metodę dla tego obiektu; Metoda wystąpienia działa na tego wystąpienia i jego danych. Wywołaj metodę statyczną, odwołując się do nazwy typu, do którego należy metoda; metody statyczne nie działają na dane wystąpienia. Próba wywołania metody statycznej za pomocą wystąpienia obiektu generuje błąd kompilatora.
+Metody mogą być *wystąpieniami* lub *statycznymi*. Wywoływanie metody wystąpienia wymaga utworzenia wystąpienia obiektu i wywołania metody dla tego obiektu; Metoda wystąpienia działa na tym wystąpieniu i jego danych. Należy wywołać metodę statyczną, odwołując się do nazwy typu, do którego należy Metoda; metody statyczne nie działają na danych wystąpienia. Próba wywołania metody statycznej za pomocą wystąpienia obiektu generuje błąd kompilatora.
 
-Wywołanie metody jest jak uzyskiwanie dostępu do pola. Po nazwę obiektu (jeśli wywołujesz metodę wystąpienia) lub nazwę typu (w przypadku wywołania `static` metoda), Dodaj okres, nazwy metody i nawiasy. Argumenty są wyświetlane w nawiasach i są oddzielone przecinkami.
+Wywołanie metody jest podobne do uzyskiwania dostępu do pola. Po nazwie obiektu (jeśli wywoływana jest metoda wystąpienia) lub nazwa typu (jeśli wywołujesz `static` metodę), Dodaj kropkę, nazwę metody i nawiasów. Argumenty są wyświetlane w nawiasach i są oddzielone przecinkami.
 
-Definicja metody określa nazwy i typy parametrów, które są wymagane. Jeśli obiekt wywołujący wywołuje metodę, udostępnia konkretnych wartości nazywanych argumentami — dla każdego parametru. Argumenty muszą być zgodne z typem parametru, ale nazwę argumentu, jeśli jest on używany w wywoływanym kodzie, nie trzeba być taka sama jak parametr o nazwie zdefiniowany w metodzie. W poniższym przykładzie `Square` metoda zawiera jeden parametr typu `int` o nazwie *i*. Pierwsza metoda wywołania przebiegów `Square` metoda zmienną typu `int` o nazwie *num*; drugi, stałej liczbowej; oraz trzeci, wyrażenie.
+Definicja metody Określa nazwy i typy wymaganych parametrów. Gdy wywołujący wywołuje metodę, dostarcza konkretnych wartości, nazywanych argumentami, dla każdego parametru. Argumenty muszą być zgodne z typem parametru, ale nazwa argumentu, jeśli jest używana w wywoływanym kodzie, nie musi być taka sama jak parametr o nazwie zdefiniowanej w metodzie. W poniższym przykładzie `Square` Metoda zawiera pojedynczy parametr typu `int` o nazwie *i*. Pierwsze wywołanie metody przekazuje `Square` metodę zmienną typu `int` o nazwie *NUM*; sekundową, stałą liczbową i trzecim wyrażeniem.
 
 [!code-csharp[csSnippets.Methods#74](../../samples/snippets/csharp/concepts/methods/params74.cs#74)]
 
-Najczęściej używany typ wywołania metody używane argumenty pozycyjne; dostarcza mu argumenty w kolejności parametrów metody. Metody `Motorcycle` klasy, w związku z tym może być wywoływana tak jak w poniższym przykładzie. Wywołanie `Drive` metody, na przykład zawiera dwa argumenty, które odpowiadają dwa parametry przy użyciu składni metody. Pierwszy staje się wartością `miles` parametr, drugi wartość `speed` parametru.
+Najbardziej typowa forma wywołania metody użyła argumentów pozycyjnych; dostarcza argumenty w takiej samej kolejności jak parametry metody. W związku z tym `Motorcycle` metody klasy mogą być wywoływane jak w poniższym przykładzie. Wywołanie `Drive` metody, na przykład, zawiera dwa argumenty, które odpowiadają dwóm parametrom w składni metody. Pierwszy jest wartością `miles` parametru, drugą wartością `speed` parametru.
 
 [!code-csharp[csSnippets.Methods#41](../../samples/snippets/csharp/concepts/methods/methods40.cs#41)]
 
-Można również używać *argumenty nazwane* zamiast argumenty pozycyjne, podczas wywoływania metody. Przy użyciu nazwane argumenty, określ nazwę parametru z dwukropkiem (":") i argumentu. Argumenty do metody mogą być wyświetlane w dowolnej kolejności, tak długo, jak wszystkie wymagane argumenty są obecne. W poniższym przykładzie użyto argumentów nazwanych do wywołania `TestMotorcycle.Drive` metody. W tym przykładzie nazwane argumenty są przekazywane w kolejności przeciwnej w liście parametrów metody.
+Można również użyć *nazwanych argumentów* zamiast argumentów pozycyjnych podczas wywoływania metody. Przy użyciu nazwanych argumentów należy określić nazwę parametru, po którym następuje dwukropek (":") i argument. Argumenty metody mogą pojawiać się w dowolnej kolejności, o ile wszystkie wymagane argumenty są obecne. W poniższym przykładzie zastosowano nazwane argumenty do wywołania `TestMotorcycle.Drive` metody. W tym przykładzie nazwane argumenty są przekazane w odwrotnej kolejności z listy parametrów metody.
 
 [!code-csharp[csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/named1.cs#45)]
 
-Można wywołać metody za pomocą obu argumentów pozycyjnych i argumenty nazwane. Argument pozycyjny nie można jednak wykonać argumentu nazwanego. Poniższy przykład przedstawia wywoływanie `TestMotorcycle.Drive` metodę jak w poprzednim przykładzie, za pomocą jednego argumentu pozycyjnego i jeden argument nazwany.
+Metodę można wywołać przy użyciu obu argumentów pozycyjnych i nazwanych argumentów. Jednak argument pozycyjny nie może następować po nazwanym argumencie. Poniższy przykład wywołuje `TestMotorcycle.Drive` metodę z poprzedniego przykładu przy użyciu jednego argumentu pozycyjnego i jednego argumentu nazwanego.
 
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
 
 <a name="inherited"></a>
 
-## <a name="inherited-and-overridden-methods"></a>Metody dziedziczone i zastąpiona
+## <a name="inherited-and-overridden-methods"></a>Dziedziczone i zastąpione metody
 
-Oprócz elementów członkowskich, które są jawnie zdefiniowane w typie typ dziedziczy składowych zdefiniowanych w jej klas podstawowych. Ponieważ wszystkie typy w systemie typu zarządzanego dziedziczy bezpośrednio lub pośrednio z <xref:System.Object> klasy, wszystkie typy odziedziczenie jego elementów członkowskich, takich jak <xref:System.Object.Equals(System.Object)>, <xref:System.Object.GetType>, i <xref:System.Object.ToString>. W poniższym przykładzie zdefiniowano `Person` klasy, są tworzone wystąpienia dwóch `Person` obiektów i wywołuje `Person.Equals` metodę pozwala ustalić, czy dwa obiekty są takie same. `Equals` Metody, jednak nie jest zdefiniowany w `Person` klasy; zostało ono odziedziczone <xref:System.Object>.
+Oprócz elementów członkowskich, które są jawnie zdefiniowane w typie, typ dziedziczy składowe zdefiniowane w jego klasach bazowych. Ponieważ wszystkie typy w systemie typu <xref:System.Object> zarządzanego dziedziczą bezpośrednio lub pośrednio z klasy, wszystkie typy dziedziczą elementy członkowskie, takie jak <xref:System.Object.Equals(System.Object)>, <xref:System.Object.GetType>, i. <xref:System.Object.ToString> Poniższy przykład definiuje `Person` klasę, tworzy wystąpienie dwóch `Person` `Person.Equals` obiektów i wywołuje metodę, aby określić, czy dwa obiekty są równe. Metoda nie jest jednak zdefiniowana `Person` w klasie; jest dziedziczona z <xref:System.Object>. `Equals`
 
 [!code-csharp[csSnippets.Methods#104](../../samples/snippets/csharp/concepts/methods/inherited1.cs#104)]
 
-Typy można zastąpić dziedziczone elementy członkowskie przy użyciu `override` — słowo kluczowe i zapewniając implementację przeciążonej. Podpis metody musi być taka sama, jak w przypadku przeciążonej. Poniższy przykład jest podobne do pokazanego w poprzednim, z tą różnicą, że zastępuje ona <xref:System.Object.Equals(System.Object)> metody. (Zastępuje ona również <xref:System.Object.GetHashCode> metody, ponieważ te dwie metody są przeznaczone do zapewnić spójne wyniki.)
+Typy mogą przesłaniać dziedziczone elementy członkowskie przy `override` użyciu słowa kluczowego i dostarczając implementację przesłoniętej metody. Sygnatura metody musi być taka sama jak w przypadku przesłoniętej metody. Poniższy przykład jest podobny do poprzedniego, z tą różnicą, że zastępuje <xref:System.Object.Equals(System.Object)> metodę. (Również zastępuje <xref:System.Object.GetHashCode> metodę, ponieważ dwie metody są przeznaczone do zapewnienia spójnych wyników).
 
 [!code-csharp[csSnippets.Methods#105](../../samples/snippets/csharp/concepts/methods/overridden1.cs#105)]
 
@@ -98,53 +98,53 @@ Typy można zastąpić dziedziczone elementy członkowskie przy użyciu `overrid
 
 ## <a name="passing-parameters"></a>Przekazywanie parametrów
 
-Typy w języku C# są albo *typy wartości* lub *typy odwołań*. Aby uzyskać listę typów wbudowanych wartości, zobacz [typy i zmienne](./tour-of-csharp/types-and-variables.md). Domyślnie typy odwołań i typy wartości są przekazywane do metody przez wartość.
+Typy w C# to typy *wartości* lub *typy referencyjne*. Aby zapoznać się z listą wbudowanych typów wartości, zobacz [typy i zmienne](./tour-of-csharp/types-and-variables.md). Domyślnie zarówno typy wartości, jak i typy odwołań są przesyłane do metody przez wartość.
 
 <a name="byval"></a>
 
-### <a name="passing-parameters-by-value"></a>Przekazywanie parametrów przez wartość
+### <a name="passing-parameters-by-value"></a>Przekazywanie parametrów według wartości
 
-Gdy typ wartości jest przekazywany do metody przez wartość, kopię obiektu, a nie sam obiekt jest przekazywany do metody. W związku z tym zmiany do obiektu w metodzie wywoływanej nie mają wpływu na oryginalny obiekt gdy sterowanie powraca do obiektu wywołującego.
+Gdy typ wartości jest przenoszona do metody przez wartość, kopia obiektu zamiast samego obiektu jest przenoszona do metody. W związku z tym zmiany w obiekcie wywołanej metody nie mają wpływu na oryginalny obiekt, gdy sterowanie powraca do obiektu wywołującego.
 
-Poniższy przykład przekazuje do metody typu wartości przez wartość, a następnie wywoływana metoda próbuje zmienić wartość typu wartości. Definiuje zmienną typu `int`, który jest typem wartości, inicjuje jej wartość na 20 i przekazuje go do metody o nazwie `ModifyValue` który zmienia wartość zmiennej do 30. Gdy metoda zwróci wartość, jednak wartość zmiennej pozostaje bez zmian.
+Poniższy przykład przekazuje typ wartości do metody przez wartość, a wywołana metoda próbuje zmienić wartość typu wartości. Definiuje zmienną typu `int`, która jest typem wartości, inicjuje jej wartość na 20 i przekazuje ją do metody o nazwie `ModifyValue` , która zmienia wartość zmiennej na 30. Gdy metoda zwraca, jednak wartość zmiennej pozostaje niezmieniona.
 
 [!code-csharp[csSnippets.Methods#10](../../samples/snippets/csharp/concepts/methods/byvalue10.cs#10)]
 
-Gdy obiekt typu referencyjnego jest przekazywany do metody przez wartość, odwołanie do obiektu jest przekazywany przez wartość. Oznacza to, że metoda odbiera nie samego obiektu, ale argument, który wskazuje lokalizację obiektu. Jeśli zmienisz członka obiektu za pomocą tego odwołania, zmiana jest odzwierciedlana w obiekcie, gdy sterowanie powraca do wywoływania metody. Jednak zastępując obiekt przekazany do metody nie ma wpływu na oryginalny obiekt gdy sterowanie powraca do obiektu wywołującego.
+Gdy obiekt typu referencyjnego jest przekazanie do metody przez wartość, odwołanie do obiektu jest przesyłane przez wartość. Oznacza to, że metoda nie odbiera samego obiektu, ale argument, który wskazuje lokalizację obiektu. Jeśli zmienisz element członkowski obiektu za pomocą tego odwołania, zmiana zostanie odzwierciedlona w obiekcie, gdy sterowanie powróci do metody wywołującej. Jednak zastąpienie obiektu przesłanego do metody nie ma wpływu na oryginalny obiekt, gdy sterowanie powraca do obiektu wywołującego.
 
-W poniższym przykładzie zdefiniowano klasę (który jest typem referencyjnym) o nazwie `SampleRefType`. Metoda tworzy `SampleRefType` obiektów, przypisuje 44 do jego `value` pola, a następnie przekazuje obiekt do `ModifyObject` metody. W tym przykładzie działa zasadniczo tak samo jak w poprzednim przykładzie — przekazaniem argumentu przez wartość do metody. Ale ponieważ jest używany typ odwołania, wynik jest inny. Ze zmianami, które znajduje się w `ModifyObject` do `obj.value` pola również zmiany `value` pole argumentu, `rt`w `Main` jako dane wyjściowe w przykładzie pokazano metodę 33.
+W poniższym przykładzie zdefiniowano klasę (będącą typem referencyjnym) o `SampleRefType`nazwie. Tworzy wystąpienie `SampleRefType` obiektu, przypisuje 44 do jego `value` pola i `ModifyObject` przekazuje obiekt do metody. Ten przykład zasadniczo działa tak samo jak w poprzednim przykładzie — przekazuje argument przez wartość do metody. Ale ponieważ jest używany typ referencyjny, wynik jest różny. Modyfikacja `ModifyObject` wprowadzona w `value` polurównież`rt` zmienia`Main` pola argumentu, w metodzie na 33, jako dane wyjściowe z przykładu. `obj.value`
 
 [!code-csharp[csSnippets.Methods#42](../../samples/snippets/csharp/concepts/methods/byvalue42.cs#42)]
 
 <a name="byref"></a>
 
-### <a name="passing-parameters-by-reference"></a>Przekazywanie parametrów przez odwołanie
+### <a name="passing-parameters-by-reference"></a>Przekazywanie parametrów według odwołania
 
-Należy podać parametr według odwołania, jeśli chcesz zmienić wartość argumentu w metodzie i ma na celu odzwierciedlenia tej zmiany, gdy sterowanie powraca do wywoływania metody. Aby przekazać parametr według odwołania, należy użyć [ `ref` ](language-reference/keywords/ref.md) lub [ `out` ](language-reference/keywords/out-parameter-modifier.md) — słowo kluczowe. Można również przekazać wartość przez odwołanie, aby unikać kopiowania, ale nadal zapobiec przy użyciu [ `in` ](language-reference/keywords/in-parameter-modifier.md) — słowo kluczowe.
+Parametr można przekazać przez odwołanie, gdy chcesz zmienić wartość argumentu w metodzie i chcieć odzwierciedlić tę zmianę, gdy sterowanie powraca do metody wywołującej. Aby przekazać parametr przez odwołanie, należy użyć [`ref`](language-reference/keywords/ref.md) słowa kluczowego or. [`out`](language-reference/keywords/out-parameter-modifier.md) Możesz również przekazać wartość przez odwołanie, aby uniknąć kopiowania, [`in`](language-reference/keywords/in-parameter-modifier.md) ale nadal uniemożliwiać modyfikacje przy użyciu słowa kluczowego.
 
-Poniższy przykład jest taka sama jak poprzedni, z wyjątkiem wartość jest przekazywana przez odwołanie do `ModifyValue` metody. Po zmodyfikowaniu wartości parametru w `ModifyValue` znajduje odzwierciedlenie metody zmianę wartości, gdy sterowanie powraca do obiektu wywołującego.
+Poniższy przykład jest identyczny z poprzednim, z wyjątkiem tego, że wartość jest przenoszona przez odwołanie `ModifyValue` do metody. Gdy wartość parametru jest modyfikowana w `ModifyValue` metodzie, zmiana wartości jest odzwierciedlona, gdy sterowanie powraca do obiektu wywołującego.
 
 [!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref106.cs#106)]
 
-Typowy wzorzec, który używa parametrów ref obejmuje zamianę wartości zmiennych. Dwie zmienne jest przekazywany do metody za pomocą odwołania, a metoda zamienia ich zawartości. Poniższy przykład zamienia wartości całkowitych.
+Typowy wzorzec wykorzystywany przez parametry ref obejmuje zamianę wartości zmiennych. Dwie zmienne są przekazywane do metody przez odwołanie, a metoda zamienia ich zawartość. Poniższy przykład zamienia wartości całkowite.
 
 [!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/swap107.cs#107)]
 
-Przekazywanie parametrów typu Odwołanie umożliwia zmianę wartości samo odwołanie, a nie wartość jego poszczególne elementy lub pola.
+Przekazywanie parametru typu odwołania umożliwia zmianę wartości samego odwołania, a nie wartości poszczególnych elementów lub pól.
 
 <a name="paramarray"></a>
 
-### <a name="parameter-arrays"></a>Parameter — tablice
+### <a name="parameter-arrays"></a>Tablice parametrów
 
-Czasami wymagania Określ dokładna liczba argumentów do metody jest restrykcyjne. Za pomocą `params` — słowo kluczowe, aby wskazać, że parametr jest tablicą parametrów, musisz zezwolić na metodę do wywołania z różną liczbą argumentów. Parametr oznakowane za pomocą `params` — słowo kluczowe musi być typem tablicy, a musi być ostatnim parametrem na liście parametrów metody.
+Czasami wymaganie podania dokładnej liczby argumentów do metody jest restrykcyjne. Za pomocą `params` słowa kluczowego, aby wskazać, że parametr jest tablicą parametrów, można wywołać metodę o zmiennej liczbie argumentów. Parametr oznaczony `params` słowem kluczowym musi być typem tablicowym i musi być ostatnim parametrem na liście parametrów metody.
 
-Obiekt wywołujący może następnie wywołania metody w jednym z trzech sposobów:
+Obiekt wywołujący może następnie wywołać metodę na jeden z trzech sposobów:
 
-- Przekazując tablicę odpowiedniego typu, który zawiera odpowiednią liczbę elementów.
-- Przekazując rozdzielaną przecinkami listę pojedynczych argumentów odpowiedniego typu w metodzie.
-- Zapewniając nie argument tablicy parametrów.
+- Przekazując tablicę odpowiedniego typu, która zawiera żądaną liczbę elementów.
+- Przekazując do metody rozdzieloną przecinkami listę pojedynczych argumentów odpowiedniego typu.
+- Nie dostarczając argumentu do tablicy parametrów.
 
-W poniższym przykładzie zdefiniowano metodę o nazwie `GetVowels` zwracającego wszystkie samogłoski z tablicy parametrów. `Main` Metoda przedstawiono wszystkie trzy sposoby wywoływania metody. Nie trzeba podać argumenty dla parametrów, które zawierają obiekty wywołujące `params` modyfikator. W takim przypadku parametr jest `null`.
+W poniższym przykładzie zdefiniowano metodę o `GetVowels` nazwie, która zwraca wszystkie samogłosy z tablicy parametrów. `Main` Metoda ilustruje wszystkie trzy sposoby wywoływania metody. Obiekty wywołujące nie muszą podawać żadnych argumentów dla parametrów, które zawierają `params` modyfikator. W takim przypadku parametr ma wartość `null`.
 
 [!code-csharp[csSnippets.Methods#75](~/samples/snippets/csharp/concepts/methods/params75.cs#75)]
 
@@ -152,55 +152,55 @@ W poniższym przykładzie zdefiniowano metodę o nazwie `GetVowels` zwracająceg
 
 ## <a name="optional-parameters-and-arguments"></a>Opcjonalne parametry i argumenty
 
-Definicję metody można określić, że jej parametry są wymagane lub czy są opcjonalne. Domyślnie parametry są wymagane. Następujące parametry opcjonalne są określone przez dołączenie wartości domyślnej parametru w definicji metody. Gdy metoda jest wywoływana, jeśli nie dostarczono żadnego argumentu dla parametru opcjonalnego, w zamian jest używana wartość domyślna.
+Definicja metody może określać, że parametry są wymagane lub są opcjonalne. Domyślnie parametry są wymagane. Parametry opcjonalne są określane przez dołączenie wartości domyślnej parametru w definicji metody. Gdy metoda jest wywoływana, jeśli nie podano żadnego argumentu dla parametru opcjonalnego, zamiast tego zostanie użyta wartość domyślna.
 
-Wartość domyślna parametru musi zostać przypisany przez jedną z następujących rodzajów wyrażeń:
+Wartość domyślna parametru musi być przypisana przy użyciu jednego z następujących rodzajów wyrażeń:
 
-- Stała, takich jak ciąg literału lub numer.
-- Wyrażenie w formie `new ValType`, gdzie `ValType` jest typem wartości. Należy pamiętać, że wywołuje to typ wartości niejawnego konstruktora bez parametrów, który nie jest faktycznej składowej typu.
-- Wyrażenie w formie `default(ValType)`, gdzie `ValType` jest typem wartości.
+- Stała, taka jak ciąg literału lub liczba.
+- Wyrażenie formularza `new ValType`, gdzie `ValType` jest typem wartości. Należy zauważyć, że spowoduje to wywołanie niejawnego konstruktora bez parametrów typu wartości, który nie jest rzeczywistym elementem członkowskim typu.
+- Wyrażenie formularza `default(ValType)`, gdzie `ValType` jest typem wartości.
 
-Jeśli metoda zawiera zarówno wymaganych i opcjonalnych parametrów, opcjonalne parametry są definiowane na końcu listy parametrów po wszystkich wymaganych parametrów.
+Jeśli metoda obejmuje parametry wymagane i opcjonalne, parametry opcjonalne są definiowane na końcu listy parametrów po wszystkich wymaganych parametrach.
 
-W poniższym przykładzie zdefiniowano metodę `ExampleMethod`, która ma jeden wymagany i dwa parametry opcjonalne.
+W poniższym przykładzie zdefiniowano metodę, `ExampleMethod`która ma jeden wymagany i dwa parametry opcjonalne.
 
 [!code-csharp[csSnippets.Methods#21](../../samples/snippets/csharp/concepts/methods/optional1.cs#21)]
 
-Gdy wywoływana jest metoda, za pomocą wielu argumentów opcjonalnych, za pomocą argumentów pozycyjnych, obiekt wywołujący musi podać argument dla wszystkich parametrów opcjonalnych z pierwszego w celu ostatni, dla którego zostanie podany argument. W przypadku właściwości `ExampleMethod` metody, na przykład, jeśli obiekt wywołujący dostarcza argument `description` parametru, jego należy również podać jeden dla `optionalInt` parametru. `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` to wywołanie prawidłowej metody; `opt.ExampleMethod(2, , "Addition of 2 and 0");` generuje "Brak argumentu" błąd kompilatora.
+Jeśli metoda z wieloma opcjonalnymi argumentami jest wywoływana przy użyciu argumentów pozycyjnych, obiekt wywołujący musi podać argument dla wszystkich parametrów opcjonalnych z pierwszego do ostatniego, dla którego podano argument. W przypadku `ExampleMethod` metody, na przykład jeśli obiekt wywołujący dostarcza argument `description` dla parametru, musi `optionalInt` również podać jeden dla parametru. `opt.ExampleMethod(2, 2, "Addition of 2 and 2");`jest prawidłowym wywołaniem metody; `opt.ExampleMethod(2, , "Addition of 2 and 0");` generuje błąd kompilatora "Brak argumentu".
 
-Jeśli metoda jest wywoływana przy użyciu argumentów nazwanych lub kombinacji argumenty pozycyjne i nazwane, obiekt wywołujący, można pominąć argumenty, które należy wykonać ostatni argument pozycyjny w wywołaniu metody.
+Jeśli metoda jest wywoływana przy użyciu nazwanych argumentów lub kombinacji argumentów pozycyjnych i nazwanych, obiekt wywołujący może pominąć wszystkie argumenty, które po ostatnim argumencie pozycyjnym w wywołaniu metody.
 
-Poniższy przykład wywołuje `ExampleMethod` metoda trzy razy.  Wywołań metod pierwsze dwa użycia argumentów pozycyjnych. Pierwszy pomija oba argumenty opcjonalne, podczas gdy drugi pomija ostatni argument. Trzecie wywołanie metody dostarcza argument pozycyjny dla wymaganego parametru, ale używa argumentu nazwanego, aby podać wartość `description` parametru pomijając `optionalInt` argumentu.
+Poniższy przykład wywołuje `ExampleMethod` metodę trzykrotnie.  Pierwsze dwa wywołania metod używają argumentów pozycyjnych. Pierwsze pomija oba argumenty opcjonalne, podczas gdy drugi pomija ostatni argument. Trzecie wywołanie metody dostarcza argument pozycyjny dla wymaganego parametru, ale używa argumentu nazwanego do podania wartości do `description` parametru podczas pomijania `optionalInt` argumentu.
 
 [!code-csharp[csSnippets.Methods#22](../../samples/snippets/csharp/concepts/methods/optional1.cs#22)]
 
-Ma wpływ na korzystanie z parametrów opcjonalnych *Rozpoznanie przeciążenia*, czy w sposób, w którym kompilator języka C# Określa, które przeładowanie określonego powinien być wywoływany przez wywołanie metody w następujący sposób:
+Użycie parametrów opcjonalnych wpływa na *rozdzielczość przeciążenia*lub sposób, w jaki C# kompilator określa, które określone Przeciążenie powinno być wywoływane przez wywołanie metody w następujący sposób:
 
-- Metoda, indeksator lub Konstruktor jest kandydatem do wykonywania w przypadku każdego z jego parametrów jest opcjonalny albo odpowiada według nazwy lub pozycji, aby jeden argument w instrukcji wywołujące, i że argument można przekonwertować na typ parametru.
-- Jeśli zostanie znalezione więcej niż jeden Release candidate, zasady rozpoznawania przeciążenia preferowanych konwersje są stosowane do argumentów, które są jawnie określone. Pominięty Argumenty opcjonalne parametry są ignorowane.
-- Jeśli dwa kandydatów zostaną ocenione one równie dobrze, preferencji jest przesyłany do Release candidate, który nie ma parametrów opcjonalnych, które zostały pominięte argumentów w wywołaniu. Jest to konsekwencją Ogólne preferencji w przeciążeniu rozdzielczości dla kandydatów, które mają mniej parametrów.
+- Metoda, indeksator lub Konstruktor jest kandydatem do wykonania, jeśli każdy z jego parametrów jest opcjonalny lub odpowiada według nazwy lub według pozycji, do pojedynczego argumentu w instrukcji wywołującej i ten argument można przekonwertować na typ parametru.
+- W przypadku znalezienia więcej niż jednego kandydata reguły rozpoznawania przeciążenia dla preferowanych konwersji są stosowane do argumentów, które są jawnie określone. Pominięte argumenty dla parametrów opcjonalnych są ignorowane.
+- Jeśli dwie kandydaci są uważane za równie dobre, preferencja przechodzi do kandydata, który nie ma parametrów opcjonalnych, dla których argumenty zostały pominięte w wywołaniu. Jest to konsekwencja ogólne preferencje rozpoznawania przeciążenia dla kandydatów, które mają mniej parametrów.
 
 <a name="return"></a>
 
 ## <a name="return-values"></a>Zwracane wartości
 
-Metody może zwrócić wartości do obiektu wywołującego. Jeśli nie jest zwracany typ (typu wymienionego przed nazwą metody) `void`, metoda może zwrócić wartość przy użyciu `return` — słowo kluczowe. Instrukcja zawierająca `return` — słowo kluczowe następuje zmiennej, stałej lub wyrażenia, który jest zgodny z typem zwracanym zwróci tę wartość do obiektu wywołującego metodę. Metody z innym niż void zwrotu typu są wymagane do użycia `return` — słowo kluczowe w celu zwrócenia wartości. `return` — Słowo kluczowe również zatrzymuje wykonywanie metody.
+Metody mogą zwracać wartość do obiektu wywołującego. Jeśli typ zwracany (typ wymieniony przed nazwą metody) nie `void`jest, Metoda może zwrócić wartość za `return` pomocą słowa kluczowego. Instrukcja ze `return` słowem kluczowym, po której następuje zmienna, stała lub wyrażenie zgodne z typem zwracanym zwróci tę wartość do obiektu wywołującego metodę. Metody z typem zwracanym innym niż void są wymagane do zwrócenia wartości `return` za pomocą słowa kluczowego. `return` Słowo kluczowe również przerywa wykonywanie metody.
 
-Jeśli typ zwracany jest `void`, `return` instrukcji bez wartości nadal jest użyteczne do zatrzymywania wykonywania metody. Bez `return` — słowo kluczowe, metoda wykonywanie zostanie przerwane po osiągnięciu końca bloku kodu.
+Jeśli zwracanym typem jest `void` `return` , instrukcja bez wartości jest nadal przydatna do zatrzymania wykonywania metody. `return` Bez słowa kluczowego, Metoda zostanie zatrzymana po osiągnięciu końca bloku kodu.
 
-Na przykład użyć tych dwóch metod `return` — słowo kluczowe, aby zwrócić liczb całkowitych:
+Na przykład te dwie metody używają `return` słowa kluczowego do zwracania liczb całkowitych:
 
 [!code-csharp[csSnippets.Methods#44](../../samples/snippets/csharp/concepts/methods/return44.cs#44)]
 
-Aby użyć wartości zwrócone z metody, wywoływania metody użyć wywołania metody które się dowolnym wartością tego samego typu może być wystarczające. Można także przypisać zwracana wartość do zmiennej. Na przykład poniższe dwa przykłady kodu osiągnięcia tego samego celu:
+Aby użyć wartości zwracanej z metody, Metoda wywołująca może użyć wywołania metody, wszędzie tam, gdzie wartość tego samego typu byłaby wystarczająca. Możesz również przypisać wartość zwracaną do zmiennej. Na przykład następujące dwa przykłady kodu mają ten sam cel:
 
 [!code-csharp[csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/return44.cs#45)]
 
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/return44.cs#46)]
 
-Za pomocą zmiennej lokalnej, w tym przypadku `result`, aby przechowywać wartość jest opcjonalna. Może ułatwić czytelność kodu lub może być konieczne, jeśli chcesz przechować oryginalnej wartości argumentu dla całego zakresu metody.
+Użycie zmiennej lokalnej, w tym przypadku `result`, do przechowywania wartości jest opcjonalne. Może to pomóc w czytelności kodu lub może być konieczne, jeśli konieczne będzie przechowywanie pierwotnej wartości argumentu dla całego zakresu metody.
 
-Czasami chcesz metodę do zwrócenia więcej niż jedną wartość. Począwszy od języka C# 7.0, możesz to łatwo zrobić przy użyciu *typy krotki* i *literałach krotek*. Typ krotki definiuje typy danych elementów krotki. Literałach krotek zawierają rzeczywiste wartości zwracane spójnej kolekcji. W poniższym przykładzie `(string, string, string, int)` definiuje typ spójnej kolekcji, który jest zwracany przez `GetPersonalInfo` metody. Wyrażenie `(per.FirstName, per.MiddleName, per.LastName, per.Age)` jest spójna kolekcja znajdująca się literału; metoda zwraca nazwę pierwszego, drugie imię i nazwisko, wraz z okresu ważności z `PersonInfo` obiektu.
+Czasami chcesz, aby Metoda zwracała więcej niż jedną wartość. Począwszy od C# 7,0, można to łatwo zrobić, używając *typów krotek* i *literałów krotek*. Typ krotki definiuje typy danych elementów krotki. Literały krotki zapewniają rzeczywiste wartości zwracanej krotki. W poniższym przykładzie `(string, string, string, int)` definiuje typ krotki, który jest zwracany `GetPersonalInfo` przez metodę. Wyrażenie `(per.FirstName, per.MiddleName, per.LastName, per.Age)` jest literałem krotki; Metoda zwraca pierwszą, środkową i nazwisko, wraz z wiekiem `PersonInfo` obiektu.
 
 ```csharp
 public (string, string, string, int) GetPersonalInfo(string id)
@@ -210,14 +210,14 @@ public (string, string, string, int) GetPersonalInfo(string id)
 }
 ```
 
-Obiekt wywołujący mogły zwrócone spójna kolekcja znajdująca się z kodem, jak pokazano poniżej:
+Obiekt wywołujący może następnie użyć zwróconej krotki z kodem podobnym do poniższego:
 
 ```csharp
 var person = GetPersonalInfo("111111111")
 Console.WriteLine("{person.Item1} {person.Item3}: age = {person.Item4}");
 ```
 
-Również można przypisać nazwy elementów krotki w definicji typu krotki. W poniższym przykładzie pokazano alternatywnej wersji `GetPersonalInfo` metodę, która korzysta z nazwanych elementów:
+Nazwy można także przypisać do elementów krotki w definicji typu krotki. W poniższym przykładzie pokazano alternatywną wersję `GetPersonalInfo` metody używającej nazwanych elementów:
 
 ```csharp
 public (string FName, string MName, string LName, int Age) GetPersonalInfo(string id)
@@ -227,27 +227,27 @@ public (string FName, string MName, string LName, int Age) GetPersonalInfo(strin
 }
 ```
 
-Poprzednie wywołanie `GetPersonInfo` metoda może być modyfikowany w następujący sposób:
+Poprzednie wywołanie `GetPersonInfo` metody można następnie zmodyfikować w następujący sposób:
 
 ```csharp
 var person = GetPersonalInfo("111111111");
 Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 ```
 
-Jeśli metoda jest przekazywana tablicę jako argument i modyfikuje wartość poszczególnych elementów, nie jest konieczne dla metody zwrócić tablicę, mimo że można to zrobić dla dobra stylu lub funkcjonalności przepływu wartości.  Jest to spowodowane C# przekazuje wszystkich typów odniesienia według wartości, a wartość odwołania do tablicy jest wskaźnik do tablicy. W poniższym przykładzie zmienia się na zawartość `values` tablicy, które zostały wprowadzone w `DoubleValues` metody jest możliwość obserwowania przez każdy kod, który zawiera odwołanie do tablicy.
+Jeśli metoda przekazuje tablicę jako argument i modyfikuje wartość poszczególnych elementów, nie jest to konieczne, aby Metoda zwracała tablicę, chociaż można to zrobić dla dobrego stylu lub przepływu funkcjonalnych wartości.  Wynika to z C# faktu, że wszystkie typy odwołań są przekazywane przez wartość, a wartość odwołania tablicy jest wskaźnikiem do tablicy. W poniższym przykładzie zmiany zawartości `values` tablicy, które są wykonywane `DoubleValues` w metodzie, są zauważalne przez dowolny kod, który zawiera odwołanie do tablicy.
 
 [!code-csharp[csSnippets.Methods#101](../../samples/snippets/csharp/concepts/methods/returnarray1.cs#101)]
 
 <a name="extension"></a>
 
-## <a name="extension-methods"></a>Metody rozszerzenia
+## <a name="extension-methods"></a>Metody rozszerzające
 
-Zazwyczaj istnieją dwa sposoby, aby dodać metodę do istniejącego typu:
+Zwykle istnieją dwa sposoby dodawania metody do istniejącego typu:
 
-- Zmodyfikuj kod źródłowy dla tego typu. Nie możesz tego zrobić, oczywiście, jeśli nie jesteś właścicielem kodu źródłowego typu. I to staje się istotnej zmiany po dodaniu pola danych prywatnych do obsługuje metody.
-- Zdefiniuj nową metodę w klasie pochodnej. Nie można dodać metodę w ten sposób za pomocą dziedziczenia dla innych typów, takie jak struktury i wyliczeń. Nie może on służyć do "Dodaj" metodę do klasy zapieczętowanej.
+- Zmodyfikuj kod źródłowy dla tego typu. Nie można tego zrobić, jeśli nie jesteś własnym kodem źródłowym typu. Jest to istotna zmiana, jeśli dodasz także wszystkie pola danych prywatnych do obsługi metody.
+- Zdefiniuj nową metodę w klasie pochodnej. Nie można dodać metody w ten sposób przy użyciu dziedziczenia dla innych typów, takich jak struktury i wyliczenia. Nie można ich również użyć do dodania metody do klasy zapieczętowanej.
 
-Metody rozszerzenia umożliwiają "Dodawanie" metody do istniejącego typu bez modyfikowania samego typu lub wykonania nowej metody dziedziczonej typu. Metoda rozszerzenia również nie musi znajdować się w tym samym zestawie jako typ, który stanowi rozszerzenie. Wywoływanie metody rozszerzenia, tak jakby był on członkiem zdefiniowanego typu.
+Metody rozszerzające umożliwiają "dodanie" metody do istniejącego typu bez modyfikowania samego typu lub implementowania nowej metody w dziedziczonym typie. Metoda rozszerzająca również nie musi znajdować się w tym samym zestawie, co rozszerza typ. Wywoływana jest metoda rozszerzająca, tak jakby była to zdefiniowana składowa typu.
 
 Aby uzyskać więcej informacji, zobacz [metody rozszerzenia](programming-guide/classes-and-structs/extension-methods.md).
 
@@ -255,28 +255,28 @@ Aby uzyskać więcej informacji, zobacz [metody rozszerzenia](programming-guide/
 
 ## <a name="async-methods"></a>Metody asynchroniczne
 
-Za pomocą funkcji asynchronicznych, można wywoływać metod asynchronicznych, bez za pomocą jawnego wywołania zwrotne lub ręcznego podziału kodu na wielu metod lub wyrażenia lambda.
+Za pomocą funkcji asynchronicznej można wywołać metody asynchroniczne bez używania jawnych wywołań zwrotnych lub ręcznie podzielić kod na wiele metod lub wyrażenia lambda.
 
-Po oznaczeniu metody z [async](language-reference/keywords/async.md) modyfikator, można użyć [await](language-reference/keywords/await.md) operatora w metodzie. Gdy kontrola osiąga `await` wyrażenia w metodzie asynchronicznej, sterowanie powraca do obiektu wywołującego, jeśli oczekiwane zadanie nie zostało ukończone i postęp w danej metody `await` — słowo kluczowe jest wstrzymana, dopóki nie zakończy się oczekiwane zadanie. Kiedy zadanie zostanie ukończone, wykonanie można wznowić w metodzie.
+Jeśli oznaczesz metodę za pomocą modyfikatora [asynchronicznego](language-reference/keywords/async.md) , możesz użyć operatora [await](language-reference/operators/await.md) w metodzie. Gdy kontrolka osiągnie `await` wyrażenie w metodzie asynchronicznej, sterowanie powraca do obiektu wywołującego, jeśli oczekiwane zadanie nie zostało ukończone, a postęp w metodzie `await` ze słowem kluczowym jest zawieszony do momentu zakończenia zadania oczekiwania. Po zakończeniu zadania wykonywanie może zostać wznowione w metodzie.
 
 > [!NOTE]
-> Metoda asynchroniczna zwraca do obiektu wywołującego, po napotkaniu pierwszego oczekiwane obiekt, który nie został jeszcze ukończony lub otrzymuje na końcu metody asynchronicznej, zależnie co nastąpi wcześniej.
+> Metoda asynchroniczna wraca do obiektu wywołującego, gdy napotka on pierwszy oczekujący obiekt, który nie został jeszcze ukończony lub otrzymuje koniec metody asynchronicznej, zależnie od tego, co się dzieje.
 
-Metoda asynchroniczna może mieć typ zwracany <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, lub `void`. `void` Typ zwracany jest używany głównie do definiowania programów obsługi zdarzeń, gdzie `void` jest wymagany typ zwracany. Metoda asynchroniczna, która zwraca `void` nie może być oczekiwany, a obiekt wywołujący metodę zwracającą typ void nie może przechwytywać wyjątków, które metoda wygeneruje. Począwszy od języka C# 7.0, metoda asynchroniczna może mieć [dowolnego typu zwracanego zadania](./whats-new/csharp-7.md#generalized-async-return-types).
+Metoda asynchroniczna może mieć zwracany typ <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, lub `void`. Typ zwracany jest używany głównie do definiowania programów obsługi zdarzeń, `void` gdy wymagany jest typ zwracany. `void` Metoda async zwracająca wartość `void` nie może być oczekiwana, a obiekt wywołujący metodę void nie może przechwytywać wyjątków, które metoda zgłasza. Począwszy od C# 7,0, Metoda asynchroniczna może mieć [dowolny typ zwracany podobne do zadania](./whats-new/csharp-7.md#generalized-async-return-types).
 
-W poniższym przykładzie `DelayAsync` jest to metoda asynchroniczna, która zawiera instrukcję return, która zwraca liczbę całkowitą. Ponieważ jest to metoda asynchroniczna, jego deklaracja metody musi mieć typ zwracany `Task<int>`. Ponieważ typem zwracanym jest `Task<int>`, oceny `await` wyrażenia w `DoSomethingAsync` tworzy liczbą całkowitą, zgodnie z poniższymi `int result = await delayTask` pokazuje instrukcji.
+W poniższym przykładzie `DelayAsync` jest metoda async, która zawiera instrukcję return, która zwraca liczbę całkowitą. Ponieważ jest to Metoda asynchroniczna, jej Deklaracja metody musi być typem `Task<int>`zwracanym. Ponieważ typem zwracanym jest `Task<int>`, obliczanie `await` wyrażenia w `DoSomethingAsync` tworzy liczbę całkowitą, jak pokazano w poniższej `int result = await delayTask` instrukcji.
 
 [!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
 
-Metoda async nie może deklarować [w](language-reference/keywords/in-parameter-modifier.md), [ref](language-reference/keywords/ref.md), lub [się](language-reference/keywords/out-parameter-modifier.md) parametry, ale może wywoływać metody, które mają takie parametry.
+Metoda async nie może deklarować parametrów [in](language-reference/keywords/in-parameter-modifier.md), [ref](language-reference/keywords/ref.md)ani [out](language-reference/keywords/out-parameter-modifier.md) , ale może wywoływać metody, które mają takie parametry.
 
- Aby uzyskać więcej informacji na temat metod asynchronicznych, zobacz [Asynchronous Programming with Async and Await](async.md), [Control Flow in Async Programs](programming-guide/concepts/async/control-flow-in-async-programs.md), i [Async Return Types](programming-guide/concepts/async/async-return-types.md).
+ Aby uzyskać więcej informacji na temat metod asynchronicznych, zobacz [programowanie asynchroniczne z asynchroniczne i oczekujące](async.md), [przepływ sterowania w programach asynchronicznych](programming-guide/concepts/async/control-flow-in-async-programs.md)i [asynchroniczne typy zwracane](programming-guide/concepts/async/async-return-types.md).
 
 <a name="expr"></a>
 
 ## <a name="expression-bodied-members"></a>Składowe z wyrażeniem w treści
 
-Jest to często mają definicje metody, która po prostu zwrócenia natychmiast z wynikiem wyrażenia lub pojedynczą instrukcję jako treść metody, które mają.  Ma składnię skrót do definiowania takich metod za pomocą `=>`:
+Często istnieją definicje metod, które po prostu zwracają bezpośrednio z wynikiem wyrażenia lub które mają pojedynczą instrukcję jako treść metody.  Istnieje skrót do definiowania takich metod przy użyciu `=>`:
 
 ```csharp
 public Point Move(int dx, int dy) => new Point(x + dx, y + dy);
@@ -287,17 +287,17 @@ public string Name => First + " " + Last;
 public Customer this[long id] => store.LookupCustomer(id);
 ```
 
-Jeśli metoda zwraca `void` lub jest to metoda asynchroniczna treści metody musi być wyrażeniem — instrukcja (tak samo jak w przypadku wyrażenia lambda).  Właściwości i indeksatorów, muszą być w trybie tylko do odczytu i nie należy używać `get` akcesor — słowo kluczowe.
+Jeśli metoda zwraca `void` lub jest metodą asynchroniczną, treść metody musi być wyrażeniem instrukcji (analogicznie jak w przypadku wyrażeń lambda).  W przypadku właściwości i indeksatorów muszą one być tylko do odczytu i nie można używać `get` słowa kluczowego metody dostępu.
 
 <a name="iterators"></a>
 
 ## <a name="iterators"></a>Iteratory
 
-Iterator wykonuje niestandardowych iteracji w kolekcji, takie jak listy lub tablicy. Używa iteratora [yield return](language-reference/keywords/yield.md) instrukcja zwraca każdy element w danym momencie. Gdy `yield return` osiągnięciu instrukcji bieżącą lokalizację zapamiętywane jest tak, aby obiekt wywołujący może żądać następnego elementu w sekwencji.
+Iterator wykonuje niestandardową iterację w kolekcji, na przykład listę lub tablicę. Iterator używa instrukcji [yield return](language-reference/keywords/yield.md) , aby zwrócić każdy element po jednym naraz. Po osiągnięciu `yield return` instrukcji zostanie zapamiętana bieżąca lokalizacja, aby obiekt wywołujący mógł zażądać następnego elementu w sekwencji.
 
-Zwracany typ iteratora, może być <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, lub <xref:System.Collections.Generic.IEnumerator%601>.
+Zwracany typ iteratora <xref:System.Collections.IEnumerable>może mieć wartość, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, lub <xref:System.Collections.Generic.IEnumerator%601>.
 
-Aby uzyskać więcej informacji, zobacz [Iteratory](programming-guide/concepts/iterators.md).
+Aby uzyskać więcej informacji, [](programming-guide/concepts/iterators.md)zobacz Iteratory.
 
 ## <a name="see-also"></a>Zobacz także
 

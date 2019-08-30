@@ -4,12 +4,12 @@ description: Poznaj koncepcje testów jednostkowych w oprogramowaniu .NET Core z
 author: rprouse
 ms.date: 10/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: 84287a94504594c731c0fbccf2e61a957a15a36f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7563fe12d1e3637a737c5472dbf8d64d163a3feb
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626401"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168213"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Testowanie jednostkowe Visual Basic biblioteki .NET Core przy użyciu testu dotnet i NUnit
 
@@ -30,7 +30,7 @@ dotnet new sln
 
 Następnie Utwórz katalog *PrimeService* . Poniższy konspekt przedstawia strukturę plików do tej pory:
 
-```
+```console
 /unit-testing-vb-nunit
     unit-testing-vb-nunit.sln
     /PrimeService
@@ -66,7 +66,7 @@ dotnet sln add .\PrimeService\PrimeService.vbproj
 
 Następnie Utwórz katalog *PrimeService. Tests* . Poniższy konspekt przedstawia strukturę katalogów:
 
-```
+```console
 /unit-testing-vb-nunit
     unit-testing-vb-nunit.sln
     /PrimeService
@@ -95,7 +95,7 @@ Cały plik można zobaczyć w [repozytorium Samples](https://github.com/dotnet/s
 
 Dysponujesz następującym końcowym układem rozwiązań:
 
-```
+```console
 /unit-testing-vb-nunit
     unit-testing-vb-nunit.sln
     /PrimeService

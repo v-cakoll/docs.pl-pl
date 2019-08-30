@@ -8,21 +8,21 @@ helpviewer_keywords:
 - providerOptions
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
-ms.openlocfilehash: 37f4d8c5eeacd82f8fc37179c478d026ca25f459
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 8d90364e34aa15bbd38e82ec70ec44616d7360f8
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664303"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167669"
 ---
 # <a name="provideroption-element"></a>\<providerOption, element >
 Określa atrybuty wersji kompilatora dla dostawcy języka.  
   
- \<> elementu konfiguracji  
-\<system.codedom Element>  
-\<Element kompilatorów >  
-\<compiler> Element  
-\<providerOption, element >  
+[ **\<> konfiguracji**](../configuration-element.md)  
+&nbsp;&nbsp;[ **\<> System. CodeDom**](system-codedom-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<kompilatory >** ](compilers-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> kompilatora**](compiler-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<providerOption >**  
   
 ## <a name="syntax"></a>Składnia  
   

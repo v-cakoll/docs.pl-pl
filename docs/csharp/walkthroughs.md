@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: 0c666d62c21d3e4f7b1041c1d5360ac43d2cf03f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e70d2b708eefa9762bef15403a63b2a908f7a149
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587060"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168966"
 ---
 # <a name="c-walkthroughs"></a>C# — wskazówki
 Instruktaże zawierają instrukcje krok po kroku dla typowych scenariuszy, co sprawia, że jest dobrym miejscem do rozpoczęcia uczenia się dotyczącej produktu lub określonego obszaru funkcji.  
@@ -21,7 +21,7 @@ Instruktaże zawierają instrukcje krok po kroku dla typowych scenariuszy, co sp
 ## <a name="in-this-section"></a>W tej sekcji  
 
  [Uzyskiwanie dostępu do sieci Web za pomocą Async i await](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- Pokazuje, jak utworzyć rozwiązanie asynchroniczne przy użyciu [Async](./language-reference/keywords/async.md) i [await](./language-reference/keywords/await.md).  
+ Pokazuje, jak utworzyć rozwiązanie asynchroniczne przy użyciu [Async](./language-reference/keywords/async.md) i [await](./language-reference/operators/await.md).  
   
  [Tworzenie składnika środowisko wykonawcze systemu Windows w programie C# lub Visual Basic i wywoływanie go przy użyciu języka JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
  Pokazuje, jak utworzyć typ środowisko wykonawcze systemu Windows, spakować go w składniku środowisko wykonawcze systemu Windows, a następnie wywołać składnik z [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplikacji skompilowanej dla systemu Windows przy użyciu języka JavaScript.  

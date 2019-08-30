@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 47a1d38c-fe9c-44aa-bd15-937bd5659b0b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 044e726a1c668335780fe3d4322fbce83d8dcbba
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 6f57c0e2098cbd73edc34f34ba6e309bbf68fac9
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666363"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167931"
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Instrukcje: Implementowanie wzorca przepływu danych producent — konsument
 W tym dokumencie opisano sposób użycia biblioteki TPL przepływu danych do wdrożenia wzorca producenta. W tym wzorcu *producent* wysyła komunikaty do bloku komunikatów, a *konsument* odczytuje komunikaty z tego bloku.  
@@ -27,7 +27,7 @@ W tym dokumencie opisano sposób użycia biblioteki TPL przepływu danych do wdr
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano podstawowy model konsumencki-konsumenta, który używa przepływu danych. Metoda zapisuje tablice zawierające losowe bajty danych <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> do obiektu, a `Consume` Metoda odczytuje bajty z <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType> obiektu. `Produce` Działając na <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> interfejsach i <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> zamiast ich typach pochodnych można napisać kod wielokrotnego użytku, który może działać na różnych typach bloków przepływu danych. W <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> tym przykładzie używa klasy. <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> Ponieważ Klasa działa jako blok źródłowy i jako blok docelowy, producent i odbiorca mogą używać obiektu udostępnionego do transferowania danych.  
   
- `Produce` Metoda<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> wywołuje metodę w pętli, aby synchronicznie zapisywać dane w bloku docelowym. Gdy metoda zapisuje wszystkie dane w bloku docelowym, <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> wywołuje metodę, aby wskazać, że blok nigdy nie będzie miał dostępnych dodatkowych danych. `Produce` <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> [](../../visual-basic/language-reference/operators/await-operator.md) [](../../csharp/language-reference/keywords/async.md) [](../../visual-basic/language-reference/modifiers/async.md) [](../../csharp/language-reference/keywords/await.md) Metoda używa operatorów Async i Await (Async i await w Visual Basic), aby asynchronicznie obliczyć łączną liczbę bajtów odebranych z obiektu. `Consume` Aby działać asynchronicznie, `Consume` metoda wywołuje metodę <xref:System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync%2A> , aby otrzymać powiadomienie, gdy blok źródłowy ma dostępne dane i gdy blok źródłowy nigdy nie będzie miał dodatkowych dostępnych danych.  
+ `Produce` Metoda<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> wywołuje metodę w pętli, aby synchronicznie zapisywać dane w bloku docelowym. Gdy metoda zapisuje wszystkie dane w bloku docelowym, <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> wywołuje metodę, aby wskazać, że blok nigdy nie będzie miał dostępnych dodatkowych danych. `Produce` <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> [](../../visual-basic/language-reference/operators/await-operator.md) [](../../csharp/language-reference/keywords/async.md) [](../../visual-basic/language-reference/modifiers/async.md) [](../../csharp/language-reference/operators/await.md) Metoda używa operatorów Async i Await (Async i await w Visual Basic), aby asynchronicznie obliczyć łączną liczbę bajtów odebranych z obiektu. `Consume` Aby działać asynchronicznie, `Consume` metoda wywołuje metodę <xref:System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync%2A> , aby otrzymać powiadomienie, gdy blok źródłowy ma dostępne dane i gdy blok źródłowy nigdy nie będzie miał dodatkowych dostępnych danych.  
   
  [!code-csharp[TPLDataflow_ProducerConsumer#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_producerconsumer/cs/dataflowproducerconsumer.cs#1)]
  [!code-vb[TPLDataflow_ProducerConsumer#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_producerconsumer/vb/dataflowproducerconsumer.vb#1)]  

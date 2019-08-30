@@ -6,12 +6,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 0ec741d085ca52d52999d2e10cf5f687cc885219
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c50d9e8db2668f2138653858e42b8ed07d3e1e9
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921792"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168953"
 ---
 # <a name="statements-c-programming-guide"></a>Instrukcje (Przewodnik programowania w języku C#)
 Akcje podejmowane przez program są wyrażone w instrukcjach. Typowe akcje obejmują deklarowanie zmiennych, przypisywanie wartości, wywoływanie metod, zapętlenie za pomocą kolekcji i rozgałęzianie do jednego lub innego bloku kodu, w zależności od danego warunku. Kolejność, w której instrukcje są wykonywane w programie, nazywa się przepływem sterowania lub przepływu wykonania. Przepływ sterowania może się różnić przy każdym uruchomieniu programu, w zależności od tego, jak program reaguje na dane wejściowe w czasie wykonywania.  
@@ -32,7 +32,7 @@ Akcje podejmowane przez program są wyrażone w instrukcjach. Typowe akcje obejm
 |Instrukcje skoku|Przeskocz kontrolę transferu do innej sekcji kodu. Więcej informacji znajduje się w następujących tematach:<br /><br /> [Break](../../language-reference/keywords/break.md), [Continue](../../language-reference/keywords/continue.md), [default](../../language-reference/keywords/switch.md), [goto](../../language-reference/keywords/goto.md), [Return](../../language-reference/keywords/return.md), [Yield](../../language-reference/keywords/yield.md)|  
 |Instrukcje obsługi wyjątków|Instrukcje obsługi wyjątków umożliwiają bezpieczne odzyskiwanie z wyjątkowych warunków występujących w czasie wykonywania. Więcej informacji znajduje się w następujących tematach:<br /><br /> [throw](../../language-reference/keywords/throw.md), [try-catch](../../language-reference/keywords/try-catch.md), [try-finally](../../language-reference/keywords/try-finally.md), [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)|  
 |[Zaznaczone i niezaznaczone](../../language-reference/keywords/checked-and-unchecked.md)|Instrukcje sprawdzone i niesprawdzone umożliwiają określenie, czy operacje numeryczne mogą spowodować przepełnienie, gdy wynik jest przechowywany w zmiennej, która jest zbyt mała, aby pomieścić wynikową wartość. Aby uzyskać więcej informacji, zobacz [zaznaczone](../../language-reference/keywords/checked.md) i [niezaznaczone](../../language-reference/keywords/unchecked.md).|  
-|`await` Instrukcja|Jeśli oznaczesz metodę za pomocą modyfikatora [asynchronicznego](../../language-reference/keywords/async.md) , możesz użyć operatora [await](../../language-reference/keywords/await.md) w metodzie. Gdy kontrolka osiągnie `await` wyrażenie w metodzie asynchronicznej, sterowanie powraca do obiektu wywołującego, a postęp w metodzie jest zawieszony do momentu zakończenia zadania oczekiwania. Po zakończeniu zadania wykonywanie może zostać wznowione w metodzie.<br /><br /> Aby zapoznać się z prostym przykładem, zobacz sekcję "metody asynchroniczne" w temacie [metody](../classes-and-structs/methods.md). Aby uzyskać więcej informacji, zobacz [programowanie asynchroniczne z Async i await](../concepts/async/index.md).|  
+|`await` Instrukcja|Jeśli oznaczesz metodę za pomocą modyfikatora [asynchronicznego](../../language-reference/keywords/async.md) , możesz użyć operatora [await](../../language-reference/operators/await.md) w metodzie. Gdy kontrolka osiągnie `await` wyrażenie w metodzie asynchronicznej, sterowanie powraca do obiektu wywołującego, a postęp w metodzie jest zawieszony do momentu zakończenia zadania oczekiwania. Po zakończeniu zadania wykonywanie może zostać wznowione w metodzie.<br /><br /> Aby zapoznać się z prostym przykładem, zobacz sekcję "metody asynchroniczne" w temacie [metody](../classes-and-structs/methods.md). Aby uzyskać więcej informacji, zobacz [programowanie asynchroniczne z Async i await](../concepts/async/index.md).|  
 |`yield return` Instrukcja|Iterator wykonuje niestandardową iterację w kolekcji, na przykład listę lub tablicę. Iterator używa instrukcji [yield return](../../language-reference/keywords/yield.md) , aby zwrócić każdy element po jednym naraz. Po osiągnięciu `yield return` instrukcji zostanie zapamiętana bieżąca lokalizacja w kodzie. Wykonanie jest uruchamiane ponownie z tej lokalizacji, kiedy iterator jest wywoływana następnym razem.<br /><br /> Aby uzyskać więcej informacji, [](../concepts/iterators.md)zobacz Iteratory.|  
 |`fixed` Instrukcja|Stała instrukcja uniemożliwia ponowne lokalizowanie ruchomej zmiennej przez moduł wyrzucania elementów bezużytecznych. Aby uzyskać więcej informacji, zobacz [FIXED](../../language-reference/keywords/fixed-statement.md).|  
 |`lock` Instrukcja|Instrukcja lock umożliwia ograniczenie dostępu do bloków kodu tylko do jednego wątku naraz. Aby uzyskać więcej informacji, zobacz [Blokada](../../language-reference/keywords/lock-statement.md).|  

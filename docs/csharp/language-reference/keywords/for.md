@@ -1,5 +1,5 @@
 ---
-title: C# for, instrukcja
+title: C#for — instrukcja
 ms.date: 06/13/2018
 f1_keywords:
 - for
@@ -7,87 +7,87 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: a0252493ffd251b8d760927345c71e2f5ef55aaa
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 61315a04ca8d5a619a3dcaf43b15a309919d3c42
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401521"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167870"
 ---
-# <a name="for-c-reference"></a>Aby uzyskać (odwołanie w C#)
+# <a name="for-c-reference"></a>for (C# odwołanie)
 
-`for` Instrukcji wykonuje instrukcję lub blok instrukcji, gdy określone wyrażenie logiczne, które daje w wyniku `true`.
+Instrukcja wykonuje instrukcję lub blok instrukcji, gdy określone wyrażenie logiczne zwraca wartość `true`. `for`
 
-W dowolnym punkcie w `for` blok instrukcji, można zerwać pętlę za pomocą [podziału](break.md) instrukcji lub krok do następnej iteracji w pętli za pomocą [nadal](continue.md) instrukcji. Możesz również wyjść `for` pętli przez [przejdź do](goto.md), [zwracają](return.md), lub [throw](throw.md) instrukcji.
+W dowolnym momencie w `for` bloku instrukcji można przerwać pętlę przy użyciu instrukcji [Break](break.md) lub przejść do następnej iteracji w pętli przy użyciu instrukcji [Continue](continue.md) . `for` Możesz również wyjść z pętli przez instrukcje [goto](goto.md), [Return](return.md)lub [throw](throw.md) .
 
-## <a name="structure-of-the-for-statement"></a>Struktura `for` — instrukcja
+## <a name="structure-of-the-for-statement"></a>`for` Struktura instrukcji
 
-`for` Instrukcja definiuje *inicjatora*, *warunek*, i *iteratora* sekcje:
+Instrukcja definiuje *inicjator*, *warunek*i sekcje iteratora: `for`
 
 ```csharp
 for (initializer; condition; iterator)
     body
 ```
 
-Wszystkie trzy sekcje są opcjonalne. Treść pętli jest instrukcję lub blok instrukcji.
+Wszystkie trzy sekcje są opcjonalne. Treść pętli jest instrukcją lub blokiem instrukcji.
 
-W poniższym przykładzie przedstawiono `for` instrukcję, określając wszystkie sekcje zdefiniowane:
+Poniższy przykład pokazuje `for` instrukcję ze wszystkimi zdefiniowanymi sekcjami:
 
 [!code-csharp-interactive[for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#5)]
 
-### <a name="the-initializer-section"></a>*Inicjatora* sekcji
+### <a name="the-initializer-section"></a>Sekcja *inicjatora*
 
-Instrukcje w *inicjatora* sekcji są wykonywane tylko raz, przed wprowadzeniem pętli. *Inicjatora* sekcja jest jedną z następujących czynności:
+Instrukcje w sekcji *inicjatora* są wykonywane tylko raz, przed wprowadzeniem pętli. Sekcja *inicjatora* jest jedną z następujących czynności:
 
-- Deklaracji i inicjowania zmiennej lokalnej, co nie jest dostępny z zewnątrz pętli.
+- Deklaracja i inicjalizacja zmiennej pętli lokalnej, do której nie można uzyskać dostępu spoza pętli.
 
-- Zero lub więcej wyrażenia instrukcji z następującej listy, rozdzielonych przecinkami:
+- Zero lub więcej wyrażeń instrukcji z następującej listy oddzielonych przecinkami:
 
-  - [Przypisanie](../operators/assignment-operator.md) — instrukcja
+  - instrukcja [przypisania](../operators/assignment-operator.md)
 
-  - Wywołanie metody
+  - wywołanie metody
 
-  - Wstawianie prefiksu lub przyrostkowe [przyrostu](../operators/arithmetic-operators.md#increment-operator-) wyrażenie, takie jak `++i` lub `i++`
+  - wyrażenie przyrostu [](../operators/arithmetic-operators.md#increment-operator-) prefiksu lub przyrostkowego `++i` , takie jak lub`i++`
 
-  - Wstawianie prefiksu lub przyrostkowe [dekrementacji](../operators/arithmetic-operators.md#decrement-operator---) wyrażenie, takie jak `--i` lub `i--`
+  - wyrażenie lub [zmniejszanie](../operators/arithmetic-operators.md#decrement-operator---) przyrostowe, takie `--i` jak lub`i--`
 
-  - Tworzenie obiektu za pomocą [nowe](../operators/new-operator.md) — operator
+  - Tworzenie obiektu za pomocą operatora [New](../operators/new-operator.md)
 
-  - [await](await.md) wyrażenia
+  - wyrażenie [await](../operators/await.md)
 
-*Inicjatora* sekcji w powyższym przykładzie deklaruje i inicjuje zmienną lokalnej `i`:
+Sekcja *inicjatora* w powyższym przykładzie deklaruje i inicjuje zmienną `i`pętli lokalnej:
 
 ```csharp
 int i = 0
 ```
 
-### <a name="the-condition-section"></a>*Warunek* sekcji
+### <a name="the-condition-section"></a>Sekcja *warunku*
 
-*Warunek* sekcji, jeśli jest obecna, musi być wyrażenie logiczne. To wyrażenie jest oceniane przed każdą iteracją pętli. Jeśli *warunek* sekcja nie istnieje lub wyrażenie logiczne, które daje w wyniku `true`, następnej iteracji pętli wykonane; w przeciwnym razie, pętla zostanie zakończone.
+Sekcja *warunku* , jeśli jest obecna, musi być wyrażeniem logicznym. To wyrażenie jest oceniane przed każdą iteracją pętli. Jeśli sekcja *Condition* nie istnieje lub wyrażenie logiczne zwraca `true`wartość, wykonywana jest iteracja następnej pętli. w przeciwnym razie pętla zostanie zakończona.
 
-*Warunek* określa sekcji w powyższym przykładzie, jeśli pętla kończy się na podstawie wartości zmiennej lokalnej:
+Sekcja *warunek* w powyższym przykładzie określa, czy pętla kończy się na podstawie wartości zmiennej pętli lokalnej:
 
 ```csharp
 i < 5
 ```
 
-### <a name="the-iterator-section"></a>*Iteratora* sekcji
+### <a name="the-iterator-section"></a>Sekcja *iteratora*
 
-*Iteratora* sekcja definiuje, co się dzieje po każdej iteracji w treści pętli. *Iteratora* sekcja zawiera zero lub więcej z następujących wyrażeń instrukcji, oddzielonych przecinkami:
+Sekcja *iterator* definiuje, co się stanie po każdej iteracji treści pętli. Sekcja *iteratora* zawiera zero lub więcej następujących wyrażeń instrukcji, rozdzielonych przecinkami:
 
-- [Przypisanie](../operators/assignment-operator.md) — instrukcja
+- instrukcja [przypisania](../operators/assignment-operator.md)
 
-- Wywołanie metody
+- wywołanie metody
 
-- Wstawianie prefiksu lub przyrostkowe [przyrostu](../operators/arithmetic-operators.md#increment-operator-) wyrażenie, takie jak `++i` lub `i++`
+- wyrażenie przyrostu [](../operators/arithmetic-operators.md#increment-operator-) prefiksu lub przyrostkowego `++i` , takie jak lub`i++`
 
-- Wstawianie prefiksu lub przyrostkowe [dekrementacji](../operators/arithmetic-operators.md#decrement-operator---) wyrażenie, takie jak `--i` lub `i--`
+- wyrażenie lub [zmniejszanie](../operators/arithmetic-operators.md#decrement-operator---) przyrostowe, takie `--i` jak lub`i--`
 
-- Tworzenie obiektu za pomocą [nowe](../operators/new-operator.md) — operator
+- Tworzenie obiektu za pomocą operatora [New](../operators/new-operator.md)
 
-- [await](await.md) wyrażenia
+- wyrażenie [await](../operators/await.md)
 
-*Iteratora* sekcji w powyższym przykładzie zwiększa zmiennej lokalnej:
+Sekcja *iterator* w powyższym przykładzie zwiększa zmienną pętli lokalnej:
 
 ```csharp
 i++
@@ -95,17 +95,17 @@ i++
 
 ## <a name="examples"></a>Przykłady
 
-W poniższym przykładzie pokazano kilka mniej typowe sposoby użycia `for` sekcje instrukcji: przypisywanie wartości do zmiennej w zewnętrznej pętli *inicjatora* sekcji wywołania metody w obu  *Inicjator* i *iteratora* sekcje i zmianę wartości dwóch zmiennych w *iteratora* sekcji. Wybierz **Uruchom** do uruchamiania kodu przykładu. Po tym można zmodyfikować kod i uruchom go ponownie.
+Poniższy przykład ilustruje kilka mniej typowych zastosowań `for` sekcji instrukcji: Przypisywanie wartości do zmiennej pętli zewnętrznej w sekcji *inicjatora* , wywoływanie metody w *inicjatorze* i *iterator* i zmiana wartości dwóch zmiennych w sekcji *iterator* . Wybierz pozycję **Uruchom** , aby uruchomić przykładowy kod. Następnie można zmodyfikować kod i uruchomić go ponownie.
 
 [!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
 
-W poniższym przykładzie zdefiniowano nieskończone `for` Pętla:
+W poniższym przykładzie zdefiniowano pętlę nieskończoną `for` :
 
 [!code-csharp[infinite for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#7)]
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz [dla instrukcji](~/_csharplang/spec/statements.md#the-for-statement) części [ C# specyfikacji języka](../language-specification/index.md).
+Aby uzyskać więcej informacji, zobacz sekcję [dotyczącą instrukcji](~/_csharplang/spec/statements.md#the-for-statement) [ C# języka](../language-specification/index.md).
 
 ## <a name="see-also"></a>Zobacz także
 

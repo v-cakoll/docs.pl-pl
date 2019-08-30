@@ -2,12 +2,12 @@
 title: 'Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą AsyncC#i Await ()'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 986f3985783c6ae941d437fe557998f67557f5af
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0c80bb079e66a56d6bbc30ba43269aee7ac4ab5b
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595511"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168351"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą AsyncC#i Await ()
 
@@ -237,7 +237,7 @@ Należy zauważyć, że wyświetlanie liczników zajmuje kilka sekund. W tym cza
 
 2. `GetResponseAsync`Zwraca wartość <xref:System.Threading.Tasks.Task%601>. W takim przypadku `TResult` *zmienna zwracająca zadanie*,, ma typ. <xref:System.Net.WebResponse> Zadanie to obietnica do utworzenia rzeczywistego `WebResponse` obiektu po pobraniu żądanych danych, a zadanie zostało wykonane w celu ukończenia.
 
-     Aby pobrać `WebResponse` wartość z zadania, Zastosuj operator [await](../../../language-reference/keywords/await.md) `GetResponseAsync`do wywołania, jak pokazano w poniższym kodzie.
+     Aby pobrać `WebResponse` wartość z zadania, Zastosuj operator [await](../../../language-reference/operators/await.md) `GetResponseAsync`do wywołania, jak pokazano w poniższym kodzie.
 
     ```csharp
     using (WebResponse response = await webReq.GetResponseAsync())
@@ -692,7 +692,7 @@ namespace AsyncExampleWPF
 
 - [Przykład asynchroniczny: Uzyskiwanie dostępu do przewodnika sieci Web (C# i Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [async](../../../language-reference/keywords/async.md)
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 - [Programowanie asynchroniczne z Async i Await (C#)](./index.md)
 - [Asynchroniczne typy zwracane (C#)](./async-return-types.md)
 - [Programowanie asynchroniczne oparte na zadaniach (TAP)](https://www.microsoft.com/download/details.aspx?id=19957)

@@ -1,66 +1,66 @@
 ---
-title: Programowanie asynchroniczne w języku C#
-description: Omówienie C# Obsługa języków programowania asynchronicznego przy użyciu async, operator await, zadań i zadań<T>
+title: Programowanie asynchroniczne wC#
+description: Omówienie C# obsługi programowania asynchronicznego przy użyciu asynchronicznych, oczekujących, zadań i zadań<T>
 ms.date: 03/18/2019
-ms.openlocfilehash: a306ff75357f9f61ec9b086485472d99de5ad083
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 4ed48a2e74dde5ae0f24ebd680ace133e05e15d4
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307126"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167893"
 ---
-# <a name="the-task-asynchronous-programming-model-in-c"></a>Zadania asynchronicznego modelu programowania w języku C\#
+# <a name="asynchronous-programming-with-async-and-await"></a>Programowanie asynchroniczne z Async i await
 
-Z zadań modelu programowania asynchronicznego (TAP) udostępnia abstrakcję za pośrednictwem kodu asynchronicznego. Pisanie kodu jako sekwencja instrukcji, tak jak zawsze. Możesz przeczytać ten kod tak, jakby każda instrukcja kończy się przed rozpoczęciem następnego. Kompilator wykonuje szereg przekształcenia, ponieważ niektóre z tych instrukcji może rozpocząć pracę i zwracają <xref:System.Threading.Tasks.Task> reprezentujący pracy w toku.
+Model programowania asynchronicznego zadania (TAP) zawiera streszczenie w porównaniu z kodem asynchronicznym. Napiszesz kod jako sekwencję instrukcji, tak jak zawsze. Można odczytać ten kod, tak jakby każda instrukcja została zakończona przed rozpoczęciem następnego. Kompilator wykonuje szereg transformacji, ponieważ niektóre z tych instrukcji mogą zacząć pracę i zwrócić <xref:System.Threading.Tasks.Task> , która reprezentuje bieżącą pracę.
 
-Jest celem tej składni: Włącz kod odczytuje np. sekwencja instrukcji, ale jest wykonywany w kolejności dużo bardziej skomplikowany, oparte na alokacji zasobów zewnętrznych, a po zakończeniu zadania. Jest to analogiczne jak osoby wskazówki dotyczące procesów, które obejmuje zadań asynchronicznych. W tym artykule użyjemy przykładowe instrukcje dokonywania śniadanie, aby zobaczyć, jak `async` i `await` słowa kluczowe ułatwiają przeglądanie informacji o kod, który zawiera szereg instrukcji asynchronicznego. Możesz napisać instrukcje podobną do poniższej liście, aby wyjaśnić, jak śniadanie:
+Jest to cel tej składni: Włącz kod, który odczytuje się jak sekwencja instrukcji, ale wykonuje się w znacznie bardziej skomplikowanej kolejności na podstawie zewnętrznej alokacji zasobów i po zakończeniu zadań. Jest to analogiczne do sposobu, w jaki ludzie udostępniają instrukcje dotyczące procesów zawierających zadania asynchroniczne. W tym artykule przedstawiono przykład instrukcji służących do nawiązywania śniadania, aby zobaczyć, `async` jak słowa kluczowe i `await` ułatwiają powód dla kodu, który zawiera szereg instrukcji asynchronicznych. Napiszesz instrukcje podobne do poniższej listy, aby wyjaśnić, jak utworzyć śniadanie:
 
-1. Umieścić napić się kawy.
-1. Cieplnej się pan, a następnie FRJ potrawach dwa.
-1. FRJ trzy wycinki bekon.
-1. Wyskakujące dwóch rodzajów chleb.
-1. Dodaj masła i zakleszczenie do wyskakującego powiadomienia.
-1. Umieścić szkła soku pomarańczowego.
+1. Wlać filiżankę kawy.
+1. Podgrzewaj panoramę, a następnie przefrj dwie jaja.
+1. Narybka trzy wycinki Bacon.
+1. Wyskakujące dwa elementy chleba.
+1. Dodaj masło i dżem do wyskakującego powiadomienia.
+1. Wlać szklany sok pomarańczowy.
 
-W przypadku korzystania z gotowania może wykonać te instrukcje **asynchronicznie**. czy start ciepły pan dla potrawach, a następnie uruchomić bekon. Czy umieścić chleb w tostera, a następnie uruchomić potrawach. W każdym kroku procesu można będzie uruchomić zadanie, a następnie zwrócić uwagę na zadania, które są gotowe do Twojej uwagi.
+W przypadku korzystania z funkcji gotowania należy wykonać te instrukcje asynchronicznie. Zaczniesz rozgrzewać panoramy dla jaj, a następnie uruchomić Bacon. Należy umieścić chleb w wyskakującym, a następnie rozpocząć jaja. W każdym kroku procesu należy uruchomić zadanie, a następnie zwrócić uwagę na zadania, które są gotowe do Twojej uwagi.
 
-Gotowania śniadanie jest dobrym przykładem pracę asynchroniczną, która nie jest równoległe. Jedna osoba (lub wątek) może obsługiwać te zadania. Trwając w sposób analogiczny śniadanie, jedna osoba ułatwia śniadanie asynchronicznie przez uruchomienie kolejnego przed ukończeniem pierwszego. Gotowania w miarę czy ktoś obserwuje go. Zaraz po uruchomieniu ciepły pan dla potrawach, możesz rozpocząć smażeniu bekon. Po rozpoczęciu bekon można umieścić chleb w tostera.
+Śniadanie gotowania jest dobrym przykładem asynchronicznej pracy, która nie jest równoległa. Jedna osoba (lub wątek) może obsłużyć wszystkie te zadania. W przypadku kontynuowania nieprzerwanego śniadania jedna osoba może napełnić proces, rozpoczynając następne zadanie przed pierwszym zakończeniem. Postęp gotowania niezależnie od tego, czy ktoś ją ogląda. Gdy tylko zaczniesz rozgrzewać kadrowanie dla jaj, możesz zacząć Frying Bacon. Po rozpoczęciu Bacon można umieścić chleb w wyskakującym pasku.
 
-Dla algorytmu równoległego będziesz potrzebować wielu kucharzy (lub wątki). Jeden czyniłyby potrawach, jeden bekon, i tak dalej. Każdy z nich będzie koncentrować się na wystarczy, że jedno zadanie. Każdy Cooka (lub wątek) zostałby zablokowany synchronicznie oczekuje bekon gotowość do przerzucenia lub wyskakujące przeskoczyć do. 
+Dla algorytmu równoległego potrzebna jest wiele Cooka (lub wątków). Jedna z nich spowoduje, że jaja, jeden z Bacon i tak dalej. Każdy z nich będzie koncentrować się tylko na jednym zadaniu. Każdy Cooka (lub wątek) zostałby zablokowany synchronicznie, oczekując na Bacon w celu przerzucenia lub wyskakującego okienka. 
 
-Teraz należy wziąć pod uwagę te tych samych instrukcji, zapisywane jako C# instrukcji:
+Teraz Rozważ te same instrukcje, które zostały C# wpisane jako instrukcje:
 
 [!code-csharp[SynchronousBreakfast](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-starter/Program.cs#Main)]
 
-Komputery nie interpretuje tych instrukcji, co zrobić z tymi samymi osobami sposób. Komputer będzie blokować na każdej instrukcji, przed zakończeniem pracy przed przejściem do następnej instrukcji. Tworząca unsatisfying śniadanie. Nie można uruchomić kolejnych zadaniach, aż do zakończenia miał wcześniej zadania. Zajęłoby znacznie dłużej w celu utworzenia śniadanie, a niektóre elementy będą stają się coraz zimnych przed obsługiwanych. 
+Komputery nie interpretują tych instrukcji w taki sam sposób jak ludzie. Komputer będzie blokować każdą instrukcję do momentu zakończenia pracy przed przejściem do następnej instrukcji. Spowoduje to utworzenie niespełniającego śniadania. Późniejsze zadania nie zostaną uruchomione do momentu ukończenia wcześniejszych zadań. Utworzenie śniadania może zająć dużo czasu, a niektóre elementy byłyby na zimno przed rozpoczęciem. 
 
-Jeśli chcesz, aby komputer asynchroniczne wykonywanie instrukcje powyżej, należy napisać kod asynchroniczny.
+Jeśli chcesz, aby komputer wykonywał powyższe instrukcje asynchronicznie, musisz napisać kod asynchroniczny.
 
-Te rozważania są ważne dla programów, które piszesz już dziś. Podczas pisania programów klienckich ma interfejsu użytkownika, aby reagować na dane wejściowe użytkownika. Aplikacja nie powinna upewnij telefonu sprawiać wrażenie podczas pobierania danych z sieci web. Podczas pisania programów serwera, które nie mają zablokowane wątki. Te wątki mogą obsługująca innych żądań. Przy użyciu kodu synchronicznego, gdy asynchronicznych rozwiązań alternatywnych istnieją dobrze jest możliwość skalowania w poziomie mniej opracowanego. Płacisz za tych zablokowane wątki.
+Te zagadnienia są ważne w przypadku programów, które można napisać dzisiaj. Podczas pisania programów klienckich, interfejs użytkownika ma reagować na dane wejściowe użytkownika. Twoja aplikacja nie powinna sprawiać, że telefon jest zamrożony podczas pobierania danych z sieci Web. W przypadku pisania programów serwerowych nie ma możliwości blokowania wątków. Te wątki mogą obsługiwać inne żądania. Użycie kodu synchronicznego, gdy istnieje asynchroniczna alternatywa, powoduje, że skalowanie w poziomie jest tańsze. Płacisz za te zablokowane wątki.
 
-Pomyślne nowoczesne aplikacje wymagają kodu asynchronicznego. Bez obsługi języka kodu asynchronicznego zapisywać wywołań zwrotnych, zakończenia zdarzenia lub inne oznacza, że zostanie przesłonięty, oryginalnym celem kodu. Zaletą synchroniczny kod jest ona łatwa do zrozumienia. Akcje krok po kroku ułatwiają przeskanować i zrozumieć. Tradycyjne modelami asynchronicznymi wymuszone możesz skoncentrować się na asynchroniczne rodzaj kodu, a nie na podstawowe działania kodu.
+Pomyślne aplikacje Modern wymagają kodu asynchronicznego. Bez obsługi języka, pisania asynchronicznie wymaganego kodu wywołania zwrotne, zdarzenia ukończenia lub inne oznacza, że zasłania pierwotny cel kodu. Zaletą kodu synchronicznego jest łatwość zrozumienia. Akcje krok po kroku ułatwiają skanowanie i zrozumienie. Tradycyjne modele asynchroniczne zmuszają do skoncentrowania się na asynchronicznym charakterze kodu, a nie na podstawowych działaniach kodu.
 
-## <a name="dont-block-await-instead"></a>Nie blokuj, zamiast tego await
+## <a name="dont-block-await-instead"></a>Nie blokuj, await zamiast
 
-Poprzedni kod pokazuje złym zwyczajem: konstruowanie synchroniczny kod w celu wykonywania operacji asynchronicznej. W ten kod blokuje wątku, ale wykonanie go z innymi dostawcami. Nie były wyświetlane, gdy dowolne zadania są w toku. Jest tak, jakby stared na tostera po umieszczenie chleb w. Czy można zignorować każdy rozmawiając aż wyskakujące zdjęte ze stosu. 
+Powyższy kod demonstruje niewłaściwe rozwiązanie: konstruowanie kodu synchronicznego do wykonywania operacji asynchronicznych. Zgodnie z zapisaniem ten kod blokuje wątek wykonujący go przez wykonywanie innych czynności. Nie zostanie ona przerwana, gdy jakieś zadania są w toku. Po wprowadzeniu chleba na wyskakującym pasku jest to możliwe. Dowiesz się, jak wszyscy rozmawiają z Twoim zdjęte. 
 
-Zacznijmy od, aktualizując ten kod, tak aby nie blokuje wątku, podczas wykonywania zadania. `await` — Słowo kluczowe umożliwia nieblokującej na poziomie uruchomić zadanie, a następnie kontynuuj wykonywanie po zakończeniu tego zadania. Prosta wersja asynchronicznego wykonującego kodu śniadanie będzie wyglądać poniższy fragment kodu:
+Zacznijmy od zaktualizowania tego kodu, aby wątek nie zablokuje wykonywania zadań. `await` Słowo kluczowe zapewnia nieblokujący sposób uruchamiania zadania, a następnie kontynuuje wykonywanie po zakończeniu zadania. Prosta, asynchroniczna wersja kodu naśniadania będzie wyglądać następująco:
 
 [!code-csharp[SimpleAsyncBreakfast](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-V2/Program.cs#Main)]
 
-Ten kod nie blokuje, gdy są gotowania potrawach lub bekon. Ten kod nie będzie jednak uruchomić innych zadań. Czy nadal umieścić wyskakujące w tostera, a stare go do momentu jej POP. Ale co najmniej reaguje dla każdego, kto chce Twojej uwagi. Restauracji, gdzie są umieszczone wiele zamówień Cooka uruchomiła inny śniadanie podczas pierwszego jest gotowania.
+Ten kod nie jest blokowany, gdy jaja lub Bacon są gotowania. W tym kodzie nie zostaną uruchomione żadne inne zadania. Nadal wyskakujące powiadomienie na wyskakującym pasku i stare je do momentu pop. Ale co najmniej, wystarczy odpowiedzieć na każdą z nich. W restauracji, w której znajduje się wiele zamówień, Cooka może rozpocząć kolejną śniadanie, podczas gdy pierwszy jest gotowania.
 
-Wątek nad śniadanie nie jest blokowane podczas oczekiwania na rozpoczęte zadanie, które nie zostało jeszcze zakończone. W niektórych aplikacjach ta zmiana ma wszystko, co jest potrzebne. Aplikacji GUI nadal odpowiada na użytkownika za pomocą tylko tej zmiany. Jednak w tym scenariuszu ma więcej. Nie chcesz każdego składnika zadań, które mają być wykonywane sekwencyjnie. Zaleca się rozpoczynać każde z zadań składnik przed oczekiwanie na ukończenie poprzedniego zadania.
+Teraz wątek pracujący nad śniadaniem nie jest blokowany podczas oczekiwania na zadanie uruchomione, które jeszcze się nie zakończyło. W przypadku niektórych aplikacji ta zmiana jest wymagana. Aplikacja GUI nadal reaguje na użytkownika za pomocą tylko tej zmiany. Jednak w tym scenariuszu potrzebujesz więcej informacji. Nie chcesz, aby poszczególne zadania składników były wykonywane sekwencyjnie. Przed zaczekaniem na ukończenie poprzedniego zadania lepiej uruchomić wszystkie zadania składników.
 
-## <a name="start-tasks-concurrently"></a>Równoczesne zadania uruchamiania
+## <a name="start-tasks-concurrently"></a>Uruchom zadania współbieżnie
 
-W wielu przypadkach chcesz uruchomić kilka niezależnych zadań od razu. Następnie gdy poszczególne podzadania zakończą, można kontynuować inne prace, które jest gotowe. Analogicznie śniadanie to jak się dostać śniadanie wykonywane szybciej. Możesz także uzyskać, wszystko gotowe blisko tym samym czasie. Przedstawiamy śniadanie gorąca.
+W wielu scenariuszach należy od razu zacząć uruchamiać kilka niezależnych zadań. Następnie, po zakończeniu każdego zadania, można kontynuować wykonywanie innych gotowych zadań. W przypadku korzystania z analogu śniadaniowego wiesz, jak szybko uzyskać śniadanie. Wszystko to jest również wykonywane blisko tego samego czasu. Uzyskasz gorącą śniadanie.
 
-<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> i powiązanych typów klas, które umożliwia przeglądanie informacji o zadania, które są w toku. Która pozwala napisać kod, który bardziej przypomina sposób, w rzeczywistości utworzyłoby śniadanie. Chce się uruchomić, gotowania potrawach, bekon i powiadomienie typu toast w tym samym czasie. Każdy wymaga akcji, czy zwrócić uwagę na to zadanie, zajmie się następnej akcji, następnie await do czegoś innego, która wymaga uwagi.
+<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> I powiązane typy są klasami, których można użyć, aby przyczynić się do zadań, które są w toku. Dzięki temu można napisać kod, który jest bardziej zbliżony do sposobu, w jaki faktycznie tworzysz śniadanie. W tym samym czasie można rozpocząć gotowanie jaj, Bacon i wyskakujących powiadomień. Ponieważ każda z nich wymaga działania, należy zwrócić uwagę na to zadanie, zadbać o następną akcję, a następnie oczekiwać na coś innego, co wymaga uwagi.
 
-Uruchomienie zadania i przechowywania w <xref:System.Threading.Tasks.Task> obiekt, który reprezentuje pracę. Będziesz `await` każdego zadania, przed rozpoczęciem pracy z jego wynik.
+Uruchamiasz zadanie i przytrzymasz do <xref:System.Threading.Tasks.Task> obiektu, który reprezentuje pracę. Każde zadanie `await` zostanie wyświetlone przed rozpoczęciem pracy z jego wynikiem.
 
-Upewnijmy się te zmiany do kodu śniadanie. Pierwszym krokiem jest do przechowywania zadań dla operacji podczas uruchamiania, a nie oczekuje na ich:
+Wprowadźmy te zmiany w kodzie śniadania. Pierwszym krokiem jest przechowywanie zadań do operacji po ich uruchomieniu, a nie ich oczekiwanie:
 
 ```csharp
 Coffee cup = PourCoffee();
@@ -82,7 +82,7 @@ Console.WriteLine("oj is ready");
 Console.WriteLine("Breakfast is ready!");
 ```
 
-Następnie możesz przenieść `await` instrukcji bekon i potrawach na końcu metody, zanim śniadanie:
+Następnie można przenieść `await` instrukcje dotyczące Bacon i jaj do końca metody przed objęciem śniadania:
 
 ```csharp
 Coffee cup = PourCoffee();
@@ -105,28 +105,28 @@ Console.WriteLine("bacon is ready");
 Console.WriteLine("Breakfast is ready!");
 ```
 
-Powyższy kod działa lepiej. Asynchroniczne zadania możesz rozpocząć tylko raz. Każde zadanie podrzędne jest await, tylko wtedy, gdy potrzebujesz wyników. Powyższy kod może być podobny do kodu w aplikacji sieci web, który zgłasza żądania dotyczące różnych mikrousług, a następnie scala wyniki w pojedynczej strony. Wprowadzisz wszystkich żądań, następnie `await` wszystkie te zadania i narzędzia compose strony sieci web.
+Poprzedni kod działa lepiej. Wszystkie zadania asynchroniczne są uruchamiane jednocześnie. Każde zadanie zostanie zaczekane tylko wtedy, gdy są potrzebne wyniki. Poprzedni kod może być podobny do kodu w aplikacji sieci Web, która wysyła żądania różnych mikrousług, a następnie łączy wyniki w jedną stronę. Wszystkie żądania zostaną wprowadzone natychmiast, następnie `await` wszystkie te zadania i tworzą stronę sieci Web.
 
 ## <a name="composition-with-tasks"></a>Kompozycja z zadaniami
 
- Masz wszystko gotowe do śniadanie w tym samym czasie, z wyjątkiem wyskakującego powiadomienia. Tworzenie wyskakujące jest skład operację asynchroniczną (toasting chleb) oraz operacje synchroniczne (dodanie masła i zakleszczenie). Aktualizowanie tego kodu pokazano bardzo ważnym pojęciem:
+ Wszystko jest gotowe do śniadania w tym samym czasie, z wyjątkiem wyskakującego powiadomienia. Wyskakujące powiadomienia są kompozycją operacji asynchronicznej (wyskakujące chleb) i synchronicznymi operacjami (dodaniem masła i zakleszczeniem). Aktualizacja tego kodu ilustruje ważną koncepcję:
 
 > [!IMPORTANT]
-> Skład następuje Praca synchroniczna operacja asynchroniczna jest operacją asynchroniczną. Określona w inny sposób, jeśli jakakolwiek część operacji jest asynchroniczne, cała operacja jest asynchroniczna.
+> Kompozycja operacji asynchronicznej, po której następuje synchroniczna operacja, jest operacją asynchroniczną. Podano inny sposób, jeśli jakakolwiek część operacji jest asynchroniczna, cała operacja jest asynchroniczna.
 
-Powyższy kod wykazało, że można użyć <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601> obiektów, aby pomieścić uruchomione zadania podrzędne. Możesz `await` każdego zadania, przed rozpoczęciem korzystania z jego wynik. Następnym krokiem jest, aby utworzyć metody, które reprezentują kombinacji innych zadań. Przed rozpoczęciem obsługi śniadanie, należy poczekać na zadanie, które reprezentuje toasting chleb przed dodaniem masła i zakleszczenie. Może reprezentować pracę z następującym kodem:
+Powyższy kod wskazuje, że można użyć <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601> obiektów do przechowywania uruchomionych zadań. `await` Każde zadanie przed użyciem jego wyniku. Następnym krokiem jest utworzenie metod, które reprezentują kombinację innych zadań. Przed objęciem śniadania, należy oczekiwać, że zadanie reprezentuje wyskakujące chleb przed dodaniem masła i dżemu. Można przedstawić, że pracujesz z poniższym kodem:
 
 [!code-csharp[ComposeToastTask](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-V3/Program.cs#ComposeToastTask)]
 
-Powyższa metoda ma `async` modyfikator w podpisie. Który sygnalizuje kompilatorowi, ta metoda zawiera `await` instrukcji; zawiera on operacji asynchronicznych. Ta metoda reprezentuje zadanie, które toasts chleb, a następnie dodaje masła i zakleszczenie. Ta metoda zwraca <xref:System.Threading.Tasks.Task%601> reprezentujący kompozycji te trzy operacje. Główny blok kodu staje się:
+Poprzednia metoda ma `async` modyfikator w podpisie. Sygnalizuje kompilatorowi, że ta metoda zawiera `await` instrukcję; zawiera operacje asynchroniczne. Ta metoda przedstawia zadanie, które wyskakujące chleb, a następnie dodaje masło i dżem. Ta metoda zwraca <xref:System.Threading.Tasks.Task%601> , który reprezentuje skład tych trzech operacji. Główny blok kodu jest teraz:
 
 [!code-csharp[StartConcurrentTasks](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-V3/Program.cs#Main)]
 
-Poprzednia zmiana zilustrowane ważną technikę do pracy z kodu asynchronicznego. Dzięki oddzieleniu operacji na nową metodę, która zwraca klasę task, redagowania zadań. Możesz wybrać, kiedy należy poczekać na zadanie. Można jednocześnie uruchomić inne zadania.
+Poprzednia zmiana ilustruje ważną technikę pracy z kodem asynchronicznym. Tworzysz zadania, oddzielając operacje do nowej metody, która zwraca zadanie. Możesz określić, kiedy ma oczekiwać to zadanie. Można uruchamiać inne zadania współbieżnie.
 
-## <a name="await-tasks-efficiently"></a>Efektywne await zadania
+## <a name="await-tasks-efficiently"></a>Efektywne zadania oczekujące
 
-Seria `await` instrukcji na końcu poprzedniego kodu można zwiększyć za pomocą metody `Task` klasy. Jedną z tych interfejsów API jest <xref:System.Threading.Tasks.Task.WhenAll%2A>, co powoduje zwrócenie <xref:System.Threading.Tasks.Task> którego działanie jest kończone po zakończeniu wszystkich zadań w swojej listy argumentów, jak pokazano w poniższym kodzie:
+Serie `await` instrukcji na końcu powyższego kodu można ulepszyć przy użyciu metod `Task` klasy. Jeden z tych interfejsów API <xref:System.Threading.Tasks.Task.WhenAll%2A>to, które <xref:System.Threading.Tasks.Task> zwraca, gdy wszystkie zadania na liście argumentów zostały ukończone, jak pokazano w poniższym kodzie:
 
 ```csharp
 await Task.WhenAll(eggTask, baconTask, toastTask);
@@ -136,12 +136,12 @@ Console.WriteLine("toast is ready");
 Console.WriteLine("Breakfast is ready!");
 ```
 
-Innym rozwiązaniem jest użycie <xref:System.Threading.Tasks.Task.WhenAny%2A>, co powoduje zwrócenie `Task<Task>` , działanie jest kończone po zakończeniu przez dowolny z jej argumentów. Zwrócone zadanie może poczekać, wiedząc, że zostało już zakończone. Poniższy kod przedstawia sposób użycia <xref:System.Threading.Tasks.Task.WhenAny%2A> aby poczekać na pierwsze zadanie, aby zakończyć i następnie przetworzyć jego wynik. Po przetworzeniu wynikiem ukończone zadanie podrzędne, usuń ukończone zadania z listy zadań przekazany do `WhenAny`.
+Kolejną opcją jest użycie <xref:System.Threading.Tasks.Task.WhenAny%2A>, która `Task<Task>` zwraca zakończenie, gdy którykolwiek z jego argumentów zakończy działanie. Możesz oczekiwać na zwrócone zadanie, wiedząc, że już zostało zakończone. Poniższy kod pokazuje, jak można użyć <xref:System.Threading.Tasks.Task.WhenAny%2A> do oczekiwania na zakończenie pierwszego zadania, a następnie przetworzyć jego wynik. Po przetworzeniu wyniku z zadania zakończonego zadanie zostało usunięte z listy zadań przesłanych do `WhenAny`.
 
 [!code-csharp[AwaitAnyTask](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-final/Program.cs#AwaitAnyTask)]
 
-Po wprowadzeniu wszystkich tych zmian, ostateczną wersją `Main` wygląda podobnie do poniższego kodu:
+Po wprowadzeniu wszystkich zmian końcowa wersja `Main` wygląda podobnie do następującego kodu:
 
 [!code-csharp[Final](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-final/Program.cs#Main)]
 
-Ten kod końcowy jest asynchroniczna. Odzwierciedla dokładniej, jak osoba będzie Cooka śniadanie. Należy porównać poprzedni kod z pierwszym przykładowy kod w tym artykule. Akcje podstawowe są nadal jasne z kodu. Możesz przeczytać ten kod w taki sam sposób, wczytane tych instrukcji składania śniadanie na początku tego artykułu. Funkcje języka `async` i `await` Podaj tłumaczenia sprawia, że każda osoba z tymi pisemnych instrukcji: uruchamiania zadań, jak można, a nie blokować oczekiwanie na ukończenie zadań.
+Ten ostatni kod jest asynchroniczny. Dokładniej odzwierciedla to, w jaki sposób osoba może zacooka śniadanie. Porównaj poprzedni kod z pierwszym przykładowym kodem w tym artykule. Podstawowe działania są nadal jasne przed odczytaniem kodu. Można odczytać ten kod w taki sam sposób, jak w przypadku uzyskania śniadania na początku tego artykułu. Funkcje języka dla i `async` `await` zapewniają tłumaczenie dla każdej osoby, która wykonuje te instrukcje: Rozpocznij zadania w miarę możliwości i nie blokuj oczekiwania na ukończenie zadań.

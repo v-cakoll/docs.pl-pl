@@ -2,12 +2,12 @@
 title: Korzystanie z wariancji wC#delegatach ()
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 00e11d4ce755c8c75b73023fec14d95ebc96b4fe
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 980caf8d5e4699115d203a89fab7994d18cc1707
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595261"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168361"
 ---
 # <a name="using-variance-in-delegates-c"></a>Korzystanie z wariancji wC#delegatach ()
 Podczas przypisywania metody do delegata, *Kowariancja* i *kontrawariancja* zapewniają elastyczność dla dopasowania typu delegata z sygnaturą metody. Kowariancja zezwala metodzie na typ zwracany, który jest bardziej pochodny niż zdefiniowany w delegatze. Kontrawariancja zezwala na metodę, która ma typy parametrów, które są mniej pochodne niż te w typie delegata.  
@@ -50,8 +50,23 @@ class Program
   
 ## <a name="example-2-contravariance"></a>Przykład 2: Kontrawariancja  
   
-### <a name="description"></a>Opis  
- W tym przykładzie pokazano, jak można używać delegatów z metodami, które mają parametry typu, które są typami podstawowymi typu parametru podpisu delegata. Za pomocą kontrawariancja można użyć jednego programu obsługi zdarzeń zamiast oddzielnych programów obsługi. Można na przykład utworzyć procedurę obsługi zdarzeń, `EventArgs` która akceptuje parametr wejściowy, i użyć go `Button.MouseClick` ze zdarzeniem, które wysyła `MouseEventArgs` typ `TextBox.KeyDown` jako parametr, `KeyEventArgs` a także ze zdarzeniem, które wysyła parametr.  
+### <a name="description"></a>Opis
+
+W tym przykładzie pokazano, jak obiekty delegowane mogą być używane z metodami, które mają parametry, których typy są typami podstawowymi typu parametru podpisu delegata. Za pomocą kontrawariancja można użyć jednego programu obsługi zdarzeń zamiast oddzielnych programów obsługi. W poniższym przykładzie użyto dwóch delegatów:
+
+- Delegat definiujący podpis zdarzenia [Button. KeyDown.](xref:System.Windows.Forms.Control.KeyDown) <xref:System.Windows.Forms.KeyEventHandler> Podpis jest:
+
+   ```csharp
+   public delegate void KeyEventHandler(object sender, KeyEventArgs e)
+   ```
+
+- Delegat definiujący sygnaturę zdarzenia [Button. MouseClick.](xref:System.Windows.Forms.Control.MouseDown) <xref:System.Windows.Forms.MouseEventHandler> Podpis jest:
+
+   ```csharp
+   public delegate void MouseEventHandler(object sender, MouseEventArgs e)
+   ```
+
+W przykładzie zdefiniowano procedurę obsługi zdarzeń z <xref:System.EventArgs> parametrem i używa jej do obsługi `Button.KeyDown` zarówno zdarzenia `Button.MouseClick` , jak i. Można to zrobić, ponieważ <xref:System.EventArgs> jest typem podstawowym obu <xref:System.Windows.Forms.KeyEventArgs> i <xref:System.Windows.Forms.MouseEventArgs>. 
   
 ### <a name="code"></a>Kod  
   

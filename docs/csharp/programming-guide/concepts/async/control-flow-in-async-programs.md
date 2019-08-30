@@ -2,18 +2,18 @@
 title: Przepływ sterowania w programach asynchronicznychC#()
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 8adf4bcf193d9fa8d7335996539933ce71282bac
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bac47393814737b0e6f635845f5dfcd95bad6328
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595852"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168471"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Przepływ sterowania w programach asynchronicznychC#()
 
 Można łatwiej pisać i konserwować programy asynchroniczne przy użyciu `async` słów kluczowych i. `await` Jednak wyniki mogą być niewidoczne, jeśli nie zrozumiesz, jak działa program. Ten temat śledzi przepływ kontroli za pośrednictwem prostego programu asynchronicznego, aby pokazać, gdy kontrolka przechodzi z jednej metody do innej i jakie informacje są przesyłane za każdym razem.
 
-Ogólnie rzecz biorąc, należy oznaczyć metody, które zawierają kod asynchroniczny za pomocą modyfikatora [Async (C#)](../../../language-reference/keywords/async.md) . W metodzie, która jest oznaczona za pomocą modyfikatora asynchronicznego, można użyć operatora [awaitC#()](../../../language-reference/keywords/await.md) , aby określić miejsce wstrzymania metody do oczekiwania na zakończenie wywołanego procesu asynchronicznego. Aby uzyskać więcej informacji, zobacz [programowanie asynchroniczne z Async i awaitC#()](./index.md).
+Ogólnie rzecz biorąc, należy oznaczyć metody, które zawierają kod asynchroniczny za pomocą modyfikatora [Async (C#)](../../../language-reference/keywords/async.md) . W metodzie, która jest oznaczona za pomocą modyfikatora asynchronicznego, można użyć operatora [awaitC#()](../../../language-reference/operators/await.md) , aby określić miejsce wstrzymania metody do oczekiwania na zakończenie wywołanego procesu asynchronicznego. Aby uzyskać więcej informacji, zobacz [programowanie asynchroniczne z Async i awaitC#()](./index.md).
 
 W poniższym przykładzie zastosowano metody asynchroniczne, aby pobrać zawartość określonej witryny sieci Web jako ciąg i wyświetlić długość ciągu. Przykład zawiera poniższe dwie metody.
 

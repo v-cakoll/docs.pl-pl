@@ -1,13 +1,13 @@
 ---
-title: polecenie pakietu listy DotNet
-description: Polecenia dotnet wyświetlenia listy pakietów zapewnia wygodny sposób, aby wyświetlić listę odwołania do pakietu dla projektu lub rozwiązania.
+title: polecenie pakietu list dotnet
+description: Polecenie "pakiet listy dotnet" udostępnia wygodną opcję wyświetlania odwołań do pakietów dla projektu lub rozwiązania.
 ms.date: 06/26/2019
-ms.openlocfilehash: 98cc456fff02364310cec98f0282700f7697f07e
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 48eef0ccc6acf2bbd6c1acf748870882d2480ce5
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67421956"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168021"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -15,11 +15,11 @@ ms.locfileid: "67421956"
 
 ## <a name="name"></a>Nazwa
 
-`dotnet list package` — Wyświetla listę odwołań do pakietów dla projektu lub rozwiązania.
+`dotnet list package`-Wyświetla listę odwołań do pakietu dla projektu lub rozwiązania.
 
 ## <a name="synopsis"></a>Streszczenie
 
-```
+```console
 dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch] 
    [--include-prerelease] [--include-transitive] [--interactive] [--outdated] [--source]
 dotnet list package [-h|--help]
@@ -27,7 +27,7 @@ dotnet list package [-h|--help]
 
 ## <a name="description"></a>Opis
 
-`dotnet list package` Polecenie zapewnia wygodny sposób, aby wyświetlić listę wszystkich odwołań do pakietów NuGet dla określonego projektu lub rozwiązania. Należy najpierw skompilować projekt, aby mogła mieć zasoby wymagane dla tego polecenia do przetworzenia. Poniższy przykład przedstawia dane wyjściowe `dotnet list package` polecenie, aby uzyskać [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) projektu:
+`dotnet list package` Polecenie udostępnia wygodną opcję wyświetlania listy wszystkich odwołań pakietów NuGet dla określonego projektu lub rozwiązania. Najpierw należy skompilować projekt w celu uzyskania zasobów potrzebnych do przetworzenia tego polecenia. Poniższy przykład przedstawia dane wyjściowe `dotnet list package` polecenia dla projektu [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) :
 
 ```output
 Project 'SentimentAnalysis' has the following package references
@@ -39,9 +39,9 @@ Project 'SentimentAnalysis' has the following package references
 (A) : Auto-referenced package.
 ```
 
-**Żądana** kolumna odwołuje się do wersji pakietu, określone w pliku projektu i może być zakresem. **Rozwiązane** kolumna zawiera listę wersji, że projekt jest obecnie używany i zawsze jest wartość typu single. Pakiety wyświetlanie `(A)` reprezentują obok ich nazwy [odwołania do pakietu niejawne](csproj.md#implicit-package-references) , są dedukowane z ustawień projektu (`Sdk` typu `<TargetFramework>` lub `<TargetFrameworks>` właściwości itp.)
+**Żądana** kolumna odwołuje się do wersji pakietu określonej w pliku projektu i może być zakresem. W kolumnie rozwiązane są wyświetlane wersje, które są obecnie używane w projekcie i zawsze jest pojedyncza wartość. Pakiety wyświetlające `(A)` prawo obok ich nazw reprezentują niejawne [odwołania do pakietów](csproj.md#implicit-package-references) , które są wywnioskowane z`Sdk` `<TargetFramework>` ustawień projektu (typ lub `<TargetFrameworks>` Właściwość itp.)
 
-Użyj `--outdated` opcję, aby dowiedzieć się, jeśli dostępne są nowsze wersje pakietów używane w projektach. Domyślnie `--outdated` Wyświetla listę najnowszych pakietów stabilny, chyba że rozwiązane jest także wersja wstępna wersja. Aby dołączyć wstępnej wersji, podczas wyświetlania nowszych wersji, należy także określić `--include-prerelease` opcji. Następujące przykłady przedstawiają dane wyjściowe `dotnet list package --outdated --include-prerelease` polecenia dla tego samego projektu, jak w poprzednim przykładzie:
+Użyj opcji `--outdated` , aby dowiedzieć się, czy są dostępne nowsze wersje pakietów używanych w projektach. Domyślnie program wyświetla `--outdated` listę najnowszych stabilnych pakietów, chyba że rozpoznana wersja stanowi również wersję wstępną. Aby uwzględnić wersje wstępne podczas wyświetlania listy nowszych wersji, należy również określić `--include-prerelease` opcję. Poniższe przykłady przedstawiają dane wyjściowe `dotnet list package --outdated --include-prerelease` polecenia dla tego samego projektu, co w poprzednim przykładzie:
 
 ```output
 The following sources were used:
@@ -53,7 +53,7 @@ Project `SentimentAnalysis` has the following updates to its packages
    > Microsoft.ML         0.11.0      0.11.0     1.0.0-preview
 ```
 
-Jeśli musisz sprawdzić, czy projekt ma przechodnie zależności, użyj `--include-transitive` opcji. Przechodnie zależności wystąpić, gdy dodasz pakiet do projektu, która z kolei zależy od innego pakietu. Poniższy przykład przedstawia dane wyjściowe uruchamianie `dotnet list package --include-transitive` polecenie, aby uzyskać [HelloPlugin](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin/HelloPlugin) projektu, który wyświetla najwyższego pakiety i pakiety, są one zależne od:
+Jeśli chcesz dowiedzieć się, czy projekt zawiera zależności przechodnie, użyj `--include-transitive` opcji. Zależności przechodnie występują po dodaniu pakietu do projektu, który z kolei jest zależny od innego pakietu. Poniższy przykład przedstawia dane wyjściowe uruchamiania `dotnet list package --include-transitive` polecenia dla projektu [HelloPlugin](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin/HelloPlugin) , w którym są wyświetlane pakiety najwyższego poziomu i pakiety, od których zależą:
 
 ```output
 Project 'HelloPlugin' has the following package references
@@ -73,65 +73,65 @@ Project 'HelloPlugin' has the following package references
 
 `PROJECT | SOLUTION`
 
-Plik projektu lub rozwiązania do wykonywania operacji. Jeśli nie zostanie określony, polecenie wyszukuje w bieżącym katalogu dla jednego. Jeśli więcej niż jedno rozwiązanie lub projekt zostanie znaleziony, zostanie zgłoszony błąd.
+Plik projektu lub rozwiązania do działania. Jeśli nie zostanie określony, polecenie przeszukuje bieżący katalog. Jeśli znaleziono więcej niż jedno rozwiązanie lub projekt, zostanie zgłoszony błąd.
 
 ## <a name="options"></a>Opcje
 
 * **`--config <SOURCE>`**
 
-  Źródła NuGet do użycia podczas wyszukiwania dla nowszych pakietów. Wymaga `--outdated` opcji.
+  Źródła NuGet do użycia podczas wyszukiwania nowszych pakietów. `--outdated` Wymaga opcji.
 
 * **`--framework <FRAMEWORK>`**
 
-  Wyświetla tylko te pakiety, które są odpowiednie dla określonego [platformę docelową](../../standard/frameworks.md). Aby określić wiele struktur, powtórz opcję wiele razy. Na przykład: `--framework netcoreapp2.2 --framework netstandard2.0`.
+  Wyświetla tylko pakiety mające zastosowanie do określonej [platformy docelowej](../../standard/frameworks.md). Aby określić wiele struktur, Powtarzaj tę opcję wiele razy. Na przykład: `--framework netcoreapp2.2 --framework netstandard2.0`.
 
 * **`-h|--help`**
 
-  Drukuje krótki pomoc dotyczącą polecenia.
+  Drukuje krótką pomoc dla polecenia.
 
 * **`--highest-minor`**
 
-  Uwzględnia tylko pakiety za pomocą dopasowywania główny numer wersji, podczas wyszukiwania dla nowszych pakietów. Wymaga `--outdated` opcji.
+  Podczas wyszukiwania nowszych pakietów uwzględnia tylko te pakiety, które pasują do numeru głównego. `--outdated` Wymaga opcji.
 
 * **`--highest-patch`**
 
-  Uwzględnia tylko pakiety z pasującą główne i pomocnicze numery wersji podczas wyszukiwania dla nowszych pakietów. Wymaga `--outdated` opcji.
+  Podczas wyszukiwania nowszych pakietów uwzględnia tylko te pakiety, które mają pasujące główne i pomocnicze numery wersji. `--outdated` Wymaga opcji.
 
 * **`--include-prerelease`**
 
-  Uwzględnia pakiety z wersji wstępnych podczas wyszukiwania dla nowszych pakietów. Wymaga `--outdated` opcji.
+  Traktuje pakiety z wersjami wstępnymi podczas wyszukiwania nowszych pakietów. `--outdated` Wymaga opcji.
 
 * **`--include-transitive`**
 
-  Zawiera listę pakietów przechodnich, oprócz pakietów najwyższego poziomu. Gdy użycie tej opcji, masz dostęp do listy pakietów, które zależą od pakietów najwyższego poziomu.
+  Wyświetla listę pakietów przechodnich oprócz pakietów najwyższego poziomu. Po wybraniu tej opcji otrzymujesz listę pakietów, od których zależą pakiety najwyższego poziomu.
 
 * **`--interactive`**
 
-  Umożliwia polecenie, aby zatrzymać i czeka na dane wejściowe użytkownika lub akcji. Na przykład w celu ukończenia uwierzytelniania. Dostępne, ponieważ .NET Core SDK w wersji 3.0.
+  Zezwala na zatrzymanie polecenia i oczekiwanie na dane wejściowe użytkownika lub akcję. Na przykład, aby ukończyć uwierzytelnianie. Dostępne od wersji .NET Core 3,0 SDK.
 
 * **`--outdated`**
 
-  Zawiera listę pakietów, które mają nowszych wersji będą dostępne.
+  Wyświetla listę pakietów, które mają dostępne nowsze wersje.
 
 * **`-s|--source <SOURCE>`**
 
-  Źródła NuGet do użycia podczas wyszukiwania dla nowszych pakietów. Wymaga `--outdated` opcji.
+  Źródła NuGet do użycia podczas wyszukiwania nowszych pakietów. `--outdated` Wymaga opcji.
 
 ## <a name="examples"></a>Przykłady
 
-* Lista odwołania do pakietu z określonego projektu:
+* Utwórz listę odwołań do pakietów dla określonego projektu:
 
   ```console
   dotnet list SentimentAnalysis.csproj package
   ```
 
-* Lista odwołania do pakietu, które mają nowszych wersji będą dostępne wersje wstępne w tym:
+* Wyświetl listę odwołań do pakietów, które mają dostępne nowsze wersje, w tym wersje wstępne:
 
   ```console
   dotnet list package --outdated --include-prerelease
   ```
 
-* Wyświetl odwołania do pakietu dla określonej platformy:
+* Utwórz listę odwołań do pakietów dla konkretnej platformy docelowej:
 
   ```console
   dotnet list package --framework netcoreapp3.0

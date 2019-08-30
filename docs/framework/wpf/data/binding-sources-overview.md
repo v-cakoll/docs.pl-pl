@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: eee10cbf3bbfc6f66ec9e0c3f35b27fdc485764b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4b7a5681840bf70eaebc824ff3d0dbeef3d1d799
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944681"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169091"
 ---
 # <a name="binding-sources-overview"></a>Przegląd Wiązanie źródeł
 W powiązaniu danych obiekt źródłowy powiązania odwołuje się do obiektu, z którego pochodzą dane. W tym temacie omówiono typy obiektów, których można użyć jako źródła powiązań.  
@@ -42,7 +42,7 @@ W powiązaniu danych obiekt źródłowy powiązania odwołuje się do obiektu, z
 ### <a name="other-characteristics"></a>Inne cechy  
  Poniższa lista zawiera inne ważne punkty, które należy zwrócić uwagę:  
   
-- Jeśli chcesz utworzyć obiekt w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], Klasa musi mieć konstruktora bez parametrów. W niektórych [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] językach, takich jak C#, można utworzyć niezależny od parametrów Konstruktor.  
+- Jeśli chcesz utworzyć obiekt w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], Klasa musi mieć konstruktora bez parametrów. W niektórych językach .NET, takich jak C#, można utworzyć niezależny od parametrów Konstruktor.  
   
 - Właściwości, które są używane jako właściwości źródła powiązań dla powiązania, muszą być publicznymi właściwościami klasy. Nie można uzyskać dostępu do jawnie zdefiniowanych właściwości interfejsu na potrzeby tworzenia powiązań ani właściwości chronionych, prywatnych, wewnętrznych lub wirtualnych, które nie mają podstawowej implementacji.  
   

@@ -1,26 +1,26 @@
 ---
-title: Szkolenie modelu uczenia maszynowego, za pomocą krzyżowego sprawdzania poprawności
-description: Dowiedz się, jak na potrzeby tworzenia bardziej niezawodnych modeli uczenia maszynowego w strukturze ML.NET krzyżowego sprawdzania poprawności. Krzyżowa Weryfikacja jest szkolenia i model oceny technika, która dzieli dane na wiele partycji, a następnie szkolenie modeli wielu algorytmów na te partycje.
-ms.date: 06/25/2019
+title: Uczenie modelu uczenia maszynowego przy użyciu weryfikacji krzyżowej
+description: Dowiedz się, jak tworzyć bardziej niezawodne modele uczenia maszynowego w programie ML.NET przy użyciu krzyżowego sprawdzania poprawności. Wzajemne sprawdzanie poprawności to technika szkoleń i oceny modelu, która dzieli dane na kilka partycji i pociąga za siebie wiele algorytmów na tych partycjach.
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to,title-hack-0625
-ms.openlocfilehash: c68c2b61054f59f03b4743ec30a694e94086ebab
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: f29103d0cf59cdec10a641b05ce359bf95c01ccd
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397647"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169055"
 ---
-# <a name="train-a-machine-learning-model-using-cross-validation"></a>Szkolenie modelu uczenia maszynowego, za pomocą krzyżowego sprawdzania poprawności
+# <a name="train-a-machine-learning-model-using-cross-validation"></a>Uczenie modelu uczenia maszynowego przy użyciu weryfikacji krzyżowej
 
-Dowiedz się, jak na potrzeby uczenia bardziej niezawodnych modeli uczenia maszynowego w strukturze ML.NET krzyżowego sprawdzania poprawności. 
+Dowiedz się, jak korzystać z krzyżowego sprawdzania poprawności do uczenia bardziej niezawodnych modeli uczenia maszynowego w ML.NET. 
 
-Krzyżowa Weryfikacja jest szkolenia i model oceny technika, która dzieli dane na wiele partycji, a następnie szkolenie modeli wielu algorytmów na te partycje. Ta technika zwiększa niezawodność modelu, zawierający dane z procesu uczenia. Oprócz poprawianie wydajności niewidzianych uwagi, w środowiskach ograniczonego danych może być skutecznym narzędziem do szkolenia modele z mniejszych zestawu danych.
+Wzajemne sprawdzanie poprawności to technika szkoleń i oceny modelu, która dzieli dane na kilka partycji i pociąga za siebie wiele algorytmów na tych partycjach. Ta technika podnosi niezawodność modelu przez wyprowadzenie danych z procesu szkolenia. Oprócz poprawy wydajności niewidocznych obserwacji w środowiskach z ograniczonymi danymi może być skutecznym narzędziem dla modeli szkoleniowych z mniejszym zestawem danych.
 
-## <a name="the-data-and-data-model"></a>Dane oraz model danych
+## <a name="the-data-and-data-model"></a>Dane i model danych
 
-Podane dane z pliku, ma następujący format:
+Dane z pliku o następującym formacie:
 
 ```text
 Size (Sq. ft.), HistoricalPrice1 ($), HistoricalPrice2 ($), HistoricalPrice3 ($), Current Price ($)
@@ -30,7 +30,7 @@ Size (Sq. ft.), HistoricalPrice1 ($), HistoricalPrice2 ($), HistoricalPrice3 ($)
 1120.00, 47504.98, 45129.73, 43775.84, 46792.41
 ```
 
-Dane mogą być modelowane przez klasę, takie jak `HousingData`:
+Dane można modelować według klasy, takiej jak `HousingData` i załadowanej [`IDataView`](xref:Microsoft.ML.IDataView)do.
 
 ```csharp
 public class HousingData
@@ -48,13 +48,11 @@ public class HousingData
 }
 ```
 
-Załadowane dane w [ `IDataView` ](xref:Microsoft.ML.IDataView).
-
 ## <a name="prepare-the-data"></a>Przygotowywanie danych
 
-Wstępne przetwarzanie danych przed ich użyciem do tworzenia modelu uczenia maszynowego. W tym przykładzie `Size` i `HistoricalPrices` kolumny są łączone w jednej funkcji wektor, który jest wyprowadzana do nową kolumnę o nazwie `Features` przy użyciu [ `Concatenate` ](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) metody. Oprócz pobierania danych do formatu oczekiwanego przez algorytmy strukturze ML.NET, złączenie kolumn optymalizuje kolejne operacje w potoku, stosując wykonać jeden raz dla połączonych kolumny zamiast wszystkich oddzielne kolumny. 
+Wstępnie przetwórz dane przed użyciem ich do kompilowania modelu uczenia maszynowego. W tym przykładzie `Size` kolumny i `HistoricalPrices` są łączone w jeden wektor funkcji, który jest wyprowadzany do [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) nowej kolumny o nazwie `Features` przy użyciu metody. Oprócz pobierania danych do formatu oczekiwanego przez algorytmy ML.NET, łączenie kolumn optymalizuje kolejne operacje w potoku przez zastosowanie operacji raz dla połączonej kolumny zamiast każdej oddzielnej kolumny. 
 
-Po kolumny są łączone w pojedynczy wektor [ `NormalizeMinMax` ](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) jest stosowany do `Features` kolumny, aby uzyskać `Size` i `HistoricalPrices` w tym samym zakresie 0 – 1. 
+Gdy kolumny są łączone w [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) jeden wektor, są stosowane `Features` do kolumny do pobrania `Size` i `HistoricalPrices` w tym samym zakresie między 0-1. 
 
 ```csharp
 // Define data prep estimator
@@ -69,12 +67,12 @@ ITransformer dataPrepTransformer = dataPrepEstimator.Fit(data);
 IDataView transformedData = dataPrepTransformer.Transform(data);
 ```
 
-## <a name="train-model-with-cross-validation"></a>Szkolenie modelu za pomocą krzyżowego sprawdzania poprawności
+## <a name="train-model-with-cross-validation"></a>Uczenie modelu z krzyżowego sprawdzania poprawności
 
-Gdy dane zostały wstępnie przetworzone, nadszedł czas na szkolenie modelu. Najpierw należy wybrać algorytm, najlepiej pasującą za pomocą zadań do wykonania uczenia maszynowego. Ponieważ numerycznie ciągłe wartość jest wartością prognozowaną, zadanie jest regresji. Jeden z algorytmów regresji implementowany przez strukturze ML.NET jest [ `StochasticDualCoordinateAscentCoordinator` ](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) algorytmu. Do nauczenia modelu przy użyciu krzyżowego sprawdzania poprawności [ `CrossValidate` ](xref:Microsoft.ML.RegressionCatalog.CrossValidate*) metody. 
+Gdy dane zostaną wstępnie przetworzone, czas na nauczenie modelu. Najpierw wybierz algorytm najbardziej zbliżony do zadania uczenia maszynowego, które ma zostać wykonane. Ponieważ przewidywana wartość jest wartością liczbową, to zadanie jest regresją. Jednym z algorytmów regresji implementowanych przez ml.NET [`StochasticDualCoordinateAscentCoordinator`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) jest algorytm. Aby przeprowadzić uczenie modelu z wykorzystaniem krzyżowego sprawdzania [`CrossValidate`](xref:Microsoft.ML.RegressionCatalog.CrossValidate*) poprawności, użyj metody. 
 
 > [!NOTE]
-> Chociaż ten przykład używa modelu regresji liniowej, CrossValidate ma zastosowanie do wszystkich innych zadań w strukturze ML.NET, z wyjątkiem wykrywania anomalii uczenia maszynowego.
+> Chociaż ten przykład używa modelu regresji liniowej, CrossValidate ma zastosowanie do wszystkich innych zadań uczenia maszynowego w ML.NET, z wyjątkiem wykrywania anomalii.
 
 ```csharp
 // Define StochasticDualCoordinateAscent algorithm estimator
@@ -84,18 +82,18 @@ IEstimator<ITransformer> sdcaEstimator = mlContext.Regression.Trainers.Sdca();
 var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimator, numberOfFolds: 5);
 ```
 
-[`CrossValidate`](xref:Microsoft.ML.RegressionCatalog.CrossValidate*) wykonuje następujące operacje:
+[`CrossValidate`](xref:Microsoft.ML.RegressionCatalog.CrossValidate*)wykonuje następujące operacje:
 
-1. Dzieli dane na liczbę partycji jest równa wartości określonej w `numberOfFolds` parametru. Wynik każdej partycji jest [ `TrainTestData` ](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) obiektu.
-1. Model jest uczony w każdej partycji przy użyciu określonego komputera uczenie algorytmu narzędzie do szacowania zestawów danych szkoleniowych.
-1. Każdy model wydajności jest obliczane przy użyciu [ `Evaluate` ](xref:Microsoft.ML.RegressionCatalog.Evaluate*) metody testowego zestawu danych. 
-1. Model wraz z jego metryki są zwracane dla wszystkich modeli.
+1. Dzieli dane na liczbę partycji równą wartości określonej w `numberOfFolds` parametrze. Wynikiem każdej partycji jest [`TrainTestData`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) obiekt.
+1. Model jest przeszkolony na każdej partycji przy użyciu określonego algorytmu uczenia maszynowego szacowania w zestawie danych szkoleniowych.
+1. Wydajność poszczególnych modeli jest oceniana przy użyciu [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*) metody w zestawie danych testowych. 
+1. Model wraz z metrykami są zwracane dla każdego z modeli.
 
-Wynik przechowywany w `cvResults` to zbiór [ `CrossValidationResult` ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) obiektów. Ten obiekt zawiera trenowanego modelu, a także metryk, które są zarówno dostępną formę [ `Model` ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) i [ `Metrics` ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics) właściwości odpowiednio. W tym przykładzie `Model` właściwość jest typu [ `ITransformer` ](xref:Microsoft.ML.ITransformer) i `Metrics` właściwość jest typu [ `RegressionMetrics` ](xref:Microsoft.ML.Data.RegressionMetrics). 
+Wynik przechowywany w programie `cvResults` jest [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) kolekcją obiektów. Ten obiekt obejmuje przeszkolony model, a także metryki, które są zarówno dostępne [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) , [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics) jak i właściwości. W tym przykładzie `Model` właściwość jest typu [`ITransformer`](xref:Microsoft.ML.ITransformer) , a `Metrics` właściwość jest typu [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics). 
 
-## <a name="evaluate-the-model"></a>Ocena modelu
+## <a name="evaluate-the-model"></a>Oceń model
 
-Metryki dla różnych modeli uczonego jest możliwy za pośrednictwem `Metrics` właściwości poszczególnych [ `CrossValidationResult` ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) obiektu. W tym przypadku [R-kwadrat metryki](https://en.wikipedia.org/wiki/Coefficient_of_determination) uzyskuje dostęp i przechowywane w zmiennej `rSquared`. 
+Metryki dla różnych przeszkolonych modeli są dostępne za `Metrics` pomocą właściwości indywidualnego [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) obiektu. W takim przypadku uzyskuje się dostęp do [metryki R-kwadrat](https://en.wikipedia.org/wiki/Coefficient_of_determination) i są one przechowywane `rSquared`w zmiennej. 
 
 ```csharp
 IEnumerable<double> rSquared = 
@@ -103,7 +101,7 @@ IEnumerable<double> rSquared =
         .Select(fold => fold.Metrics.RSquared);
 ```
 
-Jeśli możesz zbadać zawartość `rSquared` zmiennej, dane wyjściowe powinny być pięciu wartości z zakresu od 0 – 1, w przypadku, gdy bliżej 1 oznacza, że najlepiej. Metryki, takie jak R-kwadrat, wybierz opcję przy użyciu modeli z najlepiej najgorszy wykonywania. Następnie wybierz górny modelu do prognozowania lub wykonanie dodatkowych operacji za pomocą.
+Jeśli sprawdzisz zawartość `rSquared` zmiennej, dane wyjściowe powinny mieć pięć wartości z zakresu od 0-1, gdzie najlepiej do 1. Korzystając z metryk, takich jak R-Square, wybierz modele z największej do najgorszego wykonania. Następnie wybierz najwyższy model, aby dokonać prognoz lub wykonać dodatkowe operacje w programie.
 
 ```csharp
 // Select all models

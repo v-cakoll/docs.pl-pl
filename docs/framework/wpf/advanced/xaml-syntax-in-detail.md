@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 3ac7d79660830601ca69951e56763fc923692b0e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09f0a1b34e88be995fb9a386161a930457e4bb56
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958787"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168990"
 ---
 # <a name="xaml-syntax-in-detail"></a>Szczegóły składni XAML
 Ten temat definiuje warunki, które są używane do opisywania elementów składni języka XAML. Te warunki są często używane w całej pozostałej części tej dokumentacji, zarówno w przypadku dokumentacji WPF, jak i dla innych struktur, które używają języka XAML lub podstawowych pojęć XAML włączonych przez obsługę języka XAML na poziomie system. XAML. W tym temacie opisano podstawową terminologię wprowadzoną w temacie [Omówienie języka XAML (WPF)](xaml-overview-wpf.md).  
@@ -62,7 +62,7 @@ Ten temat definiuje warunki, które są używane do opisywania elementów skład
   
 - Tag otwierający musi być wykonany przy użyciu prawego nawiasu ostrego (>). Inne elementy obiektu, elementy właściwości lub tekst wewnętrzny mogą następować po tagu otwierającym. Dokładnie zawartość może być zawarta w tym miejscu jest zwykle ograniczone przez model obiektów elementu. Odpowiedni tag zamykający dla elementu Object musi również istnieć w prawidłowym zagnieżdżaniu i zrównoważeniu przy użyciu innych par tagów otwierających i zamykających.  
   
- KOD XAML zaimplementowany przez platformę .NET ma zestaw reguł, które mapują elementy obiektów do typów, atrybutów do właściwości lub zdarzeń oraz przestrzenie nazw XAML do przestrzeni nazw CLR oraz zestawu. Dla WPF i .NET Framework, elementy obiektów XAML mapują do [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] typów zgodnie z definicją w przywoływanych zestawach, a atrybuty są mapowane na elementy członkowskie tych typów. W przypadku odwoływania się do typu CLR w języku XAML masz również dostęp do dziedziczonych elementów członkowskich tego typu.  
+ KOD XAML zaimplementowany przez platformę .NET ma zestaw reguł, które mapują elementy obiektów do typów, atrybutów do właściwości lub zdarzeń oraz przestrzenie nazw XAML do przestrzeni nazw CLR oraz zestawu. W przypadku WPF i .NET elementy obiektów XAML są mapowane na typy .NET zgodnie z definicją w przywoływanych zestawach, a atrybuty są mapowane na elementy członkowskie tych typów. W przypadku odwoływania się do typu CLR w języku XAML masz również dostęp do dziedziczonych elementów członkowskich tego typu.  
   
  Na przykład poniższy przykład to składnia elementu obiektu, która tworzy wystąpienie nowego wystąpienia <xref:System.Windows.Controls.Button> klasy, a także <xref:System.Windows.FrameworkElement.Name%2A> określa atrybut i wartość dla tego atrybutu:  
   

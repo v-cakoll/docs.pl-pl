@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: 6081e7b6b52d85615cfde701e364eb87d69f42bf
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9daa152c319f8cc72b4fd230758f2063cebf2a9a
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626429"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168221"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>Testowanie jednostkowe Visual Basic biblioteki .NET Core przy użyciu testu dotnet i MSTest
 
@@ -22,7 +22,7 @@ Otwórz okno powłoki. Utwórz katalog o nazwie *Unit-Tests-VB-MSTest* , aby obt
 W tym nowym katalogu Uruchom [`dotnet new sln`](../tools/dotnet-new.md) polecenie, aby utworzyć nowe rozwiązanie. To rozwiązanie ułatwia zarządzanie zarówno biblioteką klas, jak i projektem testów jednostkowych.
 W katalogu rozwiązania Utwórz katalog *PrimeService* . W tej chwili istnieje następujący katalog i struktura pliku:
 
-```
+```console
 /unit-testing-vb-mstest
     unit-testing-vb-mstest.sln
     /PrimeService
@@ -48,7 +48,7 @@ Zmień katalog z powrotem na katalog *Test Unit-VB-using-MSTest* . Uruchom [`dot
 
 Następnie Utwórz katalog *PrimeService. Tests* . Poniższy konspekt przedstawia strukturę katalogów:
 
-```
+```console
 /unit-testing-vb-mstest
     unit-testing-vb-mstest.sln
     /PrimeService
@@ -69,7 +69,7 @@ Utwórz katalog *PrimeService. Tests* jako bieżący katalog i Utwórz nowy proj
 
 Projekt testowy wymaga innych pakietów do tworzenia i uruchamiania testów jednostkowych. `dotnet new`w poprzednim kroku dodano MSTest i moduł uruchamiający MSTest. Teraz Dodaj `PrimeService` bibliotekę klas jako inną zależność do projektu. [`dotnet add reference`](../tools/dotnet-add-reference.md) Użyj polecenia:
 
-```
+```console
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
@@ -77,7 +77,7 @@ Cały plik można zobaczyć w [repozytorium Samples](https://github.com/dotnet/s
 
 Dysponujesz następującym końcowym układem rozwiązań:
 
-```
+```console
 /unit-testing-vb-mstest
     unit-testing-vb-mstest.sln
     /PrimeService

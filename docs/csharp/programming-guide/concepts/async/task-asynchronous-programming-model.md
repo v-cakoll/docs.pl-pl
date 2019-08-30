@@ -2,12 +2,12 @@
 title: Model programowania asynchronicznego zadania (TAP) z asynchroniczne i oczekujące (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: bfe32b2eaefb9ce813ca74bed450a935e33dc9d4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: abe1ab777a17ba8cba15a27b02d389a9ede3caf0
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595605"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167899"
 ---
 # <a name="task-asynchronous-programming-model"></a>Model programowania asynchronicznego zadań (APM)
 
@@ -38,7 +38,7 @@ Podejście async oferuje również odpowiednik automatycznego przejścia do list
 
 ## <a name="BKMK_HowtoWriteanAsyncMethod"></a>Metody asynchroniczne są łatwiejsze do zapisu
 
-Słowa kluczowe [Async](../../../language-reference/keywords/async.md) i [await](../../../language-reference/keywords/await.md) w C# programie to serce programowanie asynchroniczne. Korzystając z tych dwóch słów kluczowych, można użyć zasobów w .NET Framework, .NET Core lub środowisko wykonawcze systemu Windows, aby szybko utworzyć metodę asynchroniczną niemal jak w przypadku tworzenia metody synchronicznej. Metody asynchroniczne zdefiniowane za pomocą `async` słowa kluczowego są nazywane metodami *asynchronicznymi*.
+Słowa kluczowe [Async](../../../language-reference/keywords/async.md) i [await](../../../language-reference/operators/await.md) w C# programie to serce programowanie asynchroniczne. Korzystając z tych dwóch słów kluczowych, można użyć zasobów w .NET Framework, .NET Core lub środowisko wykonawcze systemu Windows, aby szybko utworzyć metodę asynchroniczną niemal jak w przypadku tworzenia metody synchronicznej. Metody asynchroniczne zdefiniowane za pomocą `async` słowa kluczowego są nazywane metodami *asynchronicznymi*.
 
 W poniższym przykładzie przedstawiono metodę async. Prawie wszystko w kodzie powinno wyglądać znajomo.
 
@@ -156,7 +156,7 @@ Podejście async do programowania asynchronicznego jest preferowane prawie w ka�
 
 Jeśli określisz, że metoda jest metodą asynchroniczną przy użyciu modyfikatora [Async](../../../language-reference/keywords/async.md) , włączysz następujące dwie możliwości.
 
-- Oznaczona Metoda async może użyć [oczekiwania](../../../language-reference/keywords/await.md) do wyznaczenia punktów zawieszenia. `await` Operator informuje kompilator, że metoda async nie może kontynuować tego punktu do momentu zakończenia procesu asynchronicznego oczekiwania. W międzyczasie sterowanie powraca do obiektu wywołującego metodę async.
+- Oznaczona Metoda async może użyć [oczekiwania](../../../language-reference/operators/await.md) do wyznaczenia punktów zawieszenia. `await` Operator informuje kompilator, że metoda async nie może kontynuować tego punktu do momentu zakończenia procesu asynchronicznego oczekiwania. W międzyczasie sterowanie powraca do obiektu wywołującego metodę async.
 
      Zawieszenie metody asynchronicznej w `await` wyrażeniu nie stanowi wyjścia z metody, a `finally` bloki nie są uruchamiane.
 
@@ -168,7 +168,7 @@ Metoda async zwykle zawiera co najmniej jedno wystąpienie `await` operatora, al
 
 - [async](../../../language-reference/keywords/async.md)
 
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 
 ## <a name="BKMK_ReturnTypesandParameters"></a>Typy zwracane i parametry
 
@@ -343,6 +343,7 @@ namespace AsyncFirstExample
 ## <a name="see-also"></a>Zobacz także
 
 - [async](../../../language-reference/keywords/async.md)
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 - [Programowanie asynchroniczne](../../../async.md)
 - [Przegląd Async](../../../../standard/async.md)
+ 

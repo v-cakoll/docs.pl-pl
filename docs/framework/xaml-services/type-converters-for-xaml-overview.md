@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: a94f1f358a2d0fbfd489ac3d34375b6f883dd4fa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e401b40e1c11504e3c27d5b3601d71ef8f5821e1
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965446"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169008"
 ---
 # <a name="type-converters-for-xaml-overview"></a>Typy konwerterów dla XAML — Omówienie
 Typy konwerterów dostarczają logiki dla składnika zapisywania obiektów, który konwertuje z ciągu znaków XAML na określone obiekty w grafie obiektów. W .NET Framework usługach XAML konwerter typów musi być klasą, która pochodzi od <xref:System.ComponentModel.TypeConverter>. Niektóre konwertery obsługują również ścieżkę zapisu XAML i mogą służyć do serializacji obiektu w postaci ciągu w znaczniku serializacji. W tym temacie opisano, jak i kiedy są wywoływane konwertery typów w języku XAML, i przedstawiono porady dotyczące implementacji <xref:System.ComponentModel.TypeConverter>metod przesłania.  
@@ -93,9 +93,9 @@ Typy konwerterów dostarczają logiki dla składnika zapisywania obiektów, któ
   
 <a name="Applying_the_TypeConverterAttribute"></a>   
 ## <a name="applying-the-typeconverterattribute"></a>Stosowanie TypeConverterAttribute  
- Dla niestandardowego konwertera typów, który ma być używany jako typ działającego konwertera klasy niestandardowej przez .NET Framework usług XAML, należy zastosować [!INCLUDE[TLA#tla_netframewkattr](../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> do definicji klasy. <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> Określony za pomocą atrybutu musi być nazwą typu niestandardowego konwertera typów. W przypadku zastosowania tego atrybutu, gdy procesor XAML obsługuje wartości, w których typ właściwości używa typu klasy niestandardowej, może wprowadzać ciągi i zwracać wystąpienia obiektów.  
+ Dla niestandardowego konwertera typów, który ma być używany jako typ działającego konwertera klasy niestandardowej przez .NET Framework usług XAML, należy zastosować <xref:System.ComponentModel.TypeConverterAttribute> do definicji klasy. <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> Określony za pomocą atrybutu musi być nazwą typu niestandardowego konwertera typów. W przypadku zastosowania tego atrybutu, gdy procesor XAML obsługuje wartości, w których typ właściwości używa typu klasy niestandardowej, może wprowadzać ciągi i zwracać wystąpienia obiektów.  
   
- Można również udostępnić konwerter typów dla poszczególnych właściwości. `set` / `get` Zamiast stosować dodefinicjiklasy,zastosujjądodefinicjiwłaściwości(głównejdefinicji,aniewramachjejimplementacji).<xref:System.ComponentModel.TypeConverterAttribute> [!INCLUDE[TLA#tla_netframewkattr](../../../includes/tlasharptla-netframewkattr-md.md)] Typ właściwości musi być zgodny z typem, który jest przetwarzany przez konwerter typów niestandardowych. Po zastosowaniu tego atrybutu, gdy procesor XAML obsługuje wartości tej właściwości, może przetwarzać ciągi wejściowe i zwracać wystąpienia obiektów. Technika konwertera typów dla właściwości jest szczególnie przydatna, jeśli zdecydujesz się użyć typu właściwości z Microsoft .NET Framework lub z innej biblioteki, w której nie można kontrolować definicji klasy i nie można jej <xref:System.ComponentModel.TypeConverterAttribute> zastosować.  
+ Można również udostępnić konwerter typów dla poszczególnych właściwości. Zamiast stosować `get` / `set` do definicji klasy, zastosuj ją do definicji właściwości (głównej definicji, a nie w ramach jej implementacji). <xref:System.ComponentModel.TypeConverterAttribute> Typ właściwości musi być zgodny z typem, który jest przetwarzany przez konwerter typów niestandardowych. Po zastosowaniu tego atrybutu, gdy procesor XAML obsługuje wartości tej właściwości, może przetwarzać ciągi wejściowe i zwracać wystąpienia obiektów. Technika konwertera typów dla właściwości jest szczególnie przydatna, jeśli zdecydujesz się użyć typu właściwości z Microsoft .NET Framework lub z innej biblioteki, w której nie można kontrolować definicji klasy i nie można jej <xref:System.ComponentModel.TypeConverterAttribute> zastosować.  
   
  Aby podać zachowanie konwersji typu dla niestandardowego dołączonego elementu członkowskiego, <xref:System.ComponentModel.TypeConverterAttribute> Zastosuj `Get` do metody dostępu wzorca implementacji dla dołączonego elementu członkowskiego.  
   

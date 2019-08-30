@@ -5,12 +5,12 @@ author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
 ms.custom: seodec18
-ms.openlocfilehash: 8100add17b61424624f27de705728935f3a1160b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ae4ddd4df902cf8c3d50e50614b12af8dc0aebed
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038037"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168167"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Testowanie C# jednostkowe za pomocą MSTest i .NET Core
 
@@ -20,7 +20,7 @@ Ten samouczek przeprowadzi Cię przez interaktywny proces tworzenia przykładowe
 
 Otwórz okno powłoki. Utwórz katalog o nazwie *Unit-Test-using-MSTest* , aby pomieścić rozwiązanie. W tym nowym katalogu Uruchom [`dotnet new sln`](../tools/dotnet-new.md) polecenie, aby utworzyć nowy plik rozwiązania dla biblioteki klas i projektu testowego. Następnie Utwórz katalog *PrimeService* . W poniższym konspekcie przedstawiono strukturę katalogów i plików:
 
-```
+```console
 /unit-testing-using-mstest
     unit-testing-using-mstest.sln
     /PrimeService
@@ -49,7 +49,7 @@ Zmień katalog z powrotem do katalogu *testowego MSTest* . Uruchom [`dotnet sln 
 
 Następnie Utwórz katalog *PrimeService. Tests* . Poniższy konspekt przedstawia strukturę katalogów:
 
-```
+```console
 /unit-testing-using-mstest
     unit-testing-using-mstest.sln
     /PrimeService
@@ -70,7 +70,7 @@ Utwórz katalog *PrimeService. Tests* jako bieżący katalog i Utwórz nowy proj
 
 Projekt testowy wymaga innych pakietów do tworzenia i uruchamiania testów jednostkowych. `dotnet new`w poprzednim kroku dodano zestaw MSTest SDK, platformę test MSTest i moduł uruchamiający MSTest. Teraz Dodaj `PrimeService` bibliotekę klas jako inną zależność do projektu. [`dotnet add reference`](../tools/dotnet-add-reference.md) Użyj polecenia:
 
-```
+```console
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
@@ -78,7 +78,7 @@ Cały plik można zobaczyć w [repozytorium Samples](https://github.com/dotnet/s
 
 W poniższym konspekcie przedstawiono końcowy układ rozwiązania:
 
-```
+```console
 /unit-testing-using-mstest
     unit-testing-using-mstest.sln
     /PrimeService

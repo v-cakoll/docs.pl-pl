@@ -2,12 +2,12 @@
 title: Koncepcje programowaniaC#()
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: 7668ca6bba0b938e569886cfa9f1985eaa48c5d0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3fcb1ca76c49919b00b74d955b7aadaa2e882f2a
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594997"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168343"
 ---
 # <a name="programming-concepts-c"></a>Koncepcje programowaniaC#()
 W tej części objaśniono koncepcje C# programowania w języku.  
@@ -17,7 +17,7 @@ W tej części objaśniono koncepcje C# programowania w języku.
 |Tytuł|Opis|  
 |-----------|-----------------|  
 |[Zestawy w środowisku .NET](../../../standard/assembly/index.md)|Opisuje sposób tworzenia i używania zestawów.|  
-|[Programowanie asynchroniczne z Async i Await (C#)](./async/index.md)|Opisuje sposób pisania rozwiązań asynchronicznych przy użyciu słów kluczowych [Async](../../language-reference/keywords/async.md) i [await](../../language-reference/keywords/await.md) w C#programie. Zawiera Instruktaż.|  
+|[Programowanie asynchroniczne z Async i Await (C#)](./async/index.md)|Opisuje sposób pisania rozwiązań asynchronicznych przy użyciu słów kluczowych [Async](../../language-reference/keywords/async.md) i [await](../../language-reference/operators/await.md) w C#programie. Zawiera Instruktaż.|  
 |[Atrybuty (C#)](./attributes/index.md)|W tym artykule omówiono sposób dostarczania dodatkowych informacji o elementach programistycznych, takich jak typy, pola, metody i właściwości, przy użyciu atrybutów.|  
 |[Informacje o obiekcieC#wywołującym ()](./caller-information.md)|Opisuje, jak uzyskać informacje o wywołującym metodę. Te informacje obejmują ścieżkę pliku oraz numer wiersza kodu źródłowego i nazwę elementu wywołującego.|  
 |[Kolekcje (C#)](./collections.md)|Zawiera opis niektórych typów kolekcji dostarczonych przez .NET Framework. Pokazuje, jak używać prostych kolekcji i kolekcji par klucz/wartość.|  

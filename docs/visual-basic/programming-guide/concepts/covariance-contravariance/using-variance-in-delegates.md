@@ -1,25 +1,25 @@
 ---
-title: Korzystanie z wariancji w Delegatach (Visual Basic)
+title: Korzystanie z wariancji w delegatach (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
-ms.openlocfilehash: 19eb3070c1b8359a4eb050e7cf2f16622f66ebe9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebba7e862e1b4677d9438aa301ef2b713fba3712
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787260"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169067"
 ---
-# <a name="using-variance-in-delegates-visual-basic"></a><span data-ttu-id="d294d-102">Korzystanie z wariancji w Delegatach (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d294d-102">Using Variance in Delegates (Visual Basic)</span></span>
+# <a name="using-variance-in-delegates-visual-basic"></a><span data-ttu-id="f01d2-102">Korzystanie z wariancji w delegatach (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f01d2-102">Using Variance in Delegates (Visual Basic)</span></span>
 
-<span data-ttu-id="d294d-103">Po przypisaniu metody z delegatem, *Kowariancja* i *kontrawariancja* zapewniają elastyczność dopasowanie typu delegata z podpis metody.</span><span class="sxs-lookup"><span data-stu-id="d294d-103">When you assign a method to a delegate, *covariance* and *contravariance* provide flexibility for matching a delegate type with a method signature.</span></span> <span data-ttu-id="d294d-104">Kowariancja zezwala na metodę, aby zwracany typ, który jest bardziej pochodnego niż zdefiniowanymi dla delegata.</span><span class="sxs-lookup"><span data-stu-id="d294d-104">Covariance permits a method to have return type that is more derived than that defined in the delegate.</span></span> <span data-ttu-id="d294d-105">Kontrawariancja umożliwia metody, która ma typy parametrów, które są mniej pochodnego niż typ delegata.</span><span class="sxs-lookup"><span data-stu-id="d294d-105">Contravariance permits a method that has parameter types that are less derived than those in the delegate type.</span></span>
+<span data-ttu-id="f01d2-103">Podczas przypisywania metody do delegata, *Kowariancja* i *kontrawariancja* zapewniają elastyczność dla dopasowania typu delegata z sygnaturą metody.</span><span class="sxs-lookup"><span data-stu-id="f01d2-103">When you assign a method to a delegate, *covariance* and *contravariance* provide flexibility for matching a delegate type with a method signature.</span></span> <span data-ttu-id="f01d2-104">Kowariancja zezwala metodzie na typ zwracany, który jest bardziej pochodny niż zdefiniowany w delegatze.</span><span class="sxs-lookup"><span data-stu-id="f01d2-104">Covariance permits a method to have return type that is more derived than that defined in the delegate.</span></span> <span data-ttu-id="f01d2-105">Kontrawariancja zezwala na metodę, która ma typy parametrów, które są mniej pochodne niż te w typie delegata.</span><span class="sxs-lookup"><span data-stu-id="f01d2-105">Contravariance permits a method that has parameter types that are less derived than those in the delegate type.</span></span>
 
-## <a name="example-1-covariance"></a><span data-ttu-id="d294d-106">Przykład 1: Kowariancja</span><span class="sxs-lookup"><span data-stu-id="d294d-106">Example 1: Covariance</span></span>
+## <a name="example-1-covariance"></a><span data-ttu-id="f01d2-106">Przykład 1: Kowariancja</span><span class="sxs-lookup"><span data-stu-id="f01d2-106">Example 1: Covariance</span></span>
 
-### <a name="description"></a><span data-ttu-id="d294d-107">Opis</span><span class="sxs-lookup"><span data-stu-id="d294d-107">Description</span></span>
+### <a name="description"></a><span data-ttu-id="f01d2-107">Opis</span><span class="sxs-lookup"><span data-stu-id="f01d2-107">Description</span></span>
 
-<span data-ttu-id="d294d-108">W tym przykładzie pokazano, jak można używać delegatów za pomocą metod, które mają zwracane typy, które są uzyskiwane ze zwracanego typu w podpisie delegata.</span><span class="sxs-lookup"><span data-stu-id="d294d-108">This example demonstrates how delegates can be used with methods that have return types that are derived from the return type in the delegate signature.</span></span> <span data-ttu-id="d294d-109">Typ danych zwracanych przez `DogsHandler` typu `Dogs`, która pochodzi od klasy `Mammals` typu, który jest zdefiniowany w delegacie.</span><span class="sxs-lookup"><span data-stu-id="d294d-109">The data type returned by `DogsHandler` is of type `Dogs`, which derives from the `Mammals` type that is defined in the delegate.</span></span>
+<span data-ttu-id="f01d2-108">Ten przykład pokazuje, jak obiekty delegowane mogą być używane z metodami, które mają typy zwracane, które pochodzą z typu zwracanego w sygnaturze delegata.</span><span class="sxs-lookup"><span data-stu-id="f01d2-108">This example demonstrates how delegates can be used with methods that have return types that are derived from the return type in the delegate signature.</span></span> <span data-ttu-id="f01d2-109">Typ danych zwracanych przez `DogsHandler` element jest typu `Dogs` `Mammals` , który pochodzi od typu, który jest zdefiniowany w delegacie.</span><span class="sxs-lookup"><span data-stu-id="f01d2-109">The data type returned by `DogsHandler` is of type `Dogs`, which derives from the `Mammals` type that is defined in the delegate.</span></span>
 
-### <a name="code"></a><span data-ttu-id="d294d-110">Kod</span><span class="sxs-lookup"><span data-stu-id="d294d-110">Code</span></span>
+### <a name="code"></a><span data-ttu-id="f01d2-110">Kod</span><span class="sxs-lookup"><span data-stu-id="f01d2-110">Code</span></span>
 
 ```vb
 Class Mammals
@@ -44,13 +44,27 @@ Class Test
 End Class
 ```
 
-## <a name="example-2-contravariance"></a><span data-ttu-id="d294d-111">Przykład 2: Kontrawariancja</span><span class="sxs-lookup"><span data-stu-id="d294d-111">Example 2: Contravariance</span></span>
+## <a name="example-2-contravariance"></a><span data-ttu-id="f01d2-111">Przykład 2: Kontrawariancja</span><span class="sxs-lookup"><span data-stu-id="f01d2-111">Example 2: Contravariance</span></span>
 
-### <a name="description"></a><span data-ttu-id="d294d-112">Opis</span><span class="sxs-lookup"><span data-stu-id="d294d-112">Description</span></span>
+### <a name="description"></a><span data-ttu-id="f01d2-112">Opis</span><span class="sxs-lookup"><span data-stu-id="f01d2-112">Description</span></span>
 
-<span data-ttu-id="d294d-113">W tym przykładzie pokazano, jak można używać delegatów za pomocą metody, które mają parametry typu, które typy podstawowe typu parametru podpis delegata.</span><span class="sxs-lookup"><span data-stu-id="d294d-113">This example demonstrates how delegates can be used with methods that have parameters of a type that are base types of the delegate signature parameter type.</span></span> <span data-ttu-id="d294d-114">Za pomocą kontrawariancja możesz użyć jednego programu obsługi zdarzeń zamiast oddzielnych programów obsługi.</span><span class="sxs-lookup"><span data-stu-id="d294d-114">With contravariance, you can use one event handler instead of separate handlers.</span></span> <span data-ttu-id="d294d-115">Na przykład można utworzyć program obsługi zdarzeń, który akceptuje `EventArgs` parametr wejściowy i korzystać z niego przy użyciu `Button.MouseClick` zdarzenia, które wysyła `MouseEventArgs` typu jako parametru, a także z `TextBox.KeyDown` zdarzenia, które wysyła `KeyEventArgs` parametru.</span><span class="sxs-lookup"><span data-stu-id="d294d-115">For example, you can create an event handler that accepts an `EventArgs` input parameter and use it with a `Button.MouseClick` event that sends a `MouseEventArgs` type as a parameter, and also with a `TextBox.KeyDown` event that sends a `KeyEventArgs` parameter.</span></span>
+<span data-ttu-id="f01d2-113">W tym przykładzie pokazano, jak obiekty delegowane mogą być używane z metodami, które mają parametry, których typy są typami podstawowymi typu parametru podpisu delegata.</span><span class="sxs-lookup"><span data-stu-id="f01d2-113">This example demonstrates how delegates can be used with methods that have parameters whose types are base types of the delegate signature parameter type.</span></span> <span data-ttu-id="f01d2-114">Za pomocą kontrawariancja można użyć jednego programu obsługi zdarzeń zamiast oddzielnych programów obsługi.</span><span class="sxs-lookup"><span data-stu-id="f01d2-114">With contravariance, you can use one event handler instead of separate handlers.</span></span> <span data-ttu-id="f01d2-115">W poniższym przykładzie użyto dwóch delegatów:</span><span class="sxs-lookup"><span data-stu-id="f01d2-115">The following example makes use of two delegates:</span></span>
 
-### <a name="code"></a><span data-ttu-id="d294d-116">Kod</span><span class="sxs-lookup"><span data-stu-id="d294d-116">Code</span></span>
+- <span data-ttu-id="f01d2-116">Delegat definiujący podpis zdarzenia [Button. KeyDown.](xref:System.Windows.Forms.Control.KeyDown) <xref:System.Windows.Forms.KeyEventHandler></span><span class="sxs-lookup"><span data-stu-id="f01d2-116">A <xref:System.Windows.Forms.KeyEventHandler> delegate that defines the signature of the [Button.KeyDown](xref:System.Windows.Forms.Control.KeyDown) event.</span></span> <span data-ttu-id="f01d2-117">Podpis jest:</span><span class="sxs-lookup"><span data-stu-id="f01d2-117">Its signature is:</span></span>
+
+   ```vb
+   Public Delegate Sub KeyEventHandler(sender As Object, e As KeyEventArgs)
+   ```
+
+- <span data-ttu-id="f01d2-118">Delegat definiujący sygnaturę zdarzenia [Button. MouseClick.](xref:System.Windows.Forms.Control.MouseDown) <xref:System.Windows.Forms.MouseEventHandler></span><span class="sxs-lookup"><span data-stu-id="f01d2-118">A <xref:System.Windows.Forms.MouseEventHandler> delegate that defines the signature of the [Button.MouseClick](xref:System.Windows.Forms.Control.MouseDown) event.</span></span> <span data-ttu-id="f01d2-119">Podpis jest:</span><span class="sxs-lookup"><span data-stu-id="f01d2-119">Its signature is:</span></span>
+
+   ```vb
+   Public Delegate Sub MouseEventHandler(sender As Object, e As MouseEventArgs)
+   ```
+
+<span data-ttu-id="f01d2-120">W przykładzie zdefiniowano procedurę obsługi zdarzeń z <xref:System.EventArgs> parametrem i używa jej do obsługi `Button.KeyDown` zarówno zdarzenia `Button.MouseClick` , jak i.</span><span class="sxs-lookup"><span data-stu-id="f01d2-120">The example defines an event handler with an <xref:System.EventArgs> parameter and uses it to handle both the `Button.KeyDown` and `Button.MouseClick` events.</span></span> <span data-ttu-id="f01d2-121">Można to zrobić, ponieważ <xref:System.EventArgs> jest typem podstawowym obu <xref:System.Windows.Forms.KeyEventArgs> i <xref:System.Windows.Forms.MouseEventArgs>.</span><span class="sxs-lookup"><span data-stu-id="f01d2-121">It can do this because <xref:System.EventArgs> is a base type of both <xref:System.Windows.Forms.KeyEventArgs>  and <xref:System.Windows.Forms.MouseEventArgs>.</span></span>
+
+### <a name="code"></a><span data-ttu-id="f01d2-122">Kod</span><span class="sxs-lookup"><span data-stu-id="f01d2-122">Code</span></span>
 
 ```vb
 ' Event handler that accepts a parameter of the EventArgs type.
@@ -72,7 +86,7 @@ Private Sub Form1_Load(ByVal sender As System.Object,
 End Sub
 ```
 
-## <a name="see-also"></a><span data-ttu-id="d294d-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d294d-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f01d2-123">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f01d2-123">See also</span></span>
 
-- [<span data-ttu-id="d294d-118">Wariancje w Delegatach (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d294d-118">Variance in Delegates (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
-- [<span data-ttu-id="d294d-119">Korzystanie z wariancji dla Func i akcji delegatów ogólnych (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d294d-119">Using Variance for Func and Action Generic Delegates (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [<span data-ttu-id="f01d2-124">Wariancja w delegatach (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f01d2-124">Variance in Delegates (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [<span data-ttu-id="f01d2-125">Korzystanie z wariancji dla delegatów "Func" i "Action Generic" (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f01d2-125">Using Variance for Func and Action Generic Delegates (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

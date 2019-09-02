@@ -1,321 +1,321 @@
 ---
-title: Oceń przełomowych zmianach — .NET Core
-description: Dowiedz się więcej o sposobach, w którym próbuje zachować zgodność dla deweloperów w różnych wersjach .NET platformy .NET Core.
+title: Oszacowanie istotnych zmian — .NET Core
+description: Dowiedz się więcej na temat sposobu, w jaki platforma .NET Core próbuje zachować zgodność dla deweloperów w różnych wersjach programu .NET.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/10/2019
 ms.openlocfilehash: c68a19b8b98a98bb9c64f5b9fa60b378935e6e93
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
+ms.lasthandoff: 09/02/2019
 ms.locfileid: "67736561"
 ---
-# <a name="evaluate-breaking-changes-in-net-core"></a>Oceń przełomowe zmiany w programie .NET Core
+# <a name="evaluate-breaking-changes-in-net-core"></a>Oszacowanie istotnych zmian w programie .NET Core
 
-Całej swojej historii .NET próbował utrzymanie wysokiego poziomu zgodności z wersji do wersji i w różnych wersjach programu .NET. Ten proces jest kontynuowany prawdziwe dla platformy .NET Core. Mimo że platformy .NET Core może być traktowany jako nową technologię, która jest niezależna od programu .NET Framework, dwa główne czynniki Ogranicz możliwość rozdzielić z .NET Framework .NET Core:
+W całej historii środowisko .NET podjęło próbę utrzymania wysokiego poziomu zgodności z wersji do wersji i w różnych wersjach platformy .NET. Jest to nadal prawdziwe dla platformy .NET Core. Mimo że platforma .NET Core może być traktowana jako nowa technologia, która jest niezależna od .NET Framework, dwa główne czynniki ograniczają możliwość rozbieżności programu .NET Core od .NET Framework:
 
-- Wielu deweloperów pierwotnie opracowana albo kontynuować tworzenie aplikacji .NET Framework. Spójne zachowanie spełniają oczekiwane przez implementacje platformy .NET.
+- Duża liczba deweloperów pierwotnie opracowała lub kontynuowała opracowywanie .NET Framework aplikacji. Oczekują one spójnego zachowania w implementacjach platformy .NET.
 
-- Projekty biblioteki .NET standard umożliwia deweloperom tworzenie bibliotek, których platformą docelową, wspólnych interfejsów API udostępnionych przez oprogramowanie .NET Core i .NET Framework. Deweloperzy oczekują, że biblioteki używane w aplikacji .NET Core powinny działać identycznie do tej samej biblioteki używane w aplikacji .NET Framework.
+- .NET Standard projekty biblioteki umożliwiają deweloperom tworzenie bibliotek przeznaczonych dla wspólnych interfejsów API udostępnionych przez platformę .NET Core i .NET Framework. Deweloperzy oczekują, że biblioteka używana w aplikacji .NET Core powinna zachowywać się identycznie z tą samą biblioteką używaną w aplikacji .NET Framework.
 
-Wraz z zgodność między implementacje platformy .NET deweloperów oczekują wysokiego poziomu zgodności między wersjami .NET Core. W szczególności przeznaczony dla starszej wersji programu .NET Core powinien zostać uruchomiony kod bezproblemowo w nowszej wersji programu .NET Core. W rzeczywistości wielu deweloperów się spodziewać, że nowe interfejsy API znaleziony w nowo wydane wersje programu .NET Core powinny być zgodne ze wstępnymi wersjami, w których wprowadzono tych interfejsów API.
+Wraz ze zgodnością w ramach implementacji platformy .NET deweloperzy oczekują wysokiego poziomu zgodności między wersjami programu .NET Core. W szczególności kod zapisany dla starszej wersji programu .NET Core powinien działać bezproblemowo na nowszej wersji platformy .NET Core. W rzeczywistości wielu deweloperów oczekuje, że nowe interfejsy API znajdujące się w nowo wydanej wersji platformy .NET Core powinny również być zgodne z wersjami wstępnymi, w których zostały wprowadzone te interfejsy API.
 
-W tym artykule przedstawiono kategorie zmiany zgodności (lub zmiany powodujące niezgodność) i sposób, w którym zespół .NET daje w wyniku zmiany w każdej z tych kategorii. Zrozumienie, jak zbliża się do zespołu .NET możliwych przełomowych zmian jest szczególnie przydatne dla programistów, którzy są otwieranie żądania ściągnięcia w [dotnet/corefx](https://github.com/dotnet/corefx) repozytorium GitHub, które modyfikują zachowanie istniejących interfejsów API.
-
-> [!NOTE]
-> Dla definicji kategorii zgodności, takich jak zgodność binarną i zgodności z poprzednimi wersjami, zobacz [istotnej zmiany kategorie](categories.md).
-
-Poniższe sekcje w tym artykule opisano rodzaje zmian wprowadzonych do interfejsów API platformy .NET Core i ich wpływ na zgodność aplikacji. Ikona ✔️ wskazuje, że określonego rodzaju zmian jest dozwolone, ❌ wskazuje, że jest to niedozwolone, natomiast ❓ oznacza zmianę, która może być lub może być zablokowany. Zmiany w tej ostatniej kategorii wymagają orzeczenia i został ocenę jak przewidywalnym oczywisty i spójne poprzednie zachowanie.
+W tym artykule przedstawiono kategorie zmian zgodności (lub istotne zmiany) oraz sposób, w jaki zespół .NET oceni zmiany w każdej z tych kategorii. Zrozumienie, w jaki sposób zespół .NET poddaje potencjalne istotne zmiany, jest szczególnie przydatny dla deweloperów, którzy otwierają żądania ściągnięcia w repozytorium GitHub [/corefx](https://github.com/dotnet/corefx) , które modyfikują zachowanie istniejących interfejsów API.
 
 > [!NOTE]
-> Oprócz służy jako przewodnik dotyczący sposobu zmiany w bibliotekach .NET Core są oceniane, deweloperów bibliotek można również użyć tych kryteriów można ocenić zmian wprowadzonych do ich bibliotek przeznaczonych do wielu implementacji platformy .NET i wersje.
+> Aby zapoznać się z definicją kategorii zgodności, takich jak zgodność binarna i zgodność z poprzednimi wersjami, zobacz artykuł dotyczący [zmiany kategorii](categories.md).
 
-## <a name="modifications-to-the-public-contract"></a>Modyfikacje publicznego kontraktu
+W poniższych sekcjach opisano kategorie zmian wprowadzonych w interfejsach API programu .NET Core i ich wpływ na zgodność aplikacji. Ikona ✔️ wskazuje, że określony rodzaj zmiany jest dozwolony, ❌ wskazuje, że jest niedozwolone, a ❓ wskazuje zmianę, która może lub nie jest dozwolona. Zmiany w tej ostatniej kategorii wymagają orzeczenia i oceny, jak przewidywalne, oczywiste i spójne poprzednie zachowanie było.
 
-Zmiany w tej kategorii *zmodyfikować* publiczny obszar powierzchni typu. Większość zmian w tej kategorii są niedozwolone, ponieważ mogą naruszyć *wstecznej zgodności* (możliwości aplikacji, który został opracowany przy użyciu poprzedniej wersji interfejsu API do wykonania bez ponownej kompilacji w nowszej wersji).
+> [!NOTE]
+> Oprócz obsługi programu jako wskazówki dotyczącej oceny zmian w bibliotekach .NET Core, deweloperzy biblioteki mogą również używać tych kryteriów do oceny zmian w bibliotekach przeznaczonych dla wielu implementacji i wersji platformy .NET.
+
+## <a name="modifications-to-the-public-contract"></a>Modyfikacje kontraktu publicznego
+
+Zmiany w tej kategorii *modyfikują* publiczną powierzchnię typu. Większość zmian w tej kategorii jest niedozwolona, ponieważ naruszają *zgodność* z poprzednimi wersjami (zdolność aplikacji, która została opracowana przy użyciu poprzedniej wersji interfejsu API do wykonania bez ponownej kompilacji w nowszej wersji).
 
 ### <a name="types"></a>Types
 
-- **✔️ Usuwanie implementację interfejsu z typu, gdy interfejs został już zaimplementowany przez typ podstawowy**
+- **✔️ usuwania implementacji interfejsu z typu, gdy interfejs jest już zaimplementowany przez typ podstawowy**
 
-- **Dodawanie nowej implementacji interfejsu na typ ❓**
+- **❓ Dodawanie nowej implementacji interfejsu do typu**
 
-  Jest to dopuszczalne zmiany, ponieważ nie niekorzystnie wpłynąć na istniejących klientów. Wszelkie zmiany typu musi działać w granicach dopuszczalne zmiany zdefiniowane w tym miejscu dla nowej implementacji pozostaje dopuszczalne. Należy zachować wyjątkową ostrożność zachodzi podczas dodawania interfejsów, które bezpośrednio wpływają na zdolność projektanta lub serializatora do generowania kodu lub dane, które nie mogą być używane niskiego poziomu. Na przykład <xref:System.Runtime.Serialization.ISerializable> interfejsu.
+  Jest to akceptowalna zmiana, ponieważ nie ma negatywnego wpływu na istniejących klientów. Wszelkie zmiany w typie muszą działać w granicach akceptowalnych zmian zdefiniowanych w tym miejscu dla nowej implementacji, która pozostanie akceptowalna. Należy zachować szczególną ostrożność przy dodawaniu interfejsów, które bezpośrednio wpływają na zdolność projektanta lub serializatorów do generowania kodu lub danych, których nie można użyć na poziomie niskiego poziomu. Przykładem jest <xref:System.Runtime.Serialization.ISerializable> interfejs.
 
-- **Wprowadzenie do nowej klasy ❓**
+- **❓ Wprowadzenie nowej klasy bazowej**
 
-  Typu mogą zostać wprowadzone do hierarchii między dwoma typami istniejących, jeśli go nie będzie żadnego wprowadzenie nowych [abstrakcyjne](../../csharp/language-reference/keywords/abstract.md) członków lub zmień semantyki oraz zachowanie istniejących typów. Na przykład w programie .NET Framework 2.0 <xref:System.Data.Common.DbConnection> klasy stało się nowe klasy bazowej dla <xref:System.Data.SqlClient.SqlConnection>, które było wcześniej pochodzi bezpośrednio z <xref:System.ComponentModel.Component>.
+  Typ może być wprowadzany do hierarchii między dwoma istniejącymi typami, jeśli nie wprowadza żadnych nowych [abstrakcyjnych](../../csharp/language-reference/keywords/abstract.md) elementów członkowskich lub zmiany semantyki lub zachowania istniejących typów. Na przykład w .NET Framework 2,0, <xref:System.Data.Common.DbConnection> Klasa stał się nową klasą bazową dla <xref:System.Data.SqlClient.SqlConnection>, która wcześniej <xref:System.ComponentModel.Component>była bezpośrednio pochodną.
 
-- **Przenoszenie typu z jednego zestawu do innego ✔️**
+- **✔️ przeniesienie typu z jednego zestawu do innego**
 
-  Należy pamiętać, że *stare* zestawu musi być oznaczony przez <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> wskazującego na nowego zestawu.
+  Należy zauważyć, że *stary* zestaw musi być oznaczony jako <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> wskazujący nowy zestaw.
 
-- **✔️ Zmiana [struktury](../../csharp/language-reference/keywords/struct.md) typ `readonly struct` typu**
+- **✔️ zmienić typu [struktury](../../csharp/language-reference/keywords/struct.md) na `readonly struct` typ**
 
-  Należy pamiętać, że zmiana `readonly struct` typ `struct` typ nie jest dozwolony.
+  Należy zauważyć, że `readonly struct` zmiana typu `struct` na typ jest niedozwolona.
   
-- **✔️ Dodawanie [zapieczętowanego](../../csharp/language-reference/keywords/sealed.md) lub [abstrakcyjne](../../csharp/language-reference/keywords/abstract.md) — słowo kluczowe do typu, gdy istnieją nie *dostępny* konstruktory (publiczny lub chroniony)**
+- **✔️ dodawania [zapieczętowanego](../../csharp/language-reference/keywords/sealed.md) lub [abstrakcyjnego](../../csharp/language-reference/keywords/abstract.md) słowa kluczowego do typu, gdy nie ma *dostępnych* (publicznych lub chronionych) konstruktorów**
 
-- **Rozwijanie widoczność typu ✔️**
+- **✔️ Rozszerzanie widoczności typu**
 
-- **❌ Zmienianie przestrzeni nazw lub nazwa typu**
+- **❌ Zmienić przestrzeni nazw lub nazwy typu**
 
-- **❌ Zmienianie nazw lub usuwanie typów publicznych**
+- **❌ Zmienianie nazwy lub usuwanie typu publicznego**
 
-   Spowoduje to podzielenie cały kod, który używa typu usunięty lub zmieniono jego nazwę.
+   Spowoduje to przerwanie całego kodu, który używa nazwy lub usuniętego typu.
 
-- **❌ Zmiana podstawowym typem wyliczenia**
+- **❌ Zmienianie typu podstawowego wyliczenia**
 
-   Jest to czasu kompilacji i zachowania istotnej zmiany, a także binarne istotną zmianę, który może zgłaszać błędny argumentów atrybutu.
+   Jest to niezależna od czasu kompilowania i zachowania zmiana, a także zmiana podziału binarnego, która może sprawiać, że argumenty atrybutów nie są przewidziane do przeanalizowania.
 
-- **❌ pieczętowania typ, który był wcześniej otwarty**
+- **❌ Opieczętowanie typu, który był wcześniej niezapieczętowany**
 
-- **Dodawanie interfejsu do zestawu podstawowych typów interfejsu ❌**
+- **❌ Dodawania interfejsu do zestawu typów podstawowych interfejsu**
 
-   Jeśli interfejs implementuje interfejs, który ją wcześniej nie implementuje interfejsu, wszystkie typy, które są implementowane oryginalną wersję interfejsu są uszkodzone.
+   Jeśli interfejs implementuje interfejs, który wcześniej nie został zaimplementowany, wszystkie typy, które implementują oryginalną wersję interfejsu, są uszkodzone.
 
-- **Usuwanie klasy z zestawu klas podstawowych lub interfejs z zestawu implementowane interfejsy ❓**
+- **❓ Usunięcie klasy z zestawu klas bazowych lub interfejsu z zestawu zaimplementowanych interfejsów**
 
-  Istnieje jeden wyjątek reguły do usunięcia interfejsu: można dodać implementacji interfejsu, która wynika z usuniętych interfejsu. Na przykład, możesz usunąć <xref:System.IDisposable> Jeśli typ lub interfejs implementuje teraz <xref:System.ComponentModel.IComponent>, który implementuje <xref:System.IDisposable>.
+  Istnieje jeden wyjątek dla reguły usuwania interfejsu: można dodać implementację interfejsu, która pochodzi od usuniętego interfejsu. Można na przykład usunąć <xref:System.IDisposable> , czy typ lub interfejs implementuje <xref:System.ComponentModel.IComponent>teraz, który implementuje <xref:System.IDisposable>.
 
-- **❌ Zmiana `readonly struct` typ [struktury](../../csharp/language-reference/keywords/struct.md) typu**
+- **❌ Zmienić `readonly struct` typu na typ [struktury](../../csharp/language-reference/keywords/struct.md)**
 
-  Należy pamiętać, że zmiana `struct` typ `readonly struct` typ jest dozwolony.
+  Należy zauważyć, że zmiana `struct` typu `readonly struct` na typ jest dozwolona.
 
-- **❌ Zmiana [struktury](../../csharp/language-reference/keywords/struct.md) typ `ref struct` typu i na odwrót**
+- **❌ Zmienić typu [struktury](../../csharp/language-reference/keywords/struct.md) na `ref struct` typ i na odwrót**
 
-- **Zmniejszanie widoczności typu ❌**
+- **❌ Zmniejszania widoczności typu**
 
-   Jednakże zwiększając widoczność obramowania typem jest dozwolone.
+   Jednak zwiększenie widoczności typu jest dozwolone.
 
 ### <a name="members"></a>Elementy członkowskie
 
-- **Rozwijanie widoczność elementu członkowskiego, który nie jest ✔️ [wirtualny](../../csharp/language-reference/keywords/sealed.md)**
+- **✔️ Rozszerzanie widoczności elementu członkowskiego, który nie jest [wirtualny](../../csharp/language-reference/keywords/sealed.md)**
 
-- **✔️ Dodawanie abstrakcyjną składową do typu publicznego, który nie ma przypisanego *dostępny* konstruktory (publiczny lub chroniony) lub typ [zapieczętowane](../../csharp/language-reference/keywords/sealed.md)**
+- **✔️ dodawania abstrakcyjnej składowej do typu publicznego, który ma *niedostępne* (publiczne lub chronione) konstruktory lub typ jest [zapieczętowany](../../csharp/language-reference/keywords/sealed.md)**
 
-  Jednak dodanie abstrakcyjną składową do typu, który jest dostępny żaden konstruktor (publiczny lub chroniony), a nie `sealed` jest niedozwolone.
+  Jednak dodanie abstrakcyjnej składowej do typu, który ma dostępne (publiczne lub chronione) konstruktorów, i `sealed` nie jest dozwolone.
 
-- **Ograniczanie widoczności ✔️ [chronione](../../csharp/language-reference/keywords/protected.md) elementu członkowskiego, gdy typ nie ma dostępnych konstruktorów (publiczny lub chroniony) lub typ jest [zapieczętowane](../../csharp/language-reference/keywords/sealed.md)**
+- **✔️ Ograniczanie widoczności chronionego elementu [](../../csharp/language-reference/keywords/protected.md) Członkowskiego, gdy typ nie ma dostępnych (publicznych lub chronionych) konstruktorów lub typ jest [zapieczętowany](../../csharp/language-reference/keywords/sealed.md)**
 
-- **✔️ Przenoszenie członka do klasy wyżej w hierarchii niż typ, z którego został usunięty**
+- **✔️ przeniesienie elementu członkowskiego do klasy wyższej w hierarchii niż typ, z którego został usunięty**
 
-- **✔️ Dodanie lub usunięcie zastąpienia**
+- **✔️ Dodawanie lub usuwanie przesłonięcia**
 
-  Wprowadzenie do zastąpienia może powodować poprzedniego odbiorcy pominąć zastępowania podczas wywoływania [podstawowy](../../csharp/language-reference/keywords/base.md).
+  Należy pamiętać, że wprowadzenie przesłonięcia może spowodować, że poprzedni odbiorcy pominięcia przesłonięcia podczas wywoływania [podstawy](../../csharp/language-reference/keywords/base.md).
 
-- **✔️ Dodanie konstruktora do klasy, wraz z domyślnego (bezparametrowego) konstruktora, jeśli klasa miała wcześniej konstruktorów**
+- **✔️ dodać konstruktora do klasy wraz z domyślnym konstruktorem (bez parametrów), jeśli Klasa nie miała wcześniej konstruktorów**
 
-   Jednak dodanie konstruktora do klasy, która miała wcześniej konstruktorów *bez* Dodawanie konstruktora bez parametrów jest niedozwolone.
+   Jednak dodanie konstruktora do klasy, która wcześniej nie miała konstruktorów *bez* dodawania konstruktora bezparametrowego, nie jest dozwolone.
 
-- **✔️ Zmiana elementu członkowskiego w [abstrakcyjne](../../csharp/language-reference/keywords/abstract.md) do [wirtualny](../../csharp/language-reference/keywords/virtual.md)**
+- **✔️ zmienić elementu członkowskiego [](../../csharp/language-reference/keywords/abstract.md) z abstrakcyjnego na [wirtualny](../../csharp/language-reference/keywords/virtual.md)**
 
-- **✔️ Zmiana z `ref readonly` do `ref` zwracają wartość (z wyjątkiem metod wirtualnych lub interfejsów)**
+- **✔️ zmienić z `ref readonly` `ref` na wartość zwracaną (z wyjątkiem metod wirtualnych lub interfejsów)**
 
-- **✔️ Usunięcie [tylko do odczytu](../../csharp/language-reference/keywords/readonly.md) z polem, chyba że typu statycznego pola jest typem wartości modyfikowalne**
+- **✔️ Usuwanie elementu [ReadOnly](../../csharp/language-reference/keywords/readonly.md) z pola, chyba że typ statyczny pola jest modyfikowalnym typem wartości**
 
-- **✔️ Wywoływania nowe zdarzenie, który nie został wcześniej zdefiniowany**
+- **✔️ Wywoływanie nowego zdarzenia, które nie zostało wcześniej zdefiniowane**
 
-- **Dodawanie nowego pola wystąpienia typu ❓**
+- **❓ Dodać nowego pola wystąpienia do typu**
 
-   Ta zmiana wpływa na serializacji.
+   Ta zmiana wpływa na serializację.
 
-- **❌ Zmienianie nazw lub usuwanie członka publicznego lub parametru**
+- **❌ Zmienianie nazwy lub usuwanie publicznego elementu członkowskiego lub parametru**
 
-   Spowoduje to podzielenie cały kod, który używa usunięty lub zmieniono jego nazwę elementu członkowskiego lub parametrów.
+   Spowoduje to przerwanie całego kodu, który używa nazwy lub usuniętego elementu członkowskiego lub parametru.
 
-   Należy pamiętać, że obejmuje usunięcie lub zmiana nazwy metody pobierającej lub ustawiającej z właściwością, a także zmiana nazwy lub usunięcie elementów członkowskich wyliczenia.
+   Należy zauważyć, że obejmuje to usunięcie lub zmianę nazwy metody pobierającej lub setter z właściwości, a także zmianę nazwy lub usunięcie elementów członkowskich wyliczenia.
 
-- **Dodawanie członka do interfejsu ❌**
+- **❌ Dodawanie elementu członkowskiego do interfejsu**
 
-- **❌, zmieniając wartość publiczny członek stałej lub wyliczenia**
+- **❌ Zmienić wartości stałej publicznej lub składowej wyliczenia**
 
-- **Zmiana typu właściwości, pola, parametru lub zwracanej wartości ❌**
+- **❌ Zmienić typu właściwości, pola, parametru lub wartości zwracanej**
 
-- **❌ Dodawanie, usuwanie lub zmiana kolejności parametrów**
+- **❌ Dodawania, usuwania lub zmiany kolejności parametrów**
 
-- **❌ Dodawanie lub usuwanie [w](../../csharp/language-reference/keywords/in.md), [się](../../csharp/language-reference/keywords/out.md) , lub [ref](../../csharp/language-reference/keywords/ref.md) — słowo kluczowe z parametru**
+- **❌ Dodawanie lub usuwanie słowa kluczowego [in](../../csharp/language-reference/keywords/in.md), [out](../../csharp/language-reference/keywords/out.md) lub [ref](../../csharp/language-reference/keywords/ref.md) z parametru**
 
-- **❌ Zmiana nazwy parametru (w tym zmienianie jej wielkości liter)**
+- **❌ Zmianę nazwy parametru (w tym zmiana jego wielkości liter)**
 
-  Jest uznawane za istotne dwóch powodów:
+  Jest to uważane za rozdzielenie z dwóch powodów:
   
-  - Przerywa z późnym wiązaniem scenariuszy, takich jak funkcji późne powiązania w języku Visual Basic i [dynamiczne](../../csharp/language-reference/keywords/dynamic.md) w C#.
+  - Dzieli scenariusze z późnym wiązaniem, takie jak funkcja późnego wiązania [](../../csharp/language-reference/keywords/dynamic.md) w Visual Basic C#i dynamiczna w.
   
-  - Przerywa [źródła zgodności](categories.md#source-compatibility) kiedy używać deweloperzy [argumenty nazwane](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments).
+  - Jest ona podzielona na [zgodność źródłową](categories.md#source-compatibility) , gdy deweloperzy używają [nazwanych argumentów](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments).
 
-- **❌ Zmiana z `ref` wartości zwracanej, aby `ref readonly` zwracają wartość**
+- **❌ Zmiany z `ref` wartości zwracanej `ref readonly` na wartość zwracaną**
 
-- **❌️ Zmiana z `ref readonly` do `ref` zwracają wartość metody wirtualnej lub interfejsu**
+- **❌️ zmiany z `ref readonly` `ref` do wartości zwracanej w wirtualnej metodzie lub interfejsie**
 
-- **❌ Dodawanie lub usuwanie [abstrakcyjne](../../csharp/language-reference/keywords/abstract.md) od elementu członkowskiego**
+- **❌ Dodawanie lub usuwanie [abstrakcyjnej](../../csharp/language-reference/keywords/abstract.md) z elementu członkowskiego**
 
-- **❌ Usunięcie [wirtualnego](../../csharp/language-reference/keywords/virtual.md) — słowo kluczowe od elementu członkowskiego**
+- **❌ Usunięcie słowa kluczowego [Virtual](../../csharp/language-reference/keywords/virtual.md) z elementu członkowskiego**
 
-  Chociaż często nie jest to istotna zmiana ponieważ C# kompilatora zwykle do emitowania [callvirt](<xref:System.Reflection.Emit.OpCodes.Callvirt>) instrukcje języka pośredniego (IL), aby wywołać metody niewirtualnej (`callvirt` wykonuje sprawdzanie wartości null, podczas gdy normalne wywołanie nie ), to zachowanie nie jest invariable z kilku powodów:
-  - C#to nie tylko języka współpracującego .NET.
+  Chociaż często nie jest to istotna zmiana, C# ponieważ kompilator zamierza emitować instrukcje języka pośredniego (IL) elementu [callvirt](<xref:System.Reflection.Emit.OpCodes.Callvirt>) do wywoływania metod niewirtualnych (`callvirt` wykonuje sprawdzanie wartości null, podczas gdy normalne wywołanie nie jest), to zachowanie nie jest Niezmienna z kilku powodów:
+  - C#nie jest jedynym językiem, który jest obiektem docelowym platformy .NET.
   
-  - C# Kompilator próbuje coraz bardziej zoptymalizować `callvirt` na normalne wywołanie, zawsze wtedy, gdy niewirtualną metodę docelową i prawdopodobnie nie jest null (np. metody udostępnianej [?. operatora propagowania wartości null](../../csharp/language-reference/operators/member-access-operators.md#null-conditional-operators--and-)).
+  - C# Kompilator coraz bardziej próbuje zoptymalizować `callvirt` do normalnego wywołania, gdy metoda docelowa nie jest wirtualna i prawdopodobnie nie ma wartości null (na przykład do metody dostępnej za pomocą [operatora propagacji?. null](../../csharp/language-reference/operators/member-access-operators.md#null-conditional-operators--and-)).
   
-  Wprowadzanie metody wirtualnej oznacza, że kod konsumenta często pojawiłyby-niemal jej wywołanie.
+  Zastosowanie metody wirtualnej oznacza, że kod konsumenta często kończy wywoływanie go niepraktycznie.
 
-- **❌ Dodawanie [wirtualnego](../../csharp/language-reference/keywords/virtual.md) — słowo kluczowe do elementu członkowskiego**
+- **❌ Dodawania słowa kluczowego [Virtual](../../csharp/language-reference/keywords/virtual.md) do elementu członkowskiego**
 
-- **❌ Wprowadzania wirtualny element członkowski jest abstrakcyjna**
+- **❌ Tworzenia abstrakcyjnej składowej wirtualnego**
 
-  A [wirtualna elementu członkowskiego](../../csharp/language-reference/keywords/virtual.md) dostarcza implementację metody, która *może być* zastąpiona przez klasę pochodną. [Abstrakcyjną składową](../../csharp/language-reference/keywords/abstract.md) zapewnia żadnej implementacji i *musi być* przesłonięcia.
+  [Wirtualny element członkowski](../../csharp/language-reference/keywords/virtual.md) zawiera implementację metody, która *może zostać* zastąpiona przez klasę pochodną. [Abstrakcyjny element członkowski](../../csharp/language-reference/keywords/abstract.md) nie zawiera implementacji i *musi zostać* zastąpiony.
 
-- **❌ Dodawanie abstrakcyjną składową do typu publicznego, który ma dostępnych konstruktorów (publiczny lub chroniony) i który nie jest [zapieczętowane](../../csharp/language-reference/keywords/sealed.md)**
+- **❌ Dodawania abstrakcyjnej składowej do typu publicznego, który ma dostępne (publiczne lub chronione) konstruktory, które nie są [zapieczętowane](../../csharp/language-reference/keywords/sealed.md)**
 
-- **❌ Dodawanie lub usuwanie [statyczne](../../csharp/language-reference/keywords/static.md) — słowo kluczowe od elementu członkowskiego**
+- **❌ Dodawanie lub usuwanie [statycznego](../../csharp/language-reference/keywords/static.md) słowa kluczowego z elementu członkowskiego**
 
-- **Dodanie przeciążenia wyklucza istniejących przeciążenia, która definiuje zachowanie różnych ❌**
+- **❌ Dodawania przeciążenia, które wyklucza istniejące Przeciążenie i definiuje inne zachowanie**
 
-  Spowoduje to podzielenie istniejących klientów, które były powiązane z poprzednim przeciążenia. Na przykład, jeśli klasę utworzono według jednej wersji metody, która akceptuje <xref:System.UInt32>, istniejących klientów pomyślnie powiąże tego przeciążenia przy przekazywaniu <xref:System.Int32> wartość. Jednak jeśli dodasz przeciążenia akceptujący <xref:System.Int32>, podczas ponownej kompilacji lub korzystanie z późnym wiązaniem, kompilator teraz wiąże się z nowym przeciążeniem. Jeśli powoduje różne zachowanie, to istotnej zmiany.
+  Spowoduje to przerwanie istniejących klientów, które zostały powiązane z poprzednim przeciążeniem. Na przykład jeśli klasa ma jedną wersję metody, która akceptuje <xref:System.UInt32>, istniejący Klient pomyślnie powiąże się z tym przeciążeniem podczas <xref:System.Int32> przekazywania wartości. Jeśli jednak zostanie dodane Przeciążenie, które akceptuje <xref:System.Int32>, podczas ponownej kompilacji lub użycia późnego wiązania, kompilator tworzy teraz powiązanie z nowym przeciążeniem. W przypadku innych wyników zachowania jest to istotna zmiana.
 
-- **❌ Dodanie konstruktora do klasy, która miała wcześniej żaden konstruktor bez dodawania konstruktora bez parametrów**
+- **❌ Dodać konstruktora do klasy, która wcześniej nie miała konstruktora bez dodawania konstruktora bezparametrowego**
 
-- **❌️ Dodawanie [tylko do odczytu](../../csharp/language-reference/keywords/readonly.md) do pola**
+- **❌️ Dodawanie elementu [ReadOnly](../../csharp/language-reference/keywords/readonly.md) do pola**
 
-- **❌ Zmniejszanie widoczności elementu członkowskiego**
+- **❌ Zmniejszania widoczności elementu członkowskiego**
 
-   Obejmuje to zmniejszenie widoczność [chronione](../../csharp/language-reference/keywords/protected.md) elementu członkowskiego, gdy istnieją *dostępny* konstruktory (publiczny lub chroniony) i typ jest *nie* [ zapieczętowane](../../csharp/language-reference/keywords/sealed.md). Jeśli nie jest to możliwe, zmniejszając widoczność chroniony element członkowski jest dozwolone.
+   Obejmuje to zmniejszenie widoczności chronionego elementu [](../../csharp/language-reference/keywords/protected.md) Członkowskiego, gdy są *dostępne* (publiczne lub chronione) konstruktory, a typ *nie* jest [zapieczętowany](../../csharp/language-reference/keywords/sealed.md). Jeśli tak się nie dzieje, zmniejszenie widoczności chronionego elementu członkowskiego jest dozwolone.
 
-   Pamiętaj, że zwiększając widoczność elementu członkowskiego jest dozwolone.
+   Należy zauważyć, że zwiększenie widoczności składowej jest dozwolone.
 
-- **❌ Zmianę typu składowej**
+- **❌ Zmienić typu elementu członkowskiego**
 
-   Nie można zmodyfikować wartość zwracaną metody lub typu pola lub właściwości. Na przykład, podpis metody, która zwraca <xref:System.Object> nie można zmienić, aby zwrócić <xref:System.String>, lub na odwrót.
+   Nie można zmodyfikować wartości zwracanej przez metodę lub typ właściwości lub pola. Na przykład sygnatura metody zwracającej wartość <xref:System.Object> nie może zostać zmieniona w celu <xref:System.String>zwrócenia lub odwrotnie.
 
-- **❌ Dodanie pola do struktury, która miała wcześniej bez stanu**
+- **❌ Dodawanie pola do struktury, która wcześniej nie miała stanu**
 
-  Asercja określonego przydziału reguły umożliwia niezainicjowane zmienne tak długo, jak typ zmiennej jest strukturą bezstanowe. Jeśli struktura jest stanowa, kod może wystąpić niezainicjowanych danych. To plik binarny zmiana powodująca niezgodność oraz potencjalnie źródłowej, które są istotne.
+  Określone reguły przypisywania umożliwiają użycie niezainicjowanych zmiennych, tak długo, jak typ zmiennej jest strukturą bezstanową. Jeśli struktura jest stanowa, kod może kończyć się zainicjowanymi danymi. Może to być zarówno uszkodzenie źródła, jak i uszkodzenie binarne.
 
-- **Wyzwalanie istniejące zdarzenie, gdy nigdy nie zostało wywołane przed ❌**
+- **❌ Wyzwalanie istniejącego zdarzenia, gdy wcześniej nie zostało ono wyzwolone**
 
-## <a name="behavioral-changes"></a>Zmiany zachowania
+## <a name="behavioral-changes"></a>Zmiany behawioralne
 
 ### <a name="assemblies"></a>Zestawy
 
-- **✔️ Tworzenie przenośnej zestawu podczas tych samych platformach są nadal obsługiwane.**
+- **✔️ tworzenia zestawu przenośnego, gdy te same platformy są nadal obsługiwane**
 
-- **Zmienianie nazwy zestawu ❌**
-- **Zmiana klucza publicznego zestawu ❌**
+- **❌ Zmienić nazwy zestawu**
+- **❌ Zmienić klucza publicznego zestawu**
 
-### <a name="properties-fields-parameters-and-return-values"></a>Właściwości, pola, parametrów i zwracanych wartości
+### <a name="properties-fields-parameters-and-return-values"></a>Właściwości, pola, parametry i wartości zwracane
 
-- **✔️ Zmiana wartości właściwości, pola, wartość zwracana lub [się](../../csharp/language-reference/keywords/out-parameter-modifier.md) parametr typu bardziej pochodnego**
+- **✔️ zmiany wartości właściwości, pola, wartości zwracanej lub parametru [out](../../csharp/language-reference/keywords/out-parameter-modifier.md) na bardziej pochodny typ**
 
-  Na przykład metodę, która zwraca typ <xref:System.Object> może zwrócić <xref:System.String> wystąpienia. (Jednak sygnatury metody nie można zmienić).
+  Na przykład Metoda zwracająca typ <xref:System.Object> może <xref:System.String> zwracać wystąpienie. Nie można jednak zmienić sygnatury metody.)
 
-- **Zwiększenie zakresu ✔️ akceptowane wartości dla właściwości lub parametru, jeśli element członkowski nie jest [wirtualny](../../csharp/language-reference/keywords/virtual.md)**
+- **✔️ zwiększenie zakresu akceptowanych wartości dla właściwości lub parametru, jeśli element członkowski nie jest [wirtualny](../../csharp/language-reference/keywords/virtual.md)**
 
-  Pamiętaj, że podczas zakres wartości, które mogą być przekazywane do metody lub są zwracane przez element członkowski można rozwinąć, nie typem parametru lub elementu członkowskiego. Na przykład, gdy wartości przekazywane do metody, można zwiększyć z 0 124 0-255, typ parametru nie można zmienić z <xref:System.Byte> do <xref:System.Int32>.
+  Należy zauważyć, że podczas gdy zakres wartości, które mogą być przesyłane do metody lub są zwracane przez element członkowski, można rozwinąć, parametr lub typ elementu członkowskiego nie mogą. Na przykład, podczas gdy wartości przekazaną do metody można rozszerzyć od 0-124 do 0-255, typ parametru nie może zmienić <xref:System.Byte> z <xref:System.Int32>na.
 
-- **Zwiększenie zakresu ❌ akceptowane wartości dla właściwości lub parametru, jeśli element jest [wirtualny](../../csharp/language-reference/keywords/virtual.md)**
+- **❌ Zwiększenie zakresu akceptowanych wartości właściwości lub parametru, jeśli element członkowski jest [wirtualny](../../csharp/language-reference/keywords/virtual.md)**
 
-   Ta zmiana spowoduje przerwanie istniejących zgodnym z przesłoniętą elementy członkowskie, których nie będzie działać prawidłowo dla rozszerzonego zakresu wartości.
+   Ta zmiana powoduje przerwanie istniejących przesłoniętych elementów członkowskich, które nie będą działać poprawnie dla rozszerzonego zakresu wartości.
 
-- **❌ Zmniejszenie zakresu akceptowanych wartości dla właściwości lub parametru**
+- **❌ Zmniejszania zakresu akceptowanych wartości dla właściwości lub parametru**
 
-- **Zwiększenie zakresu ❌ zwracane wartości dla właściwości, pola, wartość zwracana lub [się](../../csharp/language-reference/keywords/out-parameter-modifier.md) parametru**
+- **❌ Zwiększyć zakres wartości zwracanych dla właściwości, pola, wartości zwracanej lub parametru [out](../../csharp/language-reference/keywords/out-parameter-modifier.md)**
 
-- **❌ Zmiana zwracane wartości dla właściwości, pola, wartość zwracana przez metodę, lub [się](../../csharp/language-reference/keywords/out-parameter-modifier.md) parametru**
+- **❌ Zmienić zwracanych wartości dla właściwości, pola, wartości zwracanej metody lub parametru [out](../../csharp/language-reference/keywords/out-parameter-modifier.md)**
 
-- **Zmiana wartości domyślnej właściwości, pola lub parametr ❌**
+- **❌ Zmiany wartości domyślnej właściwości, pola lub parametru**
 
-- **Zmiana dokładność liczbowa wartość zwrotna ❌**
+- **❌ Zmiany dokładności liczbowej zwracanej wartości**
 
-- **Zmiana ❓ A analizowania danych wejściowych i zgłaszanie nowych wyjątków (nawet, jeśli zachowanie analizowania, nie jest określony w dokumentacji**
+- **❓ Zmianę podczas analizowania danych wejściowych i zgłaszających nowe wyjątki (nawet jeśli nie określono zachowania analizy w dokumentacji**
 
 ### <a name="exceptions"></a>Wyjątki
 
-- **Zgłaszanie wyjątku typu bardziej pochodnego niż istniejący wyjątek ✔️**
+- **✔️ Zgłaszanie bardziej pochodnego wyjątku niż istniejący wyjątek**
 
-  Ponieważ nowy wyjątek jest podklasą istniejących wyjątek, poprzedniego kodu obsługi wyjątków w dalszym ciągu obsłużyć wyjątek. Na przykład w programie .NET Framework 4, metod tworzenia i pobierania kultury rozpoczął się zgłosić <xref:System.Globalization.CultureNotFoundException> zamiast <xref:System.ArgumentException> Jeśli nie można odnaleźć kultury. Ponieważ <xref:System.Globalization.CultureNotFoundException> pochodzi od klasy <xref:System.ArgumentException>, jest to dopuszczalne zmiany.
+  Ponieważ nowy wyjątek jest podklasą istniejącego wyjątku, poprzedni kod obsługi wyjątków nadal obsłużył wyjątek. Na przykład w .NET Framework 4, metody tworzenia i pobierania kultur zaczęły zgłosić <xref:System.Globalization.CultureNotFoundException> zamiast <xref:System.ArgumentException> elementu, jeśli nie można znaleźć kultury. Ponieważ <xref:System.Globalization.CultureNotFoundException> pochodzi od <xref:System.ArgumentException>, jest to akceptowalna zmiana.
 
-- **Zgłaszanie bardziej konkretny wyjątek niż ✔️ <xref:System.NotSupportedException>, <xref:System.NotImplementedException>, <xref:System.NullReferenceException>**
+- **✔️ zgłaszania bardziej szczegółowego wyjątku <xref:System.NotSupportedException>niż <xref:System.NotImplementedException>,,<xref:System.NullReferenceException>**
 
-- **✔️ zostanie zgłoszony wyjątek, który jest uważany za nieodwracalny**
+- **✔️ zgłaszania wyjątku, który jest uznawany za niemożliwy do odzyskania**
 
-  Nieodwracalny wyjątki nie powinny być przechwytywane, ale zamiast tego powinno zostać obsłużone przez wysokiego poziomu obsługi catch-all. W związku z tym użytkownicy nie powinny mieć kod, który przechwytuje tych jawnych wyjątków. Nieodwracalny wyjątki są:
+  Niemożliwy do odzyskania wyjątki nie powinny być przechwytywane, ale powinny być obsługiwane przez obsługę catch-all o wysokim poziomie. W związku z tym użytkownicy nie powinny mieć kodu, który przechwytuje te jawne wyjątki. Nieodwracalne wyjątki są następujące:
 
   - <xref:System.AccessViolationException>
   - <xref:System.ExecutionEngineException>
   - <xref:System.Runtime.InteropServices.SEHException>
   - <xref:System.StackOverflowException>
 
-- **✔️ Zgłaszanie nowy wyjątek nową ścieżkę kodu**
+- **✔️ Zgłaszanie nowego wyjątku w nowej ścieżce kodu**
 
-  Wyjątek musi dotyczyć tylko nową ścieżkę kodu które jest wykonywane przy użyciu nowych wartości parametru lub stan i nie można wykonać przez istniejący kod przeznaczonego poprzedniej wersji.
+  Wyjątek musi dotyczyć tylko nowej ścieżki kodu, która jest wykonywana przy użyciu nowych wartości parametrów lub stanu, i które nie mogą być wykonywane przez istniejący kod, który jest przeznaczony dla poprzedniej wersji.
 
-- **Usuwanie wyjątek, aby umożliwić bardziej niezawodne działanie lub udostępnione nowe scenariusze ✔️**
+- **✔️ usunąć wyjątek, aby umożliwić bardziej niezawodne zachowanie lub nowe scenariusze**
 
-  Na przykład `Divide` metodę, która wcześniej tylko obsługiwane wartości dodatnich i zgłosił <xref:System.ArgumentOutOfRangeException> można zmienić do obsługi wartości dodatnie i ujemne bez zgłoszenia wyjątku.
+  Na przykład `Divide` Metoda, która wcześniej obsługiwała tylko wartości dodatnie i <xref:System.ArgumentOutOfRangeException> zgłosiła w przeciwnym razie, może zostać zmieniona, aby obsługiwała wartości ujemne i dodatnie bez zgłaszania wyjątku.
 
-- **Zmiana tekstu komunikatu o błędzie ✔️**
+- **✔️ zmienić tekstu komunikatu o błędzie**
 
-  Deweloperzy nie należy polegać na tekst komunikaty o błędach, które zmieniają się również na podstawie kultury użytkownika.
+  Deweloperzy nie powinni polegać na tekście komunikatów o błędach, które również zmieniają się w zależności od kultury użytkownika.
 
-- **❌ w innym przypadku nie jest wymieniona powyżej zostanie zgłoszony wyjątek**
+- **❌ Zgłaszanie wyjątku w innym przypadku niewymienionym powyżej**
 
-- **Usuwanie wyjątek w innym przypadku niewymienionego powyżej ❌**
+- **❌ Usunąć wyjątek w każdym innym przypadku niewymienionym powyżej**
 
 ### <a name="attributes"></a>Atrybuty
 
-- **✔️, zmieniając wartość atrybutu, który jest *nie* możliwość obserwowania**
+- **✔️ zmienić wartości atrybutu, który *nie* jest zauważalny**
 
-- **Zmiana wartości atrybutu ❌, *jest* możliwość obserwowania**
+- **❌ Zmienić wartości atrybutu, który *jest* zauważalny**
 
-- **Usuwanie atrybutu ❓**
+- **❓ Usunąć atrybutu**
 
-  W większości przypadków, usunięcie atrybutu (takie jak <xref:System.NonSerializedAttribute>) jest zmianą przerywającą.
+  W większości przypadków usunięcie atrybutu (na przykład <xref:System.NonSerializedAttribute>) jest istotną zmianą.
 
-## <a name="platform-support"></a>Obsługa różnych platform
+## <a name="platform-support"></a>Obsługa platform
 
-- **✔️ Obsługi operacji na platformie, która wcześniej nie jest obsługiwana**
+- **✔️ Obsługa operacji na platformie, która była wcześniej nieobsługiwana**
 
-- **❌ Nie obsługi lub teraz wymagających określonego dodatku do operacji, która wcześniej była obsługiwana na platformie**
+- **❌ Nie obsługiwać lub obecnie wymaganego dodatku Service Pack dla operacji, która była wcześniej obsługiwana na platformie**
 
-## <a name="internal-implementation-changes"></a>Wewnętrznej implementacji zmian
+## <a name="internal-implementation-changes"></a>Wewnętrzne zmiany implementacji
 
-- **Zmienianie obszaru powierzchni wewnętrzny typ ❓**
+- **❓ Zmienić obszaru powierzchni typu wewnętrznego**
 
-   Takie zmiany są ogólnie dozwolone, mimo że dzielą się one prywatnej odbicia. W niektórych przypadkach, w którym popularnych bibliotek innych firm lub dużej liczby deweloperów zależą od wewnętrznych interfejsach API, takie zmiany może być zablokowany.
+   Takie zmiany są zwykle dozwolone, chociaż przerywają odbicie prywatne. W niektórych przypadkach, gdy popularne biblioteki innych firm lub duża liczba deweloperów zależą od wewnętrznych interfejsów API, takie zmiany mogą nie być dozwolone.
 
-- **❓ Zmianę wewnętrznej implementacji elementu członkowskiego**
+- **❓ Zmiana wewnętrznej implementacji elementu członkowskiego**
 
-  Te zmiany są ogólnie dozwolone, mimo że dzielą się one prywatnej odbicia. W niektórych przypadkach, gdy kod klienta często zależy od prywatnych odbicia lub gdzie zmiany wprowadzono wystąpienie niezamierzonych skutków ubocznych, te zmiany może być zablokowany.
+  Te zmiany są ogólnie dozwolone, chociaż przerywają odbicie prywatne. W niektórych przypadkach, gdzie kod klienta często zależy od odbicia prywatnego lub gdzie zmiana wprowadza niezamierzone efekty uboczne, te zmiany mogą być niedozwolone.
 
-- **✔️ Poprawę wydajności operacji**
+- **✔️ poprawy wydajności operacji**
 
-   Możliwość modyfikowania wydajność operacji jest niezbędne, ale takie zmiany może przerwać kodu, która opiera się na bieżącej szybkości operacji. Jest to szczególnie istotne, kodu, który jest zależny od czasu operacji asynchronicznych. Należy pamiętać, że zmiana wydajności nie powinna mieć żadnego wpływu na inne zachowanie interfejsu API w danym; w przeciwnym razie zostaną istotne zmiany.
+   Możliwość modyfikowania wydajności operacji jest istotna, ale takie zmiany mogą spowodować przerwanie kodu, który opiera się na bieżącej szybkości operacji. Jest to szczególnie prawdziwe w przypadku kodu, który zależy od chronometrażu operacji asynchronicznych. Należy zauważyć, że zmiana wydajności nie powinna mieć wpływu na inne zachowanie interfejsu API. w przeciwnym razie zmiana zostanie przerwana.
 
-- **✔️ Pośrednio (i często niekorzystnie) Zmiana wydajności operacji**
+- **✔️ pośrednio (i często nieszkodliwe) zmiana wydajności operacji**
 
-  Jeśli w danym zmian nie jest traktowane jako podziału innego powodu, jest to dopuszczalne. Często potrzeba akcje do wykonania, która może zawierać dodatkowe operacje lub dodaje nowe funkcje. To prawie zawsze mieć wpływ na wydajność, ale może być niezbędny do uzyskania interfejsu API w funkcji pytania, zgodnie z oczekiwaniami.
+  Jeśli dana zmiana nie zostanie skategoryzowana z innego powodu, jest to dopuszczalne. Często należy podjąć działania, które mogą obejmować dodatkowe operacje lub dodając nowe funkcje. Prawie zawsze ma to wpływ na wydajność, ale może być konieczne, aby interfejs API działał w oczekiwany sposób.
 
-- **❌ Zmiana synchronicznego interfejsu API do asynchronicznego (i na odwrót)**
+- **❌ Zmiany synchronicznego interfejsu API na asynchroniczny (i odwrotnie)**
 
-## <a name="code-changes"></a>Zmiany w kodzie
+## <a name="code-changes"></a>Zmiany kodu
 
-- **✔️ Dodawanie [params](../../csharp/language-reference/keywords/params.md) do parametru**
+- **✔️ dodawania [parametrów](../../csharp/language-reference/keywords/params.md) do parametru**
 
-- **❌ Zmiana [struktury](../../csharp/language-reference/keywords/struct.md) do [klasy](../../csharp/language-reference/keywords/class.md) i na odwrót**
+- **❌ Zmienić [struktury](../../csharp/language-reference/keywords/struct.md) na [klasę](../../csharp/language-reference/keywords/class.md) i odwrotnie**
 
-- **❌ Dodawanie [zaznaczone](../../csharp/language-reference/keywords/virtual.md) słowa kluczowego blok kodu**
+- **❌ Dodawania słowa kluczowego [Checked](../../csharp/language-reference/keywords/virtual.md) do bloku kodu**
 
-   Ta zmiana może spowodować kod, który wcześniej wykonywanego zgłosić <xref:System.OverflowException> i jest nie do przyjęcia.
+   Ta zmiana może spowodować, że kod, który został wcześniej <xref:System.OverflowException> wykonany w celu wygenerowania i jest nieakceptowalny.
 
-- **❌ Usunięcie [params](../../csharp/language-reference/keywords/params.md) z parametru**
+- **❌ Usuwanie [parametrów](../../csharp/language-reference/keywords/params.md) z parametru**
 
-- **Zmiana kolejności, w której zdarzenia są uruchamiane ❌**
+- **❌ Zmienić kolejność, w której są uruchamiane zdarzenia**
 
-  Deweloperzy mogą spodziewać zdarzenia w tej samej kolejności, a kod dewelopera zależy często kolejność, w której zdarzenia są uruchamiane.
+  Deweloperzy mogą w rozsądny sposób oczekiwać, że wyzwalają zdarzenia w tej samej kolejności, a kod dewelopera często zależy od kolejności, w jakiej są uruchamiane zdarzenia.
 
-- **❌ Usuwanie wywoływanie zdarzeń w danej akcji**
+- **❌ Usunąć podnoszenie poziomu zdarzenia na daną akcję**
 
-- **❌ Zmiana liczby danego zdarzenia są wywoływane.**
+- **❌ Zmienić liczbę wywoływanych zdarzeń**
 
-- **❌ Dodawanie <xref:System.FlagsAttribute> na typ wyliczenia**
+- **❌ Dodawania <xref:System.FlagsAttribute> do typu wyliczenia**

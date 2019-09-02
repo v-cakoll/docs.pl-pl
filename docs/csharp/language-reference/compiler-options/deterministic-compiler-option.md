@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /deterministic compiler option [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3950578e9e5d1acb517e7d96c76454b198ba3e1c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e77c14a1c3a4ba11b8ae6556be4f1c3c0cd42788
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606928"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202922"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -22,7 +22,7 @@ Powoduje, że kompilator tworzy zestaw, którego bajty w bajtach są identyczne 
 
 ## <a name="syntax"></a>Składnia
 
-```
+```console
 -deterministic
 ```
 

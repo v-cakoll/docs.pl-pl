@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 24b962edc15c04cf1f68b73a7da960857658309c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 77f25e1c52f10a1724bf81a3fa533739e15085c4
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928450"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204715"
 ---
 # <a name="loading-a-dataset-from-xml"></a>Ładowanie elementu DataSet z pliku XML
 Zawartość ADO.NET <xref:System.Data.DataSet> można utworzyć na podstawie strumienia lub dokumentu XML. Ponadto dzięki .NET Framework masz doskonałą elastyczność nad tym, jakie informacje są ładowane z pliku XML, oraz sposób tworzenia schematu lub struktury <xref:System.Data.DataSet> relacyjnej.  
@@ -22,10 +22,10 @@ Zawartość ADO.NET <xref:System.Data.DataSet> można utworzyć na podstawie str
 |Opcja|Opis|  
 |------------|-----------------|  
 |**Auto**|Domyślnie włączone. Bada kod XML i wybiera najbardziej odpowiednią opcję w następującej kolejności:<br /><br /> -Jeśli plik XML jest w formacie DiffGram, jest używany element **DiffGram** .<br />-Jeśli <xref:System.Data.DataSet> zawiera schemat lub XML zawiera schemat wbudowany, **ReadSchema** jest używany.<br />-Jeśli <xref:System.Data.DataSet> nie zawiera schematu, a XML nie zawiera wbudowanego schematu, **InferSchema** jest używany.<br /><br /> Jeśli znasz format odczytywanego kodu XML, w celu uzyskania najlepszej wydajności zaleca się ustawienie jawnego elementu XmlReadMode, a nie akceptowanie wartości domyślnej.|  
-|**ReadSchema**|Odczytuje wszystkie wbudowane schematy i ładuje dane i schemat.<br /><br /> Jeśli zawiera <xref:System.Data.DataSet>już schemat, nowe tabele są dodawane z schematu wbudowanego do istniejącego schematu w programie. <xref:System.Data.DataSet> Wyjątek jest zgłaszany <xref:System.Data.DataSet>, jeśli dowolna tabela w schemacie wbudowanym już istnieje. Nie będzie można modyfikować schematu istniejącej tabeli przy użyciu elementu XmlReadMode **. ReadSchema**.<br /><br /> <xref:System.Data.DataSet> Jeśli nie zawiera schematu i nie ma wbudowanego schematu, żadne dane nie są odczytywane.<br /><br /> Schemat wbudowany można zdefiniować przy użyciu schematu języka definicji schematu XML (XSD). Aby uzyskać szczegółowe informacje na temat pisania schematu wbudowanego jako schematu XML, zobacz [wyprowadzanie relacyjnej struktury zestawu danych ze schematu XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).|  
+|**ReadSchema**|Odczytuje wszystkie wbudowane schematy i ładuje dane i schemat.<br /><br /> Jeśli zawiera <xref:System.Data.DataSet>już schemat, nowe tabele są dodawane z schematu wbudowanego do istniejącego schematu w programie. <xref:System.Data.DataSet> Wyjątek jest zgłaszany <xref:System.Data.DataSet>, jeśli dowolna tabela w schemacie wbudowanym już istnieje. Nie będzie można modyfikować schematu istniejącej tabeli przy użyciu elementu XmlReadMode **. ReadSchema**.<br /><br /> <xref:System.Data.DataSet> Jeśli nie zawiera schematu i nie ma wbudowanego schematu, żadne dane nie są odczytywane.<br /><br /> Schemat wbudowany można zdefiniować przy użyciu schematu języka definicji schematu XML (XSD). Aby uzyskać szczegółowe informacje na temat pisania schematu wbudowanego jako schematu XML, zobacz [wyprowadzanie relacyjnej struktury zestawu danych ze schematu XML (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md).|  
 |**IgnoreSchema**|Ignoruje wszystkie wbudowane schemat i ładuje dane do istniejącego <xref:System.Data.DataSet> schematu. Wszystkie dane, które nie są zgodne z istniejącym schematem, są odrzucane. Jeśli żaden schemat nie istnieje w <xref:System.Data.DataSet>, żadne dane nie są ładowane.<br /><br /> Jeśli dane są w formacie DiffGram, **IgnoreSchema** ma takie same funkcje jak **DiffGram** *.*|  
-|**InferSchema**|Ignoruje wszystkie wbudowane schemat i wnioskuje schemat na strukturę danych XML, a następnie ładuje dane.<br /><br /> Jeśli zawiera <xref:System.Data.DataSet> już schemat, bieżący schemat zostanie rozszerzony przez dodanie kolumn do istniejących tabel. Dodatkowe tabele nie zostaną dodane, jeśli nie ma istniejących tabel. Wyjątek jest zgłaszany, jeśli wywnioskowana tabela już istnieje z inną przestrzenią nazw lub jeśli wszystkie wywnioskowane kolumny kolidują z istniejącymi kolumnami.<br /><br /> Aby uzyskać szczegółowe informacje na temat sposobu, w jaki program **ReadXmlSchema** wnioskuje schemat z dokumentu XML, zobacz wnioskowanie o [relacyjnej strukturze zestawu danych z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md).|  
-|**DiffGram**|Odczytuje element DiffGram i dodaje dane do bieżącego schematu. Format **DiffGram** Scala nowe wiersze z istniejącymi wierszami, w których unikatowe wartości identyfikatorów są zgodne. Zobacz "scalanie danych z pliku XML" na końcu tego tematu. Aby uzyskać więcej informacji na temat DiffGrams, zobacz [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).|  
+|**InferSchema**|Ignoruje wszystkie wbudowane schemat i wnioskuje schemat na strukturę danych XML, a następnie ładuje dane.<br /><br /> Jeśli zawiera <xref:System.Data.DataSet> już schemat, bieżący schemat zostanie rozszerzony przez dodanie kolumn do istniejących tabel. Dodatkowe tabele nie zostaną dodane, jeśli nie ma istniejących tabel. Wyjątek jest zgłaszany, jeśli wywnioskowana tabela już istnieje z inną przestrzenią nazw lub jeśli wszystkie wywnioskowane kolumny kolidują z istniejącymi kolumnami.<br /><br /> Aby uzyskać szczegółowe informacje na temat sposobu, w jaki program **ReadXmlSchema** wnioskuje schemat z dokumentu XML, zobacz wnioskowanie o [relacyjnej strukturze zestawu danych z pliku XML](inferring-dataset-relational-structure-from-xml.md).|  
+|**DiffGram**|Odczytuje element DiffGram i dodaje dane do bieżącego schematu. Format **DiffGram** Scala nowe wiersze z istniejącymi wierszami, w których unikatowe wartości identyfikatorów są zgodne. Zobacz "scalanie danych z pliku XML" na końcu tego tematu. Aby uzyskać więcej informacji na temat DiffGrams, zobacz [DiffGrams](diffgrams.md).|  
 |**Fragment**|Kontynuuje odczytywanie wielu fragmentów kodu XML do momentu osiągnięcia końca strumienia. Fragmenty, które pasują <xref:System.Data.DataSet> do schematu, są dołączane do odpowiednich tabel. Fragmenty, które nie pasują <xref:System.Data.DataSet> do schematu, są odrzucane.|  
   
 > [!NOTE]
@@ -118,10 +118,10 @@ foreach (DataTable dataTable in dataSet.Tables)
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Data.DataSet.Merge%2A?displayProperty=nameWithType>
-- [Używanie języka XML w elemencie DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [Elementy DiffGram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)
-- [Pobieranie relacyjnej struktury elementu DataSet ze schematu XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
-- [Wnioskowanie relacyjnej struktury elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [Ładowanie informacji o schemacie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Używanie języka XML w elemencie DataSet](using-xml-in-a-dataset.md)
+- [Elementy DiffGram](diffgrams.md)
+- [Pobieranie relacyjnej struktury elementu DataSet ze schematu XML (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)
+- [Wnioskowanie relacyjnej struktury elementu DataSet z pliku XML](inferring-dataset-relational-structure-from-xml.md)
+- [Ładowanie informacji o schemacie elementu DataSet z pliku XML](loading-dataset-schema-information-from-xml.md)
+- [Elementy DataSet, DataTable i DataView](index.md)
 - [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

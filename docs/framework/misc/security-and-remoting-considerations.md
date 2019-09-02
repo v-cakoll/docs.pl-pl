@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bb5727bab8e06decde6ccff8b84515f82c3d491a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2d4d3b009e5792685ea39a3bcc2a15e082e1b8de
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910692"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206099"
 ---
 # <a name="security-and-remoting-considerations"></a>Zagadnienia dotyczące zabezpieczeń internetowych i zdalnego dostępu
 Komunikacja zdalna umożliwia skonfigurowanie przezroczystego wywoływania między domenami aplikacji, procesami lub komputerami. Jednak przechodzenie przez stos zabezpieczeń dostępu kodu nie może przekroczyć procesu ani granic maszyn (stosuje się między domenami aplikacji tego samego procesu).  
   
  Każda klasa, która jest zdalna (pochodząca z <xref:System.MarshalByRefObject> klasy) musi podejmować odpowiedzialność za zabezpieczenia. Kod powinien być używany tylko w środowiskach zamkniętych, w których kod wywołujący może być niejawnie zaufany lub wywołania komunikacji zdalnej powinny być zaprojektowane tak, aby nie podlegać chronionemu kodowi, który mógłby być użyty złośliwie.  
   
- Ogólnie rzecz biorąc nie należy ujawniać metod, właściwości ani zdarzeń chronionych przez deklaracyjne [LinkDemand](../../../docs/framework/misc/link-demands.md) i <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> kontrole zabezpieczeń. W przypadku komunikacji zdalnej te sprawdzenia nie są wymuszane. Inne sprawdzenia zabezpieczeń, takie jak <xref:System.Security.Permissions.SecurityAction.Demand>, [Assert](../../../docs/framework/misc/using-the-assert-method.md)i tak dalej, działają między domenami aplikacji w ramach procesu, ale nie działają w scenariuszach obejmujących wiele procesów lub międzymaszynowo.  
+ Ogólnie rzecz biorąc nie należy ujawniać metod, właściwości ani zdarzeń chronionych przez deklaracyjne [LinkDemand](link-demands.md) i <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> kontrole zabezpieczeń. W przypadku komunikacji zdalnej te sprawdzenia nie są wymuszane. Inne sprawdzenia zabezpieczeń, takie jak <xref:System.Security.Permissions.SecurityAction.Demand>, [Assert](using-the-assert-method.md)i tak dalej, działają między domenami aplikacji w ramach procesu, ale nie działają w scenariuszach obejmujących wiele procesów lub międzymaszynowo.  
   
 ## <a name="protected-objects"></a>Chronione obiekty  
  Niektóre obiekty przechowują stan zabezpieczeń we własnym zakresie. Tych obiektów nie należy przekazywać do niezaufanego kodu, który następnie uzyskuje autoryzację zabezpieczeń poza jej własnymi uprawnieniami.  

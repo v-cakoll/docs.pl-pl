@@ -5,78 +5,78 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: 153c96860005046e4cc16d5a965bd569e3519b52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5a8040a803fbc9b098fc1b56e0f5d837c4cdb94
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607933"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203365"
 ---
 # <a name="merging-dataset-contents"></a>Scalanie zawartości elementu DataSet
 
-Możesz użyć <xref:System.Data.DataSet.Merge%2A> metodę, aby scalić zawartość <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, lub <xref:System.Data.DataRow> tablicę do istniejącego `DataSet`. Kilka czynników, jak i opcje mają wpływ na sposób nowe dane są scalane w istniejącej `DataSet`.
+<xref:System.Data.DataSet.Merge%2A> Możesz użyć `DataSet`metody <xref:System.Data.DataSet>, aby scalić zawartość tablicy, <xref:System.Data.DataTable>lub <xref:System.Data.DataRow> do istniejącej. Kilka czynników i opcji mają wpływ na sposób scalania nowych danych w istniejący `DataSet`.
 
 ## <a name="primary-keys"></a>Klucze podstawowe
 
-Jeśli tabela odbieranie nowych danych i schemat z scalanie ma klucz podstawowy, nowych wierszy dane przychodzące są dopasowywane do istniejące wiersze, które mają taki sam <xref:System.Data.DataRowVersion.Original> klucz podstawowy wartości zgodnie z programami znajdującymi się na dane przychodzące. Jeśli kolumny z przychodzącego schematu pasują do właściwości istniejącego schematu, danych w istniejących wierszy jest modyfikowany. Kolumny, które nie pasują do istniejącego schematu są ignorowane lub dodawane na podstawie <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> parametru. Nowe wiersze z wartości klucza podstawowego, które nie pasują jakiekolwiek istniejące wiersze są dołączane do istniejącej tabeli.
+Jeśli tabela otrzymująca nowe dane i schemat z scalania ma klucz podstawowy, nowe wiersze z danych przychodzących są dopasowywane do istniejących wierszy, które mają te same <xref:System.Data.DataRowVersion.Original> wartości klucza podstawowego co te w danych przychodzących. Jeśli kolumny ze schematu przychodzącego są zgodne z istniejącymi schematami, dane w istniejących wierszach są modyfikowane. Kolumny, które nie pasują do istniejącego schematu, są ignorowane lub dodawane na podstawie <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> parametru. Nowe wiersze z wartościami klucza podstawowego, które nie są zgodne z żadnymi istniejącymi wierszami, są dołączane do istniejącej tabeli.
 
-Jeśli przychodzących lub istniejące wiersze mają stan wiersza <xref:System.Data.DataRowState.Added>, ich wartości klucza podstawowego są dopasowywane przy użyciu <xref:System.Data.DataRowVersion.Current> wartość klucza podstawowego `Added` wiersza, ponieważ nie `Original` istnieje wersja wiersza.
+Jeśli przychodzące lub istniejące <xref:System.Data.DataRowState.Added>wiersze mają stan wiersza, ich wartości klucza podstawowego są dopasowywane <xref:System.Data.DataRowVersion.Current> przy użyciu wartości klucza `Added` podstawowego wiersza, ponieważ nie `Original` istnieje wersja wiersza.
 
-Jeśli tabeli usługi w przychodzących i istniejącej tabeli zawiera kolumnę o tej samej nazwie, ale różnych typów danych, jest zgłaszany wyjątek i <xref:System.Data.DataSet.MergeFailed> zdarzenia `DataSet` jest wywoływane. Jeśli tabeli usługi w przychodzących i istniejącej tabeli zdefiniowano kluczy, ale klucze podstawowe są dla różnych kolumn, zwracany jest wyjątek i `MergeFailed` zdarzenia `DataSet` jest wywoływane.
+Jeśli tabela przychodząca i istniejąca tabela zawierają kolumnę o tej samej nazwie, ale różne typy danych, zgłaszany jest wyjątek, <xref:System.Data.DataSet.MergeFailed> a zdarzenie `DataSet` jest wywoływane. Jeśli tabela przychodząca i istniejąca tabela mają zdefiniowane klucze, ale klucze podstawowe są dla różnych kolumn, zgłaszany jest wyjątek, a `MergeFailed` zdarzenie `DataSet` jest wywoływane.
 
-Jeśli tabela otrzymuje nowych danych z scalania nie ma klucza podstawowego, nowych wierszy z przychodzących danych nie można dopasować do istniejące wiersze w tabeli i zamiast tego są dołączane do istniejącej tabeli.
+Jeśli tabela otrzymująca nowe dane z scalania nie ma klucza podstawowego, nie można dopasować nowych wierszy z danych przychodzących do istniejących wierszy w tabeli i są one dołączane do istniejącej tabeli.
 
 ## <a name="table-names-and-namespaces"></a>Nazwy tabel i przestrzenie nazw
 
-<xref:System.Data.DataTable> Opcjonalnie można przypisać obiektów <xref:System.Data.DataTable.Namespace%2A> wartości właściwości. Gdy <xref:System.Data.DataTable.Namespace%2A> wartości są przypisywane, <xref:System.Data.DataSet> może zawierać więcej niż jednego <xref:System.Data.DataTable> obiekty o takiej samej <xref:System.Data.DataTable.TableName%2A> wartość. Podczas operacji scalanie zarówno <xref:System.Data.DataTable.TableName%2A> i <xref:System.Data.DataTable.Namespace%2A> są używane do identyfikowania element docelowy scalania. Jeśli nie <xref:System.Data.DataTable.Namespace%2A> został przypisany, tylko <xref:System.Data.DataTable.TableName%2A> służy do identyfikowania element docelowy scalania.
+<xref:System.Data.DataTable>do <xref:System.Data.DataTable.Namespace%2A> obiektów można opcjonalnie przypisać wartość właściwości. Gdy <xref:System.Data.DataTable.Namespace%2A> wartości są przypisane <xref:System.Data.DataSet> , może zawierać wiele <xref:System.Data.DataTable> obiektów o tej samej <xref:System.Data.DataTable.TableName%2A> wartości. Podczas operacji scalania zarówno <xref:System.Data.DataTable.TableName%2A> i <xref:System.Data.DataTable.Namespace%2A> są używane do identyfikowania celu scalania. Jeśli nie <xref:System.Data.DataTable.Namespace%2A> została przypisana, <xref:System.Data.DataTable.TableName%2A> tylko służy do identyfikowania celu scalania.
 
 > [!NOTE]
-> To zachowanie, zmiany w wersji 2.0 programu .NET Framework. W wersji 1.1 przestrzenie nazw były obsługiwane, ale zostały zignorowane podczas wykonywania operacji scalania. Z tego powodu <xref:System.Data.DataSet> , który używa <xref:System.Data.DataTable.Namespace%2A> wartości właściwości mają różne zachowania, w zależności od instalowanej wersji programu .NET Framework są uruchomione. Załóżmy, że masz dwa `DataSets` zawierający `DataTables` o takiej samej <xref:System.Data.DataTable.TableName%2A> ale o innej wartości właściwości <xref:System.Data.DataTable.Namespace%2A> wartości właściwości. W wersji 1.1 programu .NET Framework, poszczególne <xref:System.Data.DataTable.Namespace%2A> nazwy zostaną zignorowane podczas scalania dwóch <xref:System.Data.DataSet> obiektów. Jednak począwszy od wersji 2.0, scalanie powoduje, że dwa nowe `DataTables` zostały utworzone w docelowej <xref:System.Data.DataSet>. Oryginalny `DataTables` będą mieć wpływu na scalania.
+> To zachowanie zostało zmienione w wersji 2,0 .NET Framework. W wersji 1,1, przestrzenie nazw były obsługiwane, ale zostały zignorowane podczas operacji scalania. Z tego powodu, <xref:System.Data.DataSet> który używa <xref:System.Data.DataTable.Namespace%2A> wartości właściwości, będzie mieć różne zachowania, w zależności od używanej wersji .NET Framework. Załóżmy na przykład, że masz `DataSets` dwie zawierające `DataTables` te same <xref:System.Data.DataTable.TableName%2A> wartości właściwości, ale różne <xref:System.Data.DataTable.Namespace%2A> wartości właściwości. W wersji 1,1 .NET Framework różne <xref:System.Data.DataTable.Namespace%2A> nazwy zostaną zignorowane podczas scalania dwóch <xref:System.Data.DataSet> obiektów. Jednak począwszy od wersji 2,0, scalenia powoduje utworzenie dwóch `DataTables` nowych obiektów w celu. <xref:System.Data.DataSet> Scalanie `DataTables` nie wpłynie na oryginalne.
 
 ## <a name="preservechanges"></a>PreserveChanges
 
-Podczas przekazywania `DataSet`, `DataTable`, lub `DataRow` tablicy do `Merge` metody może zawierać parametrów opcjonalnych, które określają, czy chcesz zachować zmiany w istniejącym `DataSet`i sposób obsługi nowych elementów schematu, znaleziono w danych przychodzących. Pierwsza z tych parametrów po dane przychodzące są flagę logiczną <xref:System.Data.LoadOption.PreserveChanges>, która określa, czy chcesz zachować zmiany w istniejącym `DataSet`. Jeśli `PreserveChanges` flaga jest ustawiona na `true`, wartości przychodzących nie zastępuj istniejących wartości `Current` wiersza wersji istniejącego wiersza. Jeśli `PreserveChanges` flaga jest ustawiona na `false`, wartości przychodzących zastępuj istniejących wartości w `Current` wiersza wersji istniejącego wiersza. Jeśli `PreserveChanges` flaga nie zostanie określona, jest równa `false` domyślnie. Aby uzyskać więcej informacji na temat wersji wierszy, zobacz [stany wiersza i wersje wiersza](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).
+`DataSet`Gdy przekazujesz tablicę `DataTable`, `DataRow` `DataSet`, lub do metody, możesz dołączyć parametry opcjonalne, które określają, czy zachować zmiany w istniejącym i jak obsługiwać nowe elementy schematu `Merge` w danych przychodzących. Pierwszy z tych parametrów po danych przychodzących jest flagą logiczną, <xref:System.Data.LoadOption.PreserveChanges>która określa, czy zachować zmiany w istniejącym. `DataSet` Jeśli flaga jest ustawiona na `true`, wartości przychodzące nie `Current` zastępują istniejących wartości w wierszu wersji istniejącego wiersza. `PreserveChanges` Jeśli flaga jest ustawiona na `false`, wartości przychodzące zastępuje istniejące wartości w `Current` wierszu wersji istniejącego wiersza. `PreserveChanges` Jeśli flaga nie jest określona, jest domyślnie ustawiona na `false` wartość. `PreserveChanges` Aby uzyskać więcej informacji o wersjach wierszy, zobacz [Stany wiersza i wersje wierszy](row-states-and-row-versions.md).
 
-Gdy `PreserveChanges` jest `true`, danych z istniejącego wiersza jest zachowywany w <xref:System.Data.DataRowVersion.Current> wiersz wersję istniejący wiersz, podczas dane z <xref:System.Data.DataRowVersion.Original> istniejący wiersz w wersji wiersza jest zastępowany przy użyciu danych z `Original` wiersza Wersja wiersza przychodzących. <xref:System.Data.DataRow.RowState%2A> Istniejący wiersz został ustawiony na <xref:System.Data.DataRowState.Modified>. Stosuje się następujące wyjątki:
+Gdy `PreserveChanges` tak `true`jest, dane z istniejącego <xref:System.Data.DataRowVersion.Current> wiersza są zachowywane w wersji wiersza <xref:System.Data.DataRowVersion.Original> istniejącego wiersza, podczas gdy dane z wiersza wersji istniejącego wiersza są zastępowane danymi z `Original` wiersza wersja wiersza przychodzącego. Istniejący wiersz jest ustawiony na <xref:System.Data.DataRowState.Modified>. <xref:System.Data.DataRow.RowState%2A> Obowiązują następujące wyjątki:
 
-- Jeśli istniejący wiersz ma `RowState` z `Deleted`ten `RowState` pozostaje `Deleted` i nie jest ustawiony na `Modified`. W tym przypadku danych z przychodzącego wiersza, nadal będą przechowywane w `Original` istniejący wiersz w wersji wiersza zastępowanie `Original` istniejący wiersz w wersji wiersza (chyba że przychodzących wiersz zawiera `RowState` z `Added`).
+- Jeśli istniejący wiersz `RowState` ma wartość `Deleted`, `RowState` pozostaje `Deleted` i nie jest ustawiony na `Modified`. W takim przypadku dane `Original` z przychodzącego wiersza będą nadal przechowywane w wersji wiersza istniejącego wiersza, `Original` zastępując wersję wiersza istniejącego wiersza (chyba że `Added`przychodzący wiersz ma wartość `RowState` ).
 
-- Jeśli wiersz zawiera `RowState` z `Added`, dane z `Original` istniejący wiersz w wersji wiersza nie zostaną zastąpione przy użyciu danych z przychodzącego wiersza, ponieważ wiersz nie ma `Original` wiersza wersji.
+- Jeśli przychodzący wiersz zawiera `RowState` z `Added` `Original` , dane z wersji wiersza istniejącego wiersza nie zostaną zastąpione danymi z wiersza przychodzącego, `Original` ponieważ w wierszu przychodzącym nie ma wersji wiersza.
 
-Gdy `PreserveChanges` jest `false`, zarówno `Current` i `Original` wersje wiersza w istniejącym wierszu zostaną zastąpione danymi z przychodzącego wiersza i `RowState` istniejący wiersz został ustawiony na `RowState` przychodzących wiersza. Stosuje się następujące wyjątki:
+Gdy `PreserveChanges` ma `Original` `Current` `RowState` `RowState` wartość, zarówno wersje wierszy, jak i w istniejącym wierszu są zastępowane danymi z wiersza przychodzącego, a istniejący wiersz jest ustawiony na wiersz przychodzący. `false` Obowiązują następujące wyjątki:
 
-- Jeśli wiersz zawiera `RowState` z `Unchanged` i istniejący wiersz ma `RowState` z `Modified`, `Deleted`, lub `Added`, `RowState` istniejący wiersz został ustawiony na `Modified`.
+- Jeśli przychodzący wiersz ma `RowState` `Unchanged` a i `Modified`istniejący wiersz ma `RowState` , `Deleted`, lub `Added`, w `RowState` istniejącym wierszu ma ustawioną wartość `Modified`.
 
-- Jeśli wiersz zawiera `RowState` z `Added`, a istniejący wiersz ma `RowState` z `Unchanged`, `Modified`, lub `Deleted`, `RowState` istniejący wiersz został ustawiony na `Modified`. Ponadto dane z `Original` istniejący wiersz w wersji wiersza nie jest zastępowany przy użyciu danych z przychodzącego wiersza, ponieważ wiersz nie ma `Original` wiersza wersji.
+- Jeśli wiersz przychodzący ma `RowState` wartość `Added`, a `Unchanged`istniejący wiersz ma `RowState` , `Modified`, lub `Deleted`, w `RowState` istniejącym wierszu jest ustawiony na `Modified`. Ponadto dane z `Original` wersji wiersza istniejącego wiersza nie są zastępowane danymi z wiersza przychodzącego, ponieważ w wierszu przychodzącym nie `Original` ma wersji wiersza.
 
 ## <a name="missingschemaaction"></a>MissingSchemaAction
 
-Możesz użyć opcjonalnego <xref:System.Data.MissingSchemaAction> parametru `Merge` metodę, aby określić sposób `Merge` będzie obsługiwać elementy schematu danych przychodzących, które nie są częścią istniejącej `DataSet`.
+Można użyć opcjonalnego <xref:System.Data.MissingSchemaAction> parametru metody, `Merge` aby określić, jak `Merge` program będzie obsługiwać elementy schematu w danych przychodzących, które nie są częścią istniejącej `DataSet`.
 
-W poniższej tabeli opisano opcje `MissingSchemaAction`.
+W poniższej tabeli opisano opcje dla programu `MissingSchemaAction`.
 
-|Opcja MissingSchemaAction|Opis|
+|MissingSchemaAction — opcja|Opis|
 |--------------------------------|-----------------|
-|<xref:System.Data.MissingSchemaAction.Add>|Dodanie nowych informacji o schemacie do `DataSet` i wypełnić nowe kolumny przy użyciu wartości przychodzących. Domyślnie włączone.|
-|<xref:System.Data.MissingSchemaAction.AddWithKey>|Dodawanie nowego schematu i informacje o kluczu podstawowym do `DataSet` i wypełnić nowe kolumny przy użyciu wartości przychodzących.|
-|<xref:System.Data.MissingSchemaAction.Error>|Zgłoś wyjątek, jeśli okaże się, informacje o schemacie niezgodne.|
-|<xref:System.Data.MissingSchemaAction.Ignore>|Ignoruj nowych informacji o schemacie.|
+|<xref:System.Data.MissingSchemaAction.Add>|Dodaj nowe informacje o schemacie do `DataSet` i Wypełnij nowe kolumny wartościami przychodzącymi. Domyślnie włączone.|
+|<xref:System.Data.MissingSchemaAction.AddWithKey>|Dodaj nowy schemat i informacje o kluczu podstawowym do `DataSet` i Wypełnij nowe kolumny wartościami przychodzącymi.|
+|<xref:System.Data.MissingSchemaAction.Error>|Zgłoś wyjątek, Jeśli napotkano niezgodne informacje o schemacie.|
+|<xref:System.Data.MissingSchemaAction.Ignore>|Ignoruj nowe informacje o schemacie.|
 
 ## <a name="constraints"></a>Ograniczenia
 
-Za pomocą `Merge` metody ograniczenia nie są sprawdzane, dopóki wszystkie nowe dane zostały dodane do istniejących `DataSet`. Po dodaniu danych ograniczenia są wymuszane na bieżące wartości `DataSet`. Należy się upewnić, że kod obsługuje wszystkie wyjątki, które mogą być generowane z powodu naruszenia ograniczenia.
+Przy użyciu `DataSet`metody ograniczenia nie są sprawdzane, dopóki wszystkie nowe dane nie zostaną dodane do istniejącej. `Merge` Po dodaniu danych ograniczenia są wymuszane na bieżących wartościach w `DataSet`. Musisz się upewnić, że kod obsługuje wszystkie wyjątki, które mogą być zgłaszane z powodu naruszeń ograniczenia.
 
-Należy rozważyć przypadek, w przypadku, gdy istniejący wiersz w `DataSet` jest `Unchanged` wiersz mający wartość klucza podstawowego 1. Podczas operacji scalania z `Modified` wiersz z `Original` wartość klucza podstawowego 2 i `Current` wartość klucza podstawowego, 1, istniejący wiersz i wiersz nie są uważane za dopasowanie, ponieważ `Original` wartości klucza podstawowego różnią się. Jednak po ukończeniu scalania i ograniczenia są sprawdzane, zostanie zgłoszony wyjątek ponieważ `Current` wartości klucza podstawowego narusza unikatowe ograniczenie dla kolumny klucza podstawowego.
+Rozważ przypadek, w którym istniejący wiersz w a `DataSet` `Unchanged` jest wiersz z wartością klucza podstawowego 1. Podczas `Modified` operacji scalania z wierszem przychodzącym `Original` z `Current` wartością klucza podstawowego 2 i wartością klucza podstawowego 1, istniejący wiersz i wiersz `Original` przychodzący nie są uważane za zgodne, ponieważ wartości klucza podstawowego różniącego. Jednak po zakończeniu scalania i sprawdzeniu ograniczeń zostanie zgłoszony wyjątek, ponieważ `Current` wartości klucza podstawowego naruszają unikatowe ograniczenie dla kolumny klucza podstawowego.
 
 > [!NOTE]
-> Gdy wiersze zostały wstawione do tabeli bazy danych zawierająca automatycznego przyrostu o wartości kolumny, takie jak kolumny tożsamości, wartości kolumny tożsamości, które są zwracane przez Wstaw mogą być niezgodne wartości w `DataSet`, powodując zwrócone wiersze, które mają być dołączane zamiast scalone. Aby uzyskać więcej informacji, zobacz [pobieranie tożsamości lub wartości automatycznych numerów](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).
+> Gdy wiersze są wstawiane do tabeli bazy danych zawierającej kolumnę z autoprzyrostem, taką jak kolumna tożsamości, wartość kolumny tożsamości zwracana przez wstawianie może być niezgodna z wartością w `DataSet`, powodując dołączenie zwracanych wierszy zamiast scalonych. Aby uzyskać więcej informacji, zobacz [pobieranie tożsamości lub wartości AutoNumber](../retrieving-identity-or-autonumber-values.md).
 
-Poniższy przykład kodu scala dwa `DataSet` obiektów z różnymi schematami w jednej `DataSet` za pomocą połączonego schematów dwóch przychodzących `DataSet` obiektów.
+Poniższy przykład kodu Scala dwa `DataSet` obiekty z różnymi schematami w jeden `DataSet` z połączonymi schematami dwóch obiektów przychodzących `DataSet` .
 
 [!code-csharp[DataWorks DataSet.Merge#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/CS/source.cs#1)]
 [!code-vb[DataWorks DataSet.Merge#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/VB/source.vb#1)]
 
-Poniższy przykładowy kod pobiera istniejący `DataSet` aktualizacje i przekazuje te aktualizacje `DataAdapter` mają być przetwarzane w źródle danych. Wyniki są następnie scalane w oryginalnym `DataSet`. Po odrzuceniu zmian, które spowodowały błąd, scalone zmiany są zatwierdzone z `AcceptChanges`.
+Poniższy przykład kodu przyjmuje istniejące `DataSet` aktualizacje i przekazuje te aktualizacje do programu `DataAdapter` w celu ich przetworzenia w źródle danych. Następnie wyniki zostaną scalone z oryginałem `DataSet`. Po odrzuceniu zmian, które spowodowały błąd, scalone zmiany są zatwierdzane za `AcceptChanges`pomocą.
 
 [!code-csharp[DataWorks DataSet.MergeAcceptChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataSet.MergeAcceptChanges/CS/source.cs#1)]
 [!code-vb[DataWorks DataSet.MergeAcceptChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataSet.MergeAcceptChanges/VB/source.vb#1)]
@@ -86,9 +86,9 @@ Poniższy przykładowy kod pobiera istniejący `DataSet` aktualizacje i przekazu
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Stany wiersza i wersje wiersza](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
-- [Elementy DataAdapter i DataReaders](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Pobieranie i modyfikowanie danych ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Pobieranie tożsamości lub wartości automatycznych numerów](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Elementy DataSet, DataTable i DataView](index.md)
+- [Stany wiersza i wersje wiersza](row-states-and-row-versions.md)
+- [Elementy DataAdapter i DataReaders](../dataadapters-and-datareaders.md)
+- [Pobieranie i modyfikowanie danych ADO.NET](../retrieving-and-modifying-data.md)
+- [Pobieranie tożsamości lub wartości automatycznych numerów](../retrieving-identity-or-autonumber-values.md)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

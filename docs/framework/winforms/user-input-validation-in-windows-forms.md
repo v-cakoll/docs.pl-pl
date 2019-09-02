@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 0a1d6c4c18e658d71f1baf90763e121314ea35d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7ee99d1b264f508882418c83da8e82759b0d95fa
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916293"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206134"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Walidacja danych użytkownika w formularzach systemu Windows
 Gdy użytkownicy wprowadzają dane do aplikacji, warto sprawdzić, czy dane są prawidłowe przed jej użyciem. Może być konieczne, aby niektóre pola tekstowe nie miały długości zerowej, że pole jest sformatowane jako numer telefonu lub inny typ poprawnie sformułowanych danych lub że ciąg nie zawiera żadnych niebezpiecznych znaków, których można użyć do złamania zabezpieczeń bazy danych. Windows Forms zapewnia kilka metod sprawdzania poprawności danych wejściowych w aplikacji.  
@@ -85,7 +85,7 @@ Gdy użytkownicy wprowadzają dane do aplikacji, warto sprawdzić, czy dane są 
   
 - Wywoływanie <xref:System.Windows.Forms.Form.Close%2A> metody programowo.  
   
- Jednak w niektórych przypadkach możesz chcieć pozwolić użytkownikowi na zamknięcie formularza niezależnie od tego, czy wartości w kontrolkach są prawidłowe. Możesz przesłonić walidację i zamknąć formularz, który nadal zawiera nieprawidłowe dane, tworząc procedurę obsługi dla <xref:System.Windows.Forms.Form.Closing> zdarzenia formularza. W zdarzeniu Ustaw <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> właściwość na `false`. Wymusza to zamknięcie formularza. Aby uzyskać więcej informacji i zapoznać się z <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>przykładem, zobacz.  
+ Jednak w niektórych przypadkach możesz chcieć pozwolić użytkownikowi na zamknięcie formularza niezależnie od tego, czy wartości w kontrolkach są prawidłowe. Możesz przesłonić walidację i zamknąć formularz, który nadal zawiera nieprawidłowe dane, tworząc procedurę obsługi dla <xref:System.Windows.Forms.Form.FormClosing> zdarzenia formularza. W zdarzeniu Ustaw <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> właściwość na `false`. Wymusza to zamknięcie formularza. Aby uzyskać więcej informacji i zapoznać się z <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>przykładem, zobacz.  
   
 > [!NOTE]
 > Jeśli wymusisz zamknięcie formularza w ten sposób, wszelkie dane w kontrolkach formularza, które nie zostały jeszcze zapisane, zostały utracone. Ponadto formularze modalne nie weryfikują zawartości formantów po ich zamknięciu. Nadal można użyć walidacji kontrolek, aby zablokować fokus do kontrolki, ale nie trzeba mieć informacji o zachowaniu związanym z zamknięciem formularza.  
@@ -93,7 +93,7 @@ Gdy użytkownicy wprowadzają dane do aplikacji, warto sprawdzić, czy dane są 
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
-- <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
-- <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.FormClosingEventArgs?displayProperty=nameWithType>
 - [MaskedTextBox, kontrolka](./controls/maskedtextbox-control-windows-forms.md)
 - [Przykłady wyrażeń regularnych](../../standard/base-types/regular-expression-examples.md)

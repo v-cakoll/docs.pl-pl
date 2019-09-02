@@ -1,25 +1,25 @@
 ---
-title: Włączanie uzupełniania po naciśnięciu tabulatora
-description: Ten artykuł nauczy Cię sposobu włączania uzupełniania po naciśnięciu tabulatora dla platformy .NET Core interfejsu wiersza polecenia programu PowerShell, Bash i zsh.
+title: Włącz uzupełnianie kart
+description: W tym artykule opisano, jak włączyć uzupełnianie kart dla interfejs wiersza polecenia platformy .NET Core dla programu PowerShell, bash i ZSH.
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2018
-ms.openlocfilehash: 16574e02aa9f9167602401eef2ad7a73e07ad107
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7673d95f3710d78d3a09b26f031396587f9c669
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61648220"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202501"
 ---
-# <a name="how-to-enable-tab-completion-for-net-core-cli"></a>Jak włączyć uzupełnianie po naciśnięciu TABULATORA dla wiersza polecenia platformy .NET Core
+# <a name="how-to-enable-tab-completion-for-net-core-cli"></a>Jak włączyć uzupełnianie kart dla interfejs wiersza polecenia platformy .NET Core
 
-Począwszy od programu .NET Core 2.0 SDK, interfejsu wiersza polecenia platformy .NET Core obsługuje uzupełnianie po naciśnięciu tabulatora. W tym artykule opisano sposób konfigurowania uzupełniania po naciśnięciu tabulatora dla trzech powłoki, programu PowerShell, Bash i zsh. Inne powłoki mogą mieć obsługę funkcji autouzupełniania. Zobacz ich dokumentację na temat konfigurowania funkcji autouzupełniania, kroki powinny być podobne do czynności opisanych w tym artykule.
+Począwszy od zestawu SDK platformy .NET Core 2,0, interfejs wiersza polecenia platformy .NET Core obsługuje uzupełnianie kart. W tym artykule opisano sposób konfigurowania uzupełniania tabulatorów dla trzech powłok, programu PowerShell, bash i ZSH. Inne powłoki mogą obsługiwać Autouzupełnianie. Zapoznaj się z dokumentacją dotyczącą sposobu konfigurowania automatycznego uzupełniania, kroki powinny być podobne do kroków opisanych w tym artykule.
 
 [!INCLUDE [topic-appliesto-net-core-2plus](~/includes/topic-appliesto-net-core-2plus.md)]
 
-Po instalacji uzupełniania po naciśnięciu tabulatora dla interfejsu wiersza polecenia platformy .NET Core jest wyzwalany przez wpisanie `dotnet` polecenie w powłoce, a następnie naciskając klawisz TAB. Bieżący wiersz polecenia są wysyłane do `dotnet complete` polecenia, a wyniki są przetwarzane przez powłoki. Wyniki można przetestować bez włączania uzupełniania po naciśnięciu tabulatora, wysyłając coś bezpośrednio do `dotnet complete` polecenia. Na przykład:
+Po zakończeniu instalacji zostanie wyzwolone zakończenie karty interfejs wiersza polecenia platformy .NET Core, wpisując `dotnet` polecenie w powłoce, a następnie naciskając klawisz Tab. Bieżący wiersz polecenia jest wysyłany do `dotnet complete` polecenia, a wyniki są przetwarzane przez powłokę. Wyniki można testować bez włączania kończenia karty, wysyłając coś bezpośrednio do `dotnet complete` polecenia. Na przykład:
 
-```
+```console
 > dotnet complete "dotnet a"
 add
 clean
@@ -28,25 +28,25 @@ migrate
 pack
 ```
 
-Jeśli polecenie nie działa, upewnij się, że zestaw .NET Core 2.0 SDK lub powyżej jest zainstalowany. Jeśli jest zainstalowany, ale polecenie nie działa, upewnij się, że `dotnet` polecenie usuwa do wersji programu .NET Core 2.0 SDK lub jego nowszych wersjach. Użyj `dotnet --version` polecenie, aby zobaczyć bieżącą wersję programu `dotnet` Twojej bieżącej ścieżki jest rozpoznawana. Aby uzyskać więcej informacji, zobacz [wybierz wersję platformy .NET Core do użycia](../versions/selection.md).
+Jeśli to polecenie nie działa, upewnij się, że jest zainstalowany zestaw .NET Core 2,0 SDK lub nowszy. Jeśli jest zainstalowana, ale to polecenie nadal nie działa, upewnij się, że `dotnet` polecenie jest rozpoznawane jako wersja zestawu SDK platformy .NET Core 2,0 i nowsze. Użyj polecenia `dotnet --version` , aby sprawdzić, która `dotnet` wersja bieżącej ścieżki jest rozpoznawana. Aby uzyskać więcej informacji, zobacz [Wybieranie wersji platformy .NET Core do użycia](../versions/selection.md).
 
 ### <a name="examples"></a>Przykłady
 
-Poniżej przedstawiono kilka przykładów zawiera jakie uzupełniania po naciśnięciu tabulatora:
+Poniżej przedstawiono kilka przykładów zapewniania przez uzupełnianie kart:
 
-Dane wejściowe                                | staje się                                                                     | ponieważ
+Dane wejściowe                                | stanowi                                                                     | ponieważ
 :------------------------------------|:----------------------------------------------------------------------------|:--------------------------------
-`dotnet a⇥`                          | `dotnet add`                                                                 | `add` to pierwszy podpolecenia alfabetycznie.
-`dotnet add p⇥`                      | `dotnet add --help`                                                          | Karta uzupełniania dopasowań podciągów i `--help` wykorzystasz w kolejności alfabetycznej.
-`dotnet add p⇥⇥`                    | `dotnet add package`                                                          | Naciśnięcie klawisza tab po raz drugi wyświetlenie sugestią dalej.      
+`dotnet a⇥`                          | `dotnet add`                                                                 | `add`to pierwsze polecenie, alfabetycznie.
+`dotnet add p⇥`                      | `dotnet add --help`                                                          | Uzupełnianie tabulacji dopasowuje podciągi i pojawia się w `--help` pierwszej kolejności alfabetycznie.
+`dotnet add p⇥⇥`                    | `dotnet add package`                                                          | Naciśnięcie klawisza Tab drugi raz spowoduje wyświetlenie następnej sugestii.      
 `dotnet add package Microsoft⇥`      | `dotnet add package Microsoft.ApplicationInsights.Web`                      | Wyniki są zwracane w porządku alfabetycznym.
-`dotnet remove reference ⇥`          | `dotnet remove reference ..\..\src\OmniSharp.DotNet\OmniSharp.DotNet.csproj` | Uzupełnianie po naciśnięciu tabulatora jest świadomość pliku projektu.
+`dotnet remove reference ⇥`          | `dotnet remove reference ..\..\src\OmniSharp.DotNet\OmniSharp.DotNet.csproj` | Uzupełnianie karty jest świadome pliku projektu.
 
 ## <a name="powershell"></a>PowerShell
 
-Aby dodać uzupełniania po naciśnięciu tabulatora, aby **PowerShell** dla platformy .NET Core interfejsu wiersza polecenia, należy utworzyć lub edytować profilu przechowywana w zmiennej `$PROFILE`. Aby uzyskać więcej informacji, zobacz [jak utworzyć swój profil](/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-6#how-to-create-a-profile) i [profile i zasady wykonywania](/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-6#profiles-and-execution-policy). 
+Aby dodać uzupełnianie tabulatorów do **programu PowerShell** dla interfejs wiersza polecenia platformy .NET Core, Utwórz lub Edytuj profil przechowywany w zmiennej `$PROFILE`. Aby uzyskać więcej informacji, zobacz [jak utworzyć profil](/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-6#how-to-create-a-profile) i [zasady wykonywania](/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-6#profiles-and-execution-policy). 
 
-Dodaj następujący kod do Twojego profilu:
+Dodaj następujący kod do swojego profilu:
 
 ```powershell
 # PowerShell parameter completion shim for the dotnet CLI 
@@ -60,7 +60,7 @@ Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
 
 ## <a name="bash"></a>Bash
 
-Uzupełnianie po naciśnięciu tabulatora, aby dodać swoje **bash** powłoki interfejsu wiersza polecenia platformy .NET Core, Dodaj następujący kod, aby Twoje `.bashrc` pliku:
+Aby dodać uzupełnianie karty do powłoki **bash** dla interfejs wiersza polecenia platformy .NET Core, Dodaj następujący kod do `.bashrc` pliku:
 
 ```bash
 # bash parameter completion for the dotnet CLI
@@ -78,9 +78,9 @@ _dotnet_bash_complete()
 complete -f -F _dotnet_bash_complete dotnet
 ```
 
-## <a name="zsh"></a>zsh
+## <a name="zsh"></a>Zsh
 
-Uzupełnianie po naciśnięciu tabulatora, aby dodać swoje **zsh** powłoki interfejsu wiersza polecenia platformy .NET Core, Dodaj następujący kod, aby Twoje `.zshrc` pliku:
+Aby dodać uzupełnianie karty do powłoki **ZSH** dla interfejs wiersza polecenia platformy .NET Core, Dodaj następujący kod do `.zshrc` pliku:
 
 ```zsh
 # zsh parameter completion for the dotnet CLI

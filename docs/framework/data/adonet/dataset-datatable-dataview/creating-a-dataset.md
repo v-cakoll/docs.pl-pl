@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 57629d8f-393e-4677-8b83-29ffde27f5fc
-ms.openlocfilehash: d2d17056e6dcd29ef9b5c5e8c3024a32fce32bd5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 19badb009ebe95c52ab1dbbaef96f280c769553b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879882"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205155"
 ---
 # <a name="creating-a-dataset"></a>Tworzenie elementu DataSet
-Utwórz wystąpienie <xref:System.Data.DataSet> przez wywołanie metody <xref:System.Data.DataSet> konstruktora. Opcjonalnie można określić argument nazwy. Jeśli nie określisz nazwę <xref:System.Data.DataSet>, nazwa jest równa "NewDataSet".  
+Można utworzyć wystąpienie <xref:System.Data.DataSet> obiektu przez <xref:System.Data.DataSet> wywołanie konstruktora. Opcjonalnie można określić argument nazwy. Jeśli nie określisz nazwy dla <xref:System.Data.DataSet>, nazwa zostanie ustawiona na "NewDataSet".  
   
- Można również utworzyć nową <xref:System.Data.DataSet> oparty na istniejącym <xref:System.Data.DataSet>. Nowy <xref:System.Data.DataSet> może być dokładną kopię istniejącego <xref:System.Data.DataSet>; klonu <xref:System.Data.DataSet> , kopiuje relacyjnej struktury lub schematu, ale która nie zawiera żadnych danych z istniejącego <xref:System.Data.DataSet>; lub być podzbiorem wartości <xref:System.Data.DataSet>, zawierająca tylko zmodyfikowane wiersze z istniejącego <xref:System.Data.DataSet> przy użyciu <xref:System.Data.DataSet.GetChanges%2A> metody. Aby uzyskać więcej informacji, zobacz [kopiowanie zawartości elementu DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/copying-dataset-contents.md).  
+ Możesz również utworzyć nowy <xref:System.Data.DataSet> oparty na istniejącym. <xref:System.Data.DataSet> <xref:System.Data.DataSet> Nowy może być dokładną kopią istniejącej <xref:System.Data.DataSet> <xref:System.Data.DataSet> ; klon, który kopiuje strukturę relacyjną lub schemat <xref:System.Data.DataSet>, ale nie zawiera żadnych danych z istniejącego <xref:System.Data.DataSet>lub podzestawu, zawierający tylko zmodyfikowane wiersze z istniejących <xref:System.Data.DataSet> <xref:System.Data.DataSet.GetChanges%2A> przy użyciu metody. Aby uzyskać więcej informacji, zobacz [kopiowanie zawartości zestawu danych](copying-dataset-contents.md).  
   
- Poniższy przykład kodu pokazuje, jak skonstruować wystąpienia <xref:System.Data.DataSet>.  
+ Poniższy przykład kodu demonstruje sposób konstruowania wystąpienia <xref:System.Data.DataSet>obiektu.  
   
 ```vb  
 Dim customerOrders As DataSet = New DataSet("CustomerOrders")  
@@ -29,6 +29,6 @@ DataSet customerOrders = new DataSet("CustomerOrders");
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wypełnianie zestawu danych z elementu DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
-- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Wypełnianie zestawu danych z elementu DataAdapter](../populating-a-dataset-from-a-dataadapter.md)
+- [Elementy DataSet, DataTable i DataView](index.md)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

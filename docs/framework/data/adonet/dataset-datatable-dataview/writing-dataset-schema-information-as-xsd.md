@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4e530831-695e-49ff-8f0b-e5b0c526b8eb
-ms.openlocfilehash: 8403f9d9be88f34e473fd3512f5499193245d227
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9664d8e7bc221da68492140f30419ea8fb0d316
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607052"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204363"
 ---
 # <a name="writing-dataset-schema-information-as-xsd"></a>Zapisywanie informacji o schemacie elementu DataSet jako pliku XSD
-Można napisać schemat <xref:System.Data.DataSet> jako schematu języka (XSD) definicji schematu XML, dzięki czemu mogą transportować, z lub bez powiązanych danych w dokumencie XML. Schemat XML mogą być zapisywane do pliku strumienia, <xref:System.Xml.XmlWriter>, lub ciąg; jest to przydatne podczas generowania silnie typizowanej **zestawu danych**. Aby uzyskać więcej informacji na temat silnie typizowane **DataSet** obiekty, zobacz [wpisanych zestawów danych](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  
+Można napisać schemat <xref:System.Data.DataSet> programu jako schemat języka definicji schematu XML (XSD), dzięki czemu można transportować go z lub bez powiązanych danych w dokumencie XML. Schemat XML można zapisać w pliku, strumieniu, <xref:System.Xml.XmlWriter>a lub ciągu; jest to przydatne w przypadku generowania **zestawu danych**o jednoznacznie określonym typie. Aby uzyskać więcej informacji na temat obiektów typu **zestaw danych** o jednoznacznie określonym typie, zobacz [zestawy danych z określonym typem](typed-datasets.md).  
   
- Można określić, jak kolumny tabeli jest reprezentowana w schemacie XML przy użyciu **ColumnMapping** właściwość <xref:System.Data.DataColumn> obiektu. Aby uzyskać więcej informacji, zobacz "Mapowanie kolumn do elementów XML, atrybuty i tekst" w [zapisywanie zawartości elementu DataSet jako danych XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md).  
+ Można określić sposób, w jaki kolumna tabeli jest reprezentowana w schemacie XML przy użyciu właściwości <xref:System.Data.DataColumn> ColumnMapping obiektu. Aby uzyskać więcej informacji, zobacz "Mapowanie kolumn do elementów XML, atrybutów i tekstu" w [treści zestawu danych jako dane XML](writing-dataset-contents-as-xml-data.md).  
   
- Można zapisać schematu **DataSet** jako schematu XML w pliku strumienia, lub **XmlWriter**, użyj **WriteXmlSchema** metody **zestawu danych**. **WriteXmlSchema** przyjmuje jeden parametr, który określa miejsce docelowe wynikowy schematu XML. Poniższe przykłady kodu przedstawiają sposób zapisu schemat XML **DataSet** do pliku, przekazując ciąg zawierający nazwę pliku i <xref:System.IO.StreamWriter> obiektu.  
+ Aby zapisać schemat **zestawu danych** jako schemat XML, do pliku, strumienia lub **XmlWriter**, użyj metody **WriteXmlSchema** **zestawu danych**. **WriteXmlSchema** przyjmuje jeden parametr, który określa miejsce docelowe uzyskanego schematu XML. Poniższy przykład kodu pokazuje, jak napisać schemat XML **zestawu danych** do pliku, przekazując ciąg zawierający nazwę pliku i <xref:System.IO.StreamWriter> obiekt.  
   
 ```vb  
 dataSet.WriteXmlSchema("Customers.xsd")  
@@ -39,7 +39,7 @@ dataSet.WriteXmlSchema(writer);
 writer.Close();  
 ```  
   
- Można uzyskać schematu **DataSet** i zapisz je jako ciąg schematu XML, należy użyć **GetXmlSchema** metodzie, jak pokazano w poniższym przykładzie.  
+ Aby uzyskać schemat **zestawu danych** i zapisać go jako ciąg schematu XML, należy użyć metody GetXml , jak pokazano w poniższym przykładzie.  
   
 ```vb  
 Dim schemaString As String = dataSet.GetXmlSchema()  
@@ -51,8 +51,8 @@ string schemaString = dataSet.GetXmlSchema();
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Używanie języka XML w elemencie DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [Zapisywanie zawartości elementu DataSet jako danych XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
-- [Typizowane elementy DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
-- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Używanie języka XML w elemencie DataSet](using-xml-in-a-dataset.md)
+- [Zapisywanie zawartości elementu DataSet jako danych XML](writing-dataset-contents-as-xml-data.md)
+- [Typizowane elementy DataSet](typed-datasets.md)
+- [Elementy DataSet, DataTable i DataView](index.md)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

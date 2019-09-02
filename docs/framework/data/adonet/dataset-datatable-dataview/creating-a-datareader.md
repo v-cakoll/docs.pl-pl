@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d4422a-7464-4ab8-8ec7-90185fde3ecf
-ms.openlocfilehash: 8932f393af58f2014f643c5b6ebd6dc7a127b7eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb39ead1fe15e3bfcf67370e4675dcae3bbf9801
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034439"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203897"
 ---
 # <a name="creating-a-datareader"></a>Tworzenie elementu DataReader
-<xref:System.Data.DataTable> i <xref:System.Data.DataSet> klasy mają <xref:System.Data.DataTable.CreateDataReader%2A> metodę, która zwraca zawartość <xref:System.Data.DataTable> lub zawartości <xref:System.Data.DataSet> obiektu <xref:System.Data.DataSet.Tables%2A> kolekcji jako jeden lub więcej zestawów wyników tylko do odczytu, tylko do przodu.  
+<xref:System.Data.DataTable> <xref:System.Data.DataSet.Tables%2A> Klasy i <xref:System.Data.DataSet>mają metodę<xref:System.Data.DataTable.CreateDataReader%2A> , która zwraca<xref:System.Data.DataSet> zawartość lub zawartość kolekcji obiektu jako co najmniej jeden zestaw wyników tylko do odczytu. <xref:System.Data.DataTable>  
   
 ## <a name="example"></a>Przykład  
- Tworzy następujące aplikację konsolową <xref:System.Data.DataTable> wystąpienia. Następnie przykład przekazuje wypełniony <xref:System.Data.DataTable> do procedury, która wywołuje <xref:System.Data.DataTable.CreateDataReader%2A> metody, która wykonuje iterację przez wyniki zawartych w <xref:System.Data.DataTableReader>.  
+ Następująca aplikacja konsolowa tworzy <xref:System.Data.DataTable> wystąpienie. Następnie przykład przekazuje wypełniony <xref:System.Data.DataTable> do procedury, która <xref:System.Data.DataTable.CreateDataReader%2A> wywołuje metodę, która wykonuje iterację przez wyniki zawarte w <xref:System.Data.DataTableReader>.  
   
  [!code-csharp[DataWorks DataTable.CreateDataReader#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTable.CreateDataReader/CS/source.cs#1)]
  [!code-vb[DataWorks DataTable.CreateDataReader#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTable.CreateDataReader/VB/source.vb#1)]  
@@ -34,5 +34,5 @@ ms.locfileid: "62034439"
 
 - <xref:System.Data.DataTable.CreateDataReader%2A>
 - <xref:System.Data.DataSet.CreateDataReader%2A>
-- [Elementy DataTableReader](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Elementy DataTableReader](datatablereaders.md)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

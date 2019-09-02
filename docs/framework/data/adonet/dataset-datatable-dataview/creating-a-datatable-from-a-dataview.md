@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: c70dd0401ea518613a2b51f047de13f6c7270152
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 36839574ae8a8acd1cb56fa82ebcfa6bddb0c97e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621188"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203870"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Tworzenie elementu DataTable przy użyciu elementu DataView
-Gdy pobierane są dane ze źródła danych i wypełnione <xref:System.Data.DataTable> z danymi, możesz chcieć sortowanie, filtrowanie lub inny sposób ograniczyć zwracanych danych bez pobierania go ponownie. <xref:System.Data.DataView> Klasy sprawia, że jest to możliwe. Ponadto, jeśli musisz utworzyć nowy <xref:System.Data.DataTable> z <xref:System.Data.DataView>, możesz użyć <xref:System.Data.DataView.ToTable%2A> metodę, aby skopiować wszystkie wiersze i kolumny lub podzbiór danych do nowego <xref:System.Data.DataTable>. <xref:System.Data.DataView.ToTable%2A> Metoda zapewnia przeciążeń:  
+Po pobraniu danych ze źródła danych, które zostały wypełnione <xref:System.Data.DataTable> danymi, możesz chcieć posortować, filtrować lub w inny sposób ograniczyć zwrócone dane bez konieczności pobierania ich. Jest <xref:System.Data.DataView> to możliwe. Ponadto, jeśli konieczne <xref:System.Data.DataTable> jest utworzenie nowego z programu <xref:System.Data.DataView> <xref:System.Data.DataView.ToTable%2A> , można użyć metody do skopiowania wszystkich wierszy i kolumn lub podzbioru danych do nowej <xref:System.Data.DataTable>. <xref:System.Data.DataView.ToTable%2A> Metoda zapewnia przeciążenia:  
   
-- Tworzenie <xref:System.Data.DataTable> zawierający kolumny, które stanowią podzestaw kolumn w <xref:System.Data.DataView>.  
+- Utwórz zawierające kolumny, które są podzbiorem kolumn <xref:System.Data.DataView>w. <xref:System.Data.DataTable>  
   
-- Tworzenie <xref:System.Data.DataTable> która zawiera tylko unikatowe wiersze z <xref:System.Data.DataView>, analogicznie do słowa kluczowego DISTINCT w języku Transact-SQL.  
+- Utwórz, <xref:System.Data.DataView>który zawiera tylko unikatowe wiersze od, analogicznie do DISTINCT słowo kluczowe w języku Transact-SQL. <xref:System.Data.DataTable>  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład aplikacji konsoli tworzy <xref:System.Data.DataTable> zawierający dane z **Person.Contact** tabelę **AdventureWorks** przykładowej bazy danych. Następnie przykład tworzy posortowane i przefiltrowane <xref:System.Data.DataView> na podstawie <xref:System.Data.DataTable>. Po wyświetleniu zawartości <xref:System.Data.DataTable> i <xref:System.Data.DataView>, w przykładzie jest tworzony nowy <xref:System.Data.DataTable> z <xref:System.Data.DataView> przez wywołanie metody <xref:System.Data.DataView.ToTable%2A> metody, wybierając tylko podzbiór dostępnych kolumn. Na koniec w przykładzie pokazano zawartość nowego <xref:System.Data.DataTable>.  
+ Poniższy przykład aplikacji konsolowej tworzy <xref:System.Data.DataTable> , który zawiera dane z tabeli **Person. Contact** w przykładowej bazie danych **AdventureWorks** . Następnie przykład tworzy sortowanie i filtrowanie <xref:System.Data.DataView> na podstawie. <xref:System.Data.DataTable> Po <xref:System.Data.DataTable> wyświetleniu zawartości <xref:System.Data.DataTable> <xref:System.Data.DataView>i, przykład <xref:System.Data.DataView> tworzy nowy z, wywołując <xref:System.Data.DataView.ToTable%2A> metodę, wybierając tylko podzestaw dostępnych kolumn. Na koniec przykład wyświetla zawartość nowego <xref:System.Data.DataTable>.  
   
 ```vb  
 Private Sub DemonstrateDataView()  
@@ -208,5 +208,5 @@ Console.WriteLine();
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Data.DataView.ToTable%2A>
-- [Elementy DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Elementy DataView](dataviews.md)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

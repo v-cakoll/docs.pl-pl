@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 6825fbc571d8b08808f14a3f69ffc6f8a1ef048c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: dab8466b4d40e318bbb9915c06ce4ac836c0ead0
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596193"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205431"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Używanie konstruktorów (Przewodnik programowania w języku C#)
 
@@ -39,14 +39,14 @@ Console.WriteLine(i);
   
  Poniższy kod powoduje jednak błąd kompilatora, ponieważ nie używa `new`i ponieważ próbuje użyć obiektu, który nie został zainicjowany:  
   
-```  
+```csharp  
 int i;  
 Console.WriteLine(i);  
 ```  
   
  Alternatywnie obiekty oparte na ( `structs` w tym wszystkie wbudowane typy liczbowe) mogą być inicjowane lub przypisane, a następnie używane jak w poniższym przykładzie:  
   
-```  
+```csharp  
 int a = 44;  // Initialize the value type...  
 int b;  
 b = 33;      // Or assign it before using it.  

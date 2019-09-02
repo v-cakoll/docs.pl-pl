@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-ms.openlocfilehash: f4dfccad23bf5d15f5cbd0a33e76a136417e13ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b7b1717317bb119538497f60bae48ec1da2286c8
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607267"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203326"
 ---
 # <a name="navigating-datarelations"></a>Nawigowanie w elementach DataRelation
-Jedną z podstawowych funkcji <xref:System.Data.DataRelation> jest umożliwienie nawigacji z jednego <xref:System.Data.DataTable> do drugiej w ramach <xref:System.Data.DataSet>. Dzięki temu można pobrać wszystkie powiązane <xref:System.Data.DataRow> obiekty w jednym **DataTable** , gdy jeden **DataRow** z powiązanych **DataTable**. Na przykład po ustanowieniu **DataRelation** między spisu klientów i tabelę zamówień, mogą pobierać wszystkie wiersze zamówienia dla wiersza określonego klienta za pomocą **GetChildRows**.  
+Jedną z podstawowych funkcji <xref:System.Data.DataRelation> programu jest umożliwienie nawigacji od jednego <xref:System.Data.DataTable> do drugiego w obrębie <xref:System.Data.DataSet>. Dzięki temu <xref:System.Data.DataRow> można pobrać wszystkie powiązane obiekty w jednej **DataTable** , gdy podaje jeden element **DataRow** z powiązanej **tabeli DataTable**. Na przykład po ustaleniu **relacji** między tabelą klientów a tabelą zamówień można pobrać wszystkie wiersze zamówienia dla danego wiersza klienta przy użyciu **GetChildRows**.  
   
- Poniższy przykład kodu tworzy **DataRelation** między **klientów** tabeli i **zamówienia** tabeli **DataSet** i zwraca wszystkie zamówienia dla każdego klienta.  
+ Poniższy przykład kodu tworzy relację między tabelą **Customers** i tabelą **Orders** **zestawu danych** i zwraca wszystkie zamówienia dla każdego klienta.  
   
  [!code-csharp[DataWorks Data.DataTableRelation#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks Data.DataTableRelation/CS/source.cs#1)]
  [!code-vb[DataWorks Data.DataTableRelation#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableRelation/VB/source.vb#1)]  
   
- Następny przykład opiera się na poprzednim przykładzie związanych ze sobą cztery tabele i nawigowanie po relacjach tych. Co w poprzednim przykładzie **CustomerID** odnosi się **klientów** do tabeli **zamówienia** tabeli. Dla każdego klienta w **klientów** tabeli wiersze podrzędne w **zamówienia** tabeli są określone, aby zwrócić liczbę zamówień ma określonego klienta i ich **OrderID** wartości.  
+ Następny przykład jest oparty na powyższym przykładzie, łącznie z czterema tabelami i nawigowaniem w tych relacjach. Tak jak w poprzednim przykładzie, **CustomerID** powiąże tabelę **Customers** z tabelą Orders. Dla każdego klienta w tabeli **Customers** są określane wszystkie wiersze podrzędne w tabeli **Orders** , aby można było zwrócić liczbę zamówień określonych przez określonego klienta i ich wartości **IDZamówienia** .  
   
- Rozwinięty przykład zwraca również wartość wartości z **OrderDetails** i **produktów** tabel. **Zamówienia** tabela jest powiązana z **OrderDetails** tabeli, używając **OrderID** Aby ustalić, dla każdego zamówienia klienta, jakich produktów i ilości zostały uporządkowane. Ponieważ **OrderDetails** tabeli zawiera tylko **ProductID** produktu uporządkowane **OrderDetails** jest powiązany z **produktów** za pomocą **ProductID** celu zwrócenie **ProductName**. W tej relacji **produktów** tabeli jest elementem nadrzędnym i **Orderdetails** tabeli jest elementem podrzędnym. W rezultacie podczas iteracji przez **OrderDetails** tabeli **GetParentRow** jest wywoływana w celu pobrania powiązane **ProductName** wartość.  
+ Rozwinięty przykład zwraca również wartości z tabel **OrderDetails** i **Products** . Tabela **Orders** jest powiązana z tabelą **OrderDetails** przy użyciu funkcji **IDZamówienia** , aby określić, jakie produkty i ilości zostały uporządkowane według kolejności. Ponieważ tabela **OrderDetails** zawiera tylko identyfikator **ProductID** uporządkowanego produktu, **OrderDetails** jest związana z **produktami** przy użyciu klasy **ProductID** w celu zwrócenia **ProductName**. W tej relacji tabela **Products** jest elementem nadrzędnym, a tabela **Order** Details jest elementem podrzędnym. W związku z tym podczas iterowania za pomocą tabeli **OrderDetails** zostaje wywołana funkcja **GetParentRow** w celu pobrania pokrewnej wartości **ProductName** .  
   
- Należy zauważyć, że w przypadku **DataRelation** jest tworzona dla **klientów** i **zamówienia** tabele, nie określono wartości dla **createConstraints**flagi (wartość domyślna to **true**). To zakłada się, że wszystkie wiersze w **zamówienia** tabela ma **CustomerID** wartość, która istnieje w obiekcie nadrzędnym **klientów** tabeli. Jeśli **CustomerID** istnieje w **zamówienia** tabelę, która nie istnieje w **klientów** tabeli <xref:System.Data.ForeignKeyConstraint> powoduje zgłoszenie wyjątku.  
+ Należy zauważyć, że po utworzeniu **relacji** dla tabel **Customers** i Orders nie określono żadnej wartości dla flagi **xmlconstraint** (wartość domyślna to **true**). Przyjęto założenie, że wszystkie wiersze w tabeli Orders mają wartość **CustomerID** , która istnieje w tabeli nadrzędnych **klientów** . Jeśli element **CustomerID** istnieje w tabeli **Orders** , która nie istnieje w tabeli <xref:System.Data.ForeignKeyConstraint> Customers, powoduje to wystąpienie wyjątku.  
   
- Kolumna podrzędny może zawierać wartości, które nie zawiera kolumny nadrzędnej, ustawić **createConstraints** flaga **false** podczas dodawania **DataRelation**. W tym przykładzie **createConstraints** flaga jest ustawiona na **false** dla **DataRelation** między **zamówienia** tabeli i  **OrderDetails** tabeli. Umożliwia to aplikacji zwrócić wszystkie rekordy z **OrderDetails** tabeli i tylko podzestaw rekordów z **zamówienia** tabeli bez generowania wyjątku czasu wykonywania. Rozwinięty przykładowe generuje dane wyjściowe w następującym formacie.  
+ Gdy kolumna podrzędna może zawierać wartości, których kolumna nadrzędna nie zawiera, ustaw dla flagi "isconstraint **" wartość false** podczas dodawania **relacji**między elementami. W przykładzie flaga " **isconstraint** " ma wartość **false** dla **relacji** między tabelą **Orders** i tabelą **OrderDetails** . Dzięki temu aplikacja zwróci wszystkie rekordy z tabeli **OrderDetails** i tylko podzestaw rekordów z tabeli Orders bez generowania wyjątku w czasie wykonywania. Rozwinięty przykład generuje dane wyjściowe w następującym formacie.  
   
 ```  
 Customer ID: NORTS  
@@ -44,12 +44,12 @@ Customer ID: NORTS
           Quantity: 3  
 ```  
   
- Poniższy przykład kodu jest rozwinięty przykładowe gdzie wartości z **OrderDetails** i **produktów** tabele są zwracane, za pomocą tylko podzestaw rekordów w **zamówienia**tabeli są zwracane.  
+ Poniższy przykład kodu jest rozwiniętą próbką, gdy zwracane są wartości z tabeli **OrderDetails** i **Products** , z tylko podzbiorem rekordów w tabeli Orders .  
   
  [!code-csharp[DataWorks Data.DataTableNavigation#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks Data.DataTableNavigation/CS/source.cs#1)]
  [!code-vb[DataWorks Data.DataTableNavigation#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableNavigation/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Elementy DataSet, DataTable i DataView](index.md)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

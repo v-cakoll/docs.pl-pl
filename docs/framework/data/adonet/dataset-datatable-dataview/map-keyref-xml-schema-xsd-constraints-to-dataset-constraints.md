@@ -2,29 +2,29 @@
 title: Mapowanie ograniczeń keyref schematu XML (XSD) na ograniczenia elementu DataSet
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: 4cc4cb530b7252f35469fd4bb43bf6da9c1a3e24
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 611322065a4df53d1a3149ef4e1ca5592f149081
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64604023"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203441"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapowanie ograniczeń keyref schematu XML (XSD) na ograniczenia elementu DataSet
-**Keyref** element umożliwia ustanowienie łączy między elementami w dokumencie. Jest to podobne do relacji klucza obcego w relacyjnej bazie danych. Jeśli schemat określa **keyref** elementu, element jest konwertowany podczas procesu mapowania schematu do odpowiedniego ograniczenia klucza obcego dla kolumn w tabelach <xref:System.Data.DataSet>. Domyślnie **keyref** element generuje również relacji z **ParentTable**, **ChildTable**, **ParentColumn**i  **ChildColumn** właściwości określone w relacji.  
+Element **keyref** umożliwia ustanowienie linków między elementami w dokumencie. Jest to podobne do relacji klucza obcego w relacyjnej bazie danych. Jeśli schemat określa element **keyref** , element jest konwertowany podczas procesu mapowania schematu do odpowiedniego ograniczenia klucza obcego w kolumnach w tabelach tabeli <xref:System.Data.DataSet>. Domyślnie element **keyref** również generuje relację z właściwościami **Parent**, **Child**, **ParentColumn**i **ChildColumn** określonymi w relacji.  
   
- W poniższej tabeli przedstawiono **msdata** atrybuty, które można określić w **keyref** elementu.  
+ Poniższa tabela zawiera opis atrybutów **msdata** , które można określić w elemencie **keyref** .  
   
 |Nazwa atrybutu|Opis|  
 |--------------------|-----------------|  
-|**msdata:ConstraintOnly**|Jeśli **ConstraintOnly = "true"** jest określona w **keyref** elementu w schemacie, ograniczenie zostanie utworzony, ale żadna relacja jest tworzony. Jeśli ten atrybut nie jest określony (lub jest ustawiona na **False**), ograniczenia i relacji, które są tworzone w **zestawu danych**.|  
-|**msdata:ConstraintName**|Jeśli **ConstraintName** atrybut jest określony, jego wartość jest używana jako nazwa ograniczenia. W przeciwnym razie **nazwa** atrybutu **keyref** elementu w schemacie zawiera nazwę ograniczenia w **zestawu danych**.|  
-|**msdata:UpdateRule**|Jeśli **elementu UpdateRule** atrybut jest określony w **keyref** elementu w schemacie, jego wartość jest przypisywana do **elementu UpdateRule** właściwości ograniczenia w  **Zestaw danych**. W przeciwnym razie **elementu UpdateRule** właściwość jest ustawiona na **Cascade**.|  
-|**msdata:DeleteRule**|Jeśli **DeleteRule** atrybut jest określony w **keyref** elementu w schemacie, jego wartość jest przypisywana do **DeleteRule** właściwości ograniczenia w  **Zestaw danych**. W przeciwnym razie **DeleteRule** właściwość jest ustawiona na **Cascade**.|  
-|**msdata:AcceptRejectRule**|Jeśli **AcceptRejectRule** atrybut jest określony w **keyref** elementu w schemacie, jego wartość jest przypisywana do **AcceptRejectRule** ograniczenia właściwości  **Zestaw danych**. W przeciwnym razie **AcceptRejectRule** właściwość jest ustawiona na **Brak**.|  
+|**msdata:ConstraintOnly**|Jeśli **ConstraintOnly = "true"** jest określony w elemencie **keyref** w schemacie, zostanie utworzone ograniczenie, ale nie jest tworzone żadne powiązanie. Jeśli ten atrybut nie jest określony (lub jest ustawiony na **wartość false**), zarówno ograniczenie, jak i relacja są tworzone w **zestawie danych**.|  
+|**msdata:ConstraintName**|Jeśli określono atrybut ConstraintName, jego wartość jest używana jako nazwa ograniczenia. W przeciwnym razie atrybut **name** elementu **keyref** w schemacie zawiera nazwę ograniczenia w **zestawie danych**.|  
+|**msdata:UpdateRule**|Jeśli atrybut **UpdateRule** jest określony w elemencie **keyref** w schemacie, jego wartość jest przypisywana do właściwości ograniczenia **UpdateRule** w **zestawie danych**. W przeciwnym razie Właściwość **UpdateRule** jest ustawiona na **Kaskada**.|  
+|**msdata:DeleteRule**|Jeśli atrybut **DeleteRule** jest określony w elemencie **keyref** w schemacie, jego wartość jest przypisywana do właściwości ograniczenia **DeleteRule** w **zestawie danych**. W przeciwnym razie Właściwość **DeleteRule** jest ustawiona na **Kaskada**.|  
+|**msdata:AcceptRejectRule**|Jeśli atrybut **AcceptRejectRule** jest określony w elemencie **keyref** w schemacie, jego wartość jest przypisywana do właściwości ograniczenia **AcceptRejectRule** w **zestawie danych**. W przeciwnym razie Właściwość **AcceptRejectRule** ma wartość **none**.|  
   
- Poniższy przykład zawiera schemat, który określa **klucz** i **keyref** relacje między **OrderNumber** element podrzędny elementu **zamówienia**  elementu i **OrderNo** element podrzędny elementu **OrderDetail** elementu.  
+ Poniższy przykład zawiera schemat, który określa relacje **Key** i **keyref** między elementem podrzędnym **OrderNumber** elementu **Order** i elementem podrzędnym **OrderNo** **OrderDetail** postaci.  
   
- W tym przykładzie **OrderNumber** element podrzędny elementu **OrderDetail** element odwołuje się do **OrderNo** element podrzędny klucza **kolejności**elementu.  
+ W przykładzie element podrzędny **OrderNumber** elementu **OrderDetail** odwołuje się do elementu podrzędnego klucza **OrderNo** elementu **Order** .  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -66,16 +66,16 @@ ms.locfileid: "64604023"
 </xs:schema>  
 ```  
   
- Proces mapowania schematu języka (XSD) definicji schematu XML generuje następujące **DataSet** z dwoma tabelami:  
+ Proces mapowania schematu języka definicji schematu XML (XSD) generuje następujący **zestaw danych** z dwiema tabelami:  
   
 ```  
 OrderDetail(OrderNo, ItemNo) and  
 Order(OrderNumber, EmpNumber)  
 ```  
   
- Ponadto **DataSet** definiuje następujące ograniczenia:  
+ Ponadto **zestaw danych** definiuje następujące ograniczenia:  
   
-- Ograniczenia unique wobec **kolejności** tabeli.  
+- Unikatowe ograniczenie tabeli **Order** .  
   
     ```  
               Table: Order  
@@ -85,7 +85,7 @@ Order(OrderNumber, EmpNumber)
     IsPrimaryKey: False  
     ```  
   
-- Relacja między **kolejności** i **OrderDetail** tabel. **Zagnieżdżone** właściwość jest ustawiona na **False** ponieważ dwa elementy nie są zagnieżdżone w schemacie.  
+- Relacja między tabelami **Order** i **OrderDetail** . Właściwość **zagnieżdżona** jest ustawiona na **false** , ponieważ dwa elementy nie są zagnieżdżone w schemacie.  
   
     ```  
               ParentTable: Order  
@@ -98,7 +98,7 @@ Order(OrderNumber, EmpNumber)
     Nested: False  
     ```  
   
-- Ograniczenie klucza obcego w **OrderDetail** tabeli.  
+- Ograniczenie klucza obcego w tabeli **OrderDetail** .  
   
     ```  
               ConstraintName: OrderNoRef  
@@ -111,6 +111,6 @@ Order(OrderNumber, EmpNumber)
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

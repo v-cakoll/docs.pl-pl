@@ -2,17 +2,17 @@
 title: Mapowanie relacji określonych dla zagnieżdżonych elementów
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: cd0fd66fe70be4b8dea14ac7420e95c4b8bb1158
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 510a5e676df7bac274c6086b94e9a23e7540da20
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64604017"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204638"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>Mapowanie relacji określonych dla zagnieżdżonych elementów
-Schemat może zawierać **msdata:Relationship** adnotacji, aby jawnie określić mapowanie między dowolne dwa elementy w schemacie. Dwa elementy, które są określone w **msdata:Relationship** może być zagnieżdżona w schemacie, ale nie trzeba być. Proces mapowania używa **msdata:Relationship** w schemacie, aby wygenerować podstawowy klucz/relacji klucza obcego między dwiema kolumnami.  
+Schemat może zawierać adnotację **msdata: Relationship** , aby jawnie określić mapowanie między dowolnymi dwoma elementami w schemacie. Dwa elementy określone w **msdata: Relationship** mogą być zagnieżdżane w schemacie, ale nie muszą być. Proces mapowania używa **relacji msdata: Relationship** w schemacie do generowania relacji klucza podstawowego/klucza obcego między dwiema kolumnami.  
   
- Poniższy przykład przedstawia schematu XML, w którym **OrderDetail** element jest elementem podrzędnym **kolejności**. **Msdata:Relationship** identyfikuje tę relację nadrzędny podrzędny i określa, że **OrderNumber** kolumny wynikowe **kolejności** tabela jest powiązana z **OrderNo** kolumny wynikowe **OrderDetail** tabeli.  
+ W poniższym przykładzie przedstawiono schemat XML, w którym element **OrderDetail** jest elementem podrzędnym **zamówienia**. **Msdata: Relationship** identyfikuje tę relację nadrzędny-podrzędny i określa, że kolumna **OrderNumber** tabeli **kolejności** wyników jest powiązana z kolumną **OrderNo** tabeli wyników w **OrderDetail** .  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -52,16 +52,16 @@ Schemat może zawierać **msdata:Relationship** adnotacji, aby jawnie określić
 </xs:schema>  
 ```  
   
- Proces mapowania schematu XML tworzy następujące <xref:System.Data.DataSet>:  
+ Proces mapowania schematu XML tworzy następujące elementy w <xref:System.Data.DataSet>:  
   
-- **Kolejności** i **OrderDetail** tabeli.  
+- **Zamówienie** i tabela **OrderDetail** .  
   
     ```  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
-- Relacja między **kolejności** i **OrderDetail** tabel. **Zagnieżdżone** dla tej relacji jest właściwością **True** ponieważ **kolejności** i **OrderDetail** elementów jest zagnieżdżanych w schemacie .  
+- Relacja między tabelami **Order** i **OrderDetail** . Właściwość **zagnieżdżona** dla tej relacji jest ustawiona na **wartość true** , ponieważ elementy **Order** i **OrderDetail** są zagnieżdżone w schemacie.  
   
     ```  
     ParentTable: Order  
@@ -76,6 +76,6 @@ Schemat może zawierać **msdata:Relationship** adnotacji, aby jawnie określić
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
+- [Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,18 +1,18 @@
 ---
-title: polecenie wypychania nuget DotNet
-description: Polecenie wypychania nuget dotnet wypycha pakietu do serwera i publikuje go.
+title: polecenia wypychania NuGet dotnet
+description: Polecenie polecenia push NuGet narzędzia dotnet wypycha pakiet do serwera i opublikuje go.
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 4d5efa94c6a4494158aea447be98256d2a307cd6
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 87557f606dead921961349fec4575394e6d359fd
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539132"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202550"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-**Ten temat dotyczy: ✓** platformy .NET Core SDK w wersji 1.x i nowszymi wersjami
+**Ten temat dotyczy: ✓** .NET Core 1. x SDK i nowszych wersji
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -20,11 +20,11 @@ ms.locfileid: "67539132"
 
 ## <a name="name"></a>Nazwa
 
-`dotnet nuget push` -Wypycha pakietu do serwera i publikuje go.
+`dotnet nuget push`— Wypchnij pakiet do serwera i opublikuje go.
 
 ## <a name="synopsis"></a>Streszczenie
 
-```
+```console
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
     [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
@@ -32,51 +32,51 @@ dotnet nuget push [-h|--help]
 
 ## <a name="description"></a>Opis
 
-`dotnet nuget push` Polecenie wypycha pakietu do serwera i publikuje go. Używa polecenia push serwera i szczegóły poświadczeń znalezionych w pliku config NuGet systemu lub łańcucha plików konfiguracji. Aby uzyskać więcej informacji na temat plików konfiguracyjnych, zobacz [Konfigurowanie zachowania pakietu NuGet](/nuget/consume-packages/configuring-nuget-behavior). Konfiguracja domyślna NuGet uzyskuje się przez ładowanie *%AppData%\NuGet\NuGet.config* (Windows) lub *$HOME/.local/share* (Linux/macOS), następnie ładowania *nuget.config*lub *.nuget\nuget.config* od katalogu głównego dysku i kończący się w bieżącym katalogu.
+`dotnet nuget push` Polecenie wypycha pakiet do serwera i opublikuje go. Polecenie push używa informacji o serwerze i poświadczeniach znajdujących się w pliku konfiguracyjnym NuGet systemu lub w łańcuchu plików konfiguracji. Aby uzyskać więcej informacji na temat plików konfiguracji, zobacz [Konfigurowanie zachowania NuGet](/nuget/consume-packages/configuring-nuget-behavior). Domyślna konfiguracja narzędzia NuGet jest uzyskiwana przez załadowanie *%AppData%\NuGet\NuGet.config* (Windows) lub *$Home/.local/share* (Linux/macOS), a następnie załadowanie jakichkolwiek *NuGet. config* lub *. NuGet\NuGet.config* , począwszy od katalogu głównego dysk i zakończenie w bieżącym katalogu.
 
 ## <a name="arguments"></a>Argumenty
 
 * **`ROOT`**
 
-  Określa ścieżkę pliku do pakietu, który ma zostać wypchnięty.
+  Określa ścieżkę pliku do pakietu do wypchnięcia.
 
 ## <a name="options"></a>Opcje
 
 * **`-d|--disable-buffering`**
 
-  Wyłącza buforowanie podczas wypychania do serwera HTTP (S), aby zmniejszyć użycie pamięci.
+  Wyłącza buforowanie podczas wypychania do serwera HTTP (S) w celu zmniejszenia użycia pamięci.
 
 * **`--force-english-output`**
 
-  Wymusza na aplikacji do uruchamiania przy użyciu kultury niezmiennej, oparte na język angielski.
+  Wymusza uruchomienie aplikacji przy użyciu niezmiennej, opartej na języku angielskim kultury.
 
 * **`-h|--help`**
 
-Drukuje krótki pomoc dotyczącą polecenia.
+Drukuje krótką pomoc dla polecenia.
 
 * **`--interactive`**
 
-  Umożliwia polecenie, aby zablokować i wymaga ręcznej akcji dla operacji, takich jak uwierzytelnianie. Opcja dostępna od zestawu SDK programu .NET Core 2.2.
+  Umożliwia zablokowanie polecenia i wymaga ręcznej akcji dla operacji takich jak uwierzytelnianie. Opcja dostępna od wersji .NET Core 2,2 SDK.
 
 * **`-k|--api-key <API_KEY>`**
 
-  Klucz interfejsu API dla serwera.
+  Klucz interfejsu API dla serwera programu.
 
 * **`-n|--no-symbols`**
 
-  Nie wypychania symbole (nawet jeśli istnieje).
+  Nie Wypychaj symboli (nawet jeśli istnieją).
 
 * **`--no-service-endpoint`**
 
-  Nie dołącza "interfejsu api w wersji 2/pakiet" adres URL źródła. Opcja dostępna od zestawu SDK programu .NET Core 2.1.
+  Nie dołącza "API/v2/Package" do źródłowego adresu URL. Opcja dostępna od wersji .NET Core 2,1 SDK.
 
 * **`-s|--source <SOURCE>`**
 
-  Określa adres URL serwera. Ta opcja jest wymagana, chyba że `DefaultPushSource` wartość konfiguracji jest ustawiana w pliku konfiguracyjnym NuGet.
+  Określa adres URL serwera. Ta opcja jest wymagana, `DefaultPushSource` chyba że wartość konfiguracji jest ustawiona w pliku konfiguracyjnym NuGet.
 
 * **`-sk|--symbol-api-key <API_KEY>`**
 
-  Klucz interfejsu API serwera symboli.
+  Klucz interfejsu API dla serwera symboli.
 
 * **`-ss|--symbol-source <SOURCE>`**
 
@@ -84,46 +84,46 @@ Drukuje krótki pomoc dotyczącą polecenia.
 
 * **`-t|--timeout <TIMEOUT>`**
 
-  Określa limit czasu Wypychanie do serwera w ciągu kilku sekund. Wartość domyślna to 300 sekund (5 minut). Określanie 0 (zero sekund) stosuje się wartością domyślną.
+  Określa limit czasu wypychania do serwera w sekundach. Wartość domyślna to 300 sekund (5 minut). Wartość domyślna to 0 (zero sekund).
 
 ## <a name="examples"></a>Przykłady
 
-* Wypycha *foo.nupkg* do domyślnego źródła wypychania, określając klucz interfejsu API:
+* Wypchnięcie *foo. nupkg* do domyślnego źródła push, określając klucz interfejsu API:
 
   ```console
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
-* Wypychania *foo.nupkg* do źródła niestandardowego wypychania `https://customsource`, określając klucz interfejsu API:
+* Wypychanie *foo. nupkg* do niestandardowego źródła `https://customsource`wypychania, określając klucz interfejsu API:
 
   ```console
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
-* Wypycha *foo.nupkg* do domyślnego źródła push:
+* Wypchnięcie *foo. nupkg* do domyślnego źródła push:
 
   ```console
   dotnet nuget push foo.nupkg
   ```
 
-* Wypycha *foo.symbols.nupkg* do domyślnego źródła symboli:
+* Wypchnięcie *foo. Symbols. nupkg* do domyślnego źródła symboli:
 
   ```console
   dotnet nuget push foo.symbols.nupkg
   ```
 
-* Wypycha *foo.nupkg* do domyślnego źródła wypychania, określając 360-sekundowy limit:
+* Wypchnięcie *foo. nupkg* do domyślnego źródła push, określając 360-sekundowy limit czasu:
 
   ```console
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
-* Wypychanie wszystkich *.nupkg* plików w bieżącym katalogu, do domyślnego źródła push:
+* Wypycha wszystkie pliki *. nupkg* w bieżącym katalogu do domyślnego źródła push:
 
   ```console
   dotnet nuget push *.nupkg
   ```
   
   > [!NOTE]
-  > To polecenie nie działa, prawdopodobnie z powodu błędów, które istniały w starszych wersjach zestawu SDK (zestaw SDK programu .NET Core 2.1 i wcześniejszych wersjach).
-  > Aby rozwiązać ten problem, Uaktualnij używanej wersji zestawu SDK lub zamiast tego uruchom następujące polecenie: `dotnet nuget push **/*.nupkg`
+  > Jeśli to polecenie nie działa, może to być spowodowane usterką, która istniała we wcześniejszych wersjach zestawu SDK (zestaw SDK programu .NET Core 2,1 i wcześniejsze wersje).
+  > Aby rozwiązać ten problem, Uaktualnij wersję zestawu SDK lub zamiast tego Uruchom następujące polecenie:`dotnet nuget push **/*.nupkg`

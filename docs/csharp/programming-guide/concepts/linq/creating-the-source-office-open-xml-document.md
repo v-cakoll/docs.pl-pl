@@ -2,20 +2,20 @@
 title: Tworzenie źródłowego dokumentu Office Open XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 653c8cdb-73be-4dc2-927f-924cfb4ed9ed
-ms.openlocfilehash: 024b6c80cdedf38fd2dcee77562c0105df7bd033
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: d6c4d8866bba58e86735099a62041894a9faa9b1
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690094"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204152"
 ---
 # <a name="creating-the-source-office-open-xml-document-c"></a>Tworzenie źródłowego dokumentu Office Open XML (C#)
 
-W tym temacie przedstawiono sposób tworzenia dokumentu Office Open XML WordprocessingML, używanego przez inne przykłady w tym samouczku. Jeśli wykonasz te instrukcje, dane wyjściowe będą zgodne dane wyjściowe w każdym przykładzie.
+W tym temacie przedstawiono sposób tworzenia dokumentu Office Open XML WordprocessingML, który jest używany przez inne przykłady w tym samouczku. Jeśli wykonasz te instrukcje, dane wyjściowe będą zgodne z danymi wyjściowymi podanymi w każdym przykładzie.
 
-Jednak na potrzeby przykładów w tym samouczku będą działać z dowolny prawidłowy dokument WordprocessingML.
+Jednak przykłady w tym samouczku będą działały z dowolnym prawidłowym dokumentem WordprocessingML.
 
-Aby utworzyć dokument, który korzysta z tego samouczka, musi mieć pakietu Microsoft Office 2007 lub nowszy zainstalowany lub konieczne jest posiadanie programu Microsoft Office 2003 za pomocą pakietu Microsoft Office zgodności dla programu Word, Excel i PowerPoint 2007 formatów.
+Aby utworzyć dokument, który jest wykorzystywany przez ten samouczek, musisz mieć zainstalowany Microsoft Office 2007 lub nowszy lub mieć Microsoft Office 2003 z pakietem zgodności Microsoft Office dla formatów plików programów Word, Excel i PowerPoint 2007.
 
 ## <a name="creating-the-wordprocessingml-document"></a>Tworzenie dokumentu WordprocessingML
 
@@ -25,7 +25,7 @@ Aby utworzyć dokument, który korzysta z tego samouczka, musi mieć pakietu Mic
 
 2. Wklej następujący tekst do nowego dokumentu:
 
-    ```
+    ```text
     Parsing WordprocessingML with LINQ to XML
 
     The following example prints to the console.
@@ -43,13 +43,13 @@ Aby utworzyć dokument, który korzysta z tego samouczka, musi mieć pakietu Mic
     Hello World
     ```
 
-3. Formatuj pierwszy wiersz ze stylem "Nagłówek 1".
+3. Sformatuj pierwszy wiersz za pomocą stylu "Nagłówek 1".
 
-4. Wybierz wiersze, które zawierają kod C#. Pierwszy wiersz zaczyna się od `using` — słowo kluczowe. Ostatni wiersz jest ostatni nawias zamykający. Formatuj wierszy przy użyciu czcionki courier. Formatuj je przy użyciu nowego stylu i nazwę nowego stylu "Code".
+4. Wybierz wiersze, które zawierają C# kod. Pierwszy wiersz rozpoczyna `using` się od słowa kluczowego. Ostatnim wierszem jest ostatni zamykający nawias klamrowy. Sformatuj linie przy użyciu czcionki Courier. Sformatuj je przy użyciu nowego stylu i nazwij nowy styl "Code".
 
-5. Na koniec zaznacz całą linię, która zawiera dane wyjściowe i sformatować je za pomocą `Code` stylu.
+5. Na koniec zaznacz cały wiersz zawierający dane wyjściowe i sformatuj go przy użyciu `Code` stylu.
 
-6. Zapisz dokument, a następnie nadaj mu nazwę SampleDoc.docx.
+6. Zapisz dokument i nadaj mu nazwę SampleDoc. docx.
 
     > [!NOTE]
-    > Jeśli używasz programu Microsoft Word 2003, wybierz opcję **dokument programu Word 2007** w **Zapisz jako typ** listy rozwijanej.
+    > Jeśli używasz programu Microsoft Word 2003, wybierz pozycję **dokument programu Word 2007** na liście rozwijanej **Zapisz jako typ** .

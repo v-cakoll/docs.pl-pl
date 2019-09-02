@@ -1,37 +1,37 @@
 ---
 title: Przewodnik platformy .NET Core
-description: Platforma .NET core to moduły, wysokowydajnych implementacji .NET do tworzenia aplikacji Windows, Linux i Mac. Dowiedz się więcej na temat platformy .NET Core, aby rozpocząć pracę.
+description: .NET Core to modularna, wielowydajna implementacja platformy .NET do tworzenia aplikacji dla systemów Windows, Linux i Mac. Dowiedz się więcej o programie .NET Core, aby rozpocząć pracę.
 author: richlander
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 79a0c09074159160dd01b0c7970612f7058cc3fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db4daa8c78a181f0599c4c75ccd31f46ee278e63
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614456"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202825"
 ---
 # <a name="net-core-guide"></a>Przewodnik platformy .NET Core
 
-[.NET core](about.md) jest [typu open-source](https://github.com/dotnet/coreclr/blob/master/LICENSE.TXT), platforma deweloperska ogólnego przeznaczenia, obsługiwane przez firmę Microsoft i społeczności platformy .NET w [GitHub](https://github.com/dotnet/core). Jest wiele platform (Obsługa Windows, macOS i Linux) i może służyć do tworzenia urządzeń, chmury i aplikacji IoT.
+[.NET Core](about.md) to platforma programistyczna ["Open Source](https://github.com/dotnet/coreclr/blob/master/LICENSE.TXT)", która jest obsługiwana przez firmę Microsoft i społeczność programu .NET w serwisie [GitHub](https://github.com/dotnet/core). Jest to międzyplatformowe (pomocnicze systemy Windows, macOS i Linux) i mogą być używane do tworzenia aplikacji dla urządzeń, usług w chmurze i IoT.
 
-Zobacz [platformy .NET Core](about.md) Aby dowiedzieć się więcej na temat platformy .NET Core, w tym właściwości, języków i struktur i klucza API.
+Zobacz [Informacje o programie .NET Core](about.md) , aby dowiedzieć się więcej na temat platformy .NET Core, w tym jej cech, obsługiwanych języków i struktur oraz kluczowych interfejsów API.
 
-Zapoznaj się z [Samouczki programu .NET Core](tutorials/index.md) dowiesz się, jak utworzyć prostą aplikację platformy .NET Core. Trwa tylko kilka minut, aby uzyskać swoją pierwszą aplikację, działanie. Jeśli chcesz wypróbować platformy .NET Core w przeglądarce, Przyjrzyj się [liczby w elemencie C# ](../csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml) samouczek online.
+Zapoznaj się z samouczkami dotyczącymi [platformy .NET Core](tutorials/index.md) , aby dowiedzieć się, jak utworzyć prostą aplikację platformy .NET Core. Rozpoczęcie pracy z pierwszą aplikacją może zająć zaledwie kilka minut. Jeśli chcesz wypróbować platformę .NET Core w przeglądarce, poszukaj [cyfr w C# ](../csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml) samouczku online.
 
-## <a name="download-net-core-22"></a>Pobierz program .NET Core 2.2
+## <a name="download-net-core-22"></a>Pobierz program .NET Core 2,2
 
-Pobierz [zestawu .NET Core 2.2 SDK](https://www.microsoft.com/net/download) próby platformy .NET Core na komputerze Windows, macOS lub Linux. Odwiedź stronę [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) Jeśli wolisz używać kontenerów platformy Docker.
+Pobierz [zestaw .net core 2,2 SDK](https://www.microsoft.com/net/download) , aby wypróbować platformę .NET Core na komputerze z systemem Windows, MacOS lub Linux. Jeśli wolisz używać kontenerów platformy Docker, odwiedź stronę [dotnet/Core](https://hub.docker.com/_/microsoft-dotnet-core/) .
 
-Wszystkie wersje platformy .NET Core są dostępne pod adresem [pobierania programu .NET Core](https://www.microsoft.com/net/download/archives) interesuje Cię bliższa dla innej wersji programu .NET Core.
+Wszystkie wersje programu .NET Core są dostępne w [programie .NET Core downloads](https://www.microsoft.com/net/download/archives) , jeśli szukasz innej wersji platformy .NET Core.
 
 ## <a name="net-core-22"></a>.NET Core 2.2
 
-Najnowsza wersja to [platformy .NET Core 2.2](whats-new/dotnet-core-2-2.md). Nowe funkcje obejmują: wdrożeń zależny od struktury, punkty zaczepienia uruchamiania, uwierzytelnianie w usłudze AAD przy użyciu usługi Azure SQL i pomoc techniczna dla Windows ARM32.
+Najnowsza wersja to [.NET Core 2,2](whats-new/dotnet-core-2-2.md). Nowe funkcje obejmują: wdrożenia zależne od platformy, punkty uruchomienia, uwierzytelnianie w usłudze AAD z użyciem usługi Azure SQL i obsługę systemu Windows ARM32.
 
 ## <a name="create-your-first-application"></a>Tworzenie pierwszej aplikacji
 
-Po zainstalowaniu programu .NET Core SDK, otwórz wiersz polecenia. Wpisz następujące polecenie `dotnet` polecenia, aby utworzyć i uruchomić aplikację w języku C#.
+Po zainstalowaniu zestaw .NET Core SDK Otwórz wiersz polecenia. Wpisz następujące `dotnet` polecenia, aby utworzyć i uruchomić C# aplikację.
 
 ```console
 dotnet new console
@@ -40,14 +40,14 @@ dotnet run
 
 Powinny zostać wyświetlone następujące dane wyjściowe:
 
-```console
+```output
 Hello World!
 ```
 
 ## <a name="support"></a>Pomoc techniczna
 
-Platforma .NET core to [obsługiwane przez firmę Microsoft](https://www.microsoft.com/net/support/policy)na Windows, macOS i Linux. Bezpieczeństwo i jakości jest aktualizowany kilka razy w roku, zazwyczaj co miesiąc.
+Platforma .NET Core jest [obsługiwana przez firmę Microsoft](https://www.microsoft.com/net/support/policy), w systemach Windows, MacOS i Linux. Jest ona aktualizowana pod kątem bezpieczeństwa i jakości kilka razy w roku, zazwyczaj co miesiąc.
 
-Dystrybucje binarny platformy .NET core tworzone i testowane na serwerach utrzymywane przez Microsoft na platformie Azure i obsługiwane podobnie jak każdego produktu firmy Microsoft.
+Dystrybucje binarne programu .NET Core są kompilowane i testowane na serwerach obsługiwanych przez firmę Microsoft na platformie Azure i są obsługiwane w taki sam sposób jak każdy produkt firmy Microsoft.
 
-[Red Hat obsługuje platformy .NET Core](http://redhatloves.net/) na Red Hat Enterprise Linux (RHEL). Red Hat kompilacji platformy .NET Core ze źródła i udostępnia je w [Red Hat oprogramowania kolekcje](https://developers.redhat.com/products/softwarecollections/overview/). Red Hat i Microsoft współpracują, aby upewnić się, że platformy .NET Core działa dobrze w systemie RHEL.
+[Red Hat obsługuje platformę .NET Core](http://redhatloves.net/) na Red Hat Enterprise Linux (RHEL). Red Hat kompiluje platformę .NET Core ze źródła i udostępnia je w [kolekcjach oprogramowania Red Hat](https://developers.redhat.com/products/softwarecollections/overview/). Red Hat i Microsoft Współpracuj, aby upewnić się, że .NET Core działa dobrze na RHEL.

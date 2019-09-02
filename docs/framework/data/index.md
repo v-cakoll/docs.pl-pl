@@ -6,18 +6,18 @@ helpviewer_keywords:
 - data access [.NET Framework], about .NET Framework data access
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
-ms.openlocfilehash: 428fe49584523bb1386b100838034fc161455d3b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 74256cb52756e790a0e3eb8980f65f1a85445204
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965163"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205991"
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>Dane i modelowanie w programie .NET Framework
 Ta sekcja zawiera informacje na temat sposobu uzyskiwania dostępu do danych za pomocą ADO.NET, Language Integrated Query (LINQ), Usługi danych programu WCF i XML.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [ADO.NET](../../../docs/framework/data/adonet/index.md)  
+ [ADO.NET](./adonet/index.md)  
  Opisuje architekturę ADO.NET oraz sposób używania klas ADO.NET do zarządzania danymi aplikacji i współdziałania ze źródłami danych, w tym Microsoft SQL Server, OLE DB źródeł danych i XML.  
   
  [Language Integrated Query (LINQ)](../../csharp/programming-guide/concepts/linq/index.md)  
@@ -26,10 +26,10 @@ Ta sekcja zawiera informacje na temat sposobu uzyskiwania dostępu do danych za 
  [Zapytanie zintegrowane z językiem (LINQ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)  
  Zawiera łącza do odpowiedniej dokumentacji dotyczącej języka Integrated Language Query (LINQ) przy użyciu Visual Basic.  
   
- [Przetwarzanie transakcji](../../../docs/framework/data/transactions/index.md)  
+ [Przetwarzanie transakcji](./transactions/index.md)  
  W tym artykule omówiono obsługę .NET Framework transakcji.  
   
- [Usługi danych WCF 4.5](../../../docs/framework/data/wcf/index.md)  
+ [Usługi danych WCF 4.5](./wcf/index.md)  
  Zawiera informacje dotyczące sposobu wdrażania usług danych w Internecie lub intranecie przy użyciu Usługi danych programu WCF.  
   
  [Dokumenty i dane XML](../../standard/data/xml/index.md)  
@@ -42,7 +42,7 @@ Ta sekcja zawiera informacje na temat sposobu uzyskiwania dostępu do danych za 
  [Microsoft SQL Server technologie modelowania](https://go.microsoft.com/fwlink/?LinkId=193039)  
  Opisuje zestaw technologii umożliwiających szybkie i dostosowane projektowanie i opracowywanie aplikacji opartych na danych.  
   
- [Podręcznik programowania](../../../docs/framework/development-guide.md)  
+ [Podręcznik programowania](../development-guide.md)  
  Przewodnik po wszystkich obszarach kluczowych technologii i zadaniach związanych z rozwojem aplikacji, takich jak tworzenie, konfigurowanie, debugowanie, zabezpieczanie i wdrażanie aplikacji, oraz informacje na temat programowania dynamicznego, interoperacyjności, rozszerzalności, zarządzania pamięcią i wątków.  
   
  [Zabezpieczenia](../../standard/security/index.md)  

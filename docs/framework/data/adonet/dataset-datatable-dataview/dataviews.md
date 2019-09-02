@@ -2,63 +2,63 @@
 title: Elementy DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: aff4d6f648fa091130bfd9951f2a5001947b09a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f362e4807bce4fb0e3e8c9ae8cdd6b4704fc28aa
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034336"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203810"
 ---
 # <a name="dataviews"></a>Elementy DataView
-A <xref:System.Data.DataView> umożliwia tworzenie różnych widoków danych przechowywanych w <xref:System.Data.DataTable>, możliwości, jest często używany w aplikacjach powiązanie danych. Za pomocą **DataView**, może uwidaczniać dane w tabeli z zamówieniami sortowania i dane można filtrować według wierszy, stanu lub w zależności od wyrażenia filtru.  
+A <xref:System.Data.DataView> umożliwia tworzenie różnych widoków danych przechowywanych <xref:System.Data.DataTable>w programie, które są często używane w aplikacjach do wiązania danych. Za pomocą elementu **DataView**można uwidocznić dane w tabeli z różnymi kolejności sortowania i można filtrować dane według stanu wiersza lub w oparciu o wyrażenie filtru.  
   
- A **DataView** udostępnia dynamiczny widok danych w źródłowym **DataTable**: zawartość, kolejność i członkostwa odzwierciedlenia zmian w miarę ich występowania. To zachowanie różni się od **wybierz** metody **DataTable**, co powoduje zwrócenie <xref:System.Data.DataRow> tablica z tabeli opartym na określonej kolejności filtrowania lub sortowania: Ta zawartość zawiera zmiany podstawowy w tabeli, ale członkostwo i kolejność pozostaną statyczne. Dynamiczne możliwości **DataView** jest idealnym rozwiązaniem dla wiązania danych aplikacji.  
+ **Element DataView** udostępnia dynamiczny widok danych w źródłowej **tabeli DataTable**: zawartość, kolejność i członkostwo odzwierciedlają zmiany w miarę ich występowania. To zachowanie różni się od metody **SELECT** **elementu DataTable**, <xref:System.Data.DataRow> która zwraca tablicę z tabeli na podstawie określonego filtru i/lub porządku sortowania: Ta zawartość odzwierciedla zmiany w tabeli podstawowej, ale jego członkostwo i Porządkowanie pozostaje statyczne. Dynamiczne możliwości obiektu **DataView** sprawiają, że są idealnym rozwiązaniem dla aplikacji do wiązania danych.  
   
- A **DataView** udostępnia dynamiczny widok jednego zestawu danych, podobnie jak widok bazy danych, do którego można zastosować różne sortowanie i kryteria filtrowania. W przeciwieństwie do widoku bazy danych, jednak **DataView** nie może być traktowany jako tabelę i nie można udostępnić widok Tabele sprzężone. Również nie można wykluczyć kolumny, które istnieją w tabeli źródłowej i nie można dołączyć kolumn, takich jak kolumny obliczeniowej, które nie istnieją w tabeli źródłowej.  
+ **Element DataView** udostępnia dynamiczny widok pojedynczego zestawu danych, podobnie jak widok bazy danych, do którego można zastosować różne kryteria sortowania i filtrowania. W przeciwieństwie do widoku bazy danych, jednak **element DataView** nie może być traktowany jako tabela i nie może zawierać widoku sprzężonych tabel. Nie można również wykluczyć kolumn istniejących w tabeli źródłowej ani dodawać kolumn, takich jak kolumny obliczeniowe, które nie istnieją w tabeli źródłowej.  
   
- Możesz użyć <xref:System.Data.DataView.DataViewManager%2A> do zarządzania ustawieniami widoku dla wszystkich tabel w **zestawu danych**. **DataViewManager** zapewnia wygodny sposób zarządzać domyślne ustawienia widoku dla każdej tabeli. Podczas tworzenia wiązania kontrolki do więcej niż jedną tabelę **DataSet**, wiązania do **DataViewManager** jest idealnym wyborem.  
+ Aby zarządzać ustawieniami widoku <xref:System.Data.DataView.DataViewManager%2A> dla wszystkich tabel w **zestawie danych**, można użyć elementu. Element DataViewManager zapewnia wygodny sposób zarządzania domyślnymi ustawieniami widoku dla każdej tabeli. W przypadku wiązania kontrolki z więcej niż jedną tabelą **zestawu danych**powiązanie z elementem DataViewManager jest idealnym wyborem.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Tworzenie elementu DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataview.md)  
- W tym artykule opisano sposób tworzenia **DataView** dla **DataTable**.  
+ [Tworzenie elementu DataView](creating-a-dataview.md)  
+ Opisuje sposób tworzenia elementu **DataView** dla **elementu DataTable**.  
   
- [Sortowanie i filtrowanie danych](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
- W tym artykule opisano sposób ustawiania właściwości **DataView** zwracanie podzbiorów danych wiersze spełniające kryteria filtru określonego lub zwrócić dane w określony porządek sortowania.  
+ [Sortowanie i filtrowanie danych](sorting-and-filtering-data.md)  
+ Opisuje sposób ustawiania właściwości elementu **DataView** do zwracania podzbiorów wierszy danych spełniających kryteria filtrowania lub do zwracania danych w określonej kolejności sortowania.  
   
- [Elementy DataRow i DataRowView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarows-and-datarowviews.md)  
- Opisuje, jak uzyskać dostęp do danych udostępnianych przez **DataView**.  
+ [Elementy DataRow i DataRowView](datarows-and-datarowviews.md)  
+ Opisuje sposób uzyskiwania dostępu do danych uwidocznionych przez **Widok DataView**.  
   
- [Znajdowanie wierszy](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md)  
- Opisuje sposób wyszukiwania określonego wiersza w **DataView**.  
+ [Znajdowanie wierszy](finding-rows.md)  
+ Opisuje, jak znaleźć konkretny wiersz w **widoku**danych.  
   
- [Elementy ChildView i relacje](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/childviews-and-relations.md)  
- W tym artykule opisano sposób tworzenia widoków danych z relacji nadrzędny podrzędny za pomocą **DataView**.  
+ [Elementy ChildView i relacje](childviews-and-relations.md)  
+ Opisuje sposób tworzenia widoków danych z relacji nadrzędny-podrzędny przy użyciu elementu **DataView**.  
   
- [Modyfikowanie elementów DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/modifying-dataviews.md)  
- Opisuje sposób modyfikowania danych w źródłowym **DataTable** za pośrednictwem **DataView**, w tym na włączenie lub wyłączenie aktualizacji.  
+ [Modyfikowanie elementów DataView](modifying-dataviews.md)  
+ Opisuje, jak modyfikować dane w źródłowej **DataTable** za pośrednictwem **widoku**danych, w tym Włączanie lub wyłączanie aktualizacji.  
   
- [Obsługa zdarzeń elementu DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataview-events.md)  
- Opisuje sposób używania **ListChanged** zdarzeń, aby otrzymać powiadomienie po zawartości lub kolejność **DataView** jest aktualizowana.  
+ [Obsługa zdarzeń elementu DataView](handling-dataview-events.md)  
+ Opisuje sposób korzystania z zdarzenia **ListChanged** w celu otrzymywania powiadomień w przypadku aktualizowania zawartości lub kolejności elementu **DataView** .  
   
- [Zarządzanie elementami DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/managing-dataviews.md)  
- Opisuje sposób używania **DataViewManager** zarządzanie **DataView** ustawienia dla każdej tabeli w **zestawu danych**.  
+ [Zarządzanie elementami DataView](managing-dataviews.md)  
+ Opisuje, w jaki sposób używać elementu DataViewManager do zarządzania ustawieniami **DataView** dla każdej tabeli w **zestawie danych**.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Aplikacje internetowe ASP.NET](https://docs.microsoft.com/previous-versions/655cec97(v=vs.100))  
- Zawiera omówienie i szczegółowe procedury krok po kroku do tworzenia aplikacji platformy ASP.NET, formularze sieci Web i usług sieci Web.  
+ Oferuje przeglądy i szczegółowe procedury krok po kroku dotyczące tworzenia aplikacji ASP.NET, formularzy sieci Web i usług sieci Web.  
   
- [Aplikacje Windows](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
- Zawiera szczegółowe informacje na temat pracy z usługą Windows Forms i aplikacji konsoli.  
+ [Aplikacje systemu Windows](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
+ Zawiera szczegółowe informacje dotyczące pracy z aplikacjami Windows Forms i konsolą programu.  
   
- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- W tym artykule opisano **DataSet** obiektu i jak go używać do zarządzania danymi w aplikacji.  
+ [Elementy DataSet, DataTable i DataView](index.md)  
+ Opisuje obiekt **DataSet** i jak można go użyć do zarządzania danymi aplikacji.  
   
- [Elementy DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- W tym artykule opisano **DataTable** obiektu i jak go używać do zarządzania danymi aplikacji, samodzielnie lub jako część **zestawu danych**.  
+ [Elementy DataTable](datatables.md)  
+ Opisuje obiekt **DataTable** i sposób, w jaki można go użyć do zarządzania danymi aplikacji przez siebie lub jako część **zestawu danych**.  
   
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- W tym artykule opisano ADO.NET architektura i składniki i jak za pomocą ADO.NET dostęp do istniejących źródeł danych i zarządzania danymi w aplikacji.  
+ [ADO.NET](../index.md)  
+ Opisuje architekturę i składniki ADO.NET oraz sposób używania ADO.NET do uzyskiwania dostępu do istniejących źródeł danych i zarządzania danymi aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

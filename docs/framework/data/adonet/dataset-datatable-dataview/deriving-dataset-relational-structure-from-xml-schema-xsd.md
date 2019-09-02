@@ -2,12 +2,12 @@
 title: Pobieranie relacyjnej struktury elementu DataSet ze schematu XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 98c43b6af2913b9737085d2d983b37c6da4c1724
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 29b905c42f15cad4eb8521c4d702b56093982445
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934470"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203781"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Pobieranie relacyjnej struktury elementu DataSet ze schematu XML (XSD)
 Ta sekcja zawiera omówienie sposobu kompilowania schematu `DataSet` relacyjnego z dokumentu schematu języka definicji schematu XML (XSD). Ogólnie rzecz biorąc dla każdego `complexType` elementu podrzędnego elementu schematu tabela jest generowana `DataSet`w. Struktura tabeli jest określana na podstawie definicji typu złożonego. Tabele są tworzone w programie `DataSet` dla elementów najwyższego poziomu w schemacie. Jednak tabela jest tworzona tylko dla elementu najwyższego poziomu `complexType` , `complexType` gdy element jest zagnieżdżony wewnątrz innego `complexType` elementu, w którym to `DataTable` przypadku `DataSet`zagnieżdżony `complexType` element jest mapowany do wewnątrz.  
@@ -83,17 +83,17 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
 ```  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Opisuje elementy schematu XML używane do tworzenia ograniczeń unique i FOREIGN KEY w `DataSet`.  
   
- [Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)  
  Opisuje elementy schematu XML używane do tworzenia relacji między kolumnami tabeli w `DataSet`.  
   
- [Relacje i ograniczenia schematu XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/xml-schema-constraints-and-relationships.md)  
+ [Relacje i ograniczenia schematu XML](xml-schema-constraints-and-relationships.md)  
  Opisuje, `DataSet`w jaki sposób relacje są tworzone niejawnie podczas używania elementów schematu XML do tworzenia ograniczeń w.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Używanie języka XML w elemencie DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [Używanie języka XML w elemencie DataSet](using-xml-in-a-dataset.md)  
  Opisuje sposób ładowania i utrwalania relacyjnej struktury i danych w `DataSet` postaci danych XML.  
   
 ## <a name="see-also"></a>Zobacz także

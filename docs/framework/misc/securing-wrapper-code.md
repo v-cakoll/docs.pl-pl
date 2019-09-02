@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e824fd686176d83c26ca2c042348c9423fbcc884
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee78c1c1f92515472bb3ea3ce77405a5e3447fd9
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910749"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206102"
 ---
 # <a name="securing-wrapper-code"></a>Zabezpieczanie kodu otoki
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -47,7 +47,7 @@ ms.locfileid: "69910749"
 ## <a name="link-demands-and-wrappers"></a>Wymagania dotyczące linków i otoki  
  Specjalna sprawa ochrony z wymaganiami dotyczącymi linków została wzmocniona w infrastrukturze zabezpieczeń, ale nadal jest źródłem możliwej słabej przyczyny w kodzie.  
   
- Jeśli w pełni zaufany kod wywołuje właściwość, zdarzenie lub metodę chronioną przez [LinkDemand](../../../docs/framework/misc/link-demands.md), wywołanie powiedzie się, jeśli zostanie spełnione sprawdzenie uprawnień **LinkDemand** dla elementu wywołującego. Ponadto jeśli w pełni zaufany kod ujawnia klasę, która przyjmuje nazwę właściwości i wywołuje metodę dostępu **Get** przy użyciu odbicia, to wywołanie metody dostępu **Get** powiedzie się, mimo że kod użytkownika nie ma prawa dostępu do tej właściwości. Wynika to z faktu, że **LinkDemand** sprawdza tylko bezpośredni obiekt wywołujący, który jest w pełni zaufanym kodem. W zasadzie w pełni zaufany kod dokonuje uprzywilejowanego wywołania w imieniu kodu użytkownika bez upewnienia się, że kod użytkownika ma prawo do tego wywołania.  
+ Jeśli w pełni zaufany kod wywołuje właściwość, zdarzenie lub metodę chronioną przez [LinkDemand](link-demands.md), wywołanie powiedzie się, jeśli zostanie spełnione sprawdzenie uprawnień **LinkDemand** dla elementu wywołującego. Ponadto jeśli w pełni zaufany kod ujawnia klasę, która przyjmuje nazwę właściwości i wywołuje metodę dostępu **Get** przy użyciu odbicia, to wywołanie metody dostępu **Get** powiedzie się, mimo że kod użytkownika nie ma prawa dostępu do tej właściwości. Wynika to z faktu, że **LinkDemand** sprawdza tylko bezpośredni obiekt wywołujący, który jest w pełni zaufanym kodem. W zasadzie w pełni zaufany kod dokonuje uprzywilejowanego wywołania w imieniu kodu użytkownika bez upewnienia się, że kod użytkownika ma prawo do tego wywołania.  
   
  Aby zapobiec występowaniu takich luk w zabezpieczeniach, środowisko uruchomieniowe języka wspólnego rozszerza kontrolę na pełne zapotrzebowanie na stosy dla każdego pośredniego wywołania metody, konstruktora, właściwości lub zdarzenia chronionego przez **LinkDemand**. Ta ochrona wiąże się z pewnymi kosztami wydajności i zmienia semantykę kontroli zabezpieczeń; pełne żądanie przechodzenia stosu może zakończyć się niepowodzeniem w przypadku szybszego sprawdzenia na jednym poziomie.  
   
@@ -73,10 +73,10 @@ ms.locfileid: "69910749"
   
 - <xref:System.Security.Permissions.SecurityAction.Demand>Określa przeszukiwanie stosu zabezpieczeń dostępu kodu. Wszystkie obiekty wywołujące na stosie muszą mieć określone uprawnienie lub tożsamość do przekazania. **Żądanie** występuje dla każdego wywołania, ponieważ stos może zawierać różne obiekty wywołujące. Jeśli wywołasz metodę wielokrotnie, to sprawdzanie zabezpieczeń odbywa się za każdym razem. **Zapotrzebowanie** jest dobrą ochronę przed atakami luringymi; zostanie wykryty nieautoryzowany kod, który próbuje się pobrać.  
   
-- [LinkDemand](../../../docs/framework/misc/link-demands.md) odbywa się w czasie kompilacji just-in-Time (JIT) i sprawdza tylko bezpośredni obiekt wywołujący. To sprawdzenie zabezpieczeń nie sprawdza wywołującego obiektu wywołującego. Po pomyślnym sprawdzeniu nie ma żadnych dodatkowych obciążeń związanych z zabezpieczeniami niezależnie od tego, ile razy proces wywołujący może wywoływać. Nie ma jednak żadnej ochrony przed atakami luring. Dzięki **LinkDemand**każdy kod, który przekazuje test i może odwoływać się do kodu, może potencjalnie przerwać zabezpieczenia, umożliwiając złośliwemu kodowi wywoływanie przy użyciu autoryzowanego kodu. W związku z tym nie należy używać **LinkDemand** , chyba że wszystkie możliwe słabe luki nie będą widoczne.  
+- [LinkDemand](link-demands.md) odbywa się w czasie kompilacji just-in-Time (JIT) i sprawdza tylko bezpośredni obiekt wywołujący. To sprawdzenie zabezpieczeń nie sprawdza wywołującego obiektu wywołującego. Po pomyślnym sprawdzeniu nie ma żadnych dodatkowych obciążeń związanych z zabezpieczeniami niezależnie od tego, ile razy proces wywołujący może wywoływać. Nie ma jednak żadnej ochrony przed atakami luring. Dzięki **LinkDemand**każdy kod, który przekazuje test i może odwoływać się do kodu, może potencjalnie przerwać zabezpieczenia, umożliwiając złośliwemu kodowi wywoływanie przy użyciu autoryzowanego kodu. W związku z tym nie należy używać **LinkDemand** , chyba że wszystkie możliwe słabe luki nie będą widoczne.  
   
     > [!NOTE]
-    > W .NET Framework 4 wymagania dotyczące linków zostały zastąpione przez <xref:System.Security.SecurityCriticalAttribute> atrybut w <xref:System.Security.SecurityRuleSet.Level2> zestawach. <xref:System.Security.SecurityCriticalAttribute> Jest odpowiednikiem żądania połączenia dla pełnego zaufania, ale również ma wpływ na reguły dziedziczenia. Aby uzyskać więcej informacji na temat tej zmiany, zobacz [kod przezroczysty zabezpieczeń, poziom 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
+    > W .NET Framework 4 wymagania dotyczące linków zostały zastąpione przez <xref:System.Security.SecurityCriticalAttribute> atrybut w <xref:System.Security.SecurityRuleSet.Level2> zestawach. <xref:System.Security.SecurityCriticalAttribute> Jest odpowiednikiem żądania połączenia dla pełnego zaufania, ale również ma wpływ na reguły dziedziczenia. Aby uzyskać więcej informacji na temat tej zmiany, zobacz [kod przezroczysty zabezpieczeń, poziom 2](security-transparent-code-level-2.md).  
   
  Dodatkowe środki ostrożności wymagane, gdy użycie **LinkDemand** muszą być zaprogramowane osobno; System zabezpieczeń może pomóc wymuszać. Dowolny błąd powoduje otwarcie luki w zabezpieczeniach. Cały autoryzowany kod, który korzysta z kodu, musi być odpowiedzialny za wdrożenie dodatkowych zabezpieczeń, wykonując następujące czynności:  
   

@@ -2,55 +2,55 @@
 title: Implementowanie Menedżera zasobów
 ms.date: 03/30/2017
 ms.assetid: d5c153f6-4419-49e3-a5f1-a50ae4c81bf3
-ms.openlocfilehash: f3e29dae095fbe56181cf7b67787c1044efa07ae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f64a729f49d546dd16c25a2be1f9bd64a2ca8f63
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793708"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205948"
 ---
 # <a name="implementing-a-resource-manager"></a>Implementowanie Menedżera zasobów
-Poszczególne zasoby używane w transakcji jest zarządzane przez Menedżera zasobów, których działania są koordynowany przez Menedżera transakcji. Menedżer zasobów działa we współpracy z menedżerem transakcji, aby zapewnić aplikacji niepodzielność i izolację gwarancji. Microsoft SQL Server, kolejki komunikatów trwałe, tabele zbędnych danych w pamięci należą do nich menedżerów zasobów.  
+Poszczególne zasoby używane w transakcji jest zarządzane przez Menedżera zasobów, których działania są koordynowany przez Menedżera transakcji. Menedżerowie zasobów pracują we współpracy z menedżerem transakcji w celu zapewnienia aplikacji z gwarancją niepodzielności i izolacji. Microsoft SQL Server, trwałe kolejki komunikatów, tabele skrótów w pamięci to wszystkie przykłady menedżerów zasobów.  
   
- Menedżer zasobów zarządza trwałe lub nietrwała danych. Trwałość (lub odwrotnie niestabilności ich) zasobu menedżera odwołuje się do tego, czy Menedżera zasobów obsługuje odzyskiwanie po awarii. Jeśli Menedżera zasobów obsługuje odzyskiwanie po awarii, utrzymuje danych do trwałego magazynu podczas fazy 1. (przygotowanie) tak, aby w przypadku awarii Menedżera zasobów, można ponownie zarejestrować transakcji po odzyskiwania i wykonać odpowiednie akcje w oparciu o powiadomienia otrzymane z menedżerem transakcji. Ogólnie rzecz biorąc menedżerów zasobów lotnych zarządzania lotnych zasoby, takie jak struktura danych w pamięci (na przykład w pamięci transacted skrótów) oraz menedżerów zasobów trwałego zarządzania zasobów, które mają więcej trwały zapasowy magazyn (na przykład Baza danych jest którego zapasowy magazyn dysku).  
+ Menedżer zasobów zarządza trwałe lub nietrwała danych. Trwałość (lub odwrotnie niestabilności ich) zasobu menedżera odwołuje się do tego, czy Menedżera zasobów obsługuje odzyskiwanie po awarii. Jeśli Menedżera zasobów obsługuje odzyskiwanie po awarii, utrzymuje danych do trwałego magazynu podczas fazy 1. (przygotowanie) tak, aby w przypadku awarii Menedżera zasobów, można ponownie zarejestrować transakcji po odzyskiwania i wykonać odpowiednie akcje w oparciu o powiadomienia otrzymane z menedżerem transakcji. Ogólnie rzecz biorąc, Menedżerowie zasobów lotnych zarządzają zasobami nietrwałymi, takimi jak struktura danych w pamięci (na przykład w pamięci podręcznej), a trwałe Menedżerowie zasobów zarządzają zasobami, które mają bardziej trwały magazyn zapasowy (na przykład Baza danych, której magazyn zapasowy jest dyskiem).  
   
- Aby zasób, aby uczestniczyć w transakcji należy zarejestrować w transakcji. <xref:System.Transactions.Transaction> Klasa definiuje zestaw metod, których nazwy zaczynają się od **Enlist** , zapewnienia tej funkcji. Poszczególne **Enlist** metody odpowiada różnego rodzaju rejestracji, które mogą mieć Menedżera zasobów. W szczególności użyj <xref:System.Transactions.Transaction.EnlistVolatile%2A> metody dla lotnych zasoby i <xref:System.Transactions.Transaction.EnlistDurable%2A> metody dla trwałego zasobów. Dla prostotę, po podjęcie decyzji o użyciu <xref:System.Transactions.Transaction.EnlistDurable%2A> lub <xref:System.Transactions.Transaction.EnlistVolatile%2A> metody, w zależności od pomocy technicznej trwałości Twoje zasobu, należy zarejestrować materiał brać udziału w dwóch faza zatwierdzania (2PC) przez zaimplementowanie <xref:System.Transactions.IEnlistmentNotification> interfejs na potrzeby usługi Menedżer zasobów. Aby uzyskać więcej informacji dotyczących 2PC, zobacz [Zatwierdzanie transakcji jednofazowe i wielofazowe](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md).  
+ Aby zasób, aby uczestniczyć w transakcji należy zarejestrować w transakcji. Klasa definiuje zestaw metod, których nazwy zaczynają się od rejestracji, która zapewnia tę funkcję. <xref:System.Transactions.Transaction> Różne metody **rejestracji** odnoszą się do różnych typów rejestracji, które może mieć Menedżer zasobów. W szczególności użyj <xref:System.Transactions.Transaction.EnlistVolatile%2A> metody dla lotnych zasoby i <xref:System.Transactions.Transaction.EnlistDurable%2A> metody dla trwałego zasobów. Dla uproszczenia po podjęciu decyzji o tym, <xref:System.Transactions.Transaction.EnlistDurable%2A> czy <xref:System.Transactions.Transaction.EnlistVolatile%2A> użyć metody lub w oparciu o wsparcie trwałości zasobu, należy zarejestrować zasób, aby wziąć udział w dwóch fazach zatwierdzania ( <xref:System.Transactions.IEnlistmentNotification> 2PC) przez implementację interfejsu dla Resource Manager. Aby uzyskać więcej informacji na temat 2PC, zobacz temat [zatwierdzanie transakcji w ramach jednej fazy i](committing-a-transaction-in-single-phase-and-multi-phase.md)wielofazowej.  
   
- Przez wywołanie tej metody, Menedżer zasobów zapewnia ona pobiera wywołania zwrotne z menedżerem transakcji po zatwierdzeniu lub przerwaniu transakcji. Istnieje jedno wystąpienie <xref:System.Transactions.IEnlistmentNotification> na rejestracji. Zazwyczaj ma jeden rejestracji na transakcję, ale Menedżera zasobów można zarejestrować wielokrotnie w ramach jednej transakcji.  
+ Przez wywołanie tej metody, Menedżer zasobów zapewnia ona pobiera wywołania zwrotne z menedżerem transakcji po zatwierdzeniu lub przerwaniu transakcji. Istnieje jedno wystąpienie <xref:System.Transactions.IEnlistmentNotification> na rejestracji. Zwykle istnieje jedna Rejestracja na transakcję, ale Menedżer zasobów może wybrać wiele razy w tej samej transakcji.  
   
  Po rejestracji Menedżera zasobów odpowiada na żądania transakcji. Menedżer zasobów trwałe przechowuje wystarczających informacji do pozwalać na jego cofnąć lub ponowić transakcji pracy zasobów, że zarządza. Istnieje wiele sposobów, w tym; przechowywanie wersji danych lub utrzymywanie dziennika zmian są dwie metody wspólne.  
   
- Gdy aplikacja zatwierdzeń transakcji, Menedżer transakcji inicjuje dwufazowy protokół zatwierdzania. Menedżer transakcji najpierw pyta, czy każdy Menedżera zasobów Jeśli jest gotowa do zatwierdzania transakcji. Menedżer zasobów musi przygotowania do zatwierdzenia — jej przygotowuje się do zatwierdzenia lub przerwania transakcji.  
+ Gdy aplikacja zatwierdzi transakcję, Menedżer transakcji inicjuje dwufazowego protokołu zatwierdzania. Menedżer transakcji najpierw pyta, czy każdy Menedżera zasobów Jeśli jest gotowa do zatwierdzania transakcji. Menedżer zasobów musi przygotowania do zatwierdzenia — jej przygotowuje się do zatwierdzenia lub przerwania transakcji.  
   
- W fazie przygotowanie Menedżera zasobów trwałe rejestruje stara i Nowa danych w magazynie stabilna, dzięki czemu Menedżera zasobów można go odzyskać nawet w przypadku awarii systemu. Jeśli Menedżera zasobów można przygotować, informuje menedżera transakcji jego głos na zatwierdzenia lub przerwania transakcji. Jeśli którykolwiek z menedżerów zasobów zgłasza błąd do przygotowania, Menedżer transakcji wysyła polecenie wycofywania do każdego Menedżera zasobów i wskazuje niepowodzeniem zatwierdzania do aplikacji.  
+ W fazie przygotowanie Menedżera zasobów trwałe rejestruje stara i Nowa danych w magazynie stabilna, dzięki czemu Menedżera zasobów można go odzyskać nawet w przypadku awarii systemu. Jeśli Menedżera zasobów można przygotować, informuje menedżera transakcji jego głos na zatwierdzenia lub przerwania transakcji. Jeśli którykolwiek z menedżerów zasobów zgłosi błąd przygotowania, Menedżer transakcji wysyła polecenie wycofania do każdego Menedżera zasobów i wskazuje niepowodzenie zatwierdzenia aplikacji.  
   
- Po przygotowaniu Menedżera zasobów musi czekać, aż otrzyma zatwierdzania lub przerwania wywołania zwrotnego z menedżerem transakcji w fazie 2. Zazwyczaj całego protokołu przygotowanie i zatwierdzania kończy w część 1 sekunda. Jeśli występują awarie systemu lub łączności, zatwierdzania lub przerwania powiadomień nie może pojawić się dla minuty lub godziny. W tym okresie Menedżera zasobów jest w stanie wątPLiwości wyniku transakcji. Nie wiedzieć, czy zatwierdzeniu lub przerwaniu transakcji. Menedżer zasobów jest w stanie wątPLiwości transakcji, zapewnia dane zmodyfikowany przez utrzymywanie transakcji zablokowane, a tym samym izolowanie te zmiany innych transakcji.  
+ Po przygotowaniu Menedżera zasobów musi czekać, aż otrzyma zatwierdzania lub przerwania wywołania zwrotnego z menedżerem transakcji w fazie 2. Zwykle cały protokół przygotowywania i zatwierdzania kończy się w części sekundy. Jeśli występują awarie systemu lub łączności, zatwierdzania lub przerwania powiadomień nie może pojawić się dla minuty lub godziny. W tym okresie Menedżera zasobów jest w stanie wątPLiwości wyniku transakcji. Nie wiedzieć, czy zatwierdzeniu lub przerwaniu transakcji. Menedżer zasobów jest w stanie wątPLiwości transakcji, zapewnia dane zmodyfikowany przez utrzymywanie transakcji zablokowane, a tym samym izolowanie te zmiany innych transakcji.  
   
  Gdy Menedżer zasobów nie powiodło się, wszystkich jej znajdujących się w wykazie transakcji zostało przerwane z wyjątkiem tych, które zostały przygotowane lub zadeklarowane przed awarii. Po ponownym uruchomieniu Menedżera zasobów trwałe rekonstruuje zatwierdzone stanu zasobów, którymi zarządza pobierając prepare informacje zapisane w fazie przygotowania i zatwierdzane lub przerywa daną transakcję.  
   
  Podsumowanie Protokół dwufazowego i menedżerów zasobów połączyć wykonywanie transakcji częściowych i trwałe.  
   
- <xref:System.Transactions.Transaction> Klasa udostępnia także <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> metodę, aby zarejestrować awansowanie jednego etapu rejestracji (PSPE). Dzięki temu trwałe zasobu manager (MB), hosta i "własnością" transakcji, która może zostać później przekazany do były zarządzane przez MSDTC, jeśli to konieczne. Aby uzyskać więcej informacji na temat tego, zobacz [Optymalizacja za pomocą zatwierdzania jednofazowego i awansowanie powiadomienia jednofazowego](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
+ <xref:System.Transactions.Transaction> Klasa udostępnia także <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> metodę, aby zarejestrować awansowanie jednego etapu rejestracji (PSPE). Dzięki temu trwałe zasobu manager (MB), hosta i "własnością" transakcji, która może zostać później przekazany do były zarządzane przez MSDTC, jeśli to konieczne. Aby uzyskać więcej informacji na ten temat, zobacz [Optymalizacja przy użyciu jednej fazy zatwierdzania i powiadomienia o pojedynczej fazie](optimization-spc-and-promotable-spn.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  W następujących tematach opisano kroki zwykle następuje Menedżera zasobów.  
   
- [Rejestrowanie zasobów jako uczestników transakcji](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
+ [Rejestrowanie zasobów jako uczestników transakcji](enlisting-resources-as-participants-in-a-transaction.md)  
   
  Opisuje, jak trwałe zasobu można zarejestrować w transakcji.  
   
- [Zatwierdzanie transakcji jednofazowe i wielofazowe](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)  
+ [Zatwierdzanie transakcji jednofazowe i wielofazowe](committing-a-transaction-in-single-phase-and-multi-phase.md)  
   
  Opisuje, jak Zatwierdź powiadomień i przygotowania zatwierdzanie z użytkownikiem odpowiada Menedżera zasobów.  
   
- [Odzyskiwanie systemu](../../../../docs/framework/data/transactions/performing-recovery.md)  
+ [Odzyskiwanie systemu](performing-recovery.md)  
   
  Opisuje sposób trwałego menedżerem przywraca po awarii.  
   
- [Poziomy zaufania zabezpieczeń podczas uzyskiwania dostępu do zasobów](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md)  
+ [Poziomy zaufania zabezpieczeń podczas uzyskiwania dostępu do zasobów](security-trust-levels-in-accessing-resources.md)  
   
  Opisuje sposób trzy poziomy zaufania System.Transactions ograniczyć dostęp dla typów zasobów, które <xref:System.Transactions> przedstawia.  
   
- [Optymalizacja za pomocą zatwierdzania jednofazowego i umożliwiającego awansowanie powiadomienia jednofazowego](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
+ [Optymalizacja za pomocą zatwierdzania jednofazowego i umożliwiającego awansowanie powiadomienia jednofazowego](optimization-spc-and-promotable-spn.md)  
   
- Opisuje praktyki optymalizacji dostępne do implementacji klasy menedżerów zasobów.
+ Opisuje praktyki optymalizacji dostępne dla implementacji menedżerów zasobów.

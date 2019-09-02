@@ -1,14 +1,14 @@
 ---
-title: polecenie vstest DotNet
-description: Polecenia dotnet vstest kompiluje projekt i wszystkie jego zależności.
+title: dotnet VSTest — polecenie
+description: Polecenie dotnet VSTest kompiluje projekt i wszystkie jego zależności.
 author: mairaw
 ms.date: 05/30/2018
-ms.openlocfilehash: 45fda3b34d2649bc6f20cf3f35c65277a9a53cec
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 4630982ba21ab37b051895faf3dc0fcd8784cb18
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300033"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202778"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -16,13 +16,13 @@ ms.locfileid: "66300033"
 
 ## <a name="name"></a>Nazwa
 
-`dotnet-vstest` -Uruchamia testy z określonych plików.
+`dotnet-vstest`-Uruchamia testy z określonych plików.
 
 ## <a name="synopsis"></a>Streszczenie
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-```
+```console
 dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath]
     [--Platform|/Platform] [--Framework|/Framework] [--Parallel|/Parallel] [--TestCaseFilter|/TestCaseFilter] [--logger|/logger]
     [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [--Blame|/Blame] [--InIsolation|/InIsolation]
@@ -31,7 +31,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-```
+```console
 dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath] 
     [--Platform|/Platform] [--Framework|/Framework] [--Parallel|/Parallel] [--TestCaseFilter|/TestCaseFilter] [--logger|/logger]
     [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [[--] <args>...]] [-?|--Help|/?|/Help]
@@ -39,7 +39,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```
+```console
 dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath]
     [--Platform|/Platform] [--Framework|/Framework] [--Parallel|/Parallel] [--TestCaseFilter|/TestCaseFilter] [--logger|/logger] 
     [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [[--] <args>...]] [-?|--Help|/?|/Help]
@@ -49,7 +49,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 ## <a name="description"></a>Opis
 
-`dotnet-vstest` Polecenia `VSTest.Console` aplikacji wiersza polecenia, aby uruchomić automatyczne testy jednostkowe.
+Polecenie uruchamia aplikację wiersza polecenia w celu uruchomienia zautomatyzowanych testów jednostkowych. `VSTest.Console` `dotnet-vstest`
 
 ## <a name="arguments"></a>Argumenty
 
@@ -63,43 +63,43 @@ Uruchom testy z określonych zestawów. Oddziel wiele nazw zestawów testowych s
 
 `--Settings|/Settings:<Settings File>`
 
-Ustawienia używane podczas uruchamiania testów.
+Ustawienia do użycia podczas przeprowadzania testów.
 
 `--Tests|/Tests:<Test Names>`
 
-Uruchom testy o nazwach odpowiadających podanej wartości. Wiele wartości należy oddzielić przecinkami.
+Uruchom testy z nazwami, które pasują do podanych wartości. Rozdziel wiele wartości przecinkami.
 
 `--TestAdapterPath|/TestAdapterPath`
 
-Używa niestandardowych adapterów testowych z określonej ścieżki (jeśli istnieją) w przebiegu testu.
+Użyj niestandardowych adapterów testowych z danej ścieżki (jeśli istnieje) w przebiegu testu.
 
 `--Platform|/Platform:<Platform type>`
 
-Docelowa platforma architektury używanej do wykonania testu. Prawidłowe wartości to `x86`, `x64`, i `ARM`.
+Architektura platformy docelowej używana do wykonywania testów. Prawidłowe wartości to `x86`, `x64`, i `ARM`.
 
 `--Framework|/Framework:<Framework Version>`
 
-Wersja docelowa.NET Framework używanego do wykonania testu. Prawidłowe wartości należą do nich `.NETFramework,Version=v4.6` lub `.NETCoreApp,Version=v1.0`. Inne obsługiwane wartości to `Framework40`, `Framework45`, `FrameworkCore10`, i `FrameworkUap10`.
+Docelowa wersja .NET Framework używana do wykonania testu. Przykłady prawidłowych wartości to `.NETFramework,Version=v4.6` lub `.NETCoreApp,Version=v1.0`. Inne obsługiwane wartości to `Framework40` `Framework45` `FrameworkCore10`,,, i. `FrameworkUap10`
 
 `--Parallel|/Parallel`
 
-Wykonuj testy równolegle. Domyślnie wszystkie dostępne rdzenie maszyny są dostępne do użycia. Określ jawną liczby rdzeni, ustawiając właściwość MaxCpuCount w węźle RunConfiguration w pliku runsettings.
+Wykonaj testy równolegle. Domyślnie wszystkie dostępne rdzenie na komputerze są dostępne do użycia. Określ jawną liczbę rdzeni przez ustawienie właściwości MaxCpuCount w węźle RunConfiguration w pliku runsettings.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
-Uruchom testy, które odpowiadają danemu wyrażeniu. `<Expression>` Format `<property>Operator<value>[|&<Expression>]`, w której Operator jest jednym z `=`, `!=`, lub `~`. Operator `~` ma "zawiera" semantykę i ma zastosowanie do właściwości ciągów, takich jak `DisplayName`. Nawias `()` służą do podrzędną wyrażeniach grupy.
+Uruchom testy zgodne z podanym wyrażeniem. `<Expression>`ma format `<property>Operator<value>[|&<Expression>]`, gdzie operator jest jednym z `=`, `!=`lub `~`. Operator `~` ma semantykę "Contains" i ma zastosowanie do właściwości ciągów, `DisplayName`takich jak. Nawiasy `()` są używane do grupowania wyrażeń podrzędnych.
 
 `-?|--Help|/?|/Help`
 
-Drukuje krótki pomoc dotyczącą polecenia.
+Drukuje krótką pomoc dla polecenia.
 
 `--logger|/logger:<Logger Uri/FriendlyName>`
 
-Określ Rejestrator dla wyników badań.
+Określ Rejestrator dla wyników testu.
 
-* Aby opublikować wyniki testu z Team Foundation Server, użyj `TfsPublisher` rejestratora dostawcy:
+* Aby opublikować wyniki testów w Team Foundation Server, użyj `TfsPublisher` dostawcy rejestratora:
 
-  ```
+  ```console
   /logger:TfsPublisher;
       Collection=<team project collection url>;
       BuildName=<build name>;
@@ -109,85 +109,85 @@ Określ Rejestrator dla wyników badań.
       [;RunTitle=<title>]
   ```
 
-* Aby rejestrować wyniki do programu Visual Studio Test wyniki pliku (TRX), użyj `trx` dostawcy rejestratora. Ten przełącznik tworzy plik w wynikach testu katalogu przy użyciu danej nazwy pliku dziennika. Jeśli `LogFileName` nie jest udostępniany unikatowej nazwy pliku jest utworzona w celu przechowywania wyników testów.
+* Aby zarejestrować wyniki do pliku wyniki testów programu Visual Studio (TRX), użyj `trx` dostawcy rejestratora. Ten przełącznik tworzy plik w katalogu wyników testu o podaną nazwę pliku dziennika. Jeśli `LogFileName` nie zostanie podany, unikatowa nazwa pliku zostanie utworzona w celu przechowywania wyników testu.
 
-  ```
+  ```console
   /logger:trx [;LogFileName=<Defaults to unique file name>]
   ```
 
 `-lt|--ListTests|/lt|/ListTests:<File Name>`
 
-Wyświetla listę wszystkich odnalezionych testów z podanego kontenera testowego.
+Wyświetla wszystkie odnalezione testy z danego kontenera testowego.
 
 `--ParentProcessId|/ParentProcessId:<ParentProcessId>`
 
-Identyfikator procesu nadrzędnego odpowiedzialna za uruchamianie bieżącego procesu.
+Identyfikator procesu nadrzędnego odpowiedzialny za uruchamianie bieżącego procesu.
 
 `--Port|/Port:<Port>`
 
-Określa port do połączenia z gniazdem i odbierania komunikatów zdarzeń.
+Określa port dla połączenia gniazda i otrzymywania komunikatów o zdarzeniach.
 
 `--Diag|/Diag:<Path to log file>`
 
-Włącza pełne dzienniki platformy testów. Dzienniki są zapisywane do podanego pliku.
+Włącza pełne dzienniki dla platformy testowej. Dzienniki są zapisywane do podanego pliku.
 
 `--Blame|/Blame`
 
-Uruchamia testy w trybie polecenia blame. Ta opcja jest przydatna polega na wyizolowaniu problematyczne testy, powodując hosta testów ulega awarii. Tworzy plik wyjściowy w bieżącym katalogu jako *Sequence.xml* , przechwytuje kolejność wykonywania testów przed awarią.
+Uruchamia testy w trybie polecenia Blame. Ta opcja jest pomocna w odizolowaniu problematycznych testów powodujących awarię hosta testowego. Tworzy plik wyjściowy w bieżącym katalogu jako *Sequence. XML* , który przechwytuje kolejność testów przed awarią.
 
 `--InIsolation|/InIsolation`
 
-Uruchamia testy w procesie izolowanym. To sprawia, że *vstest.console.exe* procesu mniej prawdopodobne zatrzymane w przypadku błędu w testach, ale testy mogą działać wolniej.
+Uruchamia testy w procesie izolowanym. Powoduje to, że proces *VSTest. Console. exe* jest mniej prawdopodobnie zatrzymany w przypadku błędu w testach, ale testy mogą działać wolniej.
 
 `@<file>`
 
-Odczytuje plik odpowiedzi, aby wyświetlić więcej opcji.
+Odczytuje plik odpowiedzi w celu uzyskania dodatkowych opcji.
 
 `args`
 
-Określa dodatkowe argumenty do przekazania do adaptera. Argumenty są określone jako pary nazwa wartość w formie `<n>=<v>`, gdzie `<n>` jest nazwa argumentu i `<v>` jest wartość argumentu. Użyj spacji do oddzielania wielu argumentów.
+Określa dodatkowe argumenty do przekazania do adaptera. Argumenty są określane jako pary nazwa-wartość formularza `<n>=<v>`, gdzie `<n>` jest nazwą argumentu i `<v>` jest wartością argumentu. Użyj spacji, aby rozdzielić wiele argumentów.
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `--Settings|/Settings:<Settings File>`
 
-Ustawienia używane podczas uruchamiania testów.
+Ustawienia do użycia podczas przeprowadzania testów.
 
 `--Tests|/Tests:<Test Names>`
 
-Uruchom testy o nazwach odpowiadających podanej wartości. Wiele wartości należy oddzielić przecinkami.
+Uruchom testy z nazwami, które pasują do podanych wartości. Rozdziel wiele wartości przecinkami.
 
 `--TestAdapterPath|/TestAdapterPath`
 
-Używa niestandardowych adapterów testowych z określonej ścieżki (jeśli istnieją) w przebiegu testu.
+Użyj niestandardowych adapterów testowych z danej ścieżki (jeśli istnieje) w przebiegu testu.
 
 `--Platform|/Platform:<Platform type>`
 
-Docelowa platforma architektury używanej do wykonania testu. Prawidłowe wartości to `x86`, `x64`, i `ARM`.
+Architektura platformy docelowej używana do wykonywania testów. Prawidłowe wartości to `x86`, `x64`, i `ARM`.
 
 `--Framework|/Framework:<Framework Version>`
 
-Wersja docelowa.NET Framework używanego do wykonania testu. Prawidłowe wartości należą do nich `.NETFramework,Version=v4.6` lub `.NETCoreApp,Version=v1.0`. Inne obsługiwane wartości to `Framework40`, `Framework45`, i `FrameworkCore10`.
+Docelowa wersja .NET Framework używana do wykonania testu. Przykłady prawidłowych wartości to `.NETFramework,Version=v4.6` lub `.NETCoreApp,Version=v1.0`. Inne obsługiwane wartości to `Framework40`, `Framework45`, i `FrameworkCore10`.
 
 `--Parallel|/Parallel`
 
-Wykonuj testy równolegle. Domyślnie wszystkie dostępne rdzenie maszyny są dostępne do użycia. Określ jawną liczby rdzeni, ustawiając właściwość MaxCpuCount w węźle RunConfiguration w pliku runsettings.
+Wykonaj testy równolegle. Domyślnie wszystkie dostępne rdzenie na komputerze są dostępne do użycia. Określ jawną liczbę rdzeni przez ustawienie właściwości MaxCpuCount w węźle RunConfiguration w pliku runsettings.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
-Uruchom testy, które odpowiadają danemu wyrażeniu. `<Expression>` Format `<property>Operator<value>[|&<Expression>]`, w której Operator jest jednym z `=`, `!=`, lub `~`. Operator `~` ma "zawiera" semantykę i ma zastosowanie do właściwości ciągów, takich jak `DisplayName`. Nawias `()` służą do podrzędną wyrażeniach grupy.
+Uruchom testy zgodne z podanym wyrażeniem. `<Expression>`ma format `<property>Operator<value>[|&<Expression>]`, gdzie operator jest jednym z `=`, `!=`lub `~`. Operator `~` ma semantykę "Contains" i ma zastosowanie do właściwości ciągów, `DisplayName`takich jak. Nawiasy `()` są używane do grupowania wyrażeń podrzędnych.
 
 `-?|--Help|/?|/Help`
 
-Drukuje krótki pomoc dotyczącą polecenia.
+Drukuje krótką pomoc dla polecenia.
 
 `--logger|/logger:<Logger Uri/FriendlyName>`
 
-Określ Rejestrator dla wyników badań.
+Określ Rejestrator dla wyników testu.
 
-* Aby opublikować wyniki testu z Team Foundation Server, użyj `TfsPublisher` rejestratora dostawcy:
+* Aby opublikować wyniki testów w Team Foundation Server, użyj `TfsPublisher` dostawcy rejestratora:
 
-  ```
+  ```console
   /logger:TfsPublisher;
       Collection=<team project collection url>;
       BuildName=<build name>;
@@ -197,73 +197,73 @@ Określ Rejestrator dla wyników badań.
       [;RunTitle=<title>]
   ```
 
-* Aby rejestrować wyniki do programu Visual Studio Test wyniki pliku (TRX), użyj `trx` dostawcy rejestratora. Ten przełącznik tworzy plik w wynikach testu katalogu przy użyciu danej nazwy pliku dziennika. Jeśli `LogFileName` nie jest udostępniany unikatowej nazwy pliku jest utworzona w celu przechowywania wyników testów.
+* Aby zarejestrować wyniki do pliku wyniki testów programu Visual Studio (TRX), użyj `trx` dostawcy rejestratora. Ten przełącznik tworzy plik w katalogu wyników testu o podaną nazwę pliku dziennika. Jeśli `LogFileName` nie zostanie podany, unikatowa nazwa pliku zostanie utworzona w celu przechowywania wyników testu.
 
-  ```
+  ```console
   /logger:trx [;LogFileName=<Defaults to unique file name>]
   ```
 
 `-lt|--ListTests|/lt|/ListTests:<File Name>`
 
-Wyświetla listę wszystkich odnalezionych testów z podanego kontenera testowego.
+Wyświetla wszystkie odnalezione testy z danego kontenera testowego.
 
 `--ParentProcessId|/ParentProcessId:<ParentProcessId>`
 
-Identyfikator procesu nadrzędnego odpowiedzialna za uruchamianie bieżącego procesu.
+Identyfikator procesu nadrzędnego odpowiedzialny za uruchamianie bieżącego procesu.
 
 `--Port|/Port:<Port>`
 
-Określa port do połączenia z gniazdem i odbierania komunikatów zdarzeń.
+Określa port dla połączenia gniazda i otrzymywania komunikatów o zdarzeniach.
 
 `--Diag|/Diag:<Path to log file>`
 
-Włącza pełne dzienniki platformy testów. Dzienniki są zapisywane do podanego pliku.
+Włącza pełne dzienniki dla platformy testowej. Dzienniki są zapisywane do podanego pliku.
 
 `args`
 
-Określa dodatkowe argumenty do przekazania do adaptera. Argumenty są określone jako pary nazwa wartość w formie `<n>=<v>`, gdzie `<n>` jest nazwa argumentu i `<v>` jest wartość argumentu. Użyj spacji do oddzielania wielu argumentów.
+Określa dodatkowe argumenty do przekazania do adaptera. Argumenty są określane jako pary nazwa-wartość formularza `<n>=<v>`, gdzie `<n>` jest nazwą argumentu i `<v>` jest wartością argumentu. Użyj spacji, aby rozdzielić wiele argumentów.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `--Settings|/Settings:<Settings File>`
 
-Ustawienia używane podczas uruchamiania testów.
+Ustawienia do użycia podczas przeprowadzania testów.
 
 `--Tests|/Tests:<Test Names>`
 
-Uruchom testy o nazwach odpowiadających podanej wartości. Wiele wartości należy oddzielić przecinkami.
+Uruchom testy z nazwami, które pasują do podanych wartości. Rozdziel wiele wartości przecinkami.
 
 `--TestAdapterPath|/TestAdapterPath`
 
-Używa niestandardowych adapterów testowych z określonej ścieżki (jeśli istnieją) w przebiegu testu.
+Użyj niestandardowych adapterów testowych z danej ścieżki (jeśli istnieje) w przebiegu testu.
 
 `--Platform|/Platform:<Platform type>`
 
-Docelowa platforma architektury używanej do wykonania testu. Prawidłowe wartości to `x86`, `x64`, i `ARM`.
+Architektura platformy docelowej używana do wykonywania testów. Prawidłowe wartości to `x86`, `x64`, i `ARM`.
 
 `--Framework|/Framework:<Framework Version>`
 
-Wersja docelowa.NET Framework używanego do wykonania testu. Prawidłowe wartości należą do nich `.NETFramework,Version=v4.6` lub `.NETCoreApp,Version=v1.0`. Inne obsługiwane wartości to `Framework40`, `Framework45`, i `FrameworkCore10`.
+Docelowa wersja .NET Framework używana do wykonania testu. Przykłady prawidłowych wartości to `.NETFramework,Version=v4.6` lub `.NETCoreApp,Version=v1.0`. Inne obsługiwane wartości to `Framework40`, `Framework45`, i `FrameworkCore10`.
 
 `--Parallel|/Parallel`
 
-Wykonuj testy równolegle. Domyślnie wszystkie dostępne rdzenie maszyny są dostępne do użycia. Określ jawną liczby rdzeni, ustawiając właściwość MaxCpuCount w węźle RunConfiguration w pliku runsettings.
+Wykonaj testy równolegle. Domyślnie wszystkie dostępne rdzenie na komputerze są dostępne do użycia. Określ jawną liczbę rdzeni przez ustawienie właściwości MaxCpuCount w węźle RunConfiguration w pliku runsettings.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
-Uruchom testy, które odpowiadają danemu wyrażeniu. `<Expression>` Format `<property>Operator<value>[|&<Expression>]`, w której Operator jest jednym z `=`, `!=`, lub `~`. Operator `~` ma "zawiera" semantykę i ma zastosowanie do właściwości ciągów, takich jak `DisplayName`. Nawias `()` służą do podrzędną wyrażeniach grupy.
+Uruchom testy zgodne z podanym wyrażeniem. `<Expression>`ma format `<property>Operator<value>[|&<Expression>]`, gdzie operator jest jednym z `=`, `!=`lub `~`. Operator `~` ma semantykę "Contains" i ma zastosowanie do właściwości ciągów, `DisplayName`takich jak. Nawiasy `()` są używane do grupowania wyrażeń podrzędnych.
 
 `-?|--Help|/?|/Help`
 
-Drukuje krótki pomoc dotyczącą polecenia.
+Drukuje krótką pomoc dla polecenia.
 
 `--logger|/logger:<Logger Uri/FriendlyName>`
 
-Określ Rejestrator dla wyników badań.
+Określ Rejestrator dla wyników testu.
 
-* Aby opublikować wyniki testu z Team Foundation Server, użyj `TfsPublisher` rejestratora dostawcy:
+* Aby opublikować wyniki testów w Team Foundation Server, użyj `TfsPublisher` dostawcy rejestratora:
 
-  ```
+  ```console
   /logger:TfsPublisher;
       Collection=<team project collection url>;
       BuildName=<build name>;
@@ -273,31 +273,31 @@ Określ Rejestrator dla wyników badań.
       [;RunTitle=<title>]
   ```
 
-* Aby rejestrować wyniki do programu Visual Studio Test wyniki pliku (TRX), użyj `trx` dostawcy rejestratora. Ten przełącznik tworzy plik w wynikach testu katalogu przy użyciu danej nazwy pliku dziennika. Jeśli `LogFileName` nie jest udostępniany unikatowej nazwy pliku jest utworzona w celu przechowywania wyników testów.
+* Aby zarejestrować wyniki do pliku wyniki testów programu Visual Studio (TRX), użyj `trx` dostawcy rejestratora. Ten przełącznik tworzy plik w katalogu wyników testu o podaną nazwę pliku dziennika. Jeśli `LogFileName` nie zostanie podany, unikatowa nazwa pliku zostanie utworzona w celu przechowywania wyników testu.
 
-  ```
+  ```console
   /logger:trx [;LogFileName=<Defaults to unique file name>]
   ```
 
 `-lt|--ListTests|/lt|/ListTests:<File Name>`
 
-Wyświetla listę wszystkich odnalezionych testów z podanego kontenera testowego.
+Wyświetla wszystkie odnalezione testy z danego kontenera testowego.
 
 `--ParentProcessId|/ParentProcessId:<ParentProcessId>`
 
-Identyfikator procesu nadrzędnego odpowiedzialna za uruchamianie bieżącego procesu.
+Identyfikator procesu nadrzędnego odpowiedzialny za uruchamianie bieżącego procesu.
 
 `--Port|/Port:<Port>`
 
-Określa port do połączenia z gniazdem i odbierania komunikatów zdarzeń.
+Określa port dla połączenia gniazda i otrzymywania komunikatów o zdarzeniach.
 
 `--Diag|/Diag:<Path to log file>`
 
-Włącza pełne dzienniki platformy testów. Dzienniki są zapisywane do podanego pliku.
+Włącza pełne dzienniki dla platformy testowej. Dzienniki są zapisywane do podanego pliku.
 
 `args`
 
-Określa dodatkowe argumenty do przekazania do adaptera. Argumenty są określone jako pary nazwa wartość w formie `<n>=<v>`, gdzie `<n>` jest nazwa argumentu i `<v>` jest wartość argumentu. Użyj spacji do oddzielania wielu argumentów.
+Określa dodatkowe argumenty do przekazania do adaptera. Argumenty są określane jako pary nazwa-wartość formularza `<n>=<v>`, gdzie `<n>` jest nazwą argumentu i `<v>` jest wartością argumentu. Użyj spacji, aby rozdzielić wiele argumentów.
 
 ---
 
@@ -307,7 +307,7 @@ Uruchom testy w `mytestproject.dll`:
 
 `dotnet vstest mytestproject.dll`
 
-Uruchom testy w `mytestproject.dll`, eksportowania do niestandardowego folderu o nazwie niestandardowy:
+Uruchom testy w `mytestproject.dll`, Eksportuj do folderu niestandardowego z nazwą niestandardową:
 
 `dotnet vstest mytestproject.dll --logger:"trx;LogFileName=custom_file_name.trx" --ResultsDirectory:custom/file/path`
 
@@ -315,10 +315,10 @@ Uruchom testy w `mytestproject.dll` i `myothertestproject.exe`:
 
 `dotnet vstest mytestproject.dll myothertestproject.exe`
 
-Uruchom `TestMethod1` testów:
+Uruchom `TestMethod1` testy:
 
 `dotnet vstest /Tests:TestMethod1`
 
-Uruchom `TestMethod1` i `TestMethod2` testów:
+Uruchom `TestMethod1` i`TestMethod2` testy:
 
 `dotnet vstest /Tests:TestMethod1,TestMethod2`

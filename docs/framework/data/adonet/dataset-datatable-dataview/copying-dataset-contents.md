@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: 29afeb84498f2b1d000940ddc28545602a44d408
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f60ef817773b6234b19856bfc0727eedb67e113e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626152"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205177"
 ---
 # <a name="copying-dataset-contents"></a>Kopiowanie zawartości elementu DataSet
-Można utworzyć kopię <xref:System.Data.DataSet> tak, aby pracować z danymi bez wywierania wpływu na oryginalnych danych lub pracy przy użyciu podzestawu danych z **zestawu danych**. Podczas kopiowania **DataSet**, możesz:  
+Można utworzyć kopię <xref:System.Data.DataSet> programu, aby można było korzystać z danych bez wpływania na oryginalne dane, lub pracy z podzbiorem danych z **elementu DataSet**. Podczas kopiowania **zestawu danych**można:  
   
-- Utworzyć dokładną kopię **zestawu danych**, w tym schematu, danych, informacje o stanie wiersza i wersje wiersza.  
+- Utwórz dokładną kopię **zestawu danych**, włącznie z schematem, danymi, informacjami o stanie wiersza i wersjami wierszy.  
   
-- Tworzenie **DataSet** zawiera schemat z istniejącej **zestawu danych**, ale tylko wiersze, które zostały zmodyfikowane. Zwracanie wszystkich wierszy, które zostały zmodyfikowane lub określić konkretną **właściwością DataRowState**. Aby uzyskać więcej informacji na temat stany wiersza zobacz [stany wiersza i wersje wiersza](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+- Utwórz **zestaw danych** , który zawiera schemat istniejącego **zestawu danych**, ale tylko wiersze, które zostały zmodyfikowane. Można zwrócić wszystkie wiersze, które zostały zmodyfikowane, lub określić określony **DataRowState**. Aby uzyskać więcej informacji na temat stanów wiersza, zobacz [Stany wiersza i wersje wierszy](row-states-and-row-versions.md).  
   
-- Kopia schematu lub relacyjnej struktury **DataSet** tylko, bez kopiowania żadnych wierszy. Wiersze mogą być importowane do istniejącego <xref:System.Data.DataTable> przy użyciu <xref:System.Data.DataTable.ImportRow%2A>.  
+- Skopiuj schemat lub strukturę relacyjną tylko **zestawu danych** , bez kopiowania żadnych wierszy. Wiersze można importować do istniejącej <xref:System.Data.DataTable> funkcji using. <xref:System.Data.DataTable.ImportRow%2A>  
   
- Aby utworzyć dokładną kopię **zestawu danych** zawierającą zarówno schematu, jak i dane, użyj <xref:System.Data.DataSet.Copy%2A> metody **zestawu danych**. Poniższy przykład kodu pokazuje, jak utworzyć dokładną kopię **zestawu danych**.  
+ Aby utworzyć dokładną kopię **zestawu danych** , który zawiera schemat i dane, użyj <xref:System.Data.DataSet.Copy%2A> metody **zestawu danych**. Poniższy przykład kodu pokazuje, jak utworzyć dokładną kopię **zestawu danych**.  
   
 ```vb  
 Dim copyDataSet As DataSet = customerDataSet.Copy()  
@@ -31,7 +31,7 @@ Dim copyDataSet As DataSet = customerDataSet.Copy()
 DataSet copyDataSet = customerDataSet.Copy();  
 ```  
   
- Aby utworzyć kopię **zestawu danych** zawierającego schemat i tylko dane reprezentujące **dodano**, **zmodyfikowane**, lub **usunięte** wierszy, użyj <xref:System.Data.DataSet.GetChanges%2A> metody **zestawu danych**. Można również użyć **GetChanges —** zwracać tylko wiersze ze stanem określony wiersz, przekazując **właściwością DataRowState** wartości podczas wywoływania **GetChanges —**. Poniższy przykład kodu pokazuje sposób przekazywania **właściwością DataRowState** podczas wywoływania **GetChanges —**.  
+ Aby utworzyć kopię **zestawu danych** , który zawiera schemat i tylko dane reprezentujące **dodane**, **zmodyfikowane**lub **usunięte** wiersze, użyj <xref:System.Data.DataSet.GetChanges%2A> metody **zestawu danych**. Można również użyć metody getchangs, aby zwrócić tylko wiersze z określonym stanem wiersza przez przekazanie wartości **DataRowState** podczas wywoływania metody GetChanges. Poniższy przykład kodu pokazuje, jak przekazać **DataRowState** podczas wywoływania metody GetChanges.  
   
 ```vb  
 ' Copy all changes.  
@@ -48,9 +48,9 @@ DataSet changeDataSet = customerDataSet.GetChanges();
 DataSet addedDataSet= customerDataSet.GetChanges(DataRowState.Added);  
 ```  
   
- Aby utworzyć kopię **DataSet** zawiera tylko schemat, należy użyć <xref:System.Data.DataSet.Clone%2A> metody **zestawu danych**. Można również dodać istniejące wiersze do sklonowanego **DataSet** przy użyciu **ImportRow** metody **DataTable**. **ImportRow** dodaje dane, stan wiersza i informacje o wersji wierszy do określonej tabeli. Wartości w kolumnie są dodawane, tylko jeśli odpowiada nazwa kolumny i dane typ jest zgodny.  
+ Aby utworzyć kopię **zestawu danych** , który zawiera tylko schemat, użyj <xref:System.Data.DataSet.Clone%2A> metody **zestawu danych**. Istnieje również możliwość dodania istniejących wierszy do sklonowanego **zestawu danych** przy użyciu metody **ImportRow** **tabeli DataTable**. **ImportRow** dodaje informacje o stanie wiersza i wersji wiersza do określonej tabeli. Wartości kolumn są dodawane tylko wtedy, gdy nazwa kolumny jest zgodna i typ danych jest zgodny.  
   
- Poniższy przykład kodu tworzy klon **zestawu danych** , a następnie dodaje wiersze z oryginalnego **DataSet** do **klientów** tabelę **zestawu danych**  klonowania dla klientów, którym **tekst** kolumna ma wartość "Germany".  
+ Poniższy przykład kodu tworzy klon **zestawu danych** , a następnie dodaje wiersze z oryginalnego **zestawu** danych do tabeli **Customers** w sklonowanym **zestawie danych** dla klientów, których kolumna **CountryRegion** ma wartość "Niemcy" ".  
   
 ```vb  
 Dim customerDataSet As New DataSet  
@@ -98,5 +98,5 @@ foreach (DataRow copyRow in copyRows)
 
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
-- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Elementy DataSet, DataTable i DataView](index.md)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

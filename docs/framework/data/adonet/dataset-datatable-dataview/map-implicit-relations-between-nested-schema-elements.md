@@ -2,27 +2,27 @@
 title: Mapowanie niejawnych relacji między zagnieżdżonymi elementami schematu
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 6fcb0b9bb7c947359c2334d3d116f5317f84af83
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e9ea85db98a577991e06e0239a0738a2ca5bada6
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586815"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203482"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>Mapowanie niejawnych relacji między zagnieżdżonymi elementami schematu
-Schemat języka (XSD) definicji schematu XML może mieć typy złożone, zagnieżdżone wewnątrz siebie nawzajem. W takim przypadku proces mapowania stosuje domyślne mapowanie i tworzy następujące <xref:System.Data.DataSet>:  
+Schemat języka definicji schematu XML (XSD) może mieć złożone typy zagnieżdżone wewnątrz siebie. W takim przypadku proces mapowania stosuje domyślne mapowanie i tworzy następujące elementy w <xref:System.Data.DataSet>:  
   
-- Jedną tabelę dla każdego z typów złożonych (nadrzędnych i podrzędnych).  
+- Jedna tabela dla każdego z typów złożonych (nadrzędnych i podrzędnych).  
   
-- Jeśli nie ograniczenia unique znajduje się na element nadrzędny, co dodatkowe kolumny klucza podstawowego dla definicji tabeli o nazwie *TableName*_identyfikator gdzie *TableName* jest nazwą tabeli nadrzędnej.  
+- Jeśli w obiekcie nadrzędnym nie istnieje ograniczenie UNIQUE, jedna dodatkowa kolumna klucza podstawowego dla definicji tabelio nazwie TableName _Id, gdzie *TableName* jest nazwą tabeli nadrzędnej.  
   
-- Ograniczenia klucza podstawowego w tabeli nadrzędnej identyfikowanie dodatkową kolumnę jako klucz podstawowy (przez ustawienie **IsPrimaryKey** właściwości **True**). Ograniczenie o nazwie ograniczenie\# gdzie \# to 1, 2, 3 i tak dalej. Na przykład domyślna nazwa pierwszego ograniczenia jest Constraint1.  
+- Ograniczenie PRIMARY KEY w tabeli nadrzędnej identyfikujące dodatkową kolumnę jako klucz podstawowy (przez ustawienie właściwości IsPrimaryKey na **wartość true**). Ograniczenie ma nazwę Constraint\# , gdzie \# ma wartość 1, 2, 3 i tak dalej. Na przykład domyślna nazwa pierwszego ograniczenia to Constraint1.  
   
-- Ograniczenia klucza obcego dla tabeli podrzędnej identyfikuje dodatkową kolumnę jako klucz obcy odwołujące się do klucza podstawowego tabeli nadrzędnej. Ograniczenie o nazwie *ParentTable_ChildTable* gdzie *ParentTable* jest nazwą tabeli nadrzędnej i *ChildTable* jest nazwą tabeli podrzędnej.  
+- Ograniczenie klucza obcego w tabeli podrzędnej identyfikującej dodatkową kolumnę jako klucz obcy odwołujący się do klucza podstawowego tabeli nadrzędnej. Ograniczenie ma nazwę *ParentTable_ChildTable* , gdzie *element parentname* jest nazwą tabeli nadrzędnej i *elementem podrzędnym* jest nazwa tabeli podrzędnej.  
   
-- Relacje danych między tabelami nadrzędnymi i podrzędnymi.  
+- Relacja danych między tabelami nadrzędnymi i podrzędnymi.  
   
- Poniższy przykład przedstawia schematu gdzie **OrderDetail** jest elementem podrzędnym **kolejności**.  
+ W poniższym przykładzie przedstawiono schemat, gdzie **OrderDetail** jest elementem podrzędnym **zamówienia**.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -54,16 +54,16 @@ Schemat języka (XSD) definicji schematu XML może mieć typy złożone, zagnie�
 </xs:schema>  
 ```  
   
- Proces mapowania schematu XML tworzy następujące **zestawu danych**:  
+ Proces mapowania schematu XML tworzy następujące elementy w **zestawie danych**:  
   
-- **Kolejności** i **OrderDetail** tabeli.  
+- **Zamówienie** i tabela **OrderDetail** .  
   
     ```  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
-- Ograniczenia unique wobec **kolejności** tabeli. Należy pamiętać, że **IsPrimaryKey** właściwość jest ustawiona na **True**.  
+- Unikatowe ograniczenie tabeli **Order** . Należy pamiętać, że właściwość IsPrimaryKey jest ustawiona na **wartość true**.  
   
     ```  
     ConstraintName: Constraint1  
@@ -73,7 +73,7 @@ Schemat języka (XSD) definicji schematu XML może mieć typy złożone, zagnie�
     IsPrimaryKey: True  
     ```  
   
-- Ograniczenie klucza obcego w **OrderDetail** tabeli.  
+- Ograniczenie klucza obcego w tabeli **OrderDetail** .  
   
     ```  
     ConstraintName: Order_OrderDetail  
@@ -84,7 +84,7 @@ Schemat języka (XSD) definicji schematu XML może mieć typy złożone, zagnie�
     RelatedColumns: Order_Id   
     ```  
   
-- Relacja między **kolejności** i **OrderDetail** tabel. **Zagnieżdżone** dla tej relacji jest właściwością **True** ponieważ **kolejności** i **OrderDetail** elementów jest zagnieżdżanych w schemacie .  
+- Relacja między tabelami **Order** i **OrderDetail** . Właściwość **zagnieżdżona** dla tej relacji jest ustawiona na **wartość true** , ponieważ elementy **Order** i **OrderDetail** są zagnieżdżone w schemacie.  
   
     ```  
     ParentTable: Order  
@@ -99,6 +99,6 @@ Schemat języka (XSD) definicji schematu XML może mieć typy złożone, zagnie�
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
+- [Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

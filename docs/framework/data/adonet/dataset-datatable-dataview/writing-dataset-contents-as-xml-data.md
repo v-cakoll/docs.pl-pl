@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-ms.openlocfilehash: dae044a9d7802e858f1f24dd4aa0f1de8f6cba7a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8a8656bb68832a09490e656903fd68788bdeb1d
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607024"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203098"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>Zapisywanie zawartości elementu DataSet jako danych XML
-W ADO.NET można napisać Reprezentacja XML <xref:System.Data.DataSet>, z lub bez jego schematu. Informacje o schemacie jest uwzględnione w tekście z pliku XML, jest ona zapisywana, za pomocą języka definicji schematu XML (XSD). Schemat zawiera definicje tabeli <xref:System.Data.DataSet> oraz definicje relacja i ograniczenie.  
+W ADO.NET można napisać reprezentację <xref:System.Data.DataSet>XML obiektu, z lub bez jego schematu. Jeśli informacje o schemacie są dołączone do kodu XML, są zapisywane przy użyciu języka definicji schematu XML (XSD). Schemat zawiera definicje <xref:System.Data.DataSet> tabeli, a także relacje i definicje ograniczeń.  
   
- Gdy <xref:System.Data.DataSet> jest zapisywany jako danych XML, wiersze <xref:System.Data.DataSet> są zapisywane w ich bieżącej wersji. Jednak <xref:System.Data.DataSet> można również zapisać jako element w formacie DiffGram tak, aby bieżące i oryginalne wartości parametru wiersze zostaną dołączone.  
+ Gdy obiekt <xref:System.Data.DataSet> jest zapisywana jako dane XML, wiersze <xref:System.Data.DataSet> w programie są zapisywane w ich bieżących wersjach. <xref:System.Data.DataSet> Jednak może być również zapisany jako DiffGram, tak aby wszystkie bieżące i oryginalne wartości wierszy były uwzględniane.  
   
- Reprezentacja XML <xref:System.Data.DataSet> mogą być zapisywane do pliku strumienia, **XmlWriter**, lub ciągiem. Te opcje zapewniają dużą elastyczność dla jak transportu reprezentację XML <xref:System.Data.DataSet>. Aby uzyskać reprezentację XML <xref:System.Data.DataSet> jako ciąg znaków, należy użyć **getxml —** metody, jak pokazano w poniższym przykładzie.  
+ Reprezentacja <xref:System.Data.DataSet> XML można zapisać do pliku, strumienia, elementu **XmlWriter**lub ciągu. Te opcje zapewniają dużą elastyczność w zakresie transportu reprezentacji <xref:System.Data.DataSet>XML. Aby uzyskać reprezentację <xref:System.Data.DataSet> XML jako ciąg, użyj metody **GetXml —** , jak pokazano w poniższym przykładzie.  
   
 ```vb  
 Dim xmlDS As String = custDS.GetXml()  
@@ -27,21 +27,21 @@ Dim xmlDS As String = custDS.GetXml()
 string xmlDS = custDS.GetXml();  
 ```  
   
- **Getxml —** zwraca reprezentację XML <xref:System.Data.DataSet> bez informacji o schemacie. Można zapisać informacji o schemacie z <xref:System.Data.DataSet> (jako schematu XML) na ciąg, użyj **GetXmlSchema**.  
+ **GetXml —** zwraca reprezentację <xref:System.Data.DataSet> XML bez informacji o schemacie. Aby zapisać informacje o schemacie z <xref:System.Data.DataSet> (jako schemat XML) w ciągu, użyj elementu **GetXmlSchema**.  
   
- Można zapisać <xref:System.Data.DataSet> w pliku strumienia, lub **XmlWriter**, użyj **WriteXml** metody. Pierwszy parametr, które są przekazywane do **WriteXml** jest miejscem docelowym danych wyjściowych XML. Na przykład przekazać ciąg zawierający nazwę pliku **System.IO.TextWriter** obiektu i tak dalej. Można przekazać opcjonalny drugi parametr funkcji **XmlWriteMode** do określenia, jak dane wyjściowe XML jest do zapisania.  
+ Aby napisać <xref:System.Data.DataSet> plik, strumień lub **XmlWriter**, użyj metody **WriteXml** . Pierwszym parametrem przekazywanym do **WriteXml** jest miejsce docelowe danych wyjściowych XML. Na przykład Przekaż ciąg zawierający nazwę pliku, obiekt **System. IO. TextWriter** i tak dalej. Aby określić sposób zapisywania danych wyjściowych XML, można przekazać opcjonalny drugi parametr XmlWriteMode.  
   
- W poniższej tabeli przedstawiono opcje **XmlWriteMode**.  
+ W poniższej tabeli przedstawiono opcje elementu XmlWriteMode.  
   
-|Opcja XmlWriteMode|Opis|  
+|XmlWriteMode — opcja|Opis|  
 |-------------------------|-----------------|  
-|**IgnoreSchema**|Zapisuje zawartość bieżącego <xref:System.Data.DataSet> jako danych XML bez schematu XML. Domyślnie włączone.|  
-|**WriteSchema**|Zapisuje zawartość bieżącego <xref:System.Data.DataSet> jako danych XML przy użyciu relacyjnej struktury jako wbudowanego schematu XML.|  
-|**DiffGram**|Zapisuje całą <xref:System.Data.DataSet> jako element w formacie DiffGram, łącznie z pierwotnym i bieżącym wartości. Aby uzyskać więcej informacji, zobacz [DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).|  
+|**IgnoreSchema**|Zapisuje bieżącą zawartość <xref:System.Data.DataSet> jako dane XML, bez schematu XML. Domyślnie włączone.|  
+|**WriteSchema**|Zapisuje bieżącą zawartość <xref:System.Data.DataSet> jako dane XML przy użyciu struktury relacyjnej jako wbudowanego schematu XML.|  
+|**DiffGram**|Zapisuje cały <xref:System.Data.DataSet> element w formacie DiffGram, w tym pierwotne i bieżące wartości. Aby uzyskać więcej informacji, zobacz [DiffGrams](diffgrams.md).|  
   
- Podczas zapisywania zawartości reprezentację XML <xref:System.Data.DataSet> zawierający **DataRelation** obiektów, najprawdopodobniej będą wynikowy kod XML ma wiersze podrzędne każdej relacji zagnieżdżone w obrębie ich elementy nadrzędne powiązane. Aby to zrobić, należy ustawić **zagnieżdżone** właściwość **DataRelation** do **true** po dodaniu **DataRelation** do <xref:System.Data.DataSet>. Aby uzyskać więcej informacji, zobacz [zagnieżdżanie elementów DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
+ Gdy piszesz reprezentację <xref:System.Data.DataSet> XML zawierającą obiekty , najprawdopodobniej chcesz, aby otrzymany kod XML miał wszystkie wiersze podrzędne każdej relacji zagnieżdżonej w pokrewnych elementach nadrzędnych. Aby to osiągnąć, należy ustawić właściwość **zagnieżdżoną** elementu na **wartość true** , gdy dodasz **relację** do <xref:System.Data.DataSet>obiektu. Aby uzyskać więcej informacji, zobacz [zagnieżdżanie relacji](nesting-datarelations.md)danych.  
   
- Poniżej przedstawiono dwa przykłady sposobu pisania reprezentację XML <xref:System.Data.DataSet> do pliku. Pierwszy przykład przekazuje nazwę pliku dla wynikowy kod XML jako ciąg do **WriteXml**. Drugi przykład przekazuje **System.IO.StreamWriter** obiektu.  
+ Poniżej przedstawiono dwa przykłady sposobu pisania reprezentacji <xref:System.Data.DataSet> XML do pliku. Pierwszy przykład przekazuje nazwę pliku XML w postaci ciągu do **WriteXml**. Drugi przykład przekazuje obiekt **System. IO. StreamWriter —** .  
   
 ```vb  
 custDS.WriteXml("Customers.xml", XmlWriteMode.WriteSchema)  
@@ -63,21 +63,21 @@ custDS.WriteXml(xmlSW, XmlWriteMode.WriteSchema);
 xmlSW.Close();  
 ```  
   
-## <a name="mapping-columns-to-xml-elements-attributes-and-text"></a>Mapowanie kolumn do elementów XML, atrybuty i tekstu  
- Można określić, jak kolumny tabeli są reprezentowane w formacie XML przy użyciu **ColumnMapping** właściwość **DataColumn** obiektu. W poniższej tabeli przedstawiono poszczególne **MappingType** wartości **ColumnMapping** właściwość kolumny tabeli i wynikowy kod XML.  
+## <a name="mapping-columns-to-xml-elements-attributes-and-text"></a>Mapowanie kolumn do elementów XML, atrybutów i tekstu  
+ Można określić sposób, w jaki kolumna tabeli jest reprezentowana w kodzie XML przy użyciu właściwości **ColumnMapping** obiektu DataColumn. W poniższej tabeli przedstawiono różne wartości **mapowaniatype** dla właściwości **ColumnMapping** kolumny tabeli oraz otrzymany kod XML.  
   
 |Wartość MappingType|Opis|  
 |-----------------------|-----------------|  
-|**Element**|Domyślnie włączone. Kolumny są zapisywane jako XML element, gdzie ColumnName jest nazwa elementu, a zawartość kolumny są zapisywane w postaci tekstu elementu. Na przykład:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
-|**Atrybut**|Kolumny są zapisywane jako atrybut XML elementu XML dla bieżącego wiersza, gdzie ColumnName jest nazwa atrybutu, a zawartość kolumny są zapisywane jako wartość atrybutu. Na przykład:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
-|**SimpleContent**|Zawartość kolumny są zapisywane jako tekst w elemencie XML dla bieżącego wiersza. Na przykład:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> Należy pamiętać, że **SimpleContent** nie można ustawić wartości w kolumnie tabeli, która ma **elementu** kolumn ani relacjach zagnieżdżonych.|  
+|**Element**|Domyślnie włączone. Kolumna jest zapisywana jako element XML, gdzie ColumnName jest nazwą elementu, a zawartość kolumny jest zapisywana jako tekst elementu. Na przykład:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
+|**Atrybut**|Kolumna jest zapisywana jako atrybut XML elementu XML dla bieżącego wiersza, gdzie ColumnName jest nazwą atrybutu, a zawartość kolumny jest zapisywana jako wartość atrybutu. Przykład:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
+|**SimpleContent**|Zawartość kolumny jest zapisywana jako tekst w elemencie XML dla bieżącego wiersza. Na przykład:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> Należy zauważyć, że nie można ustawić elementu **SimpleContent** dla kolumny tabeli, która zawiera kolumny **elementów** lub relacje zagnieżdżone.|  
 |**Ukryte**|Kolumna nie jest zapisywana w danych wyjściowych XML.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Używanie języka XML w elemencie DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [Elementy DiffGram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)
-- [Zagnieżdżanie elementów DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)
-- [Zapisywanie informacji o schemacie elementu DataSet jako pliku XSD](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-schema-information-as-xsd.md)
-- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Używanie języka XML w elemencie DataSet](using-xml-in-a-dataset.md)
+- [Elementy DiffGram](diffgrams.md)
+- [Zagnieżdżanie elementów DataRelation](nesting-datarelations.md)
+- [Zapisywanie informacji o schemacie elementu DataSet jako pliku XSD](writing-dataset-schema-information-as-xsd.md)
+- [Elementy DataSet, DataTable i DataView](index.md)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

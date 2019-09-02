@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: d8a1a12a4d8ab5e6f4b0fe6ad6c2a3759aa65aa9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ce7cd859ce0c9a5874751e9928e5bced33593d6
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034513"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205248"
 ---
 # <a name="annotating-typed-datasets"></a>Dodawanie adnotacji do typizowanych elementów DataSet
-Adnotacje umożliwiają modyfikowanie nazwy elementów w wpisaną <xref:System.Data.DataSet> bez modyfikowania schemat źródłowy. Modyfikowanie nazwy elementów w schemacie bazowego spowodowałoby wpisanego **DataSet** do odwoływania się do obiektów, które nie istnieją w źródle danych, a także stracić odwołania do obiektów, które istnieją w źródle danych.  
+Adnotacje umożliwiają modyfikowanie nazw elementów w określonym typie <xref:System.Data.DataSet> bez modyfikowania bazowego schematu. Modyfikacja nazw elementów w schemacie źródłowym spowoduje, że określony **zestaw danych** odwołuje się do obiektów, które nie istnieją w źródle danych, a także utraci odwołanie do obiektów, które istnieją w źródle danych.  
   
- Korzystanie z adnotacji, można dostosować nazwy obiektów w wpisaną **zestawu danych** z bardziej zrozumiałej nazwy, dzięki czemu czytelność kodu i wpisaną **DataSet** ułatwia klientom na użycie przy równoczesnym zachowaniu Schemat źródłowy bez zmian. Na przykład, następujący element schematu dla **klientów** tabeli **Northwind** bazy danych mogłoby spowodować **DataRow** nazwę obiektu  **CustomersRow** i <xref:System.Data.DataRowCollection> o nazwie **klientów**.  
+ Przy użyciu adnotacji można dostosować nazwy obiektów w określonym **zestawie danych** o bardziej zrozumiałych nazwach, zwiększyć czytelność kodu i ułatwić klientom korzystanie z tego **zestawu danych** , pozostawiając jednocześnie nienaruszony schemat. Na przykład następujący element schematu dla tabeli **Customers** w bazie danych **Northwind** spowoduje powstanie <xref:System.Data.DataRowCollection> nazwy obiektu **DataRow** **CustomersRow** i nazwanych **klientów**.  
   
 ```xml  
 <xs:element name="Customers">  
@@ -27,7 +27,7 @@ Adnotacje umożliwiają modyfikowanie nazwy elementów w wpisaną <xref:System.D
 </xs:element>  
 ```  
   
- A **kolekcji DataRowCollection** nazwa **klientów** ma znaczenie w kodzie klienta, ale **DataRow** nazwa **CustomersRow** jest mylące ponieważ jest on pojedynczy obiekt. W typowych scenariuszy, obiekt może być również określany bez **wiersz** identyfikator i zamiast tego może być po prostu nazywany **klienta** obiektu. Rozwiązaniem jest dodawanie adnotacji do schematu i zidentyfikować nowe nazwy **DataRow** i **kolekcji DataRowCollection** obiektów. Poniżej przedstawiono adnotacjami wersja poprzedniego schematu.  
+ Nazwa elementu DataRowCollection **klientów** ma znaczenie w kodzie klienta, ale nazwa elementu **DataRow** **CustomersRow** jest myląca, ponieważ jest to pojedynczy obiekt. Ponadto w typowych scenariuszach obiekt zostałby odnosił się do bez identyfikatora **wiersza** i zamiast niego będzie po prostu określany jako obiekt **klienta** . Rozwiązaniem jest dodawanie adnotacji do schematu i identyfikowanie nowych nazw obiektów **DataRow** i **DataRowCollection** . Poniżej znajduje się adnotacja wersja poprzedniego schematu.  
   
 ```xml  
 <xs:element name="Customers" codegen:typedName="Customer" codegen:typedPlural="Customers">  
@@ -39,48 +39,48 @@ Adnotacje umożliwiają modyfikowanie nazwy elementów w wpisaną <xref:System.D
 </xs:element>  
 ```  
   
- Określanie **nazwy wpisanej** wartość **klienta** spowoduje **DataRow** nazwę obiektu **klienta**. Określanie **typedPlural** wartość **klientów** zachowuje **kolekcji DataRowCollection** nazwa **klientów**.  
+ Określenie wartości typu nazwa **klienta** spowoduje powstanie nazwy obiektu **DataRow** dla **klienta**. Określenie wartości **TypedPlural** **klientów** zachowuje nazwę elementu DataRowCollection **klientów**.  
   
- W poniższej tabeli przedstawiono dostępne do użycia adnotacje.  
+ W poniższej tabeli przedstawiono adnotacje dostępne do użycia.  
   
 |Adnotacja|Opis|  
 |----------------|-----------------|  
 |**typedName**|Nazwa obiektu.|  
 |**typedPlural**|Nazwa kolekcji obiektów.|  
-|**typedParent**|Nazwa obiektu określonych w relacji nadrzędny.|  
-|**typedChildren**|Nazwa metody, aby przywrócić obiekty z relacji podrzędnej.|  
-|**nullValue**|Wartość, jeśli jest podstawową wartość **DBNull**. Zobacz w poniższej tabeli **nullValue** adnotacji. Wartość domyślna to **_throw**.|  
+|**typedParent**|Nazwa obiektu, gdy jest on określony w relacji nadrzędnej.|  
+|**typedChildren**|Nazwa metody zwracającej obiekty z relacji podrzędnej.|  
+|**nullValue**|Wartość, jeśli wartość podstawowa to **DBNull**. Zapoznaj się z poniższą tabelą dla adnotacji **NullValue** . Wartość domyślna to **_throw**.|  
   
- W poniższej tabeli przedstawiono wartości, które mogą być określone dla **nullValue** adnotacji.  
+ W poniższej tabeli przedstawiono wartości, które można określić dla adnotacji **NullValue** .  
   
 |nullValue wartość|Opis|  
 |---------------------|-----------------|  
-|*Wartość zastąpienia*|Określ wartość do zwrócenia. Zwracana wartość musi odpowiadać typowi elementu. Na przykład użyć `nullValue="0"` do zwracają wartość 0 dla pola liczb całkowitych o wartości null.|  
+|*Wartość zastępcza*|Określ wartość, która ma zostać zwrócona. Zwracana wartość musi być zgodna z typem elementu. Na przykład użyj `nullValue="0"` , aby zwrócić 0 dla pól o wartości null.|  
 |**_throw**|Zgłoś wyjątek. Domyślnie włączone.|  
-|**_null**|Zwraca odwołanie o wartości null lub zgłosić wyjątek, jeśli typem pierwotnym zostanie osiągnięty.|  
-|**_pusty**|W przypadku ciągów, zwracają **String.Empty**, w przeciwnym razie zwraca obiekt, który został utworzony na podstawie pustego konstruktora. Jeśli typ pierwotny, należy zgłosić wyjątek.|  
+|**_null**|Zwraca odwołanie o wartości null lub Zgłoś wyjątek, jeśli napotkany jest typ pierwotny.|  
+|**_empty**|W przypadku ciągów zwraca **ciąg. Empty**, w przeciwnym razie zwraca obiekt utworzony na podstawie pustego konstruktora. Jeśli zostanie napotkany typ pierwotny, Zgłoś wyjątek.|  
   
- W poniższej tabeli przedstawiono wartości domyślne dla obiektów w typizowanych **DataSet** i dostępne adnotacji.  
+ W poniższej tabeli przedstawiono wartości domyślne dla obiektów w określonym **zestawie danych** i dostępnych adnotacji.  
   
-|Obiekt lub metoda/zdarzenia|Domyślny|Adnotacja|  
+|Obiekt/Metoda/zdarzenie|Domyślny|Adnotacja|  
 |---------------------------|-------------|----------------|  
-|**Elementu DataTable**|TableNameDataTable|typedPlural|  
-|**DataTable** metody|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
-|**DataRowCollection**|Właściwość TableName|typedPlural|  
+|**Columns**|TableNameDataTable|typedPlural|  
+|**Tabela DataTable** Form|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
+|**DataRowCollection**|TableName|typedPlural|  
 |**DataRow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
 |**Property**|PropertyName|typedName|  
-|**Podrzędne** metody dostępu|GetChildTableNameRows|typedChildren|  
-|**Nadrzędny** metody dostępu|TableNameRow|typedParent|  
-|**Zestaw danych** zdarzenia|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
+|**Element podrzędny** Metoda|GetChildTableNameRows|typedChildren|  
+|**Element nadrzędny** Metoda|TableNameRow|typedParent|  
+|**Zestaw danych** Wydarzeniach|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- Aby użyć wpisane **zestawu danych** adnotacji, należy uwzględnić następujące **xmlns** odwołania w schemacie języka (XSD) definicji schematu XML. Aby utworzyć xsd z tabel bazy danych, zobacz <xref:System.Data.DataSet.WriteXmlSchema%2A> lub [Praca z zestawami danych w programie Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
+ Aby użyć wpisanych adnotacji **zestawu danych** , należy uwzględnić następujące odwołanie **xmlns** w schemacie języka definicji schematu XML (XSD). Aby utworzyć XSD z tabel baz danych, zobacz <xref:System.Data.DataSet.WriteXmlSchema%2A> lub [Working with datasetss in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
   
 ```  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
 ```  
   
- Poniżej przedstawiono przykładowe schemat adnotacjami, który udostępnia **klientów** tabeli **Northwind** bazy danych za pomocą relacji do **zamówienia** tabelę zawartą.  
+ Poniżej znajduje się przykładowy schemat z adnotacjami, który uwidacznia tabelę **Customers** bazy danych **Northwind** z relacją do uwzględnionej tabeli **Orders** .  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -134,7 +134,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- Poniższy przykład kodu używa silnie typizowaną **DataSet** utworzone na podstawie schematu próbki. Używa jednego <xref:System.Data.SqlClient.SqlDataAdapter> do wypełniania **klientów** tabeli, a drugi <xref:System.Data.SqlClient.SqlDataAdapter> do wypełniania **zamówienia** tabeli. Silnie typizowane **DataSet** definiuje **elementów DataRelation**.  
+ Poniższy przykład kodu używa jednoznacznie określonego **zestawu danych** utworzonego na podstawie przykładowego schematu. Używa one <xref:System.Data.SqlClient.SqlDataAdapter> do wypełniania tabeli **Customers** , a <xref:System.Data.SqlClient.SqlDataAdapter> druga do wypełniania tabeli **Orders** . **Zestaw danych** o jednoznacznie określonym typie definiuje **relacje**DataRelations.  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  
@@ -226,6 +226,6 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
 
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>
-- [Typizowane elementy DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
-- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Typizowane elementy DataSet](typed-datasets.md)
+- [Elementy DataSet, DataTable i DataView](index.md)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

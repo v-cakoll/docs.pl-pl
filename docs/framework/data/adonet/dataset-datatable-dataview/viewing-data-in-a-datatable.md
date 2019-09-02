@@ -5,36 +5,36 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
-ms.openlocfilehash: fa8749550e10256ee0623714cc95e03a838655c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea92b8a5e46bdaa8e94756cd28a3fbcb2789d7b3
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607035"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204388"
 ---
 # <a name="viewing-data-in-a-datatable"></a>Wyświetlanie danych w elemencie DataTable
 
-Można uzyskać dostęp do zawartości <xref:System.Data.DataTable> przy użyciu **wierszy** i **kolumn** kolekcji **DataTable**. Można również użyć <xref:System.Data.DataTable.Select%2A> metody zwracanie podzbiorów danych w **DataTable** zgodnie z kryteriami, w tym kryteria wyszukiwania, porządek sortowania i wiersz stanu. Ponadto można użyć <xref:System.Data.DataRowCollection.Find%2A> metody **kolekcji DataRowCollection** podczas wyszukiwania określonego wiersza przy użyciu wartości klucza podstawowego.
+Można uzyskać <xref:System.Data.DataTable> dostęp do zawartości a przy użyciu kolekcji **wierszy** i **kolumn** **tabeli DataTable**. Można również użyć metody, <xref:System.Data.DataTable.Select%2A> aby zwrócić podzbiory danych w **elemencie DataTable** zgodnie z kryteriami wyszukiwania, kolejności sortowania i stanem wiersza. Ponadto można użyć <xref:System.Data.DataRowCollection.Find%2A> metody obiektu DataRowCollection podczas wyszukiwania określonego wiersza przy użyciu wartości klucza podstawowego.
 
-**Wybierz** metody **DataTable** zwraca zbiór <xref:System.Data.DataRow> obiekty spełniające określone kryteria. **Wybierz** przyjmuje opcjonalne argumenty wyrażenia filtru wyrażenie sortowania i **DataViewRowState**. Wyrażenie filtru identyfikuje, które wierszy do zwrócenia na podstawie **DataColumn** wartości, takich jak `LastName = 'Smith'`. Wyrażenie sortowania zgodna z konwencjami standardowa SQL do ustalania kolejności kolumn, na przykład `LastName ASC, FirstName ASC`. Reguły dotyczące wyrażeń, zobacz <xref:System.Data.DataColumn.Expression%2A> właściwość **DataColumn** klasy.
+Metoda **SELECT** obiektu **DataTable** zwraca zestaw <xref:System.Data.DataRow> obiektów spełniających określone kryteria. **Wybierz** pobiera opcjonalne argumenty wyrażenia filtru, wyrażenie sortowania i **DataViewRowState**. Wyrażenie filtru identyfikuje wiersze do zwrócenia na podstawie wartości **kolumn DataColumn** , takich jak `LastName = 'Smith'`. Wyrażenie sortowania stosuje się do standardowych konwencji SQL w celu porządkowania kolumn, `LastName ASC, FirstName ASC`na przykład. Aby uzyskać reguły dotyczące pisania wyrażeń, zobacz <xref:System.Data.DataColumn.Expression%2A> właściwość klasy DataColumn.
 
 > [!TIP]
-> Jeśli przeprowadzasz liczba wywołań **wybierz** metody **DataTable**, może zwiększyć wydajność, tworząc pierwszy <xref:System.Data.DataView> dla **DataTable**. Tworzenie **DataView** indeksuje wiersze z tabeli. **Wybierz** metoda następnie używa indeksu, znacznie skracając czas do generowania wyników kwerendy. Aby uzyskać informacje o tworzeniu **DataView** dla **DataTable**, zobacz [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).
+> W przypadku wykonywania wielu wywołań metody **SELECT** **elementu DataTable**można zwiększyć wydajność, tworząc najpierw element <xref:System.Data.DataView> dla **elementu DataTable**. Utworzenie elementu **DataView** indeksuje wiersze tabeli. Metoda **SELECT** używa tego indeksu znacznie skraca czas generowania wyników zapytania. Aby uzyskać informacje na temat tworzenia elementu **DataView** dla **elementu DataTable**, zobacz temat DataViews. [](dataviews.md)
 
-**Wybierz** Metoda określa na podstawie której wersji wierszy do wyświetlenia lub modyfikowania <xref:System.Data.DataViewRowState>. W poniższej tabeli opisano możliwe **DataViewRowState** wartości wyliczenia.
+Metoda **SELECT** określa, która wersja wierszy ma być wyświetlana lub manipulowana na podstawie <xref:System.Data.DataViewRowState>. W poniższej tabeli opisano możliwe wartości wyliczenia **DataViewRowState** .
 
-|Wartość DataViewRowState|Opis|
+|DataViewRowState wartość|Opis|
 |----------------------------|-----------------|
-|**CurrentRows**|Bieżące wiersze, w tym bez zmian, dodano i zmodyfikowane wiersze.|
-|**Usunięto**|Usunięty wiersz.|
-|**ModifiedCurrent**|W bieżącej wersji, która to zmodyfikowana wersja oryginalnych danych. (Zobacz **ModifiedOriginal**.)|
-|**ModifiedOriginal**|Oryginalna wersja wszystkie zmodyfikowane wiersze. Bieżąca wersja jest dostępna za pomocą **ModifiedCurrent**.|
-|**Dodano**|Nowy wiersz.|
+|**CurrentRows**|Bieżące wiersze z uwzględnieniem niezmienionych, dodanych i zmodyfikowanych wierszy.|
+|**Skasowan**|Usunięty wiersz.|
+|**ModifiedCurrent**|Bieżąca wersja, która jest zmodyfikowaną wersją oryginalnych danych. (Zobacz **ModifiedOriginal**).|
+|**ModifiedOriginal**|Oryginalna wersja wszystkich zmodyfikowanych wierszy. Bieżąca wersja jest dostępna przy użyciu **ModifiedCurrent**.|
+|**Dołączony**|Nowy wiersz.|
 |**Brak**|Brak.|
-|**OriginalRows**|Oryginalny wierszy, w tym bez zmian i usunięte wiersze.|
-|**bez zmian**|Niezmieniony.|
+|**OriginalRows**|Oryginalne wiersze, włącznie z niezmienionymi i usuniętymi wierszami.|
+|**Bez zmian**|Niezmieniony wiersz.|
 
-W poniższym przykładzie **DataSet** obiektu jest filtrowana, tak aby tylko pracujesz z wierszami, którego **DataViewRowState** ustawiono **CurrentRows**.
+W poniższym przykładzie obiekt **DataSet** jest filtrowany, dzięki czemu pracujesz tylko z wierszami, których **DataViewRowState** jest ustawiona na **CurrentRows**.
 
 ```vb
 Dim column As DataColumn
@@ -87,7 +87,7 @@ else
 }
 ```
 
-**Wybierz** metoda może służyć do zwrócenia wierszy z różniących się **RowState** wartości lub wartości pól. Poniższy przykład zwraca **DataRow** tablica, która odwołuje się do wszystkich wierszy, które zostały usunięte, a następnie zwraca innego **DataRow** tablica, która odwołuje się do wszystkich wierszy, uporządkowane według **CustLName**, gdzie **CustID** kolumny jest większa niż 5. Aby uzyskać informacje o sposobie wyświetlania informacji w **usunięte** wiersza, zobacz [stany wiersza i wersje wiersza](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).
+Metoda **SELECT** może służyć do zwracania wierszy zawierających różne wartości **RowState** lub wartości pól. Poniższy przykład zwraca tablicę **DataRow** , która odwołuje się do wszystkich wierszy, które zostały usunięte, i zwraca kolejną tablicę **DataRow** , która odwołuje się do wszystkich wierszy, uporządkowanych według **CustLName**, gdzie kolumna **CustId** jest większa niż 5. Aby uzyskać informacje na temat sposobu wyświetlania informacji w **usuwanym** wierszu, zobacz [Stany wiersza i wersje wierszy](row-states-and-row-versions.md).
 
 ```vb
 ' Retrieve all deleted rows.
@@ -113,6 +113,6 @@ DataRow[] custRows = workTable.Select("CustID > 5", "CustLName ASC");
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataViewRowState>
-- [Operowanie danymi w elemencie DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [Stany wiersza i wersje wiersza](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Operowanie danymi w elemencie DataTable](manipulating-data-in-a-datatable.md)
+- [Stany wiersza i wersje wiersza](row-states-and-row-versions.md)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

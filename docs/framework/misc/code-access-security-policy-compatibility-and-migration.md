@@ -7,46 +7,46 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15e693f716d02e6f7ef8b666ddf51a8bd352f642
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 9563dae9ba5d144300549e7f33f5f5a9feb1d410
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690284"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205630"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Zgodność i migracja zasad zabezpieczenia dostępu kodu
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-Części zasad zabezpieczenia dostępu kodu (CAS) stało się przestarzałe w programie .NET Framework 4. W rezultacie mogą wystąpić ostrzeżenia kompilacji i wyjątki środowiska uruchomieniowego wywołanie zasad przestarzałych typów i członków [jawnie](#explicit_use) lub [niejawnie](#implicit_use) (za pośrednictwem innych typów i elementów członkowskich).
+Część zasad zabezpieczeń dostępu kodu (CAS) była przestarzała w .NET Framework 4. W związku z tym mogą wystąpić ostrzeżenia kompilacji i wyjątki czasu wykonywania w przypadku wywołania przestarzałych typów zasad i elementów członkowskich [jawnie](#explicit_use) lub niejawnie (za pomocą innych typów i elementów członkowskich). [](#implicit_use)
 
-Ostrzeżenia i błędy można uniknąć przez:
+Ostrzeżenia i błędy można uniknąć:
 
-- [Migrowanie](#migration) do .NET Framework 4 zastępujące wywołuje przestarzały.
+- [Migrowanie](#migration) do .NET Framework 4 zamienników dla przestarzałych wywołań.
 
    \- lub —
 
-- Za pomocą [ \<NetFx40_LegacySecurityPolicy > element konfiguracji](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) do dołączenia do starsze zachowanie zasady CAS.
+- Użyj [elementu konfiguracji > NetFx40_LegacySecurityPolicy,abyzrezygnowaćzestarszejwersjizasadCAS.\<](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)
 
 Ten temat zawiera następujące sekcje:
 
-- [Użyj jawnego](#explicit_use)
+- [Jawne użycie](#explicit_use)
 
-- [Użycia niejawnego](#implicit_use)
+- [Niejawne użycie](#implicit_use)
 
 - [Błędy i ostrzeżenia](#errors_and_warnings)
 
-- [Migracja: Zastąpienie dla wywołań przestarzałe](#migration)
+- [Migracji Zastępowanie dla przestarzałych wywołań](#migration)
 
-- [Zgodność: Za pomocą opcji starsza wersja zasady CAS](#compatibility)
+- [Zgodna Korzystanie z opcji starszej wersji zasad CAS](#compatibility)
 
 <a name="explicit_use"></a>
 
-## <a name="explicit-use"></a>Użyj jawnego
+## <a name="explicit-use"></a>Jawne użycie
 
-Elementy członkowskie, które bezpośrednio modyfikować zasady zabezpieczeń lub zasady CAS ją w piaskownicy są przestarzałe i generuje błędy domyślnie.
+Elementy członkowskie, które bezpośrednio manipulują zasadami zabezpieczeń lub wymagają zasad CAS do piaskownicy, są przestarzałe i domyślnie generują błędy.
 
-Przykładem tego są:
+Przykłady są następujące:
 
 - <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType>
 
@@ -70,11 +70,11 @@ Przykładem tego są:
 
 <a name="implicit_use"></a>
 
-## <a name="implicit-use"></a>Użycia niejawnego
+## <a name="implicit-use"></a>Niejawne użycie
 
-Ładowanie zestawu kilka przeciążeń błędów produktu ze względu na ich użycie niejawnej urzędów certyfikacji zasad. Wykonaj te przeciążenia <xref:System.Security.Policy.Evidence> parametr służący do rozwiązywania zasady CAS i podaj uprawnienia udzielić zestawu dla zestawu.
+Niektóre przeciążenia ładowania zestawów generują błędy ze względu na niejawne użycie zasad CAS. Te przeciążenia mają <xref:System.Security.Policy.Evidence> parametr, który jest używany do rozpoznawania zasad CAS i zapewniają zestaw uprawnień dla zestawu.
 
-Oto kilka przykładów. Przestarzałe przeciążenia są tymi, które przyjmują <xref:System.Security.Policy.Evidence> jako parametr:
+Oto kilka przykładów. Przestarzałe przeciążenia to te, które <xref:System.Security.Policy.Evidence> przyjmują jako parametr:
 
 - <xref:System.Activator.CreateInstanceFrom%2A?displayProperty=nameWithType>
 
@@ -98,9 +98,9 @@ Oto kilka przykładów. Przestarzałe przeciążenia są tymi, które przyjmują
 
 ## <a name="errors-and-warnings"></a>Błędy i ostrzeżenia
 
-Przestarzałe typy i członków generuje następujące komunikaty o błędach, gdy są one używane. Należy pamiętać, że <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> samego typu nie jest przestarzały.
+Przestarzałe typy i elementy członkowskie generują następujące komunikaty o błędach, gdy są używane. Należy pamiętać, <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> że sam typ nie jest przestarzały.
 
-Ostrzeżenie kompilacji:
+Ostrzeżenie czasu kompilacji:
 
 `warning CS0618: '<API Name>' is obsolete: 'This method is obsolete and will be removed in a future release of the .NET Framework. Please use <suggested alternate API>. See <link> for more information.'`
 
@@ -110,11 +110,11 @@ Wyjątek czasu wykonywania:
 
 <a name="migration"></a>
 
-## <a name="migration-replacement-for-obsolete-calls"></a>Migracja: Zastąpienie dla wywołań przestarzałe
+## <a name="migration-replacement-for-obsolete-calls"></a>Migracji Zastępowanie dla przestarzałych wywołań
 
-### <a name="determining-an-assemblys-trust-level"></a>Określanie poziom zaufania zestawu
+### <a name="determining-an-assemblys-trust-level"></a>Określanie poziomu zaufania zestawu
 
-Urzędy certyfikacji zasad jest często używany do określenia zestawu lub uprawnienie domeny aplikacji zestaw uprawnień lub poziom zaufania. .NET Framework 4 udostępnia następujące właściwości przydatne, które nie powinny być rozwiązać zasady zabezpieczeń:
+Zasady urzędów certyfikacji są często używane do określania uprawnień do zestawu lub poziomu zaufania domeny aplikacji. .NET Framework 4 uwidacznia następujące przydatne właściwości, które nie muszą rozwiązywać zasad zabezpieczeń:
 
 - <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType>
 
@@ -126,26 +126,26 @@ Urzędy certyfikacji zasad jest często używany do określenia zestawu lub upra
 
 ### <a name="application-domain-sandboxing"></a>Tryb piaskownicy domeny aplikacji
 
-<xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> Metoda jest zwykle używane dla piaskownicy zestawów w domenie aplikacji. .NET Framework 4 udostępnia elementy członkowskie, które nie mają używać <xref:System.Security.Policy.PolicyLevel> do tego celu. Aby uzyskać więcej informacji, zobacz [jak: Uruchamianie częściowo zaufanego kodu w piaskownicy](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
+Metoda <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> ta jest zwykle używana do wypełniania zestawów w domenie aplikacji. .NET Framework 4 uwidacznia składowe, które nie muszą być używane <xref:System.Security.Policy.PolicyLevel> do tego celu. Aby uzyskać więcej informacji, zobacz [jak: Uruchom częściowo zaufany kod w piaskownicy](how-to-run-partially-trusted-code-in-a-sandbox.md).
 
-### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>Określanie bezpieczny lub uzasadnione dla ustawione uprawnienie częściowo zaufanego kodu
+### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>Określanie bezpiecznego lub uzasadnionego zestawu uprawnień dla częściowo zaufanego kodu
 
-Hosty często trzeba określić uprawnienia, które są odpowiednie dla kodu w piaskownicy hostowanej. Przed .NET Framework 4, zasady CAS podany sposób, aby zrobić to za pomocą <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> metody. W zastępstwie .NET Framework 4 zawiera <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> metody, która zwraca bezpieczną, standardowe zestawu uprawnień dla podanego dowodów.
+Hosty często muszą określić uprawnienia, które są odpowiednie dla hostowanego kodu w trybie piaskownicy. Przed przystąpieniem do .NET Framework 4 zasady urzędów certyfikacji udostępniają <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> metodę. Jako zamiennik, .NET Framework 4 udostępnia <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> metodę, która zwraca bezpieczny, standardowy zestaw uprawnień dla dostarczonych dowodów.
 
-### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>Scenariusze bez piaskownicy: Przeciążenia Załadowań zestawów
+### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>Scenariusze spoza piaskownicy: Przeciążenia dla obciążeń zestawów
 
-Przyczyna za pomocą przeciążenia ładowania zestawu może być korzystanie z parametrów, które nie są dostępne, zamiast piaskownicy zestawu. Począwszy od programu .NET Framework 4, ładowanie zestawu przeciążenia, które nie wymagają <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> obiektu jako parametr, na przykład <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, realizacji tego scenariusza.
+Przyczyną użycia przeciążenia ładowania zestawu może być użycie parametrów, które nie są dostępne w inny sposób, zamiast w piaskownicy zestawu. Począwszy od .NET Framework 4, przeciążenia ładowania zestawów, które nie wymagają <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> obiektu jako parametru, na <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>przykład, Włącz ten scenariusz.
 
-Jeśli chcesz piaskownicy zestawu, należy użyć <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> przeciążenia.
+Jeśli chcesz piaskownicy zestawu, użyj <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> przeciążenia.
 
 <a name="compatibility"></a>
 
-## <a name="compatibility-using-the-cas-policy-legacy-option"></a>Zgodność: Za pomocą opcji starsza wersja zasady CAS
+## <a name="compatibility-using-the-cas-policy-legacy-option"></a>Zgodna Korzystanie z opcji starszej wersji zasad CAS
 
-[ \<NetFx40_LegacySecurityPolicy > element konfiguracji](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) pozwala określić, że proces lub biblioteki używa starsza zasada CAS. Po włączeniu tego elementu, zasad i dowody przeciążenia będzie działać tak samo, jak w poprzednich wersjach programu framework.
+[Element konfiguracji > NetFx40_LegacySecurityPolicyumożliwiaokreślenie,żeproceslubbibliotekakorzystazestarszychzasadCAS.\<](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) Po włączeniu tego elementu przeciążenia zasad i dowodów będą działały tak, jak w poprzednich wersjach platformy.
 
 > [!NOTE]
-> Urzędów certyfikacji zasad zachowanie jest określone na podstawie wersji środowiska uruchomieniowego, więc modyfikowanie zasad urzędów certyfikacji dla jednej wersji środowiska uruchomieniowego nie wpływa na zasady CAS w innej wersji.
+> Zachowanie zasad CAS jest określone w wersji środowiska uruchomieniowego, więc modyfikowanie zasad CAS dla jednej wersji środowiska uruchomieniowego nie ma wpływu na zasady CAS innej wersji.
 
 ```xml
 <configuration>
@@ -157,5 +157,5 @@ Jeśli chcesz piaskownicy zestawu, należy użyć <xref:System.AppDomain.CreateD
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Uruchamianie częściowo zaufanego kodu w piaskownicy](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Instrukcje: Uruchamianie częściowo zaufanego kodu w piaskownicy](how-to-run-partially-trusted-code-in-a-sandbox.md)
 - [Wytyczne dotyczące bezpiecznego programowania](../../standard/security/secure-coding-guidelines.md)

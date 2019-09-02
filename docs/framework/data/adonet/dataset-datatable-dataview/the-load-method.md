@@ -4,27 +4,27 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
-ms.openlocfilehash: 82f840ab7dd26a4888ebf024d696f2c70701eb18
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b704deeffcd06bca09b6c26d60a66218b46fc55c
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607235"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203170"
 ---
 # <a name="the-load-method"></a>Metoda Load
-Możesz użyć <xref:System.Data.DataTable.Load%2A> metodę, aby załadować <xref:System.Data.DataTable> wierszy ze źródła danych. To jest przeciążona metoda, która w najprostszej postaci przyjmuje jeden parametr **DataReader**. W tym formularzu, po prostu ładuje **DataTable** wierszy. Opcjonalnie można określić **LoadOption** parametru, aby kontrolować, jak dane są dodawane do **DataTable**.  
+Możesz użyć <xref:System.Data.DataTable.Load%2A> metody do <xref:System.Data.DataTable> załadowania z wierszami ze źródła danych. Jest to przeciążona metoda, która w najprostszej postaci akceptuje pojedynczy parametr, element **DataReader**. W tym formularzu po prostu ładuje **DataTable** z wierszami. Opcjonalnie można określić parametr **LoadOption** , aby kontrolować sposób dodawania danych do obiektu **DataTable**.  
   
- **LoadOption** parametr jest szczególnie przydatne w przypadkach, gdzie **DataTable** już zawiera wiersze danych, ponieważ opisuje jak przychodzące dane ze źródła danych, które mają zostać połączone z danymi już w tabeli. Na przykład **PreserveCurrentValues** (opcja domyślna) określa, że w przypadku, gdy wiersz jest oznaczony jako **dodano** w **DataTable**, **oryginalnego** wartość lub każda kolumna jest równa zawartości zgodnego wiersza ze źródła danych. **Bieżącego** wartość zachowają wartości przypisane, gdy wiersz został dodany, a **RowState** wiersza zostanie ustawiony na **zmieniono**.  
+ Parametr **LoadOption** jest szczególnie przydatny w przypadkach, gdy element **DataTable** zawiera już wiersze danych, ponieważ opisuje sposób, w jaki dane przychodzące ze źródła danych będą łączone z danymi znajdującymi się już w tabeli. Na przykład **PreserveCurrentValues** (wartość domyślna) określa, że w przypadkach, gdy wiersz jest oznaczony jako **dodany** w **tabeli DataTable**, **oryginalna** wartość lub każda kolumna jest ustawiona na zawartość pasującego wiersza ze źródła danych. **Bieżąca** wartość spowoduje zachowanie wartości przypisanych, gdy wiersz został dodany, a **RowState** wierszy zostanie ustawiona na wartość **zmienione**.  
   
- W poniższej tabeli przedstawiono krótki opis <xref:System.Data.LoadOption> wartości wyliczenia.  
+ Poniższa tabela zawiera krótki opis <xref:System.Data.LoadOption> wartości wyliczenia.  
   
-|Wartość LoadOption|Opis|  
+|LoadOption wartość|Opis|  
 |----------------------|-----------------|  
-|**OverwriteRow**|Jeśli przychodzące mają takie same **PrimaryKey** wartość jako wiersz w już **DataTable**, **oryginalnego** i **bieżącego** wartości każdego z nich kolumny są zastępowane wartości w wierszu przychodzących i **RowState** właściwość jest ustawiona na **Unchanged**.<br /><br /> Wiersze ze źródła danych, które jeszcze nie istnieją w **DataTable** są dodawane przy użyciu **RowState** wartość **Unchanged**.<br /><br /> Ta opcja w praktyce Odświeża zawartość **DataTable** tak, aby pasuje do zawartości ze źródłem danych.|  
-|**PreserveCurrentValues (ustawienie domyślne)**|Jeśli przychodzący mają takie same **PrimaryKey** wartość jako wiersz już w **DataTable**, **oryginalnego** wartość zostanie ustawiona na zawartość wiersza przychodzących i **Bieżącego** wartość nie ulega zmianie.<br /><br /> Jeśli **RowState** jest **dodano** lub **zmodyfikowane**, jest równa **zmodyfikowane**.<br /><br /> Jeśli **RowState** został **usunięte**, pozostaje **usunięte**.<br /><br /> Wiersze ze źródła danych, które jeszcze nie istnieją w **DataTable** są dodawane i **RowState** ustawiono **Unchanged**.|  
-|**UpdateCurrentValues**|Jeśli przychodzący mają takie same **PrimaryKey** wartość jako wiersz już w **DataTable**, **bieżącego** wartość jest kopiowany do **oryginalny**wartości, a **bieżącego** następnie wartość na zawartość wiersza przychodzących.<br /><br /> Jeśli **RowState** w **DataTable** został **dodano**, **RowState** pozostaje **dodano**. Dla wierszy oznaczone jako **zmodyfikowane** lub **usunięte**, **RowState** jest **zmodyfikowane**.<br /><br /> Wiersze ze źródła danych, które jeszcze nie istnieją w **DataTable** są dodawane i **RowState** ustawiono **dodano**.|  
+|**OverwriteRow**|Jeśli wiersze przychodzące mają tę samą wartość PrimaryKey jak wiersz już w **tabeli DataTable**, **pierwotne** i **bieżące** wartości każdej kolumny są zastępowane wartościami w wierszu przychodzące, a właściwość **RowState** jest ustawiona na **Bez zmian**.<br /><br /> Wiersze ze źródła danych, które jeszcze nie istnieją w tabeli **DataTable** , są dodawane z niezmienionym wartością **RowState** .<br /><br /> Ta opcja powoduje odświeżenie zawartości **elementu DataTable** tak, aby odpowiadał zawartości źródła danych.|  
+|**PreserveCurrentValues (domyślnie)**|Jeśli wiersze przychodzące mają taką samą wartość PrimaryKey jak wiersz już w **tabeli DataTable**, **oryginalna** wartość jest ustawiana na zawartość wiersza przychodzącego, a **Bieżąca** wartość nie jest zmieniana.<br /><br /> Jeśli **RowState** jest **dodawany** lub **modyfikowany**, jest ustawiony na wartość **zmodyfikowano**.<br /><br /> Jeśli **RowState** został **usunięty**, pozostanie **usunięty**.<br /><br /> Wiersze ze źródła danych, które jeszcze nie istnieją w tabeli **DataTable** , są dodawane, a **RowState** jest ustawiona na wartośćUnchanged.|  
+|**UpdateCurrentValues**|Jeśli wiersze przychodzące mają tę samą wartość PrimaryKey jak wiersz już w **tabeli DataTable**, **Bieżąca** wartość jest kopiowana do **pierwotnej** wartości, a **Bieżąca** wartość jest ustawiana na zawartość wiersza przychodzącego.<br /><br /> Jeśli **RowState** w **elemencie DataTable** został **dodany**, **RowState** zostanie **dodana**. W przypadku wierszy oznaczonych jako **zmodyfikowane** lub usunięte **RowState** jest **modyfikowany**.<br /><br /> Wiersze ze źródła danych, które nie znajdują się jeszcze w **elemencie DataTable** , są dodawane i **RowState** jest ustawiony na wartość **dodana**.|  
   
- Następujące przykładowe używa **obciążenia** metodę, aby wyświetlić listę dat urodzenia dla pracowników w **Northwind** bazy danych.  
+ Poniższy przykład używa metody **Load** do wyświetlania listy urodzin dla pracowników w bazie danych **Northwind** .  
   
 ```vb  
 Private Sub LoadBirthdays(ByVal connectionString As String)  
@@ -70,5 +70,5 @@ End Sub
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Operowanie danymi w elemencie DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Operowanie danymi w elemencie DataTable](manipulating-data-in-a-datatable.md)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

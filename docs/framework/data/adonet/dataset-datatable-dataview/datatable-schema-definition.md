@@ -2,12 +2,12 @@
 title: Definicja schematu elementu DataTable
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: 20fee4316ad95c0f8716a0f374410009ea129222
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0d2609801da3bc336c54d32068246027cfd6d3aa
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952358"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204993"
 ---
 # <a name="datatable-schema-definition"></a>Definicja schematu elementu DataTable
 Schemat lub struktura tabeli jest reprezentowana przez kolumny i ograniczenia. <xref:System.Data.DataTable> Zdefiniuj schemat <xref:System.Data.DataColumn> obiektów, <xref:System.Data.ForeignKeyConstraint> a także obiektów i <xref:System.Data.UniqueConstraint> . Kolumny w tabeli mogą być mapowane na kolumny w źródle danych, zawierają wartości obliczeniowe z wyrażeń, automatycznie zwiększają ich wartości lub zawierają wartości klucza podstawowego.  
@@ -20,22 +20,22 @@ Schemat lub struktura tabeli jest reprezentowana przez kolumny i ograniczenia. <
 > Właściwość elementu DataTable nie ma wpływu na to zachowanie. <xref:System.Data.DataTable.CaseSensitive%2A> Właściwość **CaseSensitive** ma zastosowanie do danych w tabeli i ma wpływ na sortowanie, wyszukiwanie, filtrowanie, wymuszanie ograniczeń itd., ale nie do odwołań do kolumn, relacji i ograniczeń.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Dodawanie kolumn do elementu DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
+ [Dodawanie kolumn do elementu DataTable](adding-columns-to-a-datatable.md)  
  Opisuje sposób definiowania kolumn tabeli przy użyciu obiektów DataColumn .  
   
- [Tworzenie kolumn wyrażeń](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
+ [Tworzenie kolumn wyrażeń](creating-expression-columns.md)  
  Wyjaśnia, w jaki sposób Właściwość **Expression** kolumny może służyć do obliczania wartości na podstawie wartości z innych kolumn w wierszu.  
   
- [Tworzenie kolumn typu AutoIncrement](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)  
+ [Tworzenie kolumn typu AutoIncrement](creating-autoincrement-columns.md)  
  Opisuje, w jaki sposób można ustawić kolumnę, aby automatycznie zwiększać wartości liczbowe, aby zapewnić unikatową wartość kolumny dla każdego wiersza.  
   
- [Definiowanie kluczy podstawowych](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)  
+ [Definiowanie kluczy podstawowych](defining-primary-keys.md)  
  Opisuje sposób określania klucza podstawowego tabeli z co najmniej jednego obiektu DataColumn.  
   
- [Ograniczenia elementu DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
+ [Ograniczenia elementu DataTable](datatable-constraints.md)  
  Opisuje sposób definiowania kluczy obcych i unikatowych ograniczeń dla kolumn w tabeli.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Elementy DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [Elementy DataTable](datatables.md)
 - [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

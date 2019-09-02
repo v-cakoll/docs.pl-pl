@@ -2,83 +2,83 @@
 title: Elementy DataSet, DataTable i DataView
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: abfb53b0a7d827ffe8df909746c0c0ad0ce8c57b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b5e81f415685d6ee3529c7e4f9d389e8017427e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750757"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203633"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>Elementy DataSet, DataTable i DataView
-ADO.NET <xref:System.Data.DataSet> jest reprezentacją rezydentnego zapewnia spójny model programowania relacyjnych niezależnie od źródła danych zawiera dane. A <xref:System.Data.DataSet> przedstawia kompletny zestaw danych w tym tabel, które zawierają, kolejność i Zachowaj dane, jak również relacje między tabelami.  
+ADO.NET <xref:System.Data.DataSet> to reprezentacja danych znajdujących się w pamięci, która zapewnia spójny relacyjny model programowania niezależnie od źródła danych, które zawiera. <xref:System.Data.DataSet> Reprezentuje kompletny zestaw danych, w tym tabele, które zawierają, porządkują i ograniczają dane, a także relacje między tabelami.  
   
- Istnieją różne sposoby pracy z <xref:System.Data.DataSet>, które można stosować niezależnie lub razem. Można:  
+ Istnieje kilka sposobów pracy z <xref:System.Data.DataSet>, które mogą być stosowane niezależnie lub w połączeniu. Można:  
   
-- Programowe tworzenie <xref:System.Data.DataTable>, <xref:System.Data.DataRelation>, i <xref:System.Data.Constraint> w ramach <xref:System.Data.DataSet> i wypełnianie tabel danymi.  
+- <xref:System.Data.DataTable>Programowe tworzenie, <xref:System.Data.DataRelation>, i <xref:System.Data.Constraint> wewnątrz <xref:System.Data.DataSet> i wypełnianie tabel danymi.  
   
-- Wypełnij <xref:System.Data.DataSet> z tabelami danych z istniejącego relacyjne źródła danych przy użyciu `DataAdapter`.  
+- Wypełnij tabele danych z istniejącego relacyjnego źródła danych `DataAdapter`przy użyciu. <xref:System.Data.DataSet>  
   
-- Ładowanie i zachować <xref:System.Data.DataSet> zawartości za pomocą języka XML. Aby uzyskać więcej informacji, zobacz [za pomocą XML w zestawie danych](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
+- Ładowanie i utrwalanie <xref:System.Data.DataSet> zawartości przy użyciu XML. Aby uzyskać więcej informacji, zobacz [Używanie języka XML w zestawie danych](using-xml-in-a-dataset.md).  
   
- Silnie typizowane <xref:System.Data.DataSet> również mogą być transportowane przy użyciu usługi sieci Web XML. Projekt <xref:System.Data.DataSet> to idealny do transportowania danych przy użyciu usług XML sieci Web. Aby uzyskać omówienie usług XML sieci Web, zobacz [Omówienie usług sieci Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100)). Na przykład używania <xref:System.Data.DataSet> z usługi sieci Web XML, zobacz [korzystanie z zestawu danych z usługi sieci Web XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/consuming-a-dataset-from-an-xml-web-service.md).  
+ Silnie wpisaną <xref:System.Data.DataSet> można również transportować za pomocą usługi sieci Web XML. Projekt <xref:System.Data.DataSet> ułatwia transportowanie danych przy użyciu usług sieci Web XML. Aby zapoznać się z omówieniem usług sieci Web XML, zobacz [Omówienie usług sieci Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100)). Przykład <xref:System.Data.DataSet> korzystania z usługi sieci Web XML można znaleźć w temacie wykorzystywanie [zestawu danych z usługi sieci Web XML](consuming-a-dataset-from-an-xml-web-service.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Tworzenie elementu DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataset.md)  
- W tym artykule opisano Składnia służąca do tworzenia wystąpienia obiektu <xref:System.Data.DataSet>.  
+ [Tworzenie elementu DataSet](creating-a-dataset.md)  
+ Opisuje składnię tworzenia wystąpienia <xref:System.Data.DataSet>obiektu.  
   
- [Dodawanie elementu DataTable do elementu DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-a-datatable-to-a-dataset.md)  
- W tym artykule opisano sposób tworzenia i dodawanie tabel i kolumn do <xref:System.Data.DataSet>.  
+ [Dodawanie elementu DataTable do elementu DataSet](adding-a-datatable-to-a-dataset.md)  
+ Opisuje sposób tworzenia i dodawania tabel i kolumn do <xref:System.Data.DataSet>.  
   
- [Dodawanie elementów DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)  
- W tym artykule opisano sposób tworzenia relacji między tabelami w <xref:System.Data.DataSet>.  
+ [Dodawanie elementów DataRelation](adding-datarelations.md)  
+ Opisuje sposób tworzenia relacji między tabelami w <xref:System.Data.DataSet>.  
   
- [Nawigowanie w elementach DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/navigating-datarelations.md)  
- Opisuje sposób używania relacje między tabelami w <xref:System.Data.DataSet> do zwrócenia wierszy podrzędnej lub nadrzędnej relacji nadrzędny podrzędny.  
+ [Nawigowanie w elementach DataRelation](navigating-datarelations.md)  
+ Opisuje sposób użycia relacji między tabelami w a <xref:System.Data.DataSet> w celu zwrócenia podrzędnych lub nadrzędnych wierszy relacji nadrzędny-podrzędny.  
   
- [Scalanie zawartości elementu DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)  
- W tym artykule opisano sposób scalania zawartość jednej <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, lub <xref:System.Data.DataRow> tablicy do innej <xref:System.Data.DataSet>.  
+ [Scalanie zawartości elementu DataSet](merging-dataset-contents.md)  
+ Opisuje <xref:System.Data.DataSet>sposób scalania zawartości jednej <xref:System.Data.DataTable>lub <xref:System.Data.DataRow> tablicy w innej <xref:System.Data.DataSet>.  
   
- [Kopiowanie zawartości elementu DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/copying-dataset-contents.md)  
- W tym artykule opisano sposób tworzenia kopii <xref:System.Data.DataSet> zawierających schemat, a także określonych danych.  
+ [Kopiowanie zawartości elementu DataSet](copying-dataset-contents.md)  
+ Opisuje sposób tworzenia kopii <xref:System.Data.DataSet> programu, która może zawierać schemat, a także określone dane.  
   
- [Obsługa zdarzeń elementu DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)  
- W tym artykule opisano zdarzeń <xref:System.Data.DataSet> i sposobu ich używania.  
+ [Obsługa zdarzeń elementu DataSet](handling-dataset-events.md)  
+ Opisuje zdarzenia <xref:System.Data.DataSet> a i sposobu ich używania.  
   
- [Typizowane elementy DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
- W tym artykule omówiono jakie wpisane <xref:System.Data.DataSet> jest i jak tworzyć i używać go.  
+ [Typizowane elementy DataSet](typed-datasets.md)  
+ Omawia wpisany typ <xref:System.Data.DataSet> i sposób jego tworzenia i używania.  
   
- [Elementy DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- W tym artykule opisano sposób tworzenia <xref:System.Data.DataTable>, zdefiniować schemat i manipulowania danymi.  
+ [Elementy DataTable](datatables.md)  
+ Opisuje sposób tworzenia <xref:System.Data.DataTable>, definiowania schematu i manipulowania danymi.  
   
- [Elementy DataTableReader](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)  
+ [Elementy DataTableReader](datatablereaders.md)  
  Opisuje sposób tworzenia i używania <xref:System.Data.DataTableReader>.  
   
- [Elementy DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- W tym artykule opisano sposób tworzenia i pracy z `DataViews` i pracować z <xref:System.Data.DataView> zdarzenia.  
+ [Elementy DataView](dataviews.md)  
+ Opisuje sposób tworzenia i pracy `DataViews` ze zdarzeniami oraz pracy z <xref:System.Data.DataView> nim.  
   
- [Używanie języka XML w elemencie DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- W tym artykule opisano sposób, w jaki <xref:System.Data.DataSet> wchodzi w interakcję z danymi XML jako źródła danych, w tym ładowanie i przechowywanie zawartości <xref:System.Data.DataSet> jako danych XML.  
+ [Używanie języka XML w elemencie DataSet](using-xml-in-a-dataset.md)  
+ Opisuje sposób <xref:System.Data.DataSet> interakcji z danymi XML jako źródła danych, w tym ładowanie i utrwalanie zawartości <xref:System.Data.DataSet> w postaci danych XML.  
   
- [Korzystanie z elementu DataSet w usłudze internetowej XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/consuming-a-dataset-from-an-xml-web-service.md)  
- W tym artykule opisano sposób tworzenia usługi XML sieci Web, która używa <xref:System.Data.DataSet> transportu danych.  
+ [Korzystanie z elementu DataSet w usłudze internetowej XML](consuming-a-dataset-from-an-xml-web-service.md)  
+ Zawiera opis sposobu tworzenia usługi sieci Web XML, która używa <xref:System.Data.DataSet> do przesyłania danych.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Nowości w programie ADO.NET](../../../../../docs/framework/data/adonet/whats-new.md)  
- Dodano funkcje, które są nowością w programie ADO.NET.  
+ [Nowości w programie ADO.NET](../whats-new.md)  
+ Wprowadza funkcje, które są nowe w ADO.NET.  
   
- [Omówienie ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
- Wprowadzenie do projektowania i składników programu ADO.NET.  
+ [Omówienie ADO.NET](../ado-net-overview.md)  
+ Zawiera wprowadzenie do projektowania i składników ADO.NET.  
   
- [Wypełnianie zestawu danych z elementu DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
- Zawiera opis sposobu ładowania **DataSet** z danymi ze źródła danych.  
+ [Wypełnianie zestawu danych z elementu DataAdapter](../populating-a-dataset-from-a-dataadapter.md)  
+ Opisuje sposób ładowania **zestawu danych** z danymi ze źródła danych.  
   
- [Aktualizowanie źródeł danych za pomocą elementów DataAdapters](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
- Opisuje sposób rozwiązywania zmiany z danymi w **DataSet** wstecz do źródła danych.  
+ [Aktualizowanie źródeł danych za pomocą elementów DataAdapters](../updating-data-sources-with-dataadapters.md)  
+ Opisuje sposób rozwiązywania zmian w danych w **zestawie** danych z powrotem do źródła danych.  
   
- [Dodawanie istniejących ograniczeń do zestawu danych](../../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
- Zawiera opis sposobu wypełniania **DataSet** o informacje o kluczu podstawowym ze źródła danych.  
+ [Dodawanie istniejących ograniczeń do zestawu danych](../adding-existing-constraints-to-a-dataset.md)  
+ Opisuje sposób wypełniania **zestawu danych** z informacjami o kluczu podstawowym ze źródła danych.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET](../index.md)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

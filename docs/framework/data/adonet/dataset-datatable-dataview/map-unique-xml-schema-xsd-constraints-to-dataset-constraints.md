@@ -2,24 +2,24 @@
 title: Mapowanie ograniczeń unique schematu XML (XSD) na ograniczenia elementu DataSet
 ms.date: 03/30/2017
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
-ms.openlocfilehash: 650cd6b8b8149529f115f22a11d19178fbd6d302
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 231f23ccf47f60b902fdd5c66b63fe1a750445f9
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785376"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203418"
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapowanie ograniczeń unique schematu XML (XSD) na ograniczenia elementu DataSet
-W schemacie języka (XSD) definicji schematu XML **unikatowy** element określa ograniczenie unikatowości elementu lub atrybutu. W trakcie tłumaczenie schematu XML na schemat relacyjny, unikatowego ograniczenia określone w element lub atrybut w schemacie XML jest mapowany do unikatowego ograniczenia w <xref:System.Data.DataTable> w odpowiednich <xref:System.Data.DataSet> generowany.  
+W schemacie języka definicji schematu XML (XSD) **unikatowy** element określa ograniczenie unikatowości dla elementu lub atrybutu. W procesie tłumaczenia schematu XML na schemat relacyjny, unikatowe ograniczenie określone dla elementu lub atrybutu w schemacie XML jest zamapowane na unikatowe ograniczenie w <xref:System.Data.DataTable> polu w odpowiedniej <xref:System.Data.DataSet> generacji.  
   
- W poniższej tabeli przedstawiono **msdata** atrybutów, które można określić w **unikatowy** elementu.  
+ Poniższa tabela zawiera opis atrybutów **msdata** , które można określić w unikatowym elemencie .  
   
 |Nazwa atrybutu|Opis|  
 |--------------------|-----------------|  
-|**msdata:ConstraintName**|Jeśli ten atrybut jest określony, jego wartość jest używana jako nazwa ograniczenia. W przeciwnym razie **nazwa** atrybut zawiera wartość Nazwa ograniczenia.|  
-|**msdata:PrimaryKey**|Jeśli `PrimaryKey="true"` znajduje się w **unikatowy** unikatowego ograniczenia elementu jest tworzony z **IsPrimaryKey** właściwością **true**.|  
+|**msdata:ConstraintName**|Jeśli ten atrybut jest określony, jego wartość jest używana jako nazwa ograniczenia. W przeciwnym razie atrybut **name** zawiera wartość nazwy ograniczenia.|  
+|**msdata:PrimaryKey**|Jeśli `PrimaryKey="true"` jest obecny w elemencie **unikatowym** , zostanie utworzone unikatowe ograniczenie z właściwością IsPrimaryKey ustawioną na **wartość true**.|  
   
- W poniższym przykładzie przedstawiono schematu XML, który używa **unikatowy** elementu, aby określić ograniczenie unikatowości.  
+ W poniższym przykładzie przedstawiono schemat XML, który używa **unikatowego** elementu do określenia ograniczenia unikatowości.  
   
 ```xml  
 <xs:schema id="SampleDataSet"   
@@ -48,13 +48,13 @@ W schemacie języka (XSD) definicji schematu XML **unikatowy** element określa 
 </xs:schema>  
 ```  
   
- **Unikatowy** elementu w schemacie Określa, że dla wszystkich **klientów** elementów w dokumencie wystąpienia, wartość **CustomerID** element podrzędny musi być unikatowa. W budynku **DataSet**, proces mapowania odczytuje ten schemat i generuje poniższej tabeli:  
+ **Unikatowy** element w schemacie określa, że dla wszystkich elementów **klientów** w wystąpieniu dokumentu wartość elementu podrzędnego **CustomerID** musi być unikatowa. Podczas kompilowania **zestawu danych**proces mapowania odczytuje ten schemat i generuje poniższą tabelę:  
   
 ```  
 Customers (CustomerID, CompanyName, Phone)  
 ```  
   
- Proces mapowania wzrasta, powstaje unikatowego ograniczenia na **CustomerID** kolumny, jak pokazano w poniższym **zestawu danych**. (Dla uproszczenia tylko odpowiednie właściwości są wyświetlane.)  
+ Proces mapowania powoduje także utworzenie unikatowego ograniczenia kolumny **CustomerID** , jak pokazano w poniższym **zestawie danych**. (Dla uproszczenia są wyświetlane tylko odpowiednie właściwości.)  
   
 ```  
       DataSetName: MyDataSet  
@@ -68,11 +68,11 @@ TableName: Customers
       IsPrimaryKey: False  
 ```  
   
- W **DataSet** , jest generowany, **IsPrimaryKey** właściwość jest ustawiona na **False** dla ograniczenia unique. **Unikatowy** właściwość w kolumnie oznacza, że **CustomerID** wartości kolumn muszą być unikatowe (ale mogą być odwołanie o wartości null, określony przez **AllowDBNull** Właściwości kolumny).  
+ W wygenerowanym **zestawie danych** Właściwość IsPrimaryKey jest ustawiona na **wartość false** dla ograniczenia UNIQUE. Właściwość **Unique** kolumny wskazuje, że wartości kolumny **CustomerID** muszą być unikatowe (ale mogą być odwołaniem null, jak określono przez właściwość **AllowDBNull** kolumny).  
   
- Jeśli modyfikacji schematu opcjonalnego **msdata:PrimaryKey** wartość do atrybutu **True**, unikatowego ograniczenia jest tworzona w tabeli. **AllowDBNull** ustawiono wartość właściwości column **False**i **IsPrimaryKey** właściwości ograniczenia równa **True**, a w związku z tym **CustomerID** kolumny to kolumna klucza podstawowego.  
+ Jeśli zmodyfikujesz schemat i ustawisz opcjonalną wartość atrybutu **msdata: PrimaryKey** na **true**, w tabeli zostanie utworzone ograniczenie UNIQUE. Właściwość **Column AllowDBNull** jest ustawiona na **false**, a właściwość IsPrimaryKey ograniczenia ma **wartość true**, co sprawia, że kolumna klucza podstawowego zostanie określona jako kolumna.  
   
- Można określić ograniczenia unique na kombinacji elementów lub atrybutów w schemacie XML. Poniższy przykład pokazuje, jak określić, że kombinacji **CustomerID** i **CompanyName** wartości muszą być unikatowe dla wszystkich **klientów** w żadnym wystąpieniu przez Dodawanie innego **xs:field** elementu w schemacie.  
+ Można określić unikatowe ograniczenie kombinacji elementów lub atrybutów w schemacie XML. W poniższym przykładzie pokazano, jak określić, że kombinacja wartości **CustomerID** i **NazwaFirmy** musi być unikatowa dla wszystkich **klientów** w dowolnym wystąpieniu, dodając inny element **xs: Field** w schemacie.  
   
 ```xml  
       <xs:unique     
@@ -84,7 +84,7 @@ TableName: Customers
 </xs:unique>  
 ```  
   
- Jest to ograniczenie, który jest tworzony w wynikowym **zestawu danych**.  
+ Jest to ograniczenie, które jest tworzone w powstałym **zestawie danych**.  
   
 ```  
 ConstraintName: SomeName  
@@ -95,6 +95,6 @@ ConstraintName: SomeName
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: Przykład wykonania odroczonego (C#)
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
-ms.openlocfilehash: a934645d0d7ad807e1524031ca3f023f7b11c5b4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0816594ad016f19af4c97198160b4bafb9b4b8b4
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594546"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204135"
 ---
 # <a name="deferred-execution-example-c"></a>Przykład wykonania odroczonego (C#)
 W tym temacie pokazano, w jaki sposób odroczone wykonywanie i Ocena z opóźnieniem wpływają na wykonywanie zapytań LINQ to XML.  
@@ -46,7 +46,7 @@ class Program
   
  Ten przykład generuje następujące wyniki:  
   
-```  
+```output  
 ToUpper: source abc  
 Main: str ABC  
 ToUpper: source def  

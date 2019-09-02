@@ -2,12 +2,12 @@
 title: Poziomy zaufania zabezpieczeń podczas uzyskiwania dostępu do zasobów
 ms.date: 03/30/2017
 ms.assetid: fb5be924-317d-4d69-b33a-3d18ecfb9d6e
-ms.openlocfilehash: 4cd229737d7569afe84d945dce0fbb6867f3ef76
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7070d82c430b762059153c544e26478dc2d7ae39
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948719"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205872"
 ---
 # <a name="security-trust-levels-in-accessing-resources"></a>Poziomy zaufania zabezpieczeń podczas uzyskiwania dostępu do zasobów
 W tym temacie opisano, jak dostęp jest ograniczony do typów zasobów, które <xref:System.Transactions> przedstawia.  
@@ -38,7 +38,7 @@ W tym temacie opisano, jak dostęp jest ograniczony do typów zasobów, które <
   
  Aby włączyć odzyskiwanie, ten typ aplikacji umożliwia trwałe korzystanie z zasobów systemowych. Jest to spowodowane Menedżer transakcji do odzyskania musi zapamiętać transakcje, które mają wykonywane, dopóki nie można potwierdzić, że otrzymane wyniki wszystkich menedżerów trwałe zasobów, które uczestniczą w transakcji. W związku z tym ten typ aplikacji wymaga pełnego zaufania i nie należy go uruchamiać, chyba że zostanie udzielony ten poziom zaufania.  
   
- Aby uzyskać więcej informacji na temat trwałych rejestracji i odzyskiwania, zobacz temat [Rejestrowanie zasobów jako uczestników transakcji](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) i [wykonywanie odzyskiwania](../../../../docs/framework/data/transactions/performing-recovery.md) .  
+ Aby uzyskać więcej informacji na temat trwałych rejestracji i odzyskiwania, zobacz temat [Rejestrowanie zasobów jako uczestników transakcji](enlisting-resources-as-participants-in-a-transaction.md) i [wykonywanie odzyskiwania](performing-recovery.md) .  
   
  Aplikacje korzystające ze starszej współdziałania z modelem COM+ również muszą mieć pełne zaufanie.  
   

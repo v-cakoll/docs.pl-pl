@@ -2,39 +2,39 @@
 title: Podsumowanie procesu wnioskowania schematu elementu DataSet
 ms.date: 03/30/2017
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
-ms.openlocfilehash: 3c43b834f7a85f43cefd29a1ceba2260145e7d1b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5266d08212e5259bd5b242a70d61e29ad9008006
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607082"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203245"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a>Podsumowanie procesu wnioskowania schematu elementu DataSet
-Procesu wnioskowania najpierw określi, z dokumentu XML, które elementy zostanie wywnioskowany, jako tabele. Z pozostałych pliku XML procesu wnioskowania Określa kolumny dla tych tabel. W przypadku zagnieżdżonych tabel generuje procesu wnioskowania zagnieżdżonych <xref:System.Data.DataRelation> i <xref:System.Data.ForeignKeyConstraint> obiektów.  
+Proces wnioskowania najpierw określa, z dokumentu XML, które elementy zostaną wywnioskowane jako tabele. W pozostałej postaci kodu XML proces wnioskowania określa kolumny dla tych tabel. W przypadku zagnieżdżonych tabel proces wnioskowania generuje zagnieżdżone <xref:System.Data.DataRelation> i <xref:System.Data.ForeignKeyConstraint> obiekty.  
   
- Poniżej przedstawiono krótkie podsumowanie reguły wnioskowania:  
+ Poniżej przedstawiono krótkie podsumowanie reguł wnioskowania:  
   
-- Elementy, które mają atrybuty są wnioskowane jako tabele.  
+- Elementy, które mają atrybuty są wywnioskowane jako tabele.  
   
-- Elementy, które mają elementy podrzędne są wnioskowane jako tabele.  
+- Elementy, które mają elementy podrzędne są wywnioskowane jako tabele.  
   
-- Elementy, które powtarzają się wywnioskować jako pojedynczą tabelę.  
+- Elementy, które powtarzają się, są wywnioskowane jako jedna tabela.  
   
-- Jeśli element dokumentu lub katalogu głównego, ma żadnych atrybutów i nie elementy podrzędne, które będzie można wywnioskować jako kolumny, jest wnioskowany jako <xref:System.Data.DataSet>. W przeciwnym razie element dokumentu jest wnioskowany w postaci tabeli.  
+- Jeśli dokument lub element główny nie ma żadnych atrybutów i żadne elementy podrzędne, które zostałyby wywnioskowane jako kolumny, zostanie wywnioskowane jako <xref:System.Data.DataSet>. W przeciwnym razie element dokumentu jest wywnioskowany jako tabela.  
   
-- Atrybuty są wnioskowane jako kolumny.  
+- Atrybuty są wywnioskowane jako kolumny.  
   
-- Elementów, które mają nie atrybutów lub elementów podrzędnych i nie powtórzyć, są wnioskowane jako kolumny.  
+- Elementy, które nie mają atrybutów ani elementów podrzędnych, i które nie powtarzają się, są wywnioskowane jako kolumny.  
   
-- Dla elementów, które są wnioskowane jako zagnieżdżoną tabelę w obrębie innych elementów, które również są wnioskowane jako tabele, zagnieżdżoną **DataRelation** utworzeniu między dwiema tabelami. Nowy, podstawowej kolumny klucza o nazwie **TableName_Id** jest dodawane do obu tabel i używana przez **DataRelation**. A **ForeignKeyConstraint** jest tworzony między dwiema tabelami, za pomocą **TableName_Id** kolumny.  
+- W przypadku elementów, które są wywnioskowane jako zagnieżdżone tabele w innych elementach, które są również wywnioskowane jako tabele, zagnieżdżona relacja między dwiema tabelami zostanie utworzona. Nowa kolumna klucza podstawowego o nazwie **TableName_Id** jest dodawana do obu tabel i używana przez **relację**. **Element ForeignKeyConstraint** jest tworzony między dwiema tabelami przy użyciu kolumny **TableName_Id** .  
   
-- Dla elementów, które są wnioskowane jako tabele i który zawiera tekst, ale mieć żadnych elementów podrzędnych, nową kolumnę o nazwie **TableName_Text** jest tworzona dla poszczególnych elementów tekstu. Jeśli element jest wnioskowany w postaci tabeli i zawiera tekst, ale ma również elementy podrzędne, tekst zostanie zignorowany.  
+- Dla elementów, które są wywnioskowane jako tabele i które zawierają tekst, ale nie zawierają elementów podrzędnych, dla tekstu każdego elementu jest tworzona nowa kolumna o nazwie **TableName_Text** . Jeśli element jest wywnioskowany jako tabela i zawiera tekst, ale również zawiera elementy podrzędne, tekst jest ignorowany.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wnioskowanie relacyjnej struktury elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [Ładowanie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [Ładowanie informacji o schemacie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [Używanie języka XML w elemencie DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Wnioskowanie relacyjnej struktury elementu DataSet z pliku XML](inferring-dataset-relational-structure-from-xml.md)
+- [Ładowanie elementu DataSet z pliku XML](loading-a-dataset-from-xml.md)
+- [Ładowanie informacji o schemacie elementu DataSet z pliku XML](loading-dataset-schema-information-from-xml.md)
+- [Używanie języka XML w elemencie DataSet](using-xml-in-a-dataset.md)
+- [Elementy DataSet, DataTable i DataView](index.md)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
-ms.openlocfilehash: 6c2e554b7e6bde3e82190f70723f272b0d39a18a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3a1077bff9bf457b4aef0b05357d4a9260f8973
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880038"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204823"
 ---
 # <a name="handling-dataview-events"></a>Obsługa zdarzeń elementu DataView
-Możesz użyć <xref:System.Data.DataView.ListChanged> zdarzenia <xref:System.Data.DataView> do określenia, czy widok zostały zaktualizowane. Aktualizacje, które zgłaszają zdarzenia obejmują dodawanie, usuwanie lub modyfikowanie wiersza w tabeli podstawowej; Dodawanie lub usuwanie kolumn do schematu tabeli podstawowej; i zmiany w relacji nadrzędnej lub podrzędnej. **ListChanged** zdarzeń również powiadamia użytkownika, jeśli lista wierszy wyświetlanych zmienił się znacznie ze względu na stosowanie nowych kolejność sortowania lub filtrowania.  
+Aby określić, czy <xref:System.Data.DataView.ListChanged> widok został zaktualizowany, można użyć zdarzenia. <xref:System.Data.DataView> Aktualizacje, które powodują wygenerowanie zdarzenia, obejmują dodawanie, usuwanie lub modyfikowanie wiersza w tabeli źródłowej; Dodawanie lub usuwanie kolumny do schematu tabeli bazowej; i zmiana relacji nadrzędnej lub podrzędnej. Zdarzenie **ListChanged** powiadamia również o tym, czy lista wyświetlanych wierszy została znacząco zmieniona z powodu zastosowania nowej kolejności sortowania lub filtru.  
   
- **ListChanged** implementuje zdarzeń **ListChangedEventHandler** delegowanie z <xref:System.ComponentModel> przestrzeni nazw i przyjmuje jako dane wejściowe <xref:System.ComponentModel.ListChangedEventArgs> obiektu. Można określić, jakiego rodzaju zmian wystąpił, za pomocą <xref:System.ComponentModel.ListChangedType> wartości wyliczenia w **ListChangedType** właściwość **ListChangedEventArgs** obiektu. Do zmiany, które obejmują dodawanie, usuwanie lub przenoszenie wierszy, nowy indeks wiersza dodano lub które zostały przeniesione i poprzedniej indeks wiersza usuniętego są dostępne przy użyciu **NewIndex** właściwość **ListChangedEventArgs** obiektu. W przypadku przeniesione wiersz poprzedniego indeks wiersza przeniesionych można uzyskać dostęp za pomocą **OldIndex** właściwość **ListChangedEventArgs** obiektu.  
+ Zdarzenie **ListChanged** implementuje <xref:System.ComponentModel> delegata **ListChangedEventHandler** <xref:System.ComponentModel.ListChangedEventArgs> przestrzeni nazw i przyjmuje jako obiekt wejściowy. Można określić, jakiego typu zmiany wystąpiły przy użyciu <xref:System.ComponentModel.ListChangedType> wartości wyliczenia we właściwości **ListChangedType** obiektu **ListChangedEventArgs** . W przypadku zmian, które obejmują dodawanie, usuwanie lub przenoszenie wierszy, nowy indeks dodanego lub przeniesionego wiersza i poprzedni indeks usuniętego wiersza są dostępne za pomocą właściwości **NewIndex** obiektu **ListChangedEventArgs** . W przypadku przenoszonego wiersza poprzedni indeks przenoszonego wiersza można uzyskać za pomocą właściwości **OldIndex** obiektu **ListChangedEventArgs** .  
   
- **DataViewManager** udostępnia również **ListChanged** zdarzeń, aby otrzymywać powiadomienia, jeśli dodano lub usunięto tabelę lub zmiana została wprowadzona do **relacji** kolekcji bazowy **zestawu danych**.  
+ Element DataViewManager udostępnia również zdarzenie **ListChanged** w celu powiadomienia użytkownika o dodaniu lub usunięciu tabeli lub wprowadzeniu zmiany do kolekcji **relacji** bazowego **zestawu danych**.  
   
- W poniższym przykładzie kodu przedstawiono sposób dodawania **ListChanged** programu obsługi zdarzeń.  
+ Poniższy przykład kodu pokazuje, jak dodać program obsługi zdarzeń **ListChanged** .  
   
 ```vb  
 AddHandler custView.ListChanged, _  
@@ -55,5 +55,5 @@ protected static void OnListChanged(object sender,
 
 - <xref:System.Data.DataView>
 - <xref:System.ComponentModel.ListChangedEventHandler>
-- [Elementy DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Elementy DataView](dataviews.md)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

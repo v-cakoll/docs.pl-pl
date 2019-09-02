@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a4a564fb-c1c4-4135-b6c2-b030e51195e4
-ms.openlocfilehash: 9cefc97e571f315a6a644e0a058d4283168ecb9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fde1e2ace09e31234d199876ae7f063e01e7a7e4
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034526"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203980"
 ---
 # <a name="adding-datarelations"></a>Dodawanie elementów DataRelation
-W <xref:System.Data.DataSet> z wieloma <xref:System.Data.DataTable> obiektów, można użyć <xref:System.Data.DataRelation> obiektów do powiązania z jednej tabeli do innej, aby poruszać się po w tabelach i zwracanie podrzędnej lub nadrzędnej wierszy z tabeli powiązanej.  
+W przypadku <xref:System.Data.DataTable>zwieloma obiektami można użyć <xref:System.Data.DataRelation> obiektów, aby powiązać jedną tabelę z inną, aby nawigować przez tabele i zwracać elementy podrzędne lub nadrzędne z powiązanej tabeli. <xref:System.Data.DataSet>  
   
- Argumenty wymagane do utworzenia **DataRelation** są nazwę **DataRelation** tworzona i tablicę co najmniej jeden <xref:System.Data.DataColumn> odwołania do kolumn, które służą jako nadrzędne i podrzędne kolumny w relacji. Po utworzeniu **DataRelation**, można użyć go do nawigacji między tabelami i pobierać wartości.  
+ Argumenty wymagane do utworzenia **relacji** datarelationship są nazwami tworzonego elementu datarelationship i tablicą zawierającą <xref:System.Data.DataColumn> co najmniej jedno odwołanie do kolumn, które pełnią rolę kolumn nadrzędnych i podrzędnych w relacji. Po utworzeniu **relacji**można jej używać do nawigowania między tabelami i pobierania wartości.  
   
- Dodawanie **DataRelation** do <xref:System.Data.DataSet> dodaje domyślnie <xref:System.Data.UniqueConstraint> tabeli nadrzędnej i <xref:System.Data.ForeignKeyConstraint> do tabeli podrzędnej. Aby uzyskać więcej informacji o tych ograniczeniach domyślnych, zobacz [ograniczenia elementu DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
+ Dodawanie **relacji** do <xref:System.Data.DataSet> dodawania, domyślnie, <xref:System.Data.UniqueConstraint> do tabeli nadrzędnej i <xref:System.Data.ForeignKeyConstraint> do tabeli podrzędnej. Aby uzyskać więcej informacji o tych domyślnych ograniczeniach, zobacz temat [ograniczenia DataTable](datatable-constraints.md).  
   
- Poniższy przykład kodu tworzy **DataRelation** za pomocą dwóch <xref:System.Data.DataTable> obiekty w <xref:System.Data.DataSet>. Każdy <xref:System.Data.DataTable> zawiera kolumnę o nazwie **CustID**, który służy jako łącza między tymi dwoma <xref:System.Data.DataTable> obiektów. W przykładzie dodano pojedynczej **DataRelation** do **relacji** zbiór <xref:System.Data.DataSet>. Pierwszy argument w przykładzie określa nazwę **DataRelation** tworzona. Drugi argument określa element nadrzędny **DataColumn** i trzeci argument ustawia element podrzędny **DataColumn**.  
+ Poniższy przykład kodu tworzy relację danych przy użyciu dwóch <xref:System.Data.DataTable> obiektów w <xref:System.Data.DataSet>. Każda <xref:System.Data.DataTable> z nich zawiera kolumnę o nazwie **CustId**, która służy jako link między dwoma <xref:System.Data.DataTable> obiektami. Przykład dodaje pojedyncze **powiązanie** do <xref:System.Data.DataSet>kolekcji **relacji** . Pierwszy argument w przykładzie określa nazwę tworzonego **powiązania** . Drugi argument ustawia nadrzędną **kolumnę** danych, a trzeci argument ustawia podrzędną **kolumnę**danych.  
   
 ```vb  
 customerOrders.Relations.Add("CustOrders", _  
@@ -33,9 +33,9 @@ customerOrders.Relations.Add("CustOrders",
   customerOrders.Tables["Orders"].Columns["CustID"]);  
 ```  
   
- A **DataRelation** ma również **zagnieżdżone** właściwość, która po ustawieniu **true**, powoduje, że wiersze z tabeli podrzędnej na być zagnieżdżony w skojarzonych wiersz z tabeli nadrzędnej Podczas zapisywania jako elementów XML przy użyciu <xref:System.Data.DataSet.WriteXml%2A> . Aby uzyskać więcej informacji, zobacz [za pomocą XML w zestawie danych](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
+ **Relacja** danych ma również **zagnieżdżoną** właściwość, która po ustawieniu na **wartość true**powoduje, że wiersze z tabeli podrzędnej będą zagnieżdżone w skojarzonym wierszu z tabeli nadrzędnej, gdy są zapisywane jako elementy <xref:System.Data.DataSet.WriteXml%2A> XML przy użyciu. Aby uzyskać więcej informacji, zobacz [Używanie języka XML w zestawie danych](using-xml-in-a-dataset.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Elementy DataSet, DataTable i DataView](index.md)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

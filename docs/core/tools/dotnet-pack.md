@@ -1,13 +1,13 @@
 ---
-title: polecenie pakietu DotNet
-description: Polecenie pakietu dotnet tworzy pakiety NuGet do projektu .NET Core.
+title: polecenie dotnet Pack
+description: Polecenie programu dotnet Pack tworzy pakiety NuGet dla projektu .NET Core.
 ms.date: 12/04/2018
-ms.openlocfilehash: 5d48e5957e8095cc9ef4eaca2e1e1746c25a2a88
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c5c00f3bb06e5bc5579c0d3d6bdd39fbdf3db656
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876044"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202842"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -15,13 +15,13 @@ ms.locfileid: "65876044"
 
 ## <a name="name"></a>Nazwa
 
-`dotnet pack` -Pakiety kodu do pakietu NuGet.
+`dotnet pack`-Pakuje kod do pakietu NuGet.
 
 ## <a name="synopsis"></a>Streszczenie
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-```
+```console
 dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
     [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
@@ -29,7 +29,7 @@ dotnet pack [-h|--help]
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```
+```console
 dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
     [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
@@ -39,15 +39,15 @@ dotnet pack [-h|--help]
 
 ## <a name="description"></a>Opis
 
-`dotnet pack` Polecenie tworzy projekt i tworzy pakiety NuGet. Wynik tego polecenia jest pakiet NuGet. Jeśli `--include-symbols` opcji, jest tworzony inny pakiet zawierający symboli debugowania.
+`dotnet pack` Polecenie kompiluje projekt i tworzy pakiety NuGet. Wynikiem tego polecenia jest pakiet NuGet. Jeśli ta `--include-symbols` opcja jest obecna, tworzony jest inny pakiet zawierający symbole debugowania.
 
-Zależności NuGet upakowaną projektu zostaną dodane do *.nuspec* pliku, dzięki czemu są one prawidłowo rozwiązany po zainstalowaniu pakietu. Odwołania projekt projekt nie są spakowane w projekcie. Obecnie konieczne jest posiadanie pakietu dla projektu w przypadku zależności projektu do projektu.
+Zależności NuGet spakowanego projektu są dodawane do pliku *. nuspec* , więc są one poprawnie rozwiązane po zainstalowaniu pakietu. Odwołania projektu do projektu nie są spakowane w projekcie. Obecnie należy mieć pakiet dla każdego projektu, jeśli istnieją zależności między projektami.
 
-Domyślnie `dotnet pack` najpierw tworzy projekt. Jeśli chcesz uniknąć tego zachowania, należy przekazać `--no-build` opcji. Ta opcja jest często przydatne w scenariuszach kompilacji ciągłej integracji (CI), gdy wiesz, że kod została wcześniej skompilowana.
+Domyślnie program `dotnet pack` kompiluje projekt. Jeśli chcesz uniknąć tego zachowania, Przekaż `--no-build` opcję. Ta opcja jest często przydatna w scenariuszach kompilacji ciągłej integracji (CI), w których wiadomo, że kod został wcześniej skompilowany.
 
-Możesz podać właściwości programu MSBuild do `dotnet pack` polecenie, aby uzyskać proces pakowania. Aby uzyskać więcej informacji, zobacz [właściwości metadanych NuGet](csproj.md#nuget-metadata-properties) i [odwołanie do wiersza polecenia MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). [Przykłady](#examples) sekcja przedstawia sposób użycia przełącznika -p MSBuild z kilku różnych scenariuszy.
+Można podać właściwości programu MSBuild do `dotnet pack` polecenia dla procesu pakowania. Aby uzyskać więcej informacji, zobacz [właściwości metadanych NuGet](csproj.md#nuget-metadata-properties) i [Dokumentacja wiersza polecenia programu MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). W sekcji [przykłady](#examples) pokazano, jak używać przełącznika MSBuild-p w przypadku kilku różnych scenariuszy.
 
-Projekty sieci Web nie są packable domyślnie. Aby zastąpić domyślne zachowanie, dodaj następującą właściwość do Twojej *.csproj* pliku:
+Projekty sieci Web nie są domyślnie objęte pakietem. Aby zastąpić zachowanie domyślne, Dodaj następującą właściwość do pliku *. csproj* :
 
 ```xml
 <PropertyGroup>
@@ -61,7 +61,7 @@ Projekty sieci Web nie są packable domyślnie. Aby zastąpić domyślne zachowa
 
 * **`PROJECT`**
 
-  Projekt do pakietu. Jest ścieżką do [pliku csproj](csproj.md) lub w katalogu. Jeśli nie zostanie określony, jego wartość domyślna w bieżącym katalogu.
+  Projekt do spakowania. Jest to ścieżka do [pliku csproj](csproj.md) lub katalogu. Jeśli nie zostanie określony, domyślnie jest bieżącym katalogiem.
 
 ## <a name="options"></a>Opcje
 
@@ -73,15 +73,15 @@ Projekty sieci Web nie są packable domyślnie. Aby zastąpić domyślne zachowa
 
 * **`--force`**
 
-  Wymusza wszystkie zależności rozwiązany, nawet wtedy, gdy ostatnie przywracanie zakończyło się pomyślnie. Określanie ta flaga jest taka sama jak usuwanie *project.assets.json* pliku.
+  Wymusza rozpoznanie wszystkich zależności, nawet jeśli ostatnie przywracanie zakończyło się pomyślnie. Określenie tej flagi jest takie samo jak usuwanie pliku *Project. assets. JSON* .
 
 * **`-h|--help`**
 
-  Drukuje krótki pomoc dotyczącą polecenia.
+  Drukuje krótką pomoc dla polecenia.
 
 * **`--include-source`**
 
-  Zawiera pliki źródłowe pakietu NuGet. Pliki źródłowe znajdują się w `src` folder wewnątrz `nupkg`.
+  Zawiera pliki źródłowe w pakiecie NuGet. Pliki źródeł znajdują się w `src` folderze programu. `nupkg`
 
 * **`--include-symbols`**
 
@@ -89,35 +89,35 @@ Projekty sieci Web nie są packable domyślnie. Aby zastąpić domyślne zachowa
 
 * **`--no-build`**
 
-  Nie da się skompilować projektu przed pakowania. Ustawia również niejawnie `--no-restore` flagi.
+  Nie kompiluje projektu przed opakowaniem. Również niejawnie ustawia `--no-restore` flagę.
 
 * **`--no-dependencies`**
 
-  Ignoruje odwołania projekt projekt i przywraca jedynie projektu głównego.
+  Ignoruje odwołania projektu do projektu i przywraca tylko projekt główny.
 
 * **`--no-restore`**
 
-  Przy uruchamianiu polecenia niejawne przywracania nie jest wykonywany.
+  Nie wykonuje przywracania niejawnego podczas wykonywania polecenia.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Pakiety utworzone w katalogu wskazanym miejsca.
+  Umieszcza skompilowane pakiety w określonym katalogu.
 
 * **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  Określa docelowe środowisko uruchomieniowe w celu przywrócenia pakietów dla. Aby uzyskać listę identyfikatorów środowisk uruchomieniowych (RID), zobacz [katalogu RID](../rid-catalog.md).
+  Określa docelowy środowisko uruchomieniowe, dla którego mają zostać przywrócone pakiety. Aby uzyskać listę identyfikatorów środowiska uruchomieniowego (RID), zobacz [wykaz identyfikatorów RID](../rid-catalog.md).
 
 * **`-s|--serviceable`**
 
-  Ustawia flagę zdatne do użytku w pakiecie. Aby uzyskać więcej informacji, zobacz [bloga platformy .NET: .NET 4.5.1 zabezpieczeń firmy Microsoft obsługuje aktualizacje programu .NET NuGet biblioteki](https://aka.ms/nupkgservicing).
+  Ustawia flagę obsługi w pakiecie. Aby uzyskać więcej informacji, zobacz [blog platformy .NET: .NET 4.5.1 obsługuje aktualizacje zabezpieczeń firmy Microsoft dla bibliotek NuGet programu .NET](https://aka.ms/nupkgservicing).
 
 * **`--version-suffix <VERSION_SUFFIX>`**
 
-  Definiuje wartość dla `$(VersionSuffix)` właściwości programu MSBuild w projekcie.
+  Definiuje wartość `$(VersionSuffix)` właściwości programu MSBuild w projekcie.
 
 * **`-v|--verbosity <LEVEL>`**
 
-  Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, i `diag[nostic]`.
+  Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i .`diag[nostic]`
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -127,11 +127,11 @@ Projekty sieci Web nie są packable domyślnie. Aby zastąpić domyślne zachowa
 
 * **`-h|--help`**
 
-  Drukuje krótki pomoc dotyczącą polecenia.
+  Drukuje krótką pomoc dla polecenia.
 
 * **`--include-source`**
 
-  Zawiera pliki źródłowe pakietu NuGet. Pliki źródłowe znajdują się w `src` folder wewnątrz `nupkg`.
+  Zawiera pliki źródłowe w pakiecie NuGet. Pliki źródeł znajdują się w `src` folderze programu. `nupkg`
 
 * **`--include-symbols`**
 
@@ -139,77 +139,77 @@ Projekty sieci Web nie są packable domyślnie. Aby zastąpić domyślne zachowa
 
 * **`--no-build`**
 
-  Nie da się skompilować projektu przed pakowania.
+  Nie kompiluje projektu przed opakowaniem.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Pakiety utworzone w katalogu wskazanym miejsca.
+  Umieszcza skompilowane pakiety w określonym katalogu.
 
 * **`-s|--serviceable`**
 
-  Ustawia flagę zdatne do użytku w pakiecie. Aby uzyskać więcej informacji, zobacz [bloga platformy .NET: .NET 4.5.1 zabezpieczeń firmy Microsoft obsługuje aktualizacje programu .NET NuGet biblioteki](https://aka.ms/nupkgservicing).
+  Ustawia flagę obsługi w pakiecie. Aby uzyskać więcej informacji, zobacz [blog platformy .NET: .NET 4.5.1 obsługuje aktualizacje zabezpieczeń firmy Microsoft dla bibliotek NuGet programu .NET](https://aka.ms/nupkgservicing).
 
 * **`--version-suffix <VERSION_SUFFIX>`**
 
-  Definiuje wartość dla `$(VersionSuffix)` właściwości programu MSBuild w projekcie.
+  Definiuje wartość `$(VersionSuffix)` właściwości programu MSBuild w projekcie.
 
 * **`-v|--verbosity <LEVEL>`**
 
-  Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, i `diag[nostic]`.
+  Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i .`diag[nostic]`
 
 ---
 
 ## <a name="examples"></a>Przykłady
 
-* Pakiet projektu w bieżącym katalogu:
+* Pakowanie projektu w bieżącym katalogu:
 
   ```console
   dotnet pack
   ```
 
-* Pakiet `app1` projektu:
+* `app1` Pakowanie projektu:
 
   ```console
   dotnet pack ~/projects/app1/project.csproj
   ```
 
-* Pakowanie projekt w bieżącym katalogu i umieścić wynikowy pakietów do `nupkgs` folderu:
+* Pakowanie projektu w bieżącym katalogu i umieszczenie w nim pakietów `nupkgs` powstających:
 
   ```console
   dotnet pack --output nupkgs
   ```
 
-* Pakiet projektu w bieżącym katalogu do `nupkgs` folder i Pomiń krok kompilacji:
+* Pakowanie projektu w bieżącym katalogu do `nupkgs` folderu i pomijanie kroku kompilacji:
 
   ```console
   dotnet pack --no-build --output nupkgs
   ```
 
-* Z projektem sufiks wersji skonfigurowana jako `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` w *.csproj* pliku, pakiet bieżącego projektu i zaktualizuj wynikowy wersja pakietu przy użyciu danego sufiksu:
+* Przy użyciu sufiksu wersji projektu skonfigurowanego `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` jako w pliku *. csproj* należy spakować bieżący projekt i zaktualizować uzyskaną wersję pakietu przy użyciu danego sufiksu:
 
   ```console
   dotnet pack --version-suffix "ci-1234"
   ```
 
-* Ustaw wersję pakietu `2.1.0` z `PackageVersion` właściwości MSBuild:
+* Ustaw wersję pakietu na `2.1.0` `PackageVersion` za pomocą właściwości MSBuild:
 
   ```console
   dotnet pack -p:PackageVersion=2.1.0
   ```
 
-* Projekt dla określonego pakietu [platformę docelową](../../standard/frameworks.md):
+* Pakowanie projektu dla konkretnej [platformy docelowej](../../standard/frameworks.md):
 
   ```console
   dotnet pack -p:TargetFrameworks=net45
   ```
 
-* Pakowanie projektu i użyć określonego środowiska uruchomieniowego (system Windows 10) dla operacji przywracania (.NET Core SDK 2.0 i nowsze wersje):
+* Pakowanie projektu i użycie określonego środowiska uruchomieniowego (Windows 10) dla operacji przywracania (zestaw .NET Core SDK 2,0 i nowsze wersje):
 
   ```console
   dotnet pack --runtime win10-x64
   ```
 
-* Pakiet projekt za pomocą [pliku .nuspec](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):
+* Pakowanie projektu przy użyciu [pliku. nuspec](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):
 
   ```console
   dotnet pack ~/projects/app1/project.csproj /p:NuspecFile=~/projects/app1/project.nuspec /p:NuspecBasePath=~/projects/app1/nuget

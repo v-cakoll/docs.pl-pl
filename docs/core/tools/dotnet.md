@@ -2,12 +2,12 @@
 title: dotnet — polecenie
 description: Dowiedz się więcej na temat polecenia dotnet (sterownika generycznego dla narzędzi interfejs wiersza polecenia platformy .NET Core) i jego użycia.
 ms.date: 06/04/2018
-ms.openlocfilehash: 7e1915610732151487353f2d14586597f801ddfb
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 61542a3fff8bba6e2c3e55a4db5a746620d79ca1
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167919"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202508"
 ---
 # <a name="dotnet-command"></a>dotnet — polecenie
 
@@ -22,22 +22,23 @@ ms.locfileid: "70167919"
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```console
-dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
-    [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
+    [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 ```console
-dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics]
-    [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
+    [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx]
+    [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```console
-dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
-    [-h|--help] [--info] [-v|--verbosity] [--version]
+dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagnostics]
+    [--fx-version] [-h|--help] [--info] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
 ---
@@ -54,11 +55,17 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--additional-deps <PATH>`
 
-Ścieżka do pliku dodatkowego *. deps. JSON* .
+Ścieżka do dodatkowego pliku *. deps. JSON* .
 
 `--additionalprobingpath <PATH>`
 
 Ścieżka zawierająca zasady i zestawy do sondowania.
+
+`--depsfile`
+
+Ścieżka do pliku *deps. JSON* .
+
+Plik *deps. JSON* zawiera listę zależności, zależności kompilacji i informacje o wersji używane do rozwiązywania konfliktów zestawów. Aby uzyskać więcej informacji na temat tego pliku, zobacz [pliki konfiguracji środowiska uruchomieniowego](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) w serwisie GitHub.
 
 `-d|--diagnostics`
 
@@ -93,6 +100,12 @@ Definiuje zachowanie, gdy wymagana architektura udostępniona jest niedostępna.
 
  Aby uzyskać więcej informacji, zobacz [przewinięcie do przodu](../whats-new/dotnet-core-2-1.md#roll-forward).
 
+`--runtimeconfig`
+
+Ścieżka do pliku *runtimeconfig. JSON* .
+
+Plik *runtimeconfig. JSON* to plik konfiguracji zawierający ustawienia konfiguracji środowiska uruchomieniowego. Aby uzyskać więcej informacji, zobacz [pliki konfiguracji środowiska uruchomieniowego](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) w serwisie GitHub.
+
 `-v|--verbosity <LEVEL>`
 
 Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i .`diag[nostic]` Nieobsługiwane w każdym poleceniu; Aby określić, czy ta opcja jest dostępna, zobacz określoną stronę poleceń.
@@ -105,11 +118,17 @@ Drukuje używaną wersję zestaw .NET Core SDK.
 
 `--additional-deps <PATH>`
 
-Ścieżka do pliku dodatkowego *. deps. JSON* .
+Ścieżka do dodatkowego pliku *. deps. JSON* .
 
 `--additionalprobingpath <PATH>`
 
 Ścieżka zawierająca zasady i zestawy do sondowania.
+
+`--depsfile`
+
+Ścieżka do pliku *deps. JSON* .
+
+Plik *deps. JSON* zawiera listę zależności, zależności kompilacji i informacje o wersji używane do rozwiązywania konfliktów zestawów. Aby uzyskać więcej informacji na temat tego pliku, zobacz [pliki konfiguracji środowiska uruchomieniowego w serwisie GitHub](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).
 
 `-d|--diagnostics`
 
@@ -131,6 +150,12 @@ Drukuje szczegółowe informacje na temat instalacji programu .NET Core i środo
 
  Wyłącza dodatkową wersję do przodu, jeśli jest ustawiona `0`na. Aby uzyskać więcej informacji, zobacz [przewinięcie do przodu](../whats-new/dotnet-core-2-1.md#roll-forward).
 
+`--runtimeconfig`
+
+Ścieżka do pliku *runtimeconfig. JSON* .
+
+Plik *runtimeconfig. JSON* to plik konfiguracji zawierający ustawienia konfiguracji środowiska uruchomieniowego. Aby uzyskać więcej informacji, zobacz [pliki konfiguracji środowiska uruchomieniowego w serwisie GitHub](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).
+
 `-v|--verbosity <LEVEL>`
 
 Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i .`diag[nostic]` Nieobsługiwane w każdym poleceniu; Aby określić, czy ta opcja jest dostępna, zobacz określoną stronę poleceń.
@@ -144,6 +169,12 @@ Drukuje używaną wersję zestaw .NET Core SDK.
 `--additionalprobingpath <PATH>`
 
 Ścieżka zawierająca zasady i zestawy do sondowania.
+
+`--depsfile`
+
+Ścieżka do pliku *deps. JSON* .
+
+Plik *deps. JSON* zawiera listę zależności, zależności kompilacji i informacje o wersji używane do rozwiązywania konfliktów zestawów. Aby uzyskać więcej informacji na temat tego pliku, zobacz [pliki konfiguracji środowiska uruchomieniowego w serwisie GitHub](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).
 
 `-d|--diagnostics`
 
@@ -160,6 +191,12 @@ Drukuje dokumentację dla danego polecenia, na przykład `dotnet build --help`. 
 `--info`
 
 Drukuje szczegółowe informacje na temat instalacji programu .NET Core i środowiska maszynowego, takiego jak bieżący system operacyjny, i zatwierdzania SHA dla wersji .NET Core.
+
+`--runtimeconfig`
+
+Ścieżka do pliku *runtimeconfig. JSON* .
+
+Plik *runtimeconfig. JSON* to plik konfiguracji zawierający ustawienia konfiguracji środowiska uruchomieniowego. Aby uzyskać więcej informacji, zobacz [pliki konfiguracji środowiska uruchomieniowego w serwisie GitHub](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).
 
 `-v|--verbosity <LEVEL>`
 
@@ -355,3 +392,7 @@ Określa lokalizację indeksu obsługi, który ma być używany przez host udost
 Określa, czy dane dotyczące użycia narzędzi .NET Core są zbierane i wysyłane do firmy Microsoft. Ustaw, `true` aby zrezygnować z funkcji telemetrii (wartości `true`, `1`lub `yes` zaakceptować). W przeciwnym razie ustaw `false` opcję, aby można było wybrać funkcje telemetrii ( `no` wartości `false`, `0`lub zaakceptowane). Jeśli nie zostanie ustawiona, wartość domyślna `false` to i aktywna funkcja telemetrii.
 
 ---
+
+## <a name="see-also"></a>Zobacz także
+
+- [Pliki konfiguracji środowiska uruchomieniowego](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)

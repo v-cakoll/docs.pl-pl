@@ -2,28 +2,28 @@
 title: Mapowanie ograniczeń key schematu XML (XSD) na ograniczenia elementu DataSet
 ms.date: 03/30/2017
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-ms.openlocfilehash: 46a980f06198c6f06bb13824c65cfb5309eec154
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6fcdae77c2f2ac07ea5cd16baf07cd5de36d25b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034232"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203466"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapowanie ograniczeń key schematu XML (XSD) na ograniczenia elementu DataSet
-W schemacie, można określić ograniczenia klucza dla elementu lub atrybutu przy użyciu **klucz** elementu. Element lub atrybut, w którym określono ograniczenia klucza musi zawierać unikatowe wartości w żadnym wystąpieniu schematu, a nie może mieć wartości null.  
+W schemacie można określić ograniczenie klucza dla elementu lub atrybutu przy użyciu elementu **klucza** . Element lub atrybut, w którym określono ograniczenie klucza, muszą mieć unikatowe wartości w dowolnym wystąpieniu schematu i nie może mieć wartości null.  
   
- Ograniczenie klucza jest podobny do ograniczenia unique, z tą różnicą, że kolumny, na którym jest zdefiniowana ograniczenie klucza nie może mieć wartości null.  
+ Ograniczenie klucza jest podobne do ograniczenia UNIQUE, z tą różnicą, że kolumna, w której zdefiniowano ograniczenie klucza nie może mieć wartości null.  
   
- W poniższej tabeli przedstawiono **msdata** atrybutów, które można określić w **klucz** elementu.  
+ Poniższa tabela zawiera opis atrybutów **msdata** , które można określić w elemencie **Key** .  
   
 |Nazwa atrybutu|Opis|  
 |--------------------|-----------------|  
-|**msdata:ConstraintName**|Jeśli ten atrybut jest określony, jego wartość jest używana jako nazwa ograniczenia. W przeciwnym razie **nazwa** atrybut zawiera wartość Nazwa ograniczenia.|  
-|**msdata:PrimaryKey**|Jeśli `PrimaryKey="true"` jest obecny, **IsPrimaryKey** ograniczenie właściwość jest ustawiona na **true**, co czyni go kluczem podstawowym. **AllowDBNull** ustawiono wartość właściwości column **false**, ponieważ klucze podstawowe nie może mieć wartości null.|  
+|**msdata:ConstraintName**|Jeśli ten atrybut jest określony, jego wartość jest używana jako nazwa ograniczenia. W przeciwnym razie atrybut **name** zawiera wartość nazwy ograniczenia.|  
+|**msdata:PrimaryKey**|Jeśli `PrimaryKey="true"` jest obecny, właściwość ograniczenia IsPrimaryKey jest ustawiona na **wartość true**, co oznacza, że jest kluczem podstawowym. Właściwość Column **AllowDBNull** ma wartość **false**, ponieważ klucze podstawowe nie mogą mieć wartości null.|  
   
- W celu przeliczenia schematu, w którym określono ograniczenia klucza, proces mapowania tworzy ograniczenia unique wobec tabeli z **AllowDBNull** właściwości column ustawioną **false** dla każdej kolumny w ograniczenie. **IsPrimaryKey** właściwości ograniczenia unique jest również ustawiona na **false** , chyba że określono `msdata:PrimaryKey="true"` na **klucz** elementu. To jest taka sama jak unikatowego ograniczenia w schemacie, w którym `PrimaryKey="true"`.  
+ W przypadku konwertowania schematu, w którym jest określone ograniczenie klucza, proces mapowania tworzy unikatowe ograniczenie dla tabeli z właściwością Column **AllowDBNull** ustawioną na **wartość false** dla każdej kolumny ograniczenia. Właściwość IsPrimaryKey ograniczenia UNIQUE jest również ustawiona na **wartość false** , chyba że określono `msdata:PrimaryKey="true"` element **Key** . Jest to identyczne z ograniczeniami unikatowymi w schemacie, `PrimaryKey="true"`w którym.  
   
- W poniższym przykładzie schematu **klucz** element określa ograniczenie klucza na **CustomerID** elementu.  
+ W poniższym przykładzie schematu element **klucza** określa ograniczenie klucza elementu **CustomerID** .  
   
 ```xml  
 <xs:schema id="cod"  
@@ -54,13 +54,13 @@ W schemacie, można określić ograniczenia klucza dla elementu lub atrybutu prz
 </xs:schema>   
 ```  
   
- **Klucz** elementu Określa, że wartości **CustomerID** element podrzędny elementu **klientów** element musi zawierać unikatowe wartości i nie może mieć wartości null. W tłumaczeniu schematu języka (XSD) definicji schematu XML, proces mapowania tworzy poniższej tabeli:  
+ Element **klucza** określa, że wartości elementu podrzędnego **IDKlienta** elementu **Customers** muszą mieć unikatowe wartości i nie może zawierać wartości null. W przypadku tłumaczenia schematu języka definicji schematu XML (XSD) proces mapowania tworzy poniższą tabelę:  
   
 ```  
 Customers(CustomerID, CompanyName, Phone)  
 ```  
   
- Tworzy również mapowanie schematu XML **UniqueConstraint** na **CustomerID** kolumny, jak pokazano w poniższym <xref:System.Data.DataSet>. (Dla uproszczenia tylko odpowiednie właściwości są wyświetlane.)  
+ Mapowanie schematu XML tworzy również **UniqueConstraint** w kolumnie **IDKlienta** , jak pokazano w poniższej <xref:System.Data.DataSet>tabeli. (Dla uproszczenia są wyświetlane tylko odpowiednie właściwości.)  
   
 ```  
       DataSetName: MyDataSet  
@@ -74,12 +74,12 @@ TableName: customers
       IsPrimaryKey: True  
 ```  
   
- W **zestawu danych** , jest generowany, **IsPrimaryKey** właściwość **UniqueConstraint** ustawiono **true** ponieważ schematu Określa `msdata:PrimaryKey="true"` w **klucz** elementu.  
+ W wygenerowanym **zestawie danych** Właściwość IsPrimaryKey elementu **UniqueConstraint** ma **wartość true** , ponieważ schemat określa `msdata:PrimaryKey="true"` element **Key** .  
   
- Wartość **ConstraintName** właściwość **UniqueConstraint** w **DataSet** jest wartością **msdata:ConstraintName** atrybutu wskazanego w **klucz** elementu w schemacie.  
+ Wartość właściwości ConstraintName **UniqueConstraint** w **zestawie danych** jest wartością atrybutu **msdata: ConstraintName** określonego w elemencie **Key** w schemacie.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

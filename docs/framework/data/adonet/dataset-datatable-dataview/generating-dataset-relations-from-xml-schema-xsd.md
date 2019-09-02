@@ -2,24 +2,24 @@
 title: Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-ms.openlocfilehash: 2cf6d2ed949a3efa39c0f1c049bc03e7a5b0eb0b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fd32d024acca393dcc8241f047a305e763682866
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621078"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204858"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)
-W <xref:System.Data.DataSet>, formularza skojarzenia między co najmniej dwóch kolumn, tworząc relację nadrzędny podrzędny. Istnieją trzy sposoby do reprezentowania **DataSet** relacji w ramach schematu języka (XSD) definicji schematu XML:  
+<xref:System.Data.DataSet>W programie można utworzyć skojarzenie między dwiema lub więcej kolumnami przez utworzenie relacji nadrzędny-podrzędny. Istnieją trzy sposoby reprezentowania relacji **zestawu danych** w schemacie języka definicji schematu XML (XSD):  
   
-- Określ zagnieżdżonych typów złożonych.  
+- Określ zagnieżdżone typy złożone.  
   
-- Użyj **msdata:Relationship** adnotacji.  
+- Użyj adnotacji **msdata: Relationship** .  
   
-- Określ **xs:keyref** bez **msdata:ConstraintOnly** adnotacji.  
+- Określ element **xs: keyref** bez adnotacji **msdata: ConstraintOnly** .  
   
 ## <a name="nested-complex-types"></a>Zagnieżdżone typy złożone  
- Definicje zagnieżdżonych typów złożonych w schemacie wskazują relacje nadrzędny podrzędny elementów. Poniższy fragment schematu XML pokazują, że **OrderDetail** jest elementem podrzędnym **kolejności** elementu.  
+ Zagnieżdżone definicje typu złożonego w schemacie wskazują relacje nadrzędny-podrzędny elementów. Poniższy fragment schematu XML pokazuje, że **OrderDetail** jest elementem podrzędnym elementu **Order** .  
   
 ```xml  
 <xs:element name="Order">  
@@ -33,10 +33,10 @@ W <xref:System.Data.DataSet>, formularza skojarzenia między co najmniej dwóch 
 </xs:element>  
 ```  
   
- Proces mapowania schematu XML tworzy tabele w **DataSet** odpowiadające zagnieżdżone typy złożone w schemacie. Tworzy również dodatkowe kolumny, które są używane jako element nadrzędny**-** kolumn podrzędnych dla wygenerowanego tabel. Należy zauważyć, że te nadrzędnego**-** kolumn podrzędnych określa relacje, które nie jest taka sama jak określanie ograniczeń klucza podstawowego/klucza obcego.  
+ Proces mapowania schematu XML tworzy tabele w **zestawie danych** , które odnoszą się do zagnieżdżonych typów złożonych w schemacie. Tworzy również dodatkowe kolumny, które są używane jako nadrzędne **-** kolumny podrzędne dla wygenerowanych tabel. Należy zauważyć, że **-** te nadrzędne kolumny podrzędne określają relacje, które nie są takie same jak określanie ograniczeń klucza podstawowego/klucza obcego.  
   
-## <a name="msdatarelationship-annotation"></a>MSDATA:Relationship adnotacji  
- **Msdata:Relationship** adnotacji można jawnie określić relacji nadrzędny podrzędny między elementami w schemacie, które nie są osadzone. Poniższy przykład pokazuje strukturę **relacji** elementu.  
+## <a name="msdatarelationship-annotation"></a>msdata: adnotacja relacji  
+ Adnotacja **msdata: Relationship** pozwala jawnie określić relacje nadrzędny-podrzędny między elementami w schemacie, które nie są zagnieżdżone. Poniższy przykład pokazuje strukturę elementu **Relationship** .  
   
 ```xml  
 <msdata:Relationship name="CustOrderRelationship"    
@@ -46,9 +46,9 @@ msdata:parentkey=""
 msdata:childkey="" />  
 ```  
   
- Atrybuty **msdata:Relationship** adnotacji identyfikowania elementów uczestniczących w relacji nadrzędny podrzędny, jak również jako **elementy parentkey** i **childkey** elementy i atrybuty uczestniczących w relacji. Proces mapowania używa tych informacji w celu wygenerowania tabel w **DataSet** i utworzyć podstawowy klucz/relacji klucza obcego między tymi tabelami.  
+ Atrybuty **msdata:** adnotacja relacji identyfikują elementy należące do relacji nadrzędny-podrzędny, a także elementy **ParentKey** i **ChildKey** oraz atrybuty powiązane z relacją. Proces mapowania używa tych informacji do generowania tabel w **zestawie danych** i tworzenia relacji klucz podstawowy/klucz obcy między tymi tabelami.  
   
- Na przykład poniższy fragment schemat określa **kolejności** i **OrderDetail** elementów na tym samym poziomie (niezagnieżdżony). Schemat określa **msdata:Relationship** adnotacji, który określa relacji nadrzędny podrzędny między tymi dwoma elementami. W tym przypadku wyraźnej relacji musi być określony przy użyciu **msdata:Relationship** adnotacji.  
+ Na przykład poniższy fragment schematu określa **kolejność** i **OrderDetail** elementów na tym samym poziomie (niezagnieżdżony). Schemat określa **msdata:** adnotację relacji, która określa relację nadrzędny-podrzędny między tymi dwoma elementami. W takim przypadku należy określić jawną relację przy użyciu adnotacji **msdata: Relationship** .  
   
 ```xml  
  <xs:element name="MyDataSet" msdata:IsDataSet="true">  
@@ -78,25 +78,25 @@ msdata:childkey="" />
   </xs:annotation>  
 ```  
   
- Proces mapowania używa **relacji** elementu do utworzenia relacji nadrzędny podrzędny między **OrderNumber** kolumny w **kolejności** tabeli i **OrderNo** kolumny w **OrderDetail** tabelę **zestawu danych**. Proces mapowania określa tylko relacji; nie automatycznie określa wszelkie ograniczenia na podstawie wartości w tych kolumnach, tak jak podstawowego klucza/ograniczenia klucza obcego w relacyjnych baz danych.  
+ Proces mapowania używa elementu **Relationship** , aby utworzyć relację nadrzędny-podrzędny między kolumną **OrderNumber** w tabeli **Order** i kolumną **OrderNo** w tabeli **OrderDetail** w **zestawie danych**. Proces mapowania określa tylko relację; nie określa ona automatycznie żadnych ograniczeń dotyczących wartości w tych kolumnach, tak jak ograniczenia klucz podstawowy/klucz obcy w relacyjnych bazach danych.  
   
 ### <a name="in-this-section"></a>W tej sekcji  
- [Mapowanie niejawnych relacji między zagnieżdżonymi elementami schematu](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
- W tym artykule opisano ograniczenia i relacje, które są tworzone niejawnie w **DataSet** po napotkaniu elementów zagnieżdżonych w schemacie XML.  
+ [Mapowanie niejawnych relacji między zagnieżdżonymi elementami schematu](map-implicit-relations-between-nested-schema-elements.md)  
+ Opisuje ograniczenia i relacje, które są niejawnie tworzone w **zestawie danych** podczas napotkania zagnieżdżonych elementów w schemacie XML.  
   
- [Mapowanie relacji określonych dla zagnieżdżonych elementów](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
- Opisuje sposób jawnie ustawić relacji między deweloperami rozwiązań **zestawu danych** dla elementów zagnieżdżonych w schematu XML.  
+ [Mapowanie relacji określonych dla zagnieżdżonych elementów](map-relations-specified-for-nested-elements.md)  
+ Opisuje, jak jawnie ustawić relacje w **zestawie danych** dla zagnieżdżonych elementów w schemacie XML.  
   
- [Określanie relacji między elementami bez zagnieżdżania](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
- W tym artykule opisano sposób tworzenia relacji w **DataSet** między elementami schematu XML, które nie są osadzone.  
+ [Określanie relacji między elementami bez zagnieżdżania](specify-relations-between-elements-with-no-nesting.md)  
+ Opisuje sposób tworzenia relacji w **zestawie danych** między elementami schematu XML, które nie są zagnieżdżone.  
   
 ### <a name="related-sections"></a>Sekcje pokrewne  
- [Pobieranie relacyjnej struktury elementu DataSet ze schematu XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- W tym artykule opisano relacyjnej struktury lub schematu z **DataSet** , jest tworzona na podstawie schematu języka (XSD) definicji schematu XML.  
+ [Pobieranie relacyjnej struktury elementu DataSet ze schematu XML (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ Opisuje strukturę relacyjną lub schemat **zestawu danych** , który jest tworzony na podstawie schematu definicji schematu XML (XSD).  
   
- [Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Opisano elementy schematu XML, używany do tworzenia unikatowych obcych kluczy ograniczeń i **zestawu danych**.  
+ [Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ Opisuje elementy schematu XML używane do tworzenia ograniczeń unikatowych i obcych kluczy w **zestawie danych**.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

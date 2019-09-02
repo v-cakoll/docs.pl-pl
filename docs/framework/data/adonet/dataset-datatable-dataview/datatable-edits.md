@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-ms.openlocfilehash: 0300ceab16d9a94bd04468f7acd105e69d13e643
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a970ebda76f5bb6bdea704dabef2ee305436c613
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879843"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205018"
 ---
 # <a name="datatable-edits"></a>Edycje elementu DataTable
-Podczas wprowadzania zmian do wartości kolumn <xref:System.Data.DataRow>, zmiany od razu są umieszczane w bieżącym stanie wiersza. <xref:System.Data.DataRowState> Zostanie następnie ustawiona **zmodyfikowane**, a zmiany są akceptowane lub odrzucone, za pomocą <xref:System.Data.DataRow.AcceptChanges%2A> lub <xref:System.Data.DataRow.RejectChanges%2A> metody **DataRow**. **DataRow** udostępnia trzy metody, które można użyć do zawieszenia stan wiersza podczas edytowania go. Te metody są <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A>, i <xref:System.Data.DataRow.CancelEdit%2A>.  
+Po wprowadzeniu zmian w wartościach kolumn w <xref:System.Data.DataRow>, zmiany są natychmiast umieszczane w bieżącym stanie wiersza. <xref:System.Data.DataRow.AcceptChanges%2A> <xref:System.Data.DataRow.RejectChanges%2A>Następnie jest ustawiona na wartość zmodyfikowano, a zmiany zostaną zaakceptowane lub odrzucone przy użyciu metod lub obiektu DataRow. <xref:System.Data.DataRowState> Ten element **DataRow** zawiera również trzy metody, których można użyć w celu zawieszenia stanu wiersza podczas jego edytowania. Te metody to <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A>i <xref:System.Data.DataRow.CancelEdit%2A>.  
   
- Po zmodyfikowaniu wartości kolumn **DataRow** bezpośrednio **DataRow** zarządza wartości kolumny za pomocą **bieżącego**, **domyślne**, i **Oryginalnego** wersje wierszy. Oprócz tych wersji wierszy **BeginEdit**, **EndEdit —**, i **CancelEdit** metody za pomocą wersji czwarty wiersz: **Proponowane**. Aby uzyskać więcej informacji na temat wersji wierszy, zobacz [stany wiersza i wersje wiersza](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+ W przypadku bezpośredniej modyfikacji wartości kolumn w elemencie **DataRow** element **DataRow** zarządza wartościami kolumn przy użyciu **bieżących**, **domyślnych**i **oryginalnych** wersji wiersza. Oprócz tych wersji wiersza metody **elementu BeginEdit**, **EndEdit**i **CancelEdit** używają czwartej wersji wiersza: **Proponowane**. Aby uzyskać więcej informacji o wersjach wierszy, zobacz [Stany wiersza i wersje wierszy](row-states-and-row-versions.md).  
   
- **Proponowane** istnieje wersja wierszy podczas operacji edycji, który rozpoczyna się przez wywołanie metody **BeginEdit** i który kończy się za pomocą **EndEdit —** lub **CancelEdit,**  lub przez wywołanie **AcceptChanges** lub **RejectChanges**.  
+ **Proponowana** wersja wiersza istnieje podczas operacji edycji rozpoczynającej się od wywołania **elementu BeginEdit** i kończącą się za pomocą **EndEdit** lub **CancelEdit** lub przez wywołanie metody **AcceptChanges** lub **RejectChanges**.  
   
- Podczas operacji edycji można zastosować logikę walidacji do poszczególnych kolumn, oceniając **ProposedValue** w **ColumnChanged** zdarzenia **DataTable**. **ColumnChanged** przechowuje zdarzenia **DataColumnChangeEventArgs** , utrzymywać odwołania do kolumny, która zmienia się i **ProposedValue**. Po przeprowadzeniu oceny proponowana wartość, można go modyfikować lub anulowania edycji. Po zakończeniu edycji, wiersz przenosi się z **proponowane** stanu.  
+ Podczas operacji edycji można zastosować logikę walidacji do poszczególnych kolumn, oceniając **ProposedValue** w zdarzeniu **ColumnChanged** **elementu DataTable**. Zdarzenie **ColumnChanged** przechowuje **DataColumnChangeEventArgs** , które zachowuje odwołanie do kolumny, która jest zmieniana, oraz do **ProposedValue**. Po obliczeniu proponowanej wartości można ją zmodyfikować lub anulować edycję. Po zakończeniu edycji wiersz jest przenoszony z proponowanego stanu.  
   
- Możesz sprawdzić zmiany przez wywołanie metody **EndEdit —**, lub można go anulować, wywołując **CancelEdit**. Należy pamiętać, że podczas **EndEdit —** upewnij się, edytowania, **zestawu danych** faktycznie nie akceptuje zmian do momentu **AcceptChanges** jest wywoływana. Należy zauważyć, że jeśli wywołasz **AcceptChanges** przed Zakończono edytowanie za pomocą **EndEdit —** lub **CancelEdit**, edycji zostanie zakończona i **proponowane** wartości wierszy są akceptowane dla obu **bieżącego** i **oryginalnego** wersje wierszy. W ten sam sposób wywoływania **RejectChanges** kończy edycji i odrzuca **bieżącego** i **proponowane** wersje wierszy. Wywoływanie **EndEdit —** lub **CancelEdit** po wywołaniu **AcceptChanges** lub **RejectChanges** nie obowiązuje, ponieważ Edycja zawiera już została zakończona.  
+ Można potwierdzić zmiany przez wywołanie **EndEdit**lub anulować je przez wywołanie **CancelEdit**. Należy pamiętać, że podczas gdy **EndEdit** potwierdza modyfikacje, **zestaw danych** nie akceptuje zmian do momentu wywołania metody **AcceptChanges** . Należy również pamiętać, że w przypadku wywołania metody **AcceptChanges** przed zakończeniem edycji przy użyciu **EndEdit** lub **CancelEdit**, Edycja zostanie zakończona, a **proponowane** wartości wierszy są akceptowane zarówno dla **bieżącej** , jak i **oryginalnej** wersji wiersza. W ten sam sposób wywołanie **RejectChanges** powoduje zakończenie edycji i odrzucenie **bieżącej** i proponowanej wersji wiersza. Wywołanie **EndEdit** lub **CancelEdit** po wywołaniu metody **AcceptChanges** lub **RejectChanges** nie ma żadnego efektu, ponieważ edytowanie już się zakończyło.  
   
- Poniższy przykład pokazuje sposób użycia **BeginEdit** z **EndEdit —** i **CancelEdit**. Przykład sprawdza również **ProposedValue** w **ColumnChanged** zdarzeń i decyduje o tym, czy anulować edycji.  
+ W poniższym przykładzie pokazano, jak używać **elementu BeginEdit** z **EndEdit** i **CancelEdit**. Przykład sprawdza także **ProposedValue** w zdarzeniu **ColumnChanged** i decyduje o tym, czy anulować edycję.  
   
 ```vb  
 Dim workTable As DataTable = New DataTable  
@@ -91,6 +91,6 @@ protected static void OnColumnChanged(
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataRowVersion>
-- [Operowanie danymi w elemencie DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [Obsługa zdarzeń elementu DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Operowanie danymi w elemencie DataTable](manipulating-data-in-a-datatable.md)
+- [Obsługa zdarzeń elementu DataTable](handling-datatable-events.md)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

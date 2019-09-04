@@ -1,15 +1,15 @@
 ---
-title: Nakładania się (jednostka SQL)
+title: NAKŁADAją się (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
-ms.openlocfilehash: 9d909fb7efbb29619351cfc866b0f84381d0b80b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fef90beebf1c2723c767eaf5155542ad40d5fcb8
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760275"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249735"
 ---
-# <a name="overlaps-entity-sql"></a>Nakładania się (jednostka SQL)
+# <a name="overlaps-entity-sql"></a>NAKŁADAją się (Entity SQL)
 Określa, czy dwie kolekcje mają wspólne elementy.  
   
 ## <a name="syntax"></a>Składnia  
@@ -20,27 +20,27 @@ expression OVERLAPS expression
   
 ## <a name="arguments"></a>Argumenty  
  `expression`  
- Dowolne wyrażenie prawidłowe zapytanie, które zwraca kolekcję do porównania z tą kolekcją zwrócony z innego wyrażenia zapytania. Wszystkie wyrażenia musi być tego samego typu lub wspólnej podstawowej lub pochodny typ jako `expression`.  
+ Każde prawidłowe wyrażenie zapytania, które zwraca kolekcję do porównania z kolekcją zwróconą z innego wyrażenia zapytania. Wszystkie wyrażenia muszą być tego samego typu lub według `expression`wspólnego typu podstawowego lub pochodnego.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli dwie kolekcje mają wspólne elementy; w przeciwnym razie `false`.  
+ `true`Jeśli dwie kolekcje mają wspólne elementy; w przeciwnym razie. `false`  
   
 ## <a name="remarks"></a>Uwagi  
- Nakładania się zawiera funkcjonalnie równoważne do następujących:  
+ NAKŁADAjące się funkcje zapewniają funkcję równoważną z następującymi:  
   
  `EXISTS ( expression INTERSECT expression )`  
   
- Nakładania się jest jednym z [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatory zestawu. Wszystkie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatory zestawów są przetwarzane od lewej do prawej. Pierwszeństwo informacji dla [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zestaw operatorów, zobacz [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).  
+ Nakładanie się jest jednym z [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatorów zestawu. Wszystkie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatory zestawów są oceniane od lewej do prawej. Aby uzyskać informacje o pierwszeństwie dla [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatorów zestawu, zobacz [except](except-entity-sql.md).  
   
 ## <a name="example"></a>Przykład  
- Następujące zapytanie SQL jednostki używa operatora nakłada się na Określa, czy dwie kolekcje mają wspólną wartość. Zapytanie jest oparty na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić ten, wykonaj następujące kroki:  
+ Poniższe zapytanie Entity SQL używa operatora NAKŁADAnia się, aby określić, czy dwie kolekcje mają wspólną wartość. Zapytanie jest oparte na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić, wykonaj następujące kroki:  
   
-1. Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Wykonaj czynności opisane w [temacie How to: Wykonaj zapytanie zwracające wyniki](../how-to-execute-a-query-that-returns-structuraltype-results.md)StructuralType.  
   
-2. Przekaż poniższe zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
+2. Przekaż następujące zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
   
  [!code-csharp[DP EntityServices Concepts 2#OVERLAPS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#overlaps)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Odwołanie do jednostki SQL](entity-sql-reference.md)

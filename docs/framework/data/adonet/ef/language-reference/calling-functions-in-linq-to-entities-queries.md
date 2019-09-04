@@ -2,42 +2,42 @@
 title: Wywoływanie funkcji w zapytaniach składnika LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
-ms.openlocfilehash: 6fa1a7204a91a62c30e8683c449cc2be44132b4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 267bb393d9e75c66eb18139e8897da34bd86e159
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61605785"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251263"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>Wywoływanie funkcji w zapytaniach składnika LINQ to Entities
-Tematy w tej sekcji opisano sposób wywołania funkcji w składniku LINQ do zapytań jednostki.  
+W tematach w tej sekcji opisano sposób wywoływania funkcji w LINQ to Entities zapytaniach.  
   
- <xref:System.Data.Objects.EntityFunctions> i <xref:System.Data.Objects.SqlClient.SqlFunctions> klasy zapewniają dostęp do canonical i funkcje bazy danych jako część programu Entity Framework. Aby uzyskać więcej informacji, zobacz [jak: Wywoływanie funkcji kanonicznych](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-canonical-functions.md) i [jak: Wywoływanie funkcji bazy danych](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-database-functions.md).  
+ Klasy <xref:System.Data.Objects.EntityFunctions> i<xref:System.Data.Objects.SqlClient.SqlFunctions> zapewniają dostęp do funkcji kanonicznych i baz danych w ramach Entity Framework. Aby uzyskać więcej informacji, zobacz [jak: Wywołaj funkcje](how-to-call-canonical-functions.md) kanoniczne i [instrukcje: Wywołaj funkcje](how-to-call-database-functions.md)bazy danych.  
   
- Proces wywoływania funkcji niestandardowej wymaga trzy podstawowe kroki:  
+ Proces wywoływania funkcji niestandardowej wymaga wykonania trzech podstawowych czynności:  
   
-1. Zdefiniuj funkcję w model koncepcyjny lub deklarowania funkcji w modelu magazynu.  
+1. Zdefiniuj funkcję w modelu koncepcyjnym lub Zadeklaruj funkcję w modelu magazynu.  
   
-2. Dodaj metodę do swojej aplikacji i Mapuj na funkcję w modelu z <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>.  
+2. Dodaj metodę do aplikacji i zamapuj ją na funkcję w modelu z <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>.  
   
-3. Wywołanie funkcji w zapytaniu składnika LINQ to Entities.  
+3. Wywołaj funkcję w kwerendzie LINQ to Entities.  
   
- Aby uzyskać więcej informacji zobacz Tematy w tej sekcji.  
+ Więcej informacji znajduje się w tematach w tej sekcji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: Wywoływanie funkcji kanonicznych](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-canonical-functions.md)  
+ [Instrukcje: Wywołaj funkcje kanoniczne](how-to-call-canonical-functions.md)  
   
- [Instrukcje: Wywoływanie funkcji bazy danych](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-database-functions.md)  
+ [Instrukcje: Wywołania funkcji bazy danych](how-to-call-database-functions.md)  
   
- [Instrukcje: Wywoływanie niestandardowych funkcji bazy danych](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-custom-database-functions.md)  
+ [Instrukcje: Wywołaj niestandardowe funkcje bazy danych](how-to-call-custom-database-functions.md)  
   
- [Instrukcje: Wywoływanie funkcji definiowanych przez Model w zapytaniach](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md)  
+ [Instrukcje: Wywoływanie funkcji zdefiniowanych przez model w zapytaniach](how-to-call-model-defined-functions-in-queries.md)  
   
- [Instrukcje: Wywoływanie funkcji definiowanych przez Model jako metod obiektu](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-as-object-methods.md)  
+ [Instrukcje: Wywołaj funkcje zdefiniowane przez model jako metody obiektów](how-to-call-model-defined-functions-as-object-methods.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zapytania w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
-- [Funkcje Canonical](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
-- [Omówienie pliku edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [Zapytania w składniku LINQ to Entities](queries-in-linq-to-entities.md)
+- [Funkcje Canonical](canonical-functions.md)
+- [Plik. edmx — Omówienie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Instrukcje: Definiowanie funkcji niestandardowych w modelu koncepcyjnym](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))

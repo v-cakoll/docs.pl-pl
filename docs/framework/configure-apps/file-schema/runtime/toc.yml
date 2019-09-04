@@ -26,12 +26,14 @@
                   href: bindingredirect-element.md
                 - name: <codeBase> Element
                   href: codebase-element.md
+                - name: <publisherPolicy> Element
+                  href: publisherpolicy-element.md
             - name: <probing> Element
               href: probing-element.md
-            - name: <publisherPolicy> Element
-              href: publisherpolicy-element.md
             - name: <qualifyAssembly> Element
               href: qualifyassembly-element.md
+            - name: <supportPortability> Element
+              href: supportportability-element.md
         - name: <bypassTrustedAppStrongNames> Element
           href: bypasstrustedappstrongnames-element.md
         - name: <CompatSortNLSVersion> Element
@@ -82,23 +84,6 @@
           href: relativebindforresources-element.md
         - name: <shadowCopyVerifyByTimestamp> Element
           href: shadowcopyverifybytimestamp-element.md
-        - name: <supportPortability> Element
-          href: supportportability-element.md
-        - name: '<system.runtime.caching>, element (ustawienia pamięci podręcznej)'
-          href: system-runtime-caching-element-cache-settings.md
-          items:
-            - name: '<memoryCache>, element (ustawienia pamięci podręcznej)'
-              href: memorycache-element-cache-settings.md
-              items:
-                - name: '<namedCaches>, element (ustawienia pamięci podręcznej)'
-                  href: namedcaches-element-cache-settings.md
-                  items:
-                    - name: '<add>, element dla <namedCaches>'
-                      href: add-element-for-namedcaches.md
-                    - name: '<clear>, element dla <namedCaches>'
-                      href: clear-element-for-namedcaches.md
-                    - name: '<remove>, element dla <namedCaches>'
-                      href: remove-element-for-namedcaches.md
         - name: '<Thread_UseAllCpuGroups>, element'
           href: thread-useallcpugroups-element.md
         - name: <ThrowUnobservedTaskExceptions> Element
@@ -111,3 +96,18 @@
           href: userandomizedstringhashalgorithm-element.md
         - name: <UseSmallInternalThreadStacks> Element
           href: usesmallinternalthreadstacks-element.md
+    - name: '<system.runtime.caching>, element (ustawienia pamięci podręcznej)'
+      href: system-runtime-caching-element-cache-settings.md
+      items:
+        - name: '<memoryCache>, element (ustawienia pamięci podręcznej)'
+          href: memorycache-element-cache-settings.md
+          items:
+            - name: '<namedCaches>, element (ustawienia pamięci podręcznej)'
+              href: namedcaches-element-cache-settings.md
+              items:
+                - name: '<add>, element dla <namedCaches>'
+                  href: add-element-for-namedcaches.md
+                - name: '<clear>, element dla <namedCaches>'
+                  href: clear-element-for-namedcaches.md
+                - name: '<remove>, element dla <namedCaches>'
+                  href: remove-element-for-namedcaches.md

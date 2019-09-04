@@ -160,8 +160,6 @@
           href: core/tutorials/with-visual-studio.md
         - name: Tworzenie aplikacji Hello World w języku Visual Basic na platformie .NET Core w programie Visual Studio 2017
           href: core/tutorials/vb-with-visual-studio.md
-        - name: Tworzenie aplikacji platformy .NET Core za pomocą wtyczek
-          href: core/tutorials/creating-app-with-plugin-support.md
         - name: 'Debugowanie aplikacji Hello world w języku C# lub Visual Basic .NET Core przy użyciu programu Visual Studio 2017'
           href: core/tutorials/debugging-with-visual-studio.md
         - name: Publikowanie aplikacji Hello world za pomocą programu Visual Studio 2017
@@ -219,6 +217,8 @@
           href: core/tutorials/testing-with-cli.md
         - name: Tworzenie bibliotek za pomocą narzędzi międzyplatformowych
           href: core/tutorials/libraries.md
+        - name: Tworzenie aplikacji platformy .NET Core za pomocą wtyczek
+          href: core/tutorials/creating-app-with-plugin-support.md
         - name: Tworzenie aplikacji ASP.NET Core
           href: core/tutorials/aspnet-core.md
         - name: Hostowanie platformy .NET Core z kodu natywnego

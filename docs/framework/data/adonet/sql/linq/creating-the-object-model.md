@@ -2,40 +2,40 @@
 title: Tworzenie modelu obiektu
 ms.date: 03/30/2017
 ms.assetid: 27afce86-9b1d-45fb-8e0b-636bf671a236
-ms.openlocfilehash: 0f1a0d035f2b11f33a9899ededd876155d45de3c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 68fb4ce79b5ee2277821e8a06ceab910cf35480a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743576"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247714"
 ---
 # <a name="creating-the-object-model"></a>Tworzenie modelu obiektu
-Można utworzyć modelu obiektu z istniejącej bazy danych i używania tego modelu w stanie domyślnym. Można również dostosować wiele aspektów modelu i jego zachowanie.  
+Model obiektów można utworzyć na podstawie istniejącej bazy danych i użyć modelu w stanie domyślnym. Można również dostosować wiele aspektów modelu i jego zachowanie.  
   
- Jeśli używasz programu Visual Studio, można użyć Object Relational Designer do tworzenia modelu obiektu.  
+ Jeśli używasz programu Visual Studio, możesz użyć Object Relational Designer, aby utworzyć model obiektu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: Generowanie modelu obiektu w języku Visual Basic lubC#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
- W tym artykule opisano sposób użycia narzędzia wiersza polecenia SQLMetal. Udostępnia także link do Object Relational Designer dla użytkowników programu Visual Studio  
+ [Instrukcje: Generuj model obiektów w Visual Basic lubC#](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
+ Opisuje sposób korzystania z narzędzia wiersza polecenia SQLMetal. Zawiera również link do Object Relational Designer użytkowników programu Visual Studio  
   
- [Instrukcje: Generowanie modelu obiektu jako zewnętrznego pliku](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
- Opisuje sposób generowania pliku mapowanie zewnętrzne zamiast mapowanie oparte na atrybutach.  
+ [Instrukcje: Generuj model obiektów jako plik zewnętrzny](how-to-generate-the-object-model-as-an-external-file.md)  
+ Opisuje sposób generowania zewnętrznego pliku mapowania zamiast korzystania z mapowania opartego na atrybutach.  
   
- [Instrukcje: Generowanie kodu dostosowane przez zmodyfikowanie pliku DBML](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-customized-code-by-modifying-a-dbml-file.md)  
- W tym artykule opisano sposób generowania kodu języka Visual Basic lub C# kodu z pliku metadanych DBML.  
+ [Instrukcje: Generuj dostosowany kod, modyfikując plik DBML](how-to-generate-customized-code-by-modifying-a-dbml-file.md)  
+ Opisuje sposób generowania Visual Basic lub C# kodu z pliku metadanych DBML.  
   
- [Instrukcje: Weryfikacja DBML i zewnętrznych plików mapowania](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)  
- W tym artykule opisano sposób sprawdzania poprawności mapowania plików, które zostały zmodyfikowane (zaawansowane).  
+ [Instrukcje: Weryfikowanie DBML i zewnętrznych plików mapowania](how-to-validate-dbml-and-external-mapping-files.md)  
+ Opisuje sposób sprawdzania poprawności plików mapowania, które zostały zmodyfikowane (Zaawansowane).  
   
- [Instrukcje: Umożliwianie serializacji jednostek](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)  
- W tym artykule opisano sposób dodawania odpowiednich atrybutów, które mają umożliwianie serializacji jednostek.  
+ [Instrukcje: Umożliwianie serializacji jednostek](how-to-make-entities-serializable.md)  
+ Opisuje sposób dodawania odpowiednich atrybutów w celu serializacji jednostek.  
   
- [Instrukcje: Dostosowywanie klas jednostek za pomocą edytora kodu](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)  
- W tym artykule opisano sposób używania edytora kodu do pisania własnego kodu mapowania lub dostosować program code, który został wygenerowany automatycznie.  
+ [Instrukcje: Dostosowywanie klas jednostek przy użyciu edytora kodu](how-to-customize-entity-classes-by-using-the-code-editor.md)  
+ Opisuje sposób użycia edytora kodu do pisania własnego kodu mapowania lub dostosowywania kodu, który został wygenerowany automatycznie.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Model obiektu LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
- Zawiera szczegółowe informacje na temat [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelu obiektów.  
+ [Model obiektu LINQ to SQL](the-linq-to-sql-object-model.md)  
+ Zawiera szczegółowe informacje o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelu obiektów.  
   
- [Typowe kroki dotyczące korzystania z LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/typical-steps-for-using-linq-to-sql.md)  
- Opisano typowe czynności, które należy wykonać, aby zaimplementować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji.
+ [Typowe kroki dotyczące korzystania z LINQ to SQL](typical-steps-for-using-linq-to-sql.md)  
+ Wyjaśnia typowe kroki, które należy wykonać, aby zaimplementować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikację.

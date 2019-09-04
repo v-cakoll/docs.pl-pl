@@ -2,12 +2,12 @@
 title: 'Instrukcje: Zmień kolejność pól rozdzielanego pliku (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
-ms.openlocfilehash: 1507d0f743070f15b8e64d5dcfb1b9499470b123
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 31cb7b936f58653e6223501f3b03cd9472b92453
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592686"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253459"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>Instrukcje: Zmień kolejność pól rozdzielanego pliku (LINQ) (C#)
 Plik wartości rozdzielanych przecinkami (CSV) to plik tekstowy, który jest często używany do przechowywania danych arkusza kalkulacyjnego lub innych danych tabelarycznych, które są reprezentowane przez wiersze i kolumny. Za pomocą <xref:System.String.Split%2A> metody do rozdzielania pól, można bardzo łatwo wysyłać zapytania do plików CSV i manipulować nimi przy użyciu LINQ. W rzeczywistości ta sama technika może służyć do zmiany kolejności części dowolnego strukturalnego wiersza tekstu. nie jest to ograniczone do plików CSV.  
@@ -18,7 +18,7 @@ Plik wartości rozdzielanych przecinkami (CSV) to plik tekstowy, który jest cz�
   
 1. Skopiuj następujące wiersze do zwykłego pliku tekstowego o nazwie spreadsheet1. csv. Zapisz plik w folderze projektu.  
   
-    ```  
+    ```csv  
     Adams,Terry,120  
     Fakhouri,Fadi,116  
     Feng,Hanying,117  

@@ -2,29 +2,29 @@
 title: Funkcje systemowe
 ms.date: 03/30/2017
 ms.assetid: b7c71b58-09e6-44ce-a3e5-a0fdb892fb86
-ms.openlocfilehash: 135154d2f5e26cdf7f2e41e8ed2b561bb75f377e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 552f374bc1824a16fb323cd19abe79c1914295a7
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879453"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248236"
 ---
 # <a name="system-functions"></a>Funkcje systemowe
-.NET Framework Data Provider for SQL Server (SqlClient) udostępnia następujące funkcje systemu:  
+Dostawca danych .NET Framework dla SQL Server (SqlClient) udostępnia następujące funkcje systemowe:  
   
 |Funkcja|Opis|  
 |--------------|-----------------|  
-|`CHECKSUM (` `value`, [`value`, [`value`]]`)`|Zwraca wartość sumy kontrolnej. `CHECKSUM` jest przeznaczony do użycia podczas tworzenia indeksów skrótu.<br /><br /> **Argumenty**<br /><br /> `value`: A `Boolean`, `Byte`, `Int16`, `Int32`, `Int64`, `Single`, `Decimal`, `Double`, `DateTime`, `String`, `Binary`, lub `Guid`. Można określić wartości jeden, dwa lub trzy.<br /><br /> **Wartość zwracana**<br /><br /> Wartość bezwzględna z określonego wyrażenia.<br /><br /> **Przykład**<br /><br /> `SqlServer.CHECKSUM(10,100,1000.0)`|  
-|`CURRENT_TIMESTAMP ()`|Generuje bieżącą datę i godzinę w formacie wewnętrznych programu SQL Server dla `DateTime` wartości z dokładnością do 7 w programie SQL Server 2008 i dokładność 3 w programie SQL Server 2005.<br /><br /> **Wartość zwracana**<br /><br /> Bieżącej systemowej daty i godziny jako `DateTime`.<br /><br /> **Przykład**<br /><br /> `SqlServer.CURRENT_TIMESTAMP()`|  
+|`CHECKSUM (` `value`, [`value`, [`value`]]`)`|Zwraca wartość sumy kontrolnej. `CHECKSUM`jest przeznaczony do użycia podczas tworzenia indeksów skrótu.<br /><br /> **Argumenty**<br /><br /> `value`: A `Boolean`, `Byte`, ,`Int16` ,,`DateTime`, ,,,,lub.`Decimal` `Binary` `String` `Single` `Int32` `Int64` `Double` `Guid` Można określić jedną, dwie lub trzy wartości.<br /><br /> **Wartość zwracana**<br /><br /> Wartość bezwzględna określonego wyrażenia.<br /><br /> **Przykład**<br /><br /> `SqlServer.CHECKSUM(10,100,1000.0)`|  
+|`CURRENT_TIMESTAMP ()`|Tworzy bieżącą datę i godzinę w SQL Server wewnętrznym formacie dla `DateTime` wartości z dokładnością 7 w SQL Server 2008 i dokładnością 3 w SQL Server 2005.<br /><br /> **Wartość zwracana**<br /><br /> Bieżąca data i godzina systemowa jako `DateTime`.<br /><br /> **Przykład**<br /><br /> `SqlServer.CURRENT_TIMESTAMP()`|  
 |`CURRENT_ USER``()`|Zwraca nazwę bieżącego użytkownika.<br /><br /> **Wartość zwracana**<br /><br /> An ASCII `String`.<br /><br /> **Przykład**<br /><br /> `SqlServer.CURRENT_USER()`|  
-|`DATALENGTH` `(` `expression` `)`|Zwraca liczbę bajtów reprezentujących dowolne wyrażenie.<br /><br /> **Argumenty**<br /><br /> `expression`: A `Boolean`, `Byte`, `Int16`, `Int32`, `Int64`, `Single`, `Decimal`, `Double`, `DateTime`, `Time`, `DateTimeOffset`, `String`, `Binary`, lub `Guid`.<br /><br /> **Wartość zwracana**<br /><br /> Rozmiar właściwości `Int32`.<br /><br /> **Przykład**<br /><br /> `SELECT VALUE SqlServer.DATALENGTH(P.Name)FROM`<br /><br /> `AdventureWorksEntities.Product AS P`|  
+|`DATALENGTH` `(` `expression` `)`|Zwraca liczbę bajtów użytych do reprezentowania dowolnego wyrażenia.<br /><br /> **Argumenty**<br /><br /> `expression`: A `Boolean`, `Byte`, ,`Int16` ,,`Time`, ,,`String`, ,`Binary`, ,`DateTimeOffset`lub `Int32` `Int64` `Single` `Decimal` `Double` `DateTime` `Guid`.<br /><br /> **Wartość zwracana**<br /><br /> Rozmiar właściwości jako `Int32`.<br /><br /> **Przykład**<br /><br /> `SELECT VALUE SqlServer.DATALENGTH(P.Name)FROM`<br /><br /> `AdventureWorksEntities.Product AS P`|  
 |`HOST_NAME()`|Zwraca nazwę stacji roboczej.<br /><br /> **Wartość zwracana**<br /><br /> Unicode `String`.<br /><br /> **Przykład**<br /><br /> `SqlServer.HOST_NAME()`|  
-|`ISDATE(` `expression` `)`|Określa, czy wyrażenie wejściowe jest prawidłową datą.<br /><br /> **Argumenty**<br /><br /> `expression`: A `Boolean`, `Byte`, `Int16`, `Int32`, `Int64`, `Single`, `Decimal`, `Double`, `DateTime`, `Time`, `DateTimeOffset`, `String`, `Binary`, lub `Guid`.<br /><br /> **Wartość zwracana**<br /><br /> `Int32`. Jeden (1) Jeśli wyrażenie danych wejściowych jest prawidłową datą. Zero (0) w przeciwnym razie.<br /><br /> **Przykład**<br /><br /> `SqlServer.ISDATE('1/1/2006')`|  
-|`ISNUMERIC(` `expression` `)`|Określa, czy wyrażenie jest prawidłowy typ liczbowy.<br /><br /> **Argumenty**<br /><br /> `expression`: A `Boolean`, `Byte`, `Int16`, `Int32`, `Int64`, `Single`, `Decimal`, `Double`, `DateTime`, `Time`, `DateTimeOffset`, `String`, `Binary`, lub `Guid`.<br /><br /> **Wartość zwracana**<br /><br /> `Int32`. Jeden (1) Jeśli wyrażenie danych wejściowych jest prawidłową datą. Zero (0) w przeciwnym razie.<br /><br /> **Przykład**<br /><br /> `SqlServer.ISNUMERIC('21')`|  
-|`NEWID()`|Tworzy wartość Unikatowy identyfikator Guid typu.<br /><br /> **Wartość zwracana**<br /><br /> A `Guid`.<br /><br /> **Przykład**<br /><br /> `SqlServer.NEWID()`|  
-|`USER_NAME(` `id` `)`|Zwraca numer identyfikacyjny określony nazwa użytkownika bazy danych.<br /><br /> **Argumenty**<br /><br /> `expression`: `Int32` Numeru identyfikacyjnego skojarzonych z użytkownikiem bazy danych.<br /><br /> **Wartość zwracana**<br /><br /> Unicode `String`.<br /><br /> **Przykład**<br /><br /> `SqlServer.USER_NAME(0)`|  
+|`ISDATE(` `expression` `)`|Określa, czy wyrażenie wejściowe jest prawidłową datą.<br /><br /> **Argumenty**<br /><br /> `expression`: A `Boolean`, `Byte`, ,`Int16` ,,`Time`, ,,`String`, ,`Binary`, ,`DateTimeOffset`lub `Int32` `Int64` `Single` `Decimal` `Double` `DateTime` `Guid`.<br /><br /> **Wartość zwracana**<br /><br /> A `Int32`. Jeden (1), jeśli wyrażenie wejściowe jest prawidłową datą. Zero (0) w przeciwnym razie.<br /><br /> **Przykład**<br /><br /> `SqlServer.ISDATE('1/1/2006')`|  
+|`ISNUMERIC(` `expression` `)`|Określa, czy wyrażenie jest prawidłowym typem liczbowym.<br /><br /> **Argumenty**<br /><br /> `expression`: A `Boolean`, `Byte`, ,`Int16` ,,`Time`, ,,`String`, ,`Binary`, ,`DateTimeOffset`lub `Int32` `Int64` `Single` `Decimal` `Double` `DateTime` `Guid`.<br /><br /> **Wartość zwracana**<br /><br /> A `Int32`. Jeden (1), jeśli wyrażenie wejściowe jest prawidłową datą. Zero (0) w przeciwnym razie.<br /><br /> **Przykład**<br /><br /> `SqlServer.ISNUMERIC('21')`|  
+|`NEWID()`|Tworzy unikatową wartość typu GUID.<br /><br /> **Wartość zwracana**<br /><br /> A `Guid`.<br /><br /> **Przykład**<br /><br /> `SqlServer.NEWID()`|  
+|`USER_NAME(` `id` `)`|Zwraca nazwę użytkownika bazy danych z określonego numeru identyfikacyjnego.<br /><br /> **Argumenty**<br /><br /> `expression`: Numer `Int32` identyfikacyjny skojarzony z użytkownikiem bazy danych.<br /><br /> **Wartość zwracana**<br /><br /> Unicode `String`.<br /><br /> **Przykład**<br /><br /> `SqlServer.USER_NAME(0)`|  
   
- Aby uzyskać więcej informacji o funkcjach ciągu, które obsługuje klient SQL zobacz dokumentację dla używanej wersji programu SQL Server określonego w manifeście dostawcy SqlClient:  
+ Aby uzyskać więcej informacji na temat funkcji ciągów obsługiwanych przez program SqlClient, zapoznaj się z dokumentacją dla SQL Server wersji określonej w manifeście dostawcy SqlClient:  
   
 |SQL Server 2000|SQL Server 2005|SQL Server 2008|  
 |---------------------|---------------------|---------------------|  
@@ -32,5 +32,5 @@ ms.locfileid: "61879453"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Jednostki języka SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
-- [Klient SQL dla funkcji programu Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)
+- [Jednostki języka SQL](./language-reference/entity-sql-language.md)
+- [Klient SQL dla funkcji programu Entity Framework](sqlclient-for-ef-functions.md)

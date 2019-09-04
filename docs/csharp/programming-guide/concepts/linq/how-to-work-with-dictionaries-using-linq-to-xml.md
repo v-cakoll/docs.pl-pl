@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Praca ze słownikami przy użyciu LINQ to XML (C#)'
+title: 'Instrukcje: Pracuj ze słownikami przy użyciuC#LINQ to XML ()'
 ms.date: 07/20/2015
 ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
-ms.openlocfilehash: 196720ff9c17e62f8da9e65e1b8c481fed5074cc
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 55512e6039010d74d390c805c119935c436f9834
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484717"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253242"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>Instrukcje: Praca ze słownikami przy użyciu LINQ to XML (C#)
-Często jest to wygodne przekonwertować różne typy struktur danych XML i XML do innych struktur danych. W tym temacie przedstawiono określoną implementację tego podejścia ogólne, konwertując <xref:System.Collections.Generic.Dictionary%602> XML i na odwrót.  
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>Instrukcje: Pracuj ze słownikami przy użyciuC#LINQ to XML ()
+Często wygodnie jest przekonwertować różne struktury danych na XML, a następnie XML z powrotem do innych struktur danych. W tym temacie przedstawiono określoną implementację ogólnego podejścia poprzez konwersję <xref:System.Collections.Generic.Dictionary%602> do formatu XML i z powrotem.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto formularza konstrukcja funkcjonalna, w którym zapytanie projektów nowych <xref:System.Xml.Linq.XElement> obiektów i kolekcji wynikowy jest przekazywany jako argument do konstruktora obiektu głównego <xref:System.Xml.Linq.XElement> obiektu.  
+ W tym przykładzie stosowana jest forma konstrukcji funkcjonalnej, w której zapytania projektują nowe <xref:System.Xml.Linq.XElement> obiekty, a wynikowa kolekcja jest przenoszona jako argument do konstruktora obiektu głównego. <xref:System.Xml.Linq.XElement>  
   
 ```csharp  
 Dictionary<string, string> dict = new Dictionary<string, string>();  
@@ -59,10 +59,9 @@ foreach (string str in dict.Keys)
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```output  
 Child1:Value1  
 Child2:Value2  
 Child3:Value3  
 Child4:Value4  
 ```  
-  

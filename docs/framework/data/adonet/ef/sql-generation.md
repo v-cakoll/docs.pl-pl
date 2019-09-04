@@ -2,30 +2,30 @@
 title: Generowanie kodu SQL
 ms.date: 03/30/2017
 ms.assetid: 0e16aa02-d458-4418-a765-58b42aad9315
-ms.openlocfilehash: 108a68f74849c7fa1418775c2a37db06d9d947ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c18e88967fcba2b8414bfc171412eba908002b3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879155"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248401"
 ---
 # <a name="sql-generation"></a>Generowanie kodu SQL
-Podczas wpisywania dostawcę dla [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], musi przetłumaczyć [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] polecenia drzewa w SQL Server, który może zrozumieć konkretnej bazy danych, takich jak języka Transact-SQL dla programu SQL Server lub PL/SQL dla bazy danych Oracle. W tej sekcji dowiesz sposobu tworzenia składnika generowania SQL (dla zapytań SELECT) dla [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dostawcy. Dla informacji na temat wstawiania, aktualizacji i usuwanie zapytań, zobacz [modyfikowanie generowania kodu SQL](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md).  
+Podczas pisania dostawcy dla programu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]należy przetłumaczyć [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] drzewa poleceń na SQL, które może zrozumieć konkretna baza danych, na przykład Transact-SQL dla SQL Server lub pl/SQL dla firmy Oracle. W tej sekcji dowiesz się, jak opracowywać składnik generacji SQL (dla wybranych zapytań) dla [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dostawcy. Aby uzyskać informacje na temat zapytań INSERT, Update i DELETE, zobacz [Modyfikowanie generacji SQL](modification-sql-generation.md).  
   
- Aby dowiedzieć się w tej sekcji, należy się zapoznać z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] i Model dostawcy ADO.NET. Należy również mieć świadomość drzew poleceń i <xref:System.Data.Common.CommandTrees.DbExpression>.  
+ Aby zrozumieć tę sekcję, należy zapoznać się z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] modelem dostawcy usług i ADO.NET. Należy również zrozumieć drzewa poleceń i <xref:System.Data.Common.CommandTrees.DbExpression>.  
   
-## <a name="the-role-of-the-sql-generation-module"></a>Rola modułu generowania SQL  
- Moduł generowania SQL z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dostawca tłumaczy drzewo poleceń danego zapytania na pojedynczą instrukcję SQL SELECT, który jest przeznaczony dla SQL:1999-zgodności bazy danych. Wygenerowany SQL powinna few zagnieżdżać zapytań jak to możliwe. Moduł generowania SQL nie uprościć drzewo poleceń danych wyjściowych zapytania. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Będziesz to robić, na przykład przez wyeliminowanie sprzężenia i zwijanie filtr kolejnych węzłów.  
+## <a name="the-role-of-the-sql-generation-module"></a>Rola modułu generacji SQL  
+ Moduł generowania kodu SQL [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dostawcy tłumaczy określone drzewo poleceń zapytania na pojedynczą instrukcję SQL SELECT, która jest przeznaczona dla bazy danych zgodnej z programem SQL: 1999. Wygenerowany kod SQL powinien zawierać co najmniej kilka zagnieżdżonych zapytań. Moduł generowania kodu SQL nie powinien uprościć drzewa poleceń kwerendy wyjściowej. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Wykona to na przykład przez wyeliminowanie sprzężeń i zwijanie kolejnych węzłów filtru.  
   
- <xref:System.Data.Common.DbProviderServices> Klasa jest punktem wyjścia do uzyskiwania dostępu do warstwy generowania SQL, aby przekonwertować drzew poleceń do <xref:System.Data.Common.DbCommand>.  
+ Klasa jest punktem początkowym uzyskiwania dostępu do warstwy generowania kodu SQL w celu konwertowania drzew poleceń <xref:System.Data.Common.DbCommand>na. <xref:System.Data.Common.DbProviderServices>  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Kształt drzew poleceń](../../../../../docs/framework/data/adonet/ef/the-shape-of-the-command-trees.md)  
+ [Kształt drzew poleceń](the-shape-of-the-command-trees.md)  
   
- [Generowanie kodu SQL na podstawie drzew poleceń — najlepsze praktyki](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md)  
+ [Generowanie kodu SQL na podstawie drzew poleceń — najlepsze praktyki](generating-sql-from-command-trees-best-practices.md)  
   
- [Generowanie kodu SQL w dostawcy próbki](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)  
+ [Generowanie kodu SQL w dostawcy próbki](sql-generation-in-the-sample-provider.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Pisanie dostawcy danych programu Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+- [Pisanie dostawcy danych programu Entity Framework](writing-an-ef-data-provider.md)

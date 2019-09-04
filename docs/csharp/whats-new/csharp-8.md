@@ -1,17 +1,17 @@
 ---
 title: Co nowego w C# 8,0 — C# Przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8,0. Ten artykuł jest aktualny w wersji zapoznawczej 5.
-ms.date: 02/12/2019
-ms.openlocfilehash: 14c86fe4b1ecd1c89ebbbb082c5c9956bc51e03e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.date: 09/02/2019
+ms.openlocfilehash: 7210f2e978f307b3ecef2eff272fea0d19025de6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105512"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252900"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego w C# 8,0
 
-Istnieje wiele ulepszeń C# języka, który można wypróbować już. 
+Istnieje wiele ulepszeń C# języka, który można wypróbować już.
 
 - [Elementy członkowskie tylko do odczytu](#readonly-members)
 - [Domyślne elementy członkowskie interfejsu](#default-interface-members)
@@ -26,6 +26,7 @@ Istnieje wiele ulepszeń C# języka, który można wypróbować już.
 - [Typy referencyjne dopuszczające wartość null](#nullable-reference-types)
 - [Strumienie asynchroniczne](#asynchronous-streams)
 - [Indeksy i zakresy](#indices-and-ranges)
+- [Ulepszenie interpolowanych ciągów Verbatim](#enhancement-of-interpolated-verbatim-strings)
 
 > [!NOTE]
 > Ten artykuł został ostatnio zaktualizowany do C# wersji 8,0 Preview 5.
@@ -96,7 +97,7 @@ Domyślne elementy członkowskie interfejsu mają wpływ na wiele scenariuszy i 
 
 C#8,0 rozwija ten słownik, aby można było używać więcej wyrażeń wzorca w większej liczbie miejsc w kodzie. Te funkcje należy wziąć pod uwagę, gdy dane i funkcje są osobne. Rozważ dopasowanie wzorców, gdy algorytmy zależą od faktu innego niż typ środowiska uruchomieniowego obiektu. Techniki te zapewniają inny sposób tworzenia projektów.
 
-Oprócz nowych wzorców w nowych miejscach, C# 8,0 dodaje cykliczne **wzorce**. Wynikiem dowolnego wyrażenia wzorca jest wyrażenie. Wzorzec cykliczny jest po prostu wyrażeniem wzorca zastosowanym do danych wyjściowych innego wyrażenia wzorca.
+Oprócz nowych wzorców w nowych miejscach, C# 8,0 dodaje **cykliczne wzorce**. Wynikiem dowolnego wyrażenia wzorca jest wyrażenie. Wzorzec cykliczny jest po prostu wyrażeniem wzorca zastosowanym do danych wyjściowych innego wyrażenia wzorca.
 
 ### <a name="switch-expressions"></a>Przełącz wyrażenia
 
@@ -186,7 +187,7 @@ Dopasowanie wzorca tworzy zwięzłą składnię do wyrażania tego algorytmu.
 
 ### <a name="tuple-patterns"></a>Wzorce krotek
 
-Niektóre algorytmy zależą od wielu danych wejściowych. **Wzorce krotek** umożliwiają przełączanie na podstawie wielu wartości wyrażonych jako krotka [](../tuples.md).  Poniższy kod przedstawia wyrażenie Switch dla *skały, papieru, nożyczków*:
+Niektóre algorytmy zależą od wielu danych wejściowych. **Wzorce krotek** umożliwiają przełączanie na podstawie wielu wartości wyrażonych jako [krotka](../tuples.md).  Poniższy kod przedstawia wyrażenie Switch dla *skały, papieru, nożyczków*:
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -206,7 +207,7 @@ Komunikaty wskazują zwycięzcę. Przypadek odrzucania reprezentuje trzy kombina
 
 ### <a name="positional-patterns"></a>Wzorce pozycyjne
 
-Niektóre typy obejmują `Deconstruct` metodę, która dekonstrukcjauje swoje właściwości do zmiennych dyskretnych. Gdy metoda jest dostępna, można użyć wzorców pozycyjnych do inspekcji właściwości obiektu i używania tych właściwości dla wzorca. `Deconstruct`  Rozważmy następujące `Point` klasy, które `Deconstruct` obejmują metodę tworzenia zmiennych dyskretnych dla `X` i `Y`:
+Niektóre typy obejmują `Deconstruct` metodę, która dekonstrukcjauje swoje właściwości do zmiennych dyskretnych. Gdy metoda jest dostępna, można użyć **wzorców pozycyjnych** do inspekcji właściwości obiektu i używania tych właściwości dla wzorca. `Deconstruct`  Rozważmy następujące `Point` klasy, które `Deconstruct` obejmują metodę tworzenia zmiennych dyskretnych dla `X` i `Y`:
 
 ```csharp
 public class Point
@@ -236,7 +237,7 @@ public enum Quadrant
 }
 ```
 
-Poniższa metoda używa **wzorca pozycyjnego** do wyodrębnienia wartości `x` i `y`. Następnie używa `when` klauzuli do `Quadrant` określenia punktu:
+Poniższa metoda używa **wzorca pozycyjnego** do wyodrębnienia wartości `x` i. `y` Następnie używa `when` klauzuli do `Quadrant` określenia punktu:
 
 ```csharp
 static Quadrant GetQuadrant(Point point) => point switch
@@ -332,7 +333,7 @@ Deklaracja z modyfikatorem nie może implementować żadnych interfejsów i dlat
 
 ## <a name="nullable-reference-types"></a>Typy referencyjne dopuszczające wartość null
 
-Wewnątrz bezwartościowego kontekstu adnotacji Każda zmienna typu referencyjnego jest uważana za typ referencyjny, który nie **ma wartości null**. Aby wskazać, że zmienna może mieć wartość null, należy dołączyć nazwę typu z, `?` aby zadeklarować zmienną jako **typ referencyjny dopuszczający wartość null**.
+Wewnątrz bezwartościowego kontekstu adnotacji Każda zmienna typu referencyjnego jest uważana za **typ referencyjny, który nie ma wartości null**. Aby wskazać, że zmienna może mieć wartość null, należy dołączyć nazwę typu z, `?` aby zadeklarować zmienną jako **typ referencyjny dopuszczający wartość null**.
 
 W przypadku typów referencyjnych, które nie mają wartości null, kompilator używa analizy przepływu, aby upewnić się, że zmienne lokalne są inicjowane do wartości innej niż null, gdy zostanie zadeklarowana. Pola muszą być inicjowane podczas konstruowania. Kompilator generuje ostrzeżenie, jeśli zmienna nie jest ustawiona przez wywołanie do któregokolwiek z dostępnych konstruktorów lub inicjatora. Ponadto nie można przypisać wartości, która może mieć wartość null.
 
@@ -376,7 +377,8 @@ Możesz samodzielnie wypróbować strumienie asynchroniczne w naszym samouczku d
 
 Zakresy i indeksy zapewniają zwięzłą składnię do określania podzakresów w tablicy, <xref:System.Span%601>lub. <xref:System.ReadOnlySpan%601>
 
-Ten język obsługuje dwa nowe typy i dwa nowe operatory.
+Ten język obsługuje dwa nowe typy i dwa nowe operatory:
+
 - <xref:System.Index?displayProperty=nameWithType>reprezentuje indeks w sekwencji.
 - `^` Operator, który określa, że indeks jest względem końca sekwencji.
 - <xref:System.Range?displayProperty=nameWithType>reprezentuje Podzakres sekwencji.
@@ -444,3 +446,7 @@ var text = words[phrase];
 ```
 
 Więcej informacji o indeksach i zakresach można dowiedzieć się w samouczku dotyczącym [indeksów i zakresów](../tutorials/ranges-indexes.md).
+
+## <a name="enhancement-of-interpolated-verbatim-strings"></a>Ulepszenie interpolowanych ciągów Verbatim
+
+`@$"..."` `$@"..."` [](../language-reference/tokens/interpolated.md) Kolejność tokenów `@`iw interpolowanych ciągach Verbatim może być dowolna: oba i są prawidłowymi interpolowanymi ciągami Verbatim. `$` We wcześniejszych C# wersjach `$` token `@` musi znajdować się przed tokenem.

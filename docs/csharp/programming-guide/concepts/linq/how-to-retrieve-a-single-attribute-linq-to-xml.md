@@ -2,12 +2,12 @@
 title: 'Instrukcje: Pobierz pojedynczy atrybut (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
-ms.openlocfilehash: 4a1be51c7f0e89a8f211ae523eb102282bd9747b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d8c8d0e3a99f94c4404f0ab23a5edf082be77952
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592652"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253413"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>Instrukcje: Pobierz pojedynczy atrybut (LINQ to XML) (C#)
 W tym temacie wyjaśniono, jak pobrać pojedynczy atrybut elementu, pod nazwą atrybutu. Jest to przydatne w przypadku pisania wyrażeń zapytania, gdzie chcesz znaleźć element, który ma określony atrybut.  
@@ -37,7 +37,7 @@ foreach (XElement el in elList)
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```output  
 home  
 work  
 ```  
@@ -63,7 +63,7 @@ foreach (XElement el in elList)
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```output  
 home  
 work  
 ```  
@@ -92,7 +92,7 @@ foreach (XElement el in elList)
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```output  
 home  
 work  
 ```  

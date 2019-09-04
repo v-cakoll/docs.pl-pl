@@ -2,22 +2,22 @@
 title: Szybkie odwołanie do języka Entity SQL
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-ms.openlocfilehash: b4e3eaf8abd82b63fa2663b47f878ecfa9584897
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7780359d981b130118cb73d4892f3dcb4b6e2e7d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785258"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251028"
 ---
 # <a name="entity-sql-quick-reference"></a>Szybkie odwołanie do języka Entity SQL
-Ten temat zawiera krótki przewodnik po [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania. Zapytania w tym temacie są oparte na modelu sprzedaży AdventureWorks.  
+Ten temat zawiera krótkie informacje o [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytaniach. Zapytania w tym temacie są oparte na modelu sprzedaży AdventureWorks.  
   
 ## <a name="literals"></a>Literały  
   
 ### <a name="string"></a>String  
- Dostępne są literały ciągów znaków Unicode i innego niż Unicode. Ciągi Unicode są poprzedzonej ciągiem N. Na przykład `N'hello'`.  
+ Istnieją literały ciągu Unicode i inne niż Unicode. Ciągi Unicode są poprzedzone znakiem N. Na przykład `N'hello'`.  
   
- Oto przykład literału ciągu Unicode inne niż:  
+ Poniżej znajduje się przykład literału ciągu innego niż Unicode:  
   
 ```  
 'hello'  
@@ -32,7 +32,7 @@ Ten temat zawiera krótki przewodnik po [!INCLUDE[esql](../../../../../../includ
 |Cześć|  
   
 ### <a name="datetime"></a>DataGodzina  
- W literałach daty/godziny daty i godziny części są obowiązkowe. Brak wartości domyślnej.  
+ W literałach DateTime oba części daty i godziny są obowiązkowe. Brak wartości domyślnych.  
   
  Przykład:  
   
@@ -49,7 +49,7 @@ DATETIME '2006-12-25 01:01'
 |12/25/2006 1:01:00 AM|  
   
 ### <a name="integer"></a>Liczba całkowita  
- Literały całkowite mogą być typu Int32 (123) UInt32 (123U), Int64 (123L), a UInt64 (123UL).  
+ Literały całkowite mogą być typu Int32 (123), UInt32 (123U), Int64 (123L) i UInt64 (123UL).  
   
  Przykład:  
   
@@ -67,12 +67,12 @@ DATETIME '2006-12-25 01:01'
 |3|  
   
 ### <a name="other"></a>Inne  
- Inne literały, obsługiwane przez [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to identyfikator Guid, pliku binarnego, Float/Double, Decimal, i `null`. Wartość null, literałów w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] są uważane za zgodne z każdego innego typu w modelu koncepcyjnym.  
+ Inne literały obsługiwane przez [!INCLUDE[esql](../../../../../../includes/esql-md.md)] program to GUID, Binary, float/Double, Decimal i `null`. Literały o wartości [!INCLUDE[esql](../../../../../../includes/esql-md.md)] null w są uważane za zgodne z każdym innym typem w modelu koncepcyjnym.  
   
-## <a name="type-constructors"></a>Konstruktorzy typów  
+## <a name="type-constructors"></a>Konstruktory typów  
   
 ### <a name="row"></a>ROW  
- [WIERSZ](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md) tworzy anonimowe, strukturalnie wpisane (rekordów) wartością jako: `ROW(1 AS myNumber, ‘Name’ AS myName).`  
+ [Wiersz](row-entity-sql.md) konstruuje anonimową, strukturalnie wpisaną wartość w postaci:`ROW(1 AS myNumber, ‘Name’ AS myName).`  
   
  Przykład:  
   
@@ -85,13 +85,13 @@ SELECT VALUE row (product.ProductID as ProductID, product.Name
   
 |Identyfikator produktu|Nazwa|  
 |---------------|----------|  
-|1|Wyścig zmienianych|  
-|879|Uniwersalny roweru autonomicznej|  
-|712|Czapka z Logo AWC|  
+|1|Wyścigi regulowane|  
+|879|Podstawa roweru ogólnego przeznaczenia|  
+|712|AWC logo|  
 |...|...|  
   
 ### <a name="multiset"></a>MULTISET  
- [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md) tworzy kolekcji, takie jak:  
+ Kolekcje [zestawów wielokrotnych](multiset-entity-sql.md) , takie jak:  
   
  `MULTISET(1,2,2,3)` `--same as`-`{1,2,2,3}.`  
   
@@ -105,10 +105,10 @@ SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE produc
   
 |Identyfikator produktu|Name (Nazwa)|ProductNumber|…|  
 |---------------|----------|-------------------|-------|  
-|842|Sakwy turystyczne, duże|PA-T100|…|  
+|842|Touring-Panniers, Large|PA-T100|…|  
   
 ### <a name="object"></a>Obiekt  
- [O nazwie konstruktora typu](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md) tworzy obiekty zdefiniowane przez użytkownika (o nazwie), takie jak `person("abc", 12)`.  
+ Konstrukcje [konstruktorów nazwanych](named-type-constructor-entity-sql.md) (o nazwach) obiekty zdefiniowane przez użytkownika `person("abc", 12)`, takie jak.  
   
  Przykład:  
   
@@ -130,7 +130,7 @@ AS o
 ## <a name="references"></a>Odwołania  
   
 ### <a name="ref"></a>REF  
- [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md) tworzy odwołanie do wystąpienia typu jednostki. Na przykład następujące zapytanie zwraca odwołania do każdej jednostki kolejność w zestawie jednostek zamówień:  
+ [Ref](ref-entity-sql.md) tworzy odwołanie do wystąpienia typu jednostki. Na przykład następujące zapytanie zwraca odwołania do każdej jednostki zamówienia w zestawie jednostek Orders:  
   
 ```  
 SELECT REF(o) AS OrderID FROM Orders AS o  
@@ -145,7 +145,7 @@ SELECT REF(o) AS OrderID FROM Orders AS o
 |3|  
 |...|  
   
- W poniższym przykładzie użyto operatora wyodrębniania właściwości (.) do dostępu do właściwości jednostki. Gdy używany jest operator wyodrębniania właściwości, odwołanie jest automatycznie wyłuskiwany.  
+ Poniższy przykład używa operatora wyodrębniania właściwości (.) w celu uzyskania dostępu do właściwości jednostki. Gdy jest używany operator wyodrębniania właściwości, odwołanie jest automatycznie wywoływać.  
   
  Przykład:  
   
@@ -158,13 +158,13 @@ SELECT VALUE REF(p).Name FROM
   
 |Wartość|  
 |-----------|  
-|Wyścig zmienianych|  
-|Uniwersalny roweru autonomicznej|  
-|Czapka z Logo AWC|  
+|Wyścigi regulowane|  
+|Podstawa roweru ogólnego przeznaczenia|  
+|AWC logo|  
 |...|  
   
 ### <a name="deref"></a>DEREF  
- [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md) wyłuskań wartość odniesienia i generuje wyłuskania wynik tego obiektu. Na przykład, następujące zapytanie generuje jednostki zamówienia dla każdego zamówienia w zestawie jednostek zamówienia: `SELECT DEREF(o2.r) FROM (SELECT REF(o) AS r FROM LOB.Orders AS o) AS o2`...  
+ [DEREF](deref-entity-sql.md) odwołuje się do wartości odniesienia i tworzy wynik tego odwołania. Na przykład następujące zapytanie tworzy jednostki Order dla każdego zamówienia w zestawie jednostek Orders: `SELECT DEREF(o2.r) FROM (SELECT REF(o) AS r FROM LOB.Orders AS o) AS o2`..  
   
  Przykład:  
   
@@ -177,13 +177,13 @@ SELECT VALUE DEREF(REF(p)).Name FROM
   
 |Wartość|  
 |-----------|  
-|Wyścig zmienianych|  
-|Uniwersalny roweru autonomicznej|  
-|Czapka z Logo AWC|  
+|Wyścigi regulowane|  
+|Podstawa roweru ogólnego przeznaczenia|  
+|AWC logo|  
 |...|  
   
 ### <a name="createref-and-key"></a>CREATEREF I KLUCZ  
- [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md) tworzy odwołanie przekazywania klucza. [KLUCZ](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md) wyodrębnia część klucza wyrażeniu zawierającym odwołania do typu.  
+ [CreateRef](createref-entity-sql.md) tworzy odwołanie z przekazywaniem klucza. [Klucz](key-entity-sql.md) wyodrębnia część klucza wyrażenia z odwołaniem do typu.  
   
  Przykład:  
   
@@ -204,7 +204,7 @@ SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))
 ## <a name="functions"></a>Funkcje  
   
 ### <a name="canonical"></a>Canonical  
- Przestrzeń nazw dla [funkcje canonical](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) jest Edm, podobnie jak w `Edm.Length("string")`. Nie masz Określ obszar nazw, chyba że innej przestrzeni nazw jest importowany zawierającego funkcję z taką samą nazwę jak kanonicznej funkcji. Jeśli dwie przestrzenie nazw mają taką samą funkcję, użytkownik musi określonych imię i nazwisko.  
+ Przestrzeń nazw dla [funkcji kanonicznych](canonical-functions.md) to EDM, jak `Edm.Length("string")`w. Nie trzeba określać przestrzeni nazw, chyba że zostanie zaimportowana inna przestrzeń nazw, która zawiera funkcję o takiej samej nazwie jak funkcja kanoniczna. Jeśli dwie przestrzenie nazw mają tę samą funkcję, użytkownik powinien mieć określoną pełną nazwę.  
   
  Przykład:  
   
@@ -223,7 +223,7 @@ SELECT Length(c. FirstName) As NameLen FROM
 |5|  
   
 ### <a name="microsoft-provider-specific"></a>Microsoft Provider-Specific  
- [Funkcje właściwe dla dostawcy Microsoft](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md) znajdują się w `SqlServer` przestrzeni nazw.  
+ [Funkcje specyficzne dla dostawcy firmy Microsoft](../sqlclient-for-ef-functions.md) znajdują `SqlServer` się w przestrzeni nazw.  
   
  Przykład:  
   
@@ -242,7 +242,7 @@ SELECT SqlServer.LEN(c.EmailAddress) As EmailLen FROM
 |26|  
   
 ## <a name="namespaces"></a>Namespaces  
- [Za pomocą](../../../../../../docs/framework/data/adonet/ef/language-reference/using-entity-sql.md) Określa przestrzeń nazw używaną w wyrażeniu zapytania.  
+ [Użycie](using-entity-sql.md) określa przestrzenie nazw używane w wyrażeniu zapytania.  
   
  Przykład:  
   
@@ -257,7 +257,7 @@ using SqlServer; LOWER('AA');
 |aa|  
   
 ## <a name="paging"></a>Stronicowanie  
- Stronicowania może być wyrażona przez zadeklarowanie [POMIŃ](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) i [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) podklauzul do [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) klauzuli.  
+ Stronicowanie może być wyrażone za pomocą deklaracji podrzędnych klauzul [Skip](skip-entity-sql.md) i [Limit](limit-entity-sql.md) do klauzuli [order by](order-by-entity-sql.md) .  
   
  Przykład:  
   
@@ -268,14 +268,14 @@ SELECT c.ContactID as ID, c.LastName as Name FROM
   
  Dane wyjściowe:  
   
-|Identyfikator|Nazwa|  
+|id|Nazwa|  
 |--------|----------|  
 |10|Adina|  
 |11|Agcaoili|  
 |12|Aguilar|  
   
 ## <a name="grouping"></a>Grupowanie  
- [Grupowanie według](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md) określa grupy, do których obiektów zwróconych przez zapytanie ([wybierz](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) wyrażenie, które mają być umieszczone.  
+ [Grupowanie według](group-by-entity-sql.md) określa grupy, do których obiekty zwracane przez zapytanie ([SELECT](select-entity-sql.md)) mają zostać umieszczone.  
   
  Przykład:  
   
@@ -288,13 +288,13 @@ SELECT VALUE name FROM AdventureWorksEntities.Product as P
   
 |nazwa|  
 |----------|  
-|LL górski stanowisko zestawu|  
-|Uczenie Maszynowe górski stanowisko zestawu|  
-|Rama górski stanowisko zestawu|  
+|WSZYSTKO — zestaw stanowisk górskich|  
+|Zestaw siedzeń górskich ML|  
+|Zestaw miejsc górskich HL|  
 |...|  
   
 ## <a name="navigation"></a>Nawigacja  
- Operator nawigacji relacji można przejść przez relacji z jednej jednostki (od końca) do innego (w celu zakończenia). [NAVIGATE](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md) przyjmuje odpowiednio wykwalifikowany typ relacji \<przestrzeni nazw >.\< Nazwa typu relacji >. Przejdź zwraca Ref\<T > Jeśli kardynalność do końca jest 1. Jeśli kardynalność do końca jest n, kolekcji < Ref\<T >> zostaną zwrócone.  
+ Operator nawigacji relacji umożliwia nawigowanie po relacji od jednej jednostki (od końca) do innej (do końca). [Nawigacja](navigate-entity-sql.md) przyjmuje typ relacji kwalifikowana jako \<przestrzeń nazw >.\< Nazwa typu relacji >. Funkcja nawigacji zwraca\<wartość Ref T >, jeśli Kardynalność do końca jest równa 1. Jeśli Kardynalność do końca to n, zostanie zwrócona kolekcja < ref\<T > >.  
   
  Przykład:  
   
@@ -313,10 +313,10 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 |3|  
 |...|  
   
-## <a name="select-value-and-select"></a>WYBIERZ WARTOŚĆ I WYBIERZ POZYCJĘ  
+## <a name="select-value-and-select"></a>WYBIERZ POZYCJĘ WARTOŚĆ I WYBIERZ POZYCJĘ  
   
 ### <a name="select-value"></a>WYBIERZ WARTOŚĆ  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] udostępnia klauzula SELECT VALUE, aby pominąć konstrukcji niejawne wiersza. Można określić tylko jeden element w klauzuli SELECT VALUE. Takie klauzula jest używana, nie otoki wiersza jest konstruowany wokół elementów w klauzuli SELECT, gdy kolekcja żądany kształt może wygenerować, na przykład: `SELECT VALUE a`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]udostępnia klauzulę SELECT VALUE, aby pominąć konstruowanie niejawnego wiersza. W klauzuli SELECT VALUE można określić tylko jeden element. Gdy taka klauzula jest używana, żadna otoka wiersza nie jest zbudowana wokół elementów w klauzuli SELECT i można utworzyć kolekcję żądanego kształtu, na przykład: `SELECT VALUE a`.  
   
  Przykład:  
   
@@ -328,27 +328,27 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
   
 |Nazwa|  
 |----------|  
-|Wyścig zmienianych|  
-|Uniwersalny roweru autonomicznej|  
-|Czapka z Logo AWC|  
+|Wyścigi regulowane|  
+|Podstawa roweru ogólnego przeznaczenia|  
+|AWC logo|  
 |...|  
   
 ### <a name="select"></a>SELECT  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapewnia także Konstruktor row do utworzenia dowolnego wierszy. Wybierz przyjmuje jeden lub więcej elementów w projekcji i wyniki w rekordzie danych z polami, na przykład: `SELECT a, b, c`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]udostępnia także konstruktora wierszy do konstruowania dowolnych wierszy. Zaznacz powoduje, że co najmniej jeden element w projekcji i wyniki w rekordzie danych z polami, na `SELECT a, b, c`przykład:.  
   
  Przykład:  
   
- Wybierz p.Name, p.ProductID z AdventureWorksEntities.Product jako dane wyjściowe p:  
+ Wybierz pozycję p.Name, p. ProductID z AdventureWorksEntities. Product jako p Output:  
   
 |Nazwa|Identyfikator produktu|  
 |----------|---------------|  
-|Wyścig zmienianych|1|  
-|Uniwersalny roweru autonomicznej|879|  
-|Czapka z Logo AWC|712|  
+|Wyścigi regulowane|1|  
+|Podstawa roweru ogólnego przeznaczenia|879|  
+|AWC logo|712|  
 |...|...|  
   
 ## <a name="case-expression"></a>WYRAŻENIE CASE  
- [Zamierzone, Zapisz wyrażenie](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md) obliczenie zestawu wyrażeń logicznych w celu określenia wyniku.  
+ [Wyrażenie CASE](case-entity-sql.md) oblicza zestaw wyrażeń logicznych, aby określić wynik.  
   
  Przykład:  
   
@@ -360,9 +360,9 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
   
 |Wartość|  
 |-----------|  
-|WARTOŚĆ TRUE|  
+|OZNACZA|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Odwołanie do jednostki SQL](entity-sql-reference.md)
+- [Omówienie jednostki SQL](entity-sql-overview.md)

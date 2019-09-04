@@ -1,15 +1,15 @@
 ---
-title: REF (jednostka SQL)
+title: REF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c5f4cb35-69e9-44cc-b63b-ee38922bbda1
-ms.openlocfilehash: 05e687f951930d92797a863410181585278b067d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d35306d1299e91ecaa55a7d2818ee1e2982793f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797764"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249194"
 ---
-# <a name="ref-entity-sql"></a>REF (jednostka SQL)
+# <a name="ref-entity-sql"></a>REF (Entity SQL)
 Zwraca odwołanie do wystąpienia jednostki.  
   
 ## <a name="syntax"></a>Składnia  
@@ -20,29 +20,29 @@ REF( expression )
   
 ## <a name="arguments"></a>Argumenty  
  `expression`  
- Dowolne prawidłowe wyrażenie, które zwracają wystąpienia typu jednostki.  
+ Dowolne prawidłowe wyrażenie zwracające wystąpienie typu jednostki.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Odwołanie do wystąpienia określonej jednostki.  
+ Odwołanie do określonego wystąpienia jednostki.  
   
 ## <a name="remarks"></a>Uwagi  
- Odwołania do jednostki, który składa się z klucza podmiotu i nazwy zestawu jednostek. Ponieważ zestawy jednostek innej mogą opierać się na ten sam typ jednostki klucza określonej jednostki mogą być wyświetlane w wielu zestawach jednostki. Jednak odwołania do jednostki jest zawsze unikatowa. Jeśli wyrażenie wejściowe reprezentuje utrwalonych jednostki, zostaną zwrócone odwołanie do tej jednostki. Jeśli wyrażenie wejściowe nie jest utrwalona jednostki, zostaną zwrócone odwołanie o wartości null.  
+ Odwołanie do jednostki składa się z klucza jednostki i nazwy zestawu jednostek. Ponieważ różne zestawy jednostek mogą opierać się na tym samym typie jednostki, określony klucz jednostki może pojawić się w wielu zestawach jednostek. Odwołanie do jednostki jest jednak zawsze unikatowe. Jeśli wyrażenie danych wejściowych reprezentuje obiekt utrwalony, odwołanie do tej jednostki zostanie zwrócone. Jeśli wyrażenie wejściowe nie jest utrwaloną jednostką, zostanie zwrócone odwołanie o wartości null.  
   
- Operator wyodrębniania właściwości (.) jest używane do dostępu do właściwości jednostki, odwołanie jest automatycznie wyłuskiwany.  
+ Jeśli operator wyodrębniania właściwości (.) jest używany w celu uzyskania dostępu do właściwości jednostki, odwołanie zostanie automatycznie wywoływać.  
   
 ## <a name="example"></a>Przykład  
- Następujące zapytanie SQL jednostki używa operatora REF zwrócić odwołanie do argumentu wejściowego jednostki. Tego samego zapytania wyłuskań odwołanie, ponieważ używamy operacji wyodrębniania właściwości (.) do dostępu do właściwości jednostki produktu. Zapytanie jest oparty na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
+ Poniższe zapytanie Entity SQL używa operatora REF do zwrócenia odwołania dla argumentu jednostki wejściowej. To samo zapytanie odwołuje się do odwołania, ponieważ używamy operacji wyodrębniania właściwości (.) w celu uzyskania dostępu do właściwości jednostki produktu. Zapytanie jest oparte na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
   
-1. Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Wykonaj czynności opisane w [temacie How to: Wykonaj zapytanie zwracające wyniki](../how-to-execute-a-query-that-returns-primitivetype-results.md)typu pierwotnego.  
   
-2. Przekaż poniższe zapytanie jako argument do `ExecutePrimitiveTypeQuery` metody:  
+2. Przekaż następujące zapytanie jako argument do `ExecutePrimitiveTypeQuery` metody:  
   
  [!code-csharp[DP EntityServices Concepts 2#REF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#ref)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)
-- [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)
-- [KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Definicje typu](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md)
+- [DEREF](deref-entity-sql.md)
+- [CREATEREF](createref-entity-sql.md)
+- [KEY](key-entity-sql.md)
+- [Odwołanie do jednostki SQL](entity-sql-reference.md)
+- [Definicje typu](type-definitions-entity-sql.md)

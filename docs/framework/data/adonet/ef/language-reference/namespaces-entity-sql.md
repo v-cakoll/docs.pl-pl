@@ -1,27 +1,27 @@
 ---
-title: Przestrzenie nazw (jednostka SQL)
+title: Przestrzenie nazw (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 83991c21-60db-4af9-aca3-b416f6cae98e
-ms.openlocfilehash: 7bcd7a72df8afbd598a15ccd9a259ed11b5b9ef7
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 395ffb23859be27b4897dfc352f6e44d52286b26
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583810"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249997"
 ---
-# <a name="namespaces-entity-sql"></a>Przestrzenie nazw (jednostka SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] wprowadza przestrzenie nazw, aby uniknąć konfliktów nazw identyfikatorów globalnych, takich jak nazwy typów, zestawów encji, funkcje i tak dalej. Obsługa przestrzeni nazw w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest podobny do obsługi przestrzeni nazw w programie .NET Framework.  
+# <a name="namespaces-entity-sql"></a>Przestrzenie nazw (Entity SQL)
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]wprowadza przestrzenie nazw, aby uniknąć konfliktów nazw dla identyfikatorów globalnych, takich jak nazwy typów, zestawy jednostek, funkcje i tak dalej. Obsługa przestrzeni nazw w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] programie jest podobna do obsługi przestrzeni nazw w .NET Framework.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] oferuje dwa rodzaje klauzuli USING: kwalifikowanych przestrzeni nazw (w miejscu podania krótszy alias dla przestrzeni nazw), a przestrzenie nazw niekwalifikowanych, jak pokazano w poniższym przykładzie:  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Program udostępnia dwie formy klauzuli USING: kwalifikowane przestrzenie nazw (gdzie dla przestrzeni nazw jest określony krótszy alias) i niekwalifikowane obszary nazw, jak pokazano w następującym przykładzie:  
   
  `USING System.Data;`  
   
  `USING tsql = System.Data;`  
   
-## <a name="name-resolution-rules"></a>Zasad rozpoznawania nazw  
- Jeśli nie można rozpoznać identyfikatora w lokalnym zakresy [!INCLUDE[esql](../../../../../../includes/esql-md.md)] próbuje zlokalizować nazwy w zakresach globalnych (przestrzeni nazw). [!INCLUDE[esql](../../../../../../includes/esql-md.md)] najpierw próbuje dopasować identyfikatora (prefiks) przy użyciu jednej z kwalifikowaną przestrzeni nazw. Jeśli istnieje dopasowanie, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] próbuje rozpoznać pozostałą część identyfikatora w określonej przestrzeni nazw. Jeśli nie zostanie znalezione dopasowanie, zwracany jest wyjątek.  
+## <a name="name-resolution-rules"></a>Reguły rozpoznawania nazw  
+ Jeśli nie można rozpoznać identyfikatora w lokalnych zakresach, program [!INCLUDE[esql](../../../../../../includes/esql-md.md)] próbuje zlokalizować nazwę w globalnych zakresach (przestrzeni nazw). [!INCLUDE[esql](../../../../../../includes/esql-md.md)]najpierw próbuje dopasować identyfikator (prefiks) do jednego z kwalifikowanych przestrzeni nazw. Jeśli istnieje dopasowanie, program [!INCLUDE[esql](../../../../../../includes/esql-md.md)] podejmie próbę rozpoznania reszty identyfikatora w podanej przestrzeni nazw. Jeśli nie zostanie znalezione dopasowanie, zostanie zgłoszony wyjątek.  
   
- Następnie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] próbuje wyszukiwanie wszystkich niekwalifikowanej przestrzeni nazw (określony w prologu) dla identyfikatora. Jeśli identyfikator może znajdować się w dokładnie jedną przestrzeń nazw, zwracany jest tej lokalizacji. Jeśli więcej niż jednej przestrzeni nazw ma dopasowania dla tego identyfikatora, jest zgłaszany wyjątek. Jeśli można zidentyfikować żadnej przestrzeni nazw dla identyfikatora, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] przekazuje nazwę na następny zakres na zewnątrz ( <xref:System.Data.Common.DbCommand> lub <xref:System.Data.Common.DbConnection> obiektu), jak pokazano w poniższym przykładzie:  
+ Następnie program [!INCLUDE[esql](../../../../../../includes/esql-md.md)] próbuje przeszukać wszystkie niekwalifikowane przestrzenie nazw (określone w prologu) dla identyfikatora. Jeśli identyfikator może znajdować się w dokładnie jednej przestrzeni nazw, Ta lokalizacja jest zwracana. Jeśli więcej niż jedna przestrzeń nazw ma dopasowanie dla tego identyfikatora, zgłaszany jest wyjątek. Jeśli dla identyfikatora nie można zidentyfikować żadnej przestrzeni nazw, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] przekazuje nazwę do następnego zakresu <xref:System.Data.Common.DbCommand> (lub <xref:System.Data.Common.DbConnection> obiektu), jak pokazano w następującym przykładzie:  
   
 ```  
 SELECT TREAT(p AS NamespaceName.Employee)  
@@ -29,13 +29,13 @@ FROM ContainerName.Person AS p
 WHERE p IS OF (NamespaceName.Employee)  
 ```  
   
-## <a name="differences-from-the-net-framework"></a>Różnice w stosunku do programu .NET Framework  
- W .NET Framework można użyć częściowo kwalifikowane przestrzeni nazw. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie zezwala na to.  
+## <a name="differences-from-the-net-framework"></a>Różnice między .NET Framework  
+ W .NET Framework można użyć częściowo kwalifikowanych przestrzeni nazw. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]nie zezwala na to.  
   
-## <a name="adonet-usage"></a>Użycie ADO.NET  
- Zapytania są wyrażone za pośrednictwem środowiska ADO.NET <xref:System.Data.Common.DbCommand> obiektów. <xref:System.Data.Common.DbCommand> obiekty mogą być wbudowane w <xref:System.Data.Common.DbConnection> obiektów. Przestrzenie nazw można również określić w ramach <xref:System.Data.Common.DbCommand> i <xref:System.Data.Common.DbConnection> obiektów. Jeśli [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie można rozpoznać identyfikatora w ramach samo zapytanie zewnętrzne przestrzenie nazw są sondowany (na podstawie reguły podobne).  
+## <a name="adonet-usage"></a>ADO.NET użycie  
+ Zapytania są wyrażane za <xref:System.Data.Common.DbCommand> poorednictwem obiektów ADO.NET. <xref:System.Data.Common.DbCommand>obiekty mogą być kompilowane względem <xref:System.Data.Common.DbConnection> obiektów. Przestrzenie nazw można także określić jako część <xref:System.Data.Common.DbCommand> obiektów i. <xref:System.Data.Common.DbConnection> Jeśli [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie można rozpoznać identyfikatora wewnątrz zapytania, zewnętrzne przestrzenie nazw są badane (na podstawie podobnych reguł).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Odwołanie do jednostki SQL](entity-sql-reference.md)
+- [Omówienie jednostki SQL](entity-sql-overview.md)

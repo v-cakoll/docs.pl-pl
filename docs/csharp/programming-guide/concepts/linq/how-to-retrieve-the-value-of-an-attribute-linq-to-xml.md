@@ -2,12 +2,12 @@
 title: 'Instrukcje: Pobierz wartość atrybutu (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 817bbe89-5979-4234-bf0c-46f63692ac8c
-ms.openlocfilehash: 54ea4b532669ed2c615fcde02011fdd1228705a3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 635aee3bd08618b94fb5c091f8eef212c067acef
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592470"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253380"
 ---
 # <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-c"></a>Instrukcje: Pobierz wartość atrybutu (LINQ to XML) (C#)
 W tym temacie pokazano, jak uzyskać wartość atrybutów. Istnieją dwa główne sposoby: Można rzutować <xref:System.Xml.Linq.XAttribute> na żądany typ; operator jawnej konwersji następnie konwertuje zawartość elementu lub atrybutu do określonego typu. Alternatywnie można użyć <xref:System.Xml.Linq.XAttribute.Value%2A> właściwości. Jednak Rzutowanie jest ogólnie lepszym rozwiązaniem. Jeśli rzutowany atrybut na typ dopuszczający wartość null, kod jest łatwiejszy do zapisu podczas pobierania wartości atrybutu, który może lub nie istnieje. Przykłady tej techniki można znaleźć w temacie [How to: Pobierz wartość elementu (LINQ to XML) (C#).](./how-to-retrieve-the-value-of-an-element-linq-to-xml.md)  
@@ -26,7 +26,7 @@ Console.WriteLine(str);
   
  Ten przykład generuje następujące wyniki:  
   
-```  
+```output  
 <Root Attr="abcde" />  
 abcde  
 ```  
@@ -45,7 +45,7 @@ Console.WriteLine(str);
   
  Ten przykład generuje następujące wyniki:  
   
-```  
+```output  
 abcde  
 ```  
   

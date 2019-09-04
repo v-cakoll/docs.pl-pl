@@ -9,21 +9,21 @@ helpviewer_keywords:
 - container tags, <bindingRedirect> element
 - bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
-ms.openlocfilehash: 7cdea10cc6e0562f6062470240b01743aa439bde
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 7d51ef5c4107fc6a40a472a660f53bb0ded59683
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658939"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252785"
 ---
 # <a name="bindingredirect-element"></a>\<bindingRedirect, element >
 Przekierowuje jedną wersję zestawu do innej.  
   
- \<> konfiguracji  
-\<runtime>  
-\<> zestawubinding  
-\<> dependentAssembly  
-\<bindingRedirect >  
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> środowiska uruchomieniowego**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zestawubinding**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> dependentAssembly**](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bindingRedirect >**  
   
 ## <a name="syntax"></a>Składnia  
   

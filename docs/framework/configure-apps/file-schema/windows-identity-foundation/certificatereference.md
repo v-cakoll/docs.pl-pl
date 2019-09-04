@@ -3,20 +3,21 @@ title: <certificateReference>
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-ms.openlocfilehash: da8ea128466457409334cd0b4ee3246a923f969a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 782ca3344774b8412a18e3cf13bff5f969751ea3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941930"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252143"
 ---
 # <a name="certificatereference"></a>\<certificateReference >
 Określa ustawienia, które są używane do znajdowania i weryfikowania certyfikatu X. 509 w magazynie certyfikatów.  
   
- \<system.identityModel.services>  
-\<federationConfiguration>  
-\<> serviceCertificate  
-\<certificateReference >  
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. identityModel. Services**](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<federationConfiguration >** ](federationconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> serviceCertificate**](servicecertificate.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<certificateReference >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,10 +45,10 @@ Określa ustawienia, które są używane do znajdowania i weryfikowania certyfik
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |storeName|Nazwa magazynu certyfikatów X. 509. Wartość domyślna to "my". Opcjonalny.|  
-|storeLocation|<xref:System.Security.Cryptography.X509Certificates.StoreLocation> Wartość, która określa lokalizację magazynu certyfikatów X. 509. Wartość domyślna to "LocalMachine". Opcjonalny.|  
-|x509FindType|<xref:System.Security.Cryptography.X509Certificates.X509FindType> Wartość określająca typ wyszukiwania, które ma zostać wykonane. Wartość domyślna to "FindBySubjectDistinguishedName". Opcjonalna.|  
-|findValue|Wartość do wyszukania w magazynie certyfikatów X. 509. Opcjonalny.|  
-|isChainIncluded|Określa, czy należy przeprowadzić walidację przy użyciu łańcucha certyfikatów. Wartość domyślna to "true"; Walidacja jest przeprowadzana przy użyciu łańcucha certyfikatów. Opcjonalna.|  
+|storeLocation|<xref:System.Security.Cryptography.X509Certificates.StoreLocation> Wartość, która określa lokalizację magazynu certyfikatów X. 509. Wartość domyślna to "LocalMachine". Opcjonalna.|  
+|x509FindType|<xref:System.Security.Cryptography.X509Certificates.X509FindType> Wartość określająca typ wyszukiwania, które ma zostać wykonane. Wartość domyślna to "FindBySubjectDistinguishedName". Opcjonalny.|  
+|findValue|Wartość do wyszukania w magazynie certyfikatów X. 509. Opcjonalna.|  
+|isChainIncluded|Określa, czy należy przeprowadzić walidację przy użyciu łańcucha certyfikatów. Wartość domyślna to "true"; Walidacja jest przeprowadzana przy użyciu łańcucha certyfikatów. Opcjonalny.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  

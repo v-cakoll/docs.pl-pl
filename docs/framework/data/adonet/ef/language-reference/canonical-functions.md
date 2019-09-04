@@ -2,54 +2,54 @@
 title: Funkcje Canonical
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: 380c1dbcf86d8bbb844c2b226697d72d00c3e81a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8949735ba4712b721460335b4579f0a268c91aea
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606091"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251272"
 ---
 # <a name="canonical-functions"></a>Funkcje Canonical
-W tej sekcji omówiono funkcje canonical, które są obsługiwane przez wszystkich dostawców danych i może być używany przez wszystkie technologie zapytań. Nie można rozszerzyć funkcje Canonical przez dostawcę.  
+W tej sekcji omówiono funkcje kanoniczne, które są obsługiwane przez wszystkich dostawców danych, i mogą być używane przez wszystkie technologie zapytań. Nie można rozszerzyć funkcji kanonicznych przez dostawcę.  
   
- Te funkcje canonical będzie tłumaczona na odpowiednie funkcje źródła danych dla dostawcy. Dzięki temu wywołania funkcji wyrażony w postaci typowych źródeł danych.  
+ Te funkcje kanoniczne zostaną przetłumaczone na odpowiednie funkcje źródła danych dla dostawcy. Pozwala to na wywołania funkcji wyrażone w typowym formacie między źródłami danych.  
   
- Ponieważ te funkcje canonical są niezależne od źródeł danych, argumentów i typy kanonicznej funkcji są definiowane pod względem typów w modelu koncepcyjnym. Jednak niektóre źródła danych mogą nie obsługiwać wszystkich typów w modelu koncepcyjnym.  
+ Ponieważ te funkcje kanoniczne są niezależne od źródeł danych, argument i zwracane typy funkcji kanonicznych są zdefiniowane w kategoriach typów w modelu koncepcyjnym. Jednak niektóre źródła danych mogą nie obsługiwać wszystkich typów w modelu koncepcyjnym.  
   
- Gdy funkcje canonical są używane w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania, odpowiednią funkcję zostanie wywołana w źródle danych.  
+ Jeśli w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytaniu są używane funkcje kanoniczne, odpowiednia funkcja zostanie wywołana w źródle danych.  
   
- Wszystkie funkcje canonical mają zachowanie danych wejściowych o wartości null i warunki błędów, które zostały jawnie określone. Dostawców Store powinny być zgodne z tego zachowania, ale [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] nie wymusza to zachowanie.  
+ Wszystkie funkcje kanoniczne mają zarówno zachowanie danych wejściowych, jak i jawne określone warunki błędu. Dostawcy sklepu powinni przestrzegać tego zachowania, ale [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] nie wymuszają tego zachowania.  
   
- W przypadku scenariuszy LINQ zapytania względem [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] obejmują metody CLR mapowania do metod w źródle danych. Mapę metodach CLR, aby funkcje canonical tak, aby zestaw konkretnych metod poprawnie zmapuje, niezależnie od tego źródła danych.  
+ W przypadku scenariuszy LINQ zapytania dotyczące programu [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] obejmują mapowanie metod CLR do metod w podstawowym źródle danych. Metody CLR mapują na funkcje kanoniczne, dzięki czemu określony zestaw metod będzie poprawnie mapowany, niezależnie od źródła danych.  
   
-## <a name="canonical-functions-namespace"></a>Namespace funkcje Canonical  
- Przestrzeń nazw dla kanonicznej funkcji jest <xref:System.Data.Metadata.Edm>. <xref:System.Data.Metadata.Edm> Przestrzeni nazw jest automatycznie uwzględniany we wszystkich zapytań. Jednak jeśli innej przestrzeni nazw jest importowany zawierający funkcję z taką samą nazwę jak kanonicznej funkcji (w <xref:System.Data.Metadata.Edm> przestrzeni nazw), należy określić przestrzeń nazw.  
+## <a name="canonical-functions-namespace"></a>Przestrzeń nazw funkcji kanonicznych  
+ Przestrzeń nazw dla funkcji kanonicznej <xref:System.Data.Metadata.Edm>to. <xref:System.Data.Metadata.Edm> Przestrzeń nazw jest automatycznie dołączana do wszystkich zapytań. Jeśli jednak zostanie zaimportowana inna przestrzeń nazw, która zawiera funkcję o takiej samej nazwie jak funkcja kanoniczna ( <xref:System.Data.Metadata.Edm> w przestrzeni nazw), należy określić przestrzeń nazw.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Funkcje agregujące Canonical](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)  
- W tym artykule omówiono agregacji [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funkcje canonical.  
+ [Funkcje agregujące Canonical](aggregate-canonical-functions.md)  
+ Omawia agregacje [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funkcji w postaci kanonicznej.  
   
- [Funkcje matematyczne Canonical](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)  
- W tym artykule omówiono matematyczne [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funkcje canonical.  
+ [Funkcje matematyczne Canonical](math-canonical-functions.md)  
+ Omawia funkcje [!INCLUDE[esql](../../../../../../includes/esql-md.md)] matematyczne w postaci kanonicznej.  
   
- [Funkcje ciągów Canonical](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)  
- W tym artykule omówiono ciągu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funkcje canonical.  
+ [Funkcje ciągów Canonical](string-canonical-functions.md)  
+ Omawia funkcje [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ciągów kanonicznych.  
   
- [Funkcji daty i godziny Canonical](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)  
- W tym artykule omówiono daty i godziny [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funkcje canonical.  
+ [Funkcji daty i godziny Canonical](date-and-time-canonical-functions.md)  
+ Omawia funkcje kanoniczne [!INCLUDE[esql](../../../../../../includes/esql-md.md)] daty i godziny.  
   
- [Funkcje bitowe Canonical](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)  
- W tym artykule omówiono bitowe [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funkcje canonical.  
+ [Funkcje bitowe Canonical](bitwise-canonical-functions.md)  
+ Omawia bitowe [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funkcje kanoniczne.  
   
- [Funkcje przestrzenne](../../../../../../docs/framework/data/adonet/ef/language-reference/spatial-functions.md)  
- W tym artykule omówiono przestrzenne [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funkcje canonical.  
+ [Funkcje przestrzenne](spatial-functions.md)  
+ Omawia funkcje [!INCLUDE[esql](../../../../../../includes/esql-md.md)] przestrzenne w postaci kanonicznej.  
   
- [Inne funkcje Canonical](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)  
- W tym artykule omówiono funkcje nie sklasyfikowane jako bitowe, daty/godziny, ciąg, matematyczne lub agregacji.  
+ [Inne funkcje Canonical](other-canonical-functions.md)  
+ Omawia funkcje niesklasyfikowane jako bitowe, daty/godziny, String, Math lub Aggregate.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Model koncepcyjny Canonical do mapowania funkcji serwera SQL](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)
-- [Funkcje zdefiniowane przez użytkownika](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)
+- [Omówienie jednostki SQL](entity-sql-overview.md)
+- [Odwołanie do jednostki SQL](entity-sql-reference.md)
+- [Model koncepcyjny Canonical do mapowania funkcji serwera SQL](../conceptual-model-canonical-to-sql-server-functions-mapping.md)
+- [Funkcje zdefiniowane przez użytkownika](user-defined-functions-entity-sql.md)

@@ -1,16 +1,16 @@
 ---
-title: = (Równa się) (jednostka SQL)
+title: = (Equals) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 948eb588-7080-4046-bb48-633b007393bf
-ms.openlocfilehash: d50ede1964f6d6b9025a7214efe90e878aa55a0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: ec87ec682e1773c001c225567a35b3cedc9c5aba
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333161"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251006"
 ---
-# <a name="-equals-entity-sql"></a>= (Równa się) (jednostka SQL)
-Porównanie równości dwóch wyrażeń.  
+# <a name="-equals-entity-sql"></a>= (Equals) (Entity SQL)
+Porównuje równość dwóch wyrażeń.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -22,23 +22,23 @@ expression == expression
   
 ## <a name="arguments"></a>Argumenty  
  `expression`  
- Dowolne prawidłowe wyrażenie. Oba wyrażenia muszą mieć niejawnej konwersji typów.  
+ Dowolne prawidłowe wyrażenie. Oba wyrażenia muszą mieć niejawnie wymienialne typy danych.  
   
 ## <a name="result-types"></a>Typy wyników  
- `true` Jeśli po lewej stronie wyrażenia jest równy wyrażenie prawej krawędzi; w przeciwnym razie `false`.  
+ `true`Jeśli wyrażenie po lewej stronie jest równe wyrażeniu z prawej strony; w przeciwnym razie. `false`  
   
 ## <a name="remarks"></a>Uwagi  
- == — Operator jest odpowiednikiem =.  
+ Operator = = jest równoważny z =.  
   
 ## <a name="example"></a>Przykład  
- Następujące zapytanie SQL jednostki używa =, operator porównania do porównania równości dwóch wyrażeń. Zapytanie jest oparty na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
+ Poniższy Entity SQL Query używa operatora porównania, aby porównać równość dwóch wyrażeń. Zapytanie jest oparte na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
   
-1. Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Wykonaj czynności opisane w [temacie How to: Wykonaj zapytanie zwracające wyniki](../how-to-execute-a-query-that-returns-structuraltype-results.md)StructuralType.  
   
-2. Przekaż poniższe zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
+2. Przekaż następujące zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
   
  [!code-csharp[DP EntityServices Concepts 2#EQUALS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#equals)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Odwołanie do jednostki SQL](entity-sql-reference.md)

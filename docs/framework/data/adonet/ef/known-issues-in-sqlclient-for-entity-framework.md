@@ -2,64 +2,64 @@
 title: Znane problemy klienta SQL dla programu Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 8cadb234ffc0f00049edd0c09475031eeec275df
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5c0b7c32e00a0cc90367a559a41f5a7ab59a33a4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662269"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251396"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Znane problemy klienta SQL dla programu Entity Framework
-W tej sekcji opisano znane problemy związane z .NET Framework Data Provider for SQL Server (SqlClient).  
+W tej sekcji opisano znane problemy związane z .NET Framework Dostawca danych dla SQL Server (SqlClient).  
   
-## <a name="trailing-spaces-in-string-functions"></a>Końcowe spacje w funkcje ciągów  
- Program SQL Server ignoruje spacje końcowe w wartości ciągu. W związku z tym przekazywanie spacje końcowe w ciągu może prowadzić do nieoczekiwanych rezultatów, a nawet awarii.  
+## <a name="trailing-spaces-in-string-functions"></a>Spacje końcowe w funkcjach ciągów  
+ SQL Server ignoruje końcowe spacje w wartościach ciągu. W związku z tym, przekazanie końcowych spacji w ciągu może prowadzić do nieprzewidzianych wyników, nawet niepowodzeń.  
   
- Jeśli musisz mieć spacji w ciągu, należy rozważyć dołączenie biały znak na końcu, tak, aby program SQL Server nie przycinania ciągu. Jeśli spacje końcowe nie są wymagane, ich przycięcia przed przekazaniem ich szczegółów w potoku zapytania.  
+ Jeśli musisz mieć spacje końcowe w ciągu, rozważ dołączenie znaku odstępu na końcu, tak aby SQL Server nie przycinał ciągu. Jeśli spacje końcowe nie są wymagane, powinny być obcinane przed przekazaniem potoku zapytania.  
   
 ## <a name="right-function"></a>RIGHT — funkcja  
- Jeśli innej niż`null` wartość jest przekazywany jako pierwszy argument, a 0 jest przekazywany jako drugi argument `RIGHT(nvarchar(max)`, 0`)` lub `RIGHT(varchar(max)`, 0`)`, `NULL` zostanie zwrócona wartość zamiast `empty` ciągu.  
+ Jeśli wartość nie`null` jest przekazana jako pierwszy argument, a wartość 0 jest przekazana jako drugi argument do `RIGHT(nvarchar(max)`, 0`)` lub `RIGHT(varchar(max)` `empty` , 0`)`, `NULL` zostanie zwrócona wartość zamiast ciągu.  
   
-## <a name="cross-and-outer-apply-operators"></a>Operatory Zastosuj krzyżowe i zewnętrzne  
- KRZYŻOWE i operatora OUTER APPLY operatory zostały wprowadzone w programie SQL Server 2005. W niektórych przypadkach potoku zapytania może wygenerować instrukcji języka Transact-SQL, która zawiera operatory CROSS APPLY i/lub operatora OUTER APPLY. Ponieważ niektórzy dostawcy wewnętrznej bazy danych, w tym programu SQL Server w wersjach starszych niż SQL Server 2005 nie obsługują tych operatorów, takich zapytań nie można wykonać na tych dostawców wewnętrznej bazy danych.  
+## <a name="cross-and-outer-apply-operators"></a>Operatory zastosowania krzyżowe i zewnętrzne  
+ Operatory zastosowania krzyżowe i zewnętrzne zostały wprowadzone w SQL Server 2005. W niektórych przypadkach potok zapytania może utworzyć instrukcję języka Transact-SQL, która zawiera operator Apply i/lub OUTER APPLY. Ponieważ niektórzy dostawcy zaplecza, w tym wersje SQL Server wcześniejsze niż SQL Server 2005, nie obsługują tych operatorów, takie zapytania nie mogą być wykonywane w tych dostawcach zaplecza.  
   
- Poniżej przedstawiono niektóre typowe scenariusze, które mogą prowadzić do występowania CROSS APPLY i/lub operatora OUTER APPLY operatory w zapytaniu dane wyjściowe:  
+ Poniżej przedstawiono niektóre typowe scenariusze, które mogą prowadzić do obecności operatora KRZYŻowego zastosowania i/lub zewnętrznego zastosowania operatorów w kwerendzie wyjściowej:  
   
-- Skorelowane podzapytanie za pomocą stronicowania.  
+- Skorelowane podzapytanie ze stronicowaniem.  
   
-- `AnyElement` Na skorelowane podzapytanie lub generowane przez nawigacji kolekcji.  
+- `AnyElement` Za pośrednictwem skorelowanego podzapytania lub kolekcji utworzonej przez nawigację.  
   
-- LINQ zapytania używające grupowanie metod, które akceptują selektor elementu.  
+- Zapytania LINQ używające metod grupowania, które akceptują selektor elementu.  
   
-- Zapytanie, w którym CROSS APPLY lub operatora OUTER APPLY jest jawnie określona  
+- Zapytanie, w którym jest jawnie określone zastosowanie krzyżowe lub zewnętrzne  
   
-- Zapytanie, które ma DEREF skonstruować za pośrednictwem konstrukcję REF.  
+- Zapytanie, które ma konstrukcję DEREF dla konstrukcji REF.  
   
-## <a name="skip-operator"></a>SKIP — Operator  
- Jeśli używasz programu SQL Server 2000 przy POMIŃ ORDER BY-key kolumn może zwracać nieprawidłowe wyniki. Więcej niż określoną liczbę wierszy może zostać pominięta, jeżeli kolumnę niebędącą kolumną klucza zawiera zduplikowane dane. Jest to spowodowane jak SKIP jest tłumaczony dla programu SQL Server 2000. Na przykład, w następującym zapytaniu więcej niż pięć wierszy może zostać pominięta, jeżeli `E.NonKeyColumn` zawiera zduplikowane wartości:  
+## <a name="skip-operator"></a>Operator SKIP  
+ W przypadku korzystania z SQL Server 2000 przy użyciu polecenia Pomiń z KOLEJNOŚCIą według w przypadku kolumn niebędących kolumnami klucza mogą zostać zwrócone nieprawidłowe wyniki. Jeśli kolumna niebędąca kluczem zawiera zduplikowane dane, może zostać pominięta więcej niż określona liczba wierszy. Wynika to z tego, jak POMIJAnie jest tłumaczone dla SQL Server 2000. Na przykład w poniższym zapytaniu można pominąć więcej niż pięć wierszy, jeśli `E.NonKeyColumn` mają zduplikowane wartości:  
   
 ```  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  
 ```  
   
-## <a name="targeting-the-correct-sql-server-version"></a>Wersja serwera SQL poprawne  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Jest przeznaczony dla zapytanie Transact-SQL, w oparciu o wersji programu SQL Server, który jest określony w `ProviderManifestToken` atrybutu elementu schematu w pliku modelu (ssdl) magazynu. Ta wersja mogą się różnić od wersję używanego serwera SQL nawiązano połączenie. Na przykład, jeśli używasz programu SQL Server 2005 ale Twoja `ProviderManifestToken` 2008 ma ustawioną wartość atrybutu, wygenerowane zapytanie Transact-SQL nie może być wykonywany na serwerze. Na przykład zapytanie, które korzysta z typów czasu nową datę, które zostały wprowadzone w programie SQL Server 2008 nie będzie wykonywał we wcześniejszych wersjach programu SQL Server. Jeśli używasz programu SQL Server 2005, ale Twoja `ProviderManifestToken` atrybutu jest równa 2000, wygenerowane zapytanie Transact-SQL może być mniej zoptymalizowany lub mogą wystąpić wyjątek, który mówi, że zapytanie nie jest obsługiwany. Aby uzyskać więcej informacji zobacz sekcję operatory Zastosuj krzyżowe i zewnętrzne w we wcześniejszej części tego tematu.  
+## <a name="targeting-the-correct-sql-server-version"></a>Kierowanie do poprawnej wersji SQL Server  
+ Obiekt docelowy zapytania Transact-SQL na podstawie wersji SQL Server określonej `ProviderManifestToken` w atrybucie elementu schematu w pliku modelu magazynu (. ssdl). [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Ta wersja może różnić się od wersji rzeczywistego SQL Server, z którą nawiązano połączenie. Na przykład jeśli używasz SQL Server 2005, ale `ProviderManifestToken` atrybut jest ustawiony na 2008, wygenerowane zapytanie Transact-SQL może nie zostać wykonane na serwerze. Na przykład zapytanie korzystające z nowych typów dat, które zostały wprowadzone w SQL Server 2008, nie będzie wykonywane we wcześniejszych wersjach SQL Server. Jeśli używasz SQL Server 2005, ale `ProviderManifestToken` atrybut ma ustawioną wartość 2000, wygenerowane zapytanie Transact-SQL może być mniej zoptymalizowane lub można napotkać wyjątek informujący, że zapytanie nie jest obsługiwane. Aby uzyskać więcej informacji, zobacz sekcję operatory zastosowania krzyżowe i zewnętrzne we wcześniejszej części tego tematu.  
   
- Niektóre zachowania bazy danych są zależne od poziomu zgodności ustawiony na bazie danych. Jeśli Twoje `ProviderManifestToken` 2005 ma ustawioną wartość atrybutu i używanej wersji programu SQL Server 2005, a poziom zgodności bazy danych jest ustawiony na "80" (SQL Server 2000), wygenerowane języka Transact-SQL będą przeznaczone dla programu SQL Server 2005, ale nie może być wykonywany zgodnie z oczekiwaniami, ze względu na Ustawienie poziomu zgodności. Na przykład jeśli nazwę kolumny na liście klauzuli ORDER BY pasuje do nazwy kolumny w selektorze może spowodować utratę informacji szeregowania.  
+ Niektóre zachowania bazy danych zależą od poziomu zgodności ustawionego na bazę danych. `ProviderManifestToken` Jeśli atrybut jest ustawiony na 2005, a wersja SQL Server to 2005, ale poziom zgodności bazy danych jest ustawiony na "80" (SQL Server 2000), wygenerowany język Transact-SQL będzie ukierunkowany na SQL Server 2005, ale może nie działać zgodnie z oczekiwaniami z powodu ustawienie poziomu zgodności. Na przykład można utracić informacje o uporządkowaniu, jeśli nazwa kolumny na liście ORDER BY jest zgodna z nazwą kolumny w selektorze.  
   
-## <a name="nested-queries-in-projection"></a>Zapytania zagnieżdżone w projekcji  
- Zapytania zagnieżdżone w klauzuli projekcji może uzyskać przetłumaczone na zapytania formułuje iloczyn na serwerze. Na niektórych serwerach zaplecza, w tym SQL Server może to spowodować tabeli bazy danych TempDB, aby pobrać dość duży. Może to obniżyć wydajność serwera.  
+## <a name="nested-queries-in-projection"></a>Zagnieżdżone zapytania w projekcji  
+ Zagnieżdżone zapytania w klauzuli projekcji mogą zostać przetłumaczone na zapytania o produkty kartezjańskiego na serwerze. Na niektórych serwerach zaplecza, w tym serwera magazynem, może to spowodować, że tabela TempDB będzie dość duża. Może to zmniejszyć wydajność serwera.  
   
- Oto przykład zagnieżdżonych zapytania w klauzuli projekcji:  
+ Poniżej znajduje się przykład zagnieżdżonego zapytania w klauzuli projekcji:  
   
 ```  
 SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2 FROM AdventureWorksModel.JobCandidate AS c  ) As Inner1 FROM AdventureWorksModel.EmployeeDepartmentHistory AS c  
 ```  
   
-## <a name="server-generated-guid-identity-values"></a>Serwer wygenerowany identyfikator GUID wartości tożsamości  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Obsługuje serwera wartości generowanych przez identyfikator GUID typu tożsamości, ale dostawca musi obsługiwać, zwracając wartość, tożsamością wygenerowaną przez serwer po wstawieniu wiersza. Począwszy od programu SQL Server 2005, może zwrócić typ identyfikator GUID generowany przez serwer w bazie danych programu SQL Server za pośrednictwem [klauzuli OUTPUT](https://go.microsoft.com/fwlink/?LinkId=169400) .  
+## <a name="server-generated-guid-identity-values"></a>Wartości tożsamości identyfikatorów GUID generowanych przez serwer  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Obsługuje wartości tożsamości typu GUID generowany przez serwer, ale dostawca musi obsługiwać zwracanie wartości tożsamości generowanej przez serwer po wstawieniu wiersza. Począwszy od SQL Server 2005, można zwrócić typ GUID wygenerowany przez serwer w bazie danych SQL Server za pomocą [klauzuli OUTPUT](https://go.microsoft.com/fwlink/?LinkId=169400) .  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Element SqlClient programu Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)
-- [Znane problemy i zagadnienia dotyczące w składniku LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
+- [Element SqlClient programu Entity Framework](sqlclient-for-the-entity-framework.md)
+- [Znane problemy i zagadnienia dotyczące w składniku LINQ to Entities](./language-reference/known-issues-and-considerations-in-linq-to-entities.md)

@@ -2,12 +2,12 @@
 title: 'Instrukcje: Nowy typ projektu (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 48145cf9-1e0b-4e73-bbfd-28fc04800dc4
-ms.openlocfilehash: bec4e7c7d87dffb90b49b76aa00a5de093d68436
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 32c3de9f4dd967cf0aafa7f4e571d8714ca41e3a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593048"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253506"
 ---
 # <a name="how-to-project-a-new-type-linq-to-xml-c"></a>Instrukcje: Nowy typ projektu (LINQ to XML) (C#)
 
@@ -53,7 +53,7 @@ W tym przykładzie użyto <xref:System.Xml.Linq.XContainer.Element%2A> metody, k
 
 Ten przykład generuje następujące wyniki:
 
-```console
+```output
 Lawnmower:1
 Baby Monitor:2
 ```

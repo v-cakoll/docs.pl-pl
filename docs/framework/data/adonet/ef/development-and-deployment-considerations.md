@@ -2,28 +2,28 @@
 title: Projektowanie i zagadnienia dotyczące wdrażania
 ms.date: 03/30/2017
 ms.assetid: 535e6611-02de-484c-b5ff-6ffeed04d740
-ms.openlocfilehash: d0402fde61b1bfcdee6e0e8e435d35e59ad76b6f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f6c34a9cfae08e189b89ad772321b2e43799660
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606644"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251584"
 ---
 # <a name="development-and-deployment-considerations"></a>Projektowanie i zagadnienia dotyczące wdrażania
-Tematy w tej sekcji rozwiązania problemów pod uwagę podczas opracowywania lub wdrażania aplikacji, która opiera się na platformie ADO.NET Entity Framework.  
+Tematy w tej sekcji dotyczą zagadnień związanych z tworzeniem lub wdrażaniem aplikacji opartej na Entity Framework ADO.NET.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Zagadnienia dotyczące bezpieczeństwa](../../../../../docs/framework/data/adonet/ef/security-considerations.md)  
+ [Zagadnienia dotyczące bezpieczeństwa](security-considerations.md)  
   
- [Zagadnienia dotyczące wydajności](../../../../../docs/framework/data/adonet/ef/performance-considerations.md)  
+ [Zagadnienia dotyczące wydajności](performance-considerations.md)  
   
- [Zagadnienia dotyczące migracji](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)  
+ [Zagadnienia dotyczące migracji](migration-considerations.md)  
   
- [Zagadnienia dotyczące wdrażania](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
+ [Zagadnienia dotyczące wdrażania](deployment-considerations.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Program Entity Framework na platformie ADO.NET](../../../../../docs/framework/data/adonet/ef/index.md)
-- [Omówienie programu Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)
-- [Wprowadzenie](../../../../../docs/framework/data/adonet/ef/getting-started.md)
-- [Narzędzia do modelu danych jednostki ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [Program Entity Framework na platformie ADO.NET](index.md)
+- [Omówienie programu Entity Framework](overview.md)
+- [Wprowadzenie](getting-started.md)
+- [Narzędzia Entity Data Model ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

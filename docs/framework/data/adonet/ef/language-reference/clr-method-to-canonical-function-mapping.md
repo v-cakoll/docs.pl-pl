@@ -2,205 +2,205 @@
 title: Metody mapowania funkcji Canonical CLR
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
-ms.openlocfilehash: 16d447e82959f5ade7210b36dcf9d06bed9c9b00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f14ad8d9e8f919fe820447cc991b102319b38d5
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61605720"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251222"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Metody mapowania funkcji Canonical CLR
 
-Entity Framework zawiera zestaw funkcje canonical, które implementują funkcjonalność, obejmującą wiele systemów baz danych, takie jak manipulowanie ciągami i funkcji matematycznych. Dzięki temu deweloperzy pod kątem szerokiego zakresu systemów baz danych. Gdy wywoływana z zapytań technologii, takich jak składnik LINQ to Entities, te canonical funkcji są tłumaczone do odpowiedniej funkcji magazynu odpowiednich dla używanego dostawcy. Dzięki temu wywołania funkcji wyrażane w formie wspólnych źródeł danych, zapewniając zapytania spójne środowisko dla źródeł danych. Bitowe AND, OR, NOT, i operatorów XOR również są mapowane na funkcje canonical, gdy argument jest typu liczbowego. Logiczna operandy bitowe AND, OR, NOT, aby uzyskać i operatory XOR logiczne AND, OR, obliczenia i operacje XOR swojego operandu. Aby uzyskać więcej informacji, zobacz [funkcje Canonical](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).
+Entity Framework zawiera zestaw funkcji kanonicznych, które implementują funkcje, które są wspólne dla wielu systemów baz danych, takich jak manipulowanie ciągami i funkcje matematyczne. Dzięki temu deweloperzy mogą kierować do szerokiego zakresu systemów baz danych. Po wywołaniu z technologii zapytań, takiej jak LINQ to Entities, te funkcje kanoniczne są tłumaczone na poprawną odpowiednią funkcję magazynu dla używanego dostawcy. Dzięki temu wywołania funkcji są wyrażane w typowym formacie między źródłami danych, co zapewnia spójne środowisko zapytań w ramach źródeł danych. Operatory bitowe and, OR, NOT i XOR są również mapowane na funkcje kanoniczne, gdy argument operacji jest typu liczbowego. W przypadku operandów logicznych operatory bitowe and, OR, NOT i XOR obliczają operacje logiczne i, OR, NOT i XOR argumentów operacji. Aby uzyskać więcej informacji, zobacz [funkcje kanoniczne](canonical-functions.md).
 
-W przypadku scenariuszy LINQ zapytań względem programu Entity Framework obejmują mapowanie niektórych metod CLR do metody w źródle danych za pomocą funkcji kanonicznej. Wszelkie wywołania metody w składniku LINQ zapytania jednostki, który nie jest jawnie mapowany do kanonicznej funkcji spowoduje w środowisku uruchomieniowym <xref:System.NotSupportedException> zgłaszanego wyjątku.
+W przypadku scenariuszy LINQ zapytania dotyczące Entity Framework polegają na mapowaniu określonych metod CLR na metody z bazowego źródła danych za pomocą funkcji kanonicznych. Wszelkie wywołania metod w zapytaniu LINQ to Entities, które nie są jawnie zamapowane na funkcję kanoniczną, spowodują wyrzucanie wyjątku czasu wykonywania <xref:System.NotSupportedException> .
 
-## <a name="systemstring-method-static-mapping"></a>Metody System.String mapowanie (statyczne)
+## <a name="systemstring-method-static-mapping"></a>Mapowanie metody System. String (static)
 
-|Metody System.String (statyczny)|Canonical — funkcja|
+|System. String — Metoda (statyczna)|Funkcja kanoniczna|
 |-------------------------------------|------------------------|
 |System.String Concat(String `str0`, String `str1`)|Concat (`str0`, `str1`)|
 |System.String Concat(String `str0`, String `str1`, String `str2`)|Concat(Concat(`str0`, `str1`), `str2`)|
 |System.String Concat(String `str0`, String `str1`, String `str2`, String `str03`)|Concat(Concat(Concat(`str0`, `str1`), `str2`), `str3`)|
-|Logiczna Equals (ciąg `a`, ciąg `b`)|= — Operator|
-|Wartość logiczna IsNullOrEmpty (ciąg `value`)|(IsNull (`value`)) lub długość (`value`) = 0|
-|Op_equality — wartość logiczna (ciąg `a`, ciąg `b`)|= — Operator|
-|Op_inequality — wartość logiczna (ciąg `a` , ciąg `b`)|!= - Operator|
+|Wartość logiczna Equals ( `a`String, `b`String)|= — Operator|
+|Wartość logiczna IsNullOrEmpty ( `value`ciąg)|(IsNull (`value`)) lub length (`value`) = 0|
+|Wartość logiczna op_Equality ( `a`String, `b`String)|= — Operator|
+|Wartość logiczna op_Inequality ( `a` String, `b`String)|!= - Operator|
 |Microsoft.VisualBasic.Strings.Trim(String `str`)|Trim(`str`)|
 |Microsoft.VisualBasic.Strings.LTrim(String `str`)|Ltrim(`str`)|
 |Microsoft.VisualBasic.Strings.RTrim(String `str`)|Rtrim(`str`)|
 |Microsoft.VisualBasic.Strings.Len(String `expression`)|Długość (`expression`)|
-|Microsoft.VisualBasic.Strings.Left(String `str`, Int32 `Length`)|Po lewej stronie (`str`, `Length`)|
-|Microsoft.VisualBasic.Strings.Mid(String `str`, Int32 `Start`, Int32 `Length`)|Substring (`str`, `Start`, `Length`)|
-|Microsoft.VisualBasic.Strings.Right(String `str`, Int32 `Length`)|Po prawej stronie (`str`, `Length`)|
+|Microsoft.VisualBasic.Strings.Left(String `str`, Int32 `Length`)|Po lewej`str`( `Length`,)|
+|Microsoft. VisualBasic. Strings. Mid (String `str`, Int32 `Start`, Int32 `Length`)|Podciąg (`str`, `Start`, `Length`)|
+|Microsoft.VisualBasic.Strings.Right(String `str`, Int32 `Length`)|Right (`str`, `Length`)|
 |Microsoft.VisualBasic.Strings.UCase(String `Value`)|ToUpper (`Value`)|
-|Microsoft.VisualBasic.Strings.LCase(String Value)|ToLower (`Value`)|
+|Microsoft. VisualBasic. Strings. LCase (wartość ciągu)|ToLower (`Value`)|
 
-## <a name="systemstring-method-instance-mapping"></a>Metody System.String (wystąpienie), mapowanie
+## <a name="systemstring-method-instance-mapping"></a>Mapowanie metody System. String (wystąpienie)
 
-|Metody System.String (wystąpienie)|Canonical — funkcja|Uwagi|
+|System. String — Metoda (wystąpienie)|Funkcja kanoniczna|Uwagi|
 |---------------------------------------|------------------------|-----------|
-|Zawiera atrybut typu wartość logiczna (ciąg `value`)|`this` NP. "%`value`%"|Jeśli `value` nie jest stałą, a następnie mapuje to IndexOf (`this`, `value`) > 0|
-|Wartość logiczna EndsWith (String `value`)|`this` LIKE `'`%`value`'|Jeśli `value` nie jest stałą, to mapuje do prawej (`this`, długość (`value`)) = `value`.|
-|Wartość logiczna StartsWith (String `value`)|`this` NP. "`value`%"|Jeśli `value` nie jest stałą, a następnie mapuje to IndexOf (`this`, `value`) = 1.|
+|Wartość logiczna zawiera ( `value`ciąg)|`this`JAK "%`value`%"|Jeśli `value` nie jest stałą, to mapuje do IndexOf (`this`, `value`) > 0|
+|Wartość logiczna EndsWith ( `value`ciąg)|`this` LIKE `'`%`value`'|Jeśli `value` nie jest stałą, to mapuje na prawo (`this`, Długość (`value`)) = `value`.|
+|Wartość logiczna StartsWith ( `value`ciąg)|`this`LIKE "`value`%"|Jeśli `value` nie jest stałą, to mapuje do IndexOf (`this`, `value`) = 1.|
 |Długość|Długość (`this`)||
-|Int32 IndexOf (ciąg `value`)|IndexOf (`this`, `value`) - 1||
-|System.String Insert(Int32 `startIndex`, String `value`)|Concat (Concat (podciąg (`this`, 1, `startIndex`), `value`), podciąg (`this`, `startIndex`+ 1, długość (`this`)- `startIndex`))||
-|System.String Remove(Int32 `startIndex`)|Substring (`this`, 1, `startIndex`)||
-|System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat (podciąg (`this`, 1, `startIndex`), podciąg (`this`, `startIndex`  +  `count` + 1, długość (`this`)-(`startIndex` + `count`)))|Usuń (`startIndex`, `count`) jest obsługiwana tylko w przypadku `count` jest liczbą całkowitą większą niż lub równa 0.|
-|System.String Replace(String `oldValue`, String `newValue`)|Zastąp (`this`, `oldValue`, `newValue`)||
-|System.String Substring(Int32 `startIndex`)|Substring (`this`, `startIndex` + 1, długość (`this`)- `startIndex`)||
-|System.String Substring(Int32 `startIndex`, Int32 `length`)|Substring (`this`, `startIndex` + 1, `length`)||
-|System.String ToLower()|ToLower (`this`)||
-|System.String ToUpper()|ToUpper (`this`)||
-|System.String Trim()|Trim(`this`)||
-|System.String TrimEnd(Char[] `trimChars`)|RTrim(`this`)||
-|System.String TrimStart(Char[]`trimChars`)|LTrim(`this`)||
-|Logiczna Equals (ciąg `value`)|= — Operator||
+|Int32 IndexOf (ciąg `value`)|IndexOf (`this`, `value`)-1||
+|Insert system. String (Int32 `startIndex`, String `value`)|`this`Concat (concat (, 1, `startIndex`), `value`), podciąg (`this`, `startIndex`+ 1, Długość (`this`)- `startIndex`))||
+|Usuwanie z System. String ( `startIndex`Int32)|Podciąg (`this`, 1, `startIndex`)||
+|Usuwanie z System. String ( `startIndex`Int32, `count`Int32)|`this`Concat (, 1,`count``startIndex``this` + ), podciąg (  +  `this` `startIndex`, `startIndex` `count` + 1, Długość ()-()))|Polecenie Remove`startIndex`( `count`,) jest obsługiwane tylko `count` wtedy, gdy jest liczbą całkowitą większą lub równą 0.|
+|Zastąp system. String ( `oldValue`ciąg, `newValue`ciąg)|Zamień (`this`, `oldValue`, `newValue`)||
+|Reciąg system. String (Int32 `startIndex`)|Podciąg (`this`, `startIndex` + 1, Długość (`this`) — `startIndex`)||
+|Podciąg system. String (Int32 `startIndex`, Int32 `length`)|Podciąg (`this`, `startIndex` + 1, `length`)||
+|System. String ToLower ()|ToLower (`this`)||
+|System. String ToUpper ()|ToUpper (`this`)||
+|Trim system. String ()|Trim(`this`)||
+|System. String TrimEnd (Char [] `trimChars`)|RTrim(`this`)||
+|System. String TrimStart (Char []`trimChars`)|LTrim(`this`)||
+|Wartość logiczna jest równa (ciąg `value`)|= — Operator||
 
-## <a name="systemdatetime-method-static-mapping"></a>Metody System.DateTime mapowanie (statyczne)
+## <a name="systemdatetime-method-static-mapping"></a>Mapowanie metody System. DateTime (static)
 
-|Metody System.DateTime (statyczny)|Canonical — funkcja|Uwagi|
+|System. DateTime — Metoda (statyczna)|Funkcja kanoniczna|Uwagi|
 |---------------------------------------|------------------------|-----------|
-|Logiczna Equals (daty/godziny `t1`, daty/godziny `t2`)|= — Operator||
+|Wartość logiczna Equals ( `t1`DateTime, `t2`DateTime)|= — Operator||
 |System.DateTime.Now|CurrentDateTime()||
 |System.DateTime.UtcNow|CurrentUtcDateTime()||
-|Op_equality — wartość logiczna (daty/godziny `d1`, daty/godziny `d2`)|= — Operator||
-|Op_greaterthan — wartość logiczna (daty/godziny `t1`, daty/godziny `t2`)|> operator||
-|Op_greaterthanorequal — wartość logiczna (daty/godziny `t1`, daty/godziny `t2`)|> = — operator||
-|Op_inequality — wartość logiczna (daty/godziny `t1`, daty/godziny `t2`)|!= - Operator||
-|Op_lessthan — wartość logiczna (daty/godziny `t1`, daty/godziny `t2`)|< — operator||
-|Op_lessthanorequal — wartość logiczna (daty/godziny `t1`, daty/godziny `t2`)|< = — operator||
-|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` jako DateInterval, \_<br /><br /> ByVal `DateValue` jako wartość DateTime, \_<br /><br /> Opcjonalne ByVal `FirstDayOfWeekValue` jako FirstDayOfWeek = stałej VbSunday, \_<br /><br /> Opcjonalne ByVal `FirstWeekOfYearValue` jako FirstWeekOfYear = VbFirstJan1 \_<br /><br /> ) Jako liczba całkowita||Zobacz sekcję Funkcja DatePart, aby uzyskać więcej informacji.|
+|Wartość logiczna op_Equality ( `d1`DateTime, `d2`DateTime)|= — Operator||
+|Wartość logiczna op_GreaterThan ( `t1`DateTime, `t2`DateTime)|operator >||
+|Wartość logiczna op_GreaterThanOrEqual ( `t1`DateTime, `t2`DateTime)|> = — operator||
+|Wartość logiczna op_Inequality ( `t1`DateTime, `t2`DateTime)|!= - Operator||
+|Wartość logiczna op_LessThan ( `t1`DateTime, `t2`DateTime)|operator <||
+|Wartość logiczna op_LessThanOrEqual ( `t1`DateTime, `t2`DateTime)|< = — operator||
+|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` jako DateInterval,\_<br /><br /> ByVal `DateValue` jako DateTime,\_<br /><br /> Opcjonalna `FirstDayOfWeekValue` opcja ByVal jako pierwszydzieńtygodnia = VbSunday,\_<br /><br /> Opcjonalne ByVal `FirstWeekOfYearValue` as FirstWeekOfYear = VbFirstJan1\_<br /><br /> ) Jako liczba całkowita||Aby uzyskać więcej informacji, zobacz sekcję funkcji DatePart.|
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||
-|Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||
-|Microsoft.VisualBasic.DateAndTime.Month(DateTime `TimeValue`)|Month()||
-|Microsoft.VisualBasic.DateAndTime.Day (daty/godziny `TimeValue`)|Day()||
+|Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year ()||
+|Microsoft.VisualBasic.DateAndTime.Month(DateTime `TimeValue`)|Miesiąc ()||
+|Microsoft. VisualBasic. DateAndTime. Day (DateTime `TimeValue`)|Day()||
 |Microsoft.VisualBasic.DateAndTime.Hour(DateTime `TimeValue`)|Hour()||
-|Microsoft.VisualBasic.DateAndTime.Minute(DateTime `TimeValue`)|MINUTE()||
-|Microsoft.VisualBasic.DateAndTime.Second(DateTime `TimeValue`)|Second()||
+|Microsoft.VisualBasic.DateAndTime.Minute(DateTime `TimeValue`)|Minuta ()||
+|Microsoft.VisualBasic.DateAndTime.Second(DateTime `TimeValue`)|Sekunda ()||
 
-## <a name="systemdatetime-method-instance-mapping"></a>Metody System.DateTime (wystąpienie), mapowanie
+## <a name="systemdatetime-method-instance-mapping"></a>Mapowanie metody System. DateTime (Instance)
 
-|System.DateTime method (instance)|Canonical — funkcja|
+|System. DateTime (wystąpienie)|Funkcja kanoniczna|
 |-----------------------------------------|------------------------|
-|Logiczna Equals (daty/godziny `value`)|= — Operator|
+|Wartość logiczna Equals ( `value`DateTime)|= — Operator|
 |Dzień|Dzień (`this`)|
 |Godzina|Godzina (`this`)|
-|Millisecond|Millisecond(`this`)|
-|Minuta|Minuty (`this`)|
-|Miesiąc|Miesiąc (`this`)|
-|Sekunda|Drugi (`this`)|
-|Rok|Rok (`this`)|
+|Milisekund|Millisecond(`this`)|
+|Minuta|Minuta`this`()|
+|Bieżącym|Miesiąc (`this`)|
+|Sekunda|Sekunda`this`()|
+|Rok|Year (`this`)|
 
-## <a name="systemdatetimeoffset-method-instance-mapping"></a>Metody System.DateTimeOffset (wystąpienie), mapowanie
+## <a name="systemdatetimeoffset-method-instance-mapping"></a>Mapowanie metody System. DateTimeOffset (wystąpienie)
 
-Mapowanie wyświetlane dla `get` metody na liście właściwości.
+Mapowanie pokazane dla `get` metod na liście właściwości.
 
-|System.DateTimeOffset method (instance)|Canonical — funkcja|Uwagi|
+|System. DateTimeOffset — Metoda (wystąpienie)|Funkcja kanoniczna|Uwagi|
 |-----------------------------------------------|------------------------|-----------|
-|Dzień|Dzień (`this`)|Nie jest obsługiwane dla programu SQL Server 2005.|
-|Godzina|Godzina (`this`)|Nie jest obsługiwane dla programu SQL Server 2005.|
-|Millisecond|Millisecond(`this`)|Nie jest obsługiwane dla programu SQL Server 2005.|
-|Minuta|Minuty (`this`)|Nie jest obsługiwane dla programu SQL Server 2005.|
-|Miesiąc|Miesiąc (`this`)|Nie jest obsługiwane dla programu SQL Server 2005.|
-|Sekunda|Drugi (`this`)|Nie jest obsługiwane dla programu SQL Server 2005.|
-|Rok|Rok (`this`)|Nie jest obsługiwane dla programu SQL Server 2005.|
+|Dzień|Dzień (`this`)|Nieobsługiwane w przypadku SQL Server 2005.|
+|Godzina|Godzina (`this`)|Nieobsługiwane w przypadku SQL Server 2005.|
+|Milisekund|Millisecond(`this`)|Nieobsługiwane w przypadku SQL Server 2005.|
+|Minuta|Minuta`this`()|Nieobsługiwane w przypadku SQL Server 2005.|
+|Bieżącym|Miesiąc (`this`)|Nieobsługiwane w przypadku SQL Server 2005.|
+|Sekunda|Sekunda`this`()|Nieobsługiwane w przypadku SQL Server 2005.|
+|Rok|Year (`this`)|Nieobsługiwane w przypadku SQL Server 2005.|
 
 > [!NOTE]
-> <xref:System.DateTimeOffset.Equals%2A> Metoda zwraca `true` Jeśli porównany z certyfikatami <xref:System.DateTimeOffset> obiekty są równe; `false` inaczej. <xref:System.DateTimeOffset.CompareTo%2A> Metoda zwróci wartość 0, 1 lub -1 w zależności od tego, czy porównany z certyfikatami <xref:System.DateTimeOffset> obiekt jest taki sam, większa lub mniejsza niż odpowiednio.
+> Metoda zwraca `true` czy porównywane <xref:System.DateTimeOffset> obiekty są równe; <xref:System.DateTimeOffset.Equals%2A> `false` w przeciwnym razie. Metoda zwraca wartość 0, 1 lub-1, w zależności od tego, czy <xref:System.DateTimeOffset> porównany obiekt jest równy, większy lub mniejszy niż odpowiednio. <xref:System.DateTimeOffset.CompareTo%2A>
 
-## <a name="systemdatetimeoffset-method-static-mapping"></a>Metody System.DateTimeOffset mapowanie (statyczne)
+## <a name="systemdatetimeoffset-method-static-mapping"></a>Mapowanie metody System. DateTimeOffset (static)
 
-Mapowanie wyświetlane dla `get` metody na liście właściwości.
+Mapowanie pokazane dla `get` metod na liście właściwości.
 
-|Metody System.DateTimeOffset (statyczny)|Canonical — funkcja|Uwagi|
+|System. DateTimeOffset — Metoda (statyczna)|Funkcja kanoniczna|Uwagi|
 |---------------------------------------------|------------------------|-----------|
-|System.DateTimeOffset.Now()|CurrentDateTimeOffset()|Nie jest obsługiwane dla programu SQL Server 2005.|
+|System.DateTimeOffset.Now()|CurrentDateTimeOffset()|Nieobsługiwane w przypadku SQL Server 2005.|
 
-## <a name="systemtimespan-method-instance-mapping"></a>System.TimeSpan Method (Instance) Mapping
+## <a name="systemtimespan-method-instance-mapping"></a>Mapowanie metody System. TimeSpan (wystąpienie)
 
-Mapowanie wyświetlane dla `get` metody na liście właściwości.
+Mapowanie pokazane dla `get` metod na liście właściwości.
 
-|Metody System.TimeSpan (wystąpienie)|Canonical — funkcja|Uwagi|
+|System. TimeSpan — Metoda (wystąpienie)|Funkcja kanoniczna|Uwagi|
 |-----------------------------------------|------------------------|-----------|
-|godz.|Godzina (`this`)|Nie jest obsługiwane dla programu SQL Server 2005.|
-|MS|Millisecond(`this`)|Nie jest obsługiwane dla programu SQL Server 2005.|
-|Minuty|Minuty (`this`)|Nie jest obsługiwane dla programu SQL Server 2005.|
-|sekundy|Drugi (`this`)|Nie jest obsługiwane dla programu SQL Server 2005.|
+|Liczb|Godzina (`this`)|Nieobsługiwane w przypadku SQL Server 2005.|
+|MS|Millisecond(`this`)|Nieobsługiwane w przypadku SQL Server 2005.|
+|Minuty|Minuta`this`()|Nieobsługiwane w przypadku SQL Server 2005.|
+|S|Sekunda`this`()|Nieobsługiwane w przypadku SQL Server 2005.|
 
 > [!NOTE]
-> <xref:System.TimeSpan.Equals%2A> Metoda zwraca `true` Jeśli porównany z certyfikatami <xref:System.TimeSpan> obiekty są równe; `false` inaczej. <xref:System.TimeSpan.CompareTo%2A> Metoda zwróci wartość 0, 1 lub -1 w zależności od tego, czy porównany z certyfikatami <xref:System.TimeSpan> obiekt jest taki sam, większa lub mniejsza niż odpowiednio.
+> Metoda zwraca `true` czy porównywane <xref:System.TimeSpan> obiekty są równe; <xref:System.TimeSpan.Equals%2A> `false` w przeciwnym razie. Metoda zwraca wartość 0, 1 lub-1, w zależności od tego, czy <xref:System.TimeSpan> porównany obiekt jest równy, większy lub mniejszy niż odpowiednio. <xref:System.TimeSpan.CompareTo%2A>
 
-### <a name="datepart-function"></a>Funkcja DatePart
+### <a name="datepart-function"></a>DatePart — funkcja
 
-`DatePart` Funkcji jest mapowany na jeden z kilku różnych funkcje canonical, w zależności od wartości `Interval`. W poniższej tabeli przedstawiono mapowania kanonicznej funkcji dla obsługiwane wartości równych `Interval`:
+Funkcja jest mapowana na jedną z kilku różnych funkcji kanonicznych, w zależności od `Interval`wartości. `DatePart` W poniższej tabeli przedstawiono mapowanie funkcji kanonicznej dla obsługiwanych wartości `Interval`:
 
-|Wartość interwału|Canonical — funkcja|
+|Wartość interwału|Funkcja kanoniczna|
 |--------------------|------------------------|
-|DateInterval.Year|Year()|
-|DateInterval.Month|Month()|
+|DateInterval.Year|Year ()|
+|DateInterval.Month|Miesiąc ()|
 |DateInterval.Day|Day()|
 |DateInterval.Hour|Hour()|
-|DateInterval.Minute|MINUTE()|
-|DateInterval.Second|Second()|
+|DateInterval.Minute|Minuta ()|
+|DateInterval.Second|Sekunda ()|
 
 ## <a name="mathematical-function-mapping"></a>Mapowanie funkcji matematycznych
 
-|CLR — metoda|Canonical — funkcja|
+|CLR — Metoda|Funkcja kanoniczna|
 |----------------|------------------------|
-|System.Decimal.Ceiling(Decimal `d`)|CEILING (`d`)|
-|System.Decimal.Floor(Decimal `d`)|FLOOR (`d`)|
-|System.Decimal.Round(Decimal `d`)|ROUND (`d`)|
-|System.Math.Ceiling(Decimal `d`)|CEILING (`d`)|
-|System.Math.Floor(Decimal `d`)|FLOOR (`d`)|
-|System.Math.Round(Decimal `d`)|ROUND (`d`)|
-|System.Math.Ceiling(Double `a`)|CEILING (`a`)|
-|System.Math.Floor(Double `a`)|FLOOR (`a`)|
-|System.Math.Round (podwójny `a`)|ROUND (`a`)|
-|System.Math.Round(Double value, Int16 digits)|Zaokrąglij (wartość cyfr)|
-|System.Math.Round(Double value, Int32 digits)|Zaokrąglij (wartość cyfr)|
-|System.Math.Round(Decimal value, Int16 digits)|Zaokrąglij (wartość cyfr)|
-|System.Math.Round(Decimal value, Int32, digits)|Zaokrąglij (wartość cyfr)|
-|System.Math.Abs(Int16 value)|ABS(Value)|
-|System.Math.Abs(Int32 value)|ABS(Value)|
-|System.Math.Abs(Int64 value)|ABS(Value)|
-|System.Math.Abs(Byte value)|ABS(Value)|
-|System.Math.Abs(Single value)|ABS(Value)|
-|System.Math.Abs(Double value)|ABS(Value)|
-|System.Math.Abs(Decimal value)|ABS(Value)|
-|System.Math.Truncate(Double value, Int16 digits)|Obetnij (wartość cyfr)|
-|System.Math.Truncate(Double value, Int32 digits)|Obetnij (wartość cyfr)|
-|System.Math.Truncate(Decimal value, Int16 digits)|Obetnij (wartość cyfr)|
-|System.Math.Truncate(Decimal value, Int32 digits)|Obetnij (wartość cyfr)|
-|System.Math.Power(Int32 value, Int64 exponent)|Zasilania (wartość wykładnika)|
-|System.Math.Power (wartość Int32 wykładnik Double)|Zasilania (wartość wykładnika)|
-|System.Math.Power (wartość Int32, wykładnik dziesiętna)|Zasilania (wartość wykładnika)|
-|System.Math.Power(Int64 value, Int64 exponent)|Zasilania (wartość wykładnika)|
-|System.Math.Power (wartość Int64 wykładnik Double)|Zasilania (wartość wykładnika)|
-|System.Math.Power(Int64 value, Decimal exponent)|Zasilania (wartość wykładnika)|
-|System.Math.Power (podwójna wartość, Int64 wykładnik)|Zasilania (wartość wykładnika)|
-|System.Math.Power(Double value, Double exponent)|Zasilania (wartość wykładnika)|
-|System.Math.Power (podwójna wartość, wykładnik dziesiętna)|Zasilania (wartość wykładnika)|
-|System.Math.Power (wartość dziesiętną, Int64 wykładnik)|Zasilania (wartość wykładnika)|
-|System.Math.Power (dziesiętna wartość i wykładnik Double)|Zasilania (wartość wykładnika)|
-|System.Math.Power(Decimal value, Decimal exponent)|Zasilania (wartość wykładnika)|
+|System.Decimal.Ceiling(Decimal `d`)|Górny`d`limit ()|
+|System.Decimal.Floor(Decimal `d`)|Podłoga`d`()|
+|System.Decimal.Round(Decimal `d`)|Round (`d`)|
+|System.Math.Ceiling(Decimal `d`)|Górny`d`limit ()|
+|System.Math.Floor(Decimal `d`)|Podłoga`d`()|
+|System. Math. Round (Decimal `d`)|Round (`d`)|
+|System.Math.Ceiling(Double `a`)|Górny`a`limit ()|
+|System.Math.Floor(Double `a`)|Podłoga`a`()|
+|System. Math. Round (Double `a`)|Round (`a`)|
+|System.Math.Round(Double value, Int16 digits)|Round (wartość, cyfry)|
+|System.Math.Round(Double value, Int32 digits)|Round (wartość, cyfry)|
+|System.Math.Round(Decimal value, Int16 digits)|Round (wartość, cyfry)|
+|System.Math.Round(Decimal value, Int32, digits)|Round (wartość, cyfry)|
+|System.Math.Abs(Int16 value)|ABS (wartość)|
+|System.Math.Abs(Int32 value)|ABS (wartość)|
+|System.Math.Abs(Int64 value)|ABS (wartość)|
+|System.Math.Abs(Byte value)|ABS (wartość)|
+|System.Math.Abs(Single value)|ABS (wartość)|
+|System.Math.Abs(Double value)|ABS (wartość)|
+|System.Math.Abs(Decimal value)|ABS (wartość)|
+|System.Math.Truncate(Double value, Int16 digits)|TRUNCATE (wartość, cyfry)|
+|System.Math.Truncate(Double value, Int32 digits)|TRUNCATE (wartość, cyfry)|
+|System.Math.Truncate(Decimal value, Int16 digits)|TRUNCATE (wartość, cyfry)|
+|System.Math.Truncate(Decimal value, Int32 digits)|TRUNCATE (wartość, cyfry)|
+|System.Math.Power(Int32 value, Int64 exponent)|Potęga (wartość, wykładnik)|
+|System. Math. potęgi (wartość Int32, podwójny wykładnik)|Potęga (wartość, wykładnik)|
+|System. Math. potęgi (wartość Int32, wykładnik dziesiętny)|Potęga (wartość, wykładnik)|
+|System.Math.Power(Int64 value, Int64 exponent)|Potęga (wartość, wykładnik)|
+|System. Math. potęgi (wartość Int64, podwójny wykładnik)|Potęga (wartość, wykładnik)|
+|System.Math.Power(Int64 value, Decimal exponent)|Potęga (wartość, wykładnik)|
+|System. Math. potęgi (wartość podwójna, wykładnik Int64)|Potęga (wartość, wykładnik)|
+|System.Math.Power(Double value, Double exponent)|Potęga (wartość, wykładnik)|
+|System. Math. potęgi (wartość podwójna, wykładnik dziesiętny)|Potęga (wartość, wykładnik)|
+|System. Math. potęgi (wartość dziesiętna, wykładnik Int64)|Potęga (wartość, wykładnik)|
+|System. Math. potęgi (wartość dziesiętna, podwójny wykładnik)|Potęga (wartość, wykładnik)|
+|System.Math.Power(Decimal value, Decimal exponent)|Potęga (wartość, wykładnik)|
 
-## <a name="bitwise-operator-mapping"></a>Bitowy Operator mapowania
+## <a name="bitwise-operator-mapping"></a>Mapowanie operatora bitowego
 
-|Bitowy operator|Kanonicznej funkcji w przypadku argumentów operacji inne niż logiczne|Kanonicznej funkcji w przypadku argumentów operacji logicznych|
+|Operator bitowy|Funkcja kanoniczna dla operandów innych niż logiczne|Funkcja kanoniczna dla argumentów operacji typu Boolean|
 |----------------------|--------------------------------------------------|---------------------------------------------|
-|Bitowy operator AND|BitWiseAnd|op1 op2 i|
-|Bitowy operator OR|BitWiseOr|op1 OR op2|
-|Bitowy NOT operator|BitWiseNot|NOT(OP)|
-|Bitowy operator XOR|BitWiseXor|((op1 NOT(op2)) i OR (NOT(op1) i op2))|
+|Operatory bitowe i|BitWiseAnd|OP1 i OP2|
+|Operator or|BitWiseOr|OP1 lub OP2|
+|Operator NOT bitowego|BitWiseNot|NIE (op)|
+|Bitowy operator XOR|BitWiseXor|((OP1 i NOT (OP2)) lub (NOT (OP1) i OP2))|
 
 ## <a name="other-mapping"></a>Inne mapowanie
 
-|Metoda|Canonical — funkcja|
+|Metoda|Funkcja kanoniczna|
 |------------|------------------------|
 |Guid.NewGuid()|NewGuid()|
 
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+- [LINQ to Entities](linq-to-entities.md)

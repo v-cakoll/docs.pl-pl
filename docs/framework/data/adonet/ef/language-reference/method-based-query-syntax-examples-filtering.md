@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e40e314c-eb30-4f44-a054-41e511e35832
-ms.openlocfilehash: 0795784f4090fca02c89cdfb396d217620b1ba68
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e0eb29b750c474c277ef54c343726b338fbf5dbe
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948237"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250231"
 ---
 # <a name="method-based-query-syntax-examples-filtering"></a>Przykłady składni zapytania oparte na metodzie: Filtrowanie
-W przykładach w tym temacie pokazano, `Where` jak za pomocą metod i `Where…Contains` zbadać [model sprzedaży AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) przy użyciu składni zapytania opartego na metodzie. Uwaga, gdzie...`Contains` nie można użyć jako części [skompilowanego zapytania](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+W przykładach w tym temacie pokazano, `Where` jak za pomocą metod i `Where…Contains` zbadać [model sprzedaży AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) przy użyciu składni zapytania opartego na metodzie. Uwaga, gdzie...`Contains` nie można użyć jako części [skompilowanego zapytania](compiled-queries-linq-to-entities.md).  
   
  Model sprzedaży AdventureWorks używany w tych przykładach jest tworzony na podstawie tabel Contact, Address, Product, SalesOrderHeader i SalesOrderDetail w przykładowej bazie danych AdventureWorks.  
   
@@ -67,4 +67,4 @@ W przykładach w tym temacie pokazano, `Where` jak za pomocą metod i `Where…C
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zapytania w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [Zapytania w składniku LINQ to Entities](queries-in-linq-to-entities.md)

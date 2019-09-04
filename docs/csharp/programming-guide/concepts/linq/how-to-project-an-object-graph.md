@@ -2,12 +2,12 @@
 title: 'Instrukcje: Tworzenie projektu grafu obiektówC#()'
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: dcfdd8cba95d729a1f9bda3adb4b5fd8690b724a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b00e350dd5bf00a5939547b3ed1651b2a6645197
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592989"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253481"
 ---
 # <a name="how-to-project-an-object-graph-c"></a>Instrukcje: Tworzenie projektu grafu obiektówC#()
 W tym temacie pokazano, jak projektować i wypełniać Graf obiektów z pliku XML.  
@@ -218,7 +218,7 @@ class Program {
   
  Przykład generuje następujące dane wyjściowe:  
   
-```  
+```output  
 PurchaseOrderNumber: 99503  
 OrderDate: 10/20/1999  
   

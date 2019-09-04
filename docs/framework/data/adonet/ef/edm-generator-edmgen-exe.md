@@ -2,26 +2,26 @@
 title: Generator EDM (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: f9c75cd7589b1c5fb28112a22390acf90f46e465
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 688989fea6037cc989267e14b103210c2a995afa
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584590"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251628"
 ---
 # <a name="edm-generator-edmgenexe"></a>Generator EDM (EdmGen.exe)
 
-EdmGen.exe to narzędzie wiersza polecenia służące do pracy z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] modelu i mapowania plików. Można użyć narzędzia EdmGen.exe, wykonaj następujące czynności:
+EdmGen. exe to narzędzie wiersza polecenia służące do pracy z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] modelem i plikami mapowania. Za pomocą narzędzia EdmGen. exe można wykonać następujące czynności:
 
-- Łączenie ze źródłem danych przy użyciu dostawcy danych .NET Framework specyficzne dla źródła danych oraz do generowania modelu koncepcyjnego (.csdl), modelu magazynu (ssdl) i pliki mapowania (MSL albo identyfikatorem), które są używane przez [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Aby uzyskać więcej informacji, zobacz [jak: Generowanie modelu i mapowania plików za pomocą EdmGen.exe](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).
+- Nawiązywanie połączenia ze źródłem danych przy użyciu dostawcy danych .NET Framework określonego przez źródło danych i generowanie modelu koncepcyjnego (CSDL), modelu magazynu (. ssdl) i plików mapowania (. MSL), które są używane przez [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]program. Aby uzyskać więcej informacji, zobacz [jak: Użyj programu EdmGen. exe, aby wygenerować model i pliki](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)mapowania.
 
-- Weryfikowanie istniejącego modelu. Aby uzyskać więcej informacji, zobacz [jak: Walidacja modelu i mapowania plików za pomocą EdmGen.exe](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md).
+- Zweryfikuj istniejący model. Aby uzyskać więcej informacji, zobacz [jak: Użyj EdmGen. exe do walidacji modelu i plików](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)mapowania.
 
-- Wygeneruj, C# lub Visual Basic kodu zawierający klasy obiektów wygenerowany na podstawie pliku modelu koncepcyjnego (.csdl). Aby uzyskać więcej informacji, zobacz [jak: Aby wygenerować kod warstwy obiektu za pomocą EdmGen.exe](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md).
+- Generuj plik C# kodu lub Visual Basic, który zawiera klasy obiektów generowane na podstawie pliku modelu koncepcyjnego (CSDL). Aby uzyskać więcej informacji, zobacz [jak: Użyj EdmGen. exe, aby wygenerować kod](how-to-use-edmgen-exe-to-generate-object-layer-code.md)warstwy obiektu.
 
-- Generuj plik kodu C# lub Visual Basic, który zawiera wstępnie wygenerowanych widoków dla istniejącego modelu. Aby uzyskać więcej informacji [jak: Wstępnie wygenerować widoków, aby poprawić wydajność zapytań](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100)).
+- Generuj plik C# kodu lub Visual Basic zawierający wstępnie wygenerowane widoki dla istniejącego modelu. Aby uzyskać więcej informacji [, jak: Wstępnie Generuj widoki, aby zwiększyć wydajność](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))zapytań.
 
-Narzędzie EdmGen.exe jest instalowany w katalogu .NET Framework. W wielu przypadkach znajduje się on w C:\windows\Microsoft.NET\Framework\v4.0. W 64-bitowych systemach znajduje się on w C:\windows\Microsoft.NET\Framework64\v4.0. Można również uzyskać dostęp do narzędzia EdmGen.exe, w wierszu polecenia programu Visual Studio (kliknij **Start**, wskaż **wszystkie programy**, wskaż polecenie **Microsoft Visual Studio 2010**, wskaż polecenie **Visual Studio Tools**, a następnie kliknij przycisk **Visual Studio 2010 Command Prompt**).
+Narzędzie EdmGen. exe jest instalowane w katalogu .NET Framework. W wielu przypadkach znajduje się to w C:\windows\Microsoft.NET\Framework\v4.0. W przypadku systemów 64-bitowych ten program znajduje się w C:\windows\Microsoft.NET\Framework64\v4.0. Możesz również uzyskać dostęp do narzędzia EdmGen. exe z wiersza polecenia programu Visual Studio (kliknij przycisk **Start**, wskaż **Wszystkie programy**, wskaż **Microsoft Visual Studio 2010**, wskaż **Visual Studio Tools**, a następnie kliknij przycisk **Visual Studio 2010 Wiersz polecenia**).
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,51 +31,51 @@ EdmGen /mode:choice [options]
 
 ## <a name="mode"></a>Tryb
 
-Podczas korzystania z narzędzia EdmGen.exe, należy określić jedną z następujących trybów.
+W przypadku korzystania z narzędzia EdmGen. exe należy określić jeden z następujących trybów.
 
 |Tryb|Opis|
 |----------|-----------------|
-|`/mode:ValidateArtifacts`|Weryfikuje pliki .csdl, ssdl i MSL albo identyfikatorem i wyświetla wszelkie błędy lub ostrzeżenia.<br /><br /> Ta opcja wymaga co najmniej jeden z `/inssdl` lub `/incsdl` argumentów. Jeśli `/inmsl` jest określony, `/inssdl` i `/incsdl` wymagane są również argumentów.|
-|`/mode:FullGeneration`|Informacje o połączeniu bazy danych, które zostały określone w używa `/connectionstring` opcji oraz generuje .csdl, ssdl i MSL albo identyfikatorem, obiekt warstwy i przeglądania plików.<br /><br /> Ta opcja wymaga `/connectionstring` argument, a następnie `/project` argument lub `/outssdl`, `/outcsdl`, `/outmsdl`, `/outobjectlayer`, `/outviews`, `/namespace`, i `/entitycontainer` argumentów.|
-|`/mode:FromSSDLGeneration`|Generuje pliki .csdl i MSL albo identyfikatorem, kod źródłowy i widoki z pliku określonego ssdl.<br /><br /> Ta opcja wymaga `/inssdl` argument, a następnie `/project` argument lub `/outcsdl`, `/outmsl`, `/outobjectlayer`, `/outviews`, `/namespace,` i `/entitycontainer` argumentów.|
-|`/mode:EntityClassGeneration`|Tworzy plik kodu źródłowego, który zawiera klas wygenerowanych na podstawie pliku .csdl.<br /><br /> Ta opcja wymaga `/incsdl` argument, a następnie `/project` argument lub `/outobjectlayer` argumentu. `/language` Argument jest opcjonalny.|
-|`/mode:ViewGeneration`|Tworzy plik kodu źródłowego, który zawiera widoki generowane na podstawie .csdl, ssdl i MSL albo identyfikatorem plików.<br /><br /> Ta opcja wymaga `/inssdl`, `/incsdl`, `/inmsl,` i `/project` lub `/outviews` argumentów. `/language` Argument jest opcjonalny.|
+|`/mode:ValidateArtifacts`|Sprawdza poprawność plików CSDL, SSDL i MSL oraz wyświetla błędy lub ostrzeżenia.<br /><br /> Ta opcja wymaga co najmniej jednego `/inssdl` argumentu lub. `/incsdl` Jeśli `/inmsl` jest określona `/inssdl` , wymagane są `/incsdl` również argumenty i.|
+|`/mode:FullGeneration`|Program używa informacji o połączeniu z bazą danych `/connectionstring` określonych w opcji i generuje pliki CSDL, SSDL, MSL, warstwy obiektów i wyświetlaj.<br /><br /> Ta opcja `/connectionstring` wymaga argumentu oraz `/outssdl` `/project` `/outcsdl` argumentu,`/outviews` ,,`/entitycontainer` ,,, i argumentów. `/outmsdl` `/outobjectlayer` `/namespace`|
+|`/mode:FromSSDLGeneration`|Generuje pliki CSDL i MSL, kod źródłowy i widoki z określonego pliku SSDL.<br /><br /> Ta opcja `/inssdl` wymaga argumentu oraz `/project` argumentu `/outobjectlayer` `/outmsl` `/outcsdl` lubargumentów`/namespace,` ,, ,,`/entitycontainer` i. `/outviews`|
+|`/mode:EntityClassGeneration`|Tworzy plik kodu źródłowego, który zawiera klasy wygenerowane z pliku CSDL.<br /><br /> Ta opcja wymaga `/incsdl` argumentu oraz `/project` argumentu lub `/outobjectlayer` argumentu. `/language` Argument jest opcjonalny.|
+|`/mode:ViewGeneration`|Tworzy plik kodu źródłowego, który zawiera widoki wygenerowane na podstawie plików. csdl,. ssdl i. MSL.<br /><br /> Ta `/inssdl`opcja wymaga argumentów`/outviews` , `/incsdl`i. `/inmsl,` `/project` `/language` Argument jest opcjonalny.|
 
 ## <a name="options"></a>Opcje
 
 |Opcja|Opis|
 |------------|-----------------|
-|`/p[roject]:`\<ciąg >|Określa nazwę projektu, należy użyć. Nazwa projektu jest używany jako domyślny dla przestrzeni nazw, ustawiając nazwę modelu i mapowania plików, nazwa pliku źródłowego obiektu i nazwę pliku źródłowego generowania widoku. Nazwa kontenera jednostki jest równa \<Projekt > kontekstu.|
-|`/prov[ider]:`\<ciąg >|Nazwa dostawcy danych .NET Framework, który ma być używany do generowania pliku modelu (ssdl) magazynu. Domyślny dostawca jest .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|
-|`/c[onnectionstring]:`\<Parametry połączenia >|Określa ciąg, który jest używany do połączenia ze źródłem danych.|
-|`/incsdl:`\<file>|Określa plik .csdl lub katalogu, w którym znajdują się pliki .csdl. Tego argumentu można określić wiele razy, aby określić kilka katalogów lub .csdl plików. Określanie wielu katalogów mogą być przydatne podczas generowania klasy (`/mode:EntityClassGeneration`) lub widokach (`/mode:ViewGeneration`) podczas modelu koncepcyjnego jest podzielone między kilka plików. Może to być również przydatne, gdy chcesz zweryfikować wielu modeli (`/mode:ValidateArtifacts`).|
-|`/refcsdl:`\<file>|Określa dodatkowe .csdl pliku lub plików używany do rozpoznawania odwołań w pliku źródłowym .csdl. (Jest .csdl pliku źródłowego, pliku, określonego przez `/incsdl` opcji). `/refcsdl` Plik zawiera typy, które .csdl pliku źródłowego jest zależny od. Ten argument może być określony wiele razy.|
-|`/inmsl:`\<file>|Określa plik MSL albo identyfikatorem lub katalogu, w którym znajdują się pliki MSL albo identyfikatorem. Tego argumentu można określić wiele razy, dzięki czemu można określić kilka katalogów lub MSL albo identyfikatorem plików. Określanie wielu katalogów mogą być przydatne podczas generowania widoki (`/mode:ViewGeneration`) podczas modelu koncepcyjnego jest podzielone między kilka plików. Może to być również przydatne, gdy chcesz zweryfikować wielu modeli (`/mode:ValidateArtifacts`).|
-|`/inssdl:`\<file>|Określa plik ssdl lub katalogu, w którym znajduje się plik ssdl. Tego argumentu można określić wiele razy, aby określić kilka katalogów lub ssdl plików. Może to być przydatne, gdy chcesz zweryfikować wielu modeli `(/mode:ValidateArtifacts)`.|
-|`/outcsdl:`\<file>|Określa nazwę pliku .csdl, który zostanie utworzony.|
-|`/outmsl:`\<file>|Określa nazwę pliku MSL albo identyfikatorem, który zostanie utworzony.|
-|`/outssdl:`\<file>|Określa nazwę pliku ssdl, który zostanie utworzony.|
-|`/outobjectlayer:`\<file>|Określa nazwę pliku kodu źródłowego, który zawiera obiekty wygenerowany na podstawie pliku .csdl.|
-|`/outviews:`\<file>|Określa nazwę pliku kodu źródłowego, który zawiera widoki, które zostały wygenerowane.|
-|`/language:`[VB&#124;CSharp]|Określa język dla plików kodu wygenerowanego źródła. Wartością domyślną języka C#.|
-|`/namespace:`\<ciąg >|Określa przestrzeń nazw modelu do użycia. Przestrzeń nazw jest ustawiony w pliku .csdl podczas uruchamiania `/mode:FullGeneration` lub `/mode:FromSSDLGeneration`. Przestrzeń nazw nie jest używany podczas uruchamiania `/mode:EntityClassGeneration`.|
-|`/entitycontainer:`\<ciąg >|Określa nazwę do zastosowania do `<EntityContainer>` elementu w wygenerowanym modelu i mapowania plików.|
-|`/pl[uralize]`|Stosuje zasady język angielski singulars i liczba mnoga do `Entity`, `EntitySet`, i `NavigationProperty` nazw w modelu koncepcyjnym. Ta opcja będzie wykonywać następujące czynności:<br /><br /> — Sprawdź wszystkie `EntityType` nazw pojedynczej.<br />— Sprawdź wszystkie `EntitySet` nazwy w liczbie mnogiej.<br />— Dla każdego `NavigationProperty` zwracającego co najwyżej jedną jednostkę, wprowadzić nazwę pojedynczej.<br />— Dla każdego `NavigationProperty` zwracającego więcej niż jednej jednostce, utworzyć liczba mnoga nazwy.|
-|`/SuppressForeignKeyProperties or /nofk`|Zapobiega kolumny klucza obcego są widoczne jako właściwości skalarne na typy jednostek w modelu koncepcyjnym.|
+|`/p[roject]:`\<ciąg >|Określa nazwę projektu do użycia. Nazwa projektu jest używana jako wartość domyślna dla ustawienia przestrzeń nazw, nazwa modelu i pliki mapowania, nazwa pliku źródłowego obiektu i nazwa pliku źródłowego generacji widoku. Nazwa kontenera jednostek jest ustawiona na \<kontekst > projektu.|
+|`/prov[ider]:`\<ciąg >|Nazwa dostawcy danych .NET Framework, który ma zostać użyty do wygenerowania pliku modelu magazynu (SSDL). Domyślny dostawca to .NET Framework Dostawca danych dla SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|
+|`/c[onnectionstring]:`\<> parametrów połączenia|Określa ciąg, który jest używany do nawiązywania połączenia ze źródłem danych.|
+|`/incsdl:`\<file>|Określa plik CSDL lub katalog, w którym znajdują się pliki. csdl. Ten argument można określić wiele razy, aby można było określić kilka katalogów lub plików CSDL. Określenie wielu katalogów może być przydatne w przypadku generowania klas`/mode:EntityClassGeneration`() lub widoków`/mode:ViewGeneration`(), gdy model koncepcyjny jest podzielony na kilka plików. Może to być przydatne, jeśli chcesz sprawdzić poprawność wielu modeli`/mode:ValidateArtifacts`().|
+|`/refcsdl:`\<file>|Określa dodatkowy plik. csdl lub pliki używane do rozwiązywania wszelkich odwołań w źródłowym pliku CSDL. (Plik. CSDL jest plikiem, który jest określony przez `/incsdl` opcję). `/refcsdl` Plik zawiera typy, od których zależy plik source. csdl. Ten argument można określić wiele razy.|
+|`/inmsl:`\<file>|Określa plik. MSL lub katalog, w którym znajdują się pliki. MSL. Ten argument można określić wiele razy, aby można było określić kilka katalogów lub plików MSL. Określenie wielu katalogów może być przydatne w przypadku generowania widoków`/mode:ViewGeneration`(), gdy model koncepcyjny jest podzielony na kilka plików. Może to być przydatne, jeśli chcesz sprawdzić poprawność wielu modeli`/mode:ValidateArtifacts`().|
+|`/inssdl:`\<file>|Określa plik SSDL lub katalog, w którym znajduje się plik. SSDL. Ten argument można określić wiele razy, aby można było określić kilka katalogów lub plików SSDL. Może to być przydatne, jeśli chcesz sprawdzić poprawność `(/mode:ValidateArtifacts)`wielu modeli.|
+|`/outcsdl:`\<file>|Określa nazwę pliku. csdl, który zostanie utworzony.|
+|`/outmsl:`\<file>|Określa nazwę pliku. MSL, który zostanie utworzony.|
+|`/outssdl:`\<file>|Określa nazwę pliku SSDL, który zostanie utworzony.|
+|`/outobjectlayer:`\<file>|Określa nazwę pliku kodu źródłowego, który zawiera obiekty wygenerowane z pliku CSDL.|
+|`/outviews:`\<file>|Określa nazwę pliku kodu źródłowego zawierającego widoki, które zostały wygenerowane.|
+|`/language:`[VB&#124;CSharp]|Określa język generowanych plików kodu źródłowego. Język jest wartością domyślną C#.|
+|`/namespace:`\<ciąg >|Określa przestrzeń nazw modelu, która ma być używana. Przestrzeń nazw jest ustawiana w pliku CSDL podczas uruchamiania `/mode:FullGeneration` lub. `/mode:FromSSDLGeneration` Przestrzeń nazw nie jest używana podczas uruchamiania `/mode:EntityClassGeneration`.|
+|`/entitycontainer:`\<ciąg >|Określa nazwę, która ma zostać zastosowana do `<EntityContainer>` elementu w wygenerowanym modelu i plików mapowania.|
+|`/pl[uralize]`|Stosuje reguły języka angielskiego dla liczb pojedynczej i pluralizmu do `Entity`, `EntitySet`i `NavigationProperty` nazwy w modelu koncepcyjnym. Ta opcja spowoduje wykonanie następujących akcji:<br /><br /> — Wprowadź wszystkie `EntityType` nazwy pojedyncze.<br />— Wprowadź wszystkie `EntitySet` nazwy w liczbie mnogiej.<br />-Dla każdej `NavigationProperty` , która zwraca co najwyżej jedną jednostkę, wprowadź nazwę pojedynczą.<br />-Dla każdego `NavigationProperty` , które zwraca więcej niż jedną jednostkę, wprowadź nazwę w liczbie mnogiej.|
+|`/SuppressForeignKeyProperties or /nofk`|Zapobiega ujawnianiu kolumn klucza obcego jako właściwości skalarnych w typach jednostek w modelu koncepcyjnym.|
 |`/help` lub `?`|Wyświetla składnię polecenia i opcje narzędzia.|
-|`/nologo`|Pomija komunikat o prawach autorskich były wyświetlane.|
-|`/targetversion:` \<ciąg >|Wersja .NET Framework, która będzie służyć do kompilowania wygenerowanego kodu. Obsługiwane wersje to 4 i 4.5. Wartość domyślna to 4.|
+|`/nologo`|Pomija wyświetlanie komunikatu o prawach autorskich.|
+|`/targetversion:`\<ciąg >|Wersja .NET Framework, która będzie używana do kompilowania wygenerowanego kodu. Obsługiwane wersje to 4 i 4,5. Wartość domyślna to 4.|
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Instrukcje: Generowanie modelu i mapowania plików za pomocą EdmGen.exe](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)
+[Instrukcje: Używanie programu EdmGen. exe do generowania modelu i plików mapowania](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)
 
-[Instrukcje: Aby wygenerować kod warstwy obiektu za pomocą EdmGen.exe](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)
+[Instrukcje: Generowanie kodu warstwy obiektu za pomocą EdmGen. exe](how-to-use-edmgen-exe-to-generate-object-layer-code.md)
 
-[Instrukcje: Walidacja modelu i mapowania plików za pomocą EdmGen.exe](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
+[Instrukcje: Sprawdzanie poprawności modelu i plików mapowania przy użyciu programu EdmGen. exe](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Narzędzia do modelu danych jednostki ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [Model danych jednostki](../../../../../docs/framework/data/adonet/entity-data-model.md)
-- [Specyfikacje CSDL, SSDL i MSL](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)
+- [Narzędzia Entity Data Model ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [Model danych jednostki](../entity-data-model.md)
+- [Specyfikacje CSDL, SSDL i MSL](./language-reference/csdl-ssdl-and-msl-specifications.md)

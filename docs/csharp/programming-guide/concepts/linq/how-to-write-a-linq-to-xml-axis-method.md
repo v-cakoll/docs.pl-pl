@@ -2,12 +2,12 @@
 title: 'Instrukcje: Napisz metodę osi LINQ to XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: 71d9d0e9ba1f63d8badb1f10ab7ede1dbb30a19f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 74105ff9d08479a4fc702b02e6929130272b237b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592183"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253221"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Instrukcje: Napisz metodę osi LINQ to XML (C#)
 Można napisać własne metody osi, aby pobierać kolekcje z drzewa XML. Najlepszym sposobem, aby to zrobić, jest zapisanie metody rozszerzającej zwracającej kolekcję elementów lub atrybutów. Można napisać metodę rozszerzenia w celu zwrócenia określonych podzbiorów elementów lub atrybutów na podstawie wymagań aplikacji.  
@@ -280,7 +280,7 @@ class Program
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```output  
 /PurchaseOrders/PurchaseOrder[1]/@OrderDate  
 1999-10-20  
 /PurchaseOrders/PurchaseOrder[1]/Items/Item[2]/ShipDate  
@@ -290,4 +290,3 @@ class Program
 /PurchaseOrders/PurchaseOrder[3]/@OrderDate  
 1999-10-22  
 ```  
-  

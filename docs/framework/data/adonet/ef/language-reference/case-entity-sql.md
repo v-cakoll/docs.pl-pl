@@ -1,16 +1,16 @@
 ---
-title: W przypadku (jednostka SQL)
+title: PRZYPADEK (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: 3fc916d201ec79c753e06ccfcd6514761f826eb7
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 79544f4180313a008669c56c4f2740c889043c6d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489503"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251252"
 ---
-# <a name="case-entity-sql"></a>W przypadku (jednostka SQL)
-Obliczenie zestawu `Boolean` wyrażenia do obliczenia wyniku.  
+# <a name="case-entity-sql"></a>PRZYPADEK (Entity SQL)
+Oblicza zestaw `Boolean` wyrażeń, aby określić wynik.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,38 +26,38 @@ END
   
 ## <a name="arguments"></a>Argumenty  
  `n`  
- Jest symbolem zastępczym, która wskazuje, że wiele podczas `Boolean_expression` następnie `result_expression` klauzule można użyć.  
+ Jest symbolem zastępczym, który wskazuje `Boolean_expression` , `result_expression` że można użyć wielu klauzule then.  
   
- NASTĘPNIE `result_expression`  
- Wyrażenie zwracane, gdy `Boolean_expression` daje w wyniku `true`. `result expression` Jest dowolnym prawidłowym wyrażeniem.  
+ NASTĘPNIE`result_expression`  
+ Jest wyrażeniem zwracanym `Boolean_expression` podczas obliczania. `true` `result expression`jest dowolnym prawidłowym wyrażeniem.  
   
  ELSE `else_result_expression`  
- Wyrażenie zwracane, jeśli żadna operacja porównania nie daje w wyniku `true`. Jeśli ten argument zostanie pominięty, a żadna operacja porównania, które daje w wyniku `true`, przypadek zwraca wartość null. `else_result_expression` Jest dowolnym prawidłowym wyrażeniem. Typy danych `else_result_expression` oraz wszelką `result_expression` musi być taka sama lub musi być niejawną konwersję.  
+ Jest wyrażeniem zwracanym, jeśli nie zostanie obliczona `true`żadna operacja porównania. Jeśli ten argument zostanie pominięty i żadna operacja porównania nie zostanie obliczona do `true`, przypadek zwraca wartość null. `else_result_expression`jest dowolnym prawidłowym wyrażeniem. Typy `else_result_expression` danych i any `result_expression` muszą być takie same lub muszą być niejawną konwersją.  
   
- KIEDY `Boolean_expression`  
- Jest `Boolean` wyrażenia obliczonego stosowania wyszukiwanych format wielkości liter. `Boolean_expression` jest dowolne, prawidłowe `Boolean` wyrażenia.  
+ CZASIE`Boolean_expression`  
+ `Boolean` Jest wyrażeniem obliczanym, gdy jest używany przeszukiwany format wielkości liter. `Boolean_expression`jest dowolnym prawidłowym `Boolean` wyrażeniem.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca typ najwyższy priorytet z zestawu typów w `result_expression` i opcjonalną `else_result_expression`.  
+ Zwraca typ najwyższego pierwszeństwa z zestawu typów w `result_expression` i opcjonalne. `else_result_expression`  
   
 ## <a name="remarks"></a>Uwagi  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Wyrażenia case przypomina wyrażenia case w instrukcji Transact-SQL. Wyrażenie case umożliwia wprowadzając szereg testów warunkowych, aby określić wyrażenie, które umożliwia uzyskanie odpowiednich wyników. Ta forma wyrażenia case dotyczy serii co najmniej jednego `Boolean` wyrażenia, aby określić poprawne wyrażenie wynikowe.  
+ Wyrażenie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Case przypomina wyrażenie CASE języka Transact-SQL. Wyrażenie CASE służy do tworzenia serii testów warunkowych, aby określić, które wyrażenie zwróci odpowiedni wynik. Ta forma wyrażenia case ma zastosowanie do serii co najmniej jednego `Boolean` wyrażenia, aby określić poprawne wyrażenie wyniku.  
   
- Funkcja CASE ocenia `Boolean_expression` dla każdej klauzuli WHEN w kolejności określonej, a następnie zwraca `result_expression` pierwszego `Boolean_expression` która daje w wyniku `true`. Pozostałe wyrażenia nie są sprawdzane. Jeśli nie `Boolean_expression` daje w wyniku `true`, aparat bazy danych zwraca `else_result_expression` Jeśli określono klauzulę ELSE, lub wartość null, jeśli określono żadnej klauzuli ELSE.  
+ Funkcja Case oblicza `Boolean_expression` dla każdej klauzuli when w określonej kolejności i zwraca `result_expression` `true`pierwszy `Boolean_expression` , który jest obliczany. Pozostałe wyrażenia nie są oceniane. Jeśli żaden `Boolean_expression` z `true`nich nie jest wynikiem, aparat bazy danych `else_result_expression` zwraca wartość, jeśli określono klauzulę else lub wartość null, jeśli nie określono klauzuli else.  
   
- CASE — instrukcja nie może zwrócić zestawu wielokrotnego.  
+ Instrukcja CASE nie może zwracać zestawu wielokrotnego.  
   
 ## <a name="example"></a>Przykład  
- Następujące zapytanie SQL jednostki użyto wyrażenia CASE można obliczyć zestawu `Boolean` wyrażenia w celu określenia wyniku. Zapytanie jest oparty na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
+ Poniższe zapytanie Entity SQL używa wyrażenia case do obliczenia zestawu `Boolean` wyrażeń w celu określenia wyniku. Zapytanie jest oparte na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
   
-1. Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Wykonaj czynności opisane w [temacie How to: Wykonaj zapytanie zwracające wyniki](../how-to-execute-a-query-that-returns-primitivetype-results.md)typu pierwotnego.  
   
-2. Przekaż poniższe zapytanie jako argument do `ExecutePrimitiveTypeQuery` metody:  
+2. Przekaż następujące zapytanie jako argument do `ExecutePrimitiveTypeQuery` metody:  
   
  [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)
-- [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [THEN](then-entity-sql.md)
+- [SELECT](select-entity-sql.md)
+- [Odwołanie do jednostki SQL](entity-sql-reference.md)

@@ -4,12 +4,12 @@ description: Przewodnik dotyczący implementacji platformy .NET, którą należy
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 520920566e8a55eef2d506dc4a8085f57ef1c0bb
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 37f7a4e3d543711af9ef40e458edfa1cac076db2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107286"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254215"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wybieranie między programami .NET Core i .NET Framework na potrzeby aplikacji serwerowych
 
@@ -28,7 +28,7 @@ Użyj .NET Framework dla aplikacji serwera, gdy:
 - Twoja aplikacja używa obecnie .NET Framework (zalecane jest, aby zwiększyć zamiast migracji).
 - Twoja aplikacja używa bibliotek .NET innych firm lub pakietów NuGet niedostępnych dla platformy .NET Core.
 - Twoja aplikacja korzysta z technologii .NET, które nie są dostępne dla platformy .NET Core.
-- Aplikacja korzysta z platformy, która nie obsługuje programu .NET Core.
+- Aplikacja korzysta z platformy, która nie obsługuje programu .NET Core. Systemy Windows, macOS i Linux obsługują platformę .NET Core.
 
 ## <a name="when-to-choose-net-core"></a>Kiedy należy wybrać platformę .NET Core
 
@@ -44,7 +44,7 @@ Platforma .NET Core obsługuje wcześniej wymienione systemy operacyjne jako sta
 
 Architektura mikrousług umożliwia łączenie różnych technologii między granicami usług. Ten miks technologii umożliwia stopniowe wdrażanie platformy .NET Core dla nowych mikrousług, które współpracują z innymi mikrousługami lub usługami. Można na przykład mieszać mikrousługi lub usługi opracowane za pomocą .NET Framework, Java, Ruby lub innych, monolitycznych technologii.
 
-Dostępnych jest wiele platform infrastruktury. [Usługa Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) jest przeznaczona dla dużych i złożonych systemów mikrousług. [Azure App Service](https://azure.microsoft.com/services/app-service/) to dobry wybór w przypadku mikrousług bezstanowych. Alternatywy mikrousług oparte na platformie Docker pasują do dowolnego rodzaju podejścia mikrousług, jak wyjaśniono [](#containers) w sekcji Containers. Wszystkie te platformy obsługują platformę .NET Core i sprawiają, że są one idealne do obsługi mikrousług.
+Dostępnych jest wiele platform infrastruktury. [Usługa Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) jest przeznaczona dla dużych i złożonych systemów mikrousług. [Azure App Service](https://azure.microsoft.com/services/app-service/) to dobry wybór w przypadku mikrousług bezstanowych. Alternatywy mikrousług oparte na platformie Docker pasują do dowolnego rodzaju podejścia mikrousług, jak wyjaśniono w sekcji [Containers](#containers) . Wszystkie te platformy obsługują platformę .NET Core i sprawiają, że są one idealne do obsługi mikrousług.
 
 Aby uzyskać więcej informacji o architekturze mikrousług, [Zobacz .NET mikrousługi. Architektura dla kontenerów aplikacji](../architecture/microservices/index.md).NET.
 
@@ -56,7 +56,7 @@ Kontenery platformy Docker mogą być hostowane we własnej infrastrukturze syst
 
 ### <a name="a-need-for-high-performance-and-scalable-systems"></a>Potrzeba dla systemów o wysokiej wydajności i skalowalności
 
-Gdy system potrzebuje najlepszej możliwej wydajności i skalowalności, program .NET Core i ASP.NET Core są najlepszymi opcjami. Środowisko uruchomieniowe serwera o wysokiej wydajności dla systemów Windows Server i Linux sprawia, że platforma sieci Web jest wydajnym środowiskiem [TechEmpower](https://www.techempower.com/benchmarks/#hw=ph&test=plaintext)na testach porównawczych.
+Gdy system potrzebuje najlepszej możliwej wydajności i skalowalności, program .NET Core i ASP.NET Core są najlepszymi opcjami. Środowisko uruchomieniowe serwera o wysokiej wydajności dla systemów Windows Server i Linux sprawia, że platforma sieci Web jest wydajnym środowiskiem [TechEmpower na testach porównawczych](https://www.techempower.com/benchmarks/#hw=ph&test=plaintext).
 
 Wydajność i skalowalność są szczególnie istotne w przypadku architektury mikrousług, w których mogą być uruchomione setki mikrousług. W przypadku ASP.NET Core systemy działają z znacznie mniejszą liczbą serwerów/Virtual Machines (VM). Zredukowane serwery/maszyny wirtualne oszczędzają koszty infrastruktury i hostingu.
 

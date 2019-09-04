@@ -1,16 +1,16 @@
 ---
-title: W (jednostka SQL)
+title: W (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 51662950-ee01-4857-b7b9-311dd8515966
-ms.openlocfilehash: d88f79dbfcd27f0ca0d1e26815d7d2bbee731bcf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a07ee79d5452da4341d391fae7c997c33b603a2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750699"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250658"
 ---
-# <a name="in-entity-sql"></a>W (jednostka SQL)
-Określa, czy wartość pasuje do dowolnej wartości w kolekcji.  
+# <a name="in-entity-sql"></a>W (Entity SQL)
+Określa, czy wartość jest zgodna z dowolną wartością w kolekcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -22,24 +22,24 @@ value [ NOT ] IN expression
  `value`  
  Dowolne prawidłowe wyrażenie zwracające wartość do dopasowania.  
   
- [ NOT ]  
- Określa, że `Boolean` wynik w być ujemna.  
+ NIEMOŻLIWE  
+ Określa, że `Boolean` wynik jest negacji.  
   
  `expression`  
- Dowolne prawidłowe wyrażenie, które zwraca kolekcję do testowania pod kątem dopasowania. Wszystkie wyrażenia musi być tego samego typu lub wspólnej podstawowej lub pochodny typ jako `value`.  
+ Dowolne prawidłowe wyrażenie zwracające kolekcję do przetestowania w celu dopasowania. Wszystkie wyrażenia muszą być tego samego typu lub według `value`wspólnego typu podstawowego lub pochodnego.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli wartość zostanie znaleziony w kolekcji; wartość null, jeśli ma wartość null lub kolekcji mają wartość null; w przeciwnym razie `false`. Za pomocą NOT IN neguje wyniki cali  
+ `true`Jeśli wartość zostanie znaleziona w kolekcji; wartość null, jeśli wartość jest równa null lub kolekcja ma wartość null; w przeciwnym razie. `false` Użycie nie jest w wyniku negacji wyników w.  
   
 ## <a name="example"></a>Przykład  
- Następujące zapytanie SQL jednostki używa operatora w celu ustalenia, czy wartość pasuje do dowolnej wartości w kolekcji. Zapytanie jest oparty na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
+ Poniższe zapytanie Entity SQL używa operatora IN, aby określić, czy wartość pasuje do dowolnej wartości w kolekcji. Zapytanie jest oparte na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
   
-1. Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Wykonaj czynności opisane w [temacie How to: Wykonaj zapytanie zwracające wyniki](../how-to-execute-a-query-that-returns-structuraltype-results.md)StructuralType.  
   
-2. Przekaż poniższe zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
+2. Przekaż następujące zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
   
  [!code-csharp[DP EntityServices Concepts 2#IN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#in)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Odwołanie do jednostki SQL](entity-sql-reference.md)

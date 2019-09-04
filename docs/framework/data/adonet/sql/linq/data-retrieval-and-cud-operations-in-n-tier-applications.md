@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: ccd30e3d1b0d716b6393fdb093d47cddf7302f8d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 706dbda98d0e1674b76ebc6a25c7a34746720ea2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963272"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247362"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Pobieranie danych i operacje CUD w aplikacjach N-warstwowych (LINQ to SQL)
 Podczas serializacji obiektów jednostek, takich jak klienci lub zamówienia, do klienta za pośrednictwem sieci, te jednostki są odłączone od kontekstu danych. W kontekście danych nie są już śledzone zmiany ani ich skojarzenia z innymi obiektami. Nie jest to problem, o ile klienci odczytują tylko dane. Umożliwia to również stosunkowo proste umożliwienie klientom dodawania nowych wierszy do bazy danych. Jeśli jednak aplikacja wymaga, aby klienci mogli zaktualizować lub usunąć dane, należy dołączyć jednostki do nowego kontekstu danych przed wywołaniem <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. Ponadto, jeśli używasz optymistycznej kontroli współbieżności z oryginalnymi wartościami, konieczne będzie również udostępnienie bazy danych zarówno oryginalnej jednostki, jak i jednostki jako zmienionej. Dostępne `Attach` są metody umożliwiające umieszczenie jednostek w nowym kontekście danych po odłączeniu.  
   
  Nawet w przypadku serializowania obiektów proxy zamiast [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jednostek nadal trzeba utworzyć jednostkę w warstwie dostępu do danych (dal) i dołączyć ją do nowej <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>, aby przesłać dane do bazy danych.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]nie różni się w zależności od tego, jak jednostki są serializowane. Aby uzyskać więcej informacji na temat używania Object Relational Designer i narzędzi SQLMetal do generowania klas, które można serializować przy użyciu Windows Communication Foundation (WCF), zobacz [How to: Utwórz obiekty do](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)serializacji.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]nie różni się w zależności od tego, jak jednostki są serializowane. Aby uzyskać więcej informacji na temat używania Object Relational Designer i narzędzi SQLMetal do generowania klas, które można serializować przy użyciu Windows Communication Foundation (WCF), zobacz [How to: Utwórz obiekty do](how-to-make-entities-serializable.md)serializacji.  
   
 > [!NOTE]
-> Wywołaj `Attach` metody tylko dla nowych lub deserializowanych jednostek. Jedynym sposobem odłączenia jednostki od jej oryginalnego kontekstu danych jest jego Serializowanie. Jeśli spróbujesz dołączyć odłączoną jednostkę do nowego kontekstu danych, a jednostka nadal ma odroczone ładowarki z poprzedniego kontekstu danych, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] program wygeneruje wyjątek. Jednostka z odroczonymi ładowarkami z dwóch różnych kontekstów danych może spowodować niepożądane wyniki podczas wykonywania operacji INSERT, Update i DELETE na tej jednostce. Aby uzyskać więcej informacji na temat odroczonych modułów ładujących, zobacz odroczone względem [natychmiastowego ładowania](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
+> Wywołaj `Attach` metody tylko dla nowych lub deserializowanych jednostek. Jedynym sposobem odłączenia jednostki od jej oryginalnego kontekstu danych jest jego Serializowanie. Jeśli spróbujesz dołączyć odłączoną jednostkę do nowego kontekstu danych, a jednostka nadal ma odroczone ładowarki z poprzedniego kontekstu danych, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] program wygeneruje wyjątek. Jednostka z odroczonymi ładowarkami z dwóch różnych kontekstów danych może spowodować niepożądane wyniki podczas wykonywania operacji INSERT, Update i DELETE na tej jednostce. Aby uzyskać więcej informacji na temat odroczonych modułów ładujących, zobacz [odroczone względem natychmiastowego ładowania](deferred-versus-immediate-loading.md).  
   
 ## <a name="retrieving-data"></a>Trwa pobieranie danych  
   
@@ -121,7 +121,7 @@ public IEnumerable<Product> GetProductsByCategory(int categoryID)
   
  Wystąpienie kontekstu danych powinno mieć okres istnienia jednego "jednostki pracy". W przypadku luźno powiązanego środowiska jednostka pracy jest zwykle mała, być może jedną optymistyczną transakcję, łącznie z pojedynczym wywołaniem do `SubmitChanges`. W związku z tym, kontekst danych jest tworzony i usuwany w zakresie metody. Jeśli jednostka pracy obejmuje wywołania logiki reguł firmy, a następnie należy zachować to `DataContext` wystąpienie dla całej operacji. W każdym przypadku `DataContext` wystąpienia nie są przeznaczone do utrzymania przez długi okres czasu między dowolnymi liczbami transakcji.  
   
- Ta metoda zwróci obiekty produktu, ale nie zbiera obiektów Order_Detail, które są skojarzone z poszczególnymi produktami. Użyj obiektu <xref:System.Data.Linq.DataLoadOptions> , aby zmienić to zachowanie domyślne. Aby uzyskać więcej informacji, zobacz [jak: Kontrolowanie ilości pobieranych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-control-how-much-related-data-is-retrieved.md)powiązanych danych.  
+ Ta metoda zwróci obiekty produktu, ale nie zbiera obiektów Order_Detail, które są skojarzone z poszczególnymi produktami. Użyj obiektu <xref:System.Data.Linq.DataLoadOptions> , aby zmienić to zachowanie domyślne. Aby uzyskać więcej informacji, zobacz [jak: Kontrolowanie ilości pobieranych](how-to-control-how-much-related-data-is-retrieved.md)powiązanych danych.  
   
 ## <a name="inserting-data"></a>Wstawianie danych  
  Aby wstawić nowy obiekt, warstwa prezentacji po prostu wywołuje odpowiednią metodę w interfejsie warstwy środkowej i przekazuje nowy obiekt do wstawienia. W niektórych przypadkach może być bardziej wydajne, aby klient mógł przekazać tylko niektóre wartości i utworzyć pełny obiekt dla warstwy środkowej.  
@@ -157,7 +157,7 @@ End Sub
 ## <a name="deleting-data"></a>Usuwanie danych  
  Aby usunąć istniejący obiekt z bazy danych, warstwa prezentacji wywołuje odpowiednią metodę w interfejsie warstwy środkowej i przekazuje jej kopię zawierającą oryginalne wartości obiektu do usunięcia.  
   
- Operacje usuwania obejmują optymistyczne sprawdzanie współbieżności, a obiekt, który ma zostać usunięty, musi być najpierw dołączony do nowego kontekstu danych. W tym przykładzie `Boolean` parametr jest ustawiony na `false` , aby wskazać, że obiekt nie ma sygnatury czasowej (rowversion). Jeśli tabela bazy danych generuje sygnatury czasowe dla każdego rekordu, kontrole współbieżności są znacznie prostsze, szczególnie dla klienta. Po prostu przekaż obiekt oryginalny lub zmodyfikowany, a następnie ustaw `Boolean` parametr na. `true` W każdym przypadku w warstwie środkowej zwykle konieczne jest przechwycenie <xref:System.Data.Linq.ChangeConflictException>. Aby uzyskać więcej informacji o sposobie obsługi optymistycznych konfliktów współbieżności, [Zobacz optymistyczne współbieżność: Przegląd](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
+ Operacje usuwania obejmują optymistyczne sprawdzanie współbieżności, a obiekt, który ma zostać usunięty, musi być najpierw dołączony do nowego kontekstu danych. W tym przykładzie `Boolean` parametr jest ustawiony na `false` , aby wskazać, że obiekt nie ma sygnatury czasowej (rowversion). Jeśli tabela bazy danych generuje sygnatury czasowe dla każdego rekordu, kontrole współbieżności są znacznie prostsze, szczególnie dla klienta. Po prostu przekaż obiekt oryginalny lub zmodyfikowany, a następnie ustaw `Boolean` parametr na. `true` W każdym przypadku w warstwie środkowej zwykle konieczne jest przechwycenie <xref:System.Data.Linq.ChangeConflictException>. Aby uzyskać więcej informacji o sposobie obsługi optymistycznych konfliktów współbieżności, [Zobacz optymistyczne współbieżność: Przegląd](optimistic-concurrency-overview.md).  
   
  Podczas usuwania jednostek, które mają ograniczenia klucza obcego dla skojarzonych tabel, należy najpierw usunąć wszystkie obiekty z <xref:System.Data.Linq.EntitySet%601> kolekcji.  
   
@@ -218,7 +218,7 @@ public void DeleteOrder(Order order)
   
  Można również wykonywać aktualizacje lub usunięcia w jednostce wraz z jej relacjami, na przykład klienta i kolekcji skojarzonych z nimi obiektów Order. Po wprowadzeniu modyfikacji klienta do grafu obiektów jednostki i ich kolekcji podrzędnych (`EntitySet`), a optymistyczne kontrole współbieżności wymagają oryginalnych wartości, klient musi podać te oryginalne wartości dla każdej jednostki i <xref:System.Data.Linq.EntitySet%601> Stream. Jeśli chcesz umożliwić klientom tworzenie zestawu powiązanych aktualizacji, usunięć i wstawek w jednym wywołaniu metody, musisz zapewnić klientowi możliwość wskazania, jaki typ operacji ma być wykonywany dla każdej jednostki. W warstwie środkowej należy wywołać odpowiednią <xref:System.Data.Linq.ITable.Attach%2A> metodę, a <xref:System.Data.Linq.ITable.DeleteAllOnSubmit%2A>następnie <xref:System.Data.Linq.ITable.InsertOnSubmit%2A>, lub <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> (bez `Attach`, dla wstawek) dla każdej jednostki przed wywołaniem <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Nie pobieraj danych z bazy danych jako metody uzyskiwania oryginalnych wartości przed rozpoczęciem aktualizacji.  
   
- Aby uzyskać więcej informacji na temat współbieżności optymistycznej, zobacz [optymistyczne współbieżność: Przegląd](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md). Aby uzyskać szczegółowe informacje dotyczące rozpoznawania optymistycznych konfliktów zmian współbieżności, [zobacz How to: Zarządzanie konfliktami](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)zmian.  
+ Aby uzyskać więcej informacji na temat współbieżności optymistycznej, zobacz [optymistyczne współbieżność: Przegląd](optimistic-concurrency-overview.md). Aby uzyskać szczegółowe informacje dotyczące rozpoznawania optymistycznych konfliktów zmian współbieżności, [zobacz How to: Zarządzanie konfliktami](how-to-manage-change-conflicts.md)zmian.  
   
  W poniższych przykładach pokazano każdy scenariusz:  
   
@@ -400,7 +400,7 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
   
 3. Dołącz ją z <xref:System.Data.Linq.Table%601.Attach%2A> przeciążeniem, które przyjmuje drugi parametr Boolean (wartość true). Spowoduje to wyświetlenie śledzenia zmian w celu uwzględnienia zmodyfikowanego obiektu bez konieczności podawania oryginalnych wartości. W tym podejściu obiekt musi mieć pole Version/timestamp.  
   
- Aby uzyskać więcej informacji, zobacz temat [Stany obiektów i śledzenie zmian](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md).  
+ Aby uzyskać więcej informacji, zobacz temat [Stany obiektów i śledzenie zmian](object-states-and-change-tracking.md).  
   
  Jeśli obiekt jednostki <xref:System.Data.Linq.DuplicateKeyException> znajduje się już w pamięci podręcznej identyfikatorów z tą samą tożsamością co obiekt, który jest dołączany, jest zgłaszany.  
   
@@ -408,5 +408,5 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
   
 ## <a name="see-also"></a>Zobacz także
 
-- [N-warstwowe i zdalne aplikacje z użyciem LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
-- [Informacje uzupełniające](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [N-warstwowe i zdalne aplikacje z użyciem LINQ to SQL](n-tier-and-remote-applications-with-linq-to-sql.md)
+- [Informacje uzupełniające](background-information.md)

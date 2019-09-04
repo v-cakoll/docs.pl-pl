@@ -1,169 +1,169 @@
 ---
-title: Security Considerations (Entity Framework)
+title: Zagadnienia dotyczące zabezpieczeń (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: cf42787d7cc67d80f43a08b5fa71161fee20f5c3
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: d1fb104f336938cc83d53cae71a8132f9b648dc6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539840"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248551"
 ---
-# <a name="security-considerations-entity-framework"></a>Security Considerations (Entity Framework)
-W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficzne dla opracowywanie, wdrażanie i uruchamianie [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji. Należy również przestrzegać zaleceń dotyczących tworzenia bezpiecznych aplikacji .NET Framework. Aby uzyskać więcej informacji, zobacz [Przegląd zabezpieczeń](../../../../../docs/framework/data/adonet/security-overview.md).  
+# <a name="security-considerations-entity-framework"></a>Zagadnienia dotyczące zabezpieczeń (Entity Framework)
+W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficzne dla opracowywania [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] , wdrażania i uruchamiania aplikacji. Należy również postępować zgodnie z zaleceniami dotyczącymi tworzenia bezpiecznych aplikacji .NET Framework. Aby uzyskać więcej informacji, zobacz [Omówienie zabezpieczeń](../security-overview.md).  
   
-## <a name="general-security-considerations"></a>Zagadnienia dotyczące zabezpieczeń  
- Następujące zagadnienia dotyczące zabezpieczeń, Zastosuj do wszystkich aplikacji, które używają [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+## <a name="general-security-considerations"></a>Ogólne zagadnienia dotyczące zabezpieczeń  
+ Poniższe zagadnienia dotyczące zabezpieczeń dotyczą wszystkich aplikacji korzystających z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]programu.  
   
-#### <a name="use-only-trusted-data-source-providers"></a>Użyj tylko zaufanego dostawcy źródła danych.  
- Aby komunikować się ze źródłem danych, dostawca, wykonaj następujące czynności:  
+#### <a name="use-only-trusted-data-source-providers"></a>Używaj tylko zaufanych dostawców źródeł danych.  
+ Aby można było komunikować się ze źródłem danych, dostawca musi wykonać następujące czynności:  
   
-- Odbieranie parametrów połączenia z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+- Odbierz parametry połączenia od [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
-- Wykonuje translację elementu drzewo poleceń do źródła danych zapytania natywnego języka.  
+- Przetłumacz drzewo poleceń na natywny język zapytań źródła danych.  
   
-- Możesz korzystać i zwrócić zestaw wyników.  
+- Tworzenie i zwracanie zestawów wyników.  
   
- Podczas operacji logowania informacje, które opiera się na hasło użytkownika jest przekazywany do serwera przy użyciu bibliotek sieciowych bazowego źródła danych. Złośliwe dostawcy można kradzież poświadczeń użytkownika, generowanie złośliwych zapytań i manipulować w zestawie wyników.  
+ Podczas operacji logowania informacje oparte na haśle użytkownika są przesyłane do serwera za pośrednictwem bibliotek sieciowych bazowego źródła danych. Złośliwy dostawca może ukraść poświadczenia użytkownika, generować złośliwe zapytania lub naruszać zestaw wyników.  
   
-#### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>Szyfruj połączenie w celu ochrony poufnych danych.  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Nie obsługuje bezpośrednio szyfrowania danych. Jeśli użytkownikom dostęp do danych przez sieć publiczną, aplikacja powinna nawiązywania zaszyfrowanego połączenia ze źródłem danych, aby zwiększyć poziom zabezpieczeń. Aby uzyskać więcej informacji zobacz dokumentację związanych z zabezpieczeniami dla źródła danych. Dla źródła danych programu SQL Server, zobacz [szyfrowanie połączeń z programem SQL Server](https://go.microsoft.com/fwlink/?LinkId=119544).  
+#### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>Szyfruj połączenie, aby chronić poufne dane.  
+ Program [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] nie obsługuje bezpośrednio szyfrowania danych. Jeśli użytkownicy uzyskują dostęp do danych za pośrednictwem sieci publicznej, aplikacja powinna ustanowić szyfrowane połączenie ze źródłem danych, aby zwiększyć bezpieczeństwo. Aby uzyskać więcej informacji, zobacz dokumentację dotyczącą zabezpieczeń dla źródła danych. Aby uzyskać SQL Server źródło danych, zobacz [szyfrowanie połączeń do SQL Server](https://go.microsoft.com/fwlink/?LinkId=119544).  
   
-#### <a name="secure-the-connection-string"></a>Bezpieczne połączenia.  
- Ochrona dostępu do źródła danych jest jednym z najważniejszych celów podczas zabezpieczania aplikacji. Parametry połączenia przedstawia informacje o potencjalnych luk w zabezpieczeniach, jeśli nie jest zabezpieczony, lub jest nieprawidłowo skonstruowany. Przechowują informacje o połączeniu w postaci zwykłego tekstu lub utrwalić ją w pamięci, istnieje ryzyko obniżania całego systemu. Poniżej przedstawiono zalecane metody zabezpieczania parametry połączenia:  
+#### <a name="secure-the-connection-string"></a>Zabezpiecz parametry połączenia.  
+ Ochrona dostępu do źródła danych jest jednym z najważniejszych celów związanych z zabezpieczaniem aplikacji. Parametry połączenia przedstawiają potencjalną lukę w zabezpieczeniach, jeśli nie została zabezpieczona lub nieprawidłowo skonstruowana. Gdy przechowujesz informacje o połączeniu w postaci zwykłego tekstu lub utrwalasz je w pamięci, grozi sobie naruszeniem całego systemu. Poniżej przedstawiono zalecane metody zabezpieczania parametrów połączenia:  
   
-- Uwierzytelnianie Windows ze źródłem danych programu SQL Server.  
+- Użyj uwierzytelniania systemu Windows ze źródłem danych SQL Server.  
   
-     Gdy połączenie ze źródłem danych programu SQL Server przy użyciu uwierzytelniania Windows, ciąg połączenia nie zawiera informacji logowania i hasło.  
+     Jeśli używasz uwierzytelniania systemu Windows do nawiązywania połączenia ze źródłem danych SQL Server, parametry połączenia nie zawierają informacji o logowaniu i haśle.  
   
-- Szyfrowanie przy użyciu konfiguracji chronionych sekcji pliku konfiguracji.  
+- Szyfruj sekcje plików konfiguracyjnych przy użyciu konfiguracji chronionej.  
   
-     Program ASP.NET zapewnia funkcję o nazwie chronionych konfigurację, która umożliwia szyfrowanie poufnych informacji w pliku konfiguracji. Mimo że przeznaczony głównie dla platformy ASP.NET, umożliwia także konfiguracji chronionej do szyfrowania sekcjami plików konfiguracji w aplikacji Windows. Aby uzyskać szczegółowy opis nowych funkcji konfiguracji chronionej, zobacz [szyfrowania informacji przy użyciu chronione Konfiguracja](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100)).  
+     ASP.NET udostępnia funkcję o nazwie Protected Configuration, która umożliwia szyfrowanie poufnych informacji w pliku konfiguracji. Chociaż program przeznaczony głównie do ASP.NET, można także użyć konfiguracji chronionej do szyfrowania sekcji plików konfiguracji w aplikacjach systemu Windows. Aby uzyskać szczegółowy opis nowych możliwości konfiguracji ochrony, zobacz [szyfrowanie informacji o konfiguracji za pomocą konfiguracji chronionej](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100)).  
   
-- Store parametry połączenia w plikach konfiguracyjnych zabezpieczone.  
+- Przechowuj parametry połączenia w zabezpieczonych plikach konfiguracji.  
   
-     Nigdy nie należy osadzić parametry połączenia w kodzie źródłowym. Parametry połączenia można przechowywać w plikach konfiguracji, więc nie trzeba ich osadzać w kodzie twojej aplikacji. Domyślnie Kreator modelu Entity Data Model przechowuje ciągi połączeń w pliku konfiguracyjnym aplikacji. Należy zabezpieczyć ten plik, aby zapobiegać nieautoryzowanemu dostępowi.  
+     Nie należy osadzać parametrów połączenia w kodzie źródłowym. Parametry połączenia można przechowywać w plikach konfiguracyjnych, co eliminuje konieczność osadzania ich w kodzie aplikacji. Domyślnie Kreator Entity Data Model przechowuje parametry połączenia w pliku konfiguracyjnym aplikacji. Należy zabezpieczyć ten plik, aby zapobiec nieautoryzowanemu dostępowi.  
   
-- Użyj Konstruktorzy parametrów połączeń podczas dynamicznego tworzenia połączeń.  
+- Podczas dynamicznego tworzenia połączeń używaj konstruktorów parametrów połączenia.  
   
-     Jeśli musisz utworzyć parametry połączenia w czasie wykonywania, użyj <xref:System.Data.EntityClient.EntityConnectionStringBuilder> klasy. Ta klasa konstruktora ciągu zapobiega atakami polegającymi na iniekcji ciągu połączenia, sprawdzanie poprawności i anulowania zapewnianego element nieprawidłowe dane wejściowe. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie ciągu połączenia EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md). Również korzystanie z klasy Konstruktor odpowiedni ciąg do konstruowania parametry połączenia źródła danych, który jest częścią [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] parametry połączenia. Aby uzyskać informacji na temat Konstruktorzy parametrów połączenia dla dostawcy ADO.NET, zobacz [Konstruktorzy parametrów połączeń](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
+     W przypadku konieczności konstruowania parametrów połączenia w czasie wykonywania należy <xref:System.Data.EntityClient.EntityConnectionStringBuilder> użyć klasy. Ta klasa konstruktora ciągów pomaga zapobiegać atakom przed iniekcją parametrów połączenia przez sprawdzenie poprawności i ucieczkę nieprawidłowych informacji wejściowych. Aby uzyskać więcej informacji, zobacz [jak: Kompiluj parametry](how-to-build-an-entityconnection-connection-string.md)połączenia usługi EntityConnection. Należy również użyć odpowiedniej klasy konstruktora ciągów, aby utworzyć parametry połączenia ze źródłem danych, które są częścią [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] parametrów połączenia. Aby uzyskać informacje na temat konstruktorów parametrów połączenia dla dostawców ADO.NET, zobacz [konstruktory parametrów połączenia](../connection-string-builders.md).  
   
- Aby uzyskać więcej informacji, zobacz [ochrony informacji o połączeniu](../../../../../docs/framework/data/adonet/protecting-connection-information.md).  
+ Aby uzyskać więcej informacji, zobacz [Ochrona informacji o połączeniu](../protecting-connection-information.md).  
   
-#### <a name="do-not-expose-an-entityconnection-to-untrusted-users"></a>Nie ujawniaj EntityConnection niezaufanym użytkownikom.  
- <xref:System.Data.EntityClient.EntityConnection> Obiekt udostępnia połączenie podstawowe parametry połączenia. Użytkownik z uprawnieniami do <xref:System.Data.EntityClient.EntityConnection> obiektu można również zmienić <xref:System.Data.ConnectionState> połączenia podstawowego. <xref:System.Data.EntityClient.EntityConnection> Klasa nie jest bezpieczny dla wątków.  
+#### <a name="do-not-expose-an-entityconnection-to-untrusted-users"></a>Nie należy ujawniać EntityConnection niezaufanym użytkownikom.  
+ <xref:System.Data.EntityClient.EntityConnection> Obiekt ujawnia parametry połączenia powiązanego połączenia. Użytkownik mający dostęp do <xref:System.Data.EntityClient.EntityConnection> obiektu może również <xref:System.Data.ConnectionState> zmienić połączenie bazowe. <xref:System.Data.EntityClient.EntityConnection> Klasa nie jest bezpieczna wątkowo.  
   
 #### <a name="do-not-pass-connections-outside-the-security-context"></a>Nie przekazuj połączeń poza kontekstem zabezpieczeń.  
- Po nawiązaniu połączenia, nie należy go przekazać poza kontekstem zabezpieczeń. Na przykład jeden wątek z uprawnieniami do otwierania połączenia nie należy przechowywać połączenia w globalnej lokalizacji. Jeśli połączenie jest dostępny w globalnej lokalizacji, inny wątek złośliwego można użyć otwartego połączenia bez tego uprawnienia, które jawnie przyznane uprawnienia do niego.  
+ Po nawiązaniu połączenia nie należy go przekazywać poza kontekstem zabezpieczeń. Na przykład jeden wątek z uprawnieniem do otwierania połączenia nie powinien przechowywać połączenia w globalnej lokalizacji. Jeśli połączenie jest dostępne w lokalizacji globalnej, inny złośliwy wątek może korzystać z otwartego połączenia bez zezwolenia na jego jawne przyznanie.  
   
-#### <a name="be-aware-that-logon-information-and-passwords-may-be-visible-in-a-memory-dump"></a>Należy pamiętać, że informacje logowania i hasła mogą być widoczne w zrzut pamięci.  
- Podczas logowania i hasło informacje o źródle danych jest podana w parametrach połączenia, te informacje są utrzymywane w pamięci, aż do wyrzucania elementów bezużytecznych odzyskuje zasobów. Dzięki temu możliwe ustalenie, gdy ciąg hasła nie jest już w pamięci. Jeśli aplikacja ulegnie awarii, plik zrzutu pamięci może zawierać informacje poufne zabezpieczeń, a użytkownik uruchamiający aplikację i każdy użytkownik z dostępem administracyjnym do komputera, można wyświetlić w pliku zrzutu pamięci. Uwierzytelnianie Windows dla połączeń z programu Microsoft SQL Server.  
+#### <a name="be-aware-that-logon-information-and-passwords-may-be-visible-in-a-memory-dump"></a>Należy pamiętać, że informacje logowania i hasła mogą być widoczne w zrzucie pamięci.  
+ Gdy w parametrach połączenia są podane informacje o logowaniu i haśle źródła danych, te informacje są przechowywane w pamięci, dopóki odzyskiwanie pamięci nie zostanie odzyskane. Uniemożliwia to ustalenie, kiedy ciąg hasła nie jest już w pamięci. Jeśli aplikacja ulegnie awarii, plik zrzutu pamięci może zawierać poufne informacje o zabezpieczeniach, a użytkownik uruchamiający aplikację i dowolny użytkownik mający dostęp administracyjny do komputera może wyświetlić plik zrzutu pamięci. Użyj uwierzytelniania systemu Windows na potrzeby połączeń do Microsoft SQL Server.  
   
-#### <a name="grant-users-only-the-necessary-permissions-in-the-data-source"></a>Przyznaj użytkownikom tylko niezbędnych uprawnień w źródle danych.  
- Administrator źródła danych należy udzielać użytkownikom tylko niezbędnych uprawnień. Mimo że [!INCLUDE[esql](../../../../../includes/esql-md.md)] jest nie DML oświadczenia dotyczące pomocy technicznej, które modyfikują dane, takie jak INSERT, UPDATE lub DELETE, użytkownicy mogą nadal uzyskiwać dostęp do połączenia ze źródłem danych. Złośliwy użytkownik może używać tego połączenia, można wykonać instrukcji DML w macierzystym języku źródła danych.  
+#### <a name="grant-users-only-the-necessary-permissions-in-the-data-source"></a>Udziel użytkownikom tylko niezbędnych uprawnień w źródle danych.  
+ Administrator źródła danych powinien udzielić użytkownikom tylko niezbędnych uprawnień. [!INCLUDE[esql](../../../../../includes/esql-md.md)] Mimo że nie obsługuje instrukcji DML, które modyfikują dane, takie jak INSERT, Update lub DELETE, użytkownicy mogą nadal uzyskiwać dostęp do tego połączenia ze źródłem danych. Złośliwy użytkownik może użyć tego połączenia do wykonywania instrukcji DML w języku macierzystym źródła danych.  
   
-#### <a name="run-applications-with-the-minimum-permissions"></a>Uruchamianie aplikacji na minimalny poziom uprawnień.  
- Jeśli zezwolisz na zarządzanej aplikacji do uruchamiania przy użyciu uprawnień pełnego zaufania, .NET Framework nie ogranicza dostęp aplikacji do Twojego komputera. Może to umożliwić luki w zabezpieczeniach w aplikacji, aby naruszyć bezpieczeństwo całego systemu. Aby korzystać z zabezpieczeń dostępu kodu i inne mechanizmy zabezpieczeń w programie .NET Framework, należy uruchamiać aplikacje przy użyciu uprawnień częściowego zaufania i minimalny zestaw uprawnień, które są wymagane do włączenia aplikacji funkcji. Następujące uprawnienia dostępu kodu są minimalne uprawnienia użytkownika [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji potrzebom:  
+#### <a name="run-applications-with-the-minimum-permissions"></a>Uruchamianie aplikacji z minimalnymi uprawnieniami.  
+ Po umożliwieniu uruchamiania aplikacji zarządzanej z uprawnieniem pełnego zaufania .NET Framework nie ogranicza dostępu aplikacji do komputera. Może to spowodować, że luka w zabezpieczeniach w aplikacji spowoduje naruszenie całego systemu. Aby korzystać z zabezpieczeń dostępu kodu i innych mechanizmów zabezpieczeń w .NET Framework, należy uruchamiać aplikacje przy użyciu uprawnień częściowej relacji zaufania i z minimalnym zestawem uprawnień, które są potrzebne, aby umożliwić działanie aplikacji. Następujące uprawnienia dostępu do kodu to minimalne uprawnienia wymagane przez [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikację:  
   
-- <xref:System.Security.Permissions.FileIOPermission>: <xref:System.Security.Permissions.FileIOPermissionAccess.Write> do otwierania plików określonych metadanych lub <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> do wyszukiwania plików metadanych katalogu.  
+- <xref:System.Security.Permissions.FileIOPermission>: <xref:System.Security.Permissions.FileIOPermissionAccess.Write> aby otworzyć określone pliki metadanych lub <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> przeszukać katalog dla plików metadanych.  
   
-- <xref:System.Security.Permissions.ReflectionPermission>: <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> do obsługi zapytań LINQ do zapytań jednostki.  
+- <xref:System.Security.Permissions.ReflectionPermission>: <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> do obsługi zapytań LINQ to Entities.  
   
-- <xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted> można zarejestrować w <xref:System.Transactions> <xref:System.Transactions.Transaction>.  
+- <xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted> do <xref:System.Transactions> rejestracji<xref:System.Transactions.Transaction>w usłudze.  
   
-- <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> serializować wyjątków za pomocą <xref:System.Runtime.Serialization.ISerializable> interfejsu.  
+- <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> aby serializować wyjątki przy <xref:System.Runtime.Serialization.ISerializable> użyciu interfejsu.  
   
-- Uprawnienia do otwierania połączenia z bazą danych i wykonywania poleceń dla bazy danych, takich jak <xref:System.Data.SqlClient.SqlClientPermission> dla bazy danych programu SQL Server.  
+- Uprawnienie do otwierania połączenia z bazą danych i wykonywania poleceń względem bazy danych, na <xref:System.Data.SqlClient.SqlClientPermission> przykład dla bazy danych SQL Server.  
   
- Aby uzyskać więcej informacji, zobacz [zabezpieczenia dostępu kodu i ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).  
+ Aby uzyskać więcej informacji, zobacz [zabezpieczenia dostępu kodu i ADO.NET](../code-access-security.md).  
   
-#### <a name="do-not-install-untrusted-applications"></a>Nie należy instalować niezaufane aplikacje.  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Nie wymusza żadnych uprawnień zabezpieczeń i wywoła dowolnego kodu obiektu dane dostarczone przez użytkownika w procesie, niezależnie od tego, czy jest zaufany lub nie. Upewnij się, że uwierzytelniania i autoryzacji klienta jest wykonywane przez Magazyn danych i aplikacji.  
+#### <a name="do-not-install-untrusted-applications"></a>Nie instaluj aplikacji niezaufanych.  
+ Program [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] nie wymusi żadnych uprawnień zabezpieczeń i wywoła kod obiektu danych dostarczony przez użytkownika w procesie niezależnie od tego, czy jest on zaufany, czy nie. Upewnij się, że uwierzytelnianie i autoryzacja klienta są wykonywane przez magazyn danych i aplikację.  
   
-#### <a name="restrict-access-to-all-configuration-files"></a>Ograniczanie dostępu do wszystkich plików konfiguracji.  
- Administrator należy ograniczyć dostęp do zapisu do wszystkich plików, które określają konfigurację dla aplikacji, w tym celu enterprisesec.config —, Security.config — machine.conf, i pliku konfiguracji aplikacji \< *aplikacji* >. exe.config.  
+#### <a name="restrict-access-to-all-configuration-files"></a>Ogranicz dostęp do wszystkich plików konfiguracji.  
+ Administrator musi ograniczyć dostęp do zapisu do wszystkich plików, które określają konfigurację dla aplikacji, w tym do enterprisesec. config, Security. config, Machine. conf i \< *aplikacji*pliku konfiguracji aplikacji >. plik exe. config.  
   
- Nazwa niezmienna dostawcy jest można modyfikować w pliku app.config. Aplikacja kliencka musi ponosi odpowiedzialność za dostęp do źródłowego dostawcy za pośrednictwem standardowego dostawcy fabryki modelu za pomocą silnej nazwy.  
+ Niezmienna nazwa dostawcy jest modyfikowalna w pliku App. config. Aplikacja kliencka musi mieć obowiązek uzyskiwania dostępu do podstawowego dostawcy za pośrednictwem standardowego modelu fabryki dostawców przy użyciu silnej nazwy.  
   
-#### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>Uprawnienia do modelu i mapowania plików.  
- Administrator należy ograniczyć dostęp do zapisu do modelu i mapowania plików (edmx, .csdl, ssdl i MSL albo identyfikatorem) tylko do użytkowników modyfikujących modelu i mapowania. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Wymaga tylko do odczytu tych plików w czasie wykonywania. Administrator należy również ograniczyć dostęp do warstwy obiektu i wyświetl wstępnie skompilowanych plików kodu źródłowego, generowane przez narzędzia modelu Entity Data Model.  
+#### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>Ogranicz uprawnienia do modelu i plików mapowania.  
+ Administrator musi ograniczyć dostęp do zapisu do modelu i plików mapowania (. edmx,. csdl,. ssdl i. MSL) tylko do użytkowników, którzy modyfikują model lub mapowania. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Tylko wymaga dostępu do odczytu do tych plików w czasie wykonywania. Administrator powinien również ograniczyć dostęp do warstwy obiektów i wstępnie skompilowanych plików kodu źródłowego, które są generowane przez narzędzia Entity Data Model.  
   
-## <a name="security-considerations-for-queries"></a>Zagadnienia dotyczące zabezpieczeń dla zapytań  
- Podczas wykonywania zapytań dotyczących modelu koncepcyjnego, mają zastosowanie następujące zagadnienia dotyczące zabezpieczeń. Te zagadnienia dotyczą [!INCLUDE[esql](../../../../../includes/esql-md.md)] wysyła kwerendę za pomocą EntityClient i obiekt zapytania za pomocą LINQ, [!INCLUDE[esql](../../../../../includes/esql-md.md)]oraz metody konstruktora zapytań.  
+## <a name="security-considerations-for-queries"></a>Zagadnienia dotyczące zabezpieczeń dotyczące zapytań  
+ Podczas wykonywania zapytania dotyczącego modelu koncepcyjnego stosowane są następujące zagadnienia dotyczące zabezpieczeń. Te zagadnienia dotyczą [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytań korzystających z EntityClient i do zapytań obiektów przy [!INCLUDE[esql](../../../../../includes/esql-md.md)]użyciu metod LINQ, i konstruktora zapytań.  
   
-#### <a name="prevent-sql-injection-attacks"></a>Uniemożliwić ataki przez wstrzyknięcie kodu SQL.  
- Aplikacje często akceptują dane wejściowe w zewnętrznych (z lub innego zewnętrznego agenta użytkownika) i wykonywać akcje w oparciu o te dane wejściowe. Wszystkie dane wejściowe, który bezpośrednio lub pośrednio pochodzi od użytkownika lub zewnętrznego agenta może mieć zawartości, która używa składni języka docelowego w celu wykonywania akcji nieautoryzowanego. Język docelowy jest języka SQL (Structured Query), takie jak języka Transact-SQL, manipulowania ten jest nazywany ataku polegającego na iniekcji SQL. Złośliwy użytkownik może wstrzyknąć poleceń bezpośrednio do zapytania i upuść tabeli bazy danych, i spowodować odmowę usługi lub w przeciwnym razie Zmień rodzaj wykonywanej operacji.  
+#### <a name="prevent-sql-injection-attacks"></a>Zapobiegaj atakom iniekcji SQL.  
+ Aplikacje często pobierają zewnętrzne dane wejściowe (od użytkownika lub innego agenta zewnętrznego) i wykonują działania na podstawie tych danych wejściowych. Wszelkie dane wejściowe bezpośrednio lub pośrednio pochodzące od użytkownika lub zewnętrznego agenta mogą zawierać zawartość, która używa składni języka docelowego w celu wykonywania nieautoryzowanych akcji. Gdy język docelowy to Structured Query Language (SQL), taki jak Transact-SQL, to manipulowanie jest znane jako atak iniekcji SQL. Złośliwy użytkownik może wstrzyknąć polecenia bezpośrednio do zapytania i usunąć tabelę bazy danych, spowodować odmowę usługi lub w inny sposób zmienić charakter wykonywanej operacji.  
   
-- [!INCLUDE[esql](../../../../../includes/esql-md.md)] ataki przez iniekcję kodu:  
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]ataki z iniekcją:  
   
-     Ataki przez iniekcję SQL mogą być wykonywane w [!INCLUDE[esql](../../../../../includes/esql-md.md)] poprzez dostarczenie złośliwych danych do wartości, które są używane w predykacie zapytania i w nazwach parametrów. Aby uniknąć ryzyka wstrzyknięcie kodu SQL, nigdy nie należy łączyć dane wejściowe użytkownika z [!INCLUDE[esql](../../../../../includes/esql-md.md)] tekst polecenia.  
+     Ataki iniekcji SQL można wykonać w [!INCLUDE[esql](../../../../../includes/esql-md.md)] programie, dostarczając złośliwe dane wejściowe do wartości, które są używane w predykacie zapytania i w nazwach parametrów. Aby uniknąć ryzyka iniekcji kodu SQL, nigdy nie należy łączyć danych wejściowych użytkownika [!INCLUDE[esql](../../../../../includes/esql-md.md)] z tekstem polecenia.  
   
-     [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytania akceptować wszędzie, gdzie parametry, że literały są akceptowane. Należy użyć sparametryzowanych zapytań zamiast iniekcji literały z zewnętrznego agenta bezpośrednio do zapytania. Należy również rozważyć użycie [metody konstruktora zapytań](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) bezpiecznie skonstruowanie jednostki SQL.  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)]zapytania akceptują parametry wszędzie tam, gdzie literały są akceptowane. Zamiast dodawać literały z zewnętrznego agenta bezpośrednio do zapytania, należy użyć sparametryzowanych zapytań. Należy również rozważyć użycie [metod konstruktora zapytań](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) do bezpiecznego konstruowania Entity SQL.  
   
-- LINQ do jednostek ataki przez iniekcję kodu:  
+- Ataki z iniekcją LINQ to Entities:  
   
-     Mimo że w kompozycją zapytań jest możliwe w składniku LINQ to Entities, odbywa się za pośrednictwem interfejsu API modelu obiektu. W odróżnieniu od [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytań LINQ do zapytań jednostki nie składają się przy użyciu manipulowanie ciągami lub łączenia i nie są podatne na tradycyjnych ataki przez wstrzyknięcie kodu SQL.  
+     Chociaż kompozycja zapytania jest możliwa w LINQ to Entities, jest wykonywana za pomocą interfejsu API modelu obiektów. W przeciwieństwie [!INCLUDE[esql](../../../../../includes/esql-md.md)] do zapytań, LINQ to Entities zapytania nie są złożone przy użyciu manipulowania ciągami ani łączenia, i nie są podatne na tradycyjne ataki iniekcji SQL.  
   
-#### <a name="prevent-very-large-result-sets"></a>Zapobiegaj bardzo dużych zestawów wyników.  
- Zestaw wyników bardzo dużych może spowodować systemów klienckich, aby zamknąć, jeżeli klient wykonuje operacje, które zużywają zasoby proporcjonalny do rozmiaru zestawu wyników. Nieoczekiwanie dużych zestawów danych może wystąpić w następujących warunkach:  
+#### <a name="prevent-very-large-result-sets"></a>Zapobiegaj bardzo dużym zestawom wyników.  
+ Bardzo duży zestaw wyników może spowodować zamknięcie systemu klienta, jeśli klient wykonuje operacje, które zużywają zasoby proporcjonalnie do rozmiaru zestawu wyników. Nieoczekiwane duże zestawy wyników mogą wystąpić w następujących warunkach:  
   
-- W zapytaniach dotyczących dużej bazy danych, które nie zawierają warunków odpowiedni filtr.  
+- W zapytaniach dotyczących dużej bazy danych, które nie zawierają odpowiednich warunków filtrowania.  
   
-- W zapytaniach, tworzyć sprzężenia Kartezjańskiego na serwerze.  
+- W zapytaniach, które tworzą sprzężenia kartezjańskiego na serwerze.  
   
-- W zagnieżdżonej [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytania.  
+- W zagnieżdżonych [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytaniach.  
   
- Akceptując danych wejściowych użytkownika, należy się upewnić, że dane wejściowe nie może powodować zestawy wyników do wydają się większe niż co system może obsłużyć danych. Można również użyć <xref:System.Linq.Queryable.Take%2A> metody w składniku LINQ to Entities lub [LIMIT](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) operatora w [!INCLUDE[esql](../../../../../includes/esql-md.md)] konieczność ograniczenia rozmiaru zestawu wyników.  
+ W przypadku przyjmowania danych wejściowych użytkownika należy upewnić się, że dane wejściowe nie mogą spowodować, że zestawy wyników będą większe niż to, co system może obsłużyć. Możesz również użyć <xref:System.Linq.Queryable.Take%2A> metody w LINQ to Entities lub operator [Limit](./language-reference/limit-entity-sql.md) w [!INCLUDE[esql](../../../../../includes/esql-md.md)] , aby ograniczyć rozmiar zestawu wyników.  
   
-#### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>Należy unikać zwracania wyników IQueryable, gdy Uwidaczniającą metody potencjalnie niezaufanych wywołujących.  
- Należy unikać cofania się <xref:System.Linq.IQueryable%601> typów z metod, które są dostępne do potencjalnie niezaufanych wywołujących z następujących powodów:  
+#### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>Unikaj zwracania wyników w interfejsie IQueryable podczas ujawniania metod potencjalnie niezaufanym wywołującym.  
+ Należy unikać <xref:System.Linq.IQueryable%601> powrotu typów z metod, które są dostępne dla potencjalnie niezaufanych wywołujących, z następujących powodów:  
   
-- Konsument kwerendę, która udostępnia <xref:System.Linq.IQueryable%601> typu można wywoływać metody na wynik, który ujawnić zabezpieczonych danych lub zwiększyć rozmiar zestawu wyników. Na przykład rozważmy następujący podpis metody:  
+- Konsument zapytania, który ujawnia <xref:System.Linq.IQueryable%601> typ, może wywoływać metody w wyniku, który uwidacznia bezpieczne dane lub zwiększa rozmiar zestawu wyników. Rozważmy na przykład następującą sygnaturę metody:  
   
     ```  
     public IQueryable<Customer> GetCustomer(int customerId)  
     ```  
   
-     Konsument to zapytanie może wywołać `.Include("Orders")` na zwracanego `IQueryable<Customer>` do pobierania danych zapytania nie chcesz ujawniać. To można uniknąć, zmieniając typ zwracany metody <xref:System.Collections.Generic.IEnumerable%601> i wywołanie metody (takie jak `.ToList()`) który materializuje wyniki.  
+     Odbiorca tego zapytania może wywołać `.Include("Orders")` zwracaną `IQueryable<Customer>` wartość, aby pobrać dane, które nie zostały ujawnione. Można to uniknąć przez zmianę zwracanego typu metody na <xref:System.Collections.Generic.IEnumerable%601> i wywołanie metody (na przykład `.ToList()`), która materializuje wyniki.  
   
-- Ponieważ <xref:System.Linq.IQueryable%601> zapytania są wykonywane, gdy wyników jest iterowana, odbiorcy kwerendę, która udostępnia <xref:System.Linq.IQueryable%601> typu może przechwytywać wyjątki, które są zgłaszane. Wyjątki mogą zawierać informacje, które nie są przeznaczone dla konsumentów.  
+- Ponieważ <xref:System.Linq.IQueryable%601> zapytania są wykonywane, gdy wyniki są powtarzane, konsument zapytania, który <xref:System.Linq.IQueryable%601> ujawnia typ, może przechwytywać wyjątki, które są generowane. Wyjątki mogą zawierać informacje, które nie są przeznaczone dla konsumenta.  
   
-## <a name="security-considerations-for-entities"></a>Uwagi dotyczące podmiotów zabezpieczeń  
- Podczas generowania i pracą z nimi przy użyciu typów jednostek, mają zastosowanie następujące zagadnienia dotyczące zabezpieczeń.  
+## <a name="security-considerations-for-entities"></a>Zagadnienia dotyczące zabezpieczeń jednostek  
+ Podczas generowania i pracy z typami jednostek należy wziąć pod uwagę następujące zagadnienia dotyczące zabezpieczeń.  
   
-#### <a name="do-not-share-an-objectcontext-across-application-domains"></a>Nie należy udostępniać obiektu ObjectContext w różnych domenach aplikacji.  
- Udostępnianie <xref:System.Data.Objects.ObjectContext> z więcej niż jednej aplikacji domeny może spowodować ujawnienie informacji w parametrach połączenia. Zamiast tego należy przeniesienie obiektów zserializowanych lub wykresów obiektów do innej domeny aplikacji i następnie dołączyć te obiekty do <xref:System.Data.Objects.ObjectContext> w tej domenie aplikacji. Aby uzyskać więcej informacji, zobacz [serializacji obiektów](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
+#### <a name="do-not-share-an-objectcontext-across-application-domains"></a>Nie udostępniaj obiektu ObjectContext między domenami aplikacji.  
+ <xref:System.Data.Objects.ObjectContext> Udostępnianie z więcej niż jedną domeną aplikacji może ujawnić informacje w parametrach połączenia. Zamiast tego należy przenieść obiekty serializowane lub wykresy obiektów do innej domeny aplikacji, a następnie dołączyć te obiekty do <xref:System.Data.Objects.ObjectContext> domeny w tej domenie. Aby uzyskać więcej informacji, zobacz [Serializowanie obiektów](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
   
-#### <a name="prevent-type-safety-violations"></a>Zapobiegaj naruszenia bezpieczeństwa typu.  
- W przypadku naruszenia bezpieczeństwa typu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] nie może zagwarantować integralności danych w obiektach. Naruszenia bezpieczeństwa typu może wystąpić, jeśli zezwolisz na niezaufane aplikacje do uruchamiania przy użyciu zabezpieczeń dostępu kodu pełnego zaufania.  
+#### <a name="prevent-type-safety-violations"></a>Zapobiegaj naruszeniom bezpieczeństwa typów.  
+ W przypadku naruszenia [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] bezpieczeństwa typów nie można zagwarantować integralności danych w obiektach. Naruszenia bezpieczeństwa typów mogą wystąpić, Jeśli zezwolisz niezaufanym aplikacjom na korzystanie z pełnego zaufania dostępu do kodu.  
   
 #### <a name="handle-exceptions"></a>Obsługa wyjątków.  
- Dostęp do metod i właściwości <xref:System.Data.Objects.ObjectContext> w bloku try-catch. Przechwytywanie wyjątków zapobiega nieobsługiwanych wyjątków z udostępnianie wpisów w <xref:System.Data.Objects.ObjectStateManager> lub informacji o modelu (np. nazwy tabel) do użytkowników aplikacji.  
+ Dostęp do metod i właściwości <xref:System.Data.Objects.ObjectContext> w bloku try-catch. Przechwytywanie wyjątków zapobiega nieobsługiwanym wyjątkom od udostępniania wpisów w <xref:System.Data.Objects.ObjectStateManager> lub informacji o modelu (takich jak nazwy tabel) użytkownikom aplikacji.  
   
-## <a name="security-considerations-for-aspnet-applications"></a>Zagadnienia dotyczące zabezpieczeń dla aplikacji ASP.NET  
+## <a name="security-considerations-for-aspnet-applications"></a>Zagadnienia dotyczące zabezpieczeń aplikacji ASP.NET  
 
-Podczas pracy ze ścieżkami w aplikacjach ASP.NET, należy rozważyć następujące czynności.  
+Podczas pracy ze ścieżkami w aplikacjach ASP.NET należy wziąć pod uwagę następujące kwestie.  
   
-#### <a name="verify-whether-your-host-performs-path-checks"></a>Sprawdź, czy hosta sprawdza ścieżkę.  
- Gdy `|DataDirectory|` (ujęty w symbole potoku) jest używany ciąg podstawienia, ADO.NET sprawdza, czy rozpoznana ścieżka jest obsługiwana. Na przykład ".." nie jest dozwolona za `DataDirectory`. Tym samym sprawdzanie rozpoznawania operatora główny aplikacji sieci Web (`~`) odbywa się przez proces hostingu platformy ASP.NET. Usługi IIS wykonuje to sprawdzenie; hosty innej niż IIS mogą nie weryfikują jednak czy rozpoznana ścieżka jest obsługiwana. Należy znać zachowanie hosta, na którym jest wdrażany [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji.  
+#### <a name="verify-whether-your-host-performs-path-checks"></a>Sprawdź, czy host sprawdza ścieżki.  
+ Gdy jest używany ciąg podstawienia (ujętywsymbolepotoku),ADO.NETsprawdza,czyrozpoznanaścieżkajestobsługiwana.`|DataDirectory|` Na przykład, ".." jest niedozwolone w `DataDirectory`tle. To samo sprawdzenie w celu rozpoznania głównego operatora aplikacji sieci Web`~`() jest wykonywane przez proces obsługujący ASP.NET. Program IIS wykonuje tę kontrolę; jednak hosty inne niż usługi IIS mogą nie sprawdzać, czy rozpoznana ścieżka jest obsługiwana. Należy znać zachowanie hosta, na którym jest wdrażana [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacja.  
   
-#### <a name="do-not-make-assumptions-about-resolved-path-names"></a>Nie należy wprowadzać założeń dotyczących nazw rozpoznana ścieżka.  
- Mimo że wartości, do którego operator głównego (`~`) i `DataDirectory` resolve ciąg podstawienia powinien pozostaje niezmienna, podczas wykonywania aplikacji [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] nie ogranicza hosta modyfikowanie tych wartości.  
+#### <a name="do-not-make-assumptions-about-resolved-path-names"></a>Nie należy tworzyć założeń dotyczących rozwiązanych nazw ścieżek.  
+ Chociaż wartości, dla których operator główny (`~`) `DataDirectory` i ciąg podstawienia, powinny być stałe w czasie wykonywania [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji, nie ograniczają hosta do modyfikowania tych wartości.  
   
-#### <a name="verify-the-path-length-before-deployment"></a>Sprawdź długość ścieżki, przed przystąpieniem do wdrożenia.  
- Przed wdrożeniem [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji, należy upewnić się, że wartości operator głównym (~) i `DataDirectory` ciąg podstawienia nie przekraczają limitów długość ścieżki w systemie operacyjnym. Dostawcy danych ADO.NET nie upewnij się, że długość ścieżki w granicach prawidłowe.  
+#### <a name="verify-the-path-length-before-deployment"></a>Przed wdrożeniem sprawdź długość ścieżki.  
+ Przed wdrożeniem [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji należy się upewnić, że wartości operatora głównego (~) i `DataDirectory` ciągu podstawienia nie przekraczają limitów długości ścieżki w systemie operacyjnym. Dostawcy danych ADO.NET nie zapewniają, że długość ścieżki należy do zakresu prawidłowych limitów.  
   
-## <a name="security-considerations-for-adonet-metadata"></a>Zagadnienia dotyczące zabezpieczeń dla metadanych programu ADO.NET  
- Podczas generowania i pracą z nimi za pomocą modelu i mapowania plików, mają zastosowanie następujące zagadnienia dotyczące zabezpieczeń.  
+## <a name="security-considerations-for-adonet-metadata"></a>Zagadnienia dotyczące zabezpieczeń dla metadanych ADO.NET  
+ Podczas generowania i pracy z modelem i mapowaniem plików obowiązują następujące zagadnienia dotyczące zabezpieczeń.  
   
-#### <a name="do-not-expose-sensitive-information-through-logging"></a>Nie ujawniaj poufnych informacji za pośrednictwem rejestrowania.  
-Składniki usługi metadanych ADO.NET nie Rejestruj informacje prywatne. W przypadku wyników, które nie mogą być zwracane z powodu ograniczeń dostępu systemy zarządzania bazami danych i systemy plików powinna zwrócić wyniki, zerowego zamiast zgłaszania wyjątku, który może zawierać informacje poufne.  
+#### <a name="do-not-expose-sensitive-information-through-logging"></a>Nie ujawniaj poufnych informacji za poorednictwem rejestrowania.  
+Składniki usługi metadanych ADO.NET nie rejestrują żadnych prywatnych informacji. Jeśli istnieją wyniki, których nie można zwrócić ze względu na ograniczenia dostępu, systemy zarządzania bazami danych i systemy plików powinny zwracać zero wyników zamiast podnieść wyjątek, który może zawierać poufne informacje.  
   
-#### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>Nie akceptuj obiektów w obiekcie MetadataWorkspace ze źródeł niezaufanych.  
- Aplikacje powinny akceptuje wystąpień <xref:System.Data.Metadata.Edm.MetadataWorkspace> klasy z niezaufanego źródła. Zamiast tego należy jawnie utworzyć i wypełnienia obszaru roboczego z takich źródeł.  
+#### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>Nie Akceptuj obiektów MetadataWorkspace z niezaufanych źródeł.  
+ Aplikacje nie powinny akceptować wystąpień <xref:System.Data.Metadata.Edm.MetadataWorkspace> klasy z niezaufanych źródeł. Zamiast tego należy jawnie utworzyć i wypełnić obszar roboczy z takiego źródła.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Zagadnienia dotyczące wdrażania](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
-- [Zagadnienia dotyczące migracji](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)
+- [Zabezpieczanie aplikacji ADO.NET](../securing-ado-net-applications.md)
+- [Zagadnienia dotyczące wdrażania](deployment-considerations.md)
+- [Zagadnienia dotyczące migracji](migration-considerations.md)

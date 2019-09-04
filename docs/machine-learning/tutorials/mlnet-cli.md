@@ -1,19 +1,19 @@
 ---
-title: Automatycznie Generuj klasyfikator binarny przy użyciu interfejsu wiersza polecenia ML.NET
+title: Analizowanie tonacji przy użyciu interfejsu wiersza polecenia ML.NET
 description: Automatycznie Generuj model ML i powiązany C# kod z przykładowego zestawu danych
 author: cesardl
 ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: c0e188286821f0e3822fde4af74a1561edfbb868
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 7b740f2c93096c971da009e8abf6865ac1b8e966
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107273"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254160"
 ---
-# <a name="auto-generate-a-binary-classifier-using-the-cli"></a>Automatycznie Generuj klasyfikator binarny przy użyciu interfejsu wiersza polecenia
+# <a name="analyze-sentiment-using-the-mlnet-cli"></a>Analizowanie tonacji przy użyciu interfejsu wiersza polecenia ML.NET
 
 Dowiedz się, jak używać interfejsu wiersza polecenia ML.NET, aby automatycznie generować C# model ml.NET i kod źródłowy. Podajesz zestaw danych i zadanie uczenia maszynowego, które chcesz zaimplementować, a interfejs wiersza polecenia używa aparatu AutoML do tworzenia kodu źródłowego generacji i wdrożenia modelu, a także modelu binarnego.
 
@@ -51,7 +51,7 @@ Zamierzamy użyć istniejącego zestawu danych, który będzie używany dla scen
 
 2. Skopiuj plik do folderu, który został wcześniej utworzony (na przykład `/cli-test`). `yelp_labelled.txt`
 
-3. Otwórz preferowany wiersz polecenia i przejdź do folderu, do którego skopiowano plik zestawu danych. Przykład:
+3. Otwórz preferowany wiersz polecenia i przejdź do folderu, do którego skopiowano plik zestawu danych. Na przykład:
 
     ```console
     > cd /cli-test
@@ -227,7 +227,7 @@ Jednak sposób implementacji tych wierszy kodu w celu uruchomienia modelu ML pow
 
 Tworzenie obiektu modelu (`ITransformer` załadowane z pliku zip modelu) `PredictionEngine` i obiekt powinien być zoptymalizowany szczególnie w przypadku uruchamiania na skalowalnych aplikacjach internetowych i usługach rozproszonych. Dla pierwszego przypadku obiekt modelu (`ITransformer`) Optymalizacja jest prosta. `ITransformer` Ponieważ obiekt jest bezpieczny wątkowo, obiekt można buforować jako obiekt pojedynczy lub statyczny, aby można było załadować model jeden raz.
 
-W przypadku drugiego obiektu `PredictionEngine` obiekt nie jest tak prosty, `PredictionEngine` ponieważ obiekt nie jest bezpieczny wątkowo, dlatego nie można utworzyć wystąpienia tego obiektu jako pojedynczego lub statycznego obiektu w aplikacji ASP.NET Core. Problem z bezpiecznym wątkem i skalowalnością został szczegółowo omówiony w tym wpisie w [blogu](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/). 
+W przypadku drugiego obiektu `PredictionEngine` obiekt nie jest tak prosty, `PredictionEngine` ponieważ obiekt nie jest bezpieczny wątkowo, dlatego nie można utworzyć wystąpienia tego obiektu jako pojedynczego lub statycznego obiektu w aplikacji ASP.NET Core. Problem z bezpiecznym wątkem i skalowalnością został szczegółowo omówiony w tym [wpisie w blogu](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/). 
 
 Jednak rzeczy znacznie się różnią od tego, co zostało wyjaśnione w tym wpisie w blogu. Pracujemy nad prostszym podejściem i utworzyłem całkiem **"pakiet integracyjny platformy .NET Core"** , którego można łatwo używać w ASP.NET Core aplikacjach i usługach, rejestrując je w aplikacji di Services (usługi wtrysku zależności), a następnie bezpośrednio Użyj go z Twojego kodu. Zapoznaj się z poniższym samouczkiem i przykładem, aby:
 

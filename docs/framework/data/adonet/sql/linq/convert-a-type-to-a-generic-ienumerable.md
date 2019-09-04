@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 64774fb5-7447-4296-ad3b-8a94346f99a1
-ms.openlocfilehash: d75c9b9123b52b3e241bea1bbd1d302c406715e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c92f65c22fe4b4128a171c757bb9e9c0ccbc3fee
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032711"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247731"
 ---
 # <a name="convert-a-type-to-a-generic-ienumerable"></a>Konwertowanie typu na ogólny interfejs IEnumerable
-Użyj <xref:System.Linq.Enumerable.AsEnumerable%2A> być zwracany argument wpisanych w formie ogólnego `IEnumerable`.  
+Użyj <xref:System.Linq.Enumerable.AsEnumerable%2A> , aby zwrócić argument, który jest typem `IEnumerable`ogólnym.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] (przy użyciu domyślnego ogólnego `Query`) spróbuje przekonwertować kwerendy do bazy danych SQL, a następnie uruchomić go na serwerze. Ale `where` klauzuli odwołuje się do metody zdefiniowanej przez użytkownika po stronie klienta (`isValidProduct`), której nie można skonwertować do bazy danych SQL.  
+ W tym przykładzie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] (przy użyciu domyślnego generycznego `Query`) próba konwersji zapytania na SQL i wykonania go na serwerze. Natomiast klauzula odwołuje się do zdefiniowanej przez użytkownika metody po stronie`isValidProduct`klienta (), której nie można przekonwertować na SQL. `where`  
   
- To rozwiązanie jest określenie ogólnego klienta <xref:System.Collections.Generic.IEnumerable%601> implementacji `where` do zastąpienia ogólnego <xref:System.Linq.IQueryable%601>. Można to zrobić, wywołując <xref:System.Linq.Enumerable.AsEnumerable%2A> operatora.  
+ Rozwiązaniem jest określenie, że <xref:System.Collections.Generic.IEnumerable%601> `where` implementacja ogólna po stronie klienta zastąpi ogólny <xref:System.Linq.IQueryable%601>. W tym celu należy wycofać <xref:System.Linq.Enumerable.AsEnumerable%2A> operatora.  
   
  [!code-csharp[DLinqQueryExamples#46](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#46)]
  [!code-vb[DLinqQueryExamples#46](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#46)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przykłady zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Przykłady zapytań](query-examples.md)

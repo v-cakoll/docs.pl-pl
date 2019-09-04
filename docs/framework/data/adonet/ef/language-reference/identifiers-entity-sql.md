@@ -1,59 +1,59 @@
 ---
-title: Identyfikatory (jednostka SQL)
+title: Identyfikatory (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-ms.openlocfilehash: e514a25dc754b788316cb18b53191e8f838587dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a8f98a9ea9601e1bf5f178e404f99e4a9160078
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631580"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250717"
 ---
-# <a name="identifiers-entity-sql"></a>Identyfikatory (jednostka SQL)
-Identyfikatory są używane w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] do reprezentowania aliasy wyrażenie zapytania, odwołań do zmiennych, właściwości obiektów, funkcji i tak dalej. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zawiera dwa rodzaje identyfikatorów: proste identyfikatory oraz identyfikatory w cudzysłowach.  
+# <a name="identifiers-entity-sql"></a>Identyfikatory (Entity SQL)
+Identyfikatory są używane w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] programie do reprezentowania aliasów wyrażeń zapytania, odwołań do zmiennych, właściwości obiektów, funkcji i tak dalej. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]zawiera dwa rodzaje identyfikatorów: proste identyfikatory i identyfikatory ujęte w cudzysłów.  
   
-## <a name="simple-identifiers"></a>Proste identyfikatory  
- W prostym identyfikatorem [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest sekwencją alfanumeryczne i znaki podkreślenia. Pierwszy znak identyfikatora musi być znak alfabetyczny (a – z lub A – Z).  
+## <a name="simple-identifiers"></a>Identyfikatory proste  
+ Prosty identyfikator w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest sekwencją znaków alfanumerycznych i podkreślenia. Pierwszy znak identyfikatora musi być znakiem alfabetycznym (a-z lub A-Z).  
   
-## <a name="quoted-identifiers"></a>Identyfikatory w cudzysłowach  
- Cytowanego identyfikatora znak jest dowolną sekwencję znaków, ujęte w nawiasy kwadratowe ([]). Cytowane identyfikatory pozwalają określić identyfikatory znaków, które nie są prawidłowe w identyfikatorach. Wszystkie znaki między nawiasami kwadratowymi stają się częścią identyfikatora, w tym wszystkich odstępów.  
+## <a name="quoted-identifiers"></a>Identyfikatory ujęte w cudzysłów  
+ Identyfikator w cudzysłowie to dowolna sekwencja znaków ujęta w nawiasy kwadratowe ([]). Identyfikatory ujęte w cudzysłów umożliwiają określanie identyfikatorów z nieprawidłowymi znakami w identyfikatorach. Wszystkie znaki między nawiasami kwadratowymi stają się częścią identyfikatora, łącznie ze wszystkimi białymi znakami.  
   
- Cytowanego identyfikatora nie może zawierać następujących znaków:  
+ Identyfikator w cudzysłowie nie może zawierać następujących znaków:  
   
 - Newline.  
   
 - Znaki powrotu karetki.  
   
-- Karty.  
+- Przedstawia.  
   
 - Backspace.  
   
-- Dodatkowe nawiasy kwadratowe (oznacza to, że nawiasy kwadratowe wewnątrz nawiasów kwadratowych, które odróżnić identyfikator).  
+- Dodatkowe nawiasy kwadratowe (czyli nawiasy kwadratowe w nawiasach kwadratowych, które odróżnić identyfikator).  
   
- Podane identyfikator może zawierać znaków Unicode.  
+ Identyfikator ujęty w cudzysłów może zawierać znaki Unicode.  
   
- Identyfikatory w cudzysłowach umożliwiają tworzenie znaków nazwy właściwości, które nie są prawidłowe w identyfikatorach, jak pokazano w poniższym przykładzie:  
+ Identyfikatory ujęte w cudzysłów umożliwiają tworzenie znaków nazw właściwości, które nie są prawidłowe w identyfikatorach, jak pokazano w następującym przykładzie:  
   
  `SELECT c.ContactName AS [Contact Name] FROM customers AS c`  
   
- Umożliwia także identyfikatory w cudzysłowach określić identyfikator, który jest zastrzeżonym słowem kluczowym z [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Na przykład jeśli typ `Email` ma właściwość o nazwie "Od", można odróżnić go od zastrzeżonego słowa kluczowego z, za pomocą nawiasów kwadratowych, w następujący sposób:  
+ Można również użyć identyfikatorów w cudzysłowie, aby określić identyfikator, który jest zastrzeżonym słowem kluczowym [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Na przykład, jeśli typ `Email` ma właściwość o nazwie "from", można odróżnić ją od zastrzeżonego słowa kluczowego from przy użyciu nawiasów kwadratowych w następujący sposób:  
   
  `SELECT e.[From] FROM emails AS e`  
   
- Po prawej stronie operatora kropka (.), można użyć cytowanego identyfikatora.  
+ Możesz użyć identyfikatora w cudzysłowie po prawej stronie operatora kropki (.).  
   
  `SELECT t FROM ts as t WHERE t.[property] == 2`  
   
- Aby użyć nawias kwadratowy w identyfikatorze, należy dodać dodatkowy nawias kwadratowy. W poniższym przykładzie "`abc]`" to identyfikator:  
+ Aby użyć nawiasu kwadratowego w identyfikatorze, należy dodać dodatkowy nawias kwadratowy. W poniższym przykładzie "`abc]`" jest identyfikatorem:  
   
  `SELECT t from ts as t WHERE t.[abc]]] == 2`  
   
- Semantyka porównania cytowanego identyfikatora, można zobaczyć [zestaw znaków danych wejściowych](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md).  
+ W przypadku semantyki porównania identyfikatora w cudzysłowie zobacz [wejściowy zestaw znaków](input-character-set-entity-sql.md).  
   
-## <a name="aliasing-rules"></a>Zasady aliasowania  
- Firma Microsoft zaleca, określając aliasów w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania zawsze wtedy, gdy potrzebne, w tym następujące [!INCLUDE[esql](../../../../../../includes/esql-md.md)] konstrukcji:  
+## <a name="aliasing-rules"></a>Reguły aliasowania  
+ Zalecamy Określanie aliasów w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytaniach zawsze, gdy jest [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to potrzebne, w tym następujących konstrukcji:  
   
-- Pola konstruktorze wierszy.  
+- Pola konstruktora wierszy.  
   
 - Elementy w klauzuli FROM w wyrażeniu zapytania.  
   
@@ -62,66 +62,66 @@ Identyfikatory są używane w [!INCLUDE[esql](../../../../../../includes/esql-md
 - Elementy w klauzuli GROUP BY w wyrażeniu zapytania.  
   
 ### <a name="valid-aliases"></a>Prawidłowe aliasy  
- Prawidłowe aliasy w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] prostym identyfikatorem lub cytowanego identyfikatora.  
+ Prawidłowe aliasy [!INCLUDE[esql](../../../../../../includes/esql-md.md)] w to każdy prosty identyfikator lub Identyfikator ujęty w cudzysłów.  
   
-### <a name="alias-generation"></a>Alias Generation  
- Jeśli brak aliasu jest określona w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] wyrażeniu, zapytania [!INCLUDE[esql](../../../../../../includes/esql-md.md)] spróbuje wygenerować aliasem, na podstawie następujących reguł proste:  
+### <a name="alias-generation"></a>Generowanie aliasu  
+ Jeśli w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] wyrażeniu zapytania nie określono aliasu, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] program podejmie próbę wygenerowania aliasu na podstawie następujących prostych reguł:  
   
-- Wyrażenia zapytania (w przypadku którego aliasu jest nieokreślony) w przypadku prostego lub cytowanego identyfikatora, ten identyfikator jest używany jako alias. Na przykład, `ROW(a, [b])` staje się `ROW(a AS a, [b] AS [b])`.  
+- Jeśli wyrażenie zapytania (dla którego alias jest nieokreślony) jest identyfikatorem prostym lub w cudzysłowie, ten identyfikator jest używany jako alias. Na przykład, `ROW(a, [b])` staje się `ROW(a AS a, [b] AS [b])`.  
   
-- Jeśli wyrażenie kwerendy jest bardziej złożonych wyrażeń, ale ostatni składnik to wyrażenie kwerendy jest prostym identyfikatorem, że identyfikator jest używany jako alias. Na przykład, `ROW(a.a1, b.[b1])` staje się `ROW(a.a1 AS a1, b.[b1] AS [b1])`.  
+- Jeśli wyrażenie zapytania jest bardziej skomplikowanym wyrażeniem, ale ostatni składnik tego wyrażenia zapytania jest prostym identyfikatorem, ten identyfikator jest używany jako alias. Na przykład, `ROW(a.a1, b.[b1])` staje się `ROW(a.a1 AS a1, b.[b1] AS [b1])`.  
   
- Zaleca się, czy należy używać niejawne Tworzenie aliasów Jeśli chcesz później użyć nazwę aliasu. W dowolnym momencie konflikt aliasy (niejawny lub jawny) lub czy powtarza się w tym samym zakresie, nastąpi błąd kompilacji. Niejawne alias zostaną spełnione kompilacji, nawet jeśli dostępny jest aliasem jawnych lub niejawnych o takiej samej nazwie.  
+ Zaleca się, aby nie używać niejawnych aliasów, jeśli chcesz użyć nazwy aliasu później. W każdym aliasie (niejawny lub jawny) występuje konflikt lub powtarza się w tym samym zakresie, wystąpił błąd kompilacji. Niejawny alias przejdzie kompilację, nawet jeśli istnieje jawny lub niejawny alias o tej samej nazwie.  
   
- Niejawne aliasy są automatycznie wygenerowany na podstawie danych wejściowych użytkownika. Na przykład następujący wiersz kodu wygeneruje nazwę jako alias obie kolumny, a w związku z tym spowoduje konflikt.  
+ Aliasy niejawne są generowane automatycznie na podstawie danych wejściowych użytkownika. Na przykład poniższy wiersz kodu generuje nazwę jako alias dla obu kolumn i w związku z tym spowoduje konflikt.  
   
 ```  
 SELECT product.NAME, person.NAME  
 ```  
   
- Następujący wiersz kodu, który używa jawnego aliasy, również zakończy się niepowodzeniem. Jednak błąd będą bardziej widoczny, zapoznając się kod.  
+ Następujący wiersz kodu, który używa jawnych aliasów, również zakończy się niepowodzeniem. Niepowodzenie będzie jednak bardziej widoczne, odczytując kod.  
   
 ```  
 SELECT 1 AS X, 2 AS X …  
 ```  
   
-## <a name="scoping-rules"></a>Wyznaczanie zakresu reguły  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Definiuje reguły określania zakresów, które określają podczas określonego zmienne są widoczne w języku zapytań. Niektóre wyrażenia lub instrukcji wprowadzają nowe nazwy. Wyznaczanie zakresu reguły określają, gdzie te nazwy mogą być używane i po lub w którym nowe oświadczenie z taką samą nazwę jak inny można ukryć jego poprzednika.  
+## <a name="scoping-rules"></a>Reguły określania zakresu  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]definiuje reguły określania zakresu, które określają, kiedy określone zmienne są widoczne w języku zapytań. Niektóre wyrażenia lub instrukcje wprowadzają nowe nazwy. Reguły określania zakresu określają, gdzie mogą być używane te nazwy, a kiedy lub gdzie Nowa deklaracja o takiej samej nazwie jak inna może ukryć jej poprzednik.  
   
- Gdy nazwy są definiowane w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania, ich mówi się, że można zdefiniować w obrębie zakresu. Zakres obejmuje cały region zapytania. Wszystkie wyrażenia lub nazwę odwołania w określonym zakresie zobaczyć nazwy, które są zdefiniowane w tym zakresie. Przed rozpoczęciem zakresu i po jej zakończeniu, nie może być przywoływany nazw, które są zdefiniowane w zakresie.  
+ Gdy nazwy są zdefiniowane w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytaniu, są one określane jako zdefiniowane w zakresie. Zakres obejmuje cały region zapytania. Wszystkie wyrażenia lub odwołania do nazw w określonym zakresie mogą zobaczyć nazwy, które są zdefiniowane w tym zakresie. Przed rozpoczęciem i po zakończeniu zakresu nie można odwoływać się do nazw, które są zdefiniowane w zakresie.  
   
- Zakresy mogą być zagnieżdżone. Części [!INCLUDE[esql](../../../../../../includes/esql-md.md)] wprowadzają nowe zakresy, które obejmują całą regionów, a tych regionów może zawierać innych [!INCLUDE[esql](../../../../../../includes/esql-md.md)] wyrażeń, które również wprowadzać zakresów. Jeśli zakresy są zagnieżdżone, odwołania może przyjąć nazwy, które są zdefiniowane w najbardziej wewnętrznego zakresu, który zawiera odwołanie do. Odwołania można również wprowadzić do żadnych nazw, które są zdefiniowane w żadnych zakresów zewnętrznych. Wszelkie dwa zakresy zdefiniowane w tym samym zakresie są traktowane jako element równorzędny zakresów. Nie można wprowadzać odwołania do nazwy, które są zdefiniowane w ramach tego samego poziomu zakresów.  
+ Zakresy mogą być zagnieżdżane. Części wprowadzające nowe zakresy, które obejmują całe regiony, i te regiony mogą zawierać [!INCLUDE[esql](../../../../../../includes/esql-md.md)] inne wyrażenia, które również wprowadzają zakresy. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Gdy zakresy są zagnieżdżone, odwołania można wprowadzać do nazw, które są zdefiniowane w najbardziej wewnętrznym zakresie, który zawiera odwołanie. Odwołania można także wprowadzać do nazw, które są zdefiniowane w dowolnych zewnętrznych zakresach. Wszystkie dwa zakresy zdefiniowane w tym samym zakresie są uznawane za zakresy równorzędne. Nie można wprowadzać odwołań do nazw, które są zdefiniowane w ramach zakresów elementów równorzędnych.  
   
- Jeśli nazwa zadeklarowana w zakresie wewnętrznym pasuje nazwę zadeklarowana w zakresie zewnętrznym, odwołania w zakresie wewnętrznym lub w ramach zadeklarowany w tym zakresie zakresy dotyczą tylko nowo zadeklarowana nazwa. Nazwa w zewnętrznym zakresie jest ukryty.  
+ Jeśli nazwa zadeklarowana w zakresie wewnętrznym jest zgodna z nazwą zadeklarowaną w zewnętrznym zakresie, odwołania w zakresie wewnętrznym lub w zakresach zadeklarowanych w tym zakresie odwołują się tylko do nowo zadeklarowanej nazwy. Nazwa w zewnętrznym zakresie jest ukryta.  
   
- Nawet w ramach tego samego zakresu nazwy nie może być przywoływany, zanim nie zostaną zdefiniowane.  
+ Nawet w tym samym zakresie nazwy nie mogą być przywoływane przed zdefiniowaniem.  
   
- Nazwy globalne może znajdować się w ramach środowiska wykonawczego. Może to obejmować nazwy kolekcji trwałe lub zmienne środowiskowe. Nazwa będzie globalnym musi być zadeklarowana w zakresie najbardziej zewnętrznej.  
+ Nazwy globalne mogą istnieć jako część środowiska wykonawczego. Może to obejmować nazwy trwałych kolekcji lub zmiennych środowiskowych. Aby nazwa była globalna, musi być zadeklarowana w zewnętrznym zakresie.  
   
- Parametry nie są w zakresie. Odwołania do parametrów zawiera specjalnej składni, nazwy parametrów nigdy nie będą kolidować z nazwami innych w zapytaniu.  
+ Parametry nie należą do zakresu. Ponieważ odwołania do parametrów zawierają specjalną składnię, nazwy parametrów nigdy nie kolidują z innymi nazwami w zapytaniu.  
   
 ### <a name="query-expressions"></a>Wyrażenia kwerend  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Wyrażenie wprowadza nowy zakres kwerendy. Nazwy, które są zdefiniowane w klauzuli FROM są wprowadzane do z zakresu w kolejności występowania, od lewej do prawej. Na liście sprzężenia wyrażenia mogą odwoływać się do nazwy, które zostały zdefiniowane wcześniej na liście. Właściwości publiczne (pola i tak dalej) elementów określone w klauzuli FROM nie są dodawane do zakresu od. One muszą być zawsze przywoływane przez nazwę kwalifikowaną aliasu. Zazwyczaj wszystkie części Wybierz wyrażenie są uwzględniane w zakresie od.  
+ Wyrażenie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania wprowadza nowy zakres. Nazwy, które są zdefiniowane w klauzuli FROM, są wprowadzane do zakresu od w kolejności wyglądu, od lewej do prawej. Na liście sprzężenia wyrażenia mogą odwoływać się do nazw, które zostały zdefiniowane wcześniej na liście. Właściwości publiczne (pola i tak dalej) elementów identyfikowanych w klauzuli FROM nie są dodawane do zakresu od. Muszą zawsze być przywoływane przez nazwę kwalifikowaną aliasem. Zwykle wszystkie części wyrażenia SELECT są uwzględniane w obrębie zakresu.  
   
- W klauzuli GROUP BY wprowadza również nowy zakres element równorzędny. Każda grupa może mieć nazwę grupy, która odwołuje się do elementów w grupie. Każde wyrażenie grupowania przedstawiono również nową nazwę w zakresie grupy. Ponadto zagnieżdżonych agregacji (lub nazwanej grupy) jest także dodawane do zakresu. Wyrażenia grupowania, samodzielnie znajdują się w zakresie od. Jednak gdy jest używana klauzula GROUP BY, wybierz list (rzutowania), klauzuli HAVING i ORDER BY — klauzula są uznawane za w ramach danego zakresu grupy, a nie z zakresu. Agregacje otrzymują specjalnego traktowania, zgodnie z opisem w poniższej liście punktowanej.  
+ Klauzula GROUP BY wprowadza również nowy zakres elementów równorzędnych. Każda grupa może mieć nazwę grupy odwołującą się do kolekcji elementów w grupie. Każde wyrażenie grupowania również wprowadzi nową nazwę w zakresie grupy. Ponadto do zakresu jest również dodawana wartość zagregowana (lub Grupa nazwana). Same wyrażenia grupujące znajdują się w zakresie od zakresu. Jednak gdy jest używana klauzula GROUP BY, klauzula SELECT-list (Projekcja), HAVING i klauzula ORDER BY są uznawane za należące do zakresu grupy, a nie z zakresu od. Agregacje otrzymują specjalne traktowanie, zgodnie z opisem na poniższej liście punktowanej.  
   
- Poniżej przedstawiono dodatkowe uwagi dotyczące zakresów:  
+ Poniżej znajdują się dodatkowe uwagi dotyczące zakresów:  
   
-- Na liście wybierz można wprowadzać nowe nazwy do zakresu, w kolejności. Wyrażenia projekcji po prawej stronie może odnosić się do nazwy przewidywany po lewej stronie.  
+- Lista wyboru może wprowadzać nowe nazwy do zakresu w kolejności. Wyrażenia projekcji po prawej stronie mogą odwoływać się do nazw znajdujących się po lewej stronie.  
   
-- Klauzula ORDER BY mogą odwoływać się do określonych na liście wybierz nazwami (aliasami).  
+- Klauzula ORDER BY może odwoływać się do nazw (aliasów) określonych na liście wyboru.  
   
-- Kolejność obliczania klauzule wewnątrz wyrażenia wybierz określa kolejność, w wprowadzenie nazwy do zakresu. Klauzula FROM jest stosowana jako pierwsza, a następnie klauzuli WHERE, klauzula GROUP BY, klauzula HAVING, klauzuli SELECT, a na końcu klauzuli ORDER BY.  
+- Kolejność oceny klauzul w wyrażeniu SELECT określa kolejność, w jakiej nazwy są wprowadzane do zakresu. Klauzula FROM jest szacowana jako pierwsza, po której następuje klauzula WHERE, klauzula GROUP BY, klauzula HAVING, klauzula SELECT, a finally klauzula ORDER BY.  
   
 ### <a name="aggregate-handling"></a>Obsługa agregacji  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje dwa rodzaje wartości zagregowane: agregacje związanych z kolekcjami i oparte na grupach agregacji. Agregacje opartego na kolekcji są preferowane konstrukcję w [!INCLUDE[esql](../../../../../../includes/esql-md.md)], i oparte na grupach wartości zagregowane są obsługiwane w przypadku zgodność bazy danych SQL.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]obsługuje dwie formy agregacji: agregacje oparte na kolekcjach i agregacje oparte na grupach. Agregacje oparte na kolekcjach to preferowana konstrukcja [!INCLUDE[esql](../../../../../../includes/esql-md.md)]w, a agregacje oparte na grupach są obsługiwane w celu zapewnienia zgodności z programem SQL.  
   
- Podczas rozpoznawania agregacji, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] po raz pierwszy próbuje traktowanie jej jako agregacja opartego na kolekcji. W przypadku niepowodzenia [!INCLUDE[esql](../../../../../../includes/esql-md.md)] przekształca agregacji danych wejściowych na odwołanie do zagregowania zagnieżdżanie i próbuje rozpoznać tego wyrażenia nowych, jak pokazano w poniższym przykładzie.  
+ Podczas rozpoznawania agregacji, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] najpierw próbuje traktować ją jako agregację opartą na kolekcji. Jeśli to się nie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] powiedzie, przekształca zagregowane dane wejściowe w odwołanie do agregacji zagnieżdżania i próbuje rozwiązać to nowe wyrażenie, jak pokazano w poniższym przykładzie.  
   
  `AVG(t.c) becomes AVG(group..(t.c))`  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [Wejściowy zestaw znaków](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)
+- [Odwołanie do jednostki SQL](entity-sql-reference.md)
+- [Omówienie jednostki SQL](entity-sql-overview.md)
+- [Wejściowy zestaw znaków](input-character-set-entity-sql.md)

@@ -2,12 +2,12 @@
 title: Typy danych podstawowych
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
-ms.openlocfilehash: b01a49afa99fc7ecdb7a113a5056e37d901527a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e85adb928925bf161e6e2d6ef935a20606f8eb32
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964062"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248021"
 ---
 # <a name="basic-data-types"></a>Typy danych podstawowych
 Ponieważ zapytania LINQ to SQL przekładają się na Transact-SQL przed wykonaniem na Microsoft SQL Server. LINQ to SQL obsługuje wiele z tych samych wbudowanych funkcji, które SQL Server dla podstawowych typów danych.  
@@ -24,5 +24,5 @@ Ponieważ zapytania LINQ to SQL przekładają się na Transact-SQL przed wykonan
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Mapowania typów środowiska SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [Typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Mapowania typów środowiska SQL-CLR](sql-clr-type-mapping.md)
+- [Typy danych i funkcje](data-types-and-functions.md)

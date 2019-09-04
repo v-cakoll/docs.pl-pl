@@ -3,18 +3,19 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: c4dbb31bb7961f0d33df9d1faee8fe36ecb520a3
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 148b2f3e12fbfbf85b800f0ca7f5dc7dc1845d24
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988329"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251997"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 <xref:System.IdentityModel.Services.SessionAuthenticationModule> Konfiguruje <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) i (sam), gdy jest używane uwierzytelnianie federacyjne za pośrednictwem protokołu WS-Federation. Konfiguruje <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> podczas korzystania z lub <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> klasy w celu zapewnienia kontroli dostępu opartej na oświadczeniach. <xref:System.Security.Claims.ClaimsAuthorizationManager>  
   
- \<system.identityModel.services>  
-\<federationConfiguration>  
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. identityModel. Services**](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<federationConfiguration >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,7 +42,7 @@ ms.locfileid: "69988329"
 |-------------|-----------------|  
 |[\<cookieHandler>](cookiehandler.md)|Konfiguruje obsługę plików cookie używaną przez SAM. Opcjonalny.|  
 |[\<> serviceCertificate](servicecertificate.md)|Konfiguruje certyfikat używany do szyfrowania i odszyfrowywania tokenów. Opcjonalna.|  
-|[\<wsFederation>](wsfederation.md)|Konfiguruje moduł uwierzytelniania WS-Federation (WSFAM). Opcjonalna.|  
+|[\<wsFederation>](wsfederation.md)|Konfiguruje moduł uwierzytelniania WS-Federation (WSFAM). Opcjonalny.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

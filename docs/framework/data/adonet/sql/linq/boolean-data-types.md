@@ -2,12 +2,12 @@
 title: Typy danych logicznych
 ms.date: 03/30/2017
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
-ms.openlocfilehash: f200445d2ba7846f9dc467c7f06bce4225c88865
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9fa3327315593bd54fc51f67bf9964da8d683c5d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964082"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248055"
 ---
 # <a name="boolean-data-types"></a>Typy danych logicznych
 Operatory logiczne działają zgodnie z oczekiwaniami w środowisku uruchomieniowym języka wspólnego (CLR), z tą różnicą, że zachowanie krótkiego obwodu nie jest tłumaczone. Na przykład operator Visual Basic `AndAlso` zachowuje się `And` jak operator. Operator zachowuje się`&`jakoperator. C# `&&`  
@@ -25,4 +25,4 @@ Operatory logiczne działają zgodnie z oczekiwaniami w środowisku uruchomienio
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Typy danych i funkcje](data-types-and-functions.md)

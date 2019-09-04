@@ -2,12 +2,12 @@
 title: 'Instrukcje: Pobieranie skróconej wartości elementu (C#)'
 ms.date: 07/20/2015
 ms.assetid: 924a2699-72f6-4be1-aaa6-de62f8ec73b9
-ms.openlocfilehash: 2b37cc19e2ec5149589131497b36ad381900336b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 662c20cf2b17b9f93e00f0fd3c5cf925b5274de5
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592514"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253369"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>Instrukcje: Pobieranie skróconej wartości elementu (C#)
 W tym temacie pokazano, jak uzyskać skróconą wartość elementu. Wartość płytki to wartość tylko określonego elementu, a nie wartość Szczegółowa, która obejmuje wartości wszystkich elementów potomnych połączonych w jeden ciąg.  
@@ -72,7 +72,7 @@ class Program
   
  Ten przykład generuje następujące wyniki:  
   
-```  
+```output  
 Column  Name="CustomerId"   =Customer.CustomerId.Heading  
 Column  Name="Name"         =Customer.Name.Heading  
 Column  Name="CustomerId"   =Customer.CustomerId  

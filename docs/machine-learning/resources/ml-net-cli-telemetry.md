@@ -2,14 +2,14 @@
 title: Zbieranie danych telemetrycznych za pomocą interfejsu wiersza polecenia ML.NET
 description: Dowiedz się więcej o funkcjach telemetrycznych interfejsu wiersza polecenia ML.NET, które zbierają informacje o użyciu do analizy, zbierane dane i jak je wyłączyć. Znajdź także linki do umowy licencyjnej platformy .NET oraz informacje o zgodności z programem Microsoft Rodo.
 ms.topic: conceptual
-ms.date: 05/05/2019
+ms.date: 09/03/2019
 ms.custom: ''
-ms.openlocfilehash: b9f6ccf7ff76f0cf4ce806f39909b7607a20b9f6
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: e7b3b3d7789f2368ebc4448e73add817986a5906
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567494"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254010"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Zbieranie danych telemetrycznych za pomocą interfejsu wiersza polecenia ML.NET
 
@@ -25,7 +25,7 @@ Gdy zespół produktu docenia ten wgląd, wie również, że nie wszyscy chcą w
 
 `mlnet` Polecenie uruchamia interfejs wiersza polecenia ml.NET, ale samo polecenie nie zbiera danych telemetrycznych.
 
-Funkcja telemetrii *nie jest włączona* po uruchomieniu `mlnet` polecenia bez innego dołączonego polecenia. Na przykład:
+Funkcja telemetrii *nie jest włączona* po uruchomieniu `mlnet` polecenia bez innego dołączonego polecenia. Przykład:
 
 - `mlnet`
 - `mlnet --help`
@@ -36,14 +36,14 @@ Funkcja telemetrii *jest włączona* po uruchomieniu [polecenia ml.NET CLI](../r
 
 Funkcja telemetrii interfejsu wiersza polecenia ML.NET jest domyślnie włączona.
 
-Rezygnacja z funkcji telemetrii przez ustawienie `MLDOTNET_CLI_TELEMETRY_OPTOUT` zmiennej środowiskowej `1` na `true`lub. Ta zmienna środowiskowa jest stosowana globalnie do narzędzia interfejsu wiersza polecenia platformy .NET.
+Rezygnacja z funkcji telemetrii przez ustawienie `MLDOTNET_CLI_TELEMETRY_OPTOUT` zmiennej środowiskowej `1` na `true`lub. Ta zmienna środowiskowa jest stosowana globalnie do narzędzia interfejsu wiersza polecenia ML.NET.
 
 ## <a name="data-points-collected"></a>Zebrane punkty danych
 
 Funkcja zbiera następujące dane:
 
 - Jakie polecenie zostało wywołane, na przykład`auto-train`
-- Używane nazwy parametrów wiersza polecenia (tj. "DataSet-Name, Label-column-name, ml-Task, Output-Path, Max-Learning-Time, szczegółowości")
+- Używane nazwy parametrów wiersza polecenia (czyli "DataSet-Name, Label-column-name, ml-Task, Output-Path, Max-Learning-Time, verboseal")
 - Skrótowy adres MAC: kryptograficzny (SHA256) anonimowy i unikatowy identyfikator dla komputera
 - Sygnatura czasowa wywołania
 - Trzy oktetowe adresy IP (nie pełny adres IP) używane tylko do określania lokalizacji geograficznej
@@ -52,7 +52,7 @@ Funkcja zbiera następujące dane:
 - Zasobnik rozmiaru pliku zestawu danych
 - System operacyjny i wersja
 - Wartość--parametru zadania: Kategorii wartości, takie jak `regression`, `binary-classification`i`multiclass-classification`
-- Wersja interfejsu wiersza polecenia ML.NET (np. 0.3.27703.4)
+- Wersja interfejsu wiersza polecenia ML.NET (0.3.27703.4)
 
 Dane są bezpiecznie przesyłane do serwerów firmy Microsoft przy użyciu technologii [Application Insights platformy Azure](https://azure.microsoft.com/services/application-insights/) , w ramach ograniczonego dostępu i stosowane w ramach ścisłej kontroli zabezpieczeń z bezpiecznych systemów [usługi Azure Storage](https://azure.microsoft.com/services/storage/) .
 

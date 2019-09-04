@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e2be4d9384f1e1ef73ce6064184aa2621a517a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b2774c32b4ee3e67772f84d599ecc5dbeb6598b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674106"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252594"
 ---
-# <a name="gcconcurrent-element"></a>\<gcConcurrent> Element
+# <a name="gcconcurrent-element"></a>\<gcConcurrent, element >
 
-Określa, czy środowisko uruchomieniowe języka wspólnego uruchamia wyrzucanie elementów bezużytecznych w oddzielnym wątku.
+Określa, czy środowisko uruchomieniowe języka wspólnego uruchamia odzyskiwanie pamięci w osobnym wątku.
 
-\<Konfiguracja > \
-\<runtime>\
-\<gcConcurrent>
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> środowiska uruchomieniowego**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<gcConcurrent>**  
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,14 +41,14 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy środowisko uruchomieniowe jednocześnie uruchamia wyrzucanie elementów bezużytecznych.|
+|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy środowisko uruchomieniowe uruchamia odzyskiwanie pamięci jednocześnie.|
 
-## <a name="enabled-attribute"></a>Atrybut włączony
+## <a name="enabled-attribute"></a>włączony atrybut
 
 |Wartość|Opis|
 |-----------|-----------------|
-|`false`|Nie równoczesne wyrzucanie elementów bezużytecznych.|
-|`true`|Uruchamia współbieżnego wyrzucania elementów bezużytecznych. Domyślnie włączone.|
+|`false`|Nie uruchamia współbieżnego wyrzucania elementów bezużytecznych.|
+|`true`|Uruchamia odzyskiwanie pamięci jednocześnie. Domyślnie włączone.|
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
@@ -63,14 +63,14 @@ Brak.
 
 ## <a name="remarks"></a>Uwagi
 
-Przed .NET Framework 4 wyrzucanie elementów bezużytecznych obsługiwane współbieżne wyrzucanie elementów bezużytecznych, wykonywane wyrzucania elementów bezużytecznych w tle w oddzielnym wątku. W programie .NET Framework 4 współbieżne wyrzucanie elementów bezużytecznych została zastąpiona GC, który wykonuje wyrzucania elementów bezużytecznych w tle w oddzielnym wątku tła. Począwszy od programu .NET Framework 4.5, zbieranie w tle stały się dostępne w serwer wyrzucania elementów bezużytecznych. `<gcConcurrent>` Element kontroluje, czy środowisko uruchomieniowe wykonuje albo równolegle lub w tle wyrzucanie elementów bezużytecznych, jeśli jest dostępna lub czy wykonuje wyrzucanie elementów bezużytecznych na pierwszym planie.
+Przed .NET Framework 4, wyrzucanie elementów bezużytecznych stacji roboczych obsługiwało współbieżne wyrzucanie elementów bezużytecznych, które przeprowadzono odzyskiwanie pamięci w tle w osobnym wątku. W .NET Framework 4 współbieżne wyrzucanie elementów bezużytecznych zostało zastąpione przez w tle GC, co również wykonuje wyrzucanie elementów bezużytecznych w tle w osobnym wątku. Począwszy od .NET Framework 4,5, zbieranie w tle stało się dostępne w wyrzucaniu elementów bezużytecznych serwera. `<gcConcurrent>` Element określa, czy środowisko uruchomieniowe wykonuje współbieżne lub w tle wyrzucanie elementów bezużytecznych, jeśli jest dostępne, lub czy wykonuje wyrzucanie elementów bezużytecznych na pierwszym planie.
 
-### <a name="to-disable-background-garbage-collection"></a>Aby wyłączyć wyrzucania elementów bezużytecznych w tle
+### <a name="to-disable-background-garbage-collection"></a>Aby wyłączyć wyrzucanie elementów bezużytecznych w tle
 
 > [!WARNING]
-> Począwszy od programu .NET Framework 4, współbieżne wyrzucanie elementów bezużytecznych zastępuje wyrzucania elementów bezużytecznych w tle. Warunki *współbieżnych* i *tła* są używane zamiennie w dokumentacji programu .NET Framework. Aby wyłączyć wyrzucania elementów bezużytecznych w tle, należy użyć `<gcConcurrent>` elementu, zgodnie z opisem w tym artykule.
+> Począwszy od .NET Framework 4 współbieżne wyrzucanie elementów bezużytecznych jest zastępowane przez odzyskiwanie pamięci w tle. Terminy *współbieżne* i *tła* są używane zamiennie w dokumentacji .NET Framework. Aby wyłączyć wyrzucanie elementów bezużytecznych w tle, należy użyć `<gcConcurrent>` elementu, zgodnie z opisem w tym artykule.
 
-Domyślnie używa środowiska uruchomieniowego współbieżnych oraz wyrzucania elementów bezużytecznych w tle, który jest zoptymalizowany pod kątem opóźnień. Jeśli aplikacja obejmuje interakcji z użytkownikiem duże, należy pozostawić współbieżne wyrzucanie elementów bezużytecznych, włączone, aby zminimalizować czas wstrzymania aplikacji do wyrzucania elementów bezużytecznych. Jeśli ustawisz `enabled` atrybutu `<gcConcurrent>` elementu `false`, środowisko wykonawcze używa niewspółbieżnym wyrzucaniem elementów bezużytecznych, zoptymalizowaną pod kątem przepływności. Następujący plik konfiguracji wyłącza wyrzucania elementów bezużytecznych w tle.
+Domyślnie środowisko uruchomieniowe używa współbieżnych lub w tle wyrzucania elementów bezużytecznych, które jest zoptymalizowane pod kątem opóźnień. Jeśli aplikacja wymaga dużej interakcji z użytkownikiem, Włącz współbieżne wyrzucanie elementów bezużytecznych, aby zminimalizować czas wstrzymania aplikacji w celu wykonania odzyskiwania pamięci. Jeśli ustawisz `enabled` atrybut `<gcConcurrent>` elementu na `false`, środowisko uruchomieniowe używa niewspółbieżnego wyrzucania elementów bezużytecznych, które jest zoptymalizowane pod kątem przepływności. Następujący plik konfiguracji wyłącza odzyskiwanie pamięci w tle.
 
 ```xml
 <configuration>
@@ -80,13 +80,13 @@ Domyślnie używa środowiska uruchomieniowego współbieżnych oraz wyrzucania 
 </configuration>
 ```
 
- W przypadku `<gcConcurrentSetting>` ustawienia w pliku konfiguracji komputera, określa wartość domyślną dla wszystkich aplikacji programu .NET Framework. Ustawienie pliku konfiguracji komputera zastępuje ustawienia pliku konfiguracyjnego aplikacji.
+ Jeśli w pliku konfiguracji `<gcConcurrentSetting>` komputera istnieje ustawienie, definiuje on wartość domyślną dla wszystkich .NET Framework aplikacji. Ustawienie pliku konfiguracji komputera zastępuje ustawienie pliku konfiguracji aplikacji.
 
- Aby uzyskać więcej informacji na temat równolegle i wyrzucania elementów bezużytecznych w tle, zobacz [współbieżne wyrzucanie elementów bezużytecznych](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection) sekcji [podstawowe informacje dotyczące wyrzucania elementów bezużytecznych](../../../../standard/garbage-collection/fundamentals.md) artykułu.
+ Aby uzyskać więcej informacji na temat współbieżnych i wyrzucania elementów bezużytecznych w tle, zobacz sekcję [współbieżne odzyskiwanie](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection) pamięci w artykule [podstawy odzyskiwania pamięci](../../../../standard/garbage-collection/fundamentals.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład umożliwia współbieżne wyrzucanie elementów bezużytecznych:
+Poniższy przykład włącza współbieżne wyrzucanie elementów bezużytecznych:
 
 ```xml
 <configuration>

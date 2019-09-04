@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: d9453f931bba9b1d3b5db3b4f80aa365677c0b76
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 8dacd4bf0102ccc2e769d10ce51e481b36004c3a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988422"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252974"
 ---
 # <a name="strings-c-programming-guide"></a>Ciągi (Przewodnik programowania w języku C#)
 Ciąg jest obiektem typu <xref:System.String> , którego wartością jest Text. Wewnętrznie tekst jest przechowywany jako sekwencyjna kolekcja <xref:System.Char> obiektów tylko do odczytu. Na końcu C# ciągu nie ma znaku zamykającego wartości null; w związku C# z tym ciąg może zawierać dowolną liczbę osadzonych znaków null (' \ 0 '). Właściwość ciągu reprezentuje `Char` liczbę obiektów, które zawiera, a nie liczbę znaków Unicode. <xref:System.String.Length%2A> Aby uzyskać dostęp do poszczególnych punktów kodu Unicode w ciągu, użyj <xref:System.Globalization.StringInfo> obiektu.  
@@ -77,7 +77,7 @@ Ciąg jest obiektem typu <xref:System.String> , którego wartością jest Text. 
  Ciąg formatu jest ciągiem, którego zawartość jest określana dynamicznie w czasie wykonywania. Ciągi formatu są tworzone przez osadzanie *wyrażeń interpolowanych* lub symboli zastępczych wewnątrz nawiasów klamrowych w ciągu. Wszystkie elementy wewnątrz nawiasów klamrowych (`{...}`) zostaną rozpoznane jako ciąg sformatowany w czasie wykonywania. Istnieją dwie metody tworzenia ciągów formatowania: Interpolacja ciągów i formatowanie złożone.
 
 ### <a name="string-interpolation"></a>Interpolacja ciągów
-Dostępne w C# 6,0 i nowszych, [interpolowane ciągi](../../language-reference/tokens/interpolated.md) są `$` identyfikowane przez znak specjalny i zawierają interpolowane wyrażenia w nawiasach klamrowych. Jeśli dopiero zaczynasz interpolację ciągów, zobacz Interpolacja [ciągów — C# Interaktywny samouczek](../../tutorials/exploration/interpolated-strings.yml) , aby zapoznać się z krótkim omówieniem.
+Dostępne w C# 6,0 i nowszych, [interpolowane ciągi](../../language-reference/tokens/interpolated.md) są `$` identyfikowane przez znak specjalny i zawierają interpolowane wyrażenia w nawiasach klamrowych. Jeśli dopiero zaczynasz interpolację ciągów, zobacz [Interpolacja ciągów — C# Interaktywny samouczek](../../tutorials/exploration/interpolated-strings.yml) , aby zapoznać się z krótkim omówieniem.
 
 Używaj interpolacji ciągów, aby zwiększyć czytelność i łatwość utrzymania kodu. Interpolacja ciągów osiąga te same wyniki co `String.Format` Metoda, ale poprawia łatwość użycia i inline.
 
@@ -107,7 +107,7 @@ Aby uzyskać więcej informacji na temat formatowania typów .NET, zobacz [Typy 
 ## <a name="null-strings-and-empty-strings"></a>Ciągi o wartości null i puste ciągi  
  Pusty ciąg jest wystąpieniem <xref:System.String?displayProperty=nameWithType> obiektu, który zawiera znaki zerowe. Puste ciągi są często używane w różnych scenariuszach programistycznych do reprezentowania pustego pola tekstowego. Możesz wywoływać metody dla pustych ciągów, ponieważ są <xref:System.String?displayProperty=nameWithType> one prawidłowymi obiektami. Puste ciągi są inicjowane w następujący sposób:  
   
-```  
+```csharp  
 string s = String.Empty;  
 ```  
   

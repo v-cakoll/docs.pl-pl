@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a71277c6e5183f855ef07a6fc3a20e29b06998f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7fe354a929aad93ba4d4a6ea3cb43b2607be1f05
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920922"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252869"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides> Element
 Definiuje jeden lub więcej przełączników używanych przez <xref:System.AppContext> klasę, aby zapewnić mechanizm rezygnacji dla nowych funkcji.  
   
- \<> konfiguracji  
- \<runtime>  
-\<AppContextSwitchOverrides>  
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> środowiska uruchomieniowego**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<AppContextSwitchOverrides>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -84,7 +84,7 @@ Definiuje jeden lub więcej przełączników używanych przez <xref:System.AppCo
 |`Switch.System.IO.Compression.ZipFile.`<br/>`UseBackslash`|Używa ukośnika odwrotnego (\\""), a nie ukośnika ("/") jako separatora ścieżki <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> we właściwości. Aby uzyskać więcej informacji, [Zobacz Ograniczanie: ZipArchiveEntry.FullName Path Separator](../../../migration-guide/mitigation-ziparchiveentry-fullname-path-separator.md).|.NET Framework 4.6.1|  
 |`Switch.System.IO.Ports.`<br/>`DoNotCatchSerialStreamThreadExceptions`|Określa, czy wyjątki systemu operacyjnego, które są generowane w wątkach <xref:System.IO.Ports.SerialPort> w tle utworzonych przy użyciu strumieni kończy proces.|.NET Framework 4.7.1| 
 |`Switch.System.IO.`<br/>`UseLegacyPathHandling`|Kontroluje, czy jest używana normalizacja starszej ścieżki, a ścieżki URI są <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> obsługiwane <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> przez metody i. Aby uzyskać więcej informacji, [Zobacz Ograniczanie: Normalizacja](../../../migration-guide/mitigation-path-normalization.md) ścieżki i [środki zaradcze: Sprawdzanie](../../../migration-guide/mitigation-path-colon-checks.md)dwukropek ścieżki.|.NET Framework 4.6.2|
-|`Switch.System.`<br/>`MemberDescriptorEqualsReturnsFalseIfEquivalent`|Określa, <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=nameWithType> <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=nameWithType> czy test pod kątem równości porównuje Właściwość jednego obiektu z właściwością drugiego obiektu. Aby uzyskać więcej informacji, zobacz niepoprawna [implementacja MemberDescriptor. Equals](../../../migration-guide/retargeting/4.6.1-4.6.2.md#incorrect-implementation-of-memberdescriptorequals).|.NET Framework 4.6.2|  
+|`Switch.System.`<br/>`MemberDescriptorEqualsReturnsFalseIfEquivalent`|Określa, <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=nameWithType> <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=nameWithType> czy test pod kątem równości porównuje Właściwość jednego obiektu z właściwością drugiego obiektu. Aby uzyskać więcej informacji, zobacz [niepoprawna implementacja MemberDescriptor. Equals](../../../migration-guide/retargeting/4.6.1-4.6.2.md#incorrect-implementation-of-memberdescriptorequals).|.NET Framework 4.6.2|  
  `Switch.System.Net.`<br/>`DontCheckCertificateEKUs`|Wyłącza sprawdzanie poprawności identyfikatora obiektu ulepszonego użycia klucza (EKU) certyfikatu. Rozszerzenie ulepszonego użycia klucza (EKU) to zbiór identyfikatorów obiektów (OID) wskazujący aplikacje, które używają klucza.|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSchSendAuxRecord`|Wyłącza funkcję BEAST w przeglądarce TLS 1.0 przed ograniczeniami protokołu SSL/TLS, uniemożliwiając korzystanie z SCH_SEND_AUX_RECORD.|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSchUseStrongCrypto`|Określa, czy <xref:System.Net.ServicePointManager?displayProperty=nameWithType> klasy <xref:System.Net.Security.SslStream?displayProperty=nameWithType> i mogą korzystać z protokołu SSL 3,0. Aby uzyskać więcej informacji, [Zobacz Ograniczanie: Protokoły](../../../migration-guide/mitigation-tls-protocols.md)TLS.|.NET Framework 4.6|

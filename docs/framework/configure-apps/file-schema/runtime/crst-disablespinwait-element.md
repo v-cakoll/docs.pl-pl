@@ -7,20 +7,20 @@ helpviewer_keywords:
 - Crst_DisableSpinWait element
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a52dd671f1fbf6fda5bdc92c0935784181eb4b03
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 8a91e21120ecebbe7af2fb93798bc68d274fa92c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663841"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252715"
 ---
 # <a name="crst_disablespinwait-element"></a>\<Crst_DisableSpinWait, element >
 
 Określa, czy należy wyłączyć funkcję "oczekiwanie" podczas oczekiwania na sekcję krytyczną.  
   
- \<> konfiguracji  
-\<runtime>  
-\<Crst_DisableSpinWait >  
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> środowiska uruchomieniowego**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Crst_DisableSpinWait >**  
   
 ## <a name="syntax"></a>Składnia  
   

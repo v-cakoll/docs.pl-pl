@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3a9744bfebd93c5004011819b8c6e739e84b97d0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 8ef4489fffa8a0876f7f8dcfd1463965c177646a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626494"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253942"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>Biblioteki testów F# jednostkowych w programie .NET Core przy użyciu testu dotnet i xUnit
 
@@ -62,7 +62,7 @@ Utwórz katalog *mathservice. Tests* jako bieżący katalog i Utwórz nowy proje
 
 Projekt testowy wymaga innych pakietów do tworzenia i uruchamiania testów jednostkowych. `dotnet new`w poprzednim kroku dodano xUnit i moduł uruchamiający xUnit. Teraz Dodaj `MathService` bibliotekę klas jako inną zależność do projektu. [`dotnet add reference`](../tools/dotnet-add-reference.md) Użyj polecenia:
 
-```
+```console
 dotnet add reference ../MathService/MathService.fsproj
 ```
 

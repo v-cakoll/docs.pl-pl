@@ -2,12 +2,12 @@
 title: Refaktoryzacja przy użyciu metody rozszerzającej (C#)
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-ms.openlocfilehash: 2be848d6454abf0dd37a6974cff915a107336503
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8546c2cb834107cf2e099af40f9a7df4d5858b4b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591302"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253099"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>Refaktoryzacja przy użyciu metody rozszerzającej (C#)
 Ten przykład kompiluje się w poprzednim przykładzie, [pobierając tekst akapitówC#()](./retrieving-the-text-of-the-paragraphs.md)przez refaktoryzację łączenia ciągów przy użyciu czystej funkcji, która jest implementowana jako Metoda rozszerzenia.  
@@ -80,7 +80,7 @@ Console.WriteLine("{0}", intNumbers.StringConcatenate(i => i.ToString(), ":"));
   
  Ten przykład generuje następujące wyniki:  
   
-```  
+```output  
 onetwothree  
 one:two:three:  
 123  
@@ -221,7 +221,7 @@ class Program
   
  Ten przykład generuje następujące dane wyjściowe w przypadku zastosowania do dokumentu opisanego w temacie [Tworzenie źródłowego dokumentu Office Open XML (C#)](./creating-the-source-office-open-xml-document.md).  
   
-```  
+```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  

@@ -1,47 +1,47 @@
 ---
-title: 'Instrukcje: Adnotacje umożliwiają przekształcanie drzew LINQ to XML w stylu XSLT (C#)'
+title: 'Instrukcje: Przekształcanie drzew LINQ to XML w stylu XSLT (C#) przy użyciu adnotacji'
 ms.date: 07/20/2015
 ms.assetid: 12a95902-a6b7-4a1e-ad52-04a518db226f
-ms.openlocfilehash: 3aaf141a8ac5d8f3fc75d0a31b460fc84733a62e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: d6975601855e736082662ffb0319b5c6563cedc6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484802"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253258"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>Instrukcje: Adnotacje umożliwiają przekształcanie drzew LINQ to XML w stylu XSLT (C#)
-Adnotacje może służyć do ułatwienia przekształcenia drzewa XML.  
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>Instrukcje: Przekształcanie drzew LINQ to XML w stylu XSLT (C#) przy użyciu adnotacji
+Adnotacje mogą służyć do ułatwienia transformacji drzewa XML.  
   
- Niektóre dokumenty XML są "dokument przetwarzających z zawartością mieszaną". Za pomocą tych dokumentów nie zawsze wiadomo kształt podrzędny węzłów elementu. Na przykład węzeł, który zawiera tekst może wyglądać następująco:  
+ Niektóre dokumenty XML to "dokument zorientowany na zawartość mieszaną". W takich dokumentach nie trzeba znać kształtu węzłów podrzędnych elementu. Na przykład węzeł zawierający tekst może wyglądać następująco:  
   
 ```xml  
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>  
 ```  
   
- Dla dowolnego węzła dany tekst może być dowolną liczbę podrzędnych `<b>` i `<i>` elementów. To podejście obejmuje szereg innych sytuacjach, takich jak strony, które mogą zawierać różne elementy podrzędne, takie jak regularne akapitów, akapitów punktowanych i map bitowych. Komórek w tabeli może zawierać tekst, lista rozwijana list i map bitowych. Jedna z właściwości podstawowy dokument, który skoncentrowane na kod XML jest, że nie znasz elementu podrzędnego, które będzie mieć jeden z elementów.  
+ Dla dowolnego węzła tekstowego może istnieć wiele elementów podrzędnych `<b>` i. `<i>` Takie podejście rozciąga się do wielu innych sytuacji, takich jak strony, które mogą zawierać różne elementy podrzędne, takie jak regularne akapity, punktowane akapity i mapy bitowe. Komórki w tabeli mogą zawierać tekst, listy rozwijane lub mapy bitowe. Jedną z podstawowych cech języka XML zorientowanego na dokument jest to, że nie wiesz, który element podrzędny ma określony element.  
   
- Jeśli chcesz przekształcić elementy w drzewie, na którym nie zawsze znasz te informacje, elementy podrzędne elementy, które chcesz przekształcić takie podejście, który używa adnotacji jest efektywne podejście.  
+ Jeśli chcesz przekształcić elementy w drzewie, w której nie ma potrzeby bardzo często wiedzieć o elementach podrzędnych elementów, które chcesz przekształcić, to podejście wykorzystujące adnotacje jest skutecznym podejściem.  
   
- Podsumowanie podejście jest:  
+ Podsumowanie podejścia to:  
   
-- Po pierwsze Dodawanie adnotacji do elementów w drzewie z elementem zastępczy.  
+- Najpierw Dodaj adnotację do elementów w drzewie z elementem zastępującym.  
   
-- Po drugie iterację całego drzewa, tworzenie nowego drzewa, gdzie należy zamienić każdy element jej adnotacji. W tym przykładzie implementuje iteracji i utworzenie nowego drzewa w funkcji o nazwie `XForm`.  
+- Następnie wykonaj iterację w całym drzewie, tworząc nowe drzewo, w którym każdy element jest zastępowany adnotacją. Ten przykład implementuje iterację i tworzenie nowego drzewa w funkcji o nazwie `XForm`.  
   
- Szczegółowo podejścia składa się z:  
+ Szczegółowo podejście obejmuje:  
   
-- Wykonaj co najmniej jeden zapytaniach składnika LINQ to XML, które zwracają zestaw elementów, które chcesz przekształcić z jednego kształtu do innego. Dla każdego elementu w zapytaniu, Dodaj nowy <xref:System.Xml.Linq.XElement> obiektu jako adnotacji do elementu. Ten nowy element spowoduje zastąpienie adnotacjami elementu w drzewie nowe, przekształcone. Jest to prosty kod, aby zapisywać, jak pokazano na przykładzie.  
+- Wykonaj co najmniej jedno LINQ to XML zapytania, które zwracają zestaw elementów, które chcesz przekształcić z jednego kształtu do drugiego. Dla każdego elementu w zapytaniu Dodaj nowy <xref:System.Xml.Linq.XElement> obiekt jako adnotację do elementu. Ten nowy element spowoduje zamianę elementu z adnotacją w nowym, przekształconym drzewie. Jest to prosty kod do zapisu, jak pokazano na przykładzie.  
   
-- Nowy element, który jest dodawany jako adnotacja może zawierać nowe węzły podrzędne; utworzenia poddrzewie przy użyciu dowolnego żądanego kształtu.  
+- Nowy element, który jest dodawany jako Adnotacja może zawierać nowe węzły podrzędne; można utworzyć poddrzewo z dowolnym żądanym kształtem.  
   
-- Brak specjalną regułę: Jeśli węzeł podrzędny nowego elementu jest w innej przestrzeni nazw przestrzeni nazw, która składa się w tym celu (w tym przykładzie obszar nazw jest `http://www.microsoft.com/LinqToXmlTransform/2007`), a następnie ten element podrzędny nie jest kopiowany do nowego drzewa. Zamiast tego, czy przestrzeń nazw jest wyżej specjalne przestrzeni nazw i lokalna nazwa elementu jest `ApplyTransforms`, a następnie węzły podrzędne elementu w drzewie źródła są postanowiliśmy i skopiowane do nowego drzewa (z wyjątkiem, które są elementy podrzędne z adnotacjami same przekształcane zgodnie z tych reguł).  
+- Istnieje specjalna reguła: Jeśli węzeł podrzędny nowego elementu znajduje się w innej przestrzeni nazw, przestrzeń nazw, która została przeprowadzona do tego celu (w tym przykładzie przestrzeń nazw to `http://www.microsoft.com/LinqToXmlTransform/2007`), ten element podrzędny nie jest kopiowany do nowego drzewa. Zamiast tego, jeśli obszar nazw jest wyżej wspomnianą specjalną przestrzenią nazw, a lokalna nazwa elementu `ApplyTransforms`to, węzły podrzędne elementu w drzewie źródłowym są powtarzane i kopiowane do nowego drzewa (z wyjątkiem tego, że elementy podrzędne z adnotacjami są są one przekształcane zgodnie z tymi regułami.  
   
-- Jest to nieco analogiczne do specyfikacji przekształcenia w XSL. Zapytania, który wybiera zestaw węzłów jest odpowiednikiem wyrażenie XPath dla szablonu. Kod, aby utworzyć nowy <xref:System.Xml.Linq.XElement> zapisane jako adnotacja jest analogiczne do konstruktora sekwencji w XSL i `ApplyTransforms` element jest analogiczne w funkcji `xsl:apply-templates` elementu XSL.  
+- Jest to nieco analogiczne do specyfikacji transformacji w kodzie XSL. Zapytanie wybierające zestaw węzłów jest analogiczne do wyrażenia XPath dla szablonu. Kod służący do tworzenia nowego <xref:System.Xml.Linq.XElement> , który jest zapisywany jako Adnotacja, jest analogiczny do konstruktora sekwencji w XSL `ApplyTransforms` , a element jest `xsl:apply-templates` analogiczny w funkcji do elementu w XSL.  
   
-- Jedną z zalet zastosowaniu takiego podejścia — jak sformułowania zapytań, są zawsze Pisanie zapytań w drzewie źródła zostały zmodyfikowane. Nie muszą się martwić o wpływ zmian w drzewie zapytań, które piszesz.  
+- Jedną z zalet tego podejścia — podczas redagowania zapytań są zawsze zapisywane zapytania w niezmodyfikowanym drzewie źródła. Nie musisz martwić się o to, jak zmiany w drzewie mają wpływ na zapisywanych zapytań.  
   
 ## <a name="transforming-a-tree"></a>Przekształcanie drzewa  
- W pierwszym przykładzie zmienia nazwę wszystkich `Paragraph` węzłów `para`.  
+ W pierwszym przykładzie nazwa wszystkie `Paragraph` węzły są zmieniane na. `para`  
   
 ```csharp  
 XNamespace xf = "http://www.microsoft.com/LinqToXmlTransform/2007";  
@@ -77,8 +77,8 @@ Console.WriteLine(newRoot);
 </Root>  
 ```  
   
-## <a name="a-more-complicated-transform"></a>Bardziej złożone przekształcenia  
- W poniższym przykładzie zapytania drzewa i oblicza, średnia i suma `Data` elementów i dodaje je jako nowe elementy do drzewa.  
+## <a name="a-more-complicated-transform"></a>Bardziej skomplikowana transformacja  
+ Poniższy przykład wykonuje zapytanie do drzewa i oblicza średnią i sumę `Data` elementów i dodaje je jako nowe elementy do drzewa.  
   
 ```csharp  
 XNamespace xf = "http://www.microsoft.com/LinqToXmlTransform/2007";  
@@ -122,7 +122,7 @@ Console.WriteLine(newData);
   
  Ten przykład generuje następujące wyniki:  
   
-```  
+```output  
 Before Transform  
 ----------------  
 <Root>  
@@ -142,12 +142,12 @@ After Transform
 </Root>  
 ```  
   
-## <a name="effecting-the-transform"></a>Dokonywanie przekształcenia  
- Małej funkcji `XForm`, tworzy nowe drzewo przekształcone z drzewa oryginalny, adnotacjami.  
+## <a name="effecting-the-transform"></a>Efekt przekształcenia  
+ Mała funkcja `XForm`,, tworzy nowe przekształcone drzewo z oryginalnego drzewa z adnotacjami.  
   
-- Pseudo kod funkcji jest bardzo proste:  
+- Pseudo kod dla funkcji jest bardzo prosty:  
   
-```  
+```text  
 The function takes an XElement as an argument and returns an XElement.   
 If an element has an XElement annotation, then  
     Return a new XElement  
@@ -171,7 +171,7 @@ If an element is not annotated
             is transformed by calling this function recursively.  
 ```  
   
- Oto implementacja tej funkcji:  
+ Poniżej przedstawiono implementację tej funkcji:  
   
 ```csharp  
 // Build a transformed XML tree per the annotations  
@@ -237,7 +237,7 @@ static XElement XForm(XElement source)
 ```  
   
 ## <a name="complete-example"></a>Kompletny przykład  
- Poniższy kod jest kompletny przykład, który zawiera `XForm` funkcji. Obejmuje niektóre typowe zastosowania tego typu przekształcenia:  
+ Poniższy kod jest kompletnym przykładem `XForm` zawierającym funkcję. Zawiera kilka typowych zastosowania tego typu transformacji:  
   
 ```csharp  
 using System;  
@@ -393,7 +393,7 @@ class Program
   
  Ten przykład generuje następujące wyniki:  
   
-```  
+```output  
 Before Transform  
 ----------------  
 <Root Att1="123">  

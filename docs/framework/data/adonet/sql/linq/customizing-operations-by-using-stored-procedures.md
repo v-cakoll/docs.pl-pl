@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: aedbecc1-c33c-4fb4-8861-fdf7e1dc6b8a
-ms.openlocfilehash: 08cc8aedac545ffa5648034119fc2267c860d499
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 63f4cb3cbb90afc37629b336972b5e09d20346b3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963292"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247529"
 ---
 # <a name="customizing-operations-by-using-stored-procedures"></a>Dostosowywanie operacji przy użyciu procedur składowanych
 Procedury składowane reprezentują typowe podejście do zastępowania zachowania domyślnego. W przykładach w tym temacie pokazano, jak można użyć wygenerowanych otok metod dla procedur składowanych oraz jak można wywołać procedury składowane bezpośrednio.  
@@ -18,7 +18,7 @@ Procedury składowane reprezentują typowe podejście do zastępowania zachowani
  Jeśli używasz programu Visual Studio, możesz użyć Object Relational Designer, aby przypisać procedury składowane do wykonywania operacji wstawiania, aktualizacji i usuwania.  
   
 > [!NOTE]
-> Aby odczytać wartości z wygenerowanej bazy danych, użyj parametrów wyjściowych w procedurach składowanych. Jeśli nie możesz użyć parametrów wyjściowych, Zapisz implementację metody częściowej zamiast zastępowania zastąpień generowanych przez Object Relational Designer. Elementy członkowskie zamapowane do wartości generowanych przez bazę danych muszą być ustawione `INSERT` na `UPDATE` odpowiednie wartości po pomyślnym zakończeniu operacji lub. Aby uzyskać więcej informacji, zobacz [obowiązki dewelopera w celu przesłania domyślnego zachowania](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md).  
+> Aby odczytać wartości z wygenerowanej bazy danych, użyj parametrów wyjściowych w procedurach składowanych. Jeśli nie możesz użyć parametrów wyjściowych, Zapisz implementację metody częściowej zamiast zastępowania zastąpień generowanych przez Object Relational Designer. Elementy członkowskie zamapowane do wartości generowanych przez bazę danych muszą być ustawione `INSERT` na `UPDATE` odpowiednie wartości po pomyślnym zakończeniu operacji lub. Aby uzyskać więcej informacji, zobacz [obowiązki dewelopera w celu przesłania domyślnego zachowania](responsibilities-of-the-developer-in-overriding-default-behavior.md).  
   
 ## <a name="example"></a>Przykład  
   
@@ -49,4 +49,4 @@ Procedury składowane reprezentują typowe podejście do zastępowania zachowani
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Obowiązki dewelopera podczas zastępowania domyślnego zachowania](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)
+- [Obowiązki dewelopera podczas zastępowania domyślnego zachowania](responsibilities-of-the-developer-in-overriding-default-behavior.md)

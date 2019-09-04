@@ -2,12 +2,12 @@
 title: 'Instrukcje: Dołącz dwie kolekcje (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
-ms.openlocfilehash: aa774e23cfd232709f9824826f5084fe6049ef37
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 82083a24da9a5356a8ff8e8430b61bb5d41f7c72
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593200"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253577"
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-c"></a>Instrukcje: Dołącz dwie kolekcje (LINQ to XML) (C#)
 Element lub atrybut w dokumencie XML czasami może odwoływać się do innego elementu lub atrybutu. [Przykładowy plik XML: Dokument XML Customers and Orders](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) (LINQ to XML) zawiera listę klientów i listę zamówień. Każdy `Customer` element`CustomerID` zawiera atrybut. Każdy `Order` element`CustomerID` zawiera element. Element w każdym porządku odwołuje się `CustomerID` do atrybutu w kliencie. `CustomerID`  
@@ -76,7 +76,7 @@ if (!errors)
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```output  
 Attempting to validate, custOrdDoc validated  
 <Root>  
   <Order>  

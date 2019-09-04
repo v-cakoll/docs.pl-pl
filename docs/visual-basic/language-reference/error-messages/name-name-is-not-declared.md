@@ -7,43 +7,43 @@ f1_keywords:
 helpviewer_keywords:
 - BC30451
 ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
-ms.openlocfilehash: 3aadc49f91021409123550ba2712f1acf5b99d83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dfa1d1600c7943e503b4f5ec2e2b8ecd6fbb9fe0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651028"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254202"
 ---
-# <a name="name-name-is-not-declared"></a>Nazwa "\<name >' nie jest zadeklarowana
-Oświadczenie odnosi się do elementu programistycznego, ale kompilator nie może odnaleźć element o takiej samej nazwie.  
+# <a name="name-name-is-not-declared"></a>Nazwa "\<Name >" nie jest zadeklarowana
+Instrukcja odwołuje się do elementu programistycznego, ale kompilator nie może odnaleźć elementu o takiej samej nazwie.  
   
  **Identyfikator błędu:** BC30451  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Sprawdź pisownię nazwy w instrukcji odwołujących się. Visual Basic jest rozróżniana wielkość liter, ale inne zmienność pisowni jest traktowany jako całkowicie inną nazwę. Należy pamiętać, że znak podkreślenia (`_`) jest częścią nazwy i w związku z tym część pisownię.  
+1. Sprawdź pisownię nazwy w instrukcji odwołującej. W Visual Basic nie jest rozróżniana wielkość liter, ale każda inna zmiana pisowni jest traktowana jako zupełnie inna nazwa. Należy zauważyć, że podkreślenie`_`() jest częścią nazwy i w związku z tym jest częścią pisowni.  
   
-2. Sprawdź, czy operator dostępu do elementu członkowskiego (`.`) między obiektem i jego elementów członkowskich. Na przykład, jeśli masz <xref:System.Windows.Forms.TextBox> formantu o nazwie `TextBox1`, aby uzyskać dostęp do jego <xref:System.Windows.Forms.TextBoxBase.Text%2A> właściwość, należy wpisać `TextBox1.Text`. Jeśli zamiast tego wpisz `TextBox1Text`, utworzono inną nazwę.  
+2. Sprawdź, czy masz operator dostępu do elementu członkowskiego (`.`) między obiektem a jego składową. <xref:System.Windows.Forms.TextBox> Na przykład jeśli masz kontrolkę o nazwie `TextBox1`, aby uzyskać dostęp do <xref:System.Windows.Forms.TextBoxBase.Text%2A> jej właściwości, należy `TextBox1.Text`wpisać. Jeśli zamiast tego wpiszesz `TextBox1Text`, utworzona zostanie inna nazwa.  
   
-3. Jeśli składnia dostęp do dowolnego obiektu elementu członkowskiego jest poprawna Pisownia jest poprawna, sprawdź, czy element został zadeklarowany. Aby uzyskać więcej informacji, zobacz [zadeklarowane elementy](../../programming-guide/language-features/declared-elements/index.md).  
+3. Jeśli pisownia jest poprawna i składnia dowolnego dostępu do elementu członkowskiego obiektu jest poprawna, sprawdź, czy element został zadeklarowany. Aby uzyskać więcej informacji, zobacz [elementy zadeklarowane](../../programming-guide/language-features/declared-elements/index.md).  
   
-4. Jeśli zadeklarowano elementu programistycznego, sprawdź, czy są w zakresie. W przypadku instrukcji odwołujących się poza regionem deklarowania elementu programistycznego, może być konieczne kwalifikowania nazwy elementu. Aby uzyskać więcej informacji, zobacz [zakres w Visual Basic](../../programming-guide/language-features/declared-elements/scope.md).  
+4. Jeśli element programowania został zadeklarowany, sprawdź, czy znajduje się w zakresie. Jeśli instrukcja odwołująca znajduje się poza regionem deklarującym element programowania, może być konieczne zakwalifikowanie nazwy elementu. Aby uzyskać więcej informacji, zobacz [zakres w Visual Basic](../../programming-guide/language-features/declared-elements/scope.md).  
 
-5. Jeśli nie używasz w pełni kwalifikowany typ lub nazwa typów i elementów członkowskich (na przykład kod odwołuje się do właściwości jako `MethodInfo.Name` zamiast `System.Reflection.MethodInfo.Name`), Dodaj [Imports — instrukcja](../statements/imports-statement-net-namespace-and-type.md).
+5. Jeśli nie używasz w pełni kwalifikowanego typu lub typu i nazwy elementu członkowskiego (na przykład kod odwołuje się do właściwości jako `MethodInfo.Name` " `System.Reflection.MethodInfo.Name`zamiast"), Dodaj [instrukcję Imports](../statements/imports-statement-net-namespace-and-type.md).
 
-6. Jeśli chcesz skompilować projekt w stylu zestawu SDK (projektu za pomocą \*pliku .vbproj, który rozpoczyna się od wiersza `<Project Sdk="Microsoft.NET.Sdk">`), a komunikat o błędzie, który odwołuje się do typu lub elementu członkowskiego w zestawie Microsoft.VisualBasic.dll, umożliwia skonfigurowanie aplikacji Skompiluj z odwołaniem do biblioteki środowiska uruchomieniowego Visual Basic. Domyślnie podzbiór biblioteki jest osadzony w swoim zestawie, w projekcie zestawu SDK stylu.
+6. Jeśli próbujesz skompilować projekt w stylu zestawu SDK (projekt z \*plikiem. vbproj, który rozpoczyna się od wiersza `<Project Sdk="Microsoft.NET.Sdk">`), a komunikat o błędzie dotyczy typu lub elementu członkowskiego zestawu Microsoft. VisualBasic. dll, skonfiguruj aplikację do Kompiluj z odwołaniem do biblioteki środowiska uruchomieniowego Visual Basic. Domyślnie podzestaw biblioteki jest osadzony w zestawie w projekcie w stylu zestawu SDK.
 
-   Na przykład, poniższy przykład nie powiedzie się do kompilacji ponieważ <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A?displayProperty=fullName> nie można odnaleźć metody. Nie jest zagnieżdżony w podzbiorze środowiska uruchomieniowego Visual Basic, dołączone do aplikacji.  
+   Na przykład następujący przykład nie zostanie skompilowany, ponieważ <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ChangeType%2A?displayProperty=fullName> nie można odnaleźć metody. Nie jest on osadzony w podzbiorze środowiska uruchomieniowego Visual Basic dołączonego do aplikacji.  
 
-   [!code-vb[BC30451](~/samples/snippets/visualbasic/language-reference/error-messages/bc30451/program1.vb)]
+   [!code-vb[BC30451](~/samples/snippets/visualbasic/language-reference/error-messages/bc30451/program1.vb?highlight=7)]
 
-   Aby rozwiązać ten błąd, należy dodać `<VBRuntime>Default</VBRuntime>` element do projektów `<PropertyGroup>` sekcji, co ilustruje poniższy plik projektu języka Visual Basic.
+   Aby rozwiązać ten problem, Dodaj `<VBRuntime>Default</VBRuntime>` element do sekcji projekty `<PropertyGroup>` , jak pokazano w poniższym pliku projektu Visual Basic.
 
-   [!code-vb[BC30451](~/samples/snippets/visualbasic/language-reference/error-messages/bc30451/vbruntime.vbproj?highlight=6)]
+   [!code-xml[BC30451](~/samples/snippets/visualbasic/language-reference/error-messages/bc30451/vbruntime.vbproj?highlight=6)]
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Deklaracje i stałe — podsumowanie](../../../visual-basic/language-reference/keywords/declarations-and-constants-summary.md)
-- [Visual Basic — konwencje nazewnictwa](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Konwencje nazewnictwa Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [Nazwy zadeklarowanych elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Odwołania do elementów zadeklarowanych](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

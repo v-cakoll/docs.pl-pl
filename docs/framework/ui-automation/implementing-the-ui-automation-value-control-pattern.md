@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: 55290e8f14f81c50239097905e5407dbcf547c4c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4af35b3ad1277723d4102b3aeac48748588ef8bf
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968220"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70244004"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>Implementacja wzorca formantu wartości automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -36,7 +36,7 @@ Przykład edytowalnego elementu listy
   
 - <xref:System.Windows.Automation.Provider.IValueProvider>nie obsługuje pobierania informacji o formatowaniu ani wartości podciągów. Zaimplementuj <xref:System.Windows.Automation.Provider.ITextProvider> w tych scenariuszach.  
   
-- <xref:System.Windows.Automation.Provider.IValueProvider>musi być zaimplementowany przez kontrolki, takie jak formant wyboru selektora [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] kolorów z (przedstawiony poniżej), który obsługuje mapowanie ciągów między wartością koloru (na przykład "żółta") i równoważną wewnętrzną [!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)] strukturę.  
+- <xref:System.Windows.Automation.Provider.IValueProvider>musi być zaimplementowany przez kontrolki, takie jak formant wyboru **selektora kolorów** z [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (przedstawiony poniżej), który obsługuje mapowanie ciągów między wartością koloru (na przykład "żółta") i równoważną wewnętrzną strukturę RGB.  
   
  ![Selektor kolorów z wyróżnioną żółtą opcją.](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Przykład mapowania ciągu próbnika kolorów  

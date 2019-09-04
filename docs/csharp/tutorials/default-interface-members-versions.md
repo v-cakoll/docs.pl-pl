@@ -3,12 +3,12 @@ title: Bezpiecznie Aktualizuj interfejsy przy użyciu domyślnych elementów cz�
 description: W tym zaawansowanym samouczku przedstawiono sposób bezpiecznego dodawania nowych funkcji do istniejących definicji interfejsów bez przerywania wszystkich klas i struktur, które implementują ten interfejs.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 2d7265b7705fc931d356a3b7fe3504ab7f21c0b3
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 9e0e4324b2474292064a760db9727d7dec6561d4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971438"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252919"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Samouczek: Aktualizowanie interfejsów z domyślnymi elementami członkowskimi interfejsu w C# 8,0
 
@@ -37,7 +37,7 @@ Zdefiniowano drugi interfejs, który reprezentuje zamówienie:
 
 Z tych interfejsów zespół może stworzyć bibliotekę dla swoich użytkowników, aby mogli tworzyć lepsze środowisko dla swoich klientów. Ich celem było stworzenie szczegółowej relacji z istniejącymi klientami i poprawa ich relacji z nowymi klientami.
 
-Teraz czas na uaktualnienie biblioteki do kolejnej wersji. Jedną z żądanych funkcji jest włączenie rabatu lojalnościowego dla klientów, którzy mają wiele zamówień. Ten nowy rabat dla lojalności zostanie zastosowany za każdym razem, gdy klient przyniesie zamówienie. Określony rabat jest właściwością każdego indywidualnego klienta. Każda implementacja ICustomer może ustawiać różne reguły rabatu lojalnościowego. 
+Teraz czas na uaktualnienie biblioteki do kolejnej wersji. Jedną z żądanych funkcji jest włączenie rabatu lojalnościowego dla klientów, którzy mają wiele zamówień. Ten nowy rabat dla lojalności zostanie zastosowany za każdym razem, gdy klient przyniesie zamówienie. Określony rabat jest właściwością każdego indywidualnego klienta. Każda implementacja programu `ICustomer` może ustawiać różne reguły rabatu lojalnościowego. 
 
 Najbardziej naturalnym sposobem dodawania tej funkcji jest udoskonalenie `ICustomer` interfejsu za pomocą metody w celu zastosowania dowolnego rabatu lojalnościowego. Ta sugestia projektowa została spowodowana przez doświadczonych deweloperów: "Interfejsy są niemodyfikowalne po ich udostępnieniu! To jest istotna zmiana! " C#8,0 dodaje *domyślne implementacje interfejsu* w celu uaktualnienia interfejsów. Autorzy biblioteki mogą dodawać nowych członków do interfejsu i udostępniać domyślną implementację dla tych elementów członkowskich.
 
@@ -47,7 +47,7 @@ Domyślne implementacje interfejsu umożliwiają deweloperom uaktualnienie inter
 
 Zespół wyraził zgodę na najprawdopodobniej domyślną implementację: Rabat dla klientów.
 
-Uaktualnienie powinno zapewnić funkcjonalność, aby ustawić dwie właściwości: liczbę zamówień wymaganych do uzyskania rabatu oraz procent rabatu. To sprawia, że jest to idealny scenariusz dla domyślnych elementów członkowskich interfejsu. Można dodać metodę do interfejsu ICustomer i zapewnić najbardziej prawdopodobną implementację. Wszystkie istniejące i nowe implementacje mogą korzystać z implementacji domyślnej lub udostępniać własne.
+Uaktualnienie powinno zapewnić funkcjonalność, aby ustawić dwie właściwości: liczbę zamówień wymaganych do uzyskania rabatu oraz procent rabatu. To sprawia, że jest to idealny scenariusz dla domyślnych elementów członkowskich interfejsu. Możesz dodać metodę do `ICustomer` interfejsu i podać najbardziej prawdopodobną implementację. Wszystkie istniejące i nowe implementacje mogą korzystać z implementacji domyślnej lub udostępniać własne.
 
 Najpierw Dodaj nową metodę do implementacji:
 

@@ -1,16 +1,16 @@
 ---
-title: ISOF (jednostka SQL)
+title: ISOF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b2b0d34-d0a7-4bcd-baf2-58aa8456d00b
-ms.openlocfilehash: 097d6e7d452ee62a2c8934d2c5fcfdddbeaffc73
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b746a82f72fc7f42f9d91ddd0a7d6f4f86ac0bb
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772375"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250574"
 ---
-# <a name="isof-entity-sql"></a>ISOF (jednostka SQL)
-Określa, czy typ wyrażenia jest określonego typu lub jednego z jego podtypy.  
+# <a name="isof-entity-sql"></a>ISOF (Entity SQL)
+Określa, czy typ wyrażenia jest określonego typu czy jednego z jego podtypów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -20,42 +20,42 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
   
 ## <a name="arguments"></a>Argumenty  
  `expression`  
- Dowolne wyrażenie prawidłowe zapytanie w celu określenia rodzaju.  
+ Dowolne prawidłowe wyrażenie zapytania, aby określić typ.  
   
- NIE  
- Neguje EDM. Wartość logiczną wyniku jest programu.  
+ NIEMOŻLIWE  
+ Negacja modelu EDM. Wynik wartości logicznej wynosi.  
   
- TYLKO  
- Określa, że jest z zwraca `true` tylko wtedy, gdy `expression` typu `type` i nie wszystkie z jedną jego podtypy.  
+ JEDYN  
+ Określa, że jest zwraca `true` tylko wtedy `expression` , gdy jest `type` typu, a nie dowolnego jednego z jego podtypów.  
   
  `type`  
- Typ do przetestowania `expression` względem. Typ musi być kwalifikowana przez obszar nazw.  
+ Typ do przetestowania `expression` . Typ musi być kwalifikowaną przestrzenią nazw.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli `expression` jest typu T i T jest typu podstawowego lub typem pochodnym `type`; wartość null, jeśli `expression` jest wartość null w czasie wykonywania; w przeciwnym razie `false`.  
+ `true`Jeśli `expression` parametr jest typu T i T jest typem podstawowym lub `type`typem pochodnym; null, jeśli `expression` ma wartość null w czasie wykonywania; w przeciwnym razie `false`.  
   
 ## <a name="remarks"></a>Uwagi  
- Wyrażenia `expression IS NOT OF (type)` i `expression IS NOT OF (ONLY type)` są składniowo równoważne `NOT (expression IS OF (type))` i `NOT (expression IS OF (ONLY type))`, odpowiednio.  
+ Wyrażenia `expression IS NOT OF (type)` i `expression IS NOT OF (ONLY type)` są syntaktycznie równoważne z `NOT (expression IS OF (type))` i `NOT (expression IS OF (ONLY type))`, odpowiednio.  
   
- W poniższej tabeli przedstawiono zachowania `IS OF` operatora przez niektóre typowe i rogu wzorce. Wszystkie wyjątki są zgłaszane po stronie klienta, przed wywołaniem pobiera dostawcy:  
+ W poniższej tabeli przedstawiono zachowanie `IS OF` operatora w przypadku niektórych wzorców typowych i narożnych. Wszystkie wyjątki są zgłaszane po stronie klienta przed wywołaniem dostawcy:  
   
 |Wzorzec|Zachowanie|  
 |-------------|--------------|  
-|wartość null jest z (typu jednostki)|Zgłasza wyjątek|  
-|wartość null jest z (ComplexType)|Zgłasza wyjątek|  
-|wartość null jest z (RowType)|Zgłasza wyjątek|  
-|TRAKTUJ (wartość null dla obiektu AS) jest typu (EntityType)|Zwraca wartość DBNull|  
-|TRAKTUJ (o wartości null ComplexType AS) jest z (ComplexType)|Zgłasza wyjątek|  
-|TRAKTUJ (o wartości null RowType AS) jest z (RowType)|Zgłasza wyjątek|  
-|Obiekt EntityType jest z typu (jednostki)|Zwraca wartość PRAWDA/FAŁSZ|  
-|JEST ComplexType z (ComplexType)|Zgłasza wyjątek|  
-|JEST RowType z (RowType)|Zgłasza wyjątek|  
+|wartość zerowa jest typu (EntityType)|Generuje|  
+|wartość zerowa jest równa (ComplexType)|Generuje|  
+|wartość zerowa jest równa (RowType)|Generuje|  
+|Traktuj (wartość null jako element EntityType) to (EntityType)|Zwraca wartość DBNull|  
+|Traktuj (wartość null jako ComplexType) to (ComplexType)|Generuje|  
+|Traktuj (wartość null AS RowType) to (RowType)|Generuje|  
+|Typ EntityType to (EntityType)|Zwraca wartość PRAWDA/FAŁSZ|  
+|ComplexType jest typu (ComplexType)|Generuje|  
+|RowType jest (RowType)|Generuje|  
   
 ## <a name="example"></a>Przykład  
- Następujące [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytanie używa operatora jest OF można określić typu wyrażenia zapytania, a następnie używa operatora TRAKTUJ można przekonwertować obiektu typu kursu do kolekcji obiektów typu OnsiteCourse. Zapytanie jest oparty na [modelu School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)).  
+ Następujące [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytanie używa operatora is, aby określić typ wyrażenia zapytania, a następnie używa operatora Traktuj do konwersji obiektu typu kursu do kolekcji obiektów typu OnsiteCourse. Zapytanie jest oparte na [modelu szkoły](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)).  
   
  [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Odwołanie do jednostki SQL](entity-sql-reference.md)

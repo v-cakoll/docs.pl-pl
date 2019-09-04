@@ -2,103 +2,103 @@
 title: Specyfikacja manifestu dostawcy
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 9ae528105119241e05be5182db418312c4120112
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 6b924f484e6635760d08d0eba9fb9436bdd8bc88
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422718"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248587"
 ---
 # <a name="provider-manifest-specification"></a>Specyfikacja manifestu dostawcy
-W tej sekcji omówiono, jak dostawca magazynu danych może obsługiwać typy i funkcje w magazynie danych.  
+W tej sekcji omówiono, w jaki sposób dostawca magazynu danych może obsługiwać typy i funkcje w magazynie danych.  
   
- Jednostki usługi działa niezależnie od danych specyficznych dla dostawcy magazynu, ale nadal umożliwia jawne zdefiniowanie sposobu interakcji modeli, mapowania i kwerendy z podstawowym magazynie danych dostawcy danych. Bez warstwę abstrakcji jednostki usługi może być przeznaczony tylko dla określonych danych sklepu lub Dostawca danych.  
+ Usługa Entity Services działa niezależnie od konkretnego dostawcy magazynu danych, mimo że dostawca danych jawnie definiuje sposób, w jaki modele, mapowania i zapytania współdziałają z bazowym magazynem danych. Bez warstwy abstrakcji usługi Entity Services mogą być wskazywane tylko przez określony magazyn danych lub dostawcę danych.  
   
- Typy obsługiwane przez dostawcę są bezpośrednio lub pośrednio obsługiwane przez podstawowej bazy danych. Te typy nie są zawsze typów magazynów dokładnie, ale typy dostawca używa do obsługi [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. W warunkach Entity Data Model (EDM) opisano typy dostawcy/magazynowania.  
+ Typy obsługujące dostawcę są bezpośrednio lub pośrednio obsługiwane przez podstawową bazę danych. Te typy nie muszą być dokładnymi typami magazynów, ale typy stosowane przez dostawcę do obsługi [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Typy dostawców/magazynów są opisane w tematach Entity Data Model (EDM).  
   
- Typy parametrów i zwrotu w funkcji obsługiwanych przez Magazyn danych są określone w postanowieniach EDM.  
+ Parametry i typy zwracane dla funkcji obsługiwanych przez magazyn danych są określone w obszarze EDM.  
   
 ## <a name="requirements"></a>Wymagania  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] i magazynu danych muszą mieć możliwość przekazywania danych i z powrotem w znanych typów bez utraty danych lub obcięcie.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] I magazyn danych musi być w stanie przekazać dane z powrotem i dalej w znanych typach bez utraty lub obcięcia danych.  
   
- Manifest dostawcy musi być obciążana za pomocą narzędzi w czasie projektowania bez konieczności otwierania połączenia z magazynem danych.  
+ Manifest dostawcy musi być ładowany przez narzędzia w czasie projektowania bez konieczności otwierania połączenia z magazynem danych.  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Jest przypadek wielkość liter, ale źródłowy magazyn danych może nie być. Gdy artefakty EDM (identyfikatory i nazwy typów, na przykład) są zdefiniowane i używane w manifeście, należy użyć [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] wielkość liter. Jeśli elementów magazynu danych, które mogą być uwzględniana wielkość liter są wyświetlane w manifeście dostawcy, że wielkość liter w wyrazie musi być utrzymywane w manifeście dostawcy.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Jest uwzględniana wielkość liter, ale podstawowy magazyn danych może nie być. Gdy artefakty modelu EDM (na przykład identyfikatory i nazwy typów) są zdefiniowane i używane w manifeście, muszą używać [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] rozróżniania wielkości liter. Jeśli w manifeście dostawcy znajdują się elementy magazynu danych, które mogą uwzględniać wielkość liter, należy zachować wielkość liter w manifeście dostawcy.  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Wymaga manifest dostawcy dla wszystkich dostawców danych. Jeśli spróbujesz użyć dostawcy, który nie ma dostawcy manifestu z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], otrzymają komunikat o błędzie.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Wymaga manifestu dostawcy dla wszystkich dostawców danych. Jeśli spróbujesz użyć dostawcy, który nie ma manifestu dostawcy z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], zostanie wyświetlony komunikat o błędzie.  
   
- W poniższej tabeli opisano rodzaje wyjątków [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] powodowało zgłoszenie, gdy wyjątki wynikać dostawca interakcji:  
+ W poniższej tabeli opisano rodzaje wyjątków, które zostałyby zgłoszone w [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] przypadku wystąpienia wyjątków przez interakcję z dostawcą:  
   
 |Problem|Wyjątek|  
 |-----------|---------------|  
 |Dostawca nie obsługuje GetProviderManifest w DbProviderServices.|ProviderIncompatibleException|  
 |Brak manifestu dostawcy: dostawca zwraca `null` podczas próby pobrania manifestu dostawcy.|ProviderIncompatibleException|  
-|Nieprawidłowy dostawca manifest: dostawca zwraca nieprawidłowy kod XML, podczas próby pobrania manifestu dostawcy.|ProviderIncompatibleException|  
+|Nieprawidłowy manifest dostawcy: dostawca zwraca nieprawidłowy kod XML podczas próby pobrania manifestu dostawcy.|ProviderIncompatibleException|  
   
 ## <a name="scenarios"></a>Scenariusze  
  Dostawca powinien obsługiwać następujące scenariusze:  
   
-### <a name="writing-a-provider-with-symmetric-type-mapping"></a>Pisanie dostawcy za pomocą mapowania typu symetryczne  
- Można napisać dostawcę dla [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] gdzie każdego typu magazynu jest mapowany na pojedynczy typ EDM, niezależnie od tego, w kierunku mapowania. Dla typu dostawcy, który znajduje się bardzo prostego mapowanie odpowiada za pomocą typu EDM można użyć symetrycznego rozwiązania, ponieważ system typu prostego lub pasuje do typu EDM.  
+### <a name="writing-a-provider-with-symmetric-type-mapping"></a>Pisanie dostawcy z mapowaniem typu symetrycznego  
+ Można napisać dostawcę dla [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] każdego typu magazynu, który jest mapowany na pojedynczy typ modelu EDM, niezależnie od kierunku mapowania. W przypadku typu dostawcy, który ma bardzo proste mapowanie odpowiadające typowi modelu EDM, można użyć rozwiązania symetrycznego, ponieważ system typów jest prosty lub zgodny z typami modelu EDM.  
   
- Można użyć prostotę ich domeny i wygenerować manifest dostawcy deklaratywne statyczne.  
+ Możesz użyć prostoty swojej domeny i utworzyć statyczny manifest dostawcy deklaratywnego.  
   
- Możesz napisać plik XML, który ma dwie sekcje:  
+ Napiszesz plik XML, który ma dwie sekcje:  
   
-- Lista typy dostawców, wyrażonych "EDM odpowiednikiem" typ magazynu lub funkcji. Typy Store mają odpowiednika typów EDM. Funkcje Store mają odpowiednie funkcje EDM. Na przykład varchar jest typem programu SQL Server, ale odpowiedni typ EDM jest ciągiem.  
+- Lista typów dostawców wyrażona w postaci "odpowiedniki modelu EDM" typu lub funkcji magazynu. Typy magazynów mają odpowiedni typ modelu EDM. Funkcje magazynu mają odpowiednie funkcje modelu EDM. Na przykład, varchar jest typem SQL Server, ale odpowiedni typ modelu EDM to ciąg.  
   
-- Lista funkcji obsługiwanych przez dostawcę, w których typy parametrów i zwrotu jest wyrażany w kategoriach EDM.  
+- Lista funkcji obsługiwanych przez dostawcę, gdzie parametry i zwracane typy są wyrażane w warunkach EDM.  
   
-### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>Pisanie dostawcy za pomocą asymetrycznych Typ mapowania  
- Podczas pisania dostawca magazynu danych dla [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], typ EDM do dostawcy mapowanie dla niektórych typów może się różnić od typu dostawcy do EDM mapowania. Na przykład niepowiązane PrimitiveTypeKind.String EDM mogą być mapowane do nvarchar(4000) na dostawcy, gdy nvarchar(4000) mapuje EDM PrimitiveTypeKind.String(MaxLength=4000).  
+### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>Pisanie dostawcy z mapowaniem typu asymetrycznego  
+ Podczas pisania dostawcy magazynu danych dla [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]programu, mapowanie typu modelu EDM do dostawcy dla niektórych typów może różnić się od mapowania typu dostawca-do-EDM. Na przykład niezależny obiekt EDM PrimitiveTypeKind. String może być mapowany na nvarchar (4000) na dostawcy, podczas gdy nvarchar (4000) mapuje do modelu EDM PrimitiveTypeKind. String (MaxLength = 4000).  
   
- Możesz napisać plik XML, który ma dwie sekcje:  
+ Napiszesz plik XML, który ma dwie sekcje:  
   
-- Lista typów dostawcy wyrażany w kategoriach EDM i zdefiniować mapowanie dla obu kierunku: EDM do dostawcy i dostawcy do EDM.  
+- Lista typów dostawców wyrażona w warunkach EDM i zdefiniuj mapowanie dla obu kierunków: Modelu EDM-to-Provider i dostawcy do modelu EDM.  
   
-- Lista funkcji obsługiwanych przez dostawcę, w których typy parametrów i zwrotu jest wyrażany w kategoriach EDM.  
+- Lista funkcji obsługiwanych przez dostawcę, gdzie parametry i zwracane typy są wyrażane w warunkach EDM.  
   
-## <a name="provider-manifest-discoverability"></a>Odnajdowanie manifestu dostawcy  
- Manifest używany jest pośrednio w różnych typach składnika w jednostki usługi (na przykład narzędzia lub zapytanie), ale przechowywać więcej bezpośrednio wykorzystywane przez metadane za pomocą danych modułu ładującego metadanych.  
+## <a name="provider-manifest-discoverability"></a>Odnajdywanie manifestu dostawcy  
+ Manifest jest używany pośrednio przez kilka typów składników w usługach Entity Services (na przykład narzędzia lub zapytania), ale bardziej bezpośrednio korzystających z metadanych przy użyciu modułu ładującego metadanych magazynu danych.  
   
- ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
+ ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](./media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
   
- Jednak danego dostawcy mogą obsługiwać różne wersje tego samego magazynu lub różnych magazynów danych. W związku z tym dostawca, musisz zgłosić różnych manifestu dla każdego obsługiwanego magazynu danych.  
+ Jednak dany dostawca może obsługiwać różne magazyny lub różne wersje tego samego magazynu. W związku z tym dostawca musi zgłosić inny manifest dla każdego z obsługiwanych magazynów danych.  
   
 ### <a name="provider-manifest-token"></a>Token manifestu dostawcy  
- Po otwarciu połączenia magazynu danych dostawcy mogą wysyłać zapytania dotyczące informacji do zwrócenia prawo manifestu. To może nie być możliwe w scenariuszach w trybie offline gdy informacje o połączeniu nie są dostępne lub kiedy nie jest możliwość nawiązywania połączeń do magazynu. Identyfikowanie manifest za pomocą `ProviderManifestToken` atrybutu `Schema` elementu souboru ssdl. Brak ma wymaganego formatu dla tego atrybutu; Dostawca wybiera minimalne informacje potrzebne do identyfikowania manifestu bez konieczności otwierania połączenia z magazynem.  
+ Po otwarciu połączenia z magazynem danych dostawca może wysyłać zapytania o informacje w celu zwrócenia odpowiedniego manifestu. Może to nie być możliwe w scenariuszach w trybie offline, w których informacje o połączeniu są niedostępne lub nie można nawiązać połączenia ze sklepem. Zidentyfikuj manifest przy użyciu `ProviderManifestToken` atrybutu `Schema` elementu w pliku SSDL. Nie ma wymaganego formatu dla tego atrybutu; Dostawca wybiera minimalne informacje niezbędne do zidentyfikowania manifestu bez otwierania połączenia z magazynem.  
   
- Na przykład:  
+ Przykład:  
   
 ```xml  
 <Schema Namespace="Northwind" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:edm="http://schemas.microsoft.com/ado/2006/04/edm/ssdl" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">  
 ```  
   
-## <a name="provider-manifest-programming-model"></a>Model programowania z manifestu dostawcy  
- Dostawców pochodzić od <xref:System.Data.Common.DbXmlEnabledProviderManifest>, co pozwala określić swoich manifestach deklaratywnie. Poniższa ilustracja przedstawia hierarchii klas dostawcy:  
+## <a name="provider-manifest-programming-model"></a>Model programowania manifestu dostawcy  
+ Dostawcy pochodzą z <xref:System.Data.Common.DbXmlEnabledProviderManifest>, co umożliwia ich deklaratywne określanie ich manifestów. Na poniższej ilustracji przedstawiono hierarchię klas dostawcy:  
   
- ![None](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
+ ![None](./media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
   
-### <a name="discoverability-api"></a>Odnajdowanie interfejsu API  
- Manifest dostawcy jest ładowany przez moduł ładujący Store metadanych (obiektu StoreItemCollection), przy użyciu danych przechowywać połączenia lub tokenu manifestu dostawcy.  
+### <a name="discoverability-api"></a>Interfejs API odnajdywania  
+ Manifest dostawcy jest ładowany przez moduł ładujący metadanych magazynu (StoreItemCollection), przy użyciu połączenia magazynu danych lub tokenu manifestu dostawcy.  
   
-#### <a name="using-a-data-store-connection"></a>Przy użyciu połączenia danych Store  
- Gdy połączenie magazynu danych jest dostępna, należy wywołać <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> do zwracania tokenu, który jest przekazywany do <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> metody, która zwraca <xref:System.Data.Common.DbProviderManifest>. Ta metoda deleguje do implementacji dostawcy `GetDbProviderManifestToken`.  
+#### <a name="using-a-data-store-connection"></a>Korzystanie z połączenia magazynu danych  
+ Gdy jest dostępne połączenie z magazynem danych, <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> Wywołaj polecenie zwracające token, który jest <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> przesyłany do metody <xref:System.Data.Common.DbProviderManifest>, która zwraca wartość. Ta metoda deleguje do implementacji `GetDbProviderManifestToken`dostawcy.  
   
 ```csharp
 public string GetProviderManifestToken(DbConnection connection);  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  
   
-#### <a name="using-a-provider-manifest-token"></a>Za pomocą tokenu manifestu dostawcy  
- W scenariuszu w trybie offline token jest pobierany z reprezentacji SSDL. SSDL pozwala na określenie ProviderManifestToken (zobacz [elementu schematu (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) Aby uzyskać więcej informacji). Na przykład jeśli nie można otworzyć połączenia, SSDL ma token manifestu dostawcy, który określa informacje dotyczące manifestu.  
+#### <a name="using-a-provider-manifest-token"></a>Korzystanie z tokenu manifestu dostawcy  
+ W przypadku scenariusza offline token jest wybierany z reprezentacji SSDL. SSDL pozwala określić ProviderManifestToken (zobacz [element Schema (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) , aby uzyskać więcej informacji. Na przykład jeśli nie można otworzyć połączenia, plik SSDL ma token manifestu dostawcy, który określa informacje o manifeście.  
   
 ```  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  
   
-### <a name="provider-manifest-schema"></a>Schematu manifestu dostawcy  
- Schemat informacje zdefiniowane dla każdego dostawcy zawiera dane statyczne do użycia przez metadane:  
+### <a name="provider-manifest-schema"></a>Schemat manifestu dostawcy  
+ Schemat informacji zdefiniowanych dla każdego dostawcy zawiera informacje statyczne, które mają być używane przez metadane:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -240,45 +240,45 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 </xs:schema>  
 ```  
   
-#### <a name="types-node"></a>Typy węzłów  
- Węzeł typów w manifeście dostawcy zawiera informacje o typach, które są obsługiwane natywnie przez Magazyn danych lub za pośrednictwem dostawcy.  
+#### <a name="types-node"></a>Węzeł typów  
+ Węzeł typy w manifeście dostawcy zawiera informacje o typach, które są obsługiwane natywnie przez magazyn danych lub przez dostawcę.  
   
-##### <a name="type-node"></a>Typ węzła  
- Każdy typ węzła definiuje typ dostawcy pod względem EDM. Węzeł typu w tym artykule opisano nazwa, typ dostawcy i informacje dotyczące typ modelu, który jest on mapowany i zestawów reguł do opisania mapowania typu.  
+##### <a name="type-node"></a>Węzeł typu  
+ Każdy węzeł typu definiuje typ dostawcy w kategoriach modelu EDM. Węzeł typu zawiera opis nazwy typu dostawcy i informacje związane z typem modelu, który jest mapowany do i aspektami opisującymi tego mapowania typu.  
   
- Aby można było express to informacje o typie w manifeście dostawcy, każdego zgłoszenia TypeInformation należy zdefiniować kilka opisów reguł dla każdego typu:  
-  
-|Nazwa atrybutu|Typ danych|Wymagane|Wartość domyślna|Opis|  
-|--------------------|---------------|--------------|-------------------|-----------------|  
-|Nazwa|String|Yes|n/d|Nazwa typu danych specyficznego dla dostawcy|  
-|PrimitiveTypeKind|PrimitiveTypeKind|Yes|n/d|Nazwa typu EDM|  
-  
-###### <a name="function-node"></a>Węzeł — funkcja  
- Każda funkcja określa jednej funkcji dostępnych za pośrednictwem dostawcy.  
+ Aby można było wyrazić te informacje o typie w manifeście dostawcy, każda deklaracja TypeInformation musi definiować kilka opisów aspektów dla każdego typu:  
   
 |Nazwa atrybutu|Typ danych|Wymagane|Wartość domyślna|Opis|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Nazwa|String|Tak|n/d|Identyfikator/nazwę funkcji|  
-|ReturnType|String|Nie|Void|Zwracany typ EDM — funkcja|  
-|Agregowanie|Boolean|Nie|False|Wartość true, jeśli funkcja znajduje się funkcja agregująca|  
-|BuiltIn|Boolean|Nie|Prawda|Wartość true, jeśli funkcja jest wbudowana w magazynie danych|  
-|StoreFunctionName|String|Nie|\<Nazwa >|Nazwa funkcji w magazynie danych.  Zezwala na poziomie przekierowywania nazwy funkcji.|  
-|NiladicFunction|Boolean|Nie|False|Wartość true, jeśli funkcja nie wymaga parametrów i jest wywoływana bez parametrów|  
-|Zgodność<br /><br /> Semantyka|ParameterSemantics|Nie|AllowImplicit<br /><br /> Konwersja|Wybór sposobu potoku zapytania powinien zająć się podstawienie typ parametru:<br /><br /> -ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
+|Nazwa|String|Tak|n/d|Nazwa typu danych specyficznych dla dostawcy|  
+|PrimitiveTypeKind|PrimitiveTypeKind|Tak|n/d|Nazwa typu modelu EDM|  
   
- **Parametry węzła**  
-  
- Każda funkcja ma zbiór jednego lub więcej węzłów parametrów.  
+###### <a name="function-node"></a>Węzeł funkcji  
+ Każda funkcja definiuje pojedynczą funkcję dostępną za pomocą dostawcy.  
   
 |Nazwa atrybutu|Typ danych|Wymagane|Wartość domyślna|Opis|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Nazwa|String|Tak|n/d|Identyfikator/nazwę parametru.|  
-|Typ|String|Tak|n/d|Typ EDM parametru.|  
-|Tryb|Parametr<br /><br /> Kierunek|Yes|n/d|Kierunek parametru:<br /><br /> -w<br />-out<br />-inout|  
+|Nazwa|String|Tak|n/d|Identyfikator/nazwa funkcji|  
+|Atrybuty|String|Nie|Pozycję|Typ zwracany funkcji modelu EDM|  
+|Agregowanie|Boolean|Nie|False|True, jeśli funkcja jest funkcją agregującą|  
+|Wbudowan|Boolean|Nie|Prawda|Prawda, jeśli funkcja jest wbudowana w magazyn danych|  
+|StoreFunctionName|String|Nie|\<> Nazwy|Nazwa funkcji w magazynie danych.  Umożliwia przekierowanie nazw funkcji.|  
+|NiladicFunction|Boolean|Nie|False|Prawda, jeśli funkcja nie wymaga parametrów i jest wywoływana bez żadnych parametrów|  
+|ParameterType<br /><br /> Semantyki|ParameterSemantics|Nie|AllowImplicit<br /><br /> Konwersja|Wybór sposobu postępowania z zastępowaniem typu parametru przez potok zapytania:<br /><br /> - ExactMatchOnly<br />- AllowImplicitPromotion<br />- AllowImplicitConversion|  
   
-##### <a name="namespace-attribute"></a>Atrybut Namespace  
- Każdy dostawca magazynu danych, należy zdefiniować przestrzeni nazw lub grupy w przestrzeni nazw dla informacje zdefiniowane w manifeście. Ta przestrzeń nazw może służyć w zapytań jednostki SQL do rozpoznawania nazw funkcji i typów. Przykład: SqlServer. Przestrzeń nazw musi się różnić od canonical przestrzeni nazw, EDM, zdefiniowane przez jednostki Services na potrzeby standardowych funkcji są obsługiwane przez zapytania SQL jednostki.  
+ **Węzeł parametrów**  
+  
+ Każda funkcja ma kolekcję z co najmniej jednym węzłem parametrów.  
+  
+|Nazwa atrybutu|Typ danych|Wymagane|Wartość domyślna|Opis|  
+|--------------------|---------------|--------------|-------------------|-----------------|  
+|Nazwa|String|Tak|n/d|Identyfikator/Nazwa parametru.|  
+|Typ|String|Tak|n/d|Typ modelu EDM.|  
+|Tryb|Parametr<br /><br /> Kierunek|Tak|n/d|Kierunek parametru:<br /><br /> -in<br />-out<br />-Inout|  
+  
+##### <a name="namespace-attribute"></a>Namespace — atrybut  
+ Każdy dostawca magazynu danych musi definiować przestrzeń nazw lub grupę przestrzeni nazw, aby uzyskać informacje zdefiniowane w manifeście. Ta przestrzeń nazw może być używana w Entity SQL zapytania do rozpoznawania nazw funkcji i typów. Przykład: SqlServer. Ta przestrzeń nazw musi być różna od kanonicznej przestrzeni nazw, EDM zdefiniowanej przez usługi jednostek dla funkcji standardowych, które mają być obsługiwane przez Entity SQL zapytań.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Pisanie dostawcy danych programu Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+- [Pisanie dostawcy danych programu Entity Framework](writing-an-ef-data-provider.md)

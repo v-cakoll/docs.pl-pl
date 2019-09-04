@@ -1,28 +1,28 @@
 ---
-title: Funkcje (jednostka SQL)
+title: Funkcje (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 52b3d776-5acc-4f69-b614-5a43ce56ef9f
-ms.openlocfilehash: f31f829b53160da5a043617b9aa999b398859f17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec94a0f16fb3b836297f6675cc938a711816555b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034167"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250905"
 ---
-# <a name="functions-entity-sql"></a>Funkcje (jednostka SQL)
-Jednostka SQL obsługuje funkcje zdefiniowane przez użytkownika, funkcje canonical i funkcje właściwe dla dostawcy. Funkcje zdefiniowane przez użytkownika są określone w model koncepcyjny lub wbudowane w zapytaniu. Aby uzyskać więcej informacji, zobacz [funkcje zdefiniowane przez użytkownika](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md).  
+# <a name="functions-entity-sql"></a>Funkcje (Entity SQL)
+Entity SQL obsługuje funkcje zdefiniowane przez użytkownika, funkcje kanoniczne i funkcje specyficzne dla dostawcy. Funkcje zdefiniowane przez użytkownika są określone w modelu koncepcyjnym lub wbudowane w zapytaniu. Aby uzyskać więcej informacji, zobacz [funkcje zdefiniowane przez użytkownika](user-defined-functions-entity-sql.md).  
   
- Funkcje Canonical są wstępnie zdefiniowane w programie Entity Framework i powinna być obsługiwana przez dostawcę danych. Polecenia SQL jednostki zakończy się niepowodzeniem, jeśli użytkownik wywołuje funkcję, która nie jest obsługiwana przez dostawcę. W związku z tym funkcje canonical ogólnie zaleca się za pośrednictwem funkcji specyficznych dla magazynu, które znajdują się w przestrzeni nazw właściwe dla dostawcy. Aby uzyskać więcej informacji, zobacz [funkcje Canonical](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
+ Funkcje kanoniczne są wstępnie zdefiniowane w Entity Framework i powinny być obsługiwane przez dostawców danych. Entity SQL polecenia zakończą się niepowodzeniem, jeśli użytkownik wywoła funkcję, która nie jest obsługiwana przez dostawcę. W związku z tym funkcje kanoniczne są zwykle zalecane w stosunku do funkcji specyficznych dla magazynu, które znajdują się w przestrzeni nazw specyficznej dla dostawcy. Aby uzyskać więcej informacji, zobacz [funkcje kanoniczne](canonical-functions.md).  
   
- Program Microsoft SQL klienta zarządzanego dostawcy zawiera zestaw funkcji specyficznych dla dostawcy. Aby uzyskać więcej informacji, zobacz [Klient SQL dla funkcji programu Entity Framework](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).  
+ Dostawca zarządzany przez klienta programu Microsoft SQL Server udostępnia zestaw funkcji specyficznych dla dostawcy. Aby uzyskać więcej informacji, zobacz temat [SqlClient for Entity Framework Functions](../sqlclient-for-ef-functions.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Funkcje zdefiniowane przez użytkownika](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)  
+ [Funkcje zdefiniowane przez użytkownika](user-defined-functions-entity-sql.md)  
   
- [Rozpoznanie przeciążenia funkcji](../../../../../../docs/framework/data/adonet/ef/language-reference/function-overload-resolution-entity-sql.md)  
+ [Rozpoznanie przeciążenia funkcji](function-overload-resolution-entity-sql.md)  
   
- [Funkcje agregujące](../../../../../../docs/framework/data/adonet/ef/aggregate-functions-sqlclient-for-entity-framework.md)  
+ [Funkcje agregujące](../aggregate-functions-sqlclient-for-entity-framework.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Omówienie jednostki SQL](entity-sql-overview.md)

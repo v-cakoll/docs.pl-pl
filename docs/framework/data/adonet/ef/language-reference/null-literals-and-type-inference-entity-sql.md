@@ -1,45 +1,45 @@
 ---
-title: Literały null i wnioskowanie o typie (jednostka SQL)
+title: Literały o wartości null i wnioskowanie o typie (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: edd56afb-af1b-4e7d-b210-cb8998143426
-ms.openlocfilehash: 3fea03146549f3d42bf08bbd5e7ce355d25bd4eb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb2d9184e17ee2a9916a731eb20eefa105a73753
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641812"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249824"
 ---
-# <a name="null-literals-and-type-inference-entity-sql"></a>Literały null i wnioskowanie o typie (jednostka SQL)
-Literały null są zgodne z żadnym typem w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] system typów. Jednak w przypadku typu literałem o wartości null, aby był wywnioskowany poprawnie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nakłada pewne ograniczenia dotyczące użycia właściwość literal o wartości null.  
+# <a name="null-literals-and-type-inference-entity-sql"></a>Literały o wartości null i wnioskowanie o typie (Entity SQL)
+Literały null są zgodne z dowolnym typem w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] systemie typów. Jednak dla typu literału wartości null, który ma zostać wywnioskowany prawidłowo, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nakłada pewne ograniczenia dotyczące miejsca, w którym można użyć literału o wartości null.  
   
 ## <a name="typed-nulls"></a>Wpisane wartości null  
- Wpisane wartości null może służyć w dowolnym miejscu. Wnioskowanie o typie nie jest wymagana dla wpisane wartości null, ponieważ typ jest znany. Na przykład można utworzyć wartości null typu Int16 następującym kodem [!INCLUDE[esql](../../../../../../includes/esql-md.md)] konstruowania:  
+ Wpisane wartości null mogą być używane w dowolnym miejscu. Wnioskowanie typu nie jest wymagane dla wpisanych wartości null, ponieważ typ jest znany. Na przykład można skonstruować wartość null typu Int16 przy użyciu następującej [!INCLUDE[esql](../../../../../../includes/esql-md.md)] konstrukcji:  
   
  `(cast(null as Int16))`  
   
-## <a name="free-floating-null-literals"></a>Swobodny literały Null  
- Swobodny literały null może służyć w następujących okolicznościach:  
+## <a name="free-floating-null-literals"></a>Bezpłatne, zmiennoprzecinkowe literały o wartości null  
+ W następujących kontekstach można używać wolnych zmiennoprzecinkowych literałów null:  
   
-- Jako argument do RZUTOWANIA lub TRAKTUJ wyrażenia. Jest to zalecany sposób tworzenia wpisane wyrażenie o wartości null.  
+- Jako argument do wyrażenia CAST lub TREAT. Jest to zalecany sposób tworzenia wyrażeniu o wartości null.  
   
-- Jako argument do metody lub funkcji. Przeciążenie standardowe reguły mają zastosowanie.  
+- Jako argument metody lub funkcji. Obowiązują standardowe reguły przeciążenia.  
   
-- Jako jeden z argumentów do wyrażenia arytmetyczne, takie jak +, -, lub /. Drugi argument nie może być literały null, w przeciwnym razie wnioskowanie typu zerowalnego nie jest możliwe.  
+- Jako jeden z argumentów wyrażenia arytmetycznego, takiego jak +,-lub/. Pozostałe argumenty nie mogą być literałami o wartości null; w przeciwnym razie nie jest możliwe wnioskowanie o typie.  
   
-- Jako argumenty, które mają wyrażenie logiczne (AND, OR lub nie). Wszystkie argumenty są znane jako typu Boolean.  
+- Jako dowolne argumenty wyrażenia logicznego (i, lub, lub nie). Wszystkie argumenty muszą być typu Boolean.  
   
-- Jako argument wyrażenia jest wartość NULL lub nie jest równa NULL.  
+- Jako że argument ma wartość NULL lub jest wyrażeniem niepustym.  
   
-- Jako co najmniej jeden z argumentów do wyrażenia LIKE. Wszystkie argumenty powinny być ciągami.  
+- Jako jeden lub więcej argumentów wyrażenia LIKE. Wszystkie argumenty powinny być ciągami.  
   
-- Jako jeden lub więcej argumentów konstruktora typu o nazwie.  
+- Jako jeden lub więcej argumentów konstruktora nazwanego.  
   
-- Jako jeden lub więcej argumentów Konstruktor multiset. Co najmniej jeden argument Pro Konstruktor multiset — musi być wyrażeniem, które nie jest literałem o wartości null.  
+- Jako jeden lub więcej argumentów konstruktora zestawu wielokrotnego. Co najmniej jeden argument w konstruktorze zestawów wielokrotnych musi być wyrażeniem, które nie jest literałem null.  
   
-- Ponieważ co najmniej jedno z wyrażeń w wyrażeniu CASE następnie albo też. Co najmniej jedno z wyrażeń w wyrażeniu CASE następnie albo też musi być wyrażeniem innym niż literałem o wartości null.  
+- Jako co najmniej jedno wyrażenie THEN lub ELSE w wyrażeniu CASE. Co najmniej jedno wyrażenie THEN lub ELSE w wyrażeniu CASE musi być wyrażeniem innym niż literał o wartości null.  
   
- Swobodny literały null nie można używać w innych scenariuszach. Na przykład nie mogą być używane jako argumenty konstruktorze wierszy.  
+ W innych scenariuszach nie można używać żadnych zmiennoprzecinkowych literałów null. Na przykład nie mogą być używane jako argumenty konstruktora wiersza.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Omówienie jednostki SQL](entity-sql-overview.md)

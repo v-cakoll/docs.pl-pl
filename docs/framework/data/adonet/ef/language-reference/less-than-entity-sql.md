@@ -1,16 +1,16 @@
 ---
-title: < (Mniejsze niż) (jednostka SQL)
+title: < (Mniejsze niż) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 1fc2a039-3ad6-4b3c-b41d-09932e803f86
-ms.openlocfilehash: 1ca1cbdf1282782295b659393e8f54aae3ec5649
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1d19c9017a4b789b40332e4eca522e9758dcdf2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772310"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250450"
 ---
-# <a name="-less-than-entity-sql"></a>\< (Mniejsze niż) (Jednostka SQL)
-Porównuje dwa wyrażenia w celu określenia, czy lewe wyrażenie ma wartość mniejszą niż wyrażenie prawej krawędzi.  
+# <a name="-less-than-entity-sql"></a>\<(Mniejsze niż) (Entity SQL)
+Porównuje dwa wyrażenia, aby określić, czy lewe wyrażenie ma wartość mniejszą niż prawo wyrażenie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -20,20 +20,20 @@ expression < expression
   
 ## <a name="arguments"></a>Argumenty  
  `expression`  
- Dowolne prawidłowe wyrażenie. Oba wyrażenia muszą mieć niejawnej konwersji typów.  
+ Dowolne prawidłowe wyrażenie. Oba wyrażenia muszą mieć niejawnie wymienialne typy danych.  
   
 ## <a name="result-types"></a>Typy wyników  
- `true` Jeśli po lewej stronie wyrażenie ma wartość mniejszą niż wyrażenie prawej krawędzi; w przeciwnym razie `false`.  
+ `true`Jeśli lewe wyrażenie ma wartość mniejszą niż prawe wyrażenie; w przeciwnym razie. `false`  
   
 ## <a name="example"></a>Przykład  
- Następujące zapytanie SQL jednostki używa < operator porównania do porównywania dwóch wyrażeń w celu ustalenia, czy lewe wyrażenie ma wartość mniejszą niż wyrażenie prawej krawędzi. Zapytanie jest oparty na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
+ Poniższe zapytanie Entity SQL używa operatora porównania < do porównywania dwóch wyrażeń, aby określić, czy lewe wyrażenie ma wartość mniejszą niż prawe wyrażenie. Zapytanie jest oparte na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
   
-1. Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Wykonaj czynności opisane w [temacie How to: Wykonaj zapytanie zwracające wyniki](../how-to-execute-a-query-that-returns-structuraltype-results.md)StructuralType.  
   
-2. Przekaż poniższe zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
+2. Przekaż następujące zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
   
  [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Odwołanie do jednostki SQL](entity-sql-reference.md)

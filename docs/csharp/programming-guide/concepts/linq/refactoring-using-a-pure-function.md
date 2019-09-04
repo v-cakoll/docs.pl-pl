@@ -2,15 +2,15 @@
 title: Refaktoryzacja przy użyciu czystej funkcji (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: d1c4b1fc59e52fbd72dec1ee0e73e7198a083868
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f264a0028ed265a5a4fbe1dc32f430c648724c20
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591310"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253080"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refaktoryzacja przy użyciu czystej funkcji (C#)
-Poniższy przykład refaktoryzacji w poprzednim przykładzie, refaktoryzacji [przy użyciu metody rozszerzeniaC#()](./refactoring-using-an-extension-method.md), aby użyć czystej funkcji w tym przykładzie, kod, aby znaleźć tekst akapitu, jest przenoszony do czystej metody `ParagraphText`statycznej.  
+Poniższy przykład refaktoryzacji w poprzednim przykładzie, [refaktoryzacji przy użyciu metody rozszerzeniaC#()](./refactoring-using-an-extension-method.md), aby użyć czystej funkcji w tym przykładzie, kod, aby znaleźć tekst akapitu, jest przenoszony do czystej metody `ParagraphText`statycznej.  
   
 ## <a name="example"></a>Przykład  
  Ten przykład przetwarza dokument WordprocessingML, pobierając węzły akapitu z dokumentu WordprocessingML. Identyfikuje także styl każdego akapitu. Ten przykład kompiluje się zgodnie z poprzednimi przykładami w tym samouczku. Kod refaktoryzacji jest wywoływany w komentarzach w kodzie poniżej.  
@@ -156,7 +156,7 @@ class Program
   
  Ten przykład generuje te same dane wyjściowe, co przed refaktoryzacją:  
   
-```  
+```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  

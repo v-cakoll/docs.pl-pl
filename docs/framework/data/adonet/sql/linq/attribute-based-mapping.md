@@ -2,22 +2,22 @@
 title: Mapowanie oparte na atrybutach
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: 41152aa81ab84a2ab77e9a4ebf16e102ee5c0e3f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1e11a2efc3d1afa56a27d6e2c60149a509511080
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964093"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248064"
 ---
 # <a name="attribute-based-mapping"></a>Mapowanie oparte na atrybutach
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]mapuje bazę danych SQL Server na [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] model obiektu przez zastosowanie atrybutów lub zewnętrznego pliku mapowania. Ten temat zawiera opis podejścia opartego na atrybutach.  
   
- W najpopularniejszym formularzu podstawowym program [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapuje bazę danych <xref:System.Data.Linq.DataContext>do tabeli, tabelę na klasę, a następnie kolumny i relacje z właściwościami tych klas. Można również użyć atrybutów do mapowania hierarchii dziedziczenia w modelu obiektów. Aby uzyskać więcej informacji, zobacz [jak: Generuj model obiektów w Visual Basic lub C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ W najpopularniejszym formularzu podstawowym program [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapuje bazę danych <xref:System.Data.Linq.DataContext>do tabeli, tabelę na klasę, a następnie kolumny i relacje z właściwościami tych klas. Można również użyć atrybutów do mapowania hierarchii dziedziczenia w modelu obiektów. Aby uzyskać więcej informacji, zobacz [jak: Generuj model obiektów w Visual Basic lub C# ](how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
- Deweloperzy korzystający z programu Visual Studio zwykle wykonują mapowanie oparte na atrybutach przy użyciu Object Relational Designer. Możesz również użyć narzędzia wiersza polecenia SQLMetal lub samodzielnie pokodować atrybuty. Aby uzyskać więcej informacji, zobacz [jak: Generuj model obiektów w Visual Basic lub C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ Deweloperzy korzystający z programu Visual Studio zwykle wykonują mapowanie oparte na atrybutach przy użyciu Object Relational Designer. Możesz również użyć narzędzia wiersza polecenia SQLMetal lub samodzielnie pokodować atrybuty. Aby uzyskać więcej informacji, zobacz [jak: Generuj model obiektów w Visual Basic lub C# ](how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
 > [!NOTE]
-> Możesz również mapować przy użyciu zewnętrznego pliku XML. Aby uzyskać więcej informacji, zobacz [Mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+> Możesz również mapować przy użyciu zewnętrznego pliku XML. Aby uzyskać więcej informacji, zobacz [Mapowanie zewnętrzne](external-mapping.md).  
   
  W poniższych sekcjach opisano mapowanie oparte na atrybutach bardziej szczegółowo. Aby uzyskać więcej informacji, zobacz <xref:System.Data.Linq.Mapping> przestrzeń nazw.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "69964093"
 > W wartościach właściwości magazynu AssociationAttribute i ColumnAttribute jest uwzględniana wielkość liter. Na przykład upewnij się, że wartości używane w atrybucie właściwości AssociationAttribute. Storage pasują do wielkości liter dla odpowiednich nazw właściwości używanych w innym miejscu w kodzie. Dotyczy to wszystkich języków programowania .NET, nawet tych, które nie są zazwyczaj rozróżniane wielkości liter, w tym Visual Basic. Aby uzyskać więcej informacji na temat właściwości Storage, <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>Zobacz.  
   
 ## <a name="associationattribute-attribute"></a>AssociationAttribute — atrybut  
- Użyj tego atrybutu, aby wyznaczyć Właściwość reprezentującą skojarzenie w bazie danych, takie jak klucz obcy do relacji klucza podstawowego. Aby uzyskać więcej informacji na temat relacji [, zobacz How to: Mapowanie relacji między](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)bazami danych.  
+ Użyj tego atrybutu, aby wyznaczyć Właściwość reprezentującą skojarzenie w bazie danych, takie jak klucz obcy do relacji klucza podstawowego. Aby uzyskać więcej informacji na temat relacji [, zobacz How to: Mapowanie relacji między](how-to-map-database-relationships.md)bazami danych.  
   
  W poniższej tabeli opisano właściwości tego atrybutu.  
   
@@ -144,4 +144,4 @@ ms.locfileid: "69964093"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Dokumentacja](reference.md)

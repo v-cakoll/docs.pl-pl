@@ -1,47 +1,47 @@
 ---
-title: Konstruowanie typów (jednostka SQL)
+title: Konstruowanie typów (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
-ms.openlocfilehash: d43793b1d514b9dd81f524a30cd5bf1622aa5258
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7113aaf1c2caa982a8ab4751928856c1271570cb
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64632221"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251120"
 ---
-# <a name="constructing-types-entity-sql"></a>Konstruowanie typów (jednostka SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] zawiera trzy rodzaje konstruktorów: wiersz konstruktorów, typu nazwanego konstruktorów i konstruktorów kolekcji.  
+# <a name="constructing-types-entity-sql"></a>Konstruowanie typów (Entity SQL)
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]zawiera trzy rodzaje konstruktorów: konstruktory wierszy, konstruktory nazwanych typów i konstruktory kolekcji.  
   
-## <a name="row-constructors"></a>Konstruktory wiersza  
- Użyj wiersza konstruktorów w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] do konstruowania anonimowe, strukturalnie wpisane rekordy z co najmniej jedną wartość. Typ wyniku w Konstruktorze wierszy jest typu wiersza, w których typy pól odpowiadają typy wartości używane do konstruowania wiersza. Na przykład poniższe wyrażenie tworzy wartość typu `Record(a int, b string, c int)`:  
+## <a name="row-constructors"></a>Konstruktory wierszy  
+ Konstruktory wierszy w programie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] służą do konstruowania anonimowych, strukturalnie wpisanych rekordów z co najmniej jednej wartości. Typ wyniku konstruktora wierszy jest typem wiersza, którego typy pól odpowiadają typom wartości używanych do konstruowania wiersza. Na przykład następujące wyrażenie konstruuje wartość typu `Record(a int, b string, c int)`:  
   
  `ROW(1 AS a, "abc" AS b, a + 34 AS c)`  
   
- Jeśli nie podasz alias wyrażenia w Konstruktorze wierszy, platformy Entity Framework podejmie próbę go wygeneruje. Aby uzyskać więcej informacji, zobacz sekcję "Zasady aliasowania" w [identyfikatory](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md).  
+ Jeśli nie podasz aliasu dla wyrażenia w konstruktorze wierszy, Entity Framework podejmie próbę wygenerowania jednego. Aby uzyskać więcej informacji, zobacz sekcję "reguły aliasów" w temacie [identyfikatory](identifiers-entity-sql.md).  
   
- Następujące reguły stosuje się do wyrażenia aliasów w Konstruktorze wierszy:  
+ W konstruktorze wierszy są stosowane następujące reguły:  
   
-- Wyrażenia w Konstruktorze row nie może odwoływać się do innych aliasów w tej samej konstruktora.  
+- Wyrażenia w konstruktorze wierszy nie mogą odwoływać się do innych aliasów w tym samym konstruktorze.  
   
-- Dwóch wyrażeń w tym samym Konstruktor row nie może mieć takiego samego aliasu.  
+- Dwa wyrażenia w tym samym konstruktorze wierszy nie mogą mieć tego samego aliasu.  
   
- Aby uzyskać więcej informacji na temat konstruktory wiersz zobacz [wiersza](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).  
+ Aby uzyskać więcej informacji na temat konstruktorów wierszy, zobacz [wiersz](row-entity-sql.md).  
   
 ## <a name="collection-constructors"></a>Konstruktory kolekcji  
- Możesz użyć kolekcji konstruktorów w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] do utworzenia wystąpienia zestawu wielokrotnego z listy wartości. Wszystkie wartości w Konstruktorze musi być typu wzajemnie zgodne `T`, i Konstruktor tworzy kolekcję typu `Multiset<T>`. Na przykład poniższe wyrażenie tworzy kolekcję liczb całkowitych:  
+ Za pomocą konstruktorów kolekcji [!INCLUDE[esql](../../../../../../includes/esql-md.md)] w programie można utworzyć wystąpienie zestawu wielokrotnego z listy wartości. Wszystkie wartości w konstruktorze muszą być wzajemnie zgodnego typu `T`, a Konstruktor tworzy kolekcję typu. `Multiset<T>` Na przykład następujące wyrażenie tworzy kolekcję liczb całkowitych:  
   
  `Multiset(1, 2, 3)`  
   
  `{1, 2, 3}`  
   
- Pusty zestaw wielokrotny konstruktory nie są dozwolone, ponieważ nie można określić typ elementów. Poniżej jest nieprawidłowa:  
+ Puste konstruktory wielokrotne są niedozwolone, ponieważ nie można określić typu elementów. Następujące elementy są nieprawidłowe:  
   
  `multiset() {}`  
   
- Aby uzyskać więcej informacji, zobacz [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md).  
+ Aby uzyskać więcej informacji, zobacz zestaw [wielokrotny](multiset-entity-sql.md).  
   
-## <a name="named-type-constructors-namedtype-initializers"></a>Typ nazwany, konstruktory (NamedType inicjatory)  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Umożliwia konstruktorów typu (inicjatory), aby tworzyć wystąpienia nazwane typy złożone i typy jednostek. Na przykład poniższe wyrażenie tworzy wystąpienie `Person` typu.  
+## <a name="named-type-constructors-namedtype-initializers"></a>Konstruktory nazwanych typów (inicjatory nazwanych)  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]zezwala na konstruktory typów (inicjatory) do tworzenia wystąpień o nazwanych typach złożonych i typów jednostek. Na przykład następujące wyrażenie tworzy wystąpienie `Person` typu.  
   
  `Person("abc", 12)`  
   
@@ -53,18 +53,18 @@ ms.locfileid: "64632221"
   
  `MyModel.AddressInfo('My street address', 'Seattle', 'WA', MyModel.ZipCode('98118', '4567'))`  
   
- Poniższe wyrażenie tworzy wystąpienie jednostki przy użyciu zagnieżdżonych typu złożonego.  
+ Poniższe wyrażenie tworzy wystąpienie jednostki z zagnieżdżonym typem złożonym.  
   
  `MyModel.Person("Bill", MyModel.AddressInfo('My street address', 'Seattle', 'WA', MyModel.ZipCode('98118', '4567')))`  
   
- Poniższy przykład pokazuje, jak zainicjować właściwość typu złożonego do wartości null. `MyModel.ZipCode(‘98118’, null)`  
+ Poniższy przykład pokazuje, jak zainicjować właściwość typu złożonego na wartość null. `MyModel.ZipCode(‘98118’, null)`  
   
- Argumenty konstruktora są rozpatrywane w tej samej kolejności, jak deklaracja atrybuty typu.  
+ Argumenty konstruktora są założono, że są w tej samej kolejności co deklaracja atrybutów typu.  
   
- Aby uzyskać więcej informacji, zobacz [konstruktora typu o nazwie](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md).  
+ Aby uzyskać więcej informacji, zobacz [nazwany Konstruktor typów](named-type-constructor-entity-sql.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [System typów](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)
+- [Odwołanie do jednostki SQL](entity-sql-reference.md)
+- [Omówienie jednostki SQL](entity-sql-overview.md)
+- [System typów](type-system-entity-sql.md)

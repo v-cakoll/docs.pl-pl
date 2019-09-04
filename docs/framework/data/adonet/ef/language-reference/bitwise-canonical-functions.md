@@ -2,26 +2,26 @@
 title: Funkcje bitowe Canonical
 ms.date: 03/30/2017
 ms.assetid: 993868ca-16e3-47b6-9915-c29cd63b0a21
-ms.openlocfilehash: 67d78e8d31f0bc3564a0a111b9bc71cbd0e14f5c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c1f32acc7a035658198b807646c1ceb95dfed0b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606032"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251300"
 ---
 # <a name="bitwise-canonical-functions"></a>Funkcje bitowe Canonical
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] obejmuje funkcje canonical bitowe.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]zawiera bitowe funkcje kanoniczne.  
   
 ## <a name="remarks"></a>Uwagi  
- W poniższej tabeli przedstawiono operatora testu koniunkcji [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funkcje canonical. Te funkcje zwrócą `Null` Jeśli `Null` znajduje się dane wejściowe. Zwracany typ funkcji jest taka sama jak typy argumentów. Argumenty muszą być tego samego typu, jeśli funkcja przyjmuje więcej niż jeden argument. Aby wykonać operacje bitowe na różnych urządzeniach, należy rzutować na ten sam typ. jawne.  
+ W poniższej tabeli przedstawiono bitowe [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funkcje kanoniczne. Te funkcje będą zwracać `Null` , `Null` Jeśli dane wejściowe zostaną dostarczone. Zwracany typ funkcji jest taki sam jak typ argumentu (s). Argumenty muszą być tego samego typu, jeśli funkcja przyjmuje więcej niż jeden argument. Aby wykonywać operacje bitowe w różnych typach, należy jawnie rzutować na ten sam typ.  
   
 |Funkcja|Opis|  
 |--------------|-----------------|  
-|`BitWiseAnd (` `value1` `,`  `value2` `)`|Zwraca koniunkcję bitową programu `value1` i `value2` jako typ `value1` i `value2`.<br /><br /> **Argumenty**<br /><br /> A `Byte`, `Int16`, `Int32`, i `Int64`.<br /><br /> **Przykład**<br /><br /> `-- The following example returns 1.`<br /><br /> `BitWiseAnd(1,3)`|  
-|`BitWiseNot (` `value` `)`|Zwraca wartość logiczną negację `value`.<br /><br /> **Argumenty**<br /><br /> A `Byte`, `Int16`, `Int32`, i `Int64`.<br /><br /> **Przykład**<br /><br /> `-- The following example returns -4.`<br /><br /> `BitWiseNot(3)`|  
-|`BitWiseOr (` `value1` `,`  `value2` `)`|Zwraca sumę bitową programu `value1` i `value2` jako typ `value1` i `value2`.<br /><br /> **Argumenty**<br /><br /> A `Byte`, `Int16`, `Int32` i `Int64`.<br /><br /> **Przykład**<br /><br /> `-- The following example returns 3.`<br /><br /> `BitWiseOr(1,3)`|  
-|`BitWiseXor (` `value1` `,`  `value2` `)`|Zwraca bitowego rozłączenia wyłączny z `value1` i `value2` jako typ `value1` i `value2`.<br /><br /> **Argumenty**<br /><br /> A `Byte`, `Int16`, `Int32` i `Int64`.<br /><br /> **Przykład**<br /><br /> `-- The following example returns 2.`<br /><br /> `BitWiseXor (1,3)`|  
+|`BitWiseAnd (` `value1` `,`  `value2` `)`|Zwraca koniunkcję bitową `value1` typu `value2` `value1` `value2`i.<br /><br /> **Argumenty**<br /><br /> A `Byte`, `Int16`, ,`Int32`i .`Int64`<br /><br /> **Przykład**<br /><br /> `-- The following example returns 1.`<br /><br /> `BitWiseAnd(1,3)`|  
+|`BitWiseNot (` `value` `)`|Zwraca bitową negację `value`.<br /><br /> **Argumenty**<br /><br /> A `Byte`, `Int16`, ,`Int32`i .`Int64`<br /><br /> **Przykład**<br /><br /> `-- The following example returns -4.`<br /><br /> `BitWiseNot(3)`|  
+|`BitWiseOr (` `value1` `,`  `value2` `)`|Zwraca bitowe `value1` rozłączenie i `value2` jako typ `value1` i `value2`.<br /><br /> **Argumenty**<br /><br /> A `Byte` ,`Int16` i`Int64`. `Int32`<br /><br /> **Przykład**<br /><br /> `-- The following example returns 3.`<br /><br /> `BitWiseOr(1,3)`|  
+|`BitWiseXor (` `value1` `,`  `value2` `)`|`value1` Zwraca bitowe, wyłączne rozłączenie i `value2` jako typ `value1` i `value2`.<br /><br /> **Argumenty**<br /><br /> A `Byte` ,`Int16` i`Int64`. `Int32`<br /><br /> **Przykład**<br /><br /> `-- The following example returns 2.`<br /><br /> `BitWiseXor (1,3)`|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Funkcje Canonical](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+- [Funkcje Canonical](canonical-functions.md)

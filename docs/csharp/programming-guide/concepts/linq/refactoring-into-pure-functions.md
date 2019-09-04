@@ -2,12 +2,12 @@
 title: Refaktoryzacja do czystych funkcji (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 453b128ecaea62fd58c54bfb383091f65a082370
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4cf91ff078bd1c4582daa05475a91c4a4ecaba3e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924191"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253109"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refaktoryzacja do czystych funkcji (C#)
 
@@ -52,7 +52,7 @@ public class Program
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```output  
 StringOne-StringTwo  
 ```  
   

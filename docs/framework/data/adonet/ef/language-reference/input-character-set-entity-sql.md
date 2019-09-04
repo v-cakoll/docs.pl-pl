@@ -1,33 +1,33 @@
 ---
-title: Wejściowy zestaw znaków (jednostka SQL)
+title: Wejściowy zestaw znaków (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
-ms.openlocfilehash: 3795660cf6086aa67596f31e49c4d950aa653d86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1c6475704ec384800af0b678edd943246bf8044
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780422"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250637"
 ---
-# <a name="input-character-set-entity-sql"></a>Wejściowy zestaw znaków (jednostka SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] akceptuje znaków UNICODE zakodowanych w formacie UTF-16.  
+# <a name="input-character-set-entity-sql"></a>Wejściowy zestaw znaków (Entity SQL)
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]akceptuje znaki UNICODE zakodowane w UTF-16.  
   
- Literały ciągu może zawierać żadnych znaków UTF-16 ujęta w apostrofy. Na przykład N "文字列リテラル". Gdy literały ciągów są porównywane, oryginalne wartości UTF-16 są używane. Na przykład N'ABC "różni się w strony kodowe kalendarza japońskiego i łacińskiego.  
+ Literały ciągu mogą zawierać dowolny znak UTF-16 ujęty w apostrofy. Na przykład N "文字列リテラル". Gdy literały ciągu są porównywane, używane są oryginalne wartości UTF-16. Na przykład N'ABC "różni się w języku japońskim i łacińskim stronie kodowej.  
   
- Komentarze mogą zawierać dowolne znaki UTF-16.  
+ Komentarze mogą zawierać dowolny znak UTF-16.  
   
- Identyfikatory o zmienionym znaczeniu może zawierać żadnych znaków UTF-16 w nawiasach kwadratowych. Na przykład [エスケープされた識別子]. Porównanie identyfikatorów UTF-16, poprzedzone znakiem zmiany znaczenia jest uwzględniana wielkość liter. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] traktuje wersji liter, są wyświetlane takie same, które pochodzą z różne strony kodowe jako różne znaki. Na przykład [ABC] jest odpowiednikiem [abc], jeśli odpowiadające im znaki pochodzą z tej samej strony kodowej. Jednakże jeśli ten sam dwa identyfikatory są z różne strony kodowe, nie są równoważne.  
+ Identyfikatory o zmienionym znaczeniu mogą zawierać dowolny znak UTF-16 ujęty w nawiasy kwadratowe. Na przykład [エスケープされた識別子]. W porównaniu z identyfikatorami ucieczki UTF-16 wielkość liter nie jest rozróżniana. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]traktuje wersje liter, które wyglądają tak samo, ale pochodzą z różnych stron kodowych jako różne znaki. Na przykład [ABC] jest odpowiednikiem [abc], jeśli odpowiednie znaki pochodzą z tej samej strony kodowej. Jeśli jednak te same dwa identyfikatory pochodzą z różnych stron kodowych, nie są równoważne.  
   
- Biały znak jest znakiem odstępu UTF-16.  
+ Biały znak jest dowolnego znaku w formacie UTF-16.  
   
- Nowy wiersz jest dowolny znormalizowane znak nowego wiersza UTF-16. Na przykład "\n" i "\r\n" są traktowane jako znaki nowego wiersza, ale '\r' nie jest znakiem nowego wiersza.  
+ Nowy wiersz jest dowolnym znormalizowanym znakiem nowego wiersza UTF-16. Na przykład "\n" i "\r\n" są uznawane za znaki nowego wiersza, ale "\r" nie jest znakiem nowego wiersza.  
   
- Słowa kluczowe, wyrażenia i znaków interpunkcyjnych może być dowolnym znakiem UTF-16, który normalizuje do Latin. Na przykład wybór w japońskich strona kodowa jest nieprawidłowa — słowo kluczowe.  
+ Słowa kluczowe, wyrażenia i interpunkcja mogą być dowolnego znaku UTF-16, który normalizuje do alfabetu łacińskiego. Na przykład wybierz w japońskiej stronie kodowej jest prawidłowym słowem kluczowym.  
   
- Słowa kluczowe, wyrażenia i znaków interpunkcyjnych może być tylko znaki alfabetu łacińskiego. `SELECT` w japońskich strona kodowa nie jest słowem kluczowym. +,-, \*, /, = (,), ", [,] i innych konstrukcją języka pierwszej klasy, nie są podane w tym miejscu może zawierać tylko znaki alfabetu łacińskiego.  
+ Słowa kluczowe, wyrażenia i interpunkcja mogą zawierać tylko znaki łacińskie. `SELECT`w japońskiej stronie kodowej nie jest słowem kluczowym. znaki +,- \*,,/, =, (,), ', [,] i wszelkie inne konstrukcje języka, które nie są ujęte w tym miejscu, mogą być tylko znakami łacińskimi.  
   
- Proste identyfikatory mogą być tylko znaki alfabetu łacińskiego. Pozwala to uniknąć niejednoznaczności podczas porównywania, ponieważ oryginalne wartości są porównywane. Na przykład ABC będzie różnić się w strony kodowe kalendarza japońskiego i łacińskiego.  
+ Proste identyfikatory mogą zawierać tylko znaki łacińskie. Pozwala to uniknąć niejednoznaczności podczas porównania, ponieważ oryginalne wartości są porównywane. Na przykład ABC będzie różnić się w japońskiej i Łacińskiej stronie kodowej.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Omówienie jednostki SQL](entity-sql-overview.md)

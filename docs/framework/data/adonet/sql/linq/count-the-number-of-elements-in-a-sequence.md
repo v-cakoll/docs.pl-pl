@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ccbe5d54-c9eb-4b14-b0ab-f628483c5f99
-ms.openlocfilehash: b39b0a1487c9f250e32b13330f2f70b7e3c7c877
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74e24aeb64b0097cba3975e76475034e6bb9544d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032927"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247704"
 ---
 # <a name="count-the-number-of-elements-in-a-sequence"></a>Licznik liczby elementów w sekwencji
-Użyj <xref:System.Linq.Enumerable.Count%2A> operator, aby określić liczbę elementów w sekwencji.  
+Użyj operatora <xref:System.Linq.Enumerable.Count%2A> , aby policzyć liczbę elementów w sekwencji.  
   
- Uruchomienie tego zapytania względem przykładowej bazy danych Northwind generuje dane wyjściowe `91`.  
+ Uruchomienie tego zapytania względem przykładowej bazy danych Northwind powoduje utworzenie danych `91`wyjściowych.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zlicza `Customers` w bazie danych.  
+ Poniższy przykład zlicza liczbę `Customers` w bazie danych.  
   
  [!code-csharp[DLinqQueryExamples#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#4)]
  [!code-vb[DLinqQueryExamples#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#4)]  
@@ -26,12 +26,12 @@ Użyj <xref:System.Linq.Enumerable.Count%2A> operator, aby określić liczbę el
 ## <a name="example"></a>Przykład  
  Poniższy przykład zlicza produkty w bazie danych, które nie zostały wycofane.  
   
- Działających w tym przykładzie w odniesieniu do przykładowej bazy danych Northwind generuje dane wyjściowe `69`.  
+ Uruchomienie tego przykładu w przypadku przykładowej bazy danych Northwind powoduje `69`utworzenie danych wyjściowych.  
   
  [!code-csharp[DLinqQueryExamples#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#5)]
  [!code-vb[DLinqQueryExamples#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#5)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zapytania zagregowane](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
-- [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Zapytania zagregowane](aggregate-queries.md)
+- [Pobieranie przykładowych baz danych](downloading-sample-databases.md)

@@ -1,34 +1,34 @@
 ---
-title: Deployment Considerations (Entity Framework)
+title: Zagadnienia dotyczące wdrażania (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
-ms.openlocfilehash: 736de555c5731d08227c558115cb235650761cc8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3e78fc413e50deda67aa8992179e500afa671f8d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633558"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251612"
 ---
-# <a name="deployment-considerations-entity-framework"></a>Deployment Considerations (Entity Framework)
-Ten temat zawiera informacje dotyczące wdrażania aplikacji, które używają ADO.NET Entity Framework, aby uzyskać dostęp do danych. Aby uzyskać więcej informacji na temat programu Entity Framework, zobacz [wprowadzenie](../../../../../docs/framework/data/adonet/ef/getting-started.md).  
+# <a name="deployment-considerations-entity-framework"></a>Zagadnienia dotyczące wdrażania (Entity Framework)
+Ten temat zawiera informacje dotyczące wdrażania aplikacji, które używają Entity Framework ADO.NET do uzyskiwania dostępu do danych. Aby uzyskać więcej informacji na temat Entity Framework, zobacz [wprowadzenie](getting-started.md).  
   
- Entity Framework udostępnia zestaw narzędzi, integracja z usługą, które ułatwiają tworzenie w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [narzędzia modelu danych jednostki ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)). W tym temacie nie opisano sposobu korzystania z określonymi technologiami wdrożyć aplikację na podstawie platformy Entity Framework.  
+ Entity Framework zawiera zestaw narzędzi, które integrują się z programem i ułatwiają tworzenie w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [narzędzia ADO.NET Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)). W tym temacie nie opisano, jak używać określonych technologii do wdrażania aplikacji opartej na Entity Framework.  
   
- Visual Studio zawiera funkcje służące do dystrybuowania i wdrażania aplikacji, takich jak wdrażanie ClickOnce. Aby uzyskać więcej informacji, zobacz [wdrażanie aplikacji i składników](/visualstudio/deployment/deploying-applications-services-and-components) w dokumentacji programu Visual Studio.  
+ Program Visual Studio oferuje funkcje do dystrybuowania i wdrażania aplikacji, takich jak wdrażanie ClickOnce. Aby uzyskać więcej informacji, zobacz [wdrażanie aplikacji i składników](/visualstudio/deployment/deploying-applications-services-and-components) w dokumentacji programu Visual Studio.  
   
- W przypadku wdrażania aplikacji, która używa programu Entity Framework, obowiązują następujące zastrzeżenia:  
+ Podczas wdrażania aplikacji korzystającej z Entity Framework są stosowane następujące zagadnienia:  
   
-- Entity Framework jest składnikiem programu .NET Framework, począwszy od .NET Framework 3.5 Service Pack 1 (SP1). Należy upewnić się, że .NET Framework 3.5 z dodatkiem SP1 lub nowszej jest zainstalowane, podczas wdrażania aplikacji na podstawie platformy Entity Framework.  
+- Entity Framework jest składnikiem .NET Framework, rozpoczynając od .NET Framework 3,5 z dodatkiem Service Pack 1 (SP1). Podczas wdrażania aplikacji opartej na Entity Framework należy upewnić się, że .NET Framework 3,5 SP1 lub nowsza wersja jest zainstalowana.  
   
-- Gdy model koncepcyjny jest generowany przez Kreator modelu Entity Data Model, ciąg połączenia jest tworzony w pliku konfiguracji aplikacji. Modelu i mapowania plików można osadzić jako zasobów aplikacji lub mogą być kopiowane do katalogu wyjściowego. Domyślnie są one wdrażane jako zasoby osadzonej aplikacji. Użyj `Metadata Artifact Processing` właściwość pliku Projektanta obiektów do wybrania jednej z tych opcji. Aby uzyskać więcej informacji, zobacz [jak: Kopiowanie modelu i mapowania plików do katalogu wyjściowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716709(v=vs.100)).  
+- Po wygenerowaniu modelu koncepcyjnego za pomocą Kreatora Entity Data Model w pliku konfiguracji aplikacji zostanie utworzony ciąg połączenia. Pliki modelu i mapowania mogą być osadzane jako zasoby aplikacji lub mogą być kopiowane do katalogu wyjściowego. Domyślnie są one wdrażane jako osadzone zasoby aplikacji. `Metadata Artifact Processing` Użyj właściwości pliku Entity Designer, aby wybrać jedną z tych opcji. Aby uzyskać więcej informacji, zobacz [jak: Kopiuj model i Mapuj pliki do katalogu](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716709(v=vs.100))wyjściowego.  
   
-- Upewnij się, że modelu i mapowania informacji (wyrażony w język definicji schematu koncepcyjnego (CSDL), język definicji schematu magazynu (SSDL) i mapowania specyfikacji języka (MSL)) jest wdrażany wraz z aplikacją, jak i w lokalizacji określona przez ciąg połączenia. Aby uzyskać więcej informacji, zobacz [parametry połączenia](../../../../../docs/framework/data/adonet/ef/connection-strings.md).  
+- Upewnij się, że informacje o modelu i mapowaniu (wyrażone w języku definicji schematu koncepcyjnego (CSDL), magazynu definicji schematu (SSDL) i języku specyfikacji mapowania (MSL) są wdrożone razem z aplikacją i w lokalizacji określone przez parametry połączenia. Aby uzyskać więcej informacji, zobacz [Parametry połączenia](connection-strings.md).  
   
-- Osadzenie modelu i mapowania informacji jako zasobów aplikacji, należy ponownie skompilować i ponowne wdrażanie aplikacji za każdym razem, gdy model koncepcyjny jest aktualizowana.  
+- Podczas osadzania modelu i mapowania informacji jako zasobów aplikacji należy ponownie skompilować i wdrożyć aplikację za każdym razem, gdy model koncepcyjny zostanie zaktualizowany.  
   
-- Ponieważ platforma Entity Framework jest składnikiem programu .NET Framework, można redystrybuować z aplikacją, zgodnie z umową licencyjną .NET Framework.  
+- Ponieważ Entity Framework jest składnikiem .NET Framework, można go rozpowszechniać z aplikacją zgodnie z umową licencyjną .NET Framework.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Program Entity Framework na platformie ADO.NET](../../../../../docs/framework/data/adonet/ef/index.md)
-- [Projektowanie i zagadnienia dotyczące wdrażania](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)
+- [Program Entity Framework na platformie ADO.NET](index.md)
+- [Projektowanie i zagadnienia dotyczące wdrażania](development-and-deployment-considerations.md)

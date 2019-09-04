@@ -2,12 +2,12 @@
 title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 58828b812ce374a664e4d232b707f22d5ca438c1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbe27f6e25c9d69f092a060fa2c3fbf0abc93318
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912285"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250512"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 Określa, czy określony znak `String` jest zgodny z określonym wzorcem.  
@@ -68,7 +68,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 ## <a name="example"></a>Przykład  
  Poniższe dwa [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania używają operatorów like i Escape, aby określić, czy określony ciąg znaków jest zgodny z określonym wzorcem. Pierwsze zapytanie wyszukuje `Name` , które zaczyna się od znaków `Down_`. To zapytanie używa opcji ucieczki, ponieważ znak podkreślenia`_`() jest symbolem wieloznacznym. Bez określenia opcji ucieczki, zapytanie będzie wyszukiwać `Name` wartości, które zaczynają się od słowa `Down` , po którym następuje dowolny pojedynczy znak inny niż znak podkreślenia. Zapytania są oparte na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
   
-1. Wykonaj czynności opisane w [temacie How to: Wykonaj zapytanie zwracające wyniki](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)typu pierwotnego.  
+1. Wykonaj czynności opisane w [temacie How to: Wykonaj zapytanie zwracające wyniki](../how-to-execute-a-query-that-returns-primitivetype-results.md)typu pierwotnego.  
   
 2. Przekaż następujące zapytanie jako argument do `ExecutePrimitiveTypeQuery` metody:  
   
@@ -76,4 +76,4 @@ match [NOT] LIKE pattern [ESCAPE escape]
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Odwołanie do jednostki SQL](entity-sql-reference.md)

@@ -6,80 +6,80 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: b60b3964ff8e1b1f05b6c0820c63ec06d9ea0f4c
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 7ddd887eefd67a3300795396dac26e855f30989e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859651"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254123"
 ---
 # <a name="document-serialization-and-storage"></a>Serializacja dokumentu i przechowywanie
 
-Microsoft .NET Framework oferuje zaawansowane środowisko do tworzenia i wyświetlanie dokumentów wysokiej jakości.  Ulepszone funkcje, które obsługują Naprawiono dokumenty i dokumenty przepływu, zaawansowane wyświetlania formantów, w połączeniu z zaawansowanych 2D i funkcje grafiki 3D aplikacji .NET Framework na nowy poziom jakości i środowisko użytkownika.  Możliwość elastycznego zarządzania reprezentacji w pamięci dokumentu jest kluczowym elementem programu .NET Framework i możliwość efektywnie zapisywanie i ładowanie dokumentów z magazynu danych jest niezbędne do niemal wszystkich aplikacji.  Proces konwersji dokumentu z reprezentacji w pamięci wewnętrznej do magazynu danych zewnętrznych jest określane jako serializacji.  Procesu odczytu z magazynu danych i ponowne utworzenie oryginalnego wystąpienia w pamięci jest określane jako deserializacji.
+Microsoft .NET Framework zapewnia zaawansowane środowisko do tworzenia i wyświetlania dokumentów o wysokiej jakości.  Udoskonalone funkcje, które obsługują zarówno dokumenty o stałym rozmiarze, jak i dokumenty przepływu, zaawansowane kontrolki wyświetlania, połączone z zaawansowanymi możliwościami graficznymi 2D i 3W — są .NET Framework aplikacje na nowy poziom jakości i środowiska użytkownika.  Możliwość elastycznego zarządzania reprezentacją w pamięci dokumentu jest kluczową cechą .NET Framework i można efektywnie zapisywać i ładować dokumenty z magazynu danych jest konieczna niemal dla każdej aplikacji.  Proces konwersji dokumentu z wewnętrznej reprezentacji w pamięci na zewnętrzny magazyn danych jest długoterminową serializacji.  Proces wycofywania odczytywania magazynu danych i ponownego tworzenia oryginalnego wystąpienia w pamięci jest okresowo deserializacji.
 
 <a name="AboutSerialization"></a>
 
 ## <a name="about-document-serialization"></a>Informacje o serializacji dokumentu
 
-Najlepiej proces serializacji i deserializacji dokumentu z, a następnie wstecz do pamięci jest niewidoczna dla aplikacji.  Aplikacja wywołuje element serializujący "write" metodę, aby zapisać dokumentu, podczas deserializacji "Odczyt" Metoda uzyskuje dostęp do magazynu danych oraz odtwarza oryginalnego wystąpienia w pamięci.  Określony format, którego dane są przechowywane w zwykle nie jest kwestią w aplikacji, jak długie jako serializacja i zdeserializować procesu odtwarza dokumentu z powrotem do ich oryginalnej postaci.
+W idealnym przypadku proces serializowania i deserializacji dokumentu z i z powrotem do pamięci jest niewidoczny dla aplikacji.  Aplikacja wywołuje metodę "Write" serializatora w celu zapisania dokumentu, podczas gdy metoda deserializacji "read" uzyskuje dostęp do magazynu danych i ponownie tworzy oryginalne wystąpienie w pamięci.  Określony format, w którym dane są przechowywane, nie jest ogólnie problemem aplikacji, o ile proces serializacji i deserializacji odtworzy dokument z powrotem do jego oryginalnego formularza.
 
-Aplikacje często oferują wiele opcji serializacji, które pozwalają użytkownikowi zapisywać dokumenty w innych nośników lub w innym formacie.  Na przykład aplikacja może zaoferować "Zapisz jako" Opcje zapisywania dokumentu do pliku dysku, bazy danych lub usługi sieci web.  Podobnie różnych serializatory może przechowywać dokumentu w różnych formatach takich jak HTML, RTF, XML, XPS, lub też w formacie innych firm.  Do aplikacji serializacji definiuje interfejs, który izoluje szczegółowe informacje o nośniku w implementacji każdego określonego elementu serializującego.  Oprócz korzyści z enkapsulacji szczegółów magazynu, .NET Framework <xref:System.Windows.Documents.Serialization> interfejsów API zapewniają kilka ważnych funkcji.
+Aplikacje często udostępniają wiele opcji serializacji, które umożliwiają użytkownikowi zapisywanie dokumentów w różnych nośnikach lub w innym formacie.  Na przykład aplikacja może oferować opcje "Zapisz jako" do przechowywania dokumentu w pliku dysku, bazie danych lub usłudze sieci Web.  Podobnie różne serializatory mogą przechowywać dokument w różnych formatach, takich jak HTML, RTF, XML, XPS lub alternatywnie w formacie innej firmy.  W aplikacji Serializacja definiuje interfejs, który izoluje szczegóły nośnika magazynu w ramach implementacji każdego z określonych serializatorów.  Oprócz zalet hermetyzacji szczegółów magazynu .NET Framework <xref:System.Windows.Documents.Serialization> interfejsy API udostępniają kilka innych ważnych funkcji.
 
-### <a name="features-of-net-framework-30-document-serializers"></a>Funkcje programu .NET Framework 3.0 dokumentu serializatorów
+### <a name="features-of-net-framework-30-document-serializers"></a>Funkcje serializatorów dokumentów .NET Framework 3,0
 
-- Bezpośredni dostęp do obiektów wysokiego poziomu dokumentu (drzewo logiczne i wizualizacje) umożliwiają wydajne magazynu z podziałem na strony zawartości, elementy 2D/3D, obrazy, media, hiperłącza, adnotacji i innej zawartości pomocy technicznej.
+- Bezpośredni dostęp do obiektów dokumentów wysokiego poziomu (logiczne drzewo i wizualizacje) umożliwia wydajne przechowywanie zawartości z podziałem na strony, elementów 2D/3W, obrazów, multimediów, hiperłączy, adnotacji i innych zawartości pomocy technicznej.
 
-- Operacja synchroniczne i asynchroniczne.
+- Operacja synchroniczna i asynchroniczna.
 
-- Pomoc techniczna dla dodatku plug-in serializatory z udoskonalonymi funkcjami:
+- Obsługa serializatorów wtyczek z ulepszonymi możliwościami:
 
-  - Dostęp do całego systemu dla wszystkich aplikacji .NET Framework.
+  - Dostęp na poziomie systemu do użytku przez wszystkie .NET Framework aplikacje.
 
-  - Odnajdowanie wtyczki prostą aplikację.
+  - Łatwe odnajdowanie wtyczki aplikacji.
 
-  - Proste wdrożenie, instalacji i aktualizacji dla niestandardowych wtyczek innych firm.
+  - Proste wdrażanie, Instalowanie i aktualizowanie niestandardowych wtyczek innych firm.
 
-  - Obsługa interfejsu użytkownika dla niestandardowych ustawień środowiska wykonawczego i opcje.
+  - Obsługa interfejsu użytkownika dla niestandardowych ustawień i opcji czasu wykonywania.
 
 ### <a name="xps-print-path"></a>Ścieżka wydruku XPS
 
-Microsoft .NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ścieżka wydruku także rozszerzony mechanizm do zapisywania dokumentów za pośrednictwem wydruku danych wyjściowych.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] Służy jako zarówno format pliku dokumentu i format natywnych buforu wydruku dla [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] dokumenty, które mogą być wysyłane bezpośrednio do [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-zgodnymi drukarkami, bez potrzeby konwersji do formatu pośredniego.  Zobacz [Omówienie drukowania](printing-overview.md) dodatkowe informacje na temat opcji wyjściowych ścieżka wydruku i możliwości.
+Ścieżka drukowania w formacie XPS programu Microsoft .NET Framework zapewnia także rozszerzalny mechanizm pisania dokumentów przy użyciu drukowania danych wyjściowych.  Plik XPS służy zarówno jako format pliku dokumentu, jak i jest natywnym formatem [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]buforu wydruku.  Dokumenty XPS można wysyłać bezpośrednio do drukarek zgodnych z formatem XPS bez konieczności konwersji do formatu pośredniego.  Zobacz [Omówienie drukowania](printing-overview.md) , aby uzyskać dodatkowe informacje na temat opcji i możliwości wyjściowych ścieżki wydruku.
 
 <a name="PluginSerializers"></a>
 
-## <a name="plug-in-serializers"></a>Wtyczka serializatorów
+## <a name="plug-in-serializers"></a>Serializatory wtyczek
 
-<xref:System.Windows.Documents.Serialization> Interfejsów API zapewnia obsługę zarówno serializatorów wtyczka serializatory połączone, które są instalowane osobno od aplikacji, powiązania w czasie wykonywania i są dostępne przy użyciu <xref:System.Windows.Documents.Serialization.SerializerProvider> mechanizm odnajdywania.  Serializatorów wtyczka oferują rozszerzone korzyści w celu ułatwienia wdrażania i używania całego systemu.  Połączone serializatory może też być implementowany w środowiskach częściowej relacji zaufania takich jak [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] gdzie serializatorów wtyczka nie są dostępne.  Połączone serializatory, które są oparte na pochodnej implementacji <xref:System.Windows.Documents.Serialization.SerializerWriter> klasy, są skompilowane i połączone bezpośrednio do aplikacji.  Serializatory połączone i serializatorów wtyczka działać przez identyczne publicznej metody i zdarzenia, które ułatwiają używać jednego lub obu tych typów serializatory w tej samej aplikacji.
+Interfejsy API zapewniają obsługę serializatorów wtyczek i połączonych serializatorów, które są instalowane niezależnie od aplikacji, w czasie wykonywania i są dostępne przy <xref:System.Windows.Documents.Serialization.SerializerProvider> użyciu mechanizmu odnajdywania. <xref:System.Windows.Documents.Serialization>  Serializatory wtyczek oferują ulepszone korzyści ułatwiające wdrażanie i korzystanie z całego systemu.  Połączone serializatory mogą być również zaimplementowane w środowiskach częściowego zaufania, [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] takich jak, w których serializatory wtyczki są niedostępne.  Połączone serializatory, które są oparte na pochodnej implementacji <xref:System.Windows.Documents.Serialization.SerializerWriter> klasy, są kompilowane i połączone bezpośrednio z aplikacją.  Zarówno serializatory wtyczki, jak i połączone serializatory działają przy użyciu identycznych metod publicznych i zdarzeń, co ułatwia użycie jednego lub obu typów serializacji w tej samej aplikacji.
 
-Serializatorów wtyczka pomoc deweloperom aplikacji, zapewniając rozszerzenia działania do nowych projektów magazynu oraz formaty plików bez konieczności kodu bezpośrednio dla każdego potencjalnego formatu w czasie kompilacji.  Wtyczka serializatory również korzystać deweloperzy innych firm, zapewniając standardowy sposób wdrożyć, zainstalować i zaktualizować system dostępne dodatki plug-in dla formatów niestandardowych lub chronione prawem własności plików.
+Konstruktory wtyczek ułatwiają deweloperom aplikacji zapewnianie rozszerzalności do nowych projektów magazynu i formatów plików bez konieczności bezpośredniego kodu dla każdego potencjalnego formatu w czasie kompilacji.  Serializatory wtyczek mają również dostęp do deweloperów innych firm, zapewniając ustandaryzowaną metodę wdrażania, instalowania i aktualizacji wtyczek dostępnych dla systemu dla niestandardowych lub zastrzeżonych formatów plików.
 
-### <a name="using-a-plug-in-serializer"></a>Za pomocą wtyczki serializatora
+### <a name="using-a-plug-in-serializer"></a>Korzystanie z serializatora wtyczki
 
-Serializatory wtyczki są proste w użyciu.  <xref:System.Windows.Documents.Serialization.SerializerProvider> Wylicza klasy <xref:System.Windows.Documents.Serialization.SerializerDescriptor> obiektu dla każdej wtyczki zainstalowane w systemie.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> Właściwość filtry zainstalowane dodatki plug-in na podstawie bieżącej konfiguracji i sprawdza, czy serializator może być załadowany i używanych przez aplikację.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor> Także inne właściwości, takie jak <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> i <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, używane przez aplikację monitu przy wyborze serializatora dla format wyjściowy dostępne.  Domyślne serializatora wtyczki dla [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] jest dostarczany z programem .NET Framework i zawsze są wyliczane.  Po wybraniu przez użytkownika format danych wyjściowych <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> metoda służy do tworzenia <xref:System.Windows.Documents.Serialization.SerializerWriter> dla określonego formatu.  <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> następnie można wywołać metody służący do wypełniania wyjściowego strumienia dokumentu do magazynu danych.
+Serializatory wtyczek są proste do użycia.  <xref:System.Windows.Documents.Serialization.SerializerProvider> Klasa wylicza<xref:System.Windows.Documents.Serialization.SerializerDescriptor> obiekt dla każdej wtyczki zainstalowanej w systemie.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> Właściwość filtruje zainstalowane wtyczki w oparciu o bieżącą konfigurację i weryfikuje, czy serializator może być ładowany i używany przez aplikację.  Zawiera również inne właściwości, takie jak <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> i <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, które mogą być używane przez aplikację do monitowania użytkownika o wybranie serializatora dla dostępnego formatu danych wyjściowych. <xref:System.Windows.Documents.Serialization.SerializerDescriptor>  Domyślny serializator wtyczki dla XPS jest dostarczany z .NET Framework i jest zawsze wyliczany.  Gdy użytkownik wybierze format danych wyjściowych, <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> Metoda zostanie użyta do <xref:System.Windows.Documents.Serialization.SerializerWriter> utworzenia dla określonego formatu.  <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> metodę można następnie wywołać, aby wyprowadzić strumień dokumentu do magazynu danych.
 
-W poniższym przykładzie pokazano aplikację, która używa <xref:System.Windows.Documents.Serialization.SerializerProvider> metoda we właściwości "PlugInFileFilter".  PlugInFileFilter wylicza zainstalowanych wtyczek i tworzy ciąg filtru, opcje plików <xref:Microsoft.Win32.SaveFileDialog>.
+Poniższy przykład ilustruje aplikację, która używa <xref:System.Windows.Documents.Serialization.SerializerProvider> metody we właściwości "PlugInFileFilter".  PlugInFileFilter wylicza zainstalowane wtyczki i kompiluje ciąg filtru z dostępnymi opcjami plików dla <xref:Microsoft.Win32.SaveFileDialog>.
 
 [!code-csharp[DocumentSerialize#DocSerializeFileFilter](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializefilefilter)]
 
-Po wybraniu przez użytkownika nazwa pliku wyjściowego w poniższym przykładzie pokazano użycie <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> metodę, aby przechowywać danego dokumentu w określonym formacie.
+Po wybraniu przez użytkownika nazwy pliku wyjściowego Poniższy przykład ilustruje użycie <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> metody do przechowywania danego dokumentu w określonym formacie.
 
 [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]
 
 <a name="InstallingPluginSerializers"></a>
 
-### <a name="installing-plug-in-serializers"></a>Instalowanie wtyczki serializatorów
+### <a name="installing-plug-in-serializers"></a>Instalowanie serializatorów wtyczek
 
-<xref:System.Windows.Documents.Serialization.SerializerProvider> Klasy dostarcza interfejs aplikacji wyższego poziomu dla wtyczki serializator odnajdywania i dostęp.  <xref:System.Windows.Documents.Serialization.SerializerProvider> Lokalizuje i lista aplikacji serializatory, które są zainstalowane i jest dostępny w systemie.  Szczegółowe informacje na temat zainstalowanych serializatory są definiowane za pomocą ustawień rejestru.  Serializatorów wtyczka można dodać do rejestru przy użyciu <xref:System.Windows.Documents.Serialization.SerializerProvider.RegisterSerializer%2A> metody; lub jeśli .NET Framework nie są jeszcze zainstalowane, skrypt instalacji dodatku typu plug-in bezpośrednio ustawić wartości rejestru, sam.  <xref:System.Windows.Documents.Serialization.SerializerProvider.UnregisterSerializer%2A> Metoda może służyć do usunięcia w poprzednio zainstalowanej wtyczki lub ustawienia rejestru można zresetować podobnie przez skrypt dezinstalacji.
+<xref:System.Windows.Documents.Serialization.SerializerProvider> Klasa dostarcza interfejs aplikacji najwyższego poziomu dla funkcji odnajdywania serializatorów wtyczki i dostępu.  <xref:System.Windows.Documents.Serialization.SerializerProvider>lokalizuje i udostępnia aplikację listę serializatorów, które są zainstalowane i dostępne w systemie.  Charakterystyki zainstalowanych serializacji są zdefiniowane za pomocą ustawień rejestru.  Serializatory wtyczek można dodać do rejestru przy użyciu <xref:System.Windows.Documents.Serialization.SerializerProvider.RegisterSerializer%2A> metody lub jeśli .NET Framework nie jest jeszcze zainstalowana, skrypt instalacji wtyczki może bezpośrednio ustawić wartości rejestru.  <xref:System.Windows.Documents.Serialization.SerializerProvider.UnregisterSerializer%2A> Metoda może służyć do usuwania wcześniej zainstalowanej wtyczki lub ustawienia rejestru można resetować podobnie przez skrypt dezinstalacji.
 
-### <a name="creating-a-plug-in-serializer"></a>Tworzenie wtyczki serializatora
+### <a name="creating-a-plug-in-serializer"></a>Tworzenie serializatora wtyczki
 
-Zarówno serializatorów wtyczka połączone serializatory korzystanie z tych samych metod publicznych narażonych i zdarzeń i podobnie, można zaprojektować do działania synchronicznie lub asynchronicznie.  Istnieją trzy podstawowe kroki, które zwykle używany do tworzenia serializatora wtyczki:
+Zarówno serializatory wtyczki, jak i połączone serializatory korzystają z tych samych, dostępnych publicznie metod i zdarzeń, a podobnie mogą być przeznaczone do działania synchronicznie lub asynchronicznie.  Istnieją trzy podstawowe kroki zwykle wykonywane w celu utworzenia serializatora wtyczki:
 
-1. Wdrożenie i Debuguj element serializujący najpierw jako połączony element serializujący.  Początkowo tworzenia serializatora skompilowane i połączone bezpośrednio w aplikacji test zapewnia pełny dostęp do punktów przerwania i innych usług debugowania przydatne do testowania.
+1. Zaimplementuj i Debuguj serializator najpierw jako połączony serializator.  Początkowo utworzenie serializatora skompilowanego i połączonego bezpośrednio w aplikacji testowej zapewnia pełen dostęp do punktów przerwania i innych usług debugowania przydatnych do testowania.
 
-2. Po serializator jest w pełni przetestowane, <xref:System.Windows.Documents.Serialization.ISerializerFactory> interfejs jest dodawany do tworzenia dodatku typu plug-in.  <xref:System.Windows.Documents.Serialization.ISerializerFactory> Interfejsu zezwala na pełny dostęp do wszystkich obiektów .NET Framework, która zawiera drzewo logiczne <xref:System.Windows.UIElement> obiektów <xref:System.Windows.Documents.IDocumentPaginatorSource>, i <xref:System.Windows.Media.Visual> elementów.  Ponadto <xref:System.Windows.Documents.Serialization.ISerializerFactory> zapewnia te same synchroniczne i asynchroniczne metody i zdarzenia używane przez połączone serializatory.  Ponieważ dużych dokumentów może trwać do wypełniania wyjściowego, operacje asynchroniczne są zalecane do obsługi interakcji z użytkownikiem odpowiada i oferty z opcją "Anuluj", jeśli wystąpi problem, z magazynem danych.
+2. Po pełnym przetestowaniu <xref:System.Windows.Documents.Serialization.ISerializerFactory> serializatora interfejs zostanie dodany w celu utworzenia wtyczki.  Interfejs umożliwia pełny dostęp do wszystkich obiektów .NET Framework, które obejmują Drzewo logiczne, <xref:System.Windows.UIElement> obiekty <xref:System.Windows.Documents.IDocumentPaginatorSource>i <xref:System.Windows.Media.Visual> elementy. <xref:System.Windows.Documents.Serialization.ISerializerFactory>  Ponadto <xref:System.Windows.Documents.Serialization.ISerializerFactory> zapewnia te same metody synchroniczne i asynchroniczne oraz zdarzenia używane przez połączone serializatory.  Ponieważ duże dokumenty mogą przekroczyć czas, zalecane jest wykonanie operacji asynchronicznych w celu zapewnienia reakcji na interakcję użytkownika i zaoferowania opcji "Anuluj", jeśli wystąpi jakiś problem z magazynem danych.
 
-3. Po utworzeniu dodatku typu plug-in serializator skrypt instalacji został zaimplementowany dla dystrybucji i instalacji (i odinstalowywania) wtyczki (zobacz powyżej, "[Instalowanie wtyczki Serializatory](#InstallingPluginSerializers)").
+3. Po utworzeniu serializatora wtyczki skrypt instalacyjny jest implementowany do dystrybucji i instalowania (i odinstalowywania) wtyczki (Zobacz powyżej "[Instalowanie serializatorów wtyczek](#InstallingPluginSerializers)").
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -88,4 +88,4 @@ Zarówno serializatorów wtyczka połączone serializatory korzystanie z tych sa
 - <xref:System.Windows.Xps.Packaging.XpsDocument>
 - [Dokumenty w WPF](documents-in-wpf.md)
 - [Przegląd drukowania](printing-overview.md)
-- [Formatu XML Paper Specification: omówienie](https://go.microsoft.com/fwlink?LinkID=106246)
+- [Specyfikacja papieru XML: omówienie](https://go.microsoft.com/fwlink?LinkID=106246)

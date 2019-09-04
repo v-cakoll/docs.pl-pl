@@ -4,12 +4,12 @@ description: Dowiedz się, jak wdrożyć aplikację platformy .NET dla Apache Sp
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 77c2d93ae324b6acbf8fc8dc25cd3e4d1a652f48
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 3c9169e2936742c82ba27327ac07f0aa1b4c645c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107354"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254042"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>Wdrażanie aplikacji platformy .NET dla Apache Spark w kostkach
 
@@ -27,7 +27,7 @@ Ten samouczek zawiera informacje na temat wykonywania następujących czynności
 
 Przed rozpoczęciem wykonaj następujące czynności:
 
-- Pobierz [interfejs wiersza polecenia](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html)datakosteks.
+- Pobierz [interfejs wiersza polecenia datakosteks](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html).
 - Pobierz [Install-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) na komputer lokalny. Jest to skrypt pomocnika używany później do kopiowania programu .NET pod kątem Apache Spark plików zależnych do węzłów procesu roboczego klastra platformy Spark.
 
 ## <a name="prepare-worker-dependencies"></a>Przygotowanie zależności procesu roboczego
@@ -42,7 +42,7 @@ Przed rozpoczęciem wykonaj następujące czynności:
 
 ## <a name="prepare-your-net-for-apache-spark-app"></a>Przygotowywanie aplikacji .NET dla Apache Spark
 
-1. Postępuj [](get-started.md) zgodnie z samouczkiem wprowadzenie, aby skompilować aplikację.
+1. Postępuj zgodnie [z samouczkiem wprowadzenie,](get-started.md) aby skompilować aplikację.
 
 2. Opublikuj swoją aplikację platformy Spark .NET jako samodzielny.
 
@@ -84,7 +84,7 @@ Ten krok jest wymagany tylko raz dla klastra.
 
 2. Zmodyfikuj **DB-init.sh** w taki sposób, aby wskazywała wersję **Microsoft. Spark. Worker** , którą chcesz pobrać i zainstalować w klastrze.
 
-3. Zainstaluj [interfejs wiersza polecenia](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html)datakosteks.
+3. Zainstaluj [interfejs wiersza polecenia datakosteks](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html).
 
 4. [Skonfiguruj szczegóły uwierzytelniania](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#set-up-authentication) dla interfejsu wiersza polecenia datakosteks.
 
@@ -96,7 +96,7 @@ Ten krok jest wymagany tylko raz dla klastra.
    databricks fs cp install-worker.sh dbfs:/spark-dotnet/install-worker.sh
    ```
 
-6. Przejdź do obszaru roboczego usługi Databricks. Wybierz pozycję Klastry z menu po lewej stronie, a następnie wybierz pozycję **Utwórz klaster**.
+6. Przejdź do obszaru roboczego usługi Databricks. Wybierz pozycję **klastry** z menu po lewej stronie, a następnie wybierz pozycję **Utwórz klaster**.
 
 7. Po odpowiednim skonfigurowaniu klastra Ustaw **skrypt init** i Utwórz klaster.
 
@@ -119,7 +119,7 @@ Możesz użyć `set JAR` lub `spark-submit` , aby przesłać zadanie do datakost
 3. Ustaw odpowiednio parametry.
 
    ```
-   Main Class: org.apache.spark.deploy.DotnetRunner
+   Main Class: org.apache.spark.deploy.dotnet.DotnetRunner
    Arguments /dbfs/apps/<your-app-name>.zip <your-app-main-class>
    ```
  
@@ -127,7 +127,7 @@ Możesz użyć `set JAR` lub `spark-submit` , aby przesłać zadanie do datakost
 
 #### <a name="publish-and-run-your-app"></a>Publikowanie i uruchamianie aplikacji
 
-1. Użyj [interfejsu wiersza polecenia](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html) datakosteks, aby przekazać aplikację do klastra datakostks.
+1. Użyj [interfejsu wiersza polecenia datakosteks](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html) , aby przekazać aplikację do klastra datakostks.
 
       ```bash
       cd <path-to-your-app-publish-directory>
@@ -163,7 +163,7 @@ Polecenie [Spark-Submit](https://spark.apache.org/docs/latest/submitting-applica
 2. Skonfiguruj `spark-submit` przy użyciu następujących parametrów:
 
       ```bash
-      ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
+      ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
       ```
 
 3. Przejdź do klastra datacegły w obszarze roboczym datakostki. W obszarze **zadania**wybierz zadanie, a następnie wybierz pozycję **Uruchom teraz** , aby uruchomić zadanie.

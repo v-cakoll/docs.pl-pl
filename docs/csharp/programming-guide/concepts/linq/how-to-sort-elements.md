@@ -2,18 +2,18 @@
 title: 'Instrukcje: Sortuj elementy (C#)'
 ms.date: 07/20/2015
 ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
-ms.openlocfilehash: 074428413fa57d8f0e5ae94970c2aeeeb9e4cc7c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e5f76518437954ac683ec2e3e30ad9007c280f83
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592458"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253299"
 ---
-# <a name="how-to-sort-elements-c"></a><span data-ttu-id="d4954-102">Instrukcje: Sortuj elementy (C#)</span><span class="sxs-lookup"><span data-stu-id="d4954-102">How to: Sort Elements (C#)</span></span>
-<span data-ttu-id="d4954-103">Ten przykład pokazuje, jak napisać zapytanie, które sortuje jego wyniki.</span><span class="sxs-lookup"><span data-stu-id="d4954-103">This example shows how to write a query that sorts its results.</span></span>  
+# <a name="how-to-sort-elements-c"></a><span data-ttu-id="9b3b2-102">Instrukcje: Sortuj elementy (C#)</span><span class="sxs-lookup"><span data-stu-id="9b3b2-102">How to: Sort Elements (C#)</span></span>
+<span data-ttu-id="9b3b2-103">Ten przykład pokazuje, jak napisać zapytanie, które sortuje jego wyniki.</span><span class="sxs-lookup"><span data-stu-id="9b3b2-103">This example shows how to write a query that sorts its results.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d4954-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="d4954-104">Example</span></span>  
- <span data-ttu-id="d4954-105">W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Dane liczbowe (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="d4954-105">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="9b3b2-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="9b3b2-104">Example</span></span>  
+ <span data-ttu-id="9b3b2-105">W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Dane liczbowe (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="9b3b2-105">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -26,9 +26,9 @@ foreach (decimal el in prices)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="d4954-106">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="d4954-106">This code produces the following output:</span></span>  
+ <span data-ttu-id="9b3b2-106">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="9b3b2-106">This code produces the following output:</span></span>  
   
-```  
+```output  
 0.99  
 4.95  
 6.99  
@@ -38,10 +38,10 @@ foreach (decimal el in prices)
 89.99  
 ```  
   
-## <a name="example"></a><span data-ttu-id="d4954-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="d4954-107">Example</span></span>  
- <span data-ttu-id="d4954-108">W poniższym przykładzie pokazano to samo zapytanie dla kodu XML, który znajduje się w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="d4954-108">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="d4954-109">Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw —C#omówienie (LINQ to XML) ()](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="d4954-109">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="9b3b2-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="9b3b2-107">Example</span></span>  
+ <span data-ttu-id="9b3b2-108">W poniższym przykładzie pokazano to samo zapytanie dla kodu XML, który znajduje się w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="9b3b2-108">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="9b3b2-109">Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw —C#omówienie (LINQ to XML) ()](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="9b3b2-109">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="d4954-110">W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Dane liczbowe w przestrzeni nazw](./sample-xml-file-numerical-data-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="d4954-110">This example uses the following XML document: [Sample XML File: Numerical Data in a Namespace](./sample-xml-file-numerical-data-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="9b3b2-110">W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Dane liczbowe w przestrzeni nazw](./sample-xml-file-numerical-data-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="9b3b2-110">This example uses the following XML document: [Sample XML File: Numerical Data in a Namespace](./sample-xml-file-numerical-data-in-a-namespace.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("DataInNamespace.xml");  
@@ -55,9 +55,9 @@ foreach (decimal el in prices)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="d4954-111">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="d4954-111">This code produces the following output:</span></span>  
+ <span data-ttu-id="9b3b2-111">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="9b3b2-111">This code produces the following output:</span></span>  
   
-```  
+```output  
 0.99  
 4.95  
 6.99  
@@ -67,6 +67,6 @@ foreach (decimal el in prices)
 89.99  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d4954-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d4954-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9b3b2-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9b3b2-112">See also</span></span>
 
-- [<span data-ttu-id="d4954-113">Sortowanie danych (C#)</span><span class="sxs-lookup"><span data-stu-id="d4954-113">Sorting Data (C#)</span></span>](./sorting-data.md)
+- [<span data-ttu-id="9b3b2-113">Sortowanie danych (C#)</span><span class="sxs-lookup"><span data-stu-id="9b3b2-113">Sorting Data (C#)</span></span>](./sorting-data.md)

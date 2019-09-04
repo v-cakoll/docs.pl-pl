@@ -2,20 +2,20 @@
 title: 'Instrukcje: Pobierz wartość elementu (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: 821c387bf1e3a2d58686465e5562fde9457127bf
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a7b36ea7bb602c241593da356b87d35baee8163f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592485"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253354"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a><span data-ttu-id="ed834-102">Instrukcje: Pobierz wartość elementu (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="ed834-102">How to: Retrieve the Value of an Element (LINQ to XML) (C#)</span></span>
-<span data-ttu-id="ed834-103">W tym temacie pokazano, jak uzyskać wartość elementów.</span><span class="sxs-lookup"><span data-stu-id="ed834-103">This topic shows how to get the value of elements.</span></span> <span data-ttu-id="ed834-104">Istnieją dwa podstawowe sposoby wykonania tej czynności.</span><span class="sxs-lookup"><span data-stu-id="ed834-104">There are two main ways to do this.</span></span> <span data-ttu-id="ed834-105">Jednym ze sposobów jest rzutowanie <xref:System.Xml.Linq.XElement> <xref:System.Xml.Linq.XAttribute> lub na żądany typ.</span><span class="sxs-lookup"><span data-stu-id="ed834-105">One way is to cast an <xref:System.Xml.Linq.XElement> or an <xref:System.Xml.Linq.XAttribute> to the desired type.</span></span> <span data-ttu-id="ed834-106">Operator jawnej konwersji konwertuje zawartość elementu lub atrybutu do określonego typu i przypisuje go do zmiennej.</span><span class="sxs-lookup"><span data-stu-id="ed834-106">The explicit conversion operator then converts the contents of the element or attribute to the specified type and assigns it to your variable.</span></span> <span data-ttu-id="ed834-107">Alternatywnie można użyć <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> właściwości <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> lub właściwości.</span><span class="sxs-lookup"><span data-stu-id="ed834-107">Alternatively, you can use the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property or the <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> property.</span></span>  
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a><span data-ttu-id="566c9-102">Instrukcje: Pobierz wartość elementu (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="566c9-102">How to: Retrieve the Value of an Element (LINQ to XML) (C#)</span></span>
+<span data-ttu-id="566c9-103">W tym temacie pokazano, jak uzyskać wartość elementów.</span><span class="sxs-lookup"><span data-stu-id="566c9-103">This topic shows how to get the value of elements.</span></span> <span data-ttu-id="566c9-104">Istnieją dwa podstawowe sposoby wykonania tej czynności.</span><span class="sxs-lookup"><span data-stu-id="566c9-104">There are two main ways to do this.</span></span> <span data-ttu-id="566c9-105">Jednym ze sposobów jest rzutowanie <xref:System.Xml.Linq.XElement> <xref:System.Xml.Linq.XAttribute> lub na żądany typ.</span><span class="sxs-lookup"><span data-stu-id="566c9-105">One way is to cast an <xref:System.Xml.Linq.XElement> or an <xref:System.Xml.Linq.XAttribute> to the desired type.</span></span> <span data-ttu-id="566c9-106">Operator jawnej konwersji konwertuje zawartość elementu lub atrybutu do określonego typu i przypisuje go do zmiennej.</span><span class="sxs-lookup"><span data-stu-id="566c9-106">The explicit conversion operator then converts the contents of the element or attribute to the specified type and assigns it to your variable.</span></span> <span data-ttu-id="566c9-107">Alternatywnie można użyć <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> właściwości <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> lub właściwości.</span><span class="sxs-lookup"><span data-stu-id="566c9-107">Alternatively, you can use the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property or the <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> property.</span></span>  
   
- <span data-ttu-id="ed834-108">C#Jednakże Rzutowanie jest ogólnie lepszym rozwiązaniem.</span><span class="sxs-lookup"><span data-stu-id="ed834-108">With C#, however, casting is generally the better approach.</span></span> <span data-ttu-id="ed834-109">Jeśli przerzutuje element lub atrybut na typ dopuszczający wartość null, kod jest łatwiejszy do zapisu podczas pobierania wartości elementu (lub atrybutu), który może lub nie istnieje.</span><span class="sxs-lookup"><span data-stu-id="ed834-109">If you cast the element or attribute to a nullable type, the code is simpler to write when retrieving the value of an element (or attribute) that might or might not exist.</span></span> <span data-ttu-id="ed834-110">W ostatnim przykładzie w tym temacie pokazano, jak to zrobić.</span><span class="sxs-lookup"><span data-stu-id="ed834-110">The last example in this topic demonstrates this.</span></span> <span data-ttu-id="ed834-111">Nie można jednak ustawić zawartości elementu przez rzutowanie, jak można za pomocą <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> właściwości.</span><span class="sxs-lookup"><span data-stu-id="ed834-111">However, you cannot set the contents of an element through casting, as you can through <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property.</span></span>  
+ <span data-ttu-id="566c9-108">C#Jednakże Rzutowanie jest ogólnie lepszym rozwiązaniem.</span><span class="sxs-lookup"><span data-stu-id="566c9-108">With C#, however, casting is generally the better approach.</span></span> <span data-ttu-id="566c9-109">Jeśli przerzutuje element lub atrybut na typ dopuszczający wartość null, kod jest łatwiejszy do zapisu podczas pobierania wartości elementu (lub atrybutu), który może lub nie istnieje.</span><span class="sxs-lookup"><span data-stu-id="566c9-109">If you cast the element or attribute to a nullable type, the code is simpler to write when retrieving the value of an element (or attribute) that might or might not exist.</span></span> <span data-ttu-id="566c9-110">W ostatnim przykładzie w tym temacie pokazano, jak to zrobić.</span><span class="sxs-lookup"><span data-stu-id="566c9-110">The last example in this topic demonstrates this.</span></span> <span data-ttu-id="566c9-111">Nie można jednak ustawić zawartości elementu przez rzutowanie, jak można za pomocą <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> właściwości.</span><span class="sxs-lookup"><span data-stu-id="566c9-111">However, you cannot set the contents of an element through casting, as you can through <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ed834-112">Przykład</span><span class="sxs-lookup"><span data-stu-id="ed834-112">Example</span></span>  
- <span data-ttu-id="ed834-113">Aby pobrać wartość elementu, wystarczy przerzutować <xref:System.Xml.Linq.XElement> obiekt na żądany typ.</span><span class="sxs-lookup"><span data-stu-id="ed834-113">To retrieve the value of an element, you just cast the <xref:System.Xml.Linq.XElement> object to your desired type.</span></span> <span data-ttu-id="ed834-114">Można zawsze rzutować element na ciąg w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="ed834-114">You can always cast an element to a string, as follows:</span></span>  
+## <a name="example"></a><span data-ttu-id="566c9-112">Przykład</span><span class="sxs-lookup"><span data-stu-id="566c9-112">Example</span></span>  
+ <span data-ttu-id="566c9-113">Aby pobrać wartość elementu, wystarczy przerzutować <xref:System.Xml.Linq.XElement> obiekt na żądany typ.</span><span class="sxs-lookup"><span data-stu-id="566c9-113">To retrieve the value of an element, you just cast the <xref:System.Xml.Linq.XElement> object to your desired type.</span></span> <span data-ttu-id="566c9-114">Można zawsze rzutować element na ciąg w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="566c9-114">You can always cast an element to a string, as follows:</span></span>  
   
 ```csharp  
 XElement e = new XElement("StringElement", "abcde");  
@@ -23,15 +23,15 @@ Console.WriteLine(e);
 Console.WriteLine("Value of e:" + (string)e);  
 ```  
   
- <span data-ttu-id="ed834-115">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="ed834-115">This example produces the following output:</span></span>  
+ <span data-ttu-id="566c9-115">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="566c9-115">This example produces the following output:</span></span>  
   
-```  
+```output  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
   
-## <a name="example"></a><span data-ttu-id="ed834-116">Przykład</span><span class="sxs-lookup"><span data-stu-id="ed834-116">Example</span></span>  
- <span data-ttu-id="ed834-117">Można również rzutować elementy do typów innych niż ciąg.</span><span class="sxs-lookup"><span data-stu-id="ed834-117">You can also cast elements to types other than string.</span></span> <span data-ttu-id="ed834-118">Na przykład jeśli masz element zawierający liczbę całkowitą, możesz go rzutować na `int`, jak pokazano w poniższym kodzie:</span><span class="sxs-lookup"><span data-stu-id="ed834-118">For example, if you have an element that contains an integer, you can cast it to `int`, as shown in the following code:</span></span>  
+## <a name="example"></a><span data-ttu-id="566c9-116">Przykład</span><span class="sxs-lookup"><span data-stu-id="566c9-116">Example</span></span>  
+ <span data-ttu-id="566c9-117">Można również rzutować elementy do typów innych niż ciąg.</span><span class="sxs-lookup"><span data-stu-id="566c9-117">You can also cast elements to types other than string.</span></span> <span data-ttu-id="566c9-118">Na przykład jeśli masz element zawierający liczbę całkowitą, możesz go rzutować na `int`, jak pokazano w poniższym kodzie:</span><span class="sxs-lookup"><span data-stu-id="566c9-118">For example, if you have an element that contains an integer, you can cast it to `int`, as shown in the following code:</span></span>  
   
 ```csharp  
 XElement e = new XElement("Age", "44");  
@@ -39,19 +39,19 @@ Console.WriteLine(e);
 Console.WriteLine("Value of e:" + (int)e);  
 ```  
   
- <span data-ttu-id="ed834-119">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="ed834-119">This example produces the following output:</span></span>  
+ <span data-ttu-id="566c9-119">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="566c9-119">This example produces the following output:</span></span>  
   
-```  
+```output  
 <Age>44</Age>  
 Value of e:44  
 ```  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="ed834-120">zapewnia jawne Operatory rzutowania dla następujących typów danych: `string`, `bool` `uint` `bool?` `int?` `int`, ,,`long`,,,,,, `ulong` `uint?` `long?` `ulong?`, ,`float` ,,`DateTime`, ,`decimal?`,, ,`TimeSpan?`,, i`GUID` `float?` `decimal` `double` `double?` `DateTime?` `TimeSpan` `GUID?`.</span><span class="sxs-lookup"><span data-stu-id="ed834-120">provides explicit cast operators for the following data types: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, and `GUID?`.</span></span>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="566c9-120">zapewnia jawne Operatory rzutowania dla następujących typów danych: `string`, `bool` `uint` `bool?` `int?` `int`, ,,`long`,,,,,, `ulong` `uint?` `long?` `ulong?`, ,`float` ,,`DateTime`, ,`decimal?`,, ,`TimeSpan?`,, i`GUID` `float?` `decimal` `double` `double?` `DateTime?` `TimeSpan` `GUID?`.</span><span class="sxs-lookup"><span data-stu-id="566c9-120">provides explicit cast operators for the following data types: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, and `GUID?`.</span></span>  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="ed834-121">zapewnia te same Operatory rzutowania <xref:System.Xml.Linq.XAttribute> dla obiektów.</span><span class="sxs-lookup"><span data-stu-id="ed834-121">provides the same cast operators for <xref:System.Xml.Linq.XAttribute> objects.</span></span>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="566c9-121">zapewnia te same Operatory rzutowania <xref:System.Xml.Linq.XAttribute> dla obiektów.</span><span class="sxs-lookup"><span data-stu-id="566c9-121">provides the same cast operators for <xref:System.Xml.Linq.XAttribute> objects.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ed834-122">Przykład</span><span class="sxs-lookup"><span data-stu-id="ed834-122">Example</span></span>  
- <span data-ttu-id="ed834-123">Możesz użyć <xref:System.Xml.Linq.XElement.Value%2A> właściwości, aby pobrać zawartość elementu:</span><span class="sxs-lookup"><span data-stu-id="ed834-123">You can use the <xref:System.Xml.Linq.XElement.Value%2A> property to retrieve the contents of an element:</span></span>  
+## <a name="example"></a><span data-ttu-id="566c9-122">Przykład</span><span class="sxs-lookup"><span data-stu-id="566c9-122">Example</span></span>  
+ <span data-ttu-id="566c9-123">Możesz użyć <xref:System.Xml.Linq.XElement.Value%2A> właściwości, aby pobrać zawartość elementu:</span><span class="sxs-lookup"><span data-stu-id="566c9-123">You can use the <xref:System.Xml.Linq.XElement.Value%2A> property to retrieve the contents of an element:</span></span>  
   
 ```csharp  
 XElement e = new XElement("StringElement", "abcde");   
@@ -59,15 +59,15 @@ Console.WriteLine(e);
 Console.WriteLine("Value of e:" + e.Value);  
 ```  
   
- <span data-ttu-id="ed834-124">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="ed834-124">This example produces the following output:</span></span>  
+ <span data-ttu-id="566c9-124">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="566c9-124">This example produces the following output:</span></span>  
   
-```  
+```output  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
   
-## <a name="example"></a><span data-ttu-id="ed834-125">Przykład</span><span class="sxs-lookup"><span data-stu-id="ed834-125">Example</span></span>  
- <span data-ttu-id="ed834-126">Czasami próbujesz pobrać wartość elementu, chociaż nie masz pewności, że istnieje.</span><span class="sxs-lookup"><span data-stu-id="ed834-126">Sometimes you try to retrieve the value of an element even though you are not sure it exists.</span></span> <span data-ttu-id="ed834-127">W tym przypadku, gdy przypiszesz element rzutowany do typu dopuszczającego wartość `string` null (lub jeden z typów dopuszczających wartość null w .NET Framework), jeśli element nie istnieje, przypisana zmienna jest `null`ustawiona na.</span><span class="sxs-lookup"><span data-stu-id="ed834-127">In this case, when you assign the casted element to a nullable type (either `string` or one of the nullable types in the .NET Framework), if the element does not exist the assigned variable is just set to `null`.</span></span> <span data-ttu-id="ed834-128">Poniższy kod pokazuje, że gdy element może lub nie istnieje, łatwiej jest użyć rzutowania niż w celu użycia <xref:System.Xml.Linq.XElement.Value%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="ed834-128">The following code shows that when the element might or might not exist, it is easier to use casting than to use the <xref:System.Xml.Linq.XElement.Value%2A> property.</span></span>  
+## <a name="example"></a><span data-ttu-id="566c9-125">Przykład</span><span class="sxs-lookup"><span data-stu-id="566c9-125">Example</span></span>  
+ <span data-ttu-id="566c9-126">Czasami próbujesz pobrać wartość elementu, chociaż nie masz pewności, że istnieje.</span><span class="sxs-lookup"><span data-stu-id="566c9-126">Sometimes you try to retrieve the value of an element even though you are not sure it exists.</span></span> <span data-ttu-id="566c9-127">W tym przypadku, gdy przypiszesz element rzutowany do typu dopuszczającego wartość `string` null (lub jeden z typów dopuszczających wartość null w .NET Framework), jeśli element nie istnieje, przypisana zmienna jest `null`ustawiona na.</span><span class="sxs-lookup"><span data-stu-id="566c9-127">In this case, when you assign the casted element to a nullable type (either `string` or one of the nullable types in the .NET Framework), if the element does not exist the assigned variable is just set to `null`.</span></span> <span data-ttu-id="566c9-128">Poniższy kod pokazuje, że gdy element może lub nie istnieje, łatwiej jest użyć rzutowania niż w celu użycia <xref:System.Xml.Linq.XElement.Value%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="566c9-128">The following code shows that when the element might or might not exist, it is easier to use casting than to use the <xref:System.Xml.Linq.XElement.Value%2A> property.</span></span>  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -129,9 +129,9 @@ else
 Console.WriteLine("v4:{0}", v4 == null ? "element does not exist" : v4.ToString());  
 ```  
   
- <span data-ttu-id="ed834-129">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="ed834-129">This code produces the following output:</span></span>  
+ <span data-ttu-id="566c9-129">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="566c9-129">This code produces the following output:</span></span>  
   
-```  
+```output  
 c1:child 1 content  
 c2:2  
 c3:element does not exist  
@@ -143,8 +143,8 @@ v3:element does not exist
 v4:element does not exist  
 ```  
   
- <span data-ttu-id="ed834-130">Ogólnie rzecz biorąc, można napisać łatwiejszy kod podczas używania rzutowania do pobrania zawartości elementów i atrybutów.</span><span class="sxs-lookup"><span data-stu-id="ed834-130">In general, you can write simpler code when using casting to retrieve the contents of elements and attributes.</span></span>  
+ <span data-ttu-id="566c9-130">Ogólnie rzecz biorąc, można napisać łatwiejszy kod podczas używania rzutowania do pobrania zawartości elementów i atrybutów.</span><span class="sxs-lookup"><span data-stu-id="566c9-130">In general, you can write simpler code when using casting to retrieve the contents of elements and attributes.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ed834-131">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ed834-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="566c9-131">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="566c9-131">See also</span></span>
 
-- [<span data-ttu-id="ed834-132">Osie LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="ed834-132">LINQ to XML Axes (C#)</span></span>](./linq-to-xml-axes-overview.md)
+- [<span data-ttu-id="566c9-132">Osie LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="566c9-132">LINQ to XML Axes (C#)</span></span>](./linq-to-xml-axes-overview.md)

@@ -1,23 +1,23 @@
 ---
-title: 'Instrukcje: Znajdowanie elementów potomnych elementu podrzędnego (XPath-LINQ to XML) (C#)'
+title: 'Instrukcje: Znajdź elementy podrzędne elementu podrzędnego (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 505b7512-bb8b-4f85-abbf-491f039c961e
-ms.openlocfilehash: a049ede1d533c4afc67892b7889debbe673e51c8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f17d723aa03c45daa4e7e741ea6b14c637537ccf
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485485"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253702"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a><span data-ttu-id="53cd7-102">Instrukcje: Znajdowanie elementów potomnych elementu podrzędnego (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="53cd7-102">How to: Find Descendants of a Child Element (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="53cd7-103">W tym temacie pokazano, jak można pobrać elementów podrzędnych elementu podrzędnego o określonej nazwie.</span><span class="sxs-lookup"><span data-stu-id="53cd7-103">This topic shows how to get the descendant elements of a child element with a particular name.</span></span>  
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a><span data-ttu-id="c9444-102">Instrukcje: Znajdź elementy podrzędne elementu podrzędnego (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="c9444-102">How to: Find Descendants of a Child Element (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="c9444-103">W tym temacie pokazano, jak uzyskać elementy podrzędne elementu podrzędnego o określonej nazwie.</span><span class="sxs-lookup"><span data-stu-id="c9444-103">This topic shows how to get the descendant elements of a child element with a particular name.</span></span>  
   
- <span data-ttu-id="53cd7-104">Wyrażenie XPath jest:</span><span class="sxs-lookup"><span data-stu-id="53cd7-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="c9444-104">Wyrażenie XPath:</span><span class="sxs-lookup"><span data-stu-id="c9444-104">The XPath expression is:</span></span>  
   
  `./Paragraph//Text/text()`  
   
-## <a name="example"></a><span data-ttu-id="53cd7-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="53cd7-105">Example</span></span>  
- <span data-ttu-id="53cd7-106">W tym przykładzie symuluje problemów możliwości wyodrębniania tekstu z Reprezentacja XML dokumentu tekstów.</span><span class="sxs-lookup"><span data-stu-id="53cd7-106">This example simulates the problems of extracting text from an XML representation of a word processing document.</span></span> <span data-ttu-id="53cd7-107">Wybiera pierwszy wszystkie `Paragraph` zaznacza wszystkie elementy, a następnie `Text` elementów podrzędnych każdego `Paragraph` elementu.</span><span class="sxs-lookup"><span data-stu-id="53cd7-107">It first selects all `Paragraph` elements, and then it selects all `Text` descendant elements of each `Paragraph` element.</span></span> <span data-ttu-id="53cd7-108">To nie wybierze obiekt podrzędny `Text` elementy `Comment` elementu.</span><span class="sxs-lookup"><span data-stu-id="53cd7-108">This doesn't select the descendant `Text` elements of the `Comment` element.</span></span>  
+## <a name="example"></a><span data-ttu-id="c9444-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="c9444-105">Example</span></span>  
+ <span data-ttu-id="c9444-106">Ten przykład symuluje problemy związane z wyodrębnianiem tekstu z reprezentacji XML dokumentu przetwarzania tekstów.</span><span class="sxs-lookup"><span data-stu-id="c9444-106">This example simulates the problems of extracting text from an XML representation of a word processing document.</span></span> <span data-ttu-id="c9444-107">Najpierw zaznacza wszystkie `Paragraph` elementy, a następnie wybiera wszystkie `Text` elementy zależne każdego `Paragraph` elementu.</span><span class="sxs-lookup"><span data-stu-id="c9444-107">It first selects all `Paragraph` elements, and then it selects all `Text` descendant elements of each `Paragraph` element.</span></span> <span data-ttu-id="c9444-108">Nie wybrano elementów `Text` `Comment` potomnych elementu.</span><span class="sxs-lookup"><span data-stu-id="c9444-108">This doesn't select the descendant `Text` elements of the `Comment` element.</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -68,9 +68,9 @@ else
 Console.WriteLine(str2);  
 ```  
   
- <span data-ttu-id="53cd7-109">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="53cd7-109">This example produces the following output:</span></span>  
+ <span data-ttu-id="c9444-109">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="c9444-109">This example produces the following output:</span></span>  
   
-```  
+```output  
 Results are identical  
 This is the start of a sentence.  This is a second sentence.  
 ```  

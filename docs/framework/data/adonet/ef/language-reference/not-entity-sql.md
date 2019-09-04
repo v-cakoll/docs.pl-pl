@@ -1,16 +1,16 @@
 ---
-title: '! (NIE) (Jednostka SQL)'
+title: '! NIEMOŻLIWE (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: a1447a34-df06-4393-93c3-0612ebd41abc
-ms.openlocfilehash: 51d3bdbc4adb0b5fd6275629219698dd9b42fa86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4055d56d878b817fe88bb0dacb53ea39061bc4b2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760380"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249861"
 ---
-# <a name="-not-entity-sql"></a>! (NIE) (Jednostka SQL)
-Neguje `Boolean` wyrażenia.  
+# <a name="-not-entity-sql"></a>! NIEMOŻLIWE (Entity SQL)
+`Boolean` Wyklucza wyrażenie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -25,17 +25,17 @@ or
  Dowolne prawidłowe wyrażenie zwracające wartość logiczną.  
   
 ## <a name="remarks"></a>Uwagi  
- Wykrzyknika (!) ma taką samą funkcjonalność jak NOT operator.  
+ Wykrzyknik (!) ma takie same funkcje jak operator NOT.  
   
 ## <a name="example"></a>Przykład  
- Następujące zapytanie SQL jednostki używa operatora NOT do neguje `Boolean` wyrażenia. Zapytanie jest oparty na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
+ Poniższe zapytanie Entity SQL używa operatora not, aby Negacja `Boolean` wyrażenia. Zapytanie jest oparte na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
   
-1. Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Wykonaj czynności opisane w [temacie How to: Wykonaj zapytanie zwracające wyniki](../how-to-execute-a-query-that-returns-structuraltype-results.md)StructuralType.  
   
-2. Przekaż poniższe zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
+2. Przekaż następujące zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
   
  [!code-csharp[DP EntityServices Concepts 2#NOT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#not)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Odwołanie do jednostki SQL](entity-sql-reference.md)

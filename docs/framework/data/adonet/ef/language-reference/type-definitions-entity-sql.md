@@ -1,52 +1,52 @@
 ---
-title: Definicje typów (jednostka SQL)
+title: Definicje typów (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 5a8a0cae4599057a627cce6abebf34c7f05e821f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 471964266c290d5eba95804dbe1c2bc5225e3f83
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641396"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248950"
 ---
-# <a name="type-definitions-entity-sql"></a>Definicje typów (jednostka SQL)
-Definicja typu jest używana w instrukcji deklaracji elementu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funkcja w tekście.  
+# <a name="type-definitions-entity-sql"></a>Definicje typów (Entity SQL)
+Definicja typu jest używana w instrukcji [!INCLUDE[esql](../../../../../../includes/esql-md.md)] deklaracji funkcji wbudowanej.  
   
 ## <a name="remarks"></a>Uwagi  
- Instrukcji deklaracji dla wbudowanej funkcji składa się z [funkcja](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) następuje identyfikator reprezentujący nazwę funkcji (na przykład "MyAvg"), a następnie listę definicji parametrów w nawiasie (słowo kluczowe przykład "opłat Collection(Decimal)").  
+ Instrukcja deklaracji dla wbudowanej funkcji składa się ze słowa kluczowego [Function](function-entity-sql.md) , po którym następuje identyfikator reprezentujący nazwę funkcji (na przykład "myavg"), po której następuje lista definicji parametrów w nawiasie (na przykład "Kolekcja opłat ( Decimal) ").  
   
- Lista definicji parametru składa się z zero lub więcej definicji parametru. Każda definicja parametru składa się z identyfikatora (nazwa parametru funkcji, na przykład "opłat") następuje definicję typu "(na przykład Collection(Decimal)").  
+ Lista definicji parametrów składa się z zero lub więcej definicji parametrów. Każda definicja parametru składa się z identyfikatora (nazwa parametru do funkcji, na przykład "należności"), po której następuje definicja typu (na przykład "Kolekcja (liczba dziesiętna)").  
   
- Definicje typów może być:  
+ Definicje typów mogą być następujące:  
   
-- Typ identyfikatora (na przykład "Int32" lub "AdventureWorks.Order").  
+- Typ identyfikatora (na przykład "Int32" lub "AdventureWorks. Order").  
   
-- Słowo kluczowe `COLLECTION` następuje inną definicję typu w nawiasach "(na przykład Collection(AdventureWorks.Order)").  
+- Słowo kluczowe `COLLECTION` , po którym następuje inna definicja typu w nawiasie (na przykład "Kolekcja (AdventureWorks. Order)").  
   
-- Słowo kluczowe wiersza, a następnie listę definicji właściwości w nawiasie (na przykład "Row(x AdventureWorks.Order)"). Definicje właściwości mają format, takie jak "`identifier type_definition`, `identifier type_definition`,...".  
+- WIERSZ słowa kluczowego, po którym następuje lista definicji właściwości w nawiasie (na przykład "wiersz (x AdventureWorks. Order)"). Definicje właściwości mają format, taki jak "`identifier type_definition`, `identifier type_definition`,...".  
   
-- Słowo kluczowe REF, a następnie typ identyfikatora w nawiasie "(na przykład Ref(AdventureWorks.Order)"). Operator definicji typu REF wymaga typ jednostki jako argument. Typ pierwotny nie można określić jako argument.  
+- Słowo kluczowe REF, po którym następuje Typ identyfikatora w nawiasie (na przykład "ref (AdventureWorks. Order)"). Operator definicji typu REF wymaga jako argumentu typu jednostki. Nie można określić typu pierwotnego jako argumentu.  
   
- Można także zagnieżdżać definicje typów (na przykład "kolekcji (Row(x Ref(AdventureWorks.Order)))").  
+ Można również zagnieżdżać definicje typów (na przykład "Kolekcja (wiersz (x ref (AdventureWorks. Order))").  
   
- Dostępne są opcje definicji typu:  
+ Opcje definicji typu są następujące:  
   
-- `IdentifierName supported_type`, lub  
+- `IdentifierName supported_type`lub  
   
-- `IdentifierName` KOLEKCJA (`type_definition`), lub  
+- `IdentifierName`Kolekcja (`type_definition`) lub  
   
-- `IdentifierName` WIERSZ (`property_definition`), lub  
+- `IdentifierName`Wiersz (`property_definition`) lub  
   
 - `IdentifierName` REF(`supported_entity_type`)  
   
- Opcja definicji właściwości jest `IdentifierName type_definition`.  
+ Opcja definicji właściwości to `IdentifierName type_definition`.  
   
- Obsługiwane typy to żadnych typów w bieżącej przestrzeni nazw. Obejmują one typy zarówno podstawowego, jak i jednostek.  
+ Obsługiwane typy to wszystkie typy w bieżącej przestrzeni nazw. Obejmują one zarówno pierwotne, jak i typy jednostek.  
   
- Obsługiwane typy dotyczą tylko typy jednostek w bieżącym obszarze nazw jednostki. Obejmują one typy pierwotne.  
+ Obsługiwane typy jednostek odwołują się tylko do typów jednostek w bieżącej przestrzeni nazw. Nie obejmują one typów pierwotnych.  
   
 ## <a name="examples"></a>Przykłady  
- Oto przykład definicją typu prostego.  
+ Poniżej znajduje się przykład definicji typu prostego.  
   
 ```  
 USING Microsoft.Samples.Entity  
@@ -56,7 +56,7 @@ Function MyRound(p1 EDM.Decimal) AS (
 MyRound(CAST(1.7 as EDM.Decimal))  
 ```  
   
- Oto przykład definicja typu KOLEKCJI.  
+ Poniżej znajduje się przykład definicji typu kolekcji.  
   
 ```  
 USING Microsoft.Samples.Entity  
@@ -66,7 +66,7 @@ Function MyRound(p1 Collection(EDM.Decimal)) AS (
 MyRound({CAST(1.7 as EDM.Decimal), CAST(2.7 as EDM.Decimal)})  
 ```  
   
- Oto przykład definicja typu wiersza.  
+ Poniżej znajduje się przykład definicji typu wiersza.  
   
 ```  
 USING Microsoft.Samples.Entity  
@@ -76,7 +76,7 @@ Function MyRound(p1 Row(x EDM.Decimal)) AS (
 select MyRound(row(a as x)) from {CAST(1.7 as EDM.Decimal), CAST(2.7 as EDM.Decimal)} as a  
 ```  
   
- Oto przykład definicji typu REF.  
+ Poniżej znajduje się przykład definicji typu odwołania.  
   
 ```  
 USING Microsoft.Samples.Entity  
@@ -88,5 +88,5 @@ select Ref(x) from AdventureWorksEntities.SalesOrderHeaders as x
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Omówienie jednostki SQL](entity-sql-overview.md)
+- [Odwołanie do jednostki SQL](entity-sql-reference.md)

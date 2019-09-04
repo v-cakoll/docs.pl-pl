@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 2104cb4e853888efffe6b289ac1400530be25473
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 5113de6d8d333983e6e26579ff9803a9f5a62816
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015606"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254173"
 ---
 # <a name="cleartype-registry-settings"></a>Ustawienia rejestru ClearType
 Ten temat zawiera omówienie ustawień rejestru Microsoft ClearType, które są używane przez aplikacje WPF.  
@@ -19,7 +19,7 @@ Ten temat zawiera omówienie ustawień rejestru Microsoft ClearType, które są 
 ## <a name="technology-overview"></a>Omówienie technologii  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]aplikacje, które renderują tekst do urządzenia wyświetlającego, używają funkcji ClearType w celu zapewnienia ulepszonego środowiska odczytywania. Technologia ClearType jest technologią oprogramowania opracowaną przez firmę Microsoft, która zwiększa czytelność tekstu w istniejących LCDs (w przypadku wyświetlaczy Liquid Crystal), takich jak ekrany laptopów, urządzenia Pocket PC i monitory płaskoekranowe. Technologia ClearType działa przez uzyskanie dostępu do poszczególnych elementów pasków kolorów w pionie w każdym piksel ekranu LCD. Aby uzyskać więcej informacji na temat technologii ClearType, zobacz [Omówienie technologii ClearType](cleartype-overview.md).  
   
- Tekst renderowany przy użyciu technologii ClearType może wyglądać znacznie inaczej podczas wyświetlania na różnych urządzeniach wyświetlających. Na przykład niewielka liczba monitorów implementuje elementy pasków koloru w kolorze niebieskim, zielonym, czerwonym, a nie na bardziej typowym porządku czerwonym [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)], zielonym, niebieskim ().  
+ Tekst renderowany przy użyciu technologii ClearType może wyglądać znacznie inaczej podczas wyświetlania na różnych urządzeniach wyświetlających. Na przykład niewielka liczba monitorów implementuje elementy pasków koloru w kolorze niebieskim, zielonym, czerwonym, a nie na bardziej typowym porządku czerwonym, zielonym, niebieskim (RGB).  
   
  Tekst renderowany przy użyciu technologii ClearType może być również znacznie różny podczas wyświetlania przez użytkowników indywidualnych z różnymi poziomami czułości kolorów. Niektóre osoby mogą wykrywać nieznaczne różnice w kolorze lepszym od innych.  
   

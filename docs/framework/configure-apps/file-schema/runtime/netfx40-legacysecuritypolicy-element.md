@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 881862b6b81ace1c1923b2a22d2fbe54d939d84e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 2cd6f937811ae503dd4de7ff989510c4eb8b8933
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663570"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252448"
 ---
 # <a name="netfx40_legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy> Element
 
 Określa, czy środowisko uruchomieniowe korzysta ze starszych zasad zabezpieczeń dostępu kodu (CAS).
 
-\<> konfiguracji \
-\<> środowiska uruchomieniowego \
-\<NetFx40_LegacySecurityPolicy>
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> środowiska uruchomieniowego**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<NetFx40_LegacySecurityPolicy >**  
 
 ## <a name="syntax"></a>Składnia
 
@@ -63,7 +63,7 @@ W .NET Framework wersja 3,5 i wcześniejsze wersje zasady CAS są zawsze włącz
 
 Zasady CAS są specyficzne dla wersji. Zasady niestandardowych urzędów certyfikacji, które istnieją we wcześniejszych wersjach .NET Framework muszą zostać określone w .NET Framework 4.
 
-Zastosowanie elementu do zestawu .NET Framework 4 nie wpływa na kod przezroczysty dla bezpieczeństwa; nadal obowiązują reguły przezroczystości. [](../../../misc/security-transparent-code.md) `<NetFx40_LegacySecurityPolicy>`
+Zastosowanie elementu do zestawu .NET Framework 4 nie wpływa na [kod przezroczysty dla bezpieczeństwa](../../../misc/security-transparent-code.md); nadal obowiązują reguły przezroczystości. `<NetFx40_LegacySecurityPolicy>`
 
 > [!IMPORTANT]
 > Zastosowanie elementu może spowodować znaczny wpływ na wydajność zestawów obrazów natywnych utworzonych przez [Generator obrazu natywnego (Ngen. exe)](../../../tools/ngen-exe-native-image-generator.md) , które nie są zainstalowane w [globalnej pamięci podręcznej zestawów.](../../../app-domains/gac.md) `<NetFx40_LegacySecurityPolicy>` Spadek wydajności jest spowodowany przez niezdolność środowiska uruchomieniowego do załadowania zestawów jako obrazów natywnych podczas stosowania atrybutu, co spowoduje ich załadowanie jako zestawów just in Time.

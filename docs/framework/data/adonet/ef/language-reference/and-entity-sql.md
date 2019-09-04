@@ -1,16 +1,16 @@
 ---
-title: '&amp;&amp; (I) (Jednostka SQL)'
+title: '&amp;&amp;LUB (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: e7d24213-471d-4807-b85e-570375df89b5
-ms.openlocfilehash: eab05f7454f8ebc88ed29030503bfa96d0c70756
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02e404b73e5a9a9c3963e2d2b58ab7592afabc13
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61605752"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251317"
 ---
-# <a name="ampamp-and-entity-sql"></a>&amp;&amp; (I) (Jednostka SQL)
-Zwraca `true` Jeśli oba wyrażenia są `true`; w przeciwnym razie `false` lub `NULL`.  
+# <a name="ampamp-and-entity-sql"></a>&amp;&amp;LUB (Entity SQL)
+Zwraca `true` Jeśli oba wyrażenia są `true`; w przeciwnym `false` razie `NULL`lub.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -25,25 +25,25 @@ boolean_expression && boolean_expression
  Dowolne prawidłowe wyrażenie zwracające wartość logiczną.  
   
 ## <a name="remarks"></a>Uwagi  
- Podwójne ampersandu (& &) mają taką samą funkcjonalność jak operator i.  
+ Podwójne znaki "(& &) mają takie same funkcje jak operator i.  
   
- W poniższej tabeli przedstawiono możliwe wartości wejściowych i zwracanych typów.  
+ W poniższej tabeli przedstawiono możliwe wartości wejściowe i typy zwracane.  
   
 ||`TRUE`|`FALSE`|`NULL`|  
 |-|------------|-------------|------------|  
-|`TRUE`|WARTOŚĆ TRUE|FAŁSZ|NULL|  
+|`TRUE`|OZNACZA|FAŁSZ|NULL|  
 |`FALSE`|FAŁSZ|FAŁSZ|FAŁSZ|  
 |`NULL`|NULL|FAŁSZ|NULL|  
   
 ## <a name="example"></a>Przykład  
- Następujące zapytanie SQL jednostki pokazuje sposób użycia operatora AND. Zapytanie jest oparty na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
+ W poniższym zapytaniu Entity SQL pokazano, jak używać operatora i. Zapytanie jest oparte na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
   
-1. Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Wykonaj czynności opisane w [temacie How to: Wykonaj zapytanie zwracające wyniki](../how-to-execute-a-query-that-returns-structuraltype-results.md)StructuralType.  
   
-2. Przekaż poniższe zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
+2. Przekaż następujące zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
   
  [!code-csharp[DP EntityServices Concepts 2#AND](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#and)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Odwołanie do jednostki SQL](entity-sql-reference.md)

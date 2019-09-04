@@ -2,17 +2,17 @@
 title: Wprowadzenie (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 4735a220-3301-4ec4-8833-7209abb7208f
-ms.openlocfilehash: d13b6357022a134c0c1a52c5bb2c309d1e57d8a0
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 68dbd3457a8ae578e52a10e4eeb4222c91af16b1
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878724"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251564"
 ---
 # <a name="getting-started-entity-framework"></a>Wprowadzenie (Entity Framework)
-ADO.NET [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] obsługuje usług i aplikacji biznesowych przetwarzających dane i zapewnia platformę Programowanie w oparciu o dane, które podnosi poziom abstrakcji z logicznego poziomu relacyjnych koncepcyjny poziom. Umożliwia deweloperom pracę z danymi na wyższym poziomie abstrakcji, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] obsługuje kod, który jest niezależny od dowolnego aparatu magazynu danych lub schemat relacyjny. Aby uzyskać więcej informacji, zobacz [Omówienie programu Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md).  
+ADO.NET [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] obsługuje aplikacje i usługi zorientowane na dane oraz udostępnia platformę do programowania w oparciu o dane, które wzbudzają poziom abstrakcji z logicznego poziomu relacyjnego do poziomu koncepcyjnego. Przez umożliwienie deweloperom pracy z danymi na wyższym poziomie abstrakcji, program [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] obsługuje kod, który jest niezależny od określonego aparatu magazynu danych lub schematu relacyjnego. Aby uzyskać więcej informacji, zobacz [Entity Framework przegląd](overview.md).  
   
- Aby szybko zacząć korzystać z najnowszej wersji programu Entity Framework, zobacz [wprowadzenie](https://go.microsoft.com/fwlink/?LinkId=235280)  
+ Aby szybko rozpocząć korzystanie z najnowszej wersji Entity Framework, zobacz [wprowadzenie](https://go.microsoft.com/fwlink/?LinkId=235280)  
   
 ## <a name="see-also"></a>Zobacz także
 

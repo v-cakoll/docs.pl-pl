@@ -2,12 +2,12 @@
 title: 'Instrukcje: Znajdź elementy podrzędne z określoną nazwą elementu (C#)'
 ms.date: 07/20/2015
 ms.assetid: f684da20-bee9-47f5-9607-7e3fd7e67470
-ms.openlocfilehash: dbb955697e4d4b0ed5aad9c00c37e73bbd32b7b4
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 8c859c555109a6f68a6b4290c536b10114620f3d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709938"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253698"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-c"></a>Instrukcje: Znajdź elementy podrzędne z określoną nazwą elementu (C#)
 Czasami chcesz znaleźć wszystkie elementy podrzędne o określonej nazwie. Można napisać kod do iteracji przez wszystkie elementy podrzędne, ale łatwiej jest użyć <xref:System.Xml.Linq.XContainer.Descendants%2A> osi.  
@@ -47,7 +47,7 @@ Console.WriteLine(str);
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```output  
 Some text that is broken up into multiple segments.  
 ```  
   
@@ -87,7 +87,7 @@ Console.WriteLine(str);
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```output  
 Some text that is broken up into multiple segments.  
 ```  
   

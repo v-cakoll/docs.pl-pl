@@ -1,23 +1,23 @@
 ---
-title: Wyrażenia zapytań (jednostka SQL)
+title: Wyrażenia zapytań (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c36f327b-e230-48d4-bbd5-78dc6478c447
-ms.openlocfilehash: 5f89028b9c501dd840f1dc9445418e4757967db8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4428286890f41573a02daf31a4593d0c8f9ad34b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614625"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249274"
 ---
-# <a name="query-expressions-entity-sql"></a>Wyrażenia zapytań (jednostka SQL)
-Wyrażenie zapytania łączy wiele operatorów zapytań różnych w jednej składni. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zawiera różne rodzaje wyrażeń, w tym następujące: [literały](../../../../../../docs/framework/data/adonet/ef/language-reference/literals-entity-sql.md), [parametry](../../../../../../docs/framework/data/adonet/ef/language-reference/parameters-entity-sql.md), [zmienne](../../../../../../docs/framework/data/adonet/ef/language-reference/variables-entity-sql.md), operatory, [funkcje](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)operatory zestawu i tak dalej. Aby uzyskać więcej informacji, zobacz [odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md).  
+# <a name="query-expressions-entity-sql"></a>Wyrażenia zapytań (Entity SQL)
+Wyrażenie zapytania łączy wiele różnych operatorów zapytań w jedną składnię. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]oferuje różne rodzaje wyrażeń, w tym następujące: [literały](literals-entity-sql.md), [Parametry](parameters-entity-sql.md), [zmienne](variables-entity-sql.md), operatory, [funkcje](functions-entity-sql.md), operatory ustawiające itd. Aby uzyskać więcej informacji, zobacz [Entity SQL Reference](entity-sql-reference.md).  
   
 ## <a name="clauses"></a>Klauzule  
- Wyrażenie zapytania składa się z szeregu klauzul, które dotyczą kolejnych czynności kolekcji obiektów. Są one oparte na tych samych klauzul znaleźć w standardzie instrukcję select SQL: [Wybierz](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md), [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md), [gdzie](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md), [Grupuj według](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md), [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md), i [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md).  
+ Wyrażenie zapytania składa się z serii klauzul, które stosują kolejne operacje do kolekcji obiektów. Są one oparte na tych samych klauzulach, które znajdują się w standardowej instrukcji SELECT języka SQL: [SELECT](select-entity-sql.md), [from](from-entity-sql.md), [WHERE](where-entity-sql.md), [Group by](group-by-entity-sql.md), [HAVING](having-entity-sql.md)i [order by](order-by-entity-sql.md).  
   
-## <a name="scope"></a>Zakres  
- Nazwy zdefiniowane w klauzuli FROM są wprowadzane do zakresu od w kolejności występowania, od lewej do prawej. Na liście sprzężenia wyrażenia mogą odwoływać się do nazwy zdefiniowanej wcześniej na liście. Właściwości publiczne elementy określone w klauzuli FROM nie są dodawane do zakresu od: One muszą być zawsze przywoływane za pośrednictwem nazwy kwalifikowanej aliasu. Zwykle wszystkie części Wybierz wyrażenie są uwzględniane w zakresie od.  
+## <a name="scope"></a>Scope  
+ Nazwy zdefiniowane w klauzuli FROM są wprowadzane do zakresu od w kolejności wyglądu, od lewej do prawej. Na liście SPRZĘŻENIa wyrażenia mogą odwoływać się do nazw zdefiniowanych wcześniej na liście. Właściwości publiczne elementów zidentyfikowanych w klauzuli FROM nie są dodawane do zakresu od: Muszą zawsze być przywoływane przez nazwę kwalifikowaną aliasem. Zwykle wszystkie części wyrażenia SELECT są uwzględniane w zakresie od.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Odwołanie do jednostki SQL](entity-sql-reference.md)

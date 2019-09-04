@@ -2,12 +2,12 @@
 title: 'Instrukcje: Znajdź atrybut elementu nadrzędnego (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: dbef9d89-a5c4-431f-80cc-7a2ebf323f86
-ms.openlocfilehash: 2e6c124d2653fb4426b3abb693f0b58daa5413c2
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: aa602f6876b014c48a73dea9b2ff42eb953e5c4c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593610"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253773"
 ---
 # <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-c"></a>Instrukcje: Znajdź atrybut elementu nadrzędnego (XPath-LINQ to XML) (C#)
 
@@ -50,7 +50,7 @@ Console.WriteLine(att1);
 
 Ten przykład generuje następujące wyniki:
 
-```
+```output
 Results are identical
 id="bk101"
 ```

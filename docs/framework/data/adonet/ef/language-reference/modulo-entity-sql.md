@@ -1,16 +1,16 @@
 ---
-title: (Modulo) (Jednostka SQL)
+title: Operator (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 243ddc4f-3c4e-41e1-a3ef-4ed39e36248b
-ms.openlocfilehash: e2d2c4cd6fd62cf5785d6b69aa399a74f8d04d30
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a30306539d45c3718d2e948e9717997bbe2104fa
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760483"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250086"
 ---
-# <a name="modulo-entity-sql"></a>(Modulo) (Jednostka SQL)
-Zwraca resztę z dzielenia jednego wyrażenia podzielona przez inny.  
+# <a name="modulo-entity-sql"></a>Operator (Entity SQL)
+Zwraca resztę jednego wyrażenia podzieloną przez inny.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -20,23 +20,23 @@ dividend % divisor
   
 ## <a name="arguments"></a>Argumenty  
  `dividend`  
- Wyrażenie liczbowe, aby podzielić. `dividend` jest dowolne prawidłowe wyrażenie jednego z typów liczbowych.  
+ Wyrażenie liczbowe do podzielenia. `dividend`jest dowolnym prawidłowym wyrażeniem dowolnego typu danych liczbowych.  
   
  `divisor`  
- Wyrażenie liczbowe do dzielenia dzielnej przez. `divisor` jest dowolne prawidłowe wyrażenie jednego z typów liczbowych.  
+ Wyrażenie liczbowe dzielące dywidendę przez. `divisor`jest dowolnym prawidłowym wyrażeniem dowolnego typu danych liczbowych.  
   
 ## <a name="result-types"></a>Typy wyników  
  Edm.Int32  
   
 ## <a name="example"></a>Przykład  
- Następujące zapytanie SQL jednostki używa operatora arytmetycznego % do zwracania końca jedno wyrażenie podzielona przez inny. Zapytanie jest oparty na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
+ Poniższe zapytanie Entity SQL używa operatora arytmetycznego% do zwrócenia reszty jednego wyrażenia podzielonego przez inny. Zapytanie jest oparte na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
   
-1. Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Wykonaj czynności opisane w [temacie How to: Wykonaj zapytanie zwracające wyniki](../how-to-execute-a-query-that-returns-structuraltype-results.md)StructuralType.  
   
-2. Przekaż poniższe zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
+2. Przekaż następujące zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
   
  [!code-csharp[DP EntityServices Concepts 2#MODULO](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#modulo)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Odwołanie do jednostki SQL](entity-sql-reference.md)

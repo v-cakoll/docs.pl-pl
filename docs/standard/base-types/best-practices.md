@@ -13,12 +13,12 @@ ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
-ms.openlocfilehash: 8d887bb32d1bdd398353d00aba16c2cc8adfcacb
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: a945c53f3206f29cf2b07fea86ba3e8e3af11645
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988819"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254225"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Najlepsze rozwiązania dotyczące wyrażeń regularnych w programie .NET
 <a name="top"></a>Aparat wyrażeń regularnych w programie .NET to zaawansowane, w pełni funkcjonalne narzędzie, które przetwarza tekst na podstawie dopasowania do wzorców zamiast porównywania i dopasowywania tekstu w postaci literału. W większości przypadków dopasowanie do wzorca przebiega szybko i skutecznie. Jednak w niektórych przypadkach aparat wyrażeń regularnych może okazać się bardzo wolny. W skrajnych przypadkach może nawet pozornie przestać odpowiadać, ponieważ przetwarza stosunkowo mało danych wejściowych w ciągu kilku godzin lub nawet dni.  
@@ -51,7 +51,7 @@ ms.locfileid: "69988819"
   
 - Tekst, który prawie pasuje do wzorca wyrażenia regularnego.  
   
- Ostatni typ tekstu jest szczególnie problematyczny dla wyrażeń regularnych, które zostały napisane do obsługi ograniczonych danych wejściowych. Jeśli to wyrażenie regularne opiera się również na rozbudowanej operacji wycofywania, aparat wyrażeń regularnych może poświęcać niezależny czas (w niektórych przypadkach, wiele godzin lub dni) przetwarzanie pozornie niewielkiej ilości tekstu. [](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)  
+ Ostatni typ tekstu jest szczególnie problematyczny dla wyrażeń regularnych, które zostały napisane do obsługi ograniczonych danych wejściowych. Jeśli to wyrażenie regularne [opiera się również na rozbudowanej](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)operacji wycofywania, aparat wyrażeń regularnych może poświęcać niezależny czas (w niektórych przypadkach, wiele godzin lub dni) przetwarzanie pozornie niewielkiej ilości tekstu.  
   
 > [!WARNING]
 > W poniższym przykładzie użyto wyrażenia regularnego, które jest podatne na nadmierne korzystanie z wycofywania, przez co istnieje duże prawdopodobieństwo odrzucenia prawidłowych adresów e-mail. Nie należy stosować go w procedurze weryfikacji adresów e-mail. Jeśli chcesz, aby wyrażenie regularne, które sprawdza poprawność adresów e-mail [, zapoznaj się z tematem How to: Sprawdź, czy ciągi są w prawidłowym](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)formacie poczty e-mail.  
@@ -96,7 +96,7 @@ ms.locfileid: "69988819"
 > Jeśli to samo wyrażenie regularne jest używane wielokrotnie w wywołaniach metod lub jeśli obiekty wyrażeń regularnych są często używane w aplikacji, sposób wywoływania metody (statyczny, interpretowany, skompilowany) znacząco wpływa na wydajność.  
   
 ### <a name="static-regular-expressions"></a>Statyczne wyrażenia regularne  
- Statyczne metody wyrażeń regularnych są zalecane jako alternatywa dla wielokrotnego tworzenia wystąpienia obiektu wyrażenia regularnego z tym samym wyrażeniem regularnym. W przeciwieństwie do wzorców wyrażeń regularnych używanych przez obiekty wyrażeń regularnych, kody operacji lub skompilowana składnia języka Microsoft Intermediate Language (MSIL) z wzorców używanych w wywołaniach metod wystąpień są buforowane wewnętrznie przez aparat wyrażeń regularnych.  
+ Statyczne metody wyrażeń regularnych są zalecane jako alternatywa dla wielokrotnego tworzenia wystąpienia obiektu wyrażenia regularnego z tym samym wyrażeniem regularnym. W przeciwieństwie do wzorców wyrażeń regularnych używanych przez obiekty wyrażeń regularnych, kody operacji lub skompilowane języka pośredniego firmy Microsoft (MSIL) z wzorców używanych w wywołaniach metod statycznych są buforowane wewnętrznie przez aparat wyrażeń regularnych.  
   
  Na przykład program obsługi zdarzeń często wywołuje inną metodę do weryfikacji danych wejściowych użytkownika. Jest to odzwierciedlone w poniższym kodzie, w którym <xref:System.Windows.Forms.Button> <xref:System.Windows.Forms.Control.Click> zdarzenie kontrolki służy do wywołania metody o nazwie `IsValidCurrency`, która sprawdza, czy użytkownik wprowadził symbol waluty, po którym następuje co najmniej jedna cyfra dziesiętna.  
   
@@ -177,7 +177,7 @@ ms.locfileid: "69988819"
  Zazwyczaj aparat wyrażeń regularnych używa progresji liniowej do przechodzenia przez ciąg wejściowy i porównywania go ze wzorcem wyrażenia regularnego. Jednak gdy nieokreślone Kwantyfikatory, takie `*`jak `+`, i `?` są używane we wzorcu wyrażenia regularnego, aparat wyrażeń regularnych może dać część udanych częściowych dopasowań i powrócić do wcześniej zapisanego stanu Aby wyszukać pomyślne dopasowanie dla całego wzorca. Proces ten jest znany pod nazwą wycofywania.  
   
 > [!NOTE]
-> Aby uzyskać więcej informacji na temat wycofywania, zobacz [Szczegóły zachowania wyrażenia regularnego](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) i wycofywania. [](../../../docs/standard/base-types/backtracking-in-regular-expressions.md) Aby uzyskać szczegółowe omówienie wycofywania, zobacz [Optymalizowanie wydajności wyrażeń regularnych, część II: Przejęcie opłaty](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) za wycofywanie w blogu zespołu BCL.  
+> Aby uzyskać więcej informacji na temat wycofywania, zobacz [Szczegóły zachowania wyrażenia regularnego](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) [i](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)wycofywania. Aby uzyskać szczegółowe omówienie wycofywania, zobacz [Optymalizowanie wydajności wyrażeń regularnych, część II: Przejęcie opłaty](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) za wycofywanie w blogu zespołu BCL.  
   
  Obsługa wycofywania daje wyrażeniom regularnym duże możliwości i elastyczność. Dodatkowo odpowiedzialność za kontrolowanie operacji aparatu wyrażeń regularnych spada na deweloperów wyrażeń regularnych. Ponieważ deweloperzy często nie są tego świadomi, błędne użycie wycofywania lub nadmierne poleganie na wycofywaniu często odgrywa najbardziej znaczącą rolę w zmniejszeniu wydajności wyrażeń regularnych. W scenariuszu najgorszego przypadku czas wykonywania może podwajać się dla każdego dodatkowego znaku w ciągu wejściowym. W rzeczywistości przy nadmiernym wykorzystaniu wycofywania łatwo jest stworzyć programowy odpowiednik pętli nieskończonej, jeżeli dane wejściowe niemal pasują do wzorca wyrażenia regularnego; przetwarzanie relatywnie krótkiego ciągu wejściowego może zająć aparatowi wyrażeń regularnych kilka godzin, a nawet dni.  
   
@@ -254,7 +254,7 @@ ms.locfileid: "69988819"
   
 <a name="Capture"></a>   
 ## <a name="capture-only-when-necessary"></a>Przechwytywanie tylko wtedy, gdy jest to konieczne  
- Wyrażenia regularne w programie .NET obsługują szereg konstrukcji grupujących, które pozwalają grupować wzorzec wyrażenia regularnego w jedno lub więcej podwyrażeń. Najczęściej używane konstrukcje grupujące w języku wyrażeń regularnych programu .NET to `(`Podwyrażenie`)`, które definiuje numerowaną grupę przechwytywania i `(?<`Podwyrażenie *nazwy*`>`, która definiuje nazwaną grupę przechwytywania. `)` Konstrukcje grupujące są niezbędne do tworzenia odwołań wstecznych i do definiowania podwyrażeń, do których jest stosowany kwantyfikator.  
+ Wyrażenia regularne w programie .NET obsługują szereg konstrukcji grupujących, które pozwalają grupować wzorzec wyrażenia regularnego w jedno lub więcej podwyrażeń. Najczęściej używane konstrukcje grupujące w języku wyrażeń regularnych programu .NET to `(` *Podwyrażenie*`)`, które definiuje numerowaną grupę przechwytywania i `(?<`Podwyrażenie *nazwy*`>`, która definiuje nazwaną grupę przechwytywania. `)` Konstrukcje grupujące są niezbędne do tworzenia odwołań wstecznych i do definiowania podwyrażeń, do których jest stosowany kwantyfikator.  
   
  Jednak zastosowanie tych elementów języka jest kosztowne. Powodują <xref:System.Text.RegularExpressions.GroupCollection> , że obiekt zwracany <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> przez właściwość jest wypełniany najnowszymi nienazwanymi lub nazwanymi przechwycenimi, a jeśli jedna konstrukcja grupowania przechwyciła wiele podciągów w ciągu wejściowym, wypełnia również <xref:System.Text.RegularExpressions.CaptureCollection>obiekt zwrócony przez <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> właściwość określonej grupy przechwytywania z wieloma <xref:System.Text.RegularExpressions.Capture> obiektami.  
   

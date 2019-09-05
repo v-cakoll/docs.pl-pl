@@ -2,12 +2,12 @@
 title: Literały (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 6196c1b026b49847bd06cc9cda5ea6b6af289858
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9aba737b522f75f1f81cc054fb87b414b06f9611
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953289"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250334"
 ---
 # <a name="literals-entity-sql"></a>Literały (Entity SQL)
 W tym temacie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] opisano obsługę literałów.  
@@ -15,9 +15,9 @@ W tym temacie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] opisano ob
 ## <a name="null"></a>Null  
  Literał null jest używany do reprezentowania wartości null dla dowolnego typu. Literał o wartości null jest zgodny z dowolnym typem.  
   
- Wpisane wartości null mogą być tworzone przez rzutowanie w postaci literału o wartości null. Aby uzyskać więcej informacji, zobacz [Cast](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md).  
+ Wpisane wartości null mogą być tworzone przez rzutowanie w postaci literału o wartości null. Aby uzyskać więcej informacji, zobacz [Cast](cast-entity-sql.md).  
   
- Aby uzyskać reguły dotyczące miejsca, w którym można używać bezpłatnych zmiennoprzecinkowych literałów null, zobacz [literały null i wnioskowanie typów](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md).  
+ Aby uzyskać reguły dotyczące miejsca, w którym można używać bezpłatnych zmiennoprzecinkowych literałów null, zobacz [literały null i wnioskowanie typów](null-literals-and-type-inference-entity-sql.md).  
   
 ## <a name="boolean"></a>Boolean  
  Literały logiczne są reprezentowane przez słowa kluczowe `true` i `false`.  
@@ -103,4 +103,4 @@ GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Omówienie jednostki SQL](entity-sql-overview.md)

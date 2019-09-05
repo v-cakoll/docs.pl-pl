@@ -1,18 +1,18 @@
 ---
-title: Parametry (jednostka SQL)
+title: Parametry (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8d618edd-0988-4ff2-8263-ce59448af7a5
-ms.openlocfilehash: 47a1514933904daa623adc151d50525f011e07a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 723e40f523f8bb573e0ffcb1863ed0c082ea9d8d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760242"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249586"
 ---
-# <a name="parameters-entity-sql"></a>Parametry (jednostka SQL)
-Parametry są zmienne, które są zdefiniowane poza [!INCLUDE[esql](../../../../../../includes/esql-md.md)], zwykle za pomocą API powiązania, który jest używany przez języka hosta. Każdy parametr ma nazwy i typu. Nazwy parametrów są zdefiniowane w wyrażeniach zapytań za pomocą u (@) symbol jako prefiksu. To pozwala odróżnić od siebie je z nazwy właściwości lub innych nazw, które są zdefiniowane w zapytaniu.  
+# <a name="parameters-entity-sql"></a>Parametry (Entity SQL)
+Parametry są zmiennymi, które są [!INCLUDE[esql](../../../../../../includes/esql-md.md)]zdefiniowane poza, zwykle za pomocą powiązania interfejsu API, który jest używany przez język hosta. Każdy parametr ma nazwę i typ. Nazwy parametrów są zdefiniowane w wyrażeniach zapytania z symbolem at (@) jako prefiksem. Pozwala to odróżnić je od nazw właściwości lub innych nazw zdefiniowanych w zapytaniu.  
   
- Interfejs API języka hosta powiązania udostępnia interfejsy API dla wiązania parametrów.  
+ Interfejs API powiązania języka hosta udostępnia interfejsy API dla parametrów powiązań.  
   
 ## <a name="example"></a>Przykład  
   
@@ -24,5 +24,5 @@ select c
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Odwołanie do jednostki SQL](entity-sql-reference.md)
+- [Omówienie jednostki SQL](entity-sql-overview.md)

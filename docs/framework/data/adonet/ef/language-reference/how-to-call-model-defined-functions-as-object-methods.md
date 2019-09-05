@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 83b7533f66c68dd25f21906394a40c956c9b88b8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 787ead2c52f874af2ca1a02bf009da40cee875ae
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936002"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250770"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Instrukcje: Wywoływanie funkcji definiowanych przez model jako metod obiektu
-W tym temacie opisano sposób wywoływania funkcji zdefiniowanej przez model jako metody na <xref:System.Data.Objects.ObjectContext> obiekcie lub jako metody statycznej klasy niestandardowej. *Funkcja zdefiniowana przez model* jest funkcją zdefiniowaną w modelu koncepcyjnym. Procedury w temacie opisują sposób wywołania tych funkcji bezpośrednio zamiast wywoływania ich z LINQ to Entities zapytań. Aby uzyskać informacje o wywoływaniu funkcji zdefiniowanych przez model w zapytaniach LINQ to Entities, zobacz [How to: Wywoływanie funkcji zdefiniowanych przez model w](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md)zapytaniach.  
+W tym temacie opisano sposób wywoływania funkcji zdefiniowanej przez model jako metody na <xref:System.Data.Objects.ObjectContext> obiekcie lub jako metody statycznej klasy niestandardowej. *Funkcja zdefiniowana przez model* jest funkcją zdefiniowaną w modelu koncepcyjnym. Procedury w temacie opisują sposób wywołania tych funkcji bezpośrednio zamiast wywoływania ich z LINQ to Entities zapytań. Aby uzyskać informacje o wywoływaniu funkcji zdefiniowanych przez model w zapytaniach LINQ to Entities, zobacz [How to: Wywoływanie funkcji zdefiniowanych przez model w](how-to-call-model-defined-functions-in-queries.md)zapytaniach.  
   
  Niezależnie od tego, czy wywoływana jest funkcja zdefiniowana przez <xref:System.Data.Objects.ObjectContext> model jako metoda, czy jako metoda statyczna klasy niestandardowej, należy najpierw zmapować metodę do funkcji zdefiniowanej przez model <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>przy użyciu. Jednak podczas definiowania metody <xref:System.Data.Objects.ObjectContext> klasy należy <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> użyć właściwości, aby uwidocznić dostawcę LINQ, podczas gdy definiujemy metodę statyczną dla klasy niestandardowej <xref:System.Linq.IQueryable.Provider%2A> , należy użyć właściwości, aby uwidocznić dostawcę LINQ. Aby uzyskać więcej informacji, zobacz przykłady, które postępują zgodnie z poniższymi procedurami.  
   
@@ -108,5 +108,5 @@ W tym temacie opisano sposób wywoływania funkcji zdefiniowanej przez model jak
 ## <a name="see-also"></a>Zobacz także
 
 - [Plik. edmx — Omówienie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
-- [Zapytania w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
-- [Wywoływanie funkcji w zapytaniach składnika LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
+- [Zapytania w składniku LINQ to Entities](queries-in-linq-to-entities.md)
+- [Wywoływanie funkcji w zapytaniach składnika LINQ to Entities](calling-functions-in-linq-to-entities-queries.md)

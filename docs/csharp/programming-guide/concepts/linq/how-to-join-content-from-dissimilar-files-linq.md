@@ -2,12 +2,12 @@
 title: 'Instrukcje: Dołącz zawartość z niepodobnych plików (LINQ)C#()'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: 14f9c9917aedbc0beeeddae789b835613d1badc8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: eb2e5d8e598b7b671afe9271e6e591c5ce0ada2b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593161"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253550"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Instrukcje: Dołącz zawartość z niepodobnych plików (LINQ)C#()
 
@@ -17,7 +17,7 @@ Ten przykład pokazuje, jak połączyć dane z dwóch rozdzielanych przecinkami 
   
 1. Skopiuj następujące wiersze do pliku o nazwie *Scores. csv* i Zapisz go w folderze projektu. Plik reprezentuje dane arkusza kalkulacyjnego. Kolumna 1 jest IDENTYFIKATORem studenta, a kolumny od 2 do 5 są wynikami testów.  
   
-    ```  
+    ```csv  
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -34,7 +34,7 @@ Ten przykład pokazuje, jak połączyć dane z dwóch rozdzielanych przecinkami 
   
 2. Skopiuj następujące wiersze do pliku o nazwie *Names. csv* i Zapisz go w folderze projektu. Ten plik reprezentuje arkusz kalkulacyjny zawierający nazwisko, imię i nazwisko ucznia.  
   
-    ```  
+    ```csv  
     Omelchenko,Svetlana,111  
     O'Donnell,Claire,112  
     Mortensen,Sven,113  

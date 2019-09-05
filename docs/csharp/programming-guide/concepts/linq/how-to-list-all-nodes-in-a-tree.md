@@ -1,27 +1,27 @@
 ---
-title: 'Instrukcje: Wyświetlanie listy wszystkich węzłów w drzewie (C#)'
+title: 'Instrukcje: Wyświetl listę wszystkich węzłów w drzewie (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-ms.openlocfilehash: 16d61e146e3721d8d5110d89e651aeb33ee556cd
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a6c50bba528dd250195edea80bcaebea08fa701c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486675"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253564"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-c"></a>Instrukcje: Wyświetlanie listy wszystkich węzłów w drzewie (C#)
-Czasami warto wyświetlić listę wszystkich węzłów w drzewie. Może to być przydatne podczas nauki, dokładnie tak jak metoda lub właściwość ma wpływ na drzewie. Jedno z podejść do wyświetlania listy wszystkich węzłów w postaci tekstowej jest generowanie wyrażenia XPath, które dokładnie, zwłaszcza identyfikuje dowolny węzeł w drzewie.  
+# <a name="how-to-list-all-nodes-in-a-tree-c"></a>Instrukcje: Wyświetl listę wszystkich węzłów w drzewie (C#)
+Czasami warto wyświetlić listę wszystkich węzłów w drzewie. Może to być przydatne w przypadku dokładnego uczenia się, jak metoda lub właściwość wpływa na drzewo. Jednym z metod tworzenia listy wszystkich węzłów w postaci tekstowej jest wygenerowanie wyrażenia XPath, które dokładnie i szczególnie identyfikuje każdy węzeł w drzewie.  
   
- Nie jest to szczególnie przydatne do wykonania wyrażeń XPath przy użyciu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Wyrażenia XPath ma mniejszą wydajność niż [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytań i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania są znacznie większe możliwości. Jednak jako sposób identyfikacji węzłów w drzewie XML, XPath działa poprawnie.  
+ Nie jest szczególnie przydatne do wykonywania wyrażeń XPath przy użyciu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Wyrażenia XPath mają niską wydajność niż [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania, a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania są znacznie bardziej wydajne. Jednak jako sposób identyfikowania węzłów w drzewie XML, wyrażenie XPath działa prawidłowo.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie przedstawiono funkcję o nazwie `GetXPath` generujący do określonego wyrażenia XPath dla dowolnego węzła w drzewie XML. Generuje on odpowiedni wyrażenia XPath, nawet wtedy, gdy węzły znajdują się w przestrzeni nazw. Wyrażenia XPath są generowane przy użyciu prefiksy przestrzeni nazw.  
+ Ten przykład pokazuje funkcję o nazwie `GetXPath` generującą określone wyrażenie XPath dla dowolnego węzła w drzewie XML. Generuje odpowiednie wyrażenia XPath nawet wtedy, gdy węzły znajdują się w przestrzeni nazw. Wyrażenia XPath są generowane przy użyciu prefiksów przestrzeni nazw.  
   
- Ten przykład tworzy następnie małych drzewa XML, który zawiera przykład kilka typów węzłów. Następnie iterację w węzłach podrzędnych i drukuje wyrażenie XPath dla każdego węzła.  
+ Przykład tworzy to małe drzewo XML zawierające przykład kilku typów węzłów. Następnie wykonuje iterację węzłów podrzędnych i drukuje wyrażenie XPath dla każdego węzła.  
   
- Zauważysz, że deklaracja XML nie jest węzłem w drzewie.  
+ Zauważ, że deklaracja XML nie jest węzłem drzewa.  
   
- Oto pliku XML, który zawiera kilka typów węzłów:  
+ Poniżej znajduje się plik XML, który zawiera kilka typów węzłów:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -37,9 +37,9 @@ Czasami warto wyświetlić listę wszystkich węzłów w drzewie. Może to być 
 </Root>  
 ```  
   
- Poniżej przedstawiono listę węzłów w drzewie XML powyżej, wyrażonej w postaci wyrażenia XPath:  
+ Poniżej znajduje się lista węzłów w powyższym drzewie XML, wyrażona jako wyrażenia XPath:  
   
-```  
+```text  
 /processing-instruction()  
 /Root  
 /Root/@AttName  
@@ -317,7 +317,7 @@ class Program
   
  Ten przykład generuje następujące wyniki:  
   
-```  
+```output  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <?target data?>  
 <Root AttName="An Attribute" xmlns:aw="http://www.adventure-works.com">  

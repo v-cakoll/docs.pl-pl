@@ -4,12 +4,12 @@ description: W tym samouczku dowiesz się, jak konteneryzowanie aplikację .NET 
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 81b3ce2d6ebb73648d9026c92f490dcc723014f6
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: ec1c6eb5c1a78a631b8205da5d082e44884cde7a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331041"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253950"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Samouczek: Konteneryzowanie aplikacji .NET Core
 
@@ -60,7 +60,7 @@ dotnet new console -o app -n myapp
 
 Drzewo folderów będzie wyglądać następująco:
 
-```console
+```
 docker-working
 │   global.json
 │
@@ -75,7 +75,7 @@ docker-working
             project.assets.json
 ```
 
-Polecenie tworzy nowy folder o nazwie App i generuje aplikację "Hello World".  `dotnet new` Wprowadź folder *App* , a następnie uruchom polecenie `dotnet run`. Zobaczysz następujące dane wyjściowe:
+Polecenie tworzy nowy folder o nazwie App i generuje aplikację "Hello World". `dotnet new` Wprowadź folder *App* , a następnie uruchom polecenie `dotnet run`. Zobaczysz następujące dane wyjściowe:
 
 ```console
 > dotnet run
@@ -184,7 +184,7 @@ Polecenie instruuje platformę Docker, aby ściągnąć obraz oznaczony **2,2** 
 
 Zapisz plik *pliku dockerfile* . Struktura katalogów folderu roboczego powinna wyglądać następująco. Niektóre pliki i foldery z bardziej szczegółowymi poziomami zostały wycięte w celu zaoszczędzenia miejsca w artykule:
 
-```console
+```
 docker-working
 │   Dockerfile
 │   global.json
@@ -347,7 +347,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 Docker udostępnia `docker run` polecenie do tworzenia i uruchamiania kontenera jako pojedyncze polecenie. To polecenie eliminuje konieczność uruchomienia `docker create` , a następnie. `docker start` Możesz również ustawić to polecenie, aby automatycznie usuwać kontener po zatrzymaniu kontenera. Na przykład użyj `docker run -it --rm` do dwóch rzeczy, najpierw automatycznie Użyj bieżącego terminalu do łączenia się z kontenerem, a następnie usuń go:
 
-```
+```console
 > docker run -it --rm myimage
 Counter: 1
 Counter: 2
@@ -357,16 +357,16 @@ Counter: 5
 ^C
 ```
 
-W `docker run -it`programie naciśnięcie polecenia <kbd>Ctrl + C</kbd> spowoduje zatrzymanie procesu, który jest uruchomiony w kontenerze, co z kolei powoduje zatrzymanie kontenera. `--rm` Ponieważ parametr został dostarczony, kontener jest automatycznie usuwany, gdy proces zostanie zatrzymany. Sprawdź, czy nie istnieje:
+W `docker run -it`programie <kbd>naciśnięcie polecenia CTRL + C</kbd> spowoduje zatrzymanie procesu, który jest uruchomiony w kontenerze, co z kolei powoduje zatrzymanie kontenera. `--rm` Ponieważ parametr został dostarczony, kontener jest automatycznie usuwany, gdy proces zostanie zatrzymany. Sprawdź, czy nie istnieje:
 
-```
+```console
 > docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS    PORTS   NAMES
 ```
 
 ### <a name="change-the-entrypoint"></a>Zmień punkt wejścia
 
-Polecenie umożliwia również `ENTRYPOINT` modyfikowanie polecenia z pliku dockerfile i uruchamianie czegoś innego, ale tylko dla tego kontenera.  `docker run` Na przykład użyj poniższego polecenia, aby uruchomić `bash` polecenie `cmd.exe`lub. W razie potrzeby zmodyfikuj polecenie.
+Polecenie umożliwia również `ENTRYPOINT` modyfikowanie polecenia z pliku dockerfile i uruchamianie czegoś innego, ale tylko dla tego kontenera. `docker run` Na przykład użyj poniższego polecenia, aby uruchomić `bash` polecenie `cmd.exe`lub. W razie potrzeby zmodyfikuj polecenie.
 
 #### <a name="windows"></a>Windows
 W tym przykładzie `ENTRYPOINT` został zmieniony na `cmd.exe`. <kbd>Ctrl + C</kbd> jest wciśnięty, aby zakończyć proces i zatrzymać kontener.

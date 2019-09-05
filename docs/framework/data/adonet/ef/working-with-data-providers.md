@@ -2,24 +2,24 @@
 title: Praca z dostawcami danymi
 ms.date: 03/30/2017
 ms.assetid: b6ae53f4-34f8-4510-ad98-ff1e46621526
-ms.openlocfilehash: b7fc40eb66b1885e3e4964bd216f996b34d96dbf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 728bcbcdaa3bd405be00b75da7eb62e653a99e5d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763896"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248147"
 ---
 # <a name="working-with-data-providers"></a>Praca z dostawcami danymi
-W tematach w tej sekcji opisano, usług i dostawców, które przetwarzają zapytania względem modelu koncepcyjnego do natywnego zapytania względem źródła danych, która jest obsługiwana przez program Entity Framework.  
+W tematach w tej sekcji opisano usługi i dostawcy, które przekształciją zapytania względem modelu koncepcyjnego na zapytania natywne względem źródła danych, które jest obsługiwane przez Entity Framework.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Parametry połączeń](../../../../../docs/framework/data/adonet/ef/connection-strings.md)  
+ [Parametry połączeń](connection-strings.md)  
   
- [Dostawcy danych programu Entity Framework](../../../../../docs/framework/data/adonet/ef/data-providers.md)  
+ [Dostawcy danych programu Entity Framework](data-providers.md)  
   
- [Pisanie dostawcy danych programu Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)  
+ [Pisanie dostawcy danych programu Entity Framework](writing-an-ef-data-provider.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Jednostki języka SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
-- [Program Entity Framework na platformie ADO.NET](../../../../../docs/framework/data/adonet/ef/index.md)
+- [Jednostki języka SQL](./language-reference/entity-sql-language.md)
+- [Program Entity Framework na platformie ADO.NET](index.md)

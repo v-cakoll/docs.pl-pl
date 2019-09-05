@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 9d5b5b8a479efd3918dc23616aa331cc07a901ac
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 4919424339df1f8d2c68465bd9f9af42f344fe37
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972206"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254073"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Przewodnik: Moja pierwsza aplikacja klasyczna WPF
 
@@ -143,7 +143,7 @@ W tej sekcji dodasz dwie strony i obraz do aplikacji.
 
 1. Ustaw wartość`ExpenseIt - Home`na "". <xref:System.Windows.Controls.Page.Title%2A>
 
-1. Ustaw wartości elementów `DesignWidth`ina 300 pikseli. `DesignHeight`
+1. Ustaw do 350 pikseli `DesignWidth` i do 500 pikseli. `DesignHeight`
 
     KOD XAML jest teraz wyświetlany w następujący sposób dla Visual Basic:
 
@@ -184,7 +184,7 @@ W tej sekcji dodasz dwie strony i obraz do aplikacji.
 
 1. Ustaw wartość`ExpenseIt - View Expense`na "". <xref:System.Windows.Controls.Page.Title%2A>
 
-1. Ustaw wartości elementów `DesignWidth`ina 300 pikseli. `DesignHeight`
+1. Ustaw do 350 pikseli `DesignWidth` i do 500 pikseli. `DesignHeight` 
 
     *ExpenseReportPage. XAML* wygląda teraz następująco w Visual Basic:
 
@@ -267,7 +267,7 @@ W tej sekcji utworzysz jednokolumnową tabelę z trzema wierszami i marginesem 1
 
 ## <a name="add-controls"></a>Dodawanie kontrolek
 
-W tej sekcji opisano aktualizowanie interfejsu użytkownika strony głównej w celu wyświetlenia listy osób, w których można wybrać jedną osobę, aby wyświetlić raport z wydatków. Formanty to obiekty UI, które umożliwiają użytkownikom współpracującie z Twoją aplikacją. Aby uzyskać więcej informacji, [](../controls/index.md)Zobacz Controls.
+W tej sekcji opisano aktualizowanie interfejsu użytkownika strony głównej w celu wyświetlenia listy osób, w których można wybrać jedną osobę, aby wyświetlić raport z wydatków. Formanty to obiekty UI, które umożliwiają użytkownikom współpracującie z Twoją aplikacją. Aby uzyskać więcej informacji, zobacz [Controls](../controls/index.md).
 
 Aby utworzyć ten interfejs użytkownika, Dodaj następujące elementy *`ExpenseItHome.xaml`* :
 

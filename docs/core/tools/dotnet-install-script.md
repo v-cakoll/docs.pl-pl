@@ -2,12 +2,12 @@
 title: dotnet-install scripts
 description: Dowiedz się więcej na temat skryptów programu dotnet-install, aby zainstalować narzędzia interfejs wiersza polecenia platformy .NET Core i udostępnione środowisko uruchomieniowe.
 ms.date: 01/16/2019
-ms.openlocfilehash: 8eb021c25ac218f2665932c224dc05a7d295e2b7
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: ed1a3341e678b405ae4aca35e3b49ada89eb069a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105117"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253899"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet — informacje o skryptach instalacji
 
@@ -189,7 +189,7 @@ Można zainstalować określoną wersję przy użyciu `--version` argumentu. Wer
   W systemie Windows:
 
   ```powershell
-  @powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"
+  @powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -UseBasicParsing 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"
   ```
 
   macOS/Linux:

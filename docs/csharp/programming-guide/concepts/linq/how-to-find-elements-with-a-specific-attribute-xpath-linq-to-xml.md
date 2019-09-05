@@ -1,23 +1,23 @@
 ---
-title: 'Instrukcje: Znajdowanie elementów o określonym atrybucie (XPath-LINQ to XML) (C#)'
+title: 'Instrukcje: Znajdź elementy z określonym atrybutem (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: daed00dd-923a-43be-8a90-eee406f6f574
-ms.openlocfilehash: fc1bc285a066dcb1843dcb626b1b3b354f28da74
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1e71dd7f6619c051d0e3cdef2726daff82ba3d70
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486808"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253669"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="6a8af-102">Instrukcje: Znajdowanie elementów o określonym atrybucie (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="6a8af-102">How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="6a8af-103">Czasami chcesz znaleźć wszystkie elementy, które mają określony atrybut.</span><span class="sxs-lookup"><span data-stu-id="6a8af-103">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="6a8af-104">Nie masz zajmującym się ochroną zawartości atrybutu.</span><span class="sxs-lookup"><span data-stu-id="6a8af-104">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="6a8af-105">Zamiast tego chcesz wybrać na podstawie istnienia atrybutu.</span><span class="sxs-lookup"><span data-stu-id="6a8af-105">Instead, you want to select based on the existence of the attribute.</span></span>  
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="f4a3b-102">Instrukcje: Znajdź elementy z określonym atrybutem (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="f4a3b-102">How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="f4a3b-103">Czasami chcesz znaleźć wszystkie elementy, które mają określony atrybut.</span><span class="sxs-lookup"><span data-stu-id="f4a3b-103">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="f4a3b-104">Nie dotyczy zawartości atrybutu.</span><span class="sxs-lookup"><span data-stu-id="f4a3b-104">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="f4a3b-105">Zamiast tego należy wybrać opcję na podstawie istnienia atrybutu.</span><span class="sxs-lookup"><span data-stu-id="f4a3b-105">Instead, you want to select based on the existence of the attribute.</span></span>  
   
- <span data-ttu-id="6a8af-106">Wyrażenie XPath jest:</span><span class="sxs-lookup"><span data-stu-id="6a8af-106">The XPath expression is:</span></span>  
+ <span data-ttu-id="f4a3b-106">Wyrażenie XPath:</span><span class="sxs-lookup"><span data-stu-id="f4a3b-106">The XPath expression is:</span></span>  
   
  `./*[@Select]`  
   
-## <a name="example"></a><span data-ttu-id="6a8af-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="6a8af-107">Example</span></span>  
- <span data-ttu-id="6a8af-108">Poniższy kod wybiera tylko elementy, które mają `Select` atrybutu.</span><span class="sxs-lookup"><span data-stu-id="6a8af-108">The following code selects just the elements that have the `Select` attribute.</span></span>  
+## <a name="example"></a><span data-ttu-id="f4a3b-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="f4a3b-107">Example</span></span>  
+ <span data-ttu-id="f4a3b-108">Poniższy kod wybiera tylko elementy, które mają `Select` atrybut.</span><span class="sxs-lookup"><span data-stu-id="f4a3b-108">The following code selects just the elements that have the `Select` attribute.</span></span>  
   
 ```csharp  
 XElement doc = XElement.Parse(  
@@ -48,9 +48,9 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="6a8af-109">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="6a8af-109">This example produces the following output:</span></span>  
+ <span data-ttu-id="f4a3b-109">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="f4a3b-109">This example produces the following output:</span></span>  
   
-```  
+```output  
 Results are identical  
 <Child2 Select="true">2</Child2>  
 <Child4 Select="true">4</Child4>  

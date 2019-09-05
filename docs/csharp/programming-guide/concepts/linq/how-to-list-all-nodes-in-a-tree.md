@@ -1,27 +1,27 @@
 ---
-title: 'Instrukcje: Wyświetlanie listy wszystkich węzłów w drzewie (C#)'
+title: 'Instrukcje: Wyświetl listę wszystkich węzłów w drzewie (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-ms.openlocfilehash: 16d61e146e3721d8d5110d89e651aeb33ee556cd
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a6c50bba528dd250195edea80bcaebea08fa701c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486675"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253564"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-c"></a><span data-ttu-id="f2e01-102">Instrukcje: Wyświetlanie listy wszystkich węzłów w drzewie (C#)</span><span class="sxs-lookup"><span data-stu-id="f2e01-102">How to: List All Nodes in a Tree (C#)</span></span>
-<span data-ttu-id="f2e01-103">Czasami warto wyświetlić listę wszystkich węzłów w drzewie.</span><span class="sxs-lookup"><span data-stu-id="f2e01-103">Sometimes it is helpful to list all nodes in a tree.</span></span> <span data-ttu-id="f2e01-104">Może to być przydatne podczas nauki, dokładnie tak jak metoda lub właściwość ma wpływ na drzewie.</span><span class="sxs-lookup"><span data-stu-id="f2e01-104">This can be useful when learning exactly how a method or property affects the tree.</span></span> <span data-ttu-id="f2e01-105">Jedno z podejść do wyświetlania listy wszystkich węzłów w postaci tekstowej jest generowanie wyrażenia XPath, które dokładnie, zwłaszcza identyfikuje dowolny węzeł w drzewie.</span><span class="sxs-lookup"><span data-stu-id="f2e01-105">One approach to listing all nodes in a textual form is to generate an XPath expression that exactly and specifically identifies any node in the tree.</span></span>  
+# <a name="how-to-list-all-nodes-in-a-tree-c"></a><span data-ttu-id="f14af-102">Instrukcje: Wyświetl listę wszystkich węzłów w drzewie (C#)</span><span class="sxs-lookup"><span data-stu-id="f14af-102">How to: List All Nodes in a Tree (C#)</span></span>
+<span data-ttu-id="f14af-103">Czasami warto wyświetlić listę wszystkich węzłów w drzewie.</span><span class="sxs-lookup"><span data-stu-id="f14af-103">Sometimes it is helpful to list all nodes in a tree.</span></span> <span data-ttu-id="f14af-104">Może to być przydatne w przypadku dokładnego uczenia się, jak metoda lub właściwość wpływa na drzewo.</span><span class="sxs-lookup"><span data-stu-id="f14af-104">This can be useful when learning exactly how a method or property affects the tree.</span></span> <span data-ttu-id="f14af-105">Jednym z metod tworzenia listy wszystkich węzłów w postaci tekstowej jest wygenerowanie wyrażenia XPath, które dokładnie i szczególnie identyfikuje każdy węzeł w drzewie.</span><span class="sxs-lookup"><span data-stu-id="f14af-105">One approach to listing all nodes in a textual form is to generate an XPath expression that exactly and specifically identifies any node in the tree.</span></span>  
   
- <span data-ttu-id="f2e01-106">Nie jest to szczególnie przydatne do wykonania wyrażeń XPath przy użyciu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f2e01-106">It is not particularly helpful to execute XPath expressions using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span> <span data-ttu-id="f2e01-107">Wyrażenia XPath ma mniejszą wydajność niż [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytań i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania są znacznie większe możliwości.</span><span class="sxs-lookup"><span data-stu-id="f2e01-107">XPath expressions have poorer performance than [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries, and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries are much more powerful.</span></span> <span data-ttu-id="f2e01-108">Jednak jako sposób identyfikacji węzłów w drzewie XML, XPath działa poprawnie.</span><span class="sxs-lookup"><span data-stu-id="f2e01-108">However, as a way to identify nodes in the XML tree, XPath works well.</span></span>  
+ <span data-ttu-id="f14af-106">Nie jest szczególnie przydatne do wykonywania wyrażeń XPath przy użyciu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f14af-106">It is not particularly helpful to execute XPath expressions using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span> <span data-ttu-id="f14af-107">Wyrażenia XPath mają niską wydajność niż [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania, a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania są znacznie bardziej wydajne.</span><span class="sxs-lookup"><span data-stu-id="f14af-107">XPath expressions have poorer performance than [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries, and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries are much more powerful.</span></span> <span data-ttu-id="f14af-108">Jednak jako sposób identyfikowania węzłów w drzewie XML, wyrażenie XPath działa prawidłowo.</span><span class="sxs-lookup"><span data-stu-id="f14af-108">However, as a way to identify nodes in the XML tree, XPath works well.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f2e01-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="f2e01-109">Example</span></span>  
- <span data-ttu-id="f2e01-110">W tym przykładzie przedstawiono funkcję o nazwie `GetXPath` generujący do określonego wyrażenia XPath dla dowolnego węzła w drzewie XML.</span><span class="sxs-lookup"><span data-stu-id="f2e01-110">This example shows an function named `GetXPath` that generates a specific XPath expression for any node in the XML tree.</span></span> <span data-ttu-id="f2e01-111">Generuje on odpowiedni wyrażenia XPath, nawet wtedy, gdy węzły znajdują się w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="f2e01-111">It generates appropriate XPath expressions even when nodes are in a namespace.</span></span> <span data-ttu-id="f2e01-112">Wyrażenia XPath są generowane przy użyciu prefiksy przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="f2e01-112">The XPath expressions are generated by using namespace prefixes.</span></span>  
+## <a name="example"></a><span data-ttu-id="f14af-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="f14af-109">Example</span></span>  
+ <span data-ttu-id="f14af-110">Ten przykład pokazuje funkcję o nazwie `GetXPath` generującą określone wyrażenie XPath dla dowolnego węzła w drzewie XML.</span><span class="sxs-lookup"><span data-stu-id="f14af-110">This example shows an function named `GetXPath` that generates a specific XPath expression for any node in the XML tree.</span></span> <span data-ttu-id="f14af-111">Generuje odpowiednie wyrażenia XPath nawet wtedy, gdy węzły znajdują się w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="f14af-111">It generates appropriate XPath expressions even when nodes are in a namespace.</span></span> <span data-ttu-id="f14af-112">Wyrażenia XPath są generowane przy użyciu prefiksów przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="f14af-112">The XPath expressions are generated by using namespace prefixes.</span></span>  
   
- <span data-ttu-id="f2e01-113">Ten przykład tworzy następnie małych drzewa XML, który zawiera przykład kilka typów węzłów.</span><span class="sxs-lookup"><span data-stu-id="f2e01-113">The example then creates a small XML tree that contains an example of several types of nodes.</span></span> <span data-ttu-id="f2e01-114">Następnie iterację w węzłach podrzędnych i drukuje wyrażenie XPath dla każdego węzła.</span><span class="sxs-lookup"><span data-stu-id="f2e01-114">It then iterates through the descendant nodes and prints the XPath expression for each node.</span></span>  
+ <span data-ttu-id="f14af-113">Przykład tworzy to małe drzewo XML zawierające przykład kilku typów węzłów.</span><span class="sxs-lookup"><span data-stu-id="f14af-113">The example then creates a small XML tree that contains an example of several types of nodes.</span></span> <span data-ttu-id="f14af-114">Następnie wykonuje iterację węzłów podrzędnych i drukuje wyrażenie XPath dla każdego węzła.</span><span class="sxs-lookup"><span data-stu-id="f14af-114">It then iterates through the descendant nodes and prints the XPath expression for each node.</span></span>  
   
- <span data-ttu-id="f2e01-115">Zauważysz, że deklaracja XML nie jest węzłem w drzewie.</span><span class="sxs-lookup"><span data-stu-id="f2e01-115">You will notice that the XML declaration is not a node in the tree.</span></span>  
+ <span data-ttu-id="f14af-115">Zauważ, że deklaracja XML nie jest węzłem drzewa.</span><span class="sxs-lookup"><span data-stu-id="f14af-115">You will notice that the XML declaration is not a node in the tree.</span></span>  
   
- <span data-ttu-id="f2e01-116">Oto pliku XML, który zawiera kilka typów węzłów:</span><span class="sxs-lookup"><span data-stu-id="f2e01-116">The following is an XML file that contains several types of nodes:</span></span>  
+ <span data-ttu-id="f14af-116">Poniżej znajduje się plik XML, który zawiera kilka typów węzłów:</span><span class="sxs-lookup"><span data-stu-id="f14af-116">The following is an XML file that contains several types of nodes:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -37,9 +37,9 @@ ms.locfileid: "66486675"
 </Root>  
 ```  
   
- <span data-ttu-id="f2e01-117">Poniżej przedstawiono listę węzłów w drzewie XML powyżej, wyrażonej w postaci wyrażenia XPath:</span><span class="sxs-lookup"><span data-stu-id="f2e01-117">The following is the list of nodes in the above XML tree, expressed as XPath expressions:</span></span>  
+ <span data-ttu-id="f14af-117">Poniżej znajduje się lista węzłów w powyższym drzewie XML, wyrażona jako wyrażenia XPath:</span><span class="sxs-lookup"><span data-stu-id="f14af-117">The following is the list of nodes in the above XML tree, expressed as XPath expressions:</span></span>  
   
-```  
+```text  
 /processing-instruction()  
 /Root  
 /Root/@AttName  
@@ -315,9 +315,9 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="f2e01-118">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="f2e01-118">This example produces the following output:</span></span>  
+ <span data-ttu-id="f14af-118">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="f14af-118">This example produces the following output:</span></span>  
   
-```  
+```output  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <?target data?>  
 <Root AttName="An Attribute" xmlns:aw="http://www.adventure-works.com">  

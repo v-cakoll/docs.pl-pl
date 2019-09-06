@@ -5,10 +5,10 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 148a79e39c047897719e4f97efd84676b1b92636
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/05/2019
 ms.locfileid: "68676755"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Aplikacje bezserwerowe: architektura, wzorce i implementacja platformy Azure
@@ -61,7 +61,7 @@ Uczestnicy i recenzenci:
 
 ## <a name="introduction"></a>Wprowadzenie
 
-[](https://azure.microsoft.com/solutions/serverless/) Bezserwerowy to ewolucja platform w chmurze w kierunku czystego natywnego kodu w chmurze. Bezserwerowe serwery zapewniają deweloperom bliższą logikę biznesową, jednocześnie izolując ich od obaw związanych z infrastrukturą. Jest to wzorzec, który nie implikuje "No Server", ale raczej "Less Server". Kod bezserwerowy jest sterowany zdarzeniami. Kod może być wyzwalany przez dowolne elementy od tradycyjnego żądania sieci Web HTTP do czasomierza lub wynik przekazywania pliku. Infrastruktura za bezserwerową umożliwia natychmiastowe skalowanie w celu spełnienia elastycznych wymagań i oferuje szeroką rozliczenie za użycie. Bezserwerowy wymaga nowego sposobu podejścia do tworzenia aplikacji i nie jest odpowiednim rozwiązaniem dla każdego problemu. Jako programista musisz wybrać:
+[Bezserwerowy](https://azure.microsoft.com/solutions/serverless/) to ewolucja platform w chmurze w kierunku czystego natywnego kodu w chmurze. Bezserwerowe serwery zapewniają deweloperom bliższą logikę biznesową, jednocześnie izolując ich od obaw związanych z infrastrukturą. Jest to wzorzec, który nie implikuje "No Server", ale raczej "Less Server". Kod bezserwerowy jest sterowany zdarzeniami. Kod może być wyzwalany przez dowolne elementy od tradycyjnego żądania sieci Web HTTP do czasomierza lub wynik przekazywania pliku. Infrastruktura za bezserwerową umożliwia natychmiastowe skalowanie w celu spełnienia elastycznych wymagań i oferuje szeroką rozliczenie za użycie. Bezserwerowy wymaga nowego sposobu podejścia do tworzenia aplikacji i nie jest odpowiednim rozwiązaniem dla każdego problemu. Jako programista musisz wybrać:
 
 * Jakie są zalety i wady bezserwerowe?
 * Dlaczego należy wziąć pod uwagę bezserwerowe aplikacje?

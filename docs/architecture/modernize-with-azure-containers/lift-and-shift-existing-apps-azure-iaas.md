@@ -2,26 +2,26 @@
 title: Podnieś i Przenieś istniejące aplikacje .NET do usługi Azure IaaS (infrastruktura chmury — gotowe)
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows.
 ms.date: 04/28/2018
-ms.openlocfilehash: e25ddbf9b6e62c264f3f4d4580d7df3553d262ea
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ae181784e7de5f66b34d2dc38c6e9ec2e004a0c3
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660739"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373987"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Podnieś i Przenieś istniejące aplikacje .NET do usługi Azure IaaS (infrastruktura chmury — gotowe)
 
 > Została Pierwszym krokiem jest zredukowanie inwestycji lokalnych i łącznego kosztu konserwacji sprzętu i sieci, a po prostu ponowne hostowanie istniejących aplikacji w chmurze.
 
-Przed przystąpieniem do migrowania istniejących aplikacji do platformy Azure infrastruktura jako usługa (IaaS), ważne jest przeanalizowanie przyczyn, dla których chcesz migrować bezpośrednio do IaaS na platformie Azure. Scenariusz na tym poziomie operacji modernizacji zasadniczo ma rozpocząć korzystanie z maszyn wirtualnych w chmurze, zamiast korzystać z bieżącej infrastruktury lokalnej.
+Przed przystąpieniem *do* migrowania istniejących aplikacji do platformy Azure infrastruktura jako usługa (IaaS), ważne jest przeanalizowanie *przyczyn, dla których chcesz* migrować bezpośrednio do IaaS na platformie Azure. Scenariusz na tym poziomie operacji modernizacji zasadniczo ma rozpocząć korzystanie z maszyn wirtualnych w chmurze, zamiast korzystać z bieżącej infrastruktury lokalnej.
 
-Innym punktem do przeanalizowania jest to, że warto przeprowadzić migrację do czystego IaaS chmury, zamiast dodawać bardziej zaawansowane usługi zarządzane na platformie Azure. Określ, które przypadki mogą wymagać IaaS w pierwszym miejscu.
+Innym punktem do przeanalizowania jest to, że warto przeprowadzić migrację do czystego IaaS *chmury, zamiast* dodawać bardziej zaawansowane usługi zarządzane na platformie Azure. Określ, które przypadki mogą wymagać IaaS w pierwszym miejscu.
 
 Rysunek 2-1. pozycje infrastruktury chmurowej — gotowe aplikacje na poziomach dojrzałości modernizacji:
 
 ![Pozycjonowanie aplikacji gotowych do infrastruktury chmurowej](./media/image2-1.png)
 
-> **Rysunek 2-1.** Pozycjonowanie aplikacji gotowych do infrastruktury chmurowej
+**Rysunek 2-1.** Pozycjonowanie aplikacji gotowych do infrastruktury chmurowej
 
 ## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>Dlaczego należy migrować istniejące aplikacje sieci Web platformy .NET do usługi Azure IaaS
 
@@ -65,7 +65,7 @@ Na rysunku 2-2 przedstawiono wbudowane mapowanie zależności dla wszystkich po�
 
 ![Pozycjonowanie aplikacji gotowych do infrastruktury chmurowej](./media/image2-2.png)
 
-> **Rysunek 2-2.** Pozycjonowanie aplikacji gotowych do infrastruktury chmurowej
+**Rysunek 2-2.** Pozycjonowanie aplikacji gotowych do infrastruktury chmurowej
 
 ## <a name="use-azure-site-recovery-to-migrate-your-existing-vms-to-azure-vms"></a>Używanie Azure Site Recovery do migrowania istniejących maszyn wirtualnych do maszyn wirtualnych platformy Azure
 
@@ -77,7 +77,7 @@ Rysunek 2-3 przedstawia wykonywanie wielu migracji maszyn wirtualnych przy użyc
 
 ![Pozycjonowanie aplikacji gotowych do infrastruktury chmurowej](./media/image2-3.png)
 
-> **Rysunek 2-3.** Pozycjonowanie aplikacji gotowych do infrastruktury chmurowej
+**Rysunek 2-3.** Pozycjonowanie aplikacji gotowych do infrastruktury chmurowej
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 

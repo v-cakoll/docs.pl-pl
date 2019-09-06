@@ -2,12 +2,12 @@
 title: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows (wersja 2)
 description: Dowiedz się, jak Podnieś i przenieść istniejące aplikacje do chmury platformy Azure i kontenerów z tą książką elektroniczną.
 ms.date: 04/28/2018
-ms.openlocfilehash: ab2b58441af7aed6a8cd868751339b555a345565
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 99265e6179554214ae1684b6ea266693be7f80c1
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660853"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374164"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows (wersja 2)
 
@@ -64,7 +64,7 @@ W tym przewodniku przedstawiono również zalety przechodzenia aplikacji do chmu
 
 Organizacje zwykle przechodzą na chmurę, aby uzyskać elastyczność i szybkość, którą mogą uzyskać w swoich aplikacjach. Można skonfigurować tysiące serwerów (maszyn wirtualnych) w chmurze w ciągu kilku minut w porównaniu do tygodni, które zwykle są potrzebne do skonfigurowania serwerów lokalnych.
 
-W przypadku migrowania aplikacji do chmury nie ma żadnej jednolitej strategii. Odpowiednia strategia migracji zależy od potrzeb i priorytetów organizacji oraz rodzaju aplikacji, które są migrowane. Nie wszystkie aplikacje uzasadniają inwestycję w model platformy jako usługi ([PaaS](https://azure.microsoft.com/overview/what-is-paas/)) lub opracowywanie modelu aplikacji natywnych dla [chmury](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) . W wielu przypadkach można podjąć etapowe lub przyrostowe podejście do inwestowania w przeniesienie zasobów do chmury w zależności od potrzeb firmy.
+W przypadku migrowania aplikacji do chmury nie ma żadnej jednolitej strategii. Odpowiednia strategia migracji zależy od potrzeb i priorytetów organizacji oraz rodzaju aplikacji, które są migrowane. Nie wszystkie aplikacje uzasadniają inwestycję w model platformy jako usługi ([PaaS](https://azure.microsoft.com/overview/what-is-paas/)) lub opracowywanie modelu aplikacji [natywnych dla chmury](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) . W wielu przypadkach można podjąć etapowe lub przyrostowe podejście do inwestowania w przeniesienie zasobów do chmury w zależności od potrzeb firmy.
 
 W przypadku nowoczesnych aplikacji z najlepszą długoterminową elastyczność i korzyścią dla organizacji możesz skorzystać z inwestycji w architekturę aplikacji *natywnych dla chmury* . Jednak w przypadku aplikacji, które są istniejącymi lub starszymi zasobami, klucz ma poświęcać za minimalny czas i pieniądze (bez konieczności zmiany architektury lub zmian w kodzie) podczas przechodzenia do chmury w celu osiągnięcia znaczących korzyści.
 
@@ -72,7 +72,7 @@ Na rysunku 1-1 przedstawiono możliwe ścieżki, które można wykonać po przen
 
  ![Ścieżki modernizacji istniejących aplikacji i usług platformy .NET](./media/image1-1.png)
 
-> **Rysunek 1-1**. Ścieżki modernizacji istniejących aplikacji i usług platformy .NET
+**Rysunek 1-1**. Ścieżki modernizacji istniejących aplikacji i usług platformy .NET
 
 Każde podejście migracji ma różne zalety i przyczyny jego użycia. Podczas migrowania aplikacji do chmury można wybrać jedno podejście lub wybrać pewne składniki z wielu metod. Pojedyncze aplikacje nie są ograniczone do pojedynczego podejścia lub stanu ważności. Na przykład wspólne podejście hybrydowe będzie obejmować pewne składniki lokalne oraz inne składniki w chmurze.
 
@@ -85,7 +85,7 @@ Ten prosty typ migracji jest zwykle znany w branży jako "dźwig & Shift".
 
 Trzeci poziom dojrzałości jest ostatecznym celem w chmurze, ale jest on opcjonalny w przypadku wielu aplikacji, a nie głównego punktu skupienia tego przewodnika:
 
-**Poziom 3: Aplikacje natywne** w chmurze: Takie podejście migracji zwykle jest zależne od potrzeb firmy i ukierunkowanych na modernizację aplikacji o znaczeniu strategicznym. Na tym poziomie używasz usług PaaS Services do przenoszenia aplikacji na platformę obliczeniową PaaS. Wdrażaj aplikacje natywne w [chmurze](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) i architekturę mikrousług, aby rozwijać aplikacje z długoterminową elastyczność i skalować je do nowych limitów. Ten typ modernizacji zwykle wymaga projektowania zaprojektowanego dla chmury. Często należy napisać nowy kod, szczególnie podczas przenoszenia do modeli aplikacji i mikrousług opartych na chmurze. Takie podejście może pomóc w uzyskaniu korzyści, które są trudne do osiągnięcia w lokalnym i lokalnym środowisku aplikacji.
+**Poziom 3: Aplikacje natywne** w chmurze: Takie podejście migracji zwykle jest zależne od potrzeb firmy i ukierunkowanych na modernizację aplikacji o znaczeniu strategicznym. Na tym poziomie używasz usług PaaS Services do przenoszenia aplikacji na platformę obliczeniową PaaS. Wdrażaj aplikacje [natywne w chmurze](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) i architekturę mikrousług, aby rozwijać aplikacje z długoterminową elastyczność i skalować je do nowych limitów. Ten typ modernizacji zwykle wymaga projektowania zaprojektowanego dla chmury. Często należy napisać nowy kod, szczególnie podczas przenoszenia do modeli aplikacji i mikrousług opartych na chmurze. Takie podejście może pomóc w uzyskaniu korzyści, które są trudne do osiągnięcia w lokalnym i lokalnym środowisku aplikacji.
 
 W tabeli 1-1 opisano główne zalety i przyczyny wyboru każdej metody migracji lub modernizacji.
 
@@ -111,7 +111,7 @@ Na rysunku 1-2 przedstawiono podstawowe technologie i style architektury używan
 
 ![Podstawowe technologie dla każdego poziomu zapadalności dla modernizacji istniejących aplikacji sieci Web platformy .NET](./media/image1-2.png)
 
-> **Rysunek 1-2.** Podstawowe technologie dla każdego poziomu zapadalności dla modernizacji istniejących aplikacji sieci Web platformy .NET
+**Rysunek 1-2.** Podstawowe technologie dla każdego poziomu zapadalności dla modernizacji istniejących aplikacji sieci Web platformy .NET
 
 Rysunek 1-2 wyróżnia najpopularniejsze scenariusze, ale wiele hybrydowych i mieszanych odmian jest możliwe, gdy chodzi o architekturę. Na przykład modele zapadalności dotyczą nie tylko wbudowanych architektur w istniejących aplikacjach sieci Web, ale również do orientacji usługi, warstwy N-warstwowej i innych odmian stylu architektury. Wyższy fokus lub wartość procentowa dla jednego lub innego typu architektury i powiązanych technologii określają ogólny poziom ważności aplikacji.
 
@@ -119,17 +119,17 @@ Każdy poziom dojrzałości w procesie modernizacji jest skojarzony z następuj�
 
 - **Infrastruktura chmury — gotowe** (rehostowanie lub podstawowy dźwig & Shift): W pierwszym kroku wiele organizacji chce tylko szybko wykonać strategię migracji do chmury. W takim przypadku aplikacje są przeszukane. Większość operacji hostowania można zautomatyzować za pomocą [Azure Migrate](https://aka.ms/azuremigrate), usługi, która zapewnia wskazówki, szczegółowe informacje i mechanizmy, które są potrzebne do ułatwienia migracji do platformy Azure w oparciu o narzędzia chmurowe, takie jak [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/) i [migracja bazy danych platformy Azure. Usługa](https://azure.microsoft.com/campaigns/database-migration/). Możesz również skonfigurować Ręczne Hostowanie, aby poznać szczegóły infrastruktury dotyczące zasobów w przypadku przenoszenia starszych aplikacji do chmury. Na przykład możesz przenieść aplikacje do maszyn wirtualnych na platformie Azure z małą modyfikacją — prawdopodobnie z uwzględnieniem tylko drobnych zmian konfiguracji. Sieć w tym przypadku jest podobna do środowiska lokalnego, szczególnie jeśli tworzysz sieci wirtualne na platformie Azure.
 
-- **Zoptymalizowane pod kątem chmury** (Zarządzane usługi i kontenery systemu Windows): Ten model polega na wprowadzeniu kilku ważnych optymalizacji wdrożenia w celu uzyskania znaczących korzyści z chmury, bez konieczności zmiany podstawowej architektury aplikacji. Podstawowym krokiem jest dodanie obsługi kontenerów [systemu Windows](https://docs.microsoft.com/virtualization/windowscontainers/about/) do istniejących aplikacji .NET Framework. Ten ważny krok (kontenerach) nie wymaga dotknięcia kodu, więc jest jasne, że zostanie wysunięty ogólny skok i przesunięcia. Za pomocą narzędzi [platformy Docker](https://www.docker.com/)można używać narzędzi takich jak [Image2Docker](https://github.com/docker/communitytools-image2docker-win) lub Visual Studio. Program Visual Studio automatycznie wybiera inteligentne wartości domyślne dla aplikacji ASP.NET i obrazów kontenerów systemu Windows. Narzędzia te oferują zarówno szybką pętlę wewnętrzną, jak i szybką ścieżkę do uzyskiwania kontenerów na platformę Azure. Zwiększona elastyczność w przypadku wdrażania w wielu środowiskach. Następnie przejście do środowiska produkcyjnego pozwala wdrożyć kontenery systemu Windows na [platformie azure Web App for Containers](https://azure.microsoft.com/services/app-service/containers/), [Azure Container Instances (ACI)](https://azure.microsoft.com/services/container-instances/)i maszyn wirtualnych platformy Azure z systemem Windows Server 2016 i kontenerami, jeśli wolisz podejście IaaS. W przypadku bardziej złożonych aplikacji z wieloma kontenerami Rozważ użycie programu Orchestrator, takiego jak [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/). 
+- **Zoptymalizowane pod kątem chmury** (Zarządzane usługi i kontenery systemu Windows): Ten model polega na wprowadzeniu kilku ważnych optymalizacji wdrożenia w celu uzyskania znaczących korzyści z chmury, bez konieczności zmiany podstawowej architektury aplikacji. Podstawowym krokiem jest dodanie obsługi [kontenerów systemu Windows](https://docs.microsoft.com/virtualization/windowscontainers/about/) do istniejących aplikacji .NET Framework. Ten ważny krok (kontenerach) nie wymaga dotknięcia kodu, więc jest jasne, że zostanie wysunięty ogólny skok i przesunięcia. Za pomocą narzędzi [platformy Docker](https://www.docker.com/)można używać narzędzi takich jak [Image2Docker](https://github.com/docker/communitytools-image2docker-win) lub Visual Studio. Program Visual Studio automatycznie wybiera inteligentne wartości domyślne dla aplikacji ASP.NET i obrazów kontenerów systemu Windows. Narzędzia te oferują zarówno szybką pętlę wewnętrzną, jak i szybką ścieżkę do uzyskiwania kontenerów na platformę Azure. Zwiększona elastyczność w przypadku wdrażania w wielu środowiskach. Następnie przejście do środowiska produkcyjnego pozwala wdrożyć kontenery systemu Windows na [platformie azure Web App for Containers](https://azure.microsoft.com/services/app-service/containers/), [Azure Container Instances (ACI)](https://azure.microsoft.com/services/container-instances/)i maszyn wirtualnych platformy Azure z systemem Windows Server 2016 i kontenerami, jeśli wolisz podejście IaaS. W przypadku bardziej złożonych aplikacji z wieloma kontenerami Rozważ użycie programu Orchestrator, takiego jak [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/). 
 
 Podczas tej początkowej modernizacji można także dodawać zasoby z chmury, takie jak monitorowanie za pomocą narzędzi takich jak [Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview); Potoki ciągłej integracji/ciągłego wdrażania dla cyklu życia aplikacji z [Azure DevOps Services](https://azure.microsoft.com/services/devops/); i wiele dodatkowych usług zasobów danych, które są dostępne na platformie Azure. Na przykład można zmodyfikować monolityczną aplikację sieci Web, która została pierwotnie opracowana przy użyciu tradycyjnych [ASP.NET Web Forms](https://www.asp.net/web-forms) lub [ASP.NET MVC](https://www.asp.net/mvc), ale teraz można ją wdrożyć za pomocą kontenerów systemu Windows. W przypadku korzystania z kontenerów systemu Windows należy również migrować dane do bazy danych w [Azure SQL Database wystąpieniu zarządzanym](https://docs.microsoft.com/azure/sql-database/), bez konieczności zmiany podstawowej architektury aplikacji.
 
-- **Cloud-Native**: Jak to możliwe, należy wziąć pod uwagę Tworzenie aplikacji natywnych w [chmurze](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) , gdy są przeznaczone dla dużych i złożonych aplikacji z wieloma niezależnymi zespołami programistycznymi pracującymi na różnych mikrousługach, które można opracować i wdrożyć autonomicznie. Ponadto ze względu na granulowaną i niezależną skalowalność na mikrousługach. Takie podejście podejścia do tych rozwiązań ma bardzo ważne wyzwania i złożoność, ale można je znacznie uprościć przy użyciu PaaS w chmurze i programów Orchestrator, takich jak [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/) (zarządzane Kubernetes) i [Azure Functions](https://azure.microsoft.com/services/functions/) dla podejście bezserwerowe. Wszystkie te podejścia (takie jak mikrousługi i bezserwerowe) wymagają zazwyczaj architektów w chmurze i zapisują nowy kod — kod dostosowany do określonych platform PaaS lub kod, który jest wyrównany do określonych architektur, takich jak mikrousługi.
+- **Cloud-Native**: Jak to możliwe, należy wziąć pod uwagę Tworzenie aplikacji [natywnych w chmurze](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) , gdy są przeznaczone dla dużych i złożonych aplikacji z wieloma niezależnymi zespołami programistycznymi pracującymi na różnych mikrousługach, które można opracować i wdrożyć autonomicznie. Ponadto ze względu na granulowaną i niezależną skalowalność na mikrousługach. Takie podejście podejścia do tych rozwiązań ma bardzo ważne wyzwania i złożoność, ale można je znacznie uprościć przy użyciu PaaS w chmurze i programów Orchestrator, takich jak [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/) (zarządzane Kubernetes) i [Azure Functions](https://azure.microsoft.com/services/functions/) dla podejście bezserwerowe. Wszystkie te podejścia (takie jak mikrousługi i bezserwerowe) wymagają zazwyczaj architektów w chmurze i zapisują nowy kod — kod dostosowany do określonych platform PaaS lub kod, który jest wyrównany do określonych architektur, takich jak mikrousługi.
 
 Rysunek 1-3 pokazuje wewnętrzne technologie, których można użyć dla każdego poziomu dojrzałości:
 
 ![Wewnętrzne technologie dla każdego poziomu dojrzałości modernizacji](./media/image1-3.png)
 
-> **Rysunek 1-3.** Wewnętrzne technologie dla każdego poziomu dojrzałości modernizacji
+**Rysunek 1-3.** Wewnętrzne technologie dla każdego poziomu dojrzałości modernizacji
 
 ## <a name="lift-and-shift-scenario"></a>Scenariusz podnoszenia i przesunięcia
 
@@ -137,7 +137,7 @@ W celu przeprowadzenia migracji i przesunięcia należy pamiętać, że można u
 
 ![Przykład czystego scenariusza IaaS w chmurze](./media/image1-4.png)
 
-> **Rysunek 1-4**. Przykład czystego scenariusza IaaS w chmurze
+**Rysunek 1-4**. Przykład czystego scenariusza IaaS w chmurze
 
 ## <a name="modernization-scenarios"></a>Scenariusze modernizacji
 
@@ -145,13 +145,13 @@ W przypadku scenariuszy modernizacji może istnieć czysta Aplikacja zoptymalizo
 
 ![Przykład scenariusza "Wybieranie i wybieranie" z bazą danych w zasobach IaaS, DevOps i kontenerach](./media/image1-5.png)
 
-> **Rysunek 1-5.** Przykład scenariusza "Wybieranie i wybieranie" z bazą danych w zasobach IaaS, DevOps i kontenerach
+**Rysunek 1-5.** Przykład scenariusza "Wybieranie i wybieranie" z bazą danych w zasobach IaaS, DevOps i kontenerach
 
 Następnie, jako idealny scenariusz dla wielu istniejących aplikacji .NET Framework do migracji, można przeprowadzić migrację do aplikacji zoptymalizowanej pod kątem chmury, aby uzyskać znaczne korzyści z małego nakładu pracy. Takie podejście umożliwia również skonfigurowanie natywnej chmury jako możliwej do przyszłej ewolucji. Na rysunku 1-6 przedstawiono przykład.
 
 ![Przykładowy scenariusz aplikacji zoptymalizowanych pod kątem chmury, z kontenerami systemu Windows i usługami zarządzanymi](./media/image1-6.png)
 
-> **Rysunek 1-6.** Przykładowy scenariusz aplikacji zoptymalizowanych pod kątem chmury, z kontenerami systemu Windows i usługami zarządzanymi
+**Rysunek 1-6.** Przykładowy scenariusz aplikacji zoptymalizowanych pod kątem chmury, z kontenerami systemu Windows i usługami zarządzanymi
 
 Jeszcze więcej, możesz rozszerzyć istniejącą aplikację zoptymalizowaną pod kątem chmury, dodając kilka mikrousług dla konkretnych scenariuszy. Spowoduje to przełączenie go częściowo do poziomu modelu natywnego w chmurze, który nie jest głównym fokusem niniejszych wskazówek.
 
@@ -161,7 +161,7 @@ Ten przewodnik obejmuje określony podzestaw przykładowych scenariuszy, jak pok
 
 ![Chmura w chmurze nie została omówiona w tym przewodniku](./media/image1-7.png)
 
-> **Rysunek 1-7.** Chmura w chmurze nie została omówiona w tym przewodniku
+**Rysunek 1-7.** Chmura w chmurze nie została omówiona w tym przewodniku
 
 Fokus tego przewodnika jest określony. Pokazuje ścieżkę, którą można wykonać w celu osiągnięcia przełączenia i przesunięcia istniejących aplikacji .NET, bez konieczności ich tworzenia i wprowadzania zmian w kodzie. W końcu przedstawiono sposób, w jaki aplikacja jest zoptymalizowana pod kątem chmury.
 

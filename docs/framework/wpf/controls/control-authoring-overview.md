@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 3ea5519259ba2ee31bfd6bc25f6bedf1f1250799
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 61cd7b61a586afa2addd55acff7cac6d16d92a1f
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401544"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374522"
 ---
 # <a name="control-authoring-overview"></a>Przegląd Autorstwo formantów
 
@@ -197,9 +197,9 @@ Upewnij się, że wdrożono `set` środowisko CLR `get` i metody dostępu zgodni
 
 Załączone właściwości należy zaimplementować w niestandardowych kontrolkach, korzystając z następujących wskazówek:
 
-- `public`  Ma metodęPropertyName`Property` , która została utworzona przy użyciu metody. <xref:System.Windows.DependencyProperty.RegisterAttached%2A> `static` `readonly` <xref:System.Windows.DependencyProperty> Nazwa właściwości, która jest przesyłana <xref:System.Windows.DependencyProperty.RegisterAttached%2A> do musi być zgodna z parametrem *PropertyName*.
+- `public` Ma metodęPropertyName`Property` , która została utworzona przy użyciu metody. <xref:System.Windows.DependencyProperty.RegisterAttached%2A> `static` `readonly` <xref:System.Windows.DependencyProperty> Nazwa właściwości, która jest przesyłana <xref:System.Windows.DependencyProperty.RegisterAttached%2A> do musi być zgodna z parametrem *PropertyName*.
 
-- Zaimplementuj parę `public` `static` metod CLR o nazwie `Set` *PropertyName* i `Get` *PropertyName*. Obie metody powinny akceptować klasę pochodną <xref:System.Windows.DependencyProperty> jako pierwszy argument. Metoda PropertyName akceptuje również argument, którego typ jest zgodny z typem danych zarejestrowanych dla właściwości.  `Set` Metoda PropertyName powinna zwracać wartość tego samego typu.  `Get` Jeśli brakuje metody PropertyName, właściwość jest oznaczona jako tylko do odczytu.  `Set`
+- Zaimplementuj parę `public` `static` metod CLR o nazwie `Set` *PropertyName* i `Get` *PropertyName*. Obie metody powinny akceptować klasę pochodną <xref:System.Windows.DependencyProperty> jako pierwszy argument. Metoda PropertyName akceptuje również argument, którego typ jest zgodny z typem danych zarejestrowanych dla właściwości. `Set` Metoda PropertyName powinna zwracać wartość tego samego typu. `Get` Jeśli brakuje metody PropertyName, właściwość jest oznaczona jako tylko do odczytu. `Set`
 
 - `Set` Funkcja PropertyName `Get`i *PropertyName* musi bezpośrednio kierować do <xref:System.Windows.DependencyObject.GetValue%2A> metod <xref:System.Windows.DependencyObject.SetValue%2A> i w docelowym obiekcie zależności. Projektanci mogą uzyskać dostęp do dołączonej właściwości, wywołując przez otokę metody lub wykonując bezpośrednie wywołanie do docelowego obiektu zależności.
 
@@ -264,7 +264,7 @@ Zasoby specyficzne dla motywu są przechowywane w słowniku zasobów z określon
 
 Nie trzeba definiować zasobów dla każdego motywu. Jeśli zasób nie jest zdefiniowany dla określonego motywu, formant sprawdza `Classic.xaml` dla zasobu. Jeśli zasób nie jest zdefiniowany w pliku, który odnosi się do bieżącego motywu lub w `Classic.xaml`programie, formant używa zasobu generycznego, który znajduje się w pliku słownika zasobów o `generic.xaml`nazwie.  `generic.xaml` Plik znajduje się w tym samym folderze co pliki słowników zasobów specyficznych dla motywu. Chociaż `generic.xaml` nie odpowiada określonemu motywowi systemu Windows, nadal jest słownikiem poziomu motywu.
 
-[Kontrolka niestandardowa NumericUpDown z motywem i obsługą automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=160025) — `NumericUpDown` przykład zawiera dwa słowniki zasobów dla kontrolki: jeden jest w pliku Generic. XAML i jeden z nich znajduje się w Luna. NormalColor. XAML.  Możesz uruchomić aplikację i przełączać się między motywem Silver w systemie Windows XP a innym motywem, aby zobaczyć różnicę między dwoma szablonami kontroli. (Jeśli korzystasz z systemu Windows Vista, możesz zmienić nazwę Luna. NormalColor. XAML na Aero. NormalColor. XAML i przełączać się między dwoma motywami, takimi jak klasyczny Windows i motyw domyślny dla systemu Windows Vista).
+Kontrolka niestandardowa NumericUpDown [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) lub [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) z obsługą języka i automatyzacji interfejsu użytkownika zawiera dwa `NumericUpDown` słowniki zasobów dla kontrolki: jeden jest w pliku Generic. XAML, a drugi — w Luna. NormalColor. XAML. 
 
 Po umieszczeniu <xref:System.Windows.Controls.ControlTemplate> w dowolnym pliku słownika zasobów specyficznych dla motywu należy utworzyć statyczny Konstruktor dla kontrolki i <xref:System.Windows.DependencyProperty.OverrideMetadata%28System.Type%2CSystem.Windows.PropertyMetadata%29> wywołać metodę na <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>, jak pokazano w poniższym przykładzie.
 

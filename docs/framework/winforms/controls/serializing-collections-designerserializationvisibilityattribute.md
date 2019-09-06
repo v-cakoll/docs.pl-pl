@@ -14,12 +14,12 @@ ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 2fbb0715d148b443b1eca8f400e4ad43eb51fa43
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 4fd1f1dc0c2c0ad9ae2009ed592e48b8eeaa2783
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015734"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373686"
 ---
 # <a name="walkthrough-serialize-collections-of-standard-types"></a>Przewodnik: Serializacja kolekcji typów standardowych
 
@@ -90,8 +90,8 @@ Aby przetestować zachowanie serializacji formantu, należy umieścić go w form
 
 5. Wpisz kilka ciągów w **edytorze kolekcji ciągów**. Należy je oddzielić przez naciśnięcie klawisza **Enter** na końcu każdego ciągu. Po zakończeniu wprowadzania ciągów kliknij przycisk **OK** .
 
-> [!NOTE]
-> Wpisane ciągi są wyświetlane w <xref:System.Windows.Forms.TextBox>. `SerializationDemoControl`
+    > [!NOTE]
+    > Wpisane ciągi są wyświetlane w <xref:System.Windows.Forms.TextBox>. `SerializationDemoControl`
 
 6. W **Eksplorator rozwiązań**kliknij przycisk **Pokaż wszystkie pliki** .
 

@@ -2,12 +2,12 @@
 title: Przyczyny modernizacji istniejących aplikacji .NET do aplikacji zoptymalizowanych pod kątem chmury
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Przyczyny modernizacji istniejących aplikacji .NET do aplikacji zoptymalizowanych pod kątem chmury
 ms.date: 04/28/2018
-ms.openlocfilehash: 5aa9828f65f76138461c18711fe03bdbe6a70ffd
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: aabce73efaae520a3b59c70d53519b847f2c6a94
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676965"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373932"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Przyczyny modernizacji istniejących aplikacji .NET do aplikacji zoptymalizowanych pod kątem chmury
 
@@ -41,9 +41,9 @@ Poniższa lista zawiera opis głównych założenia lub praktyk dla aplikacji zo
 
 Rysunek 4-2 przedstawia główne, opcjonalne filary aplikacji zoptymalizowanej pod kątem chmury. Im więcej filarów zaimplementowano, tym readier, że aplikacja będzie działać pomyślnie w zaspokajaniu oczekiwań klientów.
 
-> ![Główne filary aplikacji zoptymalizowanej pod kątem chmury](./media/image2.png)
->
-> **Rysunek 4-2.** Główne filary aplikacji zoptymalizowanej pod kątem chmury
+![Główne filary aplikacji zoptymalizowanej pod kątem chmury](./media/image2.png)
+
+**Rysunek 4-2.** Główne filary aplikacji zoptymalizowanej pod kątem chmury
 
 W celu podsumowania Aplikacja zoptymalizowana pod kątem chmury to podejście do kompilowania aplikacji, które wykorzystują model przetwarzania w chmurze, a przy użyciu kombinacji kontenerów, zarządzanej infrastruktury chmurowej, odpornych technik aplikacji, monitorowanie, ciągłe dostarczanie i DevOps, bez konieczności ponownej architektury i firmy Recode istniejących aplikacji.
 

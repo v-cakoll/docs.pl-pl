@@ -2,23 +2,23 @@
 title: Liczby zmiennoprzecinkowe
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
-ms.openlocfilehash: d1c033d7999fa403aaf18fccb765da178cba169a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 1f76a6ab8cc2a44580229014dd8ebae6b317921f
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882048"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374428"
 ---
 # <a name="floating-point-numbers"></a>Liczby zmiennoprzecinkowe
-W tym temacie opisano niektóre problemy, które często deweloperzy napotykają podczas pracy z liczb zmiennoprzecinkowych w ADO.NET. Te problemy są spowodowane przez sposób komputerom przechowywania liczb zmiennoprzecinkowych i nie są specyficzne dla określonego dostawcy takich jak <xref:System.Data.SqlClient> lub <xref:System.Data.OracleClient>.  
+W tym temacie opisano niektóre problemy, które często napotykają deweloperzy, gdy pracują z liczbą zmiennoprzecinkową w ADO.NET. Te problemy są spowodowane sposobem, w jaki komputery przechowują liczby zmiennoprzecinkowe i nie są specyficzne dla określonego dostawcy, takiego jak <xref:System.Data.SqlClient> lub. <xref:System.Data.OracleClient>  
   
- Liczby zmiennoprzecinkowe zwykle nie mają dokładnie reprezentacja binarna. Zamiast tego komputer przechowuje przybliżeniem liczby. W różnym czasie różną liczbę cyfr, może służyć do reprezentowania liczby. Gdy zmiennoprzecinkowy punktu, że liczba jest konwertowana z reprezentacji jednego innego reprezentacji najmniej znaczącymi cyframi tej liczby może się nieco różnić. Konwersja zazwyczaj występuje, gdy liczba jest rzutowanie z jednego typu na inny typ. Zmiana występuje, czy konwersja występuje w bazie danych, między typami, które reprezentują wartości z bazy danych lub między typami. Z powodu tych zmian numery, które logicznie są takie same może mieć zmian w ich najmniej znaczący cyfr, które spowoduje ich mają różne wartości. Liczba cyfr w numerze może być większy lub mniejszy niż oczekiwano. Gdy sformatowany jako ciąg, liczba nie mogą być wyświetlane z oczekiwaną wartością.  
+ Liczby zmiennoprzecinkowe zwykle nie mają dokładnej reprezentacji binarnej. Zamiast tego komputer przechowuje przybliżenie liczby. W różnym czasie różne liczby cyfr binarnych mogą być używane do reprezentowania liczby. Gdy liczba zmiennoprzecinkowa jest konwertowana z jednej reprezentacji na inną reprezentację, najmniej znaczące cyfry tej liczby mogą się nieco różnić. Konwersja występuje zwykle, gdy liczba jest rzutowana z jednego typu na inny typ. Odmiana występuje niezależnie od tego, czy konwersja jest wykonywana w bazie danych, między typami reprezentującymi wartości bazy danych, czy między typami. Ze względu na te zmiany liczby, które byłyby logicznie równe, mogą mieć zmiany w ich najmniej znaczących cyfrach, które powodują, że mają różne wartości. Liczba cyfr dokładności w liczbie może być większa lub mniejsza niż oczekiwano. W przypadku formatowania jako ciągu liczba nie może zawierać oczekiwanej wartości.  
   
- Aby zminimalizować te skutki, należy użyć najlepiej dopasowany między typy liczbowe, które są dostępne dla Ciebie. Na przykład jeśli pracujesz z programem SQL Server, dokładna wartość numeryczna może zmienić wartość rzeczywistego typu języka Transact-SQL po konwersji na wartość typu float. W .NET Framework, konwertowania <xref:System.Single> do <xref:System.Double> także może powodować nieoczekiwane rezultaty. W obu przypadkach dobre rozwiązanie jest wszystkie wartości w aplikacji użyj tego samego typu liczbowego. Można również użyć typu dziesiętnego dokładności stałej lub Rzutowanie liczb zmiennoprzecinkowych do typu dziesiętnego stałej dokładności, przed rozpoczęciem pracy z nimi.  
+ Aby zminimalizować te skutki, należy użyć najbliższego dopasowania między typami liczbowymi, które są dla Ciebie dostępne. Na przykład jeśli pracujesz z SQL Server, dokładna wartość liczbowa może ulec zmianie w przypadku konwersji wartości języka Transact-SQL typu rzeczywistego na wartość typu float. W .NET Framework konwersja a <xref:System.Single> na a <xref:System.Double> może również dawać nieoczekiwane wyniki. W obu tych przypadkach dobrą strategią jest upewnienie się, że wszystkie wartości w aplikacji używają tego samego typu liczbowego. Można również użyć typu dziesiętnego o stałej precyzji lub rzutowania liczb zmiennoprzecinkowych na typ dziesiętny o stałej precyzji przed rozpoczęciem pracy z nimi.  
   
- Aby uniknąć problemów z funkcją porównania równości, należy wziąć pod uwagę kodowania aplikacji, tak aby zmiany w najmniej znaczącymi cyframi są ignorowane. Na przykład zamiast porównywania, aby zobaczyć, czy dwie liczby są równe, Odejmij jedną cyfrę z drugiej liczby. Jeśli różnica jest dopuszczalne marginesem zaokrąglania, aplikację można traktować liczb, tak, jakby były takie same.  
+ Aby obejść problemy z porównaniem równości, należy rozważyć kodowanie aplikacji tak, aby różnice w najmniej znaczących cyfr zostały zignorowane. Na przykład zamiast porównywania, aby zobaczyć, czy dwie liczby są równe, Odejmij jedną liczbę od drugiej. Jeśli różnica mieści się w akceptowalnym marginesie zaokrąglenia, aplikacja może traktować liczby tak, jakby były takie same.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dlaczego liczby zmiennoprzecinkowe mogą tracić dokładność](/cpp/build/reference/why-floating-point-numbers-may-lose-precision)
+- [Dlaczego liczby zmiennoprzecinkowe mogą tracić dokładność](/cpp/build/why-floating-point-numbers-may-lose-precision)
 - [Omówienie ADO.NET](ado-net-overview.md)

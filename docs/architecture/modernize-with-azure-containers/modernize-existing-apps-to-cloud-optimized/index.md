@@ -2,12 +2,12 @@
 title: Modernizacja istniejących aplikacji .NET do aplikacji zoptymalizowanych pod kątem chmury
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows.
 ms.date: 04/28/2018
-ms.openlocfilehash: 00385ac1e2f41d2005606fa7f943618ec253ffc2
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 92dc0cde11bb35797fe3c4e8442a2a6514a27e08
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68677025"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374059"
 ---
 # <a name="modernize-existing-net-apps-to-cloud-optimized-applications"></a>Modernizacja istniejących aplikacji .NET do aplikacji zoptymalizowanych pod kątem chmury
 
@@ -19,7 +19,7 @@ Częściowe modernizacja aplikacji niekoniecznie oznacza pełną migrację i arc
 
 ![Pozycjonowanie aplikacji zoptymalizowanych pod kątem chmury](./media/image1.png)
 
-> **Rysunek 4-1.** Pozycjonowanie aplikacji zoptymalizowanych pod kątem chmury
+**Rysunek 4-1.** Pozycjonowanie aplikacji zoptymalizowanych pod kątem chmury
 
 >[!div class="step-by-step"]
 >[Poprzedni](../migrate-your-relational-databases-to-azure.md)Następny

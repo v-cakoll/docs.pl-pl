@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c15b2c27e51557494f10c2445d75a4bd56c47f91
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: bbf7c1203a1f6089eefce3ed2876c9ade91cc697
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987242"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374450"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Co nowego w .NET Framework
 
@@ -129,7 +129,7 @@ Istnieją dwa sposoby uwidocznienia punktu końcowego kondycji i publikowania in
   host.Description.Behaviors.Add(healthBehavior)
   ```
 
-- Przy użyciu pliku konfiguracji. Na przykład:
+- Przy użyciu pliku konfiguracji. Przykład:
 
   ```xml
   <behaviors>
@@ -141,11 +141,11 @@ Istnieją dwa sposoby uwidocznienia punktu końcowego kondycji i publikowania in
   </behaviors>
   ```
 
-Za pomocą parametrów zapytania, takich `OnServiceFailure`jak, `OnDispatcherFailure`, `OnListenerFailure`, `OnThrottlePercentExceeded`) można zbadać stan kondycji usługi, a dla każdego parametru zapytania można określić kod odpowiedzi HTTP. Jeśli kod odpowiedzi HTTP zostanie pominięty dla parametru zapytania, domyślnie używany jest kod odpowiedzi HTTP 503. Na przykład:
+Za pomocą parametrów zapytania, takich `OnServiceFailure`jak, `OnDispatcherFailure`, `OnListenerFailure`, `OnThrottlePercentExceeded`) można zbadać stan kondycji usługi, a dla każdego parametru zapytania można określić kod odpowiedzi HTTP. Jeśli kod odpowiedzi HTTP zostanie pominięty dla parametru zapytania, domyślnie używany jest kod odpowiedzi HTTP 503. Przykład:
 
 - OnServiceFailure:`https://contoso:81/Service1?health&OnServiceFailure=450`
 
-  Kod stanu odpowiedzi HTTP 450 jest zwracany, gdy element ServiceHost [. State](xref:System.ServiceModel.Channels.CommunicationObject.State) jest większy <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType>niż.
+  Kod stanu odpowiedzi HTTP 450 jest zwracany, gdy element [ServiceHost. State](xref:System.ServiceModel.Channels.CommunicationObject.State) jest większy <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType>niż.
 Parametry zapytania i przykłady:
 
 - OnDispatcherFailure:`https://contoso:81/Service1?health&OnDispatcherFailure=455`
@@ -174,7 +174,7 @@ Stan kondycji usługi może być wyświetlany w formacie HTML przez określenie 
 
 **Ulepszenia o wysokiej rozdzielczości DPI**
 
-W .NET Framework 4,8, WPF dodaje obsługę skalowania DPI na poziomie v2 i trybu mieszanego. Dodatkowe informacje na temat programowania wysokiej rozdzielczości DPI można znaleźć [w temacie Tworzenie aplikacji klasycznych o wysokiej rozdzielczości DPI w systemie Windows](/desktop/hidpi/high-dpi-desktop-application-development-on-windows) .
+W .NET Framework 4,8, WPF dodaje obsługę skalowania DPI na poziomie v2 i trybu mieszanego. Dodatkowe informacje na temat programowania wysokiej rozdzielczości DPI można znaleźć [w temacie Tworzenie aplikacji klasycznych o wysokiej rozdzielczości DPI w systemie Windows](/windows/win32/hidpi/high-dpi-desktop-application-development-on-windows) .
 
 .NET Framework 4,8 usprawnia obsługę hostowanych funkcji HWND i Windows Forms współdziałania w aplikacjach WPF o wysokiej rozdzielczości DPI na platformach obsługujących skalowanie DPI w trybie mieszanym (począwszy od aktualizacji systemu Windows 10 kwietnia 2018). W przypadku, gdy w trybie mieszanym skalowanie wartościowe lub kontrolki Windows Forms są tworzone jako okna z funkcją rozdzielczości DPI, wywoływanie funkcji [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) i [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext)może być obsługiwane w aplikacji WPF w wersji 2 dla monitora i ma rozmiar i odpowiednio skalowane. Taka hostowana zawartość nie jest renderowana w natywnej rozdzielczości DPI; Zamiast tego system operacyjny skaluje hostowaną zawartość do odpowiedniego rozmiaru. Obsługa trybu sygnalizacji DPI na monitor v2 umożliwia również hostowanie formantów WPF (tj. nadrzędnych) w oknie macierzystym w aplikacji o wysokiej rozdzielczości DPI.
 
@@ -257,7 +257,7 @@ Using rsa = RSA.Create(rsaParameters)
 End Using
 ```
 
-Metody <xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType> <xref:System.Security.Cryptography.DSA> i <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> pozwalają generować nowe lub<xref:System.Security.Cryptography.RSA> klucze o określonym rozmiarze klucza. Na przykład:
+Metody <xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType> <xref:System.Security.Cryptography.DSA> i <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> pozwalają generować nowe lub<xref:System.Security.Cryptography.RSA> klucze o określonym rozmiarze klucza. Przykład:
 
 ```csharp
 using (DSA dsa = DSA.Create(2048))
@@ -472,7 +472,7 @@ Program NET Framework 4.7.2 dodaje obsługę dla Always Encrypted opartych na en
 
 - <xref:System.Data.SqlClient.SqlEnclaveAttestationParameters>, która zapewnia parametry zaświadczania używane przez SQL Server do uzyskiwania informacji wymaganych do wykonania określonego protokołu zaświadczania.
 
-Następnie plik konfiguracji aplikacji określa konkretną implementację klasy abstrakcyjnej <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> , która udostępnia funkcje dostawcy enklawy. Przykład:
+Następnie plik konfiguracji aplikacji określa konkretną implementację klasy abstrakcyjnej <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> , która udostępnia funkcje dostawcy enklawy. Na przykład:
 
 ```xml
 <configuration>
@@ -898,7 +898,7 @@ End Interface
 
 ### <a name="character-categories"></a>Kategorie znaków
 
-Znaki w .NET Framework 4.6.2 są klasyfikowane na podstawie standardu [Unicode w wersji 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). W .NET Framework 4,6 i .NET Framework 4.6.1, znaki zostały sklasyfikowane w oparciu o kategorie znaków Unicode 6,3.
+Znaki w .NET Framework 4.6.2 są klasyfikowane na podstawie [standardu Unicode w wersji 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). W .NET Framework 4,6 i .NET Framework 4.6.1, znaki zostały sklasyfikowane w oparciu o kategorie znaków Unicode 6,3.
 
 Obsługa standardu Unicode 8,0 jest ograniczona do klasyfikacji znaków przez <xref:System.Globalization.CharUnicodeInfo> klasę oraz do typów i metod, które są od niego zależne. Obejmują <xref:System.Globalization.StringInfo> one klasę, przeciążoną <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> metodę i [klasy znaków](../../standard/base-types/character-classes-in-regular-expressions.md) rozpoznawane przez aparat wyrażeń regularnych .NET Framework.  Ta zmiana nie ma wpływ na porównanie znaków i ciągów, a także w systemach Windows 7 — w przypadku danych znakowych dostarczonych przez .NET Framework.
 
@@ -1034,7 +1034,7 @@ Wszystkie stałe identyfikatorów URI są uwidocznione <xref:System.Security.Cry
 
 **Buforowanie i limity czasu połączeń z bazami danych Azure SQL**
 
-Po włączeniu puli połączeń i przekroczeniu limitu czasu lub innego błędu logowania, wyjątek jest buforowany i zostanie zgłoszony wyjątek buforowany dla każdej kolejnej próby połączenia przez następne 5 sekund do 1 minuty.  Aby uzyskać więcej informacji, zobacz SQL Servering pooling [(ADO.NET)](../data/adonet/sql-server-connection-pooling.md).
+Po włączeniu puli połączeń i przekroczeniu limitu czasu lub innego błędu logowania, wyjątek jest buforowany i zostanie zgłoszony wyjątek buforowany dla każdej kolejnej próby połączenia przez następne 5 sekund do 1 minuty.  Aby uzyskać więcej informacji, zobacz [SQL Servering pooling (ADO.NET)](../data/adonet/sql-server-connection-pooling.md).
 
 To zachowanie nie jest pożądane podczas łączenia się z bazami danych Azure SQL, ponieważ próby połączenia mogą zakończyć się niepowodzeniem z błędami przejściowymi, które są zwykle przywracane szybko. Aby lepiej zoptymalizować środowisko ponownej próby połączenia, zachowanie w okresie blokowania puli połączeń zostanie usunięte w przypadku niepowodzenia połączeń z bazami danych SQL Azure.
 
@@ -1141,7 +1141,7 @@ W przypadku korzystania z NetTcp z zabezpieczeniami transportu i typem poświadc
 
 - Sekcja [ Transport>wsekcji>NetTcpBinding\<](../configure-apps/file-schema/wcf/transport-of-nettcpbinding.md) [ \<](../configure-apps/file-schema/wcf/nettcpbinding.md)
 
-- [ Sekcja\<](../configure-apps/file-schema/wcf/custombinding.md) sslStreamSecurity > sekcji CustomBinding > [ \<](../configure-apps/file-schema/wcf/sslstreamsecurity.md)
+- [ Sekcja\<sslStreamSecurity > sekcji CustomBinding >](../configure-apps/file-schema/wcf/custombinding.md) [ \<](../configure-apps/file-schema/wcf/sslstreamsecurity.md)
 
 <a name="WPF462" />
 
@@ -1241,7 +1241,7 @@ Skonwertowane aplikacje klasyczne uzyskują tożsamość aplikacji podobną do t
 
 ### <a name="debugging-improvements"></a>Ulepszenia debugowania
 
-Niezarządzany *interfejs API debugowania* został ulepszony w .NET Framework 4.6.2 do wykonania dodatkowej analizy, <xref:System.NullReferenceException> gdy zostanie zgłoszony, aby można było określić, która zmienna w jednym wierszu kodu źródłowego to. `null`   Aby obsłużyć ten scenariusz, dodano następujące interfejsy API do niezarządzanego interfejsu API debugowania.
+*Niezarządzany interfejs API debugowania* został ulepszony w .NET Framework 4.6.2 do wykonania dodatkowej analizy, <xref:System.NullReferenceException> gdy zostanie zgłoszony, aby można było określić, która zmienna w jednym wierszu kodu źródłowego to. `null`   Aby obsłużyć ten scenariusz, dodano następujące interfejsy API do niezarządzanego interfejsu API debugowania.
 
 - Interfejsy [ICorDebugCode4](../unmanaged-api/debugging/icordebugcode4-interface.md), [ICorDebugVariableHome](../unmanaged-api/debugging/icordebugvariablehome-interface.md)i [ICorDebugVariableHomeEnum](../unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) , które uwidaczniają natywne domy zmiennych zarządzanych. Dzięki temu debugery mogą wykonywać pewne analizy przepływu kodu, gdy <xref:System.NullReferenceException> wystąpi, i aby przejść do tyłu, aby określić zmienną zarządzaną, która odnosi się do lokalizacji `null`natywnej.
 
@@ -1305,7 +1305,7 @@ Klienci muszą zainstalować dostawcę usług kryptograficznych dostarczonych pr
 
 **Ulepszone <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> zachowanie połączenia dla funkcji AlwaysOn**
 
-Klient SqlClient teraz automatycznie zapewnia szybsze połączenia z grupą dostępności AlwaysOn (AG). W sposób niewidoczny dla użytkownika wykryje, czy aplikacja nawiązuje połączenie z grupą dostępności AlwaysOn (AG) w innej podsieci, i szybko odnajduje bieżący aktywny serwer i zapewnia połączenie z serwerem. Przed tą wersją aplikacja wymagała ustawienia parametrów połączenia do uwzględnienia `"MultisubnetFailover=true"` , aby wskazać, że nastąpiło połączenie z grupą dostępności AlwaysOn. Bez ustawienia słowa kluczowego połączenia `true`do, aplikacja może napotkać limit czasu podczas nawiązywania połączenia z grupą dostępności AlwaysOn. W tej wersji aplikacja nie musi już być ustawiona na `true` wartość <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> . Aby uzyskać więcej informacji na temat obsługi klienta z zawsze włączonymi grupami dostępności, zobacz temat [Obsługa klienta w przypadku wysokiej dostępności i odzyskiwania po awarii](../data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).
+Klient SqlClient teraz automatycznie zapewnia szybsze połączenia z grupą dostępności AlwaysOn (AG). W sposób niewidoczny dla użytkownika wykryje, czy aplikacja nawiązuje połączenie z grupą dostępności AlwaysOn (AG) w innej podsieci, i szybko odnajduje bieżący aktywny serwer i zapewnia połączenie z serwerem. Przed tą wersją aplikacja wymagała ustawienia parametrów połączenia do uwzględnienia `"MultisubnetFailover=true"` , aby wskazać, że nastąpiło połączenie z grupą dostępności AlwaysOn. Bez ustawienia słowa kluczowego połączenia `true`do, aplikacja może napotkać limit czasu podczas nawiązywania połączenia z grupą dostępności AlwaysOn. W tej wersji aplikacja *nie musi już być ustawiona* na `true` wartość <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> . Aby uzyskać więcej informacji na temat obsługi klienta z zawsze włączonymi grupami dostępności, zobacz temat [Obsługa klienta w przypadku wysokiej dostępności i odzyskiwania po awarii](../data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).
 
 <a name="WPF461" />
 
@@ -1871,7 +1871,7 @@ Nowe funkcje i ulepszenia w klasach bazowych w .NET Framework 4.5.1 obejmują:
 
 - Możliwość jawnego kompaktowania sterty dużego obiektu (LOH) podczas wyrzucania elementów bezużytecznych. Aby uzyskać więcej informacji, zobacz <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> właściwość.
 
-- Dodatkowe ulepszenia wydajności, takie jak zawieszenie aplikacji ASP.NET, wielordzeniowe udoskonalenia JIT i szybsze uruchamianie aplikacji po aktualizacji .NET Framework. Aby uzyskać szczegółowe informacje, zapoznaj się z wpisem w blogu [.NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/) i zawieszania [aplikacji ASP.NET](https://devblogs.microsoft.com/dotnet/asp-net-app-suspend-responsive-shared-net-web-hosting/) .
+- Dodatkowe ulepszenia wydajności, takie jak zawieszenie aplikacji ASP.NET, wielordzeniowe udoskonalenia JIT i szybsze uruchamianie aplikacji po aktualizacji .NET Framework. Aby uzyskać szczegółowe informacje, zapoznaj się z wpisem w blogu [.NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/) i [zawieszania aplikacji ASP.NET](https://devblogs.microsoft.com/dotnet/asp-net-app-suspend-responsive-shared-net-web-hosting/) .
 
 Ulepszenia Windows Forms obejmują:
 
@@ -1913,7 +1913,7 @@ Nowe funkcje w programie ASP.NET 4.5.1 można znaleźć w temacie [ASP.NET and W
 
 - Obsługa tablic o rozmiarze większym niż 2 gigabajty (GB) na platformach 64-bitowych. Tę funkcję można włączyć w pliku konfiguracji aplikacji. Zobacz element gcAllowVeryLargeObjects >, który również zawiera inne ograniczenia dotyczące rozmiaru obiektu i rozmiaru tablicy. [ \<](../configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)
 
-- Lepsza wydajność dzięki wyrzucaniu elementów bezużytecznych w tle dla serwerów. W przypadku używania wyrzucania elementów bezużytecznych serwera w .NET Framework 4,5, wyrzucanie elementów bezużytecznych w tle jest automatycznie włączone. Zobacz sekcję odzyskiwanie pamięci w tle w temacie Podstawowe informacje dotyczące wyrzucania [elementów](../../standard/garbage-collection/fundamentals.md) bezużytecznych.
+- Lepsza wydajność dzięki wyrzucaniu elementów bezużytecznych w tle dla serwerów. W przypadku używania wyrzucania elementów bezużytecznych serwera w .NET Framework 4,5, wyrzucanie elementów bezużytecznych w tle jest automatycznie włączone. Zobacz sekcję odzyskiwanie pamięci w tle w temacie Podstawowe informacje dotyczące [wyrzucania elementów bezużytecznych](../../standard/garbage-collection/fundamentals.md) .
 
 - Kompilacja just-in-Time (JIT) w tle, która jest opcjonalnie dostępna na wielordzeniowych procesorach, aby zwiększyć wydajność aplikacji. Zobacz <xref:System.Runtime.ProfileOptimization>.
 

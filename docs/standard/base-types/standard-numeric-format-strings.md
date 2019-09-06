@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06a6403d12645f96e39407f38d944f2e7682d65d
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: c99e3bc59266846fcd5c5774b6050b4e075cbc3f
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133844"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374500"
 ---
 # <a name="standard-numeric-format-strings"></a>Standardowe ciągi formatujące liczby
 
@@ -55,7 +55,7 @@ Ciągi standardowego formatu liczbowego są obsługiwane przez:
 
 |Specyfikator formatu|Nazwa|Opis|Przykłady|
 |----------------------|----------|-----------------|--------------|
-|„C” lub „c”|Waluta|Wynika Wartość waluty.<br /><br /> Obsługiwane przez: Wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: Liczba cyfr dziesiętnych.<br /><br /> Domyślny specyfikator dokładności: Zdefiniowane przez <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Więcej informacji: [Specyfikator formatu waluty ("C")](#CFormatString).|123,456 ("C", en-US) — >`$123.46`<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123,456 ("C3", en-US) — >`($123.456)`<br /><br /> -123,456 ("C3", fr-FR)->-€123 456<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
+|„C” lub „c”|Waluta|Wynika Wartość waluty.<br /><br /> Obsługiwane przez: Wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: Liczba cyfr dziesiętnych.<br /><br /> Domyślny specyfikator dokładności: Zdefiniowane przez <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Więcej informacji: [Specyfikator formatu waluty ("C")](#CFormatString).|123,456 ("C", en-US)-> \\$123,46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123,456 ("C3", en-US)-> (\\$123,456)<br /><br /> -123,456 ("C3", fr-FR)->-€123 456<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
 |„D” lub „d”|Wartość dziesiętna|Wynika Cyfry całkowite z opcjonalnym znakiem minus.<br /><br /> Obsługiwane przez: Tylko typy całkowite.<br /><br /> Specyfikator dokładności: Minimalna liczba cyfr.<br /><br /> Domyślny specyfikator dokładności: Minimalna wymagana liczba cyfr.<br /><br /> Więcej informacji: [Specyfikator formatu dziesiętnego ("D")](#DFormatString).|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|
 |„E” lub „e”|Wartość wykładnicza (naukowa)|Wynika Notacja wykładnicza.<br /><br /> Obsługiwane przez: Wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: Liczba cyfr dziesiętnych.<br /><br /> Domyślny specyfikator dokładności: 6.<br /><br /> Więcej informacji: [Specyfikator formatu wykładniczego ("E")](#EFormatString).|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052,0329112756 ("e", fr-FR)-> 1, 052033e + 003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052,0329112756 ("E2", fr-FR)->-1, 05E + 003|
 |„F” lub „f”|Wartość stałoprzecinkowa|Wynika Cyfry całkowite i dziesiętne z opcjonalnym znakiem minus.<br /><br /> Obsługiwane przez: Wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: Liczba cyfr dziesiętnych.<br /><br /> Domyślny specyfikator dokładności: Zdefiniowane przez <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Więcej informacji: [Specyfikator formatu stałej ("F")](#FFormatString).|1234,567 ("F", en-US) — > 1234,57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US)-> 1234,0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234,56 ("F4", en-US)->-1234,5600<br /><br /> -1234,56 ("F4", de-DE)->-1234, 1234,5600|
@@ -226,7 +226,7 @@ Należy pamiętać, że w przypadku użycia <xref:System.Double> z wartością s
 [!code-csharp-interactive[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/csharp/g17.cs#GeneralFormatSpecifier)]
 [!code-vb[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/vb/g17.vb)]
 
-W przypadku użycia z <xref:System.Single> wartością specyfikator formatu "G9" gwarantuje, że oryginalna <xref:System.Single> wartość została pomyślnie przerundna. Jest to spowodowane <xref:System.Single> tym, że jest to zgodna z IEEE 754-2008 liczba`binary32`zmiennoprzecinkowa o pojedynczej precyzji, która daje maksymalnie dziewięć znaczących cyfr dokładności. Ze względu na wydajność zaleca się użycie zamiast specyfikatora [formatu "R"](#RFormatString).
+W przypadku użycia z <xref:System.Single> wartością specyfikator formatu "G9" gwarantuje, że oryginalna <xref:System.Single> wartość została pomyślnie przerundna. Jest to spowodowane <xref:System.Single> tym, że jest to zgodna z IEEE 754-2008 liczba`binary32`zmiennoprzecinkowa o pojedynczej precyzji, która daje maksymalnie dziewięć znaczących cyfr dokładności. Ze względu na wydajność zaleca się użycie zamiast [specyfikatora formatu "R"](#RFormatString).
 
 Informacje o formatowaniu bieżącego <xref:System.Globalization.NumberFormatInfo> obiektu mają wpływ na ciąg wynikowy. Poniższa tabela zawiera listę <xref:System.Globalization.NumberFormatInfo> właściwości, które kontrolują formatowanie ciągu wynikowego.
 

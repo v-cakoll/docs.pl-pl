@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: deb7258326428cca01ea8734e0dc010c29177cfa
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: a5a11bc49fa834ebd6945e47767deb559244b459
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106858"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374512"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Samouczek: Wykrywanie obiektów przy użyciu ONNX w ML.NET
 
@@ -57,25 +57,25 @@ Niektóre przypadki użycia dotyczące wykrywania obiektów obejmują:
 
 ## <a name="select-a-deep-learning-model"></a>Wybierz model uczenia głębokiego
 
-Uczenie głębokie to podzestaw uczenia maszynowego. Aby szkolić modele uczenia głębokiego, wymagane są duże ilości danych. Wzorce w danych są reprezentowane przez serię warstw. Relacje w danych są kodowane jako połączenia między warstwami zawierającymi wagi. Im wyższa waga, tym silniejszy jest związek. Zbiorczo te serie warstw i połączeń są nazywane sztucznymi sieciami neuronowych. Im więcej warstw w sieci, tym "głębiej" jest to, że jest to sieć głębokiej neuronowych. 
+Uczenie głębokie to podzestaw uczenia maszynowego. Aby szkolić modele uczenia głębokiego, wymagane są duże ilości danych. Wzorce w danych są reprezentowane przez serię warstw. Relacje w danych są kodowane jako połączenia między warstwami zawierającymi wagi. Im wyższa waga, tym silniejszy jest związek. Zbiorczo te serie warstw i połączeń są nazywane sztucznymi sieciami neuronowych. Im więcej warstw w sieci, tym "głębiej" jest to, że jest to sieć głębokiej neuronowych.
 
-Istnieją różne typy sieci neuronowych, najczęściej występujące wielowarstwowe Perceptron (MLP), Splotowych neuronowych Network (CNN) i Recurrent neuronowych Network (RNN). Najbardziej podstawowa jest MLP, która mapuje zestaw danych wejściowych na zestaw wyników. Ta sieć neuronowych jest dobra, gdy dane nie zawierają składnika przestrzennego ani czasu. CNN wykorzystuje warstwy splotowych do przetwarzania informacji przestrzennych zawartych w danych. Dobrym przypadkiem użycia dla CNNs jest przetwarzanie obrazu w celu wykrycia obecności funkcji w regionie obrazu (na przykład jest to nos na środku obrazu?). Na koniec RNN zezwolić na trwałość stanu lub pamięci jako dane wejściowe. RNN są używane do analizy szeregów czasowych, gdzie ważne jest porządkowanie sekwencyjne i kontekst zdarzeń. 
+Istnieją różne typy sieci neuronowych, najczęściej występujące wielowarstwowe Perceptron (MLP), Splotowych neuronowych Network (CNN) i Recurrent neuronowych Network (RNN). Najbardziej podstawowa jest MLP, która mapuje zestaw danych wejściowych na zestaw wyników. Ta sieć neuronowych jest dobra, gdy dane nie zawierają składnika przestrzennego ani czasu. CNN wykorzystuje warstwy splotowych do przetwarzania informacji przestrzennych zawartych w danych. Dobrym przypadkiem użycia dla CNNs jest przetwarzanie obrazu w celu wykrycia obecności funkcji w regionie obrazu (na przykład jest to nos na środku obrazu?). Na koniec RNN zezwolić na trwałość stanu lub pamięci jako dane wejściowe. RNN są używane do analizy szeregów czasowych, gdzie ważne jest porządkowanie sekwencyjne i kontekst zdarzeń.
 
 ### <a name="understand-the-model"></a>Zrozumienie modelu
 
-Wykrywanie obiektów to zadanie przetwarzania obrazu. W związku z tym większość modeli uczenia głębokiego przeszkolonych w celu rozwiązania tego problemu jest CNNs. Model używany w tym samouczku to mały model YOLOv2, bardziej zwarta wersja modelu YOLOv2 opisana w dokumencie: ["YOLO9000: Lepsza, szybsza i silniejsza — RedMon i Fadhari](https://arxiv.org/pdf/1612.08242.pdf). Niewielka YOLOv2 jest przeszkolony na zestawie danych LZO w języku Pascal i składa się z 15 warstw, które mogą przewidzieć 20 różnych klas obiektów. Ponieważ mała YOLOv2 to skrócona wersja oryginalnego modelu YOLOv2, kompromis między szybkością i dokładnością jest zwiększany. Różne warstwy, które tworzą model, można wizualizować przy użyciu narzędzi, takich jak Netron. Sprawdzenie modelu spowoduje odwzorowanie połączeń między wszystkimi warstwami tworzącymi sieć neuronowych, gdzie każda warstwa będzie zawierać nazwę warstwy wraz z wymiarami odpowiednich operacji wejścia/wyjścia. Struktury danych używane do opisywania wejścia i wyjścia modelu są znane jako dwuczęściowe. Mogą być uważane za kontenery, które przechowują dane w N-wymiarach. W przypadku bardzo niewielkich YOLOv2 Nazwa warstwy wejściowej jest `image` i oczekuje dwuwymiarowego wymiaru. `3 x 416 x 416` Nazwa warstwy wyjściowej jest `grid` generowana w postaci dwuwymiarowego natężenia wymiarów. `125 x 13 x 13`  
+Wykrywanie obiektów to zadanie przetwarzania obrazu. W związku z tym większość modeli uczenia głębokiego przeszkolonych w celu rozwiązania tego problemu jest CNNs. Model używany w tym samouczku to mały model YOLOv2, bardziej zwarta wersja modelu YOLOv2 opisana w dokumencie: ["YOLO9000: Lepsza, szybsza i silniejsza — RedMon i Fadhari](https://arxiv.org/pdf/1612.08242.pdf). Niewielka YOLOv2 jest przeszkolony na zestawie danych LZO w języku Pascal i składa się z 15 warstw, które mogą przewidzieć 20 różnych klas obiektów. Ponieważ mała YOLOv2 to skrócona wersja oryginalnego modelu YOLOv2, kompromis między szybkością i dokładnością jest zwiększany. Różne warstwy, które tworzą model, można wizualizować przy użyciu narzędzi, takich jak Netron. Sprawdzenie modelu spowoduje odwzorowanie połączeń między wszystkimi warstwami tworzącymi sieć neuronowych, gdzie każda warstwa będzie zawierać nazwę warstwy wraz z wymiarami odpowiednich operacji wejścia/wyjścia. Struktury danych używane do opisywania wejścia i wyjścia modelu są znane jako dwuczęściowe. Mogą być uważane za kontenery, które przechowują dane w N-wymiarach. W przypadku bardzo niewielkich YOLOv2 Nazwa warstwy wejściowej jest `image` i oczekuje dwuwymiarowego wymiaru. `3 x 416 x 416` Nazwa warstwy wyjściowej jest `grid` generowana w postaci dwuwymiarowego natężenia wymiarów. `125 x 13 x 13`
 
 ![](./media/object-detection-onnx/netron-model-map.png)
 
-Model YOLO pobiera obraz `3(RGB) x 416px x 416px`. Model przyjmuje dane wejściowe i przekazuje je za pomocą różnych warstw, aby utworzyć dane wyjściowe. Dane wyjściowe dzielą obraz wejściowy na `13 x 13` siatkę, z każdą komórką w siatce składającą się z `125` wartości. 
+Model YOLO pobiera obraz `3(RGB) x 416px x 416px`. Model przyjmuje dane wejściowe i przekazuje je za pomocą różnych warstw, aby utworzyć dane wyjściowe. Dane wyjściowe dzielą obraz wejściowy na `13 x 13` siatkę, z każdą komórką w siatce składającą się z `125` wartości.
 
 ### <a name="what-is-an-onnx-model"></a>Co to jest model ONNX?
 
-Open neuronowych Network Exchange (ONNX) to format Open Source dla modeli AI. ONNX obsługuje współdziałanie między strukturami. Oznacza to, że możesz przeszkolić model w jednym z wielu popularnych platform uczenia maszynowego, takich jak PyTorch, przekonwertować go do formatu ONNX i korzystać z modelu ONNX w różnych strukturach, takich jak ML.NET. Aby dowiedzieć się więcej, odwiedź witrynę [sieci Web ONNX](https://onnx.ai/). 
+Open neuronowych Network Exchange (ONNX) to format Open Source dla modeli AI. ONNX obsługuje współdziałanie między strukturami. Oznacza to, że możesz przeszkolić model w jednym z wielu popularnych platform uczenia maszynowego, takich jak PyTorch, przekonwertować go do formatu ONNX i korzystać z modelu ONNX w różnych strukturach, takich jak ML.NET. Aby dowiedzieć się więcej, odwiedź witrynę [sieci Web ONNX](https://onnx.ai/).
 
 ![](./media/object-detection-onnx/onnx-frameworks.png)
 
-Wstępnie szkolony model YOLOv2 jest przechowywany w formacie ONNX, szeregowaną reprezentacją warstw i wyznanie wzorców tych warstw. W programie ml.NET współdziałanie z usługą ONNX jest [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) realizowane [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) przy użyciu pakietów NuGet i. [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) Pakiet zawiera serię przekształceń, która pobiera obraz i koduje go na wartości liczbowe, które mogą być używane jako dane wejściowe w potoku predykcyjnym lub szkoleniowym. [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) Pakiet wykorzystuje środowisko uruchomieniowe ONNX w celu załadowania modelu ONNX i używania go do prognozowania na podstawie dostarczonego danych wejściowych. 
+Wstępnie szkolony model YOLOv2 jest przechowywany w formacie ONNX, szeregowaną reprezentacją warstw i wyznanie wzorców tych warstw. W programie ml.NET współdziałanie z usługą ONNX jest [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) realizowane [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) przy użyciu pakietów NuGet i. [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) Pakiet zawiera serię przekształceń, która pobiera obraz i koduje go na wartości liczbowe, które mogą być używane jako dane wejściowe w potoku predykcyjnym lub szkoleniowym. [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) Pakiet wykorzystuje środowisko uruchomieniowe ONNX w celu załadowania modelu ONNX i używania go do prognozowania na podstawie dostarczonego danych wejściowych.
 
 ![](./media/object-detection-onnx/onnx-ml-net-integration.png)
 
@@ -89,10 +89,10 @@ Teraz, gdy masz ogólne informacje o tym, co ONNX się i jak mała YOLOv2 dział
 
 1. Zainstaluj **pakiet NuGet Microsoft.ml**:
 
-    - W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**. 
-    - Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz kartę Przeglądaj, Wyszukaj pozycję **Microsoft.ml**. 
-    - Wybierz przycisk **Instaluj** . 
-    - Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian** , a następnie wybierz przycisk Akceptuję w oknie dialogowym **akceptacji licencji** , jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów. 
+    - W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**.
+    - Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz kartę Przeglądaj, Wyszukaj pozycję **Microsoft.ml**.
+    - Wybierz przycisk **Instaluj** .
+    - Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian** , a następnie **Wybierz przycisk** Akceptuję w oknie dialogowym **akceptacji licencji** , jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów.
     - Powtórz te kroki dla **Microsoft. ml. ImageAnalytics** i **Microsoft. ml. OnnxTransformer**.
 
 ### <a name="prepare-your-data-and-pre-trained-model"></a>Przygotowywanie danych i wstępnie szkolony model
@@ -106,7 +106,7 @@ Teraz, gdy masz ogólne informacje o tym, co ONNX się i jak mała YOLOv2 dział
     Otwórz wiersz polecenia i wprowadź następujące polecenie:
 
     ```shell
-    tar -xvzf tiny_yolov2.tar.gz 
+    tar -xvzf tiny_yolov2.tar.gz
     ```
 
 1. Skopiuj wyodrębniony `model.onnx` plik z katalogu do katalogu `assets\Model` projektu ObjectDetection, a następnie zmień jego nazwę na. `TinyYolo2_model.onnx` Ten katalog zawiera model wymagany dla tego samouczka.
@@ -119,9 +119,9 @@ Otwórz plik *program.cs* i Dodaj następujące dodatkowe `using` instrukcje na 
 
 [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L1-L7)]
 
-Następnie zdefiniuj ścieżki różnych zasobów. 
+Następnie zdefiniuj ścieżki różnych zasobów.
 
-1. Najpierw Dodaj `GetAbsolutePath` metodę `Main` poniżej metody w `Program` klasie. 
+1. Najpierw Dodaj `GetAbsolutePath` metodę `Main` poniżej metody w `Program` klasie.
 
     [!code-csharp [GetAbsolutePath](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L66-L74)]
 
@@ -135,15 +135,15 @@ W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt, a następ
 
 Utwórz klasę danych wejściowych w nowo utworzonym katalogu *struktury* danych.
 
-1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy *katalog struktury* datastructures, a następnie wybierz pozycję **Dodaj** > **nowy element**.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy katalog *struktury datastructures* , a następnie wybierz pozycję **Dodaj** > **nowy element**.
 1. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **Klasa** i zmień wartość pola **Nazwa** na *ImageNetData.cs*. Następnie wybierz przycisk **Dodaj** .
-     
+
     Plik *ImageNetData.cs* zostanie otwarty w edytorze kodu. Dodaj następującą `using` instrukcję na początku *ImageNetData.cs*:
 
     [!code-csharp [ImageNetDataUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/DataStructures/ImageNetData.cs#L1-L4)]
 
     Usuń istniejącą definicję klasy i Dodaj następujący kod dla `ImageNetData` klasy do pliku *ImageNetData.cs* :
-    
+
     [!code-csharp [ImageNetDataClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/DataStructures/ImageNetData.cs#L8-L23)]
 
     `ImageNetData`jest klasą danych obrazu wejściowego i ma następujące <xref:System.String> pola:
@@ -155,7 +155,7 @@ Utwórz klasę danych wejściowych w nowo utworzonym katalogu *struktury* danych
 
 Utwórz klasę predykcyjną w katalogu *struktury* danych.
 
-1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy *katalog struktury* datastructures, a następnie wybierz pozycję **Dodaj** > **nowy element**.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy katalog *struktury datastructures* , a następnie wybierz pozycję **Dodaj** > **nowy element**.
 1. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **Klasa** i zmień wartość pola **Nazwa** na *ImageNetPrediction.cs*. Następnie wybierz przycisk **Dodaj** .
 
     Plik *ImageNetPrediction.cs* zostanie otwarty w edytorze kodu. Dodaj następującą `using` instrukcję na początku *ImageNetPrediction.cs*:
@@ -178,7 +178,6 @@ Utwórz klasę predykcyjną w katalogu *struktury* danych.
 
 [!code-csharp [InitMLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L24)]
 
-
 ## <a name="create-a-parser-to-post-process-model-outputs"></a>Tworzenie analizatora danych wyjściowych modelu po procesie
 
 Model segmentuje obraz w `13 x 13` siatce, gdzie każda komórka siatki ma wartość. `32px x 32px` Każda komórka siatki zawiera 5 potencjalnych pól związanych z obiektem. Pole ograniczenia ma 25 elementów:
@@ -188,7 +187,7 @@ Model segmentuje obraz w `13 x 13` siatce, gdzie każda komórka siatki ma warto
 - `x`Pozycja x środka pola ograniczenia względem komórki siatki, z którą jest skojarzona.
 - `y`Pozycja y środka pola ograniczenia względem komórki siatki, z którą jest skojarzona.
 - `w`Szerokość pola ograniczenia.
-- `h`Wysokość pola ograniczenia. 
+- `h`Wysokość pola ograniczenia.
 - `o`wartość pewności, którą obiekt istnieje w polu ograniczenia, znanego również jako wynik obiektu.
 - `p1-p20`prawdopodobieństwa klasy dla każdej z 20 klas przewidywanych przez model.
 
@@ -207,7 +206,7 @@ Dane wyjściowe przez model zawierają współrzędne i wymiary pól ograniczeni
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy katalog *YoloParser* , a następnie wybierz pozycję **Dodaj** > **nowy element**.
 1. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **Klasa** i zmień wartość pola **Nazwa** na *DimensionsBase.cs*. Następnie wybierz przycisk **Dodaj** .
 
-    Plik *DimensionsBase.cs* zostanie otwarty w edytorze kodu. Usuń wszystkie `using` instrukcje i istniejącą definicję klasy. 
+    Plik *DimensionsBase.cs* zostanie otwarty w edytorze kodu. Usuń wszystkie `using` instrukcje i istniejącą definicję klasy.
 
     Dodaj następujący kod dla `DimensionsBase` klasy do pliku *DimensionsBase.cs* :
 
@@ -236,7 +235,7 @@ Następnie Utwórz klasę dla pól ograniczenia.
     Usuń istniejącą `YoloBoundingBox` definicję klasy i Dodaj następujący kod `YoloBoundingBox` dla klasy do pliku *YoloBoundingBox.cs* :
 
     [!code-csharp [YoloBoundingBoxClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloBoundingBox.cs#L7-L21)]
-    
+
     `YoloBoundingBox`ma następujące pola:
 
     - `Dimensions`zawiera wymiary powiązanego pola.
@@ -262,7 +261,7 @@ Teraz, gdy tworzone są klasy wymiarów i pól powiązanych, czas na utworzenie 
 
 1. Wewnątrz definicji `YoloOutputParser` klasy Dodaj następujące stałe i pola.
 
-    [!code-csharp [ParserVarDefinitions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L12-L21)]    
+    [!code-csharp [ParserVarDefinitions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L12-L21)]
 
     - `ROW_COUNT`to liczba wierszy w siatce, do których jest podzielona ilustracja.
     - `COL_COUNT`jest liczbą kolumn w siatce, w której jest podzielony obraz.
@@ -274,17 +273,17 @@ Teraz, gdy tworzone są klasy wymiarów i pól powiązanych, czas na utworzenie 
     - `CELL_HEIGHT`to wysokość jednej komórki w siatce obrazu.
     - `channelStride`jest pozycją początkową bieżącej komórki siatki.
 
-    Gdy model wykonuje prognozę, znaną również jako ocenianie, dzieli `416px x 416px` obraz wejściowy na siatkę komórek o `13 x 13`rozmiarze. Każda komórka zawiera `32px x 32px`. W każdej komórce istnieją 5 pól, które zawierają 5 funkcji (x, y, Szerokość, wysokość, pewność). Ponadto każde pole ograniczenia zawiera prawdopodobieństwo dla każdej klasy, która w tym przypadku jest równa 20. W związku z tym każda komórka zawiera 125 fragmenty informacji (5 funkcji + 20 prawdopodobieństwa dotyczącej klasy). 
+    Gdy model wykonuje prognozę, znaną również jako ocenianie, dzieli `416px x 416px` obraz wejściowy na siatkę komórek o `13 x 13`rozmiarze. Każda komórka zawiera `32px x 32px`. W każdej komórce istnieją 5 pól, które zawierają 5 funkcji (x, y, Szerokość, wysokość, pewność). Ponadto każde pole ograniczenia zawiera prawdopodobieństwo dla każdej klasy, która w tym przypadku jest równa 20. W związku z tym każda komórka zawiera 125 fragmenty informacji (5 funkcji + 20 prawdopodobieństwa dotyczącej klasy).
 
 Utwórz listę kotwic poniżej `channelStride` dla wszystkich 5 pól ograniczenia:
 
-[!code-csharp [ParserAnchors](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L23-L26)]   
+[!code-csharp [ParserAnchors](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L23-L26)]
 
 Kotwice to wstępnie zdefiniowany stosunek wysokości i szerokości pól ograniczenia. Większość obiektów lub klas wykrywanych przez model ma podobne wskaźniki. Jest to przydatne, gdy chodzi o tworzenie pól ograniczenia. Zamiast przewidywania pól powiązanych, obliczane są przesunięcie ze wstępnie zdefiniowanych wymiarów w związku z tym redukcja obliczeń wymaganych do przewidywania pola ograniczenia. Zazwyczaj te współczynniki zakotwiczenia są obliczane na podstawie używanego zestawu danych. W tym przypadku, ponieważ zestaw danych jest znany i wartości zostały wstępnie obliczone, kotwice mogą być zakodowane na stałe.
 
 Następnie zdefiniuj etykiety lub klasy, które będą przewidywalne przez model. Ten model przewiduje 20 klas, które są podzbiorem całkowitej liczby klas przewidywanych przez oryginalny model YOLOv2.
 
-Dodaj listę etykiet poniżej `anchors`. 
+Dodaj listę etykiet poniżej `anchors`.
 
 [!code-csharp [ParserLabels](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L28-L34)]
 
@@ -294,7 +293,7 @@ Istnieją kolory skojarzone z każdą z klas. Przypisz kolory klasy poniżej `la
 
 ### <a name="create-helper-functions"></a>Tworzenie funkcji pomocnika
 
-Etap przetwarzania końcowego obejmuje szereg kroków. Aby pomóc w tym, można zastosować kilka metod pomocnika. 
+Etap przetwarzania końcowego obejmuje szereg kroków. Aby pomóc w tym, można zastosować kilka metod pomocnika.
 
 Metody pomocnika używane przez parser są następujące:
 
@@ -322,7 +321,7 @@ public IList<YoloBoundingBox> ParseOutputs(float[] yoloModelOutputs, float thres
 
 }
 ```
-    
+
 Utwórz listę do przechowywania pól ograniczenia i zdefiniuj zmienne wewnątrz `ParseOutputs` metody.
 
 [!code-csharp [BBoxList](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L155)]
@@ -419,7 +418,7 @@ Wewnątrz tej pętli for Sprawdź, czy bieżące pole ograniczenia można przetw
 ```csharp
 if (isActiveBoxes[i])
 {
-    
+
 }
 ```
 
@@ -492,7 +491,7 @@ Podobnie jak w przypadku przetwarzania końcowego, należy wykonać kilka krokó
 
     Potoki ml.NET muszą znać schemat danych do działania, gdy [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) wywoływana jest metoda. W takim przypadku zostanie użyty proces podobny do szkoleń. Ponieważ jednak żadne rzeczywiste szkolenie nie jest wykonywane, można go użyć jako pustego [`IDataView`](xref:Microsoft.ML.IDataView). Utwórz nowy [`IDataView`](xref:Microsoft.ML.IDataView) dla potoku z pustej listy.
 
-    [!code-csharp [LoadEmptyIDV](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L52)]    
+    [!code-csharp [LoadEmptyIDV](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L52)]
 
     Poniżej Zdefiniuj potoku. Potok będzie zawierać cztery przekształcenia.
 
@@ -569,7 +568,7 @@ Teraz czas wykonywania kroku po przetworzeniu. Utwórz wystąpienie `YoloOutputP
 
 [!code-csharp [ParsePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L39-L44)]
 
-Po przetworzeniu danych wyjściowych modelu czas na narysowanie pól związanych z obrazami. 
+Po przetworzeniu danych wyjściowych modelu czas na narysowanie pól związanych z obrazami.
 
 ### <a name="visualize-predictions"></a>Wizualizuj przewidywania
 
@@ -603,7 +602,7 @@ Ponieważ wymiary pola ograniczenia odpowiadają na dane wejściowe `416 x 416`m
 
 [!code-csharp [ScaleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L92-L95)]
 
-Następnie zdefiniuj szablon dla tekstu, który będzie apear powyżej każdego pola ograniczenia. Tekst będzie zawierać klasę obiektu wewnątrz odpowiedniego pola ograniczenia, a także wiarygodność.
+Następnie zdefiniuj szablon dla tekstu, który będzie wyświetlany powyżej każdego pola ograniczenia. Tekst będzie zawierać klasę obiektu wewnątrz odpowiedniego pola ograniczenia, a także wiarygodność.
 
 [!code-csharp [DefineBBoxText](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L98)]
 
@@ -612,7 +611,7 @@ Aby rysować na obrazie, przekonwertuj go na [`Graphics`](xref:System.Drawing.Gr
 ```csharp
 using (Graphics thumbnailGraphic = Graphics.FromImage(image))
 {
-    
+
 }
 ```
 
@@ -638,7 +637,7 @@ Poza pętlą for-each Dodaj kod, aby zapisać obrazy w `outputDirectory`.
 
 Aby uzyskać dodatkowe informacje o tym, że aplikacja przeprowadza prognozowanie zgodnie z oczekiwaniami w czasie wykonywania `LogDetectedObjects` , Dodaj `DrawBoundingBox` metodę o nazwie do metody w pliku *program.cs* , aby wyszukać wykryte obiekty do konsoli.
 
-[!code-csharp [LogOuptuts](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
+[!code-csharp [LogOutputs](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
 
 Teraz, gdy masz metody pomocnika do tworzenia opinii wizualnych na podstawie prognoz, Dodaj pętlę for, aby wykonać iterację każdego obrazu z wynikami.
 
@@ -665,9 +664,9 @@ Po instrukcji try-catch Dodaj dodatkową logikę, aby wskazać, że proces jest 
 
 [!code-csharp [EndProcessLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L62-L63)]
 
-To wszystko! 
+To wszystko!
 
-## <a name="results"></a>Wyniki 
+## <a name="results"></a>Wyniki
 
 Po wykonaniu poprzednich kroków uruchom aplikację konsolową (Ctrl + F5). Wyniki powinny wyglądać podobnie do poniższych danych wyjściowych. Mogą pojawić się ostrzeżenia lub komunikaty o przetwarzaniu, ale te komunikaty zostały usunięte z następujących wyników dla przejrzystości.
 
@@ -701,7 +700,7 @@ person and its Confidence score: 0.5551759
 ========= End of Process..Hit any Key ========
 ```
 
-Aby wyświetlić obrazy z polami obwiedni, przejdź do `assets/images/output/` katalogu. Poniżej znajduje się przykład z jednego z przetworzonych obrazów. 
+Aby wyświetlić obrazy z polami obwiedni, przejdź do `assets/images/output/` katalogu. Poniżej znajduje się przykład z jednego z przetworzonych obrazów.
 
 ![](./media/object-detection-onnx/image3.jpg)
 

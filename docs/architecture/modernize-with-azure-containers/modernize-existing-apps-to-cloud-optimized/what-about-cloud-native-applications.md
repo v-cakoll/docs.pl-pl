@@ -2,22 +2,22 @@
 title: A może natywne aplikacje w chmurze?
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Co z aplikacjami natywnymi w chmurze?
 ms.date: 04/28/2018
-ms.openlocfilehash: 26adb87c426442ebf0e88165e521819e3a49d175
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 86153b04790eb21276e58b3fe33c0a680d9ea1c4
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676932"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373917"
 ---
 # <a name="what-about-cloud-native-applications"></a>A może natywne aplikacje w chmurze?
 
-Chociaż aplikacje natywne w [chmurze](https://azure.microsoft.com/overview/cloudnative/) nie są głównym celem tego przewodnika, warto zrozumieć ten poziom dojrzałości, aby odróżnić go od aplikacji zoptymalizowanych pod kątem chmury.
+Chociaż aplikacje [natywne w chmurze](https://azure.microsoft.com/overview/cloudnative/) nie są głównym celem tego przewodnika, warto zrozumieć ten poziom dojrzałości, aby odróżnić go od aplikacji zoptymalizowanych pod kątem chmury.
 
 Rysunek 4-3. rozmieszczenie aplikacji natywnych w chmurze w ramach poziomów dojrzałości dla modernizacji aplikacji:
 
 ![Pozycjonowanie aplikacji natywnych w chmurze](./media/image3.png)
 
-> **Rysunek 4-3.** Pozycjonowanie aplikacji natywnych w chmurze
+**Rysunek 4-3.** Pozycjonowanie aplikacji natywnych w chmurze
 
 Poziom dojrzałości w chmurze, który ma zwykle nowe inwestycje rozwojowe. Przechodzenie do poziomu natywnego chmury zwykle jest zależne od potrzeb firmy, aby przeprowadzić modernizację aplikacji tak, aby znacznie zwiększyć skalę w dużych aplikacjach przez tworzenie autonomicznych podsystemów (mikrousług), które można wdrażać i skalować niezależnie z innych obszarów aplikacji przy jednoczesnym obniżeniu kosztów w długim okresie i zwiększenia elastyczności rozwoju tych części aplikacji autonomicznej, które zapewniają znaczące korzyści z konkurowania.
 
@@ -25,9 +25,9 @@ Główne filary natywnych aplikacji w chmurze opierają się na architekturze mi
 
 Rysunek 4-4 przedstawia główne właściwości modelu natywnego w chmurze.
 
-> ![Cechy natywne w chmurze to mikrousługi, kontenery, odporne na chmurę, koordynatorzy i bezserwerowe](./media/image4.png)
->
-> **Rysunek 4-4.** Charakterystyki natywne w chmurze
+![Cechy natywne w chmurze to mikrousługi, kontenery, odporne na chmurę, koordynatorzy i bezserwerowe](./media/image4.png)
+
+**Rysunek 4-4.** Charakterystyki natywne w chmurze
 
 Ponadto można rozciągnąć podstawowe nowoczesne aplikacje sieci Web i natywne aplikacje w chmurze, dodając inne usługi, takie jak sztuczna inteligencja (AI), uczenie maszynowe (ML) i IoT. Możesz użyć dowolnej z tych usług, aby zwiększyć dowolne możliwe podejścia zoptymalizowane pod kątem chmury.
 

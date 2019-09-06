@@ -1,64 +1,66 @@
 ---
-title: Testowanie jednostek w .NET Core i .NET Standard
+title: Testy jednostkowe w .NET Core i .NET Standard
 description: Ten artykuł zawiera krótkie omówienie testów jednostkowych dla projektów .NET Core i .NET Standard.
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 73667843452bbcab52a8cd4aa7906beecc095677
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0c74aeaf02bc6380d7627ce39f65603e94952c0
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614872"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373869"
 ---
-# <a name="unit-testing-in-net-core-and-net-standard"></a>Testowanie jednostek w .NET Core i .NET Standard
+# <a name="unit-testing-in-net-core-and-net-standard"></a>Testy jednostkowe w .NET Core i .NET Standard
 
-.NET core ułatwia tworzenie testów jednostkowych. Ten artykuł wprowadza testów jednostkowych i pokazano, jak różnią się od innych rodzajów testów. Połączone zasoby w dolnej części strony pokazują, jak dodać projekt testu do rozwiązania. Po skonfigurowaniu projektu testu, będzie można uruchomić testy jednostkowe przy użyciu wiersza polecenia lub programu Visual Studio.
+Program .NET Core ułatwia tworzenie testów jednostkowych. W tym artykule przedstawiono testy jednostkowe i pokazano, jak różnią się one od innych rodzajów testów. Połączone zasoby w dolnej części strony pokazują, jak dodać projekt testowy do rozwiązania. Po skonfigurowaniu projektu testowego będzie można uruchamiać testy jednostkowe przy użyciu wiersza polecenia lub programu Visual Studio.
 
-.NET core 2.0 i jego nowsze wersje obsługują [.NET Standard 2.0](../../standard/net-standard.md), i użyjemy jej bibliotek do zademonstrowania testów jednostkowych.
+Jeśli testujesz projekt **ASP.NET Core** , zobacz temat [testy integracji w programie ASP.NET Core](/aspnet/core/test/integration-tests#test-app-prerequisites).
 
-Można użyć wbudowanych .NET Core 2.0 i nowszych szablony projektu testu jednostki dla C#, F# i Visual Basic jako punktu wyjścia dla osobistych projektu.
+Program .NET Core 2,0 lub nowszy obsługuje [.NET Standard 2,0](../../standard/net-standard.md)i będziemy używać ich w celu przedstawienia testów jednostkowych.
+
+Możesz użyć wbudowanych szablonów projektu testów jednostkowych .NET Core 2,0 i nowszych dla C#, F# i Visual Basic jako punkt wyjścia dla projektu osobistego.
 
 ## <a name="what-are-unit-tests"></a>Co to są testy jednostkowe?
 
-Testy automatyczne jest doskonałym sposobem na upewnij się, że aplikacja jest co jego autorzy mają, mu. Istnieje wiele typów testów dla aplikacji. Obejmują one testy integracji, testy sieci web, testy obciążenia i inne. **Testy jednostkowe** testowanie składników oprogramowania i metody. Testy jednostkowe należy przetestować tylko kod znajdujących się pod kontrolą dewelopera. Należy Testuj uwagi infrastrukturze. Problemy z infrastrukturą obejmują baz danych, systemy plików i zasobów sieciowych. 
+Posiadanie zautomatyzowanych testów to doskonały sposób, aby upewnić się, że aplikacja oprogramowania wykonuje działania wykonywane przez jego autorów. Istnieje wiele typów testów dla aplikacji oprogramowania. Obejmują one testy integracji, testy sieci Web, testy obciążenia i inne. **Testy jednostkowe** testują poszczególne składniki oprogramowania i metody. Testy jednostkowe powinny tylko testować kod w formancie dewelopera. Nie powinni testować obaw związanych z infrastrukturą. Zagadnienia dotyczące infrastruktury obejmują bazy danych, systemy plików i zasoby sieciowe. 
 
-Ponadto należy pamiętać, są najlepsze rozwiązania dotyczące pisania testów. Na przykład [testów opartych na rozwój (TDD)](https://deviq.com/test-driven-development/) jest, gdy test jednostkowy jest zapisywany przed kodem jest przeznaczona do sprawdzenia. Projektowanie oparte na testach przypomina tworzenie konspektu dla książki, zanim napiszemy ją. Jego celem jest pomoc deweloperom pisanie kodu prostsze, bardziej czytelne i wydajne. 
+Należy również pamiętać o najlepszych rozwiązaniach dotyczących pisania testów. Na przykład [programowanie sterowane testami (TDD)](https://deviq.com/test-driven-development/) to gdy test jednostkowy jest zapisywana przed kodem, który ma zostać sprawdzona. TDD przypomina Tworzenie konspektu dla książki, zanim zapiszemy ją. Jest to pomocne, aby deweloperzy mogli pisać łatwiejszy, czytelny i wydajny kod. 
 
 > [!NOTE]
-> Poniżej zespołu ASP.NET [tych konwencji](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests) pomagające deweloperom pozwoli uzyskać dobrą nazwy metod i klas testów.
+> Zespół ASP.NET stosuje [te konwencje](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests) , aby ułatwić deweloperom tworzenie dobrych nazw dla klas i metod testowych.
 
-Nie należy wprowadzać zależności w infrastrukturze podczas pisania testów jednostkowych. Te upewnij testy powolne i kruchy i powinna być zarezerwowana dla testów integracji. Można uniknąć tych zależności w aplikacji, postępując zgodnie z [jawne zależności zasady](https://deviq.com/explicit-dependencies-principle/) i przy użyciu [wstrzykiwanie zależności](/aspnet/core/fundamentals/dependency-injection). Testy jednostkowe można również przechowywać w osobnym projekcie z testów integracji. Dzięki temu projektu testu jednostkowego nie ma odwołań do lub zależności w pakietach infrastruktury.
+Nie należy wprowadzać zależności od infrastruktury podczas pisania testów jednostkowych. Te testy są powolne i kruchy i powinny być zarezerwowane dla testów integracji. Można uniknąć tych zależności w aplikacji, postępując zgodnie z [zasadami jawnych zależności](https://deviq.com/explicit-dependencies-principle/) i przy użyciu [iniekcji zależności](/aspnet/core/fundamentals/dependency-injection). Możesz również utrzymać testy jednostkowe w osobnym projekcie od testów integracji. Gwarantuje to, że projekt testu jednostkowego nie zawiera odwołań do pakietów infrastruktury ani ich zależności.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Więcej informacji na temat testowanie jednostek w projektach .NET Core:
+Więcej informacji na temat testów jednostkowych w projektach .NET Core:
 
-Projekty testów jednostkowych .NET core są obsługiwane:
+Projekty testów jednostkowych programu .NET Core są obsługiwane w przypadku:
 * [C#](../../csharp/index.md)
 * [F#](../../fsharp/index.md)
 * [Visual Basic](../../visual-basic/index.md) 
 
-Można również wybrać:
+Możesz również wybrać między:
 * [xUnit](https://xunit.github.io) 
 * [NUnit](https://nunit.org)
 * [MSTest](https://github.com/Microsoft/testfx-docs)
 
-Możesz dowiedzieć się więcej, zobacz następujące instruktaże:
+Więcej informacji można znaleźć w następujących przewodnikach:
 
-* Tworzenie testów jednostkowych przy użyciu [ *xUnit* i *C#* przy użyciu interfejsu wiersza polecenia platformy .NET Core](unit-testing-with-dotnet-test.md).
-* Tworzenie testów jednostkowych przy użyciu [ *NUnit* i *C#* przy użyciu interfejsu wiersza polecenia platformy .NET Core](unit-testing-with-nunit.md).
-* Tworzenie testów jednostkowych przy użyciu [ *MSTest* i *C#* przy użyciu interfejsu wiersza polecenia platformy .NET Core](unit-testing-with-mstest.md).
-* Tworzenie testów jednostkowych przy użyciu [ *xUnit* i *F#* przy użyciu interfejsu wiersza polecenia platformy .NET Core](unit-testing-fsharp-with-dotnet-test.md).
-* Tworzenie testów jednostkowych przy użyciu [ *NUnit* i *F#* przy użyciu interfejsu wiersza polecenia platformy .NET Core](unit-testing-fsharp-with-nunit.md).
-* Tworzenie testów jednostkowych przy użyciu [ *MSTest* i *F#* przy użyciu interfejsu wiersza polecenia platformy .NET Core](unit-testing-fsharp-with-mstest.md).
-* Tworzenie testów jednostkowych przy użyciu [ *xUnit* i *języka Visual Basic* przy użyciu interfejsu wiersza polecenia platformy .NET Core](unit-testing-visual-basic-with-dotnet-test.md).
-* Tworzenie testów jednostkowych przy użyciu [ *NUnit* i *języka Visual Basic* przy użyciu interfejsu wiersza polecenia platformy .NET Core](unit-testing-visual-basic-with-nunit.md).
-* Tworzenie testów jednostkowych przy użyciu [ *MSTest* i *języka Visual Basic* przy użyciu interfejsu wiersza polecenia platformy .NET Core](unit-testing-visual-basic-with-mstest.md).
+* Utwórz testy jednostkowe za pomocą [ *xUnit* i *C#* z interfejs wiersza polecenia platformy .NET Core.
+* Utwórz testy jednostkowe za pomocą [ *nunit* i *C#* z interfejs wiersza polecenia platformy .NET Core.
+* Utwórz testy jednostkowe za pomocą [ *MSTest* i *C#* z interfejs wiersza polecenia platformy .NET Core.
+* Utwórz testy jednostkowe za pomocą [ *xUnit* i *F#* z interfejs wiersza polecenia platformy .NET Core.
+* Utwórz testy jednostkowe za pomocą [ *nunit* i *F#* z interfejs wiersza polecenia platformy .NET Core.
+* Utwórz testy jednostkowe za pomocą [ *MSTest* i *F#* z interfejs wiersza polecenia platformy .NET Core.
+* Utwórz testy jednostkowe za pomocą [ *xUnit* i *Visual Basic* z interfejs wiersza polecenia platformy .NET Core](unit-testing-visual-basic-with-dotnet-test.md).
+* Utwórz testy jednostkowe za pomocą [ *NUnit* i *Visual Basic* z interfejs wiersza polecenia platformy .NET Core](unit-testing-visual-basic-with-nunit.md).
+* Utwórz testy jednostkowe za pomocą [ *MSTest* i *Visual Basic* z interfejs wiersza polecenia platformy .NET Core](unit-testing-visual-basic-with-mstest.md).
 
-Możesz dowiedzieć się więcej, zobacz następujące artykuły:
+Więcej informacji można znaleźć w następujących artykułach:
 
-* Program Visual Studio Enterprise oferuje doskonałe narzędzia testujące dla platformy .NET Core. Zapoznaj się z [Live Unit Testing](/visualstudio/test/live-unit-testing) lub [pokrycia kodu](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage) Aby dowiedzieć się więcej.
-* Aby uzyskać więcej informacji na temat sposobu uruchamiania selektywnych testów jednostkowych, zobacz [uruchamianie selektywnych testów jednostkowych](selective-unit-tests.md), lub [dołączaniu i wykluczaniu testy za pomocą programu Visual Studio](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods).
-* [Jak korzystać xUnit przy użyciu platformy .NET Core i Visual Studio](https://xunit.github.io/docs/getting-started-dotnet-core.html).
+* Visual Studio Enterprise oferuje doskonałe narzędzia do testowania dla platformy .NET Core. Sprawdź [Live Unit Testing](/visualstudio/test/live-unit-testing) lub [pokrycie kodu](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage) , aby dowiedzieć się więcej.
+* Aby uzyskać więcej informacji na temat uruchamiania selektywnych testów jednostkowych, zobacz [Uruchamianie selektywnych testów jednostkowych](selective-unit-tests.md)lub [uwzględnianie i wykluczanie testów w programie Visual Studio](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods).
+* [Jak używać xUnit z platformą .NET Core i programem Visual Studio](https://xunit.github.io/docs/getting-started-dotnet-core.html).

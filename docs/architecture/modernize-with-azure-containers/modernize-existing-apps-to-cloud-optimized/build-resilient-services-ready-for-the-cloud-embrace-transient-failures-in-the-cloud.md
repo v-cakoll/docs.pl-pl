@@ -2,12 +2,12 @@
 title: Twórz odporne na błędy usługi w chmurze. Obsługa przejściowych błędów w chmurze
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Twórz odporne na błędy usługi w chmurze. Obsługa przejściowych błędów w chmurze
 ms.date: 04/30/2018
-ms.openlocfilehash: 5d25fb0d15ff7b9f04b9491454d1368e4aa7f593
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5f44029a214cf1f366fc787e27a9ac34599c4dca
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68677040"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373971"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Tworzenie odpornych usług gotowych do pracy w chmurze: Obsługa przejściowych błędów w chmurze
 
@@ -29,7 +29,7 @@ Odporna na błędy aplikacja, taka jak pokazana na rysunku 4-9, powinna implemen
 
 ![Częściowe błędy obsłużone przez ponowną próbę przy użyciu wykładniczej wycofywania](./media/image9.png)
 
-> **Rysunek 4-9.** Częściowe błędy obsłużone przez ponowną próbę przy użyciu wykładniczej wycofywania
+**Rysunek 4-9.** Częściowe błędy obsłużone przez ponowną próbę przy użyciu wykładniczej wycofywania
 
 Tych technik można używać zarówno w przypadku zasobów HTTP, jak i zasobów bazy danych. Na rysunku 4-9 aplikacja jest oparta na architekturze 3-warstwowej, więc te metody są wymagane na poziomie usług (HTTP) i na poziomie warstwy danych (TCP). W aplikacji monolitycznej, która korzysta tylko z jednej warstwy aplikacji oprócz bazy danych (bez dodatkowych usług lub mikrousług), obsługa błędów przejściowych na poziomie połączenia bazy danych może być wystarczająca. W tym scenariuszu wymagana jest tylko określona konfiguracja połączenia z bazą danych.
 

@@ -2,12 +2,12 @@
 title: Wdrażanie istniejących aplikacji .NET jako kontenerów systemu Windows
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Wdrażanie istniejących aplikacji .NET jako kontenerów systemu Windows
 ms.date: 04/29/2018
-ms.openlocfilehash: ba9af3fc3a5bf285830bb873fa6a5da8390dc6b4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 4d58be828418abe4964e26a983f194fd5d30b93d
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68677028"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374024"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Wdrażanie istniejących aplikacji .NET jako kontenerów systemu Windows
 
@@ -51,13 +51,13 @@ Znaczące ulepszenia elastyczności, przenośności i kontroli mogą ostatecznie
 
 [Docker](https://www.docker.com/) to [projekt typu "open source"](https://github.com/docker/docker) , który automatyzuje wdrażanie aplikacji jako przenośnych, samowystarczalnych kontenerów, które mogą działać w chmurze lub lokalnie. Platforma Docker to również [firma](https://www.docker.com/) , która wspiera i rozwija tę technologię. Firma współpracuje z dostawcami chmury, Linux i Windows, w tym z firmą Microsoft.
 
-![](./media/image6.png)
+![Platforma Docker wdraża kontenery we wszystkich warstwach chmury hybrydowej](./media/image6.png)
 
-> **Rysunek 4-6.** Platforma Docker wdraża kontenery we wszystkich warstwach chmury hybrydowej
+**Rysunek 4-6.** Platforma Docker wdraża kontenery we wszystkich warstwach chmury hybrydowej
 
 W przypadku osób zaznajomionych z maszynami wirtualnymi kontenery mogą wydawać się niezwykle podobne. W kontenerze jest uruchomiony system operacyjny, ma system plików i można uzyskać do niego dostęp za pośrednictwem sieci, podobnie jak w przypadku fizycznego lub wirtualnego systemu komputerowego. Jednak technologia i pojęcia związane z kontenerami są znacznie różne od maszyn wirtualnych. Z punktu widzenia dewelopera kontener musi być traktowany jak pojedynczy proces. W rzeczywistości kontener ma jeden punkt wejścia dla jednego procesu.
 
-Kontenery platformy Docker (dlaprostoty, kontenerów) mogą działać natywnie w systemach Linux i Windows. W przypadku uruchamiania zwykłych kontenerów kontenery systemu Windows mogą być uruchamiane tylko na hostach z systemem Windows (na serwerze hosta lub maszynie wirtualnej), a kontenery systemu Linux można uruchamiać tylko na hostach z systemem Linux. Jednak w ostatnich wersjach systemu Windows Server i kontenerów funkcji Hyper-V w systemie Windows Server można natywnie uruchamiać kontener z systemem Linux przy użyciu technologii izolacji funkcji Hyper-V, która jest obecnie dostępna tylko w kontenerach systemu Windows Server.
+Kontenery platformy Docker (dla prostoty, *kontenerów*) mogą działać natywnie w systemach Linux i Windows. W przypadku uruchamiania zwykłych kontenerów kontenery systemu Windows mogą być uruchamiane tylko na hostach z systemem Windows (na serwerze hosta lub maszynie wirtualnej), a kontenery systemu Linux można uruchamiać tylko na hostach z systemem Linux. Jednak w ostatnich wersjach systemu Windows Server i kontenerów funkcji Hyper-V w systemie Windows Server można natywnie uruchamiać kontener z systemem Linux przy użyciu technologii izolacji funkcji Hyper-V, która jest obecnie dostępna tylko w kontenerach systemu Windows Server.
 
 W najbliższej przyszłości środowiska mieszane, które mają zarówno kontenery systemu Linux, jak i Windows, będą dostępne, a nawet wspólne.
 
@@ -83,9 +83,9 @@ W przypadku systemu Linux dostępne są wiele dystrybucje i są obsługiwane w o
 
 Rysunek 4-7 zawiera wersje systemu operacyjnego, które można wybrać, w zależności od wersji .NET Framework aplikacji.
 
-![](./media/image7.png)
+![Systemy operacyjne przeznaczone do celów opartych na wersji .NET Framework](./media/image7.png)
 
-> **Rysunek 4-7.** Systemy operacyjne przeznaczone do celów opartych na wersji .NET Framework
+**Rysunek 4-7.** Systemy operacyjne przeznaczone do celów opartych na wersji .NET Framework
 
 W scenariuszach migracji dla istniejących lub starszych aplikacji, które są oparte na .NET Framework aplikacjach, główne zależności znajdują się w systemach Windows i IIS. Jedyną opcją jest użycie obrazów platformy Docker opartych na systemie Windows Server Core i .NET Framework.
 
@@ -105,7 +105,7 @@ W przypadku platformy .NET Core (międzyplatformowego dla systemów Linux i Wind
 
 ### <a name="multi-arch-images"></a>Obrazy z obsługą wielodostępności
 
-Począwszy od średniej 2017, można także użyć nowej funkcji platformy Docker o nazwie obrazy z [obsługą](https://github.com/moby/moby/issues/15866) wielodostępności. Obrazy .NET Core Docker mogą używać tagów wieloskładnikowych. Pliki pliku dockerfile nie muszą już definiować systemu operacyjnego, którego dotyczy. Funkcja wielodostępna umożliwia użycie jednego tagu w wielu konfiguracjach maszyn. Na przykład przy użyciu wielu archów można użyć jednego wspólnego tagu: **Microsoft/dotnet: 2.0.0-Runtime**. Jeśli ściągasz ten tag ze środowiska kontenera systemu Linux, uzyskasz obraz oparty na debian. Jeśli ten tag zostanie pobrany ze środowiska kontenera systemu Windows, zostanie wyświetlony obraz oparty na serwerze nano.
+Począwszy od średniej 2017, można także użyć nowej funkcji platformy Docker o nazwie obrazy z [obsługą wielodostępności](https://github.com/moby/moby/issues/15866) . Obrazy .NET Core Docker mogą używać tagów wieloskładnikowych. Pliki pliku dockerfile nie muszą już definiować systemu operacyjnego, którego dotyczy. Funkcja wielodostępna umożliwia użycie jednego tagu w wielu konfiguracjach maszyn. Na przykład przy użyciu wielu archów można użyć jednego wspólnego tagu: **Microsoft/dotnet: 2.0.0-Runtime**. Jeśli ściągasz ten tag ze środowiska kontenera systemu Linux, uzyskasz obraz oparty na debian. Jeśli ten tag zostanie pobrany ze środowiska kontenera systemu Windows, zostanie wyświetlony obraz oparty na serwerze nano.
 
 W przypadku obrazów .NET Framework, ponieważ tradycyjny .NET Framework obsługuje tylko system Windows, nie można użyć funkcji wieloskładnikowej.
 
@@ -138,9 +138,9 @@ Uruchamianie kontenera w systemie Windows z izolacją funkcji Hyper-V lub bez ni
 W poprzednich sekcjach wyjaśniono, jakie korzyści z kontenerów platformy Docker są również szczegółowe w przypadku określonych obrazów kontenerów dla aplikacji .NET. Wszystkie informacje ogólne są podstawowe w celu opracowania lub konteneryzowanie aplikacji.
 Jednak w przypadku środowiska wdrażania produkcyjnego, a nawet środowisk do tworzenia i testowania, Microsoft Azure zapewnia otwarte i szeroki wybór różnych opcji, a pełny ekosystem kontenera w chmurze (pokazano na poniższym diagramie). W zależności od potrzeb aplikacji należy wybrać jeden lub inny produkt platformy Azure.
 
-![](./media/image7.5.png)
+![Ekosystem kontenera na platformie Azure](./media/image7.5.png)
 
-> **Rysunek 4.7.5.** Ekosystem kontenera na platformie Azure
+**Rysunek 4.7.5.** Ekosystem kontenera na platformie Azure
 
 Z ekosystemu kontenerów na platformie Azure następujące produkty obsługujące kontenery, które są uważane za infrastrukturę:
 - **Usługa Azure Container Instances (ACI)**

@@ -1,34 +1,42 @@
 ---
 title: Typy niezarządzane — C# odwołanie
-ms.date: 07/23/2019
+ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: 2b675be5dbc61006725549f4b69284326650401d
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 25aa42ba8c8f0023b4f818feb2edbb325f805fb6
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512078"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374117"
 ---
-# <a name="unmanaged-types-c-reference"></a><span data-ttu-id="609ea-102">Typy niezarządzane (C# odwołanie)</span><span class="sxs-lookup"><span data-stu-id="609ea-102">Unmanaged types (C# reference)</span></span>
+# <a name="unmanaged-types-c-reference"></a><span data-ttu-id="d8f01-102">Typy niezarządzane (C# odwołanie)</span><span class="sxs-lookup"><span data-stu-id="d8f01-102">Unmanaged types (C# reference)</span></span>
 
-<span data-ttu-id="609ea-103">**Typem** niezarządzanym jest dowolny typ, który nie jest typem referencyjnym lub typem konstruowanym (typ, który zawiera co najmniej jeden argument typu) i nie zawiera pól typu referencyjnego lub typu złożonego na dowolnym poziomie zagnieżdżania.</span><span class="sxs-lookup"><span data-stu-id="609ea-103">An **unmanaged type** is any type that isn't a reference type or constructed type (a type that includes at least one type argument), and doesn't contain reference type or constructed type fields at any level of nesting.</span></span> <span data-ttu-id="609ea-104">Innymi słowy, niezarządzany typ jest jednym z następujących:</span><span class="sxs-lookup"><span data-stu-id="609ea-104">In other words, an unmanaged type is one of the following:</span></span>
+<span data-ttu-id="d8f01-103">Typ jest **typem niezarządzanym** , jeśli jest dowolnego z następujących typów:</span><span class="sxs-lookup"><span data-stu-id="d8f01-103">A type is an **unmanaged type** if it's any of the following types:</span></span>
 
-- <span data-ttu-id="609ea-105">`sbyte`, `byte` `short` ,`uint` ,,`float`,, ,`long` ,,`decimal`, ,`double`lub `ushort` `ulong` `int` `char``bool`</span><span class="sxs-lookup"><span data-stu-id="609ea-105">`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, `double`, `decimal`, or `bool`</span></span>
-- <span data-ttu-id="609ea-106">Dowolny typ [wyliczeniowy](../keywords/enum.md)</span><span class="sxs-lookup"><span data-stu-id="609ea-106">Any [enum](../keywords/enum.md) type</span></span>
-- <span data-ttu-id="609ea-107">Dowolny typ [wskaźnika](../../programming-guide/unsafe-code-pointers/pointer-types.md)</span><span class="sxs-lookup"><span data-stu-id="609ea-107">Any [pointer](../../programming-guide/unsafe-code-pointers/pointer-types.md) type</span></span>
-- <span data-ttu-id="609ea-108">Dowolny zdefiniowany przez użytkownika typ [struktury](../keywords/struct.md) , który nie jest typem skonstruowanym i zawiera pola tylko typów niezarządzanych</span><span class="sxs-lookup"><span data-stu-id="609ea-108">Any user-defined [struct](../keywords/struct.md) type that is not a constructed type and contains fields of unmanaged types only</span></span>
+- <span data-ttu-id="d8f01-104">`sbyte`, `byte` `short` ,`uint` ,,`float`,, ,`long` ,,`decimal`, ,`double`lub `ushort` `ulong` `int` `char``bool`</span><span class="sxs-lookup"><span data-stu-id="d8f01-104">`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, `double`, `decimal`, or `bool`</span></span>
+- <span data-ttu-id="d8f01-105">Dowolny typ [wyliczeniowy](../keywords/enum.md)</span><span class="sxs-lookup"><span data-stu-id="d8f01-105">Any [enum](../keywords/enum.md) type</span></span>
+- <span data-ttu-id="d8f01-106">Dowolny typ [wskaźnika](../../programming-guide/unsafe-code-pointers/pointer-types.md)</span><span class="sxs-lookup"><span data-stu-id="d8f01-106">Any [pointer](../../programming-guide/unsafe-code-pointers/pointer-types.md) type</span></span>
+- <span data-ttu-id="d8f01-107">Dowolny zdefiniowany przez użytkownika typ [struktury](../keywords/struct.md) , który zawiera pola tylko typy niezarządzane i, w C# 7,3 i wcześniejszych, nie jest typem skonstruowanym (typ, który zawiera co najmniej jeden argument typu)</span><span class="sxs-lookup"><span data-stu-id="d8f01-107">Any user-defined [struct](../keywords/struct.md) type that contains fields of unmanaged types only and, in C# 7.3 and earlier, is not a constructed type (a type that includes at least one type argument)</span></span>
 
-<span data-ttu-id="609ea-109">Począwszy od C# 7,3, można użyć [ `unmanaged` ograniczenia](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint) , aby określić, że parametr typu jest typem niezarządzanym wskaźnika.</span><span class="sxs-lookup"><span data-stu-id="609ea-109">Beginning with C# 7.3, you can use the [`unmanaged` constraint](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint) to specify that a type parameter is a non-pointer unmanaged type.</span></span>
+<span data-ttu-id="d8f01-108">Począwszy od C# 7,3, można użyć [ `unmanaged` ograniczenia](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint) , aby określić, że parametr typu jest typem niezarządzanym wskaźnika.</span><span class="sxs-lookup"><span data-stu-id="d8f01-108">Beginning with C# 7.3, you can use the [`unmanaged` constraint](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint) to specify that a type parameter is a non-pointer unmanaged type.</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="609ea-110">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="609ea-110">C# language specification</span></span>
+<span data-ttu-id="d8f01-109">Począwszy od C# 8,0, *skonstruowany* typ struktury, który zawiera pola typów niezarządzanych, również jest niezarządzany, jak pokazano w poniższym przykładzie:</span><span class="sxs-lookup"><span data-stu-id="d8f01-109">Beginning with C# 8.0, a *constructed* struct type that contains fields of unmanaged types only is also unmanaged, as the following example shows:</span></span>
 
-<span data-ttu-id="609ea-111">Aby uzyskać więcej informacji, zobacz sekcję [typy wskaźników](~/_csharplang/spec/unsafe-code.md#pointer-types) [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).</span><span class="sxs-lookup"><span data-stu-id="609ea-111">For more information, see the [Pointer types](~/_csharplang/spec/unsafe-code.md#pointer-types) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
+[!code-csharp[unmanaged constructed types](~/samples/csharp/language-reference/builtin-types/UnmanagedTypes.cs#ProgramExample)]
 
-## <a name="see-also"></a><span data-ttu-id="609ea-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="609ea-112">See also</span></span>
+<span data-ttu-id="d8f01-110">Struktura generyczna może być źródłem zarówno typów niezarządzanych, jak i niezarządzanych.</span><span class="sxs-lookup"><span data-stu-id="d8f01-110">A generic struct may be the source of both unmanaged and not unmanaged constructed types.</span></span> <span data-ttu-id="d8f01-111">W poprzednim przykładzie zdefiniowano strukturę `Coords<T>` generyczną i przedstawiono przykłady niezarządzanych typów skonstruowanych.</span><span class="sxs-lookup"><span data-stu-id="d8f01-111">The preceding example defines a generic struct `Coords<T>` and presents the examples of unmanaged constructed types.</span></span> <span data-ttu-id="d8f01-112">Przykładem niezarządzanego typu jest `Coords<object>`.</span><span class="sxs-lookup"><span data-stu-id="d8f01-112">The example of not an unmanaged type is `Coords<object>`.</span></span> <span data-ttu-id="d8f01-113">Nie jest ona zarządzana, ponieważ zawiera pola `object` typu, które nie są zarządzane.</span><span class="sxs-lookup"><span data-stu-id="d8f01-113">It's not unmanaged because it has the fields of the `object` type, which is not unmanaged.</span></span> <span data-ttu-id="d8f01-114">Jeśli chcesz, aby *wszystkie* skonstruowane typy były typami niezarządzanymi, `unmanaged` Użyj ograniczenia w definicji generycznej struktury:</span><span class="sxs-lookup"><span data-stu-id="d8f01-114">If you want *all* constructed types to be unmanaged types, use the `unmanaged` constraint in the definition of a generic struct:</span></span>
 
-- [<span data-ttu-id="609ea-113">C#odwoła</span><span class="sxs-lookup"><span data-stu-id="609ea-113">C# reference</span></span>](../index.md)
-- [<span data-ttu-id="609ea-114">Typy wskaźników</span><span class="sxs-lookup"><span data-stu-id="609ea-114">Pointer types</span></span>](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [<span data-ttu-id="609ea-115">Pamięć i typy związane z zakresem</span><span class="sxs-lookup"><span data-stu-id="609ea-115">Memory and span-related types</span></span>](../../../standard/memory-and-spans/index.md)
-- [<span data-ttu-id="609ea-116">sizeof — Operator</span><span class="sxs-lookup"><span data-stu-id="609ea-116">sizeof operator</span></span>](../operators/sizeof.md)
-- [<span data-ttu-id="609ea-117">operator stackalloc</span><span class="sxs-lookup"><span data-stu-id="609ea-117">stackalloc operator</span></span>](../operators/stackalloc.md)
+[!code-csharp[unmanaged constraint in type definition](~/samples/csharp/language-reference/builtin-types/UnmanagedTypes.cs#AlwaysUnmanaged)]
+
+## <a name="c-language-specification"></a><span data-ttu-id="d8f01-115">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="d8f01-115">C# language specification</span></span>
+
+<span data-ttu-id="d8f01-116">Aby uzyskać więcej informacji, zobacz sekcję [typy wskaźników](~/_csharplang/spec/unsafe-code.md#pointer-types) [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).</span><span class="sxs-lookup"><span data-stu-id="d8f01-116">For more information, see the [Pointer types](~/_csharplang/spec/unsafe-code.md#pointer-types) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="d8f01-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d8f01-117">See also</span></span>
+
+- [<span data-ttu-id="d8f01-118">C#odwoła</span><span class="sxs-lookup"><span data-stu-id="d8f01-118">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="d8f01-119">Typy wskaźników</span><span class="sxs-lookup"><span data-stu-id="d8f01-119">Pointer types</span></span>](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [<span data-ttu-id="d8f01-120">Pamięć i typy związane z zakresem</span><span class="sxs-lookup"><span data-stu-id="d8f01-120">Memory and span-related types</span></span>](../../../standard/memory-and-spans/index.md)
+- [<span data-ttu-id="d8f01-121">sizeof — Operator</span><span class="sxs-lookup"><span data-stu-id="d8f01-121">sizeof operator</span></span>](../operators/sizeof.md)
+- [<span data-ttu-id="d8f01-122">operator stackalloc</span><span class="sxs-lookup"><span data-stu-id="d8f01-122">stackalloc operator</span></span>](../operators/stackalloc.md)

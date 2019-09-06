@@ -1,0 +1,24 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Wskazówki dotyczące architektury aplikacji .NET
+metadata:
+  document_id: na
+  title: Wskazówki dotyczące architektury aplikacji .NET
+  meta.description: 'Learn about recommended practices for architecting, designing and building .NET software.'
+  ms.topic: landing-page
+  ms.date: 06/12/2019
+abstract:
+  description: 'Dowiedz się, jak tworzyć aplikacje .NET gotowe do użycia w środowisku produkcyjnym przy użyciu bezpłatnych wskazówek dotyczących architektury aplikacji.'
+sections:
+  - title: Dostępne książki elektroniczne
+    items:
+      - html: <ul><li><p><a href="containerized-lifecycle/index">Cykl życia konteneryzowanych aplikacji platformy Docker korzystających z platformy i narzędzi firmy Microsoft</a></p>
+      - html: '<p>Ten przewodnik zawiera wprowadzenie do zalecanych kompleksowych procesów cyklu życia, z których można korzystać w celu opracowywania, weryfikowania i wdrażania aplikacji platformy Docker przy użyciu programu Visual Studio i Microsoft Azure.</p></li></ul>'
+      - html: <ul><li><p><a href="modernize-with-azure-containers/index">Modernizacja istniejących aplikacji platformy .NET za pomocą chmury platformy Azure i kontenerów systemu Windows</a></p>
+      - html: '<p>Ten przewodnik zawiera wprowadzenie do strategii potrzebnych do migrowania istniejących aplikacji sieci Web do usługi Azure Cloud i kontenerów systemu Windows. Zapoznaj się z strategiami kodu, migracją danych, koordynatorami i procesami ciągłej integracji/ciągłego wdrażania.</p></li></ul>'
+      - html: <ul><li><p><a href="modern-web-apps-azure/index">Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyciu ASP.NET Core i platformy Azure</a></p>
+      - html: '<p>Ten przewodnik zawiera wprowadzenie do zalecanej architektury, projektu i procesów wdrażania, które będą używane do kompilowania aplikacji ASP.NET i ASP.NET Core oraz hostowania aplikacji na platformie Azure.</p></li></ul>'
+      - html: <ul><li><p><a href="microservices/index">Tworzenie aplikacji opartych na kontenerach i mikrousługach</a></p>
+      - html: <p>Ten przewodnik stanowi wprowadzenie do tworzenia aplikacji opartych na mikrousługach i zarządzania nimi przy użyciu kontenerów. Omówiono podejścia projektowania i implementacji architektury przy użyciu programu .NET Core i kontenerów platformy Docker.</p></li></ul>
+      - html: '<ul><li><p><a href="serverless/index">Aplikacje bezserwerowe: architektura, wzorce i implementacja platformy Azure</a></p>'
+      - html: '<p>Jest to przewodnik dotyczący tworzenia aplikacji bezserwerowych z przykładami przy użyciu platformy Azure. W tym artykule omówiono różne podejścia do architektury i projektowania, korzyści i wyzwania związane z bez serwera oraz scenariusze i przypadki użycia dla aplikacji bezserwerowych.</p></li></ul>'

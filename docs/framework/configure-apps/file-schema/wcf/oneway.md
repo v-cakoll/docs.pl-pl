@@ -2,23 +2,24 @@
 title: <oneWay>
 ms.date: 03/30/2017
 ms.assetid: 00e67e0e-77c0-4695-9138-c0997b0e5f3c
-ms.openlocfilehash: f4a9422f4385e37a61ec85d680fcf7743a57bc0c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f12969d8b752e54916b45c3d0e64f114971b8944
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932943"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397653"
 ---
-# <a name="oneway"></a><span data-ttu-id="bef88-101">\<> oneWay</span><span class="sxs-lookup"><span data-stu-id="bef88-101">\<oneWay></span></span>
-<span data-ttu-id="bef88-102">Umożliwia routing pakietów i stosowanie jednokierunkowych metod dla niestandardowego powiązania.</span><span class="sxs-lookup"><span data-stu-id="bef88-102">Enables packet routing and the use of one-way methods for a custom binding.</span></span>  
+# <a name="oneway"></a><span data-ttu-id="ad086-101">\<> oneWay</span><span class="sxs-lookup"><span data-stu-id="ad086-101">\<oneWay></span></span>
+<span data-ttu-id="ad086-102">Umożliwia routing pakietów i stosowanie jednokierunkowych metod dla niestandardowego powiązania.</span><span class="sxs-lookup"><span data-stu-id="ad086-102">Enables packet routing and the use of one-way methods for a custom binding.</span></span>  
   
- <span data-ttu-id="bef88-103">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="bef88-103">\<system.serviceModel></span></span>  
-<span data-ttu-id="bef88-104">\<> powiązań</span><span class="sxs-lookup"><span data-stu-id="bef88-104">\<bindings></span></span>  
-<span data-ttu-id="bef88-105">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="bef88-105">\<customBinding></span></span>  
-<span data-ttu-id="bef88-106">\<> powiązania</span><span class="sxs-lookup"><span data-stu-id="bef88-106">\<binding></span></span>  
-<span data-ttu-id="bef88-107">\<> oneWay</span><span class="sxs-lookup"><span data-stu-id="bef88-107">\<oneWay></span></span>  
+<span data-ttu-id="ad086-103">[ **\<> konfiguracji**](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="ad086-103">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="ad086-104">&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)</span><span class="sxs-lookup"><span data-stu-id="ad086-104">&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)</span></span>\
+<span data-ttu-id="ad086-105">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> powiązań**](bindings.md)</span><span class="sxs-lookup"><span data-stu-id="ad086-105">&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)</span></span>\
+<span data-ttu-id="ad086-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<niestandardowy >Binding**](custombinding.md)</span><span class="sxs-lookup"><span data-stu-id="ad086-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)</span></span>\
+<span data-ttu-id="ad086-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> powiązania**</span><span class="sxs-lookup"><span data-stu-id="ad086-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**</span></span>\
+<span data-ttu-id="ad086-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> oneWay**</span><span class="sxs-lookup"><span data-stu-id="ad086-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<oneWay>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bef88-108">Składnia</span><span class="sxs-lookup"><span data-stu-id="bef88-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ad086-109">Składnia</span><span class="sxs-lookup"><span data-stu-id="ad086-109">Syntax</span></span>  
   
 ```xml  
 <oneWay packetRoutable="Boolean">
@@ -28,37 +29,37 @@ ms.locfileid: "69932943"
 </oneWay>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="bef88-109">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="bef88-109">Attributes and Elements</span></span>  
- <span data-ttu-id="bef88-110">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="bef88-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ad086-110">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="ad086-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="ad086-111">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="ad086-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="bef88-111">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="bef88-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="ad086-112">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="ad086-112">Attributes</span></span>  
   
-|<span data-ttu-id="bef88-112">Atrybut</span><span class="sxs-lookup"><span data-stu-id="bef88-112">Attribute</span></span>|<span data-ttu-id="bef88-113">Opis</span><span class="sxs-lookup"><span data-stu-id="bef88-113">Description</span></span>|  
+|<span data-ttu-id="ad086-113">Atrybut</span><span class="sxs-lookup"><span data-stu-id="ad086-113">Attribute</span></span>|<span data-ttu-id="ad086-114">Opis</span><span class="sxs-lookup"><span data-stu-id="ad086-114">Description</span></span>|  
 |---------------|-----------------|  
-|`packetRoutable`|<span data-ttu-id="bef88-114">Wartość logiczna określająca, czy jest włączona funkcja routingu pakietów.</span><span class="sxs-lookup"><span data-stu-id="bef88-114">A Boolean value that specifies whether packet routing is enabled.</span></span> <span data-ttu-id="bef88-115">Wartość domyślna to `false`.</span><span class="sxs-lookup"><span data-stu-id="bef88-115">The default is `false`.</span></span>|  
-|`MaxAcceptedChannels`|<span data-ttu-id="bef88-116">Liczba całkowita określająca maksymalną liczbę kanałów, które mogą być akceptowane.</span><span class="sxs-lookup"><span data-stu-id="bef88-116">An integer that specifies the maximum number of channels that can be accepted.</span></span>|  
+|`packetRoutable`|<span data-ttu-id="ad086-115">Wartość logiczna określająca, czy jest włączona funkcja routingu pakietów.</span><span class="sxs-lookup"><span data-stu-id="ad086-115">A Boolean value that specifies whether packet routing is enabled.</span></span> <span data-ttu-id="ad086-116">Wartość domyślna to `false`.</span><span class="sxs-lookup"><span data-stu-id="ad086-116">The default is `false`.</span></span>|  
+|`MaxAcceptedChannels`|<span data-ttu-id="ad086-117">Liczba całkowita określająca maksymalną liczbę kanałów, które mogą być akceptowane.</span><span class="sxs-lookup"><span data-stu-id="ad086-117">An integer that specifies the maximum number of channels that can be accepted.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="bef88-117">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="bef88-117">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="ad086-118">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="ad086-118">Child Elements</span></span>  
   
-|<span data-ttu-id="bef88-118">Element</span><span class="sxs-lookup"><span data-stu-id="bef88-118">Element</span></span>|<span data-ttu-id="bef88-119">Opis</span><span class="sxs-lookup"><span data-stu-id="bef88-119">Description</span></span>|  
+|<span data-ttu-id="ad086-119">Element</span><span class="sxs-lookup"><span data-stu-id="ad086-119">Element</span></span>|<span data-ttu-id="ad086-120">Opis</span><span class="sxs-lookup"><span data-stu-id="ad086-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="bef88-120">\<channelPoolSettings></span><span class="sxs-lookup"><span data-stu-id="bef88-120">\<channelPoolSettings></span></span>](channelpoolsettings.md)|<span data-ttu-id="bef88-121"><xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement> Obiekt, który zawiera właściwości puli kanałów dla bieżącego kanału.</span><span class="sxs-lookup"><span data-stu-id="bef88-121">A <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement> object that contains properties of the channel pool for the current channel.</span></span>|  
+|[<span data-ttu-id="ad086-121">\<channelPoolSettings></span><span class="sxs-lookup"><span data-stu-id="ad086-121">\<channelPoolSettings></span></span>](channelpoolsettings.md)|<span data-ttu-id="ad086-122"><xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement> Obiekt, który zawiera właściwości puli kanałów dla bieżącego kanału.</span><span class="sxs-lookup"><span data-stu-id="ad086-122">A <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement> object that contains properties of the channel pool for the current channel.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="bef88-122">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="bef88-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="ad086-123">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="ad086-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="bef88-123">Element</span><span class="sxs-lookup"><span data-stu-id="bef88-123">Element</span></span>|<span data-ttu-id="bef88-124">Opis</span><span class="sxs-lookup"><span data-stu-id="bef88-124">Description</span></span>|  
+|<span data-ttu-id="ad086-124">Element</span><span class="sxs-lookup"><span data-stu-id="ad086-124">Element</span></span>|<span data-ttu-id="ad086-125">Opis</span><span class="sxs-lookup"><span data-stu-id="ad086-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="bef88-125">\<> powiązania</span><span class="sxs-lookup"><span data-stu-id="bef88-125">\<binding></span></span>](../../../misc/binding.md)|<span data-ttu-id="bef88-126">Definiuje wszystkie możliwości powiązań niestandardowego powiązania.</span><span class="sxs-lookup"><span data-stu-id="bef88-126">Defines all binding capabilities of the custom binding.</span></span>|  
+|[<span data-ttu-id="ad086-126">\<> powiązania</span><span class="sxs-lookup"><span data-stu-id="ad086-126">\<binding></span></span>](../../../misc/binding.md)|<span data-ttu-id="ad086-127">Definiuje wszystkie możliwości powiązań niestandardowego powiązania.</span><span class="sxs-lookup"><span data-stu-id="ad086-127">Defines all binding capabilities of the custom binding.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="bef88-127">Uwagi</span><span class="sxs-lookup"><span data-stu-id="bef88-127">Remarks</span></span>  
- <span data-ttu-id="bef88-128">Aby włączyć routing pakietów, wymagana jest jednokierunkowa warstwa konwersji, która zawiera ten element.</span><span class="sxs-lookup"><span data-stu-id="bef88-128">To enable packet routing, a one-way conversion layer is required, which this element provides.</span></span> <span data-ttu-id="bef88-129">Użytkownik może utworzyć niestandardowe powiązanie, które tworzy warstwy tego powiązania przez transport obsługujący sesję lub żądanie-odpowiedź, aby umożliwić jej Routing.</span><span class="sxs-lookup"><span data-stu-id="bef88-129">A user can create a custom binding that layers this binding over a session-aware or request-reply transport to make it packet routable.</span></span> <span data-ttu-id="bef88-130">Ten element jest również przydatny, gdy chcesz uwidocznić jednokierunkowe metody w bardziej natywny sposób.</span><span class="sxs-lookup"><span data-stu-id="bef88-130">This element is also useful when you want to expose one-way methods in a more native fashion.</span></span> <span data-ttu-id="bef88-131">Więcej przekształceń można zastosować do tej warstwy, na przykład złożonego dupleksu i niezawodnej obsługi komunikatów.</span><span class="sxs-lookup"><span data-stu-id="bef88-131">More transformations can be applied over this layer, such as Composite Duplex and Reliable Messaging.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ad086-128">Uwagi</span><span class="sxs-lookup"><span data-stu-id="ad086-128">Remarks</span></span>  
+ <span data-ttu-id="ad086-129">Aby włączyć routing pakietów, wymagana jest jednokierunkowa warstwa konwersji, która zawiera ten element.</span><span class="sxs-lookup"><span data-stu-id="ad086-129">To enable packet routing, a one-way conversion layer is required, which this element provides.</span></span> <span data-ttu-id="ad086-130">Użytkownik może utworzyć niestandardowe powiązanie, które tworzy warstwy tego powiązania przez transport obsługujący sesję lub żądanie-odpowiedź, aby umożliwić jej Routing.</span><span class="sxs-lookup"><span data-stu-id="ad086-130">A user can create a custom binding that layers this binding over a session-aware or request-reply transport to make it packet routable.</span></span> <span data-ttu-id="ad086-131">Ten element jest również przydatny, gdy chcesz uwidocznić jednokierunkowe metody w bardziej natywny sposób.</span><span class="sxs-lookup"><span data-stu-id="ad086-131">This element is also useful when you want to expose one-way methods in a more native fashion.</span></span> <span data-ttu-id="ad086-132">Więcej przekształceń można zastosować do tej warstwy, na przykład złożonego dupleksu i niezawodnej obsługi komunikatów.</span><span class="sxs-lookup"><span data-stu-id="ad086-132">More transformations can be applied over this layer, such as Composite Duplex and Reliable Messaging.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bef88-132">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="bef88-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ad086-133">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ad086-133">See also</span></span>
 
 - <xref:System.ServiceModel.Channels.OneWayBindingElement>
 - <xref:System.ServiceModel.Configuration.OneWayElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [<span data-ttu-id="bef88-133">Powiązania</span><span class="sxs-lookup"><span data-stu-id="bef88-133">Bindings</span></span>](../../../wcf/bindings.md)
-- [<span data-ttu-id="bef88-134">Rozszerzanie powiązań</span><span class="sxs-lookup"><span data-stu-id="bef88-134">Extending Bindings</span></span>](../../../wcf/extending/extending-bindings.md)
-- [<span data-ttu-id="bef88-135">Powiązania niestandardowe</span><span class="sxs-lookup"><span data-stu-id="bef88-135">Custom Bindings</span></span>](../../../wcf/extending/custom-bindings.md)
-- [<span data-ttu-id="bef88-136">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="bef88-136">\<customBinding></span></span>](custombinding.md)
+- [<span data-ttu-id="ad086-134">Powiązania</span><span class="sxs-lookup"><span data-stu-id="ad086-134">Bindings</span></span>](../../../wcf/bindings.md)
+- [<span data-ttu-id="ad086-135">Rozszerzanie powiązań</span><span class="sxs-lookup"><span data-stu-id="ad086-135">Extending Bindings</span></span>](../../../wcf/extending/extending-bindings.md)
+- [<span data-ttu-id="ad086-136">Powiązania niestandardowe</span><span class="sxs-lookup"><span data-stu-id="ad086-136">Custom Bindings</span></span>](../../../wcf/extending/custom-bindings.md)
+- [<span data-ttu-id="ad086-137">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="ad086-137">\<customBinding></span></span>](custombinding.md)

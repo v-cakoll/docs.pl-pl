@@ -13,18 +13,17 @@ helpviewer_keywords:
 - receiving data, application protocols
 - requesting data from Internet, application protocols
 ms.assetid: 3aab4bcc-8397-4e1a-a1b6-bbd837a21430
-ms.openlocfilehash: ffb47c6384a5c26599a65c9837f3b9d1d9332e9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a127776544830e299118aefadf1735a856c095dd
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796880"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398516"
 ---
-# <a name="using-application-protocols"></a><span data-ttu-id="9f45a-102">Korzystanie z protokołów aplikacji</span><span class="sxs-lookup"><span data-stu-id="9f45a-102">Using Application Protocols</span></span>
-<span data-ttu-id="9f45a-103">.NET Framework obsługuje najczęściej używanych protokołów aplikacji internetowych.</span><span class="sxs-lookup"><span data-stu-id="9f45a-103">The .NET Framework supports commonly used Internet application protocols.</span></span> <span data-ttu-id="9f45a-104">Ta sekcja zawiera informacje na temat korzystania z [HTTP](../../../docs/framework/network-programming/http.md), protokoły "TCP" i "UDP", a także informacje na temat korzystania z [Windows Sockets](../../../docs/framework/network-programming/sockets.md) interfejs do implementacji niestandardowych protokołów.</span><span class="sxs-lookup"><span data-stu-id="9f45a-104">This section includes information on using the [HTTP](../../../docs/framework/network-programming/http.md), "TCP", and "UDP" protocols, as well as information on using the [Windows Sockets](../../../docs/framework/network-programming/sockets.md) interface to implement custom protocols.</span></span>  
+# <a name="using-application-protocols"></a><span data-ttu-id="04e20-102">Korzystanie z protokołów aplikacji</span><span class="sxs-lookup"><span data-stu-id="04e20-102">Using Application Protocols</span></span>
+<span data-ttu-id="04e20-103">.NET Framework obsługuje powszechnie używane protokoły aplikacji internetowych.</span><span class="sxs-lookup"><span data-stu-id="04e20-103">The .NET Framework supports commonly used Internet application protocols.</span></span> <span data-ttu-id="04e20-104">Ta sekcja zawiera informacje dotyczące korzystania z protokołów [http](../../../docs/framework/network-programming/http.md), "TCP" i "UDP" oraz informacje na temat używania interfejsu [Windows Sockets](../../../docs/framework/network-programming/sockets.md) do implementowania protokołów niestandardowych.</span><span class="sxs-lookup"><span data-stu-id="04e20-104">This section includes information on using the [HTTP](../../../docs/framework/network-programming/http.md), "TCP", and "UDP" protocols, as well as information on using the [Windows Sockets](../../../docs/framework/network-programming/sockets.md) interface to implement custom protocols.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9f45a-105">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9f45a-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="04e20-105">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="04e20-105">See also</span></span>
 
-- [<span data-ttu-id="9f45a-106">Programowanie dla sieci w programie .NET Framework</span><span class="sxs-lookup"><span data-stu-id="9f45a-106">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)
-- [<span data-ttu-id="9f45a-107">Przykłady programowania sieciowego</span><span class="sxs-lookup"><span data-stu-id="9f45a-107">Network Programming Samples</span></span>](../../../docs/framework/network-programming/network-programming-samples.md)
-- [<span data-ttu-id="9f45a-108">Przykłady kodu usług sieciowych dla platformy .NET w galerii kodu MSDN</span><span class="sxs-lookup"><span data-stu-id="9f45a-108">Networking Samples for .NET on MSDN Code Gallery</span></span>](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+- [<span data-ttu-id="04e20-106">Programowanie dla sieci w programie .NET Framework</span><span class="sxs-lookup"><span data-stu-id="04e20-106">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)
+- [<span data-ttu-id="04e20-107">Przykłady programowania sieciowego</span><span class="sxs-lookup"><span data-stu-id="04e20-107">Network Programming Samples</span></span>](../../../docs/framework/network-programming/network-programming-samples.md)

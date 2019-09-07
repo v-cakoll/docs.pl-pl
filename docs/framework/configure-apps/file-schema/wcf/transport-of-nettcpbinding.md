@@ -2,22 +2,23 @@
 title: <transport> dla <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 265b68e058919d1d5c5f1dbcfb1419b57be9aeab
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 41f11be9b4ae8f7a7535c9766965de8575cff784
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915548"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399321"
 ---
 # <a name="transport-of-nettcpbinding"></a>\<Transport > \<NetTcpBinding >
 Definiuje typ wymagań dotyczących zabezpieczeń na poziomie komunikatów dla punktu końcowego skonfigurowanego przy użyciu [ \<> NetTcpBinding](nettcpbinding.md).  
   
- \<system.ServiceModel>  
-\<> powiązań  
-\<netTcpBinding>  
-\<> powiązania  
-\<> zabezpieczeń  
-\<transport>  
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> powiązań**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netTcpBinding >** ](nettcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> powiązania**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zabezpieczeń**](security-of-nettcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> transportu**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,8 +47,8 @@ Definiuje typ wymagań dotyczących zabezpieczeń na poziomie komunikatów dla p
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|clientCredentialType|Opcjonalna. Określa typ poświadczeń, które mają być używane podczas uwierzytelniania klienta przy użyciu zabezpieczeń transportu.<br /><br /> — Wartość domyślna to `Windows`.<br />-Ten atrybut jest typu <xref:System.ServiceModel.TcpClientCredentialType>.|  
-|protectionLevel|Opcjonalny. Definiuje zabezpieczenia na poziomie transportu TCP. Komunikaty podpisywania zmniejszają ryzyko naruszenia przez osobę trzecią komunikatu podczas jego przesyłania. Szyfrowanie zapewnia prywatność na poziomie danych podczas transportu.<br /><br /> Wartość domyślna to `EncryptAndSign`.|  
+|clientCredentialType|Opcjonalny. Określa typ poświadczeń, które mają być używane podczas uwierzytelniania klienta przy użyciu zabezpieczeń transportu.<br /><br /> — Wartość domyślna to `Windows`.<br />-Ten atrybut jest typu <xref:System.ServiceModel.TcpClientCredentialType>.|  
+|protectionLevel|Opcjonalna. Definiuje zabezpieczenia na poziomie transportu TCP. Komunikaty podpisywania zmniejszają ryzyko naruszenia przez osobę trzecią komunikatu podczas jego przesyłania. Szyfrowanie zapewnia prywatność na poziomie danych podczas transportu.<br /><br /> Wartość domyślna to `EncryptAndSign`.|  
 |SslProtocols określająca|Wartość flagi wyliczenia SslProtocols określająca, która określa, które SslProtocols określająca są obsługiwane. Wartość domyślna to TLS&#124;Tls11&#124;Tls12.|  
 |policyEnforcement|To Wyliczenie określa, <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> Kiedy należy wymusić.<br /><br /> 1.  Nigdy — zasady nigdy nie są wymuszane (ochrona rozszerzona jest wyłączona).<br />2.  WhenSupported — zasady są wymuszane tylko wtedy, gdy klient obsługuje ochronę rozszerzoną.<br />3.  Zawsze — zasady są zawsze wymuszane. Klienci, którzy nie obsługują rozszerzonej ochrony, nie będą uwierzytelniani.|  
   

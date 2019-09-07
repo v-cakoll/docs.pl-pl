@@ -2,21 +2,22 @@
 title: <security> dla <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-ms.openlocfilehash: 1bbc3a460ce707e71b72a469af2e03acd8dc79e5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c780b157d0d566e24c6826c253401a51fbfab69d
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936686"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399840"
 ---
 # <a name="security-of-netmsmqbinding"></a>\<> \<zabezpieczeń usługi msmqbinding >
 Definiuje ustawienia zabezpieczeń dla powiązania usługi MSMQ. Określa, czy zabezpieczenia transportu lub protokołu SOAP są włączone i, jeśli tak, jakiego trybu uwierzytelniania i poziomów ochrony są używane.  
   
- \<system.ServiceModel>  
-\<> powiązań  
-\<netMsmqBinding>  
-\<> powiązania  
-\<> zabezpieczeń  
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> powiązań**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> usługi Msmqbinding**](netmsmqbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> powiązania**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> zabezpieczeń**  
   
 ## <a name="syntax"></a>Składnia  
   

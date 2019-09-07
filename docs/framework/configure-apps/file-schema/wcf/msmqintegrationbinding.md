@@ -4,19 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: 52f488bfc77cbe6c0942c0e38c0201fa8d7d2d9c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b692d0610a975247d74798feff2411317db68dfd
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928891"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397742"
 ---
 # <a name="msmqintegrationbinding"></a>\<msmqIntegrationBinding>
 Definiuje powiązanie, które zapewnia obsługę kolejkowania przez kierowanie komunikatów za pośrednictwem usługi MSMQ.  
   
- \<system.ServiceModel>  
-\<> powiązań  
-msmqIntegrationBinding  
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> powiązań**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<niestandardowy >Binding**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> powiązania**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<msmqIntegrationBinding >**  
   
 ## <a name="syntax"></a>Składnia  
   

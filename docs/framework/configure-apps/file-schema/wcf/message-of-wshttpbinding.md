@@ -2,22 +2,23 @@
 title: <message> dla <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 621abbde-590b-454d-90ac-68dc3c69c720
-ms.openlocfilehash: 30507e44997a2e0fcc43494332e87edb2cc37aa3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8cb8879d866eca3b1dafbd139de39373874dad14
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931454"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397793"
 ---
 # <a name="message-of-wshttpbinding"></a>\<> komunikatu > \<WSHttpBinding
 Definiuje ustawienia zabezpieczeń [ \<](wshttpbinding.md)na poziomie wiadomości WSHttpBinding >.  
   
- \<system.ServiceModel>  
-\<> powiązań  
-\<wsHttpBinding>  
-\<> powiązania  
-\<> zabezpieczeń  
-\<message>  
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> powiązań**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsHttpBinding >** ](wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> powiązania**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zabezpieczeń**](security-of-wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> komunikatu**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,9 +40,9 @@ Definiuje ustawienia zabezpieczeń [ \<](wshttpbinding.md)na poziomie wiadomośc
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |algorithmSuite|Ustawia szyfrowanie komunikatów i algorytmy zawijania kluczy. Algorytmy i rozmiary kluczy są określane przez <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> klasę. Te algorytmy są mapowane na te określone w specyfikacji języka zasad zabezpieczeń (WS-SecurityPolicy).<br /><br /> Wartość domyślna to `Basic256`.|  
-|clientCredentialType|Opcjonalny. Określa typ poświadczeń, które mają być używane podczas uwierzytelniania klienta przy użyciu trybu `Message` zabezpieczeń lub. `TransportWithMessageCredentials` Zobacz poniższe wartości wyliczenia. Wartość domyślna to `Windows`.<br /><br /> Ten atrybut jest typu <xref:System.ServiceModel.MessageCredentialType>.|  
+|clientCredentialType|Opcjonalna. Określa typ poświadczeń, które mają być używane podczas uwierzytelniania klienta przy użyciu trybu `Message` zabezpieczeń lub. `TransportWithMessageCredentials` Zobacz poniższe wartości wyliczenia. Wartość domyślna to `Windows`.<br /><br /> Ten atrybut jest typu <xref:System.ServiceModel.MessageCredentialType>.|  
 |establishSecurityContext|Wartość logiczna określająca, czy kanał zabezpieczeń ustanawia bezpieczną sesję. Bezpieczna sesja ustanawia token kontekstu zabezpieczeń (SCT) przed wymianą komunikatów aplikacji. Po ustanowieniu tego SCT kanał zabezpieczeń oferuje <xref:System.ServiceModel.Channels.ISession> interfejs do górnych kanałów. Aby uzyskać więcej informacji o korzystaniu z bezpiecznych [sesji, zobacz How to: Utwórz bezpieczną sesję](../../../wcf/feature-details/how-to-create-a-secure-session.md).<br /><br /> Wartość domyślna to `true`.|  
-|negotiateServiceCredential|Opcjonalna. Wartość logiczna określająca, czy poświadczenie usługi jest inicjowane na kliencie poza pasmem, czy jest uzyskiwane z usługi do klienta przez proces negocjacji. Takie negocjowanie jest prekursorem do zwykłej wymiany komunikatów.<br /><br /> Jeśli atrybut ma wartość None, username lub Certificate, ustawienie tego atrybutu na `false` wartość oznacza, że certyfikat usługi jest dostępny na kliencie poza pasmem, a klient musi określić certyfikat usługi (za pomocą `clientCredentialType` > serviceCertificate) w [ \<](servicecertificate-of-servicecredentials.md) [ \<](servicecredentials.md) zachowaniu usługi ServiceCredentials >. Ten tryb jest współdziałania z stosami protokołu SOAP, które implementują WS-Trust i WS-SecureConversation.<br /><br /> Jeśli atrybut jest ustawiony na `Windows` `false` , ustawienie tego atrybutu Określa uwierzytelnianie oparte na protokole Kerberos. `ClientCredentialType` Oznacza to, że klient i usługa muszą być częścią tej samej domeny Kerberos. Ten tryb jest interoperacyjny z stosami protokołu SOAP, które implementują profil tokenu Kerberos (zgodnie z definicją języka Oasis WSS TC), a także WS-Trust i WS-SecureConversation.<br /><br /> Ten atrybut jest `true`przyczyną negocjacji protokołu SOAP platformy .NET, która tuneluje SPNEGO Exchange za pośrednictwem komunikatów protokołu SOAP.<br /><br /> Wartość domyślna to `true`.|  
+|negotiateServiceCredential|Opcjonalny. Wartość logiczna określająca, czy poświadczenie usługi jest inicjowane na kliencie poza pasmem, czy jest uzyskiwane z usługi do klienta przez proces negocjacji. Takie negocjowanie jest prekursorem do zwykłej wymiany komunikatów.<br /><br /> Jeśli atrybut ma wartość None, username lub Certificate, ustawienie tego atrybutu na `false` wartość oznacza, że certyfikat usługi jest dostępny na kliencie poza pasmem, a klient musi określić certyfikat usługi (za pomocą `clientCredentialType` [ \<](servicecredentials.md) [ >serviceCertificate)w\<](servicecertificate-of-servicecredentials.md)zachowaniu usługi ServiceCredentials >. Ten tryb jest współdziałania z stosami protokołu SOAP, które implementują WS-Trust i WS-SecureConversation.<br /><br /> Jeśli atrybut jest ustawiony na `Windows` `false` , ustawienie tego atrybutu Określa uwierzytelnianie oparte na protokole Kerberos. `ClientCredentialType` Oznacza to, że klient i usługa muszą być częścią tej samej domeny Kerberos. Ten tryb jest interoperacyjny z stosami protokołu SOAP, które implementują profil tokenu Kerberos (zgodnie z definicją języka Oasis WSS TC), a także WS-Trust i WS-SecureConversation.<br /><br /> Ten atrybut jest `true`przyczyną negocjacji protokołu SOAP platformy .NET, która tuneluje SPNEGO Exchange za pośrednictwem komunikatów protokołu SOAP.<br /><br /> Wartość domyślna to `true`.|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite Attribute  
   

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5d21b178-d731-471a-8534-1f8184a2ef06
-ms.openlocfilehash: 8da335bc2b45153aa00cd28f1a6baf58d11020ce
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e10101e2a3534d981b2126884a2a61b411254477
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250106"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397330"
 ---
 # <a name="method-based-query-syntax-examples-ordering"></a>Przykłady składni zapytania oparte na metodzie: Szeregowanie
-W przykładach w tym temacie pokazano, <xref:System.Linq.Enumerable.ThenBy%2A> jak używać metody do wykonywania zapytań względem [modelu sprzedaży AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) przy użyciu składni zapytania opartego na metodzie. Model sprzedaży AdventureWorks używany w tych przykładach jest tworzony na podstawie tabel Contact, Address, Product, SalesOrderHeader i SalesOrderDetail w przykładowej bazie danych AdventureWorks.  
+W przykładach w tym temacie pokazano, <xref:System.Linq.Enumerable.ThenBy%2A> jak używać metody do wykonywania zapytań względem [modelu sprzedaży AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) przy użyciu składni zapytania opartego na metodzie. Model sprzedaży AdventureWorks używany w tych przykładach jest tworzony na podstawie tabel Contact, Address, Product, SalesOrderHeader i SalesOrderDetail w przykładowej bazie danych AdventureWorks.  
   
  Przykłady w tym temacie wykorzystują następujące `using` / `Imports` instrukcje:  
   

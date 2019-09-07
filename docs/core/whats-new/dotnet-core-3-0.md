@@ -6,24 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 08/21/2019
-ms.openlocfilehash: f62afe79ec3ace98a3bd8997e20672bef81b89c4
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.date: 09/05/2019
+ms.openlocfilehash: 2d18e7750e0c2e2a44028d1e906a8536e47d979d
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037837"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70394288"
 ---
-# <a name="whats-new-in-net-core-30-preview-8"></a>Co nowego w programie .NET Core 3,0 (wersja zapoznawcza 8)
+# <a name="whats-new-in-net-core-30-preview-9"></a>Co nowego w programie .NET Core 3,0 (wersja zapoznawcza 9)
 
-W tym artykule opisano nowości w programie .NET Core 3,0 (w wersji zapoznawczej 8). Jednym z największych ulepszeń jest obsługa aplikacji klasycznych systemu Windows (tylko system Windows). Korzystając z pulpitu systemu Windows składnika zestawu SDK platformy .NET Core 3,0, można przenieść aplikacje Windows Forms i Windows Presentation Foundation (WPF). Aby można było wyczyścić, składnik pulpitu systemu Windows jest obsługiwany i uwzględniany w systemie Windows. Aby uzyskać więcej informacji, zobacz sekcję [pulpitu systemu Windows](#windows-desktop) w dalszej części tego artykułu.
+W tym artykule opisano nowości w programie .NET Core 3,0 (w wersji zapoznawczej 9). Jednym z największych ulepszeń jest obsługa aplikacji klasycznych systemu Windows (tylko system Windows). Korzystając z pulpitu systemu Windows składnika zestawu SDK platformy .NET Core 3,0, można przenieść aplikacje Windows Forms i Windows Presentation Foundation (WPF). Aby można było wyczyścić, składnik pulpitu systemu Windows jest obsługiwany i uwzględniany w systemie Windows. Aby uzyskać więcej informacji, zobacz sekcję [pulpitu systemu Windows](#windows-desktop) w dalszej części tego artykułu.
 
-Program .NET Core 3,0 dodaje obsługę C# 8,0. Zdecydowanie zaleca się użycie [najnowszej wersji programu Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview)lub Visual Studio Code z rozszerzeniem OmniSharp.
+Program .NET Core 3,0 dodaje obsługę C# 8,0. Zdecydowanie zaleca się używanie [programu Visual Studio 2019 16,3 w wersji zapoznawczej 3](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview), [Visual Studio dla komputerów Mac 8,3](https://docs.microsoft.com/visualstudio/mac/install-preview?view=vsmac-2019)lub [Visual Studio Code](https://code.visualstudio.com/) z  **C# rozszerzeniem**.
 
-[Pobierz i zacznij korzystać z programu .NET Core 3,0 Preview 8](https://aka.ms/netcore3download) teraz w systemie Windows, MacOS lub Linux.
+[Pobierz i Rozpocznij pracę z programem .NET Core 3,0 Preview 9](https://aka.ms/netcore3download) teraz w systemie Windows, MacOS lub Linux.
 
 Aby uzyskać więcej informacji na temat każdej wersji zapoznawczej, zobacz następujące powiadomienia:
 
+- [Anons programu .NET Core 3,0 Preview 9](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)
 - [Anons programu .NET Core 3,0 Preview 8](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
 - [Anons programu .NET Core 3,0 w wersji zapoznawczej 7](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
 - [Anons programu .NET Core 3,0 w wersji 6](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
@@ -35,9 +36,9 @@ Aby uzyskać więcej informacji na temat każdej wersji zapoznawczej, zobacz nas
 
 ## <a name="production-supported-preview"></a>Wersja zapoznawcza obsługiwanej produkcji
 
-Program .NET Core Preview 8 jest uznawany za gotowy do produkcji przez firmę Microsoft i jest w pełni obsługiwany. Począwszy od wersji zapoznawczej 7, wersje będą skoncentrowane na polerowaniu platformy .NET Core 3,0 zamiast dodawania nowych funkcji. Aby uzyskać więcej informacji na temat zmian w wersji zapoznawczej 8, zobacz [ogłoszenie w wersji zapoznawczej 8](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/).
+Program .NET Core Preview 9 jest uznawany za gotowy do produkcji przez firmę Microsoft i jest w pełni obsługiwany. Począwszy od wersji zapoznawczej 7, wersje będą skoncentrowane na polerowaniu platformy .NET Core 3,0 zamiast dodawania nowych funkcji. Aby uzyskać więcej informacji o zmianach w wersji zapoznawczej 9, zapoznaj się z [ogłoszeniem w wersji zapoznawczej 9](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/).
 
-Jeśli używasz starszej wersji zapoznawczej, musisz przejść do wersji zapoznawczej 8, aby kontynuować obsługę "go na żywo".
+Jeśli używasz starszej wersji zapoznawczej, musisz przejść do wersji zapoznawczej 9, aby kontynuować obsługę "go na żywo".
 
 ## <a name="net-core-sdk-windows-installer"></a>Zestaw .NET Core SDK Instalator Windows
 
@@ -67,7 +68,7 @@ Jeśli używasz programu Visual Studio, potrzebujesz [programu Visual studio 201
 
 ## <a name="improved-net-core-version-apis"></a>Ulepszone interfejsy API wersji platformy .NET Core
 
-Począwszy od platformy .NET Core 3,0, interfejsy API wersji dostarczone z platformą .NET Core teraz zwracają oczekiwane informacje. Na przykład:
+Począwszy od platformy .NET Core 3,0, interfejsy API wersji dostarczone z platformą .NET Core teraz zwracają oczekiwane informacje. Przykład:
 
 ```csharp
 System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");
@@ -240,14 +241,14 @@ W programie .NET Core 3,0 wprowadzono funkcję wyboru, która pozwala aplikacji 
 - Zmienna środowiskowa:`DOTNET_ROLL_FORWARD`
 - Argument wiersza polecenia:`--roll-forward`
 
-Należy określić jedną z następujących wartości. Jeśli ustawienie zostanie pominięte, wartością domyślną jest wartość pomocnicza.
+Należy określić jedną z następujących wartości. Jeśli ustawienie zostanie pominięte, wartością domyślną jest wartość **pomocnicza** .
 
 - **LatestPatch**\
 Przewinięcie do najwyższej wersji poprawki. Spowoduje to wyłączenie wycofywania wersji pomocniczej.
 - **Średni**\
 Przewinięcie do najmniejszej wyższej wersji pomocniczej, jeśli brakuje wymaganej wersji pomocniczej. Jeśli jest obecna żądana wersja pomocnicza, zostaną użyte zasady **LatestPatch** .
 - **Znaczny**\
-Zaczekaj na najmniejszą wyższą wersję główną i najniższą wersję pomocniczą, jeśli brakuje żądanej wersji głównej. Jeśli jest obecna żądana wersja główna, są używane zasady pomocnicze.
+Zaczekaj na najmniejszą wyższą wersję główną i najniższą wersję pomocniczą, jeśli brakuje żądanej wersji głównej. Jeśli jest obecna żądana wersja główna, są używane zasady **pomocnicze** .
 - **LatestMinor**\
 Przewinięcie do przodu do najwyższej wersji pomocniczej, nawet jeśli jest obecna żądana wersja pomocnicza. Przeznaczone do scenariuszy hostingu składników.
 - **LatestMajor**\
@@ -286,7 +287,7 @@ Przykład sposobu tworzenia składnika modelu COM i korzystania z niego można z
 
 [MSIX](https://docs.microsoft.com/windows/msix/) to nowy format pakietu aplikacji systemu Windows. Można go użyć do wdrożenia aplikacji klasycznych platformy .NET Core 3,0 w systemie Windows 10.
 
-[Projekt pakietu aplikacji systemu Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), dostępny w programie Visual Studio 2019, umożliwia tworzenie pakietów MSIX przy użyciu [](../deploying/index.md#self-contained-deployments-scd) samodzielnych aplikacji .NET Core.
+[Projekt pakietu aplikacji systemu Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), dostępny w programie Visual Studio 2019, umożliwia tworzenie pakietów MSIX przy użyciu [samodzielnych](../deploying/index.md#self-contained-deployments-scd) aplikacji .NET Core.
 
 Plik projektu .NET Core musi określać obsługiwane środowiska uruchomieniowe we `<RuntimeIdentifiers>` właściwości:
 
@@ -509,7 +510,7 @@ Program .NET Core 3,0 zapewnia podstawową pomoc <xref:System.IO.Ports.SerialPor
 
 Wcześniej platforma .NET Core jest obsługiwana `SerialPort` tylko w systemie Windows.
 
-Aby uzyskać więcej informacji o ograniczonej obsłudze portu szeregowego w systemie Linux, zobacz artykuł dotyczący usługi [GitHub #33146](https://github.com/dotnet/corefx/issues/33146).
+Aby uzyskać więcej informacji o ograniczonej obsłudze portu szeregowego w systemie Linux, zobacz artykuł [dotyczący usługi GitHub #33146](https://github.com/dotnet/corefx/issues/33146).
 
 ## <a name="docker-and-cgroup-memory-limits"></a>Limity pamięci Docker i cgroup
 

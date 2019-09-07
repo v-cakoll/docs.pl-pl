@@ -2,18 +2,19 @@
 title: <diagnostics>na potrzeby aktywacji
 ms.date: 03/30/2017
 ms.assetid: 1486e0eb-fe2a-46c3-b584-c924889477dd
-ms.openlocfilehash: 543c41936921eda39017e07f1c97294b268a9141
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 33b2cd4c5ae1b4076892a61aa7e2b927efa1ddc1
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919218"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400409"
 ---
 # <a name="diagnostics-for-activation"></a>\<> diagnostyki na potrzeby aktywacji
 Konfiguruje funkcje diagnostyki odbiornika Windows Communication Foundation (WCF).  
   
- \<system.serviceModel.activation>  
-\<> diagnostyki  
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel. Activation**](system-servicemodel-activation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> diagnostyki**  
   
 ## <a name="syntax"></a>Składnia  
   

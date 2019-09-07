@@ -2,21 +2,22 @@
 title: <security> dla <netPeerBinding>
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-ms.openlocfilehash: be5ebacec466caf8d8a77bf552f42da1861e77a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 88aa2898472c20c9e52cfd5830c0e41e8ea9ba21
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936627"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399816"
 ---
 # <a name="security-of-netpeerbinding"></a>\<> \<zabezpieczeń elementu webpeerbinding >
 Definiuje ustawienia [ \<zabezpieczeń > NetPeerTcpBinding](netpeertcpbinding.md), włącznie z typem używanego uwierzytelniania i zabezpieczeniami używanymi do transportu wiadomości.  
   
- \<system.ServiceModel>  
-\<> powiązań  
-\<netPeerBinding>  
-\<> powiązania  
-\<> zabezpieczeń  
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> powiązań**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netPeerTcpBinding >** ](netpeertcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> powiązania**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> zabezpieczeń**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,7 +38,7 @@ Definiuje ustawienia [ \<zabezpieczeń > NetPeerTcpBinding](netpeertcpbinding.md
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|tryb|Opcjonalny. Określa typ zabezpieczeń używanych przez elementy równorzędne skonfigurowane przy użyciu tego powiązania. Wartość domyślna to `Message`. Ten atrybut jest typu <xref:System.ServiceModel.SecurityMode>.|  
+|tryb|Opcjonalna. Określa typ zabezpieczeń używanych przez elementy równorzędne skonfigurowane przy użyciu tego powiązania. Wartość domyślna to `Message`. Ten atrybut jest typu <xref:System.ServiceModel.SecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Atrybut Mode  
   

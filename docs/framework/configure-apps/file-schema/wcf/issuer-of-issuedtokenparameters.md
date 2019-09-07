@@ -2,23 +2,24 @@
 title: <issuer> dla <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: d6a95f32-d58c-40fc-8658-dd92564d3c90
-ms.openlocfilehash: 77ed9534ce872e805a6a6ea2c21a38710e6bc0fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bdd5ad45984fae7b39defe82c4af75845dfda1b6
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925267"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397943"
 ---
 # <a name="issuer-of-issuedtokenparameters"></a>\<wystawca > \<issuedTokenParameters >
 Określa usługę tokenu zabezpieczającego (STS), która wystawia tokeny zabezpieczające.  
   
- \<system.serviceModel>  
-\<> powiązań  
-\<customBinding>  
-\<> powiązania  
-\<> zabezpieczeń  
-\<issuedTokenParameters >  
-\<> wystawcy  
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> powiązań**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<niestandardowy >Binding**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> powiązania**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zabezpieczeń**](security-of-custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<issuedTokenParameters >** ](issuedtokenparameters.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> wystawcy**  
   
 ## <a name="syntax"></a>Składnia  
   

@@ -2,19 +2,20 @@
 title: <basicHttpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 39b16b82-4ec6-4eff-8031-67e026870961
-ms.openlocfilehash: 05c863cf7649546745db270a4b3ac0c638083a85
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0f4bde41bdd37580d946af3195540082d3647e7a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919862"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400633"
 ---
 # <a name="basichttpcontextbinding"></a>\<basicHttpContextBinding>
 Określanie powiązania, które dostarcza kontekst <xref:System.ServiceModel.BasicHttpBinding> do wymiany przez włączenie plików cookie protokołu HTTP jako mechanizm wymiany.  
   
- \<system.ServiceModel>  
-\<> powiązań  
-\<basicHttpContextBinding>  
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> powiązań**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<basicHttpContextBinding >**  
   
 ## <a name="syntax"></a>Składnia  
   

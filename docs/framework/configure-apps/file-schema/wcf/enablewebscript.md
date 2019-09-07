@@ -2,21 +2,22 @@
 title: <enableWebScript>
 ms.date: 03/30/2017
 ms.assetid: 9c7e96e1-af70-4e6e-ac5c-d67929dddbaa
-ms.openlocfilehash: 123f58ee3d77bf605db21fa0d9537b3196d56468
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 20c0057c80b668df97379d0168bb7c005d9927ce
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919111"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400385"
 ---
 # <a name="enablewebscript"></a>\<enableWebScript >
 Ten element włącza zachowanie punktu końcowego, który umożliwia korzystanie z usługi z ASP.NET AJAX stron sieci Web.  
   
- \<system.ServiceModel>  
-\<> zachowań  
-\<endpointBehaviors>  
-\<> zachowania  
-\<enableWebScript >  
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zachowań**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zachowania**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<enableWebScript >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,7 +41,7 @@ Ten element włącza zachowanie punktu końcowego, który umożliwia korzystanie
 |[\<> zachowania](behavior-of-endpointbehaviors.md)|Określa zestaw zachowań punktów końcowych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Tego zachowania należy używać tylko w połączeniu z [ \<](webhttpbinding.md) elementem WebHttpBinding > [ \<](webmessageencoding.md) powiązanie standardowe lub webMessageEncoding > powiązania.  Aby uzyskać więcej informacji na temat tego zachowania <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>, zobacz.  
+ Tego zachowania należy używać tylko w połączeniu z [ \<elementem WebHttpBinding >](webhttpbinding.md) [ \<](webmessageencoding.md) powiązanie standardowe lub webMessageEncoding > powiązania.  Aby uzyskać więcej informacji na temat tego zachowania <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>, zobacz.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -5,18 +5,19 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-ms.openlocfilehash: 7dce5984882e48c3e62efc44ef00b6256d9eb64e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6cc8b80edb3206bb2ef3a8a1ffa34ab40af77612
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919526"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398151"
 ---
 # <a name="client"></a>\<> klienta
 `client` Element definiuje listę punktów końcowych, z którymi klient może się połączyć.  
   
- \<system.ServiceModel>  
-\<> klienta  
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> klienta**  
   
 ## <a name="syntax"></a>Składnia  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 74084b8eef46f700733ad44e04cf8b3811456b85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 245c843d13e70a807807f4e462dd1a5357c25665
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642415"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398522"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Programowanie dla sieci w .NET Framework
 Środowisko Microsoft .NET Framework oferuje warstwowe, rozszerzalne i zarządzane wdrożenia usług internetowych, które można szybko i łatwo zintegrować ze swoimi aplikacjami. Aplikacje sieciowe mogą za pomocą podłączanych protokołów automatycznie wykorzystywać nowe protokoły internetowe albo za pośrednictwem zarządzanej implementacji interfejsu gniazd systemu Windows współpracować z siecią na poziomie gniazd.  
@@ -41,7 +41,7 @@ ms.locfileid: "61642415"
  Wyjaśnienie, jak za pomocą mechanizmu śledzenia sieci uzyskiwać informacje o wywołaniach metod i ruchu sieciowym generowanym przez zarządzaną aplikację.  
   
  [Zarządzanie pamięcią podręczną dla aplikacji sieciowych](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- W tym artykule opisano sposób użycia buforowania w aplikacjach, które używają <xref:System.Net.WebClient?displayProperty=nameWithType>, <xref:System.Net.WebRequest?displayProperty=nameWithType>, i <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> klasy.  
+ Opisuje sposób używania buforowania dla aplikacji korzystających z <xref:System.Net.WebClient?displayProperty=nameWithType>klas, <xref:System.Net.WebRequest?displayProperty=nameWithType>i. <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>  
   
  [Zabezpieczenia w programowaniu sieciowym](../../../docs/framework/network-programming/security-in-network-programming.md)  
  Opis używania standardowych technik zabezpieczania i uwierzytelniania w Internecie.  
@@ -53,44 +53,44 @@ ms.locfileid: "61642415"
  Opis konfigurowania serwerów proxy.  
   
  [NetworkInformation](../../../docs/framework/network-programming/networkinformation.md)  
- Opis sposobów gromadzenia informacji na temat zdarzeń w sieci, zmiany, statystyk i właściwości oraz wyjaśnienie, jak ustalić, czy zdalny host jest osiągalny, za pomocą <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> klasy.  
+ Opisuje, jak zbierać informacje o zdarzeniach, zmianach, statystykach i właściwościach sieci, a także wyjaśnia, jak ustalić, czy host zdalny jest <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> osiągalny za pomocą klasy.  
   
  [Zmiany w przestrzeni nazw System.Uri w wersji 2.0](../../../docs/framework/network-programming/changes-to-the-system-uri-namespace-in-version-2-0.md)  
- W tym artykule opisano kilka zmian <xref:System.Uri?displayProperty=nameWithType> klasy w wersji 2.0 nieprawidłowe zachowanie, zwiększyć użyteczność i poprawić bezpieczeństwo.  
+ Opisuje kilka zmian wprowadzonych <xref:System.Uri?displayProperty=nameWithType> w klasie w wersji 2,0, aby stała mieć nieprawidłowe zachowanie, zwiększyć użyteczność i zwiększyć bezpieczeństwo.  
   
  [Obsługa identyfikatorów zasobów międzynarodowych w System.Uri](../../../docs/framework/network-programming/international-resource-identifier-support-in-system-uri.md)  
- Opis ulepszeń <xref:System.Uri?displayProperty=nameWithType> klasy w wersjach 3.5, 3.0 z dodatkiem SP1 i 2.0 z dodatkiem SP1 międzynarodowych identyfikatorów zasobów (IRI) i międzynarodowych nazw domen (IDN).  
+ Opisuje ulepszenia <xref:System.Uri?displayProperty=nameWithType> klasy w wersji 3,5, 3,0 SP1 i 2,0 SP1 dla międzynarodowych identyfikatorów zasobów (IRI) i międzynarodowych nazw domen (IDN).  
   
  [Ulepszenia wydajności gniazda w wersji 3.5](../../../docs/framework/network-programming/socket-performance-enhancements-in-version-3-5.md)  
- Opis zbioru ulepszeń klasy <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> klasy w wersjach 3.5, 3.0 z dodatkiem SP1 i 2.0 z dodatkiem SP1, które zapewniają alternatywny wzorzec asynchroniczny, które mogą być używane przez aplikacje specjalistyczne gniazda o wysokiej wydajności.  
+ Opisuje zestaw ulepszeń <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> klasy w wersji 3,5, 3,0 SP1 i 2,0 z dodatkiem SP1, które zapewniają alternatywny wzorzec asynchroniczny, który może być używany przez wyspecjalizowane aplikacje gniazd o wysokiej wydajności.  
   
  [Protokół PNRP](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)  
- Opis mechanizmu dodanego w wersji 3.5 do obsługi protokołu PNRP (Peer Name Resolution Protocol), bezserwerowego i dynamicznego rejestrowania nazw oraz protokołu rozpoznawania nazw. Te nowe funkcje są obsługiwane przez <xref:System.Net.PeerToPeer?displayProperty=nameWithType> przestrzeni nazw.  
+ Opis mechanizmu dodanego w wersji 3.5 do obsługi protokołu PNRP (Peer Name Resolution Protocol), bezserwerowego i dynamicznego rejestrowania nazw oraz protokołu rozpoznawania nazw. Te nowe funkcje są obsługiwane przez <xref:System.Net.PeerToPeer?displayProperty=nameWithType> przestrzeń nazw.  
   
  [Współpraca równorzędna](../../../docs/framework/network-programming/peer-to-peer-collaboration.md)  
- Opis mechanizmu dodanego w wersji 3.5 do obsługi współpracy między równorzędnymi urządzeniami w oparciu o protokół PNRP. Te nowe funkcje są obsługiwane przez <xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType> przestrzeni nazw.  
+ Opis mechanizmu dodanego w wersji 3.5 do obsługi współpracy między równorzędnymi urządzeniami w oparciu o protokół PNRP. Te nowe funkcje są obsługiwane przez <xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType> przestrzeń nazw.  
   
  [Zmiany w uwierzytelnianiu NTLM dla HttpWebRequest w wersji 3.5 z dodatkiem SP1](../../../docs/framework/network-programming/changes-to-ntlm-authentication-for-httpwebrequest-in-version-3-5-sp1.md)  
- W tym artykule opisano zmiany zabezpieczeń wprowadzone w wersji 3.5 z dodatkiem SP1, które mają wpływ na Windows jak zintegrowane uwierzytelnianie jest obsługiwane przez <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>, <xref:System.Net.HttpListener?displayProperty=nameWithType>, <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType>, i pokrewne klasy w przestrzeni nazw System.Net.  
+ Opisuje zmiany zabezpieczeń wprowadzone w wersji 3,5 SP1, które mają wpływ na sposób obsługi zintegrowanego uwierzytelniania <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>systemu <xref:System.Net.HttpListener?displayProperty=nameWithType>Windows <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType>przez klasy,, i pokrewne w przestrzeni nazw System.NET.  
   
  [Zintegrowane uwierzytelnianie systemu Windows z ochroną rozszerzoną](../../../docs/framework/network-programming/integrated-windows-authentication-with-extended-protection.md)  
- Opis rozszerzonej ochrony, które mają wpływ na sposób zintegrowane uwierzytelnianie Windows odbywa się przez <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>, <xref:System.Net.HttpListener?displayProperty=nameWithType>, <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>, <xref:System.Net.Security.SslStream?displayProperty=nameWithType>, <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType>, i pokrewne klasy w <xref:System.Net?displayProperty=nameWithType> i pokrewne przestrzenie nazw.  
+ Opisuje ulepszenia ochrony rozszerzonej, które mają wpływ na sposób obsługi zintegrowanego uwierzytelniania <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>systemu <xref:System.Net.HttpListener?displayProperty=nameWithType>Windows <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>przez <xref:System.Net.Security.SslStream?displayProperty=nameWithType>klasy <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType> <xref:System.Net?displayProperty=nameWithType> ,,, i powiązane z przestrzeni.  
   
  [Przechodzenie translatora adresów sieciowych przy użyciu protokołu IPv6 i Teredo](../../../docs/framework/network-programming/nat-traversal-using-ipv6-and-teredo.md)  
- Opis ulepszeń dodanych w <xref:System.Net?displayProperty=nameWithType>, <xref:System.Net.NetworkInformation?displayProperty=nameWithType>, i <xref:System.Net.Sockets?displayProperty=nameWithType> przestrzenie nazw umożliwiają przechodzenie translatora adresów Sieciowych przy użyciu protokołu IPv6 i Teredo.  
+ Opisuje ulepszenia dodane do <xref:System.Net?displayProperty=nameWithType>przestrzeni nazw, <xref:System.Net.NetworkInformation?displayProperty=nameWithType>i <xref:System.Net.Sockets?displayProperty=nameWithType> i obsługują przechodzenie NAT przy użyciu protokołu IPv6 i Teredo.  
   
  [Izolacja sieci dla aplikacji ze sklepu Windows Store](../../../docs/framework/network-programming/network-isolation-for-windows-store-apps.md)  
- Opis wpływu izolacji sieci gdy klasy przestrzeni <xref:System.Net>, <xref:System.Net.Http>, i <xref:System.Net.Http.Headers> przestrzenie nazw są używane w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji.  
+ Opisuje <xref:System.Net>wpływ izolacji sieci, gdy klasy w, <xref:System.Net.Http>i i <xref:System.Net.Http.Headers> przestrzenie nazw są używane w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacjach.  
   
  [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)  
- Łącza do pobieralnych sieci przykłady programowania, które używają klas w <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets> przestrzeni nazw.  
+ Linki do pobieranych przykładów programistycznych sieci, które używają klas <xref:System.Net>w <xref:System.Net.Cache> <xref:System.Net.PeerToPeer> <xref:System.Net.Mail> <xref:System.Net.Sockets> przestrzeniach nazw <xref:System.Net.Mime> <xref:System.Net.Configuration>, <xref:System.Net.NetworkInformation> <xref:System.Net.Security>,,,,,.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Net?displayProperty=nameWithType>  
- Prosty interfejs programistyczny dla wielu protokołów używanych obecnie w sieciach. <xref:System.Net.WebRequest?displayProperty=nameWithType> i <xref:System.Net.WebResponse?displayProperty=nameWithType> klasy w tej przestrzeni nazw stanowią podstawę podłączanych protokołów.  
+ Prosty interfejs programistyczny dla wielu protokołów używanych obecnie w sieciach. Klasy <xref:System.Net.WebRequest?displayProperty=nameWithType> i<xref:System.Net.WebResponse?displayProperty=nameWithType> w tej przestrzeni nazw są podstawą dla protokołów podłączanych.  
   
  <xref:System.Net.Cache?displayProperty=nameWithType>  
- Określa typy i wyliczenia używane do definiowania zasad buforowania dla zasobów pobranych przy użyciu <xref:System.Net.WebRequest?displayProperty=nameWithType> i <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> klasy.  
+ Definiuje typy i wyliczenia używane do definiowania zasad pamięci podręcznej dla zasobów uzyskanych <xref:System.Net.WebRequest?displayProperty=nameWithType> przy <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> użyciu klas i.  
   
  <xref:System.Net.Configuration?displayProperty=nameWithType>  
  Klasy, za pomocą których aplikacje programistycznie uzyskują dostęp i aktualizują ustawienia konfiguracyjne w przestrzeni nazw System.Net.  
@@ -99,13 +99,13 @@ ms.locfileid: "61642415"
  Klasy tworzące interfejs programistyczny dla nowoczesnych aplikacji wykorzystujących protokół HTTP.  
   
  <xref:System.Net.Http.Headers?displayProperty=nameWithType>  
- Zapewnia obsługę kolekcji nagłówków HTTP używanych przez <xref:System.Net.Http?displayProperty=nameWithType> przestrzeni nazw  
+ Zapewnia obsługę kolekcji nagłówków HTTP używanych przez <xref:System.Net.Http?displayProperty=nameWithType> przestrzeń nazw  
   
  <xref:System.Net.Mail?displayProperty=nameWithType>  
  Klasy do redagowania i wysyłania poczty przy użyciu protokołu SMTP.  
   
  <xref:System.Net.Mime?displayProperty=nameWithType>  
- Definiuje typy, które są używane do reprezentowania nagłówków protokołu dynamicznej konfiguracji hosta (MIME, Multipurpose Internet Mail Exchange) używanych przez klasy w <xref:System.Net.Mail?displayProperty=nameWithType> przestrzeni nazw.  
+ Definiuje typy, które są używane do reprezentowania nagłówków MIME (Multipurpose Internet mail Exchange) używanych przez klasy w <xref:System.Net.Mail?displayProperty=nameWithType> przestrzeni nazw.  
   
  <xref:System.Net.NetworkInformation?displayProperty=nameWithType>  
  Klasy umożliwiające programistyczne gromadzenie informacji o zdarzeniach, zmianach, statystykach i właściwościach sieci.  
@@ -136,8 +136,7 @@ ms.locfileid: "61642415"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Transport Layer Security (TLS) najlepsze rozwiązania z programem .NET Framework](../../../docs/framework/network-programming/tls.md)
+- [Transport Layer Security (TLS) — najlepsze rozwiązania z .NET Framework](../../../docs/framework/network-programming/tls.md)
 - [Programowanie dla sieci — tematy z instrukcjami](../../../docs/framework/network-programming/network-programming-how-to-topics.md)
 - [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)
-- [Przykłady kodu usług sieciowych dla platformy .NET w galerii kodu MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
-- [Przykładowe klasy HttpClient](https://go.microsoft.com/fwlink/?LinkId=242550)
+- [Przykład HttpClient](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)

@@ -2,22 +2,23 @@
 title: <transport> dla <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
-ms.openlocfilehash: f9f784329081f6a18560991378a4527c731f4d31
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 521aaf3913a1d30d10a674b71d4d98affcabc296
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934710"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399341"
 ---
 # <a name="transport-of-nethttpbinding"></a>\<> \<transportu > protokołu HttpBinding
 Definiuje właściwości kontrolujące parametry uwierzytelniania dla transportu HTTP.  
   
-\<system.serviceModel>  
-\<> powiązań  
-\<> protokołu HttpBinding  
-\<> powiązania  
-\<> zabezpieczeń  
-\<transport>  
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> powiązań**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> protokołu HttpBinding**](nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> powiązania**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zabezpieczeń**](security-of-nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> transportu**  
   
 ## <a name="syntax"></a>Składnia  
   

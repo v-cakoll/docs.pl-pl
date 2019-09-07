@@ -2,21 +2,22 @@
 title: <security> dla <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
-ms.openlocfilehash: e627a63221d0013c89495d7ff81e02047a03df89
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f7a4ef98637a7c966665fdd02ad26929bd4ba6ac
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936507"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399726"
 ---
 # <a name="security-of-wshttpbinding"></a>\<zabezpieczenia > \<WSHttpBinding >
 Reprezentuje możliwości [ \<zabezpieczeń > WSHttpBinding](wshttpbinding.md).  
   
- \<system.ServiceModel>  
-\<> powiązań  
-\<wsHttpBinding>  
-\<> powiązania  
-\<> zabezpieczeń  
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> powiązań**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsHttpBinding >** ](wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> powiązania**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> zabezpieczeń**  
   
 ## <a name="syntax"></a>Składnia  
   

@@ -4,20 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsFederationBinding element
 ms.assetid: 9c3312b4-2137-4e71-bf3f-de1cf8e9be79
-ms.openlocfilehash: 3c4edc17fd669fbe23ec38ff26a61e867c04c561
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a605d3241ec62f5648e3439b327153f3fb4590df
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915068"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399033"
 ---
 # <a name="wsfederationhttpbinding"></a>\<wsFederationHttpBinding>
 
 Definiuje powiązanie, które obsługuje WS-Federation.
 
-\<system.ServiceModel>\
-\<powiązania > \
-wsFederationBinding, element
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> powiązań**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<wsFederationHttpBinding >**  
 
 ## <a name="syntax"></a>Składnia
 

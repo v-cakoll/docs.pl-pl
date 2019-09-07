@@ -2,21 +2,22 @@
 title: <security> dla <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: 806cf8524ed1a1439ca85a4b918e8e486e5dc94b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2f0bc97e10fcd72f2f33cc20730320cbbfc42dd8
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936590"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399768"
 ---
 # <a name="security-of-webhttpbinding"></a>\<> zabezpieczeń elementu \<WebHttpBinding >
-Określa wymagania dotyczące zabezpieczeń dla punktu końcowego skonfigurowanego za [ \<](webhttpbinding.md)pomocą elementu WebHttpBinding >.  
+Określa wymagania dotyczące zabezpieczeń dla punktu końcowego skonfigurowanego za pomocą elementu [ \<WebHttpBinding >](webhttpbinding.md).  
   
- \<system.ServiceModel>  
-\<> powiązań  
-\<webHttpBinding>  
-\<> powiązania  
-\<> zabezpieczeń  
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> powiązań**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> WebHttpBinding**](webhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> powiązania**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> zabezpieczeń**  
   
 ## <a name="syntax"></a>Składnia  
   

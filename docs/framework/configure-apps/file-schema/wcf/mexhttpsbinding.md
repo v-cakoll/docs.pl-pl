@@ -2,19 +2,20 @@
 title: <mexHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: f2ed3774-78b9-4a15-b79b-655f1ad68b86
-ms.openlocfilehash: 30d1aa27ce29b6aa4091c3e7be05746ad462102a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d32db2180e06cba6662ed853ab1a259805680ea1
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931270"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397820"
 ---
 # <a name="mexhttpsbinding"></a>\<mexHttpsBinding>
 Określa ustawienia dla powiązania używanego w wymianie wiadomości WS-MetadataExchange (WS-MEX) za pośrednictwem protokołu HTTPS.  
   
- \<system.ServiceModel>  
-\<> powiązań  
-\<mexHttpsBinding>  
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> powiązań**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<mexHttpsBinding >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -52,7 +53,7 @@ Określa ustawienia dla powiązania używanego w wymianie wiadomości WS-Metadat
 |[\<> powiązań](bindings.md)|Ten element zawiera kolekcję powiązań standardowych i niestandardowych.|  
   
 ## <a name="remarks"></a>Uwagi  
- To powiązanie jest zasadniczo `WSHttpBinding` powiązaniem, które obsługuje zabezpieczenia na poziomie transportu przy użyciu certyfikatów. Aby uzyskać więcej informacji o konfigurowaniu i używaniu takiego punktu końcowego [metadanych, zobacz How to: Skonfiguruj niestandardowe powiązanie](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)WS-Metadata Exchange, [jak: Pobieranie metadanych za pośrednictwem powiązania](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)niezwiązanego z elementem MEX i przykładowym, niestandardowym bezpiecznym [punktem końcowym metadanych](../../../wcf/samples/custom-secure-metadata-endpoint.md).  
+ To powiązanie jest zasadniczo `WSHttpBinding` powiązaniem, które obsługuje zabezpieczenia na poziomie transportu przy użyciu certyfikatów. Aby uzyskać więcej informacji o konfigurowaniu i używaniu takiego punktu końcowego [metadanych, zobacz How to: Skonfiguruj niestandardowe powiązanie](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)WS-Metadata Exchange, [jak: Pobieranie metadanych za pośrednictwem powiązania](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)niezwiązanego z elementem MEX i przykładowym, [niestandardowym bezpiecznym punktem końcowym metadanych](../../../wcf/samples/custom-secure-metadata-endpoint.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

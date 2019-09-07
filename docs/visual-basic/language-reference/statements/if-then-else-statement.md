@@ -21,12 +21,12 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-ms.openlocfilehash: e0b365afaa8cf7dff130cf01d2937be629e5f7a8
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: db81a1c41809b563d5f9d0777c3feb064c5e540b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106518"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400715"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>If...Then...Else — Instrukcja (Visual Basic)
 
@@ -34,7 +34,7 @@ Warunkowo wykonuje grupy poleceń w zależności od wartości wyrażenia.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```vb
 ' Multiline syntax:
 If condition [ Then ]
     [ statements ]
@@ -59,15 +59,15 @@ Ten artykuł zawiera kilka przykładów ilustrujących zastosowanie `If`... `The
 ## <a name="parts"></a>Części
 
 `condition` \
-Wymagane. Wyrażenia. Należy oszacować do `True` lub `False`, lub do typu danych, który jest niejawnie konwertowany `Boolean`na.
+Wymagany. Wyrażenia. Należy oszacować do `True` lub `False`, lub do typu danych, który jest niejawnie konwertowany `Boolean`na.
 
-Jeśli wyrażenie jest zmienną dopuszczającą [wartość null](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` , która zwraca wartość [Nothing](../../../visual-basic/language-reference/nothing.md), warunek jest traktowany jak `False` `Else` wtedy, gdy wyrażenie jest i jest wykonywane.
+Jeśli wyrażenie jest zmienną [dopuszczającą wartość null](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` , która zwraca wartość [Nothing](../../../visual-basic/language-reference/nothing.md), warunek jest traktowany tak, jakby `False`wyrażenie ma wartość `ElseIf` , a bloki są oceniane, jeśli istnieją lub `Else` blok jest wykonywane, jeśli istnieje.
 
 `Then` \
 Wymagane w składni jednowierszowej; opcjonalne w składni wielowierszowej.
 
 `statements` \
-Opcjonalny. Jedna lub więcej instrukcji po `If`... są wykonywane, jeśli `condition` są oceniane `True`. `Then`
+Opcjonalna. Jedna lub więcej instrukcji po `If`... są wykonywane, jeśli `condition` są oceniane `True`. `Then`
 
 `elseifcondition` \
 Wymagane, `ElseIf` jeśli jest obecny. Wyrażenia. Należy oszacować do `True` lub `False`, lub do typu danych, który jest niejawnie konwertowany `Boolean`na.
@@ -76,7 +76,7 @@ Wymagane, `ElseIf` jeśli jest obecny. Wyrażenia. Należy oszacować do `True` 
 Opcjonalny. Jedna lub więcej instrukcji po `ElseIf`... są wykonywane, jeśli `elseifcondition` są oceniane `True`. `Then`
 
 `elsestatements` \
-Opcjonalny. Jedna lub więcej instrukcji, które są wykonywane, jeśli `condition` nie `elseifcondition` zostanie obliczone `True`wyrażenie Previous lub.
+Opcjonalna. Jedna lub więcej instrukcji, które są wykonywane, jeśli `condition` nie `elseifcondition` zostanie obliczone `True`wyrażenie Previous lub.
 
 `End If` \
 Kończy wielowierszową wersję programu `If`... `Then`... `Else` blok.

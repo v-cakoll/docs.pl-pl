@@ -2,26 +2,26 @@
 title: Operatory sekwencji
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
-ms.openlocfilehash: 96f36681c4933d3aa15547c00e003b6d9c18d704
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: d975949d95c7cd0a4009ef9e988d3625a46defef
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616115"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398544"
 ---
 # <a name="sequence-operators"></a>Operatory sekwencji
-Ogólnie rzecz biorąc [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie obsługuje operatory sekwencji, które mają co najmniej jedną z następujących właściwości:  
+Ogólnie mówiąc, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] program nie obsługuje operatorów sekwencji, które mają co najmniej jedną z następujących jakości:  
   
-- Skorzystaj z wyrażenia lambda z parametrem indeksu.  
+- Wykonaj wyrażenie lambda z parametrem index.  
   
-- Zależą od właściwości kolejnych wierszy, takich jak <xref:System.Linq.Queryable.TakeWhile%2A>.  
+- Polegaj na właściwościach sekwencyjnych wierszy, takich <xref:System.Linq.Queryable.TakeWhile%2A>jak.  
   
-- Zależą od dowolnego implementacji środowiska CLR, takich jak <xref:System.Collections.Generic.IComparer%601>.  
+- Polegaj na dowolnej implementacji środowiska CLR, takiej <xref:System.Collections.Generic.IComparer%601>jak.  
   
-|Przykłady nieobsługiwany|  
+|Przykłady nieobsługiwanych|  
 |-----------------------------|  
 |<xref:System.Linq.Enumerable.Where%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Boolean%7D%29?displayProperty=nameWithType>|  
-|<xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29?displayProperty=nameWithType>|  
+|<xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2C%60%601%7D%29?displayProperty=nameWithType>|  
 |<xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29?displayProperty=nameWithType>|  
 |<xref:System.Linq.Enumerable.TakeWhile%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Boolean%7D%29?displayProperty=nameWithType>|  
 |<xref:System.Linq.Enumerable.TakeWhile%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Boolean%7D%29?displayProperty=nameWithType>|  
@@ -42,8 +42,8 @@ Ogólnie rzecz biorąc [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdli
 |<xref:System.Linq.Enumerable.Aggregate%60%603%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2C%60%601%2CSystem.Func%7B%60%601%2C%60%600%2C%60%601%7D%2CSystem.Func%7B%60%601%2C%60%602%7D%29?displayProperty=nameWithType>|  
 |<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
-## <a name="differences-from-net"></a>Różnice z platformy .NET  
- Wszystkie obsługiwane pracy operatory sekwencji zgodnie z oczekiwaniami w środowisku uruchomieniowym języka (wspólnego CLR), z wyjątkiem `Average`. `Average` Zwraca wartość taki sam typ co typ uśrednione, natomiast w CLR `Average` zawsze zwraca albo <xref:System.Double> lub <xref:System.Decimal>. Jeśli argument źródła jest jawnie Rzutowanie na podwójne / dziesiętną lub selektor rzutuje double / dziesiętną, wynikowa instrukcja SQL ma też taka konwersja i wynik będzie zgodnie z oczekiwaniami.  
+## <a name="differences-from-net"></a>Różnice od platformy .NET  
+ Wszystkie obsługiwane operatory sekwencji działają zgodnie z oczekiwaniami w środowisku uruchomieniowym języka wspólnego (CLR) `Average`, z wyjątkiem. `Average`Zwraca wartość tego samego typu co średnia, a w środowisku CLR `Average` zawsze zwraca <xref:System.Double> albo lub <xref:System.Decimal>. Jeśli argument źródłowy jest jawnie rzutowany na wartość typu Double/Decimal lub przerzutowanie selektora na wartość podwójną/dziesiętną, wynikowa SQL również będzie miała taką konwersję, a wynik będzie zgodnie z oczekiwaniami.  
   
 ## <a name="see-also"></a>Zobacz także
 

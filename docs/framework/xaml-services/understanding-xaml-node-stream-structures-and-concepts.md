@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: c873961982cd1642d8b354e5d77b06105c0b7a1e
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: d6b2975b8e0338b121d00f5ec7f4ffb69d32ab6a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364309"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400739"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Zapoznanie się ze strukturami i koncepcjami strumienia węzłów XAML
 
@@ -85,9 +85,6 @@ Ten podstawowy przykład pętli węzła XAML ścieżki ładowania w sposób prze
 ### <a name="accessing-xaml-beyond-the-node-loop-concept"></a>Uzyskiwanie dostępu do języka XAML poza koncepcją pętli węzłów
 
 Istnieją inne sposoby pracy z reprezentacją XAML inną niż pętla węzła XAML. Na przykład może istnieć czytnik XAML, który może odczytać indeksowany węzeł lub w szczególności uzyskuje dostęp do węzłów bezpośrednio przez `x:Name`, przez `x:Uid`lub innych identyfikatorów. Usługi .NET Framework XAML nie zapewniają pełnej implementacji, ale udostępniają sugerowany wzorzec za pomocą usług i typów pomocy technicznej. Aby uzyskać więcej informacji, zobacz <xref:System.Xaml.IXamlIndexingReader> i <xref:System.Xaml.XamlNodeList>.
-
-> [!TIP]
-> Firma Microsoft tworzy również wydanie poza pasmem znane jako zestaw narzędzi Microsoft XAML Toolkit. Ta wersja poza pasmem nadal jest w fazie wstępnej wersji. Jeśli jednak chcesz korzystać z składników wersji wstępnej, zestaw narzędzi Microsoft XAML Toolkit udostępnia interesujące zasoby dla narzędzi XAML i analizy statycznej XAML. Zestaw narzędzi Microsoft XAML Toolkit zawiera interfejs API DOM języka XAML, obsługę analizy FxCop oraz kontekst schematu XAML dla technologii Silverlight. Aby uzyskać więcej informacji, zobacz [Microsoft XAML Toolkit](https://code.msdn.microsoft.com/XAML).
 
 <a name="working_with_the_current_node"></a>
 

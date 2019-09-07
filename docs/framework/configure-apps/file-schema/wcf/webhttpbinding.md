@@ -2,19 +2,20 @@
 title: <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-ms.openlocfilehash: 70c99c29d4febae51b9fed54d37d681ff922f9f6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8ba4780cb73011fd7841fa41e1fac8d467f9f6a2
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940488"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399180"
 ---
 # <a name="webhttpbinding"></a>\<webHttpBinding>
 Definiuje element powiązania, który jest używany do konfigurowania punktów końcowych dla usług sieci Web Windows Communication Foundation (WCF), które odpowiadają na żądania HTTP zamiast komunikatów protokołu SOAP.  
   
-\<system.ServiceModel>  
-\<> powiązań  
-\<webHttpBinding>  
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> powiązań**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> WebHttpBinding**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -86,7 +87,7 @@ Definiuje element powiązania, który jest używany do konfigurowania punktów k
 |[\<> powiązań](bindings.md)|Ten element zawiera kolekcję powiązań standardowych i niestandardowych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Model programowania w sieci Web WCF umożliwia deweloperom udostępnianie usług sieci Web WCF za pośrednictwem żądań HTTP, które używają komunikatów o formacie "zwykły stary kod XML" (POX) zamiast komunikatów opartych na protokole SOAP. Aby klienci mogli komunikować się z usługą przy użyciu żądań HTTP, punkt końcowy usługi musi być skonfigurowany za pomocą \< [ \<](webhttpbinding.md) elementu WebHttpBinding >, do którego dołączono > WebHttpBehavior.  
+ Model programowania w sieci Web WCF umożliwia deweloperom udostępnianie usług sieci Web WCF za pośrednictwem żądań HTTP, które używają komunikatów o formacie "zwykły stary kod XML" (POX) zamiast komunikatów opartych na protokole SOAP. Aby klienci mogli komunikować się z usługą przy użyciu żądań HTTP, punkt końcowy usługi musi być skonfigurowany za pomocą \< [ \<elementu WebHttpBinding >](webhttpbinding.md) , do którego dołączono > WebHttpBehavior.  
   
  Obsługa funkcji WCF dla zespalania i ASP. Integracja AJAX jest oparta na modelu programowania sieci Web. Aby uzyskać więcej informacji na temat modelu, zobacz [model programowania HTTP sieci Web](../../../wcf/feature-details/wcf-web-http-programming-model.md)w programie WCF.  
   

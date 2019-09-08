@@ -2,12 +2,12 @@
 title: Obsługa SqlClient dla wysokiej dostępności, odzyskiwania po awarii
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 104fdd78ce3f4b9c18f09fc41fddebe46815d217
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b51c3cb1eb3c8726b7de007a1c1519eae0733392
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938473"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791612"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Obsługa SqlClient dla wysokiej dostępności, odzyskiwania po awarii
 W tym temacie omówiono obsługę SqlClient (dodano w .NET Framework 4,5) w celu uzyskania wysokiej dostępności i odzyskiwania po awarii — Zawsze włączone grupy dostępności.  Dodano funkcję Zawsze włączone grupy dostępności do SQL Server 2012. Aby uzyskać więcej informacji na temat Zawsze włączone grupy dostępności, zobacz SQL Server Books Online.  
@@ -98,5 +98,5 @@ W tym temacie omówiono obsługę SqlClient (dodano w .NET Framework 4,5) w celu
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Funkcje Serwera SQL i ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Funkcje Serwera SQL i ADO.NET](sql-server-features-and-adonet.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

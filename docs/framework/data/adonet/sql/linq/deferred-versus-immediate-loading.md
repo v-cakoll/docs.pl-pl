@@ -5,34 +5,34 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-ms.openlocfilehash: 7196d172b7bec051b5407f1c8e27ec642d230fc2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2045cab19e7400f94888297571a172de1578094d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64581396"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794140"
 ---
 # <a name="deferred-versus-immediate-loading"></a>Odroczone a bezpośrednie ładowanie
-Po wykonaniu zapytania dotyczącego obiektu, możesz pobrać faktycznie tylko żądanego obiektu. *Powiązane* obiekty nie są automatycznie pobrać w tym samym czasie. (Aby uzyskać więcej informacji, zobacz [zapytań w relacjach](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) Nie widzisz, że fakt, że obiekty powiązane nie są już załadowane, ponieważ próba dostępu do nich generuje żądanie, która pobiera je.  
+Podczas wykonywania zapytania o obiekt faktycznie pobierany jest tylko żądany obiekt. Obiekty *powiązane* nie są automatycznie pobierane w tym samym czasie. (Aby uzyskać więcej informacji, zobacz [zapytania dotyczące relacji](querying-across-relationships.md).) Nie widać faktu, że powiązane obiekty nie są już załadowane, ponieważ próba uzyskania do nich dostępu spowoduje utworzenie żądania, które je pobierze.  
   
- Na przykład można znaleźć określonego zestawu zamówienia, a następnie tylko sporadycznie wyśle wiadomość e-mail z powiadomieniem do klientów danego. Nie zawsze należałoby początkowo można pobrać wszystkich danych klientów z każdego zamówienia. Za pomocą odroczonego ładowania mają być odroczone pobieranie dodatkowych informacji, dopóki nie jest bezwzględnie konieczne. Rozważmy następujący przykład:  
+ Można na przykład utworzyć zapytanie dotyczące określonego zestawu zamówień, a następnie wysłać powiadomienie e-mail do określonych klientów. W każdym porządku nie trzeba początkowo pobierać wszystkich danych klientów. Można użyć opóźnionego ładowania, aby odroczyć pobieranie dodatkowych informacji do momentu, gdy będzie to absolutnie konieczne. Rozważmy następujący przykład:  
   
  [!code-csharp[DLinqQueryConcepts#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#1)]
  [!code-vb[DLinqQueryConcepts#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#1)]  
   
- Przeciwieństwo również może mieć wartość true. Może być aplikacja, która ma wyświetlić dane klienta i zamówienia w tym samym czasie. Wiesz, że potrzebujesz oba zestawy danych. Wiesz, że Twoja aplikacja potrzebuje informacji o zamówieniach dla każdego klienta, tak szybko, jak uzyskać wyniki. Czy chcesz przesłać poszczególnych kwerend w obsłudze zamówień dla każdego klienta. Co naprawdę jest do pobierania danych zlecenia wraz z klientów.  
+ Przeciwieństwem może być również wartość true. Może istnieć aplikacja, która musi wyświetlać dane klienta i zamówienia w tym samym czasie. Wiadomo, że potrzebujesz obu zestawów danych. Wiadomo, że aplikacja wymaga informacji o zamówieniach dla każdego klienta, gdy tylko uzyskasz wyniki. Nie chcesz przesyłać poszczególnych zapytań dla zamówień dla każdego klienta. W rzeczywistości warto pobrać dane zamówienia razem z klientami.  
   
  [!code-csharp[DLinqQueryConcepts#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#2)]
  [!code-vb[DLinqQueryConcepts#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#2)]  
   
- Można również dołączyć klienci i zamówienia w zapytaniu, tworzących obejmujących wiele produktów i pobieranie względne bity danych jako jeden duży projekcji. Te wyniki nie są jednak jednostek. (Aby uzyskać więcej informacji, zobacz [LINQ to SQL Model obiektów](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)). Jednostki są obiekty, które mają tożsamości i że można modyfikować, te wyniki byłyby projekcji, które nie mogą być zmienione i utrwalone. Co gorsza można będzie można pobierania wiele nadmiarowych danych zgodnie z każdego klienta powtarza się dla każdego zamówienia w danych wyjściowych spłaszczonych sprzężenia.  
+ Możesz również dołączać do klientów i zamówień w zapytaniu, tworząc iloczyn wielu elementów i pobierając wszystkie względne bity danych jako jedną dużą projekcję. Jednak te wyniki nie są jednostkami. (Aby uzyskać więcej informacji, zobacz [LINQ to SQL model obiektów](the-linq-to-sql-object-model.md)). Jednostki są obiektami, które mają tożsamość i można modyfikować, podczas gdy te wyniki byłyby projekcjami, których nie można zmienić ani utrwalić. Nawet gorsze, można pobrać wiele nadmiarowych danych, ponieważ każdy klient powtarza się dla każdego zamówienia w danych wyjściowych spłaszczonych sprzężeń.  
   
- Co naprawdę potrzebne jest sposobem pobrania zestawu powiązanych obiektów w tym samym czasie. Zestaw jest nakreślonego części wykres, dzięki czemu można będzie nigdy nie być pobierania więcej lub mniej niż niezbędne do zamierzonego użycia. W tym celu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapewnia <xref:System.Data.Linq.DataLoadOptions> dla bezpośrednie ładowanie region modelu obiektu. Metody obejmują:  
+ To, co naprawdę konieczne, jest sposobem na pobranie zestawu obiektów pokrewnych w tym samym czasie. Zestaw jest przekreśloną sekcją wykresu, dzięki czemu nigdy nie będzie można pobrać więcej lub mniej niż było to konieczne do zamierzonego użycia. W tym celu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] umożliwia <xref:System.Data.Linq.DataLoadOptions> natychmiastowe ładowanie regionu modelu obiektów. Metody obejmują:  
   
-- <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> Metody, można od razu załadować dane powiązane z głównym celem.  
+- <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> Metoda, aby natychmiast załadować dane powiązane z głównym celem.  
   
-- <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> Metod w celu Filtruj obiekty pobranych dla określonej relacji.  
+- <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> Metoda służąca do filtrowania obiektów pobranych dla konkretnej relacji.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Pojęcia dotyczące zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Pojęcia dotyczące zapytań](query-concepts.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fc581904351443f4368a68a653fd39b3548999a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a48dbd38d357b668c2794ae6305ceb9cad3dcf4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741429"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787193"
 ---
 # <a name="setpekind-method"></a>SetPEKind — Metoda
-Określa typ przenośnego pliku wykonywalnego, specyficzny dla komputera lub niezależny od maszyny.  
+Określa przenośny typ pliku wykonywalnego, dla maszyn lub maszyn-niezależny od.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,23 +42,23 @@ HRESULT SetPEKind(
  Identyfikator zestawu.  
   
  `FileToken`  
- Token pliku, dla którego ma można ustawić typu PE. Może mieć wartości NULL, jeśli `AssemblyID` nie wskazuje niepowiązanych modułu netmodule.  
+ Token pliku, dla którego ma zostać ustawiony typ PE. Może mieć wartość null `AssemblyID` , jeśli nie wskazuje niepowiązanego modułu.  
   
  `dwPEKind`  
- Typ PE, wskazane przez [corpekind — wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md).  
+ Typ środowiska PE określony przez [Wyliczenie CorPEKind —](../metadata/corpekind-enumeration.md).  
   
  `dwMachine`  
- Architektura maszyny docelowej, jak wskazano w nagłówku NT.  
+ Architektura komputera docelowego, jak wskazano w nagłówku NT.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga alink.h.  
+ Wymaga Alink. h.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [GetPEKind, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [GetPEKind, metoda](../metadata/imetadataimport2-getpekind-method.md)
+- [IALink2, interfejs](ialink2-interface.md)
+- [IALink, interfejs](ialink-interface.md)
+- [ALink, interfejs API](index.md)

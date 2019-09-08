@@ -2,15 +2,15 @@
 title: Wnioskowanie kolumn
 ms.date: 03/30/2017
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
-ms.openlocfilehash: 651d132fd76ba9015d4730a5e519bc679608e275
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 2718cbcf29799f99c8648b129fdb6079a6f6d344
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203594"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786174"
 ---
 # <a name="inferring-columns"></a>Wnioskowanie kolumn
-Po ustaleniu ADO.NET z dokumentu XML, który elementy do wnioskowania jako tabele dla <xref:System.Data.DataSet>a, następnie wnioskuje kolumny dla tych tabel. W ADO.NET 2,0 wprowadzono nowy aparat wnioskowania schematu, który wnioskuje typ danych o jednoznacznie określonym typie dla każdego elementu simpleType. W poprzednich wersjach typ danych wywnioskowanego elementu simpleType miał zawsze wartość **XSD: String**.  
+Po ustaleniu ADO.NET z dokumentu XML, który elementy do wnioskowania jako tabele dla <xref:System.Data.DataSet>a, następnie wnioskuje kolumny dla tych tabel. W ADO.NET 2,0 wprowadzono nowy aparat wnioskowania schematu, który wnioskuje typ danych o jednoznacznie określonym typie dla każdego elementu **simpleType** . W poprzednich wersjach typ danych wywnioskowanego elementu **simpleType** miał zawsze wartość **XSD: String**.  
   
 ## <a name="migration-and-backward-compatibility"></a>Migracja i zgodność z poprzednimi wersjami  
  Metoda **ReadXml** przyjmuje argument typu **InferSchema**. Ten argument umożliwia określenie zachowania wnioskowania zgodnego z poprzednimi wersjami. Dostępne wartości wyliczenia **InferSchema** są przedstawione w poniższej tabeli.  
@@ -25,7 +25,7 @@ Po ustaleniu ADO.NET z dokumentu XML, który elementy do wnioskowania jako tabel
  Ignoruje wszystkie wbudowane schemat i odczytuje dane w istniejącym <xref:System.Data.DataSet> schemacie.  
   
 ## <a name="attributes"></a>Atrybuty  
- Zgodnie z definicją w [tabelach](inferring-tables.md)odwołujących element z atrybutami zostanie wywnioskowany jako tabela. Atrybuty tego elementu zostaną następnie wywnioskowane jako kolumny dla tabeli. Właściwość **ColumnMapping** kolumn zostanie ustawiona na wartość **MappingType. Attribute**, aby upewnić się, że nazwy kolumn będą zapisywane jako atrybuty, jeśli schemat jest zapisywana z powrotem do kodu XML. Wartości atrybutów są przechowywane w wierszu w tabeli. Rozważmy na przykład następujący kod XML:  
+ Zgodnie z definicją w [tabelach odwołujących](inferring-tables.md)element z atrybutami zostanie wywnioskowany jako tabela. Atrybuty tego elementu zostaną następnie wywnioskowane jako kolumny dla tabeli. Właściwość **ColumnMapping** kolumn zostanie ustawiona na wartość **MappingType. Attribute**, aby upewnić się, że nazwy kolumn będą zapisywane jako atrybuty, jeśli schemat jest zapisywana z powrotem do kodu XML. Wartości atrybutów są przechowywane w wierszu w tabeli. Rozważmy na przykład następujący kod XML:  
   
 ```xml  
 <DocumentElement>  
@@ -33,7 +33,7 @@ Po ustaleniu ADO.NET z dokumentu XML, który elementy do wnioskowania jako tabel
 </DocumentElement>  
 ```  
   
- Proces wnioskowania spowoduje utworzenie tabeli o nazwie **element1** z dwiema kolumnami, **attr1** i **attr2**. Właściwość **ColumnMapping** obu kolumn zostanie ustawiona na wartość MappingType **. Attribute**.  
+ Proces wnioskowania spowoduje utworzenie tabeli o nazwie **element1** z dwiema kolumnami, **attr1** i **attr2**. Właściwość **ColumnMapping** obu kolumn zostanie ustawiona na wartość **MappingType. Attribute**.  
   
  **Zestawu** DocumentElement  
   
@@ -55,7 +55,7 @@ Po ustaleniu ADO.NET z dokumentu XML, który elementy do wnioskowania jako tabel
 </DocumentElement>  
 ```  
   
- Proces wnioskowania spowoduje utworzenie tabeli o nazwie **element1** z dwiema kolumnami, **ChildElement1** i **ChildElement2**. Właściwość **ColumnMapping** obu kolumn zostanie ustawiona na wartość MappingType **. element**.  
+ Proces wnioskowania spowoduje utworzenie tabeli o nazwie **element1** z dwiema kolumnami, **ChildElement1** i **ChildElement2**. Właściwość **ColumnMapping** obu kolumn zostanie ustawiona na wartość **MappingType. element**.  
   
  **Zestawu** DocumentElement  
   
@@ -72,4 +72,4 @@ Po ustaleniu ADO.NET z dokumentu XML, który elementy do wnioskowania jako tabel
 - [Ładowanie informacji o schemacie elementu DataSet z pliku XML](loading-dataset-schema-information-from-xml.md)
 - [Używanie języka XML w elemencie DataSet](using-xml-in-a-dataset.md)
 - [Elementy DataSet, DataTable i DataView](index.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

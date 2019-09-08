@@ -10,17 +10,17 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: 474ac625-8770-43ba-8320-d3315ea9530f
-ms.openlocfilehash: b53da9c1ecfcc5061fe551c4e180774319beaf5d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 758bb01764fcfe195d4f940705316e7579be95ff
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952224"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780007"
 ---
 # <a name="how-to-project-query-results-wcf-data-services"></a>Instrukcje: Wyniki zapytania projektu (Usługi danych programu WCF)
-Projekcja zapewnia mechanizm zmniejszania ilości danych zwracanych przez zapytanie przez określenie, że tylko niektóre właściwości jednostki są zwracane w odpowiedzi. Można wykonywać projekcje [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] na wynikach zapytania przy `$select` użyciu opcji zapytania lub klauzuli [SELECT](../../../csharp/language-reference/keywords/select-clause.md) ([SELECT](../../../visual-basic/language-reference/queries/select-clause.md) in Visual Basic) w zapytaniu LINQ. Aby uzyskać więcej informacji, zobacz [wykonywanie zapytań dotyczących usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+Projekcja zapewnia mechanizm zmniejszania ilości danych zwracanych przez zapytanie przez określenie, że tylko niektóre właściwości jednostki są zwracane w odpowiedzi. Można wykonywać projekcje [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] na wynikach zapytania przy `$select` użyciu opcji zapytania lub klauzuli [SELECT](../../../csharp/language-reference/keywords/select-clause.md) ([SELECT](../../../visual-basic/language-reference/queries/select-clause.md) in Visual Basic) w zapytaniu LINQ. Aby uzyskać więcej informacji, zobacz [wykonywanie zapytań dotyczących usługi danych](querying-the-data-service-wcf-data-services.md).  
   
- W przykładzie w tym temacie jest stosowana usługa danych przykładowych Northwind i klasy usługi danych klientów. Ta usługa i klasy danych klienta są tworzone po zakończeniu [usługi danych programu WCF szybkiego startu](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ W przykładzie w tym temacie jest stosowana usługa danych przykładowych Northwind i klasy usługi danych klientów. Ta usługa i klasy danych klienta są tworzone po zakończeniu [usługi danych programu WCF szybkiego startu](quickstart-wcf-data-services.md).  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje zapytanie LINQ, które projektuje jednostki klientów do nowego typu CustomerAddress, który zawiera tylko właściwości specyficzne dla adresu i właściwość Identity. Ta `CustomerAddress` Klasa jest zdefiniowana na kliencie i jest przypisywana, tak aby Biblioteka klienta mogła rozpoznać ją jako typ jednostki.  

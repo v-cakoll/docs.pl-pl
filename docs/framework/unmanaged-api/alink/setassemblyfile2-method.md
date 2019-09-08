@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d96881ce35dca1ee7a196507ef8d81a565eed82
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aba11ccd61b65d2a779b39db8e0e082cf4d4015b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741501"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787219"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 — Metoda
-Określa nazwę i opcje dla nowego zestawu. Ta metoda zostanie wywołana podczas tworzenia modułów niepowiązanych.  
+Ustawia nazwę i opcje dla nowego zestawu. Nie wywołuj tej metody podczas tworzenia niezwiązanych modułów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,22 +42,22 @@ HRESULT SetAssemblyFile2(
  Nazwa pliku manifestu.  
   
  `pEmitter`  
- [Imetadataemit2 — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) interfejsu dla tego pliku.  
+ Interfejs [IMetaDataEmit2 interfejsu](../metadata/imetadataemit2-interface.md) dla tego pliku.  
   
  `afFlags`  
- Opcje reprezentowany przez [assemblyflags — wyliczenie](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).  
+ Opcje reprezentowane przez [Wyliczenie AssemblyFlags —](../metadata/assemblyflags-enumeration.md).  
   
  `pAssemblyID`  
- Otrzymuje unikatowy identyfikator dla zestawu podczas konstruowania.  
+ Odbiera unikatowy identyfikator konstruowanego zestawu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga alink.h.  
+ Wymaga Alink. h.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2, interfejs](ialink2-interface.md)
+- [IALink, interfejs](ialink-interface.md)
+- [ALink, interfejs API](index.md)

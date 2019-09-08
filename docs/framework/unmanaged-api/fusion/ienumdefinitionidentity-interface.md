@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bbd8476b7778de6d0023f3a8522a44be6626884
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 88c2513229b6a4183cadbdc78e505910e01e152c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751525"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796471"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>IEnumDefinitionIdentity — Interfejs
-Służy jako modułu wyliczającego dla kolekcji `IDefinitionIdentity` obiektów.  
+Służy jako moduł wyliczający dla kolekcji `IDefinitionIdentity` obiektów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -55,19 +55,19 @@ IEnumDefinitionIdentity : IUnknown {
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|`IEnumDefinitionIdentity::Clone`|Pobiera wskaźnik interfejsu do nowego `IEnumDefinitionIdentity` obiekt, który zawiera te same elementy członkowskie, ponieważ `IEnumDefinitionIdentity`.|  
-|`IEnumDefinitionIdentity::Next`|Pobiera określoną liczbę `IDefinitionIdentity` obiektów, począwszy od bieżącej pozycji.|  
-|`IEnumDefinitionIdentity::Reset`|Przesuwa wskaźnik instrukcji na początku `IEnumDefinitionIdentity`.|  
-|`IEnumDefinitionIdentity::Skip`|Przesuwa wskaźnik instrukcji do przodu o określoną liczbę elementów, zaczynając od bieżącej pozycji.|  
+|`IEnumDefinitionIdentity::Clone`|Pobiera wskaźnik interfejsu do nowego `IEnumDefinitionIdentity` obiektu, który zawiera te same składowe. `IEnumDefinitionIdentity`|  
+|`IEnumDefinitionIdentity::Next`|Pobiera określoną liczbę `IDefinitionIdentity` obiektów, rozpoczynając od bieżącego położenia.|  
+|`IEnumDefinitionIdentity::Reset`|Przenosi wskaźnik instrukcji na początek tego `IEnumDefinitionIdentity`elementu.|  
+|`IEnumDefinitionIdentity::Skip`|Przesuwa wskaźnik instrukcji do przodu o określoną liczbę elementów, rozpoczynając od bieżącego położenia.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Isolation.h  
+ **Nagłówki** Izolacja. h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Interfejsy łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IDefinitionIdentity, interfejs](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
+- [Interfejsy łączenia](fusion-interfaces.md)
+- [IDefinitionIdentity, interfejs](idefinitionidentity-interface.md)

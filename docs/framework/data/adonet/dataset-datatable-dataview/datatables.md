@@ -2,15 +2,15 @@
 title: Elementy DataTable
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-ms.openlocfilehash: 365eafc938f3db511fd6714bec02cea2bd27ea25
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 12255f738dea0a4713389e599468d1a7fab67d23
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204964"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784691"
 ---
 # <a name="datatables"></a>Elementy DataTable
-Składa <xref:System.Data.DataSet> się z kolekcji tabel, relacji i ograniczeń. W ADO.NET <xref:System.Data.DataTable> obiekty są używane do reprezentowania tabel w **zestawie danych**. Element **DataTable** reprezentuje jedną tabelę danych relacyjnych w pamięci; dane są lokalne dla. Aplikacja oparta na sieci, w której znajduje się, ale może zostać wypełniona ze źródła danych, takiego jak Microsoft SQL Server przy użyciu elementu **DataAdapter** Aby uzyskać więcej informacji, zobacz wypełnianie [zestawu danych z elementu DataAdapter](../populating-a-dataset-from-a-dataadapter.md).  
+Składa <xref:System.Data.DataSet> się z kolekcji tabel, relacji i ograniczeń. W ADO.NET <xref:System.Data.DataTable> obiekty są używane do reprezentowania tabel w **zestawie danych**. Element **DataTable** reprezentuje jedną tabelę danych relacyjnych w pamięci; dane są lokalne dla. Aplikacja oparta na sieci, w której znajduje się, ale może zostać wypełniona ze źródła danych, takiego jak Microsoft SQL Server przy użyciu elementu **DataAdapter** Aby uzyskać więcej informacji, zobacz [wypełnianie zestawu danych z elementu DataAdapter](../populating-a-dataset-from-a-dataadapter.md).  
   
  Klasa **DataTable** jest składową przestrzeni nazw **System. Data** w bibliotece klas .NET Framework. Można utworzyć i używać **DataTable** niezależnie lub jako elementu członkowskiego **zestawu danych**, a obiekty **DataTable** mogą być również używane w połączeniu z innymi obiektami <xref:System.Data.DataView>.NET Framework, w tym. Dostęp do kolekcji tabel w **zestawie danych** można uzyskać za pomocą właściwości **Tables** obiektu **DataSet** .  
   
@@ -18,7 +18,7 @@ Składa <xref:System.Data.DataSet> się z kolekcji tabel, relacji i ograniczeń.
   
  Poza schematem element **DataTable** musi także zawierać wiersze, które zawierają i porządkują dane. <xref:System.Data.DataRow> Klasa reprezentuje rzeczywiste dane zawarte w tabeli. Aby pobrać, oszacować i manipulować danymi w tabeli, należy użyć obiektu **DataRow** oraz jego właściwości i metod. Gdy uzyskujesz dostęp do danych i zmieniasz je w wierszu, obiekt **DataRow** zachowuje zarówno bieżący, jak i oryginalny stan.  
   
- Można utworzyć relacje nadrzędny-podrzędny między tabelami przy użyciu co najmniej jednej powiązanej kolumny w tabelach. Utwórz relację między obiektami **DataTable** przy użyciu <xref:System.Data.DataRelation>. Obiektów można następnie użyć do zwrócenia powiązanych podrzędnych lub nadrzędnych wierszy określonego wiersza. Aby uzyskać więcej informacji, zobacz [Dodawanie relacji](adding-datarelations.md)danych.  
+ Można utworzyć relacje nadrzędny-podrzędny między tabelami przy użyciu co najmniej jednej powiązanej kolumny w tabelach. Utwórz relację między obiektami **DataTable** przy użyciu <xref:System.Data.DataRelation>. **Obiektów** można następnie użyć do zwrócenia powiązanych podrzędnych lub nadrzędnych wierszy określonego wiersza. Aby uzyskać więcej informacji, zobacz [Dodawanie relacji](adding-datarelations.md)danych.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Tworzenie elementów DataTable](creating-a-datatable.md)  
@@ -44,7 +44,7 @@ Składa <xref:System.Data.DataSet> się z kolekcji tabel, relacji i ograniczeń.
  Zawiera informacje referencyjne dotyczące obiektu **ograniczenia** .  
   
  <xref:System.Data.DataColumn>  
- Zawiera informacje referencyjne na temat obiektu DataColumn.  
+ Zawiera informacje referencyjne na temat obiektu **DataColumn** .  
   
  <xref:System.Data.DataSet>  
  Zawiera informacje referencyjne o obiekcie **DataSet** .  
@@ -57,4 +57,4 @@ Składa <xref:System.Data.DataSet> się z kolekcji tabel, relacji i ograniczeń.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

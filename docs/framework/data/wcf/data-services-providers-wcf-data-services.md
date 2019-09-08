@@ -1,37 +1,37 @@
 ---
-title: Data Services — dostawcy (WCF Data Services)
+title: Dostawcy Data Services (Usługi danych programu WCF)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: a0160b1b-3d9c-4cc8-8391-cb0986a60a41
-ms.openlocfilehash: 7a870eb0c85fa6ed208341a3ac10dce8bb0724bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7623c2b743d6a61362c8cf0e1228b4663c9e7d48
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765703"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780388"
 ---
-# <a name="data-services-providers-wcf-data-services"></a>Data Services — dostawcy (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje wiele modeli dostawcy do udostępniania danych jako [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych. Ten temat zawiera informacje umożliwiające wybranie najlepszej [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] dostawcy dla źródła danych.  
+# <a name="data-services-providers-wcf-data-services"></a>Dostawcy Data Services (Usługi danych programu WCF)
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]obsługuje wiele modeli dostawcy na potrzeby ujawniania danych [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] jako źródła strumieniowego. Ten temat zawiera informacje umożliwiające wybranie najlepszego [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] dostawcy dla źródła danych.  
   
 ## <a name="data-source-providers"></a>Dostawcy źródła danych  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje następujących dostawców na potrzeby definiowania modelu danych usługi danych.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Program obsługuje następujących dostawców do definiowania modelu danych usługi danych.  
   
 |Dostawca|Opis|  
 |--------------|-----------------|  
-|Dostawca programu Entity Framework|Ten dostawca używa ADO.NET Entity Framework, aby umożliwić do użycia w relacyjnej bazie danych za pomocą usługi danych przez zdefiniowanie modelu danych, który jest mapowany do opartego na danych relacyjnych. Źródło danych może być program SQL Server lub dowolnego innego źródła danych z obsługą innych dostawców dla programu Entity Framework. W przypadku źródła danych relacyjnych, takich jak bazy danych programu SQL Server, należy używać dostawcy środowiska Entity Framework. Aby uzyskać więcej informacji, zobacz [dostawcy Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md).|  
-|Dostawcy odbicia|Ten dostawca używa odbicia w celu umożliwiają zdefiniowanie modelu danych, w oparciu o istniejące klasy danych, które są dostępne jako wystąpień obiektu <xref:System.Linq.IQueryable%601> interfejsu. Aktualizacje są włączone przez zaimplementowanie <xref:System.Data.Services.IUpdatable> interfejsu. W przypadku danych statycznych klas, które są zdefiniowane w czasie wykonywania, takich jak te generowane w składniku LINQ to SQL lub zdefiniowany przez typizowany zestaw danych, należy używać tego dostawcy. Aby uzyskać więcej informacji, zobacz [dostawcy odbicia](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md).|  
-|Niestandardowi dostawcy usługi danych|[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] zawiera zestaw dostawców, którzy umożliwiają zdefiniowanie dynamicznie na podstawie typów danych z późnym wiązaniem modelu danych. Te interfejsy powinny implementować, gdy dane są udostępniane nie jest znany, podczas projektowania aplikacji lub dostawcy programu Entity Framework lub odbicia nie są wystarczające. Aby uzyskać więcej informacji, zobacz [dostawcy usługi danych niestandardowych](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).|  
+|Dostawca Entity Framework|Ten dostawca używa Entity Framework ADO.NET, aby umożliwić korzystanie z danych relacyjnych z usługą danych przez zdefiniowanie modelu danych, który mapuje na dane relacyjne. Źródło danych może być SQL Server lub dowolnego innego źródła danych z obsługą dostawcy innej firmy dla Entity Framework. Dostawcy Entity Framework należy używać w przypadku relacyjnego źródła danych, takiego jak baza danych SQL Server. Aby uzyskać więcej informacji, zobacz [Entity Framework Provider](entity-framework-provider-wcf-data-services.md).|  
+|Dostawca odbicia|Ten dostawca używa odbicia, aby umożliwić zdefiniowanie modelu danych opartego na istniejących klasach danych, które mogą być ujawnione <xref:System.Linq.IQueryable%601> jako wystąpienia interfejsu. Aktualizacje są włączane przez implementację <xref:System.Data.Services.IUpdatable> interfejsu. Tego dostawcy należy używać, gdy istnieją klasy danych statycznych, które są zdefiniowane w czasie wykonywania, takie jak te wygenerowane przez LINQ to SQL lub zdefiniowane przez określony zestaw danych. Aby uzyskać więcej informacji, zobacz temat [dostawca odbicia](reflection-provider-wcf-data-services.md).|  
+|Niestandardowi dostawcy usługi danych|[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]zawiera zestaw dostawców, które umożliwiają dynamiczne definiowanie modelu danych na podstawie późnych typów danych. Te interfejsy należy zaimplementować, gdy udostępniane dane nie są znane, gdy aplikacja jest zaprojektowana lub gdy Entity Framework lub dostawcy odbicia nie są wystarczające. Aby uzyskać więcej informacji, zobacz [niestandardowe dostawcy usług danych](custom-data-service-providers-wcf-data-services.md).|  
   
-## <a name="other-data-service-providers"></a>Innych dostawców usług danych  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ma następującego dostawcy usługi dodatkowe dane, które poprawia wydajność źródła danych, zdefiniowane przy użyciu jednego z innych dostawców.  
+## <a name="other-data-service-providers"></a>Inni dostawcy usług danych  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]ma następującego dodatkowego dostawcę usługi danych, który zwiększa wydajność źródła danych zdefiniowanego przy użyciu jednego z pozostałych dostawców.  
   
 |Dostawca|Opis|  
 |--------------|-----------------|  
-|Dostawca przesyłania strumieniowego|Ten dostawca umożliwia udostępnianie duży obiekt binarny typy danych przy użyciu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Dostawca przesyłania strumieniowego jest tworzony przez zaimplementowanie <xref:System.Data.Services.Providers.IDataServiceStreamProvider> interfejsu. Ten dostawca może być implementowany wraz z dowolnego dostawcy źródła danych. Aby uzyskać więcej informacji, zobacz [dostawca przesyłania strumieniowego](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).|  
+|Dostawca przesyłania strumieniowego|Ten dostawca pozwala udostępnić binarne typy danych obiektów binarnych za pomocą polecenia [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Dostawca przesyłania strumieniowego jest tworzony przez implementację <xref:System.Data.Services.Providers.IDataServiceStreamProvider> interfejsu. Ten dostawca można zaimplementować razem z dowolnym dostawcą źródła danych. Aby uzyskać więcej informacji, zobacz [dostawca przesyłania strumieniowego](streaming-provider-wcf-data-services.md).|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Definiowanie usług danych WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
-- [Konfigurowanie usługi danych](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)
-- [Hosting usługi danych](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)
+- [Definiowanie usług danych WCF](defining-wcf-data-services.md)
+- [Konfigurowanie usługi danych](configuring-the-data-service-wcf-data-services.md)
+- [Hosting usługi danych](hosting-the-data-service-wcf-data-services.md)

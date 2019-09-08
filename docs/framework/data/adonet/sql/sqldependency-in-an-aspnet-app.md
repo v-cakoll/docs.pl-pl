@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: a93cb9da44985fa29a4975875564b384117ce76f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3e28adc2cf7c24cee9ee344eb78404f01b79793
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938454"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780718"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>Element SqlDependency w aplikacji ASP.NET
 W przykładzie w tej sekcji pokazano, jak używać <xref:System.Data.SqlClient.SqlDependency> pośrednio, wykorzystując obiekt ASP.NET <xref:System.Web.Caching.SqlCacheDependency> . <xref:System.Web.Caching.SqlCacheDependency> Obiekt używaobiektudonasłuchiwaniapowiadomieńipoprawnie<xref:System.Data.SqlClient.SqlDependency> zaktualizować pamięć podręczną.  
   
 > [!NOTE]
-> Przykładowy kod założono, że włączono powiadomienia o zapytaniach przez wykonanie skryptów w temacie [Włączanie powiadomień o](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)zapytaniach.  
+> Przykładowy kod założono, że włączono powiadomienia o zapytaniach przez wykonanie skryptów w temacie [Włączanie powiadomień o zapytaniach](enabling-query-notifications.md).  
   
 ## <a name="about-the-sample-application"></a>Informacje o aplikacji przykładowej  
  Aplikacja Przykładowa używa pojedynczej strony sieci Web ASP.NET do wyświetlania informacji o produkcie z bazy danych SQL Server AdventureWorks <xref:System.Web.UI.WebControls.GridView> w kontrolce. Po załadowaniu strony kod zapisuje bieżący czas do <xref:System.Web.UI.WebControls.Label> kontrolki. Następnie definiuje <xref:System.Web.Caching.SqlCacheDependency> obiekt i ustawia właściwości <xref:System.Web.Caching.Cache> dla obiektu w celu przechowywania danych w pamięci podręcznej przez maksymalnie trzy minuty. Kod następnie łączy się z bazą danych i pobiera dane. Po załadowaniu strony i uruchomieniu aplikacji ASP.NET pobierze dane z pamięci podręcznej, którą można zweryfikować, zwracając uwagę, że czas na stronie nie ulegnie zmianie. Jeśli monitorowane dane zmieniają się, ASP.NET unieważnia pamięć podręczną i ponownie wypełnia `GridView` kontrolę przy użyciu nowych danych, aktualizując czas wyświetlany `Label` w kontrolce.  
@@ -59,5 +59,5 @@ W przykładzie w tej sekcji pokazano, jak używać <xref:System.Data.SqlClient.S
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Powiadomienia zapytań w programie SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Powiadomienia zapytań w programie SQL Server](query-notifications-in-sql-server.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

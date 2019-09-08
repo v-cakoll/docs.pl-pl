@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ad712fa1-2baf-462a-b163-574cce6d376a
-ms.openlocfilehash: d956fd5f07c108146d20623bcf811266380c132c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 55714c4dae73cd17a849cc35681797dfa4266e3b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651743"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782965"
 ---
-# <a name="query-typed-datasets"></a>Zapytanie wpisanych zestawów danych
+# <a name="query-typed-datasets"></a>Zestawy danych z określonym typem zapytania
 
-Jeśli schemat <xref:System.Data.DataSet> jest znany w czasie projektowania aplikacji, zalecamy użycie wpisane <xref:System.Data.DataSet> podczas korzystania z LINQ to DataSet. Wpisane <xref:System.Data.DataSet> jest klasa, która pochodzi od klasy <xref:System.Data.DataSet>. W efekcie dziedziczy wszystkie metody, zdarzenia i właściwości <xref:System.Data.DataSet>. Ponadto wpisane <xref:System.Data.DataSet> udostępnia silnie typizowane metody, zdarzenia i właściwości. Oznacza to, że masz dostęp tabele i kolumny, według nazwy, zamiast korzystać z metody oparte na kolekcji. To sprawia, że zapytania prostszy i bardziej czytelny. Aby uzyskać więcej informacji, zobacz [wpisanych zestawów danych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).
+Jeśli schemat <xref:System.Data.DataSet> programu jest znany w czasie projektowania aplikacji, zalecamy użycie <xref:System.Data.DataSet> typu podczas korzystania z LINQ to DataSet. Typ <xref:System.Data.DataSet> to Klasa, która pochodzi <xref:System.Data.DataSet>od klasy. W związku z tym dziedziczy wszystkie metody, zdarzenia i właściwości <xref:System.Data.DataSet>. Ponadto typ <xref:System.Data.DataSet> udostępnia metody o jednoznacznie określonym typie, zdarzenia i właściwości. Oznacza to, że można uzyskać dostęp do tabel i kolumn według nazwy, zamiast korzystać z metod opartych na kolekcji. Sprawia to, że zapytania są prostsze i bardziej czytelne. Aby uzyskać więcej informacji, zobacz [typy zestawów danych](./dataset-datatable-dataview/typed-datasets.md).
 
-LINQ do zestawu danych obsługuje również zapytań wpisane <xref:System.Data.DataSet>. Z kontrolą typów <xref:System.Data.DataSet>, będą musieli używać ogólnych <xref:System.Data.DataRowExtensions.Field%2A> metody lub <xref:System.Data.DataRowExtensions.SetField%2A> metody dostępu do kolumny danych. Nazwy właściwości są dostępne w czasie kompilacji, ponieważ informacje o typie jest uwzględniony w <xref:System.Data.DataSet>. LINQ do zestawu danych zapewnia dostęp do wartości w kolumnie jako odpowiedniego typu, tak aby błędy niezgodności wpisywania są wyłapywane, gdy kod jest kompilowany zamiast w czasie wykonywania.
+LINQ to DataSet obsługuje również zapytania w określonym typie <xref:System.Data.DataSet>. Z określonym typem <xref:System.Data.DataSet>nie trzeba używać metody ogólnej <xref:System.Data.DataRowExtensions.Field%2A> ani <xref:System.Data.DataRowExtensions.SetField%2A> metody dostępu do danych kolumn. Nazwy właściwości są dostępne w czasie kompilacji, ponieważ informacje o typie są zawarte w <xref:System.Data.DataSet>. LINQ to DataSet zapewnia dostęp do wartości kolumn jako poprawny typ, dzięki czemu błędy niezgodności typów są przechwytywane podczas kompilowania kodu, a nie w czasie wykonywania.
 
-Przed rozpoczęciem wykonywania zapytań wpisane <xref:System.Data.DataSet>, należy wygenerować klasę za pomocą **Projektanta obiektów DataSet** w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [tworzenie i konfigurowanie zestawów danych](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio).
+Przed rozpoczęciem wykonywania zapytania o określony typ <xref:System.Data.DataSet>należy wygenerować klasę przy użyciu **projektanta obiektów DataSet** w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [Tworzenie i konfigurowanie zestawów danych](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio).
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono zapytanie, za pośrednictwem wpisane <xref:System.Data.DataSet>:
+W poniższym przykładzie pokazano zapytanie w określonym typie <xref:System.Data.DataSet>:
 
 ```csharp
 var query = from o in orders
@@ -60,6 +60,6 @@ Next
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wykonywanie zapytania do zestawów danych](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
-- [Zapytania wielotabelowe](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)
-- [Zapytania jednotabelowe](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)
+- [Wykonywanie zapytania do zestawów danych](querying-datasets-linq-to-dataset.md)
+- [Zapytania wielotabelowe](cross-table-queries-linq-to-dataset.md)
+- [Zapytania jednotabelowe](single-table-queries-linq-to-dataset.md)

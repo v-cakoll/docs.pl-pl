@@ -2,12 +2,12 @@
 title: Mapowanie zewnętrzne
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 70372473eb2de5d3c4751e237e7beb66315b690e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 39cdd7b23bd90ff8938dda9eee630149ce6ddbea
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950328"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793986"
 ---
 # <a name="external-mapping"></a>Mapowanie zewnętrzne
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]obsługuje *Mapowanie zewnętrzne*, proces, za pomocą którego używany jest osobny plik XML do określenia mapowania między modelem danych bazy danych i modelem obiektu. Zalety korzystania z zewnętrznego pliku mapowania są następujące:  
@@ -23,7 +23,7 @@ ms.locfileid: "69950328"
   
 - Plik mapowania musi być plikiem XML.  
   
-- Plik mapowania XML musi być prawidłowy względem pliku definicji schematu XML. Aby uzyskać więcej informacji, zobacz [jak: Sprawdź poprawność DBML i](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)zewnętrznych plików mapowania.  
+- Plik mapowania XML musi być prawidłowy względem pliku definicji schematu XML. Aby uzyskać więcej informacji, zobacz [jak: Sprawdź poprawność DBML i](how-to-validate-dbml-and-external-mapping-files.md)zewnętrznych plików mapowania.  
   
 - Mapowanie zewnętrzne zastępuje mapowanie oparte na atrybutach. Innymi słowy, jeśli używasz zewnętrznego źródła mapowania do tworzenia <xref:System.Data.Linq.DataContext> <xref:System.Data.Linq.DataContext> , ignoruje wszystkie atrybuty mapowania, które zostały utworzone dla klas. To zachowanie jest prawdziwe, niezależnie od tego, czy Klasa jest uwzględniona w zewnętrznym pliku mapowania.  
   
@@ -32,10 +32,10 @@ ms.locfileid: "69950328"
 ## <a name="xml-schema-definition-file"></a>Plik definicji schematu XML  
  Mapowanie zewnętrzne w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] programie musi być prawidłowe względem następującej definicji schematu XML.  
   
- Odróżnij ten plik definicji schematu od pliku definicji schematu, który jest używany do walidacji pliku DBML. Aby uzyskać więcej informacji, zobacz [generowanie kodu w LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).  
+ Odróżnij ten plik definicji schematu od pliku definicji schematu, który jest używany do walidacji pliku DBML. Aby uzyskać więcej informacji, zobacz [generowanie kodu w LINQ to SQL](code-generation-in-linq-to-sql.md)).  
   
 > [!NOTE]
-> Użytkownicy programu Visual Studio również znajdą ten plik XSD w oknie dialogowym schematy XML jako "LinqToSqlMapping. xsd". Aby prawidłowo użyć tego pliku do walidacji pliku mapowania zewnętrznego, zobacz [How to: Sprawdź poprawność DBML i](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)zewnętrznych plików mapowania.  
+> Użytkownicy programu Visual Studio również znajdą ten plik XSD w oknie dialogowym schematy XML jako "LinqToSqlMapping. xsd". Aby prawidłowo użyć tego pliku do walidacji pliku mapowania zewnętrznego, zobacz [How to: Sprawdź poprawność DBML i](how-to-validate-dbml-and-external-mapping-files.md)zewnętrznych plików mapowania.  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -143,6 +143,6 @@ elementFormDefault="qualified" >
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Generowanie kodu w składniku LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [Dokumentacja](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Instrukcje: Generuj model obiektów jako plik zewnętrzny](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [Generowanie kodu w składniku LINQ to SQL](code-generation-in-linq-to-sql.md)
+- [Dokumentacja](reference.md)
+- [Instrukcje: Generuj model obiektów jako plik zewnętrzny](how-to-generate-the-object-model-as-an-external-file.md)

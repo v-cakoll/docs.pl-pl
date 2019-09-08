@@ -2,41 +2,41 @@
 title: Bezpieczeństwo programu SQL Server Express
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: f4291de89b397f60aedd35b89d6aa3130d348be5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 55f1d141e50ed7afd851d7330cfaf2e3b6380f18
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876788"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791689"
 ---
 # <a name="sql-server-express-security"></a>Bezpieczeństwo programu SQL Server Express
-Microsoft SQL Server Express Edition, (SQL Server Express) jest oparty na programie Microsoft SQL Server i obsługuje większość funkcji aparatu bazy danych. Zaprojektowano tak, aby mniej ważne funkcje i połączenie sieciowe są domyślnie wyłączone. Powoduje to zmniejszenie obszaru powierzchni dostępne ataku przez złośliwego użytkownika.  
+Microsoft SQL Server Express Edition (SQL Server Express) jest oparta na Microsoft SQL Server i obsługuje większość funkcji aparatu bazy danych. Jest ona zaprojektowana tak, że nieistotne funkcje i łączność sieciowa są domyślnie wyłączone. Pozwala to zmniejszyć obszar powierzchni dostępny dla ataku złośliwego użytkownika.  
   
- SQL Server Express jest zazwyczaj instalowany jako nazwane wystąpienie. Domyślna nazwa wystąpienia to `SQLExpress`. Nazwane wystąpienie jest identyfikowane przez nazwę sieciową komputera, a także nazwę wystąpienia, który jest określany podczas instalacji.  
+ SQL Server Express jest zazwyczaj instalowany jako nazwane wystąpienie. Domyślna nazwa wystąpienia to `SQLExpress`. Nazwane wystąpienie jest identyfikowane przez nazwę sieciową komputera oraz nazwę wystąpienia określoną podczas instalacji.  
   
 ## <a name="network-access"></a>Dostęp do sieci  
- Ze względów bezpieczeństwa protokoły sieciowe są domyślnie wyłączona, w programie SQL Server Express. Pozwala to zapobiec atakom, od użytkowników zewnętrznych, które mogą negatywnie wpłynąć na komputerze, który hostuje wystąpienie programu SQL Server Express. Należy jawnie włączyć łączność sieciową i uruchom usługę SQL Server Browser do połączenia z wystąpieniem programu SQL Server Express z innego komputera.  
+ Ze względów bezpieczeństwa protokoły sieciowe są domyślnie wyłączone w SQL Server Express. Zapobiega to atakom spoza użytkowników, którzy mogą naruszyć bezpieczeństwo komputera, który hostuje wystąpienie SQL Server Express. Należy jawnie włączyć łączność sieciową i uruchomić usługę SQL Server Browser, aby połączyć się z wystąpieniem SQL Server Express z innego komputera.  
   
- Gdy połączenie sieciowe jest włączone, wystąpienie programu SQL Server Express ma takie same wymagania dotyczące zabezpieczeń, jak inne wersje programu SQL Server.  
+ Po włączeniu łączności sieciowej wystąpienie SQL Server Express ma takie same wymagania dotyczące zabezpieczeń co inne wersje SQL Server.  
   
 ## <a name="user-instances"></a>Wystąpienia użytkownika  
- Wystąpienia użytkownika jest osobnego wystąpienia programu SQL Server Express aparat bazy danych jest generowany przez nadrzędne wystąpienie programu SQL Server Express. Podstawowym celem wystąpienia użytkownika jest umożliwienie użytkownikom z systemem Windows przy użyciu konta użytkownika uprawnień, aby administrator systemu (`sysadmin`) uprawnienia w wystąpieniu programu SQL Server Express na komputerze lokalnym. Wystąpienia użytkownika nie są przeznaczone dla użytkowników, którzy są administratorami systemu na swoich komputerach.  
+ Wystąpienie użytkownika jest osobnym wystąpieniem aparatu bazy danych SQL Server Express, który jest generowany przez wystąpienie nadrzędne SQL Server Express. Głównym celem wystąpienia użytkownika jest umożliwienie użytkownikom z systemem Windows w ramach konta użytkownika z najniższymi uprawnieniami, aby mieć uprawnienia administratora`sysadmin`systemu w wystąpieniu SQL Server Express na swoim komputerze lokalnym. Wystąpienia użytkownika nie są przeznaczone dla użytkowników, którzy są administratorami systemu na swoich komputerach.  
   
- Wystąpienia użytkownika jest generowany na podstawie podstawowego wystąpienia programu SQL Server lub SQL Server Express w imieniu użytkownika. Działa jako proces użytkownika w kontekście zabezpieczeń Windows użytkownika, a nie jako usługa. Logowania do programu SQL Server są niedozwolone; obsługiwane są tylko Windows logowania. Zapobiega to oprogramowanie wykonywania w wystąpieniu użytkownika, możliwość dokonywania zmian całego systemu, które użytkownik nie musiałby uprawnień do wprowadzania. Wystąpienia użytkownika jest także znana jako wystąpienia podrzędne lub klienta, a nazywa się czasem przy użyciu akronim RANU ("Uruchom jako zwykły użytkownik").  
+ Wystąpienie użytkownika jest generowane na podstawie wystąpienia podstawowego SQL Server lub SQL Server Express w imieniu użytkownika. Jest on uruchamiany jako proces użytkownika w kontekście zabezpieczeń systemu Windows użytkownika, a nie jako usługa. Identyfikatory logowania SQL Server są niedozwolone; Obsługiwane są tylko nazwy logowania systemu Windows. Zapobiega to wykonywaniu przez oprogramowanie w wystąpieniu użytkownika zmian w całym systemie, których użytkownik nie ma uprawnień do wykonania. Wystąpienie użytkownika jest również nazywane wystąpieniem podrzędnym lub klientem i jest czasami określane przy użyciu akronima RANU ("Uruchom jako normalny użytkownik").  
   
- Każde wystąpienie użytkownika jest izolowane od jego wystąpienie nadrzędne i od innych wystąpień użytkownika na tym samym komputerze. Baza danych zainstalowana na wystąpieniach użytkowników są otwierane w trybie jednego użytkownika. wielu użytkowników nie może nawiązać z nimi. Replikacja, zapytania rozproszone i połączenia zdalne są wyłączone dla wystąpienia użytkownika. Po podłączeniu do wystąpienia użytkownika, użytkownicy nie mają żadnych specjalnych uprawnień w wystąpieniu programu SQL Server Express nadrzędnej.  
+ Każde wystąpienie użytkownika jest odizolowane od jego wystąpienia nadrzędnego i innych wystąpień użytkownika uruchomionych na tym samym komputerze. Bazy danych zainstalowane w wystąpieniach użytkownika są otwierane tylko w trybie jednego użytkownika. wielu użytkowników nie może połączyć się z nimi. Replikacja, zapytania rozproszone i połączenia zdalne są wyłączone dla wystąpień użytkownika. Po nawiązaniu połączenia z wystąpieniem użytkownika użytkownicy nie mają żadnych specjalnych uprawnień do wystąpienia nadrzędnego SQL Server Express.  
   
 ## <a name="external-resources"></a>Zasoby zewnętrzne  
- Aby uzyskać więcej informacji na temat programu SQL Server Express zobacz następujące zasoby.  
+ Aby uzyskać więcej informacji na temat SQL Server Express, zobacz następujące zasoby.  
   
 |||  
 |-|-|  
-|[Microsoft SQL Server 2005 Express Edition Books Online](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Pełna dokumentacja dotycząca programu SQL Server 2005 Express Edition.|  
-|[Wystąpienia użytkownika dla użytkowników niebędących administratorami](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) w SQL Server — książki Online|Opisuje sposób tworzenia i wdrażania wystąpienia użytkownika.|  
-|[Wystąpienia użytkownika programu SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|W tym artykule opisano możliwości wystąpienia użytkownika w aplikacji ADO.NET. Zawiera informacje o tym, jak włączyć wystąpienia użytkownika, nawiązać połączenie z wystąpieniem użytkownika za pomocą <xref:System.Data.SqlClient.SqlConnection>, okres istnienia wystąpienia użytkownika i scenariuszy wystąpienia użytkownika.|  
+|[Microsoft SQL Server 2005 Express Edition Books Online](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Kompletna dokumentacja programu SQL Server 2005 Express Edition.|  
+|[Wystąpienia użytkownika dla użytkowników niebędących administratorami](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) w SQL Server książki online|Opisuje sposób tworzenia i wdrażania wystąpień użytkownika.|  
+|[Wystąpienia użytkownika programu SQL Server Express](sql-server-express-user-instances.md)|Opisuje możliwości wystąpienia użytkownika w aplikacji ADO.NET. Zawiera informacje na temat sposobu włączania wystąpienia użytkownika i łączenia się z wystąpieniem użytkownika przy <xref:System.Data.SqlClient.SqlConnection>użyciu scenariuszy wystąpienia użytkownika, okresu istnienia wystąpień i wystąpień użytkownika.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczenia serwera SQL](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [Wystąpienia użytkownika programu SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Zabezpieczenia serwera SQL](sql-server-security.md)
+- [Wystąpienia użytkownika programu SQL Server Express](sql-server-express-user-instances.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

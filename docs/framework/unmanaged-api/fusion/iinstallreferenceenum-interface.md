@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5781254b508887f2e76f6ca0eca6a2830ada172b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0d29b9e2a9b9022f682065816a62734d6c5b2d62
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774017"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796408"
 ---
 # <a name="iinstallreferenceenum-interface"></a>IInstallReferenceEnum — Interfejs
-Reprezentuje moduł wyliczający przywoływanych zestawach zainstalowane w globalnej pamięci podręcznej.  
+Reprezentuje moduł wyliczający dla zestawów, do których istnieją odwołania zainstalowane w globalnej pamięci podręcznej zestawów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,16 +42,16 @@ interface IInstallReferenceEnum : IUnknown {
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetNextInstallReferenceItem, metoda](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-getnextinstallreferenceitem-method.md)|Pobiera wskaźnik do następnego `IInstallReferenceItem` zawarte w tym `IInstallReferenceEnum`.|  
+|[GetNextInstallReferenceItem, metoda](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|Pobiera wskaźnik do następnego `IInstallReferenceItem` elementu zawartego w tym `IInstallReferenceEnum`elemencie.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Fusion.h  
+ **Nagłówki** Fusion. h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Interfejsy łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IInstallReferenceItem, interfejs](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
+- [Interfejsy łączenia](fusion-interfaces.md)
+- [IInstallReferenceItem, interfejs](iinstallreferenceitem-interface.md)

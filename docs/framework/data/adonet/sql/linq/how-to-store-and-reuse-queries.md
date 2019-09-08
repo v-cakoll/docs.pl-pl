@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a012bd79-1809-45e3-adea-0229532396cc
-ms.openlocfilehash: f8400b214bc9ba3a28eeec05f6171953b42bc6f5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c023f7610576c017c91fdb919322acdf9003767a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938742"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781642"
 ---
 # <a name="how-to-store-and-reuse-queries"></a>Instrukcje: Przechowywanie i ponowne użycie zapytań
 W przypadku aplikacji, która wielokrotnie wykonuje podobne zapytania strukturalnie, często można zwiększyć wydajność, kompilując zapytanie jeden raz i wykonując je kilka razy z innymi parametrami. Na przykład aplikacja może wymagać pobrania wszystkich klientów, którzy znajdują się w konkretnym mieście, gdzie miasto jest określone w czasie wykonywania przez użytkownika w formularzu. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]obsługuje w tym celu użycie *skompilowanych zapytań* .  
@@ -36,5 +36,5 @@ W przypadku aplikacji, która wielokrotnie wykonuje podobne zapytania struktural
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Data.Linq.CompiledQuery>
-- [Pojęcia dotyczące zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Wykonywanie zapytania w bazie danych](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+- [Pojęcia dotyczące zapytań](query-concepts.md)
+- [Wykonywanie zapytania w bazie danych](querying-the-database.md)

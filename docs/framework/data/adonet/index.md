@@ -2,64 +2,64 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 4105aaba92c73206e7a162415e3bc245507f40e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 24b7a11d031502b9a6b825f49d97214f68f92176
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667099"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783809"
 ---
 # <a name="adonet"></a>ADO.NET
-ADO.NET jest zestaw klas, które ujawniają usługi dostępu do danych dla programistów .NET Framework. ADO.NET zapewnia bogaty zestaw składników do tworzenia aplikacji rozproszonych, udostępnianie danych. Jest integralną częścią programu .NET Framework, zapewniając dostęp do relacyjnych, XML i dane aplikacji. ADO.NET obsługuje szereg rozwoju, w tym tworzenie frontonu bazy danych klientów i używanych przez aplikacje, narzędzi, języków lub przeglądarek internetowych obiektów firm warstwy środkowej.  
+ADO.NET to zestaw klas, które uwidaczniają usługi dostępu do danych dla programistów .NET Framework. Usługa ADO.NET oferuje bogaty zestaw składników służących do tworzenia dystrybuowanych aplikacji do udostępniania danych. Jest to integralna część .NET Framework, zapewniająca dostęp do danych relacyjnych, XML i aplikacji. Program ADO.NET obsługuje różne potrzeby programistyczne, w tym tworzenie klientów baz danych frontonu oraz obiektów branżowych warstwy środkowej używanych przez aplikacje, narzędzia, Języki lub przeglądarki internetowe.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Nowości w programie ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
- Dodano funkcje, które są nowością w programie ADO.NET.  
+ [Nowości w programie ADO.NET](whats-new.md)  
+ Wprowadza funkcje, które są nowe w ADO.NET.  
   
- [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- Wprowadzenie do projektowania i składników programu ADO.NET.  
+ [Omówienie ADO.NET](ado-net-overview.md)  
+ Zawiera wprowadzenie do projektowania i składników ADO.NET.  
   
  [Entity Framework](https://go.microsoft.com/fwlink/?LinkID=213876)  
- W tym artykule opisano, jak tworzyć aplikacje przy użyciu platformy Entity Framework.  
+ Opisuje sposób tworzenia aplikacji przy użyciu Entity Framework.  
   
- [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- Opisuje bezpiecznego kodowania, gdy za pomocą platformy ADO.NET.  
+ [Zabezpieczanie aplikacji ADO.NET](securing-ado-net-applications.md)  
+ Zawiera opis bezpiecznych praktyk kodowania w przypadku korzystania z ADO.NET.  
   
- [Mapowanie typu danych w ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- Opisuje mapowanie typu danych między typami danych .NET Framework i dostawcy danych .NET Framework.  
+ [Mapowanie typu danych w ADO.NET](data-type-mappings-in-ado-net.md)  
+ Opisuje mapowania typu danych między .NET Framework typami danych i .NET Framework dostawcami danych.  
   
- [Elementy DataSet, DataTable i DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- Opisuje sposób tworzenia i używania `DataSets`, wpisane `DataSets`, `DataTables`, i `DataViews`.  
+ [Elementy DataSet, DataTable i DataView](./dataset-datatable-dataview/index.md)  
+ Opisuje sposób tworzenia `DataSets`i używania, `DataTables`wpisywania `DataSets`, i `DataViews`.  
   
- [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)  
- Zawiera informacje dotyczące LINQ do zestawu danych, w tym przykłady programowania.  
+ [LINQ to DataSet](linq-to-dataset.md)  
+ Zawiera informacje dotyczące LINQ to DataSet, w tym przykładów programistycznych.  
   
- [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- Opisuje sposób nawiązywania połączeń ze źródłem danych oraz pobieranie i modyfikowanie danych za pomocą `Commands`, `DataReaders` i `DataAdapters`.  
+ [Pobieranie i modyfikowanie danych ADO.NET](retrieving-and-modifying-data.md)  
+ Opisuje sposób nawiązywania połączenia ze źródłem danych oraz sposobu pobierania i modyfikowania danych przy użyciu `Commands` `DataReaders` i `DataAdapters`.  
   
- [SQL Server i ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- W tym artykule opisano sposób pracy z funkcjami specyficznymi dla programu SQL Server.  
+ [SQL Server i ADO.NET](./sql/index.md)  
+ Opisuje sposób pracy z funkcjami i funkcjami, które są specyficzne dla SQL Server.  
   
- [Oracle i ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- Zawiera opis funkcji i zachowań, które są specyficzne dla .NET Framework Data Provider for Oracle.  
+ [Oracle i ADO.NET](oracle-and-adonet.md)  
+ Opisuje funkcje i zachowania, które są specyficzne dla Dostawca danych .NET Framework dla programu Oracle.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Zapytanie o języku zintegrowanym (LINQ) —C#](../../../csharp/programming-guide/concepts/linq/index.md)  
- Zawiera łącza do tematów LINQ i przykłady, za pomocą C#.  
+ [Language-Integrated Query (LINQ) —C#](../../../csharp/programming-guide/concepts/linq/index.md)  
+ Oferuje linki do tematów i przykładów LINQ przy C#użyciu programu.  
   
- [Zapytanie o języku zintegrowanym (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
- Zawiera łącza do tematów LINQ i przykłady w języku Visual Basic.  
+ [Zapytanie zintegrowane z językiem (LINQ) — Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ Oferuje linki do tematów i przykładów LINQ przy użyciu Visual Basic.  
   
- [Usługi danych WCF 4.5](../../../../docs/framework/data/wcf/index.md)  
- Opisuje sposób używania [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] do wdrażania usług danych w Internecie lub intranecie, które implementują Open Data Protocol (OData).  
+ [Usługi danych WCF 4.5](../wcf/index.md)  
+ Opisuje, jak używać [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] programu do wdrażania usług danych w sieci Web lub intranecie implementujących protokół Open Data Protocol (OData).  
   
- [Przewodnik projektowania programu .NET framework](../../development-guide.md)  
- Zawiera łącza do informacji o zadaniach tworzenia w standardzie w programie .NET Framework.  
+ [Przewodnik programowania .NET Framework](../../development-guide.md)  
+ Zawiera łącza do informacji o standardowych zadaniach programistycznych w .NET Framework.  
   
  [Przykłady i samouczki](../../../samples-and-tutorials/index.md)  
- Zawiera listę samouczki i przykłady kodu platformy .NET.
+ Zawiera listę przykładów i samouczków dotyczących platformy .NET.
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Uzyskiwanie dostępu do danych w programie Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](ado-net-overview.md)

@@ -2,20 +2,20 @@
 title: Kolekcje schematów OLE DB
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: 6c3441e86d4c5267418cf8002ba17d539c464d5c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d5718c12100ebea49a6b6fab29a3790918c6ad3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645894"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783448"
 ---
 # <a name="ole-db-schema-collections"></a>Kolekcje schematów OLE DB
-W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla programu Microsoft SQL Server, Oracle i Microsoft Jet.  
+W tej sekcji omówiono obsługę kolekcji schematów dla OLE DB dostawców dla Microsoft SQL Server, Oracle i Microsoft Jet.  
   
-## <a name="microsoft-sql-server-ole-db-provider"></a>Dostawca programu Microsoft SQL Server OLE DB  
- Sterownik firmy Microsoft SQL Server OLE DB obsługuje następujące kolekcje z określonego schematu, oprócz Typowe kolekcje schematów:  
+## <a name="microsoft-sql-server-ole-db-provider"></a>Dostawca OLE DB Microsoft SQL Server  
+ Sterownik OLE DB Microsoft SQL Server obsługuje następujące kolekcje schematów oprócz wspólnych kolekcji schematów:  
   
-- Tabele  
+- Tabelę  
   
 - Kolumny  
   
@@ -25,25 +25,25 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
   
 - Wykaz  
   
-- Indeksy  
+- Zwiększa  
   
-### <a name="tables"></a>Tabele  
+### <a name="tables"></a>Tabelę  
   
-|NazwaKolumny|DataType|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |TABLE_TYPE|String|  
 |TABLE_GUID|Guid|  
-|OPIS ELEMENTU|String|  
+|ZHARMONIZOWAN|String|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DataGodzina|  
 |DATE_MODIFIED|DataGodzina|  
   
 ### <a name="columns"></a>Kolumny  
   
-|NazwaKolumny|DataType|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -72,7 +72,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |DOMAIN_CATALOG|String|  
 |DOMAIN_SCHEMA|String|  
 |DOMAIN_NAME|String|  
-|OPIS ELEMENTU|String|  
+|ZHARMONIZOWAN|String|  
 |COLUMN_LCID|Int32|  
 |COLUMN_COMPFLAGS|Int32|  
 |COLUMN_SORTID|Int32|  
@@ -81,27 +81,27 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
   
 ### <a name="procedures"></a>Procedury  
   
-|NazwaKolumny|DataType|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|String|  
 |PROCEDURE_SCHEMA|String|  
 |PROCEDURE_NAME|String|  
 |PROCEDURE_TYPE|Int16|  
 |PROCEDURE_DEFINITION|String|  
-|OPIS ELEMENTU|String|  
+|ZHARMONIZOWAN|String|  
 |DATE_CREATED|DataGodzina|  
 |DATE_MODIFIED|DataGodzina|  
   
 ### <a name="procedureparameters"></a>ProcedureParameters  
   
-|NazwaKolumny|DataType|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|String|  
 |PROCEDURE_SCHEMA|String|  
 |PROCEDURE_NAME|String|  
 |PARAMETER_NAME|String|  
 |ORDINAL_POSITION|Int32|  
-|TYP_PARAMETRU|Int32|  
+|PARAMETER_TYPE|Int32|  
 |PARAMETER_HASDEFAULT|Boolean|  
 |PARAMETER_DEFAULT|String|  
 |IS_NULLABLE|Boolean|  
@@ -110,20 +110,20 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
-|OPIS ELEMENTU|String|  
+|ZHARMONIZOWAN|String|  
 |TYPE_NAME|String|  
 |LOCAL_TYPE_NAME|String|  
   
 ### <a name="catalog"></a>Wykaz  
   
-|NazwaKolumny|DataType|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |CATALOG_NAME|String|  
-|OPIS ELEMENTU|String|  
+|ZHARMONIZOWAN|String|  
   
-### <a name="indexes"></a>Indeksy  
+### <a name="indexes"></a>Zwiększa  
   
-|NazwaKolumny|DataType|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -134,7 +134,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |PRIMARY_KEY|Boolean|  
 |UNIQUE|Boolean|  
 |CLUSTERED|Boolean|  
-|TYP|Int32|  
+|WPROWADŹ|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULL — Wartości|Int32|  
@@ -146,15 +146,15 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |SORTOWANIE|Int16|  
-|KARDYNALNOŚĆ|Wartość dziesiętna|  
-|STRONY|Int32|  
+|KARDYNALNOŚCI|Wartość dziesiętna|  
+|PAGE|Int32|  
 |FILTER_CONDITION|String|  
-|INTEGRATED|Boolean|  
+|ZINTEGROWANE|Boolean|  
   
-## <a name="microsoft-oracle-ole-db-provider"></a>Dostawca programu Microsoft Oracle OLE DB  
- Sterownik firmy Microsoft Oracle OLE DB obsługuje następujące kolekcje z określonego schematu, oprócz Typowe kolekcje schematów:  
+## <a name="microsoft-oracle-ole-db-provider"></a>Dostawca OLE DB Microsoft Oracle  
+ Sterownik programu Microsoft Oracle OLE DB obsługuje następujące wybrane kolekcje schematów oprócz wspólnych kolekcji schematów:  
   
-- Tabele  
+- Tabelę  
   
 - Kolumny  
   
@@ -166,25 +166,25 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
   
 - Widoki  
   
-- Indeksy  
+- Zwiększa  
   
-### <a name="tables"></a>Tabele  
+### <a name="tables"></a>Tabelę  
   
-|NazwaKolumny|DataType|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |TABLE_TYPE|String|  
 |TABLE_GUID|Guid|  
-|OPIS ELEMENTU|String|  
+|ZHARMONIZOWAN|String|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DataGodzina|  
 |DATE_MODIFIED|DataGodzina|  
   
 ### <a name="columns"></a>Kolumny  
   
-|NazwaKolumny|DataType|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -213,24 +213,24 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |DOMAIN_CATALOG|String|  
 |DOMAIN_SCHEMA|String|  
 |DOMAIN_NAME|String|  
-|OPIS ELEMENTU|String|  
+|ZHARMONIZOWAN|String|  
   
 ### <a name="procedures"></a>Procedury  
   
-|NazwaKolumny|DataType|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|String|  
 |PROCEDURE_SCHEMA|String|  
 |PROCEDURE_NAME|String|  
 |PROCEDURE_TYPE|Int16|  
 |PROCEDURE_DEFINITION|String|  
-|OPIS ELEMENTU|String|  
+|ZHARMONIZOWAN|String|  
 |DATE_CREATED|DataGodzina|  
 |DATE_MODIFIED|DataGodzina|  
   
 ### <a name="procedurecolumns"></a>ProcedureColumns  
   
-|NazwaKolumny|DataType|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|String|  
 |PROCEDURE_SCHEMA|String|  
@@ -247,12 +247,12 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
-|OPIS ELEMENTU|String|  
-|PRZECIĄŻENIE|Int16|  
+|ZHARMONIZOWAN|String|  
+|WYSTĘPUJĄ|Int16|  
   
 ### <a name="views"></a>Widoki  
   
-|NazwaKolumny|DataType|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -260,13 +260,13 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |VIEW_DEFINITION|String|  
 |CHECK_OPTION|Boolean|  
 |IS_UPDATABLE|Boolean|  
-|OPIS ELEMENTU|String|  
+|ZHARMONIZOWAN|String|  
 |DATE_CREATED|DataGodzina|  
 |DATE_MODIFIED|DataGodzina|  
   
-### <a name="indexes"></a>Indeksy  
+### <a name="indexes"></a>Zwiększa  
   
-|NazwaKolumny|DataType|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -277,7 +277,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |PRIMARY_KEY|Boolean|  
 |UNIQUE|Boolean|  
 |CLUSTERED|Boolean|  
-|TYP|Int32|  
+|WPROWADŹ|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULL — Wartości|Int32|  
@@ -289,15 +289,15 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |SORTOWANIE|Int16|  
-|KARDYNALNOŚĆ|Wartość dziesiętna|  
-|STRONY|Int32|  
+|KARDYNALNOŚCI|Wartość dziesiętna|  
+|PAGE|Int32|  
 |FILTER_CONDITION|String|  
-|INTEGRATED|Boolean|  
+|ZINTEGROWANE|Boolean|  
   
-## <a name="microsoft-jet-ole-db-provider"></a>Microsoft Jet OLE DB Provider  
- Sterownik firmy Microsoft Jet OLE DB obsługuje następujące kolekcje z określonego schematu, oprócz Typowe kolekcje schematów:  
+## <a name="microsoft-jet-ole-db-provider"></a>Dostawca OLE DB Microsoft Jet  
+ Sterownik programu Microsoft Jet OLE DB obsługuje następujące kolekcje schematów oprócz wspólnych kolekcji schematów:  
   
-- Tabele  
+- Tabelę  
   
 - Kolumny  
   
@@ -305,25 +305,25 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
   
 - Widoki  
   
-- Indeksy  
+- Zwiększa  
   
-### <a name="tables"></a>Tabele  
+### <a name="tables"></a>Tabelę  
   
-|NazwaKolumny|DataType|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |TABLE_TYPE|String|  
 |TABLE_GUID|Guid|  
-|OPIS ELEMENTU|String|  
+|ZHARMONIZOWAN|String|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DataGodzina|  
 |DATE_MODIFIED|DataGodzina|  
   
 ### <a name="columns"></a>Kolumny  
   
-|NazwaKolumny|DataType|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -352,24 +352,24 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |DOMAIN_CATALOG|String|  
 |DOMAIN_SCHEMA|String|  
 |DOMAIN_NAME|String|  
-|OPIS ELEMENTU|String|  
+|ZHARMONIZOWAN|String|  
   
 ### <a name="procedures"></a>Procedury  
   
-|NazwaKolumny|DataType|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|String|  
 |PROCEDURE_SCHEMA|String|  
 |PROCEDURE_NAME|String|  
 |PROCEDURE_TYPE|Int16|  
 |PROCEDURE_DEFINITION|String|  
-|OPIS ELEMENTU|String|  
+|ZHARMONIZOWAN|String|  
 |DATE_CREATED|DataGodzina|  
 |DATE_MODIFIED|DataGodzina|  
   
 ### <a name="views"></a>Widoki  
   
-|NazwaKolumny|DataType|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -377,13 +377,13 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |VIEW_DEFINITION|String|  
 |CHECK_OPTION|Boolean|  
 |IS_UPDATABLE|Boolean|  
-|OPIS ELEMENTU|String|  
+|ZHARMONIZOWAN|String|  
 |DATE_CREATED|DataGodzina|  
 |DATE_MODIFIED|DataGodzina|  
   
-### <a name="indexes"></a>Indeksy  
+### <a name="indexes"></a>Zwiększa  
   
-|NazwaKolumny|DataType|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -394,7 +394,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |PRIMARY_KEY|Boolean|  
 |UNIQUE|Boolean|  
 |CLUSTERED|Boolean|  
-|TYP|Int32|  
+|WPROWADŹ|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULL — Wartości|Int32|  
@@ -406,11 +406,11 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |SORTOWANIE|Int16|  
-|KARDYNALNOŚĆ|Wartość dziesiętna|  
-|STRONY|Int32|  
+|KARDYNALNOŚCI|Wartość dziesiętna|  
+|PAGE|Int32|  
 |FILTER_CONDITION|String|  
-|INTEGRATED|Boolean|  
+|ZINTEGROWANE|Boolean|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](ado-net-overview.md)

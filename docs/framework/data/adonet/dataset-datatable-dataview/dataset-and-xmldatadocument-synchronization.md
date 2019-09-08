@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: 3bbe28423385cae0f09f301c03b2b1a59edf101d
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: e76e81153cb7d074fe975744c6b6041ee04be90f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205072"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785428"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>Synchronizacja elementów DataSet i XmlDataDocument
 ADO.NET <xref:System.Data.DataSet> zapewnia relacyjną reprezentację danych. W przypadku dostępu do danych hierarchicznych można użyć klas XML dostępnych w .NET Framework. W przeszłości te dwie reprezentacje danych zostały użyte osobno. Jednak .NET Framework umożliwia dostęp synchroniczny w czasie rzeczywistym zarówno do relacyjnych, jak i hierarchicznych reprezentacji danych za pomocą obiektu **DataSet** i <xref:System.Xml.XmlDataDocument> obiektu.  
@@ -19,7 +19,7 @@ ADO.NET <xref:System.Data.DataSet> zapewnia relacyjną reprezentację danych. W 
   
  Istnieje kilka sposobów synchronizacji **zestawu danych** z **XmlDataDocument**. Można:  
   
-- Wypełnij **zestaw danych** schematem (czyli strukturą relacyjną) i danymi, a następnie zsynchronizuj go z nowym **XmlDataDocument**. Zapewnia to hierarchiczny widok istniejących danych relacyjnych. Przykład:  
+- Wypełnij **zestaw danych** schematem (czyli strukturą relacyjną) i danymi, a następnie zsynchronizuj go z nowym **XmlDataDocument**. Zapewnia to hierarchiczny widok istniejących danych relacyjnych. Na przykład:  
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  
@@ -85,7 +85,7 @@ ADO.NET <xref:System.Data.DataSet> zapewnia relacyjną reprezentację danych. W 
     xmlDoc.Load("XMLDocument.xml");  
     ```  
   
- Inną zaletą synchronizowania **XmlDataDocument** z zestawem **danych** jest zachowywanie wierności dokumentu XML. Jeśli **zestaw danych** jest wypełniany z dokumentu XML przy użyciu **ReadXml**, gdy dane są zapisywane z powrotem jako dokument XML przy użyciu **WriteXml** , może się różnić od oryginalnego dokumentu XML. Jest to spowodowane tym, że **zestaw danych** nie zachowuje formatowania, takiego jak odstępy, lub informacji hierarchicznych, takich jak kolejność elementów, z dokumentu XML. **Zestaw danych** nie zawiera również elementów z dokumentu XML, który został zignorowany, ponieważ nie pasowały do schematu **zestawu danych**. Synchronizacja elementu **XmlDataDocument** z zestawem **danych** umożliwia przechowywanie formatowania i hierarchicznej struktury elementu oryginalnego dokumentu XML w **XmlDataDocument**, podczas gdy **zestaw danych** zawiera tylko dane i Informacje o schemacie odpowiednie dla **zestawu danych**.  
+ Inną zaletą synchronizowania **XmlDataDocument** z **zestawem danych** jest zachowywanie wierności dokumentu XML. Jeśli **zestaw danych** jest wypełniany z dokumentu XML przy użyciu **ReadXml**, gdy dane są zapisywane z powrotem jako dokument XML przy użyciu **WriteXml** , może się różnić od oryginalnego dokumentu XML. Jest to spowodowane tym, że **zestaw danych** nie zachowuje formatowania, takiego jak odstępy, lub informacji hierarchicznych, takich jak kolejność elementów, z dokumentu XML. **Zestaw danych** nie zawiera również elementów z dokumentu XML, który został zignorowany, ponieważ nie pasowały do schematu **zestawu danych**. Synchronizacja elementu **XmlDataDocument** z **zestawem danych** umożliwia przechowywanie formatowania i hierarchicznej struktury elementu oryginalnego dokumentu XML w **XmlDataDocument**, podczas gdy **zestaw danych** zawiera tylko dane i Informacje o schemacie odpowiednie dla **zestawu danych**.  
   
  W przypadku synchronizacji **zestawu danych** z **XmlDataDocument**wyniki mogą się różnić w zależności od tego, czy <xref:System.Data.DataRelation> obiekty są zagnieżdżone. Aby uzyskać więcej informacji, zobacz [zagnieżdżanie relacji](nesting-datarelations.md)danych.  
   
@@ -104,7 +104,7 @@ ADO.NET <xref:System.Data.DataSet> zapewnia relacyjną reprezentację danych. W 
  Opisuje, jak **zestaw** danych WSPÓŁDZIAŁA z XML jako źródło danych, w tym ładowanie i utrwalanie zawartości **zestawu** danych jako danych XML.  
   
  [Zagnieżdżanie elementów DataRelation](nesting-datarelations.md)  
- Omawia znaczenie zagnieżdżonych obiektów podczas reprezentowania zawartości **zestawu** danych jako danych XML i opisuje sposób tworzenia tych relacji.  
+ Omawia **znaczenie zagnieżdżonych** obiektów podczas reprezentowania zawartości **zestawu** danych jako danych XML i opisuje sposób tworzenia tych relacji.  
   
  [Elementy DataSet, DataTable i DataView](index.md)  
  Opisuje **zestaw danych** i sposób korzystania z niego do zarządzania danymi aplikacji oraz do współdziałania ze źródłami danych, w tym relacyjnych baz danych i XML.  
@@ -114,4 +114,4 @@ ADO.NET <xref:System.Data.DataSet> zapewnia relacyjną reprezentację danych. W 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

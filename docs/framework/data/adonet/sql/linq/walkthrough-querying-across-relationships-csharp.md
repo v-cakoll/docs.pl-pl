@@ -2,12 +2,12 @@
 title: 'Przewodnik: Wykonywanie zapytań w relacjach (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: a9e0583b14c07df2b1de23ba37fa88552a4c5c7c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ebf96bc575ef68e1190c5b9be7111902c0f69fef
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946948"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780987"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Przewodnik: Wykonywanie zapytań w relacjach (C#)
 W tym instruktażu przedstawiono sposób [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] użycia *skojarzeń* do reprezentowania relacji FOREIGN KEY w bazie danych.  
@@ -17,7 +17,7 @@ W tym instruktażu przedstawiono sposób [!INCLUDE[vbtecdlinq](../../../../../..
  Ten Instruktaż został zapisany przy użyciu ustawień C# deweloperskich.  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- Należy wykonać [następujące instrukcje: Prosty model obiektu i zapytanie (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md). Ten przewodnik jest oparty na tym instruktażu, w tym o obecności pliku northwnd. mdf w c:\linqtest5.  
+ Należy wykonać [następujące instrukcje: Prosty model obiektu i zapytanie (C#)](walkthrough-simple-object-model-and-query-csharp.md). Ten przewodnik jest oparty na tym instruktażu, w tym o obecności pliku northwnd. mdf w c:\linqtest5.  
   
 ## <a name="overview"></a>Omówienie  
  Ten przewodnik składa się z trzech głównych zadań:  
@@ -47,7 +47,7 @@ W tym instruktażu przedstawiono sposób [!INCLUDE[vbtecdlinq](../../../../../..
      [!code-csharp[DLinqWalk2CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#2)]  
   
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Tworzenie i uruchamianie zapytania w ramach relacji zamówienia klienta  
- Teraz możesz uzyskiwać dostęp `Order` do obiektów bezpośrednio `Customer` z obiektów lub w odwrotnej kolejności. Nie jest potrzebne jawne dołączenie między klientami i zamówieniami.  
+ Teraz możesz uzyskiwać dostęp `Order` do obiektów bezpośrednio `Customer` z obiektów lub w odwrotnej kolejności. Nie jest potrzebne jawne *dołączenie* między klientami i zamówieniami.  
   
 ### <a name="to-access-order-objects-by-using-customer-objects"></a>Aby uzyskać dostęp do obiektów zamówienia przy użyciu obiektów klienta  
   
@@ -86,8 +86,8 @@ W tym instruktażu przedstawiono sposób [!INCLUDE[vbtecdlinq](../../../../../..
 4. Naciśnij klawisz ENTER w oknie konsoli, aby zatrzymać debugowanie.  
   
 ## <a name="next-steps"></a>Następne kroki  
- Następny Przewodnik ([Przewodnik: Manipulowanie danymi (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) demonstruje sposób manipulowania danymi. Ten Instruktaż nie wymaga zapisania dwóch instruktaży w tej serii, które zostały już wykonane.  
+ Następny Przewodnik ([Przewodnik: Manipulowanie danymi (C#)](walkthrough-manipulating-data-csharp.md)) demonstruje sposób manipulowania danymi. Ten Instruktaż nie wymaga zapisania dwóch instruktaży w tej serii, które zostały już wykonane.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Nauka przez przewodniki](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [Nauka przez przewodniki](learning-by-walkthroughs.md)

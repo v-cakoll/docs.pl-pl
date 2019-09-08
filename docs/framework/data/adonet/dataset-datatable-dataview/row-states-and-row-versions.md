@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: 24d0d44f5964708164f89b0d9fa6c4c1aac7da0b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 70596d6acb62fa01092e5e55dd3b6c84eb162b5d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204503"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784331"
 ---
 # <a name="row-states-and-row-versions"></a>Stany wiersza i wersje wiersza
 ADO.NET zarządza wierszami w tabelach przy użyciu stanów i wersji wiersza. Stan wiersza wskazuje stan wiersza; wersje wierszy obsługują wartości przechowywane w wierszu w miarę ich modyfikacji, w tym bieżące, oryginalne i domyślne wartości. Na przykład po wprowadzeniu modyfikacji do kolumny w wierszu wiersz będzie miał stan `Modified`wiersza i dwie wersje wierszy: `Current`, które zawierają wartości bieżącego wiersza, i `Original`, które zawierają wartości wierszy przed kolumną Modyfikacja.  
@@ -99,4 +99,4 @@ foreach (DataRow delRow in delRows)
 - [Operowanie danymi w elemencie DataTable](manipulating-data-in-a-datatable.md)
 - [Elementy DataSet, DataTable i DataView](index.md)
 - [Elementy DataAdapter i DataReaders](../dataadapters-and-datareaders.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

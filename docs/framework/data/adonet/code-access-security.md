@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: b288ffe6346ac8260756115b50c253c42b596f96
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 080432670c68623433a6b4e61adba77cf6fa5ec7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948263"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786873"
 ---
 # <a name="code-access-security-and-adonet"></a>Zabezpieczenia dostępu kodu i ADO.NET
 .NET Framework oferuje zabezpieczenia oparte na rolach, a także zabezpieczenia dostępu kodu (CAS), które są implementowane przy użyciu wspólnej infrastruktury dostarczanej przez środowisko uruchomieniowe języka wspólnego (CLR). W świecie kodu niezarządzanego większość aplikacji jest wykonywanych z uprawnieniami użytkownika lub podmiotu zabezpieczeń. W związku z tym systemy komputerowe mogą być uszkodzone, a dane prywatne zostały naruszone, gdy złośliwe lub błędne oprogramowanie jest uruchamiane przez użytkownika z podniesionymi uprawnieniami.  
@@ -47,15 +47,15 @@ ms.locfileid: "69948263"
   
  Środowisko CLR używa uprawnień do zaimplementowania mechanizmu do wymuszania ograniczeń w kodzie zarządzanym. Uprawnienia zabezpieczeń oparte na rolach zapewniają mechanizm wykrywania, czy użytkownik (lub agent działający w imieniu użytkownika) ma określoną tożsamość lub jest członkiem określonej roli. Aby uzyskać więcej informacji, zobacz [uprawnienia zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5ba4k1c5(v=vs.100)).  
   
- W zależności od typu kompilowanej aplikacji należy również rozważyć zaimplementowanie uprawnień opartych na rolach w bazie danych. Aby uzyskać więcej informacji na temat zabezpieczeń opartych na rolach w SQL Server, zobacz [SQL Server Security](../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
+ W zależności od typu kompilowanej aplikacji należy również rozważyć zaimplementowanie uprawnień opartych na rolach w bazie danych. Aby uzyskać więcej informacji na temat zabezpieczeń opartych na rolach w SQL Server, zobacz [SQL Server Security](./sql/sql-server-security.md).  
   
 ## <a name="assemblies"></a>Zestawy  
- Zestawy stanowią podstawową jednostkę wdrożenia, kontrolę wersji, ponowne użycie, zakres aktywacji i uprawnienia zabezpieczeń dla aplikacji .NET Framework. Zestaw zawiera kolekcję typów i zasobów, które są tworzone w celu współdziałania i tworzą logiczną jednostkę funkcjonalności. W środowisku CLR typ nie istnieje poza kontekstem zestawu. Aby uzyskać więcej informacji na temat tworzenia i wdrażania zestawów, zobacz [programowanie z zestawami](../../../../docs/framework/app-domains/programming-with-assemblies.md).  
+ Zestawy stanowią podstawową jednostkę wdrożenia, kontrolę wersji, ponowne użycie, zakres aktywacji i uprawnienia zabezpieczeń dla aplikacji .NET Framework. Zestaw zawiera kolekcję typów i zasobów, które są tworzone w celu współdziałania i tworzą logiczną jednostkę funkcjonalności. W środowisku CLR typ nie istnieje poza kontekstem zestawu. Aby uzyskać więcej informacji na temat tworzenia i wdrażania zestawów, zobacz [programowanie z zestawami](../../app-domains/programming-with-assemblies.md).  
   
 ### <a name="strong-naming-assemblies"></a>Zestawy o silnych nazwach  
  Silna nazwa lub podpis cyfrowy składa się z tożsamości zestawu, która obejmuje jego prostą nazwę tekstu, numer wersji i informacje o kulturze (jeśli zostały podane) oraz klucz publiczny i podpis cyfrowy. Podpis cyfrowy jest generowany na podstawie pliku zestawu przy użyciu odpowiedniego klucza prywatnego. Plik zestawu zawiera manifest zestawu, który zawiera nazwy i skróty wszystkich plików, które tworzą zestaw.  
   
- Silne nazewnictwo zestawu daje aplikacji lub składnikowi unikatową tożsamość, która może być używana przez inne oprogramowanie do jawnego odwoływania się do niego. Zestawy chroniące silne nazewnictwo przed fałszowaniem przez zestaw, który zawiera kod nieszkodliwy. Silne nazewnictwo zapewnia także spójność wersji między różnymi wersjami składnika. Należy wdrożyć zestawy o silnych nazwach, które zostaną wdrożone w globalnej pamięci podręcznej zestawów (GAC). Aby uzyskać więcej informacji, zobacz [Tworzenie i używanie zestawów o silnej nazwie](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
+ Silne nazewnictwo zestawu daje aplikacji lub składnikowi unikatową tożsamość, która może być używana przez inne oprogramowanie do jawnego odwoływania się do niego. Zestawy chroniące silne nazewnictwo przed fałszowaniem przez zestaw, który zawiera kod nieszkodliwy. Silne nazewnictwo zapewnia także spójność wersji między różnymi wersjami składnika. Należy wdrożyć zestawy o silnych nazwach, które zostaną wdrożone w globalnej pamięci podręcznej zestawów (GAC). Aby uzyskać więcej informacji, zobacz [Tworzenie i używanie zestawów o silnej nazwie](../../app-domains/create-and-use-strong-named-assemblies.md).  
   
 ## <a name="partial-trust-in-adonet-20"></a>Częściowe zaufanie w ADO.NET 2,0  
  W ADO.NET 2,0 Dostawca danych .NET Framework, SQL Server .NET Framework Dostawca danych dla OLE DB, .NET Framework dostawca danych dla ODBC, a .NET Framework dostawca danych dla programu Oracle można teraz uruchamiać w częściowo zaufanych środowiskach. W poprzednich wersjach .NET Framework były obsługiwane tylko <xref:System.Data.SqlClient> w mniej niż aplikacje w pełni zaufane.  
@@ -78,7 +78,7 @@ ms.locfileid: "69948263"
 |`Unrestricted`|Wskazuje, czy nieograniczone uprawnienia do zasobu są zadeklarowane. Dziedziczone z <xref:System.Security.Permissions.SecurityAttribute>.|  
   
 #### <a name="connectionstring-syntax"></a>Składnia ConnectionString  
- Poniższy przykład pokazuje, `connectionStrings` jak używać elementu pliku konfiguracji, aby zezwalać na użycie tylko określonych parametrów połączenia. Zobacz [parametry połączeń](../../../../docs/framework/data/adonet/connection-strings.md) , aby uzyskać więcej informacji na temat przechowywania i pobierania parametrów połączenia z plików konfiguracji.  
+ Poniższy przykład pokazuje, `connectionStrings` jak używać elementu pliku konfiguracji, aby zezwalać na użycie tylko określonych parametrów połączenia. Zobacz [parametry połączeń](connection-strings.md) , aby uzyskać więcej informacji na temat przechowywania i pobierania parametrów połączenia z plików konfiguracji.  
   
 ```xml  
 <connectionStrings>  
@@ -136,7 +136,7 @@ ms.locfileid: "69948263"
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>Włączanie częściowej relacji zaufania z niestandardowym zestawem uprawnień  
- Aby umożliwić korzystanie z <xref:System.Data.SqlClient> uprawnień dla określonej strefy, administrator systemu musi utworzyć niestandardowy zestaw uprawnień i ustawić go jako uprawnienie ustawione dla określonej strefy. Domyślne zestawy uprawnień, takie jak `LocalIntranet`, nie mogą być modyfikowane. <xref:System.Data.SqlClient> Na przykład aby uwzględnić uprawnienia dla kodu, który <xref:System.Security.Policy.Zone> ma `LocalIntranet`, administrator systemu może skopiować zestaw uprawnień dla `LocalIntranet`, zmienić nazwę na "CustomLocalIntranet", dodać <xref:System.Data.SqlClient> uprawnienia, zaimportować uprawnienie CustomLocalIntranet ustawia się za pomocą [Caspol. exe (Narzędzie zasad zabezpieczeń dostępu kodu)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)i ustawia zestaw `LocalIntranet_Zone` uprawnień do CustomLocalIntranet.  
+ Aby umożliwić korzystanie z <xref:System.Data.SqlClient> uprawnień dla określonej strefy, administrator systemu musi utworzyć niestandardowy zestaw uprawnień i ustawić go jako uprawnienie ustawione dla określonej strefy. Domyślne zestawy uprawnień, takie jak `LocalIntranet`, nie mogą być modyfikowane. <xref:System.Data.SqlClient> Na przykład aby uwzględnić uprawnienia dla kodu, który <xref:System.Security.Policy.Zone> ma `LocalIntranet`, administrator systemu może skopiować zestaw uprawnień dla `LocalIntranet`, zmienić nazwę na "CustomLocalIntranet", dodać <xref:System.Data.SqlClient> uprawnienia, zaimportować uprawnienie CustomLocalIntranet ustawia się za pomocą [Caspol. exe (Narzędzie zasad zabezpieczeń dostępu kodu)](../../tools/caspol-exe-code-access-security-policy-tool.md)i ustawia zestaw `LocalIntranet_Zone` uprawnień do CustomLocalIntranet.  
   
 ### <a name="sample-permission-set"></a>Przykładowy zestaw uprawnień  
  Poniżej znajduje się przykładowy zestaw uprawnień dla Dostawca danych .NET Framework w przypadku SQL Server w częściowo zaufanym scenariuszu. Aby uzyskać informacje na temat tworzenia niestandardowych zestawów uprawnień, zobacz [konfigurowanie zestawów uprawnień przy użyciu Caspol. exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  
@@ -190,13 +190,13 @@ Failed, as expected: Request failed.
 ```  
   
 ## <a name="interoperability-with-unmanaged-code"></a>Współdziałanie z kodem niezarządzanym  
- Kod, który jest uruchamiany poza środowiskiem CLR, jest nazywany kodem niezarządzanym. Z tego względu mechanizmy zabezpieczeń, takie jak urzędy certyfikacji, nie mogą być stosowane do kodu niezarządzanego. Składniki COM, interfejsy ActiveX i funkcje interfejsu API systemu Windows to przykłady kodu niezarządzanego. Specjalne kwestie dotyczące zabezpieczeń są stosowane podczas wykonywania kodu niezarządzanego, aby nie zagrażać ogólnym zabezpieczeniom aplikacji. Aby uzyskać więcej informacji, zobacz Współdziałanie [z kodem](../../../../docs/framework/interop/index.md)niezarządzanym.  
+ Kod, który jest uruchamiany poza środowiskiem CLR, jest nazywany kodem niezarządzanym. Z tego względu mechanizmy zabezpieczeń, takie jak urzędy certyfikacji, nie mogą być stosowane do kodu niezarządzanego. Składniki COM, interfejsy ActiveX i funkcje interfejsu API systemu Windows to przykłady kodu niezarządzanego. Specjalne kwestie dotyczące zabezpieczeń są stosowane podczas wykonywania kodu niezarządzanego, aby nie zagrażać ogólnym zabezpieczeniom aplikacji. Aby uzyskać więcej informacji, zobacz [współdziałanie z kodem niezarządzanym](../../interop/index.md).  
   
  .NET Framework obsługuje również zgodność z poprzednimi wersjami z istniejącymi składnikami COM przez zapewnienie dostępu za pomocą międzyoperacyjności modelu COM. Składniki COM można dołączać do aplikacji .NET Framework przy użyciu narzędzi międzyoperacyjnych modelu COM do importowania odpowiednich typów COM. Po zaimportowaniu typy COM są gotowe do użycia. Współdziałanie modelu COM umożliwia również klientom COM dostęp do kodu zarządzanego przez wyeksportowanie metadanych zestawu do biblioteki typów i zarejestrowanie składnika zarządzanego jako składnika modelu COM. Aby uzyskać więcej informacji, zobacz [Zaawansowane współdziałanie com](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Zabezpieczanie aplikacji ADO.NET](securing-ado-net-applications.md)
 - [Zabezpieczenia w kodzie natywnym i .NET Framework](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [Zabezpieczenia oparte na rolach](../../../standard/security/role-based-security.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](ado-net-overview.md)

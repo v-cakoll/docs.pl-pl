@@ -2,21 +2,21 @@
 title: Mapowanie niejawnych relacji między zagnieżdżonymi elementami schematu
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: e9ea85db98a577991e06e0239a0738a2ca5bada6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f4b1b9e45f0cda976719b991c336463e0af05f12
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203482"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784435"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>Mapowanie niejawnych relacji między zagnieżdżonymi elementami schematu
 Schemat języka definicji schematu XML (XSD) może mieć złożone typy zagnieżdżone wewnątrz siebie. W takim przypadku proces mapowania stosuje domyślne mapowanie i tworzy następujące elementy w <xref:System.Data.DataSet>:  
   
 - Jedna tabela dla każdego z typów złożonych (nadrzędnych i podrzędnych).  
   
-- Jeśli w obiekcie nadrzędnym nie istnieje ograniczenie UNIQUE, jedna dodatkowa kolumna klucza podstawowego dla definicji tabelio nazwie TableName _Id, gdzie *TableName* jest nazwą tabeli nadrzędnej.  
+- Jeśli w obiekcie nadrzędnym nie istnieje ograniczenie UNIQUE, jedna dodatkowa kolumna klucza podstawowego dla definicji tabeli o nazwie *TableName*_Id, gdzie *TableName* jest nazwą tabeli nadrzędnej.  
   
-- Ograniczenie PRIMARY KEY w tabeli nadrzędnej identyfikujące dodatkową kolumnę jako klucz podstawowy (przez ustawienie właściwości IsPrimaryKey na **wartość true**). Ograniczenie ma nazwę Constraint\# , gdzie \# ma wartość 1, 2, 3 i tak dalej. Na przykład domyślna nazwa pierwszego ograniczenia to Constraint1.  
+- Ograniczenie PRIMARY KEY w tabeli nadrzędnej identyfikujące dodatkową kolumnę jako klucz podstawowy (przez ustawienie właściwości **IsPrimaryKey** na **wartość true**). Ograniczenie ma nazwę Constraint\# , gdzie \# ma wartość 1, 2, 3 i tak dalej. Na przykład domyślna nazwa pierwszego ograniczenia to Constraint1.  
   
 - Ograniczenie klucza obcego w tabeli podrzędnej identyfikującej dodatkową kolumnę jako klucz obcy odwołujący się do klucza podstawowego tabeli nadrzędnej. Ograniczenie ma nazwę *ParentTable_ChildTable* , gdzie *element parentname* jest nazwą tabeli nadrzędnej i *elementem podrzędnym* jest nazwa tabeli podrzędnej.  
   
@@ -63,7 +63,7 @@ Schemat języka definicji schematu XML (XSD) może mieć złożone typy zagnież
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
-- Unikatowe ograniczenie tabeli **Order** . Należy pamiętać, że właściwość IsPrimaryKey jest ustawiona na **wartość true**.  
+- Unikatowe ograniczenie tabeli **Order** . Należy pamiętać, że właściwość **IsPrimaryKey** jest ustawiona na **wartość true**.  
   
     ```  
     ConstraintName: Constraint1  
@@ -101,4 +101,4 @@ Schemat języka definicji schematu XML (XSD) może mieć złożone typy zagnież
 
 - [Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
 - [Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

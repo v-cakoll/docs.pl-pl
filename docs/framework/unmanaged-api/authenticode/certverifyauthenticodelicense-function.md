@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 00118de7-33c6-41c4-8e1f-5d5e35e0da83
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8736da6c8db876b3dadb3b906a586633be176cf6
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 3d8ab96c758b946684af78bfa21822fdaf96530a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038322"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786971"
 ---
 # <a name="certverifyauthenticodelicense-function"></a>Funkcja CertVerifyAuthenticodeLicense
 Weryfikuje ważność licencji XrML Authenticode.  
@@ -53,20 +53,20 @@ HRESULT CertVerifyAuthenticodeLicense (
 - AXL_TRUST_MICROSOFT_ROOT_ONLY  
   
  `pSignerInfo`  
- określoną , Aby uzyskać informacje dotyczące osoby podpisującej. Jeśli licencja nie została podpisana `dwError` , jest ustawiona na TRUST_E_NOSIGNATURE. Jest on odpowiedzialny za zwolnienie zasobów przy użyciu funkcji [CertFreeAuthenticodeSignerInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md) po użyciu.  
+ określoną , Aby uzyskać informacje dotyczące osoby podpisującej. Jeśli licencja nie została podpisana `dwError` , jest ustawiona na TRUST_E_NOSIGNATURE. Jest on odpowiedzialny za zwolnienie zasobów przy użyciu funkcji [CertFreeAuthenticodeSignerInfo](certfreeauthenticodesignerinfo-function.md) po użyciu.  
   
- Zobacz [strukturę AXL_AUTHENTICODE_SIGNER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md).  
+ Zobacz [strukturę AXL_AUTHENTICODE_SIGNER_INFO](axl-authenticode-signer-info-structure.md).  
   
  `pTimestamperInfo`  
- określoną W celu uzyskania informacji o sygnaturze czasowej, jeśli są dostępne. Jeśli licencja nie była sygnaturą czasową, `dwError` jest ustawiona na TRUST_E_NOSIGNATURE. Jest on odpowiedzialny za zwolnienie zasobów przy użyciu funkcji [CertFreeAuthenticodeTimestamperInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodetimestamperinfo-function.md) po użyciu.  
+ określoną W celu uzyskania informacji o sygnaturze czasowej, jeśli są dostępne. Jeśli licencja nie była sygnaturą czasową, `dwError` jest ustawiona na TRUST_E_NOSIGNATURE. Jest on odpowiedzialny za zwolnienie zasobów przy użyciu funkcji [CertFreeAuthenticodeTimestamperInfo](certfreeauthenticodetimestamperinfo-function.md) po użyciu.  
   
- Zobacz [strukturę AXL_AUTHENTICODE_TIMESTAMPER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md).  
+ Zobacz [strukturę AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md).  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Zwraca `S_OK` w przypadku powodzenia. W przeciwnym razie zwraca kod błędu.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
-- [GetHashFromHandle, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)
-- [ICLRStrongName, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Authenticode](index.md)
+- [GetHashFromHandle, metoda](../hosting/iclrstrongname-gethashfromhandle-method.md)
+- [ICLRStrongName, interfejs](../hosting/iclrstrongname-interface.md)

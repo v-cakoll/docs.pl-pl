@@ -1,26 +1,26 @@
 ---
-title: 'Środki zaradcze: X509CertificateClaimSet.FindClaims Method'
+title: Środki zaradcze X509CertificateClaimSet.FindClaims Method
 ms.date: 03/30/2017
 ms.assetid: ee356e3b-f932-48f5-875a-5e42340bee63
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7fb1eb0c502584caac11ca3dde6e7e646b29cfe
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: ffc03e6c88a2aabb967587d8b1ee7d0b784b4e7d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251092"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70778933"
 ---
-# <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>Środki zaradcze: X509CertificateClaimSet.FindClaims Method
-Począwszy od aplikacji przeznaczonych dla platformy .NET Framework 4.6.1, <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> metoda będzie próbował dopasować `claimType` argument w przypadku wszystkich wpisów DNS w jego polu sieci SAN.  
+# <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>Środki zaradcze X509CertificateClaimSet.FindClaims Method
+Począwszy od aplikacji, które są przeznaczone dla .NET Framework 4.6.1 <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> , Metoda podejmie próbę `claimType` dopasowania argumentu ze wszystkimi wpisami DNS w jego polu sieci SAN.  
   
 ## <a name="impact"></a>Wpływ  
- Ta zmiana dotyczy tylko aplikacji, przeznaczonych dla wersji programu .NET Framework, począwszy od programu .NET Framework 4.6.1.  
+ Ta zmiana ma wpływ tylko na aplikacje, które są przeznaczone dla wersji .NET Framework począwszy od .NET Framework 4.6.1.  
   
- W przypadku aplikacji przeznaczonych dla poprzednich wersji programu .NET Framework <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> metoda próbuje dopasować `claimType` argumentu tylko ostatni wpis DNS.  
+ W przypadku aplikacji przeznaczonych dla poprzednich wersji .NET Framework <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> Metoda próbuje `claimType` dopasować argument tylko do ostatniego wpisu DNS.  
   
 ## <a name="mitigation"></a>Ograniczenie  
- Jeśli ta zmiana jest niepożądany, aplikacji przeznaczonych dla wersji programu .NET Framework, począwszy od programu .NET Framework 4.6.1 można zrezygnować z go, dodając następujące ustawienie konfiguracji, aby [ \<runtime >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sekcji plik konfiguracji aplikacji:  
+ Jeśli ta zmiana jest niepożądana, aplikacje przeznaczone dla wersji .NET Framework począwszy od .NET Framework 4.6.1 mogą zrezygnować z niego, dodając następujące ustawienia konfiguracji do [ \<sekcji > środowiska uruchomieniowego](../configure-apps/file-schema/runtime/runtime-element.md) w pliku konfiguracji aplikacji :  
   
 ```xml  
 <runtime>  
@@ -28,7 +28,7 @@ Począwszy od aplikacji przeznaczonych dla platformy .NET Framework 4.6.1, <xref
 </runtime>  
 ```  
   
- Ponadto aplikacje poprzedniej wersji programu .NET Framework, które są uruchomione w .NET Framework 4.6.1 i nowszych wersjach zgodzić się na to zachowanie, dodając następujące ustawienie konfiguracji, aby [ \<runtime >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sekcję pliku konfiguracji aplikacji:  
+ Ponadto aplikacje, które są przeznaczone dla poprzednich wersji .NET Framework ale działają w ramach .NET Framework 4.6.1 i nowszych wersji, mogą zrezygnować z tego zachowania, dodając następujące ustawienia konfiguracji do [ \<sekcji > środowiska uruchomieniowego](../configure-apps/file-schema/runtime/runtime-element.md) plik konfiguracji aplikacji:  
   
 ```xml  
 <runtime>  
@@ -38,4 +38,4 @@ Począwszy od aplikacji przeznaczonych dla platformy .NET Framework 4.6.1, <xref
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zmiany retargetingu](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)
+- [Zmiany retargetingu](retargeting-changes-in-the-net-framework-4-6-1.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: a29efbc1b4d886afe4329df011b522e4d589e2ee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: afafe5d1eaddaef3b9f0069908b365e40ea4ed29
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949493"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785684"
 ---
 # <a name="connection-string-builders"></a>Konstruktorzy parametrów połączeń
 We wcześniejszych wersjach programu ADO.NET sprawdzanie czasu kompilacji parametrów połączenia z połączonymi wartościami ciągu nie zakończyło się, więc w czasie wykonywania, nieprawidłowe słowo kluczowe wygenerowało <xref:System.ArgumentException>. Każdy dostawca danych .NET Framework obsługuje inną składnię dla słów kluczowych parametrów połączenia, która sprawia, że prawidłowe parametry połączenia są trudne, jeśli zostały wykonane ręcznie. Aby rozwiązać ten problem, ADO.NET 2,0 wprowadził nowe konstruktory parametrów połączenia dla każdego dostawcy danych .NET Framework. Każdy dostawca danych zawiera klasę konstruktora parametrów połączenia o jednoznacznie określonym typie, która <xref:System.Data.Common.DbConnectionStringBuilder>dziedziczy z. Poniższa tabela zawiera listę dostawców danych .NET Framework i skojarzonych z nimi klas konstruktorów parametrów połączenia.  
@@ -59,7 +59,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
  Jeden z przeciążonych konstruktorów dla konstruktora parametrów połączenia przyjmuje <xref:System.String> jako argument, który umożliwia podawanie częściowych parametrów połączenia, które można następnie ukończyć z danych wejściowych użytkownika. Częściowe parametry połączenia mogą być przechowywane w pliku konfiguracji i pobierane w czasie wykonywania.  
   
 > [!NOTE]
-> Przestrzeń nazw umożliwia programistyczny dostęp do plików konfiguracji, które <xref:System.Web.Configuration.WebConfigurationManager> używają aplikacji <xref:System.Configuration.ConfigurationManager> dla sieci Web i aplikacji dla systemu Windows. <xref:System.Configuration> Aby uzyskać więcej informacji na temat pracy z parametrami połączenia i plikami konfiguracji, zobacz [parametry połączeń i pliki konfiguracji](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
+> Przestrzeń nazw umożliwia programistyczny dostęp do plików konfiguracji, które <xref:System.Web.Configuration.WebConfigurationManager> używają aplikacji <xref:System.Configuration.ConfigurationManager> dla sieci Web i aplikacji dla systemu Windows. <xref:System.Configuration> Aby uzyskać więcej informacji na temat pracy z parametrami połączenia i plikami konfiguracji, zobacz [parametry połączeń i pliki konfiguracji](connection-strings-and-configuration-files.md).  
   
 ### <a name="example"></a>Przykład  
  W tym przykładzie <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A>pokazano, jak pobrać częściowe parametry połączenia z pliku konfiguracji i zakończyć je przez ustawienie właściwości, <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserID%2A> <xref:System.Data.SqlClient.SqlConnectionStringBuilder>, <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Password%2A> i. Plik konfiguracji jest definiowany w następujący sposób.  
@@ -81,6 +81,6 @@ initial catalog="AdventureWorks;NewValue=Bad"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Parametry połączeń](../../../../docs/framework/data/adonet/connection-strings.md)
-- [Bezpieczeństwo danych i poufności informacji](../../../../docs/framework/data/adonet/privacy-and-data-security.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Parametry połączeń](connection-strings.md)
+- [Bezpieczeństwo danych i poufności informacji](privacy-and-data-security.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

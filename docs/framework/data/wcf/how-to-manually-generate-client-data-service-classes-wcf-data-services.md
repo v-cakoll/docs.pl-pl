@@ -5,17 +5,17 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
-ms.openlocfilehash: 2a827e4909b18d9cca74fc20a2d83d2730ea0cd9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 106f1cedb33c0c1b333df0b9f2b8c2a70d458a0d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952284"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790425"
 ---
 # <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>Instrukcje: Generuj ręcznie klasy usługi danych klienta (Usługi danych programu WCF)
-Usługi danych programu WCF integruje się z programem Visual Studio, aby umożliwić automatyczne generowanie klas usługi danych klienta w przypadku używania okna dialogowego **Dodaj odwołanie do usługi** do dodawania odwołania do usługi danych w projekcie programu Visual Studio. Aby uzyskać więcej informacji, zobacz [jak: Dodaj odwołanie](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)do usługi danych. Można również ręcznie generować te same klasy usługi danych klienta przy użyciu narzędzia `DataSvcUtil.exe`do generowania kodu. To narzędzie, które jest dołączone do Usługi danych programu WCF, generuje klasy .NET Framework z definicji usługi danych. Można go również użyć do wygenerowania klas usługi danych z pliku modelu koncepcyjnego (. csdl) i pliku edmx, który reprezentuje model Entity Framework w projekcie programu Visual Studio.
+Usługi danych programu WCF integruje się z programem Visual Studio, aby umożliwić automatyczne generowanie klas usługi danych klienta w przypadku używania okna dialogowego **Dodaj odwołanie do usługi** do dodawania odwołania do usługi danych w projekcie programu Visual Studio. Aby uzyskać więcej informacji, zobacz [jak: Dodaj odwołanie](how-to-add-a-data-service-reference-wcf-data-services.md)do usługi danych. Można również ręcznie generować te same klasy usługi danych klienta przy użyciu narzędzia `DataSvcUtil.exe`do generowania kodu. To narzędzie, które jest dołączone do Usługi danych programu WCF, generuje klasy .NET Framework z definicji usługi danych. Można go również użyć do wygenerowania klas usługi danych z pliku modelu koncepcyjnego (. csdl) i pliku edmx, który reprezentuje model Entity Framework w projekcie programu Visual Studio.
 
- W przykładzie w tym temacie opisano tworzenie klas usługi danych klienta na podstawie przykładowej usługi danych Northwind. Ta usługa jest tworzona po zakończeniu [usługi danych programu WCF przewodnika Szybki Start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Niektóre przykłady w tym temacie wymagają pliku modelu koncepcyjnego dla modelu Northwind. Aby uzyskać więcej informacji, zobacz [jak: Użyj programu EdmGen. exe, aby wygenerować model i pliki](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)mapowania. Niektóre przykłady w tym temacie wymagają pliku. edmx dla modelu Northwind. Aby uzyskać więcej informacji, zobacz [plik. edmx — Omówienie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).
+ W przykładzie w tym temacie opisano tworzenie klas usługi danych klienta na podstawie przykładowej usługi danych Northwind. Ta usługa jest tworzona po zakończeniu [usługi danych programu WCF przewodnika Szybki Start](quickstart-wcf-data-services.md). Niektóre przykłady w tym temacie wymagają pliku modelu koncepcyjnego dla modelu Northwind. Aby uzyskać więcej informacji, zobacz [jak: Użyj programu EdmGen. exe, aby wygenerować model i pliki](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)mapowania. Niektóre przykłady w tym temacie wymagają pliku. edmx dla modelu Northwind. Aby uzyskać więcej informacji, zobacz [plik. edmx — Omówienie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).
 
 ### <a name="to-generate-c-classes-that-support-data-binding"></a>Aby wygenerować C# klasy obsługujące powiązanie danych
 
@@ -95,6 +95,6 @@ Usługi danych programu WCF integruje się z programem Visual Studio, aby umożl
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Generowanie biblioteki klienta usługi danych](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)
-- [Instrukcje: Dodawanie odwołania do usługi danych](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)
-- [Narzędzie klienta usługi danych WCF (DataSvcUtil.exe)](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md)
+- [Generowanie biblioteki klienta usługi danych](generating-the-data-service-client-library-wcf-data-services.md)
+- [Instrukcje: Dodawanie odwołania do usługi danych](how-to-add-a-data-service-reference-wcf-data-services.md)
+- [Narzędzie klienta usługi danych WCF (DataSvcUtil.exe)](wcf-data-service-client-utility-datasvcutil-exe.md)

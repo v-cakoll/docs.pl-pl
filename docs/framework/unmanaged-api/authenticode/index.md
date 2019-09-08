@@ -4,44 +4,44 @@ ms.date: 03/30/2017
 ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 408219307015d5c39cb581b3884ed9810f4c0566
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d2c0163d03a19a7bc00ae705fd633ef4f0880082
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941639"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776559"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode (niezarządzana dokumentacja interfejsu API)
-Obsługuje moduł tworzenia i weryfikacji licencji Authenticode XrML.  
+Obsługuje moduł tworzenia i weryfikacji licencji XrML Authenticode.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Funkcja _AxlGetIssuerPublicKeyHash](../../../../docs/framework/unmanaged-api/authenticode/axlgetissuerpublickeyhash-function.md)  
- Pobiera Skrót SHA-1 klucza publicznego skojarzonego z kluczem prywatnym, który jest używany do podpisywania określonego certyfikatu.  
+ [Funkcja _AxlGetIssuerPublicKeyHash](axlgetissuerpublickeyhash-function.md)  
+ Pobiera skrót SHA-1 klucza publicznego skojarzonego z kluczem prywatnym, który jest używany do podpisywania określonego certyfikatu.  
   
- [Funkcja _AxlPublicKeyBlobToPublicKeyToken](../../../../docs/framework/unmanaged-api/authenticode/axlpublickeyblobtopublickeytoken-function.md)  
- Oblicza silnej nazwy token klucza publicznego z formatu publickeyblob — dostawcy usług Kryptograficznych.  
+ [Funkcja _AxlPublicKeyBlobToPublicKeyToken](axlpublickeyblobtopublickeytoken-function.md)  
+ Oblicza token klucza publicznego o silnej nazwie w formacie PublicKeyBlob — dostawcy usług kryptograficznych.  
   
- [Funkcja _AxlRSAKeyValueToPublicKeyToken](../../../../docs/framework/unmanaged-api/authenticode/axlrsakeyvaluetopublickeytoken-function.md)  
- Konwertuje wyznaczanie modułu i wykładnik silnej nazwy token klucza publicznego.  
+ [Funkcja _AxlRSAKeyValueToPublicKeyToken](axlrsakeyvaluetopublickeytoken-function.md)  
+ Konwertuje modulo i wykładnik na token klucza publicznego o silnej nazwie.  
   
- [Funkcja CertFreeAuthenticodeSignerInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md)  
- Zwalnia zasoby przydzielone do struktura AXL_AUTHENTICODE_SIGNER_INFO.  
+ [Funkcja CertFreeAuthenticodeSignerInfo](certfreeauthenticodesignerinfo-function.md)  
+ Zwalnia zasoby przydzieloną dla struktury AXL_AUTHENTICODE_SIGNER_INFO.  
   
- [Funkcja CertFreeAuthenticodeTimestamperInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodetimestamperinfo-function.md)  
- Zwalnia zasoby przydzielone do struktura AXL_AUTHENTICODE_TIMESTAMPER_INFO.  
+ [Funkcja CertFreeAuthenticodeTimestamperInfo](certfreeauthenticodetimestamperinfo-function.md)  
+ Zwalnia zasoby przydzieloną dla struktury AXL_AUTHENTICODE_TIMESTAMPER_INFO.  
   
- [Funkcja CertTimestampAuthenticodeLicense](../../../../docs/framework/unmanaged-api/authenticode/certtimestampauthenticodelicense-function.md)  
- Licencja Authenticode XrML utworzone przez CertCreateAuthenticodeLicense sygnatury czasowe.  
+ [Funkcja CertTimestampAuthenticodeLicense](certtimestampauthenticodelicense-function.md)  
+ Sygnatura czasowa oznacza licencję na technologię XrML Authenticode utworzoną przez CertCreateAuthenticodeLicense.  
   
- [Funkcja CertVerifyAuthenticodeLicense](../../../../docs/framework/unmanaged-api/authenticode/certverifyauthenticodelicense-function.md)  
- Sprawdza poprawność licencję Authenticode XrML.  
+ [Funkcja CertVerifyAuthenticodeLicense](certverifyauthenticodelicense-function.md)  
+ Weryfikuje ważność licencji XrML Authenticode.  
   
- [Struktura AXL_AUTHENTICODE_SIGNER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md)  
- Definiuje informacje podpisu Authenticode.  
+ [Struktura AXL_AUTHENTICODE_SIGNER_INFO](axl-authenticode-signer-info-structure.md)  
+ Definiuje informacje o podpisie Authenticode.  
   
- [Struktura AXL_AUTHENTICODE_TIMESTAMPER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md)  
- Definiuje informacje stamper czasu Authenticode.  
+ [Struktura AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md)  
+ Definiuje informacje o sygnaturze czasowym Authenticode.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Niezarządzane interfejsy API — informacje](../../../../docs/framework/unmanaged-api/index.md)
+- [Niezarządzane interfejsy API — informacje](../index.md)

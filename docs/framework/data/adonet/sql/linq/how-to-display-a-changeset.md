@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 126e7245-c5a0-4ebf-800d-cc1fcf9cd0ab
-ms.openlocfilehash: 92acee0d36634ea09c245418fcc7a8b97d208aa6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f49e123e6e980501d330eeecf2719023cdff8e7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903113"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781968"
 ---
 # <a name="how-to-display-a-changeset"></a>Instrukcje: Wyświetlanie zestawu zmian
-Możesz wyświetlić zmiany śledzone przez <xref:System.Data.Linq.DataContext> przy użyciu <xref:System.Data.Linq.DataContext.GetChangeSet%2A>.  
+Zmiany śledzone przez <xref:System.Data.Linq.DataContext> program można wyświetlić za pomocą <xref:System.Data.Linq.DataContext.GetChangeSet%2A>polecenia.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pobiera klientów, których Miasto jest Londyn, zmienia nazwę miasta do Paryża i przesyła zmiany z powrotem do bazy danych.  
+ Poniższy przykład pobiera klientów, których miasto jest Londyn, zmienia miasto na Paryż i przesyła zmiany z powrotem do bazy danych.  
   
  [!code-csharp[DLinqDebuggingSupport#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#2)]
  [!code-vb[DLinqDebuggingSupport#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#2)]  
   
- Dane wyjściowe z tego kodu pojawi się podobne do następujących. Pamiętaj, że podsumowanie na końcu pokazuje, że ośmiu zmiany zostały wprowadzone.  
+ Dane wyjściowe z tego kodu są podobne do poniższych. Należy zauważyć, że podsumowanie na końcu pokazuje, że wprowadzono osiem zmian.  
 
  ```console
 CustomerID: AROUT
@@ -53,4 +53,4 @@ Total changes: {Added: 0, Removed: 0, Modified: 8}
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Obsługa debugowania](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+- [Obsługa debugowania](debugging-support.md)

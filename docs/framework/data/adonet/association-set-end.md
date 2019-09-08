@@ -2,36 +2,36 @@
 title: punkt końcowy zestawu skojarzeń
 ms.date: 03/30/2017
 ms.assetid: fe4bf1d3-047a-4a37-98c5-a66e70811346
-ms.openlocfilehash: ea750e9f381de92233f4c9389ec6676847b56d01
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 48ba84d46e380462405551cc2d826d84368b351a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592596"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786932"
 ---
 # <a name="association-set-end"></a>punkt końcowy zestawu skojarzeń
-*Punkt końcowy zestawu skojarzeń* identyfikuje [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) i [zestaw jednostek](../../../../docs/framework/data/adonet/entity-set.md) na końcu [zestaw skojarzeń](../../../../docs/framework/data/adonet/association-set.md). Skojarzenie zestawu są zdefiniowane jako część zestawu skojarzeń; zestaw skojarzeń musi mieć dokładnie dwa skojarzenie zestawu.  
+*Koniec zestawu skojarzeń* identyfikuje [Typ jednostki](entity-type.md) i [jednostkę ustawioną](entity-set.md) na końcu [zestawu skojarzenia](association-set.md). Zakończenia zestawu skojarzeń są definiowane jako część zestawu skojarzenia; zestaw skojarzeń musi mieć dokładnie dwa punkty końcowe zestawu skojarzenia.  
   
- Definicję końcowy zestawu skojarzeń zawiera następujące informacje:  
+ Definicja końcowa zestawu skojarzeń zawiera następujące informacje:  
   
-- Ustaw jeden z typów jednostek zaangażowanych w skojarzeniu. (Wymagane)  
+- Jeden z typów jednostek należących do zestawu skojarzeń. Potrzeb  
   
-- Zestaw jednostek dla typu jednostki związane z zestaw skojarzeń. (Wymagane)  
+- Zestaw jednostek dla typu jednostki, który jest powiązany z zestawem skojarzeń. Potrzeb  
   
 ## <a name="example"></a>Przykład  
- Poniższy diagram przedstawia modelu koncepcyjnego z dwóch skojarzeń: `WrittenBy` i `PublishedBy`.  
+ Na poniższym diagramie przedstawiono model koncepcyjny z dwoma skojarzeniami: `WrittenBy` i `PublishedBy`.  
   
- ![Przykładowy model przy użyciu trzech typów jednostek](./media/association-set-end/example-model-three-entity-types.gif)  
+ ![Przykładowy model z trzema typami jednostek](./media/association-set-end/example-model-three-entity-types.gif)  
   
- Na poniższym diagramie przedstawiono zestaw skojarzeń (`PublishedBy`) i dwa zestawy jednostek (`Books` i `Publishers`) oparte na modelu koncepcyjnego przedstawionych powyżej. Skojarzenie zestawu są `Books` i `Publishers` zestawy jednostek. Analizy biznesowej w `Books` zestaw jednostek reprezentuje wystąpienie `Book` typu jednostki w czasie wykonywania. Podobnie, reprezentuje Pj `Publisher` wystąpienia w `Publishers` zestawu jednostek. BiPj reprezentuje wystąpienie `PublishedBy` skojarzenia w `PublishedBy` zestaw skojarzeń.  
+ Na poniższym diagramie przedstawiono zestaw skojarzeń (`PublishedBy`) i dwa zestawy jednostek (`Books` i `Publishers`) na podstawie modelu koncepcyjnego pokazanego powyżej. Zestaw skojarzeń zostaje zakończony `Books` i `Publishers` zestawy jednostek. Usługa BI w `Books` zestawie jednostek reprezentuje wystąpienie `Book` typu jednostki w czasie wykonywania. Podobnie PJ reprezentuje `Publisher` wystąpienie `Publishers` w zestawie jednostek. BiPj reprezentuje wystąpienie `PublishedBy` skojarzenia `PublishedBy` w zestawie skojarzeń.  
   
- ![Zrzut ekranu przedstawia przykład zestawów.](./media/association-set-end/sets-example-association.gif)  
+ ![Zrzut ekranu pokazujący przykład zestawu.](./media/association-set-end/sets-example-association.gif)  
   
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) używa o nazwie język definicji schematu koncepcyjnego języka DSL ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych. Następujące CSDL definiuje kontener jednostek z jednej skojarzenia dla każdego skojarzenia na powyższym diagramie. Należy pamiętać, że zestaw końcowych są zdefiniowane jako część każdej definicji zestawu skojarzeń.  
+ [ADO.NET Entity Framework](./ef/index.md) używa języka DSL o nazwie koncepcyjny schemat definicji schematu ([CSDL](./ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych. Następujący CSDL definiuje kontener jednostek z jednym zestawem skojarzenia dla każdego skojarzenia na powyższym diagramie. Należy zauważyć, że końcówki zestawu skojarzeń są zdefiniowane jako część każdej definicji zestawu skojarzeń.  
   
  [!code-xml[EDM_Example_Model#EntityContainerExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entitycontainerexample)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Kluczowe założenia modelu danych jednostki](entity-data-model-key-concepts.md)
+- [Model danych jednostki](entity-data-model.md)

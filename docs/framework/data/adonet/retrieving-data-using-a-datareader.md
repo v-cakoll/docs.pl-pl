@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 561ebd7ac6948fa42f73ebb4f1eb97c574e6d7e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3add49d48a569664d4cbb6b5c26d5f3379b6f18
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963186"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794411"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>Pobieranie danych przy użyciu elementu DataReader
 Aby pobrać dane przy użyciu elementu **DataReader**, Utwórz wystąpienie obiektu **Command** , a następnie Utwórz element **DataReader** , wywołując **polecenie Command. ExecuteReader** , aby pobrać wiersze ze źródła danych. Element **DataReader** zawiera niebuforowany strumień danych, który umożliwia logiki proceduralnej efektywnie przetwarzać wyniki ze źródła danych sekwencyjnie. Element **DataReader** jest dobrym rozwiązaniem w przypadku pobierania dużej ilości danych, ponieważ dane nie są buforowane w pamięci.
@@ -25,7 +25,7 @@ reader = command.ExecuteReader();
 reader = command.ExecuteReader()
 ```  
 
-Użyj metody **DataReader. Read** , aby uzyskać wiersz z wyników zapytania. Możesz uzyskać dostęp do każdej kolumny zwracanego wiersza, przekazując nazwę lub numer porządkowy kolumny do elementu **DataReader**. Jednak w celu uzyskania najlepszej wydajności element **DataReader** zawiera szereg metod, które umożliwiają dostęp do wartości kolumn w ich natywnych typach danych (**GetDateTime**, GetDouble, GetGuid, GetInt32 itd.). Aby zapoznać się z listą metod akcesora typu dla specyficznych dla dostawcy danych, <xref:System.Data.OleDb.OleDbDataReader> zobacz <xref:System.Data.SqlClient.SqlDataReader>i. Przy użyciu metod metody dostępu typu, Jeśli wiesz, że typ danych jest mniejszy niż wymagana podczas pobierania wartości kolumny.  
+Użyj metody **DataReader. Read** , aby uzyskać wiersz z wyników zapytania. Możesz uzyskać dostęp do każdej kolumny zwracanego wiersza, przekazując nazwę lub numer porządkowy kolumny do elementu **DataReader**. Jednak w celu uzyskania najlepszej wydajności element **DataReader** zawiera szereg metod, które umożliwiają dostęp do wartości kolumn w ich natywnych typach danych (**GetDateTime**, **GetDouble**, **GetGuid**, **GetInt32**itd.). Aby zapoznać się z listą metod akcesora typu dla specyficznych dla dostawcy **danych, zobacz** <xref:System.Data.OleDb.OleDbDataReader> i <xref:System.Data.SqlClient.SqlDataReader>. Przy użyciu metod metody dostępu typu, Jeśli wiesz, że typ danych jest mniejszy niż wymagana podczas pobierania wartości kolumny.  
   
  Poniższy przykład wykonuje iterację przez obiekt **DataReader** i zwraca dwie kolumny z każdego wiersza.  
   
@@ -49,7 +49,7 @@ Użyj metody **DataReader. Read** , aby uzyskać wiersz z wyników zapytania. Mo
  [!code-vb[DataWorks SqlClient.NextResult#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.NextResult/VB/source.vb#1)]  
   
 ## <a name="getting-schema-information-from-the-datareader"></a>Pobieranie informacji o schemacie z elementu DataReader  
- Gdy element **DataReader** jest otwarty, można pobrać informacje o schemacie bieżącego zestawu wyników przy użyciu metody **GetSchema** . Getschemaing zwraca <xref:System.Data.DataTable> obiekt wypełniony wierszami i kolumnami zawierającymi informacje o schemacie dla bieżącego zestawu wyników. Element **DataTable** zawiera jeden wiersz dla każdej kolumny zestawu wyników. Każda kolumna tabeli schematu jest mapowana na właściwość kolumn zwracanych w wierszach zestawu wyników, gdzie ColumnName jest nazwą właściwości, a wartością kolumny jest wartość właściwości. Poniższy przykład zapisuje informacje o schemacie dla elementu **DataReader**.  
+ Gdy element **DataReader** jest otwarty, można pobrać informacje o schemacie bieżącego zestawu wyników przy użyciu metody **GetSchema** . **Getschemaing** zwraca <xref:System.Data.DataTable> obiekt wypełniony wierszami i kolumnami zawierającymi informacje o schemacie dla bieżącego zestawu wyników. Element **DataTable** zawiera jeden wiersz dla każdej kolumny zestawu wyników. Każda kolumna tabeli schematu jest mapowana na właściwość kolumn zwracanych w wierszach zestawu wyników, gdzie **ColumnName** jest nazwą właściwości, a wartością kolumny jest wartość właściwości. Poniższy przykład zapisuje informacje o schemacie dla elementu **DataReader**.  
   
  [!code-csharp[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/VB/source.vb#1)]  
@@ -57,7 +57,7 @@ Użyj metody **DataReader. Read** , aby uzyskać wiersz z wyników zapytania. Mo
 ## <a name="working-with-ole-db-chapters"></a>Praca z rozdziałami OLE DB  
  Hierarchiczne zestawy wierszy lub rozdziały (OLE DB typu **DBTYPE_HCHAPTER**, ADO Type **adChapter**) można <xref:System.Data.OleDb.OleDbDataReader>pobrać przy użyciu. Gdy zapytanie zawierające rozdział jest zwracane jako element **DataReader**, rozdział jest zwracany jako kolumna w tym elemencie **DataReader** i jest udostępniany jako obiekt **DataReader** .  
   
- **Zestaw danych** ADO.NET może być również używany do reprezentowania hierarchicznych zestawów wierszy przy użyciu relacji nadrzędny-podrzędny między tabelami. Aby uzyskać więcej informacji, zobacz [zestawy danych, DataTables i](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)DataViews.  
+ **Zestaw danych** ADO.NET może być również używany do reprezentowania hierarchicznych zestawów wierszy przy użyciu relacji nadrzędny-podrzędny między tabelami. Aby uzyskać więcej informacji, zobacz [zestawy danych, DataTables i DataViews](./dataset-datatable-dataview/index.md).  
   
  Poniższy przykład kodu używa dostawcy MSDataShape w celu wygenerowania kolumny rozdział zamówień dla każdego klienta na liście klientów.  
   
@@ -255,11 +255,11 @@ adapter.Fill(ds);
 ```
 
 > [!NOTE]
-> Aby uniknąć przepełnienia, zalecamy również obsługę konwersji z typu numeru Oracle na prawidłowy typ .NET Framework przed zapisaniem wartości w. <xref:System.Data.DataRow> Możesz użyć <xref:System.Data.Common.DataAdapter.FillError> zdarzenia, aby określić, czy wystąpił wyjątek przepełnienia. Aby uzyskać więcej informacji <xref:System.Data.Common.DataAdapter.FillError> o zdarzeniu, zobacz [Obsługa zdarzeń DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+> Aby uniknąć **przepełnienia**, zalecamy również obsługę konwersji z typu numeru Oracle na prawidłowy typ .NET Framework przed zapisaniem wartości w <xref:System.Data.DataRow>. Możesz użyć <xref:System.Data.Common.DataAdapter.FillError> zdarzenia, aby określić, czy wystąpił wyjątek **przepełnienia** . Aby uzyskać więcej informacji <xref:System.Data.Common.DataAdapter.FillError> o zdarzeniu, zobacz [Obsługa zdarzeń DataAdapter](handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Polecenia i parametry](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Pobieranie informacji o schemacie bazy danych](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Elementy DataAdapter i DataReaders](dataadapters-and-datareaders.md)
+- [Polecenia i parametry](commands-and-parameters.md)
+- [Pobieranie informacji o schemacie bazy danych](retrieving-database-schema-information.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

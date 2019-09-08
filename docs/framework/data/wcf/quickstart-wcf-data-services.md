@@ -1,57 +1,57 @@
 ---
-title: Przewodnik Szybki Start (WCF Data Services)
+title: Szybki Start (Usługi danych programu WCF)
 ms.date: 08/24/2018
 helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: 49d11556d3703331b4cdf5bf83a69f6b15bca8ed
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: df6806cd77e7ff109d79f7ba61866763de4c7fc1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881996"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790364"
 ---
-# <a name="quickstart-wcf-data-services"></a>Przewodnik Szybki Start (WCF Data Services)
+# <a name="quickstart-wcf-data-services"></a>Szybki Start (Usługi danych programu WCF)
 
-Ten przewodnik Szybki Start ułatwia zapoznanie się z usług danych WCF i [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] przez szereg zadań, które obsługują tematy w [wprowadzenie](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md).
+Ten przewodnik Szybki Start pomaga zapoznać się z usługi danych programu WCF i [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] z serii zadań, które obsługują tematy w programie [wprowadzenie](getting-started-with-wcf-data-services.md).
 
 ## <a name="what-youll-learn"></a>Dowiesz się
 
-Pierwsze zadanie w tym przewodniku Szybki Start przedstawia sposób tworzenia usługi danych, aby udostępnić źródła danych z przykładowej bazy danych Northwind OData. W kolejnych tematach będzie dostęp do usługi OData źródła danych za pomocą przeglądarki sieci Web, a także utworzyć Windows Presentation Foundation (WPF) aplikację kliencką, która zużywa OData źródła danych przy użyciu biblioteki klienta.
+Pierwsze zadanie w tym przewodniku szybki start przedstawia sposób tworzenia usługi danych w celu udostępnienia źródła strumieniowego OData z przykładowej bazy danych Northwind. W kolejnych tematach można uzyskać dostęp do źródła danych OData przy użyciu przeglądarki sieci Web, a także utworzyć aplikację kliencką Windows Presentation Foundation (WPF), która korzysta ze źródła danych OData przy użyciu bibliotek klienckich.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Aby ukończyć ten przewodnik Szybki Start, musisz zainstalować następujące składniki:
+Aby ukończyć ten przewodnik Szybki Start, należy zainstalować następujące składniki:
 
 - Visual Studio
 
-- Wystąpienie programu SQL Server. W tym programu SQL Server Express, która jest ujęta w domyślnej instalacji programu Visual Studio 2015 lub jako część **przechowywanie i przetwarzanie danych** obciążenia w programie Visual Studio 2017.
+- Wystąpienie SQL Server. Obejmuje to SQL Server Express, które są dołączone do domyślnej instalacji programu Visual Studio 2015 lub w ramach obciążenia **magazynu i przetwarzania danych** w programie visual Studio 2017.
 
-- Przykładowa bazy danych Northwind. Aby pobrać tej przykładowej bazy danych, zobacz stronę pobierania [przykładowych baz danych programu SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).
+- Przykładowa bazy danych Northwind. Aby pobrać tę przykładową bazę danych, zobacz stronę pobierania, [przykładowe bazy danych dla SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).
 
-## <a name="wcf-data-services-quickstart-tasks"></a>Zadania szybkiego startu usługi danych WCF
+## <a name="wcf-data-services-quickstart-tasks"></a>Zadania szybkiego startu usług danych WCF
 
- [Tworzenie usługi danych](../../../../docs/framework/data/wcf/creating-the-data-service.md)
+ [Tworzenie usługi danych](creating-the-data-service.md)
 
- Definiowanie aplikacji ASP.NET, zdefiniowanie modelu danych, tworzenie usługi danych i zapewnianie dostępu do zasobów.
+ Zdefiniuj aplikację ASP.NET, zdefiniuj model danych, Utwórz usługę danych i Włącz dostęp do zasobów.
 
- [Dostęp do usługi z przeglądarki sieci Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
+ [Uzyskiwanie dostępu do usługi z przeglądarki sieci Web](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
 
- Uruchom usługę za pomocą programu Visual Studio i uzyskania dostępu do usługi po przesłaniu żądania HTTP GET, za pośrednictwem przeglądarki sieci Web narażonych źródła danych.
+ Uruchom usługę z programu Visual Studio i uzyskaj dostęp do usługi, przesyłając żądania HTTP GET za pośrednictwem przeglądarki sieci Web do uwidocznionego źródła danych.
 
- [Tworzenie aplikacji klienckich programu .NET Framework](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)
+ [Tworzenie aplikacji klienckiej .NET Framework](creating-the-dotnet-client-application-wcf-data-services-quickstart.md)
 
- Tworzenie aplikacji WPF przyjmowania źródła danych OData, wiązanie danych kontrolek Windows, zmiany danych w formantach powiązanych, a następnie wysłać zmiany z powrotem do usługi danych.
+ Utwórz aplikację WPF do korzystania ze źródła danych OData, powiąż dane z kontrolkami systemu Windows, Zmień dane w formantach powiązanych, a następnie Wyślij zmiany z powrotem do usługi danych.
 
 > [!NOTE]
-> Pliki projektów z pełną wersję tego przewodnika Szybki Start można pobrać z [przykłady dokumentacji usług danych WCF](https://go.microsoft.com/fwlink/?LinkId=179994) strony.
+> Pliki projektu z kompletnej wersji przewodnika Szybki Start można pobrać ze strony [przykładów dokumentacji usługi danych programu WCF](https://go.microsoft.com/fwlink/?LinkId=179994) .
 
 ## <a name="next-steps"></a>Następne kroki
 
 > [!div class="nextstepaction"]
-> [Uruchom samouczek Szybki Start](../../../../docs/framework/data/wcf/creating-the-data-service.md)
+> [Rozpocznij Przewodnik Szybki Start](creating-the-data-service.md)
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Program Entity Framework na platformie ADO.NET](../../../../docs/framework/data/adonet/ef/index.md)
+- [Program Entity Framework na platformie ADO.NET](../adonet/ef/index.md)

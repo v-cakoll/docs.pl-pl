@@ -2,35 +2,35 @@
 title: N-warstwowe i zdalne aplikacje z użyciem LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 854a1cdd-53cb-45f5-83ca-63962a9b3598
-ms.openlocfilehash: 31f06fd5e840c51c0133d22078d79cd4f945c369
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 94ca057da10c3570e85e17b5caec2d86154d8a3f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660920"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781408"
 ---
 # <a name="n-tier-and-remote-applications-with-linq-to-sql"></a>N-warstwowe i zdalne aplikacje z użyciem LINQ to SQL
-Można utworzyć aplikacji n warstwowa lub wielowarstwowa, które używają [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Zazwyczaj [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kontekst danych, klas jednostek i logiki budowa zapytania znajdują się w warstwie środkowej jako warstwa dostępu do danych (DAL). Logika biznesowa i trwałe dane mogą być implementowane całkowicie w klasy częściowe i metody jednostek i kontekst danych, lub może być implementowana w osobnych klas.
+Można tworzyć aplikacje warstwy n lub wielowarstwowe korzystające [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]z programu. Zazwyczaj kontekst danych, klasy jednostek i logika konstruowania zapytania znajdują się w warstwie środkowej jako warstwa dostępu do danych (dal). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Logika biznesowa i wszystkie nietrwałe dane można całkowicie zaimplementować w klasach częściowych i metodach jednostek i kontekście danych albo można je zaimplementować w oddzielnych klasach.
 
- Warstwa prezentacji lub klient wywołuje metody na interfejsie zdalnego warstwy środkowej i warstwy DAL w danej warstwie wykona zapytań lub procedur przechowywanych, które są mapowane do <xref:System.Data.Linq.DataContext> metody. Warstwa środkowa zwraca dane do klientów zwykle jako XML reprezentacje obiektów lub obiekty serwerów proxy.
+ Klient lub warstwa prezentacji wywołuje metody w interfejsie zdalnym warstwy środkowej, a dal w tej warstwie wykona zapytania lub procedury składowane, które są mapowane na <xref:System.Data.Linq.DataContext> metody. Warstwa środkowa zwraca dane do klientów zazwyczaj jako reprezentacje XML jednostek lub obiektów proxy.
 
- W środkowej warstwie jednostki są tworzone przez kontekst danych, który śledzi ich stan i zarządza odroczone ładowanie z i przesyłanie zmian do bazy danych. Te jednostki są "dołączone" do `DataContext`. Jednak po jednostki są wysyłane do innej warstwy za pomocą serializacji, stają się one odłączone, co oznacza, że `DataContext` już służy do śledzenia stanu. Jednostki, które klient wysyła aktualizacje musi być ponownie dołączyć do kontekstu danych przed [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] można przesłać zmian w bazie danych. Klient jest odpowiedzialny za zapewnienie oryginalnych wartości i/lub sygnatury czasowe z powrotem do warstwy środkowej, jeśli są wymagane w celu pomyślnych kontroli współbieżności.
+ W warstwie środkowej jednostki są tworzone przez kontekst danych, który śledzi ich stan i zarządza odroczonym ładowaniem z i przesyłaniem zmian do bazy danych. Te jednostki są "dołączone" do `DataContext`. Jednak po wysłaniu jednostek do innej warstwy przy użyciu serializacji stają się one odłączane, co oznacza, `DataContext` że nie śledzi już stanu. Jednostki wysyłane przez klienta z powrotem do aktualizacji muszą zostać ponownie dołączone do kontekstu danych, zanim [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] będą mogły przesłać zmiany do bazy danych. Klient jest odpowiedzialny za dostarczanie oryginalnych wartości i/lub sygnatur czasowych do warstwy środkowej, jeśli są one wymagane do optymistycznych kontroli współbieżności.
 
- W aplikacjach ASP.NET <xref:System.Web.UI.WebControls.LinqDataSource> zarządza większość tę złożoność. Aby uzyskać więcej informacji, zobacz [omówienie kontrolki serwera sieci Web LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100)).
+ W aplikacjach <xref:System.Web.UI.WebControls.LinqDataSource> ASP.NET zarządza największą z tych złożoności. Aby uzyskać więcej informacji, zobacz [Omówienie kontrolki serwera sieci Web programu LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100)).
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
- Aby uzyskać więcej informacji o sposobie wdrażania aplikacji n warstwowej, które używają [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], zobacz następujące tematy:
+ Aby uzyskać więcej informacji na temat implementowania aplikacji n-warstwowych [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], które korzystają z programu, zobacz następujące tematy:
 
-- [N-warstwowa LINQ to SQL z użyciem ASP.NET](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-aspnet.md)
+- [N-warstwowa LINQ to SQL z użyciem ASP.NET](linq-to-sql-n-tier-with-aspnet.md)
 
-- [N-warstwowa LINQ to SQL z użyciem usług internetowych](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-web-services.md) 
+- [N-warstwowa LINQ to SQL z użyciem usług internetowych](linq-to-sql-n-tier-with-web-services.md) 
 
-- [Implementowanie N-warstwowej logiki biznesowej](../../../../../../docs/framework/data/adonet/sql/linq/implementing-business-logic-linq-to-sql.md)
+- [Implementowanie N-warstwowej logiki biznesowej](implementing-business-logic-linq-to-sql.md)
 
-- [Pobieranie danych i operacje CUD w aplikacjach N-warstwowych (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)
+- [Pobieranie danych i operacje CUD w aplikacjach N-warstwowych (LINQ to SQL)](data-retrieval-and-cud-operations-in-n-tier-applications.md)
 
- Aby uzyskać więcej informacji na temat aplikacji n warstwowych, które używają zestawów danych ADO.NET, zobacz [Praca z zestawami danych w aplikacjach n warstwowych](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications).
+ Aby uzyskać więcej informacji na temat aplikacji n-warstwowych, które używają zestawów danych ADO.NET, zobacz [Work with datasetss in aplikacje n-warstwowe](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications).
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Informacje uzupełniające](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Informacje uzupełniające](background-information.md)

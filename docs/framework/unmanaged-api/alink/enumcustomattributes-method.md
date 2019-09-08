@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09ccf731f0494b6eda49f6a15d04970a723c473b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d8827f46a12bd090fa27e71072d833607d34677
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742055"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777352"
 ---
 # <a name="enumcustomattributes-method"></a>EnumCustomAttributes — Metoda
-Pobiera atrybuty niestandardowe na poziomie zestawu.  
+Pobiera niestandardowe atrybuty na poziomie zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,25 +44,25 @@ HRESULT EnumCustomAttributes(
  Uchwyt modułu wyliczającego.  
   
  `tkType`  
- Typ atrybutów, które mają zostać wyliczone. Użyj `mdTokenNill` dla wszystkich atrybutów.  
+ Typ atrybutów do wyliczenia. Używać `mdTokenNill` dla wszystkich atrybutów.  
   
  `rCustomValues`  
- Odbiera tokenów atrybutów niestandardowych.  
+ Odbiera tokeny atrybutów niestandardowych.  
   
  `cMax`  
  Określa rozmiar `rCustomValues` tablicy.  
   
  `pcCustomValues`  
- Opcjonalnie odbiera token wartości.  
+ Opcjonalnie otrzymuje liczbę wartości tokenu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga alink.h  
+ Wymaga Alink. h  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink, interfejs](ialink-interface.md)
+- [IALink2, interfejs](ialink2-interface.md)
+- [ALink, interfejs API](index.md)

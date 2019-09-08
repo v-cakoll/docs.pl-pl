@@ -2,45 +2,45 @@
 title: zestaw skojarzeń
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
-ms.openlocfilehash: b7ded35986d27dedccbc3846f8791974bb225398
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 43ab6cf9f1ee8cb971810add6b9a89467726f3e2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592569"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785030"
 ---
 # <a name="association-set"></a>zestaw skojarzeń
-*Zestaw skojarzeń* to logiczny kontener przeznaczony do [skojarzenia](../../../../docs/framework/data/adonet/association-type.md) wystąpień tego samego typu. Zestaw skojarzeń nie jest konstrukcja; modelowania danych oznacza to, że nie opisano strukturę danych lub relacje. Zamiast tego zestaw skojarzeń zapewnia konstrukcję w środowisku hostingu lub magazynu (np. środowisko uruchomieniowe języka wspólnego lub bazą danych programu SQL Server) do wystąpień skojarzenia grupy mogą być mapowane do magazynu danych.  
+*Zestaw skojarzeń* to logiczny kontener dla wystąpień [skojarzeń](association-type.md) tego samego typu. Zestaw skojarzeń nie jest konstrukcją modelowania danych; oznacza to, że nie opisuje struktury danych lub relacji. Zamiast tego zestaw skojarzeń zawiera konstrukcję dla środowiska hostingu lub magazynu (na przykład środowisko uruchomieniowe języka wspólnego lub SQL Server Database) w celu grupowania wystąpień skojarzeń, aby można je było mapować do magazynu danych.  
   
- Zestaw skojarzeń jest zdefiniowana w [kontener jednostek](../../../../docs/framework/data/adonet/entity-container.md), która jest logicznym grupowaniem [zestawy jednostek](../../../../docs/framework/data/adonet/entity-set.md) i zestawów skojarzeń.  
+ Zestaw skojarzeń jest zdefiniowany w [kontenerze jednostek](entity-container.md), który jest logicznym grupowaniem [zestawów jednostek](entity-set.md) i zestawów skojarzeń.  
   
- Definicja zestawu skojarzeń zawiera następujące informacje:  
+ Definicja zestawu skojarzenia zawiera następujące informacje:  
   
-- Nazwa zestawu skojarzenia. (Wymagane)  
+- Nazwa zestawu skojarzeń. Potrzeb  
   
-- Skojarzenia, które będzie zawierać wystąpień. (Wymagane)  
+- Skojarzenie, którego będzie zawierać wystąpienia. Potrzeb  
   
-- Dwa [kończy się zestawu skojarzeń](../../../../docs/framework/data/adonet/association-set-end.md).  
+- Dwa [punkty końcowe zestawu skojarzenia](association-set-end.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy diagram przedstawia modelu koncepcyjnego z dwóch skojarzeń: `PublishedBy`, i `WrittenBy`. Mimo że informacji na temat zestawów skojarzenie nie jest przekazywany w diagramie, następny diagram pokazuje przykład zestawów skojarzeń i zestawy jednostek, w oparciu o ten model.  
+ Na poniższym diagramie przedstawiono model koncepcyjny z dwoma skojarzeniami: `PublishedBy`i. `WrittenBy` Chociaż informacje o zestawach skojarzeń nie są przekazywane na diagramie, na następnym diagramie przedstawiono przykład zestawów skojarzeń i zestawów jednostek opartych na tym modelu.  
   
- ![Przykładowy model przy użyciu trzech typów jednostek](./media/association-set/example-model-three-entity-types.gif)  
+ ![Przykładowy model z trzema typami jednostek](./media/association-set/example-model-three-entity-types.gif)  
   
- W poniższym przykładzie przedstawiono zestaw skojarzeń (`PublishedBy`) i dwa zestawy jednostek (`Books` i `Publishers`) oparte na modelu koncepcyjnego przedstawionych powyżej. Analizy biznesowej w `Books` zestaw jednostek reprezentuje wystąpienie `Book` typu jednostki w czasie wykonywania. Podobnie, reprezentuje Pj `Publisher` wystąpienia w `Publishers` zestawu jednostek. BiPj reprezentuje wystąpienie `PublishedBy` skojarzenia w `PublishedBy` zestaw skojarzeń.  
+ Poniższy przykład przedstawia zestaw skojarzeń (`PublishedBy`) i dwa zestawy jednostek (`Books` i `Publishers`) na podstawie modelu koncepcyjnego pokazanego powyżej. Usługa BI w `Books` zestawie jednostek reprezentuje wystąpienie `Book` typu jednostki w czasie wykonywania. Podobnie PJ reprezentuje `Publisher` wystąpienie `Publishers` w zestawie jednostek. BiPj reprezentuje wystąpienie `PublishedBy` skojarzenia `PublishedBy` w zestawie skojarzeń.  
   
- ![Zrzut ekranu przedstawia przykład zestawów.](./media/association-set/sets-example-association.gif)  
+ ![Zrzut ekranu pokazujący przykład zestawu.](./media/association-set/sets-example-association.gif)  
   
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) używa języka specyficznego dla domeny (DSL), o nazwie język definicji schematu koncepcyjnego ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych. Następujące CSDL definiuje kontener jednostek z jednej skojarzenia dla każdego skojarzenia na powyższym diagramie. Należy zauważyć, że nazwa i skojarzenia dla każdego skojarzenia należy ustawić są definiowane przy użyciu atrybutów XML.  
+ [ADO.NET Entity Framework](./ef/index.md) używa języka specyficznego dla domeny (DSL) zwanego językiem definicji schematu koncepcyjnego ([CSDL](./ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych. Następujący CSDL definiuje kontener jednostek z jednym zestawem skojarzenia dla każdego skojarzenia na powyższym diagramie. Należy zauważyć, że nazwa i skojarzenie dla każdego zestawu skojarzeń są zdefiniowane przy użyciu atrybutów XML.  
   
  [!code-xml[EDM_Example_Model#EntityContainerExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entitycontainerexample)]  
   
- Można zdefiniować wiele zestawów skojarzeń na skojarzenie, tak długo, jak nie skojarzenie dwóch zestawów udziału [punkt końcowy zestawu skojarzeń](../../../../docs/framework/data/adonet/association-set-end.md). Następujące CSDL definiuje kontener jednostek z dwoma zestawami skojarzenia dla `WrittenBy` skojarzenia. Należy zauważyć, że wiele zestawów jednostki zostały zdefiniowane dla `Book` i `Author` typów jednostek oraz czy żadne skojarzenia udziałów skojarzenie punkt końcowy zestawu.  
+ Istnieje możliwość zdefiniowania wielu zestawów skojarzeń na każde skojarzenie, o ile żadne z dwóch zestawów skojarzeń nie współdzieli [końca zestawu skojarzenia](association-set-end.md). Poniższy CSDL definiuje kontener jednostek z dwoma zestawami skojarzeń dla `WrittenBy` skojarzenia. Zauważ, że zdefiniowano wiele zestawów jednostek dla `Book` obiektów i `Author` i że żaden z zestawów skojarzeń nie udostępnia końcowego zestawu skojarzenia.  
   
  [!code-xml[EDM_Example_Model#MultipleAssociationSets](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#multipleassociationsets)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
-- [właściwość klucza obcego](../../../../docs/framework/data/adonet/foreign-key-property.md)
+- [Kluczowe założenia modelu danych jednostki](entity-data-model-key-concepts.md)
+- [Model danych jednostki](entity-data-model.md)
+- [właściwość klucza obcego](foreign-key-property.md)

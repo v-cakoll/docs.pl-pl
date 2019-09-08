@@ -2,62 +2,62 @@
 title: Typy danych programu SQL Server i ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: 9e81e54f223d35a3db9c943edf6f9f9b24110faa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 642fe0d541aca01d6ffb2d9279c4d0fa91eadb63
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876801"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780847"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>Typy danych programu SQL Server i ADO.NET
-Program SQL Server i .NET Framework są oparte na różnych typów systemów, które może spowodować utratę danych. Aby zachować spójność danych, dla programu .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) udostępnia metody typizowane metody dostępu do pracy z danymi programu SQL Server. Można używać wyliczenia w <xref:System.Data.SqlDbType> klasy, aby określić <xref:System.Data.SqlClient.SqlParameter> typów danych.  
+SQL Server i .NET Framework są oparte na różnych systemach typu, co może spowodować utratę danych. Aby zachować integralność danych, dostawca danych .NET Framework dla SQL Server (<xref:System.Data.SqlClient>) zapewnia metody dostępu typu Type do pracy z danymi SQL Server. Możesz użyć wyliczeń w <xref:System.Data.SqlDbType> klasach, aby określić <xref:System.Data.SqlClient.SqlParameter> typy danych.  
   
- Więcej informacji i tabelę, która opisuje mapowanie typu danych między serwerem SQL i typów danych programu .NET Framework, zobacz [mapowanie typu danych serwera SQL](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md).  
+ Aby uzyskać więcej informacji i tabelę opisującą mapowanie typu danych między SQL Server i .NET Framework typy danych, zobacz [SQL Server mapowania typów danych](../sql-server-data-type-mappings.md).  
   
- Program SQL Server 2008 wprowadzono nowe typy danych, które są przeznaczone do zaspokojenia potrzeb biznesowych do pracy z daty i godziny, ze strukturą, częściową strukturą i bez struktury danych. Te opisano w dokumentacji programu SQL Server 2008 — książki Online.  
+ SQL Server 2008 wprowadza nowe typy danych, które są przeznaczone do zaspokajania potrzeb firmy, do pracy z danymi o dacie i godzinie, ze strukturą, częściową strukturą i bez struktury. Są one udokumentowane w SQL Server 2008 książki online.  
   
- Typy danych programu SQL Server, które są dostępne do użycia w aplikacji zależy od wersji programu SQL Server, którego używasz. Aby uzyskać więcej informacji zobacz odpowiedniej wersji programu SQL Server — książki Online, w poniższej tabeli.  
+ SQL Server typy danych, które są dostępne do użycia w aplikacji, zależą od używanej wersji programu SQL Server. Aby uzyskać więcej informacji, zobacz odpowiednią wersję dokumentacji SQL Server Books Online w poniższej tabeli.  
   
- **SQL Server Books Online**  
+ **Książka SQL Server online**  
   
 1. [Typy danych (aparat bazy danych)](https://go.microsoft.com/fwlink/?LinkID=107468)  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Właściwość SqlTypes i zestaw danych](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
- W tym artykule opisano obsługę typu `SqlTypes` w `DataSet`.  
+ [Właściwość SqlTypes i zestaw danych](sqltypes-and-the-dataset.md)  
+ Opisuje obsługę `SqlTypes` typów `DataSet`w programie.  
   
- [Obsługa wartości Null](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)  
- Pokazuje, jak pracować z przechowywanymi w trzech logiki i wartości null.  
+ [Obsługa wartości Null](handling-null-values.md)  
+ Pokazuje, jak korzystać z wartości null i logiki z trzema wartościami.  
   
- [Porównywanie identyfikatora GUID i wartości uniqueidentifier](../../../../../docs/framework/data/adonet/sql/comparing-guid-and-uniqueidentifier-values.md)  
- Pokazuje, jak pracować z wartości identyfikatora GUID i unikatowy identyfikator programu SQL Server i .NET Framework.  
+ [Porównywanie identyfikatora GUID i wartości uniqueidentifier](comparing-guid-and-uniqueidentifier-values.md)  
+ Demonstruje sposób pracy z identyfikatorami GUID i unikatowymi wartościami w SQL Server i .NET Framework.  
   
- [Dane daty i godziny](../../../../../docs/framework/data/adonet/sql/date-and-time-data.md)  
- W tym artykule opisano, jak używać nowych typów daty i godziny dane wprowadzone w programie SQL Server 2008.  
+ [Dane daty i godziny](date-and-time-data.md)  
+ Opisuje sposób korzystania z nowych typów danych daty i godziny wprowadzonych w SQL Server 2008.  
   
- [Duże UDT](../../../../../docs/framework/data/adonet/sql/large-udts.md)  
- Pokazuje, jak można pobrać danych z dużą wartość typów zdefiniowanych przez użytkownika, wprowadzone w programie SQL Server 2008.  
+ [Duże UDT](large-udts.md)  
+ Demonstruje sposób pobierania danych z UDTs dużej wartości wprowadzonych w SQL Server 2008.  
   
- [Dane XML w programie SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
- W tym artykule opisano sposób pracy z danymi XML, pobierane z programu SQL Server.  
+ [Dane XML w programie SQL Server](xml-data-in-sql-server.md)  
+ Opisuje sposób pracy z danymi XML pobranymi z SQL Server.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Data.DataSet>  
- W tym artykule opisano `DataSet` klasy i wszystkich jego składowych.  
+ `DataSet` Opisuje klasę i wszystkich jej członków.  
   
  <xref:System.Data.SqlTypes>  
- W tym artykule opisano `SqlTypes` przestrzeni nazw i wszystkich jego składowych.  
+ Zawiera opis `SqlTypes` przestrzeni nazw i wszystkich jej elementów członkowskich.  
   
  <xref:System.Data.SqlDbType>  
- W tym artykule opisano `SqlDbType` wyliczenia i wszyscy jej członkowie.  
+ `SqlDbType` Opisuje Wyliczenie i wszystkie jego elementy członkowskie.  
   
  <xref:System.Data.DbType>  
- W tym artykule opisano `DbType` wyliczenia i wszyscy jej członkowie.  
+ `DbType` Opisuje Wyliczenie i wszystkie jego elementy członkowskie.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Mapowanie typu danych serwera SQL](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [Konfigurowanie parametrów i typów danych parametrów](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [Parametry o wartościach tabelowych](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)
-- [Dane binarne i dużej wartości w programie SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Mapowanie typu danych serwera SQL](../sql-server-data-type-mappings.md)
+- [Konfigurowanie parametrów i typów danych parametrów](../configuring-parameters-and-parameter-data-types.md)
+- [Parametry o wartościach tabelowych](table-valued-parameters.md)
+- [Dane binarne i dużej wartości w programie SQL Server](sql-server-binary-and-large-value-data.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

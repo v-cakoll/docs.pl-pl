@@ -2,24 +2,24 @@
 title: ProtocolStopFailure
 ms.date: 03/30/2017
 ms.assetid: 8b246f8f-eb0f-430b-a82b-3d55aad287a1
-ms.openlocfilehash: 1032305600526868fca5d2e1517238e3cabdc92b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9df41480d110ff4ba8066a85a9d1d5debe045900
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999027"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796156"
 ---
 # <a name="protocolstopfailure"></a>ProtocolStopFailure
-Id: 147  
+#C1 147  
   
- Ważność: Błąd  
+ Obrażeń Błąd  
   
- Kategoria: TransactionBridge  
+ Kategorii TransactionBridge  
   
 ## <a name="description"></a>Opis  
- To zdarzenie oznacza, że Usługa protokołu WS-Atomic Transaction nie powiodło się zatrzymanie. Zdarzenie Wyświetla identyfikator protokołu, nazwy protokołu, wyjątków, nazwa procesu i identyfikatora procesu.  
+ To zdarzenie oznacza, że nie można zatrzymać usługi protokołu transakcji WS-AT. W tym zdarzeniu znajduje się lista Identyfikator protokołu, nazwa protokołu, wyjątek, nazwa procesu i identyfikator procesu.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Rejestrowanie zdarzeń](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Informacje ogólne o zdarzeniach](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Rejestrowanie zdarzeń](index.md)
+- [Informacje ogólne o zdarzeniach](events-general-reference.md)

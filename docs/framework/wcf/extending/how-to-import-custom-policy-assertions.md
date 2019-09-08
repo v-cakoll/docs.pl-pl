@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: 627b68d707dbedfaf6a291f2ab22dbc9a4f60835
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 4510eac2d9c1b3bb64420b0678b3a47a90887188
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363854"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795622"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>Instrukcje: importowanie niestandardowych asercji zasad
 Potwierdzenia zasad opisują możliwości i wymagania punktu końcowego usługi.  Aplikacje klienckie mogą używać potwierdzeń zasad w metadanych usługi, aby skonfigurować powiązanie klienta lub dostosować kontrakt usługi dla punktu końcowego usługi.  
@@ -25,7 +25,7 @@ Potwierdzenia zasad opisują możliwości i wymagania punktu końcowego usługi.
   
 3. Przy użyciu pliku konfiguracji. Zapoznaj się z poniższymi procedurami.  
   
-4. Korzystanie z pliku konfiguracji z [narzędziem do przesyłania metadanych programu ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Zapoznaj się z poniższymi procedurami.  
+4. Korzystanie z pliku konfiguracji z [narzędziem do przesyłania metadanych programu ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Zapoznaj się z poniższymi procedurami.  
   
 5. Programowe Wstawianie importera zasad. Zapoznaj się z poniższymi procedurami.  
   
@@ -44,7 +44,7 @@ Potwierdzenia zasad opisują możliwości i wymagania punktu końcowego usługi.
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>Aby wstawić importera zasad niestandardowych do systemu metadanych przy użyciu pliku konfiguracji  
   
-1. Dodaj typ importera do `<extensions>` elementu [ \<wewnątrz elementu policyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) w pliku konfiguracji klienta.  
+1. Dodaj typ importera do `<extensions>` elementu [ \<wewnątrz elementu policyImporters >](../../configure-apps/file-schema/wcf/policyimporters.md) w pliku konfiguracji klienta.  
   
      [!code-xml[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]   
   
@@ -55,9 +55,9 @@ Potwierdzenia zasad opisują możliwości i wymagania punktu końcowego usługi.
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-svcutilexe"></a>Aby wstawić importera zasad niestandardowych do systemu metadanych przy użyciu programu Svcutil. exe  
   
-1. Dodaj typ importera do `<extensions>` elementu [ \<wewnątrz elementu policyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) w pliku konfiguracyjnym Svcutil. exe. config. Możesz również wskazać Svcutil. exe, aby załadować typy importerów zasad zarejestrowane w innym pliku konfiguracji przy użyciu `/svcutilConfig` opcji.  
+1. Dodaj typ importera do `<extensions>` elementu [ \<wewnątrz elementu policyImporters >](../../configure-apps/file-schema/wcf/policyimporters.md) w pliku konfiguracyjnym Svcutil. exe. config. Możesz również wskazać Svcutil. exe, aby załadować typy importerów zasad zarejestrowane w innym pliku konfiguracji przy użyciu `/svcutilConfig` opcji.  
   
-2. Użyj [Narzędzia do przesyłania metadanych ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) w celu zaimportowania metadanych, a importer jest wywoływany automatycznie.  
+2. Użyj [Narzędzia do przesyłania metadanych ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) w celu zaimportowania metadanych, a importer jest wywoływany automatycznie.  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-programmatically"></a>Aby programowo wstawić importera zasad niestandardowych do systemu metadanych  
   
@@ -68,4 +68,4 @@ Potwierdzenia zasad opisują możliwości i wymagania punktu końcowego usługi.
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
-- [Rozszerzanie systemu metadanych](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+- [Rozszerzanie systemu metadanych](extending-the-metadata-system.md)

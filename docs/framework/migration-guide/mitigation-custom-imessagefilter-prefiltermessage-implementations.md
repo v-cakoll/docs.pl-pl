@@ -1,37 +1,37 @@
 ---
-title: 'Środki zaradcze: Implementacji niestandardowego IMessageFilter.PreFilterMessage'
+title: Środki zaradcze Niestandardowe implementacje IMessageFilter. PreFilterMessage
 ms.date: 03/30/2017
 ms.assetid: 9cf47c5b-0bb2-45df-9437-61cd7e7c2f4d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3ac43b574c4382c4aec5070acde0fa77516727d
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 2af81468c5c4c4caf2f09725d6c7c4723084e35c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251147"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779432"
 ---
-# <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>Środki zaradcze: Implementacji niestandardowego IMessageFilter.PreFilterMessage
+# <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>Środki zaradcze Niestandardowe implementacje IMessageFilter. PreFilterMessage
 
-W aplikacjach Windows Forms, przeznaczonych dla wersji programu .NET Framework, począwszy od programu .NET Framework 4.6.1 niestandardowego <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> implementacji może bezpiecznie filtr komunikatów, kiedy <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> metoda jest wywoływana, gdy <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> implementacji:
+W Windows Forms aplikacje, które są przeznaczone dla wersji .NET Framework począwszy od .NET Framework 4.6.1, implementacja niestandardowa <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> może bezpiecznie filtrować komunikaty, <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> gdy <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> Metoda jest wywoływana, jeśli implementacja:
 
-- Wykonuje jedno lub oba z następujących czynności:
+- Wykonuje jedną lub obie następujące czynności:
 
-  - Dodaje filtr komunikatu przez wywołanie metody <xref:System.Windows.Forms.Application.AddMessageFilter%2A> metody.
+  - Dodaje filtr komunikatów przez wywołanie <xref:System.Windows.Forms.Application.AddMessageFilter%2A> metody.
 
-  - Usuwa filtr komunikatu przez wywołanie metody <xref:System.Windows.Forms.Application.RemoveMessageFilter%2A> metody. Metoda.
+  - Usuwa filtr komunikatów przez wywołanie <xref:System.Windows.Forms.Application.RemoveMessageFilter%2A> metody. Method.
 
-- **I** pompy komunikatów przez wywołanie metody <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType> metody.
+- **I** pompy komunikatów przez wywołanie <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType> metody.
 
 ## <a name="impact"></a>Wpływ
 
-Ta zmiana dotyczy tylko aplikacji Windows Forms, przeznaczonych dla wersji programu .NET Framework, począwszy od programu .NET Framework 4.6.1.
+Ta zmiana ma wpływ tylko na Windows Forms aplikacje, które są przeznaczone dla wersji .NET Framework, począwszy od .NET Framework 4.6.1.
 
-W przypadku aplikacji Windows Forms przeznaczone dla poprzednich wersji programu .NET Framework, throw takich implementacji w niektórych przypadkach <xref:System.IndexOutOfRangeException> wyjątek podczas <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> wywoływana jest metoda
+W przypadku aplikacji Windows Forms przeznaczonych dla poprzednich wersji .NET Framework takie implementacje w niektórych przypadkach <xref:System.IndexOutOfRangeException> zgłaszają wyjątek, <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> gdy wywoływana jest metoda
 
 ## <a name="mitigation"></a>Ograniczenie
 
-Jeśli ta zmiana jest niepożądany, aplikacji przeznaczonych dla platformy .NET Framework 4.6.1 lub nowszej wersji można zrezygnować z go, dodając następujące ustawienie konfiguracji, aby [ \<runtime >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sekcję pliku konfiguracji aplikacji:
+Jeśli ta zmiana jest niepożądana, aplikacje przeznaczone dla .NET Framework 4.6.1 lub nowszej wersji mogą zrezygnować z niego, dodając następujące ustawienia konfiguracji do [ \<sekcji > środowiska uruchomieniowego](../configure-apps/file-schema/runtime/runtime-element.md) w pliku konfiguracyjnym aplikacji:
 
 ```xml
 <runtime>
@@ -39,7 +39,7 @@ Jeśli ta zmiana jest niepożądany, aplikacji przeznaczonych dla platformy .NET
 </runtime>
 ```
 
-Ponadto aplikacje poprzedniej wersji programu .NET Framework, które są uruchomione w .NET Framework 4.6.1 lub nowszej wersji zgodzić się na to zachowanie, dodając następujące ustawienie konfiguracji, aby [ \<runtime >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sekcję pliku konfiguracji aplikacji:
+Ponadto aplikacje, które są przeznaczone dla poprzednich wersji .NET Framework ale działają w .NET Framework 4.6.1 lub nowszej wersji, mogą zrezygnować z tego zachowania, dodając następujące ustawienia konfiguracji do [ \<sekcji > środowiska uruchomieniowego](../configure-apps/file-schema/runtime/runtime-element.md) plik konfiguracji aplikacji:
 
 ```xml
 <runtime>
@@ -49,4 +49,4 @@ Ponadto aplikacje poprzedniej wersji programu .NET Framework, które są uruchom
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Zmiany retargetingu](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)
+- [Zmiany retargetingu](retargeting-changes-in-the-net-framework-4-6-1.md)

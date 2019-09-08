@@ -2,42 +2,42 @@
 title: Kluczowe założenia modelu danych jednostki
 ms.date: 03/30/2017
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
-ms.openlocfilehash: 2efa54b6bd656129812cc9dd7c2ce38a4fb2a89a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5e4fc0c960d7dac289852df3b080c7e49d1d1c10
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879281"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795563"
 ---
 # <a name="entity-data-model-key-concepts"></a>Kluczowe założenia modelu danych jednostki
-Do opisania struktury danych Entity Data Model (EDM) używa trzech kluczowych pojęć: *typu jednostki*, *typ skojarzenia*, i *właściwość*. Oto najważniejsze pojęcia do opisywania struktury danych w implementacji EDM.  
+Entity Data Model (EDM) używa trzech najważniejszych koncepcji do opisywania struktury danych: *typu jednostki*, *typu skojarzenia*i *Właściwości*. Są to najważniejsze pojęcia dotyczące opisywania struktury danych w dowolnej implementacji modelu EDM.  
   
 ## <a name="entity-type"></a>Typ jednostki  
- [Typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) jest elementem składowym podstawowych do opisywania struktury danych z modelu Entity Data Model. W modelu koncepcyjnym, typy jednostek są konstruowane na podstawie [właściwości](../../../../docs/framework/data/adonet/property.md) i opisz strukturę koncepcje najwyższego poziomu, takich jak klienci i zamówienia w aplikacji biznesowej. W ten sam sposób czy definicję klasy w program komputerowy jest szablonem dla wystąpienia klasy, typ jednostki jest szablonem dla jednostki. Jednostka reprezentuje określonego obiektu (na przykład konkretnego klienta lub zamówienia). Każda jednostka musi mieć unikatową [klucz jednostki](../../../../docs/framework/data/adonet/entity-key.md) w ramach [zestaw jednostek](../../../../docs/framework/data/adonet/entity-set.md).  Zestaw jednostek jest kolekcją wystąpień określonego typu. Zestawy jednostek (i [zestawów skojarzeń](../../../../docs/framework/data/adonet/association-set.md)) są logicznie pogrupowane w [kontener jednostek](../../../../docs/framework/data/adonet/entity-container.md).  
+ [Typ jednostki](entity-type.md) jest podstawowym blokiem konstrukcyjnym opisującym strukturę danych z Entity Data Model. W modelu koncepcyjnym typy jednostek są zbudowane z [Właściwości](property.md) i opisują strukturę koncepcji najwyższego poziomu, takich jak klienci i zamówienia w aplikacji biznesowej. W taki sam sposób, w jaki definicja klasy w programie komputerowym jest szablonem wystąpień klasy, typ jednostki jest szablon dla jednostek. Jednostka reprezentuje konkretny obiekt (na przykład konkretny klient lub zamówienie). Każda jednostka musi mieć unikatowy [klucz jednostki](entity-key.md) w ramach [zestawu jednostek](entity-set.md).  Zestaw jednostek jest kolekcją wystąpień określonego typu jednostki. Zestawy jednostek (i [zestawy skojarzeń](association-set.md)) są logicznie pogrupowane w [kontenerze jednostek](entity-container.md).  
   
- Dziedziczenie jest obsługiwana przy użyciu typów jednostek: oznacza to, co typ jednostki może pochodzić z innej. Aby uzyskać więcej informacji, zobacz [modelu danych jednostki: Dziedziczenie](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).  
+ Dziedziczenie jest obsługiwane w przypadku typów jednostek: to oznacza, że jeden typ jednostki może pochodzić od innego. Aby uzyskać więcej informacji, [zobacz Entity Data Model: Dziedziczenie](entity-data-model-inheritance.md).  
   
 ## <a name="association-type"></a>Typ skojarzenia  
- [Typ skojarzenia](../../../../docs/framework/data/adonet/association-type.md) (nazywane również skojarzenie) jest elementem składowym podstawowych do opisywania relacji w modelu Entity Data Model. W modelu koncepcyjnym skojarzenia reprezentuje relację między dwoma typami encji (na przykład klienta i zamówienia). Każde skojarzenie ma dwa [skojarzenia](../../../../docs/framework/data/adonet/association-end.md) określające zaangażowanych w skojarzeniu typów jednostek. Każdy punkt końcowy skojarzenia określa również [skojarzenie i liczebność](../../../../docs/framework/data/adonet/association-end-multiplicity.md) oznacza liczbę jednostek, które mogą być na końcu tego skojarzenia. Skojarzenie i liczebność może mieć wartość równą jeden (1), zero lub jeden (od 0 do 1), lub wielu (*). Jednostki na jednym końcu asocjacji jest możliwy za pośrednictwem [właściwości nawigacji](../../../../docs/framework/data/adonet/navigation-property.md), lub za pomocą kluczy obcych, jeśli są one widoczne na typ jednostki. Aby uzyskać więcej informacji, zobacz [właściwość klucza obcego](../../../../docs/framework/data/adonet/foreign-key-property.md).  
+ [Typ skojarzenia](association-type.md) (nazywany także skojarzeniem) to podstawowy blok konstrukcyjny do opisywania relacji w Entity Data Model. W modelu koncepcyjnym skojarzenie reprezentuje relację między dwoma typami jednostek (np. klientem i kolejnością). Każde skojarzenie ma dwa [punkty końcowe skojarzenia](association-end.md) , które określają typy jednostek objęte skojarzeniem. Każdy punkt końcowy skojarzenia określa również [liczebność końcową skojarzenia](association-end-multiplicity.md) , która wskazuje liczbę jednostek, które mogą znajdować się na tym końcu skojarzenia. Liczebność końcowa skojarzenia może mieć wartość jednego (1), zero lub jeden (0.. 1) lub wiele (\*). Do jednostek na jednym końcu skojarzenia można uzyskać dostęp za poorednictwem [właściwości nawigacji](navigation-property.md)lub kluczy obcych, jeśli są one uwidocznione w typie jednostki. Aby uzyskać więcej informacji, zobacz [Właściwość klucza obcego](foreign-key-property.md).  
   
- W aplikacji wystąpienia skojarzenia reprezentuje określone skojarzenia (takie jak skojarzenie między wystąpieniem odbiorcy i wystąpień zamówienia). Skojarzenie wystąpienia są logicznie pogrupowane w [zestaw skojarzeń](../../../../docs/framework/data/adonet/association-set.md). Zestawów skojarzeń (i [zestawy jednostek](../../../../docs/framework/data/adonet/entity-set.md)) są logicznie pogrupowane w [kontener jednostek](../../../../docs/framework/data/adonet/entity-container.md).  
+ W aplikacji wystąpienie skojarzenia reprezentuje określone skojarzenie (takie jak skojarzenie między wystąpieniem klienta i wystąpieniami zamówienia). Wystąpienia skojarzeń są logicznie pogrupowane w [zestawie skojarzenia](association-set.md). Zestawy skojarzeń (i [zestawy jednostek](entity-set.md)) są logicznie pogrupowane w [kontenerze jednostek](entity-container.md).  
   
 ## <a name="property"></a>Właściwość  
- [Typy jednostek](../../../../docs/framework/data/adonet/entity-type.md) zawierają [właściwości](../../../../docs/framework/data/adonet/property.md) definiują ich struktury i właściwości. Na przykład typ jednostki Klient może mieć właściwości, takie jak CustomerId, nazwa i adres.  
+ [Typy jednostek](entity-type.md) zawierają [Właściwości](property.md) definiujące ich strukturę i cechy. Na przykład typ jednostki klienta może mieć właściwości, takie jak CustomerId, Name i Address.  
   
- Właściwości w modelu koncepcyjnym są analogiczne do właściwości zdefiniowane w klasie w programie komputera. W ten sam sposób, że właściwości w klasie określenia kształtu elementu klasy i zawierają informacje o obiektach właściwości w modelu koncepcyjnym określenia kształtu typu jednostki i zawierają informacje na temat wystąpień typu jednostki.  
+ Właściwości w modelu koncepcyjnym są analogiczne do właściwości zdefiniowanych w klasie w programie komputerowym. W taki sam sposób, w jaki właściwości klasy definiują kształt klasy i zawierają informacje o obiektach, właściwości w modelu koncepcyjnym definiują kształt typu jednostki i zawierają informacje o wystąpieniach typu jednostki.  
   
- Właściwość może zawierać danych pierwotnych (na przykład ciąg, liczba całkowita lub wartość logiczna) lub dane strukturalne (takie jak typ złożony). Aby uzyskać więcej informacji, zobacz [modelu danych jednostki: Pierwotne typy danych](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).  
+ Właściwość może zawierać dane pierwotne (takie jak ciąg, liczba całkowita lub wartość logiczna) lub dane strukturalne (takie jak typ złożony). Aby uzyskać więcej informacji, [zobacz Entity Data Model: Typy](entity-data-model-primitive-data-types.md)danych pierwotnych.  
   
-## <a name="representations-of-a-conceptual-model"></a>Reprezentacje Model koncepcyjny  
- A *modelu koncepcyjnego* to reprezentacja określonej struktury niektórych danych jako jednostek i relacji. Jest jednym ze sposobów do reprezentowania modelu koncepcyjnego z diagramu. Poniższy diagram przedstawia modelu koncepcyjnego z trzech typów jednostki (`Book`, `Publisher`, i `Author`) i dwa powiązania (`PublishedBy` i `WrittenBy`):  
+## <a name="representations-of-a-conceptual-model"></a>Reprezentacje modelu koncepcyjnego  
+ *Model koncepcyjny* jest określoną reprezentacją struktury niektórych danych jako jednostek i relacji. Jednym ze sposobów reprezentowania modelu koncepcyjnego jest diagram. Poniższy diagram przedstawia model koncepcyjny z trzema typami jednostek (`Book`, `Publisher`i `Author`) oraz dwoma skojarzeniami (`PublishedBy` i `WrittenBy`):  
   
- ![Diagram przedstawiający modelu koncepcyjnego z trzech typów jednostek.](./media/entity-data-model-key-concepts/conceptual-model-entity-types-associations.gif)  
+ ![Diagram przedstawiający model koncepcyjny z trzema typami jednostek.](./media/entity-data-model-key-concepts/conceptual-model-entity-types-associations.gif)  
   
- Taka reprezentacja ma jednak niektórych niedoskonałości, jeśli chodzi o przekazywania niektóre szczegóły na temat modelu. Na przykład właściwość jednostki Ustaw informacje dotyczące typu i nie są przekazywane na diagramie. Bogactwa modelu koncepcyjnego mogą być przeniesione wyraźniej języka specyficznego dla domeny (DSL). [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) używa DSL oparty na formacie XML o nazwie *język definicji schematu koncepcyjnego* ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych. Poniżej przedstawiono definicję CSDL modelu koncepcyjnego na powyższym diagramie:  
+ Jednakże ta reprezentacja ma pewne niedociągnięcia, gdy chodzi o przekazywanie pewnych szczegółów dotyczących modelu. Na przykład typ właściwości i informacje o zestawie jednostek nie są przekazywane na diagramie. Przejrzystość modelu koncepcyjnego może być przekazana dokładniej przy użyciu języka specyficznego dla domeny (DSL). [ADO.NET Entity Framework](./ef/index.md) korzysta z opartego na języku XML języka DSL zwanego *językiem definicji schematu koncepcyjnego* ([CSDL](./ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych. Poniżej znajduje się definicja CSDL modelu koncepcyjnego na powyższym diagramie:  
   
  [!code-xml[EDM_Example_Model#EDMExampleCSDL](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#edmexamplecsdl)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Model danych jednostki](entity-data-model.md)

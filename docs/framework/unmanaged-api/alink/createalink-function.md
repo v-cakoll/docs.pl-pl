@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 993848711f41c9e03b969a3c611982a5c8bc860d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 24f7e2d5a547b78ceb4808feaf581c6f49807cf7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742218"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787620"
 ---
 # <a name="createalink-function"></a>CreateALink — Funkcja
-Tworzy wystąpienie programu Assembly Linker i ustawia wskaźnik do określonego interfejsu.  
+Tworzy wystąpienie konsolidatora zestawu i ustawia wskaźnik do określonego interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,12 +40,12 @@ HRESULT CreateALink (
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|`riid`|Nazwa fizyczna jednego z interfejsów Assembly Linker.|  
-|`ppInterface`|Lokalizację zawierającą od pomyślnego zakończenia wskaźnika do `riid` interfejsu.|  
+|`riid`|Nazwa fizyczna jednego z interfejsów konsolidatora zestawu.|  
+|`ppInterface`|Lokalizacja po pomyślnym zakończeniu zawiera wskaźnik do `riid` interfejsu.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Biblioteka**: alink.dll  
+ **Biblioteka**: Alink. dll  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Al.exe (konsolidator zestawów)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Al.exe (konsolidator zestawów)](../../tools/al-exe-assembly-linker.md)

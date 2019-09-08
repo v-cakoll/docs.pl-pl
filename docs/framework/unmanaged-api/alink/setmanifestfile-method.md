@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 825bb945e0d8662a4dadc9d688de6a677165df4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b293c30060107d18c6b609efc82c4128a73cc1c7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741474"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787208"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile — Metoda
-Pozwala na określenie lub zresetowania pliku manifestu, który konsolidator używa podczas tworzenia zestawu.  
+Umożliwia określenie lub zresetowanie pliku manifestu używanego przez konsolidatora podczas tworzenia zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,20 +37,20 @@ HRESULT SetManifestFile(
 ## <a name="parameters"></a>Parametry  
  `pszFile`  
   
- Nazwa pliku manifestu, którego zawartość są umieszczane w obiekcie blob zasobów Win32.  
+ Nazwa pliku manifestu, którego zawartość jest umieszczana w obiekcie blob zasobów Win32.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="remarks"></a>Uwagi  
- Połączenie się z tym przed żądaniem Win32ResBlob. Wartość `pszFile` parametr jest nazwą pliku manifestu, których zawartość jest odczytać i umieścić w zasoby Win32, za pomocą Identyfikatora RT_MANIFEST. Gdy zostanie wywołana przy użyciu parametru o wartości NULL, jest wyczyszczone wszelkie wcześniej odczytu manifestu. Dzięki temu jeden do zresetowania stanu konsolidator do tego czasu inicjowania.  
+ Wywołaj to przed pytaniem o Win32ResBlob. Wartość `pszFile` parametru jest nazwą pliku manifestu, którego zawartość jest odczytywana i umieszczana w zasobach Win32 o identyfikatorze RT_MANIFEST. Gdy wywoływana przy użyciu parametru o wartości NULL, każdy poprzednio odczytany manifest jest czyszczony. Umożliwia to jednemu resetowaniu stanu konsolidatora do czasu inicjacji.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga aLink.h  
+ Wymaga aLink. h  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IALink3, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Al.exe (konsolidator zestawów)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [IALink3, interfejs](ialink3-interface.md)
+- [ALink, interfejs API](index.md)
+- [IALink, interfejs](ialink-interface.md)
+- [Al.exe (konsolidator zestawów)](../../tools/al-exe-assembly-linker.md)

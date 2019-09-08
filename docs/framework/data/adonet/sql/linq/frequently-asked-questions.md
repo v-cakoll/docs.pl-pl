@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 714ec7bda4f6c79b789d6c3029b68a04cef1342b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ed9149eb5b88d648c02863e0fb0101e5503e1c73
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041227"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782144"
 ---
 # <a name="frequently-asked-questions"></a>Często zadawane pytania
 
 W poniższych sekcjach opisano niektóre typowe problemy, które mogą wystąpić podczas wdrażania [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]programu.
 
-[Rozwiązywanie problemów](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)z dodatkowymi problemami.
+[Rozwiązywanie problemów](troubleshooting.md)z dodatkowymi problemami.
 
 ## <a name="cannot-connect"></a>Nie można nawiązać połączenia
 
 PYTANIE: Nie mogę nawiązać połączenia z moją bazą danych.
 
-A. Upewnij się, że parametry połączenia są poprawne i że wystąpienie SQL Server jest uruchomione. Należy również pamiętać [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , że wymaga włączenia protokołu potoków nazwanych. Aby uzyskać więcej informacji, zobacz uczenie się [według przewodników](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).
+A. Upewnij się, że parametry połączenia są poprawne i że wystąpienie SQL Server jest uruchomione. Należy również pamiętać [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , że wymaga włączenia protokołu potoków nazwanych. Aby uzyskać więcej informacji, zobacz [uczenie się według przewodników](learning-by-walkthroughs.md).
 
 ## <a name="changes-to-database-lost"></a>Utracone zmiany w bazie danych
 
@@ -40,7 +40,7 @@ Dokładne szczegóły użycia połączenia zależą od następujących:
 
 - Stan połączenia, <xref:System.Data.Linq.DataContext> jeśli jest konstruowany z obiektem połączenia.
 
-- Ustawienia parametrów połączenia (na przykład włączenie wielu aktywnych zestawów wyników (MARS). Aby uzyskać więcej informacji, zobacz [wiele aktywnych zestawów wyników (MARS)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md).
+- Ustawienia parametrów połączenia (na przykład włączenie wielu aktywnych zestawów wyników (MARS). Aby uzyskać więcej informacji, zobacz [wiele aktywnych zestawów wyników (MARS)](../multiple-active-result-sets-mars.md).
 
 ## <a name="updating-without-querying"></a>Aktualizowanie bez wykonywania zapytań
 
@@ -56,7 +56,7 @@ A. Chociaż [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 
 
 PYTANIE: Moje zapytanie zwraca nieoczekiwane wyniki. Jak można sprawdzić, co się dzieje?
 
-A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Program udostępnia kilka narzędzi do sprawdzania kodu SQL, który generuje. Jednym z najważniejszych jest <xref:System.Data.Linq.DataContext.Log%2A>. Aby uzyskać więcej informacji, zobacz [obsługa debugowania](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).
+A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Program udostępnia kilka narzędzi do sprawdzania kodu SQL, który generuje. Jednym z najważniejszych jest <xref:System.Data.Linq.DataContext.Log%2A>. Aby uzyskać więcej informacji, zobacz [obsługa debugowania](debugging-support.md).
 
 ## <a name="unexpected-stored-procedure-results"></a>Nieoczekiwane wyniki procedury składowanej
 
@@ -110,13 +110,13 @@ select nax(i) AS MaxResult from t where name like 'hello'
 end
 ```
 
-Aby uzyskać więcej informacji, zobacz [Dostosowywanie operacji za pomocą procedur składowanych](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md).
+Aby uzyskać więcej informacji, zobacz [Dostosowywanie operacji za pomocą procedur składowanych](customizing-operations-by-using-stored-procedures.md).
 
 ## <a name="serialization-errors"></a>Błędy serializacji
 
 PYTANIE: Podczas próby serializacji pojawia się następujący błąd: "Type" System. Data. LINQ. ChangeTracker + StandardChangeTracker "... nie jest oznaczony jako możliwy do serializacji. "
 
-A. Generowanie kodu w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] programie <xref:System.Runtime.Serialization.DataContractSerializer> obsługuje serializację. Nie obsługuje <xref:System.Xml.Serialization.XmlSerializer> ani <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Aby uzyskać więcej informacji, zobacz [serializacji](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md).
+A. Generowanie kodu w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] programie <xref:System.Runtime.Serialization.DataContractSerializer> obsługuje serializację. Nie obsługuje <xref:System.Xml.Serialization.XmlSerializer> ani <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Aby uzyskać więcej informacji, zobacz [serializacji](serialization.md).
 
 ## <a name="multiple-dbml-files"></a>Wiele plików DBML
 
@@ -210,13 +210,13 @@ PYTANIE: Czy istnieje konstrukcja, która może pomóc w <xref:System.Data.Linq.
 
 A. Nie próbuj ponownie używać wystąpień programu <xref:System.Data.Linq.DataContext>. Każda <xref:System.Data.Linq.DataContext> z nich utrzymuje stan (łącznie z pamięcią podręczną tożsamości) dla jednej konkretnej sesji edytowania/zapytań. Aby uzyskać nowe wystąpienia na podstawie bieżącego stanu bazy danych, Użyj nowego <xref:System.Data.Linq.DataContext>.
 
-Nadal można używać podstawowej puli połączeń ADO.NET. Aby uzyskać więcej informacji, zobacz SQL Servering pooling [(ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).
+Nadal można używać podstawowej puli połączeń ADO.NET. Aby uzyskać więcej informacji, zobacz [SQL Servering pooling (ADO.NET)](../../sql-server-connection-pooling.md).
 
 ## <a name="second-datacontext-is-not-updated"></a>Drugi element DataContext nie został zaktualizowany
 
 PYTANIE: Użyto jednego wystąpienia <xref:System.Data.Linq.DataContext> do przechowywania wartości w bazie danych. Jednak sekunda <xref:System.Data.Linq.DataContext> w tej samej bazie danych nie odzwierciedla zaktualizowanych wartości. Drugie <xref:System.Data.Linq.DataContext> wystąpienie wydaje się zwracać wartości buforowane.
 
-A. Takie zachowanie jest zaprojektowane. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]nadal zwraca te same wystąpienia/wartości, które zostały wydane w pierwszym wystąpieniu. Podczas wprowadzania aktualizacji należy użyć optymistycznej współbieżności. Oryginalne dane są używane do sprawdzania stanu bieżącego bazy danych w celu potwierdzenia, że nadal nie są zmieniane. Jeśli uległy zmianie, wystąpi konflikt i aplikacja musi je rozwiązać. Jedną z opcji aplikacji jest zresetowanie oryginalnego stanu do bieżącego stanu bazy danych i ponowne wypróbowanie aktualizacji. Aby uzyskać więcej informacji, zobacz [jak: Zarządzanie konfliktami](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)zmian.
+A. Takie zachowanie jest zaprojektowane. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]nadal zwraca te same wystąpienia/wartości, które zostały wydane w pierwszym wystąpieniu. Podczas wprowadzania aktualizacji należy użyć optymistycznej współbieżności. Oryginalne dane są używane do sprawdzania stanu bieżącego bazy danych w celu potwierdzenia, że nadal nie są zmieniane. Jeśli uległy zmianie, wystąpi konflikt i aplikacja musi je rozwiązać. Jedną z opcji aplikacji jest zresetowanie oryginalnego stanu do bieżącego stanu bazy danych i ponowne wypróbowanie aktualizacji. Aby uzyskać więcej informacji, zobacz [jak: Zarządzanie konfliktami](how-to-manage-change-conflicts.md)zmian.
 
 Można również ustawić <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> wartość false, co spowoduje wyłączenie buforowania i śledzenie zmian. Następnie można pobrać najnowsze wartości przy każdym zapytaniu.
 
@@ -228,6 +228,6 @@ A. Tryb tylko do odczytu wyłącza możliwość śledzenia zmian w kontekście.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Rozwiązywanie problemów](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)
-- [Zabezpieczenia w składniku LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)
+- [Dokumentacja](reference.md)
+- [Rozwiązywanie problemów](troubleshooting.md)
+- [Zabezpieczenia w składniku LINQ to SQL](security-in-linq-to-sql.md)

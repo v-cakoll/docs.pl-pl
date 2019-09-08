@@ -5,39 +5,39 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70d7c058-0280-4815-a008-6f290093591a
-ms.openlocfilehash: b7a2588b9e5082915dff4d371adff2ad3d232d74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebef8cb373da4021fd68fd7ce38de8cb06eb81ec
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032542"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782171"
 ---
 # <a name="find-the-maximum-value-in-a-numeric-sequence"></a>Odnajdywanie wartości maksymalnej w sekwencji numerycznej
-Użyj <xref:System.Linq.Enumerable.Max%2A> operator, aby znaleźć największą wartość w sekwencji wartości liczbowych.  
+Użyj operatora <xref:System.Linq.Enumerable.Max%2A> , aby znaleźć najwyższą wartość w sekwencji wartości liczbowych.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład umożliwia znalezienie Najpóźniejsza data zatrudnienia dla każdego pracownika.  
+ Poniższy przykład umożliwia znalezienie najnowszej daty zatrudnienia dla każdego pracownika.  
   
- Po uruchomieniu tego zapytania względem przykładowej bazy danych Northwind, dane wyjściowe to: `11/15/1994 12:00:00 AM`.  
+ W przypadku uruchomienia tego zapytania względem przykładowej bazy danych Northwind dane wyjściowe to: `11/15/1994 12:00:00 AM`.  
   
  [!code-csharp[DLinqQueryExamples#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#6)]
  [!code-vb[DLinqQueryExamples#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#6)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład umożliwia znalezienie większość jednostek w magazynie dla każdego produktu.  
+ Poniższy przykład znajduje najwięcej jednostek w magazynie dla każdego produktu.  
   
- Po uruchomieniu tego przykładu w bazie danych Northwind przykładowe dane wyjściowe to: `125`.  
+ W przypadku uruchomienia tego przykładu w przypadku przykładowej bazy danych Northwind dane wyjściowe `125`to:.  
   
  [!code-csharp[DLinqQueryExamples#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#7)]
  [!code-vb[DLinqQueryExamples#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#7)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto Max można znaleźć `Products` mają najwyższą cena jednostkowa w każdej kategorii. Dane wyjściowe następnie wyświetla wyniki według kategorii.  
+ W poniższym przykładzie zastosowano wartość Max, `Products` aby znaleźć wartość, która ma najwyższą cenę jednostkową w każdej kategorii. Następnie dane wyjściowe wyświetlają wyniki według kategorii.  
   
  [!code-csharp[DLinqQueryExamples#8](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#8)]
  [!code-vb[DLinqQueryExamples#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#8)]  
   
- Jeśli uruchamiasz poprzednie zapytanie względem przykładowej bazy danych Northwind, wyniki będą wyglądać w następujący sposób:  
+ W przypadku uruchomienia poprzedniego zapytania względem przykładowej bazy danych Northwind wyniki będą wyglądać następująco:  
   
  `1`  
   
@@ -73,5 +73,5 @@ Użyj <xref:System.Linq.Enumerable.Max%2A> operator, aby znaleźć największą 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zapytania zagregowane](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
-- [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Zapytania zagregowane](aggregate-queries.md)
+- [Pobieranie przykładowych baz danych](downloading-sample-databases.md)

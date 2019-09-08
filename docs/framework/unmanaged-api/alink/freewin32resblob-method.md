@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 75aec187452e2f9f442a5d4856fe6777c03f34c1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ea0fbceb1e778a2f26e0625a337b803f417b59eb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741980"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777247"
 ---
 # <a name="freewin32resblob-method"></a>FreeWin32ResBlob — Metoda
-Zwalnia blob zasobów Win32 i skojarzonych zasobów.  
+Zwalnia obiekt BLOB zasobów Win32 i skojarzone zasoby.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,16 +36,16 @@ HRESULT FreeWin32ResBlob(
   
 ## <a name="parameters"></a>Parametry  
  `ppResBlob`  
- Obiekt blob zasobów mogą być wprowadzane. Ta metoda przypisuje wskaźnik obiektu blob na wartość NULL.  
+ Obiekt BLOB zasobu do zwolnienia. Ta metoda przypisuje wskaźnik obiektu BLOB do wartości NULL.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga alink.h  
+ Wymaga Alink. h  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink, interfejs](ialink-interface.md)
+- [IALink2, interfejs](ialink2-interface.md)
+- [ALink, interfejs API](index.md)

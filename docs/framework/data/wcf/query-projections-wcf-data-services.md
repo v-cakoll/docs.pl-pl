@@ -10,12 +10,12 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 44e99db2d75fcd8e84f91f0afc8da54ff6c3f707
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8128fd3cab0ca20da87a1a98c2657aefab96beaf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931167"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779819"
 ---
 # <a name="query-projections-wcf-data-services"></a>Projekcje zapytań (Usługi danych programu WCF)
 
@@ -38,7 +38,7 @@ Typy jednostek muszą mieć co najmniej jedną właściwość tożsamości, któ
 
 - Gdy typ ma właściwość o nazwie `ID`.
 
-- Gdy typ ma właściwość o nazwie`ID`Type, gdzie *Type* jest nazwą typu.
+- Gdy typ ma *Właściwość o nazwie*`ID`Type, gdzie *Type* jest nazwą typu.
 
 Domyślnie podczas tworzenia projektu wyników zapytania do typu zdefiniowanego na kliencie właściwości wymagane w projekcji muszą istnieć w typie klienta. Jeśli jednak określisz wartość `true` <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> właściwości <xref:System.Data.Services.Client.DataServiceContext>, właściwości określone w projekcji nie są wymagane do wystąpienia w typie klienta.
 
@@ -102,7 +102,7 @@ Poniżej opisano zachowania podczas projekcji wyników do jednostek i typów nie
 
 Podczas definiowania projekcji zapytania należy stosować następujące zagadnienia dodatkowe.
 
-- Podczas definiowania niestandardowych kanałów informacyjnych dla formatu Atom należy upewnić się, że wszystkie właściwości jednostki, które mają zdefiniowane niestandardowe mapowania, są zawarte w projekcji. Gdy właściwość mapowanego obiektu nie jest uwzględniona w projekcji, może dojść do utraty danych. Aby uzyskać więcej informacji, zobacz temat [Dostosowywanie kanału informacyjnego](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).
+- Podczas definiowania niestandardowych kanałów informacyjnych dla formatu Atom należy upewnić się, że wszystkie właściwości jednostki, które mają zdefiniowane niestandardowe mapowania, są zawarte w projekcji. Gdy właściwość mapowanego obiektu nie jest uwzględniona w projekcji, może dojść do utraty danych. Aby uzyskać więcej informacji, zobacz temat [Dostosowywanie kanału informacyjnego](feed-customization-wcf-data-services.md).
 
 - Gdy operacje wstawiania są wprowadzane do typu przewidywanego, który nie zawiera wszystkich właściwości jednostki w modelu danych usługi danych, właściwości, które nie są uwzględnione w projekcji na kliencie, są ustawiane na wartości domyślne.
 
@@ -112,10 +112,10 @@ Podczas definiowania projekcji zapytania należy stosować następujące zagadni
 
 - Gdy projekcja zawiera właściwość nawigacji, powiązane obiekty są ładowane niejawnie bez konieczności wywoływania <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> metody. <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> Metoda nie jest obsługiwana w zapytaniach rzutowanych.
 
-- Zapytania o projekcje zapytań na kliencie są tłumaczone na użycie `$select` opcji zapytania w identyfikatorze URI żądania. Gdy zapytanie z projekcją jest wykonywane względem poprzedniej wersji [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] , która nie `$select` obsługuje opcji zapytania, zwracany jest błąd. Taka sytuacja może mieć miejsce, <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> gdy <xref:System.Data.Services.DataServiceBehavior> dla usługi dla danych <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>ustawiono wartość. Aby uzyskać więcej informacji, zobacz [przechowywanie wersji usługi danych](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).
+- Zapytania o projekcje zapytań na kliencie są tłumaczone na użycie `$select` opcji zapytania w identyfikatorze URI żądania. Gdy zapytanie z projekcją jest wykonywane względem poprzedniej wersji [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] , która nie `$select` obsługuje opcji zapytania, zwracany jest błąd. Taka sytuacja może mieć miejsce, <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> gdy <xref:System.Data.Services.DataServiceBehavior> dla usługi dla danych <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>ustawiono wartość. Aby uzyskać więcej informacji, zobacz [przechowywanie wersji usługi danych](data-service-versioning-wcf-data-services.md).
 
-Aby uzyskać więcej informacji, zobacz [jak: Wyniki](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)zapytania projektu.
+Aby uzyskać więcej informacji, zobacz [jak: Wyniki](how-to-project-query-results-wcf-data-services.md)zapytania projektu.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wykonywanie zapytań do usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+- [Wykonywanie zapytań do usługi danych](querying-the-data-service-wcf-data-services.md)

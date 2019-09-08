@@ -2,26 +2,26 @@
 title: System.String, metody
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: c988bf7f04b284b0d352cd9e495931543980fdba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 583c0d58562c1605f24b61489d481e19248ebed4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613757"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792491"
 ---
 # <a name="systemstring-methods"></a>System.String, metody
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie obsługuje następujących <xref:System.String> metody.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Program nie obsługuje następujących <xref:System.String> metod.  
   
-## <a name="unsupported-systemstring-methods-in-general"></a>Ogólnie rzecz biorąc nieobsługiwany metody System.String  
- Nieobsługiwana <xref:System.String> metody ogólne:  
+## <a name="unsupported-systemstring-methods-in-general"></a>Ogólnie nieobsługiwane metody System. String  
+ Ogólnie <xref:System.String> nieobsługiwane metody:  
   
-- Przeciążenia kultury (metody, które przyjmują `CultureInfo`  /  `StringComparison`  /  `IFormatProvider`).  
+- Przeciążenia z uwzględnieniem kultury (metody, które `CultureInfo`przyjmują `StringComparison`  /   /  `IFormatProvider`).  
   
-- Metody, które dopiero po lub utworzyć `char` tablicy.  
+- Metody, które pobierają lub `char` tworzą tablicę.  
   
-## <a name="unsupported-systemstring-static-methods"></a>Nieobsługiwany System.String statyczne metody  
+## <a name="unsupported-systemstring-static-methods"></a>Nieobsługiwana metoda statyczna system. String  
   
-|Nieobsługiwany System.String statyczne metody|  
+|Nieobsługiwana metoda statyczna system. String|  
 |----------------------------------------------|  
 |<xref:System.String.Copy%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType>|  
@@ -34,9 +34,9 @@ ms.locfileid: "64613757"
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|  
 |<xref:System.String.Join%2A?displayProperty=nameWithType>|  
   
-## <a name="unsupported-systemstring-non-static-methods"></a>Nieobsługiwana System.String metod niestatycznych  
+## <a name="unsupported-systemstring-non-static-methods"></a>Nieobsługiwana Metoda niestatyczna system. String  
   
-|Nieobsługiwana System.String metod niestatycznych|  
+|Nieobsługiwana Metoda niestatyczna system. String|  
 |---------------------------------------------------|  
 |<xref:System.String.IndexOfAny%28System.Char%5B%5D%29?displayProperty=nameWithType>|  
 |<xref:System.String.Split%2A?displayProperty=nameWithType>|  
@@ -45,16 +45,16 @@ ms.locfileid: "64613757"
 |<xref:System.String.TrimEnd%28System.Char%5B%5D%29?displayProperty=nameWithType>|  
 |<xref:System.String.TrimStart%28System.Char%5B%5D%29?displayProperty=nameWithType>|  
   
-## <a name="differences-from-net"></a>Różnice z platformy .NET  
+## <a name="differences-from-net"></a>Różnice od platformy .NET  
   
-- Zapytania nie uwzględniać sortowania programu SQL Server, które mogą obowiązywać na serwerze i będzie stanowić porównania wrażliwość na ustawienia kulturowe, bez uwzględniania wielkości liter domyślnie. To zachowanie różni się od domyślnej, semantyka liter programu .NET Framework.  
+- Zapytania nie uwzględniają sortowania SQL Server, które mogą być stosowane na serwerze i w związku z tym domyślnie udostępniają niezależne od wielkości liter porównania. To zachowanie różni się od domyślnej, zależnej od wielkości liter semantyki .NET Framework.  
   
-- Gdy `LastIndexOf` jest zwraca wartość 0, ciągiem `NULL` lub znaleziono pozycji to 0.  
+- Gdy `LastIndexOf` zwraca wartość 0, ciąg jest `NULL` lub pozycja znaleziona ma wartość 0.  
   
-- Nieoczekiwane wyniki mogą być zwracane z łączenia lub inne operacje na ciągi o stałej długości (`CHAR`, `NCHAR`), ponieważ te typy mają automatycznie dopełnienie stosowane w bazie danych.  
+- Nieoczekiwane wyniki mogą zostać zwrócone z łączenia lub innych operacji na ciągach o stałej`CHAR`długości `NCHAR`(,), ponieważ te typy automatycznie mają uzupełnienie zastosowane w bazie danych.  
   
-- Ponieważ wiele metod, takich jak `Replace`, `ToLower`, `ToUpper`i indeksatora znaków, ma nie prawidłowe tłumaczenia `TEXT` lub `NTEXT` kolumn i XML, `SqlExceptions` wystąpić, jeśli zwykle translacji. To zachowanie jest uważany za akceptowalne dla tych typów. Jednak wszystkie operacje na ciągach musi odpowiadać wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) semantyki dla `VARCHAR`, `NVARCHAR`, `VARCHAR(max)`, i `NVARCHAR(max)`.  
+- Ze względu na to, `Replace`że `ToLower`wiele `ToUpper`metod, takich jak,, i indeksator znaku, nie ma `TEXT` prawidłowych tłumaczeń dla `SqlExceptions` `NTEXT` kolumn i XML, występuje w przypadku przetłumaczenia normalnego. Takie zachowanie jest uznawane za akceptowalne dla tych typów. Jednak wszystkie operacje na ciągach muszą być zgodne z semantyką środowiska uruchomieniowego języka `VARCHAR`wspólnego `NVARCHAR`(CLR) `NVARCHAR(max)`dla,, `VARCHAR(max)`i.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Typy danych i funkcje](data-types-and-functions.md)

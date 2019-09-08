@@ -2,63 +2,62 @@
 title: Omówienie ADO.NET
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 0a47a2734e68b4c00aab077191d5257386cd6602
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2d21e5b73757280b679a9c5cd04a56339e7e967e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877213"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785096"
 ---
 # <a name="adonet-overview"></a>Omówienie ADO.NET
-ADO.NET zapewnia spójny dostęp do źródeł danych, takie jak SQL Server i XML i źródła danych dostępne za pośrednictwem OLE DB i ODBC. Udostępnianie danych aplikacje komercyjne umożliwia ADO.NET nawiązać połączenie z tymi źródłami danych i pobierania, obsługiwać i zaktualizować dane, które zawierają.  
+ADO.NET zapewnia spójny dostęp do źródeł danych, takich jak SQL Server i XML, oraz źródeł danych udostępnianych za pośrednictwem OLE DB i ODBC. Aplikacje dla użytkowników korzystających z udostępniania danych mogą łączyć się z tymi źródłami danych przy użyciu programu ADO.NET, a także pobierać, obsługiwać i aktualizować zawarte w nich dane.  
   
- Dostęp do danych w ADO.NET są oddzielone od manipulowanie danymi na osobne składniki, których można użyć pojedynczo lub w tandem. ADO.NET zawiera dostawcy danych .NET Framework do nawiązywania połączenia z bazą danych, wykonując polecenia i pobierania wyników. Te wyniki są albo przetwarzane bezpośrednio, umieszczone w ADO.NET <xref:System.Data.DataSet> obiektu w celu będzie widoczna dla użytkownika w sposób ad-hoc w połączeniu z danymi z wielu źródeł lub przekazywane między warstwami. `DataSet` Obiektu można również używać niezależnie od dostawcy danych .NET Framework do zarządzania danymi lokalne dla aplikacji lub skąd pochodzi z pliku XML.  
+ ADO.NET oddziela dostęp do danych z manipulowania danymi do odrębnych składników, które mogą być używane osobno lub wspólnie. ADO.NET zawiera .NET Framework dostawców danych do łączenia się z bazą danych, wykonywania poleceń i pobierania wyników. Te wyniki są przetwarzane bezpośrednio, umieszczane w obiekcie ADO.NET <xref:System.Data.DataSet> , aby można było je uwidocznić dla użytkownika w trybie ad hoc, w połączeniu z danymi z wielu źródeł lub przekazywać między warstwami. `DataSet` Obiekt może być również używany niezależnie od dostawcy danych .NET Framework do zarządzania danymi lokalnymi w aplikacji lub źródłem z pliku XML.  
   
- Klasy ADO.NET znajdują się w System.Data.dll i są zintegrowane z usługą znalezione w System.Xml.dll klasy XML. Przykładowy kod, który nawiązuje połączenie z bazą danych, pobiera dane z niego, a następnie zostaną wyświetlone w oknie konsoli, zobacz [przykłady kodu ADO.NET](../../../../docs/framework/data/adonet/ado-net-code-examples.md).  
+ Klasy ADO.NET są dostępne w pliku System. Data. dll i są zintegrowane z klasami XML znalezionymi w pliku System. XML. dll. W przypadku przykładowego kodu, który nawiązuje połączenie z bazą danych, pobiera z niej dane, a następnie wyświetla je w oknie konsoli, zobacz [przykłady kodu ADO.NET](ado-net-code-examples.md).  
   
- ADO.NET oferuje funkcje dla deweloperów, którzy pisania kodu zarządzanego, które są podobne do funkcji dla deweloperów model (COM) obiektu składnika macierzystego ActiveX Data Objects (ADO). Zalecamy użycie programu ADO.NET, nie ADO do uzyskiwania dostępu do danych w aplikacjach .NET.  
+ Funkcja ADO.NET zapewnia deweloperom, którzy piszą kod zarządzany podobny do funkcji udostępnianych przez deweloperów modelu COM (Component Object Model), przez ActiveX Data Objects (ADO). Zalecamy używanie ADO.NET, a nie ADO, do uzyskiwania dostępu do danych w aplikacjach .NET.  
   
- ADO.NET zapewnia najbardziej bezpośrednią metodę dostępu do danych w ramach programu .NET Framework. Na wyższym poziomie abstrakcji, który umożliwia aplikacjom pracować z modelu koncepcyjnego zamiast odpowiedni model magazynu, zobacz [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  
+ ADO.NET zapewnia najbardziej bezpośrednią metodę dostępu do danych w .NET Framework. W przypadku abstrakcji wyższego poziomu, która umożliwia aplikacjom współdziałanie z modelem koncepcyjnym, a nie z modelem magazynu bazowego, zobacz [ADO.NET Entity Framework](./ef/index.md).  
   
- **Zasady zachowania poufności informacji**: Zestawy System.Data.dll, System.Data.Design.dll i System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll oraz System.Data.DataSetExtensions.dll nie dokonuje rozróżnienia między użytkownika -prywatne dane i dane prywatne.  Te zestawy nie zbierania, przechowywania lub transportu danych prywatnych dowolnego użytkownika. Jednak aplikacje innych firm mogą zbierać, przechowywania lub transportu przez użytkownika dane prywatne przy użyciu tych zestawów.  
+ **Zasady zachowania poufności**: Zestawy system. Data. dll, system. Data. Design. dll, system. Data. OracleClient. dll, system. Data. SqlXml. dll, system. Data. LINQ. dll, system. Data. SqlServerCe. dll i system. Data. DataSetExtensions. dll nie rozróżniają między użytkownikami dane prywatne i dane nieprywatne.  Te zestawy nie zbierają, nie przechowują ani nie transportuje prywatnych danych użytkownika. Jednak aplikacje innych firm mogą zbierać, przechowywać i transportować prywatne dane użytkownika przy użyciu tych zestawów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Architektura ADO.NET](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
- Zawiera omówienie architektury i składników programu ADO.NET.  
+ [Architektura ADO.NET](ado-net-architecture.md)  
+ Zawiera omówienie architektury i składników ADO.NET.  
   
- [Opcje technologii ADO.NET i wskazówki](../../../../docs/framework/data/adonet/ado-net-technology-options-and-guidelines.md)  
- Zawiera opis produktów i technologii zawartych z platformą danych jednostki.  
+ [Opcje technologii ADO.NET i wskazówki](ado-net-technology-options-and-guidelines.md)  
+ Opisuje produkty i technologie dołączone do platformy danych jednostki.  
   
- [LINQ i ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
- W tym artykule opisano, jak język Language-Integrated Query (LINQ) jest zaimplementowana w ADO.NET oraz linki do powiązanych tematów.  
+ [LINQ i ADO.NET](linq-and-ado-net.md)  
+ Opisuje, jak program Language-Integrated Query (LINQ) jest zaimplementowany w programie ADO.NET i zawiera łącza do odpowiednich tematów.  
   
- [Dostawcy danych .NET Framework](../../../../docs/framework/data/adonet/data-providers.md)  
- Zawiera omówienie projektu dostawcy danych .NET Framework, dostawcy danych .NET Framework, które znajdują się za pomocą narzędzia ADO.NET.  
+ [Dostawcy danych .NET Framework](data-providers.md)  
+ Zawiera omówienie projektowania dostawcy danych .NET Framework i .NET Framework dostawców danych, które są dołączone do ADO.NET.  
   
- [Zestawy danych ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
- Zawiera omówienie `DataSet` projektu i składników.  
+ [Zestawy danych ADO.NET](ado-net-datasets.md)  
+ Zawiera przegląd informacji o `DataSet` projekcie i składnikach programu.  
   
- [Wykonywanie równoczesne w ADO.NET](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
- W tym artykule omówiono różnice między wersjami programu ADO.NET i ich wpływ na zgodność aplikacji i wykonywanie side-by-side.  
+ [Wykonywanie równoczesne w ADO.NET](side-by-side-execution.md)  
+ Omawia różnice w wersjach ADO.NET i ich wpływ na wykonywanie równoczesne i zgodność aplikacji.  
   
- [Przykłady kodu ADO.NET](../../../../docs/framework/data/adonet/ado-net-code-examples.md)  
- Zawiera przykłady kodu, które pobierają dane przy użyciu dostawcy danych ADO.NET.  
+ [Przykłady kodu ADO.NET](ado-net-code-examples.md)  
+ Udostępnia przykłady kodu, które pobierają dane przy użyciu dostawców danych ADO.NET.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Nowości w programie ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
- Dodano funkcje, które są nowością w programie ADO.NET.  
+ [Nowości w programie ADO.NET](whats-new.md)  
+ Wprowadza funkcje, które są nowe w ADO.NET.  
   
- [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- Opisuje bezpiecznego kodowania, gdy za pomocą platformy ADO.NET.  
+ [Zabezpieczanie aplikacji ADO.NET](securing-ado-net-applications.md)  
+ Zawiera opis bezpiecznych praktyk kodowania w przypadku korzystania z ADO.NET.  
   
- [Mapowanie typu danych w ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- Opisuje mapowanie typu danych między typami danych .NET Framework i dostawcy danych .NET Framework.  
+ [Mapowanie typu danych w ADO.NET](data-type-mappings-in-ado-net.md)  
+ Opisuje mapowania typu danych między .NET Framework typami danych i .NET Framework dostawcami danych.  
   
- [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- W tym artykule opisano, jak połączyć się ze źródłem danych, pobieranie danych i modyfikować dane. Obejmuje to `DataReaders` i `DataAdapters`.  
+ [Pobieranie i modyfikowanie danych ADO.NET](retrieving-and-modifying-data.md)  
+ Opisuje sposób nawiązywania połączenia ze źródłem danych, pobierania danych i modyfikowania danych. Obejmuje `DataReaders` to i `DataAdapters`.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+- [ADO.NET](index.md)
 - [Uzyskiwanie dostępu do danych w programie Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

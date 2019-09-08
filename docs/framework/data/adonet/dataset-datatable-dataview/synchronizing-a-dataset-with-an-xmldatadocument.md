@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: f788e1732f083c01542fcdacdfc042553741350b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 272b76c0448da9e069fba331c3ae99c1de02ed16
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204421"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784266"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Synchronizowanie elementu DataSet z elementem XmlDataDocument
 W tej sekcji przedstawiono jeden krok w przetwarzaniu zamówienia zakupu przy użyciu silnie określonego <xref:System.Data.DataSet> typu synchronizacji <xref:System.Xml.XmlDataDocument>z. Poniższe przykłady tworzą **zestaw danych** ze zminimalizowanym schematem, który jest zgodny tylko z częścią źródłowego dokumentu XML. Przykłady używają **XmlDataDocument** , aby zachować wierność źródłowego dokumentu XML, co pozwala na użycie **zestawu danych** do udostępnienia podzestawu dokumentu XML.  
@@ -159,7 +159,7 @@ W tej sekcji przedstawiono jeden krok w przetwarzaniu zamówienia zakupu przy u�
   
  Należy zauważyć, że tylko informacje z elementów **OrderDetails** i **Products** oryginalnego dokumentu XML są zawarte w schemacie dla **zestawu danych**. Synchronizowanie **zestawu danych** z **XmlDataDocument** gwarantuje, że elementy, które nie znajdują się w **zestawie danych** , zostaną zachowane w dokumencie XML.  
   
- Przy użyciu jednoznacznie określonego **zestawu danych** wygenerowanego na podstawie schematu XML (z przestrzenią nazw **Northwind. FillOrder**) część oryginalnego dokumentu XML może być ujawniona przez zsynchronizowanie **zestawu danych** z załadowanym **XmlDataDocument** ze źródłowego dokumentu XML. Należy zauważyć, że **zestaw danych** wygenerowany przez schemat zawiera strukturę, ale nie dane. Dane są wypełniane podczas ładowania pliku XML do **XmlDataDocument**. Próba załadowania elementu **XmlDataDocument** , który został zsynchronizowany z zestawem danych, który zawiera już dane, zostanie wygenerowany wyjątek.  
+ Przy użyciu jednoznacznie określonego **zestawu danych** wygenerowanego na podstawie schematu XML (z przestrzenią nazw **Northwind. FillOrder**) część oryginalnego dokumentu XML może być ujawniona przez zsynchronizowanie **zestawu danych** z załadowanym **XmlDataDocument** ze źródłowego dokumentu XML. Należy zauważyć, że **zestaw danych** wygenerowany przez schemat zawiera strukturę, ale nie dane. Dane są wypełniane podczas ładowania pliku XML do **XmlDataDocument**. Próba załadowania elementu **XmlDataDocument** , który został zsynchronizowany z **zestawem** danych, który zawiera już dane, zostanie wygenerowany wyjątek.  
   
  Po zaktualizowaniu **zestawu danych** (i **XmlDataDocument**) **XmlDataDocument** może następnie napisać zmodyfikowany dokument XML z elementami ignorowanymi przez **zestaw danych** , jak pokazano poniżej. W scenariuszu zamówienia zakupu po wypełnieniu elementów zamówienia zmodyfikowany dokument XML można następnie przekazywać do następnego kroku w procesie zamówienia, na przykład do działu wysyłki firmy.  
   
@@ -234,4 +234,4 @@ public class Sample
 ## <a name="see-also"></a>Zobacz także
 
 - [Synchronizacja elementów DataSet i XmlDataDocument](dataset-and-xmldatadocument-synchronization.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

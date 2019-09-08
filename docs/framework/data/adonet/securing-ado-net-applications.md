@@ -2,12 +2,12 @@
 title: Zabezpieczanie aplikacji ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: d4c9c21f4d1f4a08ca6d676ee7b4c9e80709ba19
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 725ba568f3cd482991359237f4fc42b7da99bc0a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963122"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795059"
 ---
 # <a name="securing-adonet-applications"></a>Zabezpieczanie aplikacji ADO.NET
 Pisanie zabezpieczonej aplikacji ADO.NET obejmuje więcej niż uniknięcie wspólnego kodowania pułapek, takie jak nieweryfikowanie danych wejściowych użytkownika. Aplikacja, która uzyskuje dostęp do danych, ma wiele potencjalnych punktów awarii, których atakujący może wykorzystać do pobierania, manipulowania lub niszczenia poufnych danych. W związku z tym ważne jest, aby zrozumieć wszystkie aspekty zabezpieczeń, od procesu modelowania zagrożeń podczas fazy projektowania aplikacji, do ostatecznego wdrożenia i trwającej konserwacji.  
@@ -17,26 +17,26 @@ Pisanie zabezpieczonej aplikacji ADO.NET obejmuje więcej niż uniknięcie wspó
  Pisanie bezpiecznego kodu nie chroni przed atakami z użyciem niezarządzanych zasobów, takich jak bazy danych. Większość baz danych serwera, takich jak SQL Server, ma własne systemy zabezpieczeń, które zwiększają bezpieczeństwo po poprawnym wdrożeniu. Jednak nawet źródło danych z niezawodnym systemem zabezpieczeń może być ofiarą ataku, jeśli nie jest odpowiednio skonfigurowany.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przegląd zabezpieczeń](../../../../docs/framework/data/adonet/security-overview.md)  
+ [Przegląd zabezpieczeń](security-overview.md)  
  Zawiera zalecenia dotyczące projektowania bezpiecznych aplikacji ADO.NET.  
   
- [Bezpieczny dostęp do danych](../../../../docs/framework/data/adonet/secure-data-access.md)  
+ [Bezpieczny dostęp do danych](secure-data-access.md)  
  Opisuje sposób pracy z danymi z zabezpieczonego źródła danych.  
   
- [Zabezpieczanie aplikacje klienckich](../../../../docs/framework/data/adonet/secure-client-applications.md)  
+ [Zabezpieczanie aplikacje klienckich](secure-client-applications.md)  
  Opisuje zagadnienia dotyczące zabezpieczeń aplikacji klienckich.  
   
- [Zabezpieczenia dostępu kodu i ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)  
+ [Zabezpieczenia dostępu kodu i ADO.NET](code-access-security.md)  
  Opisuje, jak urzędy certyfikacji mogą chronić kod ADO.NET. Omówiono również sposób pracy z częściowym zaufaniem.  
   
- [Bezpieczeństwo danych i poufności informacji](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  
+ [Bezpieczeństwo danych i poufności informacji](privacy-and-data-security.md)  
  Opisuje opcje szyfrowania dla aplikacji ADO.NET.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Zabezpieczenia serwera SQL](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
+ [Zabezpieczenia serwera SQL](./sql/sql-server-security.md)  
  Opisuje funkcje zabezpieczeń SQL Server z perspektywy dewelopera.  
   
- [Zagadnienia dotyczące bezpieczeństwa](../../../../docs/framework/data/adonet/ef/security-considerations.md)  
+ [Zagadnienia dotyczące bezpieczeństwa](./ef/security-considerations.md)  
  Opisuje zabezpieczenia Entity Framework aplikacji.  
   
  [Zabezpieczenia](../../../standard/security/index.md)  
@@ -53,5 +53,5 @@ Pisanie zabezpieczonej aplikacji ADO.NET obejmuje więcej niż uniknięcie wspó
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET](index.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

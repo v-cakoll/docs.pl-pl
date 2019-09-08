@@ -4,50 +4,50 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: e1e776a42ca63e4b862e307cbcae1bab2847d0ca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3b5feb0da86e11485fa7ca1c474a69002c8d43ff
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587297"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797239"
 ---
 # <a name="creating-user-defined-bindings"></a>Tworzenie wiązań zdefiniowanych przez użytkownika
-Istnieje kilka sposobów tworzenia powiązania nie został dostarczony przez system:  
+Istnieje kilka sposobów tworzenia powiązań niedostarczonych przez system:  
   
-- Tworzenie niestandardowego powiązania, na podstawie <xref:System.ServiceModel.Channels.CustomBinding> klasy, która jest kontenerem, który można wypełnić elementy powiązania. Niestandardowe powiązanie jest dodawane do punktu końcowego usługi. Można utworzyć niestandardowego powiązania, które albo programowo, albo w konfiguracji aplikacji pliku. Aby użyć elementu powiązania z pliku konfiguracji aplikacji, element powiązania musi rozszerzać <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Aby uzyskać więcej informacji na temat powiązania niestandardowej zobacz [powiązań niestandardowych](../../../../docs/framework/wcf/extending/custom-bindings.md) i <xref:System.ServiceModel.Channels.CustomBinding>.  
+- Utwórz niestandardowe powiązanie na podstawie <xref:System.ServiceModel.Channels.CustomBinding> klasy, która jest kontenerem, który wypełnia elementy powiązania. Niestandardowe powiązanie jest następnie dodawane do punktu końcowego usługi. Niestandardowe powiązanie można utworzyć programowo lub w pliku konfiguracyjnym aplikacji. Aby użyć elementu powiązania z pliku konfiguracyjnego aplikacji, element Binding musi być rozszerzany <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Aby uzyskać więcej informacji na temat powiązań niestandardowych, zobacz [niestandardowe powiązania](custom-bindings.md) i <xref:System.ServiceModel.Channels.CustomBinding>.  
   
-- Można utworzyć klasę, która pochodzi od standardowego powiązania. Na przykład można wyprowadzić klasę z <xref:System.ServiceModel.WSHttpBinding> i zastąpić <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> metodę, aby uzyskać elementy powiązania i Wstaw element niestandardowego powiązania lub określenia konkretnej wartości dotyczące zabezpieczeń.  
+- Można utworzyć klasę, która pochodzi ze standardowego powiązania. Na przykład można utworzyć klasę z <xref:System.ServiceModel.WSHttpBinding> i zastąpić <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> metodę, aby uzyskać elementy powiązania i wstawić niestandardowy element powiązania lub określić określoną wartość zabezpieczeń.  
   
-- Można utworzyć nową <xref:System.ServiceModel.Channels.Binding> typu na całkowitą kontrolę wykonania całego powiązania.  
+- Można utworzyć nowy <xref:System.ServiceModel.Channels.Binding> typ, aby całkowicie kontrolować całą implementację wdrożenia.  
   
-## <a name="the-order-of-binding-elements"></a>Kolejność elementów wiązania  
- Każdy element powiązania reprezentuje krok przetwarzania podczas wysyłania lub odbierania komunikatów. W czasie wykonywania elementy powiązania Tworzenie kanałów i odbiorników niezbędne do utworzenia stosów kanałów przychodzących i wychodzących.  
+## <a name="the-order-of-binding-elements"></a>Kolejność elementów powiązania  
+ Każdy element powiązania reprezentuje etap przetwarzania podczas wysyłania lub otrzymywania wiadomości. W czasie wykonywania elementy powiązania tworzą kanały i odbiorniki niezbędne do tworzenia stosów kanałów wychodzących i przychodzących.  
   
- Istnieją trzy główne typy elementy powiązania: Protokół powiązania elementów, kodowania elementów powiązania i elementy powiązania transportu.  
+ Istnieją trzy główne typy elementów powiązania: Elementy powiązania protokołów, elementy powiązania kodowania i elementy powiązania transportowego.  
   
- Elementy powiązania protokołu — te elementy reprezentują kroki przetwarzania wyższego poziomu, które działają w wiadomości. Kanałów i odbiorników utworzone przez te elementy powiązania można dodać, usunąć lub zmodyfikować zawartości komunikatu. Podane powiązanie może mieć dowolną liczbę elementów powiązania protokołu, każdy dziedziczenie z <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) obejmuje kilka elementów powiązania protokołu, w tym <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> i <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+ Elementy powiązania protokołów — te elementy reprezentują kroki przetwarzania wyższego poziomu, które działają w przypadku komunikatów. Kanały i odbiorniki utworzone przez te elementy powiązania mogą dodawać, usuwać lub modyfikować zawartość wiadomości. Określone powiązanie może mieć dowolną liczbę elementów powiązania protokołów, z których każdy dziedziczy z <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) zawiera kilka elementów powiązania protokołów, w <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> tym <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>i.  
   
- Kodowanie elementu powiązania — reprezentują one elementy przekształcenia między wiadomość i kodowania gotowe do transmisji w sieci. Typowe powiązania WCF zawierać dokładnie jeden element powiązania kodowania. Kodowanie elementów wiązania przykłady <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>i <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Jeśli kodowanie elementu powiązania nie zostanie określony dla powiązania, domyślnym kodowaniem jest używany. W przypadku transportu HTTP i danych binarnych w przeciwnym razie, wartość domyślna to text.  
+ Element powiązania kodowania — te elementy reprezentują przekształcenia między komunikatem a kodowaniem gotowym do transmisji w sieci. Typowe powiązania WCF obejmują dokładnie jeden element powiązania kodowania. Przykłady elementów powiązania kodowania obejmują <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>,, i <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Jeśli element powiązania kodowania nie jest określony dla powiązania, używane jest domyślne kodowanie. Wartość domyślna to Text, gdy transport jest HTTP i binarny w przeciwnym razie.  
   
- Element powiązania transportu — te elementy reprezentują transmisji kodowania komunikatu protokołu transportu. Typowe powiązania WCF zawierać dokładnie jeden element powiązania transportu, która dziedziczy z <xref:System.ServiceModel.Channels.TransportBindingElement>. Przykłady elementów wiązania transportu <xref:System.ServiceModel.Channels.TcpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement>i <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>.  
+ Element powiązania transportu — te elementy reprezentują transmisję komunikatu kodowania na protokole transportowym. Typowe powiązania WCF obejmują dokładnie jeden element powiązania transportu, który dziedziczy z <xref:System.ServiceModel.Channels.TransportBindingElement>. Przykłady elementów powiązania transportowego obejmują <xref:System.ServiceModel.Channels.TcpTransportBindingElement> <xref:System.ServiceModel.Channels.HttpTransportBindingElement>,, i <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>.  
   
- Podczas tworzenia nowego powiązania ważna jest kolejność elementów dodanych wiązania. Zawsze dodawaj elementy powiązania w następującej kolejności:  
+ W przypadku tworzenia nowych powiązań kolejność dodanych elementów powiązania jest ważna. Zawsze dodawaj elementy powiązania w następującej kolejności:  
   
 |Warstwa|Opcje|Wymagane|  
 |-----------|-------------|--------------|  
 |Przepływ transakcji|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement?displayProperty=nameWithType>|Nie|  
 |Niezawodność|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType>|Nie|  
 |Zabezpieczenia|<xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>|Nie|  
-|Złożone komunikacja dwukierunkowa|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement?displayProperty=nameWithType>|Nie|  
-|Kodowanie|Tekst, Binary MTOM, niestandardowe|Tak*|  
-|Transport|TCP i nazwane potoki, HTTP, HTTPS, usługa MSMQ, niestandardowe|Tak|  
+|Złożony dupleks|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement?displayProperty=nameWithType>|Nie|  
+|Kodowanie|Tekst, dane binarne, MTOM, niestandardowe|Opcję\*|  
+|Transportu|TCP, nazwane potoki, HTTP, HTTPS, MSMQ, niestandardowe|Tak|  
   
- * Ponieważ jest wymagane kodowanie dla każdego powiązania, jeśli nie określono kodowania, WCF dodaje domyślne kodowanie dla Ciebie. Wartość domyślna to Text/XML binarnej i dla transportu HTTP i HTTPS, w przeciwnym razie.  
+\*Ponieważ kodowanie jest wymagane dla każdego powiązania, w przypadku, gdy kodowanie nie jest określone, WCF dodaje domyślne kodowanie. Wartość domyślna to Text/XML dla transportów HTTP i HTTPS, a w przeciwnym razie dane binarne.  
   
 ## <a name="creating-a-new-binding-element"></a>Tworzenie nowego elementu powiązania  
- Oprócz typów pochodnych typu <xref:System.ServiceModel.Channels.BindingElement> , które są wprowadzone przez architekturę WCF, możesz utworzyć własne elementy powiązania. Dzięki temu można dostosować sposób stosu powiązania jest tworzony i składniki, które bardziej szczegółowo w nim, tworząc własne <xref:System.ServiceModel.Channels.BindingElement> może być składana przy użyciu innych typów dostarczanych przez system w stosie.  
+ Oprócz typów pochodnych <xref:System.ServiceModel.Channels.BindingElement> dostarczonych przez program WCF można tworzyć własne elementy powiązania. Dzięki temu można dostosować sposób tworzenia stosu powiązań oraz składniki, które go tworzą, tworząc własne <xref:System.ServiceModel.Channels.BindingElement> , które mogą być składane z innymi typami udostępnionymi przez system w stosie.  
   
- Na przykład w przypadku zaimplementowania `LoggingBindingElement` zapewniającej możliwość rejestrowania komunikatu do bazy danych, należy go umieścić powyżej kanał transportu w stosie kanału. W takim przypadku aplikacja tworzy niestandardowego powiązania, które składa się `LoggingBindingElement` z `TcpTransportBindingElement`, jak w poniższym przykładzie.  
+ Na przykład w przypadku zaimplementowania `LoggingBindingElement` programu, który zapewnia możliwość rejestrowania komunikatu w bazie danych, należy umieścić go powyżej kanału transportu w stosie kanałów. W takim przypadku aplikacja tworzy niestandardowe powiązanie, które składa `LoggingBindingElement` się z `TcpTransportBindingElement`, jak w poniższym przykładzie.  
   
 ```csharp  
 Binding customBinding = new CustomBinding(  
@@ -56,23 +56,23 @@ Binding customBinding = new CustomBinding(
 );  
 ```  
   
- Jak zapisać nowy element powiązania, zależy od jego dokładne działanie. Jednym z przykładów, [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md), zawiera szczegółowy opis sposobu implementacji jeden rodzaj elementu powiązania.  
+ Sposób pisania nowego elementu powiązania zależy od jego dokładnej funkcjonalności. Jeden z przykładów, [transport: Protokół](../samples/transport-udp.md)UDP zawiera szczegółowy opis sposobu implementowania jednego rodzaju elementu powiązania.  
   
 ## <a name="creating-a-new-binding"></a>Tworzenie nowego powiązania  
- Element powiązania utworzone przez użytkownika może służyć na dwa sposoby. Poprzedniej sekcji przedstawiono sposób pierwszy: za pomocą niestandardowego powiązania. Powiązanie niestandardowe umożliwia użytkownikowi tworzenie własnych powiązania na podstawie dowolnego zestawu powiązania elementów, w tym te utworzone przez użytkownika.  
+ Element powiązania utworzony przez użytkownika może być używany na dwa sposoby. Poprzednia sekcja ilustruje pierwszy sposób: za pomocą niestandardowego powiązania. Niestandardowe powiązanie umożliwia użytkownikowi tworzenie własnych powiązań na podstawie dowolnego zestawu elementów powiązania, w tym utworzonych przez użytkownika.  
   
- Jeśli używasz powiązania w więcej niż jedną aplikację, utworzyć własne powiązania i rozszerzanie <xref:System.ServiceModel.Channels.Binding>. Pozwala to uniknąć ręcznego tworzenia niestandardowego powiązania za każdym razem, gdy chcesz z niego korzystać. Powiązania zdefiniowane przez użytkownika umożliwia definiowanie zachowania wiązania i obejmują elementy powiązań zdefiniowanych przez użytkownika. I jest *wstępnie spakowane*: nie trzeba odbudować powiązania, za każdym razem, gdy ich używania.  
+ Jeśli używasz powiązania w więcej niż jednej aplikacji, Utwórz własne powiązanie i rozszerzaj <xref:System.ServiceModel.Channels.Binding>. Pozwala to uniknąć ręcznego tworzenia powiązania niestandardowego za każdym razem, gdy chcesz go używać. Powiązanie zdefiniowane przez użytkownika umożliwia zdefiniowanie zachowania powiązania i uwzględnienie elementów powiązania zdefiniowanych przez użytkownika. I jest on *wstępnie spakowany*: nie trzeba ponownie kompilować powiązania za każdym razem, gdy jest on używany.  
   
- Co najmniej powiązania zdefiniowane przez użytkownika muszą implementować <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> metody i <xref:System.ServiceModel.Channels.Binding.Scheme%2A> właściwości.  
+ Jako minimum, zdefiniowane przez użytkownika powiązanie musi implementować <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> metodę <xref:System.ServiceModel.Channels.Binding.Scheme%2A> i właściwość.  
   
- <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> Metoda zwraca nowy <xref:System.ServiceModel.Channels.BindingElementCollection> zawierającą elementy wiązania dla wiązania. Kolekcja jest określona i może zawierać elementy powiązania protokołu najpierw, następuje kodowania element powiązania, a następnie element powiązania transportu. Podczas korzystania z elementów wiązania WCF dostarczane przez system, należy wykonać element powiązania, kolejność reguł określonych w [niestandardowego powiązania](../../../../docs/framework/wcf/extending/custom-bindings.md). Ta kolekcja nigdy nie powinien odwoływać się do obiektów w klasie powiązań zdefiniowanych przez użytkownika; odwoływać się do w związku z tym, autorzy powiązania musi zwracać `Clone()` z <xref:System.ServiceModel.Channels.BindingElementCollection> przy każdym wywołaniu <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>.  
+ Metoda zwraca nowy <xref:System.ServiceModel.Channels.BindingElementCollection> , który zawiera elementy powiązania dla powiązania. <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> Kolekcja jest uporządkowana i powinna zawierać najpierw elementy powiązania protokołów, a następnie element powiązania kodowania, a następnie element powiązania transportu. W przypadku używania elementów powiązania dostarczonych przez system WCF należy przestrzegać reguł porządkowania elementów powiązania określonych w [powiązaniach niestandardowych](custom-bindings.md). Ta kolekcja nigdy nie powinna odwoływać się do obiektów, do których odwołuje się Klasa powiązań zdefiniowana przez użytkownika; w związku z tym, autorzy powiązań `Clone()` muszą zwrócić <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>z każdego wywołania do. <xref:System.ServiceModel.Channels.BindingElementCollection>  
   
- <xref:System.ServiceModel.Channels.Binding.Scheme%2A> Właściwość reprezentuje schemat identyfikatora URI protokołu transportowego używany w wiązaniu. Na przykład *WSHttpBinding* i *NetTcpBinding* zwracać "http" i "net.tcp" z odpowiednich <xref:System.ServiceModel.Channels.Binding.Scheme%2A> właściwości.  
+ <xref:System.ServiceModel.Channels.Binding.Scheme%2A> Właściwość reprezentuje schemat URI dla używanego protokołu transportowego w ramach powiązania. Na przykład *WSHttpBinding* i *NetTcpBinding* zwracają "http" i "net. TCP" z odpowiednich <xref:System.ServiceModel.Channels.Binding.Scheme%2A> właściwości.  
   
- Aby uzyskać pełną listę opcjonalny metody i właściwości dla powiązań zdefiniowanych przez użytkownika, zobacz <xref:System.ServiceModel.Channels.Binding>.  
+ Aby uzyskać pełną listę opcjonalnych metod i właściwości dla powiązań zdefiniowanych przez użytkownika, zobacz <xref:System.ServiceModel.Channels.Binding>.  
   
 ### <a name="example"></a>Przykład  
- W tym przykładzie implementuje powiązanie profilu w `SampleProfileUdpBinding`, która jest pochodną <xref:System.ServiceModel.Channels.Binding>. `SampleProfileUdpBinding` Zawiera maksymalnie cztery elementy powiązania w niej: jeden użytkownik utworzył `UdpTransportBindingElement`; i trzy dostarczane przez system: `TextMessageEncodingBindingElement`, `CompositeDuplexBindingElement`, i `ReliableSessionBindingElement`.  
+ Ten przykład implementuje powiązanie profilu w `SampleProfileUdpBinding`, który pochodzi od <xref:System.ServiceModel.Channels.Binding>. `TextMessageEncodingBindingElement` `UdpTransportBindingElement` `ReliableSessionBindingElement` `CompositeDuplexBindingElement`Zawiera maksymalnie cztery elementy powiązań w obrębie siebie: jeden utworzony przez użytkownika i trzy systemy:,, i. `SampleProfileUdpBinding`  
   
 ```csharp
 public override BindingElementCollection CreateBindingElements()  
@@ -89,36 +89,36 @@ public override BindingElementCollection CreateBindingElements()
 }  
 ```  
   
-## <a name="security-restrictions-with-duplex-contracts"></a>Ograniczenia zabezpieczeń za pomocą kontrakty dwukierunkowe  
- Nie wszystkie elementy powiązania są ze sobą zgodne. W szczególności istnieją pewne ograniczenia dotyczące zabezpieczeń elementy wiązania, gdy jest używane z kontrakty dwukierunkowe.  
+## <a name="security-restrictions-with-duplex-contracts"></a>Ograniczenia zabezpieczeń z kontraktami dwustronnymi  
+ Nie wszystkie elementy powiązania są zgodne ze sobą. W szczególności istnieją pewne ograniczenia dotyczące elementów powiązań zabezpieczeń, gdy są używane z kontraktami dwustronnymi.  
   
-### <a name="one-shot-security"></a>Jednorazowej zabezpieczeń  
- Możesz zaimplementować zabezpieczenia "jednorazowej", gdzie wszystkie niezbędne poświadczenia zabezpieczeń są wysyłane w pojedynczym komunikacie, ustawiając `negotiateServiceCredential` atrybutu \<komunikatu > element konfiguracji do `false`.  
+### <a name="one-shot-security"></a>Zabezpieczenia po jednym zrzucie  
+ Można zaimplementować zabezpieczenia "z jednym zrzutem", gdzie wszystkie niezbędne poświadczenia zabezpieczeń są wysyłane w jednym komunikacie, przez ustawienie `negotiateServiceCredential` atrybutu \<> `false`komunikatu elementu konfiguracji.  
   
- Jednorazowej uwierzytelnianie nie działa z kontrakty dwukierunkowe.  
+ Uwierzytelnianie z użyciem jednego z zrzutów nie działa z kontraktami dwustronnymi.  
   
- Dla kontraktów "żądanie-odpowiedź" jednorazowej uwierzytelnianie działa tylko wtedy, gdy stos powiązania poniżej elementu powiązania zabezpieczeń obsługuje tworzenie <xref:System.ServiceModel.Channels.IRequestChannel> lub <xref:System.ServiceModel.Channels.IRequestSessionChannel> wystąpień.  
+ W przypadku kontraktów żądanie-odpowiedź uwierzytelnianie z zastosowaniem jednego zrzutu działa tylko wtedy, gdy stos powiązań poniżej elementu <xref:System.ServiceModel.Channels.IRequestChannel> powiązania <xref:System.ServiceModel.Channels.IRequestSessionChannel> zabezpieczeń obsługuje tworzenie wystąpień.  
   
- Dla kontraktów jednokierunkowych jednorazowej uwierzytelniania działa, gdy stos powiązania poniżej elementu powiązania zabezpieczeń obsługuje tworzenie <xref:System.ServiceModel.Channels.IRequestChannel>, <xref:System.ServiceModel.Channels.IRequestSessionChannel>, <xref:System.ServiceModel.Channels.IOutputChannel> lub <xref:System.ServiceModel.Channels.IOutputSessionChannel> wystąpień.  
+ W przypadku zamówień jednokierunkowych uwierzytelnianie z zastosowaniem jednego z nich działa, jeśli stos powiązań poniżej elementu powiązania zabezpieczeń <xref:System.ServiceModel.Channels.IRequestChannel>obsługuje <xref:System.ServiceModel.Channels.IRequestSessionChannel>tworzenie <xref:System.ServiceModel.Channels.IOutputChannel> , <xref:System.ServiceModel.Channels.IOutputSessionChannel> lub wystąpień.  
   
-### <a name="cookie-mode-security-context-tokens"></a>Tryb plików cookie zabezpieczeń kontekstu tokenów  
- Nie można używać tokenów kontekstu zabezpieczeń trybu plików cookie z kontrakty dwukierunkowe.  
+### <a name="cookie-mode-security-context-tokens"></a>Tokeny kontekstu zabezpieczeń trybu cookie  
+ Tokeny kontekstu zabezpieczeń trybu plików cookie nie mogą być używane z kontraktami dwustronnymi.  
   
- Dla kontraktów "żądanie-odpowiedź", kontekst zabezpieczeń trybu plików cookie tokenów pracy tylko wtedy, gdy stos powiązania poniżej elementu powiązania zabezpieczeń obsługuje tworzenie <xref:System.ServiceModel.Channels.IRequestChannel> lub <xref:System.ServiceModel.Channels.IRequestSessionChannel> wystąpień.  
+ W przypadku kontraktów "żądanie-odpowiedź" tokeny kontekstu zabezpieczeń trybu cookie działają tylko wtedy, gdy stos powiązań poniżej elementu powiązania <xref:System.ServiceModel.Channels.IRequestChannel> zabezpieczeń <xref:System.ServiceModel.Channels.IRequestSessionChannel> obsługuje tworzenie wystąpień lub.  
   
- Dla kontraktów jednokierunkowych kontekstu zabezpieczeń trybu plików cookie tokenów działa, jeśli stosu powiązania poniżej elementu powiązania zabezpieczeń obsługuje tworzenie <xref:System.ServiceModel.Channels.IRequestChannel> lub <xref:System.ServiceModel.Channels.IRequestSessionChannel> wystąpień.  
+ W przypadku kontraktów jednokierunkowych tokeny kontekstu zabezpieczeń trybu cookie działają, jeśli stos powiązań poniżej elementu powiązania zabezpieczeń obsługuje tworzenie <xref:System.ServiceModel.Channels.IRequestChannel> wystąpień <xref:System.ServiceModel.Channels.IRequestSessionChannel> lub.  
   
 ### <a name="session-mode-security-context-tokens"></a>Tokeny kontekstu zabezpieczeń trybu sesji  
- Tryb sesji SCT działa w przypadku kontrakty dwukierunkowe Jeśli stosu powiązania poniżej elementu powiązania zabezpieczeń obsługuje tworzenie <xref:System.ServiceModel.Channels.IDuplexChannel> lub <xref:System.ServiceModel.Channels.IDuplexSessionChannel> wystąpień.  
+ Tryb sesji SCT działa w przypadku kontraktów dwustronnych, jeśli stos powiązań poniżej elementu powiązania <xref:System.ServiceModel.Channels.IDuplexChannel> zabezpieczeń <xref:System.ServiceModel.Channels.IDuplexSessionChannel> obsługuje tworzenie wystąpień lub.  
   
- Tryb sesji SCT działa dla kontraktów "żądanie-odpowiedź", jeśli stosu powiązania poniżej elementu powiązania zabezpieczeń obsługuje tworzenie <xref:System.ServiceModel.Channels.IDuplexChannel>, <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, <xref:System.ServiceModel.Channels.IRequestChannel> lub <xref:System.ServiceModel.Channels.IRequestSessionChannel>, wystąpień.  
+ Tryb sesji SCT działa w przypadku kontraktów z odpowiedzią na żądanie, jeśli stos powiązań poniżej elementu powiązania <xref:System.ServiceModel.Channels.IDuplexChannel>zabezpieczeń <xref:System.ServiceModel.Channels.IDuplexSessionChannel>obsługuje tworzenie <xref:System.ServiceModel.Channels.IRequestSessionChannel>,, <xref:System.ServiceModel.Channels.IRequestChannel> lub, wystąpienia.  
   
- Tryb sesji SCT działa w przypadku umów sposób 1 Jeśli stosu powiązania poniżej elementu powiązania zabezpieczeń obsługuje tworzenie <xref:System.ServiceModel.Channels.IDuplexChannel>, <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, <xref:System.ServiceModel.Channels.IRequestChannel> lub <xref:System.ServiceModel.Channels.IRequestSessionChannel> wystąpień.  
+ Tryb sesji SCT działa dla kontraktów jednokierunkowych, jeśli stos powiązań poniżej elementu powiązania zabezpieczeń obsługuje tworzenie <xref:System.ServiceModel.Channels.IDuplexChannel> <xref:System.ServiceModel.Channels.IRequestChannel> , <xref:System.ServiceModel.Channels.IDuplexSessionChannel>lub <xref:System.ServiceModel.Channels.IRequestSessionChannel> wystąpień.  
   
-## <a name="deriving-from-a-standard-binding"></a>Wyprowadzanie z Powiązanie standardowe  
- Zamiast tworzenia nowej klasy powiązanie, może być możliwe zwiększenie jeden z istniejących powiązań dostarczanych przez system. Podobnie jak w poprzednim przypadku nr, konieczne jest przesłonięcie <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> metody i <xref:System.ServiceModel.Channels.Binding.Scheme%2A> właściwości.  
+## <a name="deriving-from-a-standard-binding"></a>Wyprowadzanie ze standardowego powiązania  
+ Zamiast tworzyć zupełnie nową klasę powiązań, może być możliwe rozszerzanie jednego z istniejących powiązań dostarczonych przez system. Podobnie jak w przypadku poprzedniego przypadku, należy zastąpić <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> metodę <xref:System.ServiceModel.Channels.Binding.Scheme%2A> i właściwość.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ServiceModel.Channels.Binding>
-- [Powiązania niestandardowe](../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [Powiązania niestandardowe](custom-bindings.md)

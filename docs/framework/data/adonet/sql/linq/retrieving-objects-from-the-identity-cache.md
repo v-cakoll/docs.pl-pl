@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: ef771d924d9b508c29061f75a45808b5f81abb53
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d14b15f72bd196d8b3a61f22c614516e17d2e95b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963835"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781242"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Pobieranie obiektów z pamięci podręcznej tożsamości
 W tym temacie opisano typy zapytań LINQ to SQL, które zwracają obiekt z pamięci podręcznej tożsamości, która jest zarządzana przez <xref:System.Data.Linq.DataContext>program.  
@@ -20,7 +20,7 @@ W tym temacie opisano typy zapytań LINQ to SQL, które zwracają obiekt z pami�
  Ogólnie rzecz biorąc, aby kwerenda LINQ to SQL zwracała obiekt z pamięci podręcznej tożsamości, zapytanie musi być oparte na kluczu podstawowym obiektu i musi zwrócić pojedynczy obiekt. W szczególności zapytanie musi znajdować się w jednym z formularzy ogólnych przedstawionych poniżej.  
   
 > [!NOTE]
-> Wstępnie skompilowane zapytania nie będą zwracać obiektów z pamięci podręcznej tożsamości. Aby uzyskać więcej informacji na temat wstępnie skompilowanych zapytań <xref:System.Data.Linq.CompiledQuery> , [Zobacz i instrukcje: Przechowuj i ponownie używaj](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)zapytań.  
+> Wstępnie skompilowane zapytania nie będą zwracać obiektów z pamięci podręcznej tożsamości. Aby uzyskać więcej informacji na temat wstępnie skompilowanych zapytań <xref:System.Data.Linq.CompiledQuery> , [Zobacz i instrukcje: Przechowuj i ponownie używaj](how-to-store-and-reuse-queries.md)zapytań.  
   
  Zapytanie musi znajdować się w jednym z następujących formularzy ogólnych, aby pobrać obiekt z pamięci podręcznej tożsamości:  
   
@@ -66,7 +66,7 @@ W tym temacie opisano typy zapytań LINQ to SQL, które zwracają obiekt z pami�
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Pojęcia dotyczące zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Tożsamość obiektu](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
-- [Informacje uzupełniające](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Tożsamość obiektu](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+- [Pojęcia dotyczące zapytań](query-concepts.md)
+- [Tożsamość obiektu](object-identity.md)
+- [Informacje uzupełniające](background-information.md)
+- [Tożsamość obiektu](object-identity.md)

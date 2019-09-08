@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: 8a69b3ae83d7f701428b3183f2b80e0d44a06537
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3ed431709266b636804c6c00450b26684550d8b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033777"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793754"
 ---
 # <a name="how-to-display-generated-sql"></a>Instrukcje: Wyświetlanie wygenerowanego kodu SQL
-Można wyświetlić kodu SQL, generowany dla zapytań i przetwarzania przy użyciu zmiany <xref:System.Data.Linq.DataContext.Log%2A> właściwości. Takie podejście może być przydatne do zrozumienia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] funkcjonalność i debugowania konkretnych problemów.  
+Można wyświetlić kod SQL wygenerowany dla zapytań i przetwarzania zmian przy użyciu <xref:System.Data.Linq.DataContext.Log%2A> właściwości. Takie podejście może być przydatne w przypadku [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] znajomości funkcjonalności i debugowania określonych problemów.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto <xref:System.Data.Linq.DataContext.Log%2A> właściwość, aby wyświetlić kod SQL w oknie konsoli, zanim kod zostanie wykonany.  Można używać tej właściwości przy użyciu zapytań, wstawiania, aktualizacji i usuwania poleceń.  
+ Poniższy przykład używa właściwości, <xref:System.Data.Linq.DataContext.Log%2A> aby wyświetlić kod SQL w oknie konsoli przed wykonaniem kodu.  Tej właściwości można użyć z poleceniami Query, INSERT, Update i DELETE.  
   
- Wiersze z okna konsoli są, zobacz podczas wykonywania Visual Basic lub C# kod następujący po ciągu.  
+ Wiersze z okna konsoli są wyświetlane podczas wykonywania Visual Basic lub C# kodu poniżej.  
   
 ```  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
@@ -44,4 +44,4 @@ SEVES
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Obsługa debugowania](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+- [Obsługa debugowania](debugging-support.md)

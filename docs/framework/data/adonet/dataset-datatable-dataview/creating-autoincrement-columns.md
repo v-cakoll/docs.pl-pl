@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cf09732a-ab54-4d98-89e2-4d0a1f28fbce
-ms.openlocfilehash: 2548ad9382b406978dac0a3d366207626278f501
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 5e4a36829107480a44980c7210b39c21231c67f4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205131"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786454"
 ---
 # <a name="creating-autoincrement-columns"></a>Tworzenie kolumn typu AutoIncrement
 Aby zapewnić unikatowe wartości kolumn, można ustawić wartości kolumn, które mają być zwiększane automatycznie po dodaniu nowych wierszy do tabeli. Aby utworzyć funkcję autozwiększania <xref:System.Data.DataColumn>, <xref:System.Data.DataColumn.AutoIncrement%2A> ustaw właściwość kolumny na **true**. Następnie rozpoczyna się od wartości zdefiniowanej <xref:System.Data.DataColumn.AutoIncrementSeed%2A> we właściwości, a każdy wiersz dodaliśmy wartość kolumny **AutoIncrement** <xref:System.Data.DataColumn.AutoIncrementStep%2A> zwiększa się o wartość zdefiniowaną we właściwości kolumny. <xref:System.Data.DataColumn>  
@@ -40,4 +40,4 @@ workColumn.AutoIncrementStep = 3;
 - <xref:System.Data.DataColumn>
 - [Definicja schematu elementu DataTable](datatable-schema-definition.md)
 - [Elementy DataTable](datatables.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Interceptory (WCF Data Services)
+title: Interceptory (Usługi danych programu WCF)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,46 +8,46 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-ms.openlocfilehash: 17926e144fae206d702c2bcb4f88dd2093442ed5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7decfdd738e71a01afa8cb32604953142b46e588
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876229"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790440"
 ---
-# <a name="interceptors-wcf-data-services"></a>Interceptory (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] umożliwia aplikacji przechwycenia komunikatów żądań, tak aby dodać logikę niestandardową operacji. Można użyć tej niestandardowej logiki do sprawdzania poprawności danych w wiadomości przychodzących. Można również użyć bardziej ograniczyć zakres żądania zapytania, takie jak wstawić niestandardowych zasad autoryzacji na podstawie danego żądania.  
+# <a name="interceptors-wcf-data-services"></a>Interceptory (Usługi danych programu WCF)
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]umożliwia aplikacji przechwytywanie komunikatów żądań w celu dodania logiki niestandardowej do operacji. Możesz użyć tej logiki niestandardowej do walidacji danych w wiadomościach przychodzących. Można go również użyć, aby dodatkowo ograniczyć zakres żądania zapytania, na przykład w celu wstawienia niestandardowych zasad autoryzacji na podstawie żądania.  
   
- Przejmowanie odbywa się za pomocą metod specjalnie opartego na atrybutach usługi danych. Te metody są wywoływane przez [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] we właściwym punkcie podczas przetwarzania komunikatu. Interceptory są zdefiniowane na podstawie zestawu jednostek i metody interceptor nie akceptuje parametrów z żądania, takie jak operacje usługi można. Metody interceptor zapytania, które są wywoływane podczas przetwarzania żądania HTTP GET, muszą zwracać Wyrażenie lambda, która określa, czy wystąpienie jednostki interceptor ustawić powinien być zwrócony przez wyniki zapytania. To wyrażenie jest używany przez usługę danych można uściślić żądanej operacji. Oto przykład definicji interceptor zapytania.  
+ Przechwytywanie jest wykonywane przez specjalnie przypisane metody w usłudze danych. Metody te są wywoływane przez [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] właściwy punkt w przetwarzaniu komunikatów. Interceptory są definiowane na podstawie zestawu jednostek, a metody przechwytywania nie mogą przyjmować parametrów z żądania, takie jak operacje usługi. Metody interceptora zapytań, które są wywoływane podczas przetwarzania żądania HTTP GET, muszą zwracać wyrażenie lambda, które określa, czy wystąpienie zestawu jednostek interceptora ma być zwracane przez wyniki zapytania. To wyrażenie jest używane przez usługę danych w celu dodatkowego uściślenia wymaganej operacji. Poniżej znajduje się przykładowa definicja interceptora zapytań.  
   
  [!code-csharp[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#queryinterceptordef)]
  [!code-vb[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#queryinterceptordef)]  
   
- Aby uzyskać więcej informacji, zobacz [jak: Przechwytywanie wiadomości usługi danych](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
+ Aby uzyskać więcej informacji, zobacz [jak: Komunikaty](how-to-intercept-data-service-messages-wcf-data-services.md)usługi przechwytywania danych.  
   
- Interceptory zmiany, które są wywoływane podczas przetwarzania operacji niebędącą zapytaniem, musi zwracać `void` (`Nothing` w języku Visual Basic). Zmiana interceptor metody muszą zaakceptować następujące dwa parametry:  
+ Interceptory zmian, które są wywoływane podczas przetwarzania operacji innych niż zapytania, muszą zwracać `void` (`Nothing` w Visual Basic). Metody przechwytywania zmian muszą przyjmować następujące dwa parametry:  
   
-1. Parametr typu, który jest zgodny z typem jednostki z zestawu jednostek. Gdy usługa danych wywołuje interceptor zmiany, wartość tego parametru, zostanie naliczona informacje jednostki, które są wysyłane przez żądanie.  
+1. Parametr typu, który jest zgodny z typem jednostki zestawu jednostek. Gdy usługa danych wywołuje interceptor zmiany, wartość tego parametru będzie odzwierciedlać informacje o jednostce wysyłane przez żądanie.  
   
-2. Parametr typu <xref:System.Data.Services.UpdateOperations>. Gdy usługa danych wywołuje interceptor zmiany, wartość tego parametru, zostanie naliczona operacji, które podejmuje próbę wykonania żądania.  
+2. Parametr typu <xref:System.Data.Services.UpdateOperations>. Gdy usługa danych wywołuje interceptor zmiany, wartość tego parametru będzie odzwierciedlać operację wykonywaną przez żądanie.  
   
- Oto przykład definicji interceptor zmiany.  
+ Poniżej znajduje się przykładowa definicja interceptora zmian.  
   
  [!code-csharp[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#changeinterceptordef)]
  [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#changeinterceptordef)]  
   
- Aby uzyskać więcej informacji, zobacz [jak: Przechwytywanie wiadomości usługi danych](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
+ Aby uzyskać więcej informacji, zobacz [jak: Komunikaty](how-to-intercept-data-service-messages-wcf-data-services.md)usługi przechwytywania danych.  
   
- Następujące atrybuty są obsługiwane w przypadku zatrzymania.  
+ Następujące atrybuty są obsługiwane w przypadku przechwycenia.  
   
- **[QueryInterceptor(** *EntitySetName* **)]**  
- Metody z <xref:System.Data.Services.QueryInterceptorAttribute> zastosowany są wywoływane po odebraniu żądania HTTP GET dla docelowej jednostki zestawu zasobów. Te metody muszą zawsze zwracać wyrażenia lambda w formie `Expression<Func<T,bool>>`.  
+ **[QueryInterceptor (** *entitySetName* **)]**  
+ Metody z <xref:System.Data.Services.QueryInterceptorAttribute> zastosowanym atrybutem są wywoływane, gdy odebrane zostanie żądanie HTTP GET dla zasobu dla obiektu zestawu jednostek. Metody te muszą zawsze zwracać wyrażenie lambda w postaci `Expression<Func<T,bool>>`.  
   
- **[ChangeInterceptor (** *Nazwa zestawu jednostek* **)]**  
- Metody z <xref:System.Data.Services.ChangeInterceptorAttribute> zastosowany są wywoływane po odebraniu żądania HTTP inne niż żądanie HTTP GET dla docelowej jednostki zestawu zasobów. Te metody muszą zawsze zwracać `void` (`Nothing` w języku Visual Basic).  
+ **[ChangeInterceptor (** *entitySetName* **)]**  
+ Metody z <xref:System.Data.Services.ChangeInterceptorAttribute> zastosowanym atrybutem są wywoływane, gdy odebrane zostanie żądanie HTTP inne niż żądanie GET protokołu HTTP dla zasobu zestawu jednostek dla obiektu Target. Metody te muszą zawsze zwracać `void` (`Nothing` w Visual Basic).  
   
- Aby uzyskać więcej informacji, zobacz [jak: Przechwytywanie wiadomości usługi danych](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
+ Aby uzyskać więcej informacji, zobacz [jak: Komunikaty](how-to-intercept-data-service-messages-wcf-data-services.md)usługi przechwytywania danych.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Operacje usługi](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)
+- [Operacje usługi](service-operations-wcf-data-services.md)

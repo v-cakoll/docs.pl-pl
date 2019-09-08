@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ba049723710b378a90d17c67735a05e8a09d05d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 59b4df08157ce14a58393e54b671e8f41b8998ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636850"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799230"
 ---
 # <a name="gethashfromblob-function"></a>GetHashFromBlob — Funkcja
 
-Pobiera skrót zestawu pod adresem określonym pamięci, przy użyciu określonego algorytmu skrótu.
+Pobiera skrót zestawu pod określonym adresem pamięci przy użyciu określonego algorytmu wyznaczania wartości skrótu.
 
-Ta funkcja jest przestarzała. Użyj [iclrstrongname::gethashfromblob —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md) metody zamiast tego.
+Ta funkcja jest przestarzała. Zamiast tego użyj metody [ICLRStrongName:: GetHashFromBlob —](../hosting/iclrstrongname-gethashfromblob-method.md) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,32 +45,32 @@ HRESULT GetHashFromBlob (
 ## <a name="parameters"></a>Parametry
 
 `pbBlob`\
-[in] Wskaźnik na adres bloku pamięci, aby zostać obliczona wartość skrótu.
+podczas Wskaźnik do adresu bloku pamięci, który ma zostać zmieszany.
 
 `cchBlob`\
-[in] Długość w bajtach, bloku pamięci.
+podczas Długość (w bajtach) bloku pamięci.
 
 `piHashAlg`\
-[out w] Stała, który określa algorytm wyznaczania wartości skrótu. Użyj wartości zero dla domyślny algorytm.
+[in. out] Stała, która określa algorytm wyznaczania wartości skrótu. Użyj wartości zero dla algorytmu domyślnego.
 
 `pbHash`\
-[out] Bufor zwrócone wyznaczania wartości skrótu.
+określoną Zwrócony bufor wyznaczania wartości skrótu.
 
 `cchHash`\
-[in] Żądany maksymalny rozmiar `pbHash`.
+podczas Żądany maksymalny rozmiar `pbHash`.
 
 `pchHash`\
-[out] Rozmiar w bajtach zwracanego `pbHash`.
+określoną Rozmiar zwracanych `pbHash`wartości (w bajtach).
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
-**Nagłówek:** StrongName.h
+**Nagłówki** StrongName.h
 
-**Biblioteka:** Dołączony jako zasób w MsCorEE.dll
+**Biblioteki** Uwzględnione jako zasób w bibliotece MsCorEE. dll
 
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

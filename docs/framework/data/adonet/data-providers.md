@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: fc338b176ee0b20800b83febe05ed2fe695cecb0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3891cae272d93c2bb1ba8929a40fbdb8c332765c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949811"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785648"
 ---
 # <a name="net-framework-data-providers"></a>Dostawcy danych .NET Framework
 Dostawca danych .NET Framework jest używany do łączenia się z bazą danych, wykonywania poleceń i pobierania wyników. Te wyniki są przetwarzane bezpośrednio, umieszczane w <xref:System.Data.DataSet> , aby były udostępniane użytkownikowi w miarę potrzeby, w połączeniu z danymi z wielu źródeł lub zdalnie między warstwami. Dostawcy danych .NET Framework są lekkie, tworząc minimalną warstwę między źródłem danych i kodem, zwiększając wydajność bez ograniczania funkcjonalności.  
@@ -54,12 +54,12 @@ Dostawca danych .NET Framework jest używany do łączenia się z bazą danych, 
 > [!NOTE]
 > .NET Framework Dostawca danych dla ODBC ma podobną architekturę do .NET Framework Dostawca danych dla OLE DB; na przykład wywołuje do składnika usługi ODBC.  
   
- ![Data providers](../../../../docs/framework/data/adonet/media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
+ ![Data providers](./media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
 Porównanie Dostawca danych .NET Framework dla SQL Server i .NET Framework Dostawca danych dla OLE DB  
   
  Dostawca danych .NET Framework klas SQL Server znajdują się w <xref:System.Data.SqlClient> przestrzeni nazw.  
   
- Dostawca danych .NET Framework dla SQL Server obsługuje zarówno transakcje lokalne, jak i rozproszone. W przypadku transakcji rozproszonych SQL Server Dostawca danych .NET Framework, domyślnie jest automatycznie rejestrowana w transakcji i uzyskuje szczegóły transakcji z usług składowych systemu Windows lub <xref:System.Transactions>. Aby uzyskać więcej informacji, zobacz [transakcje i współbieżność](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
+ Dostawca danych .NET Framework dla SQL Server obsługuje zarówno transakcje lokalne, jak i rozproszone. W przypadku transakcji rozproszonych SQL Server Dostawca danych .NET Framework, domyślnie jest automatycznie rejestrowana w transakcji i uzyskuje szczegóły transakcji z usług składowych systemu Windows lub <xref:System.Transactions>. Aby uzyskać więcej informacji, zobacz [transakcje i współbieżność](transactions-and-concurrency.md).  
   
  Poniższy przykład kodu pokazuje, `System.Data.SqlClient` jak uwzględnić przestrzeń nazw w aplikacjach.  
   
@@ -72,7 +72,7 @@ using System.Data.SqlClient;
 ```  
   
 ## <a name="net-framework-data-provider-for-ole-db"></a>.NET Framework Dostawca danych OLE DB  
- .NET Framework Dostawca danych for OLE DB (OleDb) korzysta z natywnego OLE DB za pośrednictwem modelu COM Interop, aby umożliwić dostęp do danych. Dostawca danych .NET Framework dla OLE DB obsługuje zarówno transakcje lokalne, jak i rozproszone. W przypadku transakcji rozproszonych OLE DB Dostawca danych .NET Framework, domyślnie jest automatycznie rejestrowana w transakcji i uzyskuje szczegóły transakcji z usług składników systemu Windows. Aby uzyskać więcej informacji, zobacz [transakcje i współbieżność](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
+ .NET Framework Dostawca danych for OLE DB (OleDb) korzysta z natywnego OLE DB za pośrednictwem modelu COM Interop, aby umożliwić dostęp do danych. Dostawca danych .NET Framework dla OLE DB obsługuje zarówno transakcje lokalne, jak i rozproszone. W przypadku transakcji rozproszonych OLE DB Dostawca danych .NET Framework, domyślnie jest automatycznie rejestrowana w transakcji i uzyskuje szczegóły transakcji z usług składników systemu Windows. Aby uzyskać więcej informacji, zobacz [transakcje i współbieżność](transactions-and-concurrency.md).  
   
  W poniższej tabeli przedstawiono dostawców, którzy zostali przetestowani za pomocą ADO.NET.  
   
@@ -100,7 +100,7 @@ using System.Data.OleDb;
 ```  
   
 ## <a name="net-framework-data-provider-for-odbc"></a>.NET Framework Dostawca danych dla ODBC  
- .NET Framework Dostawca danych dla ODBC (ODBC) używa natywnego Menedżera sterowników ODBC (DM), aby umożliwić dostęp do danych. Dostawca danych ODBC obsługuje zarówno transakcje lokalne, jak i rozproszone. W przypadku transakcji rozproszonych dostawca danych ODBC jest domyślnie automatycznie zarejestrowany w transakcji i uzyskuje szczegóły transakcji z usług składowych systemu Windows. Aby uzyskać więcej informacji, zobacz [transakcje i współbieżność](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
+ .NET Framework Dostawca danych dla ODBC (ODBC) używa natywnego Menedżera sterowników ODBC (DM), aby umożliwić dostęp do danych. Dostawca danych ODBC obsługuje zarówno transakcje lokalne, jak i rozproszone. W przypadku transakcji rozproszonych dostawca danych ODBC jest domyślnie automatycznie zarejestrowany w transakcji i uzyskuje szczegóły transakcji z usług składowych systemu Windows. Aby uzyskać więcej informacji, zobacz [transakcje i współbieżność](transactions-and-concurrency.md).  
   
  W poniższej tabeli przedstawiono sterowniki ODBC testowane z ADO.NET.  
   
@@ -126,7 +126,7 @@ using System.Data.Odbc;
 > Dostawca danych .NET Framework dla ODBC wymaga programu MDAC 2,6 lub nowszej wersji, a zaleca się używanie programu MDAC 2,8 z dodatkiem SP1. Program MDAC 2,8 z dodatkiem SP1 można pobrać z [Centrum deweloperów dostępu do danych i magazynu](https://go.microsoft.com/fwlink/?linkid=4173).  
   
 ## <a name="net-framework-data-provider-for-oracle"></a>.NET Framework Dostawca danych dla programu Oracle  
- .NET Framework Dostawca danych dla programu Oracle (OracleClient) umożliwia dostęp do danych w źródłach danych Oracle przy użyciu oprogramowania łączności klienta Oracle. Dostawca danych obsługuje oprogramowanie klienckie Oracle w wersji 8.1.7 lub nowszej. Dostawca danych obsługuje zarówno transakcje lokalne, jak i rozproszone. Aby uzyskać więcej informacji, zobacz [transakcje i współbieżność](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
+ .NET Framework Dostawca danych dla programu Oracle (OracleClient) umożliwia dostęp do danych w źródłach danych Oracle przy użyciu oprogramowania łączności klienta Oracle. Dostawca danych obsługuje oprogramowanie klienckie Oracle w wersji 8.1.7 lub nowszej. Dostawca danych obsługuje zarówno transakcje lokalne, jak i rozproszone. Aby uzyskać więcej informacji, zobacz [transakcje i współbieżność](transactions-and-concurrency.md).  
   
  Aby można było nawiązać połączenie ze źródłem danych Oracle, Dostawca danych .NET Framework dla systemu Oracle wymaga oprogramowania klienckiego Oracle (w wersji 8.1.7 lub nowszej).  
   
@@ -159,6 +159,5 @@ using System.Data.OracleClient;
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](ado-net-overview.md)
+- [Pobieranie i modyfikowanie danych ADO.NET](retrieving-and-modifying-data.md)

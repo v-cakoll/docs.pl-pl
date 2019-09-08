@@ -5,135 +5,135 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: 6910bfbc94f69292bb8c2a52bf3ebef8fcfb3a8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 017fe2177cf824d461b4c51ea805f75b6ddbe064
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876463"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779989"
 ---
 # <a name="wcf-data-services-45"></a>Usługi danych WCF 4.5
 
-Usługi danych WCF (wcześniej znane jako "Architektury ADO.NET Data Services") jest składnikiem programu .NET Framework, która umożliwia tworzenie usług, które używają [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] do prezentowania i wykorzystywania danych w Internecie lub intranecie przy użyciu semantyki [ (REST) Representational state transfer](https://go.microsoft.com/fwlink/?LinkId=113919). OData przedstawia dane w postaci zasobów, które są adresowane przez identyfikatory URI. Dane są dostępne i zmieniać przy użyciu standardowych poleceń HTTP elementu GET, PUT, POST i DELETE. OData używa konwencji Relacja jednostki [modelu Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md) aby uwidocznić zasoby jako zestawów jednostek, które są powiązane przez skojarzenia.
+Usługi danych programu WCF (dawniej znany jako "ADO.NET Data Services") jest składnikiem .NET Framework, który umożliwia tworzenie usług korzystających z programu [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] w celu udostępniania danych i korzystania z nich w sieci Web lub intranecie przy użyciu semantyki [stanu reprezentacji transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919). Usługa OData udostępnia dane jako zasoby, które są adresowane przez identyfikatory URI. Dostęp do danych jest uzyskiwany i zmieniany przy użyciu standardowych czasowników HTTP GET, PUT, POST i DELETE. Usługa OData używa Konwencji relacji jednostek [Entity Data Model](../adonet/entity-data-model.md) , aby udostępnić zasoby jako zestawy jednostek, które są powiązane ze skojarzeniami.
 
-Usługi danych WCF korzysta z protokołu OData do adresowania i aktualizowania zasobów. W ten sposób uzyskujesz dostęp do tych usług, za pomocą dowolnego klienta, który obsługuje OData. OData pozwala na żądanie i zapisywania danych do zasobów przy użyciu dobrze znanych transferu formatów: Atom, zestaw standardów wymianę i aktualizowanie danych w formacie XML i JavaScript Object Notation (JSON), formatem wymiany danych tekstowych, często używane w aplikacjach w technologii AJAX.
+Usługi danych programu WCF używa protokołu OData do adresowania i aktualizacji zasobów. W ten sposób można uzyskać dostęp do tych usług z dowolnego klienta, który obsługuje protokół OData. Usługa OData umożliwia żądanie i zapisanie danych do zasobów przy użyciu dobrze znanych formatów transferu: Atom, zestaw standardów do wymiany i aktualizowania danych jako XML i JavaScript Object Notation (JSON), oparty na tekście format wymiany danych używany w szerokim stopniu w aplikacjach AJAX.
 
-Usługi danych WCF można ujawnić dane, które pochodzą z różnych źródeł, jako źródła OData. Narzędzia programu Visual Studio ułatwiają tworzenie usługi OData przy użyciu modelu danych ADO.NET Entity Framework. Można również utworzyć źródła danych OData na podstawie wspólnej klasy środowiska uruchomieniowego (języka wspólnego CLR) języka i nawet z późnym wiązaniem lub bez danych.
+Usługi danych programu WCF mogą uwidaczniać dane pochodzące z różnych źródeł jako źródła danych OData. Narzędzia programu Visual Studio ułatwiają tworzenie usługi opartej na protokole OData przy użyciu modelu danych ADO.NET Entity Framework. Można również tworzyć źródła danych OData oparte na klasach środowiska uruchomieniowego języka wspólnego (CLR), a nawet z danymi z późnym wiązaniem lub bez typu.
 
-Usługi danych WCF zawiera również zestaw bibliotek klienta dla głównej aplikacji klienta programu .NET Framework i inny wpis specjalnie dla aplikacji opartych na technologii Silverlight. Tych bibliotek klienckich zapewnia model programowania oparty na obiekt, gdy uzyskujesz dostęp do źródła danych ze środowisk, takich jak .NET Framework lub Silverlight jako technologii OData.
+Usługi danych programu WCF obejmuje również zestaw bibliotek klienckich, jeden dla ogólnych .NET Framework aplikacji klienckich, a drugi przeznaczony dla aplikacji opartych na technologii Silverlight. Te biblioteki klienckie zapewniają model programowania oparty na obiektach, gdy uzyskujesz dostęp do źródła danych OData ze środowisk, takich jak .NET Framework i Silverlight.
 
-## <a name="where-should-i-start"></a>Gdzie mam zacząć?
+## <a name="where-should-i-start"></a>Gdzie należy zacząć?
 
-W zależności od zainteresowaniach należy rozważyć wprowadzenie do usługi danych WCF w jeden z następujących tematów.
+W zależności od zainteresowań należy rozważyć wprowadzenie do Usługi danych programu WCF w jednym z poniższych tematów.
 
-Chcę, aby przejść bezpośrednio...
+Chcę przeskoczyć do prawej strony...
 
-- [Szybki start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Szybki start](quickstart-wcf-data-services.md)
 
-- [Wprowadzenie](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+- [Wprowadzenie](getting-started-with-wcf-data-services.md)
 
-- [Szybki start Silverlight](https://go.microsoft.com/fwlink/?LinkID=192782)
+- [Silverlight — Szybki Start](https://go.microsoft.com/fwlink/?LinkID=192782)
 
-- [Szybki start Silverlight dla systemu Windows Phone rozwoju](https://go.microsoft.com/fwlink/?LinkID=214535)
+- [Samouczek szybki start dla programu Windows Phone Development](https://go.microsoft.com/fwlink/?LinkID=214535)
 
-Po prostu Pokaż kodu...
+Pokaż mi tylko jakiś kod...
 
-- [Szybki start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Szybki start](quickstart-wcf-data-services.md)
 
-- [Instrukcje: Wykonywanie zapytań usługi danych](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)
+- [Instrukcje: Wykonaj zapytania dotyczące usługi danych](how-to-execute-data-service-queries-wcf-data-services.md)
 
-- [Instrukcje: Powiąż dane z programu Windows Presentation Foundation elementów](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+- [Instrukcje: Powiąż dane z Windows Presentation Foundation elementami](bind-data-to-wpf-elements-wcf-data-services.md)
 
-Chcę dowiedzieć się więcej o OData...
+Chcę dowiedzieć się więcej o usłudze OData...
 
-- [Oficjalny dokument: Wprowadzenie do protokołu OData](https://go.microsoft.com/fwlink/?LinkId=220867)
+- [Dokumentacji Wprowadzenie do usługi OData](https://go.microsoft.com/fwlink/?LinkId=220867)
 
-- [Otwórz witrynę sieci Web protokołu danych](https://go.microsoft.com/fwlink/?LinkID=184554)
+- [Otwórz witrynę sieci Web protokołu Data Protocol](https://go.microsoft.com/fwlink/?LinkID=184554)
 
-- [OData: SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
+- [Wykonała ZESTAWIE](https://go.microsoft.com/fwlink/?LinkID=185248)
 
-- [OData: często zadawane pytania](https://go.microsoft.com/fwlink/?LinkId=185867)
+- [Wykonała często zadawane pytania](https://go.microsoft.com/fwlink/?LinkId=185867)
 
-Chcę obejrzeć niektóre filmy wideo...
+Chcę obejrzeć kilka filmów wideo...
 
-- [Przewodnik dla początkujących do usługi danych WCF](https://go.microsoft.com/fwlink/?LinkId=220864)
+- [Przewodnik dla początkujących Usługi danych programu WCF](https://go.microsoft.com/fwlink/?LinkId=220864)
 
-- [Filmy dla deweloperów usługi danych WCF](https://go.microsoft.com/fwlink/?LinkId=220861)
+- [Film wideo dla deweloperów Usługi danych programu WCF](https://go.microsoft.com/fwlink/?LinkId=220861)
 
-- [OData: Witryny sieci Web deweloperów](https://go.microsoft.com/fwlink/?LinkId=185866)
+- [Wykonała Witryna sieci Web dla deweloperów](https://go.microsoft.com/fwlink/?LinkId=185866)
 
-Chcę wyświetlić przykłady end-to-end...
+Chcę zobaczyć kompleksowe przykłady...
 
-- [Usługi WCF Data Services — przykłady dokumentacji w galerii przykładów MSDN](https://go.microsoft.com/fwlink/?LinkID=220865)
+- [Przykłady dokumentacji Usługi danych programu WCF w galerii przykładów MSDN](https://go.microsoft.com/fwlink/?LinkID=220865)
 
-- [Inne usługi WCF Data Services — przykłady w galerii przykładów MSDN](https://go.microsoft.com/fwlink/?LinkId=220866)
+- [Inne przykłady Usługi danych programu WCF w galerii przykładów MSDN](https://go.microsoft.com/fwlink/?LinkId=220866)
 
-- [OData: SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
+- [Wykonała ZESTAWIE](https://go.microsoft.com/fwlink/?LinkID=185248)
 
-Jak można je zintegrować z programem Visual Studio?
+Jak integruje się z programem Visual Studio?
 
-- [Generowanie biblioteki klienta usługi danych](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)
+- [Generowanie biblioteki klienta usługi danych](generating-the-data-service-client-library-wcf-data-services.md)
 
-- [Tworzenie usługi danych](../../../../docs/framework/data/wcf/creating-the-data-service.md)
+- [Tworzenie usługi danych](creating-the-data-service.md)
 
-- [Dostawca programu Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
+- [Dostawca programu Entity Framework](entity-framework-provider-wcf-data-services.md)
 
-Co można zrobić z nim?
+Co mogę zrobić z nim?
 
-- [Omówienie](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)
+- [Omówienie](wcf-data-services-overview.md)
 
-- [Oficjalny dokument: Wprowadzenie do protokołu OData](https://go.microsoft.com/fwlink/?LinkId=220867)
+- [Dokumentacji Wprowadzenie do usługi OData](https://go.microsoft.com/fwlink/?LinkId=220867)
 
-- [Scenariusze aplikacji](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)
+- [Scenariusze aplikacji](application-scenarios-wcf-data-services.md)
 
-Chcę użyć Silverlight...
+Chcę użyć programu Silverlight...
 
-- [Szybki start Silverlight](https://go.microsoft.com/fwlink/?LinkID=192782)
+- [Silverlight — Szybki Start](https://go.microsoft.com/fwlink/?LinkID=192782)
 
 - [WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149)
 
-- [Wprowadzenie do programu Silverlight](https://go.microsoft.com/fwlink/?LinkId=148366)
+- [Wprowadzenie z technologią Silverlight](https://go.microsoft.com/fwlink/?LinkId=148366)
 
 Chcę użyć LINQ...
 
-- [Wykonywanie zapytań do usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+- [Wykonywanie zapytań do usługi danych](querying-the-data-service-wcf-data-services.md)
 
-- [Zagadnienia dotyczące LINQ](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)
+- [Zagadnienia dotyczące LINQ](linq-considerations-wcf-data-services.md)
 
-- [Instrukcje: Wykonywanie zapytań usługi danych](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)
+- [Instrukcje: Wykonaj zapytania dotyczące usługi danych](how-to-execute-data-service-queries-wcf-data-services.md)
 
-Mi nadal potrzebne pewne dodatkowe informacje...
+Nadal potrzebuję więcej informacji...
 
-- [Blog zespołu usług danych WCF](https://go.microsoft.com/fwlink/?LinkID=150511)
+- [Blog zespołu Usługi danych programu WCF](https://go.microsoft.com/fwlink/?LinkID=150511)
 
-- [Zasoby](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)
+- [Zasoby](wcf-data-services-resources.md)
 
-- [Centrum deweloperów usług danych WCF](https://go.microsoft.com/fwlink/?LinkId=220868)
+- [Centrum deweloperów Usługi danych programu WCF](https://go.microsoft.com/fwlink/?LinkId=220868)
 
-- [Otwórz witrynę sieci Web protokołu danych](https://go.microsoft.com/fwlink/?LinkID=184554)
+- [Otwórz witrynę sieci Web protokołu Data Protocol](https://go.microsoft.com/fwlink/?LinkID=184554)
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Omówienie](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)
+[Omówienie](wcf-data-services-overview.md)
 
-Zawiera omówienie funkcji i funkcji dostępnych w usługach danych programu WCF.
+Zawiera przegląd funkcji dostępnych w Usługi danych programu WCF.
 
-[What's New in usługi danych WCF 5.0](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
+[Co nowego w Usługi danych programu WCF 5,0](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
 
-W tym artykule opisano nowe funkcje w usługach danych programu WCF i obsługę nowych funkcji OData.
+Opisuje nowe funkcje w Usługi danych programu WCF i obsługę nowych funkcji OData.
 
-[Wprowadzenie](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+[Wprowadzenie](getting-started-with-wcf-data-services.md)
 
-Zawiera opis sposobu prezentowania i wykorzystywania źródeł danych usługi OData przy użyciu usługi danych WCF.
+Opisuje sposób udostępniania i korzystania ze źródeł danych OData przy użyciu Usługi danych programu WCF.
 
-[Definiowanie usług danych WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+[Definiowanie usług danych WCF](defining-wcf-data-services.md)
 
-W tym artykule opisano sposób tworzenia i konfigurowania usługi danych, która udostępnia źródłami danych OData.
+Opisuje sposób tworzenia i konfigurowania usługi danych, która udostępnia źródła strumieniowego OData.
 
-[Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+[Biblioteka klienta usług danych WCF](wcf-data-services-client-library.md)
 
-W tym artykule opisano, jak używać tych źródeł od aplikacji klienckiej .NET Framework za pomocą biblioteki klienta.
+Opisuje sposób używania bibliotek klienckich do korzystania ze źródeł danych OData z aplikacji klienckiej .NET Framework.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Representational State Transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919)
+- [Przenoszenie stanu reprezentacji (REST)](https://go.microsoft.com/fwlink/?LinkId=113919)

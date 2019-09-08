@@ -2,12 +2,12 @@
 title: Typizowane elementy DataSet
 ms.date: 03/30/2017
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
-ms.openlocfilehash: 33876cb9f614a93cab2fa3fd9d056f94dd1e9038
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 7c8111e0e62a57b6745a5ea0387fc65a05839df8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203154"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785838"
 ---
 # <a name="typed-datasets"></a>Typizowane elementy DataSet
 Wraz z późnym wiązaniem dostępu do wartości za pomocą zmiennych o nieprawidłowym typie, <xref:System.Data.DataSet> zapewnia dostęp do danych przez silnie wpisaną metaphor. Do tabel i kolumn, które są częścią **zestawu danych** , można uzyskać dostęp przy użyciu nazw przyjaznych dla użytkownika i silnie wpisanych zmiennych.  
@@ -26,4 +26,4 @@ Wraz z późnym wiązaniem dostępu do wartości za pomocą zmiennych o nieprawi
 ## <a name="see-also"></a>Zobacz także
 
 - [Elementy DataSet, DataTable i DataView](index.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

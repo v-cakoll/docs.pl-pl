@@ -2,12 +2,12 @@
 title: Tworzenie ról aplikacji w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: e7060e1b171ee1791b9986250fe6f2050ec77acd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 212bda6f64829792e965dd6714428a05b30c995b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961166"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794278"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Tworzenie ról aplikacji w programie SQL Server
 Role aplikacji umożliwiają przypisywanie uprawnień do aplikacji zamiast roli lub użytkownika bazy danych. Użytkownicy mogą łączyć się z bazą danych, aktywować rolę aplikacji i przypuszczać uprawnienia przyznane aplikacji. Uprawnienia przyznane roli aplikacji są obowiązujące na czas trwania połączenia.  
@@ -47,9 +47,9 @@ Role aplikacji umożliwiają przypisywanie uprawnień do aplikacji zamiast roli 
   
  Warto rozważyć następujące alternatywy.  
   
-- Użyj przełączania kontekstu z instrukcją EXECUTE AS z klauzulami NO Revert i WITH COOKIE. Możesz utworzyć konto użytkownika w bazie danych, która nie jest zamapowana na nazwę logowania. Następnie można przypisać uprawnienia do tego konta. Używanie polecenia EXECUTE AS z użytkownikiem bez hasła jest bezpieczniejsze, ponieważ jest to oparte na uprawnieniach, a nie oparte na haśle. Aby uzyskać więcej informacji, zobacz [Dostosowywanie uprawnień przy użyciu personifikacji w SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+- Użyj przełączania kontekstu z instrukcją EXECUTE AS z klauzulami NO Revert i WITH COOKIE. Możesz utworzyć konto użytkownika w bazie danych, która nie jest zamapowana na nazwę logowania. Następnie można przypisać uprawnienia do tego konta. Używanie polecenia EXECUTE AS z użytkownikiem bez hasła jest bezpieczniejsze, ponieważ jest to oparte na uprawnieniach, a nie oparte na haśle. Aby uzyskać więcej informacji, zobacz [Dostosowywanie uprawnień przy użyciu personifikacji w SQL Server](customizing-permissions-with-impersonation-in-sql-server.md).  
   
-- Podpisz procedury składowane z certyfikatami, przyznając tylko uprawnienia do wykonywania procedur. Aby uzyskać więcej informacji, zobacz Podpisywanie [procedur składowanych w SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Podpisz procedury składowane z certyfikatami, przyznając tylko uprawnienia do wykonywania procedur. Aby uzyskać więcej informacji, zobacz [podpisywanie procedur składowanych w SQL Server](signing-stored-procedures-in-sql-server.md).  
   
 ## <a name="external-resources"></a>Zasoby zewnętrzne  
  Aby uzyskać więcej informacji, zobacz następujące zasoby.  
@@ -60,7 +60,7 @@ Role aplikacji umożliwiają przypisywanie uprawnień do aplikacji zamiast roli 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Przegląd zabezpieczeń serwera SQL](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Scenariusze zabezpieczeń aplikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Zabezpieczanie aplikacji ADO.NET](../securing-ado-net-applications.md)
+- [Przegląd zabezpieczeń serwera SQL](overview-of-sql-server-security.md)
+- [Scenariusze zabezpieczeń aplikacji w programie SQL Server](application-security-scenarios-in-sql-server.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

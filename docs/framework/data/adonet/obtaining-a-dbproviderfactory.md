@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
-ms.openlocfilehash: dd4bca48c35b9b636a96fe5d4a724272abc4f71d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bde442e344ae8aa710d75c61d0957bff9264bf01
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934400"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783535"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>Uzyskiwanie DbProviderFactory
 Proces uzyskiwania <xref:System.Data.Common.DbProviderFactory> informacji dotyczących dostawcy danych jest przekazywany <xref:System.Data.Common.DbProviderFactories> do klasy. Na podstawie tych informacji <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> Metoda tworzy fabrykę dostawców o jednoznacznie określonym typie. Na przykład, aby utworzyć <xref:System.Data.SqlClient.SqlClientFactory>, można przekazać `GetFactory` ciąg z nazwą dostawcy określoną jako "System. Data. SqlClient". Inne Przeciążenie `GetFactory` <xref:System.Data.DataRow>trwa. Po utworzeniu fabryki dostawcy można użyć jej metod, aby utworzyć dodatkowe obiekty. Niektóre metody `SqlClientFactory` obejmują <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A>, i <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.  
@@ -79,7 +79,7 @@ Proces uzyskiwania <xref:System.Data.Common.DbProviderFactory> informacji dotycz
 ```  
   
 ### <a name="retrieving-a-connection-string-by-provider-name"></a>Pobieranie parametrów połączenia według nazwy dostawcy  
- Aby utworzyć fabrykę dostawcy, należy podać parametry połączenia oraz nazwę dostawcy. W tym przykładzie pokazano, jak pobrać parametry połączenia z pliku konfiguracyjnego aplikacji, przekazując nazwę dostawcy w formacie niezmiennym "*System. Data. ProviderName*". Kod wykonuje iterację przez <xref:System.Configuration.ConnectionStringSettingsCollection>. Zwraca <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> on sukces; w przeciwnym razie `null` (`Nothing` w Visual Basic). Jeśli istnieje wiele wpisów dla dostawcy, zostanie zwrócony pierwszy z nich. Aby uzyskać więcej informacji i przykłady pobierania parametrów połączenia z plików konfiguracji, zobacz [parametry połączeń i pliki konfiguracji](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
+ Aby utworzyć fabrykę dostawcy, należy podać parametry połączenia oraz nazwę dostawcy. W tym przykładzie pokazano, jak pobrać parametry połączenia z pliku konfiguracyjnego aplikacji, przekazując nazwę dostawcy w formacie niezmiennym "*System. Data. ProviderName*". Kod wykonuje iterację przez <xref:System.Configuration.ConnectionStringSettingsCollection>. Zwraca <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> on sukces; w przeciwnym razie `null` (`Nothing` w Visual Basic). Jeśli istnieje wiele wpisów dla dostawcy, zostanie zwrócony pierwszy z nich. Aby uzyskać więcej informacji i przykłady pobierania parametrów połączenia z plików konfiguracji, zobacz [parametry połączeń i pliki konfiguracji](connection-strings-and-configuration-files.md).  
   
 > [!NOTE]
 > Odwołanie do `System.Configuration.dll` jest wymagane w celu uruchomienia kodu.  
@@ -97,7 +97,7 @@ Proces uzyskiwania <xref:System.Data.Common.DbProviderFactory> informacji dotycz
   
 ## <a name="see-also"></a>Zobacz także
 
-- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [Parametry połączeń](../../../../docs/framework/data/adonet/connection-strings.md)
+- [DbProviderFactories](dbproviderfactories.md)
+- [Parametry połączeń](connection-strings.md)
 - [Korzystanie z klas konfiguracji](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))
 - [Omówienie ADO.NET](ado-net-overview.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28157d2ed223d89af4b4314035e7c03d572be7b8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a56785d84a07122080efda22d41ec43721474789
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778566"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795266"
 ---
-# <a name="asmcmpflags-enumeration"></a>ASM_CMP_FLAGS — Wyliczenie
-Wskazuje, wersji, kompilacji, kultury, podpis i tak dalej, dwóch zestawów, które mają być porównane [iassemblyname::isequal —](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md) metody.  
+# <a name="asm_cmp_flags-enumeration"></a>ASM_CMP_FLAGS — Wyliczenie
+Wskazuje wersję, kompilację, kulturę, sygnaturę i tak dalej, dwóch zestawów, które mają być porównane przez metodę [IAssemblyName:: IsEqual](iassemblyname-isequal-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -68,15 +68,15 @@ typedef enum {
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Fusion.h  
+ **Nagłówki** Fusion. h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Biblioteki** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IAssemblyName, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Wyliczenia łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [IAssemblyName, interfejs](iassemblyname-interface.md)
+- [Wyliczenia łączenia](fusion-enumerations.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: f3b0fe20ae9f6eb50f26d044f18e02214ce97757
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 87ca9b75d641035b268c6737822f198d1eea87e3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038464"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777510"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Transport Layer Security (TLS) — najlepsze rozwiązania dotyczące .NET Framework
 
@@ -50,7 +50,7 @@ Jeśli nie możesz uniknąć zakodowana wersji protokołu, zdecydowanie zalecamy
 
 Program WCF obsługuje protokoły TLS 1.0, 1,1 i 1,2 jako domyślne w .NET Framework 4,7. Począwszy od .NET Framework 4.7.1, program WCF domyślnie używa skonfigurowanej wersji systemu operacyjnego. Jeśli aplikacja jest jawnie skonfigurowana za pomocą `SslProtocols.None`programu, WCF używa domyślnego ustawienia systemu operacyjnego w przypadku korzystania z transportu NetTcp.
 
-Pytania dotyczące tego dokumentu można zadawać w Transport Layer Security z najlepszymi rozwiązaniami związanymi z protokołem [TLS, .NET Framework](https://github.com/dotnet/docs/issues/4675).
+Pytania dotyczące tego dokumentu można zadawać w [Transport Layer Security z najlepszymi rozwiązaniami](https://github.com/dotnet/docs/issues/4675)związanymi z PROTOKOŁem TLS, .NET Framework.
 
 ## <a name="audit-your-code-and-make-code-changes"></a>Inspekcja kodu i wprowadzanie zmian w kodzie
 
@@ -66,7 +66,9 @@ W poniższych sekcjach pokazano, jak sprawdzić, czy nie jest używana określon
 
 ### <a name="for-http-networking"></a>Dla sieci HTTP
 
-<xref:System.Net.ServicePointManager>przy użyciu .NET Framework 4,7 i nowszych wersji, domyślny system operacyjny wybiera najlepszy protokół zabezpieczeń i wersję. Aby uzyskać domyślny najlepszy wybór systemu operacyjnego, jeśli jest to możliwe, nie ustawiaj wartości <xref:System.Net.ServicePointManager.SecurityProtocol> właściwości. W przeciwnym razie ustaw ją <xref:System.Net.SecurityProtocolType.SystemDefault>na wartość.
+<xref:System.Net.ServicePointManager>przy użyciu .NET Framework 4,7 i nowszych wersji program użyje domyślnego protokołu zabezpieczeń skonfigurowanego w systemie operacyjnym. Aby wybrać domyślny wybór systemu operacyjnego, jeśli to możliwe, nie ustawiaj wartości <xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType> właściwości, która <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType>domyślnie.
+
+Ponieważ to <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType> ustawienie <xref:System.Net.ServicePointManager> powoduje użycie domyślnego protokołu zabezpieczeń skonfigurowanego przez system operacyjny, aplikacja może działać w różny sposób w zależności od systemu operacyjnego, w którym jest uruchamiany. Na przykład system Windows 7 z dodatkiem SP1 korzysta z protokołu TLS 1,0, podczas gdy system Windows 8 i system Windows 10 używają protokołu TLS 1,2.
 
 Pozostała część tego artykułu nie ma znaczenia w przypadku .NET Framework 4,7 lub nowszych wersji dla sieci HTTP.
 

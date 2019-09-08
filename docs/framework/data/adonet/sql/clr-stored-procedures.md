@@ -2,12 +2,12 @@
 title: Procedury składowane CLR
 ms.date: 03/30/2017
 ms.assetid: fd7eea9b-218a-4988-8c9a-8abcc6031c66
-ms.openlocfilehash: c02efa3f0a91d176b626761335bd2d5a2b96b966
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d2fde4fdcd5ab63906256d814256578b9baa9ecd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917960"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782501"
 ---
 # <a name="clr-stored-procedures"></a>Procedury składowane CLR
 Procedury składowane są procedurami, których nie można używać w wyrażeniach skalarnych. Mogą zwracać wyniki tabelaryczne i komunikaty do klienta, wywoływać instrukcje języka definicji danych (DDL) i języka manipulowania danymi oraz zwracać parametry wyjściowe.  
@@ -28,4 +28,4 @@ Aby uzyskać szczegółowe informacje, zobacz wersję [dokumentacji SQL Server](
 ## <a name="see-also"></a>Zobacz także
 
 - [Tworzenie obiektów SQL Server 2005 w kodzie zarządzanym](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6s0s2at1(v=vs.90))
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

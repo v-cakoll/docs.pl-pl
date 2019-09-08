@@ -2,24 +2,24 @@
 title: Kolekcje schematów ODBC
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
-ms.openlocfilehash: ffe80120ceffbe29c0a117cf1194860c5782be8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f0240e99d2420b0956d3c144f837b39e094bb78a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772050"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794716"
 ---
 # <a name="odbc-schema-collections"></a>Kolekcje schematów ODBC
 
-W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla programu Microsoft SQL Server, Oracle i Microsoft Jet.
+W tej sekcji omówiono obsługę kolekcji schematów dla sterowników ODBC dla Microsoft SQL Server, Oracle i Microsoft Jet.
 
-## <a name="microsoft-sql-server-odbc-driver"></a>Sterownik ODBC usługi Microsoft SQL Server
+## <a name="microsoft-sql-server-odbc-driver"></a>Sterownik Microsoft SQL Server ODBC
 
-Sterownik ODBC firmy Microsoft SQL Server obsługuje następujące kolekcje z określonego schematu, oprócz Typowe kolekcje schematów:
+Sterownik Microsoft SQL Server ODBC obsługuje następujące kolekcje schematów oprócz wspólnych kolekcji schematów:
 
-- Tabele
+- Tabelę
 
-- Indeksy
+- Zwiększa
 
 - Kolumny
 
@@ -33,7 +33,7 @@ Sterownik ODBC firmy Microsoft SQL Server obsługuje następujące kolekcje z ok
 
 ### <a name="tables-and-views"></a>Tabele i widoki
 
-|NazwaKolumny|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |TABLE_CAT|String|
 |TABLE_SCHEM|String|
@@ -41,9 +41,9 @@ Sterownik ODBC firmy Microsoft SQL Server obsługuje następujące kolekcje z ok
 |TABLE_TYPE|String|
 |REMARKS|String|
 
-### <a name="indexes"></a>Indeksy
+### <a name="indexes"></a>Zwiększa
 
-|NazwaKolumny|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |TABLE_CAT|String|
 |TABLE_SCHEM|String|
@@ -51,19 +51,19 @@ Sterownik ODBC firmy Microsoft SQL Server obsługuje następujące kolekcje z ok
 |NON_UNIQUE|Int16|
 |INDEX_QUALIFIER|String|
 |INDEX_NAME|String|
-|TYP|Int16|
+|WPROWADŹ|Int16|
 |ORDINAL_POSITION|Int16|
 |COLUMN_NAME|String|
 |ASC_OR_DESC|String|
-|KARDYNALNOŚĆ|Int32|
-|STRONY|Int32|
+|KARDYNALNOŚCI|Int32|
+|PAGE|Int32|
 |FILTER_CONDITION|String|
 |SS_TYPE_SCHEMA|String|
 |SS_DATA_TYPE|Byte|
 
 ### <a name="columns"></a>Kolumny
 
-|NazwaKolumny|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |TABLE_CAT|String|
 |TABLE_SCHEM|String|
@@ -75,7 +75,7 @@ Sterownik ODBC firmy Microsoft SQL Server obsługuje następujące kolekcje z ok
 |BUFFER_LENGTH|Int32|
 |DECIMAL_DIGITS|Int16|
 |NUM_PREC_RADIX|Int16|
-|NULLABLE|Int16|
+|WYMAGA|Int16|
 |REMARKS|String|
 |COLUMN_DEF|String|
 |SQL_DATA_TYPE|Int16|
@@ -89,7 +89,7 @@ Sterownik ODBC firmy Microsoft SQL Server obsługuje następujące kolekcje z ok
 
 ### <a name="procedures"></a>Procedury
 
-|NazwaKolumny|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |PROCEDURE_CAT|String|
 |PROCEDURE_SCHEM|String|
@@ -102,7 +102,7 @@ Sterownik ODBC firmy Microsoft SQL Server obsługuje następujące kolekcje z ok
 
 ### <a name="procedurecolumns"></a>ProcedureColumns
 
-|NazwaKolumny|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |PROCEDURE_CAT|String|
 |PROCEDURE_SCHEM|String|
@@ -115,7 +115,7 @@ Sterownik ODBC firmy Microsoft SQL Server obsługuje następujące kolekcje z ok
 |BUFFER_LENGTH|Int32|
 |DECIMAL_DIGITS|Int16|
 |NUM_PREC_RADIX|Int16|
-|NULLABLE|Int16|
+|WYMAGA|Int16|
 |REMARKS|String|
 |COLUMN_DEF|String|
 |SQL_DATA_TYPE|Int16|
@@ -129,7 +129,7 @@ Sterownik ODBC firmy Microsoft SQL Server obsługuje następujące kolekcje z ok
 
 ### <a name="procedureparameters"></a>ProcedureParameters
 
-|NazwaKolumny|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |PROCEDURE_CAT|String|
 |PROCEDURE_SCHEM|String|
@@ -142,7 +142,7 @@ Sterownik ODBC firmy Microsoft SQL Server obsługuje następujące kolekcje z ok
 |BUFFER_LENGTH|Int32|
 |DECIMAL_DIGITS|Int16|
 |NUM_PREC_RADIX|Int16|
-|NULLABLE|Int16|
+|WYMAGA|Int16|
 |REMARKS|String|
 |COLUMN_DEF|String|
 |SQL_DATA_TYPE|Int16|
@@ -154,11 +154,11 @@ Sterownik ODBC firmy Microsoft SQL Server obsługuje następujące kolekcje z ok
 |SS_TYPE_SCHEMA|String|
 |SS_DATA_TYPE|Byte|
 
-## <a name="microsoft-oracle-odbc-driver"></a>Microsoft Oracle ODBC Driver
+## <a name="microsoft-oracle-odbc-driver"></a>Sterownik Microsoft Oracle ODBC
 
-Sterownik ODBC programu Oracle do programu Microsoft SQL Server obsługuje następujące kolekcje z określonego schematu, oprócz Typowe kolekcje schematów:
+Microsoft SQL Server sterownik Oracle ODBC obsługuje następujące kolekcje schematów oprócz wspólnych kolekcji schematów:
 
-- Tabele
+- Tabelę
 
 - Kolumny
 
@@ -170,11 +170,11 @@ Sterownik ODBC programu Oracle do programu Microsoft SQL Server obsługuje nast�
 
 - Widoki
 
-- Indeksy
+- Zwiększa
 
 ### <a name="tables-and-views"></a>Tabele i widoki
 
-|NazwaKolumny|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |TABLE_QUALIFIER|String|
 |TABLE_OWNER|String|
@@ -184,7 +184,7 @@ Sterownik ODBC programu Oracle do programu Microsoft SQL Server obsługuje nast�
 
 ### <a name="columns"></a>Kolumny
 
-|NazwaKolumny|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |TABLE_QUALIFIER|String|
 |TABLE_OWNER|String|
@@ -192,17 +192,17 @@ Sterownik ODBC programu Oracle do programu Microsoft SQL Server obsługuje nast�
 |COLUMN_NAME|String|
 |DATA_TYPE|Int16|
 |TYPE_NAME|String|
-|PRECYZJA|Int32|
+|DOKŁADNE|Int32|
 |DŁUGOŚĆ|Int32|
-|SKALA|Int16|
+|ZASIĘGU|Int16|
 |RADIX|Int16|
-|NULLABLE|Int16|
+|WYMAGA|Int16|
 |REMARKS|String|
 |ORDINAL_POSITION|Int32|
 
 ### <a name="procedures"></a>Procedury
 
-|NazwaKolumny|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |PROCEDURE_QUALIFIER|String|
 |PROCEDURE_OWNER|String|
@@ -215,7 +215,7 @@ Sterownik ODBC programu Oracle do programu Microsoft SQL Server obsługuje nast�
 
 ### <a name="procedurecolumns"></a>ProcedureColumns
 
-|NazwaKolumny|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |PROCEDURE_QUALIFIER|String|
 |PROCEDURE_OWNER|String|
@@ -224,22 +224,22 @@ Sterownik ODBC programu Oracle do programu Microsoft SQL Server obsługuje nast�
 |COLUMN_TYPE|Int16|
 |DATA_TYPE|Int16|
 |TYPE_NAME|String|
-|PRECYZJA|Int32|
+|DOKŁADNE|Int32|
 |DŁUGOŚĆ|Int32|
-|SKALA|Int16|
+|ZASIĘGU|Int16|
 |RADIX|Int16|
-|NULLABLE|Int16|
+|WYMAGA|Int16|
 |REMARKS|String|
-|PRZECIĄŻENIE|Int32|
+|WYSTĘPUJĄ|Int32|
 |ORDINAL_POSITION|Int32|
 
-## <a name="microsoft-jet-odbc-driver"></a>Microsoft Jet ODBC Driver
+## <a name="microsoft-jet-odbc-driver"></a>Sterownik Microsoft Jet ODBC
 
-Sterownik ODBC firmy Microsoft Jet obsługuje następujące kolekcje z określonego schematu, oprócz Typowe kolekcje schematów:
+Sterownik Microsoft Jet ODBC obsługuje następujące kolekcje schematów oprócz wspólnych kolekcji schematów:
 
-- Tabele
+- Tabelę
 
-- Indeksy
+- Zwiększa
 
 - Kolumny
 
@@ -253,7 +253,7 @@ Sterownik ODBC firmy Microsoft Jet obsługuje następujące kolekcje z określon
 
 ### <a name="tables-and-views"></a>Tabele i widoki
 
-|NazwaKolumny|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |TABLE_QUALIFIER|String|
 |TABLE_OWNER|String|
@@ -263,7 +263,7 @@ Sterownik ODBC firmy Microsoft Jet obsługuje następujące kolekcje z określon
 
 ### <a name="columns"></a>Kolumny
 
-|NazwaKolumny|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |TABLE_QUALIFIER|String|
 |TABLE_OWNER|String|
@@ -271,17 +271,17 @@ Sterownik ODBC firmy Microsoft Jet obsługuje następujące kolekcje z określon
 |COLUMN_NAME|String|
 |DATA_TYPE|Int16|
 |TYPE_NAME|String|
-|PRECYZJA|Int32|
+|DOKŁADNE|Int32|
 |DŁUGOŚĆ|Int32|
-|SKALA|Int16|
+|ZASIĘGU|Int16|
 |RADIX|Int16|
-|NULLABLE|Int16|
+|WYMAGA|Int16|
 |REMARKS|String|
 |ORDINAL_POSITION|Int32|
 
 ### <a name="procedures"></a>Procedury
 
-|NazwaKolumny|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |PROCEDURE_QUALIFIER|String|
 |PROCEDURE_OWNER|String|
@@ -294,7 +294,7 @@ Sterownik ODBC firmy Microsoft Jet obsługuje następujące kolekcje z określon
 
 ### <a name="procedurecolumns"></a>ProcedureColumns
 
-|NazwaKolumny|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |PROCEDURE_QUALIFIER|String|
 |PROCEDURE_OWNER|String|
@@ -303,18 +303,18 @@ Sterownik ODBC firmy Microsoft Jet obsługuje następujące kolekcje z określon
 |COLUMN_TYPE|Int16|
 |DATA_TYPE|Int16|
 |TYPE_NAME|String|
-|PRECYZJA|Int32|
+|DOKŁADNE|Int32|
 |DŁUGOŚĆ|Int32|
-|SKALA|Int16|
+|ZASIĘGU|Int16|
 |RADIX|Int16|
-|NULLABLE|Int16|
+|WYMAGA|Int16|
 |REMARKS|String|
-|PRZECIĄŻENIE|Int32|
+|WYSTĘPUJĄ|Int32|
 |ORDINAL_POSITION|Int32|
 
 ### <a name="procedureparameters"></a>ProcedureParameters
 
-|NazwaKolumny|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |PROCEDURE_CAT|String|
 |PROCEDURE_SCHEM|String|
@@ -327,7 +327,7 @@ Sterownik ODBC firmy Microsoft Jet obsługuje następujące kolekcje z określon
 |BUFFER_LENGTH|Int32|
 |DECIMAL_DIGITS|Int16|
 |NUM_PREC_RADIX|Int16|
-|NULLABLE|Int16|
+|WYMAGA|Int16|
 |REMARKS|String|
 |COLUMN_DEF|String|
 |SQL_DATA_TYPE|Int16|
@@ -338,4 +338,4 @@ Sterownik ODBC firmy Microsoft Jet obsługuje następujące kolekcje z określon
 
 ## <a name="see-also"></a>Zobacz także
 
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](ado-net-overview.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 31a5aa0f147d43e94ce885c541f11b9aec4ae6d2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5261aab1ef6641651f856b8ebb024f64ad32ee59
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938652"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781430"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Implementowanie logiki biznesowej (LINQ to SQL)
 Termin "logika biznesowa" w tym temacie odnosi się do wszystkich reguł niestandardowych lub testów weryfikacyjnych, które są stosowane do danych, zanim zostaną wstawione, zaktualizowane lub usunięte z bazy danych. Logika biznesowa jest również czasami określana jako "reguły biznesowe" lub "Logika domeny". W aplikacjach n-warstwowych zwykle jest to warstwa logiczna, dzięki czemu można ją modyfikować niezależnie od warstwy prezentacji lub warstwy dostępu do danych. Logika biznesowa może być wywoływana przez warstwę dostępu do danych przed dowolnymi aktualizacjami, wstawianiem lub usuwaniem danych w bazie danych.  
@@ -188,4 +188,4 @@ partial class Customer
 - [Klasy częściowe i metody](../../../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
 - [Metody częściowe](../../../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
 - [Narzędzia LINQ to SQL Tools w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
-- [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
+- [SqlMetal.exe (narzędzie generowania kodu)](../../../../tools/sqlmetal-exe-code-generation-tool.md)

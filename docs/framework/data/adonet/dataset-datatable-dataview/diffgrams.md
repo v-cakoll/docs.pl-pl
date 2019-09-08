@@ -2,12 +2,12 @@
 title: Elementy DiffGram
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: b9e6fb4ce1c2c7ee7d081a1cb2106d30960853c7
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: dd70c8d238ba47744eec6ab4a4c6bc1e80a3d0b3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204882"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784656"
 ---
 # <a name="diffgrams"></a>Elementy DiffGram
 Plik DiffGram jest formatem XML, który identyfikuje bieżące i oryginalne wersje elementów danych. <xref:System.Data.DataSet> Używa formatu DiffGram do ładowania i utrwalania jego zawartości oraz do serializacji jego zawartości do transportu przez połączenie sieciowe. Gdy jest zapisywana w formacie DiffGram, wypełnia ona plik DiffGram ze wszystkimi informacjami niezbędnymi, aby dokładnie odtworzyć zawartość, ale nie schemat programu, w <xref:System.Data.DataSet>tym wartości kolumn zarówno z **oryginału** , jak i <xref:System.Data.DataSet>  **Wersje bieżącego** wiersza, wiersz informacje o błędzie i kolejność wierszy.  
@@ -68,13 +68,13 @@ Plik DiffGram jest formatem XML, który identyfikuje bieżące i oryginalne wers
  Format DiffGram składa się z następujących bloków danych:  
   
  **\<**  ***Wystąpienie***  **>**  
- Nazwa tego elementu (DataInstance) służy do wyjaśnienia w tej dokumentacji. Element ***DataInstance*** reprezentuje <xref:System.Data.DataSet> lub wiersz a <xref:System.Data.DataTable>. Zamiast DataInstance, element będzie zawierać nazwę <xref:System.Data.DataSet> lub. <xref:System.Data.DataTable> Ten blok formatu DiffGram zawiera bieżące dane, bez względu na to, czy został on zmodyfikowany, czy nie. Element lub wiersz, który został zmodyfikowany, jest identyfikowany za pomocą adnotacji **diffgr: hasChanges** .  
+ Nazwa tego elementu ( ***DataInstance***) służy do wyjaśnienia w tej dokumentacji. Element ***DataInstance*** reprezentuje <xref:System.Data.DataSet> lub wiersz a <xref:System.Data.DataTable>. Zamiast *DataInstance*, element będzie zawierać nazwę <xref:System.Data.DataSet> lub. <xref:System.Data.DataTable> Ten blok formatu DiffGram zawiera bieżące dane, bez względu na to, czy został on zmodyfikowany, czy nie. Element lub wiersz, który został zmodyfikowany, jest identyfikowany za pomocą adnotacji **diffgr: hasChanges** .  
   
  **\<diffgr: przed >**  
- Ten blok formatu DiffGram zawiera oryginalną wersję wiersza. Elementy w tym bloku są dopasowywane do elementów w bloku DataInstance przy użyciu adnotacji **diffgr: ID** .  
+ Ten blok formatu DiffGram zawiera oryginalną wersję wiersza. Elementy w tym bloku są dopasowywane do elementów w bloku ***DataInstance*** przy użyciu adnotacji **diffgr: ID** .  
   
  **\<diffgr: Błędy >**  
- Ten blok formatu DiffGram zawiera informacje o błędach dla określonego wiersza w bloku ***DataInstance*** . Elementy w tym bloku są dopasowywane do elementów w bloku DataInstance przy użyciu adnotacji **diffgr: ID** .  
+ Ten blok formatu DiffGram zawiera informacje o błędach dla określonego wiersza w bloku ***DataInstance*** . Elementy w tym bloku są dopasowywane do elementów w bloku ***DataInstance*** przy użyciu adnotacji **diffgr: ID** .  
   
 ## <a name="diffgram-annotations"></a>Adnotacje w formacie DiffGram  
  DiffGrams użyć kilku adnotacji do powiązania elementów z różnych bloków DiffGram, które reprezentują różne wersje wierszy lub informacje o błędach w <xref:System.Data.DataSet>.  
@@ -83,10 +83,10 @@ Plik DiffGram jest formatem XML, który identyfikuje bieżące i oryginalne wers
   
 |Adnotacja|Opis|  
 |----------------|-----------------|  
-|**id**|Służy do parowania elementów w  **\<diffgr: przed >** i **\<**  **\<diffgr: Błędy >** bloków do elementów w bloku DataInstance. **>** Wartości z adnotacją **diffgr: ID** są w postaci *[TableName] [RowIdentifier]* . Na przykład: `<Customers diffgr:id="Customers1">`.|  
-|**parentId**|Określa, który element z **\<** bloku DataInstance **>** jest elementem nadrzędnym bieżącego elementu. Wartości z adnotacją **diffgr: parentID** znajdują się w postaci *[TableName] [RowIdentifier]* . Na przykład: `<Orders diffgr:parentId="Customers1">`.|  
-|**hasChanges**|Identyfikuje wiersz w **\<** bloku DataInstance **>** jako zmodyfikowany. Adnotacja **HasChanges** może mieć jedną z następujących dwóch wartości:<br /><br /> **wstawiany**<br /> Identyfikuje **dodany** wiersz.<br /><br /> **Modyfikacja**<br /> Określa **zmodyfikowany** wiersz, który zawiera **oryginalną**  **\<wersję wiersza w bloku diffgr: Before >** . Zwróć uwagę, że **usunięte** wiersze będą mieć oryginalną **>** **\<**  **\<wersję wiersza w diffgr: Before >** , ale w bloku DataInstance nie będzie żadnych elementów z adnotacjami.|  
-|**hasErrors**|Identyfikuje wiersz w **\<** bloku DataInstance **>** z **RowError**. Element Error jest umieszczany w  **\<bloku diffgr: Errors >** .|  
+|**id**|Służy do parowania elementów w  **\<diffgr: przed >** **\<** i  **\<diffgr: Błędy >** bloków do elementów w bloku ***DataInstance*** **>** . Wartości z adnotacją **diffgr: ID** są w postaci *[TableName] [RowIdentifier]* . Na przykład: `<Customers diffgr:id="Customers1">`.|  
+|**parentId**|Określa, który element z **\<** bloku ***DataInstance*** **>** jest elementem nadrzędnym bieżącego elementu. Wartości z adnotacją **diffgr: parentID** znajdują się w postaci *[TableName] [RowIdentifier]* . Na przykład: `<Orders diffgr:parentId="Customers1">`.|  
+|**hasChanges**|Identyfikuje wiersz w **\<** bloku ***DataInstance*** **>** jako zmodyfikowany. Adnotacja **HasChanges** może mieć jedną z następujących dwóch wartości:<br /><br /> **wstawiany**<br /> Identyfikuje **dodany** wiersz.<br /><br /> **Modyfikacja**<br /> Określa **zmodyfikowany** wiersz, który zawiera **oryginalną**  **\<wersję wiersza w bloku diffgr: Before >** . Zwróć uwagę, że **usunięte** wiersze będą mieć **oryginalną** **\<** **>**  **\<wersję wiersza w diffgr: Before >** , ale w bloku DataInstance nie będzie żadnych elementów z adnotacjami.|  
+|**hasErrors**|Identyfikuje wiersz w **\<** bloku ***DataInstance*** **>** z **RowError**. Element Error jest umieszczany w  **\<bloku diffgr: Errors >** .|  
 |**Error**|Zawiera tekst **RowError** dla określonego elementu w  **\<bloku diffgr: Errors >** .|  
   
  <xref:System.Data.DataSet> Zawiera dodatkowe adnotacje podczas odczytywania lub zapisywania zawartości w formacie DiffGram. W poniższej tabeli opisano te dodatkowe adnotacje, które są zdefiniowane w przestrzeni nazw **urn: schematy-Microsoft-com: XML-msdata**.  
@@ -97,7 +97,7 @@ Plik DiffGram jest formatem XML, który identyfikuje bieżące i oryginalne wers
 |**Ukryte**|Identyfikuje kolumnę jako posiadającą Właściwość **ColumnMapping** ustawioną na wartość **MappingType. Hidden**. Atrybut jest zapisywana w formacie **msdata: Hidden** *[ColumnName]* = "*Value*". Na przykład: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`.<br /><br /> Należy zauważyć, że ukryte kolumny są zapisywane tylko jako atrybut DiffGram, jeśli zawierają dane. W przeciwnym razie są one ignorowane.|  
   
 ## <a name="sample-diffgram"></a>Przykładowy format DiffGram  
- Poniżej przedstawiono przykładowy format DiffGram. Ten przykład pokazuje wynik aktualizacji wiersza w tabeli przed zatwierdzeniem zmian. Wiersz z identyfikatorem IDKlienta "ALFKI" został zmodyfikowany, ale nie został zaktualizowany. W efekcie istnieje **bieżący** wiersz o **identyfikatorze diffgr:** " **\<** Customers1" w bloku DataInstance **>** i **oryginalny** wiersz z **diffgr: ID** "Customers1" w  **\< elemencie diffgr: przed blok >** . Wiersz z identyfikatorem IDKlienta "ANATR" zawiera element **RowError**, więc ma on adnotację z `diffgr:hasErrors="true"` i zawiera  **\<powiązany element w bloku diffgr: Errors >** .  
+ Poniżej przedstawiono przykładowy format DiffGram. Ten przykład pokazuje wynik aktualizacji wiersza w tabeli przed zatwierdzeniem zmian. Wiersz z identyfikatorem IDKlienta "ALFKI" został zmodyfikowany, ale nie został zaktualizowany. W efekcie istnieje **bieżący** wiersz o **identyfikatorze diffgr:** **\<** "Customers1" w bloku ***DataInstance*** **>** i **oryginalny** wiersz z **diffgr: ID** "Customers1" w  **\< elemencie diffgr: przed blok >** . Wiersz z identyfikatorem IDKlienta "ANATR" zawiera element **RowError**, więc ma on adnotację z `diffgr:hasErrors="true"` i zawiera  **\<powiązany element w bloku diffgr: Errors >** .  
   
 ```xml  
 <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">  
@@ -137,4 +137,4 @@ Plik DiffGram jest formatem XML, który identyfikuje bieżące i oryginalne wers
 - [Ładowanie elementu DataSet z pliku XML](loading-a-dataset-from-xml.md)
 - [Zapisywanie zawartości elementu DataSet jako danych XML](writing-dataset-contents-as-xml-data.md)
 - [Elementy DataSet, DataTable i DataView](index.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

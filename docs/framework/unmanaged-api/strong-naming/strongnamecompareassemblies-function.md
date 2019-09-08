@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3693a42db8e32a4bb7a399f8c930da011130893
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b0c2e8e46c7bb3a5e693c9ea16e6c5a0722b1898
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778736"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799154"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies — Funkcja
-Określa, czy dwa zestawy różnią się tylko ich podpisy silnej nazwy.  
+Określa, czy dwa zestawy różnią się tylko sygnaturami silnej nazwy.  
   
- Ta funkcja jest przestarzała. Użyj [iclrstrongname::strongnamecompareassemblies —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md) metody zamiast tego.  
+ Ta funkcja jest przestarzała. Zamiast tego użyj metody [ICLRStrongName:: StrongNameCompareAssemblies —](../hosting/iclrstrongname-strongnamecompareassemblies-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,38 +40,38 @@ BOOLEAN StrongNameCompareAssemblies (
   
 ## <a name="parameters"></a>Parametry  
  `wszAssembly1`  
- [in] Ścieżka do pierwszego zestawu.  
+ podczas Ścieżka do pierwszego zestawu.  
   
  `wszAssembly2`  
- [in] Ścieżka do drugiego zestawu.  
+ podczas Ścieżka do drugiego zestawu.  
   
  `pdwResult`  
- [out] Jeden z następujących wartości:  
+ określoną Jedna z następujących wartości:  
   
-- `SN_CMP_DIFFERENT` (0) — określa, że zestawy zawierają różne dane.  
+- `SN_CMP_DIFFERENT`(0) — określa, że zestawy zawierają różne dane.  
   
-- `SN_CMP_IDENTICAL` (1) — określa, że zestawy są dokładnie takie same, łącznie z ich podpisy i sumy kontrolnej.  
+- `SN_CMP_IDENTICAL`(1) — określa, że zestawy są dokładnie takie same, łącznie z ich sygnaturami i sumą kontrolną.  
   
-- `SN_CMP_SIGONLY` (2) — określa, że zestawy różnią się jedynie podpisu i sum kontrolnych.  
+- `SN_CMP_SIGONLY`(2) — określa, że zestawy różnią się tylko sygnaturą i sumą kontrolną.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true` Po pomyślnym zakończeniu; w przeciwnym razie `false`.  
+ `true`Po pomyślnym zakończeniu; w przeciwnym razie. `false`  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** StrongName.h  
+ **Nagłówki** StrongName.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Biblioteki** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="remarks"></a>Uwagi  
- Podpis silnej nazwy zestawu składa się z tekstu nazwę zestawu, wersji, kultury i token klucza publicznego.  
+ Podpis silnej nazwy zestawu składa się z nazwy tekstu, wersji, kultury i tokenu klucza publicznego zestawu.  
   
- Jeśli `StrongNameCompareAssemblies` funkcja nie jest ukończone pomyślnie, wywołaj [strongnameerrorinfo —](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) funkcję, aby pobrać ostatni błąd wygenerowany.  
+ Jeśli funkcja nie zakończy się pomyślnie, wywołaj funkcję StrongNameErrorInfo — w celu pobrania ostatniego wygenerowanego błędu. [](strongnameerrorinfo-function.md) `StrongNameCompareAssemblies`  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [StrongNameCompareAssemblies, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)
-- [ICLRStrongName, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameCompareAssemblies, metoda](../hosting/iclrstrongname-strongnamecompareassemblies-method.md)
+- [ICLRStrongName, interfejs](../hosting/iclrstrongname-interface.md)

@@ -2,12 +2,12 @@
 title: Oracle REF CURSOR
 ms.date: 03/30/2017
 ms.assetid: c6b25b8b-0bdd-41b2-9c7c-661f070c2247
-ms.openlocfilehash: 7c6b326b15a2af58da9206adf28070e57fec600c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7cd29a6a20015c7ce4475b0211cb07f7ee78b530
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963515"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794874"
 ---
 # <a name="oracle-ref-cursors"></a>Oracle REF CURSOR
 .NET Framework Dostawca danych dla programu Oracle obsługuje typ danych **Cursor ref** firmy Oracle. Gdy dostawca danych jest używany do pracy z kursorami REF Oracle, należy wziąć pod uwagę następujące zachowania.  
@@ -19,7 +19,7 @@ ms.locfileid: "69963515"
   
 - Dostawca danych nie obsługuje żadnych sekwencji unikowych ODBC, w tym kontrolki ucieczki {zestaw wyników} służącej do określania parametrów REF CURSOR.  
   
-- Aby wykonać procedurę przechowywaną, która zwraca kursory ref, należy zdefiniować <xref:System.Data.OracleClient.OracleParameterCollection>parametry w <xref:System.Data.OracleClient.OracleType> z kursorem i a <xref:System.Data.OracleClient.OracleParameter.Direction%2A> . Dostawca danych obsługuje Powiązywanie kursorów REFERENCYJNych jako parametrów wyjściowych. Dostawca nie obsługuje REFERENCYJNych kursorów jako parametrów wejściowych.  
+- Aby wykonać procedurę przechowywaną, która <xref:System.Data.OracleClient.OracleParameterCollection> zwraca kursory ref, należy zdefiniować parametry w <xref:System.Data.OracleClient.OracleType> z **kursorem** i <xref:System.Data.OracleClient.OracleParameter.Direction%2A> **a.** Dostawca danych obsługuje Powiązywanie kursorów REFERENCYJNych jako parametrów wyjściowych. Dostawca nie obsługuje REFERENCYJNych kursorów jako parametrów wejściowych.  
   
 - <xref:System.Data.OracleClient.OracleDataReader> Uzyskanie z wartości parametru nie jest obsługiwane. Wartości są typu <xref:System.DBNull> po wykonaniu polecenia.  
   
@@ -30,19 +30,19 @@ ms.locfileid: "69963515"
 - Typ danych **tabeli** pl/SQL nie jest obsługiwany. Jednak kursory REF są bardziej wydajne. Jeśli musisz użyć typu danych **tabeli** , użyj OLE DB .NET Dostawca danych z msdaora i.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przykłady REF CURSOR](../../../../docs/framework/data/adonet/ref-cursor-examples.md)  
+ [Przykłady REF CURSOR](ref-cursor-examples.md)  
  Zawiera trzy przykłady, które demonstrują korzystanie z kursorów REF.  
   
- [Parametry kursora REF CURSOR w OracleDataReader](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)  
+ [Parametry kursora REF CURSOR w OracleDataReader](ref-cursor-parameters-in-an-oracledatareader.md)  
  Pokazuje, jak wykonać procedurę składowaną PL/SQL, która zwraca parametr REF CURSOR i odczytuje wartość jako **OracleDataReader**.  
   
- [Pobieranie danych z wielu kursorów REF CURSOR przy użyciu OracleDataReader](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)  
+ [Pobieranie danych z wielu kursorów REF CURSOR przy użyciu OracleDataReader](retrieving-data-from-multiple-ref-cursors.md)  
  Demonstruje sposób wykonywania procedury składowanej PL/SQL, która zwraca dwa parametry REF CURSOR i odczytuje wartości przy użyciu **OracleDataReader**.  
   
- [Wypełnianie zestawu danych przy użyciu przynajmniej jednego kursora REF CURSOR](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)  
+ [Wypełnianie zestawu danych przy użyciu przynajmniej jednego kursora REF CURSOR](filling-a-dataset-using-one-or-more-ref-cursors.md)  
  Demonstruje sposób wykonywania procedury składowanej pl/SQL, która zwraca dwa parametry kursora ref, i wypełnia <xref:System.Data.DataSet> z zwracanymi wierszami.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Oracle i ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Oracle i ADO.NET](oracle-and-adonet.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

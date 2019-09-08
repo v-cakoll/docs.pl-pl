@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6c417eec9583ff069c9d61fa31e9c14f3931130
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0086906b23cc65825bbd54a54e544fa9ec7b211e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778508"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796267"
 ---
 # <a name="assemblycomparisonresult-enumeration"></a>AssemblyComparisonResult — Wyliczenie
-Wskazuje na równoważność dwóch tożsamości zestawu, zgodnie z ustaleniami [compareassemblyidentity —](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md) funkcji.  
+Określa równoważność dwóch tożsamości zestawów określonych przez funkcję [CompareAssemblyIdentity —](compareassemblyidentity-function.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,29 +49,29 @@ typedef enum _tagAssemblyComparisonResult {
   
 |Nazwa elementu członkowskiego|Opis|  
 |-----------------|-----------------|  
-|`ACR_EquivalentFullMatch`|Wskazuje, że zestaw wszystkich pól dopasowania porównania.|  
-|`ACR_EquivalentFXUnified`|Wskazuje, że zestawy są uważane za równoważne oparte na wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) w wersji ujednolicenie numery wersji zestawu w .NET Framework w wersji 2.0.|  
-|`ACR_EquivalentPartialFXUnified`|Wskazuje częściowe dopasowanie zestawów, w oparciu o ujednolicenie środowiska CLR numery wersji zestawu w programie .NET Framework 2.0.|  
+|`ACR_EquivalentFullMatch`|Wskazuje, że wszystkie pola zestawu w porównaniu są zgodne.|  
+|`ACR_EquivalentFXUnified`|Wskazuje, że zestawy są uważane za równoważne w oparciu o wersję środowiska uruchomieniowego języka wspólnego (CLR), w .NET Framework w wersji 2,0.|  
+|`ACR_EquivalentPartialFXUnified`|Wskazuje częściowe dopasowanie zestawów na podstawie niezjednoczenia środowiska CLR numerów wersji zestawu w .NET Framework 2,0.|  
 |`ACR_EquivalentPartialMatch`|Wskazuje częściowe dopasowanie zestawów.|  
-|`ACR_EquivalentPartialUnified`|Wskazuje częściowym zestawy oparte na starszych ujednolicenie numerów wersji.|  
-|`ACR_EquivalentPartialWeakNamed`|Wskazuje częściowe dopasowanie, po prostu nazwanych zestawów.|  
-|`ACR_EquivalentUnified`|Wskazuje, że zestawy są uważane za równoważne oparte na ujednolicenie środowiska CLR numery wersji w starszych wersjach programu .NET Framework.|  
-|`ACR_EquivalentWeakNamed`|Wskazuje zgodność między dwa po prostu nazwane zestawy, których numery wersji zostały zignorowane.|  
-|`ACR_NonEquivalent`|Wskazuje, że dopasowanie nie wystąpił między dwoma zestawami.|  
-|`ACR_NonEquivalentPartialVersion`|Wskazuje, że te dwa zestawy są zgodne z wyjątkiem ich numery wersji i tylko częściowo zgodne.|  
-|`ACR_NonEquivalentVersion`|Wskazuje, że te dwa zestawy są zgodne z wyjątkiem ich numery wersji, które nie są zgodne.|  
-|`ACR_Unknown`|Wskazuje przyczynę niż równoważności jest nieznany.|  
+|`ACR_EquivalentPartialUnified`|Wskazuje częściowe dopasowanie zestawów w oparciu o starszej zjednoczenia numerów wersji.|  
+|`ACR_EquivalentPartialWeakNamed`|Wskazuje częściowe dopasowanie zestawów po prostu nazwanych.|  
+|`ACR_EquivalentUnified`|Wskazuje, że zestawy są uważane za równoważne w oparciu o niezjednoczenie kodów wersji w starszych wersjach .NET Framework.|  
+|`ACR_EquivalentWeakNamed`|Wskazuje zgodność między dwoma po prostu zestawami, których numery wersji zostały zignorowane.|  
+|`ACR_NonEquivalent`|Wskazuje, że nie wystąpiły żadne dopasowanie między dwoma zestawami.|  
+|`ACR_NonEquivalentPartialVersion`|Wskazuje, że dwa zestawy są zgodne z wyjątkiem numerów wersji, które pasują tylko częściowo.|  
+|`ACR_NonEquivalentVersion`|Wskazuje, że dwa zestawy są zgodne z wyjątkiem numerów wersji, które nie pasują do siebie.|  
+|`ACR_Unknown`|Wskazuje, że przyczyna nierównoważności jest nieznana.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Fusion.h  
+ **Nagłówki** Fusion. h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Biblioteki** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [CompareAssemblyIdentity, funkcja](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)
-- [Wyliczenia łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [CompareAssemblyIdentity, funkcja](compareassemblyidentity-function.md)
+- [Wyliczenia łączenia](fusion-enumerations.md)

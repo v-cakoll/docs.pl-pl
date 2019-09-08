@@ -2,28 +2,28 @@
 title: 'Instrukcje: Generowanie kodu dostosowane przez zmodyfikowanie pliku DBML'
 ms.date: 03/30/2017
 ms.assetid: 50ad597a-8598-42d3-82dd-fc7d702ebc37
-ms.openlocfilehash: c3fa4d9db4076309ab7d6066cc7072797eaead54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 01890e6b899db6b70049e2d6b8193e5b0f4095fb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877347"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781984"
 ---
 # <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a>Instrukcje: Generowanie kodu dostosowane przez zmodyfikowanie pliku DBML
-Można wygenerować kodu języka Visual Basic lub C# źródła kodu z pliku metadanych bazy danych markup language (dbml). To podejście oferuje możliwość dostosowywania domyślnego pliku dbml przed wygenerowaniem kodu mapowania aplikacji. Jest to zaawansowana funkcja.  
+Można generować Visual Basic lub C# kod źródłowy z pliku metadanych języka DBML (Database Markup Language). Takie podejście umożliwia dostosowanie domyślnego pliku DBML przed wygenerowaniem kodu mapowania aplikacji. Jest to funkcja zaawansowana.  
   
- Kroki w ramach tego procesu są następujące:  
+ Kroki w tym procesie są następujące:  
   
-1. Generuje plik dbml.  
+1. Generuj plik. dbml.  
   
-2. Użyj edytora do modyfikowania pliku dbml. Należy zauważyć, że plik dbml musi przeprowadzić walidacji względem pliku (XSD) definicji schematu dla [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dbml, pliki. Aby uzyskać więcej informacji, zobacz [generowanie kodu w składniku LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+2. Zmodyfikuj plik DBML za pomocą edytora. Należy pamiętać, że plik. dbml musi sprawdzać poprawność pliku definicji schematu (XSD [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ) dla plików. dbml. Aby uzyskać więcej informacji, zobacz [generowanie kodu w LINQ to SQL](code-generation-in-linq-to-sql.md).  
   
-3. Generowanie języka Visual Basic lub C# kodu źródłowego.  
+3. Generuj Visual Basic lub C# kod źródłowy.  
   
- W poniższych przykładach używane jest narzędzie wiersza polecenia SQLMetal. Aby uzyskać więcej informacji, zobacz [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+ W poniższych przykładach użyto narzędzia wiersza polecenia SQLMetal. Aby uzyskać więcej informacji, zobacz [SQLMetal. exe (Narzędzie generowania kodu)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod generuje plik dbml z przykładowej bazy danych Northwind. Jako źródło dla metadanych bazy danych można użyć nazwy bazy danych lub nazwę pliku MDF.  
+ Poniższy kod generuje plik. dbml z przykładowej bazy danych Northwind. Jako źródło metadanych bazy danych można użyć nazwy bazy danych lub nazwy pliku MDF.  
   
 ```  
 sqlmetal /server:myserver /database:northwind /dbml:mymeta.dbml  
@@ -31,7 +31,7 @@ sqlmetal /dbml:mymeta.dbml mydbfile.mdf
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod generuje języka Visual Basic lub C# pliku kodu źródłowego, na podstawie pliku dbml.  
+ Poniższy kod generuje Visual Basic lub C# plik kodu źródłowego z pliku. dbml.  
   
 ```  
 sqlmetal /namespace:nwind /code:nwind.vb /language:vb DBMLFile.dbml  
@@ -40,6 +40,6 @@ sqlmetal /namespace:nwind /code:nwind.cs /language:csharp DBMLFile.dbml
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Generowanie kodu w składniku LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
-- [Tworzenie modelu obiektu](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
+- [Generowanie kodu w składniku LINQ to SQL](code-generation-in-linq-to-sql.md)
+- [SqlMetal.exe (narzędzie generowania kodu)](../../../../tools/sqlmetal-exe-code-generation-tool.md)
+- [Tworzenie modelu obiektu](creating-the-object-model.md)

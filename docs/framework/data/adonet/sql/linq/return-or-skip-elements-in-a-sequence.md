@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: 75cb5ea166c36de5c0921fbbd830021719497cda
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5c32afc913443787ad8371f31f1fe330b126398
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963861"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792754"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Zwracanie lub pomijanie elementów w sekwencji
 Użyj operatora <xref:System.Linq.Queryable.Take%2A> , aby zwrócić daną liczbę elementów w sekwencji, a następnie pominąć resztę.  
@@ -18,7 +18,7 @@ Użyj operatora <xref:System.Linq.Queryable.Take%2A> , aby zwrócić daną liczb
  Użyj operatora <xref:System.Linq.Queryable.Skip%2A> , aby pominąć daną liczbę elementów w sekwencji, a następnie zwrócić resztę.  
   
 > [!NOTE]
-> <xref:System.Linq.Enumerable.Take%2A>i <xref:System.Linq.Enumerable.Skip%2A> mają pewne ograniczenia, gdy są używane w zapytaniach do SQL Server 2000. Aby uzyskać więcej informacji, zobacz wpis "Pomiń i przejmowanie wyjątków w SQL Server 2000" w [temacie Rozwiązywanie problemów](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+> <xref:System.Linq.Enumerable.Take%2A>i <xref:System.Linq.Enumerable.Skip%2A> mają pewne ograniczenia, gdy są używane w zapytaniach do SQL Server 2000. Aby uzyskać więcej informacji, zobacz wpis "Pomiń i przejmowanie wyjątków w SQL Server 2000" w [temacie Rozwiązywanie problemów](troubleshooting.md).  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]tłumaczy przy użyciu podzapytania z klauzulą SQL `NOT EXISTS`. <xref:System.Linq.Queryable.Skip%2A> To tłumaczenie ma następujące ograniczenia:  
   
@@ -80,5 +80,5 @@ ORDER BY [t0].[CustomerID]
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przykłady zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [Translacja standardowego operatora zapytania](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+- [Przykłady zapytań](query-examples.md)
+- [Translacja standardowego operatora zapytania](standard-query-operator-translation.md)

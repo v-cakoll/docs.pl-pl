@@ -16,35 +16,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25733e459423500352595d6be0eee26ef75ca7e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 522ed80f161f114af25e1fa7ad041c8238073d6f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789691"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796369"
 ---
 # <a name="ireferenceappid-interface"></a>IReferenceAppId — Interfejs
-Reprezentuje odwołanie do Unikatowy identyfikator aplikacji w bieżącym zakresie.  
+Reprezentuje odwołanie do unikatowego identyfikatora aplikacji w bieżącym zakresie.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|`IReferenceAppId::get_CodeBase`|Pobiera wskaźnik do ciągu reprezentującego identyfikator kodu dla aplikacji odwołuje się ten `IReferenceAppId`.|  
-|`IReferenceAppId::put_CodeBase`|Ustawia identyfikator kodu dla aplikacji odwołuje się ten `IReferenceAppId`.|  
-|`IReferenceAppId::EnumAppPath`|Pobiera wskaźnik interfejsu do `IEnumReferenceIdentity` zawierające wystąpienie `IReferenceIdentity` wystąpień, które reprezentują elementy członkowskie tego `IReferenceAppId`.|  
-|`IReferenceAppId::get_SubscriptionId`|Pobiera wskaźnik do reprezentację ciągu identyfikatora tokenu dla subskrypcji w tym `IReferenceAppId`.|  
-|`IReferenceAppId::put_SubscriptionId`|Ustawia token identyfikator subskrypcji to `IReferenceAppId` wartości określonego ciągu.|  
+|`IReferenceAppId::get_CodeBase`|Pobiera wskaźnik do ciągu reprezentującego identyfikator kodu dla aplikacji, do której się odwołuje `IReferenceAppId`.|  
+|`IReferenceAppId::put_CodeBase`|Ustawia identyfikator kodu dla aplikacji, do której się odwołuje `IReferenceAppId`.|  
+|`IReferenceAppId::EnumAppPath`|Pobiera wskaźnik interfejsu do `IEnumReferenceIdentity` wystąpienia `IReferenceIdentity` zawierającego wystąpienia, które reprezentują elementy członkowskie tego `IReferenceAppId`elementu.|  
+|`IReferenceAppId::get_SubscriptionId`|Pobiera wskaźnik do ciągu reprezentującego Identyfikator tokenu dla subskrypcji `IReferenceAppId`.|  
+|`IReferenceAppId::put_SubscriptionId`|Ustawia identyfikator tokenu dla subskrypcji `IReferenceAppId` na wartość określonej wartości ciągu.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Isolation.h  
+ **Nagłówki** Izolacja. h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Interfejsy łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IEnumReferenceIdentity, interfejs](../../../../docs/framework/unmanaged-api/fusion/ienumreferenceidentity-interface.md)
-- [IReferenceIdentity, interfejs](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+- [Interfejsy łączenia](fusion-interfaces.md)
+- [IEnumReferenceIdentity, interfejs](ienumreferenceidentity-interface.md)
+- [IReferenceIdentity, interfejs](ireferenceidentity-interface.md)

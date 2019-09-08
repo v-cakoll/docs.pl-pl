@@ -2,60 +2,60 @@
 title: Używanie akcji do implementacji zachowania po stronie serwera
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 23a01b7221fcfcbfc3cceb82123c68879eba98a3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: bdfa8e37904395b402874b743ca4069cae75c504
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063166"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779687"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Używanie akcji do implementacji zachowania po stronie serwera
 
-Akcje protokołu OData umożliwiają implementowanie zachowania, które podejmuje działania dotyczące zasobów, pobierane z usługi OData. Na przykład rozważmy film cyfrowy jako zasób, istnieje wiele rzeczy, które można wykonać za pomocą cyfrowych film: wyewidencjonowanie, szybkość/comment lub ewidencjonowania. Są to wszystkie przykłady działań, które mogą być zaimplementowane przez usługi danych WCF, która zarządza filmów cyfrowych. Akcje są opisane w odpowiedzi OData, która zawiera zasób, na którym może być wywołana Akcja. Gdy użytkownik zażąda z zasobem, który reprezentuje film cyfrowy odpowiedź zwrócona z usługi danych WCF zawiera informacje o akcjach, które są dostępne dla tego zasobu. Dostępność akcji może zależeć od stanu zasobu lub usługi danych. Na przykład, gdy film cyfrowy jest wyewidencjonowany go nie może być wyewidencjonowany przez innego użytkownika. Klienci mogą wywołać akcję poprzez określenie adresu URL. Na przykład `http://MyServer/MovieService.svc/Movies(6)` będzie identyfikować określonych film cyfrowy i `http://MyServer/MovieService.svc/Movies(6)/Checkout` powodowałoby wywołanie pliku wykonywalnego działania w określonym filmu. Akcje umożliwiają możesz udostępnić modelu usługi bez narażania modelu danych. Kontynuując przykład usługi filmu, możesz umożliwić użytkownikowi szybkości filmu, ale nie są bezpośrednio uwidaczniać dane ocenę jako zasób. Można zaimplementować akcją kurs pozwala użytkownikom sklasyfikować filmu, ale nie są bezpośrednio uzyskać dostęp do danych klasyfikację jako zasób.
+Akcje OData umożliwiają wdrożenie zachowania, które działa w przypadku zasobu pobranego z usługi OData. Na przykład w przypadku filmu cyfrowego należy wziąć pod uwagę wiele rzeczy, które można wykonać za pomocą filmu cyfrowego: wyewidencjonowywanie, wskaźnik/komentarz lub ewidencjonowanie. Są to wszystkie przykłady akcji, które mogą być implementowane przez usługę danych programu WCF, która zarządza cyfrowymi filmami. Akcje są opisane w odpowiedzi OData, która zawiera zasób, w którym można wywołać akcję. Gdy użytkownik zażąda zasobu, który reprezentuje film cyfrowy, odpowiedź zwrócona z usługi danych programu WCF zawiera informacje o akcjach, które są dostępne dla tego zasobu. Dostępność akcji może zależeć od stanu usługi danych lub zasobu. Na przykład po wyewidencjonowaniu filmu cyfrowego nie można go wyewidencjonować przez innego użytkownika. Klienci mogą wywołać akcję po prostu podając adres URL. Na przykład `http://MyServer/MovieService.svc/Movies(6)` zidentyfikuje określony film cyfrowy i `http://MyServer/MovieService.svc/Movies(6)/Checkout` wywoła akcję na określonym filmie. Akcje umożliwiają udostępnienie modelu usług bez uwidaczniania modelu danych. Kontynuując korzystanie z przykładu usługi filmowej, możesz chcieć zezwolić użytkownikowi na ocenianie filmu, ale nie ujawniać bezpośrednio danych klasyfikacji jako zasobu. Można zaimplementować akcję rate, aby umożliwić użytkownikowi ocenę filmu, ale nie uzyskanie bezpośredniego dostępu do danych klasyfikacji jako zasobu.
   
 ## <a name="implementing-an-action"></a>Implementowanie akcji  
- Do wykonania działania usługi, musisz zaimplementować <xref:System.IServiceProvider>, [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)), i [IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) interfejsów. <xref:System.IServiceProvider> Umożliwia WCF Data Services uzyskać implementacji [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)). [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) umożliwia usługi danych WCF w celu tworzenia, znajdowanie, opis i wywołania akcji usługi. [IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) pozwala wywołuje kod, który implementuje zachowanie akcji usługi i uzyskiwać wyniki, jeśli istnieje. Należy pamiętać o tym, czy na wywołanie usług WCF, nowe wystąpienie klasy usługi WCF Data Services zostanie utworzony w każdym razem, gdy usługa jest wywoływana.  Upewnij się, że bez niepotrzebnych wykonywania pracy po utworzeniu usługi.  
+ Aby zaimplementować akcję usługi <xref:System.IServiceProvider>, należy zaimplementować interfejsy, [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))i [IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) . <xref:System.IServiceProvider>zezwala Usługi danych programu WCF na pobieranie implementacji [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)). [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) umożliwia usługi danych programu WCF tworzenie, Znajdowanie, opisywanie i wywoływanie akcji usługi. [IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) umożliwia wywołanie kodu, który implementuje zachowanie działania usługi i pobiera wyniki, jeśli istnieją. Należy pamiętać, że Usługi danych programu WCF są usługi WCF dla wywołań, nowe wystąpienie usługi zostanie utworzone za każdym razem, gdy usługa zostanie wywołana.  Upewnij się, że nie ma żadnych niepotrzebnych zadań podczas tworzenia usługi.  
   
 ### <a name="iserviceprovider"></a>IServiceProvider  
- <xref:System.IServiceProvider> zawiera metodę o nazwie <xref:System.IServiceProvider.GetService%2A>. Ta metoda jest wywoływana przez usługi danych WCF w celu pobrania liczba dostawców usług, w tym metadanych, dostawców usług i dostawcy akcji usługi danych. Po wyświetleniu monitu Akcja dostawcy usługi danych, zwraca swoje [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) implementacji.  
+ <xref:System.IServiceProvider>zawiera metodę o nazwie <xref:System.IServiceProvider.GetService%2A>. Ta metoda jest wywoływana przez Usługi danych programu WCF w celu pobrania wielu dostawców usług, w tym dostawców usług metadanych i dostawców akcji usługi danych. Po wyświetleniu monitu o dostawcę akcji usługi danych Zwróć implementację programu [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) .  
   
 ### <a name="idataserviceactionprovider"></a>IDataServiceActionProvider  
- [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) zawiera metody, które umożliwiają pobieranie informacji o dostępnych akcji. Podczas implementacji [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) są przestarzałe metadanych dla usługi, która jest zdefiniowana przez implementację usługi [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) z akcjami i Obsługa wysyłania tych akcji, zgodnie z potrzebami.  
+ [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) zawiera metody, które umożliwiają pobieranie informacji o dostępnych akcjach. Podczas implementowania [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) są rozszerzane metadane usługi, która jest definiowana przez implementację usługi [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) z akcjami i obsługa wysyłania do tych akcji jako wymaga.  
   
 #### <a name="advertiseserviceaction"></a>AdvertiseServiceAction  
- [Metoda AdvertiseServiceAction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859971(v=vs.103)) jest wywoływana w celu określenia, jakie akcje są dostępne dla określonego zasobu. Ta metoda jest wywoływana tylko w akcji, które nie są zawsze dostępne. Służy do sprawdzenia, czy akcja powinien być uwzględniony w odpowiedzi OData, w zależności od stanu żądanych zasobów lub stanu usługi. Jak odbywa się to sprawdzanie jest całkowicie do Ciebie. Jeśli jest kosztowna obliczania dostępności i bieżącego zasobu jest źródło danych, jest dopuszczalne pomijania sprawdzania i anonsowanie akcji. `inFeed` Parametr ma wartość `true` Jeśli bieżącego zasobu, zwracana jest częścią źródła danych.  
+ [Metoda AdvertiseServiceAction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859971(v=vs.103)) jest wywoływana w celu określenia, jakie akcje są dostępne dla określonego zasobu. Ta metoda jest wywoływana tylko w przypadku akcji, które nie są zawsze dostępne. Służy do sprawdzania, czy akcja powinna zostać uwzględniona w odpowiedzi OData w zależności od stanu żądanego zasobu lub stanu usługi. Jak to sprawdzanie jest wykonywane całkowicie do Ciebie. Jeśli Obliczanie dostępności jest kosztowne, a bieżący zasób jest w strumieniu, można pominąć sprawdzanie i zaanonsować akcję. Parametr jest ustawiany na, `true` Jeśli bieżący zwracany zasób jest częścią źródła danych. `inFeed`  
   
 #### <a name="createinvokable"></a>CreateInvokable  
- [CreateInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859940(v=vs.103)) jest wywoływana, aby utworzyć [IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) zawierający delegata, który hermetyzuje kod, który implementuje zachowanie akcji. Spowoduje to utworzenie [IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) wystąpienia, ale nie wywołuje akcję. Akcje usługi danych WCF mają skutki uboczne i musisz pracować w połączeniu z dostawcą aktualizacji, aby zapisać te zmiany na dysku. [IDataServiceInvokable.Invoke](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859924(v=vs.103)) metoda jest wywoływana z SaveChanges() dostawca aktualizacji, zostanie wywołana metoda.  
+ [CreateInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859940(v=vs.103)) jest wywoływana, aby utworzyć [IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) , który zawiera delegata, który hermetyzuje kod implementujący zachowanie akcji. Spowoduje to utworzenie wystąpienia [IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) , ale nie wywołanie akcji. Akcje usługi danych programu WCF mają efekty uboczne i muszą współpracować z dostawcą aktualizacji w celu zapisania tych zmian na dysku. Metoda [IDataServiceInvokable. Invoke](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859924(v=vs.103)) jest wywoływana z metody metody SaveChanges () dostawcy aktualizacji.  
   
 #### <a name="getserviceactions"></a>GetServiceActions  
- Ta metoda zwraca kolekcję [ServiceAction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) wystąpień, które reprezentują wszystkie akcje udostępnia usługi danych WCF. [ServiceAction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) to reprezentacja metadanych akcję, która zawiera informacje, takie jak nazwy akcji, jego parametry i jego typem zwracanym.  
+ Ta metoda zwraca kolekcję wystąpień [ServiceAction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) , które reprezentują wszystkie akcje ujawniane przez usługę danych programu WCF. [ServiceAction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) to reprezentacja metadanych akcji, która obejmuje informacje takie jak nazwa akcji, jej parametry i typ zwracany.  
   
 #### <a name="getserviceactionsbybindingparametertype"></a>GetServiceActionsByBindingParameterType  
- Ta metoda zwraca kolekcję wszystkich [ServiceAction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) wystąpień, które może być powiązana z typem parametru określonego powiązania. Innymi słowy, wszystkie [ServiceAction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103))s, która może działać na określony typ zasobu (nazywane również typ parametru wiązania). Służy to, gdy usługa zwraca zasobu, aby dołączyć informacje o akcjach, które można wywołać wobec tego zasobu. Ta metoda powinna zwrócić tylko akcje, które można powiązać typ parametru wiązania dokładne (Brak typów pochodnych). Ta metoda jest wywoływana jeden raz na każde żądanie, według typu napotkał, a wynik jest buforowany przez WCF Data Services.  
+ Ta metoda zwraca kolekcję wszystkich wystąpień [akcji](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) , które można powiązać z określonym typem parametru powiązania. Innymi słowy, wszystkie [Akcje ServiceAction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103))s, które mogą działać na określonym typie zasobu (nazywany również typem parametru wiązania). Jest on używany, gdy usługa zwraca zasób w celu uwzględnienia informacji o akcjach, które mogą być wywoływane względem tego zasobu. Ta metoda powinna zwracać tylko akcje, które można powiązać z dokładnym typem parametru powiązania (brak typów pochodnych). Ta metoda jest wywoływana raz dla każdego żądania na typ, a wynik jest buforowany przez Usługi danych programu WCF.  
   
 #### <a name="tryresolveserviceaction"></a>TryResolveServiceAction  
- Metoda ta wyszukuje określoną [ServiceAction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) i zwraca `true` Jeśli [ServiceAction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) zostanie znaleziony. Jeśli znaleziono [ServiceAction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) jest zwracany w `serviceAction` `out` parametru.  
+ Ta metoda wyszukuje określoną [akcję ServiceAction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) i zwraca `true` czy znaleziono [akcję ServiceAction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) . Jeśli zostanie znaleziona, w `serviceAction` `out` parametrze zostanie zwrócona [Akcja ServiceAction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) .  
   
 ### <a name="idataserviceinvokable"></a>IDataServiceInvokable  
- Ten interfejs umożliwia wykonywanie akcji usług danych WCF. Podczas implementowania IDataServiceInvokable odpowiedzialność za 3 rzeczy:  
+ Ten interfejs zapewnia sposób wykonywania akcji usługi danych programu WCF. Podczas wdrażania IDataServiceInvokable użytkownik jest odpowiedzialny za 3 rzeczy:  
   
-1. Przechwytywanie i potencjalnie przekazywanie parametrów  
+1. Przechwytywanie i potencjalnie organizowanie parametrów  
   
-2. Parametry, aby kod, który faktycznie implementuje akcji, gdy wywoływana jest Invoke() wysyłki  
+2. Wysyłanie parametrów do kodu, który faktycznie implementuje akcję, gdy wywoływana jest metoda Invoke ()  
   
-3. Przechowywanie dowolnego wynikiem Invoke(), dzięki czemu mogą być pobierane, za pomocą GetResult()  
+3. Przechowywanie jakichkolwiek wyników z wywołania (), aby można je było pobrać przy użyciu metody GetResult ()  
   
- Parametry mogą być przekazywane jako tokenów. To dlatego istnieje możliwość zapisu danych dostawcy usług, działająca z tokenów, które reprezentują zasoby, jeśli jest to przypadek, konieczne może być przekonwertować (marshal) tokeny te służą do rzeczywistych zasobów przed wysłaniem do rzeczywistego akcji. Po parametr został przekazany, tak aby zmiany do zasobu, które występują podczas wywoływania akcji zostaną zapisane i będą zapisane na dysku musi być w stanie edycji.  
+ Parametry mogą być przesyłane jako tokeny. Wynika to z faktu, że można napisać dostawcę usługi danych, który działa z tokenami reprezentującymi zasoby. Jeśli tak jest, może być konieczne przekonwertowanie (kierowanie) tych tokenów na rzeczywiste zasoby przed wysłaniem ich do rzeczywistej akcji. Po przekierowaniu parametru musi on być w stanie umożliwiającym edycję, aby wszelkie zmiany w zasobie, które wystąpiły po wywołaniu akcji, zostaną zapisane i zapisane na dysku.  
   
- Ten interfejs wymaga dwóch metod: Wywołania i GetResult. Wywoływanie wywołuje delegata, który implementuje zachowanie akcji i zwraca GetResult wynik monitorowanej akcji.  
+ Ten interfejs wymaga dwóch metod: Invoke i GetResult. Wywołanie wywołuje obiekt delegowany implementujący zachowanie akcji i GetResult zwraca wynik akcji.  
   
-## <a name="invoking-a-wcf-data-service-action"></a>Wywołanie akcji usług danych WCF  
- Akcje są wywoływane za pomocą żądania HTTP POST. Adres URL Określa zasób następuje nazwa akcji. Parametry są przekazywane w treści żądania. Na przykład, jeśli było usługi o nazwie MovieService, na której widoczne akcję o nazwie szybkości. Można użyć następującego adresu URL wywołanie akcji stawki na określonych film:  
+## <a name="invoking-a-wcf-data-service-action"></a>Wywoływanie akcji usługi danych programu WCF  
+ Akcje są wywoływane za pomocą żądania HTTP POST. Adres URL określa zasób, po którym następuje nazwa akcji. Parametry są przesyłane w treści żądania. Na przykład jeśli istnieje usługa o nazwie MovieService, która uwidacznia akcję o nazwie rate. Aby wywołać akcję rate dla określonego filmu, można użyć następującego adresu URL:  
   
  `http://MovieServer/MovieService.svc/Movies(1)/Rate`
   
- Movies(1) określa filmu, którą chcesz nawiązać za oraz stawkę za określa szybkość akcji. Rzeczywistej wartości ocena będzie w treści żądania HTTP, jak pokazano w poniższym przykładzie:  
+ Filmy (1) określają film, który ma być oceniany, i szybkość Określa akcję stawki. Rzeczywista wartość klasyfikacji będzie w treści żądania HTTP, jak pokazano w następującym przykładzie:  
   
 ```  
 POST http://MovieServer/MoviesService.svc/Movies(1)/Rate HTTP/1.1   
@@ -68,9 +68,9 @@ Host: localhost:15238
 ```  
   
 > [!WARNING]
-> Powyższy kod przykładowy będzie działać tylko w przypadku 5.2 usług danych WCF i później, który ma pomocy technicznej dla lekkiej serializacji JSON. Jeśli przy użyciu starszej wersji usługi danych WCF, należy określić właściwość json pełne content-type w następujący sposób: `application/json;odata=verbose`.  
+> Powyższy przykładowy kod będzie działał tylko z Usługi danych programu WCF 5,2 i nowszymi, które obsługują oświetlenie JSON. W przypadku korzystania ze starszej wersji Usługi danych programu WCF należy określić pełną zawartość JSON typu w następujący sposób: `application/json;odata=verbose`.  
   
- Alternatywnie możesz wywołać akcję za pomocą klienta usługi danych WCF, jak pokazano w poniższym fragmencie kodu.  
+ Alternatywnie można wywołać akcję przy użyciu klienta Usługi danych programu WCF, jak pokazano w poniższym fragmencie kodu.  
   
 ```csharp
 MoviesModel context = new MoviesModel (new Uri("http://MyServer/MoviesService.svc/"));  
@@ -78,11 +78,11 @@ MoviesModel context = new MoviesModel (new Uri("http://MyServer/MoviesService.sv
 context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "POST", new BodyOperationParameter("rating",4) );
 ```
   
- W powyższym fragmencie kodu `MoviesModel` klasy został wygenerowany przy użyciu programu Visual Studio Dodaj odwołanie do usługi z usługą danych programu WCF.  
+ W powyższym fragmencie kodu `MoviesModel` Klasa została wygenerowana przy użyciu programu Visual Studio, aby Dodaj odwołanie do usługi do usługi danych programu WCF.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Usługi danych WCF 4.5](../../../../docs/framework/data/wcf/index.md)
-- [Definiowanie usług danych WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
-- [Tworzenie i wdrażanie usług danych programu WCF](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)
-- [Niestandardowi dostawcy usługi danych](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
+- [Usługi danych WCF 4.5](index.md)
+- [Definiowanie usług danych WCF](defining-wcf-data-services.md)
+- [Tworzenie i wdrażanie usług danych programu WCF](developing-and-deploying-wcf-data-services.md)
+- [Niestandardowi dostawcy usługi danych](custom-data-service-providers-wcf-data-services.md)

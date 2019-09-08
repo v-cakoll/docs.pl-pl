@@ -2,22 +2,22 @@
 title: Mapowanie ograniczeń unique schematu XML (XSD) na ograniczenia elementu DataSet
 ms.date: 03/30/2017
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
-ms.openlocfilehash: 231f23ccf47f60b902fdd5c66b63fe1a750445f9
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 4aa94dfaf088a2a934c8901e2720f166d3a38dae
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203418"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784407"
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapowanie ograniczeń unique schematu XML (XSD) na ograniczenia elementu DataSet
 W schemacie języka definicji schematu XML (XSD) **unikatowy** element określa ograniczenie unikatowości dla elementu lub atrybutu. W procesie tłumaczenia schematu XML na schemat relacyjny, unikatowe ograniczenie określone dla elementu lub atrybutu w schemacie XML jest zamapowane na unikatowe ograniczenie w <xref:System.Data.DataTable> polu w odpowiedniej <xref:System.Data.DataSet> generacji.  
   
- Poniższa tabela zawiera opis atrybutów **msdata** , które można określić w unikatowym elemencie .  
+ Poniższa tabela zawiera opis atrybutów **msdata** , które można określić w **unikatowym** elemencie.  
   
 |Nazwa atrybutu|Opis|  
 |--------------------|-----------------|  
 |**msdata:ConstraintName**|Jeśli ten atrybut jest określony, jego wartość jest używana jako nazwa ograniczenia. W przeciwnym razie atrybut **name** zawiera wartość nazwy ograniczenia.|  
-|**msdata:PrimaryKey**|Jeśli `PrimaryKey="true"` jest obecny w elemencie **unikatowym** , zostanie utworzone unikatowe ograniczenie z właściwością IsPrimaryKey ustawioną na **wartość true**.|  
+|**msdata:PrimaryKey**|Jeśli `PrimaryKey="true"` jest obecny w elemencie **unikatowym** , zostanie utworzone unikatowe ograniczenie z właściwością **IsPrimaryKey** ustawioną na **wartość true**.|  
   
  W poniższym przykładzie przedstawiono schemat XML, który używa **unikatowego** elementu do określenia ograniczenia unikatowości.  
   
@@ -68,9 +68,9 @@ TableName: Customers
       IsPrimaryKey: False  
 ```  
   
- W wygenerowanym **zestawie danych** Właściwość IsPrimaryKey jest ustawiona na **wartość false** dla ograniczenia UNIQUE. Właściwość **Unique** kolumny wskazuje, że wartości kolumny **CustomerID** muszą być unikatowe (ale mogą być odwołaniem null, jak określono przez właściwość **AllowDBNull** kolumny).  
+ W wygenerowanym **zestawie danych** Właściwość **IsPrimaryKey** jest ustawiona na **wartość false** dla ograniczenia UNIQUE. Właściwość **Unique** kolumny wskazuje, że wartości kolumny **CustomerID** muszą być unikatowe (ale mogą być odwołaniem null, jak określono przez właściwość **AllowDBNull** kolumny).  
   
- Jeśli zmodyfikujesz schemat i ustawisz opcjonalną wartość atrybutu **msdata: PrimaryKey** na **true**, w tabeli zostanie utworzone ograniczenie UNIQUE. Właściwość **Column AllowDBNull** jest ustawiona na **false**, a właściwość IsPrimaryKey ograniczenia ma **wartość true**, co sprawia, że kolumna klucza podstawowego zostanie określona jako kolumna.  
+ Jeśli zmodyfikujesz schemat i ustawisz opcjonalną wartość atrybutu **msdata: PrimaryKey** na **true**, w tabeli zostanie utworzone ograniczenie UNIQUE. Właściwość Column **AllowDBNull** jest ustawiona na **false**, a właściwość **IsPrimaryKey** ograniczenia ma **wartość true**, co sprawia, że kolumna klucza podstawowego zostanie określona **jako kolumna.**  
   
  Można określić unikatowe ograniczenie kombinacji elementów lub atrybutów w schemacie XML. W poniższym przykładzie pokazano, jak określić, że kombinacja wartości **CustomerID** i **NazwaFirmy** musi być unikatowa dla wszystkich **klientów** w dowolnym wystąpieniu, dodając inny element **xs: Field** w schemacie.  
   
@@ -97,4 +97,4 @@ ConstraintName: SomeName
 
 - [Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

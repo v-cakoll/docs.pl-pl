@@ -2,12 +2,12 @@
 title: Relacje i ograniczenia schematu XML
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 1ffb11814be14b3f9601abaad6e95c00f9f7a634
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 76af1c2e9d85d18a68b8c0a947dfba3b3291326c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202992"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784188"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>Relacje i ograniczenia schematu XML
 W schemacie języka definicji schematu XML (XSD) można określić ograniczenia (ograniczenia UNIQUE, Key i keyref) oraz relacje (przy użyciu adnotacji **msdata: Relationship** ). W tym temacie wyjaśniono, jak są interpretowane ograniczenia i relacje określone w schemacie XML <xref:System.Data.DataSet>w celu wygenerowania.  
@@ -189,4 +189,4 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
 ## <a name="see-also"></a>Zobacz także
 
 - [Pobieranie relacyjnej struktury elementu DataSet ze schematu XML (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

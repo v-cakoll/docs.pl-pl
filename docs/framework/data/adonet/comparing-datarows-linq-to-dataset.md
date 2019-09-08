@@ -1,19 +1,19 @@
 ---
-title: Porównywanie wierszy danych (LINQ to DataSet)
+title: Porównywanie wierszy DataRows (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8fe0eadf-297b-487c-8d4b-7816753c2883
-ms.openlocfilehash: 7c8687e0e14458c944e2dec2b51b9f78bb2377c3
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 30a782f5e37e867c7a0e4dfd800f4b2c2836d070
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504222"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784929"
 ---
-# <a name="comparing-datarows-linq-to-dataset"></a>Porównywanie wierszy danych (LINQ to DataSet)
-[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] definiuje różne operatory zestawów do porównywania elementów źródła, aby zobaczyć, czy są równe. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] udostępnia następujące operatory zestawów:  
+# <a name="comparing-datarows-linq-to-dataset"></a>Porównywanie wierszy DataRows (LINQ to DataSet)
+[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]definiuje różne operatory zestawów do porównywania elementów źródłowych, aby sprawdzić, czy są równe. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]udostępnia następujące operatory zestawu:  
   
 - <xref:System.Linq.Enumerable.Distinct%2A>  
   
@@ -23,12 +23,12 @@ ms.locfileid: "67504222"
   
 - <xref:System.Linq.Enumerable.Except%2A>  
   
- Te operatory porównania elementy źródłowe, wywołując <xref:System.Collections.Generic.IEqualityComparer%601.GetHashCode%2A> i <xref:System.Collections.Generic.IEqualityComparer%601.Equals%2A> metody dla każdej kolekcji elementów. W przypadku właściwości <xref:System.Data.DataRow>, te operatory wykonać porównanie odwołań, które zwykle nie jest idealnym rozwiązaniem zachowanie operacje na zestawie danych tabelarycznych. Dla operacji zestawu zazwyczaj chcesz określić, czy są równe wartości elementów i nie odwołania do elementu. W związku z tym <xref:System.Data.DataRowComparer> klasa została dodana do programu LINQ to DataSet. Tej klasy może służyć do porównywania wartości wierszy.  
+ Te operatory porównują elementy źródłowe, <xref:System.Collections.Generic.IEqualityComparer%601.GetHashCode%2A> wywołując <xref:System.Collections.Generic.IEqualityComparer%601.Equals%2A> metody i dla każdej kolekcji elementów. W przypadku <xref:System.Data.DataRow>, te operatory wykonują porównanie odwołań, które zwykle nie jest idealnym zachowaniem dla operacji ustawiania w danych tabelarycznych. W przypadku operacji ustawiania zazwyczaj należy określić, czy wartości elementów są równe, a nie odwołania do elementów. W związku z tym KlasazostaładodanadoLINQtoDataSet.<xref:System.Data.DataRowComparer> Ta klasa może służyć do porównywania wartości wierszy.  
   
- <xref:System.Data.DataRowComparer> Klasa zawiera implementację porównania wartości <xref:System.Data.DataRow>, więc ta klasa może służyć do zestawu operacji takich jak <xref:System.Linq.Enumerable.Distinct%2A>. To nie można bezpośrednio utworzyć wystąpienia klasy; Zamiast tego <xref:System.Data.DataRowComparer.Default%2A> właściwość musi być używana do zwrócenia wystąpienia <xref:System.Data.DataRowComparer%601>. <xref:System.Data.DataRowComparer%601.Equals%2A> Następnie wywoływana jest metoda i dwa <xref:System.Data.DataRow> obiekty, które mają być porównane, są przekazywane w jako parametry wejściowe. <xref:System.Data.DataRowComparer%601.Equals%2A> Metoda zwraca `true` Jeśli uporządkowany zestaw kolumn wartości w obu <xref:System.Data.DataRow> obiekty są równe; w przeciwnym razie `false`.  
+ Klasa zawiera implementację porównania wartości dla <xref:System.Data.DataRow>, więc ta klasa może być używana do ustawiania operacji, takich jak <xref:System.Linq.Enumerable.Distinct%2A>. <xref:System.Data.DataRowComparer> Nie można bezpośrednio utworzyć wystąpienia tej klasy; Zamiast tego <xref:System.Data.DataRowComparer%601>właściwość musi być używana do zwracania wystąpienia. <xref:System.Data.DataRowComparer.Default%2A> Metoda jest następnie wywoływana, a dwa <xref:System.Data.DataRow> obiekty, które mają być porównane, są przenoszone jako parametry wejściowe. <xref:System.Data.DataRowComparer%601.Equals%2A> <xref:System.Data.DataRow> Metoda zwraca `true` , czyuporządkowanyzestawwartościkolumnwobuobiektachjestrówny;wprzeciwnymrazie.`false` <xref:System.Data.DataRowComparer%601.Equals%2A>  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto `Intersect` do zwrócenia kontakty, które pojawiają się w obu tabelach.  
+ Ten przykład używa `Intersect` do zwracania kontaktów, które pojawiają się w obu tabelach.  
   
  [!code-csharp[DP LINQ to DataSet Examples#Intersect2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#intersect2)]
  [!code-vb[DP LINQ to DataSet Examples#Intersect2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#intersect2)]  
@@ -41,5 +41,5 @@ ms.locfileid: "67504222"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Data.DataRowComparer>
-- [Ładowanie danych do zestawu danych](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
-- [Przykłady LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [Ładowanie danych do zestawu danych](loading-data-into-a-dataset.md)
+- [Przykłady LINQ to DataSet](linq-to-dataset-examples.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
-ms.openlocfilehash: 0b2bfd1b0490572e78c8ce365491a8d48db87684
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3e811410ea9fdd4be0cbd84b895483f69f58b0d0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204575"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786043"
 ---
 # <a name="modifying-dataviews"></a>Modyfikowanie elementów DataView
 Można użyć <xref:System.Data.DataView> do dodawania, usuwania lub modyfikowania wierszy danych w tabeli źródłowej. Możliwość używania elementu **DataView** do modyfikowania danych w źródłowej tabeli jest kontrolowana przez ustawienie jednej z trzech właściwości logicznych elementu **DataView**. Te właściwości to <xref:System.Data.DataView.AllowNew%2A>, <xref:System.Data.DataView.AllowEdit%2A>i <xref:System.Data.DataView.AllowDelete%2A>. Domyślnie ustawiono **wartość true** .  
@@ -57,4 +57,4 @@ newDRV.EndEdit();
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
 - [Elementy DataView](dataviews.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

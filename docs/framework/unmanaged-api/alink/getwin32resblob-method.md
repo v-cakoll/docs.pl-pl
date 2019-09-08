@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdc1ef6490f250ebe93b0482adf244adfc0ffd56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b26f08548ac964fae2f4d64db50167add327eb2d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741785"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777367"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob — Metoda
-Pobiera obiekt blob zasobów Win32. Wywołaj tę metodę po ustawieniu opcji zestawu.  
+Pobiera obiekt BLOB zasobów Win32. Wywołaj tę metodę po ustawieniu opcji zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,28 +44,28 @@ HRESULT GetWin32ResBlob(
  Identyfikator zestawu.  
   
  `FileToken`  
- Token pliku używany do pobrania nazwy pliku, który będzie używany podczas tworzenia zasobów Win32 w wersji  
+ Token pliku używany do pobierania nazwy pliku do użycia podczas konstruowania zasobu wersji Win32  
   
  `fDll`  
- Wartość TRUE, jeśli plik jest biblioteką DLL, false dla pliku EXE.  
+ PRAWDA, jeśli plik jest biblioteką DLL, wartość false dla pliku EXE.  
   
  `pszIconFile`  
- Opcjonalne ikona Wstawianie obiektu blob zasobów.  
+ Opcjonalna ikona do wstawienia do obiektu BLOB zasobu.  
   
  `ppResBlob`  
- Odbiera zasobów obiektu blob.  
+ Odbiera obiekt BLOB zasobu.  
   
  `pcbResBlob`  
- Uzyskuje rozmiar obiektu blob.  
+ Odbiera rozmiar obiektu BLOB.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga alink.h  
+ Wymaga Alink. h  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink, interfejs](ialink-interface.md)
+- [IALink2, interfejs](ialink2-interface.md)
+- [ALink, interfejs API](index.md)

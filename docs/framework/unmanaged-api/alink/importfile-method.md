@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d76e9b4e18b46d0b546d6c66fa572c35cb9fcefe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f7fee7a91de99e2db69609cbc7c73e22d85d045f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741770"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777063"
 ---
 # <a name="importfile-method"></a>ImportFile — Metoda
-Importuje zestawów i modułów niepowiązanej.  
+Importuje zestawy i niepowiązane moduły.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,28 +44,28 @@ HRESULT ImportFile(
  W pełni kwalifikowana nazwa pliku do zaimportowania.  
   
  `pszTargetName`  
- Nazwa pliku wyjściowego opcjonalny, którego można zmienić nazwy pliku, ponieważ jest on połączony do zestawu.  
+ Opcjonalna nazwa pliku wyjściowego, która może zostać użyta do zmiany nazwy pliku, ponieważ jest on połączony z zestawem.  
   
  `fSmartImport`  
- W przypadku opcji TRUE importtypes — jest używana, w przeciwnym razie importowanie muszą być wykonywane ręcznie.  
+ Jeśli wartość jest równa TRUE, używane są wartości, w przeciwnym razie importowanie należy wykonać ręcznie.  
   
  `pImportToken`  
- Wskaźnik do tokenu, gdzie będą przechowywane Unikatowy identyfikator pliku. Plik może być zestawu lub pliku.  
+ Wskaźnik do tokenu, w którym będzie przechowywany unikatowy identyfikator pliku. Plik może być zestawem lub plikiem.  
   
  `ppAssemblyScope`  
- Otrzymuje wskaźnik do [imetadataassemblyimport — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md). Może mieć wartości NULL, jeśli plik nie jest zestawem.  
+ Odbiera wskaźnik do [interfejsu IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md). Może mieć wartość NULL, jeśli plik nie jest zestawem.  
   
  `pdwCountOfScopes`  
- Wskaźnik do liczby plików i/lub zakresy, które zostały zaimportowane.  
+ Wskaźnik do liczby zaimportowanych plików i/lub zakresów.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga alink.h  
+ Wymaga Alink. h  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink, interfejs](ialink-interface.md)
+- [IALink2, interfejs](ialink2-interface.md)
+- [ALink, interfejs API](index.md)

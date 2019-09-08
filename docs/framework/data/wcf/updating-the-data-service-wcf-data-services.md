@@ -8,18 +8,18 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: f65e3775c260eedc1d76f209d5cb76524d61b939
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5cf7a6e563069e35a4ac0fe729a616dc1c56bdb5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953214"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779741"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Aktualizowanie usługi danych (Usługi danych programu WCF)
 W przypadku korzystania [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] z biblioteki klienckiej do [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] korzystania z kanału informacyjnego Biblioteka tłumaczy wpisy w strumieniu na wystąpienia klas usługi danych klienta. Te klasy usługi danych są śledzone przy użyciu <xref:System.Data.Services.Client.DataServiceContext> , do <xref:System.Data.Services.Client.DataServiceQuery%601> którego należy. Klient śledzi zmiany w jednostkach, które są zgłaszane przy użyciu metod <xref:System.Data.Services.Client.DataServiceContext>w. Te metody umożliwiają klientowi śledzenie dodanych i usuniętych jednostek, a także zmiany wartości właściwości lub relacje między wystąpieniami jednostek. Te śledzone zmiany są wysyłane z powrotem do usługi danych jako operacje oparte na interfejsie REST podczas <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> wywoływania metody.  
   
 > [!NOTE]
-> W przypadku użycia wystąpienia programu <xref:System.Data.Services.Client.DataServiceCollection%601> w celu powiązania danych z kontrolkami zmiany wprowadzone do danych w formancie powiązanym są automatycznie raportowane <xref:System.Data.Services.Client.DataServiceContext>do. Aby uzyskać więcej informacji, zobacz [Powiązywanie danych z kontrolkami](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  
+> W przypadku użycia wystąpienia programu <xref:System.Data.Services.Client.DataServiceCollection%601> w celu powiązania danych z kontrolkami zmiany wprowadzone do danych w formancie powiązanym są automatycznie raportowane <xref:System.Data.Services.Client.DataServiceContext>do. Aby uzyskać więcej informacji, zobacz [Powiązywanie danych z kontrolkami](binding-data-to-controls-wcf-data-services.md).  
   
 ## <a name="adding-modifying-and-changing-entities"></a>Dodawanie, modyfikowanie i zmiana jednostek  
  W przypadku dodania odwołania do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych przy użyciu okna dialogowego Dodaj odwołanie do usługi w programie Visual Studio, w przypadku utworzonych klas usługi dane klienta każda z nich ma metodę static *Create* , która przyjmuje jeden parametr dla każdej właściwości jednostki, która nie dopuszcza wartości null . Tej metody można użyć do tworzenia wystąpień klas typu jednostki, jak w poniższym przykładzie:  
@@ -44,7 +44,7 @@ W przypadku korzystania [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.m
  [!code-csharp[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#deleteproductspecific)]
  [!code-vb[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#deleteproductspecific)]  
   
- Aby uzyskać więcej informacji, zobacz [jak: Dodawanie, modyfikowanie i usuwanie jednostek](../../../../docs/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services.md).  
+ Aby uzyskać więcej informacji, zobacz [jak: Dodawanie, modyfikowanie i usuwanie jednostek](how-to-add-modify-and-delete-entities-wcf-data-services.md).  
   
 ## <a name="attaching-entities"></a>Dołączanie jednostek  
  Biblioteka klienta umożliwia zapisywanie aktualizacji dokonanych w jednostce bez uprzedniego wykonania zapytania w celu załadowania jednostki do programu <xref:System.Data.Services.Client.DataServiceContext>. Użyj metody <xref:System.Data.Services.Client.DataServiceContext.AttachTo%2A> , aby dołączyć istniejący obiekt do określonego zestawu jednostek <xref:System.Data.Services.Client.DataServiceContext>w. Następnie można zmodyfikować obiekt i zapisać zmiany w usłudze danych. W poniższym przykładzie obiekt klienta, który został zmieniony, jest dołączony do kontekstu, a następnie <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> jest wywoływana w celu oznaczenia dołączonego obiektu, tak jak <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> <xref:System.Data.Services.Client.EntityStates.Modified> wcześniej, jest wywoływana:  
@@ -62,7 +62,7 @@ W przypadku korzystania [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.m
   
 - Przeciążenie metody, które pobiera parametr, jest używany podczas dołączania obiektu jednostki, który został odebrany wraz z wartością ETag. `etag` <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> Ta wartość eTag jest następnie używana do sprawdzania współbieżności po zapisaniu zmian w dołączonym obiekcie.  
   
- Aby uzyskać więcej informacji, zobacz [jak: Dołącz istniejącą jednostkę do obiekcie DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md).  
+ Aby uzyskać więcej informacji, zobacz [jak: Dołącz istniejącą jednostkę do obiekcie DataServiceContext](attach-an-existing-entity-to-dc-wcf-data.md).  
   
 ## <a name="creating-and-modifying-relationship-links"></a>Tworzenie i modyfikowanie linków relacji  
  <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> Po dodaniu nowej jednostki przy użyciu metody lub odpowiedniej metody <xref:System.Data.Services.Client.DataServiceContext> AddTo klasy generowanej przez okno dialogowe **Dodaj odwołanie do usługi** wszystkie relacje między nową jednostką a powiązanymi jednostkami są nie zdefiniowane automatycznie.  
@@ -88,16 +88,16 @@ W przypadku korzystania [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.m
  [!code-csharp[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#setnavprops)]
  [!code-vb[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#setnavprops)]  
   
- Aby uzyskać więcej informacji, zobacz [jak: Zdefiniuj relacje między](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md)jednostkami.  
+ Aby uzyskać więcej informacji, zobacz [jak: Zdefiniuj relacje między](how-to-define-entity-relationships-wcf-data-services.md)jednostkami.  
   
 ## <a name="saving-changes"></a>Zapisywanie zmian  
- Zmiany są śledzone w <xref:System.Data.Services.Client.DataServiceContext> wystąpieniu, ale nie są natychmiast wysyłane do serwera. Po zakończeniu pracy z wymaganymi zmianami dotyczącymi określonego działania Wywołaj <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> polecenie Prześlij wszystkie zmiany do usługi danych. Aby uzyskać więcej informacji, zobacz [zarządzanie kontekstem usługi danych](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md). Można także zapisywać zmiany asynchronicznie przy użyciu <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> metod i. <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> Aby uzyskać więcej informacji, zobacz [operacje asynchroniczne](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
+ Zmiany są śledzone w <xref:System.Data.Services.Client.DataServiceContext> wystąpieniu, ale nie są natychmiast wysyłane do serwera. Po zakończeniu pracy z wymaganymi zmianami dotyczącymi określonego działania Wywołaj <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> polecenie Prześlij wszystkie zmiany do usługi danych. Aby uzyskać więcej informacji, zobacz [zarządzanie kontekstem usługi danych](managing-the-data-service-context-wcf-data-services.md). Można także zapisywać zmiany asynchronicznie przy użyciu <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> metod i. <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> Aby uzyskać więcej informacji, zobacz [operacje asynchroniczne](asynchronous-operations-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Wykonywanie zapytań do usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
-- [Operacje asynchroniczne](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)
-- [Operacje przetwarzania wsadowego](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)
-- [Materializacja obiektu](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)
-- [Zarządzanie kontekstem usługi danych](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)
+- [Biblioteka klienta usług danych WCF](wcf-data-services-client-library.md)
+- [Wykonywanie zapytań do usługi danych](querying-the-data-service-wcf-data-services.md)
+- [Operacje asynchroniczne](asynchronous-operations-wcf-data-services.md)
+- [Operacje przetwarzania wsadowego](batching-operations-wcf-data-services.md)
+- [Materializacja obiektu](object-materialization-wcf-data-services.md)
+- [Zarządzanie kontekstem usługi danych](managing-the-data-service-context-wcf-data-services.md)

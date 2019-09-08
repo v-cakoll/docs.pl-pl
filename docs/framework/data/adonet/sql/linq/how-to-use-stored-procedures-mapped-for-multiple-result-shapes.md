@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2b84dfe-7fec-489a-92de-45215cec4518
-ms.openlocfilehash: 22614be8e53d975c4efdf7004f41906c58639c61
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d32faf026789923ca4343271c9fd1b6bbdb068df
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938696"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793094"
 ---
-# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a><span data-ttu-id="381f0-102">Instrukcje: Używanie procedur składowanych zamapowanych na wiele kształtów wyników</span><span class="sxs-lookup"><span data-stu-id="381f0-102">How to: Use Stored Procedures Mapped for Multiple Result Shapes</span></span>
-<span data-ttu-id="381f0-103">Gdy procedura składowana może zwracać wiele kształtów wyników, typ zwracany nie może być jednoznacznie wpisany do pojedynczego kształtu projekcji.</span><span class="sxs-lookup"><span data-stu-id="381f0-103">When a stored procedure can return multiple result shapes, the return type cannot be strongly typed to a single projection shape.</span></span> <span data-ttu-id="381f0-104">Chociaż [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] program może generować wszystkie możliwe typy projekcji, nie może znać kolejności, w której zostaną zwrócone.</span><span class="sxs-lookup"><span data-stu-id="381f0-104">Although [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] can generate all possible projection types, it cannot know the order in which they will be returned.</span></span>  
+# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a><span data-ttu-id="6c78c-102">Instrukcje: Używanie procedur składowanych zamapowanych na wiele kształtów wyników</span><span class="sxs-lookup"><span data-stu-id="6c78c-102">How to: Use Stored Procedures Mapped for Multiple Result Shapes</span></span>
+<span data-ttu-id="6c78c-103">Gdy procedura składowana może zwracać wiele kształtów wyników, typ zwracany nie może być jednoznacznie wpisany do pojedynczego kształtu projekcji.</span><span class="sxs-lookup"><span data-stu-id="6c78c-103">When a stored procedure can return multiple result shapes, the return type cannot be strongly typed to a single projection shape.</span></span> <span data-ttu-id="6c78c-104">Chociaż [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] program może generować wszystkie możliwe typy projekcji, nie może znać kolejności, w której zostaną zwrócone.</span><span class="sxs-lookup"><span data-stu-id="6c78c-104">Although [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] can generate all possible projection types, it cannot know the order in which they will be returned.</span></span>  
   
- <span data-ttu-id="381f0-105">Ten scenariusz należy wykonać z procedurami składowanymi, które tworzą sekwencyjnie wiele kształtów wynikowych.</span><span class="sxs-lookup"><span data-stu-id="381f0-105">Contrast this scenario with stored procedures that produce multiple result shapes sequentially.</span></span> <span data-ttu-id="381f0-106">Aby uzyskać więcej informacji, zobacz [jak: Użyj procedur składowanych mapowanych na sekwencyjne kształty](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)wynikowe.</span><span class="sxs-lookup"><span data-stu-id="381f0-106">For more information, see [How to: Use Stored Procedures Mapped for Sequential Result Shapes](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md).</span></span>  
+ <span data-ttu-id="6c78c-105">Ten scenariusz należy wykonać z procedurami składowanymi, które tworzą sekwencyjnie wiele kształtów wynikowych.</span><span class="sxs-lookup"><span data-stu-id="6c78c-105">Contrast this scenario with stored procedures that produce multiple result shapes sequentially.</span></span> <span data-ttu-id="6c78c-106">Aby uzyskać więcej informacji, zobacz [jak: Użyj procedur składowanych mapowanych na sekwencyjne kształty](how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)wynikowe.</span><span class="sxs-lookup"><span data-stu-id="6c78c-106">For more information, see [How to: Use Stored Procedures Mapped for Sequential Result Shapes](how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md).</span></span>  
   
- <span data-ttu-id="381f0-107">Ten <xref:System.Data.Linq.Mapping.ResultTypeAttribute> atrybut jest stosowany do procedur składowanych, które zwracają wiele typów wyników, aby określić zestaw typów, które może zwracać procedura.</span><span class="sxs-lookup"><span data-stu-id="381f0-107">The <xref:System.Data.Linq.Mapping.ResultTypeAttribute> attribute is applied to stored procedures that return multiple result types to specify the set of types the procedure can return.</span></span>  
+ <span data-ttu-id="6c78c-107">Ten <xref:System.Data.Linq.Mapping.ResultTypeAttribute> atrybut jest stosowany do procedur składowanych, które zwracają wiele typów wyników, aby określić zestaw typów, które może zwracać procedura.</span><span class="sxs-lookup"><span data-stu-id="6c78c-107">The <xref:System.Data.Linq.Mapping.ResultTypeAttribute> attribute is applied to stored procedures that return multiple result types to specify the set of types the procedure can return.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="381f0-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="381f0-108">Example</span></span>  
- <span data-ttu-id="381f0-109">W poniższym przykładzie kodu SQL kształt wynik zależy od danych wejściowych (`shape =1` lub `shape = 2`).</span><span class="sxs-lookup"><span data-stu-id="381f0-109">In the following SQL code example, the result shape depends on the input (`shape =1` or `shape = 2`).</span></span> <span data-ttu-id="381f0-110">Nie wiesz, która projekcja zostanie najpierw zwrócona.</span><span class="sxs-lookup"><span data-stu-id="381f0-110">You do not know which projection will be returned first.</span></span>  
+## <a name="example"></a><span data-ttu-id="6c78c-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="6c78c-108">Example</span></span>  
+ <span data-ttu-id="6c78c-109">W poniższym przykładzie kodu SQL kształt wynik zależy od danych wejściowych (`shape =1` lub `shape = 2`).</span><span class="sxs-lookup"><span data-stu-id="6c78c-109">In the following SQL code example, the result shape depends on the input (`shape =1` or `shape = 2`).</span></span> <span data-ttu-id="6c78c-110">Nie wiesz, która projekcja zostanie najpierw zwrócona.</span><span class="sxs-lookup"><span data-stu-id="6c78c-110">You do not know which projection will be returned first.</span></span>  
   
 ```  
 CREATE PROCEDURE VariableResultShapes(@shape int)  
@@ -34,15 +34,15 @@ else if(@shape = 2)
  [!code-csharp[DLinqSprox#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/northwind-sprox.cs#4)]
  [!code-vb[DLinqSprox#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/northwind-sprox.vb#4)]  
   
-## <a name="example"></a><span data-ttu-id="381f0-111">Przykład</span><span class="sxs-lookup"><span data-stu-id="381f0-111">Example</span></span>  
- <span data-ttu-id="381f0-112">Aby wykonać tę procedurę składowaną, należy użyć kodu podobnego do poniższego.</span><span class="sxs-lookup"><span data-stu-id="381f0-112">You would use code similar to the following to execute this stored procedure.</span></span>  
+## <a name="example"></a><span data-ttu-id="6c78c-111">Przykład</span><span class="sxs-lookup"><span data-stu-id="6c78c-111">Example</span></span>  
+ <span data-ttu-id="6c78c-112">Aby wykonać tę procedurę składowaną, należy użyć kodu podobnego do poniższego.</span><span class="sxs-lookup"><span data-stu-id="6c78c-112">You would use code similar to the following to execute this stored procedure.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="381f0-113">Aby uzyskać moduł wyliczający poprawnego typu, należy użyć <xref:System.Data.Linq.IMultipleResults.GetResult%2A> wzorca w zależności od wiedzy procedury składowanej.</span><span class="sxs-lookup"><span data-stu-id="381f0-113">You must use the <xref:System.Data.Linq.IMultipleResults.GetResult%2A> pattern to obtain an enumerator of the correct type, based on your knowledge of the stored procedure.</span></span>  
+> <span data-ttu-id="6c78c-113">Aby uzyskać moduł wyliczający poprawnego typu, należy użyć <xref:System.Data.Linq.IMultipleResults.GetResult%2A> wzorca w zależności od wiedzy procedury składowanej.</span><span class="sxs-lookup"><span data-stu-id="6c78c-113">You must use the <xref:System.Data.Linq.IMultipleResults.GetResult%2A> pattern to obtain an enumerator of the correct type, based on your knowledge of the stored procedure.</span></span>  
   
  [!code-csharp[DLinqSprox#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/Program.cs#5)]
  [!code-vb[DLinqSprox#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#5)]  
   
-## <a name="see-also"></a><span data-ttu-id="381f0-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="381f0-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6c78c-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6c78c-114">See also</span></span>
 
-- [<span data-ttu-id="381f0-115">Procedury składowane</span><span class="sxs-lookup"><span data-stu-id="381f0-115">Stored Procedures</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [<span data-ttu-id="6c78c-115">Procedury składowane</span><span class="sxs-lookup"><span data-stu-id="6c78c-115">Stored Procedures</span></span>](stored-procedures.md)

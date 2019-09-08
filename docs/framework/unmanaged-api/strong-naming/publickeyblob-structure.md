@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75ba3fd634b108c996e848f48000ffcd0600b00c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e66196e2bd2cb326ca3f5badc67bcf8d81e5fc3c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774585"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799163"
 ---
-# <a name="publickeyblob-structure"></a><span data-ttu-id="751a4-102">PublicKeyBlob — Struktura</span><span class="sxs-lookup"><span data-stu-id="751a4-102">PublicKeyBlob Structure</span></span>
-<span data-ttu-id="751a4-103">Reprezentuje w formacie binarnym, klucz publiczny z pary kluczy publiczny/prywatny.</span><span class="sxs-lookup"><span data-stu-id="751a4-103">Represents, in binary format, the public key of a public/private key pair.</span></span>  
+# <a name="publickeyblob-structure"></a><span data-ttu-id="87ff1-102">PublicKeyBlob — Struktura</span><span class="sxs-lookup"><span data-stu-id="87ff1-102">PublicKeyBlob Structure</span></span>
+<span data-ttu-id="87ff1-103">Reprezentuje w formacie binarnym klucz publiczny pary kluczy publiczny/prywatny.</span><span class="sxs-lookup"><span data-stu-id="87ff1-103">Represents, in binary format, the public key of a public/private key pair.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="751a4-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="751a4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="87ff1-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="87ff1-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct {  
@@ -37,28 +37,28 @@ typedef struct {
 } PublicKeyBlob;   
 ```  
   
-## <a name="members"></a><span data-ttu-id="751a4-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="751a4-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="87ff1-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="87ff1-105">Members</span></span>  
   
-|<span data-ttu-id="751a4-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="751a4-106">Member</span></span>|<span data-ttu-id="751a4-107">Opis</span><span class="sxs-lookup"><span data-stu-id="751a4-107">Description</span></span>|  
+|<span data-ttu-id="87ff1-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="87ff1-106">Member</span></span>|<span data-ttu-id="87ff1-107">Opis</span><span class="sxs-lookup"><span data-stu-id="87ff1-107">Description</span></span>|  
 |------------|-----------------|  
-|`SigAlgId`|<span data-ttu-id="751a4-108">Identyfikator algorytmu podpisu (typu `ALG_ID`, zgodnie z definicją w WinCrypt.h) z kluczem publicznym.</span><span class="sxs-lookup"><span data-stu-id="751a4-108">The identifier for the signature algorithm (of type `ALG_ID`, as defined in WinCrypt.h) of the public key.</span></span>|  
-|`HashAlgId`|<span data-ttu-id="751a4-109">Identyfikator algorytmu wyznaczania wartości skrótu (typu `ALG_ID`, zgodnie z definicją w WinCrypt.h) z kluczem publicznym.</span><span class="sxs-lookup"><span data-stu-id="751a4-109">The identifier for the hash algorithm (of type `ALG_ID`, as defined in WinCrypt.h) of the public key.</span></span>|  
-|`cbPublicKey`|<span data-ttu-id="751a4-110">Długość klucza w bajtach.</span><span class="sxs-lookup"><span data-stu-id="751a4-110">The length of the key in bytes.</span></span>|  
-|`PublicKey`|<span data-ttu-id="751a4-111">Tablica bajtów o zmiennej długości, która zawiera wartość klucza w formacie zwracane przez interfejs CryptoAPI.</span><span class="sxs-lookup"><span data-stu-id="751a4-111">A variable-length byte array that contains the key value in the format returned by the CryptoAPI.</span></span>|  
+|`SigAlgId`|<span data-ttu-id="87ff1-108">Identyfikator algorytmu podpisu (typu `ALG_ID`, zgodnie z definicją w WinCrypt. h) klucza publicznego.</span><span class="sxs-lookup"><span data-stu-id="87ff1-108">The identifier for the signature algorithm (of type `ALG_ID`, as defined in WinCrypt.h) of the public key.</span></span>|  
+|`HashAlgId`|<span data-ttu-id="87ff1-109">Identyfikator algorytmu wyznaczania wartości skrótu (typu `ALG_ID`, zgodnie z definicją w WinCrypt. h) klucza publicznego.</span><span class="sxs-lookup"><span data-stu-id="87ff1-109">The identifier for the hash algorithm (of type `ALG_ID`, as defined in WinCrypt.h) of the public key.</span></span>|  
+|`cbPublicKey`|<span data-ttu-id="87ff1-110">Długość klucza w bajtach.</span><span class="sxs-lookup"><span data-stu-id="87ff1-110">The length of the key in bytes.</span></span>|  
+|`PublicKey`|<span data-ttu-id="87ff1-111">Tablica bajtów o zmiennej długości, która zawiera wartość klucza w formacie zwracanym przez interfejs CryptoAPI.</span><span class="sxs-lookup"><span data-stu-id="87ff1-111">A variable-length byte array that contains the key value in the format returned by the CryptoAPI.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="751a4-112">Uwagi</span><span class="sxs-lookup"><span data-stu-id="751a4-112">Remarks</span></span>  
- <span data-ttu-id="751a4-113">`PublicKeyBlob` Struktury jest używany przez [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md), [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)i innych funkcji silnej nazwy, aby przedstawić klucz publiczny z pary kluczy publiczny/prywatny.</span><span class="sxs-lookup"><span data-stu-id="751a4-113">The `PublicKeyBlob` structure is used by [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md), [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md), and other strong name functions to represent the public key of a public/private key pair.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="87ff1-112">Uwagi</span><span class="sxs-lookup"><span data-stu-id="87ff1-112">Remarks</span></span>  
+ <span data-ttu-id="87ff1-113">Struktura jest używana przez [StrongNameGetPublicKey —](strongnamegetpublickey-function.md), StrongNameSignatureGeneration — i inne funkcje silnej nazwy do reprezentowania klucza publicznego pary kluczy publicznych/prywatnych. [](strongnamesignaturegeneration-function.md) `PublicKeyBlob`</span><span class="sxs-lookup"><span data-stu-id="87ff1-113">The `PublicKeyBlob` structure is used by [StrongNameGetPublicKey](strongnamegetpublickey-function.md), [StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md), and other strong name functions to represent the public key of a public/private key pair.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="751a4-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="751a4-114">Requirements</span></span>  
- <span data-ttu-id="751a4-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="751a4-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="87ff1-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="87ff1-114">Requirements</span></span>  
+ <span data-ttu-id="87ff1-115">**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="87ff1-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="751a4-116">**Nagłówek:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="751a4-116">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="87ff1-116">**Nagłówki** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="87ff1-116">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="751a4-117">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="751a4-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="87ff1-117">**Biblioteki** Uwzględnione jako zasób w bibliotece MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="87ff1-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="751a4-118">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="751a4-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="87ff1-118">**.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="87ff1-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="751a4-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="751a4-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="87ff1-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="87ff1-119">See also</span></span>
 
-- [<span data-ttu-id="751a4-120">StrongNameGetPublicKey, funkcja</span><span class="sxs-lookup"><span data-stu-id="751a4-120">StrongNameGetPublicKey Function</span></span>](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)
-- [<span data-ttu-id="751a4-121">StrongNameSignatureGeneration, funkcja</span><span class="sxs-lookup"><span data-stu-id="751a4-121">StrongNameSignatureGeneration Function</span></span>](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)
+- [<span data-ttu-id="87ff1-120">StrongNameGetPublicKey, funkcja</span><span class="sxs-lookup"><span data-stu-id="87ff1-120">StrongNameGetPublicKey Function</span></span>](strongnamegetpublickey-function.md)
+- [<span data-ttu-id="87ff1-121">StrongNameSignatureGeneration, funkcja</span><span class="sxs-lookup"><span data-stu-id="87ff1-121">StrongNameSignatureGeneration Function</span></span>](strongnamesignaturegeneration-function.md)

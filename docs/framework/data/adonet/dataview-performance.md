@@ -5,35 +5,35 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 90820e49-9d46-41f6-9a3d-6c0741bbd8eb
-ms.openlocfilehash: f0a85232b753eed891cded4b0fb1154269b30dc9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 51ea09965c423f04c220260248c3501e061820cb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606947"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784138"
 ---
 # <a name="dataview-performance"></a>Wydajność widoku danych
-W tym temacie omówiono zalety wydajności przy użyciu <xref:System.Data.DataView.Find%2A> i <xref:System.Data.DataView.FindRows%2A> metody <xref:System.Data.DataView> klasy i buforowania <xref:System.Data.DataView> w aplikacji sieci Web.  
+W tym temacie omówiono <xref:System.Data.DataView.Find%2A> zalety korzystania z metod <xref:System.Data.DataView> i <xref:System.Data.DataView.FindRows%2A> klasy oraz buforowanie a <xref:System.Data.DataView> w aplikacji sieci Web.  
   
 ## <a name="find-and-findrows"></a>Znajdź i FindRows  
- <xref:System.Data.DataView> Tworzy indeks. Indeks zawiera klucze utworzona na podstawie co najmniej jedną kolumnę w tabeli lub widoku. Te klucze są przechowywane w strukturze, która umożliwia <xref:System.Data.DataView> można znaleźć wiersze skojarzonych wartości klucza, szybkie i skuteczne. Operacje korzystające z indeksu, takich jak filtrowanie i sortowanie, zobacz zwiększa istotnie poprawiającą wydajność. Indeks <xref:System.Data.DataView> powstała zarówno gdy <xref:System.Data.DataView> jest tworzony i gdy którykolwiek z sortowania lub filtrowania informacji jest modyfikowany. Tworzenie <xref:System.Data.DataView> , a następnie ustawienie sortowania lub filtrowania informacje później powoduje indeks ma zostać utworzony co najmniej dwa razy: po podczas <xref:System.Data.DataView> zostanie utworzony, i ponownie podczas sortowania lub filtrowania właściwości są modyfikowane. Aby uzyskać więcej informacji na temat filtrowania i sortowania z <xref:System.Data.DataView>, zobacz [Filtrowanie za pomocą widoku danych](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md) i [sortowanie za pomocą widoku danych](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md).  
+ <xref:System.Data.DataView>tworzy indeks. Indeks zawiera klucze skompilowane z co najmniej jednej kolumny w tabeli lub widoku. Klucze te są przechowywane w strukturze, która umożliwia <xref:System.Data.DataView> szybkie i wydajne Znajdowanie wierszy lub wierszy skojarzonych z wartościami klucza. Operacje, które używają indeksu, takie jak filtrowanie i sortowanie, zobacz znaczące zwiększenie wydajności. Indeks dla <xref:System.Data.DataView> obiektu jest kompilowany zarówno <xref:System.Data.DataView> podczas tworzenia, jak i gdy dowolna z informacji o sortowaniu lub filtrowaniu jest modyfikowana. Utworzenie a, a następnie ustawienie informacji o sortowaniu lub filtrowaniu później spowoduje, że indeks zostanie skompilowany co najmniej dwa razy <xref:System.Data.DataView> : raz podczas tworzenia i ponownie, gdy właściwości sortowania lub filtrowania są modyfikowane. <xref:System.Data.DataView> Aby uzyskać więcej informacji o filtrowaniu i <xref:System.Data.DataView>sortowaniu w programie, zobacz [filtrowanie z widokiem](filtering-with-dataview-linq-to-dataset.md) danych i [sortowanie za pomocą widoku](sorting-with-dataview-linq-to-dataset.md)danych.  
   
- Jeśli mają być zwracane wyniki zapytania określonego na danych, w przeciwieństwie do realizacji dynamiczny widok podzbiór danych, można użyć <xref:System.Data.DataView.Find%2A> lub <xref:System.Data.DataView.FindRows%2A> metody <xref:System.Data.DataView>, zamiast ustawienie <xref:System.Data.DataView.RowFilter%2A> właściwości. <xref:System.Data.DataView.RowFilter%2A> Właściwość najlepiej sprawdza się w aplikacji powiązanych z danymi gdzie powiązanej kontrolki Wyświetla wyfiltrowanych wyników. Ustawienie <xref:System.Data.DataView.RowFilter%2A> właściwość odbudowania indeksu dla danych, obciążenie dodawanie do aplikacji i zmniejszenie wydajności. <xref:System.Data.DataView.Find%2A> i <xref:System.Data.DataView.FindRows%2A> metody używać bieżącego indeksu bez konieczności indeks odbudowany. Jeśli wywołanie <xref:System.Data.DataView.Find%2A> lub <xref:System.Data.DataView.FindRows%2A> tylko raz, użyj istniejącego <xref:System.Data.DataView>. Jeśli wywołanie <xref:System.Data.DataView.Find%2A> lub <xref:System.Data.DataView.FindRows%2A> wielokrotnie, należy utworzyć nową <xref:System.Data.DataView> do odbudowania indeksu w kolumnie, aby wyszukać, a następnie wywołaj <xref:System.Data.DataView.Find%2A> lub <xref:System.Data.DataView.FindRows%2A> metody. Aby uzyskać więcej informacji na temat <xref:System.Data.DataView.Find%2A> i <xref:System.Data.DataView.FindRows%2A> metod, zobacz [znajdowanie wierszy](../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md).  
+ Jeśli chcesz zwrócić wyniki konkretnego zapytania dotyczącego danych, w przeciwieństwie do udostępnienia dynamicznego widoku podzbioru danych, <xref:System.Data.DataView.Find%2A> możesz użyć metod <xref:System.Data.DataView>lub <xref:System.Data.DataView.FindRows%2A> zamiast ustawić <xref:System.Data.DataView.RowFilter%2A> właściwość. <xref:System.Data.DataView.RowFilter%2A> Właściwość najlepiej jest używana w aplikacji powiązanej z danymi, gdzie kontrolka powiązania Wyświetla przefiltrowane wyniki. <xref:System.Data.DataView.RowFilter%2A> Ustawienie właściwości powoduje odbudowanie indeksu dla danych, dodanie obciążenia do aplikacji i zmniejszenie wydajności. Metody <xref:System.Data.DataView.Find%2A> i<xref:System.Data.DataView.FindRows%2A> używają bieżącego indeksu bez konieczności ponownego kompilowania indeksu. Jeśli zamierzasz wywołać <xref:System.Data.DataView.Find%2A> lub <xref:System.Data.DataView.FindRows%2A> tylko raz, należy użyć istniejącej <xref:System.Data.DataView>. Jeśli chcesz <xref:System.Data.DataView.Find%2A> wywoływać lub <xref:System.Data.DataView> <xref:System.Data.DataView.FindRows%2A> wiele razy, należy utworzyć nową, aby ponownie skompilować indeks w kolumnie, w której ma zostać wyszukane, a następnie wywołać <xref:System.Data.DataView.Find%2A> metody lub <xref:System.Data.DataView.FindRows%2A> . Aby uzyskać więcej informacji o <xref:System.Data.DataView.Find%2A> metodach i <xref:System.Data.DataView.FindRows%2A> , zobacz [Znajdowanie wierszy](./dataset-datatable-dataview/finding-rows.md).  
   
- W poniższym przykładzie użyto <xref:System.Data.DataView.Find%2A> metody do znalezienia kontaktu o nazwisku "Zhu".  
+ Poniższy przykład używa metody, <xref:System.Data.DataView.Find%2A> aby znaleźć kontakt z nazwiskiem "Zhu".  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryOrderByFind](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromqueryorderbyfind)]
  [!code-vb[DP DataView Samples#LDVFromQueryOrderByFind](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromqueryorderbyfind)]  
   
- W poniższym przykładzie użyto <xref:System.Data.DataView.FindRows%2A> metody do znalezienia wszystkich red pokolorowane produktów.  
+ W poniższym przykładzie zastosowano <xref:System.Data.DataView.FindRows%2A> metodę, aby znaleźć wszystkie czerwone kolorowe produkty.  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryFindRows](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromqueryfindrows)]
  [!code-vb[DP DataView Samples#LDVFromQueryFindRows](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromqueryfindrows)]  
   
 ## <a name="aspnet"></a>ASP.NET  
- Program ASP.NET ma mechanizm buforowania, która umożliwia przechowywanie obiektów, które wymagają zasobów rozbudowane serwera do tworzenia w pamięci. Buforowanie tych typów zasobów może znacznie poprawić wydajność aplikacji. Pamięć podręczna jest implementowana przez <xref:System.Web.Caching.Cache> klasy z wystąpienia pamięci podręcznej, które są prywatne dla każdej aplikacji. Ponieważ utworzenie nowego <xref:System.Data.DataView> obiekt może być dużej ilości zasobów, można skorzystać z tej funkcji w aplikacjach sieci Web buforowania, aby <xref:System.Data.DataView> nie trzeba odbudować, za każdym razem, gdy strona sieci Web zostanie odświeżona.  
+ ASP.NET ma mechanizm buforowania, który umożliwia przechowywanie obiektów wymagających rozległych zasobów serwera do tworzenia w pamięci. Buforowanie tych typów zasobów może znacząco poprawić wydajność aplikacji. Buforowanie jest implementowane przez <xref:System.Web.Caching.Cache> klasę, z wystąpieniami pamięci podręcznej, które są prywatne dla każdej aplikacji. Ponieważ tworzenie nowego <xref:System.Data.DataView> obiektu może być czasochłonne, warto użyć tej funkcji buforowania w aplikacjach sieci Web, aby <xref:System.Data.DataView> nie trzeba było jej odbudować za każdym razem, gdy strona sieci Web zostanie odświeżona.  
   
- W poniższym przykładzie <xref:System.Data.DataView> są buforowane, dzięki czemu dane nie trzeba ponownie posortowane po odświeżeniu strony.  
+ W poniższym przykładzie <xref:System.Data.DataView> znajduje się w pamięci podręcznej, dzięki czemu dane nie muszą być ponownie sortowane po odświeżeniu strony.  
   
 ```vb  
 If (Cache("ordersView") = Nothing) Then  
@@ -88,4 +88,4 @@ GridView1.DataBind();
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Powiązanie danych i LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
+- [Powiązanie danych i LINQ to DataSet](data-binding-and-linq-to-dataset.md)

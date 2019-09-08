@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 324e30f6cbcaa1d1d81c7c03967dbb629d2cd6e9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 49e7b73559e8def890f8df8f596fbe8ad5bb5d3b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742267"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777481"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions — Wyliczenie
 Wylicza opcje zestawu.  
@@ -59,31 +59,31 @@ typedef enum _AssemblyOptions {
 |Pole|Opis|  
 |-----------|-----------------|  
 |optAssemTitle|String — reprezentuje tytuł zestawu.|  
-|optAssemDescription|String — zawiera opis zestawu.|  
+|optAssemDescription|Ciąg — zawiera opis zestawu.|  
 |optAssemConfig|String — zawiera konfigurację zestawu.|  
-|optAssemOS|Parametry - zakodowanymi w formacie: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".|  
+|optAssemOS|Zakodowany ciąg jako: "dwOSPlatformId. dwOSMajorVersion. dwOSMinorVersion".|  
 |optAssemProcessor|ULONG|  
-|optAssemLocale|String — zawiera zestaw ustawień regionalnych.|  
-|optAssemVersion|Parametry - zakodowanymi w formacie: "Główna.pomocnicza.kompilacja.poprawka".|  
-|optAssemCompany|String — zawiera firmy.|  
+|optAssemLocale|Ciąg — zawiera ustawienia regionalne zestawu.|  
+|optAssemVersion|Zakodowany ciąg jako: "Główna. pomocnicza. kompilacja. poprawka".|  
+|optAssemCompany|Ciąg — zawiera firmę.|  
 |optAssemProduct|String — zawiera nazwę produktu.|  
-|optAssemProductVersion|Ciąg (znany także jako InformationalVersion).|  
-|optAssemCopyright|String — zawiera informacje o prawach autorskich.|  
-|optAssemTrademark|String — zawiera informacje o znakach towarowych.|  
-|optAssemKeyFile|String (nazwa pliku).|  
+|optAssemProductVersion|Ciąg (znany również jako InformationalVersion).|  
+|optAssemCopyright|Ciąg — zawiera informacje o prawach autorskich.|  
+|optAssemTrademark|Ciąg — zawiera informacje o znakach towarowych.|  
+|optAssemKeyFile|Ciąg (nazwa pliku).|  
 |optAssemKeyName|Ciąg (nazwa klucza).|  
 |optAssemAlgID|ULONG|  
 |optAssemFlags|ULONG|  
-|optAssemHalfSign|Wartość logiczna (określana także jako DelaySign).|  
-|optAssemFileVersion|Parametry - zakodowanymi w formacie "Główna.pomocnicza.kompilacja.poprawka"--takie same jak ProductVersion.|  
-|optAssemSatelliteVer|Parametry - zakodowanymi w formacie "Główna.pomocnicza.kompilacja.poprawka".|  
+|optAssemHalfSign|Bool (znany również jako DelaySign).|  
+|optAssemFileVersion|Zakodowana ciągowo jako "główna. pomocnicza. kompilacja. poprawka" — taka sama jak ProductVersion.|  
+|optAssemSatelliteVer|Kodowanie ciągu jako "główna. pomocnicza. kompilacja. poprawka".|  
 |optLastAssemOption|Licznik liczby elementów.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** alink.h  
+ **Nagłówek:** Alink. h  
   
- **Biblioteka**: alink.dll  
+ **Biblioteka**: Alink. dll  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Al.exe (konsolidator zestawów)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Al.exe (konsolidator zestawów)](../../tools/al-exe-assembly-linker.md)

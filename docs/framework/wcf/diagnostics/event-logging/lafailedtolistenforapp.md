@@ -2,24 +2,24 @@
 title: LAFailedToListenForApp
 ms.date: 03/30/2017
 ms.assetid: 8ef16d4e-fab7-4ffc-829b-1e3163e72337
-ms.openlocfilehash: 49fd8440baba3752b52cc409fd1f79d2fcd28505
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 091ed8572cf2b4c81bba9e55299fd18771461bc2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969549"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797787"
 ---
 # <a name="lafailedtolistenforapp"></a>LAFailedToListenForApp
-Id: 160  
+#C1 160  
   
- Ważność: Błąd  
+ Obrażeń Błąd  
   
- Kategoria: SMSvcHost  
+ Kategorii SMSvcHost  
   
 ## <a name="description"></a>Opis  
- To zdarzenie oznacza, że wystąpił błąd w określonej usłudze aktywacji określonego protokołu, podczas próby nasłuchiwania dla określonej lokacji, dlatego protokół jest wyłączona dla witryny tymczasowo... Zdarzenie zawiera adres URL, stan, wyjątków, nazwa procesu i identyfikatora procesu.  
+ To zdarzenie wskazuje, że wystąpił błąd w określonej usłudze aktywacji określonego protokołu podczas próby nasłuchiwania dla określonej lokacji, w rezultacie protokół jest tymczasowo wyłączony dla lokacji. Zdarzenie zawiera listę adresów URL, stan, wyjątek, nazwa procesu i identyfikator procesu.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Rejestrowanie zdarzeń](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Informacje ogólne o zdarzeniach](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Rejestrowanie zdarzeń](index.md)
+- [Informacje ogólne o zdarzeniach](events-general-reference.md)

@@ -5,39 +5,39 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b27b52cf-6172-485f-a75c-70ff9c5a2bd4
-ms.openlocfilehash: 120b4bf22e310bee73ba006cfe5a060d0ecd9d65
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 27df5e88b93914d317f0f59c704382bde67534d2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667018"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794999"
 ---
-# <a name="how-to-implement-copytodatatablet-where-the-generic-type-t-is-not-a-datarow"></a>Instrukcje: Implementowanie CopyToDataTable\<T > gdzie ogólny typ T nie jest elementem DataRow
-<xref:System.Data.DataTable> Obiektu jest często używana do wiązania danych. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Metoda pobiera wyniki zapytania i kopiuje dane do <xref:System.Data.DataTable>, która następnie umożliwia powiązanie danych. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Metod, jednak działać tylko w odniesieniu <xref:System.Collections.Generic.IEnumerable%601> źródła gdzie parametr ogólny `T` typu <xref:System.Data.DataRow>. Mimo że jest to przydatne, nie zezwala tabel, które ma zostać utworzony z sekwencji typami skalarnymi, zapytania, które anonimowych typów projektów lub zapytania, które wykonują sprzężeń tabel.  
+# <a name="how-to-implement-copytodatatablet-where-the-generic-type-t-is-not-a-datarow"></a>Instrukcje: Zaimplementuj\<CopyToDataTable T >, gdzie typ ogólny t nie jest typem DataRow
+<xref:System.Data.DataTable> Obiekt jest często używany do wiązania danych. Metoda pobiera wyniki zapytania i kopiuje dane <xref:System.Data.DataTable>do, które mogą być następnie używane do wiązania danych. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Metody, jednak działają tylko <xref:System.Collections.Generic.IEnumerable%601> na źródle, gdzie parametr `T` generyczny jest typu <xref:System.Data.DataRow>. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Chociaż jest to przydatne, nie zezwala na tworzenie tabel z sekwencji typów skalarnych, od zapytań, które są typami anonimowymi projektu, lub z zapytań, które wykonują sprzężenia tabeli.  
   
- W tym temacie opisano sposób implementacji niestandardowego dwóch `CopyToDataTable<T>` metody rozszerzenia, które akceptują parametr ogólny `T` typu innego niż <xref:System.Data.DataRow>. Logic Apps, aby utworzyć <xref:System.Data.DataTable> z <xref:System.Collections.Generic.IEnumerable%601> źródła znajduje się w `ObjectShredder<T>` klasy, która jest następnie opakowywany w dwóch przeciążone `CopyToDataTable<T>` metody rozszerzenia. `Shred` Metody `ObjectShredder<T>` Klasa zwraca wypełniony <xref:System.Data.DataTable> i przyjmuje trzy parametry wejściowe: <xref:System.Collections.Generic.IEnumerable%601> źródła <xref:System.Data.DataTable>, a <xref:System.Data.LoadOption> wyliczenia. Schemat początkowy zwracanego <xref:System.Data.DataTable> opiera się na schemat typu `T`. Jeśli nie podano istniejącej tabeli jako dane wejściowe, schemat musi być spójne ze schematem typu `T`. Każdej publicznej właściwości i pola typu `T` jest konwertowana na <xref:System.Data.DataColumn> w tabeli zwracane. Jeśli sekwencja źródłowa zawiera typ pochodzący od `T`, schemat tabeli zwracane podzielonego na wszelkie dodatkowe właściwości publiczne i pola.  
+ W tym temacie opisano sposób implementacji dwóch niestandardowych `CopyToDataTable<T>` metod rozszerzenia, które akceptują parametr `T` ogólny typu innego niż <xref:System.Data.DataRow>. Logika <xref:System.Data.DataTable> do utworzenia <xref:System.Collections.Generic.IEnumerable%601> ze `ObjectShredder<T>` źródła jest zawarta w klasie, która następnie jest opakowana w dwie przeciążone `CopyToDataTable<T>` metody rozszerzenia. `Shred` Metoda <xref:System.Collections.Generic.IEnumerable%601> klasyzwraca<xref:System.Data.DataTable>wypełnione iakceptuje<xref:System.Data.LoadOption> trzy parametry wejściowe: Źródło, a i Wyliczenie. <xref:System.Data.DataTable> `ObjectShredder<T>` Początkowy schemat zwracanych <xref:System.Data.DataTable> danych opiera się na schemacie typu `T`. Jeśli istniejąca tabela jest dostarczana jako dane wejściowe, schemat musi być spójny ze schematem typu `T`. Każda publiczna właściwość i pole typu `T` jest konwertowane <xref:System.Data.DataColumn> na w zwracanej tabeli. Jeśli sekwencja źródłowa zawiera typ pochodzący z `T`, zwracany schemat tabeli jest rozwinięty dla wszystkich dodatkowych właściwości publicznych lub pól.  
   
- Przykłady użycia niestandardowej `CopyToDataTable<T>` metod, zobacz [Tworzenie elementu DataTable z zapytania](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md).  
+ Przykłady użycia metod niestandardowych `CopyToDataTable<T>` można znaleźć w temacie [Creating a DataTable from a Query](creating-a-datatable-from-a-query-linq-to-dataset.md).  
   
-### <a name="to-implement-the-custom-copytodatatablet-methods-in-your-application"></a>Implementacji niestandardowego CopyToDataTable\<T > metodami w aplikacji  
+### <a name="to-implement-the-custom-copytodatatablet-methods-in-your-application"></a>Aby zaimplementować niestandardowe metody CopyToDataTable\<> T w aplikacji  
   
-1. Implementowanie `ObjectShredder<T>` klasy w celu utworzenia <xref:System.Data.DataTable> z <xref:System.Collections.Generic.IEnumerable%601> źródła:  
+1. Zaimplementuj <xref:System.Data.DataTable> <xref:System.Collections.Generic.IEnumerable%601> klasę, aby utworzyć obiekt ze źródła: `ObjectShredder<T>`  
   
      [!code-csharp[DP Custom CopyToDataTable Examples#ObjectShredderClass](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#objectshredderclass)]
      [!code-vb[DP Custom CopyToDataTable Examples#ObjectShredderClass](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#objectshredderclass)]  
 
-    Poprzedni przykład założono, że właściwości `DataColumn` nie są typy dopuszczające wartości null. Aby obsłużyć właściwości z typami zerowalnymi, użyj następującego kodu:
+    W poprzednim przykładzie przyjęto założenie, że `DataColumn` właściwości nie są typami dopuszczającymi wartość null. Aby obsłużyć właściwości z typami dopuszczających wartości null, użyj następującego kodu:
 
     ```csharp
     DataColumn dc = table.Columns.Contains(p.Name) ? table.Columns[p.Name] : table.Columns.Add(p.Name, Nullable.GetUnderlyingType(p.PropertyType) ?? p.PropertyType);
     ```
 
-2. Implementowanie niestandardowego `CopyToDataTable<T>` metody rozszerzenia w klasie:  
+2. Zaimplementuj niestandardowe `CopyToDataTable<T>` metody rozszerzenia w klasie:  
   
      [!code-csharp[DP Custom CopyToDataTable Examples#CustomCopyToDataTableMethods](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#customcopytodatatablemethods)]
      [!code-vb[DP Custom CopyToDataTable Examples#CustomCopyToDataTableMethods](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#customcopytodatatablemethods)]  
   
-3. Dodaj `ObjectShredder<T>` klasy i `CopyToDataTable<T>` metody rozszerzenia do aplikacji.  
+3. Dodaj klasę i `CopyToDataTable<T>` metody rozszerzenia do aplikacji. `ObjectShredder<T>`  
   
 ```vb  
 Module Module1  
@@ -75,5 +75,5 @@ public class ObjectShredder<T>
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Tworzenie elementu DataTable na podstawie zapytania](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)
-- [Przewodnik programowania](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
+- [Tworzenie elementu DataTable na podstawie zapytania](creating-a-datatable-from-a-query-linq-to-dataset.md)
+- [Przewodnik programowania](programming-guide-linq-to-dataset.md)

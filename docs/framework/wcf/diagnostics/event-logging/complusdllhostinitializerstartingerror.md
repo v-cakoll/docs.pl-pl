@@ -2,24 +2,24 @@
 title: ComPlusDllHostInitializerStartingError
 ms.date: 03/30/2017
 ms.assetid: ad7d176a-cf40-412a-9335-eef64a25454a
-ms.openlocfilehash: 1e541525d66504b37bf97cce115414e71c31305e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eaa7338b3393f930d6e10cf6b286202900f07102
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999417"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798063"
 ---
 # <a name="complusdllhostinitializerstartingerror"></a>ComPlusDllHostInitializerStartingError
-Id: 131  
+#C1 131  
   
- Ważność: Błąd  
+ Obrażeń Błąd  
   
- Kategoria: ServiceModel  
+ Kategorii Modelu  
   
 ## <a name="description"></a>Opis  
- To zdarzenie oznacza, że wystąpił błąd podczas uruchamiania Dllhost byla zastavena. Zdarzenia zawiera identyfikator aplikacji, wyjątków, nazwa procesu i identyfikatora procesu.  
+ To zdarzenie wskazuje, że wystąpił błąd podczas uruchamiania inicjatora DllHost. W tym zdarzeniu znajduje się lista AppID, wyjątek, nazwa procesu i identyfikator procesu.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Rejestrowanie zdarzeń](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Informacje ogólne o zdarzeniach](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Rejestrowanie zdarzeń](index.md)
+- [Informacje ogólne o zdarzeniach](events-general-reference.md)

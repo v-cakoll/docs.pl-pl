@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d1f5988266fcbfc18ee937b6e7fdb1829646fa9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 380181d8e309ba4b51d49aae9159f0bbf7e0250f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778677"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796716"
 ---
 # <a name="iassemblycacheitemcommit-method"></a>IAssemblyCacheItem::Commit — Metoda
-Zatwierdza odwołanie do zestawu pamięci podręcznej w pamięci.  
+Zatwierdza odwołanie do pamięci podręcznej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,18 +38,18 @@ HRESULT Commit (
   
 ## <a name="parameters"></a>Parametry  
  `dwFlags`  
- [in] Flagi zdefiniowane w Fusion.idl.  
+ podczas Flagi zdefiniowane w pliku Fusion. idl.  
   
  `pulDisposition`  
- [out, opcjonalny] Wartość, która wskazuje wynik operacji.  
+ [out, opcjonalne] Wartość, która wskazuje wynik operacji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Fusion.h  
+ **Nagłówki** Fusion. h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IAssemblyCacheItem, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+- [IAssemblyCacheItem, interfejs](iassemblycacheitem-interface.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-ms.openlocfilehash: afa760d890cf2857737372af5a9d3ba7c2749e6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 054898a3520cbc2b607fc26b94b72b9896ad9c71
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949418"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786686"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>Tworzenie obiektu DataView (LINQ to DataSet)
 Istnieją dwa sposoby tworzenia <xref:System.Data.DataView> w kontekście LINQ to DataSet. Można utworzyć na <xref:System.Data.DataView> podstawie zapytania <xref:System.Data.DataTable>LINQ to DataSet w lub można utworzyć je na podstawie typu lub z nieokreślonym typem <xref:System.Data.DataTable>. W obu przypadkach <xref:System.Data.DataView> tworzysz przy użyciu jednej <xref:System.Data.DataTableExtensions.AsDataView%2A> z metod rozszerzenia; <xref:System.Data.DataView> nie jest bezpośrednio konstrukcyjną w kontekście LINQ to DataSet.  
@@ -19,7 +19,7 @@ Istnieją dwa sposoby tworzenia <xref:System.Data.DataView> w kontekście LINQ t
   
  <xref:System.Data.DataView>tworzy indeks, co znacznie zwiększa wydajność operacji, które mogą używać indeksu, takich jak filtrowanie i sortowanie. Indeks dla <xref:System.Data.DataView> obiektu jest kompilowany zarówno <xref:System.Data.DataView> podczas tworzenia, jak i gdy dowolna z informacji o sortowaniu lub filtrowaniu jest modyfikowana. Utworzenie a, a następnie ustawienie informacji o sortowaniu lub filtrowaniu później spowoduje, że indeks zostanie skompilowany co najmniej dwa razy <xref:System.Data.DataView> : raz podczas tworzenia i ponownie, gdy właściwości sortowania lub filtrowania są modyfikowane. <xref:System.Data.DataView>  
   
- Aby uzyskać więcej informacji o filtrowaniu i <xref:System.Data.DataView>sortowaniu w programie, zobacz [filtrowanie z widokiem](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md) danych i [sortowanie za pomocą widoku](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)danych.  
+ Aby uzyskać więcej informacji o filtrowaniu i <xref:System.Data.DataView>sortowaniu w programie, zobacz [filtrowanie z widokiem](filtering-with-dataview-linq-to-dataset.md) danych i [sortowanie za pomocą widoku](sorting-with-dataview-linq-to-dataset.md)danych.  
   
 ## <a name="creating-dataview-from-a-linq-to-dataset-query"></a>Tworzenie elementu DataView z zapytania LINQ to DataSet  
  Obiekt można utworzyć na podstawie wyników zapytania LINQ to DataSet, gdzie wyniki są <xref:System.Data.DataRow> projekcją obiektów. <xref:System.Data.DataView> Nowo utworzona <xref:System.Data.DataView> dziedziczy informacje o filtrowaniu i sortowaniu z zapytania, z którego zostało utworzone.  
@@ -72,6 +72,6 @@ Istnieją dwa sposoby tworzenia <xref:System.Data.DataView> w kontekście LINQ t
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Powiązanie danych i LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
-- [Filtrowanie za pomocą widoku danych.](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
-- [Sortowanie za pomocą widoku danych.](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)
+- [Powiązanie danych i LINQ to DataSet](data-binding-and-linq-to-dataset.md)
+- [Filtrowanie za pomocą widoku danych.](filtering-with-dataview-linq-to-dataset.md)
+- [Sortowanie za pomocą widoku danych.](sorting-with-dataview-linq-to-dataset.md)

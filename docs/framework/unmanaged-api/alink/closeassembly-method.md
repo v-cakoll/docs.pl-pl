@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18e0b7b3547bb246588f6b255483d4c317e0df88
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b7828c86018724bb934de99cab4617f9885fdca6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742228"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787610"
 ---
 # <a name="closeassembly-method"></a>CloseAssembly — Metoda
-Kończenie znajdujących się w operacji zestawu. Tę metodę należy wywołać przed rozpoczęciem nowego zestawu lub modułu niepowiązanej.  
+Kończy operacje zestawu. Wywołaj tę metodę przed rozpoczęciem nowego zestawu lub niepowiązanego modułu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,13 +40,13 @@ HRESULT CloseAssembly(
  Identyfikator zestawu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga alink.h.  
+ Wymaga Alink. h.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink, interfejs](ialink-interface.md)
+- [IALink2, interfejs](ialink2-interface.md)
+- [ALink, interfejs API](index.md)

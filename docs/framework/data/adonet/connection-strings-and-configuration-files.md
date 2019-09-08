@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 3a1b0b947b97eac52e06626d2ed6d47bb9700147
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a98239886d6745bbb6e13e71a12764008460cdd7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949461"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785676"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Parametry połączenia i pliki konfiguracji
-Osadzanie parametrów połączenia w kodzie aplikacji może prowadzić do luk w zabezpieczeniach i problemów z konserwacją. Nieszyfrowane parametry połączenia skompilowane w kodzie źródłowym aplikacji można wyświetlić za pomocą narzędzia [Ildasm. exe (Il dezasembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) . Ponadto w przypadku zmiany parametrów połączenia należy ponownie skompilować aplikację. Z tego powodu zalecamy przechowywanie parametrów połączenia w pliku konfiguracyjnym aplikacji.  
+Osadzanie parametrów połączenia w kodzie aplikacji może prowadzić do luk w zabezpieczeniach i problemów z konserwacją. Nieszyfrowane parametry połączenia skompilowane w kodzie źródłowym aplikacji można wyświetlić za pomocą narzędzia [Ildasm. exe (Il dezasembler)](../../tools/ildasm-exe-il-disassembler.md) . Ponadto w przypadku zmiany parametrów połączenia należy ponownie skompilować aplikację. Z tego powodu zalecamy przechowywanie parametrów połączenia w pliku konfiguracyjnym aplikacji.  
   
 ## <a name="working-with-application-configuration-files"></a>Praca z plikami konfiguracji aplikacji  
  Pliki konfiguracji aplikacji zawierają ustawienia specyficzne dla określonej aplikacji. Na przykład aplikacja ASP.NET może mieć jeden lub więcej plików **Web. config** , a aplikacja systemu Windows może mieć opcjonalny plik **App. config** . Pliki konfiguracji współużytkują wspólne elementy, chociaż nazwa i lokalizacja pliku konfiguracji różnią się w zależności od hosta aplikacji.  
@@ -36,7 +36,7 @@ Osadzanie parametrów połączenia w kodzie aplikacji może prowadzić do luk w 
 ```  
   
 > [!NOTE]
-> Możesz zapisać część parametrów połączenia w pliku konfiguracji i użyć <xref:System.Data.Common.DbConnectionStringBuilder> klasy, aby ukończyć ją w czasie wykonywania. Jest to przydatne w scenariuszach, w których nie są znane elementy parametrów połączenia przed czasem, lub jeśli nie chcesz zapisywać poufnych informacji w pliku konfiguracyjnym. Aby uzyskać więcej informacji, zobacz [konstruktory parametrów połączenia](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+> Możesz zapisać część parametrów połączenia w pliku konfiguracji i użyć <xref:System.Data.Common.DbConnectionStringBuilder> klasy, aby ukończyć ją w czasie wykonywania. Jest to przydatne w scenariuszach, w których nie są znane elementy parametrów połączenia przed czasem, lub jeśli nie chcesz zapisywać poufnych informacji w pliku konfiguracyjnym. Aby uzyskać więcej informacji, zobacz [konstruktory parametrów połączenia](connection-string-builders.md).  
   
 ### <a name="using-external-configuration-files"></a>Używanie zewnętrznych plików konfiguracji  
  Zewnętrzne pliki konfiguracji to oddzielne pliki, które zawierają fragment pliku konfiguracji składający się z jednej sekcji. Plik konfiguracji zewnętrznej jest następnie przywoływany przez główny plik konfiguracji. Przechowywanie sekcji **connectionStrings** w fizycznie osobnym pliku jest przydatne w sytuacjach, w których parametry połączenia mogą być edytowane po wdrożeniu aplikacji. Na przykład standardowe zachowanie ASP.NET polega na ponownym uruchomieniu domeny aplikacji po zmodyfikowaniu plików konfiguracji, co spowoduje utratę informacji o stanie. Jednak modyfikowanie zewnętrznego pliku konfiguracji nie powoduje ponownego uruchomienia aplikacji. Zewnętrzne pliki konfiguracji nie są ograniczone do ASP.NET; mogą być również używane przez aplikacje systemu Windows. Ponadto zabezpieczenia dostępu do plików i uprawnienia mogą służyć do ograniczania dostępu do zewnętrznych plików konfiguracji. Praca z zewnętrznymi plikami konfiguracji w czasie wykonywania jest niewidoczna i nie wymaga specjalnego kodowania.  
@@ -77,7 +77,7 @@ Osadzanie parametrów połączenia w kodzie aplikacji może prowadzić do luk w 
 |Właściwość|Opis|  
 |--------------|-----------------|  
 |<xref:System.Configuration.ConnectionStringSettings.Name%2A>|Nazwa parametrów połączenia. Mapuje do atrybutu **name** .|  
-|<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|W pełni kwalifikowana nazwa dostawcy. Mapuje na atrybut ProviderName.|  
+|<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|W pełni kwalifikowana nazwa dostawcy. Mapuje na atrybut **ProviderName** .|  
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|Parametry połączenia. Mapuje do atrybutu **ConnectionString** .|  
   
 ### <a name="example-listing-all-connection-strings"></a>Przykład: Wyświetlanie listy wszystkich parametrów połączenia  
@@ -171,9 +171,9 @@ Osadzanie parametrów połączenia w kodzie aplikacji może prowadzić do luk w 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md)
-- [Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [Konstruktorzy parametrów połączeń](connection-string-builders.md)
+- [Ochrona informacji o połączeniu](protecting-connection-information.md)
 - [Korzystanie z klas konfiguracji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [Konfigurowanie aplikacji](../../../../docs/framework/configure-apps/index.md)
+- [Konfigurowanie aplikacji](../../configure-apps/index.md)
 - [Administrowanie witryną sieci Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](ado-net-overview.md)

@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: 4eb96eaf409fd34e9b10a469ed31fbbe18ebac5e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9250ca09fb5e28655e39f8d91d991fdb3bffcdbd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045999"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795746"
 ---
 # <a name="extending-dispatchers"></a>Rozszerzanie dyspozytorów
 Dyspozytory są odpowiedzialni za ściąganie komunikatów przychodzących z kanałów, tłumaczenie ich na wywołania metod w kodzie aplikacji i wysyłanie wyników z powrotem do obiektu wywołującego. Rozszerzenia dyspozytora umożliwiają modyfikowanie tego przetwarzania.  Można zaimplementować inspektorów komunikatów lub parametrów kontrolujących lub modyfikujących zawartość komunikatów lub parametrów.  Można zmienić sposób, w jaki komunikaty są kierowane do operacji, lub udostępnić inne funkcje.
 
-W tym temacie opisano sposób używania <xref:System.ServiceModel.Dispatcher.DispatchRuntime> klas i <xref:System.ServiceModel.Dispatcher.DispatchOperation> w aplikacji usługi Windows Communication Foundation (WCF) do modyfikowania domyślnego zachowania wykonywania dyspozytora lub przechwytywania lub modyfikowania komunikatów, parametrów lub powrotu wartości przed lub po ich wysłaniu lub pobraniu z warstwy kanału. Aby uzyskać więcej informacji na temat równoważnego przetwarzania komunikatów przez środowisko uruchomieniowe klienta, zobacz [Rozszerzanie klientów](../../../../docs/framework/wcf/extending/extending-clients.md). Aby zrozumieć rolę, która <xref:System.ServiceModel.IExtensibleObject%601> umożliwia odczytywanie informacji o stanie udostępnionym między różnymi obiektami dostosowania środowiska uruchomieniowego, zobacz [Rozszerzalne obiekty](../../../../docs/framework/wcf/extending/extensible-objects.md).
+W tym temacie opisano sposób używania <xref:System.ServiceModel.Dispatcher.DispatchRuntime> klas i <xref:System.ServiceModel.Dispatcher.DispatchOperation> w aplikacji usługi Windows Communication Foundation (WCF) do modyfikowania domyślnego zachowania wykonywania dyspozytora lub przechwytywania lub modyfikowania komunikatów, parametrów lub powrotu wartości przed lub po ich wysłaniu lub pobraniu z warstwy kanału. Aby uzyskać więcej informacji na temat równoważnego przetwarzania komunikatów przez środowisko uruchomieniowe klienta, zobacz [Rozszerzanie klientów](extending-clients.md). Aby zrozumieć rolę, która <xref:System.ServiceModel.IExtensibleObject%601> umożliwia odczytywanie informacji o stanie udostępnionym między różnymi obiektami dostosowania środowiska uruchomieniowego, zobacz [Rozszerzalne obiekty](extensible-objects.md).
 
 ## <a name="dispatchers"></a>Dyspozytorów
 
@@ -22,11 +22,11 @@ Warstwa modelu usług wykonuje konwersję między modelem programowania dewelope
 
 Dyspozytor kanału (i pomocnik <xref:System.ServiceModel.Channels.IChannelListener>) ściąga komunikaty z kanału w obszarze i przekazuje komunikaty do odpowiednich odnoszących się do nich punktów końcowych. Każdy Dyspozytor punktu końcowego ma <xref:System.ServiceModel.Dispatcher.DispatchRuntime> kierowanie komunikatów do odpowiednich <xref:System.ServiceModel.Dispatcher.DispatchOperation>, które są odpowiedzialne za wywołanie metody implementującej operację. Różne opcjonalne i wymagane klasy rozszerzeń są wywoływane w sposób. W tym temacie wyjaśniono, jak te fragmenty pasują do siebie i jak można zmodyfikować właściwości i podłączyć własny kod w celu poszerzenia podstawowej funkcjonalności.
 
-Właściwości dyspozytora i zmodyfikowane obiekty dostosowania są wstawiane przy użyciu obiektów usługi, punktu końcowego, kontraktu lub zachowania operacji. W tym temacie nie opisano, jak używać zachowań. Aby uzyskać więcej informacji na temat typów używanych do wstawiania modyfikacji dyspozytora, zobacz [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).
+Właściwości dyspozytora i zmodyfikowane obiekty dostosowania są wstawiane przy użyciu obiektów usługi, punktu końcowego, kontraktu lub zachowania operacji. W tym temacie nie opisano, jak używać zachowań. Aby uzyskać więcej informacji na temat typów używanych do wstawiania modyfikacji dyspozytora, zobacz [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](configuring-and-extending-the-runtime-with-behaviors.md).
 
 Poniższa ilustracja przedstawia ogólny widok elementów architektury w usłudze.
 
-![Architektura środowiska uruchomieniowego wysyłania](../../../../docs/framework/wcf/extending/media/wcfc-dispatchruntimearchc.gif "wcfc_DispatchRuntimeArchc")
+![Architektura środowiska uruchomieniowego wysyłania](./media/wcfc-dispatchruntimearchc.gif "wcfc_DispatchRuntimeArchc")
 
 ### <a name="channel-dispatchers"></a>Dyspozytorzy kanałów
 
@@ -44,30 +44,30 @@ Użyj, <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> Aby uzyskać dwa
 
 Istnieje kilka powodów, dla których należy zwiększyć dyspozytora:
 
-- Niestandardowa weryfikacja komunikatów. Użytkownicy mogą wymusić, że komunikat jest prawidłowy dla określonego schematu. Można to zrobić, implementując interfejsy interceptora komunikatów. Aby zapoznać się z przykładem, zobacz [inspektorzy komunikatów](../../../../docs/framework/wcf/samples/message-inspectors.md).
+- Niestandardowa weryfikacja komunikatów. Użytkownicy mogą wymusić, że komunikat jest prawidłowy dla określonego schematu. Można to zrobić, implementując interfejsy interceptora komunikatów. Aby zapoznać się z przykładem, zobacz [inspektorzy komunikatów](../samples/message-inspectors.md).
 
 - Niestandardowe rejestrowanie komunikatów. Użytkownicy mogą przeprowadzać inspekcję i rejestrowanie niektórych komunikatów aplikacji przepływających przez punkt końcowy. Można to również zrobić przy użyciu interfejsów interceptora komunikatów.
 
 - Niestandardowe przekształcenia komunikatów. Użytkownicy mogą zastosować pewne przekształcenia do wiadomości w środowisku uruchomieniowym (na przykład w celu przechowywania wersji). Można to zrobić ponownie przy użyciu interfejsów interceptora komunikatów.
 
-- Niestandardowy model danych. Użytkownicy mogą mieć model serializacji danych inny niż te obsługiwane domyślnie w programie WCF (mianowicie <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>,, i nieprzetworzonych wiadomości). Można to zrobić, implementując interfejsy programu formatującego komunikatów. Aby zapoznać się z przykładem, zobacz Program [formatujący operacje i selektor operacji](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).
+- Niestandardowy model danych. Użytkownicy mogą mieć model serializacji danych inny niż te obsługiwane domyślnie w programie WCF (mianowicie <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>,, i nieprzetworzonych wiadomości). Można to zrobić, implementując interfejsy programu formatującego komunikatów. Aby zapoznać się z przykładem, zobacz Program [formatujący operacje i selektor operacji](../samples/operation-formatter-and-operation-selector.md).
 
 - Walidacja parametrów niestandardowych. Użytkownicy mogą wymusić, że wpisane parametry są prawidłowe (w przeciwieństwie do formatu XML). Można to zrobić za pomocą interfejsów inspektora parametrów.
 
-- Wysyłanie operacji niestandardowej. Użytkownicy mogą zaimplementować wysyłanie na coś innego niż akcja — na przykład w elemencie body lub w niestandardowej właściwości wiadomości. Można to zrobić za pomocą <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> interfejsu. Aby zapoznać się z przykładem, zobacz Program [formatujący operacje i selektor operacji](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).
+- Wysyłanie operacji niestandardowej. Użytkownicy mogą zaimplementować wysyłanie na coś innego niż akcja — na przykład w elemencie body lub w niestandardowej właściwości wiadomości. Można to zrobić za pomocą <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> interfejsu. Aby zapoznać się z przykładem, zobacz Program [formatujący operacje i selektor operacji](../samples/operation-formatter-and-operation-selector.md).
 
-- Buforowanie obiektów. Użytkownicy mogą tworzyć wystąpienia w puli, a nie przydzielać nowych danych dla każdego wywołania. Można to zaimplementować przy użyciu interfejsów dostawcy wystąpień. Aby zapoznać się z przykładem, zobacz [Pule](../../../../docs/framework/wcf/samples/pooling.md).
+- Buforowanie obiektów. Użytkownicy mogą tworzyć wystąpienia w puli, a nie przydzielać nowych danych dla każdego wywołania. Można to zaimplementować przy użyciu interfejsów dostawcy wystąpień. Aby zapoznać się z przykładem, zobacz [Pule](../samples/pooling.md).
 
 - Dzierżawa wystąpienia. Użytkownicy mogą zaimplementować wzorzec dzierżawy dla okresu istnienia wystąpienia, podobnie jak w przypadku komunikacji zdalnej .NET Framework. Można to zrobić przy użyciu interfejsów czasu istnienia kontekstu wystąpienia.
 
 - Niestandardowa obsługa błędów. Użytkownicy mogą kontrolować sposób przetwarzania zarówno błędów lokalnych, jak i komunikatów o błędach przesyłanych z powrotem do klientów. Można to zaimplementować przy użyciu <xref:System.ServiceModel.Dispatcher.IErrorHandler> interfejsów.
 
-- Niestandardowe zachowania autoryzacji. Użytkownicy mogą zaimplementować niestandardową kontrolę dostępu, rozszerzając elementy kontraktu lub czasu wykonywania operacji oraz sprawdzając zabezpieczenia na podstawie tokenów znajdujących się w wiadomości. Można to zrobić przy użyciu interfejsu interceptora komunikatów lub interfejsów interceptorów parametrów. Aby zapoznać się z przykładami, zobacz [rozszerzalność zabezpieczeń](../../../../docs/framework/wcf/samples/security-extensibility.md).
+- Niestandardowe zachowania autoryzacji. Użytkownicy mogą zaimplementować niestandardową kontrolę dostępu, rozszerzając elementy kontraktu lub czasu wykonywania operacji oraz sprawdzając zabezpieczenia na podstawie tokenów znajdujących się w wiadomości. Można to zrobić przy użyciu interfejsu interceptora komunikatów lub interfejsów interceptorów parametrów. Aby zapoznać się z przykładami, zobacz [rozszerzalność zabezpieczeń](../samples/security-extensibility.md).
 
   > [!CAUTION]
   > Ze względu na to, że zmiana właściwości zabezpieczeń ma potencjalną ochronę aplikacji WCF, zdecydowanie zaleca się podejmowanie modyfikacji związanych z bezpieczeństwem i dokładne sprawdzenie przed wdrożeniem.
 
-- Niestandardowe moduły sprawdzania środowiska uruchomieniowego WCF. Można zainstalować niestandardowe moduły sprawdzania poprawności, które badają usługi, kontrakty i powiązania, aby wymusić zasady na poziomie przedsiębiorstwa w odniesieniu do aplikacji WCF. (Na przykład zobacz [How to: Zablokuj punkty końcowe w](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)przedsiębiorstwie.
+- Niestandardowe moduły sprawdzania środowiska uruchomieniowego WCF. Można zainstalować niestandardowe moduły sprawdzania poprawności, które badają usługi, kontrakty i powiązania, aby wymusić zasady na poziomie przedsiębiorstwa w odniesieniu do aplikacji WCF. (Na przykład zobacz [How to: Zablokuj punkty końcowe w](how-to-lock-down-endpoints-in-the-enterprise.md)przedsiębiorstwie.
 
 ### <a name="using-the-dispatchruntime-class"></a>Korzystanie z klasy DispatchRuntime
 
@@ -137,6 +137,6 @@ Następujące właściwości kontrolują wykonywanie w czasie wykonywania na poz
 
 - <xref:System.ServiceModel.Dispatcher.DispatchRuntime>
 - <xref:System.ServiceModel.Dispatcher.DispatchOperation>
-- [Instrukcje: Inspekcja i modyfikowanie komunikatów w usłudze](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
-- [Instrukcje: Inspekcja lub modyfikowanie parametrów](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
-- [Instrukcje: Blokowanie punktów końcowych w przedsiębiorstwie](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)
+- [Instrukcje: Inspekcja i modyfikowanie komunikatów w usłudze](how-to-inspect-and-modify-messages-on-the-service.md)
+- [Instrukcje: Inspekcja lub modyfikowanie parametrów](how-to-inspect-or-modify-parameters.md)
+- [Instrukcje: Blokowanie punktów końcowych w przedsiębiorstwie](how-to-lock-down-endpoints-in-the-enterprise.md)

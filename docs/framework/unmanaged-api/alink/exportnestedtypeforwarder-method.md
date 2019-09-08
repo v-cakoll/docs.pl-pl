@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bb8fba433c5f7ef9701caf61971841672f46b425
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eb8112d6d2b5c2cbb257db2f20ff4be5a84e827b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742036"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787473"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder — Metoda
-Dodaje typ usługi przesyłania dalej dla typu zagnieżdżonego do tabeli typu danego zestawu.  
+Dodaje funkcję przesyłania dalej typu dla typu zagnieżdżonego do tabeli typów danego zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,34 +42,34 @@ HRESULT ExportNestedTypeForwarder(
   
 ## <a name="parameters"></a>Parametry  
  `AssemblyID`  
- Identyfikator zestawu, aby wyeksportować z.  
+ Identyfikator zestawu do wyeksportowania.  
   
  `FileToken`  
- Identyfikator tokenu lub zestawu w pliku, który definiuje typ pliku.  
+ Token pliku lub identyfikator zestawu, który definiuje typ.  
   
  `TypeToken`  
- Token dla typu.  
+ Token dla tego typu.  
   
  `ParentType`  
- Token typie elementu nadrzędnego.  
+ Token typu nadrzędnego.  
   
  `pszTypename`  
- W pełni kwalifikowana nazwa typu do wyeksportowania.  
+ W pełni kwalifikowana nazwa typu do eksportowania.  
   
  `dwFlags`  
- `ComType` flagi, takich jak `tdPublic` lub `tdNested`.  
+ `ComType`flagi takie jak `tdPublic` lub `tdNested`.  
   
  `pType`  
- Odbiera token typu eksportu. Jest to niezbędne tylko w przypadku emitowania zagnieżdżone typy.  
+ Odbiera token typu eksportu. Jest to konieczne tylko w przypadku emitowania typów zagnieżdżonych.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga alink.h  
+ Wymaga Alink. h  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink, interfejs](ialink-interface.md)
+- [IALink2, interfejs](ialink2-interface.md)
+- [ALink, interfejs API](index.md)

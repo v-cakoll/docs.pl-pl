@@ -2,66 +2,66 @@
 title: Powiadomienia zapytań w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: a68c01c7db782a9904ba36edec9d13332cab39a9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 94171c8dac59fc17b0dd699d87fc043651fa5b7a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645662"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791772"
 ---
 # <a name="query-notifications-in-sql-server"></a>Powiadomienia zapytań w programie SQL Server
-Powiadomienia o zapytaniach utworzonych na podstawie infrastruktury programu Service Broker, Zezwalaj na aplikacje otrzymywać powiadomienia, gdy dane zostały zmienione. Ta funkcja jest szczególnie użyteczna w przypadku aplikacji, które zapewniają pamięci podręcznej informacje z bazy danych, takich jak aplikacji sieci Web i musi być zgłoszone po zmianie źródła danych.  
+W oparciu o infrastrukturę Service Broker powiadomienia o zapytaniach umożliwiają powiadamianie aplikacji o zmianach danych. Ta funkcja jest szczególnie przydatna w przypadku aplikacji, które udostępniają pamięć podręczną informacji z bazy danych, takiej jak aplikacja sieci Web, i należy powiadamiać o zmianach danych źródłowych.  
   
- Istnieją trzy sposoby, które można wdrożyć za pomocą platformy ADO.NET powiadomienia o zapytaniach:  
+ Istnieją trzy sposoby implementacji powiadomień o zapytaniach przy użyciu ADO.NET:  
   
-1. Implementacja niskiego poziomu są dostarczane przez `SqlNotificationRequest` klasę, która udostępnia funkcje po stronie serwera, dzięki któremu można wykonać polecenia z żądaniem powiadomienia.  
+1. Implementacja niskiego poziomu jest dostarczana przez `SqlNotificationRequest` klasę, która udostępnia funkcje po stronie serwera, co umożliwia wykonywanie poleceń z żądaniem powiadomienia.  
   
-2. Wdrożenia wysokiego poziomu są dostarczane przez `SqlDependency` klasy, która jest klasą, która zawiera Abstrakcja wysokiego poziomu funkcjonalności powiadomień od źródłowej aplikacji i programu SQL Server, dzięki czemu można na potrzeby wykrywania zmian w zależności serwer. W większości przypadków jest to najprostszy i najbardziej efektywnym sposobem wykorzystać możliwości powiadomienia programu SQL Server, aplikacji klienckich zarządzanych za pomocą dostawcy danych .NET Framework dla programu SQL Server.  
+2. Implementacja wysokiego poziomu jest dostarczana przez `SqlDependency` klasę, która jest klasą, która zapewnia abstrakcję wysokiego poziomu funkcji powiadomień między aplikacją źródłową i SQL Server, umożliwiając użycie zależności do wykrywania zmian w Server. W większości przypadków jest to najprostszy i najbardziej efektywny sposób, aby wykorzystać możliwości SQL Server powiadomień przez zarządzane aplikacje klienckie przy użyciu Dostawca danych .NET Framework dla SQL Server.  
   
-3. Ponadto sieci Web aplikacji utworzonych za pomocą programu ASP.NET 2.0 lub później za pomocą `SqlCacheDependency` klas pomocniczych.  
+3. Ponadto aplikacje sieci Web skompilowane przy użyciu ASP.NET 2,0 lub nowszej mogą używać `SqlCacheDependency` klas pomocnika.  
   
- Powiadomienia o zapytaniach są używane dla aplikacji, które trzeba odświeżyć Wyświetla lub zapisuje w pamięci podręcznej, w odpowiedzi na zmiany w danych bazowych. Microsoft SQL Server umożliwia aplikacji .NET Framework wysyłać polecenia do programu SQL Server i powiadomień żądania, jeśli wykonywane to samo polecenie dałby w efekcie inne niż pobierana początkowo zestawów wyników. Powiadomienia generowane na serwerze są wysyłane za pośrednictwem kolejki do przetworzenia później.  
+ Powiadomienia o zapytaniach są używane w przypadku aplikacji, które wymagają odświeżenia wyświetlania lub buforowania w odpowiedzi na zmiany danych bazowych. Microsoft SQL Server umożliwia aplikacjom .NET Framework wysyłanie polecenia do SQL Server i żądanie powiadomienia, jeśli wykonanie tego samego polecenia spowoduje wygenerowanie zestawów wynikowych innych niż pobrane początkowo. Powiadomienia generowane na serwerze są wysyłane przez kolejki, aby można je było przetworzyć później.  
   
- Można skonfigurować powiadomienia wybierz pozycję i instrukcjach EXECUTE. Korzystając z instrukcji EXECUTE, programu SQL Server rejestruje powiadomienie wykonano zamiast instrukcji EXECUTE samego polecenia. Polecenie musi spełniać wymagania i ograniczenia dotyczące instrukcji SELECT. Gdy polecenia, który rejestruje powiadomienie zawiera więcej niż jedną instrukcję, aparat bazy danych tworzy powiadomień dla każdej instrukcji w partii.  
+ Możesz skonfigurować powiadomienia dla instrukcji SELECT i EXECUTE. Przy użyciu instrukcji EXECUTE SQL Server rejestruje powiadomienie dla wykonywanego polecenia, a nie samą instrukcję EXECUTE. Polecenie musi spełniać wymagania i ograniczenia dotyczące instrukcji SELECT. Gdy polecenie rejestrujące powiadomienie zawiera więcej niż jedną instrukcję, aparat bazy danych tworzy powiadomienie dla każdej instrukcji w partii.  
   
- Jeśli tworzysz aplikację, gdzie potrzebujesz niezawodnej sekundy powiadomienia po zmianie danych, zapoznaj się z sekcji **planowania strategii wydajne powiadomienia kwerendy** i **alternatywy dla zapytania Powiadomienia** w [planowanie powiadomień](https://go.microsoft.com/fwlink/?LinkId=211984) temat w dokumentacji SQL Server — książki Online. Aby uzyskać więcej informacji na temat powiadomienia o zapytaniach i SQL Server Service Broker zobacz poniższe linki do tematów, w dokumentacji SQL Server — książki Online.  
+ Jeśli tworzysz aplikację, w której potrzebujesz niezawodnych powiadomień podrzędnych w przypadku zmiany danych, zapoznaj się z sekcją **Planowanie wydajnej strategii powiadomień o zapytaniach** i **alternatywy do wysyłania zapytań dotyczących powiadomień** w [przypadku planowania Temat powiadomień](https://go.microsoft.com/fwlink/?LinkId=211984) w SQL Server książki online. Aby uzyskać więcej informacji na temat powiadomień o zapytaniach i SQL Server Service Broker, zobacz następujące linki do tematów w temacie SQL Server Books Online.  
   
- **Dokumentacja programu SQL Server**  
+ **Dokumentacja SQL Server**  
   
-- [Przy użyciu powiadomienia o zapytaniach](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
+- [Korzystanie z powiadomień o zapytaniach](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
-- [Tworzenie zapytania o powiadomienie](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+- [Tworzenie zapytania dla powiadomienia](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
-- [Programowanie (programu Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
+- [Programowanie (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
 - [Service Broker Developer InfoCenter](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
-- [Przewodnik dewelopera usługi (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+- [Przewodnik dewelopera (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Włączanie powiadomień o zapytaniach](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  
- W tym artykule omówiono sposób używania powiadomień kwerendy, w tym wymagania dotyczące włączania i używania ich.  
+ [Włączanie powiadomień o zapytaniach](enabling-query-notifications.md)  
+ W tym artykule omówiono sposób używania powiadomień o zapytaniach, w tym wymagania dotyczące włączania i korzystania z nich.  
   
- [Element SqlDependency w aplikacji ASP.NET](../../../../../docs/framework/data/adonet/sql/sqldependency-in-an-aspnet-app.md)  
- Pokazuje sposób użycia kwerendy powiadomienia z aplikacji ASP.NET.  
+ [Element SqlDependency w aplikacji ASP.NET](sqldependency-in-an-aspnet-app.md)  
+ Pokazuje, jak używać powiadomień o zapytaniach z aplikacji ASP.NET.  
   
- [Wykrywanie zmian za pomocą elementu SqlDependency](../../../../../docs/framework/data/adonet/sql/detecting-changes-with-sqldependency.md)  
- Pokazuje, jak wykryć, kiedy wyniki zapytania będą inne niż pierwotnie otrzymały.  
+ [Wykrywanie zmian za pomocą elementu SqlDependency](detecting-changes-with-sqldependency.md)  
+ Pokazuje, w jaki sposób wykryć, kiedy wyniki zapytania będą inne niż te, które zostały pierwotnie odebrane.  
   
- [Wykonywanie polecenia SqlCommand za pomocą SqlNotificationRequest](../../../../../docs/framework/data/adonet/sql/sqlcommand-execution-with-a-sqlnotificationrequest.md)  
- Pokazuje Konfigurowanie <xref:System.Data.SqlClient.SqlCommand> obiektu do pracy z powiadomień o zapytaniach.  
+ [Wykonywanie polecenia SqlCommand za pomocą SqlNotificationRequest](sqlcommand-execution-with-a-sqlnotificationrequest.md)  
+ Demonstruje Konfigurowanie <xref:System.Data.SqlClient.SqlCommand> obiektu do pracy z powiadomieniem o zapytaniach.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Data.Sql.SqlNotificationRequest>  
- W tym artykule opisano <xref:System.Data.Sql.SqlNotificationRequest> klasy i wszystkich jego składowych.  
+ <xref:System.Data.Sql.SqlNotificationRequest> Opisuje klasę i wszystkich jej członków.  
   
  <xref:System.Data.SqlClient.SqlDependency>  
- W tym artykule opisano <xref:System.Data.SqlClient.SqlDependency> klasy i wszystkich jego składowych.  
+ <xref:System.Data.SqlClient.SqlDependency> Opisuje klasę i wszystkich jej członków.  
   
  <xref:System.Web.Caching.SqlCacheDependency>  
- W tym artykule opisano <xref:System.Web.Caching.SqlCacheDependency> klasy i wszystkich jego składowych.  
+ <xref:System.Web.Caching.SqlCacheDependency> Opisuje klasę i wszystkich jej członków.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server i ADO.NET](index.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

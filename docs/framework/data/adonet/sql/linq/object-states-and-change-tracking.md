@@ -2,12 +2,12 @@
 title: Stany obiektów i śledzenie zmian
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: a60afab5158d0d5f66d12d6913ee890abc8ca730
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a9df200f4d2e5f64bf5883c7bc513ba7129dcaad
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043518"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781278"
 ---
 # <a name="object-states-and-change-tracking"></a>Stany obiektów i śledzenie zmian
 
@@ -21,7 +21,7 @@ Poniższa tabela zawiera listę możliwych stanów [!INCLUDE[vbtecdlinq](../../.
 |-----------|-----------------|
 |`Untracked`|Obiekt, który nie jest [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]śledzony przez. Przykłady obejmują następujące elementy:<br /><br /> -Obiekt nie jest wysyłany do zapytania za <xref:System.Data.Linq.DataContext> pomocą bieżącego (na przykład nowo utworzonego obiektu).<br />-Obiekt utworzony przy użyciu deserializacji<br />-Obiekt odpytany za pomocą innego <xref:System.Data.Linq.DataContext>elementu.|
 |`Unchanged`|Obiekt pobrany przy użyciu bieżącego <xref:System.Data.Linq.DataContext> i nieznanego elementu został zmodyfikowany od czasu jego utworzenia.|
-|`PossiblyModified`|Obiekt, który jest *dołączony* do <xref:System.Data.Linq.DataContext>. Aby uzyskać więcej informacji, zobacz [operacje pobierania i cud danych w aplikacjach N-warstwowych (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).|
+|`PossiblyModified`|Obiekt, który jest *dołączony* do <xref:System.Data.Linq.DataContext>. Aby uzyskać więcej informacji, zobacz [operacje pobierania i cud danych w aplikacjach N-warstwowych (LINQ to SQL)](data-retrieval-and-cud-operations-in-n-tier-applications.md).|
 |`ToBeInserted`|Nie pobrano obiektu przy użyciu bieżącego <xref:System.Data.Linq.DataContext>elementu. Powoduje to, że `INSERT` baza <xref:System.Data.Linq.DataContext.SubmitChanges%2A>danych jest w trakcie.|
 |`ToBeUpdated`|Wiadomo, że obiekt został zmodyfikowany od czasu jego pobrania. Powoduje to, że `UPDATE` baza <xref:System.Data.Linq.DataContext.SubmitChanges%2A>danych jest w trakcie.|
 |`ToBeDeleted`|Obiekt oznaczony do usunięcia, który powoduje wystąpienie bazy `DELETE` danych <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.|
@@ -31,7 +31,7 @@ Poniższa tabela zawiera listę możliwych stanów [!INCLUDE[vbtecdlinq](../../.
 
 Można jawnie zażądać `Inserts` przy użyciu <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>. Alternatywnie można wnioskować `Inserts` o znalezienie obiektów podłączonych do jednego z znanych obiektów, które muszą zostać zaktualizowane. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Na przykład, jeśli dodasz `Untracked` obiekt <xref:System.Data.Linq.EntitySet%601> do `Untracked` obiektu lub ustawisz <xref:System.Data.Linq.EntityRef%601> obiekt jako, `Untracked` obiekt jest dostępny w drodze śledzenia obiektów na grafie. Podczas przetwarzania <xref:System.Data.Linq.DataContext.SubmitChanges%2A> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] przechodzą śledzone obiekty i odnajduje wszystkie dostępne trwałe obiektów trwałych, które nie są śledzone. Takie obiekty są kandydatami do wstawienia do bazy danych programu.
 
-W przypadku <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>klas w hierarchii dziedziczenia (`o`) ustawia również wartość elementu członkowskiego wyznaczono jako *rozróżniacz* do dopasowania do typu obiektu. `o` W przypadku typu zgodnego z domyślną wartością rozróżniacza ta akcja powoduje nadpisanie wartości rozróżniacza wartością domyślną. Aby uzyskać więcej informacji, zobacz [Obsługa dziedziczenia](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md).
+W przypadku <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>klas w hierarchii dziedziczenia (`o`) ustawia również wartość elementu członkowskiego wyznaczono jako *rozróżniacz* do dopasowania do typu obiektu. `o` W przypadku typu zgodnego z domyślną wartością rozróżniacza ta akcja powoduje nadpisanie wartości rozróżniacza wartością domyślną. Aby uzyskać więcej informacji, zobacz [Obsługa dziedziczenia](inheritance-support.md).
 
 > [!IMPORTANT]
 > Obiekt dodany do `Table` nie znajduje się w pamięci podręcznej tożsamości. Pamięć podręczna tożsamości odzwierciedla tylko te dane, które są pobierane z bazy danych. Po wywołaniu, dodana <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>jednostka nie pojawia się w zapytaniach dotyczących bazy danych, dopóki <xref:System.Data.Linq.DataContext.SubmitChanges%2A> nie zostanie ukończona pomyślnie.
@@ -69,5 +69,5 @@ W przypadku zaktualizowania zarówno wymaganego odwołania, jak i odpowiedniego 
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Informacje uzupełniające](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Operacje wstawiania, aktualizowania i usuwania](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)
+- [Informacje uzupełniające](background-information.md)
+- [Operacje wstawiania, aktualizowania i usuwania](insert-update-and-delete-operations.md)

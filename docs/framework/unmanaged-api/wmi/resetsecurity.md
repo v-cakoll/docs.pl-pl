@@ -1,6 +1,6 @@
 ---
-title: Funkcja ResetSecurity (niezarządzany wykaz interfejsów API)
-description: Funkcja ResetSecurity przypisuje tokenu personifikacji w bieżącym wątku.
+title: ResetSecurity — funkcja (niezarządzana dokumentacja interfejsu API)
+description: Funkcja ResetSecurity przypisuje token personifikacji do bieżącego wątku.
 ms.date: 11/06/2017
 api_name:
 - ResetSecurity
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3d87fa10dafba326147bcaa39836b631291ef1c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1636d7de8273389e785131dbc1145affd5d3b45f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783124"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798258"
 ---
-# <a name="resetsecurity-function"></a>ResetSecurity — funkcja
-Przypisuje token personifikacji dostarczony do bieżącego wątku.   
+# <a name="resetsecurity-function"></a>ResetSecurity, funkcja
+Przypisuje podany token personifikacji do bieżącego wątku.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -39,21 +39,21 @@ HRESULT ResetSecurity (
 ## <a name="parameters"></a>Parametry
 
 `token`  
-[in] Token personifikacji do skojarzenia z bieżącym wątkiem. Wartość może być `null`. 
+podczas Token personifikacji do skojarzenia z bieżącym wątkiem. Jego wartością może być `null`. 
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja się powiedzie, wartość zwracana jest `S_OK` (0).
+Jeśli funkcja się powiedzie, zwracaną wartością jest `S_OK` (0).
 
-Jeśli funkcja zawiedzie, wartość zwracana jest kod błędu różny od zera. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [geterrorinfo —](geterrorinfo.md) funkcji.
+Jeśli funkcja się nie powiedzie, wartość zwracana jest kodem błędu o wartości innej niż zero. Aby uzyskać rozszerzone informacje o błędzie, wywołaj funkcję [GetErrorInfo](geterrorinfo.md) .
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** WMINet_Utils.idl  
+ **Nagłówki** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)
+- [WMI i liczniki wydajności (niezarządzana dokumentacja interfejsu API)](index.md)

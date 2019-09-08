@@ -2,46 +2,46 @@
 title: wykonywanie zapytania w bazie danych
 ms.date: 03/30/2017
 ms.assetid: eefb8b0c-ff07-4e86-a3d3-567479523fe9
-ms.openlocfilehash: fdcfaa3fc0d08df07027d44399612fb688b920d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c48879d8e3ae699ef749fc14923358174010aae
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918037"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782071"
 ---
 # <a name="querying-the-database"></a>wykonywanie zapytania w bazie danych
-Ta grupa tematów w tym artykule opisano sposób tworzenia i wykonywanie zapytań w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projektów.  
+W tej grupie tematów opisano sposób tworzenia i wykonywania zapytań w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projektach.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: Zapytanie dotyczące informacji](../../../../../../docs/framework/data/adonet/sql/linq/how-to-query-for-information.md)  
- Krótko przedstawiono sposób [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapytania są zasadniczo takie same, jak [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] ogólnie zapytania.  
+ [Instrukcje: Zapytanie o informacje](how-to-query-for-information.md)  
+ Krótko pokazuje, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jak zapytania są zasadniczo takie same [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] jak zapytania.  
   
- [Instrukcje: Pobieranie informacji jako tylko do odczytu](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md)  
- Opisuje sposób zwiększyć wydajność zapytań, gdy planowane jest wprowadzenie nie wprowadzono zmian w danych.  
+ [Instrukcje: Pobierz informacje jako tylko do odczytu](how-to-retrieve-information-as-read-only.md)  
+ Opisuje, jak zwiększyć wydajność zapytań, gdy nie są planowane żadne zmiany w danych.  
   
- [Instrukcje: Kontrolowanie, ile powiązane dane są pobierane.](../../../../../../docs/framework/data/adonet/sql/linq/how-to-control-how-much-related-data-is-retrieved.md)  
- W tym artykule opisano sposób kontrolowania powiązane dane, które są pobierane wraz z główny element docelowy.  
+ [Instrukcje: Kontrolowanie ilości pobieranych powiązanych danych](how-to-control-how-much-related-data-is-retrieved.md)  
+ Opisuje sposób kontrolowania, które powiązane dane są pobierane razem z głównym celem.  
   
- [Instrukcje: Filtrowanie powiązanych danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-filter-related-data.md)  
- Opisuje sposób pobierania powiązanych danych przy użyciu podzapytaniu.  
+ [Instrukcje: Filtruj powiązane dane](how-to-filter-related-data.md)  
+ Opisuje sposób pobierania powiązanych danych przy użyciu podzapytania.  
   
- [Instrukcje: Wyłączanie odroczonego ładowania](../../../../../../docs/framework/data/adonet/sql/linq/how-to-turn-off-deferred-loading.md)  
- Opisuje sposób wyłączanie odroczonego ładowania.  
+ [Instrukcje: Wyłącz ładowanie odroczone](how-to-turn-off-deferred-loading.md)  
+ Opisuje sposób wyłączania odroczonego ładowania.  
   
- [Instrukcje: Bezpośrednie wykonywanie zapytań SQL](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-queries.md)  
- W tym artykule opisano sposób przesyłania zapytań przy użyciu języka SQL.  
+ [Instrukcje: Bezpośrednie wykonywanie zapytań SQL](how-to-directly-execute-sql-queries.md)  
+ Opisuje sposób przesyłania zapytań przy użyciu języka SQL.  
   
- [Instrukcje: Store i ponowne użycie zapytań](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)  
- Opisuje sposób kompilowania zapytania jeden raz, ale jej używać wiele razy z różnymi parametrami.  
+ [Instrukcje: Przechowywanie i ponowne używanie zapytań](how-to-store-and-reuse-queries.md)  
+ Opisuje sposób kompilowania zapytania jeden raz, ale wielokrotnie używać go z różnymi parametrami.  
   
- [Instrukcje: Obsługa kluczy złożonych w zapytaniach](../../../../../../docs/framework/data/adonet/sql/linq/how-to-handle-composite-keys-in-queries.md)  
- W tym artykule opisano jak dołączyć więcej niż jedną kolumnę w zapytaniu, w której operator przyjmuje jeden argument.  
+ [Instrukcje: Obsługuj klucze złożone w zapytaniach](how-to-handle-composite-keys-in-queries.md)  
+ Opisuje sposób dołączania więcej niż jednej kolumny w zapytaniu, w którym operator akceptuje tylko jeden argument.  
   
- [Instrukcje: Pobieranie jednocześnie wielu obiektów](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-many-objects-at-once.md)  
- Opisuje sposób używania <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.  
+ [Instrukcje: Pobierz wiele obiektów jednocześnie](how-to-retrieve-many-objects-at-once.md)  
+ Opisuje sposób użycia <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>programu.  
   
- [Instrukcje: Filtrowanie na poziomie elementu DataContext](../../../../../../docs/framework/data/adonet/sql/linq/how-to-filter-at-the-datacontext-level.md)  
- W tym artykule opisano używanie innego <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.  
+ [Instrukcje: Filtrowanie na poziomie elementu DataContext](how-to-filter-at-the-datacontext-level.md)  
+ Opisuje inne użycie programu <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.  
   
- [Przykłady zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- Przykłady wiele kwerend.
+ [Przykłady zapytań](query-examples.md)  
+ Zawiera wiele przykładów zapytań.

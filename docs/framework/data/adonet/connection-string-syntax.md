@@ -2,12 +2,12 @@
 title: Składnia parametrów połączenia
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 9b43dc780b8570bd671f6b5d9db14a0c98e822d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 00b8dc4c7592daa200f1a2a6c3c7fa9a3c587087
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949470"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784917"
 ---
 # <a name="connection-string-syntax"></a>Składnia parametrów połączenia
 Każdy dostawca danych .NET Framework ma `Connection` obiekt, który dziedziczy z <xref:System.Data.Common.DbConnection> oraz Właściwość specyficzną <xref:System.Data.Common.DbConnection.ConnectionString%2A> dla dostawcy. Składnia określonych parametrów połączenia dla każdego dostawcy jest udokumentowana w swojej `ConnectionString` właściwości. Poniższa tabela zawiera listę czterech dostawców danych uwzględnionych w .NET Framework.  
@@ -30,7 +30,7 @@ Każdy dostawca danych .NET Framework ma `Connection` obiekt, który dziedziczy 
   
 - <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
- Konstruktory parametrów połączenia umożliwiają konstruowanie składniowo prawidłowych parametrów połączenia w czasie wykonywania, dzięki czemu nie trzeba ręcznie łączyć wartości parametrów połączenia w kodzie. Aby uzyskać więcej informacji, zobacz [konstruktory parametrów połączenia](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+ Konstruktory parametrów połączenia umożliwiają konstruowanie składniowo prawidłowych parametrów połączenia w czasie wykonywania, dzięki czemu nie trzeba ręcznie łączyć wartości parametrów połączenia w kodzie. Aby uzyskać więcej informacji, zobacz [konstruktory parametrów połączenia](connection-string-builders.md).  
 
 ## <a name="windows-authentication"></a>Uwierzytelnianie systemu Windows  
  Zalecamy używanie uwierzytelniania systemu Windows (nazywanego czasem *zabezpieczeniami zintegrowanymi*) do nawiązywania połączeń ze źródłami danych, które je obsługują. Składnia wykorzystywana w parametrach połączenia zależy od dostawcy. W poniższej tabeli przedstawiono składnię uwierzytelniania systemu Windows używaną z dostawcami danych .NET Framework.  
@@ -90,7 +90,7 @@ Można również ustawić <xref:System.Data.SqlClient.SqlConnectionStringBuilder
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>Łączenie i dołączanie do SQL Server Express wystąpień użytkownika  
  Wystąpienia użytkownika są funkcją w SQL Server Express. Umożliwiają one użytkownikowi uruchomionemu na najniższych uprawnieniach lokalnych konta systemu Windows dołączenie i uruchomienie SQL Server bazy danych bez konieczności posiadania uprawnień administracyjnych. Wystąpienie użytkownika jest wykonywane z poświadczeniami systemu Windows użytkownika, a nie jako usługa.  
   
- Aby uzyskać więcej informacji na temat pracy z wystąpieniami użytkowników, zobacz [SQL Server Express wystąpień użytkownika](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md).  
+ Aby uzyskać więcej informacji na temat pracy z wystąpieniami użytkowników, zobacz [SQL Server Express wystąpień użytkownika](./sql/sql-server-express-user-instances.md).  
   
 ## <a name="using-trustservercertificate"></a>Korzystanie z TrustServerCertificate  
  `TrustServerCertificate` Słowo kluczowe jest prawidłowe tylko w przypadku nawiązywania połączenia z wystąpieniem SQL Server z prawidłowym certyfikatem. Gdy `TrustServerCertificate` jest ustawiona na `true`, warstwa transportu będzie używać protokołu SSL do szyfrowania kanału i pomijania pominięcia łańcucha certyfikatów w celu zweryfikowania zaufania.  
@@ -105,7 +105,7 @@ Można również ustawić <xref:System.Data.SqlClient.SqlConnectionStringBuilder
 ### <a name="enabling-encryption"></a>Włączanie szyfrowania  
  Aby włączyć szyfrowanie, gdy nie zainicjowano obsługi administracyjnej certyfikatu na serwerze, w SQL Server Configuration Manager należy ustawić opcje **szyfrowanie protokołu Force** i **certyfikat serwera zaufania** . W takim przypadku szyfrowanie będzie używać certyfikatu serwera z podpisem własnym bez sprawdzania poprawności, jeśli nie zainicjowano obsługi administracyjnej na serwerze żadnego certyfikatu zweryfikowanego.  
   
- Ustawienia aplikacji nie mogą zmniejszyć poziomu zabezpieczeń skonfigurowanych w SQL Server, ale można go opcjonalnie wzmocnić. Aplikacja `TrustServerCertificate` może zażądać szyfrowania przez ustawienie słów kluczowych i `Encrypt` na `true`, co gwarantuje, że szyfrowanie odbywa się, nawet jeśli certyfikat serwera nie został zainicjowany i wymuszone **szyfrowanie protokołu** nie skonfigurowano dla klienta. Jeśli `TrustServerCertificate` jednak program nie jest włączony w konfiguracji klienta, jest nadal wymagany certyfikat serwera aprowizacji.  
+ Ustawienia aplikacji nie mogą zmniejszyć poziomu zabezpieczeń skonfigurowanych w SQL Server, ale można go opcjonalnie wzmocnić. Aplikacja `TrustServerCertificate` może zażądać szyfrowania przez ustawienie słów kluczowych i `Encrypt` na `true`, co gwarantuje, że szyfrowanie odbywa się, nawet jeśli certyfikat serwera nie został zainicjowany i **wymuszone szyfrowanie protokołu** nie skonfigurowano dla klienta. Jeśli `TrustServerCertificate` jednak program nie jest włączony w konfiguracji klienta, jest nadal wymagany certyfikat serwera aprowizacji.  
   
  W poniższej tabeli opisano wszystkie przypadki.  
   
@@ -196,6 +196,6 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Parametry połączeń](../../../../docs/framework/data/adonet/connection-strings.md)
-- [Nawiązywanie połączenia ze źródłem danych](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Parametry połączeń](connection-strings.md)
+- [Nawiązywanie połączenia ze źródłem danych](connecting-to-a-data-source.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

@@ -2,108 +2,108 @@
 title: Overview2 zabezpieczeń
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 4960959dfe6f485a96d29a5da43c2b8c6c98fe3a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4aac564e55b24b2499f861938082a32f30247f91
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649601"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794341"
 ---
 # <a name="security-overview"></a>Przegląd zabezpieczeń
-Zabezpieczanie aplikacji jest procesem stałym. Nigdy nie będzie punktu, w której deweloper może zagwarantować, czy aplikacja jest bezpieczne przed atakami wszystkich, ponieważ nie jest możliwe do przewidzenia, jakie rodzaje nowe technologie atakom w przyszłości nastąpi. Z drugiej strony po prostu, ponieważ nikt nie ma luki w zabezpieczeniach jeszcze odnalezionych (lub opublikowany) w systemie nie oznacza brak istnieje, lub może istnieć. Należy Planowanie zabezpieczeń w fazie projektowania projektu, a także zaplanować, jak zabezpieczenia zostaną zachowane w okresie istnienia aplikacji.  
+Zabezpieczanie aplikacji jest procesem ciągłym. Nie będzie to miało miejsca, w którym deweloper może zagwarantować, że aplikacja jest bezpieczna przed atakami, ponieważ nie można przewidzieć, jakie rodzaje przyszłych ataków będą się pojawiać. Z drugiej strony, ponieważ nikt nie został jeszcze odnaleziony (lub opublikowany) wady zabezpieczeń w systemie nie oznacza, że nic nie istnieje lub nie istnieje. Należy zaplanować zabezpieczenia w fazie projektowania projektu, a także zaplanować, w jaki sposób zabezpieczenia będą utrzymywane w okresie istnienia aplikacji.  
   
 ## <a name="design-for-security"></a>Projektowanie pod kątem zabezpieczeń  
- Jedną z największych problemów w projektowania bezpiecznych aplikacji jest zabezpieczeń często wymaga tylko chwili namysłu, coś do zaimplementowania po ukończenia kodu projektu. Nie tworzenia zabezpieczeń do aplikacji na początku prowadzi do niezabezpieczonej aplikacji, ponieważ nieco myślenia dostarczono co sprawia, że aplikacja bezpieczne.  
+ Jednym z największych problemów związanych z tworzeniem bezpiecznych aplikacji jest to, że bezpieczeństwo jest często zostawiać, co do wdrożenia po zakończeniu projektu. Nietworzenie zabezpieczeń w aplikacji na początku prowadzi do niezabezpieczonych aplikacji, ponieważ niektóre uwagi zostały nadane w celu zabezpieczenia aplikacji.  
   
- Implementacja zabezpieczeń ostatniej minuty prowadzi do liczby błędów, jak oprogramowanie przerwy w obszarze nowe ograniczenia lub ma zostać przepisane, aby pomieścić funkcje nieprzewidziane. Każdy wiersz poprawiony kod zawiera możliwość wprowadzenia nowych usterek. Z tego powodu należy rozważyć bezpieczeństwo wcześnie w procesie tworzenia aplikacji, dzięki czemu będzie możliwe jej wraz z rozwojem nowych funkcji.  
+ Ostatnia minuta implementacja zabezpieczeń prowadzi do większej liczby usterek, ponieważ przerwy w oprogramowaniu w ramach nowych ograniczeń lub należy zapisać w celu uwzględnienia nieoczekiwanych funkcji. Każdy wiersz poprawionego kodu zawiera możliwość wprowadzenia nowego błędu. Z tego powodu należy wziąć pod uwagę wczesne zabezpieczenia w procesie opracowywania, tak aby można było kontynuować opracowywanie nowych funkcji.  
   
 ### <a name="threat-modeling"></a>Modelowanie zagrożeń  
- Nie można chronić system przed atakiem, chyba że rozumiesz, które jest narażony na wypadek potencjalnych ataków. Proces oceny zagrożeń bezpieczeństwa, nazywany *modelowanie zagrożeń*, konieczne jest określenie prawdopodobieństwo i konsekwencje naruszenia zabezpieczeń w aplikacji ADO.NET.  
+ Nie można chronić systemu przed atakami, chyba że zrozumiesz wszystkie potencjalne ataki, dla których jest on narażony. Proces oceny zagrożeń bezpieczeństwa zwany *modelem zagrożeń*jest konieczny do określenia prawdopodobieństwa i konsekwencji naruszeń zabezpieczeń w aplikacji ADO.NET.  
   
- Modelowanie zagrożeń składa się z trzech kroków wysokiego poziomu: opis widoku osoby atakującej, charakteryzujące zabezpieczeń systemu i określanie zagrożenia.  
+ Modelowanie zagrożeń składa się z trzech kroków wysokiego poziomu: zrozumienie widoku atakującej, scharakteryzowanie zabezpieczeń systemu i określanie zagrożeń.  
   
- Modelowanie zagrożeń to iteracyjne podejście do oceny luk w zabezpieczeniach w aplikacji, aby znaleźć te, które są najbardziej niebezpieczne, ponieważ eksponowanie najbardziej poufnych danych. Po zidentyfikowaniu luk w zabezpieczeniach, ustaw ich pozycję w kolejności ważności i utworzyć priorytetami zestaw środków zaradczych licznik zagrożenia.  
+ Modelowanie zagrożeń jest iteracyjnym podejściem do oceny luk w zabezpieczeniach aplikacji, aby znaleźć te, które są najbardziej niebezpieczne, ponieważ uwidaczniają one najbardziej poufne dane. Po zidentyfikowaniu luk w zabezpieczeniach należy określić ich rangę w kolejności ważności i utworzyć priorytetowy zestaw środków zaradczych, aby wyeliminować zagrożenia.  
   
- Aby uzyskać więcej informacji zobacz następujące zasoby.  
-  
-|Zasób|Opis|  
-|--------------|-----------------|  
-|[Modelowania zagrożeń](https://go.microsoft.com/fwlink/?LinkId=98353) w witrynie Centrum deweloperów zabezpieczeń w witrynie MSDN|Zasoby na tej stronie pomoże Ci zrozumieć zagrożeń procesu modelowania i twórz modele zagrożeń, które można użyć, aby zabezpieczyć swoje własne aplikacje|  
-  
-## <a name="the-principle-of-least-privilege"></a>Zasadę najmniejszych uprawnień  
- Przy projektowaniu, tworzeniu i wdrażania aplikacji należy zakładać, że aplikacja będzie ataku. Często te ataki jest opracowywane przez złośliwy kod, który jest wykonywany przy użyciu uprawnień użytkownika, uruchamiając kod. Inne mogą pochodzić z intencjami kodem, który ma zostać wykorzystana przez osobę atakującą. Podczas planowania zabezpieczeń należy zawsze przyjęto założenie, że nastąpi scenariuszu najgorszego przypadku.  
-  
- Jeden środki zaradcze, które można stosować jest próba ustawienie tyle ściany w całym kodzie jak to możliwe, uruchamiając za pomocą najniższych uprawnień. Zasadę najmniejszych uprawnień mówi, że dany uprawnienia, może być przyznany elementowi najmniejszą ilością kodu, które są niezbędne do najkrótszy czas wymagany do swoją pracę.  
-  
- Najlepsze rozwiązanie w przypadku tworzenia bezpiecznych aplikacji ma rozpoczynać się w ogóle nie ma uprawnień, a następnie dodać najwęższego uprawnienia do danego zadania wykonywane. Z drugiej strony począwszy od wszystkich uprawnień, a następnie odmawianie pojedyncze pliki prowadzi do niezabezpieczone aplikacje, które są trudne do testowania i obsługi, ponieważ luk w zabezpieczeniach może istnieć przypadkowo udzielanie więcej uprawnień niż jest to wymagane.  
-  
- Aby uzyskać więcej informacji na temat zabezpieczenia aplikacji zobacz następujące zasoby.  
+ Aby uzyskać więcej informacji, zobacz następujące zasoby.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Zabezpieczanie aplikacji](/visualstudio/ide/securing-applications)|Zawiera łącza do tematów ogólnych zabezpieczeń. Zawiera także łącza do tematów dotyczące zabezpieczania aplikacji rozproszonych, aplikacji sieci Web, aplikacji mobilnych i klasycznych.|  
+|Witryna [modelowania zagrożeń](https://go.microsoft.com/fwlink/?LinkId=98353) w witrynie MSDN Security Developer Center|Zasoby na tej stronie pomogą zrozumieć proces modelowania zagrożeń oraz modele zagrożeń kompilacji, których można użyć do zabezpieczenia własnych aplikacji|  
+  
+## <a name="the-principle-of-least-privilege"></a>Zasada najniższych uprawnień  
+ Podczas projektowania, kompilowania i wdrażania aplikacji należy założyć, że aplikacja zostanie zaatakowana. Często te ataki pochodzą ze złośliwego kodu, który jest wykonywany z uprawnieniami użytkownika, na którym uruchomiono kod. Inne mogą pochodzić z dobrze zamierzonym kodem, który został wykorzystany przez osobę atakującą. W przypadku planowania zabezpieczeń zawsze zakłada się, że wystąpi scenariusz najgorszego przypadku.  
+  
+ Jedną z miar liczników, których można użyć, jest próba przewinięcia możliwie największej liczby ścian w kodzie przez uruchomienie z najniższymi uprawnieniami. Zasada najniższych uprawnień oznacza, że każde z tych uprawnień powinno być przyznane najmniejszej ilości kodu niezbędnej przez najkrótszy czas wymagany do wykonania zadania.  
+  
+ Najlepszym rozwiązaniem w przypadku tworzenia bezpiecznych aplikacji jest rozpoczęcie od braku uprawnień, a następnie dodanie najwęższych uprawnień dla danego wykonywanego zadania. Z drugiej strony, począwszy od wszystkich uprawnień, a następnie odmówienia poszczególnym osobom potencjalną ochronę niezabezpieczonych aplikacji, które są trudne do przetestowania i utrzymania, ponieważ luki w zabezpieczeniach mogą być niecelowo przyznawane więcej uprawnień niż jest to wymagane.  
+  
+ Aby uzyskać więcej informacji na temat zabezpieczania aplikacji, zobacz następujące zasoby.  
+  
+|Zasób|Opis|  
+|--------------|-----------------|  
+|[Zabezpieczanie aplikacji](/visualstudio/ide/securing-applications)|Zawiera linki do ogólnych tematów zabezpieczeń. Zawiera również linki do tematów zabezpieczania aplikacji rozproszonych, aplikacji sieci Web, aplikacji mobilnych i aplikacji klasycznych.|  
   
 ## <a name="code-access-security-cas"></a>Zabezpieczenia dostępu kodu (CAS)  
- Zabezpieczenia dostępu kodu (CAS) to mechanizm, który pomaga ograniczać dostęp do tego kodu do chronionych zasobów i operacji. W .NET Framework urzędy certyfikacji pełni następujące funkcje:  
+ Zabezpieczenia dostępu kodu (CAS) to mechanizm, który pomaga ograniczyć dostęp do tego kodu do chronionych zasobów i operacji. W .NET Framework urzędy certyfikacji wykonują następujące funkcje:  
   
-- Definiuje uprawnienia i zestawów uprawnień, które reprezentuje prawo dostępu do różnych zasobów systemowych.  
+- Definiuje uprawnienia i zestawy uprawnień, które reprezentują prawo dostępu do różnych zasobów systemu.  
   
-- Umożliwia administratorom konfigurowanie zasad zabezpieczeń, kojarząc zestawy uprawnień przy użyciu grup kodu (grup kodu).  
+- Umożliwia administratorom konfigurowanie zasad zabezpieczeń, kojarząc zestawy uprawnień z grupami kodu (grupy kodu).  
   
-- Umożliwia kodu zażądać uprawnień wymaga, aby można było uruchomić, a także uprawnienia, które będą mieć i określa kod nigdy nie musi mieć uprawnienia.  
+- Umożliwia programowi Code żądanie uprawnień wymaganych do uruchomienia programu, a także uprawnienia, które byłyby przydatne, i określa, które uprawnienia kod nigdy nie musi mieć.  
   
-- Przyznaje uprawnienia do każdego zestawu, który jest ładowany, na podstawie uprawnień żądany przez kod, a operacje dozwolone przez zasady zabezpieczeń.  
+- Przyznaje uprawnienia do każdego zestawu, który jest ładowany, na podstawie uprawnień wymaganych przez kod oraz operacji dozwolonych przez zasady zabezpieczeń.  
   
-- Umożliwia kodu zapotrzebowania, że elementy go wywołujące pod ma określone uprawnienia.  
+- Włącza kod do żądania, że jego obiekty wywołujące mają określone uprawnienia.  
   
-- Umożliwia kodu zapotrzebowania, że elementy go wywołujące pod posiadają podpis cyfrowy, dzięki czemu tylko obiekty wywołujące z konkretnej organizacji lub witryny do wywołania chronionego kodu.  
+- Umożliwia wykonywanie kodu na potrzeby żądania, że jego obiekty wywołujące mają podpis cyfrowy, co pozwala tylko wywołującym z danej organizacji lub lokacji wywoływanie chronionego kodu.  
   
-- Wymusza ograniczenia dotyczące kodu w czasie wykonywania, porównując udzielone uprawnienia co obiekt wywołujący na stosie wywołań do uprawnień, które musi zawierać obiekty wywołujące.  
+- Wymusza ograniczenia dotyczące kodu w czasie wykonywania, porównując przyznane uprawnienia każdego obiektu wywołującego na stosie wywołań z uprawnieniami, które są wymagane przez wywoływania.  
   
- Aby zminimalizować ilość uszkodzeń, które mogą wystąpić, jeśli udany atak, wybierz kontekst zabezpieczeń dla tego kodu, która udziela dostępu tylko do zasobów, serwer musi pobrać swoją pracę, gotowe i nie ma więcej.  
+ Aby zminimalizować ilość szkód, które mogą wystąpić, jeśli atak powiedzie się, wybierz kontekst zabezpieczeń dla kodu, który udziela dostępu tylko do zasobów potrzebnych do wykonania pracy i nie tylko.  
   
- Aby uzyskać więcej informacji zobacz następujące zasoby.  
+ Aby uzyskać więcej informacji, zobacz następujące zasoby.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Zabezpieczenia dostępu kodu i ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|W tym artykule opisano interakcje między zabezpieczenia dostępu kodu, zabezpieczenia oparte na rolach i środowisk częściowo zaufanym z perspektywy aplikacji ADO.NET.|  
-|[Zabezpieczenia dostępu kodu](../../../../docs/framework/misc/code-access-security.md)|Zawiera łącza do dodatkowych tematów opisujących urzędów certyfikacji w programie .NET Framework.|  
+|[Zabezpieczenia dostępu kodu i ADO.NET](code-access-security.md)|Opisuje interakcje między zabezpieczeniami dostępu kodu, zabezpieczeniami opartymi na rolach i częściowo zaufanymi środowiskami z perspektywy aplikacji ADO.NET.|  
+|[Zabezpieczenia dostępu kodu](../../misc/code-access-security.md)|Zawiera linki do dodatkowych tematów opisujących urzędy certyfikacji w .NET Framework.|  
   
 ## <a name="database-security"></a>Zabezpieczenia bazy danych  
- Zasadę najmniejszych uprawnień ma zastosowanie także do źródła danych. Ogólne wskazówki dotyczące zabezpieczeń bazy danych obejmują:  
+ Zasada najniższych uprawnień dotyczy również źródła danych. Poniżej wymieniono ogólne wskazówki dotyczące zabezpieczeń bazy danych:  
   
-- Tworzenie kont przy najniższe możliwe uprawnienia.  
+- Utwórz konta z najniższymi możliwymi uprawnieniami.  
   
-- Nie zezwalaj użytkownikom dostęp do konta z uprawnieniami administracyjnymi tak, aby rozpocząć pracę z kodem.  
+- Nie Zezwalaj użytkownikom na dostęp do kont administracyjnych tylko w celu uzyskania działania kodu.  
   
-- Nie zwracają komunikatów o błędach po stronie serwera dla aplikacji klienckich.  
+- Nie zwracaj komunikatów o błędach po stronie serwera do aplikacji klienckich.  
   
-- Sprawdź wszystkie dane wejściowe zarówno klient, jak i serwera.  
+- Sprawdź poprawność wszystkich danych wejściowych zarówno na kliencie, jak i na serwerze.  
   
-- Za pomocą sparametryzowanych poleceń i uniknąć dynamicznych instrukcji SQL.  
+- Używaj sparametryzowanych poleceń i unikaj dynamicznych instrukcji SQL.  
   
-- Włącz zabezpieczenia inspekcji i rejestrowania dla bazy danych używane w tak, że alerty są wyzwalane na wszelkie naruszenia zabezpieczeń.  
+- Włącz inspekcję zabezpieczeń i rejestrowanie dla używanej bazy danych, aby otrzymywać alerty o naruszeniach zabezpieczeń.  
   
- Aby uzyskać więcej informacji zobacz następujące zasoby.  
-  
-|Zasób|Opis|  
-|--------------|-----------------|  
-|[Zabezpieczenia serwera SQL](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|Omówienie zabezpieczeń programu SQL Server przy użyciu scenariuszy aplikacji, które zawierają wskazówki dotyczące tworzenia bezpiecznych aplikacji ADO.NET, których obiektem docelowym programu SQL Server.|  
-|[Zalecenia dotyczące strategii dostępu do danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Zawiera zalecenia dotyczące uzyskiwania dostępu do danych i wykonywania operacji w bazie danych.|  
-  
-## <a name="security-policy-and-administration"></a>Zasady zabezpieczeń i administracji  
- Nieprawidłowo administrowania zasady zabezpieczenia dostępu kodu może utworzyć luk zabezpieczeń. Po wdrożeniu aplikacji powinny być używane techniki monitorowanie zabezpieczeń i wyłaniać ryzyko oceniane jako nowe zagrożenia.  
-  
- Aby uzyskać więcej informacji zobacz następujące zasoby.  
+ Aby uzyskać więcej informacji, zobacz następujące zasoby.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Zarządzanie zasadami zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Zawiera informacje na temat tworzenia i administrowanie zasadami zabezpieczeń.|  
-|[Najlepsze rozwiązania dotyczące zasad zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Zawiera łącza, dotyczące administrowania zasadami zabezpieczeń.|  
+|[Zabezpieczenia serwera SQL](./sql/sql-server-security.md)|Zawiera omówienie zabezpieczeń SQL Server ze scenariuszami aplikacji, które zapewniają wskazówki dotyczące tworzenia bezpiecznych aplikacji ADO.NET, które są przeznaczone SQL Server.|  
+|[Zalecenia dotyczące strategii dostępu do danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Zawiera zalecenia dotyczące uzyskiwania dostępu do danych i wykonywania operacji bazy danych.|  
+  
+## <a name="security-policy-and-administration"></a>Zasady zabezpieczeń i administracja  
+ Nieprawidłowe administrowanie zasadami zabezpieczeń dostępu kodu (CAS) może potencjalnie stworzyć słabe zabezpieczenia. Po wdrożeniu aplikacji należy użyć technik monitorowania zabezpieczeń i ryzyka, które są oceniane jako nowe zagrożenia.  
+  
+ Aby uzyskać więcej informacji, zobacz następujące zasoby.  
+  
+|Zasób|Opis|  
+|--------------|-----------------|  
+|[Zarządzanie zasadami zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Zawiera informacje dotyczące tworzenia i administrowania zasadami zabezpieczeń.|  
+|[Najlepsze rozwiązania dotyczące zasad zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Zawiera łącza opisujące sposób administrowania zasadami zabezpieczeń.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Zabezpieczenia w .NET](../../../standard/security/index.md)
-- [Zabezpieczenia serwera SQL](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Zabezpieczanie aplikacji ADO.NET](securing-ado-net-applications.md)
+- [Zabezpieczenia w programie .NET](../../../standard/security/index.md)
+- [Zabezpieczenia serwera SQL](./sql/sql-server-security.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

@@ -2,31 +2,31 @@
 title: 'Model danych jednostki: Dziedziczenie'
 ms.date: 03/30/2017
 ms.assetid: 42c7ef24-710a-4af9-8493-cd41c399ecb0
-ms.openlocfilehash: 9f77f2ebb86ea050c124fbd1c6f2b30ed9e75a1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21dbdff63c07dbcdac8de7bf4b3a8e5d0ece7901
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667216"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784067"
 ---
 # <a name="entity-data-model-inheritance"></a>Model danych jednostki: Dziedziczenie
-Entity Data Model (EDM) obsługuje dziedziczenie [typów jednostek](../../../../docs/framework/data/adonet/entity-type.md). Dziedziczenie w EDM jest podobny do dziedziczenia klas w językach programowania obiektowego. Tak jak w przypadku klas w językach obiektowych w modelu koncepcyjnym można zdefiniować typ jednostki ( *typu pochodnego*) który dziedziczy z innego typu jednostki ( *typ podstawowy*). Jednak w odróżnieniu od klas w programowanie zorientowane obiektowo, w modelu koncepcyjnym Typ pochodny zawsze dziedziczy wszystkie [właściwości](../../../../docs/framework/data/adonet/property.md) i [właściwości nawigacji](../../../../docs/framework/data/adonet/navigation-property.md) typu podstawowego. Nie można zastąpić właściwości dziedziczonych w typie pochodnym.  
+Entity Data Model (EDM) obsługuje dziedziczenie dla [typów jednostek](entity-type.md). Dziedziczenie w modelu EDM jest podobne do dziedziczenia klas w językach programowania zorientowanego obiektowo. Podobnie jak w przypadku klas w językach zorientowanych obiektowo, w modelu koncepcyjnym można zdefiniować typ jednostki ( *Typ pochodny*), który dziedziczy z innego typu jednostki ( *Typ podstawowy*). Jednak w przeciwieństwie do klas w programowaniu zorientowanym na obiektach, w modelu koncepcyjnym typ pochodny zawsze dziedziczy wszystkie [Właściwości](property.md) i [właściwości nawigacji](navigation-property.md) typu podstawowego. Nie można przesłonić dziedziczonych właściwości w typie pochodnym.  
   
- W modelu koncepcyjnym można tworzyć hierarchie dziedziczenia, w których typ pochodny dziedziczy z innego typu pochodnego. Typ w hierarchii (jeden typ w hierarchii, który nie jest typem pochodnym) jest nazywany *główny typ*. W hierarchii dziedziczenia [klucz jednostki](../../../../docs/framework/data/adonet/entity-key.md) muszą być zdefiniowane w typie katalogu głównego.  
+ W modelu koncepcyjnym można tworzyć hierarchie dziedziczenia, w których typ pochodny dziedziczy z innego typu pochodnego. Typ w górnej części hierarchii (jeden typ w hierarchii, która nie jest typem pochodnym) jest nazywany *typem głównym*. W hierarchii dziedziczenia [klucz jednostki](entity-key.md) musi być zdefiniowany w typie głównym.  
   
- Nie można utworzyć hierarchii dziedziczenia, w których typ pochodny dziedziczy z więcej niż jednego typu. Na przykład w modelu koncepcyjnego z `Book` typu jednostki, można zdefiniować typy pochodne `FictionBook` i `NonFictionBook` , każdy dziedziczyć `Book`. Jednak nie następnie można zdefiniować typ, który dziedziczy z obu `FictionBook` i `NonFictionBook` typów.  
+ Nie można skompilować hierarchii dziedziczenia, w których typ pochodny dziedziczy z więcej niż jednego typu. Na przykład w modelu `Book` koncepcyjnym z typem jednostki można zdefiniować typy `FictionBook` pochodne i `NonFictionBook` każdy z `Book`nich dziedziczy. Nie można jednak zdefiniować typu, który dziedziczy z obu `FictionBook` typów i. `NonFictionBook`  
   
 ## <a name="example"></a>Przykład  
 
-Na poniższym diagramie przedstawiono model koncepcyjny przy użyciu czterech typów jednostek: `Book`, `FictionBook`, `Publisher`, i `Author`. `FictionBook` Typ jednostki jest typ pochodny dziedziczy z `Book` typu jednostki. `FictionBook` Typ dziedziczy `ISBN (Key)`, `Title`, i `Revision` właściwości i definiuje dodatkowe właściwości o nazwie `Genre`.  
+Na poniższym diagramie przedstawiono model koncepcyjny z czterema typami jednostek: `Book`, `FictionBook`, `Publisher`, i `Author`. Typ jednostki jest typem pochodnym, który dziedziczy `Book` z typu jednostki. `FictionBook` `FictionBook` Typ `Genre`dziedziczy właściwości `Title`,, i`Revision` i definiuje dodatkową właściwość o nazwie. `ISBN (Key)`  
   
- ![Diagram pokazujący model koncepcyjny przy użyciu czterech typów jednostek.](./media/entity-data-model-inheritance/entity-type-inheritance.gif)  
+ ![Diagram przedstawiający model koncepcyjny z czterema typami jednostek.](./media/entity-data-model-inheritance/entity-type-inheritance.gif)  
   
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) używa języka specyficznego dla domeny (DSL), o nazwie język definicji schematu koncepcyjnego ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych. Następujące CSDL definiuje typ jednostki, `FictionBook`, która dziedziczy z `Book` typu (tak jak w powyższym diagramie):  
+ [ADO.NET Entity Framework](./ef/index.md) używa języka specyficznego dla domeny (DSL) zwanego językiem definicji schematu koncepcyjnego ([CSDL](./ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych. Poniższy identyfikator CSDL definiuje typ `FictionBook`jednostki, który dziedziczy `Book` z typu (jak na diagramie powyżej):  
   
  [!code-xml[EDM_Example_Model#DerivedType](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books5.edmx#derivedtype)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Kluczowe założenia modelu danych jednostki](entity-data-model-key-concepts.md)
+- [Model danych jednostki](entity-data-model.md)

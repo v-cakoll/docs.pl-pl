@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 219a92c0a105cc43e0c2af7d93868cac12f2e4e4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 390ab4881396bbc01337d087f05b6066153bfed1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778521"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795488"
 ---
-# <a name="assemblyinfo-structure"></a>ASSEMBLY_INFO — Struktura
-Zawiera informacje o zestawie, który jest zarejestrowany w globalnej pamięci podręcznej.  
+# <a name="assembly_info-structure"></a>ASSEMBLY_INFO — Struktura
+Zawiera informacje dotyczące zestawu, który jest zarejestrowany w globalnej pamięci podręcznej zestawów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,20 +42,20 @@ typedef struct _ASSEMBLY_INFO {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`cbAssemblyInfo`|Rozmiar w bajtach, struktury. To pole jest zarezerwowane dla przyszłej rozszerzalności.|  
-|`dwAssemblyFlags`|Flagi wskazujące szczegółowe informacje dotyczące instalacji o zestawie. Obsługiwane są następujące wartości:<br /><br /> -ASSEMBLYINFO_FLAG_INSTALLED wartość, co oznacza, że zestaw jest zainstalowany. Zawsze ustawia dla bieżącej wersji programu .NET Framework `dwAssemblyFlags` tej wartości.<br />-ASSEMBLYINFO_FLAG_PAYLOADRESIDENT wartość, co oznacza, że zestaw jest rezydentnego ładunku. Bieżąca wersja programu .NET Framework nigdy nie ustawia `dwAssemblyFlags` tej wartości.|  
-|`uliAssemblySizeInKB`|Całkowity rozmiar w kilobajtach, plików, które zawiera zestaw.|  
-|`pszCurrentAssemblyPathBuf`|Wskaźnik do buforu ciągu, który zawiera bieżącą ścieżkę do pliku manifestu. Ścieżka musi kończyć się znakiem null.|  
-|`cchBuf`|Liczba znaków dwubajtowych, łącznie z terminatorem null, która `pszCurrentAssemblyPathBuf` zawiera.|  
+|`cbAssemblyInfo`|Rozmiar (w bajtach) struktury. To pole jest zarezerwowane do użytku w przyszłości.|  
+|`dwAssemblyFlags`|Flagi wskazujące szczegóły instalacji zestawu. Obsługiwane są następujące wartości:<br /><br /> -Wartość ASSEMBLYINFO_FLAG_INSTALLED, która wskazuje, że zestaw jest zainstalowany. Bieżąca wersja .NET Framework zawsze jest ustawiana `dwAssemblyFlags` na tę wartość.<br />-Wartość ASSEMBLYINFO_FLAG_PAYLOADRESIDENT, która wskazuje, że zestaw jest rezydentem ładunku. Bieżąca wersja .NET Framework nigdy nie ustawia `dwAssemblyFlags` tej wartości.|  
+|`uliAssemblySizeInKB`|Łączny rozmiar (w kilobajtach) plików, które zawiera zestaw.|  
+|`pszCurrentAssemblyPathBuf`|Wskaźnik do buforu ciągu, który przechowuje bieżącą ścieżkę do pliku manifestu. Ścieżka musi kończyć się znakiem null.|  
+|`cchBuf`|Liczba znaków dwubajtowych, łącznie z terminatorem wartości null `pszCurrentAssemblyPathBuf` , który zawiera.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Fusion.h  
+ **Nagłówki** Fusion. h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Łączenie — struktury](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
-- [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)
+- [Łączenie — struktury](fusion-structures.md)
+- [Global Assembly Cache](../../app-domains/gac.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6df750872e90572b00cdf427461b4a9782c47d63
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 07f9ae01fae5e4badbc13670ee56a2f05e303c0c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968522"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779353"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Środki zaradcze Nowy 64-bitowy kompilator JIT
 Począwszy od .NET Framework 4,6, środowisko uruchomieniowe zawiera nowy, 64-bitowy kompilator JIT dla kompilacji just in Time. Ta zmiana nie ma wpływu na kompilację z 32-bitowym kompilatorem JIT.  
@@ -52,7 +52,7 @@ Począwszy od .NET Framework 4,6, środowisko uruchomieniowe zawiera nowy, 64-bi
 ## <a name="mitigation-of-other-issues"></a>Eliminowanie innych problemów  
  Jeśli wystąpią inne różnice w zachowaniu kodu skompilowanego ze starszym kompilatorem 64-bitowym i nowym 64-bitowym kompilatorem JIT lub między wersjami Debug i Release aplikacji, które są kompilowane przy użyciu nowego, 64-bitowego kompilatora JIT, można wykonać następujące czynności Aby skompilować aplikację ze starszym 64-bitowym kompilatorem JIT:  
   
-- Dla poszczególnych aplikacji można dodać [ \<element useLegacyJit >](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) do pliku konfiguracji aplikacji. Następujące wyłączenie kompilacji z nowym 64-bitowym kompilatorem JIT, a zamiast tego używa starszego, 64-bitowego kompilatora JIT.  
+- Dla poszczególnych aplikacji można dodać [ \<element useLegacyJit >](../configure-apps/file-schema/runtime/uselegacyjit-element.md) do pliku konfiguracji aplikacji. Następujące wyłączenie kompilacji z nowym 64-bitowym kompilatorem JIT, a zamiast tego używa starszego, 64-bitowego kompilatora JIT.  
   
     ```xml  
     <?xml version ="1.0"?>  
@@ -71,5 +71,5 @@ Począwszy od .NET Framework 4,6, środowisko uruchomieniowe zawiera nowy, 64-bi
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zmiany środowiska uruchomieniowego](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
-- [\<useLegacyJit> Element](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)
+- [Zmiany środowiska uruchomieniowego](runtime-changes-in-the-net-framework-4-6.md)
+- [\<useLegacyJit> Element](../configure-apps/file-schema/runtime/uselegacyjit-element.md)

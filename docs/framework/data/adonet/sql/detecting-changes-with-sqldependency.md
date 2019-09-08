@@ -5,40 +5,40 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e6a58316-f005-4477-92e1-45cc2eb8c5b4
-ms.openlocfilehash: 839642c4fea45f4f37c5dc351d71417d46d07093
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3719188064388b00c756dd037d4a475ca6debd13
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877672"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782422"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>Wykrywanie zmian za pomocą elementu SqlDependency
 
-A <xref:System.Data.SqlClient.SqlDependency> obiekt może być skojarzony z <xref:System.Data.SqlClient.SqlCommand> w celu wykrycia, gdy wyniki zapytania różnią się od pierwotnie pobrany. Można także przypisać obiekt delegowany do `OnChange` zdarzenie, które będą uruchamiane, gdy zmienią się wyniki skojarzone polecenia. Musisz skojarzyć <xref:System.Data.SqlClient.SqlDependency> za pomocą polecenia przed wykonaniem polecenia. `HasChanges` Właściwość <xref:System.Data.SqlClient.SqlDependency> można również określić, czy wyniki zapytania uległy zmianie od czasu najpierw pobrania danych.
+Obiekt może być skojarzony z w celu <xref:System.Data.SqlClient.SqlCommand> wykrycia, gdy wyniki zapytania różnią się od pierwotnych pobranych. <xref:System.Data.SqlClient.SqlDependency> Można również przypisać delegata do `OnChange` zdarzenia, które zostanie wywołane po zmianie wyników dla skojarzonego polecenia. Należy skojarzyć <xref:System.Data.SqlClient.SqlDependency> z poleceniem przed wykonaniem polecenia. `HasChanges` Właściwość<xref:System.Data.SqlClient.SqlDependency> może również służyć do określenia, czy wyniki zapytania uległy zmianie od momentu pierwszego pobrania danych.
 
 ## <a name="security-considerations"></a>Zagadnienia dotyczące zabezpieczeń
 
-Zależy od infrastruktury zależności <xref:System.Data.SqlClient.SqlConnection> otwieranego po <xref:System.Data.SqlClient.SqlDependency.Start%2A> jest wywoływana, aby otrzymywać powiadomienia o zmienionych danych bazowych dla podanego polecenia. Możliwości dla klientów zainicjować wywołanie `SqlDependency.Start` jest kontrolowany za pośrednictwem <xref:System.Data.SqlClient.SqlClientPermission> i atrybuty zabezpieczeń dostępu kodu. Aby uzyskać więcej informacji, zobacz [Włączanie kwerenda powiadomienia](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md) i [zabezpieczenia dostępu kodu i ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).
+Infrastruktura zależności opiera się na <xref:System.Data.SqlClient.SqlConnection> otwarciu, gdy <xref:System.Data.SqlClient.SqlDependency.Start%2A> jest wywoływana w celu otrzymywania powiadomień, że dane bazowe zostały zmienione dla danego polecenia. Możliwość inicjowania wywołania `SqlDependency.Start` przez klienta jest kontrolowana za pomocą <xref:System.Data.SqlClient.SqlClientPermission> atrybutów zabezpieczeń dostępu do kodu i. Aby uzyskać więcej informacji, zobacz [Włączanie powiadomień o zapytaniach](enabling-query-notifications.md) i [zabezpieczenia dostępu kodu i ADO.NET](../code-access-security.md).
 
 ### <a name="example"></a>Przykład
 
-Poniższe kroki pokazują, jak zadeklarować zależność, należy wykonać polecenie i otrzymywanie powiadomienia w przypadku zmiany zestawu wyników:
+Poniższe kroki ilustrują sposób deklarowania zależności, wykonywania polecenia i odbierania powiadomienia po zmianie zestawu wyników:
 
 1. Zainicjuj `SqlDependency` połączenie z serwerem.
 
-2. Tworzenie <xref:System.Data.SqlClient.SqlConnection> i <xref:System.Data.SqlClient.SqlCommand> obiektów, aby połączyć się z serwerem i Zdefiniuj instrukcję Transact-SQL.
+2. Utwórz <xref:System.Data.SqlClient.SqlConnection> obiekty <xref:System.Data.SqlClient.SqlCommand> i Połącz się z serwerem i zdefiniuj instrukcję języka Transact-SQL.
 
-3. Utwórz nową `SqlDependency` obiektu lub użyć istniejącego i powiązać `SqlCommand` obiektu. Wewnętrznie, spowoduje to utworzenie <xref:System.Data.Sql.SqlNotificationRequest> obiektu i wiąże go obiekt polecenia zgodnie z potrzebami. To żądanie powiadomienie zawiera wewnętrzny identyfikator, który unikatowo identyfikuje to `SqlDependency` obiektu. Uruchamia również odbiornik klienta, jeśli nie jest już aktywny.
+3. Utwórz nowy `SqlDependency` obiekt lub Użyj istniejącego obiektu i powiąż go `SqlCommand` z obiektem. Wewnętrznie tworzy <xref:System.Data.Sql.SqlNotificationRequest> obiekt i wiąże go z obiektem Command w razie potrzeby. To żądanie powiadomienia zawiera identyfikator wewnętrzny, który jednoznacznie identyfikuje ten `SqlDependency` obiekt. Uruchamia również odbiornik klienta, jeśli nie jest jeszcze aktywny.
 
-4. Subskrybuj program obsługi zdarzeń do `OnChange` zdarzenia `SqlDependency` obiektu.
+4. Zasubskrybuj procedurę obsługi zdarzeń do `OnChange` zdarzenia `SqlDependency` obiektu.
 
-5. Wykonanie polecenia przy użyciu dowolnej z `Execute` metody `SqlCommand` obiektu. Ponieważ polecenie jest powiązany z obiektem powiadomień, serwer rozpoznaje, że muszą być generowane powiadomienia i informacji o kolejki wskaże kolejki zależności.
+5. Wykonaj polecenie przy użyciu dowolnej `Execute` metody `SqlCommand` obiektu. Ponieważ polecenie jest powiązane z obiektem Notification, serwer rozpoznaje, że musi wygenerować powiadomienie, a informacje o kolejce wskazują na kolejkę zależności.
 
-6. Zatrzymaj `SqlDependency` połączenie z serwerem.
+6. `SqlDependency` Zatrzymaj połączenie z serwerem.
 
-Jeśli każdy użytkownik zmieni później danych bazowych, programu Microsoft SQL Server wykryje, że nie jest oczekiwanie na powiadomienie dla tej zmiany i wysyła powiadomienie, które są przetwarzane i przesyłane dalej do klienta za pośrednictwem podstawowych `SqlConnection` utworzony przez wywołanie metody `SqlDependency.Start`. Odbiornik klient otrzymuje komunikat unieważniania. Odbiornik klient następnie klient zlokalizuje skojarzonego `SqlDependency` obiektu i generowane `OnChange` zdarzeń.
+Jeśli dowolny użytkownik zmieni dane bazowe, Microsoft SQL Server wykryje, że istnieje powiadomienie oczekujące na taką zmianę, i opublikuje powiadomienie, które jest przetwarzane i przekazywane do klienta za pomocą programu `SqlConnection` , który został utworzony. przez wywołanie `SqlDependency.Start`metody. Odbiornik klienta odbiera komunikat informujący o unieważnieniu. Odbiornik klienta lokalizuje skojarzony `SqlDependency` obiekt i `OnChange` uruchamia zdarzenie.
 
-Poniższy fragment kodu przedstawia wzorzec projektowania, które są używane do tworzenia przykładowej aplikacji.
+Poniższy fragment kodu przedstawia Wzorzec projektowy, który służy do tworzenia przykładowej aplikacji.
 
 ```vb
 Sub Initialization()
@@ -127,5 +127,5 @@ void Termination()
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Powiadomienia zapytań w programie SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Powiadomienia zapytań w programie SQL Server](query-notifications-in-sql-server.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 91e27206-01fb-4c7a-8afc-1383a6ac5067
-ms.openlocfilehash: ff33196f83e2c0d8d759e4ffc3fb7442e8ba0e3b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2de0182cc0b87768a9cff553b7ec6e77f8ccc7b8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940096"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793777"
 ---
 # <a name="how-to-detect-and-resolve-conflicting-submissions"></a>Instrukcje: Wykrywanie i rozwiązywanie powodujących konflikt przesłań
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]oferuje wiele zasobów do wykrywania i rozwiązywania konfliktów, które pochodzą od zmian wielu użytkowników w bazie danych. Aby uzyskać więcej informacji, zobacz [jak: Zarządzanie konfliktami](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)zmian.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]oferuje wiele zasobów do wykrywania i rozwiązywania konfliktów, które pochodzą od zmian wielu użytkowników w bazie danych. Aby uzyskać więcej informacji, zobacz [jak: Zarządzanie konfliktami](how-to-manage-change-conflicts.md)zmian.  
   
 ## <a name="example"></a>Przykład  
  Poniższy `try` przykład pokazuje / <xref:System.Data.Linq.ChangeConflictException> blok, który przechwytuje wyjątek. `catch` Informacje o jednostkach i elementach członkowskich dla każdego konfliktu są wyświetlane w oknie konsoli.  
@@ -26,5 +26,5 @@ ms.locfileid: "69940096"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Tworzenie i przesyłanie zmian danych](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
-- [Instrukcje: Zarządzanie konfliktami zmian](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Tworzenie i przesyłanie zmian danych](making-and-submitting-data-changes.md)
+- [Instrukcje: Zarządzanie konfliktami zmian](how-to-manage-change-conflicts.md)

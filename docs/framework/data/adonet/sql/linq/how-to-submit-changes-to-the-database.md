@@ -5,37 +5,37 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c7cba174-9d40-491d-b32c-f2d73b7e9eab
-ms.openlocfilehash: 222ce575d9e977cc8b68862385b4a1b147c6394a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c279d4ed32aed4788ee5866a24572663a1e2f580
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902697"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793107"
 ---
 # <a name="how-to-submit-changes-to-the-database"></a>Instrukcje: Przesyłanie zmian do bazy danych
-Niezależnie od tego, ile zmiany wprowadzone do obiektów zmiany są wprowadzane tylko do repliki w pamięci. Rzeczywiste dane w bazie danych wprowadzono żadnych zmian. Zmiany nie są przekazywane do serwera, dopóki nie zostanie jawnie wywołana <xref:System.Data.Linq.DataContext.SubmitChanges%2A> na <xref:System.Data.Linq.DataContext>.  
+Bez względu na liczbę zmian dokonanych w obiektach, zmiany są wprowadzane tylko do replik w pamięci. Nie wprowadzono żadnych zmian w rzeczywistych danych w bazie danych. Zmiany nie są przekazywane do serwera, dopóki nie zostanie jawnie wywołana <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. <xref:System.Data.Linq.DataContext>  
   
- Po wprowadzeniu tego wywołania <xref:System.Data.Linq.DataContext> próbuje tłumaczenie zmiany w środowisku równoważne polecenia SQL. Można użyć własnej logiki niestandardowej do zastąpienia tych akcji, ale kolejność przesyłania jest zarządzane przez usługę <xref:System.Data.Linq.DataContext> znane jako *zmienić procesora*. Kolejność zdarzeń jest następująca:  
+ Po nadaniu tego wywołania <xref:System.Data.Linq.DataContext> próbuje przetłumaczyć zmiany na równoważne polecenia SQL. Możesz użyć własnej logiki niestandardowej, aby przesłonić te działania, ale kolejność przesłania jest zorganizowany przez usługę <xref:System.Data.Linq.DataContext> znanego jako *procesor zmian*. Sekwencja zdarzeń jest następująca:  
   
-1. Gdy wywołujesz <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sprawdza zestawu obiektów znane, aby ustalić, czy nowe wystąpienia zostały dołączone do nich. Jeśli mają one te nowe wystąpienia są dodawane do zestawu obiektów śledzonych.  
+1. Po wywołaniu <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, sprawdza [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zestaw znanych obiektów, aby określić, czy zostały do nich dołączone nowe wystąpienia. Jeśli mają, nowe wystąpienia są dodawane do zestawu śledzonych obiektów.  
   
-2. Wszystkie obiekty, które ma oczekujące zmiany są uporządkowane w sekwencji obiektów na podstawie zależności między nimi. Obiekty, w której zmiany są zależne od innych obiektów są ustawione w kolejności po ich zależności.  
+2. Wszystkie obiekty, które mają oczekujące zmiany są uporządkowane w kolejności obiektów na podstawie zależności między nimi. Obiekty, których zmiany zależą od innych obiektów, są sekwencjonowane po ich zależnościach.  
   
-3. Od razu, przed przesłaniem żadnych rzeczywistych zmian [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] rozpoczyna się transakcja Hermetyzuj serię pojedynczych poleceń.  
+3. Natychmiast przed przesłaniem rzeczywistych zmian program [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uruchamia transakcję w celu hermetyzacji szeregu poszczególnych poleceń.  
   
-4. Zmiany do obiektów są przetłumaczone pojedynczo, aby poleceń SQL i wysyłane do serwera.  
+4. Zmiany w obiektach są tłumaczone pojedynczo do poleceń SQL i wysyłane do serwera.  
   
- W tym momencie wszelkie błędy wykryte przez bazę danych, że proces przesyłania zatrzymać i zgłaszany jest wyjątek. Wszystkie zmiany do bazy danych jest przedstawiana tak, jakby nigdy nie wystąpił brak zgłoszenia. <xref:System.Data.Linq.DataContext> Środki, nieopłacone pełne rejestrowanie wszystkich zmian. W związku z tym można spróbować rozwiązać problem i wywołania <xref:System.Data.Linq.DataContext.SubmitChanges%2A> ponownie, tak jak w poniższym przykładzie kodu.  
+ W tym momencie wszystkie błędy wykryte przez bazę danych powodują zatrzymanie procesu wysyłania i zgłaszany jest wyjątek. Wszystkie zmiany w bazie danych są wycofywane tak, jakby nie miały żadnych przesłanych elementów. <xref:System.Data.Linq.DataContext> Nadal ma pełne nagranie wszystkich zmian. W związku z tym możesz spróbować rozwiązać problem i ponownie <xref:System.Data.Linq.DataContext.SubmitChanges%2A> wywołać, jak w poniższym przykładzie kodu.  
   
 ## <a name="example"></a>Przykład  
- Gdy transakcja wokół przesyłania zakończyło się powodzeniem, <xref:System.Data.Linq.DataContext> akceptuje zmiany do obiektów, ignorując informacji śledzenia zmian.  
+ Po pomyślnym <xref:System.Data.Linq.DataContext> zakończeniu transakcji w celu zaakceptowania zmian w obiektach zostaną one zignorowane.  
   
  [!code-csharp[DLinqSubmittingChanges#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#1)]
  [!code-vb[DLinqSubmittingChanges#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Wykrywanie i rozwiązywanie powodujących konflikt przesłań](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)
-- [Instrukcje: Zarządzanie konfliktami zmian](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
-- [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Tworzenie i przesyłanie zmian danych](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [Instrukcje: Wykrywaj i rozwiązuj sprzeczne zgłoszenia](how-to-detect-and-resolve-conflicting-submissions.md)
+- [Instrukcje: Zarządzanie konfliktami zmian](how-to-manage-change-conflicts.md)
+- [Pobieranie przykładowych baz danych](downloading-sample-databases.md)
+- [Tworzenie i przesyłanie zmian danych](making-and-submitting-data-changes.md)

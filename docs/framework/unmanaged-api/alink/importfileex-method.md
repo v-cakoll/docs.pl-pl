@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fcf714cb0c1c1dd59ae2ec56279870c0bb3e1c4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bd138d0418bb9667a86419d719bf0b95a4bb1b12
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741720"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777112"
 ---
 # <a name="importfileex-method"></a>ImportFileEx — Metoda
-Importy wykazały, zestaw lub moduł niepowiązanej.  
+Importuje wskazany zestaw lub niezwiązany moduł.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,34 +42,34 @@ HRESULT ImportFileEx(
   
 ## <a name="parameters"></a>Parametry  
  `pszFilename`  
- W pełni kwalifikowana nazwa pliku, z którego chcesz zaimportować.  
+ W pełni kwalifikowana nazwa pliku, z którego ma zostać zaimportowana.  
   
  `pszTargetName`  
  Opcjonalna nazwa pliku docelowego.  
   
  `fSmartImport`  
- W przypadku opcji TRUE importtypes — jest używana, w przeciwnym razie importowanie muszą być wykonywane ręcznie.  
+ Jeśli wartość jest równa TRUE, używane są wartości, w przeciwnym razie importowanie należy wykonać ręcznie.  
   
  `dwOpenFlags`  
- Flagi, aby być przekazywane do [openscope — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).  
+ Flagi do przesłania do [metody OpenScope —](../metadata/imetadatadispenser-openscope-method.md).  
   
  `pImportToken`  
- Odbiera identyfikator pliku zostały zaimportowane.  
+ Odbiera identyfikator importowanego pliku.  
   
  `ppAssemblyScope`  
- Odbiera zakresu importu zestawu [imetadataassemblyimport — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interfejsu. Jest ustawiona na wartość NULL, jeśli plik nie jest zestawem.  
+ Odbiera Interfejs [IMetaDataAssemblyImporty](../metadata/imetadataassemblyimport-interface.md) zakresu importu zestawu. Jest ustawiona na wartość NULL, jeśli plik nie jest zestawem.  
   
  `pdwCountOfScopes`  
  Odbiera liczbę zaimportowanych plików i/lub zakresów.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga alink.h.  
+ Wymaga Alink. h.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2, interfejs](ialink2-interface.md)
+- [IALink, interfejs](ialink-interface.md)
+- [ALink, interfejs API](index.md)

@@ -2,19 +2,19 @@
 title: Rozszerzanie koderów i serializatorów
 ms.date: 03/30/2017
 ms.assetid: 97aec970-d73c-469c-9b93-8b86be701c44
-ms.openlocfilehash: 914654c6f3b5ff89529efc271daef40dfd3f092f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f1768f81b8dfb2b6f519199d481a497fe9b4bce8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857951"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797153"
 ---
 # <a name="extending-encoders-and-serializers"></a>Rozszerzanie koderów i serializatorów
-Tematy w tej sekcji opisano, jak rozszerzyć serializacji systemu Windows Communication Foundation (WCF).  
+W tematach w tej sekcji opisano sposób rozszerzający system serializacji Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Surogaty kontraktu danych](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)  
- W tym artykule opisano, jak serializacji, deserializacji, schemat eksportu i importu schematu mogą być dostosowywane przy użyciu klasy zastępcze kontraktu danych.  
+ [Surogaty kontraktu danych](data-contract-surrogates.md)  
+ Opisuje sposób dostosowywania serializacji, deserializacji, eksportu schematu i importowania schematu przy użyciu klasy zastępczej kontraktu danych.  
   
- [Niestandardowe elementy formatujące komunikaty](../../../../docs/framework/wcf/extending/custom-message-formatters.md)  
- W tym artykule opisano niestandardowe elementy formatujące komunikaty, które mogą być używane do kontrolowania serializacji i deserializacji komunikatów WCF na typy CLR.
+ [Niestandardowe elementy formatujące komunikaty](custom-message-formatters.md)  
+ Opisuje niestandardowe elementy formatujące komunikaty, które mogą służyć do kontrolowania serializacji i deserializacji komunikatu WCF do typów CLR.

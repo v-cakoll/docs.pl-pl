@@ -2,22 +2,22 @@
 title: Połączenie kontekstu
 ms.date: 03/30/2017
 ms.assetid: e443ca86-9243-4234-a822-ed10a53a9de0
-ms.openlocfilehash: 83e9f4a9672d2703514c0a86ad8d41b968c255fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26578d0c6a5e4553e57673561f94090b9a1fd1a5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61915229"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791514"
 ---
 # <a name="the-context-connection"></a>Połączenie kontekstu
-Problem dostęp do danych wewnętrznych jest dość typowy scenariusz. Oznacza to, że chcesz uzyskać dostęp do tego samego serwera swoje środowisko uruchomieniowe języka wspólnego (CLR) procedury składowanej lub funkcji jest wykonywany. Jedną z opcji jest utworzyć połączenie przy użyciu <xref:System.Data.SqlClient.SqlConnection>Określ parametry połączenia, który wskazuje na serwerze lokalnym, a Otwórz połączenie. Wymagane jest określenie poświadczeń do zalogowania się. Połączenie jest w sesji innej bazy danych niż procedurę składowaną lub funkcję, mogą mieć różne `SET` opcji, znajduje się w oddzielnej transakcji, nie zobaczą tabel tymczasowych, i tak dalej. Jeśli usługi zarządzanej procedury składowanej lub funkcji kod jest wykonywany w procesie programu SQL Server, jest to, ponieważ ktoś połączona z tym serwerem i instrukcja SQL, aby wywołać go. Prawdopodobnie procedury składowanej lub funkcji, które można wykonać w kontekście tego połączenia, wraz z jego transakcji `SET` opcje i tak dalej. Jest to połączenie kontekstu.  
+Problem z wewnętrznym dostępem do danych jest dość typowym scenariuszem. Oznacza to, że chcesz uzyskać dostęp do tego samego serwera, na którym jest wykonywana procedura składowana środowiska uruchomieniowego języka wspólnego (CLR). Jedną z opcji jest utworzenie połączenia przy użyciu <xref:System.Data.SqlClient.SqlConnection>programu, określenie parametrów połączenia wskazujących na serwer lokalny, a następnie otwarcie połączenia. Wymaga to określenia poświadczeń do logowania. Połączenie znajduje się w innej sesji bazy danych niż procedura składowana lub funkcja, która może mieć różne `SET` opcje, jest w oddzielnym transakcjach, nie widzi tabel tymczasowych i tak dalej. Jeśli zarządzana procedura składowana lub kod funkcji jest wykonywany w procesie SQL Server, jest to spowodowane tym, że ktoś połączony z tym serwerem i wykonał instrukcję SQL, aby ją wywołać. Prawdopodobnie chcesz, aby procedura składowana lub funkcja była wykonywana w kontekście tego połączenia, wraz z jego transakcjami `SET` , opcjami i tak dalej. Jest to nazywane połączeniem kontekstu.  
   
- Połączenie kontekstu umożliwia wykonywanie instrukcji języka Transact-SQL w tym samym kontekście, że kod został wywołany w pierwszej kolejności. Aby uzyskać szczegółowe informacje Zobacz wersję programu SQL Server — książki Online dla wersji programu SQL Server, którego używasz.  
+ Połączenie kontekstu umożliwia wykonywanie instrukcji języka Transact-SQL w tym samym kontekście, w którym kod został wywołany w pierwszym miejscu. Aby uzyskać bardziej szczegółowe informacje, zapoznaj się z wersją usługi SQL Server Books Online dla używanej wersji SQL Server.  
   
- **SQL Server Books Online**  
+ **Książka SQL Server online**  
   
 1. [Połączenie kontekstu](https://go.microsoft.com/fwlink/?LinkId=115395)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

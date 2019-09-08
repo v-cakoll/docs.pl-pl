@@ -2,12 +2,12 @@
 title: Elementy DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: f362e4807bce4fb0e3e8c9ae8cdd6b4704fc28aa
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 8a06accb11631f2dce6b0d39587d7274223c0e68
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203810"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786347"
 ---
 # <a name="dataviews"></a>Elementy DataView
 A <xref:System.Data.DataView> umożliwia tworzenie różnych widoków danych przechowywanych <xref:System.Data.DataTable>w programie, które są często używane w aplikacjach do wiązania danych. Za pomocą elementu **DataView**można uwidocznić dane w tabeli z różnymi kolejności sortowania i można filtrować dane według stanu wiersza lub w oparciu o wyrażenie filtru.  
@@ -16,7 +16,7 @@ A <xref:System.Data.DataView> umożliwia tworzenie różnych widoków danych prz
   
  **Element DataView** udostępnia dynamiczny widok pojedynczego zestawu danych, podobnie jak widok bazy danych, do którego można zastosować różne kryteria sortowania i filtrowania. W przeciwieństwie do widoku bazy danych, jednak **element DataView** nie może być traktowany jako tabela i nie może zawierać widoku sprzężonych tabel. Nie można również wykluczyć kolumn istniejących w tabeli źródłowej ani dodawać kolumn, takich jak kolumny obliczeniowe, które nie istnieją w tabeli źródłowej.  
   
- Aby zarządzać ustawieniami widoku <xref:System.Data.DataView.DataViewManager%2A> dla wszystkich tabel w **zestawie danych**, można użyć elementu. Element DataViewManager zapewnia wygodny sposób zarządzania domyślnymi ustawieniami widoku dla każdej tabeli. W przypadku wiązania kontrolki z więcej niż jedną tabelą **zestawu danych**powiązanie z elementem DataViewManager jest idealnym wyborem.  
+ Aby zarządzać ustawieniami widoku <xref:System.Data.DataView.DataViewManager%2A> dla wszystkich tabel w **zestawie danych**, można użyć elementu. Element **DataViewManager** zapewnia wygodny sposób zarządzania domyślnymi ustawieniami widoku dla każdej tabeli. W przypadku wiązania kontrolki z więcej niż jedną tabelą **zestawu danych**powiązanie z elementem **DataViewManager** jest idealnym wyborem.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Tworzenie elementu DataView](creating-a-dataview.md)  
@@ -41,7 +41,7 @@ A <xref:System.Data.DataView> umożliwia tworzenie różnych widoków danych prz
  Opisuje sposób korzystania z zdarzenia **ListChanged** w celu otrzymywania powiadomień w przypadku aktualizowania zawartości lub kolejności elementu **DataView** .  
   
  [Zarządzanie elementami DataView](managing-dataviews.md)  
- Opisuje, w jaki sposób używać elementu DataViewManager do zarządzania ustawieniami **DataView** dla każdej tabeli w **zestawie danych**.  
+ Opisuje, w jaki sposób używać elementu **DataViewManager** do zarządzania ustawieniami **DataView** dla każdej tabeli w **zestawie danych**.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Aplikacje internetowe ASP.NET](https://docs.microsoft.com/previous-versions/655cec97(v=vs.100))  
@@ -61,4 +61,4 @@ A <xref:System.Data.DataView> umożliwia tworzenie różnych widoków danych prz
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

@@ -8,26 +8,26 @@ helpviewer_keywords:
 ms.assetid: a96bf3cc-75a0-49c9-bf5e-4d7ad5dab716
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16c787d865313f77417093555ea0cedb72aeb042
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4989fd403e78558b415ba29e31e6a3a4e5bbe59
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753663"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787286"
 ---
 # <a name="ialink3-interface"></a>IALink3 — Interfejs
-Udostępnia pojedynczą metodę `SetManifestFile`, co pozwala na określenie lub zresetować plik manifestu, konsolidator użyje podczas tworzenia zestawu.  
+Udostępnia pojedynczą metodę, `SetManifestFile`która umożliwia określenie lub zresetowanie pliku manifestu, który będzie używany przez konsolidator podczas tworzenia zestawu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [SetManifestFile, metoda](../../../../docs/framework/unmanaged-api/alink/setmanifestfile-method.md)  
- Pozwala na określenie lub zresetować plik manifestu, który konsolidator będzie używany podczas tworzenia zestawu.  
+ [SetManifestFile, metoda](setmanifestfile-method.md)  
+ Umożliwia określenie lub zresetowanie pliku manifestu, który będzie używany przez konsolidator podczas tworzenia zestawu.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)  
- Obsługuje tworzenie niepowiązanej modułów i zestawów .NET Framework.  
+ [ALink, interfejs API](index.md)  
+ Obsługuje tworzenie zestawów .NET Framework i niezwiązanych modułów.  
   
- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- Pomaga przy tworzeniu zestawów .NET Framework.  
+ [IALink, interfejs](ialink-interface.md)  
+ Pomaga w konstruowaniu zestawów .NET Framework.  
   
- [Al.exe (konsolidator zestawów)](../../../../docs/framework/tools/al-exe-assembly-linker.md)  
- Generuje plik zestawu manifestu z co najmniej jeden plik, który jest modułem lub plikiem zasobów.
+ [Al.exe (konsolidator zestawów)](../../tools/al-exe-assembly-linker.md)  
+ Generuje plik z manifestem zestawu z co najmniej jednego pliku, który jest modułem lub plikami zasobów.

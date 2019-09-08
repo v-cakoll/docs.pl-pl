@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6dc2792b572aae30e9989c81967b86f340d7b83
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: d72b0da43971a74a08a249b19dfc0d446eeb5e6a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038260"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798543"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle, funkcja
 
@@ -79,7 +79,7 @@ Dojścia można pobrać dla właściwości wszystkich typów danych innych niż 
 
 ## <a name="requirements"></a>Wymagania
 
-**Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
 **Nagłówki** WMINet_Utils.idl
 

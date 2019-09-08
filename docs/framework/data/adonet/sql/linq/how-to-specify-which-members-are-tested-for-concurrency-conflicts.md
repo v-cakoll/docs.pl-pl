@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d2cda293-1e2f-4878-af0e-5aaf0d092120
-ms.openlocfilehash: fc6fafa474805c2644bb2deabdceed192776ac76
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: de7109e0fed0eb7c1975ad7360a7588ef9b294ef
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938751"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793141"
 ---
 # <a name="how-to-specify-which-members-are-tested-for-concurrency-conflicts"></a>Instrukcje: Określanie, które elementy członkowskie są sprawdzane pod kątem konfliktów współbieżności
 Zastosuj jeden z trzech typów wyliczeniowych [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] do <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> właściwości <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu, aby określić, które składowe mają być uwzględnione w testach aktualizacji w celu wykrywania optymistycznych konfliktów współbieżności.  
   
- Właściwość (zamapowana w czasie projektowania) jest używana razem z funkcjami współbieżności w czasie wykonywania [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]w systemie. <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> Aby uzyskać więcej informacji, [Zobacz optymistyczne współbieżność: Przegląd](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
+ Właściwość (zamapowana w czasie projektowania) jest używana razem z funkcjami współbieżności w czasie wykonywania [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]w systemie. <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> Aby uzyskać więcej informacji, [Zobacz optymistyczne współbieżność: Przegląd](optimistic-concurrency-overview.md).  
   
 > [!NOTE]
 > Pierwotne wartości elementów członkowskich są porównywane z bieżącym stanem bazy danych, o ile nie `IsVersion=true`wyznaczono żadnego elementu członkowskiego. Aby uzyskać więcej informacji, zobacz <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>.  
@@ -48,5 +48,5 @@ Zastosuj jeden z trzech typów wyliczeniowych [!INCLUDE[vbtecdlinq](../../../../
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Zarządzanie konfliktami zmian](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
-- [Tworzenie i przesyłanie zmian danych](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [Instrukcje: Zarządzanie konfliktami zmian](how-to-manage-change-conflicts.md)
+- [Tworzenie i przesyłanie zmian danych](making-and-submitting-data-changes.md)

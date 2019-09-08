@@ -1,31 +1,31 @@
 ---
-title: 'Środki zaradcze: Renderowanie okien WPF'
+title: Środki zaradcze Renderowanie okna WPF
 ms.date: 03/30/2017
 ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecf951ecb955a6597757387de1119267ebc58fdc
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 13091c06561da24d2fc03f810fd8b8687b21d9a4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301452"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70789791"
 ---
-# <a name="mitigation-wpf-window-rendering"></a>Środki zaradcze: Renderowanie okien WPF
+# <a name="mitigation-wpf-window-rendering"></a>Środki zaradcze Renderowanie okna WPF
 
-W .NET Framework 4.6 jest uruchomiona w systemie Windows 8 lub nowszym, całe okno jest renderowany bez przycinania, gdy wykraczał poza jednym wyświetlana w przypadku wielu monitorów.
+W .NET Framework 4,6 działający w systemie Windows 8 i nowszych całe okno jest renderowane bez przycinania, gdy rozciąga się poza pojedynczym ekranem w scenariuszu z obsługą kilku monitorów.
 
 ## <a name="impact"></a>Wpływ
 
-Ogólnie rzecz biorąc renderowanie całe okno na wiele monitorów bez przycinania to oczekiwane zachowanie. Jednak na Windows 7 i starszych wersjach, WPF, windows powoduje ich rozszerzania poza pojedynczy ekran, ponieważ renderowanie części okna na drugim monitorze ma wpływ na wydajność znaczące.
+Ogólnie rzecz biorąc, renderowanie całego okna na wielu monitorach bez wycinków jest oczekiwane zachowanie. Jednak w systemie Windows 7 i starszych wersjach Okna WPF są przycinane po przekroczeniu jednego ekranu, ponieważ renderowanie części okna na drugim monitorze ma znaczny wpływ na wydajność.
 
-Dokładne wpływ renderowanie okien WPF na monitorów w systemie Windows 8 lub nowszym nie jest dokładnie wymierne, ponieważ zależy od wielu czynników. W niektórych przypadkach go może dać nadal niekorzystny wpływ na wydajność, szczególnie w przypadku użytkowników, którzy uruchamiania aplikacji intensywnie korzystających z grafiki i czy masz system windows międzystrefowymi monitorów. W innych przypadkach może po prostu chcesz spójne zachowanie różnych wersji programu .NET Framework.
+Dokładny wpływ renderowania systemu Windows WPF na monitory w systemie Windows 8 i nowszych nie jest precyzyjnie wymierny, ponieważ zależy on od dużej liczby czynników. W niektórych przypadkach może to spowodować niepożądane wpływ na wydajność, szczególnie w przypadku użytkowników, którzy uruchamiają aplikacje intensywnie korzystające z grafiki i mają monitory międzystrefowe systemu Windows. W innych przypadkach można po prostu chcieć mieć spójne zachowanie w wersjach .NET Framework.
 
 ## <a name="mitigation"></a>Ograniczenie
 
-Można wyłączyć tej zmiany i powrócić do poprzedniego zachowania przycinania okna WPF, gdy wykraczał poza pojedynczy ekran. Istnieją dwa sposoby wykonania tej czynności:
+Tę zmianę można wyłączyć i przywrócić poprzednie zachowanie przycinania okna WPF, gdy wykracza poza pojedynczy ekran. Istnieją dwa sposoby wykonania tej czynności:
 
-- Dodając `<EnableMultiMonitorDisplayClipping>` elementu `<appSettings>` sekcję pliku konfiguracji aplikacji można wyłączyć lub włączyć to zachowanie w aplikacje działające w systemie Windows 8 lub nowszym. Na przykład w poniższej sekcji konfiguracji wyłącza renderowanie, bez przycinania:
+- Dodając `<EnableMultiMonitorDisplayClipping>` element `<appSettings>` do sekcji pliku konfiguracyjnego aplikacji, możesz wyłączyć lub włączyć to zachowanie w aplikacjach uruchomionych w systemie Windows 8 lub nowszym. Na przykład następująca sekcja konfiguracyjna wyłącza renderowanie bez przycinania:
 
   ```xml
   <appSettings>
@@ -33,14 +33,14 @@ Można wyłączyć tej zmiany i powrócić do poprzedniego zachowania przycinani
     </appSettings>
   ```
 
-  `<EnableMultiMonitorDisplayClipping>` Ustawienie konfiguracji może mieć jedną z dwóch wartości:
+  Ustawienie `<EnableMultiMonitorDisplayClipping>` konfiguracji może mieć jedną z dwóch wartości:
 
-  - `true`, aby umożliwić wycinka monitorowania granic podczas renderowania w systemie windows.
+  - `true`, aby włączyć przycinanie systemu Windows do monitorowania granic podczas renderowania.
 
-  - `false`, aby wyłączyć obcinanie do systemu windows do monitorowania granic podczas renderowania.
+  - `false`, aby wyłączyć przycinanie okien do monitorowania granic podczas renderowania.
 
-- Ustawiając <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> właściwości `true` przy uruchamianiu aplikacji.
+- Ustawiając <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> właściwość na `true` wartość przy uruchamianiu aplikacji.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Zmiany środowiska uruchomieniowego](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+- [Zmiany środowiska uruchomieniowego](runtime-changes-in-the-net-framework-4-6.md)

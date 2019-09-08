@@ -1,6 +1,6 @@
 ---
-title: Funkcja PutInstanceWmi (niezarządzany wykaz interfejsów API)
-description: Funkcja PutInstanceWmi tworzy lub aktualizuje wystąpienia istniejącej klasy.
+title: PutInstanceWmi — funkcja (niezarządzana dokumentacja interfejsu API)
+description: Funkcja PutInstanceWmi tworzy lub aktualizuje wystąpienie istniejącej klasy.
 ms.date: 11/06/2017
 api_name:
 - PutInstanceWmi
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9774656d010a3e52dd2392094ba6b529a573f3e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 37810ecab2e02d4ec250dd2a4b2657c3b898f714
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636571"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798375"
 ---
-# <a name="putinstancewmi-function"></a>PutInstanceWmi — funkcja
+# <a name="putinstancewmi-function"></a>PutInstanceWmi, funkcja
 
-Tworzy lub aktualizuje wystąpienia istniejącej klasy. Wystąpienie jest zapisywany do repozytorium WMI.
+Tworzy lub aktualizuje wystąpienie istniejącej klasy. Wystąpienie jest zapisywane w repozytorium WMI.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -43,67 +43,67 @@ HRESULT PutInstanceWmi (
 ## <a name="parameters"></a>Parametry
 
 `pInst`\
-[in] Wskaźnik do wystąpienia, które ma zostać zapisany.
+podczas Wskaźnik do wystąpienia do zapisania.
 
 `lFlags`\
-[in] Kombinacja flag, które mają wpływ na zachowanie tej funkcji. Następujące wartości są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
+podczas Kombinacja flag mających wpływ na zachowanie tej funkcji. Poniższe wartości są zdefiniowane w pliku nagłówkowym *WbemCli. h* lub można je definiować jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Jeśli ustawiona, usługi WMI nie przechowuje żadnych kwalifikatorów z **zmieniony** wersja. <br> W przeciwnym razie zestawu, zakłada się, że ten obiekt nie jest zlokalizowana, a wszystkie kwalifikatory są przechowywane z tym wystąpieniem. |
-| `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Utwórz wystąpienie, jeśli on nie istnieje, lub go zastąpić, jeśli już istnieje. |
-| `WBEM_FLAG_UPDATE_ONLY` | 1 | Aktualizuj wystąpienia. Wystąpienie musi istnieć przez wywołanie zakończy się powodzeniem. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Jeśli ta wartość jest ustawiona, usługa WMI nie przechowuje żadnych kwalifikatorów z **zmienionym** elementem. <br> Jeśli nie zostanie ustawiona, zakłada się, że ten obiekt nie jest zlokalizowany i wszystkie kwalifikatory są przechowywane z tym wystąpieniem. |
+| `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Utwórz wystąpienie, jeśli nie istnieje, lub zastąp je, jeśli już istnieje. |
+| `WBEM_FLAG_UPDATE_ONLY` | 1 | Zaktualizuj wystąpienie. Wystąpienie musi istnieć, aby wywołanie zakończyło się pomyślnie. |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | Utwórz wystąpienie. Wywołanie zakończy się niepowodzeniem, jeśli wystąpienie już istnieje. |
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Flaga powoduje, że wywołanie półsynchronicznej. |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Flaga powoduje wywołanie półsynchronicznej. |
 
 `pCtx`\
-[in] Ta wartość jest zazwyczaj `null`. W przeciwnym razie jest wskaźnikiem do [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) wystąpienie, które mogą być używane przez dostawcę, który dostarcza żądanej klasy.
+podczas Zazwyczaj ta wartość to `null`. W przeciwnym razie jest wskaźnikiem do wystąpienia [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) , które może być używane przez dostawcę dostarczającego żądane klasy.
 
 `ppCallResult`\
-[out] Jeśli `null`, ten parametr jest nieużywana. Jeśli `lFlags` zawiera `WBEM_FLAG_RETURN_IMMEDIATELY`, funkcja zwraca natychmiast za pomocą `WBEM_S_NO_ERROR`. `ppCallResult` Parametru otrzymuje wskaźnik do nowego [IWbemCallResult](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcallresult) obiektu.
+określoną Jeśli `null`ten parametr jest nieużywany. Jeśli `lFlags` `WBEM_S_NO_ERROR`zawiera `WBEM_FLAG_RETURN_IMMEDIATELY`, funkcja zwraca natychmiast z. Parametr otrzymuje wskaźnik do nowego obiektu IWbemCallResult. [](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcallresult) `ppCallResult`
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
+Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nagłówkowym *WbemCli. h* lub można je definiować jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
-| `WBEM_E_ACCESS_DENIED` | 0x80041003 | Użytkownik nie ma uprawnień do aktualizowania wystąpienie określonej klasy. |
+| `WBEM_E_ACCESS_DENIED` | 0x80041003 | Użytkownik nie ma uprawnienia do aktualizowania wystąpienia określonej klasy. |
 | `WBEM_E_FAILED` | 0x80041001 | Wystąpił nieokreślony błąd. |
-| `WBEM_E_INVALID_CLASS` | 0x80041010 | Klasy obsługi tego wystąpienia jest nieprawidłowy. |
-| `WBEM_E_ILLEGAL_NULL` | 0x80041028 | `null` została określona dla właściwości, która nie może być `null`, taki, który jest oznaczony za **indeksowany** lub **Not_Null** kwalifikator. |
-| `WBEM_E_INVALID_OBJECT` | 0x8004100f | Określone wystąpienie jest nieprawidłowy. (Na przykład, wywołanie `PutInstanceWmi` za pomocą klasy zwraca tę wartość.) |
+| `WBEM_E_INVALID_CLASS` | 0x80041010 | Klasa obsługująca to wystąpienie jest nieprawidłowa. |
+| `WBEM_E_ILLEGAL_NULL` | 0x80041028 | określono dla właściwości, która nie może być `null`taka, jak taka, która jest oznaczona przez kwalifikator **Indexed** lub **NOT_NULL** . `null` |
+| `WBEM_E_INVALID_OBJECT` | 0x8004100f | Określone wystąpienie jest nieprawidłowe. (Na przykład wywoływanie `PutInstanceWmi` z klasą zwraca tę wartość). |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr jest nieprawidłowy. |
-| `WBEM_E_ALREADY_EXISTS` | 0x80041019 | `WBEM_FLAG_CREATE_ONLY` Określono flagę, ale wystąpienie już istnieje. |
-| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` został określony w `lFlags`, ale wystąpienie nie istnieje. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nie ma wystarczającej ilości pamięci jest dostępny do ukończenia tej operacji. |
-| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI został prawdopodobnie zatrzymane i ponowne uruchamianie. Wywołaj [ConnectServerWmi](connectserverwmi.md) ponownie. |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Procedury zdalnej łącza wywołania (procedur RPC) między bieżącym procesem a usługą WMI nie powiodło się. |
+| `WBEM_E_ALREADY_EXISTS` | 0x80041019 | Określono `WBEM_FLAG_CREATE_ONLY` flagę, ale wystąpienie już istnieje. |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY`określono w `lFlags`, ale wystąpienie nie istnieje. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało dostępnej pamięci, aby ukończyć tę operację. |
+| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | Usługa WMI prawdopodobnie została zatrzymana i ponownie uruchomiona. Ponownie wywołaj [ConnectServerWmi](connectserverwmi.md) . |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Łącze zdalnego wywołania procedury (RPC) między bieżącym procesem a usługą WMI nie powiodło się. |
 | `WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie. |
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja zawija wywołanie do [IWbemServices::PutInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-putinstance) metody.
+Ta funkcja otacza wywołanie metody [IWbemServices::P utinstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-putinstance) .
 
-`PutInstanceWmi` Obsługuje tworzenie wystąpień i aktualizowanie wystąpień istniejące klasy tylko funkcji.  W zależności od sposobu `pCtx` zestaw parametrów, niektórych lub wszystkich właściwości wystąpienia są aktualizowane.
+`PutInstanceWmi` Funkcja obsługuje tworzenie wystąpień i aktualizowanie wystąpień istniejących klas.  W zależności od sposobu `pCtx` ustawienia parametru, niektóre lub wszystkie właściwości wystąpienia są aktualizowane.
 
-Gdy wystąpienie wskazywany przez `pInst` należy do podklasy, Windows Management wywołania odpowiedzialny za klasy, z których pochodzi podklasy dostawców. Wszystkie z tych dostawców musi zakończyć się dla oryginalnej `PutInstanceWmi` żądanie zakończyło się sukcesem. Najpierw nosi nazwę dostawcy, obsługujące klasie najwyższego poziomu w hierarchii. Kolejności wywoływania będzie kontynuowane z użyciem podklasę klasy najwyższego poziomu i rozpoczynające się od góry do dołu dopóki nie osiągnie zarządzania Windows dostawca dla klasy będącej właścicielem wystąpienia wskazywany przez `pInst`.
-Windows Management nie wywołuje dostawców dla każdego wystąpienia klasy podrzędne.
+Gdy wystąpienie wskazywane przez `pInst` należy do podklasy, zarządzanie systemem Windows wywołuje wszystkich dostawców odpowiedzialnych za klasy, z których dziedziczy Klasa. Aby oryginalne `PutInstanceWmi` żądanie powiodło się, wszyscy dostawcy muszą pomyślnie wykonać te działania. Dostawca obsługujący klasę najwyższego poziomu w hierarchii jest nazywany pierwszym. Kolejność wywoływania jest kontynuowana z podklasą klasy najwyższej i przechodzi z góry do dołu, dopóki zarządzanie systemem Windows osiągnie dostawcę dla klasy będącej właścicielem wystąpienia wskazywanym przez `pInst`.
+Zarządzanie systemem Windows nie wywołuje dostawców dla żadnej z klas podrzędnych wystąpienia.
 
-Jeśli aplikacja musi zaktualizować wystąpienie, które należy do hierarchii klas, `pInst` parametru musi wskazywać na wystąpienie zawierającego właściwości, które mają być modyfikowane. Oznacza to, należy wziąć pod uwagę wystąpienie docelowe, który należy do **ClassB**. **ClassB** wystąpienia jest pochodną **ClassA**, i **ClassA** nie definiuje właściwości **PropA**. Jeśli aplikacja chce, aby wprowadzić zmiany do wartości **PropA** w **ClassB** wystąpienia, należy ustawić `pInst` tego wystąpienia, a nie wystąpieniem **ClassA** .
+Gdy aplikacja musi zaktualizować wystąpienie należące do hierarchii klas, `pInst` parametr musi wskazywać na wystąpienie zawierające właściwości do zmodyfikowania. Oznacza to, że należy rozważyć wystąpienie docelowe, które należy do **ClassB**. Wystąpienie **ClassB** dziedziczy z **ClassA**, a **ClassA** definiuje Właściwość **propa**. Jeśli aplikacja chce wprowadzić zmiany do wartości **propa** w wystąpieniu **ClassB** , musi ustawić `pInst` to wystąpienie, a nie wystąpienie elementu **ClassA**.
 
-Wywoływanie `PutInstanceWmi` nie jest dozwolona w wystąpieniu klasy abstrakcyjnej.
+Wywoływanie `PutInstanceWmi` wystąpienia klasy abstrakcyjnej jest niedozwolone.
 
-Jeśli wywołanie funkcji zakończy się niepowodzeniem, można uzyskać dodatkowe informacje o błędzie, wywołując [geterrorinfo —](geterrorinfo.md) funkcji.
+Jeśli wywołanie funkcji nie powiedzie się, można uzyskać dodatkowe informacje o błędzie, wywołując funkcję [GetErrorInfo](geterrorinfo.md) .
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
-**Nagłówek:** WMINet_Utils.idl
+**Nagłówki** WMINet_Utils.idl
 
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)
+- [WMI i liczniki wydajności (niezarządzana dokumentacja interfejsu API)](index.md)

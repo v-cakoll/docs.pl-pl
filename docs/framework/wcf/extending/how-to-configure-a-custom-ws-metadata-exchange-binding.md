@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 51681e258e6a21b3a7ae604d1c0ef65d320bfb4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3582ba3c434bb763889faebcc27407f67af7b1e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991227"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795655"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Instrukcje: konfigurowanie niestandardowego wiązania WS-Metadata Exchange
-W tym temacie wyjaśniono, jak skonfigurować niestandardowe protokołu WS-Metadata exchange powiązania. Windows Communication Foundation (WCF) zawiera cztery powiązania metadane zdefiniowane przez system, ale można opublikować za pomocą dowolnego powiązania, który ma metadanych. W tym temacie opisano, jak można opublikować za pomocą metadanych `wsHttpBinding`. To powiązanie zapewnia możliwość ujawnienia metadanych w bezpieczny sposób. Kod ten artykuł jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+W tym temacie opisano sposób konfigurowania niestandardowego powiązania usługi WS-Metadata Exchange. Windows Communication Foundation (WCF) obejmuje cztery zdefiniowane przez system powiązania metadanych, ale można opublikować metadane przy użyciu dowolnego powiązania. W `wsHttpBinding`tym temacie przedstawiono sposób publikowania metadanych przy użyciu. To powiązanie umożliwia bezpieczne udostępnianie metadanych. Kod w tym artykule jest oparty na [wprowadzenie](../samples/getting-started-sample.md).  
   
 ### <a name="using-a-configuration-file"></a>Korzystanie z pliku konfiguracji  
   
-1. W pliku konfiguracji usługi, należy dodać zachowanie usługi, który zawiera `serviceMetadata` tag:  
+1. W pliku konfiguracji usługi Dodaj zachowanie usługi, które zawiera `serviceMetadata` Tag:  
   
     ```xml  
     <behaviors>  
@@ -29,14 +29,14 @@ W tym temacie wyjaśniono, jak skonfigurować niestandardowe protokołu WS-Metad
     </behaviors>  
     ```  
   
-2. Dodaj `behaviorConfiguration` atrybut do tagu usługi, która odwołuje się to nowe zachowanie:  
+2. `behaviorConfiguration` Dodaj atrybut do tagu usługi, który odwołuje się do tego nowego zachowania:  
   
     ```xml  
     <service        name="Microsoft.ServiceModel.Samples.CalculatorService"  
     behaviorConfiguration="CalculatorServiceBehavior">   
     ```  
   
-3. Dodawanie punktu końcowego metadanych, określając mex jako adres, `wsHttpBinding` używanego w powiązaniu i <xref:System.ServiceModel.Description.IMetadataExchange> jako umowy:  
+3. Dodaj punkt końcowy metadanych określający MEX jako adres, `wsHttpBinding` jako powiązanie i <xref:System.ServiceModel.Description.IMetadataExchange> jako kontrakt:  
   
     ```xml  
     <endpoint address="mex"  
@@ -44,7 +44,7 @@ W tym temacie wyjaśniono, jak skonfigurować niestandardowe protokołu WS-Metad
               contract="IMetadataExchange" />  
     ```  
   
-4. Aby sprawdzić, czy punkt końcowy wymiany metadanych jest pracy poprawnie dodać tag punktu końcowego w pliku konfiguracji klienta:  
+4. Aby sprawdzić, czy punkt końcowy wymiany metadanych działa prawidłowo, Dodaj tag punktu końcowego w pliku konfiguracji klienta:  
   
     ```xml  
     <endpoint name="MyMexEndpoint"               address="http://localhost:8000/servicemodelsamples/service/mex"  
@@ -52,7 +52,7 @@ W tym temacie wyjaśniono, jak skonfigurować niestandardowe protokołu WS-Metad
               contract="IMetadataExchange"/>  
     ```  
   
-5. W metodzie Main() klienta, Utwórz nową <xref:System.ServiceModel.Description.MetadataExchangeClient> wystąpienia, ustaw jego <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> właściwości `true`, wywołaj <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> i następnie iterację kolekcji metadanych zwróconych:  
+5. W głównej <xref:System.ServiceModel.Description.MetadataExchangeClient> metodzie klienta Utwórz nowe wystąpienie, ustaw jego <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> właściwość na `true`, wywołaj <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> , a następnie wykonaj iterację w kolekcji zwróconych metadanych:  
   
     ```  
     string mexAddress = "http://localhost:8000/servicemodelsamples/service/mex";  
@@ -64,15 +64,15 @@ W tym temacie wyjaśniono, jak skonfigurować niestandardowe protokołu WS-Metad
     Console.WriteLine("Metadata section: " + section.Dialect.ToString());  
     ```  
   
-### <a name="configuring-by-code"></a>Skonfigurować przy użyciu kodu  
+### <a name="configuring-by-code"></a>Konfigurowanie przez kod  
   
-1. Utwórz <xref:System.ServiceModel.WSHttpBinding> wystąpienie obiektu binding:  
+1. Utwórz wystąpienie <xref:System.ServiceModel.WSHttpBinding> powiązania:  
   
     ```  
     WSHttpBinding binding = new WSHttpBinding();  
     ```  
   
-2. Utwórz <xref:System.ServiceModel.ServiceHost> wystąpienie:  
+2. <xref:System.ServiceModel.ServiceHost> Utwórz wystąpienie:  
   
     ```  
     ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress);  
@@ -93,7 +93,7 @@ W tym temacie wyjaśniono, jak skonfigurować niestandardowe protokołu WS-Metad
     serviceHost.AddServiceEndpoint(typeof(IMetadataExchange), binding, mexAddress);  
     ```  
   
-5. Aby sprawdzić, czy punkt końcowy wymiany metadanych działa poprawnie, należy dodać tag punktu końcowego w pliku konfiguracji klienta:  
+5. Aby sprawdzić, czy punkt końcowy wymiany metadanych działa prawidłowo, Dodaj tag punktu końcowego w pliku konfiguracji klienta:  
   
     ```xml  
     <endpoint name="MyMexEndpoint"               address="http://localhost:8000/servicemodelsamples/service/mex"  
@@ -101,7 +101,7 @@ W tym temacie wyjaśniono, jak skonfigurować niestandardowe protokołu WS-Metad
               contract="IMetadataExchange"/>  
     ```  
   
-6. W metodzie Main() klienta, Utwórz nową <xref:System.ServiceModel.Description.MetadataExchangeClient> wystąpienia, należy ustawić <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> właściwości `true`, wywołaj <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> i następnie iterację kolekcji metadanych zwróconych:  
+6. W <xref:System.ServiceModel.Description.MetadataExchangeClient> głównej metodzie klienta Utwórz nowe wystąpienie, <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> ustaw właściwość na `true`, wywołaj <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> , a następnie wykonaj iterację w kolekcji zwróconych metadanych:  
   
     ```  
     string mexAddress = "http://localhost:8000/servicemodelsamples/service/mex";  
@@ -115,8 +115,8 @@ W tym temacie wyjaśniono, jak skonfigurować niestandardowe protokołu WS-Metad
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zachowanie publikowania metadanych](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
-- [Pobieranie metadanych](../../../../docs/framework/wcf/samples/retrieve-metadata.md)
-- [Metadane](../../../../docs/framework/wcf/feature-details/metadata.md)
-- [Publikowanie metadanych](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)
-- [Publikowanie punktów końcowych metadanych](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)
+- [Zachowanie publikowania metadanych](../samples/metadata-publishing-behavior.md)
+- [Pobieranie metadanych](../samples/retrieve-metadata.md)
+- [Metadane](../feature-details/metadata.md)
+- [Publikowanie metadanych](../feature-details/publishing-metadata.md)
+- [Publikowanie punktów końcowych metadanych](../publishing-metadata-endpoints.md)

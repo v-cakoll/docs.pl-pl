@@ -2,20 +2,20 @@
 title: Wdrażanie usług
 ms.date: 03/30/2017
 ms.assetid: ac361bfb-017d-4da9-a2d7-fc0fb72d65bb
-ms.openlocfilehash: 2c3cd17b597fafcd02b9155089bc583fafbc9dea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 684b781c568518cfb321d8021e4f7062e855e6aa
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784985"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798141"
 ---
 # <a name="deploying-services"></a>Wdrażanie usług
-W tym temacie opisano, jak wdrożyć aplikację Windows Communication Foundation (WCF) do środowiska wykonawczego.  
+W tym temacie opisano sposób wdrażania aplikacji Windows Communication Foundation (WCF) w środowisku wykonawczym.  
   
-## <a name="choosing-the-hosting-environment-for-your-application"></a>Wybierając Środowisko hostingu aplikacji  
- Usługi WCF są przeznaczone do uruchamiania w każdym procesie Windows obsługuje kodu zarządzanego. Stanie się aktywna, usługa musi być hostowany w środowisku uruchomieniowym, tworzy go, która określa jego kontekstu i okresu istnienia. Opcje z zakresu od działa wewnątrz najprostszej aplikacji konsoli w środowiskach serwera, takich jak usługa Windows Internet Information Services (IIS) lub w ramach procesu roboczego obsługującego zarządzanych przez Windows Activation Service (WAS). Aby zapoznać się z różnych opcji obsługi aplikacji WCF, zobacz [usług obsługującego](../../../../docs/framework/wcf/hosting-services.md).  
+## <a name="choosing-the-hosting-environment-for-your-application"></a>Wybieranie środowiska hostingu dla aplikacji  
+ Usługi WCF są przeznaczone do uruchamiania w dowolnym procesie systemu Windows, który obsługuje kod zarządzany. Aby stał się aktywny, usługa musi być hostowana w środowisku uruchomieniowym, które tworzy go i kontroluje jego kontekst i okres istnienia. Zakres opcji hostingu od uruchamiania wewnątrz najprostszej aplikacji konsolowej do środowisk serwerowych, takich jak usługa systemu Windows, Internet Information Services (IIS) lub w ramach procesu roboczego zarządzanego przez usługę aktywacji systemu Windows (WAS). Aby zapoznać się z różnymi opcjami hostingu dla aplikacji WCF, zobacz [usługi hostingu](../hosting-services.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md)
-- [Usługi hostingowe](../../../../docs/framework/wcf/hosting-services.md)
+- [Hosting](../feature-details/hosting.md)
+- [Usługi hostingowe](../hosting-services.md)

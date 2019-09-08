@@ -2,12 +2,12 @@
 title: Przegląd przepływu komunikatu
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: cee579f272700ca37228bacecdf387d03637610a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0bfbd1523f1d5db4a94cf3af03a03779af14655d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963058"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795962"
 ---
 # <a name="message-flow-overview"></a>Przegląd przepływu komunikatu
 W systemie rozproszonym zawierającym połączone usługi należy określić związek przyczyn między usługami. Ważne jest, aby zrozumieć różne składniki, które były częścią przepływu żądania, aby zapewnić obsługę krytycznych scenariuszy, takich jak monitorowanie kondycji, rozwiązywanie problemów i analiza głównych przyczyn. Aby umożliwić korelację śladów między różnymi usługami, w .NET Framework 4 dodaliśmy obsługę za pomocą następujących funkcji:
@@ -18,7 +18,7 @@ W systemie rozproszonym zawierającym połączone usługi należy określić zwi
 
 - Śledzenie ETW dla WF: Ta funkcja używa rekordów śledzenia wygenerowanych przez usługi WF w celu zapewnienia wglądu w bieżący stan i postęp przepływu pracy.
 
- Błędy zarejestrowane w rekordzie śledzenia lub śledzenia mogą służyć do znajdowania wad kodu lub niepoprawnie sformułowanych komunikatów. Właściwość ActivityId węzła korelacji w nagłówku komunikatu zdarzenia może służyć do określenia działania powodującego błąd. Aby włączyć śledzenie przepływu komunikatów według identyfikatora działania, zobacz [Konfigurowanie śledzenia przepływu komunikatów](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md). W tym temacie przedstawiono sposób włączania śledzenia przepływu komunikatów w projekcie utworzonym w samouczku Wprowadzenie.
+ Błędy zarejestrowane w rekordzie śledzenia lub śledzenia mogą służyć do znajdowania wad kodu lub niepoprawnie sformułowanych komunikatów. Właściwość ActivityId węzła korelacji w nagłówku komunikatu zdarzenia może służyć do określenia działania powodującego błąd. Aby włączyć śledzenie przepływu komunikatów według identyfikatora działania, zobacz [Konfigurowanie śledzenia przepływu komunikatów](./etw/configuring-message-flow-tracing.md). W tym temacie przedstawiono sposób włączania śledzenia przepływu komunikatów w projekcie utworzonym w samouczku Wprowadzenie.
 
 ### <a name="to-enable-message-flow-tracing-in-the-getting-started-tutorial"></a>Aby włączyć śledzenie przepływu komunikatów w samouczku Wprowadzenie
 
@@ -26,7 +26,7 @@ W systemie rozproszonym zawierającym połączone usługi należy określić zwi
 
 2. Jeśli nie włączono śledzenia analitycznego, rozwiń węzeł **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, **serwer aplikacji-aplikacje**. Wybierz **Widok**, **Pokaż dzienniki analityczne i debugowania**. Kliknij prawym przyciskiem myszy pozycję **analityczne** i wybierz pozycję **Włącz dziennik**. Pozostaw Podgląd zdarzeń otwarty, aby umożliwić wyświetlanie śladów.
 
-3. Otwórz przykład utworzony w samouczku [wprowadzenie](../../../../docs/framework/wcf/getting-started-tutorial.md) w programie Visual Studio 2012. Należy pamiętać, że aby można było utworzyć usługę, należy uruchomić program Visual Studio 2012 jako administrator. Jeśli masz zainstalowane przykłady WCF, możesz otworzyć [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), która zawiera ukończony projekt utworzony w samouczku.
+3. Otwórz przykład utworzony w [samouczku wprowadzenie](../getting-started-tutorial.md) w programie Visual Studio 2012. Należy pamiętać, że aby można było utworzyć usługę, należy uruchomić program Visual Studio 2012 jako administrator. Jeśli masz zainstalowane przykłady WCF, możesz otworzyć [wprowadzenie](../samples/getting-started-sample.md), która zawiera ukończony projekt utworzony w samouczku.
 
 4. Kliknij prawym przyciskiem myszy projekt **usługi** i wybierz polecenie **Dodaj**, **nowy element**. Wybierz pozycję **plik konfiguracji aplikacji** , a następnie kliknij przycisk **OK**.
 

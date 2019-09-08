@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9876e3ba5ea67442714c2d00b1901c25e54494f2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f19dd114925ed1fd12bcc0056411c3e3d4181215
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741636"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777093"
 ---
 # <a name="importtypes-method"></a>ImportTypes — Metoda
-Inicjuje importowania typów z każdym zakresem importowane za pośrednictwem [importfile — metoda](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
+Inicjuje importowanie typów z każdego zakresu zaimportowanego za pomocą [metody ImportFile —](importfile-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,31 +41,31 @@ HRESULT ImportTypes(
   
 ## <a name="parameters"></a>Parametry  
  `AssemblyID`  
- Identyfikator zestawu, aby zaimportować.  
+ Identyfikator zestawu do zaimportowania.  
   
  `FileToken`  
- Identyfikator pliku do zaimportowania z.  
+ Identyfikator pliku do zaimportowania.  
   
  `dwScope`  
- Liczony od zera zakres do zaimportowania.  
+ Zakres od zera do zaimportowania.  
   
  `phEnum`  
- Odbiera uchwytu modułu wyliczającego dla typów, w tym zakresie.  
+ Odbiera dojście modułu wyliczającego dla typów w tym zakresie.  
   
  `ppImportScope`  
- Opcjonalnie odbiera [imetadataimport — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interfejsu.  
+ Opcjonalnie odbiera Interfejs [interfejsu IMetaDataImport](../metadata/imetadataimport-interface.md) .  
   
  `pdwCountOfTypes`  
- Opcjonalnie odbiera liczba typów w zakresie wskazane.  
+ Opcjonalnie otrzymuje liczbę typów we wskazanym zakresie.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga alink.h  
+ Wymaga Alink. h  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink, interfejs](ialink-interface.md)
+- [IALink2, interfejs](ialink2-interface.md)
+- [ALink, interfejs API](index.md)

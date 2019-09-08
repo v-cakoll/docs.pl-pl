@@ -2,12 +2,12 @@
 title: Bezpieczny dostęp do danych
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 7aa68842ab3733943f84e9d6d9157f7a3d65cac7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 122bdaf8467994f8f56ce3f6c92457be6b8b3155
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963139"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782777"
 ---
 # <a name="secure-data-access"></a>Bezpieczny dostęp do danych
 Aby napisać bezpieczny kod ADO.NET, należy zapoznać się z mechanizmami zabezpieczeń dostępnymi w podstawowym magazynie danych lub w bazie danych. Należy również wziąć pod uwagę implikacje zabezpieczeń innych funkcji lub składników, które może zawierać aplikacja.  
@@ -23,10 +23,10 @@ Aby napisać bezpieczny kod ADO.NET, należy zapoznać się z mechanizmami zabez
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)|Opisuje najlepsze rozwiązania w zakresie zabezpieczeń i techniki ochrony informacji o połączeniach, takich jak używanie konfiguracji chronionej do szyfrowania parametrów połączenia.|  
+|[Ochrona informacji o połączeniu](protecting-connection-information.md)|Opisuje najlepsze rozwiązania w zakresie zabezpieczeń i techniki ochrony informacji o połączeniach, takich jak używanie konfiguracji chronionej do szyfrowania parametrów połączenia.|  
 |[Zalecenia dotyczące strategii dostępu do danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Zawiera zalecenia dotyczące uzyskiwania dostępu do danych i wykonywania operacji bazy danych.|  
-|[Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md)|Opisuje sposób tworzenia parametrów połączenia z danych wejściowych użytkownika w czasie wykonywania.|  
-|[Przegląd zabezpieczeń serwera SQL](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|Opisuje SQL Server architekturę zabezpieczeń.|  
+|[Konstruktorzy parametrów połączeń](connection-string-builders.md)|Opisuje sposób tworzenia parametrów połączenia z danych wejściowych użytkownika w czasie wykonywania.|  
+|[Przegląd zabezpieczeń serwera SQL](./sql/overview-of-sql-server-security.md)|Opisuje SQL Server architekturę zabezpieczeń.|  
   
 ## <a name="parameterized-commands-and-sql-injection"></a>Polecenia sparametryzowane i iniekcja kodu SQL  
  Używanie sparametryzowanych poleceń pomaga chronić przed atakami polegającymi na iniekcji SQL, w których osoba atakująca "wprowadza" polecenie do instrukcji SQL, która narusza zabezpieczenia na serwerze. Sparametryzowane polecenia Guard przed atakami polegającymi na iniekcji SQL przez zapewnienie, że wartości otrzymywane ze źródła zewnętrznego są przesyłane jako tylko wartości, a nie częścią instrukcji języka Transact-SQL. W związku z tym polecenia języka Transact-SQL wstawione do wartości nie są wykonywane w źródle danych. Zamiast tego są oceniane wyłącznie jako wartość parametru. Oprócz korzyści z zabezpieczeń, polecenia sparametryzowane zapewniają wygodną metodę organizowania wartości przekazaną za pomocą instrukcji języka Transact-SQL lub procedury składowanej.  
@@ -35,9 +35,9 @@ Aby napisać bezpieczny kod ADO.NET, należy zapoznać się z mechanizmami zabez
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Parametry elementu DataAdapter](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|Opisuje sposób używania parametrów z `DataAdapter`.|  
-|[Modyfikowanie danych za pomocą procedur składowanych](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|Opisuje sposób określania parametrów i uzyskiwania wartości zwracanej.|  
-|[Zarządzanie uprawnieniami za pomocą procedur składowanych w programie SQL Server](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|Opisuje sposób korzystania z procedur składowanych SQL Server w celu hermetyzacji dostępu do danych.|  
+|[Parametry elementu DataAdapter](dataadapter-parameters.md)|Opisuje sposób używania parametrów z `DataAdapter`.|  
+|[Modyfikowanie danych za pomocą procedur składowanych](modifying-data-with-stored-procedures.md)|Opisuje sposób określania parametrów i uzyskiwania wartości zwracanej.|  
+|[Zarządzanie uprawnieniami za pomocą procedur składowanych w programie SQL Server](./sql/managing-permissions-with-stored-procedures-in-sql-server.md)|Opisuje sposób korzystania z procedur składowanych SQL Server w celu hermetyzacji dostępu do danych.|  
   
 ## <a name="script-exploits"></a>Luki w zabezpieczeniach skryptów  
  Wykorzystanie skryptów jest kolejną formą iniekcji, która używa złośliwych znaków wstawianych do strony sieci Web. Przeglądarka nie sprawdza poprawności wstawionych znaków i przetworzy je jako część strony.  
@@ -84,14 +84,14 @@ Aby napisać bezpieczny kod ADO.NET, należy zapoznać się z mechanizmami zabez
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Współdziałanie z kodem niezarządzanym](../../../../docs/framework/interop/index.md)|Zawiera tematy opisujące, jak uwidocznić składniki COM w .NET Framework i jak uwidocznić składniki .NET Framework do modelu COM.|
+|[Współdziałanie z kodem niezarządzanym](../../interop/index.md)|Zawiera tematy opisujące, jak uwidocznić składniki COM w .NET Framework i jak uwidocznić składniki .NET Framework do modelu COM.|
 |[Zaawansowana współdziałanie COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Zawiera zaawansowane tematy, takie jak podstawowe zestawy międzyoperacyjności, wątkowość i organizowanie niestandardowe.|
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Zabezpieczenia serwera SQL](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [Zabezpieczanie aplikacji ADO.NET](securing-ado-net-applications.md)
+- [Zabezpieczenia serwera SQL](./sql/sql-server-security.md)
 - [Zalecenia dotyczące strategii dostępu do danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
-- [Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Ochrona informacji o połączeniu](protecting-connection-information.md)
+- [Konstruktorzy parametrów połączeń](connection-string-builders.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

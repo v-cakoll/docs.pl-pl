@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: ec1acc009e58408fc41c60134538340486f19f75
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eed8a1edaae5fab03ad9e78d29803676debd1b9a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949676"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796913"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Przesłanianie tożsamości usługi na potrzeby uwierzytelniania
-Zazwyczaj nie trzeba ustawiać tożsamości w usłudze, ponieważ wybór typu poświadczeń klienta określa typ tożsamości uwidocznionej w metadanych usługi. Na przykład poniższy kod konfiguracyjny używa `clientCredentialType` [ \<elementu WSHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) i ustawia atrybut na Windows.  
+Zazwyczaj nie trzeba ustawiać tożsamości w usłudze, ponieważ wybór typu poświadczeń klienta określa typ tożsamości uwidocznionej w metadanych usługi. Na przykład poniższy kod konfiguracyjny używa `clientCredentialType` [ \<elementu WSHttpBinding >](../../configure-apps/file-schema/wcf/wshttpbinding.md) i ustawia atrybut na Windows.  
 
  Poniższy fragment Web Services Description Language (WSDL) przedstawia tożsamość punktu końcowego zdefiniowanego wcześniej. W tym przykładzie usługa działa jako usługa samodzielna w ramach określonego konta użytkownika (username@contoso.com), w związku z czym tożsamość głównej nazwy użytkownika (UPN) zawiera nazwę konta. Nazwa UPN jest również nazywana nazwą logowania użytkownika w domenie systemu Windows.  
 
- Aby zapoznać się z przykładową aplikacją, która demonstruje ustawienie tożsamości, zobacz [przykład Identity Service](../../../../docs/framework/wcf/samples/service-identity-sample.md). Aby uzyskać więcej informacji na temat tożsamości usługi, zobacz [tożsamość usługi i uwierzytelnianie](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Aby zapoznać się z przykładową aplikacją, która demonstruje ustawienie tożsamości, zobacz [przykład Identity Service](../samples/service-identity-sample.md). Aby uzyskać więcej informacji na temat tożsamości usługi, zobacz [tożsamość usługi i uwierzytelnianie](../feature-details/service-identity-and-authentication.md).  
   
 ## <a name="kerberos-authentication-and-identity"></a>Uwierzytelnianie i tożsamość Kerberos  
- Domyślnie, gdy usługa jest skonfigurowana do korzystania z poświadczeń systemu Windows, [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md) [ \<element > Identity](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) , który zawiera element userPrincipalName > lub ServicePrincipalName > jest generowane w języku WSDL. Jeśli usługa `LocalSystem`jest uruchomiona w ramach `NetworkService` `LocalService`konta, lub, nazwa główna usługi (SPN) `host/` \<jest generowana domyślnie w postaci nazwy *hosta*> ponieważ te konta mają dostęp do dane SPN komputera. Jeśli usługa jest uruchomiona przy użyciu innego konta, Windows Communication Foundation (WCF) \<generuje nazwę UPN w postaci>@<`>` *nazwy użytkownika* *nazwa_domeny*. Dzieje się tak, ponieważ uwierzytelnianie Kerberos wymaga, aby nazwa UPN lub nazwa SPN była dostarczana do klienta w celu uwierzytelnienia usługi.  
+ Domyślnie, gdy usługa jest skonfigurowana do korzystania z poświadczeń systemu Windows, [ \<](../../configure-apps/file-schema/wcf/userprincipalname.md) [ \<element > Identity](../../configure-apps/file-schema/wcf/identity.md) , który zawiera element userPrincipalName > lub [ \<ServicePrincipalName >](../../configure-apps/file-schema/wcf/serviceprincipalname.md) jest generowane w języku WSDL. Jeśli usługa `LocalSystem`jest uruchomiona w ramach `NetworkService` `LocalService`konta, lub, nazwa główna usługi (SPN) `host/` \<jest generowana domyślnie w postaci nazwy *hosta*> ponieważ te konta mają dostęp do dane SPN komputera. Jeśli usługa jest uruchomiona przy użyciu innego konta, Windows Communication Foundation (WCF) \<generuje nazwę UPN w postaci>@<`>` *nazwy użytkownika* *nazwa_domeny*. Dzieje się tak, ponieważ uwierzytelnianie Kerberos wymaga, aby nazwa UPN lub nazwa SPN była dostarczana do klienta w celu uwierzytelnienia usługi.  
   
  Można również użyć narzędzia Setspn. exe do zarejestrowania dodatkowej nazwy SPN z kontem usługi w domenie. Następnie można użyć nazwy SPN jako tożsamości usługi. Aby pobrać narzędzie, zobacz [Windows 2000 Resource Kit Tool: Setspn.exe](https://go.microsoft.com/fwlink/?LinkId=91752). Więcej informacji o narzędziu można znaleźć w temacie [Setspn Overview](https://go.microsoft.com/fwlink/?LinkId=61374).  
   
@@ -59,5 +59,5 @@ Zazwyczaj nie trzeba ustawiać tożsamości w usłudze, ponieważ wybór typu po
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Tworzenie niestandardowego weryfikatora tożsamości klienta](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
-- [Uwierzytelnianie i tożsamość usług](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Instrukcje: Tworzenie niestandardowego weryfikatora tożsamości klienta](how-to-create-a-custom-client-identity-verifier.md)
+- [Uwierzytelnianie i tożsamość usług](../feature-details/service-identity-and-authentication.md)

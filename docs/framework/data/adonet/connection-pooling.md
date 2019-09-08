@@ -2,24 +2,24 @@
 title: Pula połączeń
 ms.date: 03/30/2017
 ms.assetid: 955c057f-aea8-4ba8-aa6d-e3dfa18ba8d5
-ms.openlocfilehash: 4cba53993489f51ed39ac52bff4fa252beb9aafd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c431011cf57fd9ef79c2f0a099ab1080116c571f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880024"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786711"
 ---
 # <a name="connection-pooling"></a>Pula połączeń
-Łączenie ze źródłem danych może zająć dużo czasu. Aby zminimalizować koszty otwarcia połączeń, ADO.NET wykorzystuje technikę optymalizacji, o nazwie *buforowanie połączeń*, które minimalizuje koszty wielokrotnym otwieraniem i zamykaniem połączeń. Pula połączeń różni się dla dostawcy danych .NET Framework.  
+Nawiązywanie połączenia ze źródłem danych może być czasochłonne. Aby zminimalizować koszt otwarcia połączeń, ADO.NET korzysta z techniki optymalizacji zwanej *pulą połączeń*, co minimalizuje koszt wielokrotnego otwierania i zamykania połączeń. Pule połączeń są obsługiwane inaczej dla dostawców danych .NET Framework.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Buforowanie połączenia z programem SQL Server (ADO.NET)](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)  
- Zawiera omówienie buforowanie połączeń, a w tym artykule opisano, jak działa buforowanie połączeń w programie SQL Server.  
+ [Buforowanie połączenia z programem SQL Server (ADO.NET)](sql-server-connection-pooling.md)  
+ Zawiera omówienie puli połączeń i opisuje sposób działania puli połączeń w SQL Server.  
   
- [Buforowanie połączenia Oracle, OLE DB i ODBC](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
- W tym artykule opisano tworzenie puli połączeń dla .NET Framework Data Provider for OLE DB dla programu .NET Framework Data Provider for ODBC i .NET Framework Data Provider for Oracle.  
+ [Buforowanie połączenia Oracle, OLE DB i ODBC](ole-db-odbc-and-oracle-connection-pooling.md)  
+ Opisuje pule połączeń dla Dostawca danych .NET Framework, OLE DB .NET Framework Dostawca danych dla ODBC oraz .NET Framework dostawca danych dla programu Oracle.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Pobieranie i modyfikowanie danych ADO.NET](retrieving-and-modifying-data.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

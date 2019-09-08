@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40953d03904e3268770c8a1b6e212873ec66d2dd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 17e96f56c57d896397489e27bcc072d8e7df05ec
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761848"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796539"
 ---
 # <a name="iassemblynamesetproperty-method"></a>IAssemblyName::SetProperty — Metoda
-Ustawia wartość właściwości odwołuje się określony identyfikator właściwości.  
+Ustawia wartość właściwości, do której odwołuje się określony identyfikator właściwości.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,21 +39,21 @@ HRESULT SetProperty (
   
 ## <a name="parameters"></a>Parametry  
  `PropertyId`  
- [in] Unikatowy identyfikator właściwości, którego wartość zostanie ustawiona.  
+ podczas Unikatowy identyfikator właściwości, której wartość zostanie ustawiona.  
   
  `pvProperty`  
- [in] Wartość, do którego można ustawić właściwości odwołuje się `PropertyId`.  
+ podczas Wartość, dla której ma zostać ustawiona właściwość, do `PropertyId`której odwołuje się.  
   
  `cbProperty`  
- [in] Rozmiar w bajtach z `pvProperty`.  
+ podczas Rozmiar, w bajtach, z `pvProperty`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Fusion.h  
+ **Nagłówki** Fusion. h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IAssemblyName, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [IAssemblyName, interfejs](iassemblyname-interface.md)

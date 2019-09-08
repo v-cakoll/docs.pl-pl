@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4eb64fc0badf94c93182e7bd6875337c411bcdef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0338c1e3e8890f08f87c80ec922071053d591935
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697436"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796673"
 ---
 # <a name="iassemblyenum-interface"></a>IAssemblyEnum — Interfejs
 Reprezentuje moduł wyliczający dla tablicy `IAssemblyName` obiektów.  
@@ -30,18 +30,18 @@ Reprezentuje moduł wyliczający dla tablicy `IAssemblyName` obiektów.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Clone, metoda](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-clone-method.md)|Tworzy kopię pobieżną to `IAssemblyEnum` obiektu.|  
-|[GetNextAssembly, metoda](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-getnextassembly-method.md)|Pobiera wskaźnik do następnego `IAssemblyName` zawarte w tym `IAssemblyEnum` obiektu.|  
-|[Reset, metoda](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-reset-method.md)|Spowoduje to zresetowanie `IAssemblyEnum` obiektu do jego położenia wyjściowego.|  
+|[Clone, metoda](iassemblyenum-clone-method.md)|Tworzy skróconą kopię tego `IAssemblyEnum` obiektu.|  
+|[GetNextAssembly, metoda](iassemblyenum-getnextassembly-method.md)|Pobiera wskaźnik do następnego `IAssemblyName` elementu zawartego w tym `IAssemblyEnum` obiekcie.|  
+|[Reset, metoda](iassemblyenum-reset-method.md)|Resetuje ten `IAssemblyEnum` obiekt do jego pozycji początkowej.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Fusion.h  
+ **Nagłówki** Fusion. h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Interfejsy łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IAssemblyName, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [Interfejsy łączenia](fusion-interfaces.md)
+- [IAssemblyName, interfejs](iassemblyname-interface.md)

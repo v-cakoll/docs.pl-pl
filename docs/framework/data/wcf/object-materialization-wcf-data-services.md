@@ -5,16 +5,16 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: d45d472a2996c0b501af70a0a2a6d2d669dedb4d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 89357b1d05526438c939a73663c5b7b6273df4ac
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043535"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790394"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Obiekt materializację (Usługi danych programu WCF)
 
-W przypadku korzystania z okna dialogowego **Dodaj odwołanie do usługi** do korzystania [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] z kanału informacyjnego w aplikacji klienckiej opartej na .NET Framework są generowane równoważne klasy danych dla każdego typu jednostki w modelu danych udostępnionym przez kanał informacyjny. Aby uzyskać więcej informacji, zobacz [generowanie biblioteki klienta usługi danych](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). Dane jednostki, które są zwracane przez zapytanie, są uwzględniane w wystąpieniu jednej z wygenerowanych klas usługi danych klienta. Aby uzyskać informacje na temat opcji scalania i rozpoznawania tożsamości dla śledzonych obiektów, zobacz [zarządzanie kontekstem usługi danych](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).
+W przypadku korzystania z okna dialogowego **Dodaj odwołanie do usługi** do korzystania [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] z kanału informacyjnego w aplikacji klienckiej opartej na .NET Framework są generowane równoważne klasy danych dla każdego typu jednostki w modelu danych udostępnionym przez kanał informacyjny. Aby uzyskać więcej informacji, zobacz [generowanie biblioteki klienta usługi danych](generating-the-data-service-client-library-wcf-data-services.md). Dane jednostki, które są zwracane przez zapytanie, są uwzględniane w wystąpieniu jednej z wygenerowanych klas usługi danych klienta. Aby uzyskać informacje na temat opcji scalania i rozpoznawania tożsamości dla śledzonych obiektów, zobacz [zarządzanie kontekstem usługi danych](managing-the-data-service-context-wcf-data-services.md).
 
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]umożliwia także Definiowanie własnych klas usługi danych klienta zamiast używać klas danych generowanych przez narzędzie. Umożliwia to korzystanie z własnych klas danych, nazywanych również "zwykłymi klasami danych CLR" (POCO). W przypadku korzystania z tych typów niestandardowych klas danych należy przypisać klasę danych z <xref:System.Data.Services.Common.DataServiceKeyAttribute> lub <xref:System.Data.Services.Common.DataServiceEntityAttribute> i upewnić się, że nazwy typów na klientach są zgodne z nazwami typów w modelu danych usługi danych.
 
@@ -38,10 +38,10 @@ Gdy biblioteka otrzyma komunikat odpowiedzi na zapytanie, materializuje zwrócon
 
     - Właściwości złożone są ustawiane na nowe wystąpienie typu złożonego, które są ustawiane przy użyciu właściwości typu złożonego z odpowiedzi.
 
-    - Właściwości nawigacji, które zwracają kolekcję powiązanych jednostek <xref:System.Collections.Generic.ICollection%601>, są ustawiane na nowe lub istniejące wystąpienie, gdzie `T` jest typem powiązanej jednostki. Ta kolekcja jest pusta, chyba że powiązane obiekty zostały załadowane do <xref:System.Data.Services.Client.DataServiceContext>. Aby uzyskać więcej informacji, zobacz [ładowanie odroczonej zawartości](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).
+    - Właściwości nawigacji, które zwracają kolekcję powiązanych jednostek <xref:System.Collections.Generic.ICollection%601>, są ustawiane na nowe lub istniejące wystąpienie, gdzie `T` jest typem powiązanej jednostki. Ta kolekcja jest pusta, chyba że powiązane obiekty zostały załadowane do <xref:System.Data.Services.Client.DataServiceContext>. Aby uzyskać więcej informacji, zobacz [ładowanie odroczonej zawartości](loading-deferred-content-wcf-data-services.md).
 
       > [!NOTE]
-      > Gdy wygenerowane klasy danych klienta obsługują powiązanie danych, w zamian zwraca wystąpienia <xref:System.Data.Services.Client.DataServiceCollection%601> klasy. Aby uzyskać więcej informacji, zobacz [Powiązywanie danych z kontrolkami](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).
+      > Gdy wygenerowane klasy danych klienta obsługują powiązanie danych, w zamian zwraca wystąpienia <xref:System.Data.Services.Client.DataServiceCollection%601> klasy. Aby uzyskać więcej informacji, zobacz [Powiązywanie danych z kontrolkami](binding-data-to-controls-wcf-data-services.md).
 
 4. <xref:System.Data.Services.Client.DataServiceContext.ReadingEntity> Zdarzenie jest zgłaszane.
 
@@ -49,5 +49,5 @@ Gdy biblioteka otrzyma komunikat odpowiedzi na zapytanie, materializuje zwrócon
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wykonywanie zapytań do usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
-- [Projekcje zapytania](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
+- [Wykonywanie zapytań do usługi danych](querying-the-data-service-wcf-data-services.md)
+- [Projekcje zapytania](query-projections-wcf-data-services.md)

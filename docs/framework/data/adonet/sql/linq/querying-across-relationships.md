@@ -5,35 +5,35 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 297878d0-685b-4c01-b2e0-9d731b7322bc
-ms.openlocfilehash: 2e1cf9efcf47fc70421c64541aead5fb36d8c9d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be0aea66f0923b8b353f42cecc9360731efc7bb9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916776"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792845"
 ---
 # <a name="querying-across-relationships"></a>Wykonywanie zapytań w relacjach
-Odwołania do innych obiektów lub kolekcji innych obiektów w definicji klasy odpowiadają bezpośrednio relacje klucza obcego w bazie danych. Możesz użyć tych relacji, zapytania przy użyciu notacji z kropką dostęp do właściwości relacji i przejść z jednego obiektu do drugiego. Te operacje dostępu wykonuje translację elementu do bardziej złożonych sprzężeń lub skorelowany podzapytań równoważne SQL.  
+Odwołania do innych obiektów lub kolekcji innych obiektów w definicjach klas bezpośrednio odpowiadają na relacje klucza obcego w bazie danych. Tych relacji można użyć podczas wykonywania zapytania przy użyciu notacji kropkowej w celu uzyskania dostępu do właściwości relacji i przechodzenia z jednego obiektu do drugiego. Te operacje dostępu są tłumaczone na bardziej złożone sprzężenia lub skorelowane podzapytania w odpowiedniku SQL.  
   
- Na przykład następujące zapytanie powoduje przejście z zamówień dla klientów jako sposób, aby ograniczyć wyniki do tylko zamówień dla klientów znajdujących się w Londynie.  
+ Na przykład następujące zapytanie przechodzi od zamówień do klientów w taki sposób, aby ograniczyć wyniki do zamówień tylko dla klientów znajdujących się w Londynie.  
   
  [!code-csharp[DLinqQueryConcepts#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#3)]
  [!code-vb[DLinqQueryConcepts#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#3)]  
   
- Jeśli nie istniał właściwości relacji trzeba będzie zapisanie ich ręcznie jako *sprzężeń*tak samo, tak jak w zapytaniu SQL, tak jak w poniższym kodzie:  
+ Jeśli właściwości relacji nie istniały, należy napisać je ręcznie jako *sprzężenia*, tak jak w przypadku zapytania SQL, jak w poniższym kodzie:  
   
  [!code-csharp[DLinqQueryConcepts#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#4)]
  [!code-vb[DLinqQueryConcepts#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#4)]  
   
- Możesz użyć *relacji* właściwości do definiowania tego konkretną relację jeden raz. Następnie można użyć bardziej wygodne składni z kropkami. Ale właściwości relacji istnieje, co ważniejsze, ponieważ modeli obiektów specyficznych dla domeny są zazwyczaj definiowane jako hierarchie lub wykresów. Obiekty, które możesz programować przy użyciu odwołują się do innych obiektów. Jest tylko wszystkiego zbieżność relacji obiektu do obiektu odnoszą się do relacji obcych różne klucza w bazach danych. Dostęp do właściwości następnie zapewnia wygodny sposób zapisu sprzężenia.  
+ Możesz użyć właściwości *relacji* , aby zdefiniować tę konkretną relację jeden raz. Następnie można użyć bardziej wygodnej składni kropki. Jednak właściwości relacji są ważniejsze, ponieważ modele obiektów specyficzne dla domeny są zwykle zdefiniowane jako hierarchie lub wykresy. Obiekty, względem których program ma odwoływać się do innych obiektów. Jest to tylko szczęśliwe współdziałanie, że relacje obiekt-obiekt odpowiadają relacji między kluczami obcym w bazach danych. Dostęp do właściwości zapewnia wygodny sposób zapisu sprzężeń.  
   
- W efekcie właściwości relacji są niezwykle ważne po stronie wyników zapytań niż w ramach samo zapytanie. Po zapytanie pobierze dane dotyczące określonego klienta, definicja klasy informuje, że klienci zamówienia. Innymi słowy, oczekujesz, że `Orders` właściwości określonego klienta jako kolekcja, która jest wypełniana przy użyciu wszystkich zamówień tego klienta. W rzeczywistości to kontrakt, który zadeklarowana przez definiowanie klas w ten sposób. Powinna się pojawić zamówienia istnieje, nawet wtedy, gdy zapytanie nie żądanie zamówienia. Oczekujesz, że model obiektów do utrzymania wrażenie, że jest to rozszerzenie w pamięci, bazy danych z pokrewnymi obiektami, od razu dostępna.  
+ W związku z tym właściwości relacji są ważniejsze od wyników zapytania, a nie jako część samego zapytania. Po pobraniu przez zapytanie danych dotyczących określonego klienta definicja klasy wskazuje, że klienci mają zamówienia. Innymi słowy, oczekujesz `Orders` , że właściwość określonego klienta ma być kolekcją, która jest wypełniana wszystkimi zamówieniami od tego klienta. Jest to w rzeczywistości umową zadeklarowaną przez zdefiniowanie klas w ten sposób. Można oczekiwać, że zamówienia są widoczne nawet wtedy, gdy zapytanie nie zażądało zamówień. Oczekujesz, że Twój model obiektów utrzymuje wrażenie, że jest to rozszerzenie bazy danych z pokrewnymi obiektami natychmiast dostępnych.  
   
- Teraz, gdy masz relacji, możesz pisać zapytania, odwołując się do właściwości relacji zdefiniowanych w Twoich zajęciach. Te odwołania relacji odpowiadają relacje klucza obcego w bazie danych. Przetłumacz operacji korzystających z tych relacji do bardziej złożonych sprzężeń w równoważnych SQL. Tak długo, jak zdefiniowano relacji (przy użyciu <xref:System.Data.Linq.Mapping.AssociationAttribute> atrybut), nie masz kodu za pomocą jawnego sprzężenia w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ Teraz, gdy masz relacje, możesz pisać zapytania, odwołując się do właściwości relacji zdefiniowanych w klasach. Te odwołania do relacji odnoszą się do relacji klucza obcego w bazie danych. Operacje, które używają tych relacji, przekładają się na bardziej złożone sprzężenia w równoważnej tabeli SQL. Tak długo, jak definiujesz relację (przy użyciu <xref:System.Data.Linq.Mapping.AssociationAttribute> atrybutu), nie musisz kodować jawnego sprzężenia w. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]  
   
- Pomagających zapewnić tym wrażenie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implementuje technikę o nazwie *odroczone ładowanie*. Aby uzyskać więcej informacji, zobacz [odroczone a ładowania bezpośredniego](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
+ Aby pomóc w utrzymaniu tego [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] iluzji, implementuje technikę nazywaną *ładowanie odroczone*. Aby uzyskać więcej informacji, zobacz [odroczone względem natychmiastowego ładowania](deferred-versus-immediate-loading.md).  
   
- Należy wziąć pod uwagę następujące zapytanie SQL, aby wyświetlić listę `CustomerID` - `OrderID` pary:  
+ Rozważmy następujące zapytanie SQL, aby zaprojektować `CustomerID` listę - `OrderID` par:  
   
 ```  
 SELECT t0.CustomerID, t1.OrderID  
@@ -42,16 +42,16 @@ FROM   Customers AS t0 INNER JOIN
 WHERE  (t0.City = @p0)  
 ```  
   
- Aby uzyskać te same wyniki przy użyciu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], możesz użyć `Orders` właściwość odwoływać się do już istniejących w `Customer` klasy. `Orders` Dokumentacja zawiera informacje niezbędne do wykonywania zapytań i projektu `CustomerID` - `OrderID` pary, zgodnie z poniższym kodem:  
+ Aby uzyskać te same wyniki przy użyciu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], należy użyć `Customer` odwołania `Orders` do właściwości już istniejącej w klasie. Dokumentacja zawiera informacje niezbędne do wykonania zapytania - i `OrderID` `CustomerID` projektu par, jak w poniższym kodzie: `Orders`  
   
  [!code-csharp[DLinqQueryConcepts#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#5)]
  [!code-vb[DLinqQueryConcepts#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#5)]  
   
- Można również wykonać odwrotnie. Oznacza to, że można tworzyć zapytania `Orders` i używać jej `Customer` relacji odwołanie do uzyskiwania dostępu do informacji o skojarzonego `Customer` obiektu. Poniższy kod projekty takie same `CustomerID` - `OrderID` par tak jak poprzednio, ale tym razem, badając `Orders` zamiast `Customers`.  
+ Możesz również wykonać odwrotność. Oznacza to, że można wysyłać `Orders` zapytania do informacji `Customer` o skojarzonym `Customer` obiekcie i używać ich. Poniższy kod koduje te same `CustomerID` - `OrderID` pary jak `Orders` poprzednio, `Customers`ale tym razem wykonując zapytania zamiast.  
   
  [!code-csharp[DLinqQueryConcepts#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#6)]
  [!code-vb[DLinqQueryConcepts#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#6)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Pojęcia dotyczące zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Pojęcia dotyczące zapytań](query-concepts.md)

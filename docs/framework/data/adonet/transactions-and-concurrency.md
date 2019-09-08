@@ -2,12 +2,12 @@
 title: Transakcje i współbieżność
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: c78031150d9b1209372dece49813dfcf0a03b9d5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 837fe6c42d64f7416dbd895e56a38d1a409e567a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965212"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791320"
 ---
 # <a name="transactions-and-concurrency"></a>Transakcje i współbieżność
 Transakcja składa się z jednego polecenia lub grupy poleceń, które są wykonywane jako pakiet. Transakcje umożliwiają łączenie wielu operacji w pojedynczą jednostkę pracy. Jeśli wystąpi awaria w jednym punkcie transakcji, wszystkie aktualizacje można przywrócić do stanu sprzed transakcji.  
@@ -22,23 +22,23 @@ Transakcja składa się z jednego polecenia lub grupy poleceń, które są wykon
  Transakcje dotyczące różnych menedżerów zasobów, takich jak transakcja między SQL Server i Oracle, wymagają transakcji rozproszonej.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Transakcje lokalne](../../../../docs/framework/data/adonet/local-transactions.md)  
+ [Transakcje lokalne](local-transactions.md)  
  Pokazuje, jak wykonywać transakcje względem bazy danych.  
   
- [Transakcje rozproszone](../../../../docs/framework/data/adonet/distributed-transactions.md)  
+ [Transakcje rozproszone](distributed-transactions.md)  
  Opisuje sposób wykonywania transakcji rozproszonych w programie ADO.NET.  
   
- [Integracja System.Transactions z programem SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
+ [Integracja System.Transactions z programem SQL Server](system-transactions-integration-with-sql-server.md)  
  Opisuje <xref:System.Transactions> integrację z SQL Server do pracy z transakcjami rozproszonymi.  
   
- [Optymistyczna współbieżność](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
+ [Optymistyczna współbieżność](optimistic-concurrency.md)  
  Opisuje optymistyczne i pesymistyczne współbieżność oraz sposób testowania naruszeń współbieżności.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Podstawowe informacje dotyczące transakcji](../../../../docs/framework/data/transactions/transaction-fundamentals.md)
-- [Nawiązywanie połączenia ze źródłem danych](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Polecenia i parametry](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Podstawowe informacje dotyczące transakcji](../transactions/transaction-fundamentals.md)
+- [Nawiązywanie połączenia ze źródłem danych](connecting-to-a-data-source.md)
+- [Polecenia i parametry](commands-and-parameters.md)
+- [Elementy DataAdapter i DataReaders](dataadapters-and-datareaders.md)
+- [DbProviderFactories](dbproviderfactories.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

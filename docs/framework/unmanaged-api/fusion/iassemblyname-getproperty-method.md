@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5ddc2646b560814adef01f2508f3792abe13c1d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 351d540d226f46f180b46323e83eb1bcc71da4f0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744524"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796589"
 ---
 # <a name="iassemblynamegetproperty-method"></a>IAssemblyName::GetProperty — Metoda
-Pobiera wskaźnik do właściwości odwołuje się określony identyfikator właściwości.  
+Pobiera wskaźnik do właściwości, do której odwołuje się określony identyfikator właściwości.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,21 +39,21 @@ HRESULT GetProperty (
   
 ## <a name="parameters"></a>Parametry  
  `PropertyId`  
- [in] Unikatowy identyfikator dla żądanej właściwości.  
+ podczas Unikatowy identyfikator dla żądanej właściwości.  
   
  `pvProperty`  
- [out] Dane zwrócone właściwości.  
+ określoną Zwrócone dane właściwości.  
   
  `pcbProperty`  
- [out w] Rozmiar w bajtach z `pvProperty`.  
+ [in. out] Rozmiar, w bajtach, z `pvProperty`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Fusion.h  
+ **Nagłówki** Fusion. h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IAssemblyName, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [IAssemblyName, interfejs](iassemblyname-interface.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: f76b1f0a09be2f745156437919f43ebaa8840519
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7cd02a0a315ffdb155af09ac4e4fabbea1724a4d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938482"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780832"
 ---
 # <a name="sql-server-express-user-instances"></a>Wystąpienia użytkownika programu SQL Server Express
 Microsoft SQL Server Express Edition (SQL Server Express) obsługuje funkcję wystąpienia użytkownika, która jest dostępna tylko w przypadku używania .NET Framework Dostawca danych dla SQL Server (`SqlClient`). Wystąpienie użytkownika jest osobnym wystąpieniem aparatu bazy danych SQL Server Express, który jest generowany przez wystąpienie nadrzędne. Wystąpienia użytkowników umożliwiają użytkownikom, którzy nie są administratorami na swoich komputerach lokalnych, dołączania do SQL Server Express baz danych i łączenia się z nimi. Każde wystąpienie jest uruchamiane w kontekście zabezpieczeń poszczególnych użytkowników, na podstawie jednego wystąpienia na użytkownika.  
@@ -152,7 +152,7 @@ private static void OpenSqlConnection()
   
 ## <a name="see-also"></a>Zobacz także
 
-- [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [Parametry połączeń](../../../../../docs/framework/data/adonet/connection-strings.md)
-- [Nawiązywanie połączenia ze źródłem danych](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server i ADO.NET](index.md)
+- [Parametry połączeń](../connection-strings.md)
+- [Nawiązywanie połączenia ze źródłem danych](../connecting-to-a-data-source.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

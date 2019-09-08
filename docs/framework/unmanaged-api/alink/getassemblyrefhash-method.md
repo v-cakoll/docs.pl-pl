@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 49ea7fbe9f491028a85fae543d126fd9d4f2d940
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d19eebaa3aa0ebb6f9807f0cf277b7ed6183c148
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741908"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777192"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash — Metoda
-Pobiera obiekt blob wyznaczania wartości skrótu dla danego zestawu.  
+Pobiera obiekt BLOB mieszania dla danego zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,22 +38,22 @@ HRESULT GetAssemblyRefHash(
   
 ## <a name="parameters"></a>Parametry  
  `FileToken`  
- Identyfikator zestawu, do którego będzie odnosił się wartość skrótu.  
+ Identyfikator zestawu, do którego odwołuje się skrót.  
   
  `ppvHash`  
- Odbiera wynikowy obiekt blob wyznaczania wartości skrótu.  
+ Odbiera wynikowy obiekt BLOB.  
   
  `pcbHash`  
- Odbiera rozmiar w bajtach, obiektu blob wyznaczania wartości skrótu.  
+ Odbiera rozmiar, w bajtach, obiektu BLOB mieszania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga alink.h  
+ Wymaga Alink. h  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink, interfejs](ialink-interface.md)
+- [IALink2, interfejs](ialink2-interface.md)
+- [ALink, interfejs API](index.md)

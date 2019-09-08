@@ -2,30 +2,30 @@
 title: Sekwencje Oracle
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
-ms.openlocfilehash: 4ba7b750d48613b80eca0ef3c7c2da127977498d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 772aeda94215ccc8e1eff0e1145ed0399791197d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64632342"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794588"
 ---
 # <a name="oracle-sequences"></a>Sekwencje Oracle
-.NET Framework Data Provider for Oracle zapewnia obsługę pobierania wartości generowanych przez serwer Oracle sekwencja klucza po wykonaniu operacji wstawienia przy użyciu <xref:System.Data.OracleClient.OracleDataAdapter>.  
+.NET Framework Dostawca danych dla programu Oracle zapewnia obsługę pobierania wartości sekwencji programu Oracle klucza generowanych przez serwer po wykonaniu operacji Inserts <xref:System.Data.OracleClient.OracleDataAdapter>przy użyciu.  
   
- SQL Server i Oracle obsługuje tworzenie automatycznego przyrostu o wartości kolumn, które mogą być oznaczone jako klucze podstawowe. Te wartości są generowane przez serwer w miarę dodawania wierszy do tabeli. W programie SQL Server Ustaw właściwości tożsamości kolumny; Oracle, należy utworzyć sekwencję. Różnica między kolumn automatycznego przyrostu w programie SQL Server i sekwencje Oracle jest to, że:  
+ SQL Server i Oracle obsługują tworzenie automatycznie zwiększających się kolumn, które można wyznaczyć jako klucze podstawowe. Te wartości są generowane przez serwer, ponieważ wiersze są dodawane do tabeli. W SQL Server ustaw właściwość Identity kolumny. w programie Oracle utworzysz sekwencję. Różnica między kolumnami AutoIncrement w SQL Server i sekwencjami w programie Oracle to:  
   
-- W programie SQL Server Oznacz kolumnę jako kolumny automatycznego przyrostu i programu SQL Server automatycznie generuje nowe wartości dla kolumny, gdy wstawić nowy wiersz.  
+- W SQL Server oznaczasz kolumnę jako kolumnę automatycznego przyrostu i SQL Server automatycznie generuje nowe wartości dla kolumny podczas wstawiania nowego wiersza.  
   
-- Oracle utworzeniem sekwencji można wygenerować nowe wartości dla kolumny w tabeli, ale nie ma żadnego bezpośredniego połączenia między sekwencji i tabeli lub kolumny. Sekwencja Oracle jest obiektem, takich jak tabeli lub procedury składowanej.  
+- W programie Oracle utworzysz sekwencję, aby wygenerować nowe wartości dla kolumny w tabeli, ale nie ma bezpośredniego powiązania między sekwencją a tabelą lub kolumną. Sekwencja Oracle to obiekt, taki jak tabela lub procedura składowana.  
   
- Po utworzeniu sekwencji w bazie danych Oracle, można zdefiniować jej wartość początkową i przyrost między jego wartości. Możesz także zbadać sekwencję dla nowych wartości przed przesłaniem nowych wierszy. Oznacza to, że Twój kod może rozpoznać wartości klucza dla nowych wierszy, przed wstawiania do bazy danych.  
+ Podczas tworzenia sekwencji w bazie danych Oracle można zdefiniować jej początkową wartość i przyrost między jej wartościami. Możesz również zbadać sekwencję nowych wartości przed przesłaniem nowych wierszy. Oznacza to, że kod może rozpoznać wartości klucza dla nowych wierszy przed wstawieniem ich do bazy danych.  
   
- Aby uzyskać więcej informacji na temat tworzenia kolumn automatycznego przyrostu za pomocą programu SQL Server i ADO.NET, zobacz [pobieranie tożsamości lub wartości automatycznych numerów](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md) i [Tworzenie kolumn typu AutoIncrement](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md).  
+ Aby uzyskać więcej informacji na temat tworzenia autoprzyrostowych kolumn przy użyciu SQL Server i ADO.NET, zobacz [pobieranie tożsamości lub wartości AutoNumber](retrieving-identity-or-autonumber-values.md) i [Tworzenie kolumn typu AutoIncrement](./dataset-datatable-dataview/creating-autoincrement-columns.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie C# pokazano, jak można pobrać nowe wartości sekwencji z bazy danych Oracle. Przykład odwołuje się do sekwencji w zapytaniu INSERT INTO użytego do przesłania nowe wiersze, a następnie zwraca wartość sekwencji wygenerowane przy użyciu klauzuli ZWRÓCENIE wprowadzona w Oracle10g. W przykładzie dodano szereg oczekujące nowych wierszy w arkuszu <xref:System.Data.DataTable> przy użyciu obiektów ADO. Funkcja automatycznego przyrostu przez sieć do generowania wartości klucza podstawowego "— symbol zastępczy". Należy pamiętać, że wartość przyrostu ADO.NET wygenerowany nowy wiersz po prostu "symbol zastępczy". Oznacza to, że baza danych może wygenerować różne wartości z tymi, które generuje ADO.NET.  
+ W poniższym C# przykładzie pokazano, jak można pobrać nowe wartości sekwencji z bazy danych Oracle Database. Przykład odwołuje się do sekwencji w kwerendzie INSERT INTO użytej do przesłania nowych wierszy, a następnie zwraca wartość sekwencji wygenerowaną przy użyciu klauzuli Return wprowadzonej w Oracle10g. Przykład dodaje serię oczekujących nowych wierszy w a <xref:System.Data.DataTable> za pomocą ADO. Funkcja autoprzyrostu netto w celu wygenerowania wartości klucza podstawowego "PlaceHolder". Zwróć uwagę, że wartość przyrostu ADO.NET wygenerowana dla nowego wiersza to "symbol zastępczy". Oznacza to, że baza danych może generować różne wartości z tych ADO.NET.  
   
- Przed przesłaniem oczekujące operacje wstawiania do bazy danych, w przykładzie pokazano zawartość wierszy. Następnie kod tworzy nową <xref:System.Data.OracleClient.OracleDataAdapter> i ustawia jego <xref:System.Data.OracleClient.OracleDataAdapter.InsertCommand%2A> i <xref:System.Data.OracleClient.OracleDataAdapter.UpdateBatchSize%2A> właściwości. Przykład dostarcza również logikę do zwrócenia wartości generowanych przez serwer przy użyciu parametrów wyjściowych. Następnie w przykładzie wykonuje aktualizacji można przesłać oczekujące wierszy i wyświetla zawartość <xref:System.Data.DataTable>.  
+ Przed przesłaniem oczekujących operacji wstawiania do bazy danych, w przykładzie zostanie wyświetlona zawartość wierszy. Następnie kod tworzy nowy <xref:System.Data.OracleClient.OracleDataAdapter> obiekt i ustawia jego <xref:System.Data.OracleClient.OracleDataAdapter.InsertCommand%2A> <xref:System.Data.OracleClient.OracleDataAdapter.UpdateBatchSize%2A> właściwości i. W przykładzie pokazano również, że logika zwraca wartości generowane przez serwer przy użyciu parametrów wyjściowych. Następnie przykład wykonuje aktualizację w celu przesłania oczekujących wierszy i wyświetla zawartość <xref:System.Data.DataTable>.  
   
 ```csharp  
 public void OracleSequence(String connectionString)  
@@ -100,5 +100,5 @@ public void OracleSequence(String connectionString)
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Oracle i ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Oracle i ADO.NET](oracle-and-adonet.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

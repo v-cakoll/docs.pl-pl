@@ -8,48 +8,48 @@ helpviewer_keywords:
 ms.assetid: 77526f65-b71c-4483-9d19-3a3751fd8a45
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c76db644ffee478003d834460c155c4ec6d0070
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b91f2a749557f94a68f1929d649824719160d9ee
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944615"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786956"
 ---
 # <a name="constants-unmanaged-api-reference"></a>Stałe (Niezarządzany wykaz interfejsów API)
-W tym temacie opisano typ języka, dostawcy języka i stałe typów dokumentów, które są zdefiniowane w CorSym.idl.  
+W tym temacie opisano typy języka, dostawcy języka i stałe typu dokumentu, które są zdefiniowane w CorSym. idl.  
   
-## <a name="language-type-constants"></a>Stałe typów języka  
- W poniższej tabeli przedstawiono języka stałe typów, które reprezentują identyfikatorami GUID określającymi języków programowania.  
+## <a name="language-type-constants"></a>Stałe typu języka  
+ W poniższej tabeli przedstawiono stałe typu języka, które reprezentują identyfikatory GUID, które identyfikują Języki programowania.  
   
 |Symbol|Opis|  
 |------------|-----------------|  
-|CorSym_LanguageType_C|Określa język C.|  
-|CorSym_LanguageType_CPlusPlus|Wskazuje języka C++.|  
-|CorSym_LanguageType_CSharp|Wskazuje C# języka.|  
-|CorSym_LanguageType_Basic|Wskazuje podstawowy język.|  
-|CorSym_LanguageType_Java|Wskazuje języka Java.|  
-|CorSym_LanguageType_Cobol|Określa język COBOL.|  
-|CorSym_LanguageType_Pascal|Określa język Pascal.|  
-|CorSym_LanguageType_ILAssembly|Wskazuje kod zestawu Microsoft intermediate language (MSIL).|  
-|CorSym_LanguageType_JScript|Wskazuje języka JScript.|  
-|CorSym_LanguageType_SMC|Określa język SMC.|  
-|CorSym_LanguageType_MCPlusPlus|Wskazuje języka C++, włączone dla programu .NET Framework.|  
+|CorSym_LanguageType_C|Wskazuje język C.|  
+|CorSym_LanguageType_CPlusPlus|Wskazuje C++ język.|  
+|CorSym_LanguageType_CSharp|Wskazuje C# język.|  
+|CorSym_LanguageType_Basic|Wskazuje język podstawowy.|  
+|CorSym_LanguageType_Java|Wskazuje język Java.|  
+|CorSym_LanguageType_Cobol|Wskazuje język COBOL.|  
+|CorSym_LanguageType_Pascal|Wskazuje język Pascala.|  
+|CorSym_LanguageType_ILAssembly|Wskazuje kod zestawu języka pośredniego firmy Microsoft (MSIL).|  
+|CorSym_LanguageType_JScript|Wskazuje Język JScript.|  
+|CorSym_LanguageType_SMC|Wskazuje język SMC.|  
+|CorSym_LanguageType_MCPlusPlus|Wskazuje C++ język włączony dla .NET Framework.|  
   
 ## <a name="language-vendor-constants"></a>Stałe dostawcy języka  
- W poniższej tabeli przedstawiono języka dostawcy stałych, które reprezentują identyfikatorami GUID określającymi programowania dostawców języka.  
+ W poniższej tabeli przedstawiono stałe dostawcy języka, które reprezentują identyfikatory GUID, które identyfikują dostawców języka programowania.  
   
 |Symbol|Opis|  
 |------------|-----------------|  
-|CorSym_LanguageVendor_Microsoft|Wskazuje firmy Microsoft.|  
+|CorSym_LanguageVendor_Microsoft|Wskazuje firmę Microsoft.|  
   
-## <a name="document-type-constants"></a>Stałe typów dokumentów  
- W poniższej tabeli przedstawiono dokumentu stałe typów, które reprezentują identyfikatorami GUID określającymi typy dokumentów.  
+## <a name="document-type-constants"></a>Stałe typu dokumentu  
+ W poniższej tabeli przedstawiono stałe typu dokumentu reprezentujące identyfikatory GUID, które identyfikują typy dokumentów.  
   
 |Symbol|Opis|  
 |------------|-----------------|  
 |CorSym_DocumentType_Text|Wskazuje dokument tekstowy.|  
-|CorSym_DocumentType_MC|Wskazuje dokument-text.|  
+|CorSym_DocumentType_MC|Wskazuje dokument bez tekstu.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Niezarządzane interfejsy API — informacje](../../../docs/framework/unmanaged-api/index.md)
+- [Niezarządzane interfejsy API — informacje](index.md)

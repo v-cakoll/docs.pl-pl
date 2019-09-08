@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7fddfffed499537f5746998a94a3ef32d035685
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ce09eca30e1edb9e1afc02216a07955a5fed4fd2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741603"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787255"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2 — Metoda
-Inicjuje importowania typów. Wywołaj tę metodę ma się zacząć importowanie typów z każdym zakresem importowane za pośrednictwem [importfile — metoda](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
+Inicjuje importowanie typów. Wywołaj tę metodę, aby rozpocząć importowanie typów z każdego zakresu zaimportowanego za pomocą [metody ImportFile —](importfile-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,31 +41,31 @@ HRESULT ImportTypes2(
   
 ## <a name="parameters"></a>Parametry  
  `AssemblyID`  
- Identyfikator zestawu, do którego chcesz zaimportować.  
+ Identyfikator zestawu do zaimportowania.  
   
  `FileToken`  
- Identyfikator pliku do, z którego chcesz zaimportować.  
+ Identyfikator pliku, z którego ma zostać zaimportowany.  
   
  `dwScope`  
- Liczony od zera zakres, z którego chcesz zaimportować.  
+ Zakres od zera, z którego ma zostać zaimportowany.  
   
  `phEnum`  
- Odbiera uchwytu modułu wyliczającego dla typów w danym zakresie.  
+ Odbiera dojście modułu wyliczającego dla typów w danym zakresie.  
   
  `ppImportScope`  
- Opcjonalnie odbiera [imetadataimport2 — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) interfejsu.  
+ Opcjonalnie odbiera Interfejs [interfejsu IMetaDataImport2](../metadata/imetadataimport2-interface.md) .  
   
  `pdwCountOfTypes`  
- Opcjonalnie odbiera liczba typów w określonym zakresie.  
+ Opcjonalnie otrzymuje liczbę typów w określonym zakresie.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga alink.h  
+ Wymaga Alink. h  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2, interfejs](ialink2-interface.md)
+- [IALink, interfejs](ialink-interface.md)
+- [ALink, interfejs API](index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: 50dc56a3c4c87bf9ac197b127c036c41ac833a88
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 21a0a02516a1fbe24378235b910df0a602900a21
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931123"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790377"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Wykonywanie zapytania dotyczącego usługi danych (Usługi danych programu WCF)
 
@@ -43,7 +43,7 @@ Następujące zapytanie, gdy jest wykonywane, zwraca wszystkie `Customers` jedno
 [!code-csharp[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomersspecific)]
 [!code-vb[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomersspecific)]
 
-Aby uzyskać więcej informacji, zobacz [jak: Wykonaj zapytania](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)dotyczące usługi danych.
+Aby uzyskać więcej informacji, zobacz [jak: Wykonaj zapytania](how-to-execute-data-service-queries-wcf-data-services.md)dotyczące usługi danych.
 
 Klient obsługuje zapytania dotyczące obiektów z późnym wiązaniem, na przykład w przypadku użycia typu *dynamicznego* w C# [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Jednak ze względu na wydajność należy zawsze tworzyć zapytania o jednoznacznie określonym typie względem usługi danych. <xref:System.Tuple> Typ i obiekty dynamiczne nie są obsługiwane przez klienta.
 
@@ -54,7 +54,7 @@ Ponieważ klasa implementuje interfejs zdefiniowany przez LINQ, biblioteka klien
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]
 
-To zapytanie LINQ jest tłumaczone na następujący identyfikator URI zapytania, który jest wykonywany względem usługi danych [szybkiego startu](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) opartego na bazie Northwind:
+To zapytanie LINQ jest tłumaczone na następujący identyfikator URI zapytania, który jest wykonywany względem usługi danych [szybkiego startu](quickstart-wcf-data-services.md) opartego na bazie Northwind:
 
 ```
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30
@@ -63,7 +63,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 > [!NOTE]
 > Zestaw zapytań można wyrazić elementu w składni LINQ jest szerszy niż te włączone w składni identyfikatorów URI opartych na reprezentacji stanu (REST), które są używane przez usługi danych. Występuje <xref:System.NotSupportedException> , gdy nie można zamapować zapytania na identyfikator URI w docelowej usłudze danych.
 
-Aby uzyskać więcej informacji, zobacz temat zagadnienia dotyczące [LINQ](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md).
+Aby uzyskać więcej informacji, zobacz temat [zagadnienia dotyczące LINQ](linq-considerations-wcf-data-services.md).
 
 ## <a name="adding-query-options"></a>Dodawanie opcji zapytania
 
@@ -77,9 +77,9 @@ Można użyć `$orderby` opcji zapytania do porządkowania i filtrowania zapytan
 [!code-csharp[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#orderwithfilter)]
 [!code-vb[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#orderwithfilter)]
 
-Można wywołać metodę po <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> kolei, aby skonstruować złożone wyrażenia zapytań. Aby uzyskać więcej informacji, zobacz [jak: Dodaj opcje zapytania do zapytania](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)usługi danych.
+Można wywołać metodę po <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> kolei, aby skonstruować złożone wyrażenia zapytań. Aby uzyskać więcej informacji, zobacz [jak: Dodaj opcje zapytania do zapytania](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)usługi danych.
 
-Opcje zapytania dają inny sposób na wyrażenie składników składni zapytania LINQ. Aby uzyskać więcej informacji, zobacz temat zagadnienia dotyczące [LINQ](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md).
+Opcje zapytania dają inny sposób na wyrażenie składników składni zapytania LINQ. Aby uzyskać więcej informacji, zobacz temat [zagadnienia dotyczące LINQ](linq-considerations-wcf-data-services.md).
 
 > [!NOTE]
 > Nie można dodać opcji <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> zapytaniadoidentyfikatoraURIzapytaniaprzyużyciumetody.`$select` Zalecamy użycie metody LINQ <xref:System.Linq.Enumerable.Select%2A> , aby klient `$select` generował opcję zapytania w identyfikatorze URI żądania.
@@ -102,7 +102,7 @@ Gdy wykonywane, <xref:System.Collections.Generic.IEnumerable%601> zwraca <xref:S
 [!code-csharp[Astoria Northwind Client#GetResponseSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getresponsespecific)]
 [!code-vb[Astoria Northwind Client#GetResponseSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getresponsespecific)]
 
-Wystąpienia typu jednostki reprezentujące jednostki w usłudze danych są tworzone na kliencie przez proces o nazwie Object materializację. Aby uzyskać więcej informacji, zobacz [obiekt materializację](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md). <xref:System.Data.Services.Client.QueryOperationResponse%601> Obiekt implementuje<xref:System.Collections.Generic.IEnumerable%601> , aby zapewnić dostęp do wyników zapytania.
+Wystąpienia typu jednostki reprezentujące jednostki w usłudze danych są tworzone na kliencie przez proces o nazwie Object materializację. Aby uzyskać więcej informacji, zobacz [obiekt materializację](object-materialization-wcf-data-services.md). <xref:System.Data.Services.Client.QueryOperationResponse%601> Obiekt implementuje<xref:System.Collections.Generic.IEnumerable%601> , aby zapewnić dostęp do wyników zapytania.
 
 <xref:System.Data.Services.Client.QueryOperationResponse%601> Ponadto ma następujących członków, którzy umożliwiają dostęp do dodatkowych informacji na temat wyniku zapytania:
 
@@ -121,36 +121,36 @@ Wystąpienia typu jednostki reprezentujące jednostki w usłudze danych są twor
 Domyślnie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] zwraca tylko dane, które są jawnie wybrane przez identyfikator URI zapytania. Dzięki temu można jawnie ładować dodatkowe dane z usługi danych, gdy jest to konieczne. Żądanie jest wysyłane do usługi danych przy każdym jawnie załadowaniu danych z usługi danych. Dane, które mogą zostać załadowane jawnie obejmują powiązane jednostki, stronicowane dane odpowiedzi i strumienie danych binarnych.
 
 > [!NOTE]
-> Ponieważ usługa danych może zwrócić stronicowaną odpowiedź, zalecamy, aby aplikacja korzystała ze wzorca programowania do obsługi odpowiedzi na stronicowaną usługę danych. Aby uzyskać więcej informacji, zobacz [ładowanie odroczonej zawartości](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).
+> Ponieważ usługa danych może zwrócić stronicowaną odpowiedź, zalecamy, aby aplikacja korzystała ze wzorca programowania do obsługi odpowiedzi na stronicowaną usługę danych. Aby uzyskać więcej informacji, zobacz [ładowanie odroczonej zawartości](loading-deferred-content-wcf-data-services.md).
 
-Ilość danych zwracanych przez zapytanie może być również zmniejszana przez określenie, że tylko niektóre właściwości jednostki są zwracane w odpowiedzi. Aby uzyskać więcej informacji, zobacz [projekcje zapytań](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md).
+Ilość danych zwracanych przez zapytanie może być również zmniejszana przez określenie, że tylko niektóre właściwości jednostki są zwracane w odpowiedzi. Aby uzyskać więcej informacji, zobacz [projekcje zapytań](query-projections-wcf-data-services.md).
 
 ## <a name="getting-a-count-of-the-total-number-of-entities-in-the-set"></a>Pobieranie liczby łącznej liczby jednostek w zestawie
 
 W niektórych scenariuszach warto znać łączną liczbę jednostek w zestawie jednostek, a nie tylko liczbę zwróconą przez zapytanie. Wywołaj <xref:System.Data.Services.Client.DataServiceQuery%601> metodę w programie, aby zażądać, aby całkowita liczba jednostek w zestawie była uwzględniona w wyniku zapytania. <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> W takim przypadku <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> Właściwość <xref:System.Data.Services.Client.QueryOperationResponse%601> zwracanej wartości zwraca łączną liczbę jednostek w zestawie.
 
-Możesz również uzyskać tylko całkowitą liczbę jednostek w zestawie <xref:System.Int32> jako lub <xref:System.Int64> jako wartość, wywołując <xref:System.Linq.Enumerable.Count%2A> odpowiednio metody lub <xref:System.Linq.Enumerable.LongCount%2A> . Gdy te metody są wywoływane, element <xref:System.Data.Services.Client.QueryOperationResponse%601> nie jest zwracany; zwracana jest tylko wartość Count. Aby uzyskać więcej informacji, zobacz [jak: Określ liczbę jednostek zwróconych przez zapytanie](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md).
+Możesz również uzyskać tylko całkowitą liczbę jednostek w zestawie <xref:System.Int32> jako lub <xref:System.Int64> jako wartość, wywołując <xref:System.Linq.Enumerable.Count%2A> odpowiednio metody lub <xref:System.Linq.Enumerable.LongCount%2A> . Gdy te metody są wywoływane, element <xref:System.Data.Services.Client.QueryOperationResponse%601> nie jest zwracany; zwracana jest tylko wartość Count. Aby uzyskać więcej informacji, zobacz [jak: Określ liczbę jednostek zwróconych przez zapytanie](number-of-entities-returned-by-a-query-wcf.md).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-- [Projekcje zapytania](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
+- [Projekcje zapytania](query-projections-wcf-data-services.md)
 
-- [Materializacja obiektu](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)
+- [Materializacja obiektu](object-materialization-wcf-data-services.md)
 
-- [Zagadnienia dotyczące LINQ](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)
+- [Zagadnienia dotyczące LINQ](linq-considerations-wcf-data-services.md)
 
-- [Instrukcje: Wykonaj zapytania dotyczące usługi danych](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)
+- [Instrukcje: Wykonaj zapytania dotyczące usługi danych](how-to-execute-data-service-queries-wcf-data-services.md)
 
-- [Instrukcje: Dodawanie opcji zapytania do zapytania usługi danych](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
+- [Instrukcje: Dodawanie opcji zapytania do zapytania usługi danych](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
 
-- [Instrukcje: Określanie liczby jednostek zwróconych przez zapytanie](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)
+- [Instrukcje: Określanie liczby jednostek zwróconych przez zapytanie](number-of-entities-returned-by-a-query-wcf.md)
 
-- [Instrukcje: Określ poświadczenia klienta dla żądania usługi danych](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)
+- [Instrukcje: Określ poświadczenia klienta dla żądania usługi danych](specify-client-creds-for-a-data-service-request-wcf.md)
 
-- [Instrukcje: Ustawianie nagłówków w żądaniu klienta](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)
+- [Instrukcje: Ustawianie nagłówków w żądaniu klienta](how-to-set-headers-in-the-client-request-wcf-data-services.md)
 
-- [Instrukcje: Wyniki zapytania projektu](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)
+- [Instrukcje: Wyniki zapytania projektu](how-to-project-query-results-wcf-data-services.md)
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Biblioteka klienta usług danych WCF](wcf-data-services-client-library.md)

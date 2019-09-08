@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: 5c0a3d14-5f26-4267-94a9-82c30f8db09a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f41a233e9b5338bdb0a324ff9af267a97821d4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a95ff535a4d0847fbd4b8af28f873b67a1829a4f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967703"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798823"
 ---
 # <a name="tlbexp-helper-functions-unmanaged-api-reference"></a>Funkcje pomocy narzędziaTlbexp (Niezarządzany wykaz interfejsów API)
-[Narzędzie Eksporter biblioteki typów](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) (Tlbexp.exe), ładuje bibliotekę dołączaną dynamicznie o nazwie TlbRef.dll. Ta biblioteka DLL zawiera dwóch funkcji pomocnika oraz interfejs, który korzysta z narzędzia eksportu w procesie konwersji zestawu do typu biblioteki.  
+[Narzędzie eksportu biblioteki typów](../../tools/tlbexp-exe-type-library-exporter.md) (Tlbexp. exe) ładuje bibliotekę dołączaną dynamicznie o nazwie TlbRef. dll. Ta biblioteka DLL zawiera dwie funkcje pomocnika i interfejs, którego używa narzędzie eksportu w procesie konwersji zestawu na typ biblioteki.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [GetTypeLibInfo, funkcja](../../../../docs/framework/unmanaged-api/tlbexp/gettypelibinfo-function.md)  
- Zawiera informacje o lokalizacji i systemu operacyjnego dla biblioteki typów.  
+ [GetTypeLibInfo, funkcja](gettypelibinfo-function.md)  
+ Zapewnia lokalizację i informacje o systemie operacyjnym dla biblioteki typów.  
   
- [LoadTypeLibWithResolver, funkcja](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md)  
- Ładuje bibliotekę typów, przy użyciu implementacji [itypelibresolver — interfejs](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) do rozwiązania odwołanie do biblioteki typów.  
+ [LoadTypeLibWithResolver, funkcja](loadtypelibwithresolver-function.md)  
+ Ładuje bibliotekę typów przy użyciu implementacji [interfejsu ITypeLibResolver](itypelibresolver-interface.md) , aby rozwiązać wszelkie odwołania do bibliotek typów.  
   
- [ITypeLibResolver, interfejs](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)  
- Udostępnia [resolvetypelib — metoda](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md), która zwraca w pełni kwalifikowaną ścieżkę biblioteki typów.
+ [ITypeLibResolver, interfejs](itypelibresolver-interface.md)  
+ Udostępnia [metodę ResolveTypeLib —](resolvetypelib-method.md), która zwraca w pełni kwalifikowaną ścieżkę do biblioteki typów.

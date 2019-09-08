@@ -4,38 +4,38 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], extending
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
-ms.openlocfilehash: 95dacf3ef975be1ddd56db747936cca35db50625
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45216493a3afa23f24a085964a2c43e19b197d4b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857925"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797123"
 ---
 # <a name="extending-security"></a>Rozszerzanie zabezpieczeń
-Aby uwzględnić nowe oświadczenia i tokeny niestandardowe, można rozszerzyć infrastruktura zabezpieczeń programu Windows Communication Foundation (WCF). Tematy w tej sekcji pokazano, jak to zrobić.  
+W celu uwzględnienia nowych typów i tokenów niestandardowych można zwiększyć infrastrukturę zabezpieczeń Windows Communication Foundation (WCF). W tematach w tej sekcji pokazano, jak to zrobić.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
- [Niestandardowe poświadczenia i weryfikacja poświadczeń](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
- W tym artykule wyjaśniono, jak Model tożsamości jest używany podczas sprawdzania poprawności niestandardowych poświadczeń.  
+ [Niestandardowe poświadczenia i weryfikacja poświadczeń](custom-credential-and-credential-validation.md)  
+ Wyjaśnia, jak model tożsamości jest używany podczas sprawdzania poprawności poświadczeń niestandardowych.  
   
- [Tokeny niestandardowe](../../../../docs/framework/wcf/extending/custom-tokens.md)  
- Wystawionych tokenów z Usługa tokenu zabezpieczającego (STS) zazwyczaj są tokeny SAML. W tym temacie wyjaśniono, jak utworzyć niestandardowy typ tokenu.  
+ [Tokeny niestandardowe](custom-tokens.md)  
+ Wystawione tokeny z usługi tokenu zabezpieczającego (STS) są zazwyczaj tokenami SAML. W tym temacie wyjaśniono, jak utworzyć niestandardowy typ tokenu.  
   
- [Autoryzacja niestandardowa](../../../../docs/framework/wcf/extending/custom-authorization.md)  
- Wyjaśnia, jak zaimplementować niestandardowy autoryzacji.  
+ [Autoryzacja niestandardowa](custom-authorization.md)  
+ Wyjaśnia, jak zaimplementować autoryzację niestandardową.  
   
- [Przesłanianie tożsamości usługi na potrzeby uwierzytelniania](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)  
- W tym artykule opisano sposób zastąpienia tożsamości usługi na potrzeby uwierzytelniania.  
+ [Przesłanianie tożsamości usługi na potrzeby uwierzytelniania](overriding-the-identity-of-a-service-for-authentication.md)  
+ Opisuje sposób przesłania tożsamości usługi na potrzeby uwierzytelniania.  
   
- [Instrukcje: Tworzenie niestandardowego weryfikatora tożsamości klienta](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
- Pokazuje, jak w celu weryfikowania tożsamości niestandardowego punktu końcowego.  
+ [Instrukcje: Tworzenie niestandardowego weryfikatora tożsamości klienta](how-to-create-a-custom-client-identity-verifier.md)  
+ Pokazuje, jak zweryfikować tożsamość niestandardowego punktu końcowego.  
   
- [Instrukcje: Używanie osobnych certyfikatów X.509 do podpisywania i szyfrowania](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
- Komunikaty są zwykle podpisane i szyfrowane za pomocą jednego certyfikatu. W tym temacie wyjaśniono, jak dwa certyfikaty mogą być używane, gdy jest to wymagane.  
+ [Instrukcje: Używanie osobnych certyfikatów X. 509 do podpisywania i szyfrowania](how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
+ Komunikaty są zwykle podpisywane i szyfrowane za pomocą jednego certyfikatu. W tym temacie wyjaśniono, w jaki sposób mogą być używane dwa certyfikaty, jeśli jest to wymagane.  
   
- [Instrukcje: Zmienianie dostawcy kryptograficznego dla klucza prywatnego certyfikatu X.509](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
- Wyjaśnia, jak zmienić dostawcy usług kryptograficznych, używane do zapewnienia klucza prywatnego certyfikatu X.509 oraz integrować dostawcę w ramach usług Windows Communication Foundation (WCF).  
+ [Instrukcje: Zmień dostawcę usług kryptograficznych dla klucza prywatnego certyfikatu X. 509](change-cryptographic-provider-x509-certificate-private-key.md)  
+ Wyjaśnia, jak zmienić dostawcę usług kryptograficznych używany do udostępniania klucza prywatnego certyfikatu X. 509 oraz jak zintegrować dostawcę z platformą Windows Communication Foundation (WCF).  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
@@ -51,10 +51,10 @@ Aby uwzględnić nowe oświadczenia i tokeny niestandardowe, można rozszerzyć 
  <xref:System.IdentityModel.Selectors>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Zabezpieczenia](../../../../docs/framework/wcf/feature-details/security.md)  
+ [Zabezpieczenia](../feature-details/security.md)  
   
- [Podstawy programowania przy użyciu programu WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Podstawy programowania przy użyciu programu WCF](../basic-wcf-programming.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Przegląd zabezpieczeń](../feature-details/security-overview.md)

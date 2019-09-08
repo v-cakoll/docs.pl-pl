@@ -9,28 +9,28 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: d2d03e11c49d3bde042cc46811f21cc2d899b4b8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c0d2d1dac43dd178680adbc123d5ce4f88fc0cc0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952253"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779885"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Uwagi dotyczące LINQ (Usługi danych programu WCF)
-Ten temat zawiera informacje na temat sposobu tworzenia i wykonywania zapytań LINQ, gdy [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] używasz klienta i ograniczeń programu LINQ do wysyłania zapytań do usługi danych [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]implementującej. Aby uzyskać więcej informacji o redagowaniu i wykonywaniu zapytań [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]dotyczących usługi danych opartych na usłudze, zobacz [wykonywanie zapytań dotyczących usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+Ten temat zawiera informacje na temat sposobu tworzenia i wykonywania zapytań LINQ, gdy [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] używasz klienta i ograniczeń programu LINQ do wysyłania zapytań do usługi danych [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]implementującej. Aby uzyskać więcej informacji o redagowaniu i wykonywaniu zapytań [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]dotyczących usługi danych opartych na usłudze, zobacz [wykonywanie zapytań dotyczących usługi danych](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="composing-linq-queries"></a>Redagowanie zapytań LINQ  
  LINQ umożliwia tworzenie zapytań względem kolekcji obiektów, które implementują <xref:System.Collections.Generic.IEnumerable%601>. Zarówno okno dialogowe **Dodaj odwołanie do usługi** w programie Visual Studio, jak i Narzędzie DataSvcUtil. exe są używane do generowania reprezentacji [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usługi jako klasy kontenera jednostek, która dziedziczy po <xref:System.Data.Services.Client.DataServiceContext>, a także obiektów, które reprezentują jednostki zwrócone w źródłach danych. Narzędzia te generują również właściwości klasy kontenera jednostek dla kolekcji, które są udostępniane jako źródła danych przez usługę. Każda z tych właściwości klasy, która hermetyzuje usługę danych, zwraca <xref:System.Data.Services.Client.DataServiceQuery%601>. <xref:System.Data.Services.Client.DataServiceQuery%601> Ponieważ Klasa<xref:System.Linq.IQueryable%601> implementuje interfejs zdefiniowany przez LINQ, można utworzyć zapytanie LINQ względem kanałów ujawnianych przez usługę danych, które są tłumaczone przez bibliotekę kliencką na identyfikator URI żądania zapytania, który jest wysyłany do usługi danych na działania.  
   
 > [!IMPORTANT]
-> Zestaw zapytań można wyrazić elementu w składni LINQ jest szerszy niż te włączone w składni identyfikatora URI, który jest używany przez [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usługi danych. Występuje <xref:System.NotSupportedException> , gdy nie można zamapować zapytania na identyfikator URI w docelowej usłudze danych. Aby uzyskać więcej informacji, zobacz [nieobsługiwane metody LINQ](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods) w tym temacie.  
+> Zestaw zapytań można wyrazić elementu w składni LINQ jest szerszy niż te włączone w składni identyfikatora URI, który jest używany przez [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usługi danych. Występuje <xref:System.NotSupportedException> , gdy nie można zamapować zapytania na identyfikator URI w docelowej usłudze danych. Aby uzyskać więcej informacji, zobacz [nieobsługiwane metody LINQ](linq-considerations-wcf-data-services.md#unsupportedMethods) w tym temacie.  
   
  Poniższy przykład to zapytanie LINQ zwracające wartość `Orders` kosztu frachtu o wartości większej niż $30 i sortuje wyniki według daty wysyłki, rozpoczynając od ostatniego dnia wysyłki:  
   
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]      
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]    
   
- To zapytanie LINQ jest tłumaczone na następujący identyfikator URI zapytania, który jest wykonywany względem usługi danych [szybkiego startu](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) opartego na bazie Northwind:  
+ To zapytanie LINQ jest tłumaczone na następujący identyfikator URI zapytania, który jest wykonywany względem usługi danych [szybkiego startu](quickstart-wcf-data-services.md) opartego na bazie Northwind:  
   
 ```  
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30  
@@ -46,11 +46,11 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Klient może przetłumaczyć oba rodzaje złożonych zapytań na identyfikator URI zapytania, a zapytanie LINQ, dołączając metody zapytania do wyrażenia zapytania. Podczas redagowania zapytań LINQ przez dołączenie składni metody do wyrażenia zapytania lub <xref:System.Data.Services.Client.DataServiceQuery%601>, operacje są dodawane do identyfikatora URI zapytania w kolejności, w której metody są wywoływane. Jest to równoznaczne z wywołaniem <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> metody w celu dodania każdej opcji zapytania do identyfikatora URI zapytania.  
   
 ## <a name="executing-linq-queries"></a>Wykonywanie zapytań LINQ  
- Niektóre metody zapytania LINQ, takie jak <xref:System.Linq.Enumerable.First%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> lub <xref:System.Linq.Enumerable.Single%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>, po dołączeniu do zapytania, powodują wykonanie zapytania. Zapytanie jest również wykonywane, gdy wyniki są wyliczane niejawnie, `foreach` na przykład w pętli lub po przypisaniu zapytania `List` do kolekcji. Aby uzyskać więcej informacji, zobacz [wykonywanie zapytań dotyczących usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+ Niektóre metody zapytania LINQ, takie jak <xref:System.Linq.Enumerable.First%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> lub <xref:System.Linq.Enumerable.Single%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>, po dołączeniu do zapytania, powodują wykonanie zapytania. Zapytanie jest również wykonywane, gdy wyniki są wyliczane niejawnie, `foreach` na przykład w pętli lub po przypisaniu zapytania `List` do kolekcji. Aby uzyskać więcej informacji, zobacz [wykonywanie zapytań dotyczących usługi danych](querying-the-data-service-wcf-data-services.md).  
   
- Klient wykonuje zapytanie LINQ w dwóch częściach. Zawsze, gdy to możliwe, wyrażenia LINQ w zapytaniu są najpierw oceniane na kliencie, a następnie generowane jest zapytanie oparte na identyfikatorze URI i wysyłane do usługi danych w celu oceny danych w usłudze. Aby uzyskać więcej informacji, zapoznaj się z sekcją [klient i wykonanie serwera](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md#executingQueries) w temacie wykonywanie [zapytań do usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+ Klient wykonuje zapytanie LINQ w dwóch częściach. Zawsze, gdy to możliwe, wyrażenia LINQ w zapytaniu są najpierw oceniane na kliencie, a następnie generowane jest zapytanie oparte na identyfikatorze URI i wysyłane do usługi danych w celu oceny danych w usłudze. Aby uzyskać więcej informacji, zapoznaj się z sekcją [klient i wykonanie serwera](querying-the-data-service-wcf-data-services.md#executingQueries) w temacie wykonywanie [zapytań do usługi danych](querying-the-data-service-wcf-data-services.md).  
   
- Gdy nie można przetłumaczyć zapytania LINQ w [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]identyfikator URI zgodny z zapytaniem, wyjątek jest zgłaszany, gdy zostanie podjęta próba wykonania. Aby uzyskać więcej informacji, zobacz [wykonywanie zapytań dotyczących usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+ Gdy nie można przetłumaczyć zapytania LINQ w [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]identyfikator URI zgodny z zapytaniem, wyjątek jest zgłaszany, gdy zostanie podjęta próba wykonania. Aby uzyskać więcej informacji, zobacz [wykonywanie zapytań dotyczących usługi danych](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="linq-query-examples"></a>Przykłady zapytań LINQ  
  Przykłady w poniższych sekcjach przedstawiają rodzaje zapytań LINQ, które mogą być wykonywane w odniesieniu [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] do usługi.  
@@ -136,7 +136,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
 <a name="expand"></a>   
 ### <a name="expand"></a>Expand  
- Podczas wykonywania zapytania dotyczącego [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usługi danych można zażądać, aby jednostki powiązane z jednostką dodaną przez zapytanie były dołączone do zwróconego źródła danych. Metoda jest wywoływana <xref:System.Data.Services.Client.DataServiceQuery%601> dla elementu dla zestawu jednostek przeznaczonego dla zapytania LINQ, z pokrewną nazwą `path` zestawu jednostek podaną jako parametr. <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> Aby uzyskać więcej informacji, zobacz [ładowanie odroczonej zawartości](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).  
+ Podczas wykonywania zapytania dotyczącego [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usługi danych można zażądać, aby jednostki powiązane z jednostką dodaną przez zapytanie były dołączone do zwróconego źródła danych. Metoda jest wywoływana <xref:System.Data.Services.Client.DataServiceQuery%601> dla elementu dla zestawu jednostek przeznaczonego dla zapytania LINQ, z pokrewną nazwą `path` zestawu jednostek podaną jako parametr. <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> Aby uzyskać więcej informacji, zobacz [ładowanie odroczonej zawartości](loading-deferred-content-wcf-data-services.md).  
   
  W poniższych przykładach pokazano równoważne sposoby używania <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> metody w kwerendzie:  
   
@@ -212,7 +212,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wykonywanie zapytań do usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
-- [Projekcje zapytania](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
-- [Materializacja obiektu](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)
+- [Wykonywanie zapytań do usługi danych](querying-the-data-service-wcf-data-services.md)
+- [Projekcje zapytania](query-projections-wcf-data-services.md)
+- [Materializacja obiektu](object-materialization-wcf-data-services.md)
 - [Wykonała Konwencje identyfikatora URI](https://go.microsoft.com/fwlink/?LinkID=185564)

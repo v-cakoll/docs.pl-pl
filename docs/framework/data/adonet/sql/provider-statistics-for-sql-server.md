@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: e13c4df87909629a45830e3b7950551434ed5ab1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b6fa4207531e86cbde8657d0c47596f22c886f89
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946587"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791872"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Statystyki dostawcy dla programu SQL Server
 Począwszy od .NET Framework w wersji 2,0, .NET Framework Dostawca danych dla SQL Server obsługuje statystyki czasu wykonywania. Aby włączyć statystykę, należy ustawić <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> Właściwość <xref:System.Data.SqlClient.SqlConnection> obiektu na `True` po utworzeniu prawidłowego obiektu połączenia. Po włączeniu statystyk można je przejrzeć jako "migawkę w czasie", pobierając <xref:System.Collections.IDictionary> odwołanie <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> za pomocą metody <xref:System.Data.SqlClient.SqlConnection> obiektu. Wyliczasz listę jako zbiór wpisów słownika par nazwa/wartość. Te pary nazwa/wartość są nieuporządkowane. W dowolnym momencie można wywołać <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> metodę <xref:System.Data.SqlClient.SqlConnection> obiektu, aby zresetować liczniki. Jeśli zbieranie informacji statystycznych nie zostało włączone, wyjątek nie jest generowany. Ponadto, jeśli <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> jest wywoływana bez <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> uprzedniego wywołania, pobierane wartości są początkowymi wartościami dla każdego wpisu. W przypadku włączenia statystyk, uruchomienia aplikacji przez pewien czas, a następnie wyłączenia statystyk, pobrane wartości będą odzwierciedlać wartości zbierane do punktu, w którym statystyki zostały wyłączone. Wszystkie zebrane wartości statystyczne dotyczą poszczególnych połączeń.  
@@ -340,5 +340,5 @@ namespace CS_Stats_Console_GetAll
   
 ## <a name="see-also"></a>Zobacz także
 
-- [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server i ADO.NET](index.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

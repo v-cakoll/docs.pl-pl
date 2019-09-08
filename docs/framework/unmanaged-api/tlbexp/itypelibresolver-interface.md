@@ -16,32 +16,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa3135465673bedea1c6827da622903279d1bcf1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ebc885e000f902670dbf74d5ecc11fd956f8c81
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61964635"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798877"
 ---
 # <a name="itypelibresolver-interface"></a>ITypeLibResolver — Interfejs
-Udostępnia [resolvetypelib — metoda](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md), która jest rozpoznawana jako ścieżkę pliku biblioteki typów.  
+Udostępnia [metodę ResolveTypeLib —](resolvetypelib-method.md), która rozpoznaje ścieżkę pliku biblioteki typów.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[ResolveTypeLib, metoda](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)|Rozpoznaje prostą nazwę biblioteki typów, przywracając jego w pełni kwalifikowaną ścieżkę.|  
+|[ResolveTypeLib, metoda](resolvetypelib-method.md)|Rozpoznaje prostą nazwę biblioteki typów przez zwrócenie jej w pełni kwalifikowanej ścieżki.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** TlbRef.idl, TlbRef.h  
+ **Nagłówki** TlbRef. idl, TlbRef. h  
   
- **Biblioteka:** TlbRef.lib  
+ **Biblioteki** TlbRef.lib  
   
- **Wersja programu .NET framework:** 4, 3.5, 3.0, 2.0  
+ **Wersja .NET Framework:** 4, 3,5, 3,0, 2,0  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Tlbexp, funkcje pomocy](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
-- [LoadTypeLibEx — funkcja](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+- [Tlbexp, funkcje pomocy](index.md)
+- [LoadTypeLibEx, funkcja](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

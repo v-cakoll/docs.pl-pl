@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 481e0983a40bb551d08894ea32f76f332b8fe5a3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3a1e369fe52a2a529fb3511d9a65067b4a56ec1e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943139"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797252"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań
-Zachowania umożliwiają modyfikowanie zachowania domyślnego i Dodawanie rozszerzeń niestandardowych, które sprawdzają i weryfikują konfigurację usługi lub modyfikują zachowanie środowiska uruchomieniowego w aplikacjach klienckich i usług Windows Communication Foundation (WCF). W tym temacie opisano interfejsy zachowań, sposób ich implementacji oraz sposób ich dodawania do opisu usługi (w aplikacji usługi) lub punktu końcowego (w aplikacji klienckiej) programowo lub w pliku konfiguracji. Aby uzyskać więcej informacji o używaniu zachowań dostarczonych przez system, zobacz [Określanie zachowania usługi w czasie wykonywania](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) i [Określanie zachowania klienta w czasie wykonywania](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
+Zachowania umożliwiają modyfikowanie zachowania domyślnego i Dodawanie rozszerzeń niestandardowych, które sprawdzają i weryfikują konfigurację usługi lub modyfikują zachowanie środowiska uruchomieniowego w aplikacjach klienckich i usług Windows Communication Foundation (WCF). W tym temacie opisano interfejsy zachowań, sposób ich implementacji oraz sposób ich dodawania do opisu usługi (w aplikacji usługi) lub punktu końcowego (w aplikacji klienckiej) programowo lub w pliku konfiguracji. Aby uzyskać więcej informacji o używaniu zachowań dostarczonych przez system, zobacz [Określanie zachowania usługi w czasie wykonywania](../specifying-service-run-time-behavior.md) i [Określanie zachowania klienta w czasie wykonywania](../specifying-client-run-time-behavior.md).  
   
 ## <a name="behaviors"></a>Zachowania  
  Typy zachowań są dodawane do obiektów opisu punktu końcowego usługi lub usługi (odpowiednio do usługi lub klienta) przed użyciem tych obiektów przez Windows Communication Foundation (WCF), aby utworzyć środowisko uruchomieniowe, które wykonuje usługę WCF lub klienta WCF. Gdy te zachowania są wywoływane podczas procesu konstruowania środowiska uruchomieniowego, są w stanie uzyskać dostęp do właściwości i metod środowiska uruchomieniowego, które modyfikują środowisko uruchomieniowe skonstruowane przez kontrakt, powiązania i adresy.  
@@ -32,7 +32,7 @@ Zachowania umożliwiają modyfikowanie zachowania domyślnego i Dodawanie rozsze
  Właściwości, które można modyfikować, oraz interfejsy dostosowywania, które można zaimplementować, są dostępne za pomocą klas środowiska uruchomieniowego usługi i klienta. Typy usług są <xref:System.ServiceModel.Dispatcher.DispatchRuntime> klasami i <xref:System.ServiceModel.Dispatcher.DispatchOperation> . Typy klientów są <xref:System.ServiceModel.Dispatcher.ClientRuntime> klasami i <xref:System.ServiceModel.Dispatcher.ClientOperation> . Klasy <xref:System.ServiceModel.Dispatcher.ClientRuntime> i<xref:System.ServiceModel.Dispatcher.DispatchRuntime> to punkty wejścia rozszerzalności umożliwiające dostęp odpowiednio do właściwości środowiska uruchomieniowego i kolekcji rozszerzeń dla całego klienta i usługi. Podobnie klasy i <xref:System.ServiceModel.Dispatcher.ClientOperation> <xref:System.ServiceModel.Dispatcher.DispatchOperation> właściwości środowiska uruchomieniowego operacji usługi i kolekcji rozszerzeń są odpowiednio uwidaczniane. Można jednak uzyskać dostęp do szerszego obiektu środowiska uruchomieniowego w zakresie z obiektu środowiska uruchomieniowego operacji i odwrotnie, jeśli jest to konieczne.  
   
 > [!NOTE]
-> Aby zapoznać się z omówieniem właściwości środowiska uruchomieniowego i typów rozszerzeń, których można użyć w celu zmodyfikowania zachowania klienta, zobacz [Rozszerzanie klientów](../../../../docs/framework/wcf/extending/extending-clients.md). Omówienie właściwości środowiska uruchomieniowego i typów rozszerzeń, których można użyć w celu zmodyfikowania zachowania wykonywania dyspozytora usługi, znajdziesz w [](../../../../docs/framework/wcf/extending/extending-dispatchers.md)temacie rozszerzanie elementów wysyłających.  
+> Aby zapoznać się z omówieniem właściwości środowiska uruchomieniowego i typów rozszerzeń, których można użyć w celu zmodyfikowania zachowania klienta, zobacz [Rozszerzanie klientów](extending-clients.md). Omówienie właściwości środowiska uruchomieniowego i typów rozszerzeń, których można użyć w celu zmodyfikowania zachowania wykonywania dyspozytora usługi, znajdziesz w temacie [rozszerzanie elementów wysyłających](extending-dispatchers.md).  
   
  Większość użytkowników programu WCF nie współdziała bezpośrednio ze środowiskiem uruchomieniowym. zamiast nich używają podstawowych konstrukcji programistycznych, takich jak punkty końcowe, kontrakty, powiązania, adresy i atrybuty zachowań dla klas lub zachowań w plikach konfiguracyjnych. Te konstrukcje składają się na *drzewo opisów*, która stanowi kompletną specyfikację konstruowania środowiska uruchomieniowego w celu obsługi usługi lub klienta opisanego przez drzewo opisu.  
   
@@ -110,7 +110,7 @@ Zachowania umożliwiają modyfikowanie zachowania domyślnego i Dodawanie rozsze
  Zachowanie usługi i punktu końcowego oraz kontrakty mogą być przeznaczone do określenia w kodzie lub przy użyciu atrybutów; można skonfigurować tylko zachowania usługi i punktu końcowego za pomocą aplikacji lub plików konfiguracji sieci Web. Uwidacznianie zachowań przy użyciu atrybutów pozwala deweloperom określić zachowanie w czasie kompilacji, którego nie można dodać, usunąć ani zmodyfikować w czasie wykonywania. Jest to często odpowiednie dla zachowań, które są zawsze wymagane do poprawnego działania usługi (na przykład parametrów związanych z transakcjami do <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> atrybutu). Udostępnianie zachowań przy użyciu konfiguracji pozwala deweloperom na pozostawienie specyfikacji i konfiguracji tych zachowań dla użytkowników, którzy wdrażają usługę. Jest to odpowiednie dla zachowań, które są opcjonalnymi składnikami lub inną konfigurację specyficzną dla wdrożenia, na przykład czy metadane są uwidocznione dla usługi lub określonej konfiguracji autoryzacji dla usługi.  
   
 > [!NOTE]
-> Można również użyć zachowań, które obsługują konfigurację, aby wymusić zasady aplikacji firmowych, wstawiając je do pliku konfiguracji Machine. config i blokując te elementy w dół. Aby uzyskać opis i przykład, zobacz [How to: Zablokuj punkty końcowe w](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)przedsiębiorstwie.  
+> Można również użyć zachowań, które obsługują konfigurację, aby wymusić zasady aplikacji firmowych, wstawiając je do pliku konfiguracji Machine. config i blokując te elementy w dół. Aby uzyskać opis i przykład, zobacz [How to: Zablokuj punkty końcowe w](how-to-lock-down-endpoints-in-the-enterprise.md)przedsiębiorstwie.  
   
  Aby uwidocznić zachowanie przy użyciu konfiguracji, Deweloper musi utworzyć klasę <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> pochodną, a następnie zarejestrować to rozszerzenie w konfiguracji.  
   

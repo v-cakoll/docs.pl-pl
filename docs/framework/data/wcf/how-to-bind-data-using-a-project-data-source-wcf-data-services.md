@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wiązanie danych przy użyciu źródła danych projektu (WCF Data Services)'
+title: 'Instrukcje: Powiązywanie danych przy użyciu źródła danych projektu (Usługi danych programu WCF)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,50 +8,50 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 69a0ec657f0a8cec34048776a4767cec23d091d9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85d5974f43349d91d56a1ab41b314521a6ee7348
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645637"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780162"
 ---
-# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Instrukcje: Wiązanie danych przy użyciu źródła danych projektu (WCF Data Services)
+# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Instrukcje: Powiązywanie danych przy użyciu źródła danych projektu (Usługi danych programu WCF)
 
-Można utworzyć źródła danych, które są oparte na obiektach wygenerowane dane w aplikacji klienta usługi danych WCF. Po dodaniu odwołania do usługi danych przy użyciu **Dodaj odwołanie do usługi** okno dialogowe, tworzone jest źródło danych projektu wraz z klas danych wygenerowanego klienta. Jedno źródło danych jest tworzony dla każdego zestawu jednostek usługi ujawnia w danych. Możesz tworzyć formularze, które wyświetlają dane z usługi, przeciągając elementy w tych źródeł danych, z **źródeł danych** okna do projektanta. Te elementy stają się formantów, które są powiązane ze źródłem danych. W czasie wykonywania tego źródła danych jest powiązany do wystąpienia <xref:System.Data.Services.Client.DataServiceCollection%601> klasy, która jest zajęta przez obiekty, które są zwracane przez zapytanie do usługi danych. Aby uzyskać więcej informacji, zobacz [powiązanie danych z kontrolkami](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).
+Możesz tworzyć źródła danych, które są oparte na wygenerowanych obiektach danych w aplikacji klienckiej Usługi danych programu WCF. Po dodaniu odwołania do usługi danych przy użyciu okna dialogowego **Dodaj odwołanie do usługi** , tworzone jest źródło danych projektu wraz z wygenerowanymi klasami danych klienta. Jedno źródło danych jest tworzone dla każdego zestawu jednostek, który jest udostępniany przez usługę danych. Można tworzyć formularze, które wyświetlają dane z usługi, przeciągając te elementy źródła danych z okna **źródła danych** do projektanta. Elementy te stają się kontrolkami, które są powiązane ze źródłem danych. Podczas wykonywania to źródło danych jest powiązane z wystąpieniem <xref:System.Data.Services.Client.DataServiceCollection%601> klasy, która jest wypełniana obiektami, które są zwracane przez zapytanie do usługi danych. Aby uzyskać więcej informacji, zobacz [Powiązywanie danych z kontrolkami](binding-data-to-controls-wcf-data-services.md).
 
- Przykłady w tym temacie usługi Northwind przykładowych danych i dane klienta automatycznie wygenerowany usługi klas. Ta usługa i klas danych klienta, są tworzone po ukończeniu [Szybki Start usług danych WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).
+ Przykłady w tym temacie wykorzystują przykładową usługę danych Northwind i automatycznie wygenerowaną klasę usługi danych klienta. Ta usługa i klasy danych klienta są tworzone po zakończeniu [usługi danych programu WCF szybkiego startu](quickstart-wcf-data-services.md).
 
-## <a name="use-a-project-data-source-in-a-wpf-window"></a>Korzystanie ze źródła danych projektu w oknie WPF
+## <a name="use-a-project-data-source-in-a-wpf-window"></a>Używanie źródła danych projektu w oknie WPF
 
-1. W programie Visual Studio w projekcie WPF, Dodaj odwołanie do usługi danych Northwind. Aby uzyskać więcej informacji, zobacz [jak: Dodaj odwołanie do usługi danych](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
+1. W programie Visual Studio, w projekcie WPF, Dodaj odwołanie do usługi danych Northwind. Aby uzyskać więcej informacji, zobacz [jak: Dodaj odwołanie](how-to-add-a-data-service-reference-wcf-data-services.md)do usługi danych.
 
-2. W **źródeł danych** okna, rozwiń węzeł `Customers` w węźle **NorthwindEntities** źródła danych projektu.
+2. W oknie **źródła danych** rozwiń `Customers` węzeł w źródle danych projektu **NorthwindEntities** .
 
-3. Kliknij przycisk **CustomerID** element i wybierz pozycję **ComboBox** z listy, a następnie przeciągnij **CustomerID** elementu z **klientów** węzła Projektant.
+3. Kliknij element **CustomerID** , wybierz z listy pole **kombi** i przeciągnij element **IDKlienta** z węzła **Customers** do projektanta.
 
-     Spowoduje to utworzenie następujących elementów obiektu w pliku XAML dla okna:
+     Spowoduje to utworzenie następujących elementów obiektów w pliku XAML dla okna:
 
-    - A <xref:System.Windows.Data.CollectionViewSource> elementu o nazwie `customersViewSource`. <xref:System.Windows.FrameworkElement.DataContext%2A> Właściwości najwyższego poziomu <xref:System.Windows.Controls.Grid> element obiektu jest ustawiona na tym nowy <xref:System.Windows.Data.CollectionViewSource>.
+    - Element o nazwie `customersViewSource`. <xref:System.Windows.Data.CollectionViewSource> Właściwość elementu najwyższego poziomu <xref:System.Windows.Controls.Grid> jest ustawiona na ten nowy <xref:System.Windows.Data.CollectionViewSource>. <xref:System.Windows.FrameworkElement.DataContext%2A>
 
-    - Powiązane z danymi <xref:System.Windows.Controls.ComboBox> o nazwie `CustomerID`.
+    - Powiązane <xref:System.Windows.Controls.ComboBox> z danymi nazwy `CustomerID`.
 
     - A <xref:System.Windows.Controls.Label>.
 
-4. Przeciągnij **zamówienia** właściwość nawigacji do projektanta.
+4. Przeciągnij właściwość nawigacji **Orders** do projektanta.
 
-     Spowoduje to utworzenie następujących elementów dodatkowych obiektu w pliku XAML dla okna:
+     Spowoduje to utworzenie następujących elementów dodatkowych obiektów w pliku XAML dla okna:
 
-    - Sekundy <xref:System.Windows.Data.CollectionViewSource> elementu o nazwie `customersOrdersViewSource`, której źródłem jest `customerViewSource`.
+    - Drugi <xref:System.Windows.Data.CollectionViewSource> element o nazwie `customersOrdersViewSource`, którego `customerViewSource`źródłem jest.
 
-    - Powiązane z danymi <xref:System.Windows.Controls.DataGrid> formantu o nazwie `ordersDataGrid`.
+    - Formant powiązany <xref:System.Windows.Controls.DataGrid> z danymi o nazwie `ordersDataGrid`.
 
-5. (Opcjonalnie) Przeciągnij dodatkowe elementy z **klientów** węzła do projektanta.
+5. Obowiązkowe Przeciągnij dodatkowe elementy z węzła **Customers** do projektanta.
 
-6. Otwórz stronę kodową dla formularza i Dodaj następujący kod `using` instrukcji (`Imports` w języku Visual Basic):
+6. Otwórz stronę kodową formularza i Dodaj następujące `using` instrukcje (`Imports` w Visual Basic):
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersUsingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf2.xaml.cs#customersordersusingwpf)]
 
-7. W klasie częściowej, który definiuje formularza, Dodaj następujący kod, który tworzy <xref:System.Data.Objects.ObjectContext> wystąpień i umożliwia zdefiniowanie `customerID` stałej.
+7. W klasie częściowej, która definiuje formularz, Dodaj następujący kod, który tworzy <xref:System.Data.Objects.ObjectContext> wystąpienie i `customerID` definiuje stałą.
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf2.xaml.cs#customersordersdefinitionwpf)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf2.xaml.vb#customersordersdefinitionwpf)]
@@ -59,65 +59,65 @@ Można utworzyć źródła danych, które są oparte na obiektach wygenerowane d
 8. W Projektancie wybierz okno.
 
     > [!NOTE]
-    > Upewnij się, wybierz okno, a nie wybierania zawartości, który znajduje się w oknie. Jeśli okno jest zaznaczone, **nazwa** polu tekstowym w górnej części **właściwości** okna powinien zawierać nazwę okna.
+    > Upewnij się, że wybierasz samo okno, a nie zaznaczasz zawartość znajdującą się w oknie. Jeśli okno jest zaznaczone, pole tekstowe **Nazwa** znajdujące się w górnej części okna **Właściwości** powinno zawierać nazwę okna.
 
-9. W **właściwości** wybierz **zdarzenia** przycisku.
+9. W oknie **Właściwości** wybierz przycisk **zdarzenia** .
 
-10. Znajdź **Loaded** zdarzeń, a następnie kliknij dwukrotnie pozycję z listy rozwijanej liście obok tego zdarzenia.
+10. Znajdź **załadowane** zdarzenie, a następnie kliknij dwukrotnie listę rozwijaną obok tego zdarzenia.
 
-     Visual Studio otwiera plik CodeBehind dla okna i generuje <xref:System.Windows.FrameworkElement.Loaded> programu obsługi zdarzeń.
+     Program Visual Studio otwiera plik związany z kodem dla okna i generuje <xref:System.Windows.FrameworkElement.Loaded> procedurę obsługi zdarzeń.
 
-11. W nowo utworzonej <xref:System.Windows.FrameworkElement.Loaded> procedura obsługi zdarzeń, skopiuj i wklej następujący kod.
+11. W nowo utworzonym <xref:System.Windows.FrameworkElement.Loaded> programie obsługi zdarzeń skopiuj i wklej poniższy kod.
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf2.xaml.cs#customersordersdatabindingwpf)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf2.xaml.vb#customersordersdatabindingwpf)]
 
-12. Ten kod tworzy wystąpienie <xref:System.Data.Services.Client.DataServiceCollection%601> dla `Customers` oparty na wykonanie zapytania LINQ, która zwraca typ <xref:System.Collections.Generic.IEnumerable%601> z `Customers` wraz z powiązanych `Orders` obiektów z usługi danych Northwind i wiąże go `customersViewSource`.
+12. Ten kod <xref:System.Data.Services.Client.DataServiceCollection%601> tworzy wystąpienie `Customers` dla typu na podstawie wykonywania `Customers` zapytania LINQ, które zwraca obiekt <xref:System.Collections.Generic.IEnumerable%601> z pokrewnymi `Orders` obiektami z usługi danych Northwind i wiąże go z `customersViewSource`.
 
-## <a name="use-a-project-data-source-in-a-windows-form"></a>Korzystanie ze źródła danych projektu w formularzu Windows
+## <a name="use-a-project-data-source-in-a-windows-form"></a>Używanie źródła danych projektu w formularzu systemu Windows
 
-1. W **źródeł danych** okna, rozwiń węzeł **klientów** w węźle **NorthwindEntities** źródła danych projektu.
+1. W oknie **źródła danych** rozwiń węzeł **klienci** w źródle danych projektu **NorthwindEntities** .
 
-2. Kliknij przycisk **CustomerID** element i wybierz pozycję **ComboBox** z listy, a następnie przeciągnij **CustomerID** elementu z **klientów** węzła Projektant.
+2. Kliknij element **CustomerID** , wybierz z listy pole **kombi** i przeciągnij element **IDKlienta** z węzła **Customers** do projektanta.
 
-     Spowoduje to utworzenie następujących formantów na formularzu:
+     Spowoduje to utworzenie następujących kontrolek w formularzu:
 
     - Wystąpienie <xref:System.Windows.Forms.BindingSource> o nazwie `customersBindingSource`.
 
-    - Wystąpienie <xref:System.Windows.Forms.BindingNavigator> o nazwie `customersBindingNavigator`. Można usunąć tej kontrolki, ponieważ nie będą potrzebne.
+    - Wystąpienie <xref:System.Windows.Forms.BindingNavigator> o nazwie `customersBindingNavigator`. Tę kontrolkę można usunąć, ponieważ nie będzie to konieczne.
 
-    - Powiązane z danymi <xref:System.Windows.Forms.ComboBox> o nazwie `CustomerID`.
+    - Powiązane <xref:System.Windows.Forms.ComboBox> z danymi nazwy `CustomerID`.
 
     - A <xref:System.Windows.Forms.Label>.
 
-3. Przeciągnij **zamówienia** właściwość nawigacji do formularza.
+3. Przeciągnij właściwość nawigacji **Orders** do formularza.
 
-4. Spowoduje to utworzenie `ordersBindingSource` kontrolką <xref:System.Windows.Forms.BindingSource.DataSource%2A> właściwości formantu równa `customersBindingSource` i <xref:System.Windows.Forms.BindingSource.DataMember%2A> właściwością `Customers`. Tworzy również `ordersDataGridView` kontrolki powiązania danych w formularzu, wraz z kontrolkę etykiety odpowiednio nazwanych.
+4. Spowoduje to utworzenie `ordersBindingSource` <xref:System.Windows.Forms.BindingSource.DataSource%2A> kontrolki z właściwością <xref:System.Windows.Forms.BindingSource.DataMember%2A> zestawu `customersBindingSource` kontrolki i właściwością ustawioną na `Customers`. Tworzy również kontrolkę `ordersDataGridView` powiązaną z danymi w formularzu wraz z odpowiednio zatytułowaną kontrolką etykieta.
 
-5. (Opcjonalnie) Przeciągnij dodatkowe elementy z **klientów** węzła do projektanta.
+5. Obowiązkowe Przeciągnij dodatkowe elementy z węzła **Customers** do projektanta.
 
-6. Otwórz stronę kodową dla formularza i Dodaj następujący kod `using` instrukcji (`Imports` w języku Visual Basic):
+6. Otwórz stronę kodową formularza i Dodaj następujące `using` instrukcje (`Imports` w Visual Basic):
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders.cs#customersordersusing)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders.vb#customersordersusing)]
 
-7. W klasie częściowej, który definiuje formularza, Dodaj następujący kod, który tworzy <xref:System.Data.Objects.ObjectContext> wystąpień i umożliwia zdefiniowanie `customerID` stałej.
+7. W klasie częściowej, która definiuje formularz, Dodaj następujący kod, który tworzy <xref:System.Data.Objects.ObjectContext> wystąpienie i `customerID` definiuje stałą.
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders.cs#customersordersdefinition)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders.vb#customersordersdefinition)]
 
-8. W Projektancie formularza kliknij dwukrotnie formularz.
+8. W projektancie formularzy kliknij dwukrotnie formularz.
 
-     To otwiera stronę kodową dla formularza i tworzy metodę, która obsługuje `Load` zdarzenie dla formularza.
+     Spowoduje to otwarcie strony kodowej dla formularza i utworzenie metody, która obsługuje `Load` zdarzenie dla formularza.
 
-9. W `Load` procedura obsługi zdarzeń, skopiuj i wklej następujący kod.
+9. W programie obsługi zdarzeń skopiuj i wklej poniższy kod. `Load`
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders.cs#customersordersdatabinding)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders.vb#customersordersdatabinding)]
 
-10. Ten kod tworzy wystąpienie <xref:System.Data.Services.Client.DataServiceCollection%601> dla `Customers` typ oparty na wykonanie <xref:System.Data.Services.Client.DataServiceQuery%601> zwracającego <xref:System.Collections.Generic.IEnumerable%601> z `Customers` z Northwind danych usługi i wiąże go do `customersBindingSource`.
+10. Ten kod <xref:System.Data.Services.Client.DataServiceCollection%601> tworzy wystąpienie `Customers` dla typu na podstawie wykonania <xref:System.Data.Services.Client.DataServiceQuery%601> , które zwraca wartość <xref:System.Collections.Generic.IEnumerable%601> `Customers` z z usługi danych Northwind i wiąże ją `customersBindingSource`z.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Instrukcje: Powiąż dane z programu Windows Presentation Foundation elementów](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+- [Biblioteka klienta usług danych WCF](wcf-data-services-client-library.md)
+- [Instrukcje: Powiąż dane z Windows Presentation Foundation elementami](bind-data-to-wpf-elements-wcf-data-services.md)

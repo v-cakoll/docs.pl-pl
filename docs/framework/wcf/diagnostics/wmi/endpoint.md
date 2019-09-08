@@ -2,12 +2,12 @@
 title: Punkt końcowy
 ms.date: 03/30/2017
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
-ms.openlocfilehash: 4562481e8b0b18c0ea0d9df0af3427ffe6419821
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 03c401358839671d750985b95b1aada599931aad
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963608"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795906"
 ---
 # <a name="endpoint"></a>Punkt końcowy
 Punkt końcowy  
@@ -33,101 +33,101 @@ class Endpoint
 ```  
   
 ## <a name="methods"></a>Metody  
- Klasa punktu końcowego definiuje następującą metodę.  
+ Klasa Endpoint definiuje następującą metodę.  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetOperationCounterInstanceName](../../../../../docs/framework/wcf/diagnostics/wmi/getoperationcounterinstancename.md)|Pobiera nazwę wystąpienia licznika wydajności operacji|  
+|[GetOperationCounterInstanceName](getoperationcounterinstancename.md)|Pobiera nazwę wystąpienia licznika wydajności operacji|  
   
 ## <a name="properties"></a>Właściwości  
- Klasa punkt końcowy ma następujące właściwości:  
+ Klasa punktu końcowego ma następujące właściwości:  
   
 ### <a name="address"></a>Adres  
  Typ danych: ciąg  
   
- Typ dostępu: tylko do odczytu  
+ Typ dostępu: Tylko do odczytu  
   
- Identyfikator URI, który zawiera adres punktu końcowego.  
+ Identyfikator URI zawierający adres punktu końcowego.  
   
 ### <a name="addressheaders"></a>AddressHeaders  
  Typ danych: tablica ciągów  
   
- Typ dostępu: tylko do odczytu  
+ Typ dostępu: Tylko do odczytu  
   
- Kolekcja nagłówków adresowych, dołączony do tego punktu końcowego.  
+ Kolekcja nagłówków adresów dołączonych do tego punktu końcowego.  
   
 ### <a name="addressidentity"></a>AddressIdentity  
  Typ danych: ciąg  
   
- Typ dostępu: tylko do odczytu  
+ Typ dostępu: Tylko do odczytu  
   
  Tożsamość punktu końcowego.  
   
 ### <a name="appdomainid"></a>AppDomainId  
  Typ danych: sint32  
   
- Typ dostępu: tylko do odczytu  
+ Typ dostępu: Tylko do odczytu  
   
- Identyfikator elementu appdomain punktu końcowego.  
+ Identyfikator domeny aplikacji, która hostuje punkt końcowy.  
   
 ### <a name="behaviors"></a>Zachowania  
- Typ danych: Zachowanie tablicy  
+ Typ danych: Tablica zachowań  
   
- Typ dostępu: tylko do odczytu  
+ Typ dostępu: Tylko do odczytu  
   
  Kolekcja zachowań implementowanych przez ten punkt końcowy.  
   
 ### <a name="binding"></a>Wiązanie  
  Typ danych: Wiązanie  
   
- Typ dostępu: tylko do odczytu  
+ Typ dostępu: Tylko do odczytu  
   
- Wiązanie używane przez ten punkt końcowy.  
+ Powiązanie używane przez ten punkt końcowy.  
   
-### <a name="contractname"></a>ContractName  
+### <a name="contractname"></a>Nr kontraktu  
  Typ danych: ciąg  
   
- Typ dostępu: tylko do odczytu  
+ Typ dostępu: Tylko do odczytu  
   
- Ciąg, który określa, który kontrakt tego punktu końcowego jest uwidaczniany.  
+ Ciąg określający, który kontrakt jest ujawniany przez ten punkt końcowy.  
   
 ### <a name="counterinstancename"></a>CounterInstanceName  
  Typ danych: ciąg  
   
- Typ dostępu: tylko do odczytu  
+ Typ dostępu: Tylko do odczytu  
   
  Nazwa wystąpienia liczników wydajności punktu końcowego.  
   
-### <a name="listenuri"></a>ListenUri  
+### <a name="listenuri"></a>ListenUri o wartości  
  Typ danych: ciąg  
   
- Typ dostępu: tylko do odczytu  
+ Typ dostępu: Tylko do odczytu  
   
- Identyfikator Uri punktu końcowego nasłuchuje.  
+ Identyfikator URI, na którym nasłuchuje punkt końcowy.  
   
 ### <a name="name"></a>Nazwa  
  Typ danych: ciąg  
   
- Typ dostępu: tylko do odczytu  
+ Typ dostępu: Tylko do odczytu  
   
  Unikatowa nazwa tego punktu końcowego.  
   
 ### <a name="processid"></a>Identyfikator procesu  
  Typ danych: sint32  
   
- Typ dostępu: tylko do odczytu  
+ Typ dostępu: Tylko do odczytu  
   
- Proces identyfikator procesu, który jest hostem punktu końcowego.  
+ Identyfikator procesu, który hostuje punkt końcowy.  
   
 ### <a name="ref"></a>ref  
  Typ danych: Kontrakt  
   
- Typ dostępu: tylko do odczytu  
+ Typ dostępu: Tylko do odczytu  
   
- Kontrakt tego punktu końcowego jest uwidaczniany.  
+ Kontrakt ujawniany przez ten punkt końcowy.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|MOF|Zadeklarowana w Servicemodel.mof.|  
+|PLIK|Zadeklarowany w ServiceModel. mof.|  
 |---------|-----------------------------------|  
 |Przestrzeń nazw|Zdefiniowane w root\ServiceModel|

@@ -1,6 +1,6 @@
 ---
-title: Usuwanie funkcji (niezarządzany wykaz interfejsów API)
-description: Funkcja usuwania usuwa określonej właściwości i wszystkich jego kwalifikatory z definicji klasy modelu wspólnych informacji.
+title: DELETE — funkcja (niezarządzana dokumentacja interfejsu API)
+description: Funkcja DELETE Usuwa określoną właściwość i wszystkie jej kwalifikatory z definicji klasy CIM.
 ms.date: 11/06/2017
 api_name:
 - Delete
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 965143eadd6e2dde498d5ee73e4f9e8bfded8a6e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a1bf9bd5d93d1affee649588138456269411d280
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636720"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798670"
 ---
 # <a name="delete-function"></a>Delete, funkcja
 
-Usuwa określoną właściwość i wszystkich jego kwalifikatory z definicji klasy modelu wspólnych informacji.
+Usuwa określoną właściwość i wszystkie jej kwalifikatory z definicji klasy CIM.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -42,17 +42,17 @@ HRESULT Delete (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`\
-[in] Ten parametr jest nieużywany.
+podczas Ten parametr jest nieużywany.
 
 `ptr`\
-[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.
+podczas Wskaźnik do wystąpienia [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszName`\
-[in] Nazwa właściwości do usunięcia. `wszName` musi być wskaźnikiem do prawidłowego `LPCWSTR`.
+podczas Nazwa właściwości do usunięcia. `wszName`musi być wskaźnikiem prawidłowym `LPCWSTR`.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
+Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nagłówkowym *WbemCli. h* lub można je definiować jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
@@ -60,24 +60,24 @@ Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowan
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | Nie można usunąć właściwości. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` jest nieprawidłowy. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | Określona właściwość nie istnieje. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nie ma wystarczającej ilości pamięci do ukończenia tej operacji. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało pamięci, aby ukończyć operację. |
 | `WBEM_E_PROPAGATED_PROPERTY` | 0x8004101c | Właściwość jest dziedziczona z klasy bazowej. |
-| `WBEM_E_SYSTEM_PROPERTY` | | Właściwość jest właściwością systemu. |
+| `WBEM_E_SYSTEM_PROPERTY` | | Właściwość jest właściwością systemową. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
-| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | Funkcja usunięte wartość domyślną zastępowania bieżącej klasy. Wartość domyślna tej właściwości w klasie nadrzędnej została ponownie aktywowana. |
+| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | Funkcja usunęła wartość domyślną przesłonięcia dla bieżącej klasy. Wartość domyślna tej właściwości w klasie nadrzędnej została ponownie aktywowana. |
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja zawija wywołanie do [IWbemClassObject::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete) metody.
+Ta funkcja otacza wywołanie metody [IWbemClassObject::D Usuń](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete) .
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
-**Nagłówek:** WMINet_Utils.idl
+**Nagłówki** WMINet_Utils.idl
 
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)
+- [WMI i liczniki wydajności (niezarządzana dokumentacja interfejsu API)](index.md)

@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: f2bc67b4130633fba3a6e42e2b6925fc09f835c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d47f5b7eaf6b5f6a3174982e6b4cf43859c031a5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032425"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794151"
 ---
 # <a name="inserting-an-image-from-a-file"></a>Wstawianie obrazu z pliku
-Możesz napisać duży obiekt binarny (BLOB) do bazy danych jako dane binarne lub znaków, w zależności od typu pola w źródle danych. Obiekt BLOB jest ogólny termin określający, który odwołuje się do `text`, `ntext`, i `image` typy danych, które zwykle zawierają dokumenty i obrazy.  
+Można napisać obiekt binarny (BLOB) do bazy danych jako dane binarne lub znakowe, w zależności od typu pola w źródle danych. Obiekt BLOB to ogólny termin, który odwołuje `text`się `ntext`do typów `image` danych,, i, które zwykle zawierają dokumenty i obrazy.  
   
- Aby zapisać wartość obiektu BLOB do bazy danych, wykonaj odpowiednią instrukcję INSERT nebo UPDATE i przekaż wartość obiektu BLOB jako parametr wejściowy (zobacz [konfigurowania parametrów i typów danych parametrów](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)). Jeśli obiekt BLOB są przechowywane jako tekst, np. programu SQL Server `text` pola, można przekazać obiekt BLOB jako parametr ciągu. Jeśli obiekt BLOB jest przechowywany w formacie binarnym, takim jak serwer SQL `image` pola, możesz przekazać tablicę typu `byte` jako parametr binarnego.  
+ Aby zapisać wartość obiektu BLOB do bazy danych, należy wydać odpowiednią instrukcję INSERT lub UPDATE i przekazać wartość obiektu BLOB jako parametr wejściowy (zobacz [Konfigurowanie parametrów i typów danych parametrów](../configuring-parameters-and-parameter-data-types.md)). Jeśli obiekt BLOB jest przechowywany jako tekst, na przykład pole SQL Server `text` , można przekazać obiekt BLOB jako parametr ciągu. Jeśli obiekt BLOB jest przechowywany w formacie binarnym, takim jak SQL Server `image` pole, można przekazać tablicę typu `byte` jako parametr binarny.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu dodaje informacje dotyczące pracowników do tabeli Pracownicy w bazie danych Northwind. Zdjęcie pracownika jest odczyt z pliku i dodany do pola zdjęcie w tabeli, która jest polem obrazu.  
+ Poniższy przykład kodu dodaje informacje o pracowniku do tabeli Employees w bazie danych Northwind. Zdjęcie pracownika jest odczytywane z pliku i dodawane do pola zdjęcia w tabeli, czyli pola obrazu.  
   
 ```vb  
 Public Shared Sub AddEmployee( _  
@@ -132,8 +132,8 @@ public static byte[] GetPhoto(string filePath)
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Używanie poleceń do modyfikacji danych](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [Pobieranie danych binarnych](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)
-- [Dane binarne i dużej wartości w programie SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [Mapowanie typu danych serwera SQL](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Używanie poleceń do modyfikacji danych](../using-commands-to-modify-data.md)
+- [Pobieranie danych binarnych](../retrieving-binary-data.md)
+- [Dane binarne i dużej wartości w programie SQL Server](sql-server-binary-and-large-value-data.md)
+- [Mapowanie typu danych serwera SQL](../sql-server-data-type-mappings.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

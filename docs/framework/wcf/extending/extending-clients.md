@@ -4,58 +4,58 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-ms.openlocfilehash: 48e6177e7098f8131d2a0fd62bda9c505fa8bcc9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 91277e1a4d0a1d001d62d677dbd087bec5d875f0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662801"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797163"
 ---
 # <a name="extending-clients"></a>Rozszerzanie klientów
-W aplikacji wywołującej jest odpowiedzialny za tłumaczenie wywołań metod w kodzie aplikacji do wiadomości wychodzących, wypychanie ich do bazowego kanałów, tłumaczenie wyników do wartości zwracane i parametry w warstwy modelu usług Kod aplikacji i zwraca wyniki z powrotem do obiektu wywołującego. Rozszerzenia modelu usługi modyfikować ani implementować wykonywania lub zachowanie komunikacji i funkcje, obejmujące funkcje klienta lub dyspozytora, niestandardowe zachowania, wiadomości i przejmowanie parametru i innych funkcji rozszerzalności.  
+W aplikacji wywołującej warstwa modelu usług jest odpowiedzialna za tłumaczenie wywołań metod w kodzie aplikacji na komunikaty wychodzące, wypychanie ich do kanałów bazowych, tłumaczenie wyników z powrotem do wartości zwracanych i parametrów wyjściowych w kod aplikacji i zwracają wyniki z powrotem do obiektu wywołującego. Rozszerzenia modelu usług modyfikują lub implementują zachowanie wykonywania lub komunikacji oraz funkcje, w tym funkcje klienta lub dyspozytora, niestandardowe zachowania, przechwycenie komunikatów i parametrów oraz inne funkcje rozszerzalności.  
   
- W tym temacie opisano sposób użycia <xref:System.ServiceModel.Dispatcher.ClientRuntime> i <xref:System.ServiceModel.Dispatcher.ClientOperation> klas w aplikacji klienckiej Windows Communication Foundation (WCF), aby zmodyfikować domyślne zachowanie wykonywania klienta WCF lub do przechwycenia lub modyfikowanie komunikatów i parametrów lub zwracanych wartości przed lub po wysyłanie i pobieranie ich z warstwy kanału. Aby uzyskać więcej informacji na temat rozszerzania środowiska uruchomieniowego usługi, zobacz [rozszerzanie dyspozytorów](../../../../docs/framework/wcf/extending/extending-dispatchers.md). Aby uzyskać więcej informacji na temat działania, które modyfikują i wstawianie obiektów dostosowywania środowiska uruchomieniowego klienta, zobacz [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ W tym temacie opisano sposób użycia <xref:System.ServiceModel.Dispatcher.ClientRuntime> klas i <xref:System.ServiceModel.Dispatcher.ClientOperation> w aplikacji klienckiej programu Windows Communication Foundation (WCF) do modyfikowania domyślnego zachowania klienta programu WCF lub przechwytywania lub modyfikowania komunikatów, parametrów lub wartości zwracanych przed lub po wysłaniu lub pobraniu z warstwy kanału. Aby uzyskać więcej informacji na temat rozszerzania środowiska uruchomieniowego usługi, zobacz [rozszerzanie dyspozytorów](extending-dispatchers.md). Aby uzyskać więcej informacji na temat zachowań modyfikujących i wstawiających obiekty dostosowania do środowiska uruchomieniowego klienta, zobacz [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="clients"></a>Klienci  
- Na komputerze klienckim kanału klienta lub obiektu klienta WCF konwertuje wywołań metody opisywanego komunikaty wychodzące i przychodzące wiadomości do wyniki operacji, które są zwracane do aplikacji wywołującej. (Aby uzyskać więcej informacji na temat typów klientów, zobacz [Architektura klienta programu WCF](../../../../docs/framework/wcf/feature-details/client-architecture.md).)  
+ Na kliencie obiekt klienta programu WCF lub kanał klienta konwertuje wywołania metody na komunikaty wychodzące i komunikaty przychodzące do wyników operacji, które są zwracane do aplikacji wywołującej. (Aby uzyskać więcej informacji na temat typów klientów, zobacz [Architektura klienta WCF](../feature-details/client-architecture.md)).  
   
- Typy klienta WCF mają typów środowiska wykonawczego, które obsługują tę funkcję z poziomu punktu końcowego i operacji. Po uruchomieniu operacji <xref:System.ServiceModel.Dispatcher.ClientOperation> tłumaczy obiekty wychodzące do wiadomości, przetwarza interceptory, potwierdza, że wywołanie ruchu wychodzącego jest zgodny z kontraktu docelowego i przekazuje wiadomości wychodzących do <xref:System.ServiceModel.Dispatcher.ClientRuntime>, czyli odpowiedzialne za tworzenie i zarządzanie nimi wychodzących kanałów i kanały dla ruchu przychodzącego w przypadku usługi dwukierunkowe, obsługi przetwarzania (np. nagłówek modyfikacji) bardzo wychodzących wiadomości, przetwarzanie wiadomości interceptory w obu kierunkach i routing ruchu przychodzącego dwustronnego wywołania do odpowiedniego klienta <xref:System.ServiceModel.Dispatcher.DispatchRuntime> obiektu. Zarówno <xref:System.ServiceModel.Dispatcher.ClientOperation> i <xref:System.ServiceModel.Dispatcher.ClientRuntime> świadczenia usług podobnie, gdy wiadomości (w tym błędów) są zwracane do klienta.  
+ Typy klientów WCF mają typy środowiska uruchomieniowego, które obsługują tę funkcję. Gdy aplikacja wywołuje operację, program <xref:System.ServiceModel.Dispatcher.ClientOperation> tłumaczy obiekty wychodzące na komunikat, przetwarza przechwycenia, potwierdza, że wywołanie wychodzące jest zgodne z umową docelową i przekazuje komunikat wychodzący <xref:System.ServiceModel.Dispatcher.ClientRuntime>do, który jest odpowiedzialny za tworzenie kanałów wychodzących (i kanałów przychodzących w przypadku usług dupleksowych) oraz zarządzanie nimi, obsługa dodatkowego przetwarzania komunikatów wychodzących (takich jak modyfikowanie nagłówka), przetwarzanie przechwyceń komunikatów w obu kierunkach i kierowanie ruchu przychodzącego wywołania dupleksowe do odpowiedniego obiektu po stronie <xref:System.ServiceModel.Dispatcher.DispatchRuntime> klienta. Zarówno, <xref:System.ServiceModel.Dispatcher.ClientRuntime> jak i oferują podobne usługi, gdy komunikaty (w tym błędy) są zwracane do klienta. <xref:System.ServiceModel.Dispatcher.ClientOperation>  
   
- Te dwie klasy środowiska uruchomieniowego są głównym rozszerzenia dostosowywania przetwarzanie obiektów klienta WCF i kanałów. <xref:System.ServiceModel.Dispatcher.ClientRuntime> Klasy pozwala użytkownikom na przechwytywanie i rozszerzyć klienta wykonywanie na wszystkie komunikaty w kontrakcie. <xref:System.ServiceModel.Dispatcher.ClientOperation> Klasy zezwala użytkownikom na przechwytywanie i rozszerzać wykonywania klienta dla wszystkich komunikatów w danej operacji.  
+ Te dwie klasy środowiska uruchomieniowego są głównym rozszerzeniem umożliwiającym dostosowanie przetwarzania obiektów i kanałów klienta programu WCF. <xref:System.ServiceModel.Dispatcher.ClientRuntime> Klasa umożliwia użytkownikom przechwycenie i rozbudowanie wykonywania klienta we wszystkich wiadomościach kontraktu. <xref:System.ServiceModel.Dispatcher.ClientOperation> Klasa umożliwia użytkownikom przechwycenie i rozbudowanie wykonywania klienta dla wszystkich komunikatów w danej operacji.  
   
- Modyfikowanie właściwości lub wstawianie dostosowania są wykonywane przy użyciu kontraktu punktu końcowego i zachowania operacji. Aby uzyskać więcej informacji na temat używania tego rodzaju zachowania do dostosowania środowiska uruchomieniowego klienta, zobacz [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ Modyfikowanie właściwości lub wstawianie dostosowań odbywa się za pomocą kontraktów, punktów końcowych i zachowań operacji. Aby uzyskać więcej informacji na temat sposobu użycia tego typu zachowań do wykonywania dostosowań w środowisku uruchomieniowym klienta, zobacz [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="scenarios"></a>Scenariusze  
- Tam wiele możliwych przyczyn, aby rozszerzyć system klienta, w tym:  
+ Istnieje kilka powodów, dla których można zwiększyć system klienta, w tym:  
   
-- Niestandardowy komunikat sprawdzania poprawności. Użytkownik może chcieć wymusić, czy komunikat jest prawidłowa dla niektórych schematu. Można to zrobić poprzez implementację <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> interfejsu i przypisywanie wdrożenie <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A> właściwości. Aby uzyskać przykłady, zobacz [jak: Inspekcja lub modyfikowanie komunikatów na kliencie](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md) i [jak: Inspekcja lub modyfikowanie komunikatów na kliencie](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md).  
+- Niestandardowa weryfikacja komunikatów. Użytkownik może chcieć wymusić, że komunikat jest prawidłowy dla określonego schematu. Można to zrobić, implementując <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> interfejs i przypisując implementację <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A> do właściwości. Aby zapoznać się z [przykładami, zobacz How to: Inspekcja lub modyfikowanie komunikatów na kliencie](how-to-inspect-or-modify-messages-on-the-client.md) oraz [instrukcje: Inspekcja lub modyfikowanie komunikatów na kliencie](how-to-inspect-or-modify-messages-on-the-client.md).  
   
-- Rejestrowanie komunikatów niestandardowych. Użytkownik może być do inspekcji i rejestrować pewne zestaw komunikatów aplikacji, które przepływać za pośrednictwem punktu końcowego. Ponadto można to zrobić za pomocą interfejsów interceptor wiadomości.  
+- Niestandardowe rejestrowanie komunikatów. Użytkownik może chcieć sprawdzić i zarejestrować część komunikatów aplikacji przesyłanych przez punkt końcowy. Można to również zrobić przy użyciu interfejsów interceptora komunikatów.  
   
-- Niestandardowy komunikat przekształcenia. Zamiast modyfikowania kodu aplikacji, użytkownik może chcieć zastosowania przekształcenia niektórych wiadomości w czasie wykonywania (na przykład w przypadku wersji). Można to osiągnąć, również z interfejsami interceptor wiadomości.  
+- Niestandardowe przekształcenia komunikatów. Zamiast modyfikować kod aplikacji, użytkownik może chcieć zastosować pewne przekształcenia do wiadomości w środowisku uruchomieniowym (na przykład w celu przechowywania wersji). Można to zrobić ponownie przy użyciu interfejsów interceptora komunikatów.  
   
-- Niestandardowy Model danych. Użytkownik może chcieć modelu danych lub serializacji w innym niż obsługiwany przez domyślną programu WCF (to znaczy, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>, i <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> obiektów). Można to zrobić poprzez implementację interfejsów elementu formatującego wiadomości. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter?displayProperty=nameWithType> i <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A?displayProperty=nameWithType> właściwości.  
+- Niestandardowy model danych. Użytkownik może chcieć mieć model danych lub serializacji inny niż te obsługiwane domyślnie w programie WCF (mianowicie <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>,, i <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> obiekty). Można to zrobić, implementując interfejsy programu formatującego komunikatów. Aby uzyskać więcej informacji, <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter?displayProperty=nameWithType> zobacz <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A?displayProperty=nameWithType> i właściwość.  
   
-- Walidacja parametru niestandardowego. Użytkownik może chcieć wymusić, że wpisane parametry są prawidłowe (w przeciwieństwie do XML). Można to zrobić przy użyciu Inspektora interfejsów parametru. Aby uzyskać przykład, zobacz [jak: Inspekcja lub modyfikowanie parametrów](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md) lub [sprawdzanie poprawności klienta](../../../../docs/framework/wcf/samples/client-validation.md).  
+- Walidacja parametrów niestandardowych. Użytkownik może chcieć wymusić, że wpisane parametry są prawidłowe (w przeciwieństwie do kodu XML). Można to zrobić za pomocą interfejsów inspektora parametrów. Aby zapoznać się z przykładem, zobacz [How to: Sprawdź lub Modyfikuj parametry](how-to-inspect-or-modify-parameters.md) lub [Walidacja klienta](../samples/client-validation.md).  
   
-### <a name="using-the-clientruntime-class"></a>Używanie klasy ClientRuntime  
- <xref:System.ServiceModel.Dispatcher.ClientRuntime> Klasy jest punktem rozszerzalności do której można dodać obiektów rozszerzenia, które Przechwytywanie wiadomości i rozszerzyć zachowanie klienta. Przejmowanie obiektów może przetworzyć wszystkie komunikaty w określonej umowy, przetwarzać tylko wiadomości dla określonej operacji, wykonać inicjowania w niestandardowym kanale i implementować inne niestandardowe zachowanie aplikacji.  
+### <a name="using-the-clientruntime-class"></a>Korzystanie z klasy ClientRuntime  
+ <xref:System.ServiceModel.Dispatcher.ClientRuntime> Klasa jest punktem rozszerzalności, do którego można dodawać obiekty rozszerzeń, które przechwytuje komunikaty i rozszerzają zachowanie klienta. Obiekty przechwycenia mogą przetwarzać wszystkie komunikaty w określonym kontrakcie, przetwarzać tylko komunikaty dla określonych operacji, wykonywać inicjalizacje kanałów niestandardowych i implementować inne niestandardowe zachowanie aplikacji klienta.  
   
-- <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A> Właściwość zwraca obiekt środowiska wykonawczego wysyłania dla klientów zainicjowanych przez usługę wywołania zwrotnego.  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A> Właściwość zwraca obiekt czasu wykonywania wysyłania dla klientów wywołania zwrotnego inicjowanych przez usługę.  
   
-- <xref:System.ServiceModel.Dispatcher.ClientRuntime.OperationSelector%2A> Właściwości można określić obiektu selektora działania niestandardowe.  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.OperationSelector%2A> Właściwość akceptuje obiekt selektora operacji niestandardowej.  
   
-- <xref:System.ServiceModel.Dispatcher.ClientRuntime.ChannelInitializers%2A> Właściwość umożliwia dodanie inicjatora kanału, inspekcji i modyfikacji kanału klienta.  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.ChannelInitializers%2A> Właściwość umożliwia dodanie inicjatora kanału, który może sprawdzić lub zmodyfikować kanał klienta.  
   
-- <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A> Właściwości pobiera kolekcję <xref:System.ServiceModel.Dispatcher.ClientOperation> obiektów, do których można dodać niestandardowy komunikat interceptory, które udostępniają funkcje, które są specyficzne dla wiadomości tej operacji.  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A> Właściwość Pobiera<xref:System.ServiceModel.Dispatcher.ClientOperation> kolekcję obiektów, do których można dodać niestandardowych interceptorów komunikatów, które udostępniają funkcje specyficzne dla komunikatów tej operacji.  
   
-- <xref:System.ServiceModel.Dispatcher.ClientRuntime.ManualAddressing%2A> Właściwość umożliwia aplikacji wyłącz niektóre automatyczne adresowania nagłówki, aby bezpośrednio kontrolują adresowania.  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.ManualAddressing%2A> Właściwość umożliwia aplikacji wyłączenie niektórych automatycznych nagłówków adresowania w celu bezpośredniej kontroli adresów.  
   
-- <xref:System.ServiceModel.Dispatcher.ClientRuntime.Via%2A> Właściwość ustawia wartość miejsce docelowe dla wiadomości na poziomie transportu, aby obsługiwać rolę pośredników i innych scenariuszy.  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.Via%2A> Właściwość ustawia wartość miejsca docelowego wiadomości na poziomie transportu w celu obsługi pośredników i innych scenariuszy.  
   
-- <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> Właściwości pobiera kolekcję <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> obiektów, do których można dodać niestandardowy komunikat interceptory dla wszystkich wiadomości przesyłane przez klienta programu WCF.  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> Właściwość Pobiera<xref:System.ServiceModel.Dispatcher.IClientMessageInspector> kolekcję obiektów, do których można dodać niestandardowych interceptorów komunikatów dla wszystkich wiadomości podróżujących przez klienta WCF.  
   
- Ponadto istnieje kilka innych właściwości, które pobierają informacje na temat umowy:  
+ Ponadto istnieje kilka innych właściwości, które pobierają informacje o kontrakcie:  
   
 - <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractName%2A>  
   
@@ -63,60 +63,60 @@ W aplikacji wywołującej jest odpowiedzialny za tłumaczenie wywołań metod w 
   
 - <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractClientType%2A>  
   
- Jeśli klient WCF jest dupleksowy klienta WCF, następujące właściwości również pobrać wywołanie zwrotne informacje o kliencie programu WCF:  
+ Jeśli klient WCF jest klientem programu WCF, następujące właściwości pobierają również informacje o kliencie wywołania zwrotnego programu WCF:  
   
 - <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackClientType%2A>  
   
 - <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A>  
   
- Można rozszerzyć wykonywania klienta programu WCF dla całego klienta WCF, zapoznaj się z dostępne na właściwości <xref:System.ServiceModel.Dispatcher.ClientRuntime> klasy, aby zobaczyć, czy modyfikowanie właściwości lub implementującej interfejs i dodanie go do właściwości tworzy funkcje szukamy. Po wybraniu określonego rozszerzenia, aby zbudować Wstawianie rozszerzenia odpowiednie <xref:System.ServiceModel.Dispatcher.ClientRuntime> właściwość implementując zachowania klienta, który zapewnia dostęp do <xref:System.ServiceModel.Dispatcher.ClientRuntime> klasy po wywołaniu.  
+ Aby zwiększyć wykonanie klienta WCF przez cały klient WCF, przejrzyj właściwości dostępne w klasie, <xref:System.ServiceModel.Dispatcher.ClientRuntime> aby zobaczyć, czy modyfikacja właściwości lub implementacja interfejsu i dodanie go do właściwości powoduje utworzenie funkcji, którą poszukujesz. Po wybraniu określonego rozszerzenia do skompilowania należy wstawić rozszerzenie do odpowiedniej <xref:System.ServiceModel.Dispatcher.ClientRuntime> właściwości, implementując zachowanie klienta, które zapewnia dostęp <xref:System.ServiceModel.Dispatcher.ClientRuntime> do klasy po wywołaniu.  
   
- Obiekty niestandardowego rozszerzenia można wstawić do kolekcji za pomocą zachowania operacji (obiekt, który implementuje <xref:System.ServiceModel.Description.IOperationBehavior>), zachowanie kontraktu (obiekt, który implementuje <xref:System.ServiceModel.Description.IContractBehavior>), lub zachowanie punktu końcowego (obiekt, który implementuje <xref:System.ServiceModel.Description.IEndpointBehavior> ). Instalowanie obiektu zachowanie zostanie dodany do odpowiedniej kolekcji zachowań programowo, w sposób deklaratywny (implementując atrybut niestandardowy), lub poprzez implementację niestandardową <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> obiektu, aby włączyć zachowanie, które ma zostać wstawiony, za pomocą plik konfiguracji aplikacji. Aby uzyskać więcej informacji, zobacz [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ Niestandardowe obiekty rozszerzeń można wstawiać do kolekcji przy użyciu zachowania operacji (obiektu, który implementuje <xref:System.ServiceModel.Description.IOperationBehavior>), zachowania kontraktu (obiektu, który implementuje <xref:System.ServiceModel.Description.IContractBehavior>) lub zachowania punktu końcowego (obiektu, który implementuje <xref:System.ServiceModel.Description.IEndpointBehavior> ). Obiekt zachowanie podczas instalowania jest dodawany do odpowiedniej kolekcji zachowań programowo, deklaratywnie (przez implementację atrybutu niestandardowego) lub przez implementację niestandardowego <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> obiektu, aby umożliwić Wstawianie zachowania przy użyciu plik konfiguracji aplikacji. Aby uzyskać szczegółowe informacje, zobacz [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](configuring-and-extending-the-runtime-with-behaviors.md).  
   
- Przykłady demonstrujące przejmowanie przez klienta programu WCF można znaleźć [jak: Inspekcja lub modyfikowanie komunikatów na kliencie](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md).  
+ Przykłady pokazujące przechwycenia przez klienta WCF znajdują się [w temacie How to: Inspekcja lub modyfikowanie komunikatów na kliencie](how-to-inspect-or-modify-messages-on-the-client.md).  
   
-### <a name="using-the-clientoperation-class"></a>Używanie klasy ClientOperation  
- <xref:System.ServiceModel.Dispatcher.ClientOperation> Klasy znajdują się w przypadku zmiany środowiska wykonawczego klienta oraz wstawiania wskaż niestandardowych rozszerzeń, które są w zakresie operacji tylko jednej usługi. (Aby zmodyfikować zachowanie w czasie wykonywania klienta dla wszystkich komunikatów w umowie, użyj <xref:System.ServiceModel.Dispatcher.ClientRuntime> klasy.)  
+### <a name="using-the-clientoperation-class"></a>Korzystanie z klasy ClientOperation  
+ <xref:System.ServiceModel.Dispatcher.ClientOperation> Klasa jest lokalizacją dla modyfikacji w czasie wykonywania klienta i punktu wstawiania dla rozszerzeń niestandardowych objętych zakresem tylko jednej operacji usługi. (Aby zmodyfikować zachowanie w czasie wykonywania klienta dla wszystkich komunikatów w kontrakcie, użyj <xref:System.ServiceModel.Dispatcher.ClientRuntime> klasy).  
   
- Użyj <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A> właściwości, aby zlokalizować <xref:System.ServiceModel.Dispatcher.ClientOperation> obiekt reprezentujący operację określonej usługi. Następujące właściwości umożliwiają wstawianie niestandardowych obiektów systemu klienta WCF:  
+ Użyj właściwości, aby zlokalizować obiekt, który reprezentuje konkretną operację usługi. <xref:System.ServiceModel.Dispatcher.ClientOperation> <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A> Następujące właściwości umożliwiają wstawianie niestandardowych obiektów do systemu klienta WCF:  
   
-- Użyj <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A> właściwości, aby wstawić własne <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> implementację dla operacji lub zmodyfikować bieżącego elementu formatującego.  
+- Użyj właściwości <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A> , aby wstawić implementację <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> niestandardową dla operacji lub zmodyfikować bieżący program formatujący.  
   
-- Użyj <xref:System.ServiceModel.Dispatcher.ClientOperation.ParameterInspectors%2A> właściwości, aby wstawić własne <xref:System.ServiceModel.Dispatcher.IParameterInspector> implementacji lub zmodyfikować bieżący.  
+- Użyj właściwości <xref:System.ServiceModel.Dispatcher.ClientOperation.ParameterInspectors%2A> , aby wstawić implementację <xref:System.ServiceModel.Dispatcher.IParameterInspector> niestandardową lub zmodyfikować bieżącą.  
   
- Następujące właściwości umożliwiają modyfikowanie systemu w interakcję z elementu formatującego i inspektorzy parametru niestandardowego:  
+ Następujące właściwości umożliwiają modyfikację systemu w interakcji z programem formatującego i inspektorami parametrów niestandardowych:  
   
-- Użyj <xref:System.ServiceModel.Dispatcher.ClientOperation.SerializeRequest%2A> właściwości do kontrolowania serializacji wiadomości wychodzących.  
+- <xref:System.ServiceModel.Dispatcher.ClientOperation.SerializeRequest%2A> Użyj właściwości, aby kontrolować serializację wiadomości wychodzącej.  
   
-- Użyj <xref:System.ServiceModel.Dispatcher.ClientOperation.DeserializeReply%2A> właściwości do kontrolowania deserializacji wiadomości przychodzącej.  
+- <xref:System.ServiceModel.Dispatcher.ClientOperation.DeserializeReply%2A> Użyj właściwości, aby kontrolować deserializacja komunikatu przychodzącego.  
   
-- Użyj <xref:System.ServiceModel.Dispatcher.ClientOperation.Action%2A> właściwości do kontrolowania akcji usługi WS-Addressing komunikatu żądania.  
+- <xref:System.ServiceModel.Dispatcher.ClientOperation.Action%2A> Użyj właściwości, aby kontrolować akcję WS-Addressing komunikatu żądania.  
   
-- Użyj <xref:System.ServiceModel.Dispatcher.ClientOperation.BeginMethod%2A> i <xref:System.ServiceModel.Dispatcher.ClientOperation.EndMethod%2A> do określenia metody klienta WCF, które są skojarzone z operacją asynchroniczną.  
+- <xref:System.ServiceModel.Dispatcher.ClientOperation.BeginMethod%2A> Użyj i <xref:System.ServiceModel.Dispatcher.ClientOperation.EndMethod%2A> , aby określić, które metody klienta WCF są skojarzone z operacją asynchroniczną.  
   
-- Użyj <xref:System.ServiceModel.Dispatcher.ClientOperation.FaultContractInfos%2A> właściwości do pobrania kolekcję, która zawiera typy, które mogą wystąpić w SOAP błędów jako typ szczegółów.  
+- <xref:System.ServiceModel.Dispatcher.ClientOperation.FaultContractInfos%2A> Użyj właściwości, aby uzyskać kolekcję zawierającą typy, które mogą występować w błędach SOAP jako typ szczegółowy.  
   
-- Użyj <xref:System.ServiceModel.Dispatcher.ClientOperation.IsInitiating%2A> i <xref:System.ServiceModel.Dispatcher.ClientOperation.IsTerminating%2A> właściwości w celu kontrolowania, czy sesja jest inicjowana lub podarte odpowiednio podczas wywoływania operacji.  
+- Użyj właściwości <xref:System.ServiceModel.Dispatcher.ClientOperation.IsTerminating%2A> i, aby określić, czy sesja jest inicjowana lub jest odłączana odpowiednio do momentu wywołania operacji. <xref:System.ServiceModel.Dispatcher.ClientOperation.IsInitiating%2A>  
   
-- Użyj <xref:System.ServiceModel.Dispatcher.ClientOperation.IsOneWay%2A> właściwości do kontrolowania, czy operacja jest Operacja jednokierunkowa.  
+- Użyj właściwości <xref:System.ServiceModel.Dispatcher.ClientOperation.IsOneWay%2A> , aby określić, czy operacja jest operacją jednokierunkową.  
   
-- Użyj <xref:System.ServiceModel.Dispatcher.ClientOperation.Parent%2A> właściwości można uzyskać, zawierający <xref:System.ServiceModel.Dispatcher.ClientRuntime> obiektu.  
+- Użyj właściwości <xref:System.ServiceModel.Dispatcher.ClientOperation.Parent%2A> , aby uzyskać obiekt zawierający <xref:System.ServiceModel.Dispatcher.ClientRuntime> .  
   
-- Użyj <xref:System.ServiceModel.Dispatcher.ClientOperation.Name%2A> właściwości można odczytać nazwy operacji.  
+- Użyj właściwości <xref:System.ServiceModel.Dispatcher.ClientOperation.Name%2A> , aby pobrać nazwę operacji.  
   
-- Użyj <xref:System.ServiceModel.Dispatcher.ClientOperation.SyncMethod%2A> właściwości do kontrolowania, jakiej metody jest mapowany do operacji.  
+- Użyj właściwości <xref:System.ServiceModel.Dispatcher.ClientOperation.SyncMethod%2A> , aby określić, która metoda jest zamapowana na operację.  
   
- Można rozszerzyć wykonywania klienta programu WCF dla operacji tylko jedną usługę, zapoznaj się z dostępne na właściwości <xref:System.ServiceModel.Dispatcher.ClientOperation> klasy, aby zobaczyć, czy modyfikowanie właściwości lub implementującej interfejs i dodanie go do właściwości tworzy funkcje szukamy. Po wybraniu określonego rozszerzenia, aby zbudować Wstawianie rozszerzenia odpowiednie <xref:System.ServiceModel.Dispatcher.ClientOperation> właściwość implementując zachowania klienta, który zapewnia dostęp do <xref:System.ServiceModel.Dispatcher.ClientOperation> klasy po wywołaniu. Wewnątrz tego zachowania można następnie zmodyfikować <xref:System.ServiceModel.Dispatcher.ClientRuntime> właściwości zgodnie z wymaganiami.  
+ Aby zwiększyć wykonanie klienta WCF tylko w jednej operacji usługi, przejrzyj właściwości dostępne w klasie, <xref:System.ServiceModel.Dispatcher.ClientOperation> aby zobaczyć, czy modyfikacja właściwości lub implementacja interfejsu i dodanie go do właściwości powoduje utworzenie funkcji, którą poszukujesz. Po wybraniu określonego rozszerzenia do skompilowania należy wstawić rozszerzenie do odpowiedniej <xref:System.ServiceModel.Dispatcher.ClientOperation> właściwości, implementując zachowanie klienta, które zapewnia dostęp <xref:System.ServiceModel.Dispatcher.ClientOperation> do klasy po wywołaniu. Wewnątrz tego zachowania można następnie zmodyfikować właściwość zgodnie <xref:System.ServiceModel.Dispatcher.ClientRuntime> z wymaganiami.  
   
- Zazwyczaj Implementowanie zachowania operacji (obiekt, który implementuje <xref:System.ServiceModel.Description.IOperationBehavior> interfejsu) sufiksy, ale można także użyć zachowań punktu końcowego i kontrakt zachowania, aby osiągnąć ten sam efekt, znajdując <xref:System.ServiceModel.Description.OperationDescription> dla określonego Operacja i dołączania ma zachowanie. Aby uzyskać więcej informacji, zobacz [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ Zazwyczaj implementacja zachowania operacji (obiekt implementujący <xref:System.ServiceModel.Description.IOperationBehavior> interfejs) wystarcza, ale można również użyć zachowań punktów końcowych i zachowań kontraktu, aby osiągnąć ten sam efekt <xref:System.ServiceModel.Description.OperationDescription> , wyszukując dla określonego Operacja i dołączenie tego zachowania. Aby uzyskać szczegółowe informacje, zobacz [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](configuring-and-extending-the-runtime-with-behaviors.md).  
   
- Aby korzystać z konfiguracji niestandardowe zachowanie, zachowanie podczas instalowania usługi przy użyciu modułu obsługi sekcji konfiguracji zachowanie niestandardowe. Można także zainstalować swoje zachowanie, tworząc atrybutu niestandardowego.  
+ Aby użyć zachowania niestandardowego z konfiguracji, należy zainstalować zachowanie przy użyciu niestandardowej procedury obsługi sekcji konfiguracji zachowania. Możesz również zainstalować zachowanie, tworząc atrybut niestandardowy.  
   
- Przykłady demonstrujące przejmowanie przez klienta programu WCF można znaleźć [jak: Inspekcja lub modyfikowanie parametrów](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md).  
+ Przykłady pokazujące przechwycenia przez klienta WCF znajdują się [w temacie How to: Inspekcja lub modyfikowanie](how-to-inspect-or-modify-parameters.md)parametrów.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ServiceModel.Dispatcher.ClientRuntime>
 - <xref:System.ServiceModel.Dispatcher.ClientOperation>
-- [Instrukcje: Inspekcja lub modyfikowanie komunikatów na kliencie](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)
-- [Instrukcje: Inspekcja lub modyfikowanie parametrów](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
+- [Instrukcje: Inspekcja lub modyfikowanie komunikatów na kliencie](how-to-inspect-or-modify-messages-on-the-client.md)
+- [Instrukcje: Inspekcja lub modyfikowanie parametrów](how-to-inspect-or-modify-parameters.md)

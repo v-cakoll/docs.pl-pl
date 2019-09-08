@@ -2,12 +2,12 @@
 title: Używanie Instrumentacji zarządzania Windows na potrzeby diagnostyki
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: e1f5ccb8849d5f8f6bd9156cd428d395a86b1301
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 90aae0e22feec5d26fa7ee4c690904ed893489b4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046014"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795915"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Używanie Instrumentacji zarządzania Windows na potrzeby diagnostyki
 Windows Communication Foundation (WCF) ujawnia dane inspekcji usługi w czasie wykonywania za pomocą dostawcy Instrumentacja zarządzania Windows WCF (WMI).  
@@ -17,7 +17,7 @@ Windows Communication Foundation (WCF) ujawnia dane inspekcji usługi w czasie w
   
  Dostawca usługi WMI to składnik, który udostępnia instrumentację w czasie wykonywania za pomocą interfejsu zgodnego z pakietem WBEM. Składa się z zestawu obiektów usługi WMI, które mają pary atrybut/wartość. Pary mogą mieć różne typy proste. Narzędzia do zarządzania programu mogą łączyć się z usługami za pomocą interfejsu w czasie wykonywania. Funkcja WCF udostępnia atrybuty usług, takie jak adresy, powiązania, zachowania i odbiorniki.  
   
- Wbudowanego dostawcę usługi WMI można aktywować w pliku konfiguracji aplikacji. Odbywa się to za pomocą `wmiProviderEnabled` atrybutu [ \<diagnostyki >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) w [ \<sekcji > System. ServiceModel](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) , jak pokazano w poniższej konfiguracji przykładowej.  
+ Wbudowanego dostawcę usługi WMI można aktywować w pliku konfiguracji aplikacji. Odbywa się to za pomocą `wmiProviderEnabled` atrybutu [ \<diagnostyki >](../../../configure-apps/file-schema/wcf/diagnostics.md) w [ \<sekcji > System. ServiceModel](../../../configure-apps/file-schema/wcf/system-servicemodel.md) , jak pokazano w poniższej konfiguracji przykładowej.  
   
 ```xml  
 <system.serviceModel>  
@@ -35,9 +35,9 @@ Windows Communication Foundation (WCF) ujawnia dane inspekcji usługi w czasie w
 > [!CAUTION]
 > Jeśli używasz .NET Framework dostarczonych metod do programistycznego uzyskiwania dostępu do danych WMI, należy pamiętać, że takie metody mogą generować wyjątki po ustanowieniu połączenia. Połączenie nie jest ustanawiane podczas konstruowania <xref:System.Management.ManagementObject> wystąpienia, ale przy pierwszym żądaniu obejmującym rzeczywistą wymianę danych. W związku z tym należy użyć `try..catch` bloku, aby przechwycić możliwe wyjątki.  
   
- Można zmienić poziom rejestrowania śledzenia i komunikatów, a także opcje rejestrowania komunikatów dla `System.ServiceModel` źródła śledzenia w usłudze WMI. Można to zrobić, uzyskując dostęp do wystąpienia [AppDomainInfo](../../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) , które uwidacznia następujące właściwości logiczne `LogMessagesAtServiceLevel`: `LogMessagesAtTransportLevel`, `LogMalformedMessages`,, `TraceLevel`i. `false` W związku z tym, jeśli skonfigurujesz odbiornik śledzenia do rejestrowania komunikatów, ale ustawisz te opcje w konfiguracji, możesz później zmienić je `true` na, gdy aplikacja jest uruchomiona. Pozwoli to efektywnie włączyć rejestrowanie komunikatów w czasie wykonywania. Podobnie, jeśli włączysz rejestrowanie komunikatów w pliku konfiguracji, możesz go wyłączyć w czasie wykonywania za pomocą usługi WMI.  
+ Można zmienić poziom rejestrowania śledzenia i komunikatów, a także opcje rejestrowania komunikatów dla `System.ServiceModel` źródła śledzenia w usłudze WMI. Można to zrobić, uzyskując dostęp do wystąpienia [AppDomainInfo](appdomaininfo.md) , które uwidacznia następujące właściwości logiczne `LogMessagesAtServiceLevel`: `LogMessagesAtTransportLevel`, `LogMalformedMessages`,, `TraceLevel`i. `false` W związku z tym, jeśli skonfigurujesz odbiornik śledzenia do rejestrowania komunikatów, ale ustawisz te opcje w konfiguracji, możesz później zmienić je `true` na, gdy aplikacja jest uruchomiona. Pozwoli to efektywnie włączyć rejestrowanie komunikatów w czasie wykonywania. Podobnie, jeśli włączysz rejestrowanie komunikatów w pliku konfiguracji, możesz go wyłączyć w czasie wykonywania za pomocą usługi WMI.  
   
- Należy pamiętać, że jeśli w pliku konfiguracji nie zostaną określone detektory śledzenia komunikatów rejestrowania komunikatów `System.ServiceModel` lub żadne detektory śledzenia dla śledzenia nie zostaną uwzględnione, pomimo że zmiany są akceptowane przez usługę WMI. Aby uzyskać więcej informacji na temat prawidłowego konfigurowania odpowiednich odbiorników, zobacz [Konfigurowanie rejestrowania komunikatów](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) i [Konfigurowanie śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Poziom śledzenia wszystkich innych źródeł śledzenia określonych przez konfigurację jest efektywny, gdy aplikacja zostanie uruchomiona i nie można jej zmienić.  
+ Należy pamiętać, że jeśli w pliku konfiguracji nie zostaną określone detektory śledzenia komunikatów rejestrowania komunikatów `System.ServiceModel` lub żadne detektory śledzenia dla śledzenia nie zostaną uwzględnione, pomimo że zmiany są akceptowane przez usługę WMI. Aby uzyskać więcej informacji na temat prawidłowego konfigurowania odpowiednich odbiorników, zobacz [Konfigurowanie rejestrowania komunikatów](../configuring-message-logging.md) i [Konfigurowanie śledzenia](../tracing/configuring-tracing.md). Poziom śledzenia wszystkich innych źródeł śledzenia określonych przez konfigurację jest efektywny, gdy aplikacja zostanie uruchomiona i nie można jej zmienić.  
   
  Funkcja WCF udostępnia `GetOperationCounterInstanceName` metodę tworzenia skryptów. Ta metoda zwraca nazwę wystąpienia licznika wydajności, jeśli jest podano nazwę operacji. Nie sprawdza ona jednak danych wejściowych. W związku z tym, jeśli podano niepoprawną nazwę operacji, zwracana jest niepoprawna nazwa licznika.  
   

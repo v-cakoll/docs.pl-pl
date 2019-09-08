@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 19d0c78221f35bd36edce85a60a4a7a2f985bc38
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 34f0a61329667a42aa42693e93169a5b6fb0aa5e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947007"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792043"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modyfikowanie dużej wartości (wartość maksymalna) danych w ADO.NET
 Typy danych dużego obiektu (LOB) to te, które przekraczają maksymalny rozmiar wiersza wynoszący 8 kilobajtów (KB). SQL Server udostępnia `max` specyfikator dla `varchar`, `nvarchar` i`varbinary` typów danych, aby umożliwić przechowywanie wartości o rozmiarze maksymalnie 2 ^ 32 bajtów. Kolumny tabeli i zmienne języka Transact-SQL mogą `varchar(max)`określać, `varbinary(max)` `nvarchar(max)`lub typy danych. W ADO.NET `max` typy danych mogą być pobierane `DataReader`przez i można również określić jako wartości parametrów wejściowych i wyjściowych bez żadnej specjalnej obsługi. W przypadku `varchar` dużych typów danych można pobrać i zaktualizować dane przyrostowo.  
@@ -251,7 +251,7 @@ WHERE   DocumentID=@DocumentID
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dane binarne i dużej wartości w programie SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [Mapowanie typu danych serwera SQL](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [Operacje danych serwera SQL w ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Dane binarne i dużej wartości w programie SQL Server](sql-server-binary-and-large-value-data.md)
+- [Mapowanie typu danych serwera SQL](../sql-server-data-type-mappings.md)
+- [Operacje danych serwera SQL w ADO.NET](sql-server-data-operations.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

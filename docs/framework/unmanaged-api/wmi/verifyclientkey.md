@@ -1,5 +1,5 @@
 ---
-title: Funkcja VerifyClientKey (niezarządzany wykaz interfejsów API)
+title: VerifyClientKey — funkcja (niezarządzana dokumentacja interfejsu API)
 description: Funkcja VerifyClientKey gwarantuje, że klucz klienta ma poprawne zabezpieczenia.
 ms.date: 11/06/2017
 api_name:
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4b51fe4510f4172227d9afd049eb6815790a165
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b674e959ab93cf76b84e2af41e875a50b7d115f4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783086"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798191"
 ---
-# <a name="verifyclientkey-function"></a>VerifyClientKey — funkcja
-Zapewnia, że klucz klienta ma poprawne zabezpieczeń.  
+# <a name="verifyclientkey-function"></a>VerifyClientKey, funkcja
+Zapewnia, że klucz klienta ma poprawne zabezpieczenia.  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -36,17 +36,17 @@ LONG VerifyClientKey();
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja się powiedzie, wartość zwracana jest `ERROR_SUCCESS` (0).
+Jeśli funkcja się powiedzie, zwracaną wartością jest `ERROR_SUCCESS` (0).
 
-Jeśli funkcja zawiedzie, wartością zwracaną jest kod błędu różny od zera, zdefiniowany w *WinError.h*.
+Jeśli funkcja się nie powiedzie, wartość zwracana jest kodem błędu o wartości innej niż zero zdefiniowanym w *Winerror. h*.
 
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** WMINet_Utils.def  
+ **Nagłówki** WMINet_Utils.def  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)
+- [WMI i liczniki wydajności (niezarządzana dokumentacja interfejsu API)](index.md)

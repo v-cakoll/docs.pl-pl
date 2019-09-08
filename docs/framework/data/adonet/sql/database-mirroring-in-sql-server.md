@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: 31fb8af4653cefc8027f4061b46b9a29d8d07f8c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 81e8bd5ba9274c84ffe18f617978b61238ebeff2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963987"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782432"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Dublowanie bazy danych w programie SQL Server
 Funkcja dublowania baz danych w programie SQL Server umożliwia przechowywanie kopii bazy danych SQL Server na serwerze rezerwy lub jej dublowanie. Funkcja dublowania gwarantuje, że w każdym momencie istnieją dwie oddzielne kopie danych, zapewniając wysoką dostępność i pełną nadmiarowość danych. Program .NET Dostawca danych dla SQL Server zapewnia niejawną obsługę funkcji dublowania baz danych, dzięki czemu Deweloper nie musi podejmować żadnych działań ani pisać kodu po skonfigurowaniu go dla bazy danych SQL Server. Ponadto <xref:System.Data.SqlClient.SqlConnection> obiekt obsługuje tryb połączenia jawnego, który umożliwia podawanie nazwy serwera partnerskiego trybu failover <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>w programie.  
@@ -65,4 +65,4 @@ string activeServer = connection.DataSource;
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

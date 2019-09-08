@@ -2,15 +2,15 @@
 title: Wybieranie platformy wymiany komunikatów
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 518a21ef34d52ef4b70871ba8bad7876374dd319
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7dcbea30b53142ed68db9ac138f8c7a665ca1729
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951861"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797289"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Wybieranie platformy wymiany komunikatów
-Pierwszym krokiem w przypadku tworzenia niestandardowego transportu jest podjęcie decyzji, które *wzorce wymiany komunikatów* (lub MEPs) są wymagane dla opracowywanego kanału. W tym temacie opisano dostępne opcje i omówiono różne wymagania. Jest to pierwsze zadanie na liście zadań opracowywania kanału opisane w temacie [Tworzenie kanałów](../../../../docs/framework/wcf/extending/developing-channels.md).  
+Pierwszym krokiem w przypadku tworzenia niestandardowego transportu jest podjęcie decyzji, które *wzorce wymiany komunikatów* (lub MEPs) są wymagane dla opracowywanego kanału. W tym temacie opisano dostępne opcje i omówiono różne wymagania. Jest to pierwsze zadanie na liście zadań opracowywania kanału opisane w temacie [Tworzenie kanałów](developing-channels.md).  
   
 ## <a name="six-message-exchange-patterns"></a>Wzorce wymiany komunikatów 6  
  Istnieją trzy MEPs do wyboru:  
@@ -27,7 +27,7 @@ Pierwszym krokiem w przypadku tworzenia niestandardowego transportu jest podjęc
   
      UNIKATOWY MEP dupleks umożliwia wysyłanie dowolnej liczby komunikatów przez klienta i odbieranie ich w dowolnej kolejności. UNIKATOWY MEP dupleks jest taka sama jak rozmowa telefoniczna, gdzie każdy wypowiadany wyraz jest komunikatem. Ponieważ obie strony mogą wysyłać i odbierać dane w tym unikatowy MEP, interfejs zaimplementowany przez klienta i kanały usług to <xref:System.ServiceModel.Channels.IDuplexChannel>.  
   
- ![Wybieranie wzorca wymiany komunikatów](../../../../docs/framework/wcf/extending/media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
+ ![Wybieranie wzorca wymiany komunikatów](./media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
 Trzy podstawowe wzorce wymiany komunikatów. Od góry do dołu: datagram, żądanie-odpowiedź i dupleks.  
   
  Każdy z tych MEPs może również obsługiwać *sesje*. Sesja (i implementacja <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> typu <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>) umożliwia skorelowanie wszystkich komunikatów wysłanych i odebranych w kanale. Wzorzec żądanie-odpowiedź jest autonomiczną sesją dwustronicową, ponieważ żądanie i odpowiedź są skorelowane. Z kolei wzorzec żądanie-odpowiedź, który obsługuje sesje, oznacza, że wszystkie pary żądanie/odpowiedź w tym kanale są skorelowane ze sobą. Zapewnia to sześć MEPs do wyboru:  
@@ -52,7 +52,7 @@ Trzy podstawowe wzorce wymiany komunikatów. Od góry do dołu: datagram, żąda
   
  W modelu obiektu kanału każdy manifest sesji logicznej jest wystąpieniem kanału sesji. W związku z tym każda nowa sesja utworzona przez klienta i zaakceptowana w usłudze odnosi się do nowego kanału sesji na każdej stronie. Na poniższym diagramie pokazano, w górnej części, struktura kanałów bezsesyjnych i na dole, struktura kanałów sesji.  
   
- ![Wybieranie wzorca wymiany komunikatów](../../../../docs/framework/wcf/extending/media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
+ ![Wybieranie wzorca wymiany komunikatów](./media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
   
  Klient tworzy nowy kanał sesji i wysyła komunikat. Po stronie usługi odbiornik kanału otrzymuje ten komunikat i wykryje, że należy on do nowej sesji, aby utworzyć nowy kanał sesji i skontaktować się z nim do aplikacji (w odpowiedzi na aplikację wywołującą AcceptChannel na odbiorniku kanału). Następnie aplikacja odbiera ten komunikat i wszystkie kolejne komunikaty wysyłane w ramach tej samej sesji za pośrednictwem tego samego kanału sesji.  
   
@@ -94,4 +94,4 @@ Trzy podstawowe wzorce wymiany komunikatów. Od góry do dołu: datagram, żąda
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd modelu kanału](../../../../docs/framework/wcf/extending/channel-model-overview.md)
+- [Przegląd modelu kanału](channel-model-overview.md)

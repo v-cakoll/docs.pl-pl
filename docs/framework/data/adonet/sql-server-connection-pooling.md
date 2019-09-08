@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 7581031b022c9c53568a616de66584be9ef7229c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 2c73bec644a9a76ba05d3299183e8f1643c8e870
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041190"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794317"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Buforowanie połączenia z programem SQL Server (ADO.NET)
 Połączenie z serwerem bazy danych zwykle składa się z kilku czasochłonnych kroków. Musi zostać ustanowiony kanał fizyczny, taki jak gniazdo lub nazwany potok, początkowe uzgadnianie z serwerem, muszą być przeanalizowane informacje o parametrach połączenia, połączenie musi być uwierzytelniane przez serwer. bieżąca transakcja i tak dalej.  
@@ -127,11 +127,11 @@ using (SqlConnection connection = new SqlConnection(
  Po aktywowaniu SQL Server roli aplikacji przez wywołanie `sp_setapprole` procedury składowanej system nie można zresetować kontekstu zabezpieczeń tego połączenia. Jeśli jednak włączono obsługę puli, połączenie zostanie zwrócone do puli i wystąpi błąd, gdy połączenie z pulą jest ponownie używane. Aby uzyskać więcej informacji, zobacz artykuł w bazie wiedzy "[Błędy ról aplikacji SQL z pulą zasobów OLE DB](https://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)".  
   
 ### <a name="application-role-alternatives"></a>Alternatywy ról aplikacji  
- Zalecamy skorzystanie z mechanizmów zabezpieczeń, których można używać zamiast ról aplikacji. Aby uzyskać więcej informacji, zobacz [Tworzenie ról aplikacji w SQL Server](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  
+ Zalecamy skorzystanie z mechanizmów zabezpieczeń, których można używać zamiast ról aplikacji. Aby uzyskać więcej informacji, zobacz [Tworzenie ról aplikacji w SQL Server](./sql/creating-application-roles-in-sql-server.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Pula połączeń](../../../../docs/framework/data/adonet/connection-pooling.md)
-- [SQL Server i ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
-- [Liczniki wydajności](../../../../docs/framework/data/adonet/performance-counters.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Pula połączeń](connection-pooling.md)
+- [SQL Server i ADO.NET](./sql/index.md)
+- [Liczniki wydajności](performance-counters.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

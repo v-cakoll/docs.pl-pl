@@ -2,24 +2,24 @@
 title: WmiPropertyMissing
 ms.date: 03/30/2017
 ms.assetid: 109fa6b4-93dc-4785-bec4-5aa02c434a65
-ms.openlocfilehash: 9b3933ad4e0f7d01bfe94cf0d2f42db482b76b45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f150124ee0cbd3ba94761988b7428d2e4b88f42c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944160"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797386"
 ---
 # <a name="wmipropertymissing"></a>WmiPropertyMissing
-Id: 129  
+#C1 129  
   
- Ważność: Błąd  
+ Obrażeń Błąd  
   
- Kategoria: ServiceModel  
+ Kategorii Modelu  
   
 ## <a name="description"></a>Opis  
- To zdarzenie oznacza, że wystąpiła niezgodność typów. Określona klasa modelu wspólnych informacji nie ma określonej właściwości określonego typu. Zdarzenie Wyświetla nazwę procesu i identyfikatora procesu.  
+ To zdarzenie wskazuje, że wystąpił niezgodność typów. Określona Klasa CIM nie ma określonej właściwości określonego typu. Zdarzenie Wyświetla nazwę procesu i identyfikator procesu.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Rejestrowanie zdarzeń](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Informacje ogólne o zdarzeniach](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Rejestrowanie zdarzeń](index.md)
+- [Informacje ogólne o zdarzeniach](events-general-reference.md)

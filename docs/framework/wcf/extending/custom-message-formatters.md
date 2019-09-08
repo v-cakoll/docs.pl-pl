@@ -2,38 +2,38 @@
 title: Niestandardowe elementy formatujące komunikaty
 ms.date: 03/30/2017
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
-ms.openlocfilehash: af1596c65fc87a68bc3dc2ab5ab2d82133e0fed4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f66071d3c400ca2adc615afc7f93b2483fe2136
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857977"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795801"
 ---
 # <a name="custom-message-formatters"></a>Niestandardowe elementy formatujące komunikaty
-Zawartość komunikatu jest często w formacie XML, który zwykle nie jest to wygodne format dla aplikacji. Aplikacje manipulowania obiektami, pobierania i ustawiania ich właściwości. Windows Communication Foundation (WCF) używa *kontraktu danych* przekonwertować <xref:System.ServiceModel.Channels.Message> obiektu do obiektu może z łatwością obsłużyć przez aplikację. Procesy te są nazywane serializacji i deserializacji. Należy pamiętać, że tych samych warunkach są używane do opisywania serializacji i deserializacji, wykonywane przez warstwy transportowej do i z formatu o komunikacji sieciowej komunikat, który jest procesem niepowiązanych.  
+Zawartość komunikatu jest często w postaci pliku XML, który zwykle nie jest wygodnym formatem aplikacji. Aplikacje manipulowanie obiektami, pobieranie i Ustawianie ich właściwości. Windows Communication Foundation (WCF) używa *kontraktu danych* do konwersji <xref:System.ServiceModel.Channels.Message> obiektu do obiektu, który można łatwo obsłużyć przez aplikację. Procesy te są nazywane serializacji i deserializacji. Należy zauważyć, że te same terminy są używane do opisywania serializacji i deserializacji wykonywanej przez warstwę transportu do i z formatu transportowego, który jest procesem niepowiązanym.  
   
- Możesz użyć programu formatującego niestandardowy komunikat, jeśli musisz wdrożyć wyspecjalizowane konwersji między komunikatów i obiekty, które nie można wykonać za pomocą kontraktu danych. W tym celu modyfikowania i rozszerzania zachowanie wykonania operacji konkretnej umowy, na kliencie lub usługi.  
+ Niestandardowego programu formatującego komunikaty można użyć, jeśli trzeba zaimplementować wyspecjalizowaną konwersję między komunikatami i obiektami, których nie można osiągnąć za pomocą kontraktu danych. W tym celu należy zmodyfikować lub rozszerzyć zachowanie wykonywania konkretnej operacji kontraktu na kliencie lub usłudze.  
   
-## <a name="custom-message-formatters-on-the-client"></a>Niestandardowe elementy formatujące komunikaty na komputerze klienckim  
- <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> Interfejs definiuje metody, które są używane w celu kontroli konwersji wiadomości do obiektów i obiektów do wiadomości dla aplikacji klienckich.  
+## <a name="custom-message-formatters-on-the-client"></a>Niestandardowe elementy formatujące komunikaty na kliencie  
+ <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> Interfejs definiuje metody, które są używane do sterowania konwersją komunikatów do obiektów i obiektów w wiadomości dla aplikacji klienckich.  
   
- Musisz zaimplementować ten interfejs. Najpierw Zastąp <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.DeserializeReply%2A> metodę deserializacji komunikatu. Ta metoda jest wywoływana po otrzymaniu wiadomości przychodzących, ale przed jest wysyłany do operacji klienta.  
+ Należy zaimplementować ten interfejs. Najpierw Zastąp <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.DeserializeReply%2A> metodę, aby deserializować komunikat. Ta metoda jest wywoływana po odebraniu komunikatu przychodzącego, ale przed wysłaniem go do operacji klienta.  
   
- Następnie zastąp <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.SerializeRequest%2A> metody do serializacji obiektu. Ta metoda jest wywoływana przed wysłaniem wiadomości wychodzących.  
+ Następnie zastąp <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.SerializeRequest%2A> metodę serializacji obiektu. Ta metoda jest wywoływana przed wysłaniem komunikatu wychodzącego.  
   
- Aby wstawić niestandardowego elementu formatującego do aplikacji usługi, należy przypisać <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> obiekt <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A> właściwości przy użyciu operacji zachowanie. Aby uzyskać informacje na temat działania, zobacz [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ Aby wstawić niestandardowy program formatujący do aplikacji usługi, przypisz <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> obiekt <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A> do właściwości przy użyciu zachowania operacji. Aby uzyskać informacje o zachowaniach, zobacz [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](configuring-and-extending-the-runtime-with-behaviors.md).  
   
-## <a name="custom-message-formatters-on-the-service"></a>Niestandardowe elementy formatujące komunikaty w usłudze  
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> Interfejs definiuje metody, które konwertują <xref:System.ServiceModel.Channels.Message> obiektu do parametrów operacji i parametrów w <xref:System.ServiceModel.Channels.Message> obiektu w aplikacji usługi.  
+## <a name="custom-message-formatters-on-the-service"></a>Niestandardowe elementy formatujące wiadomości w usłudze  
+ Interfejs definiuje metody, które <xref:System.ServiceModel.Channels.Message> konwertują obiekt na parametry dla operacji <xref:System.ServiceModel.Channels.Message> i z parametrów do obiektu w aplikacji usługi. <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>  
   
- Musisz zaimplementować ten interfejs. Najpierw Zastąp <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.DeserializeReply%2A> metodę deserializacji komunikatu. Ta metoda jest wywoływana po otrzymaniu wiadomości przychodzących, ale przed jest wysyłany do operacji klienta.  
+ Należy zaimplementować ten interfejs. Najpierw Zastąp <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.DeserializeReply%2A> metodę, aby deserializować komunikat. Ta metoda jest wywoływana po odebraniu komunikatu przychodzącego, ale przed wysłaniem go do operacji klienta.  
   
- Następnie zastąp <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.SerializeRequest%2A> metody do serializacji obiektu. Ta metoda jest wywoływana przed wysłaniem wiadomości wychodzących.  
+ Następnie zastąp <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.SerializeRequest%2A> metodę serializacji obiektu. Ta metoda jest wywoływana przed wysłaniem komunikatu wychodzącego.  
   
- Aby wstawić niestandardowego elementu formatującego do aplikacji usługi, należy przypisać <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> obiekt <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> właściwości przy użyciu operacji zachowanie. Aby uzyskać informacje na temat działania, zobacz [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ Aby wstawić niestandardowy program formatujący do aplikacji usługi, przypisz <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> obiekt <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> do właściwości przy użyciu zachowania operacji. Aby uzyskać informacje o zachowaniach, zobacz [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>
 - <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>
-- [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+- [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](configuring-and-extending-the-runtime-with-behaviors.md)

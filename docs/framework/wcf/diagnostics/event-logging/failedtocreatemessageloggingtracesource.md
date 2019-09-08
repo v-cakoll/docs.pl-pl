@@ -2,24 +2,24 @@
 title: FailedToCreateMessageLoggingTraceSource
 ms.date: 03/30/2017
 ms.assetid: 75e91aad-6d83-4e5e-8c70-fed1625e522f
-ms.openlocfilehash: e50c881bf10e05508408814c28c8570745b672fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44654b22bc83fcf681cee19a728993ba72efdb4b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774988"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797958"
 ---
 # <a name="failedtocreatemessageloggingtracesource"></a>FailedToCreateMessageLoggingTraceSource
-Id: 115  
+#C1 115  
   
- Ważność: Błąd  
+ Obrażeń Błąd  
   
- Kategoria: ServiceModel  
+ Kategorii Modelu  
   
 ## <a name="description"></a>Opis  
- To zdarzenie oznacza, że rejestrowanie komunikatów nie można utworzyć źródła śledzenia. Zdarzenie Wyświetla listę wyjątków, nazwa procesu i identyfikatora procesu.  
+ To zdarzenie wskazuje, że rejestrowanie komunikatów nie może utworzyć źródła śledzenia. Zdarzeń zawiera wyjątek, nazwę procesu i identyfikator procesu.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Rejestrowanie zdarzeń](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Informacje ogólne o zdarzeniach](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Rejestrowanie zdarzeń](index.md)
+- [Informacje ogólne o zdarzeniach](events-general-reference.md)

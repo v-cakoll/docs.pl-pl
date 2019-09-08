@@ -4,29 +4,29 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - channel model [WCF]
 ms.assetid: 07a81e11-3911-4632-90d2-cca99825b5bd
-ms.openlocfilehash: c29b3e3d5eff426ac573ddf5224259f0a6c28e53
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 362a7392d9dbaedb1942280a6c3b6c8f2139afe5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664929"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795888"
 ---
 # <a name="channel-model-overview"></a>Przegląd modelu kanału
-Stos kanał Windows Communication Foundation (WCF) jest stos warstwowej komunikacji z co najmniej jednego kanału, które przetwarzają komunikaty. W dolnej części stosu jest kanał transportu, który jest odpowiedzialny za dostosowanie stosu kanału do transportu źródłowego (na przykład protokołu TCP, HTTP, SMTP i innych rodzajów transportu). Kanały zapewnia model programowania niskiego poziomu do wysyłania i odbierania komunikatów. Ten model programowania opiera się na kilka interfejsów i innych typów nazywanych zbiorczo model kanału WCF. W tym temacie omówiono kształty kanału, konstrukcja odbiornika podstawowego kanałów (na usługę) i fabryki kanałów (na kliencie).  
+Stos kanału Windows Communication Foundation (WCF) to stos komunikacji warstwowej z co najmniej jednym kanałem, który przetwarza komunikaty. W dolnej części stosu jest kanał transportu, który jest odpowiedzialny za dostosowanie stosu kanału do podstawowego transportu (na przykład TCP, HTTP, SMTP i inne typy transportu). Kanały zapewniają model programowania niskiego poziomu służący do wysyłania i otrzymywania wiadomości. Ten model programowania opiera się na kilku interfejsach i innych typach wspólnie znanych jako model kanału WCF. W tym temacie omówiono kształty kanałów, konstruowanie odbiornika podstawowego kanału (w usłudze) i fabryki kanałów (na kliencie).  
   
-## <a name="channel-stack"></a>Kanał stosu  
- Punktami końcowymi programu WCF komunikują się ze świata, za pomocą stosu komunikacji, o nazwie stosu kanału. Poniższy diagram zawiera porównanie stosu kanału, za pomocą innych stosów komunikacji, na przykład protokołu TCP/IP.  
+## <a name="channel-stack"></a>Stos kanałów  
+ Punkty końcowe WCF komunikują się ze światem przy użyciu stosu komunikacji o nazwie stos kanału. Na poniższym diagramie porównano stos kanału z innymi stosami komunikacji, na przykład TCP/IP.  
   
- ![Model kanału](../../../../docs/framework/wcf/extending/media/wcfc-channelstackhighlevelc.gif "wcfc_ChannelStackHighLevelc")  
+ ![Model kanału](./media/wcfc-channelstackhighlevelc.gif "wcfc_ChannelStackHighLevelc")  
   
- Najpierw podobieństwa: W obu przypadkach każdej warstwie stosu zawiera niektóre abstrakcji świata poniżej warstwy, która tego abstrakcji tylko do warstwy bezpośrednio znad niej widoczne. Każda warstwa używa pozyskiwania tylko warstwę bezpośrednio pod nim. Również w obu przypadkach, gdy komunikują się dwóch stosów, każda warstwa komunikuje się za pomocą odpowiedniej warstwy ze stosu na przykład warstwy IP komunikuje się z warstwy IP i warstwie TCP w warstwie TCP i tak dalej.  
+ Najpierw podobieństwa: W obu przypadkach każda warstwa stosu zapewnia pewne streszczenie świata poniżej tej warstwy i uwidacznia Ten abstrakcję tylko w warstwie bezpośrednio nad nią. Każda warstwa używa abstrakcji tylko warstwy bezpośrednio poniżej. Ponadto w obu przypadkach, gdy dwa stosy komunikują się, każda warstwa komunikuje się z odpowiednią warstwą w innym stosie, na przykład warstwa IP komunikuje się z warstwą IP i warstwą TCP z warstwą TCP itd.  
   
- Teraz różnice: Gdy dotyczącą stosu TCP zaprojektowano tak, aby zapewnić abstrakcję sieci fizycznej, stos kanał ma na celu zapewnienie klasą abstrakcyjną nie tylko sposób wiadomość jest dostarczany, oznacza to, transport, ale też inne funkcje, takie jak co to jest komunikat lub Protokół używany do komunikacji, w tym transportu, ale znacznie więcej niż. Na przykład elementu powiązania niezawodnej sesji jest częścią stosu kanału, ale nie poniżej transportu lub z dot. Ta warstwa abstrakcji odbywa się poprzez wymaganie kanału dołu w stosie, aby dostosować protokół transportowy podstawowej architektury stosu kanału i opierając się na dalsze kanałów w stosie, aby zapewnić funkcji komunikacji, takich jak niezawodność w górę gwarancje i zabezpieczeń.  
+ Teraz różnice: Stos protokołu TCP został zaprojektowany tak, aby zapewnić abstrakcję sieci fizycznej, stos kanału został zaprojektowany tak, aby zapewnić abstrakcję nie tylko sposobu dostarczania wiadomości, czyli transport, ale również inne funkcje, takie jak to, co znajduje się w komunikacie lub co Protokół jest używany do komunikacji, w tym transportu, ale znacznie więcej niż ten. Na przykład element powiązania niezawodnej sesji jest częścią stosu kanału, ale nie jest niższy niż transport lub sam transport. Takie streszczenie jest osiągane przez wymaganie, aby dolny kanał w stosie przystosował podstawowy protokół transportu do architektury stosu kanału, a następnie opierał się na kanałach w dalszej części stosu w celu zapewnienia funkcji komunikacji, takich jak niezawodność gwarancje i zabezpieczenia.  
   
- Komunikaty przepływ przez stos komunikacji jako <xref:System.ServiceModel.Channels.Message> obiektów. Jak pokazano na rysunku powyżej, kanał dolnej nosi nazwę kanał transportu. Jest to kanał, który jest odpowiedzialny za wysyłanie i odbieranie wiadomości do i z innych stron. Dotyczy to również odpowiedzialny za przekształcania <xref:System.ServiceModel.Channels.Message> obiektów do i z formatu używany do komunikacji z innych stron. Powyżej kanał transportowy może być dowolną liczbę kanały protokołów każdej osoby odpowiedzialnej za podawanie funkcja komunikacji, takich jak gwarantuje niezawodne dostarczanie. Kanały protokołów działają na wiadomości przepływają przez ich w formie <xref:System.ServiceModel.Channels.Message> obiektu. Są zazwyczaj albo przekształcenia komunikatu, na przykład przez dodawanie nagłówków lub szyfrowanie treści, lub wysyłania i odbierania komunikatów sterujących własne protokołu, na przykład potwierdzenia otrzymania.  
+ Komunikaty przepływają przez stos komunikacji <xref:System.ServiceModel.Channels.Message> jako obiekty. Jak pokazano na rysunku powyżej, dolny kanał nosi nazwę kanału transportowego. Jest to kanał odpowiedzialny za wysyłanie i otrzymywanie komunikatów do i z innych stron. Obejmuje to odpowiedzialność za transformowanie <xref:System.ServiceModel.Channels.Message> obiektu do i z formatu używanego do komunikowania się z innymi stronami. Nad kanałem transportu może istnieć dowolna liczba kanałów protokołów, które są odpowiedzialne za dostarczanie funkcji komunikacji, takiej jak gwarancje niezawodnego dostarczania. Kanały protokołu działają na komunikatach przepływających przez nich w postaci <xref:System.ServiceModel.Channels.Message> obiektu. Zwykle Przekształć komunikat, na przykład przez dodanie nagłówków lub zaszyfrowanie treści lub wysłanie i odebranie własnych komunikatów kontroli protokołu, na przykład potwierdzenia odbioru.  
   
 ## <a name="channel-shapes"></a>Kształty kanału  
- Każdy kanał implementuje jeden lub więcej interfejsów, znane jako interfejsy kształtu kanału lub kształtów kanału. Te kształty kanału zawierają metody zorientowane na komunikacji takich jak wysyłania oraz odbierania lub żądania i odpowiedzi czy implementuje kanału i wywołuje użytkownika kanału. Podstawową kształtów kanał jest <xref:System.ServiceModel.Channels.IChannel> interfejsu, który stanowi interfejs, który zapewnia `GetProperty` \<T > Metoda przeznaczony jako mechanizm warstwowej dostęp do dowolnych funkcji udostępnianych przez kanały w stosie. 5 kanału kształty, które rozszerzają <xref:System.ServiceModel.Channels.IChannel> są:  
+ Każdy kanał implementuje jeden lub więcej interfejsów znanych jako interfejsy kształtu kanału lub kształty kanałów. Te kształty kanałów zapewniają metody ukierunkowane na komunikację, takie jak wysyłanie i odbieranie lub żądanie, i odpowiadają za to, aby kanał został zaimplementowany, oraz użytkownika wywołań kanału. Na podstawie kształtu kanału jest <xref:System.ServiceModel.Channels.IChannel> interfejs, który `GetProperty` \<zapewnia metodę T >, która jest mechanizmem warstwowym, aby uzyskać dostęp do dowolnych funkcji udostępnianych przez kanały w stosie. Pięć kształtów kanałów, które <xref:System.ServiceModel.Channels.IChannel> są rozbudowane:  
   
 - <xref:System.ServiceModel.Channels.IInputChannel>  
   
@@ -38,7 +38,7 @@ Stos kanał Windows Communication Foundation (WCF) jest stos warstwowej komunika
   
 - <xref:System.ServiceModel.Channels.IDuplexChannel>  
   
- Ponadto każdy z tych kształtów ma odpowiednika, która rozszerza <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> do obsługi sesji. Są to:  
+ Dodatkowo każdy z tych kształtów ma odpowiednik, który rozciąga <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> się na obsługę sesji. Są to:  
   
 - <xref:System.ServiceModel.Channels.IInputSessionChannel>  
   
@@ -50,31 +50,31 @@ Stos kanał Windows Communication Foundation (WCF) jest stos warstwowej komunika
   
 - <xref:System.ServiceModel.Channels.IDuplexSessionChannel>  
   
- Kształty kanału są wzorowane po niektóre podstawowe wiadomości programu exchange wzorców obsługiwane przez istniejące protokołów transportowych. Na przykład, jednokierunkowe komunikaty odpowiada <xref:System.ServiceModel.Channels.IInputChannel> / <xref:System.ServiceModel.Channels.IOutputChannel> para "żądanie-odpowiedź" odnosi się do <xref:System.ServiceModel.Channels.IRequestChannel> / <xref:System.ServiceModel.Channels.IReplyChannel> pary i dwukierunkową komunikację dwukierunkowego odpowiada <xref:System.ServiceModel.Channels.IDuplexChannel> (który rozszerza zarówno <xref:System.ServiceModel.Channels.IInputChannel> i <xref:System.ServiceModel.Channels.IOutputChannel>).  
+ Kształty kanałów są desenie po niektórych podstawowych wzorcach wymiany komunikatów obsługiwanych przez istniejące protokoły transportowe. Na przykład komunikacja <xref:System.ServiceModel.Channels.IInputChannel> jednokierunkowa odpowiada / <xref:System.ServiceModel.Channels.IOutputChannel> pary, żądanie-odpowiedź odpowiada <xref:System.ServiceModel.Channels.IReplyChannel> <xref:System.ServiceModel.Channels.IRequestChannel> / par i dwukierunkowej komunikacji dupleksowej odnosi się do <xref:System.ServiceModel.Channels.IDuplexChannel> (który rozszerza oba <xref:System.ServiceModel.Channels.IInputChannel> i <xref:System.ServiceModel.Channels.IOutputChannel>).  
   
-## <a name="programming-with-the-channel-stack"></a>Programowanie za pomocą stosu kanału  
- Kanał stosy są zwykle tworzone przy użyciu wzorca fabryki, której powiązanie tworzy stosu kanału. Na stronie wysyłania powiązania jest używany do tworzenia <xref:System.ServiceModel.ChannelFactory>, który z kolei stosu kompilacje kanału i zwraca odwołanie do góry kanału w stosie. Aplikacja można następnie używać tego kanału do wysyłania wiadomości. Aby uzyskać więcej informacji, zobacz [programowania na poziomie kanału klienta](../../../../docs/framework/wcf/extending/client-channel-level-programming.md).  
+## <a name="programming-with-the-channel-stack"></a>Programowanie przy użyciu stosu kanału  
+ Stosy kanałów są zwykle tworzone przy użyciu wzorca fabryki, gdzie powiązanie tworzy stos kanałów. Na stronie wysyłanie powiązanie służy do kompilowania <xref:System.ServiceModel.ChannelFactory>, który z kolei kompiluje stos kanału i zwraca odwołanie do górnego kanału w stosie. Następnie aplikacja może używać tego kanału do wysyłania komunikatów. Aby uzyskać więcej informacji, zobacz [Programowanie na poziomie kanału klienta](client-channel-level-programming.md).  
   
- Po stronie odbierającej powiązania jest używany do tworzenia <xref:System.ServiceModel.Channels.IChannelListener>, która nasłuchuje komunikatów przychodzących. <xref:System.ServiceModel.Channels.IChannelListener> Zapewnia komunikatów do nasłuchiwania aplikacji, tworząc kanał stosy i przekazywanie odwołania aplikacji do górnej kanału. Następnie aplikacja użyje tego kanału do odbierania wiadomości przychodzących. Aby uzyskać więcej informacji, zobacz [programowania na poziomie kanału usługi](../../../../docs/framework/wcf/extending/service-channel-level-programming.md).  
+ Na stronie odbierania powiązanie służy do kompilowania <xref:System.ServiceModel.Channels.IChannelListener>, który nasłuchuje komunikatów przychodzących. <xref:System.ServiceModel.Channels.IChannelListener> Dostarcza komunikaty do aplikacji nasłuchiwania przez utworzenie stosów kanałów i przekazanie odwołania aplikacji do górnego kanału. Aplikacja używa tego kanału do odbierania wiadomości przychodzących. Aby uzyskać więcej informacji, zobacz [Programowanie na poziomie kanału usługi](service-channel-level-programming.md).  
   
 ## <a name="the-channel-object-model"></a>Model obiektu kanału  
- Model obiektu kanału jest podstawowy zestaw interfejsów, które trzeba do zaimplementowania kanały, odbiorniki kanałów i fabryki kanałów. Istnieją również pewne klas bazowych, pod warunkiem, aby pomóc w niestandardowych implementacji.  
+ Model obiektów kanału jest podstawowym zestawem interfejsów wymaganych do implementowania kanałów, odbiorników kanałów i fabryk kanałów. Istnieją także pewne klasy bazowe, które mogą pomóc w implementacji niestandardowej.  
   
- Odbiorniki kanałów jest odpowiedzialny za nasłuchiwanie przychodzących wiadomości, a następnie dostarczanie ich do warstwy powyżej za pośrednictwem kanałów utworzonych przez odbiornik kanału.  
+ Odbiorniki kanałów są odpowiedzialne za nasłuchiwanie wiadomości przychodzących, a następnie dostarczanie ich do warstwy powyżej za pośrednictwem kanałów utworzonych przez odbiornik kanału.  
   
- Fabryki kanałów jest odpowiedzialny za tworzenie kanałów, które są używane do wysyłania wiadomości i zamknięcie wszystkich kanałów one utworzone po zamknięciu fabryki kanałów.  
+ Fabryki kanałów są odpowiedzialne za tworzenie kanałów, które są używane do wysyłania komunikatów i zamykania wszystkich kanałów utworzonych podczas zamykania fabryki kanałów.  
   
- <xref:System.ServiceModel.ICommunicationObject> to interfejs core, który definiuje automatu stanów podstawowego, który implementuje wszystkie obiekty komunikacji. <xref:System.ServiceModel.Channels.CommunicationObject> udostępnia implementację tego interfejsu core, która innych klas kanału może pochodzić z zamiast ponownej implementacji interfejsu. Jednak nie jest to wymagane: można zaimplementować niestandardowy kanał <xref:System.ServiceModel.ICommunicationObject> bezpośrednio i dziedziczy <xref:System.ServiceModel.Channels.CommunicationObject>. Żadna z klas na rysunku 3 są traktowane jako część model kanału; są one dostępne implementacje niestandardowym kanale, którzy chcą tworzyć kanały pomocników.  
+ <xref:System.ServiceModel.ICommunicationObject>jest podstawowym interfejsem, który definiuje podstawowy komputer stanu, który implementuje wszystkie obiekty komunikacji. <xref:System.ServiceModel.Channels.CommunicationObject>zapewnia implementację tego interfejsu podstawowego, z którego mogą pochodzić inne klasy kanału zamiast ponownego implementowania interfejsu. Nie jest to jednak wymagane: kanał niestandardowy można zaimplementować <xref:System.ServiceModel.ICommunicationObject> bezpośrednio i nie dziedziczy z. <xref:System.ServiceModel.Channels.CommunicationObject> Żadna z klas na rysunku 3 nie jest uważana za część modelu kanału; są one pomocnikami dostępnymi dla niestandardowych realizatorów kanałów, którzy chcą tworzyć kanały.  
   
- ![Model kanału](../../../../docs/framework/wcf/extending/media/wcfc-wcfcchannelsigure3omumtreec.gif "wcfc_WCFCChannelsigure3OMUMTreec")  
+ ![Model kanału](./media/wcfc-wcfcchannelsigure3omumtreec.gif "wcfc_WCFCChannelsigure3OMUMTreec")  
   
- W poniższych tematach opisano model obiektów kanał, a także różne obszary rozwoju, które pomagają tworzyć niestandardowe kanały.  
+ W poniższych tematach opisano model obiektów kanału oraz różne obszary programistyczne, które ułatwiają tworzenie niestandardowych kanałów.  
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[Usługa: Odbiorniki kanałów i kanały](../../../../docs/framework/wcf/extending/service-channel-listeners-and-channels.md)|W tym artykule opisano odbiorniki kanałów, które nasłuchiwanie przychodzących kanałów w aplikacji usługi.|  
-|[Klient: Fabryki kanałów i kanały](../../../../docs/framework/wcf/extending/client-channel-factories-and-channels.md)|W tym artykule opisano fabryki kanałów, które tworzą kanały, aby nawiązać połączenie z aplikacją usługi.|  
-|[Opis zmian stanu](../../../../docs/framework/wcf/extending/understanding-state-changes.md)|W tym artykule opisano sposób, w jaki <xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType> interfejsu modele zmiany stanu w kanałach.|  
-|[Wybieranie platformy wymiany komunikatów](../../../../docs/framework/wcf/extending/choosing-a-message-exchange-pattern.md)|Opisuje sześć wzorców podstawowe wiadomości programu exchange, obsługujące kanałów.|  
-|[Obsługa wyjątków i błędów](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)|W tym artykule opisano sposób obsługi błędów i wyjątków w ramach kanałów niestandardowych.|  
-|[Konfiguracja i obsługa metadanych](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)|W tym artykule opisano, jak do obsługi kanałów niestandardowych z modelu aplikacji i jak eksportować i importować metadane przy użyciu powiązania i elementy powiązań.|
+|[Usługi Odbiorniki kanałów i kanały](service-channel-listeners-and-channels.md)|Opisuje Odbiorniki kanałów, które nasłuchują przychodzących kanałów w aplikacji usługi.|  
+|[Klient Fabryki kanałów i kanały](client-channel-factories-and-channels.md)|Opisuje fabryki kanałów, które tworzą kanały do łączenia się z aplikacją usługi.|  
+|[Opis zmian stanu](understanding-state-changes.md)|Opisuje sposób <xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType> zmiany stanu modeli interfejsu w kanałach.|  
+|[Wybieranie platformy wymiany komunikatów](choosing-a-message-exchange-pattern.md)|Opisuje sześć podstawowych wzorców wymiany komunikatów, które mogą być obsługiwane przez kanały.|  
+|[Obsługa wyjątków i błędów](handling-exceptions-and-faults.md)|Opisuje, jak obsługiwać błędy i wyjątki w niestandardowych kanałach.|  
+|[Konfiguracja i obsługa metadanych](configuration-and-metadata-support.md)|Opisuje sposób obsługi kanałów niestandardowych z modelu aplikacji oraz sposób eksportowania i importowania metadanych przy użyciu powiązań i elementów powiązania.|

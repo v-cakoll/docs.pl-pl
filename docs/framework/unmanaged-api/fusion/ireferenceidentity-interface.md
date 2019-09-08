@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd46ea26532074c9ea42da4d07a38ed583aad076
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2bb151d7c77104d8e24acefaac2e1f109b67f168
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789685"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796360"
 ---
 # <a name="ireferenceidentity-interface"></a>IReferenceIdentity — Interfejs
 Reprezentuje odwołanie do unikatowego podpisu obiektu kodu.  
@@ -30,19 +30,19 @@ Reprezentuje odwołanie do unikatowego podpisu obiektu kodu.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|`IReferenceIdentity::Clone`|Pobiera wskaźnik interfejsu do nowego `IReferenceIdentity` wystąpienia, która jest taka sama jak ta `IReferenceIdentity`, z wyjątkiem zmiany określonego atrybutu.|  
-|`IReferenceIdentity::EnumAttributes`|Pobiera wskaźnik interfejsu do `IEnumIDENTITY_ATTRIBUTE` wystąpienia, które zawiera atrybuty skojarzone z tym `IReferenceIdentity`.|  
-|`IReferenceIdentity::GetAttribute`|Pobiera wartość atrybutu w określonej przestrzeni nazw o podanej nazwie.|  
-|`IReferenceIdentity::SetAttribute`|Ustawia atrybut, który ma określonego obszaru nazw i nazwę określoną dla określonej wartości.|  
+|`IReferenceIdentity::Clone`|Pobiera wskaźnik interfejsu do nowego `IReferenceIdentity` wystąpienia, które jest identyczne z tą `IReferenceIdentity`różnicą, z wyjątkiem określonych zmian atrybutów.|  
+|`IReferenceIdentity::EnumAttributes`|Pobiera wskaźnik interfejsu do `IEnumIDENTITY_ATTRIBUTE` wystąpienia, które zawiera atrybuty skojarzone z tym `IReferenceIdentity`elementem.|  
+|`IReferenceIdentity::GetAttribute`|Pobiera wartość atrybutu w określonym obszarze nazw z określoną nazwą.|  
+|`IReferenceIdentity::SetAttribute`|Ustawia atrybut, który ma określoną przestrzeń nazw i określoną nazwę określonej wartości.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Isolation.h  
+ **Nagłówki** Izolacja. h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Interfejsy łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IEnumIDENTITY_ATTRIBUTE, interfejs](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
+- [Interfejsy łączenia](fusion-interfaces.md)
+- [IEnumIDENTITY_ATTRIBUTE, interfejs](ienumidentity-attribute-interface.md)

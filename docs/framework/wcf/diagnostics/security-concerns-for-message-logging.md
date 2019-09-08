@@ -2,12 +2,12 @@
 title: Uwagi dotyczące zabezpieczeń rejestrowania komunikatów
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: b635591b7a3b07385ed48c6b1ea556139c6d77c5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c5efd2990a00045e920c005f6658d5fdfb858481
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044254"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795944"
 ---
 # <a name="security-concerns-for-message-logging"></a>Uwagi dotyczące zabezpieczeń rejestrowania komunikatów
 W tym temacie opisano, jak można chronić poufne dane przed ujawnieniem w dziennikach komunikatów, a także zdarzenia generowane przez funkcję rejestrowania komunikatów.  
@@ -107,9 +107,9 @@ W tym temacie opisano, jak można chronić poufne dane przed ujawnieniem w dzien
   
 - Znane dane OSOBowe nie są dozwolone w dzienniku: To zdarzenie jest emitowane, gdy rejestrowanie znanego elementu dane OSOBowe jest niedozwolone. Dzieje się tak, `logKnownPii` gdy atrybut `source` elementu w pliku App. config lub Web. config jest `enableLoggingKnownPii` ustawiony na `true`, ale atrybut w `machineSettings` elemencie Machine. config jest ustawiony na `false`. Nie zgłoszono żadnego wyjątku.  
   
- Te zdarzenia można wyświetlać w narzędziu Podgląd zdarzeń, które są dostarczane z systemem Windows. Aby uzyskać więcej informacji na ten temat, zobacz [Rejestrowanie zdarzeń](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
+ Te zdarzenia można wyświetlać w narzędziu Podgląd zdarzeń, które są dostarczane z systemem Windows. Aby uzyskać więcej informacji na ten temat, zobacz [Rejestrowanie zdarzeń](./event-logging/index.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Rejestrowanie komunikatów](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [Problemy dotyczące zabezpieczeń i przydatne porady na temat śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
+- [Rejestrowanie komunikatów](message-logging.md)
+- [Problemy dotyczące zabezpieczeń i przydatne porady na temat śledzenia](./tracing/security-concerns-and-useful-tips-for-tracing.md)

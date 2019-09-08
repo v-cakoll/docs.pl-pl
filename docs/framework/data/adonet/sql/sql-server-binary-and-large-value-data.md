@@ -2,28 +2,28 @@
 title: Dane binarne i dużej wartości w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: e00827b3-7511-4b2d-91d7-851ca86cc6b5
-ms.openlocfilehash: 4b7a3f16726d6363cd702fb912bb7be281a25000
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4d941ad6b7865112b45fd8c20ad89e9236e17b9d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906623"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791676"
 ---
 # <a name="sql-server-binary-and-large-value-data"></a>Dane binarne i dużej wartości w programie SQL Server
-SQL Server udostępnia `max` specyfikator, który zwiększa pojemność `varchar`, `nvarchar`, i `varbinary` typów danych. `varchar(max)`, `nvarchar(max)`, i `varbinary(max)` są nazywane *typów danych dużych wartości*. Typy danych dużej wartości można użyć do przechowywania maksymalnie 2 ^ 31-1 bajtów danych.  
+SQL Server zawiera `max` specyfikator, który rozszerza pojemność magazynu `varchar`dla, `nvarchar`i `varbinary` typów danych. `varchar(max)`, `nvarchar(max)` i`varbinary(max)` są nazywane zbiorczo *typami danych o dużej wartości*. Możesz użyć typów danych o dużej wartości do przechowywania maksymalnie 2 ^ 31-1 bajtów danych.  
   
- Program SQL Server 2008 wprowadzono atrybut FILESTREAM, który jest typem danych, ale raczej atrybut, który może być zdefiniowany dla kolumny, dzięki czemu duża wartość danych mają być przechowywane w systemie plików zamiast w bazie danych.  
+ SQL Server 2008 wprowadza atrybut FILESTREAM, który nie jest typem danych, ale raczej atrybut, który można zdefiniować w kolumnie, umożliwiając przechowywanie danych dużych wartości w systemie plików, a nie w bazie danych.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Modyfikowanie dużej wartości (wartość maksymalna) danych w ADO.NET](../../../../../docs/framework/data/adonet/sql/modifying-large-value-max-data.md)  
- W tym artykule opisano sposób pracy z typami danych duża wartość.  
+ [Modyfikowanie dużej wartości (wartość maksymalna) danych w ADO.NET](modifying-large-value-max-data.md)  
+ Opisuje sposób pracy z typami danych o dużej wartości.  
   
- [Dane FILESTREAM](../../../../../docs/framework/data/adonet/sql/filestream-data.md)  
- W tym artykule opisano sposób pracy z dużą wartość — dane przechowywane w programie SQL Server 2008 mających atrybut FILESTREAM.  
+ [Dane FILESTREAM](filestream-data.md)  
+ Opisuje sposób pracy z danymi o dużej wartości przechowywanych w SQL Server 2008 przy użyciu atrybutu FILESTREAM.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Typy danych programu SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [Operacje danych serwera SQL w ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
-- [Pobieranie i modyfikowanie danych ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Typy danych programu SQL Server i ADO.NET](sql-server-data-types.md)
+- [Operacje danych serwera SQL w ADO.NET](sql-server-data-operations.md)
+- [Pobieranie i modyfikowanie danych ADO.NET](../retrieving-and-modifying-data.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

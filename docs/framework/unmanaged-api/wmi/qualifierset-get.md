@@ -1,5 +1,5 @@
 ---
-title: Funkcja QualifierSet_Get (niezarządzany wykaz interfejsów API)
+title: QualifierSet_Get — funkcja (niezarządzana dokumentacja interfejsu API)
 description: Funkcja QualifierSet_Get pobiera nazwany kwalifikator.
 ms.date: 11/06/2017
 api_name:
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24ab27a8724107bac96c9fae695fb791b00bfa5e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 751694985248346187eff016ef7a4a8054cb1212
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782576"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798312"
 ---
-# <a name="qualifiersetget-function"></a>QualifierSet_Get — funkcja
-Pobiera określonego nazwanego kwalifikator.  
+# <a name="qualifierset_get-function"></a>QualifierSet_Get, funkcja
+Pobiera określony kwalifikator nazwany.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -44,44 +44,44 @@ HRESULT QualifierSet_Get (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`   
-[in] Ten parametr jest nieużywany.
+podczas Ten parametr jest nieużywany.
 
 `ptr`   
-[in] Wskaźnik do [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) wystąpienia.
+podczas Wskaźnik do wystąpienia [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .
 
 `wszName`   
-[in] Nazwa kwalifikatora, którego wartość jest wymagane.
+podczas Nazwa kwalifikatora, którego żądano wartości.
 
 `lFlags`   
-[in] Zastrzeżone. Ten parametr musi być 0.
+podczas Rezerwacj. Ten parametr musi być równy 0.
 
 `pVal`   
-[out] Jeśli operacja się powiedzie, poprawny typ i wartość kwalifikatora. Jeśli funkcja zawiedzie, `VARIANT` wskazywany przez `pVal` nie jest modyfikowany. Jeśli ten parametr jest `null`, parametr jest ignorowany.
+określoną Po pomyślnym wykonaniu prawidłowy typ i wartość kwalifikatora. Jeśli funkcja się nie powiedzie `VARIANT` , wskazywane `pVal` przez nie jest modyfikowane. Jeśli ten parametr ma `null`wartość, parametr jest ignorowany.
 
 `plFlavor`   
-[out] Wskaźnik na wartość typu LONG, odbierająca bitów wersja kwalifikatora dla żądanego kwalifikatora. Jeśli informacje o wersji nie jest wymagana, ten parametr może być `null`. 
+określoną Wskaźnik do LONG, który odbiera bity wersji kwalifikatora dla żądanego kwalifikatora. Jeśli informacje o wersji nie są potrzebne, ten parametr może `null`być. 
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
+Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nagłówkowym *WbemCli. h* lub można je definiować jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr jest nieprawidłowy. |
-|`WBEM_E_NOT_FOUND` | 0x80041002 | Określony kwalifikatora nie istnieje. |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | Określony kwalifikator nie istnieje. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja zawija wywołanie do [IWbemQualifierSet::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) metody.
+Ta funkcja otacza wywołanie metody [IWbemQualifierSet:: Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) .
 
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** WMINet_Utils.idl  
+ **Nagłówki** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)
+- [WMI i liczniki wydajności (niezarządzana dokumentacja interfejsu API)](index.md)

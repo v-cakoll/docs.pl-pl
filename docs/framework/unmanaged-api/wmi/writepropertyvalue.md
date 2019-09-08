@@ -1,5 +1,5 @@
 ---
-title: Funkcja WritePropertyValue (niezarządzany wykaz interfejsów API)
+title: WritePropertyValue — funkcja (niezarządzana dokumentacja interfejsu API)
 description: Funkcja WritePropertyValue zapisuje bajty do właściwości.
 ms.date: 11/06/2017
 api_name:
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47120ff9de9e6e4802c5aea990841b235cd6c74c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a3c42129835f9b30bed493a0992d49d7e2a458e2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783056"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798184"
 ---
-# <a name="writepropertyvalue-function"></a>WritePropertyValue — funkcja
-Zapisuje określoną liczbę bajtów z właściwością identyfikowane przez dojście właściwości.
+# <a name="writepropertyvalue-function"></a>WritePropertyValue, funkcja
+Zapisuje określoną liczbę bajtów do właściwości identyfikowanej przez uchwyt właściwości.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -43,45 +43,45 @@ HRESULT WritePropertyValue (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`  
-[in] Ten parametr jest nieużywany.
+podczas Ten parametr jest nieużywany.
 
 `ptr`  
-[in] Wskaźnik do [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) wystąpienia.
+podczas Wskaźnik do wystąpienia [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) .
 
 `lHandle`  
-[in] Liczba całkowita, która zawiera uchwyt, który identyfikuje tę właściwość. Uchwyt może być pobierany przez wywołanie [GetPropertyHandle](getpropertyhandle.md) funkcji.   
+podczas Liczba całkowita, która zawiera uchwyt, który identyfikuje tę właściwość. Dojście można pobrać, wywołując funkcję [GetPropertyHandle](getpropertyhandle.md) .   
 
 `lNumBytes`  
-[in] Liczba bajtów zapisywanych do właściwości. Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji.
+podczas Liczba bajtów zapisywanych w właściwości. Zobacz sekcję [uwagi](#remarks) , aby uzyskać więcej informacji.
 
 `pHandle`   
-[out] Wskaźnik do tablicy typu byte, który zawiera dane.
+określoną Wskaźnik do tablicy bajtów zawierającej dane.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
+Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nagłówkowym *WbemCli. h* lub można je definiować jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr jest nieprawidłowy. |
-|`WBEM_E_TYPE_MISMATCH` | 0x80041005 | Wystąpiła niezgodność typów. |
+|`WBEM_E_TYPE_MISMATCH` | 0x80041005 | Wystąpił niezgodność typów. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja zawija wywołanie do [IWbemClassObject::WritePropertyValue](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-writepropertyvalue) metody.
+Ta funkcja otacza wywołanie metody [IWbemClassObject:: WritePropertyValue](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-writepropertyvalue) .
 
-Ta funkcja służy do ciągu i wszystkie inne non -`DWORD` lub -`QWORD` danych.
+Użyj tej funkcji, aby ustawić ciąg i wszystkie inne`DWORD` `QWORD` dane, które nie są danymi.
 
-W przypadku wartości właściwości typu `lNumBytes` musi być prawidłowe dane rozmiar określony typ właściwości. Wartości właściwości ciągu `lNumBytes` musi mieć długość określonego ciągu w bajtach i ciągu musi być nawet długości w bajtach wraz z występować znak zakończenia o wartości null.
+W przypadku wartości właściwości, które `lNumBytes` nie są ciągami, musi być poprawnym rozmiarem danych określonego typu właściwości. W przypadku wartości właściwości ciągu `lNumBytes` , musi być długością określonego ciągu w bajtach, a sam ciąg musi mieć długość w bajtach i mieć znak zakończenia o wartości null.
 
 ## <a name="requirements"></a>Wymagania  
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** WMINet_Utils.idl  
+ **Nagłówki** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)
+- [WMI i liczniki wydajności (niezarządzana dokumentacja interfejsu API)](index.md)

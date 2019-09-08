@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-ms.openlocfilehash: 08149de9222c34928078c0ca9d88096f7a4a88d1
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 971a1bddc40521dc7381ecb2e39709c0fed282ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203268"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785982"
 ---
 # <a name="nesting-datarelations"></a>Zagnieżdżanie elementów DataRelation
 W relacyjnej reprezentacji danych poszczególne tabele zawierają wiersze, które są ze sobą powiązane, przy użyciu kolumny lub zestawu kolumn. W ADO.NET <xref:System.Data.DataSet>relacja między tabelami jest implementowana <xref:System.Data.DataRelation>przy użyciu. Podczas tworzenia **relacji**datarelationship relacje z relacją nadrzędny-podrzędny kolumn są zarządzane tylko za pomocą relacji. Tabele i kolumny są oddzielnymi jednostkami. W hierarchicznej reprezentacji danych dostarczanych przez XML, relacje nadrzędny-podrzędny są reprezentowane przez elementy nadrzędne, które zawierają zagnieżdżone elementy podrzędne.  
   
- Aby ułatwić zagnieżdżanie obiektów podrzędnych, gdy **zestaw danych** <xref:System.Xml.XmlDataDocument> jest synchronizowany z lub zapisywany jako dane XML przy użyciu **WriteXml**, **relacja** danych ujawnia Właściwość **zagnieżdżoną** . Ustawienie właściwości **zagnieżdżonej** **relacji** na **wartość true** powoduje, że wiersze podrzędne relacji mają być zagnieżdżone w kolumnie nadrzędnej podczas zapisywania jako dane XML lub synchronizowane z **XmlDataDocument**. **Zagnieżdżona** właściwość elementu DataRelation ma domyślnie **wartość false**.  
+ Aby ułatwić zagnieżdżanie obiektów podrzędnych, gdy **zestaw danych** jest synchronizowany <xref:System.Xml.XmlDataDocument> z lub zapisywany jako dane XML przy użyciu **WriteXml**, **relacja** danych ujawnia Właściwość **zagnieżdżoną** . Ustawienie właściwości **zagnieżdżonej** **relacji** na **wartość true** powoduje, że wiersze podrzędne relacji mają być zagnieżdżone w kolumnie nadrzędnej podczas zapisywania jako dane XML lub synchronizowane z **XmlDataDocument**. **Zagnieżdżona** właściwość elementu **DataRelation** ma domyślnie **wartość false**.  
   
  Rozważmy na przykład następujący **zestaw danych**.  
   
@@ -59,7 +59,7 @@ DataRelation customerOrders = dataSet.Relations.Add(
   dataSet.Tables["Orders"].Columns["CustomerID"]);  
 ```  
   
- Ponieważ **zagnieżdżona** właściwość obiektu nie jest ustawiona na **wartość true** dla tego **zestawu danych**, obiekty podrzędne nie są zagnieżdżane w elementach nadrzędnych, gdy ten **zestaw danych** jest reprezentowany jako dane XML. Przekształcanie reprezentacji XML **zestawu danych** , który zawiera powiązane elementy **DataSet**z niezagnieżdżonymi relacjami danych może spowodować niską wydajność. Zalecamy zagnieżdżanie relacji danych. W tym celu ustaw właściwość **zagnieżdżoną** na **wartość true**. Następnie napisz kod w arkuszu stylów XSLT, który używa hierarchicznych wyrażeń zapytania XPath do lokalizowania i przekształcania danych.  
+ Ponieważ **zagnieżdżona** **właściwość obiektu** nie jest ustawiona na **wartość true** dla tego **zestawu danych**, obiekty podrzędne nie są zagnieżdżane w elementach nadrzędnych, gdy ten **zestaw danych** jest reprezentowany jako dane XML. Przekształcanie reprezentacji XML **zestawu danych** , który zawiera powiązane elementy **DataSet**z niezagnieżdżonymi relacjami danych może spowodować niską wydajność. Zalecamy zagnieżdżanie relacji danych. W tym celu ustaw właściwość **zagnieżdżoną** na **wartość true**. Następnie napisz kod w arkuszu stylów XSLT, który używa hierarchicznych wyrażeń zapytania XPath do lokalizowania i przekształcania danych.  
   
  Poniższy przykład kodu ilustruje wynik wywołania **WriteXml** na **zestawie danych**.  
   
@@ -91,7 +91,7 @@ DataRelation customerOrders = dataSet.Relations.Add(
 </CustomerOrders>  
 ```  
   
- Należy zauważyć, że element **Customers** i elementy Orders są wyświetlane jako elementy równorzędne. Jeśli chcesz, aby elementy **zamówienia** były wyświetlane jako elementy podrzędne odpowiednich elementów nadrzędnych, właściwość **zagnieżdżona** elementu DataRelation powinna mieć wartość **true** i dodać następujące elementy:  
+ Należy zauważyć, że element **Customers** i elementy **Orders** są wyświetlane jako elementy równorzędne. Jeśli chcesz, aby elementy **zamówienia** były wyświetlane jako elementy podrzędne odpowiednich elementów nadrzędnych, właściwość **zagnieżdżona** elementu **DataRelation** powinna mieć wartość **true** i dodać następujące elementy:  
   
 ```vb  
 customerOrders.Nested = True  
@@ -136,4 +136,4 @@ customerOrders.Nested = true;
 - [Używanie języka XML w elemencie DataSet](using-xml-in-a-dataset.md)
 - [Dodawanie elementów DataRelation](adding-datarelations.md)
 - [Elementy DataSet, DataTable i DataView](index.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

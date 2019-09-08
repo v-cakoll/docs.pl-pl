@@ -2,39 +2,39 @@
 title: Powiązanie danych i LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: 310bff4a-32dd-4f20-a271-6dbd82912631
-ms.openlocfilehash: 125c9b7df0164092182506a7a71d4180b81d3ca6
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 563d57249daa3aa720da1d9654866727f770afb3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504114"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786701"
 ---
 # <a name="data-binding-and-linq-to-dataset"></a>Powiązanie danych i LINQ to DataSet
-*Powiązanie danych* to proces, który nawiązuje połączenie między aplikacją w interfejsie użytkownika i logikę biznesową. Jeśli wiązanie ma prawidłowych ustawień i danych udostępnia odpowiednie powiadomienia po zmianie danych jego wartości, elementy, które są powiązane z danymi automatycznie odzwierciedlają zmiany. <xref:System.Data.DataSet> To reprezentacja danych, który zapewnia spójne relacyjne modelu programowania, niezależnie od źródła danych, zawiera on w pamięci. ADO.NET w wersji 2.0 <xref:System.Data.DataView> pozwala na filtrowanie i sortowanie danych przechowywanych w <xref:System.Data.DataTable>. Ta funkcja jest często używany w aplikacjach powiązanie danych. Za pomocą <xref:System.Data.DataView>, może uwidaczniać dane w tabeli z zamówieniami sortowania i dane można filtrować według wierszy, stanu lub w zależności od wyrażenia filtru. Aby uzyskać więcej informacji na temat <xref:System.Data.DataView> obiektu, zobacz [DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  
+*Powiązanie danych* to proces, który ustanawia połączenie między interfejsem użytkownika aplikacji i logiką biznesową. Jeśli powiązanie ma poprawne ustawienia, a dane udostępniają odpowiednie powiadomienia, gdy zmieniają się dane, elementy, które są powiązane z danymi, odzwierciedlają zmiany automatycznie. <xref:System.Data.DataSet> Jest reprezentacja danych w pamięci, która zapewnia spójny relacyjny model programowania, niezależnie od źródła danych, które zawiera. ADO.NET 2,0 <xref:System.Data.DataView> pozwala sortować i filtrować dane przechowywane <xref:System.Data.DataTable>w. Ta funkcja jest często używana w aplikacjach do wiązania danych. Za pomocą <xref:System.Data.DataView>, można uwidocznić dane w tabeli z różnymi kolejności sortowania i można filtrować dane według stanu wiersza lub w oparciu o wyrażenie filtru. Aby uzyskać więcej informacji na <xref:System.Data.DataView> temat obiektu, zobacz [DataViews](./dataset-datatable-dataview/dataviews.md).  
   
- LINQ do zestawu danych pozwala deweloperom tworzyć złożone, zaawansowane zapytania <xref:System.Data.DataSet> przy użyciu [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]. Jednak w zapytaniu składnika LINQ to DataSet zwraca wyliczenie <xref:System.Data.DataRow> obiektów, które nie jest łatwo używana w przypadku powiązania. Aby ułatwić powiązania, można utworzyć <xref:System.Data.DataView> w zapytaniu składnika LINQ to DataSet. To <xref:System.Data.DataView> jest używane filtrowanie i sortowanie, określona w zapytaniu, ale lepiej jest odpowiedni do wiązania danych. LINQ do DataSet rozszerza funkcjonalność <xref:System.Data.DataView> , zapewniając [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] oparte na wyrażeniach filtrowania i sortowania, co pozwala na znacznie bardziej złożone i zaawansowane operacji filtrowania i sortowania niż oparte na ciągach filtrowania i sortowania.  
+ LINQ to DataSet pozwala deweloperom na tworzenie złożonych, zaawansowanych zapytań w <xref:System.Data.DataSet> odniesieniu do programu przy użyciu. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] Jednak zapytanie LINQ to DataSet zwraca Wyliczenie <xref:System.Data.DataRow> obiektów, które nie jest łatwo używane w scenariuszu powiązania. Aby ułatwić tworzenie powiązań, można utworzyć <xref:System.Data.DataView> zapytanie na podstawie LINQ to DataSet. Powoduje <xref:System.Data.DataView> to użycie filtrowania i sortowania określonego w zapytaniu, ale jest lepiej dopasowane do powiązania danych. LINQ to DataSet rozszerza funkcje <xref:System.Data.DataView> programu, dostarczając [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] oparte na wyrażeniach filtrowanie i sortowanie, które pozwala na znacznie bardziej złożone i zaawansowane operacje filtrowania i sortowania niż oparte na ciągach filtrowanie i sortowanie.  
   
- Należy pamiętać, że <xref:System.Data.DataView> reprezentuje samo zapytanie, a nie jest widokiem na podstawie zapytania. <xref:System.Data.DataView> Jest powiązany z kontrolki interfejsu użytkownika, takie jak <xref:System.Windows.Forms.DataGrid> lub <xref:System.Windows.Forms.DataGridView>, zapewniając proste powiązanie modelem. A <xref:System.Data.DataView> również można tworzyć na podstawie <xref:System.Data.DataTable>, zapewniając domyślny widok w tej tabeli.  
+ Należy zauważyć, <xref:System.Data.DataView> że reprezentuje kwerendę i nie jest widokiem na górze zapytania. Jest powiązany z kontrolką interfejsu użytkownika, taką <xref:System.Windows.Forms.DataGrid> jak lub <xref:System.Windows.Forms.DataGridView>, dostarczając prosty model powiązań danych. <xref:System.Data.DataView> Można również utworzyć <xref:System.Data.DataTable>z, dostarczając widok domyślny tej tabeli. <xref:System.Data.DataView>  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Tworzenie obiektu widoku danych](../../../../docs/framework/data/adonet/creating-a-dataview-object-linq-to-dataset.md)  
- Zawiera informacje o tworzeniu <xref:System.Data.DataView>.  
+ [Tworzenie obiektu widoku danych](creating-a-dataview-object-linq-to-dataset.md)  
+ Zawiera informacje na <xref:System.Data.DataView>temat tworzenia.  
   
- [Filtrowanie za pomocą widoku danych.](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
- W tym artykule opisano jak filtrować za pomocą <xref:System.Data.DataView>.  
+ [Filtrowanie za pomocą widoku danych.](filtering-with-dataview-linq-to-dataset.md)  
+ Opisuje sposób filtrowania przy użyciu <xref:System.Data.DataView>.  
   
- [Sortowanie za pomocą widoku danych.](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)  
- W tym artykule opisano sposób sortowania z <xref:System.Data.DataView>.  
+ [Sortowanie za pomocą widoku danych.](sorting-with-dataview-linq-to-dataset.md)  
+ Opisuje sposób sortowania przy użyciu <xref:System.Data.DataView>.  
   
- [Wykonywanie zapytania do kolekcji DataRowView w widoku danych](../../../../docs/framework/data/adonet/querying-the-datarowview-collection-in-a-dataview.md)  
- Informacje na temat wykonywania zapytań <xref:System.Data.DataRowView> kolekcji udostępnianych przez <xref:System.Data.DataView>.  
+ [Wykonywanie zapytania do kolekcji DataRowView w widoku danych](querying-the-datarowview-collection-in-a-dataview.md)  
+ Zawiera informacje o wysyłaniu zapytań <xref:System.Data.DataRowView> do kolekcji uwidocznionej przez <xref:System.Data.DataView>program.  
   
- [Wydajność widoku danych](../../../../docs/framework/data/adonet/dataview-performance.md)  
- Zawiera informacje na temat <xref:System.Data.DataView> i wydajności.  
+ [Wydajność widoku danych](dataview-performance.md)  
+ Zawiera informacje o <xref:System.Data.DataView> wydajności i.  
   
- [Instrukcje: Powiązanie obiektu widoku danych do formantu DataGridView formularzy Windows](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
- Opis sposobu tworzenia powiązania <xref:System.Data.DataView> obiekt <xref:System.Windows.Forms.DataGridView>.  
+ [Instrukcje: Powiązywanie obiektu DataView z Windows Forms formantem DataGridView](how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
+ Opisuje sposób powiązania <xref:System.Data.DataView> obiektu <xref:System.Windows.Forms.DataGridView>z.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
+- [Przewodnik programowania](programming-guide-linq-to-dataset.md)

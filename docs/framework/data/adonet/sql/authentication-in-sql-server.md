@@ -2,12 +2,12 @@
 title: Uwierzytelnianie w programie SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 1723552a48ebfa41e8d6a0f963154fc3b864119d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 49835ebf8ebe4d5bd200ed771477edc8af580b7d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957494"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794295"
 ---
 # <a name="authentication-in-sql-server"></a>Uwierzytelnianie w programie SQL Server
 SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania systemu Windows i tryb mieszany.  
@@ -69,7 +69,7 @@ SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania systemu 
  SQL Server zapewnia mechanizmy zasad haseł systemu Windows dla SQL Server logowania, gdy jest uruchomiona [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] w systemie lub nowszym. Zasady złożoności haseł zaprojektowano w celu powstrzymania ataków na ataki przez zwiększenie liczby możliwych haseł. SQL Server mogą zastosować te same zasady złożoności i wygasania [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] używane w programie w przypadku haseł używanych wewnątrz SQL Server.  
   
 > [!IMPORTANT]
-> Łączenie parametrów połączenia z danymi wejściowymi użytkownika może spowodować zagrożenie dla ataku polegającego na iniekcji parametrów połączenia. Użyj, <xref:System.Data.SqlClient.SqlConnectionStringBuilder> aby utworzyć składniowo prawidłowe parametry połączenia w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [konstruktory parametrów połączenia](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
+> Łączenie parametrów połączenia z danymi wejściowymi użytkownika może spowodować zagrożenie dla ataku polegającego na iniekcji parametrów połączenia. Użyj, <xref:System.Data.SqlClient.SqlConnectionStringBuilder> aby utworzyć składniowo prawidłowe parametry połączenia w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [konstruktory parametrów połączenia](../connection-string-builders.md).  
   
 ## <a name="external-resources"></a>Zasoby zewnętrzne  
  Aby uzyskać więcej informacji, zobacz następujące zasoby.  
@@ -80,8 +80,8 @@ SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania systemu 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Scenariusze zabezpieczeń aplikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Nawiązywanie połączenia ze źródłem danych](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Parametry połączeń](../../../../../docs/framework/data/adonet/connection-strings.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Zabezpieczanie aplikacji ADO.NET](../securing-ado-net-applications.md)
+- [Scenariusze zabezpieczeń aplikacji w programie SQL Server](application-security-scenarios-in-sql-server.md)
+- [Nawiązywanie połączenia ze źródłem danych](../connecting-to-a-data-source.md)
+- [Parametry połączeń](../connection-strings.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

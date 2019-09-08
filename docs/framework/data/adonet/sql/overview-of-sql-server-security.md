@@ -2,46 +2,46 @@
 title: Przegląd zabezpieczeń serwera SQL
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: 52e6f69c006353fcafcbf8f567675a7c14830f76
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: adc1ce661d49c468de09552ea36a2cd58d6343f1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582815"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780940"
 ---
 # <a name="overview-of-sql-server-security"></a>Przegląd zabezpieczeń serwera SQL
-Strategii ochronę w głębi z nakładającymi się warstw zabezpieczeń, to najlepszy sposób na zagrożenia bezpieczeństwa licznika. SQL Server udostępnia architekturę zabezpieczeń, która umożliwia administratorów baz danych i deweloperom tworzenie aplikacji w bezpiecznej bazie danych i licznik zagrożenia. Każda wersja programu SQL Server zostały udoskonalone w poprzednich wersjach programu SQL Server wraz z wprowadzeniem nowych funkcji. Zabezpieczeń nie jest dostarczany w polu. Każda aplikacja jest unikatowa w jej wymagania dotyczące zabezpieczeń. Deweloperzy muszą poznać kombinację funkcji i funkcje są najbardziej odpowiednie do licznika znanymi zagrożeniami i przewidywać zagrożenia, które mogą się pojawić w przyszłości.  
+Strategia obrony szczegółowej z nakładającymi się warstwami zabezpieczeń jest najlepszym sposobem na licznik zagrożeń bezpieczeństwa. SQL Server zapewnia architekturę zabezpieczeń, która została zaprojektowana tak, aby umożliwić administratorom baz danych i deweloperom tworzenie bezpiecznych aplikacji baz danych i zagrożeń. Każda wersja SQL Server została ulepszona w poprzednich wersjach SQL Server z wprowadzeniem nowych funkcji i funkcji. Jednak zabezpieczenia nie są dostarczane w tym polu. Każda aplikacja jest unikatowa w wymaganiach dotyczących zabezpieczeń. Deweloperzy muszą zrozumieć, którą kombinację funkcji i funkcji są najbardziej odpowiednie do określenia znanych zagrożeń, oraz do przewidywania zagrożeń, które mogą wystąpić w przyszłości.  
   
- Wystąpienie programu SQL Server zawiera hierarchiczną kolekcję jednostek, rozpoczynając od serwera. Każdy serwer zawiera wiele baz danych, a każda baza danych zawiera kolekcję obiektów zabezpieczanych. Co zabezpieczanych programu SQL Server ma skojarzone *uprawnienia* , może zostać przydzielony *jednostki*, czyli pojedynczej, grupy lub proces udzielony dostęp do programu SQL Server. Struktura zabezpieczeń programu SQL Server zarządza dostępem do zabezpieczanych obiektów za pomocą *uwierzytelniania* i *autoryzacji*.  
+ Wystąpienie SQL Server zawiera hierarchiczną kolekcję jednostek, rozpoczynając od serwera. Każdy serwer zawiera wiele baz danych, a każda baza danych zawiera kolekcję obiektów zabezpieczanych. Każde SQL Server zabezpieczane ma powiązane *uprawnienia* , które mogą zostać przyznane *podmiotowi zabezpieczeń*, który jest osobą, grupą lub procesem udzielonym dostępu do SQL Server. SQL Server Framework zabezpieczeń zarządza dostępem do obiektów zabezpieczanych za pomocą *uwierzytelniania* i *autoryzacji*.  
   
-- Uwierzytelnianie to proces logowania do serwera SQL, podmiot zabezpieczeń za pomocą którego żąda dostępu, przesyłając poświadczenia, które ocenia serwera. Uwierzytelnianie ustala tożsamość użytkownika lub procesu uwierzytelniane.  
+- Uwierzytelnianie to proces logowania do SQL Server, za pomocą którego podmiot zabezpieczeń żąda dostępu przez przesłanie poświadczeń przesyłanych przez serwer. Uwierzytelnianie ustala tożsamość uwierzytelnianego użytkownika lub procesu.  
   
-- Autoryzacja to proces określania, że zasoby zabezpieczanego podmiot zabezpieczeń mogą uzyskiwać dostęp do i jakie operacje są dozwolone dla tych zasobów.  
+- Autoryzacja to proces określania, które zasoby, do których ma dostęp podmiot zabezpieczeń, i które operacje są dozwolone dla tych zasobów.  
   
- Tematy w tej sekcji opisano podstawy zabezpieczeń programu SQL Server, linków do pełną dokumentację w odpowiedniej wersji programu SQL Server — książki Online.  
+ Tematy w tej sekcji dotyczą SQL Server podstawowych zabezpieczeń, które udostępniają linki do kompletnej dokumentacji w odpowiedniej wersji usługi SQL Server Books Online.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Uwierzytelnianie w programie SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
- W tym artykule opisano identyfikatory logowania i uwierzytelniania w programie SQL Server i zawiera łącza do dodatkowych zasobów.  
+ [Uwierzytelnianie w programie SQL Server](authentication-in-sql-server.md)  
+ Zawiera opis logowania i uwierzytelniania w SQL Server i zawiera linki do dodatkowych zasobów.  
   
- [Serwer i role bazy danych w programie SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
- W tym artykule opisano stałe role serwera i bazy danych, role bazy danych niestandardowych i wbudowanych kont i zawiera łącza do dodatkowych zasobów.  
+ [Serwer i role bazy danych w programie SQL Server](server-and-database-roles-in-sql-server.md)  
+ Opisuje stałe role serwera i bazy danych, niestandardowe role baz danych oraz wbudowane konta i oferuje linki do dodatkowych zasobów.  
   
- [Własność i oddzielenie schematu użytkownika w programie SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
- Zawiera opis obiektu rozdzielenie własność i schemat użytkownika i zawiera łącza do dodatkowych zasobów.  
+ [Własność i oddzielenie schematu użytkownika w programie SQL Server](ownership-and-user-schema-separation-in-sql-server.md)  
+ Opisuje własność obiektu i separację schematów użytkownika oraz zawiera linki do dodatkowych zasobów.  
   
- [Autoryzacja i uprawnienia w programie SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- W tym artykule opisano, udzielanie uprawnień za pomocą zasadę najmniejszych uprawnień i zawiera łącza do dodatkowych zasobów.  
+ [Autoryzacja i uprawnienia w programie SQL Server](authorization-and-permissions-in-sql-server.md)  
+ Opisuje udzielanie uprawnień przy użyciu zasady najniższych uprawnień i oferuje linki do dodatkowych zasobów.  
   
- [Szyfrowanie danych w programie SQL Server](../../../../../docs/framework/data/adonet/sql/data-encryption-in-sql-server.md)  
- W tym artykule opisano opcje szyfrowania danych w programie SQL Server i zawiera łącza do dodatkowych zasobów.  
+ [Szyfrowanie danych w programie SQL Server](data-encryption-in-sql-server.md)  
+ Opisuje opcje szyfrowania danych w SQL Server i zawiera linki do dodatkowych zasobów.  
   
- [Zabezpieczenia integracji CLR w programie SQL Server](../../../../../docs/framework/data/adonet/sql/clr-integration-security-in-sql-server.md)  
- Zawiera łącza do zasobów zabezpieczenia integracji CLR.  
+ [Zabezpieczenia integracji CLR w programie SQL Server](clr-integration-security-in-sql-server.md)  
+ Oferuje linki do zasobów zabezpieczeń integracji środowiska CLR.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Zabezpieczenia serwera SQL](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [Scenariusze zabezpieczeń aplikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Zabezpieczanie aplikacji ADO.NET](../securing-ado-net-applications.md)
+- [Zabezpieczenia serwera SQL](sql-server-security.md)
+- [Scenariusze zabezpieczeń aplikacji w programie SQL Server](application-security-scenarios-in-sql-server.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

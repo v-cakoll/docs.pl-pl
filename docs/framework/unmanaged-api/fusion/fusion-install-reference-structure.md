@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec18d5d5a6574cb0e08a6c4d6eaedcbcbf6886cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e81fb7c99b9fd03a69456a84f2191770f40121d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759363"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795346"
 ---
-# <a name="fusioninstallreference-structure"></a>FUSION_INSTALL_REFERENCE — Struktura
-Reprezentuje odwołanie, który sprawia, że aplikacja do zestawu, który aplikacja została zainstalowana w globalnej pamięci podręcznej.  
+# <a name="fusion_install_reference-structure"></a>FUSION_INSTALL_REFERENCE — Struktura
+Reprezentuje odwołanie do zestawu, który aplikacja została zainstalowana w globalnej pamięci podręcznej zestawów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,19 +43,19 @@ typedef struct _FUSION_INSTALL_REFERENCE_ {
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`cbSize`|Rozmiar struktury w bajtach.|  
-|`dwFlags`|Zarezerwowane dla przyszłej rozszerzalności. Ta wartość musi być 0 (zero).|  
-|`guidScheme`|Jednostka, która dodaje odwołanie. To pole może mieć jedną z następujących wartości:<br /><br /> -FUSION_REFCOUNT_MSI_GUID: Zestaw odwołuje się aplikacja, która została zainstalowana za pomocą Instalatora Windows firmy Microsoft. `szIdentifier` Pole jest ustawione na `MSI`i `szNonCanonicalData` pole jest ustawione na `Windows Installer`. Ten schemat jest używany dla zestawów side-by-side Windows.<br />-FUSION_REFCOUNT_UNINSTALL_SUBKEY_GUID: Zestaw odwołuje się do aplikacji, która jest wyświetlana w **Dodaj/Usuń programy** interfejsu. `szIdentifier` Pole zawiera token, który rejestruje aplikację za pomocą **Dodaj/Usuń programy** interfejsu.<br />-FUSION_REFCOUNT_FILEPATH_GUID: Zestaw odwołuje się aplikacja, która jest reprezentowana przez plik w systemie plików. `szIdentifier` Pole zawiera ścieżkę do tego pliku.<br />-   FUSION_REFCOUNT_OPAQUE_STRING_GUID: Zestaw odwołuje się aplikacja, która jest reprezentowana tylko przez nieprzezroczysty ciąg. `szIdentifier` Pole zawiera to nieprzezroczysty ciąg. Global assembly cache nie sprawdza istnienie odwołania nieprzezroczyste po usunięciu tej wartości.<br />-FUSION_REFCOUNT_OSINSTALL_GUID: Ta wartość jest zastrzeżona.|  
-|`szIdentifier`|Unikatowy ciąg, który identyfikuje aplikację, którą zainstalowano zestaw w globalnej pamięci podręcznej. Wartość zależy od wartości `guidScheme` pola.|  
-|`szNonCanonicalData`|Ciąg, który jest zrozumiałe dla jednostki, która dodaje odwołanie. Global assembly cache przechowuje te parametry, ale nie jest używana.|  
+|`dwFlags`|Zarezerwowane do użytku w przyszłości. Ta wartość musi być równa 0 (zero).|  
+|`guidScheme`|Jednostka, która dodaje odwołanie. To pole może mieć jedną z następujących wartości:<br /><br /> - FUSION_REFCOUNT_MSI_GUID: Zestaw jest przywoływany przez aplikację, która została zainstalowana przy użyciu Instalator Windows Microsoft. Pole jest ustawione na `MSI`, a `szNonCanonicalData` pole jest ustawione na `Windows Installer`. `szIdentifier` Ten schemat jest używany dla zestawów równoległych systemu Windows.<br />- FUSION_REFCOUNT_UNINSTALL_SUBKEY_GUID: Zestaw odwołuje się do aplikacji, która pojawia się w interfejsie **Dodaj/Usuń programy** . Pole zawiera token, który rejestruje aplikację przy użyciu interfejsu **Dodaj/Usuń programy.** `szIdentifier`<br />- FUSION_REFCOUNT_FILEPATH_GUID: Zestaw odwołuje się do aplikacji reprezentowanej przez plik w systemie plików. `szIdentifier` Pole zawiera ścieżkę do tego pliku.<br />- FUSION_REFCOUNT_OPAQUE_STRING_GUID: Zestaw odwołuje się do aplikacji reprezentowanej tylko przez nieprzezroczysty ciąg. `szIdentifier` Pole zawiera ten ciąg nieprzezroczysty. Globalna pamięć podręczna zestawów nie sprawdza istnienia nieprzezroczystych odwołań po usunięciu tej wartości.<br />- FUSION_REFCOUNT_OSINSTALL_GUID: Ta wartość jest zarezerwowana.|  
+|`szIdentifier`|Unikatowy ciąg identyfikujący aplikację, która zainstalowała zestaw w globalnej pamięci podręcznej zestawów. Jego wartość zależy od wartości `guidScheme` pola.|  
+|`szNonCanonicalData`|Ciąg, który jest zrozumiały tylko dla jednostki, która dodaje odwołanie. Globalna pamięć podręczna zestawów przechowuje ten ciąg, ale nie używa go.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Fusion.h  
+ **Nagłówki** Fusion. h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Łączenie — struktury](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
-- [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)
+- [Łączenie — struktury](fusion-structures.md)
+- [Global Assembly Cache](../../app-domains/gac.md)

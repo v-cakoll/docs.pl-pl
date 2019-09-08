@@ -1,6 +1,6 @@
 ---
-title: Funkcja umieszczania (niezarządzany wykaz interfejsów API)
-description: Funkcję Put przypisuje nową wartość o nazwie właściwości.
+title: Put — funkcja (niezarządzana dokumentacja interfejsu API)
+description: Funkcja Put przypisuje nową wartość do nazwanej właściwości.
 ms.date: 11/06/2017
 api_name:
 - Put
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fba929e5a1a1e4c2b69e15bf6c855211e25a67a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5aa629c2d07fb25db035cd80aba3c74413070e6e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636624"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798400"
 ---
-# <a name="put-function"></a>Umieść — funkcja
+# <a name="put-function"></a>Put — funkcja
 
-Ustawia właściwość o nazwie na nową wartość.
+Ustawia nazwę właściwości nazwanej na nową wartość.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -45,62 +45,62 @@ HRESULT Put (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`\
-[in] Ten parametr jest nieużywany.
+podczas Ten parametr jest nieużywany.
 
 `ptr`\
-[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.
+podczas Wskaźnik do wystąpienia [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszName`\
-[in] Nazwa właściwości. Ten parametr nie może być `null`.
+podczas Nazwa właściwości. Ten parametr nie może `null`być.
 
 `lFlags`\
-[in] Zastrzeżone. Ten parametr musi być 0.
+podczas Rezerwacj. Ten parametr musi być równy 0.
 
 `pVal`\
-[in] Wskaźnik do prawidłowego `VARIANT` stanie się nowa wartość właściwości. Jeśli `pVal` jest `null` lub wskazuje na `VARIANT` typu `VT_NULL`, zostaje ustalona `null`.
+podczas Wskaźnik do prawidłowego `VARIANT` , który będzie nową wartością właściwości. Jeśli `pVal` jest `null` lub `null`wskazuje `VARIANT` na typ `VT_NULL`, właściwość jest ustawiona na.
 
 `vtType`\
-[in] Typ `VARIANT` wskazywany przez `pVal`. Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji.
+podczas Typ `VARIANT` wskazywany przez `pVal`. Zobacz sekcję [uwagi](#remarks) , aby uzyskać więcej informacji.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
+Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nagłówkowym *WbemCli. h* lub można je definiować jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Wystąpił błąd ogólny. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Jeden lub więcej parametrów są nieprawidłowe. |
-|`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | Nie rozpoznano typu właściwości. Ta wartość jest zwracana podczas tworzenia wystąpienia klasy, jeśli klasa już istnieje. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nie ma wystarczającej ilości pamięci jest dostępny do ukończenia tej operacji. |
-| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | Dla wystąpień: Oznacza to, że `pVal` wskazuje `VARIANT` nieprawidłowego typu właściwości. <br/> Aby uzyskać definicje klas: Właściwość już istnieje w klasie nadrzędnej, a nowy typ COM jest inny niż stary typ COM. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Co najmniej jeden parametr jest nieprawidłowy. |
+|`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | Nie rozpoznano typu właściwości. Ta wartość jest zwracana podczas tworzenia wystąpień klas, jeśli Klasa już istnieje. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało dostępnej pamięci, aby ukończyć tę operację. |
+| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | Dla wystąpień: Wskazuje, `pVal` że dla właściwości `VARIANT` wskazuje niewłaściwy typ. <br/> Definicje klas: Właściwość już istnieje w klasie nadrzędnej, a nowy typ modelu COM różni się od starego typu COM. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie. |
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja zawija wywołanie do [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) metody.
+Ta funkcja otacza wywołanie metody [IWbemClassObject::P UT](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) .
 
-Ta funkcja zawsze zastępuje bieżącą wartość właściwości nowej. Jeśli [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) punkty na definicję klasy `Put` tworzy lub aktualizuje wartości właściwości. Gdy [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wskazuje na wystąpienie CIM `Put` aktualizuje wartości właściwości. `Put` nie można utworzyć wartości właściwości.
+Ta funkcja zawsze zastępuje bieżącą wartość właściwości nową. Jeśli [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wskazuje definicję klasy, `Put` tworzy lub aktualizuje wartość właściwości. Gdy [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wskazuje na wystąpienie CIM, `Put` aktualizuje tylko wartość właściwości. `Put` nie można utworzyć wartości właściwości.
 
-`__CLASS` System właściwość jest tylko zapisu podczas tworzenia klasy, gdy go nie może pozostać puste. Wszystkie pozostałe właściwości systemu są tylko do odczytu.
+Właściwość `__CLASS` systemowa jest tylko do zapisu podczas tworzenia klasy, gdy nie powinna pozostać pusta. Wszystkie inne właściwości systemu są tylko do odczytu.
 
-Użytkownik nie można utworzyć właściwości z nazwami będącymi rozpoczynać się ani kończyć znakiem podkreślenia ("_"). Jest on zarezerwowany dla klas systemowych i właściwości.
+Użytkownik nie może tworzyć właściwości o nazwach zaczynających się lub kończących znakiem podkreślenia ("_"). Jest to zarezerwowane dla klas systemowych i właściwości.
 
-Jeśli właściwość jest ustawiona `Put` istnieje funkcja w klasie nadrzędnej, wartość domyślna właściwości zostanie zmieniona, chyba że typ właściwości jest niezgodny z typem klasy nadrzędnej. Jeśli właściwość nie istnieje i nie jest niezgodność typów, właściwości, zostanie utworzony.
+Jeśli właściwość ustawiona przez `Put` funkcję istnieje w klasie nadrzędnej, wartość domyślna właściwości jest zmieniana, chyba że typ właściwości jest niezgodny z typem klasy nadrzędnej. Jeśli właściwość nie istnieje i nie jest to niezgodność typów, zostanie utworzona właściwość.
 
-Użyj `vtType` parametru tylko podczas tworzenia nowych właściwości w definicji klasy modelu wspólnych informacji i `pVal` jest `null` lub wskazuje na `VARIANT` typu `VT_NULL`. W tym przypadku `vType` parametr określa typ CIM właściwości. W każdym przypadku `vtType` musi mieć wartość 0. `vtType` musi również być na 0, jeśli obiekt źródłowy jest wystąpieniem (nawet jeśli `Val` jest `null`), ponieważ typ właściwości jest stała i nie można jej zmienić.
+Użyj parametru `vtType` tylko wtedy, gdy tworzysz nowe właściwości w definicji klasy CIM i `pVal` `VARIANT` jest `null` lub wskazuje typ `VT_NULL`. W tym przypadku `vType` parametr określa typ CIM właściwości. W każdym innym przypadku `vtType` należy mieć wartość 0. `vtType`musi również mieć wartość 0, jeśli obiekt źródłowy jest wystąpieniem (nawet `Val` Jeśli `null`jest), ponieważ typ właściwości jest ustalony i nie można go zmienić.
 
 ## <a name="example"></a>Przykład
 
-Aby uzyskać przykład, zobacz [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) metody.
+Aby zapoznać się z przykładem, zobacz [IWbemClassObject::P UT](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) .
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
-**Nagłówek:** WMINet_Utils.idl
+**Nagłówki** WMINet_Utils.idl
 
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)
+- [WMI i liczniki wydajności (niezarządzana dokumentacja interfejsu API)](index.md)

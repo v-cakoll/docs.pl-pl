@@ -1,17 +1,17 @@
 ---
-title: polecenia DotNet-Dodaj odwołania — polecenie
-description: Dotnet Dodaj odwołanie do polecenia zapewnia wygodny sposób, aby dodać odwołania projektu do projektu.
+title: dotnet-Dodaj polecenie referencyjne
+description: Polecenie "Dodaj odwołanie" dotnet udostępnia wygodną opcję dodawania projektu do odwołań do projektu.
 ms.date: 06/26/2019
-ms.openlocfilehash: 6e0ca40e701b62dcc18147f9de83cafa6aa2f50f
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 867596058aad8f9c38918e6d6657709d0d0699b3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422002"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784046"
 ---
-# <a name="dotnet-add-reference"></a>polecenia DotNet-Dodawanie odwołania
+# <a name="dotnet-add-reference"></a>dotnet — Dodawanie odwołania
 
-**Ten artykuł dotyczy: ✓** platformy .NET Core SDK w wersji 1.x i nowszymi wersjami
+**Ten artykuł dotyczy: ✓** .NET Core 1. x SDK i nowszych wersji
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -19,7 +19,7 @@ ms.locfileid: "67422002"
 
 ## <a name="name"></a>Nazwa
 
-`dotnet add reference` -Dodaje odwołania do projektu do projektu (P2P).
+`dotnet add reference`-Dodaje odwołania projektu do projektu (P2P).
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -27,7 +27,7 @@ ms.locfileid: "67422002"
 
 ## <a name="description"></a>Opis
 
-`dotnet add reference` Polecenie zapewnia wygodny sposób, aby dodać odwołania projektu do projektu. Po uruchomieniu polecenia [ `<ProjectReference>` ](/visualstudio/msbuild/common-msbuild-project-items) elementy są dodawane do pliku projektu.
+`dotnet add reference` Polecenie udostępnia wygodną opcję dodawania odwołań projektu do projektu. Po uruchomieniu polecenia `<ProjectReference>` elementy są dodawane do pliku projektu.
 
 ```xml
 <ItemGroup>
@@ -41,25 +41,25 @@ ms.locfileid: "67422002"
 
 * **`PROJECT`**
 
-  Określa plik projektu. Jeśli nie zostanie określony, polecenie wyszukuje w bieżącym katalogu dla jednego.
+  Określa plik projektu. Jeśli nie zostanie określony, polecenie przeszukuje bieżący katalog.
 
 * **`PROJECT_REFERENCES`**
 
-  Projekt do projektu (P2P) odwołuje się do dodania. Określ co najmniej jeden projekt. [Wzorce glob](https://en.wikipedia.org/wiki/Glob_(programming)) są obsługiwane w systemach opartych na systemie Unix/Linux.
+  Odwołania projektu do projektu (P2P) do dodania. Określ jeden lub więcej projektów. [Wzorce globalizowania](https://en.wikipedia.org/wiki/Glob_(programming)) są obsługiwane w systemach UNIX/Linux.
 
 ## <a name="options"></a>Opcje
 
 * **`-h|--help`**
 
-  Drukuje krótki pomoc dotyczącą polecenia.
+  Drukuje krótką pomoc dla polecenia.
 
 * **`-f|--framework <FRAMEWORK>`**
 
-  Dodaje odwołania do projektu tylko wtedy, gdy przeznaczonych dla określonego [framework](../../standard/frameworks.md).
+  Dodaje odwołania do projektu tylko w przypadku określania konkretnej [struktury](../../standard/frameworks.md).
 
 * **`--interactive`**
 
-  Umożliwia polecenie, aby zatrzymać i czeka na dane wejściowe użytkownika lub akcji (na przykład w celu ukończenia uwierzytelniania). Dostępne, ponieważ .NET Core SDK w wersji 3.0.
+  Zezwala na zatrzymanie polecenia i oczekiwanie na dane wejściowe użytkownika lub akcję (na przykład w celu ukończenia uwierzytelniania). Dostępne od wersji .NET Core 3,0 SDK.
 
 ## <a name="examples"></a>Przykłady
 
@@ -69,13 +69,13 @@ ms.locfileid: "67422002"
   dotnet add app/app.csproj reference lib/lib.csproj
   ```
 
-* Dodaj wielu odwołania projektu do projektu w bieżącym katalogu:
+* Dodaj wiele odwołań projektu do projektu w bieżącym katalogu:
 
   ```console
   dotnet add reference lib1/lib1.csproj lib2/lib2.csproj
   ```
 
-* Dodaj wielu odwołania do projektu przy użyciu wzorca obsługi symboli wieloznacznych w systemach Linux/Unix:
+* Dodaj odwołania do wielu projektów za pomocą wzorca obsługi symboli wieloznacznych w systemie Linux/UNIX:
 
   ```console
   dotnet add app/app.csproj reference **/*.csproj

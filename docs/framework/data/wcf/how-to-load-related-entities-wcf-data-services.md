@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Ładowanie powiązanych jednostek (WCF Data Services)'
+title: 'Instrukcje: Załaduj jednostki powiązane (Usługi danych programu WCF)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 6f143d30-d997-4e6b-bcf0-d5c394ecb108
-ms.openlocfilehash: 75e1d583d2a4d519619a440800cdeb1403fedac2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14b0ba988c96c270610208a4f944083bb333eac5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936499"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780027"
 ---
-# <a name="how-to-load-related-entities-wcf-data-services"></a>Instrukcje: Ładowanie powiązanych jednostek (WCF Data Services)
-Kiedy należy załadować jednostek skojarzonych w [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], możesz użyć <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> metody <xref:System.Data.Services.Client.DataServiceContext> klasy. Można również użyć <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> metody <xref:System.Data.Services.Client.DataServiceQuery%601> wymaganie, że powiązanych jednostek eagerly załadowane w tej samej odpowiedzi na kwerendę.  
+# <a name="how-to-load-related-entities-wcf-data-services"></a>Instrukcje: Załaduj jednostki powiązane (Usługi danych programu WCF)
+Gdy zachodzi potrzeba załadowania skojarzonych jednostek [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]w, można <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> użyć metody <xref:System.Data.Services.Client.DataServiceContext> klasy. Można również użyć <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> metody z, <xref:System.Data.Services.Client.DataServiceQuery%601> aby wymagać eagerly powiązanych jednostek w tej samej odpowiedzi na zapytanie.  
   
- W przykładzie w tym temacie użyto Northwind przykładowe dane usługi i automatycznie wygenerowany klas usługi danych klienta. Ta usługa i klas danych klienta, są tworzone po ukończeniu [Szybki Start usług danych WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ W przykładzie w tym temacie jest stosowana usługa danych przykładowych Northwind i klasy usługi danych klientów. Ta usługa i klasy danych klienta są tworzone po zakończeniu [usługi danych programu WCF szybkiego startu](quickstart-wcf-data-services.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak by jawnie ładować `Customer` , jest powiązany z każdym zwrócił `Orders` wystąpienia.  
+ Poniższy przykład pokazuje, jak jawnie załadować `Customer` , która jest powiązana z każdym zwracanym `Orders` wystąpieniem.  
   
  [!code-csharp[Astoria Northwind Client#LoadRelatedOrderCustomer](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#loadrelatedordercustomer)]
  [!code-vb[Astoria Northwind Client#LoadRelatedOrderCustomer](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#loadrelatedordercustomer)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak używać <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> metodę, aby zwrócić `Order Details` należących do `Orders` zwróconych przez zapytanie.  
+ Poniższy przykład pokazuje, jak używać <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> metody do zwrócenia `Order Details` , która należy do `Orders` zwracanych przez zapytanie.  
   
  [!code-csharp[Astoria Northwind Client#ExpandOrderDetails](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#expandorderdetails)]
  [!code-vb[Astoria Northwind Client#ExpandOrderDetails](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#expandorderdetails)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wykonywanie zapytań do usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+- [Wykonywanie zapytań do usługi danych](querying-the-data-service-wcf-data-services.md)

@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
-ms.openlocfilehash: ea92b8a5e46bdaa8e94756cd28a3fbcb2789d7b3
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: c13f0b802b2714a17ea4014625a65ebd1b0011f4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204388"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785853"
 ---
 # <a name="viewing-data-in-a-datatable"></a>Wyświetlanie danych w elemencie DataTable
 
-Można uzyskać <xref:System.Data.DataTable> dostęp do zawartości a przy użyciu kolekcji **wierszy** i **kolumn** **tabeli DataTable**. Można również użyć metody, <xref:System.Data.DataTable.Select%2A> aby zwrócić podzbiory danych w **elemencie DataTable** zgodnie z kryteriami wyszukiwania, kolejności sortowania i stanem wiersza. Ponadto można użyć <xref:System.Data.DataRowCollection.Find%2A> metody obiektu DataRowCollection podczas wyszukiwania określonego wiersza przy użyciu wartości klucza podstawowego.
+Można uzyskać <xref:System.Data.DataTable> dostęp do zawartości a przy użyciu kolekcji **wierszy** i **kolumn** **tabeli DataTable**. Można również użyć metody, <xref:System.Data.DataTable.Select%2A> aby zwrócić podzbiory danych w **elemencie DataTable** zgodnie z kryteriami wyszukiwania, kolejności sortowania i stanem wiersza. Ponadto można użyć <xref:System.Data.DataRowCollection.Find%2A> metody obiektu **DataRowCollection** podczas wyszukiwania określonego wiersza przy użyciu wartości klucza podstawowego.
 
-Metoda **SELECT** obiektu **DataTable** zwraca zestaw <xref:System.Data.DataRow> obiektów spełniających określone kryteria. **Wybierz** pobiera opcjonalne argumenty wyrażenia filtru, wyrażenie sortowania i **DataViewRowState**. Wyrażenie filtru identyfikuje wiersze do zwrócenia na podstawie wartości **kolumn DataColumn** , takich jak `LastName = 'Smith'`. Wyrażenie sortowania stosuje się do standardowych konwencji SQL w celu porządkowania kolumn, `LastName ASC, FirstName ASC`na przykład. Aby uzyskać reguły dotyczące pisania wyrażeń, zobacz <xref:System.Data.DataColumn.Expression%2A> właściwość klasy DataColumn.
+Metoda **SELECT** obiektu **DataTable** zwraca zestaw <xref:System.Data.DataRow> obiektów spełniających określone kryteria. **Wybierz** pobiera opcjonalne argumenty wyrażenia filtru, wyrażenie sortowania i **DataViewRowState**. Wyrażenie filtru identyfikuje wiersze do zwrócenia na podstawie wartości **kolumn DataColumn** , takich jak `LastName = 'Smith'`. Wyrażenie sortowania stosuje się do standardowych konwencji SQL w celu porządkowania kolumn, `LastName ASC, FirstName ASC`na przykład. Aby uzyskać reguły dotyczące pisania wyrażeń, zobacz <xref:System.Data.DataColumn.Expression%2A> właściwość klasy **DataColumn** .
 
 > [!TIP]
-> W przypadku wykonywania wielu wywołań metody **SELECT** **elementu DataTable**można zwiększyć wydajność, tworząc najpierw element <xref:System.Data.DataView> dla **elementu DataTable**. Utworzenie elementu **DataView** indeksuje wiersze tabeli. Metoda **SELECT** używa tego indeksu znacznie skraca czas generowania wyników zapytania. Aby uzyskać informacje na temat tworzenia elementu **DataView** dla **elementu DataTable**, zobacz temat DataViews. [](dataviews.md)
+> W przypadku wykonywania wielu wywołań metody **SELECT** **elementu DataTable**można zwiększyć wydajność, tworząc najpierw element <xref:System.Data.DataView> dla **elementu DataTable**. Utworzenie elementu **DataView** indeksuje wiersze tabeli. Metoda **SELECT** używa tego indeksu znacznie skraca czas generowania wyników zapytania. Aby uzyskać informacje na temat tworzenia elementu **DataView** dla **elementu DataTable**, zobacz temat [DataViews](dataviews.md).
 
 Metoda **SELECT** określa, która wersja wierszy ma być wyświetlana lub manipulowana na podstawie <xref:System.Data.DataViewRowState>. W poniższej tabeli opisano możliwe wartości wyliczenia **DataViewRowState** .
 
@@ -115,4 +115,4 @@ DataRow[] custRows = workTable.Select("CustID > 5", "CustLName ASC");
 - <xref:System.Data.DataViewRowState>
 - [Operowanie danymi w elemencie DataTable](manipulating-data-in-a-datatable.md)
 - [Stany wiersza i wersje wiersza](row-states-and-row-versions.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

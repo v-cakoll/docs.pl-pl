@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 25b443d8234909a4d8525c2ce2b4e70c3baa337b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 075eea42c65a822fc46ca14f820599567c35d231
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965223"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791366"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Integracja System.Transactions z programem SQL Server
 W .NET Framework w wersji 2,0 wprowadzono strukturę transakcji, do której można uzyskać dostęp <xref:System.Transactions> za pomocą przestrzeni nazw. Ta struktura uwidacznia transakcje w sposób, który jest w pełni zintegrowany w .NET Framework, w tym ADO.NET.  
@@ -230,5 +230,5 @@ End Function
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Transakcje i współbieżność](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Transakcje i współbieżność](transactions-and-concurrency.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

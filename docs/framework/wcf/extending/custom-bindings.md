@@ -5,38 +5,38 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: 4a1174dd1cd6ea785c118c61428ba73d1347316c
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: a4b3abfe9be25c9080a362eb4a6e4c7b070528f1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663880"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797224"
 ---
 # <a name="custom-bindings"></a>Powiązania niestandardowe
 
-Możesz użyć <xref:System.ServiceModel.Channels.CustomBinding> klasy, gdy jedno z powiązań dostarczanych przez system nie spełnia wymagania dotyczące usługi. Wszystkie powiązania są konstruowane na podstawie uporządkowany zestaw elementów wiązania. Powiązania niestandardowe mogą być zbudowane z zestaw elementów powiązania dostarczane przez system lub może zawierać elementów zdefiniowanych przez użytkownika niestandardowego powiązania. Elementy powiązania niestandardowego, na przykład umożliwia korzystanie z nowego transportu lub koderów na punkt końcowy usługi. Przykłady pracy, zobacz [niestandardowe powiązanie przykłady](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90)). Aby uzyskać więcej informacji, zobacz [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).
+Klasy można użyć, <xref:System.ServiceModel.Channels.CustomBinding> gdy jedno z powiązań dostarczonych przez system nie spełnia wymagań usługi. Wszystkie powiązania są zbudowane z uporządkowanego zestawu elementów powiązania. Niestandardowe powiązania mogą być kompilowane z zestawu elementów powiązania dostarczonych przez system lub mogą zawierać niestandardowe elementy powiązań zdefiniowane przez użytkownika. Możesz użyć niestandardowych elementów powiązania, na przykład, aby umożliwić korzystanie z nowych transportów lub koderów w punkcie końcowym usługi. Aby zapoznać się z przykładami pracy, zobacz [niestandardowe powiązania przykładów](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90)). Aby uzyskać więcej informacji, zobacz [ \<CustomBinding >](../../configure-apps/file-schema/wcf/custombinding.md).
 
-## <a name="construction-of-a-custom-binding"></a>Konstrukcja powiązania niestandardowego
+## <a name="construction-of-a-custom-binding"></a>Konstruowanie niestandardowego powiązania
 
-Powiązanie niestandardowe jest tworzony przy użyciu <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> konstruktora z kolekcji elementów, które są "skumulowany" w określonej kolejności wiązania:
+Niestandardowe powiązanie jest konstruowane przy użyciu <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> konstruktora z kolekcji elementów powiązania, które są "ułożone" w określonej kolejności:
 
-- U góry to opcjonalna <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> klasę, która umożliwia przepływu transakcji.
+- U góry jest klasą opcjonalną <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> , która umożliwia przepływ transakcji.
 
-- Następnie to opcjonalna <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> klasę, która zapewnia sesji i kolejność mechanizmów, zgodnie z definicją w specyfikacji WS-ReliableMessaging. Sesja może krzyżowe pośredników SOAP i mechanizm transportu.
+- Dalej jest klasą <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> opcjonalną, która dostarcza do sesji i mechanizmy porządkowania, zgodnie z definicją w specyfikacji WS-ReliableMessaging. Sesja może przekroczyć pośredników SOAP i transportowych.
 
-- Następnie to opcjonalna <xref:System.ServiceModel.Channels.SecurityBindingElement> klasę, która zapewnia funkcje zabezpieczeń, takich jak autoryzacja, uwierzytelnianie, ochrony i poufnością.
+- Następnie jest opcjonalną <xref:System.ServiceModel.Channels.SecurityBindingElement> klasą, która zapewnia funkcje zabezpieczeń, takie jak autoryzacja, uwierzytelnianie, ochrona i poufność.
 
-- Następnie to opcjonalna <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> klasę, która zapewnia możliwość mieć dwa sposób paradygmacie komunikacji przy użyciu protokołu transportu, która nie obsługuje komunikację dupleksową natywnie, takich jak HTTP.
+- Dalej jest klasą <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> opcjonalną, która zapewnia możliwość dwukierunkowej komunikacji dwustronnej z protokołem transportu, który nie obsługuje natywnej komunikacji dupleksowej, na przykład http.
 
-- Następnie to opcjonalna <xref:System.ServiceModel.Channels.OneWayBindingElement>) klasę, która zapewnia komunikację jednokierunkową.
+- Next to opcjonalna <xref:System.ServiceModel.Channels.OneWayBindingElement>Klasa, która zapewnia komunikację jednokierunkową.
 
-- Następnym ekranem jest opcjonalny strumienia elementu powiązania zabezpieczeń, który może być jednym z następujących czynności.
+- Następny to opcjonalny element powiązania zabezpieczeń strumienia, który może mieć jedną z następujących wartości:
 
   - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
 
   - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
 
-- Następnym ekranem jest element powiązania z kodowania komunikatu wymagane. Można użyć koder komunikatu lub jeden z trzech powiązania kodowania komunikatu:
+- Następnie jest wymagany element powiązania kodowania komunikatów. Możesz użyć własnego kodera komunikatów lub jednego z trzech powiązań kodowania komunikatów:
 
   - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
 
@@ -44,7 +44,7 @@ Powiązanie niestandardowe jest tworzony przy użyciu <xref:System.ServiceModel.
 
   - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
 
-W dolnej części jest element wymagany transportu. Można użyć własnych transportu lub jedną z następujących elementy powiązania transportu, przez Windows Communication Foundation (WCF):
+U dołu jest wymagany element transportu. Możesz użyć własnego transportu lub jednego z następujących elementów powiązania transportowego Windows Communication Foundation (WCF) zapewnia:
 
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 
@@ -62,23 +62,23 @@ W dolnej części jest element wymagany transportu. Można użyć własnych tran
 
 - <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>
 
-Poniższa tabela podsumowuje opcje dla każdej warstwy.
+Poniższa tabela zawiera podsumowanie opcji dla każdej warstwy.
 
 |Warstwa|Opcje|Wymagane|
 |-----------|-------------|--------------|
 |Transakcje|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|Nie|
 |Niezawodność|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Nie|
 |Zabezpieczenia|<xref:System.ServiceModel.Channels.SecurityBindingElement>|Nie|
-|Kodowanie|Tekst, niestandardowe dane binarne, komunikat transmisji optymalizacji mechanizm (MTOM)|Tak|
-|Transport|TCP, HTTP i HTTPS, nazwanych potoków (znany także jako IPC) między równorzędnych (P2P), Usługa kolejkowania komunikatów (MSMQ), niestandardowe|Tak|
+|Kodowanie|Tekst, binarny, mechanizm optymalizacji transmisji wiadomości (MTOM), niestandardowy|Tak|
+|Transportu|TCP, HTTP, HTTPS, nazwane potoki (znane również jako IPC), peer-to-peer (P2P), kolejkowanie komunikatów (nazywane także MSMQ), niestandardowe|Tak|
 
-Ponadto można zdefiniować własne elementy powiązania i wstawione między dowolnymi poprzedniej warstwy zdefiniowanej przez użytkownika.
+Ponadto można definiować własne elementy powiązania i wstawiać je między wszystkimi wcześniej zdefiniowanymi warstwami.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd tworzenia punktów końcowych](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [Instrukcje: Dostosuj powiązania dostarczane przez System](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
-- [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Powiązanie niestandardowe](../../../../docs/framework/wcf/samples/custom-binding.md)
+- [Przegląd tworzenia punktów końcowych](../endpoint-creation-overview.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../using-bindings-to-configure-services-and-clients.md)
+- [Powiązania dostarczane przez system](../system-provided-bindings.md)
+- [Instrukcje: Dostosowywanie podanego przez system powiązania](how-to-customize-a-system-provided-binding.md)
+- [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md)
+- [Powiązanie niestandardowe](../samples/custom-binding.md)

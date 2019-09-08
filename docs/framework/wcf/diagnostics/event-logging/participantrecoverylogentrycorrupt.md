@@ -2,24 +2,24 @@
 title: ParticipantRecoveryLogEntryCorrupt
 ms.date: 03/30/2017
 ms.assetid: ab34785f-f953-4428-93ca-3c50d3f50a4a
-ms.openlocfilehash: 566517a122e17078156a61e0d3808ae06d0cf93c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61ab172a3924e3c0ca00ffc25ef96446e33c5142
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999092"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796232"
 ---
 # <a name="participantrecoverylogentrycorrupt"></a>ParticipantRecoveryLogEntryCorrupt
-Id: 138  
+#C1 138  
   
- Ważność: Błąd  
+ Obrażeń Błąd  
   
- Kategoria: TransactionBridge  
+ Kategorii TransactionBridge  
   
 ## <a name="description"></a>Opis  
- To zdarzenie oznacza, że wpis dziennika odzyskiwania uczestnika został uszkodzony i nie może być zdeserializowany. Z tego błędu może spowodować utratę danych. Listy zdarzeń identyfikator transakcji, odzyskiwania danych (kodowanie Base64), wyjątków, nazwa procesu i proces identyfikatora.  
+ To zdarzenie wskazuje, że wpis dziennika odzyskiwania uczestnika został uszkodzony i nie można go zdeserializować. Przyczyną tego błędu może być utrata danych. Zdarzenie Wyświetla identyfikator transakcji, dane odzyskiwania (kodowane algorytmem Base64), wyjątek, nazwę procesu i identyfikator procesu.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Rejestrowanie zdarzeń](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Informacje ogólne o zdarzeniach](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Rejestrowanie zdarzeń](index.md)
+- [Informacje ogólne o zdarzeniach](events-general-reference.md)

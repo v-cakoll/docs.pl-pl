@@ -2,24 +2,24 @@
 title: WmiRegistrationFailed
 ms.date: 03/30/2017
 ms.assetid: 69ac6b2b-770c-49e1-9865-34773767971c
-ms.openlocfilehash: 8d4a7b1af5e500d6e3b75616ed92f0c3618594ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4e6560ceb9685992d2e52a9db858e788a6c1ca84
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998832"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797346"
 ---
 # <a name="wmiregistrationfailed"></a>WmiRegistrationFailed
-Id: 126  
+#C1 126  
   
- Ważność: Błąd  
+ Obrażeń Błąd  
   
- Kategoria: ServiceModel  
+ Kategorii Modelu  
   
 ## <a name="description"></a>Opis  
- To zdarzenie oznacza, że dostawca usługi WMI nie został zarejestrowany. Zdarzenie wyświetla obiekt usługi WMI, błąd, nazwa procesu i identyfikatora procesu.  
+ To zdarzenie oznacza, że dostawca WMI nie został zarejestrowany. Zdarzenie zawiera listę obiektów WMI, błąd, nazwa procesu i identyfikator procesu.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Rejestrowanie zdarzeń](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Informacje ogólne o zdarzeniach](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Rejestrowanie zdarzeń](index.md)
+- [Informacje ogólne o zdarzeniach](events-general-reference.md)

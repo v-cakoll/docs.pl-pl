@@ -2,12 +2,12 @@
 title: Elementy DataTableReader
 ms.date: 03/30/2017
 ms.assetid: 97546ae2-0e42-4d26-961d-e0b244d81ded
-ms.openlocfilehash: 1ff7868b59c6fdc4e6c443be1b831accc84f36a6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1559cde9cb786ccb2baf920347064b8b28d472c3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203821"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785344"
 ---
 # <a name="datatablereaders"></a>Elementy DataTableReader
 Przedstawia zawartość a <xref:System.Data.DataTable> lub a <xref:System.Data.DataSet> w postaci co najmniej jednego zestawu wyników tylko do odczytu. <xref:System.Data.DataTableReader>  
@@ -26,4 +26,4 @@ Przedstawia zawartość a <xref:System.Data.DataTable> lub a <xref:System.Data.D
 ## <a name="see-also"></a>Zobacz także
 
 - [Pobieranie i modyfikowanie danych ADO.NET](../retrieving-and-modifying-data.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

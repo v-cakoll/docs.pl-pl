@@ -2,59 +2,59 @@
 title: 'Instrukcje: Dostosowywanie klas jednostek za pomocą edytora kodu'
 ms.date: 03/30/2017
 ms.assetid: ec28332f-9f3c-4e0a-baca-60f9141a68c0
-ms.openlocfilehash: 67a0e17b6a81d804ce101bf56d8da82fe330479c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 578e0cbd1f6990a5d41007ad31f4c1c938cd3ebe
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743423"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793792"
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>Instrukcje: Dostosowywanie klas jednostek za pomocą edytora kodu
-Deweloperzy korzystający z programu Visual Studio można użyć Object Relational Designer do tworzenia i dostosowywania ich klas jednostek.  
+Deweloperzy korzystający z programu Visual Studio mogą używać Object Relational Designer do tworzenia lub dostosowywania ich klas jednostek.  
   
- Umożliwia także Edytor kodu programu Visual Studio należy napisać kod mapowania lub dostosować program code, który został już wygenerowany. Aby uzyskać więcej informacji, zobacz [mapowanie oparte na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ Możesz również użyć edytora kodu programu Visual Studio, aby napisać własny kod mapowania lub dostosować kod, który został już wygenerowany. Aby uzyskać więcej informacji, zobacz [Mapowanie oparte na atrybutach](attribute-based-mapping.md).  
   
- Tematy w tej sekcji opisano sposób dostosowywania modelu obiektu.  
+ W tematach w tej sekcji opisano sposób dostosowywania modelu obiektów.  
   
- [Instrukcje: Określanie nazw bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-names.md)  
- Opisuje sposób używania <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>.  
+ [Instrukcje: Określanie nazw baz danych](how-to-specify-database-names.md)  
+ Opisuje sposób użycia <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>programu.  
   
- [Instrukcje: Reprezentacja tabel jako klas](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-tables-as-classes.md)  
- Opisuje sposób używania <xref:System.Data.Linq.Mapping.TableAttribute>.  
+ [Instrukcje: Przedstawianie tabel jako klas](how-to-represent-tables-as-classes.md)  
+ Opisuje sposób użycia <xref:System.Data.Linq.Mapping.TableAttribute>programu.  
   
- [Instrukcje: Reprezentacja kolumn jako elementów członkowskich klas](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-class-members.md)  
- Opisuje sposób używania <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
+ [Instrukcje: Reprezentuje kolumny jako elementy członkowskie klasy](how-to-represent-columns-as-class-members.md)  
+ Opisuje sposób użycia <xref:System.Data.Linq.Mapping.ColumnAttribute>programu.  
   
- [Instrukcje: Reprezentacja kluczy podstawowych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-primary-keys.md)  
- Opisuje sposób używania <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>.  
+ [Instrukcje: Reprezentuje klucze podstawowe](how-to-represent-primary-keys.md)  
+ Opisuje sposób użycia <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>programu.  
   
- [Instrukcje: Mapowanie relacji w bazie danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)  
- Przykłady użycia <xref:System.Data.Linq.Mapping.AssociationAttribute> atrybutu.  
+ [Instrukcje: Mapowanie relacji bazy danych](how-to-map-database-relationships.md)  
+ Zawiera przykłady użycia <xref:System.Data.Linq.Mapping.AssociationAttribute> atrybutu.  
   
- [Instrukcje: Reprezentacja kolumn jako wygenerowanych w bazie danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-database-generated.md)  
- Opisuje sposób używania <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>.  
+ [Instrukcje: Przedstawia kolumny jako wygenerowane przez bazę danych](how-to-represent-columns-as-database-generated.md)  
+ Opisuje sposób użycia <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>programu.  
   
- [Instrukcje: Reprezentuje kolumn jako sygnatura czasowa lub kolumny wersji](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-timestamp-or-version-columns.md)  
- Opisuje sposób używania <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>.  
+ [Instrukcje: Przedstawia kolumny jako kolumny znaczników czasu lub wersji](how-to-represent-columns-as-timestamp-or-version-columns.md)  
+ Opisuje sposób użycia <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>programu.  
   
- [Instrukcje: Określanie typów danych bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-data-types.md)  
- Opisuje sposób używania <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>.  
+ [Instrukcje: Określanie typów danych bazy danych](how-to-specify-database-data-types.md)  
+ Opisuje sposób użycia <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>programu.  
   
- [Instrukcje: Reprezentacja kolumn obliczanych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-computed-columns.md)  
- Opisuje sposób używania <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>.  
+ [Instrukcje: Reprezentuje kolumny obliczane](how-to-represent-computed-columns.md)  
+ Opisuje sposób użycia <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>programu.  
   
- [Instrukcje: Określanie pól magazynu prywatnego](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-private-storage-fields.md)  
- Opisuje sposób używania <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>.  
+ [Instrukcje: Określ prywatne pola magazynu](how-to-specify-private-storage-fields.md)  
+ Opisuje sposób użycia <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>programu.  
   
- [Instrukcje: Reprezentacja kolumn jako dopuszczających wartości Null](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-allowing-null-values.md)  
- Opisuje sposób używania <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>.  
+ [Instrukcje: Reprezentuje kolumny jako zezwalające na wartości null](how-to-represent-columns-as-allowing-null-values.md)  
+ Opisuje sposób użycia <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>programu.  
   
- [Instrukcje: Mapowanie hierarchii dziedziczenia](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md)  
- W tym artykule opisano mapowania konieczne określenie hierarchii dziedziczenia.  
+ [Instrukcje: Hierarchie dziedziczenia mapowania](how-to-map-inheritance-hierarchies.md)  
+ Opisuje mapowania wymagane do określenia hierarchii dziedziczenia.  
   
- [Instrukcje: Określanie sprawdzania konfliktów współbieżności](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-concurrency-conflict-checking.md)  
- Opisuje sposób używania <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>.  
+ [Instrukcje: Określ kontrolę konfliktów współbieżności](how-to-specify-concurrency-conflict-checking.md)  
+ Opisuje sposób użycia <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>programu.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
+- [SqlMetal.exe (narzędzie generowania kodu)](../../../../tools/sqlmetal-exe-code-generation-tool.md)

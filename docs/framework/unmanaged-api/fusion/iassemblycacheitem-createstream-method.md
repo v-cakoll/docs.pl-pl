@@ -17,16 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a98273307003485202d8c12d5c27fda04ff5a0ae
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5af7dc4e1694b66fc4a5ce37e515c71e9fa3db49
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629876"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796733"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>IAssemblyCacheItem::CreateStream — Metoda
 
-Tworzy strumień o określonej nazwie i format.
+Tworzy strumień o określonej nazwie i formacie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,30 +44,30 @@ HRESULT CreateStream (
 ## <a name="parameters"></a>Parametry
 
 `dwFlags`\
-[in] Flagi zdefiniowane w Fusion.idl.
+podczas Flagi zdefiniowane w pliku Fusion. idl.
 
 `pszStreamName`\
-[in] Nazwa strumienia, który ma zostać utworzony.
+podczas Nazwa strumienia, który ma zostać utworzony.
 
 `dwFormat`\
-[in] Format pliku do celów przesyłania strumieniowego.
+podczas Format pliku, który ma być przesyłany strumieniowo.
 
 `dwFormatFlags`\
-[in] Zdefiniowane w Fusion.idl flagi specyficzne dla formatu.
+podczas Flagi specyficzne dla formatu zdefiniowane w pliku Fusion. idl.
 
 `ppIStream`\
-[out] Wskaźnik na adres zwracanego [IStream](/windows/desktop/api/objidl/nn-objidl-istream) wystąpienia.
+określoną Wskaźnik do adresu zwróconego wystąpienia [IStream](/windows/desktop/api/objidl/nn-objidl-istream) .
 
 `puliMaxSize`\
-[in, opcjonalny] Maksymalny rozmiar strumienia odwołuje się `ppIStream`.
+[w, opcjonalnie] Maksymalny rozmiar strumienia, do którego odwołuje `ppIStream`się.
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
-**Nagłówek:** Fusion.h
+**Nagłówki** Fusion. h
 
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

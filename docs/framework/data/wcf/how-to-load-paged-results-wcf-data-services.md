@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Ładowanie stronicowanych wyników (WCF Data Services)'
+title: 'Instrukcje: Załaduj stronicowane wyniki (Usługi danych programu WCF)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: bb786ea4-f3ef-4ad3-9a41-3a0b7feb6a1f
-ms.openlocfilehash: 0be7dcbefb23d2f2b283ac498f3b0ea43278f2d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e718aad904a43d118a243afafc17834cba31f028
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875842"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790457"
 ---
-# <a name="how-to-load-paged-results-wcf-data-services"></a>Instrukcje: Ładowanie stronicowanych wyników (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Włącza usługę danych ograniczyć liczbę jednostek, które są zwracane w pojedynczym źródle danych odpowiedzi. W takim przypadku końcowy wpis w źródle danych zawiera łącze do następnej strony danych. Identyfikator URI dla następnej strony danych można uzyskać przez wywołanie <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> metody <xref:System.Data.Services.Client.QueryOperationResponse%601>, który jest zwracany, gdy <xref:System.Data.Services.Client.DataServiceQuery%601> jest wykonywany. Identyfikator URI, reprezentowane przez ten obiekt jest następnie używana do ładowania następnej strony wyników. Aby uzyskać więcej informacji, zobacz [ładowanie zawartości odroczone](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).  
+# <a name="how-to-load-paged-results-wcf-data-services"></a>Instrukcje: Załaduj stronicowane wyniki (Usługi danych programu WCF)
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]umożliwia usłudze danych ograniczenie liczby jednostek, które są zwracane w ramach pojedynczego źródła odpowiedzi. W takim przypadku końcowy wpis w kanale informacyjnym zawiera link do następnej strony danych. Identyfikator URI następnej strony danych jest uzyskiwany przez wywołanie <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> metody <xref:System.Data.Services.Client.QueryOperationResponse%601>, <xref:System.Data.Services.Client.DataServiceQuery%601> która jest zwracana, gdy jest wykonywane. Identyfikator URI reprezentowany przez ten obiekt jest następnie używany do załadowania następnej strony wyników. Aby uzyskać więcej informacji, zobacz [ładowanie odroczonej zawartości](loading-deferred-content-wcf-data-services.md).  
   
- W przykładzie w tym temacie użyto Northwind przykładowe dane usługi i automatycznie wygenerowany klas usługi danych klienta. Ta usługa i klas danych klienta, są tworzone po ukończeniu [Szybki Start usług danych WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ W przykładzie w tym temacie jest stosowana usługa danych przykładowych Northwind i klasy usługi danych klientów. Ta usługa i klasy danych klienta są tworzone po zakończeniu [usługi danych programu WCF szybkiego startu](quickstart-wcf-data-services.md).  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto `do…while` pętli, aby załadować `Customers` jednostek z stronicowane wyniki usługi danych.  
+ W tym przykładzie zastosowano `do…while` pętlę w celu załadowania `Customers` jednostek z wyników ze strony z usługi danych.  
   
  [!code-csharp[Astoria Northwind Client#GetCustomersPaged](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getcustomerspaged)]
  [!code-vb[Astoria Northwind Client#GetCustomersPaged](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getcustomerspaged)]  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie Zwraca powiązane `Orders` jednostek z każdym `Customers` jednostki i używa `do…while` pętli, aby załadować `Customers` jednostki strony i zagnieżdżoną `while` pętli do załadowania strony powiązane `Orders` jednostek usługi data .  
+ Ten przykład zwraca powiązane `Orders` jednostki z każdą `Customers` jednostką i używa `do…while` pętli do załadowania `Customers` stron jednostek i zagnieżdżonej `while` pętli w celu załadowania `Orders` stron powiązanych jednostek z usługi danych .  
   
  [!code-csharp[Astoria Northwind Client#GetCustomersPagedNested](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getcustomerspagednested)]
  [!code-vb[Astoria Northwind Client#GetCustomersPagedNested](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getcustomerspagednested)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Ładowanie odroczonej zawartości](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)
-- [Instrukcje: Ładowanie powiązanych jednostek](../../../../docs/framework/data/wcf/how-to-load-related-entities-wcf-data-services.md)
+- [Ładowanie odroczonej zawartości](loading-deferred-content-wcf-data-services.md)
+- [Instrukcje: Załaduj jednostki powiązane](how-to-load-related-entities-wcf-data-services.md)

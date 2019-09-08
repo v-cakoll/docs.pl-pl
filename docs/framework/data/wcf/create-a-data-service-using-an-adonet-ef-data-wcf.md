@@ -1,80 +1,80 @@
 ---
-title: 'Instrukcje: Tworzenie usługi danych przy użyciu źródła danych programu ADO.NET Entity Framework (WCF Data Services)'
+title: 'Instrukcje: Tworzenie usługi danych przy użyciu źródła danych ADO.NET Entity Framework (Usługi danych programu WCF)'
 ms.date: 08/24/2018
 helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 7dd93e5aa44effcf9fc41598e41f6f612a209c86
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: ae4176fd986f870523e44a11eee48850e2dddd7c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307146"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791080"
 ---
-# <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Instrukcje: Tworzenie usługi danych przy użyciu źródła danych programu ADO.NET Entity Framework (WCF Data Services)
+# <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Instrukcje: Tworzenie usługi danych przy użyciu źródła danych ADO.NET Entity Framework (Usługi danych programu WCF)
 
-Usługi danych WCF przedstawia dane jednostki w postaci usługi danych. Dane te jednostki są udostępniane przez ADO.NET[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] po relacyjnej bazy danych w źródle danych. W tym temacie przedstawiono sposób tworzenia [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]— na podstawie modelu danych w aplikacji internetowego programu Visual Studio, która opiera się na istniejącą bazę danych i Utwórz nową usługę danych przy użyciu tego modelu danych.
+Usługi danych programu WCF udostępnia dane jednostki jako usługę danych. Te dane jednostki są udostępniane przez ADO.NET[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] , gdy źródłem danych jest relacyjna baza danych. W tym temacie pokazano, jak utworzyć [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]model danych oparty na bazie programu Visual Studio, który jest oparty na istniejącej bazie danych i użyć tego modelu danych do utworzenia nowej usługi danych.
 
-[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Także narzędzia wiersza polecenia, które mogą generować [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] modelu spoza projektu programu Visual Studio. Aby uzyskać więcej informacji, zobacz [jak: Generowanie modelu i mapowania plików za pomocą EdmGen.exe](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).
+Udostępnia również narzędzie wiersza polecenia, które może [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] generować model poza projektem programu Visual Studio. [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Aby uzyskać więcej informacji, zobacz [jak: Użyj programu EdmGen. exe, aby wygenerować model i pliki](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)mapowania.
 
-## <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>Aby dodać modelu Entity Framework, która opiera się na istniejącą bazę danych do istniejącej aplikacji sieci Web
+## <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>Aby dodać model Entity Framework, który jest oparty na istniejącej bazie danych w istniejącej aplikacji sieci Web
 
-1. Na **projektu** menu, kliknij przycisk **Dodaj** > **nowy element**.
+1. W menu **projekt** kliknij polecenie **Dodaj** > **nowy element**.
 
-2. W **szablony** okienku kliknij **danych** kategorii, a następnie wybierz **ADO.NET Entity Data Model**.
+2. W okienku **Szablony** kliknij kategorię **dane** , a następnie wybierz pozycję **ADO.NET Entity Data Model**.
 
 3. Wprowadź nazwę modelu, a następnie kliknij przycisk **Dodaj**.
 
-     Na pierwszej stronie Kreator modelu Entity Data Model jest wyświetlany.
+     Zostanie wyświetlona pierwsza strona kreatora Entity Data Model.
 
-4. W **wybierz zawartość modelu** okno dialogowe, wybierz opcję **Generuj z bazy danych**. Następnie kliknij przycisk **Dalej**.
+4. W oknie dialogowym **Wybierz zawartość modelu** wybierz pozycję **Generuj z bazy danych**. Następnie kliknij przycisk **Dalej**.
 
-5. Kliknij przycisk **nowe połączenie** przycisku.
+5. Kliknij przycisk **nowe połączenie** .
 
-6. W **właściwości połączenia** okno dialogowe, wpisz nazwę serwera, wybierz metodę uwierzytelniania, wpisz nazwę bazy danych, a następnie kliknij przycisk **OK**.
+6. W oknie dialogowym **Właściwości połączenia** wpisz nazwę serwera, wybierz metodę uwierzytelniania, wpisz nazwę bazy danych, a następnie kliknij przycisk **OK**.
 
-     **Wybierz połączenie danych** okno dialogowe zostanie zaktualizowana przy użyciu ustawienia połączenia bazy danych.
+     Okno dialogowe **Wybieranie połączenia danych** zostanie zaktualizowane przy użyciu ustawień połączenia z bazą danych.
 
-7. Upewnij się, że **zapisywanie ustawień połączenia w pliku App.Config jako jednostki:** zaznaczono pole wyboru. Następnie kliknij przycisk **Dalej**.
+7. Upewnij się, że pole wyboru **Zapisz ustawienia połączenia jednostek w pliku App. config as:** jest zaznaczone. Następnie kliknij przycisk **Dalej**.
 
-8. W **wybierz obiekty bazy danych** okno dialogowe, zaznacz wszystkie bazy danych obiekty czy planowane jest udostępnianie w usłudze danych.
+8. W oknie dialogowym **Wybierz obiekty bazy danych** wybierz wszystkie obiekty bazy danych, które planujesz uwidocznić w usłudze danych.
 
     > [!NOTE]
-    > Obiektów uwzględnionych w modelu danych nie są automatycznie widoczne przez usługę danych. One muszą być wyraźnie widoczne za samą usługę. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usługi danych](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).
+    > Obiekty zawarte w modelu danych nie są automatycznie uwidaczniane przez usługę danych. Muszą być jawnie udostępniane przez samą usługę. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usługi danych](configuring-the-data-service-wcf-data-services.md).
 
-9. Kliknij przycisk **Zakończ** aby zakończyć działanie kreatora.
+9. Kliknij przycisk **Zakończ** , aby zakończyć pracę kreatora.
 
-     Spowoduje to utworzenie domyślny model danych, na podstawie określonej bazy danych. [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Umożliwia dostosowywanie modelu danych. Aby uzyskać więcej informacji, zobacz [zadań narzędzia modelu danych jednostki](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100)).
+     Spowoduje to utworzenie domyślnego modelu danych opartego na określonej bazie danych. [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Umożliwia dostosowanie modelu danych. Aby uzyskać więcej informacji, zobacz [Entity Data Model narzędzia zadań](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100)).
 
 ## <a name="to-create-the-data-service-by-using-the-new-data-model"></a>Aby utworzyć usługę danych przy użyciu nowego modelu danych
 
-1. W programie Visual Studio Otwórz plik edmx, reprezentujące model danych.
+1. W programie Visual Studio Otwórz plik. edmx, który reprezentuje model danych.
 
-2. W **przeglądarka modeli**, kliknij prawym przyciskiem myszy model, kliknij przycisk **właściwości**, a następnie zanotuj nazwę kontenera jednostek.
+2. W **przeglądarce modelu**kliknij prawym przyciskiem myszy Model, kliknij polecenie **Właściwości**, a następnie zanotuj nazwę kontenera jednostek.
 
-3. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy nazwę projektu ASP.NET, a następnie kliknij **Dodaj** > **nowy element**.
+3. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy nazwę projektu ASP.NET, a następnie kliknij pozycję **Dodaj** > **nowy element**.
 
-4. W **Dodaj nowy element** okno dialogowe, wybierz opcję **usługi danych WCF** szablonu w **Web** kategorii.
+4. W oknie dialogowym **Dodaj nowy element** wybierz szablon **usługi danych programu WCF** w kategorii **Sieć Web** .
 
-   ![Szablon elementu usługi danych WCF w programie Visual Studio 2015](media/wcf-data-service-item-template.png)
+   ![Szablon elementu usługi danych programu WCF w programie Visual Studio 2015](media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > **Usługi danych WCF** szablon jest dostępny w programie Visual Studio 2015, ale nie w programie Visual Studio 2017.
+   > Szablon **usługi danych programu WCF** jest dostępny w programie visual Studio 2015, ale nie w programie visual Studio 2017.
 
 5. Podaj nazwę usługi, a następnie kliknij przycisk **OK**.
 
-     Program Visual Studio tworzy pliki znaczników i kodu XML dla nowej usługi. Domyślnie zostanie otwarte okno edytora kodu.
+     Program Visual Studio tworzy znaczniki XML i pliki kodu dla nowej usługi. Domyślnie zostanie otwarte okno edytora kodu.
 
-6. W kodzie dla usługi danych, Zastąp komentarz `/* TODO: put your data source class name here */` w definicji klasy, która definiuje usługę danych o typie, który dziedziczy z <xref:System.Data.Objects.ObjectContext> klasy i oznacza to kontener jednostek w modelu danych, która została zanotowanym w kroku 2.
+6. W kodzie usługi danych Zastąp komentarz `/* TODO: put your data source class name here */` w definicji klasy, która definiuje usługę danych z typem, który dziedziczy <xref:System.Data.Objects.ObjectContext> z klasy i jest kontenerem jednostek modelu danych, który został zanotowany w kroku 2.
 
-7. W kodzie dla usługi danych należy włączyć autoryzowanym klientom dostęp zestawy jednostek usługi ujawnia w danych. Aby uzyskać więcej informacji, zobacz [Tworzenie usługi danych](../../../../docs/framework/data/wcf/creating-the-data-service.md).
+7. W kodzie usługi danych Włącz autoryzowanych klientów, aby uzyskać dostęp do zestawów jednostek udostępnianych przez usługę danych. Aby uzyskać więcej informacji, zobacz [Tworzenie usługi danych](creating-the-data-service.md).
 
-8. Aby przetestować usługę danych Northwind.svc przy użyciu przeglądarki sieci Web, postępuj zgodnie z instrukcjami w temacie [uzyskiwania dostępu do usługi z przeglądarki sieci Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).
+8. Aby przetestować usługę danych Northwind. svc przy użyciu przeglądarki sieci Web, postępuj zgodnie z instrukcjami podanymi w temacie [Uzyskiwanie dostępu do usługi z przeglądarki sieci Web](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Definiowanie usług danych WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
-- [Dostawcy usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
-- [Instrukcje: Tworzenie usługi danych przy użyciu dostawcy odbicia](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)
-- [Instrukcje: Tworzenie usługi danych przy użyciu LINQ do SQL źródła danych](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md)
+- [Definiowanie usług danych WCF](defining-wcf-data-services.md)
+- [Dostawcy usług danych](data-services-providers-wcf-data-services.md)
+- [Instrukcje: Tworzenie usługi danych przy użyciu dostawcy odbicia](create-a-data-service-using-rp-wcf-data-services.md)
+- [Instrukcje: Tworzenie usługi danych przy użyciu LINQ to SQL źródła danych](create-a-data-service-using-linq-to-sql-wcf.md)

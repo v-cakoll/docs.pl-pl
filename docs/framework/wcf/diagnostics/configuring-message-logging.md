@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: f9324370539b41d21365e0bd126c2f632ac67789
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: db538634dccf22fb954ccf0827909e5cf3563f77
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044284"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798160"
 ---
 # <a name="configuring-message-logging"></a>Konfigurowanie rejestrowania komunikatów
 
@@ -47,7 +47,7 @@ Poniższy przykład pokazuje, jak włączyć rejestrowanie i określić dodatkow
 </system.serviceModel>
 ```
 
-Aby uzyskać więcej informacji na temat ustawień rejestrowania komunikatów, zobacz [zalecane ustawienia śledzenia i rejestrowania komunikatów](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).
+Aby uzyskać więcej informacji na temat ustawień rejestrowania komunikatów, zobacz [zalecane ustawienia śledzenia i rejestrowania komunikatów](./tracing/recommended-settings-for-tracing-and-message-logging.md).
 
 Możesz użyć `add` , aby określić nazwę i typ odbiornika, którego chcesz użyć. W przykładowej konfiguracji odbiornik ma nazwę "Messages" i dodaje odbiornik standardowego .NET Framework śledzenia (`System.Diagnostics.XmlWriterTraceListener`) jako typ do użycia. Jeśli używasz `System.Diagnostics.XmlWriterTraceListener`, musisz określić lokalizację i nazwę pliku wyjściowego w pliku konfiguracji. Można to zrobić, ustawiając `initializeData` nazwę pliku dziennika. W przeciwnym razie system zgłasza wyjątek. Możesz również zaimplementować niestandardowy odbiornik, który emituje dzienniki do pliku domyślnego.
 
@@ -62,7 +62,7 @@ Poziom rejestrowania, a także opcje dodatkowe są omówione w sekcji poziom rej
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">
 ```
 
-Jeśli chcesz wyłączyć źródło śledzenia, zamiast tego `logMessagesAtServiceLevel`należy użyć atrybutów `messageLogging` , `logMalformedMessages`i `logMessagesAtTransportLevel` . Należy ustawić wszystkie te atrybuty na `false`. Można to zrobić za pomocą pliku konfiguracji w poprzednim przykładzie kodu, za pomocą interfejsu użytkownika edytora konfiguracji lub przy użyciu usługi WMI. Aby uzyskać więcej informacji o narzędziu Edytor konfiguracji, zobacz [Narzędzie edytora konfiguracji (SvcConfigEditor. exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). Aby uzyskać więcej informacji na temat usługi WMI, zobacz [używanie Instrumentacja zarządzania Windows do diagnostyki](../../../../docs/framework/wcf/diagnostics/wmi/index.md).
+Jeśli chcesz wyłączyć źródło śledzenia, zamiast tego `logMessagesAtServiceLevel`należy użyć atrybutów `messageLogging` , `logMalformedMessages`i `logMessagesAtTransportLevel` . Należy ustawić wszystkie te atrybuty na `false`. Można to zrobić za pomocą pliku konfiguracji w poprzednim przykładzie kodu, za pomocą interfejsu użytkownika edytora konfiguracji lub przy użyciu usługi WMI. Aby uzyskać więcej informacji o narzędziu Edytor konfiguracji, zobacz [Narzędzie edytora konfiguracji (SvcConfigEditor. exe)](../configuration-editor-tool-svcconfigeditor-exe.md). Aby uzyskać więcej informacji na temat usługi WMI, zobacz [używanie Instrumentacja zarządzania Windows do diagnostyki](./wmi/index.md).
 
 ## <a name="logging-levels-and-options"></a>Poziomy rejestrowania i opcje
 
@@ -101,7 +101,7 @@ Oprócz poziomów rejestrowania użytkownik może określić następujące opcje
 
 Jeśli żaden odbiornik śledzenia nie jest zdefiniowany w pliku konfiguracji, żadne dane wyjściowe rejestrowania nie są generowane niezależnie od określonego poziomu rejestrowania.
 
-Opcje rejestrowania komunikatów, takie jak atrybuty opisane w tej sekcji, można zmienić w czasie wykonywania przy użyciu Instrumentacja zarządzania Windows (WMI). Można to zrobić, uzyskując dostęp do wystąpienia [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) , które uwidacznia następujące właściwości logiczne `LogMessagesAtServiceLevel`: `LogMessagesAtTransportLevel`,, `LogMalformedMessages`i. `false` W związku z tym, jeśli skonfigurujesz odbiornik śledzenia do rejestrowania komunikatów, ale ustawisz te opcje w konfiguracji, możesz później zmienić je `true` na, gdy aplikacja jest uruchomiona. Pozwala to efektywnie rejestrować komunikaty w czasie wykonywania. Podobnie, jeśli włączysz rejestrowanie komunikatów w pliku konfiguracji, możesz go wyłączyć w czasie wykonywania za pomocą usługi WMI. Aby uzyskać więcej informacji, zobacz [używanie Instrumentacja zarządzania Windows do diagnostyki](../../../../docs/framework/wcf/diagnostics/wmi/index.md).
+Opcje rejestrowania komunikatów, takie jak atrybuty opisane w tej sekcji, można zmienić w czasie wykonywania przy użyciu Instrumentacja zarządzania Windows (WMI). Można to zrobić, uzyskując dostęp do wystąpienia [AppDomainInfo](./wmi/appdomaininfo.md) , które uwidacznia następujące właściwości logiczne `LogMessagesAtServiceLevel`: `LogMessagesAtTransportLevel`,, `LogMalformedMessages`i. `false` W związku z tym, jeśli skonfigurujesz odbiornik śledzenia do rejestrowania komunikatów, ale ustawisz te opcje w konfiguracji, możesz później zmienić je `true` na, gdy aplikacja jest uruchomiona. Pozwala to efektywnie rejestrować komunikaty w czasie wykonywania. Podobnie, jeśli włączysz rejestrowanie komunikatów w pliku konfiguracji, możesz go wyłączyć w czasie wykonywania za pomocą usługi WMI. Aby uzyskać więcej informacji, zobacz [używanie Instrumentacja zarządzania Windows do diagnostyki](./wmi/index.md).
 
 `source` Pole w dzienniku komunikatów określa, w którym kontekście komunikat jest rejestrowany: podczas wysyłania/otrzymywania komunikatu żądania, dla żądania żądanie-odpowiedź lub 1-kierunkowego, w modelu usług lub warstwie transportowej lub w przypadku nieprawidłowo sformułowanego komunikatu.
 
@@ -174,6 +174,6 @@ Należy pamiętać, że `type` atrybut powinien być ustawiony na kwalifikowaną
 
 ## <a name="see-also"></a>Zobacz także
 
-- [\<messageLogging >](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
-- [Rejestrowanie komunikatów](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [Zalecane ustawienia śledzenia i rejestrowania komunikatów](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)
+- [\<messageLogging >](../../configure-apps/file-schema/wcf/messagelogging.md)
+- [Rejestrowanie komunikatów](message-logging.md)
+- [Zalecane ustawienia śledzenia i rejestrowania komunikatów](./tracing/recommended-settings-for-tracing-and-message-logging.md)

@@ -1,6 +1,6 @@
 ---
-title: Funkcja QualifierSet_GetNames (niezarządzany wykaz interfejsów API)
-description: Funkcja QualifierSet_GetNames pobiera nazwy kwalifikatory z obiektu lub właściwości.
+title: QualifierSet_GetNames — funkcja (niezarządzana dokumentacja interfejsu API)
+description: Funkcja QualifierSet_GetNames pobiera nazwy kwalifikatorów z obiektu lub właściwości.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_GetNames
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 402d56b44c2b6f53f901e35c6d7b965811a40344
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 266462a5393c8e26aa2bc3f2ec8ab72d4410a431
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636588"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798294"
 ---
-# <a name="qualifiersetgetnames-function"></a>QualifierSet_GetNames — funkcja
+# <a name="qualifierset_getnames-function"></a>QualifierSet_GetNames, funkcja
 
 Pobiera nazwy wszystkich kwalifikatorów lub niektórych kwalifikatorów, które są dostępne z bieżącego obiektu lub właściwości.
 
@@ -43,49 +43,49 @@ HRESULT QualifierSet_GetNames (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`\
-[in] Ten parametr jest nieużywany.
+podczas Ten parametr jest nieużywany.
 
 `ptr`\
-[in] Wskaźnik do [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) wystąpienia.
+podczas Wskaźnik do wystąpienia [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .
 
 `lFlags`\
-[in] Jedną z następujących flag lub wartości, które określa nazwy, w których do uwzględnienia w wyliczeniu.
+podczas Jedna z następujących flag lub wartości, które określają, które nazwy mają być uwzględnione w wyliczeniu.
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
-|  | 0 | Zwraca nazwy wszystkich kwalifikatorów. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Zwróć tylko nazwy kwalifikatory określonych do bieżącej właściwości lub obiektu. <br/> Dla właściwości: Zwróć tylko kwalifikatory określone dla właściwości (w tym zastąpień), a nie kwalifikatory propagowane z poziomu definicji klasy. <br/> W przypadku wystąpienia: Zwróć tylko nazwy kwalifikator danego wystąpienia. <br/> Dla klasy: Zwróć tylko kwalifikatory określonej klasy pochodnej jest.
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Zwróć tylko nazwy kwalifikatory propagowane z innego obiektu. <br/> Dla właściwości: Zwróć tylko kwalifikatory propagowane do tej właściwości z definicji klasy, a nie te z samej właściwości. <br/> W przypadku wystąpienia: Zwróć tylko tych kwalifikatory propagowane z poziomu definicji klasy. <br/> Dla klasy: Zwróć tylko nazwy kwalifikator dziedziczone z klasy nadrzędnej. |
+|  | 0 | Zwróć nazwy wszystkich kwalifikatorów. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Zwraca tylko nazwy kwalifikatorów specyficzne dla bieżącej właściwości lub obiektu. <br/> Dla właściwości: Zwróć tylko kwalifikatory charakterystyczne dla właściwości (w tym przesłonięć), a nie te kwalifikatory, które zostały przekazane z definicji klasy. <br/> Dla wystąpienia: Zwróć tylko nazwy kwalifikatorów specyficznych dla wystąpienia. <br/> Dla klasy: Zwróć tylko kwalifikatory charakterystyczne dla klasy pochodnej.
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Zwraca tylko nazwy kwalifikatorów, które zostały przekazane z innego obiektu. <br/> Dla właściwości: Zwróć tylko kwalifikatory propagowane do tej właściwości z definicji klasy, a nie te z samej właściwości. <br/> Dla wystąpienia: Zwraca tylko te kwalifikatory, które zostały przekazane z definicji klasy. <br/> Dla klasy: Zwróć tylko te nazwy kwalifikatorów dziedziczone z klas nadrzędnych. |
 
 `pstrNames`\
-[out] Nowy `SAFEARRAY` zawierający żądanej nazwy. Tablica może mieć elementów 0. Jeśli wystąpi błąd, nowy `SAFEARRAY` nie jest zwracana.
+określoną Nowy `SAFEARRAY` , który zawiera żądane nazwy. Tablica może zawierać 0 elementów. Jeśli wystąpi błąd, nowe `SAFEARRAY` nie zostanie zwrócone.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
+Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nagłówkowym *WbemCli. h* lub można je definiować jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr jest nieprawidłowy. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nie ma wystarczającej ilości pamięci jest dostępny rozpocząć nowe wyliczenie. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało dostępnej pamięci, aby rozpocząć nowe Wyliczenie. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja zawija wywołanie do [IWbemQualifierSet::GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-getnames) metody.
+Ta funkcja otacza wywołanie metody [IWbemQualifierSet:: GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-getnames) .
 
-Po po pobraniu nazwy kwalifikator, są dostępne każdego kwalifikator według nazwy przez wywołanie metody [QualifierSet_Get](qualifierset-get.md) funkcji.
+Po pobraniu nazw kwalifikatorów możesz uzyskać dostęp do każdego kwalifikatora według nazwy, wywołując funkcję [QualifierSet_Get](qualifierset-get.md) .
 
-Nie jest błąd dla danego obiektu, który ma zero kwalifikatorów, więc liczba ciągów w `pstrNames` przy powrocie może przyjąć wartość 0, nawet jeśli funkcja zwraca `WBEM_S_NO_ERROR`.
+Nie jest to błąd dla danego obiektu, aby mieć kwalifikatory zerowe, więc liczba ciągów w `pstrNames` instrukcji return może wynosić 0, mimo że funkcja zwraca wartość. `WBEM_S_NO_ERROR`
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
-**Nagłówek:** WMINet_Utils.idl
+**Nagłówki** WMINet_Utils.idl
 
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)
+- [WMI i liczniki wydajności (niezarządzana dokumentacja interfejsu API)](index.md)

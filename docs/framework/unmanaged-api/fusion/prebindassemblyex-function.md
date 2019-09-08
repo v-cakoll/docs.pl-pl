@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a23d3c4fd8eef2e361abf1602157cb4fbb820b48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8aa2d174200db76f5c7a6db43e14bb6904604226
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773860"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796326"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx — Funkcja
-Pobiera nazwę wyświetlaną po zastosowaniu zasad dla zestawu.  
+Pobiera nazwę wyświetlaną dla zestawu.  
   
  Ta funkcja obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
@@ -43,35 +43,35 @@ HRESULT PreBindAssemblyEx (
   
 ## <a name="parameters"></a>Parametry  
  `pAppCtx`  
- [in] Identyfikuje kontekst aplikacji.  
+ podczas Identyfikuje kontekst aplikacji.  
   
  `pName`  
- [in] Określa nazwę zestawu.  
+ podczas Identyfikuje nazwę zestawu.  
   
  `pAsmParent`  
- [in] Identyfikuje zestaw nadrzędnej. Ten parametr jest ignorowany.  
+ podczas Identyfikuje zestaw nadrzędny. Ten parametr jest ignorowany.  
   
  `pwzRuntimeVersion`  
- [in] Określa wersję środowiska uruchomieniowego.  
+ podczas Identyfikuje wersję środowiska uruchomieniowego.  
   
  `ppNamePostPolicy`  
- [out] Zawiera nazwę wyświetlaną po zastosowaniu zasad.  
+ określoną Zawiera nazwę wyświetlaną po wprowadzeniu zasad.  
   
  `pvReserved`  
- [in] Zarezerwowane dla przyszłej rozszerzalności. `pvReserved` musi być odwołanie o wartości null.  
+ podczas Zarezerwowane do użytku w przyszłości. `pvReserved`musi być odwołaniem o wartości null.  
   
 ## <a name="remarks"></a>Uwagi  
- `ppNamePostPolicy` Parametr wyjściowy jest ustawiona tylko wtedy, gdy funkcja zwraca wartość HRESULT FUSION_E_REF_DEF_MISMATCH. W przeciwnym razie ma wartość null.  
+ Parametr `ppNamePostPolicy` Output jest ustawiany tylko wtedy, gdy funkcja zwraca wartość HRESULT FUSION_E_REF_DEF_MISMATCH. W przeciwnym razie ma wartość null.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Fusion.h  
+ **Nagłówki** Fusion. h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Biblioteki** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Łączenie statycznych funkcji globalnych](fusion-global-static-functions.md)

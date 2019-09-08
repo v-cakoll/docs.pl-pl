@@ -9,58 +9,58 @@ helpviewer_keywords:
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd84d84706a0d61f26b576b7300fae87fbe602e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 677bee7319a80e405098f0dd5c8684765806c5f7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984168"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796875"
 ---
 # <a name="unmanaged-api-reference"></a>Niezarządzany wykaz interfejsów API
-Ta sekcja zawiera informacje na temat niezarządzanych interfejsów API, które mogą być używane przez aplikacje zarządzane — związane z kodem, takich jak hosty środowiska uruchomieniowego, kompilatory, deasemblery, obfuscators, debugery i profilery.  
+Ta sekcja zawiera informacje dotyczące niezarządzanych interfejsów API, które mogą być używane przez aplikacje związane z kodem zarządzanym, takie jak hosty środowiska uruchomieniowego, kompilatory, deasemblery, elementy zasłaniające, debugery i pliki.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Standardowe typy danych](../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)  
- Wyświetla typy danych, które są używane, szczególnie w przypadku niezarządzanych profilowania i profilowanie interfejsów API.  
+ [Standardowe typy danych](common-data-types-unmanaged-api-reference.md)  
+ Wyświetla listę typowych typów danych, które są używane, szczególnie w niezarządzanych interfejsy API profilowania i debugowania.  
   
- [ALink](../../../docs/framework/unmanaged-api/alink/index.md)  
- W tym artykule opisano ALink interfejsu API, który obsługuje tworzenie niepowiązanej modułów i zestawów .NET Framework.  
+ [ALink](./alink/index.md)  
+ Opisuje interfejs API ALink, który obsługuje tworzenie zestawów .NET Framework i niezwiązanych modułów.  
   
- [Authenticode](../../../docs/framework/unmanaged-api/authenticode/index.md)  
- Obsługuje moduł tworzenia i weryfikacji licencji Authenticode XrML.  
+ [Authenticode](./authenticode/index.md)  
+ Obsługuje moduł tworzenia i weryfikacji licencji XrML Authenticode.  
   
- [Stałe](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
- W tym artykule opisano, stałe, które są zdefiniowane w CorSym.idl.  
+ [Stałe](constants-unmanaged-api-reference.md)  
+ Opisuje stałe, które są zdefiniowane w CorSym. idl.  
   
  [Niestandardowe atrybuty interfejsu](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms231946(v=vs.100))  
- W tym artykule opisano component object model (COM) niestandardowe atrybuty interfejsu.  
+ Opisuje atrybuty niestandardowego interfejsu COM (Component Object Model).  
   
- [Debugowanie](../../../docs/framework/unmanaged-api/debugging/index.md)  
- W tym artykule opisano debugowania interfejsu API, który umożliwia debugera do debugowania kodu uruchamianego w środowisku uruchomieniowym języka wspólnego (CLR).  
+ [Debugowanie](./debugging/index.md)  
+ Opisuje interfejs API debugowania, który umożliwia debugerowi Debugowanie kodu, który jest uruchamiany w środowisku środowiska uruchomieniowego języka wspólnego (CLR).  
   
- [Magazyn symboli diagnostycznych](../../../docs/framework/unmanaged-api/diagnostics/index.md)  
- W tym artykule opisano magazynu symboli diagnostycznych interfejsu API, który umożliwia kompilatorowi generowanie informacji o symbolach do użytku przez debuger.  
+ [Magazyn symboli diagnostycznych](./diagnostics/index.md)  
+ Opisuje interfejs API magazynu symboli diagnostyki, który umożliwia kompilatorowi generowanie informacji o symbolach do użycia przez debuger.  
   
- [Łączenie](../../../docs/framework/unmanaged-api/fusion/index.md)  
- W tym artykule opisano fusion interfejsu API, który umożliwia dostęp do właściwości zasobów aplikacji, aby zlokalizować prawidłowe wersje tych zasobów dla aplikacji hosta środowiska uruchomieniowego.  
+ [Łączenie](./fusion/index.md)  
+ Opisuje interfejs API Fusion, który umożliwia hostowi środowiska uruchomieniowego dostęp do właściwości zasobów aplikacji w celu zlokalizowania odpowiednich wersji tych zasobów dla aplikacji.  
   
- [Hosting](../../../docs/framework/unmanaged-api/hosting/index.md)  
- W tym artykule opisano hostingu interfejsu API, który włącza niezarządzane hosty do integracji środowiska CLR w swoich aplikacjach.  
+ [Hosting](./hosting/index.md)  
+ Opisuje interfejs API hostingu, który umożliwia niezarządzanym hostom integrację środowiska CLR z aplikacjami.  
   
- [Metadane](../../../docs/framework/unmanaged-api/metadata/index.md)  
- W tym artykule opisano metadanych interfejsu API, który umożliwia klientowi takie jak kompilator wygenerować lub dostęp do metadanych składnika bez typy ładowany przez środowisko CLR.  
+ [Metadane](./metadata/index.md)  
+ Opisuje interfejs API metadanych, który umożliwia klientowi, takim jak kompilator, generowanie metadanych składnika lub uzyskiwanie do nich dostępu bez typów ładowanych przez środowisko CLR.  
   
- [Profilowanie](../../../docs/framework/unmanaged-api/profiling/index.md)  
- W tym artykule opisano profilowanie API umożliwia programowi profilującemu można monitorować wykonywania programu przez środowisko CLR.  
+ [Profilowanie](./profiling/index.md)  
+ Opisuje Profiling API, który umożliwia profilerowi monitorowanie wykonywania programu przez środowisko CLR.  
   
- [Silne nazewnictwo](../../../docs/framework/unmanaged-api/strong-naming/index.md)  
- W tym artykule opisano silnego nazewnictwa interfejsu API, który umożliwia klientowi do administrowania podpisywania zestawów silnymi nazwami.  
+ [Silne nazewnictwo](./strong-naming/index.md)  
+ Opisuje interfejs API silnego nazewnictwa, który umożliwia klientowi administrowanie podpisywaniem silnych nazw dla zestawów.  
 
  [Usługi WMI i liczniki wydajności](wmi/index.md)  
- W tym artykule opisano interfejsy API, które owijają odwołania do bibliotek Instrumentacji zarządzania Windows (WMI).
+ Opisuje interfejsy API, które zawijają wywołania do bibliotek Instrumentacja zarządzania Windows (WMI).
   
- [Tlbexp, funkcje pomocy](../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- Zawiera opis dwóch funkcji pomocnika i interfejs używany przez Eksporter biblioteki typów (Tlbexp.exe) w procesie konwersji zestawu do typu biblioteki.  
+ [Tlbexp, funkcje pomocy](./tlbexp/index.md)  
+ Opisuje dwie funkcje pomocnika i interfejs używany przez eksportera biblioteki typów (Tlbexp. exe) podczas procesu konwersji zestawu na typ biblioteki.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Podręcznik programowania](../../../docs/framework/development-guide.md)  

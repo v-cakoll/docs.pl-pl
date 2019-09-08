@@ -1,30 +1,30 @@
 ---
-title: Podczas badania zestawów danych (LINQ to DataSet)
+title: Wykonywanie zapytania dotyczącego zestawów danych (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: bb68d2e4-623d-4d60-85e3-965254f6fee7
-ms.openlocfilehash: ec4ee345835294499f7ac9f665a9b79e2efc0f64
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 79a9b320fbdbfecc3f7d531d992b1529873871a5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504661"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783048"
 ---
-# <a name="querying-datasets-linq-to-dataset"></a>Podczas badania zestawów danych (LINQ to DataSet)
-Po <xref:System.Data.DataSet> obiektu została wypełniona danymi, można rozpocząć, badając ją. Formułowanie zapytania za pomocą LINQ to DataSet jest podobne do [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] względem innych [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]— włączone źródeł danych. Należy jednak pamiętać, że gdy używasz [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] zapytań <xref:System.Data.DataSet> obiektu jest wykonywane zapytanie wyliczenie <xref:System.Data.DataRow> obiekty, zamiast wyliczenie typu niestandardowego. Oznacza to, że można użyć dowolnego z elementów członkowskich <xref:System.Data.DataRow> klasy w swojej [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] zapytania. Dzięki temu można tworzyć zaawansowane, złożone zapytania.  
+# <a name="querying-datasets-linq-to-dataset"></a>Wykonywanie zapytania dotyczącego zestawów danych (LINQ to DataSet)
+Po wypełnieniu <xref:System.Data.DataSet> obiektu danymi można rozpocząć wykonywanie zapytania. Formułowanie zapytań w LINQ to DataSet jest podobne do użycia [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] z innymi [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]źródłami danych. Należy jednak pamiętać, że w przypadku używania [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] zapytań <xref:System.Data.DataSet> względem obiektu, który wykonuje <xref:System.Data.DataRow> zapytanie o Wyliczenie obiektów, zamiast wyliczania typu niestandardowego. Oznacza to, że można użyć dowolnego z elementów członkowskich <xref:System.Data.DataRow> klasy [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] w zapytaniach. Pozwala to na tworzenie rozbudowanych, złożonych zapytań.  
   
- Podobnie jak w przypadku innych implementacji [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], możesz utworzyć LINQ do zapytań zestawu danych w dwóch różnych formach: składnia wyrażenia oraz składni zapytania oparte na metodzie zapytania. Można użyć składni wyrażeń zapytania lub składni zapytania oparte na metodzie do wykonania zapytania względem pojedynczej tabel w <xref:System.Data.DataSet>, dla wielu tabel w <xref:System.Data.DataSet>, lub dla tabel w typizowanych <xref:System.Data.DataSet>.  
+ Podobnie jak w przypadku innych [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]implementacji programu, można utworzyć zapytania LINQ to DataSet w dwóch różnych formularzach: składni wyrażeń zapytania i składni zapytania opartego na metodzie. Można użyć składni wyrażeń zapytania lub składni zapytania opartej na metodzie <xref:System.Data.DataSet>, aby wykonywać zapytania dotyczące pojedynczych tabel w, względem wielu tabel <xref:System.Data.DataSet>w, lub względem tabel w określonym typie <xref:System.Data.DataSet>.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Zapytania jednotabelowe](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)  
- W tym artykule opisano, jak wykonywać zapytania jednotabelowe.  
+ [Zapytania jednotabelowe](single-table-queries-linq-to-dataset.md)  
+ Opisuje sposób wykonywania zapytań pojedynczej tabeli.  
   
- [Zapytania wielotabelowe](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)  
+ [Zapytania wielotabelowe](cross-table-queries-linq-to-dataset.md)  
  Opisuje sposób wykonywania zapytań między tabelami.  
   
- [Wykonywanie zapytania do typizowanych zestawów danych](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
- W tym artykule opisano sposób tworzenia zapytań względem wpisane <xref:System.Data.DataSet> obiektów.  
+ [Wykonywanie zapytania do typizowanych zestawów danych](querying-typed-datasets.md)  
+ Opisuje sposób wykonywania zapytań względem <xref:System.Data.DataSet> wpisanych obiektów.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przykłady LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
-- [Ładowanie danych do zestawu danych](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [Przykłady LINQ to DataSet](linq-to-dataset-examples.md)
+- [Ładowanie danych do zestawu danych](loading-data-into-a-dataset.md)

@@ -2,20 +2,20 @@
 title: System.DateTime Methods
 ms.date: 03/30/2017
 ms.assetid: 4f80700c-e83f-4ab6-af0f-1c9a606e1133
-ms.openlocfilehash: 85af6f252362b811356d68a3ae220df2bb813882
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fba695975645ecb86a06b17f0664fdf37f8866a0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876775"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792418"
 ---
 # <a name="systemdatetime-methods"></a>System.DateTime, metody
-Następujące LINQ to SQL obsługiwanych metod, operatorów i właściwości są dostępne do użycia w składniku LINQ do zapytań SQL. Gdy metoda, operator lub właściwość nie jest obsługiwany, LINQ to SQL nie wykonuje translację elementu członkowskiego do wykonania w programie SQL Server. Może użyć tych elementów członkowskich w kodzie, jednak one muszą zostać ocenione przed zapytania jest tłumaczony języka Transact-SQL lub po wyniki zostały pobrane z bazy danych.  
+Poniższe LINQ to SQL-obsługiwane metody, operatory i właściwości są dostępne do użycia w LINQ to SQL zapytaniach. Gdy metoda, operator lub właściwość nie jest obsługiwana, LINQ to SQL nie może przetłumaczyć elementu członkowskiego na wykonanie na SQL Server. Możesz użyć tych członków w kodzie, ale muszą one być oceniane przed przetłumaczeniem zapytania na Transact-SQL lub po pobraniu wyników z bazy danych.  
   
-## <a name="supported-systemdatetime-members"></a>Elementy członkowskie obsługiwanych System.DateTime  
- Gdy mapowane w modelu obiektu lub pliku mapowania zewnętrznych, LINQ to SQL pozwala wywoływać następujące <xref:System.DateTime?displayProperty=nameWithType> członków wewnątrz LINQ do zapytań SQL.  
+## <a name="supported-systemdatetime-members"></a>Obsługiwane elementy członkowskie system. DateTime  
+ Po zmapowaniu w modelu obiektów lub zewnętrznym pliku mapowania LINQ to SQL umożliwia wywoływanie następujących <xref:System.DateTime?displayProperty=nameWithType> elementów członkowskich wewnątrz zapytań LINQ to SQL.  
   
-|Obsługiwane <xref:System.DateTime> metody|Obsługiwane <xref:System.DateTime> operatorów|Obsługiwane <xref:System.DateTime> właściwości|  
+|Obsługiwane <xref:System.DateTime> metody|Obsługiwane <xref:System.DateTime> operatory|Obsługiwane <xref:System.DateTime> właściwości|  
 |------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.DateTime.Add%2A>|<xref:System.DateTime.op_Addition%2A>|<xref:System.DateTime.Date%2A>|  
 |<xref:System.DateTime.AddDays%2A>|<xref:System.DateTime.op_Equality%2A>|<xref:System.DateTime.Day%2A>|  
@@ -31,8 +31,8 @@ Następujące LINQ to SQL obsługiwanych metod, operatorów i właściwości są
 |<xref:System.DateTime.Equals%28System.DateTime%29>||<xref:System.DateTime.Today%2A>|  
 |||<xref:System.DateTime.Year%2A>|  
   
-## <a name="members-not-supported-by-linq-to-sql"></a>Elementy członkowskie nie są obsługiwane w składniku LINQ to SQL  
- Następujące elementy członkowskie nie są obsługiwane wewnątrz LINQ do zapytań SQL.  
+## <a name="members-not-supported-by-linq-to-sql"></a>Elementy członkowskie nieobsługiwane przez LINQ to SQL  
+ Następujące elementy członkowskie nie są obsługiwane wewnątrz zapytań LINQ to SQL.  
   
 |||  
 |-|-|  
@@ -46,17 +46,17 @@ Następujące LINQ to SQL obsługiwanych metod, operatorów i właściwości są
 |<xref:System.DateTime.FromFileTime%2A>|<xref:System.DateTime.FromFileTimeUtc%2A>|  
 |<xref:System.DateTime.FromOADate%2A>|<xref:System.DateTime.GetDateTimeFormats%2A>|  
   
-## <a name="method-translation-example"></a>Przykład tłumaczenie — metoda  
- Wszystkie metody w składniku LINQ to SQL są tłumaczone na instrukcji języka Transact-SQL, przed wysłaniem ich do programu SQL Server. Na przykład rozważmy następujący wzorzec.  
+## <a name="method-translation-example"></a>Przykład tłumaczenia metody  
+ Wszystkie metody obsługiwane przez LINQ to SQL są tłumaczone na Transact-SQL przed wysłaniem do SQL Server. Rozważmy na przykład następujący wzorzec.  
   
  `(dateTime1 – dateTime2).{Days, Hours, Milliseconds, Minutes, Months, Seconds, Years}`  
   
- Po rozpoznaniu go jest tłumaczony na bezpośrednie wywołanie do programu SQL Server `DATEDIFF` funkcji w następujący sposób:  
+ Po rozpoznaniu są one tłumaczone na bezpośrednie wywołanie funkcji SQL Server `DATEDIFF` w następujący sposób:  
   
  `DATEDIFF({DatePart}, @dateTime1, @dateTime2)`  
   
-## <a name="sqlmethods-date-and-time-methods"></a>SQLMethods daty i godziny metody  
- Oprócz metod oferowane przez <xref:System.DateTime> struktury, LINQ to SQL oferuje metody wymienione w poniższej tabeli z <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> klasy do pracy z datą i godziną.  
+## <a name="sqlmethods-date-and-time-methods"></a>Metody SqlMethods i Time  
+ Oprócz metod oferowanych przez <xref:System.DateTime> strukturę LINQ to SQL oferują metody wymienione w poniższej tabeli <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> z klasy do pracy z datą i godziną.  
   
 ||||  
 |-|-|-|  
@@ -66,7 +66,7 @@ Następujące LINQ to SQL obsługiwanych metod, operatorów i właściwości są
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Pojęcia dotyczące zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Tworzenie modelu obiektu](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [Mapowania typów środowiska SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [Typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Pojęcia dotyczące zapytań](query-concepts.md)
+- [Tworzenie modelu obiektu](creating-the-object-model.md)
+- [Mapowania typów środowiska SQL-CLR](sql-clr-type-mapping.md)
+- [Typy danych i funkcje](data-types-and-functions.md)

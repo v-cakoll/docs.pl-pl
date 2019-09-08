@@ -2,12 +2,12 @@
 title: Dostosowywanie uprawnień personifikacji w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: 52e11bd983a8c9155d90659834df03dea6449a8e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b5dcef80afffa7bb3722a09020c5445dbc47f16a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961121"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782471"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Dostosowywanie uprawnień personifikacji w programie SQL Server
 Wiele aplikacji korzysta z procedur składowanych w celu uzyskania dostępu do danych, opierając się na łańcuchu własności, aby ograniczyć dostęp do tabel podstawowych. Można przyznać uprawnienia wykonywania w procedurach składowanych, odwoływaniu lub odmowie uprawnień do tabel podstawowych. SQL Server nie sprawdza uprawnień obiektu wywołującego, jeśli procedura składowana i tabele mają tego samego właściciela. Jednak tworzenie łańcucha własności nie działa, jeśli obiekty mają różnych właścicieli lub w przypadku dynamicznego języka SQL.  
@@ -54,7 +54,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="using-execute-as-with-revert"></a>Używanie polecenia EXECUTE AS z opcją Revert  
  Możesz użyć instrukcji przywracania Transact-SQL, aby przywrócić pierwotny kontekst wykonania.  
   
- Opcjonalna klauzula bez przywracania pliku cookie = @variableName, umożliwia przełączenie kontekstu wykonywania z powrotem do obiektu wywołującego, @variableName Jeśli zmienna zawiera poprawną wartość. Pozwala to na przełączenie kontekstu wykonywania z powrotem do obiektu wywołującego w środowiskach, w których jest używane pule połączeń. Ponieważ wartość @variableName jest znana tylko obiektowi wywołującemu instrukcji EXECUTE AS, obiekt wywołujący może zagwarantować, że kontekst wykonywania nie może zostać zmieniony przez użytkownika końcowego, który wywoła aplikację. Gdy połączenie jest zamknięte, zostanie zwrócone do puli. Aby uzyskać więcej informacji na temat puli połączeń w programie ADO.NET, zobacz SQL Servering pooling [(ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ Opcjonalna klauzula bez przywracania pliku cookie = @variableName, umożliwia przełączenie kontekstu wykonywania z powrotem do obiektu wywołującego, @variableName Jeśli zmienna zawiera poprawną wartość. Pozwala to na przełączenie kontekstu wykonywania z powrotem do obiektu wywołującego w środowiskach, w których jest używane pule połączeń. Ponieważ wartość @variableName jest znana tylko obiektowi wywołującemu instrukcji EXECUTE AS, obiekt wywołujący może zagwarantować, że kontekst wykonywania nie może zostać zmieniony przez użytkownika końcowego, który wywoła aplikację. Gdy połączenie jest zamknięte, zostanie zwrócone do puli. Aby uzyskać więcej informacji na temat puli połączeń w programie ADO.NET, zobacz [SQL Servering pooling (ADO.NET)](../sql-server-connection-pooling.md).  
   
 ### <a name="specifying-the-execution-context"></a>Określanie kontekstu wykonywania  
  Oprócz określania użytkownika można również użyć słowa kluczowego EXECUTE jako z dowolnym z następujących słów kluczowych.  
@@ -67,11 +67,11 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Przegląd zabezpieczeń serwera SQL](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Scenariusze zabezpieczeń aplikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Zarządzanie uprawnieniami za pomocą procedur składowanych w programie SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [Pisanie bezpiecznego dynamicznego kodu SQL w programie SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [Rejestrowanie procedur składowanych w programie SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [Modyfikowanie danych za pomocą procedur składowanych](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Zabezpieczanie aplikacji ADO.NET](../securing-ado-net-applications.md)
+- [Przegląd zabezpieczeń serwera SQL](overview-of-sql-server-security.md)
+- [Scenariusze zabezpieczeń aplikacji w programie SQL Server](application-security-scenarios-in-sql-server.md)
+- [Zarządzanie uprawnieniami za pomocą procedur składowanych w programie SQL Server](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [Pisanie bezpiecznego dynamicznego kodu SQL w programie SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
+- [Rejestrowanie procedur składowanych w programie SQL Server](signing-stored-procedures-in-sql-server.md)
+- [Modyfikowanie danych za pomocą procedur składowanych](../modifying-data-with-stored-procedures.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

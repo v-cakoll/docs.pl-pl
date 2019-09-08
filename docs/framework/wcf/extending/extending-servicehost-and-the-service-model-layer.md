@@ -4,31 +4,31 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending service models [WCF]
 ms.assetid: 954c138a-1cd0-45a0-8abe-e4d2b8ff5400
-ms.openlocfilehash: 9e08b5b7b11848262d2cb7b6ed5715799d597889
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e370316cd121f49953e00e83dfc9d2aec17de1e8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991773"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795738"
 ---
 # <a name="extending-servicehost-and-the-service-model-layer"></a>Rozszerzanie elementu ServiceHost i warstwy modelu usług
-Warstwy modelu usług jest odpowiedzialny za ściąganie komunikaty przychodzące poza podstawowym kanały, tłumaczenie je na wywołania metody w kodzie aplikacji i wyniki są wysyłane do obiektu wywołującego. Rozszerzenia modelu usługi modyfikować ani implementować wykonywania lub zachowanie komunikacji i funkcje, obejmujące funkcje klienta lub dyspozytora, niestandardowe zachowania, wiadomości i przejmowanie parametru i innych funkcji rozszerzalności.  
+Warstwa modelu usług jest odpowiedzialna za ściąganie komunikatów przychodzących z kanałów, tłumaczenie ich na wywołania metod w kodzie aplikacji i wysyłanie wyników z powrotem do obiektu wywołującego. Rozszerzenia modelu usług modyfikują lub implementują zachowanie wykonywania lub komunikacji oraz funkcje, w tym funkcje klienta lub dyspozytora, niestandardowe zachowania, przechwycenie komunikatów i parametrów oraz inne funkcje rozszerzalności.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Rozszerzanie klientów](../../../../docs/framework/wcf/extending/extending-clients.md)  
- W tym artykule opisano interfejsy, które mogą przechwytywać i modyfikowania środowiska uruchomieniowego klienta, a także klasy, do których można wstawić niestandardowych rozszerzeń w aplikacjach klienckich. Na przykład można wykonać rejestrowania komunikatów niestandardowych klienta, wykonywać serializacji niestandardowy komunikat i tak dalej.  
+ [Rozszerzanie klientów](extending-clients.md)  
+ Opisuje interfejsy, które mogą przechwycić i zmodyfikować środowisko uruchomieniowe klienta, a także klasy, w których można wstawić niestandardowe rozszerzenia w aplikacjach klienckich. Można na przykład wykonać niestandardowe rejestrowanie komunikatów klienta, wykonać niestandardową serializację komunikatów i tak dalej.  
   
- [Rozszerzanie dyspozytorów](../../../../docs/framework/wcf/extending/extending-dispatchers.md)  
- W tym artykule opisano interfejsy, które mogą przechwytywać i zmodyfikować środowisko wykonawcze usług, a także klasy, do których można wstawić niestandardowych rozszerzeń w aplikacjach usługi. Na przykład można wykonać rejestrowania niestandardowych usług, weryfikacji wiadomości po stronie usługi, wysyłania niestandardowych i tak dalej.  
+ [Rozszerzanie dyspozytorów](extending-dispatchers.md)  
+ Opisuje interfejsy, które mogą przechwycić i zmodyfikować środowisko uruchomieniowe usługi, a także klasy, w których można wstawić niestandardowe rozszerzenia w aplikacjach usług. Można na przykład przeprowadzić niestandardowe rejestrowanie usługi, sprawdzanie poprawności komunikatów po stronie usługi, niestandardowe wysyłanie i tak dalej.  
   
- [Obiekty rozszerzalne](../../../../docs/framework/wcf/extending/extensible-objects.md)  
- W tym artykule opisano pięć obiekty rozszerzalne i <xref:System.ServiceModel.IExtensibleObject%601> wzorca. Wzorzec extensible object jest używany, albo rozszerzanie istniejących klas środowiska uruchomieniowego przy użyciu nowych funkcji lub dodanie nowego Państwa do obiektu. Rozszerzenia, dołączony do jednego z obiekty rozszerzalne umożliwiają zachowania w bardzo różnych etapach przetwarzania dostęp do udostępnionego stanu i dołączony do obiektu extensible wspólnego, które mogą uzyskiwać dostęp do funkcji.  
+ [Obiekty rozszerzalne](extensible-objects.md)  
+ Opisuje pięć rozszerzalnych obiektów i <xref:System.ServiceModel.IExtensibleObject%601> wzorca. Rozszerzalny wzór obiektu służy do rozszerzania istniejących klas środowiska uruchomieniowego o nowe funkcje lub do dodawania nowego stanu do obiektu. Rozszerzenia dołączone do jednego z rozszerzalnych obiektów, umożliwiają zachowanie zachowań na różnych etapach przetwarzania w celu uzyskania dostępu do udostępnionego stanu i funkcjonalności dołączonego do wspólnego rozszerzalnego obiektu, do którego mają dostęp.  
   
- [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)  
- Aby zmienić ustawienia lub Wstaw rozszerzeń w środowisku uruchomieniowym usługi WCF, należy użyć zachowań. WCF zawiera zachowania zaimplementowana przez system kontrolowanie ograniczania przepustowości, wystąpień i wiele innych aspektów usług i operacji. W tej sekcji opisano, jak utworzyć własne niestandardowe zachowania i porady były dostępne do użycia zarówno programowo i za pomocą plików konfiguracji.  
+ [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](configuring-and-extending-the-runtime-with-behaviors.md)  
+ Aby zmienić ustawienia lub wstawić rozszerzenia w środowisku uruchomieniowym WCF, należy użyć zachowań. Funkcja WCF obejmuje zachowanie implementowane przez system w celu kontrolowania ograniczeń, wystąpień i wielu innych aspektów usług i operacji. W tej sekcji opisano sposób tworzenia własnych zachowań niestandardowych i sposobu udostępniania ich użytkownikom programistycznym i korzystającym z plików konfiguracji.  
   
- [Rozszerzanie hostingu za pomocą elementu ServiceHostFactory](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)  
- Opisuje sposób rozszerzyć <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType>, <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>i użyj <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> klasy do dostosowywania środowiska hosta.  
+ [Rozszerzanie hostingu za pomocą elementu ServiceHostFactory](extending-hosting-using-servicehostfactory.md)  
+ Opisuje sposób <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>rozbudowania i użycia <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> klas w celu dostosowania środowiska hosta.  
   
 ## <a name="reference"></a>Tematy pomocy  
   

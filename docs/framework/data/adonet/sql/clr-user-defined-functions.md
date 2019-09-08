@@ -2,19 +2,19 @@
 title: Zdefiniowane przez użytkownika funkcje CLR
 ms.date: 03/30/2017
 ms.assetid: 1c59d9d3-6ff9-411b-8b29-b1494d80fdf1
-ms.openlocfilehash: 5cf7f4b9a0bd0c97b237d85dc99b28f0a89cf00a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c482b98a444db015d23acf5f789ed289673698e5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878179"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782489"
 ---
 # <a name="clr-user-defined-functions"></a>Zdefiniowane przez użytkownika funkcje CLR
-Funkcje zdefiniowane przez użytkownika są procedury, które przyjmują parametry, wykonywanie obliczeń lub inne czynności i zwracają wynik. Funkcje zdefiniowane przez użytkownika można pisać w dowolnej architektury Microsoft .NET, język programowania, takich jak Microsoft Visual Basic .NET lub Microsoft Visual C#.  
+Funkcje zdefiniowane przez użytkownika to procedury, które mogą przyjmować parametry, wykonywać obliczenia lub inne akcje i zwracać wynik. Funkcje zdefiniowane przez użytkownika można napisać w dowolnym języku programowania Microsoft .NET Framework, takim jak Microsoft Visual Basic .NET lub Microsoft Visual C#.  
   
- Aby uzyskać więcej informacji, zobacz [funkcje CLR User-Defined](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions).  
+ Aby uzyskać szczegółowe informacje, zobacz [CLR — funkcje zdefiniowane przez użytkownika](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Integracja aparatu plików wykonywalnych języka wspólnego z programem SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Integracja aparatu plików wykonywalnych języka wspólnego z programem SQL Server](sql-server-common-language-runtime-integration.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

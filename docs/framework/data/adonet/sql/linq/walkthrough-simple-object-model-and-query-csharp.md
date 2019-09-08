@@ -2,12 +2,12 @@
 title: 'Przewodnik: Prosty model obiektu i zapytanie (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: 4661dffa037504d9157f30af12d4308a4d7644a2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a9b3b57e37331cd13f2cd30b8a7663f2fb39d8c1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946920"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792131"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Przewodnik: Prosty model obiektu i zapytanie (C#)
 
@@ -23,7 +23,7 @@ Ten Instruktaż został zapisany przy użyciu ustawień C# deweloperskich.
 
 - W tym instruktażu do przechowywania plików służy dedykowany folder ("c:\linqtest5"). Utwórz ten folder przed rozpoczęciem przewodnika.
 
-- Ten Instruktaż wymaga przykładowej bazy danych Northwind. Jeśli nie masz tej bazy danych na komputerze deweloperskim, możesz ją pobrać z witryny pobierania firmy Microsoft. Aby uzyskać instrukcje, zobacz [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Po pobraniu bazy danych Skopiuj plik do folderu c:\linqtest5.
+- Ten Instruktaż wymaga przykładowej bazy danych Northwind. Jeśli nie masz tej bazy danych na komputerze deweloperskim, możesz ją pobrać z witryny pobierania firmy Microsoft. Aby uzyskać instrukcje, zobacz [Pobieranie przykładowych baz danych](downloading-sample-databases.md). Po pobraniu bazy danych Skopiuj plik do folderu c:\linqtest5.
 
 ## <a name="overview"></a>Omówienie
 
@@ -49,7 +49,7 @@ W tym pierwszym zadaniu utworzysz rozwiązanie programu Visual Studio, które za
 
 1. W menu **plik** programu Visual Studio wskaż polecenie **Nowy**, a następnie kliknij pozycję **projekt**.
 
-2. W okienku **typy projektów** okna dialogowego **Nowy projekt** kliknij pozycję Wizualizacja. **C#**
+2. W okienku **typy projektów** okna dialogowego **Nowy projekt** kliknij pozycję **Wizualizacja C#** .
 
 3. W okienku **Szablony** kliknij pozycję **Aplikacja konsolowa**.
 
@@ -140,7 +140,7 @@ W tym kroku rzeczywiście wykonujesz zapytanie. Wyrażenia zapytania utworzone w
 2. Naciśnij klawisz F5, aby debugować aplikację.
 
     > [!NOTE]
-    > Jeśli aplikacja generuje błąd w czasie wykonywania, zobacz sekcję Rozwiązywanie problemów w temacie [uczenie się według przewodników](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).
+    > Jeśli aplikacja generuje błąd w czasie wykonywania, zobacz sekcję Rozwiązywanie problemów w temacie [uczenie się według przewodników](learning-by-walkthroughs.md).
 
      Wyniki zapytania w oknie konsoli powinny wyglądać następująco:
 
@@ -160,10 +160,10 @@ W tym kroku rzeczywiście wykonujesz zapytanie. Wyrażenia zapytania utworzone w
 
 ## <a name="next-steps"></a>Następne kroki
 
-[Przewodnik: Wykonywanie zapytań w relacjachC#(](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md) ) jest kontynuowane, gdy ten przewodnik zakończy się. Wskazówki dotyczące zapytania między relacjami pokazują [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , jak można wykonywać zapytania między tabelami, podobnie jak *sprzężenia* w relacyjnej bazie danych.
+[Przewodnik: Wykonywanie zapytań w relacjachC#(](walkthrough-querying-across-relationships-csharp.md) ) jest kontynuowane, gdy ten przewodnik zakończy się. Wskazówki dotyczące zapytania między relacjami pokazują [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , jak można wykonywać zapytania między tabelami, podobnie jak *sprzężenia* w relacyjnej bazie danych.
 
 Jeśli chcesz wykonać zapytanie w przewodniku dotyczącym relacji, pamiętaj o zapisaniu rozwiązania dla przewodnika, który właśnie został ukończony, co jest wymaganiem wstępnym.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Nauka przez przewodniki](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [Nauka przez przewodniki](learning-by-walkthroughs.md)

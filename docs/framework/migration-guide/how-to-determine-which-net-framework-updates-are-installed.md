@@ -1,6 +1,6 @@
 ---
-title: 'Instrukcje: Określanie, które poprawek i aktualizacji zabezpieczeń .NET Framework są zainstalowane'
-description: Dowiedz się, jak ustalić, które poprawek i aktualizacji zabezpieczeń .NET Framework są zainstalowane na komputerze.
+title: 'Instrukcje: Określanie, które .NET Framework aktualizacje zabezpieczeń i poprawki są zainstalowane'
+description: Dowiedz się, jak określić, które .NET Framework aktualizacje zabezpieczeń i poprawki są zainstalowane na komputerze.
 ms.date: 11/27/2017
 dev_langs:
 - csharp
@@ -11,37 +11,37 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e11b2588471e95b4e47fd0efaf41757430b9bb39
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4c505c679c46494f7dc2534c2bbe9f50243a7dd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61872927"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790067"
 ---
-# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Instrukcje: Określanie, które poprawek i aktualizacji zabezpieczeń .NET Framework są zainstalowane
+# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Instrukcje: Określanie, które .NET Framework aktualizacje zabezpieczeń i poprawki są zainstalowane
 
-W tym artykule dowiesz się, jak sprawdzić aktualizacje zabezpieczeń .NET Framework i poprawki są zainstalowane na komputerze.
+W tym artykule opisano, jak dowiedzieć się, które .NET Framework aktualizacje zabezpieczeń i poprawki są zainstalowane na komputerze.
 
 > [!NOTE]
-> Wszystkie techniki przedstawione w tym artykule wymaga konta z uprawnieniami administracyjnymi.
+> Wszystkie techniki przedstawione w tym artykule wymagają konta z uprawnieniami administracyjnymi.
 
-## <a name="to-find-installed-updates-using-the-registry"></a>Aby znaleźć zainstalowane aktualizacje, za pomocą rejestru
+## <a name="to-find-installed-updates-using-the-registry"></a>Aby znaleźć zainstalowane aktualizacje przy użyciu rejestru
 
-Zainstalowane aktualizacje i poprawki dla każdej wersji programu .NET Framework zainstalowanej na komputerze są wymienione w rejestrze systemu Windows. Edytor rejestru (*regedit.exe*) program, aby wyświetlić te informacje.
+Zainstalowane aktualizacje zabezpieczeń i poprawki dla każdej wersji .NET Framework zainstalowanej na komputerze są wymienione w rejestrze systemu Windows. Aby wyświetlić te informacje, można użyć programu edytora rejestru (*regedit. exe*).
 
-1. Otwórz program **regedit.exe**. W systemie Windows 8 i nowszych wersjach, kliknij prawym przyciskiem myszy **Start** ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo"), a następnie wybierz **Uruchom**. W **Otwórz** wprowadź **regedit** i wybierz **OK**.
+1. Otwórz program **regedit. exe**. W systemie Windows 8 i nowszych wersjach kliknij prawym przyciskiem myszy pozycję **Uruchom** ![logo systemu Windows](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo"), a następnie wybierz polecenie **Uruchom**. W polu **Otwórz** wprowadź ciąg **regedit** , a następnie wybierz **przycisk OK**.
 
 2. W Edytorze rejestru otwórz następujący podklucz:
 
      `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates`
 
-     Zainstalowane aktualizacje są wymienione w podkluczy, które identyfikują wersja programu .NET Framework, które odnoszą się do. Każda aktualizacja jest identyfikowany przez numer bazy wiedzy Knowledge Base (KB).
+     Zainstalowane aktualizacje są wymienione w obszarze podkluczy, które identyfikują .NET Framework wersji, do których mają zastosowanie. Każda aktualizacja jest identyfikowana przez numer bazy wiedzy (KB).
 
-W Edytorze rejestru wersje programu .NET Framework i zainstalowanych aktualizacji dla każdej wersji, są przechowywane w różnych podkluczy. Aby dowiedzieć się, jak wykrywanie numery zainstalowanej wersji, zobacz [jak: Określanie, które wersje programu .NET Framework są zainstalowane](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).
+W Edytorze rejestru wersje .NET Framework i zainstalowane aktualizacje dla każdej wersji są przechowywane w różnych podkluczach. Informacje o wykrywaniu zainstalowanych numerów wersji znajdują się [w temacie How to: Ustal, które wersje .NET Framework są](how-to-determine-which-versions-are-installed.md)zainstalowane.
 
-## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>Aby znaleźć zainstalowane aktualizacje, wykonując zapytanie w rejestrze w kodzie
+## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>Aby znaleźć zainstalowane aktualizacje, badając rejestr w kodzie
 
-Poniższy przykład określa programowo, aktualizacje zabezpieczeń .NET Framework i poprawki, które są zainstalowane na komputerze:
+Poniższy przykład programowo określa .NET Framework aktualizacje zabezpieczeń i poprawki, które są zainstalowane na komputerze:
 
 [!code-csharp[ListUpdates](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs)]
 [!code-vb[ListUpdates](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb)]
@@ -67,9 +67,9 @@ Microsoft .NET Framework 4 Extended
   KB2600217
 ```
 
-## <a name="to-find-installed-updates-by-querying-the-registry-in-powershell"></a>Aby znaleźć zainstalowane aktualizacje, wykonując zapytanie w rejestrze w programie PowerShell
+## <a name="to-find-installed-updates-by-querying-the-registry-in-powershell"></a>Aby znaleźć zainstalowane aktualizacje, badając rejestr w programie PowerShell
 
-Poniższy przykład pokazuje, jak określić aktualizacje zabezpieczeń .NET Framework i poprawki, które są zainstalowane na komputerze przy użyciu programu PowerShell:
+Poniższy przykład pokazuje, jak określić .NET Framework aktualizacje zabezpieczeń i poprawki, które są zainstalowane na komputerze przy użyciu programu PowerShell:
 
 ```powershell
 $DotNetVersions = Get-ChildItem HKLM:\SOFTWARE\WOW6432Node\Microsoft\Updates | Where-Object {$_.name -like
@@ -108,6 +108,6 @@ KB2600217
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Określanie, które wersje programu .NET Framework są zainstalowane.](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)
-- [Instalowanie programu .NET Framework dla deweloperów](../../../docs/framework/install/guide-for-developers.md)
-- [Wersje i zależności](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+- [Instrukcje: Ustal, które wersje .NET Framework są zainstalowane](how-to-determine-which-versions-are-installed.md)
+- [Zainstaluj .NET Framework dla deweloperów](../install/guide-for-developers.md)
+- [Wersje i zależności](versions-and-dependencies.md)

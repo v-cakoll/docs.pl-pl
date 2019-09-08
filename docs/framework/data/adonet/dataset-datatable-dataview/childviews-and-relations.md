@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: 2bbd0d980b65bfbc9240faa8506f2e41875ec6e6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d208b0796a072cda2873678ba184bc9793a1688a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205179"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786583"
 ---
 # <a name="childviews-and-relations"></a>Elementy ChildView i relacje
 Jeśli istnieje relacja między tabelami w <xref:System.Data.DataSet>, można <xref:System.Data.DataView> utworzyć zawierające wiersze z powiązanej tabeli <xref:System.Data.DataRowView.CreateChildView%2A> podrzędnej przy <xref:System.Data.DataRowView> użyciu metody dla wierszy w tabeli nadrzędnej. Na przykład poniższy kod wyświetla **Kategorie** i powiązane **produkty** w kolejności alfabetycznej posortowane według **CategoryName** i **ProductName**.  
@@ -79,4 +79,4 @@ foreach (DataRowView catDRV in catView)
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
 - [Elementy DataView](dataviews.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

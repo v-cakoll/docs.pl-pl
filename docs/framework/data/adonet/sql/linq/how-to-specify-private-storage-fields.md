@@ -2,25 +2,25 @@
 title: 'Instrukcje: Określanie pól magazynu prywatnego'
 ms.date: 03/30/2017
 ms.assetid: 5a40e816-cc6e-43a0-b32a-9caaa0ab6912
-ms.openlocfilehash: 843b7ae8dbddb76e0e5fa33d3594a5655dbf1a37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e6e6a4e28fbfb327f25874844f28bcbafa6d2805
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902723"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793218"
 ---
 # <a name="how-to-specify-private-storage-fields"></a>Instrukcje: Określanie pól magazynu prywatnego
-Użyj [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> właściwość <xref:System.Data.Linq.Mapping.DataAttribute> atrybutu, aby wyznaczyć nazwę odpowiedniego pola magazynu.  
+Użyj właściwości w atrybucie, <xref:System.Data.Linq.Mapping.DataAttribute> aby określić nazwę bazowego pola magazynu. <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]  
   
- Aby uzyskać przykłady kodu, zobacz <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>.  
+ Aby zapoznać się z przykładami kodu, zobacz <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>.  
   
-### <a name="to-specify-the-name-of-an-underlying-storage-field"></a>Aby określić nazwę odpowiedniego pola magazynu  
+### <a name="to-specify-the-name-of-an-underlying-storage-field"></a>Aby określić nazwę bazowego pola magazynu  
   
-1. Dodaj <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> właściwość <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu.  
+1. <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> Dodaj Właściwość<xref:System.Data.Linq.Mapping.ColumnAttribute> do atrybutu.  
   
 2. Przypisz nazwę pola jako wartość <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> właściwości.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Model obiektu LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [Instrukcje: Dostosowywanie klas jednostek za pomocą edytora kodu](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Model obiektu LINQ to SQL](the-linq-to-sql-object-model.md)
+- [Instrukcje: Dostosowywanie klas jednostek przy użyciu edytora kodu](how-to-customize-entity-classes-by-using-the-code-editor.md)

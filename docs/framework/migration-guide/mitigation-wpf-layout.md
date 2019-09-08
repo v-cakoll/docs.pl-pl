@@ -1,38 +1,38 @@
 ---
-title: 'Środki zaradcze: Układ platformy WPF'
+title: Środki zaradcze Układ WPF
 ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c261a025548b2d22f6df3051dbcdb637723d4324
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d266ad33110d2bda8f7911d89981c372624c3f36
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599470"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779065"
 ---
-# <a name="mitigation-wpf-layout"></a>Środki zaradcze: Układ platformy WPF
-Nieco zmienić układ kontrolek WPF.  
+# <a name="mitigation-wpf-layout"></a>Środki zaradcze Układ WPF
+Układ formantów WPF może się nieco zmieniać.  
   
 ## <a name="impact"></a>Wpływ  
  W wyniku tej zmiany:  
   
-- Szerokość lub wysokość elementów może zwiększać i zmniejszać co najwyżej jeden piksel.  
+- Szerokość lub wysokość elementów może wzrosnąć lub zmniejszyć o co najwyżej jeden piksel.  
   
-- Położenie obiektu można przenieść co najwyżej jeden piksel.  
+- Położenie obiektu może zostać przeniesione o co najwyżej jeden piksel.  
   
-- Wyśrodkowany elementy mogą być w pionie lub w poziomie, od środka co najwyżej jeden piksel.  
+- Wyśrodkowane elementy mogą być przesunięte w pionie lub w poziomie o co najwyżej jeden piksel.  
   
- Domyślnie ten nowy układ jest włączona tylko dla aplikacji przeznaczonych dla platformy .NET Framework 4.6.  
+ Domyślnie ten nowy układ jest włączony tylko dla aplikacji przeznaczonych dla .NET Framework 4,6.  
   
 ## <a name="mitigation"></a>Ograniczenie  
- Ponieważ ta modyfikacja zwykle wyeliminować wycinka elementu po prawej stronie lub u dołu okna kontrolki WPF w dużych wysokiej, aplikacje docelowe wcześniejszych wersji programu .NET Framework, które są uruchomione na platformie .NET Framework 4.6 mogą wyrazić zgodę to nowe zachowanie, dodając następujący wiersz do `<runtime>` sekcji w pliku app.config:  
+ Ponieważ ta modyfikacja ma na celu wyeliminowanie wycinków prawej lub dolnej części formantów WPF o wysokiej rozdzielczościami, aplikacje, które są przeznaczone dla wcześniejszych wersji .NET Framework ale działają na .NET Framework 4,6, mogą przystąpić do tego nowego zachowania, dodając następujący wiersz do `<runtime>` sekcja pliku App. config:  
   
 ```xml  
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=false" />  
 ```  
   
- Aplikacje, które docelowych programu .NET Framework 4.6, ale chcesz kontrolek WPF do renderowania przy użyciu poprzednich algorytmu układu można to zrobić, dodając następujący wiersz do `<runtime>` sekcji w pliku app.config:  
+ Aplikacje, które są przeznaczone dla .NET Framework 4,6, ale chcą, aby formanty WPF mogły być renderowane przy użyciu poprzedniego algorytmu układu, można to zrobić `<runtime>` , dodając następujący wiersz do sekcji pliku App. config:  
   
 ```xml  
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=true" />  
@@ -40,4 +40,4 @@ Nieco zmienić układ kontrolek WPF.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zmiany retargetingu](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+- [Zmiany retargetingu](retargeting-changes-in-the-net-framework-4-6.md)

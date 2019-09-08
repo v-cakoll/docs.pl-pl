@@ -5,45 +5,45 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3b787719-4e77-4e77-96a6-5b15a11b995a
-ms.openlocfilehash: ea56c99d7d122dd20fc217f8ecb2937bcf81bec3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f24c558b1d5303b2417416beb14555539f498ea
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923269"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797268"
 ---
 # <a name="client-channel-level-programming"></a>Programowanie na poziomie kanału klienta
-W tym temacie opisano sposób pisania aplikacji klienckiej Windows Communication Foundation (WCF) bez użycia <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> klasy i jego skojarzonego obiektu modelu.  
+W tym temacie opisano sposób pisania aplikacji klienckiej programu Windows Communication Foundation (WCF) bez użycia <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> klasy i skojarzonego z nią modelu obiektów.  
   
-## <a name="sending-messages"></a>Wysyłanie wiadomości  
- Gotowość wysyłać i odbierać i przetwarzać odpowiedzi, wymagane są następujące kroki:  
+## <a name="sending-messages"></a>Wysyłanie komunikatów  
+ Aby można było wysyłać wiadomości i odbierać i przetwarzać odpowiedzi, wymagane są następujące kroki:  
   
-1. Tworzenie powiązania.  
+1. Utwórz powiązanie.  
   
-2. Tworzenie fabryki kanałów.  
+2. Kompiluj fabrykę kanałów.  
   
 3. Utwórz kanał.  
   
-4. Wyślij żądanie i odpowiedź do odczytu.  
+4. Wyślij żądanie i przeczytaj odpowiedź.  
   
 5. Zamknij wszystkie obiekty kanału.  
   
 #### <a name="creating-a-binding"></a>Tworzenie powiązania  
- Podobnie jak w przypadku odbieranego (zobacz [programowania na poziomie kanału usługi](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)), wysyłanie komunikatów rozpoczyna się przez utworzenie powiązania. W tym przykładzie tworzy nowy <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> i dodaje <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> do swojej kolekcji elementów.  
+ Podobnie jak w przypadku odbioru (zobacz [Programowanie na poziomie kanału usługi](service-channel-level-programming.md)), wysyłanie komunikatów zaczyna się od utworzenia powiązania. Ten przykład tworzy nowe <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> i <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> dodaje do kolekcji elementów.  
   
-#### <a name="building-a-channelfactory"></a>Tworzenie elementu ChannelFactory  
- Zamiast tworzyć <xref:System.ServiceModel.Channels.IChannelListener?displayProperty=nameWithType>, tym razem możemy utworzyć <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> przez wywołanie metody <xref:System.ServiceModel.ChannelFactory.CreateFactory%2A?displayProperty=nameWithType> w powiązaniu, gdzie parametr typu jest <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>. Odbiorniki kanałów są używane przez stronę, która czeka na komunikaty przychodzące, fabryki kanałów są używane przez strony, która inicjuje komunikację, próba utworzenia kanału. Podobnie jak odbiorniki kanałów fabryki kanałów najpierw należy otworzyć zanim będzie można ich użyć.  
+#### <a name="building-a-channelfactory"></a>Kompilowanie elementu ChannelFactory  
+ Zamiast tworzenia <xref:System.ServiceModel.Channels.IChannelListener?displayProperty=nameWithType>, ten czas <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> tworzymy, wywołując <xref:System.ServiceModel.ChannelFactory.CreateFactory%2A?displayProperty=nameWithType> na powiązanie, gdzie parametr typu jest <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>. Gdy Odbiorniki kanałów są używane po stronie, które czekają na komunikaty przychodzące, fabryki kanałów są używane przez stronę, która inicjuje komunikację w celu utworzenia kanału. Podobnie jak w przypadku odbiorników kanału należy najpierw otworzyć fabryki kanałów przed ich użyciem.  
   
 #### <a name="creating-a-channel"></a>Tworzenie kanału  
- Następnie wywołaj <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType> utworzyć <xref:System.ServiceModel.Channels.IRequestChannel>. To wywołanie pobiera adres punktu końcowego za pomocą którego chcemy, aby komunikować się za pomocą nowego kanału tworzona. Gdy będziemy już mieć kanał, nazywamy otwórz go, aby umieścić ją w stanie gotowy do komunikacji. W zależności od charakteru transportu tego wywołania do otworzenia może zainicjować połączenia z punktem końcowym docelowego lub mogą nic w ogóle w sieci.  
+ Następnie wywołajmy <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType> , aby <xref:System.ServiceModel.Channels.IRequestChannel>utworzyć. To wywołanie Pobiera adres punktu końcowego, z którym chcemy się komunikować przy użyciu nowego tworzonego kanału. Gdy będziemy korzystać z kanału, dzwonimy na niego, aby przygotować go w stanie gotowym do komunikacji. W zależności od rodzaju transportu to wywołanie do otwarcia może inicjować połączenie z docelowym punktem końcowym lub w ogóle nie ma nic w sieci.  
   
-#### <a name="sending-a-request-and-reading-the-reply"></a>Wysyłanie żądania i odpowiedzi do czytania  
- Gdy będziemy już mieć otwarty kanał, firma Microsoft Utwórz wiadomość, a następnie wysłać żądanie i oczekiwania na odpowiedź, aby wrócić do tego za pomocą metody żądania tego kanału. Gdy metoda zwróci wartość, mamy komunikat odpowiedzi, który firma Microsoft może odczytać, aby dowiedzieć się, jaka była odpowiedzi punktu końcowego.  
+#### <a name="sending-a-request-and-reading-the-reply"></a>Wysyłanie żądania i odczytywanie odpowiedzi  
+ Po otwarciu kanału można utworzyć komunikat i użyć metody żądania kanału, aby wysłać żądanie i poczekać na powrót odpowiedzi. Po powrocie tej metody mamy komunikat odpowiedzi, który możemy przeczytać, aby dowiedzieć się, co to jest odpowiedź punktu końcowego.  
   
 #### <a name="closing-objects"></a>Zamykanie obiektów  
- Aby uniknąć wyciek zasobów, możemy zamknąć obiekty używane podczas komunikacji, gdy nie są już wymagane.  
+ Aby uniknąć przecieków zasobów, należy zamknąć obiekty używane w komunikacji, gdy nie są już wymagane.  
   
- Poniższy przykład kodu pokazuje podstawowe klienta za pomocą fabryki kanałów, aby wysłać wiadomość i odczytać odpowiedzi.  
+ Poniższy przykład kodu pokazuje klienta podstawowego przy użyciu fabryki kanałów do wysyłania wiadomości i odczytywania odpowiedzi.  
   
  [!code-csharp[ChannelProgrammingBasic#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/channelprogrammingbasic/cs/clientprogram.cs#2)]
  [!code-vb[ChannelProgrammingBasic#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/channelprogrammingbasic/vb/clientprogram.vb#2)]

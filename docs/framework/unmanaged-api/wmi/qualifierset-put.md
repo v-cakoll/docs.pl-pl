@@ -1,6 +1,6 @@
 ---
-title: Funkcja QualifierSet_Put (niezarządzany wykaz interfejsów API)
-description: Funkcja QualifierSet_Put zapisuje kwalifikator nazwanych i jego wartość.
+title: QualifierSet_Put — funkcja (niezarządzana dokumentacja interfejsu API)
+description: Funkcja QualifierSet_Put zapisuje nazwany kwalifikator i jego wartość.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Put
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a11f19a9b5ebdf491b79c250da7fc5ac3d980b64
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 40688a0e4273233245d00fcd927f95945a43f712
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377863"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798275"
 ---
-# <a name="qualifiersetput-function"></a>QualifierSet_Put — funkcja
+# <a name="qualifierset_put-function"></a>QualifierSet_Put, funkcja
 
-Zapisuje kwalifikator o nazwie i wartości. Nowy kwalifikator zastępuje poprzednią wartość taką samą nazwę. Jeśli kwalifikatora nie istnieje, zostanie utworzony.
+Zapisuje nazwany kwalifikator i wartość. Nowy kwalifikator zastępuje poprzednią wartość tej samej nazwy. Jeśli kwalifikator nie istnieje, zostanie utworzony.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -44,52 +44,52 @@ HRESULT QualifierSet_Put (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`\
-[in] Ten parametr jest nieużywany.
+podczas Ten parametr jest nieużywany.
 
 `ptr`\
-[in] Wskaźnik do [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) wystąpienia.
+podczas Wskaźnik do wystąpienia [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .
 
 `wszName`\
-[in] Nazwa kwalifikatora do zapisania.
+podczas Nazwa kwalifikatora do zapisu.
 
 `pVal`\
-[in] Wskaźnik do prawidłowego `VARIANT` zawierający kwalifikator do zapisania. Ten parametr nie może być `null`.
+podczas Wskaźnik do prawidłowego `VARIANT` , który zawiera kwalifikator do zapisu. Ten parametr nie może `null`być.
 
 `lFlavor`\
-[in] Jeden z następujących stałych, które definiuje właściwą kwalifikator odpowiednią dla tego kwalifikatora. Wartość domyślna to `WBEM_FLAVOR_OVERRIDABLE` (0).
+podczas Jedna z następujących stałych, która definiuje odpowiednie typy kwalifikatorów dla tego kwalifikatora. Wartość domyślna to `WBEM_FLAVOR_OVERRIDABLE` (0).
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
-| `WBEM_FLAVOR_OVERRIDABLE` | 0 | Kwalifikator może zostać przesłonięta w pochodnej klasy lub wystąpienia. **Jest to wartość domyślna.** |
-| `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | Kwalifikator jest propagowana do wystąpienia. |
-| `WBEM_FLAVOR_FLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | Kwalifikator jest propagowana do klas pochodnych. |
-| `WBEM_FLAVOR_NOT_OVERRIDABLE` | 0x10 | Nie można zastąpić kwalifikator w klasie pochodnej lub wystąpienia. |
-| `WBEM_FLAVOR_AMENDED` | 0x80 | Kwalifikator jest zlokalizowana. |
+| `WBEM_FLAVOR_OVERRIDABLE` | 0 | Kwalifikator można zastąpić w klasie pochodnej lub w wystąpieniu. **Jest to wartość domyślna.** |
+| `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | Kwalifikator jest propagowany do wystąpień. |
+| `WBEM_FLAVOR_FLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | Kwalifikator jest propagowany do klas pochodnych. |
+| `WBEM_FLAVOR_NOT_OVERRIDABLE` | 0x10 | Kwalifikator nie może zostać zastąpiony w klasie pochodnej lub w wystąpieniu. |
+| `WBEM_FLAVOR_AMENDED` | 0x80 | Kwalifikator jest zlokalizowany. |
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
+Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nagłówkowym *WbemCli. h* lub można je definiować jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
-| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Wystąpił niedozwolona próba określenia **klucz** kwalifikator dla właściwości, która nie może być kluczem. Klucze są określone w definicji klasy dla obiektu i nie może zostać zmieniona na podstawie poszczególnych wystąpień. |
+| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Wystąpiła niedozwolona próba określenia kwalifikatora **klucza** dla właściwości, która nie może być kluczem. Klucze są określone w definicji klasy dla obiektu i nie można ich zmienić dla poszczególnych wystąpień. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr jest nieprawidłowy. |
 | `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | `pVal` Parametr nie jest dozwolonym typem kwalifikatora. |
-| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Nie jest możliwe do wywołania `QualifierSet_Put` metody kwalifikator, ponieważ obiekt-właściciel nie zezwala na zastąpienia. |
+| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Nie można wywołać `QualifierSet_Put` metody w kwalifikatorze, ponieważ obiekt będący właścicielem nie zezwala na zastępowanie. |
 | `WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja zawija wywołanie do [IWbemQualifierSet::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) metody.
+Ta funkcja otacza wywołanie metody [IWbemQualifierSet::P UT](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) .
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
-**Nagłówek:** WMINet_Utils.idl
+**Nagłówki** WMINet_Utils.idl
 
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)
+- [WMI i liczniki wydajności (niezarządzana dokumentacja interfejsu API)](index.md)

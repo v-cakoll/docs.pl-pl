@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4432b17e5d9aa875d8346b3329cd618e15222040
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 215eb3a508a746230d36fdda3e8ba992287be62c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771024"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796829"
 ---
 # <a name="iassemblycachecreateassemblycacheitem-method"></a>IAssemblyCache::CreateAssemblyCacheItem — Metoda
-Pobiera odwołanie do nowego [iassemblycacheitem —](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) obiektu.  
+Pobiera odwołanie do nowego obiektu [IAssemblyCacheItem](iassemblycacheitem-interface.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,29 +40,29 @@ HRESULT CreateAssemblyCacheItem (
   
 ## <a name="parameters"></a>Parametry  
  `dwFlags`  
- [in] Flagi zdefiniowane w Fusion.idl. Obsługiwane są następujące wartości:  
+ podczas Flagi zdefiniowane w pliku Fusion. idl. Obsługiwane są następujące wartości:  
   
-- IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0X00000001)  
+- IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)  
   
-- IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0X00000002)  
+- IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
   
  `pvReserved`  
- [in] Zarezerwowane dla przyszłej rozszerzalności. `pvReserved` musi być odwołanie o wartości null.  
+ podczas Zarezerwowane do użytku w przyszłości. `pvReserved`musi być odwołaniem o wartości null.  
   
  `ppAsmItem`  
- [out] Zwrócony `IAssemblyCacheItem` wskaźnika.  
+ określoną Zwrócony `IAssemblyCacheItem` wskaźnik.  
   
  `pszAssemblyName`  
- [in, opcjonalny] Uncanonicalized, oddzielone przecinkami `name=value` pary.  
+ [w, opcjonalnie] Niekanoniczne, pary rozdzielane `name=value` przecinkami.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Fusion.h  
+ **Nagłówki** Fusion. h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IAssemblyCache, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
-- [IAssemblyCacheItem, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+- [IAssemblyCache, interfejs](iassemblycache-interface.md)
+- [IAssemblyCacheItem, interfejs](iassemblycacheitem-interface.md)

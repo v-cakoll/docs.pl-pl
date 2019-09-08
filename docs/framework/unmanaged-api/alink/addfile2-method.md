@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de85d264d709da747fab636f40c99bc0d0752251
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c3a6892dbed172c0be3b036014d393657dbc8593
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742353"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777520"
 ---
 # <a name="addfile2-method"></a>AddFile2 — Metoda
-Dodaje pliki do zestawu. Można również utworzyć niezwiązanego moduły.  
+Dodaje pliki do zestawu. Może również służyć do tworzenia niezwiązanych modułów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,28 +41,28 @@ HRESULT AddFile2(
   
 ## <a name="parameters"></a>Parametry  
  `AssemblyID`  
- Identyfikator zestawu, do której plik zostanie dodany.  
+ Identyfikator zestawu, do którego zostanie dodany plik.  
   
  `pszFilename`  
- Nazwa pliku, który ma zostać dodana.  
+ Nazwa pliku, który ma zostać dodany.  
   
  `dwFlags`  
- COM + `FileDef` flagi, takich jak `ffContainsNoMetaData` i `ffWriteable`. `dwFlags` jest przekazywany do [definefile — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+ Flagi `FileDef` com+, takie `ffContainsNoMetaData` jak `ffWriteable`i. `dwFlags`jest przenoszona do [metody DefineFile —](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
- Interfejs do [imetadataemit2 — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) interfejsu.  
+ Interfejs do interfejsu [interfejsu IMetaDataEmit2](../metadata/imetadataemit2-interface.md) .  
   
  `pFileToken`  
- Otrzymuje identyfikator pliku dodawany.  
+ Odbiera identyfikator dodawanego pliku.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga alink.h.  
+ Wymaga Alink. h.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2, interfejs](ialink2-interface.md)
+- [IALink, interfejs](ialink-interface.md)
+- [ALink, interfejs API](index.md)

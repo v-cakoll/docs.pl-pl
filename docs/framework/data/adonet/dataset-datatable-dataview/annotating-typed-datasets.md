@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 8ce7cd859ce0c9a5874751e9928e5bced33593d6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 351175b96d354a264a9280018ce21de8870beda2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205248"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784804"
 ---
 # <a name="annotating-typed-datasets"></a>Dodawanie adnotacji do typizowanych elementów DataSet
 Adnotacje umożliwiają modyfikowanie nazw elementów w określonym typie <xref:System.Data.DataSet> bez modyfikowania bazowego schematu. Modyfikacja nazw elementów w schemacie źródłowym spowoduje, że określony **zestaw danych** odwołuje się do obiektów, które nie istnieją w źródle danych, a także utraci odwołanie do obiektów, które istnieją w źródle danych.  
@@ -27,7 +27,7 @@ Adnotacje umożliwiają modyfikowanie nazw elementów w określonym typie <xref:
 </xs:element>  
 ```  
   
- Nazwa elementu DataRowCollection **klientów** ma znaczenie w kodzie klienta, ale nazwa elementu **DataRow** **CustomersRow** jest myląca, ponieważ jest to pojedynczy obiekt. Ponadto w typowych scenariuszach obiekt zostałby odnosił się do bez identyfikatora **wiersza** i zamiast niego będzie po prostu określany jako obiekt **klienta** . Rozwiązaniem jest dodawanie adnotacji do schematu i identyfikowanie nowych nazw obiektów **DataRow** i **DataRowCollection** . Poniżej znajduje się adnotacja wersja poprzedniego schematu.  
+ Nazwa elementu **DataRowCollection** **klientów** ma znaczenie w kodzie klienta, ale nazwa elementu **DataRow** **CustomersRow** jest myląca, ponieważ jest to pojedynczy obiekt. Ponadto w typowych scenariuszach obiekt zostałby odnosił się do bez identyfikatora **wiersza** i zamiast niego będzie po prostu określany jako obiekt **klienta** . Rozwiązaniem jest dodawanie adnotacji do schematu i identyfikowanie nowych nazw obiektów **DataRow** i **DataRowCollection** . Poniżej znajduje się adnotacja wersja poprzedniego schematu.  
   
 ```xml  
 <xs:element name="Customers" codegen:typedName="Customer" codegen:typedPlural="Customers">  
@@ -39,7 +39,7 @@ Adnotacje umożliwiają modyfikowanie nazw elementów w określonym typie <xref:
 </xs:element>  
 ```  
   
- Określenie wartości typu nazwa **klienta** spowoduje powstanie nazwy obiektu **DataRow** dla **klienta**. Określenie wartości **TypedPlural** **klientów** zachowuje nazwę elementu DataRowCollection **klientów**.  
+ Określenie wartości **typu** nazwa **klienta** spowoduje powstanie nazwy obiektu **DataRow** dla **klienta**. Określenie wartości **TypedPlural** **klientów** zachowuje nazwę elementu **DataRowCollection** **klientów**.  
   
  W poniższej tabeli przedstawiono adnotacje dostępne do użycia.  
   
@@ -134,7 +134,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- Poniższy przykład kodu używa jednoznacznie określonego **zestawu danych** utworzonego na podstawie przykładowego schematu. Używa one <xref:System.Data.SqlClient.SqlDataAdapter> do wypełniania tabeli **Customers** , a <xref:System.Data.SqlClient.SqlDataAdapter> druga do wypełniania tabeli **Orders** . **Zestaw danych** o jednoznacznie określonym typie definiuje **relacje**DataRelations.  
+ Poniższy przykład kodu używa jednoznacznie określonego **zestawu danych** utworzonego na podstawie przykładowego schematu. Używa one <xref:System.Data.SqlClient.SqlDataAdapter> do wypełniania tabeli **Customers** , a <xref:System.Data.SqlClient.SqlDataAdapter> druga do wypełniania tabeli **Orders** . **Zestaw danych** o jednoznacznie określonym typie definiuje **relacje DataRelations**.  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  
@@ -228,4 +228,4 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
 - <xref:System.Data.DataSet>
 - [Typizowane elementy DataSet](typed-datasets.md)
 - [Elementy DataSet, DataTable i DataView](index.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

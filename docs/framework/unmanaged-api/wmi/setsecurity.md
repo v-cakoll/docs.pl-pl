@@ -1,6 +1,6 @@
 ---
-title: Funkcja SetSecurity (niezarządzany wykaz interfejsów API)
-description: Funkcja SetSecurity pobiera token personifikacji bieżącego wątku.
+title: Setsecurity — funkcja (niezarządzana dokumentacja interfejsu API)
+description: Funkcja setsecurity pobiera token personifikacji bieżącego wątku.
 ms.date: 11/06/2017
 api_name:
 - SetSecurity
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2cb71263201c86a93ca0bfbd783f2b8512055e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94c76213acb66116105d181e9961a33976047ee7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783117"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798240"
 ---
-# <a name="setsecurity-function"></a>SetSecurity — funkcja
+# <a name="setsecurity-function"></a>Funkcja setsecurity
 
-Pobiera token personifikacji skojarzone z bieżącym wątkiem. 
+Pobiera token personifikacji skojarzony z bieżącym wątkiem. 
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -41,25 +41,25 @@ HRESULT SetSecurity (
 ## <a name="parameters"></a>Parametry
 
 `pNeedToReset`\
-[out] Po powrocie z tej funkcji zawiera wskaźnik do `boolean` oznacza to, czy token powinien być resetowany przez wywołanie metody [ResetSecurity](resetsecurity.md) funkcji.
+określoną Gdy funkcja zwraca, zawiera wskaźnik do elementu `boolean` , który wskazuje, czy token powinien być resetowany przez wywołanie funkcji [ResetSecurity](resetsecurity.md) .
 
 `token`\
-[out] Po powrocie z tej funkcji zawiera wskaźnik do uchwytu token personifikacji skojarzone z bieżącym wątkiem. Wartość może być `null` czy token nie jest skojarzony z bieżącym wątkiem. 
+określoną Gdy funkcja zwraca, zawiera wskaźnik do uchwytu tokenu personifikacji skojarzonego z bieżącym wątkiem. Jej wartość może być `null` , jeśli nie istnieje token skojarzony z bieżącym wątkiem. 
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja się powiedzie, wartość zwracana jest `S_OK` (0).
+Jeśli funkcja się powiedzie, zwracaną wartością jest `S_OK` (0).
 
-Jeśli funkcja zawiedzie, wartość zwracana jest kod błędu różny od zera. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [geterrorinfo —](geterrorinfo.md) funkcji.
+Jeśli funkcja się nie powiedzie, wartość zwracana jest kodem błędu o wartości innej niż zero. Aby uzyskać rozszerzone informacje o błędzie, wywołaj funkcję [GetErrorInfo](geterrorinfo.md) .
 
 ## <a name="requirements"></a>Wymagania
 
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
- **Nagłówek:** WMINet_Utils.idl
+ **Nagłówki** WMINet_Utils.idl
 
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+ **.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)
+- [WMI i liczniki wydajności (niezarządzana dokumentacja interfejsu API)](index.md)

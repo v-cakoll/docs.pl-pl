@@ -2,24 +2,24 @@
 title: FailedToLogMessage
 ms.date: 03/30/2017
 ms.assetid: 589d5af7-685f-4456-bebf-d6d6fa1f8475
-ms.openlocfilehash: 4736c259fbc28a432edd22068993ce1477f55fa1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2cbd4b3ca9d9700c9acd5c7fe55a4fbba0e29e08
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999352"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797917"
 ---
 # <a name="failedtologmessage"></a>FailedToLogMessage
-Id: 113  
+#C1 113  
   
- Ważność: Błąd  
+ Obrażeń Błąd  
   
- Kategoria: ServiceModel  
+ Kategorii Modelu  
   
 ## <a name="description"></a>Opis  
- To zdarzenie oznacza, że komunikat nie został zarejestrowany. Zdarzenie Wyświetla listę wyjątków, nazwa procesu i identyfikatora procesu.  
+ To zdarzenie oznacza, że komunikat nie został zarejestrowany. Zdarzeń zawiera wyjątek, nazwę procesu i identyfikator procesu.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Rejestrowanie zdarzeń](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Informacje ogólne o zdarzeniach](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Rejestrowanie zdarzeń](index.md)
+- [Informacje ogólne o zdarzeniach](events-general-reference.md)

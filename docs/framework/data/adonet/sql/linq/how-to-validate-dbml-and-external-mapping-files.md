@@ -2,12 +2,12 @@
 title: 'Instrukcje: Weryfikacja DBML i zewnętrznych plików mapowania'
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: 212d65dfe998b825dd40e564756083ed685dff6f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b5901705ac7c0692025ff1f4a4b78f976d62176d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041132"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793039"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Instrukcje: Weryfikacja DBML i zewnętrznych plików mapowania
 
@@ -31,9 +31,9 @@ Pliki mapowania zewnętrznego i pliki. dbml, które należy zmodyfikować, musz�
 
 5. Zanotuj odpowiednią definicję schematu dla danego celu.
 
-    - DbmlSchema. xsd jest definicją schematu służącą do walidacji pliku. dbml. Aby uzyskać więcej informacji, zobacz [generowanie kodu w LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).
+    - DbmlSchema. xsd jest definicją schematu służącą do walidacji pliku. dbml. Aby uzyskać więcej informacji, zobacz [generowanie kodu w LINQ to SQL](code-generation-in-linq-to-sql.md).
 
-    - LinqToSqlMapping. xsd jest definicją schematu służącą do walidacji zewnętrznego pliku mapowania XML. Aby uzyskać więcej informacji, zobacz [Mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).
+    - LinqToSqlMapping. xsd jest definicją schematu służącą do walidacji zewnętrznego pliku mapowania XML. Aby uzyskać więcej informacji, zobacz [Mapowanie zewnętrzne](external-mapping.md).
 
 6. W kolumnie **Użyj** w żądanym wierszu definicji schematu kliknij, aby otworzyć pole listy rozwijanej, a następnie kliknij pozycję **Użyj tego schematu**.
 
@@ -53,9 +53,9 @@ Jeśli z jakiegoś powodu odpowiedni plik XSD nie jest wyświetlany w oknie dial
 
 1. Znajdź temat pomocy zawierający definicję schematu, jak opisano wcześniej w tym temacie.
 
-    - Aby uzyskać pliki. dbml, zobacz [generowanie kodu w LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).
+    - Aby uzyskać pliki. dbml, zobacz [generowanie kodu w LINQ to SQL](code-generation-in-linq-to-sql.md).
 
-    - W przypadku zewnętrznych plików mapowania zobacz [Mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).
+    - W przypadku zewnętrznych plików mapowania zobacz [Mapowanie zewnętrzne](external-mapping.md).
 
 2. Kliknij przycisk **Kopiuj kod** , aby skopiować plik kodu do Schowka.
 
@@ -74,4 +74,4 @@ Jeśli z jakiegoś powodu odpowiedni plik XSD nie jest wyświetlany w oknie dial
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Dokumentacja](reference.md)

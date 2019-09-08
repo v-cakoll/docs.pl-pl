@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-ms.openlocfilehash: 4eb211ed13b5f2fe066cd7570c97ae324b187b34
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: db0df68aa89cdd5c8bf94ad95a2b8bc9b36d5685
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203510"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786219"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>Ładowanie informacji o schemacie elementu DataSet z pliku XML
 Schemat <xref:System.Data.DataSet> (tabele, kolumny, relacje i ograniczenia) można definiować programowo, tworząc przy użyciu metod <xref:System.Data.Common.DataAdapter> **Fill** lub **FillSchema** lub załadowanych z dokumentu XML. Aby załadować informacje o schemacie **zestawu danych** z dokumentu XML, można użyć metody **ReadXmlSchema** lub **InferXmlSchema** **zestawu danych**. **ReadXmlSchema** umożliwia ładowanie lub wnioskowanie informacji o schemacie **zestawu danych** z dokumentu zawierającego schemat języka definicji schematu XML (XSD) lub dokument XML z wbudowanym schematem XML. **InferXmlSchema** umożliwia wywnioskowanie schematu z dokumentu XML podczas ignorowania określonych przestrzeni nazw XML.  
@@ -23,7 +23,7 @@ Schemat <xref:System.Data.DataSet> (tabele, kolumny, relacje i ograniczenia) mo�
   
  Metoda **ReadXmlSchema** przyjmuje pojedynczy argument nazwy pliku, strumienia lub elementu **XMLREADER** zawierającego dokument XML do załadowania. Dokument XML może zawierać tylko schemat lub może zawierać schemat w tekście z elementami XML zawierającymi dane. Aby uzyskać szczegółowe informacje na temat pisania schematu wbudowanego jako schematu XML, zobacz [wyprowadzanie relacyjnej struktury zestawu danych ze schematu XML (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md).  
   
- Jeśli dokument XML przesłany do **ReadXmlSchema** nie zawiera wbudowanych informacji o schemacie, **ReadXmlSchema** będzie wnioskować o schemat z elementów w dokumencie XML. Jeśli **zestaw danych** zawiera już schemat, bieżący schemat zostanie rozszerzony przez dodanie nowych tabel, jeśli jeszcze nie istnieją. Nowe kolumny nie zostaną dodane do istniejących tabel. Jeśli dodawana kolumna już istnieje w **zestawie danych** , ale ma niezgodny typ z kolumną znalezioną w kodzie XML, zgłaszany jest wyjątek. Aby uzyskać szczegółowe informacje na temat sposobu, w jaki program **ReadXmlSchema** wnioskuje schemat z dokumentu XML, zobacz wnioskowanie o [relacyjnej strukturze zestawu danych z pliku XML](inferring-dataset-relational-structure-from-xml.md).  
+ Jeśli dokument XML przesłany do **ReadXmlSchema** nie zawiera wbudowanych informacji o schemacie, **ReadXmlSchema** będzie wnioskować o schemat z elementów w dokumencie XML. Jeśli **zestaw danych** zawiera już schemat, bieżący schemat zostanie rozszerzony przez dodanie nowych tabel, jeśli jeszcze nie istnieją. Nowe kolumny nie zostaną dodane do istniejących tabel. Jeśli dodawana kolumna już istnieje w **zestawie danych** , ale ma niezgodny typ z kolumną znalezioną w kodzie XML, zgłaszany jest wyjątek. Aby uzyskać szczegółowe informacje na temat sposobu, w jaki program **ReadXmlSchema** wnioskuje schemat z dokumentu XML, zobacz [wnioskowanie o relacyjnej strukturze zestawu danych z pliku XML](inferring-dataset-relational-structure-from-xml.md).  
   
  Mimo że **ReadXmlSchema** ładuje lub wnioskuje tylko schemat **zestawu danych**, Metoda **ReadXml** **zestawu danych** ładuje lub wnioskuje schemat oraz dane zawarte w dokumencie XML. Aby uzyskać więcej informacji, zobacz [Ładowanie zestawu danych z pliku XML](loading-a-dataset-from-xml.md).  
   
@@ -54,7 +54,7 @@ xmlStream.Close();
 ```  
   
 ## <a name="inferxmlschema"></a>InferXmlSchema  
- Można również nakazać **zestawowi danych** wywnioskowanie schematu z dokumentu XML przy użyciu metody **InferXmlSchema** **zestawu danych**. Funkcja **InferXmlSchema** działa tak samo jak w przypadku obu **ReadXml** z atrybutem XmlReadMode of **InferSchema** (ładuje dane, a także schemat wniosku) i **ReadXmlSchema** , jeśli dokument jest odczytywany nie zawiera wbudowanego schematu. **InferXmlSchema** oferuje jednak dodatkową możliwość, która umożliwia określenie określonych przestrzeni nazw XML, które mają być ignorowane, gdy schemat zostanie wywnioskowany. **InferXmlSchema** przyjmuje dwa wymagane argumenty: lokalizację dokumentu XML, określoną przez nazwę pliku, strumień lub element **XmlReader**; i tablica ciągów przestrzeni nazw XML, która ma być ignorowana przez operację.  
+ Można również nakazać **zestawowi danych** wywnioskowanie schematu z dokumentu XML przy użyciu metody **InferXmlSchema** **zestawu danych**. Funkcja **InferXmlSchema** działa tak samo jak w przypadku obu **ReadXml** z atrybutem **XmlReadMode** of **InferSchema** (ładuje dane, a także schemat wniosku) i **ReadXmlSchema** , jeśli dokument jest odczytywany nie zawiera wbudowanego schematu. **InferXmlSchema** oferuje jednak dodatkową możliwość, która umożliwia określenie określonych przestrzeni nazw XML, które mają być ignorowane, gdy schemat zostanie wywnioskowany. **InferXmlSchema** przyjmuje dwa wymagane argumenty: lokalizację dokumentu XML, określoną przez nazwę pliku, strumień lub element **XmlReader**; i tablica ciągów przestrzeni nazw XML, która ma być ignorowana przez operację.  
   
  Rozważmy na przykład następujący kod XML:  
   
@@ -73,7 +73,7 @@ xmlStream.Close();
 </NewDataSet>  
 ```  
   
- Ze względu na atrybuty określone dla elementów w poprzednim dokumencie XML, Metoda **ReadXmlSchema** i Metoda **ReadXml** z atrybutem XmlReadMode klasy **InferSchema** utworzy tabele dla każdego elementu w dokumentu **Kategorie**, **IDkategorii**, **CategoryName**, **Opis**, **produkty**, **ProductID**, **ReorderLevel**i **wycofane**. (Aby uzyskać więcej informacji, zobacz [wnioskowanie relacyjnej struktury zestawu danych z pliku XML](inferring-dataset-relational-structure-from-xml.md)). Jednak bardziej odpowiednią strukturą jest utworzenie tylko tabel **Kategorie** i **produkty** , a następnie utworzenie kolumn **IDkategorii**, **CategoryName**i **Description** w tabeli **Kategorie** i  **Kolumny ProductID**, **ReorderLevel**i uncontinued w tabeli **Products** . Aby upewnić się, że wywnioskowany schemat ignoruje atrybuty określone w elementach XML, należy użyć metody **InferXmlSchema** i określić przestrzeń nazw XML do ignorowania, jak pokazano w poniższym przykładzie.  
+ Ze względu na atrybuty określone dla elementów w poprzednim dokumencie XML, Metoda **ReadXmlSchema** i Metoda **ReadXml** z atrybutem **XmlReadMode** klasy **InferSchema** utworzy tabele dla każdego elementu w dokumentu **Kategorie**, **IDkategorii**, **CategoryName**, **Opis**, **produkty**, **ProductID**, **ReorderLevel**i **wycofane**. (Aby uzyskać więcej informacji, zobacz [wnioskowanie relacyjnej struktury zestawu danych z pliku XML](inferring-dataset-relational-structure-from-xml.md)). Jednak bardziej odpowiednią strukturą jest utworzenie tylko tabel **Kategorie** i **produkty** , a następnie utworzenie kolumn **IDkategorii**, **CategoryName**i **Description** w tabeli **Kategorie** i  **Kolumny ProductID**, **ReorderLevel**i **uncontinued** w tabeli **Products** . Aby upewnić się, że wywnioskowany schemat ignoruje atrybuty określone w elementach XML, należy użyć metody **InferXmlSchema** i określić przestrzeń nazw **XML do** ignorowania, jak pokazano w poniższym przykładzie.  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  
@@ -92,4 +92,4 @@ dataSet.InferXmlSchema("input_od.xml", new string[] "urn:schemas-microsoft-com:o
 - [Wnioskowanie relacyjnej struktury elementu DataSet z pliku XML](inferring-dataset-relational-structure-from-xml.md)
 - [Ładowanie elementu DataSet z pliku XML](loading-a-dataset-from-xml.md)
 - [Elementy DataSet, DataTable i DataView](index.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

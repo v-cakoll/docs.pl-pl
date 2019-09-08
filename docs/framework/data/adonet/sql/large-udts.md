@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 97df0bee10440dd03f07b980589d9dda85ce121e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 33f4263c747ac2590234493ec7cb9e6048ed2b96
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69909880"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794014"
 ---
 # <a name="large-udts"></a>Duże UDT
 Typy zdefiniowane przez użytkownika (UDTs) umożliwiają deweloperom rozbudowa systemu typu skalarnego serwera przez przechowywanie obiektów środowiska uruchomieniowego języka wspólnego (CLR) w bazie danych SQL Server. UDTs może zawierać wiele elementów i może mieć zachowania, w przeciwieństwie do tradycyjnych typów danych aliasów, które składają się z jednego typu danych systemu SQL Server.  
@@ -27,7 +27,7 @@ Typy zdefiniowane przez użytkownika (UDTs) umożliwiają deweloperom rozbudowa 
 1. [Zdefiniowane przez użytkownika typy CLR](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>Pobieranie schematów UDT przy użyciu GetSchema  
- Metoda zwraca informacje o schemacie <xref:System.Data.DataTable>bazy danych w. <xref:System.Data.SqlClient.SqlConnection> <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> Aby uzyskać więcej informacji, zobacz [SQL Server kolekcje schematów](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md).  
+ Metoda zwraca informacje o schemacie <xref:System.Data.DataTable>bazy danych w. <xref:System.Data.SqlClient.SqlConnection> <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> Aby uzyskać więcej informacji, zobacz [SQL Server kolekcje schematów](../sql-server-schema-collections.md).  
   
 ### <a name="getschematable-column-values-for-udts"></a>Wartości kolumn getschemacollection dla UDTs  
  <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> Metoda zwraca,<xref:System.Data.DataTable> która opisuje metadane kolumn. <xref:System.Data.SqlClient.SqlDataReader> W poniższej tabeli opisano różnice w metadanych kolumn dla dużych UDTs między SQL Server 2005 i SQL Server 2008.  
@@ -133,8 +133,8 @@ End Using
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Konfigurowanie parametrów i typów danych parametrów](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [Pobieranie informacji o schemacie bazy danych](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [Mapowanie typu danych serwera SQL](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [Dane binarne i dużej wartości w programie SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Konfigurowanie parametrów i typów danych parametrów](../configuring-parameters-and-parameter-data-types.md)
+- [Pobieranie informacji o schemacie bazy danych](../retrieving-database-schema-information.md)
+- [Mapowanie typu danych serwera SQL](../sql-server-data-type-mappings.md)
+- [Dane binarne i dużej wartości w programie SQL Server](sql-server-binary-and-large-value-data.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

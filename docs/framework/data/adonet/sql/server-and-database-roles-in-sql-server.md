@@ -2,12 +2,12 @@
 title: Serwer i role bazy danych w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 97ad04b1d081e5635104bdadb2d1a54402ffcca2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3e31aa67bfbaa541d8d1eb5b8b61dfd28182c72
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961105"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791779"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Serwer i role bazy danych w programie SQL Server
 Wszystkie wersje SQL Server korzystają z zabezpieczeń opartych na rolach, które umożliwiają przypisywanie uprawnień do roli lub grupy użytkowników, a nie do poszczególnych użytkowników. Stałe role serwera i stałych baz danych mają przypisane do nich stały zestaw uprawnień.  
@@ -42,7 +42,7 @@ Wszystkie wersje SQL Server korzystają z zabezpieczeń opartych na rolach, któ
  `dbo`Właścicielem bazy danych jest konto użytkownika, które ma implikowane uprawnienia do wykonywania wszystkich działań w bazie danych. Członkowie stałej roli serwera są automatycznie zamapowane na `dbo`. `sysadmin`  
   
 > [!NOTE]
-> `dbo`jest również nazwą schematu, zgodnie z opisem w sekcji [własność i separacja w schemacie użytkownika w SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md).  
+> `dbo`jest również nazwą schematu, zgodnie z opisem w sekcji [własność i separacja w schemacie użytkownika w SQL Server](ownership-and-user-schema-separation-in-sql-server.md).  
   
  Konto użytkownika jest często mylone `db_owner` ze stałą rolą bazy danych. `dbo` Zakresem `db_owner` jest baza danych; `sysadmin` zakresem jest cały serwer. Członkostwo w `db_owner` roli nie `dbo` przyznaje uprawnień użytkownika.  
   
@@ -63,9 +63,9 @@ Wszystkie wersje SQL Server korzystają z zabezpieczeń opartych na rolach, któ
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Scenariusze zabezpieczeń aplikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Uwierzytelnianie w programie SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
-- [Własność i oddzielenie schematu użytkownika w programie SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
-- [Autoryzacja i uprawnienia w programie SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Zabezpieczanie aplikacji ADO.NET](../securing-ado-net-applications.md)
+- [Scenariusze zabezpieczeń aplikacji w programie SQL Server](application-security-scenarios-in-sql-server.md)
+- [Uwierzytelnianie w programie SQL Server](authentication-in-sql-server.md)
+- [Własność i oddzielenie schematu użytkownika w programie SQL Server](ownership-and-user-schema-separation-in-sql-server.md)
+- [Autoryzacja i uprawnienia w programie SQL Server](authorization-and-permissions-in-sql-server.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0e6250987997b8d1c833b7b33a985900510fb03
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a2adf53d1e29fda077cdcf7b79891f6271993109
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742136"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787580"
 ---
 # <a name="emitassembly-method"></a>EmitAssembly — Metoda
-Tworzy zestaw. Wywołaj tę metodę po zamknięciu wszystkich innych plików z wyjątkiem pliku zestawu. Ta metoda zostanie wywołana podczas produkowania niepowiązanych modułów.  
+Tworzy zestaw. Wywołaj tę metodę po zamknięciu wszystkich innych plików z wyjątkiem pliku zestawu. Nie wywołuj tej metody podczas tworzenia niezwiązanych modułów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,13 +40,13 @@ HRESULT EmitAssembly(
  Identyfikator zestawu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga alink.h  
+ Wymaga Alink. h  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink, interfejs](ialink-interface.md)
+- [IALink2, interfejs](ialink2-interface.md)
+- [ALink, interfejs API](index.md)

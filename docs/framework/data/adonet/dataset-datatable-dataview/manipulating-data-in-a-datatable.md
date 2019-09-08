@@ -2,12 +2,12 @@
 title: Operowanie na danych w elemencie DataTable
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: 83b1a4b6c0e477ac918a2bb4e454718fc58ece0b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 421680a4f39dd68c09dfe20e62f2eec86259b9f0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203492"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786156"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>Operowanie na danych w elemencie DataTable
 Po utworzeniu elementu <xref:System.Data.DataTable> <xref:System.Data.DataSet>w programie można wykonać te same działania, które będą używane w przypadku korzystania z tabeli w bazie danych. Można dodawać, wyświetlać, edytować i usuwać dane w tabeli; można monitorować błędy i zdarzenia; i można wykonywać zapytania dotyczące danych w tabeli. Podczas modyfikowania danych w **elemencie DataTable**można także sprawdzić, czy zmiany są dokładne, oraz określić, czy zmiany mają być programowo akceptowane czy odrzucane.  
@@ -41,4 +41,4 @@ Po utworzeniu elementu <xref:System.Data.DataTable> <xref:System.Data.DataSet>w 
 
 - [Elementy DataTable](datatables.md)
 - [Obsługa zdarzeń elementu DataTable](handling-datatable-events.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

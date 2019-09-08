@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 496d6f6ffef8d15e368979a67a8beed62ab86c38
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 481a56f923c4218cd8689c578ce990785aee0ab3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918190"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782721"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Sortowanie za pomocą widoku danych (LINQ to DataSet)
 Możliwość sortowania danych na podstawie określonych kryteriów, a następnie prezentowania danych do klienta za pośrednictwem kontrolki interfejsu użytkownika jest ważnym aspektem powiązania danych. <xref:System.Data.DataView>oferuje kilka sposobów sortowania danych i zwracania wierszy danych uporządkowanych według określonych kryteriów określania kolejności. Oprócz funkcji sortowania opartych na ciągach, <xref:System.Data.DataView> można również używać [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] wyrażeń dla kryteriów sortowania. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]wyrażenia umożliwiają znacznie bardziej skomplikowane i zaawansowane operacje sortowania niż sortowanie oparte na ciągach. W tym temacie opisano oba podejścia do sortowania <xref:System.Data.DataView>przy użyciu.  
@@ -20,7 +20,7 @@ Możliwość sortowania danych na podstawie określonych kryteriów, a następni
   
  Sortowanie oparte na wyrażeniach oferuje bardziej zaawansowane i złożone sortowanie niż prostsze sortowanie oparte na ciągach. Należy zauważyć, że sortowanie oparte na ciągach i wyrażeniach wykluczają się wzajemnie. Jeśli parametr <xref:System.Data.DataView.Sort%2A> jest ustawiony <xref:System.Data.DataView> po utworzeniu na podstawie zapytania, filtr oparty na wyrażeniach wywnioskowany na podstawie zapytania jest wyczyszczony i nie można go zresetować.  
   
- Indeks dla <xref:System.Data.DataView> obiektu jest kompilowany zarówno <xref:System.Data.DataView> podczas tworzenia, jak i gdy dowolna z informacji o sortowaniu lub filtrowaniu jest modyfikowana. Najlepszą wydajność uzyskuje się, dostarczając kryteria sortowania w kwerendzie LINQ to DataSet, że <xref:System.Data.DataView> jest tworzona z i nie modyfikując informacji o sortowaniu w późniejszym czasie. Aby uzyskać więcej informacji, zobacz temat [wydajność widoku](../../../../docs/framework/data/adonet/dataview-performance.md)danych.  
+ Indeks dla <xref:System.Data.DataView> obiektu jest kompilowany zarówno <xref:System.Data.DataView> podczas tworzenia, jak i gdy dowolna z informacji o sortowaniu lub filtrowaniu jest modyfikowana. Najlepszą wydajność uzyskuje się, dostarczając kryteria sortowania w kwerendzie LINQ to DataSet, że <xref:System.Data.DataView> jest tworzona z i nie modyfikując informacji o sortowaniu w późniejszym czasie. Aby uzyskać więcej informacji, zobacz temat [wydajność widoku](dataview-performance.md)danych.  
   
 > [!NOTE]
 > W większości przypadków wyrażenia używane do sortowania nie powinny mieć efektów ubocznych i muszą być deterministyczne. Ponadto wyrażenia nie powinny zawierać żadnych logiki, które są zależne od ustawionej liczby wykonań, ponieważ operacje sortowania mogą być wykonywane dowolną liczbę razy.  
@@ -48,7 +48,7 @@ Możliwość sortowania danych na podstawie określonych kryteriów, a następni
   
  Funkcja sortowania oparta na ciągach i wyrażeniach wykluczają się wzajemnie. Ustawienie właściwości spowoduje wyczyszczenie opartego na wyrażeniach sortowania dziedziczone z zapytania <xref:System.Data.DataView> , z którego zostało utworzone. <xref:System.Data.DataView.Sort%2A>  
   
- Aby uzyskać więcej informacji o filtrowaniu <xref:System.Data.DataView.Sort%2A> opartym na ciągach, zobacz [Sortowanie i filtrowanie danych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
+ Aby uzyskać więcej informacji o filtrowaniu <xref:System.Data.DataView.Sort%2A> opartym na ciągach, zobacz [Sortowanie i filtrowanie danych](./dataset-datatable-dataview/sorting-and-filtering-data.md).  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie następuje utworzenie <xref:System.Data.DataView> z tabeli Contact i sortowanie wierszy według nazwiska w kolejności malejącej, a następnie imię i nazwisko w kolejności rosnącej:  
@@ -83,6 +83,6 @@ Możliwość sortowania danych na podstawie określonych kryteriów, a następni
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Powiązanie danych i LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
-- [Filtrowanie za pomocą widoku danych.](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
+- [Powiązanie danych i LINQ to DataSet](data-binding-and-linq-to-dataset.md)
+- [Filtrowanie za pomocą widoku danych.](filtering-with-dataview-linq-to-dataset.md)
 - [Sortowanie danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546145(v=vs.120))

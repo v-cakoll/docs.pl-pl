@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-ms.openlocfilehash: 11cfad81e40e76691db9f99efd1d60f5528600d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ac0216ce2965d555f7283ba66a085ea9d7cac3c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667054"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783836"
 ---
 # <a name="getschema-and-schema-collections"></a>GetSchema i kolekcje schematów
-**Połączenia** klas w każdej implementacji zarządzanego dostawcy .NET Framework **GetSchema** metodę, która służy do pobierania informacji o schemacie o bazie danych, który jest obecnie połączony, i informacje o schemacie zwróciło **GetSchema** metody jest dostarczany w formie <xref:System.Data.DataTable>. **GetSchema** metodą jest przeciążona metoda, która zapewnia następujące parametry opcjonalne określanie kolekcji schematów, aby powrócić i ograniczając ilość zwracanych informacji.  
+Klasy **połączeń** w każdym z .NET Framework dostawców zarządzanych implementują metodę **GetSchema** , która jest używana do pobierania informacji o schemacie, która jest aktualnie połączona, oraz informacji o schemacie zwróconych z  **Metoda GetSchema** ma <xref:System.Data.DataTable>postać. Metoda **GetSchema** jest przeciążoną metodą, która zapewnia parametry opcjonalne do określania kolekcji schematów do zwrócenia i ograniczając ilość zwracanych informacji.  
   
-## <a name="specifying-the-schema-collections"></a>Określanie kolekcje schematów  
- Pierwszy parametr opcjonalny **GetSchema** metoda to nazwa kolekcji, która jest określana jako ciąg. Istnieją dwa typy kolekcje schematów: Typowe kolekcje schematów, które są wspólne dla wszystkich dostawców i kolekcje określonego schematu, które są specyficzne dla każdego dostawcy.  
+## <a name="specifying-the-schema-collections"></a>Określanie kolekcji schematów  
+ Pierwszy opcjonalny parametr metody **GetSchema** jest nazwą kolekcji, która jest określona jako ciąg. Istnieją dwa typy kolekcji schematów: wspólne kolekcje schematów, które są wspólne dla wszystkich dostawców i konkretne kolekcje schematów, które są specyficzne dla każdego dostawcy.  
   
- Można tworzyć zapytania zarządzanego dostawcy .NET Framework, aby określić listę kolekcje schematów obsługiwanych przez wywołanie metody **GetSchema** metody bez argumentów lub nazwą kolekcji schematów "MetaDataCollections". Spowoduje to zwrócenie <xref:System.Data.DataTable> z listą kolekcje schematów obsługiwanych, liczba ograniczeń, które obsługują one każdego i części identyfikator, których używają.  
+ Można wysłać zapytanie do dostawcy zarządzanego .NET Framework, aby określić listę obsługiwanych kolekcji schematów przez wywołanie metody **GetSchema** bez argumentów lub z nazwą kolekcji schematów "MetaDataCollections". Spowoduje to zwrócenie <xref:System.Data.DataTable> listy obsługiwanych kolekcji schematów, liczbę ograniczeń, które one obsługują, oraz liczbę używanych przez nich części identyfikatora.  
   
-### <a name="retrieving-schema-collections-example"></a>Pobieranie schematu przykład kolekcji  
- W poniższych przykładach pokazano sposób użycia <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> metody .NET Framework Data Provider for SQL Server <xref:System.Data.SqlClient.SqlConnection> klasy do pobrania informacji o schemacie o wszystkich tabelach zawartych w **AdventureWorks**przykładowej bazy danych:  
+### <a name="retrieving-schema-collections-example"></a>Przykład pobierania kolekcji schematów  
+ W poniższych przykładach pokazano, jak za <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> pomocą metody dostawca danych .NET Framework dla klasy SQL Server <xref:System.Data.SqlClient.SqlConnection> pobrać informacje o schemacie dotyczące wszystkich tabel zawartych w przykładowej bazie danych **AdventureWorks** :  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -106,5 +106,5 @@ class Program
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Pobieranie informacji o schemacie bazy danych](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Pobieranie informacji o schemacie bazy danych](retrieving-database-schema-information.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

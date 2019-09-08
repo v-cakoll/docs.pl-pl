@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: 304387197c7c6ca31d76ce429cd1516be27ba7b9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c464762e82a24aab399a23ecb26420b5dce61f55
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938173"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782386"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Wyliczanie wystąpień programu SQL Server (ADO.NET)
 SQL Server zezwala aplikacjom na Znajdowanie SQL Server wystąpień w bieżącej sieci. Klasa ujawnia te informacje deweloperowi aplikacji, <xref:System.Data.DataTable> dostarczając zawierające informacje o wszystkich widocznych serwerach. <xref:System.Data.Sql.SqlDataSourceEnumerator> Zwracana tabela zawiera listę wystąpień serwera dostępnych w sieci, które pasują do listy udostępnionej, gdy użytkownik próbuje utworzyć nowe połączenie, a następnie rozwija listę rozwijaną zawierającą wszystkie dostępne serwery we **właściwościach połączenia.** okno dialogowe. Wyświetlane wyniki nie zawsze są kompletne.  
@@ -48,7 +48,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
 |**ServerName**|Nazwa serwera.|  
 |**InstanceName**|Nazwa wystąpienia serwera. Puste, jeśli serwer działa jako wystąpienie domyślne.|  
 |**Isclusterd**|Wskazuje, czy serwer jest częścią klastra.|  
-|**Wersja**|Wersja serwera programu. Przykład:<br /><br /> -9.00. x (SQL Server 2005)<br />-10.0. XX (SQL Server 2008)<br />-10.50. x (SQL Server 2008 R2)<br />-11.0. XX (SQL Server 2012)|  
+|**Wersja**|Wersja serwera programu. Na przykład:<br /><br /> -9.00. x (SQL Server 2005)<br />-10.0. XX (SQL Server 2008)<br />-10.50. x (SQL Server 2008 R2)<br />-11.0. XX (SQL Server 2012)|  
   
 ## <a name="enumeration-limitations"></a>Ograniczenia wyliczania  
  Wszystkie dostępne serwery mogą lub nie mogą być wymienione na liście. Lista może się różnić w zależności od takich czynników, jak limity czasu i ruch sieciowy. Może to spowodować, że lista będzie się różnić między dwoma kolejnymi wywołaniami. Zostaną wyświetlone tylko serwery w tej samej sieci. Pakiety emisji zwykle nie przechodzą na routery, co oznacza, że nie widzisz serwera na liście, ale będzie on stabilny dla wywołań.  
@@ -126,5 +126,5 @@ class Program
   
 ## <a name="see-also"></a>Zobacz także
 
-- [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server i ADO.NET](index.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

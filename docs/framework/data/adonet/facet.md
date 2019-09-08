@@ -2,15 +2,15 @@
 title: facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
-ms.openlocfilehash: 2b4a8a559d7297543812f3c67e3b90d06a011b0f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1ac46c882b266fbb73d5c709c9fdf297e2b55b1b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959103"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783971"
 ---
 # <a name="facet"></a>facet
-Zestaw *reguł* służy do dodawania szczegółów do definicji właściwości typu pierwotnego. Definicja [Właściwości](../../../../docs/framework/data/adonet/property.md) zawiera informacje o typie właściwości, ale często więcej szczegółów jest konieczna. Na przykład typ jednostki w modelu koncepcyjnym może mieć właściwość typu `String` , której wartość nie może być ustawiona na wartość null. Zestawy reguł umożliwiają określenie tego poziomu szczegółowości.  
+Zestaw *reguł* służy do dodawania szczegółów do definicji właściwości typu pierwotnego. Definicja [Właściwości](property.md) zawiera informacje o typie właściwości, ale często więcej szczegółów jest konieczna. Na przykład typ jednostki w modelu koncepcyjnym może mieć właściwość typu `String` , której wartość nie może być ustawiona na wartość null. Zestawy reguł umożliwiają określenie tego poziomu szczegółowości.  
   
  W poniższej tabeli opisano aspekty, które są obsługiwane w modelu EDM.  
   
@@ -30,11 +30,11 @@ Zestaw *reguł* służy do dodawania szczegółów do definicji właściwości t
 |`Unicode`|Wskazuje, czy wartość właściwości jest przechowywana w formacie Unicode.|`String`|  
   
 ## <a name="example"></a>Przykład  
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) używa języka specyficznego dla domeny (DSL) zwanego językiem definicji schematu koncepcyjnego ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych. Poniższy CSDL definiuje `Book` typ jednostki. Należy zauważyć, że zestawy reguł są implementowane jako atrybuty XML. Wartości aspektów wskazują, że żadna właściwość nie może być ustawiona na wartość null i `Scale` że `Precision` `Revision` Właściwość i ma być ustawiona na 29.  
+ [ADO.NET Entity Framework](./ef/index.md) używa języka specyficznego dla domeny (DSL) zwanego językiem definicji schematu koncepcyjnego ([CSDL](./ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych. Poniższy CSDL definiuje `Book` typ jednostki. Należy zauważyć, że zestawy reguł są implementowane jako atrybuty XML. Wartości aspektów wskazują, że żadna właściwość nie może być ustawiona na wartość null i `Scale` że `Precision` `Revision` Właściwość i ma być ustawiona na 29.  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Kluczowe założenia modelu danych jednostki](entity-data-model-key-concepts.md)
+- [Model danych jednostki](entity-data-model.md)

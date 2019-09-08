@@ -2,52 +2,51 @@
 title: Zestawy danych ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: da6fb7bbe82e37787615518fa74a0d84bf95758f
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: acbe5a549539a77d63332687486cbe8744592f8b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504270"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786990"
 ---
 # <a name="adonet-datasets"></a>Zestawy danych ADO.NET
-<xref:System.Data.DataSet> Obiekt ma decydujące znaczenie dla obsługi odłączony, rozproszone scenariusze danych za pomocą narzędzia ADO.NET. **DataSet** jest rezydentnego reprezentację danych, które zapewnia spójny model programowania relacyjnych niezależnie od tego źródła danych. Mogą być używane z wieloma i różnymi źródłami danych z danymi XML lub do zarządzania danymi lokalne dla aplikacji. **DataSet** przedstawia kompletny zestaw danych, w tym powiązane tabele, ograniczenia i relacje między tabelami. Poniższa ilustracja przedstawia **DataSet** modelu obiektów.  
+<xref:System.Data.DataSet> Obiekt jest centralną obsługą rozłączonych, rozproszonych scenariuszy danych za pomocą ADO.NET. **Zestaw danych** to reprezentacja danych będąca rezydentem pamięci, która zapewnia spójny relacyjny model programowania niezależnie od źródła danych. Może być używany z wieloma i różnymi źródłami danych, z danymi XML lub do zarządzania danymi lokalnymi w aplikacji. **Zestaw** danych reprezentuje kompletny zestaw danych, w tym powiązane tabele, ograniczenia i relacje między tabelami. Na poniższej ilustracji przedstawiono model obiektów **DataSet** .  
   
- ![ADO.Net graphic](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
+ ![Grafika ADO.NET](./media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 Model obiektów DataSet  
   
- Metody i obiektów w **DataSet** są spójne z identyfikatorami w modelu relacyjnej bazy danych.  
+ Metody i obiekty w **zestawie danych** są spójne z tymi w modelu relacyjnej bazy danych.  
   
- **DataSet** można utrwalić i ponownie załaduj jego zawartość w formacie XML, a jego schematu jako języka (XSD) definicji schematu XML. Aby uzyskać więcej informacji, zobacz [za pomocą XML w zestawie danych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
+ **Zestaw danych** może również utrwalać i ładować jego zawartość jako XML oraz schemat jako schemat języka definicji schematu XML (XSD). Aby uzyskać więcej informacji, zobacz [Używanie języka XML w zestawie danych](./dataset-datatable-dataview/using-xml-in-a-dataset.md).  
   
-## <a name="the-datatablecollection"></a>DataTableCollection  
- ADO.NET **DataSet** zawiera zbiór zero lub więcej tabel, reprezentowane przez <xref:System.Data.DataTable> obiektów. <xref:System.Data.DataTableCollection> Zawiera wszystkie **DataTable** obiekty w **zestawu danych**.  
+## <a name="the-datatablecollection"></a>Tabela DataTableCollection  
+ **Zestaw danych** ADO.NET zawiera kolekcję zawierającą zero lub więcej tabel reprezentowanych przez <xref:System.Data.DataTable> obiekty. Zawiera wszystkie obiekty **DataTable** w **zestawie danych.** <xref:System.Data.DataTableCollection>  
   
- A **DataTable** jest zdefiniowany w <xref:System.Data> przestrzeni nazw, a wartość reprezentuje pojedynczej tabeli dane rezydentny. Zawiera on kolekcję kolumn, reprezentowane przez <xref:System.Data.DataColumnCollection>i ograniczenia, reprezentowane przez <xref:System.Data.ConstraintCollection>, które razem definiują schematu tabeli. A **DataTable** także zawiera zestaw wierszy, reprezentowane przez <xref:System.Data.DataRowCollection>, który zawiera dane w tabeli. Wraz z jego bieżącym stanie <xref:System.Data.DataRow> zachowuje zarówno jego bieżąca i oryginalna wersja do identyfikowania zmian wartości przechowywane w wierszu.  
+ Element **DataTable** jest zdefiniowany w <xref:System.Data> przestrzeni nazw i reprezentuje pojedynczą tabelę danych znajdujących się w pamięci. Zawiera kolekcję kolumn reprezentowane przez <xref:System.Data.DataColumnCollection>, i ograniczenia reprezentowane <xref:System.Data.ConstraintCollection>przez, które razem definiują schemat tabeli. **Tabela DataTable** zawiera również kolekcję wierszy reprezentowanych przez <xref:System.Data.DataRowCollection>obiekt, który zawiera dane w tabeli. Wraz z bieżącym stanem <xref:System.Data.DataRow> zachowuje zarówno bieżącą, jak i oryginalną wersję, aby identyfikować zmiany wartości przechowywanych w wierszu.  
   
-## <a name="the-dataview-class"></a>DataView — klasa  
- A <xref:System.Data.DataView> umożliwia tworzenie różnych widoków danych przechowywanych w <xref:System.Data.DataTable>, możliwości, jest często używany w aplikacjach powiązanie danych. Za pomocą <xref:System.Data.DataView>, może uwidaczniać dane w tabeli z zamówieniami sortowania i dane można filtrować według wierszy, stanu lub w zależności od wyrażenia filtru. Aby uzyskać więcej informacji, zobacz [DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  
+## <a name="the-dataview-class"></a>Element DataView — Klasa  
+ A <xref:System.Data.DataView> umożliwia tworzenie różnych widoków danych przechowywanych <xref:System.Data.DataTable>w programie, które są często używane w aplikacjach do wiązania danych. Korzystając z <xref:System.Data.DataView>, można uwidocznić dane w tabeli z różnymi kolejności sortowania i można filtrować dane według stanu wiersza lub w oparciu o wyrażenie filtru. Aby uzyskać więcej informacji, zobacz temat [DataViews](./dataset-datatable-dataview/dataviews.md).  
   
-## <a name="the-datarelationcollection"></a>The DataRelationCollection  
- A **DataSet** zawiera relacje w jego <xref:System.Data.DataRelationCollection> obiektu. Relacja, reprezentowane przez <xref:System.Data.DataRelation> obiektu, kojarzy wierszy w jednym **DataTable** z wierszami w innym **DataTable**. Relacja jest analogiczne do ścieżki dołączania, które mogą istnieć między kolumnami klucza podstawowe i obce w relacyjnej bazie danych. A **DataRelation** identyfikuje pasujących kolumn w dwóch tabelach **zestawu danych**.  
+## <a name="the-datarelationcollection"></a>DataRelationCollection  
+ **Zestaw danych** zawiera relacje w <xref:System.Data.DataRelationCollection> obiekcie. Relacja reprezentowana przez <xref:System.Data.DataRelation> obiekt kojarzy wiersze w jednej **tabeli DataTable** z wierszami w innej **tabeli DataTable**. Relacja jest analogiczna do ścieżki sprzężenia, która może istnieć między podstawowymi a kolumnami klucza obcego w relacyjnej bazie danych. **Relacja** danych identyfikuje pasujące kolumny w dwóch tabelach **zestawu danych**.  
   
- Relacje Włącz nawigację z jednej tabeli do drugiej **zestawu danych**. Istotne elementy **DataRelation** nazwę relacji, nazwy tabel powiązanych i powiązanych kolumn w każdej tabeli. Relacje mogą być wbudowane w więcej niż jedną kolumnę na tabelę, określając szereg <xref:System.Data.DataColumn> obiektów jako kolumny klucza. Podczas dodawania relacji <xref:System.Data.DataRelationCollection>, możesz opcjonalnie dodać **UniqueKeyConstraint** i **ForeignKeyConstraint** wymuszania ograniczeń integralności, gdy zmiany zostaną wprowadzone do kolumny powiązanej wartości.  
+ Relacje umożliwiają nawigację z jednej tabeli do innej w **zestawie danych**. Zasadniczymi elementami **relacji** datarelationship są Nazwa relacji, Nazwa powiązanych tabel i powiązane kolumny w każdej tabeli. Relacje można kompilować z więcej niż jedną kolumną na tabelę, określając tablicę <xref:System.Data.DataColumn> obiektów jako kolumny klucza. Po dodaniu relacji do <xref:System.Data.DataRelationCollection>elementu można opcjonalnie dodać **UniqueKeyConstraint** i **element ForeignKeyConstraint** , aby wymusić ograniczenia integralności w przypadku wprowadzenia zmian w powiązanych wartościach kolumn.  
   
- Aby uzyskać więcej informacji, zobacz [Dodawanie elementów DataRelation](../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).  
+ Aby uzyskać więcej informacji, zobacz [Dodawanie relacji](./dataset-datatable-dataview/adding-datarelations.md)danych.  
   
 ## <a name="xml"></a>XML  
- Możesz wpisać **DataSet** ze strumienia XML lub dokumentu. Można użyć strumień XML lub dokument Dostarcz je do **zestawu danych** danych, informacje o schemacie lub obu. Informacje dostarczone z strumień XML lub dokumentu może być łączone z istniejące dane lub informacje o schemacie już istnieje w **zestawu danych**. Aby uzyskać więcej informacji, zobacz [za pomocą XML w zestawie danych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
+ **Zestaw danych** można wypełniać ze strumienia XML lub dokumentu. Możesz użyć strumienia XML lub dokumentu, aby dostarczyć do **zestawu** danych dane, informacje o schemacie lub oba te elementy. Informacje dostarczone ze strumienia lub dokumentu XML mogą być łączone z istniejącymi danymi lub informacjami o schemacie już obecnymi w **zestawie danych**. Aby uzyskać więcej informacji, zobacz [Używanie języka XML w zestawie danych](./dataset-datatable-dataview/using-xml-in-a-dataset.md).  
   
-## <a name="extendedproperties"></a>ExtendedProperties  
- **DataSet**, **DataTable**, i **DataColumn** wszystkie mają **ExtendedProperties** właściwości. **Właściwości rozszerzone** jest **PropertyCollection** umieszczane informacje niestandardowe, takie jak instrukcji SELECT, który został użyty do wygenerowania zestawu wyników lub czasu wygenerowania danych. **ExtendedProperties** kolekcji jest trwały informacji o schemacie dla **zestawu danych**.  
+## <a name="extendedproperties"></a>Właściwości ExtendedProperties  
+ Wszystkie **zestawy danych**, **DataTable**i **DataColumn** mają właściwość **Właściwości ExtendedProperties** . **Właściwości ExtendedProperties** jest **właściwością** , w której można umieścić informacje niestandardowe, takie jak instrukcja SELECT, która została użyta do wygenerowania zestawu wyników lub godzina wygenerowania danych. Kolekcja **Właściwości ExtendedProperties** jest utrwalona z informacjami o schemacie dla **zestawu danych**.  
   
 ## <a name="linq-to-dataset"></a>LINQ do DataSet  
- LINQ do zestawu danych udostępnia zintegrowane języka zapytań możliwości odłączonego — dane przechowywane w zestawie danych. LINQ do zestawu danych używa standardu [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] składni i dostarcza sprawdzanie składni w czasie kompilacji, wpisując statycznych i obsługę funkcji IntelliSense podczas korzystania z programu Visual Studio IDE.  
+ LINQ to DataSet udostępnia funkcje obsługi zapytań zintegrowanych z językiem dla odłączonych danych przechowywanych w zestawie danych. LINQ to DataSet używa standardowej [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] składni i zapewnia sprawdzanie składni w czasie kompilacji, statyczne wpisywanie i obsługę technologii IntelliSense podczas korzystania ze środowiska IDE programu Visual Studio.  
   
- Aby uzyskać więcej informacji, zobacz [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
+ Aby uzyskać więcej informacji, zobacz [LINQ to DataSet](linq-to-dataset.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [Elementy DataSet, DataTable i DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](ado-net-overview.md)
+- [Elementy DataSet, DataTable i DataView](./dataset-datatable-dataview/index.md)
+- [Pobieranie i modyfikowanie danych ADO.NET](retrieving-and-modifying-data.md)

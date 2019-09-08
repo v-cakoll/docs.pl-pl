@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 335d80255f7a3f5a22e8a69aa91c9e5b0843ea1e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 763b7a776007c2ce8dac42c6a5f7f00f6eb58a10
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741591"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776945"
 ---
 # <a name="linkresource-method"></a>LinkResource — Metoda
 Linki w zasobie.  
@@ -46,22 +46,22 @@ HRESULT LinkResource(
  Nazwa pliku.  
   
  `pszNewLocation`  
- Opcjonalne nową nazwę pliku. Jeśli innych niż NULL, `pszFileName` zostaną skopiowane do pszNewLocation.  
+ Opcjonalna nazwa nowego pliku. Jeśli wartość nie jest równa null, `pszFileName` zostanie skopiowana do pszNewLocation.  
   
  `pszResourceName`  
  Nazwa zasobu.  
   
  `dwFlags`  
- Ułatwienia dostępu flagi, takich jak `mrPublic` i `mrPrivate`. Ten parametr może być przekazana do [definemanifestresource — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md).  
+ Flagi dostępności, takie `mrPublic` jak `mrPrivate`i. Ten parametr może być przesłany do [metody DefineManifestResource —](../metadata/imetadataassemblyemit-definemanifestresource-method.md).  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga alink.h.  
+ Wymaga Alink. h.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink, interfejs](ialink-interface.md)
+- [IALink2, interfejs](ialink2-interface.md)
+- [ALink, interfejs API](index.md)

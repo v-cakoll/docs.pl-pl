@@ -2,26 +2,26 @@
 title: 'Instrukcje: Reprezentacja kolumn jako kolumn znacznika czasu lub wersji'
 ms.date: 03/30/2017
 ms.assetid: 5afd5ce8-1d20-4bc3-a34f-49d95449f493
-ms.openlocfilehash: db73bf4880d8f5556247f7b037fca24b0ddc56d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef99e0420b328f94686e08256ecf229000467810
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037742"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793503"
 ---
 # <a name="how-to-represent-columns-as-timestamp-or-version-columns"></a>Instrukcje: Reprezentacja kolumn jako kolumn znacznika czasu lub wersji
-Użyj [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> właściwość <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu, aby wyznaczyć reprezentująca kolumnę w bazie danych, który zawiera numery wersji lub sygnatur czasowych bazy danych do pola lub właściwości.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Użyj<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> właściwości atrybutu<xref:System.Data.Linq.Mapping.ColumnAttribute> , aby wyznaczyć pole lub właściwość w postaci kolumny bazy danych zawierającej sygnatury czasowe bazy danych lub numery wersji.  
   
- Aby uzyskać przykłady kodu, zobacz <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>.  
+ Aby zapoznać się z przykładami kodu, zobacz <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>.  
   
-### <a name="to-designate-a-field-or-property-as-representing-a-timestamp-or-version-column"></a>Aby wyznaczyć reprezentujący kolumnę sygnatur czasowych lub wersji pola lub właściwości  
+### <a name="to-designate-a-field-or-property-as-representing-a-timestamp-or-version-column"></a>Aby wyznaczyć pole lub właściwość jako kolumnę sygnatury czasowej lub wersji  
   
-1. Dodaj <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> właściwość <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu.  
+1. <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> Dodaj Właściwość<xref:System.Data.Linq.Mapping.ColumnAttribute> do atrybutu.  
   
-2. Ustaw <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> wartość właściwości `true`.  
+2. `true`Ustaw wartość <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> właściwości na.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Model obiektu LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [Instrukcje: Określ, której członkami są sprawdzane pod kątem konfliktów współbieżności](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)
-- [Instrukcje: Dostosowywanie klas jednostek za pomocą edytora kodu](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Model obiektu LINQ to SQL](the-linq-to-sql-object-model.md)
+- [Instrukcje: Określ, które składowe są testowane pod kątem konfliktów współbieżności](how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)
+- [Instrukcje: Dostosowywanie klas jednostek przy użyciu edytora kodu](how-to-customize-entity-classes-by-using-the-code-editor.md)

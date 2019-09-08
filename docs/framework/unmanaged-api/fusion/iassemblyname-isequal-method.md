@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1fc128d15c56981f4bc6122e38e0514d006e29e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 926bdcee3a3c3974c8546f3a6dfe98f0b62c93c8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768621"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796568"
 ---
 # <a name="iassemblynameisequal-method"></a>IAssemblyName::IsEqual — Metoda
-Określa, czy określony [iassemblyname —](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) obiekt jest taki sam tym `IAssemblyName`zgodnie z flagi porównania określony.  
+Określa, czy określony obiekt [IAssemblyName](iassemblyname-interface.md) jest równy temu `IAssemblyName`, na podstawie określonych flag porównania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +38,19 @@ HRESULT IsEqual (
   
 ## <a name="parameters"></a>Parametry  
  `pName`  
- [in] `IAssemblyName` Obiekt, do którego można to porównać `IAssemblyName`.  
+ podczas Obiekt, do którego ma zostać wykonane `IAssemblyName`porównanie. `IAssemblyName`  
   
  `dwCmpFlags`  
- [in] Bitowa kombinacja [asm_cmp_flags —](../../../../docs/framework/unmanaged-api/fusion/asm-cmp-flags-enumeration.md) wartości, które mają wpływ na wynik porównania.  
+ podczas Bitowa kombinacja wartości [ASM_CMP_FLAGS](asm-cmp-flags-enumeration.md) , które mają wpływ na porównanie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Fusion.h  
+ **Nagłówki** Fusion. h  
   
- **NET Framework w wersji:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IAssemblyName, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Wyliczenia łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [IAssemblyName, interfejs](iassemblyname-interface.md)
+- [Wyliczenia łączenia](fusion-enumerations.md)

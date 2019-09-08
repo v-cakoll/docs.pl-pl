@@ -1,27 +1,27 @@
 ---
-title: Dostawcy programu Entity Framework (WCF Data Services)
+title: Dostawca Entity Framework (Usługi danych programu WCF)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 650b5eb6-c71d-4dc1-8b64-b6beaf752114
-ms.openlocfilehash: a09c81b2d0f052884e8e54c899653a6f0e038aff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 612888aaa11c606112527f01864897560061845f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765625"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790852"
 ---
-# <a name="entity-framework-provider-wcf-data-services"></a>Dostawcy programu Entity Framework (WCF Data Services)
-Podobnie jak [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], ADO.NET Entity Framework jest oparta na modelu danych jednostki, który jest typem jednostki relacji modelu. Entity Framework tłumaczy operacji wykonywanych względem jego implementacja obiektu modelu danych jednostki, która jest wywoływana *modelu koncepcyjnego*, na równoważne operacje w odniesieniu do źródła danych. To sprawia, że platforma Entity Framework dostawcę idealne rozwiązanie dla usług danych, które są oparte na danych relacyjnych i wszelkie bazy danych, w której dostawcy danych, który obsługuje platformy Entity Framework może być używany z [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Aby uzyskać listę źródeł danych, które obecnie obsługuje platformy Entity Framework, zobacz [dostawców innych firm dla programu Entity Framework](https://go.microsoft.com/fwlink/?LinkId=143699).  
+# <a name="entity-framework-provider-wcf-data-services"></a>Dostawca Entity Framework (Usługi danych programu WCF)
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Na przykład ADO.NET Entity Framework jest oparty na Entity Data Model, który jest typem modelu relacji jednostek. Entity Framework tłumaczy operacje na implementację Entity Data Model, która jest nazywana *modelem koncepcyjnym*w równoważne operacje względem źródła danych. Dzięki temu Entity Framework idealnym dostawcą usług danych opartych na danych relacyjnych, a każda baza danych, która ma dostawcę danych obsługującą Entity Framework, może być używana z programem [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Aby zapoznać się z listą źródeł danych, które obecnie obsługują Entity Framework, zobacz [dostawców innych firm dla Entity Framework](https://go.microsoft.com/fwlink/?LinkId=143699).  
   
- W model koncepcyjny kontener jednostek jest głównym usługi. Należy zdefiniować model koncepcyjny platformy Entity Framework, zanim dane mogą być udostępniane przez usługę danych. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie usługi danych przy użyciu źródła danych programu ADO.NET Entity Framework](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md).  
+ W modelu koncepcyjnym kontener jednostki jest katalogiem głównym usługi. Model koncepcyjny należy zdefiniować w Entity Framework zanim dane będą mogły być udostępniane przez usługę danych. Aby uzyskać więcej informacji, zobacz [jak: Utwórz usługę danych przy użyciu źródła](create-a-data-service-using-an-adonet-ef-data-wcf.md)danych ADO.NET Entity Framework.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje model optymistycznej współbieżności, umożliwiając Definiowanie tokenem współbieżności dla jednostki. Ten token współbieżności, który zawiera jedną lub więcej właściwości jednostki, jest używany przez usługę danych do określenia, czy nastąpiła zmiana w danych, która jest wymagana, zaktualizowanych lub usuniętych. Gdy token wartości z elementu eTag w żądaniu różnią się od wartości bieżącej jednostki, wyjątek jest zgłaszany przez usługę danych. Aby wskazać, że właściwość jest częścią tokenu współbieżności, należy zastosować atrybut `ConcurrencyMode="Fixed"` w modelu danych zdefiniowane przez [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcy. Token współbieżności nie może zawierać właściwości klucza lub właściwości nawigacji. Aby uzyskać więcej informacji, zobacz [aktualizacja usługi danych](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]obsługuje optymistyczny model współbieżności, umożliwiając zdefiniowanie tokenu współbieżności dla jednostki. Ten token współbieżności, który zawiera co najmniej jedną właściwość jednostki, jest używany przez usługę danych w celu ustalenia, czy wprowadzono zmianę w danych, które są żądane, aktualizowane lub usuwane. Gdy wartości tokenu uzyskane z elementu eTag w żądaniu różnią się od bieżących wartości jednostki, wyjątek jest wywoływany przez usługę danych. Aby wskazać, że właściwość jest częścią tokenu współbieżności, należy zastosować atrybut `ConcurrencyMode="Fixed"` w modelu danych zdefiniowanym [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] przez dostawcę. Token współbieżności nie może zawierać właściwości Key ani właściwości nawigacji. Aby uzyskać więcej informacji, zobacz [Aktualizowanie usługi danych](updating-the-data-service-wcf-data-services.md).  
   
- Aby dowiedzieć się więcej na temat programu Entity Framework, zobacz [Omówienie programu Entity Framework](../../../../docs/framework/data/adonet/ef/overview.md).  
+ Aby dowiedzieć się więcej na temat Entity Framework, zobacz [Omówienie usługi Entity Framework](../adonet/ef/overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dostawcy usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
-- [Dostawca odbicia](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
-- [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Dostawcy usług danych](data-services-providers-wcf-data-services.md)
+- [Dostawca odbicia](reflection-provider-wcf-data-services.md)
+- [Model danych jednostki](../adonet/entity-data-model.md)

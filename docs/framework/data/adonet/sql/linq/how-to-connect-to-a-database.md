@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c33d74b3-530d-421b-a121-96786dd263a5
-ms.openlocfilehash: ebf630c08714a2e5162ba072f88b7fbdef7ca0f4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 48ff4af2c881104d5699910e20ef86eea0466d2a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964060"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793861"
 ---
 # <a name="how-to-connect-to-a-database"></a>Instrukcje: Łączenie z bazą danych
 <xref:System.Data.Linq.DataContext> Jest głównym kanałem, za pomocą którego nawiązujesz połączenie z bazą danych, pobierają z niej obiekty i przesyłamy zmiany z powrotem. Używasz tak samo jak w przypadku korzystania z ADO.NET <xref:System.Data.SqlClient.SqlConnection>. <xref:System.Data.Linq.DataContext> W rzeczywistości <xref:System.Data.Linq.DataContext> jest inicjowany z użyciem parametrów połączenia lub połączenia, które są dostarczane. Aby uzyskać więcej informacji, zobacz [metody DataContext (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer).  
@@ -18,7 +18,7 @@ ms.locfileid: "69964060"
  Celem <xref:System.Data.Linq.DataContext> jest przetłumaczenie żądań obiektów na zapytania SQL, które mają zostać wykonane względem bazy danych, a następnie do złożenia obiektów z wyników. Włącza przez implementację tego samego wzorca operatora jako standardowych operatorów zapytań, takich jak `Where` i `Select`. <xref:System.Data.Linq.DataContext> [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)]  
   
 > [!IMPORTANT]
-> Utrzymywanie bezpiecznego połączenia ma najwyższy priorytet. Aby uzyskać więcej informacji, zobacz [zabezpieczenia w LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
+> Utrzymywanie bezpiecznego połączenia ma najwyższy priorytet. Aby uzyskać więcej informacji, zobacz [zabezpieczenia w LINQ to SQL](security-in-linq-to-sql.md).  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie <xref:System.Data.Linq.DataContext> jest używany do nawiązywania połączenia z przykładową bazą danych Northwind oraz do pobierania wierszy klientów, których miasto jest Londyn.  
@@ -41,4 +41,4 @@ ms.locfileid: "69964060"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Komunikacja z bazą danych](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)
+- [Komunikacja z bazą danych](communicating-with-the-database.md)

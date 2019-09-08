@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: 6518e4edeccdd533487f717122ba6832f13436a3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b73904e2347c501b21b2c5933d0b43c7abafeb7c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947065"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792315"
 ---
 # <a name="the-linq-to-sql-object-model"></a>Model obiektu LINQ to SQL
 W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]programie model obiektów wyrażony w języku programowania dewelopera jest mapowany na model danych relacyjnej bazy danych. Operacje na danych są następnie wykonywane zgodnie z modelem obiektów.  
@@ -40,7 +40,7 @@ W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]programie m
   
  Tylko wystąpienia klas zadeklarowanych jako tabele (czyli klasy jednostek) można zapisać w bazie danych.  
   
- Aby uzyskać więcej informacji, zobacz sekcję atrybut tabeli [mapowania opartego na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ Aby uzyskać więcej informacji, zobacz sekcję atrybut tabeli [mapowania opartego na atrybutach](attribute-based-mapping.md).  
   
 ## <a name="linq-to-sql-class-members-and-database-columns"></a>Elementy członkowskie klasy LINQ to SQL i kolumny bazy danych  
  Oprócz kojarzenia klas z tabelami należy wyznaczyć pola lub właściwości do reprezentowania kolumn bazy danych. W tym celu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute> definiuje atrybut, jak w poniższym przykładzie:  
@@ -51,7 +51,7 @@ W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]programie m
   
  Tylko pola i właściwości zamapowane do kolumn są utrwalane lub pobierane z bazy danych. Te, które nie są zadeklarowane jako kolumny, są uznawane za przejściowe części logiki aplikacji.  
   
- Ten <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybut ma różne właściwości, których można użyć do dostosowania tych elementów członkowskich, które reprezentują kolumny (na przykład wyznaczanie elementu członkowskiego jako kolumny klucza podstawowego). Aby uzyskać więcej informacji, zobacz sekcję atrybut kolumny [mapowania opartego na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ Ten <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybut ma różne właściwości, których można użyć do dostosowania tych elementów członkowskich, które reprezentują kolumny (na przykład wyznaczanie elementu członkowskiego jako kolumny klucza podstawowego). Aby uzyskać więcej informacji, zobacz sekcję atrybut kolumny [mapowania opartego na atrybutach](attribute-based-mapping.md).  
   
 ## <a name="linq-to-sql-associations-and-database-foreign-key-relationships"></a>Powiązania LINQ to SQL i relacje klucza obcego bazy danych  
  W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]programie reprezentowane są <xref:System.Data.Linq.Mapping.AssociationAttribute> skojarzenia bazy danych (takie jak klucz obcy z relacjami klucza podstawowego) przez zastosowanie atrybutu. W poniższym segmencie kodu `Order` Klasa `Customer` zawiera właściwość, która ma <xref:System.Data.Linq.Mapping.AssociationAttribute> atrybut. Ta właściwość i jej atrybut zapewniają `Order` klasę z relacją `Customer` do klasy.  
@@ -62,7 +62,7 @@ W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]programie m
  [!code-csharp[DLinqObjectModel#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#3)]
  [!code-vb[DLinqObjectModel#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/northwind.vb#3)]  
   
- Aby uzyskać więcej informacji, zobacz sekcję atrybut skojarzenia w [mapowaniu opartym na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ Aby uzyskać więcej informacji, zobacz sekcję atrybut skojarzenia w [mapowaniu opartym na atrybutach](attribute-based-mapping.md).  
   
 ## <a name="linq-to-sql-methods-and-database-stored-procedures"></a>Metody LINQ to SQL i procedury składowane bazy danych  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]obsługuje procedury składowane i funkcje zdefiniowane przez użytkownika. W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]programie należy mapować te abstrakcyjne zdefiniowane dla bazy danych na obiekty klienckie, aby można było uzyskać do nich dostęp w jednoznacznie określonym sposób z kodu klienta. Sygnatury metod przypominają możliwie najbliżej sygnatury procedur i funkcji zdefiniowanych w bazie danych. Aby poznać te metody, można użyć funkcji IntelliSense.  
@@ -78,9 +78,9 @@ W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]programie m
  [!code-csharp[DLinqObjectModel#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#4)]
  [!code-vb[DLinqObjectModel#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/northwind.vb#4)]  
   
- Aby uzyskać więcej informacji, zobacz sekcję atrybut funkcji, atrybut procedury składowanej i atrybuty parametrów dotyczące mapowań i [procedur składowanych](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md) [opartych na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) .  
+ Aby uzyskać więcej informacji, zobacz sekcję atrybut funkcji, atrybut procedury składowanej i atrybuty parametrów dotyczące mapowań i [procedur składowanych](stored-procedures.md) [opartych na atrybutach](attribute-based-mapping.md) .  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Mapowanie oparte na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
-- [Informacje uzupełniające](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Mapowanie oparte na atrybutach](attribute-based-mapping.md)
+- [Informacje uzupełniające](background-information.md)

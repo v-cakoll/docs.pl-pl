@@ -2,74 +2,74 @@
 title: Rozwiązywanie problemów
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 697432dce5f7698a8b4eabde3586bb4f77fd62de
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0eede70b67cbaef4805fc7fc5f07fc51e342ea3f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742743"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780979"
 ---
 # <a name="troubleshooting"></a>Rozwiązywanie problemów
-Poniższe informacje przedstawia niektóre problemy, które mogą wystąpić w swojej [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji i oferuje sugestie, aby uniknąć lub w przeciwnym razie ograniczenia wpływu tych problemów.  
+Poniższe informacje ujawniają problemy, które mogą wystąpić w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacjach, i zawierają sugestie dotyczące unikania lub zmniejszania skutków tych problemów.  
   
- Dodatkowe problemy zostały rozwiązane w [— często zadawane pytania](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md).  
+ Dodatkowe problemy są rozwiązywane w [często zadawanych pytaniach](frequently-asked-questions.md).  
   
-## <a name="unsupported-standard-query-operators"></a>Nieobsługiwana standardowych operatorów zapytań  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie obsługuje wszystkie metody standardowego operatora zapytań (na przykład <xref:System.Linq.Enumerable.ElementAt%2A>). W rezultacie projekty kompilowane nadal może spowodować błędy czasu wykonywania. Aby uzyskać więcej informacji, zobacz [standardowa translacji operatora zapytania](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
+## <a name="unsupported-standard-query-operators"></a>Nieobsługiwane standardowe operatory zapytań  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Program nie obsługuje wszystkich standardowych metod operatora zapytań (na przykład <xref:System.Linq.Enumerable.ElementAt%2A>). W efekcie projekty, które kompilują, mogą nadal generować błędy w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [standardowe tłumaczenia operatorów zapytań](standard-query-operator-translation.md).  
   
 ## <a name="memory-issues"></a>Problemy z pamięcią  
- Jeśli zapytanie obejmuje kolekcji w pamięci i [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>, być może można wykonać zapytania w pamięci, w zależności od kolejności, w której określane są dwie kolekcje. Jeśli zapytanie musi zostać wykonana w pamięci, następnie dane z tabeli bazy danych należy do pobrania.  
+ Jeśli zapytanie obejmuje kolekcję w pamięci i [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>, zapytanie może być wykonywane w pamięci, w zależności od kolejności, w której określono dwie kolekcje. Jeśli zapytanie musi zostać wykonane w pamięci, należy pobrać dane z tabeli bazy danych.  
   
- To podejście jest nieefektywne i może spowodować znaczne obciążenie pamięci i procesora. Należy unikać takich zapytania obejmujące wiele domen.  
+ Takie podejście jest niewydajne i może spowodować znaczne użycie pamięci i procesora. Spróbuj uniknąć takich zapytań wielodomenowych.  
   
 ## <a name="file-names-and-sqlmetal"></a>Nazwy plików i SQLMetal  
- Aby określić nazwę pliku wejściowego, należy dodać ją do wiersza polecenia jako plik wejściowy. Łącznie z nazwą pliku w parametrach połączenia (przy użyciu **/conn** opcja) nie jest obsługiwane. Aby uzyskać więcej informacji, zobacz [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+ Aby określić nazwę pliku wejściowego, należy dodać ją do wiersza polecenia jako plik wejściowy. Dołączenie nazwy pliku w parametrach połączenia (przy użyciu opcji **/Conn** ) nie jest obsługiwane. Aby uzyskać więcej informacji, zobacz [SQLMetal. exe (Narzędzie generowania kodu)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
-## <a name="class-library-projects"></a>Projekty bibliotek klas  
- Object Relational Designer tworzy ciąg połączenia w `app.config` pliku projektu. W projektach biblioteki klas `app.config` plik nie jest używany. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] korzysta z plików czasu projektowania w podanym ciągu połączenia. Zmiana wartości w `app.config` nie zmienia się z bazą danych, z którym łączy się aplikacja.  
+## <a name="class-library-projects"></a>Projekty biblioteki klas  
+ Object Relational Designer tworzy parametry połączenia w `app.config` pliku projektu. W projektach `app.config` biblioteki klas plik nie jest używany. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]używa parametrów połączenia dostarczonych w plikach czasu projektowania. Zmiana wartości w programie `app.config` nie powoduje zmiany bazy danych, z którą aplikacja nawiązuje połączenie.  
   
 ## <a name="cascade-delete"></a>Usuwanie kaskadowe  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie obsługuje ani nie rozpoznają operations usuwanie kaskadowe. Aby usunąć wiersz w tabeli, która ma ograniczenia względem go, należy wykonać jedną z następujących czynności:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]nie obsługuje ani nie rozpoznaje operacji kaskadowego usuwania. Jeśli chcesz usunąć wiersz w tabeli zawierającej ograniczenia, wykonaj jedną z następujących czynności:  
   
-- Ustaw `ON DELETE CASCADE` reguły w ograniczenie klucza obcego w bazie danych.  
+- `ON DELETE CASCADE` Ustaw regułę w ograniczeniu klucza obcego w bazie danych.  
   
-- Użyj własnego kodu, aby najpierw usunąć obiekty podrzędne, które uniemożliwiają usunięcie obiektu nadrzędnego.  
+- Aby najpierw usunąć obiekty podrzędne, które uniemożliwiają usunięcie obiektu nadrzędnego, użyj własnego kodu.  
   
- W przeciwnym razie <xref:System.Data.SqlClient.SqlException> jest zgłaszany wyjątek.  
+ W przeciwnym razie jest zgłaszany wyjątek.<xref:System.Data.SqlClient.SqlException>  
   
- Aby uzyskać więcej informacji, zobacz [jak: Usuwanie wierszy z bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
+ Aby uzyskać więcej informacji, zobacz [jak: Usuń wiersze z bazy danych](how-to-delete-rows-from-the-database.md).  
   
-## <a name="expression-not-queryable"></a>Wyrażenie nie umożliwia zadawania zapytań  
- Jeśli zostanie wyświetlony, "wyrażenie [wyrażenie] jest nie umożliwia zadawania zapytań; czy nie brakuje odwołania do zestawu?" błąd, upewnij się, z następujących czynności:  
+## <a name="expression-not-queryable"></a>Wyrażenie nie jest Queryable  
+ W przypadku uzyskania wyrażenia "wyrażenie [wyrażenie] nie jest Queryable; Czy brakuje odwołania do zestawu? " błąd, upewnij się, że:  
   
-- Aplikacja jest przeznaczony dla platformy .NET Compact Framework 3.5.  
+- Twoja aplikacja jest ukierunkowana na .NET Compact Framework 3,5.  
   
-- Odwołania do `System.Core.dll` i `System.Data.Linq.dll`.  
+- Istnieje odwołanie do `System.Core.dll` i `System.Data.Linq.dll`.  
   
-- Masz `Imports` (Visual Basic) lub `using` — dyrektywa (C#) dla <xref:System.Linq> i <xref:System.Data.Linq>.  
+- C# <xref:System.Linq> `using` Masz dyrektywę <xref:System.Data.Linq>(Visual Basic) lub () dla i. `Imports`  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
- W trakcie debugowania [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projektu, może przechodzić przez relacji jednostek. Ten sposób zapewniają te elementy w pamięci podręcznej i [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uzyska informacje o ich obecności. Jeśli zostanie podjęta próba wykonania <xref:System.Data.Linq.Table%601.Attach%2A> lub <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> lub podobnej metody, która tworzy wiele wierszy, które mają ten sam klucz <xref:System.Data.Linq.DuplicateKeyException> zgłaszany.  
+ W trakcie debugowania [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projektu można przechodzenie między relacjami jednostek. Dzięki temu te elementy są umieszczane w pamięci podręcznej i [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] będą miały świadomość ich obecności. Jeśli następnie spróbujesz wykonać <xref:System.Data.Linq.Table%601.Attach%2A> lub <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> lub podobną metodę, która produkuje wiele wierszy, które mają ten sam klucz, <xref:System.Data.Linq.DuplicateKeyException> zostanie zgłoszony.  
   
-## <a name="string-concatenation-exceptions"></a>Wyjątki konkatenacji ciągów  
- Łączenie w przypadku argumentów operacji mapowane na `[n]text` i innych `[n][var]char` nie jest obsługiwane. Wyjątek jest generowany dla łączenia ciągów mapowany na dwa różne zestawy typów. Aby uzyskać więcej informacji, zobacz [metody System.String](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md).  
+## <a name="string-concatenation-exceptions"></a>Wyjątki łączenia ciągów  
+ Łączenie z operandami zamapowanymi `[n]text` na i `[n][var]char` inne nie jest obsługiwane. Wyjątek jest zgłaszany w przypadku łączenia ciągów mapowanych na dwa różne zestawy typów. Aby uzyskać więcej informacji, zobacz [metody System. String](system-string-methods.md).  
   
-## <a name="skip-and-take-exceptions-in-sql-server-2000"></a>Pomiń i Pobierz wyjątki w programie SQL Server 2000  
- Należy użyć składowych tożsamości (<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>) zastosowania <xref:System.Linq.Queryable.Take%2A> lub <xref:System.Linq.Queryable.Skip%2A> względem bazy danych programu SQL Server 2000. Zapytanie musi być względem pojedynczej tabeli (czyli nie sprzężenia) lub <xref:System.Linq.Queryable.Distinct%2A>, <xref:System.Linq.Queryable.Except%2A>, <xref:System.Linq.Queryable.Intersect%2A>, lub <xref:System.Linq.Queryable.Union%2A> operacji i nie może zawierać <xref:System.Linq.Queryable.Concat%2A> operacji. Aby uzyskać więcej informacji, zobacz sekcję "Obsługa programu SQL Server 2000" w [standardowa translacji operatora zapytania](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
+## <a name="skip-and-take-exceptions-in-sql-server-2000"></a>Pomiń i podejmij wyjątki w SQL Server 2000  
+ Należy używać członków tożsamości (<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>) w przypadku korzystania z bazy danych SQL Server 2000 lub <xref:System.Linq.Queryable.Skip%2A> jej używania <xref:System.Linq.Queryable.Take%2A> . Zapytanie musi znajdować się w odniesieniu do pojedynczej tabeli (to nie sprzężenia) lub <xref:System.Linq.Queryable.Distinct%2A>być <xref:System.Linq.Queryable.Except%2A>operacją, <xref:System.Linq.Queryable.Union%2A> , <xref:System.Linq.Queryable.Intersect%2A>, <xref:System.Linq.Queryable.Concat%2A> lub i nie może zawierać operacji. Aby uzyskać więcej informacji, zobacz sekcję "Pomoc techniczna w SQL Server 2000" w [standardowym tłumaczeniu operatora zapytań](standard-query-operator-translation.md).  
   
- Ten wymóg nie ma zastosowania do wersji SQL Server 2005.  
+ To wymaganie nie ma zastosowania do SQL Server 2005.  
   
-## <a name="groupby-invalidoperationexception"></a>GroupBy InvalidOperationException  
- Ten wyjątek jest zgłaszany, gdy wartość kolumny ma wartość null w <xref:System.Linq.Enumerable.GroupBy%2A> kwerendę, która grupuje według `boolean` wyrażenie, takie jak `group x by (Phone==@phone)`. Ponieważ wyrażenie jest `boolean`, klucz wywnioskowana jest `boolean`, a nie `nullable` `boolean`. Gdy przetłumaczone porównania tworzy wartość null, aby przypisać zostanie podjęta próba `nullable` `boolean` do `boolean`, i jest wyjątek.  
+## <a name="groupby-invalidoperationexception"></a>InvalidOperationException GroupBy  
+ Ten wyjątek jest zgłaszany, gdy wartość kolumny jest równa <xref:System.Linq.Enumerable.GroupBy%2A> null w zapytaniu, `boolean` które grupuje wyrażenie `group x by (Phone==@phone)`, takie jak. Ponieważ wyrażenie ma `boolean`wartość, klucz jest wywnioskowany `boolean`jako, nie `nullable` `boolean`. Gdy przetłumaczone porównanie daje wartość null, podejmowana jest próba przypisania `nullable` `boolean` `boolean`do i, a wyjątek jest zgłaszany.  
   
- Aby uniknąć tej sytuacji (przy założeniu, że ma traktować wartości null jako FAŁSZ), należy użyć podejścia, takie jak następujące:  
+ Aby uniknąć tej sytuacji (przy założeniu, że chcesz traktować wartości null jako FAŁSZ), użyj podejścia, takiego jak:  
   
  `GroupBy="(Phone != null) && (Phone=@Phone)"`  
   
-## <a name="oncreated-partial-method"></a>OnCreated() Partial Method  
- Wygenerowana metoda `OnCreated()` jest wywoływana za każdym razem, wywoływany jest konstruktor obiektu, w którym w tym scenariuszu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wywołuje konstruktor kopiowania do oryginalnych wartości. Uwzględnia to zachowanie w przypadku zaimplementowania `OnCreated()` metody w klasie częściowej.  
+## <a name="oncreated-partial-method"></a>OnCreated () — Metoda częściowa  
+ Wygenerowana Metoda `OnCreated()` jest wywoływana za każdym razem, gdy Konstruktor obiektów jest wywoływany, łącznie z [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariuszem, w którym Konstruktor tworzy kopię dla oryginalnych wartości. To zachowanie należy wziąć pod uwagę w przypadku zaimplementowania `OnCreated()` metody we własnej klasie częściowej.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Obsługa debugowania](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
-- [Często zadawane pytania](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
+- [Obsługa debugowania](debugging-support.md)
+- [Często zadawane pytania](frequently-asked-questions.md)

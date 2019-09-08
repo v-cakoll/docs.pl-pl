@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: f6677e894e09b41e1f406d6b6485abf4168b5d6e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5aaf33e5e2379ace4d32c59bd842889d0f9e32da
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946257"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794537"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Zapytania w LINQ to DataSet
 Zapytanie jest wyrażeniem, które pobiera dane ze źródła danych. Zapytania są zwykle wyrażane w wyspecjalizowanym języku zapytań, takim jak SQL dla relacyjnych baz danych i XQuery for XML. W związku z tym deweloperzy musieli poznać nowy język zapytań dla każdego typu źródła danych lub formatu danych, który wykonuje zapytanie. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]oferuje prostszy, spójny model służący do pracy z danymi w różnych rodzajach źródeł danych i formatach. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] W zapytaniu zawsze pracujesz z obiektami programowania.  
@@ -61,7 +61,7 @@ Zapytanie jest wyrażeniem, które pobiera dane ze źródła danych. Zapytania s
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
-- [Wykonywanie zapytania do zestawów danych](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
+- [Przewodnik programowania](programming-guide-linq-to-dataset.md)
+- [Wykonywanie zapytania do zestawów danych](querying-datasets-linq-to-dataset.md)
 - [Wprowadzenie do korzystania z LINQ w C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Wprowadzenie ze składnikami LINQ w Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

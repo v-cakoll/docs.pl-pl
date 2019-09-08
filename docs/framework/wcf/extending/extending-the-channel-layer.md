@@ -4,25 +4,25 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending channels [WCF]
 ms.assetid: 4238db74-2fb6-4dc8-a326-f58527230810
-ms.openlocfilehash: e60d8ef1a5191c6407b01eb1a2456a06aeeb1914
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76ca76d7973403c657b8f68bfde9619df36f220e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857912"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797137"
 ---
 # <a name="extending-the-channel-layer"></a>Rozszerzanie warstwy kanału
-Warstwy kanału jest odpowiedzialny za wymiana wiadomości między klientami i usługami. Rozszerzenia kanału można zaimplementować nowych funkcji protokołu, takie jak zabezpieczenia czy funkcji transportu, takich jak zaimplementowanie nowy transport do sieci, żeby komunikaty protokołu SOAP.  
+Warstwa kanału jest odpowiedzialna za wymianę komunikatów między klientami i usługami. Rozszerzenia kanału mogą implementować nowe funkcje protokołu, takie jak zabezpieczenia lub funkcje transportu, takie jak implementacja nowego transportu sieciowego do przenoszenia komunikatów protokołu SOAP.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przegląd modelu kanału](../../../../docs/framework/wcf/extending/channel-model-overview.md)  
- Zawiera ogólne omówienie kanałów, jakie są funkcje, które zapewniają i jak działają zarówno w usłudze i aplikację kliencką.  
+ [Przegląd modelu kanału](channel-model-overview.md)  
+ Zawiera ogólny przegląd informacji o kanałach, funkcjach, które zapewnia i jak działają zarówno w usłudze, jak i w aplikacji klienckiej.  
   
- [Opracowywanie kanałów](../../../../docs/framework/wcf/extending/developing-channels.md)  
- W tym artykule opisano szczegółowo role, które odtwarzania różnych typów kanałów w infrastrukturze, sposobu działania cyklu życia aparatu i stan stanu, sposób obsługi wyjątków i błędów, jak zaimplementować obsługę metadanych i za pomocą koderów wiadomości na temat działania kanałów.  
+ [Opracowywanie kanałów](developing-channels.md)  
+ Szczegółowo opisano role, które są odtwarzane przez różne typy infrastruktury kanałów, jak działa aparat stanu i cykl życia stanu, jak obsługiwać wyjątki i błędy, jak zaimplementować obsługę metadanych oraz jak kanały pracują z koderami komunikatów.  
   
- [Niestandardowe kodery](../../../../docs/framework/wcf/extending/custom-encoders.md)  
- W tym artykule opisano rolę pełniące koderów wiadomości w kanałach oraz sposób zbudować ją.  
+ [Niestandardowe kodery](custom-encoders.md)  
+ Opisuje rolę, jaką odgrywa kodery wiadomości w kanałach i jak ją skompilować.  
   
- [Niestandardowe uaktualnienia strumienia](../../../../docs/framework/wcf/extending/custom-stream-upgrades.md)  
- W tym artykule opisano proces uaktualniania strumieni, dostarczone przez zorientowane na strumień transportu.
+ [Niestandardowe uaktualnienia strumienia](custom-stream-upgrades.md)  
+ Opisuje proces uaktualniania strumieni dostarczonych przez transporty ukierunkowane na strumień.

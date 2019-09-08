@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e478cb89821ce8666f1746e752e06d2caa3ad2bb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 58ee2764d2e2c4c4e21effa3e0c3551a2e145f40
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751593"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796505"
 ---
-# <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB — Struktura
-Zawiera informacje o jeden atrybut w zestawie i składa się z trzech `DWORD`s. Każdy `DWORD` to przesunięcie buforu znaków, utworzona przez testowany `CurrentIntoBuffer` metody [ienumidentity_attribute —](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) interfejsu  
+# <a name="identity_attribute_blob-structure"></a>IDENTITY_ATTRIBUTE_BLOB — Struktura
+Zawiera informacje o pojedynczym atrybucie w zestawie i składa się z trzech `DWORD`elementów. Każdy `DWORD` jest przesunięciem do buforu znaków utworzonego `CurrentIntoBuffer` przez metodę interfejsu [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,20 +42,20 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`ofsNamespace`|Pierwsze przesunięcie buforu znaków. To przesunięcie nie jest zakończony przez ten atrybut przestrzeni nazw, ale przez ciąg znaków o wartości null. W związku z tym nie jest używany.|  
-|`ofsName`|Drugi przesunięcie buforu znaków. Ta lokalizacja oznacza początek nazwę atrybutu.|  
-|`ofsValue`|Trzeci przesunięcie buforu znaków. Ta lokalizacja oznacza początek wartość atrybutu.|  
+|`ofsNamespace`|Pierwsze przesunięcie do buforu znaków. To przesunięcie nie następuje po nazwie przestrzeni nazw atrybutu, ale przez serię znaków null. W związku z tym nie jest używany.|  
+|`ofsName`|Drugie przesunięcie do buforu znaków. Ta lokalizacja oznacza początek nazwy atrybutu.|  
+|`ofsValue`|Trzecie przesunięcie do buforu znaków. Ta lokalizacja oznacza początek wartości atrybutu.|  
   
 ## <a name="sample"></a>Przykład  
- W poniższym przykładzie pokazano kilka podstawowe kroki, które ostatecznie powoduje wypełnione `IDENTITY_ATTRIBUTE_BLOB` strukturę:  
+ Poniższy przykład ilustruje kilka podstawowych kroków, które ostatecznie spowodują, że została wypełniona `IDENTITY_ATTRIBUTE_BLOB` :  
   
-1. Uzyskaj [ireferenceidentity —](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) dla zestawu.  
+1. Uzyskaj [IReferenceIdentity —](ireferenceidentity-interface.md) dla zestawu.  
   
-2. Wywołaj `IReferenceIdentity::EnumAttributes` metody i uzyskać [ienumidentity_attribute —](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).  
+2. Wywołaj metodę i uzyskaj IEnumIDENTITY_ATTRIBUTE. [](ienumidentity-attribute-interface.md) `IReferenceIdentity::EnumAttributes`  
   
-3. Tworzenie buforu znaków i zrzutowania go `IDENTITY_ATTRIBUTE_BLOB` struktury.  
+3. Utwórz bufor znaków i Cast jako `IDENTITY_ATTRIBUTE_BLOB` strukturę.  
   
-4. Wywołaj `CurrentIntoBuffer` metody `IEnumIDENTITY_ATTRIBUTE` interfejsu. Ta metoda kopiuje atrybuty `Namespace`, `Name`, i `Value` do buforu znaków. Trzy przesunięcia do tych ciągów staną się dostępne w `IDENTITY_ATTRIBUTE_BLOB` struktury.  
+4. Wywoływanie `IEnumIDENTITY_ATTRIBUTE`metodyinterfejsu. `CurrentIntoBuffer` Ta metoda kopiuje atrybuty `Namespace`, `Name`i `Value` do buforu znaków. Trzy przesunięcia do tych ciągów staną się dostępne w `IDENTITY_ATTRIBUTE_BLOB` strukturze.  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -225,26 +225,26 @@ Exit:
  C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
   
 ### <a name="sample-output"></a>Przykładowe dane wyjściowe  
- Culture = neutral  
+ Kultura = neutralna  
   
- Nazwa = System  
+ Nazwa = system  
   
  processorArchitecture = MSIL  
   
  PublicKeyToken = b77a5c561934e089  
   
- W wersji = 2.0.0.0  
+ Wersja = 2.0.0.0  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Isolation.h  
+ **Nagłówki** Izolacja. h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IReferenceIdentity, interfejs](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
-- [IEnumIDENTITY_ATTRIBUTE, interfejs](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
-- [IDENTITY_ATTRIBUTE, struktura](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)
-- [Łączenie — struktury](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [IReferenceIdentity, interfejs](ireferenceidentity-interface.md)
+- [IEnumIDENTITY_ATTRIBUTE, interfejs](ienumidentity-attribute-interface.md)
+- [IDENTITY_ATTRIBUTE, struktura](identity-attribute-structure.md)
+- [Łączenie — struktury](fusion-structures.md)

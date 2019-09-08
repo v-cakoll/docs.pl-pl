@@ -2,12 +2,12 @@
 title: 'Instrukcje: eksportowanie niestandardowych informacji w formacie WSDL'
 ms.date: 03/30/2017
 ms.assetid: 5c1e4b58-b76b-472b-9635-2f80d42a0734
-ms.openlocfilehash: 0e8d1079124b981c3408d46040c8d83bf6877dfb
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 723121798fee3a3c0b49a7f15995bb26444836e8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972101"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797004"
 ---
 # <a name="how-to-export-custom-wsdl"></a>Instrukcje: eksportowanie niestandardowych informacji w formacie WSDL
 
@@ -200,4 +200,4 @@ return lines;
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Metadane](../../../../docs/framework/wcf/feature-details/metadata.md)
+- [Metadane](../feature-details/metadata.md)

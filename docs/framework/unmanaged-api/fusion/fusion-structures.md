@@ -8,32 +8,32 @@ helpviewer_keywords:
 ms.assetid: 3feb4fc5-a1e9-445d-929c-0a7490244114
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 762b23af9eb6282a26d9b0430132023c9f76d1f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb66e0d518abc2d337362affbd2aa951303128f3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697735"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795294"
 ---
 # <a name="fusion-structures"></a>Łączenie — Struktury
-W tej sekcji opisano niezarządzane struktury, używane do łączenia interfejsu API.  
+W tej sekcji opisano niezarządzane struktury używane przez interfejs API Fusion.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [ASSEMBLY_INFO, struktura](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md)  
- Zawiera informacje o zestawie, który jest zarejestrowany w globalnej pamięci podręcznej.  
+ [ASSEMBLY_INFO, struktura](assembly-info-structure.md)  
+ Zawiera informacje dotyczące zestawu, który jest zarejestrowany w globalnej pamięci podręcznej zestawów.  
   
- [FUSION_INSTALL_REFERENCE, struktura](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)  
- Reprezentuje odwołanie, który sprawia, że aplikacja do zestawu, który aplikacja została zainstalowana w globalnej pamięci podręcznej.  
+ [FUSION_INSTALL_REFERENCE, struktura](fusion-install-reference-structure.md)  
+ Reprezentuje odwołanie do zestawu, który aplikacja została zainstalowana w globalnej pamięci podręcznej zestawów.  
   
- [IDENTITY_ATTRIBUTE, struktura](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
- Zawiera informacje o atrybutach metadane dotyczące [idefinitionidentity —](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) wystąpienia.  
+ [IDENTITY_ATTRIBUTE, struktura](identity-attribute-structure.md)  
+ Zawiera informacje o atrybucie metadanych dotyczące wystąpienia [IDefinitionIdentity —](idefinitionidentity-interface.md) .  
   
- [IDENTITY_ATTRIBUTE_BLOB, struktura](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)  
- Zawiera informacje dotyczące przesunięcia dla skojarzonego [identity_attribute —](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md) struktury.  
+ [IDENTITY_ATTRIBUTE_BLOB, struktura](identity-attribute-blob-structure.md)  
+ Zawiera informacje o przesunięciu skojarzonej struktury [IDENTITY_ATTRIBUTE](identity-attribute-structure.md) .  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Interfejsy łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [Interfejsy łączenia](fusion-interfaces.md)  
   
- [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
+ [Łączenie statycznych funkcji globalnych](fusion-global-static-functions.md)  
   
- [Wyliczenia łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+ [Wyliczenia łączenia](fusion-enumerations.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 531f9167a931d6b972e47e120950197bed11c07e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63c1cb3c417e8e521c6ac8417d260ccb937863f8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778700"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796745"
 ---
 # <a name="iassemblycacheuninstallassembly-method"></a>IAssemblyCache::UninstallAssembly — Metoda
-Odinstalowuje określony zestaw z globalnej pamięci podręcznej.  
+Odinstalowuje określony zestaw z globalnej pamięci podręcznej zestawów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,16 +40,16 @@ HRESULT UninstallAssembly (
   
 ## <a name="parameters"></a>Parametry  
  `dwFlags`  
- [in] Flagi zdefiniowane w Fusion.idl.  
+ podczas Flagi zdefiniowane w pliku Fusion. idl.  
   
  `pszAssemblyName`  
- [in] Nazwa zestawu do odinstalowania.  
+ podczas Nazwa zestawu do odinstalowania.  
   
  `pRefData`  
- [in] A [fusion_install_reference —](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) strukturę, która zawiera dane instalacji dla zestawu.  
+ podczas Struktura [FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md) , która zawiera dane instalacji dla zestawu.  
   
  `pulDisposition`  
- [out, opcjonalny] Jedna z wartości dyspozycji zdefiniowane w Fusion.idl. Możliwe wartości:  
+ [out, opcjonalne] Jedna z wartości dyspozycji zdefiniowanych w pliku Fusion. idl. Możliwe wartości:  
   
 - IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED (1)  
   
@@ -64,12 +64,12 @@ HRESULT UninstallAssembly (
 - IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND (6)  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Fusion.h  
+ **Nagłówki** Fusion. h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IAssemblyCache, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [IAssemblyCache, interfejs](iassemblycache-interface.md)

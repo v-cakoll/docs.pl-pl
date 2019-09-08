@@ -2,12 +2,12 @@
 title: Definicja schematu elementu DataTable
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: 0d2609801da3bc336c54d32068246027cfd6d3aa
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d18af8001fd24f3b21c3e7fd13f9dabb2587b322
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204993"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786393"
 ---
 # <a name="datatable-schema-definition"></a>Definicja schematu elementu DataTable
 Schemat lub struktura tabeli jest reprezentowana przez kolumny i ograniczenia. <xref:System.Data.DataTable> Zdefiniuj schemat <xref:System.Data.DataColumn> obiektów, <xref:System.Data.ForeignKeyConstraint> a także obiektów i <xref:System.Data.UniqueConstraint> . Kolumny w tabeli mogą być mapowane na kolumny w źródle danych, zawierają wartości obliczeniowe z wyrażeń, automatycznie zwiększają ich wartości lub zawierają wartości klucza podstawowego.  
@@ -21,7 +21,7 @@ Schemat lub struktura tabeli jest reprezentowana przez kolumny i ograniczenia. <
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Dodawanie kolumn do elementu DataTable](adding-columns-to-a-datatable.md)  
- Opisuje sposób definiowania kolumn tabeli przy użyciu obiektów DataColumn .  
+ Opisuje sposób definiowania kolumn tabeli przy użyciu obiektów **DataColumn** .  
   
  [Tworzenie kolumn wyrażeń](creating-expression-columns.md)  
  Wyjaśnia, w jaki sposób Właściwość **Expression** kolumny może służyć do obliczania wartości na podstawie wartości z innych kolumn w wierszu.  
@@ -30,7 +30,7 @@ Schemat lub struktura tabeli jest reprezentowana przez kolumny i ograniczenia. <
  Opisuje, w jaki sposób można ustawić kolumnę, aby automatycznie zwiększać wartości liczbowe, aby zapewnić unikatową wartość kolumny dla każdego wiersza.  
   
  [Definiowanie kluczy podstawowych](defining-primary-keys.md)  
- Opisuje sposób określania klucza podstawowego tabeli z co najmniej jednego obiektu DataColumn.  
+ Opisuje sposób określania klucza podstawowego tabeli z co najmniej jednego obiektu **DataColumn** .  
   
  [Ograniczenia elementu DataTable](datatable-constraints.md)  
  Opisuje sposób definiowania kluczy obcych i unikatowych ograniczeń dla kolumn w tabeli.  
@@ -38,4 +38,4 @@ Schemat lub struktura tabeli jest reprezentowana przez kolumny i ograniczenia. <
 ## <a name="see-also"></a>Zobacz także
 
 - [Elementy DataTable](datatables.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

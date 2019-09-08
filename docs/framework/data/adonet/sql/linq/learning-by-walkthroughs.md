@@ -2,12 +2,12 @@
 title: Nauka przez przewodniki
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: f1061842343d7a700d3af5da5fdc6aec2f79396d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4beb9944a13fd2f76d7305b4d84230fcc33483be
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929211"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781316"
 ---
 # <a name="learning-by-walkthroughs"></a>Nauka przez przewodniki
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Dokumentacja zawiera kilka przewodników. Ten temat dotyczy niektórych ogólnych problemów z instruktażem (w tym rozwiązywania problemów) i zawiera linki do kilku przewodników dotyczących [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]poziomu wejścia do uczenia się.  
@@ -22,22 +22,22 @@ ms.locfileid: "69929211"
   
 |Jakim|Visual Basic|C#|  
 |---------------|------------------|---------|  
-|Utwórz klasę jednostki i wykonaj proste zapytanie.|[Przewodnik: Prosty model obiektu i zapytanie (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[Przewodnik: Prosty model obiektu i zapytanie (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
-|Dodaj drugą klasę i wykonaj bardziej skomplikowaną kwerendę.<br /><br /> (Wymaga zakończenia poprzedniego przewodnika).|[Przewodnik: Wykonywanie zapytań w relacjach (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[Przewodnik: Wykonywanie zapytań w relacjachC#()](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
-|Dodawanie, zmienianie i usuwanie elementów w bazie danych.|[Przewodnik: Manipulowanie danymi (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[Przewodnik: Manipulowanie danymi (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
-|Użyj procedur składowanych.|[Przewodnik: Używanie tylko procedur składowanych (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[Przewodnik: Używanie tylko procedur składowanychC#()](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
+|Utwórz klasę jednostki i wykonaj proste zapytanie.|[Przewodnik: Prosty model obiektu i zapytanie (Visual Basic)](walkthrough-simple-object-model-and-query-visual-basic.md)|[Przewodnik: Prosty model obiektu i zapytanie (C#)](walkthrough-simple-object-model-and-query-csharp.md)|  
+|Dodaj drugą klasę i wykonaj bardziej skomplikowaną kwerendę.<br /><br /> (Wymaga zakończenia poprzedniego przewodnika).|[Przewodnik: Wykonywanie zapytań w relacjach (Visual Basic)](walkthrough-querying-across-relationships-visual-basic.md)|[Przewodnik: Wykonywanie zapytań w relacjachC#()](walkthrough-querying-across-relationships-csharp.md)|  
+|Dodawanie, zmienianie i usuwanie elementów w bazie danych.|[Przewodnik: Manipulowanie danymi (Visual Basic)](walkthrough-manipulating-data-visual-basic.md)|[Przewodnik: Manipulowanie danymi (C#)](walkthrough-manipulating-data-csharp.md)|  
+|Użyj procedur składowanych.|[Przewodnik: Używanie tylko procedur składowanych (Visual Basic)](walkthrough-using-only-stored-procedures-visual-basic.md)|[Przewodnik: Używanie tylko procedur składowanychC#()](walkthrough-using-only-stored-procedures-csharp.md)|  
   
 ## <a name="general"></a>Ogólne  
  Poniższe informacje dotyczą następujących przewodników:  
   
 - Naturalne Każdy [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Przewodnik używa programu Visual Studio jako zintegrowanego środowiska programistycznego (IDE).  
   
-- Aparaty SQL: Te instruktaże są zapisywane do wdrożenia przy użyciu SQL Server Express. Jeśli nie masz SQL Server Express, możesz pobrać bezpłatnie. Aby uzyskać więcej informacji, zobacz [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- Aparaty SQL: Te instruktaże są zapisywane do wdrożenia przy użyciu SQL Server Express. Jeśli nie masz SQL Server Express, możesz pobrać bezpłatnie. Aby uzyskać więcej informacji, zobacz [Pobieranie przykładowych baz danych](downloading-sample-databases.md).  
   
     > [!NOTE]
-    > [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Instruktaże używają nazwy pliku jako parametrów połączenia. Po prostu określenie nazwy pliku jest wygodą, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] która zapewnia użytkownikom SQL Server Express. Zawsze należy zwrócić uwagę na problemy z zabezpieczeniami. Aby uzyskać więcej informacji, zobacz [zabezpieczenia w LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
+    > [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Instruktaże używają nazwy pliku jako parametrów połączenia. Po prostu określenie nazwy pliku jest wygodą, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] która zapewnia użytkownikom SQL Server Express. Zawsze należy zwrócić uwagę na problemy z zabezpieczeniami. Aby uzyskać więcej informacji, zobacz [zabezpieczenia w LINQ to SQL](security-in-linq-to-sql.md).  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Instruktaże wymagają zwykle przykładowej bazy danych Northwind. Aby uzyskać więcej informacji, zobacz [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Instruktaże wymagają zwykle przykładowej bazy danych Northwind. Aby uzyskać więcej informacji, zobacz [Pobieranie przykładowych baz danych](downloading-sample-databases.md).  
   
 - Okna dialogowe i polecenia menu wyświetlane w przewodnikach mogą różnić się od tych opisanych w pomocy, w zależności od ustawień aktywnych lub wersji programu Visual Studio. Aby zmienić ustawienia, kliknij przycisk **Importuj i Eksportuj ustawienia** w menu **Narzędzia** . Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "69929211"
   
 1. W lewym okienku **Configuration Manager SQL Server**rozwiń węzeł **konfiguracja sieci w SQL Server 2005**, a następnie kliknij pozycję **Protokoły dla programu SQLExpress**.  
   
-2. Upewnij się, że w okienku po prawej stronie jest włączony protokół nazwanych potoków. Jeśli tak nie jest, kliknij prawym przyciskiem myszy pozycję **nazwy potoki** , a następnie kliknij pozycję **Włącz**.  
+2. Upewnij się, że w okienku po prawej stronie jest włączony protokół **nazwanych potoków** . Jeśli tak nie jest, kliknij prawym przyciskiem myszy pozycję **nazwy potoki** , a następnie kliknij pozycję **Włącz**.  
   
      Trzeba będzie zatrzymać i ponownie uruchomić usługę. Postępuj zgodnie z instrukcjami w następnym bloku.  
   
@@ -89,4 +89,4 @@ ms.locfileid: "69929211"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+- [Wprowadzenie](getting-started.md)

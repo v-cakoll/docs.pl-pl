@@ -1,6 +1,6 @@
 ---
-title: Funkcja GetPropertyQualifierSet (niezarządzany wykaz interfejsów API)
-description: Funkcja GetPropertyQualifierSet pobiera kwalifikator, ustaw dla właściwości.
+title: GetPropertyQualifierSet — funkcja (niezarządzana dokumentacja interfejsu API)
+description: Funkcja GetPropertyQualifierSet pobiera kwalifikator dla właściwości.
 ms.date: 11/06/2017
 api_name:
 - GetPropertyQualifierSet
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 588c56c80cc55df3689178875a9a0500cd0ca7b8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b7bce241d10051e4c6be94cdfa40de23773fb0bb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636403"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798474"
 ---
-# <a name="getpropertyqualifierset-function"></a>GetPropertyQualifierSet — funkcja
+# <a name="getpropertyqualifierset-function"></a>GetPropertyQualifierSet, funkcja
 
-Pobiera kwalifikator, ustaw dla określonej właściwości.
+Pobiera kwalifikator zestawu dla określonej właściwości.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -43,48 +43,48 @@ HRESULT GetPropertyQualifierSet (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`\
-[in] Ten parametr jest nieużywany.
+podczas Ten parametr jest nieużywany.
 
 `ptr`\
-[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.
+podczas Wskaźnik do wystąpienia [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszMethod`\
-[in] Nazwa właściwości. `wszProperty` musi wskazywać prawidłowy `LPCWSTR`.
+podczas Nazwa właściwości. `wszProperty`musi wskazywać prawidłowy `LPCWSTR`.
 
 `ppQualSet`\
-[out] Otrzymuje wskaźnik interfejsu, który umożliwia dostęp do kwalifikatory właściwości. `ppQualSet` nie może być `null`. Jeśli wystąpi błąd, nowy obiekt nie jest zwracana i wskaźnik jest ustawiony na wskaż `null`.
+określoną Odbiera wskaźnik interfejsu, który umożliwia dostęp do kwalifikatorów właściwości. `ppQualSet`nie może `null`być. Jeśli wystąpi błąd, nowy obiekt nie jest zwracany, a wskaźnik zostanie ustawiony na `null`wartość.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
+Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nagłówkowym *WbemCli. h* lub można je definiować jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Wystąpił błąd ogólny. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | Określona metoda nie istnieje. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nie ma wystarczającej ilości pamięci jest dostępny do ukończenia tej operacji. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr jest `null`. |
-| `WBEM_E_SYSTEM_PROPERTY` | 0x80041030 | Funkcja podejmie próbę uzyskania kwalifikatorów właściwości systemu. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało dostępnej pamięci, aby ukończyć tę operację. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr ma `null`wartość. |
+| `WBEM_E_SYSTEM_PROPERTY` | 0x80041030 | Funkcja próbuje uzyskać kwalifikatory właściwości System. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja zawija wywołanie do [IWbemClassObject::GetPropertyQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyqualifierset) metody.
+Ta funkcja otacza wywołanie metody [IWbemClassObject:: GetPropertyQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyqualifierset) .
 
-Wywołanie tej funkcji jest obsługiwana tylko wtedy, gdy bieżący obiekt jest definicją klasy modelu wspólnych informacji. Metoda manipulowania nie jest dostępna dla [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wskaźniki prowadzące do wystąpienia modelu CIM.
+Wywołanie tej funkcji jest obsługiwane tylko wtedy, gdy bieżący obiekt jest definicją klasy CIM. Operowanie metodami nie jest dostępne dla wskaźników [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) , które wskazują wystąpienia modelu wspólnych informacji.
 
-Ponieważ każda metoda może mieć własną kwalifikatory [wskaźnik IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) umożliwia obiekt wywołujący, dodawać, edytować lub usuwać kwalifikatory.
+Ponieważ każda metoda może mieć własne kwalifikatory, [wskaźnik IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) umożliwia obiektowi wywołującemu Dodawanie, edytowanie lub usuwanie tych kwalifikatorów.
 
-Ponieważ właściwości systemu mieć nie kwalifikatorów, funkcja zwraca `WBEM_E_SYSTEM_PROPERTY` Jeśli użytkownik podejmie próbę uzyskania [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) wskaźnik dla właściwości systemu.
+Ponieważ właściwości systemu nie mają kwalifikatorów, funkcja zwraca wartość `WBEM_E_SYSTEM_PROPERTY` , jeśli próbujesz uzyskać wskaźnik [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) dla właściwości System.
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
-**Nagłówek:** WMINet_Utils.idl
+**Nagłówki** WMINet_Utils.idl
 
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)
+- [WMI i liczniki wydajności (niezarządzana dokumentacja interfejsu API)](index.md)

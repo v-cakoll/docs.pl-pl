@@ -2,28 +2,28 @@
 title: Oracle LOB
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: 3f4550344ee09620ae17de5bfcba36b3075a0f47
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a52203ad62e8761897f7b2bef90f1915db9433f8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771946"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783332"
 ---
 # <a name="oracle-lobs"></a>Oracle LOB
-.NET Framework Data Provider for Oracle obejmuje <xref:System.Data.OracleClient.OracleLob> klasę, która zostanie użyta do pracy z bazą danych Oracle **LOB** typów danych.  
+.NET Framework dostawca danych dla programu Oracle zawiera <xref:System.Data.OracleClient.OracleLob> klasę, która jest używana do pracy z typami danych **LOB** firmy Oracle.  
   
  **OracleLob** może być jednym z następujących <xref:System.Data.OracleClient.OracleType> typów danych:  
   
 |Typ danych|Opis|  
 |---------------|-----------------|  
-|**Obiekt blob**|Oracle **BLOB** typu danych, który zawiera dane binarne o maksymalnym rozmiarze 4 gigabajty. To jest mapowany **tablicy** typu **bajt**.|  
-|**Clob**|Oracle **CLOB** na serwerze, o maksymalnym rozmiarze 4 gigabajty ustawić typ danych, która zawiera znak danych na podstawie domyślny znak. To jest mapowany **ciąg**.|  
-|**NClob**|Oracle **NCLOB** typu danych, który zawiera znak danych oparte na national zestawu znaków na serwerze o maksymalnym rozmiarze 4 gigabajty. To jest mapowany **ciąg**.|  
+|**Obiekt blob**|Typ danych **obiektu BLOB** Oracle zawierający dane binarne o maksymalnym rozmiarze wynoszącym 4 gigabajty. To mapuje do **tablicy** typu **Byte**.|  
+|**Clob**|Typ danych Oracle **obiektów CLOB** , który zawiera dane znakowe, na podstawie domyślnego zestawu znaków na serwerze z maksymalnym rozmiarem wynoszącym 4 gigabajty. To mapuje na **ciąg**.|  
+|**NClob**|Typ danych Oracle **NCLOB** , który zawiera dane znakowe, oparte na Narodowym zestawie znaków na serwerze o maksymalnym rozmiarze wynoszącym 4 gigabajty. To mapuje na **ciąg**.|  
   
- **OracleLob** różni się od <xref:System.Data.OracleClient.OracleBFile> , dane są przechowywane na serwerze, a nie w pliku fizycznego w systemie operacyjnym. Może to być także obiekt odczytu i zapisu, w odróżnieniu od **OracleBFile**, który jest zawsze tylko do odczytu.  
+ **OracleLob** różni się od <xref:System.Data.OracleClient.OracleBFile> w tym, że dane są przechowywane na serwerze, a nie w pliku fizycznym w systemie operacyjnym. Może być również obiektem do odczytu i zapisu, w przeciwieństwie do **OracleBFile**, który jest zawsze tylko do odczytu.  
   
-## <a name="creating-retrieving-and-writing-to-a-lob"></a>Tworzenie, pobieranie i zapisywanie obiektu LOB  
- W poniższym przykładzie C# pokazuje, jak można tworzyć obiektów LOB w tabeli bazy danych Oracle i pobrać i był na nich zapis w formie **OracleLob** obiektów. W przykładzie pokazano, za pomocą <xref:System.Data.OracleClient.OracleDataReader> obiektu i **OracleLob** **odczytu** i **zapisu** metody. W przykładzie użyto Oracle **BLOB**, **CLOB**, i **NCLOB** typów danych.  
+## <a name="creating-retrieving-and-writing-to-a-lob"></a>Tworzenie, pobieranie i zapisywanie do obiektu LOB  
+ Poniższy C# przykład demonstruje, jak można utworzyć LOB w tabeli Oracle, a następnie pobrać i zapisać do nich w postaci obiektów **OracleLob** . W przykładzie pokazano użycie <xref:System.Data.OracleClient.OracleDataReader> obiektu i metody **odczytu** i **zapisu** **OracleLob** . W przykładzie są stosowane typy danych **obiektów BLOB**, **obiektów CLOB**i **NCLOB** firmy Oracle.  
   
 ```csharp  
 using System;  
@@ -216,7 +216,7 @@ public class LobExample
 ```  
   
 ## <a name="creating-a-temporary-lob"></a>Tworzenie tymczasowego obiektu LOB  
- W poniższym przykładzie C# pokazano, jak utworzyć tymczasowego obiektu LOB.  
+ W poniższym C# przykładzie pokazano, jak utworzyć tymczasowy obiekt LOB.  
   
 ```csharp  
 OracleConnection conn = new OracleConnection(  
@@ -249,5 +249,5 @@ tx.Commit();
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Oracle i ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Oracle i ADO.NET](oracle-and-adonet.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

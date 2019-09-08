@@ -2,61 +2,60 @@
 title: Nowości w programie ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 77a7aa5721a83bf7bc8d3e3cbf57a77c56267062
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 0a02ca3885524c5fcf8def603acdce33a972d283
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379985"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791257"
 ---
 # <a name="whats-new-in-adonet"></a>Nowości w programie ADO.NET
 
-Następujące funkcje są nowością w programie ADO.NET w programie .NET Framework 4.5.
+Następujące funkcje są nowością w programie ADO.NET w .NET Framework 4,5.
 
 ## <a name="sqlclient-data-provider"></a>Dostawca danych SqlClient
 
-Następujące funkcje są nowością w programie .NET Framework Data Provider for SQL Server w programie .NET Framework 4.5:
+Następujące funkcje są nowe w .NET Framework Dostawca danych SQL Server w .NET Framework 4,5:
 
-- ConnectRetryCount i ConnectRetryInterval połączenia ciąg słów kluczowych (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) pozwalają na kontrolowanie funkcji odporności bezczynnego połączenia.
+- Słowa kluczowe parametrów połączenia ConnectRetryCount i ConnectRetryInterval (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) pozwalają kontrolować funkcję odporności bezczynnego połączenia.
 
-- Przesyłanie strumieniowe pomocy technicznej z programu SQL Server do aplikacji obsługuje scenariusze, w którym dane na serwerze jest bez struktury.  Zobacz [obsługa przesyłania strumieniowego SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md) Aby uzyskać więcej informacji.
+- Obsługa przesyłania strumieniowego z SQL Server do aplikacji obsługuje scenariusze, w których dane na serwerze mają nieprawidłową strukturę.  Aby uzyskać więcej informacji, zobacz [obsługa przesyłania strumieniowego SqlClient](sqlclient-streaming-support.md) .
 
-- Dodano obsługę dla programowania asynchronicznego.  Zobacz [Asynchronous Programming](../../../../docs/framework/data/adonet/asynchronous-programming.md) Aby uzyskać więcej informacji.
+- Dodano obsługę w programowaniu asynchronicznym.  Aby uzyskać więcej informacji, zobacz [programowanie asynchroniczne](asynchronous-programming.md) .
 
-- Błędy połączenia będą teraz rejestrowane w dzienniku zdarzeń rozszerzonych. Aby uzyskać więcej informacji, zobacz [danych śledzenia w ADO.NET](../../../../docs/framework/data/adonet/data-tracing.md).
+- Błędy połączeń będą teraz rejestrowane w dzienniku zdarzeń rozszerzonych. Aby uzyskać więcej informacji, zobacz [śledzenie danych w ADO.NET](data-tracing.md).
 
-- Klient SQL ma teraz obsługę programu SQL Server wysoką dostępność, funkcji odzyskiwania po awarii, zawsze włączone. Aby uzyskać więcej informacji, zobacz [Obsługa SqlClient dla wysokiej dostępności, odzyskiwania po awarii](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).
+- Klient SqlClient ma teraz obsługę wysokiej dostępności SQL Server, funkcji odzyskiwania po awarii, AlwaysOn. Aby uzyskać więcej informacji, zobacz temat [Obsługa klienta w przypadku wysokiej dostępności i odzyskiwania po awarii](./sql/sqlclient-support-for-high-availability-disaster-recovery.md).
 
-- Hasła mogą być przekazywane jako <xref:System.Security.SecureString> podczas korzystania z uwierzytelniania programu SQL Server. Aby uzyskać więcej informacji, zobacz <xref:System.Data.SqlClient.SqlCredential>.
+- Hasło można przesłać jako <xref:System.Security.SecureString> przy użyciu uwierzytelniania SQL Server. Aby uzyskać więcej informacji, zobacz <xref:System.Data.SqlClient.SqlCredential>.
 
-- Gdy `TrustServerCertificate` ma wartość FAŁSZ i `Encrypt` ma wartość true, nazwę serwera (lub adres IP) w certyfikacie SSL serwera SQL musi dokładnie odpowiadać serwera nazwę (lub adres IP) określone w parametrach połączenia. W przeciwnym razie próba połączenia zakończy się niepowodzeniem. Aby uzyskać więcej informacji, zobacz opis `Encrypt` opcja połączenia w <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
+- Gdy `TrustServerCertificate` ma wartość false `Encrypt` i ma wartość true, nazwa serwera (lub adres IP) w SQL Server certyfikat SSL musi być dokładnie zgodna z nazwą serwera (lub adresem IP) określoną w parametrach połączenia. W przeciwnym razie próba połączenia nie powiedzie się. Aby uzyskać więcej informacji, zobacz Opis `Encrypt` opcji połączenia w <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>temacie.
 
-  Jeśli ta zmiana powoduje, że już połączyć istniejącą aplikację, można naprawić aplikacji przy użyciu jednej z następujących czynności:
+  Jeśli ta zmiana spowoduje, że istniejąca aplikacja nie będzie mogła nawiązywać połączenia, możesz naprawić aplikację, korzystając z jednego z następujących elementów:
 
-  - Wystawić certyfikat, który określa krótką nazwę w polu Nazwa pospolita (CN) lub alternatywnej nazwy podmiotu (SAN). To rozwiązanie będzie działać w przypadku dublowania bazy danych.
+  - Wystawianie certyfikatu określającego krótką nazwę w polu Nazwa pospolita (CN) lub alternatywna nazwa podmiotu (SAN). To rozwiązanie będzie działało na potrzeby dublowania baz danych.
 
-  - Dodaj alias, który mapuje krótką nazwę do w pełni kwalifikowaną nazwę domeny.
+  - Dodaj alias, który mapuje krótką nazwę na w pełni kwalifikowaną nazwę domeny.
 
-  - Użyj w pełni kwalifikowaną nazwę domeny w parametrach połączenia.
+  - Użyj w pełni kwalifikowanej nazwy domeny w parametrach połączenia.
 
-- Klient SQL obsługuje ochrony rozszerzonej. Aby uzyskać więcej informacji na temat ochrony rozszerzonej zobacz [nawiązywania połączenia z bazy danych aparatu przy użyciu ochrony rozszerzonej](https://go.microsoft.com/fwlink/?LinkId=219978).
+- Klient SqlClient obsługuje rozszerzoną ochronę. Aby uzyskać więcej informacji na temat ochrony rozszerzonej, zobacz [nawiązywanie połączenia z aparatem bazy danych przy użyciu ochrony rozszerzonej](https://go.microsoft.com/fwlink/?LinkId=219978).
 
-- Klient SQL obsługuje połączenia do bazy danych LocalDB. Aby uzyskać więcej informacji, zobacz [Obsługa SqlClient dla LocalDB](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md).
+- Klient SqlClient obsługuje połączenia z bazami danych LocalDB. Aby uzyskać więcej informacji, zobacz temat [Obsługa SqlClient dla LocalDB](./sql/sqlclient-support-for-localdb.md).
 
-- `Type System Version=SQL Server 2012;` jest nową wartość do przekazania do `Type System Version` właściwości połączenia. `Type System Version=Latest;` Wartości jest już przestarzały i dokonano odpowiednikiem `Type System Version=SQL Server 2008;`. Aby uzyskać więcej informacji, zobacz <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
+- `Type System Version=SQL Server 2012;`jest nową wartością do przekazania do `Type System Version` właściwości Connection. Wartość jest obecnie przestarzała i została przeprowadzona jako `Type System Version=SQL Server 2008;`odpowiednik. `Type System Version=Latest;` Aby uzyskać więcej informacji, zobacz <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
 
-- Klient SQL zapewnia dodatkową obsługę kolumn rozrzedzonych, funkcji, który został dodany do programu SQL Server 2008. Jeśli aplikacja już uzyskuje dostęp do danych w tabeli, która używa kolumn rozrzedzonych, powinien zostać wyświetlony wzrost wydajności. Kolumna IsColumnSet <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> wskazuje, czy kolumna jest kolumną rozrzedzoną, który jest członkiem zestawu kolumn. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> Wskazuje, czy kolumna jest kolumną rozrzedzoną (zobacz [kolekcje schematów programu SQL Server](../../../../docs/framework/data/adonet/sql-server-schema-collections.md) Aby uzyskać więcej informacji). Aby uzyskać więcej informacji na temat kolumn rozrzedzonych, zobacz [przy użyciu kolumn rozrzedzonych](https://go.microsoft.com/fwlink/?LinkId=224244).
+- Klient SqlClient oferuje dodatkową obsługę kolumn rozrzedzonych, funkcję dodaną w SQL Server 2008. Jeśli aplikacja już uzyskuje dostęp do danych w tabeli używającej kolumn rozrzedzonych, powinien zostać wyświetlony wzrost wydajności. Kolumna <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> IsColumnSet wskazuje, czy kolumna jest kolumną rozrzedzoną, która jest elementem członkowskim zestawu kolumn. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>wskazuje, czy kolumna jest kolumną rozrzedzoną (zobacz [SQL Server kolekcje schematów](sql-server-schema-collections.md) , aby uzyskać więcej informacji). Aby uzyskać więcej informacji na temat kolumn rozrzedzonych, zobacz [Używanie kolumn rozrzedzonych](https://go.microsoft.com/fwlink/?LinkId=224244).
 
-- Zestaw Microsoft.SqlServer.Types.dll, który zawiera typy danych przestrzennych, został uaktualniony z wersji 10.0 do wersji 11.0. Aplikacje odwołujące się do tego zestawu może zakończyć się niepowodzeniem. Aby uzyskać więcej informacji, zobacz [zmiany powodujące funkcje aparatu bazy danych](https://go.microsoft.com/fwlink/?LinkId=224367).
+- Zestaw Microsoft. SqlServer. Types. dll, który zawiera typy danych przestrzennych, został uaktualniony z wersji 10,0 do wersji 11,0. Aplikacje odwołujące się do tego zestawu mogą zakończyć się niepowodzeniem. Aby uzyskać więcej informacji, zobacz istotne [zmiany w funkcjach aparatu bazy danych](https://go.microsoft.com/fwlink/?LinkId=224367).
 
 ## <a name="adonet-entity-framework"></a>Program Entity Framework na platformie ADO.NET
 
-.NET Framework 4.5 dodaje interfejsów API, które umożliwiają obsługę nowych scenariuszy podczas pracy z programu Entity Framework 5.0. Aby uzyskać więcej informacji na temat usprawnień i nowych funkcji, które zostały dodane do programu Entity Framework 5.0 zobacz następujące tematy: [What's New](https://go.microsoft.com/fwlink/?LinkID=251106) i [Entity Framework w wersji oraz zarządzanie ich wersjami](https://go.microsoft.com/fwlink/?LinkId=234899).
+.NET Framework 4,5 dodaje interfejsy API, które umożliwiają nowe scenariusze podczas pracy z Entity Framework 5,0. Aby uzyskać więcej informacji na temat ulepszeń i funkcji, które zostały dodane do Entity Framework 5,0, zobacz następujące tematy: [Nowości i wersje](https://go.microsoft.com/fwlink/?LinkID=251106) [Entity Framework i przechowywanie wersji](https://go.microsoft.com/fwlink/?LinkId=234899).
 
 ## <a name="see-also"></a>Zobacz także
 
-- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [SQL Server i ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
-- [What's New in usługi danych WCF 5.0](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET](index.md)
+- [Omówienie ADO.NET](ado-net-overview.md)
+- [SQL Server i ADO.NET](./sql/index.md)
+- [Co nowego w Usługi danych programu WCF 5,0](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))

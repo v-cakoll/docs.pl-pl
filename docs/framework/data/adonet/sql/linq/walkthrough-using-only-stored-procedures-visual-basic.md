@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 159b65b4b58b9142a168401ea2a881af2714df5f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a1994d100c4d18d5fa3642e27d0dcb8823800549
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946637"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780969"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Przewodnik: Używanie tylko procedur składowanych (Visual Basic)
 Ten Instruktaż przedstawia podstawowy [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariusz kompleksowego dostępu do danych za pomocą procedur składowanych. Ta metoda jest często używana przez administratorów bazy danych do ograniczania dostępu do magazynu.  
   
 > [!NOTE]
-> Można również użyć procedur składowanych w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacjach, aby przesłonić zachowanie domyślne `Create`, szczególnie w `Delete` przypadku procesów, `Update`i. Aby uzyskać więcej informacji, zobacz [Dostosowywanie operacji wstawiania, aktualizowania i usuwania](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
+> Można również użyć procedur składowanych w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacjach, aby przesłonić zachowanie domyślne `Create`, szczególnie w `Delete` przypadku procesów, `Update`i. Aby uzyskać więcej informacji, zobacz [Dostosowywanie operacji wstawiania, aktualizowania i usuwania](customizing-insert-update-and-delete-operations.md).  
   
  Na potrzeby tego instruktażu zostaną użyte dwie metody, które zostały zamapowane na procedury składowane w przykładowej bazie danych Northwind: CustOrdersDetail i CustOrderHist. Mapowanie odbywa się po uruchomieniu narzędzia wiersza polecenia SqlMetal w celu wygenerowania pliku Visual Basic. Aby uzyskać więcej informacji, zobacz sekcję wymagania wstępne w dalszej części tego przewodnika.  
   
@@ -32,7 +32,7 @@ Ten Instruktaż przedstawia podstawowy [!INCLUDE[vbtecdlinq](../../../../../../i
   
 - Przykładowa bazy danych Northwind.  
   
-     Jeśli nie masz tej bazy danych na komputerze deweloperskim, możesz ją pobrać z witryny pobierania firmy Microsoft. Aby uzyskać instrukcje, zobacz [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Po pobraniu bazy danych Skopiuj plik northwnd. mdf do folderu c:\linqtest3.  
+     Jeśli nie masz tej bazy danych na komputerze deweloperskim, możesz ją pobrać z witryny pobierania firmy Microsoft. Aby uzyskać instrukcje, zobacz [Pobieranie przykładowych baz danych](downloading-sample-databases.md). Po pobraniu bazy danych Skopiuj plik northwnd. mdf do folderu c:\linqtest3.  
   
 - Plik kodu Visual Basic wygenerowany na podstawie bazy danych Northwind.  
   
@@ -40,7 +40,7 @@ Ten Instruktaż przedstawia podstawowy [!INCLUDE[vbtecdlinq](../../../../../../i
   
      **SQLMetal/Code: "c:\linqtest3\northwind.vb"/Language: VB "c:\linqtest3\northwnd.mdf"/sprocs/Functions/pluralize**  
   
-     Aby uzyskać więcej informacji, zobacz [SQLMetal. exe (Narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+     Aby uzyskać więcej informacji, zobacz [SQLMetal. exe (Narzędzie generowania kodu)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="overview"></a>Omówienie  
  Ten przewodnik składa się z sześciu głównych zadań:  
@@ -135,7 +135,7 @@ Ten Instruktaż przedstawia podstawowy [!INCLUDE[vbtecdlinq](../../../../../../i
   
 6. W ten sam sposób dla **etykiety 2**Zmień właściwość **Text** z **etykiety 2** , aby **wprowadzić CustomerID:** .  
   
-7. W ten sam sposób Zmień właściwość **Text** dla **Button1** na **Order**details.  
+7. W ten sam sposób Zmień właściwość **Text** dla **Button1** na **Order Details**.  
   
 8. Zmień właściwość **Text** dla **Button2** na **historię kolejności**.  
   
@@ -193,5 +193,5 @@ Ten Instruktaż przedstawia podstawowy [!INCLUDE[vbtecdlinq](../../../../../../i
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Nauka przez przewodniki](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
-- [Procedury składowane](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [Nauka przez przewodniki](learning-by-walkthroughs.md)
+- [Procedury składowane](stored-procedures.md)

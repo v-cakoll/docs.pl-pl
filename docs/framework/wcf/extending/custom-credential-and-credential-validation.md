@@ -8,28 +8,28 @@ helpviewer_keywords:
 - credential validation [WCF]
 - credentials [WCF], validation
 ms.assetid: da831bec-e281-4d44-b343-437b5eef688e
-ms.openlocfilehash: 3b1ff700010f471a4d9be117f363083b6cbed493
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1418d4155bc7f2fefc9f3e6caf4d3a264747a667
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696447"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795817"
 ---
 # <a name="custom-credential-and-credential-validation"></a>Niestandardowe poświadczenia i weryfikacja poświadczeń
-Zabezpieczenia w Windows Communication Foundation (WCF) opiera się na wymianie poświadczeń między usług i klientów. Większość scenariuszy zabezpieczeń mogą zostać zrealizowane przy użyciu popularnych typów poświadczeń, takich jak Windows (Kerberos), nazwę użytkownika i hasła oraz certyfikatów. Jednak jeśli wymagany jest nowy typ poświadczeń, tematy w tej sekcji wyjaśniono, jak obsługiwać i Zweryfikuj nowe typy.  
+Zabezpieczenia w programie Windows Communication Foundation (WCF) bazują na wymianie poświadczeń między usługami i klientami. Większość scenariuszy zabezpieczeń można spełnić przy użyciu wspólnych typów poświadczeń, takich jak Windows (Kerberos), nazwa użytkownika i hasła oraz certyfikaty. Jeśli jednak jest wymagany nowy typ poświadczeń, w tematach w tej sekcji wyjaśniono, jak obsługiwać i sprawdzać poprawność nowych typów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: Tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
- Opis sposobu dostosowywania WCF weryfikacji przez dziedziczenie z <xref:System.IdentityModel.Selectors.X509CertificateValidator> klasy.  
+ [Instrukcje: Tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów](how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
+ Wyjaśnia, <xref:System.IdentityModel.Selectors.X509CertificateValidator> jak dostosować walidację programu WCF przez dziedziczenie z klasy.  
   
- [Przewodnik: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
- Pokazuje, jak rozszerzyć <xref:System.ServiceModel.Description.ClientCredentials> i <xref:System.ServiceModel.Description.ServiceCredentials> klasy w celu uwzględnienia nowych poświadczeń typów. To jest pierwszy w szeregu tematów, które umożliwiają tworzenie typów niestandardowych poświadczeń.  
+ [Przewodnik: Tworzenie niestandardowych poświadczeń klienta i usługi](walkthrough-creating-custom-client-and-service-credentials.md)  
+ Pokazuje, <xref:System.ServiceModel.Description.ClientCredentials> w jaki sposób można <xref:System.ServiceModel.Description.ServiceCredentials> rozciągnąć klasy i, aby pomieścić nowe typy poświadczeń. Jest to pierwsza część tematów, które umożliwiają tworzenie niestandardowych typów poświadczeń.  
   
- [Instrukcje: Tworzenie niestandardowego dostawcy tokenów zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
- Wyjaśnia, jak utworzyć dostawcę tokenu zabezpieczającego, aby obsługiwać nowe typy poświadczeń i wrócić nowych tokenów dla poświadczenia. Jest to drugi tematu w serii.  
+ [Instrukcje: Tworzenie niestandardowego dostawcy tokenów zabezpieczeń](how-to-create-a-custom-security-token-provider.md)  
+ Wyjaśnia, jak utworzyć dostawcę tokenów zabezpieczających do obsługi nowych typów poświadczeń i zwracać nowe tokeny dla poświadczenia. Jest to drugi temat w serii.  
   
- [Instrukcje: Tworzenie wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowych](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
- Omówiono tworzenie niestandardowego wystawcy uwierzytelniania na nowy typ poświadczeń uwierzytelniania. Jest to trzeci tematu w serii.  
+ [Instrukcje: Tworzenie niestandardowego wystawcy uwierzytelniania tokenu zabezpieczeń](how-to-create-a-custom-security-token-authenticator.md)  
+ Wyjaśnia, jak utworzyć niestandardowy wystawca uwierzytelnienia w celu uwierzytelnienia nowego typu poświadczeń. Jest to trzeci temat w tej serii.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.ServiceModel.Security>  
@@ -49,12 +49,12 @@ Zabezpieczenia w Windows Communication Foundation (WCF) opiera się na wymianie 
  <xref:System.ServiceModel.Description.ServiceCredentials>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Uwierzytelnianie](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+ [Uwierzytelnianie](../feature-details/authentication-in-wcf.md)  
   
- [Federacja i wystawione tokeny](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [Federacja i wystawione tokeny](../feature-details/federation-and-issued-tokens.md)  
   
- [Autoryzacja](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
+ [Autoryzacja](../feature-details/authorization-in-wcf.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczenia](../../../../docs/framework/wcf/feature-details/security.md)
+- [Zabezpieczenia](../feature-details/security.md)

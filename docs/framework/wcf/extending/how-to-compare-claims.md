@@ -8,16 +8,16 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: e2d3d33900dd894eea77420aac444ebde0df9a43
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 29254bd661e72b926b21695ccb646480c53b5475
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68970775"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797094"
 ---
 # <a name="how-to-compare-claims"></a>Instrukcje: porównywanie oświadczeń
 
-Infrastruktura modelu tożsamości w Windows Communication Foundation (WCF) służy do sprawdzania autoryzacji. W związku z tym typowym zadaniem jest porównanie oświadczeń w kontekście autoryzacji do oświadczeń wymaganych do wykonania żądanej akcji lub uzyskania dostępu do żądanego zasobu. W tym temacie opisano sposób porównywania oświadczeń, w tym wbudowanych i niestandardowych typów oświadczeń. Aby uzyskać więcej informacji na temat infrastruktury modelu tożsamości, zobacz [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).
+Infrastruktura modelu tożsamości w Windows Communication Foundation (WCF) służy do sprawdzania autoryzacji. W związku z tym typowym zadaniem jest porównanie oświadczeń w kontekście autoryzacji do oświadczeń wymaganych do wykonania żądanej akcji lub uzyskania dostępu do żądanego zasobu. W tym temacie opisano sposób porównywania oświadczeń, w tym wbudowanych i niestandardowych typów oświadczeń. Aby uzyskać więcej informacji na temat infrastruktury modelu tożsamości, zobacz [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../feature-details/managing-claims-and-authorization-with-the-identity-model.md).
 
 Porównanie roszczeń obejmuje porównanie trzech części roszczeń (typu, praw i zasobu) z tymi samymi częściami w innym zasobie, aby sprawdzić, czy są równe. Zobacz Poniższy przykład.
 
@@ -74,5 +74,5 @@ Poniższy przykład przedstawia porównanie niestandardowych oświadczeń, w kt�
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
-- [Instrukcje: Tworzenie niestandardowego żądania](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Instrukcje: Tworzenie niestandardowego żądania](how-to-create-a-custom-claim.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: eb6841dd24c4c7587cc2424cc1e606194da34585
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 357812aa95ea731fe86fbe49b2cb1b2806e3915a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944064"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784865"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>Element DataAdapter DataTable i mapowania elementu DataColumn
 Element **DataAdapter** zawiera kolekcję zero lub więcej <xref:System.Data.Common.DataTableMapping> obiektów we właściwości **TableMappings** . **DataTableMapping** zapewnia mapowanie wzorca między danymi zwracanymi z zapytania do źródła danych i <xref:System.Data.DataTable>. Nazwę **DataTableMapping** można przesłać zamiast nazwy **DataTable** do metody **Fill** elementu **DataAdapter**. Poniższy przykład tworzy **DataTableMapping** o nazwie **AuthorsMapping** dla tabeli **autorów** .  
@@ -81,16 +81,16 @@ adapter.Fill(custDS, "Customers");
 > Jeśli nie podano nazwy kolumny źródłowej dla mapowania kolumn lub nie podano nazwy tabeli źródłowej dla mapowania tabeli, automatycznie generowane są domyślne nazwy. Jeśli nie podano kolumny źródłowej dla mapowania kolumn, mapowanie kolumny otrzymuje przyrostową domyślną nazwę **SourceColumn** *N,* rozpoczynając od **SourceColumn1**. Jeśli nie podano nazwy tabeli źródłowej dla mapowania tabeli, mapowanie tabeli uzyskuje przyrostową domyślną nazwę elementu **SourceName** *N*, rozpoczynając od **SourceTable1**.  
   
 > [!NOTE]
-> Zalecamy uniknięcie konwencji nazewnictwa elementu **SourceColumn** *N* dla mapowania kolumn lub elementu **sources** *n* dla mapowania tabeli, ponieważ dostarczona nazwa może powodować konflikt z istniejącą domyślną nazwą mapowania kolumn wNazwa ColumnMappingCollection lub mapowanie tabeli w **DataTableMappingCollection**. Jeśli podana nazwa już istnieje, zostanie zgłoszony wyjątek.  
+> Zalecamy uniknięcie konwencji nazewnictwa elementu **SourceColumn** *N* dla mapowania kolumn lub elementu **sources** *n* dla mapowania tabeli, ponieważ dostarczona nazwa może powodować konflikt z istniejącą domyślną nazwą mapowania kolumn w  **Nazwa ColumnMappingcollection** lub mapowanie tabeli w **DataTableMappingCollection**. Jeśli podana nazwa już istnieje, zostanie zgłoszony wyjątek.  
   
 ## <a name="handling-multiple-result-sets"></a>Obsługa wielu zestawów wyników  
- Jeśli **Właściwość SelectCommand** zwraca wiele tabel, **Wypełnij** automatycznie generuje nazwy tabel z przyrostowymi wartościami dla tabel w **zestawie danych**, rozpoczynając od określonej nazwy tabeli i kontynuując w formularzu TableName *N*, zaczynając od **TableName1**. Mapowania tabeli można użyć, aby zamapować automatycznie wygenerowaną nazwę tabeli na nazwę, która ma być określona dla tabeli w **zestawie danych**. Na przykład dla elementu **SelectCommand** , który zwraca dwie tabele, **klienci** i **zamówienia**, wydaj następujące wywołanie do **wypełnienia**.  
+ Jeśli **Właściwość SelectCommand** zwraca wiele tabel, **Wypełnij** automatycznie generuje nazwy tabel z przyrostowymi wartościami dla tabel w **zestawie danych**, rozpoczynając od określonej nazwy tabeli i kontynuując w formularzu **TableName** *N*, zaczynając od **TableName1**. Mapowania tabeli można użyć, aby zamapować automatycznie wygenerowaną nazwę tabeli na nazwę, która ma być określona dla tabeli w **zestawie danych**. Na przykład dla elementu **SelectCommand** , który zwraca dwie tabele, **klienci** i **zamówienia**, wydaj następujące wywołanie do **wypełnienia**.  
   
 ```  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
   
- W **zestawie danych**są tworzone dwie tabele: **Klienci** i **Customers1**. Mapowania tabel można użyć, aby upewnić się, że druga tabela ma nazwę Orders zamiast **Customers1**. W tym celu należy zmapować tabelę źródłową **Customers1** do **kolejności**tabel **zestawu danych** , jak pokazano w poniższym przykładzie.  
+ W **zestawie danych**są tworzone dwie tabele: **Klienci** i **Customers1**. Mapowania tabel można użyć, aby upewnić się, że druga tabela ma nazwę **Orders** zamiast **Customers1**. W tym celu należy zmapować tabelę źródłową **Customers1** do **kolejności**tabel **zestawu danych** , jak pokazano w poniższym przykładzie.  
   
 ```  
 adapter.TableMappings.Add("Customers1", "Orders")  
@@ -99,6 +99,6 @@ adapter.Fill(customersDataSet, "Customers")
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Elementy DataAdapter i DataReaders](dataadapters-and-datareaders.md)
+- [Pobieranie i modyfikowanie danych ADO.NET](retrieving-and-modifying-data.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

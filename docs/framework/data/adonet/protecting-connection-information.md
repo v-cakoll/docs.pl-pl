@@ -2,22 +2,22 @@
 title: Ochrona informacji o połączeniu
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-ms.openlocfilehash: ccb039a79c76c31b905783b81710571d8c5ab82b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37aab00a967b9912ba01cc3f27f68f8a3e85fdb2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878933"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783059"
 ---
 # <a name="protecting-connection-information"></a>Ochrona informacji o połączeniu
-Ochrona dostępu do źródła danych jest jednym z najważniejszych celów podczas zabezpieczania aplikacji. Parametry połączenia przedstawia informacje o potencjalnych luk w zabezpieczeniach, jeśli nie jest zabezpieczony. Przechowywanie informacji o połączeniu w postaci zwykłego tekstu lub utrwalanie go w pamięci ryzyko obniżania całego systemu. Parametry połączenia osadzone w kodzie źródłowym, może zostać odczytany przy użyciu [Ildasm.exe (dezasembler IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) Aby wyświetlić składnię języka Microsoft intermediate language (MSIL) w skompilowanym zestawie.  
+Ochrona dostępu do źródła danych jest jednym z najważniejszych celów związanych z zabezpieczaniem aplikacji. Parametry połączenia przedstawiają potencjalną lukę w zabezpieczeniach, jeśli nie została zabezpieczona. Przechowywanie informacji o połączeniu w postaci zwykłego tekstu lub utrwalanie ich w pamięci podnoszącej ryzyko złamania całego systemu. Parametry połączenia osadzone w kodzie źródłowym mogą zostać odczytane przy użyciu [Ildasm. exe (Il dezasembler)](../../tools/ildasm-exe-il-disassembler.md) do wyświetlania języka pośredniego firmy Microsoft (MSIL) w skompilowanym zestawie.  
   
- Luki w zabezpieczeniach który obejmujące parametry połączenia mogą wystąpić na podstawie typu uwierzytelniania używane, jak parametry połączenia są zachowywane w pamięci i na dysku i techniki penetracji sieci używane do konstruowania je w czasie wykonywania.  
+ Luki w zabezpieczeniach dotyczące parametrów połączenia mogą powstać w zależności od używanego typu uwierzytelniania, sposobu utrwalania ciągów połączenia w pamięci i na dysku oraz technik używanych do konstruowania ich w czasie wykonywania.  
   
-## <a name="use-windows-authentication"></a>Uwierzytelnianie Windows  
- Aby ułatwić dostęp do źródła danych, należy zabezpieczyć informacje o połączeniu, takie jak nazwa źródłowego Identyfikatora, hasła i dane użytkownika. Aby uniknąć ujawnienia informacji o użytkowniku, zaleca się korzystania z uwierzytelniania Windows (czasami określane jako *zintegrowane zabezpieczenia*) wszędzie tam, gdzie to możliwe. Uwierzytelnianie Windows określono w parametrach połączenia przy użyciu `Integrated Security` lub `Trusted_Connection` słów kluczowych, eliminując konieczność łączenia się przy użyciu Identyfikatora użytkownika i hasło. Korzystając z uwierzytelniania Windows, użytkownicy są uwierzytelniani przez Windows, a dostęp do zasobów serwera i bazy danych jest określona, przyznając uprawnienia Windows użytkowników i grup.  
+## <a name="use-windows-authentication"></a>Użyj uwierzytelniania systemu Windows  
+ Aby ograniczyć dostęp do źródła danych, należy zabezpieczyć informacje dotyczące połączenia, takie jak identyfikator użytkownika, hasło i nazwa źródła danych. Aby uniknąć udostępniania informacji o użytkowniku, zalecamy używanie uwierzytelniania systemu Windows (nazywanego czasem *zabezpieczeniami zintegrowanymi*) wszędzie tam, gdzie to możliwe. Uwierzytelnianie systemu Windows jest określone w parametrach połączenia przy użyciu `Integrated Security` słów `Trusted_Connection` kluczowych lub, eliminując konieczność używania identyfikatora użytkownika i hasła. W przypadku korzystania z uwierzytelniania systemu Windows użytkownicy są uwierzytelniani przez system Windows, a dostęp do zasobów serwera i bazy danych jest określany przez przyznanie uprawnień użytkownikom i grupom systemu Windows.  
   
- W sytuacjach, w którym nie jest możliwe do korzystania z uwierzytelniania Windows należy użyć szczególną ostrożność należy zachować, ponieważ poświadczenia użytkownika są widoczne w parametrach połączenia. W aplikacji ASP.NET można skonfigurować również konto Windows jako stały tożsamości, która służy do łączenia się z bazami danych i innych zasobów sieciowych. Włączanie personifikacji w elemencie tożsamości w **web.config** plik i określ nazwę użytkownika i hasło.  
+ W sytuacjach, gdy nie jest możliwe korzystanie z uwierzytelniania systemu Windows, należy użyć dodatkowej opieki, ponieważ poświadczenia użytkownika są ujawniane w parametrach połączenia. W aplikacji ASP.NET można skonfigurować konto systemu Windows jako stałą tożsamość, która jest używana do łączenia się z bazami danych i innymi zasobami sieciowymi. Należy włączyć personifikację w elemencie Identity w pliku **Web. config** i określić nazwę użytkownika i hasło.  
   
 ```xml  
 <identity impersonate="true"   
@@ -25,23 +25,23 @@ Ochrona dostępu do źródła danych jest jednym z najważniejszych celów podcz
         password="*****" />  
 ```  
   
- Konto tożsamości stałej powinno być konta o niskim poziomie uprawnień, które zostały udzielone tylko niezbędne uprawnienia w bazie danych. Ponadto należy szyfrowania pliku konfiguracji, tak, aby nazwy użytkownika i hasła nie są widoczne w postaci zwykłego tekstu.  
+ Stałe konto tożsamości powinno być kontem z niskimi uprawnieniami, które ma przyznane tylko niezbędne uprawnienia w bazie danych. Ponadto należy zaszyfrować plik konfiguracji, aby nazwa użytkownika i hasło nie były ujawniane w postaci zwykłego tekstu.  
   
-## <a name="do-not-use-universal-data-link-udl-files"></a>Czy pliki nie Użyj Universal Data Link (UDL)  
- Nie należy przechowywać parametry połączenia dla <xref:System.Data.OleDb.OleDbConnection> w pliku Universal Data Link (UDL). UDL są przechowywane w postaci zwykłego tekstu i nie może być szyfrowana. Plik UDL jest oparte na plikach zasób zewnętrzny do aplikacji i nie mogą być chronione ani zaszyfrowane za pomocą programu .NET Framework.  
+## <a name="do-not-use-universal-data-link-udl-files"></a>Nie używaj plików Universal Data Link (UDL)  
+ Należy unikać zapisywania parametrów połączenia dla <xref:System.Data.OleDb.OleDbConnection> elementu w pliku Universal Data Link (UDL). UDL są przechowywane w postaci zwykłego tekstu i nie mogą być szyfrowane. Plik UDL jest zewnętrznym zasobem opartym na plikach dla aplikacji i nie może być zabezpieczony ani szyfrowany przy użyciu .NET Framework.  
   
-## <a name="avoid-injection-attacks-with-connection-string-builders"></a>Należy unikać ataki przez iniekcję kodu z Konstruktorzy parametrów połączeń  
- Ataku polegającego na iniekcji ciąg połączenia może wystąpić, gdy dynamiczne ciągów jest używany do tworzenia parametrów połączenia, w oparciu o dane wejściowe użytkownika. Jeśli dane wejściowe użytkownika nie jest tekst zweryfikowane i złośliwych lub znaków, nie zawiera wyjścia, osoba atakująca może potencjalnie uzyskać dostęp do poufnych danych lub innych zasobów na serwerze. Aby rozwiązać ten problem, ADO.NET w wersji 2.0 wprowadzono nowe klasy konstruktora parametrów połączenia do sprawdzania poprawności składnia ciągu połączenia i upewnij się, że nie wprowadzono dodatkowe parametry. Aby uzyskać więcej informacji, zobacz [Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+## <a name="avoid-injection-attacks-with-connection-string-builders"></a>Unikanie ataków iniekcji przy użyciu konstruktorów parametrów połączenia  
+ Atak polegający na iniekcji parametrów połączenia może wystąpić, gdy dynamiczne łączenie ciągów służy do tworzenia parametrów połączenia na podstawie danych wejściowych użytkownika. Jeśli dane wejściowe użytkownika nie są zweryfikowane i złośliwy tekst lub znaki nie zostały zmienione, osoba atakująca może uzyskać dostęp do poufnych danych lub innych zasobów na serwerze. Aby rozwiązać ten problem, ADO.NET 2,0 wprowadził nowe klasy konstruktora parametrów połączenia w celu zweryfikowania składni parametrów połączenia i upewnienia się, że nie wprowadzono dodatkowych parametrów. Aby uzyskać więcej informacji, zobacz [konstruktory parametrów połączenia](connection-string-builders.md).  
   
-## <a name="use-persist-security-infofalse"></a>Użyj Utrwal informacje zabezpieczające = False  
- Wartością domyślną dla `Persist Security Info` ma wartość FAŁSZ; w zalecamy używanie tego ustawienia domyślnego wszystkie parametry połączenia. Ustawienie `Persist Security Info` do `true` lub `yes` umożliwia informacje związane z zabezpieczeniami, w tym nazwę użytkownika i hasło, które mają zostać uzyskane z połączenia po jego otwarciu. Gdy `Persist Security Info` ustawiono `false` lub `no`, informacje o zabezpieczeniach są usuwane po jest używany do otwierania połączenia, zapewniając, że niezaufanego źródła nie ma dostępu do informacji poufnych.  
+## <a name="use-persist-security-infofalse"></a>Użyj informacji o zabezpieczeniach utrwalania = FAŁSZ  
+ Wartość domyślna dla `Persist Security Info` ma wartość false. Zalecamy używanie tego ustawienia domyślnego we wszystkich parametrach połączenia. Ustawienie `Persist Security Info` na `true` lub`yes` dopuszcza informacje dotyczące zabezpieczeń, w tym identyfikator użytkownika i hasło, które zostaną uzyskane z połączenia po jego otwarciu. Gdy `Persist Security Info` jest ustawiona na `false` lub `no`, informacje o zabezpieczeniach są odrzucane po użyciu do otwarcia połączenia, co zapewnia, że niezaufane źródło nie ma dostępu do informacji poufnych z uwzględnieniem zabezpieczeń.  
   
-## <a name="encrypt-configuration-files"></a>Szyfrowanie plików konfiguracji  
- Można również przechowywać parametry połączenia w plikach konfiguracji, więc nie trzeba ich osadzać w kodzie twojej aplikacji. Pliki konfiguracyjne są standardowymi plikami XML, dla których programu .NET Framework został zdefiniowany zestaw wspólnych elementów. Parametry połączenia w plikach konfiguracji są zazwyczaj przechowywane wewnątrz  **\<connectionStrings >** element **app.config** dla aplikacji Windows, lub  **plik Web.config** plików dla aplikacji ASP.NET. Aby uzyskać więcej informacji na temat przechowywania, pobieranie i szyfrowania parametrów połączenia z plików konfiguracji, zobacz [parametry połączenia i pliki konfiguracyjne](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
+## <a name="encrypt-configuration-files"></a>Szyfruj pliki konfiguracji  
+ Możesz również przechowywać parametry połączenia w plikach konfiguracyjnych, co eliminuje konieczność osadzania ich w kodzie aplikacji. Pliki konfiguracji to standardowe pliki XML, dla których .NET Framework definiuje wspólny zestaw elementów. Parametry połączenia w plikach konfiguracyjnych są zwykle przechowywane wewnątrz  **\<elementu connectionStrings >** w pliku **App. config** dla aplikacji systemu Windows lub **Web. config** dla aplikacji ASP.NET. Aby uzyskać więcej informacji na temat podstaw przechowywania, pobierania i szyfrowania parametrów połączenia z plików konfiguracji, zobacz [parametry połączeń i pliki konfiguracji](connection-strings-and-configuration-files.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Szyfrowanie przy użyciu konfiguracji chronionych informacji o konfiguracji](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))
-- [Zabezpieczenia w .NET](../../../standard/security/index.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Zabezpieczanie aplikacji ADO.NET](securing-ado-net-applications.md)
+- [Szyfrowanie informacji o konfiguracji przy użyciu konfiguracji chronionej](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))
+- [Zabezpieczenia w programie .NET](../../../standard/security/index.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

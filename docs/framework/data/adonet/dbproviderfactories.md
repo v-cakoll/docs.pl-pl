@@ -2,32 +2,32 @@
 title: DbProviderFactories
 ms.date: 03/30/2017
 ms.assetid: 2a8e2640-3a49-42a1-a3a9-b43026907ae1
-ms.openlocfilehash: 2376cf39228cb5e8208112333ba06bb80070de84
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e3ea9e3d083314f8df25f9edadbd1a18f1227293
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606999"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784100"
 ---
 # <a name="dbproviderfactories"></a>DbProviderFactories
-<xref:System.Data.Common> Nazw zawiera klasy do tworzenia <xref:System.Data.Common.DbProviderFactory> wystąpień do pracy z konkretnych źródeł danych. Po utworzeniu <xref:System.Data.Common.DbProviderFactory> wystąpienia i przekazać go informacje o dostawcy danych `DbProviderFactory` można określić obiekt połączenia poprawny, silnie typizowaną do zwrócenia na podstawie informacji został dostarczony.  
+Przestrzeń nazw zawiera klasy służące <xref:System.Data.Common.DbProviderFactory> do tworzenia wystąpień do pracy z określonymi źródłami danych. <xref:System.Data.Common> Po utworzeniu <xref:System.Data.Common.DbProviderFactory> wystąpienia i przejściu do niego informacji o dostawcy `DbProviderFactory` danych można określić poprawny obiekt połączenia o jednoznacznie określonym typie, który ma zostać zwrócony na podstawie dostarczonych informacji.  
   
- Począwszy od programu .NET Framework w wersji 4, dostawców danych takich jak <xref:System.Data.Odbc>, <xref:System.Data.OleDb>, <xref:System.Data.SqlClient>, i <xref:System.Data.OracleClient> już nie są wymienione w pliku machine.config, ale niestandardowego dostawcy będą nadal będą wyświetlane istnieje.  
+ Począwszy od .NET Framework w wersji 4, dostawcy danych, takie <xref:System.Data.Odbc>jak <xref:System.Data.OleDb> <xref:System.Data.SqlClient>,, i <xref:System.Data.OracleClient> nie są już wymienione w pliku Machine. config, ale Dostawcy niestandardowi nadal będą wyświetlani w tym miejscu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Omówienie modelu fabryki](../../../../docs/framework/data/adonet/factory-model-overview.md)  
- Zawiera omówienie wzorca projektowego fabryki i interfejs programowania.  
+ [Omówienie modelu fabryki](factory-model-overview.md)  
+ Zawiera omówienie wzorca projektowego i interfejsu programowania.  
   
- [Uzyskiwanie DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)  
- Pokazuje, jak listy dostawcy danych zainstalowanego i tworzenia <xref:System.Data.Common.DbConnection> z `DbProviderFactory`.  
+ [Uzyskiwanie DbProviderFactory](obtaining-a-dbproviderfactory.md)  
+ Pokazuje, jak wyświetlić listę zainstalowanych dostawców danych i utworzyć <xref:System.Data.Common.DbConnection> `DbProviderFactory`z programu.  
   
- [DbConnection, DbCommand i DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  
- Przedstawia sposób tworzenia <xref:System.Data.Common.DbCommand> i <xref:System.Data.Common.DbDataReader>i sposób obsługi błędów danych przy użyciu <xref:System.Data.Common.DbException>.  
+ [DbConnection, DbCommand i DbException](dbconnection-dbcommand-and-dbexception.md)  
+ Pokazuje, jak utworzyć <xref:System.Data.Common.DbCommand> i <xref:System.Data.Common.DbDataReader>i jak obsługiwać błędy danych przy użyciu programu <xref:System.Data.Common.DbException>.  
   
- [Modyfikowanie danych za pomocą obiektu DbDataAdapter](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)  
- Pokazuje sposób użycia <xref:System.Data.Common.DbCommandBuilder> z <xref:System.Data.Common.DbDataAdapter> do pobrania i modyfikowania danych.  
+ [Modyfikowanie danych za pomocą obiektu DbDataAdapter](modifying-data-with-a-dbdataadapter.md)  
+ Pokazuje, w jaki sposób <xref:System.Data.Common.DbCommandBuilder> używać elementu <xref:System.Data.Common.DbDataAdapter> with a, aby pobierać i modyfikować dane.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Pobieranie i modyfikowanie danych ADO.NET](retrieving-and-modifying-data.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

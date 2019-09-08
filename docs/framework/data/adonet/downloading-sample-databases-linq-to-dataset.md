@@ -2,77 +2,77 @@
 title: Pobieranie przykładowych baz danych (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-ms.openlocfilehash: 340ccd1e0e2d415fe60721775bd39acf9db00f85
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: c67ee699cf594f476a728c7345b47b0c32dea7ff
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504502"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795180"
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Pobieranie przykładowych baz danych (LINQ to DataSet)
-Przykłady i wskazówki dotyczące w składniku LINQ to DataSet dokumentacji Użyj przykładowej bazy danych AdventureWorks. Ten produkt bezpłatna można pobrać z witryny pobierania firmy Microsoft. Przykłady i wskazówki dotyczące w składniku LINQ to DataSet dokumentacji należy użyć programu SQL Server do przechowywania danych. SQL Server Express Edition, który jest dostępny bez opłat, również może służyć do przechowywania danych, zamiast programu SQL Server.  
+Przykłady i instruktaże w dokumentacji LINQ to DataSet korzystają z przykładowej bazy danych AdventureWorks. Ten produkt można pobrać bezpłatnie z witryny pobierania firmy Microsoft. Przykłady i instruktaże w dokumentacji LINQ to DataSet używają SQL Server jako magazynu danych. Wersja SQL Server Express, która jest dostępna bez opłat, może być również używana jako magazyn danych, a nie SQL Server.  
   
-## <a name="downloading-and-installing-the-adventureworks-database"></a>Pobranie i zainstalowanie bazy danych AdventureWorks  
+## <a name="downloading-and-installing-the-adventureworks-database"></a>Pobieranie i Instalowanie bazy danych AdventureWorks  
   
-#### <a name="to-download-and-install-the-adventureworks-sample-database-for-sql-server"></a>Aby pobrać i zainstalować przykładową bazę danych AdventureWorks programu SQL Server  
+#### <a name="to-download-and-install-the-adventureworks-sample-database-for-sql-server"></a>Aby pobrać i zainstalować przykładową bazę danych AdventureWorks dla SQL Server  
   
 1. Otwórz program Internet Explorer.  
   
-2. Przejdź do [przykładów programu SQL Server 2005 i przykładowych baz danych](https://go.microsoft.com/fwlink/?linkid=31046) witryny sieci Web.  
+2. Przejdź do witryny [SQL Server samples 2005 i przykładowych baz danych](https://go.microsoft.com/fwlink/?linkid=31046) w sieci Web.  
   
-3. Postępuj zgodnie z instrukcjami pobierania przykładowej bazy danych AdventureWorks dla danego typu procesora (na przykład AdventureWorksDB.msi), a następnie zapisz. Plik MSI na komputerze lokalnym.  
+3. Postępuj zgodnie z instrukcjami dotyczącymi pobierania przykładowej bazy danych AdventureWorks dla danego typu procesora (na przykład AdventureWorksDB. msi) i Zapisz. Plik MSI na komputer lokalny.  
   
-4. Jeśli masz starszą wersję AdventureWorks zainstalowany z pliki do pobrania lub podczas instalacji programu SQL Server, należy go usunąć przed uruchomieniem AdventureWorks.msi.  
+4. Jeśli masz zainstalowaną poprzednią wersję usługi AdventureWorks z pobrania lub w trakcie instalacji SQL Server, musisz ją usunąć przed uruchomieniem pliku AdventureWorks. msi.  
   
-#### <a name="to-remove-a-previous-download-of-an-adventureworks-sample-database"></a>Aby usunąć poprzednie pobieranie przykładową bazę danych AdventureWorks  
+#### <a name="to-remove-a-previous-download-of-an-adventureworks-sample-database"></a>Aby usunąć poprzednie pobranie przykładowej bazy danych AdventureWorks  
   
-1. Usuwanie bazy danych AdventureWorks lub bazy danych AdventureWorksDW.  
+1. Porzuć bazę danych AdventureWorks lub AdventureWorksDW.  
   
-2. Z **apletu Dodaj lub usuń programy**, wybierz opcję **AdventureWorksDB** lub **AdventureWorksBI** i kliknij przycisk **Usuń**.  
+2. W obszarze **Dodaj lub usuń programy**wybierz pozycję **AdventureWorksDB** lub **AdventureWorksBI** , a następnie kliknij pozycję **Usuń**.  
   
-#### <a name="to-remove-an-adventureworks-sample-database-previously-installed-using-setup"></a>Aby usunąć przykładową bazę danych AdventureWorks zainstalowane wcześniej przy użyciu Instalatora  
+#### <a name="to-remove-an-adventureworks-sample-database-previously-installed-using-setup"></a>Aby usunąć przykładową bazę danych AdventureWorks, która została wcześniej zainstalowana przy użyciu Instalatora  
   
-1. Usuwanie bazy danych AdventureWorks lub bazy danych AdventureWorksDW.  
+1. Porzuć bazę danych AdventureWorks lub AdventureWorksDW.  
   
-2. Z **apletu Dodaj lub usuń programy**, wybierz opcję **Microsoft SQL Server 2005** i kliknij przycisk **zmiany**.  
+2. W obszarze **Dodaj lub usuń programy**wybierz pozycję **Microsoft SQL Server 2005** , a następnie kliknij przycisk **Zmień**.  
   
-3. Z **wybranych składników**, wybierz opcję **składniki stacji roboczej** a następnie kliknij przycisk **dalej**.  
+3. W **obszarze wybór składnika**wybierz pozycję **składniki stacji roboczej** , a następnie kliknij przycisk **dalej**.  
   
-4. Z **Kreator instalacji programu SQL Server — Zapraszamy**, kliknij przycisk **dalej**.  
+4. Na stronie **Witamy w Kreatorze instalacji SQL Server**kliknij przycisk **dalej**.  
   
-5. Z **sprawdzania konfiguracji systemu**, kliknij przycisk **dalej**.  
+5. W obszarze **sprawdzenie konfiguracji systemu**kliknij przycisk **dalej**.  
   
-6. Z **zmiany lub usunięcia wystąpienia**, kliknij przycisk **Zmień zainstalowane składniki**.  
+6. W obszarze **zmiana lub usuwanie wystąpienia**kliknij pozycję **Zmień zainstalowane składniki**.  
   
-7. Z **wybór funkcji**, rozwiń węzeł **dokumentacji, przykładów i przykładowych baz danych** węzła.  
+7. W **obszarze Wybór funkcji**rozwiń węzeł **Dokumentacja, przykłady i Przykładowa baza danych** .  
   
-8. Wybierz **przykładowy kod i aplikacje**. Rozwiń **przykładowych baz danych**, wybierz przykładową bazę danych do usunięcia i wybierz **Cała funkcja będzie niedostępna**. Kliknij przycisk **Dalej**.  
+8. Wybierz **przykładowy kod i aplikacje**. Rozwiń **przykładowe bazy danych**, wybierz przykładową bazę danych do usunięcia, a następnie wybierz opcję **cała funkcja będzie niedostępna**. Kliknij przycisk **Dalej**.  
   
-9. Kliknij przycisk **zainstalować** i Zakończ działanie Kreatora instalacji.  
+9. Kliknij przycisk **Zainstaluj** i Zakończ pracę Kreatora instalacji.  
   
-#### <a name="to-attach-the-adventureworks-sample-database-files-to-an-instance-of-sql-server"></a>Aby dołączyć plików bazy danych AdventureWorks próbki do wystąpienia programu SQL Server  
+#### <a name="to-attach-the-adventureworks-sample-database-files-to-an-instance-of-sql-server"></a>Aby dołączyć pliki przykładowej bazy danych AdventureWorks do wystąpienia SQL Server  
   
-1. Po pobraniu pliku Instalatora bazy danych przykładowych plików kliknij dwukrotnie plik **AdventureWorksDB.msi** pliku (lub pobrany plik) w celu zainstalowania bazy danych. Domyślnie baza danych jest zainstalowana na c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data.  
+1. Po pobraniu pliku instalacyjnego przykładowej bazy danych pliku kliknij dwukrotnie plik **AdventureWorksDB. msi** (lub pobrany plik), aby zainstalować bazę danych. Domyślnie baza danych jest instalowana w katalogu c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data.  
   
-2. Dołącz pliki bazy danych AdventureWorks do wystąpienia programu SQL Server, wykonując następujący skrypt SQLCMD lub SQL Server Management Studio:  
+2. Dołącz pliki bazy danych AdventureWorks do wystąpienia SQL Server, wykonując następujący skrypt SQLCMD lub SQL Server Management Studio:  
   
     ```sql
     exec sp_attach_db @dbname=N'AdventureWorks', @filename1=N'C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data\AdventureWorks_Data.mdf', @filename2=N'C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data\AdventureWorks_log.ldf'  
     ```  
   
-     Jeśli te pliki są zainstalowane na inny dysk lub katalog, należy odpowiednio poprawić ścieżki, przed wykonaniem `sp_attach_db` procedury składowanej.  
+     Jeśli zainstalowano te pliki na innym dysku lub w katalogu, należy odpowiednio skorygować ścieżki przed wykonaniem `sp_attach_db` procedury składowanej.  
   
-## <a name="downloading-sql-server-express-edition"></a>Pobieranie programu SQL Server Express Edition  
- Przykłady i wskazówki dotyczące w składniku LINQ to DataSet sekcji należy użyć programu SQL Server 2005 do przechowywania danych, ale można modyfikować, aby zamiast tego użyj programu SQL Server Express Edition. SQL Server Express Edition jest dostępna bezpłatnie, a następnie rozpowszechnić go z aplikacjami. Jeśli używasz programu Visual Studio, SQL Server Express Edition znajduje się w wersji Pro lub nowszej.  
+## <a name="downloading-sql-server-express-edition"></a>Pobieranie SQL Server Express Edition  
+ Przykłady i instruktaże w sekcji LINQ to DataSet używają jako magazynu danych SQL Server 2005, ale można je zmodyfikować tak, aby korzystały z wersji SQL Server Express Edition. Wersja SQL Server Express jest dostępna bez opłat i można ją rozpowszechniać z aplikacjami. Jeśli używasz programu Visual Studio, wersja SQL Server Express jest dołączona do wersji Pro i nowszych.  
   
-#### <a name="to-download-and-install-sql-server-express-edition"></a>Aby pobrać i zainstalować program SQL Server Express Edition  
+#### <a name="to-download-and-install-sql-server-express-edition"></a>Aby pobrać i zainstalować wersję SQL Server Express  
   
 1. Uruchom program Internet Explorer.  
   
-2. Przejdź do [programu Microsoft SQL Server 2005 Express Edition](https://go.microsoft.com/fwlink/?LinkID=31070) strony pobierania.  
+2. Przejdź do strony pobierania [Microsoft SQL Server 2005 Express Edition](https://go.microsoft.com/fwlink/?LinkID=31070) .  
   
-3. W witrynie sieci Web, postępuj zgodnie z instrukcjami instalacji.  
+3. Postępuj zgodnie z instrukcjami instalacji w witrynie sieci Web.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)
+- [Wprowadzenie](getting-started-linq-to-dataset.md)

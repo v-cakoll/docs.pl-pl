@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-ms.openlocfilehash: 68b99e834428261d59c5fb27277b24eb0f6e77e4
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3f3055b11f0e682ae5a9578289e30dc2716343fe
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205049"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785405"
 ---
 # <a name="datatable-constraints"></a>Ograniczenia elementu DataTable
 Możesz użyć ograniczeń <xref:System.Data.DataTable>, aby wymusić ograniczenia dotyczące danych w, aby zachować integralność danych. Ograniczenie jest automatyczną regułą stosowaną do kolumny lub powiązanych kolumn, która określa przebieg akcji, gdy wartość wiersza jest zmieniana. Ograniczenia są wymuszane, `System.Data.DataSet.EnforceConstraints` gdy właściwość <xref:System.Data.DataSet> ma **wartość true**. Przykładowy kod, który pokazuje, jak ustawić `EnforceConstraints` właściwość, można znaleźć w <xref:System.Data.DataSet.EnforceConstraints%2A> temacie Reference.  
@@ -31,7 +31,7 @@ Możesz użyć ograniczeń <xref:System.Data.DataTable>, aby wymusić ograniczen
   
  **Element ForeignKeyConstraint** może ograniczyć, a także propagowanie zmian w powiązanych kolumnach. W zależności od właściwości ustawionych dla **element ForeignKeyConstraint** kolumny, jeśli właściwość **EnforceConstraints** **zestawu danych** ma **wartość true**, wykonanie niektórych operacji w wierszu nadrzędnym spowoduje wyjątek. Na przykład jeśli właściwość **DeleteRule** elementu **element ForeignKeyConstraint** ma **wartość None**, nie można usunąć wiersza nadrzędnego, jeśli ma on wszystkie wiersze podrzędne.  
   
- Można utworzyć ograniczenie klucza obcego między pojedynczymi kolumnami lub między tablicami kolumn za pomocą konstruktora **element ForeignKeyConstraint** . Przekaż otrzymany obiekt **element ForeignKeyConstraint** do metody **Add** właściwości **ograniczenia** tabeli, która jest elementem **ConstraintCollection**. Można również przekazać argumenty konstruktora do kilku przeciążeń metody **Add** obiektu ConstraintCollection , aby utworzyć **element ForeignKeyConstraint**.  
+ Można utworzyć ograniczenie klucza obcego między pojedynczymi kolumnami lub między tablicami kolumn za pomocą konstruktora **element ForeignKeyConstraint** . Przekaż otrzymany obiekt **element ForeignKeyConstraint** do metody **Add** właściwości **ograniczenia** tabeli, która jest elementem **ConstraintCollection**. Można również przekazać argumenty konstruktora do kilku przeciążeń metody **Add** obiektu **ConstraintCollection** , aby utworzyć **element ForeignKeyConstraint**.  
   
  Podczas tworzenia elementu **element ForeignKeyConstraint**można przekazać wartości **DeleteRule** i **UpdateRule** do konstruktora jako argumenty lub ustawić je jako właściwości, tak jak w poniższym przykładzie (gdzie wartość **DeleteRule** jest ustawiona na  **Brak**).  
   
@@ -70,9 +70,9 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
  [!code-vb[DataWorks Data.AcceptRejectRule#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.AcceptRejectRule/VB/source.vb#1)]  
   
 ## <a name="uniqueconstraint"></a>UniqueConstraint  
- Obiekt **UniqueConstraint** , który można przypisać do pojedynczej kolumny lub do tablicy kolumn w **tabeli DataTable**, zapewnia, że wszystkie dane w określonej kolumnie lub kolumnach są unikatowe dla każdego wiersza. Można utworzyć unikatowe ograniczenie dla kolumny lub tablicy kolumn za pomocą konstruktora **UniqueConstraint** . Przekaż otrzymany obiekt **UniqueConstraint** do metody **Add** właściwości **ograniczenia** tabeli, która jest elementem **ConstraintCollection**. Można również przekazać argumenty konstruktora do kilku przeciążeń metody **Add** obiektu ConstraintCollection , aby utworzyć **UniqueConstraint**. Podczas tworzenia **UniqueConstraint** dla kolumny lub kolumn można opcjonalnie określić, czy kolumna lub kolumny są kluczem podstawowym.  
+ Obiekt **UniqueConstraint** , który można przypisać do pojedynczej kolumny lub do tablicy kolumn w **tabeli DataTable**, zapewnia, że wszystkie dane w określonej kolumnie lub kolumnach są unikatowe dla każdego wiersza. Można utworzyć unikatowe ograniczenie dla kolumny lub tablicy kolumn za pomocą konstruktora **UniqueConstraint** . Przekaż otrzymany obiekt **UniqueConstraint** do metody **Add** właściwości **ograniczenia** tabeli, która jest elementem **ConstraintCollection**. Można również przekazać argumenty konstruktora do kilku przeciążeń metody **Add** obiektu **ConstraintCollection** , aby utworzyć **UniqueConstraint**. Podczas tworzenia **UniqueConstraint** dla kolumny lub kolumn można opcjonalnie określić, czy kolumna lub kolumny są kluczem podstawowym.  
   
- Możesz również utworzyć unikatowe ograniczenie dla kolumny, ustawiając właściwość **Unique** kolumny na **wartość true**. Alternatywnie, ustawienie właściwości **Unique** pojedynczej kolumny na **false** usuwa wszelkie unikatowe ograniczenia, które mogą istnieć. Definiowanie kolumny lub kolumn jako klucza podstawowego dla tabeli spowoduje automatyczne utworzenie unikatowego ograniczenia dla określonej kolumny lub kolumny. Jeśli usuniesz kolumnę z właściwości PrimaryKey **elementu DataTable**, **UniqueConstraint** zostanie usunięta.  
+ Możesz również utworzyć unikatowe ograniczenie dla kolumny, ustawiając właściwość **Unique** kolumny na **wartość true**. Alternatywnie, ustawienie właściwości **Unique** pojedynczej kolumny na **false** usuwa wszelkie unikatowe ograniczenia, które mogą istnieć. Definiowanie kolumny lub kolumn jako klucza podstawowego dla tabeli spowoduje automatyczne utworzenie unikatowego ograniczenia dla określonej kolumny lub kolumny. Jeśli usuniesz kolumnę z właściwości **PrimaryKey** **elementu DataTable**, **UniqueConstraint** zostanie usunięta.  
   
  Poniższy przykład tworzy **UniqueConstraint** dla dwóch kolumn tabeli **DataTable**.  
   
@@ -100,4 +100,4 @@ custDS.Tables["Customers"].Constraints.Add(custUnique);
 - <xref:System.Data.UniqueConstraint>
 - [Definicja schematu elementu DataTable](datatable-schema-definition.md)
 - [Elementy DataSet, DataTable i DataView](index.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

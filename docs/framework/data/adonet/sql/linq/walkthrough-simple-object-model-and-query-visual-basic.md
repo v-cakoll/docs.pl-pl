@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: e0840adba62e10640ef16908db6b57519191f7f7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c21a187739ba19be2dc8e89b4dddc94ad799f036
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946784"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792115"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Przewodnik: Prosty model obiektu i zapytanie (Visual Basic)
 
@@ -25,7 +25,7 @@ Ten Instruktaż został zapisany przy użyciu ustawień tworzenia Visual Basic.
 
 - W tym instruktażu do przechowywania plików służy dedykowany folder ("c:\linqtest"). Utwórz ten folder przed rozpoczęciem przewodnika.
 
-- Ten Instruktaż wymaga przykładowej bazy danych Northwind. Jeśli nie masz tej bazy danych na komputerze deweloperskim, możesz ją pobrać z witryny pobierania firmy Microsoft. Aby uzyskać instrukcje, zobacz [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Po pobraniu bazy danych Skopiuj plik do folderu c:\linqtest.
+- Ten Instruktaż wymaga przykładowej bazy danych Northwind. Jeśli nie masz tej bazy danych na komputerze deweloperskim, możesz ją pobrać z witryny pobierania firmy Microsoft. Aby uzyskać instrukcje, zobacz [Pobieranie przykładowych baz danych](downloading-sample-databases.md). Po pobraniu bazy danych Skopiuj plik do folderu c:\linqtest.
 
 ## <a name="overview"></a>Omówienie
 
@@ -144,7 +144,7 @@ W tym kroku rzeczywiście wykonujesz zapytanie. Wyrażenia zapytania utworzone w
 2. Naciśnij klawisz F5, aby debugować aplikację.
 
     > [!NOTE]
-    > Jeśli aplikacja generuje błąd w czasie wykonywania, zobacz sekcję Rozwiązywanie problemów w temacie [uczenie się według przewodników](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).
+    > Jeśli aplikacja generuje błąd w czasie wykonywania, zobacz sekcję Rozwiązywanie problemów w temacie [uczenie się według przewodników](learning-by-walkthroughs.md).
 
      W oknie komunikatu zostanie wyświetlona lista sześciu klientów. W oknie konsoli jest wyświetlany wygenerowany kod SQL.
 
@@ -158,10 +158,10 @@ W tym kroku rzeczywiście wykonujesz zapytanie. Wyrażenia zapytania utworzone w
 
 ## <a name="next-steps"></a>Następne kroki
 
-[Przewodnik: Wykonywanie zapytań w relacjach (Visual Basic](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md) ) tematu kontynuuje się w przypadku zakończenia tego przewodnika. Instruktaż dotyczący wykonywania zapytań w relacjach [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pokazuje, jak można wykonywać zapytania między tabelami, podobnie jak w przypadku *sprzężeń* w relacyjnej bazie danych.
+[Przewodnik: Wykonywanie zapytań w relacjach (Visual Basic](walkthrough-querying-across-relationships-visual-basic.md) ) tematu kontynuuje się w przypadku zakończenia tego przewodnika. Instruktaż dotyczący wykonywania zapytań w relacjach [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pokazuje, jak można wykonywać zapytania między tabelami, podobnie jak w przypadku *sprzężeń* w relacyjnej bazie danych.
 
 Jeśli chcesz wykonać zapytania dotyczące instrukcji dotyczących relacji, pamiętaj, aby zapisać rozwiązanie dla przewodnika, który właśnie został ukończony, co jest wymaganiem wstępnym.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Nauka przez przewodniki](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [Nauka przez przewodniki](learning-by-walkthroughs.md)

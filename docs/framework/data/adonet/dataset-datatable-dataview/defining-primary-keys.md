@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2ea85959-e763-4669-8bd9-46a9dab894bd
-ms.openlocfilehash: dbfd8a8b207c0da9403ac1f8ab36557c4abe383b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 0f87b1b730eecf0edad75bd87ca8b491b96e1d2b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204911"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784711"
 ---
 # <a name="defining-primary-keys"></a>Definiowanie kluczy podstawowych
 Tabela bazy danych ma zwykle kolumnę lub grupę kolumn, która jednoznacznie identyfikuje każdy wiersz w tabeli. Ta kolumna identyfikująca lub grupa kolumn jest nazywana kluczem podstawowym.  
   
  Po zidentyfikowaniu pojedynczej <xref:System.Data.DataColumn> <xref:System.Data.DataTable.PrimaryKey%2A> jako dla elementu <xref:System.Data.DataTable>, w tabeli automatycznie ustawia <xref:System.Data.DataColumn.AllowDBNull%2A> właściwość kolumny na **false** i <xref:System.Data.DataColumn.Unique%2A> właściwość na **true**. W przypadku kluczy podstawowych z wieloma kolumnami tylko właściwość **AllowDBNull** jest automatycznie ustawiana na **wartość false**.  
   
- Właściwość <xref:System.Data.DataTable> PrimaryKey elementu otrzymuje jako wartość tablicę co najmniej jednego obiektu **DataColumn** , jak pokazano w poniższych przykładach. Pierwszy przykład definiuje pojedynczą kolumnę jako klucz podstawowy.  
+ Właściwość **PrimaryKey** elementu otrzymujejakowartośćtablicęconajmniejjednegoobiektuDataColumn,jakpokazanowponiższychprzykładach.<xref:System.Data.DataTable> Pierwszy przykład definiuje pojedynczą kolumnę jako klucz podstawowy.  
   
 ```vb  
 workTable.PrimaryKey = New DataColumn() {workTable.Columns("CustID")}  
@@ -70,4 +70,4 @@ workTable.PrimaryKey = keyColumn;
 - <xref:System.Data.DataTable>
 - [Definicja schematu elementu DataTable](datatable-schema-definition.md)
 - [Elementy DataTable](datatables.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: 156d661fd5602333fae8066f3062b442a1df19af
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b2407c293de7f11b90586f5a55bd759a4ea734aa
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951707"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795678"
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Instrukcje: tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów
 W tym temacie pokazano, jak zaimplementować niestandardowy moduł sprawdzania poprawności certyfikatu oraz jak skonfigurować poświadczenia klienta lub usługi w celu zastąpienia domyślnej logiki walidacji certyfikatu za pomocą niestandardowego modułu sprawdzania certyfikatu.  
@@ -35,15 +35,15 @@ W tym temacie pokazano, jak zaimplementować niestandardowy moduł sprawdzania p
   
 #### <a name="to-specify-a-custom-certificate-validator-in-service-configuration"></a>Aby określić niestandardowy moduł sprawdzania poprawności certyfikatu w konfiguracji usługi  
   
-1. Dodaj zachowania > elementu i [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) do [ \<elementu System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) . [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+1. Dodaj zachowania > elementu i [ \<serviceBehaviors >](../../configure-apps/file-schema/wcf/servicebehaviors.md) do [ \<elementu System. ServiceModel >](../../configure-apps/file-schema/wcf/system-servicemodel.md) . [ \<](../../configure-apps/file-schema/wcf/behaviors.md)  
   
-2. `name` [ Dodaj\<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) i ustaw odpowiednią wartość atrybutu.  
+2. `name` [ Dodaj\<zachowanie >](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) i ustaw odpowiednią wartość atrybutu.  
   
-3. Dodaj > ServiceCredentials do elementu.`<behavior>` [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)  
+3. Dodaj > ServiceCredentials do elementu.`<behavior>` [ \<](../../configure-apps/file-schema/wcf/servicecredentials.md)  
   
 4. `<clientCertificate>` Dodaj element`<serviceCredentials>` do elementu.  
   
-5. Dodaj [> uwierzytelniania do elementu. \<](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) `<clientCertificate>`  
+5. Dodaj [> uwierzytelniania do elementu. \<](../../configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) `<clientCertificate>`  
   
 6. `customCertificateValidatorType` Ustaw atrybut na typ walidacji. Poniższy przykład ustawia atrybut na przestrzeń nazw i nazwę typu.  
   
@@ -69,17 +69,17 @@ W tym temacie pokazano, jak zaimplementować niestandardowy moduł sprawdzania p
   
 #### <a name="to-specify-a-custom-certificate-validator-using-configuration-on-the-client"></a>Aby określić niestandardowy moduł sprawdzania poprawności certyfikatu przy użyciu konfiguracji na kliencie  
   
-1. Dodaj zachowania > elementu i [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) do [ \<elementu System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) . [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+1. Dodaj zachowania > elementu i [ \<serviceBehaviors >](../../configure-apps/file-schema/wcf/servicebehaviors.md) do [ \<elementu System. ServiceModel >](../../configure-apps/file-schema/wcf/system-servicemodel.md) . [ \<](../../configure-apps/file-schema/wcf/behaviors.md)  
   
-2. Dodaj element [> endpointBehaviors.\<](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)  
+2. Dodaj element [> endpointBehaviors.\<](../../configure-apps/file-schema/wcf/endpointbehaviors.md)  
   
 3. Dodaj element i ustaw odpowiednią wartość `name` atrybutu. `<behavior>`  
   
-4. Dodaj element ClientCredentials >. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)  
+4. Dodaj element ClientCredentials >. [ \<](../../configure-apps/file-schema/wcf/clientcredentials.md)  
   
-5. Dodaj > serviceCertificate. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)  
+5. Dodaj > serviceCertificate. [ \<](../../configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)  
   
-6. Dodaj > uwierzytelniania, jak pokazano w poniższym przykładzie. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+6. Dodaj > uwierzytelniania, jak pokazano w poniższym przykładzie. [ \<](../../configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
 7. `customCertificateValidatorType` Ustaw atrybut na typ walidacji.  
   
@@ -116,7 +116,7 @@ W tym temacie pokazano, jak zaimplementować niestandardowy moduł sprawdzania p
   
 #### <a name="to-specify-a-custom-certificate-validator-using-code-on-the-client"></a>Aby określić niestandardowy moduł sprawdzania poprawności certyfikatu przy użyciu kodu na kliencie  
   
-1. Określ niestandardowy moduł sprawdzania poprawności certyfikatu przy <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> użyciu właściwości. Możesz uzyskać dostęp do poświadczeń klienta przy użyciu <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> właściwości. (Klasa klienta wygenerowana przez [Narzędzie narzędzia metadanych ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) zawsze pochodzi z <xref:System.ServiceModel.ClientBase%601> klasy.)  
+1. Określ niestandardowy moduł sprawdzania poprawności certyfikatu przy <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> użyciu właściwości. Możesz uzyskać dostęp do poświadczeń klienta przy użyciu <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> właściwości. (Klasa klienta wygenerowana przez [Narzędzie narzędzia metadanych ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) zawsze pochodzi z <xref:System.ServiceModel.ClientBase%601> klasy.)  
   
 2. Ustaw <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> właściwość <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>.  
   

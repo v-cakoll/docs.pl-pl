@@ -2,12 +2,12 @@
 title: Opis zmian stanu
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 154f49e7da059d20d0751a73c664aa2a0f89be12
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9f72d113c7160bdb6c4c5680669243323a30a4c1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963082"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796939"
 ---
 # <a name="understanding-state-changes"></a>Opis zmian stanu
 W tym temacie omówiono Stany i przejścia, które są dostępne dla kanałów, typy używane do struktury Stanów kanałów oraz sposób ich implementacji.  
@@ -28,12 +28,12 @@ W tym temacie omówiono Stany i przejścia, które są dostępne dla kanałów, 
   
  Każde <xref:System.ServiceModel.ICommunicationObject> zaczyna się w stanie created. W tym stanie aplikacja może skonfigurować obiekt przez ustawienie jego właściwości. Gdy obiekt jest w stanie innym niż utworzony, jest traktowany jako niezmienny.  
   
- ![Przejście stanu kanału](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
+ ![Przejście stanu kanału](./media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
 Rysunek 1. Maszyna stanu Interfejs ICommunicationObject.  
   
  Windows Communication Foundation (WCF) zawiera abstrakcyjną klasę bazową <xref:System.ServiceModel.Channels.CommunicationObject> o nazwie <xref:System.ServiceModel.ICommunicationObject> implementującą i maszyną stanu kanału. Poniższa ilustracja przedstawia zmodyfikowany Diagram stanu, który jest specyficzny <xref:System.ServiceModel.Channels.CommunicationObject>dla. Oprócz <xref:System.ServiceModel.ICommunicationObject> komputera stanu pokazuje on czas, gdy są wywoływane dodatkowe <xref:System.ServiceModel.Channels.CommunicationObject> metody.  
   
- ![Zmiany stanu](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
+ ![Zmiany stanu](./media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
 Rysunek 2. Implementacja Communicationsobject automatu stanu Interfejs ICommunicationObject, w tym wywołania zdarzeń i metod chronionych.  
   
 ### <a name="icommunicationobject-events"></a>Zdarzenia Interfejs ICommunicationObject  
@@ -90,7 +90,7 @@ Rysunek 2. Implementacja Communicationsobject automatu stanu Interfejs ICommunic
   
  Następnie ustawia stan na otwieranie i wywoływanie metody OnOpening () (która wywołuje zdarzenie otwarcia), OnOpen () i OnOpened () w tej kolejności. OnOpened () ustawia stan na otwarty i wywołuje otwarte zdarzenie. Jeśli którykolwiek z tych zgłasza wyjątek, Open () wywołuje błąd () i umożliwia wyszukanie wyjątku. Na poniższym diagramie przedstawiono proces otwierania w bardziej szczegółowy sposób.  
   
- ![Zmiany stanu](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
+ ![Zmiany stanu](./media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
 Zastąp metodę OnOpen, aby zaimplementować niestandardową, otwartą logikę, taką jak otwieranie wewnętrznego obiektu komunikacyjnego.  
   
  Close — Metoda  
@@ -101,7 +101,7 @@ Zastąp metodę OnOpen, aby zaimplementować niestandardową, otwartą logikę, 
   
  Metodę Close () można wywołać w dowolnym stanie. Próbuje ona zamknąć obiekt w normalny sposób. Jeśli wystąpi błąd, kończy obiekt. Metoda nie wykonuje żadnych operacji, jeśli bieżący stan jest zamykany lub zamknięty. W przeciwnym razie ustawia stan do zamknięcia. Jeśli oryginalny stan został utworzony, otwarcie lub błąd, wywołuje metodę Abort () (zobacz poniższy diagram). Jeśli pierwotny stan został otwarty, wywołuje metodę OnClose () (która wywołuje zdarzenie zamknięcia), w tej kolejności. Jeśli którykolwiek z tych zgłasza wyjątek, zamknięcia () wywołuje metodę Abort () i umożliwia wyszukanie wyjątku. OnClosed () ustawia stan na zamknięty i wywołuje zamknięte zdarzenie. Na poniższym diagramie przedstawiono proces zamykania bardziej szczegółowo.  
   
- ![Zmiany stanu](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO — CloseFlowChartc")  
+ ![Zmiany stanu](./media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO — CloseFlowChartc")  
 Zastąp metodę OnClose, aby zaimplementować niestandardową logikę zamykającą, na przykład zamykającą wewnętrzny obiekt komunikacyjny. Wszelka dyskretna logika, która może być blokowana przez długi czas (na przykład oczekiwanie na odpowiedź drugiej strony) powinna zostać zaimplementowana w trybie OnClose (), ponieważ przyjmuje parametr timeout i ponieważ nie jest wywoływana jako część przerwania ().  
   
  Przerwij  
@@ -111,7 +111,7 @@ Warunek po: Stan jest zamknięty. Może zgłosić wyjątek.
   
  Metoda Abort () nie wykonuje żadnych operacji, jeśli bieżący stan jest zamknięty lub jeśli obiekt został zakończony przed (na przykład może to być operacja Abort () wykonywana w innym wątku). W przeciwnym razie ustawia stan na zamykające i wywołuje metodę OnClose () (która wywołuje zdarzenie zamknięcia), OnAbort () i OnClosed () w tej kolejności (nie wywołuje metody onzamykającej, ponieważ obiekt jest przerywany, nie zamknięty). OnClosed () ustawia stan na zamknięty i wywołuje zamknięte zdarzenie. Jeśli którykolwiek z tych zgłasza wyjątek, zostanie ponownie zgłoszony wywołujący przerwanie. Implementacje onzamykając (), OnClosed () i OnAbort () nie powinny blokować (na przykład na wejściu/wyjściu). Na poniższym diagramie przedstawiono proces przerwania w bardziej szczegółowy sposób.  
   
- ![Zmiany stanu](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO — AbortFlowChartc")  
+ ![Zmiany stanu](./media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO — AbortFlowChartc")  
 Zastąp metodę OnAbort, aby zaimplementować niestandardową logikę zakończenia, taką jak kończenie wewnętrznego obiektu komunikacyjnego.  
   
  Powodu  

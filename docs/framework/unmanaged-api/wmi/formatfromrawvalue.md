@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 681d7ce42b2b8d16353e4f5b3523f1a953a49d95
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 65a6d9eab9708f762d14e5361697b85ffb73f54a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037888"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798628"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue, funkcja
 Konwertuje jedną pierwotną wartość danych wydajności do określonego formatu lub dwie wartości danych pierwotnych wydajności, jeśli Konwersja formatu jest oparta na czasie. 
@@ -89,7 +89,7 @@ Ta funkcja otacza wywołanie funkcji [FormatFromRawValue](https://docs.microsoft
 
 ## <a name="requirements"></a>Wymagania
 
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
  **Biblioteki** PerfCounter.dll
 

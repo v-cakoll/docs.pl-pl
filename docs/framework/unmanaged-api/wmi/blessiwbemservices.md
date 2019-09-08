@@ -1,6 +1,6 @@
 ---
-title: Funkcja BlessIWbemServices (niezarządzany wykaz interfejsów API)
-description: Funkcja BlessIWbemServices wskazuje, czy poświadczenia użytkownika zezwolić na dostęp do klasy IWbemServices.
+title: BlessIWbemServices — funkcja (niezarządzana dokumentacja interfejsu API)
+description: Funkcja BlessIWbemServices wskazuje, czy poświadczenia użytkownika zezwalają na dostęp do klasy IWbemServices.
 ms.date: 11/06/2017
 api_name:
 - BlessIWbemServices
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb83bc3c0c7724dbcd3133465d4e7ad3a9eea3a9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 57ab5eb418b5f0a9175074c87837c7cac8936346
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636504"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799044"
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices, funkcja
-Wskazuje, czy poświadczenia użytkownika zezwolić na dostęp do określonego [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) klasy.   
+Wskazuje, czy poświadczenia użytkownika zezwalają na dostęp do określonej klasy [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) .   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -44,43 +44,43 @@ HRESULT BlessIWbemServices (
 ## <a name="parameters"></a>Parametry
 
 `pIWbemServices`\
-[in] Wskaźnik do [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) obiektu, dla których wymagane są uprawnienia.
+podczas Wskaźnik do obiektu [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) , dla którego wymagane są uprawnienia.
 
 `strUser`\
-[in] Nazwa użytkownika.
+podczas Nazwa użytkownika.
 
 `strPassword`\
-[in] Hasło skojarzone z `strUser`.
+podczas Hasło skojarzone z `strUser`.
 
 `strAuthority`\
-[in] Nazwa domeny użytkownika. Zobacz [ConnectServerWmi](connectserverwmi.md) funkcji, aby uzyskać więcej informacji.
+podczas Nazwa domeny użytkownika. Zobacz funkcję [ConnectServerWmi](connectserverwmi.md) , aby uzyskać więcej informacji.
 
 `impLevel`\
-[in] Poziom personifikacji.
+podczas Poziom personifikacji.
 
 `authnLevel`\
-[in] Poziom autoryzacji.
+podczas Poziom autoryzacji.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WinError.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
+Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nagłówkowym *Winerror. h* lub można je definiować jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
-| `E_INVALIDARG` | 0x80070057 | Jeden lub więcej argumentów są nieprawidłowe. |
-| `E_POINTER` | 0x80004003 | `pIWbemServices` jest `null`. | 
+| `E_INVALIDARG` | 0x80070057 | Co najmniej jeden argument jest nieprawidłowy. |
+| `E_POINTER` | 0x80004003 | `pIWbemServices`jest `null`. | 
 | `E_FAIL` | 0x80000008 | Wystąpił nieokreślony błąd. |
-| `E_OUTOFMEMORY` | 0x80000002 | Ma wystarczającej ilości pamięci do wykonania tej operacji. | 
+| `E_OUTOFMEMORY` | 0x80000002 | Za mało dostępnej pamięci, aby wykonać tę operację. | 
 | `S_OK` | 0 | Wywołanie funkcji zakończyło się pomyślnie. | 
 
 ## <a name="requirements"></a>Wymagania  
 
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** WMINet_Utils.idl  
+ **Nagłówki** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)
+- [WMI i liczniki wydajności (niezarządzana dokumentacja interfejsu API)](index.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-ms.openlocfilehash: 0907aa2a66e1bf51fefc7bed8ea2612cc0c830fa
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 09cee2f2b2c3288c835912c9f311bf2511c7b0d0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203218"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785915"
 ---
 # <a name="sorting-and-filtering-data"></a>Sortowanie i filtrowanie danych
 Oferuje kilka sposobów sortowania i filtrowania danych <xref:System.Data.DataTable>w: <xref:System.Data.DataView>  
@@ -23,20 +23,20 @@ Oferuje kilka sposobów sortowania i filtrowania danych <xref:System.Data.DataTa
   
      Jeśli chcesz zwrócić wyniki konkretnego zapytania dotyczącego danych, w przeciwieństwie do udostępnienia dynamicznego widoku podzbioru danych, użyj <xref:System.Data.DataView.Find%2A> metody lub <xref:System.Data.DataView.FindRows%2A> obiektu **DataView** , aby osiągnąć najlepszą wydajność zamiast ustawić  **Właściwość RowFilter** . Ustawienie właściwości **RowFilter** powoduje odbudowanie indeksu dla danych, dodanie obciążenia do aplikacji i zmniejszenie wydajności. Właściwość **RowFilter** najlepiej używać w aplikacji powiązanej z danymi, gdzie kontrolka powiązania wyświetla filtrowane wyniki. Metody **Find** i **FindRows** wykorzystują bieżący indeks bez konieczności ponownego kompilowania indeksu. Aby uzyskać więcej informacji na temat metod **Find** i **FindRows** , zobacz [Znajdowanie wierszy](finding-rows.md).  
   
-- Możesz użyć właściwości, <xref:System.Data.DataView.RowStateFilter%2A> aby określić wersje wierszy do wyświetlenia. **Widok DataView** niejawnie określa wersję wiersza do udostępnienia w zależności od **RowState** podstawowego wiersza. Na przykład jeśli **RowStateFilter** jest ustawiony na **DataViewRowState. deleted**, **Widok DataView** ujawnia pierwotną wersję wiersza wszystkich usuniętych wierszy , ponieważ nie ma **bieżącej** wersji wiersza. Możesz określić, która wersja wiersza ma być ujawniana przy użyciu właściwości **rowversion** **DataRowView**.  
+- Możesz użyć właściwości, <xref:System.Data.DataView.RowStateFilter%2A> aby określić wersje wierszy do wyświetlenia. **Widok DataView** niejawnie określa wersję wiersza do udostępnienia w zależności od **RowState** podstawowego wiersza. Na przykład jeśli **RowStateFilter** jest ustawiony na **DataViewRowState. deleted**, **Widok DataView** ujawnia **pierwotną** wersję wiersza wszystkich **usuniętych** wierszy, ponieważ nie ma **bieżącej** wersji wiersza. Możesz określić, która wersja wiersza ma być ujawniana przy użyciu właściwości **rowversion** **DataRowView**.  
   
      W poniższej tabeli przedstawiono opcje **DataViewRowState**.  
   
     |Opcje DataViewRowState|Opis|  
     |------------------------------|-----------------|  
-    |**CurrentRows**|Wersja **bieżącego** wiersza wszystkich niezmienionych, dodanychi zmodyfikowanych wierszy. Domyślnie włączone.|  
-    |**Dołączony**|Wersja **bieżącego** wiersza wszystkich dodanych wierszy.|  
-    |**Skasowan**|**Oryginalna** wersja wiersza wszystkich usuniętych wierszy.|  
-    |**ModifiedCurrent**|Wersja **bieżącego** wiersza wszystkich zmodyfikowanych wierszy.|  
-    |**ModifiedOriginal**|**Oryginalna** wersja wiersza wszystkich zmodyfikowanych wierszy.|  
+    |**CurrentRows**|Wersja **bieżącego** wiersza wszystkich **niezmienionych**, **dodanych**i **zmodyfikowanych** wierszy. Domyślnie włączone.|  
+    |**Dołączony**|Wersja **bieżącego** wiersza wszystkich **dodanych** wierszy.|  
+    |**Skasowan**|**Oryginalna** wersja wiersza wszystkich **usuniętych** wierszy.|  
+    |**ModifiedCurrent**|Wersja **bieżącego** wiersza wszystkich **zmodyfikowanych** wierszy.|  
+    |**ModifiedOriginal**|**Oryginalna** wersja wiersza wszystkich **zmodyfikowanych** wierszy.|  
     |**Brak**|Brak wierszy.|  
-    |**OriginalRows**|Wersja **oryginalnego** wiersza wszystkich niezmienionych, zmodyfikowanychi usuniętych wierszy.|  
-    |**Bez zmian**|Wersja **bieżącego** wiersza wszystkich niezmienionych wierszy.|  
+    |**OriginalRows**|Wersja **oryginalnego** wiersza wszystkich **niezmienionych**, **zmodyfikowanych**i **usuniętych** wierszy.|  
+    |**Bez zmian**|Wersja **bieżącego** wiersza wszystkich **niezmienionych** wierszy.|  
   
  Aby uzyskać więcej informacji o Stanach wierszy i wersjach wierszy, zobacz [Stany wiersza i wersje wierszy](row-states-and-row-versions.md).  
   
@@ -63,4 +63,4 @@ DataView prodView = new DataView(prodDS.Tables["Products"],
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
 - [Elementy DataView](dataviews.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

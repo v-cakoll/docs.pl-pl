@@ -2,12 +2,12 @@
 title: Bezpieczeństwo danych i poufności informacji
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: e4f603d35b4fc03eff990570e725a9d063c19faa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 04e405307d3aa42388c396cd69c465ba7ec70d35
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69988720"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783229"
 ---
 # <a name="privacy-and-data-security"></a>Bezpieczeństwo danych i poufności informacji
 Zabezpieczanie poufnych informacji w aplikacji ADO.NET i zarządzanie nimi zależy od podstawowych produktów i technologii użytych do jego utworzenia. Usługa ADO.NET nie udostępnia bezpośrednio usług służących do zabezpieczania i szyfrowania danych.  
@@ -18,7 +18,7 @@ Zabezpieczanie poufnych informacji w aplikacji ADO.NET i zarządzanie nimi zale�
  W przeciwieństwie do kryptografii, która umożliwia szyfrowanie i odszyfrowywanie danych, dane mieszania są procesem jednokierunkowym. Dane dotyczące mieszania są przydatne, gdy chcesz zapobiec naruszeniu przez sprawdzenie, czy dane nie zostały zmienione: dane wejściowe są identyczne, algorytmy wyznaczania wartości skrótu zawsze generują identyczne krótkie wartości wyjściowe, które można łatwo porównać. [Zapewnianie integralności danych za pomocą kodów skrótów](../../../standard/security/ensuring-data-integrity-with-hash-codes.md) opisuje sposób generowania i weryfikowania wartości skrótu.  
   
 ## <a name="encrypting-configuration-files"></a>Szyfrowanie plików konfiguracji  
- Ochrona dostępu do źródła danych jest jednym z najważniejszych celów związanych z zabezpieczaniem aplikacji. Parametry połączenia przedstawiają potencjalną lukę w zabezpieczeniach, jeśli nie została zabezpieczona. Parametry połączenia zapisane w plikach konfiguracji są przechowywane w standardowych plikach XML, dla których .NET Framework zdefiniował wspólny zestaw elementów. Konfiguracja chroniona umożliwia szyfrowanie poufnych informacji w pliku konfiguracji. Program, który jest przeznaczony głównie do aplikacji ASP.NET, może być również używany do szyfrowania sekcji plików konfiguracyjnych w aplikacjach systemu Windows. Aby uzyskać więcej informacji, zobacz [Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
+ Ochrona dostępu do źródła danych jest jednym z najważniejszych celów związanych z zabezpieczaniem aplikacji. Parametry połączenia przedstawiają potencjalną lukę w zabezpieczeniach, jeśli nie została zabezpieczona. Parametry połączenia zapisane w plikach konfiguracji są przechowywane w standardowych plikach XML, dla których .NET Framework zdefiniował wspólny zestaw elementów. Konfiguracja chroniona umożliwia szyfrowanie poufnych informacji w pliku konfiguracji. Program, który jest przeznaczony głównie do aplikacji ASP.NET, może być również używany do szyfrowania sekcji plików konfiguracyjnych w aplikacjach systemu Windows. Aby uzyskać więcej informacji, zobacz [Ochrona informacji o połączeniu](protecting-connection-information.md).  
   
 ## <a name="securing-string-values-in-memory"></a>Zabezpieczanie wartości ciągu w pamięci  
  <xref:System.String> Jeśli obiekt zawiera informacje poufne, takie jak hasło, numer karty kredytowej lub dane osobowe, istnieje ryzyko, że te informacje mogą być ujawnione po ich użyciu, ponieważ aplikacja nie może usunąć danych z pamięci komputera.  
@@ -29,6 +29,6 @@ Zabezpieczanie poufnych informacji w aplikacji ADO.NET i zarządzanie nimi zale�
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Zabezpieczenia serwera SQL](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Zabezpieczanie aplikacji ADO.NET](securing-ado-net-applications.md)
+- [Zabezpieczenia serwera SQL](./sql/sql-server-security.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

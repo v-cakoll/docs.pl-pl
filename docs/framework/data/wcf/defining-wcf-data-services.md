@@ -4,61 +4,61 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 05006ff3-02dc-410e-831e-54ec3e7e24ef
-ms.openlocfilehash: ac75f5fd91f68d9403dc7b42325bf8970f0c6794
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b9280936a16d50283c01120c9dc046e65a0a79ae
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765651"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790870"
 ---
 # <a name="defining-wcf-data-services"></a>Definiowanie usług danych WCF
 
-W tej sekcji opisano sposób tworzenia i konfigurowania usług danych WCF, aby uwidocznić dane jako [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych. Aby uzyskać więcej informacji na temat podstawowych czynności wymagane do tworzenia usługi danych, zobacz [udostępnianie własnych danych jako usługa](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md).
+W tej sekcji opisano sposób tworzenia i konfigurowania usługi danych programu WCF w celu udostępnienia danych [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] jako źródła strumieniowego. Aby uzyskać więcej informacji na temat podstawowych kroków wymaganych do utworzenia usługi danych, zobacz [udostępnianie danych jako usługi](exposing-your-data-as-a-service-wcf-data-services.md).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
- [Konfigurowanie usługi danych](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)
+ [Konfigurowanie usługi danych](configuring-the-data-service-wcf-data-services.md)
 
- W tym artykule opisano opcje konfiguracji usługi danych, udostępniane przez usługi danych WCF.
+ Opisuje opcje konfiguracji usługi danych udostępniane przez Usługi danych programu WCF.
 
- [Dostawcy usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+ [Dostawcy usług danych](data-services-providers-wcf-data-services.md)
 
- W tym artykule opisano modele dostawcy do udostępniania danych jako usługę danych.
+ Opisuje modele dostawców umożliwiające udostępnianie danych jako usługi danych.
 
- [Operacje usługi](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)
+ [Operacje usługi](service-operations-wcf-data-services.md)
 
- W tym artykule opisano, jak zdefiniować operacje usług, które uwidaczniają metod na serwerze.
+ Opisuje sposób definiowania operacji usługi, które uwidaczniają metody na serwerze.
 
- [Dostosowywanie źródła](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md)
+ [Dostosowywanie źródła](feed-customization-wcf-data-services.md)
 
- Opisuje sposób tworzenia mapowania między jednostkami w modelu danych zdefiniowane przez dostawcę usług danych i elementów strumieniowego źródła danych.
+ Opisuje sposób tworzenia mapowania między jednostkami w modelu danych zdefiniowanym przez dostawcę usługi danych i elementy w strumieniowym źródle danych.
 
- [Interceptory](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)
+ [Interceptory](interceptors-wcf-data-services.md)
 
- W tym artykule opisano sposób definiowania metody interceptor do wykonania niestandardowej logiki biznesowej w żądaniach do usługi danych.
+ Opisuje sposób definiowania metod przechwytywania w celu wykonywania niestandardowej logiki biznesowej w przypadku żądań do usługi danych.
 
- [Tworzenie i wdrażanie usług danych programu WCF](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)
+ [Tworzenie i wdrażanie usług danych programu WCF](developing-and-deploying-wcf-data-services.md)
 
  Opisuje sposób tworzenia i wdrażania usługi danych przy użyciu programu Visual Studio.
 
- [Zabezpieczanie usług danych WCF](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
+ [Zabezpieczanie usług danych WCF](securing-wcf-data-services.md)
 
- W tym artykule opisano uwierzytelnianie i autoryzacja dla usługi danych i innych zagadnień dotyczących zabezpieczeń.
+ Opisuje uwierzytelnianie i autoryzację usługi danych oraz inne zagadnienia dotyczące zabezpieczeń.
 
- [Hosting usługi danych](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)
+ [Hosting usługi danych](hosting-the-data-service-wcf-data-services.md)
 
- Opisuje sposób wybierania hosta usługi danych.
+ Opisuje sposób wybierania hosta dla usługi danych.
 
- [Przechowywanie wersji usługi danych](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)
+ [Przechowywanie wersji usługi danych](data-service-versioning-wcf-data-services.md)
 
- W tym artykule opisano sposób pracy z użyciem różnych wersji OData.
+ Opisuje sposób pracy z różnymi wersjami protokołu OData.
 
- [Szczegóły implementacji protokołu usługi danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-protocol-implementation-details.md)
+ [Szczegóły implementacji protokołu usługi danych WCF](wcf-data-services-protocol-implementation-details.md)
 
- W tym artykule opisano opcjonalne funkcje protokołu OData, które nie są obecnie implementowane w usługach danych programu WCF.
+ Opisuje opcjonalne funkcje protokołu OData, które nie są obecnie zaimplementowane przez Usługi danych programu WCF.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Uzyskiwanie dostępu do zasobów usługi danych](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
-- [Wprowadzenie](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+- [Biblioteka klienta usług danych WCF](wcf-data-services-client-library.md)
+- [Uzyskiwanie dostępu do zasobów usługi danych](accessing-data-service-resources-wcf-data-services.md)
+- [Wprowadzenie](getting-started-with-wcf-data-services.md)

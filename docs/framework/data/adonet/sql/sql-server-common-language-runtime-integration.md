@@ -2,47 +2,47 @@
 title: Integracja aparatu plików wykonywalnych języka wspólnego z programem SQL Server
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
-ms.openlocfilehash: fd043aa6c7e5b9246a36146e000e5cba9e090d3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 77b40c6a1576b87d9bb4a7eb4b1ee3df8828b892
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876346"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780862"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>Integracja aparatu plików wykonywalnych języka wspólnego z programem SQL Server
-SQL Server 2005 wprowadzono integrację składnika wspólnego języka wspólnego (CLR) programu .NET Framework dla programu Microsoft Windows. Oznacza to, że można napisać procedury składowane, wyzwalacze, typy zdefiniowane przez użytkownika, funkcje zdefiniowane przez użytkownika, agregacje zdefiniowane przez użytkownika i przesyłania strumieniowego funkcji z wartościami przechowywanymi w tabeli przy użyciu dowolnego języka .NET Framework, w tym programu Microsoft Visual Basic .NET i Microsoft Visual C#. <xref:Microsoft.SqlServer.Server> Przestrzeń nazw zawiera zestaw nowych interfejsów programowania aplikacji (API), aby kod zarządzany może wchodzić w interakcje ze środowiskiem programu Microsoft SQL Server.  
+W SQL Server 2005 wprowadzono integrację składnika środowiska uruchomieniowego języka wspólnego (CLR) .NET Framework dla systemu Microsoft Windows. Oznacza to, że można napisać procedury składowane, wyzwalacze, typy zdefiniowane przez użytkownika, funkcje zdefiniowane przez użytkownika, agregacje zdefiniowane przez użytkownika i funkcję przesyłania strumieniowego z wartościami przechowywanymi w tabeli przy użyciu dowolnego .NET Framework języka, w tym Microsoft Visual Basic .NET i Microsoft Wizualizacja C#. <xref:Microsoft.SqlServer.Server> Przestrzeń nazw zawiera zestaw nowych interfejsów programowania aplikacji (API), dzięki czemu kod zarządzany może współdziałać ze środowiskiem Microsoft SQL Server.  
   
- W tej sekcji opisano, funkcji i zachowań, które są specyficzne dla integrację środowiska uruchomieniowego (języka wspólnego CLR) języka wspólnego programu SQL Server i programu SQL Server w trakcie określonego rozszerzenia do zestawu ADO.NET.  
+ W tej sekcji opisano funkcje i zachowania, które są specyficzne SQL Server dla integracji środowiska uruchomieniowego języka wspólnego (CLR) i SQL Server w procesie ADO.NET.  
   
- Ta sekcja ma zapewnić tylko wystarczających informacji, aby rozpocząć programowanie z użyciem integracji środowiska CLR programu SQL Server i nie jest przeznaczona do wyczerpująca. Aby uzyskać szczegółowe informacje Zobacz wersję programu SQL Server — książki Online dla wersji programu SQL Server, którego używasz.  
+ Ta sekcja ma na celu dostarczenie tylko wystarczającej ilości informacji, aby rozpocząć programowanie przy użyciu integracji środowiska CLR SQL Server i nie jest to wszechstronne. Aby uzyskać bardziej szczegółowe informacje, zapoznaj się z wersją usługi SQL Server Books Online dla używanej wersji SQL Server.  
   
- **SQL Server Books Online**  
+ **Książka SQL Server online**  
   
-1. [Koncepcje programowania integracji wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR)](https://go.microsoft.com/fwlink/?LinkId=115240)  
+1. [Pojęcia dotyczące programowania integracji środowiska uruchomieniowego języka wspólnego (CLR)](https://go.microsoft.com/fwlink/?LinkId=115240)  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Wprowadzenie do integracja środowiska CLR programu SQL Server](../../../../../docs/framework/data/adonet/sql/introduction-to-sql-server-clr-integration.md)  
- Wprowadzenie do integracji środowiska CLR programu SQL Server. Zawiera łącza do dodatkowych tematów.  
+ [Wprowadzenie do integracja środowiska CLR programu SQL Server](introduction-to-sql-server-clr-integration.md)  
+ Zawiera wprowadzenie do SQL Server integracji środowiska CLR. Zawiera łącza do dodatkowych tematów.  
   
- [Zdefiniowane przez użytkownika funkcje CLR](../../../../../docs/framework/data/adonet/sql/clr-user-defined-functions.md)  
- W tym artykule opisano sposób wdrażania i używać różnych typów funkcji CLR: wartościami przechowywanymi w tabeli, skalarną i zdefiniowanych przez użytkownika funkcji agregujących.  
+ [Zdefiniowane przez użytkownika funkcje CLR](clr-user-defined-functions.md)  
+ Opisuje sposób implementacji i używania różnych typów funkcji CLR: funkcji agregujących zwracającej tabelę, skalarnej i zdefiniowanej przez użytkownika.  
   
- [Zdefiniowane przez użytkownika typy CLR](../../../../../docs/framework/data/adonet/sql/clr-user-defined-types.md)  
- Opisuje sposób wdrożenia i używania typy CLR zdefiniowane przez użytkownika. Zawiera łącza do dodatkowych tematów.  
+ [Zdefiniowane przez użytkownika typy CLR](clr-user-defined-types.md)  
+ Opisuje sposób implementacji i używania typów CLR zdefiniowanych przez użytkownika. Zawiera łącza do dodatkowych tematów.  
   
- [Procedury składowane CLR](../../../../../docs/framework/data/adonet/sql/clr-stored-procedures.md)  
- W tym artykule opisano, jak implementować oraz procedury składowane CLR. Zawiera łącza do dodatkowych tematów.  
+ [Procedury składowane CLR](clr-stored-procedures.md)  
+ Opisuje sposób implementacji i używania procedur składowanych CLR. Zawiera łącza do dodatkowych tematów.  
   
- [Wyzwalacze CLR](../../../../../docs/framework/data/adonet/sql/clr-triggers.md)  
- Opisuje sposób wdrożenia i używania wyzwalacze CLR. Zawiera łącza do dodatkowych tematów.  
+ [Wyzwalacze CLR](clr-triggers.md)  
+ Opisuje sposób implementacji i używania wyzwalaczy CLR. Zawiera łącza do dodatkowych tematów.  
   
- [Połączenie kontekstu](../../../../../docs/framework/data/adonet/sql/the-context-connection.md)  
- W tym artykule opisano połączenia kontekstu.  
+ [Połączenie kontekstu](the-context-connection.md)  
+ Opisuje połączenie kontekstu.  
   
- [Zachowanie w procesie specyficzne dla serwera SQL ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-in-process-specific-behavior-of-adonet.md)  
- Opisuje rozszerzenia określone w procesie programu SQL Server, ADO.NET i połączenia kontekstu. Zawiera łącza do dodatkowych tematów.  
+ [Zachowanie w procesie specyficzne dla serwera SQL ADO.NET](sql-server-in-process-specific-behavior-of-adonet.md)  
+ W tym artykule opisano SQL Server specyficzne dla procesu rozszerzenia ADO.NET i połączenia kontekstu. Zawiera łącza do dodatkowych tematów.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server i ADO.NET](index.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

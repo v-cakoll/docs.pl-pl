@@ -2,12 +2,12 @@
 title: Pobieranie relacyjnej struktury elementu DataSet ze schematu XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 29b905c42f15cad4eb8521c4d702b56093982445
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d15aa02b41b9a34b00298aeb32d2e3998de8feba
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203781"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786331"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Pobieranie relacyjnej struktury elementu DataSet ze schematu XML (XSD)
 Ta sekcja zawiera omówienie sposobu kompilowania schematu `DataSet` relacyjnego z dokumentu schematu języka definicji schematu XML (XSD). Ogólnie rzecz biorąc dla każdego `complexType` elementu podrzędnego elementu schematu tabela jest generowana `DataSet`w. Struktura tabeli jest określana na podstawie definicji typu złożonego. Tabele są tworzone w programie `DataSet` dla elementów najwyższego poziomu w schemacie. Jednak tabela jest tworzona tylko dla elementu najwyższego poziomu `complexType` , `complexType` gdy element jest zagnieżdżony wewnątrz innego `complexType` elementu, w którym to `DataTable` przypadku `DataSet`zagnieżdżony `complexType` element jest mapowany do wewnątrz.  
@@ -98,4 +98,4 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

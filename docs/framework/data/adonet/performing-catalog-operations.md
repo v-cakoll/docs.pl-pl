@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-ms.openlocfilehash: beb5d2db898df1c98662d53190ac1432acc746e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0291b6684092ec15fc672c39c909caf7781194e3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878230"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783256"
 ---
 # <a name="performing-catalog-operations"></a>Wykonywanie operacji katalogu
-Wykonanie polecenia do modyfikowania bazy danych lub katalogu, np. wykonywanie instrukcji CREATE TABLE lub utworzyć procedurę tworzenia **polecenia** przy użyciu odpowiedniej instrukcji SQL i **połączenia** obiektu. Wykonanie polecenia za pomocą **ExecuteNonQuery** metody **polecenia** obiektu.  
+Aby wykonać polecenie modyfikacji bazy danych lub wykazu, takie jak CREATE TABLE lub CREATE PROCEDURe, Utwórz obiekt **Command** przy użyciu odpowiednich instrukcji SQL i obiektu **Connection** . Wykonaj polecenie za pomocą metody **ExecuteNonQuery** obiektu **Command** .  
   
- Poniższy przykład kodu tworzy procedurę składowaną w bazie danych programu Microsoft SQL Server.  
+ Poniższy przykład kodu tworzy procedurę przechowywaną w bazie danych Microsoft SQL Server.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -47,6 +47,6 @@ command.ExecuteNonQuery();
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Używanie poleceń do modyfikacji danych](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [Polecenia i parametry](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Używanie poleceń do modyfikacji danych](using-commands-to-modify-data.md)
+- [Polecenia i parametry](commands-and-parameters.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

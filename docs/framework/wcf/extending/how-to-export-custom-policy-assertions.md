@@ -5,46 +5,46 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-ms.openlocfilehash: b3d3afdd1e3fba2a77186d1cd644d723c445600c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 992133ff9922e36b00683f4f48db88e1c2b91c1d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767172"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795670"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Instrukcje: eksportowanie niestandardowych asercji zasad
-Asercji zasad opisano możliwości i wymagania dotyczące punktu końcowego usługi. Aplikacje usługi można użyć niestandardowych asercji zasad w metadanych usługi do komunikacji z punktu końcowego, binding lub umowy informacje o dostosowaniu do aplikacji klienckiej. Windows Communication Foundation (WCF) umożliwia eksportowanie asercji w wyrażeniach zasad dołączone w powiązaniach WSDL na punkt końcowy, operacji lub tematów wiadomości, w zależności od możliwości i wymagania, które komunikują się.  
+Potwierdzenia zasad opisują możliwości i wymagania punktu końcowego usługi. Aplikacje usług mogą używać niestandardowych potwierdzeń zasad w metadanych usługi do przekazywania informacji o dostosowywaniu punktów końcowych, powiązań lub umów do aplikacji klienckiej. Za pomocą Windows Communication Foundation (WCF) można eksportować potwierdzenia w wyrażeniach zasad dołączonych do powiązań WSDL w podmiotach punktu końcowego, operacji lub komunikatu, w zależności od możliwości lub wymagań, które komunikujesz.  
   
- Niestandardowych asercji zasad są eksportowane przez zaimplementowanie <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> interfejsu na <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> i wstawianie elementu powiązania bezpośrednio do powiązania punktu końcowego usługi lub rejestrując element powiązania w aplikacji plik konfiguracji. Implementacji eksportu zasad należy dodać swoje potwierdzeń niestandardowych zasad jako <xref:System.Xml.XmlElement?displayProperty=nameWithType> wystąpienia do odpowiednich <xref:System.ServiceModel.Description.PolicyAssertionCollection?displayProperty=nameWithType> na <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType> przekazany do <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A> metody.  
+ Potwierdzenia zasad niestandardowych są eksportowane przez zaimplementowanie <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> interfejsu <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> na i wstawianie elementu powiązania bezpośrednio do powiązania punktu końcowego usługi lub przez zarejestrowanie elementu powiązania w aplikacji. plik konfiguracji. Implementacja eksportu zasad powinna dodać <xref:System.Xml.XmlElement?displayProperty=nameWithType> potwierdzenie zasad niestandardowych jako wystąpienie do odpowiedniej <xref:System.ServiceModel.Description.PolicyAssertionCollection?displayProperty=nameWithType> <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A> metody w <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType> przekazaniu na metodę.  
   
- Ponadto należy sprawdzić <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> właściwość <xref:System.ServiceModel.Description.WsdlExporter> klasy i eksportowanie zasad zagnieżdżonych wyrażeń zasad framework atrybutów w poprawną przestrzeń nazw określona wersja zasad w oparciu.  
+ Ponadto należy sprawdzić <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> Właściwość <xref:System.ServiceModel.Description.WsdlExporter> klasy i wyeksportować zagnieżdżone wyrażenia zasad i atrybuty struktury zasad w prawidłowej przestrzeni nazw na podstawie określonej wersji zasad.  
   
- Aby importowanie niestandardowych asercji zasad, zobacz <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> i [jak: Importowanie niestandardowych asercji zasad](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md).  
+ Aby zaimportować potwierdzenia zasad niestandardowych, zobacz <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> i [instrukcje: Importuj potwierdzenia](how-to-import-custom-policy-assertions.md)zasad niestandardowych.  
   
-### <a name="to-export-custom-policy-assertions"></a>Aby Eksportowanie niestandardowych asercji zasad  
+### <a name="to-export-custom-policy-assertions"></a>Aby wyeksportować potwierdzenia zasad niestandardowych  
   
-1. Implementowanie <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> interfejsu na <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>. Poniższy przykład kodu pokazuje implementację asercję zasad niestandardowych na poziomie powiązania.  
+1. Zaimplementuj <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>interfejs na. <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> Poniższy przykład kodu pokazuje implementację niestandardowej potwierdzeń zasad na poziomie powiązania.  
   
      [!code-csharp[CustomPolicySample#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/policyexporter.cs#14)]
      [!code-vb[CustomPolicySample#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/policyexporter.vb#14)]  
   
-2. Wstaw element powiązania do endpoint powiązanie albo programowo lub za pomocą pliku konfiguracji aplikacji. Zobacz poniższe procedury.  
+2. Wstaw element Binding do powiązania punktu końcowego albo programowo lub za pomocą pliku konfiguracji aplikacji. Zapoznaj się z poniższymi procedurami.  
   
 ### <a name="to-insert-a-binding-element-using-an-application-configuration-file"></a>Aby wstawić element powiązania przy użyciu pliku konfiguracji aplikacji  
   
-1. Implementowanie <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType> odniesieniu do danego elementu powiązania asercji zasad niestandardowych.  
+1. Zaimplementuj <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType> dla elementu niestandardowego powiązania potwierdzenia zasad.  
   
-2. Dodaj rozszerzenie elementu powiązania do plików konfiguracji przy użyciu [ \<bindingElementExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md) elementu.  
+2. Dodaj rozszerzenie elementu Binding do pliku konfiguracji przy użyciu [ \<elementu > BindingElementExtensions](../../configure-apps/file-schema/wcf/bindingelementextensions.md) .  
   
-3. Tworzenie niestandardowego powiązania za pomocą <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
+3. Utwórz niestandardowe powiązanie przy użyciu <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
   
 ### <a name="to-insert-a-binding-element-programmatically"></a>Aby programowo wstawić element powiązania  
   
-1. Utwórz nową <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> i dodać go do <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
+1. Utwórz nowy <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> i dodaj go <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>do.  
   
-2. Dodawanie niestandardowego powiązania z kroku 1. do nowego punktu końcowego i dodać ten nowy punkt końcowy usługi <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> przez wywołanie metody <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> metody.  
+2. Dodaj niestandardowe powiązanie z kroku 1. do nowego punktu końcowego i Dodaj nowy punkt końcowy usługi do elementu <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> , <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> wywołując metodę.  
   
-3. Otwórz <xref:System.ServiceModel.ServiceHost>. W poniższym przykładzie kodu pokazano tworzenie powiązania niestandardowego i programowe wstawianie elementów wiązania.  
+3. Otwórz okno <xref:System.ServiceModel.ServiceHost>. Poniższy przykład kodu pokazuje Tworzenie niestandardowego powiązania i programistyczne Wstawianie elementów powiązania.  
   
      [!code-csharp[s_imperative#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_imperative/cs/service.cs#1)]
      [!code-vb[s_imperative#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/service.vb#1)]  
@@ -53,4 +53,4 @@ Asercji zasad opisano możliwości i wymagania dotyczące punktu końcowego usł
 
 - <xref:System.ServiceModel.Description.IPolicyImportExtension>
 - <xref:System.ServiceModel.Description.IPolicyExportExtension>
-- [Instrukcje: Importowanie niestandardowych asercji zasad](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+- [Instrukcje: Importuj potwierdzenia zasad niestandardowych](how-to-import-custom-policy-assertions.md)

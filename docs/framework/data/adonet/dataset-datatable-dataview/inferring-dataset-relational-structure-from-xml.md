@@ -2,17 +2,17 @@
 title: Wnioskowanie relacyjnej struktury elementu DataSet z pliku XML
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
-ms.openlocfilehash: 9b1932807058777a532457c99efc49f3ddfdf4ae
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1c8325d7ed52fea7397a7b5aa8744bdfa90b2c6e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204805"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785319"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>Wnioskowanie relacyjnej struktury elementu DataSet z pliku XML
 Struktura relacyjna (lub schemat <xref:System.Data.DataSet> ) składa się z tabel, kolumn, ograniczeń i relacji. Podczas ładowania <xref:System.Data.DataSet> z pliku XML schemat może być wstępnie zdefiniowany lub można go utworzyć, jawnie lub przez wnioskowanie, z ładującego kodu XML. Aby uzyskać więcej informacji na temat ładowania schematu i zawartości <xref:System.Data.DataSet> z pliku XML, zobacz [Ładowanie zestawu danych z XML](loading-a-dataset-from-xml.md) i [ładowanie informacji o schemacie zestawu danych z pliku XML](loading-dataset-schema-information-from-xml.md).  
   
- Jeśli schemat elementu <xref:System.Data.DataSet> jest tworzony na podstawie kodu XML, preferowaną metodą jest jawne określenie schematu przy użyciu języka definicji schematu XML (XSD) (zgodnie z opisem w temacie pochodny [Struktura zestawu danych ze schematu XML (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)) lub Dane XML — zmniejszone (XDR). Jeśli w kodzie XML nie jest dostępny żaden schemat XML ani schemat XDR, schemat <xref:System.Data.DataSet> można wywnioskować na podstawie struktury elementów i atrybutów XML.  
+ Jeśli schemat elementu <xref:System.Data.DataSet> jest tworzony na podstawie kodu XML, preferowaną metodą jest jawne określenie schematu przy użyciu języka definicji schematu XML (XSD) (zgodnie z opisem w temacie [pochodny struktura zestawu danych ze schematu XML (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)) lub Dane XML — zmniejszone (XDR). Jeśli w kodzie XML nie jest dostępny żaden schemat XML ani schemat XDR, schemat <xref:System.Data.DataSet> można wywnioskować na podstawie struktury elementów i atrybutów XML.  
   
  W tej sekcji opisano reguły <xref:System.Data.DataSet> wnioskowania schematu przez pokazanie elementów i atrybutów XML oraz ich struktury, a następnie <xref:System.Data.DataSet> wywnioskowany schemat.  
   
@@ -49,4 +49,4 @@ Struktura relacyjna (lub schemat <xref:System.Data.DataSet> ) składa się z tab
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

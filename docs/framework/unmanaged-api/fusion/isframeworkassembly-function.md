@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 989d046bba1ba3170649e9d908a850bd1177fdd2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 269e3702c21532f377735ba6087abb1603dde4f7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773831"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796320"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly — Funkcja
 Pobiera wartość wskazującą, czy określony zestaw jest zarządzany.  
@@ -39,27 +39,27 @@ HRESULT IsFrameworkAssembly (
   
 ## <a name="parameters"></a>Parametry  
  `pwzAssemblyReference`  
- [in] Nazwa zestawu do sprawdzenia.  
+ podczas Nazwa zestawu do sprawdzenia.  
   
  `pbIsFrameworkAssembly`  
- [out] Wartość logiczna wskazująca, czy zestaw jest zarządzany.  
+ określoną Wartość logiczna wskazująca, czy zestaw jest zarządzany.  
   
  `pwzFrameworkAssemblyIdentity`  
- [in] Uncanonicalized ciąg, który zawiera unikatową tożsamość zestawu.  
+ podczas Niekanoniczny ciąg, który zawiera unikatową tożsamość zestawu.  
   
  `pccSize`  
- [in] Rozmiar `pwzFrameworkAssemblyIdentity`.  
+ podczas Rozmiar `pwzFrameworkAssemblyIdentity`.  
   
 ## <a name="remarks"></a>Uwagi  
  `pwzAssemblyReference` Parametr jest wskaźnikiem do ciągu znaków, który zawiera nazwę zestawu.  
   
- Jeśli ten zestaw jest częścią programu .NET Framework, `pbIsFrameworkAssembly` parametr będzie zawierać wartość logiczną `true`.  
+ Jeśli ten zestaw jest częścią .NET Framework, `pbIsFrameworkAssembly` parametr będzie zawierać `true`wartość logiczną.  
   
- Jeśli nazwany zestaw nie jest częścią programu .NET Framework lub `pwzAssemblyReference` parametru nazwy zestawu, `pbIsFrameworkAssembly` będzie zawierać wartość logiczną `false`.  
+ Jeśli nazwany zestaw nie jest częścią .NET Framework lub jeśli `pwzAssemblyReference` parametr nie ma nazwy zestawu, `pbIsFrameworkAssembly` będzie `false`zawierać wartość logiczną.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Łączenie statycznych funkcji globalnych](fusion-global-static-functions.md)

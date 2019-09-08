@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 21501ec9d0af4c785dd86946fa34c1041bb34b9d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 35e7cc666307d589f21c128734df10430a1a8588
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043895"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779624"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Praca z danymi binarnymi (Usługi danych programu WCF)
 
@@ -23,7 +23,7 @@ Biblioteka klienta umożliwia pobieranie i aktualizowanie danych binarnych [!INC
 
 - Jako oddzielny strumień zasobów binarnych. Jest to zalecana metoda do uzyskiwania dostępu do danych binarnych dużych obiektów (BLOB), które mogą reprezentować zdjęcia, wideo lub dowolnego innego typu binarne dane zakodowane.
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]implementuje przesyłanie strumieniowe danych binarnych przy użyciu protokołu HTTP, jak [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]zdefiniowano w. W tym mechanizmie dane binarne są traktowane jako zasób multimedialny, który jest oddzielony od, ale związany z jednostką, która jest nazywana wpisem multimediów. Aby uzyskać więcej informacji, zobacz [dostawca przesyłania strumieniowego](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]implementuje przesyłanie strumieniowe danych binarnych przy użyciu protokołu HTTP, jak [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]zdefiniowano w. W tym mechanizmie dane binarne są traktowane jako zasób multimedialny, który jest oddzielony od, ale związany z jednostką, która jest nazywana wpisem multimediów. Aby uzyskać więcej informacji, zobacz [dostawca przesyłania strumieniowego](streaming-provider-wcf-data-services.md).
 
 > [!TIP]
 > Aby zapoznać się z przykładem krok po kroku, jak utworzyć aplikację kliencką Windows Presentation Foundation (WPF), która pobiera pliki obrazów binarnych [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] z usługi, w której są przechowywane Zdjęcia [, zobacz Data Services seria dostawcy przesyłania strumieniowego 2: Uzyskiwanie dostępu do strumienia zasobów multimediów z](https://go.microsoft.com/fwlink/?LinkId=201637)klienta programu. Aby pobrać przykładowy kod dla oferty usługi przesyłania strumieniowego strumienia w blogu, zobacz [przykład przesyłania strumieniowego usługi danych zdjęć](https://go.microsoft.com/fwlink/?LinkId=198988) w witrynie MSDN Gallery.
@@ -74,5 +74,5 @@ W tym przykładzie <xref:System.Data.Services.Client.DataServiceContext.SetSaveS
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Wiązanie danych do kontrolki](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+- [Biblioteka klienta usług danych WCF](wcf-data-services-client-library.md)
+- [Wiązanie danych do kontrolki](binding-data-to-controls-wcf-data-services.md)

@@ -1,6 +1,6 @@
 ---
-title: Funkcja GetDemultiplexedStub (niezarządzany wykaz interfejsów API)
-description: Funkcja GetDemultiplexedStub tworzy obiektu sink usługi przesyłania dalej ułatwiających klienta odbieranie wywołań asynchronicznych z zarządzania Windows.
+title: GetDemultiplexedStub — funkcja (niezarządzana dokumentacja interfejsu API)
+description: Funkcja GetDemultiplexedStub tworzy ujścia usługi przesyłania dalej obiektów, aby pomóc klientowi w odbieraniu asynchronicznych wywołań z usługi zarządzania systemem Windows.
 ms.date: 11/06/2017
 api_name:
 - GetDemultiplexedStub
@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b519ea4062682a56b5b4e277de22b14799f65d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a2d3885a4a9e54950909053ba18de5b1891e7edf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783217"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798610"
 ---
-# <a name="getdemultiplexedstub-function"></a><span data-ttu-id="fc8af-103">GetDemultiplexedStub — funkcja</span><span class="sxs-lookup"><span data-stu-id="fc8af-103">GetDemultiplexedStub function</span></span>
-<span data-ttu-id="fc8af-104">Tworzy obiektu sink usługi przesyłania dalej ułatwiających klienta odbieranie wywołań asynchronicznych z zarządzania Windows.</span><span class="sxs-lookup"><span data-stu-id="fc8af-104">Creates an object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
+# <a name="getdemultiplexedstub-function"></a><span data-ttu-id="cfb26-103">GetDemultiplexedStub, funkcja</span><span class="sxs-lookup"><span data-stu-id="cfb26-103">GetDemultiplexedStub function</span></span>
+<span data-ttu-id="cfb26-104">Tworzy obiekt sink usługi przesyłania dalej obiektów, który pomaga klientowi odbierać asynchroniczne wywołania z usługi Windows Management.</span><span class="sxs-lookup"><span data-stu-id="cfb26-104">Creates an object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="fc8af-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="fc8af-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cfb26-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="cfb26-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDemultiplexedStub (
@@ -38,30 +38,30 @@ HRESULT GetDemultiplexedStub (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="fc8af-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="fc8af-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="cfb26-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="cfb26-106">Parameters</span></span>
 
 `pObject`  
-<span data-ttu-id="fc8af-107">[in] Wskaźnik do klienta w trakcie wykonania [funkcji IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).</span><span class="sxs-lookup"><span data-stu-id="fc8af-107">[in] A pointer to the client's in-process implementation of [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).</span></span>
+<span data-ttu-id="cfb26-107">podczas Wskaźnik do implementacji w procesie klienta [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).</span><span class="sxs-lookup"><span data-stu-id="cfb26-107">[in] A pointer to the client's in-process implementation of [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).</span></span>
 
 `isLocal`  
-<span data-ttu-id="fc8af-108">[in] Flagę wskazującą, czy zdarzenie jest lokalny (`true`); w przeciwnym razie `false`.</span><span class="sxs-lookup"><span data-stu-id="fc8af-108">[in] A flag that indicates whether the event is local (`true`); otherwise, `false`.</span></span>
+<span data-ttu-id="cfb26-108">podczas Flaga wskazująca,`true` `false`czy zdarzenie jest lokalne (); w przeciwnym razie.</span><span class="sxs-lookup"><span data-stu-id="cfb26-108">[in] A flag that indicates whether the event is local (`true`); otherwise, `false`.</span></span>
 
 `ppObject`  
-<span data-ttu-id="fc8af-109">[out] Obiektu sink usługi przesyłania dalej pomagać klientowi w odbieranie wywołań asynchronicznych z zarządzania Windows.</span><span class="sxs-lookup"><span data-stu-id="fc8af-109">[out] A object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
+<span data-ttu-id="cfb26-109">określoną Obiekt sink usługi przesyłania dalej obiektów, który ułatwia Klientowi otrzymywanie wywołań asynchronicznych z usługi Windows Management.</span><span class="sxs-lookup"><span data-stu-id="cfb26-109">[out] A object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="fc8af-110">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="fc8af-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="cfb26-110">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="cfb26-110">Return value</span></span>
 
-<span data-ttu-id="fc8af-111">Jeśli funkcja się powiedzie, wartość zwracana jest `S_OK` (0).</span><span class="sxs-lookup"><span data-stu-id="fc8af-111">If the function succeeds, the return value is `S_OK` (0).</span></span>
+<span data-ttu-id="cfb26-111">Jeśli funkcja się powiedzie, zwracaną wartością jest `S_OK` (0).</span><span class="sxs-lookup"><span data-stu-id="cfb26-111">If the function succeeds, the return value is `S_OK` (0).</span></span>
 
-<span data-ttu-id="fc8af-112">Jeśli funkcja zawiedzie, wartość zwracana jest kod błędu różny od zera.</span><span class="sxs-lookup"><span data-stu-id="fc8af-112">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="fc8af-113">Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [geterrorinfo —](geterrorinfo.md) funkcji.</span><span class="sxs-lookup"><span data-stu-id="fc8af-113">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
+<span data-ttu-id="cfb26-112">Jeśli funkcja się nie powiedzie, wartość zwracana jest kodem błędu o wartości innej niż zero.</span><span class="sxs-lookup"><span data-stu-id="cfb26-112">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="cfb26-113">Aby uzyskać rozszerzone informacje o błędzie, wywołaj funkcję [GetErrorInfo](geterrorinfo.md) .</span><span class="sxs-lookup"><span data-stu-id="cfb26-113">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
     
-## <a name="requirements"></a><span data-ttu-id="fc8af-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="fc8af-114">Requirements</span></span>  
- <span data-ttu-id="fc8af-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fc8af-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cfb26-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="cfb26-114">Requirements</span></span>  
+ <span data-ttu-id="cfb26-115">**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cfb26-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fc8af-116">**Nagłówek:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="fc8af-116">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="cfb26-116">**Nagłówki** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="cfb26-116">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="fc8af-117">**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="fc8af-117">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="cfb26-117">**.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="cfb26-117">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fc8af-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="fc8af-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cfb26-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="cfb26-118">See also</span></span>
 
-- [<span data-ttu-id="fc8af-119">Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)</span><span class="sxs-lookup"><span data-stu-id="fc8af-119">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="cfb26-119">WMI i liczniki wydajności (niezarządzana dokumentacja interfejsu API)</span><span class="sxs-lookup"><span data-stu-id="cfb26-119">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

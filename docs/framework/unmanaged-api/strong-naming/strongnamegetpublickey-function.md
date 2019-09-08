@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6e9e5c199ad437290d7bf19d65b5f29a0abed5e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae87ebd0b8225f14ca029fac80528d47f5a866cf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780109"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799060"
 ---
-# <a name="strongnamegetpublickey-function"></a><span data-ttu-id="cd241-102">StrongNameGetPublicKey — Funkcja</span><span class="sxs-lookup"><span data-stu-id="cd241-102">StrongNameGetPublicKey Function</span></span>
-<span data-ttu-id="cd241-103">Pobiera klucz publiczny z pary kluczy publiczny/prywatny.</span><span class="sxs-lookup"><span data-stu-id="cd241-103">Gets the public key from a private/public key pair.</span></span> <span data-ttu-id="cd241-104">Pary kluczy można podać jako nazwę kontenera kluczy w dostawcy usług kryptograficznych (CSP) lub jako kolekcję pierwotnych bajtów.</span><span class="sxs-lookup"><span data-stu-id="cd241-104">The key pair can be supplied either as a key container name within a cryptographic service provider (CSP) or as a raw collection of bytes.</span></span>  
+# <a name="strongnamegetpublickey-function"></a><span data-ttu-id="93322-102">StrongNameGetPublicKey — Funkcja</span><span class="sxs-lookup"><span data-stu-id="93322-102">StrongNameGetPublicKey Function</span></span>
+<span data-ttu-id="93322-103">Pobiera klucz publiczny z pary kluczy prywatnych/publicznych.</span><span class="sxs-lookup"><span data-stu-id="93322-103">Gets the public key from a private/public key pair.</span></span> <span data-ttu-id="93322-104">Para kluczy może być podana jako nazwa kontenera klucza w ramach dostawcy usług kryptograficznych (CSP) lub jako pierwotna kolekcja bajtów.</span><span class="sxs-lookup"><span data-stu-id="93322-104">The key pair can be supplied either as a key container name within a cryptographic service provider (CSP) or as a raw collection of bytes.</span></span>  
   
- <span data-ttu-id="cd241-105">Ta funkcja jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="cd241-105">This function has been deprecated.</span></span> <span data-ttu-id="cd241-106">Użyj [iclrstrongname::strongnamegetpublickey —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md) metody zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="cd241-106">Use the [ICLRStrongName::StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md) method instead.</span></span>  
+ <span data-ttu-id="93322-105">Ta funkcja jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="93322-105">This function has been deprecated.</span></span> <span data-ttu-id="93322-106">Zamiast tego użyj metody [ICLRStrongName:: StrongNameGetPublicKey —](../hosting/iclrstrongname-strongnamegetpublickey-method.md) .</span><span class="sxs-lookup"><span data-stu-id="93322-106">Use the [ICLRStrongName::StrongNameGetPublicKey](../hosting/iclrstrongname-strongnamegetpublickey-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cd241-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="cd241-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="93322-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="93322-107">Syntax</span></span>  
   
 ```cpp  
 BOOLEAN StrongNameGetPublicKey (   
@@ -41,46 +41,46 @@ BOOLEAN StrongNameGetPublicKey (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cd241-108">Parametry</span><span class="sxs-lookup"><span data-stu-id="cd241-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="93322-108">Parametry</span><span class="sxs-lookup"><span data-stu-id="93322-108">Parameters</span></span>  
  `szKeyContainer`  
- <span data-ttu-id="cd241-109">[in] Nazwa kontenera kluczy, który zawiera pary kluczy publiczny/prywatny.</span><span class="sxs-lookup"><span data-stu-id="cd241-109">[in] The name of the key container that contains the public/private key pair.</span></span> <span data-ttu-id="cd241-110">Jeśli `pbKeyBlob` ma wartość null, `szKeyContainer` należy określić prawidłowy kontener w ramach dostawcy usług Kryptograficznych.</span><span class="sxs-lookup"><span data-stu-id="cd241-110">If `pbKeyBlob` is null, `szKeyContainer` must specify a valid container within the CSP.</span></span> <span data-ttu-id="cd241-111">W tym przypadku `StrongNameGetPublicKey` wyodrębnia klucz publiczny z pary kluczy, przechowywane w kontenerze.</span><span class="sxs-lookup"><span data-stu-id="cd241-111">In this case, `StrongNameGetPublicKey` extracts the public key from the key pair stored in the container.</span></span>  
+ <span data-ttu-id="93322-109">podczas Nazwa kontenera kluczy, który zawiera parę kluczy publiczny/prywatny.</span><span class="sxs-lookup"><span data-stu-id="93322-109">[in] The name of the key container that contains the public/private key pair.</span></span> <span data-ttu-id="93322-110">Jeśli `pbKeyBlob` ma wartość null `szKeyContainer` , należy określić prawidłowy kontener w ramach dostawcy CSP.</span><span class="sxs-lookup"><span data-stu-id="93322-110">If `pbKeyBlob` is null, `szKeyContainer` must specify a valid container within the CSP.</span></span> <span data-ttu-id="93322-111">W takim przypadku `StrongNameGetPublicKey` wyodrębnia klucz publiczny z pary kluczy przechowywanej w kontenerze.</span><span class="sxs-lookup"><span data-stu-id="93322-111">In this case, `StrongNameGetPublicKey` extracts the public key from the key pair stored in the container.</span></span>  
   
- <span data-ttu-id="cd241-112">Jeśli `pbKeyBlob` nie ma wartości null, zakłada, że pary kluczy muszą być zawarte w kluczowych duży obiekt binarny (BLOB).</span><span class="sxs-lookup"><span data-stu-id="cd241-112">If `pbKeyBlob` is not null, the key pair is assumed to be contained in the key binary large object (BLOB).</span></span>  
+ <span data-ttu-id="93322-112">Jeśli `pbKeyBlob` wartość nie jest równa null, przyjmuje się, że para kluczy jest zawarta w kluczowym dużym obiekcie binarnym (BLOB).</span><span class="sxs-lookup"><span data-stu-id="93322-112">If `pbKeyBlob` is not null, the key pair is assumed to be contained in the key binary large object (BLOB).</span></span>  
   
- <span data-ttu-id="cd241-113">Klucze muszą być Rivest-Shamir-Adleman 1024-bitowy (RSA) kluczy podpisywania.</span><span class="sxs-lookup"><span data-stu-id="cd241-113">The keys must be 1024-bit Rivest-Shamir-Adleman (RSA) signing keys.</span></span> <span data-ttu-id="cd241-114">Żadne inne typy kluczy są obsługiwane w tej chwili.</span><span class="sxs-lookup"><span data-stu-id="cd241-114">No other types of keys are supported at this time.</span></span>  
+ <span data-ttu-id="93322-113">Klucze muszą być 1024-bitowe Rivest-Shamir-Adleman (RSA) kluczy podpisywania.</span><span class="sxs-lookup"><span data-stu-id="93322-113">The keys must be 1024-bit Rivest-Shamir-Adleman (RSA) signing keys.</span></span> <span data-ttu-id="93322-114">W tej chwili nie są obsługiwane żadne inne typy kluczy.</span><span class="sxs-lookup"><span data-stu-id="93322-114">No other types of keys are supported at this time.</span></span>  
   
  `pbKeyBlob`  
- <span data-ttu-id="cd241-115">[in] Wskaźnik do pary kluczy publiczny/prywatny.</span><span class="sxs-lookup"><span data-stu-id="cd241-115">[in] A pointer to the public/private key pair.</span></span> <span data-ttu-id="cd241-116">Ta para jest w formacie utworzone przez Win32 `CryptExportKey` funkcji.</span><span class="sxs-lookup"><span data-stu-id="cd241-116">This pair is in the format created by the Win32 `CryptExportKey` function.</span></span> <span data-ttu-id="cd241-117">Jeśli `pbKeyBlob` jest null, kontenerze klucza określonym przez `szKeyContainer` założono, że zawiera pary kluczy.</span><span class="sxs-lookup"><span data-stu-id="cd241-117">If `pbKeyBlob` is null, the key container specified by `szKeyContainer` is assumed to contain the key pair.</span></span>  
+ <span data-ttu-id="93322-115">podczas Wskaźnik do pary kluczy publicznych/prywatnych.</span><span class="sxs-lookup"><span data-stu-id="93322-115">[in] A pointer to the public/private key pair.</span></span> <span data-ttu-id="93322-116">Ta para jest w formacie utworzonym przez funkcję Win32 `CryptExportKey` .</span><span class="sxs-lookup"><span data-stu-id="93322-116">This pair is in the format created by the Win32 `CryptExportKey` function.</span></span> <span data-ttu-id="93322-117">Jeśli `pbKeyBlob` ma wartość null, zakłada się, że `szKeyContainer` kontener kluczy określony przez ma zawierać parę kluczy.</span><span class="sxs-lookup"><span data-stu-id="93322-117">If `pbKeyBlob` is null, the key container specified by `szKeyContainer` is assumed to contain the key pair.</span></span>  
   
  `cbKeyBlob`  
- <span data-ttu-id="cd241-118">[in] Rozmiar w bajtach z `pbKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="cd241-118">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
+ <span data-ttu-id="93322-118">podczas Rozmiar, w bajtach, z `pbKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="93322-118">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
   
  `ppbPublicKeyBlob`  
- <span data-ttu-id="cd241-119">[out] Zwrócone klucza publicznego obiektu BLOB.</span><span class="sxs-lookup"><span data-stu-id="cd241-119">[out] The returned public key BLOB.</span></span> <span data-ttu-id="cd241-120">`ppbPublicKeyBlob` Parametr jest przydzielany przez środowisko uruchomieniowe języka wspólnego i zwracany do wywołującego.</span><span class="sxs-lookup"><span data-stu-id="cd241-120">The `ppbPublicKeyBlob` parameter is allocated by the common language runtime and returned to the caller.</span></span> <span data-ttu-id="cd241-121">Obiekt wywołujący musi zwolnić pamięć przy użyciu [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) funkcji.</span><span class="sxs-lookup"><span data-stu-id="cd241-121">The caller must free the memory by using the [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) function.</span></span>  
+ <span data-ttu-id="93322-119">określoną Zwrócony obiekt BLOB klucza publicznego.</span><span class="sxs-lookup"><span data-stu-id="93322-119">[out] The returned public key BLOB.</span></span> <span data-ttu-id="93322-120">`ppbPublicKeyBlob` Parametr jest przypisywany przez środowisko uruchomieniowe języka wspólnego i zwracany do obiektu wywołującego.</span><span class="sxs-lookup"><span data-stu-id="93322-120">The `ppbPublicKeyBlob` parameter is allocated by the common language runtime and returned to the caller.</span></span> <span data-ttu-id="93322-121">Obiekt wywołujący musi zwolnić pamięć przy użyciu funkcji [StrongNameFreeBuffer —](strongnamefreebuffer-function.md) .</span><span class="sxs-lookup"><span data-stu-id="93322-121">The caller must free the memory by using the [StrongNameFreeBuffer](strongnamefreebuffer-function.md) function.</span></span>  
   
  `pcbPublicKeyBlob`  
- <span data-ttu-id="cd241-122">[out] Rozmiar zwróconego obiektu BLOB klucza publicznego.</span><span class="sxs-lookup"><span data-stu-id="cd241-122">[out] The size of the returned public key BLOB.</span></span>  
+ <span data-ttu-id="93322-122">określoną Rozmiar zwróconego obiektu BLOB klucza publicznego.</span><span class="sxs-lookup"><span data-stu-id="93322-122">[out] The size of the returned public key BLOB.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="cd241-123">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="cd241-123">Return Value</span></span>  
- <span data-ttu-id="cd241-124">`true` Po pomyślnym zakończeniu; w przeciwnym razie `false`.</span><span class="sxs-lookup"><span data-stu-id="cd241-124">`true` on successful completion; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="93322-123">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="93322-123">Return Value</span></span>  
+ <span data-ttu-id="93322-124">`true`Po pomyślnym zakończeniu; w przeciwnym razie. `false`</span><span class="sxs-lookup"><span data-stu-id="93322-124">`true` on successful completion; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cd241-125">Uwagi</span><span class="sxs-lookup"><span data-stu-id="cd241-125">Remarks</span></span>  
- <span data-ttu-id="cd241-126">Klucz publiczny jest zawarty w [publickeyblob —](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) struktury.</span><span class="sxs-lookup"><span data-stu-id="cd241-126">The public key is contained in a [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) structure.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="93322-125">Uwagi</span><span class="sxs-lookup"><span data-stu-id="93322-125">Remarks</span></span>  
+ <span data-ttu-id="93322-126">Klucz publiczny jest zawarty w strukturze [PublicKeyBlob —](publickeyblob-structure.md) .</span><span class="sxs-lookup"><span data-stu-id="93322-126">The public key is contained in a [PublicKeyBlob](publickeyblob-structure.md) structure.</span></span>  
   
- <span data-ttu-id="cd241-127">Jeśli `StrongNameGetPublicKey` funkcja nie jest ukończone pomyślnie, wywołaj [strongnameerrorinfo —](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) funkcję, aby pobrać ostatni błąd wygenerowany.</span><span class="sxs-lookup"><span data-stu-id="cd241-127">If the `StrongNameGetPublicKey` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+ <span data-ttu-id="93322-127">Jeśli funkcja nie zakończy się pomyślnie, wywołaj funkcję StrongNameErrorInfo — w celu pobrania ostatniego wygenerowanego błędu. [](strongnameerrorinfo-function.md) `StrongNameGetPublicKey`</span><span class="sxs-lookup"><span data-stu-id="93322-127">If the `StrongNameGetPublicKey` function does not complete successfully, call the [StrongNameErrorInfo](strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cd241-128">Wymagania</span><span class="sxs-lookup"><span data-stu-id="cd241-128">Requirements</span></span>  
- <span data-ttu-id="cd241-129">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cd241-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="93322-128">Wymagania</span><span class="sxs-lookup"><span data-stu-id="93322-128">Requirements</span></span>  
+ <span data-ttu-id="93322-129">**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="93322-129">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cd241-130">**Nagłówek:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="cd241-130">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="93322-130">**Nagłówki** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="93322-130">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="cd241-131">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="cd241-131">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="93322-131">**Biblioteki** Uwzględnione jako zasób w bibliotece MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="93322-131">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="cd241-132">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cd241-132">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="93322-132">**.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="93322-132">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cd241-133">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="cd241-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="93322-133">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="93322-133">See also</span></span>
 
-- [<span data-ttu-id="cd241-134">StrongNameGetPublicKey, metoda</span><span class="sxs-lookup"><span data-stu-id="cd241-134">StrongNameGetPublicKey Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)
-- [<span data-ttu-id="cd241-135">StrongNameTokenFromPublicKey, metoda</span><span class="sxs-lookup"><span data-stu-id="cd241-135">StrongNameTokenFromPublicKey Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
-- [<span data-ttu-id="cd241-136">ICLRStrongName, interfejs</span><span class="sxs-lookup"><span data-stu-id="cd241-136">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
-- [<span data-ttu-id="cd241-137">PublicKeyBlob, struktura</span><span class="sxs-lookup"><span data-stu-id="cd241-137">PublicKeyBlob Structure</span></span>](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)
+- [<span data-ttu-id="93322-134">StrongNameGetPublicKey, metoda</span><span class="sxs-lookup"><span data-stu-id="93322-134">StrongNameGetPublicKey Method</span></span>](../hosting/iclrstrongname-strongnamegetpublickey-method.md)
+- [<span data-ttu-id="93322-135">StrongNameTokenFromPublicKey, metoda</span><span class="sxs-lookup"><span data-stu-id="93322-135">StrongNameTokenFromPublicKey Method</span></span>](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
+- [<span data-ttu-id="93322-136">ICLRStrongName, interfejs</span><span class="sxs-lookup"><span data-stu-id="93322-136">ICLRStrongName Interface</span></span>](../hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="93322-137">PublicKeyBlob, struktura</span><span class="sxs-lookup"><span data-stu-id="93322-137">PublicKeyBlob Structure</span></span>](publickeyblob-structure.md)

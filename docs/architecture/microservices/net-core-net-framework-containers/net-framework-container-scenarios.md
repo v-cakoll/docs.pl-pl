@@ -2,12 +2,12 @@
 title: Kiedy należy wybrać oprogramowanie .NET Framework dla kontenerów Docker
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Kiedy należy wybrać .NET Framework kontenerów platformy Docker
 ms.date: 01/07/2019
-ms.openlocfilehash: 53164654710775320f023df9fb56a78506bd3a1a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0b948017c3bbbcc8c43d5d2d9698d9a1a6f9deed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296504"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784081"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Kiedy należy wybrać oprogramowanie .NET Framework dla kontenerów Docker
 
@@ -57,7 +57,7 @@ W międzyczasie, jeśli jakakolwiek platforma lub usługa na platformie Azure na
 - **Przenoszenie z .NET Framework do platformy .NET Core**  
     [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
-- **.NET Core w przewodniku Docker**[https://docs.microsoft.com/dotnet/core/docker/intro-net-docker](../../../core/docker/intro-net-docker.md)
+- **.NET Core w przewodniku Docker**[https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
 
 - **Przegląd składników platformy .NET**  
     [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)

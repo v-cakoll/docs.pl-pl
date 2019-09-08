@@ -3,12 +3,12 @@ title: Praca z technologią LINQ
 description: W tym samouczku przedstawiono sposób generowania sekwencji przy użyciu LINQ, metod zapisu do użycia w zapytaniach LINQ i rozróżniania między eager i oceną z opóźnieniem.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 3cbafbb6aeed3abdd6d83ead613b29de738d5604
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f80567510509ba0c7f205ccbd5e587f9ad31f531
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587180"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785866"
 ---
 # <a name="working-with-linq"></a>Praca z technologią LINQ
 
@@ -30,7 +30,7 @@ Ten samouczek zawiera wiele kroków. Po każdym kroku można uruchomić aplikacj
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Musisz skonfigurować maszynę do uruchamiania programu .NET Core. Instrukcje instalacji można znaleźć na stronie [.NET Core](https://www.microsoft.com/net/core) . Możesz uruchomić tę aplikację w systemie Windows, Ubuntu Linux, OS X lub w kontenerze platformy Docker. Musisz zainstalować swój ulubiony Edytor kodu. Poniższe opisy wykorzystują [Visual Studio Code](https://code.visualstudio.com/) , czyli edytor Międzyplatformowy. Można jednak korzystać z dowolnych narzędzi, z którymi masz doświadczenie.
+Musisz skonfigurować maszynę do uruchamiania programu .NET Core. Instrukcje instalacji można znaleźć na stronie [pobierania programu .NET Core](https://dotnet.microsoft.com/download) . Możesz uruchomić tę aplikację w systemie Windows, Ubuntu Linux, OS X lub w kontenerze platformy Docker. Musisz zainstalować swój ulubiony Edytor kodu. Poniższe opisy wykorzystują [Visual Studio Code](https://code.visualstudio.com/) , czyli edytor Międzyplatformowy. Można jednak korzystać z dowolnych narzędzi, z którymi masz doświadczenie.
 
 ## <a name="create-the-application"></a>Tworzenie aplikacji
 
@@ -142,7 +142,7 @@ public static void Main(string[] args)
 
 Jednak nie ma metody losowej, aby skorzystać z funkcji w bibliotece standardowej, więc musisz napisać własny. Metoda Losowa, która zostanie utworzona, ilustruje kilka technik, które będą używane z programami LINQ, więc każda część tego procesu zostanie omówiona w krokach.
 
-Aby można było dodać niektóre funkcje, w których można korzystać <xref:System.Collections.Generic.IEnumerable%601> z zapytań LINQ, należy napisać specjalne rodzaje metod nazywanych metodami [rozszerzenia](../programming-guide/classes-and-structs/extension-methods.md). Krótko Metoda rozszerzenia to *metoda statyczna* specjalnego przeznaczenia, która dodaje nową funkcję do już istniejącego typu bez konieczności modyfikowania oryginalnego typu, do którego ma zostać dodana funkcja.
+Aby można było dodać niektóre funkcje, w których można korzystać <xref:System.Collections.Generic.IEnumerable%601> z zapytań LINQ, należy napisać specjalne rodzaje metod nazywanych [metodami rozszerzenia](../programming-guide/classes-and-structs/extension-methods.md). Krótko Metoda rozszerzenia to *metoda statyczna* specjalnego przeznaczenia, która dodaje nową funkcję do już istniejącego typu bez konieczności modyfikowania oryginalnego typu, do którego ma zostać dodana funkcja.
 
 Nadaj rozszerzeniom nowe metody, dodając nowy plik *statycznej* klasy do programu o nazwie `Extensions.cs`, a następnie rozpocznij tworzenie pierwszej metody rozszerzenia:
 
@@ -258,7 +258,7 @@ shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
 
 Uruchom program ponownie, a zobaczysz, że dla talii zostanie wykonanych 52 iteracji na potrzeby zmiany kolejności. Należy również pamiętać o poważnym obniżeniu wydajności, gdy program będzie kontynuował pracę.
 
-Istnieje kilka przyczyn tego działania. Możesz skorzystać z jednej z głównych przyczyn tego spadku wydajności: niewydajne użycie [*oceny*](../programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)z opóźnieniem.
+Istnieje kilka przyczyn tego działania. Możesz skorzystać z jednej z głównych przyczyn tego spadku wydajności: niewydajne użycie [*oceny z opóźnieniem*](../programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
 
 Krótko, z opóźnieniem, że Ocena instrukcji nie jest wykonywana, dopóki jej wartość nie jest wymagana. Zapytania LINQ to instrukcje, które są oceniane opóźnieniem. Sekwencje są generowane tylko w przypadku, gdy są żądane elementy. Zwykle jest to główna korzyść dla LINQ. Jednak w przypadku użycia takiego jak ten program powoduje wzrost wykładniczy w czasie wykonywania.
 

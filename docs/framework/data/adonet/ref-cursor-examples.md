@@ -2,29 +2,29 @@
 title: Przykłady REF CURSOR
 ms.date: 03/30/2017
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
-ms.openlocfilehash: dfad86c6d5c99d7a1b99d7cfbde165d5ec39f5f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 24830452e6d1ab11605ffa88a925fbc55c80b9bf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651678"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794710"
 ---
 # <a name="ref-cursor-examples"></a>Przykłady REF CURSOR
-Przykłady REF CURSOR składają się z następujące trzy przykłady języka Visual Basic, które przedstawiają, za pomocą kursora REF CURSOR.  
+Przykłady kursora REF składają się z trzech następujących przykładów Visual Basic firmy Microsoft, które demonstrują korzystanie z kursorów REF.  
   
 |Przykład|Opis|  
 |------------|-----------------|  
-|[Parametry kursora REF CURSOR w OracleDataReader](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)|W tym przykładzie wykonuje procedury przechowywane PL/SQL, która zwraca parametr REF CURSOR i odczytuje wartość jako <xref:System.Data.OracleClient.OracleDataReader>.|  
-|[Pobieranie danych z wielu kursorów REF CURSOR przy użyciu OracleDataReader](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)|W tym przykładzie wykonuje procedury przechowywane PL/SQL, która zwraca dwa parametry REF CURSOR, a następnie odczytuje wartości za pomocą **Element OracleDataReader**.|  
-|[Wypełnianie zestawu danych przy użyciu przynajmniej jednego kursora REF CURSOR](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)|W tym przykładzie wykonuje procedury przechowywane PL/SQL, która zwraca dwa parametry REF CURSOR i wypełnia <xref:System.Data.DataSet> wierszy, które są zwracane.|  
+|[Parametry kursora REF CURSOR w OracleDataReader](ref-cursor-parameters-in-an-oracledatareader.md)|W tym przykładzie wykonywana jest procedura składowana PL/SQL, która zwraca parametr REF CURSOR i odczytuje wartość jako <xref:System.Data.OracleClient.OracleDataReader>.|  
+|[Pobieranie danych z wielu kursorów REF CURSOR przy użyciu OracleDataReader](retrieving-data-from-multiple-ref-cursors.md)|W tym przykładzie wykonywana jest procedura składowana PL/SQL, która zwraca dwa parametry REF CURSOR i odczytuje wartości przy użyciu **OracleDataReader**.|  
+|[Wypełnianie zestawu danych przy użyciu przynajmniej jednego kursora REF CURSOR](filling-a-dataset-using-one-or-more-ref-cursors.md)|Ten przykład wykonuje procedurę składowaną pl/SQL, która zwraca dwa parametry kursora ref, i wypełnia <xref:System.Data.DataSet> z zwracanymi wierszami.|  
   
- Aby korzystać z tych przykładów, może być konieczne utworzenie tabel bazy danych Oracle i należy utworzyć pakiet PL/SQL i treść pakietu.  
+ Aby użyć tych przykładów, może być konieczne utworzenie tabel Oracle i utworzenie pakietu PL/SQL i treści pakietu.  
   
 ## <a name="creating-the-oracle-tables"></a>Tworzenie tabel Oracle  
- Te przykłady korzystanie z tabel, które są zdefiniowane w schemacie Oracle Scott/Tiger. Schemat bazy danych Oracle Scott/Tiger jest dołączana do większości instalacji programu Oracle. Jeśli w tym schemacie nie istnieje, możesz użyć pliku poleceń SQL w {OracleHome}\rdbms\admin\scott.sql tworzyć tabele i indeksy używane przez te przykłady.  
+ W tych przykładach użyto tabel, które są zdefiniowane w schemacie programu Oracle Scott/Tiger. Schemat programu Oracle Scott/Tiger jest dołączony do większości instalacji programu Oracle. Jeśli ten schemat nie istnieje, możesz użyć pliku poleceń SQL w {OracleHome} \rdbms\admin\scott.SQL, aby utworzyć tabele i indeksy używane przez te przykłady.  
   
-## <a name="creating-the-oracle-package-and-package-body"></a>Tworzenie pakietu programu Oracle i ciało pakietu  
- Te przykłady wymagają następujących pakietów PL/SQL i treść pakietu na serwerze. Utwórz następujący pakiet oprogramowania Oracle na serwerze bazy danych Oracle.  
+## <a name="creating-the-oracle-package-and-package-body"></a>Tworzenie pakietu Oracle i treści pakietu  
+ Poniższe przykłady wymagają pakietu PL/SQL i treści pakietu na serwerze. Utwórz następujący pakiet Oracle na serwerze Oracle.  
   
 ```sql
 CREATE OR REPLACE PACKAGE CURSPKG AS   
@@ -37,7 +37,7 @@ END CURSPKG;
 /   
 ```  
   
- Utwórz następujące ciało pakietu oprogramowania Oracle na serwerze bazy danych Oracle.  
+ Utwórz na serwerze Oracle następującą treść pakietu Oracle.  
   
 ```sql
 CREATE OR REPLACE PACKAGE BODY CURSPKG AS  
@@ -81,5 +81,5 @@ END CURSPKG;
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Oracle REF CURSOR](oracle-ref-cursors.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

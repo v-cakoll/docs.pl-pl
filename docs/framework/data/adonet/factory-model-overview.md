@@ -2,26 +2,26 @@
 title: Omówienie modelu fabryki
 ms.date: 03/30/2017
 ms.assetid: b5dc81c4-7554-44b9-b513-769bd61e2e7b
-ms.openlocfilehash: 3b1d438ce5a7dbb22772d6c5dc97f196b3263d38
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d50ddd3b02b66a5b2be41eaba5cf9a497b5f1b3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879102"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795085"
 ---
 # <a name="factory-model-overview"></a>Omówienie modelu fabryki
-ADO.NET w wersji 2.0 wprowadzono nowe klasy bazowe w <xref:System.Data.Common> przestrzeni nazw. Klasy bazowe są abstrakcyjne, co oznacza, że ich nie można bezpośrednio utworzyć wystąpienia. Obejmują one <xref:System.Data.Common.DbConnection>, <xref:System.Data.Common.DbCommand>, i <xref:System.Data.Common.DbDataAdapter> i są udostępniane przez dostawcę danych .NET Framework, takich jak <xref:System.Data.SqlClient> i <xref:System.Data.OleDb>. Dodawanie klas bazowych upraszcza dodano funkcję dostawcy danych .NET Framework bez konieczności tworzenia nowych interfejsów.  
+W ADO.NET 2,0 wprowadzono nowe klasy bazowe w <xref:System.Data.Common> przestrzeni nazw. Klasy podstawowe są abstrakcyjne, co oznacza, że nie można ich bezpośrednio utworzyć. Obejmują <xref:System.Data.Common.DbConnection>one, <xref:System.Data.Common.DbCommand>i <xref:System.Data.Common.DbDataAdapter> i są współużytkowane przez dostawców danych .NET Framework, takich jak <xref:System.Data.SqlClient> i. <xref:System.Data.OleDb> Dodanie klas bazowych upraszcza Dodawanie funkcji do .NET Framework dostawców danych bez konieczności tworzenia nowych interfejsów.  
   
- ADO.NET w wersji 2.0 wprowadzono również abstrakcyjnych klas bazowych, które umożliwiają deweloperom pisanie kodu dostępu do danych typu ogólnego, które nie są zależne od dostawcy danych specyficznych dla.  
+ W ADO.NET 2,0 wprowadzono również abstrakcyjne klasy podstawowe, które umożliwiają deweloperowi pisanie ogólnego kodu dostępu do danych, który nie zależy od określonego dostawcy danych.  
   
 ## <a name="the-factory-design-pattern"></a>Wzorzec projektowy fabryki  
- Model programowania do pisania kodu niezależnych od dostawcy opiera się na korzystanie z "fabrycznej" wzorcu projektowym używający jednego interfejsu API do baz danych programu access w wielu dostawców. Ten wzorzec jest aptly o nazwie, ponieważ odwołuje się do obiektu wyspecjalizowane jedynie, aby utworzyć inne obiekty, podobnie jak fabrykę rzeczywistych. Aby uzyskać bardziej szczegółowy opis wzorzec projektowy fabryki, zobacz [pisanie ogólne dane dostępu kodu dla programu ASP.NET 2.0 i ADO.NET w wersji 2.0](https://go.microsoft.com/fwlink/?LinkId=55915).
+ Model programowania służący do pisania kodu niezależnego od dostawcy jest oparty na użyciu wzorca projektowego "Factory", który używa jednego interfejsu API do uzyskiwania dostępu do baz danych przez wielu dostawców. Ten wzorzec to aptly o nazwie, ponieważ wywołuje użycie wyspecjalizowanego obiektu wyłącznie do tworzenia innych obiektów, podobnie jak w przypadku fabryki rzeczywistej. Aby zapoznać się z bardziej szczegółowym opisem wzorca projektowego, zobacz [pisanie ogólnego kodu dostępu do danych w ASP.NET 2,0 i ADO.NET 2,0](https://go.microsoft.com/fwlink/?LinkId=55915).
   
- Począwszy od wersji 2.0 programu ADO.NET, <xref:System.Data.Common.DbProviderFactories> klasa udostępnia `static` (lub `Shared` w języku Visual Basic) metody tworzenia <xref:System.Data.Common.DbProviderFactory> wystąpienia. Wystąpienie zwraca poprawne silnie typizowany obiekt na podstawie informacji o dostawcy i parametry połączenia, podany w czasie wykonywania.  
+ Począwszy od <xref:System.Data.Common.DbProviderFactories> ADO.NET 2,0, Klasa zawiera `static` metody (lub `Shared` w Visual Basic) do tworzenia <xref:System.Data.Common.DbProviderFactory> wystąpienia. Wystąpienie zwraca poprawną silnie wpisaną obiekt na podstawie informacji o dostawcy i parametrów połączenia dostarczonych w czasie wykonywania.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Uzyskiwanie DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
-- [DbConnection, DbCommand i DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
-- [Modyfikowanie danych za pomocą obiektu DbDataAdapter](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Uzyskiwanie DbProviderFactory](obtaining-a-dbproviderfactory.md)
+- [DbConnection, DbCommand i DbException](dbconnection-dbcommand-and-dbexception.md)
+- [Modyfikowanie danych za pomocą obiektu DbDataAdapter](modifying-data-with-a-dbdataadapter.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

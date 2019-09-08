@@ -4,93 +4,93 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: 0852622811b5efb362937b3af37f2b9d81b2d1ea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3164656bb183e7773b098cab79d8fe5e0dc5de34
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626442"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792141"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>Przewodnik: Wykonywanie zapytań w relacjach (Visual Basic)
-W tym instruktażu pokazano użycie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *skojarzenia* do reprezentowania relacji klucza obcego w bazie danych.  
+W tym instruktażu przedstawiono sposób [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] użycia *skojarzeń* do reprezentowania relacji FOREIGN KEY w bazie danych.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
- W tym przewodniku została napisana przy użyciu ustawień środowiska deweloperskiego Visual Basic.  
+ Ten Instruktaż został zapisany przy użyciu ustawień tworzenia Visual Basic.  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- Konieczne jest ukończenie [instruktażu: Prosty Model obiektu i zapytanie (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md). W tym przewodniku opiera się na tym, co w tym pliku northwnd.mdf w c:\linqtest.  
+ Należy wykonać [następujące instrukcje: Prosty model obiektu i zapytanie (Visual Basic)](walkthrough-simple-object-model-and-query-visual-basic.md). Ten przewodnik jest oparty na tym instruktażu, w tym o obecności pliku northwnd. mdf w c:\linqtest.  
   
 ## <a name="overview"></a>Omówienie  
  Ten przewodnik składa się z trzech głównych zadań:  
   
-- Dodawanie klasy jednostki do reprezentowania tabeli Orders z przykładowej bazy danych Northwind.  
+- Dodawanie klasy jednostki do reprezentowania tabeli Orders w przykładowej bazie danych Northwind.  
   
-- Uzupełniające adnotacje do `Customer` klasy w celu zwiększenia relacji między `Customer` i `Order` klasy.  
+- Uzupełnianie adnotacji do `Customer` klasy w celu zwiększenia relacji `Customer` między klasami `Order` i.  
   
-- Tworzenie i uruchamianie zapytań, aby przetestować proces uzyskiwania `Order` informacji przy użyciu `Customer` klasy.  
+- Utworzenie i uruchomienie zapytania w celu przetestowania procesu uzyskiwania `Order` informacji przy `Customer` użyciu klasy.  
   
 ## <a name="mapping-relationships-across-tables"></a>Mapowanie relacji między tabelami  
- Po `Customer` definicji klasy, należy utworzyć `Order` jednostki definicji klasy, która zawiera następujący kod, który wskazuje, że `Orders.Customer` odnosi się jako klucz obcy, aby `Customers.CustomerID`.  
+ Po zdefiniowaniu `Order` `Orders.Customer` `Customers.CustomerID`klasy Utwórz definicję klasy jednostki, która zawiera następujący kod, który wskazuje, że odnosi się jako klucz obcy do. `Customer`  
   
-#### <a name="to-add-the-order-entity-class"></a>Aby dodać klasę jednostki zamówienia  
+#### <a name="to-add-the-order-entity-class"></a>Aby dodać klasę Entity Order  
   
-- Wpisz lub wklej następujący kod po `Customer` klasy:  
+- Wpisz lub wklej następujący kod po `Customer` klasie:  
   
      [!code-vb[DLinqWalk2VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#1)]  
   
-## <a name="annotating-the-customer-class"></a>Dodawanie adnotacji do klasy odbiorcy  
- W tym kroku możesz dodawać adnotacje do `Customer` klasy, aby wskazać jej relacji z `Order` klasy. (To dodawanie nie jest bezwzględnie konieczne, ponieważ zdefiniowaniem relacji w dowolnym kierunku jest wystarczające, aby utworzyć łącze. Ale dodanie tej adnotacji umożliwiają łatwe nawigowanie obiektów w dowolnym kierunku).  
+## <a name="annotating-the-customer-class"></a>Dodawanie adnotacji do klasy Customer  
+ W tym kroku utworzysz adnotację `Customer` klasy, aby wskazać jej relację `Order` z klasą. (To dodawanie nie jest absolutnie konieczne, ponieważ zdefiniowanie relacji w dowolnym kierunku jest wystarczające do utworzenia linku. Jednak dodanie tej adnotacji umożliwia łatwe nawigowanie po obiektach w dowolnym kierunku.  
   
-#### <a name="to-annotate-the-customer-class"></a>Dodawać adnotacje do klasy odbiorcy  
+#### <a name="to-annotate-the-customer-class"></a>Aby dodać adnotacje do klasy Customer  
   
 - Wpisz lub wklej następujący kod do `Customer` klasy:  
   
      [!code-vb[DLinqWalk2VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#2)]  
   
-## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Tworzenie i uruchamianie zapytań w relacji zamówienia klienta  
- Teraz uzyskiwać dostęp do `Order` obiektów bezpośrednio z `Customer` obiektów, lub w kolejności przeciwnej. Nie trzeba jawnie *sprzężenia* między klienci i zamówienia.  
+## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Tworzenie i uruchamianie zapytania w ramach relacji zamówienia klienta  
+ Teraz możesz uzyskiwać dostęp `Order` do obiektów bezpośrednio `Customer` z obiektów lub w odwrotnej kolejności. Nie jest potrzebne jawne *dołączenie* między klientami i zamówieniami.  
   
-#### <a name="to-access-order-objects-by-using-customer-objects"></a>Dostęp do obiektów kolejności przy użyciu obiektów klienta  
+#### <a name="to-access-order-objects-by-using-customer-objects"></a>Aby uzyskać dostęp do obiektów zamówienia przy użyciu obiektów klienta  
   
-1. Modyfikowanie `Sub Main` metody, wpisując lub wklejając następujący kod do metody:  
+1. `Sub Main` Zmodyfikuj metodę, wpisując lub wklejając następujący kod do metody:  
   
      [!code-vb[DLinqWalk2VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#3)]  
   
 2. Naciśnij klawisz F5, aby debugować aplikację.  
   
-     Dwie nazwy wyświetlane w oknie komunikatu, a w oknie konsoli wyświetlane wygenerowanego kodu SQL.  
+     W oknie komunikatu są wyświetlane dwie nazwy, a okno konsoli zawiera wygenerowany kod SQL.  
   
 3. Zamknij okno komunikatu, aby zatrzymać debugowanie.  
   
-## <a name="creating-a-strongly-typed-view-of-your-database"></a>Tworzenie silnie Typizowanego widoku bazy danych  
- Jest znacznie łatwiejsze do uruchamiania w silnie typizowanym widoku bazy danych. Zdecydowanie wpisując <xref:System.Data.Linq.DataContext> obiektu, nie trzeba wywołania <xref:System.Data.Linq.DataContext.GetTable%2A>. Silnie typizowane tabel można używać wszystkie zapytania, korzystając z silnie typizowaną <xref:System.Data.Linq.DataContext> obiektu.  
+## <a name="creating-a-strongly-typed-view-of-your-database"></a>Tworzenie widoku bazy danych o jednoznacznie określonym typie  
+ Znacznie łatwiej jest zacząć od jednoznacznie określonego widoku bazy danych. Silnie wpisywanie <xref:System.Data.Linq.DataContext> obiektu nie wymaga wywołania do <xref:System.Data.Linq.DataContext.GetTable%2A>. Można używać tabel z jednoznacznie określonymi typami we wszystkich zapytaniach, gdy używasz obiektu <xref:System.Data.Linq.DataContext> silnie określonego typu.  
   
- W poniższych krokach utworzysz `Customers` jako silnie typizowaną tabelę, która mapuje dane do tabeli Klienci w bazie danych.  
+ W poniższych krokach `Customers` utworzysz jako tabelę o jednoznacznie określonym typie, która jest mapowana na tabelę Customers w bazie danych.  
   
-#### <a name="to-strongly-type-the-datacontext-object"></a>Do silnie typu obiektu DataContext  
+#### <a name="to-strongly-type-the-datacontext-object"></a>Aby silnie wpisać obiekt DataContext  
   
 1. Dodaj następujący kod powyżej `Customer` deklaracji klasy.  
   
      [!code-vb[DLinqWalk2VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#4)]  
   
-2. Modyfikowanie `Sub Main` do użycia w silnie typizowany <xref:System.Data.Linq.DataContext> w następujący sposób:  
+2. Zmodyfikuj `Sub Main` , aby użyć silnie <xref:System.Data.Linq.DataContext> wpisanej w następujący sposób:  
   
      [!code-vb[DLinqWalk2VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#5)]  
   
 3. Naciśnij klawisz F5, aby debugować aplikację.  
   
-     Dane wyjściowe z okna konsoli jest:  
+     Dane wyjściowe okna konsoli są następujące:  
   
      `ID=WHITC`  
   
-4. Naciśnij klawisz Enter w oknie konsoli, aby zamknąć aplikację.  
+4. Naciśnij klawisz ENTER w oknie konsoli, aby zamknąć aplikację.  
   
-5. Na **pliku** menu, kliknij przycisk **Zapisz wszystko** Jeśli chcesz zapisać tę aplikację.  
+5. W menu **plik** kliknij **Zapisz wszystko** , jeśli chcesz zapisać tę aplikację.  
   
 ## <a name="next-steps"></a>Następne kroki  
- Następnym instruktażu ([instruktażu: Manipulowanie danych (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) pokazuje, jak wykonywać operacje na danych. Ten przewodnik nie wymaga zapisania dwa przewodniki w tej serii, które zostały już wykonane.  
+ Następny Przewodnik ([Przewodnik: Manipulowanie danymi (Visual Basic)](walkthrough-manipulating-data-visual-basic.md)) demonstruje sposób manipulowania danymi. Ten Instruktaż nie wymaga zapisania dwóch instruktaży w tej serii, które zostały już wykonane.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Nauka przez przewodniki](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [Nauka przez przewodniki](learning-by-walkthroughs.md)

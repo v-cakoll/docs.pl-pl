@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e9f51799ea56cb1e5819d708a0e4a8136a94f3d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 180eb1a3129cfcd96668ecfee11947c15c5e0915
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741492"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776911"
 ---
 # <a name="setassemblyprops-method"></a>SetAssemblyProps — Metoda
 Przypisuje właściwości na poziomie zestawu.  
@@ -42,22 +42,22 @@ HRESULT SetAssemblyProps(
  Identyfikator zestawu.  
   
  `FileToken`  
- Plik, który definiuje właściwość. Może mieć wartości NULL, jeśli `AssemblyID` nie wskazuje niepowiązanych modułu netmodule.  
+ Plik, który definiuje właściwość. Może mieć wartość null `AssemblyID` , jeśli nie wskazuje niepowiązanego modułu.  
   
  `Option`  
- Wskazuje opcję modyfikacji.  
+ Wskazuje opcję do zmodyfikowania.  
   
  `Value`  
  Nowa wartość opcji.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga alink.h.  
+ Wymaga Alink. h.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink, interfejs](ialink-interface.md)
+- [IALink2, interfejs](ialink2-interface.md)
+- [ALink, interfejs API](index.md)

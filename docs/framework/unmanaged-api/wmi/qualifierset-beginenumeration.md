@@ -1,6 +1,6 @@
 ---
-title: Funkcja QualifierSet_BeginEnumeration (niezarządzany wykaz interfejsów API)
-description: Funkcja QualifierSet_BeginEnumeration resetuje moduł wyliczający kwalifikatory obiektu.
+title: QualifierSet_BeginEnumeration — funkcja (niezarządzana dokumentacja interfejsu API)
+description: Funkcja QualifierSet_BeginEnumeration resetuje moduł wyliczający kwalifikatorów obiektu.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_BeginEnumeration
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f3987705486727a591dce1670cd369d909a0d4a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3b75c51ebddd78e447fed57b22a96c2d5c35004e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636227"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798347"
 ---
-# <a name="qualifiersetbeginenumeration-function"></a>QualifierSet_BeginEnumeration — funkcja
+# <a name="qualifierset_beginenumeration-function"></a>QualifierSet_BeginEnumeration, funkcja
 
-Resetuje moduł wyliczający kwalifikatory obiektu na początku tego wyliczenia.
+Resetuje moduł wyliczający kwalifikatorów obiektu na początku wyliczenia.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -42,47 +42,47 @@ HRESULT QualifierSet_BeginEnumeration (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`\
-[in] Ten parametr jest nieużywany.
+podczas Ten parametr jest nieużywany.
 
 `ptr`\
-[in] Wskaźnik do [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) wystąpienia.
+podczas Wskaźnik do wystąpienia [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .
 
 `lFlags`\
-[in] Bitowa kombinacja wartości opisanych w lub flag [uwagi](#remarks) sekcja, która określa kwalifikatory do uwzględnienia w wyliczeniu.
+podczas Bitowa kombinacja flag lub wartości opisanych w sekcji [uwagi](#remarks) , która określa kwalifikatory do uwzględnienia w wyliczeniu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
+Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nagłówkowym *WbemCli. h* lub można je definiować jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lFlags` Parametr jest nieprawidłowy. |
-|`WBEM_E_UNEXPECTED` | 0x8004101d | Drugie wywołanie `QualifierSet_BeginEnumeration` został utworzony bez interwencyjnego wywołania [ `QualifierSet_EndEnumeration` ](qualifierset-endenumeration.md). |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nie ma wystarczającej ilości pamięci jest dostępny rozpocząć nowe wyliczenie. |
+|`WBEM_E_UNEXPECTED` | 0x8004101d | Drugie wywołanie `QualifierSet_BeginEnumeration` zostało wykonane bez wywołania wywołującego do [`QualifierSet_EndEnumeration`](qualifierset-endenumeration.md). |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało dostępnej pamięci, aby rozpocząć nowe Wyliczenie. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja zawija wywołanie do [IWbemQualifierSet::BeginEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-beginenumeration) metody.
+Ta funkcja otacza wywołanie metody [IWbemQualifierSet:: beingenumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-beginenumeration) .
 
-Wyliczono wszystkie kwalifikatory dla obiektu, ta metoda musi zostać wywołana przed pierwszym wywołaniu [QualifierSet_Next](qualifierset-next.md). Kolejność, w którym są wyliczane kwalifikatory może być inwariantny dla danego wyliczenia.
+Aby wyliczyć wszystkie kwalifikatory obiektu, należy wywołać tę metodę przed pierwszym wywołaniem do [QualifierSet_Next](qualifierset-next.md). Kolejność, w której są wyliczane kwalifikatory, jest gwarantowany jako niezmienna dla danego wyliczenia.
 
-Flagi, które mogą być przekazywane jako `lEnumFlags` argument są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie.
+Flagi, które mogą być przesyłane jako `lEnumFlags` argument, są zdefiniowane w pliku nagłówkowym *WbemCli. h* lub można je definiować jako stałe w kodzie.
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
-|  | 0 | Zwraca nazwy wszystkich kwalifikatorów. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Zwróć tylko nazwy kwalifikatory określonych do bieżącej właściwości lub obiektu. <br/> Dla właściwości: Zwróć tylko kwalifikatory określone dla właściwości (w tym zastąpień), a nie kwalifikatory propagowane z poziomu definicji klasy. <br/> W przypadku wystąpienia: Zwróć tylko nazwy kwalifikator danego wystąpienia. <br/> Dla klasy: Zwróć tylko kwalifikatory określonej klasy pochodnej jest.
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Zwróć tylko nazwy kwalifikatory propagowane z innego obiektu. <br/> Dla właściwości: Zwróć tylko kwalifikatory propagowane do tej właściwości z definicji klasy, a nie te z samej właściwości. <br/> W przypadku wystąpienia: Zwróć tylko tych kwalifikatory propagowane z poziomu definicji klasy. <br/> Dla klasy: Zwróć tylko nazwy kwalifikator dziedziczone z klasy nadrzędnej. |
+|  | 0 | Zwróć nazwy wszystkich kwalifikatorów. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Zwraca tylko nazwy kwalifikatorów specyficzne dla bieżącej właściwości lub obiektu. <br/> Dla właściwości: Zwróć tylko kwalifikatory charakterystyczne dla właściwości (w tym przesłonięć), a nie te kwalifikatory, które zostały przekazane z definicji klasy. <br/> Dla wystąpienia: Zwróć tylko nazwy kwalifikatorów specyficznych dla wystąpienia. <br/> Dla klasy: Zwróć tylko kwalifikatory charakterystyczne dla klasy pochodnej.
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Zwraca tylko nazwy kwalifikatorów, które zostały przekazane z innego obiektu. <br/> Dla właściwości: Zwróć tylko kwalifikatory propagowane do tej właściwości z definicji klasy, a nie te z samej właściwości. <br/> Dla wystąpienia: Zwraca tylko te kwalifikatory, które zostały przekazane z definicji klasy. <br/> Dla klasy: Zwróć tylko te nazwy kwalifikatorów dziedziczone z klas nadrzędnych. |
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
-**Nagłówek:** WMINet_Utils.idl
+**Nagłówki** WMINet_Utils.idl
 
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)
+- [WMI i liczniki wydajności (niezarządzana dokumentacja interfejsu API)](index.md)

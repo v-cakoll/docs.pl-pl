@@ -2,12 +2,12 @@
 title: Parametry połączenia w ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 02fe8d984f1287673477bb142b3f9626e248898e
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 8f726ca71ba955ef542d15e0e8318c2b310e607e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363748"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784906"
 ---
 # <a name="connection-strings-in-adonet"></a>Parametry połączenia w ADO.NET
 
@@ -23,7 +23,7 @@ keyword1=value; keyword2=value;
 
 W słowach kluczowych nie jest rozróżniana wielkość liter. Jednak w zależności od źródła danych w wartościach może być rozróżniana wielkość liter. Oba słowa kluczowe i wartości mogą zawierać [znaki odstępu](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Odstępy wiodące i końcowe są ignorowane w słowach kluczowych i w wartościach bez cudzysłowów.
 
-Jeśli wartość zawiera średnika, [znaki kontrolne Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters)lub wiodące lub końcowe biały znak, musi być ujęta w znaki pojedynczego lub podwójnego cudzysłowu. Na przykład:
+Jeśli wartość zawiera średnika, [znaki kontrolne Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters)lub wiodące lub końcowe biały znak, musi być ujęta w znaki pojedynczego lub podwójnego cudzysłowu. Przykład:
 
 ```
 Keyword=" whitespace  ";
@@ -57,23 +57,23 @@ Wszystkie parametry połączenia mają tę samą składnię podstawową opisaną
 
 Wpisywanie błędów może spowodować błędy. Na przykład, `Integrated Security=true` jest prawidłowy, ale `IntegratedSecurity=true` powoduje błąd.
 
-Parametry połączenia tworzone ręcznie w czasie wykonywania z niezweryfikowanych danych wejściowych użytkownika są narażone na ataki przez iniekcję ciągów i zagrażają bezpieczeństwu w źródle danych. Aby rozwiązać te problemy, w *ADO.NET* 2,0 wprowadzono [konstruktory parametrów połączenia](../../../../docs/framework/data/adonet/connection-string-builders.md) dla każdego dostawcy danych *.NET Framework* . Te konstruktory parametrów połączenia uwidaczniają parametry jako właściwości o jednoznacznie określonym typie i umożliwiają sprawdzanie poprawności parametrów połączenia przed ich wysłaniem do źródła danych.
+Parametry połączenia tworzone ręcznie w czasie wykonywania z niezweryfikowanych danych wejściowych użytkownika są narażone na ataki przez iniekcję ciągów i zagrażają bezpieczeństwu w źródle danych. Aby rozwiązać te problemy, w *ADO.NET* 2,0 wprowadzono [konstruktory parametrów połączenia](connection-string-builders.md) dla każdego dostawcy danych *.NET Framework* . Te konstruktory parametrów połączenia uwidaczniają parametry jako właściwości o jednoznacznie określonym typie i umożliwiają sprawdzanie poprawności parametrów połączenia przed ich wysłaniem do źródła danych.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Konstruktory parametrów połączenia](../../../../docs/framework/data/adonet/connection-string-builders.md)\
+[Konstruktory parametrów połączenia](connection-string-builders.md)\
 Pokazuje, `ConnectionStringBuilder` w jaki sposób używać klas do konstruowania prawidłowych parametrów połączenia w czasie wykonywania.
 
-[Parametry połączenia i pliki konfiguracji](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)\
+[Parametry połączenia i pliki konfiguracji](connection-strings-and-configuration-files.md)\
 Pokazuje, jak przechowywać i pobierać parametry połączenia w plikach konfiguracyjnych.
 
-[Składnia parametrów połączenia](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
+[Składnia parametrów połączenia](connection-string-syntax.md)\
 Opisuje sposób konfigurowania parametrów połączenia specyficznych dla dostawcy dla `SqlClient` `OleDb`, `OracleClient`, i `Odbc`.
 
-[Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)\
+[Ochrona informacji o połączeniu](protecting-connection-information.md)\
 Demonstruje techniki ochrony informacji używanych do nawiązywania połączenia ze źródłem danych.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Nawiązywanie połączenia ze źródłem danych](/cpp/data/odbc/connecting-to-a-data-source)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](ado-net-overview.md)

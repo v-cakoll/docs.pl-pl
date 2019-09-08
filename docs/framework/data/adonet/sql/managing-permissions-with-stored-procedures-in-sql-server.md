@@ -2,67 +2,67 @@
 title: Zarządzanie uprawnieniami za pomocą procedur składowanych w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 1a057ed88c792dfdeb89227d6cf1957f74b6d7a1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 412d2a0a292e2ac83e6c42cf721c83e63633408c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623424"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780954"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Zarządzanie uprawnieniami za pomocą procedur składowanych w programie SQL Server
-Jedną z metod tworzenia wielu wierszy obrony wokół bazy danych jest do wdrożenia dostępu do wszystkich danych przy użyciu procedur składowanych i funkcji zdefiniowanych przez użytkownika. Odwoływanie lub odmówić uprawnień wszystkich podstawowych obiektów, takich jak tabele i Udziel uprawnień wykonywanie procedur składowanych. Spowoduje to skutecznie utworzenie obwodu zabezpieczeń wokół obiektów danych i bazy danych.  
+Jedną z metod tworzenia wielu wierszy obrony bazy danych jest zaimplementowanie całego dostępu do danych za pomocą procedur składowanych lub funkcji zdefiniowanych przez użytkownika. Wszystkie uprawnienia do obiektów bazowych, takie jak tabele, są odwoływane lub odrzucane. Dzięki temu powstaje obwód zabezpieczeń wokół obiektów danych i baz danych.  
   
-## <a name="stored-procedure-benefits"></a>Procedura składowana korzyści  
- Procedury składowane zapewnia następujące korzyści:  
+## <a name="stored-procedure-benefits"></a>Korzyści z procedury składowanej  
+ Procedury składowane mają następujące zalety:  
   
-- Można hermetyzować reguł biznesowych i logiki danych, dzięki czemu użytkownicy mogą uzyskiwać dostęp do danych i obiektów tylko w sposób, który ma deweloperów i administratorów baz danych.  
+- Reguły logiki danych i biznesowe mogą być hermetyzowane, dzięki czemu użytkownicy mogą uzyskiwać dostęp do danych i obiektów tylko w taki sposób, że deweloperzy i administratorzy baz danych mają.  
   
-- Sparametryzowanej procedury składowane, które sprawdzają poprawność wszystkich danych wejściowych użytkownika może służyć do udaremnić ataki przez wstrzyknięcie kodu SQL. Jeśli używasz dynamiczny język SQL, pamiętaj zdefiniować parametry poleceń, a nigdy nie dołączaj parametru wartości bezpośrednio do ciągu zapytania.  
+- Sparametryzowane procedury składowane, które sprawdzają, czy wszystkie dane wejściowe użytkownika mogą być używane do zapamiętania ataków iniekcji SQL. Jeśli używasz dynamicznego języka SQL, pamiętaj, aby Sparametryzuj polecenia, i nigdy nie dodawaj wartości parametrów bezpośrednio do ciągu zapytania.  
   
-- Może być niedozwolona ad-hoc modyfikacji zapytania i danych. Uniemożliwia to użytkownikom złośliwie przypadkowo zniszczenie danych lub wykonywaniem zapytań, które obniżają wydajność na serwerze lub w sieci.  
+- Zapytania ad hoc i modyfikacje danych mogą być niedozwolone. Zapobiega to złośliwemu lub przypadkowemu zniszczeniu danych lub wykonywaniu zapytań, które ograniczają wydajność na serwerze lub w sieci.  
   
-- Błędy mogą być obsługiwane w kodzie procedury nie został przekazany bezpośrednio do aplikacji klienckich. Zapobiega to komunikaty o błędach zwracanych, które może pomóc w badania ataków. Rejestrowanie błędów i obsługiwać je na serwerze.  
+- Błędy mogą być obsługiwane w kodzie procedury bez przekazywania ich bezpośrednio do aplikacji klienckich. Zapobiega to zwracaniu komunikatów o błędach, które mogą pomóc w ataku typu badanie. Rejestruj błędy i obsługuj je na serwerze.  
   
-- Procedury składowane można zapisywane jeden raz i używane przez wiele aplikacji.  
+- Procedury składowane można napisać raz i uzyskać do nich dostęp przez wiele aplikacji.  
   
-- Aplikacje klienckie nie trzeba nic wiedzieć o podstawowej struktury danych. Procedura składowana kod, można zmienić bez konieczności wprowadzania zmian w aplikacjach klienckich, tak długo, jak zmiany nie wpływają na listy parametrów lub zwracane typy danych.  
+- Aplikacje klienckie nie muszą wiedzieć niczego o podstawowych strukturach danych. Kod procedury składowanej można zmienić bez konieczności wprowadzania zmian w aplikacjach klienckich, o ile zmiany nie wpływają na listy parametrów lub zwracane typy danych.  
   
-- Procedury składowane można zmniejszyć ruch sieciowy, łącząc wiele operacji do wywołania jednej procedury.  
+- Procedury składowane mogą zmniejszyć ruch sieciowy przez połączenie wielu operacji w jedno wywołanie procedury.  
   
 ## <a name="stored-procedure-execution"></a>Wykonywanie procedury składowanej  
- Przechowywane procedury Wykorzystaj własności łańcucha zapewnienie dostępu do danych, dzięki czemu użytkownicy nie muszą mieć jawne uprawnienia do dostępu do obiektów bazy danych. Łańcucha własności istnieje, gdy obiektów mających dostęp do sekwencyjnego sobą należą do tego samego użytkownika. Na przykład wywołać procedurę składowaną innych procedur składowanych lub procedury składowanej mogą uzyskiwać dostęp do wielu tabel. Jeśli wszystkie obiekty w łańcuchu wykonywania mają tego samego właściciela, a następnie programu SQL Server sprawdza tylko uprawnień wykonywanie do obiektu wywołującego, nie uprawnienia obiektu wywołującego od innych obiektów. W związku z tym należy udzielić tylko uprawnienia wykonywania na procedurach przechowywanych; można odwołać lub odmówić wszystkie uprawnienia wobec tabel podstawowych.  
+ Procedury składowane wykorzystują tworzenie łańcucha własności, aby zapewnić dostęp do danych, dzięki czemu użytkownicy nie muszą mieć jawnego uprawnienia dostępu do obiektów bazy danych. Łańcuch własności istnieje, gdy obiekty, które uzyskują dostęp do siebie nawzajem, są własnością tego samego użytkownika. Na przykład procedura składowana może wywołać inne procedury składowane lub procedura składowana może uzyskać dostęp do wielu tabel. Jeśli wszystkie obiekty w łańcuchu wykonywania mają tego samego właściciela, SQL Server sprawdza tylko uprawnienie EXECUTE dla obiektu wywołującego, a nie uprawnienia obiektu wywołującego na innych obiektach. W związku z tym należy przyznać tylko uprawnienia do wykonywania w procedurach składowanych; Możesz odwołać lub odrzucić wszystkie uprawnienia do tabel źródłowych.  
   
 ## <a name="best-practices"></a>Najlepsze praktyki  
- Po prostu pisania procedur składowanych nie jest wystarczająco dużo, aby odpowiednio zabezpieczenia aplikacji. Należy również rozważyć następujące potencjalnych luk w zabezpieczeniach.  
+ Zwykłe pisanie procedur składowanych jest niewystarczające, aby odpowiednio zabezpieczyć aplikację. Należy również wziąć pod uwagę następujące potencjalne luki w zabezpieczeniach.  
   
-- Udziel uprawnień wykonywanie procedur składowanych do ról bazy danych, które chcesz mieć możliwość dostępu do danych.  
+- Przyznaj uprawnienia do wykonywania w procedurach składowanych dla ról bazy danych, które mają mieć możliwość uzyskiwania dostępu do danych.  
   
-- Odwoływanie lub Odrzuć wszystkie uprawnienia w tabelach dla wszystkich ról i użytkowników w bazie danych, w tym `public` roli. Wszyscy użytkownicy dziedziczą uprawnienia z publicznej. W związku z tym odmawia uprawnienia do `public` oznacza, że tylko właściciele i `sysadmin` członkowie mają dostęp; wszyscy inni użytkownicy będą mogli dziedziczą uprawnienia z członkostwa w innych ról.  
+- Odwołaj lub Odmów wszystkich uprawnień do odpowiednich tabel dla wszystkich ról i użytkowników w bazie danych, w tym `public` roli. Wszyscy użytkownicy dziedziczą uprawnienia od publicznego. W związku z `public` tym odmowa uprawnień oznacza, że `sysadmin` tylko właściciele i członkowie mają dostęp; wszyscy inni użytkownicy nie będą mogli odziedziczyć uprawnień z członkostwa w innych rolach.  
   
-- Nie należy dodawać użytkowników lub ról, aby `sysadmin` lub `db_owner` ról. Administratorzy systemu i właścicieli bazy danych można uzyskać dostęp do wszystkich obiektów bazy danych.  
+- Nie należy dodawać użytkowników ani ról do `sysadmin` ról lub. `db_owner` Administratorzy systemu i właściciele baz danych mogą uzyskać dostęp do wszystkich obiektów bazy danych.  
   
-- Wyłącz `guest` konta. Uniemożliwi to użytkownicy anonimowi połączenie z bazą danych. Konto gościa jest domyślnie wyłączona, w nowych baz danych.  
+- `guest` Wyłącz konto. Uniemożliwi to anonimowym użytkownikom łączenie się z bazą danych. Konto gościa jest domyślnie wyłączone w nowych bazach danych.  
   
-- Implementowanie błędu dziennika i obsługi błędów.  
+- Zaimplementuj obsługę błędów i Rejestruj błędy.  
   
-- Utwórz sparametryzowanej procedury składowane, które sprawdzają poprawność wszystkich danych wejściowych użytkownika. Wszystkie dane wejściowe użytkownika należy traktować jako niezaufane.  
+- Utwórz sparametryzowane procedury składowane, które weryfikują wszystkie dane wejściowe użytkownika. Traktuj wszystkie dane wprowadzane przez użytkownika jako niezaufane.  
   
-- Należy unikać dynamiczny język SQL, chyba że jest to absolutnie konieczne. Funkcja QUOTENAME() języka Transact-SQL do ograniczania wartości ciągu i wprowadzić dowolne wystąpienie ogranicznika w ciągu wejściowym.  
+- Unikaj dynamicznego SQL, chyba że jest to absolutnie konieczne. Funkcja cudzysłowu Transact-SQL Quote () służy do ograniczania wartości ciągu i ucieczki dowolnego wystąpienia ogranicznika w ciągu wejściowym.  
   
 ## <a name="external-resources"></a>Zasoby zewnętrzne  
- Aby uzyskać więcej informacji zobacz następujące zasoby.  
+ Aby uzyskać więcej informacji, zobacz następujące zasoby.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Procedury składowane](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) i [wstrzyknięcie kodu SQL](https://go.microsoft.com/fwlink/?LinkId=98234) w SQL Server — książki Online|Tematy opisują sposób tworzenia procedury składowane i jak działa wstrzyknięcie kodu SQL.|  
+|[Procedury składowane](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) i [iniekcja kodu SQL](https://go.microsoft.com/fwlink/?LinkId=98234) w usłudze SQL Server Books Online|Tematy opisują sposób tworzenia procedur składowanych i sposobu działania iniekcji SQL.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Przegląd zabezpieczeń serwera SQL](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Scenariusze zabezpieczeń aplikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Pisanie bezpiecznego dynamicznego kodu SQL w programie SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [Rejestrowanie procedur składowanych w programie SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [Dostosowywanie uprawnień personifikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
-- [Modyfikowanie danych za pomocą procedur składowanych](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Zabezpieczanie aplikacji ADO.NET](../securing-ado-net-applications.md)
+- [Przegląd zabezpieczeń serwera SQL](overview-of-sql-server-security.md)
+- [Scenariusze zabezpieczeń aplikacji w programie SQL Server](application-security-scenarios-in-sql-server.md)
+- [Pisanie bezpiecznego dynamicznego kodu SQL w programie SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
+- [Rejestrowanie procedur składowanych w programie SQL Server](signing-stored-procedures-in-sql-server.md)
+- [Dostosowywanie uprawnień personifikacji w programie SQL Server](customizing-permissions-with-impersonation-in-sql-server.md)
+- [Modyfikowanie danych za pomocą procedur składowanych](../modifying-data-with-stored-procedures.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

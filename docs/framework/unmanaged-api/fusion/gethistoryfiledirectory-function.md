@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10eead2772a2bbd8abaf7b9c090a091687725972
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: adbbf94dc36c6d82360ed532b283cd666a1a52ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778655"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796850"
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory — Funkcja
 Pobiera ścieżkę katalogu historii aplikacji.  
@@ -37,33 +37,33 @@ HRESULT GetHistoryFileDirectory (
   
 ## <a name="parameters"></a>Parametry  
  `wzDir`  
- [out] Bufor do przechowywania ścieżkę do katalogu historii aplikacji.  
+ określoną Bufor służący do przechowywania ścieżki do katalogu historii aplikacji.  
   
  `pdwSize`  
- [out w] Długość buforu.  
+ [in. out] Długość buforu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca standardowe kody błędu modelu COM, zgodnie z definicją w pliku WinError.h oprócz następujących wartości.  
+ Ta metoda zwraca kody błędów standardowego modelu COM, jak zdefiniowano w pliku WinError. h oprócz następujących wartości.  
   
 |Kod powrotu|Opis|  
 |-----------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|E_INVALIDARG|`wzDir` lub `pdwSize` ma wartość null lub wersji ciąg jest niepoprawny.|  
+|E_INVALIDARG|`wzDir`lub `pdwSize` ma wartość null lub ciąg wersji jest niepoprawny.|  
   
 ## <a name="remarks"></a>Uwagi  
- Po pomyślnym zakończeniu `pdwSize` argument jest równa długości ciągu ścieżki.  
+ Po pomyślnym zakończeniu `pdwSize` argument ma ustawioną długość ciągu ścieżki.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Fusion.h  
+ **Nagłówki** Fusion. h  
   
- **Biblioteka:** Fusion.dll i Mscorwks.dll. Użyj Fusion.dll zamiast Mscorwks.dll zapewnienie docelowych poprawną wersję programu .NET Framework.  
+ **Biblioteki** Fusion. dll i mscorwks. dll. Aby upewnić się, że docelowa wersja .NET Framework, należy użyć pliku Fusion. dll zamiast Mscorwks. dll.  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [CreateHistoryReader, funkcja](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)
-- [NukeDownloadedCache, funkcja](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)
-- [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [CreateHistoryReader, funkcja](createhistoryreader-function.md)
+- [NukeDownloadedCache, funkcja](nukedownloadedcache-function.md)
+- [Łączenie statycznych funkcji globalnych](fusion-global-static-functions.md)

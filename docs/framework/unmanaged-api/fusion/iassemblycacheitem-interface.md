@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fba17a2ffad9220acdbc79726efe0d3d4184978a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 193604068e379d62107b25f2bc348cd7c8bc6e98
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697982"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796703"
 ---
 # <a name="iassemblycacheitem-interface"></a>IAssemblyCacheItem — Interfejs
-Reprezentuje pojedynczy zestaw w globalnej pamięci podręcznej.  
+Reprezentuje pojedynczy zestaw w globalnej pamięci podręcznej zestawów.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[AbortItem, metoda](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-abortitem-method.md)|Umożliwia zestawu w globalnej pamięci podręcznej ma wykonywać operacje czyszczenia, przed jego udostępnieniem.|  
-|[Commit, metoda](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-commit-method.md)|Zatwierdza odwołanie do zestawu pamięci podręcznej w pamięci.|  
-|[CreateStream, metoda](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|Tworzy strumień o określonej nazwie i format.|  
+|[AbortItem, metoda](iassemblycacheitem-abortitem-method.md)|Zezwala na zestaw w globalnej pamięci podręcznej zestawów na wykonywanie operacji czyszczenia przed jego wydaniem.|  
+|[Commit, metoda](iassemblycacheitem-commit-method.md)|Zatwierdza odwołanie do pamięci podręcznej.|  
+|[CreateStream, metoda](iassemblycacheitem-createstream-method.md)|Tworzy strumień o określonej nazwie i formacie.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Fusion.h  
+ **Nagłówki** Fusion. h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Interfejsy łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)
-- [IAssemblyCache, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [Interfejsy łączenia](fusion-interfaces.md)
+- [Global Assembly Cache](../../app-domains/gac.md)
+- [IAssemblyCache, interfejs](iassemblycache-interface.md)

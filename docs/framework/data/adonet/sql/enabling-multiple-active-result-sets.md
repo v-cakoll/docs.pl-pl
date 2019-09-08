@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 5dd2bfa0884eac6864630bf393e232cf45bd1c99
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1f8cb573d051970414f3962057f6329683eea5bd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938197"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782396"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Włączanie wielu aktywnych zestawów wyników
 Wiele aktywnych zestawów wyników (MARS) to funkcja, która współpracuje z SQL Server, aby umożliwić wykonywanie wielu partii na jednym połączeniu. Gdy Usługa MARS jest włączona do użytku z SQL Server, każdy użyty obiekt polecenia dodaje sesję do połączenia.  
@@ -68,7 +68,7 @@ string connectionString = "Data Source=MSSQL1;" +
  Operacje MARS nie są bezpieczne wątkowo.  
   
 ### <a name="connection-pooling"></a>Pula połączeń  
- Połączenia z obsługą usługi MARS są umieszczane w puli, podobnie jak inne połączenia. Jeśli aplikacja otworzy dwa połączenia, jeden z włączonym usługą MARS i jeden z wyłączonym MARS, dwa połączenia są w różnych pulach. Aby uzyskać więcej informacji, zobacz SQL Servering pooling [(ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ Połączenia z obsługą usługi MARS są umieszczane w puli, podobnie jak inne połączenia. Jeśli aplikacja otworzy dwa połączenia, jeden z włączonym usługą MARS i jeden z wyłączonym MARS, dwa połączenia są w różnych pulach. Aby uzyskać więcej informacji, zobacz [SQL Servering pooling (ADO.NET)](../sql-server-connection-pooling.md).  
   
 ### <a name="sql-server-batch-execution-environment"></a>SQL Server środowiska wykonawczego partii  
  Po otwarciu połączenia jest zdefiniowane środowisko domyślne. To środowisko jest następnie kopiowane do logicznej sesji MARS.  
@@ -113,5 +113,5 @@ string connectionString = "Data Source=MSSQL1;" +
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wiele aktywnych zestawów wyników (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Wiele aktywnych zestawów wyników (MARS)](multiple-active-result-sets-mars.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

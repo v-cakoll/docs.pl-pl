@@ -9,83 +9,83 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: e118c9ec29b8d4e46fe799f24bb8a96929bf2ed8
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e464aff46f311ede1cd629fb459ade9a6e627d59
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663254"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796958"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Instrukcje: używanie osobnych certyfikatów X.509 do podpisywania i szyfrowania
 
-W tym temacie przedstawiono sposób konfigurowania Windows Communication Foundation (WCF) do użycia różnych certyfikatów do podpisywania komunikatów i szyfrowania w klienta i usługi.
+W tym temacie opisano sposób konfigurowania Windows Communication Foundation (WCF) do używania różnych certyfikatów do podpisywania i szyfrowania wiadomości na kliencie i w usłudze.
 
-Aby włączyć oddzielnych certyfikatów służący do podpisywania i szyfrowania, niestandardowe klienta lub usługę poświadczeń (lub obie) należy utworzyć ponieważ WCF nie zapewnia interfejsu API, aby ustawić wielu certyfikatów klienta lub usługę. Ponadto zabezpieczeń Menedżera tokenu należy podać może wykorzystać informacje wiele certyfikatów i utworzyć dostawcę tokenu zabezpieczeń odpowiednich dla określonego klucza kierunku użycia i komunikatu.
+Aby umożliwić używanie oddzielnych certyfikatów do podpisywania i szyfrowania, należy utworzyć niestandardowe poświadczenia klienta lub usługi (lub oba), ponieważ usługa WCF nie udostępnia interfejsu API do ustawiania wielu certyfikatów klienta lub usługi. Ponadto należy podać Menedżera tokenów zabezpieczających, aby wykorzystać informacje o wielu certyfikatach i utworzyć odpowiedniego dostawcę tokenów zabezpieczających dla określonego użycia klucza i kierunku komunikatów.
 
-Na poniższym diagramie przedstawiono główne klasy używane, klasy mogą dziedziczyć (reprezentowany przez strzałkę skierowaną w górę) i zwracane typy niektórych metod i właściwości.
+Na poniższym diagramie przedstawiono główne klasy używane, klasy, z których dziedziczą (pokazane przez strzałkę w górę) i typy zwracane niektórych metod i właściwości.
 
-- `MyClientCredentials` jest niestandardową implementację <xref:System.ServiceModel.Description.ClientCredentials>.
+- `MyClientCredentials`jest implementacją <xref:System.ServiceModel.Description.ClientCredentials>niestandardową.
 
-  - Właściwości wyświetlane na diagramie zwracany wszystkie wystąpienia elementu <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>.
+  - Jego właściwości wyświetlane na diagramie zwracają wystąpienia elementu <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>.
 
-  - Jego metoda <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> Zwraca wystąpienie `MyClientCredentialsSecurityTokenManager`.
+  - Jego Metoda <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> zwraca wystąpienie elementu `MyClientCredentialsSecurityTokenManager`.
 
-- `MyClientCredentialsSecurityTokenManager` jest niestandardową implementację <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.
+- `MyClientCredentialsSecurityTokenManager`jest implementacją <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>niestandardową.
 
-  - Jego metoda <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> Zwraca wystąpienie <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider>.
+  - Jego Metoda <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> zwraca wystąpienie elementu <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider>.
 
-![Wykres przedstawiający sposób użycia poświadczeń klienta](../../../../docs/framework/wcf/extending/media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")
+![Wykres przedstawiający sposób użycia poświadczeń klienta](./media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")
 
-Aby uzyskać więcej informacji na temat niestandardowych poświadczeń, zobacz [instruktażu: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).
+Aby uzyskać więcej informacji o poświadczeniach niestandardowych [, zobacz Przewodnik: Tworzenie niestandardowych poświadczeń](walkthrough-creating-custom-client-and-service-credentials.md)klienta i usługi.
 
-Ponadto należy utworzyć weryfikatora tożsamości niestandardowej i połączyć elementu powiązania zabezpieczeń, w niestandardowym powiązaniu. Należy również użyć niestandardowych poświadczeniach, zamiast domyślnych poświadczeń.
+Ponadto należy utworzyć niestandardowego weryfikatora tożsamości i połączyć go z elementem powiązania zabezpieczeń w niestandardowym powiązaniu. Należy również użyć niestandardowych poświadczeń zamiast poświadczeń domyślnych.
 
-Na poniższym diagramie przedstawiono klasy zaangażowanych w niestandardowego powiązania i jak jest połączony weryfikatora tożsamości niestandardowej. Istnieje kilka elementów wiązania zaangażowani, które dziedziczą z <xref:System.ServiceModel.Channels.BindingElement>. <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> Ma <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> właściwość, która zwraca wystąpienie <xref:System.ServiceModel.Security.IdentityVerifier>, z którego `MyIdentityVerifier` dostosowany.
+Na poniższym diagramie przedstawiono klasy powiązane z powiązaniem niestandardowym oraz sposób powiązania niestandardowego weryfikatora tożsamości. Istnieje kilka elementów powiązania, z których wszystkie dziedziczą <xref:System.ServiceModel.Channels.BindingElement>. Zawiera właściwość, która zwraca wystąpienie `MyIdentityVerifier` , z którego jest dostosowane. <xref:System.ServiceModel.Security.IdentityVerifier> <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 
-![Wykres przedstawiający element niestandardowego powiązania](../../../../docs/framework/wcf/extending/media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")
+![Wykres przedstawiający niestandardowy element powiązania](./media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")
 
-Aby uzyskać więcej informacji na temat tworzenia weryfikatora tożsamości niestandardowej, zobacz jak: [Instrukcje: Tworzenie niestandardowego weryfikatora tożsamości klienta](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md).
+Aby uzyskać więcej informacji na temat tworzenia niestandardowego weryfikatora tożsamości, zobacz How to: [Instrukcje: Utwórz niestandardowego weryfikatora](how-to-create-a-custom-client-identity-verifier.md)tożsamości klienta.
 
-### <a name="to-use-separate-certificates-for-signing-and-encryption"></a>Aby użyć oddzielnych certyfikatów podpisywania i szyfrowania
+### <a name="to-use-separate-certificates-for-signing-and-encryption"></a>Aby używać oddzielnych certyfikatów do podpisywania i szyfrowania
 
-1. Zdefiniuj nową klasę poświadczeń klienta, która dziedziczy <xref:System.ServiceModel.Description.ClientCredentials> klasy. Implementowanie cztery nowe właściwości, aby zezwolić wielu specyfikacji certyfikaty: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate`, i `ServiceEncryptingCertificate`. Także Przesłoń <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> metodę, aby zwrócić wystąpienia dostosowane <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> klasy, która jest zdefiniowana w następnym kroku.
+1. Zdefiniuj nową klasę poświadczeń klienta, która dziedziczy z <xref:System.ServiceModel.Description.ClientCredentials> klasy. Zaimplementuj cztery nowe właściwości, aby umożliwić określenie wielu `ClientSigningCertificate`certyfikatów `ClientEncryptingCertificate`: `ServiceSigningCertificate`,, `ServiceEncryptingCertificate`i. Należy również zastąpić <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> metodę, aby zwrócić wystąpienie dostosowanej <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> klasy zdefiniowanej w następnym kroku.
 
      [!code-csharp[c_FourCerts#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#1)]
      [!code-vb[c_FourCerts#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#1)]
 
-2. Zdefiniuj nowy Menedżer tokenów klienta zabezpieczeń, która dziedziczy z <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> klasy. Zastąp <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> metodę, aby utworzyć dostawcę tokenu usługi odpowiednie zabezpieczenia. `requirement` Parametru ( <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>) udostępnia komunikat użycia kierunku i klucz.
+2. Zdefiniuj nowego menedżera tokenów zabezpieczających klienta, który dziedziczy <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> z klasy. Zastąp <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> metodę, aby utworzyć odpowiedniego dostawcę tokenów zabezpieczających. Parametr (a <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>) zawiera kierunek wiadomości i użycie klucza. `requirement`
 
      [!code-csharp[c_FourCerts#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#2)]
      [!code-vb[c_FourCerts#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#2)]
 
-3. Zdefiniuj nową klasę poświadczenia usługi, która dziedziczy <xref:System.ServiceModel.Description.ServiceCredentials> klasy. Implementowanie cztery nowe właściwości, aby zezwolić wielu specyfikacji certyfikaty: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate`, i `ServiceEncryptingCertificate`. Także Przesłoń <xref:System.ServiceModel.Description.ServiceCredentials.CreateSecurityTokenManager%2A> metodę, aby zwrócić wystąpienia dostosowane <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> klasy, która jest zdefiniowana w następnym kroku.
+3. Zdefiniuj nową klasę poświadczeń usługi, która dziedziczy z <xref:System.ServiceModel.Description.ServiceCredentials> klasy. Zaimplementuj cztery nowe właściwości, aby umożliwić określenie wielu `ClientSigningCertificate`certyfikatów `ClientEncryptingCertificate`: `ServiceSigningCertificate`,, `ServiceEncryptingCertificate`i. Należy również zastąpić <xref:System.ServiceModel.Description.ServiceCredentials.CreateSecurityTokenManager%2A> metodę, aby zwrócić wystąpienie dostosowanej <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> klasy zdefiniowanej w następnym kroku.
 
      [!code-csharp[c_FourCerts#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#3)]
      [!code-vb[c_FourCerts#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#3)]
 
-4. Zdefiniuj nowy Menedżer tokenów usługi zabezpieczeń, który dziedziczy z <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> klasy. Zastąp <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> metodę w celu utworzenia dostawcy tokenów zabezpieczeń odpowiednich, biorąc pod uwagę użycie kierunku i klucz przekazany w wiadomości.
+4. Zdefiniuj nowego menedżera tokenów zabezpieczeń usługi, który dziedziczy z <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> klasy. Zastąp <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> metodę w celu utworzenia odpowiedniego dostawcy tokenów zabezpieczających, który ma przekazany kierunek komunikatu i użycie klucza.
 
      [!code-csharp[c_FourCerts#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#4)]
      [!code-vb[c_FourCerts#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#4)]
 
-### <a name="to-use-multiple-certificates-on-the-client"></a>Aby korzystać z wielu certyfikatów na komputerze klienckim
+### <a name="to-use-multiple-certificates-on-the-client"></a>Aby użyć wielu certyfikatów na kliencie
 
-1. Tworzenie niestandardowego powiązania. Elementu powiązania zabezpieczeń musi działać w tryb dupleks, aby umożliwić zabezpieczeń dostawcy tokenów obecności dla żądań i odpowiedzi. Jednym ze sposobów, aby zrobić to użyj transportu obsługą duplex lub użyć <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> jak pokazano w poniższym kodzie. Link dostosowane <xref:System.ServiceModel.Security.IdentityVerifier> który jest zdefiniowany w następnym kroku do elementu powiązania zabezpieczeń. Zastąp domyślne poświadczenia klienta przy użyciu poświadczeń klienta niestandardowe utworzone wcześniej.
+1. Tworzenie niestandardowego powiązania. Element powiązania zabezpieczeń musi działać w trybie dupleksu, aby zezwolić na obecność różnych dostawców tokenów zabezpieczających dla żądań i odpowiedzi. Jednym ze sposobów jest użycie transportu z obsługą dupleksu lub użycie <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> , jak pokazano w poniższym kodzie. Połącz dostosowany <xref:System.ServiceModel.Security.IdentityVerifier> element, który jest zdefiniowany w następnym kroku do elementu powiązania zabezpieczeń. Zastąp domyślne poświadczenia klienta przy użyciu niestandardowych poświadczeń klienta, które zostały wcześniej utworzone.
 
      [!code-csharp[c_FourCerts#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#5)]
      [!code-vb[c_FourCerts#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#5)]
 
-2. Definiowanie niestandardowego <xref:System.ServiceModel.Security.IdentityVerifier>. Usługa ma wiele tożsamości, ponieważ różne certyfikaty są używane do szyfrowania żądania i zaloguj się w odpowiedzi.
+2. Zdefiniuj niestandardową <xref:System.ServiceModel.Security.IdentityVerifier>. Usługa ma wiele tożsamości, ponieważ do szyfrowania żądania służą różne certyfikaty i podpisanie odpowiedzi.
 
     > [!NOTE]
-    > W poniższym przykładzie weryfikatora podana tożsamość niestandardowa nie wykonuje żadnych tożsamość punktu końcowego sprawdzanie dla celów demonstracyjnych. Nie jest to zalecane praktyki dla kodu produkcyjnego.
+    > W poniższym przykładzie dostarczony niestandardowy weryfikator tożsamości nie sprawdza tożsamości punktu końcowego w celach demonstracyjnych. Nie jest to zalecane rozwiązanie w przypadku kodu produkcyjnego.
 
      [!code-csharp[c_FourCerts#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#6)]
      [!code-vb[c_FourCerts#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#6)]
 
-### <a name="to-use-multiple-certificates-on-the-service"></a>Aby korzystać z wielu certyfikatów w usłudze
+### <a name="to-use-multiple-certificates-on-the-service"></a>Aby użyć wielu certyfikatów w usłudze
 
-1. Tworzenie niestandardowego powiązania. Elementu powiązania zabezpieczeń musi działać w tryb dupleks, aby umożliwić zabezpieczeń dostawcy tokenów obecności dla żądań i odpowiedzi. Jak za pomocą klienta, należy użyć obsługą dupleks transportu lub <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> jak pokazano w poniższym kodzie. Zastąp domyślne poświadczenia usługi przy użyciu poświadczeń usług niestandardowych utworzone wcześniej.
+1. Tworzenie niestandardowego powiązania. Element powiązania zabezpieczeń musi działać w trybie dupleksu, aby zezwolić na obecność różnych dostawców tokenów zabezpieczających dla żądań i odpowiedzi. Podobnie jak w przypadku klienta należy użyć transportu z obsługą dupleksu <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> lub użyć, jak pokazano w poniższym kodzie. Zastąp domyślne poświadczenia usługi przy użyciu wcześniej utworzonych poświadczeń usługi.
 
      [!code-csharp[c_FourCerts#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#7)]
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]
@@ -97,4 +97,4 @@ Aby uzyskać więcej informacji na temat tworzenia weryfikatora tożsamości nie
 - <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
-- [Przewodnik: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [Przewodnik: Tworzenie niestandardowych poświadczeń klienta i usługi](walkthrough-creating-custom-client-and-service-credentials.md)

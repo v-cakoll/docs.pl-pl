@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 556d29a3-8fc9-4e38-b3ee-c188f7e7b155
-ms.openlocfilehash: d62d55771e4fda74d336163b3f53b3f50cfb1e39
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: a1249718d1e1e1e64fd6fa6ee9ee8157545b5e0b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205288"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786631"
 ---
 # <a name="adding-a-datatable-to-a-dataset"></a>Dodawanie elementu DataTable do elementu DataSet
 ADO.NET umożliwia tworzenie <xref:System.Data.DataTable> obiektów i dodawanie ich do istniejącej <xref:System.Data.DataSet>. Można ustawić informacje o ograniczeniach dla <xref:System.Data.DataTable> elementu przy <xref:System.Data.DataTable.PrimaryKey%2A> użyciu właściwości <xref:System.Data.DataColumn.Unique%2A> i.  
@@ -35,4 +35,4 @@ ADO.NET umożliwia tworzenie <xref:System.Data.DataTable> obiektów i dodawanie 
 ## <a name="see-also"></a>Zobacz także
 
 - [Elementy DataSet, DataTable i DataView](index.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

@@ -2,23 +2,23 @@
 title: Transakcje rozproszone Oracle
 ms.date: 03/30/2017
 ms.assetid: c340ca81-ef79-402f-b204-c5156b890fe5
-ms.openlocfilehash: 4af1c98818f1929850c5ae78892c64993a93d4d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f910f1dbbe448352c0edd5d1b80df659ac453d4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771959"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795149"
 ---
 # <a name="oracle-distributed-transactions"></a>Transakcje rozproszone Oracle
-<xref:System.Data.OracleClient.OracleConnection> Obiektu pozyskuje automatycznie w ramach istniejącej transakcji rozproszonej, gdy ustali, że jest aktywna transakcja. Rejestracja automatyczna transakcja występuje, gdy połączenie jest otwarte lub pobierane z puli połączeń. Funkcja automatycznego rejestracji w istniejących transakcji można wyłączyć, określając  
+<xref:System.Data.OracleClient.OracleConnection> Obiekt jest automatycznie zarejestrowany w istniejącej transakcji rozproszonej, jeśli określa, że transakcja jest aktywna. Automatyczne rejestracje transakcji odbywa się po otwarciu lub pobraniu połączenia z puli połączeń. Funkcję autorejestracji można wyłączyć w istniejących transakcjach, określając  
   
 ```  
 Enlist=false  
 ```  
   
- jako parametr ciągu połączenia dla <xref:System.Data.OracleClient.OracleConnection>.  
+ jako parametr parametrów połączenia dla <xref:System.Data.OracleClient.OracleConnection>.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Oracle i ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Oracle i ADO.NET](oracle-and-adonet.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

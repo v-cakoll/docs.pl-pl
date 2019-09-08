@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 3d55168d-5901-4f48-8117-6c93da3ab5ae
-ms.openlocfilehash: 5a72b349526d5cbba229cba627c23b1b1b889678
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 42987b1a855589954d45dae13b70ffc056c35f3b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943936"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790468"
 ---
 # <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>Instrukcje: Ustaw nagłówki w żądaniu klienta (Usługi danych programu WCF)
-W przypadku korzystania [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] z biblioteki klienckiej w celu uzyskania dostępu do usługi danych [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)], która obsługuje program, Biblioteka klienta automatycznie ustawia wymagane nagłówki HTTP w komunikatach żądania wysyłanych do usługi danych. Jednak Biblioteka kliencka nie wie, aby ustawić nagłówki komunikatów, które są wymagane w niektórych przypadkach, na przykład gdy usługa danych wymaga uwierzytelniania opartego na oświadczeniach lub plików cookie. Aby uzyskać więcej informacji, zobacz [zabezpieczanie usługi danych programu WCF](../../../../docs/framework/data/wcf/securing-wcf-data-services.md#clientAuthentication). W takich przypadkach należy ręcznie ustawić nagłówki komunikatów w komunikacie żądania przed jego wysłaniem. W przykładzie w tym temacie pokazano, <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> jak obsłużyć zdarzenie, aby dodać nowy nagłówek do komunikatu żądania przed jego wysłaniem do usługi danych.  
+W przypadku korzystania [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] z biblioteki klienckiej w celu uzyskania dostępu do usługi danych [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)], która obsługuje program, Biblioteka klienta automatycznie ustawia wymagane nagłówki HTTP w komunikatach żądania wysyłanych do usługi danych. Jednak Biblioteka kliencka nie wie, aby ustawić nagłówki komunikatów, które są wymagane w niektórych przypadkach, na przykład gdy usługa danych wymaga uwierzytelniania opartego na oświadczeniach lub plików cookie. Aby uzyskać więcej informacji, zobacz [zabezpieczanie usługi danych programu WCF](securing-wcf-data-services.md#clientAuthentication). W takich przypadkach należy ręcznie ustawić nagłówki komunikatów w komunikacie żądania przed jego wysłaniem. W przykładzie w tym temacie pokazano, <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> jak obsłużyć zdarzenie, aby dodać nowy nagłówek do komunikatu żądania przed jego wysłaniem do usługi danych.  
   
- W przykładzie w tym temacie jest stosowana usługa danych przykładowych Northwind i klasy usługi danych klientów. Ta usługa i klasy danych klienta są tworzone po zakończeniu [usługi danych programu WCF szybkiego startu](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Możesz również użyć przykładowej [usługi danych Northwind](https://go.microsoft.com/fwlink/?LinkId=187426) opublikowanej w [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] witrynie sieci Web. Ta przykładowa usługa danych jest tylko do odczytu i próba zapisu spowoduje zwrócenie błędu. Przykładowe usługi danych w [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] witrynie sieci Web zezwalają na uwierzytelnianie anonimowe.  
+ W przykładzie w tym temacie jest stosowana usługa danych przykładowych Northwind i klasy usługi danych klientów. Ta usługa i klasy danych klienta są tworzone po zakończeniu [usługi danych programu WCF szybkiego startu](quickstart-wcf-data-services.md). Możesz również użyć [przykładowej usługi danych Northwind](https://go.microsoft.com/fwlink/?LinkId=187426) opublikowanej w [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] witrynie sieci Web. Ta przykładowa usługa danych jest tylko do odczytu i próba zapisu spowoduje zwrócenie błędu. Przykładowe usługi danych w [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] witrynie sieci Web zezwalają na uwierzytelnianie anonimowe.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład rejestruje procedurę obsługi dla <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> zdarzenia, a następnie wykonuje zapytanie względem usługi danych.  
@@ -36,5 +36,5 @@ W przypadku korzystania [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.m
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczanie usług danych WCF](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
-- [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Zabezpieczanie usług danych WCF](securing-wcf-data-services.md)
+- [Biblioteka klienta usług danych WCF](wcf-data-services-client-library.md)

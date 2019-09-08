@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: 37641056f2f3110685c24266d2612845ffbf0b3d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a8cca707f8fa82e97e988fcbe015b55e35b93499
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929241"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794683"
 ---
 # <a name="optimistic-concurrency"></a>Optymistyczna współbieżność
 W środowisku wielodostępnym istnieją dwa modele aktualizowania danych w bazie danych: optymistyczne współbieżność i pesymistyczne współbieżności. <xref:System.Data.DataSet> Obiekt został zaprojektowany, aby zachęcić do korzystania z optymistycznej współbieżności dla długotrwałych działań, takich jak dane dotyczące komunikacji zdalnej i manipulowania danymi.  
@@ -96,9 +96,9 @@ UPDATE Table1 Set Col1 = @NewVal1
  Można również zastosować mniej restrykcyjne kryteria przy użyciu optymistycznego modelu współbieżności. Na przykład użycie tylko kolumn klucza podstawowego w klauzuli WHERE powoduje zastąpienie danych bez względu na to, czy inne kolumny zostały zaktualizowane od czasu ostatniego zapytania. Można również zastosować klauzulę WHERE tylko do określonych kolumn, co spowoduje zastąpienie danych, chyba że określone pola zostały zaktualizowane od czasu ostatniego zapytania.  
   
 ### <a name="the-dataadapterrowupdated-event"></a>Zdarzenie DataAdapter. RowUpdated  
- Zdarzenie<xref:System.Data.Common.DataAdapter> **RowUpdated** obiektu może być używane w połączeniu z opisanymi wcześniej technikami w celu dostarczenia powiadomienia do aplikacji optymistyczne naruszenia współbieżności. **RowUpdated** występuje po każdej próbie zaktualizowania **zmodyfikowanego** wiersza z **zestawu danych**. Dzięki temu można dodać specjalny kod obsługi, w tym przetwarzanie w przypadku wystąpienia wyjątku, dodanie niestandardowych informacji o błędzie, dodanie logiki ponawiania i tak dalej. Obiekt zwraca Właściwość RecordsAffected zawierającą liczbę wierszy, na które miało wpływ określone polecenie Update dla zmodyfikowanego wiersza w tabeli. <xref:System.Data.Common.RowUpdatedEventArgs> Ustawiając polecenie Update do testowania optymistycznej współbieżności, właściwość **RecordsAffected** będzie w efekcie zwracać wartość 0 w przypadku wystąpienia naruszenia optymistycznej współbieżności, ponieważ żadne rekordy nie zostały zaktualizowane. W takim przypadku zostanie zgłoszony wyjątek. Zdarzenie **RowUpdated** umożliwia obsługę tego wystąpienia i uniknięcie wyjątku przez ustawienie odpowiedniej wartości **RowUpdatedEventArgs. status** , takiej jak **UpdateStatus. SkipCurrentRow**. Aby uzyskać więcej informacji o zdarzeniu **RowUpdated** , zobacz [Obsługa zdarzeń DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ Zdarzenie<xref:System.Data.Common.DataAdapter> **RowUpdated** obiektu może być używane w połączeniu z opisanymi wcześniej technikami w celu dostarczenia powiadomienia do aplikacji optymistyczne naruszenia współbieżności. **RowUpdated** występuje po każdej próbie zaktualizowania **zmodyfikowanego** wiersza z **zestawu danych**. Dzięki temu można dodać specjalny kod obsługi, w tym przetwarzanie w przypadku wystąpienia wyjątku, dodanie niestandardowych informacji o błędzie, dodanie logiki ponawiania i tak dalej. Obiekt zwraca Właściwość RecordsAffected zawierającą liczbę wierszy, na które miało wpływ określone polecenie Update dla zmodyfikowanego wiersza w tabeli. <xref:System.Data.Common.RowUpdatedEventArgs> Ustawiając polecenie Update do testowania optymistycznej współbieżności, właściwość **RecordsAffected** będzie w efekcie zwracać wartość 0 w przypadku wystąpienia naruszenia optymistycznej współbieżności, ponieważ żadne rekordy nie zostały zaktualizowane. W takim przypadku zostanie zgłoszony wyjątek. Zdarzenie **RowUpdated** umożliwia obsługę tego wystąpienia i uniknięcie wyjątku przez ustawienie odpowiedniej wartości **RowUpdatedEventArgs. status** , takiej jak **UpdateStatus. SkipCurrentRow**. Aby uzyskać więcej informacji o zdarzeniu **RowUpdated** , zobacz [Obsługa zdarzeń DataAdapter](handling-dataadapter-events.md).  
   
- Opcjonalnie można ustawić **Właściwość DataAdapter. ContinueUpdateOnError** na **wartość true**, przed wywołaniem funkcji **Update**, a następnie odpowiedzieć na informacje o błędzie przechowywane we właściwości **RowError** określonego wiersza po zakończeniu **aktualizacji** . Aby uzyskać więcej informacji, zobacz [wiersz informacje o błędzie](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md).  
+ Opcjonalnie można ustawić **Właściwość DataAdapter. ContinueUpdateOnError** na **wartość true**, przed wywołaniem funkcji **Update**, a następnie odpowiedzieć na informacje o błędzie przechowywane we właściwości **RowError** określonego wiersza po zakończeniu **aktualizacji** . Aby uzyskać więcej informacji, zobacz [wiersz informacje o błędzie](./dataset-datatable-dataview/row-error-information.md).  
   
 ## <a name="optimistic-concurrency-example"></a>Przykład optymistycznej współbieżności  
  Poniżej przedstawiono prosty przykład, który ustawia element **UpdateCommand** elementu **DataAdapter** do testowania optymistycznej współbieżności, a następnie używa zdarzenia **RowUpdated** do testowania optymistycznych naruszeń współbieżności. Po napotkaniu optymistycznego naruszenia współbieżności aplikacja ustawia **RowError** wiersza, dla którego aktualizacja została wystawiona, aby odzwierciedlał optymistyczne naruszenie współbieżności.  
@@ -208,8 +208,8 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Aktualizowanie źródeł danych za pomocą elementów DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [Informacje o błędzie wiersza](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)
-- [Transakcje i współbieżność](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Pobieranie i modyfikowanie danych ADO.NET](retrieving-and-modifying-data.md)
+- [Aktualizowanie źródeł danych za pomocą elementów DataAdapters](updating-data-sources-with-dataadapters.md)
+- [Informacje o błędzie wiersza](./dataset-datatable-dataview/row-error-information.md)
+- [Transakcje i współbieżność](transactions-and-concurrency.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

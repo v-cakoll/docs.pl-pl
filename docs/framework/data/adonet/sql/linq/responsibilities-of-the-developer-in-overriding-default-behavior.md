@@ -2,30 +2,30 @@
 title: Obowiązki dewelopera podczas zastępowania domyślnego zachowania
 ms.date: 03/30/2017
 ms.assetid: c6909ddd-e053-46a8-980c-0e12a9797be1
-ms.openlocfilehash: 4d895600eeaba9c410e9af359208361e83c42c4d
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 4bfb108e81f64ea368c6bcc846553eb1af5c23b1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910599"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792726"
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>Obowiązki dewelopera podczas zastępowania domyślnego zachowania
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie wymusza następujące wymagania, ale zachowanie jest niezdefiniowane, jeśli te wymagania nie zostały spełnione.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]nie wymusza następujących wymagań, ale zachowanie jest niezdefiniowane, jeśli te wymagania nie są spełnione.  
   
-- Metoda przesłaniania nie mogą wywoływać <xref:System.Data.Linq.DataContext.SubmitChanges%2A> lub <xref:System.Data.Linq.Table%601.Attach%2A>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zgłasza wyjątek, jeśli te metody są wywoływane w to metoda przesłonięcia.  
+- Metoda przesłaniania nie może wywołać <xref:System.Data.Linq.DataContext.SubmitChanges%2A> metody <xref:System.Data.Linq.Table%601.Attach%2A>lub. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]zgłasza wyjątek, jeśli te metody są wywoływane w metodzie przesłaniania.  
   
-- Zastąpienie metody nie można uruchomić, zatwierdzania lub zatrzymać transakcji. <xref:System.Data.Linq.DataContext.SubmitChanges%2A> Operacja jest wykonywana w ramach transakcji. Wewnętrzny transakcji zagnieżdżonej może zakłócać zewnętrzne transakcji. Obciążenia zastąpienie metody można rozpocząć transakcji, tylko wtedy, gdy ustalają one, że operacja nie jest akurat wykonywane w <xref:System.Transactions.Transaction>.  
+- Metody override nie mogą być używane do uruchamiania, zatwierdzania ani zatrzymywania transakcji. <xref:System.Data.Linq.DataContext.SubmitChanges%2A> Operacja jest wykonywana w ramach transakcji. Wewnętrzna transakcja zagnieżdżona może zakłócać zewnętrzną transakcję. Metody przesłaniania obciążenia mogą rozpoczynać transakcję dopiero po ustaleniu, że operacja nie jest wykonywana w <xref:System.Transactions.Transaction>.  
   
-- Zastąpienie metody powinny Wykonaj mapowanie dotyczy optymistycznej współbieżności. Metoda przesłaniająca powinien zgłosić <xref:System.Data.Linq.ChangeConflictException> gdy wystąpi konflikt optymistycznej współbieżności. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Przechwytuje ten wyjątek, dzięki czemu można poprawnie przetworzyć <xref:System.Data.Linq.DataContext.SubmitChanges%2A> opcji na <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  
+- Metody przesłaniania powinny być zgodne z odpowiednimi optymistycznymi mapowania współbieżności. Metoda przesłaniania powinna zgłosić, <xref:System.Data.Linq.ChangeConflictException> gdy występuje konflikt optymistyczny współbieżności. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]przechwytuje ten wyjątek, dzięki czemu można prawidłowo przetwarzać <xref:System.Data.Linq.DataContext.SubmitChanges%2A> tę opcję. <xref:System.Data.Linq.DataContext.SubmitChanges%2A>  
   
-- Tworzenie (`Insert`) i `Update` zastąpienie metody przewidywań powrotem wartości dla wygenerowanych w bazie danych kolumn do odpowiednich elementach członkowskich obiektu po pomyślnym zakończeniu operacji.  
+- Metody Create`Insert`() `Update` i override powinny przepływać z powrotem wartości kolumn generowanych przez bazę danych do odpowiednich członków obiektów po pomyślnym zakończeniu operacji.  
   
-     Na przykład jeśli `Order.OrderID` jest mapowany na kolumnę tożsamości (*autoincrement* klucza podstawowego), a następnie `InsertOrder()` metodę przesłaniającą należy pobrać identyfikator wygenerowanych w bazie danych i ustaw `Order.OrderID` elementu członkowskiego do tego identyfikatora. Podobnie znacznik czasu: elementy Członkowskie musi zostać zaktualizowany do wartości timestamp wygenerowanych w bazie danych, aby upewnić się, że zaktualizowanych obiektów są spójne. Błąd do propagowania wartości wygenerowanych w bazie danych może spowodować niespójność między bazy danych i obiektów śledzonych przez <xref:System.Data.Linq.DataContext>.  
+     Na przykład jeśli `Order.OrderID` jest mapowany do kolumny tożsamości (klucz podstawowy*AutoIncrement* `InsertOrder()` ), Metoda override musi pobrać identyfikator wygenerowany przez `Order.OrderID` bazę danych i ustawić element członkowski na ten identyfikator. Podobnie elementy członkowskie znacznika czasu muszą zostać zaktualizowane do wartości sygnatur czasowych generowanych przez bazę danych, aby upewnić się, że zaktualizowane obiekty są spójne. Niepowodzenie propagowania wartości generowanych przez bazę danych może spowodować niespójność bazy danych i obiektów śledzonych przez <xref:System.Data.Linq.DataContext>.  
   
-- Odpowiada za użytkownika wywołania poprawne dynamicznego interfejsu API. Na przykład w aktualizacji metoda musi zostać zastąpiona, tylko <xref:System.Data.Linq.DataContext.ExecuteDynamicUpdate%2A> może zostać wywołana. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie wykrywa ani nie Sprawdź, czy wywołana metoda dynamiczna pasuje do odpowiednich operacji. Jeśli zostanie wywołana metoda nie ma zastosowania (na przykład <xref:System.Data.Linq.DataContext.ExecuteDynamicDelete%2A> dla obiektu do zaktualizowania), wyniki są niezdefiniowane.  
+- Użytkownik jest odpowiedzialny za wywoływanie prawidłowego dynamicznego interfejsu API. Na przykład, w metodzie przesłaniania aktualizacji <xref:System.Data.Linq.DataContext.ExecuteDynamicUpdate%2A> można wywołać tylko metodę. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]nie wykrywa ani nie sprawdza, czy wywołana metoda dynamiczna pasuje do odpowiedniej operacji. W przypadku wywołania metody niestosowanej (na przykład <xref:System.Data.Linq.DataContext.ExecuteDynamicDelete%2A> w przypadku obiektu, który ma zostać zaktualizowany) wyniki są niezdefiniowane.  
   
-- Na koniec metoda przesłaniania powinien wykonać określonej operacji. Semantyka [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] operacje, takie jak wczesne ładowanie, odroczone ładowanie, a <xref:System.Data.Linq.DataContext.SubmitChanges%2A>) wymaga zastąpienia do zapewnienia określonej usługi. Na przykład obciążenia musi zostać zastąpiona, po prostu zwraca pustą kolekcję bez sprawdzania, czy zawartość w bazie danych prawdopodobnie spowoduje niespójność danych.  
+- Na koniec Metoda przesłaniania jest oczekiwana do wykonania określonej operacji. Semantyka [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] operacji, takich jak ładowanie eager, odroczone ładowanie i <xref:System.Data.Linq.DataContext.SubmitChanges%2A>), wymaga zastąpień w celu zapewnienia określonej usługi. Na przykład przesłonięcie obciążenia, które po prostu zwraca pustą kolekcję bez sprawdzania zawartości w bazie danych, prawdopodobnie spowoduje niespójne dane.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dostosowywanie operacji wstawiania, aktualizowania i usuwania](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)
+- [Dostosowywanie operacji wstawiania, aktualizowania i usuwania](customizing-insert-update-and-delete-operations.md)

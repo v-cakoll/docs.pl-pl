@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 07c705b9daeeb043ef36f1e3272a3bf259a3c23e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 05e3cf25352e731d320061001f08a835cd520b15
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043880"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780931"
 ---
 # <a name="single-bulk-copy-operations"></a>Pojedyncze operacje kopiowania zbiorczego
 
@@ -19,7 +19,7 @@ Najprostszym podejściem do wykonywania SQL Server operacji kopiowania zbiorczeg
 > [!NOTE]
 > Jeśli chcesz wycofać całość lub część kopiowania zbiorczego, gdy wystąpi błąd, możesz użyć <xref:System.Data.SqlClient.SqlBulkCopy>transakcji zarządzanej lub wykonać operację kopiowania zbiorczego w ramach istniejącej transakcji. **SqlBulkCopy** również będzie współdziałać z usługą <xref:System.Transactions> , jeśli połączenie zostanie zarejestrowane (niejawnie lub jawnie) w transakcji **System. Transactions** .
 >
-> Aby uzyskać więcej informacji, zobacz [operacje transakcji i kopiowania zbiorczego](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md).
+> Aby uzyskać więcej informacji, zobacz [operacje transakcji i kopiowania zbiorczego](transaction-and-bulk-copy-operations.md).
 
 Ogólne kroki wykonywania operacji kopiowania zbiorczego są następujące:
 
@@ -42,10 +42,10 @@ Ogólne kroki wykonywania operacji kopiowania zbiorczego są następujące:
 
 ## <a name="example"></a>Przykład
 
-W poniższej aplikacji konsolowej pokazano, <xref:System.Data.SqlClient.SqlBulkCopy> jak załadować dane przy użyciu klasy. W tym przykładzie <xref:System.Data.SqlClient.SqlDataReader> jest używany do kopiowania danych z tabeli Production **. Product** w bazie danych SQL Server **AdventureWorks** do podobnej tabeli w tej samej bazie danych.
+W poniższej aplikacji konsolowej pokazano, <xref:System.Data.SqlClient.SqlBulkCopy> jak załadować dane przy użyciu klasy. W tym przykładzie <xref:System.Data.SqlClient.SqlDataReader> jest używany do kopiowania danych z tabeli **Production. Product** w bazie danych SQL Server **AdventureWorks** do podobnej tabeli w tej samej bazie danych.
 
 > [!IMPORTANT]
-> Ten przykład nie zostanie uruchomiony, jeśli nie utworzono tabel roboczych, zgodnie z opisem w [przykładowej konfiguracji kopiowania zbiorczego](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ten kod jest dostarczany w celu przedstawienia składni tylko za pomocą **SqlBulkCopy** . Jeśli tabele źródłowe i docelowe znajdują się w tym samym wystąpieniu SQL Server, łatwiej i szybciej można używać instrukcji języka Transact-SQL `INSERT … SELECT` do kopiowania danych.
+> Ten przykład nie zostanie uruchomiony, jeśli nie utworzono tabel roboczych, zgodnie z opisem w [przykładowej konfiguracji kopiowania zbiorczego](bulk-copy-example-setup.md). Ten kod jest dostarczany w celu przedstawienia składni tylko za pomocą **SqlBulkCopy** . Jeśli tabele źródłowe i docelowe znajdują się w tym samym wystąpieniu SQL Server, łatwiej i szybciej można używać instrukcji języka Transact-SQL `INSERT … SELECT` do kopiowania danych.
 
 [!code-csharp[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/CS/source.cs#1)]
 [!code-vb[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/VB/source.vb#1)]
@@ -84,5 +84,5 @@ command.ExecuteNonQuery();
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Operacje kopiowania masowego w programie SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Operacje kopiowania masowego w programie SQL Server](bulk-copy-operations-in-sql-server.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

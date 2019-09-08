@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4e530831-695e-49ff-8f0b-e5b0c526b8eb
-ms.openlocfilehash: f9664d8e7bc221da68492140f30419ea8fb0d316
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f86e9100489ddf35d8ef5f98e386306a7dbfd4ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204363"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784182"
 ---
 # <a name="writing-dataset-schema-information-as-xsd"></a>Zapisywanie informacji o schemacie elementu DataSet jako pliku XSD
 Można napisać schemat <xref:System.Data.DataSet> programu jako schemat języka definicji schematu XML (XSD), dzięki czemu można transportować go z lub bez powiązanych danych w dokumencie XML. Schemat XML można zapisać w pliku, strumieniu, <xref:System.Xml.XmlWriter>a lub ciągu; jest to przydatne w przypadku generowania **zestawu danych**o jednoznacznie określonym typie. Aby uzyskać więcej informacji na temat obiektów typu **zestaw danych** o jednoznacznie określonym typie, zobacz [zestawy danych z określonym typem](typed-datasets.md).  
@@ -39,7 +39,7 @@ dataSet.WriteXmlSchema(writer);
 writer.Close();  
 ```  
   
- Aby uzyskać schemat **zestawu danych** i zapisać go jako ciąg schematu XML, należy użyć metody GetXml , jak pokazano w poniższym przykładzie.  
+ Aby uzyskać schemat **zestawu danych** i zapisać go jako ciąg schematu XML, należy **użyć metody GetXml,** jak pokazano w poniższym przykładzie.  
   
 ```vb  
 Dim schemaString As String = dataSet.GetXmlSchema()  
@@ -55,4 +55,4 @@ string schemaString = dataSet.GetXmlSchema();
 - [Zapisywanie zawartości elementu DataSet jako danych XML](writing-dataset-contents-as-xml-data.md)
 - [Typizowane elementy DataSet](typed-datasets.md)
 - [Elementy DataSet, DataTable i DataView](index.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

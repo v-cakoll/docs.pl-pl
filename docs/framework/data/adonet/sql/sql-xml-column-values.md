@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d97ce4da-f09c-4d1e-85b7-a0ccedd7246a
-ms.openlocfilehash: 29e9ac5b95b62ef2a4467bf41484c3740d550abd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 03b09d3a53c725bb0e84ba6b5d98944267bc564c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964946"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780800"
 ---
 # <a name="sql-xml-column-values"></a>Wartości kolumny SQL XML
 SQL Server obsługuje `xml` typ danych, a deweloperzy mogą pobierać zestawy wyników, w tym typ, przy użyciu standardowego zachowania <xref:System.Data.SqlClient.SqlCommand> klasy. Kolumnę można pobrać tylko w przypadku pobrania dowolnej kolumny ( <xref:System.Data.SqlClient.SqlDataReader>na przykład), ale jeśli chcesz korzystać z zawartości kolumny jako XML <xref:System.Xml.XmlReader>, musisz użyć. `xml`  
@@ -27,5 +27,5 @@ SQL Server obsługuje `xml` typ danych, a deweloperzy mogą pobierać zestawy wy
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Data.SqlTypes.SqlXml>
-- [Dane XML w programie SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Dane XML w programie SQL Server](xml-data-in-sql-server.md)
+- [Omówienie ADO.NET](../ado-net-overview.md)

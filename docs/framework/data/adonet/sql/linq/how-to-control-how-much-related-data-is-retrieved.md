@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: efdc203e-3da9-4477-815e-54f10c3d7c6c
-ms.openlocfilehash: 342583cdbf6a1501f1bc70c6a9be5d7009c390eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2112600dfcef65b1c85445b03806ce8e9cab6a27
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940255"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782055"
 ---
 # <a name="how-to-control-how-much-related-data-is-retrieved"></a>Instrukcje: Kontrolowanie, ile jest pobieranych powiązanych danych
 <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> Użyj metody, aby określić, które dane związane z głównym miejscem docelowym powinny być pobierane w tym samym czasie. Jeśli na przykład wiesz, że potrzebujesz informacji o zamówieniach klientów, możesz użyć <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> programu, aby upewnić się, że informacje o zamówieniach są pobierane w tym samym czasie co informacje o kliencie. To podejście powoduje tylko jedną podróż do bazy danych dla obu zestawów informacji.  
@@ -26,4 +26,4 @@ ms.locfileid: "69940255"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wykonywanie zapytania w bazie danych](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+- [Wykonywanie zapytania w bazie danych](querying-the-database.md)

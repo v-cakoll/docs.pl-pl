@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: 36839574ae8a8acd1cb56fa82ebcfa6bddb0c97e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 6e066bcbe02fa9cf498e11af431b9f6dcd4432ab
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203870"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785513"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Tworzenie elementu DataTable przy użyciu elementu DataView
 Po pobraniu danych ze źródła danych, które zostały wypełnione <xref:System.Data.DataTable> danymi, możesz chcieć posortować, filtrować lub w inny sposób ograniczyć zwrócone dane bez konieczności pobierania ich. Jest <xref:System.Data.DataView> to możliwe. Ponadto, jeśli konieczne <xref:System.Data.DataTable> jest utworzenie nowego z programu <xref:System.Data.DataView> <xref:System.Data.DataView.ToTable%2A> , można użyć metody do skopiowania wszystkich wierszy i kolumn lub podzbioru danych do nowej <xref:System.Data.DataTable>. <xref:System.Data.DataView.ToTable%2A> Metoda zapewnia przeciążenia:  
@@ -209,4 +209,4 @@ Console.WriteLine();
 
 - <xref:System.Data.DataView.ToTable%2A>
 - [Elementy DataView](dataviews.md)
-- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](../ado-net-overview.md)

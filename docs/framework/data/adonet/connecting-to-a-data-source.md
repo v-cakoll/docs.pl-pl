@@ -1,31 +1,31 @@
 ---
-title: Łączenie ze źródłem danych w ADO.NET
+title: Nawiązywanie połączenia ze źródłem danych w ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
-ms.openlocfilehash: c04624be758e4bc7c8b1981ad6a9dc44430d62b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 01e4048fb9c7b53b1b1907d1965f822b9a4644a4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879986"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786766"
 ---
-# <a name="connecting-to-a-data-source-in-adonet"></a>Łączenie ze źródłem danych w ADO.NET
-W ADO.NET **połączenia** obiekt, aby połączyć się z określonym źródłem danych, podając niezbędne informacje dotyczące uwierzytelniania w parametrach połączenia. **Połączenia** obiektu użyjesz zależy od typu źródła danych.  
+# <a name="connecting-to-a-data-source-in-adonet"></a>Nawiązywanie połączenia ze źródłem danych w ADO.NET
+W ADO.NET używasz obiektu **połączenia** do łączenia się z określonym źródłem danych, dostarczając wymagane informacje uwierzytelniania w parametrach połączenia. Używany obiekt **połączenia** zależy od typu źródła danych.  
   
- Każdego dostawcy danych .NET Framework, dołączone do programu .NET Framework ma <xref:System.Data.Common.DbConnection> obiektu: .NET Framework Data Provider for OLE DB zawiera <xref:System.Data.OleDb.OleDbConnection> obiektu .NET Framework Data Provider for SQL Server zawiera <xref:System.Data.SqlClient.SqlConnection> obiektu. NET Framework Data Provider for ODBC obejmuje <xref:System.Data.Odbc.OdbcConnection> obiektu i .NET Framework Data Provider for Oracle obejmuje <xref:System.Data.OracleClient.OracleConnection> obiektu.  
+ Każdy dostawca danych .NET Framework dołączony do .NET Framework ma <xref:System.Data.Common.DbConnection> obiekt: dostawca danych .NET Framework dla OLE DB <xref:System.Data.OleDb.OleDbConnection> zawiera obiekt, .NET Framework dostawca danych dla SQL Server zawiera <xref:System.Data.SqlClient.SqlConnection> obiekt,. Dostawca danych .NET Framework dla ODBC zawiera <xref:System.Data.Odbc.OdbcConnection> obiekt, a .NET Framework dostawca danych dla programu Oracle <xref:System.Data.OracleClient.OracleConnection> zawiera obiekt.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Nawiązywanie połączenia](../../../../docs/framework/data/adonet/establishing-the-connection.md)  
- Opisuje sposób używania **połączenia** obiektów do nawiązania połączenia ze źródłem danych.  
+ [Nawiązywanie połączenia](establishing-the-connection.md)  
+ Opisuje sposób użycia obiektu **połączenia** w celu nawiązania połączenia ze źródłem danych.  
   
- [Zdarzenia połączenia](../../../../docs/framework/data/adonet/connection-events.md)  
- Opisuje sposób używania **InfoMessage** zdarzenie, aby pobrać komunikaty informacyjne ze źródła danych.  
+ [Zdarzenia połączenia](connection-events.md)  
+ Opisuje sposób użycia zdarzenia **InfoMessage** do pobierania komunikatów informacyjnych ze źródła danych.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Parametry połączeń](../../../../docs/framework/data/adonet/connection-strings.md)
-- [Pula połączeń](../../../../docs/framework/data/adonet/connection-pooling.md)
-- [Polecenia i parametry](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Transakcje i współbieżność](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Parametry połączeń](connection-strings.md)
+- [Pula połączeń](connection-pooling.md)
+- [Polecenia i parametry](commands-and-parameters.md)
+- [Elementy DataAdapter i DataReaders](dataadapters-and-datareaders.md)
+- [Transakcje i współbieżność](transactions-and-concurrency.md)
+- [Omówienie ADO.NET](ado-net-overview.md)

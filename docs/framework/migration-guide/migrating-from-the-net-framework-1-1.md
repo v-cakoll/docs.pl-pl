@@ -7,22 +7,22 @@ helpviewer_keywords:
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9671dd87e3185e9d4b997e2ea75770f756605efb
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 7b15318ef38c407110c8d48d3e81977aa1b20df4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833517"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779475"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>Migracja z programu .NET Framework 1.1
 
-[!INCLUDE[win7](../../../includes/win7-md.md)] i nowszymi wersjami systemu operacyjnego Windows nie obsługują programu .NET Framework 1.1. W rezultacie aplikacji przeznaczonych dla środowiska .NET Framework 1.1 nie będzie działać bez żadnych modyfikacji na [!INCLUDE[win7](../../../includes/win7-md.md)] lub nowszej wersji systemu operacyjnego. W tym temacie omówiono kroki wymagane do uruchamiania aplikacji, który jest przeznaczony dla .NET Framework 1.1 w obszarze [!INCLUDE[win7](../../../includes/win7-md.md)] i nowszych wersjach systemu operacyjnego Windows. Aby uzyskać więcej informacji na temat programu .NET Framework 1.1 i [!INCLUDE[win8](../../../includes/win8-md.md)], zobacz [systemem 1.1 aplikacji programu .NET Framework w systemie Windows 8 i nowszych wersjach](../../../docs/framework/install/run-net-framework-1-1-apps.md).
+[!INCLUDE[win7](../../../includes/win7-md.md)]i nowsze wersje systemu operacyjnego Windows nie obsługują .NET Framework 1,1. W związku z tym aplikacje przeznaczone dla .NET Framework 1,1 nie będą uruchamiane bez modyfikacji w systemach [!INCLUDE[win7](../../../includes/win7-md.md)] operacyjnych i nowszych wersjach. W tym temacie omówiono kroki wymagane do uruchomienia aplikacji, która jest przeznaczona dla .NET Framework 1,1 [!INCLUDE[win7](../../../includes/win7-md.md)] w ramach i nowszych wersjach systemu operacyjnego Windows. Aby uzyskać więcej informacji na temat .NET Framework 1,1 [!INCLUDE[win8](../../../includes/win8-md.md)]i, zobacz [Uruchamianie aplikacji .NET Framework 1,1 w systemie Windows 8 i nowszych wersjach](../install/run-net-framework-1-1-apps.md).
 
-## <a name="retargeting-or-recompiling"></a>Retargeting i ponowna kompilacja
+## <a name="retargeting-or-recompiling"></a>Przekierowywanie lub ponowne kompilowanie
 
-Istnieją dwa sposoby uzyskania aplikacji skompilowanej przy użyciu programu .NET Framework 1.1 w celu uruchamiania [!INCLUDE[win7](../../../includes/win7-md.md)] lub nowszej wersji systemu operacyjnego Windows:
+Istnieją dwa sposoby uzyskania aplikacji, która została skompilowana przy użyciu .NET Framework 1,1 do uruchamiania w [!INCLUDE[win7](../../../includes/win7-md.md)] systemie lub nowszym systemem operacyjnym Windows:
 
-- Można przekierować aplikację do uruchamiania w .NET Framework 4 i nowsze wersje. Trwa przekierowywanie wymaga dodania [ \<supportedRuntime >](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) elementu do pliku konfiguracji aplikacji, który umożliwia jego uruchomienie w ramach programu .NET Framework 4 i nowsze wersje. Taki plik konfiguracyjny ma następującą postać:
+- Można przekierować aplikację do uruchamiania w .NET Framework 4 i nowszych wersjach. Przekierowywanie wymaga dodania [ \<elementu supportedRuntime >](../configure-apps/file-schema/startup/supportedruntime-element.md) do pliku konfiguracji aplikacji, który umożliwia uruchamianie go w .NET Framework 4 i nowszych wersjach. Taki plik konfiguracyjny ma następującą postać:
 
     ```xml
     <configuration>
@@ -32,19 +32,19 @@ Istnieją dwa sposoby uzyskania aplikacji skompilowanej przy użyciu programu .N
     </configuration>
     ```
 
-- Można ponownie skompilować aplikację za pomocą kompilatora przeznaczonego do .NET Framework 4 lub nowszy. Jeśli początkowo używano programu Visual Studio 2003 do utworzenia i skompilowania rozwiązania, można otworzyć rozwiązanie w programie Visual Studio 2010 (i ewentualnie nowsze wersje zbyt) i używać **zgodności projektu** okno dialogowe, aby skonwertować rozwiązanie i pliki projektu z formatów używanych przez program Visual Studio 2003 na format aparatu Microsoft Build Engine (MSBuild).
+- Możesz ponownie skompilować aplikację z kompilatorem przeznaczonym dla .NET Framework 4 lub nowszej wersji. Jeśli program Visual Studio 2003 został pierwotnie użyty do opracowania i skompilowania rozwiązania, można otworzyć rozwiązanie w programie Visual Studio 2010 (a także w późniejszych wersjach) i użyć okna dialogowego **Zgodność projektu** , aby przekonwertować rozwiązanie i pliki projektu z formaty używane przez program Visual Studio 2003 do formatu Microsoft Build Engine (MSBuild).
 
-Niezależnie od tego, czy wolisz ponownie skompilować czy przekierować aplikację musisz określić, czy aplikacja jest wpływ na wszelkie zmiany wprowadzone w nowszych wersjach programu .NET Framework. Zmiany te mają dwie formy:
+Bez względu na to, czy wolisz ponownie skompilować lub przekierować aplikację, musisz określić, czy na aplikacji mają wpływ jakiekolwiek zmiany wprowadzone w nowszych wersjach .NET Framework. Te zmiany są dwa rodzaje:
 
-- Fundamentalne zmiany między .NET Framework 1.1 i nowszych wersjach programu .NET Framework.
+- Istotne zmiany, które wystąpiły między .NET Framework 1,1 i późniejszymi wersjami .NET Framework.
 
-- Typy i składowe typu, które zostały oznaczone jako przestarzałe, lub w programie .NET Framework 1.1 i nowszych wersjach programu .NET Framework.
+- Typy i elementy członkowskie typu, które zostały oznaczone jako przestarzałe lub przestarzałe między .NET Framework 1,1 i późniejszymi wersjami .NET Framework.
 
-Czy przekierować aplikację, lub ponownie ją kompilując, należy przejrzeć zarówno przełomowe zmiany oraz przestarzałe typy i członków dla każdej wersji programu .NET Framework, która została wydana po .NET Framework 1.1.
+Bez względu na to, czy chcesz przekierować aplikację, czy ją ponownie skompilować, należy przejrzeć zarówno zmiany, jak i przestarzałe typy i elementy członkowskie dla każdej wersji .NET Framework wydanej po .NET Framework 1,1.
 
 ## <a name="breaking-changes"></a>Fundamentalne zmiany
 
-Gdy wystąpi zmiana podziału, w zależności od określonej zmiany obejście tego problemu może być dostępne zarówno dla przekierowano element i ponownie kompilowanych. W niektórych przypadkach można dodać elementu podrzędnego do [ \<runtime >](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) element pliku konfiguracji aplikacji, aby przywrócić poprzednie zachowanie. Na przykład następujący plik konfiguracji przywraca sortowanie ciągów i zachowanie porównania używane w .NET Framework 1.1 i może być używany z przebudowanymi pod inne środowisko lub ponownie skompilowanymi aplikacji.
+Gdy nastąpi zmiana istotna, w zależności od określonej zmiany obejście może być dostępne zarówno w przypadku aplikacji docelowych, jak i ponownie skompilowanych. W niektórych przypadkach można dodać element podrzędny do [ \<elementu > środowiska uruchomieniowego](../configure-apps/file-schema/startup/supportedruntime-element.md) w pliku konfiguracji aplikacji, aby przywrócić poprzednie zachowanie. Na przykład następujący plik konfiguracyjny przywraca zachowanie sortowania i porównywania ciągów używane w .NET Framework 1,1 i może być używane z przekierowaniem lub ponowną kompilacją aplikacji.
 
 ```xml
 <configuration>
@@ -54,18 +54,18 @@ Gdy wystąpi zmiana podziału, w zależności od określonej zmiany obejście te
 </configuration>
 ```
 
-Jednak w niektórych przypadkach trzeba zmodyfikować kod źródłowy i ponownie skompilować aplikację.
+Jednak w niektórych przypadkach może być konieczne zmodyfikowanie kodu źródłowego i ponowne skompilowanie aplikacji.
 
-W celu oceny wpływu możliwych przełomowych zmian w swojej aplikacji, należy przejrzeć następujące listy zmian:
+Aby ocenić wpływ ewentualnych zmian w aplikacji, należy przejrzeć następujące listy zmian:
 
-- [Istotne zmiany w programie .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkId=125263) dokumentuje zmiany w .NET Framework 2.0 z dodatkiem SP1, który może wpływać na aplikację, który jest przeznaczony dla .NET Framework 1.1.
+- Istotne [zmiany w .NET Framework 2,0](https://go.microsoft.com/fwlink/?LinkId=125263) dokumenty zmiany w .NET Framework 2,0 SP1, które mogą mieć wpływ na aplikację, która jest przeznaczona .NET Framework 1,1.
 
-- [Zmiany w .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkID=186989) dokumentuje zmiany między .NET Framework 3.5 i .NET Framework 3.5 SP1.
+- [Zmiany w .NET Framework 3,5 z dodatkiem SP1](https://go.microsoft.com/fwlink/?LinkID=186989) zmieniają się między .NET Framework 3,5 i .NET Framework 3,5 SP1.
 
-- [Zagadnienia dotyczące migracji programu .NET framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md) dokumentuje zmiany między .NET Framework 3.5 SP1 i .NET Framework 4.
+- [.NET Framework 4 problemy z migracją](net-framework-4-migration-issues.md) dokumentów między .NET Framework 3,5 SP1 a .NET Framework 4.
 
-## <a name="obsolete-types-and-members"></a>Przestarzałe typy i członkowie
+## <a name="obsolete-types-and-members"></a>Przestarzałe typy i składowe
 
-Wpływ zdeprecjonowanych typów i składowych jest nieco inny dla aplikacji przekierowanych i ponownie kompilowanych. Korzystanie z przestarzałych typów i elementów członkowskich nie wpłynie na zmienianą aplikację, chyba że przestarzałego typu lub składowej został fizycznie usunięty z zestawu. Konieczności ponownego kompilowania aplikacji korzystającej z przestarzałe typy lub członków zwykle powoduje ostrzeżenia kompilatora, nie błędu kompilatora. Jednak w niektórych przypadkach generuje błąd kompilatora i kod, który używa przestarzałego typu lub składowej nie jest kompilowany pomyślnie. W takim przypadku należy przepisać kod źródłowy, który wywołuje przestarzały typ lub członka, przed ponownym skompilowaniem aplikacji. Aby uzyskać więcej informacji na temat przestarzałych typów i członków, zobacz [What's Obsolete in biblioteki klas](../../../docs/framework/whats-new/whats-obsolete.md).
+Skutki przestarzałych typów i elementów członkowskich różnią się w zależności od aplikacji przeznaczonych do przekierowania i ponownie skompilowanych aplikacji. Użycie przestarzałych typów i elementów członkowskich nie będzie miało wpływu na przekierowanie aplikacji, chyba że przestarzały typ lub element członkowski został fizycznie usunięty z jego zestawu. Ponowne kompilowanie aplikacji używającej przestarzałych typów lub składowych zwykle powoduje ostrzeżenie kompilatora, a nie błąd kompilatora. Jednak w niektórych przypadkach generuje błąd kompilatora i kod, który używa przestarzałego typu lub elementu członkowskiego, nie kompiluje się pomyślnie. W takim przypadku należy ponownie napisać kod źródłowy, który wywołuje przestarzały typ lub element członkowski przed ponowną kompilacją aplikacji. Aby uzyskać więcej informacji na temat przestarzałych typów i członków, zobacz [co jest przestarzałe w bibliotece klas](../whats-new/whats-obsolete.md).
 
-Aby ocenić wpływ typów i elementów członkowskich, które zostały zaniechane od czasu wersji programu .NET Framework 2.0 z dodatkiem SP1, zobacz [What's Obsolete in biblioteki klas](../../../docs/framework/whats-new/whats-obsolete.md). Przejrzyj listy przestarzałych typów i członków dla platformy .NET Framework 2.0 z dodatkiem SP1, .NET Framework 3.5 i .NET Framework 4.
+Aby ocenić wpływ typów i elementów członkowskich, które zostały zaniechane od czasu wydania .NET Framework 2,0 z dodatkiem SP1, zobacz, [co jest przestarzałe w bibliotece klas](../whats-new/whats-obsolete.md). Zapoznaj się z listą przestarzałych typów i elementów członkowskich dla .NET Framework 2,0 SP1, .NET Framework 3,5 i .NET Framework 4.

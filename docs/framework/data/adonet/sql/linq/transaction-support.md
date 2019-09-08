@@ -2,28 +2,28 @@
 title: Obsługa transakcji
 ms.date: 03/30/2017
 ms.assetid: 8cceb26e-8d36-4365-8967-58e2e89e0187
-ms.openlocfilehash: 519ddab069cf3c4ca1ccfa7b203769b8102db844
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c7128ef432fa609b8d628bc74caebe790058ede
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876840"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792278"
 ---
 # <a name="transaction-support"></a>Obsługa transakcji
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje trzy modele distinct transakcji. Poniższa lista zawiera te modele, zgodnie z kolejnością kontrole wykonywane.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]obsługuje trzy różne modele transakcji. Poniżej wymieniono te modele w kolejności przeprowadzanych kontroli.  
   
-## <a name="explicit-local-transaction"></a>Jawnych transakcji lokalnej  
- Gdy <xref:System.Data.Linq.DataContext.SubmitChanges%2A> zostanie wywołana, jeśli <xref:System.Data.Linq.DataContext.Transaction%2A> właściwość jest ustawiona na (`IDbTransaction`) transakcji <xref:System.Data.Linq.DataContext.SubmitChanges%2A> wywołanie jest wykonywane w ramach tej samej transakcji.  
+## <a name="explicit-local-transaction"></a>Jawna transakcja lokalna  
+ Gdy <xref:System.Data.Linq.DataContext.SubmitChanges%2A> jest wywoływana, <xref:System.Data.Linq.DataContext.Transaction%2A> Jeśli właściwość jest ustawiona na <xref:System.Data.Linq.DataContext.SubmitChanges%2A> (`IDbTransaction`) transakcja, wywołanie jest wykonywane w kontekście tej samej transakcji.  
   
- Jest odpowiedzialny za zatwierdzenia lub wycofania transakcji po pomyślnym wykonaniu transakcji. Połączenie odpowiadające transakcji musi odpowiadać połączenie używane do konstruowania <xref:System.Data.Linq.DataContext>. Wyjątek jest generowany, jeśli jest używany przez inne połączenie.  
+ Ponosisz odpowiedzialność za zatwierdzenie lub wycofanie transakcji po pomyślnym wykonaniu transakcji. Połączenie odpowiadające transakcji musi być zgodne z połączeniem używanym do konstruowania <xref:System.Data.Linq.DataContext>. Wyjątek jest generowany, jeśli używane jest inne połączenie.  
   
-## <a name="explicit-distributable-transaction"></a>Transakcji jawnej dystrybucyjny  
- Możesz wywołać [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] interfejsy API (w tym między innymi <xref:System.Data.Linq.DataContext.SubmitChanges%2A>) w zakresie aktywnego <xref:System.Transactions.Transaction>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wykrywa, że wywołanie znajduje się w zakresie transakcji i nie tworzy nową transakcję. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unika również w tym przypadku zamknięcie połączenia. Można wykonać zapytania i <xref:System.Data.Linq.DataContext.SubmitChanges%2A> wykonania w ramach takich transakcji.  
+## <a name="explicit-distributable-transaction"></a>Jawna transakcja dystrybucyjna  
+ Można wywołać [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] interfejsy API (w tym, ale nie <xref:System.Data.Linq.DataContext.SubmitChanges%2A>ograniczone do) w zakresie aktywnego. <xref:System.Transactions.Transaction> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]wykrywa, czy wywołanie znajduje się w zakresie transakcji i nie tworzy nowej transakcji. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]w takim przypadku unika się również zamykania połączenia. Można wykonywać zapytania i <xref:System.Data.Linq.DataContext.SubmitChanges%2A> wykonania w kontekście takich transakcji.  
   
-## <a name="implicit-transaction"></a>Transakcji niejawnej  
- Gdy wywołujesz <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sprawdza, czy wywołanie znajduje się w zakresie <xref:System.Transactions.Transaction> lub jeśli `Transaction` właściwości (`IDbTransaction`) jest ustawiona na pracę użytkownika transakcji lokalnej. Jeśli znajdzie ani transakcji [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] rozpoczyna się transakcji lokalnej (`IDbTransaction`) i używa go do wykonywania wygenerowany poleceń SQL. Po pomyślnym zakończeniu wszystkich poleceń SQL [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zatwierdzeń transakcji lokalnej i zwraca.  
+## <a name="implicit-transaction"></a>Niejawna transakcja  
+ <xref:System.Data.Linq.DataContext.SubmitChanges%2A>Po wywołaniu, sprawdza [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , czy wywołanie znajduje się <xref:System.Transactions.Transaction> w zakresie lub `Transaction` czy właściwość (`IDbTransaction`) jest ustawiona na lokalną transakcję uruchomioną przez użytkownika. Jeśli nie znajdzie żadnej transakcji, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] program uruchamia transakcję lokalną`IDbTransaction`() i używa jej do wykonywania wygenerowanych poleceń SQL. Po pomyślnym zakończeniu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wszystkich poleceń SQL zostanie zatwierdzona lokalna transakcja i zwrócone.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Informacje uzupełniające](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Instrukcje: Przesyłanie danych nawiasów za pomocą transakcji](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)
+- [Informacje uzupełniające](background-information.md)
+- [Instrukcje: Przeprzesyłanie danych w nawiasach przy użyciu transakcji](how-to-bracket-data-submissions-by-using-transactions.md)

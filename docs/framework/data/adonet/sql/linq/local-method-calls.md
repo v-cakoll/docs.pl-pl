@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c34b5012-aee9-4994-9364-1d99d12b7463
-ms.openlocfilehash: c8a4c29b1faa3c05f2cf32e9a60104b43a9b1c40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec288d5ac2f6466860362be82c619c89204e8f31
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033517"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781421"
 ---
 # <a name="local-method-calls"></a>Wywoływania metody lokalnej
-Wywołanie metody lokalnej jest taki, który jest wykonywany w ramach modelu obiektu. Wywołanie metody zdalnej jest jeden, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] przekłada się na SQL i przesyła je do aparatu bazy danych w celu wykonania. Wywoływania metody lokalnej są wymagane podczas [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie może tłumaczyć wywołań do SQL. W przeciwnym razie <xref:System.InvalidOperationException> zgłaszany.  
+Wywołanie metody lokalnej to takie, które jest wykonywane w modelu obiektów. Wywołanie metody zdalnej to takie, które [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tłumaczy na SQL i przesyła do aparatu bazy danych w celu wykonania. Wywołania metody lokalnej są konieczne, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] gdy nie można przetłumaczyć wywołania na SQL. W przeciwnym razie jest zgłaszany. <xref:System.InvalidOperationException>  
   
 ## <a name="example-1"></a>Przykład 1  
- W poniższym przykładzie `Order` klasy jest mapowany do tabeli zamówienia w bazie danych Northwind. Metoda wystąpienia lokalnego, dodano do klasy.  
+ W poniższym przykładzie `Order` Klasa jest mapowana na tabelę Orders w przykładowej bazie danych Northwind. Lokalna metoda wystąpienia została dodana do klasy.  
   
- Zapytanie 1, Konstruktor `Order` klasy jest wykonywana lokalnie. W zapytania 2, jeśli [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] próbował tłumaczenie `LocalInstanceMethod()`w bazie SQL, próba zakończy się niepowodzeniem i <xref:System.InvalidOperationException> będzie zgłaszany wyjątek. Ale ponieważ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapewnia obsługę wywoływania metody lokalnej kwerenda2 nie spowoduje zgłoszenie wyjątku.  
+ W zapytaniu 1 Konstruktor dla `Order` klasy jest wykonywany lokalnie. W zapytaniu 2, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Jeśli próba przetłumaczenia `LocalInstanceMethod()`na SQL, <xref:System.InvalidOperationException> próba nie powiedzie się i zostanie zgłoszony wyjątek. Ale ponieważ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapewnia obsługę wywołań metod lokalnych, Query2 nie zgłosi wyjątku.  
   
  [!code-csharp[DlinqLocalMethodCall#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqLocalMethodCall/cs/Program.cs#1)]
  [!code-vb[DlinqLocalMethodCall#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqLocalMethodCall/vb/Module1.vb#1)]  
@@ -28,4 +28,4 @@ Wywołanie metody lokalnej jest taki, który jest wykonywany w ramach modelu obi
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Informacje uzupełniające](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Informacje uzupełniające](background-information.md)

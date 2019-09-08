@@ -2,28 +2,28 @@
 title: właściwość klucza obcego
 ms.date: 03/30/2017
 ms.assetid: 23cb6729-544d-4f67-9ee7-44e8a6545587
-ms.openlocfilehash: 74117b30ca54f7c57bd970003fc6f5dcc54d553f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e2f41c2db9aea26c7954a99ebf3f40b03e8df735
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879086"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795028"
 ---
 # <a name="foreign-key-property"></a>właściwość klucza obcego
-A *właściwość klucza obcego* w Entity Data Model (EDM) jest typem pierwotnym [właściwość](../../../../docs/framework/data/adonet/property.md) (lub zestaw właściwości typu pierwotnego) na [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) zawierający [klucz jednostki](../../../../docs/framework/data/adonet/entity-key.md) innego typu jednostki.  
+*Właściwość klucza obcego* w Entity Data Model (EDM) jest [właściwością](property.md) typu pierwotnego (lub zestawem właściwości typu pierwotnego) dla [typu jednostki](entity-type.md) , który zawiera [klucz jednostki](entity-key.md) innego typu jednostki.  
   
- Właściwość klucza obcego jest analogiczne do kolumny klucza obcego w relacyjnej bazie danych. W ten sam sposób, że kolumny klucza obcego są używane w relacyjnej bazie danych do tworzenia relacji między wierszy w tabelach, właściwości klucza obcego w modelu koncepcyjnym są używane do ustanawiania [skojarzenia](../../../../docs/framework/data/adonet/association-type.md) między typami encji. A [ograniczenia integralności referencyjnej](../../../../docs/framework/data/adonet/referential-integrity-constraint.md) służy do definiowania skojarzenie między dwoma typami encji, gdy jeden z typów ma właściwość klucza obcego.  
+ Właściwość klucza obcego jest analogiczna do kolumny klucza obcego w relacyjnej bazie danych. W taki sam sposób, w jaki kolumny klucza obcego są używane w relacyjnej bazie danych do tworzenia relacji między wierszami w tabelach, właściwości klucza obcego w modelu koncepcyjnym są używane do ustanawiania [skojarzeń](association-type.md) między typami jednostek. [Ograniczenie integralności referencyjnej](referential-integrity-constraint.md) służy do definiowania skojarzenia między dwoma typami jednostek, gdy jeden z typów ma właściwość klucza obcego.  
   
 ## <a name="example"></a>Przykład  
- Poniższy diagram przedstawia modelu koncepcyjnego z trzech typów jednostek: `Book`, `Publisher`, i `Author`. `Book` Typ jednostki ma właściwość, `PublisherId`, który odwołuje się klucz `Publisher` typu jednostki podczas definiowania ograniczenia integralności referencyjnej w `PublishedBy` skojarzenia.  
+ Na poniższym diagramie przedstawiono model koncepcyjny z trzema typami jednostek: `Book`, `Publisher`i `Author`. Typ jednostki ma właściwość, `PublisherId`która odwołuje `Publisher` się do klucza jednostki typu jednostki podczas definiowania ograniczenia integralności referencyjnej w `PublishedBy` skojarzeniu. `Book`  
   
- ![RefConstraintModel](./media/foreign-key-property/reference-constraint-model.gif "przykładowy model ograniczenie referencyjne")  
+ ![RefConstraintModel](./media/foreign-key-property/reference-constraint-model.gif "Przykład modelu ograniczeń referencyjnych")  
   
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) używa języka specyficznego dla domeny (DSL), o nazwie język definicji schematu koncepcyjnego ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych. Następujące CSDL używa właściwości klucza obcego `PublisherId` definiowania ograniczenia integralności referencyjnej w `PublishedBy` skojarzenia wyświetlane w modelu koncepcyjnym przedstawionych powyżej.  
+ [ADO.NET Entity Framework](./ef/index.md) używa języka specyficznego dla domeny (DSL) zwanego językiem definicji schematu koncepcyjnego ([CSDL](./ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych. Poniższy CSDL używa właściwości `PublisherId` klucza obcego do zdefiniowania ograniczenia integralności referencyjnej `PublishedBy` na skojarzeniu pokazanym powyżej.  
   
  [!code-xml[EDM_Example_Model#RefConstraint](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#refconstraint)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Kluczowe założenia modelu danych jednostki](entity-data-model-key-concepts.md)
+- [Model danych jednostki](entity-data-model.md)

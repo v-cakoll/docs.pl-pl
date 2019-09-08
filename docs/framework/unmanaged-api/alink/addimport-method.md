@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31dec878c92e2e2196ab2d586a78578b7244a41a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aed70a78e2513f4d63fbf8ca8868f26efbac9ae8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742243"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787663"
 ---
 # <a name="addimport-method"></a>AddImport — Metoda
-Importy dodaje do zestawu.  
+Dodaje Importy do zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,25 +40,25 @@ HRESULT AddImport(
   
 ## <a name="parameters"></a>Parametry  
  `AssemblyID`  
- Unikatowy identyfikator zestawu, aby zostać rozszerzony.  
+ Unikatowy identyfikator zestawu, który ma zostać rozszerzony.  
   
  `ImportToken`  
- Unikatowy identyfikator, pobierane z [importfile — metoda](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), pliku do zaimportowania.  
+ Unikatowy identyfikator, pobrany z [metody ImportFile —](importfile-method.md), pliku do zaimportowania.  
   
  `dwFlags`  
- COM + FileDef flagi, takich jak `ffContainsNoMetaData` i `ffWriteable`. `dwFlags` jest przekazywany do [definefile — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+ Flagi FileDef modelu COM+, `ffContainsNoMetaData` takie `ffWriteable`jak i. `dwFlags`jest przenoszona do [metody DefineFile —](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pFileToken`  
- Wskaźnik do tokenu, który odbiera identyfikator wynikowy plik.  
+ Wskaźnik do tokenu, który odbiera identyfikator dla tworzonego pliku.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga alink.h  
+ Wymaga Alink. h  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink, interfejs](ialink-interface.md)
+- [IALink2, interfejs](ialink2-interface.md)
+- [ALink, interfejs API](index.md)

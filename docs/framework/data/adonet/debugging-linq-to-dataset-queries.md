@@ -2,32 +2,32 @@
 title: Debugowanie zapytań LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: 38eda9f352c4a8d8590e5e57b48c694eadd0397b
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: a82fd3e99a556daf40e5c65a16cf20278f38ea26
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67503986"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785213"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>Debugowanie zapytań LINQ to DataSet
 
-Program Visual Studio obsługuje debugowanie LINQ do kodu zestawu danych. Istnieją jednak pewne różnice między debugowania LINQ do kodu zestawu danych i non-LINQ do kodu zarządzanego zestawu danych. Najbardziej debugujące funkcje współpracują z LINQ do instrukcji zestawu danych, w tym przechodzenie krok po kroku, ustawiania punktów przerwania i wyświetlania wyników, które są wyświetlane w oknach debugera. Jednak wykonanie odroczone zapytanie w ma pewne skutki uboczne, które należy wziąć pod uwagę podczas debugowania LINQ do kodu zestawu danych i podlegają pewnym ograniczeniom za pomocą Edytuj i Kontynuuj. W tym temacie omówiono aspektów debugowania, które są unikatowe dla programu LINQ to DataSet w porównaniu do non-LINQ do kodu zarządzanego zestawu danych.  
+Program Visual Studio obsługuje debugowanie kodu LINQ to DataSet. Istnieją jednak pewne różnice między debugowaniem LINQ to DataSet kodu i nieLINQ to DataSet kod zarządzany. Większość funkcji debugowania współpracuje z instrukcjami LINQ to DataSet, w tym krokowe, ustawianie punktów przerwania i wyświetlanie wyników, które są wyświetlane w oknach debugera. Jednak opóźnione wykonywanie zapytań w programie ma pewne efekty uboczne, które należy wziąć pod uwagę podczas debugowania kodu LINQ to DataSet i istnieją pewne ograniczenia dotyczące używania funkcji Edytuj i Kontynuuj. W tym temacie omówiono aspekty debugowania, które są unikatowe dla LINQ to DataSet w porównaniu do kodu zarządzanego nieLINQ to DataSetowego.  
   
 ## <a name="viewing-results"></a>Wyświetlanie wyników  
- Wynik składnika LINQ to DataSet instrukcji można wyświetlić, używając DataTips, okna czujki i okna dialogowego QuickWatch. Korzystając z okna źródła, możesz wstrzymać wskaźnik na zapytaniu w oknie źródła i wyświetli się datatip. Można skopiować LINQ do zestawu danych zmiennej i wklej go w oknie czujki lub okna dialogowego QuickWatch. W składniku LINQ to DataSet kwerenda nie jest uwzględniana podczas tworzenia lub deklarowania, ale tylko wtedy, gdy zapytanie jest wykonywane. Jest to nazywane *wykonanie odroczone*. W związku z tym zmienna zapytania nie ma wartości dopóki jest ocenione. Aby uzyskać więcej informacji, zobacz [zapytania w LINQ to DataSet](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md).  
+ Można wyświetlić wynik instrukcji LINQ to DataSet przy użyciu etykietek danych, okno wyrażeń kontrolnych i okna dialogowego QuickWatch. Za pomocą okna źródłowego można wstrzymać wskaźnik zapytania w oknie źródło i pojawi się etykietki danych. Można skopiować zmienną LINQ to DataSet i wkleić ją do okna dialogowego okno wyrażeń kontrolnych lub QuickWatch. W LINQ to DataSet zapytanie nie jest oceniane podczas tworzenia lub deklarowania, ale tylko wtedy, gdy zapytanie jest wykonywane. Jest to tzw. *wykonywanie odroczone*. W związku z tym zmienna zapytania nie ma wartości, dopóki nie zostanie ona oceniona. Aby uzyskać więcej informacji, zobacz [zapytania w LINQ to DataSet](queries-in-linq-to-dataset.md).  
   
- Debuger musi zwrócić zapytanie w celu wyświetlenia wyników zapytania. Bezwarunkowa ocena występuje, gdy wyświetlania składnika LINQ to DataSet wyników zapytania w debugerze ma jakieś konsekwencje, które należy wziąć pod uwagę. Każdej oceny kwerendy jest czasochłonne. Rozwinięcie węzła wyników zajmuje trochę czasu. Dla niektórych zapytań powtarzające się oceny mogą spowodować zmniejszyć wydajność. Ocena zapytania może spowodować efekty uboczne, które są zmianami wartości danych lub stanu programu. Nie wszystkie kwerendy mają skutki uboczne. Aby ustalić, czy zapytanie może być bezpiecznie ocenione bez efektów ubocznych, musisz zrozumieć kod, który implementuje zapytanie. Aby uzyskać więcej informacji, zobacz [efekty uboczne i wyrażenia](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/a7a250bs(v=vs.120)).  
+ Debuger musi oszacować zapytanie, aby wyświetlić wyniki zapytania. Ta niejawna Ocena występuje po wyświetleniu LINQ to DataSet wyniku zapytania w debugerze i ma pewne skutki, które należy wziąć pod uwagę. Każda Ocena zapytania trwa. Rozszerzanie węzła wyników zajmuje trochę czasu. W przypadku niektórych zapytań powtórzona Ocena może spowodować zauważalną spadek wydajności. Obliczenie zapytania może również spowodować skutki uboczne, które są zmieniane na wartość danych lub stan programu. Nie wszystkie zapytania mają efekty uboczne. Aby określić, czy zapytanie może być bezpiecznie ocenione bez efektów ubocznych, należy zrozumieć kod implementujący zapytanie. Aby uzyskać więcej informacji, zobacz [efekty uboczne i wyrażenia](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/a7a250bs(v=vs.120)).  
   
 ## <a name="edit-and-continue"></a>Edytuj i kontynuuj  
- Edytuj i Kontynuuj nie obsługuje zmiany zapytań LINQ do zapytań zestawu danych. Jeśli dodać, usunąć lub zmienić LINQ do DataSet instrukcji podczas sesji debugowania pojawia się okno dialogowe informujące, że zmiana nie jest obsługiwana przez Edytuj i Kontynuuj. W tym momencie można albo cofnąć zmiany lub zatrzymać sesję debugowania i ponownie uruchomić nową sesję edycji kodu.  
+ Edytuj i Kontynuuj nie obsługuje zmian w zapytaniach LINQ to DataSet. W przypadku dodania, usunięcia lub zmiany instrukcji LINQ to DataSet podczas sesji debugowania zostanie wyświetlone okno dialogowe z informacją, że zmiana nie jest obsługiwana przez polecenie Edytuj i Kontynuuj. W tym momencie można albo cofnąć zmiany lub zatrzymać sesję debugowania i ponownie uruchomić nową sesję z edytowanym kodem.  
   
- Ponadto, Edytuj i Kontynuuj nie obsługuje zmiany typu lub wartości zmiennej używanej w składniku LINQ to DataSet instrukcji. Ponownie można albo cofnąć zmiany lub zatrzymać i ponownie uruchomić sesję debugowania.  
+ Ponadto polecenie Edytuj i Kontynuuj nie obsługuje zmiany typu ani wartości zmiennej, która jest używana w instrukcji LINQ to DataSet. Ponownie można cofnąć zmiany lub zatrzymać i ponownie uruchomić sesję debugowania.  
   
- W elemencie wizualnym C# w programie Visual Studio, nie można użyć Edytuj i Kontynuuj na dowolnym kodzie w metodzie, która zawiera zapytaniu składnika LINQ to DataSet.  
+ W wizualizacji C# w programie Visual Studio nie można używać żadnych kodu w metodzie, która zawiera kwerendę LINQ to DataSet, nie jest możliwe używanie żadnych kodów.  
   
- W języku Visual Basic w programie Visual Studio można użyć Edytuj i Kontynuuj na non-LINQ do kodu zestawu danych, nawet w metodzie, która zawiera zapytaniu składnika LINQ to DataSet. Można dodać lub usunąć kod przed LINQ to DataSet instrukcji, nawet w przypadku zmiany wpływają na liczbę wierszy w zapytaniu składnika LINQ to DataSet. Obsługi debugowania dla non-LINQ do zestawu danych kodu języka Visual Basic pozostaje taka sama jak przed wprowadzeniem LINQ to DataSet. Nie można zmienić, Dodaj lub jednak usunąć zapytaniu składnika LINQ to DataSet, o ile nie zatrzymasz debugowanie, aby zastosować zmiany.  
+ W Visual Basic w programie Visual Studio można użyć funkcji Edytuj i Kontynuuj w przypadku kodu nieLINQ to DataSet, nawet w metodzie zawierającej zapytanie LINQ to DataSet. Możesz dodać lub usunąć kod przed instrukcją LINQ to DataSet, nawet jeśli zmiany wpłyną na numer wiersza zapytania LINQ to DataSetowego. Visual Basic środowisko debugowania dla kodu nieLINQ to DataSet pozostaje taki sam, jak poprzednio LINQ to DataSet został wprowadzony. Nie można zmienić, dodać ani usunąć zapytania LINQ to DataSet, jednak o ile nie zatrzymasz debugowania w celu zastosowania zmian.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Debugowanie kodu zarządzanego](/visualstudio/debugger/debugging-managed-code)
-- [Przewodnik programowania](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
+- [Przewodnik programowania](programming-guide-linq-to-dataset.md)

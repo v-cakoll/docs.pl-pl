@@ -5,39 +5,39 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 78203093-f242-4572-9b31-9495b10926aa
-ms.openlocfilehash: 84002609c550cc2de76f9948bf77f9fd88261f64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8aee43f13ec92f649b4df20505ac56c336fe07a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038457"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793834"
 ---
-# <a name="find-the-minimum-value-in-a-numeric-sequence"></a><span data-ttu-id="0ac17-102">Odnajdywanie wartości minimalnej w sekwencji numerycznej</span><span class="sxs-lookup"><span data-stu-id="0ac17-102">Find the Minimum Value in a Numeric Sequence</span></span>
-<span data-ttu-id="0ac17-103">Użyj <xref:System.Linq.Enumerable.Min%2A> operator, aby zwrócić wartość minimalna z sekwencji wartości liczbowych.</span><span class="sxs-lookup"><span data-stu-id="0ac17-103">Use the <xref:System.Linq.Enumerable.Min%2A> operator to return the minimum value from a sequence of numeric values.</span></span>  
+# <a name="find-the-minimum-value-in-a-numeric-sequence"></a><span data-ttu-id="65add-102">Odnajdywanie wartości minimalnej w sekwencji numerycznej</span><span class="sxs-lookup"><span data-stu-id="65add-102">Find the Minimum Value in a Numeric Sequence</span></span>
+<span data-ttu-id="65add-103"><xref:System.Linq.Enumerable.Min%2A> Użyj operatora, aby zwrócić minimalną wartość z sekwencji wartości liczbowych.</span><span class="sxs-lookup"><span data-stu-id="65add-103">Use the <xref:System.Linq.Enumerable.Min%2A> operator to return the minimum value from a sequence of numeric values.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0ac17-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="0ac17-104">Example</span></span>  
- <span data-ttu-id="0ac17-105">Poniższy przykład umożliwia znalezienie najniższą cenę jednostkową jakiegokolwiek produktu.</span><span class="sxs-lookup"><span data-stu-id="0ac17-105">The following example finds the lowest unit price of any product.</span></span>  
+## <a name="example"></a><span data-ttu-id="65add-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="65add-104">Example</span></span>  
+ <span data-ttu-id="65add-105">W poniższym przykładzie znajduje się najniższa cena jednostkowa dowolnego produktu.</span><span class="sxs-lookup"><span data-stu-id="65add-105">The following example finds the lowest unit price of any product.</span></span>  
   
- <span data-ttu-id="0ac17-106">Po uruchomieniu tego zapytania względem przykładowej bazy danych Northwind, dane wyjściowe to: `2.5000`.</span><span class="sxs-lookup"><span data-stu-id="0ac17-106">If you run this query against the Northwind sample database, the output is: `2.5000`.</span></span>  
+ <span data-ttu-id="65add-106">W przypadku uruchomienia tego zapytania względem przykładowej bazy danych Northwind dane wyjściowe to: `2.5000`.</span><span class="sxs-lookup"><span data-stu-id="65add-106">If you run this query against the Northwind sample database, the output is: `2.5000`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#9](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#9)]
  [!code-vb[DLinqQueryExamples#9](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#9)]  
   
-## <a name="example"></a><span data-ttu-id="0ac17-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="0ac17-107">Example</span></span>  
- <span data-ttu-id="0ac17-108">Poniższy przykład umożliwia znalezienie najmniejszą Fracht dowolnej kolejności.</span><span class="sxs-lookup"><span data-stu-id="0ac17-108">The following example finds the lowest freight amount for any order.</span></span>  
+## <a name="example"></a><span data-ttu-id="65add-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="65add-107">Example</span></span>  
+ <span data-ttu-id="65add-108">Poniższy przykład umożliwia znalezienie najmniejszej ilości frachtu dla dowolnej kolejności.</span><span class="sxs-lookup"><span data-stu-id="65add-108">The following example finds the lowest freight amount for any order.</span></span>  
   
- <span data-ttu-id="0ac17-109">Po uruchomieniu tego zapytania względem przykładowej bazy danych Northwind, dane wyjściowe to: `0.0200`.</span><span class="sxs-lookup"><span data-stu-id="0ac17-109">If you run this query against the Northwind sample database, the output is: `0.0200`.</span></span>  
+ <span data-ttu-id="65add-109">W przypadku uruchomienia tego zapytania względem przykładowej bazy danych Northwind dane wyjściowe to: `0.0200`.</span><span class="sxs-lookup"><span data-stu-id="65add-109">If you run this query against the Northwind sample database, the output is: `0.0200`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#10](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#10)]
  [!code-vb[DLinqQueryExamples#10](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#10)]  
   
-## <a name="example"></a><span data-ttu-id="0ac17-110">Przykład</span><span class="sxs-lookup"><span data-stu-id="0ac17-110">Example</span></span>  
- <span data-ttu-id="0ac17-111">W poniższym przykładzie użyto Min, aby znaleźć `Products` mają najniższą cenę jednostkową w każdej kategorii.</span><span class="sxs-lookup"><span data-stu-id="0ac17-111">The following example uses Min to find the `Products` that have the lowest unit price in each category.</span></span> <span data-ttu-id="0ac17-112">Dane wyjściowe są uporządkowane według kategorii.</span><span class="sxs-lookup"><span data-stu-id="0ac17-112">The output is arranged by category.</span></span>  
+## <a name="example"></a><span data-ttu-id="65add-110">Przykład</span><span class="sxs-lookup"><span data-stu-id="65add-110">Example</span></span>  
+ <span data-ttu-id="65add-111">W poniższym przykładzie jest używane minimum, aby `Products` znaleźć wartość, która ma najniższą cenę jednostkową w każdej kategorii.</span><span class="sxs-lookup"><span data-stu-id="65add-111">The following example uses Min to find the `Products` that have the lowest unit price in each category.</span></span> <span data-ttu-id="65add-112">Dane wyjściowe są uporządkowane według kategorii.</span><span class="sxs-lookup"><span data-stu-id="65add-112">The output is arranged by category.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#11](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#11)]
  [!code-vb[DLinqQueryExamples#11](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#11)]  
   
- <span data-ttu-id="0ac17-113">Jeśli uruchamiasz poprzednie zapytanie względem przykładowej bazy danych Northwind, wyniki będą wyglądać w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="0ac17-113">If you run the previous query against the Northwind sample database, your results will resemble the following:</span></span>  
+ <span data-ttu-id="65add-113">W przypadku uruchomienia poprzedniego zapytania względem przykładowej bazy danych Northwind wyniki będą wyglądać następująco:</span><span class="sxs-lookup"><span data-stu-id="65add-113">If you run the previous query against the Northwind sample database, your results will resemble the following:</span></span>  
   
  `1`  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62038457"
   
  `Konbu`  
   
-## <a name="see-also"></a><span data-ttu-id="0ac17-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0ac17-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="65add-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="65add-114">See also</span></span>
 
-- [<span data-ttu-id="0ac17-115">Zapytania zagregowane</span><span class="sxs-lookup"><span data-stu-id="0ac17-115">Aggregate Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
-- [<span data-ttu-id="0ac17-116">Pobieranie przykładowych baz danych</span><span class="sxs-lookup"><span data-stu-id="0ac17-116">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [<span data-ttu-id="65add-115">Zapytania zagregowane</span><span class="sxs-lookup"><span data-stu-id="65add-115">Aggregate Queries</span></span>](aggregate-queries.md)
+- [<span data-ttu-id="65add-116">Pobieranie przykładowych baz danych</span><span class="sxs-lookup"><span data-stu-id="65add-116">Downloading Sample Databases</span></span>](downloading-sample-databases.md)

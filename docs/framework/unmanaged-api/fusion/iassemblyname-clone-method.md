@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bf67506fca161a64dd5d4ee915031c155c49241
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c71616d261f145574d580b68793ec91bb4ea3f42
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754030"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796641"
 ---
-# <a name="iassemblynameclone-method"></a><span data-ttu-id="d10af-102">IAssemblyName::Clone — Metoda</span><span class="sxs-lookup"><span data-stu-id="d10af-102">IAssemblyName::Clone Method</span></span>
-<span data-ttu-id="d10af-103">Tworzy kopię pobieżną to [iassemblyname —](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) obiektu.</span><span class="sxs-lookup"><span data-stu-id="d10af-103">Creates a shallow copy of this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span>  
+# <a name="iassemblynameclone-method"></a><span data-ttu-id="b0cc9-102">IAssemblyName::Clone — Metoda</span><span class="sxs-lookup"><span data-stu-id="b0cc9-102">IAssemblyName::Clone Method</span></span>
+<span data-ttu-id="b0cc9-103">Tworzy skróconą kopię tego obiektu [IAssemblyName](iassemblyname-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="b0cc9-103">Creates a shallow copy of this [IAssemblyName](iassemblyname-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d10af-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d10af-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b0cc9-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="b0cc9-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Clone (  
@@ -35,17 +35,17 @@ HRESULT Clone (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d10af-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="d10af-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b0cc9-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="b0cc9-105">Parameters</span></span>  
  `pName`  
- <span data-ttu-id="d10af-106">[out] Zwrócone kopii tego `IAssemblyName` obiektu.</span><span class="sxs-lookup"><span data-stu-id="d10af-106">[out] The returned copy of this `IAssemblyName` object.</span></span>  
+ <span data-ttu-id="b0cc9-106">określoną Zwrócona kopia tego `IAssemblyName` obiektu.</span><span class="sxs-lookup"><span data-stu-id="b0cc9-106">[out] The returned copy of this `IAssemblyName` object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d10af-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d10af-107">Requirements</span></span>  
- <span data-ttu-id="d10af-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d10af-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b0cc9-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b0cc9-107">Requirements</span></span>  
+ <span data-ttu-id="b0cc9-108">**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b0cc9-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d10af-109">**Nagłówek:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="d10af-109">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="b0cc9-109">**Nagłówki** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="b0cc9-109">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="d10af-110">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d10af-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b0cc9-110">**.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0cc9-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d10af-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d10af-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b0cc9-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b0cc9-111">See also</span></span>
 
-- [<span data-ttu-id="d10af-112">IAssemblyName, interfejs</span><span class="sxs-lookup"><span data-stu-id="d10af-112">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="b0cc9-112">IAssemblyName, interfejs</span><span class="sxs-lookup"><span data-stu-id="b0cc9-112">IAssemblyName Interface</span></span>](iassemblyname-interface.md)

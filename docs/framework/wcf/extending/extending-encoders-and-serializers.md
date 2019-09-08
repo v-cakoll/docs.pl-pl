@@ -2,19 +2,19 @@
 title: Rozszerzanie koderów i serializatorów
 ms.date: 03/30/2017
 ms.assetid: 97aec970-d73c-469c-9b93-8b86be701c44
-ms.openlocfilehash: 914654c6f3b5ff89529efc271daef40dfd3f092f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f1768f81b8dfb2b6f519199d481a497fe9b4bce8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857951"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797153"
 ---
-# <a name="extending-encoders-and-serializers"></a><span data-ttu-id="c6b37-102">Rozszerzanie koderów i serializatorów</span><span class="sxs-lookup"><span data-stu-id="c6b37-102">Extending Encoders and Serializers</span></span>
-<span data-ttu-id="c6b37-103">Tematy w tej sekcji opisano, jak rozszerzyć serializacji systemu Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="c6b37-103">The topics in this section describe how to extend the Windows Communication Foundation (WCF) serialization system.</span></span>  
+# <a name="extending-encoders-and-serializers"></a><span data-ttu-id="2ff8a-102">Rozszerzanie koderów i serializatorów</span><span class="sxs-lookup"><span data-stu-id="2ff8a-102">Extending Encoders and Serializers</span></span>
+<span data-ttu-id="2ff8a-103">W tematach w tej sekcji opisano sposób rozszerzający system serializacji Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="2ff8a-103">The topics in this section describe how to extend the Windows Communication Foundation (WCF) serialization system.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c6b37-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="c6b37-104">In This Section</span></span>  
- [<span data-ttu-id="c6b37-105">Surogaty kontraktu danych</span><span class="sxs-lookup"><span data-stu-id="c6b37-105">Data Contract Surrogates</span></span>](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)  
- <span data-ttu-id="c6b37-106">W tym artykule opisano, jak serializacji, deserializacji, schemat eksportu i importu schematu mogą być dostosowywane przy użyciu klasy zastępcze kontraktu danych.</span><span class="sxs-lookup"><span data-stu-id="c6b37-106">Describes how serialization, deserialization, schema export, and schema import can be customized using a data contract surrogate class.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="2ff8a-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="2ff8a-104">In This Section</span></span>  
+ [<span data-ttu-id="2ff8a-105">Surogaty kontraktu danych</span><span class="sxs-lookup"><span data-stu-id="2ff8a-105">Data Contract Surrogates</span></span>](data-contract-surrogates.md)  
+ <span data-ttu-id="2ff8a-106">Opisuje sposób dostosowywania serializacji, deserializacji, eksportu schematu i importowania schematu przy użyciu klasy zastępczej kontraktu danych.</span><span class="sxs-lookup"><span data-stu-id="2ff8a-106">Describes how serialization, deserialization, schema export, and schema import can be customized using a data contract surrogate class.</span></span>  
   
- [<span data-ttu-id="c6b37-107">Niestandardowe elementy formatujące komunikaty</span><span class="sxs-lookup"><span data-stu-id="c6b37-107">Custom Message Formatters</span></span>](../../../../docs/framework/wcf/extending/custom-message-formatters.md)  
- <span data-ttu-id="c6b37-108">W tym artykule opisano niestandardowe elementy formatujące komunikaty, które mogą być używane do kontrolowania serializacji i deserializacji komunikatów WCF na typy CLR.</span><span class="sxs-lookup"><span data-stu-id="c6b37-108">Describes custom message formatters, which can be used to control the serialization and deserialization of a WCF message into CLR types.</span></span>
+ [<span data-ttu-id="2ff8a-107">Niestandardowe elementy formatujące komunikaty</span><span class="sxs-lookup"><span data-stu-id="2ff8a-107">Custom Message Formatters</span></span>](custom-message-formatters.md)  
+ <span data-ttu-id="2ff8a-108">Opisuje niestandardowe elementy formatujące komunikaty, które mogą służyć do kontrolowania serializacji i deserializacji komunikatu WCF do typów CLR.</span><span class="sxs-lookup"><span data-stu-id="2ff8a-108">Describes custom message formatters, which can be used to control the serialization and deserialization of a WCF message into CLR types.</span></span>

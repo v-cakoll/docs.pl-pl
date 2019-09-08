@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a23d3c4fd8eef2e361abf1602157cb4fbb820b48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8aa2d174200db76f5c7a6db43e14bb6904604226
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773860"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796326"
 ---
-# <a name="prebindassemblyex-function"></a><span data-ttu-id="0c454-102">PreBindAssemblyEx — Funkcja</span><span class="sxs-lookup"><span data-stu-id="0c454-102">PreBindAssemblyEx Function</span></span>
-<span data-ttu-id="0c454-103">Pobiera nazwę wyświetlaną po zastosowaniu zasad dla zestawu.</span><span class="sxs-lookup"><span data-stu-id="0c454-103">Gets the post-policy display name for an assembly.</span></span>  
+# <a name="prebindassemblyex-function"></a><span data-ttu-id="3ed57-102">PreBindAssemblyEx — Funkcja</span><span class="sxs-lookup"><span data-stu-id="3ed57-102">PreBindAssemblyEx Function</span></span>
+<span data-ttu-id="3ed57-103">Pobiera nazwę wyświetlaną dla zestawu.</span><span class="sxs-lookup"><span data-stu-id="3ed57-103">Gets the post-policy display name for an assembly.</span></span>  
   
- <span data-ttu-id="0c454-104">Ta funkcja obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="0c454-104">This function supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+ <span data-ttu-id="3ed57-104">Ta funkcja obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="3ed57-104">This function supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0c454-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="0c454-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3ed57-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="3ed57-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT PreBindAssemblyEx (  
@@ -41,37 +41,37 @@ HRESULT PreBindAssemblyEx (
  );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0c454-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="0c454-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3ed57-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="3ed57-106">Parameters</span></span>  
  `pAppCtx`  
- <span data-ttu-id="0c454-107">[in] Identyfikuje kontekst aplikacji.</span><span class="sxs-lookup"><span data-stu-id="0c454-107">[in] Identifies the application context.</span></span>  
+ <span data-ttu-id="3ed57-107">podczas Identyfikuje kontekst aplikacji.</span><span class="sxs-lookup"><span data-stu-id="3ed57-107">[in] Identifies the application context.</span></span>  
   
  `pName`  
- <span data-ttu-id="0c454-108">[in] Określa nazwę zestawu.</span><span class="sxs-lookup"><span data-stu-id="0c454-108">[in] Identifies the assembly name.</span></span>  
+ <span data-ttu-id="3ed57-108">podczas Identyfikuje nazwę zestawu.</span><span class="sxs-lookup"><span data-stu-id="3ed57-108">[in] Identifies the assembly name.</span></span>  
   
  `pAsmParent`  
- <span data-ttu-id="0c454-109">[in] Identyfikuje zestaw nadrzędnej.</span><span class="sxs-lookup"><span data-stu-id="0c454-109">[in] Identifies the parent assembly.</span></span> <span data-ttu-id="0c454-110">Ten parametr jest ignorowany.</span><span class="sxs-lookup"><span data-stu-id="0c454-110">This parameter is ignored.</span></span>  
+ <span data-ttu-id="3ed57-109">podczas Identyfikuje zestaw nadrzędny.</span><span class="sxs-lookup"><span data-stu-id="3ed57-109">[in] Identifies the parent assembly.</span></span> <span data-ttu-id="3ed57-110">Ten parametr jest ignorowany.</span><span class="sxs-lookup"><span data-stu-id="3ed57-110">This parameter is ignored.</span></span>  
   
  `pwzRuntimeVersion`  
- <span data-ttu-id="0c454-111">[in] Określa wersję środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="0c454-111">[in] Identifies the runtime version.</span></span>  
+ <span data-ttu-id="3ed57-111">podczas Identyfikuje wersję środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="3ed57-111">[in] Identifies the runtime version.</span></span>  
   
  `ppNamePostPolicy`  
- <span data-ttu-id="0c454-112">[out] Zawiera nazwę wyświetlaną po zastosowaniu zasad.</span><span class="sxs-lookup"><span data-stu-id="0c454-112">[out] Contains the post-policy display name.</span></span>  
+ <span data-ttu-id="3ed57-112">określoną Zawiera nazwę wyświetlaną po wprowadzeniu zasad.</span><span class="sxs-lookup"><span data-stu-id="3ed57-112">[out] Contains the post-policy display name.</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="0c454-113">[in] Zarezerwowane dla przyszłej rozszerzalności.</span><span class="sxs-lookup"><span data-stu-id="0c454-113">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="0c454-114">`pvReserved` musi być odwołanie o wartości null.</span><span class="sxs-lookup"><span data-stu-id="0c454-114">`pvReserved` must be a null reference.</span></span>  
+ <span data-ttu-id="3ed57-113">podczas Zarezerwowane do użytku w przyszłości.</span><span class="sxs-lookup"><span data-stu-id="3ed57-113">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="3ed57-114">`pvReserved`musi być odwołaniem o wartości null.</span><span class="sxs-lookup"><span data-stu-id="3ed57-114">`pvReserved` must be a null reference.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0c454-115">Uwagi</span><span class="sxs-lookup"><span data-stu-id="0c454-115">Remarks</span></span>  
- <span data-ttu-id="0c454-116">`ppNamePostPolicy` Parametr wyjściowy jest ustawiona tylko wtedy, gdy funkcja zwraca wartość HRESULT FUSION_E_REF_DEF_MISMATCH.</span><span class="sxs-lookup"><span data-stu-id="0c454-116">The `ppNamePostPolicy` output parameter is set only if the function returns HRESULT FUSION_E_REF_DEF_MISMATCH.</span></span> <span data-ttu-id="0c454-117">W przeciwnym razie ma wartość null.</span><span class="sxs-lookup"><span data-stu-id="0c454-117">Otherwise, it is null.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3ed57-115">Uwagi</span><span class="sxs-lookup"><span data-stu-id="3ed57-115">Remarks</span></span>  
+ <span data-ttu-id="3ed57-116">Parametr `ppNamePostPolicy` Output jest ustawiany tylko wtedy, gdy funkcja zwraca wartość HRESULT FUSION_E_REF_DEF_MISMATCH.</span><span class="sxs-lookup"><span data-stu-id="3ed57-116">The `ppNamePostPolicy` output parameter is set only if the function returns HRESULT FUSION_E_REF_DEF_MISMATCH.</span></span> <span data-ttu-id="3ed57-117">W przeciwnym razie ma wartość null.</span><span class="sxs-lookup"><span data-stu-id="3ed57-117">Otherwise, it is null.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0c454-118">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0c454-118">Requirements</span></span>  
- <span data-ttu-id="0c454-119">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0c454-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3ed57-118">Wymagania</span><span class="sxs-lookup"><span data-stu-id="3ed57-118">Requirements</span></span>  
+ <span data-ttu-id="3ed57-119">**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3ed57-119">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0c454-120">**Nagłówek:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="0c454-120">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="3ed57-120">**Nagłówki** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="3ed57-120">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="0c454-121">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0c454-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="3ed57-121">**Biblioteki** Uwzględnione jako zasób w bibliotece MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="3ed57-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="0c454-122">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0c454-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="3ed57-122">**.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3ed57-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0c454-123">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0c454-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3ed57-123">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3ed57-123">See also</span></span>
 
-- [<span data-ttu-id="0c454-124">Łączenie statycznych funkcji globalnych</span><span class="sxs-lookup"><span data-stu-id="0c454-124">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [<span data-ttu-id="3ed57-124">Łączenie statycznych funkcji globalnych</span><span class="sxs-lookup"><span data-stu-id="3ed57-124">Fusion Global Static Functions</span></span>](fusion-global-static-functions.md)

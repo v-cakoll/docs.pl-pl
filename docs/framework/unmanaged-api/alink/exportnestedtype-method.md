@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7dfaedad48291ac09f6959bc7b314ae0d9da76e5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 570e48788a11045882ef546bf6bc22315c2a02b0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742044"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777280"
 ---
-# <a name="exportnestedtype-method"></a><span data-ttu-id="40db0-102">ExportNestedType — Metoda</span><span class="sxs-lookup"><span data-stu-id="40db0-102">ExportNestedType Method</span></span>
-<span data-ttu-id="40db0-103">Określa typy zagnieżdżone jako eksportowalny.</span><span class="sxs-lookup"><span data-stu-id="40db0-103">Specifies nested types as exportable.</span></span> <span data-ttu-id="40db0-104">[Exporttype — metoda](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) może również typy zagnieżdżone eksportu, ale ta metoda jest szybsza.</span><span class="sxs-lookup"><span data-stu-id="40db0-104">The [ExportType Method](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) can also export nested types, but this method is faster.</span></span>  
+# <a name="exportnestedtype-method"></a><span data-ttu-id="61e2d-102">ExportNestedType — Metoda</span><span class="sxs-lookup"><span data-stu-id="61e2d-102">ExportNestedType Method</span></span>
+<span data-ttu-id="61e2d-103">Określa typy zagnieżdżone jako możliwe do eksportowania.</span><span class="sxs-lookup"><span data-stu-id="61e2d-103">Specifies nested types as exportable.</span></span> <span data-ttu-id="61e2d-104">[Metoda exporttype](exporttype-method.md) może również eksportować typy zagnieżdżone, ale ta metoda jest szybsza.</span><span class="sxs-lookup"><span data-stu-id="61e2d-104">The [ExportType Method](exporttype-method.md) can also export nested types, but this method is faster.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="40db0-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="40db0-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="61e2d-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="61e2d-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExportNestedType(  
@@ -41,36 +41,36 @@ HRESULT ExportNestedType(
 ) PURE;   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="40db0-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="40db0-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="61e2d-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="61e2d-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="40db0-107">Identyfikator zestawu, aby wyeksportować z.</span><span class="sxs-lookup"><span data-stu-id="40db0-107">ID of assembly to export from.</span></span>  
+ <span data-ttu-id="61e2d-107">Identyfikator zestawu do wyeksportowania.</span><span class="sxs-lookup"><span data-stu-id="61e2d-107">ID of assembly to export from.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="40db0-108">Token pliku lub zestawu plików, który definiuje typ, który ma zostać wykonane można eksportować.</span><span class="sxs-lookup"><span data-stu-id="40db0-108">File token or Assembly of file that defines the type to be made exportable.</span></span>  
+ <span data-ttu-id="61e2d-108">Token pliku lub zestaw pliku, który definiuje typ, który ma być możliwy do eksportu.</span><span class="sxs-lookup"><span data-stu-id="61e2d-108">File token or Assembly of file that defines the type to be made exportable.</span></span>  
   
  `TypeToken`  
- <span data-ttu-id="40db0-109">Typ tokenu typu ma zostać wykonane można eksportować.</span><span class="sxs-lookup"><span data-stu-id="40db0-109">Type token of type to be made exportable.</span></span>  
+ <span data-ttu-id="61e2d-109">Typ token typu, który ma być możliwy do eksportu.</span><span class="sxs-lookup"><span data-stu-id="61e2d-109">Type token of type to be made exportable.</span></span>  
   
  `ParentType`  
- <span data-ttu-id="40db0-110">Token typie elementu nadrzędnego.</span><span class="sxs-lookup"><span data-stu-id="40db0-110">Token of parent type.</span></span>  
+ <span data-ttu-id="61e2d-110">Token typu nadrzędnego.</span><span class="sxs-lookup"><span data-stu-id="61e2d-110">Token of parent type.</span></span>  
   
  `pszTypename`  
- <span data-ttu-id="40db0-111">W pełni kwalifikowana nazwa typu do wyeksportowania.</span><span class="sxs-lookup"><span data-stu-id="40db0-111">Fully qualified type name to export.</span></span>  
+ <span data-ttu-id="61e2d-111">W pełni kwalifikowana nazwa typu do eksportowania.</span><span class="sxs-lookup"><span data-stu-id="61e2d-111">Fully qualified type name to export.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="40db0-112">`ComType` flagi, takich jak `tdPublic` lub `tdNested`.</span><span class="sxs-lookup"><span data-stu-id="40db0-112">`ComType` flags such as `tdPublic` or `tdNested`.</span></span> <span data-ttu-id="40db0-113">Ta wartość może być przekazana do [defineexportedtype — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).</span><span class="sxs-lookup"><span data-stu-id="40db0-113">This value may be passed to [DefineExportedType Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
+ <span data-ttu-id="61e2d-112">`ComType`flagi takie jak `tdPublic` lub `tdNested`.</span><span class="sxs-lookup"><span data-stu-id="61e2d-112">`ComType` flags such as `tdPublic` or `tdNested`.</span></span> <span data-ttu-id="61e2d-113">Ta wartość może zostać przeniesiona do [metody DefineExportedType —](../metadata/imetadataassemblyemit-defineexportedtype-method.md).</span><span class="sxs-lookup"><span data-stu-id="61e2d-113">This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
   
  `pType`  
- <span data-ttu-id="40db0-114">Odbiera token dla eksportowanego typu.</span><span class="sxs-lookup"><span data-stu-id="40db0-114">Receives token for exported type.</span></span>  
+ <span data-ttu-id="61e2d-114">Odbiera token dla wyeksportowanego typu.</span><span class="sxs-lookup"><span data-stu-id="61e2d-114">Receives token for exported type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="40db0-115">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="40db0-115">Return Value</span></span>  
- <span data-ttu-id="40db0-116">Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="40db0-116">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="61e2d-115">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="61e2d-115">Return Value</span></span>  
+ <span data-ttu-id="61e2d-116">Zwraca S_OK, jeśli metoda zakończy się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="61e2d-116">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="40db0-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="40db0-117">Requirements</span></span>  
- <span data-ttu-id="40db0-118">Wymaga alink.h</span><span class="sxs-lookup"><span data-stu-id="40db0-118">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="61e2d-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="61e2d-117">Requirements</span></span>  
+ <span data-ttu-id="61e2d-118">Wymaga Alink. h</span><span class="sxs-lookup"><span data-stu-id="61e2d-118">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="40db0-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="40db0-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="61e2d-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="61e2d-119">See also</span></span>
 
-- [<span data-ttu-id="40db0-120">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="40db0-120">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="40db0-121">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="40db0-121">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="40db0-122">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="40db0-122">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="61e2d-120">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="61e2d-120">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="61e2d-121">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="61e2d-121">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="61e2d-122">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="61e2d-122">ALink API</span></span>](index.md)

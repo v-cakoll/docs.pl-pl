@@ -20,19 +20,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0cdeb446b18adceb4a8ed306a7934d6c905a90f8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 639664c6ce5714b554f30bff2569a12bf48d1671
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778028"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799127"
 ---
-# <a name="strongnamefreebuffer-function"></a><span data-ttu-id="a958d-102">StrongNameFreeBuffer — Funkcja</span><span class="sxs-lookup"><span data-stu-id="a958d-102">StrongNameFreeBuffer Function</span></span>
-<span data-ttu-id="a958d-103">Zwalnia pamięć, która została przydzielona z poprzedniego wywołania do funkcji silnej nazwy, takie jak [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md), [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md), lub [StrongNameSignatureGeneration ](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md).</span><span class="sxs-lookup"><span data-stu-id="a958d-103">Frees memory that was allocated with a previous call to a strong name function such as [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md), [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md), or [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md).</span></span>  
+# <a name="strongnamefreebuffer-function"></a><span data-ttu-id="c3b7c-102">StrongNameFreeBuffer — Funkcja</span><span class="sxs-lookup"><span data-stu-id="c3b7c-102">StrongNameFreeBuffer Function</span></span>
+<span data-ttu-id="c3b7c-103">Zwalnia pamięć, która została przypisana przy użyciu poprzedniego wywołania funkcji silnej nazwy, takiej jak [StrongNameGetPublicKey —](strongnamegetpublickey-function.md), [StrongNameTokenFromPublicKey —](strongnametokenfrompublickey-function.md)lub [StrongNameSignatureGeneration —](strongnamesignaturegeneration-function.md).</span><span class="sxs-lookup"><span data-stu-id="c3b7c-103">Frees memory that was allocated with a previous call to a strong name function such as [StrongNameGetPublicKey](strongnamegetpublickey-function.md), [StrongNameTokenFromPublicKey](strongnametokenfrompublickey-function.md), or [StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md).</span></span>  
   
- <span data-ttu-id="a958d-104">Ta funkcja jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="a958d-104">This function has been deprecated.</span></span> <span data-ttu-id="a958d-105">Użyj [iclrstrongname::strongnamefreebuffer —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) metody zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="a958d-105">Use the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method instead.</span></span>  
+ <span data-ttu-id="c3b7c-104">Ta funkcja jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="c3b7c-104">This function has been deprecated.</span></span> <span data-ttu-id="c3b7c-105">Zamiast tego użyj metody [ICLRStrongName:: StrongNameFreeBuffer —](../hosting/iclrstrongname-strongnamefreebuffer-method.md) .</span><span class="sxs-lookup"><span data-stu-id="c3b7c-105">Use the [ICLRStrongName::StrongNameFreeBuffer](../hosting/iclrstrongname-strongnamefreebuffer-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a958d-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="a958d-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c3b7c-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="c3b7c-106">Syntax</span></span>  
   
 ```cpp  
 VOID StrongNameFreeBuffer (   
@@ -40,20 +40,20 @@ VOID StrongNameFreeBuffer (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a958d-107">Parametry</span><span class="sxs-lookup"><span data-stu-id="a958d-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c3b7c-107">Parametry</span><span class="sxs-lookup"><span data-stu-id="c3b7c-107">Parameters</span></span>  
  `pbMemory`  
- <span data-ttu-id="a958d-108">[in] Wskaźnik do pamięci, aby zwolnić.</span><span class="sxs-lookup"><span data-stu-id="a958d-108">[in] A pointer to the memory to free.</span></span>  
+ <span data-ttu-id="c3b7c-108">podczas Wskaźnik do pamięci do zwolnienia.</span><span class="sxs-lookup"><span data-stu-id="c3b7c-108">[in] A pointer to the memory to free.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a958d-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="a958d-109">Requirements</span></span>  
- <span data-ttu-id="a958d-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a958d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c3b7c-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c3b7c-109">Requirements</span></span>  
+ <span data-ttu-id="c3b7c-110">**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c3b7c-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a958d-111">**Nagłówek:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="a958d-111">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="c3b7c-111">**Nagłówki** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="c3b7c-111">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="a958d-112">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a958d-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c3b7c-112">**Biblioteki** Uwzględnione jako zasób w bibliotece MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="c3b7c-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="a958d-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a958d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c3b7c-113">**.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3b7c-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a958d-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a958d-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c3b7c-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c3b7c-114">See also</span></span>
 
-- [<span data-ttu-id="a958d-115">StrongNameFreeBuffer, metoda</span><span class="sxs-lookup"><span data-stu-id="a958d-115">StrongNameFreeBuffer Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)
-- [<span data-ttu-id="a958d-116">ICLRStrongName, interfejs</span><span class="sxs-lookup"><span data-stu-id="a958d-116">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="c3b7c-115">StrongNameFreeBuffer, metoda</span><span class="sxs-lookup"><span data-stu-id="c3b7c-115">StrongNameFreeBuffer Method</span></span>](../hosting/iclrstrongname-strongnamefreebuffer-method.md)
+- [<span data-ttu-id="c3b7c-116">ICLRStrongName, interfejs</span><span class="sxs-lookup"><span data-stu-id="c3b7c-116">ICLRStrongName Interface</span></span>](../hosting/iclrstrongname-interface.md)

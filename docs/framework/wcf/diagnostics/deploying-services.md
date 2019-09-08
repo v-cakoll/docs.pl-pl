@@ -2,20 +2,20 @@
 title: Wdrażanie usług
 ms.date: 03/30/2017
 ms.assetid: ac361bfb-017d-4da9-a2d7-fc0fb72d65bb
-ms.openlocfilehash: 2c3cd17b597fafcd02b9155089bc583fafbc9dea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 684b781c568518cfb321d8021e4f7062e855e6aa
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784985"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798141"
 ---
-# <a name="deploying-services"></a><span data-ttu-id="80387-102">Wdrażanie usług</span><span class="sxs-lookup"><span data-stu-id="80387-102">Deploying Services</span></span>
-<span data-ttu-id="80387-103">W tym temacie opisano, jak wdrożyć aplikację Windows Communication Foundation (WCF) do środowiska wykonawczego.</span><span class="sxs-lookup"><span data-stu-id="80387-103">This topic describes how you can deploy a Windows Communication Foundation (WCF) application to a run-time environment.</span></span>  
+# <a name="deploying-services"></a><span data-ttu-id="de9d4-102">Wdrażanie usług</span><span class="sxs-lookup"><span data-stu-id="de9d4-102">Deploying Services</span></span>
+<span data-ttu-id="de9d4-103">W tym temacie opisano sposób wdrażania aplikacji Windows Communication Foundation (WCF) w środowisku wykonawczym.</span><span class="sxs-lookup"><span data-stu-id="de9d4-103">This topic describes how you can deploy a Windows Communication Foundation (WCF) application to a run-time environment.</span></span>  
   
-## <a name="choosing-the-hosting-environment-for-your-application"></a><span data-ttu-id="80387-104">Wybierając Środowisko hostingu aplikacji</span><span class="sxs-lookup"><span data-stu-id="80387-104">Choosing the Hosting Environment for Your Application</span></span>  
- <span data-ttu-id="80387-105">Usługi WCF są przeznaczone do uruchamiania w każdym procesie Windows obsługuje kodu zarządzanego.</span><span class="sxs-lookup"><span data-stu-id="80387-105">WCF services are designed to run in any Windows process that supports managed code.</span></span> <span data-ttu-id="80387-106">Stanie się aktywna, usługa musi być hostowany w środowisku uruchomieniowym, tworzy go, która określa jego kontekstu i okresu istnienia.</span><span class="sxs-lookup"><span data-stu-id="80387-106">To become active, a service must be hosted within a run-time environment that creates it and controls its context and lifetime.</span></span> <span data-ttu-id="80387-107">Opcje z zakresu od działa wewnątrz najprostszej aplikacji konsoli w środowiskach serwera, takich jak usługa Windows Internet Information Services (IIS) lub w ramach procesu roboczego obsługującego zarządzanych przez Windows Activation Service (WAS).</span><span class="sxs-lookup"><span data-stu-id="80387-107">Hosting options range from running inside the simplest console application to server environments like a Windows service, Internet Information Services (IIS), or within a worker process managed by the Windows Activation Service (WAS).</span></span> <span data-ttu-id="80387-108">Aby zapoznać się z różnych opcji obsługi aplikacji WCF, zobacz [usług obsługującego](../../../../docs/framework/wcf/hosting-services.md).</span><span class="sxs-lookup"><span data-stu-id="80387-108">To review the different hosting options for your WCF application, see [Hosting Services](../../../../docs/framework/wcf/hosting-services.md).</span></span>  
+## <a name="choosing-the-hosting-environment-for-your-application"></a><span data-ttu-id="de9d4-104">Wybieranie środowiska hostingu dla aplikacji</span><span class="sxs-lookup"><span data-stu-id="de9d4-104">Choosing the Hosting Environment for Your Application</span></span>  
+ <span data-ttu-id="de9d4-105">Usługi WCF są przeznaczone do uruchamiania w dowolnym procesie systemu Windows, który obsługuje kod zarządzany.</span><span class="sxs-lookup"><span data-stu-id="de9d4-105">WCF services are designed to run in any Windows process that supports managed code.</span></span> <span data-ttu-id="de9d4-106">Aby stał się aktywny, usługa musi być hostowana w środowisku uruchomieniowym, które tworzy go i kontroluje jego kontekst i okres istnienia.</span><span class="sxs-lookup"><span data-stu-id="de9d4-106">To become active, a service must be hosted within a run-time environment that creates it and controls its context and lifetime.</span></span> <span data-ttu-id="de9d4-107">Zakres opcji hostingu od uruchamiania wewnątrz najprostszej aplikacji konsolowej do środowisk serwerowych, takich jak usługa systemu Windows, Internet Information Services (IIS) lub w ramach procesu roboczego zarządzanego przez usługę aktywacji systemu Windows (WAS).</span><span class="sxs-lookup"><span data-stu-id="de9d4-107">Hosting options range from running inside the simplest console application to server environments like a Windows service, Internet Information Services (IIS), or within a worker process managed by the Windows Activation Service (WAS).</span></span> <span data-ttu-id="de9d4-108">Aby zapoznać się z różnymi opcjami hostingu dla aplikacji WCF, zobacz [usługi hostingu](../hosting-services.md).</span><span class="sxs-lookup"><span data-stu-id="de9d4-108">To review the different hosting options for your WCF application, see [Hosting Services](../hosting-services.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="80387-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="80387-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="de9d4-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="de9d4-109">See also</span></span>
 
-- [<span data-ttu-id="80387-110">Hosting</span><span class="sxs-lookup"><span data-stu-id="80387-110">Hosting</span></span>](../../../../docs/framework/wcf/feature-details/hosting.md)
-- [<span data-ttu-id="80387-111">Usługi hostingowe</span><span class="sxs-lookup"><span data-stu-id="80387-111">Hosting Services</span></span>](../../../../docs/framework/wcf/hosting-services.md)
+- [<span data-ttu-id="de9d4-110">Hosting</span><span class="sxs-lookup"><span data-stu-id="de9d4-110">Hosting</span></span>](../feature-details/hosting.md)
+- [<span data-ttu-id="de9d4-111">Usługi hostingowe</span><span class="sxs-lookup"><span data-stu-id="de9d4-111">Hosting Services</span></span>](../hosting-services.md)

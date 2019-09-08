@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15174480c4345f2514572701a5525f0f192ad120
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 04103ad305e0ae97669f3e07e06f03c2cdb4dfbd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742104"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787523"
 ---
-# <a name="emitinternalexportedtypes-method"></a><span data-ttu-id="d1ee6-102">EmitInternalExportedTypes — Metoda</span><span class="sxs-lookup"><span data-stu-id="d1ee6-102">EmitInternalExportedTypes Method</span></span>
-<span data-ttu-id="d1ee6-103">Emituje typów dodanych do zestawu.</span><span class="sxs-lookup"><span data-stu-id="d1ee6-103">Emits types added to the assembly.</span></span> <span data-ttu-id="d1ee6-104">Wywołaj tę metodę po wiadomo, że dodano typy wewnętrzne.</span><span class="sxs-lookup"><span data-stu-id="d1ee6-104">Call this method after known internal types have been added.</span></span>  
+# <a name="emitinternalexportedtypes-method"></a><span data-ttu-id="4a925-102">EmitInternalExportedTypes — Metoda</span><span class="sxs-lookup"><span data-stu-id="4a925-102">EmitInternalExportedTypes Method</span></span>
+<span data-ttu-id="4a925-103">Emituje typy dodane do zestawu.</span><span class="sxs-lookup"><span data-stu-id="4a925-103">Emits types added to the assembly.</span></span> <span data-ttu-id="4a925-104">Wywołaj tę metodę po dodaniu znanych typów wewnętrznych.</span><span class="sxs-lookup"><span data-stu-id="4a925-104">Call this method after known internal types have been added.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d1ee6-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="d1ee6-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4a925-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="4a925-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT EmitInternalExportedTypes(  
@@ -35,18 +35,18 @@ HRESULT EmitInternalExportedTypes(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d1ee6-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="d1ee6-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4a925-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="4a925-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="d1ee6-107">Identyfikator zestawu.</span><span class="sxs-lookup"><span data-stu-id="d1ee6-107">ID of assembly.</span></span>  
+ <span data-ttu-id="4a925-107">Identyfikator zestawu.</span><span class="sxs-lookup"><span data-stu-id="4a925-107">ID of assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d1ee6-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="d1ee6-108">Return Value</span></span>  
- <span data-ttu-id="d1ee6-109">Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="d1ee6-109">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4a925-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="4a925-108">Return Value</span></span>  
+ <span data-ttu-id="4a925-109">Zwraca S_OK, jeśli metoda zakończy się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="4a925-109">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d1ee6-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d1ee6-110">Requirements</span></span>  
- <span data-ttu-id="d1ee6-111">Wymaga alink.h</span><span class="sxs-lookup"><span data-stu-id="d1ee6-111">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4a925-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="4a925-110">Requirements</span></span>  
+ <span data-ttu-id="4a925-111">Wymaga Alink. h</span><span class="sxs-lookup"><span data-stu-id="4a925-111">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d1ee6-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d1ee6-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4a925-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4a925-112">See also</span></span>
 
-- [<span data-ttu-id="d1ee6-113">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="d1ee6-113">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="d1ee6-114">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="d1ee6-114">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="d1ee6-115">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="d1ee6-115">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="4a925-113">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="4a925-113">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="4a925-114">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="4a925-114">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="4a925-115">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="4a925-115">ALink API</span></span>](index.md)

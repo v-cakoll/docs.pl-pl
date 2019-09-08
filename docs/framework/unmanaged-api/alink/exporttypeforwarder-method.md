@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f97f46595f43c7576c499c6b9944f7e3509662fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0ae4ddd07a2a3d3ab9b5d024eceb43329db96915
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742005"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787510"
 ---
-# <a name="exporttypeforwarder-method"></a><span data-ttu-id="7d258-102">ExportTypeForwarder — Metoda</span><span class="sxs-lookup"><span data-stu-id="7d258-102">ExportTypeForwarder Method</span></span>
-<span data-ttu-id="7d258-103">Dodaje typ usługi przesyłania dalej do tabeli typu danego zestawu.</span><span class="sxs-lookup"><span data-stu-id="7d258-103">Adds a type forwarder to the type table of the given assembly.</span></span>  
+# <a name="exporttypeforwarder-method"></a><span data-ttu-id="33129-102">ExportTypeForwarder — Metoda</span><span class="sxs-lookup"><span data-stu-id="33129-102">ExportTypeForwarder Method</span></span>
+<span data-ttu-id="33129-103">Dodaje usługę przesyłania dalej typu do tabeli typów danego zestawu.</span><span class="sxs-lookup"><span data-stu-id="33129-103">Adds a type forwarder to the type table of the given assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7d258-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="7d258-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="33129-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="33129-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExportTypeForwarder(  
@@ -37,27 +37,27 @@ HRESULT ExportTypeForwarder(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7d258-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="7d258-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="33129-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="33129-105">Parameters</span></span>  
  `tkAssemblyRef`  
- <span data-ttu-id="7d258-106">Odwołanie do zestawu, do którego odwołuje się typ usługi przesyłania dalej.</span><span class="sxs-lookup"><span data-stu-id="7d258-106">Reference to the assembly to which the type forwarder refers.</span></span>  
+ <span data-ttu-id="33129-106">Odwołanie do zestawu, do którego odwołuje się usługa przesyłania dalej typu.</span><span class="sxs-lookup"><span data-stu-id="33129-106">Reference to the assembly to which the type forwarder refers.</span></span>  
   
  `pszTypename`  
- <span data-ttu-id="7d258-107">W pełni kwalifikowana nazwa typu do wyeksportowania.</span><span class="sxs-lookup"><span data-stu-id="7d258-107">Fully qualified type name to export.</span></span>  
+ <span data-ttu-id="33129-107">W pełni kwalifikowana nazwa typu do eksportowania.</span><span class="sxs-lookup"><span data-stu-id="33129-107">Fully qualified type name to export.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="7d258-108">`ComType` flagi, takich jak `tdPublic` lub `tdNested`.</span><span class="sxs-lookup"><span data-stu-id="7d258-108">`ComType` flags such as `tdPublic` or `tdNested`.</span></span> <span data-ttu-id="7d258-109">Ta wartość może być przekazana do [defineexportedtype — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).</span><span class="sxs-lookup"><span data-stu-id="7d258-109">This value may be passed to [DefineExportedType Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
+ <span data-ttu-id="33129-108">`ComType`flagi takie jak `tdPublic` lub `tdNested`.</span><span class="sxs-lookup"><span data-stu-id="33129-108">`ComType` flags such as `tdPublic` or `tdNested`.</span></span> <span data-ttu-id="33129-109">Ta wartość może zostać przeniesiona do [metody DefineExportedType —](../metadata/imetadataassemblyemit-defineexportedtype-method.md).</span><span class="sxs-lookup"><span data-stu-id="33129-109">This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
   
  `pType`  
- <span data-ttu-id="7d258-110">Odbiera token wyeksportowanego typu.</span><span class="sxs-lookup"><span data-stu-id="7d258-110">Receives the token of the exported type.</span></span> <span data-ttu-id="7d258-111">Jest to niezbędne tylko w przypadku emitowania zagnieżdżone typy.</span><span class="sxs-lookup"><span data-stu-id="7d258-111">This is necessary only for emitting nested types.</span></span>  
+ <span data-ttu-id="33129-110">Odbiera token wyeksportowanego typu.</span><span class="sxs-lookup"><span data-stu-id="33129-110">Receives the token of the exported type.</span></span> <span data-ttu-id="33129-111">Jest to konieczne tylko w przypadku emitowania typów zagnieżdżonych.</span><span class="sxs-lookup"><span data-stu-id="33129-111">This is necessary only for emitting nested types.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7d258-112">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="7d258-112">Return Value</span></span>  
- <span data-ttu-id="7d258-113">Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="7d258-113">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="33129-112">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="33129-112">Return Value</span></span>  
+ <span data-ttu-id="33129-113">Zwraca S_OK, jeśli metoda zakończy się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="33129-113">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7d258-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="7d258-114">Requirements</span></span>  
- <span data-ttu-id="7d258-115">Wymaga alink.h</span><span class="sxs-lookup"><span data-stu-id="7d258-115">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="33129-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="33129-114">Requirements</span></span>  
+ <span data-ttu-id="33129-115">Wymaga Alink. h</span><span class="sxs-lookup"><span data-stu-id="33129-115">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7d258-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7d258-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="33129-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="33129-116">See also</span></span>
 
-- [<span data-ttu-id="7d258-117">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="7d258-117">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="7d258-118">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="7d258-118">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="7d258-119">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="7d258-119">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="33129-117">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="33129-117">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="33129-118">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="33129-118">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="33129-119">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="33129-119">ALink API</span></span>](index.md)

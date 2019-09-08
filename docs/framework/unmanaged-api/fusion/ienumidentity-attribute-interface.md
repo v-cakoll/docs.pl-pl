@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d725228f2a7359d415673fdcb90d0cabae1a40be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dbb3ac150ebfe9fe3698427d8bb2bfb3e3347c07
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697345"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796466"
 ---
-# <a name="ienumidentityattribute-interface"></a><span data-ttu-id="5d069-102">IEnumIDENTITY_ATTRIBUTE — Interfejs</span><span class="sxs-lookup"><span data-stu-id="5d069-102">IEnumIDENTITY_ATTRIBUTE Interface</span></span>
-<span data-ttu-id="5d069-103">Służy jako moduł wyliczający dla atrybutów obiektu kodu w bieżącym zakresie.</span><span class="sxs-lookup"><span data-stu-id="5d069-103">Serves as an enumerator for the attributes of the code object in the current scope.</span></span>  
+# <a name="ienumidentity_attribute-interface"></a><span data-ttu-id="06db5-102">IEnumIDENTITY_ATTRIBUTE — Interfejs</span><span class="sxs-lookup"><span data-stu-id="06db5-102">IEnumIDENTITY_ATTRIBUTE Interface</span></span>
+<span data-ttu-id="06db5-103">Służy jako moduł wyliczający dla atrybutów obiektu kodu w bieżącym zakresie.</span><span class="sxs-lookup"><span data-stu-id="06db5-103">Serves as an enumerator for the attributes of the code object in the current scope.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="5d069-104">Metody</span><span class="sxs-lookup"><span data-stu-id="5d069-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="06db5-104">Metody</span><span class="sxs-lookup"><span data-stu-id="06db5-104">Methods</span></span>  
   
-|<span data-ttu-id="5d069-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="5d069-105">Method</span></span>|<span data-ttu-id="5d069-106">Opis</span><span class="sxs-lookup"><span data-stu-id="5d069-106">Description</span></span>|  
+|<span data-ttu-id="06db5-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="06db5-105">Method</span></span>|<span data-ttu-id="06db5-106">Opis</span><span class="sxs-lookup"><span data-stu-id="06db5-106">Description</span></span>|  
 |------------|-----------------|  
-|`IEnumIDENTITY_ATTRIBUTE::Clone`|<span data-ttu-id="5d069-107">Pobiera wskaźnik interfejsu do nowego `IEnumIDENTITY_ATTRIBUTE` zawiera te same elementy członkowskie, ponieważ `IEnumIDENTITY_ATTRIBUTE`.</span><span class="sxs-lookup"><span data-stu-id="5d069-107">Gets an interface pointer to a new `IEnumIDENTITY_ATTRIBUTE` that contains the same members as this `IEnumIDENTITY_ATTRIBUTE`.</span></span>|  
-|`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|<span data-ttu-id="5d069-108">Zapisuje dane zawarte w elementach to `IEnumIDENTITY_ATTRIBUTE` do określonych danych buforu.</span><span class="sxs-lookup"><span data-stu-id="5d069-108">Writes the data contained in the elements of this `IEnumIDENTITY_ATTRIBUTE` to the specified data buffer.</span></span>|  
-|`IEnumIDENTITY_ATTRIBUTE::Next`|<span data-ttu-id="5d069-109">Pobiera określoną liczbę atrybutów, zaczynając od bieżącej pozycji.</span><span class="sxs-lookup"><span data-stu-id="5d069-109">Gets the specified number of attributes, starting at the current position.</span></span>|  
-|`IEnumIDENTITY_ATTRIBUTE::Reset`|<span data-ttu-id="5d069-110">Przesuwa wskaźnik instrukcji na początku `IEnumIDENTITY_ATTRIBUTE`.</span><span class="sxs-lookup"><span data-stu-id="5d069-110">Moves the instruction pointer to the beginning of this `IEnumIDENTITY_ATTRIBUTE`.</span></span>|  
-|`IEnumIDENTITY_ATTRIBUTE::Skip`|<span data-ttu-id="5d069-111">Przesuwa wskaźnik instrukcji do przodu o określoną liczbę elementów, zaczynając od bieżącej pozycji.</span><span class="sxs-lookup"><span data-stu-id="5d069-111">Moves the instruction pointer forward by the specified number of elements, starting at the current position.</span></span>|  
+|`IEnumIDENTITY_ATTRIBUTE::Clone`|<span data-ttu-id="06db5-107">Pobiera wskaźnik interfejsu do nowego `IEnumIDENTITY_ATTRIBUTE` , który zawiera te same składowe. `IEnumIDENTITY_ATTRIBUTE`</span><span class="sxs-lookup"><span data-stu-id="06db5-107">Gets an interface pointer to a new `IEnumIDENTITY_ATTRIBUTE` that contains the same members as this `IEnumIDENTITY_ATTRIBUTE`.</span></span>|  
+|`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|<span data-ttu-id="06db5-108">Zapisuje dane zawarte w elementach tego `IEnumIDENTITY_ATTRIBUTE` obiektu do określonego buforu danych.</span><span class="sxs-lookup"><span data-stu-id="06db5-108">Writes the data contained in the elements of this `IEnumIDENTITY_ATTRIBUTE` to the specified data buffer.</span></span>|  
+|`IEnumIDENTITY_ATTRIBUTE::Next`|<span data-ttu-id="06db5-109">Pobiera określoną liczbę atrybutów, rozpoczynając od bieżącego położenia.</span><span class="sxs-lookup"><span data-stu-id="06db5-109">Gets the specified number of attributes, starting at the current position.</span></span>|  
+|`IEnumIDENTITY_ATTRIBUTE::Reset`|<span data-ttu-id="06db5-110">Przenosi wskaźnik instrukcji na początek tego `IEnumIDENTITY_ATTRIBUTE`elementu.</span><span class="sxs-lookup"><span data-stu-id="06db5-110">Moves the instruction pointer to the beginning of this `IEnumIDENTITY_ATTRIBUTE`.</span></span>|  
+|`IEnumIDENTITY_ATTRIBUTE::Skip`|<span data-ttu-id="06db5-111">Przesuwa wskaźnik instrukcji do przodu o określoną liczbę elementów, rozpoczynając od bieżącego położenia.</span><span class="sxs-lookup"><span data-stu-id="06db5-111">Moves the instruction pointer forward by the specified number of elements, starting at the current position.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5d069-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="5d069-112">Requirements</span></span>  
- <span data-ttu-id="5d069-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5d069-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="06db5-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="06db5-112">Requirements</span></span>  
+ <span data-ttu-id="06db5-113">**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="06db5-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5d069-114">**Nagłówek:** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="5d069-114">**Header:** Isolation.h</span></span>  
+ <span data-ttu-id="06db5-114">**Nagłówki** Izolacja. h</span><span class="sxs-lookup"><span data-stu-id="06db5-114">**Header:** Isolation.h</span></span>  
   
- <span data-ttu-id="5d069-115">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5d069-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="06db5-115">**.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="06db5-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5d069-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5d069-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="06db5-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="06db5-116">See also</span></span>
 
-- [<span data-ttu-id="5d069-117">Interfejsy łączenia</span><span class="sxs-lookup"><span data-stu-id="5d069-117">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [<span data-ttu-id="06db5-117">Interfejsy łączenia</span><span class="sxs-lookup"><span data-stu-id="06db5-117">Fusion Interfaces</span></span>](fusion-interfaces.md)

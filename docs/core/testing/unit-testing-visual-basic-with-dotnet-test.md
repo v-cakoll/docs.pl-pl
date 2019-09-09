@@ -5,16 +5,18 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: 867b6e3c9c647cd302b0635de1d02573485e89c7
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 63898f23f7c70a96409c6de9029fb0c067223016
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168261"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373878"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>Testowanie jednostkowe Visual Basic biblioteki .NET Core przy użyciu testu dotnet i xUnit
 
 Ten samouczek przeprowadzi Cię przez interaktywny proces tworzenia przykładowego rozwiązania krok po kroku, aby poznać koncepcje dotyczące testowania jednostkowego. Jeśli wolisz postępować zgodnie z samouczkiem przy użyciu wstępnie skompilowanego rozwiązania, przed rozpoczęciem [Wyświetl lub Pobierz przykładowy kod](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-dotnet-test) . Aby uzyskać instrukcje dotyczące pobierania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+
+[!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
 ## <a name="creating-the-source-project"></a>Tworzenie projektu źródłowego
 
@@ -110,7 +112,7 @@ Namespace PrimeService.Tests
 End Namespace
 ```
 
-Ten `<Fact>` atrybut oznacza metodę testową, która jest uruchamiana przez program Test Runner. W celu utworzenia testów i biblioteki klas, a następnie uruchomienia testów, [`dotnet test`](../tools/dotnet-test.md) należy wykonać testy jednostkowo-badawcze- *using-dotnet-test*. Program xUnit Test Runner zawiera punkt wejścia programu do uruchamiania testów. `dotnet test`uruchamia program Test Runner przy użyciu utworzonego projektu testu jednostkowego.
+Ten `<Fact>` atrybut oznacza metodę testową, która jest uruchamiana przez program Test Runner. W celu utworzenia testów i biblioteki klas, a następnie uruchomienia testów, [`dotnet test`](../tools/dotnet-test.md) należy wykonać testy *jednostkowo-badawcze-using-dotnet-test*. Program xUnit Test Runner zawiera punkt wejścia programu do uruchamiania testów. `dotnet test`uruchamia program Test Runner przy użyciu utworzonego projektu testu jednostkowego.
 
 Test zakończy się niepowodzeniem. Nie utworzono jeszcze implementacji. Wykonaj ten test, pisząc najprostszy kod w `PrimeService` klasie, która działa:
 
@@ -139,6 +141,6 @@ Uruchom `dotnet test`i dwa z tych testów zakończą się niepowodzeniem. Aby ws
 if candidate < 2
 ```
 
-Kontynuuj iteracje, dodając więcej testów, więcej teorie i więcej kodu w bibliotece głównej. Masz ukończoną [wersję testów](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.vb) i kompletną implementację [biblioteki](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-dotnet-test/PrimeService/PrimeService.vb).
+Kontynuuj iteracje, dodając więcej testów, więcej teorie i więcej kodu w bibliotece głównej. Masz [ukończoną wersję testów](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.vb) i [kompletną implementację biblioteki](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-dotnet-test/PrimeService/PrimeService.vb).
 
 Utworzono niewielką bibliotekę i zestaw testów jednostkowych dla tej biblioteki. Rozbudowane rozwiązanie jest przeznaczone do dodawania nowych pakietów i testów jest częścią normalnego przepływu pracy. Zbyt najwięcej czasu i wysiłku na rozwiązywanie celów aplikacji.

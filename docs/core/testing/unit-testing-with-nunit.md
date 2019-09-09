@@ -4,16 +4,18 @@ description: Poznaj koncepcje testów jednostkowych w C# oprogramowaniu i .NET C
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 22475fcbd9e971f4c544c020d9198fadee4548b1
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 19aa97687c41cf4a4aac00bf6ca83bc27504b09d
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168122"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374131"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Testowanie C# jednostkowe za pomocą nunit i .NET Core
 
 Ten samouczek przeprowadzi Cię przez interaktywny proces tworzenia przykładowego rozwiązania krok po kroku, aby poznać koncepcje dotyczące testowania jednostkowego. Jeśli wolisz postępować zgodnie z samouczkiem przy użyciu wstępnie skompilowanego rozwiązania, przed rozpoczęciem [Wyświetl lub Pobierz przykładowy kod](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/) . Aby uzyskać instrukcje dotyczące pobierania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+
+[!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -182,6 +184,6 @@ Uruchom `dotnet test`i dwa z tych testów zakończą się niepowodzeniem. Aby ws
 if (candidate < 2)
 ```
 
-Kontynuuj iteracje, dodając więcej testów, więcej teorie i więcej kodu w bibliotece głównej. Masz ukończoną [wersję testów](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.cs) i kompletną implementację [biblioteki](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService/PrimeService.cs).
+Kontynuuj iteracje, dodając więcej testów, więcej teorie i więcej kodu w bibliotece głównej. Masz [ukończoną wersję testów](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.cs) i [kompletną implementację biblioteki](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService/PrimeService.cs).
 
 Utworzono niewielką bibliotekę i zestaw testów jednostkowych dla tej biblioteki. Rozbudowane rozwiązanie jest przeznaczone do dodawania nowych pakietów i testów jest częścią normalnego przepływu pracy. Zbyt najwięcej czasu i wysiłku na rozwiązywanie celów aplikacji.

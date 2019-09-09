@@ -2,20 +2,21 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 0b6f26c7b9e9d02b3ff20b53f42b09d671699ea5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1fd0a12b62c416ce71946e59e7868abc7638a274
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919390"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398124"
 ---
 # <a name="custombinding"></a>\<customBinding>
 
 Zapewnia pełną kontrolę nad stosem obsługi komunikatów dla użytkownika.
 
-\<system.serviceModel>\
-\<powiązania > \
-\<customBinding>
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> powiązań**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<niestandardowy >Binding**  
 
 ## <a name="syntax"></a>Składnia
 

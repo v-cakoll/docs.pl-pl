@@ -1,28 +1,28 @@
 ---
-title: Tworzenie gier dopasowania listy aplikacji przy użyciu Infer.NET i Probabilistyczne programowania
-description: Dowiedz się, jak za pomocą programowania Probabilistyczne Infer.NET utworzyć aplikację listy gier matchup oparty na uproszczonej wersji TrueSkill.
+title: Tworzenie gry do aplikacji z listą z programowaniem Infer.NET i probabilistyczne
+description: Dowiedz się, w jaki sposób używać programowania probabilistyczne z Infer.NET do tworzenia aplikacji listy rozgrywki gry na podstawie uproszczonej wersji programu TrueSkill.
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 85cb3753ae19e7ca64002eb7c26b44b6f7d41e4f
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: aa3ad9528238e4f5a5eb187af71f2d2da1ea9cba
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211423"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855788"
 ---
-# <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Tworzenie gier dopasowania listy aplikacji przy użyciu Infer.NET i Probabilistyczne programowania
+# <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Tworzenie gry do aplikacji z listą z programowaniem Infer.NET i probabilistyczne
 
-Ten przewodnik zawiera informacje na temat prawdopodobieństwa programowania przy użyciu Infer.NET. Probabilistyczne programowania jest podejście machine learning, gdzie niestandardowe modele są wyrażane jako programów komputerowych. Umożliwia zdobędziesz znajomość domeny w ramach modeli oraz sprawia, że system jest bardziej interpretowanej uczenia maszynowego. Obsługuje ona również wnioskowania online — proces uczenia nadejściu nowych danych. Infer.NET jest używana w różnych produktów w firmie Microsoft na platformie Azure, usługi Xbox i Bing.
+Ten przewodnik zawiera wskazówki dotyczące programowania probabilistyczne przy użyciu Infer.NET. Programowanie probabilistyczne jest podejściem do uczenia maszynowego, w którym modele niestandardowe są wyrażane jako programy komputerowe. Umożliwia ona włączenie znajomości domeny w modelach i sprawia, że system uczenia maszynowego jest bardziej interpretowany. Obsługuje ona również wnioskowanie online — proces uczenia się w miarę nadejścia nowych danych. Infer.NET jest używany w różnych produktach firmy Microsoft na platformie Azure, Xbox i Bing.
 
-## <a name="what-is-probabilistic-programming"></a>Co to jest programowanie Probabilistyczne?
+## <a name="what-is-probabilistic-programming"></a>Co to jest programowanie probabilistyczne?
 
-Probabilistyczne programowania służy do tworzenia modeli statystyczne rzeczywistych procesów.
+Programowanie probabilistyczne umożliwia tworzenie modeli statystycznych procesów rzeczywistych.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Konfigurowanie środowiska deweloperskiego lokalne
+- Konfiguracja lokalnego środowiska deweloperskiego
 
-  Ten poradnik oczekuje, że będziesz mieć maszyny, których można użyć do tworzenia aplikacji. .NET [rozpocząć pracę w ciągu 10 minut](https://www.microsoft.com/net/core) samouczek zawiera instrukcje dotyczące konfigurowania swojego lokalnego środowiska deweloperskiego na komputerze Mac, PC lub Linux.
+  Ten przewodnik zawiera informacje o komputerze, którego można użyć do programowania. Samouczek platformy .NET [Hello World w ciągu 10 minut](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) zawiera instrukcje dotyczące konfigurowania lokalnego środowiska deweloperskiego w systemie MacOS, Windows lub Linux.
 
 ## <a name="create-your-app"></a>Tworzenie aplikacji
 
@@ -33,11 +33,11 @@ dotnet new console -o myApp
 cd myApp
 ```
 
-`dotnet` Polecenie tworzy `new` aplikacji typu `console`. `-o` Parametr tworzy katalog o nazwie `myApp` gdzie aplikacji są przechowywane i wypełnia je wymaganych plików. `cd myApp` Polecenie zapisuje do katalogu nowo utworzoną aplikację.
+Polecenie tworzy aplikację typu`console`. `new` `dotnet` Parametr tworzy katalog o nazwie `myApp` , w którym jest przechowywana aplikacja, i wypełnia je wymaganymi plikami. `-o` `cd myApp` Polecenie przełączy Cię do nowo utworzonego katalogu aplikacji.
 
 ## <a name="install-infernet-package"></a>Zainstaluj pakiet Infer.NET
 
-Aby użyć Infer.NET, musisz zainstalować `Microsoft.ML.Probabilistic.Compiler` pakietu. W wierszu polecenia Uruchom następujące polecenie:
+Aby korzystać z Infer.NET, należy zainstalować `Microsoft.ML.Probabilistic.Compiler` pakiet. W wierszu polecenia Uruchom następujące polecenie:
 
 ```console
 dotnet add package Microsoft.ML.Probabilistic.Compiler
@@ -45,26 +45,26 @@ dotnet add package Microsoft.ML.Probabilistic.Compiler
 
 ## <a name="design-your-model"></a>Projektowanie modelu
 
-W przykładzie przykładzie użyto tenisa tabeli lub dopasowania foosball odtwarzany w biurze. Masz uczestników i wynik każdego dopasowania.  Chcesz wywnioskować gracza umiejętności z tych danych. Załóżmy, że każdy z graczy ma zwykle rozproszonych umiejętności ukryte, a ich wydajności danego dopasowanie jest hałas wersją tej umiejętności. Dane ogranicza wydajność zwycięzca powinien być większy niż pominiętych wskutek wydajności. Jest to Uproszczona wersja popularnej [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/) modelu, który również obsługuje zespołów, rysuje oraz inne rozszerzenia. [Zaawansowanych wersji](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) ten model jest używana do matchmaking w najlepiej sprzedające tytuły gry Halo i Gears War.
+Przykładowy przykład używa tabeli tenis lub Foosball, które są odtwarzane w biurze. Masz uczestników i wynik każdego dopasowania.  Chcesz wywnioskować umiejętności gracza z tych danych. Załóżmy, że każdy gracz ma zwykle rozłożoną, niezrównaną umiejętność, a ich wydajność jest w tej samej wersji. Dane ograniczają wydajność zwycięzcy do większej niż wydajność Loser. Jest to uproszczona wersja popularnego modelu [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/) , który również obsługuje zespoły, rysuje i inne rozszerzenia. [Zaawansowana wersja](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) tego modelu jest używana do Matchmaking w najlepszej sprzedaży tytułów gry i narzędzia wojny.
 
-Należy listy zadań do umiejętności wywnioskowane player wraz z ich wariancji — miary niepewności wokół umiejętności.
+Należy wystawić umiejętności z tytułu odroczonego odtwarzacza wraz z ich wariancją — miarą niepewności wokół umiejętności.
 
-*Wynik gier przykładowych danych*
+*Przykładowe dane wyników gry*
 
-Gra |Zwycięzcy | Pominiętych wskutek
+Rozgrywk |Wygrywając | Loser
 ---------|----------|---------
- 1 | Odtwarzacz 0 | Odtwarzacz 1
- 2 | Odtwarzacz 0 | Odtwarzacz 3
- 3 | Odtwarzacz 0 | Player 4
- 4 | Odtwarzacz 1 | Odtwarzacz 2
- 5 | Odtwarzacz 3 | Odtwarzacz 1
- 6 | Player 4 | Odtwarzacz 2
+ 1 | Gracz 0 | Gracz 1
+ 2 | Gracz 0 | Player 3
+ 3 | Gracz 0 | Gracz 4
+ 4 | Gracz 1 | Gracz 2
+ 5 | Player 3 | Gracz 1
+ 6 | Gracz 4 | Gracz 2
 
-Za pomocą bliższe spojrzenie na przykładowych danych zauważysz, że graczy, 3 i 4 mają jeden win i utraty jednej. Zobaczmy, rankingi wygląd za pomocą programowania Probabilistyczne. Zwróć uwagę, również ma odtwarzacz zero, ponieważ nawet office dopasowanie wykazów są zera nam deweloperów.
+Dokładniejsze spojrzenie na przykładowe dane można zauważyć, że gracze 3 i 4 mają jedną z nich. Zobaczmy, jak wygląda Klasyfikacja przy użyciu programowania probabilistyczne. Zwróć również uwagę na to, że gracz ma wartość zero, ponieważ nawet listy dopasowania pakietu Office są równe zero w oparciu o deweloperów w Stanach Zjednoczonych.
 
-## <a name="write-some-code"></a>Pisanie kodu
+## <a name="write-some-code"></a>Napisz kod
 
-Posiadanie zaprojektowany modelu, warto Wyraź ją jako Probabilistyczne programu przy użyciu Infer.NET interfejsów API do modelowania. Otwórz `Program.cs` w swoim ulubionym edytorze tekstów i Zastąp całą jego zawartość następującym kodem:
+Po zaprojektowaniu modelu należy zaprezentować go jako program probabilistyczne przy użyciu interfejsu API modelowania Infer.NET. Otwórz `Program.cs` w ulubionym edytorze tekstów i Zastąp całą jego zawartość następującym kodem:
 
 ```csharp
 namespace myApp
@@ -136,7 +136,7 @@ dotnet run
 
 ## <a name="results"></a>Wyniki
 
-Wyniki powinny wyglądać podobnie do następującego:
+Wyniki powinny wyglądać podobnie do następujących:
 
 ```
 Compiling model...done.
@@ -149,14 +149,14 @@ Player 1 skill: Gaussian(4.955, 3.503)
 Player 2 skill: Gaussian(2.639, 4.288)
 ```
 
-W wynikach Zwróć uwagę, że tego odtwarzacza 3 szereguje nieznacznie wyższe niż 4 graczy, zgodnie z naszym modelu. To dlatego zwycięstwa odtwarzacza 3 za pośrednictwem gracz 1 jest większe znaczenie niż zwycięstwa odtwarzacza 4 za pośrednictwem player 2 — Uwaga tego odtwarzacza 1 uderzeń player 2. Odtwarzacz 0 jest ogólny wyszukiwarek.
+W wynikach Zwróć uwagę, że gracz 3 ranguje nieco więcej niż gracz 4 zgodnie z naszym modelem. Wynika to z faktu, że Victory odtwarzacza 3 w odtwarzaczu 1 jest bardziej znaczące niż Victory gracz 4 w odtwarzaczu 2 — należy zauważyć, że gracz 1 bije gracz 2. Gracz 0 to ogólna SEO!
 
-## <a name="keep-learning"></a>Zachowaj nauki
+## <a name="keep-learning"></a>Utrzymuj uczenie
 
-Projektowanie statystyczne modeli jest umiejętności samodzielnie. Zapisane przez zespół Microsoft Research Cambridge [bezpłatnej książki online](http://mbmlbook.com/), co daje delikatnie wprowadzenie w artykule. Rozdział 3 tę książkę omówiono bardziej szczegółowo model TrueSkill. Po utworzeniu modelu należy pamiętać, można przekształcić go do kodu za pomocą [obszerną dokumentację](https://dotnet.github.io/infer/) w witrynie sieci Web Infer.NET.
+Projektowanie modeli statystycznych jest własną umiejętnością. Zespół ds. Cambridge Research firmy Microsoft zapisał [bezpłatną książkę online](http://mbmlbook.com/), która zapewnia łagodne wprowadzenie do artykułu. Rozdział 3 tej książki dotyczy modelu TrueSkill w bardziej szczegółowy sposób. Jeśli masz model, możesz przekształcić go w kod przy użyciu [obszernej dokumentacji](https://dotnet.github.io/infer/) w witrynie sieci Web Infer.NET.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Zapoznaj się z repozytorium Infer.NET GitHub, aby kontynuować zapoznawanie się z i znaleźć więcej przykładów.
+Zapoznaj się z repozytorium usługi GitHub Infer.NET, aby kontynuować uczenie i znaleźć więcej przykładów.
 > [!div class="nextstepaction"]
-> [polecenia DotNet/wywnioskować repozytorium GitHub](https://github.com/dotnet/infer)
+> [repozytorium GitHub/wnioskowanie](https://github.com/dotnet/infer)

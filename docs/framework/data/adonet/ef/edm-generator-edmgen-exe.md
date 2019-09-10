@@ -2,18 +2,18 @@
 title: Generator EDM (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: 688989fea6037cc989267e14b103210c2a995afa
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 82166782e25cb7a7ea23fe7faf7a30cb0e68d631
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251628"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854719"
 ---
 # <a name="edm-generator-edmgenexe"></a>Generator EDM (EdmGen.exe)
 
-EdmGen. exe to narzędzie wiersza polecenia służące do pracy z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] modelem i plikami mapowania. Za pomocą narzędzia EdmGen. exe można wykonać następujące czynności:
+EdmGen. exe to narzędzie wiersza polecenia służące do pracy z modelem i plikami mapowania Entity Framework. Za pomocą narzędzia EdmGen. exe można wykonać następujące czynności:
 
-- Nawiązywanie połączenia ze źródłem danych przy użyciu dostawcy danych .NET Framework określonego przez źródło danych i generowanie modelu koncepcyjnego (CSDL), modelu magazynu (. ssdl) i plików mapowania (. MSL), które są używane przez [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]program. Aby uzyskać więcej informacji, zobacz [jak: Użyj programu EdmGen. exe, aby wygenerować model i pliki](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)mapowania.
+- Nawiązywanie połączenia ze źródłem danych przy użyciu dostawcy danych .NET Framework określonego przez źródło danych i generowanie modelu koncepcyjnego (. csdl), modelu magazynu (. ssdl) i plików mapowania (. MSL), które są używane przez Entity Framework. Aby uzyskać więcej informacji, zobacz [jak: Użyj programu EdmGen. exe, aby wygenerować model i pliki](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)mapowania.
 
 - Zweryfikuj istniejący model. Aby uzyskać więcej informacji, zobacz [jak: Użyj EdmGen. exe do walidacji modelu i plików](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)mapowania.
 

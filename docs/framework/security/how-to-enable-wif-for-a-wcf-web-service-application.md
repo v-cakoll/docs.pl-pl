@@ -3,12 +3,12 @@ title: 'Instrukcje: Włączanie programu WIF dla aplikacji usługi internetowej 
 ms.date: 03/30/2017
 ms.assetid: bfc64b3d-64e9-4093-a6a4-72e933917af7
 author: BrucePerlerMS
-ms.openlocfilehash: b9fa1f815a962adc0b3c91177021788734b92bb6
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 809009642caf743f4f067591adfa63ccb154a577
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041457"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851534"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Instrukcje: Włączanie programu WIF dla aplikacji usługi internetowej WCF
 ## <a name="applies-to"></a>Dotyczy:
@@ -148,7 +148,7 @@ W tym kroku utworzysz aplikację konsoli, która za pomocą deweloperskiej usłu
 
 3. Kliknij prawym przyciskiem myszy pozycję **odwołania** w projekcie **klienta** , a następnie kliknij pozycję **Dodaj odwołanie do usługi**.
 
-4. W oknie **Dodaj odwołanie do usługi** kliknij strzałkę listy rozwijanej na przycisku Odnajdź, a następnie kliknij pozycję **usługi w rozwiązaniu**. **Adres** zostanie automatycznie wypełniony usługą WCF utworzoną wcześniej, a **przestrzeń nazw** zostanie ustawiona na **ServiceReference1**. Kliknij przycisk **OK**.
+4. W oknie **Dodaj odwołanie do usługi** kliknij strzałkę listy rozwijanej na przycisku **Odnajdź** , a następnie kliknij pozycję **usługi w rozwiązaniu**. **Adres** zostanie automatycznie wypełniony usługą WCF utworzoną wcześniej, a **przestrzeń nazw** zostanie ustawiona na **ServiceReference1**. Kliknij przycisk **OK**.
 
     > [!IMPORTANT]
     > Podczas dodawania odwołania do usługi do klienta musi być uruchomiony zarówno **TestService** , jak i **LocalSTS** .
@@ -245,7 +245,7 @@ W tym kroku przetestujesz aplikację WCF korzystającą ze środowiska WIF i sp
 
 2. Naciśnij klawisz **Enter**, a w konsoli powinny pojawić się następujące informacje dotyczące oświadczeń:
 
-    ```
+    ```output
     Computed by Service1
     Input received from client: Hello World
     Client Name: Terry

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: c2812e261278af7763bc6b2e1a493b97cb35e3ab
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 83d6fc1294f6aa37389db9e517b02866ef000b50
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911636"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854227"
 ---
 # <a name="working-with-data-definition-language"></a>Praca z językiem definicji danych
-Począwszy od .NET Framework w wersji 4, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] obsługuje język definicji danych (DDL). Pozwala to na tworzenie lub usuwanie wystąpienia bazy danych na podstawie parametrów połączenia i metadanych modelu magazynu (SSDL).  
+Począwszy od .NET Framework w wersji 4 Entity Framework obsługuje język definicji danych (DDL). Pozwala to na tworzenie lub usuwanie wystąpienia bazy danych na podstawie parametrów połączenia i metadanych modelu magazynu (SSDL).  
   
  Poniższe metody dotyczące <xref:System.Data.Objects.ObjectContext> używania parametrów połączenia i zawartości SSDL do wykonania następujących czynności: Utwórz lub Usuń bazę danych, sprawdź, czy baza danych istnieje, i Wyświetl wygenerowany skrypt DDL:  
   

@@ -1,71 +1,71 @@
 ---
-title: Debugowanie problemów aktywacji środowiska CLR
+title: Jak debugować problemy dotyczące aktywacji środowiska CLR
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR activation, debugging issues
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e38e3e2b0f28b7f1eb36dd3c5b2888712b1c807c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ab80cfbd0ae2130f465216ca77812bda0002c24
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875315"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854001"
 ---
-# <a name="how-to-debug-clr-activation-issues"></a>Debugowanie problemów aktywacji środowiska CLR
+# <a name="how-to-debug-clr-activation-issues"></a>Jak debugować problemy dotyczące aktywacji środowiska CLR
 
-Jeśli wystąpią problemy podczas uzyskiwania aplikację do uruchamiania w odpowiedniej wersji środowiska uruchomieniowego języka wspólnego (CLR), można wyświetlać i debugowania dzienniki aktywacji środowiska CLR. Te dzienniki może być bardzo przydatne podczas ustalania głównej przyczyny problemu aktywacji, kiedy aplikacja różnych wersji środowiska CLR ładuje, niż oczekiwano lub w ogóle nie jest ładowana środowiska CLR. [Błędy inicjowania programu .NET Framework: Zarządzanie środowiska użytkownika](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) tym artykule omówiono środowisko CLR nie został znaleziony dla aplikacji.
+Jeśli wystąpią problemy z rozpoczęciem pracy aplikacji z poprawną wersją środowiska uruchomieniowego języka wspólnego (CLR), można wyświetlać i debugować dzienniki aktywacji środowiska CLR. Te dzienniki mogą być bardzo przydatne podczas określania głównej przyczyny problemu z aktywacją, gdy aplikacja ładuje inną wersję środowiska CLR niż oczekiwano lub nie ładuje środowiska CLR. Błędy [inicjowania .NET Framework: Zarządzanie środowiskiem](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) użytkownika omawia środowisko, w którym nie znaleziono środowiska CLR dla aplikacji.
 
-Rejestrowanie aktywacji środowiska CLR może być włączone całego systemu za pomocą klucza rejestru HKEY_LOCAL_MACHINE lub zmienną środowiskową systemu. Dziennik zostanie wygenerowany, aż do wpisu rejestru lub zmiennej środowiskowej zostanie usunięty. Alternatywnie można użyć użytkownika lub zmiennej środowiskowej proces lokalny Aby włączyć rejestrowanie za pomocą innego zakresu i czasu trwania.
+Rejestrowanie aktywacji środowiska CLR można włączyć na poziomie systemu przy użyciu klucza rejestru HKEY_LOCAL_MACHINE lub zmiennej środowiskowej system. Dziennik zostanie wygenerowany do momentu usunięcia wpisu rejestru lub zmiennej środowiskowej. Alternatywnie można użyć zmiennej środowiskowej użytkownika lub procesu lokalnego, aby włączyć rejestrowanie z innym zakresem i czasem trwania.
 
-Dzienniki aktywacji środowiska CLR, nie należy mylić z [dzienniki powiązań zestawów](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), które są zupełnie innego.
+Dzienników aktywacji środowiska CLR nie należy mylić z [dziennikami powiązań zestawów](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), które są całkowicie inne.
 
 ## <a name="to-enable-clr-activation-logging"></a>Aby włączyć rejestrowanie aktywacji środowiska CLR
 
-### <a name="using-the-registry"></a>Za pomocą rejestru
+### <a name="using-the-registry"></a>Korzystanie z rejestru
 
-1. W Edytorze rejestru przejdź do HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework (na komputerze 32-bitowa) lub HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\. Folder NETFramework (na komputerze 64-bitowych).
+1. W Edytorze rejestru przejdź do HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework (na komputerze 32-bitowym) lub HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\. Folder NETFramework (na komputerze 64-bitowym).
 
-2. Dodaj wartość ciągu o nazwie `CLRLoadLogDir`i ustaw ją na pełną ścieżkę istniejącego katalogu, w którym chcesz przechowywać dzienniki aktywacji środowiska CLR.
+2. Dodaj wartość ciągu o nazwie `CLRLoadLogDir`i ustaw ją na pełną ścieżkę do istniejącego katalogu, w którym chcesz przechowywać dzienniki aktywacji środowiska CLR.
 
-Aktywacja rejestrowania pozostanie włączona, dopóki nie usuniesz wartość ciągu.
+Rejestrowanie aktywacji pozostaje włączone do momentu usunięcia wartości ciągu.
 
-### <a name="using-an-environment-variable"></a>Za pomocą zmiennej środowiskowej
+### <a name="using-an-environment-variable"></a>Użycie zmiennej środowiskowej
 
-- Ustaw `COMPLUS_CLRLoadLogDir` zmienną środowiskową na ciąg, który reprezentuje pełną ścieżkę istniejącego katalogu, w którym chcesz przechowywać dzienniki aktywacji środowiska CLR.
+- Ustaw zmienną `COMPLUS_CLRLoadLogDir` środowiskową na ciąg, który reprezentuje pełną ścieżkę do istniejącego katalogu, w którym chcesz przechowywać dzienniki aktywacji środowiska CLR.
 
-    Zakres Określa, jak ustawić zmienną środowiskową:
+    Sposób ustawiania zmiennej środowiskowej określa jej zakres:
 
-  - Jeśli zostanie ustawiona na poziomie systemu, aktywacji rejestrowanie jest włączone dla wszystkich aplikacji .NET Framework na tym komputerze, do momentu usunięcia zmiennej środowiskowej.
+  - Jeśli ustawisz ją na poziomie systemu, rejestrowanie aktywacji jest włączone dla wszystkich aplikacji .NET Framework na tym komputerze do momentu usunięcia zmiennej środowiskowej.
 
-  - Jeśli zostanie ustawiona na poziomie użytkownika, aktywacji rejestrowanie jest włączone tylko dla bieżącego konta użytkownika. Rejestrowanie jest kontynuowany do momentu usunięcia zmiennej środowiskowej.
+  - Jeśli ustawisz ją na poziomie użytkownika, rejestrowanie aktywacji jest włączone tylko dla bieżącego konta użytkownika. Rejestrowanie jest kontynuowane do momentu usunięcia zmiennej środowiskowej.
 
-  - Jeśli ustawisz go w ramach procesu przed załadowaniem środowiska CLR, aktywacji rejestrowanie jest włączone, aż do zakończenia procesu.
+  - Jeśli ustawisz ją z poziomu procesu przed załadowaniem środowiska CLR, rejestrowanie aktywacji zostanie włączone do momentu zakończenia procesu.
 
-  - Jeśli zostanie ustawiona w wierszu polecenia przed uruchomieniem aplikacji, rejestrowanie aktywacji jest włączone dla każdej aplikacji, uruchamianą w tym wierszu polecenia.
+  - Jeśli ustawisz go w wierszu polecenia przed uruchomieniem aplikacji, rejestrowanie aktywacji jest włączone dla każdej aplikacji, która jest uruchamiana z tego wiersza polecenia.
 
-    Na przykład do przechowywania dzienników aktywacji w katalogu c:\clrloadlogs zakresie na poziomie procesu, Otwórz okno wiersza polecenia i wpisz następujące polecenie przed uruchomieniem aplikacji:
+    Aby na przykład przechowywać dzienniki aktywacji w katalogu c:\clrloadlogs z zakresem poziomu procesu, Otwórz okno wiersza polecenia i wpisz następujące polecenie, aby uruchomić aplikację:
 
-    ```
+    ```console
     set COMPLUS_CLRLoadLogDir=c:\clrloadlogs
     ```
 
 ## <a name="example"></a>Przykład
 
-Dzienniki aktywacji środowiska CLR zapewniają dużą ilość danych o aktywacji środowiska CLR i używania środowiska CLR hostowania interfejsów API. Większość z tych danych jest używana wewnętrznie przez firmę Microsoft, ale niektóre dane również może być przydatny dla deweloperów, zgodnie z opisem w tym artykule.
+Dzienniki aktywacji środowiska CLR zapewniają dużą ilość danych dotyczących aktywacji środowiska CLR i używania interfejsów API hostingu środowiska CLR. Większość tych danych jest używana wewnętrznie przez firmę Microsoft, ale niektóre dane mogą być również przydatne dla deweloperów, zgodnie z opisem w tym artykule.
 
-Dziennik odzwierciedla kolejność, w której CLR hostowania interfejsów API zostały wywołane. Zawiera on również użyteczne dane na temat zestawu zainstalowanego środowiska uruchomieniowe wykryty na komputerze. Format dziennika aktywacji środowiska CLR nie jest sam udokumentowane, ale może służyć do pomóc deweloperom, którzy muszą zostać rozwiązane problemów aktywacji środowiska CLR.
-
-> [!NOTE]
-> Nie można otworzyć dziennika aktywacji, dopóki nie zakończył procesu, który używa środowiska CLR.
+Dziennik odzwierciedla kolejność wywoływania interfejsów API hostingu środowiska CLR. Zawiera również przydatne dane dotyczące zestawu zainstalowanych środowisk uruchomieniowych na komputerze. Format dziennika aktywacji środowiska CLR nie jest udokumentowany, ale może służyć do ułatwienia deweloperom, którzy muszą rozwiązać problemy związane z aktywacją środowiska CLR.
 
 > [!NOTE]
-> Dzienniki aktywacji środowiska CLR nie są lokalizowane; są one zawsze generowane w języku angielskim.
+> Nie można otworzyć dziennika aktywacji do momentu zakończenia procesu, który używa środowiska CLR.
 
-W poniższym przykładzie w dzienniku aktywacji najbardziej użyteczne informacje jest wyróżniona i opisem po dziennika.
+> [!NOTE]
+> Dzienniki aktywacji środowiska CLR nie są zlokalizowane; są one zawsze generowane w języku angielskim.
 
-```
+W poniższym przykładzie dziennika aktywacji najbardziej przydatne informacje są wyróżnione i opisane po dzienniku.
+
+```output
 532,205950.367,CLR Loading log for C:\Tests\myapp.exe
 532,205950.367,Log started at 4:26:12 PM on 10/6/2011
 532,205950.367,-----------------------------------
@@ -94,31 +94,31 @@ W poniższym przykładzie w dzienniku aktywacji najbardziej użyteczne informacj
 532,205950.398,FunctionCall: OnShimDllMainCalled. Reason: 0
 ```
 
-- **Dziennik ładowania CLR** zapewnia ścieżkę do pliku wykonywalnego, który uruchomił proces, który załadowany kodu zarządzanego. Należy pamiętać, że może to być natywne hosta.
+- **Dziennik ładowania środowiska CLR** zawiera ścieżkę do pliku wykonywalnego, który uruchomił proces, który załadował kod zarządzany. Należy pamiętać, że może to być Host macierzysty.
 
-    ```
+    ```output
     532,205950.367,CLR Loading log for C:\Tests\myapp.exe
     ```
 
-- **Zainstalowane środowisko uruchomieniowe** to zestaw wersji środowiska CLR zainstalowany na komputerze, które nadają się do żądania aktywacji.
+- **Zainstalowane środowisko uruchomieniowe** to zestaw wersji środowiska CLR zainstalowanych na komputerze, który jest kandydatem do żądania aktywacji.
 
-    ```
+    ```output
     532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0
     ```
 
-- **utworzonych za pomocą wersji** stanowi wersję środowiska CLR, który został użyty do tworzenia pliku binarnego, który został dostarczony do metody, takie jak [iclrmetahostpolicy::getrequestedruntime —](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md).
+- **wersja wbudowana** to wersja środowiska CLR, która została użyta do skompilowania pliku binarnego, który został dostarczony do metody, takiej jak [ICLRMetaHostPolicy:: GetRequestedRuntime —](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md).
 
-    ```
+    ```output
     532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
     ```
 
-- **instalacji funkcji na żądanie** odwołuje się do włączania programu .NET Framework 3.5 w systemie Windows 8. Zobacz [błędy inicjowania programu .NET Framework: Zarządzanie wrażeniami użytkownika](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) Aby uzyskać więcej informacji na temat tego scenariusza.
+- **Instalacja funkcji na żądanie** dotyczy .NET Framework 3,5 w systemie Windows 8. Zobacz [Błędy inicjowania .NET Framework: Zarządzanie czynnościami](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) użytkownika w celu uzyskania dodatkowych informacji o tym scenariuszu.
 
-    ```
+    ```output
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
     ```
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Wdrażanie](../../../docs/framework/deployment/index.md)
-- [Instrukcje: Konfigurowanie aplikacji do obsługi w programie .NET Framework 4 lub nowszy](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Instrukcje: Skonfiguruj aplikację do obsługi .NET Framework 4 lub nowszej wersji](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

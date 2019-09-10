@@ -2,19 +2,19 @@
 title: Rozszerzanie hostingu za pomocą elementu ServiceHostFactory
 ms.date: 03/30/2017
 ms.assetid: bcc5ae1b-21ce-4e0e-a184-17fad74a441e
-ms.openlocfilehash: e553fe161ffc5b50850d916cf1cef6b38dd5c1a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de6a590b94285872dd77006eda7f86d5d629be9d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991318"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849902"
 ---
 # <a name="extending-hosting-using-servicehostfactory"></a>Rozszerzanie hostingu za pomocą elementu ServiceHostFactory
-Standardowa <xref:System.ServiceModel.ServiceHost> interfejsu API do obsługi usług w Windows Communication Foundation (WCF) jest punktem rozszerzalność w architekturze WCF. Użytkownicy mogą pochodzić własnych klas hosta z <xref:System.ServiceModel.ServiceHost>, zazwyczaj w celu zastąpienia <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> używać <xref:System.ServiceModel.Description.ServiceDescription> do dodawania domyślnych punktów końcowych obowiązkowo lub modyfikowania zachowania, przed otwarciem usługi.  
+Standardowy <xref:System.ServiceModel.ServiceHost> interfejs API dla usług hostingu w programie Windows Communication Foundation (WCF) to punkt rozszerzalności architektury WCF. Użytkownicy mogą utworzyć własne klasy hosta z <xref:System.ServiceModel.ServiceHost>, zwykle przesłonić <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> <xref:System.ServiceModel.Description.ServiceDescription> , aby dodać domyślne punkty końcowe lub zmodyfikować zachowania przed otwarciem usługi.  
   
- W środowisku hosta samodzielnego jest konieczne utworzenie niestandardowego <xref:System.ServiceModel.ServiceHost> ponieważ napisać kod, który tworzy wystąpienie hosta, a następnie wywołać <xref:System.ServiceModel.ICommunicationObject.Open> na nim po tworzenia jego instancji. Między te dwa kroki można wykonać, co tylko chcesz. Na przykład można dodać nowego <xref:System.ServiceModel.Description.IServiceBehavior>:  
+ W środowisku samoobsługowym nie trzeba tworzyć niestandardowych <xref:System.ServiceModel.ServiceHost> , ponieważ piszesz kod tworzący wystąpienie hosta, a następnie Wywołaj <xref:System.ServiceModel.ICommunicationObject.Open> go po utworzeniu jego wystąpienia. Między tymi dwoma krokami możesz wykonać dowolną czynność. Możesz na przykład dodać nowy <xref:System.ServiceModel.Description.IServiceBehavior>:  
   
-```  
+```csharp
 public static void Main()  
 {  
    ServiceHost host = new ServiceHost( typeof( MyService ) );  
@@ -25,11 +25,11 @@ public static void Main()
 }  
 ```  
   
- To podejście nie jest wielokrotnego użytku. Kod, który obsługuje opis kanonicznej zakodowanej w hoście programu (w tym przypadku funkcji Main()), dzięki czemu jest trudny do ponownego użycia tej logiki w innych kontekstach. Dostępne są także inne sposoby dodawania <xref:System.ServiceModel.Description.IServiceBehavior> nie wymagają kodu imperatywnego. Można uzyskać atrybutu z <xref:System.ServiceModel.ServiceBehaviorAttribute> i umieścić czy dla implementacji usługi typu lub można utworzyć niestandardowe zachowanie można skonfigurować i narzędzia compose dynamicznie przy użyciu konfiguracji.  
+ Ta metoda nie jest wielokrotnego użytku. Kod, który operuje na opisie, jest kodowany w programie hosta (w tym przypadku funkcji Main ()), więc trudno jest ponownie użyć tej logiki w innych kontekstach. Istnieją także inne sposoby dodawania, które nie <xref:System.ServiceModel.Description.IServiceBehavior> wymagają bezwzględnego kodu. Można utworzyć atrybut z <xref:System.ServiceModel.ServiceBehaviorAttribute> i umieścić go w typie implementacji usługi lub można skonfigurować zachowanie niestandardowe i utworzyć je dynamicznie za pomocą konfiguracji.  
   
- Jednak niewielkie zmiany przykładu można również rozwiązać ten problem. Jednym z podejść jest można przenieść kod, który dodaje ServiceBehavior poza `Main()` do <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> metoda niestandardowe utworów zależnych od <xref:System.ServiceModel.ServiceHost>:  
+ Jednak w celu rozwiązania tego problemu można także użyć niewielkiej zmiany przykładu. Jednym z `Main()` <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> metod jest przeniesienie kodu, który dodaje ServiceBehavior z i do metody niestandardowej pochodnej <xref:System.ServiceModel.ServiceHost>:  
   
-```  
+```csharp
 public class DerivedHost : ServiceHost  
 {  
    public DerivedHost( Type t, params Uri baseAddresses ) :  
@@ -42,9 +42,9 @@ public class DerivedHost : ServiceHost
 }  
 ```  
   
- Następnie wewnątrz elementu `Main()` można użyć:  
+ Następnie w `Main()` programie można użyć:  
   
-```  
+```csharp
 public static void Main()  
 {  
    ServiceHost host = new DerivedHost( typeof( MyService ) );  
@@ -54,15 +54,15 @@ public static void Main()
 }  
 ```  
   
- Teraz ma hermetyzowany niestandardowej logiki do czystego abstrakcji, który można łatwo ponownie wykorzystać w odniesieniu wielu aplikacji wykonywalnych innego hosta.  
+ Teraz hermetyzowamy logikę niestandardową do czystego abstrakcji, którą można łatwo ponownie wykorzystać w wielu różnych plikach wykonywalnych hosta.  
   
- Nie jest natychmiast oczywisty sposób użycia tego niestandardowego <xref:System.ServiceModel.ServiceHost> z wewnątrz usługi Internet Information Services (IIS) lub Windows Process Activation Service (WAS). Tych środowisk różnią się od samodzielnego hostowania środowiska, ponieważ Środowisko hostingu jest utworzenie jednego wystąpienia <xref:System.ServiceModel.ServiceHost> imieniu aplikacji. Usługi IIS i WAS infrastruktury hostingu wiesz nic o niestandardowych <xref:System.ServiceModel.ServiceHost> utworów zależnych.  
+ Nie jest od razu oczywisty sposób użycia tego elementu <xref:System.ServiceModel.ServiceHost> niestandardowego z wewnątrz Internet Information Services (IIS) lub usługi aktywacji procesów systemu Windows (was). Te środowiska są inne niż środowisko samoobsługowe, ponieważ środowisko hostingu jest jednym wystąpieniem <xref:System.ServiceModel.ServiceHost> w imieniu aplikacji. Infrastruktury usług IIS i was nie wiedzą o Twoich niestandardowych <xref:System.ServiceModel.ServiceHost> instrumentach pochodnych.  
   
- <xref:System.ServiceModel.Activation.ServiceHostFactory> Zaprojektowano tak, aby rozwiązać ten problem, uzyskiwania dostępu do niestandardowego <xref:System.ServiceModel.ServiceHost> z w ramach usług IIS i WAS. Ponieważ niestandardowego hosta, który jest tworzony na podstawie <xref:System.ServiceModel.ServiceHost> dynamicznie skonfigurowano i potencjalnie różnych typów, środowisko hostingu nigdy nie uruchamia go bezpośrednio. Zamiast tego WCF korzysta ze wzorca fabryki, aby zapewnić warstwę pośredników między środowiskiem hostingu i konkretny typ usługi. O ile nie zostanie stwierdzenie, w przeciwnym razie, używa ona domyślną implementację elementu <xref:System.ServiceModel.Activation.ServiceHostFactory> która zwraca wystąpienie <xref:System.ServiceModel.ServiceHost>. Ale możesz też podać własne fabryka, która zwraca pochodnej hosta, określając nazwę typu CLR fabryki implementacji w @ServiceHost dyrektywy.  
+ Została zaprojektowana w celu rozwiązania tego problemu z uzyskaniem dostępu do niestandardowego <xref:System.ServiceModel.ServiceHost> z poziomu usług IIS lub was. <xref:System.ServiceModel.Activation.ServiceHostFactory> Ponieważ Host niestandardowy pochodzący z programu <xref:System.ServiceModel.ServiceHost> jest dynamicznie konfigurowany i potencjalnie różne typy, środowisko hostingu nigdy nie tworzy jego bezpośrednio. Zamiast tego, WCF używa wzorca fabryki, aby zapewnić warstwę pośrednią między środowiskiem hostingu a konkretnym typem usługi. Jeśli użytkownik nie poinformuje inaczej, używa domyślnej implementacji <xref:System.ServiceModel.Activation.ServiceHostFactory> , która zwraca <xref:System.ServiceModel.ServiceHost>wystąpienie. Ale można również udostępnić własną fabrykę, która zwraca hosta pochodnego, określając nazwę typu CLR implementacji fabryki w @ServiceHost dyrektywie.  
   
- Celem jest, że w przypadkach, podstawowa, implementowanie własnych fabryki powinny być proste wykonywania. Na przykład, w tym miejscu jest niestandardowy <xref:System.ServiceModel.Activation.ServiceHostFactory> zwracającego pochodnej <xref:System.ServiceModel.ServiceHost>:  
+ Zamiarem jest to, że w przypadku podstawowych przypadków implementacja własnej fabryki powinna być prostym ćwiczeniem do przekazywania dalej. Na przykład Oto niestandardowe <xref:System.ServiceModel.Activation.ServiceHostFactory> , które zwracają pochodną: <xref:System.ServiceModel.ServiceHost>  
   
-```  
+```csharp
 public class DerivedFactory : ServiceHostFactory  
 {  
    public override ServiceHost CreateServiceHost( Type t, Uri[] baseAddresses )  
@@ -72,12 +72,10 @@ public class DerivedFactory : ServiceHostFactory
 }  
 ```  
   
- Aby użyć tej fabryce, zamiast domyślną fabrykę, należy podać nazwę typu w @ServiceHost dyrektywy w następujący sposób:  
+ Aby użyć tej fabryki zamiast domyślnej fabryki, podaj nazwę typu w @ServiceHost dyrektywie w następujący sposób:  
   
-```  
-<% @ServiceHost Factory="DerivedFactory" Service="MyService" %>  
-```  
+`<% @ServiceHost Factory="DerivedFactory" Service="MyService" %>`  
   
- Gdy nie ma żadnego limitu Technical Preview, w sposób, co chcesz <xref:System.ServiceModel.ServiceHost> zwracanie z <xref:System.ServiceModel.Activation.ServiceHostFactory.CreateServiceHost%2A>, zalecamy pozostawienie swojej implementacji fabryki tak proste, jak to możliwe. Jeśli masz wiele logikę niestandardową, lepiej jest umieścić tej logiki wewnątrz hosta zamiast wewnątrz fabryki, tak aby mogły być wielokrotnego użytku.  
+ Chociaż nie ma żadnego limitu technicznego dotyczącego działania, z <xref:System.ServiceModel.ServiceHost> <xref:System.ServiceModel.Activation.ServiceHostFactory.CreateServiceHost%2A>którego chcesz korzystać, zalecamy, aby Twoje implementacje fabryki były proste, jak to możliwe. Jeśli masz wiele logiki niestandardowej, lepiej jest umieścić tę logikę wewnątrz hosta, a nie wewnątrz fabryki, aby umożliwić jej wielokrotne używanie.  
   
- Ma więcej warstw do obsługi interfejsu API, który powinna zostać wymieniona. Ma również WCF <xref:System.ServiceModel.ServiceHostBase> i <xref:System.ServiceModel.Activation.ServiceHostFactoryBase>, z którego <xref:System.ServiceModel.ServiceHost> i <xref:System.ServiceModel.Activation.ServiceHostFactory> odpowiednio pochodnych. Dla bardziej zaawansowanych scenariuszach, gdzie należy zamienić dużej części systemu metadanych przy użyciu własnych dostosowanych operacje tworzenia tych istnieje.
+ Istnieje jeszcze jedna warstwa interfejsu API hostingu, która powinna zostać wymieniona w tym miejscu. Funkcja WCF ma <xref:System.ServiceModel.ServiceHostBase> także <xref:System.ServiceModel.Activation.ServiceHostFactoryBase>i, z <xref:System.ServiceModel.ServiceHost> której <xref:System.ServiceModel.Activation.ServiceHostFactory> są i odpowiednio pochodne. Istnieją one w przypadku bardziej zaawansowanych scenariuszy, w których należy wymienić duże części systemu metadanych przy użyciu własnych dostosowanych operacji tworzenia.

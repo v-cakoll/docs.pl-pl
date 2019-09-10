@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 33805230e0aa6c75443773d60e73f9463ee1fde5
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 0de48e14f11d3763ee239b28b40bdb809dbeb433
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106545"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853941"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Instalowanie .NET Framework w systemach Windows 10 i Windows Server 2016 i nowszych
 
@@ -72,7 +72,7 @@ Wersje .NET Framework 4. x są aktualizacjami w miejscu do wcześniejszych wersj
 
 - 4. x wersje .NET Framework mogą służyć do uruchamiania aplikacji skompilowanych dla .NET Framework 4,0 za pomocą tej wersji. Na przykład .NET Framework 4,7 może służyć do uruchamiania aplikacji skompilowanych dla .NET Framework 4,0 do 4,7. Najnowsza wersja (.NET Framework 4,8) może służyć do uruchamiania aplikacji skompilowanych ze wszystkimi wersjami .NET Framework, począwszy od 4,0.
 
-Aby uzyskać listę wszystkich wersji .NET Framework dostępnych do pobrania, zobacz stronę [pliki do pobrania platformy .NET](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) .
+Aby uzyskać listę wszystkich wersji .NET Framework dostępnych do pobrania, zobacz stronę [pliki do pobrania platformy .NET](https://dotnet.microsoft.com/download) .
 
 ## <a name="help"></a>Help
 
@@ -80,6 +80,6 @@ Jeśli nie możesz uzyskać zainstalowanej poprawnej wersji .NET Framework, moż
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Pliki do pobrania dla platformy .NET](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)
+- [Pliki do pobrania dla platformy .NET](https://dotnet.microsoft.com/download)
 - [Rozwiązywanie problemów z zablokowaną instalacją i odinstalowywaniem programu .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
 - [Zainstaluj .NET Framework dla deweloperów](guide-for-developers.md)

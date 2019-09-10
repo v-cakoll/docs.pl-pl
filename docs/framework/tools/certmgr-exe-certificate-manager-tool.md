@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ad7ce5dd3739b1edcf8a8a03a2f57376ceba138
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d13c2d2cc391e61c8ed764c26e5e5b5e7ea2a3bb
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948587"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851384"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Menedżer certyfikatów)
 Narzędzie Menedżer certyfikatów (Certmgr.exe) zarządza certyfikatami, listami zaufania certyfikatów (CTL) oraz listami odwołania certyfikatów (CRL).  
@@ -38,7 +38,7 @@ Narzędzie Menedżer certyfikatów (Certmgr.exe) zarządza certyfikatami, listam
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console  
       certmgr [/add | /del | /put] [options]  
 [/s[/r registryLocation]] [sourceStorename]  
 [/s[/r registryLocation]] [destinationStorename]  
@@ -97,43 +97,43 @@ Narzędzie Menedżer certyfikatów (Certmgr.exe) zarządza certyfikatami, listam
 ## <a name="examples"></a>Przykłady  
  Następujące polecenie wyświetla domyślny magazyn systemowy o nazwie `my` z pełnymi danymi wyjściowymi.  
   
-```  
+```console  
 certmgr /v /s my  
 ```  
   
  Następujące polecenie dodaje wszystkie certyfikaty w pliku o nazwie `myFile.ext` do nowego pliku o nazwie. `newFile.ext`  
   
-```  
+```console  
 certmgr /add /all /c myFile.ext newFile.ext  
 ```  
   
  Poniższe polecenie dodaje certyfikat w pliku o nazwie `testcert.cer` `my` do magazynu systemowego.  
   
-```  
+```console  
 certmgr /add /c testcert.cer /s my  
 ```  
   
  Poniższe polecenie dodaje certyfikat w pliku o nazwie `TrustedCert.cer` do głównego magazynu certyfikatów.  
   
-```  
+```console  
 certmgr /c /add TrustedCert.cer /s root  
 ```  
   
  Poniższe polecenie zapisuje certyfikat z nazwą `myCert` pospolitą `my` w magazynie systemowym do pliku o nazwie `newCert.cer`.  
   
-```  
+```console  
 certmgr /add /c /n myCert /s my newCert.cer  
 ```  
   
  Następujące polecenie usuwa wszystkie listy CTL ze `my` sklepu systemowego i zapisuje przechowywany magazyn do pliku o nazwie. `newStore.str`  
   
-```  
+```console  
 certmgr /del /all /ctl /s my newStore.str  
 ```  
   
  Poniższe polecenie zapisuje certyfikat w `my` magazynie systemowym w pliku. `newFile` Zostanie wyświetlony monit o wprowadzenie numeru certyfikatu z `my` , który ma zostać `newFile`umieszczony.  
   
-```  
+```console  
 certmgr /put /c /s my newFile  
 ```  
   

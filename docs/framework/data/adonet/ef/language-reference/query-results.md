@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bcd7b699-4e50-4523-8c33-2f54a103d94e
-ms.openlocfilehash: d43ec0cdf5b5bb03854dffc7132dddb4c9ae76fd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3ac80cfe06f8531dcd2343f676a6f78f8eb0e8f6
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249265"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854305"
 ---
 # <a name="query-results"></a>Wyniki zapytania
 Po przekonwertowaniu LINQ to Entities zapytania do drzew poleceń i wykonaniu wyniki zapytania są zwykle zwracane jako jeden z następujących elementów:  
@@ -23,9 +23,9 @@ Po przekonwertowaniu LINQ to Entities zapytania do drzew poleceń i wykonaniu wy
   
 - Typy anonimowe.  
   
- Gdy zapytanie zostało wykonane względem źródła danych, wyniki są uwzględniane w typach CLR i zwracane do klienta. Wszystkie obiekty materializację są wykonywane przez [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Wszelkie błędy, które wynikają z braku możliwości mapowania między [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] i CLR spowodują, że wyjątki będą zgłaszane podczas materializację obiektów.  
+ Gdy zapytanie zostało wykonane względem źródła danych, wyniki są uwzględniane w typach CLR i zwracane do klienta. Wszystkie materializację obiektów są wykonywane przez Entity Framework. Wszelkie błędy, które wynikają z braku możliwości mapowania między Entity Framework i CLR spowodują, że wyjątki będą zgłaszane podczas materializację obiektów.
   
- Jeśli wykonanie zapytania zwraca typy podstawowych koncepcji modelu koncepcyjnego, wyniki składają się z typów CLR, które są autonomiczne i odłączone [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]od. Jeśli jednak zapytanie zwraca kolekcję obiektów jednostek z określonym typem, reprezentowane przez <xref:System.Data.Objects.ObjectQuery%601>, te typy są śledzone przez kontekst obiektu. Wszystkie zachowania obiektów (takie jak kolekcje podrzędne/nadrzędne, śledzenie zmian, polimorfizm i tak dalej) są zdefiniowane w [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Tej funkcji można użyć w swojej pojemności, zgodnie z [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]definicją w. Aby uzyskać więcej informacji, zobacz [Praca z obiektami](../working-with-objects.md).  
+ Jeśli wykonanie zapytania zwróci podstawowe typy modelu koncepcyjnego, wyniki składają się z typów CLR, które są autonomiczne i odłączone od Entity Framework. Jeśli jednak zapytanie zwraca kolekcję obiektów jednostek z określonym typem, reprezentowane przez <xref:System.Data.Objects.ObjectQuery%601>, te typy są śledzone przez kontekst obiektu. Wszystkie zachowania obiektów (takie jak kolekcje podrzędne/nadrzędne, śledzenie zmian, polimorfizm i tak dalej) są zdefiniowane w Entity Framework. Tej funkcji można użyć w swojej pojemności, zgodnie z definicją w Entity Framework. Aby uzyskać więcej informacji, zobacz [Praca z obiektami](../working-with-objects.md).
   
  Typy struktur zwracane z zapytań (takich jak typy anonimowe i typy złożone o wartości null) `null` mogą być wartościami. Właściwość zwróconego obiektu może `null` być również wartością. <xref:System.Data.Objects.DataClasses.EntityCollection%601> Może to wynikać z projekcji właściwości kolekcji jednostki, która jest `null` wartością, taką jak wywołanie <xref:System.Linq.Queryable.FirstOrDefault%2A> elementu <xref:System.Data.Objects.ObjectQuery%601> , który nie ma żadnych elementów.  
   

@@ -2,12 +2,12 @@
 title: Obsługa wyjątków i błędów
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: 676ebe999c72ed678b7432ec154b1ec104b4d6cd
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f95907d4f88315f2815b84e2ceb4e069783438d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795701"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851281"
 ---
 # <a name="handling-exceptions-and-faults"></a>Obsługa wyjątków i błędów
 Wyjątki są używane do komunikacji błędów lokalnie w ramach usługi lub implementacji klienta. Z drugiej strony są używane do przekazywania błędów między granicami usług, na przykład z serwera do klienta lub na odwrót. Oprócz błędów, kanały transportu często używają mechanizmów specyficznych dla transportu do przekazywania błędów na poziomie transportu. Na przykład transport HTTP używa kodów stanu, takich jak 404 do przekazywania nieistniejącego adresu URL punktu końcowego (nie istnieje punkt końcowy do wysłania błędu). Ten dokument składa się z trzech sekcji, które zawierają wskazówki dotyczące niestandardowych autorów kanałów. W pierwszej sekcji znajdują się wskazówki dotyczące tego, kiedy i jak definiować i generować wyjątki. Druga sekcja zawiera wskazówki dotyczące generowania i zużywania błędów. Trzecia sekcja wyjaśnia, jak podać informacje o śledzeniu, aby ułatwić użytkownikowi niestandardowego kanału Rozwiązywanie problemów z uruchamianiem aplikacji.  
@@ -48,7 +48,7 @@ Błąd protokołu SOAP 1,2 (z lewej) i błąd protokołu SOAP 1,1 (prawo). Nale�
   
  Protokół SOAP definiuje komunikat o błędzie jako komunikat, który zawiera tylko element błędu (element, którego nazwa jest `<env:Fault>`) jako `<env:Body>`element podrzędny. Zawartość elementu Fault różni się nieco od protokołu SOAP 1,1 i protokołu SOAP 1,2, jak pokazano na rysunku 1. <xref:System.ServiceModel.Channels.MessageFault?displayProperty=nameWithType> Jednak Klasa normalizuje te różnice w jednym modelu obiektów:  
   
-```  
+```csharp
 public abstract class MessageFault  
 {  
     protected MessageFault();  
@@ -74,7 +74,7 @@ public abstract class MessageFault
   
  Należy utworzyć nowe podkody błędów (lub nowe kody błędów w przypadku korzystania z protokołu SOAP 1,1), jeśli jest to interesujące do programistycznego odróżnienia błędu. Jest to analogiczne do tworzenia nowego typu wyjątku. Należy unikać używania notacji kropki z kodami błędów SOAP 1,1. ( [Profil usługi WS-I Basic](https://go.microsoft.com/fwlink/?LinkId=95177) odradza również korzystanie z notacji kropki kodu błędu).  
   
-```  
+```csharp  
 public class FaultCode  
 {  
     public FaultCode(string name);  
@@ -96,7 +96,7 @@ public class FaultCode
   
  Właściwość odnosi `env:Reason` się do (lub `faultString` w protokole SOAP 1,1) opis nieprawidłowego stanu błędu analogicznie do komunikatu o wyjątku. `Reason` Klasa (i SOAP `env:Reason/faultString`) ma wbudowaną obsługę mającą wiele tłumaczeń w interesie globalizacji. `FaultReason`  
   
-```  
+```csharp  
 public class FaultReason  
 {  
     public FaultReason(FaultReasonText translation);  
@@ -118,7 +118,7 @@ public class FaultReason
   
  Podczas generowania błędu kanał niestandardowy nie powinien wysyłać błędu bezpośrednio, raczej powinien zgłosić wyjątek i pozwolić warstwie powyżej zdecydować, czy skonwertować ten wyjątek na błąd i jak go wysłać. Aby pomóc w tej konwersji, kanał powinien zapewnić `FaultConverter` implementację, która może przekonwertować wyjątek zgłoszony przez niestandardowy kanał na odpowiedni błąd. `FaultConverter`jest zdefiniowany jako:  
   
-```  
+```csharp  
 public class FaultConverter  
 {  
     public static FaultConverter GetDefaultFaultConverter(  
@@ -134,7 +134,7 @@ public class FaultConverter
   
  Każdy kanał generujący błędy niestandardowe musi implementować `FaultConverter` i zwracać z wywołania do. `GetProperty<FaultConverter>` Implementacja niestandardowa `OnTryCreateFaultMessage` musi wykonać konwersję wyjątku na błąd lub delegata do wewnętrznego `FaultConverter`kanału. Jeśli kanał jest transportem, należy przekonwertować wyjątek lub obiekt delegowany do kodera `FaultConverter` lub domyślnego ustawienia `FaultConverter` usługi WCF. Domyślnie `FaultConverter` konwertuje błędy odpowiadające komunikatom o błędach określonych przez WS-Addressing i SOAP. Oto przykładowa `OnTryCreateFaultMessage` implementacja.  
   
-```  
+```csharp  
 public override bool OnTryCreateFaultMessage(Exception exception,   
                                              out Message message)  
 {  
@@ -204,7 +204,7 @@ public override bool OnTryCreateFaultMessage(Exception exception,
   
  Poniższy model obiektów obsługuje konwertowanie komunikatów na wyjątki:  
   
-```  
+```csharp  
 public class FaultConverter  
 {  
     public static FaultConverter GetDefaultFaultConverter(  
@@ -224,7 +224,7 @@ public class FaultConverter
   
  Typowa implementacja wygląda następująco:  
   
-```  
+```csharp  
 public override bool OnTryCreateException(  
                             Message message,   
                             MessageFault fault,   
@@ -290,7 +290,7 @@ public override bool OnTryCreateException(
   
  Jeśli kanał protokołu wysyła niestandardowy nagłówek z parametrem MustUnderstand = true i odbiera `mustUnderstand` błąd, musi ustalić, czy ten błąd jest spowodowany przez plik, który został wysłany. Istnieją dwa elementy członkowskie `MessageFault` klasy, które są przydatne dla tego:  
   
-```  
+```csharp  
 public class MessageFault  
 {  
     ...  
@@ -322,7 +322,7 @@ public class MessageFault
   
  Po utworzeniu źródła śledzenia należy wywołać <xref:System.Diagnostics.TraceSource.TraceData%2A>metody, <xref:System.Diagnostics.TraceSource.TraceEvent%2A>lub <xref:System.Diagnostics.TraceSource.TraceInformation%2A> , aby pisać wpisy śledzenia do detektorów śledzenia. Dla każdego zapisywanego wpisu śledzenia należy sklasyfikować typ zdarzenia jako jeden z typów zdarzeń zdefiniowanych w <xref:System.Diagnostics.TraceEventType>. Ta klasyfikacja i ustawienie poziomu śledzenia w obszarze Konfiguracja określają, czy wpis śledzenia jest wyprowadzany do odbiornika. Na przykład ustawienie poziomu śledzenia w obszarze `Warning` konfiguracja pozwala `Warning`na zapisywanie wpisów `Error` `Critical` śledzenia, ale bloków informacji i zapisów pełnych. Oto przykład tworzenia wystąpienia źródła śledzenia i zapisywania wpisu na poziomie informacji:  
   
-```  
+```csharp
 using System.Diagnostics;  
 //...  
 TraceSource udpSource=new TraceSource("Microsoft.Samples.Udp");  

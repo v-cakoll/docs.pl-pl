@@ -2,18 +2,18 @@
 title: Zalecane ustawienia śledzenia i rejestrowania komunikatów
 ms.date: 03/30/2017
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
-ms.openlocfilehash: fa6dc74a26f6a76591a15c549a892f31a65c521e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e671762edb2d1ca71ce14cb6ef66c64e02bc297
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779733"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856086"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>Zalecane ustawienia śledzenia i rejestrowania komunikatów
-W tym temacie opisano zalecane śledzenia i ustawienia rejestrowania komunikatów dla różnych środowisk operacyjnych.  
+W tym temacie opisano zalecane ustawienia śledzenia i rejestrowania komunikatów dla różnych środowisk operacyjnych.  
   
 ## <a name="recommended-settings-for-a-production-environment"></a>Zalecane ustawienia dla środowiska produkcyjnego  
- W środowisku produkcyjnym, jeśli używasz źródła śledzenia WCF, ustaw `switchValue` na ostrzeżenie. Jeśli używasz WCF `System.ServiceModel` śledzenia źródła, ustaw `switchValue` atrybutu `Warning` i `propagateActivity` atrybutu `true`. Jeśli używasz źródła śledzenia zdefiniowanych przez użytkownika, ustaw `switchValue` atrybutu `Warning, ActivityTracing`. Można to zrobić ręcznie przy użyciu [narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). Jeśli nie przewidujesz trafień wydajności, możesz ustawić `switchValue` atrybutu `Information` we wszystkich przypadkach opisanych powyżej, która generuje stosunkowo dużej ilości danych śledzenia. W poniższym przykładzie pokazano te zalecanych ustawień.  
+ W przypadku środowiska produkcyjnego, jeśli używasz źródeł śledzenia WCF, ustaw `switchValue` opcję na ostrzeżenie. Jeśli używasz źródła śledzenia WCF `System.ServiceModel` , `switchValue` ustaw atrybut na `Warning` i `propagateActivity` atrybut na `true`. Jeśli używasz źródła śledzenia zdefiniowanego przez użytkownika, ustaw `switchValue` atrybut na. `Warning, ActivityTracing` Można to zrobić ręcznie przy użyciu [Narzędzia Edytora konfiguracji (SvcConfigEditor. exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). Jeśli nie przewidujesz trafienia wydajności, możesz ustawić `switchValue` atrybut na `Information` we wszystkich wymienionych wcześniej przypadkach, co generuje dość dużą ilość danych śledzenia. Poniższy przykład ilustruje te zalecane ustawienia.  
   
 ```xml  
 <configuration>  
@@ -47,10 +47,10 @@ W tym temacie opisano zalecane śledzenia i ustawienia rejestrowania komunikató
 </configuration>  
 ```  
   
-## <a name="recommended-settings-for-deployment-or-debugging"></a>Zalecane ustawienia wdrażania i debugowania  
- Dla wdrożenia lub w środowisku debugowania wybierz `Information` lub `Verbose`, wraz z `ActivityTracing` dla obu zdefiniowanej przez użytkownika lub `System.ServiceModel` źródła śledzenia. Aby zwiększyć możliwości debugowania, należy również dodać dodatkowe źródła (`System.ServiceModel.MessageLogging`) do konfiguracji, aby włączyć rejestrowanie komunikatów. Należy zauważyć, że `switchValue` atrybut nie ma wpływu na tego źródła śledzenia.  
+## <a name="recommended-settings-for-deployment-or-debugging"></a>Zalecane ustawienia dla wdrożenia lub debugowania  
+ W przypadku środowiska wdrażania lub debugowania wybierz `Information` lub `Verbose`, a także `ActivityTracing` dla źródła zdefiniowanego przez użytkownika lub `System.ServiceModel` śledzenia. Aby ulepszyć debugowanie, należy również dodać do konfiguracji dodatkowe źródło śledzenia`System.ServiceModel.MessageLogging`() w celu umożliwienia rejestrowania komunikatów. Zwróć uwagę, `switchValue` że atrybut nie ma wpływu na to źródło śledzenia.  
   
- W poniższym przykładzie pokazano zalecane ustawienia, za pomocą udostępnionego odbiornik, który korzysta z `XmlWriterTraceListener`.  
+ Poniższy przykład ilustruje zalecane ustawienia przy użyciu współużytkowanego odbiornika, który korzysta z `XmlWriterTraceListener`.  
   
 ```xml  
 <configuration>  
@@ -96,19 +96,19 @@ W tym temacie opisano zalecane śledzenia i ustawienia rejestrowania komunikató
 </configuration>  
 ```  
   
-## <a name="using-wmi-to-modify-settings"></a>Aby zmodyfikować ustawienia przy użyciu usługi WMI  
- WMI umożliwia zmianę ustawień konfiguracji w czasie wykonywania (włączając `wmiProviderEnabled` atrybut w konfiguracji, jak pokazano w wcześniej przykładzie konfiguracji). Na przykład można użyć WMI CIM Studio, można zmienić poziomu źródła śledzenia z ostrzegawczego do informacji w czasie wykonywania. Należy pamiętać, że spadek wydajności debugowania na żywo w ten sposób mogą być bardzo duże. Aby uzyskać więcej informacji na temat przy użyciu usługi WMI, zobacz [przy użyciu Instrumentacji zarządzania Windows Diagnostics](../../../../../docs/framework/wcf/diagnostics/wmi/index.md) tematu.  
+## <a name="using-wmi-to-modify-settings"></a>Modyfikowanie ustawień przy użyciu usługi WMI  
+ Za pomocą usługi WMI można zmienić ustawienia konfiguracji w czasie wykonywania (przez włączenie `wmiProviderEnabled` atrybutu w konfiguracji, jak pokazano w poprzednim przykładzie konfiguracji). Można na przykład użyć usługi WMI w programie CIM Studio, aby zmienić poziomy źródła śledzenia z ostrzeżeń na informacje w czasie wykonywania. Należy pamiętać, że koszt wydajności debugowania na żywo w ten sposób może być bardzo wysoki. Aby uzyskać więcej informacji na temat korzystania z usługi WMI, zobacz temat [używanie Instrumentacja zarządzania Windows do diagnostyki](../../../../../docs/framework/wcf/diagnostics/wmi/index.md) .  
   
-## <a name="enable-correlated-events-in-aspnet-tracing"></a>Włącz zdarzenia skorelowane w śledzenie na platformie ASP.NET  
- Zdarzenia programu ASP.NET nie należy ustawiać identyfikator korelacji (identyfikator), o ile nie jest włączone śledzenie zdarzeń programu ASP.NET. Aby wyświetlić zdarzenia skorelowane prawidłowo, należy włączyć na zdarzenia ASP.NET śledzenia, używając następującego polecenia w konsoli poleceń, który może być wywołana przechodząc do **Start**, **Uruchom** i typ **cmd** ,  
+## <a name="enable-correlated-events-in-aspnet-tracing"></a>Włącz skorelowane zdarzenia w śledzeniu ASP.NET  
+ Zdarzenia ASP.NET nie ustawiają identyfikatora korelacji (ActivityID), chyba że jest włączone ASP.NET śledzenie zdarzeń. Aby sprawdzić poprawność zdarzeń skorelowanych, należy włączyć śledzenie zdarzeń ASP.NET za pomocą następującego polecenia w konsoli poleceń, które można wywołać, przechodząc do **menu Start**, **Run** i Type **cmd**,  
   
-```  
+```console  
 logman start mytrace -pf logman.providers -o test.etl –ets  
 ```  
   
- Aby wyłączyć śledzenie zdarzeń programu ASP.NET, użyj następującego polecenia,  
+ Aby wyłączyć śledzenie zdarzeń ASP.NET, użyj następującego polecenia:  
   
-```  
+```console
 logman stop mytrace -ets  
 ```  
   

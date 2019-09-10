@@ -5,12 +5,12 @@ author: mairaw
 ms.author: adegeo
 ms.custom: updateeachvsrelease
 ms.date: 07/13/2019
-ms.openlocfilehash: 5086b185ee2d49c7b569ed0cb62b4c8995f9982c
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 4e0570beb0dd096d7d11cdcfb6a7ed20221c0386
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433913"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848956"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>Wymagania wstępne dotyczące platformy .NET Core w systemie macOS
 
@@ -26,7 +26,7 @@ Program .NET Core 2. x jest obsługiwany przez następujące wersje programu mac
 
 Zobacz obsługiwane wersje systemu operacyjnego .NET [core 2,1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) i [obsługiwane wersje systemu operacyjnego .NET Core 2,2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) , aby zapoznać się z pełną listą systemów operacyjnych .NET Core 2,1 i .NET Core 2,2 Obsługiwane systemy operacyjne, dystrybucje i wersje, nieobsługiwane wersje systemu operacyjnego i zasady cyklu życia linki.
 
-Aby uzyskać linki do pobrania i więcej informacji, zobacz pliki do pobrania w [programie .net core 2,2](https://www.microsoft.com/net/download/dotnet-core/2.2) lub w [programie .NET Core 2,1](https://www.microsoft.com/net/download/dotnet-core/2.1).
+Aby uzyskać linki do pobrania i więcej informacji, zobacz pliki do pobrania w [programie .net core 2,2](https://dotnet.microsoft.com/download/dotnet-core/2.2) lub w [programie .NET Core 2,1](https://dotnet.microsoft.com/download/dotnet-core/2.1).
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -37,7 +37,7 @@ Program .NET Core 1. x jest obsługiwany przez następujące wersje programu mac
 
 Zobacz obsługiwane wersje systemu operacyjnego .NET [core 1,1](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1.md) i [obsługiwane wersje systemu operacyjnego .NET Core 1,0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) , aby zapoznać się z pełną listą systemów operacyjnych .NET Core 1,1 i .NET Core 1,0 obsługiwane systemy operacyjne, dystrybucje i wersje, nieobsługiwane wersje systemu operacyjnego i zasady cyklu życia linki.
 
-Aby uzyskać linki do pobrania i więcej informacji, zobacz pliki do pobrania w [programie .net core 1,1](https://www.microsoft.com/net/download/dotnet-core/1.1) lub w [programie .NET Core 1,0](https://www.microsoft.com/net/download/dotnet-core/1.0).
+Aby uzyskać linki do pobrania i więcej informacji, zobacz pliki do pobrania w [programie .net core 1,1](https://dotnet.microsoft.com/download/dotnet-core/1.1) lub w [programie .NET Core 1,0](https://dotnet.microsoft.com/download/dotnet-core/1.0).
 
 # <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
@@ -47,7 +47,7 @@ Program .NET Core 3,0 jest obsługiwany przez następujące wersje programu macO
 
 Zobacz [obsługiwane wersje systemu operacyjnego .net core 3,0](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) , aby uzyskać pełną listę obsługiwanych systemów operacyjnych, dystrybucje i wersje programu .net Core 3,0, wersje systemu operacyjnego i linki do zasad cyklu życia.
 
-Aby uzyskać linki do pobrania i więcej informacji, zobacz temat [pobieranie z programu .NET Core 3,0](https://www.microsoft.com/net/download/dotnet-core/3.0).
+Aby uzyskać linki do pobrania i więcej informacji, zobacz temat [pobieranie z programu .NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
 ---
 
@@ -55,7 +55,7 @@ Aby uzyskać linki do pobrania i więcej informacji, zobacz temat [pobieranie z 
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-Pobierz i Zainstaluj zestaw .NET Core SDK z programu [.NET downloads](https://www.microsoft.com/net/download/core). Jeśli masz problemy z instalacją w systemie macOS, zapoznaj się z tematem [znane problemy](https://github.com/dotnet/core/tree/master/release-notes/2.1) dotyczące zainstalowanej wersji programu.
+Pobierz i Zainstaluj zestaw .NET Core SDK ze strony [plików do pobrania platformy .NET](https://dotnet.microsoft.com/download) . Jeśli masz problemy z instalacją w systemie macOS, zapoznaj się z tematem [znane problemy](https://github.com/dotnet/core/tree/master/release-notes/2.1) dotyczące zainstalowanej wersji programu.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -69,11 +69,11 @@ ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
 ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 ```
 
-Pobierz i Zainstaluj zestaw .NET Core SDK z programu [.NET downloads](https://www.microsoft.com/net/download/core). Jeśli masz problemy z instalacją w systemie macOS, zapoznaj się z tematem informacje o [znanych problemach](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) i [1.0.1 znanych problemach](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md) .
+Pobierz i Zainstaluj zestaw .NET Core SDK ze strony [plików do pobrania platformy .NET](https://dotnet.microsoft.com/download) . Jeśli masz problemy z instalacją w systemie macOS, zapoznaj się z tematem informacje o [znanych problemach](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) i [1.0.1 znanych problemach](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md) .
 
 # <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
-Pobierz i Zainstaluj zestaw .NET Core SDK z programu [.NET downloads](https://www.microsoft.com/net/download/core). Jeśli masz problemy z instalacją na macOS, zapoznaj się z tematem [Informacje o wersji](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) zainstalowanej wersji programu.
+Pobierz i Zainstaluj zestaw .NET Core SDK ze strony [plików do pobrania platformy .NET](https://dotnet.microsoft.com/download) . Jeśli masz problemy z instalacją na macOS, zapoznaj się z tematem [Informacje o wersji](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) zainstalowanej wersji programu.
 
 ---
 

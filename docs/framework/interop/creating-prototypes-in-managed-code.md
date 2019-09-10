@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8d51149c01b4c8018609ca9313cc4eea2afbb5a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f32924c8c104f37fdb98a2a9ff104b6f6c19e478
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946572"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853837"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Tworzenie prototypów w kodzie zarządzanym
 W tym temacie opisano, jak uzyskać dostęp do funkcji niezarządzanych i wprowadzono kilka pól atrybutów, które umożliwiają dodawanie adnotacji do definicji metody w kodzie zarządzanym. Przykłady, które demonstrują sposób konstruowania. Deklaracje oparte na sieci, które mają być używane z wywołaniem platformy, można znaleźć w temacie [kierowanie danych za pomocą wywołania platformy](marshaling-data-with-platform-invoke.md).  
@@ -189,7 +189,7 @@ class PInvokeScenario
   
  Poniższe deklaracje interfejsu com międzyoperacyjnych `Assert`ignorują modyfikatory, `Deny`i `PermitOnly` , podobnie jak w przypadku wywołania platform w poprzedniej sekcji.  
   
-```  
+```csharp
 [ComImport, Guid("12345678-43E6-43c9-9A13-47F40B338DE0")]  
 interface IAssertStubsItf  
 {  
@@ -220,7 +220,7 @@ interface IAssertStubsItf
   
  `Demand` Ponadto modyfikator nie jest akceptowany w scenariuszach deklaracji interfejsu COM Interop, jak pokazano w poniższym przykładzie.  
   
-```  
+```csharp  
 [ComImport, Guid("12345678-43E6-43c9-9A13-47F40B338DE0")]  
 interface IDemandStubsItf  
 {  

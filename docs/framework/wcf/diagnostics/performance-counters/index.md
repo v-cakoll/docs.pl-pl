@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 4368bd57718f52816d4efad39932bcc0959b67a2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a9bddcbd907e37d9bdf757b1999946c99e10440c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951300"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855626"
 ---
 # <a name="wcf-performance-counters"></a>Liczniki wydajności programu WCF
 Windows Communication Foundation (WCF) zawiera duży zestaw liczników wydajności, które ułatwiają pomiar wydajności aplikacji.  
@@ -39,7 +39,7 @@ Windows Communication Foundation (WCF) zawiera duży zestaw liczników wydajnoś
   
  Liczniki wydajności można również włączyć w kodzie w następujący sposób:  
   
-```  
+```csharp
 using System.Configuration;  
 using System.ServiceModel.Configuration;  
 using System.ServiceModel.Diagnostics;  
@@ -87,9 +87,7 @@ config.Save();
 ### <a name="service-performance-counters"></a>Liczniki wydajności usługi  
  Liczniki wydajności usługi mierzą zachowanie usługi jako całość i mogą służyć do diagnozowania wydajności całej usługi. Można je znaleźć w `ServiceModelService 4.0.0.0` obiekcie wydajności podczas wyświetlania z monitorem wydajności. Wystąpienia są nazwane przy użyciu następującego wzorca:  
   
-```  
-ServiceName@ServiceBaseAddress  
-```  
+`ServiceName@ServiceBaseAddress`
   
  Licznik w zakresie usługi jest agregowany z licznika w kolekcji punktów końcowych.  
   
@@ -98,9 +96,7 @@ ServiceName@ServiceBaseAddress
 ### <a name="endpoint-performance-counters"></a>Liczniki wydajności punktu końcowego  
  Liczniki wydajności punktu końcowego umożliwiają przeglądanie danych odzwierciedlających, w jaki sposób punkt końcowy akceptuje komunikaty. Można je znaleźć w `ServiceModelEndpoint 4.0.0.0` obiekcie wydajności podczas przeglądania przy użyciu Monitora wydajności. Wystąpienia są nazwane przy użyciu następującego wzorca:  
   
-```  
-(ServiceName).(ContractName)@(endpoint listener address)  
-```  
+`(ServiceName).(ContractName)@(endpoint listener address)`
   
  Dane są podobne do tego, co jest zbierane dla poszczególnych operacji, ale są agregowane w całym punkcie końcowym.  
   
@@ -112,9 +108,7 @@ ServiceName@ServiceBaseAddress
 ### <a name="operation-performance-counters"></a>Liczniki wydajności operacji  
  Liczniki wydajności operacji są dostępne w `ServiceModelOperation 4.0.0.0` obiekcie wydajności podczas wyświetlania z monitorem wydajności. Każda operacja ma pojedyncze wystąpienie. Oznacza to, że jeśli dany kontrakt zawiera 10 operacji, do tego kontraktu są skojarzone 10 wystąpień liczników operacji. Wystąpienia obiektów są nazwane przy użyciu następującego wzorca:  
   
-```  
-(ServiceName).(ContractName).(OperationName)@(first endpoint listener address)  
-```  
+`(ServiceName).(ContractName).(OperationName)@(first endpoint listener address)`
   
  Ten licznik umożliwia pomiar sposobu użycia wywołania oraz sposobu wykonywania operacji.  
   

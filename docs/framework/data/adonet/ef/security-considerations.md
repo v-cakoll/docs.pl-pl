@@ -2,23 +2,23 @@
 title: Zagadnienia dotyczące zabezpieczeń (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: d1fb104f336938cc83d53cae71a8132f9b648dc6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 1865afb384cfff41ede953c00f01cc96aea9a080
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248551"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854249"
 ---
 # <a name="security-considerations-entity-framework"></a>Zagadnienia dotyczące zabezpieczeń (Entity Framework)
-W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficzne dla opracowywania [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] , wdrażania i uruchamiania aplikacji. Należy również postępować zgodnie z zaleceniami dotyczącymi tworzenia bezpiecznych aplikacji .NET Framework. Aby uzyskać więcej informacji, zobacz [Omówienie zabezpieczeń](../security-overview.md).  
+W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficzne dla opracowywania, wdrażania i uruchamiania aplikacji Entity Framework. Należy również postępować zgodnie z zaleceniami dotyczącymi tworzenia bezpiecznych aplikacji .NET Framework. Aby uzyskać więcej informacji, zobacz [Omówienie zabezpieczeń](../security-overview.md).  
   
 ## <a name="general-security-considerations"></a>Ogólne zagadnienia dotyczące zabezpieczeń  
- Poniższe zagadnienia dotyczące zabezpieczeń dotyczą wszystkich aplikacji korzystających z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]programu.  
+ Poniższe zagadnienia dotyczące zabezpieczeń dotyczą wszystkich aplikacji, które używają Entity Framework.  
   
 #### <a name="use-only-trusted-data-source-providers"></a>Używaj tylko zaufanych dostawców źródeł danych.  
  Aby można było komunikować się ze źródłem danych, dostawca musi wykonać następujące czynności:  
   
-- Odbierz parametry połączenia od [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+- Odbierz parametry połączenia z Entity Framework.  
   
 - Przetłumacz drzewo poleceń na natywny język zapytań źródła danych.  
   
@@ -27,7 +27,7 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
  Podczas operacji logowania informacje oparte na haśle użytkownika są przesyłane do serwera za pośrednictwem bibliotek sieciowych bazowego źródła danych. Złośliwy dostawca może ukraść poświadczenia użytkownika, generować złośliwe zapytania lub naruszać zestaw wyników.  
   
 #### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>Szyfruj połączenie, aby chronić poufne dane.  
- Program [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] nie obsługuje bezpośrednio szyfrowania danych. Jeśli użytkownicy uzyskują dostęp do danych za pośrednictwem sieci publicznej, aplikacja powinna ustanowić szyfrowane połączenie ze źródłem danych, aby zwiększyć bezpieczeństwo. Aby uzyskać więcej informacji, zobacz dokumentację dotyczącą zabezpieczeń dla źródła danych. Aby uzyskać SQL Server źródło danych, zobacz [szyfrowanie połączeń do SQL Server](https://go.microsoft.com/fwlink/?LinkId=119544).  
+ Entity Framework nie obsługuje bezpośrednio szyfrowania danych. Jeśli użytkownicy uzyskują dostęp do danych za pośrednictwem sieci publicznej, aplikacja powinna ustanowić szyfrowane połączenie ze źródłem danych, aby zwiększyć bezpieczeństwo. Aby uzyskać więcej informacji, zobacz dokumentację dotyczącą zabezpieczeń dla źródła danych. Aby uzyskać SQL Server źródło danych, zobacz [szyfrowanie połączeń do SQL Server](https://go.microsoft.com/fwlink/?LinkId=119544).  
   
 #### <a name="secure-the-connection-string"></a>Zabezpiecz parametry połączenia.  
  Ochrona dostępu do źródła danych jest jednym z najważniejszych celów związanych z zabezpieczaniem aplikacji. Parametry połączenia przedstawiają potencjalną lukę w zabezpieczeniach, jeśli nie została zabezpieczona lub nieprawidłowo skonstruowana. Gdy przechowujesz informacje o połączeniu w postaci zwykłego tekstu lub utrwalasz je w pamięci, grozi sobie naruszeniem całego systemu. Poniżej przedstawiono zalecane metody zabezpieczania parametrów połączenia:  
@@ -46,7 +46,7 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
   
 - Podczas dynamicznego tworzenia połączeń używaj konstruktorów parametrów połączenia.  
   
-     W przypadku konieczności konstruowania parametrów połączenia w czasie wykonywania należy <xref:System.Data.EntityClient.EntityConnectionStringBuilder> użyć klasy. Ta klasa konstruktora ciągów pomaga zapobiegać atakom przed iniekcją parametrów połączenia przez sprawdzenie poprawności i ucieczkę nieprawidłowych informacji wejściowych. Aby uzyskać więcej informacji, zobacz [jak: Kompiluj parametry](how-to-build-an-entityconnection-connection-string.md)połączenia usługi EntityConnection. Należy również użyć odpowiedniej klasy konstruktora ciągów, aby utworzyć parametry połączenia ze źródłem danych, które są częścią [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] parametrów połączenia. Aby uzyskać informacje na temat konstruktorów parametrów połączenia dla dostawców ADO.NET, zobacz [konstruktory parametrów połączenia](../connection-string-builders.md).  
+     W przypadku konieczności konstruowania parametrów połączenia w czasie wykonywania należy <xref:System.Data.EntityClient.EntityConnectionStringBuilder> użyć klasy. Ta klasa konstruktora ciągów pomaga zapobiegać atakom przed iniekcją parametrów połączenia przez sprawdzenie poprawności i ucieczkę nieprawidłowych informacji wejściowych. Aby uzyskać więcej informacji, zobacz [jak: Kompiluj parametry](how-to-build-an-entityconnection-connection-string.md)połączenia usługi EntityConnection. Należy również użyć odpowiedniej klasy konstruktora ciągów, aby utworzyć parametry połączenia źródła danych, które są częścią parametrów połączenia Entity Framework. Aby uzyskać informacje na temat konstruktorów parametrów połączenia dla dostawców ADO.NET, zobacz [konstruktory parametrów połączenia](../connection-string-builders.md).  
   
  Aby uzyskać więcej informacji, zobacz [Ochrona informacji o połączeniu](../protecting-connection-information.md).  
   
@@ -63,7 +63,7 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
  Administrator źródła danych powinien udzielić użytkownikom tylko niezbędnych uprawnień. [!INCLUDE[esql](../../../../../includes/esql-md.md)] Mimo że nie obsługuje instrukcji DML, które modyfikują dane, takie jak INSERT, Update lub DELETE, użytkownicy mogą nadal uzyskiwać dostęp do tego połączenia ze źródłem danych. Złośliwy użytkownik może użyć tego połączenia do wykonywania instrukcji DML w języku macierzystym źródła danych.  
   
 #### <a name="run-applications-with-the-minimum-permissions"></a>Uruchamianie aplikacji z minimalnymi uprawnieniami.  
- Po umożliwieniu uruchamiania aplikacji zarządzanej z uprawnieniem pełnego zaufania .NET Framework nie ogranicza dostępu aplikacji do komputera. Może to spowodować, że luka w zabezpieczeniach w aplikacji spowoduje naruszenie całego systemu. Aby korzystać z zabezpieczeń dostępu kodu i innych mechanizmów zabezpieczeń w .NET Framework, należy uruchamiać aplikacje przy użyciu uprawnień częściowej relacji zaufania i z minimalnym zestawem uprawnień, które są potrzebne, aby umożliwić działanie aplikacji. Następujące uprawnienia dostępu do kodu to minimalne uprawnienia wymagane przez [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikację:  
+ Po umożliwieniu uruchamiania aplikacji zarządzanej z uprawnieniem pełnego zaufania .NET Framework nie ogranicza dostępu aplikacji do komputera. Może to spowodować, że luka w zabezpieczeniach w aplikacji spowoduje naruszenie całego systemu. Aby korzystać z zabezpieczeń dostępu kodu i innych mechanizmów zabezpieczeń w .NET Framework, należy uruchamiać aplikacje przy użyciu uprawnień częściowej relacji zaufania i z minimalnym zestawem uprawnień, które są potrzebne, aby umożliwić działanie aplikacji. Następujące uprawnienia dostępu do kodu to minimalne uprawnienia wymagane przez aplikację Entity Framework:  
   
 - <xref:System.Security.Permissions.FileIOPermission>: <xref:System.Security.Permissions.FileIOPermissionAccess.Write> aby otworzyć określone pliki metadanych lub <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> przeszukać katalog dla plików metadanych.  
   
@@ -78,7 +78,7 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
  Aby uzyskać więcej informacji, zobacz [zabezpieczenia dostępu kodu i ADO.NET](../code-access-security.md).  
   
 #### <a name="do-not-install-untrusted-applications"></a>Nie instaluj aplikacji niezaufanych.  
- Program [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] nie wymusi żadnych uprawnień zabezpieczeń i wywoła kod obiektu danych dostarczony przez użytkownika w procesie niezależnie od tego, czy jest on zaufany, czy nie. Upewnij się, że uwierzytelnianie i autoryzacja klienta są wykonywane przez magazyn danych i aplikację.  
+ Entity Framework nie wymusza żadnych uprawnień zabezpieczeń i wywoła kod obiektu danych podany przez użytkownika w procesie niezależnie od tego, czy jest on zaufany, czy nie. Upewnij się, że uwierzytelnianie i autoryzacja klienta są wykonywane przez magazyn danych i aplikację.  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>Ogranicz dostęp do wszystkich plików konfiguracji.  
  Administrator musi ograniczyć dostęp do zapisu do wszystkich plików, które określają konfigurację dla aplikacji, w tym do enterprisesec. config, Security. config, Machine. conf i \< *aplikacji*pliku konfiguracji aplikacji >. plik exe. config.  
@@ -86,7 +86,7 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
  Niezmienna nazwa dostawcy jest modyfikowalna w pliku App. config. Aplikacja kliencka musi mieć obowiązek uzyskiwania dostępu do podstawowego dostawcy za pośrednictwem standardowego modelu fabryki dostawców przy użyciu silnej nazwy.  
   
 #### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>Ogranicz uprawnienia do modelu i plików mapowania.  
- Administrator musi ograniczyć dostęp do zapisu do modelu i plików mapowania (. edmx,. csdl,. ssdl i. MSL) tylko do użytkowników, którzy modyfikują model lub mapowania. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Tylko wymaga dostępu do odczytu do tych plików w czasie wykonywania. Administrator powinien również ograniczyć dostęp do warstwy obiektów i wstępnie skompilowanych plików kodu źródłowego, które są generowane przez narzędzia Entity Data Model.  
+ Administrator musi ograniczyć dostęp do zapisu do modelu i plików mapowania (. edmx,. csdl,. ssdl i. MSL) tylko do użytkowników, którzy modyfikują model lub mapowania. Entity Framework wymaga tylko odczytu do tych plików w czasie wykonywania. Administrator powinien również ograniczyć dostęp do warstwy obiektów i wstępnie skompilowanych plików kodu źródłowego, które są generowane przez narzędzia Entity Data Model.  
   
 ## <a name="security-considerations-for-queries"></a>Zagadnienia dotyczące zabezpieczeń dotyczące zapytań  
  Podczas wykonywania zapytania dotyczącego modelu koncepcyjnego stosowane są następujące zagadnienia dotyczące zabezpieczeń. Te zagadnienia dotyczą [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytań korzystających z EntityClient i do zapytań obiektów przy [!INCLUDE[esql](../../../../../includes/esql-md.md)]użyciu metod LINQ, i konstruktora zapytań.  
@@ -135,7 +135,7 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
  <xref:System.Data.Objects.ObjectContext> Udostępnianie z więcej niż jedną domeną aplikacji może ujawnić informacje w parametrach połączenia. Zamiast tego należy przenieść obiekty serializowane lub wykresy obiektów do innej domeny aplikacji, a następnie dołączyć te obiekty do <xref:System.Data.Objects.ObjectContext> domeny w tej domenie. Aby uzyskać więcej informacji, zobacz [Serializowanie obiektów](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
   
 #### <a name="prevent-type-safety-violations"></a>Zapobiegaj naruszeniom bezpieczeństwa typów.  
- W przypadku naruszenia [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] bezpieczeństwa typów nie można zagwarantować integralności danych w obiektach. Naruszenia bezpieczeństwa typów mogą wystąpić, Jeśli zezwolisz niezaufanym aplikacjom na korzystanie z pełnego zaufania dostępu do kodu.  
+ W przypadku naruszenia bezpieczeństwa typów Entity Framework nie gwarantuje integralności danych w obiektach. Naruszenia bezpieczeństwa typów mogą wystąpić, Jeśli zezwolisz niezaufanym aplikacjom na korzystanie z pełnego zaufania dostępu do kodu.  
   
 #### <a name="handle-exceptions"></a>Obsługa wyjątków.  
  Dostęp do metod i właściwości <xref:System.Data.Objects.ObjectContext> w bloku try-catch. Przechwytywanie wyjątków zapobiega nieobsługiwanym wyjątkom od udostępniania wpisów w <xref:System.Data.Objects.ObjectStateManager> lub informacji o modelu (takich jak nazwy tabel) użytkownikom aplikacji.  
@@ -145,13 +145,13 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
 Podczas pracy ze ścieżkami w aplikacjach ASP.NET należy wziąć pod uwagę następujące kwestie.  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>Sprawdź, czy host sprawdza ścieżki.  
- Gdy jest używany ciąg podstawienia (ujętywsymbolepotoku),ADO.NETsprawdza,czyrozpoznanaścieżkajestobsługiwana.`|DataDirectory|` Na przykład, ".." jest niedozwolone w `DataDirectory`tle. To samo sprawdzenie w celu rozpoznania głównego operatora aplikacji sieci Web`~`() jest wykonywane przez proces obsługujący ASP.NET. Program IIS wykonuje tę kontrolę; jednak hosty inne niż usługi IIS mogą nie sprawdzać, czy rozpoznana ścieżka jest obsługiwana. Należy znać zachowanie hosta, na którym jest wdrażana [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacja.  
+ Gdy jest używany ciąg podstawienia (ujętywsymbolepotoku),ADO.NETsprawdza,czyrozpoznanaścieżkajestobsługiwana.`|DataDirectory|` Na przykład, ".." jest niedozwolone w `DataDirectory`tle. To samo sprawdzenie w celu rozpoznania głównego operatora aplikacji sieci Web`~`() jest wykonywane przez proces obsługujący ASP.NET. Program IIS wykonuje tę kontrolę; jednak hosty inne niż usługi IIS mogą nie sprawdzać, czy rozpoznana ścieżka jest obsługiwana. Należy znać zachowanie hosta, na którym jest wdrażana aplikacja Entity Framework.  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>Nie należy tworzyć założeń dotyczących rozwiązanych nazw ścieżek.  
- Chociaż wartości, dla których operator główny (`~`) `DataDirectory` i ciąg podstawienia, powinny być stałe w czasie wykonywania [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji, nie ograniczają hosta do modyfikowania tych wartości.  
+ Chociaż wartości, do których operator główny (`~`) `DataDirectory` i ciąg podstawienia powinny być stałe w czasie wykonywania aplikacji, Entity Framework nie ograniczają hosta do modyfikowania tych wartości.  
   
 #### <a name="verify-the-path-length-before-deployment"></a>Przed wdrożeniem sprawdź długość ścieżki.  
- Przed wdrożeniem [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji należy się upewnić, że wartości operatora głównego (~) i `DataDirectory` ciągu podstawienia nie przekraczają limitów długości ścieżki w systemie operacyjnym. Dostawcy danych ADO.NET nie zapewniają, że długość ścieżki należy do zakresu prawidłowych limitów.  
+ Przed wdrożeniem aplikacji Entity Framework należy upewnić się, że wartości operatora głównego (~) i `DataDirectory` ciągu podstawienia nie przekraczają limitów długości ścieżki w systemie operacyjnym. Dostawcy danych ADO.NET nie zapewniają, że długość ścieżki należy do zakresu prawidłowych limitów.  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>Zagadnienia dotyczące zabezpieczeń dla metadanych ADO.NET  
  Podczas generowania i pracy z modelem i mapowaniem plików obowiązują następujące zagadnienia dotyczące zabezpieczeń.  

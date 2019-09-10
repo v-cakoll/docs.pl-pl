@@ -1,50 +1,50 @@
 ---
-title: Wprowadzenie do C# -zapoznanie się z poziomu narzędzi deweloperskich
-description: Ten artykuł zawiera podstawowe wprowadzenie do narzędzi, będziesz używać do tworzenia C# i aplikacje platformy .NET na maszynie.
+title: Wprowadzenie do C# — zapoznaj się z narzędziami programistycznymi
+description: Ten artykuł zawiera podstawowe wprowadzenie do narzędzi, które będą używane do tworzenia C# aplikacji i platformy .NET na komputerze.
 ms.date: 10/23/2018
-ms.openlocfilehash: db0b3228272a17feaa11ec754fa0aa4952a0d1ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe39bd5e89bb168316b19c62d6e022e36c58fc2f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706237"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850750"
 ---
-# <a name="become-familiar-with-the-net-development-tools"></a>Zapoznanie się z poziomu narzędzi deweloperskich platformy .NET
+# <a name="become-familiar-with-the-net-development-tools"></a>Zapoznaj się z narzędziami programistycznymi dla platformy .NET
 
-Pierwszy krok uruchomiony samouczka na Twoim komputerze jest Konfigurowanie środowiska deweloperskiego.
-Temat .NET [rozpocząć pracę w ciągu 10 minut](https://www.microsoft.com/net/core) zawiera instrukcje dotyczące konfigurowania swojego lokalnego środowiska deweloperskiego na komputerze Mac, PC lub Linux.
+Pierwszym krokiem uruchamiania samouczka na komputerze jest skonfigurowanie środowiska programistycznego.
+Samouczek platformy .NET [Hello World w ciągu 10 minut](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) zawiera instrukcje dotyczące konfigurowania lokalnego środowiska deweloperskiego na komputerach Mac, komputerze lub Linux.
 
-Alternatywnie możesz zainstalować [zestawu .NET Core SDK](https://www.microsoft.com/net/download) i [programu Visual Studio Code](https://code.visualstudio.com/).
+Alternatywnie możesz zainstalować [zestaw .NET Core SDK](https://dotnet.microsoft.com/download) i [Visual Studio Code](https://code.visualstudio.com/).
 
-## <a name="basic-application-development-flow"></a>Przepływ rozwoju podstawowych aplikacji
+## <a name="basic-application-development-flow"></a>Podstawowy przepływ tworzenia aplikacji
 
-Będziesz tworzyć aplikacje za pomocą [ `dotnet new` ](../../../core/tools/dotnet-new.md) polecenia. To polecenie generuje pliki i zasoby niezbędne dla swojej aplikacji. Wprowadzenie do C# korzystać wszystkie samouczki `console` typu aplikacji. Po skonfigurowaniu podstawy można rozszerzyć do innych typów aplikacji.
+Aplikacje można tworzyć przy użyciu [`dotnet new`](../../../core/tools/dotnet-new.md) polecenia. To polecenie generuje pliki i zasoby niezbędne do Twojej aplikacji. Wprowadzenie do C# samouczków wszystkie używają `console` typu aplikacji. Po uzyskaniu podstawowych podstaw można rozszerzyć na inne typy aplikacji.
 
-Inne polecenia użyjesz [ `dotnet build` ](../../../core/tools/dotnet-build.md) do tworzenia pliku wykonywalnego i [ `dotnet run` ](../../../core/tools/dotnet-run.md) uruchomienia pliku wykonywalnego.
+Inne polecenia, które będą używane, [`dotnet build`](../../../core/tools/dotnet-build.md) są do kompilowania pliku wykonywalnego i [`dotnet run`](../../../core/tools/dotnet-run.md) uruchamiania pliku wykonywalnego.
 
-## <a name="pick-your-tutorial"></a>Pobierz samouczek
+## <a name="pick-your-tutorial"></a>Wybierz samouczek
 
-Można uruchomić z dowolnej z następujących samouczków:
+Możesz zacząć od dowolnego z następujących samouczków:
 
 ## <a name="numbers-in-cnumbers-in-csharp-localmd"></a>[Liczby w języku C#](numbers-in-csharp-local.md)
 
-W [liczby w elemencie C# ](numbers-in-csharp-local.md) samouczka, dowiesz się, jak komputery przechowujące liczby oraz sposób wykonywania obliczeń na różne typy liczbowe. Poznasz podstawy zaokrąglania oraz przeprowadzania obliczeń matematycznych za pomocą C#.
+W [numerach w C# ](numbers-in-csharp-local.md) samouczku dowiesz się, jak komputery są przechowywane w liczbie i jak wykonywać obliczenia przy użyciu różnych typów liczbowych. Poznasz podstawy zaokrąglania i sposób wykonywania obliczeń matematycznych za pomocą C#.
 
-W tym samouczku założono, że zakończono [Witaj, świecie](hello-world.yml) lekcji.
+W tym samouczku założono, że zakończono lekcji [Witaj świecie](hello-world.yml) .
 
 ## <a name="branches-and-loopsbranches-and-loops-localmd"></a>[Gałęzie i pętle](branches-and-loops-local.md)
 
-[Gałęzie i pętle](branches-and-loops-local.md) samouczek omawia podstawowe informacje dotyczące wybierania różnych ścieżek wykonywania kodu na podstawie wartości przechowywane w zmiennych. Poznasz podstawy przepływu sterowania, która jest podstawą jak programy podejmowanie decyzji i wybierz różne akcje.
+Samouczek [rozgałęzienia i pętle](branches-and-loops-local.md) uczy się podstaw wyboru różnych ścieżek wykonywania kodu na podstawie wartości przechowywanych w zmiennych. Nauczysz się podstaw przepływu sterowania, który jest podstawą sposobu podejmowania decyzji przez programy i wybierania różnych akcji.
 
-W tym samouczku założono, że zakończono [Witaj, świecie](hello-world.yml) i [liczby w elemencie C# ](numbers-in-csharp-local.md) lekcje.
+W tym samouczku przyjęto założenie, że zakończysz [Witaj świecie](hello-world.yml) i [numery w C# ](numbers-in-csharp-local.md) lekcji.
 
-## <a name="list-collectionarrays-and-collectionsmd"></a>[Lista kolekcji](arrays-and-collections.md)
+## <a name="list-collectionarrays-and-collectionsmd"></a>[Kolekcja list](arrays-and-collections.md)
 
-[Listy kolekcji](arrays-and-collections.md) lekcji przedstawi Przewodnik po typ kolekcji listy, który przechowuje sekwencji danych. Dowiesz się, jak dodać i usunąć elementy, wyszukiwać elementy i sortowanie listy. Dowiesz się o różnych rodzajów list. 
+Lekcja [kolekcji list](arrays-and-collections.md) zawiera Przewodnik typu kolekcji list, który przechowuje sekwencje danych. Dowiesz się, jak dodawać i usuwać elementy, wyszukiwać elementy i sortować listy. Poznasz różne rodzaje list. 
 
-Ten samouczek zakłada, Zakończono lekcje wymienionych powyżej.
+W tym samouczku założono, że zostały zakończone lekcje wymienione powyżej.
 
 ## <a name="introduction-to-classesintroduction-to-classesmd"></a>[Wprowadzenie do klas](introduction-to-classes.md)
 
-To wprowadzenie końcowego do C# samouczka jest dostępna tylko dla uruchomienia na komputerze, przy użyciu własnego lokalnego środowiska deweloperskiego i .NET Core.
-Można będzie tworzenie aplikacji konsolowej, a podstawowe funkcje zorientowane obiektowo, które są częścią C# języka.
+To ostateczne wprowadzenie C# do samouczka jest dostępne tylko do uruchamiania na maszynie przy użyciu własnego lokalnego środowiska deweloperskiego i platformy .NET Core.
+Utworzysz aplikację konsolową i zobaczysz podstawowe funkcje zorientowane obiektowo, które są częścią tego C# języka.

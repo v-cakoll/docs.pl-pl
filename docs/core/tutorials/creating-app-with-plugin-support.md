@@ -4,12 +4,12 @@ description: Dowiedz się, jak utworzyć aplikację platformy .NET Core, która 
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: 308fd2f853261e87da71892c42e17e36984d1978
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 54a4459619ee69fc74a14da7ff7fe10a472a4433
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68330982"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849449"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Tworzenie aplikacji platformy .NET Core za pomocą wtyczek
 
@@ -22,7 +22,7 @@ W tym samouczku pokazano, jak:
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Zainstaluj [zestaw SDK programu .NET Core 3,0 Preview 2](https://www.microsoft.com/net/core) lub nowszą wersję.
+- Zainstaluj [zestaw SDK programu .NET Core 3,0 Preview 2](https://dotnet.microsoft.com/download) lub nowszą wersję.
 
 ## <a name="create-the-application"></a>Tworzenie aplikacji
 

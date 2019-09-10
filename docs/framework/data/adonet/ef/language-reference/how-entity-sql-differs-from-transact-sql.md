@@ -2,12 +2,12 @@
 title: Czym język Entity SQL różni się od języka Transact-SQL
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-ms.openlocfilehash: 1a4bf8267ee5f036effc5f7bc91c28d1485b7612
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e809cea2f853eed51d28e55f81a411f7af2e5a33
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250862"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854475"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Czym język Entity SQL różni się od języka Transact-SQL
 W tym temacie opisano różnice między [!INCLUDE[esql](../../../../../../includes/esql-md.md)] programami i Transact-SQL.  
@@ -137,13 +137,13 @@ group by b + c
 ## <a name="collection-based-aggregates"></a>Agregacje oparte na kolekcjach  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)]obsługuje dwa rodzaje agregacji.  
   
- Agregacje oparte na kolekcji działają na kolekcjach i tworzą zagregowany wynik. Mogą one występować w dowolnym miejscu zapytania i nie wymagają `group by` klauzuli. Na przykład:  
+ Agregacje oparte na kolekcji działają na kolekcjach i tworzą zagregowany wynik. Mogą one występować w dowolnym miejscu zapytania i nie wymagają `group by` klauzuli. Przykład:  
   
 ```  
 select t.a as a, count({1,2,3}) as b from T as t     
 ```  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]obsługuje również agregacje w stylu SQL. Na przykład:  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]obsługuje również agregacje w stylu SQL. Przykład:  
   
 ```  
 select a, sum(t.b) from T as t group by t.a as a  
@@ -189,7 +189,7 @@ SELECT C2.FirstName, C2.LastName
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)]nie (jeszcze) zapewnia obsługę funkcji analitycznych.  
   
  Wbudowane funkcje, operatory  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]obsługuje podzestaw wbudowanych funkcji i operatorów języka Transact-SQL. Te operatory i funkcje mogą być obsługiwane przez dostawców głównych magazynów. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]używa funkcji specyficznych dla magazynu zadeklarowanych w manifeście dostawcy. Ponadto umożliwia zadeklarować wbudowane i zdefiniowane przez użytkownika funkcje [!INCLUDE[esql](../../../../../../includes/esql-md.md)] magazynu do użycia. [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]obsługuje podzestaw wbudowanych funkcji i operatorów języka Transact-SQL. Te operatory i funkcje mogą być obsługiwane przez dostawców głównych magazynów. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]używa funkcji specyficznych dla magazynu zadeklarowanych w manifeście dostawcy. Ponadto Entity Framework umożliwia zadeklarować wbudowane i zdefiniowane przez użytkownika funkcje magazynu, aby [!INCLUDE[esql](../../../../../../includes/esql-md.md)] można było korzystać z programu.  
   
  Wskazówek  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)]nie oferuje mechanizmów dla wskazówek dotyczących zapytań.  

@@ -2,12 +2,12 @@
 title: 'Instrukcje: pobieranie metadanych przez wiązanie inne niż wymiany metadanych'
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 6cd6e0ce5dc287c826179c152b989b5f7842bb6e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3721657eb72663450261b4bc8627b250b1a4a14e
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795574"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856033"
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Instrukcje: pobieranie metadanych przez wiązanie inne niż wymiany metadanych
 W tym temacie opisano sposób pobierania metadanych z punktu końcowego MEX względem powiązania niezwiązanego z MEX. Kod w tym przykładzie jest oparty na przykładowej [niestandardowej bezpiecznego punktu końcowego metadanych](../samples/custom-secure-metadata-endpoint.md) .  
@@ -85,7 +85,7 @@ W tym temacie opisano sposób pobierania metadanych z punktu końcowego MEX wzgl
   
 3. Utwórz wywołanie `MetadataExchangeClient` `GetMetadata`i. Istnieją dwa sposoby, aby to zrobić: można określić niestandardowe powiązanie w konfiguracji lub można określić niestandardowe powiązanie w kodzie, jak pokazano w poniższym przykładzie.  
   
-    ```  
+    ```csharp
     // The custom binding is specified in configuration.  
     EndpointAddress mexAddress = new EndpointAddress("http://localhost:8000/ServiceModelSamples/Service/mex");  
   
@@ -116,7 +116,7 @@ W tym temacie opisano sposób pobierania metadanych z punktu końcowego MEX wzgl
   
 4. Utwórz wywołanie `WsdlImporter` `ImportAllEndpoints`i, jak pokazano w poniższym kodzie.  
   
-    ```  
+    ```csharp
     WsdlImporter importer = new WsdlImporter(mexSet);  
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  

@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 38ec0986ef3e673ad2d624d33dc33d882f7e412c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0e5792fa4f31c4f40047016252100b1de23fd075
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780430"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854198"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Konfigurowanie usługi danych (Usługi danych programu WCF)
-Za [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]pomocą programu można tworzyć usługi danych, które [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] uwidaczniają kanały informacyjne. Dane w tych źródłach mogą pochodzić z różnych źródeł danych. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]program używa dostawców danych w celu udostępnienia tych [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] danych jako źródła strumieniowego. Ci dostawcy obejmują [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcę, dostawcę odbicia i zestaw niestandardowych interfejsów dostawcy usługi danych. Implementacja dostawcy definiuje model danych dla usługi. Aby uzyskać więcej informacji, zobacz [Data Services Providers](data-services-providers-wcf-data-services.md).  
+Za [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]pomocą programu można tworzyć usługi danych, które [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] uwidaczniają kanały informacyjne. Dane w tych źródłach mogą pochodzić z różnych źródeł danych. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]program używa dostawców danych w celu udostępnienia tych [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] danych jako źródła strumieniowego. Ci dostawcy obejmują dostawcę Entity Framework, dostawcę odbicia i zestaw niestandardowych interfejsów dostawcy usługi danych. Implementacja dostawcy definiuje model danych dla usługi. Aby uzyskać więcej informacji, zobacz [Data Services Providers](data-services-providers-wcf-data-services.md).  
   
  W [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]programie usługa danych jest klasą, która dziedziczy <xref:System.Data.Services.DataService%601> z klasy, gdzie typ usługi danych jest kontenerem jednostek modelu danych. Ten kontener jednostek ma co najmniej jedną właściwość, która zwraca <xref:System.Linq.IQueryable%601>obiekt, który jest używany do uzyskiwania dostępu do zestawów jednostek w modelu danych.  
   
@@ -69,7 +69,7 @@ Za [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]pomocą programu m
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> \- i -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Nieobsługiwane|Nieobsługiwane|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|Nieobsługiwane|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> \- i -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Nieobsługiwane|Nieobsługiwane|Nieobsługiwane|Nieobsługiwane|  
   
- <sup>1</sup> w tym przykładzie `Address` reprezentuje właściwość `Customers` typu złożonego jednostki, która ma właściwość o nazwie `StreetAddress`. Model używany przez usługi danych Northwind nie definiuje jawnie tego typu złożonego. Gdy model danych jest definiowany przy użyciu [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcy, można użyć narzędzi Entity Data Model do zdefiniowania takiego typu złożonego. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie i modyfikowanie typów](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))złożonych.  
+ <sup>1</sup> w tym przykładzie `Address` reprezentuje właściwość `Customers` typu złożonego jednostki, która ma właściwość o nazwie `StreetAddress`. Model używany przez usługi danych Northwind nie definiuje jawnie tego typu złożonego. Gdy model danych jest definiowany przy użyciu dostawcy Entity Framework, można użyć narzędzi Entity Data Model do zdefiniowania takiego typu złożonego. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie i modyfikowanie typów](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))złożonych.  
   
  <sup>2</sup> ten identyfikator URI jest obsługiwany, gdy właściwość zwracająca duży obiekt binarny (BLOB) jest definiowana jako zasób multimedialny należący do jednostki, która jest pozycją linku do nośnika, w tym przypadku jest `Customers`to. Aby uzyskać więcej informacji, zobacz [dostawca przesyłania strumieniowego](streaming-provider-wcf-data-services.md).  
   

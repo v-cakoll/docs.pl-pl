@@ -3,18 +3,18 @@ title: Gałęzie i pętle — C# wprowadzenie do samouczka
 description: W tym samouczku dotyczącej gałęzi i pętli można C# napisać kod, aby poznać składnię języka, która obsługuje gałęzie warunkowe, i pętle do wykonywania instrukcji wielokrotnie.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 0da446a71f5d7a7183a8323c470087c8726bc02f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d329a871265ae42918fbf81c42be6667710e4c75
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587214"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850806"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Informacje o logice warunkowej przy użyciu instrukcji Branch i Loop
 
 W tym samouczku przedstawiono sposób pisania kodu, który analizuje zmienne i zmienia ścieżkę wykonywania na podstawie tych zmiennych. Napiszesz C# kod i zobaczysz wyniki kompilacji i uruchomienia. Samouczek zawiera szereg lekcji, które eksplorują gałęzie i konstrukcje w pętli w C#. Te lekcje uczyją się podstaw C# języka.
 
-Ten samouczek oczekuje, że masz maszynę, której możesz użyć do programowania. Temat .NET — [wprowadzenie w ciągu 10 minut](https://www.microsoft.com/net/core) zawiera instrukcje dotyczące konfigurowania lokalnego środowiska deweloperskiego na komputerach Mac, komputerze lub Linux. Krótkie omówienie poleceń, z których będziesz korzystać, znajduje się w zapoznanie [z narzędziami programistycznymi](local-environment.md) zawierającymi linki do dalszych szczegółów.
+Ten samouczek oczekuje, że masz maszynę, której możesz użyć do programowania. Samouczek platformy .NET [Hello World w ciągu 10 minut](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) zawiera instrukcje dotyczące konfigurowania lokalnego środowiska deweloperskiego na komputerach Mac, komputerze lub Linux. Krótkie omówienie poleceń, z których będziesz korzystać, znajduje się w zapoznanie [z narzędziami programistycznymi](local-environment.md) zawierającymi linki do dalszych szczegółów.
 
 ## <a name="make-decisions-using-the-if-statement"></a>Podejmowanie decyzji przy `if` użyciu instrukcji
 
@@ -198,7 +198,7 @@ while (counter < 10)
 
 Instrukcja sprawdza warunek i wykonuje instrukcję lub blok instrukcji `while`po. `while` Wielokrotnie sprawdza warunek i wykonuje te instrukcje do momentu, gdy warunek nie ma wartości false.
 
-W tym przykładzie istnieje jeden inny operator new. Gdy zmienna jest operatorem przyrostu. `++` `counter` Dodaje 1 do wartości `counter` i zapisuje tę wartość `counter` w zmiennej.
+W tym przykładzie istnieje jeden inny operator new. Gdy zmienna jest operatorem **przyrostu.** `++` `counter` Dodaje 1 do wartości `counter` i zapisuje tę wartość `counter` w zmiennej.
 
 > [!IMPORTANT]
 > Upewnij się, że `while` warunek pętli zmieni się na FAŁSZ podczas wykonywania kodu. W przeciwnym razie utworzysz **nieskończoną pętlę** , w której program nigdy się nie skończy. Nie jest to pokazane w tym przykładzie, ponieważ trzeba wymusić zamknięcie programu przy użyciu **klawiszy CTRL-C** lub innych.

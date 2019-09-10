@@ -9,18 +9,20 @@ helpviewer_keywords:
 ms.assetid: f12922e1-6234-4165-8896-63f0653ab478
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba02333aaafbadc85e4d3c547659f4ce4d2740c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b52ff8d72132c1076dfdece5e1ce47bbece37b81
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683010"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855998"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>Wykonywanie niezależnych od kultury operacji na ciągach w tablicach
-Przeciążenia <xref:System.Array.Sort%2A?displayProperty=nameWithType> i <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> metody wykonywania kultury sortowania przy użyciu domyślnego <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> właściwości. Wrażliwość na ustawienia kulturowe wyniki zwrócone przez te metody mogą się różnić kultury z powodu różnic w kolejności sortowania. Aby wyeliminować wrażliwość na ustawienia kulturowe zachowanie, użyj jednej z przeciążenia tej metody, która akceptuje `comparer` parametru. `comparer` Parametr określa <xref:System.Collections.IComparer> wdrożenia do użycia podczas porównywania elementów w tablicy. Dla parametru należy określić klasę niestandardowego modułu porównującego niezmiennej, która używa <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Przykład klasy niestandardowej funkcji porównującej niezmiennej znajduje się w podrzędnym "Przy użyciu klasy SortedList —" tematu [wykonywanie niezależnych od kultury operacje na ciągach w kolekcjach](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) tematu.  
-  
- **Uwaga** przekazywanie **CultureInfo.InvariantCulture** do porównania metoda wykonać porównanie niezależnych od kultury. Jednak nie spowoduje nielingwistyczne porównania, na przykład ścieżki do plików, kluczy rejestru i zmiennych środowiskowych. Żadna z nich nie jest obsługiwany decyzje dotyczące bezpieczeństwa, w oparciu o wyniki porównania. Dla porównania nielingwistyczne lub pomocy technicznej dla decyzji dotyczących zabezpieczeń opartych na wynik, aplikacja powinna użyć metody porównania, która akceptuje <xref:System.StringComparison> wartość. Aplikacja powinna następnie przekazać <xref:System.StringComparison.Ordinal>.  
-  
+
+Przeciążenia metod i <xref:System.Array.Sort%2A?displayProperty=nameWithType> <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> są domyślnie wykonywane w celu sortowania z uwzględnieniem kultury, przy <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> użyciu właściwości. Wyniki wrażliwe na kulturę zwracane przez te metody mogą się różnić w zależności od różnic w kolejności sortowania. Aby wyeliminować zachowanie wrażliwe na kulturę, użyj jednego z przeciążeń tej metody, `comparer` która akceptuje parametr. `comparer` Parametr<xref:System.Collections.IComparer> określa implementację do użycia podczas porównywania elementów w tablicy. Dla parametru należy określić niestandardową klasę niezmiennej porównującej, <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>która używa. Przykład niestandardowej klasy niezmiennej porównującej znajduje się w podrozdziale "Using the SortedList Class" w temacie [wykonywanie operacji na ciągach, które nie uwzględniają kultury w temacie kolekcje](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) .
+
+> [!NOTE]
+> Przekazywanie **CultureInfo. InvariantCulture** do metody porównania wykonuje porównanie nieuwzględniające kulturę. Nie powoduje to jednak porównania w języku innym niż język, na przykład w przypadku ścieżek plików, kluczy rejestru i zmiennych środowiskowych. Żadna z tych funkcji nie wspiera podejmowania decyzji dotyczących zabezpieczeń w oparciu o wynik porównania. W przypadku niezgodności z językiem lub pomocy technicznej dla decyzji o zabezpieczeniach opartych na wynikach aplikacja powinna używać metody porównania, <xref:System.StringComparison> która akceptuje wartość. Aplikacja powinna następnie przejść <xref:System.StringComparison.Ordinal>.
+
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Array.Sort%2A?displayProperty=nameWithType>

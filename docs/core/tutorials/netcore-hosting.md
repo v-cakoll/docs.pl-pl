@@ -4,12 +4,12 @@ description: Dowiedz się, jak hostować środowisko uruchomieniowe platformy .N
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8eebc04390514bca288b67952ec7748366a45d6e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 1f04ccfa56c399a4dba003ec0de8a87f888ef848
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660522"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849331"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Napisz niestandardowego hosta .NET Core, aby kontrolować środowisko uruchomieniowe platformy .NET z kodu natywnego
 
@@ -23,7 +23,7 @@ Ten artykuł zawiera omówienie kroków niezbędnych do uruchomienia środowiska
 
 Ponieważ hosty są aplikacjami natywnymi, ten samouczek będzie obejmować konstruowanie C++ aplikacji do hostowania programu .NET Core. Konieczne będzie środowisko C++ programistyczne (takie jak dostarczone przez [program Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)).
 
-Ponadto potrzebna jest prosta aplikacja .NET Core do testowania hosta za pomocą programu, dlatego należy zainstalować [zestaw .NET Core SDK](https://www.microsoft.com/net/core) i [utworzyć małą aplikację .NET Core test](with-visual-studio.md) (na przykład aplikację "Hello World"). Wystarczy aplikacja "Hello world" utworzona przy użyciu nowego szablonu projektu konsoli .NET Core.
+Ponadto potrzebna jest prosta aplikacja .NET Core do testowania hosta za pomocą programu, dlatego należy zainstalować [zestaw .NET Core SDK](https://dotnet.microsoft.com/download) i [utworzyć małą aplikację .NET Core test](with-visual-studio.md) (na przykład aplikację "Hello World"). Wystarczy aplikacja "Hello world" utworzona przy użyciu nowego szablonu projektu konsoli .NET Core.
 
 ## <a name="hosting-apis"></a>Hostowanie interfejsów API
 Istnieją trzy różne interfejsy API, których można używać do hostowania programu .NET Core. Ten dokument (wraz ze skojarzonymi z nim [przykłady](https://github.com/dotnet/samples/tree/master/core/hosting)) pokrywa wszystkie opcje.
@@ -43,7 +43,7 @@ Poniższe kroki szczegółowo opisują sposób użycia `nethost` bibliotek `host
 
 ### <a name="step-1---load-hostfxr-and-get-exported-hosting-functions"></a>Krok 1. Załaduj HostFxr i uzyskaj wyeksportowane funkcje hostingu
 
-`nethost` Biblioteka zawiera`hostfxr` funkcję do lokalizowania biblioteki. `get_hostfxr_path` `hostfxr` Biblioteka udostępnia funkcje do hostowania środowiska uruchomieniowego platformy .NET Core. Pełną listę funkcji można znaleźć w [`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) dokumencie, a natywny [dokument projektu hostingu](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/native-hosting.md). W przykładzie i w tym samouczku są używane następujące elementy:
+`nethost` Biblioteka zawiera`hostfxr` funkcję do lokalizowania biblioteki. `get_hostfxr_path` `hostfxr` Biblioteka udostępnia funkcje do hostowania środowiska uruchomieniowego platformy .NET Core. Pełną listę funkcji można znaleźć w [`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) dokumencie, a [natywny dokument projektu hostingu](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/native-hosting.md). W przykładzie i w tym samouczku są używane następujące elementy:
 * `hostfxr_initialize_for_runtime_config`: Inicjuje kontekst hosta i przygotowuje się do inicjalizacji środowiska uruchomieniowego platformy .NET Core przy użyciu określonej konfiguracji środowiska uruchomieniowego.
 * `hostfxr_get_runtime_delegate`: Pobiera delegata dla funkcji środowiska uruchomieniowego.
 * `hostfxr_close`: Zamyka kontekst hosta.

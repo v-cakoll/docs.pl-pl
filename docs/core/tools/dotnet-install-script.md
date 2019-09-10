@@ -2,12 +2,12 @@
 title: dotnet-install scripts
 description: Dowiedz się więcej na temat skryptów programu dotnet-install, aby zainstalować narzędzia interfejs wiersza polecenia platformy .NET Core i udostępnione środowisko uruchomieniowe.
 ms.date: 01/16/2019
-ms.openlocfilehash: ed1a3341e678b405ae4aca35e3b49ada89eb069a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 867be93b5a4c66258df438ce718dabbd4ef2891c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253899"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849579"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet — informacje o skryptach instalacji
 
@@ -55,7 +55,7 @@ Można zainstalować określoną wersję przy użyciu `--version` argumentu. Wer
   - Dwuczęściowa wersja w formacie X. Y reprezentującym określoną wersję (na przykład `2.0` lub `1.0`).
   - Nazwa rozgałęzienia. Na przykład `release/2.0.0` `release/2.0.0-preview2`,, lub `master` (dla nocnych wydań).
 
-  Wartość domyślna to `LTS`. Aby uzyskać więcej informacji na temat kanałów pomocy technicznej platformy .NET, zobacz stronę [zasady pomocy technicznej platformy .NET](https://www.microsoft.com/net/platform/support-policy#dotnet-core) .
+  Wartość domyślna to `LTS`. Aby uzyskać więcej informacji na temat kanałów pomocy technicznej platformy .NET, zobacz stronę [zasady pomocy technicznej platformy .NET](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) .
 
 - **`-Version <VERSION>`**
 

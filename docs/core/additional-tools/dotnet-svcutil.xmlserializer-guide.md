@@ -1,31 +1,31 @@
 ---
-title: Za pomocą polecenia dotnet svcutil.xmlserializer na platformie .NET Core
-description: Dowiedz się, jak można użyć `dotnet-svcutil.xmlserializer` pakietu NuGet można wstępnie wygenerować zestawu serializacji dla projektów .NET Core.
+title: Używanie programu dotnet-Svcutil. XmlSerializer w programie .NET Core
+description: Dowiedz się, `dotnet-svcutil.xmlserializer` jak za pomocą pakietu NuGet wstępnie wygenerować zestaw serializacji dla projektów .NET Core.
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: 375a5ad5660658431c0d327e55513024823a6eee
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a98f8d30f2e37b722a3bf1f93be8fe9df540a468
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632199"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848970"
 ---
-# <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>Za pomocą polecenia dotnet svcutil.xmlserializer na platformie .NET Core
+# <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>Używanie programu dotnet-Svcutil. XmlSerializer w programie .NET Core
 
-`dotnet-svcutil.xmlserializer` Pakietu NuGet można wstępnie wygenerować zestawu serializacji dla projektów .NET Core. Wstępnie generuje C# kodu serializacji dla typów w aplikacji klienckiej, które są używane przez kontraktu usługi WCF i może być serializowany przez obiekt XmlSerializer. Zwiększa to wydajność uruchamiania serializacji XML podczas serializacji lub deserializacji obiektów z tych typów.
+Pakiet `dotnet-svcutil.xmlserializer` NuGet może wstępnie wygenerować zestaw serializacji dla projektów .NET Core. Wstępnie generuje C# kod serializacji dla typów w aplikacji klienckiej, które są używane przez kontrakt usługi WCF i który może zostać Zserializowany przez element XmlSerializer. Poprawia to wydajność uruchomienia serializacji XML podczas serializacji lub deserializacji obiektów tych typów.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-* [Zestaw SDK programu .NET core 2.1](https://www.microsoft.com/net/download) lub nowszej
-* Wybrany edytor kodu
+* [.NET Core 2,1 SDK](https://dotnet.microsoft.com/download) lub nowszy
+* Ulubiony Edytor kodu
 
-Możesz użyć polecenia `dotnet --info` do sprawdzenia, które wersje programu .NET Core SDK i środowiska uruchomieniowego została już zainstalowana.
+Możesz użyć polecenia `dotnet --info` , aby sprawdzić, które wersje zestaw .NET Core SDK i środowiska uruchomieniowego zostały już zainstalowane.
 
 ## <a name="getting-started"></a>Wprowadzenie
 
-Aby użyć `dotnet-svcutil.xmlserializer` platformie .NET Core konsoli aplikacji:
+Aby użyć `dotnet-svcutil.xmlserializer` w aplikacji konsolowej programu .NET Core:
 
-1. Tworzenie usługi WCF o nazwie "MyWCFService" przy użyciu domyślnego szablonu "Aplikacja usługi WCF" w programie .NET Framework. Dodaj `[XmlSerializerFormat]` atrybutu metody usługi, jak pokazano poniżej:
+1. Utwórz usługę WCF o nazwie "MyWCFService" przy użyciu domyślnego szablonu "aplikacja usługi WCF" w .NET Framework. Dodaj `[XmlSerializerFormat]` atrybut do metody usługi w następujący sposób:
 
    ```csharp
     [ServiceContract]
@@ -37,19 +37,19 @@ Aby użyć `dotnet-svcutil.xmlserializer` platformie .NET Core konsoli aplikacji
     }
     ```
 
-2. Tworzenie aplikacji konsolowej .NET Core, jako aplikacja klienta WCF przeznaczonego na platformy .NET Core 2.1 lub nowszej wersji. Na przykład utworzyć aplikację o nazwie "MyWCFClient" za pomocą następującego polecenia:
+2. Utwórz aplikację konsolową .NET Core jako aplikację kliencką WCF, która jest przeznaczona dla programu .NET Core 2,1 lub jego nowszych wersji. Na przykład Utwórz aplikację o nazwie "MyWCFClient" za pomocą następującego polecenia:
 
     ```console
     dotnet new console --name MyWCFClient
     ```
 
-    Aby upewnić się, projekt jest przeznaczony dla platformy .NET Core 2.1 lub nowszej, zbadaj `TargetFramework` — element XML w pliku projektu:
+    Aby upewnić się, że projekt jest przeznaczony dla platformy .NET Core 2,1 `TargetFramework` lub nowszej, zbadaj element XML w pliku projektu:
 
     ```xml
     <TargetFramework>netcoreapp2.1</TargetFramework>
     ```
 
-3. Dodaj odwołanie do pakietu `System.ServiceModel.Http` , uruchamiając następujące polecenie:
+3. Dodaj odwołanie do pakietu do `System.ServiceModel.Http` programu, uruchamiając następujące polecenie:
 
     ```console
     dotnet add package System.ServiceModel.Http
@@ -88,7 +88,7 @@ Aby użyć `dotnet-svcutil.xmlserializer` platformie .NET Core konsoli aplikacji
     dotnet add package dotnet-svcutil.xmlserializer
     ```
 
-    Uruchomienie polecenia należy dodać wpis do pliku projektu podobny do następującego:
+    Uruchomienie polecenia powinno spowodować dodanie wpisu do pliku projektu podobnego do tego:
   
     ```xml
     <ItemGroup>
@@ -96,6 +96,6 @@ Aby użyć `dotnet-svcutil.xmlserializer` platformie .NET Core konsoli aplikacji
     </ItemGroup>
     ```
 
-6. Kompiluj aplikację, uruchamiając `dotnet build`. Jeśli wszystko, co zakończy się powodzeniem, zestaw o nazwie *MyWCFClient.XmlSerializers.dll* jest generowany w folderze wyjściowym. Jeśli narzędzie nie można wygenerować zestawu, zostanie wyświetlone ostrzeżenia w danych wyjściowych kompilacji.
+6. Skompiluj aplikację, uruchamiając `dotnet build`. Jeśli wszystko powiedzie się, zestaw o nazwie *MyWCFClient. XmlSerializers. dll* jest generowany w folderze wyjściowym. Jeśli narzędzie nie wygenerowało zestawu, zobaczysz ostrzeżenia w danych wyjściowych kompilacji.
 
-7. Uruchom usługę WCF, na przykład `http://localhost:2561/Service1.svc` w przeglądarce. Następnie uruchom aplikację klienta, a także będą automatycznie załadować i użyć wstępnie wygenerowanego serializatory w czasie wykonywania.
+7. Uruchom usługę WCF, na przykład działającej `http://localhost:2561/Service1.svc` w przeglądarce. Następnie uruchom aplikację kliencką, która będzie automatycznie ładować i korzystać z wstępnie wygenerowanych serializatorów w czasie wykonywania.

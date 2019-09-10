@@ -2,12 +2,12 @@
 title: Generowanie kodu SQL na podstawie drzew poleceń — najlepsze praktyki
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 366e27f8c8a04c5d2507ab37459ad6d5abc255ae
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9859c7df941ae6681c991001e0d1e5a50c7ffc60
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251574"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855006"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Generowanie kodu SQL na podstawie drzew poleceń — najlepsze praktyki
 
@@ -137,11 +137,11 @@ Ponadto podczas spłaszczania sprzężeń, uczestniczące tabele (lub podzapytan
 
 ## <a name="avoid-select-"></a>Unikaj ZAZNACZania *
 
-Nie należy używać `SELECT *` do wybierania z tabel podstawowych. Model magazynu w [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji może zawierać tylko podzbiór kolumn znajdujących się w tabeli bazy danych. W takim przypadku `SELECT *` może wygenerować niepoprawny wynik. Zamiast tego należy określić wszystkie kolumny uczestniczące przy użyciu nazw kolumn z typu wynik wyrażeń uczestniczących.
+Nie należy używać `SELECT *` do wybierania z tabel podstawowych. Model magazynu w aplikacji Entity Framework może zawierać tylko podzestaw kolumn znajdujących się w tabeli bazy danych. W takim przypadku `SELECT *` może wygenerować niepoprawny wynik. Zamiast tego należy określić wszystkie kolumny uczestniczące przy użyciu nazw kolumn z typu wynik wyrażeń uczestniczących.
 
 ## <a name="reuse-of-expressions"></a>Ponowne użycie wyrażeń
 
-Wyrażenia mogą być ponownie używane w drzewie poleceń zapytania przekazanym przez [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Nie należy zakładać, że każde wyrażenie pojawia się tylko raz w drzewie poleceń zapytania.
+Wyrażenia mogą być ponownie używane w drzewie poleceń zapytania przekazanym przez Entity Framework. Nie należy zakładać, że każde wyrażenie pojawia się tylko raz w drzewie poleceń zapytania.
 
 ## <a name="mapping-primitive-types"></a>Mapowanie typów pierwotnych
 

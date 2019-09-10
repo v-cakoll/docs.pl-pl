@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: ae4176fd986f870523e44a11eee48850e2dddd7c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1d3c3628a32439d4847505e234b12b084b47ba3d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791080"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854122"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Instrukcje: Tworzenie usługi danych przy użyciu źródła danych ADO.NET Entity Framework (Usługi danych programu WCF)
 
-Usługi danych programu WCF udostępnia dane jednostki jako usługę danych. Te dane jednostki są udostępniane przez ADO.NET[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] , gdy źródłem danych jest relacyjna baza danych. W tym temacie pokazano, jak utworzyć [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]model danych oparty na bazie programu Visual Studio, który jest oparty na istniejącej bazie danych i użyć tego modelu danych do utworzenia nowej usługi danych.
+Usługi danych programu WCF udostępnia dane jednostki jako usługę danych. Te dane jednostki są udostępniane przez platformę ADO. webentity Framework, gdy źródłem danych jest relacyjna baza danych. W tym temacie pokazano, jak utworzyć model danych oparty na Entity Framework w aplikacji sieci Web programu Visual Studio, która jest oparta na istniejącej bazie danych, i korzystać z tego modelu danych w celu utworzenia nowej usługi danych.
 
-Udostępnia również narzędzie wiersza polecenia, które może [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] generować model poza projektem programu Visual Studio. [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Aby uzyskać więcej informacji, zobacz [jak: Użyj programu EdmGen. exe, aby wygenerować model i pliki](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)mapowania.
+Entity Framework udostępnia również narzędzie wiersza polecenia, które może generować model Entity Framework poza projektem programu Visual Studio. Aby uzyskać więcej informacji, zobacz [jak: Użyj programu EdmGen. exe, aby wygenerować model i pliki](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)mapowania.
 
 ## <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>Aby dodać model Entity Framework, który jest oparty na istniejącej bazie danych w istniejącej aplikacji sieci Web
 
@@ -45,7 +45,7 @@ Udostępnia również narzędzie wiersza polecenia, które może [!INCLUDE[adone
 
 9. Kliknij przycisk **Zakończ** , aby zakończyć pracę kreatora.
 
-     Spowoduje to utworzenie domyślnego modelu danych opartego na określonej bazie danych. [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Umożliwia dostosowanie modelu danych. Aby uzyskać więcej informacji, zobacz [Entity Data Model narzędzia zadań](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100)).
+     Spowoduje to utworzenie domyślnego modelu danych opartego na określonej bazie danych. Entity Framework umożliwia dostosowanie modelu danych. Aby uzyskać więcej informacji, zobacz [Entity Data Model narzędzia zadań](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100)).
 
 ## <a name="to-create-the-data-service-by-using-the-new-data-model"></a>Aby utworzyć usługę danych przy użyciu nowego modelu danych
 

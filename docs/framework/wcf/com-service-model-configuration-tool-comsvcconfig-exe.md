@@ -5,19 +5,19 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-ms.openlocfilehash: 89462d05b9da7fc63bda58955517bfa9f0c50ab9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 98c8e50ea4a9efe1c69a0c7b959b228a045dfca1
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964201"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855656"
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>Narzędzie konfiguracji modelu usług COM+ (ComSvcConfig.exe)
 Narzędzie wiersza polecenia konfiguracji modelu usług COM+ (ComSvcConfig. exe) umożliwia konfigurowanie interfejsów COM+, które mają być udostępniane jako usługi sieci Web.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console  
 ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | ApplicationName>] [/contract:<ClassID | ProgID | *,InterfaceID | InterfaceName | *>] [/hosting:<complus | was>] [/webSite:<WebsiteName>] [/webDirectory:<WebDirectoryName>] [/mex] [/id] [/nologo] [/verbose] [/help] [/partial]  
 ```  
   
@@ -45,9 +45,9 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
 |Opcja|Opis|  
 |------------|-----------------|  
 |`/application:`&#124; Dbapplicationname \<\>|Określa aplikację COM+ do skonfigurowania.<br /><br /> Krótka `/a`forma.|  
-|`/contract:`&#124; &#124; &#124; Identyfikator&#124; ClassID, InterfaceID InterfaceName \* \<    \*\>|Określa składnik i interfejs modelu COM+, który zostanie skonfigurowany jako kontrakt dla usługi.<br /><br /> Krótka `/c`forma.<br /><br /> Chociaż symbol wieloznaczny\*() może być używany podczas określania nazw składników i interfejsów, zalecamy, aby nie używać go, ponieważ mogą ujawniać interfejsy, które nie zostały zamierzone.|  
+|`/contract:`&#124; &#124; &#124; Identyfikator&#124; ClassID, InterfaceID InterfaceName \< \*    \*\>|Określa składnik i interfejs modelu COM+, który zostanie skonfigurowany jako kontrakt dla usługi.<br /><br /> Krótka `/c`forma.<br /><br /> Chociaż symbol wieloznaczny\*() może być używany podczas określania nazw składników i interfejsów, zalecamy, aby nie używać go, ponieważ mogą ujawniać interfejsy, które nie zostały zamierzone.|  
 |`/hosting:` \<*complus*  &#124; *was*\>|Określa, czy ma być używany tryb hostingu modelu COM+ czy tryb hostingu w sieci Web.<br /><br /> Krótka `/h`forma.<br /><br /> Użycie trybu hostingu modelu COM+ wymaga jawnej aktywacji aplikacji modelu COM+. Użycie trybu hostingu w sieci Web umożliwia automatyczne Aktywowanie aplikacji COM+ w razie potrzeby. Jeśli aplikacja modelu COM+ jest aplikacją biblioteki, działa w procesie Internet Information Services (IIS). Jeśli aplikacja COM+ jest aplikacją serwerową, działa w procesie dllhost. exe.|  
-|`/webSite:`\< *Witryna* WebsiteName\>|Określa witrynę sieci Web do hostowania, gdy jest używany tryb hostingu w sieci `/hosting` Web (zobacz flagę).<br /><br /> Krótka `/w`forma.<br /><br /> Jeśli żadna witryna sieci Web nie zostanie określona, zostanie użyta domyślna witryna sieci Web.|  
+|`/webSite:`\< *Witryna WebsiteName*\>|Określa witrynę sieci Web do hostowania, gdy jest używany tryb hostingu w sieci `/hosting` Web (zobacz flagę).<br /><br /> Krótka `/w`forma.<br /><br /> Jeśli żadna witryna sieci Web nie zostanie określona, zostanie użyta domyślna witryna sieci Web.|  
 |`/webDirectory:`\< *Katalog WebDirectory*\>|Określa katalog wirtualny do hostowania, gdy jest używany hosting w sieci Web `/hosting` (zobacz flagę).<br /><br /> Krótka `/d`forma.|  
 |`/mex`|Dodaje punkt końcowy usługi wymiany metadanych (MEX) do domyślnej konfiguracji usługi w celu obsługi klientów, którzy chcą pobrać definicję kontraktu z usługi.<br /><br /> Krótka `/x`forma.|  
 |`/id`|Wyświetla informacje o aplikacji, składniku i interfejsie jako identyfikatory.<br /><br /> Krótka `/k`forma.|  
@@ -63,7 +63,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
 ### <a name="code"></a>Kod  
   
-```  
+```console  
 ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus /verbose  
 ```  
   
@@ -72,7 +72,7 @@ ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financia
   
 ### <a name="code"></a>Kod  
   
-```  
+```console  
 ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.Warehouse,IStockLevels /hosting:was /webDirectory:root/OnlineWarehouse  
 ```  
   
@@ -81,7 +81,7 @@ ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.W
   
 ### <a name="code"></a>Kod  
   
-```  
+```console  
 ComSvcConfig.exe /uninstall /application:OnlineStore /interface:ItemOrders.Financial,IFinances /hosting:complus  
 ```  
   
@@ -90,7 +90,7 @@ ComSvcConfig.exe /uninstall /application:OnlineStore /interface:ItemOrders.Finan
   
 ### <a name="code"></a>Kod  
   
-```  
+```console  
 ComSvcConfig.exe /list /application:OnlineStore /hosting:complus  
 ```  
   

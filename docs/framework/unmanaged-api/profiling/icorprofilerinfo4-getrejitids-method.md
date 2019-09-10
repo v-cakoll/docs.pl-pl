@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d2d48e5fb070ec0334de579d2e28146177a87b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 805ceb60d2ac122df2382656b95b7bf5e7509bfc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049482"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855940"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs — Metoda
-Zwraca tablicę identyfikatorów, które identyfikują wszystkie ponownie skompilowana JIT wersje określonej funkcji, które nadal są przydzielane. Obejmuje to ponownie skompilowana JIT wersje funkcji, które następnie przywrócona, ale nie zostały jeszcze zwolnione (na przykład, gdy domeny aplikacji, która zawiera przywróconym funkcja jest nadal w użyciu).  
+Zwraca tablicę identyfikatorów, które identyfikują wszystkie wersje JIT-ponownie skompilowane określonej funkcji, które są nadal przydzieleni. Obejmuje to ponowne skompilowane przez JIT wersje funkcji, które zostały później przywrócone, ale nie zostały jeszcze zwolnione (na przykład wtedy, gdy domena aplikacji zawierająca przywróconą funkcję jest nadal w użyciu).  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp
 HRESULT GetReJITIDs (  
      [in]  FunctionID          functionId,  
      [in]  ULONG               cReJitIds,  
@@ -39,28 +39,28 @@ HRESULT GetReJITIDs (
   
 ## <a name="parameters"></a>Parametry  
  `functionId`  
- [in] `FunctionID` Wystąpienia funkcji, do których chcesz wyliczyć wersji.  
+ podczas `FunctionID` Wystąpienia funkcji, dla którego mają zostać wyliczone wersje.  
   
  `cReJitIds`  
- [in] Liczba identyfikatorów ponownie skompilowana JIT, przydzielone w `reJitIds` tablicy.  
+ podczas Liczba identyfikatorów ponownych kompilacji JIT przypisywanych w `reJitIds` tablicy.  
   
  `pcReJitIds`  
- [out] Rzeczywista liczba identyfikatorów ponownie skompilowana JIT.  
+ określoną Rzeczywista liczba identyfikatorów ponownych kompilacji JIT.  
   
  `reJitIds`  
- [out] Tablica przydzielana przez obiekt wywołujący, który będzie zawierać identyfikatory ponownie skompilowana JIT dla określonej funkcji.  
+ określoną Tablica przypisana przez obiekt wywołujący, która będzie zawierać identyfikatory ponownie skompilowane JIT dla określonej funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetReJITIDs` Wylicza aktywne identyfikatory ponownie skompilowana JIT dla wystąpienia danej funkcji. Wynika z tego samego wzorca użycia, jak inne `ICorProfilerInfo` funkcje, które akceptują bufory przypisane do obiektu wywołującego.  
+ `GetReJITIDs`wylicza aktywne, ponownie skompilowane identyfikatory JIT dla danego wystąpienia funkcji. Jest on zgodny z tym samym wzorcem `ICorProfilerInfo` użycia, co inne funkcje, które akceptują bufory przydzieloną przez proces wywołujący.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówki** CorProf. idl, CorProf. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

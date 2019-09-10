@@ -2,12 +2,12 @@
 title: Określanie niestandardowego algorytmu kryptograficznego
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: cf4b3da82087a6daade9d6b939f3e1aac628cb01
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 55200732b392c15a25853af28ecdf9e32d092da4
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796892"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849106"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Określanie niestandardowego algorytmu kryptograficznego
 Usługa WCF umożliwia określenie niestandardowego algorytmu kryptograficznego, który ma być używany podczas szyfrowania danych lub przetwarzania podpisów cyfrowych. W tym celu należy wykonać następujące czynności:  
@@ -109,7 +109,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
   
  Aby zarejestrować niestandardowy algorytm w kodzie, <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> Użyj metody. Ta metoda powoduje utworzenie obu mapowań. Poniższy przykład pokazuje, jak wywołać tę metodę:  
   
-```  
+```csharp
 // Register the custom URI string defined for the hashAlgorithm in MyCustomAlgorithmSuite class to create the   
 // SHA256CryptoServiceProvider hash algorithm object.  
 CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://constoso.com/CustomAlgorithms/CustomHashAlgorithm");  

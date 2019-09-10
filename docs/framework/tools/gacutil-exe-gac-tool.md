@@ -19,24 +19,24 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47d0aba8be60611527d6216227a6c4939479fc38
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31f9d045b4d784357896a628135d68365cc29937
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779837"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851240"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Narzędzie Global Assembly Cache)
 
 Narzędzie globalnej pamięci podręcznej zestawów umożliwia wyświetlenie zawartości globalnej pamięci podręcznej zestawów i wykonywanie na niej operacji oraz pobieranie pamięci podręcznej.
 
-To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, należy użyć wiersz polecenia programisty dla programu Visual Studio (lub wiersza polecenia programu Visual Studio Windows 7). Aby uzyskać więcej informacji, zobacz [wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
 W wierszu polecenia wpisz następujące polecenie:
 
 ## <a name="syntax"></a>Składnia
 
-```
+```console
 gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 ```
 
@@ -44,30 +44,30 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 
 |Argument|Opis|
 |--------------|-----------------|
-|*assemblyName*|Nazwa zestawu Można podać nazwę częściowo określonego zestawu, taką jak `myAssembly` lub nazwę w pełni określonego zestawu, taką jak `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5`.|
+|*assemblyName*|Nazwa zestawu Można podać częściowo określoną nazwę zestawu, taką jak `myAssembly` lub w pełni określoną nazwę zestawu, taką jak. `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5`|
 |*assemblyPath*|Nazwa pliku, który zawiera manifest zestawu.|
-|*assemblyListFile*|Ścieżka do pliku tekstowego ANSI, który zawiera listę zestawów do zainstalowania lub odinstalowania. Aby użyć pliku tekstowego do instalowania zestawów, należy określić ścieżkę do każdego zestawu w oddzielnym wierszu w pliku. Narzędzie interpretuje ścieżki względne względem lokalizacji pliku *Pliklistyzestawów*. Aby użyć pliku tekstowego do odinstalowania zestawów, należy określić w pełni kwalifikowaną nazwę każdego zestawu w oddzielnym wierszu w pliku. Zobacz *Pliklistyzestawów* zawartości przykłady w dalszej części tego tematu.|
+|*assemblyListFile*|Ścieżka do pliku tekstowego ANSI, który zawiera listę zestawów do zainstalowania lub odinstalowania. Aby użyć pliku tekstowego do instalowania zestawów, należy określić ścieżkę do każdego zestawu w oddzielnym wierszu w pliku. Narzędzie interpretuje ścieżki względne względem lokalizacji *pliku plikListyZestawów*. Aby użyć pliku tekstowego do odinstalowania zestawów, należy określić w pełni kwalifikowaną nazwę każdego zestawu w oddzielnym wierszu w pliku. Zobacz przykłady zawartości *pliku plikListyZestawów* w dalszej części tego tematu.|
 
 |Opcja|Opis|
 |------------|-----------------|
 |**/cdl**|Usuwa zawartość pamięci podręcznej pobierania.|
-|**/f**|Wybierz tę opcję z **/i** lub **/il** opcji, aby wymusić ponowną instalację zestawu. Jeśli zestaw o tej samej nazwie już istnieje w globalnej pamięci podręcznej zestawów, narzędzie zastępuje go.|
-|**/ h**[**elp**]|Wyświetla składnię polecenia i opcje narzędzia.|
-|**/i** *Ścieżkazestawu*|Instaluje zestaw w globalnej pamięci podręcznej zestawów.|
-|**/IF** *Ścieżkazestawu*|Instaluje zestaw w globalnej pamięci podręcznej zestawów. Jeśli zestaw o tej samej nazwie już istnieje w globalnej pamięci podręcznej zestawów, narzędzie zastępuje go.<br /><br /> Użycie tej opcji jest równoznaczne z użyciem **/i** i **/f** opcje razem.|
-|**/il** *Pliklistyzestawów*|Instaluje jeden lub więcej zestawów, do których określony w *Pliklistyzestawów* w globalnej pamięci podręcznej.|
-|**/IR** *Ścieżkazestawu*<br /><br /> *scheme*<br /><br /> *id*<br /><br /> *description*|Instaluje zestaw w globalnej pamięci podręcznej zestawów i dodaje odwołanie, aby zliczyć zestaw. Należy określić *Ścieżkazestawu*, *schemat*, *identyfikator*, i *opis* parametrów przy użyciu tej opcji. Aby uzyskać opis prawidłowe wartości dla tych parametrów można określić, zobacz **/r** opcji.<br /><br /> Użycie tej opcji jest równoznaczne z użyciem **/i** i **/r** opcje razem.|
-|**/l** [*assemblyName*]|Wyświetla zawartość globalnej pamięci podręcznej zestawów. Jeśli określisz *assemblyName* parametru, narzędzie wyświetli tylko zestawy pasujące do danej nazwy.|
+|**/f**|Aby wymusić ponowne zainstalowanie zestawu, należy określić tę opcję z opcjami **/i** lub **/Il** . Jeśli zestaw o tej samej nazwie już istnieje w globalnej pamięci podręcznej zestawów, narzędzie zastępuje go.|
+|**/h** [**ELP**]|Wyświetla składnię polecenia i opcje narzędzia.|
+|**/i** *AssemblyPath*|Instaluje zestaw w globalnej pamięci podręcznej zestawów.|
+|**/IF** *Ścieżkazestawu*|Instaluje zestaw w globalnej pamięci podręcznej zestawów. Jeśli zestaw o tej samej nazwie już istnieje w globalnej pamięci podręcznej zestawów, narzędzie zastępuje go.<br /><br /> Określenie tej opcji jest równoznaczne z podaniem opcji **/i** i **/f** razem.|
+|**/Il** *pliku plikListyZestawów*|Instaluje co najmniej jeden zestaw określony w *pliku plikListyZestawów* w globalnej pamięci podręcznej zestawów.|
+|**/IR** *Ścieżkazestawu*<br /><br /> *scheme*<br /><br /> *id*<br /><br /> *zharmonizowan*|Instaluje zestaw w globalnej pamięci podręcznej zestawów i dodaje odwołanie, aby zliczyć zestaw. Należy określić parametry *AssemblyPath*, *Schema*, *ID*i *Description* z tą opcją. Aby uzyskać opis prawidłowych wartości, które można określić dla tych parametrów, zobacz **/r** opcji.<br /><br /> Określenie tej opcji jest równoznaczne z użyciem opcji **/i** i **/r** razem.|
+|**/l** [*AssemblyName*]|Wyświetla zawartość globalnej pamięci podręcznej zestawów. Jeśli określisz parametr *AssemblyName* , narzędzie wyświetli tylko zestawy pasujące do tej nazwy.|
 |**/ldl**|Wyświetla zawartość pamięci podręcznej pobranych plików.|
-|**/LR** [*assemblyName*]|Wyświetla listę wszystkich zestawów i liczbę odwołań do nich. Jeśli określisz *assemblyName* parametr, narzędzie wyświetli tylko zestawy pasujące do nazwy i ich odpowiadające im liczby odwołań.|
+|**/LR** [*AssemblyName*]|Wyświetla listę wszystkich zestawów i liczbę odwołań do nich. Jeśli określisz parametr *AssemblyName* , narzędzie wyświetli tylko zestawy pasujące do tej nazwy i odpowiadające im liczby odwołań.|
 |**/nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|
-|**/r** [*assemblyName &#124; Ścieżkazestawu*]<br /><br /> *scheme*<br /><br /> *id*<br /><br /> *description*|Określa śledzone odwołanie do zestawu lub zestawów, które mają zostać zainstalowane lub odinstalowane. Wybierz tę opcję z **/i**, **/il**, **/u**, lub **/ul** opcje.<br /><br /> Aby zainstalować zestaw, należy określić *Ścieżkazestawu*, *schemat*, *identyfikator*, i *opis* parametrów przy użyciu tej opcji. Aby odinstalować zestaw, należy określić *assemblyName*, *schemat*, *identyfikator*, i *opis* parametrów.<br /><br /> Aby usunąć odwołanie do zestawu, należy określić ten sam *schemat*, *identyfikator*, i *opis* parametry, które zostały określone z **/i** i **/r** (lub **/ir**) po zainstalowaniu zestawu opcji. W trakcie odinstalowywania zestawu narzędzie usuwa zestaw również z globalnej pamięci podręcznej zestawów, jeśli jest to ostatnie odwołanie do usunięcia i jeśli Instalator Windows nie ma innych odwołań do zestawu.<br /><br /> *Schemat* parametr określa typ schematu instalacji. Można określić jedną z następujących wartości:<br /><br /> -UNINSTALL_KEY: Należy określić tę wartość, jeśli Instalator dodaje aplikację do apletu Dodaj/Usuń programy w programie Microsoft Windows. Aplikacje dodają same siebie do apletu Dodaj/Usuń programy przez dodanie klucza rejestru do gałęzi HKLM\Software\Microsoft\Windows\CurrentVersion.<br />— ŚCIEŻKA PLIKU: Należy określić tę wartość, jeśli Instalator nie dodaje aplikację do apletu Dodaj/Usuń programy.<br />-NIEPRZEZROCZYSTE: Jeśli dostarczenie klucza rejestru należy określić tę wartość lub ścieżka pliku nie ma zastosowania do tego scenariusza instalacji. Ta wartość służy do określania niestandardowych informacji dla *identyfikator* parametru.<br /><br /> Wartość do określenia dla *identyfikator* zależy od wartości określonej dla parametru *schemat* parametru:<br /><br /> — W przypadku określenia UNINSTALL_KEY dla *schemat* parametru, określ nazwę aplikacji ustawioną w kluczu rejestru HKLM\Software\Microsoft\Windows\CurrentVersion. Na przykład, jeśli klucz rejestru to hklm\software\microsoft\windows\currentversion\mojaaplikacja, należy określić wartość MojaAplikacja dla *identyfikator* parametru.<br />— Jeśli określono wartość FILEPATH dla *schemat* parametrów, wprowadź pełną ścieżkę do pliku wykonywalnego, który instaluje zestaw jako *identyfikator* parametru.<br />— Jeśli określono wartość OPAQUE dla *schemat* parametru, można podać dowolny element danych jako *identyfikator* parametru. Podane dane muszą być ujęte w znaki cudzysłowu ("").<br /><br /> *Opis* parametr umożliwia podanie tekstu opisującego aplikację do zainstalowania. Te informacje są wyświetlane podczas wyliczania odwołań.|
+|**/r** [*AssemblyName &#124; AssemblyPath*]<br /><br /> *scheme*<br /><br /> *id*<br /><br /> *zharmonizowan*|Określa śledzone odwołanie do zestawu lub zestawów, które mają zostać zainstalowane lub odinstalowane. Określ tę opcję z opcjami **/i**, **/Il**, **/u**lub **/ul** .<br /><br /> Aby zainstalować zestaw, określ parametry *AssemblyPath*, *Schema*, *ID*i *Description* z tą opcją. Aby odinstalować zestaw, określ parametry *AssemblyName*, *schemat*, *Identyfikator*i *Opis* .<br /><br /> Aby usunąć odwołanie do zestawu, należy określić te same parametry *schemat*, *Identyfikator*i *Opis* , które zostały określone z opcjami **/i** i **/r** (lub **/IR**) podczas instalowania zestawu. W trakcie odinstalowywania zestawu narzędzie usuwa zestaw również z globalnej pamięci podręcznej zestawów, jeśli jest to ostatnie odwołanie do usunięcia i jeśli Instalator Windows nie ma innych odwołań do zestawu.<br /><br /> Parametr *schemat* określa typ schematu instalacji. Można określić jedną z następujących wartości:<br /><br /> - UNINSTALL_KEY: Określ tę wartość, jeśli Instalator doda aplikację do dodawania/usuwania programów w systemie Microsoft Windows. Aplikacje dodają same siebie do apletu Dodaj/Usuń programy przez dodanie klucza rejestru do gałęzi HKLM\Software\Microsoft\Windows\CurrentVersion.<br />PARAMETR Określ tę wartość, jeśli Instalator nie doda aplikacji do apletu Dodaj/Usuń programy.<br />ZAKRYWA Określ tę wartość, jeśli podanie klucza rejestru lub ścieżki pliku nie ma zastosowania do scenariusza instalacji. Ta wartość umożliwia określenie niestandardowych informacji dla parametru *ID* .<br /><br /> Wartość, która ma zostać określona dla parametru *identyfikatora* , zależy od wartości określonej dla parametru *schematu* :<br /><br /> — Jeśli dla parametru *schemat* określono wartość UNINSTALL_KEY, należy określić nazwę zestawu aplikacji w kluczu rejestru HKLM\Software\Microsoft\Windows\CurrentVersion. Na przykład, jeśli klucz rejestru to HKLM\Software\Microsoft\Windows\CurrentVersion\MyApp, określ wartość MojaApl dla parametru *ID* .<br />— Jeśli dla parametru *schemat* określono wartość FilePath, należy określić pełną ścieżkę do pliku wykonywalnego, który instaluje zestaw jako parametr *ID* .<br />— Jeśli dla parametru *schemat* określono nieprzezroczystość, można podać dowolne dane jako parametr *ID* . Podane dane muszą być ujęte w znaki cudzysłowu ("").<br /><br /> Parametr *Description* umożliwia określenie tekstu opisującego aplikację do zainstalowania. Te informacje są wyświetlane podczas wyliczania odwołań.|
 |**/silent**|Pomija wyświetlanie wszystkich danych wyjściowych.|
 |**/u** *assemblyName*|Odinstalowuje zestaw z globalnej pamięci podręcznej zestawów.|
-|**/Uf** *assemblyName*|Wymusza odinstalowanie określonego zestawu przez usunięcie wszystkich odwołań do tego zestawu.<br /><br /> Użycie tej opcji jest równoznaczne z użyciem **/u** i **/f** opcje razem. **Uwaga:**  Nie można używać tej opcji, aby usunąć zestaw, który został zainstalowany przy użyciu Instalatora Microsoft Windows. Przy próbie wykonania tej operacji narzędzie wyświetli komunikat o błędzie.|
-|**/ul** *Pliklistyzestawów*|Odinstalowuje co najmniej jeden zestaw określony w *Pliklistyzestawów* z globalnej pamięci podręcznej.|
-|**/u**[**ngen**] *assemblyName*|Odinstalowuje określony zestaw z globalnej pamięci podręcznej zestawów. Jeśli istnieją odwołania do określonego zestawu, narzędzie wyświetla liczbę odwołań i nie usuwa zestawu z globalnej pamięci podręcznej zestawów. **Uwaga:**  W .NET Framework w wersji 2.0 `/ungen` nie jest obsługiwane. Zamiast tego należy użyć `uninstall` polecenia [Ngen.exe (Generator obrazu natywnego)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). <br /><br /> W .NET Framework w wersji 1.0 i 1.1 określając **/ ungen** powoduje, że Gacutil.exe usuwa zestaw z pamięci podręcznej obrazów natywnych. Ta pamięć podręczna są przechowywane obrazy natywne dla zestawów, które zostały utworzone przy użyciu [Ngen.exe (Generator obrazu natywnego)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).|
-|**/UR** *assemblyName*<br /><br /> *scheme*<br /><br /> *id*<br /><br /> *description*|Odinstalowuje odwołanie do określonego zestawu z globalnej pamięci podręcznej zestawów. Aby usunąć odwołanie do zestawu, należy określić ten sam *schemat*, *identyfikator*, i *opis* parametry, które zostały określone z **/i** i **/r** (lub **/ir)** opcji podczas instalowania zestawu. Aby uzyskać opis prawidłowe wartości dla tych parametrów można określić, zobacz **/r** opcji.<br /><br /> Użycie tej opcji jest równoznaczne z użyciem **/u** i **/r** opcje razem.|
+|**/Uf** *assemblyName*|Wymusza odinstalowanie określonego zestawu przez usunięcie wszystkich odwołań do tego zestawu.<br /><br /> Określenie tej opcji jest równoznaczne z użyciem opcji **/u** i **/f** razem. **Uwaga:**  Nie można używać tej opcji, aby usunąć zestaw, który został zainstalowany przy użyciu Instalatora Microsoft Windows. Przy próbie wykonania tej operacji narzędzie wyświetli komunikat o błędzie.|
+|**/ul** *pliku plikListyZestawów*|Odinstalowuje co najmniej jeden zestaw określony w *pliku plikListyZestawów* z globalnej pamięci podręcznej zestawów.|
+|**/u** [**NGen**] *AssemblyName*|Odinstalowuje określony zestaw z globalnej pamięci podręcznej zestawów. Jeśli istnieją odwołania do określonego zestawu, narzędzie wyświetla liczbę odwołań i nie usuwa zestawu z globalnej pamięci podręcznej zestawów. **Uwaga:**  W .NET Framework w wersji 2,0 `/ungen` nie jest obsługiwana. Zamiast tego należy użyć `uninstall` polecenia [Ngen. exe (Generator obrazu natywnego)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). <br /><br /> W .NET Framework wersje 1,0 i 1,1, określenie **/ungen** powoduje, że Gacutil. exe usuwa zestaw z pamięci podręcznej obrazów natywnych. Ta pamięć podręczna przechowuje obrazy natywne dla zestawów, które zostały utworzone przy użyciu programu [Ngen. exe (Generator obrazu natywnego)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).|
+|**/UR** *assemblyName*<br /><br /> *scheme*<br /><br /> *id*<br /><br /> *zharmonizowan*|Odinstalowuje odwołanie do określonego zestawu z globalnej pamięci podręcznej zestawów. Aby usunąć odwołanie do zestawu, należy określić te same parametry *schemat*, *Identyfikator*i *Opis* , które zostały określone z opcjami **/i** i **/r** (lub **/IR)** podczas instalowania zestawu. Aby uzyskać opis prawidłowych wartości, które można określić dla tych parametrów, zobacz **/r** opcji.<br /><br /> Określenie tej opcji jest równoznaczne z użyciem opcji **/u** i **/r** razem.|
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|
 
 ## <a name="remarks"></a>Uwagi
@@ -77,11 +77,11 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 
 W szczególności program Gacutil.exe umożliwia instalowanie zestawów w pamięci podręcznej, usuwanie ich z pamięci podręcznej oraz wyświetlanie zawartości pamięci podręcznej.
 
-Program Gacutil.exe oferuje opcje, które obsługują zliczanie odwołań podobne do schematu zliczania odwołań obsługiwanego przez Instalatora Windows. Programu Gacutil.exe można użyć do zainstalowania dwóch aplikacji, które instalują ten sam zestaw; narzędzie przechowuje informacje o liczbie odwołań do zestawu. W rezultacie zestaw pozostanie na komputerze do czasu, aż obie aplikacje zostaną odinstalowane. Jeśli program Gacutil.exe jest używany do instalacji rzeczywistych produktów, należy używać opcji obsługujących zliczanie odwołań. Użyj **/i** i **/r** opcje celu zainstalowanie zestawu i dodanie odwołania do zliczenia. Użyj **/u** i **/r** opcje umożliwia usunięcie liczby odwołań do zestawu. Należy pamiętać, że używanie **/i** i **/u** samych opcji nie obsługują zliczanie odwołań. Te opcje są odpowiednie do użycia podczas tworzenia produktu, ale nie podczas instalacji rzeczywistego produktu.
+Program Gacutil.exe oferuje opcje, które obsługują zliczanie odwołań podobne do schematu zliczania odwołań obsługiwanego przez Instalatora Windows. Programu Gacutil.exe można użyć do zainstalowania dwóch aplikacji, które instalują ten sam zestaw; narzędzie przechowuje informacje o liczbie odwołań do zestawu. W rezultacie zestaw pozostanie na komputerze do czasu, aż obie aplikacje zostaną odinstalowane. Jeśli program Gacutil.exe jest używany do instalacji rzeczywistych produktów, należy używać opcji obsługujących zliczanie odwołań. Użyj opcji **/i** i **/r** w celu zainstalowania zestawu i dodania odwołania do jego zliczenia. Użyj opcji **/u** i **/r** , aby usunąć liczbę odwołań dla zestawu. Należy pamiętać, że użycie opcji **/i** i **/u** same nie obsługuje zliczania odwołań. Te opcje są odpowiednie do użycia podczas tworzenia produktu, ale nie podczas instalacji rzeczywistego produktu.
 
-Użyj **/il** lub **/ul** opcji, aby zainstalować lub odinstalowanie listy zestawów przechowywanej w pliku tekstowym ANSI. Zawartość pliku tekstowego musi być poprawnie sformatowana. Aby użyć pliku tekstowego do instalowania zestawów, należy określić ścieżkę do każdego zestawu w oddzielnym wierszu w pliku. W poniższym przykładzie pokazano zawartość pliku zawierającego zestawy do zainstalowania.
+Użyj opcji **/Il** lub **/ul** , aby zainstalować lub odinstalować listę zestawów przechowywanych w pliku tekstowym ANSI. Zawartość pliku tekstowego musi być poprawnie sformatowana. Aby użyć pliku tekstowego do instalowania zestawów, należy określić ścieżkę do każdego zestawu w oddzielnym wierszu w pliku. W poniższym przykładzie pokazano zawartość pliku zawierającego zestawy do zainstalowania.
 
-```
+```text
 myAssembly1.dll
 myAssembly2.dll
 myAssembly3.dll
@@ -89,91 +89,91 @@ myAssembly3.dll
 
 Aby użyć pliku tekstowego do odinstalowania zestawów, należy określić w pełni kwalifikowaną nazwę każdego zestawu w oddzielnym wierszu w pliku. W poniższym przykładzie pokazano zawartość pliku zawierającego zestawy do odinstalowania.
 
-```
+```text
 myAssembly1,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 myAssembly2,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 ```
 
 > [!NOTE]
-> Próba zainstalowania zestawu przy użyciu nazwy pliku przekracza od 79 i 91 znaków (bez rozszerzenia pliku) może spowodować następujący błąd:
+> Próba zainstalowania zestawu przy użyciu nazwy pliku o długości przekraczającej od 79 do 91 znaków (oprócz rozszerzenia pliku) może skutkować następującym błędem:
 >
-> ```
+> ```output
 > Failure adding assembly to the cache:   The file name is too long.
 > ```
 >
-> Jest to, ponieważ wewnętrznie Gacutil.exe tworzy ścieżki z maksymalnie MAX_PATH znaków, który składa się z następujących elementów:
-> - GAC Root - 34 znaków (tj. `C:\Windows\Microsoft.NET\assembly\`)
-> - Architektura — 7 i 9 znaków (tj. `GAC_32\`, `GAC_64\`, `GAC_MSIL`)
-> - AssemblyName — maksymalnie 91 znaki, w zależności od rozmiaru inne elementy (np.) `System.Xml.Linq\`)
-> - AssemblyInfo - 31 do 48 znaków lub więcej składający się z:
->   - Framework - 5 znaków (np.) `v4.0_`)
->   - AssemblyVersion - 8-24 znaki (np.) `9.0.1000.0_`)
->   - AssemblyLanguage - 1 do 8 znaków (np.) `de_`, `sr-Cyrl_`)
->   - PublicKey - 17 znaki (np.) `31bf3856ad364e35\`)
-> - DllFileName — maksymalnie 91 + 4 znaki (tj. `<AssemblyName>.dll`)
+> Wynika to z faktu, że wewnętrznie Gacutil. exe konstruuje ścieżkę do znaków, które składają się z następujących elementów:
+> - Katalog główny GAC — 34 znaków (IE. `C:\Windows\Microsoft.NET\assembly\`)
+> - Architektura-7 lub 9 znaków (IE. `GAC_32\`, `GAC_64\`, `GAC_MSIL`)
+> - AssemblyName — do 91 znaków, w zależności od rozmiaru innych elementów (np. `System.Xml.Linq\`)
+> - AssemblyInfo-31 do 48 znaków lub więcej składających się z:
+>   - Framework-5 znaków (np. `v4.0_`)
+>   - AssemblyVersion-8 do 24 znaków (np. `9.0.1000.0_`)
+>   - AssemblyLanguage — od 1 do 8 znaków (np. `de_`, `sr-Cyrl_`)
+>   - PublicKey – 17 znaków (np. `31bf3856ad364e35\`)
+> - DllFileName — do 91 + 4 znaków (IE. `<AssemblyName>.dll`)
 
 ## <a name="examples"></a>Przykłady
 
-Poniższe polecenie instaluje zestaw `mydll.dll` w globalnej pamięci podręcznej.
+Poniższe polecenie instaluje zestaw `mydll.dll` w globalnej pamięci podręcznej zestawów.
 
-```
+```console
 gacutil /i mydll.dll
 ```
 
-Następujące polecenie usuwa zestaw `hello` z globalnej pamięci podręcznej tak długo, jak liczby odwołań istnieje dla zestawu.
+Następujące polecenie usuwa zestaw `hello` z globalnej pamięci podręcznej zestawów, o ile nie istnieją żadne liczniki odwołań dla zestawu.
 
-```
+```console
 gacutil /u hello
 ```
 
-Należy zauważyć, że poprzednie polecenie może usunąć więcej niż jeden zestaw z globalnej pamięci podręcznej zestawów, ponieważ nazwa zestawu nie została w pełni określona. Na przykład, jeśli obie wersje 1.0.0.0 i 3.2.2.1 zestawu `hello` są zainstalowane w pamięci podręcznej, polecenie `gacutil /u hello` usunie oba zestawy.
+Należy zauważyć, że poprzednie polecenie może usunąć więcej niż jeden zestaw z globalnej pamięci podręcznej zestawów, ponieważ nazwa zestawu nie została w pełni określona. Na przykład jeśli w pamięci podręcznej są zainstalowane `hello` wersje 1.0.0.0 i 3.2.2.1 programu, polecenie `gacutil /u hello` spowoduje usunięcie obu zestawów.
 
-Aby zapobiec usuwaniu więcej niż jednego zestawu, należy użyć składni z poniższego przykładu. To polecenie usuwa tylko `hello` zestawu, który pasuje do w pełni określonego numeru wersji, kultury i klucza publicznego.
+Aby zapobiec usuwaniu więcej niż jednego zestawu, należy użyć składni z poniższego przykładu. To polecenie usuwa tylko `hello` zestaw, który jest zgodny z w pełni określonym numerem wersji, kulturą i kluczem publicznym.
 
-```
+```console
 gacutil /u hello, Version=1.0.0.1, Culture="de",PublicKeyToken=45e343aae32233ca
 ```
 
-Poniższe polecenie instaluje zestawy określone w pliku `assemblyList.txt` w globalnej pamięci podręcznej.
+Poniższe polecenie instaluje zestawy określone w pliku `assemblyList.txt` w globalnej pamięci podręcznej zestawów.
 
-```
+```console
 gacutil /il assemblyList.txt
 ```
 
-Poniższe polecenie usuwa zestawy określone w pliku `assemblyList.txt` z globalnej pamięci podręcznej.
+Następujące polecenie usuwa zestawy określone w pliku `assemblyList.txt` z globalnej pamięci podręcznej zestawów.
 
-```
+```console
 gacutil /ul assemblyList.txt
 ```
 
-Poniższe polecenie instaluje `myDll.dll` w globalnej pamięci podręcznej zestawów i dodaje odwołania do zliczenia. Zestaw `myDll.dll` jest używany przez aplikację `MyApp`. `UNINSTALL_KEY MyApp` Parametr określa klucz rejestru, który dodaje `MyApp` do apletu Dodaj/Usuń programy w Windows. Parametr opisu jest określony jako `My Application Description`.
+Następujące polecenie zostaje zainstalowane `myDll.dll` w globalnej pamięci podręcznej zestawów i dodaje odwołanie do jego zliczenia. Zestaw `myDll.dll` jest używany przez aplikację `MyApp`. Parametr określa klucz rejestru, który dodaje `MyApp` do dodawania/usuwania programów w systemie Windows. `UNINSTALL_KEY MyApp` Parametr Description jest określony jako `My Application Description`.
 
-```
+```console
 gacutil /i /r myDll.dll UNINSTALL_KEY MyApp "My Application Description"
 ```
 
-Poniższe polecenie instaluje `myDll.dll` w globalnej pamięci podręcznej zestawów i dodaje odwołania do zliczenia. Parametr "schemat" `FILEPATH`oraz parametru id `c:\applications\myApp\myApp.exe`, określ ścieżkę do aplikacji, który jest instalowany `myDll.dll.` parametr opisu jest określony jako `MyApp`.
+Następujące polecenie zostaje zainstalowane `myDll.dll` w globalnej pamięci podręcznej zestawów i dodaje odwołanie do jego zliczenia. Parametr Schema, `FILEPATH`i `c:\applications\myApp\myApp.exe`parametr ID, określ ścieżkę do aplikacji instalującej `myDll.dll.` parametr Description jest określony jako `MyApp`.
 
-```
+```console
 gacutil /i /r myDll.dll FILEPATH c:\applications\myApp\myApp.exe MyApp
 ```
 
-Poniższe polecenie instaluje `myDll.dll` w globalnej pamięci podręcznej zestawów i dodaje odwołania do zliczenia. Parametr schematu `OPAQUE`, umożliwia dostosowanie parametrów identyfikator i opis.
+Następujące polecenie zostaje zainstalowane `myDll.dll` w globalnej pamięci podręcznej zestawów i dodaje odwołanie do jego zliczenia. Parametr `OPAQUE`schemat, umożliwia dostosowanie parametrów identyfikatora i opisu.
 
-```
+```console
 gacutil /i /r mydll.dll OPAQUE "Insert custom application details here" "Insert Custom description information here"
 ```
 
-Poniższe polecenie usuwa odwołanie do `myDll.dll` przez aplikację `myApp`. Jeśli jest to ostatnie odwołanie do tego zestawu, spowoduje to również usunięcie zestawu z globalnej pamięci podręcznej zestawów.
+Następujące polecenie usuwa odwołanie do `myDll.dll` aplikacji. `myApp` Jeśli jest to ostatnie odwołanie do tego zestawu, spowoduje to również usunięcie zestawu z globalnej pamięci podręcznej zestawów.
 
-```
+```console
 gacutil /u /r myDll.dll FILEPATH c:\applications\myApp\myApp.exe MyApp
 ```
 
 Poniższe polecenie wyświetla zawartość globalnej pamięci podręcznej zestawów.
 
-```
+```console
 gacutil /l
 ```
 

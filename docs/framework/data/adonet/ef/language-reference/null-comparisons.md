@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: 6aa0af812d44f5c63758dd47ea4271bb2d689837
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0996b7d864c5892e383cb98d4065e99b096206d1
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249836"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854335"
 ---
 # <a name="null-comparisons"></a>Porównania wartości Null
 `null` Wartość w źródle danych wskazuje, że wartość jest nieznana. W LINQ to Entities zapytaniach można sprawdzać wartości null, aby pewne obliczenia lub porównania były wykonywane tylko dla wierszy, które mają prawidłowe lub inne niż null dane. Semantyka języka CLR o wartości null może jednak różnić się od semantyki o wartości null źródła danych. Większość baz danych używa wersji logiki trójwarstwowej do obsługi porównań o wartości null. Oznacza to, że porównanie z wartością null nie jest wynikiem obliczenia do `true` wartości `false`lub `unknown`. Często jest to implementacja wartości null ANSI, ale nie zawsze jest to przypadek.  
@@ -36,7 +36,7 @@ WHERE h.ShipDate IS Null
  *Selektor klucza* jest funkcją używaną w standardowych operatorach zapytań do wyodrębniania klucza z elementu. W funkcji selektora kluczy wyrażenie można porównać z stałą. Semantyka wartości null CLR jest zaprezentowania, jeśli wyrażenie jest porównywane ze stałą o wartości null lub dwie stałe wartości null są porównywane. Semantyka wartości null magazynu jest zastawiona, jeśli dwie kolumny zawierające wartości null w źródle danych są porównywane. Selektory kluczy są dostępne w wielu standardowych operatorów zapytań grupowania i porządkowania, takich jak <xref:System.Linq.Queryable.GroupBy%2A>, i służą do wybierania kluczy, według których mają być uporządkowane lub grupowane wyniki zapytania.  
   
 ## <a name="null-property-on-a-null-object"></a>Właściwość null dla obiektu o wartości null  
- [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]W, właściwości obiektu o wartości null mają wartość null. Podczas próby odwołania się do właściwości obiektu o wartości null w środowisku CLR zostanie wyświetlony komunikat <xref:System.NullReferenceException>. Gdy zapytanie LINQ obejmuje właściwość obiektu o wartości null, może to spowodować niespójne zachowanie.  
+ W Entity Framework właściwości obiektu null mają wartość null. Podczas próby odwołania się do właściwości obiektu o wartości null w środowisku CLR zostanie wyświetlony komunikat <xref:System.NullReferenceException>. Gdy zapytanie LINQ obejmuje właściwość obiektu o wartości null, może to spowodować niespójne zachowanie.  
   
  Na przykład w poniższym zapytaniu rzutowanie `NewProduct` jest wykonywane w warstwie drzewa poleceń, co może spowodować, że `Introduced` właściwość ma wartość null. Jeśli baza danych ma zdefiniowane porównania o wartości null <xref:System.DateTime> w taki sposób, że wynikiem porównania jest wartość true, wiersz zostanie uwzględniony.  
   

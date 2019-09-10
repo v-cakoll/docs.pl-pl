@@ -2,12 +2,12 @@
 title: Funkcje Canonical
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: 8949735ba4712b721460335b4579f0a268c91aea
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f8ca9e2027e82db89e91287fda02d2014d53f325
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251272"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854511"
 ---
 # <a name="canonical-functions"></a>Funkcje Canonical
 W tej sekcji omówiono funkcje kanoniczne, które są obsługiwane przez wszystkich dostawców danych, i mogą być używane przez wszystkie technologie zapytań. Nie można rozszerzyć funkcji kanonicznych przez dostawcę.  
@@ -18,9 +18,9 @@ W tej sekcji omówiono funkcje kanoniczne, które są obsługiwane przez wszystk
   
  Jeśli w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytaniu są używane funkcje kanoniczne, odpowiednia funkcja zostanie wywołana w źródle danych.  
   
- Wszystkie funkcje kanoniczne mają zarówno zachowanie danych wejściowych, jak i jawne określone warunki błędu. Dostawcy sklepu powinni przestrzegać tego zachowania, ale [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] nie wymuszają tego zachowania.  
+ Wszystkie funkcje kanoniczne mają zarówno zachowanie danych wejściowych, jak i jawne określone warunki błędu. Dostawcy sklepu powinni przestrzegać tego zachowania, ale Entity Framework nie wymusza tego zachowania.  
   
- W przypadku scenariuszy LINQ zapytania dotyczące programu [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] obejmują mapowanie metod CLR do metod w podstawowym źródle danych. Metody CLR mapują na funkcje kanoniczne, dzięki czemu określony zestaw metod będzie poprawnie mapowany, niezależnie od źródła danych.  
+ W przypadku scenariuszy LINQ zapytania dotyczące Entity Framework obejmują mapowanie metod CLR do metod w podstawowym źródle danych. Metody CLR mapują na funkcje kanoniczne, dzięki czemu określony zestaw metod będzie poprawnie mapowany, niezależnie od źródła danych.  
   
 ## <a name="canonical-functions-namespace"></a>Przestrzeń nazw funkcji kanonicznych  
  Przestrzeń nazw dla funkcji kanonicznej <xref:System.Data.Metadata.Edm>to. <xref:System.Data.Metadata.Edm> Przestrzeń nazw jest automatycznie dołączana do wszystkich zapytań. Jeśli jednak zostanie zaimportowana inna przestrzeń nazw, która zawiera funkcję o takiej samej nazwie jak funkcja kanoniczna ( <xref:System.Data.Metadata.Edm> w przestrzeni nazw), należy określić przestrzeń nazw.  

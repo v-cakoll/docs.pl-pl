@@ -2,12 +2,12 @@
 title: Tworzenie długo działającej usługi przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: e6206babdb728b6ce38c94441f775e1fdffe7d79
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ceda43cc41ceb3381b4700d6ea8b1871e368dccc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040414"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856205"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Tworzenie długo działającej usługi przepływu pracy
 
@@ -97,7 +97,7 @@ Aby móc korzystać z tego przewodnika, musisz mieć zainstalowane następujące
 
         ![Dodawanie inicjatora korelacji](./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "Dodaj inicjator korelacji.")
 
-7. Przeciągnij i upuść inne **działanie ReceiveAndSendReply** na końcu przepływu pracy (poza **sekwencją** zawierającą pierwsze działania **Receive** i **SendReply** ). Spowoduje to odebranie drugiej wiadomości wysyłanej przez klienta i odreagowanie na nie.
+7. Przeciągnij i upuść inne działanie **ReceiveAndSendReply** na końcu przepływu pracy (poza **sekwencją** zawierającą pierwsze działania **Receive** i **SendReply** ). Spowoduje to odebranie drugiej wiadomości wysyłanej przez klienta i odreagowanie na nie.
 
     1. Wybierz **sekwencję** zawierającą nowo dodane działania **Receive** i **SendReply** , a następnie kliknij przycisk **zmienne** . Dodaj zmienną wyróżnioną na poniższej ilustracji:
 
@@ -110,13 +110,13 @@ Aby móc korzystać z tego przewodnika, musisz mieć zainstalowane następujące
         ![Ustawianie właściwości działania Odbierz](./media/creating-a-long-running-workflow-service/set-receive-activities-properties.png "Ustaw właściwości Odbierz działania.")
 
         > [!NOTE]
-        > Nie zapomnij zmienić pola ServiceContractName z `../IAddItem`.
+        > Nie zapomnij zmienić pola **ServiceContractName** z `../IAddItem`.
 
     3. Kliknij link **Definiuj...** w działaniu **ReceiveAddItem** i Dodaj parametry pokazane na poniższej ilustracji: spowoduje to skonfigurowanie działania odbioru w celu zaakceptowania dwóch parametrów, identyfikatora zamówienia i identyfikatora uporządkowanego elementu.
 
         ![Określanie parametrów dla drugiego odbioru](./media/creating-a-long-running-workflow-service/add-receive-two-parameters.png "Skonfiguruj działanie Odbierz, aby otrzymywać dwa parametry.")
 
-    4. Kliknij przycisk wielokropka **CorrelateOn** , `orderIdHandle`a następnie wprowadź. W obszarze **zapytania XPath**kliknij strzałkę listy rozwijanej i wybierz `p_orderId`pozycję. Powoduje to skonfigurowanie korelacji w drugim działaniu Receive. Aby uzyskać więcej informacji na temat [](../../../../docs/framework/wcf/feature-details/correlation.md)korelacji, zobacz Korelacja.
+    4. Kliknij przycisk wielokropka **CorrelateOn** , `orderIdHandle`a następnie wprowadź. W obszarze **zapytania XPath**kliknij strzałkę listy rozwijanej i wybierz `p_orderId`pozycję. Powoduje to skonfigurowanie korelacji w drugim działaniu Receive. Aby uzyskać więcej informacji na temat korelacji, zobacz [korelacja](../../../../docs/framework/wcf/feature-details/correlation.md).
 
         ![Ustawianie właściwości CorrelatesOn](./media/creating-a-long-running-workflow-service/correlateson-setting.png "Ustaw Właściwość CorrelatesOn.")
 
@@ -124,11 +124,11 @@ Aby móc korzystać z tego przewodnika, musisz mieć zainstalowane następujące
 
         1. Ustaw właściwość **Condition** na`itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`
 
-        2. Przeciągnij i upuść działanie przypisywania do w sekcji **then** i inne w sekcji **else** ustaw właściwości działania **przypisane** , jak pokazano na poniższej ilustracji.
+        2. Przeciągnij i upuść działanie **przypisywania** do w sekcji **then** i inne w sekcji **else** ustaw właściwości działania **przypisane** , jak pokazano na poniższej ilustracji.
 
             ![Przypisywanie wyniku wywołania usługi](./media/creating-a-long-running-workflow-service/assign-result-of-service-call.png "Przypisz wynik wywołania usługi.")
 
-            Jeśli warunek jest `true` wykonany, sekcja zostanie wykonana. Jeśli warunek jest `false` wykonywany w sekcji **else** .
+            Jeśli warunek jest `true` wykonany, **sekcja zostanie** wykonana. Jeśli warunek jest `false` wykonywany w sekcji **else** .
 
         3. Wybierz działanie **SendReplyToReceive** i ustaw właściwość **DisplayName** pokazane na poniższej ilustracji.
 
@@ -191,7 +191,7 @@ Aby móc korzystać z tego przewodnika, musisz mieć zainstalowane następujące
 
 5. Skompiluj rozwiązanie i uruchom `OrderClient` aplikację. Klient wyświetli następujący tekst:
 
-    ```Output
+    ```output
     Sending start messageWorkflow service is idle...Press [ENTER] to send an add item message to reactivate the workflow service...
     ```
 
@@ -201,7 +201,7 @@ Aby móc korzystać z tego przewodnika, musisz mieć zainstalowane następujące
 
 7. Naciśnij klawisz ENTER, aby wysłać komunikat Dodawanie elementu do usługi przepływu pracy. Klient wyświetli następujący tekst:
 
-    ```Output
+    ```output
     Sending add item messageService returned: Item added to orderPress any key to continue . . .
     ```
 

@@ -4,12 +4,12 @@ description: W tym temacie omówiono tworzenie rozwiązania .NET Core, które ob
 author: mairaw
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 6a3f6c82a92042eeca1cb79f4634277d6870ebaf
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: a2459bfdc50e64b1d6710853b556c1bf226f07e7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105253"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849557"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Tworzenie kompletnego rozwiązania .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac
 
@@ -25,7 +25,7 @@ W tym samouczku pokazano, jak utworzyć aplikację, która akceptuje słowo wysz
 ## <a name="prerequisites"></a>Wymagania wstępne
 
 - OpenSSL (w przypadku uruchamiania programu .NET Core 1,1): Zapoznaj się z tematem [wymagania wstępne dotyczące programu .NET Core w systemie Mac](../macos-prerequisites.md) .
-- [Zestaw .NET Core SDK 1,1 lub nowszy](https://www.microsoft.com/net/core#macos)
+- [Zestaw .NET Core SDK 1,1 lub nowszy](https://dotnet.microsoft.com/download)
 - [Visual Studio 2017 for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
 Aby uzyskać więcej informacji na temat wymagań wstępnych, zobacz [wymagania wstępne dotyczące platformy .NET Core na komputerze Mac](../macos-prerequisites.md). Aby uzyskać pełne wymagania systemowe programu Visual Studio 2017 dla komputerów Mac, zobacz [wymagania systemowe rodziny produktów Visual studio 2017 for Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
@@ -44,7 +44,7 @@ Aby uzyskać więcej informacji na temat wymagań wstępnych, zobacz [wymagania 
 
    [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/TextUtils/WordCount.cs)]
 
-1. Zapisz plik przy użyciu jednej z trzech różnych metod: <kbd>&#8984;</kbd> +Użyj skrótu klawiaturowego, wybierz opcję > **Zapisz** z menu lub kliknij prawym przyciskiem myszy na karcie pliku, a następnie wybierz pozycję **Zapisz** z kontekstowego <kbd></kbd> DodajMenu. Na poniższej ilustracji przedstawiono okno środowiska IDE:
+1. Zapisz plik przy użyciu jednej z trzech różnych metod: Użyj <kbd>&#8984;</kbd> +skrótu klawiaturowego **, wybierz opcję** > **Zapisz** z menu lub kliknij prawym przyciskiem myszy na karcie <kbd>pliku, a</kbd>następnie wybierz pozycję **Zapisz** z kontekstowego DodajMenu. Na poniższej ilustracji przedstawiono okno środowiska IDE:
 
    ![Visual Studio dla komputerów Mac okno środowiska IDE z plikiem biblioteki klas i metodą](./media/using-on-mac-vs-full-solution/visual-studio-mac-editor.png)
 
@@ -74,7 +74,7 @@ Testy jednostkowe zapewniają zautomatyzowane testowanie oprogramowania podczas 
 
 1. Aby biblioteka testowa działała z `WordCount` klasą, Dodaj odwołanie `TextUtils` do projektu. Na pasku bocznym **rozwiązania** kliknij prawym przyciskiem myszy pozycję **zależności** w obszarze **TestLibrary**. Wybierz pozycję **Edytuj odwołania** z menu kontekstowego.
 
-1. W oknie dialogowym **Edytowanie odwołań** wybierz projekt na karcie **projekty** . Kliknij przycisk **OK**.
+1. W oknie dialogowym **Edytowanie odwołań** **Wybierz projekt na karcie** **projekty** . Kliknij przycisk **OK**.
 
    ![Okno dialogowe edycji odwołań dla programu Visual Studio Mac](./media/using-on-mac-vs-full-solution/visual-studio-mac-edit-references.png)
 
@@ -158,7 +158,7 @@ Testy jednostkowe zapewniają zautomatyzowane testowanie oprogramowania podczas 
 
 1. Na pasku bocznym **rozwiązania** kliknij prawym przyciskiem `WordCounter` myszy rozwiązanie. Dodaj nowy projekt **aplikacji konsolowej** , wybierając szablon z szablonów**aplikacji** **platformy .NET Core** > . Wybierz opcję **Dalej**. Nazwij projekt **WordCounterApp**. Wybierz pozycję **Utwórz** , aby utworzyć projekt w rozwiązaniu.
 
-1. Na pasku bocznym **rozwiązania** kliknij prawym przyciskiem myszy węzeł **zależności** nowego projektu **WordCounterApp** . W oknie dialogowym **Edytowanie odwołań** zaznacz pole wyboru, a następnie wybierz pozycję **OK**.
+1. Na pasku bocznym **rozwiązania** kliknij prawym przyciskiem myszy węzeł **zależności** nowego projektu **WordCounterApp** . W oknie dialogowym **Edytowanie odwołań** **zaznacz pole wyboru,** a następnie wybierz pozycję **OK**.
 
 1. Otwórz plik *program.cs* . Zastąp kod następującym:
 

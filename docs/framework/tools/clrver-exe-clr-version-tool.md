@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c627b128430342c25396d01f23f2eea7956d5e3d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2f4fc74a270cc171efa166bf54ac52a1b7acfdc5
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933755"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851314"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe (Narzędzie wersji środowiska CLR)
 Narzędzia wersji środowiska CLR (Clrver.exe) raportuje wszystkie wersje środowiska uruchomieniowego języka wspólnego (CLR) zainstalowane na komputerze.  
@@ -23,7 +23,7 @@ Narzędzia wersji środowiska CLR (Clrver.exe) raportuje wszystkie wersje środo
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console  
 clrver [option]  
 ```  
   

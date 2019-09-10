@@ -3,12 +3,12 @@ title: Program WIF i farmy serwerów internetowych
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: e6806971bd2260785d66bfdb54a3e2938043c746
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09d5f3f745f170439a7fbf160b78439c103623b9
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967193"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851525"
 ---
 # <a name="wif-and-web-farms"></a>Program WIF i farmy serwerów internetowych
 W przypadku korzystania z programu Windows Identity Foundation (WIF) w celu zabezpieczenia zasobów jednostki uzależnionej (RP) wdrożonej w kolektywie serwerów sieci Web należy wykonać określone kroki, aby upewnić się, że WIF może przetwarzać tokeny z wystąpień aplikacji RP uruchomionej w różnych Komputery w farmie. Przetwarzanie obejmuje sprawdzanie poprawności sygnatur tokenów sesji, szyfrowanie i odszyfrowywanie tokenów sesji, buforowanie tokenów sesji oraz Wykrywanie powtarzających się tokenów zabezpieczających.  
@@ -64,7 +64,7 @@ W przypadku korzystania z programu Windows Identity Foundation (WIF) w celu zabe
 ## <a name="the-wcf-caching-service"></a>Usługa buforowania WCF  
  Poniższy interfejs definiuje umowę między usługą buforowania WCF i klientem WCF używanym przez aplikację jednostki uzależnionej do komunikowania się z nią. Zasadniczo uwidacznia metody <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> klasy jako operacje usługi.  
   
-```  
+```csharp
 [ServiceContract()]  
 public interface ISessionSecurityTokenCacheService  
 {  
@@ -90,7 +90,7 @@ public interface ISessionSecurityTokenCacheService
   
  Poniższy kod przedstawia implementację usługi buforowania WCF. W tym przykładzie użyto domyślnej pamięci podręcznej tokenu sesji w pamięci wdrożonej przez WIF. Alternatywnie, można zaimplementować trwałą pamięć podręczną w bazie danych. `ISessionSecurityTokenCacheService`definiuje opisany powyżej interfejs. W tym przykładzie nie wszystkie metody wymagane do zaimplementowania interfejsu są wyświetlane dla zwięzłości.  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.IdentityModel.Configuration;  
@@ -150,7 +150,7 @@ namespace WcfSessionSecurityTokenCacheService
   
  Klasa przesłania <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A> metodę, aby uzyskać punkt końcowy usługi z niestandardowego `<cacheServiceAddress>` elementu `<sessionSecurityTokenCache>` podrzędnego elementu. Używa tego punktu końcowego do zainicjowania `ISessionSecurityTokenCacheService` kanału, w którym może komunikować się z usługą.  W tym przykładzie nie wszystkie metody wymagane do zaimplementowania <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> klasy są wyświetlane dla zwięzłości.  
   
-```  
+```csharp
 using System;  
 using System.Configuration;  
 using System.IdentityModel.Configuration;  

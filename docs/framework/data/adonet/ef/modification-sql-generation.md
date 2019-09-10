@@ -2,12 +2,12 @@
 title: Modyfikowanie generowania kodu SQL
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: ab0c18473e73b2d6fe9eb45c43e9b47947a55d99
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 94b6c3c97e8255db2dc4d72bae6c6c12905d9710
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248576"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854289"
 ---
 # <a name="modification-sql-generation"></a>Modyfikowanie generowania kodu SQL
 
@@ -27,7 +27,7 @@ DbModificationCommandTree to reprezentacja modelu obiektów przez operację mody
 
 - DbDeleteCommandTree
 
-DbModificationCommandTree i jego implementacje, które są tworzone [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] przez zawsze reprezentują pojedynczy wiersz operacji. W tej sekcji opisano te typy z ograniczeniami w .NET Framework w wersji 3,5.
+DbModificationCommandTree i jego implementacje, które są tworzone przez Entity Framework zawsze reprezentują pojedynczy wiersz operacji. W tej sekcji opisano te typy z ograniczeniami w .NET Framework w wersji 3,5.
 
 ![Diagram](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
 
@@ -90,7 +90,7 @@ Predykat określa predykat używany do określenia, które elementy członkowski
 
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>Modyfikowanie generowania kodu SQL w przykładowym dostawcy
 
-[Przykładowy dostawca Entity Framework](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) ilustruje składniki dostawców danych ADO.NET, które obsługują [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Jest ona przeznaczona dla bazy danych SQL Server 2005 i jest zaimplementowana jako otoka na początku Dostawca danych System. Data. SqlClient ADO.NET 2,0.
+[Przykładowy dostawca Entity Framework](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) ilustruje składniki dostawców danych ADO.NET, które obsługują Entity Framework. Jest ona przeznaczona dla bazy danych SQL Server 2005 i jest zaimplementowana jako otoka na początku Dostawca danych System. Data. SqlClient ADO.NET 2,0.
 
 W przypadku zmodyfikowania modułu generowania bazy danych SQL dostawcy przykładowego (znajdującego się w pliku SQL Generation\DmlSqlGenerator.cs) tworzony jest DbModificationCommandTree wejściowy i tworzona jest pojedyncza instrukcja SQL, po której występuje instrukcja SELECT zwracająca czytnik, jeśli został określony przez DbModificationCommandTree. Należy zauważyć, że docelowa baza danych SQL Server ma wpływ na kształt generowanych poleceń.
 

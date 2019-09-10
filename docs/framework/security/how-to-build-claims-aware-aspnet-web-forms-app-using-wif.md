@@ -3,12 +3,12 @@ title: 'Instrukcje: Tworzenie obsługującej oświadczenia aplikacji formularzy 
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-ms.openlocfilehash: 82b0649a7324987581cc3c97570a0fc42ffdf6d6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 45ad084013cbcafdf0d7c4ac3e0fd952305232c4
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941298"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851561"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Instrukcje: Tworzenie obsługującej oświadczenia aplikacji formularzy internetowych ASP.NET za pomocą programu WIF
 ## <a name="applies-to"></a>Dotyczy:  
@@ -92,7 +92,7 @@ ms.locfileid: "69941298"
     <authentication mode="None" />  
     ```  
   
-4. Dodaj element System. WebServer >, który definiuje moduły uwierzytelniania federacyjnego.  **\<** Należy zauważyć, że atrybut *PublicKeyToken* musi być taki sam jak  **\<** atrybut PublicKeyToken dla wpisów configSections > dodane wcześniej:  
+4. Dodaj element System. **WebServer >, który definiuje moduły uwierzytelniania federacyjnego. \<** Należy zauważyć, że atrybut *PublicKeyToken* musi być taki sam jak  **\<** atrybut PublicKeyToken dla wpisów configSections > dodane wcześniej:  
   
     ```xml  
     <system.webServer>  
@@ -103,7 +103,7 @@ ms.locfileid: "69941298"
     </system.webServer>  
     ```  
   
-5. Dodaj następujące wpisy konfiguracji powiązane z usługą Windows Identity Foundation i upewnij się, że adres URL i numer portu aplikacji ASP.NET są zgodne z wartościami we  **\<wpisie audienceUris >** , atrybut obszaru  **\<wsFederation >** element i atrybut odpowiedzi elementu wsFederation >.  **\<** Upewnij się również, że wartość wystawcy mieści się w adresie URL usługi tokenu zabezpieczającego (STS).  
+5. Dodaj następujące wpisy konfiguracji powiązane z usługą Windows Identity Foundation i upewnij się, że adres URL i numer portu aplikacji ASP.NET są zgodne z wartościami we  **\<wpisie audienceUris >** , atrybut obszaru  **\<wsFederation >** element i atrybut odpowiedzi elementu wsFederation >.  **\<** Upewnij się również, że wartość **wystawcy** mieści się w adresie URL usługi tokenu zabezpieczającego (STS).  
   
     ```xml  
     <system.identityModel>  
@@ -138,8 +138,8 @@ ms.locfileid: "69941298"
   
 1. Otwórz plik **default. aspx** w projekcie **TestApp** i Zastąp istniejący znacznik następującym znacznikiem:  
   
-    ```  
-    %@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
+    ```aspx-csharp
+    <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
   
     <!DOCTYPE html>  
   

@@ -1,25 +1,25 @@
 ---
-title: Uogólnione modele dodatku i kształtu funkcji na użytek explainability modelu
-description: Uogólnione modele dodatku i kształtu funkcji na użytek explainability model w strukturze ML.NET
+title: Korzystaj z uogólnionych modeli i funkcji kształtu do celów objaśniających model
+description: Korzystaj z uogólnionych modeli i funkcji kształtu do wyjaśnienia modelu w ML.NET
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: ef56f737a2ad0cba616e32229ac3a395146fb6d2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c58cf823007196c35da093fab7423c1e40ba1158
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662129"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855602"
 ---
-# <a name="use-generalized-additive-models-and-shape-functions-for-model-explainability-in-mlnet"></a>Uogólnione modele dodatku i kształtu funkcji na użytek explainability model w strukturze ML.NET
+# <a name="use-generalized-additive-models-and-shape-functions-for-model-explainability-in-mlnet"></a>Korzystaj z uogólnionych modeli i funkcji kształtu do wyjaśnienia modelu w ML.NET
 
 > [!NOTE]
-> W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, odwiedź stronę [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+> Ten temat dotyczy ML.NET, który jest obecnie w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, odwiedź stronę [ml.NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet) .
 
-Obecnie używasz w tym przykładzie porad i pokrewnych **strukturze ML.NET wersji 0.10**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
+Ta procedura i powiązana próbka są obecnie używane w programie **ml.NET w wersji 0,10**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium programu dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)w witrynie GitHub.
 
-Podczas tworzenia modeli uczenia maszynowego, często nie jest wystarczająco, aby po prostu prognozowania. Często deweloperom, osobom podejmującym decyzje i te wpływ modele uczenia maszynowego trzeba wiedzieć, jak modele uczenia maszynowego podejmowanie decyzji i funkcji, które przyczyniają się do ich wydajność. **Uogólnione modele dodatku (GAMs)** są używane wewnętrznie w firmie Microsoft explainability modelu pomagające deweloperom learning maszyny, tworzyć modele o dużej pojemności, które mogą być łatwo interpretowane przez innych użytkowników.
+Podczas tworzenia modeli uczenia maszynowego często nie wystarczy, aby robić przewidywania. Często deweloperzy uczenia maszynowego, osoby podejmujące decyzje i te, których dotyczą modele, muszą zrozumieć, jak modele uczenia maszynowego podejmują decyzje i jakie funkcje przyczyniają się do ich wydajności. **Ogólne modele addytywne (GAMs)** są używane wewnętrznie w firmie Microsoft w celu uzyskania wyjaśnień, aby ułatwić deweloperom uczenia maszynowego tworzenie modeli o wysokiej wydajności, które mogą być łatwo interpretowane przez inne osoby.
 
-GAMs są klasy **interpretowanej modeli** będących modeli liniowych, warunki, w którym znajdują się funkcje nieliniowych, o nazwie "kształtu funkcji" jednej zmiennej. Jako modeli liniowych są interpretowane łatwe, ale ponieważ modele dowiedzieć się więcej funkcji funkcji zamiast pojedynczego wagi, ich modelowania bardziej złożonych relacji niż prosty model liniowy. Wynikowy predykcyjne GAM ma termin intercept, który reprezentuje średni prognozowania nad zestaw szkoleniowy i funkcje kształtu, reprezentującymi odchyleń od średniej prognozy. Funkcje kształtów można kontrolowane przez oka, aby zobaczyć odpowiedź modelu różne wartości funkcji i wizualizowane takich jak poniższy wykres, który jest tworzony na końcu w przykładzie kodu. Trainer GAM w strukturze ML.NET jest implementowany przy użyciu płytka gradientu wzmocnionego drzewa (na przykład drzewa pnie) aby dowiedzieć się więcej funkcji nonparametric kształt i jest oparta na metody opisanej w [zrozumiałą modele klasyfikacji i regresji](https://www.cs.cornell.edu/~yinlou/papers/lou-kdd12.pdf) Lou, Caruana i Gehrke.
+GAMs jest klasą **interpretowanych modeli** , które są modelami liniowymi, gdzie warunki są funkcjami nieliniowymi, nazywanymi "funkcjami kształtu" jednej zmiennej. Modele liniowe są łatwo interpretowane, ale ponieważ modele poznają funkcje funkcji zamiast pojedynczej wagi, mogą modelować bardziej złożone relacje niż prosty model liniowy. Wynikająca przewidywalność mapie gam ma termin przechwycenia reprezentujący średnią prognozę dla zestawu szkoleniowego i funkcje kształtu, które reprezentują odchylenia od średniej przewidywania. Funkcje kształtu mogą być sprawdzane przez oczy, aby zobaczyć odpowiedź modelu do różnych wartości funkcji i wizualizować jak Poniższy wykres, który jest tworzony na końcu przykładu kodu. MAPIE gam Trainer w ML.NET jest zaimplementowana przy użyciu wzorów podwyższania poziomu gradientu (na przykład drzewa Stumps), aby poznać funkcje kształtu nieparametrycznego i opiera się na metodzie opisanej w [odniesieniu do modelu klasyfikacji i regresji](https://www.cs.cornell.edu/~yinlou/papers/lou-kdd12.pdf) przez Lou, Caruana i Gehrke.
 
 ```csharp
 // Train the Generalized Additive Model
@@ -53,6 +53,6 @@ for (int i = 0; i < myFeatureBins.Length; i++)
 }
 ```
 
-![Uogólnionego modele dodatku kształtu funkcji wykresu](./media/use-gams-for-model-explainability/gam-shape-function-graph.png)
+![Wykres funkcji kształtów ogólnych modeli addytywne](./media/use-gams-for-model-explainability/gam-shape-function-graph.png)
 
-Przykład sposobu uczenia modelu GAM, zbadaj i interpretacji wyników, zobacz [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/blob/master/docs/samples/Microsoft.ML.Samples/Dynamic/GeneralizedAdditiveModels.cs).
+Aby zapoznać się z przykładem sposobu uczenia modelu mapie gam i sprawdzenia i interpretacji wyników, zobacz [repozytorium dotnet/machinelearning w witrynie GitHub](https://github.com/dotnet/machinelearning/blob/master/docs/samples/Microsoft.ML.Samples/Dynamic/GeneralizedAdditiveModels.cs).

@@ -1,12 +1,12 @@
 ---
 title: 'Przewodnik: Utrwalanie obiektu za pomocąC#'
 ms.date: 04/26/2018
-ms.openlocfilehash: 88fb589ca2f9a24f861b528bfd601f837e9aac5f
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 5e3a327ca0a257c45de361e0b3734e0b127f9869
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105923"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851044"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Przewodnik: utrwalanie obiektu przy użyciu języka C\#
 
@@ -22,7 +22,7 @@ W tym instruktażu utworzysz obiekt podstawowy `Loan` i zachowasz jego dane do p
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Aby skompilować i uruchomić, zainstaluj [zestaw .NET Core SDK](https://www.microsoft.com/net/core).
+- Aby skompilować i uruchomić, zainstaluj [zestaw .NET Core SDK](https://dotnet.microsoft.com/download).
 
 - Zainstaluj swój ulubiony Edytor kodu, jeśli jeszcze tego nie zrobiono.
 

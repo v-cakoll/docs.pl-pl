@@ -3,12 +3,12 @@ title: Omówienie modułu uwierzytelniania WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 9ade6b0d9e4aadb353ca148f868d548fbaacfbc3
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: eaf53a352238161ccec1b481649074d322954905
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987700"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851516"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Omówienie modułu uwierzytelniania WSFederation
 Windows Identity Foundation (WIF) obejmuje obsługę uwierzytelniania federacyjnego w aplikacjach ASP.NET za pomocą modułu uwierzytelniania WS-Federation (WS-Farma). Ten temat pomoże Ci zrozumieć, jak działa uwierzytelnianie federacyjne i jak z niego korzystać.  
@@ -67,7 +67,7 @@ Windows Identity Foundation (WIF) obejmuje obsługę uwierzytelniania federacyjn
   
 - Zdarzenie jest zgłaszane, gdy infrastruktura ASP.NET <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> wywołuje metodę po raz pierwszy na jednej z modułów aplikacji, które pochodzą z <xref:System.IdentityModel.Services.HttpModuleBase>. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> Ta metoda uzyskuje dostęp do <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> właściwości statycznej, która powoduje, że konfiguracja zostanie załadowana z pliku Web. config. To zdarzenie jest wywoływane tylko podczas pierwszego uzyskiwania dostępu do tej właściwości. Do obiektu, który jest zainicjowany z konfiguracji, <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> można uzyskać dostęp za pośrednictwem właściwości w programie obsługi zdarzeń. <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> To zdarzenie służy do modyfikowania konfiguracji przed jej zastosowaniem do dowolnych modułów. Można dodać procedurę obsługi dla tego zdarzenia w metodzie Application_Start:  
   
-    ```  
+    ```csharp
     void Application_Start(object sender, EventArgs e)  
     {  
         FederatedAuthentication.FederationConfigurationCreated += new EventHandler<FederationConfigurationCreatedEventArgs>(FederatedAuthentication_FederationConfigurationCreated);  

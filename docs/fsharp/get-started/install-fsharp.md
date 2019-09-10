@@ -2,12 +2,12 @@
 title: Instalowanie języka F#
 description: Dowiedz się, F# jak zainstalować program w oparciu o środowisko.
 ms.date: 09/05/2019
-ms.openlocfilehash: 18b660ff640904119d63f57405752a14f7673e0c
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: dffa30eac0bdb59c85a66dca6cafd62b25daa572
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400720"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855806"
 ---
 # <a name="install-f"></a>Zainstaluj program F\#
 
@@ -39,7 +39,7 @@ Narzędzie [mono](https://www.mono-project.com) jest używane na potrzeby [ F# i
 brew install mono
 ```
 
-Zainstaluj również [zestaw .NET Core SDK](https://www.microsoft.com/net/download).
+Zainstaluj również [zestaw .NET Core SDK](https://dotnet.microsoft.com/download).
 
 ### <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
@@ -50,13 +50,13 @@ sudo apt-get update
 sudo apt-get install mono-complete fsharp
 ```
 
-Zainstaluj również [zestaw .NET Core SDK](https://www.microsoft.com/net/download).
+Zainstaluj również [zestaw .NET Core SDK](https://dotnet.microsoft.com/download).
 
 ### <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 Zainstaluj [program Visual Studio F# z obsługą techniczną](#install-f-with-visual-studio). Spowoduje to zainstalowanie wszystkich składników niezbędnych do pisania, kompilowania i wykonywania F# kodu.
 
-Zainstaluj również [zestaw .NET Core SDK](https://www.microsoft.com/net/download/).
+Zainstaluj również [zestaw .NET Core SDK](https://dotnet.microsoft.com/download).
 
 ---
 

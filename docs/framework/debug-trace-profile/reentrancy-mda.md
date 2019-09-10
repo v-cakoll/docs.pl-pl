@@ -15,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7de0a869925816da6df8f17e14ab92964aec8d11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a1fb8a48cf6dbfc4edd6387fb35297c9c047270
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874188"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854042"
 ---
 # <a name="reentrancy-mda"></a>wielobieżność MDA
-`reentrancy` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy podejmowana jest próba przejścia z natywnego do zarządzanego kodu w przypadkach, gdzie wcześniejsze przełącznika z kodu zarządzanego do natywnego nie było wykonywane za pośrednictwem przejścia.  
+Asystent `reentrancy` debugowania zarządzanego (MDA) jest uaktywniany, gdy podejmowana jest próba przejścia z kodu natywnego na kod zarządzany w przypadkach, gdy wcześniejszy przełącznik z kodu zarządzanego na kod natywny nie został wykonany przy użyciu przejścia uporządkowanego.  
   
 ## <a name="symptoms"></a>Symptomy  
- Sterty obiektów jest uszkodzony lub inne poważne błędy występują w przypadku przechodzenia z natywnego do zarządzanego kodu.  
+ Sterta obiektu jest uszkodzona lub występują inne poważne błędy podczas przechodzenia z kodu natywnego do zarządzanego.  
   
- Wątki, przełączać się między kodu natywnego i zarządzanego w dowolnym kierunku, które należy wykonać przejścia. Jednak niektóre punkty rozszerzeń niskiego poziomu, w systemie operacyjnym, takich jak wektorowa obsługa wyjątków, umożliwia przełączników z kodu zarządzanego do natywnego kodu bez przeprowadzania przejścia.  Te przełączniki są pod kontrolą systemu operacyjnego, a nie kontrolowanymi języka wspólnego (CLR).  Kodu macierzystego, który jest wykonywany wewnątrz te punkty rozszerzeń należy unikać wywołań zwrotnych do kodu zarządzanego.  
+ Wątki przełączające się między kodem natywnym i zarządzanym w obu kierunkach muszą wykonywać uporządkowane przejścia. Jednak niektóre punkty rozszerzenia niskiego poziomu w systemie operacyjnym, takie jak obsługa wyjątków wektorowych, zezwalają na przełączanie z kodu zarządzanego na natywny bez wykonywania uporządkowanego przejścia.  Te przełączniki są pod kontrolą systemu operacyjnego, a nie pod kontrolą środowiska uruchomieniowego języka wspólnego (CLR).  Każdy kod natywny, który jest wykonywany w tych punktach rozszerzalności, musi unikać wywoływania kodu zarządzanego.  
   
 ## <a name="cause"></a>Przyczyna  
- Punkt rozszerzeń niskiego poziomu systemu operacyjnego, takie jak wektorowa obsługa wyjątków, zostało uaktywnione podczas wykonywania kodu zarządzanego.  Kod aplikacji, która jest wywoływana za pomocą tego punktu rozszerzalności podejmuje próbę wywołania zwrotnego w kodzie zarządzanym.  
+ Punkt rozszerzalności systemu operacyjnego niskiego poziomu, taki jak program obsługi wyjątków wektorowych, został aktywowany podczas wykonywania kodu zarządzanego.  Kod aplikacji, który jest wywoływany przez ten punkt rozszerzalności, próbuje wywołać kod zarządzany.  
   
- Ten problem, zawsze jest spowodowane przez kod aplikacji.  
+ Ten problem jest zawsze spowodowany przez kod aplikacji.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Sprawdź ślad stosu dla wątku, który uaktywnił to zdarzenie MDA.  Wątek podejmuje próbę nielegalnego mogą wywoływać kodu zarządzanego.  Ślad stosu powinno ujawnić, kod aplikacji przy użyciu tego punktu rozszerzalności, kod systemu operacyjnego, który zawiera ten punkt rozszerzeń i kodu zarządzanego, który został przerwany przez punkt rozszerzeń.  
+ Przejrzyj ślad stosu dla wątku, który uaktywnił to MDA.  Wątek próbuje niedozwolone wywołanie w kodzie zarządzanym.  Ślad stosu powinien ujawnić kod aplikacji przy użyciu tego punktu rozszerzalności, kodu systemu operacyjnego, który zapewnia ten punkt rozszerzalności, oraz kodu zarządzanego, który został przerwany przez punkt rozszerzalności.  
   
- Na przykład zobaczysz MDA aktywacji w celu wywołania kodu zarządzanego z wewnątrz wektorowa obsługa wyjątków.  Na stosie zobaczysz obsługi kodu i niektórych kodu zarządzanego, takie jak wyzwolenie wyjątek wyjątków systemu operacyjnego <xref:System.DivideByZeroException> lub <xref:System.AccessViolationException>.  
+ Na przykład zobaczysz, że element MDA został aktywowany w trakcie próby wywołania kodu zarządzanego z wewnątrz wektorowego programu obsługi wyjątków.  Na stosie zobaczysz kod obsługi wyjątków systemu operacyjnego i jakiś kod zarządzany wyzwalający wyjątek, taki jak <xref:System.DivideByZeroException> <xref:System.AccessViolationException>lub.  
   
- W tym przykładzie poprawnego rozpoznawania jest całkowicie zaimplementować wektorowa obsługa wyjątków w kodzie niezarządzanym.  
+ W tym przykładzie poprawne rozwiązanie polega na zaimplementowaniu w całości kodu niezarządzanego programu obsługi wyjątków.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
  To zdarzenie MDA nie ma wpływu na środowisko CLR.  
   
 ## <a name="output"></a>Dane wyjściowe  
- MDA zgłasza, że niedozwolona wielobieżność zostanie podjęta.  Sprawdź stosu wątku w celu ustalenia, dlaczego to się dzieje i jak rozwiązać ten problem. Poniżej przedstawiono przykładowe dane wyjściowe.  
+ Podjęto próbę wykonania niedozwolonych współużytkowania wątkowości w raportach MDA.  Sprawdź stos wątku, aby określić, dlaczego dzieje się tak i jak rozwiązać problem. Poniżej przedstawiono przykładowe dane wyjściowe.  
   
-```  
+```output
 Additional Information: Attempting to call into managed code without   
 transitioning out first.  Do not attempt to run managed code inside   
 low-level native extensibility points. Managed Debugging Assistant   
@@ -67,7 +67,7 @@ ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod powoduje, że przykład <xref:System.AccessViolationException> zostanie wygenerowany.  W wersjach systemu Windows, który obsługuje wektorowa wyjątków spowoduje to zarządzane wektorowa obsługa wyjątków do wywołania.  Jeśli `reentrancy` MDA jest włączona, MDA uaktywni się podczas próby wywołania `MyHandler` z systemu operacyjnego wyjątek wektorowa obsługi kod pomocy technicznej.  
+ Poniższy przykład kodu powoduje, że <xref:System.AccessViolationException> może zostać zgłoszony.  W przypadku wersji systemu Windows, które obsługują obsługę wyjątków wektorowych, spowoduje to wywołanie zarządzanej procedury obsługi wyjątków zarządzanych.  Jeśli zdarzenie MDA jest włączone, zostanie aktywowane podczas próby `MyHandler` wywołania z poziomu wektorowego obsługi wyjątków systemu operacyjnego. `reentrancy`  
   
 ```csharp
 using System;  

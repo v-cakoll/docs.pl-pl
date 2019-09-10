@@ -2,25 +2,25 @@
 title: Dostawca EntityClient dla programu Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: 70cc5a9aaa22cc563c910f9d250ad4565e34a135
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e3a87d4a936e5bdf633e1f997f66dd98add2a9cb
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251601"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854711"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Dostawca EntityClient dla programu Entity Framework
 Dostawca EntityClient jest dostawcą danych używanym przez aplikacje Entity Framework do uzyskiwania dostępu do danych opisanych w modelu koncepcyjnym. Aby uzyskać informacje o modelach koncepcyjnych, zobacz [modelowanie i mapowanie](modeling-and-mapping.md). EntityClient używa innych dostawców danych .NET Framework, aby uzyskać dostęp do źródła danych. Na przykład EntityClient używa Dostawca danych .NET Framework dla SQL Server (SqlClient) podczas uzyskiwania dostępu do bazy danych SQL Server. Aby uzyskać informacje na temat dostawcy SqlClient, zobacz temat [SqlClient dla Entity Framework](sqlclient-for-the-entity-framework.md). Dostawca EntityClient jest zaimplementowany w <xref:System.Data.EntityClient> przestrzeni nazw.  
   
 ## <a name="managing-connections"></a>Zarządzanie połączeniami  
- Kompilacje na podstawie ADO.NET dostawców danych specyficznych dla magazynu przez <xref:System.Data.EntityClient.EntityConnection> udostępnienie dostawcy danych i relacyjnej bazy danych. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Aby skonstruować <xref:System.Data.EntityClient.EntityConnection> obiekt, należy odwołać się do zestawu metadanych zawierającego wymagane modele i mapowania, a także nazwę dostawcy danych specyficzną dla magazynu i parametry połączenia. Po zakończeniu <xref:System.Data.EntityClient.EntityConnection> będzie można uzyskać dostęp do jednostek za pośrednictwem klas generowanych na podstawie modelu koncepcyjnego.  
+ Entity Framework kompiluje się w oparciu o ADO.NET dostawców danych specyficznych dla magazynu, <xref:System.Data.EntityClient.EntityConnection> dostarczając do podstawowego dostawcy danych i relacyjnej. Aby skonstruować <xref:System.Data.EntityClient.EntityConnection> obiekt, należy odwołać się do zestawu metadanych zawierającego wymagane modele i mapowania, a także nazwę dostawcy danych specyficzną dla magazynu i parametry połączenia. Po zakończeniu <xref:System.Data.EntityClient.EntityConnection> będzie można uzyskać dostęp do jednostek za pośrednictwem klas generowanych na podstawie modelu koncepcyjnego.  
   
  Możesz określić parametry połączenia w pliku App. config.  
   
  <xref:System.Data.EntityClient> Zawiera<xref:System.Data.EntityClient.EntityConnectionStringBuilder> również klasę. Ta klasa umożliwia deweloperom Programistyczne tworzenie składni parametrów połączenia oraz analizowanie i ponowne kompilowanie istniejących parametrów połączenia przy użyciu właściwości i metod klasy. Aby uzyskać więcej informacji, zobacz [jak: Kompiluj parametry](how-to-build-an-entityconnection-connection-string.md)połączenia usługi EntityConnection.  
   
 ## <a name="creating-queries"></a>Tworzenie zapytań  
- [!INCLUDE[esql](../../../../../includes/esql-md.md)] Język to niezależny od magazynu dialekt SQL, który działa bezpośrednio ze schematami jednostek koncepcyjnych i obsługuje Entity Data Model pojęć, takich jak dziedziczenie i relacje. Klasa jest używana do [!INCLUDE[esql](../../../../../includes/esql-md.md)] wykonywania polecenia względem modelu jednostki. <xref:System.Data.EntityClient.EntityCommand> Podczas konstruowania <xref:System.Data.EntityClient.EntityCommand> obiektów można określić nazwę procedury składowanej lub tekst zapytania. Współpracuje z dostawcami danych specyficznymi dla magazynu w celu [!INCLUDE[esql](../../../../../includes/esql-md.md)] przetłumaczenia ogólnego na zapytania specyficzne dla magazynu. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Aby uzyskać więcej informacji na [!INCLUDE[esql](../../../../../includes/esql-md.md)] temat pisania zapytań, zobacz [Entity SQL Language](./language-reference/entity-sql-language.md).  
+ [!INCLUDE[esql](../../../../../includes/esql-md.md)] Język to niezależny od magazynu dialekt SQL, który działa bezpośrednio ze schematami jednostek koncepcyjnych i obsługuje Entity Data Model pojęć, takich jak dziedziczenie i relacje. Klasa jest używana do [!INCLUDE[esql](../../../../../includes/esql-md.md)] wykonywania polecenia względem modelu jednostki. <xref:System.Data.EntityClient.EntityCommand> Podczas konstruowania <xref:System.Data.EntityClient.EntityCommand> obiektów można określić nazwę procedury składowanej lub tekst zapytania. Entity Framework współpracuje z dostawcami danych specyficznymi dla magazynu w celu [!INCLUDE[esql](../../../../../includes/esql-md.md)] tłumaczenia ogólnego na zapytania specyficzne dla magazynu. Aby uzyskać więcej informacji na [!INCLUDE[esql](../../../../../includes/esql-md.md)] temat pisania zapytań, zobacz [Entity SQL Language](./language-reference/entity-sql-language.md).  
   
  Poniższy przykład tworzy <xref:System.Data.EntityClient.EntityCommand> obiekt i [!INCLUDE[esql](../../../../../includes/esql-md.md)] przypisuje tekst zapytania do jego <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> właściwości. To [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytanie żąda produktów uporządkowanych według ceny listy z modelu koncepcyjnego. Poniższy kod nie zawiera żadnych informacji o modelu magazynu.  
   

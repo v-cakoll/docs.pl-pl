@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33bc0ecb4b7d20f0df96486c046e06fc4cf0e7ed
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f2bfb1078478aea5dffab66ba5f8c7d553262968
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941455"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851590"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Pobieranie zasobów w aplikacjach klasycznych
-W przypadku pracy z zlokalizowanymi zasobami w .NET Framework aplikacjach klasycznych najlepiej jest spakować zasoby dla kultury domyślnej lub neutralnej z zestawem głównym i utworzyć oddzielny zestaw satelicki dla każdego języka lub kultury obsługiwanej przez aplikację. Następnie można użyć <xref:System.Resources.ResourceManager> klasy zgodnie z opisem w następnej sekcji, aby uzyskać dostęp do nazwanych zasobów. Jeśli nie zdecydujesz się na osadzanie zasobów w głównym zestawie i zestawach satelickich, możesz również uzyskać dostęp do plików binarnych. resources bezpośrednio, zgodnie z opisem w sekcji [pobieranie zasobów z plików.](#from_file) Resources w dalszej części tego artykułu.  Aby pobrać zasoby w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacjach, zobacz [Tworzenie i pobieranie zasobów w aplikacjach ze sklepu Windows](https://go.microsoft.com/fwlink/p/?LinkID=241674) w centrum deweloperów systemu Windows.  
+W przypadku pracy z zlokalizowanymi zasobami w .NET Framework aplikacjach klasycznych najlepiej jest spakować zasoby dla kultury domyślnej lub neutralnej z zestawem głównym i utworzyć oddzielny zestaw satelicki dla każdego języka lub kultury obsługiwanej przez aplikację. Następnie można użyć <xref:System.Resources.ResourceManager> klasy zgodnie z opisem w następnej sekcji, aby uzyskać dostęp do nazwanych zasobów. Jeśli nie zdecydujesz się na osadzanie zasobów w głównym zestawie i zestawach satelickich, możesz również uzyskać dostęp do plików binarnych. resources bezpośrednio, zgodnie z opisem w sekcji [pobieranie zasobów z plików. resources](#from_file) w dalszej części tego artykułu.  Aby pobrać zasoby w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacjach, zobacz [Tworzenie i pobieranie zasobów w aplikacjach ze sklepu Windows](https://go.microsoft.com/fwlink/p/?LinkID=241674) w centrum deweloperów systemu Windows.  
   
 <a name="from_assembly"></a>   
 ## <a name="retrieving-resources-from-assemblies"></a>Pobieranie zasobów z zestawów  
@@ -43,19 +43,19 @@ W przypadku pracy z zlokalizowanymi zasobami w .NET Framework aplikacjach klasyc
 ### <a name="retrieving-string-data-an-example"></a>Pobieranie danych ciągu: Przykład  
  Poniższy przykład wywołuje metodę, <xref:System.Resources.ResourceManager.GetString%28System.String%29> aby pobrać zasoby ciągów dla bieżącej kultury interfejsu użytkownika. Zawiera on neutralny zasób ciągu dla kultur angielskiej (Stany Zjednoczone) i zlokalizowanych zasobów dla kultur francuski (Francja) i rosyjski (Rosja). Następujący zasób w języku angielskim (Stany Zjednoczone) znajduje się w pliku o nazwie Strings. txt:  
   
-```  
+```text
 TimeHeader=The current time is  
 ```  
   
  Zasób francuski (Francja) znajduje się w pliku o nazwie Strings.fr-FR. txt:  
   
-```  
+```text
 TimeHeader=L'heure actuelle est  
 ```  
   
  Zasób rosyjski (Rosja) znajduje się w pliku o nazwie Strings.ru-RU-txt:  
   
-```  
+```text
 TimeHeader=Текущее время —  
 ```  
   
@@ -66,7 +66,7 @@ TimeHeader=Текущее время —
   
  Poniższy plik wsadowy (. bat) kompiluje przykład i generuje zestawy satelickie w odpowiednich katalogach. Polecenia są dostępne dla C# języka i kompilatora. W przypadku Visual Basic Zmień `csc` na `vbc`i przejdź `GetString.cs` do `GetString.vb`.  
   
-```  
+```console
 resgen strings.txt  
 csc GetString.cs -resource:strings.resources  
   
@@ -96,7 +96,7 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
   
  Aby skompilować C# przykład, można użyć następującego pliku wsadowego. W przypadku Visual Basic Zmień `csc` na `vbc`i Zmień rozszerzenie pliku kodu źródłowego z `.cs` na `.vb`.  
   
-```  
+```console
 csc CreateResources.cs  
 CreateResources  
   
@@ -122,7 +122,7 @@ csc GetStream.cs -resource:AppResources.resources
   
  Możesz skompilować wymagany plik zasobów i zestawy i uruchomić aplikację, wykonując następujący plik wsadowy. Musisz użyć opcji, `/r` aby dostarczyć Resgen. exe z odwołaniem do biblioteki UIElement. dll, aby można było uzyskać dostęp do informacji `PersonTable` o strukturze. Jeśli używasz programu C#, Zamień `vbc` nazwę `csc`kompilatora na i Zastąp `.vb` rozszerzenie symbolem `.cs`.  
   
-```  
+```console
 vbc -t:library UIElements.vb  
 vbc CreateResources.vb -r:UIElements.dll  
 CreateResources  
@@ -166,21 +166,21 @@ GetObject.exe
 ### <a name="an-example"></a>Przykład  
  Poniższy przykład ilustruje sposób pobierania przez Menedżera zasobów zasobów bezpośrednio z plików Resources. Przykład składa się z trzech plików zasobów tekstowych dla kultur angielskiej (Stany Zjednoczone), francuski (Francja) i rosyjski (Rosja). W języku angielskim (Stany Zjednoczone) jest domyślną kulturą przykładową. Jego zasoby są przechowywane w następującym pliku o nazwie Strings. txt:  
   
-```  
+```text
 Greeting=Hello  
 Prompt=What is your name?  
 ```  
   
  Zasoby dla kultury francuskiej (Francja) są przechowywane w następującym pliku o nazwie Strings.fr-FR. txt:  
   
-```  
+```text 
 Greeting=Bon jour  
 Prompt=Comment vous appelez-vous?  
 ```  
   
  Zasoby dla kultury rosyjskiej (Rosja) są przechowywane w następującym pliku o nazwie Strings.ru-RU. txt:  
   
-```  
+```text
 Greeting=Здравствуйте  
 Prompt=Как вас зовут?  
 ```  
@@ -192,7 +192,7 @@ Prompt=Как вас зовут?
   
  C# Wersję przykładu można skompilować, uruchamiając następujący plik wsadowy. Jeśli używasz Visual Basic `csc` , Zamień je `.cs` na `vbc`, `.vb`a następnie zastąp rozszerzenie.  
   
-```  
+```console
 Md Resources  
 Resgen Strings.txt Resources\Strings.resources  
 Resgen Strings.fr-FR.txt Resources\Strings.fr-FR.resources  

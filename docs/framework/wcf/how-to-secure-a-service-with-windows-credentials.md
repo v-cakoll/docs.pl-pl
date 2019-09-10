@@ -7,146 +7,154 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: 5fb175bdd255af1b506dacb973a778b1f6f515f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 19ac9da94ce6e405632293a7d569698c9d866bef
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928950"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856063"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Instrukcje: Zabezpieczanie usługi za pomocą poświadczeń systemu Windows
-W tym temacie przedstawiono sposób włączania zabezpieczenia transportu usługi Windows Communication Foundation (WCF), który znajduje się w domenie, Windows i jest wywoływana przez klientów w tej samej domenie. Aby uzyskać więcej informacji na temat tego scenariusza, zobacz [zabezpieczenia transportu z uwierzytelnianiem Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Dla przykładowej aplikacji, zobacz [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) próbki.  
-  
- W tym temacie przyjęto założenie, masz istniejący interfejs kontrakt i implementacja już zdefiniowane i dodaje się, że. Można także modyfikować istniejące usługi i klienta.  
-  
- Aby zabezpieczyć usługi przy użyciu poświadczeń Windows całkowicie w kodzie. Alternatywnie możesz pominąć część kodu przy użyciu pliku konfiguracji. W tym temacie pokazano w obu kierunkach. Upewnij się, że używasz tylko jednej z metod, nie obydwa.  
-  
- Pierwsze trzy procedury pokazują, jak zabezpieczyć usługę za pomocą kodu. Czwarty i piąty procedura pokazuje, jak to zrobić za pomocą pliku konfiguracji.  
-  
-## <a name="using-code"></a>Przy użyciu kodu  
- Kompletny kod dla usługi i klienta znajduje się w sekcji przykład, na końcu tego tematu.  
-  
- Pierwsza procedura przeprowadzi tworzenia i konfigurowania <xref:System.ServiceModel.WSHttpBinding> klasy w kodzie. Powiązanie korzysta z protokołu HTTP. Tego samego powiązania jest używany na komputerze klienckim.  
-  
-#### <a name="to-create-a-wshttpbinding-that-uses-windows-credentials-and-message-security"></a>Aby utworzyć WSHttpBinding, który używa poświadczeń Windows i zabezpieczeń komunikatów  
-  
-1. Ta procedura kod dodaje się na początku `Run` metody `Test` klasy w kodzie usługi, w sekcji przykład.  
-  
-2. Utworzenie wystąpienia <xref:System.ServiceModel.WSHttpBinding> klasy.  
-  
-3. Ustaw <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> właściwość <xref:System.ServiceModel.WSHttpSecurity> klasy <xref:System.ServiceModel.SecurityMode.Message>.  
-  
-4. Ustaw <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> właściwość <xref:System.ServiceModel.MessageSecurityOverHttp> klasy <xref:System.ServiceModel.MessageCredentialType.Windows>.  
-  
-5. Kod do wykonania tej procedury jest następująca:  
-  
-     [!code-csharp[c_SecureWindowsService#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsservice/cs/secureservice.cs#1)]
-     [!code-vb[c_SecureWindowsService#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#1)]  
-  
-### <a name="using-the-binding-in-a-service"></a>Za pomocą tego powiązania w ramach usługi  
- Jest to druga procedura pokazuje, jak stosować powiązanie samodzielnie hostowanej usługi. Aby uzyskać więcej informacji na temat usługi hostingowe zobacz [usług obsługującego](../../../docs/framework/wcf/hosting-services.md).  
-  
-##### <a name="to-use-a-binding-in-a-service"></a>Aby użyć powiązania w ramach usługi  
-  
-1. Wstaw kod tej procedury po kodu z poprzedniej procedury.  
-  
-2. Tworzenie <xref:System.Type> zmiennej o nazwie `contractType` i przypisać jej typ interfejsu (`ICalculator`). Podczas korzystania z języka Visual Basic należy używać `GetType` operatora; przy użyciu języka C#, użyj `typeof` — słowo kluczowe.  
-  
-3. Utwórz drugi <xref:System.Type> zmiennej o nazwie `serviceType` i przypisać jej typ kontraktu zaimplementowano (`Calculator`).  
-  
-4. Utwórz wystąpienie obiektu <xref:System.Uri> klasę o nazwie `baseAddress` przy użyciu podstawowego adresu usługi. Adres podstawowy musi mieć schemat, który odpowiada transportu. W takim przypadku schemat transportu jest protokół HTTP, a adres zawiera specjalne identyfikator (URI) "localhost" i numer portu (8036) oraz adres podstawowego punktu końcowego ("serviceModelSamples /): `http://localhost:8036/serviceModelSamples/`.  
-  
-5. Utwórz wystąpienie obiektu <xref:System.ServiceModel.ServiceHost> klasy `serviceType` i `baseAddress` zmiennych.  
-  
-6. Dodawanie punktu końcowego do usługi za pomocą `contractType`, powiązanie i nazwę punktu końcowego (secureCalculator). Klienta należy złączyć adres podstawowy, a nazwa punktu końcowego za zaufany podczas inicjowania połączenia z usługą.  
-  
-7. Wywołaj <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> metodę, aby uruchomić usługę. Kod do wykonania tej procedury jest następujący:  
-  
-     [!code-csharp[c_SecureWindowsService#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsservice/cs/secureservice.cs#2)]
-     [!code-vb[c_SecureWindowsService#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#2)]  
-  
-### <a name="using-the-binding-in-a-client"></a>Za pomocą tego powiązania w kliencie WPF  
- Ta procedura pokazuje sposób generowania serwera proxy, który komunikuje się z usługą. Serwer proxy jest generowany przy użyciu [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) który używa metadanych usługi w celu utworzenia serwera proxy.  
-  
- Ta procedura powoduje utworzenie wystąpienia <xref:System.ServiceModel.WSHttpBinding> klasy do komunikowania się z usługą, a następnie wywołuje usługę.  
-  
- W tym przykładzie używa tylko kod tworzenia klienta. Alternatywnie można użyć pliku konfiguracji, który jest pokazany w sekcji następującej procedury.  
-  
-##### <a name="to-use-a-binding-in-a-client-with-code"></a>Aby użyć powiązania w kliencie przy użyciu kodu  
-  
-1. Użyj narzędzia SvcUtil.exe do generowania kodu serwera proxy z metadanych usługi. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Kod wygenerowany serwer proxy dziedziczy <xref:System.ServiceModel.ClientBase%601> klasy, która gwarantuje, że każdy klient ma niezbędne konstruktorów, metod i właściwości w celu komunikowania się z usługą WCF. W tym przykładzie zawiera wygenerowanego kodu `CalculatorClient` klasy, która implementuje `ICalculator` interfejsu, włączanie zgodności z kodem usługi.  
-  
-2. Ta procedura kod dodaje się na początku `Main` metoda program kliencki.  
-  
-3. Utwórz wystąpienie obiektu <xref:System.ServiceModel.WSHttpBinding> klasy i ustaw jego tryb zabezpieczeń `Message` i typ do poświadczeń klienta `Windows`. Przykład nazwy zmiennej `clientBinding`.  
-  
-4. Utwórz wystąpienie obiektu <xref:System.ServiceModel.EndpointAddress> klasę o nazwie `serviceAddress`. Inicjuje wystąpienie przy użyciu podstawowego adresu połączona z wybranej nazwy punktu końcowego.  
-  
-5. Utwórz wystąpienie wygenerowanej klasy klienta za pomocą `serviceAddress` i `clientBinding` zmiennych.  
-  
-6. Wywołaj <xref:System.ServiceModel.ClientBase%601.Open%2A> metodzie, jak pokazano w poniższym kodzie.  
-  
-7. Wywoła usługę i wyświetlić wyniki.  
-  
-     [!code-csharp[c_secureWindowsClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#1)]
-     [!code-vb[c_secureWindowsClient#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#1)]  
-  
-## <a name="using-the-configuration-file"></a>Przy użyciu pliku konfiguracji  
- Zamiast tworzenia powiązania z kodem proceduralnym, można użyć następującego kodu pokazano sekcję powiązania w pliku konfiguracji.  
-  
- Jeśli nie masz już usługę zdefiniowane, zobacz [projektowanie i Implementowanie usług](../../../docs/framework/wcf/designing-and-implementing-services.md), i [Konfigurowanie usług](../../../docs/framework/wcf/configuring-services.md).  
-  
- **Uwaga** kod tej konfiguracji jest używany w plikach konfiguracji usługi i klienta.  
-  
-#### <a name="to-enable-transfer-security-on-a-service-in-a-windows-domain-using-configuration"></a>Aby włączyć zabezpieczenia transferu na usługi w domenie Windows przy użyciu konfiguracji  
-  
-1. Dodaj [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elementu [ \<powiązania >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) sekcji pliku konfiguracji.  
-  
-2. Dodaj <`binding`> elementu <`WSHttpBinding`> element i ustaw `configurationName` atrybut na wartość, które są odpowiednie dla aplikacji.  
-  
-3. Dodaj <`security`> element i ustaw `mode` atrybutu do wiadomości.  
-  
-4. Dodaj <`message`> element i ustaw `clientCredentialType` atrybutu Windows.  
-  
-5. W pliku konfiguracji usługi, należy zastąpić `<bindings>` sekcję poniższym kodem. Jeśli nie masz jeszcze pliku konfiguracji usługi, zobacz [przy użyciu powiązania do konfigurowania usług i klientów](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
-  
-    ```xml  
-    <bindings>  
-      <wsHttpBinding>  
-       <binding name = "wsHttpBinding_Calculator">  
-         <security mode="Message">  
-           <message clientCredentialType="Windows"/>  
-         </security>  
-        </binding>  
-      </wsHttpBinding>  
-    </bindings>  
-    ```  
-  
-### <a name="using-the-binding-in-a-client"></a>Za pomocą tego powiązania w kliencie WPF  
- Ta procedura pokazuje, jak można wygenerować dwa pliki: serwer proxy, który komunikuje się z usługą i pliku konfiguracji. Omówiono także zmiany w programie klienckim jest trzeci plik używany przez klienta.  
-  
-##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>Aby użyć powiązania w kliencie za pomocą konfiguracji  
-  
-1. Użyj narzędzia SvcUtil.exe do generowania pliku kodu i konfiguracji serwera proxy z metadanych usługi. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
-  
-2. Zastąp [ \<powiązania >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) części pliku konfiguracyjnego wygenerowane z kodu konfiguracji z poprzedniej sekcji.  
-  
-3. Kod proceduralny zostanie wstawiony na początku `Main` metoda program kliencki.  
-  
-4. Utwórz wystąpienie wygenerowanej klasy klienta przekazując nazwę powiązania w pliku konfiguracyjnym jako parametr wejściowy.  
-  
-5. Wywołaj <xref:System.ServiceModel.ClientBase%601.Open%2A> metodzie, jak pokazano w poniższym kodzie.  
-  
-6. Wywoła usługę i wyświetlić wyniki.  
-  
-     [!code-csharp[c_secureWindowsClient#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#2)]  
-  
-## <a name="example"></a>Przykład  
- [!code-csharp[c_SecureWindowsService#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsservice/cs/secureservice.cs#0)]  
-  
- [!code-csharp[c_SecureWindowsClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#0)] 
- [!code-vb[c_SecureWindowsClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#0)]      
-  
+
+W tym temacie pokazano, jak włączyć zabezpieczenia transportu w usłudze Windows Communication Foundation (WCF), która znajduje się w domenie systemu Windows i jest wywoływana przez klientów w tej samej domenie. Aby uzyskać więcej informacji na temat tego scenariusza, zobacz [zabezpieczenia transportu z uwierzytelnianiem systemu Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Aby uzyskać przykładową aplikację, zobacz przykład [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) .
+
+W tym temacie przyjęto założenie, że masz już zdefiniowany interfejs kontraktu i implementację, i dodaje do niego. Możesz również zmodyfikować istniejącą usługę i klienta.
+
+Usługę można zabezpieczyć za pomocą poświadczeń systemu Windows w kodzie. Alternatywnie można pominąć część kodu przy użyciu pliku konfiguracji. W tym temacie przedstawiono obie metody. Upewnij się, że używasz tylko jednej z tych metod, a nie obu.
+
+Pierwsze trzy procedury pokazują, jak zabezpieczyć usługę przy użyciu kodu. Czwarta i piąta procedura pokazuje, jak to zrobić za pomocą pliku konfiguracji.
+
+## <a name="using-code"></a>Korzystanie z kodu
+
+Kompletny kod dla usługi i klienta znajduje się w sekcji przykład na końcu tego tematu.
+
+Pierwsza procedura zawiera instrukcje tworzenia i konfigurowania <xref:System.ServiceModel.WSHttpBinding> klasy w kodzie. Powiązanie używa transportu HTTP. To samo powiązanie jest używane na kliencie.
+
+#### <a name="to-create-a-wshttpbinding-that-uses-windows-credentials-and-message-security"></a>Aby utworzyć element WSHttpBinding, który używa poświadczeń systemu Windows i zabezpieczeń komunikatów
+
+1. Kod tej procedury jest wstawiany na początku `Run` metody `Test` klasy w kodzie usługi w sekcji przykład.
+
+2. Utworzenie wystąpienia <xref:System.ServiceModel.WSHttpBinding> klasy.
+
+3. <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> Ustaw właściwość <xref:System.ServiceModel.WSHttpSecurity> klasy na <xref:System.ServiceModel.SecurityMode.Message>.
+
+4. <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> Ustaw właściwość <xref:System.ServiceModel.MessageSecurityOverHttp> klasy na <xref:System.ServiceModel.MessageCredentialType.Windows>.
+
+5. Kod tej procedury jest następujący:
+
+    [!code-csharp[c_SecureWindowsService#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsservice/cs/secureservice.cs#1)]
+    [!code-vb[c_SecureWindowsService#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#1)]
+
+### <a name="using-the-binding-in-a-service"></a>Korzystanie z powiązania w usłudze
+
+Jest to druga procedura, która pokazuje, jak używać powiązania w usłudze samodzielnej. Aby uzyskać więcej informacji na temat usług hostingu, zobacz [usługi hostingu](../../../docs/framework/wcf/hosting-services.md).
+
+##### <a name="to-use-a-binding-in-a-service"></a>Aby użyć powiązania w usłudze
+
+1. Wstaw kod tej procedury po kodzie z poprzedniej procedury.
+
+2. Utwórz zmienną o nazwie `contractType` i przypisz ją do typu interfejsu (`ICalculator`). <xref:System.Type> Korzystając z Visual Basic, użyj `GetType` operatora; w przypadku używania C#, użyj `typeof` słowa kluczowego.
+
+3. Utwórz drugą <xref:System.Type> zmienną o nazwie `serviceType` i przypisz ją do typu zaimplementowanego kontraktu (`Calculator`).
+
+4. Utwórz wystąpienie <xref:System.Uri> klasy o nazwie `baseAddress` z adresem podstawowym usługi. Adres podstawowy musi mieć schemat zgodny z transportem. W tym przypadku schemat transportu to HTTP, a adres zawiera specjalny Uniform Resource Identifier (URI) "localhost" i numer portu (8036), a także podstawowy adres punktu końcowego ("serviceModelSamples/): `http://localhost:8036/serviceModelSamples/`.
+
+5. Utwórz wystąpienie <xref:System.ServiceModel.ServiceHost> klasy `serviceType` za pomocą zmiennych i `baseAddress` .
+
+6. Dodaj punkt końcowy do usługi przy użyciu `contractType`elementu, powiązania i nazwy punktu końcowego (secureCalculator). Po zainicjowaniu wywołania usługi Klient musi połączyć adres podstawowy i nazwę punktu końcowego.
+
+7. Wywołaj <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> metodę, aby uruchomić usługę. Kod tej procedury jest przedstawiony tutaj:
+
+    [!code-csharp[c_SecureWindowsService#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsservice/cs/secureservice.cs#2)]
+    [!code-vb[c_SecureWindowsService#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#2)]
+
+### <a name="using-the-binding-in-a-client"></a>Korzystanie z powiązania w kliencie
+
+Ta procedura pokazuje, jak wygenerować serwer proxy, który komunikuje się z usługą. Serwer proxy jest generowany przy użyciu [Narzędzia do obsługi metadanych ServiceModel (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) , które używa metadanych usługi do utworzenia serwera proxy.
+
+Ta procedura powoduje także utworzenie wystąpienia <xref:System.ServiceModel.WSHttpBinding> klasy w celu komunikacji z usługą, a następnie wywołanie usługi.
+
+Ten przykład używa tylko kodu do utworzenia klienta. Alternatywnie można użyć pliku konfiguracji, który jest przedstawiony w sekcji opisanej w poniższej procedurze.
+
+##### <a name="to-use-a-binding-in-a-client-with-code"></a>Aby użyć powiązania w kliencie z kodem
+
+1. Użyj narzędzia SvcUtil. exe, aby wygenerować kod serwera proxy z metadanych usługi. Aby uzyskać więcej informacji, zobacz [jak: Utwórz klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Wygenerowany kod serwera proxy dziedziczy z <xref:System.ServiceModel.ClientBase%601> klasy, co zapewnia, że każdy klient ma wymagane konstruktory, metody i właściwości do komunikowania się z usługą WCF. W tym przykładzie wygenerowany kod zawiera `CalculatorClient` klasę, która `ICalculator` implementuje interfejs, umożliwiając zgodność z kodem usługi.
+
+2. Kod tej procedury jest wstawiany na początku `Main` metody programu klienckiego.
+
+3. Utwórz wystąpienie <xref:System.ServiceModel.WSHttpBinding> klasy i ustaw jego tryb zabezpieczeń na `Message` i jego typ poświadczeń klienta na `Windows`. Przykład nazwy zmiennej `clientBinding`.
+
+4. Utwórz wystąpienie <xref:System.ServiceModel.EndpointAddress> klasy o nazwie `serviceAddress`. Zainicjuj wystąpienie z adresem podstawowym połączonym z nazwą punktu końcowego.
+
+5. Utwórz wystąpienie wygenerowanej klasy klienta przy użyciu `serviceAddress` `clientBinding` i zmiennych.
+
+6. Wywołaj <xref:System.ServiceModel.ClientBase%601.Open%2A> metodę, jak pokazano w poniższym kodzie.
+
+7. Wywołaj usługę i Wyświetl wyniki.
+
+    [!code-csharp[c_secureWindowsClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#1)]
+    [!code-vb[c_secureWindowsClient#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#1)]
+
+## <a name="using-the-configuration-file"></a>Korzystanie z pliku konfiguracji
+
+Zamiast tworzyć powiązania z kodem proceduralnym, można użyć poniższego kodu dla sekcji powiązania w pliku konfiguracji.
+
+Jeśli nie masz jeszcze zdefiniowanej usługi, zobacz [projektowanie i implementowanie usług](../../../docs/framework/wcf/designing-and-implementing-services.md)oraz [Konfigurowanie usług](../../../docs/framework/wcf/configuring-services.md).
+
+> [!NOTE]
+> Ten kod konfiguracji jest używany zarówno w plikach konfiguracji usługi, jak i klienta.
+
+#### <a name="to-enable-transfer-security-on-a-service-in-a-windows-domain-using-configuration"></a>Aby włączyć zabezpieczenia transferu dla usługi w domenie systemu Windows przy użyciu konfiguracji
+
+1. Dodaj element [> WSHttpBindingdosekcjipowiązania>elementuwplikukonfiguracji.\<](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) [ \<](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
+
+2. Dodaj element >`binding`< do elementu <`WSHttpBinding` `configurationName` > i ustaw dla atrybutu wartość odpowiednią dla Twojej aplikacji.
+
+3. Dodaj element >`security`< i ustaw dla niego `mode` atrybut Message.
+
+4. Dodaj element >`message`< i `clientCredentialType` ustaw atrybut na Windows.
+
+5. W pliku konfiguracji usługi Zastąp `<bindings>` sekcję poniższym kodem. Jeśli nie masz jeszcze pliku konfiguracji usługi, zobacz temat [Używanie powiązań do konfigurowania usług i klientów](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).
+
+    ```xml
+    <bindings>
+      <wsHttpBinding>
+       <binding name = "wsHttpBinding_Calculator">
+         <security mode="Message">
+           <message clientCredentialType="Windows"/>
+         </security>
+        </binding>
+      </wsHttpBinding>
+    </bindings>
+    ```
+
+### <a name="using-the-binding-in-a-client"></a>Korzystanie z powiązania w kliencie
+
+Ta procedura pokazuje, jak generować dwa pliki: serwer proxy, który komunikuje się z usługą i plikiem konfiguracji. Opisano w nim również zmiany programu klienckiego, czyli trzeci plik używany na komputerze klienckim.
+
+##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>Aby użyć powiązania w kliencie z konfiguracją
+
+1. Użyj narzędzia SvcUtil. exe, aby wygenerować kod i plik konfiguracji serwera proxy z metadanych usługi. Aby uzyskać więcej informacji, zobacz [jak: Utwórz klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).
+
+2. Zastąp sekcję [ powiązania>wwygenerowanymplikukonfiguracjikodemkonfiguracjizpoprzedniejsekcji.\<](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
+
+3. Kod proceduralny jest wstawiany na początku `Main` metody programu klienckiego.
+
+4. Utwórz wystąpienie wygenerowanej klasy klienta przekazujące nazwę powiązania w pliku konfiguracji jako parametr wejściowy.
+
+5. Wywołaj <xref:System.ServiceModel.ClientBase%601.Open%2A> metodę, jak pokazano w poniższym kodzie.
+
+6. Wywołaj usługę i Wyświetl wyniki.
+
+    [!code-csharp[c_secureWindowsClient#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#2)]
+
+## <a name="example"></a>Przykład
+
+[!code-csharp[c_SecureWindowsService#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsservice/cs/secureservice.cs#0)]
+
+[!code-csharp[c_SecureWindowsClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#0)]
+[!code-vb[c_SecureWindowsClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#0)]
+
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ServiceModel.WSHttpBinding>

@@ -8,23 +8,23 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ef10ba566842db26ed8c29643535c41aaca9806
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 4228da6efe22091c86de95d846c14f504d51457f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378659"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851288"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (Narzędzie konwersji CorFlags)
 Narzędzie do konwersji CorFlags pozwala na konfigurowanie sekcji CorFlags w nagłówku przenośnego obrazu wykonywalnego.  
   
- To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, należy użyć wiersz polecenia programisty dla programu Visual Studio (lub wiersza polecenia programu Visual Studio Windows 7). Aby uzyskać więcej informacji, zobacz [wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  W wierszu polecenia wpisz następujące polecenie:  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console  
 CorFlags.exe assembly [options]  
 ```  
   
@@ -38,13 +38,13 @@ CorFlags.exe assembly [options]
 |------------|-----------------|  
 |**/32BIT[REQ]+**|Ustawia flagę 32BITREQUIRED.|  
 |**/32BIT[REQ]-**|Czyści flagę 32BITREQUIRED.|  
-|**/32BITPREF+**|Ustawia flagę 32BITPREFERRED. Aplikacja działa jako proces 32-bitowy nawet na platformach 64-bitowych. Należy ustawić tą flagę tylko dla plików EXE. Jeśli flaga jest ustawiona dla biblioteki dll, nie uda się jej załadować w procesach 64-bitowych i <xref:System.BadImageFormatException> wyjątku. Plik EXE z tą flagą może być załadowany do procesu 64-bitowego.<br /><br /> Nowość w programie .NET Framework 4.5.|  
-|**/32BITPREF-**|Czyści flagę 32BITPREFERRED.<br /><br /> Nowość w programie .NET Framework 4.5.|  
+|**/32BITPREF +**|Ustawia flagę 32BITPREFERRED. Aplikacja działa jako proces 32-bitowy nawet na platformach 64-bitowych. Należy ustawić tą flagę tylko dla plików EXE. Jeśli flaga jest ustawiona dla biblioteki DLL, nie można załadować biblioteki DLL w procesach 64-bitowych i <xref:System.BadImageFormatException> zgłaszany jest wyjątek. Plik EXE z tą flagą może być załadowany do procesu 64-bitowego.<br /><br /> Nowość w .NET Framework 4,5.|  
+|**/32BITPREF-**|Czyści flagę 32BITPREFERRED.<br /><br /> Nowość w .NET Framework 4,5.|  
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
 |**/Force**|Wymusza aktualizację, nawet jeśli jest to zestaw z silną nazwą. **Ważne:**  Jeżeli zestaw o silnej nazwie zostanie zaktualizowany, należy podpisać go ponownie przed wykonaniem jego kodu.|  
 |**/help**|Wyświetla składnię polecenia i opcje narzędzia.|  
-|**/ILONLY+**|Ustawia flagę ILONLY.|  
-|**/ILONLY-**|Czyści flagę ILONLY.|  
+|**/ILONLY +**|Ustawia flagę ILONLY.|  
+|**ILONLY**|Czyści flagę ILONLY.|  
 |**/nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
 |**/RevertCLRHeader**|Przywraca wersję nagłówka do CLR 2.0.|  
 |**/UpgradeCLRHeader**|Uaktualnienia wersję nagłówka CLR do 2.5. **Uwaga:**  Aby zestaw mógł być uruchomiony natywnie, musi mieć wersję nagłówka CLR 2.5 lub wyższą.|  

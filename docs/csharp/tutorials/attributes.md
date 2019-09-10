@@ -1,84 +1,84 @@
 ---
-title: Atrybuty — C#
-description: Dowiedz się, jak działają atrybutów w języku C#.
+title: AttributesC#
+description: Dowiedz się, jak C#działają atrybuty.
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 3141c1bf7ddcf3fd3426290428f9eeeb54b3c872
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0037e8b2c5f50d1b8d0a950743f6eeb9145df414
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675770"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851002"
 ---
-# <a name="using-attributes-in-c"></a>Przy użyciu atrybutów w języku C\#
+# <a name="using-attributes-in-c"></a>Używanie atrybutów w C\#
 
-Atrybuty zawierają sposobu kojarzenia informacji o kodzie w sposób deklaratywny. Można również dołączyć element wielokrotnego użytku, który może odnosić się do różnych celów.
+Atrybuty umożliwiają kojarzenie informacji z kodem w sposób deklaratywny. Mogą również dostarczyć element wielokrotnego użytku, który można zastosować do różnych elementów docelowych.
 
-Należy wziąć pod uwagę `[Obsolete]` atrybutu. Mogą być stosowane do klasy, struktury, metod i konstruktorów. Jego _deklaruje_ czy element jest przestarzały. Następnie jest kompilator języka C#, aby dla tego atrybutu i czynności w odpowiedzi.
+Weź pod uwagę atrybut. `[Obsolete]` Może być stosowana do klas, struktur, metod, konstruktorów i innych. _Deklaruje_ , że element jest przestarzały. Następnie do C# kompilatora, aby wyszukać ten atrybut, i wykonaj pewne działania w odpowiedzi.
 
-W tym samouczku zostanie wprowadzona sposób dodawania atrybutów do kodu, jak utworzyć i używać własnych atrybutów i sposób używania niektórych atrybutów, które są wbudowane w platformy .NET Core.
+W tym samouczku dowiesz się, jak dodawać atrybuty do kodu, jak tworzyć i używać własnych atrybutów oraz jak używać niektórych atrybutów wbudowanych w platformę .NET Core.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
-Należy skonfigurować maszynę w taki sposób, aby uruchomić platformy .NET core. Instrukcje dotyczące instalacji można znaleźć na [platformy .NET Core](https://www.microsoft.com/net/core) strony.
-Windows, Ubuntu Linux, macOS lub w kontenerze platformy Docker, mogą uruchamiać tę aplikację. Musisz zainstalować wybrany edytor kodu. Opisy poniżej użycia [programu Visual Studio Code](https://code.visualstudio.com/) czyli typu open source cross platform edytora. Można jednak użyć dowolnego narzędzia potrafisz.
+Musisz skonfigurować maszynę do uruchamiania programu .NET Core. Instrukcje instalacji można znaleźć na stronie [pliki do pobrania w programie .NET Core](https://dotnet.microsoft.com/download) .
+Możesz uruchomić tę aplikację w systemie Windows, Ubuntu Linux, macOS lub w kontenerze platformy Docker. Musisz zainstalować swój ulubiony Edytor kodu. Poniższe opisy wykorzystują [Visual Studio Code](https://code.visualstudio.com/) , czyli edytor Międzyplatformowy. Można jednak korzystać z dowolnych narzędzi, z którymi masz doświadczenie.
 
 ## <a name="create-the-application"></a>Tworzenie aplikacji
 
-Teraz, po zainstalowaniu wszystkich narzędzi, Utwórz nową aplikację platformy .NET Core. Aby użyć generator wiersza polecenia, uruchom następujące polecenie w powłoce Ulubione:
+Teraz, po zainstalowaniu wszystkich narzędzi, Utwórz nową aplikację platformy .NET Core. Aby użyć generatora wiersza polecenia, wykonaj następujące polecenie w ulubionym powłoce:
 
 `dotnet new console`
 
-To polecenie spowoduje utworzenie podstawowe pliki projektów programu .NET core. Konieczne będzie wykonanie `dotnet restore` można przywrócić zależności niezbędne do kompilowania projektu.
+To polecenie spowoduje utworzenie plików projektu programu podstawowe .NET Core. Należy wykonać `dotnet restore` , aby przywrócić zależności wymagane do skompilowania projektu.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Do wykonania programu, należy użyć `dotnet run`. Powinieneś zobaczyć "Hello, World" dane wyjściowe do konsoli.
+Aby wykonać program, użyj `dotnet run`. Do konsoli powinny być widoczne dane wyjściowe "Hello, World".
 
 ## <a name="how-to-add-attributes-to-code"></a>Jak dodać atrybuty do kodu
 
-W języku C#, atrybuty są klas dziedziczących `Attribute` klasy bazowej. Każda klasa, która dziedziczy z `Attribute` może służyć jako sortowania "tag" na inne fragmentów kodu.
-Na przykład istnieje atrybut o nazwie `ObsoleteAttribute`. Służy do sygnalizowania, że kod jest przestarzała i nie powinien być już używany. Ten atrybut w klasie, można umieścić na przykład za pomocą nawiasami kwadratowymi.
+W C#programie atrybuty są klasy dziedziczące z `Attribute` klasy bazowej. Każda klasa, która dziedziczy `Attribute` z, może być używana jako "tag" w innych fragmentach kodu.
+Na przykład istnieje atrybut o nazwie `ObsoleteAttribute`. Jest to używane do sygnalizowania, że kod jest przestarzały i nie powinien już być używany. Ten atrybut można umieścić w klasie, na przykład za pomocą nawiasów kwadratowych.
 
 [!code-csharp[Obsolete attribute example](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample1)]  
 
-Należy pamiętać, że gdy nosi nazwę klasy `ObsoleteAttribute`, jest tylko do użycia `[Obsolete]` w kodzie. Jest to Konwencji, występującego języka C#.
-Możesz użyć pełnej nazwy `[ObsoleteAttribute]` wybranie opcji.
+Należy pamiętać, że `ObsoleteAttribute` `[Obsolete]` w przypadku wywołania klasy jest to konieczne tylko w kodzie. Jest to Konwencja C# następująca.
+Jeśli wybierzesz, możesz użyć `[ObsoleteAttribute]` pełnej nazwy.
 
-Kiedy oznaczanie klasy jest przestarzały, jest dobrym pomysłem jest podanie pewnych informacji, aby *Dlaczego* jest przestarzały, i/lub *co* do użycia zamiast kodu. W tym przez przekazanie jako parametr ciągu atrybutu przestarzały.
+Gdy oznaczasz przestarzałą klasę, dobrym pomysłem jest podanie pewnych informacji, *dlaczego* są przestarzałe i/lub *czego* można użyć zamiast tego. W tym celu należy przekazać parametr ciągu do przestarzałego atrybutu.
 
 [!code-csharp[Obsolete attribute example with parameters](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample2)]
 
-Ten ciąg jest przekazywany jako argument do `ObsoleteAttribute` konstruktora, tak jak gdyby były zapisywane `var attr = new ObsoleteAttribute("some string")`.
+Ciąg jest przesyłany jako argument do `ObsoleteAttribute` konstruktora, podobnie jak w przypadku pisania. `var attr = new ObsoleteAttribute("some string")`
 
-Parametry Konstruktora atrybutu są ograniczone do prostych typów/literałów: `bool, int, double, string, Type, enums, etc` i tablice z tych typów.
-Nie używając wyrażenia lub zmienną. Mogą używać parametry pozycyjne i nazwane.
+Parametry konstruktora atrybutu są ograniczone do typów prostych/literałów: `bool, int, double, string, Type, enums, etc` i tablic tych typów.
+Nie można użyć wyrażenia ani zmiennej. Możesz korzystać z parametrów pozycyjnych lub nazwanych.
 
-## <a name="how-to-create-your-own-attribute"></a>Jak utworzyć własnego atrybutu
+## <a name="how-to-create-your-own-attribute"></a>Jak utworzyć własny atrybut
 
-Tworzenie atrybutu jest tak proste, jak dziedziczenie z `Attribute` klasy bazowej.
+Tworzenie atrybutu jest tak proste jak dziedziczenie z `Attribute` klasy podstawowej.
 
 [!code-csharp[Create your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CreateAttributeExample1)]
 
-Za pomocą powyższego, można teraz używać `[MySpecial]` (lub `[MySpecialAttribute]`) jako atrybut w innym miejscu w bazie kodu.
+Korzystając z powyższych, można teraz używać `[MySpecial]` (lub `[MySpecialAttribute]`) jako atrybutu w innym miejscu w bazie kodu.
 
 [!code-csharp[Using your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CreateAttributeExample2)]
 
-Atrybuty w bibliotece klas podstawowych platformy .NET, takich jak `ObsoleteAttribute` wyzwolić pewnymi rodzajami zachowań w ramach kompilator. Jednak każdego atrybutu, który tworzysz działa tylko jako metadane i nie powoduje żadnego kodu w ramach klasy atrybutu wykonywana. To Ty podjęcia odpowiednich działań na tych metadanych w innym miejscu w kodzie (omówiona w dalszej części tego samouczka).
+Atrybuty w bibliotece klas bazowych .NET, `ObsoleteAttribute` takie jak wyzwalanie niektórych zachowań w kompilatorze. Jednak każdy utworzony atrybut działa tylko jako metadane i nie powoduje żadnego kodu w ramach wykonywanej klasy atrybutu. Jest to konieczne do działania na tych metadanych w innym miejscu w kodzie (więcej informacji na ten temat znajduje się w dalszej części tego samouczka).
 
-Ma problemy tutaj Zwróć uwagę na. Jak wspomniano powyżej, tylko niektóre typy mogą być przekazywane jako argumenty w przypadku używania atrybutów. Jednak podczas tworzenia typu atrybutu, kompilator języka C# nie zatrzymuje tworzenia tych parametrów. W poniższym przykładzie utworzono atrybutu przy użyciu konstruktora, który kompiluje porządku.
+Tutaj znajdziesz "Gotcha". Jak wspomniano powyżej, tylko niektóre typy mogą być przekazane jako argumenty przy użyciu atrybutów. Jednak podczas tworzenia typu atrybutu C# kompilator nie zatrzymuje tworzenia tych parametrów. W poniższym przykładzie został utworzony atrybut z konstruktorem, który kompiluje się w prawidłowy sposób.
 
 [!code-csharp[Valid constructor used in an attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeGothca1)]
 
-Jednak będzie mogła użyć tego konstruktora przy użyciu składni atrybutów.
+Nie będzie jednak można używać tego konstruktora z składnią atrybutu.
 
 [!code-csharp[Invalid attempt to use the attribute constructor](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeGotcha2)]
 
-Powyższe spowoduje błąd kompilatora, np. `Attribute constructor parameter 'myClass' has type 'Foo', which is not a valid attribute parameter type`
+Powyższe spowoduje wystąpienie błędu kompilatora`Attribute constructor parameter 'myClass' has type 'Foo', which is not a valid attribute parameter type`
 
-## <a name="how-to-restrict-attribute-usage"></a>Jak ograniczyć użycie atrybutu
+## <a name="how-to-restrict-attribute-usage"></a>Jak ograniczyć użycie atrybutów
 
-Atrybuty może służyć w numerze "celów". W powyższych przykładach je w klasach, ale mogą być również używane na:
+Atrybuty mogą być używane dla wielu elementów "targets". Powyższe przykłady pokazują je na klasach, ale mogą być również używane w:
 
 * Zestaw
 * Class
@@ -93,58 +93,58 @@ Atrybuty może służyć w numerze "celów". W powyższych przykładach je w kla
 * Moduł
 * Parametr
 * Właściwość
-* returnValue
+* ReturnValue
 * Struct
 
-Po utworzeniu klasy atrybutu domyślnie C# pozwala używać tego atrybutu na dowolnym docelowe atrybuty możliwe. Jeśli chcesz ograniczyć atrybut do określonych celów, możesz to zrobić za pomocą `AttributeUsageAttribute` na klasie atrybutu. Który ma kliknij prawym przyciskiem myszy, atrybut dla atrybutu!
+Podczas tworzenia klasy atrybutu domyślnie, C# będzie można używać tego atrybutu na dowolnym możliwym celu atrybutu. Jeśli chcesz ograniczyć atrybut do określonych elementów docelowych, możesz to zrobić za pomocą `AttributeUsageAttribute` klasy na klasie atrybutów. To prawo, atrybut atrybutu!
 
 [!code-csharp[Using your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample1)]
 
-Jeśli spróbujesz umieść atrybut powyżej w coś, co nie jest klasą lub strukturą otrzymasz błąd kompilatora, np. `Attribute 'MyAttributeForClassAndStructOnly' is not valid on this declaration type. It is only valid on 'class, struct' declarations`
+Jeśli spróbujesz umieścić powyższy atrybut w elemencie, który nie jest klasą lub strukturą, zostanie wyświetlony błąd kompilatora, taki jak`Attribute 'MyAttributeForClassAndStructOnly' is not valid on this declaration type. It is only valid on 'class, struct' declarations`
 
 [!code-csharp[Using your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample2)]
 
-## <a name="how-to-use-attributes-attached-to-a-code-element"></a>Jak używać atrybuty dołączane do elementu kodu
+## <a name="how-to-use-attributes-attached-to-a-code-element"></a>Jak używać atrybutów dołączonych do elementu kodu
 
-Atrybuty pełnić rolę metadanych. Bez niektóre na zewnątrz życie one faktycznie nie spowoduje żadnego efektu.
+Atrybuty pełnią rolę metadanych. Bez żadnej siły biernej nie będą w rzeczywistości same.
 
-Aby znaleźć oraz umożliwia korzystanie z atrybutów, [odbicia](../programming-guide/concepts/reflection.md) ogólnie jest wymagana. Czy mogę nie obejmuje odbicia szczegółowe, w tym samouczku, ale podstawowe chodzi o to, że odbicie umożliwia pisanie kodu w języku C#, który sprawdza, czy inny kod.
+Aby znaleźć i korzystać z atrybutów, [odbicie](../programming-guide/concepts/reflection.md) jest zwykle konieczne. W tym samouczku nie są pokryte szczegółowe dane dotyczące odbicia, ale podstawowym pomysłem jest to, że odbicie C# umożliwia pisanie kodu w programie, który sprawdza inny kod.
 
-Na przykład używać odbicia, aby uzyskać informacje na temat klasy (Dodaj `using System.Reflection;` na czele kodzie): 
+Na przykład możesz użyć odbicia, aby uzyskać informacje o klasie (Dodaj `using System.Reflection;` na początku kodu): 
 
 [!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
 
-Które zostanie wydrukowana mniej więcej tak: `The assembly qualified name of MyClass is ConsoleApplication.MyClass, attributes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`
+Zostanie wydrukowany następujący element:`The assembly qualified name of MyClass is ConsoleApplication.MyClass, attributes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`
 
-Po utworzeniu `TypeInfo` obiektu (lub `MemberInfo`, `FieldInfo`itp), możesz użyć `GetCustomAttributes` metody. Spowoduje to zwrócenie zbiór `Attribute` obiektów.
+Gdy masz `TypeInfo` obiekt ( `MemberInfo`lub, `FieldInfo`itp.), możesz użyć `GetCustomAttributes` metody. Spowoduje to zwrócenie kolekcji `Attribute` obiektów.
 Można również użyć `GetCustomAttribute` i określić typ atrybutu.
 
-Poniżej przedstawiono przykład użycia `GetCustomAttributes` na `MemberInfo` wystąpienie `MyClass` (który widzieliśmy wcześniej ma `[Obsolete]` atrybutu na nim).
+Oto `GetCustomAttributes` przykład użycia `MemberInfo` w przypadku wystąpienia dla `MyClass` (które zostało `[Obsolete]` wcześniej umieszczone we wcześniejszej części atrybutu).
 
 [!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample2)]
 
-Która będzie drukować do konsoli: `Attribute on MyClass: ObsoleteAttribute`. Spróbuj dodać inne atrybuty do `MyClass`.
+Drukowanie do konsoli programu: `Attribute on MyClass: ObsoleteAttribute`. Spróbuj dodać inne atrybuty do `MyClass`.
 
-Ważne jest, aby pamiętać, że te `Attribute` opóźnieniem wystąpień obiektów. Oznacza to, że ich nie będzie można utworzyć wystąpienia dopóki nie użyjesz `GetCustomAttribute` lub `GetCustomAttributes`.
-Są one również uruchomiony za każdym razem. Wywoływanie `GetCustomAttributes` dwa razy w wierszu zwróci dwa różne wystąpienia `ObsoleteAttribute`.
+Należy pamiętać, że te `Attribute` obiekty są tworzone w opóźnieniem. Oznacza to, że nie będą one tworzone do momentu `GetCustomAttribute` użycia `GetCustomAttributes`lub.
+Są one również tworzone za każdym razem. Dwukrotne wywołanie `GetCustomAttributes` w wierszu zwróci dwa różne `ObsoleteAttribute`wystąpienia.
 
-## <a name="common-attributes-in-the-base-class-library-bcl"></a>Atrybuty wspólne w bibliotece klas podstawowych (BCL)
+## <a name="common-attributes-in-the-base-class-library-bcl"></a>Typowe atrybuty w bibliotece klas bazowych (BCL)
 
-Atrybuty są używane przez wiele narzędzi i platform. Rozszerzenie NUnit używa atrybutów, takich jak `[Test]` i `[TestFixture]` które są używane przez moduł uruchamiający NUnit. ASP.NET MVC korzysta z atrybutów, takich jak `[Authorize]` i zapewnia platformę filtr akcji do wykonania odciąż przekrojowe zagadnienia dotyczące działań platformy MVC. [PostSharp](https://www.postsharp.net) używa składni atrybutu, aby umożliwić zorientowanego na aspekt programowania w języku C#.
+Atrybuty są używane przez wiele narzędzi i platform. NUnit używa atrybutów takich `[Test]` jak `[TestFixture]` i, które są używane przez moduł uruchamiający testy NUnit. ASP.NET MVC używa atrybutów, `[Authorize]` takich jak i, udostępnia strukturę filtru akcji, aby wykonywać problemy z wycinaniem w ramach akcji MVC. [PostSharp](https://www.postsharp.net) używa składni atrybutów, aby umożliwić programowanie zorientowane na podstawie aspektów w programie C#.
 
-Poniżej przedstawiono kilka istotnych atrybuty wbudowanych w platformy .NET Core bibliotek klas bazowych:
+Oto kilka istotnych atrybutów wbudowanych w podstawowe biblioteki klas platformy .NET Core:
 
-* `[Obsolete]`. Ten zestaw został użyty w powyższych przykładach i znajduje się `System` przestrzeni nazw. Jest to przydatne do zapewnienia deklaratywne dokumentacji dotyczące zmieniania bazy kodu. Można podać komunikat w postaci ciągu, a inny parametr logiczny może służyć do podwyższania poziomu z ostrzeżenia kompilatora do błędu kompilatora.
+* `[Obsolete]`. Ta nazwa została użyta w powyższych przykładach i znajduje `System` się w przestrzeni nazw. Przydatne jest dostarczanie deklaratywnej dokumentacji dotyczącej zmiany bazy kodu. Komunikat można podać w postaci ciągu i można użyć innego parametru Boolean do eskalacji z ostrzeżenia kompilatora do błędu kompilatora.
 
-* `[Conditional]`. Ten atrybut jest `System.Diagnostics` przestrzeni nazw. Ten atrybut można stosować do metod (lub klas atrybutów). Ciąg musi być przekazane do konstruktora.
-Jeśli ten ciąg nie jest zgodny `#define` dyrektywy, następnie wszelkie wywołania tej metody (ale nie metody) zostanie usunięta z dniem C# kompilatora. Zazwyczaj służy do debugowania (Diagnostyka).
+* `[Conditional]`. Ten atrybut znajduje się w `System.Diagnostics` przestrzeni nazw. Ten atrybut może być stosowany do metod (lub klas atrybutów). Należy przekazać ciąg do konstruktora.
+Jeśli ten ciąg nie pasuje `#define` do dyrektywy, wówczas wszystkie wywołania tej metody (ale nie sama metoda) zostaną usunięte przez C# kompilator. Zwykle jest to używane na potrzeby debugowania (Diagnostyka).
 
-* `[CallerMemberName]`. Ten atrybut może być używany na parametry i powiązane z nimi `System.Runtime.CompilerServices` przestrzeni nazw. Jest to atrybut, który jest używany, aby wstawić nazwę metody, która wywołuje inną metodę. To jest zwykle używany jako sposób, aby wyeliminować "Magiczna ciągi" podczas implementowania INotifyPropertyChanged w różnych platform tworzenia interfejsu użytkownika. Na przykład:
+* `[CallerMemberName]`. Tego atrybutu można używać w parametrach i w `System.Runtime.CompilerServices` przestrzeni nazw. Jest to atrybut, który jest używany do wstrzykiwania nazwy metody wywołującej inną metodę. Jest to zwykle używane w celu wyeliminowania "magicznych ciągów" podczas implementowania INotifyPropertyChanged w różnych strukturach interfejsu użytkownika. Na przykład:
 
 [!code-csharp[Using CallerMemberName when implementing INotifyPropertyChanged](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CallerMemberName1)]
 
-W powyższym kodzie, nie trzeba mieć literału `"Name"` ciągu. To może pomóc w uniknięciu błąd pisowni, powiązane błędy i sprawia, że gładsze refaktoryzacji/zmianę.
+W powyższym kodzie nie trzeba mieć ciągu literału `"Name"` . Może to ułatwić zapobieganie błędom związanym z literówkami oraz płynne Refaktoryzacja/zmiana nazwy.
 
 ## <a name="summary"></a>Podsumowanie
 
-Atrybuty przenieść deklaratywne możliwości C#, ale są formą metadane kodu i nie działają samodzielnie.
+Atrybuty zapewniają deklaratywną moc C#, ale są one formą metadanych kodu i nie działają samodzielnie.

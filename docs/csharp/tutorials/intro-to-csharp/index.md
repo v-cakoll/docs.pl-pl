@@ -3,12 +3,12 @@ title: Wprowadzenie do C# interaktywnych samouczków
 description: Zapoznaj się C# z przeglądarką i Rozpocznij pracę z własnym środowiskiem programistycznym
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 65526dcf04525f3f2afb358a5b6289ff8bba7de8
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 1712e32175a95373ca85464bbdebed9ef99fb375
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015007"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850765"
 ---
 # <a name="introduction-to-c"></a>Wprowadzenie do języka C\#
 
@@ -45,4 +45,4 @@ W tym samouczku założono, że zostały zakończone lekcje wymienione powyżej.
 Ten końcowy samouczek jest dostępny tylko do uruchamiania na komputerze przy użyciu własnego lokalnego środowiska deweloperskiego i platformy .NET Core.
 Utworzysz aplikację konsolową i zobaczysz podstawowe funkcje zorientowane obiektowo, które są częścią tego C# języka.
 
-W tym samouczku założono, że zakończono pracę z samouczkami wprowadzającymi w trybie online, a zainstalowano [zestaw .NET Core SDK](https://www.microsoft.com/net/download) i [Visual Studio Code](https://code.visualstudio.com/).
+W tym samouczku założono, że zakończono pracę z samouczkami wprowadzającymi w trybie online, a zainstalowano [zestaw .NET Core SDK](https://dotnet.microsoft.com/download) i [Visual Studio Code](https://code.visualstudio.com/).

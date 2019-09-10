@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: b4ea05b0112af4c1dcb6308a08ab3b31c586fbe8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17d54210d7abc16fe91fa94f39a8f85eac866088
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790861"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854183"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Dostosowywanie kanału informacyjnego (Usługi danych programu WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]używa programu [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] , aby udostępnić dane jako źródło danych. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]obsługuje formaty Atom i JavaScript Object Notation (JSON) dla strumieniowych źródeł danych. W przypadku korzystania z kanału informacyjnego [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Atom, program zapewnia standardową metodę serializacji danych, takich jak jednostki i relacje, do formatu XML, który może zostać uwzględniony w treści wiadomości HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]definiuje domyślne mapowanie właściwości jednostki między danymi zawartymi w jednostkach i elementach Atom. Aby uzyskać więcej informacji, [zobacz OData: Format](https://go.microsoft.com/fwlink/?LinkID=185794)Atom.  
@@ -31,7 +31,7 @@ ms.locfileid: "70790861"
 > Podczas definiowania niestandardowych kanałów informacyjnych należy zagwarantować, że wszystkie właściwości jednostki, które mają zdefiniowane mapowania niestandardowe, są uwzględniane w projekcji. Gdy właściwość mapowanego obiektu nie jest uwzględniona w projekcji, może dojść do utraty danych. Aby uzyskać więcej informacji, zobacz [projekcje zapytań](query-projections-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Dostosowywanie kanałów informacyjnych za pomocą dostawcy Entity Framework  
- Model danych używany z [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcą jest reprezentowany jako XML w pliku. edmx. W takim przypadku atrybuty definiujące niestandardowe źródła są dodawane do `EntityType` elementów i `Property` , które reprezentują typy jednostek i właściwości w modelu danych. Te atrybuty dostosowania kanału informacyjnego nie są [zdefiniowane w \[MC\]-CSDL: Koncepcyjny format](https://go.microsoft.com/fwlink/?LinkId=159072)pliku definicji schematu, który jest formatem [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] używanym przez dostawcę do definiowania modelu danych. W związku z tym należy zadeklarować atrybuty dostosowania kanału informacyjnego w określonej przestrzeni nazw schematu, `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`która jest zdefiniowana jako. Poniższy fragment kodu XML przedstawia atrybuty dostosowania źródła zastosowane do `Property` elementów `Products` typu `ProductName`jednostki, które definiują właściwości, `ReorderLevel`i `UnitsInStock` .  
+ Model danych używany z dostawcą Entity Framework jest reprezentowany jako XML w pliku edmx. W takim przypadku atrybuty definiujące niestandardowe źródła są dodawane do `EntityType` elementów i `Property` , które reprezentują typy jednostek i właściwości w modelu danych. Te atrybuty dostosowania kanału informacyjnego nie są [zdefiniowane w \[MC\]-CSDL: Koncepcyjny format](https://go.microsoft.com/fwlink/?LinkId=159072)pliku definicji schematu, który jest formatem używanym przez dostawcę Entity Framework do definiowania modelu danych. W związku z tym należy zadeklarować atrybuty dostosowania kanału informacyjnego w określonej przestrzeni nazw schematu, `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`która jest zdefiniowana jako. Poniższy fragment kodu XML przedstawia atrybuty dostosowania źródła zastosowane do `Property` elementów `Products` typu `ProductName`jednostki, które definiują właściwości, `ReorderLevel`i `UnitsInStock` .  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/northwind.csdl#edmfeedattributes)]  
   

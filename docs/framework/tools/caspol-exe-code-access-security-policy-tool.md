@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f70682150905c411be5618ab368a87e71d0e8e13
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 91ba139a4fad34edf813d76b290ccfe77450dc4c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959064"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851458"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Narzędzie zasad zabezpieczeń dostępu kodu)
 Narzędzie (Caspol.exe) sprawdzania zabezpieczeń dostępu kodu (CAS) pozwala użytkownikom i administratorom na modyfikowanie zasad bezpieczeństwa na poziomie zasad komputera, na poziomie zasad użytkownika i na poziomie zasad przedsiębiorstwa.  
@@ -39,7 +39,7 @@ Narzędzie (Caspol.exe) sprawdzania zabezpieczeń dostępu kodu (CAS) pozwala u�
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console
 caspol [options]  
 ```  
   
@@ -89,7 +89,7 @@ caspol [options]
 |**-hash** *hashAlg* { **-HEX** *hashValue* &#124; **-File** *assembly_file* }|Określa kod, który posiada podany skrót zestawu. Aby użyć skrótu jako warunku członkostwa grupy kodu, należy określić wartość skrótu lub plik zestawu. Aby uzyskać więcej informacji dotyczących warunku członkostwa, <xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>Zobacz.|  
 |**-pub** { **-CERT** *cert_file_name*&#124;<br /><br /> **-plik** *signed_file_name* &#124; **-HEX**  *hex_string* }|Określa kod, który posiada podanego wydawcę oprogramowania wskazanego przez plik certyfikatu, sygnaturę pliku lub reprezentację szesnastkową certyfikatu X509. Aby uzyskać więcej informacji dotyczących warunku członkostwa, <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>Zobacz.|  
 |**-lokacja** *Witryna sieci Web*|Określa kod, który posiada określoną witrynę pochodzenia. Na przykład:<br /><br /> `-site** www.proseware.com`<br /><br /> Aby uzyskać więcej informacji dotyczących warunku członkostwa, <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>Zobacz.|  
-|**-Strong-File** *nazwa_pliku* {*name* &#124; **-NoName**} {*Version* &#124; **-noversion**}|Określa kod, który ma określoną silną nazwę, zgodnie z nazwą pliku, nazwą zestawu jako ciąg i wersję zestawu w formacie *głównym*. *pomocnicze*. *kompilacja*. *poprawka*. Przykład:<br /><br /> **-Strong-File plik z** zestawem. exe<br /><br /> Aby uzyskać więcej informacji dotyczących warunku członkostwa, <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>Zobacz.|  
+|**-Strong-File** *nazwa_pliku* {*name* &#124; **-NoName**} {*Version* &#124; **-noversion**}|Określa kod, który ma określoną silną nazwę, zgodnie z nazwą pliku, nazwą zestawu jako ciąg i wersję zestawu w formacie *głównym*. *pomocnicze*. *kompilacja*. *poprawka*. Na przykład:<br /><br /> **-Strong-File plik z** zestawem. exe<br /><br /> Aby uzyskać więcej informacji dotyczących warunku członkostwa, <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>Zobacz.|  
 |**-URL** *Adres URL*|Określa kod, który pochodzi z określonego adresu URL. Adres URL musi zawierać protokół, taki jak `http://` lub. `ftp://` Ponadto symbol wieloznaczny (\*) może służyć do określenia wielu zestawów z określonego adresu URL. **Uwaga:**  Ponieważ adres URL może być zidentyfikowany za pomocą wielu nazw, używanie adresu URL, jako warunku członkostwa, nie jest bezpieczną metodą ustalania tożsamości kodu. Gdy jest to możliwe, należy używać silnej nazwy jako warunku członkostwa, wydawcy jako warunku członkostwa lub skrótu jako warunku członkostwa. <br /><br /> Aby uzyskać więcej informacji dotyczących warunku członkostwa, <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>Zobacz.|  
 |**-strefa** Nr *strefy*|Określa kod, który pochodzi z określonej strefy. Argument *zonename* może być jedną z następujących wartości: **Mójkomputer**, **intranet**, **Zaufane**, **internetowe**lub **niezaufane**. Aby uzyskać więcej informacji dotyczących warunku członkostwa, zobacz <xref:System.Security.Policy.ZoneMembershipCondition> Klasa.|  
   
@@ -172,7 +172,7 @@ caspol -user -addpset Mypset.xml Mypset
 caspol -user -chggroup 1.2. Execution  
 ```  
   
- Następujące polecenie zmienia warunek członkostwa w domyślnych zasadach grupy kodów o nazwie 1.2.1. i zmienia ustawienie flagi wyłącznej . Warunek członkostwa jest zdefiniowany jako kod pochodzący ze strefy **Internet** , a flaga wyłączna jest włączona.  
+ Następujące polecenie zmienia warunek członkostwa w domyślnych zasadach grupy kodów o nazwie 1.2.1. i zmienia ustawienie flagi **wyłącznej** . Warunek członkostwa jest zdefiniowany jako kod pochodzący ze strefy **Internet** , a flaga **wyłączna** jest włączona.  
   
 ```console  
 caspol -chggroup 1.2.1. -zone Internet -exclusive on  

@@ -2,15 +2,15 @@
 title: Dokumentacja języka Entity SQL
 ms.date: 03/30/2017
 ms.assetid: bb07282c-161d-47e8-856d-b2374ba18181
-ms.openlocfilehash: 5f5bbf59fa2d775c42ff5b94d6dc775e27408d3d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4c5fd8772c8885588fa6942fb410dcc24036a688
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250704"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854898"
 ---
 # <a name="entity-sql-language-reference"></a>Dokumentacja języka Entity SQL
-Ta sekcja zawiera szczegółową dokumentację LINQ to Entities [!INCLUDE[esql](../../../../../../includes/esql-md.md)], oraz języki modelowania i mapowania używane [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]przez program.  
+Ta sekcja zawiera szczegółową dokumentację LINQ to Entities [!INCLUDE[esql](../../../../../../includes/esql-md.md)], oraz języki modelowania i mapowania używane przez Entity Framework.
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Specyfikacje CSDL, SSDL i MSL](csdl-ssdl-and-msl-specifications.md)  

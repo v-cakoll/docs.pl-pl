@@ -2,32 +2,32 @@
 title: Specyfikacja manifestu dostawcy
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 6b924f484e6635760d08d0eba9fb9436bdd8bc88
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cc58bbc82f3930f087b5da0c64afb4f9f03e905b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248587"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854503"
 ---
 # <a name="provider-manifest-specification"></a>Specyfikacja manifestu dostawcy
 W tej sekcji omówiono, w jaki sposób dostawca magazynu danych może obsługiwać typy i funkcje w magazynie danych.  
   
  Usługa Entity Services działa niezależnie od konkretnego dostawcy magazynu danych, mimo że dostawca danych jawnie definiuje sposób, w jaki modele, mapowania i zapytania współdziałają z bazowym magazynem danych. Bez warstwy abstrakcji usługi Entity Services mogą być wskazywane tylko przez określony magazyn danych lub dostawcę danych.  
   
- Typy obsługujące dostawcę są bezpośrednio lub pośrednio obsługiwane przez podstawową bazę danych. Te typy nie muszą być dokładnymi typami magazynów, ale typy stosowane przez dostawcę do obsługi [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Typy dostawców/magazynów są opisane w tematach Entity Data Model (EDM).  
+ Typy obsługujące dostawcę są bezpośrednio lub pośrednio obsługiwane przez podstawową bazę danych. Te typy nie muszą być dokładnymi typami magazynów, ale typy stosowane przez dostawcę do obsługi Entity Framework. Typy dostawców/magazynów są opisane w tematach Entity Data Model (EDM).  
   
  Parametry i typy zwracane dla funkcji obsługiwanych przez magazyn danych są określone w obszarze EDM.  
   
 ## <a name="requirements"></a>Wymagania  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] I magazyn danych musi być w stanie przekazać dane z powrotem i dalej w znanych typach bez utraty lub obcięcia danych.  
+ Entity Framework i magazyn danych muszą być w stanie przekazywać dane z powrotem i dalej w znanych typach bez utraty lub obcięcia danych.  
   
  Manifest dostawcy musi być ładowany przez narzędzia w czasie projektowania bez konieczności otwierania połączenia z magazynem danych.  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Jest uwzględniana wielkość liter, ale podstawowy magazyn danych może nie być. Gdy artefakty modelu EDM (na przykład identyfikatory i nazwy typów) są zdefiniowane i używane w manifeście, muszą używać [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] rozróżniania wielkości liter. Jeśli w manifeście dostawcy znajdują się elementy magazynu danych, które mogą uwzględniać wielkość liter, należy zachować wielkość liter w manifeście dostawcy.  
+ W Entity Framework rozróżniana jest wielkość liter, ale podstawowy magazyn danych może nie być. Gdy artefakty modelu EDM (na przykład identyfikatory i nazwy typów) są zdefiniowane i używane w manifeście, muszą używać Entity Framework rozróżniana wielkość liter. Jeśli w manifeście dostawcy znajdują się elementy magazynu danych, które mogą uwzględniać wielkość liter, należy zachować wielkość liter w manifeście dostawcy.  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Wymaga manifestu dostawcy dla wszystkich dostawców danych. Jeśli spróbujesz użyć dostawcy, który nie ma manifestu dostawcy z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], zostanie wyświetlony komunikat o błędzie.  
+ Entity Framework wymaga manifestu dostawcy dla wszystkich dostawców danych. Jeśli spróbujesz użyć dostawcy, który nie ma manifestu dostawcy z Entity Framework, zostanie wyświetlony komunikat o błędzie.  
   
- W poniższej tabeli opisano rodzaje wyjątków, które zostałyby zgłoszone w [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] przypadku wystąpienia wyjątków przez interakcję z dostawcą:  
+ W poniższej tabeli opisano rodzaje wyjątków, jakie Entity Framework zostałyby zgłoszone w przypadku wystąpienia wyjątków przez interakcję z dostawcą:  
   
 |Problem|Wyjątek|  
 |-----------|---------------|  
@@ -39,7 +39,7 @@ W tej sekcji omówiono, w jaki sposób dostawca magazynu danych może obsługiwa
  Dostawca powinien obsługiwać następujące scenariusze:  
   
 ### <a name="writing-a-provider-with-symmetric-type-mapping"></a>Pisanie dostawcy z mapowaniem typu symetrycznego  
- Można napisać dostawcę dla [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] każdego typu magazynu, który jest mapowany na pojedynczy typ modelu EDM, niezależnie od kierunku mapowania. W przypadku typu dostawcy, który ma bardzo proste mapowanie odpowiadające typowi modelu EDM, można użyć rozwiązania symetrycznego, ponieważ system typów jest prosty lub zgodny z typami modelu EDM.  
+ Można napisać dostawcę dla Entity Framework, w którym każdy typ sklepu mapuje do pojedynczego typu EDM, niezależnie od kierunku mapowania. W przypadku typu dostawcy, który ma bardzo proste mapowanie odpowiadające typowi modelu EDM, można użyć rozwiązania symetrycznego, ponieważ system typów jest prosty lub zgodny z typami modelu EDM.  
   
  Możesz użyć prostoty swojej domeny i utworzyć statyczny manifest dostawcy deklaratywnego.  
   
@@ -50,7 +50,7 @@ W tej sekcji omówiono, w jaki sposób dostawca magazynu danych może obsługiwa
 - Lista funkcji obsługiwanych przez dostawcę, gdzie parametry i zwracane typy są wyrażane w warunkach EDM.  
   
 ### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>Pisanie dostawcy z mapowaniem typu asymetrycznego  
- Podczas pisania dostawcy magazynu danych dla [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]programu, mapowanie typu modelu EDM do dostawcy dla niektórych typów może różnić się od mapowania typu dostawca-do-EDM. Na przykład niezależny obiekt EDM PrimitiveTypeKind. String może być mapowany na nvarchar (4000) na dostawcy, podczas gdy nvarchar (4000) mapuje do modelu EDM PrimitiveTypeKind. String (MaxLength = 4000).  
+ Podczas pisania dostawcy magazynu danych dla Entity Framework mapowanie typu modelu EDM do dostawcy dla niektórych typów może różnić się od mapowania typu dostawca-do-EDM. Na przykład niezależny obiekt EDM PrimitiveTypeKind. String może być mapowany na nvarchar (4000) na dostawcy, podczas gdy nvarchar (4000) mapuje do modelu EDM PrimitiveTypeKind. String (MaxLength = 4000).  
   
  Napiszesz plik XML, który ma dwie sekcje:  
   
@@ -68,7 +68,7 @@ W tej sekcji omówiono, w jaki sposób dostawca magazynu danych może obsługiwa
 ### <a name="provider-manifest-token"></a>Token manifestu dostawcy  
  Po otwarciu połączenia z magazynem danych dostawca może wysyłać zapytania o informacje w celu zwrócenia odpowiedniego manifestu. Może to nie być możliwe w scenariuszach w trybie offline, w których informacje o połączeniu są niedostępne lub nie można nawiązać połączenia ze sklepem. Zidentyfikuj manifest przy użyciu `ProviderManifestToken` atrybutu `Schema` elementu w pliku SSDL. Nie ma wymaganego formatu dla tego atrybutu; Dostawca wybiera minimalne informacje niezbędne do zidentyfikowania manifestu bez otwierania połączenia z magazynem.  
   
- Przykład:  
+ Na przykład:  
   
 ```xml  
 <Schema Namespace="Northwind" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:edm="http://schemas.microsoft.com/ado/2006/04/edm/ssdl" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">  
@@ -259,7 +259,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |Nazwa atrybutu|Typ danych|Wymagane|Wartość domyślna|Opis|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |Nazwa|String|Tak|n/d|Identyfikator/nazwa funkcji|  
-|Atrybuty|String|Nie|Pozycję|Typ zwracany funkcji modelu EDM|  
+|Atrybuty|String|Nie|pozycję|Typ zwracany funkcji modelu EDM|  
 |Agregowanie|Boolean|Nie|False|True, jeśli funkcja jest funkcją agregującą|  
 |Wbudowan|Boolean|Nie|Prawda|Prawda, jeśli funkcja jest wbudowana w magazyn danych|  
 |StoreFunctionName|String|Nie|\<> Nazwy|Nazwa funkcji w magazynie danych.  Umożliwia przekierowanie nazw funkcji.|  

@@ -2,12 +2,12 @@
 title: 'Instrukcje: pisanie rozszerzenia dla typu ServiceContractGenerator'
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
-ms.openlocfilehash: b13b881a221ae0aa757b04c206125716a55f5b8c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: af23babd9255c45b9fa89b5c167de6960f0f690e
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795522"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855722"
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Instrukcje: pisanie rozszerzenia dla typu ServiceContractGenerator
 W tym temacie opisano sposób pisania rozszerzenia dla programu <xref:System.ServiceModel.Description.ServiceContractGenerator>. Można to zrobić przez implementację <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> interfejsu na zachowanie operacji lub <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> implementację interfejsu zgodnie z zachowaniem kontraktu. W tym temacie pokazano, <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> jak zaimplementować interfejs na zachowanie kontraktu.  
@@ -18,7 +18,7 @@ W tym temacie opisano sposób pisania rozszerzenia dla programu <xref:System.Ser
   
 1. Implementacja <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>. Aby zmodyfikować wygenerowany kontrakt usługi, użyj <xref:System.ServiceModel.Description.ServiceContractGenerationContext> wystąpienia przekazaną <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> do metody.  
   
-    ```  
+    ```csharp
     public void GenerateContract(ServiceContractGenerationContext context)  
     {  
         Console.WriteLine("In generate contract.");  
@@ -28,7 +28,7 @@ W tym temacie opisano sposób pisania rozszerzenia dla programu <xref:System.Ser
   
 2. Zaimplementuj <xref:System.ServiceModel.Description.IWsdlImportExtension> dla tej samej klasy. Metoda może przetwarzać określone rozszerzenie WSDL (w tym przypadku adnotacje WSDL) przez dodanie rozszerzenia generowania kodu do zaimportowanego <xref:System.ServiceModel.Description.ContractDescription> wystąpienia. <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>  
   
-    ```  
+    ```csharp
     public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
        {  
                 // Contract documentation  
@@ -72,7 +72,7 @@ W tym temacie opisano sposób pisania rozszerzenia dla programu <xref:System.Ser
   
 4. W kodzie klienta Utwórz `MetadataExchangeClient` wywołanie `GetMetadata`i.  
   
-    ```  
+    ```csharp  
     MetadataExchangeClient mexClient = new MetadataExchangeClient(metadataAddress);  
     mexClient.ResolveMetadataReferences = true;  
     MetadataSet metaDocs = mexClient.GetMetadata();  
@@ -80,13 +80,13 @@ W tym temacie opisano sposób pisania rozszerzenia dla programu <xref:System.Ser
   
 5. Utwórz wywołanie `WsdlImporter` `ImportAllContracts`i.  
   
-    ```  
+    ```csharp  
     WsdlImporter importer = new WsdlImporter(metaDocs);            System.Collections.ObjectModel.Collection<ContractDescription> contracts = importer.ImportAllContracts();  
     ```  
   
 6. Utwórz wywołanie `ServiceContractGenerator` `GenerateServiceContractType` i dla każdego kontraktu.  
   
-    ```  
+    ```csharp  
     ServiceContractGenerator generator = new ServiceContractGenerator();  
     foreach (ContractDescription contract in contracts)  
     {  

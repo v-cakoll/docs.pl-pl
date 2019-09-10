@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4092d8694bdb896db1332bd73afae3f62bba36cf
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 808f0f8ac6caf15be0bf1ba8735521871c9b94d7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105912"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851598"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Pakowanie i wdrażanie zasobów w aplikacjach .NET
 
@@ -176,13 +176,13 @@ Opcjonalnie można usunąć zasoby z głównego zestawu i określić, że środo
 
 Poniższy .NET Framework przykład używa <xref:System.Resources.NeutralResourcesLanguageAttribute> atrybutu do przechowywania rezerwowych zasobów aplikacji w zestawie satelickim dla języka francuskiego (`fr`). Przykład ma dwa pliki zasobów tekstowych, które definiują pojedynczy zasób ciągu o nazwie `Greeting`. Pierwszy z zasobów. fr. txt zawiera zasób języka francuskiego.
 
-```
+```text
 Greeting=Bon jour!
 ```
 
 Drugi, zasoby, ru. txt, zawiera zasób języka rosyjskiego.
 
-```
+```text
 Greeting=Добрый день
 ```
 
@@ -223,7 +223,7 @@ Ponieważ nie ma żadnych zasobów osadzonych w zestawie głównym, nie trzeba k
 
 Po uruchomieniu przykładu z systemu, którego język to coś innego niż rosyjski, wyświetla następujące dane wyjściowe:
 
-```
+```output
 Bon jour!
 ```
 

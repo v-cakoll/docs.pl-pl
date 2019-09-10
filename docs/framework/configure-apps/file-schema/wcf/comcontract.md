@@ -2,18 +2,20 @@
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: ef980c86efad4fda86cf62148e50688fd22afe49
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b499294af71ba230dcf985d4af1d013b1ca260cf
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926091"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850026"
 ---
 # <a name="comcontract"></a>\<comContract >
 Określa kontrakt usługi integracji COM+.  
   
- \<system.ServiceModel>  
-\<comContracts>  
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comContracts >** ](comcontracts.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<comContract >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,7 +51,7 @@ Określa kontrakt usługi integracji COM+.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|przedsiębiorc|Ciąg, który zawiera typ kontraktu.|  
+|Przedsiębiorc|Ciąg, który zawiera typ kontraktu.|  
 |nazwa|Ciąg, który zawiera nazwę kontraktu.|  
 |— przestrzeń nazw|Ciąg, który zawiera przestrzeń nazw kontraktu.|  
 |requiresSession|Wartość logiczna określająca, czy kontrakt może być używany tylko na powiązaniach sesji. Po zainicjowaniu usługi środowisko Integration Runtime zapewnia spójność tego ustawienia z typem powiązania, które ma być używane. Wyjątek jest generowany, jeśli co najmniej jedno powiązanie kontraktu jest w konflikcie. Jeśli ta właściwość ma `false`wartość, a kanał jednokierunkowy jest używany i istnieją wszystkie parametry [out], generowany jest również wyjątek.|  

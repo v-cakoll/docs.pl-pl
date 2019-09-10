@@ -4,12 +4,12 @@ description: Dowiedz się, jak utworzyć i debugować pierwszą aplikację platf
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 910545a99f9d014ae572fbe95c93cdb44a69db99
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 03a2edcbb3414cfd63006603424a3ca1eade528f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105105"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849456"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Wprowadzenie do języka C# i programu Visual Studio Code
 
@@ -18,7 +18,7 @@ Program .NET Core zapewnia szybką i modularną platformę do tworzenia aplikacj
 ## <a name="prerequisites"></a>Wymagania wstępne
 
 1. Zainstaluj [Visual Studio Code](https://code.visualstudio.com/).
-2. Zainstaluj [zestaw .NET Core SDK](https://www.microsoft.com/net/download/core).
+2. Zainstaluj [zestaw .NET Core SDK](https://dotnet.microsoft.com/download).
 3. Zainstaluj [ C# rozszerzenie](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) dla Visual Studio Code. Aby uzyskać więcej informacji na temat sposobu instalowania rozszerzeń na Visual Studio Code, zobacz [vs Code rozszerzenia Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery).
 
 ## <a name="hello-world"></a>Witaj Świecie

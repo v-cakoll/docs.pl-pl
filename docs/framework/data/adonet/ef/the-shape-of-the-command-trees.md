@@ -2,12 +2,12 @@
 title: Kształt drzew poleceń
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: a3568f3deeaeeb31b69b41ac7c767001b792a8eb
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8368354049a77a56a5aa54ab500619576f41b0dc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248222"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854265"
 ---
 # <a name="the-shape-of-the-command-trees"></a>Kształt drzew poleceń
 
@@ -17,7 +17,7 @@ Moduł generowania kodu SQL jest odpowiedzialny za generowanie zapytania SQL spe
 
 Drzewo poleceń zapytania jest reprezentacją modelu obiektu zapytania. Drzewa poleceń zapytania mają dwa cele:
 
-- Aby wyrazić zapytanie wejściowe, które jest określone względem [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].
+- , Aby wyrazić zapytanie wejściowe, które jest określone dla Entity Framework.
 
 - Aby wyrazić zapytanie wyjściowe dostarczone dla dostawcy i opisuje zapytanie dotyczące zaplecza.
 
@@ -25,7 +25,7 @@ Drzewa poleceń zapytania obsługują bogatszą semantykę niż zapytania zgodne
 
 Właściwość DBQueryCommandTree. Query jest korzeniem drzewa wyrażenia opisującym logikę zapytania. Właściwość DBQueryCommandTree. Parameters zawiera listę parametrów, które są używane w zapytaniu. Drzewo wyrażenia składa się z obiektów DbExpression.
 
-Obiekt DbExpression reprezentuje obliczanie. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Do tworzenia wyrażeń zapytań są dostarczane różne rodzaje wyrażeń, w tym stałe, zmienne, funkcje, konstruktory i standardowe operatory relacyjne, takie jak Filter i Join. Każdy obiekt DbExpression ma właściwość ResultType, która reprezentuje typ wyniku utworzonego przez to wyrażenie. Ten typ jest wyrażony jako TypeUsage.
+Obiekt DbExpression reprezentuje obliczanie. Entity Framework do tworzenia wyrażeń zapytań, w tym stałych, zmiennych, funkcji, konstruktorów i standardowych operatorów relacyjnych, takich jak filtrowanie i przyłączanie, zapewnia kilka rodzajów wyrażeń. Każdy obiekt DbExpression ma właściwość ResultType, która reprezentuje typ wyniku utworzonego przez to wyrażenie. Ten typ jest wyrażony jako TypeUsage.
 
 ## <a name="shapes-of-the-output-query-command-tree"></a>Kształty drzewa poleceń zapytania wyjściowego
 
@@ -75,7 +75,7 @@ Można przekazywać następujące typy funkcji:
 
 - Funkcje zdefiniowane przez użytkownika.
 
-Funkcje kanoniczne (zobacz [funkcje kanoniczne](./language-reference/canonical-functions.md) [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], aby uzyskać więcej informacji) są określone jako część, a dostawcy powinni dostarczać implementacje dla funkcji kanonicznych na podstawie tych specyfikacji. Funkcje magazynu są oparte na specyfikacjach w odpowiednim manifeście dostawcy. Funkcje zdefiniowane przez użytkownika są oparte na specyfikacjach w SSDL.
+Funkcje kanoniczne (zobacz [funkcje kanoniczne](./language-reference/canonical-functions.md) , aby uzyskać więcej informacji) są określone jako część Entity Framework, a dostawcy powinni dostarczać implementacje dla funkcji kanonicznych na podstawie tych specyfikacji. Funkcje magazynu są oparte na specyfikacjach w odpowiednim manifeście dostawcy. Funkcje zdefiniowane przez użytkownika są oparte na specyfikacjach w SSDL.
 
 Ponadto funkcje mające atrybut NiladicFunction nie mają argumentów i powinny być tłumaczone bez nawiasów na końcu.  Oznacza to, że do  *\<funkcji FunctionName*  *\<> zamiast FunctionName > ()* .
 

@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Dowiedz się, logikę warunkową instrukcji gałęzi i pętli
+title: Informacje o logice warunkowej przy użyciu instrukcji Branch i Loop
 metadata:
-  title: Gałęzie i pętle — wprowadzenie do C# interaktywnego samouczka
-  description: W tym samouczku omawiającym gałęzie i pętle użyjesz przeglądarki, aby dowiedzieć się więcej C# interaktywnie. Będziesz pisać kod w języku C# i wyświetlić wyniki kompilacji i uruchomienia kodu bezpośrednio w przeglądarce.
+  title: Gałęzie i pętle — C# wprowadzenie do interaktywnego samouczka
+  description: W tym samouczku dotyczącej gałęzi i pętli będziesz używać przeglądarki do interaktywnego C# nauczenia się. Napiszesz C# kod i zobaczysz wyniki kompilacji i uruchomienia kodu bezpośrednio w przeglądarce.
   audience: Developer
   level: Beginner
   ms.custom: mvc
@@ -10,21 +10,21 @@ metadata:
   displayType: two-column
   interactive: csharp
   nextTutorialHref: list-collection.yml
-  nextTutorialTitle: Kolekcja listy
-  ms.openlocfilehash: aa6e91af175d1d3a3dcad7086c3a8205d45f438a
-  ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+  nextTutorialTitle: Kolekcja list
+  ms.openlocfilehash: 0456582fb0aefa9e144b71517b9d8ed619929805
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/06/2019
-  ms.locfileid: "65063858"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850783"
 items:
 - durationInMinutes: 1
   content: >
-    Ten samouczek omawia sposób pisanie kodu badającego zmienne i wybierającego ścieżkę wykonania na podstawie tych zmiennych. Użyjesz przeglądarki do pisania C# interaktywnie i wyświetlić wyniki kompilacji i uruchomienia kodu. Ten samouczek zawiera serię lekcji przedstawiających konstrukcje w gałęzi i pętli C#. Te lekcje umożliwiają poznanie podstaw języka C#.
-- title: Podejmowanie decyzji za pomocą if — instrukcja
+    W tym samouczku przedstawiono sposób pisania kodu, który analizuje zmienne i zmienia ścieżkę wykonywania na podstawie tych zmiennych. Będziesz używać przeglądarki, aby pisać C# interaktywnie i zobaczyć wyniki kompilowania i uruchamiania kodu. Ten samouczek zawiera szereg lekcji, które eksplorują gałęzie i konstrukcje w pętli w C#. Te lekcje uczyją się podstaw C# języka.
+- title: Podejmowanie decyzji przy użyciu instrukcji if
   durationInMinutes: 4
   content: >
-    Uruchom następujący kod w oknie interaktywnym. Aby to zrobić, wpisz poniższy blok kodu w oknie interaktywnym, a następnie kliknij przycisk **Uruchom** przycisku:
+    Uruchom następujący kod w oknie interaktywnym. Aby to zrobić, wpisz poniższy blok kodu w oknie interaktywnym i kliknij przycisk **Uruchom** :
 
 
     ```csharp
@@ -38,7 +38,7 @@ items:
     ```
 
 
-    Zmodyfikuj deklarację zmiennej `b` , tak aby suma była mniejsza niż 10:
+    Zmodyfikuj deklarację `b` , tak aby suma była mniejsza niż 10:
 
 
     ```csharp
@@ -48,32 +48,32 @@ items:
     ```
 
 
-    Kliknij przycisk **Uruchom** ponownie przycisk. Ponieważ odpowiedź jest mniejsza niż 10, nic nie zostanie wyświetlone. **Warunek** jesteś testowania ma wartość false. Nie masz żadnego kodu do wykonania, ponieważ zostały zapisane wyłącznie jedną z możliwych gałęzi dla `if` instrukcji: gałęzi dla wartości true.
+    Kliknij ponownie przycisk **Uruchom** . Ponieważ odpowiedź jest mniejsza niż 10, nic nie jest drukowane. Testowany **warunek** ma wartość false. Nie masz żadnego kodu do wykonania, ponieważ Zapisano tylko jedną z możliwych gałęzi `if` instrukcji: wartość true.
 
 
     > [!TIP]
 
-    > Gdy eksplorujesz C# (lub dowolnego języka programowania), będziesz robić błędy podczas pisania kodu. **Kompilatora** znajdzie te błędy i zgłosi je. Gdy dane wyjściowe zawierają komunikaty o błędach, Przyjrzyj się uważnie przykładowy kod i kod w oknie interaktywnym, aby zobaczyć, jak naprawić.
+    > Podczas eksplorowania C# (lub dowolnego języka programowania) nastąpi pomyłki podczas pisania kodu. **Kompilator** odnajdzie te błędy i zgłosi je do użytkownika. Gdy dane wyjściowe zawierają komunikaty o błędach, należy dokładnie zapoznać się z przykładowym kodem i kodem w oknie interaktywnym, aby zobaczyć, co należy naprawić.
 
-    > To ćwiczenie pomoże Ci poznać strukturę kodu C#.
-
-
-    Pierwszy przykład przedstawia możliwości `if` i typów logicznych. A *logiczna* jest zmienną, która może mieć jedną z dwóch wartości: `true` lub `false`. Język C# definiuje specjalny typ `bool` dla zmiennych logicznych. `if` Instrukcji sprawdza wartość `bool`. Jeśli wartość to `true`, instrukcji następującej `if` wykonuje. W przeciwnym razie zostanie ona pominięta.
+    > To ćwiczenie pomoże Ci poznać strukturę C# kodu.
 
 
-    Ten proces sprawdzania warunków i wykonywania instrukcji na podstawie tych warunków są ogromne. Dowiedzmy się więcej.
+    Ten pierwszy przykład pokazuje moc `if` i typy logiczne. *Wartość logiczna* to zmienna, która może mieć jedną z dwóch wartości: `true` lub `false`. C#definiuje typ specjalny, `bool` dla zmiennych logicznych. Instrukcja sprawdza wartość elementu `bool`. `if` Gdy wartość jest `true`, instrukcja `if` po instrukcji wykonywanej. W przeciwnym razie zostanie pominięty.
+
+
+    Ten proces sprawdzania warunków i wykonywania instrukcji na podstawie tych warunków jest bardzo wydajny. Dowiedz się więcej.
 
 
     > [!NOTE]
 
-    > To środowisko kodowania online jest w trybie podglądu. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
-- title: Upewnij się, jeśli i inne współpracują ze sobą
+    > To środowisko kodowania online jest w trybie podglądu. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+- title: Utwórz, jeśli i else współpracują ze sobą
   durationInMinutes: 10
-  content: "\nAby wykonać różny kod w gałęzie true i false, należy utworzyć `else` gałęzi, która wykonuje, gdy warunek jest fałszywy. Wypróbuj:\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\nInstrukcja po słowie `else` — słowo kluczowe jest wykonywany tylko wtedy, gdy testowany warunek jest `false`. Łącząc `if` i `else` atrybut typu wartość logiczna warunki zapewnia wszystkie potrzebne możliwości.\n\n> [!IMPORTANT]\n> Wcięcia pod `if` i `else` instrukcji jest czytelności.\n> W języku C# nie mają wcięcia ani białe miejsca znaczenia.\n> Instrukcja po słowie `if` lub `else` — słowo kluczowe zostanie wykonana w zależności od warunku. Wszystkie przykłady w tym samouczku wykonaj jest stosowana powszechna praktyka wcięć odpowiadających przepływowi sterowania instrukcji.\n\nPonieważ wcięcia nie ma znaczenia, należy użyć `{` i `}` wskazać, kiedy ma więcej niż jedna instrukcja jako część bloku wykonywanego warunkowo. Programiści języka C# zazwyczaj używają nawiasów klamrowych we wszystkich `if` i `else` klauzul. Poniższy przykład jest taki sam jak właśnie utworzony. Wypróbuj go.\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> Za pomocą pozostałej części tego samouczka, wszystkie przykłady kodu zawierają nawiasy klamrowe, zgodnie z przyjętą.\n\nMożesz przetestować bardziej skomplikowanych warunków:\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not equal to the second\");\n}\n```\n\n`==` Symboli testów dla *równości*. Za pomocą `==` wyróżnia testowanie równości z przypisania, które zostały użyte w `a = 5`.\n\n`&&` Reprezentuje \"i\". Oznacza to, że oba warunki muszą być spełnione, aby wykonać tę instrukcję w gałęzi dla wartości true.  Te przykłady przedstawiają także, może mieć wielu instrukcji w każdej gałęzi warunkowej, pod warunkiem, należy ująć je w `{` i `}`.\n\nMożna również użyć `||` do reprezentowania \"lub\":\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not equal to the second\");\n}\n```\n\nZmodyfikuj wartości `a`, `b`, i `c` i przełączać się między `&&` i `||` do zbadania. Uzyskasz więcej zrozumieć sposób, w jaki `&&` i `||` pracy operatorów.\n\n> [!NOTE]\n> To środowisko kodowania online jest w trybie podglądu. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).\n"
-- title: Użycie pętli do powtarzania operacji
+  content: "\nAby wykonać inny kod zarówno dla gałęzi prawdy, jak i fałszywych, należy utworzyć `else` gałąź, która jest wykonywana, gdy warunek ma wartość false. Wypróbuj:\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\nInstrukcja po `else` słowie kluczowym jest wykonywana tylko wtedy, gdy testowany `false`warunek to. Łączenie `if` i `else` z warunkami logicznymi zapewnia wszystko, co jest potrzebne.\n\n> [!IMPORTANT]\n> Wcięcia pod `if` instrukcjami i `else` są przeznaczone dla czytników ludzkich.\n> C# Język nie traktuje wcięcia ani odstępu jako znaczącego.\n> Instrukcja po `if` słowie kluczowym or `else` zostanie wykonana na podstawie warunku. Wszystkie przykłady w tym samouczku są zgodne ze wspólną metodą tworzenia wcięć wierszy na podstawie przepływu sterowania instrukcji.\n\nPonieważ wcięcia nie są znaczące, należy użyć `{` i, `}` aby wskazać, Kiedy chcesz, aby więcej niż jedna instrukcja była częścią bloku, który jest wykonywany warunkowo. C#Programiści zazwyczaj używają tych nawiasów klamrowych `if` we `else` wszystkich klauzulach i. Poniższy przykład jest taki sam jak właśnie utworzony. Wypróbuj go.\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> W pozostałej części tego samouczka wszystkie przykłady kodu zawierają nawiasy klamrowe, po zastosowaniu zaakceptowanych praktyk.\n\nMożna testować bardziej skomplikowane warunki:\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not equal to the second\");\n}\n```\n\nSymbol sprawdza równość. ** `==` Użycie `==` odróżnia test pod kątem równości przed przypisaniem `a = 5`.\n\n`&&` Reprezentuje \"i\". Oznacza to, że oba warunki muszą mieć wartość true, aby wykonać instrukcję w gałęzi prawdy.  Te przykłady pokazują również, że można mieć wiele instrukcji w każdej gałęzi warunkowej, pod warunkiem, że `{` zostały `}`one ujęte w i.\n\nMożna również użyć `||` do reprezentowania \"lub\":\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not equal to the second\");\n}\n```\n\n`a`Zmodyfikuj wartości `||` , `b`i `c` i przełączenie między `&&` i do Eksploruj. Dowiesz się `&&` , jak działają operatory i `||` .\n\n> [!NOTE]\n> To środowisko kodowania online jest w trybie podglądu. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).\n"
+- title: Używanie pętli do powtarzania operacji
   durationInMinutes: 6
   content: >
-    Innym pojęciem ważnym dla tworzenia większych programów są **pętli**. Pętle służą do powtarzania instrukcji, które chcesz wykonać więcej niż jeden raz. Wypróbuj ten kod w oknie interaktywnym:
+    Kolejną ważną koncepcją tworzenia większych programów są **pętle**. Użyjesz pętli do powtarzania instrukcji, które mają być wykonywane więcej niż raz. Wypróbuj ten kod w oknie interaktywnym:
 
 
     ```csharp
@@ -90,18 +90,18 @@ items:
     ```
 
 
-    `while` Instrukcji sprawdza warunek i wykonuje instrukcję po `while`. Będzie powtarzane sprawdzanie warunku i wykonywanie instrukcji, dopóki warunek jest fałszywy.
+    Instrukcja sprawdza warunek i wykonuje instrukcję `while`po instrukcji. `while` Sprawdzanie warunku i wykonywanie tych instrukcji będzie powtarzane, dopóki warunek nie ma wartości false.
 
 
-    W tym przykładzie jest jeszcze jeden nowy operator. `++` Po `counter` zmienna jest **przyrostu** operatora. Dodaje 1 do wartości counter i zapisuje wynikową wartość w zmiennej counter.
+    W tym przykładzie istnieje jeden inny operator new. Gdy zmienna jest operatorem **przyrostu.** `++` `counter` Dodaje 1 do wartości licznika i zapisuje tę wartość w zmiennej licznika.
 
 
     > [!IMPORTANT]
 
-    > Upewnij się, że `while` zapętlenie przyjmie wartość false podczas wykonywania kodu. W przeciwnym razie utwórz **Pętla nieskończona** gdzie programu nigdy się nie skończy. Nie pokażemy, ponieważ aparat uruchamiający kod będzie limit czasu, aby zobaczyć żadne dane wyjściowe z programu.
+    > Upewnij się, że `while` warunek pętli jest przełączany na wartość false podczas wykonywania kodu. W przeciwnym razie utworzysz **nieskończoną pętlę** , w której program nigdy się nie skończy. Nie pokazujemy, że ponieważ aparat, na którym działa Twój kod, przekroczy limit czasu i nie będą wyświetlane dane wyjściowe z programu.
 
 
-    `while` Pętli testuje warunek przed wykonaniem kodu po `while`. `do` ... `while` pętli najpierw wykonuje kod, a następnie sprawdza warunek. Wygląda ono następująco:
+    Pętla sprawdza warunek przed wykonaniem kodu `while`po. `while` `do` ... `while` pętla wykonuje najpierw kod, a następnie sprawdza warunek. Wygląda ono następująco:
 
 
     ```csharp
@@ -118,19 +118,19 @@ items:
     ```
 
 
-    To `do` pętli i wcześniej `while` pętli działać tak samo.
+    Ta `do` pętla i wcześniejsza `while` pętla działają tak samo.
 
 
-    Przyjrzyjmy się ostatniej instrukcji pętli.
+    Przejdźmy do jednej ostatniej instrukcji Loop.
 
 
     > [!NOTE]
 
-    > To środowisko kodowania online jest w trybie podglądu. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
-- title: Praca z pętli for
+    > To środowisko kodowania online jest w trybie podglądu. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+- title: Pracuj z pętlą for
   durationInMinutes: 5
   content: >
-    Jest innym wspólnej instrukcji pętli, który znajduje się w kodzie języka C# `for` pętli. Wypróbuj ten kod w oknie interaktywnym:
+    Kolejną częstą instrukcją pętli, która będzie C# widoczna w kodzie `for` , jest pętla. Wypróbuj ten kod w oknie interaktywnym:
 
 
     ```csharp
@@ -144,55 +144,55 @@ items:
     ```
 
 
-    To działa ten sam jako `while` pętli i `do` pętli został już użyty. `for` Instrukcja składa się z trzech części, które sterują jej pracą.
+    Działa to tak samo jak w `while` przypadku pętli `do` i pętli, która została już użyta. `for` Instrukcja ma trzy części, które kontrolują sposób działania.
 
 
-    Pierwsza część to **dla inicjatora**: `int counter = 0;` oświadcza, że `counter` jako zmienną pętli i ustawia jej wartość początkową `0`.
+    Pierwsza część to **inicjator for**: `int counter = 0;` deklaruje, że `counter` jest to zmienna pętli, i ustawia jej wartość początkową `0`na.
 
 
-    Środkowa część to **warunku**: `counter < 10` oświadcza, że `for` pętli kontynuuje wykonywanie dopóki wartość licznika jest mniejsza niż 10.
+    Częścią średnią jest **warunek dla**: `counter < 10` deklaruje, `for` że ta pętla będzie działać tak długo, jak wartość licznika jest mniejsza niż 10.
 
 
-    Ostatnia część to **dla iteratora**: `counter++` określa sposób modyfikowana zmienna pętli po wykonaniu bloku występującego `for` instrukcji. Określa ona, że w tym miejscu `counter` należy zwiększyć o 1 po każdym wykonaniu bloku.
+    Ostatnia część to **iterator**: `counter++` określa, jak zmodyfikować zmienną pętli po wykonaniu bloku `for` po instrukcji. W tym miejscu określa, `counter` że powinny być zwiększane o 1 za każdym razem, gdy blok jest wykonywany.
 
 
-    Wypróbuj te samodzielnie. Wypróbuj następujące czynniki:
+    Wypróbuj je samodzielnie. Spróbuj wykonać następujące czynności:
 
 
-    - Zmień inicjator, tak aby można było uruchomić na inną wartość.
+    - Zmień inicjator tak, aby był uruchamiany z inną wartością.
 
-    - Zmień warunek, którego chcesz zatrzymać miał inną wartość.
+    - Zmień warunek, aby zatrzymać z inną wartością.
 
 
-    Gdy skończysz, przejdziemy pisania kodu, co wykorzystasz zdobyte umiejętności do samodzielnego.
+    Gdy skończysz, przyjrzyjmy się, aby samodzielnie napisać kod, aby użyć informacji, które znasz.
 
 
     > [!NOTE]
 
-    > To środowisko kodowania online jest w trybie podglądu. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
-- title: Łączenie gałęzi i pętli
+    > To środowisko kodowania online jest w trybie podglądu. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+- title: Połącz gałęzie i pętle
   durationInMinutes: 12
   content: >
-    Teraz, gdy wiesz `if` instrukcji i konstrukcje pętli w języku C#, zobacz, jeśli można napisać kod C# obliczający sumę wszystkich liczb całkowitych od 1 do 20 podzielnych przez 3.  Poniżej przedstawiono kilka wskazówek:
+    Po zapoznaniu się z `if` instrukcją i konstrukcjami pętli w C# języku Sprawdź, czy można napisać C# kod, aby znaleźć sumę wszystkich liczb całkowitych od 1 do 20, które są podzielne przez 3.  Oto kilka wskazówek:
 
 
-    - `%` Operator umożliwia obliczenie reszty z operacji dzielenia.
+    - `%` Operator podaje pozostałą część operacji dzielenia.
 
-    - `if` Instrukcji zapewnia warunku określającego, jeśli liczba powinna być częścią sumy.
+    - `if` Instrukcja zapewnia warunek, aby sprawdzić, czy liczba powinna być częścią sumy.
 
-    - `for` Pętli ułatwia powtórzenie serii kroków dla wszystkich liczb od 1 do 20.
+    - `for` Pętla może pomóc powtórzyć serię kroków dla wszystkich liczb od 1 do 20.
 
 
-    Wypróbuj ją samodzielnie. Sprawdź, jak Ci poszło. Jako wskazówka odpowiedź powinna wynosić 63.
+    Wypróbuj siebie. Następnie sprawdź, jak to się stało. Jako wskazówkę należy uzyskać 63 na odpowiedź.
 
 
     > [!NOTE]
 
-    > To środowisko kodowania online jest w trybie podglądu. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
-- title: Ukończenie wyzwania
+    > To środowisko kodowania online jest w trybie podglądu. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+- title: Ukończ wyzwanie
   durationInMinutes: 1
   content: >
-    Czy Twój pomysł był podobny do poniższego?
+    Czy udało Ci się to zrobić?
 
 
     ```csharp
@@ -215,6 +215,19 @@ items:
 
     > [!NOTE]
 
-    > To środowisko kodowania online jest w trybie podglądu. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+    > To środowisko kodowania online jest w trybie podglądu. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
 - title: Gratulacje!
-  content: "\"Gałęzie i pętle\" interaktywnego samouczka został ukończony. Możesz kliknąć pozycję **listy kolekcji** poniższe łącze do uruchomienia interaktywnego samouczka dalej lub mogą odwiedzić [lokacji .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) można pobrać zestawu .NET Core SDK, Utwórz projekt na komputerze i Zachowaj kodowania. W kroku \"Zachowaj Learning\" łączy do tych samouczków.\n\nMożesz dowiedzieć się więcej na temat tych pojęć w następujących tematach:\n\n- [Jeśli i else, instrukcja](../../language-reference/keywords/if-else.md)\n- [while — instrukcja](../../language-reference/keywords/while.md)\n- [— Instrukcja](../../language-reference/keywords/do.md)\n- [For — instrukcja](../../language-reference/keywords/for.md)"
+  content: >-
+    Ukończono Samouczek interaktywny "gałęzie i pętle". Możesz kliknąć link **Kolekcja list** poniżej, aby uruchomić następny Interaktywny samouczek lub odwiedzić [witrynę programu .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) , aby pobrać zestaw .NET Core SDK, utworzyć projekt na maszynie i zachować kodowanie. Sekcja "następne kroki" umożliwia powrót do tych samouczków.
+
+
+    Więcej informacji na temat tych pojęć można znaleźć w następujących tematach:
+
+
+    - [Instrukcja if i else](../../language-reference/keywords/if-else.md)
+
+    - [While, instrukcja](../../language-reference/keywords/while.md)
+
+    - [Do — instrukcja](../../language-reference/keywords/do.md)
+
+    - [For — instrukcja](../../language-reference/keywords/for.md)

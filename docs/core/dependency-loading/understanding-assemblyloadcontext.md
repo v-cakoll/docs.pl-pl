@@ -4,12 +4,12 @@ description: Najważniejsze koncepcje dotyczące przeznaczenia i zachowania Asse
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 293c586163921f9226916b177b3a29cc99c3e695
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 61ad19a281d829814de8321913af7dabfc916f6d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70017342"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849231"
 ---
 # <a name="understanding-systemruntimeloaderassemblyloadcontext"></a>Informacje o system. Runtime. Loader. AssemblyLoadContext
 
@@ -48,7 +48,7 @@ Rozwiązuje najczęstsze scenariusze ładowania zależności.
 
 To <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> wystąpienie obsługuje tylko przesłanianie zdarzeń.
 
-Algorytmy ładowania [zestawów zarządzanego](loading-managed.md), [algorytm ładowania zestawu satelitarnego](loading-resources.md)i niezarządzany [(natywny) algorytm ładowania](loading-unmanaged.md) odnoszą się do wszystkich dostępnych zdarzeń i funkcji wirtualnych.  W artykułach są wyświetlane poszczególne zdarzenia i względne pozycje funkcji w algorytmach ładowania. Ten artykuł nie odtwarza tych informacji.
+Algorytmy ładowania [zestawów zarządzanego](loading-managed.md), [algorytm ładowania zestawu satelitarnego](loading-resources.md)i [niezarządzany (natywny) algorytm ładowania](loading-unmanaged.md) odnoszą się do wszystkich dostępnych zdarzeń i funkcji wirtualnych.  W artykułach są wyświetlane poszczególne zdarzenia i względne pozycje funkcji w algorytmach ładowania. Ten artykuł nie odtwarza tych informacji.
 
 Ta sekcja obejmuje ogólne zasady dotyczące odpowiednich zdarzeń i funkcji.
 
@@ -99,7 +99,7 @@ Uwzględniając parę niezgodnych typów, należy również znać:
 
 Podajesz `a` dwa `b`obiekty i, oceniając następujące informacje w debugerze:
 
-```C#
+```csharp
 // In debugger look at each assembly's instance, Location, and FullName
 a.GetType().Assembly
 b.GetType().Assembly
@@ -112,6 +112,6 @@ System.Runtime.AssemblyLoadContext.GetLoadContext(b.GetType().Assembly)
 
 Istnieją dwa wzorce projektowe umożliwiające rozwiązanie tych problemów z konwersją typów.
 
-1. Używaj wspólnych typów udostępnionych. Ten typ współużytkowany może być typem pierwotnego środowiska uruchomieniowego lub może polegać na utworzeniu nowego typu udostępnionego w zestawie udostępnionym.  Często udostępniony typ jest interfejsem [](../../csharp/language-reference/keywords/interface.md) zdefiniowanym w zestawie aplikacji. Zobacz również: [Jak są udostępniane zależności?](#how-are-dependencies-shared)
+1. Używaj wspólnych typów udostępnionych. Ten typ współużytkowany może być typem pierwotnego środowiska uruchomieniowego lub może polegać na utworzeniu nowego typu udostępnionego w zestawie udostępnionym.  Często udostępniony typ jest [interfejsem](../../csharp/language-reference/keywords/interface.md) zdefiniowanym w zestawie aplikacji. Zobacz również: [Jak są udostępniane zależności?](#how-are-dependencies-shared)
 
 2. Używaj technik kierujących do konwersji z jednego typu na drugi.

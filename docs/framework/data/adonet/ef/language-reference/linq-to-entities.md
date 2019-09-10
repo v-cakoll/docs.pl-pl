@@ -2,12 +2,12 @@
 title: LINQ do Jednostek
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: bdc93b609dd88449308508bf88635cc706d91e64
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: bc568cb9dff170062651c908471a36cd17eac980
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250409"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854369"
 ---
 # <a name="linq-to-entities"></a>LINQ do Jednostek
 LINQ to Entities zapewnia obsługę programu Query-Integrated Language (LINQ), która umożliwia deweloperom Pisanie zapytań względem modelu koncepcyjnego Entity Framework przy użyciu C#Visual Basic lub wizualizacji. Zapytania dotyczące Entity Framework są reprezentowane przez zapytania drzewa poleceń, które są wykonywane względem kontekstu obiektu. LINQ to Entities konwertuje zapytania dotyczące języka (LINQ) na zapytania drzewa poleceń, wykonuje zapytania względem Entity Framework i zwraca obiekty, które mogą być używane przez Entity Framework i LINQ. Poniżej przedstawiono proces tworzenia i wykonywania zapytania LINQ to Entities:  
@@ -59,7 +59,7 @@ LINQ to Entities zapewnia obsługę programu Query-Integrated Language (LINQ), k
   
 - Kolekcja obiektów jednostek typu "zero" lub "rzutowanie typów złożonych" zdefiniowanych w modelu koncepcyjnym.  
   
-- Typy CLR obsługiwane przez [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]program.  
+- Typy CLR obsługiwane przez Entity Framework.  
   
 - Kolekcje wbudowane.  
   

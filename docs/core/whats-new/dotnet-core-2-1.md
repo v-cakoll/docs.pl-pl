@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 00edb1c8704aab19d7ff44fe26c514b5ccea64b6
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: d99d4bd646f0cfee31486a030f97801e9adfa8b8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331086"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849889"
 ---
 # <a name="whats-new-in-net-core-21"></a>Co nowego w programie .NET Core 2.1
 
@@ -25,7 +25,7 @@ Program .NET Core 2,1 zawiera ulepszenia i nowe funkcje w następujących obszar
 - [Ulepszenia kompilacji JIT](#jit-compiler-improvements)
 - [Zmiany interfejsu API](#api-changes)
 
-## <a name="tooling"></a>Narzędzi
+## <a name="tooling"></a>Narzędzia
 
 Zestaw .NET Core 2,1 SDK (v 2.1.300), narzędzia dołączone do programu .NET Core 2,1, obejmują następujące zmiany i ulepszenia:
 
@@ -178,15 +178,17 @@ Bez tych typów, podczas przekazywania takich elementów jako części tablicy l
 
 Poniższy przykład używa <xref:System.Span%601> wystąpienia i, <xref:System.Memory%601> aby zapewnić wirtualny widok 10 elementów tablicy.
 
-[!CODE-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+[!code-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
 
-[!CODE-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
+[!code-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Kompresja Brotli
 
 Program .NET Core 2,1 dodaje obsługę kompresji i dekompresji Brotli. Brotli to algorytm kompresji bezstratnego ogólnego przeznaczenia, który jest zdefiniowany w [dokumencie RFC 7932](https://www.ietf.org/rfc/rfc7932.txt) i jest obsługiwany przez większość przeglądarek sieci Web i głównych serwerów sieci Web. Można użyć klasy bazującej <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> na strumieniu lub <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> klasy obejmującej <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> wiele wydajności. Poniższy przykład ilustruje kompresję z <xref:System.IO.Compression.BrotliStream> klasą:
 
-[!CODE-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+[!code-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+
+[!code-vb[Brotli compression](~/samples/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
 
 Zachowanie jest takie samo jak <xref:System.IO.Compression.DeflateStream> i <xref:System.IO.Compression.GZipStream>, co ułatwia konwertowanie kodu, który wywołuje te interfejsy API do programu <xref:System.IO.Compression.BrotliStream>. <xref:System.IO.Compression.BrotliStream>
 

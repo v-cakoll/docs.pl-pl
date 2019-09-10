@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 7be3491af48ad29cd7892dd31a077aa7ac44ca63
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4fb7d574fdb9bd6bd9465cffaf0fda5069b2c0ee
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250497"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854386"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>Znane problemy i zagadnienia dotyczące składnika LINQ to Entities
 Ta sekcja zawiera informacje o znanych problemach dotyczących LINQ to Entities zapytań.  
@@ -42,7 +42,7 @@ Ta sekcja zawiera informacje o znanych problemach dotyczących LINQ to Entities 
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>Liczby całkowite bez znaku są nieobsługiwane  
- Określanie typu liczby całkowitej bez znaku w zapytaniu LINQ to Entities nie jest obsługiwane, [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] ponieważ nie obsługuje liczb całkowitych bez znaku. Jeśli określisz liczbę całkowitą bez znaku, <xref:System.ArgumentException> podczas tłumaczenia wyrażenia zapytania zostanie zgłoszony wyjątek, jak pokazano w poniższym przykładzie. To przykładowe zapytanie dla zamówienia o IDENTYFIKATORze 48000.  
+ Określanie typu liczby całkowitej bez znaku w zapytaniu LINQ to Entities nie jest obsługiwane, ponieważ Entity Framework nie obsługuje liczb całkowitych bez znaku. Jeśli określisz liczbę całkowitą bez znaku, <xref:System.ArgumentException> podczas tłumaczenia wyrażenia zapytania zostanie zgłoszony wyjątek, jak pokazano w poniższym przykładzie. To przykładowe zapytanie dla zamówienia o IDENTYFIKATORze 48000.  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7edd2eeafcce6a22c3256d0684a9c4f961b34002
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39e3e71185051435afcf03d51ec62742c080b02a
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049898"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855712"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams — Metoda
-Pobiera moduł wyliczający dla tablic, tokeny parametrów ogólnych skojarzone z określonego typu lub MethodDef token.  
+Pobiera moduł wyliczający dla tablicy tokenów parametrów ogólnych skojarzonych z określonym tokenem TypeDef lub MethodDef.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp
 HRESULT EnumGenericParams (  
    [in, out] HCORENUM     *phEnum,   
    [in]  mdToken          tk,  
@@ -41,35 +41,35 @@ HRESULT EnumGenericParams (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [out w] Wskaźnik do modułu wyliczającego.  
+ [in. out] Wskaźnik do modułu wyliczającego.  
   
  `tk`  
- [in] Element TypeDef lub MethodDef token, którego parametrów ogólnych są do wyliczenia.  
+ podczas Token TypeDef lub MethodDef, którego parametry ogólne mają zostać wyliczone.  
   
  `rGenericParams`  
- [out] Tablica parametrów ogólnych do wyliczenia.  
+ określoną Tablica parametrów ogólnych do wyliczenia.  
   
  `cMax`  
- [in] Żądana maksymalna liczba tokenów do umieszczenia w `rGenericParams`.  
+ podczas Żądana Maksymalna liczba tokenów do umieszczenia `rGenericParams`.  
   
  `pcGenericParams`  
- [out] Zwrócona liczba tokenów umieszczone w `rGenericParams`.  
+ określoną Zwrócona liczba tokenów umieszczonych `rGenericParams`w.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParams` pomyślnie zwrócił.|  
-|`S_FALSE`|`phEnum` nie ma żadnych elementów członkowskich. W tym przypadku `pcGenericParams` jest ustawiona na 0 (zero).|  
+|`S_OK`|`EnumGenericParams`pomyślnie zwrócono.|  
+|`S_FALSE`|`phEnum`nie ma elementów członkowskich. W tym przypadku `pcGenericParams` jest ustawiona na 0 (zero).|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Nagłówki** Cor. h  
   
- **Biblioteka:** Używany jako zasób w MsCorEE.dll  
+ **Biblioteki** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

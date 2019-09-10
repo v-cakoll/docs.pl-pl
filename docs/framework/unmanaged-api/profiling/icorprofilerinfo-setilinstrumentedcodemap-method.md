@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e41df91ceb9e4b776c2aa1ce864b7e09ec485fd5
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 65eee2e834251817b461f1cd1debf212696d5a5f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661954"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855692"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap — Metoda
 
-Ustawia mapę kodu dla określonej funkcji przy użyciu określonego wpisy mapy intermediate language (MSIL) firmy Microsoft.
+Ustawia mapę kodu dla określonej funkcji przy użyciu określonych wpisów mapy języka pośredniego (MSIL) firmy Microsoft.
 
 > [!NOTE]
-> W .NET Framework w wersji 2.0, wywołanie `SetILInstrumentedCodeMap` na `FunctionID` czy reprezentuje ogólnej funkcji w domenie określonej aplikacji będzie miało wpływ na wszystkie wystąpienia tej funkcji w domenie aplikacji.
+> W .NET Framework w wersji 2,0 wywoływanie `SetILInstrumentedCodeMap` `FunctionID` , który reprezentuje funkcję generyczną w określonej domenie aplikacji, wpłynie na wszystkie wystąpienia tej funkcji w domenie aplikacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,56 +44,58 @@ HRESULT SetILInstrumentedCodeMap(
 ## <a name="parameters"></a>Parametry
 
 `functionId`\
-[in] Identyfikator funkcji, dla którego ma zostać ustawiony na mapie kodu.
+podczas Identyfikator funkcji, dla której ma zostać ustawiona Mapa kodu.
 
 `fStartJit`\
-[in] Wartość logiczna, która wskazuje, czy wywołanie `SetILInstrumentedCodeMap` metody jest to pierwszy określonego `FunctionID`. Ustaw `fStartJit` do `true` w pierwszym wywołaniu `SetILInstrumentedCodeMap` dla danego `FunctionID`, a `false` po tej dacie.
+podczas Wartość logiczna wskazująca, czy wywołanie `SetILInstrumentedCodeMap` metody jest pierwszym elementem dla danego `FunctionID`elementu. Ustaw `fStartJit` na `FunctionID` `false` wartość w pierwszym wywołaniu dla danego elementu, a następnie na następne. `SetILInstrumentedCodeMap` `true`
 
 `cILMapEntries`\
-[in] Liczba elementów w `cILMapEntries` tablicy.
+podczas Liczba elementów w `cILMapEntries` tablicy.
 
 `rgILMapEntries`\
-[in] Tablica cor_il_map — struktur, z których każdy określa przesunięcie MSIL.
+podczas Tablica struktur COR_IL_MAP, z których każdy Określa przesunięcie MSIL.
 
 ## <a name="remarks"></a>Uwagi
 
-Program profilujący często wstawia instrukcji w kodzie źródłowym metodę w celu Instrumentacja tej metody (na przykład do wysyłania powiadomień o osiągnięciu linię danego źródła). `SetILInstrumentedCodeMap` Umożliwia programowi profilującemu mapowania oryginalny instrukcji MSIL ich nowych lokalizacji. Program profilujący może używać [icorprofilerinfo::getiltonativemapping —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) metodę, aby uzyskać oryginalnego przesunięcie MSIL po danym przesunięciu macierzystym.
+Profiler często wstawia instrukcje w kodzie źródłowym metody w celu instrumentowania tej metody (na przykład w celu powiadomienia po osiągnięciu podanych linii źródłowej). `SetILInstrumentedCodeMap`umożliwia programowi Profiler zamapowanie oryginalnych instrukcji MSIL na nowe lokalizacje. Profiler może użyć metody [ICorProfilerInfo:: GetILToNativeMapping —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) , aby uzyskać początkowe przesunięcie MSIL dla danego przesunięcia natywnego.
 
-Debuger założy, że każdy stare przesunięcie odwołuje się do MSIL w kodzie MSIL oryginalne, niezmodyfikowanego i że każdy nowy przesunięcie odwołuje się do przesunięcia MSIL kodem nowe, instrumentowanych. Mapa powinny być sortowane w kolejności rosnącej. Do przechodzenia, aby zapewnić prawidłowe działanie, należy przestrzegać następujących wytycznych:
+Debuger przyjmie, że każde Stare przesunięcie odwołuje się do przesunięcia MSIL w oryginalnym, niezmodyfikowanym kodzie MSIL i że każde nowe przesunięcie odwołuje się do przesunięcia MSIL w nowym, przyrządowym kodzie. Mapa powinna być posortowana w kolejności rosnącej. Aby krok po kroku działał prawidłowo, postępuj zgodnie z następującymi wskazówkami:
 
-- Nie zmieniają kolejności instrumentowanych kod MSIL.
+- Nie zmieniaj kolejności kodu MSIL z instrumentacją.
 
 - Nie usuwaj oryginalnego kodu MSIL.
 
-- Zawierać wpisy dla wszystkich punktów sekwencji z plik bazy danych (PDB) programu w mapie. Mapa nie interpolacji Brak wpisów. Tak biorąc pod uwagę poniższe mapy:
+- Dołącz wpisy dla wszystkich punktów sekwencji z pliku bazy danych programu (PDB) na mapie. Mapa nie wykonuje interpolacji brakujących wpisów. Dlatego, uwzględniając następujące mapowanie:
 
-  (0 stare, 0 nowe)
+  (0 stara, 0 New)
 
-  (5 stare, 10 nowych)
+  (5 starych, 10 nowych)
 
-  (9 stare, 20 nowych)
+  (9 starych, 20 nowych)
 
-  - Stary przesunięcia 0, 1, 2, 3 lub 4 zostanie zamapowane do nowego przesunięciu 0.
+  - Stare przesunięcie 0, 1, 2, 3 lub 4 zostanie zmapowane na nowe przesunięcie 0.
 
-  - Przesunięcie stare 5, 6, 7 lub 8 zostaną odwzorowane na nowe przesunięcie 10.
+  - Stare przesunięcie o wartości 5, 6, 7 lub 8 zostanie zmapowane na nowe przesunięcie 10.
 
-  - Stary przesunięcie 9 lub nowszą zostaną odwzorowane na nowe przesunięcie 20.
+  - Stare przesunięcie w wysokości 9 lub wyższej zostanie zmapowane do nowego przesunięcia 20.
 
-  - Nowe przesunięcie 0, 1, 2, 3, 4, 5, 6, 7, 8 lub 9 zostaną zmapowane do starego przesunięciu 0.
+  - Nowe przesunięcie 0, 1, 2, 3, 4, 5, 6, 7, 8 lub 9 zostanie zmapowane do starego przesunięcia 0.
 
-  - Nowe przesunięcie 10, 11, 12, 13, 14, 15, 16, 17, 18 lub 19 zostanie zamapowane do starego przesunięcia 5.
+  - Nowe przesunięcie 10, 11, 12, 13, 14, 15, 16, 17, 18 lub 19 zostanie zmapowane do starego przesunięcia 5.
 
-  - Nowe przesunięcie 20 lub nowszej zostanie zamapowane do starego przesunięcia 9.
+  - Nowe przesunięcie o wartości 20 lub wyższej zostanie zmapowane do starego przesunięcia 9.
+
+W .NET Framework 3,5 i poprzednich wersjach przydzielasz `rgILMapEntries` tablicę, wywołując metodę [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) . Ponieważ środowisko uruchomieniowe przejmuje własność tej pamięci, profiler nie powinien próbować go zwolnić.
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
 
-**Nagłówek:** CorProf.idl, CorProf.h
+**Nagłówki** CorProf. idl, CorProf. h
 
-**Biblioteka:** CorGuids.lib
+**Biblioteki** CorGuids.lib
 
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
+**.NET Framework wersje:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

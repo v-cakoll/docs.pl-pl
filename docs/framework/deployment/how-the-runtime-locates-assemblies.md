@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d22b4292483a94153864cad3439933837aed3b2
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7be86a71ae4b3f873395c48750cc22c74d7ff983
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043405"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853992"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Sposoby lokalizowania zestawów przez środowisko uruchomieniowe
 
@@ -83,7 +83,7 @@ Te pliki są zgodne z tą samą składnią i zawierają takie informacje, jak pr
 
 Najpierw środowisko uruchomieniowe języka wspólnego sprawdza plik konfiguracji aplikacji, aby uzyskać informacje, które zastępują informacje o wersji przechowywane w manifeście zestawu wywołującego. Plik konfiguracji aplikacji można wdrożyć przy użyciu aplikacji, ale nie jest to wymagane do wykonywania aplikacji. Zazwyczaj pobieranie tego pliku jest prawie chwilowe, ale w sytuacjach, gdy baza aplikacji znajduje się na komputerze zdalnym, na przykład w scenariuszu opartym na sieci Web w programie Internet Explorer, należy pobrać plik konfiguracyjny.
 
-W przypadku plików wykonywalnych klienta plik konfiguracji aplikacji znajduje się w tym samym katalogu co plik wykonywalny aplikacji i ma taką samą nazwę bazową jak plik wykonywalny z rozszerzeniem. config. Na przykład plik konfiguracyjny C:\Program Files\Myapp\Myapp.exe ma wartość C:\Program Files\Myapp\Myapp.exe.config. W scenariuszu opartym na przeglądarce plik HTML musi używać linku  **\<>** elementu, aby jawnie wskazywał plik konfiguracyjny.
+W przypadku plików wykonywalnych klienta plik konfiguracji aplikacji znajduje się w tym samym katalogu co plik wykonywalny aplikacji i ma taką samą nazwę bazową jak plik wykonywalny z rozszerzeniem. config. Na przykład plik konfiguracyjny C:\Program Files\Myapp\Myapp.exe ma wartość C:\Program Files\Myapp\Myapp.exe.config. W scenariuszu opartym na przeglądarce plik HTML musi używać  **\<linku >** elementu, aby jawnie wskazywał plik konfiguracyjny.
 
 Poniższy kod zawiera prosty przykład pliku konfiguracyjnego aplikacji. Ten przykład dodaje <xref:System.Diagnostics.TextWriterTraceListener> <xref:System.Diagnostics.Debug.Listeners%2A> do kolekcji, aby włączyć rejestrowanie informacji debugowania do pliku.
 
@@ -122,7 +122,7 @@ Poniżej znajduje się przykładowy plik konfiguracji zasad wydawcy:
 
 Aby utworzyć zestaw, można użyć narzędzia [Al. exe (Konsolidator zestawu)](../../../docs/framework/tools/al-exe-assembly-linker.md) z następującym poleceniem:
 
-```
+```console
 Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v:3.0.0.0
 ```
 

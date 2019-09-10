@@ -2,12 +2,12 @@
 title: Kompiluj ASP.NET Core 2,2 aplikacje wdrożone jako kontenery systemu Linux w klastrach AKS/Kubernetes
 description: Cykl życia konteneryzowanych aplikacji platformy Docker korzystających z platformy i narzędzi firmy Microsoft
 ms.date: 02/25/2019
-ms.openlocfilehash: 89843e0041c12f001f974360da2e5903499155d1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ab64a0423ceceb8285c159af276d6d97e12379d8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295354"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848754"
 ---
 # <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Kompilowanie aplikacji ASP.NET Core 2,2 wdrożonych jako kontenery systemu Linux w programie Orchestrator AKS/Kubernetes
 
@@ -43,7 +43,7 @@ Upewnij się, że wybrano ASP.NET Core 2,2 jako strukturę. Program .NET Core 2,
 
 **Rysunek 4-37**. Wybieranie ASP.NET CORE 2,2 i typ projektu interfejsu API sieci Web
 
-Jeśli masz poprzednią wersję programu .NET Core, możesz pobrać i zainstalować wersję 2,2 z <https://www.microsoft.com/net/download/core#/sdk>programu.
+Jeśli masz poprzednią wersję programu .NET Core, możesz pobrać i zainstalować wersję 2,2 z <https://dotnet.microsoft.com/download>programu.
 
 Możesz dodać obsługę platformy Docker podczas tworzenia projektu lub później, aby w dowolnym momencie można było "przekształcać". Aby dodać obsługę platformy Docker po utworzeniu projektu, kliknij prawym przyciskiem myszy węzeł projektu w Eksplorator rozwiązań a następnie wybierz polecenie **Dodaj** > **obsługę platformy Docker** w menu kontekstowym.
 

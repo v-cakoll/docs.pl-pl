@@ -2,12 +2,12 @@
 title: Mikrousługi platformy .NET. architektura konteneryzowanych aplikacji .NET
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Mikrousługi są modularne i niezależnie do wdrożenia usługi. Kontenery platformy Docker (dla systemów Linux i Windows) upraszczają wdrażanie i testowanie poprzez zgrupowanie usługi i jej zależności w pojedynczą jednostkę, która jest uruchamiana w środowisku izolowanym.
 ms.date: 01/07/2019
-ms.openlocfilehash: 55520153e0b926a97d0384f0b50b4c929f452f19
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: dcfff8b06dc77b47e6586ea82c82acc30a5cf3df
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70296842"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848867"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Mikrousługi .NET: architektura konteneryzowanych aplikacji .NET
 
@@ -21,7 +21,7 @@ Aby ułatwić rozpoczęcie pracy, przewodnik koncentruje się na odniesieniu do 
 
 ## <a name="action-links"></a>Linki akcji
 
-- Pobierz tę książkę elektroniczną w wybranym formacie: | [Plik PDF](https://aka.ms/microservicesebook) [](https://www.microsoft.com/net/download/thank-you/microservices-architecture-ebook-epub) [mobi](https://www.microsoft.com/net/download/thank-you/microservices-architecture-ebook-mobi)EPUB  |  |  |
+- Pobierz tę książkę elektroniczną w wybranym formacie: | [Plik PDF](https://aka.ms/microservicesebook) [](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) [mobi](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi)EPUB  |  |  |
 
 - Klonowanie/rozwidlenie aplikacji referencyjnej [eShopOnContainers w witrynie GitHub](https://github.com/dotnet-architecture/eShopOnContainers)
  

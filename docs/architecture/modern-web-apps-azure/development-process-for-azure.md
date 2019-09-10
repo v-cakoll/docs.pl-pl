@@ -4,12 +4,12 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: dcd2616cd5638aa712c11e370d35111b248e88ec
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 830271d76e5a87ed782d81fa9491328c580f0f87
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374047"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849590"
 ---
 # <a name="development-process-for-azure"></a>Proces programistyczny dla platformy Azure
 
@@ -36,7 +36,7 @@ Bez względu na to, czy wolisz pełną i wydajną platformę IDE, czy też Edyto
 
 **Interfejs wiersza polecenia Visual Studio Code i dotnet** (Narzędzia dla wielu platform dla systemów Mac, Linux i Windows). Jeśli wolisz uproszczony i Międzyplatformowy Edytor obsługujący dowolny język programowania, możesz użyć kodu Microsoft Visual Studio i interfejsu wiersza polecenia dotnet. Te produkty zapewniają proste, a jeszcze niezawodne środowisko, które usprawnia przepływ pracy dewelopera. Ponadto Visual Studio Code obsługuje rozszerzenia dla programowania C\# i sieci Web, które udostępnia funkcje IntelliSense i skróty w edytorze.
 
-[Pobierz zestaw .NET Core SDK](https://www.microsoft.com/net/download/core)
+[Pobierz zestaw .NET Core SDK](https://dotnet.microsoft.com/download)
 
 [Pobierz Visual Studio Code](https://code.visualstudio.com/download)
 

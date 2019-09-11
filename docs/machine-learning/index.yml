@@ -23,7 +23,7 @@ sections:
         items:
           - html: <a href="/dotnet/machine-learning/tutorials/sentiment-analysis">Analizowanie tonacji przy użyciu klasyfikacji binarnej</a>
           - html: <a href="/dotnet/machine-learning/tutorials/github-issue-classification">Kategoryzacja problemów usługi GitHub przy użyciu klasyfikacji wieloklasowej</a></li>
-          - html: <a href="/dotnet/machine-learning/tutorials/taxi-fare">Przewidywanie opłat za taksówkę NYC przy użyciu regresji</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/predict-prices">Przewidywanie cen przy użyciu regresji</a>
           - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">Klasyfikowanie kwiatów według cech przy użyciu klastrowania</a>
           - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">Tworzenie polecania filmu za pomocą factorization macierzy</a>
           - html: <a href="/dotnet/machine-learning/tutorials/image-classification">Tworzenie niestandardowego klasyfikatora obrazu za pomocą TensorFlow</a>

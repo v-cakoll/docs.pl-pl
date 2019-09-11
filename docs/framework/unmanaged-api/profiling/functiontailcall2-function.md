@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e10b1a77586a09f8f5f7a59e811953fbede8773
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9495624f7eca57a79518036937a5fb63d01d9c4b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586896"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851212"
 ---
-# <a name="functiontailcall2-function"></a><span data-ttu-id="36a96-102">FunctionTailcall2 — Funkcja</span><span class="sxs-lookup"><span data-stu-id="36a96-102">FunctionTailcall2 Function</span></span>
-<span data-ttu-id="36a96-103">Powiadamia program profilujący, że aktualnie wykonywanej funkcji ma wykonywać wywołania tail do innej funkcji oraz informacje o ramki stosu.</span><span class="sxs-lookup"><span data-stu-id="36a96-103">Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame.</span></span>  
+# <a name="functiontailcall2-function"></a><span data-ttu-id="14e2f-102">FunctionTailcall2 — Funkcja</span><span class="sxs-lookup"><span data-stu-id="14e2f-102">FunctionTailcall2 Function</span></span>
+<span data-ttu-id="14e2f-103">Powiadamia profiler, że aktualnie wykonywana funkcja ma wykonać wywołanie tail do innej funkcji i zawiera informacje na temat ramki stosu.</span><span class="sxs-lookup"><span data-stu-id="14e2f-103">Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="36a96-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="36a96-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="14e2f-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="14e2f-104">Syntax</span></span>  
   
-```  
+```cpp
 void __stdcall FunctionTailcall2 (  
     [in] FunctionID         funcId,   
     [in] UINT_PTR           clientData,   
@@ -36,47 +36,47 @@ void __stdcall FunctionTailcall2 (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="36a96-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="36a96-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="14e2f-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="14e2f-105">Parameters</span></span>  
  `funcId`  
- <span data-ttu-id="36a96-106">[in] Identyfikator aktualnie wykonywanej funkcji jest przeprowadzasz ogon wywołania.</span><span class="sxs-lookup"><span data-stu-id="36a96-106">[in] The identifier of the currently executing function that is about to make a tail call.</span></span>  
+ <span data-ttu-id="14e2f-106">podczas Identyfikator aktualnie wykonywanej funkcji, która ma na celu wykonanie wywołania tail.</span><span class="sxs-lookup"><span data-stu-id="14e2f-106">[in] The identifier of the currently executing function that is about to make a tail call.</span></span>  
   
  `clientData`  
- <span data-ttu-id="36a96-107">[in] Identyfikator funkcji ponownie zmapowany, który program profilujący wcześniej określona za pomocą [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), aktualnie wykonywanej funkcji, która dokona ogon wywołania.</span><span class="sxs-lookup"><span data-stu-id="36a96-107">[in] The remapped function identifier, which the profiler previously specified via [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), of the currently executing function that is about to make a tail call.</span></span>  
+ <span data-ttu-id="14e2f-107">podczas Identyfikator funkcji ponownie mapowanej, który Profiler wcześniej określił za pośrednictwem [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), obecnie wykonywanej funkcji, która ma na celu wykonanie wywołania tail.</span><span class="sxs-lookup"><span data-stu-id="14e2f-107">[in] The remapped function identifier, which the profiler previously specified via [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), of the currently executing function that is about to make a tail call.</span></span>  
   
  `func`  
- <span data-ttu-id="36a96-108">[in] A `COR_PRF_FRAME_INFO` wartość, która wskazuje informacji na temat ramki stosu.</span><span class="sxs-lookup"><span data-stu-id="36a96-108">[in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.</span></span>  
+ <span data-ttu-id="14e2f-108">podczas `COR_PRF_FRAME_INFO` Wartość, która wskazuje na informacje o ramce stosu.</span><span class="sxs-lookup"><span data-stu-id="14e2f-108">[in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.</span></span>  
   
- <span data-ttu-id="36a96-109">Program profilujący powinien traktować to jako nieprzezroczysty uchwyt, który może być przekazywany do aparatu wykonywania w [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="36a96-109">The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.</span></span>  
+ <span data-ttu-id="14e2f-109">Profiler powinien być traktowany jako nieprzezroczysty uchwyt, który można przesłać z powrotem do aparatu wykonywania w metodzie [ICorProfilerInfo2:: GetFunctionInfo2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) .</span><span class="sxs-lookup"><span data-stu-id="14e2f-109">The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="36a96-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="36a96-110">Remarks</span></span>  
- <span data-ttu-id="36a96-111">Funkcja docelowy wywołania tail użyje bieżącej ramki stosu i zwróci bezpośrednio do obiektu wywołującego zgłaszający tail wywołania funkcji.</span><span class="sxs-lookup"><span data-stu-id="36a96-111">The target function of the tail call will use the current stack frame, and will return directly to the caller of the function that made the tail call.</span></span> <span data-ttu-id="36a96-112">Oznacza to, że [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) wywołanie zwrotne nie zostanie wystawiony dla funkcji, która jest elementem docelowym wywołania tail.</span><span class="sxs-lookup"><span data-stu-id="36a96-112">This means that a [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) callback will not be issued for a function that is the target of a tail call.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="14e2f-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="14e2f-110">Remarks</span></span>  
+ <span data-ttu-id="14e2f-111">Funkcja Target wywołania tail będzie używać bieżącej ramki stosu i zwróci się bezpośrednio do obiektu wywołującego funkcji, która wykonał wywołanie tail.</span><span class="sxs-lookup"><span data-stu-id="14e2f-111">The target function of the tail call will use the current stack frame, and will return directly to the caller of the function that made the tail call.</span></span> <span data-ttu-id="14e2f-112">Oznacza to, że wywołanie zwrotne [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) nie zostanie wygenerowane dla funkcji, która jest elementem docelowym wywołania tail.</span><span class="sxs-lookup"><span data-stu-id="14e2f-112">This means that a [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) callback will not be issued for a function that is the target of a tail call.</span></span>  
   
- <span data-ttu-id="36a96-113">Wartość `func` parametr jest nieprawidłowy po `FunctionTailcall2` funkcja zwraca, ponieważ wartość mogą ulec zmianie lub zostać zniszczone.</span><span class="sxs-lookup"><span data-stu-id="36a96-113">The value of the `func` parameter is not valid after the `FunctionTailcall2` function returns because the value may change or be destroyed.</span></span>  
+ <span data-ttu-id="14e2f-113">Wartość `func` parametru jest nieprawidłowa `FunctionTailcall2` po powrocie funkcji, ponieważ wartość może ulec zmianie lub zostać zniszczona.</span><span class="sxs-lookup"><span data-stu-id="14e2f-113">The value of the `func` parameter is not valid after the `FunctionTailcall2` function returns because the value may change or be destroyed.</span></span>  
   
- <span data-ttu-id="36a96-114">`FunctionTailcall2` Funkcji jest wywołanie zwrotne; należy go zaimplementować.</span><span class="sxs-lookup"><span data-stu-id="36a96-114">The `FunctionTailcall2` function is a callback; you must implement it.</span></span> <span data-ttu-id="36a96-115">Należy użyć implementacji `__declspec`(`naked`) atrybuty klasy magazynu.</span><span class="sxs-lookup"><span data-stu-id="36a96-115">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
+ <span data-ttu-id="14e2f-114">`FunctionTailcall2` Funkcja jest wywołaniem zwrotnym, należy ją zaimplementować.</span><span class="sxs-lookup"><span data-stu-id="14e2f-114">The `FunctionTailcall2` function is a callback; you must implement it.</span></span> <span data-ttu-id="14e2f-115">Implementacja musi używać `__declspec`atrybutu klasy magazynu`naked`().</span><span class="sxs-lookup"><span data-stu-id="14e2f-115">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
   
- <span data-ttu-id="36a96-116">Aparat wykonywania nie zapisuje żadnych rejestrów przed wywołaniem tej funkcji.</span><span class="sxs-lookup"><span data-stu-id="36a96-116">The execution engine does not save any registers before calling this function.</span></span>  
+ <span data-ttu-id="14e2f-116">Aparat wykonywania nie zapisuje żadnych rejestrów przed wywołaniem tej funkcji.</span><span class="sxs-lookup"><span data-stu-id="14e2f-116">The execution engine does not save any registers before calling this function.</span></span>  
   
-- <span data-ttu-id="36a96-117">Przy uruchamianiu musisz najpierw zapisać wszystkich rejestrów, z których korzysta Licencjobiorca, łącznie z programami znajdującymi się na jednostki zmiennoprzecinkowej (FPU).</span><span class="sxs-lookup"><span data-stu-id="36a96-117">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
+- <span data-ttu-id="14e2f-117">We wpisie należy zapisać wszystkie używane rejestry, w tym te w jednostce zmiennoprzecinkowej (FPU).</span><span class="sxs-lookup"><span data-stu-id="14e2f-117">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
   
-- <span data-ttu-id="36a96-118">Na zakończenie możesz przywrócić stosu, usuwanie, wyłączanie wszystkich parametrów, które zostały wypchnięte przez wywołującego.</span><span class="sxs-lookup"><span data-stu-id="36a96-118">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
+- <span data-ttu-id="14e2f-118">Po zakończeniu należy przywrócić stos, usuwanie wyłączyć wszystkie parametry, które zostały wypchnięte przez jego obiekt wywołujący.</span><span class="sxs-lookup"><span data-stu-id="14e2f-118">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
   
- <span data-ttu-id="36a96-119">Implementacja `FunctionTailcall2` nie powinny blokować, ponieważ zostanie opóźnione, wyrzucanie elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="36a96-119">The implementation of `FunctionTailcall2` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="36a96-120">Implementacja nie powinien podejmować wyrzucania elementów bezużytecznych, ponieważ stos może nie być w stanie przyjaznego dla kolekcji wyrzucania elementów.</span><span class="sxs-lookup"><span data-stu-id="36a96-120">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="36a96-121">Jeśli próba zostanie podjęta wyrzucania elementów bezużytecznych, środowisko uruchomieniowe spowoduje zablokowanie aż do `FunctionTailcall2` zwraca.</span><span class="sxs-lookup"><span data-stu-id="36a96-121">If a garbage collection is attempted, the runtime will block until `FunctionTailcall2` returns.</span></span>  
+ <span data-ttu-id="14e2f-119">Implementacja `FunctionTailcall2` nie powinna być blokowana, ponieważ spowoduje opóźnienie wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="14e2f-119">The implementation of `FunctionTailcall2` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="14e2f-120">Implementacja nie powinna podejmować próby wyrzucania elementów bezużytecznych, ponieważ stos może nie znajdować się w stanie przyjaznym do wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="14e2f-120">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="14e2f-121">W przypadku próby wyrzucania elementów bezużytecznych środowisko uruchomieniowe `FunctionTailcall2` zostanie zablokowane do momentu powracania.</span><span class="sxs-lookup"><span data-stu-id="14e2f-121">If a garbage collection is attempted, the runtime will block until `FunctionTailcall2` returns.</span></span>  
   
- <span data-ttu-id="36a96-122">Ponadto `FunctionTailcall2` funkcji nie mogą wywoływać kodu zarządzanego lub w dowolnym Przyczyna sposób alokacji pamięci zarządzanej.</span><span class="sxs-lookup"><span data-stu-id="36a96-122">Also, the `FunctionTailcall2` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
+ <span data-ttu-id="14e2f-122">`FunctionTailcall2` Ponadto funkcja nie może wywołać kodu zarządzanego lub w jakikolwiek sposób może spowodować alokację pamięci zarządzanej.</span><span class="sxs-lookup"><span data-stu-id="14e2f-122">Also, the `FunctionTailcall2` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="36a96-123">Wymagania</span><span class="sxs-lookup"><span data-stu-id="36a96-123">Requirements</span></span>  
- <span data-ttu-id="36a96-124">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="36a96-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="14e2f-123">Wymagania</span><span class="sxs-lookup"><span data-stu-id="14e2f-123">Requirements</span></span>  
+ <span data-ttu-id="14e2f-124">**Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="14e2f-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="36a96-125">**Nagłówek:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="36a96-125">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="14e2f-125">**Nagłówki** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="14e2f-125">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="36a96-126">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="36a96-126">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="14e2f-126">**Biblioteki** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="14e2f-126">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="36a96-127">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="36a96-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="14e2f-127">**.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="14e2f-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="36a96-128">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="36a96-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="14e2f-128">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="14e2f-128">See also</span></span>
 
-- [<span data-ttu-id="36a96-129">FunctionEnter2, funkcja</span><span class="sxs-lookup"><span data-stu-id="36a96-129">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [<span data-ttu-id="36a96-130">FunctionLeave2, funkcja</span><span class="sxs-lookup"><span data-stu-id="36a96-130">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [<span data-ttu-id="36a96-131">SetEnterLeaveFunctionHooks2, metoda</span><span class="sxs-lookup"><span data-stu-id="36a96-131">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [<span data-ttu-id="36a96-132">Profilowanie statycznych funkcji globalnych</span><span class="sxs-lookup"><span data-stu-id="36a96-132">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [<span data-ttu-id="14e2f-129">FunctionEnter2, funkcja</span><span class="sxs-lookup"><span data-stu-id="14e2f-129">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
+- [<span data-ttu-id="14e2f-130">FunctionLeave2, funkcja</span><span class="sxs-lookup"><span data-stu-id="14e2f-130">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
+- [<span data-ttu-id="14e2f-131">SetEnterLeaveFunctionHooks2, metoda</span><span class="sxs-lookup"><span data-stu-id="14e2f-131">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [<span data-ttu-id="14e2f-132">Profilowanie statycznych funkcji globalnych</span><span class="sxs-lookup"><span data-stu-id="14e2f-132">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

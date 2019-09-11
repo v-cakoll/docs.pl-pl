@@ -17,123 +17,130 @@ helpviewer_keywords:
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae1e5c89676eaebfed5bbcae76048c7c48db5a18
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 222376e220bf74274082dfc6b76dc861d4f8ddc5
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779946"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855985"
 ---
-# <a name="performing-culture-insensitive-string-operations-in-collections"></a><span data-ttu-id="47ed2-102">Wykonywanie niezależnych od kultury operacji na ciągach w kolekcjach</span><span class="sxs-lookup"><span data-stu-id="47ed2-102">Performing Culture-Insensitive String Operations in Collections</span></span>
-<span data-ttu-id="47ed2-103">Brak klas i składowych w <xref:System.Collections> przestrzeni nazw, która zapewnia zachowanie wrażliwość na ustawienia kulturowe domyślnie.</span><span class="sxs-lookup"><span data-stu-id="47ed2-103">There are classes and members in the <xref:System.Collections> namespace that provide culture-sensitive behavior by default.</span></span> <span data-ttu-id="47ed2-104">Konstruktorów bez parametrów dla <xref:System.Collections.CaseInsensitiveComparer> i <xref:System.Collections.CaseInsensitiveHashCodeProvider> klasy zainicjować nowe wystąpienie, używając <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> właściwości.</span><span class="sxs-lookup"><span data-stu-id="47ed2-104">The parameterless constructors for the <xref:System.Collections.CaseInsensitiveComparer> and <xref:System.Collections.CaseInsensitiveHashCodeProvider> classes initialize a new instance using the <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="47ed2-105">Wszystkie przeciążenia <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> metoda Utwórz nowe wystąpienie klasy <xref:System.Collections.Hashtable> przy użyciu `Thread.CurrentCulture` właściwości domyślnie.</span><span class="sxs-lookup"><span data-stu-id="47ed2-105">All overloads of the <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> method create a new instance of the <xref:System.Collections.Hashtable> class using the `Thread.CurrentCulture` property by default.</span></span> <span data-ttu-id="47ed2-106">Przeciążenia <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> metoda wykonanie kultury sortowania przy użyciu domyślnego `Thread.CurrentCulture`.</span><span class="sxs-lookup"><span data-stu-id="47ed2-106">Overloads of the <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> method perform culture-sensitive sorts by default using `Thread.CurrentCulture`.</span></span> <span data-ttu-id="47ed2-107">Sortowanie i wyszukiwanie w <xref:System.Collections.SortedList> mogą mieć wpływ `Thread.CurrentCulture` Jeśli ciągi są używane jako klucze.</span><span class="sxs-lookup"><span data-stu-id="47ed2-107">Sorting and lookup in a <xref:System.Collections.SortedList> can be affected by `Thread.CurrentCulture` when strings are used as the keys.</span></span> <span data-ttu-id="47ed2-108">Postępuj zgodnie z zaleceniami użycia podane w tej sekcji w celu uzyskania wyników niezależnych od kultury z tych klas i metod w `Collections` przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="47ed2-108">Follow the usage recommendations provided in this section to obtain culture-insensitive results from these classes and methods in the `Collections` namespace.</span></span>  
-  
- <span data-ttu-id="47ed2-109">**Uwaga** przekazywanie <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> do porównania metoda wykonać porównanie niezależnych od kultury.</span><span class="sxs-lookup"><span data-stu-id="47ed2-109">**Note** Passing <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> to a comparison method does perform a culture-insensitive comparison.</span></span> <span data-ttu-id="47ed2-110">Jednak nie spowoduje nielingwistyczne porównania, na przykład ścieżki do plików, kluczy rejestru i zmiennych środowiskowych.</span><span class="sxs-lookup"><span data-stu-id="47ed2-110">However, it does not cause a non-linguistic comparison, for example, for file paths, registry keys, and environment variables.</span></span> <span data-ttu-id="47ed2-111">Żadna z nich nie jest obsługiwany decyzje dotyczące bezpieczeństwa, w oparciu o wyniki porównania.</span><span class="sxs-lookup"><span data-stu-id="47ed2-111">Neither does it support security decisions based on the comparison result.</span></span> <span data-ttu-id="47ed2-112">Dla porównania nielingwistyczne lub pomocy technicznej dla decyzji dotyczących zabezpieczeń opartych na wynik, aplikacja powinna użyć metody porównania, która akceptuje <xref:System.StringComparison> wartość.</span><span class="sxs-lookup"><span data-stu-id="47ed2-112">For a non-linguistic comparison or support for result-based security decisions, the application should use a comparison method that accepts a <xref:System.StringComparison> value.</span></span> <span data-ttu-id="47ed2-113">Aplikacja powinna następnie przekazać <xref:System.StringComparison>.</span><span class="sxs-lookup"><span data-stu-id="47ed2-113">The application should then pass <xref:System.StringComparison>.</span></span>  
-  
-## <a name="using-the-caseinsensitivecomparer-and-caseinsensitivehashcodeprovider-classes"></a><span data-ttu-id="47ed2-114">Przy użyciu caseinsensitivecomparer — i caseinsensitivehashcodeprovider — klasy</span><span class="sxs-lookup"><span data-stu-id="47ed2-114">Using the CaseInsensitiveComparer and CaseInsensitiveHashCodeProvider Classes</span></span>  
- <span data-ttu-id="47ed2-115">Konstruktorów bez parametrów dla `CaseInsensitiveHashCodeProvider` i `CaseInsensitiveComparer` inicjuje nowe wystąpienie klasy za pomocą `Thread.CurrentCulture`, dając w zachowaniu zależne od kultury.</span><span class="sxs-lookup"><span data-stu-id="47ed2-115">The parameterless constructors for `CaseInsensitiveHashCodeProvider` and `CaseInsensitiveComparer` initialize a new instance of the class using the `Thread.CurrentCulture`, resulting in culture-sensitive behavior.</span></span> <span data-ttu-id="47ed2-116">Poniższy przykład kodu pokazuje konstruktora dla `Hashtable` to wrażliwość na ustawienia kulturowe, ponieważ używa ona konstruktorów bez parametrów dla `CaseInsensitiveHashCodeProvider` i `CaseInsensitiveComparer`.</span><span class="sxs-lookup"><span data-stu-id="47ed2-116">The following code example demonstrates the constructor for a `Hashtable` that is culture-sensitive because it uses the parameterless constructors for `CaseInsensitiveHashCodeProvider` and `CaseInsensitiveComparer`.</span></span>  
-  
-```vb  
-internalHashtable = New Hashtable(CaseInsensitiveHashCodeProvider.Default, CaseInsensitiveComparer.Default)  
-```  
-  
-```csharp  
-internalHashtable = new Hashtable(CaseInsensitiveHashCodeProvider.Default, CaseInsensitiveComparer.Default);  
-```  
-  
- <span data-ttu-id="47ed2-117">Jeśli chcesz tworzyć niewrażliwość na ustawienia kulturowe `Hashtable` przy użyciu `CaseInsensitiveComparer` i `CaseInsensitiveHashCodeProvider` klasy, zainicjować nowe wystąpienia w ramach tych zajęć, za pomocą konstruktorów, które akceptują `culture` parametru.</span><span class="sxs-lookup"><span data-stu-id="47ed2-117">If you want to create a culture-insensitive `Hashtable` using the `CaseInsensitiveComparer` and `CaseInsensitiveHashCodeProvider` classes, initialize new instances of these classes using the constructors that accept a `culture` parameter.</span></span> <span data-ttu-id="47ed2-118">Aby uzyskać `culture` parametru, określ <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="47ed2-118">For the `culture` parameter, specify <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="47ed2-119">Poniższy przykład kodu pokazuje konstruktora dla niewrażliwość na ustawienia kulturowe `Hashtable`.</span><span class="sxs-lookup"><span data-stu-id="47ed2-119">The following code example demonstrates the constructor for a culture-insensitive `Hashtable`.</span></span>  
-  
-```vb  
-internalHashtable = New Hashtable(New  
-    CaseInsensitiveHashCodeProvider(CultureInfo.InvariantCulture),  
-    New CaseInsensitiveComparer(CultureInfo.InvariantCulture))  
-```  
-  
-```csharp  
-internalHashtable = new Hashtable(new CaseInsensitiveHashCodeProvider  
-    (CultureInfo.InvariantCulture),   
-    new CaseInsensitiveComparer(CultureInfo.InvariantCulture));  
-```  
-  
-## <a name="using-the-collectionsutilcreatecaseinsensitivehashtable-method"></a><span data-ttu-id="47ed2-120">Za pomocą collectionsutil.createcaseinsensitivehashtable — metoda</span><span class="sxs-lookup"><span data-stu-id="47ed2-120">Using the CollectionsUtil.CreateCaseInsensitiveHashTable Method</span></span>  
- <span data-ttu-id="47ed2-121">`CollectionsUtil.CreateCaseInsensitiveHashTable` Metodą jest przydatny skrót do tworzenia nowego wystąpienia klasy `Hashtable` klasy, które ignoruje wielkość liter ciągów.</span><span class="sxs-lookup"><span data-stu-id="47ed2-121">The `CollectionsUtil.CreateCaseInsensitiveHashTable` method is a useful shortcut for creating a new instance of the `Hashtable` class that ignores the case of strings.</span></span> <span data-ttu-id="47ed2-122">Jednak wszystkie przeciążenia `CollectionsUtil.CreateCaseInsensitiveHashTable` metody są zależne od kultury, ponieważ używają one `Thread.CurrentCulture` właściwości.</span><span class="sxs-lookup"><span data-stu-id="47ed2-122">However, all overloads of the `CollectionsUtil.CreateCaseInsensitiveHashTable` method are culture-sensitive because they use the `Thread.CurrentCulture` property.</span></span> <span data-ttu-id="47ed2-123">Nie można utworzyć niewrażliwość na ustawienia kulturowe `Hashtable` przy użyciu tej metody.</span><span class="sxs-lookup"><span data-stu-id="47ed2-123">You cannot create a culture-insensitive `Hashtable` using this method.</span></span> <span data-ttu-id="47ed2-124">Aby utworzyć niewrażliwość na ustawienia kulturowe `Hashtable`, użyj `Hashtable` Konstruktor, który akceptuje `culture` parametru.</span><span class="sxs-lookup"><span data-stu-id="47ed2-124">To create a culture-insensitive `Hashtable`, use the `Hashtable` constructor that accepts a `culture` parameter.</span></span> <span data-ttu-id="47ed2-125">Aby uzyskać `culture` parametru, określ `CultureInfo.InvariantCulture`.</span><span class="sxs-lookup"><span data-stu-id="47ed2-125">For the `culture` parameter, specify `CultureInfo.InvariantCulture`.</span></span> <span data-ttu-id="47ed2-126">Poniższy przykład kodu pokazuje konstruktora dla niewrażliwość na ustawienia kulturowe `Hashtable`.</span><span class="sxs-lookup"><span data-stu-id="47ed2-126">The following code example demonstrates the constructor for a culture-insensitive `Hashtable`.</span></span>  
-  
-```vb  
-internalHashtable = New Hashtable(New  
-    CaseInsensitiveHashCodeProvider(CultureInfo.InvariantCulture),  
-    New CaseInsensitiveComparer(CultureInfo.InvariantCulture))  
-```  
-  
-```csharp  
-internalHashtable = new Hashtable(new CaseInsensitiveHashCodeProvider  
-    (CultureInfo.InvariantCulture),   
-    new CaseInsensitiveComparer(CultureInfo.InvariantCulture));  
-```  
-  
-<a name="cpconperformingculture-insensitivestringoperationsincollectionsanchor1"></a>   
-## <a name="using-the-sortedlist-class"></a><span data-ttu-id="47ed2-127">Za pomocą SortedList — klasa</span><span class="sxs-lookup"><span data-stu-id="47ed2-127">Using the SortedList Class</span></span>  
- <span data-ttu-id="47ed2-128">A `SortedList` reprezentuje kolekcję par kluczy i wartości, są sortowane według kluczy, które są dostępne przez klucz i za pomocą indeksu.</span><span class="sxs-lookup"><span data-stu-id="47ed2-128">A `SortedList` represents a collection of key-and-value pairs that are sorted by the keys and are accessible by key and by index.</span></span> <span data-ttu-id="47ed2-129">Kiedy używasz `SortedList` gdzie parametry są klucze, sortowania i wyszukiwania mogą mieć wpływ `Thread.CurrentCulture` właściwości.</span><span class="sxs-lookup"><span data-stu-id="47ed2-129">When you use a `SortedList` where strings are the keys, the sorting and lookup can be affected by the `Thread.CurrentCulture` property.</span></span> <span data-ttu-id="47ed2-130">Uzyskanie niewrażliwość na ustawienia kulturowe zachowanie z `SortedList`, Utwórz `SortedList` przy użyciu jednego z konstruktorów, które akceptuje `comparer` parametru.</span><span class="sxs-lookup"><span data-stu-id="47ed2-130">To obtain culture-insensitive behavior from a `SortedList`, create a `SortedList` using one of the constructors that accepts a `comparer` parameter.</span></span> <span data-ttu-id="47ed2-131">`comparer` Parametr określa <xref:System.Collections.IComparer> wdrożenia do użycia podczas porównywania kluczy.</span><span class="sxs-lookup"><span data-stu-id="47ed2-131">The `comparer` parameter specifies the <xref:System.Collections.IComparer> implementation to use when comparing keys.</span></span> <span data-ttu-id="47ed2-132">Dla parametru należy określić klasę niestandardowej funkcji porównującej, która używa `CultureInfo.InvariantCulture` do porównywania kluczy.</span><span class="sxs-lookup"><span data-stu-id="47ed2-132">For the parameter, specify a custom comparer class that uses `CultureInfo.InvariantCulture` to compare keys.</span></span> <span data-ttu-id="47ed2-133">W poniższym przykładzie pokazano klasę niestandardowego modułu porównującego niewrażliwość na ustawienia kulturowe, można określić jako `comparer` parametr `SortedList` konstruktora.</span><span class="sxs-lookup"><span data-stu-id="47ed2-133">The following example illustrates a custom culture-insensitive comparer class that you can specify as the `comparer` parameter to a `SortedList` constructor.</span></span>  
-  
-```vb  
-Imports System  
-Imports System.Collections  
-Imports System.Globalization  
-  
-Friend Class InvariantComparer  
-    Implements IComparer   
-    Private m_compareInfo As CompareInfo  
-    Friend Shared [Default] As New InvariantComparer()  
-  
-    Friend Sub New()  
-        m_compareInfo = CultureInfo.InvariantCulture.CompareInfo  
-    End Sub     
-  
-    Public Function Compare(a As Object, b As Object) As Integer _  
-            Implements IComparer.Compare  
-        Dim sa As String = CType(a, String)  
-        Dim sb As String = CType(b, String)  
-        If Not (sa Is Nothing) And Not (sb Is Nothing) Then  
-            Return m_compareInfo.Compare(sa, sb)  
-        Else  
-            Return Comparer.Default.Compare(a, b)  
-        End If  
-    End Function  
-End Class  
-```  
-  
-```csharp  
-using System;  
-using System.Collections;  
-using System.Globalization;  
-  
-internal class InvariantComparer : IComparer   
-{  
-    private CompareInfo m_compareInfo;  
-    internal static readonly InvariantComparer Default = new  
-        InvariantComparer();  
-  
-    internal InvariantComparer()   
-    {  
-        m_compareInfo = CultureInfo.InvariantCulture.CompareInfo;  
-    }  
-  
-    public int Compare(Object a, Object b)  
-    {  
-        String sa = a as String;  
-        String sb = b as String;  
-        if (sa != null && sb != null)  
-            return m_compareInfo.Compare(sa, sb);  
-        else  
-            return Comparer.Default.Compare(a,b);  
-    }  
-}  
-```  
-  
- <span data-ttu-id="47ed2-134">Ogólnie rzecz biorąc, jeśli używasz `SortedList` na ciągi bez określenia niestandardowego niezmiennej modułu porównującego, zmiana `Thread.CurrentCulture` po wprowadzeniu listy mogą nie spełniać ścisłych listy.</span><span class="sxs-lookup"><span data-stu-id="47ed2-134">In general, if you use a `SortedList` on strings without specifying a custom invariant comparer, a change to `Thread.CurrentCulture` after the list has been populated can invalidate the list.</span></span>  
-  
-## <a name="using-the-arraylistsort-method"></a><span data-ttu-id="47ed2-135">Za pomocą ArrayList.sort — metoda</span><span class="sxs-lookup"><span data-stu-id="47ed2-135">Using the ArrayList.Sort Method</span></span>  
- <span data-ttu-id="47ed2-136">Przeciążenia `ArrayList.Sort` metoda wykonanie kultury sortowania przy użyciu domyślnego `Thread.CurrentCulture` właściwości.</span><span class="sxs-lookup"><span data-stu-id="47ed2-136">Overloads of the `ArrayList.Sort` method perform culture-sensitive sorts by default using the `Thread.CurrentCulture` property.</span></span> <span data-ttu-id="47ed2-137">Wyniki mogą się różnić kultury ze względu na poszczególnych kolejności sortowania.</span><span class="sxs-lookup"><span data-stu-id="47ed2-137">Results can vary by culture due to different sort orders.</span></span> <span data-ttu-id="47ed2-138">Aby wyeliminować wrażliwość na ustawienia kulturowe zachowanie, użyj przeciążenia tej metody, które akceptują `IComparer` implementacji.</span><span class="sxs-lookup"><span data-stu-id="47ed2-138">To eliminate culture-sensitive behavior, use the overloads of this method that accept an `IComparer` implementation.</span></span> <span data-ttu-id="47ed2-139">Dla `comparer` parametru, określ klasę niestandardowego modułu porównującego niezmiennej, która używa `CultureInfo.InvariantCulture`.</span><span class="sxs-lookup"><span data-stu-id="47ed2-139">For the `comparer` parameter, specify a custom invariant comparer class that uses `CultureInfo.InvariantCulture`.</span></span> <span data-ttu-id="47ed2-140">Przykład klasy niestandardowej funkcji porównującej niezmiennej znajduje się w [przy użyciu SortedList — klasa](#cpconperformingculture-insensitivestringoperationsincollectionsanchor1) tematu.</span><span class="sxs-lookup"><span data-stu-id="47ed2-140">An example of a custom invariant comparer class is provided in the [Using the SortedList Class](#cpconperformingculture-insensitivestringoperationsincollectionsanchor1) topic.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="47ed2-141">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="47ed2-141">See also</span></span>
+# <a name="performing-culture-insensitive-string-operations-in-collections"></a><span data-ttu-id="691b6-102">Wykonywanie niezależnych od kultury operacji na ciągach w kolekcjach</span><span class="sxs-lookup"><span data-stu-id="691b6-102">Performing Culture-Insensitive String Operations in Collections</span></span>
+
+<span data-ttu-id="691b6-103">Istnieją klasy i elementy członkowskie w <xref:System.Collections> przestrzeni nazw, które domyślnie udostępniają zachowania zależne od kultury.</span><span class="sxs-lookup"><span data-stu-id="691b6-103">There are classes and members in the <xref:System.Collections> namespace that provide culture-sensitive behavior by default.</span></span> <span data-ttu-id="691b6-104">Konstruktory bez parametrów dla <xref:System.Collections.CaseInsensitiveComparer> klas i <xref:System.Collections.CaseInsensitiveHashCodeProvider> inicjują nowe wystąpienie przy użyciu <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> właściwości.</span><span class="sxs-lookup"><span data-stu-id="691b6-104">The parameterless constructors for the <xref:System.Collections.CaseInsensitiveComparer> and <xref:System.Collections.CaseInsensitiveHashCodeProvider> classes initialize a new instance using the <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="691b6-105">Wszystkie przeciążenia <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> metody tworzą nowe wystąpienie <xref:System.Collections.Hashtable> klasy przy użyciu `Thread.CurrentCulture` domyślnie właściwości.</span><span class="sxs-lookup"><span data-stu-id="691b6-105">All overloads of the <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> method create a new instance of the <xref:System.Collections.Hashtable> class using the `Thread.CurrentCulture` property by default.</span></span> <span data-ttu-id="691b6-106">Przeciążenia metody domyślnie wykonują sortowanie zależne od kultury przy użyciu `Thread.CurrentCulture`. <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="691b6-106">Overloads of the <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> method perform culture-sensitive sorts by default using `Thread.CurrentCulture`.</span></span> <span data-ttu-id="691b6-107">W <xref:System.Collections.SortedList> `Thread.CurrentCulture` przypadku, gdy ciągi są używane jako klucze, można mieć wpływ na sortowanie i wyszukiwanie.</span><span class="sxs-lookup"><span data-stu-id="691b6-107">Sorting and lookup in a <xref:System.Collections.SortedList> can be affected by `Thread.CurrentCulture` when strings are used as the keys.</span></span> <span data-ttu-id="691b6-108">Postępuj zgodnie z zaleceniami dotyczącymi użycia opisanymi w tej sekcji, aby uzyskać wyniki niewrażliwe na `Collections` kulturę z tych klas i metod w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="691b6-108">Follow the usage recommendations provided in this section to obtain culture-insensitive results from these classes and methods in the `Collections` namespace.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="691b6-109">Przekazywanie <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> do metody porównania wykonuje porównanie nieuwzględniające kulturę.</span><span class="sxs-lookup"><span data-stu-id="691b6-109">Passing <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> to a comparison method does perform a culture-insensitive comparison.</span></span> <span data-ttu-id="691b6-110">Nie powoduje to jednak porównania w języku innym niż język, na przykład w przypadku ścieżek plików, kluczy rejestru i zmiennych środowiskowych.</span><span class="sxs-lookup"><span data-stu-id="691b6-110">However, it does not cause a non-linguistic comparison, for example, for file paths, registry keys, and environment variables.</span></span> <span data-ttu-id="691b6-111">Żadna z tych funkcji nie wspiera podejmowania decyzji dotyczących zabezpieczeń w oparciu o wynik porównania.</span><span class="sxs-lookup"><span data-stu-id="691b6-111">Neither does it support security decisions based on the comparison result.</span></span> <span data-ttu-id="691b6-112">W przypadku niezgodności z językiem lub pomocy technicznej dla decyzji o zabezpieczeniach opartych na wynikach aplikacja powinna używać metody porównania, <xref:System.StringComparison> która akceptuje wartość.</span><span class="sxs-lookup"><span data-stu-id="691b6-112">For a non-linguistic comparison or support for result-based security decisions, the application should use a comparison method that accepts a <xref:System.StringComparison> value.</span></span> <span data-ttu-id="691b6-113">Aplikacja powinna następnie przejść <xref:System.StringComparison>.</span><span class="sxs-lookup"><span data-stu-id="691b6-113">The application should then pass <xref:System.StringComparison>.</span></span>
+
+## <a name="using-the-caseinsensitivecomparer-and-caseinsensitivehashcodeprovider-classes"></a><span data-ttu-id="691b6-114">Korzystanie z klas CaseInsensitiveComparer i CaseInsensitiveHashCodeProvider</span><span class="sxs-lookup"><span data-stu-id="691b6-114">Using the CaseInsensitiveComparer and CaseInsensitiveHashCodeProvider Classes</span></span>
+
+<span data-ttu-id="691b6-115">Konstruktory bez parametrów dla `CaseInsensitiveHashCodeProvider` i `CaseInsensitiveComparer` inicjują nowe wystąpienie klasy przy użyciu `Thread.CurrentCulture`, w wyniku zachowania wrażliwego na kulturę.</span><span class="sxs-lookup"><span data-stu-id="691b6-115">The parameterless constructors for `CaseInsensitiveHashCodeProvider` and `CaseInsensitiveComparer` initialize a new instance of the class using the `Thread.CurrentCulture`, resulting in culture-sensitive behavior.</span></span> <span data-ttu-id="691b6-116">Poniższy przykład kodu demonstruje Konstruktor dla `Hashtable` , który jest wrażliwy na kulturę, ponieważ używa konstruktorów bez parametrów dla `CaseInsensitiveHashCodeProvider` i. `CaseInsensitiveComparer`</span><span class="sxs-lookup"><span data-stu-id="691b6-116">The following code example demonstrates the constructor for a `Hashtable` that is culture-sensitive because it uses the parameterless constructors for `CaseInsensitiveHashCodeProvider` and `CaseInsensitiveComparer`.</span></span>
+
+```vb
+internalHashtable = New Hashtable(CaseInsensitiveHashCodeProvider.Default, CaseInsensitiveComparer.Default)
+```
+
+```csharp
+internalHashtable = new Hashtable(CaseInsensitiveHashCodeProvider.Default, CaseInsensitiveComparer.Default);
+```
+
+<span data-ttu-id="691b6-117">Jeśli chcesz utworzyć `Hashtable` niezależną od `CaseInsensitiveComparer` kultury przy użyciu klas i `CaseInsensitiveHashCodeProvider` , zainicjuj nowe wystąpienia `culture` tych klas przy użyciu konstruktorów, które akceptują parametr.</span><span class="sxs-lookup"><span data-stu-id="691b6-117">If you want to create a culture-insensitive `Hashtable` using the `CaseInsensitiveComparer` and `CaseInsensitiveHashCodeProvider` classes, initialize new instances of these classes using the constructors that accept a `culture` parameter.</span></span> <span data-ttu-id="691b6-118">Dla parametru `culture` Określ <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>wartość.</span><span class="sxs-lookup"><span data-stu-id="691b6-118">For the `culture` parameter, specify <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="691b6-119">Poniższy przykład kodu demonstruje konstruktora dla niezależnych `Hashtable`od kultury.</span><span class="sxs-lookup"><span data-stu-id="691b6-119">The following code example demonstrates the constructor for a culture-insensitive `Hashtable`.</span></span>
+
+```vb
+internalHashtable = New Hashtable(New
+    CaseInsensitiveHashCodeProvider(CultureInfo.InvariantCulture),
+    New CaseInsensitiveComparer(CultureInfo.InvariantCulture))
+```
+
+```csharp
+internalHashtable = new Hashtable(new CaseInsensitiveHashCodeProvider
+    (CultureInfo.InvariantCulture),
+    new CaseInsensitiveComparer(CultureInfo.InvariantCulture));
+```
+
+## <a name="using-the-collectionsutilcreatecaseinsensitivehashtable-method"></a><span data-ttu-id="691b6-120">Korzystanie z metody CollectionsUtil. CreateCaseInsensitiveHashTable</span><span class="sxs-lookup"><span data-stu-id="691b6-120">Using the CollectionsUtil.CreateCaseInsensitiveHashTable Method</span></span>
+
+<span data-ttu-id="691b6-121">Metoda jest użytecznym skrótem do tworzenia nowego wystąpienia `Hashtable` klasy, które ignoruje wielkość liter. `CollectionsUtil.CreateCaseInsensitiveHashTable`</span><span class="sxs-lookup"><span data-stu-id="691b6-121">The `CollectionsUtil.CreateCaseInsensitiveHashTable` method is a useful shortcut for creating a new instance of the `Hashtable` class that ignores the case of strings.</span></span> <span data-ttu-id="691b6-122">Jednak wszystkie przeciążenia `CollectionsUtil.CreateCaseInsensitiveHashTable` metody są zależne od kultury, `Thread.CurrentCulture` ponieważ używają właściwości.</span><span class="sxs-lookup"><span data-stu-id="691b6-122">However, all overloads of the `CollectionsUtil.CreateCaseInsensitiveHashTable` method are culture-sensitive because they use the `Thread.CurrentCulture` property.</span></span> <span data-ttu-id="691b6-123">Nie można utworzyć bez uwzględniania `Hashtable` kultury przy użyciu tej metody.</span><span class="sxs-lookup"><span data-stu-id="691b6-123">You cannot create a culture-insensitive `Hashtable` using this method.</span></span> <span data-ttu-id="691b6-124">Aby utworzyć niezależną `Hashtable`od kultury, `Hashtable` Użyj konstruktora, który akceptuje `culture` parametr.</span><span class="sxs-lookup"><span data-stu-id="691b6-124">To create a culture-insensitive `Hashtable`, use the `Hashtable` constructor that accepts a `culture` parameter.</span></span> <span data-ttu-id="691b6-125">Dla parametru `culture` Określ `CultureInfo.InvariantCulture`wartość.</span><span class="sxs-lookup"><span data-stu-id="691b6-125">For the `culture` parameter, specify `CultureInfo.InvariantCulture`.</span></span> <span data-ttu-id="691b6-126">Poniższy przykład kodu demonstruje konstruktora dla niezależnych `Hashtable`od kultury.</span><span class="sxs-lookup"><span data-stu-id="691b6-126">The following code example demonstrates the constructor for a culture-insensitive `Hashtable`.</span></span>
+
+```vb
+internalHashtable = New Hashtable(New
+    CaseInsensitiveHashCodeProvider(CultureInfo.InvariantCulture),
+    New CaseInsensitiveComparer(CultureInfo.InvariantCulture))
+```
+
+```csharp
+internalHashtable = new Hashtable(new CaseInsensitiveHashCodeProvider
+    (CultureInfo.InvariantCulture),
+    new CaseInsensitiveComparer(CultureInfo.InvariantCulture));
+```
+
+<a name="cpconperformingculture-insensitivestringoperationsincollectionsanchor1"></a>
+
+## <a name="using-the-sortedlist-class"></a><span data-ttu-id="691b6-127">Korzystanie z klasy SortedList</span><span class="sxs-lookup"><span data-stu-id="691b6-127">Using the SortedList Class</span></span>
+
+<span data-ttu-id="691b6-128">`SortedList` Reprezentuje kolekcję par klucz-wartość, które są sortowane według kluczy i są dostępne dla klucza i według indeksu.</span><span class="sxs-lookup"><span data-stu-id="691b6-128">A `SortedList` represents a collection of key-and-value pairs that are sorted by the keys and are accessible by key and by index.</span></span> <span data-ttu-id="691b6-129">W przypadku korzystania z `SortedList` ciągów gdzie są klucze, `Thread.CurrentCulture` właściwość może mieć wpływ na sortowanie i wyszukiwanie.</span><span class="sxs-lookup"><span data-stu-id="691b6-129">When you use a `SortedList` where strings are the keys, the sorting and lookup can be affected by the `Thread.CurrentCulture` property.</span></span> <span data-ttu-id="691b6-130">Aby uzyskać zachowanie niewrażliwe na kulturę `SortedList`z, należy `SortedList` utworzyć przy użyciu jeden z konstruktorów akceptujących `comparer` parametr.</span><span class="sxs-lookup"><span data-stu-id="691b6-130">To obtain culture-insensitive behavior from a `SortedList`, create a `SortedList` using one of the constructors that accepts a `comparer` parameter.</span></span> <span data-ttu-id="691b6-131">`comparer` Parametr<xref:System.Collections.IComparer> określa implementację do użycia podczas porównywania kluczy.</span><span class="sxs-lookup"><span data-stu-id="691b6-131">The `comparer` parameter specifies the <xref:System.Collections.IComparer> implementation to use when comparing keys.</span></span> <span data-ttu-id="691b6-132">Dla parametru Określ niestandardową klasę porównującą używaną `CultureInfo.InvariantCulture` do porównywania kluczy.</span><span class="sxs-lookup"><span data-stu-id="691b6-132">For the parameter, specify a custom comparer class that uses `CultureInfo.InvariantCulture` to compare keys.</span></span> <span data-ttu-id="691b6-133">Poniższy przykład ilustruje niestandardową klasę niezależną od kultury, którą można określić jako `comparer` parametr `SortedList` konstruktora.</span><span class="sxs-lookup"><span data-stu-id="691b6-133">The following example illustrates a custom culture-insensitive comparer class that you can specify as the `comparer` parameter to a `SortedList` constructor.</span></span>
+
+```vb
+Imports System
+Imports System.Collections
+Imports System.Globalization
+
+Friend Class InvariantComparer
+    Implements IComparer
+    Private m_compareInfo As CompareInfo
+    Friend Shared [Default] As New InvariantComparer()
+
+    Friend Sub New()
+        m_compareInfo = CultureInfo.InvariantCulture.CompareInfo
+    End Sub
+
+    Public Function Compare(a As Object, b As Object) As Integer _
+            Implements IComparer.Compare
+        Dim sa As String = CType(a, String)
+        Dim sb As String = CType(b, String)
+        If Not (sa Is Nothing) And Not (sb Is Nothing) Then
+            Return m_compareInfo.Compare(sa, sb)
+        Else
+            Return Comparer.Default.Compare(a, b)
+        End If
+    End Function
+End Class
+```
+
+```csharp
+using System;
+using System.Collections;
+using System.Globalization;
+
+internal class InvariantComparer : IComparer
+{
+    private CompareInfo m_compareInfo;
+    internal static readonly InvariantComparer Default = new
+        InvariantComparer();
+
+    internal InvariantComparer()
+    {
+        m_compareInfo = CultureInfo.InvariantCulture.CompareInfo;
+    }
+
+    public int Compare(Object a, Object b)
+    {
+        String sa = a as String;
+        String sb = b as String;
+        if (sa != null && sb != null)
+            return m_compareInfo.Compare(sa, sb);
+        else
+            return Comparer.Default.Compare(a,b);
+    }
+}
+```
+
+<span data-ttu-id="691b6-134">Ogólnie rzecz biorąc, jeśli `SortedList` używasz w ciągach bez określania niestandardowej niezmiennej modułu porównującego, `Thread.CurrentCulture` zmiana po wypełnieniu listy może unieważnić listę.</span><span class="sxs-lookup"><span data-stu-id="691b6-134">In general, if you use a `SortedList` on strings without specifying a custom invariant comparer, a change to `Thread.CurrentCulture` after the list has been populated can invalidate the list.</span></span>
+
+## <a name="using-the-arraylistsort-method"></a><span data-ttu-id="691b6-135">Korzystanie z metody ArrayList. Sort</span><span class="sxs-lookup"><span data-stu-id="691b6-135">Using the ArrayList.Sort Method</span></span>
+
+<span data-ttu-id="691b6-136">Przeciążenia metody domyślnie wykonują sortowanie zależne od kultury `Thread.CurrentCulture` przy użyciu właściwości. `ArrayList.Sort`</span><span class="sxs-lookup"><span data-stu-id="691b6-136">Overloads of the `ArrayList.Sort` method perform culture-sensitive sorts by default using the `Thread.CurrentCulture` property.</span></span> <span data-ttu-id="691b6-137">Wyniki mogą się różnić w zależności od różnych kolejności sortowania.</span><span class="sxs-lookup"><span data-stu-id="691b6-137">Results can vary by culture due to different sort orders.</span></span> <span data-ttu-id="691b6-138">Aby wyeliminować zachowanie wrażliwe na kulturę, Użyj przeciążenia tej metody, która akceptuje `IComparer` implementację.</span><span class="sxs-lookup"><span data-stu-id="691b6-138">To eliminate culture-sensitive behavior, use the overloads of this method that accept an `IComparer` implementation.</span></span> <span data-ttu-id="691b6-139">Dla parametru należy określić niestandardową klasę niezmiennej porównującej, `CultureInfo.InvariantCulture`która używa. `comparer`</span><span class="sxs-lookup"><span data-stu-id="691b6-139">For the `comparer` parameter, specify a custom invariant comparer class that uses `CultureInfo.InvariantCulture`.</span></span> <span data-ttu-id="691b6-140">Przykład niestandardowej klasy niezmiennej porównującej znajduje się w temacie [using klasy SortedList](#cpconperformingculture-insensitivestringoperationsincollectionsanchor1) .</span><span class="sxs-lookup"><span data-stu-id="691b6-140">An example of a custom invariant comparer class is provided in the [Using the SortedList Class](#cpconperformingculture-insensitivestringoperationsincollectionsanchor1) topic.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="691b6-141">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="691b6-141">See also</span></span>
 
 - <xref:System.Collections.CaseInsensitiveComparer>
 - <xref:System.Collections.CaseInsensitiveHashCodeProvider>
@@ -141,5 +148,5 @@ internal class InvariantComparer : IComparer
 - <xref:System.Collections.SortedList>
 - <xref:System.Collections.Hashtable>
 - <xref:System.Collections.IComparer>
-- [<span data-ttu-id="47ed2-142">Wykonywanie niezależnych od kultury operacji na ciągach</span><span class="sxs-lookup"><span data-stu-id="47ed2-142">Performing Culture-Insensitive String Operations</span></span>](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+- [<span data-ttu-id="691b6-142">Wykonywanie niezależnych od kultury operacji na ciągach</span><span class="sxs-lookup"><span data-stu-id="691b6-142">Performing Culture-Insensitive String Operations</span></span>](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
 - <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType>

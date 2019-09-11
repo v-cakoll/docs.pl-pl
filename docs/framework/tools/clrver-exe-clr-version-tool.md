@@ -7,56 +7,56 @@ helpviewer_keywords:
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c627b128430342c25396d01f23f2eea7956d5e3d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2f4fc74a270cc171efa166bf54ac52a1b7acfdc5
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933755"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851314"
 ---
-# <a name="clrverexe-clr-version-tool"></a><span data-ttu-id="f68f6-102">Clrver.exe (Narzędzie wersji środowiska CLR)</span><span class="sxs-lookup"><span data-stu-id="f68f6-102">Clrver.exe (CLR Version Tool)</span></span>
-<span data-ttu-id="f68f6-103">Narzędzia wersji środowiska CLR (Clrver.exe) raportuje wszystkie wersje środowiska uruchomieniowego języka wspólnego (CLR) zainstalowane na komputerze.</span><span class="sxs-lookup"><span data-stu-id="f68f6-103">The CLR Version tool (Clrver.exe) reports all the installed versions of the common language runtime (CLR) on the computer.</span></span>  
+# <a name="clrverexe-clr-version-tool"></a><span data-ttu-id="9d55a-102">Clrver.exe (Narzędzie wersji środowiska CLR)</span><span class="sxs-lookup"><span data-stu-id="9d55a-102">Clrver.exe (CLR Version Tool)</span></span>
+<span data-ttu-id="9d55a-103">Narzędzia wersji środowiska CLR (Clrver.exe) raportuje wszystkie wersje środowiska uruchomieniowego języka wspólnego (CLR) zainstalowane na komputerze.</span><span class="sxs-lookup"><span data-stu-id="9d55a-103">The CLR Version tool (Clrver.exe) reports all the installed versions of the common language runtime (CLR) on the computer.</span></span>  
   
- <span data-ttu-id="f68f6-104">To narzędzie jest instalowane automatycznie z programem Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="f68f6-104">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="f68f6-105">Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7).</span><span class="sxs-lookup"><span data-stu-id="f68f6-105">To run the tool, use the Developer Command Prompt for Visual Studio (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="f68f6-106">Aby uzyskać więcej informacji, zobacz [wiersza polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="f68f6-106">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
+ <span data-ttu-id="9d55a-104">To narzędzie jest instalowane automatycznie z programem Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="9d55a-104">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="9d55a-105">Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7).</span><span class="sxs-lookup"><span data-stu-id="9d55a-105">To run the tool, use the Developer Command Prompt for Visual Studio (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="9d55a-106">Aby uzyskać więcej informacji, zobacz [wiersza polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="9d55a-106">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- <span data-ttu-id="f68f6-107">W wierszu polecenia wpisz następujące polecenie:</span><span class="sxs-lookup"><span data-stu-id="f68f6-107">At the command prompt, type the following:</span></span>  
+ <span data-ttu-id="9d55a-107">W wierszu polecenia wpisz następujące polecenie:</span><span class="sxs-lookup"><span data-stu-id="9d55a-107">At the command prompt, type the following:</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f68f6-108">Składnia</span><span class="sxs-lookup"><span data-stu-id="f68f6-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9d55a-108">Składnia</span><span class="sxs-lookup"><span data-stu-id="9d55a-108">Syntax</span></span>  
   
-```  
+```console  
 clrver [option]  
 ```  
   
-## <a name="options"></a><span data-ttu-id="f68f6-109">Opcje</span><span class="sxs-lookup"><span data-stu-id="f68f6-109">Options</span></span>  
+## <a name="options"></a><span data-ttu-id="9d55a-109">Opcje</span><span class="sxs-lookup"><span data-stu-id="9d55a-109">Options</span></span>  
   
-|<span data-ttu-id="f68f6-110">Opcja</span><span class="sxs-lookup"><span data-stu-id="f68f6-110">Option</span></span>|<span data-ttu-id="f68f6-111">Opis</span><span class="sxs-lookup"><span data-stu-id="f68f6-111">Description</span></span>|  
+|<span data-ttu-id="9d55a-110">Opcja</span><span class="sxs-lookup"><span data-stu-id="9d55a-110">Option</span></span>|<span data-ttu-id="9d55a-111">Opis</span><span class="sxs-lookup"><span data-stu-id="9d55a-111">Description</span></span>|  
 |------------|-----------------|  
-|`-all`|<span data-ttu-id="f68f6-112">Wyświetla wszystkie procesy na komputerze używające środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="f68f6-112">Displays all processes on the computer that are using the CLR.</span></span>|  
-|<span data-ttu-id="f68f6-113">*identyfikatora*</span><span class="sxs-lookup"><span data-stu-id="f68f6-113">*pid*</span></span>|<span data-ttu-id="f68f6-114">Wyświetla wersje środowiska CLR używane przez proces, który ma określony identyfikator procesu (PID).</span><span class="sxs-lookup"><span data-stu-id="f68f6-114">Displays the version(s) of the CLR used by the process that has the specified process ID (PID).</span></span>|  
-|`-?`|<span data-ttu-id="f68f6-115">Wyświetla składnię polecenia i opcje narzędzia.</span><span class="sxs-lookup"><span data-stu-id="f68f6-115">Displays command syntax and options for the tool.</span></span>|  
+|`-all`|<span data-ttu-id="9d55a-112">Wyświetla wszystkie procesy na komputerze używające środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="9d55a-112">Displays all processes on the computer that are using the CLR.</span></span>|  
+|<span data-ttu-id="9d55a-113">*identyfikatora*</span><span class="sxs-lookup"><span data-stu-id="9d55a-113">*pid*</span></span>|<span data-ttu-id="9d55a-114">Wyświetla wersje środowiska CLR używane przez proces, który ma określony identyfikator procesu (PID).</span><span class="sxs-lookup"><span data-stu-id="9d55a-114">Displays the version(s) of the CLR used by the process that has the specified process ID (PID).</span></span>|  
+|`-?`|<span data-ttu-id="9d55a-115">Wyświetla składnię polecenia i opcje narzędzia.</span><span class="sxs-lookup"><span data-stu-id="9d55a-115">Displays command syntax and options for the tool.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f68f6-116">Uwagi</span><span class="sxs-lookup"><span data-stu-id="f68f6-116">Remarks</span></span>  
- <span data-ttu-id="f68f6-117">Wywołanie procesu Clrver.exe bez opcji powoduje wyświetlenie wszystkich zainstalowanych wersji środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="f68f6-117">If you call Clrver.exe with no options, it displays all installed CLR versions.</span></span> <span data-ttu-id="f68f6-118">Jeśli określisz PID dla innego użytkownika, musisz mieć uprawnienia administracyjne, aby uzyskać informacje o wersji.</span><span class="sxs-lookup"><span data-stu-id="f68f6-118">If you specify a PID for another user, you must have administrative permissions to obtain the version information.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9d55a-116">Uwagi</span><span class="sxs-lookup"><span data-stu-id="9d55a-116">Remarks</span></span>  
+ <span data-ttu-id="9d55a-117">Wywołanie procesu Clrver.exe bez opcji powoduje wyświetlenie wszystkich zainstalowanych wersji środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="9d55a-117">If you call Clrver.exe with no options, it displays all installed CLR versions.</span></span> <span data-ttu-id="9d55a-118">Jeśli określisz PID dla innego użytkownika, musisz mieć uprawnienia administracyjne, aby uzyskać informacje o wersji.</span><span class="sxs-lookup"><span data-stu-id="9d55a-118">If you specify a PID for another user, you must have administrative permissions to obtain the version information.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="f68f6-119">W systemie Windows Vista i nowszych Kontrola konta użytkownika (UAC) określa uprawnienia użytkownika.</span><span class="sxs-lookup"><span data-stu-id="f68f6-119">In Windows Vista and later, User Account Control (UAC) determines the privileges of a user.</span></span> <span data-ttu-id="f68f6-120">Jeśli jesteś członkiem wbudowanej grupy Administratorzy, masz przypisane dwa tokeny dostępu w czasie wykonywania: token dostępu użytkownika standardowego i token dostępu administratora.</span><span class="sxs-lookup"><span data-stu-id="f68f6-120">If you are a member of the Built-in Administrators group, you are assigned two run-time access tokens: a standard user access token and an administrator access token.</span></span> <span data-ttu-id="f68f6-121">Domyślnie jesteś w roli użytkownika standardowego.</span><span class="sxs-lookup"><span data-stu-id="f68f6-121">By default, you are in the standard user role.</span></span> <span data-ttu-id="f68f6-122">Aby wykonać kod wymagający uprawnień administracyjnych, musisz najpierw podwyższenie swoje uprawnienia z użytkownika standardowego do administratora.</span><span class="sxs-lookup"><span data-stu-id="f68f6-122">To execute code that requires administrative permission, you must first elevate your privileges from standard user to administrator.</span></span> <span data-ttu-id="f68f6-123">Możesz to zrobić podczas uruchamiania wiersza polecenia, klikając prawym przyciskiem myszy ikonę wiersza polecenia i wskazując, że chcesz procować jako administrator.</span><span class="sxs-lookup"><span data-stu-id="f68f6-123">You can do this when you start the command prompt by right-clicking the command prompt icon and indicating that you want to run as an administrator.</span></span>  
+> <span data-ttu-id="9d55a-119">W systemie Windows Vista i nowszych Kontrola konta użytkownika (UAC) określa uprawnienia użytkownika.</span><span class="sxs-lookup"><span data-stu-id="9d55a-119">In Windows Vista and later, User Account Control (UAC) determines the privileges of a user.</span></span> <span data-ttu-id="9d55a-120">Jeśli jesteś członkiem wbudowanej grupy Administratorzy, masz przypisane dwa tokeny dostępu w czasie wykonywania: token dostępu użytkownika standardowego i token dostępu administratora.</span><span class="sxs-lookup"><span data-stu-id="9d55a-120">If you are a member of the Built-in Administrators group, you are assigned two run-time access tokens: a standard user access token and an administrator access token.</span></span> <span data-ttu-id="9d55a-121">Domyślnie jesteś w roli użytkownika standardowego.</span><span class="sxs-lookup"><span data-stu-id="9d55a-121">By default, you are in the standard user role.</span></span> <span data-ttu-id="9d55a-122">Aby wykonać kod wymagający uprawnień administracyjnych, musisz najpierw podwyższenie swoje uprawnienia z użytkownika standardowego do administratora.</span><span class="sxs-lookup"><span data-stu-id="9d55a-122">To execute code that requires administrative permission, you must first elevate your privileges from standard user to administrator.</span></span> <span data-ttu-id="9d55a-123">Możesz to zrobić podczas uruchamiania wiersza polecenia, klikając prawym przyciskiem myszy ikonę wiersza polecenia i wskazując, że chcesz procować jako administrator.</span><span class="sxs-lookup"><span data-stu-id="9d55a-123">You can do this when you start the command prompt by right-clicking the command prompt icon and indicating that you want to run as an administrator.</span></span>  
   
- <span data-ttu-id="f68f6-124">Próba ustalenia wersji środowiska CLR dla procesów SYSTEM, USŁUGA LOKALNA i USŁUGA SIECIOWA powoduje wyświetlenie komunikatu, że PID nie istnieje.</span><span class="sxs-lookup"><span data-stu-id="f68f6-124">Attempting to determine the CLR version for SYSTEM, LOCAL SERVICE, and NETWORK SERVICE processes results in a message indicating that the PID doesn't exist.</span></span>  
+ <span data-ttu-id="9d55a-124">Próba ustalenia wersji środowiska CLR dla procesów SYSTEM, USŁUGA LOKALNA i USŁUGA SIECIOWA powoduje wyświetlenie komunikatu, że PID nie istnieje.</span><span class="sxs-lookup"><span data-stu-id="9d55a-124">Attempting to determine the CLR version for SYSTEM, LOCAL SERVICE, and NETWORK SERVICE processes results in a message indicating that the PID doesn't exist.</span></span>  
   
-## <a name="examples"></a><span data-ttu-id="f68f6-125">Przykłady</span><span class="sxs-lookup"><span data-stu-id="f68f6-125">Examples</span></span>  
- <span data-ttu-id="f68f6-126">Następujące polecenie wyświetla listę wszystkich wersji środowiska CLR zainstalowanych na komputerze.</span><span class="sxs-lookup"><span data-stu-id="f68f6-126">The following command displays all the versions of the CLR installed on the computer.</span></span>  
+## <a name="examples"></a><span data-ttu-id="9d55a-125">Przykłady</span><span class="sxs-lookup"><span data-stu-id="9d55a-125">Examples</span></span>  
+ <span data-ttu-id="9d55a-126">Następujące polecenie wyświetla listę wszystkich wersji środowiska CLR zainstalowanych na komputerze.</span><span class="sxs-lookup"><span data-stu-id="9d55a-126">The following command displays all the versions of the CLR installed on the computer.</span></span>  
   
  `clrver`  
   
- <span data-ttu-id="f68f6-127">Następujące polecenie wyświetla wersję środowiska CLR używanego przez proces 128.</span><span class="sxs-lookup"><span data-stu-id="f68f6-127">The following command displays the version of the CLR used by process 128.</span></span>  
+ <span data-ttu-id="9d55a-127">Następujące polecenie wyświetla wersję środowiska CLR używanego przez proces 128.</span><span class="sxs-lookup"><span data-stu-id="9d55a-127">The following command displays the version of the CLR used by process 128.</span></span>  
   
  `clrver 128`  
   
- <span data-ttu-id="f68f6-128">Następujące polecenie wyświetla wszystkie zarządzane procesy i wersję używanego przez nie środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="f68f6-128">The following command displays all the managed processes and the version of the CLR they are using.</span></span>  
+ <span data-ttu-id="9d55a-128">Następujące polecenie wyświetla wszystkie zarządzane procesy i wersję używanego przez nie środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="9d55a-128">The following command displays all the managed processes and the version of the CLR they are using.</span></span>  
   
  `Clrver -all`  
   
-## <a name="see-also"></a><span data-ttu-id="f68f6-129">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f68f6-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9d55a-129">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9d55a-129">See also</span></span>
 
-- [<span data-ttu-id="f68f6-130">Narzędzia</span><span class="sxs-lookup"><span data-stu-id="f68f6-130">Tools</span></span>](../../../docs/framework/tools/index.md)
-- [<span data-ttu-id="f68f6-131">Wiersze polecenia</span><span class="sxs-lookup"><span data-stu-id="f68f6-131">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [<span data-ttu-id="9d55a-130">Narzędzia</span><span class="sxs-lookup"><span data-stu-id="9d55a-130">Tools</span></span>](../../../docs/framework/tools/index.md)
+- [<span data-ttu-id="9d55a-131">Wiersze polecenia</span><span class="sxs-lookup"><span data-stu-id="9d55a-131">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

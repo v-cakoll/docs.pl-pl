@@ -14,19 +14,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6594bb72ce9cd2fbfa9cdafebc152a90618b810
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb4eaaa23a810a23852dc5ef88d61c6a5d0f0ccd
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995491"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926806"
 ---
-# <a name="icordebugilframe4getlocalvariableex-method"></a><span data-ttu-id="a4ad4-102">Metoda ICorDebugILFrame4::GetLocalVariableEx</span><span class="sxs-lookup"><span data-stu-id="a4ad4-102">ICorDebugILFrame4::GetLocalVariableEx Method</span></span>
-<span data-ttu-id="a4ad4-103">[Obsługiwane w programie .NET Framework 4.5.2 i nowszych wersjach]</span><span class="sxs-lookup"><span data-stu-id="a4ad4-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugilframe4getlocalvariableex-method"></a><span data-ttu-id="e66dd-102">Metoda ICorDebugILFrame4::GetLocalVariableEx</span><span class="sxs-lookup"><span data-stu-id="e66dd-102">ICorDebugILFrame4::GetLocalVariableEx Method</span></span>
+<span data-ttu-id="e66dd-103">[Obsługiwane w .NET Framework 4.5.2 i nowszych wersjach]</span><span class="sxs-lookup"><span data-stu-id="e66dd-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="a4ad4-104">Pobiera wartość określonej zmiennej lokalnej w tej ramce stosu języka pośredniego (IL), a opcjonalnie uzyskuje dostęp do zmiennej dodane w profilerze ReJIT instrumentacji.</span><span class="sxs-lookup"><span data-stu-id="a4ad4-104">Gets the value of the specified local variable in this intermediate language (IL) stack frame, and optionally accesses a variable added in profiler ReJIT instrumentation.</span></span>  
+ <span data-ttu-id="e66dd-104">Pobiera wartość określonej zmiennej lokalnej w ramce stosu języka pośredniego (IL) i opcjonalnie uzyskuje dostęp do zmiennej dodanej w instrumentacji profilera ReJIT.</span><span class="sxs-lookup"><span data-stu-id="e66dd-104">Gets the value of the specified local variable in this intermediate language (IL) stack frame, and optionally accesses a variable added in profiler ReJIT instrumentation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a4ad4-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="a4ad4-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e66dd-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="e66dd-105">Syntax</span></span>  
   
 ```cpp
 HRESULT GetLocalVariableEx(  
@@ -36,30 +36,30 @@ HRESULT GetLocalVariableEx(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a4ad4-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="a4ad4-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e66dd-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="e66dd-106">Parameters</span></span>  
  `flags`  
- <span data-ttu-id="a4ad4-107">[in] [ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) składowej wyliczenia, która określa, czy zmienna dodany do programu profilującego Instrumentację ReJIT znajduje się w ramce.</span><span class="sxs-lookup"><span data-stu-id="a4ad4-107">[in] An [ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) enumeration member that specifies whether a variable added in profiler ReJIT instrumentation is included in the frame.</span></span>  
+ <span data-ttu-id="e66dd-107">podczas Element członkowski wyliczenia [ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) , który określa, czy zmienna dodana w Instrumentacji ReJIT profilera jest uwzględniona w ramce.</span><span class="sxs-lookup"><span data-stu-id="e66dd-107">[in] An [ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) enumeration member that specifies whether a variable added in profiler ReJIT instrumentation is included in the frame.</span></span>  
   
  `dwIndex`  
- <span data-ttu-id="a4ad4-108">[in] Indeks zmiennej lokalnej w ramce stosu IL.</span><span class="sxs-lookup"><span data-stu-id="a4ad4-108">[in] The index of the local variable in the IL stack frame.</span></span>  
+ <span data-ttu-id="e66dd-108">podczas Indeks zmiennej lokalnej w ramce stosu IL.</span><span class="sxs-lookup"><span data-stu-id="e66dd-108">[in] The index of the local variable in the IL stack frame.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="a4ad4-109">[out] Wskaźnik na adres "ICorDebugValue" obiekt, który reprezentuje pobraną wartość.</span><span class="sxs-lookup"><span data-stu-id="a4ad4-109">[out] A pointer to the address of an "ICorDebugValue" object that represents the retrieved value.</span></span>  
+ <span data-ttu-id="e66dd-109">określoną Wskaźnik do adresu obiektu "ICorDebugValue", który reprezentuje pobraną wartość.</span><span class="sxs-lookup"><span data-stu-id="e66dd-109">[out] A pointer to the address of an "ICorDebugValue" object that represents the retrieved value.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a4ad4-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="a4ad4-110">Remarks</span></span>  
- <span data-ttu-id="a4ad4-111">Ta metoda jest podobna do [getlocalvariable —](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md) metody, z wyjątkiem tego opcjonalnie uzyskuje dostęp zmienną dodane w profilerze ReJIT instrumentacji.</span><span class="sxs-lookup"><span data-stu-id="a4ad4-111">This method is similar to the [GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md) method, except that it optionally accesses a variable added in profiler ReJIT instrumentation.</span></span> <span data-ttu-id="a4ad4-112">Wywołanie tej metody za pomocą `flags` wartość `ILCODE_ORIGINAL_IL` jest równoważne z wywoływaniem [getlocalvariable —](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md); Jeśli metoda jest wyposażone w dodatkowe zmienne lokalne, nie można uzyskać dostępu do tych zmiennych.</span><span class="sxs-lookup"><span data-stu-id="a4ad4-112">Calling this method with a `flags` value of `ILCODE_ORIGINAL_IL` is equivalent to calling [GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md); if the method is instrumented with additional local variables, those variables cannot be accessed.</span></span> <span data-ttu-id="a4ad4-113">`ILCODE_REJIT_IL` Pozwala debugerowi, aby uzyskać dostęp do zmiennych lokalnych, dodane w profilerze ReJIT instrumentacji.</span><span class="sxs-lookup"><span data-stu-id="a4ad4-113">`ILCODE_REJIT_IL` allows the debugger to access the local variables added in profiler ReJIT instrumentation.</span></span> <span data-ttu-id="a4ad4-114">Jeśli nie ma instrumentacji IL, metoda zwraca `E_INVALIDARG`.</span><span class="sxs-lookup"><span data-stu-id="a4ad4-114">If the IL is not instrumented, the method returns `E_INVALIDARG`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e66dd-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="e66dd-110">Remarks</span></span>  
+ <span data-ttu-id="e66dd-111">Ta metoda jest podobna do metody [GetLocalVariable —](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md) , z tą różnicą, że opcjonalnie uzyskuje dostęp do zmiennej dodanej w Instrumentacji ReJIT profilera.</span><span class="sxs-lookup"><span data-stu-id="e66dd-111">This method is similar to the [GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md) method, except that it optionally accesses a variable added in profiler ReJIT instrumentation.</span></span> <span data-ttu-id="e66dd-112">Wywołanie tej metody z `flags` `ILCODE_ORIGINAL_IL` wartością jest równoznaczne z wywołaniem metody [GetLocalVariable —](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md); Jeśli metoda jest Instrumentacją przy użyciu dodatkowych zmiennych lokalnych, nie można uzyskać dostępu do tych zmiennych.</span><span class="sxs-lookup"><span data-stu-id="e66dd-112">Calling this method with a `flags` value of `ILCODE_ORIGINAL_IL` is equivalent to calling [GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md); if the method is instrumented with additional local variables, those variables cannot be accessed.</span></span> <span data-ttu-id="e66dd-113">`ILCODE_REJIT_IL`zezwala debugerowi na dostęp do zmiennych lokalnych dodanych w Instrumentacji ReJIT profilera.</span><span class="sxs-lookup"><span data-stu-id="e66dd-113">`ILCODE_REJIT_IL` allows the debugger to access the local variables added in profiler ReJIT instrumentation.</span></span> <span data-ttu-id="e66dd-114">Jeśli IL nie jest Instrumentacją, metoda zwraca `E_INVALIDARG`.</span><span class="sxs-lookup"><span data-stu-id="e66dd-114">If the IL is not instrumented, the method returns `E_INVALIDARG`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a4ad4-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="a4ad4-115">Requirements</span></span>  
- <span data-ttu-id="a4ad4-116">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a4ad4-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e66dd-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e66dd-115">Requirements</span></span>  
+ <span data-ttu-id="e66dd-116">**Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e66dd-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a4ad4-117">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a4ad4-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e66dd-117">**Nagłówki** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e66dd-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a4ad4-118">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a4ad4-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e66dd-118">**Biblioteki** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e66dd-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a4ad4-119">**Wersje programu .NET framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a4ad4-119">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="e66dd-119">**.NET Framework wersje:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e66dd-119">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a4ad4-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a4ad4-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e66dd-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e66dd-120">See also</span></span>
 
-- [<span data-ttu-id="a4ad4-121">ICorDebugILFrame4, interfejs</span><span class="sxs-lookup"><span data-stu-id="a4ad4-121">ICorDebugILFrame4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)
-- [<span data-ttu-id="a4ad4-122">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="a4ad4-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="a4ad4-123">ReJIT: Przewodniku z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="a4ad4-123">ReJIT: A How-To Guide</span></span>](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)
+- [<span data-ttu-id="e66dd-121">ICorDebugILFrame4, interfejs</span><span class="sxs-lookup"><span data-stu-id="e66dd-121">ICorDebugILFrame4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)
+- [<span data-ttu-id="e66dd-122">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="e66dd-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="e66dd-123">ReJIT: Przewodnik krok po kroku</span><span class="sxs-lookup"><span data-stu-id="e66dd-123">ReJIT: A How-To Guide</span></span>](https://blogs.msdn.microsoft.com/davbr/2011/10/12/rejit-a-how-to-guide/)

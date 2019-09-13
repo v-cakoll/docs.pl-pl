@@ -1,77 +1,78 @@
 ---
-title: Jak używać strukturze ML.NET automatyczne interfejsu API uczenia Maszynowego
-description: Strukturze ML.NET automatyczne interfejsu API uczenia Maszynowego automatyzuje modelu proces tworzenia i generuje gotowe do wdrożenia modelu. Dowiedz się, opcje, które umożliwiają skonfigurowanie automatycznych usługi machine learning zadania.
+title: Jak korzystać z interfejsu API zautomatyzowanej ML.NET ML
+description: Interfejs API zautomatyzowanej sieci ML.NET automatyzuje proces tworzenia modelu i generuje model gotowy do wdrożenia. Informacje na temat opcji, których można użyć do konfigurowania automatycznych zadań uczenia maszynowego.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: d624b999384dd92d41033e385d01fe556e10a065
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 02e4203b0d9f388c7bd7133f3cd4e97cc60cff14
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960417"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929391"
 ---
-# <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a><span data-ttu-id="f1a36-104">Jak używać strukturze ML.NET automatyczne interfejsu API usługi machine learning</span><span class="sxs-lookup"><span data-stu-id="f1a36-104">How to use the ML.NET automated machine learning API</span></span>
+# <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a><span data-ttu-id="f5de4-104">Jak korzystać z interfejsu API automatycznego uczenia maszynowego ML.NET</span><span class="sxs-lookup"><span data-stu-id="f5de4-104">How to use the ML.NET automated machine learning API</span></span>
 
-<span data-ttu-id="f1a36-105">Automatyczne usługi machine learning (AutoML) automatyzuje proces stosowania uczenia maszynowego do danych.</span><span class="sxs-lookup"><span data-stu-id="f1a36-105">Automated machine learning (AutoML) automates the process of applying machine learning to data.</span></span> <span data-ttu-id="f1a36-106">Biorąc pod uwagę zestaw danych, możesz uruchomić AutoML **eksperymentować** Iterowanie featurizations różnych danych, maszyny algorytmów uczenia i hiperparametrów, aby wybrać najlepszy model.</span><span class="sxs-lookup"><span data-stu-id="f1a36-106">Given a dataset, you can run an AutoML **experiment** to iterate over different data featurizations, machine learning algorithms, and hyperparameters to select the best model.</span></span>
+<span data-ttu-id="f5de4-105">Automatyczne Uczenie maszynowe (AutoML) automatyzuje proces stosowania uczenia maszynowego do danych.</span><span class="sxs-lookup"><span data-stu-id="f5de4-105">Automated machine learning (AutoML) automates the process of applying machine learning to data.</span></span> <span data-ttu-id="f5de4-106">Mając zestaw danych, można uruchomić **eksperyment** AutoML, aby wykonać iterację różnych danych featurizations, algorytmów uczenia maszynowego i parametrów do wybierania najlepszego modelu.</span><span class="sxs-lookup"><span data-stu-id="f5de4-106">Given a dataset, you can run an AutoML **experiment** to iterate over different data featurizations, machine learning algorithms, and hyperparameters to select the best model.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="f1a36-107">W tym temacie odnosi się do automatycznego machine learning API dla strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej.</span><span class="sxs-lookup"><span data-stu-id="f1a36-107">This topic refers to the automated machine learning API for ML.NET, which is currently in preview.</span></span> <span data-ttu-id="f1a36-108">Materiał może ulec zmianie.</span><span class="sxs-lookup"><span data-stu-id="f1a36-108">Material may be subject to change.</span></span>
+> <span data-ttu-id="f5de4-107">Ten temat odnosi się do zautomatyzowanego interfejsu API uczenia maszynowego dla usługi ML.NET, który jest obecnie w wersji zapoznawczej.</span><span class="sxs-lookup"><span data-stu-id="f5de4-107">This topic refers to the automated machine learning API for ML.NET, which is currently in preview.</span></span> <span data-ttu-id="f5de4-108">Materiał może ulec zmianie.</span><span class="sxs-lookup"><span data-stu-id="f5de4-108">Material may be subject to change.</span></span>
 
-## <a name="load-data"></a><span data-ttu-id="f1a36-109">Ładowanie danych</span><span class="sxs-lookup"><span data-stu-id="f1a36-109">Load data</span></span>
+## <a name="load-data"></a><span data-ttu-id="f5de4-109">Ładowanie danych</span><span class="sxs-lookup"><span data-stu-id="f5de4-109">Load data</span></span>
 
-<span data-ttu-id="f1a36-110">Automatyczne usługi machine learning obsługuje ładowanie zestawu danych do [IDataView](xref:Microsoft.ML.IDataView).</span><span class="sxs-lookup"><span data-stu-id="f1a36-110">Automated machine learning supports loading a dataset into an [IDataView](xref:Microsoft.ML.IDataView).</span></span> <span data-ttu-id="f1a36-111">Dane mogą być w formie plików wartości rozdzielane tabulatorami (TSV) i plików rozdzielanych przecinkami (CSV).</span><span class="sxs-lookup"><span data-stu-id="f1a36-111">Data can be in the form of tab-separated value (TSV) files and comma separated value (CSV) files.</span></span>
+<span data-ttu-id="f5de4-110">Automatyczne Uczenie maszynowe obsługuje ładowanie zestawu danych do [IDataView](xref:Microsoft.ML.IDataView).</span><span class="sxs-lookup"><span data-stu-id="f5de4-110">Automated machine learning supports loading a dataset into an [IDataView](xref:Microsoft.ML.IDataView).</span></span> <span data-ttu-id="f5de4-111">Dane mogą mieć postać plików z wartościami rozdzielanymi tabulatorami (TSV) i plików z wartościami rozdzielanymi przecinkami (CSV).</span><span class="sxs-lookup"><span data-stu-id="f5de4-111">Data can be in the form of tab-separated value (TSV) files and comma separated value (CSV) files.</span></span>
 
-<span data-ttu-id="f1a36-112">Przykład:</span><span class="sxs-lookup"><span data-stu-id="f1a36-112">Example:</span></span>
+<span data-ttu-id="f5de4-112">Przykład:</span><span class="sxs-lookup"><span data-stu-id="f5de4-112">Example:</span></span>
 
 ```csharp
 using Microsoft.ML;
 using Microsoft.ML.AutoML;
-    ...
+    // ...
     MLContext mlContext = new MLContext();
     IDataView trainDataView = mlContext.Data.LoadFromTextFile<SentimentIssue>("my-data-file.csv", hasHeader: true);
 ```
 
-## <a name="select-the-machine-learning-task-type"></a><span data-ttu-id="f1a36-113">Wybierz typ zadania uczenia maszynowego</span><span class="sxs-lookup"><span data-stu-id="f1a36-113">Select the machine learning task type</span></span>
-<span data-ttu-id="f1a36-114">Przed utworzeniem eksperymentu, należy określić rodzaj maszyny nauczanym problemem, który chcesz rozwiązać.</span><span class="sxs-lookup"><span data-stu-id="f1a36-114">Before creating an experiment, determine the kind of machine learning problem you want to solve.</span></span> <span data-ttu-id="f1a36-115">Automatyczne machine learning obsługuje następujące zadania uczenia Maszynowego:</span><span class="sxs-lookup"><span data-stu-id="f1a36-115">Automated machine learning supports the following ML tasks:</span></span>
-* <span data-ttu-id="f1a36-116">Klasyfikacja binarna</span><span class="sxs-lookup"><span data-stu-id="f1a36-116">Binary Classification</span></span>
-* <span data-ttu-id="f1a36-117">Wieloklasowej klasyfikacji</span><span class="sxs-lookup"><span data-stu-id="f1a36-117">Multiclass Classification</span></span>
-* <span data-ttu-id="f1a36-118">Regresji</span><span class="sxs-lookup"><span data-stu-id="f1a36-118">Regression</span></span>
+## <a name="select-the-machine-learning-task-type"></a><span data-ttu-id="f5de4-113">Wybierz typ zadania uczenia maszynowego</span><span class="sxs-lookup"><span data-stu-id="f5de4-113">Select the machine learning task type</span></span>
+<span data-ttu-id="f5de4-114">Przed utworzeniem eksperymentu należy określić rodzaj problemu z uczeniem maszynowym, który ma zostać rozwiązany.</span><span class="sxs-lookup"><span data-stu-id="f5de4-114">Before creating an experiment, determine the kind of machine learning problem you want to solve.</span></span> <span data-ttu-id="f5de4-115">Automatyczne Uczenie maszynowe obsługuje następujące zadania w ML:</span><span class="sxs-lookup"><span data-stu-id="f5de4-115">Automated machine learning supports the following ML tasks:</span></span>
 
-## <a name="create-experiment-settings"></a><span data-ttu-id="f1a36-119">Utwórz ustawienia eksperymentu</span><span class="sxs-lookup"><span data-stu-id="f1a36-119">Create experiment settings</span></span>
+* <span data-ttu-id="f5de4-116">Klasyfikacja binarna</span><span class="sxs-lookup"><span data-stu-id="f5de4-116">Binary Classification</span></span>
+* <span data-ttu-id="f5de4-117">Klasyfikacja wieloklasowa</span><span class="sxs-lookup"><span data-stu-id="f5de4-117">Multiclass Classification</span></span>
+* <span data-ttu-id="f5de4-118">Regresji</span><span class="sxs-lookup"><span data-stu-id="f5de4-118">Regression</span></span>
 
-<span data-ttu-id="f1a36-120">Tworzenie eksperymentu ustawień dla określonego typu zadania uczenia Maszynowego:</span><span class="sxs-lookup"><span data-stu-id="f1a36-120">Create experiment settings for the determined ML task type:</span></span>
+## <a name="create-experiment-settings"></a><span data-ttu-id="f5de4-119">Utwórz ustawienia eksperymentu</span><span class="sxs-lookup"><span data-stu-id="f5de4-119">Create experiment settings</span></span>
 
-* <span data-ttu-id="f1a36-121">Klasyfikacja binarna</span><span class="sxs-lookup"><span data-stu-id="f1a36-121">Binary Classification</span></span>
+<span data-ttu-id="f5de4-120">Utwórz ustawienia eksperymentu dla typu zadania o określonej ML:</span><span class="sxs-lookup"><span data-stu-id="f5de4-120">Create experiment settings for the determined ML task type:</span></span>
+
+* <span data-ttu-id="f5de4-121">Klasyfikacja binarna</span><span class="sxs-lookup"><span data-stu-id="f5de4-121">Binary Classification</span></span>
 
   ```csharp
   var experimentSettings = new BinaryExperimentSettings();
   ```
 
-* <span data-ttu-id="f1a36-122">Wieloklasowej klasyfikacji</span><span class="sxs-lookup"><span data-stu-id="f1a36-122">Multiclass Classification</span></span>
+* <span data-ttu-id="f5de4-122">Klasyfikacja wieloklasowa</span><span class="sxs-lookup"><span data-stu-id="f5de4-122">Multiclass Classification</span></span>
 
   ```csharp
   var experimentSettings = new MulticlassExperimentSettings();
   ```
 
-* <span data-ttu-id="f1a36-123">Regresji</span><span class="sxs-lookup"><span data-stu-id="f1a36-123">Regression</span></span>
+* <span data-ttu-id="f5de4-123">Regresji</span><span class="sxs-lookup"><span data-stu-id="f5de4-123">Regression</span></span>
 
   ```csharp
   var experimentSettings = new RegressionExperimentSettings();
   ```
 
-## <a name="configure-experiment-settings"></a><span data-ttu-id="f1a36-124">Konfigurowanie ustawień eksperymentu</span><span class="sxs-lookup"><span data-stu-id="f1a36-124">Configure experiment settings</span></span>
+## <a name="configure-experiment-settings"></a><span data-ttu-id="f5de4-124">Konfigurowanie ustawień eksperymentu</span><span class="sxs-lookup"><span data-stu-id="f5de4-124">Configure experiment settings</span></span>
 
-<span data-ttu-id="f1a36-125">Eksperymenty są wysoce konfigurowalne.</span><span class="sxs-lookup"><span data-stu-id="f1a36-125">Experiments are highly configurable.</span></span> <span data-ttu-id="f1a36-126">Zobacz [dokumentacji interfejsu API AutoML](https://docs.microsoft.com/dotnet/api/?view=automl-dotnet) poznania pełnej listy ustawień konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="f1a36-126">See the [AutoML API docs](https://docs.microsoft.com/dotnet/api/?view=automl-dotnet) for a full list of configuration settings.</span></span>
+<span data-ttu-id="f5de4-125">Eksperymenty są wysoce konfigurowalne.</span><span class="sxs-lookup"><span data-stu-id="f5de4-125">Experiments are highly configurable.</span></span> <span data-ttu-id="f5de4-126">Zobacz dokumentację [interfejsu API AutoML](https://docs.microsoft.com/dotnet/api/?view=automl-dotnet) , aby uzyskać pełną listę ustawień konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="f5de4-126">See the [AutoML API docs](https://docs.microsoft.com/dotnet/api/?view=automl-dotnet) for a full list of configuration settings.</span></span>
 
-<span data-ttu-id="f1a36-127">Oto niektóre przykłady:</span><span class="sxs-lookup"><span data-stu-id="f1a36-127">Some examples include:</span></span>
+<span data-ttu-id="f5de4-127">Oto niektóre przykłady:</span><span class="sxs-lookup"><span data-stu-id="f5de4-127">Some examples include:</span></span>
 
-1. <span data-ttu-id="f1a36-128">Określ maksymalny czas, w którym można uruchamiać eksperymentu.</span><span class="sxs-lookup"><span data-stu-id="f1a36-128">Specify the maximum time that the experiment is allowed to run.</span></span>
+1. <span data-ttu-id="f5de4-128">Określ maksymalny czas działania eksperymentu.</span><span class="sxs-lookup"><span data-stu-id="f5de4-128">Specify the maximum time that the experiment is allowed to run.</span></span>
 
     ```csharp
     experimentSettings.MaxExperimentTimeInSeconds = 3600;
     ```
 
-1. <span data-ttu-id="f1a36-129">Użyj token anulowania do anulowania doświadczenia, zanim jest zaplanowane na zakończenie.</span><span class="sxs-lookup"><span data-stu-id="f1a36-129">Use a cancellation token to cancel the experiment before it is scheduled to finish.</span></span>
+1. <span data-ttu-id="f5de4-129">Użyj tokenu anulowania, aby anulować eksperyment przed zaplanowaniem jego zakończenia.</span><span class="sxs-lookup"><span data-stu-id="f5de4-129">Use a cancellation token to cancel the experiment before it is scheduled to finish.</span></span>
 
     ```csharp
     experimentSettings.CancellationToken = cts.Token;
@@ -80,22 +81,22 @@ using Microsoft.ML.AutoML;
     CancelExperimentAfterAnyKeyPress(cts);
     ```
 
-1. <span data-ttu-id="f1a36-130">Określ inną metrykę optymalizacji.</span><span class="sxs-lookup"><span data-stu-id="f1a36-130">Specify a different optimizing metric.</span></span>
+1. <span data-ttu-id="f5de4-130">Określ inną metrykę optymalizacji.</span><span class="sxs-lookup"><span data-stu-id="f5de4-130">Specify a different optimizing metric.</span></span>
 
     ```csharp
     var experimentSettings = new RegressionExperimentSettings();
     experimentSettings.OptimizingMetric = RegressionMetric.MeanSquaredError;
     ```
 
-1. <span data-ttu-id="f1a36-131">`CacheDirectory` Ustawienie jest wskaźnikiem do katalogu, w którym zostaną zapisane wszystkie modele skonfigurowanych pod kątem podczas wykonywania zadania AutoML.</span><span class="sxs-lookup"><span data-stu-id="f1a36-131">The `CacheDirectory` setting is a pointer to a directory where all models trained during the AutoML task will be saved.</span></span> <span data-ttu-id="f1a36-132">Jeśli `CacheDirectory` jest ustawiona na wartość null, modele będą przechowywane w pamięci, a nie zapisane na dysku.</span><span class="sxs-lookup"><span data-stu-id="f1a36-132">If `CacheDirectory` is set to null, models will be kept in memory instead of written to disk.</span></span>
+1. <span data-ttu-id="f5de4-131">`CacheDirectory` Ustawienie to wskaźnik do katalogu, w którym wszystkie modele przeszkolone podczas zadania AutoML zostaną zapisane.</span><span class="sxs-lookup"><span data-stu-id="f5de4-131">The `CacheDirectory` setting is a pointer to a directory where all models trained during the AutoML task will be saved.</span></span> <span data-ttu-id="f5de4-132">Jeśli `CacheDirectory` jest ustawiona na wartość null, modele będą przechowywane w pamięci zamiast zapisywać na dysku.</span><span class="sxs-lookup"><span data-stu-id="f5de4-132">If `CacheDirectory` is set to null, models will be kept in memory instead of written to disk.</span></span>
  
     ```csharp
     experimentSettings.CacheDirectory = null;
     ```
 
-1. <span data-ttu-id="f1a36-133">Poinstruuj ML automatycznego nie należy używać niektórych instruktorów.</span><span class="sxs-lookup"><span data-stu-id="f1a36-133">Instruct automated ML not to use certain trainers.</span></span>
+1. <span data-ttu-id="f5de4-133">Poinstruuj zautomatyzowany ML, aby nie używać niektórych instruktorów.</span><span class="sxs-lookup"><span data-stu-id="f5de4-133">Instruct automated ML not to use certain trainers.</span></span>
 
-    <span data-ttu-id="f1a36-134">Domyślną listę instruktorów, aby zoptymalizować zbadano poszczególnych zadań.</span><span class="sxs-lookup"><span data-stu-id="f1a36-134">A default list of trainers to optimize are explored per task.</span></span> <span data-ttu-id="f1a36-135">Dla każdego doświadczenia można zmodyfikować tej listy.</span><span class="sxs-lookup"><span data-stu-id="f1a36-135">This list can be modified for each experiment.</span></span> <span data-ttu-id="f1a36-136">Na przykład można usunąć z listy instruktorów, które spowolnienie działania na twoim zestawie danych.</span><span class="sxs-lookup"><span data-stu-id="f1a36-136">For instance, trainers that run slowly on your dataset can be removed from the list.</span></span> <span data-ttu-id="f1a36-137">Do optymalizacji na jedno wywołanie dla określonych trenerów `experimentSettings.Trainers.Clear()`, następnie dodać instruktora, którego chcesz używać.</span><span class="sxs-lookup"><span data-stu-id="f1a36-137">To optimize on one specific trainer call `experimentSettings.Trainers.Clear()`, then add the trainer that you want to use.</span></span>
+    <span data-ttu-id="f5de4-134">Domyślna lista instruktorów do optymalizacji są zbadane według poszczególnych zadań.</span><span class="sxs-lookup"><span data-stu-id="f5de4-134">A default list of trainers to optimize are explored per task.</span></span> <span data-ttu-id="f5de4-135">Tę listę można modyfikować dla każdego eksperymentu.</span><span class="sxs-lookup"><span data-stu-id="f5de4-135">This list can be modified for each experiment.</span></span> <span data-ttu-id="f5de4-136">Na przykład, instruktorzy, którzy działają wolno w zestawie danych, można usunąć z listy.</span><span class="sxs-lookup"><span data-stu-id="f5de4-136">For instance, trainers that run slowly on your dataset can be removed from the list.</span></span> <span data-ttu-id="f5de4-137">Aby zoptymalizować na jednym konkretnym wywołaniu `experimentSettings.Trainers.Clear()`Trainer, Dodaj Trainer, którego chcesz użyć.</span><span class="sxs-lookup"><span data-stu-id="f5de4-137">To optimize on one specific trainer call `experimentSettings.Trainers.Clear()`, then add the trainer that you want to use.</span></span>
 
     ```csharp
     var experimentSettings = new RegressionExperimentSettings();
@@ -103,55 +104,56 @@ using Microsoft.ML.AutoML;
     experimentSettings.Trainers.Remove(RegressionTrainer.OnlineGradientDescent);
     ```
 
-<span data-ttu-id="f1a36-138">Lista obsługiwanych Instruktorzy każdego zadania uczenia Maszynowego znajduje się w temacie odpowiednie łącze poniżej:</span><span class="sxs-lookup"><span data-stu-id="f1a36-138">The list of supported trainers per ML task can be found at the corresponding link below:</span></span>
-* [<span data-ttu-id="f1a36-139">Obsługiwane algorytmy Klasyfikacja binarna</span><span class="sxs-lookup"><span data-stu-id="f1a36-139">Supported Binary Classification Algorithms</span></span>](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
-* [<span data-ttu-id="f1a36-140">Obsługiwane algorytmy Wieloklasowej klasyfikacji</span><span class="sxs-lookup"><span data-stu-id="f1a36-140">Supported Multiclass Classification Algorithms</span></span>](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
-* [<span data-ttu-id="f1a36-141">Regresja obsługiwane algorytmy</span><span class="sxs-lookup"><span data-stu-id="f1a36-141">Supported Regression Algorithms</span></span>](xref:Microsoft.ML.AutoML.RegressionTrainer)
+<span data-ttu-id="f5de4-138">Listę obsługiwanych zadań instruktorów na ML można znaleźć w odpowiadającym jej poniższym łączu:</span><span class="sxs-lookup"><span data-stu-id="f5de4-138">The list of supported trainers per ML task can be found at the corresponding link below:</span></span>
 
-## <a name="optimizing-metric"></a><span data-ttu-id="f1a36-142">Optymalizacja metryki</span><span class="sxs-lookup"><span data-stu-id="f1a36-142">Optimizing metric</span></span>
+* [<span data-ttu-id="f5de4-139">Obsługiwane algorytmy klasyfikacji binarnej</span><span class="sxs-lookup"><span data-stu-id="f5de4-139">Supported Binary Classification Algorithms</span></span>](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
+* [<span data-ttu-id="f5de4-140">Obsługiwane algorytmy klasyfikacji wieloklasowej</span><span class="sxs-lookup"><span data-stu-id="f5de4-140">Supported Multiclass Classification Algorithms</span></span>](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
+* [<span data-ttu-id="f5de4-141">Obsługiwane algorytmy regresji</span><span class="sxs-lookup"><span data-stu-id="f5de4-141">Supported Regression Algorithms</span></span>](xref:Microsoft.ML.AutoML.RegressionTrainer)
 
-<span data-ttu-id="f1a36-143">Optymalizacja metryki, jak pokazano w przykładzie powyżej, określa metryki można optymalizować podczas uczenia modelu.</span><span class="sxs-lookup"><span data-stu-id="f1a36-143">The optimizing metric, as shown in the example above, determines the metric to be optimized during model training.</span></span> <span data-ttu-id="f1a36-144">Optymalizacja metryki, które można wybrać, jest określana przez typ zadania, które wybierzesz.</span><span class="sxs-lookup"><span data-stu-id="f1a36-144">The optimizing metric you can select is determined by the task type you choose.</span></span> <span data-ttu-id="f1a36-145">Poniżej znajduje się lista dostępnych metryk.</span><span class="sxs-lookup"><span data-stu-id="f1a36-145">Below is a list of available metrics.</span></span>
+## <a name="optimizing-metric"></a><span data-ttu-id="f5de4-142">Optymalizowanie metryki</span><span class="sxs-lookup"><span data-stu-id="f5de4-142">Optimizing metric</span></span>
 
-|[<span data-ttu-id="f1a36-146">Klasyfikacja binarna</span><span class="sxs-lookup"><span data-stu-id="f1a36-146">Binary Classification</span></span>](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [<span data-ttu-id="f1a36-147">Wieloklasowej klasyfikacji</span><span class="sxs-lookup"><span data-stu-id="f1a36-147">Multiclass Classification</span></span>](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[<span data-ttu-id="f1a36-148">Regression</span><span class="sxs-lookup"><span data-stu-id="f1a36-148">Regression</span></span>](xref:Microsoft.ML.AutoML.RegressionMetric)
+<span data-ttu-id="f5de4-143">Metryka optymalizacji, jak pokazano w powyższym przykładzie, określa metrykę do zoptymalizowania podczas uczenia modelu.</span><span class="sxs-lookup"><span data-stu-id="f5de4-143">The optimizing metric, as shown in the example above, determines the metric to be optimized during model training.</span></span> <span data-ttu-id="f5de4-144">Metryka optymalizacji, którą można wybrać, zależy od wybranego typu zadania.</span><span class="sxs-lookup"><span data-stu-id="f5de4-144">The optimizing metric you can select is determined by the task type you choose.</span></span> <span data-ttu-id="f5de4-145">Poniżej znajduje się lista dostępnych metryk.</span><span class="sxs-lookup"><span data-stu-id="f5de4-145">Below is a list of available metrics.</span></span>
+
+|[<span data-ttu-id="f5de4-146">Klasyfikacja binarna</span><span class="sxs-lookup"><span data-stu-id="f5de4-146">Binary Classification</span></span>](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [<span data-ttu-id="f5de4-147">Klasyfikacja wieloklasowa</span><span class="sxs-lookup"><span data-stu-id="f5de4-147">Multiclass Classification</span></span>](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[<span data-ttu-id="f5de4-148">Regression</span><span class="sxs-lookup"><span data-stu-id="f5de4-148">Regression</span></span>](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
-|<span data-ttu-id="f1a36-149">dokładność</span><span class="sxs-lookup"><span data-stu-id="f1a36-149">Accuracy</span></span>| <span data-ttu-id="f1a36-150">LogLoss</span><span class="sxs-lookup"><span data-stu-id="f1a36-150">LogLoss</span></span> | <span data-ttu-id="f1a36-151">RSquared</span><span class="sxs-lookup"><span data-stu-id="f1a36-151">RSquared</span></span>
-|<span data-ttu-id="f1a36-152">AreaUnderPrecisionRecallCurve</span><span class="sxs-lookup"><span data-stu-id="f1a36-152">AreaUnderPrecisionRecallCurve</span></span> | <span data-ttu-id="f1a36-153">LogLossReduction</span><span class="sxs-lookup"><span data-stu-id="f1a36-153">LogLossReduction</span></span> | <span data-ttu-id="f1a36-154">MeanAbsoluteError</span><span class="sxs-lookup"><span data-stu-id="f1a36-154">MeanAbsoluteError</span></span>
-|<span data-ttu-id="f1a36-155">AreaUnderRocCurve</span><span class="sxs-lookup"><span data-stu-id="f1a36-155">AreaUnderRocCurve</span></span> | <span data-ttu-id="f1a36-156">MacroAccuracy</span><span class="sxs-lookup"><span data-stu-id="f1a36-156">MacroAccuracy</span></span> | <span data-ttu-id="f1a36-157">MeanSquaredError</span><span class="sxs-lookup"><span data-stu-id="f1a36-157">MeanSquaredError</span></span>
-|<span data-ttu-id="f1a36-158">F1Score</span><span class="sxs-lookup"><span data-stu-id="f1a36-158">F1Score</span></span> | <span data-ttu-id="f1a36-159">MicroAccuracy</span><span class="sxs-lookup"><span data-stu-id="f1a36-159">MicroAccuracy</span></span> | <span data-ttu-id="f1a36-160">RootMeanSquaredError</span><span class="sxs-lookup"><span data-stu-id="f1a36-160">RootMeanSquaredError</span></span>
-|<span data-ttu-id="f1a36-161">NegativePrecision</span><span class="sxs-lookup"><span data-stu-id="f1a36-161">NegativePrecision</span></span> | <span data-ttu-id="f1a36-162">TopKAccuracy</span><span class="sxs-lookup"><span data-stu-id="f1a36-162">TopKAccuracy</span></span>
-|<span data-ttu-id="f1a36-163">NegativeRecall</span><span class="sxs-lookup"><span data-stu-id="f1a36-163">NegativeRecall</span></span> |
-|<span data-ttu-id="f1a36-164">PositivePrecision</span><span class="sxs-lookup"><span data-stu-id="f1a36-164">PositivePrecision</span></span>
-|<span data-ttu-id="f1a36-165">PositiveRecall</span><span class="sxs-lookup"><span data-stu-id="f1a36-165">PositiveRecall</span></span>
+|<span data-ttu-id="f5de4-149">odpowiedni</span><span class="sxs-lookup"><span data-stu-id="f5de4-149">Accuracy</span></span>| <span data-ttu-id="f5de4-150">LogLoss</span><span class="sxs-lookup"><span data-stu-id="f5de4-150">LogLoss</span></span> | <span data-ttu-id="f5de4-151">RSquared</span><span class="sxs-lookup"><span data-stu-id="f5de4-151">RSquared</span></span>
+|<span data-ttu-id="f5de4-152">AreaUnderPrecisionRecallCurve</span><span class="sxs-lookup"><span data-stu-id="f5de4-152">AreaUnderPrecisionRecallCurve</span></span> | <span data-ttu-id="f5de4-153">LogLossReduction</span><span class="sxs-lookup"><span data-stu-id="f5de4-153">LogLossReduction</span></span> | <span data-ttu-id="f5de4-154">MeanAbsoluteError</span><span class="sxs-lookup"><span data-stu-id="f5de4-154">MeanAbsoluteError</span></span>
+|<span data-ttu-id="f5de4-155">AreaUnderRocCurve</span><span class="sxs-lookup"><span data-stu-id="f5de4-155">AreaUnderRocCurve</span></span> | <span data-ttu-id="f5de4-156">MacroAccuracy</span><span class="sxs-lookup"><span data-stu-id="f5de4-156">MacroAccuracy</span></span> | <span data-ttu-id="f5de4-157">MeanSquaredError</span><span class="sxs-lookup"><span data-stu-id="f5de4-157">MeanSquaredError</span></span>
+|<span data-ttu-id="f5de4-158">F1Score</span><span class="sxs-lookup"><span data-stu-id="f5de4-158">F1Score</span></span> | <span data-ttu-id="f5de4-159">Mikrodokładność</span><span class="sxs-lookup"><span data-stu-id="f5de4-159">MicroAccuracy</span></span> | <span data-ttu-id="f5de4-160">RootMeanSquaredError</span><span class="sxs-lookup"><span data-stu-id="f5de4-160">RootMeanSquaredError</span></span>
+|<span data-ttu-id="f5de4-161">NegativePrecision</span><span class="sxs-lookup"><span data-stu-id="f5de4-161">NegativePrecision</span></span> | <span data-ttu-id="f5de4-162">TopKAccuracy</span><span class="sxs-lookup"><span data-stu-id="f5de4-162">TopKAccuracy</span></span>
+|<span data-ttu-id="f5de4-163">NegativeRecall</span><span class="sxs-lookup"><span data-stu-id="f5de4-163">NegativeRecall</span></span> |
+|<span data-ttu-id="f5de4-164">PositivePrecision</span><span class="sxs-lookup"><span data-stu-id="f5de4-164">PositivePrecision</span></span>
+|<span data-ttu-id="f5de4-165">PositiveRecall</span><span class="sxs-lookup"><span data-stu-id="f5de4-165">PositiveRecall</span></span>
 
-## <a name="data-pre-processing-and-featurization"></a><span data-ttu-id="f1a36-166">Wstępne przetwarzanie danych i cechowania</span><span class="sxs-lookup"><span data-stu-id="f1a36-166">Data pre-processing and featurization</span></span>
+## <a name="data-pre-processing-and-featurization"></a><span data-ttu-id="f5de4-166">Wstępne przetwarzanie danych i cechowania</span><span class="sxs-lookup"><span data-stu-id="f5de4-166">Data pre-processing and featurization</span></span>
 
-<span data-ttu-id="f1a36-167">Przetwarzanie wstępne danych miały domyślnie, a poniższe kroki są wykonywane automatycznie dla Ciebie:</span><span class="sxs-lookup"><span data-stu-id="f1a36-167">Data pre-processing happens by default and the following steps are performed automatically for you:</span></span>
+<span data-ttu-id="f5de4-167">Przetwarzanie wstępne danych odbywa się domyślnie, a następujące kroki są wykonywane automatycznie:</span><span class="sxs-lookup"><span data-stu-id="f5de4-167">Data pre-processing happens by default and the following steps are performed automatically for you:</span></span>
 
-1. <span data-ttu-id="f1a36-168">Upuszczanie funkcji żadnych użytecznych informacji</span><span class="sxs-lookup"><span data-stu-id="f1a36-168">Drop features with no useful information</span></span>
+1. <span data-ttu-id="f5de4-168">Funkcje upuszczania bez użytecznych informacji</span><span class="sxs-lookup"><span data-stu-id="f5de4-168">Drop features with no useful information</span></span>
 
-    <span data-ttu-id="f1a36-169">Usuwanie funkcji żadnych użytecznych informacji z zestawów szkolenia i sprawdzania poprawności.</span><span class="sxs-lookup"><span data-stu-id="f1a36-169">Drop features with no useful information from training and validation sets.</span></span> <span data-ttu-id="f1a36-170">Obejmują one funkcje wszystkich wartości Brak, tę samą wartość we wszystkich wierszach lub bardzo dużej kardynalności (np. skróty, lub identyfikatory GUID).</span><span class="sxs-lookup"><span data-stu-id="f1a36-170">These include features with all values missing, same value across all rows or with extremely high cardinality (e.g., hashes, IDs or GUIDs).</span></span>
+    <span data-ttu-id="f5de4-169">Usuwanie funkcji żadnych użytecznych informacji z zestawów szkolenia i sprawdzania poprawności.</span><span class="sxs-lookup"><span data-stu-id="f5de4-169">Drop features with no useful information from training and validation sets.</span></span> <span data-ttu-id="f5de4-170">Obejmują one funkcje wszystkich wartości Brak, tę samą wartość we wszystkich wierszach lub bardzo dużej kardynalności (np. skróty, lub identyfikatory GUID).</span><span class="sxs-lookup"><span data-stu-id="f5de4-170">These include features with all values missing, same value across all rows or with extremely high cardinality (e.g., hashes, IDs or GUIDs).</span></span>
 
-1. <span data-ttu-id="f1a36-171">Brak wskazania wartość i przypisywania</span><span class="sxs-lookup"><span data-stu-id="f1a36-171">Missing value indication and imputation</span></span>
+1. <span data-ttu-id="f5de4-171">Brak wskazania wartości i nie należy ich przypisywaniu</span><span class="sxs-lookup"><span data-stu-id="f5de4-171">Missing value indication and imputation</span></span>
 
-    <span data-ttu-id="f1a36-172">Wypełnienie brakujących wartości komórek z wartością domyślną dla typu danych.</span><span class="sxs-lookup"><span data-stu-id="f1a36-172">Fill missing value cells with the default value for the datatype.</span></span> <span data-ttu-id="f1a36-173">Dołącz wskaźnik funkcji, korzystając z taką samą liczbę miejsc, jako kolumna danych wejściowych.</span><span class="sxs-lookup"><span data-stu-id="f1a36-173">Append indicator features with the same number of slots as the input column.</span></span> <span data-ttu-id="f1a36-174">Wartość w funkcji dołączonych wskaźnik jest `1` Jeśli brakuje wartości w kolumnie wejściowej i `0` inaczej.</span><span class="sxs-lookup"><span data-stu-id="f1a36-174">The value in the appended indicator features is `1` if the value in the input column is missing and `0` otherwise.</span></span>
+    <span data-ttu-id="f5de4-172">Wypełnij brakujące komórki wartości wartością domyślną dla typu danych.</span><span class="sxs-lookup"><span data-stu-id="f5de4-172">Fill missing value cells with the default value for the datatype.</span></span> <span data-ttu-id="f5de4-173">Dołącz funkcje wskaźnika z taką samą liczbą gniazd jak w przypadku kolumny wejściowej.</span><span class="sxs-lookup"><span data-stu-id="f5de4-173">Append indicator features with the same number of slots as the input column.</span></span> <span data-ttu-id="f5de4-174">Wartość w funkcjach dołączanych wskaźników jest `1` w przypadku braku wartości w kolumnie wejściowej i `0` w przeciwnym razie.</span><span class="sxs-lookup"><span data-stu-id="f5de4-174">The value in the appended indicator features is `1` if the value in the input column is missing and `0` otherwise.</span></span>
 
-1. <span data-ttu-id="f1a36-175">Generuj dodatkowe funkcje</span><span class="sxs-lookup"><span data-stu-id="f1a36-175">Generate additional features</span></span>
+1. <span data-ttu-id="f5de4-175">Generuj dodatkowe funkcje</span><span class="sxs-lookup"><span data-stu-id="f5de4-175">Generate additional features</span></span>
     
-    <span data-ttu-id="f1a36-176">Funkcje tekstowe: Funkcje zbioru programu word za pomocą unigrams i tri znak g.</span><span class="sxs-lookup"><span data-stu-id="f1a36-176">For text features: Bag-of-word features using unigrams and tri-character-grams.</span></span>
+    <span data-ttu-id="f5de4-176">Dla funkcji tekstowych: Funkcje zbioru słów korzystające z unigrams i Tri-Character-Grams.</span><span class="sxs-lookup"><span data-stu-id="f5de4-176">For text features: Bag-of-word features using unigrams and tri-character-grams.</span></span>
     
-    <span data-ttu-id="f1a36-177">Podzielone na kategorie funkcji: Jeden hot-hash kodowanie funkcji podzielonych na kategorie wysoka Kardynalność klauzuli i hot jeden kodowania dla funkcji Kardynalność niski.</span><span class="sxs-lookup"><span data-stu-id="f1a36-177">For categorical features: One-hot encoding for low cardinality features, and one-hot-hash encoding for high cardinality categorical features.</span></span>
+    <span data-ttu-id="f5de4-177">Dla funkcji kategorii: Jednostronicowe kodowanie dla funkcji niskiej kardynalności i jednostronicowe kodowanie dla funkcji kategorii wysoka Kardynalność.</span><span class="sxs-lookup"><span data-stu-id="f5de4-177">For categorical features: One-hot encoding for low cardinality features, and one-hot-hash encoding for high cardinality categorical features.</span></span>
 
-1. <span data-ttu-id="f1a36-178">Przekształcenia i kodowania</span><span class="sxs-lookup"><span data-stu-id="f1a36-178">Transformations and encodings</span></span>
+1. <span data-ttu-id="f5de4-178">Przekształcenia i kodowania</span><span class="sxs-lookup"><span data-stu-id="f5de4-178">Transformations and encodings</span></span>
 
-    <span data-ttu-id="f1a36-179">Funkcje tekstowe z bardzo niewielkiej liczbie unikatowych wartości przekształcone w kategorii funkcji.</span><span class="sxs-lookup"><span data-stu-id="f1a36-179">Text features with very few unique values transformed into categorical features.</span></span> <span data-ttu-id="f1a36-180">W zależności od kardynalności kategorii funkcji należy wykonać hot jeden kodowania lub hot jeden skrót kodowania.</span><span class="sxs-lookup"><span data-stu-id="f1a36-180">Depending on cardinality of categorical features, perform one-hot encoding or one-hot hash encoding.</span></span>
+    <span data-ttu-id="f5de4-179">Funkcje tekstowe z bardzo kilkoma unikatowymi wartościami przekształconymi na funkcje kategorii.</span><span class="sxs-lookup"><span data-stu-id="f5de4-179">Text features with very few unique values transformed into categorical features.</span></span> <span data-ttu-id="f5de4-180">W zależności od kardynalności funkcji kategorii należy wykonać jedno-gorąca lub jednostronicowe kodowanie skrótu.</span><span class="sxs-lookup"><span data-stu-id="f5de4-180">Depending on cardinality of categorical features, perform one-hot encoding or one-hot hash encoding.</span></span>
 
-## <a name="exit-criteria"></a><span data-ttu-id="f1a36-181">Kryteria wyjścia</span><span class="sxs-lookup"><span data-stu-id="f1a36-181">Exit criteria</span></span>
+## <a name="exit-criteria"></a><span data-ttu-id="f5de4-181">Kryteria wyjścia</span><span class="sxs-lookup"><span data-stu-id="f5de4-181">Exit criteria</span></span>
 
-<span data-ttu-id="f1a36-182">Określ kryteria do ukończenia zadania:</span><span class="sxs-lookup"><span data-stu-id="f1a36-182">Define the criteria to complete your task:</span></span>
+<span data-ttu-id="f5de4-182">Zdefiniuj kryteria, aby ukończyć zadanie:</span><span class="sxs-lookup"><span data-stu-id="f5de4-182">Define the criteria to complete your task:</span></span>
 
-1. <span data-ttu-id="f1a36-183">Zakończ po przez długi czas — przy użyciu `MaxExperimentTimeInSeconds` w ustawieniach eksperymentu można zdefiniować, jak długo w ciągu kilku sekund, które zadania powinny nadal działać.</span><span class="sxs-lookup"><span data-stu-id="f1a36-183">Exit after a length of time - Using `MaxExperimentTimeInSeconds` in your experiment settings you can define how long in seconds that an task should continue to run.</span></span>
+1. <span data-ttu-id="f5de4-183">Zakończ po upływie długiego czasu `MaxExperimentTimeInSeconds` w ustawieniach eksperymentu możesz określić, jak długo w sekundach ma być nadal wykonywane zadanie.</span><span class="sxs-lookup"><span data-stu-id="f5de4-183">Exit after a length of time - Using `MaxExperimentTimeInSeconds` in your experiment settings you can define how long in seconds that an task should continue to run.</span></span>
 
-1. <span data-ttu-id="f1a36-184">Zakończ token anulowania — mogą używać token anulowania, który pozwala anulować zadania, zanim jest zaplanowane na zakończenie.</span><span class="sxs-lookup"><span data-stu-id="f1a36-184">Exit on a cancellation token -  You can use a cancellation token that lets you cancel the task before it is scheduled to finish.</span></span>
+1. <span data-ttu-id="f5de4-184">Wyjście z tokenu anulowania — można użyć tokenu anulowania, który umożliwia anulowanie zadania przed jego zaplanowaniem.</span><span class="sxs-lookup"><span data-stu-id="f5de4-184">Exit on a cancellation token -  You can use a cancellation token that lets you cancel the task before it is scheduled to finish.</span></span>
 
     ```csharp
     var cts = new CancellationTokenSource();
@@ -160,48 +162,48 @@ using Microsoft.ML.AutoML;
     experimentSettings.CancellationToken = cts.Token;
     ```
 
-## <a name="create-an-experiment"></a><span data-ttu-id="f1a36-185">Tworzenie eksperymentu</span><span class="sxs-lookup"><span data-stu-id="f1a36-185">Create an experiment</span></span>
+## <a name="create-an-experiment"></a><span data-ttu-id="f5de4-185">Tworzenie eksperymentu</span><span class="sxs-lookup"><span data-stu-id="f5de4-185">Create an experiment</span></span>
 
-<span data-ttu-id="f1a36-186">Po skonfigurowaniu ustawień eksperymentu, możesz przystąpić do tworzenia eksperymentu.</span><span class="sxs-lookup"><span data-stu-id="f1a36-186">Once you have configured the experiment settings, you are ready to create the experiment.</span></span>
+<span data-ttu-id="f5de4-186">Po skonfigurowaniu ustawień eksperymentu możesz przystąpić do tworzenia eksperymentu.</span><span class="sxs-lookup"><span data-stu-id="f5de4-186">Once you have configured the experiment settings, you are ready to create the experiment.</span></span>
 
 ```csharp
 RegressionExperiment experiment = mlContext.Auto().CreateRegressionExperiment(experimentSettings);
 ```
 
-## <a name="run-the-experiment"></a><span data-ttu-id="f1a36-187">Uruchamianie eksperymentu</span><span class="sxs-lookup"><span data-stu-id="f1a36-187">Run the experiment</span></span>
+## <a name="run-the-experiment"></a><span data-ttu-id="f5de4-187">Uruchamianie eksperymentu</span><span class="sxs-lookup"><span data-stu-id="f5de4-187">Run the experiment</span></span>
 
-<span data-ttu-id="f1a36-188">Uruchamianie eksperymentu danych wyzwalaczy przetwarzania wstępnego, algorytm wybór i strojenia hiperparametrycznego uczenia.</span><span class="sxs-lookup"><span data-stu-id="f1a36-188">Running the experiment triggers data pre-processing, learning algorithm selection, and hyperparameter tuning.</span></span> <span data-ttu-id="f1a36-189">AutoML będą w dalszym ciągu kombinacji cechowania, algorytmów uczenia i hiperparametrów aż do wygenerowania `MaxExperimentTimeInSeconds` osiągnięciu lub eksperymentu zostanie zakończony.</span><span class="sxs-lookup"><span data-stu-id="f1a36-189">AutoML will continue to generate combinations of featurization, learning algorithms, and hyperparameters until the `MaxExperimentTimeInSeconds` is reached or the experiment is terminated.</span></span>
+<span data-ttu-id="f5de4-188">Uruchamianie eksperymentu wyzwala wstępne przetwarzanie danych, wybór algorytmu uczenia i dostrajanie parametrów.</span><span class="sxs-lookup"><span data-stu-id="f5de4-188">Running the experiment triggers data pre-processing, learning algorithm selection, and hyperparameter tuning.</span></span> <span data-ttu-id="f5de4-189">AutoML będzie nadal generować kombinacje algorytmów cechowania, uczenia i parametrów do momentu `MaxExperimentTimeInSeconds` osiągnięcia lub eksperymentu.</span><span class="sxs-lookup"><span data-stu-id="f5de4-189">AutoML will continue to generate combinations of featurization, learning algorithms, and hyperparameters until the `MaxExperimentTimeInSeconds` is reached or the experiment is terminated.</span></span>
 
 ```csharp
 ExperimentResult<RegressionMetrics> experimentResult = experiment
     .Execute(trainingDataView, LabelColumnName, progressHandler: progressHandler);
 ```
 
-<span data-ttu-id="f1a36-190">Poznaj inne przeciążenia `Execute()` jeśli mają być przekazywane sprawdzania poprawności danych, wskazując przeznaczenie kolumny lub prefeaturizers informacji o kolumnie.</span><span class="sxs-lookup"><span data-stu-id="f1a36-190">Explore other overloads for `Execute()` if you want to pass in validation data, column information indicating the column purpose, or prefeaturizers.</span></span>
+<span data-ttu-id="f5de4-190">Zapoznaj się z `Execute()` innymi przeciążeniami, jeśli chcesz przekazać dane sprawdzania poprawności, informacje o kolumnie wskazujące cel kolumny lub prefeaturizers.</span><span class="sxs-lookup"><span data-stu-id="f5de4-190">Explore other overloads for `Execute()` if you want to pass in validation data, column information indicating the column purpose, or prefeaturizers.</span></span>
 
-## <a name="training-modes"></a><span data-ttu-id="f1a36-191">Tryby szkolenia</span><span class="sxs-lookup"><span data-stu-id="f1a36-191">Training modes</span></span>
+## <a name="training-modes"></a><span data-ttu-id="f5de4-191">Tryby szkoleniowe</span><span class="sxs-lookup"><span data-stu-id="f5de4-191">Training modes</span></span>
 
-### <a name="training-dataset"></a><span data-ttu-id="f1a36-192">Zestaw danych szkoleniowych</span><span class="sxs-lookup"><span data-stu-id="f1a36-192">Training dataset</span></span>
+### <a name="training-dataset"></a><span data-ttu-id="f5de4-192">Zestaw danych szkoleniowych</span><span class="sxs-lookup"><span data-stu-id="f5de4-192">Training dataset</span></span>
 
-<span data-ttu-id="f1a36-193">AutoML zapewnia przeciążone eksperymentu Wykonaj metodę, która umożliwia przekazanie danych szkoleniowych.</span><span class="sxs-lookup"><span data-stu-id="f1a36-193">AutoML provides an overloaded experiment execute method which allows you to provide training data.</span></span> <span data-ttu-id="f1a36-194">Wewnętrznie zautomatyzowane ML dzieli dane na train-validate dzieli dane.</span><span class="sxs-lookup"><span data-stu-id="f1a36-194">Internally, automated ML divides the data into train-validate splits.</span></span>
+<span data-ttu-id="f5de4-193">AutoML zapewnia przeciążoną metodę wykonywania eksperymentu, która umożliwia dostarczanie danych szkoleniowych.</span><span class="sxs-lookup"><span data-stu-id="f5de4-193">AutoML provides an overloaded experiment execute method which allows you to provide training data.</span></span> <span data-ttu-id="f5de4-194">Wewnętrznie, zautomatyzowanej ML dzieli dane na pociąg-Validate Splits.</span><span class="sxs-lookup"><span data-stu-id="f5de4-194">Internally, automated ML divides the data into train-validate splits.</span></span>
 
 ```csharp
 experiment.Execute(trainDataView);   
 ```
 
-### <a name="custom-validation-dataset"></a><span data-ttu-id="f1a36-195">Zestaw niestandardowego sprawdzania poprawności danych</span><span class="sxs-lookup"><span data-stu-id="f1a36-195">Custom validation dataset</span></span>
+### <a name="custom-validation-dataset"></a><span data-ttu-id="f5de4-195">Zestaw niestandardowego sprawdzania poprawności danych</span><span class="sxs-lookup"><span data-stu-id="f5de4-195">Custom validation dataset</span></span>
 
-<span data-ttu-id="f1a36-196">Użyj zestawu niestandardowego sprawdzania poprawności danych, jeśli losowe podziału nie jest dopuszczalne, tak jak zwykle w przypadku przy użyciu danych szeregów czasowych.</span><span class="sxs-lookup"><span data-stu-id="f1a36-196">Use custom validation dataset if random split is not acceptable, as is usually the case with time series data.</span></span> <span data-ttu-id="f1a36-197">Można określić własnego zestawu danych walidacji.</span><span class="sxs-lookup"><span data-stu-id="f1a36-197">You can specify your own validation dataset.</span></span> <span data-ttu-id="f1a36-198">Model zostaną ocenione względem zestawu danych walidacji, zamiast jednego lub więcej losowych zestawów danych.</span><span class="sxs-lookup"><span data-stu-id="f1a36-198">The model will be evaluated against the validation dataset specified instead of one or more random datasets.</span></span>
+<span data-ttu-id="f5de4-196">Użyj niestandardowego zestawu danych walidacji, jeśli podział losowy nie jest akceptowalny, jak zwykle jest to przypadek z danymi szeregów czasowych.</span><span class="sxs-lookup"><span data-stu-id="f5de4-196">Use custom validation dataset if random split is not acceptable, as is usually the case with time series data.</span></span> <span data-ttu-id="f5de4-197">Można określić własnego zestawu danych walidacji.</span><span class="sxs-lookup"><span data-stu-id="f5de4-197">You can specify your own validation dataset.</span></span> <span data-ttu-id="f5de4-198">Model zostanie oceniony względem określonego zestawu danych walidacji, a nie do co najmniej jednego losowo ustawionego typu danych.</span><span class="sxs-lookup"><span data-stu-id="f5de4-198">The model will be evaluated against the validation dataset specified instead of one or more random datasets.</span></span>
 
 ```csharp
 experiment.Execute(trainDataView, validationDataView);   
 ```
 
-## <a name="explore-model-metrics"></a><span data-ttu-id="f1a36-199">Eksplorowanie metryk modelu</span><span class="sxs-lookup"><span data-stu-id="f1a36-199">Explore model metrics</span></span>
+## <a name="explore-model-metrics"></a><span data-ttu-id="f5de4-199">Eksplorowanie metryk modelu</span><span class="sxs-lookup"><span data-stu-id="f5de4-199">Explore model metrics</span></span>
 
-<span data-ttu-id="f1a36-200">Po każdej iteracji eksperymentu uczenia Maszynowego metryki odnoszące się do tego zadania są przechowywane.</span><span class="sxs-lookup"><span data-stu-id="f1a36-200">After each iteration of an ML experiment, metrics relating to that task are stored.</span></span>
+<span data-ttu-id="f5de4-200">Po każdej iteracji eksperymentu ML są przechowywane metryki dotyczące tego zadania.</span><span class="sxs-lookup"><span data-stu-id="f5de4-200">After each iteration of an ML experiment, metrics relating to that task are stored.</span></span>
 
-<span data-ttu-id="f1a36-201">Na przykład firma Microsoft jest dostępna metryki weryfikacji najlepszy przebieg:</span><span class="sxs-lookup"><span data-stu-id="f1a36-201">For example, we can access validation metrics from the best run:</span></span>
+<span data-ttu-id="f5de4-201">Można na przykład uzyskać dostęp do metryk walidacji z najlepszego przebiegu:</span><span class="sxs-lookup"><span data-stu-id="f5de4-201">For example, we can access validation metrics from the best run:</span></span>
 
 ```csharp
 RegressionMetrics metrics = experimentResult.BestRun.ValidationMetrics;
@@ -209,11 +211,12 @@ Console.WriteLine($"R-Squared: {metrics.RSquared:0.##}");
 Console.WriteLine($"Root Mean Squared Error: {metrics.RootMeanSquaredError:0.##}");
 ```
 
-<span data-ttu-id="f1a36-202">Poniżej wymieniono wszystkie dostępne metryki dla zadania uczenia Maszynowego:</span><span class="sxs-lookup"><span data-stu-id="f1a36-202">The following are all the available metrics per ML task:</span></span>
-* [<span data-ttu-id="f1a36-203">Klasyfikacja binarna metryki</span><span class="sxs-lookup"><span data-stu-id="f1a36-203">Binary classification metrics</span></span>](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
-* [<span data-ttu-id="f1a36-204">Metryki klasyfikacji wieloklasowej</span><span class="sxs-lookup"><span data-stu-id="f1a36-204">Multiclass classification metrics</span></span>](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
-* [<span data-ttu-id="f1a36-205">Metryki regresji</span><span class="sxs-lookup"><span data-stu-id="f1a36-205">Regression metrics</span></span>](xref:Microsoft.ML.AutoML.RegressionMetric)
+<span data-ttu-id="f5de4-202">Poniżej znajdują się wszystkie dostępne metryki na ML zadania:</span><span class="sxs-lookup"><span data-stu-id="f5de4-202">The following are all the available metrics per ML task:</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f1a36-206">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f1a36-206">See also</span></span>
+* [<span data-ttu-id="f5de4-203">Metryki klasyfikacji binarnej</span><span class="sxs-lookup"><span data-stu-id="f5de4-203">Binary classification metrics</span></span>](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
+* [<span data-ttu-id="f5de4-204">Metryki klasyfikacji wieloklasowej</span><span class="sxs-lookup"><span data-stu-id="f5de4-204">Multiclass classification metrics</span></span>](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
+* [<span data-ttu-id="f5de4-205">Metryki regresji</span><span class="sxs-lookup"><span data-stu-id="f5de4-205">Regression metrics</span></span>](xref:Microsoft.ML.AutoML.RegressionMetric)
 
-<span data-ttu-id="f1a36-207">Przykłady pełnego kodu i nie tylko można znaleźć [machinelearning-dotnet-samples](https://github.com/dotnet/machinelearning-samples/tree/master#automate-mlnet-models-generation-preview-state) repozytorium GitHub.</span><span class="sxs-lookup"><span data-stu-id="f1a36-207">For full code samples and more visit the [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master#automate-mlnet-models-generation-preview-state) GitHub repository.</span></span>
+## <a name="see-also"></a><span data-ttu-id="f5de4-206">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f5de4-206">See also</span></span>
+
+<span data-ttu-id="f5de4-207">Aby uzyskać pełne przykłady kodu i więcej informacji, odwiedź repozytorium [dotnet/machinelearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master#automate-mlnet-models-generation-preview-state) w witrynie GitHub.</span><span class="sxs-lookup"><span data-stu-id="f5de4-207">For full code samples and more visit the [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master#automate-mlnet-models-generation-preview-state) GitHub repository.</span></span>

@@ -1,12 +1,13 @@
 ---
-ms.openlocfilehash: ae81904cb5def0932c00a15505f8c43f8a97783d
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 45107e0754d6b13c92146201a97b2dd08d840df7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65199308"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927126"
 ---
-> [!div class="op_multi_selector" title1="From .NET Framework Version" title2="To .NET Framework Version"]
+> [!div class="op_multi_selector" title1="Z wersji .NET Framework" title2="Do .NET Framework wersji"]
+>
 > - [(4.0 | 4.5)](~/docs/framework/migration-guide/runtime/4.0-4.5.md)
 > - [(4.0 | 4.5.1)](~/docs/framework/migration-guide/runtime/4.0-4.5.1.md)
 > - [(4.0 | 4.5.2)](~/docs/framework/migration-guide/runtime/4.0-4.5.2.md)
@@ -16,16 +17,16 @@ ms.locfileid: "65199308"
 > - [(4.0 | 4.7)](~/docs/framework/migration-guide/runtime/4.0-4.7.md)
 > - [(4.0 | 4.7.1)](~/docs/framework/migration-guide/runtime/4.0-4.7.1.md)
 > - [(4.0 | 4.7.2)](~/docs/framework/migration-guide/runtime/4.0-4.7.2.md)
-> - [(4.0 | 4.8)](~/docs/framework/migration-guide/runtime/4.0-4.8.md)
+> - [(4,0 | 4,8)](~/docs/framework/migration-guide/runtime/4.0-4.8.md)
 > - [(4.5 | 4.5.1)](~/docs/framework/migration-guide/runtime/4.5-4.5.1.md)
 > - [(4.5 | 4.5.2)](~/docs/framework/migration-guide/runtime/4.5-4.5.2.md)
-> - [(4.5 | 4.6)](~/docs/framework/migration-guide/runtime/4.5-4.6.md)
+> - [(4,5 | 4,6)](~/docs/framework/migration-guide/runtime/4.5-4.6.md)
 > - [(4.5 | 4.6.1)](~/docs/framework/migration-guide/runtime/4.5-4.6.1.md)
 > - [(4.5 | 4.6.2)](~/docs/framework/migration-guide/runtime/4.5-4.6.2.md)
 > - [(4.5 | 4.7)](~/docs/framework/migration-guide/runtime/4.5-4.7.md)
 > - [(4.5 | 4.7.1)](~/docs/framework/migration-guide/runtime/4.5-4.7.1.md)
 > - [(4.5 | 4.7.2)](~/docs/framework/migration-guide/runtime/4.5-4.7.2.md)
-> - [(4.5 | 4.8)](~/docs/framework/migration-guide/runtime/4.5-4.8.md)
+> - [(4,5 | 4,8)](~/docs/framework/migration-guide/runtime/4.5-4.8.md)
 > - [(4.5.1 | 4.5.2)](~/docs/framework/migration-guide/runtime/4.5.1-4.5.2.md)
 > - [(4.5.1 | 4.6)](~/docs/framework/migration-guide/runtime/4.5.1-4.6.md)
 > - [(4.5.1 | 4.6.1)](~/docs/framework/migration-guide/runtime/4.5.1-4.6.1.md)
@@ -46,7 +47,7 @@ ms.locfileid: "65199308"
 > - [(4.6 | 4.7)](~/docs/framework/migration-guide/runtime/4.6-4.7.md)
 > - [(4.6 | 4.7.1)](~/docs/framework/migration-guide/runtime/4.6-4.7.1.md)
 > - [(4.6 | 4.7.2)](~/docs/framework/migration-guide/runtime/4.6-4.7.2.md)
-> - [(4.6 | 4.8)](~/docs/framework/migration-guide/runtime/4.6-4.8.md)
+> - [(4,6 | 4,8)](~/docs/framework/migration-guide/runtime/4.6-4.8.md)
 > - [(4.6.1 | 4.6.2)](~/docs/framework/migration-guide/runtime/4.6.1-4.6.2.md)
 > - [(4.6.1 | 4.7)](~/docs/framework/migration-guide/runtime/4.6.1-4.7.md)
 > - [(4.6.1 | 4.7.1)](~/docs/framework/migration-guide/runtime/4.6.1-4.7.1.md)
@@ -58,7 +59,7 @@ ms.locfileid: "65199308"
 > - [(4.6.2 | 4.8)](~/docs/framework/migration-guide/runtime/4.6.2-4.8.md)
 > - [(4.7 | 4.7.1)](~/docs/framework/migration-guide/runtime/4.7-4.7.1.md)
 > - [(4.7 | 4.7.2)](~/docs/framework/migration-guide/runtime/4.7-4.7.2.md)
-> - [(4.7 | 4.8)](~/docs/framework/migration-guide/runtime/4.7-4.8.md)
+> - [(4,7 | 4,8)](~/docs/framework/migration-guide/runtime/4.7-4.8.md)
 > - [(4.7.1 | 4.7.2)](~/docs/framework/migration-guide/runtime/4.7.1-4.7.2.md)
 > - [(4.7.1 | 4.8)](~/docs/framework/migration-guide/runtime/4.7.1-4.8.md)
 > - [(4.7.2 | 4.8)](~/docs/framework/migration-guide/runtime/4.7.2-4.8.md)

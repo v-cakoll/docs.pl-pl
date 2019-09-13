@@ -3,12 +3,12 @@ title: Korzystanie z funkcji dopasowania wzorców w celu poszerzenia typów dany
 description: W tym zaawansowanym samouczku pokazano, jak używać technik dopasowywania wzorców do tworzenia funkcji przy użyciu danych i algorytmów, które są tworzone osobno.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: b142bad9a4058a884d9e511424bc50856152b67e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 366791b113d3b1f9ccef303553a3656f7e803a32
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105567"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926652"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Samouczek: Używanie funkcji dopasowywania wzorców do zwiększania typów danych
 
@@ -17,13 +17,14 @@ C#7 wprowadzono podstawowe funkcje dopasowania do wzorca. Te funkcje są rozszer
 W tym samouczku dowiesz się, jak:
 
 > [!div class="checklist"]
+>
 > - Rozpoznaj sytuacje, w których należy użyć dopasowania do wzorca.
 > - Używaj wyrażeń dopasowania wzorców, aby zaimplementować zachowanie na podstawie typów i wartości właściwości.
 > - Połącz dopasowania wzorców z innymi technikami, aby utworzyć kompletne algorytmy.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Musisz skonfigurować maszynę do uruchamiania programu .NET Core, w tym kompilatora 8,0 w C# wersji zapoznawczej. C# 8 — kompilator wersji zapoznawczej jest dostępny z najnowszą wersją [programu Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)lub najnowszą wersją zapoznawczą [programu .NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+Musisz skonfigurować maszynę do uruchamiania programu .NET Core, w tym kompilatora 8,0 w C# wersji zapoznawczej. C# 8 — kompilator wersji zapoznawczej jest dostępny z najnowszą wersją [programu Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)lub najnowszą wersją [zapoznawczą programu .NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
 W C# tym samouczku założono, że wiesz już, jak i .NET, w tym Visual Studio lub interfejs wiersza polecenia platformy .NET Core.
 
@@ -87,7 +88,7 @@ namespace toll_calculator
 }
 ```
 
-Poprzedni kod używa **wyrażenia Switch** (nie takiego samego jak [`switch`](../language-reference/keywords/switch.md) instrukcja), które sprawdza **wzorzec typu**. **Wyrażenie Switch** zaczyna się od zmiennej, `vehicle` w poprzednim kodzie `switch` , po słowie kluczowym. Następnie wszystkie ramiona **przełączania** są umieszczone w nawiasach klamrowych. Wyrażenie wprowadza inne udoskonalenia do składni otaczającej `switch` instrukcję. `switch` `case` Słowo kluczowe jest pomijane, a wynik każdego ARM jest wyrażeniem. Ostatnie dwie poręcze zawierają nową funkcję języka. `{ }` Przypadek dopasowuje dowolny obiekt o wartości innej niż null, który nie jest zgodny z wcześniejszą ARM. Ten ARM przechwytuje wszystkie nieprawidłowe typy przesłane do tej metody.  `{ }` Przypadek musi być zgodny z przypadkami dla każdego typu pojazdu. Jeśli zamówienie zostało cofnięte, `{ }` pierwszeństwo ma. Na `null` koniec wzorzec wykrywa, `null` kiedy jest przenoszona do tej metody. `null` Wzorzec może być ostatni, ponieważ wzorce innych typów pasują tylko do niezerowego obiektu o poprawnym typie.
+Poprzedni kod używa **wyrażenia Switch** (nie takiego samego jak [`switch`](../language-reference/keywords/switch.md) instrukcja), które sprawdza **wzorzec typu**. **Wyrażenie Switch** zaczyna się od zmiennej, `vehicle` w poprzednim kodzie `switch` , po słowie kluczowym. Następnie wszystkie **ramiona przełączania** są umieszczone w nawiasach klamrowych. Wyrażenie wprowadza inne udoskonalenia do składni otaczającej `switch` instrukcję. `switch` `case` Słowo kluczowe jest pomijane, a wynik każdego ARM jest wyrażeniem. Ostatnie dwie poręcze zawierają nową funkcję języka. `{ }` Przypadek dopasowuje dowolny obiekt o wartości innej niż null, który nie jest zgodny z wcześniejszą ARM. Ten ARM przechwytuje wszystkie nieprawidłowe typy przesłane do tej metody.  `{ }` Przypadek musi być zgodny z przypadkami dla każdego typu pojazdu. Jeśli zamówienie zostało cofnięte, `{ }` pierwszeństwo ma. Na `null` koniec wzorzec wykrywa, `null` kiedy jest przenoszona do tej metody. `null` Wzorzec może być ostatni, ponieważ wzorce innych typów pasują tylko do niezerowego obiektu o poprawnym typie.
 
 Możesz przetestować ten kod przy użyciu następującego kodu w `Program.cs`:
 
@@ -295,22 +296,22 @@ W poniższej tabeli przedstawiono kombinacje wartości wejściowych i mnożnik c
 
 | Dzień        | Godzina         | Kierunek | Premium |
 | ---------- | ------------ | --------- |--------:|
-| Dzień tygodnia    | rano szczytu | dotycząc   | x 2,00  |
-| Dzień tygodnia    | rano szczytu | wyjściowy  | x 1,00  |
-| Dzień tygodnia    | telefonu      | dotycząc   | x 1,50  |
-| Dzień tygodnia    | telefonu      | wyjściowy  | x 1,50  |
-| Dzień tygodnia    | szczytu wieczór | dotycząc   | x 1,00  |
-| Dzień tygodnia    | szczytu wieczór | wyjściowy  | x 2,00  |
-| Dzień tygodnia    | Przelewy    | dotycząc   | x 0,75  |
-| Dzień tygodnia    | Przelewy    | wyjściowy  | x 0,75  |
-| Weekend    | rano szczytu | dotycząc   | x 1,00  |
-| Weekend    | rano szczytu | wyjściowy  | x 1,00  |
-| Weekend    | telefonu      | dotycząc   | x 1,00  |
-| Weekend    | telefonu      | wyjściowy  | x 1,00  |
-| Weekend    | szczytu wieczór | dotycząc   | x 1,00  |
-| Weekend    | szczytu wieczór | wyjściowy  | x 1,00  |
-| Weekend    | Przelewy    | dotycząc   | x 1,00  |
-| Weekend    | Przelewy    | wyjściowy  | x 1,00  |
+| Dzień tygodnia    | rano szczytu | Dotycząc   | x 2,00  |
+| Dzień tygodnia    | rano szczytu | Wyjściowy  | x 1,00  |
+| Dzień tygodnia    | telefonu      | Dotycząc   | x 1,50  |
+| Dzień tygodnia    | telefonu      | Wyjściowy  | x 1,50  |
+| Dzień tygodnia    | szczytu wieczór | Dotycząc   | x 1,00  |
+| Dzień tygodnia    | szczytu wieczór | Wyjściowy  | x 2,00  |
+| Dzień tygodnia    | Przelewy    | Dotycząc   | x 0,75  |
+| Dzień tygodnia    | Przelewy    | Wyjściowy  | x 0,75  |
+| Weekend    | rano szczytu | Dotycząc   | x 1,00  |
+| Weekend    | rano szczytu | Wyjściowy  | x 1,00  |
+| Weekend    | telefonu      | Dotycząc   | x 1,00  |
+| Weekend    | telefonu      | Wyjściowy  | x 1,00  |
+| Weekend    | szczytu wieczór | Dotycząc   | x 1,00  |
+| Weekend    | szczytu wieczór | Wyjściowy  | x 1,00  |
+| Weekend    | Przelewy    | Dotycząc   | x 1,00  |
+| Weekend    | Przelewy    | Wyjściowy  | x 1,00  |
 
 Istnieją 16 różnych kombinacji trzech zmiennych. Łącząc niektóre warunki, można uprościć ostateczne wyrażenie Switch.
 
@@ -340,7 +341,7 @@ Następnie Dodaj podobną funkcję, aby przydzielić czas do bloków:
 
 Poprzednia metoda nie używa dopasowania do wzorca. Jest to wyraźniejsze użycie dobrze znanego `if` zestawienia instrukcji. Dodaj prywatny `enum` , aby przekonwertować każdy zakres czasu na wartość dyskretną.
 
-Po utworzeniu tych metod można użyć innego `switch` wyrażenia z wzorcem **spójności** , aby obliczyć cenę Premium. Można utworzyć `switch` wyrażenie ze wszystkimi 16 bronią:
+Po utworzeniu tych metod można użyć innego `switch` wyrażenia z **wzorcem spójności** , aby obliczyć cenę Premium. Można utworzyć `switch` wyrażenie ze wszystkimi 16 bronią:
 
 [!code-csharp[FullTuplePattern](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
 

@@ -189,11 +189,7 @@
         - name: Co nowego w programie .NET Core 2.0
           href: core/whats-new/dotnet-core-2-0.md
     - name: Zgodność aplikacji
-      items:
-        - name: Ocenianie zmian powodujących niezgodność
-          href: core/compatibility/index.md
-        - name: Kategorie zmian powodujących niezgodność
-          href: core/compatibility/categories.md
+      href: core/compatibility/
     - name: Samouczki
       href: core/tutorials/index.md
       items:

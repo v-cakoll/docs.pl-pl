@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 64ffd57d8c0bce1d9f409adebd169b4fd3e17e06
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 9ba6c46116d809e2881eee37b080e1952e2eb6a0
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796857"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895270"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Podstawowe informacje dotyczące wyrzucania elementów bezużytecznych
 
@@ -97,7 +97,7 @@ Po wyzwoleniu wyrzucania elementów bezużytecznych moduł zbierający elementy 
 
 Nietrwałość (częstotliwość i czas trwania) wyrzucania elementów bezużytecznych to wynik ilości alokacji i ilości pamięci przeprowadzonej w zarządzanym stosie.
 
-Sterta może być traktowana jako akumulacja dwóch stert: sterty [dużych obiektów](large-object-heap.md) i sterty małego obiektu.
+Sterta może być traktowana jako akumulacja dwóch stert: [sterty dużych obiektów](large-object-heap.md) i sterty małego obiektu.
 
 [Sterta dużego obiektu](large-object-heap.md) zawiera bardzo duże obiekty, które są 85 000 bajtów i większych. Obiekty na stosie dużego obiektu są zazwyczaj tablicami. Wystąpienie obiektu wystąpienia jest rzadkim zdarzeniem bardzo duże.
 
@@ -168,7 +168,7 @@ Moduł wyrzucania elementów bezużytecznych używa następujących informacji, 
 
 - Elementy **Główne stosu**. Zmienne stosu udostępniane przez kompilator just-in-Time (JIT) i Analizator stosu. Należy zauważyć, że optymalizacje JIT mogą wydłużać lub skracać regiony kodu, w których zmienne stosu są zgłaszane do modułu wyrzucania elementów bezużytecznych.
 
-- **Dojść**do wyrzucania elementów bezużytecznych. Obsługuje obiekty zarządzane, które mogą być przydzielone przez kod użytkownika lub przez środowisko uruchomieniowe języka wspólnego.
+- **Dojść do wyrzucania elementów bezużytecznych**. Obsługuje obiekty zarządzane, które mogą być przydzielone przez kod użytkownika lub przez środowisko uruchomieniowe języka wspólnego.
 
 - **Dane statyczne**. Obiekty statyczne w domenach aplikacji, które mogą odwoływać się do innych obiektów. Każda domena aplikacji śledzi swoje obiekty statyczne.
 
@@ -270,7 +270,7 @@ Na poniższej ilustracji przedstawiono współbieżne wyrzucanie elementów bezu
 
 ## <a name="background-workstation-garbage-collection"></a>Wyrzucanie elementów bezużytecznych stacji roboczej
 
-W wyrzucaniu elementów bezużytecznych w tle generacje tymczasowe (0 i 1) są zbierane zgodnie z wymaganiami, gdy trwa zbieranie danych generacji 2. Brak ustawień dla wyrzucania elementów bezużytecznych w tle; jest ona automatycznie włączona z współbieżnym wyrzucaniem elementów bezużytecznych. Wyrzucanie elementów bezużytecznych w tle zastępuje współbieżne odzyskiwanie pamięci. Podobnie jak w przypadku równoczesnego wyrzucania elementów bezużytecznych, wyrzucanie elementów bezużytecznych w tle jest wykonywane w dedykowanym wątku i ma zastosowanie tylko do kolekcji
+Wyrzucanie elementów bezużytecznych w tle zastępuje współbieżne wyrzucanie elementów bezużytecznych stacji roboczej, rozpoczynając od .NET Framework 4 i zastępuje współbieżne wyrzucanie elementów bez4,5 .NET Framework użytecznych serwera  W wyrzucaniu elementów bezużytecznych w tle generacje tymczasowe (0 i 1) są zbierane zgodnie z wymaganiami, gdy trwa zbieranie danych generacji 2. Jest wykonywane w ramach dedykowanego wątku i ma zastosowanie tylko do kolekcji generacji 2. Automatyczne wyrzucanie elementów bezużytecznych w tle jest domyślnie włączone i można je włączyć [ \<](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) lub wyłączyć za pomocą ustawienia konfiguracji > gcConcurrent w aplikacjach .NET Framework. 
 
 > [!NOTE]
 > Wyrzucanie elementów bezużytecznych w tle jest dostępne tylko w .NET Framework 4 i nowszych wersjach. W .NET Framework 4 jest obsługiwana tylko w przypadku wyrzucania elementów bezużytecznych stacji roboczej. Począwszy od .NET Framework 4,5, wyrzucanie elementów bezużytecznych w tle jest dostępne zarówno dla stacji roboczej, jak i serwera.

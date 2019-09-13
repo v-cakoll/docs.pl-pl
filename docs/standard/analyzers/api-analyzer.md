@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2d97921a3e98d85ac1e58c7686eadef3e979211f
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 584f9f952148ebf72c5d5aaed64a2a078be00ce5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107372"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929351"
 ---
 # <a name="net-api-analyzer"></a>Analizator interfejsów API platformy .NET
 
@@ -30,6 +30,7 @@ Analizator interfejsu API jest dostarczany jako pakiet NuGet [Microsoft. dotnet.
 ### <a name="what-are-deprecated-apis"></a>Co to są przestarzałe interfejsy API?
 
 Rodzina .NET to zestaw dużych produktów, które są stale uaktualniane, aby lepiej spełniały potrzeby klientów. Jest to naturalne, aby zastąpić niektóre interfejsy API i zamienić je na nowe. Interfejs API jest uznawany za przestarzały, gdy istnieje lepsza alternatywa. Jednym ze sposobów, aby poinformować, że interfejs API jest przestarzały i nie powinien być używany, to <xref:System.ObsoleteAttribute> Oznacz go atrybutem. Wadą tego podejścia jest to, że istnieje tylko jeden identyfikator diagnostyczny dla wszystkich przestarzałych interfejsów API C#(dla, [CS0612](../../csharp/misc/cs0612.md)). Oznacza to, że:
+
 - Nie jest możliwe posiadanie dedykowanych dokumentów dla każdego przypadku.
 - Nie można pominąć pewnej kategorii ostrzeżeń. Możesz pominąć wszystkie lub żadne z nich.
 - Aby poinformować użytkowników o nowym zaniechaniu, należy zaktualizować zestaw lub pakiet docelowy, do którego istnieje odwołanie.
@@ -55,11 +56,11 @@ Wszystkie ostrzeżenia można pominąć przez kliknięcie prawym przyciskiem mys
 
 ### <a name="suppressing-warnings-locally"></a>Pomijanie ostrzeżeń lokalnie
 
-Aby pominąć ostrzeżenia lokalnie, kliknij prawym przyciskiem myszy element członkowski, dla którego chcesz pominąć ostrzeżenia, a następnie wybierz polecenie **szybkie akcje i refaktoryzacje** > **Pomijaj *Identyfikator*\<** diagnostyczny identyfikator diagnostyczny > >   **w źródle**. Dyrektywa preprocesora ostrzeżeń [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) jest dodawana do kodu źródłowego w zdefiniowanym zakresie: !["Zrzut ekranu kodu z ramką #pragma Wyłącz ostrzeżenie"](media/api-analyzer/suppress-in-source.jpg)
+Aby pominąć ostrzeżenia lokalnie, kliknij prawym przyciskiem myszy element członkowski, dla którego chcesz pominąć ostrzeżenia, a następnie wybierz polecenie **szybkie akcje i refaktoryzacje** >  >  **Pomijaj *Identyfikator*\<diagnostyczny identyfikator diagnostyczny >**  **w źródle**. Dyrektywa preprocesora ostrzeżeń [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) jest dodawana do kodu źródłowego w zdefiniowanym zakresie: !["Zrzut ekranu kodu z ramką #pragma Wyłącz ostrzeżenie"](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppressing-warnings-globally"></a>Pomijanie ostrzeżeń globalnie
 
-Aby pominąć ostrzeżenia globalnie, kliknij prawym przyciskiem myszy element członkowski, dla którego chcesz pominąć ostrzeżenia, a następnie wybierz polecenie **szybkie akcje i refaktoryzacje** >  >  **Pomiń *Identyfikator*\<** diagnostyczny identyfikator diagnostyczny > **w pliku**pominięć.
+Aby pominąć ostrzeżenia globalnie, kliknij prawym przyciskiem myszy element członkowski, dla którego chcesz pominąć ostrzeżenia, a następnie wybierz polecenie **szybkie akcje i refaktoryzacje** >  >  **Pomiń *Identyfikator*\<diagnostyczny identyfikator diagnostyczny >** **w pliku**pominięć.
 
 !["Zrzut ekranu interfejsu API WebClient z zieloną falistej linią i żarówką po lewej stronie"](media/api-analyzer/suppress-in-sup-file.jpg)
 
@@ -107,7 +108,7 @@ Wszystkie te diagnostyki są dostępne nie tylko w środowisku IDE, ale równie�
 
 ## <a name="configuration"></a>Konfiguracja
 
-Użytkownik decyduje o sposobie traktowania diagnostyki: w postaci ostrzeżeń, błędów, sugestii lub wyłączania. Na przykład jako architekt można zdecydować, że problemy ze zgodnością powinny być traktowane jako błędy, wywołania niektórych przestarzałych interfejsów API generują ostrzeżenia, podczas gdy inne tylko generują sugestie. Można ją skonfigurować osobno według identyfikatora diagnostyki i projektu. W tym celu w **Eksplorator rozwiązań**przejdź do węzła **zależności** w ramach projektu. Rozwiń węzeł > **analizatory** >  **zależności**węzłów**Microsoft. dotnet. analizatory. zgodność**. Kliknij prawym przyciskiem myszy identyfikator diagnostyczny, wybierz pozycję **Ustaw ważność zestawu reguł** i wybierz żądaną opcję.
+Użytkownik decyduje o sposobie traktowania diagnostyki: w postaci ostrzeżeń, błędów, sugestii lub wyłączania. Na przykład jako architekt można zdecydować, że problemy ze zgodnością powinny być traktowane jako błędy, wywołania niektórych przestarzałych interfejsów API generują ostrzeżenia, podczas gdy inne tylko generują sugestie. Można ją skonfigurować osobno według identyfikatora diagnostyki i projektu. W tym celu w **Eksplorator rozwiązań**przejdź do węzła **zależności** w ramach projektu. Rozwiń węzeł**analizatory** >  > zależności węzłów**Microsoft. dotnet. analizatory. zgodność**. Kliknij prawym przyciskiem myszy identyfikator diagnostyczny, wybierz pozycję **Ustaw ważność zestawu reguł** i wybierz żądaną opcję.
 
 !["Zrzut ekranu przedstawiający Eksplorator rozwiązań pokazujący diagnostykę i wyskakujące okno dialogowe z ważnością zestawu reguł"](media/api-analyzer/disable-notifications.jpg)
 

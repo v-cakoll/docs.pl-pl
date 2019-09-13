@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
-ms.openlocfilehash: 106f1cedb33c0c1b333df0b9f2b8c2a70d458a0d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f8d99213a1ef98c48855ba9f561f87a800768c89
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790425"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894301"
 ---
 # <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>Instrukcje: Generuj ręcznie klasy usługi danych klienta (Usługi danych programu WCF)
 Usługi danych programu WCF integruje się z programem Visual Studio, aby umożliwić automatyczne generowanie klas usługi danych klienta w przypadku używania okna dialogowego **Dodaj odwołanie do usługi** do dodawania odwołania do usługi danych w projekcie programu Visual Studio. Aby uzyskać więcej informacji, zobacz [jak: Dodaj odwołanie](how-to-add-a-data-service-reference-wcf-data-services.md)do usługi danych. Można również ręcznie generować te same klasy usługi danych klienta przy użyciu narzędzia `DataSvcUtil.exe`do generowania kodu. To narzędzie, które jest dołączone do Usługi danych programu WCF, generuje klasy .NET Framework z definicji usługi danych. Można go również użyć do wygenerowania klas usługi danych z pliku modelu koncepcyjnego (. csdl) i pliku edmx, który reprezentuje model Entity Framework w projekcie programu Visual Studio.
@@ -43,7 +43,7 @@ Usługi danych programu WCF integruje się z programem Visual Studio, aby umożl
 
 - W wierszu polecenia wykonaj następujące polecenie bez podziałów wierszy:
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /language:CSharp /out:northwind.cs /uri:http://localhost:12345/Northwind.svc
     ```
 
@@ -54,7 +54,7 @@ Usługi danych programu WCF integruje się z programem Visual Studio, aby umożl
 
 - W wierszu polecenia wykonaj następujące polecenie bez podziałów wierszy:
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc
     ```
 
@@ -65,7 +65,7 @@ Usługi danych programu WCF integruje się z programem Visual Studio, aby umożl
 
 - W wierszu polecenia wykonaj następujące polecenie bez podziałów wierszy:
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.csdl /out:Northwind.cs
     ```
 
@@ -73,7 +73,7 @@ Usługi danych programu WCF integruje się z programem Visual Studio, aby umożl
 
 - W wierszu polecenia wykonaj następujące polecenie bez podziałów wierszy:
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.csdl /out:Northwind.vb
     ```
 
@@ -81,7 +81,7 @@ Usługi danych programu WCF integruje się z programem Visual Studio, aby umożl
 
 - W wierszu polecenia wykonaj następujące polecenie bez podziałów wierszy:
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.edmx /out:c:\northwind.cs
     ```
 
@@ -89,7 +89,7 @@ Usługi danych programu WCF integruje się z programem Visual Studio, aby umożl
 
 - W wierszu polecenia wykonaj następujące polecenie bez podziałów wierszy:
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.edmx /out:c:\northwind.vb
     ```
 

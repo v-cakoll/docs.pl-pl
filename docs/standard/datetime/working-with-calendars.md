@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e92d5564308d31609b9fb024f3d3368a19b76b1d
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: dafa7cdaa38180e458a34fd34316f134aa443040
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106697"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929130"
 ---
 # <a name="working-with-calendars"></a>Praca z kalendarzami
 
@@ -139,6 +139,7 @@ Daty w kalendarzach są zazwyczaj dzielone na ery. Jednak klasy w programie .NET
 
 > [!IMPORTANT]
 > Reiwa ERA, nowe ERA w <xref:System.Globalization.JapaneseCalendar> i <xref:System.Globalization.JapaneseLunisolarCalendar>, rozpocznie się od 1 maja 2019. Ta zmiana ma wpływ na wszystkie aplikacje korzystające z tych kalendarzy. Aby uzyskać więcej informacji, zobacz następujące artykuły:
+>
 > - [Obsługa nowej ERA w kalendarzu japońskim w programie .NET](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/), które dokumenty zostały dodane do platformy .NET, aby obsługiwać kalendarze z wieloma wymazywanymi i omawiać najlepsze rozwiązania w zakresie obsługi kalendarzy wieloletnich.
 > - [Przygotuj aplikację dla japońskiej zmiany ery](/windows/uwp/design/globalizing/japanese-era-change), która zawiera informacje dotyczące testowania aplikacji w systemie Windows w celu zapewnienia ich gotowości do zmiany ERA.
 > - [Podsumowanie nowych, japońskich aktualizacji ery dla .NET Framework](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework), które zawierają informacje o .NET Framework aktualizacjach dla poszczególnych wersji systemu Windows, które są powiązane z nowym kalendarzem japońskim — ERA, nowe funkcje .NET Framework do obsługi wieloetapowej oceny, a także zawiera elementy do Poszukaj w temacie Testowanie aplikacji.

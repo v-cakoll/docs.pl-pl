@@ -4,20 +4,20 @@ description: Słownik ważnych warunków uczenia maszynowego, które są przydat
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: 1c979d2c4567285146ab87f359116efb506815a1
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 4d4bb80c6582facbcb11664309fde230bcfa4e7b
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710540"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929264"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Słownik uczenia maszynowego ważnych warunków
 
 Poniższa lista zawiera kompilację ważnych warunków uczenia maszynowego, które są przydatne podczas tworzenia niestandardowych modeli w programie ML.NET.
 
-## <a name="accuracy"></a>Odpowiedni
+## <a name="accuracy"></a>odpowiedni
 
-W [klasyfikacji](#classification)dokładność jest liczbą poprawnie sklasyfikowanych elementów podzielona przez łączną liczbę elementów w zestawie testów. Zakresy od 0 (najmniej dokładne) do 1 (najdokładniejsze). Dokładność jest jedną z metryk oceny wydajności modelu. Należy wziąć pod uwagę w [](#precision)połączeniu z dokładnością, [odwołaniem](#recall)i [wynikiem](#f-score).
+W [klasyfikacji](#classification)dokładność jest liczbą poprawnie sklasyfikowanych elementów podzielona przez łączną liczbę elementów w zestawie testów. Zakresy od 0 (najmniej dokładne) do 1 (najdokładniejsze). Dokładność jest jedną z metryk oceny wydajności modelu. Należy wziąć pod uwagę w połączeniu z [dokładnością](#precision), [odwołaniem](#recall)i [wynikiem](#f-score).
 
 ## <a name="area-under-the-curve-auc"></a>Obszar pod krzywą (AUC)
 
@@ -39,7 +39,7 @@ Na przykład każde zadanie uczenia maszynowego (klasyfikacja binarna, regresja,
 
 ## <a name="classification"></a>Klasyfikacja
 
-Gdy dane są używane do przewidywania kategorii, zadanie [uczenia maszynowego](#supervised-machine-learning) jest nazywane klasyfikacją. [Klasyfikacja binarna](#binary-classification) odnosi się do przewidywania tylko dwóch kategorii (na przykład klasyfikowanie obrazu jako obrazu "Cat" lub "Dog"). [Klasyfikacja](#multiclass-classification) wieloklasowa odnosi się do przewidywania wielu kategorii (na przykład podczas klasyfikowania obrazu jako obrazu konkretnej rasy Dog).
+Gdy dane są używane do przewidywania kategorii, zadanie [uczenia maszynowego](#supervised-machine-learning) jest nazywane klasyfikacją. [Klasyfikacja binarna](#binary-classification) odnosi się do przewidywania tylko dwóch kategorii (na przykład klasyfikowanie obrazu jako obrazu "Cat" lub "Dog"). [Klasyfikacja wieloklasowa](#multiclass-classification) odnosi się do przewidywania wielu kategorii (na przykład podczas klasyfikowania obrazu jako obrazu konkretnej rasy Dog).
 
 ## <a name="coefficient-of-determination"></a>Współczynnik wyznaczania
 
@@ -48,6 +48,7 @@ W [regresji](#regression)Metryka oceny, która wskazuje, jak dobre dane pasują 
 ## <a name="data"></a>Dane
 
 Dane są centralne dla każdej aplikacji uczenia maszynowego. W danych ml.NET są reprezentowane przez <xref:Microsoft.ML.IDataView> obiekty. Obiekty widoku danych:
+
 - składają się z kolumn i wierszy
 - Czy opóźnieniem są oceniane, czyli ładują dane tylko wtedy, gdy operacja wywołuje ją.
 - zawiera schemat definiujący typ, format i długość każdej kolumny.
@@ -78,7 +79,7 @@ W obszarze [Klasyfikacja](#classification)Metryka oceny, która równoważy [pre
 
 ## <a name="hyperparameter"></a>Hiperparametrycznego
 
-Parametr algorytmu uczenia maszynowego. Przykłady obejmują liczbę drzew do nauczenia się w lesie decyzyjnym lub rozmiar kroku w algorytmie pochodzenie gradientu. Wartości *parametrów moje parametry* są ustawiane przed szkoleniem modelu i określają proces znajdowania parametrów funkcji przewidywania, na przykład punkty porównania w drzewie decyzyjnym lub wagi w modelu regresji liniowej. Aby uzyskać więcej informacji, zobacz [](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)) artykuł z parametrem w witrynie Wikipedia.
+Parametr algorytmu uczenia maszynowego. Przykłady obejmują liczbę drzew do nauczenia się w lesie decyzyjnym lub rozmiar kroku w algorytmie pochodzenie gradientu. Wartości *parametrów moje parametry* są ustawiane przed szkoleniem modelu i określają proces znajdowania parametrów funkcji przewidywania, na przykład punkty porównania w drzewie decyzyjnym lub wagi w modelu regresji liniowej. Aby uzyskać więcej informacji, zobacz artykuł z [parametrem](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)) w witrynie Wikipedia.
 
 ## <a name="label"></a>Etykieta
 
@@ -104,7 +105,7 @@ Tradycyjnie parametry funkcji przewidywania. Na przykład wagi w modelu regresji
 
 ## <a name="multiclass-classification"></a>Klasyfikacja wieloklasowa
 
-Przypadek [klasyfikacji](#classification) , gdzie [etykieta](#label) jest jedną z trzech lub więcej klas. Aby uzyskać więcej informacji, zobacz sekcję [klasyfikacji](tasks.md#multiclass-classification) wieloklasowego tematu [zadań uczenia maszynowego](tasks.md) .
+Przypadek [klasyfikacji](#classification) , gdzie [etykieta](#label) jest jedną z trzech lub więcej klas. Aby uzyskać więcej informacji, zobacz sekcję [klasyfikacji wieloklasowego](tasks.md#multiclass-classification) tematu [zadań uczenia maszynowego](tasks.md) .
 
 ## <a name="n-gram"></a>N-gram
 
@@ -139,7 +140,7 @@ W [klasyfikacji](#classification)odwołanie dla klasy jest liczbą elementów pr
 
 ## <a name="regression"></a>Regresji
 
-[Nadzorowane](#supervised-machine-learning) zadanie uczenia maszynowego, gdzie wyjście jest wartością rzeczywistą, na przykład Double. Przykłady obejmują przewidywanie cen giełdowych. Aby uzyskać więcej informacji, zobacz [](tasks.md#regression) sekcję regresja w temacie [zadań uczenia maszynowego](tasks.md) .
+[Nadzorowane zadanie uczenia maszynowego](#supervised-machine-learning) , gdzie wyjście jest wartością rzeczywistą, na przykład Double. Przykłady obejmują przewidywanie cen giełdowych. Aby uzyskać więcej informacji, zobacz sekcję [regresja](tasks.md#regression) w temacie [zadań uczenia maszynowego](tasks.md) .
 
 ## <a name="relative-absolute-error"></a>Względny błąd bezwzględny
 
@@ -173,4 +174,4 @@ Transformator przekształceń jeden <xref:Microsoft.ML.IDataView> do drugiego. T
 
 ## <a name="unsupervised-machine-learning"></a>Nienadzorowane Uczenie maszynowe
 
-Podklasa uczenia maszynowego, w której żądany model znajduje ukryty (lub ukryty) strukturę w danych. Przykłady obejmują klastrowanie, modelowanie tematów i zmniejszanie liczby wymiarów. Aby uzyskać więcej informacji, zobacz [](https://en.wikipedia.org/wiki/Unsupervised_learning) artykuł dotyczący uczenia nienadzorowanego w witrynie Wikipedia.
+Podklasa uczenia maszynowego, w której żądany model znajduje ukryty (lub ukryty) strukturę w danych. Przykłady obejmują klastrowanie, modelowanie tematów i zmniejszanie liczby wymiarów. Aby uzyskać więcej informacji, zobacz artykuł dotyczący [uczenia nienadzorowanego](https://en.wikipedia.org/wiki/Unsupervised_learning) w witrynie Wikipedia.

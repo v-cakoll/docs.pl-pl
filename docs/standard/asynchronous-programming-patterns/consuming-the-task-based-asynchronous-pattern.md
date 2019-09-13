@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08b5dee94a9a23fdd1c9e635aa2ef848f59e86cf
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: e89545b5fa29f6e5bf99bb9b85322d7ee14422a4
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169134"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929011"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Wykorzystywanie wzorca asynchronicznego opartego na zadaniach
 
@@ -727,7 +727,7 @@ public class AsyncCache<TKey, TValue>
 }
 ```
 
- `TKey` <xref:System.Threading.Tasks.Task%601> [AsyncCache\<TKey, TValue klasy >](https://blogs.msdn.microsoft.com/pfxteam/2010/04/23/parallelextensionsextras-tour-12-asynccache/) akceptuje jako delegat do jego konstruktora funkcja, która pobiera i zwraca.  Wszystkie poprzednio używane wartości z pamięci podręcznej są przechowywane w słowniku wewnętrznym i `AsyncCache` zapewniają generowanie tylko jednego zadania na klucz, nawet jeśli dostęp do pamięci podręcznej odbywa się współbieżnie.
+ `TKey` <xref:System.Threading.Tasks.Task%601> [AsyncCache\<TKey, TValue klasy >](https://devblogs.microsoft.com/pfxteam/parallelextensionsextras-tour-12-asynccache/) akceptuje jako delegat do jego konstruktora funkcja, która pobiera i zwraca.  Wszystkie poprzednio używane wartości z pamięci podręcznej są przechowywane w słowniku wewnętrznym i `AsyncCache` zapewniają generowanie tylko jednego zadania na klucz, nawet jeśli dostęp do pamięci podręcznej odbywa się współbieżnie.
 
  Na przykład można utworzyć pamięć podręczną dla pobranych stron sieci Web:
 

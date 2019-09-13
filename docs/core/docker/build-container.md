@@ -4,12 +4,12 @@ description: W tym samouczku dowiesz się, jak konteneryzowanie aplikację .NET 
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: ec1c6eb5c1a78a631b8205da5d082e44884cde7a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f0e0fad9bde4c35fb5c5b0b505b9fa8441e432ba
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253950"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926305"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Samouczek: Konteneryzowanie aplikacji .NET Core
 
@@ -18,6 +18,7 @@ W tym samouczku przedstawiono sposób tworzenia obrazu platformy Docker, który 
 Dowiesz się:
 
 > [!div class="checklist"]
+>
 > * Tworzenie i publikowanie prostej aplikacji .NET Core
 > * Tworzenie i konfigurowanie pliku dockerfile dla platformy .NET Core
 > * Tworzenie obrazu platformy Docker
@@ -357,7 +358,7 @@ Counter: 5
 ^C
 ```
 
-W `docker run -it`programie <kbd>naciśnięcie polecenia CTRL + C</kbd> spowoduje zatrzymanie procesu, który jest uruchomiony w kontenerze, co z kolei powoduje zatrzymanie kontenera. `--rm` Ponieważ parametr został dostarczony, kontener jest automatycznie usuwany, gdy proces zostanie zatrzymany. Sprawdź, czy nie istnieje:
+W `docker run -it`programie naciśnięcie polecenia <kbd>Ctrl + C</kbd> spowoduje zatrzymanie procesu, który jest uruchomiony w kontenerze, co z kolei powoduje zatrzymanie kontenera. `--rm` Ponieważ parametr został dostarczony, kontener jest automatycznie usuwany, gdy proces zostanie zatrzymany. Sprawdź, czy nie istnieje:
 
 ```console
 > docker ps -a

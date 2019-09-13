@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ffcc3a079e7e9a9d69622dc6666bb0e7641d4e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4450c262b75a73114cb7de7de98567f053bbf564
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650781"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894465"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute — Metoda
-Określa atrybut niestandardowy na podstawie jego nazwy. Te atrybuty są przechowywane w magazynie symboli, w przeciwieństwie do atrybutów niestandardowych metadanych.  
+Definiuje atrybut niestandardowy na podstawie jego nazwy. Te atrybuty są przechowywane w magazynie symboli, w przeciwieństwie do atrybutów niestandardowych metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT SetSymAttribute(  
     [in] mdToken parent,  
     [in] const WCHAR *name,  
@@ -39,22 +39,22 @@ HRESULT SetSymAttribute(
   
 ## <a name="parameters"></a>Parametry  
  `parent`  
- [in] Token metadanych, dla którego jest definiowany atrybut.  
+ podczas Token metadanych, dla którego atrybut jest definiowany.  
   
  `name`  
- [in] Wskaźnik do `WCHAR` zawierający nazwę atrybutu.  
+ podczas Wskaźnik do elementu `WCHAR` , który zawiera nazwę atrybutu.  
   
  `cData`  
- [in] A `ULONG32` oznacza rozmiar `data` tablicy.  
+ podczas `ULONG32` Wskazuje rozmiar`data` tablicy.  
   
  `data`  
- [in] Wartość atrybutu.  
+ podczas Wartość atrybutu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie, E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Nagłówki** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

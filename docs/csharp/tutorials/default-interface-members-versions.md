@@ -3,12 +3,12 @@ title: Bezpiecznie Aktualizuj interfejsy przy użyciu domyślnych elementów cz�
 description: W tym zaawansowanym samouczku przedstawiono sposób bezpiecznego dodawania nowych funkcji do istniejących definicji interfejsów bez przerywania wszystkich klas i struktur, które implementują ten interfejs.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 9e0e4324b2474292064a760db9727d7dec6561d4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 6a723a116d420dd43d2adeef98b824445dd4f0d7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252919"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926702"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Samouczek: Aktualizowanie interfejsów z domyślnymi elementami członkowskimi interfejsu w C# 8,0
 
@@ -17,6 +17,7 @@ Począwszy od C# 8,0 na platformie .net Core 3,0, można zdefiniować implementa
 W tym samouczku dowiesz się, jak:
 
 > [!div class="checklist"]
+>
 > * Bezpiecznie rozszerzając interfejsy przez dodanie metod z implementacjami.
 > * Utwórz sparametryzowane implementacje, aby zapewnić większą elastyczność.
 > * Włącz realizatorów, aby zapewnić bardziej konkretną implementację w postaci przesłonięcia.

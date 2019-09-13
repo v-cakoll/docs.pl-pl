@@ -2,12 +2,12 @@
 title: Niestandardowy host usługi
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: 5da6497eadc6f02210c7f9d35d2889c98dc34ce4
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 80b2642fa202500aa22dc7d045476cb36677d47c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039957"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928869"
 ---
 # <a name="custom-service-host"></a>Niestandardowy host usługi
 Ten przykład pokazuje, jak używać niestandardowych pochodnych <xref:System.ServiceModel.ServiceHost> klasy w celu zmiany zachowania usługi w czasie wykonywania. Takie podejście umożliwia użycie alternatywnej alternatywy do konfigurowania dużej liczby usług w typowy sposób. W przykładzie pokazano również, jak użyć <xref:System.ServiceModel.Activation.ServiceHostFactory> klasy do użycia niestandardowego ServiceHost w środowisku usług Internet Information Services (IIS) lub Windows Process Activation Service (was).  
@@ -34,7 +34,7 @@ Ten przykład pokazuje, jak używać niestandardowych pochodnych <xref:System.Se
   
  W tym przykładzie chcemy utworzyć niestandardowy ServiceHost, który dodaje ServiceMetadataBehavior (co umożliwia Publikowanie metadanych), nawet jeśli to zachowanie nie zostanie jawnie dodane w pliku konfiguracji usługi. Aby to osiągnąć, tworzymy nową klasę, która dziedziczy z <xref:System.ServiceModel.ServiceHost> i przesłania `ApplyConfiguration`().  
   
-```  
+```csharp  
 class SelfDescribingServiceHost : ServiceHost  
 {  
     public SelfDescribingServiceHost(Type serviceType, params Uri[] baseAddresses)  
@@ -59,7 +59,7 @@ class SelfDescribingServiceHost : ServiceHost
   
  Ponieważ nie chcemy ignorować żadnej konfiguracji, która została dostarczona w pliku konfiguracyjnym aplikacji, w pierwszej kolejności zastępowanie `ApplyConfiguration`() jest wywołaniem podstawowej implementacji. Po zakończeniu tej metody możemy bezwzględnie dodać <xref:System.ServiceModel.Description.ServiceMetadataBehavior> do opisu przy użyciu następującego kodu.  
   
-```  
+```csharp  
 ServiceMetadataBehavior mexBehavior = this.Description.Behaviors.Find<ServiceMetadataBehavior>();  
 if (mexBehavior == null)  
 {  
@@ -76,7 +76,7 @@ else
   
  Ostatnim zastępowaniem `ApplyConfiguration`() musi być dodanie domyślnego punktu końcowego metadanych. Zgodnie z Konwencją jeden punkt końcowy metadanych jest tworzony dla każdego identyfikatora URI w kolekcji BaseAddresses hosta usługi.  
   
-```  
+```csharp  
 //Add a metadata endpoint at each base address  
 //using the "/mex" addressing convention  
 foreach (Uri baseAddress in this.BaseAddresses)  
@@ -113,7 +113,7 @@ foreach (Uri baseAddress in this.BaseAddresses)
 ## <a name="using-a-custom-servicehost-in-self-host"></a>Używanie niestandardowego ServiceHost na własnym hoście  
  Teraz, gdy zakończymy implementację niestandardowej ServiceHost, możemy użyć jej do dodania zachowania publikowania metadanych do dowolnej usługi przez hostowanie tej usługi w ramach naszego `SelfDescribingServiceHost`wystąpienia. Poniższy kod przedstawia sposób korzystania z niego w scenariuszu z własnym hostem.  
   
-```  
+```csharp  
 SelfDescribingServiceHost host =   
          new SelfDescribingServiceHost( typeof( Calculator ) );  
 host.Open();  
@@ -124,7 +124,7 @@ host.Open();
 ## <a name="using-a-custom-servicehost-in-iis-or-was"></a>Używanie niestandardowego ServiceHost w usługach IIS lub  
  Używanie niestandardowego hosta usługi w scenariuszach z własnym hostem jest proste, ponieważ jest to kod aplikacji, który jest ostatecznie odpowiedzialny za tworzenie i otwieranie wystąpienia hosta usługi. Jednak w usługach IIS lub w środowisku macierzystym Infrastruktura WCF tworzy dynamicznie wystąpienie hosta usługi w odpowiedzi na komunikaty przychodzące. Niestandardowe hosty usługi mogą być również używane w tym środowisku hostingu, ale wymagają one dodatkowego kodu w formie obiektu ServiceHostFactory. Poniższy kod przedstawia pochodne <xref:System.ServiceModel.Activation.ServiceHostFactory> zwracające wystąpienia naszych niestandardowych. `SelfDescribingServiceHost`  
   
-```  
+```csharp  
 public class SelfDescribingServiceHostFactory : ServiceHostFactory  
 {  
     protected override ServiceHost CreateServiceHost(Type serviceType,   

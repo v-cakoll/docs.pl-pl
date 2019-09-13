@@ -4,12 +4,12 @@ description: Dowiedz się bezserwerowo Dzięki praktycznemu podejściu, uzyskuj�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: adc4e1f3249cd72c423430ad4cb5dbb8eea8baf9
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cb761524976125c816aae925f0c369eb8c76e7de
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676701"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926469"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Scenariusze biznesowe i przypadki użycia bez korzystania z serwera
 
@@ -27,7 +27,7 @@ Oddzielna aplikacja jednostronicowa (SPA) wywołuje funkcję bezserwerową, aby 
 
 ![Galeria obrazów automatycznych](./media/automated-image-gallery.png)
 
-Pełne repozytorium i instrukcje dotyczące kompilowania aplikacji logiki są dostępne tutaj: Przyklejanie do [siatki zdarzeń](https://github.com/JeremyLikness/Event-Grid-Glue).
+Pełne repozytorium i instrukcje dotyczące kompilowania aplikacji logiki są dostępne tutaj: [Przyklejanie do siatki zdarzeń](https://github.com/JeremyLikness/Event-Grid-Glue).
 
 ## <a name="cross-platform-mobile-client-using-xamarinforms-and-functions"></a>Międzyplatformowy klient mobilny korzystający z narzędzi Xamarin. Forms i Functions
 
@@ -77,7 +77,7 @@ Następnie możesz utworzyć pulpit nawigacyjny Power BI, aby zebrać szczegół
 
 ![Przykład Power BI](./media/power-bi-example.png)
 
-Pełne łącze Shortener repozytorium z instrukcjami jest dostępne tutaj: [Shortener adres URL](https://github.com/jeremylikness/serverless-url-shortener)bezserwerowy. Informacje o wersji uproszczonej można znaleźć tutaj: [Usługa Azure Storage dla aplikacji platformy .NET bezserwerowych w ciągu kilku minut](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/).
+Pełne łącze Shortener repozytorium z instrukcjami jest dostępne tutaj: [Shortener adres URL bezserwerowy](https://github.com/jeremylikness/serverless-url-shortener). Informacje o wersji uproszczonej można znaleźć tutaj: [Usługa Azure Storage dla aplikacji platformy .NET bezserwerowych w ciągu kilku minut](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/).
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>Weryfikowanie łączności urządzenia przy użyciu polecenia ping
 
@@ -89,7 +89,7 @@ Aby uzyskać więcej informacji, zobacz [Azure IoT Hub ping](https://azure.micro
 
 * [Generator mozaiki zdjęć Azure Functions](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
 * [Usługa Azure IoT Hub ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
-* [Usługa Azure Storage dla aplikacji .NET bezserwerowych w ciągu kilku minut](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/)
+* [Usługa Azure Storage dla aplikacji .NET bezserwerowych w ciągu kilku minut](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
 * [Przenoszenie własnej aplikacji](https://github.com/JeremyLikness/bring-own-app-connect-17)
 * [Laboratorium importowania woluminów CSV](https://github.com/JeremyLikness/azure-fn-file-process-hol)
 * [Przyklejanie do siatki zdarzeń](https://github.com/JeremyLikness/Event-Grid-Glue)

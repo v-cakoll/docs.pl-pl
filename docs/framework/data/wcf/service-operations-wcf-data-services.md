@@ -8,18 +8,18 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: f905eb90b47cb5ab20fd912b1cbcc62947361992
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f36081ef1a3eec84f3cc2ced3c629109acd6a38
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779776"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894270"
 ---
 # <a name="service-operations-wcf-data-services"></a>Operacje usługi (Usługi danych programu WCF)
 
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]umożliwia zdefiniowanie operacji usługi w usłudze danych w celu udostępnienia metod na serwerze. Podobnie jak w przypadku innych zasobów usługi danych, operacje usługi są rozwiązywane przez identyfikatory URI. Operacje usługi umożliwiają uwidocznienie logiki biznesowej w usłudze danych, na przykład w celu zaimplementowania logiki walidacji, zastosowania zabezpieczeń opartych na rolach lub udostępnienia wyspecjalizowanych funkcji zapytań. Operacje usługi to metody dodawane do klasy usługi danych, która pochodzi od <xref:System.Data.Services.DataService%601>. Podobnie jak w przypadku wszystkich innych zasobów usługi danych, można dostarczyć parametry do metody operacji usługi. Na przykład następujący identyfikator URI operacji usługi (oparty na usłudze danych [szybkiego startu](quickstart-wcf-data-services.md) ) przekazuje wartość `London` do `city` parametru:
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
 ```
 
@@ -70,7 +70,7 @@ Podczas definiowania operacji usługi w usłudze danych obowiązują następują
 
 Operacje na usłudze można rozwiązać, umieszczając nazwę metody w pierwszym segmencie ścieżki identyfikatora URI. Na przykład następujący identyfikator URI uzyskuje dostęp `GetOrdersByState` do operacji <xref:System.Linq.IQueryable%601> zwracającej kolekcję `Orders` obiektów.
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=true
 ```
 
@@ -86,7 +86,7 @@ Następujące prawidłowe typy zwracane dla operacji usługi:
 
 Do identyfikatora URI można dodać dodatkowe segmenty ścieżki lub opcje zapytania w zależności od typu zwracanego operacji usługi. Na przykład następujący identyfikator `GetOrdersByCity` URI uzyskuje dostęp do operacji <xref:System.Linq.IQueryable%601> zwracającej kolekcję `Orders` obiektów uporządkowaną według `RequiredDate` kolejności malejącej, wraz z pokrewnymi `Order_Details` obiektami:
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order_Details&$orderby=RequiredDate desc
 ```
 

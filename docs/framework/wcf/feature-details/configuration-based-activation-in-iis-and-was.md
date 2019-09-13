@@ -2,12 +2,12 @@
 title: Aktywacja oparta na konfiguracji w usługach IIS i WAS
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: f4de4aff2fbe6b8e82dc3d6523f492d06494c79e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5b06f474d26b80f955b1508f01da83448a8708a3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69909769"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928771"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Aktywacja oparta na konfiguracji w usługach IIS i WAS
 
@@ -31,6 +31,7 @@ Aktywacja oparta na konfiguracji pobiera metadane, które były używane do umie
  Za pomocą tego elementu w pliku Web. config można umieścić kod źródłowy usługi w katalogu App_Code aplikacji lub zgodnego zestawu w katalogu bin aplikacji.
 
 > [!NOTE]
+>
 > - W przypadku korzystania z aktywacji opartej na konfiguracji, kod wbudowany w plikach. svc nie jest obsługiwany.
 > - Atrybut musi być ustawiony na adres względny, taki jak "\<sub-podkatalog >/Service.svc" lub "~/\<sub-Directory/Service. svc". `relativeAddress`
 > - Wyjątek konfiguracji jest zgłaszany w przypadku zarejestrowania adresu względnego, który nie ma znanego rozszerzenia skojarzonego z WCF.

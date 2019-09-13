@@ -4,12 +4,12 @@ description: W tym samouczku przedstawiono sposób tworzenia aplikacji konsolowe
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 4daa7734f12c57a177fab3c62fdd96bda22838af
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: f89174204c13b907db5a41ed374e1a31c61dcf11
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107165"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929027"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Samouczek: Analizuj tonacji komentarzy witryny internetowej za pomocą klasyfikacji binarnej w ML.NET
 
@@ -17,6 +17,7 @@ W tym samouczku przedstawiono sposób tworzenia aplikacji konsolowej .NET Core, 
 
 Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
+>
 > - Tworzenie aplikacji konsolowej
 > - Przygotowywanie danych
 > - Ładowanie danych
@@ -84,7 +85,7 @@ Kod źródłowy dla tego samouczka można znaleźć w repozytorium [dotnet/Sampl
     [!code-csharp[DeclareTypes](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#DeclareTypes "Declare data record types")]
 
 ### <a name="how-the-data-was-prepared"></a>Jak dane zostały przygotowane
-Wejściowa Klasa DataSet, `SentimentData`, `string` ma dla `bool` komentarzy użytkownika (`SentimentText`) i (`Sentiment`) wartość 1 (pozytywna) lub 0 (ujemna) dla tonacji. Oba pola mają dołączone atrybuty [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) , które opisują kolejność plików danych każdego pola.  Ponadto `Sentiment` właściwość ma atrybut ColumnName, [](xref:Microsoft.ML.Data.ColumnNameAttribute.%23ctor%2A) aby `Label` wyznaczyć go jako pole. Następujący przykładowy plik nie ma wiersza nagłówka i wygląda następująco:
+Wejściowa Klasa DataSet, `SentimentData`, `string` ma dla `bool` komentarzy użytkownika (`SentimentText`) i (`Sentiment`) wartość 1 (pozytywna) lub 0 (ujemna) dla tonacji. Oba pola mają dołączone atrybuty [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) , które opisują kolejność plików danych każdego pola.  Ponadto `Sentiment` właściwość ma atrybut [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute.%23ctor%2A) , aby `Label` wyznaczyć go jako pole. Następujący przykładowy plik nie ma wiersza nagłówka i wygląda następująco:
 
 |SentimentText                         |Tonacji (etykieta) |
 |--------------------------------------|----------|
@@ -256,7 +257,7 @@ Użyj następującego kodu, aby wyświetlić metryki:
 
 - `AreaUnderRocCurve` Metryka wskazuje, jak pewność, że model prawidłowo klasyfikuje klasy dodatnie i ujemne. Ma `AreaUnderRocCurve` być tak blisko jednego, jak to możliwe.
 
-- Metryka pobiera wynik F1 modelu, który jest miarą równowagi między dokładnością i [](../resources/glossary.md#precision) odwołaniem. [](../resources/glossary.md#recall) `F1Score`  Ma `F1Score` być tak blisko jednego, jak to możliwe.
+- Metryka pobiera wynik F1 modelu, który jest miarą równowagi między [dokładnością](../resources/glossary.md#precision) i [odwołaniem.](../resources/glossary.md#recall) `F1Score`  Ma `F1Score` być tak blisko jednego, jak to możliwe.
 
 ### <a name="predict-the-test-data-outcome"></a>Przewidywanie wyniku danych testowych
 
@@ -383,6 +384,7 @@ Kod źródłowy dla tego samouczka można znaleźć w repozytorium [dotnet/Sampl
 
 W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
+>
 > - Tworzenie aplikacji konsolowej
 > - Przygotowywanie danych
 > - Ładowanie danych

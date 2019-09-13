@@ -10,35 +10,35 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0a033e6881f9c0c8741fda26211b0f565762de4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 42daa241d0ebbfeb184b57e682fbb50bdaeead65
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643091"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894199"
 ---
 # <a name="how-to-implement-callback-functions"></a>Instrukcje: Implementowanie funkcji wywołania zwrotnego
-Poniższy przykład i procedury pokazują, jak wywołać przy użyciu platformy zarządzanej aplikacji, można wydrukować wartość dojścia dla każdego przedziału na komputerze lokalnym. W szczególności procedury i przykładowego użycia **EnumWindows** funkcji przechodzić przez wykaz systemu windows i funkcji wywołania zwrotnego zarządzanych (o nazwie wywołanie zwrotne) aby wyświetlić wartość uchwyt okna.  
+Poniższa procedura i przykład przedstawiają sposób, w jaki aplikacja zarządzana używająca funkcji wywołania platformy może drukować wartość dojścia dla każdego okna na komputerze lokalnym. W ramach procedury i przykładu Użyj funkcji **EnumWindows** , aby przejść przez listę systemu Windows i zarządzaną funkcję wywołania zwrotnego (nazwanego wywołania zwrotnego) w celu wydrukowania wartości uchwytu okna.  
   
 ### <a name="to-implement-a-callback-function"></a>Aby zaimplementować funkcję wywołania zwrotnego  
   
-1. Przyjrzyj się podpis dla **EnumWindows** funkcji przed przejściem dalej z implementacją. **EnumWindows** ma następujący podpis:  
+1. Przed przejściem do implementacji zapoznaj się z podpisem funkcji **EnumWindows** . **EnumWindows** ma następujący podpis:  
   
-    ```  
-    BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)  
-    ```  
+    ```cpp
+    BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)
+    ```
   
-     Co sugeruje, że ta funkcja wymaga wywołania zwrotnego jest obecność **lpEnumFunc** argumentu. Bardzo często, aby zobaczyć **lp** prefiksu (wskaźnik długi) w połączeniu z **Func** sufiks nazwy argumentów, które przyjmują wskaźnik do funkcji wywołania zwrotnego. Dokumentację informacji na temat funkcji Win32 na ten temat można znaleźć w zestawie SDK platformy firmy Microsoft.  
+     Jedną z wskazówek, że ta funkcja wymaga wywołania zwrotnego, jest obecność argumentu **lpEnumFunc** . Często widzisz prefiks **LP** (długi wskaźnik) połączony z sufiksem **Func** w nazwie argumentów, które przyjmują wskaźnik do funkcji wywołania zwrotnego. Aby uzyskać dokumentację dotyczącą funkcji Win32, zobacz zestaw SDK platformy Microsoft.  
   
-2. Tworzenie funkcji wywołania zwrotnego zarządzanych. Przykład deklaruje typu delegata, o nazwie `CallBack`, który przyjmuje dwa argumenty (**hwnd** i **lparam**). Pierwszy argument jest uchwytem do okna; drugi argument funkcji jest zdefiniowany przez aplikację. W tej wersji oba argumenty muszą być liczbami całkowitymi.  
+2. Utwórz zarządzaną funkcję wywołania zwrotnego. Przykład deklaruje typ delegata o nazwie `CallBack`, który przyjmuje dwa argumenty (**HWND** i **lParam**). Pierwszy argument jest dojściem do okna; drugi argument jest zdefiniowany przez aplikację. W tej wersji oba argumenty muszą być liczbami całkowitymi.  
   
-     Funkcje wywołania zwrotnego zazwyczaj zwraca wartość różną od zera wartości do wskazania sukcesu oraz zero, aby wskazać błąd. W tym przykładzie jawnie ustawia wartość zwracaną **true** kontynuować wyliczenia.  
+     Funkcje wywołania zwrotnego zwykle zwracają wartości niezerowe, aby wskazać sukces i zero, aby wskazać błąd. Ten przykład jawnie ustawia wartość zwracaną na **true** , aby kontynuować wyliczanie.  
   
-3. Utwórz delegata i przekazać go jako argument do **EnumWindows** funkcji. Wywołanie platformy automatycznie konwertuje delegata do formatu znanych wywołania zwrotnego.  
+3. Utwórz delegata i przekaż go jako argument do funkcji **EnumWindows** . Wywołanie platformy konwertuje delegata na automatycznie znany Format wywołania zwrotnego.  
   
-4. Upewnij się, że moduł odśmiecania pamięci nie spowoduje odzyskania delegata przed funkcji wywołania zwrotnego nie ukończy pracy. Przekazywanie obiektu delegate jako parametr lub przekazywanie obiektu delegate zawarte jako pole w strukturze, pozostaje niepobranych na czas trwania wywołania. Tak jak w przypadku, w poniższym przykładzie wyliczenie, funkcja wywołania zwrotnego nie ukończy pracy przed wywołanie zwraca i nie wymaga dodatkowych czynności przez zarządzany obiekt wywołujący.  
+4. Upewnij się, że moduł zbierający elementy bezużyteczne nie odzyska delegata, zanim funkcja wywołania zwrotnego zakończy pracę. Gdy przekazujesz delegata jako parametr lub Przekaż delegata zawarty jako pole w strukturze, pozostanie ono niezebrane na czas trwania wywołania. Tak więc, podobnie jak w poniższym przykładzie wyliczenia, funkcja wywołania zwrotnego uzupełnia swoją pracę przed wywołaniem zwrotnym i nie wymaga żadnych dodatkowych akcji przez zarządzany obiekt wywołujący.  
   
-     Jeśli jednak po wywołaniu zwraca można wywołać funkcję wywołania zwrotnego, zarządzanego obiektu wywołującego, należy wykonać czynności, aby upewnić się, delegat pozostaje niepobranych, dopóki nie zakończy się działanie funkcji wywołania zwrotnego. Aby uzyskać szczegółowe informacje dotyczące zapobiegania wyrzucania elementów bezużytecznych, zobacz [Interop Marshaling](../../../docs/framework/interop/interop-marshaling.md) za pomocą wywołania platformy.  
+     Jeśli jednak funkcja wywołania zwrotnego może być wywoływana po wywołaniu zwrotnym, zarządzany obiekt wywołujący musi wykonać kroki, aby upewnić się, że delegat pozostanie niepobrany do momentu zakończenia funkcji wywołania zwrotnego. Aby uzyskać szczegółowe informacje na temat zapobiegania wyrzucaniu elementów bezużytecznych, zobacz [Marshaling Interop](../../../docs/framework/interop/interop-marshaling.md) with platform Invoke.  
   
 ## <a name="example"></a>Przykład  
   

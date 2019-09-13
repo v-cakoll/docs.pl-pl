@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23bb88127875e0e608c8e8de54ba669f84aa1da5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f990c5194c2e5dc1422aab96c7608c019ae9855b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937987"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894749"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Eksporter biblioteki typów)
 Eksporter biblioteki typów generuje bibliotekę typów, która opisuje typy zdefiniowane w zestawie środowiska uruchomieniowego języka wspólnego.  
@@ -26,7 +26,7 @@ Eksporter biblioteki typów generuje bibliotekę typów, która opisuje typy zde
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console  
 tlbexp assemblyName [options]  
 ```  
   
@@ -74,14 +74,14 @@ tlbexp assemblyName [options]
   
  Jeśli <xref:System.Runtime.InteropServices.MarshalAsAttribute> używasz atrybutu, aby `VT_UNKOWN` <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType> określić wartość lub `VT_DISPATCH`, Tlbexp. exe ignoruje wszelkie kolejne użycie <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> pola. Na przykład w następujących podpisach:  
   
-```  
+```csharp
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_UNKNOWN, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructUnkSafe(){return null;}  
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_DISPATCH, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructDispSafe(){return null;}  
 ```  
   
  generowana jest następująca biblioteka typów:  
   
-```  
+```cpp 
 [id(0x60020004)]  
 HRESULT StructUnkSafe([out, retval] SAFEARRAY(IUnknown*)* pRetVal);  
 [id(0x60020005)]  
@@ -99,13 +99,13 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
 ## <a name="examples"></a>Przykłady  
  Następujące polecenie generuje bibliotekę typów o takiej samej nazwie jak zestaw znaleziony w `myTest.dll`.  
   
-```  
+```console  
 tlbexp myTest.dll  
 ```  
   
  Następujące polecenie generuje bibliotekę typów o nazwie `clipper.tlb`.  
   
-```  
+```console  
 tlbexp myTest.dll /out:clipper.tlb  
 ```  
   
@@ -113,19 +113,19 @@ tlbexp myTest.dll /out:clipper.tlb
   
  Najpierw należy użyć Tlbimp. exe do zaimportowania `myLib.tlb` biblioteki typów i zapisania `myLib.dll`jej jako.  
   
-```  
+```console  
 tlbimp myLib.tlb /out:myLib.dll  
 ```  
   
  Następujące polecenie używa C# kompilatora do kompilowania `Sample.dll,` odwołań `myLib.dll` utworzonych w poprzednim przykładzie.  
   
-```  
+```console  
 CSC Sample.cs /reference:myLib.dll /out:Sample.dll  
 ```  
   
  Następujące polecenie generuje bibliotekę typów dla `Sample.dll` odwołań. `myLib.dll`  
   
-```  
+```console  
 tlbexp Sample.dll  
 ```  
   

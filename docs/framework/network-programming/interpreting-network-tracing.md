@@ -9,24 +9,24 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-ms.openlocfilehash: 00df193671255e7b40f5c4b86ee952a3e20e3a40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 09f77a60255accc3e4b1c4fa5ea3d7526444e4cb
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642311"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894724"
 ---
 # <a name="interpreting-network-tracing"></a>Interpretowanie śledzenia sieci
-Po włączeniu funkcji śledzenia sieci umożliwia śledzenie przechwytywania wywołania aplikacji sprawia, że do różnych <xref:System.Net> składowych klasy. Dane wyjściowe z tych wywołań może być podobne do poniższych przykładach.  
+Po włączeniu śledzenia sieci można użyć funkcji śledzenia do przechwytywania wywołań aplikacji do różnych <xref:System.Net> elementów członkowskich klasy. Dane wyjściowe tych wywołań mogą wyglądać podobnie jak w poniższych przykładach.  
   
-```  
+```output
 [588]   (4357)   Entering Socket#33574638::Send()  
-[588]   (4387)   Exiting Socket#33574638::Send()-> 61#61  
+[588]   (4387)   Exiting Socket#33574638::Send()-> 61#61
 ```  
   
- W powyższym przykładzie [588] to unikatowy identyfikator bieżącego wątku. (4357) i (4387) są sygnatury czasowe oznaczający liczbę milisekund, które upłynęły od czasu uruchomienia aplikacji. Dane zgodnie z sygnaturą czasową przedstawiono aplikację i wychodzą z metody **Socket.Send**. Wykonywanie obiektu **wysyłania** metoda ma 33574638 jako unikatowego identyfikatora. Śledzenia zakończenia metody zawiera wartość zwracaną (61 w powyższym przykładzie).  
+ W poprzednim przykładzie [588] jest unikatowym identyfikatorem bieżącego wątku. (4357) i (4387) to sygnatury czasowe określające liczbę milisekund, które upłynęły od momentu uruchomienia aplikacji. Dane po znaczniku czasu pokazują aplikację wprowadzającą i opuszczają metodę **Socket. Send**. Obiekt wykonujący metodę **send** ma 33574638 jako unikatowy identyfikator. Ślad wyjścia metody zawiera wartość zwracaną (61 w poprzednim przykładzie).  
   
- Danych śledzenia sieci można przechwytywać ruch sieciowy, który jest wysłanych lub odebranych przez aplikację za pomocą protokoły poziomu aplikacji, takich jak protokół HTTP (Hypertext Transfer). Te dane mogą być przechwytywane jako tekst i, opcjonalnie, dane szesnastkowe. Dane szesnastkowe jest dostępna po określeniu **includehex** jako wartość **tryb_śledzenia** atrybutu. (Aby uzyskać szczegółowe informacje dotyczące tego atrybutu, zobacz [jak: Konfigurowanie śledzenia sieci](../../../docs/framework/network-programming/how-to-configure-network-tracing.md).) Poniższy przykład śledzenia został wygenerowany za pomocą **includehex**.  
+ Ślady sieci mogą przechwytywać ruch sieciowy, który jest wysyłany z lub odbierany przez aplikację przy użyciu protokołów na poziomie aplikacji, takich jak protokół HTTP (Hypertext Transfer Protocol). Te dane można przechwytywać jako tekst i, opcjonalnie, dane szesnastkowe. Dane szesnastkowe są dostępne po określeniu **includehex** jako wartości atrybutu **TraceMode** . (Aby uzyskać szczegółowe informacje na temat tego atrybutu [, zobacz How to: Skonfiguruj śledzenie](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)sieci). Poniższy przykład śledzenia został wygenerowany przy użyciu **includehex**.  
   
  `[1692]   (1142)   00000000 : 47 45 54 20 2F 77 70 61-64 2E 64 61 74 20 48 54 : GET /wpad.dat HT`  
   
@@ -36,7 +36,7 @@ Po włączeniu funkcji śledzenia sieci umożliwia śledzenie przechwytywania wy
   
  `[1692]   (1142)   00000030 : 6F 6E 3A 20 43 6C 6F 73-65 0D 0A 0D 0A     : on: Close....`  
   
- Aby pominąć szesnastkowe dane, należy określić **protocolonly** jako wartość pozycji **tryb_śledzenia** atrybutu. W poniższym przykładzie pokazano śledzenia podczas **protocolonly** jest określony.  
+ Aby pominąć dane szesnastkowe, określ **protocolonly** jako wartość atrybutu **TraceMode** . Poniższy przykład pokazuje ślad, gdy **protocolonly** jest określony.  
   
  `[2444]   (594)   Data from ConnectStream#33574638::WriteHeaders<<GET /wpad.dat HTTP/1.1`  
   

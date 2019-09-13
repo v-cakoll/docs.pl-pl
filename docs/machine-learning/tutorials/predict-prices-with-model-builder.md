@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 1bdbe31e16408da2d7dfe17941c90a022f3d8c32
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: bc1dacdad436cc5384bca4bbce224acc18d69201
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107147"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929431"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Przewidywanie cen przy użyciu regresji z konstruktorem modelu
 
@@ -21,6 +21,7 @@ Szablon prognozowania cen konstruktora modeli może być używany w każdym scen
 
 Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
+>
 > - Przygotuj i poznanie danych
 > - Wybierz scenariusz
 > - Ładowanie danych
@@ -190,6 +191,7 @@ Jeśli musisz odwoływać się do wygenerowanych projektów w późniejszym czas
 
 W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
+>
 > - Przygotuj i poznanie danych
 > - Wybierz scenariusz
 > - Ładowanie danych

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-ms.openlocfilehash: 3080514d06119a2f1b621cff16056ac7577c30b3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: adc4d519e8d29fef5595ab7ddc3168462525c4e2
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966803"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895235"
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Instrukcje: asynchroniczne wywoływanie operacji za pomocą fabryki kanałów
 W tym temacie opisano, w jaki sposób klient może uzyskiwać dostęp do operacji usługi <xref:System.ServiceModel.ChannelFactory%601>asynchronicznej podczas korzystania z aplikacji klienckiej opartej na. (W przypadku używania <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> obiektu do wywoływania usługi można użyć opartego na zdarzeniach asynchronicznego modelu wywoływania. Aby uzyskać więcej informacji, zobacz [jak: Asynchroniczne](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)wywoływanie operacji usługi. Aby uzyskać więcej informacji o asynchronicznym modelu wywoływania opartych na zdarzeniach, zobacz [asynchroniczny wzorzec oparty na zdarzeniach (EAP)](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
@@ -23,7 +23,7 @@ W tym temacie opisano, w jaki sposób klient może uzyskiwać dostęp do operacj
   
 1. Uruchom narzędzie narzędzia [metadanych ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) z `/async` opcją, jak pokazano w poniższym poleceniu.  
   
-    ```  
+    ```console
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a  
     ```  
   

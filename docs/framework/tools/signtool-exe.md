@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e210f14c74efe214be06a1cb901a144dd92af5e0
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 46475cbc8517fc73d8b7fd868c7632e5c85a7726
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168878"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894795"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Narzędzie podpisu)
 Narzędzie podpisywania to narzędzie wiersza polecenia, które cyfrowo podpisuje pliki, weryfikuje podpisy w plikach i oznacza pliki znacznikami czasu.  
@@ -23,7 +23,7 @@ Narzędzie podpisywania to narzędzie wiersza polecenia, które cyfrowo podpisuj
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console  
 signtool [command] [options] [file_name | ...]  
 ```  
   
@@ -108,7 +108,7 @@ signtool [command] [options] [file_name | ...]
 |`/p7`|Oznacza pliki PKCS #7 znacznikami czasu.|  
 |`/t`  *ADRES URL*|Określa adres URL serwera znaczników czasu. Plik oznaczany znacznikiem czasu musi zostać wcześniej podpisany. `/t` Albo`/tr` opcja jest wymagana.|  
 |`/td`  *alg*|Żąda algorytmu tworzenia skrótu używanego przez serwer znaczników czasu RFC 3161. `/td`jest używany z `/tr` opcją.|  
-|`/tp`*indeks*|Sygnatura czasowa sygnatura.|  
+|`/tp`*indeks*|Sygnatura czasowa sygnatura *.*|  
 |`/tr`  *ADRES URL*|Określa adres URL serwera znaczników czasu RFC 3161. Plik oznaczany znacznikiem czasu musi zostać wcześniej podpisany. `/tr` Albo`/t` opcja jest wymagana.|  
   
  Przykład użycia można znaleźć w temacie [Dodawanie sygnatur czasowych do wcześniej podpisanych plików](/windows/desktop/SecCrypto/adding-time-stamps-to-previously-signed-files).  
@@ -151,61 +151,61 @@ signtool [command] [options] [file_name | ...]
 ## <a name="examples"></a>Przykłady  
  Poniższe polecenie dodaje plik wykazu MyCatalogFileName.cat do bazy danych składników systemu i sterowników. Opcja `/u` w razie potrzeby generuje unikatową nazwę, aby zapobiec zastąpieniu istniejącego pliku wykazu o `MyCatalogFileName.cat`nazwie.  
   
-```  
+```console  
 signtool catdb /v /u MyCatalogFileName.cat  
 ```  
   
  Poniższe polecenie podpisuje plik automatycznie przy użyciu najlepszego certyfikatu.  
   
-```  
+```console  
 signtool sign /a MyFile.exe  
 ```  
   
  Poniższe polecenie podpisuje cyfrowo plik przy użyciu certyfikatu przechowywanego w chronionym hasłem pliku PFX.  
   
-```  
+```console  
 signtool sign /f MyCert.pfx /p MyPassword MyFile.exe  
 ```  
   
  Poniższe polecenie podpisuje cyfrowo plik i oznacza go sygnaturą czasową. Certyfikat użyty do podpisania pliku jest przechowywany w pliku PFX.  
   
-```  
+```console  
 signtool sign /f MyCert.pfx /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  Następujące polecenie podpisuje plik przy użyciu certyfikatu znajdującego się w `My` magazynie, który ma `My Company Certificate`nazwę podmiotu.  
   
-```  
+```console  
 signtool sign /n "My Company Certificate" MyFile.exe  
 ```  
   
  Poniższe polecenie podpisuje formant ActiveX i udostępnia informacje wyświetlane przez program Internet Explorer, gdy użytkownik jest monitowany o zainstalowanie tego formantu.  
   
-```  
+```console  
 Signtool sign /f MyCert.pfx /d: "MyControl" /du http://www.example.com/MyControl/info.html MyControl.exe  
 ```  
   
  Poniższe polecenie oznacza znacznikiem czasu plik, który jest już podpisany cyfrowo.  
   
-```  
+```console  
 signtool timestamp /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  Poniższe polecenie sprawdza, czy plik jest podpisany.  
   
-```  
+```console  
 signtool verify MyFile.exe  
 ```  
   
  Poniższe polecenie sprawdza plik systemowy, który może być podpisany w wykazie.  
   
-```  
+```console  
 signtool verify /a SystemFile.dll  
 ```  
   
  Poniższe polecenie sprawdza plik systemowy, który jest podpisany w wykazie o nazwie `MyCatalog.cat`.  
   
-```  
+```console  
 signtool verify /c MyCatalog.cat SystemFile.dll  
 ```  
   

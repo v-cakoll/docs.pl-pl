@@ -3,12 +3,12 @@ title: Projektowanie przy użyciu typów referencyjnych dopuszczających wartoś
 description: Ten zaawansowany samouczek zawiera wprowadzenie do typów referencyjnych dopuszczających wartość null. Dowiesz się, w jaki sposób projekt zostanie zastosowany, gdy wartości odniesienia mogą mieć wartość null, i że kompilator wymusi, gdy nie mogą mieć wartości null.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 357ebd13ca4c610f1c65009621ee628a90c70b15
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 0c95065e6c380fab6ba33432a32b3297e78027a3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105775"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926628"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Samouczek: Migruj istniejący kod z typami referencyjnymi Nullable
 
@@ -17,6 +17,7 @@ C#8 wprowadza **typy odwołań do wartości null**, które uzupełniają typy od
 W tym samouczku dowiesz się, jak:
 
 > [!div class="checklist"]
+>
 > - Włącz sprawdzanie odwołań o wartości null podczas pracy z kodem.
 > - Diagnozuj i popraw różne ostrzeżenia związane z wartościami null.
 > - Zarządzaj interfejsem pomiędzy włączonymi do dopuszczania wartości null a niedozwolonymi kontekstami.
@@ -84,7 +85,7 @@ Te dwie właściwości powodują `CS8618`, że właściwość "niedopuszczający
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-W poprzednim bloku kodu jest już w toku. Ta aplikacja używa pakietu [](https://automapper.org/) NuGet automapowania do konstruowania elementu wiadomości z `ISyndicationItem`. Wykryto, że są konstruowane elementy historii wiadomości i właściwości są ustawiane w jednej instrukcji. Oznacza to, że projekt `NewsStoryViewModel` wskazuje, że te właściwości nigdy nie powinny `null` mieć wartości. Te właściwości powinny mieć **niezerowe typy odwołań**. To najlepiej reprezentuje pierwotny cel projektowania. W rzeczywistości wszystkie `NewsStoryViewModel` wystąpienia *są* poprawnie tworzone przy użyciu wartości innych niż null. Powoduje to, że następujący kod inicjujący ma prawidłową poprawkę:
+W poprzednim bloku kodu jest już w toku. Ta aplikacja używa pakietu NuGet [automapowania](https://automapper.org/) do konstruowania elementu wiadomości z `ISyndicationItem`. Wykryto, że są konstruowane elementy historii wiadomości i właściwości są ustawiane w jednej instrukcji. Oznacza to, że projekt `NewsStoryViewModel` wskazuje, że te właściwości nigdy nie powinny `null` mieć wartości. Te właściwości powinny mieć **niezerowe typy odwołań**. To najlepiej reprezentuje pierwotny cel projektowania. W rzeczywistości wszystkie `NewsStoryViewModel` wystąpienia *są* poprawnie tworzone przy użyciu wartości innych niż null. Powoduje to, że następujący kod inicjujący ma prawidłową poprawkę:
 
 ```csharp
 public class NewsStoryViewModel
@@ -109,7 +110,7 @@ Ten kod mapuje właściwości `ISyndicationItem` obiektu `NewsStoryViewModel` na
 
 Zwróć uwagę, że ponieważ ta klasa jest mała i uważnie sprawdzona, należy włączyć `#nullable enable` dyrektywę powyżej tej deklaracji klasy. Zmiana w konstruktorze mogła spowodować uszkodzenie elementu, więc jest wartościowa do uruchamiania wszystkich testów i testowania aplikacji przed przechodzeniem.
 
-Pierwszy zestaw zmian przedstawia sposób odnajdowania, gdy oryginalny projekt wskazał, że zmienne nie powinny być ustawiane na `null`. Technika jest określana jako poprawna **przez konstrukcję**. Deklaruje, że obiekt i jego właściwości nie mogą `null` być, gdy jest konstruowany. Analiza przepływu kompilatora zapewnia gwarancję, że te właściwości nie są ustawione `null` na wartość po konstrukcji. Należy zauważyć, że ten konstruktor jest wywoływany przez kod zewnętrzny, a ten kod **dopuszcza wartość null Oblivious**. Nowa składnia nie zapewnia sprawdzania środowiska uruchomieniowego. Kod zewnętrzny może obejść analizę przepływu kompilatora. 
+Pierwszy zestaw zmian przedstawia sposób odnajdowania, gdy oryginalny projekt wskazał, że zmienne nie powinny być ustawiane na `null`. Technika jest określana jako **poprawna przez konstrukcję**. Deklaruje, że obiekt i jego właściwości nie mogą `null` być, gdy jest konstruowany. Analiza przepływu kompilatora zapewnia gwarancję, że te właściwości nie są ustawione `null` na wartość po konstrukcji. Należy zauważyć, że ten konstruktor jest wywoływany przez kod zewnętrzny, a ten kod **dopuszcza wartość null Oblivious**. Nowa składnia nie zapewnia sprawdzania środowiska uruchomieniowego. Kod zewnętrzny może obejść analizę przepływu kompilatora. 
 
 W innych przypadkach struktura klasy zawiera różne wskazówki dotyczące zamiaru. Otwórz plik *Error.cshtml.cs* w folderze *Pages* . `ErrorViewModel` Zawiera następujący kod:
 
@@ -135,7 +136,7 @@ Ta zmiana nie będzie miała wpływu na inny kod, ponieważ każdy dostęp `Erro
 
 [!code-csharp[InitializeNewsItems](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#InitializeNewsItems)]
 
-Naprawiono ostrzeżenie, ale wprowadzono błąd. Lista jest teraz poprawna **przez konstrukcję**, ale kod, który ustawia listę w `OnGet` , musi zmienić się, aby pasował do nowego interfejsu API. `NewsItems` Zamiast przypisania, należy wywołać `AddRange` , aby dodać elementy wiadomości do istniejącej listy:
+Naprawiono ostrzeżenie, ale wprowadzono błąd. Lista jest teraz **poprawna przez konstrukcję**, ale kod, który ustawia listę w `OnGet` , musi zmienić się, aby pasował do nowego interfejsu API. `NewsItems` Zamiast przypisania, należy wywołać `AddRange` , aby dodać elementy wiadomości do istniejącej listy:
 
 [!code-csharp[AddRange](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#AddRange)]
 

@@ -3,16 +3,17 @@ title: Co nowego w C# 7,0 — C# Przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji w wersji 7,0 C# języka.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 148ecdf7a3a99ac73132593272ecff3a5bb4195e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 0f26a9647503ebb667d961fefaa05a25a71ec6f5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105712"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926572"
 ---
 # <a name="whats-new-in-c-70"></a>Co nowego w C# 7,0
 
 C#7,0 dodaje wiele nowych funkcji do C# języka:
+
 - [`out`modyfikacj](#out-variables)
   - Można zadeklarować `out` wartości jako argumenty metody, gdzie są używane.
 - [Krotki](#tuples)
@@ -91,20 +92,20 @@ Więcej informacji na temat spójnych krotek można znaleźć w [artykule krotki
 
 ## <a name="discards"></a>Odrzucenia
 
-Często podczas dekonstruowania krotki lub wywoływania metody z `out` parametrami należy wymusić zdefiniowanie zmiennej, której wartość nie ma znaczenia, i nie zamierza się jej używać. C#dodaje obsługę odrzutów, aby obsłużyć ten scenariusz. Odrzucanie to zmienna tylko do zapisu, której nazwa `_` to (znak podkreślenia); można przypisać wszystkie wartości, które mają zostać odrzucone do pojedynczej zmiennej. Odrzucenie przypomina przypisaną zmienną; poza instrukcją przypisania nie można używać odrzucania w kodzie.
+Często podczas dekonstruowania krotki lub wywoływania metody z `out` parametrami należy wymusić zdefiniowanie zmiennej, której wartość nie ma znaczenia, i nie zamierza się jej używać. C#dodaje obsługę *odrzutów* , aby obsłużyć ten scenariusz. Odrzucanie to zmienna tylko do zapisu, której nazwa `_` to (znak podkreślenia); można przypisać wszystkie wartości, które mają zostać odrzucone do pojedynczej zmiennej. Odrzucenie przypomina przypisaną zmienną; poza instrukcją przypisania nie można używać odrzucania w kodzie.
 
 Odrzucenia są obsługiwane w następujących scenariuszach:
 
 - Podczas dekonstrukcji krotek lub typów zdefiniowanych przez użytkownika.
 - Podczas wywoływania metod z parametrami [out](../language-reference/keywords/out-parameter-modifier.md) .
-- W operacji dopasowania wzorca z instrukcjami with [](../language-reference/keywords/is.md) i [Switch](../language-reference/keywords/switch.md) .
+- W operacji dopasowania wzorca z instrukcjami with [i](../language-reference/keywords/is.md) [Switch](../language-reference/keywords/switch.md) .
 - Jako identyfikator autonomiczny, gdy chcesz jawnie określić wartość przypisania jako odrzucenie.
 
 W poniższym przykładzie zdefiniowano `QueryCityDataForYears` metodę, która zwraca 6-krotkę zawierającą dane dla miasta na dwa różne lata. Wywołanie metody w przykładzie jest rozważane tylko z dwiema wartościami populacji zwracanymi przez metodę i dlatego traktują pozostałe wartości w spójnej kolekcji jako odrzucane podczas dekonstruowania krotki.
 
 [!code-csharp[Tuple-discard](~/samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
-Aby uzyskać więcej informacji, [](../discards.md)Zobacz odrzucanie.
+Aby uzyskać więcej informacji, zobacz [odrzucanie](../discards.md).
 
 ## <a name="pattern-matching"></a>Dopasowanie do wzorca
 
@@ -166,7 +167,7 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
 - `case null:`jest wzorcem o wartości null.
 - `default:`jest znanym domyślnym przypadkiem.
 
-Więcej informacji na temat dopasowywania wzorców w [ C# ](../pattern-matching.md)programie można znaleźć w temacie.
+Więcej informacji na temat dopasowywania wzorców w [programie można znaleźć C#w temacie. ](../pattern-matching.md)
 
 ## <a name="ref-locals-and-returns"></a>Ref locales i Returns
 
@@ -193,7 +194,7 @@ C# Język ma kilka reguł, które chronią przed niektórymi `ref` niektórymi z
 
 Dodanie elementów lokalnych ref i Return ref umożliwia stosowanie algorytmów, które są bardziej wydajne przez uniknięcie kopiowania wartości lub wielokrotne wykonywanie operacji usuwania odwołań.
 
-Dodanie `ref` do wartości zwracanej jest zmianą zgodną ze [źródłem](version-update-considerations.md#source-compatible-changes). Istniejący kod kompiluje, ale zwracana wartość Ref jest kopiowana po przypisaniu. Obiekty wywołujące muszą zaktualizować magazyn dla wartości zwracanej do `ref` zmiennej lokalnej, aby można było przechowywać zwrot jako odwołanie.
+Dodanie `ref` do wartości zwracanej jest [zmianą zgodną ze źródłem](version-update-considerations.md#source-compatible-changes). Istniejący kod kompiluje, ale zwracana wartość Ref jest kopiowana po przypisaniu. Obiekty wywołujące muszą zaktualizować magazyn dla wartości zwracanej do `ref` zmiennej lokalnej, aby można było przechowywać zwrot jako odwołanie.
 
 Aby uzyskać więcej informacji, zobacz artykuł [słowo kluczowe ref](../language-reference/keywords/ref.md) .
 
@@ -214,7 +215,7 @@ Ta sama technika może być stosowana z `async` metodami, aby zapewnić, że wyj
 
 ## <a name="more-expression-bodied-members"></a>Więcej składowych wyrażeń
 
-C#6 wprowadzono [składowe z wyrażeniami](csharp-6.md#expression-bodied-function-members) dla funkcji Członkowskich i właściwości tylko do odczytu. C#7,0 rozwija dozwolone elementy członkowskie, które mogą być zaimplementowane jako wyrażenia. W C# 7,0 można zaimplementować konstruktory, *finalizatory* `get` i `set` metody dostępu do *Właściwości* i indeksatorów. Poniższy kod przedstawia przykłady każdego z nich:
+C#6 wprowadzono [składowe z wyrażeniami](csharp-6.md#expression-bodied-function-members) dla funkcji Członkowskich i właściwości tylko do odczytu. C#7,0 rozwija dozwolone elementy członkowskie, które mogą być zaimplementowane jako wyrażenia. W C# 7,0 można zaimplementować *konstruktory*, *finalizatory*i `get` `set` metody dostępu do *Właściwości* i *indeksatorów*. Poniższy kod przedstawia przykłady każdego z nich:
 
 [!code-csharp[ExpressionBodiedMembers](~/samples/snippets/csharp/new-in-7/expressionmembers.cs#ExpressionBodiedEverything "new expression-bodied members")]
 
@@ -223,7 +224,7 @@ C#6 wprowadzono [składowe z wyrażeniami](csharp-6.md#expression-bodied-functio
 
 Te nowe lokalizacje dla elementów członkowskich, których dotyczy wyrażenie, C# reprezentują ważne punkty kontrolne dla języka: Te funkcje zostały zaimplementowane przez członków społeczności pracujących w projekcie [Roslyn](https://github.com/dotnet/Roslyn) typu open source.
 
-Zmiana metody na wyrażenie składowane składowej jest zgodną [](version-update-considerations.md#binary-compatible-changes)z binarną zmianą.
+Zmiana metody na wyrażenie składowane składowej jest [zgodną z binarną zmianą](version-update-considerations.md#binary-compatible-changes).
 
 ## <a name="throw-expressions"></a>Wyrażenia throw
 

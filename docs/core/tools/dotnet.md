@@ -2,12 +2,12 @@
 title: dotnet — polecenie
 description: Dowiedz się więcej na temat polecenia dotnet (sterownika generycznego dla narzędzi interfejs wiersza polecenia platformy .NET Core) i jego użycia.
 ms.date: 06/04/2018
-ms.openlocfilehash: 328fd24cd72110bd235c177398f6f147fbb9d144
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 8de6a6f7e584dc472dc23d60f113b03610abb3ef
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373752"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926225"
 ---
 # <a name="dotnet-command"></a>dotnet — polecenie
 
@@ -94,6 +94,7 @@ Wyświetla zainstalowane zestawy SDK platformy .NET Core.
 `--roll-forward-on-no-candidate-fx <N>`
 
 Definiuje zachowanie, gdy wymagana architektura udostępniona jest niedostępna. `N` może być:
+
 - `0`-Wyłącz parzystą wersję pomocniczą do przodu.
 - `1`— Przewinięcie do wersji pomocniczej, ale nie w wersji głównej. Jest to zachowanie domyślne.
 - `2`— Przewinięcie do przodu w wersjach pomocniczych i głównych.

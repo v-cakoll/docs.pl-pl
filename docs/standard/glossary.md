@@ -3,12 +3,12 @@ title: Słownik platformy .NET
 description: Sprawdź znaczenie wybranych terminów używanych w dokumentacji programu .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: caff1ee4c8e3ad133016b774fdb235bd1ef59637
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: e1894d57a613531fecba6786529a735431d01423
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106924"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929079"
 ---
 # <a name="net-glossary"></a>Słownik platformy .NET
 
@@ -72,7 +72,7 @@ Zobacz [wprowadzenie do .NET Native i CoreRT](https://github.com/dotnet/corert/b
 
 Możliwość tworzenia i uruchamiania aplikacji, która może być używana w wielu różnych systemach operacyjnych, takich jak Linux, Windows i iOS, bez konieczności ponownego pisania dla każdej z nich. Umożliwia to ponowne użycie kodu i spójność między aplikacjami na różnych platformach.
 
-## <a name="ecosystem"></a>uwolnieni
+## <a name="ecosystem"></a>Uwolnieni
 
 Wszystkie oprogramowanie środowiska uruchomieniowego, narzędzia programistyczne i zasoby społeczności, które są używane do kompilowania i uruchamiania aplikacji dla danej technologii.
 
@@ -85,6 +85,7 @@ Termin "ekosystem .NET" różni się od podobnych warunków, takich jak "stos .N
 Ogólnie kompleksowe zbieranie interfejsów API, które ułatwiają tworzenie i wdrażanie aplikacji opartych na określonej technologii. W tym ogólnym sensie ASP.NET Core i Windows Forms są przykładami struktur aplikacji. Zobacz również [Biblioteka](#library).
 
 Słowo "Framework" ma bardziej charakterystyczne znaczenie techniczne w następujących warunkach:
+
 - [.NET Framework](#net-framework)
 - [Platforma docelowa](#target-framework)
 - [TFM (moniker struktury docelowej)](#tfm)
@@ -128,7 +129,7 @@ Przykłady implementacji platformy .NET:
 
 ## <a name="library"></a>biblioteka
 
-Kolekcja interfejsów API, które mogą być wywoływane przez aplikacje lub inne biblioteki. Biblioteka .NET składa się z co najmniej jednego [](#assembly)zestawu.
+Kolekcja interfejsów API, które mogą być wywoływane przez aplikacje lub inne biblioteki. Biblioteka .NET składa się z co najmniej jednego [zestawu.](#assembly)
 
 Słowa Library i [Framework](#framework) są często używane.
 
@@ -140,7 +141,7 @@ Zobacz [pakiety, aplikacje i struktury](../core/packages.md)
 
 ## <a name="mono"></a>Mono
 
-Mono to wieloplatformowa implementacja [](#cross-platform) platformy .NET, która jest używana głównie w przypadku, gdy wymagane jest małe środowisko uruchomieniowe. Jest to środowisko uruchomieniowe, które umożliwia aplikacjom platformy Xamarin w systemach Android, Mac, iOS, systemu tvOS i systemu watchOS i koncentruje się głównie na aplikacjach, które wymagają małego rozmiaru.
+Mono to [wieloplatformowa](#cross-platform) implementacja platformy .NET, która jest używana głównie w przypadku, gdy wymagane jest małe środowisko uruchomieniowe. Jest to środowisko uruchomieniowe, które umożliwia aplikacjom platformy Xamarin w systemach Android, Mac, iOS, systemu tvOS i systemu watchOS i koncentruje się głównie na aplikacjach, które wymagają małego rozmiaru.
 
 Obsługuje ona wszystkie aktualnie opublikowane wersje .NET Standard.
 
@@ -152,7 +153,7 @@ Aby dowiedzieć się więcej o programie mono, zobacz [dokumentację narzędzia 
 
 ## <a name="net"></a>.NET
 
-Termin parasol dla [.NET Standard](#net-standard) i wszystkie implementacje i obciążenia [platformy .NET](#implementation-of-net) . Zawsze wersaliki, nigdy ".NET".
+Termin parasol dla [.NET Standard](#net-standard) i wszystkie [implementacje i obciążenia platformy .NET](#implementation-of-net) . Zawsze wersaliki, nigdy ".NET".
 
 Zobacz [Przewodnik po platformie .NET](index.md)
 
@@ -254,7 +255,7 @@ Aplikacja lub biblioteka może być ukierunkowana na wersję .NET Standard (na p
 
 W przypadku niektórych platform docelowych (na przykład .NET Framework) dostępne interfejsy API są definiowane przez zestawy, które są instalowane przez implementację .NET w systemie, który może obejmować interfejsy API platformy aplikacji (na przykład ASP.NET, WinForms). W przypadku platform docelowych opartych na pakietach (takich jak .NET Standard i .NET Core) interfejsy API platformy są definiowane przez pakiety zainstalowane w aplikacji lub bibliotece. W takim przypadku platforma docelowa niejawnie określa pakiet, który odwołuje się do wszystkich pakietów, które razem tworzą strukturę.
 
-Zobacz [platformę](frameworks.md)docelową.
+Zobacz [platformę docelową](frameworks.md).
 
 ## <a name="tfm"></a>TFM
 
@@ -262,7 +263,7 @@ Moniker platformy docelowej.
 
 Standardowy format tokenu służący do określania docelowej platformy aplikacji lub biblioteki platformy .NET. Struktury docelowe są zwykle przywoływane przez krótką nazwę, na `net462`przykład. Long-form TFMs (na przykład. NETFramework, Version = 4.6.2) istnieje, ale nie są zwykle używane do określania platformy docelowej.
 
-Zobacz [platformę](frameworks.md)docelową.
+Zobacz [platformę docelową](frameworks.md).
 
 ## <a name="uwp"></a>Platforma UWP
 

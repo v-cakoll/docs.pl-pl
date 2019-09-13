@@ -5,18 +5,19 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 252d5f6655336669ba516393e17eb3d070611ea6
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: e10f09d3f7146817770e74aa173f742322aafafc
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849234"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926598"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Używanie generatora serializatorów Microsoft XML na platformie .NET Core
 
 W tym samouczku przedstawiono sposób użycia generatora serializatorów XML firmy Microsoft w C# aplikacji .NET Core. W ramach tego samouczka nauczysz się:
 
 > [!div class="checklist"]
+>
 > * Jak utworzyć aplikację platformy .NET Core
 > * Jak dodać odwołanie do pakietu Microsoft. XmlSerializer. Generator
 > * Jak edytować MojaApl. csproj, aby dodać zależności
@@ -120,6 +121,7 @@ Jeśli wszystko powiedzie się, zestaw o nazwie *MojaApl. XmlSerializers. dll* j
 
 Gratulacje! Masz właśnie:
 > [!div class="checklist"]
+>
 > * Utworzono aplikację platformy .NET Core.
 > * Dodano odwołanie do pakietu Microsoft. XmlSerializer. Generator.
 > * Edycja programu MojaApl. csproj w celu dodania zależności.

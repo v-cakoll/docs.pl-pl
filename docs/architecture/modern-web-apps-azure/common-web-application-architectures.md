@@ -4,12 +4,12 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e257410c51d70af31b565d99a8d28ef82ce681d7
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: a521be147c462146775caa81b6a31fb37b4103af
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373797"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926679"
 ---
 # <a name="common-web-application-architectures"></a>Typowe architektury aplikacji internetowych
 
@@ -292,16 +292,17 @@ Należy pamiętać, że uruchomione kontenery platformy Docker mogą być powią
 Jeśli chcesz dodać obsługę platformy Docker do aplikacji przy użyciu programu Visual Studio, upewnij się, że program Docker Desktop jest uruchomiony, gdy to zrobisz. Kreator nie będzie działać prawidłowo, jeśli program Docker Desktop nie zostanie uruchomiony po uruchomieniu kreatora. Ponadto Kreator sprawdza bieżący kontener, aby dodać poprawną obsługę platformy Docker. Jeśli chcesz dodać obsługę kontenerów systemu Windows, musisz uruchomić kreatora, gdy pulpit platformy Docker jest uruchomiony z skonfigurowanymi kontenerami systemu Windows. Jeśli chcesz dodać obsługę kontenerów systemu Linux, uruchom kreatora, gdy zainstalowano Aparat Docker z skonfigurowanymi kontenerami systemu Linux.
 
 ### <a name="references--common-web-architectures"></a>Odwołania — wspólne architektury sieci Web
-> - **Czysta architektura**  
->   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
-> - **Architektura cebuli**  
->   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
-> - **Wzorzec repozytorium**  
->   <https://deviq.com/repository-pattern/>
-> - **Przykład czystego rozwiązania architektury**  
->   <https://github.com/ardalis/cleanarchitecture>
-> - **Tworzenie architektury książki elektronicznej mikrousług**  
->   <https://aka.ms/MicroservicesEbook>
+
+- **Czysta architektura**  
+  <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
+- **Architektura cebuli**  
+  <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
+- **Wzorzec repozytorium**  
+  <https://deviq.com/repository-pattern/>
+- **Przykład czystego rozwiązania architektury**  
+  <https://github.com/ardalis/cleanarchitecture>
+- **Tworzenie architektury książki elektronicznej mikrousług**  
+  <https://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
 >[Poprzedni](architectural-principles.md)Następny

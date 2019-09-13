@@ -4,12 +4,12 @@ description: W tym samouczku przedstawiono sposób tworzenia modelu regresji prz
 ms.date: 05/09/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: fe3afab4cbd3f77ed4498cc5081180910d7d0b9e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: c9bf91ce5188a512524337f981366040ec09f6f6
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666624"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929449"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Samouczek: Przewidywanie cen przy użyciu regresji z ML.NET
 
@@ -17,6 +17,7 @@ W tym samouczku przedstawiono sposób tworzenia [modelu regresji](../resources/g
 
 Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
+>
 > * Przygotuj i poznanie danych
 > * Załaduj i Przekształć dane
 > * Wybierz algorytm uczenia
@@ -36,7 +37,7 @@ Ten samouczek zawiera informacje na temat wykonywania następujących czynności
 
 1. Zainstaluj pakiet NuGet **Microsoft.ml** :
 
-    W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz kartę **Przeglądaj** , wyszukaj pozycję **Microsoft.ml**, wybierz pakiet z listy, a następnie wybierz przycisk **Instaluj** . Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian** , a następnie wybierz przycisk Akceptuję w oknie dialogowym **akceptacji licencji** , jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów. Wykonaj te same czynności dla pakietu NuGet **Microsoft. ml. FastTree** .
+    W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz kartę **Przeglądaj** , wyszukaj pozycję **Microsoft.ml**, wybierz pakiet z listy, a następnie wybierz przycisk **Instaluj** . Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian** , a następnie **Wybierz przycisk** Akceptuję w oknie dialogowym **akceptacji licencji** , jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów. Wykonaj te same czynności dla pakietu NuGet **Microsoft. ml. FastTree** .
 
 ## <a name="prepare-and-understand-the-data"></a>Przygotuj i poznanie danych
 
@@ -133,17 +134,17 @@ W miarę jak ma być przewidywana taryfa za podróż `FareAmount` , kolumna `Lab
 
 [!code-csharp[CopyColumnsEstimator](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#7 "Use the CopyColumnsEstimator")]
 
-Algorytm, który pociąga za ten model, wymaga funkcji liczbowych, dlatego należy przekształcić wartości`VendorId`danych `RateCode`kategorii ( `PaymentType`, i) na liczby`VendorIdEncoded`( `RateCodeEncoded`, i `PaymentTypeEncoded`). W tym celu należy użyć klasy transformacji [OneHotEncodingTransformer](xref:Microsoft.ML.Transforms.OneHotEncodingTransformer) , która przypisuje różne wartości klucza liczbowego do różnych wartości w każdej z kolumn, a następnie Dodaj następujący kod:
+Algorytm, który pociąga za ten model, wymaga funkcji **liczbowych** , dlatego należy przekształcić wartości`VendorId`danych `RateCode`kategorii ( `PaymentType`, i) na liczby`VendorIdEncoded`( `RateCodeEncoded`, i `PaymentTypeEncoded`). W tym celu należy użyć klasy transformacji [OneHotEncodingTransformer](xref:Microsoft.ML.Transforms.OneHotEncodingTransformer) , która przypisuje różne wartości klucza liczbowego do różnych wartości w każdej z kolumn, a następnie Dodaj następujący kod:
 
 [!code-csharp[OneHotEncodingEstimator](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#8 "Use the OneHotEncodingEstimator")]
 
-Ostatnim krokiem w przygotowaniu danych jest połączenie wszystkich kolumn funkcji w kolumnie **funkcje** przy użyciu `mlContext.Transforms.Concatenate` klasy transformacji. Domyślnie algorytm uczenia przetwarza tylko funkcje z kolumny Features . Dodaj następujący kod:
+Ostatnim krokiem w przygotowaniu danych jest połączenie wszystkich kolumn funkcji w kolumnie **funkcje** przy użyciu `mlContext.Transforms.Concatenate` klasy transformacji. Domyślnie algorytm uczenia przetwarza tylko funkcje z kolumny **Features** . Dodaj następujący kod:
 
 [!code-csharp[ColumnConcatenatingEstimator](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#9 "Use the ColumnConcatenatingEstimator")]
 
 ## <a name="choose-a-learning-algorithm"></a>Wybierz algorytm uczenia
 
-Ten problem polega na przewidywaniu opłaty za podróż z taksówką w Nowym Jorku. Na pierwszy rzut oka może wydawać się, że zależy tylko od podróży. Jednak dostawcy taksówki w Nowym Jorku naliczane są różne kwoty dla innych czynników, takich jak dodatkowe pasażerowie lub płacisz kartą kredytową zamiast gotówki. Chcesz przewidzieć wartość ceny, która jest wartością rzeczywistą, opartą na innych czynnikach w zestawie danych. W tym celu należy wybrać zadanie uczenia maszynowego. [](../resources/glossary.md#regression)
+Ten problem polega na przewidywaniu opłaty za podróż z taksówką w Nowym Jorku. Na pierwszy rzut oka może wydawać się, że zależy tylko od podróży. Jednak dostawcy taksówki w Nowym Jorku naliczane są różne kwoty dla innych czynników, takich jak dodatkowe pasażerowie lub płacisz kartą kredytową zamiast gotówki. Chcesz przewidzieć wartość ceny, która jest wartością rzeczywistą, opartą na innych czynnikach w zestawie danych. W tym celu należy wybrać zadanie uczenia [maszynowego](../resources/glossary.md#regression) .
 
 Dołącz zadanie uczenia maszynowego [FastTreeRegressionTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer) do definicji transformacji danych, dodając następujący kod jako następny wiersz kodu w `Train()`:
 
@@ -269,6 +270,7 @@ Gratulacje! Pomyślnie skompilowano model uczenia maszynowego na potrzeby przewi
 W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 
 > [!div class="checklist"]
+>
 > * Przygotuj i poznanie danych
 > * Tworzenie potoku uczenia
 > * Załaduj i Przekształć dane

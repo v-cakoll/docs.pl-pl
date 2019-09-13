@@ -2,12 +2,12 @@
 title: Wdrażanie istniejących aplikacji .NET jako kontenerów systemu Windows
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Wdrażanie istniejących aplikacji .NET jako kontenerów systemu Windows
 ms.date: 04/29/2018
-ms.openlocfilehash: 4d58be828418abe4964e26a983f194fd5d30b93d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: d48acbb2e1c4858bf3146318f70dd7b8a7b62918
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374024"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926486"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Wdrażanie istniejących aplikacji .NET jako kontenerów systemu Windows
 
@@ -143,6 +143,7 @@ Jednak w przypadku środowiska wdrażania produkcyjnego, a nawet środowisk do t
 **Rysunek 4.7.5.** Ekosystem kontenera na platformie Azure
 
 Z ekosystemu kontenerów na platformie Azure następujące produkty obsługujące kontenery, które są uważane za infrastrukturę:
+
 - **Usługa Azure Container Instances (ACI)**
 - **Virtual Machines platformy Azure** (Z obsługą kontenera)
 - **Virtual Machine Scale Sets platformy Azure** (Z obsługą kontenera)

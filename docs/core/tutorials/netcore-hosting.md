@@ -4,12 +4,12 @@ description: Dowiedz się, jak hostować środowisko uruchomieniowe platformy .N
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 1f04ccfa56c399a4dba003ec0de8a87f888ef848
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 528d46f64c424dd0f58e57891c605ac5ab474240
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849331"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925935"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Napisz niestandardowego hosta .NET Core, aby kontrolować środowisko uruchomieniowe platformy .NET z kodu natywnego
 
@@ -44,6 +44,7 @@ Poniższe kroki szczegółowo opisują sposób użycia `nethost` bibliotek `host
 ### <a name="step-1---load-hostfxr-and-get-exported-hosting-functions"></a>Krok 1. Załaduj HostFxr i uzyskaj wyeksportowane funkcje hostingu
 
 `nethost` Biblioteka zawiera`hostfxr` funkcję do lokalizowania biblioteki. `get_hostfxr_path` `hostfxr` Biblioteka udostępnia funkcje do hostowania środowiska uruchomieniowego platformy .NET Core. Pełną listę funkcji można znaleźć w [`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) dokumencie, a [natywny dokument projektu hostingu](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/native-hosting.md). W przykładzie i w tym samouczku są używane następujące elementy:
+
 * `hostfxr_initialize_for_runtime_config`: Inicjuje kontekst hosta i przygotowuje się do inicjalizacji środowiska uruchomieniowego platformy .NET Core przy użyciu określonej konfiguracji środowiska uruchomieniowego.
 * `hostfxr_get_runtime_delegate`: Pobiera delegata dla funkcji środowiska uruchomieniowego.
 * `hostfxr_close`: Zamyka kontekst hosta.

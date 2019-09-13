@@ -1,45 +1,46 @@
 ---
-title: Jak używać strukturze ML.NET automatyczne interfejsu API uczenia Maszynowego
-description: Strukturze ML.NET automatyczne interfejsu API uczenia Maszynowego automatyzuje modelu proces tworzenia i generuje gotowe do wdrożenia modelu. Dowiedz się, opcje, które umożliwiają skonfigurowanie automatycznych usługi machine learning zadania.
+title: Jak korzystać z interfejsu API zautomatyzowanej ML.NET ML
+description: Interfejs API zautomatyzowanej sieci ML.NET automatyzuje proces tworzenia modelu i generuje model gotowy do wdrożenia. Informacje na temat opcji, których można użyć do konfigurowania automatycznych zadań uczenia maszynowego.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: d624b999384dd92d41033e385d01fe556e10a065
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 02e4203b0d9f388c7bd7133f3cd4e97cc60cff14
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960417"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929391"
 ---
-# <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Jak używać strukturze ML.NET automatyczne interfejsu API usługi machine learning
+# <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Jak korzystać z interfejsu API automatycznego uczenia maszynowego ML.NET
 
-Automatyczne usługi machine learning (AutoML) automatyzuje proces stosowania uczenia maszynowego do danych. Biorąc pod uwagę zestaw danych, możesz uruchomić AutoML **eksperymentować** Iterowanie featurizations różnych danych, maszyny algorytmów uczenia i hiperparametrów, aby wybrać najlepszy model.
+Automatyczne Uczenie maszynowe (AutoML) automatyzuje proces stosowania uczenia maszynowego do danych. Mając zestaw danych, można uruchomić **eksperyment** AutoML, aby wykonać iterację różnych danych featurizations, algorytmów uczenia maszynowego i parametrów do wybierania najlepszego modelu.
 
 > [!NOTE]
-> W tym temacie odnosi się do automatycznego machine learning API dla strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej. Materiał może ulec zmianie.
+> Ten temat odnosi się do zautomatyzowanego interfejsu API uczenia maszynowego dla usługi ML.NET, który jest obecnie w wersji zapoznawczej. Materiał może ulec zmianie.
 
 ## <a name="load-data"></a>Ładowanie danych
 
-Automatyczne usługi machine learning obsługuje ładowanie zestawu danych do [IDataView](xref:Microsoft.ML.IDataView). Dane mogą być w formie plików wartości rozdzielane tabulatorami (TSV) i plików rozdzielanych przecinkami (CSV).
+Automatyczne Uczenie maszynowe obsługuje ładowanie zestawu danych do [IDataView](xref:Microsoft.ML.IDataView). Dane mogą mieć postać plików z wartościami rozdzielanymi tabulatorami (TSV) i plików z wartościami rozdzielanymi przecinkami (CSV).
 
 Przykład:
 
 ```csharp
 using Microsoft.ML;
 using Microsoft.ML.AutoML;
-    ...
+    // ...
     MLContext mlContext = new MLContext();
     IDataView trainDataView = mlContext.Data.LoadFromTextFile<SentimentIssue>("my-data-file.csv", hasHeader: true);
 ```
 
 ## <a name="select-the-machine-learning-task-type"></a>Wybierz typ zadania uczenia maszynowego
-Przed utworzeniem eksperymentu, należy określić rodzaj maszyny nauczanym problemem, który chcesz rozwiązać. Automatyczne machine learning obsługuje następujące zadania uczenia Maszynowego:
+Przed utworzeniem eksperymentu należy określić rodzaj problemu z uczeniem maszynowym, który ma zostać rozwiązany. Automatyczne Uczenie maszynowe obsługuje następujące zadania w ML:
+
 * Klasyfikacja binarna
-* Wieloklasowej klasyfikacji
+* Klasyfikacja wieloklasowa
 * Regresji
 
 ## <a name="create-experiment-settings"></a>Utwórz ustawienia eksperymentu
 
-Tworzenie eksperymentu ustawień dla określonego typu zadania uczenia Maszynowego:
+Utwórz ustawienia eksperymentu dla typu zadania o określonej ML:
 
 * Klasyfikacja binarna
 
@@ -47,7 +48,7 @@ Tworzenie eksperymentu ustawień dla określonego typu zadania uczenia Maszynowe
   var experimentSettings = new BinaryExperimentSettings();
   ```
 
-* Wieloklasowej klasyfikacji
+* Klasyfikacja wieloklasowa
 
   ```csharp
   var experimentSettings = new MulticlassExperimentSettings();
@@ -61,17 +62,17 @@ Tworzenie eksperymentu ustawień dla określonego typu zadania uczenia Maszynowe
 
 ## <a name="configure-experiment-settings"></a>Konfigurowanie ustawień eksperymentu
 
-Eksperymenty są wysoce konfigurowalne. Zobacz [dokumentacji interfejsu API AutoML](https://docs.microsoft.com/dotnet/api/?view=automl-dotnet) poznania pełnej listy ustawień konfiguracji.
+Eksperymenty są wysoce konfigurowalne. Zobacz dokumentację [interfejsu API AutoML](https://docs.microsoft.com/dotnet/api/?view=automl-dotnet) , aby uzyskać pełną listę ustawień konfiguracji.
 
 Oto niektóre przykłady:
 
-1. Określ maksymalny czas, w którym można uruchamiać eksperymentu.
+1. Określ maksymalny czas działania eksperymentu.
 
     ```csharp
     experimentSettings.MaxExperimentTimeInSeconds = 3600;
     ```
 
-1. Użyj token anulowania do anulowania doświadczenia, zanim jest zaplanowane na zakończenie.
+1. Użyj tokenu anulowania, aby anulować eksperyment przed zaplanowaniem jego zakończenia.
 
     ```csharp
     experimentSettings.CancellationToken = cts.Token;
@@ -87,15 +88,15 @@ Oto niektóre przykłady:
     experimentSettings.OptimizingMetric = RegressionMetric.MeanSquaredError;
     ```
 
-1. `CacheDirectory` Ustawienie jest wskaźnikiem do katalogu, w którym zostaną zapisane wszystkie modele skonfigurowanych pod kątem podczas wykonywania zadania AutoML. Jeśli `CacheDirectory` jest ustawiona na wartość null, modele będą przechowywane w pamięci, a nie zapisane na dysku.
+1. `CacheDirectory` Ustawienie to wskaźnik do katalogu, w którym wszystkie modele przeszkolone podczas zadania AutoML zostaną zapisane. Jeśli `CacheDirectory` jest ustawiona na wartość null, modele będą przechowywane w pamięci zamiast zapisywać na dysku.
  
     ```csharp
     experimentSettings.CacheDirectory = null;
     ```
 
-1. Poinstruuj ML automatycznego nie należy używać niektórych instruktorów.
+1. Poinstruuj zautomatyzowany ML, aby nie używać niektórych instruktorów.
 
-    Domyślną listę instruktorów, aby zoptymalizować zbadano poszczególnych zadań. Dla każdego doświadczenia można zmodyfikować tej listy. Na przykład można usunąć z listy instruktorów, które spowolnienie działania na twoim zestawie danych. Do optymalizacji na jedno wywołanie dla określonych trenerów `experimentSettings.Trainers.Clear()`, następnie dodać instruktora, którego chcesz używać.
+    Domyślna lista instruktorów do optymalizacji są zbadane według poszczególnych zadań. Tę listę można modyfikować dla każdego eksperymentu. Na przykład, instruktorzy, którzy działają wolno w zestawie danych, można usunąć z listy. Aby zoptymalizować na jednym konkretnym wywołaniu `experimentSettings.Trainers.Clear()`Trainer, Dodaj Trainer, którego chcesz użyć.
 
     ```csharp
     var experimentSettings = new RegressionExperimentSettings();
@@ -103,21 +104,22 @@ Oto niektóre przykłady:
     experimentSettings.Trainers.Remove(RegressionTrainer.OnlineGradientDescent);
     ```
 
-Lista obsługiwanych Instruktorzy każdego zadania uczenia Maszynowego znajduje się w temacie odpowiednie łącze poniżej:
-* [Obsługiwane algorytmy Klasyfikacja binarna](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
-* [Obsługiwane algorytmy Wieloklasowej klasyfikacji](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
-* [Regresja obsługiwane algorytmy](xref:Microsoft.ML.AutoML.RegressionTrainer)
+Listę obsługiwanych zadań instruktorów na ML można znaleźć w odpowiadającym jej poniższym łączu:
 
-## <a name="optimizing-metric"></a>Optymalizacja metryki
+* [Obsługiwane algorytmy klasyfikacji binarnej](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
+* [Obsługiwane algorytmy klasyfikacji wieloklasowej](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
+* [Obsługiwane algorytmy regresji](xref:Microsoft.ML.AutoML.RegressionTrainer)
 
-Optymalizacja metryki, jak pokazano w przykładzie powyżej, określa metryki można optymalizować podczas uczenia modelu. Optymalizacja metryki, które można wybrać, jest określana przez typ zadania, które wybierzesz. Poniżej znajduje się lista dostępnych metryk.
+## <a name="optimizing-metric"></a>Optymalizowanie metryki
 
-|[Klasyfikacja binarna](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Wieloklasowej klasyfikacji](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Regression](xref:Microsoft.ML.AutoML.RegressionMetric)
+Metryka optymalizacji, jak pokazano w powyższym przykładzie, określa metrykę do zoptymalizowania podczas uczenia modelu. Metryka optymalizacji, którą można wybrać, zależy od wybranego typu zadania. Poniżej znajduje się lista dostępnych metryk.
+
+|[Klasyfikacja binarna](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Klasyfikacja wieloklasowa](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Regression](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
-|dokładność| LogLoss | RSquared
+|odpowiedni| LogLoss | RSquared
 |AreaUnderPrecisionRecallCurve | LogLossReduction | MeanAbsoluteError
 |AreaUnderRocCurve | MacroAccuracy | MeanSquaredError
-|F1Score | MicroAccuracy | RootMeanSquaredError
+|F1Score | Mikrodokładność | RootMeanSquaredError
 |NegativePrecision | TopKAccuracy
 |NegativeRecall |
 |PositivePrecision
@@ -125,33 +127,33 @@ Optymalizacja metryki, jak pokazano w przykładzie powyżej, określa metryki mo
 
 ## <a name="data-pre-processing-and-featurization"></a>Wstępne przetwarzanie danych i cechowania
 
-Przetwarzanie wstępne danych miały domyślnie, a poniższe kroki są wykonywane automatycznie dla Ciebie:
+Przetwarzanie wstępne danych odbywa się domyślnie, a następujące kroki są wykonywane automatycznie:
 
-1. Upuszczanie funkcji żadnych użytecznych informacji
+1. Funkcje upuszczania bez użytecznych informacji
 
     Usuwanie funkcji żadnych użytecznych informacji z zestawów szkolenia i sprawdzania poprawności. Obejmują one funkcje wszystkich wartości Brak, tę samą wartość we wszystkich wierszach lub bardzo dużej kardynalności (np. skróty, lub identyfikatory GUID).
 
-1. Brak wskazania wartość i przypisywania
+1. Brak wskazania wartości i nie należy ich przypisywaniu
 
-    Wypełnienie brakujących wartości komórek z wartością domyślną dla typu danych. Dołącz wskaźnik funkcji, korzystając z taką samą liczbę miejsc, jako kolumna danych wejściowych. Wartość w funkcji dołączonych wskaźnik jest `1` Jeśli brakuje wartości w kolumnie wejściowej i `0` inaczej.
+    Wypełnij brakujące komórki wartości wartością domyślną dla typu danych. Dołącz funkcje wskaźnika z taką samą liczbą gniazd jak w przypadku kolumny wejściowej. Wartość w funkcjach dołączanych wskaźników jest `1` w przypadku braku wartości w kolumnie wejściowej i `0` w przeciwnym razie.
 
 1. Generuj dodatkowe funkcje
     
-    Funkcje tekstowe: Funkcje zbioru programu word za pomocą unigrams i tri znak g.
+    Dla funkcji tekstowych: Funkcje zbioru słów korzystające z unigrams i Tri-Character-Grams.
     
-    Podzielone na kategorie funkcji: Jeden hot-hash kodowanie funkcji podzielonych na kategorie wysoka Kardynalność klauzuli i hot jeden kodowania dla funkcji Kardynalność niski.
+    Dla funkcji kategorii: Jednostronicowe kodowanie dla funkcji niskiej kardynalności i jednostronicowe kodowanie dla funkcji kategorii wysoka Kardynalność.
 
 1. Przekształcenia i kodowania
 
-    Funkcje tekstowe z bardzo niewielkiej liczbie unikatowych wartości przekształcone w kategorii funkcji. W zależności od kardynalności kategorii funkcji należy wykonać hot jeden kodowania lub hot jeden skrót kodowania.
+    Funkcje tekstowe z bardzo kilkoma unikatowymi wartościami przekształconymi na funkcje kategorii. W zależności od kardynalności funkcji kategorii należy wykonać jedno-gorąca lub jednostronicowe kodowanie skrótu.
 
 ## <a name="exit-criteria"></a>Kryteria wyjścia
 
-Określ kryteria do ukończenia zadania:
+Zdefiniuj kryteria, aby ukończyć zadanie:
 
-1. Zakończ po przez długi czas — przy użyciu `MaxExperimentTimeInSeconds` w ustawieniach eksperymentu można zdefiniować, jak długo w ciągu kilku sekund, które zadania powinny nadal działać.
+1. Zakończ po upływie długiego czasu `MaxExperimentTimeInSeconds` w ustawieniach eksperymentu możesz określić, jak długo w sekundach ma być nadal wykonywane zadanie.
 
-1. Zakończ token anulowania — mogą używać token anulowania, który pozwala anulować zadania, zanim jest zaplanowane na zakończenie.
+1. Wyjście z tokenu anulowania — można użyć tokenu anulowania, który umożliwia anulowanie zadania przed jego zaplanowaniem.
 
     ```csharp
     var cts = new CancellationTokenSource();
@@ -162,7 +164,7 @@ Określ kryteria do ukończenia zadania:
 
 ## <a name="create-an-experiment"></a>Tworzenie eksperymentu
 
-Po skonfigurowaniu ustawień eksperymentu, możesz przystąpić do tworzenia eksperymentu.
+Po skonfigurowaniu ustawień eksperymentu możesz przystąpić do tworzenia eksperymentu.
 
 ```csharp
 RegressionExperiment experiment = mlContext.Auto().CreateRegressionExperiment(experimentSettings);
@@ -170,20 +172,20 @@ RegressionExperiment experiment = mlContext.Auto().CreateRegressionExperiment(ex
 
 ## <a name="run-the-experiment"></a>Uruchamianie eksperymentu
 
-Uruchamianie eksperymentu danych wyzwalaczy przetwarzania wstępnego, algorytm wybór i strojenia hiperparametrycznego uczenia. AutoML będą w dalszym ciągu kombinacji cechowania, algorytmów uczenia i hiperparametrów aż do wygenerowania `MaxExperimentTimeInSeconds` osiągnięciu lub eksperymentu zostanie zakończony.
+Uruchamianie eksperymentu wyzwala wstępne przetwarzanie danych, wybór algorytmu uczenia i dostrajanie parametrów. AutoML będzie nadal generować kombinacje algorytmów cechowania, uczenia i parametrów do momentu `MaxExperimentTimeInSeconds` osiągnięcia lub eksperymentu.
 
 ```csharp
 ExperimentResult<RegressionMetrics> experimentResult = experiment
     .Execute(trainingDataView, LabelColumnName, progressHandler: progressHandler);
 ```
 
-Poznaj inne przeciążenia `Execute()` jeśli mają być przekazywane sprawdzania poprawności danych, wskazując przeznaczenie kolumny lub prefeaturizers informacji o kolumnie.
+Zapoznaj się z `Execute()` innymi przeciążeniami, jeśli chcesz przekazać dane sprawdzania poprawności, informacje o kolumnie wskazujące cel kolumny lub prefeaturizers.
 
-## <a name="training-modes"></a>Tryby szkolenia
+## <a name="training-modes"></a>Tryby szkoleniowe
 
 ### <a name="training-dataset"></a>Zestaw danych szkoleniowych
 
-AutoML zapewnia przeciążone eksperymentu Wykonaj metodę, która umożliwia przekazanie danych szkoleniowych. Wewnętrznie zautomatyzowane ML dzieli dane na train-validate dzieli dane.
+AutoML zapewnia przeciążoną metodę wykonywania eksperymentu, która umożliwia dostarczanie danych szkoleniowych. Wewnętrznie, zautomatyzowanej ML dzieli dane na pociąg-Validate Splits.
 
 ```csharp
 experiment.Execute(trainDataView);   
@@ -191,7 +193,7 @@ experiment.Execute(trainDataView);
 
 ### <a name="custom-validation-dataset"></a>Zestaw niestandardowego sprawdzania poprawności danych
 
-Użyj zestawu niestandardowego sprawdzania poprawności danych, jeśli losowe podziału nie jest dopuszczalne, tak jak zwykle w przypadku przy użyciu danych szeregów czasowych. Można określić własnego zestawu danych walidacji. Model zostaną ocenione względem zestawu danych walidacji, zamiast jednego lub więcej losowych zestawów danych.
+Użyj niestandardowego zestawu danych walidacji, jeśli podział losowy nie jest akceptowalny, jak zwykle jest to przypadek z danymi szeregów czasowych. Można określić własnego zestawu danych walidacji. Model zostanie oceniony względem określonego zestawu danych walidacji, a nie do co najmniej jednego losowo ustawionego typu danych.
 
 ```csharp
 experiment.Execute(trainDataView, validationDataView);   
@@ -199,9 +201,9 @@ experiment.Execute(trainDataView, validationDataView);
 
 ## <a name="explore-model-metrics"></a>Eksplorowanie metryk modelu
 
-Po każdej iteracji eksperymentu uczenia Maszynowego metryki odnoszące się do tego zadania są przechowywane.
+Po każdej iteracji eksperymentu ML są przechowywane metryki dotyczące tego zadania.
 
-Na przykład firma Microsoft jest dostępna metryki weryfikacji najlepszy przebieg:
+Można na przykład uzyskać dostęp do metryk walidacji z najlepszego przebiegu:
 
 ```csharp
 RegressionMetrics metrics = experimentResult.BestRun.ValidationMetrics;
@@ -209,11 +211,12 @@ Console.WriteLine($"R-Squared: {metrics.RSquared:0.##}");
 Console.WriteLine($"Root Mean Squared Error: {metrics.RootMeanSquaredError:0.##}");
 ```
 
-Poniżej wymieniono wszystkie dostępne metryki dla zadania uczenia Maszynowego:
-* [Klasyfikacja binarna metryki](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
+Poniżej znajdują się wszystkie dostępne metryki na ML zadania:
+
+* [Metryki klasyfikacji binarnej](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
 * [Metryki klasyfikacji wieloklasowej](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
 * [Metryki regresji](xref:Microsoft.ML.AutoML.RegressionMetric)
 
 ## <a name="see-also"></a>Zobacz także
 
-Przykłady pełnego kodu i nie tylko można znaleźć [machinelearning-dotnet-samples](https://github.com/dotnet/machinelearning-samples/tree/master#automate-mlnet-models-generation-preview-state) repozytorium GitHub.
+Aby uzyskać pełne przykłady kodu i więcej informacji, odwiedź repozytorium [dotnet/machinelearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master#automate-mlnet-models-generation-preview-state) w witrynie GitHub.

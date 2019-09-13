@@ -2,12 +2,12 @@
 title: Przepływy transakcji do i z usług przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: ae99c53bbb859f3ade075d4d60ad2ae7e5e7272b
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: db1a1ef6bcf3f048584b39450c90fac3ff35646b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988809"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70893373"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Przepływy transakcji do i z usług przepływu pracy
 Usługi przepływu pracy i klienci mogą uczestniczyć w transakcjach.  Aby operacja usługi stała się częścią otoczenia transakcji, umieść <xref:System.ServiceModel.Activities.Receive> działanie <xref:System.ServiceModel.Activities.TransactedReceiveScope> w ramach działania. Wszystkie wywołania wykonane przez <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.SendReply> lub działania w ramach <xref:System.ServiceModel.Activities.TransactedReceiveScope> programu zostaną również wykonane w obrębie transakcji otoczenia. Aplikacja kliencka przepływu pracy może utworzyć otoczenia transakcji przy użyciu <xref:System.Activities.Statements.TransactionScope> operacji działania i wywołania usługi przy użyciu transakcji otoczenia. W tym temacie omówiono tworzenie usługi przepływu pracy i klienta przepływu pracy, który uczestniczy w transakcjach.  
@@ -37,7 +37,7 @@ Usługi przepływu pracy i klienci mogą uczestniczyć w transakcjach.  Aby oper
   
 3. Dodaj nową klasę o nazwie `PrintTransactionInfo` `Common` do projektu. Ta klasa jest pochodną <xref:System.Activities.NativeActivity> i <xref:System.Activities.NativeActivity.Execute%2A> przeciążania metody.  
   
-    ```  
+    ```csharp
     using System;  
     using System;  
     using System.Activities;  
@@ -72,7 +72,7 @@ Usługi przepływu pracy i klienci mogą uczestniczyć w transakcjach.  Aby oper
     }  
     ```  
   
-     Jest to działanie natywne, które wyświetla informacje o otaczającej transakcji i jest używane w przepływach pracy usługi i klienta używanych w tym temacie. Skompiluj rozwiązanie, aby to działanie było dostępne w sekcji **wspólne** w przyborniku.  
+     Jest to działanie natywne, które wyświetla informacje o otaczającej transakcji i jest używane w przepływach pracy usługi i klienta używanych w tym temacie. Skompiluj rozwiązanie, aby to działanie było dostępne w sekcji **wspólne** w **przyborniku**.  
   
 ### <a name="implement-the-workflow-service"></a>Implementowanie usługi przepływu pracy  
   
@@ -86,7 +86,7 @@ Usługi przepływu pracy i klienci mogą uczestniczyć w transakcjach.  Aby oper
   
      ! [Dodawanie działania WriteLine do działania sekwencyjnego usługi (./Media/Flowing-Transactions-into-and-out-of-Workflow-Services/Add-WriteLine-Sequential-Service.jpg)  
   
-4. Przeciągnij i upuść <xref:System.ServiceModel.Activities.TransactedReceiveScope> <xref:System.Activities.Statements.WriteLine> po działaniu. Działanie można znaleźć w sekcji **komunikaty** w przyborniku. <xref:System.ServiceModel.Activities.TransactedReceiveScope> Działanie składa się z dwóch sekcji **żądania** i **treści.** <xref:System.ServiceModel.Activities.TransactedReceiveScope> Sekcja **żądania** zawiera <xref:System.ServiceModel.Activities.Receive> działanie. Sekcja **treść** zawiera działania, które należy wykonać w ramach transakcji po odebraniu komunikatu.  
+4. Przeciągnij i upuść <xref:System.ServiceModel.Activities.TransactedReceiveScope> <xref:System.Activities.Statements.WriteLine> po działaniu. Działanie można znaleźć w sekcji komunikaty w **przyborniku**. <xref:System.ServiceModel.Activities.TransactedReceiveScope> Działanie składa się z dwóch sekcji **żądania** i **treści.** <xref:System.ServiceModel.Activities.TransactedReceiveScope> Sekcja **żądania** zawiera <xref:System.ServiceModel.Activities.Receive> działanie. Sekcja **treść** zawiera działania, które należy wykonać w ramach transakcji po odebraniu komunikatu.  
   
      ![Dodawanie działania TransactedReceiveScope](./media/flowing-transactions-into-and-out-of-workflow-services/transactedreceivescope-activity.jpg)  
   
@@ -223,8 +223,8 @@ Usługi przepływu pracy i klienci mogą uczestniczyć w transakcjach.  Aby oper
   
 2. Otwórz wygenerowany plik Program.cs i następujący kod:  
   
-    ```  
-    static void Main()  
+    ```csharp
+          static void Main()  
           {  
               Console.WriteLine("Building the server.");  
               using (WorkflowServiceHost host = new WorkflowServiceHost(new DeclarativeServiceWorkflow(), new Uri("net.tcp://localhost:8000/TransactedReceiveService/Declarative")))  
@@ -263,8 +263,8 @@ Usługi przepływu pracy i klienci mogą uczestniczyć w transakcjach.  Aby oper
   
 2. Otwórz plik program.cs i Dodaj następujący kod.  
   
-    ```  
-    class Program  
+    ```csharp
+        class Program  
         {  
   
             private static AutoResetEvent syncEvent = new AutoResetEvent(false);  

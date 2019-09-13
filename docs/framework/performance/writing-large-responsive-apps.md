@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 234c8a1f57af4030186afd48f727621713531b17
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 916523acf1d270830a2cb1fb5ae50e26d055404c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915539"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927013"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Pisanie dużych i sprawnie działających aplikacji platformy .NET Framework
 Ten artykuł zawiera wskazówki dotyczące poprawy wydajności dużych .NET Framework aplikacji lub aplikacji, które przetwarzają duże ilości danych, takich jak pliki lub bazy danych. Te porady pochodzą z ponownego zapisywania kompilatorów C# i Visual Basic w kodzie zarządzanym, a ten artykuł zawiera kilka rzeczywistych przykładów z C# kompilatora. 
@@ -32,7 +32,7 @@ Ten artykuł zawiera wskazówki dotyczące poprawy wydajności dużych .NET Fram
  Pisanie kodu, który jest bardziej skomplikowany niż musi być związane z konserwacją, debugowaniem i polerowaniem. Doświadczeni programiści mają intuicyjny opanujesz sposobu rozwiązywania problemów z kodowaniem i pisania bardziej wydajnego kodu. Jednak czasami w sposób przedwcześnie optymalizuje swój kod. Na przykład korzystają one z tabeli skrótów, gdy prosta tablica wystarcza, lub użyj skomplikowanej pamięci podręcznej, która może wyciekać pamięć, a nie po prostu reobliczaniu wartości. Nawet jeśli jesteś programistą, należy przetestować wydajność i analizować kod, gdy znajdziesz problemy. 
   
 ### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Fakt 2: Jeśli nie mierzy się, nastąpi odgadnięcie  
- Profile i pomiary nie znajdują się. Profile pokazują, czy procesor CPU jest w pełni załadowany, czy też jest blokowany na dyskach we/wy. Profile informują o rodzaju i ilości pamięci, która jest przydzielana, oraz o tym, czy procesor CPU poświęca dużo czasu na wyrzucanie [elementów](../../standard/garbage-collection/index.md) bezużytecznych (GC). 
+ Profile i pomiary nie znajdują się. Profile pokazują, czy procesor CPU jest w pełni załadowany, czy też jest blokowany na dyskach we/wy. Profile informują o rodzaju i ilości pamięci, która jest przydzielana, oraz o tym, czy procesor CPU poświęca dużo czasu na [wyrzucanie elementów bezużytecznych](../../standard/garbage-collection/index.md) (GC). 
   
  Należy ustawić cele wydajnościowe najważniejszych środowisk klienta lub scenariuszy w aplikacji oraz testy zapisu w celu mierzenia wydajności. Zbadaj nieudane testy, stosując metodę naukową: Użyj profilów, aby Ci pomóc, hypothesize się, co może być problemem, i przetestuj hipotezę przy użyciu eksperymentu lub zmiany kodu. Ustalaj bazowe pomiary wydajności w czasie z regularnym testowaniem, dzięki czemu można izolować zmiany powodujące wydajność regresji. Dzięki podejściu wydajności w rygorystyczny sposób można uniknąć marnowania czasu z niepotrzebnymi aktualizacjami kodu. 
   
@@ -280,7 +280,7 @@ W połączeniu z wyrażeniami lambda jest przykładem funkcji produktywności (L
   
  **Przykład 5: Wyrażenia lambda, listy\<T > i IEnumerable\<t >**  
   
- W tym przykładzie używa [kodu LINQ i języka stylu funkcjonalności](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) , aby znaleźć symbol w modelu kompilatora, przy użyciu ciągu nazwy:  
+ W tym przykładzie używa [kodu LINQ i języka stylu funkcjonalności](https://blogs.msdn.microsoft.com/charlie/2007/01/27/anders-hejlsberg-on-linq-and-functional-programming/) , aby znaleźć symbol w modelu kompilatora, przy użyciu ciągu nazwy:  
   
 ```csharp  
 class Symbol {  
@@ -304,7 +304,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- W pierwszym wierszu [wyrażenie](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` lambda jest [zamykane](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) na zmiennej `name`lokalnej. Oznacza to, że oprócz przydzielenia obiektu delegata, [](../../csharp/language-reference/keywords/delegate.md) który `predicate` przechowuje, kod przydziela klasę statyczną do przechowywania środowiska, które `name`przechwytuje wartość. Kompilator generuje kod podobny do następującego:  
+ W pierwszym wierszu [wyrażenie](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` lambda jest [zamykane](https://blogs.msdn.microsoft.com/ericlippert/2003/09/17/what-are-closures/) na zmiennej `name`lokalnej. Oznacza to, że oprócz przydzielenia obiektu [delegata](../../csharp/language-reference/keywords/delegate.md) , który `predicate` przechowuje, kod przydziela klasę statyczną do przechowywania środowiska, które `name`przechwytuje wartość. Kompilator generuje kod podobny do następującego:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  

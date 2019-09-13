@@ -7,27 +7,28 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], implementing
 ms.assetid: d5ab51ba-61ae-403e-b3c8-e2669e326806
-ms.openlocfilehash: fa8c5457c636d7f37215f0d4b4fdbb1c96c9481e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05923dc0a2223da5e5fcda483abc1ee1dd2d643f
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929056"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928709"
 ---
 # <a name="tutorial-implement-a-windows-communication-foundation-service-contract"></a>Samouczek: Implementowanie kontraktu usługi Windows Communication Foundation
 
-W tym samouczku opisano drugi pięć zadania wymagane do utworzenia podstawowej aplikacji Windows Communication Foundation (WCF). Aby zapoznać się z omówieniem samouczków, zobacz [samouczka: Rozpoczynanie pracy z aplikacjami Windows Communication Foundation](getting-started-tutorial.md).
+W tym samouczku opisano dwa z pięciu zadań wymaganych do utworzenia aplikacji podstawowej Windows Communication Foundation (WCF). Aby zapoznać się z omówieniem samouczków, [zobacz Samouczek: Rozpocznij pracę z aplikacjami](getting-started-tutorial.md)Windows Communication Foundation.
 
-Następnym krokiem do tworzenia aplikacji WCF jest Dodaj kod do implementacji interfejsu usługi WCF, który został utworzony w poprzednim kroku. W tym kroku opisano tworzenie klasę o nazwie `CalculatorService` implementującej zdefiniowany przez użytkownika `ICalculator` interfejsu. Każda metoda w poniższym kodzie wywołuje działania kalkulatora i zapisuje tekst w konsoli, aby ją przetestować. 
+Następnym krokiem tworzenia aplikacji WCF jest dodanie kodu w celu zaimplementowania interfejsu usługi WCF, który został utworzony w poprzednim kroku. W tym kroku utworzysz klasę o nazwie `CalculatorService` implementującej interfejs zdefiniowany `ICalculator` przez użytkownika. Każda metoda w poniższym kodzie wywołuje operację kalkulatora i zapisuje tekst w konsoli programu w celu jej przetestowania. 
 
 Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
-> - Dodaj kod implementacji kontraktu usługi WCF.
+>
+> - Dodaj kod, aby zaimplementować kontrakt usługi WCF.
 > - Skompiluj rozwiązanie.
 
-## <a name="add-code-to-implement-the-wcf-service-contract"></a>Dodaj kod implementacji kontraktu usługi WCF
+## <a name="add-code-to-implement-the-wcf-service-contract"></a>Dodawanie kodu w celu zaimplementowania kontraktu usługi WCF
 
-W **GettingStartedLib**, otwórz **Service1.cs** lub **Service1.vb** i zastąp jego kod poniższym kodem:
+W **GettingStartedLib**otwórz plik **Service1.cs** lub **Service1. vb** i Zastąp jego kod następującym kodem:
 
 ```csharp
 using System;
@@ -116,31 +117,33 @@ Namespace GettingStartedLib
 End Namespace
 ```
 
-## <a name="edit-appconfig"></a>Edytowanie pliku App.config
+## <a name="edit-appconfig"></a>Edytuj plik App. config
 
-Edytuj **App.config** w **GettingStartedLib** aby odzwierciedlić zmiany wprowadzone do kodu.
-- Dla elementu wizualnego C# projektów:
-  - Zmień wiersz 14 `<service name="GettingStartedLib.CalculatorService">`
-  - Zmień wiersz 17 `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
-  - Zmień wiersz 22 `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`
+Edytuj **plik App. config** w programie **GettingStartedLib** , aby odzwierciedlić zmiany wprowadzone w kodzie.
 
-- Dla projektów języka Visual Basic:
-  - Zmień wiersz 14 `<service name="GettingStartedLib.GettingStartedLib.CalculatorService">`
-  - Zmień wiersz 17 `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
-  - Zmień wiersz 22 `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.GettingStartedLib.ICalculator">`
+- Dla projektów C# wizualnych:
+  - Zmień wiersz 14 na`<service name="GettingStartedLib.CalculatorService">`
+  - Zmień wiersz 17 na`<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
+  - Zmień wiersz 22 na`<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`
+
+- Projekty Visual Basic:
+  - Zmień wiersz 14 na`<service name="GettingStartedLib.GettingStartedLib.CalculatorService">`
+  - Zmień wiersz 17 na`<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
+  - Zmień wiersz 22 na`<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.GettingStartedLib.ICalculator">`
 
 ## <a name="compile-the-code"></a>Skompilować kod
 
-Kompiluj rozwiązanie, aby sprawdzić, czy nie ma żadnych błędów kompilacji. Jeśli używasz programu Visual Studio na **kompilacji** menu wybierz opcję **Kompiluj rozwiązanie** (lub naciśnij **Ctrl**+**Shift** + **B**).
+Skompiluj rozwiązanie, aby upewnić się, że nie występują żadne błędy kompilacji. Jeśli używasz programu Visual Studio, w menu **kompilacja** wybierz opcję **Kompiluj rozwiązanie** (lub naciśnij **klawisze CTRL**+**SHIFT**+**B**).
 
 ## <a name="next-steps"></a>Następne kroki
 
 W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
-> - Dodaj kod implementacji kontraktu usługi WCF.
+>
+> - Dodaj kod, aby zaimplementować kontrakt usługi WCF.
 > - Skompiluj rozwiązanie.
 
-Przejdź do następnego samouczka, aby dowiedzieć się, jak uruchomić usługi WCF.
+Przejdź do następnego samouczka, aby dowiedzieć się, jak uruchomić usługę WCF.
 
 > [!div class="nextstepaction"]
 > [Samouczek: Hostowanie i uruchamianie podstawowej usługi WCF](how-to-host-and-run-a-basic-wcf-service.md)

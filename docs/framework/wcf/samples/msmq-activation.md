@@ -2,16 +2,16 @@
 title: Aktywacja usługi MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 169881cdc0736fcc94818f6281c35b4e54e06dfe
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 038f4d7e3d713cfe4134ea98f7858ef71f29bab4
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039302"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895251"
 ---
 # <a name="msmq-activation"></a>Aktywacja usługi MSMQ
 
-Ten przykład pokazuje, jak hostować aplikacje w usłudze aktywacji procesów systemu Windows (WAS) odczytywane z kolejki komunikatów. Ten przykład używa `netMsmqBinding` i jest oparty na dwukierunkowej próbce [komunikacji](../../../../docs/framework/wcf/samples/two-way-communication.md) . Usługa w tym przypadku jest aplikacją hostowaną w sieci Web, a klient jest samoobsługowy i wyprowadza do konsoli, aby obserwować stan przesłanych zamówień zakupu.
+Ten przykład pokazuje, jak hostować aplikacje w usłudze aktywacji procesów systemu Windows (WAS) odczytywane z kolejki komunikatów. Ten przykład używa `netMsmqBinding` i jest oparty na [dwukierunkowej](../../../../docs/framework/wcf/samples/two-way-communication.md) próbce komunikacji. Usługa w tym przypadku jest aplikacją hostowaną w sieci Web, a klient jest samoobsługowy i wyprowadza do konsoli, aby obserwować stan przesłanych zamówień zakupu.
 
 > [!NOTE]
 > Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.
@@ -92,15 +92,11 @@ Plik. svc o nazwie klasy jest używany do hostowania kodu usługi w programie.
 
 Sam plik Service. svc zawiera dyrektywę służącą do utworzenia `OrderProcessorService`.
 
-```svc
-<%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>
-```
+`<%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>`
 
 Plik Service. svc zawiera także dyrektywę zestawu, aby upewnić się, że system. Transactions. dll jest załadowany.
 
-```svc
-<%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>
-```
+`<%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>`
 
 Klient tworzy zakres transakcji. Komunikacja z usługą odbywa się w zakresie transakcji, powodując, że jest ona traktowana jako jednostka niepodzielna, w której wszystkie komunikaty kończą się powodzeniem lub niepowodzeniem. Transakcja jest zatwierdzona przez wywołanie `Complete` zakresu transakcji.
 

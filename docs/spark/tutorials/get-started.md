@@ -4,12 +4,12 @@ description: Dowiedz się, jak uruchomić aplikację .NET dla Apache Spark przy 
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7ce7d7aec6c15385d3d797d5a548519eea33b764
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 004256a2fe369b026b15151dfc72ae379da0be8e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "69577072"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928489"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Samouczek: Wprowadzenie do platformy .NET dla Apache Spark
 
@@ -18,6 +18,7 @@ W tym samouczku przedstawiono sposób uruchamiania aplikacji platformy .NET dla 
 Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 
 > [!div class="checklist"]
+>
 > * Przygotuj środowisko systemu Windows dla platformy .NET dla Apache Spark
 > * Pobierz **pakiet Microsoft. Spark. Worker**
 > * Kompilowanie i uruchamianie prostej aplikacji .NET dla Apache Spark
@@ -124,6 +125,7 @@ Gratulacje! Pomyślnie utworzono i uruchomiono aplikację .NET dla Apache Spark.
 
 W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
+>
 > * Przygotuj środowisko systemu Windows dla platformy .NET dla Apache Spark
 > * Pobierz **pakiet Microsoft. Spark. Worker**
 > * Kompilowanie i uruchamianie prostej aplikacji .NET dla Apache Spark

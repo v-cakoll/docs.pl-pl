@@ -4,12 +4,12 @@ description: Najważniejsze koncepcje dotyczące przeznaczenia i zachowania Asse
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 61ad19a281d829814de8321913af7dabfc916f6d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 429f8145e4462cfa93bf286fd35b39f58f9afa64
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849231"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926378"
 ---
 # <a name="understanding-systemruntimeloaderassemblyloadcontext"></a>Informacje o system. Runtime. Loader. AssemblyLoadContext
 
@@ -94,6 +94,7 @@ Object of type 'IsolatedType' cannot be converted to type 'IsolatedType'.
 ### <a name="debugging-type-conversion-issues"></a>Błędy konwersji typu debugowania
 
 Uwzględniając parę niezgodnych typów, należy również znać:
+
 - Każdy typ<xref:System.Type.Assembly?displayProperty=nameWithType>
 - Każdy typ <xref:System.Runtime.Loader.AssemblyLoadContext>, który można uzyskać <xref:System.Runtime.Loader.AssemblyLoadContext.GetLoadContext(System.Reflection.Assembly)?displayProperty=nameWithType> za pośrednictwem funkcji.
 

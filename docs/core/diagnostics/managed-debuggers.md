@@ -4,12 +4,12 @@ description: Przegląd programów Visual Studio i Visual Studio Code Managed Deb
 author: sdmaclea
 ms.author: stmaclea
 ms.date: 08/05/2019
-ms.openlocfilehash: 8110ecb10ad2e6213e15df8848abab73d07d89b2
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 3741011d22ab6c4240b7f88a9ab790ea61ecd0d2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68974133"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926439"
 ---
 # <a name="net-core-managed-debuggers"></a>Zarządzane debugery programu .NET Core
 
@@ -20,9 +20,11 @@ Firma Microsoft udostępnia debugery dla kodu zarządzanego w programie **Visual
 ## <a name="visual-studio-managed-debugger"></a>Debuger zarządzany programu Visual Studio
 
 **Program Visual Studio** to zintegrowane środowisko programistyczne z najpełniejszym dostępnym debugerem. Program Visual Studio to doskonały wybór dla deweloperów pracujących nad systemem Windows.
+
 - [Samouczek — debugowanie aplikacji .NET Core w systemie Windows przy użyciu programu Visual Studio](../tutorials/debugging-with-visual-studio.md)
 
 Mimo że program Visual Studio jest aplikacją systemu Windows, może być nadal używany do zdalnego debugowania aplikacji Linux i macOS.
+
 - [Debugowanie aplikacji .NET Core w systemie Linux/OSX przy użyciu programu Visual Studio](https://github.com/Microsoft/MIEngine/wiki/Offroad-Debugging-of-.NET-Core-on-Linux---OSX-from-Visual-Studio)
 
  Debugowanie ASP.NET Core aplikacji wymaga nieco innych instrukcji.

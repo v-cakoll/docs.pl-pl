@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
-ms.openlocfilehash: e70afa6b3633a5868491e421c7e8e44bf9f3e895
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 231d658cf13d27936b7b362ef8b4ccad78614b73
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624583"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894714"
 ---
 # <a name="how-to-get-interface-and-protocol-information"></a>Instrukcje: uzyskiwanie informacji o interfejsie i protokole
-W tym przykładzie pokazano, jak odczytać Statystyki TCP interfejsu sieciowego.  
+Ten przykład pokazuje, jak odczytać statystykę TCP interfejsu sieciowego.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```csharp
 public static void ShowTcpStatistics(NetworkInterfaceComponent version)  
 {  
     IPGlobalProperties properties =  
@@ -72,4 +72,4 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Odwołuje się do **przestrzeni nazw System.Net** przestrzeni nazw.
+- Odwołania do przestrzeni nazw **System.NET** .

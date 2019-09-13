@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6bc6c52374ea047d2e76d346ee8bbc3faaa7bb2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a54d3cb1bb9abf740c2c9b5a9a8312a9612ae658
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650703"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894454"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2 — Metoda
-Definiuje jednej zmiennej globalnej.  
+Definiuje pojedynczą zmienną globalną.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT DefineGlobalVariable2(  
     [in] const WCHAR  *name,  
     [in] ULONG32      attributes,  
@@ -42,31 +42,31 @@ HRESULT DefineGlobalVariable2(
   
 ## <a name="parameters"></a>Parametry  
  `name`  
- [in] Nazwa zmiennej globalnej.  
+ podczas Nazwa zmiennej globalnej.  
   
  `attributes`  
- [in] Atrybuty globalne zmiennej.  
+ podczas Atrybuty zmiennej globalnej.  
   
  `sigToken`  
- [in] Token metadanych podpisu.  
+ podczas Token metadanych sygnatury.  
   
  `addrKind`  
- [in] Typ adresu.  
+ podczas Typ adresu.  
   
  `addr1`  
- [in] Pierwszy adres specyfikację parametru.  
+ podczas Pierwszy adres dla specyfikacji parametru.  
   
  `addr2`  
- [in] Drugi adres specyfikację parametru.  
+ podczas Drugi adres dla specyfikacji parametru.  
   
  `addr3`  
- [in] Trzeci adres specyfikację parametru.  
+ podczas Trzeci adres dla specyfikacji parametru.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie, E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl  
+ **Nagłówki** CorSym.idl  
   
 ## <a name="see-also"></a>Zobacz także
 

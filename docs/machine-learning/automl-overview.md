@@ -1,31 +1,33 @@
 ---
-title: Automatyczne usługi machine learning za pomocą platformy ML.NET
-description: Omówienie modelu automatycznego wyboru i szkolenia
+title: Automatyczne Uczenie maszynowe za pomocą ML.NET
+description: Przegląd automatycznego wyboru modelu i szkolenia
 author: natke
 ms.date: 05/01/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
-ms.openlocfilehash: e34694eedd06c0a3e3558c9137c6add9a7f802e4
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: da2d764e678debc78a25faeb8e48facb44fc4021
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410521"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929423"
 ---
-# <a name="automated-machine-learning-with-mlnet"></a>Automatyczne usługi machine learning za pomocą platformy ML.NET
+# <a name="automated-machine-learning-with-mlnet"></a>Automatyczne Uczenie maszynowe za pomocą ML.NET
 
-Automatyczne machine learning to funkcja strukturze ML.NET wykonujący wybór modelu automatyczne i szkolenia. Określić zadanie machine learning i podać zestaw danych i automatyczne ML wybiera model zawierający najważniejsze metryki. Dane wyjściowe:
-- Plik modelu, które mogą być ładowane do aplikacji prognoz
-- Kod aplikacji w celu prognozowania
-- Kod źródłowy, umożliwiający wybór funkcji i model, szkolenie (informacje o modelu)
+Automatyczne Uczenie maszynowe to funkcja ML.NET, która wykonuje automatyczne wybieranie modelu i szkolenie. Należy określić zadanie uczenia maszynowego i dostarczyć zestaw danych, a zautomatyzowanej ML wybiera model z najlepszymi metrykami. Dane wyjściowe IT:
+
+- plik modelu, który można załadować do aplikacji predykcyjnej
+- kod aplikacji do prognozowania
+- kod źródłowy używany do wyboru funkcji i szkolenia modelu (aby zrozumieć model)
 
 > [!NOTE]
-> Ta funkcja jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. 
+> Ta funkcja jest obecnie dostępna w wersji zapoznawczej i może ulec zmianie materiał. 
 
-Automatyczne ML jest obecnie ograniczona do uczenia maszynowego [zadania](resources/tasks.md) klasyfikacji binarnej, wieloklasowej klasyfikacji i regresji. Inne usługi machine learning zadania będą obsługiwane w przyszłych wydaniach.
+Automatyczna ML jest obecnie ograniczona do [zadań](resources/tasks.md) uczenia maszynowego klasyfikacji binarnej, klasyfikacji wieloklasowej i regresji. Inne zadania uczenia maszynowego będą obsługiwane w przyszłych wydaniach.
 
-Istnieją trzy sposoby na wykorzystanie ML automatyczne:
-1. Za pomocą graficznego interfejsu użytkownika za pomocą [konstruktora Model w strukturze ML.NET](automate-training-with-model-builder.md)
-1. W wierszu polecenia za pomocą [interfejsu wiersza polecenia w strukturze ML.NET](automate-training-with-cli.md)
-1. Za pomocą aplikacji za pomocą [automatyczne interfejsu API uczenia Maszynowego](how-to-guides/how-to-use-the-automl-api.md)
+Istnieją trzy sposoby używania zautomatyzowanej ML:
+
+1. Przy użyciu graficznego interfejsu użytkownika z [konstruktorem modelu ml.NET](automate-training-with-model-builder.md)
+1. W wierszu polecenia, z [interfejsem CLI ml.NET](automate-training-with-cli.md)
+1. Za pośrednictwem aplikacji, za pomocą [interfejsu API zautomatyzowanej](how-to-guides/how-to-use-the-automl-api.md) tablicy

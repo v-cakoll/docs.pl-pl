@@ -2,12 +2,12 @@
 title: Wymagania systemowe Dostawca danych .NET Framework dla programu Oracle
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-ms.openlocfilehash: 330bad6f58b1ba6b0d2fdb2baa86a04374946e80
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b64a84b8d8246bae9028a6ca710f0a62cc85bf79
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780576"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894380"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>Wymagania systemowe Dostawca danych .NET Framework dla programu Oracle
 .NET Framework Dostawca danych dla programu Oracle wymaga programu Microsoft Data Access Components (MDAC) w wersji 2,6 lub nowszej. Zaleca się używanie programu MDAC 2,8 z dodatkiem SP1.  
@@ -22,9 +22,7 @@ ms.locfileid: "70780576"
 ### <a name="setting-the-unicode-value-in-a-connection-string-attribute"></a>Ustawianie wartości Unicode w atrybucie parametrów połączenia  
  Podczas pracy z programem Oracle można użyć atrybutu parametrów połączenia  
   
-```  
-Unicode=True   
-```  
+`Unicode=True`
   
  Aby zainicjować biblioteki klienckie Oracle w trybie UTF-16. Powoduje to, że biblioteki klienckie Oracle akceptują UTF-16 (co jest bardzo podobne do UCS-2) zamiast ciągów wielobajtowych. Dzięki temu Dostawca danych dla programu Oracle będzie zawsze współpracować ze stroną kodową Oracle bez dodatkowych zadań związanych z tłumaczeniami. Ta konfiguracja działa tylko w przypadku korzystania z klientów Oracle 9i do komunikowania się z bazą danych Oracle 9i z alternatywnym zestawem znaków AL16UTF16. Gdy klient Oracle 9i komunikuje się z serwerem Oracle 9i, do konwersji wartości **CommandText** Unicode na odpowiedni zestaw znaków wielobajtowych używanych przez serwer Oracle9i są wymagane dodatkowe zasoby. Można to uniknąć, Jeśli wiesz, że masz bezpieczną konfigurację przez dodanie `Unicode=True` do parametrów połączenia.  
   

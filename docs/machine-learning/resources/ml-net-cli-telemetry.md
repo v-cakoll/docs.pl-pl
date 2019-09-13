@@ -4,12 +4,12 @@ description: Dowiedz się więcej o funkcjach telemetrycznych interfejsu wiersza
 ms.topic: conceptual
 ms.date: 09/03/2019
 ms.custom: ''
-ms.openlocfilehash: e7b3b3d7789f2368ebc4448e73add817986a5906
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 77a24416a8008d36006c293cb174b5a8c2f516b7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254010"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929278"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Zbieranie danych telemetrycznych za pomocą interfejsu wiersza polecenia ML.NET
 
@@ -58,6 +58,7 @@ Dane są bezpiecznie przesyłane do serwerów firmy Microsoft przy użyciu techn
 
 ### <a name="data-points-not-collected"></a>Punkty danych nie są zbierane
 Funkcja telemetrii *nie* zbiera:
+
 - dane osobowe, takie jak nazwy użytkowników
 - nazwy plików DataSet
 - dane z plików DataSet
@@ -73,6 +74,7 @@ ML.NET interfejs wiersza polecenia firmy Microsoft do dystrybucji jest licencjon
 Gdy po raz pierwszy uruchomisz [polecenie interfejsu wiersza polecenia ml.NET](../reference/ml-net-cli-reference.md) , takie jak `mlnet auto-train`, narzędzie ml.NET CLI wyświetla tekst, który informuje, jak zrezygnować z telemetrii. Tekst może się nieco różnić w zależności od używanej wersji interfejsu wiersza polecenia.
 
 ## <a name="see-also"></a>Zobacz także
+
 - [Dokumentacja interfejsu wiersza polecenia ML.NET](../reference/ml-net-cli-reference.md)
 - [Postanowienia licencyjne dotyczące oprogramowania firmy Microsoft: Biblioteka Microsoft .NET](https://aka.ms/dotnet-core-eula)
 - [Prywatność w firmie Microsoft](https://www.microsoft.com/trustcenter/privacy/)

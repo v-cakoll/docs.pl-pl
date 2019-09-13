@@ -4,16 +4,17 @@ description: Poznaj składniki inżynierii funkcji obsługiwane w programie ML.N
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: cbcdef5b8f5f6334d5545f100976347ade9ee6fd
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 25da3cceb3c9090661b34254ed240207aaf3b9d7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671873"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929254"
 ---
 # <a name="data-transformations"></a>Przekształcenia danych
 
 Przekształcenia danych są używane do:
+
 - Przygotowywanie danych do szkolenia modelu
 - stosowanie zaimportowanego modelu w formacie TensorFlow lub ONNX
 - dane po zakończeniu procesu po przekazaniu ich przez model

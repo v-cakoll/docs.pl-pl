@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 7cd02a0a315ffdb155af09ac4e4fabbea1724a4d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fabd9b94b8c0a3f0e0db220e84d6c2eca3537c50
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780832"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894422"
 ---
 # <a name="sql-server-express-user-instances"></a>Wystąpienia użytkownika programu SQL Server Express
 Microsoft SQL Server Express Edition (SQL Server Express) obsługuje funkcję wystąpienia użytkownika, która jest dostępna tylko w przypadku używania .NET Framework Dostawca danych dla SQL Server (`SqlClient`). Wystąpienie użytkownika jest osobnym wystąpieniem aparatu bazy danych SQL Server Express, który jest generowany przez wystąpienie nadrzędne. Wystąpienia użytkowników umożliwiają użytkownikom, którzy nie są administratorami na swoich komputerach lokalnych, dołączania do SQL Server Express baz danych i łączenia się z nimi. Każde wystąpienie jest uruchamiane w kontekście zabezpieczeń poszczególnych użytkowników, na podstawie jednego wystąpienia na użytkownika.  
@@ -26,9 +26,9 @@ Microsoft SQL Server Express Edition (SQL Server Express) obsługuje funkcję wy
 ## <a name="enabling-user-instances"></a>Włączanie wystąpień użytkownika  
  Aby wygenerować wystąpienia użytkownika, musi być uruchomione wystąpienie nadrzędne SQL Server Express. Wystąpienia użytkownika są domyślnie włączone po zainstalowaniu SQL Server Express i mogą być jawnie włączane lub wyłączane przez administratora systemu, wykonując procedurę składowaną systemu **sp_configure** w wystąpieniu nadrzędnym.  
   
-```  
+```sql  
 -- Enable user instances.  
-sp_configure 'user instances enabled','1'   
+sp_configure 'user instances enabled','1'
   
 -- Disable user instances.  
 sp_configure 'user instances enabled','0'  
@@ -51,7 +51,7 @@ sp_configure 'user instances enabled','0'
   
 - Ciąg `|DataDirectory|` podstawienia ujęty w symbole potoku odwołuje się do katalogu danych aplikacji otwierającej połączenie i udostępnia ścieżkę względną wskazującą lokalizację plików. mdf i. ldf. Jeśli chcesz zlokalizować te pliki w innym miejscu, musisz podać pełną ścieżkę do plików.  
   
-```  
+```text
 Data Source=.\\SQLExpress;Integrated Security=true;  
 User Instance=true;AttachDBFilename=|DataDirectory|\InstanceDB.mdf;  
 Initial Catalog=InstanceDB;  
@@ -65,7 +65,7 @@ Initial Catalog=InstanceDB;
   
  Fizyczna lokalizacja, `DataDirectory` która wskazuje, zależy od typu aplikacji. W tym przykładzie plik Northwind. mdf, który ma zostać dołączony, znajduje się w folderze \app_data aplikacji.  
   
-```  
+```text
 Data Source=.\\SQLExpress;Integrated Security=true;  
 User Instance=true;  
 AttachDBFilename=|DataDirectory|\app_data\Northwind.mdf;  

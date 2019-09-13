@@ -13,101 +13,101 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 906007902c6b66d88da0d3145625e56f2a7e2b55
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b3f7363ec5f8c954dd55a9500dcf8f2e302424f
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592518"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894903"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>Instrukcje: Tworzenie klasy za pomocą modelu CodeDOM
-Poniższe procedury pokazują, jak utworzyć i skompilować wykresu CodeDOM, który generuje klasę zawierający dwa pola, trzy właściwości, metody, Konstruktor i punktu wejścia.  
+Poniższe procedury ilustrują sposób tworzenia i kompilowania wykresu CodeDOM, który generuje klasę zawierającą dwa pola, trzy właściwości, metodę, Konstruktor i punkt wejścia.  
   
-1. Utwórz aplikację konsolową, która będzie używać kodu CodeDOM, aby wygenerować kod źródłowy dla klasy.  
+1. Utwórz aplikację konsolową, która będzie używać kodu CodeDOM do generowania kodu źródłowego dla klasy.  
   
-     W tym przykładzie Generowanie klasy o nazwie `Sample`, i wygenerowany kod jest klasę o nazwie `CodeDOMCreatedClass` w pliku o nazwie SampleCode.  
+     W tym przykładzie Klasa generująca ma nazwę `Sample`, a wygenerowany kod jest klasą o `CodeDOMCreatedClass` nazwie SampleCode.  
   
-2. Podczas generowania klasy, zainicjować wykresu CodeDOM i definiowanie elementów członkowskich, Konstruktor i punktu wejścia przy użyciu metod CodeDOM (`Main` metoda) wygenerowanej klasy.  
+2. W klasie generującej zainicjuj wykres CodeDOM i użyj metod CodeDOM, aby zdefiniować elementy członkowskie, Konstruktor i punkt wejścia (`Main` metodę) wygenerowanej klasy.  
   
-     W tym przykładzie, wygenerowana klasa ma dwa pola, trzy właściwości, Konstruktor, metody i `Main` metody.  
+     W tym przykładzie wygenerowana Klasa ma dwa pola, trzy właściwości, Konstruktor, metodę i `Main` metodę.  
   
-3. Podczas generowania klasy, utworzyć dostawcy kodu specyficznego dla języka i wywołanie jego <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> metodę w celu wygenerowania kodu z wykresu.  
+3. W klasie generującej Utwórz dostawcę kodu specyficzny dla języka i Wywołaj <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> metodę w celu wygenerowania kodu z grafu.  
   
-4. Skompiluj i uruchom aplikację do generowania kodu.  
+4. Skompiluj i uruchom aplikację w celu wygenerowania kodu.  
   
-     W tym przykładzie wygenerowany kod znajduje się w pliku o nazwie SampleCode. Skompiluj i wykonać ten kod, aby wyświetlić przykładowe dane wyjściowe.  
+     W tym przykładzie wygenerowany kod znajduje się w pliku o nazwie SampleCode. Skompiluj i wykonaj ten kod, aby zobaczyć przykładowe dane wyjściowe.  
   
-### <a name="to-create-the-application-that-will-execute-the-codedom-code"></a>Do tworzenia aplikacji, które spowodują wykonanie kodu CodeDOM  
+### <a name="to-create-the-application-that-will-execute-the-codedom-code"></a>Aby utworzyć aplikację, która będzie wykonywała kod CodeDOM  
   
-- Tworzenie klasy aplikacji konsoli w celu uwzględnienia kodu CodeDOM. Zdefiniuj globalne pola, które mają być używane w klasie, aby odwoływać się do zestawu (<xref:System.CodeDom.CodeCompileUnit>) i klasy (<xref:System.CodeDom.CodeTypeDeclaration>), określ nazwę pliku wygenerowanego źródła i zadeklarować `Main` metody.  
+- Utwórz klasę aplikacji konsoli, która będzie zawierać kod CodeDOM. Zdefiniuj pola globalne, które mają być używane w klasie, aby odwołać się do zestawu<xref:System.CodeDom.CodeCompileUnit>() i klasy<xref:System.CodeDom.CodeTypeDeclaration>(), określ nazwę wygenerowanego `Main` pliku źródłowego i Zadeklaruj metodę.  
   
      [!code-csharp[CodeDOM Class Sample Main#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample Main/CS/program.cs#1)]
      [!code-vb[CodeDOM Class Sample Main#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample Main/VB/program.vb#1)]  
   
-### <a name="to-initialize-the-codedom-graph"></a>Aby zainicjować wykresu CodeDOM  
+### <a name="to-initialize-the-codedom-graph"></a>Aby zainicjować wykres CodeDOM  
   
-- W konstruktorze klasy aplikacji konsoli zainicjować zestaw i klasa i Dodaj właściwe deklaracje do wykresu CodeDOM.  
+- W konstruktorze klasy aplikacji konsoli, Zainicjuj zestaw i klasę, a następnie Dodaj odpowiednie deklaracje do wykresu CodeDOM.  
   
      [!code-csharp[CodeDOM Class Sample#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#2)]
      [!code-vb[CodeDOM Class Sample#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#2)]  
   
-### <a name="to-add-members-to-the-codedom-graph"></a>Aby dodać członków do wykresu CodeDOM  
+### <a name="to-add-members-to-the-codedom-graph"></a>Aby dodać elementy członkowskie do wykresu CodeDOM  
   
-- Dodaj pola do wykresu CodeDOM, dodając <xref:System.CodeDom.CodeMemberField> obiekty do <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> właściwości klasy.  
+- Dodaj pola do wykresu CodeDOM przez dodanie <xref:System.CodeDom.CodeMemberField> obiektów <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> do właściwości klasy.  
   
      [!code-csharp[CodeDOM Class Sample#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#3)]
      [!code-vb[CodeDOM Class Sample#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#3)]  
   
-- Dodawanie właściwości do wykresu CodeDOM, dodając <xref:System.CodeDom.CodeMemberProperty> obiekty do <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> właściwości klasy.  
+- Dodaj właściwości do wykresu CodeDOM przez dodanie <xref:System.CodeDom.CodeMemberProperty> obiektów <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> do właściwości klasy.  
   
      [!code-csharp[CodeDOM Class Sample#4](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#4)]
      [!code-vb[CodeDOM Class Sample#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#4)]  
   
-- Dodawanie metody do wykresu CodeDOM, dodając <xref:System.CodeDom.CodeMemberMethod> obiekt <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> właściwości klasy.  
+- Dodaj metodę do wykresu CodeDOM, <xref:System.CodeDom.CodeMemberMethod> dodając obiekt <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> do właściwości klasy.  
   
      [!code-csharp[CodeDOM Class Sample#5](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#5)]
      [!code-vb[CodeDOM Class Sample#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#5)]  
   
-- Dodaj Konstruktor do wykresu CodeDOM, dodając <xref:System.CodeDom.CodeConstructor> obiekt <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> właściwości klasy.  
+- Dodaj Konstruktor do wykresu CodeDOM, <xref:System.CodeDom.CodeConstructor> dodając obiekt <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> do właściwości klasy.  
   
      [!code-csharp[CodeDOM Class Sample#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#6)]
      [!code-vb[CodeDOM Class Sample#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#6)]  
   
-- Dodaj punkt wejścia do wykresu CodeDOM, dodając <xref:System.CodeDom.CodeEntryPointMethod> obiekt <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> właściwości klasy.  
+- Dodaj punkt wejścia do wykresu CodeDOM, <xref:System.CodeDom.CodeEntryPointMethod> dodając obiekt <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> do właściwości klasy.  
   
      [!code-csharp[CodeDOM Class Sample#7](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#7)]
      [!code-vb[CodeDOM Class Sample#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#7)]  
   
-### <a name="to-generate-the-code-from-the-codedom-graph"></a>Do generowania kodu z wykresu CodeDOM  
+### <a name="to-generate-the-code-from-the-codedom-graph"></a>Aby wygenerować kod z wykresu CodeDOM  
   
-- Generowanie kodu źródłowego z wykresu CodeDOM, wywołując <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> metody.  
+- Wygeneruj kod źródłowy z grafu CodeDOM, wywołując <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> metodę.  
   
      [!code-csharp[CodeDOM Class Sample#8](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#8)]
      [!code-vb[CodeDOM Class Sample#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#8)]  
   
-### <a name="to-create-the-graph-and-generate-the-code"></a>Aby utworzyć wykres i generowania kodu  
+### <a name="to-create-the-graph-and-generate-the-code"></a>Aby utworzyć Graf i wygenerować kod  
   
-1. Dodaj metody, utworzony w poprzednich krokach do `Main` metody zdefiniowanej w pierwszym kroku.  
+1. Dodaj metody utworzone w poprzednich krokach do `Main` metody zdefiniowanej w pierwszym kroku.  
   
      [!code-csharp[CodeDOM Class Sample#9](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#9)]
      [!code-vb[CodeDOM Class Sample#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#9)]  
   
-2. Skompilować i uruchomić generowania klasy.  
+2. Kompiluj i wykonaj klasę generującą.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu zawiera kod z poprzednich kroków.  
+ Poniższy przykład kodu pokazuje kod z poprzednich kroków.  
   
  [!code-csharp[CodeDOM Class Sample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#1)]
  [!code-vb[CodeDOM Class Sample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#1)]  
   
- Gdy poprzedni przykład jest skompilowany i wykonany, tworzy następujące kodu źródłowego.  
+ Gdy poprzedni przykład jest kompilowany i wykonywany, generuje następujący kod źródłowy.  
   
  [!code-csharp[CodeDOM Class Sample#99](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/SampleCode.cs#99)]
  [!code-vb[CodeDOM Class Sample#99](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/SampleCode.vb#99)]  
   
- Kod źródłowy wygenerowanego generuje następujące dane wyjściowe, gdy skompilowany i wykonany.  
+ Wygenerowany kod źródłowy generuje następujące dane wyjściowe podczas kompilowania i wykonywania.  
   
-```  
+```output
 The object:  
  width = 5.3,  
  height = 6.9,  
@@ -116,7 +116,7 @@ The object:
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
-- Poniższy przykład kodu wymaga `FullTrust` zestawu uprawnień Wykonywanie pomyślnie.  
+- Ten przykład kodu wymaga `FullTrust` pomyślnego wykonania zestawu uprawnień.  
   
 ## <a name="see-also"></a>Zobacz także
 

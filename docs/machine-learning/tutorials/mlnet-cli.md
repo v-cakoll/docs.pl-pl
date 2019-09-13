@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 6dbd69c8424227f85d8bf3cdcaf6cf9dbf7e1f4c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f3688b4492d3eb629f86a9d463b9127429260033
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856020"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929122"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Analizowanie tonacji przy użyciu interfejsu wiersza polecenia platformy ML.NET
 
@@ -19,6 +19,7 @@ Dowiedz się, jak używać interfejsu wiersza polecenia ML.NET, aby automatyczni
 
 W tym samouczku wykonasz następujące czynności:
 > [!div class="checklist"]
+>
 > - Przygotuj dane dla wybranego zadania uczenia maszynowego
 > - Uruchom polecenie "mlnet autouczenie" w interfejsie wiersza polecenia
 > - Przejrzyj wyniki metryki jakości
@@ -51,7 +52,7 @@ Zamierzamy użyć istniejącego zestawu danych, który będzie używany dla scen
 
 2. Skopiuj plik do folderu, który został wcześniej utworzony (na przykład `/cli-test`). `yelp_labelled.txt`
 
-3. Otwórz preferowany wiersz polecenia i przejdź do folderu, do którego skopiowano plik zestawu danych. Przykład:
+3. Otwórz preferowany wiersz polecenia i przejdź do folderu, do którego skopiowano plik zestawu danych. Na przykład:
 
     ```console
     > cd /cli-test
@@ -259,6 +260,7 @@ Należy porównać wybrane algorytmy i konfigurację potoku w samouczku z kodem 
 
 W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
+>
 > - Przygotuj dane dla wybranego zadania ML (problem do rozwiązania)
 > - Uruchom polecenie "mlnet autouczenie" w narzędziu interfejsu wiersza polecenia
 > - Przejrzyj wyniki metryki jakości

@@ -7,24 +7,24 @@ helpviewer_keywords:
 ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 037891abe18d1e119ea1d84a9840ece58b5b3c3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbdbc7586396a13cacac216774e8937416be947e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973371"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929293"
 ---
 # <a name="for-further-reading-parallel-programming"></a>Dalsze informacje (Programowanie równoległe)
 
-Następujące zasoby zawierają dodatkowe informacje dotyczące programowania równoległego w .NET:
+Następujące zasoby zawierają dodatkowe informacje na temat programowania równoległego w programie .NET:
 
-- [Wzorce programowania równoległego: Opis i stosowanie wzorów równoległych za pomocą programu .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222) dokumencie opisano typowe równoległych wzorców i najlepsze rozwiązania dotyczące tworzenia składników równoległych, przy użyciu tych wzorców.
+- [Wzorce programowania równoległego: Zrozumienie i stosowanie równoległych wzorców z dokumentem](https://www.microsoft.com/download/details.aspx?id=19222) .NET Framework 4 zawiera opis typowych wzorców równoległych i najlepszych rozwiązań do tworzenia równoległych składników wykorzystujących te wzorce.
 
-- [Wzorce projektowe zapewniające dekompozycji i koordynacji w architekturach wielordzeniowy](https://docs.microsoft.com/previous-versions/msp-n-p/ff963553(v=pandp.10)) książki opisuje wzorce programowania równoległego używających równoległego programowania pomocy technicznej, wprowadzone w .NET Framework 4.
+- [Wzorce projektowe dla dekompozycji i koordynacji w książce architektury wielordzeniowe](https://docs.microsoft.com/previous-versions/msp-n-p/ff963553(v=pandp.10)) opisują wzorce programowania równoległego, które korzystają z obsługi programowania równoległego wprowadzonego w .NET Framework 4.
 
-- [Programowanie równoległe z .NET](https://blogs.msdn.microsoft.com/pfxteam/) blogu zawiera wiele szczegółowe artykuły dotyczące programowania równoległego w .NET.
+- Blog [programowania równoległego z platformą .NET](https://devblogs.microsoft.com/pfxteam/) zawiera wiele szczegółowych artykułów na temat programowania równoległego w programie .NET.
 
-- [Przykłady dotyczące programowania równoległego za pomocą programu .NET Framework](https://code.msdn.microsoft.com/ParExtSamples) strona zawiera wiele przykładów, które pokazują pośrednich i zaawansowane techniki programowania równoległego.
+- [Przykłady programowania równoległego ze stroną .NET Framework](https://code.msdn.microsoft.com/ParExtSamples) zawierają wiele przykładów demonstrujących pośrednie i zaawansowane techniki programowania równoległego.
 
 ## <a name="see-also"></a>Zobacz także
 

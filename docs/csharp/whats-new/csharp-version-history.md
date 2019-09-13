@@ -3,12 +3,12 @@ title: Historia C# - C# Przewodnik
 description: Jak wygląda ten język we wcześniejszych wersjach i jak został on rozwijający od?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 9962dcb0192fb27ff21b24e985a6a897703720c7
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 304c433e7f15301b77e8b2440e27795dcdea345c
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105681"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70893163"
 ---
 # <a name="the-history-of-c"></a>Historia języka C\#
 
@@ -28,7 +28,7 @@ Narzędzia C# kompilacji uwzględniają najnowszą wersję językową wersji ję
 
 ## <a name="c-version-10"></a>C#Wersja 1,0
 
-Po przejściu do tyłu i wyszukania wersja 1,0 wyglądała tak, C# jak w przypadku języka Java. Zgodnie [z ustalonymi celami projektu dla języka ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), powinien to być "prosty, nowoczesny, zorientowany na obiekty ogólnego przeznaczenia".  W tym czasie wygląda na to, że środowisko Java osiągnęło te wczesne cele projektowania.
+Po wycofaniu i powrocie do C# wersji 1,0 wydanej w programie Visual Studio.NET 2002 sprawdzono wiele takich elementów jak Java. Zgodnie [z ustalonymi celami projektu dla języka ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), powinien to być "prosty, nowoczesny, zorientowany na obiekty ogólnego przeznaczenia".  W tym czasie wygląda na to, że środowisko Java osiągnęło te wczesne cele projektowania.
 
 Jeśli jednak powrócisz do C# 1,0 teraz, znajdziesz nieco trochę Dizzy. Brakuje wbudowanych funkcji asynchronicznych i niektórych funkcji sprawny wokół typów ogólnych, które należy podjąć. Z tego względu nie wszystkie ogólne.  I [LINQ](../linq/index.md)? Jeszcze niedostępne. Te dodatki będą trwać kilka lat.
 
@@ -100,7 +100,7 @@ Zajęło ci dużo czasu na opanujesz i integrację koncepcji, ale stopniowo. A t
 
 ## <a name="c-version-40"></a>C#wersja 4,0
 
-C#w wersji 4,0 wystąpi trudny czas utrzymania stanu przełomowe w wersji 3,0. W wersji 3,0, C# język został przesunięty od cienia środowiska Java do wyeksponowanie. Język mógł szybko stać się elegancki.
+C#w wersji 4,0 wydanej w programie Visual Studio 2010 wystąpił trudny czas utrzymania stanu przełomowe w wersji 3,0. W wersji 3,0, C# język został przesunięty od cienia środowiska Java do wyeksponowanie. Język mógł szybko stać się elegancki.
 
 Następna wersja wprowadziła interesujące nowe funkcje:
 
@@ -117,7 +117,7 @@ Dynamiczne powiązanie zapewnia potencjalne błędy, ale również doskonale moc
 
 ## <a name="c-version-50"></a>C#wersja 5,0
 
-C#wersja 5,0 była skoncentrowaną wersją języka. Niemal cały nakład pracy związany z tą wersją osiągnął inną koncepcję języka przełomowe: `async` model `await` i programowanie asynchroniczne.  Oto lista głównych funkcji:
+C#wersja 5,0 wydana w programie Visual Studio 2012 była skoncentrowaną wersją języka. Niemal cały nakład pracy związany z tą wersją osiągnął inną koncepcję języka przełomowe: `async` model `await` i programowanie asynchroniczne.  Oto lista głównych funkcji:
 
 - [Asynchroniczne elementy członkowskie](../async.md)
 - [Atrybuty informacji o wywołującym](../programming-guide/concepts/caller-information.md)
@@ -132,7 +132,7 @@ Ale `async` i`await` są rzeczywiste gwiazdki tej wersji. Gdy te funkcje został
 
 ## <a name="c-version-60"></a>C#wersja 6,0
 
-W przypadku wersji 3,0 i 5,0 C# dodano najważniejsze nowe funkcje w języku zorientowanym obiektowo. W wersji 6,0 nie można przeprowadzić C# dominującej funkcji Killer i zamiast tego wydać wiele mniejszych funkcji, które zwiększają produktywność. Oto niektóre z nich:
+W przypadku wersji 3,0 i 5,0 C# dodano najważniejsze nowe funkcje w języku zorientowanym obiektowo. W wersji 6,0 wydanej w Visual Studio 2013 nie można przeprowadzić C# dominującej funkcji Killer i zamiast tego wydać wiele mniejszych funkcji, które zwiększają produktywność. Oto niektóre z nich:
 
 - [Importy statyczne](./csharp-6.md#using-static)
 - [Filtry wyjątków](./csharp-6.md#exception-filters)
@@ -154,7 +154,7 @@ Te osoby były jednym innym elementem wraz z tą wersją, chociaż nie jest trad
 
 ## <a name="c-version-70"></a>C#wersja 7,0
 
-Najnowsza wersja główna to C# wersja 7,0. Ta wersja ma pewne ewolucje i chłodnie w szyjce C# 6,0, ale bez kompilatora jako usługi. Oto niektóre z nowych funkcji:
+Najnowsza wersja główna jest C# w wersji 7,0 wydanej w programie Visual Studio 2017. Ta wersja ma pewne ewolucje i chłodnie w szyjce C# 6,0, ale bez kompilatora jako usługi. Oto niektóre z nowych funkcji:
 
 - [Zmienne out](./csharp-7.md#out-variables)
 - [Krotki i dekonstrukcja](./csharp-7.md#tuples)

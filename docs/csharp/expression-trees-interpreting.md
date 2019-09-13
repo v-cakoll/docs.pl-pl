@@ -3,12 +3,12 @@ title: Interpretowanie wyrażeń
 description: Dowiedz się, jak napisać kod, aby sprawdzić strukturę drzewa wyrażenia.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: fcc16e7a0cef7b3ac24d99ccbddd93bed100a5bb
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: c9d80ca234e298df2f2e7ce48fbf92cb817fc8a7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202975"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925686"
 ---
 # <a name="interpreting-expressions"></a>Interpretowanie wyrażeń
 
@@ -261,7 +261,7 @@ Expression<Func<int>> sum5 = () => (1 + (2 + 3)) + 4;
 Rozdzielenie można zobaczyć na dwie możliwe odpowiedzi, aby wyróżnić najbardziej obiecujące. Pierwsze reprezentuje wyrażenia *asocjacyjne z prawej strony* . Druga reprezentuje wyrażenia *asocjacyjne z lewej strony* .
 Zaletą obu tych dwóch formatów jest skalowanie do dowolnej dowolnej liczby wyrażeń dodawania. 
 
-Jeśli to wyrażenie zostanie uruchomione za pomocą gościa, zobaczysz to dane wyjściowe, sprawdzając, czy proste wyrażenie dodawania jest polewane. 
+Jeśli to wyrażenie zostanie uruchomione za pomocą gościa, zobaczysz to dane wyjściowe, sprawdzając, czy proste wyrażenie dodawania jest *polewane*. 
 
 Aby można było uruchomić ten przykład i zobaczyć pełne drzewo wyrażeń, musiałem wprowadzić jedną zmianę w drzewie wyrażenia źródłowego. Gdy drzewo wyrażenia zawiera wszystkie stałe, utworzone drzewo po prostu zawiera stałą wartość `10`. Kompilator wykonuje wszystkie Dodawanie i zmniejsza wyrażenie do najprostszego formularza. Po prostu dodanie jednej zmiennej w wyrażeniu jest wystarczające, aby wyświetlić pierwotne drzewo:
 
@@ -357,6 +357,7 @@ Ten kod reprezentuje jedną możliwą implementację funkcji *silnie* arytmetycz
 Mam już delegata, ale nie można go wywołać w jego formularzu drzewa wyrażeń. W sekcji dotyczącej [tworzenia drzew wyrażeń](expression-trees-building.md) dowiesz się, jak można przezwyciężyć te ograniczenia.
 
 W tym wyrażeniu zobaczysz węzły wszystkich następujących typów:
+
 1. Równe (wyrażenie binarne)
 2. Pomnóż (wyrażenie binarne)
 3. Warunkowo (? wyrażenia

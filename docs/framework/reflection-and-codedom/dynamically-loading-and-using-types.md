@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0246f429b396a2606bbb827b7ae2a9034af00f11
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5dbbf0f71eaefd0ef7fc7f2b5e69e47ce7b8db26
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915476"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894880"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Dynamiczne ładowanie i używanie typów
 Odbicie zapewnia infrastrukturę używaną przez kompilatory języka do implementowania niejawnego późnego wiązania. Powiązanie jest procesem lokalizowania deklaracji (czyli implementacji), która odnosi się do jednoznacznie określonego typu. Gdy ten proces wystąpi w czasie wykonywania, a nie w czasie kompilacji, jest nazywany późnym wiązaniem. Visual Basic umożliwia użycie niejawnego późnego wiązania w kodzie. Kompilator Visual Basic wywołuje metodę pomocnika, która używa odbicia w celu uzyskania typu obiektu. Argumenty przekazane do metody pomocnika powodują wywołanie odpowiedniej metody w czasie wykonywania. Te argumenty są wystąpieniem (obiektem), na którym należy wywołać metodę, nazwę wywołanej metody (ciąg) i argumenty przekazane do wywołanej metody (tablicę obiektów).  
   
  W poniższym przykładzie kompilator Visual Basic używa odbicia niejawnie do wywołania metody w obiekcie, którego typ nie jest znany w czasie kompilacji. Klasa **HelloWorld** ma metodę **PrintHello** , która drukuje "Hello World" połączone z tekstem, który jest przesyłany do metody **PrintHello** . Metoda **PrintHello** wywołana w tym przykładzie jest w rzeczywistości a <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>; kod Visual Basic umożliwia wywoływanie metody **PrintHello** , tak jakby typ obiektu (helloObj) był znany w czasie kompilacji (wczesne wiązanie), a nie w czasie wykonywania ( Późne wiązanie).  
   
-```  
-Imports System  
+```vb
 Module Hello  
     Sub Main()  
         ' Sets up the variable.  
@@ -69,7 +68,7 @@ End Module
   
  Gdy są obecne argumenty ByRef, obiekt wywołujący może chcieć uzyskać zwrot. W związku z tym, **spinacz** umożliwia klientowi mapowanie tablicy argumentów z powrotem do oryginalnej postaci, jeśli **BindToMethod** operuje tablicą argumentów. Aby to zrobić, obiekt wywołujący musi mieć gwarancję, że kolejność argumentów nie jest zmieniana. Gdy argumenty są przekazane według nazwy, **spinacz** zmienia kolejność tablic argumentów i jest to, co obiekt wywołujący widzi. Aby uzyskać więcej informacji, zobacz <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>.  
   
- Zestaw dostępnych elementów członkowskich to elementy członkowskie zdefiniowane w typie lub dowolnym typie podstawowym. Jeśli <xref:System.Reflection.BindingFlags> jest określony, elementy członkowskie dowolnego ułatwienia dostępu zostaną zwrócone w zestawie. Jeśli **BindingFlags. inpublic** nie jest określony, spinacz musi wymusić reguły ułatwień dostępu. Podczas określania **publicznej** lub niepublicznej flagi powiązania należy również określić **wystąpienie** lub flagę powiązania **statycznego** albo nie zwraca żadnych elementów członkowskich.  
+ Zestaw dostępnych elementów członkowskich to elementy członkowskie zdefiniowane w typie lub dowolnym typie podstawowym. Jeśli <xref:System.Reflection.BindingFlags> jest określony, elementy członkowskie dowolnego ułatwienia dostępu zostaną zwrócone w zestawie. Jeśli **BindingFlags. inpublic** nie jest określony, spinacz musi wymusić reguły ułatwień dostępu. Podczas określania **publicznej** lub **niepublicznej** flagi powiązania należy również określić **wystąpienie** lub flagę powiązania **statycznego** albo nie zwraca żadnych elementów członkowskich.  
   
  Jeśli istnieje tylko jeden element członkowski danej nazwy, wywołanie zwrotne nie jest wymagane, a powiązanie jest wykonywane dla tej metody. Przypadek 1 przykładu kodu ilustruje ten punkt: Dostępna jest tylko jedna metoda **PrintBob** i dlatego nie jest konieczne wywołanie zwrotne.  
   
@@ -79,7 +78,7 @@ End Module
   
  W przypadku 3 przykładu kodu rzeczywisty argument typu **String** o wartości "5,5" jest przenoszona do metody z formalnym argumentem typu **Double**. Aby wywołanie zakończyło się pomyślnie, wartość ciągu "5,5" musi być konwertowana na wartość typu Double. **ChangeType** wykonuje tę konwersję.  
   
- **ChangeType** wykonuje tylko [przekształcenia](../../standard/base-types/type-conversion.md)bezstratne lub rozszerzające, jak pokazano w poniższej tabeli.  
+ **ChangeType** wykonuje tylko przekształcenia bezstratne lub [rozszerzające](../../standard/base-types/type-conversion.md), jak pokazano w poniższej tabeli.  
   
 |Typ źródła|Typ docelowy|  
 |-----------------|-----------------|  

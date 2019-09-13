@@ -3,12 +3,12 @@ title: Wymagania wstępne dotyczące platformy .NET Core w systemie Windows
 description: Dowiedz się, jakie zależności są potrzebne na komputerze z systemem Windows, aby opracowywać i uruchamiać aplikacje platformy .NET Core.
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 1921ef565c2d04624009f7684e439ddba1cdf57e
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 82d336bc4efb34d336d5078952683c1673c3fa8a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331075"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926035"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Wymagania wstępne dotyczące platformy .NET Core w systemie Windows
 
@@ -97,8 +97,9 @@ Aby opracowywać aplikacje platformy .NET Core 1. x w programie Visual Studio, [
 
 > [!IMPORTANT]
 > Możliwe jest korzystanie z programu Visual Studio 2015 do programowania w środowisku .NET Core 1. x, ale nie jest to zalecane z następujących powodów:
-  > * Narzędzia .NET Core są w wersji zapoznawczej, która nie jest obsługiwana.
-  > * Projekty to oparte na pliku Project. JSON, które jest przestarzałe.
+>
+> * Narzędzia .NET Core są w wersji zapoznawczej, która nie jest obsługiwana.
+> * Projekty to oparte na pliku Project. JSON, które jest przestarzałe.
 >
 > Aby uzyskać więcej informacji na temat zmian w formacie projektu, zobacz [Ogólne omówienie zmian](./tools/cli-msbuild-architecture.md).
 

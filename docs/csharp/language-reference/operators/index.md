@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 0f7e99aaa171160a813b14dc818846052766551e
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 403a79671128ffe95b45c2e18507bb804281d2c5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168607"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925051"
 ---
 # <a name="c-operators-c-reference"></a>C#Operatory (C# odwołanie)
 
@@ -42,7 +42,7 @@ Poniższa tabela zawiera listę C# operatorów zaczynających się od najwyższe
 
 | Operatory | Kategoria lub nazwa |
 | --------- | ---------------- |
-| [x. y](member-access-operators.md#member-access-operator-), [x?. y](member-access-operators.md#null-conditional-operators--and-), [x? [ y]](member-access-operators.md#null-conditional-operators--and-), [f (x)](member-access-operators.md#invocation-operator-), [a&#91;&#93;](member-access-operators.md#indexer-operator-), [x + +](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [New](new-operator.md), [typeof](type-testing-and-cast.md#typeof-operator), [Checked](../keywords/checked.md), unchecked, [default](default.md), [nameof](nameof.md), [Delegate](delegate-operator.md), [sizeof](sizeof.md), [](../keywords/unchecked.md) [stackalloc](stackalloc.md), [x-> y](pointer-related-operators.md#pointer-member-access-operator--) | Podstawowy |
+| [x. y](member-access-operators.md#member-access-operator-), [x?. y](member-access-operators.md#null-conditional-operators--and-), [x? [ y]](member-access-operators.md#null-conditional-operators--and-), [f (x)](member-access-operators.md#invocation-operator-), [a&#91;&#93;](member-access-operators.md#indexer-operator-), [x + +](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [New](new-operator.md), [typeof](type-testing-and-cast.md#typeof-operator), [Checked](../keywords/checked.md), [unchecked](../keywords/unchecked.md), [default](default.md), [nameof](nameof.md), [Delegate](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [x-> y](pointer-related-operators.md#pointer-member-access-operator--) | Podstawowy |
 | [+ x](arithmetic-operators.md#unary-plus-and-minus-operators), [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [ \!x](boolean-logical-operators.md#logical-negation-operator-), [~ x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [+ + x](arithmetic-operators.md#increment-operator-), [--x](arithmetic-operators.md#decrement-operator---), [(T) x](type-testing-and-cast.md#cast-operator-), [await](await.md), [& x](pointer-related-operators.md#address-of-operator-), [* x](pointer-related-operators.md#pointer-indirection-operator-), [true i false](true-false-operators.md) | Jednostk |
 | [x * y](arithmetic-operators.md#multiplication-operator-), [x/y](arithmetic-operators.md#division-operator-), [x% y](arithmetic-operators.md#remainder-operator-) | Mnożeniowy|
 | [x + y](arithmetic-operators.md#addition-operator-), [x – y](arithmetic-operators.md#subtraction-operator--) | Dana |
@@ -56,14 +56,14 @@ Poniższa tabela zawiera listę C# operatorów zaczynających się od najwyższe
 | [x &#124; &#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) | Warunkowego OR |
 | [x? t](null-coalescing-operator.md) | Operator łączenia wartości null |
 | [s? t: f](conditional-operator.md) | Operator warunkowy |
-| [x = y](assignment-operator.md), [x + = y](arithmetic-operators.md#compound-assignment), [x-= y](arithmetic-operators.md#compound-assignment), [x * = y](arithmetic-operators.md#compound-assignment), [x/= y](arithmetic-operators.md#compound-assignment), [x% = y](arithmetic-operators.md#compound-assignment), [x & = y](boolean-logical-operators.md#compound-assignment), [x &#124;= y](boolean-logical-operators.md#compound-assignment), [x ^ = y](boolean-logical-operators.md#compound-assignment), [x < < = y](bitwise-and-shift-operators.md#compound-assignment), [x > > = y](bitwise-and-shift-operators.md#compound-assignment),[=>](lambda-operator.md) | Przypisanie i Deklaracja lambda |
+| [x = y](assignment-operator.md), [x + = y](arithmetic-operators.md#compound-assignment), [x-= y](arithmetic-operators.md#compound-assignment), [x * = y](arithmetic-operators.md#compound-assignment), [x/= y](arithmetic-operators.md#compound-assignment), [x% = y](arithmetic-operators.md#compound-assignment), [x & = y](boolean-logical-operators.md#compound-assignment), [x &#124;= y](boolean-logical-operators.md#compound-assignment), [x ^ = y](boolean-logical-operators.md#compound-assignment), x [< < = y](bitwise-and-shift-operators.md#compound-assignment), [x > > = y](bitwise-and-shift-operators.md#compound-assignment), [x?? = y](null-coalescing-operator.md),[=>](lambda-operator.md) | Przypisanie i Deklaracja lambda |
 
 ## <a name="operator-associativity"></a>Łączność operatora
 
 Gdy operatory mają takie samo pierwszeństwo, łączność operatorów określa kolejność wykonywania operacji:
 
-- Operatory kojarzenia w *lewo* są oceniane w kolejności od lewej do prawej. Z wyjątkiem [operatorów przypisania](assignment-operator.md) i [operatora `??`łączenia wartości null ](null-coalescing-operator.md)wszystkie operatory binarne są z lewej strony skojarzenia. Na przykład, `a + b - c` jest oceniane jako `(a + b) - c`.
-- Operatory kojarzenia w *prawo* są oceniane w kolejności od prawej do lewej. Operatory przypisania, operator `??`łączenia wartości null i [operator `?:` warunkowy](conditional-operator.md) są z prawej strony skojarzenia. Na przykład, `x = y = z` jest oceniane jako `x = (y = z)`.
+- Operatory *kojarzenia w lewo* są oceniane w kolejności od lewej do prawej. Z wyjątkiem [operatorów przypisania](assignment-operator.md) i [operatora `??`łączenia wartości null ](null-coalescing-operator.md)wszystkie operatory binarne są z lewej strony skojarzenia. Na przykład, `a + b - c` jest oceniane jako `(a + b) - c`.
+- Operatory *kojarzenia w prawo* są oceniane w kolejności od prawej do lewej. Operatory przypisania, operator `??`łączenia wartości null i [operator `?:` warunkowy](conditional-operator.md) są z prawej strony skojarzenia. Na przykład, `x = y = z` jest oceniane jako `x = (y = z)`.
 
 Użyj nawiasów, aby zmienić kolejność oceny nałożona przez operator łączność:
 
@@ -84,7 +84,7 @@ Niepowiązane z pierwszeństwem operatora i łączność, operandy w wyrażeniu 
 |`a / b + c * d`|a, b,/, c, d, *, +|
 |`a / (b + c) * d`|a, b, c, +,/, d, *|
 
-Zazwyczaj są oceniane wszystkie operandy operatora. Niektóre operatory jednocześnie szacują operandy. Oznacza to, że wartość pierwszego operandu takiego operatora definiuje, czy należy ocenić inne operandy. Operatory te są operatorami logicznymi [i`&&`](boolean-logical-operators.md#conditional-logical-and-operator-) () i [lub`||`()](boolean-logical-operators.md#conditional-logical-or-operator-) , [operatorem `??`łączenia wartości null ](null-coalescing-operator.md), [operatorami `?.` warunkowymi null i `?[]` ](member-access-operators.md#null-conditional-operators--and-)i [ operator`?:`warunkowy ](conditional-operator.md). Aby uzyskać więcej informacji, zobacz opis każdego operatora.
+Zazwyczaj są oceniane wszystkie operandy operatora. Niektóre operatory jednocześnie szacują operandy. Oznacza to, że wartość pierwszego operandu takiego operatora definiuje, czy należy ocenić inne operandy. Operatory te są operatorami logicznymi [i`&&`](boolean-logical-operators.md#conditional-logical-and-operator-) () i [lub`||`()](boolean-logical-operators.md#conditional-logical-or-operator-) , [ `??`operatorem łączenia wartości null ](null-coalescing-operator.md), [operatorami `?.` warunkowymi null i `?[]` ](member-access-operators.md#null-conditional-operators--and-)i [ operator`?:`warunkowy ](conditional-operator.md). Aby uzyskać więcej informacji, zobacz opis każdego operatora.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 

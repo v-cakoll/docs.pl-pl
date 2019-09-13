@@ -6,24 +6,22 @@ helpviewer_keywords:
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 611ad0a6f4ec8b8c63010938372b733a0ac66052
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 85d554337d11c3f79d8f70048246e978e185645e
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955766"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894923"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>Zdarzenia ETW w bibliotece równoległych zadań i PLINQ
 
-Biblioteka zadań równoległych i PLINQ generują zdarzenia śledzenia zdarzeń dla systemu Windows (ETW), których można użyć do profilowania i rozwiązywania problemów z aplikacjami przy użyciu narzędzi, takich jak Windows Performance Analyzer. Jednak w większości scenariuszy najlepszym sposobem profilowania kodu aplikacji równoległej jest użycie wizualizatora współbieżności w [](/visualstudio/profiling/concurrency-visualizer) programie Visual Studio.
+Biblioteka zadań równoległych i PLINQ generują zdarzenia śledzenia zdarzeń dla systemu Windows (ETW), których można użyć do profilowania i rozwiązywania problemów z aplikacjami przy użyciu narzędzi, takich jak Windows Performance Analyzer. Jednak w większości scenariuszy najlepszym sposobem profilowania kodu aplikacji równoległej jest użycie [wizualizatora współbieżności](/visualstudio/profiling/concurrency-visualizer) w programie Visual Studio.
 
 ## <a name="task-parallel-library-etw-events"></a>Zdarzenia ETW biblioteki równoległej zadania
 
 W strukturze EVENT_HEADER identyfikator GUID identyfikatorem dla zdarzeń generowanych przez <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType> :
 
-```
-0x2e5dba47, 0xa3d2, 0x4d16, 0x8e, 0xe0, 0x66, 0x71, 0xff, 0xdc, 0xd7, 0xb5
-```
+`0x2e5dba47, 0xa3d2, 0x4d16, 0x8e, 0xe0, 0x66, 0x71, 0xff, 0xdc, 0xd7, 0xb5`
 
 ### <a name="parallel-loop-begin"></a>Rozpoczęcie pętli równoległej
 
@@ -88,9 +86,7 @@ EVENT_DESCRIPTOR. Identyfikator = 1
 ## <a name="plinq-etw-events"></a>Zdarzenia ETW PLINQ
  EVENT_HEADER. Identyfikator GUID identyfikatorem dla PLINQ to:
 
-```
-0x159eeeec, 0x4a14, 0x4418, 0xa8, 0xfe, 0xfa, 0xab, 0xcd, 0x98, 0x78, 0x87
-```
+`0x159eeeec, 0x4a14, 0x4418, 0xa8, 0xfe, 0xfa, 0xab, 0xcd, 0x98, 0x78, 0x87`
 
 ### <a name="parallel-query-begin"></a>Rozpoczęcie zapytania równoległego
  EVENT_DESCRIPTOR. Zadanie = 1

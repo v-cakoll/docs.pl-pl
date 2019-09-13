@@ -5,12 +5,12 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.topic: overview
-ms.openlocfilehash: 69cca28606c64479d500e731ba95fe404bea38df
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 0388bd1fa29ce1caad93c917503dac9eed8974e1
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70017333"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926398"
 ---
 # <a name="dependency-loading-in-net-core"></a>Ładowanie zależności w programie .NET Core
 
@@ -20,13 +20,14 @@ Informacje o standardowej logiki ładowania zestawów programu .NET Core mogą p
 
 W niektórych aplikacjach zależności są określane dynamicznie w czasie wykonywania. W takich sytuacjach ważne jest, aby zrozumieć, jak są ładowane zestawy zarządzane i niezarządzane zależności.
 
-## <a name="understanding-assemblyloadcontext"></a>Zrozumienie AssemblyLoadContext
+## <a name="understanding-assemblyloadcontext"></a>Informacje o elemencie AssemblyLoadContext
 
 <xref:System.Runtime.Loader.AssemblyLoadContext> Interfejs API jest centralny w projekcie ładowania .NET Core. Artykuł dotyczący [poznania AssemblyLoadContext](understanding-assemblyloadcontext.md) zawiera omówienie pojęć dotyczących projektu.
 
-## <a name="loading-details"></a>Szczegóły ładowania
+## <a name="loading-details"></a>Ładowanie szczegółów
 
 Szczegóły algorytmu ładowania zostały omówione krótko w kilku artykułach:
+
 - [Algorytm ładowania zestawu zarządzanego](loading-managed.md)
 - [Algorytm ładowania zestawu satelitarnego](loading-resources.md)
 - [Algorytm ładowania biblioteki niezarządzanej (natywnej)](loading-unmanaged.md)

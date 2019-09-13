@@ -17,28 +17,29 @@ helpviewer_keywords:
 - members [Visual Basic], Implements keyword
 - reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
-ms.openlocfilehash: 05de1d9f8966c17d84deba34f27819cce4aff3fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcd20f21a989c327dcfcf27d5638d500b6e4b6da
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61637768"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929318"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements — Klauzula (Visual Basic)
 Wskazuje, że składowa klasy lub struktury dostarcza implementację dla składowej zdefiniowanej w interfejsie.  
   
 ## <a name="remarks"></a>Uwagi  
-`Implements` — Słowo kluczowe nie jest taka sama jak [Implements — instrukcja](../../../visual-basic/language-reference/statements/implements-statement.md). Możesz użyć `Implements` instrukcję, aby określić, że klasa lub struktura implementuje jeden lub więcej interfejsów, a następnie dla każdego elementu członkowskiego przy użyciu `Implements` — słowo kluczowe, aby określić, które interfejsu i członka, który implementuje.
+Słowo kluczowe nie jest takie samo jak [instrukcja Implements.](../../../visual-basic/language-reference/statements/implements-statement.md) `Implements` Możesz użyć `Implements` instrukcji, aby określić, że Klasa lub struktura implementuje jeden lub więcej interfejsów, a następnie dla każdego elementu członkowskiego `Implements` używa słowa kluczowego, aby określić, który interfejs i który element członkowski implementuje.
 
-Jeśli klasa lub struktura implementuje interfejs, musi on zawierać `Implements` instrukcji natychmiast po [Class — instrukcja](../../../visual-basic/language-reference/statements/class-statement.md) lub [Structure — instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md), i musi on implementować wszystkie elementy członkowskie zdefiniowane przez interfejs.
+Jeśli klasa lub struktura implementuje interfejs, musi zawierać `Implements` instrukcję bezpośrednio po [instrukcji klasy](../../../visual-basic/language-reference/statements/class-statement.md) lub [instrukcji struktury](../../../visual-basic/language-reference/statements/structure-statement.md)i musi zaimplementować wszystkie elementy członkowskie zdefiniowane przez interfejs.
 
-## <a name="reimplementation"></a>Reimplementation  
-W klasie pochodnej można ponownie składowej interfejsu, która klasa bazowa została już zaimplementowana. To różni się od przesłanianie składowej klasy bazowej pod następującymi względami:
+## <a name="reimplementation"></a>Reimplementacja  
+W klasie pochodnej można wykonać ponowną implementację elementu członkowskiego interfejsu, który został już zaimplementowany przez klasę bazową. Różni się to od przesłaniania składowej klasy bazowej w następujących aspektach:
 
-- Składowej klasy bazowej nie musi być [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) do być reimplemented.
-- Można ponownie element członkowski o innej nazwie.
+- Składowa klasy bazowej nie musi być zaimplementowana [, aby](../../../visual-basic/language-reference/modifiers/overridable.md) można ją było ponownie zaimplementować.
+- Można wykonać ponowną implementację elementu członkowskiego z inną nazwą.
 
-`Implements` — Słowo kluczowe może służyć w następujących okolicznościach:
+`Implements` Słowo kluczowe może być używane w następujących kontekstach:
+
 - [Event, instrukcja](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Instrukcja Property](../../../visual-basic/language-reference/statements/property-statement.md)

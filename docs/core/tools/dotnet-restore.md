@@ -2,12 +2,12 @@
 title: polecenie dotnet restore
 description: Informacje o sposobie przywracania zależności i narzędzi specyficznych dla projektu przy użyciu polecenia dotnet restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: c510aec8411fb0650b8caa4c3926181aa8071a66
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 567316e98e161a7645db6bf55a03c3c006999fa9
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849609"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70893287"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -177,7 +177,7 @@ Określa środowisko uruchomieniowe przywracania pakietu. Służy do przywracani
 
 `-s|--source <SOURCE>`
 
-Określa źródło pakietu NuGet do użycia podczas operacji przywracania. Zastępuje wszystkie źródła określone w plikach *NuGet. config* , efektywnie odczytując plik *NuGet. config* <packageSource> tak, jakby nie było tam elementu. Można podać wiele źródeł, określając tę opcję wiele razy.
+Określa źródło pakietu NuGet do użycia podczas operacji przywracania. Zastępuje wszystkie źródła określone w plikach *NuGet. config* , efektywnie odczytując plik *NuGet. config* `<packageSource>` tak, jakby nie było tam elementu. Można podać wiele źródeł, określając tę opcję wiele razy.
 
 `--verbosity <LEVEL>`
 

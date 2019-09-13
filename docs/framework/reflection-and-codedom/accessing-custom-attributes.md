@@ -12,29 +12,29 @@ helpviewer_keywords:
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 764b0d535413fc1e5e23a2e47221789aa807ff38
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6955c24c12936ef37bedea2a1dd290bac45a5a2e
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937093"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894914"
 ---
 # <a name="accessing-custom-attributes"></a>Uzyskiwanie dostępu do atrybutów niestandardowych
-Po atrybuty zostały skojarzone z elementami program, odbicie może służyć do kwerendy ich istnienie i wartości. W .NET Framework w wersji 1.0 i 1.1 atrybuty niestandardowe są badane w kontekście wykonywania. .NET Framework w wersji 2.0 zapewnia nowy kontekst obciążenia kontekstu reflection-only, którego można użyć, aby sprawdzić kod, którego nie można załadować do wykonania.  
+Po skojarzeniu atrybutów z elementami programu odbicie może służyć do wykonywania zapytań o ich istnienie i wartości. W .NET Framework w wersji 1,0 i 1,1 atrybuty niestandardowe są badane w kontekście wykonania. .NET Framework w wersji 2,0 udostępnia nowy kontekst ładowania, kontekst tylko odbicia, który może służyć do badania kodu, którego nie można załadować do wykonania.  
   
-## <a name="the-reflection-only-context"></a>Kontekstu Reflection-Only  
- Nie można wykonać kod ładowane do kontekstu reflection-only. Oznacza to, że nie można utworzyć wystąpienia atrybutów niestandardowych, ponieważ wymagałoby, wykonywanie ich konstruktory. Aby załadować i zbadać atrybutów niestandardowych w kontekstu reflection-only, należy użyć <xref:System.Reflection.CustomAttributeData> klasy. Wystąpienia tej klasy można uzyskać za pomocą odpowiednich przeciążenia statycznych <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> metody. Zobacz [jak: Ładowanie zestawów do kontekstu Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+## <a name="the-reflection-only-context"></a>Kontekst tylko odbicie  
+ Nie można wykonać kodu załadowanego do kontekstu tylko odbicie. Oznacza to, że nie można utworzyć wystąpień atrybutów niestandardowych, ponieważ wymagałoby to wykonania konstruktorów. Aby załadować i przejrzeć atrybuty niestandardowe w kontekście tylko odbicia, użyj <xref:System.Reflection.CustomAttributeData> klasy. Wystąpienia tej klasy można uzyskać przy użyciu odpowiedniego przeciążenia metody statycznej <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> . Zobacz [How to: Załaduj zestawy do kontekstu](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)tylko odbicie.  
   
 ## <a name="the-execution-context"></a>Kontekst wykonywania  
- Metody głównej odbicia do atrybutów zapytania w kontekście wykonania są <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType> i <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>.  
+ Główne metody odbicia w celu zbadania atrybutów w kontekście wykonywania są <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType> i <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>.  
   
- Dostępność atrybut niestandardowy jest sprawdzany w odniesieniu do zestawu, w której jest dołączony. Jest to równoważne do sprawdzania, czy metoda w typie w zestawie, w której jest dołączony atrybut niestandardowy można wywołać konstruktora atrybutu niestandardowego.  
+ Dostępność atrybutu niestandardowego jest sprawdzana w odniesieniu do zestawu, w którym jest dołączony. Jest to równoznaczne z sprawdzeniem, czy metoda na typie w zestawie, do którego jest dołączony atrybut niestandardowy, może wywołać konstruktora atrybutu niestandardowego.  
   
- Metody takie jak <xref:System.Reflection.Assembly.GetCustomAttributes%28System.Boolean%29?displayProperty=nameWithType> Sprawdź widoczność i dostępność argument typu. Tylko do kodu w zestawie, który zawiera typ zdefiniowany przez użytkownika można pobrać atrybutu niestandardowego dla tego typu za pomocą **getcustomattributes —**.  
+ Metody, takie <xref:System.Reflection.Assembly.GetCustomAttributes%28System.Boolean%29?displayProperty=nameWithType> jak sprawdzanie widoczności i dostępności argumentu typu. Tylko kod w zestawie, który zawiera typ zdefiniowany przez użytkownika, może pobrać atrybut niestandardowy tego typu za pomocą **GetCustomAttributes —** .  
   
- Następujące C# przykładem jest wzorzec projektowy typowe atrybutu niestandardowego. Zawiera ono modelu odbicia atrybutu niestandardowego środowiska uruchomieniowego.  
+ Poniższy C# przykład jest typowym wzorcem projektowania atrybutów niestandardowych. Ilustruje on model odbicia niestandardowego atrybutu środowiska uruchomieniowego.  
   
-```  
+```csharp
 System.DLL  
 public class DescriptionAttribute : Attribute  
 {  
@@ -54,19 +54,19 @@ public class LocalizationExtenderProvider
 }  
 ```  
   
- Jeśli środowisko wykonawcze próbuje pobrać atrybutów niestandardowych dla tego typu atrybutu niestandardowego publicznych <xref:System.ComponentModel.DescriptionAttribute> dołączone do **getlanguage —** metody wykonuje następujące czynności:  
+ Jeśli środowisko uruchomieniowe próbuje pobrać atrybuty niestandardowe dla publicznego typu <xref:System.ComponentModel.DescriptionAttribute> atrybutu niestandardowego dołączonego do metody **GetLanguage** , wykonuje następujące czynności:  
   
-1. Środowisko uruchomieniowe sprawdza, czy argument typu **DescriptionAttribute** do **Type.GetCustomAttributes**(typ *typu*) nie jest publiczny i dlatego jest widoczny i dostępny.  
+1. Środowisko uruchomieniowe sprawdza, czy argument typu **DescriptionAttribute** do **typu. GetCustomAttributes —** ( *Typ typu) jest*publiczny i dlatego jest widoczny i dostępny.  
   
-2. Środowisko uruchomieniowe sprawdza, czy typ zdefiniowany przez użytkownika **MyDescriptionAttribute** , jest tworzony na podstawie **DescriptionAttribute** jest widoczny i dostępny w ramach **System.Web.DLL**zestawu, w której jest podłączony do metody **getlanguage —**().  
+2. Środowisko uruchomieniowe sprawdza, czy zdefiniowany przez użytkownika typ **DescriptionAttribute** pochodzący z **DescriptionAttribute** jest widoczny i dostępny w ramach zestawu **System. Web. dll** , gdzie jest dołączony do metody **GetLanguage** ().  
   
-3. Środowisko uruchomieniowe sprawdza, czy konstruktora **MyDescriptionAttribute** jest widoczny i dostępny w ramach **System.Web.DLL** zestawu.  
+3. Środowisko uruchomieniowe sprawdza, czy Konstruktor elementu **WebDescriptionAttribute** jest widoczny i dostępny w zestawie **System. Web. dll** .  
   
-4. Środowisko wykonawcze wywołuje konstruktor **MyDescriptionAttribute** z parametrami atrybutu niestandardowego i zwraca nowy obiekt do obiektu wywołującego.  
+4. Środowisko uruchomieniowe wywołuje konstruktora elementu **WebDescriptionAttribute** z parametrami atrybutu niestandardowego i zwraca nowy obiekt do obiektu wywołującego.  
   
- Atrybut niestandardowy model odbicia mogą spowodować przeciek tych wystąpień typów zdefiniowanych przez użytkownika spoza zestawu, w którym typ jest zdefiniowany. To nie różni się od członków w bibliotece środowiska uruchomieniowego systemu, które zwracają wystąpień typów zdefiniowanych przez użytkownika, takie jak <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> tablicę **RuntimeMethodInfo** obiektów. Aby zapobiec klienta z odnajdywanie informacji o typie atrybutów niestandardowych zdefiniowanych przez użytkownika, należy zdefiniować członkom typów można niepublicznych.  
+ Model odbicia atrybutów niestandardowych może wyciekować wystąpienia typów zdefiniowanych przez użytkownika poza zestawem, w którym jest zdefiniowany typ. Nie różni się to od elementów członkowskich w bibliotece systemowej środowiska uruchomieniowego, które zwracają wystąpienia typów zdefiniowanych przez użytkownika, <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> takich jak zwracanie tablicy obiektów **RuntimeMethodInfo** . Aby zapobiec odnajdywaniu przez klienta informacji o typie atrybutu niestandardowego zdefiniowanym przez użytkownika, należy zdefiniować członków typu jako niepubliczny.  
   
- Poniższy przykład pokazuje podstawowy sposób przy użyciu odbicia w celu uzyskania dostępu do atrybutów niestandardowych.  
+ Poniższy przykład ilustruje podstawowy sposób używania odbicia w celu uzyskania dostępu do atrybutów niestandardowych.  
   
  [!code-cpp[CustomAttributeData#2](../../../samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source2.cpp#2)]
  [!code-csharp[CustomAttributeData#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source2.cs#2)]

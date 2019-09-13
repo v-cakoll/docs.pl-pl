@@ -3,12 +3,12 @@ title: Eksplorowanie zakresów danych przy użyciu indeksów i zakresów
 description: Ten zaawansowany Samouczek uczy się, jak eksplorować dane przy użyciu indeksów i zakresów w celu zbadania wycinków sekwencyjnego zestawu danych.
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: d53f32bcb310d4859cea67a742ac0e2c4be5d942
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 27f4b90f130345dd10517a5de78c759066afdf07
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105789"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926640"
 ---
 # <a name="indices-and-ranges"></a>Indeksy i zakresy
 
@@ -17,6 +17,7 @@ Zakresy i indeksy zapewniają zwięzłą składnię do uzyskiwania dostępu do p
 W tym samouczku dowiesz się, jak:
 
 > [!div class="checklist"]
+>
 > - Użyj składni dla zakresów w sekwencji.
 > - Poznaj decyzje projektowe dotyczące początku i końca każdej sekwencji.
 > - Poznaj scenariusze dla <xref:System.Index> typów i <xref:System.Range> .
@@ -24,6 +25,7 @@ W tym samouczku dowiesz się, jak:
 ## <a name="language-support-for-indices-and-ranges"></a>Obsługa języków w przypadku indeksów i zakresów
 
 Ten język obsługuje dwa nowe typy i dwa nowe operatory.
+
 - <xref:System.Index?displayProperty=nameWithType>reprezentuje indeks w sekwencji.
 - `^` Operator, który określa, że indeks jest względem końca sekwencji.
 - <xref:System.Range?displayProperty=nameWithType>reprezentuje Podzakres sekwencji.

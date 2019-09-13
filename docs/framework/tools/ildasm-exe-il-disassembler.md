@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38a6b27ea0ba8b9d9e2af883db1fc3350d60494a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d9e6d9e57528f3eae9b30706013a0529313877c7
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912491"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894868"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Dezasembler IL)
 
@@ -28,7 +28,7 @@ W wierszu polecenia wpisz następujące polecenie:
 
 ## <a name="syntax"></a>Składnia
 
-```
+```console
 ildasm [options] [PEfilename] [options]
 ```
 
@@ -117,14 +117,14 @@ Począwszy od .NET Framework 4,5, *Ildasm. exe* obsługuje nierozpoznany zorgani
 public void Test([MarshalAs((short)70)] int test) { }
 ```
 
-```
+```il
 // IL from Ildasm.exe output
 .method public hidebysig instance void Test(int32  marshal({ 46 }) test) cil managed
 ```
 
 Począwszy od .NET Framework 4,5, *Ildasm. exe* Wyświetla atrybuty, które są stosowane do implementacji interfejsu, jak pokazano w poniższym fragmencie danych wyjściowych programu *Ildasm. exe* :
 
-```
+```il
 .class public auto ansi beforefieldinit MyClass
   extends [mscorlib]System.Object
   implements IMyInterface
@@ -155,7 +155,7 @@ Następujące polecenie odłączy plik `MyFile.exe` i wyświetla otrzymany tekst
 ildasm MyFile.exe /text
 ```
 
-Jeśli plik `MyApp.exe` zawiera osadzone zasoby zarządzane i niezarządzane, następujące polecenie tworzy cztery pliki: *MyApp.Il*, *MojaApl. res*, *ikon.* Resources i *Message.* Resources:
+Jeśli plik `MyApp.exe` zawiera osadzone zasoby zarządzane i niezarządzane, następujące polecenie tworzy cztery pliki: *MyApp.Il*, *MojaApl. res*, *ikon. resources*i *Message. resources*:
 
 ```console
 ildasm MyApp.exe /output:MyApp.il

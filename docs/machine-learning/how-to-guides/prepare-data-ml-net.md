@@ -1,28 +1,28 @@
 ---
-title: Przygotowuje dane do budowania modelu
-description: Dowiedz się, jak użyć przekształceń w strukturze ML.NET do manipulowania i przygotowuje dane do dodatkowego przetwarzania lub tworzenia modelu.
+title: Przygotowywanie danych do kompilowania modelu
+description: Dowiedz się, jak używać transformacji w programie ML.NET, aby manipulować i przygotowywać dane do dodatkowego przetwarzania lub kompilowania modeli.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 06/25/2019
+ms.date: 09/11/2019
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 4b7d5a09044e49f1b57b8276b893e0fc962a3be2
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 4452aef351f33df532f3c673307dedbbf71631b8
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397716"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929374"
 ---
-# <a name="prepare-data-for-building-a-model"></a>Przygotowuje dane do budowania modelu
+# <a name="prepare-data-for-building-a-model"></a>Przygotowywanie danych do kompilowania modelu
 
-Dowiedz się, jak używać strukturze ML.NET do przygotowywania danych do dodatkowego przetwarzania lub budowania modelu.
+Dowiedz się, w jaki sposób używać ML.NET do przygotowywania danych do dodatkowego przetwarzania lub tworzenia modelu.
 
-Dane są często nieczyste i rozrzedzone. Ponadto algorytmów uczenia maszynowego w strukturze ML.NET oczekiwać, że dane wejściowe lub funkcje, aby być w przypadku pojedynczego wektora wartości liczbowych. Dlatego jest jednym z celów przygotowywania danych do pobrania danych do formatu oczekiwanego przez algorytmy strukturze ML.NET. 
+Dane często są nieoczyszczone i rozrzedzone. Algorytmy uczenia maszynowego ML.NET oczekują wejścia lub funkcje, które mogą znajdować się w pojedynczym wektorze liczbowym. Podobnie, wartość do prognozowania (etykieta), szczególnie w przypadku kategorii danych, musi być zakodowana. W związku z tym jednym z celów przygotowywania danych jest uzyskanie danych do formatu oczekiwanego przez algorytmy ML.NET. 
 
 ## <a name="filter-data"></a>Filtrowanie danych
 
-Czasami nie wszystkie dane w zestawie danych są istotne dla analizy. Filtrowanie jest sposobem usunięcia danych nie ma znaczenia. [ `DataOperationsCatalog` ](xref:Microsoft.ML.DataOperationsCatalog) Zawiera zestaw operacji filtrów, które pobierają w [ `IDataView` ](xref:Microsoft.ML.IDataView) zawierająca wszystkie dane i zwrócenia [IDataView](xref:Microsoft.ML.IDataView) zawierający tylko dane punktów orientacyjnych. Należy zauważyć, że ponieważ filtr operacje nie są [ `IEstimator` ](xref:Microsoft.ML.IEstimator%601) lub [ `ITransformer` ](xref:Microsoft.ML.ITransformer) , takich jak te w [ `TransformsCatalog` ](xref:Microsoft.ML.TransformsCatalog), nie mogą być dołączone jako część [ `EstimatorChain` ](xref:Microsoft.ML.Data.EstimatorChain%601) lub [ `TransformerChain` ](xref:Microsoft.ML.Data.TransformerChain%601) potoku przygotowywania danych. 
+Czasami nie wszystkie dane w zestawie danych są związane z analizą. Podejście do usuwania nieistotnych danych jest filtrowanie. Zawiera zestaw operacji filtrowania, które przyjmują [`IDataView`](xref:Microsoft.ML.IDataView) wszystkie dane i zwracają [IDataView](xref:Microsoft.ML.IDataView) zawierające tylko interesujące punkty danych. [`DataOperationsCatalog`](xref:Microsoft.ML.DataOperationsCatalog) Należy pamiętać, że [`IEstimator`](xref:Microsoft.ML.IEstimator%601) ponieważ operacje filtrowania nie są ani [`ITransformer`](xref:Microsoft.ML.ITransformer) takie jak te w programie [`TransformsCatalog`](xref:Microsoft.ML.TransformsCatalog), nie można [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) ich uwzględnić jako części potoku przygotowywania lub [`TransformerChain`](xref:Microsoft.ML.Data.TransformerChain%601) przygotowania danych. 
 
-Przy użyciu następujących danych wejściowych, który jest ładowany do [ `IDataView` ](xref:Microsoft.ML.IDataView):
+Użycie następujących danych wejściowych, które są ładowane do [`IDataView`](xref:Microsoft.ML.IDataView):
 
 ```csharp
 HomeData[] homeDataList = new HomeData[]
@@ -45,20 +45,20 @@ HomeData[] homeDataList = new HomeData[]
 };
 ```
 
-Aby filtrować dane na podstawie wartości kolumny, należy użyć [ `FilterRowsByColumn` ](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn*) metody.
+Aby filtrować dane na podstawie wartości kolumny, użyj [`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn*) metody.
 
 ```csharp
 // Apply filter
 IDataView filteredData = mlContext.Data.FilterRowsByColumn(data, "Price", lowerBound: 200000, upperBound: 1000000);
 ```
 
-Powyższe przykładowe przyjmuje wierszy w zestawie danych z ceną między 200000 do 1 000 000. Wynik zastosowania ten filtr będzie zwracać tylko ostatnie dwa wiersze danych i pominąć pierwszy wiersz, ponieważ jej miesięczna cena to 100000, a nie od określonego zakresu.
+Powyższy przykład pobiera wiersze w zestawie danych z ceną z zakresu od 200000 do 1000000. Wynikiem zastosowania tego filtru będzie zwrócenie tylko ostatnich dwóch wierszy danych i wykluczenie pierwszego wiersza, ponieważ jego cena jest 100000, a nie pomiędzy określonym zakresem.
 
-## <a name="replace-missing-values"></a>Zastąp wartości Brak
+## <a name="replace-missing-values"></a>Zamień brakujące wartości
 
-Brak wartości są wystąpieniem typowe w zestawach danych. Jedno z podejść do radzenia sobie z brakującymi wartościami ma zastąpić je wartością domyślną dla danego typu lub innej mająca znaczenie wartość, takie jak średnia wartość w danych. 
+Brakujące wartości są typowym wystąpieniem w zestawach danych. Jednym z metod postępowania z brakującymi wartościami jest zastąpienie ich wartością domyślną dla danego typu, jeśli jakakolwiek lub inna wartość istotna, taka jak wartość średnia w danych. 
 
-Przy użyciu następujących danych wejściowych, który jest ładowany do [ `IDataView` ](xref:Microsoft.ML.IDataView):
+Użycie następujących danych wejściowych, które są ładowane do [`IDataView`](xref:Microsoft.ML.IDataView):
 
 ```csharp
 HomeData[] homeDataList = new HomeData[]
@@ -81,10 +81,10 @@ HomeData[] homeDataList = new HomeData[]
 };
 ```
 
-Należy zauważyć, że po ostatnim elemencie w naszej listy ma Brak wartości dla `Price`. Aby zastąpić brakujących wartości w `Price` kolumny, użyj [ `ReplaceMissingValues` ](xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues*) metodę, aby wypełnić tę wartość Brak.
+Zwróć uwagę, że ostatni element na naszej liście ma brakującą wartość `Price`dla. Aby zastąpić brakujące wartości w `Price` kolumnie, [`ReplaceMissingValues`](xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues*) Użyj metody, aby wypełnić tę brakującą wartość.
 
 > [!IMPORTANT]
-> [`ReplaceMissingValue`](xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues*) działa tylko z danymi liczbowymi.
+> [`ReplaceMissingValue`](xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues*)działa tylko z danymi liczbowymi.
 
 ```csharp
 // Define replacement estimator
@@ -98,15 +98,15 @@ ITransformer replacementTransformer = replacementEstimator.Fit(data);
 IDataView transformedData = replacementTransformer.Transform(data);
 ```
 
-Strukturze ML.NET obsługuje różne [tryby zastąpienie](xref:Microsoft.ML.Transforms.MissingValueReplacingEstimator.ReplacementMode). Przykład powyżej używa `Mean` trybu zastępczy, który wypełni brakujące wartością średniej wartości tej kolumny. Wypełnia wyniku zastąpienia `Price` właściwość po ostatnim elemencie w naszych danych za pomocą 200 000, ponieważ jest średnią 100 000 i 300 000. 
+ML.NET obsługuje różne [tryby wymiany](xref:Microsoft.ML.Transforms.MissingValueReplacingEstimator.ReplacementMode). Powyższy przykład używa `Mean` trybu zamiany, który spowoduje wypełnienie brakującej wartości wartością średnią tej kolumny. Wynikiem zamiany jest wypełnienie `Price` właściwości ostatniego elementu w danych z 200 000, ponieważ jest to średnia z 100 000 i 300 000. 
 
-## <a name="use-normalizers"></a>Użyj normalizers
+## <a name="use-normalizers"></a>Korzystanie z normalizacji
 
-[Normalizacja](https://en.wikipedia.org/wiki/Feature_scaling) danych, przetwarzanie wstępne technika używana do standaryzacji funkcje, które nie znajdują się na tę samą skalę, która pomaga algorytmy zbiegają się szybciej. Na przykład zakresy dla wartości, takich jak wiek i przychody się istotnie różnić o wieku ogólnie jest z zakresu od 0 do 100 i przychody ogólnie znajdujące się w zakresie od zera do tysięcy. Odwiedź stronę [stronę przekształcenia](../resources/transforms.md) bardziej szczegółowe listę i opis przekształcenia normalizacji. 
+[Normalizacja](https://en.wikipedia.org/wiki/Feature_scaling) to technika przetwarzania wstępnego danych używana do standaryzacji funkcji, które nie znajdują się na tej samej skali, co ułatwia algorytmom szybsze wywoływanie zbieżności. Na przykład zakresy wartości, takie jak wiek i dochód, różnią się znacznie w stosunku do wieku w zakresie 0-100 i przychodów ogólnie w zakresie od zera do tysięcy. Odwiedź [stronę przekształcenia](../resources/transforms.md) , aby uzyskać bardziej szczegółową listę i opis transformacji normalizacji. 
 
-### <a name="min-max-normalization"></a>Normalizacji minimum-maksimum
+### <a name="min-max-normalization"></a>Minimalna-Maksymalna normalizacja
 
-Przy użyciu następujących danych wejściowych, który jest ładowany do [ `IDataView` ](xref:Microsoft.ML.IDataView):
+Użycie następujących danych wejściowych, które są ładowane do [`IDataView`](xref:Microsoft.ML.IDataView):
 
 ```csharp
 HomeData[] homeDataList = new HomeData[]
@@ -124,7 +124,7 @@ HomeData[] homeDataList = new HomeData[]
 };
 ```
 
-Normalizacja można zastosować do kolumn z jednej wartości liczbowe, a także wektorów. Normalizować dane w `Price` kolumny przy użyciu normalizacji minimum maksimum z [ `NormalizeMinMax` ](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) metody.
+Normalizację można zastosować do kolumn z pojedynczą wartością liczbową, a także wektorami. Normalizuje dane w `Price` kolumnie, używając minimalnej normalizacji [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) z metodą.
 
 ```csharp
 // Define min-max estimator
@@ -138,13 +138,13 @@ ITransformer minMaxTransformer = minMaxEstimator.Fit(data);
 IDataView transformedData = minMaxTransformer.Transform(data);
 ```
 
-Oryginalne wartości cen `[200000,100000]` są konwertowane na `[ 1, 0.5 ]` przy użyciu `MinMax` Formuła normalizacji, które generuje wartości wyjściowe w zakresie 0 – 1.
+Pierwotne wartości `[200000,100000]` cen są konwertowane na `[ 1, 0.5 ]` użycie `MinMax` formuły normalizacji, która generuje wartości wyjściowe z zakresu 0-1.
 
-### <a name="binning"></a>Kwantowanie
+### <a name="binning"></a>Pakowania
 
-[Kwantowanie](https://en.wikipedia.org/wiki/Data_binning) konwertuje ciągłe wartości dyskretnych reprezentacja danych wejściowych. Na przykład załóżmy, że jedna z funkcji jest okres ważności. Zamiast używania wartości rzeczywistej wiek, pakowania tworzy zakresy dla tej wartości. 0 – 18 może być jednego pojemnika, inny może być 19 – 35 i tak dalej. 
+[Pakowania](https://en.wikipedia.org/wiki/Data_binning) konwertuje ciągłe wartości na dyskretną reprezentację danych wejściowych. Załóżmy na przykład, że jedna z Twoich funkcji jest w wieku. Zamiast korzystać z rzeczywistej wartości wieku, pakowania tworzy zakresy dla tej wartości. 0-18 może być jednym pojemnikem, innym może być 19-35 i tak dalej. 
 
-Przy użyciu następujących danych wejściowych, który jest ładowany do [ `IDataView` ](xref:Microsoft.ML.IDataView):
+Użycie następujących danych wejściowych, które są ładowane do [`IDataView`](xref:Microsoft.ML.IDataView):
 
 ```csharp
 HomeData[] homeDataList = new HomeData[]
@@ -167,7 +167,7 @@ HomeData[] homeDataList = new HomeData[]
 };
 ```
 
-Normalizacji danych do pojemniki przy użyciu [ `NormalizeBinning` ](xref:Microsoft.ML.NormalizationCatalog.NormalizeBinning*) metody. `maximumBinCount` Parametr umożliwia określenie liczba pojemników potrzebne do klasyfikowania danych. W tym przykładzie dane będą umieszczone dwa pojemniki.  
+Normalizowanie danych do pojemników przy użyciu [`NormalizeBinning`](xref:Microsoft.ML.NormalizationCatalog.NormalizeBinning*) metody. `maximumBinCount` Parametr umożliwia określenie liczby pojemników potrzebnych do klasyfikowania danych. W tym przykładzie dane będą umieszczane w dwóch pojemnikach.  
 
 ```csharp
 // Define binning estimator
@@ -181,13 +181,13 @@ var binningTransformer = binningEstimator.Fit(data);
 IDataView transformedData = binningTransformer.Transform(data);
 ```
 
-Wynik pakowania tworzy granice bin `[0,200000,Infinity]`. W związku z tym pojemniki wynikowe są `[0,1,1]` ponieważ pierwszy obserwacji jest z zakresu od 0 200000 i inne są większe niż 200000, ale mniejszą niż nieskończoność.
+Wynik pakowania tworzy granice `[0,200000,Infinity]`bin. W związku z tym te `[0,1,1]` pojemniki są spowodowane tym, że Pierwsza obserwacja jest między 0-200000 a pozostałe są większe niż 200000, ale mniejsze niż nieskończoność.
 
-## <a name="work-with-categorical-data"></a>Praca z danymi podzielonych na kategorie
+## <a name="work-with-categorical-data"></a>Pracuj z danymi kategorii
 
-Dane podzielone na kategorie nieliczbowe musi być konwertowany na liczbę przed ich użyciem do tworzenia modelu uczenia maszynowego. 
+Dane nieliczbowe kategorii muszą zostać przekonwertowane na liczbę przed użyciem do kompilowania modelu uczenia maszynowego. 
 
-Przy użyciu następujących danych wejściowych, który jest ładowany do [ `IDataView` ](xref:Microsoft.ML.IDataView):
+Użycie następujących danych wejściowych, które są ładowane do [`IDataView`](xref:Microsoft.ML.IDataView):
 
 ```csharp
 CarData[] cars = new CarData[] 
@@ -210,7 +210,7 @@ CarData[] cars = new CarData[]
 };
 ```
 
-Podzielone na kategorie `VehicleType` właściwości mogą być konwertowane na numer przy użyciu [ `OneHotEncoding` ](xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*) metody. 
+Właściwość kategorii `VehicleType` można przekonwertować na liczbę [`OneHotEncoding`](xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*) przy użyciu metody. 
 
 ```csharp
 // Define categorical transform estimator
@@ -224,7 +224,7 @@ ITransformer categoricalTransformer = categoricalEstimator.Fit(data);
 IDataView transformedData = categoricalTransformer.Transform(data);
 ```
 
-Wynikowy przekształcenie konwertuje wartość tekstu `VehicleType` na liczbę. Wpisy w `VehicleType` kolumny stają się następujące po zastosowaniu przekształcenia: 
+Wynikiem przekształcenia jest konwertowanie wartości `VehicleType` tekstowej na liczbę. Po zastosowaniu przekształcenia `VehicleType` wpisy w kolumnie stają się następujące: 
 
 ```text
 [
@@ -234,11 +234,11 @@ Wynikowy przekształcenie konwertuje wartość tekstu `VehicleType` na liczbę. 
 ]
 ```
 
-## <a name="work-with-text-data"></a>Praca z danymi tekstu
+## <a name="work-with-text-data"></a>Pracuj z danymi tekstowymi
 
-Dane tekstowe muszą zostać przekształcone na liczby, przed jego użyciem, aby zbudować model uczenia maszynowego. Odwiedź stronę [stronę przekształcenia](../resources/transforms.md) bardziej szczegółową listę i opis przekształcenia tekstu.
+Aby można było utworzyć model uczenia maszynowego, dane tekstowe muszą zostać przekształcone w liczby. Odwiedź [stronę przekształcenia](../resources/transforms.md) , aby uzyskać bardziej szczegółową listę i opis przekształceń tekstu.
 
-Korzystanie z danych, takich jak dane poniżej, który został załadowany do [ `IDataView` ](xref:Microsoft.ML.IDataView):
+Używając danych, takich jak poniższe dane, które zostały załadowane [`IDataView`](xref:Microsoft.ML.IDataView)do:
 
 ```csharp
 ReviewData[] reviews = new ReviewData[]
@@ -256,7 +256,7 @@ ReviewData[] reviews = new ReviewData[]
 };
 ```
 
-Minimalna krokiem do konwertowania tekstu do reprezentacji liczbowych wektora jest używanie [ `FeaturizeText` ](xref:Microsoft.ML.TextCatalog.FeaturizeText*) metody. Za pomocą [ `FeaturizeText` ](xref:Microsoft.ML.TextCatalog.FeaturizeText*) przekształcenie, które szereg przekształcenia jest stosowany do kolumny wprowadzania tekstu, co w przypadku wektora wartości liczbowych, reprezentujący znormalizowane lp word i ngrams znak. 
+Minimalny krok konwersji tekstu na cyfrową reprezentację wektorową polega na użyciu [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) metody. Przy użyciu [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) transformacji serie przekształceń są stosowane do kolumny tekstu wejściowego, co jest wektorem liczbowym reprezentującym słowo LP-znormalizowane i znaki ngrams. 
 
 ```csharp
 // Define text transform estimator
@@ -270,13 +270,13 @@ ITransformer textTransformer = textEstimator.Fit(data);
 IDataView transformedData = textTransformer.Transform(data);
 ```
 
-Przekształcanie wynikowy będzie konwersji wartości tekstowe w `Description` kolumny liczbowe wektor, który wygląda podobnie do danych wyjściowych poniżej:
+Wynikowa transformacja spowoduje przekonwertowanie wartości tekstowych w `Description` kolumnie na wektor liczbowy, który wygląda podobnie do danych wyjściowych poniżej:
 
 ```text
 [ 0.2041241, 0.2041241, 0.2041241, 0.4082483, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0, 0, 0, 0, 0.4472136, 0.4472136, 0.4472136, 0.4472136, 0.4472136, 0 ]
 ```
 
-Przetwarzanie złożonych tekstu łączenia wchodzi do [ `EstimatorChain` ](xref:Microsoft.ML.Data.EstimatorChain%601) usunąć hałasu i zmniejszenie ilości zasobów do przetwarzania wymagane zgodnie z potrzebami.
+Połącz złożone kroki przetwarzania tekstu w [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) celu usunięcia szumu i potencjalnie Zmniejsz ilość wymaganych zasobów przetwarzania zgodnie z potrzebami.
 
 ```csharp
 // Define text transform estimator
@@ -288,17 +288,17 @@ var textEstimator = mlContext.Transforms.Text.NormalizeText("Description")
     .Append(mlContext.Transforms.NormalizeLpNorm("Description"));
 ```
 
-`textEstimator` zawiera podzestaw operacji wykonywanych przez [ `FeaturizeText` ](xref:Microsoft.ML.TextCatalog.FeaturizeText*) metody. Korzyści wynikające z bardziej złożonych potoku kontroli i widoczności umieszczeniu transformacji zastosowanych względem danych. 
+`textEstimator`zawiera podzestaw operacji wykonywanych przez [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) metodę. Zaletą bardziej złożonej potoku jest kontrola i widoczność przekształceń zastosowanych do danych. 
 
-Przy użyciu pierwszej pozycji, na przykład, poniżej przedstawiono szczegółowy opis efektów kroki przekształcania definicją `textEstimator`:
+Przy użyciu pierwszego wpisu na przykład, poniżej przedstawiono szczegółowy opis wyników przedstawionych przez kroki transformacji zdefiniowane przez `textEstimator`:
 
-**Oryginalny tekst: Jest to dobry produktu**
+**Oryginalny tekst: Jest to dobry produkt**
 
 |Transformacja | Opis | Wynik
 |--|--|--|
-|1. NormalizeText | Konwertuje wszystkie litery na małe litery, domyślnie | Jest to dobry produktu
-|2. TokenizeWords | Dzieli dane ciągu do poszczególnych wyrazów | ["to", "is", "","dobre","produkt"]
-|3. RemoveDefaultStopWords | Usuwa Stop-słowa, takie jak *jest* *i*. | ["dobre", "produkt"]
-|4. MapValueToKey | Mapuje wartości kluczy (kategorie), na podstawie danych wejściowych |  [1,2]
-|5. ProduceNGrams | Przekształca tekst w sekwencji kolejnych wyrazów | [1,1,1,0,0]
-|6. NormalizeLpNorm | Skala wejść przez ich lp typ norm | [ 0.577350529, 0.577350529, 0.577350529, 0, 0 ]
+|1. NormalizeText | Konwertuje domyślnie wszystkie litery na małe | jest to dobry produkt
+|2. TokenizeWords | Dzieli ciąg na pojedyncze wyrazy | ["This", "is", "a", "dobry", "Product"]
+|3. RemoveDefaultStopWords | Usuwa Stop-słowa, *takie* jak *i.* | ["dobry", "produkt"]
+|4. MapValueToKey | Mapuje wartości na klucze (kategorie) w oparciu o dane wejściowe |  [1,2]
+|5. ProduceNGrams | Przekształca tekst w sekwencję kolejnych wyrazów | [1,1,1,0,0]
+|6. NormalizeLpNorm | Skalowanie danych wejściowych według ich standardu LP | [0,577350529, 0,577350529, 0,577350529, 0, 0]

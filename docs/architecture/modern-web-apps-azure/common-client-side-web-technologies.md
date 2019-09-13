@@ -4,12 +4,12 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3a44b017c6160639ed1be7374b893e103ee5f5d8
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 4dd747293fba4c18c2d10738d36f4d98cfd3f5b9
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373909"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926501"
 ---
 # <a name="common-client-side-web-technologies"></a>Typowe technologie internetowe po stronie klienta
 
@@ -141,6 +141,7 @@ Biorąc pod uwagę, która struktura języka JavaScript będzie najlepiej dział
 Struktury JavaScript w dalszym ciągu rozwijają się z szybkością breakneck. Skorzystaj z wymienionych powyżej zagadnień, aby pomóc w ograniczeniu ryzyka wyboru struktury, z której będziesz później korzystać z programu. Jeśli jesteś szczególnie narażony na averse, weź pod uwagę platformę, która oferuje komercyjną pomoc techniczną i/lub opracowaną przez duże przedsiębiorstwo.
 
 > ### <a name="references--client-web-technologies"></a>Odwołania — technologie sieci Web klienta
+>
 > - **HTML i CSS**  
 > <https://www.w3.org/standards/webdesign/htmlcss>
 > - **Sass a LESS**  

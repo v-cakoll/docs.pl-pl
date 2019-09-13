@@ -9,17 +9,18 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: c685a5227f4339a094ae74af4e1314d4c47f7585
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: d3d11950f919c13590a0212b8d03d394d59d3550
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400868"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928434"
 ---
 # <a name="properties-wpf"></a>Właściwości (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]zawiera zestaw usług, których można użyć do zwiększenia funkcjonalności właściwości środowiska uruchomieniowego języka wspólnego (CLR). Zbiorowo te usługi są zwykle określane jako system właściwości WPF. Właściwość, która jest obsługiwana przez [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] system właściwości, jest znana jako właściwość zależności.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
+
 - [Przegląd właściwości zależności](dependency-properties-overview.md)
 - [Przegląd właściwości dołączonych](attached-properties-overview.md)
 - [Niestandardowe właściwości zależności](custom-dependency-properties.md)

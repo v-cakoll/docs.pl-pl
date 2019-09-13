@@ -6,12 +6,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 03a35d26fd1917d926f9a26d25ae8a8e32c476f4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3433819761c19b616a7c9c19fe52e250b0f028dc
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917626"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929191"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>Przewodnik: hostowanie zawartości WPF w Win32
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]oferuje bogate środowisko do tworzenia aplikacji. Jeśli jednak masz znaczną inwestycję w [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kod, bardziej efektywne może być dodanie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funkcji do aplikacji zamiast ponownego pisania oryginalnego kodu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zapewnia prosty mechanizm do hostowania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] w oknie.  
@@ -64,7 +64,6 @@ ms.locfileid: "69917626"
 ## <a name="implementing-the-host-application"></a>Implementowanie aplikacji hosta
  W tej sekcji opisano, jak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hostować zawartość w [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplikacji podstawowej. Sama zawartość jest implementowana w C++/CLI jako Klasa zarządzana. W większości przypadków jest to proste [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programowanie. Kluczowe aspekty implementacji zawartości zostały omówione w temacie implementowanie [zawartości WPF](#implementing_the_wpf_page).
 
-<a name="autoNestedSectionsOUTLINE1"></a>
 - [Podstawowa aplikacja](#the_basic_application)
 
 - [Hosting zawartości WPF](#hosting_the_wpf_page)
@@ -169,7 +168,6 @@ ms.locfileid: "69917626"
 ## <a name="implementing-the-wpf-page"></a>Implementowanie strony WPF
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Zawartość można hostować i korzystać z niej bez znajomości rzeczywistej implementacji. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Jeśli zawartość została spakowana w oddzielnej bibliotece DLL, mogła zostać skompilowana w dowolnym języku środowiska uruchomieniowego języka wspólnego (CLR). Poniżej znajduje się krótki przewodnik implementacji C++/CLI, który jest używany w przykładzie. Ta sekcja zawiera następujące podsekcje.
 
-<a name="autoNestedSectionsOUTLINE2"></a>
 - [Układ](#page_layout)
 
 - [Zwracanie danych do okna hosta](#returning_data_to_window)

@@ -3,12 +3,12 @@ title: Generowanie i używanie strumieni asynchronicznych
 description: Ten zaawansowany samouczek ilustruje scenariusze, w których generowanie i zużywanie strumieni asynchronicznych zapewnia bardziej naturalny sposób pracy z sekwencjami danych, które mogą być generowane asynchronicznie.
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: cd1159c139f2c885eacf55b8577bea9e79bf0d7a
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 3fdf5299deca365c62a00a8320ea335e96d9078c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105865"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926688"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Samouczek: Generowanie i używanie strumieni asynchronicznych C# przy użyciu 8,0 i .net Core 3,0
 
@@ -17,6 +17,7 @@ C#8,0 wprowadza **strumienie asynchroniczne**, które modelują Źródło strumi
 W tym samouczku dowiesz się, jak:
 
 > [!div class="checklist"]
+>
 > - Utwórz źródło danych, które generuje sekwencję elementów danych asynchronicznie.
 > - Korzystaj z tego źródła danych asynchronicznie.
 > - Rozpoznawaj, kiedy nowy interfejs i źródło danych są preferowane ze starszymi synchronicznymi sekwencjami danych.

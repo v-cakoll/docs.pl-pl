@@ -4,12 +4,12 @@ description: Jak korzystać z konstruktora modelu ML.NET w celu automatycznego u
 author: natke
 ms.date: 08/07/2019
 ms.custom: overview
-ms.openlocfilehash: 715c9f5854d9691fd9fc2cd771d38456405836ec
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 77b5e75fede1a4aa93eadcf7e21591d82f565cab
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104844"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929467"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Co to jest Konstruktor modelu i jak to działa?
 
@@ -28,7 +28,8 @@ Nie musisz uczyć się uczenia maszynowego, aby korzystać z konstruktora modeli
 
 W celu wygenerowania modelu uczenia maszynowego dla aplikacji można przenieść wiele różnych scenariuszy do programu model Builder.
 
-Scenariusz to opis typu przewidywania, które chcesz wprowadzić przy użyciu danych. Przykład:
+Scenariusz to opis typu przewidywania, które chcesz wprowadzić przy użyciu danych. Na przykład:
+
 - przewidywanie przyszłego wolumenu sprzedaży produktu na podstawie historycznych danych sprzedaży
 - Klasyfikuj mową jako dodatnie lub ujemne na podstawie recenzji klienta
 - Wykryj, czy transakcja bankowa jest fałszywa
@@ -41,6 +42,7 @@ W konstruktorze modelu należy wybrać typ modelu uczenia maszynowego. Typ model
 W scenariuszach, w których jest przewidywana liczba, jest wywoływany `regression`Typ modelu uczenia maszynowego.
 
 W scenariuszach, w których jest przewidywana Kategoria, typem `classification`modelu jest. Istnieją dwa typy klasyfikacji:
+
 - gdzie są tylko 2 Kategorie: `binary classification`.
 - gdzie znajdują się trzy lub więcej kategorii `multiclass classification`:.
 
@@ -89,10 +91,12 @@ Po wybraniu typu modelu program model Builder prosi o dostarczenie zestawu danyc
 ### <a name="choose-the-output-to-predict-label"></a>Wybierz dane wyjściowe do przewidywania (etykieta)
 
 Zestaw danych to tabela wierszy przykładów szkoleniowych i kolumn atrybutów. Każdy wiersz ma:
+
 - **etykieta** (atrybut, który ma zostać przewidywalna)
 - **funkcje** (atrybuty, które są używane jako dane wejściowe do przewidywania etykiet).
 
 W przypadku scenariusza przewidywania cen dla domu funkcje mogą być następujące:
+
 - kwadratowy materiał dla domu
 - Liczba sypialniami i bathrooms
 - kod pocztowy
@@ -107,10 +111,10 @@ Jeśli nie masz jeszcze własnych danych, wypróbuj jeden z tych zestawów danyc
 
 |Scenariusz|Typ modelu|Dane|Etykieta|Funkcje|
 |-|-|-|-|-|
-|Prognoza cen|ubytk|[dane dotyczące opłat za taksówki](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Bezprzewodow|Czas podróży, odległość|
-|Wykrywanie anomalii|klasyfikacja binarna|[dane sprzedaży produktu](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Sprzedaż produktu|Bieżącym|
-|Analiza tonacji|klasyfikacja binarna|[dane komentarzy witryny sieci Web](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etykieta (0 w przypadku wartości ujemnej tonacji, 1, gdy wartość jest dodatnia)|Komentarz, rok|
-|Wykrywanie oszustw|klasyfikacja binarna|[dane karty kredytowej](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Klasa (1 w przypadku oszustwa, 0 w przeciwnym razie)|Kwota, v1 — v28 (funkcje anonimowe)|
+|Prognoza cen|Ubytk|[dane dotyczące opłat za taksówki](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Bezprzewodow|Czas podróży, odległość|
+|Wykrywanie anomalii|Klasyfikacja binarna|[dane sprzedaży produktu](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Sprzedaż produktu|Bieżącym|
+|Analiza tonacji|Klasyfikacja binarna|[dane komentarzy witryny sieci Web](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etykieta (0 w przypadku wartości ujemnej tonacji, 1, gdy wartość jest dodatnia)|Komentarz, rok|
+|Wykrywanie oszustw|Klasyfikacja binarna|[dane karty kredytowej](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Klasa (1 w przypadku oszustwa, 0 w przeciwnym razie)|Kwota, v1 — v28 (funkcje anonimowe)|
 |Klasyfikacja tekstu|Klasyfikacja wieloklasowa|[Dane problemu w usłudze GitHub](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Obszar|Tytuł, opis|
 
 ## <a name="train"></a>Szkolenie
@@ -123,7 +127,7 @@ Szkolenia są procesem automatycznym, dzięki któremu Konstruktor modelu uczy s
 
 Ponieważ Konstruktor modelu korzysta z funkcji automatycznego uczenia maszynowego (AutoML), nie wymaga żadnych danych wejściowych ani dostrajania podczas szkoleń.
 
-## <a name="evaluate"></a>Oceny
+## <a name="evaluate"></a>oceny
 
 Ocena to proces użycia przeszkolonego modelu, który umożliwia prognozowanie przy użyciu nowych danych testowych, a następnie zmierzenie, jak dobre są przewidywania.
 

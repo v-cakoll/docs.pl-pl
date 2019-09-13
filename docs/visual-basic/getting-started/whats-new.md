@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 20d403e4a6410257068cc3414fcb8dc1e45709e9
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3638deeafc052a2da3b438de2c504a9955a15ad3
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666864"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895262"
 ---
 # <a name="whats-new-for-visual-basic"></a>Co nowego w Visual Basic
 
@@ -21,9 +21,12 @@ Ten temat zawiera listę najważniejszych nazw funkcji dla każdej wersji Visual
 
 ## <a name="current-version"></a>Bieżąca wersja
 
-Visual Basic 15,8/Visual Studio 2017 wersja 15,8 dla nowych funkcji, zobacz [Visual Basic 15,8](#visual-basic-158)
+Visual Basic 16,0/Visual Studio 2019 wersja 16,0  
+Aby poznać nowe funkcje, zobacz [Visual Basic 16,0](#visual-basic-160)
 
 ## <a name="previous-versions"></a>Poprzednie wersje
+
+Visual Basic 15,8/Visual Studio 2017 wersja 15,8 dla nowych funkcji, zobacz [Visual Basic 15,8](#visual-basic-158)
 
 Visual Basic 15,5/Visual Studio 2017 wersja 15,5 dla nowych funkcji, zobacz [Visual Basic 15,5](#visual-basic-155)
 
@@ -47,11 +50,26 @@ Visual Basic/operatory programu Visual Studio .NET 2003 bit Shift, deklaracja zm
 
 Visual Basic/Visual Studio .NET 2002 — pierwsza wersja Visual Basic .NET
 
+## <a name="visual-basic-160"></a>Visual Basic 16,0
+Visual Basic 16,0 koncentruje się na dostarczaniu większej liczby funkcji środowiska uruchomieniowego Visual Basic (Microsoft. VisualBasic. dll) do programu .NET Core i to pierwsza wersja Visual Basic skoncentrowana na platformie .NET Core. Wiele części środowiska uruchomieniowego Visual Basic jest zależne od WinForms i zostaną dodane do nowszej wersji Visual Basic. 
+
+**Komentarze są dozwolone w większej liczbie miejsc w instrukcjach** W Visual Basic 15,8 i wcześniejszych wersjach Komentarze są dozwolone tylko w pustych wierszach, na końcu instrukcji lub w określonych miejscach w instrukcji, w których niejawna kontynuacja wiersza jest dozwolona. Począwszy od Visual Basic 16,0, komentarze są również dozwolone po jawnej kontynuacji wiersza i wewnątrz instrukcji w wierszu rozpoczynającym się od znaku podkreślenia.
+
+```vb
+Public Sub Main()
+    cmd.CommandText = ' Comment is allowed here without _
+        "SELECT * FROM Titles JOIN Publishers " _ ' This is a comment
+        & "ON Publishers.PubId = Titles.PubID " _
+ _ ' This is a comment on a line without code
+        & "WHERE Publishers.State = 'CA'"
+End Sub
+```
+
 ## <a name="visual-basic-158"></a>Visual Basic 15,8
 
 **Optymalizacja konwersji zmiennoprzecinkowej na liczbę całkowitą**
 
-W poprzednich wersjach Visual Basic konwersja wartości podwójnej [](../language-reference/data-types/double-data-type.md) i [pojedynczej](../language-reference/data-types/single-data-type.md) na liczbę całkowitą oferuje stosunkowo niską wydajność. Visual Basic 15,8 znacząco podnosi wydajność konwersji zmiennoprzecinkowych do liczb całkowitych, gdy przekazujesz wartość zwróconą przez dowolną z następujących metod do jednej z [funkcji konwersji wewnętrznej Visual Basic liczb całkowitych](../language-reference/functions/type-conversion-functions.md) (CByte, CShort, CInt, CLng, CSByte, CUShort, CUInt, CULng) lub gdy wartość zwrócona przez dowolną z następujących metod jest niejawnie rzutowana na typ całkowity, gdy [opcja Strict](../language-reference/statements/option-strict-statement.md) jest ustawiona na `Off`:
+W poprzednich wersjach Visual Basic konwersja wartości [podwójnej](../language-reference/data-types/double-data-type.md) i [pojedynczej](../language-reference/data-types/single-data-type.md) na liczbę całkowitą oferuje stosunkowo niską wydajność. Visual Basic 15,8 znacząco podnosi wydajność konwersji zmiennoprzecinkowych do liczb całkowitych, gdy przekazujesz wartość zwróconą przez dowolną z następujących metod do jednej z [funkcji konwersji wewnętrznej Visual Basic liczb całkowitych](../language-reference/functions/type-conversion-functions.md) (CByte, CShort, CInt, CLng, CSByte, CUShort, CUInt, CULng) lub gdy wartość zwrócona przez dowolną z następujących metod jest niejawnie rzutowana na typ całkowity, gdy [opcja Strict](../language-reference/statements/option-strict-statement.md) jest ustawiona na `Off`:
 
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>

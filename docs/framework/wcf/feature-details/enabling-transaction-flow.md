@@ -4,77 +4,77 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], enabling flow
 ms.assetid: a03f5041-5049-43f4-897c-e0292d4718f7
-ms.openlocfilehash: 560b03b8e2788c88e6c92c64834bf36c750575ea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2443e82dd9c6d8b5447c2fa16b537a9feed8ddaf
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626941"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895156"
 ---
 # <a name="enabling-transaction-flow"></a>Włączanie przepływu transakcji
-Windows Communication Foundation (WCF) zapewnia bardzo elastyczne opcje do kontrolowania przepływu transakcji. Ustawienia przepływu transakcji usługi mogą być wyrażone przy użyciu kombinacji atrybutów i konfiguracji.  
+Windows Communication Foundation (WCF) zapewnia wysoce elastyczne opcje kontroli przepływu transakcji. Ustawienia przepływu transakcji usługi mogą być wyrażone przy użyciu kombinacji atrybutów i konfiguracji.  
   
 ## <a name="transaction-flow-settings"></a>Ustawienia przepływu transakcji  
- Ustawienia przepływu transakcji są generowane dla punktu końcowego usługi, w wyniku przecięcia trzech następujących wartości:  
+ Ustawienia przepływu transakcji są generowane dla punktu końcowego usługi w wyniku przecięcia następujących trzech wartości:  
   
-- <xref:System.ServiceModel.TransactionFlowAttribute> Atrybutu dla każdej metody w kontrakcie usługi.  
+- <xref:System.ServiceModel.TransactionFlowAttribute> Atrybut określony dla każdej metody w kontrakcie usługi.  
   
-- `TransactionFlow` Powiązanie właściwości w określonym powiązaniu.  
+- Właściwość `TransactionFlow` powiązania określonego powiązania.  
   
-- `TransactionFlowProtocol` Powiązanie właściwości w określonym powiązaniu. `TransactionFlowProtocol` Powiązanie właściwości pozwala na dokonanie wyboru spośród dwóch protokołów innej transakcji, można użyć do przepływu transakcji. W poniższych sekcjach krótko opisano każdego z nich.  
+- Właściwość `TransactionFlowProtocol` powiązania określonego powiązania. Właściwość `TransactionFlowProtocol` Binding umożliwia wybór spośród dwóch różnych protokołów transakcji, których można użyć do przepływu transakcji. W poniższych sekcjach krótko opisano każdą z nich.  
   
 ### <a name="ws-atomictransaction-protocol"></a>Protokół WS-AtomicTransaction  
- Protokół WS-AtomicTransaction (WS-AT) jest przydatne w scenariuszach, gdy wymagane jest współdziałanie ze stosów protokołu innych firm.  
+ Protokół WS-AtomicTransaction (WS-AT) jest użyteczny w scenariuszach, gdy wymagane jest współdziałanie z stosami protokołu innych firm.  
   
 ### <a name="oletransactions-protocol"></a>Protokół OleTransactions  
- Protokół OleTransactions jest przydatne w scenariuszach, współdziałanie z stosów protokołu innych firm nie jest wymagana, gdy wdrażania usługi wcześniej wie, że usługi protokołu WS-AT jest wyłączone lokalnie, lub istniejącą topologię sieci nie nie Preferuj użycie WS-AT.  
+ Protokół OleTransactions jest użyteczny w scenariuszach, gdy współdziałanie z stosami protokołu innych firm nie jest wymagane, a program wdrażania usługi wie z wyprzedzeniem, że usługa protokołu WS-AT jest wyłączona lokalnie lub istniejąca topologia sieci nie Preferuj użycia usługi WS-AT.  
   
- W poniższej tabeli przedstawiono różne typy przepływów transakcji, które mogą być generowane przy użyciu tych różnych kombinacji.  
+ W poniższej tabeli przedstawiono różne typy przepływów transakcji, które można wygenerować przy użyciu tych różnych kombinacji.  
   
-|transactionFlow<br /><br /> powiązanie|Właściwość powiązania TransactionFlow|Protokół powiązania TransactionFlowProtocol|Typ przepływu transakcji|  
+|TransactionFlow<br /><br /> powiązanie|Właściwość powiązania TransactionFlow|Protokół powiązania TransactionFlowProtocol|Typ przepływu transakcji|  
 |---------------------------------|--------------------------------------|----------------------------------------------|------------------------------|  
-|Obowiązkowy|true|WS-AT|Transakcji musi przepływać format WS-AT międzyoperacyjnych.|  
-|Obowiązkowy|true|OleTransactions|Transakcji musi przepływać w formacie WCF OleTransactions.|  
+|Obowiązkowy|true|WS-AT|Transakcja musi być przepływa w formacie międzyoperacyjnym WS-AT.|  
+|Obowiązkowy|true|OleTransactions|Transakcja musi być przepływa w formacie OleTransactions WCF.|  
 |Obowiązkowy|false|Nie dotyczy|Nie dotyczy, ponieważ jest to nieprawidłowa konfiguracja.|  
-|Dozwolone|true|WS-AT|Transakcja może przekazane w formacie WS-AT międzyoperacyjnych.|  
-|Dozwolone|true|OleTransactions|Transakcja może przepływać w formacie WCF OleTransactions.|  
-|Dozwolone|false|Dowolna wartość|Transakcja nie jest przepływ.|  
-|NotAllowed|Dowolna wartość|Dowolna wartość|Transakcja nie jest przepływ.|  
+|Występować|true|WS-AT|Transakcja może być przepływa w formacie międzyoperacyjnym WS-AT.|  
+|Występować|true|OleTransactions|Transakcja może być przepływa w formacie OleTransactions WCF.|  
+|Występować|false|Dowolna wartość|Transakcja nie jest przepływa.|  
+|NotAllowed|Dowolna wartość|Dowolna wartość|Transakcja nie jest przepływa.|  
   
- Poniższa tabela zawiera podsumowanie wyników przetwarzania wiadomości.  
+ Poniższa tabela zawiera podsumowanie wyników przetwarzania komunikatów.  
   
-|Przychodząca wiadomość|Ustawienie TransactionFlow|Nagłówek transakcji|Wynik przetworzenia komunikatu|  
+|Komunikat przychodzący|Ustawienie TransactionFlow|Nagłówek transakcji|Wynik przetwarzania komunikatu|  
 |----------------------|-----------------------------|------------------------|-------------------------------|  
-|Transakcja odpowiada protokołu oczekiwanego formatu|Dozwolone lub obowiązkowe|`MustUnderstand` równa się `true`.|Proces|  
-|Transakcja nie jest zgodny z formatem oczekiwanym protokołu|Obowiązkowy|`MustUnderstand` równa się `false`.|Odrzucone, ponieważ wymagana jest transakcja|  
-|Transakcja nie jest zgodny z formatem oczekiwanym protokołu|Dozwolone|`MustUnderstand` równa się `false`.|Odrzucone, ponieważ nagłówek jest niezrozumiały.|  
-|Transakcji, w formacie protokołu|NotAllowed|`MustUnderstand` równa się `false`.|Odrzucone, ponieważ nagłówek jest niezrozumiały.|  
-|Nie transakcji|Obowiązkowy|Brak|Odrzucone, ponieważ wymagana jest transakcja|  
-|Nie transakcji|Dozwolone|Brak|Proces|  
-|Nie transakcji|NotAllowed|Brak|Proces|  
+|Transakcja jest zgodna z oczekiwanym formatem protokołu|Dozwolone lub obowiązkowe|`MustUnderstand`równa `true`się.|Proces|  
+|Transakcja nie jest zgodna z oczekiwanym formatem protokołu|Obowiązkowy|`MustUnderstand`równa `false`się.|Odrzucono, ponieważ jest wymagana transakcja|  
+|Transakcja nie jest zgodna z oczekiwanym formatem protokołu|Występować|`MustUnderstand`równa `false`się.|Odrzucono, ponieważ nagłówek nie jest zrozumiały|  
+|Transakcja przy użyciu dowolnego formatu protokołu|NotAllowed|`MustUnderstand`równa `false`się.|Odrzucono, ponieważ nagłówek nie jest zrozumiały|  
+|Brak transakcji|Obowiązkowy|Brak|Odrzucono, ponieważ jest wymagana transakcja|  
+|Brak transakcji|Występować|Brak|Proces|  
+|Brak transakcji|NotAllowed|Brak|Proces|  
   
- Podczas każdej metody na kontrakt może mieć wymagania dotyczące przepływu innej transakcji, ustawienie protokołu przepływu transakcji ma zakres na poziomie powiązania. Oznacza to, że wszystkie metody, które współużytkują ten sam punkt końcowy (i w związku z tym tego samego powiązania) również udostępniać te same zasady, umożliwiając bądź wymagają takiej przepływu transakcji, a także ten sam protokół transakcji, jeśli ma to zastosowanie.  
+ Chociaż każda metoda w kontrakcie może mieć różne wymagania dotyczące przepływu transakcji, ustawienie protokołu przepływu transakcji jest ograniczone na poziomie powiązania. Oznacza to, że wszystkie metody, które współużytkują ten sam punkt końcowy (i w związku z tym to samo powiązanie), również współużytkują te same zasady, które umożliwiają lub wymagają przepływu transakcji, a także ten sam protokół transakcji, jeśli ma to zastosowanie.  
   
-## <a name="enabling-transaction-flow-at-the-method-level"></a>Włączanie przepływu transakcji na poziomie — metoda  
- Wymagania dotyczące przepływu transakcji nie zawsze są takie same dla wszystkich metod w kontrakcie usługi. W związku z tym usługi WCF także opartych na atrybutach mechanizm umożliwia każdej metody preferencje dotyczące przepływu transakcji wyrażane. Jest to osiągane przez <xref:System.ServiceModel.TransactionFlowAttribute> , który określa poziom, w którym operacji usługi akceptuje Nagłówek transakcji. Jeśli chcesz włączyć przepływ transakcji, należy oznaczyć metody kontraktu usługi za pomocą tego atrybutu. Ten atrybut ma jedną z wartości <xref:System.ServiceModel.TransactionFlowOption> wyliczenia, w którym wartość domyślna to <xref:System.ServiceModel.TransactionFlowOption.NotAllowed>. Jeśli wszystkie wartości z wyjątkiem <xref:System.ServiceModel.TransactionFlowOption.NotAllowed> jest określony, metoda jest wymagany, nie są jednokierunkowe. Deweloper może użyć tego atrybutu, aby określić wymagania dotyczące przepływu transakcji na poziomie lub ograniczenia w czasie projektowania.  
+## <a name="enabling-transaction-flow-at-the-method-level"></a>Włączanie przepływu transakcji na poziomie metody  
+ Wymagania przepływu transakcji nie są zawsze takie same dla wszystkich metod w kontrakcie usługi. W związku z tym WCF zapewnia również mechanizm oparty na atrybutach, aby umożliwić wyrażanie preferencji przepływu transakcji poszczególnych metod. Jest to osiągane przez <xref:System.ServiceModel.TransactionFlowAttribute> określenie poziomu, w którym operacja usługi akceptuje Nagłówek transakcji. Jeśli chcesz włączyć przepływ transakcji, należy oznaczyć metody kontraktu usługi z tym atrybutem. Ten atrybut przyjmuje jedną z wartości <xref:System.ServiceModel.TransactionFlowOption> wyliczenia, w której wartość domyślna to. <xref:System.ServiceModel.TransactionFlowOption.NotAllowed> Jeśli dowolna wartość <xref:System.ServiceModel.TransactionFlowOption.NotAllowed> z wyjątkiem jest określona, metoda jest wymagana, aby nie była jednokierunkowa. Deweloper może użyć tego atrybutu, aby określić wymagania lub ograniczenia przepływu transakcji na poziomie metody w czasie projektowania.  
   
 ## <a name="enabling-transaction-flow-at-the-endpoint-level"></a>Włączanie przepływu transakcji na poziomie punktu końcowego  
- Oprócz ustawienia przepływu transakcji na poziomie <xref:System.ServiceModel.TransactionFlowAttribute> zawiera atrybut WCF zawiera ustawienia dla punktu końcowego dla przepływu transakcji umożliwia ona administratorom do sterowania przepływem transakcji na wyższym poziomie.  
+ Oprócz ustawienia <xref:System.ServiceModel.TransactionFlowAttribute> przepływu transakcji na poziomie metody, funkcja WCF udostępnia ustawienie dla przepływu transakcji dla całego punktu końcowego, co umożliwia administratorom sterowanie przepływem transakcji na wyższym poziomie.  
   
- Jest to osiągane przez <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>, co umożliwia włączanie lub wyłączanie przychodzącego przepływu transakcji w punkcie końcowym powiązania ustawienia, a także określenie transakcji żądany format protokół transakcji przychodzących.  
+ Jest to osiągane przez <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>program, który umożliwia włączenie lub wyłączenie przychodzącego przepływu transakcji w ustawieniach powiązań punktu końcowego, a także określenie formatu żądanego protokołu transakcji dla przychodzących transakcji.  
   
- Jeśli wiązanie wyłączył przepływu transakcji, ale jedna z operacji w kontrakcie usługi wymaga transakcja przychodzące, podczas uruchamiania usługi jest zgłaszany wyjątek sprawdzania poprawności.  
+ Jeśli powiązanie wyłączyło przepływ transakcji, ale jedna z operacji w kontrakcie usługi wymaga transakcji przychodzącej, podczas uruchamiania usługi jest zgłaszany wyjątek sprawdzania poprawności.  
   
- Większość powiązania stałego WCF zapewnia zawierają `transactionFlow` i `transactionProtocol` atrybutów, które mają umożliwiać użytkownikowi konfigurowanie określonych powiązania do akceptowania przychodzących transakcji. Aby uzyskać więcej informacji na temat ustawiania elementów konfiguracji, zobacz [ \<powiązania >](../../../../docs/framework/misc/binding.md).  
+ Większość stałych powiązań WCF zawiera `transactionFlow` atrybuty i `transactionProtocol` , które umożliwiają skonfigurowanie określonego powiązania w celu akceptowania przychodzących transakcji. Aby uzyskać więcej informacji na temat ustawiania elementów konfiguracji, zobacz [ \<Binding >](../../../../docs/framework/misc/binding.md).  
   
- Administrator lub wdrażania umożliwia przepływ transakcji na poziomie punktu końcowego Skonfiguruj wymagania dotyczące przepływu transakcji lub ograniczenia w czasie wdrażania przy użyciu pliku konfiguracji.  
+ Administrator lub program do wdrażania może użyć przepływu transakcji na poziomie punktu końcowego w celu skonfigurowania wymagań przepływu transakcji lub ograniczeń w czasie wdrażania przy użyciu pliku konfiguracji.  
   
 ## <a name="security"></a>Zabezpieczenia  
- Aby upewnić się, system bezpieczeństwa i integralności, należy zabezpieczyć wymianę komunikatów podczas przepływu transakcji między aplikacjami. Nie należy przepływu lub ujawniania szczegółów transakcji do dowolnej aplikacji, która nie jest uprawniony do wzięcia udziału w ramach jednej transakcji.  
+ Aby zapewnić bezpieczeństwo i integralność systemu, należy zabezpieczyć wymianę komunikatów podczas przepływu transakcji między aplikacjami. Nie należy przepływać ani ujawniać szczegółowych informacji o transakcji do żadnej aplikacji, która nie jest uprawniona do uczestniczenia w tej samej transakcji.  
   
- Podczas generowania klientów usługi WCF do nieznanej lub niezaufanej usług sieci Web za pomocą wymiany metadanych, wywołania operacji na te usługi sieci Web ma pomijać bieżącej transakcji, jeśli jest to możliwe. Poniższy przykład demonstruje, jak to zrobić.  
+ Podczas generowania klientów WCF do nieznanych lub niezaufanych usług sieci Web za pomocą wymiany metadanych, wywołania operacji na tych usługach sieci Web powinny pomijać bieżącą transakcję, jeśli jest to możliwe. Poniższy przykład demonstruje, jak to zrobić.  
   
-```  
+```csharp
 //client code which has an ambient transaction  
 using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Suppress))  
 {  
@@ -85,11 +85,11 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Supp
 //remainder of client code  
 ```  
   
- Ponadto usługi należy skonfigurować do akceptowania przychodzących transakcji tylko od klientów, którzy mają uwierzytelniony i autoryzowany. Przychodzące transakcje powinny być akceptowane tylko, jeśli pochodzą z wysoce zaufanych klientów.  
+ Ponadto usługi należy skonfigurować w taki sposób, aby akceptowały transakcje przychodzące tylko od klientów, którzy zostali uwierzytelnieni i autoryzowani. Przychodzące transakcje powinny być akceptowane tylko wtedy, gdy pochodzą z wysoce zaufanych klientów.  
   
-## <a name="policy-assertions"></a>Asercji zasad  
- Usługi WCF używa asercji zasad w celu sterowania przepływem transakcji. Asercji zasad można znaleźć w dokumencie zasady usługi, którym jest generowany przez agregację kontrakty, konfiguracji i atrybutów. Klient może pobrać dokumentu zasad usługi za pomocą żądania HTTP GET lub WS-MetadataExchange typu żądanie odpowiedź. Klienci mogą następnie przetwarzać dokument zasad, aby określić, jakie operacje w kontrakcie usługi może obsługi lub wymagania przepływu transakcji.  
+## <a name="policy-assertions"></a>Potwierdzenia zasad  
+ Funkcja WCF używa potwierdzeń zasad do sterowania przepływem transakcji. Potwierdzenia zasad znajdują się w dokumencie zasad usługi, który jest generowany przez agregowanie kontraktów, konfiguracji i atrybutów. Klient może uzyskać dokument zasad usługi przy użyciu polecenia HTTP GET lub żądania WS-MetadataExchange. Klienci mogą następnie przetwarzać dokument zasad, aby określić, które operacje w kontrakcie usługi mogą obsługiwać lub wymagać przepływu transakcji.  
   
- Asercji zasad przepływu transakcji wpływać na przepływ transakcji, określając nagłówków protokołu SOAP, klienta należy wysłać do usługi do reprezentowania transakcji. Wszystkie nagłówki transakcji musi być oznaczony przez `MustUnderstand` równa `true`. Każdy komunikat z nagłówkiem, w przeciwnym razie oznaczone jest odrzucana przy użyciu protokołu SOAP.  
+ Potwierdzenia zasad przepływu transakcji mają wpływ na przepływ transakcji przez określenie nagłówków protokołu SOAP, które klient powinien wysłać do usługi, aby reprezentować transakcję. Wszystkie nagłówki transakcji muszą być oznaczone jako `MustUnderstand` `true`równe. Wszystkie komunikaty z nagłówkiem oznaczonym inaczej są odrzucane z błędem SOAP.  
   
- Tylko jedną asercję zasad związanych z transakcji może znajdować się w ramach jednej operacji. Zasady dokumentów za pomocą więcej niż jeden potwierdzenie transakcji w przypadku operacji są uznawane za nieprawidłowe i są odrzucane przez architekturę WCF. Ponadto tylko protokół pojedyncza transakcja może być obecne w każdego typu portu. Dokumentów zasad z operacjami, które odwołuje się do więcej niż jeden protokół transakcji wewnątrz typu jednego portu są uznawane za nieprawidłowe i zostały odrzucone prze [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Zasady dokumentów za pomocą transakcji potwierdzenia znajduje się on na komunikaty wyjściowe lub jednokierunkowe komunikaty wejściowe także są uznawane za nieprawidłowe.
+ Tylko jedno potwierdzenie zasad związanych z transakcją może być obecne w jednej operacji. Dokumenty zasad z więcej niż jedną potwierdzeniem transakcji w operacji są uznawane za nieprawidłowe i są odrzucane przez WCF. Ponadto tylko jeden protokół transakcji może być obecny w obrębie każdego typu portu. Dokumenty zasad z operacjami odwołującymi się do więcej niż jednego protokołu transakcji wewnątrz jednego typu portu są uznawane za nieprawidłowe i są odrzucane przez narzędzie do obsługi [metadanych ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Dokumenty zasad z potwierdzeniami transakcji znajdującymi się w wiadomościach wyjściowych lub jednokierunkowymi komunikatami wejściowymi są również uznawane za nieprawidłowe.

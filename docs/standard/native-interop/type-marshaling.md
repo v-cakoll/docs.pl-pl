@@ -1,34 +1,34 @@
 ---
-title: Wpisz marshaling — .NET
-description: Dowiedz się, jak .NET kieruje typów na natywną reprezentację.
+title: Kierowanie typów — .NET
+description: Dowiedz się, w jaki sposób platforma .NET umożliwia kierowanie typów do natywnej reprezentacji.
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 2cb8898b52b4b4afba1184a886e16c9f7f68f03a
-ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
+ms.openlocfilehash: bc44a2c63dfa3fde3e3c4197e5d1fe79857ea717
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041785"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929067"
 ---
 # <a name="type-marshaling"></a>Marshaling typów
 
-**Marshaling** jest procesem przekształcania typów, kiedy ich potrzebują do wielu między kodu zarządzanego i natywnego.
+**Kierowanie** jest procesem przekształcania typów, gdy muszą one przecinać się między kodem zarządzanym i natywnym.
 
-Marshaling jest niezbędne, ponieważ różnią się typami w kodzie zarządzanym i niezarządzanym. W kodzie zarządzanym, na przykład masz `String`, natomiast w świecie niezarządzanych ciągi mogą być Unicode ("szerokiego"), innego niż Unicode, zakończony wartością null ASCII, itp. Domyślnie próbuje postępują właściwie na podstawie zachowania domyślnego, opisane w tym artykule podsystemu P/Invoke. Jednak w tych sytuacjach, gdy potrzebujesz dodatkowych kontroli, zostanie zastosowana [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) atrybutu, aby określić, co to jest oczekiwany typ w niezarządzanym. Na przykład jeśli chcesz, aby ciąg do wysłania jako ciąg znaków zakończony znakiem null ANSI, nakładu pracy następująco:
+Organizowanie jest niezbędna, ponieważ typy w kodzie zarządzanym i niezarządzanym są różne. W kodzie zarządzanym, na przykład, posiadasz `String`, natomiast w niezarządzanych ciągach świata mogą być Unicode ("szerokie"), inne niż Unicode, zakończonych znakiem null, ASCII itd. Domyślnie podsystem P/Invoke próbuje wykonać właściwe czynności na podstawie domyślnego zachowania opisanego w tym artykule. Jednak dla tych sytuacji, gdy potrzebna jest dodatkowa kontrola, można użyć atrybutu [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) , aby określić, jaki jest oczekiwany typ na stronie niezarządzanej. Na przykład, jeśli chcesz, aby ciąg był wysyłany jako ciąg ANSI zakończony wartością null, można to zrobić w następujący sposób:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]
 static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 ```
 
-## <a name="default-rules-for-marshaling-common-types"></a>Reguły domyślne dla marshaling typów wspólnych
+## <a name="default-rules-for-marshaling-common-types"></a>Domyślne reguły organizowania wspólnych typów
 
-Ogólnie rzecz biorąc, środowisko wykonawcze stara się zrobić "dobre" podczas organizowania, aby wymagać minimalnej liczbie wysiłku z Twojej strony. W poniższych tabelach opisano, jak zorganizować każdego typu, domyślnie, gdy są używane w parametrze lub pola. C99 / C ++ 11 całkowitą stałej szerokości i typy znaków, które są używane do upewnij się, że Poniższa tabela jest prawidłowy dla wszystkich platform. Można użyć dowolnego typu natywnego, która ma takie samo wyrównanie i wymagania dotyczące rozmiaru, jak te typy.
+Ogólnie rzecz biorąc, środowisko uruchomieniowe próbuje wykonać "prawo" podczas organizowania, aby wymagać od Ciebie najmniejszej ilości pracy. W poniższych tabelach opisano, jak każdy typ jest zorganizowany domyślnie, gdy jest używany w parametrze lub polu. Typy całkowite i znaki stałej szerokości C99/C++ 11 są używane w celu upewnienia się, że Poniższa tabela jest poprawna dla wszystkich platform. Można użyć dowolnego typu natywnego, który ma takie same wymagania dotyczące wyrównania i rozmiaru co te typy.
 
-Pierwsza tabela zawiera opis mapowania dla różnych typów, dla których marshaling jest taka sama dla metody P/Invoke i organizowanie pola.
+W pierwszej tabeli opisano mapowania dla różnych typów, dla których kierowanie jest takie same dla obydwu P/Invoke i organizowania pól.
 
-| Typ architektury .NET | Typ natywny  |
+| Typ .NET | Typ natywny  |
 |-----------|-------------------------|
 | `byte`    | `uint8_t`               |
 | `sbyte`   | `int8_t`                |
@@ -38,65 +38,65 @@ Pierwsza tabela zawiera opis mapowania dla różnych typów, dla których marsha
 | `uint`    | `uint32_t`              |
 | `long`    | `int64_t`               |
 | `ulong`   | `uint64_t`              |
-| `char`    | Albo `char` lub `char16_t` w zależności od `CharSet` P/Invoke lub struktury. Zobacz [dokumentacji charset](charset.md). |
-| `string`  | Albo `char*` lub `char16_t*` w zależności od `CharSet` P/Invoke lub struktury. Zobacz [dokumentacji charset](charset.md). |
+| `char`    | Albo w zależności`CharSet` od typu P/Invoke lub struktury. `char` `char16_t` Zobacz [dokumentację zestawu znaków](charset.md). |
+| `string`  | Albo w zależności`CharSet` od typu P/Invoke lub struktury. `char*` `char16_t*` Zobacz [dokumentację zestawu znaków](charset.md). |
 | `System.IntPtr` | `intptr_t`        |
 | `System.UIntPtr` | `uintptr_t`      |
-| Typy wskaźników .NET (np.) `void*`)  | `void*` |
-| Typ pochodzący od `System.Runtime.InteropServices.SafeHandle` | `void*` |
-| Typ pochodzący od `System.Runtime.InteropServices.CriticalHandle` | `void*`          |
-| `bool`    | Win32 `BOOL` typu       |
-| `decimal` | COM `DECIMAL` — struktura |
-| .NET Delegate | Wskaźnik funkcji natywnej |
-| `System.DateTime` | Win32 `DATE` typu |
-| `System.Guid` | Win32 `GUID` typu |
+| Typy wskaźników .NET (np. `void*`)  | `void*` |
+| Typ pochodzący od`System.Runtime.InteropServices.SafeHandle` | `void*` |
+| Typ pochodzący od`System.Runtime.InteropServices.CriticalHandle` | `void*`          |
+| `bool`    | Typ `BOOL` Win32       |
+| `decimal` | Struktura `DECIMAL` com |
+| Delegat platformy .NET | Wskaźnik funkcji natywnej |
+| `System.DateTime` | Typ `DATE` Win32 |
+| `System.Guid` | Typ `GUID` Win32 |
 
-Kilku kategorii marshalingu mają różne wartości domyślne, jeśli masz kierowanie jako parametr lub struktury.
+Niektóre kategorie organizowania mają różne wartości domyślne, jeśli są organizowane jako parametry lub struktura.
 
-| Typ architektury .NET | Typ macierzysty (parametr) | Typ macierzysty (pole) |
+| Typ .NET | Typ natywny (parametr) | Typ natywny (pole) |
 |-----------|-------------------------|---------------------|
-| Tablica platformy .NET | Wskaźnik do początku tablicy natywnej reprezentujących elementy tablicy. | Niedozwolona bez `[MarshalAs]` atrybutu|
-| Klasa z `LayoutKind` z `Sequential` lub `Explicit` | Wskaźnik do natywna reprezentacja klasy | Natywna reprezentacja klasy |
+| Tablica .NET | Wskaźnik do początku tablicy natywnych reprezentacji elementów tablicy. | Niedozwolone bez `[MarshalAs]` atrybutu|
+| Klasa z `LayoutKind`lub `Sequential``Explicit` | Wskaźnik do natywnej reprezentacji klasy | Natywna Reprezentacja klasy |
 
-Poniższa tabela zawiera domyślny marshaling reguł, które są tylko do Windows. Na platformach innych niż Windows nie można kierować te typy.
+Poniższa tabela zawiera domyślne reguły organizowania, które są przeznaczone tylko dla systemu Windows. Na platformach innych niż Windows nie można zorganizować tych typów.
 
-| Typ architektury .NET | Typ macierzysty (parametr) | Typ macierzysty (pole) |
+| Typ .NET | Typ natywny (parametr) | Typ natywny (pole) |
 |-----------|-------------------------|---------------------|
 | `object`  | `VARIANT`               | `IUnknown*`         |
-| `System.Array` | Interfejs modelu COM | Niedozwolona bez `[MarshalAs]` atrybutu |
+| `System.Array` | Interfejs COM | Niedozwolone bez `[MarshalAs]` atrybutu |
 | `System.ArgIterator` | `va_list` | Niedozwolone |
 | `System.Collections.IEnumerator` | `IEnumVARIANT*` | Niedozwolone |
 | `System.Collections.IEnumerable` | `IDispatch*` | Niedozwolone |
-| `System.DateTimeOffset` | `int64_t` reprezentuje liczbę znaczników, od północy 1 stycznia 1601 || `int64_t` reprezentuje liczbę znaczników, od północy 1 stycznia 1601 |
+| `System.DateTimeOffset` | `int64_t`reprezentująca liczbę taktów od północy 1 stycznia 1601 || `int64_t`reprezentująca liczbę taktów od północy 1 stycznia 1601 |
 
-Niektóre typy mogą być organizowane wyłącznie jako parametry, a nie pola. Te typy są wymienione w poniższej tabeli:
+Niektóre typy mogą być organizowane tylko jako parametry, a nie jako pola. Te typy są wymienione w poniższej tabeli:
 
-| Typ architektury .NET | Typ macierzysty (tylko parametr) |
+| Typ .NET | Typ natywny (tylko parametr) |
 |-----------|------------------------------|
-| `System.Text.StringBuilder` | Albo `char*` lub `char16_t*` w zależności od `CharSet` elementu P/Invoke.  Zobacz [dokumentacji charset](charset.md). |
-| `System.ArgIterator` | `va_list` (na Windows x86/x64/arm64 tylko) |
+| `System.Text.StringBuilder` | Albo `char*`w zależności`CharSet` od parametru P/Invoke. `char16_t*`  Zobacz [dokumentację zestawu znaków](charset.md). |
+| `System.ArgIterator` | `va_list`(tylko w systemie Windows x86/x64/arm64) |
 | `System.Runtime.InteropServices.ArrayWithOffset` | `void*` |
 | `System.Runtime.InteropServices.HandleRef` | `void*` |
 
-Jeśli te ustawienia domyślne nie są dokładnie chcesz, możesz dostosować, jak parametry są przekazywane. [Kierowanie parametru](customize-parameter-marshaling.md) artykuł przeszukiwania Cię sposobu dostosowywania jak różne typy parametrów są przekazywane.
+Jeśli te wartości domyślne nie wykonują dokładnie tego, co chcesz, możesz dostosować sposób organizowania parametrów. Artykuł dotyczący [organizowania parametrów](customize-parameter-marshaling.md) przeprowadzi Cię przez proces dostosowywania sposobu organizowania różnych typów parametrów.
 
-## <a name="default-marshaling-in-com-scenarios"></a>Domyślny marshaling w scenariuszach COM
+## <a name="default-marshaling-in-com-scenarios"></a>Kierowanie domyślne w scenariuszach COM
 
-Wywołując metod obiektów COM na platformie .NET, środowisko uruchomieniowe platformy .NET zmienia domyślny marshaling reguł wspólne COM semantyki. Poniższa tabela zawiera listę reguł, które korzysta z środowiska uruchomieniowe platformy .NET w scenariuszach COM:
+Podczas wywoływania metod obiektów COM w programie .NET środowisko uruchomieniowe platformy .NET zmienia domyślne reguły organizowania w celu dopasowania do wspólnej semantyki modelu COM. W poniższej tabeli wymieniono reguły, których środowiska uruchomieniowe platformy .NET używają w scenariuszach COM:
 
-| Typ architektury .NET | Typ macierzysty (COM wywołania metody) |
+| Typ .NET | Typ natywny (wywołania metody COM) |
 |-----------|--------------------------------|
 | `bool`    | `VARIANT_BOOL`                 |
 | `StringBuilder` | `LPWSTR`                 |
 | `string`  | `BSTR`                         |
-| Typy delegatów | `_Delegate*` w programie .NET Framework. Niedozwolone w programie .NET Core. |
+| Typy delegatów | `_Delegate*`w .NET Framework. Niedozwolone w programie .NET Core. |
 | `System.Drawing.Color` | `OLECOLOR`        |
-| Tablica platformy .NET | `SAFEARRAY`                   |
-| `string[]` | `SAFEARRAY` z `BSTR`s        |
+| Tablica .NET | `SAFEARRAY`                   |
+| `string[]` | `SAFEARRAY`z `BSTR`s        |
 
-## <a name="marshaling-classes-and-structs"></a>Marshaling klas i struktur
+## <a name="marshaling-classes-and-structs"></a>Kierowanie klas i struktur
 
-Innym aspektem marshalingu typu jest sposób przekazywania w strukturze metody niezarządzanego. Na przykład niektóre z niezarządzanych metod wymagają struktury jako parametr. W takich przypadkach należy utworzyć odpowiednie struktury lub klasy w zarządzanych części świata, który będzie używany jako parametr. Jednak po prostu Definiowanie klasy nie jest wystarczająco dużo, trzeba będzie również poinstruować Organizator sposób mapowania pól w klasie do struktury niezarządzanej. W tym miejscu `StructLayout` atrybutu staje się przydatne.
+Innym aspektem organizowania typów jest sposób przekazywania struktury do niezarządzanej metody. Na przykład niektóre metody niezarządzane wymagają struktury jako parametru. W takich przypadkach należy utworzyć odpowiednią strukturę lub klasę w zarządzanej części świata, aby użyć jej jako parametru. Jednak tylko zdefiniowanie klasy jest niewystarczające, należy również poinstruować organizatora, jak mapować pola w klasie na niezarządzaną strukturę. W tym `StructLayout` miejscu atrybut jest przydatny.
 
 ```csharp
 [DllImport("kernel32.dll")]
@@ -121,7 +121,7 @@ public static void Main(string[] args) {
 }
 ```
 
-Poprzedni kod pokazuje prosty przykład wywołanie `GetSystemTime()` funkcji. Bit interesujące znajduje się w wierszu 4. Ten atrybut określa, że pola klasy powinno zostać zamapowane sekwencyjnie struktury z drugiej strony (niezarządzanego). Oznacza to, że nazwy pól nie są ważne, tylko ich kolejność jest ważna, w przypadku, gdy musi odpowiadać niezarządzane struktury, pokazano w poniższym przykładzie:
+Poprzedni kod pokazuje prosty przykład wywołania `GetSystemTime()` funkcji. Interesujący bit jest w wierszu 4. Ten atrybut określa, że pola klasy powinny być mapowane sekwencyjnie do struktury na drugiej (niezarządzanej) stronie. Oznacza to, że nazwy pól nie są ważne, tylko ich kolejność jest ważna, ponieważ musi odpowiadać strukturze niezarządzanej, pokazanej w następującym przykładzie:
 
 ```c
 typedef struct _SYSTEMTIME {
@@ -133,7 +133,7 @@ typedef struct _SYSTEMTIME {
   WORD wMinute;
   WORD wSecond;
   WORD wMilliseconds;
-} SYSTEMTIME, *PSYSTEMTIME*;
+} SYSTEMTIME, *PSYSTEMTIME;
 ```
 
-Czasami domyślny marshaling dla struktury nie robi, co jest potrzebne. [Dostosowywanie struktury marshaling](./customize-struct-marshaling.md) artykuł nauczy Cię, jak dostosować, jak jest organizowana strukturę.
+Czasami domyślne kierowanie dla Twojej struktury nie robi tego, czego potrzebujesz. W artykule [Dostosowywanie struktury dostosowywania](./customize-struct-marshaling.md) przedstawiono sposób dostosowywania struktury struktur.

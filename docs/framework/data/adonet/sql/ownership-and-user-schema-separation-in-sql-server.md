@@ -2,12 +2,12 @@
 title: Własność i oddzielenie schematu użytkownika w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: f0aa0a67bfbc64124fe2510915d0945341aeb49e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5ad3d927bcf3534e134db2c98b79842b0e6148f3
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791934"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894426"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Własność i oddzielenie schematu użytkownika w programie SQL Server
 Podstawową koncepcją SQL Server zabezpieczeń jest to, że właściciele obiektów mają nieodwołalne uprawnienia do administrowania nimi. Nie można usunąć uprawnień z właściciela obiektu i nie można upuścić użytkowników z bazy danych, jeśli są one właścicielami obiektów.  
@@ -17,7 +17,7 @@ Podstawową koncepcją SQL Server zabezpieczeń jest to, że właściciele obiek
   
  Składnia nazewnictwa czterech części dla odwoływania się do obiektów określa nazwę schematu.  
   
-```  
+```text
 Server.Database.DatabaseSchema.DatabaseObject  
 ```  
   

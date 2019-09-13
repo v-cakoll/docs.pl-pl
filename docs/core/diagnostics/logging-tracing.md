@@ -4,12 +4,12 @@ description: Wprowadzenie do rejestrowania i śledzenia w programie .NET Core.
 author: sdmaclea
 ms.author: stmaclea
 ms.date: 08/05/2019
-ms.openlocfilehash: 06781c6a5c1d771b1fa772539705cd1e2b3ad2d4
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 46e64a7f60b88c26ceef9ac817be885bfa180c8e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68974130"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926355"
 ---
 # <a name="net-core-logging-and-tracing"></a>Rejestrowanie i śledzenie w programie .NET Core
 
@@ -32,6 +32,7 @@ Ta prosta technika jest Surprisingly zaawansowana. Może być używana w sytuacj
 Klasy <xref:System.Console?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace?displayProperty=nameWithType> i<xref:System.Diagnostics.Debug?displayProperty=nameWithType> , każdy udostępniają podobne interfejsy API stylu drukowania wygodne do rejestrowania.
 
 Wybór interfejsu API drukowania stylu do użycia. Kluczowe różnice są następujące:
+
 - <xref:System.Console?displayProperty=nameWithType>
   - Zawsze włączone i zawsze zapisuje się w konsoli programu.
   - Przydatne w przypadku informacji, które mogą być wymagane przez klienta w wersji.
@@ -80,6 +81,7 @@ Interfejsy API niskiego poziomu mogą nie być właściwym wyborem dla potrzeb r
 <xref:Microsoft.Extensions.Logging.ILogger> Interfejs został użyty do utworzenia wspólnego interfejsu rejestrowania, w którym rejestratory mogą być wstawiane przez iniekcję zależności.
 
 Na przykład, aby umożliwić wybranie najlepszego wyboru dla aplikacji `ASP.NET` , oferuje obsługę wybranych platform wbudowanych i innych firm:
+
 - [ASP.NET wbudowane dostawcy rejestrowania](/aspnet/core/fundamentals/logging/#built-in-logging-providers)
 - [ASP.NET dostawców rejestrowania innych firm](/aspnet/core/fundamentals/logging/#third-party-logging-providers)
 
@@ -102,6 +104,7 @@ Na przykład, aby umożliwić wybranie najlepszego wyboru dla aplikacji `ASP.NET
 Formatowanie ciągu może mieć zauważalny czas przetwarzania procesora CPU.
 
 W przypadku aplikacji o krytycznym znaczeniu zaleca się:
+
 - Unikaj wielu rejestracji, gdy nikt nie nasłuchuje. Unikaj konstruowania kosztownych komunikatów rejestrowania, sprawdzając, czy rejestrowanie jest włączone jako pierwsze.
 - Rejestruj tylko to, co jest przydatne.
 - Odłóż ozdobne formatowanie do etapu analizy.

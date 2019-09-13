@@ -1,22 +1,22 @@
 ---
 title: = odwołanie do C# operatora
 ms.custom: seodec18
-ms.date: 06/21/2019
+ms.date: 09/10/2019
 f1_keywords:
 - =_CSharpKeyword
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: f30b48fc6bd1e896658a7234a58409ea9a0f5e6f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a450a55524f33f4f06ed077aba864e8f641a458d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69601945"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70924657"
 ---
 # <a name="-operator-c-reference"></a>= — operatorC# (odwołanie)
 
-Operator `=` przypisania przypisuje wartość jego operandu po prawej stronie do zmiennej, [Właściwości](../../programming-guide/classes-and-structs/properties.md)lub elementu indeksatora podanym [](../../programming-guide/indexers/index.md) przez operand z lewej strony. Wynikiem wyrażenia przypisania jest wartość przypisana do operandu po lewej stronie. Typ operandu po prawej stronie musi być taki sam jak typ operandu po lewej stronie lub niejawnie konwertowany.
+Operator `=` przypisania przypisuje wartość jego operandu po prawej stronie do zmiennej, [Właściwości](../../programming-guide/classes-and-structs/properties.md)lub elementu [indeksatora](../../programming-guide/indexers/index.md) podanym przez operand z lewej strony. Wynikiem wyrażenia przypisania jest wartość przypisana do operandu po lewej stronie. Typ operandu po prawej stronie musi być taki sam jak typ operandu po lewej stronie lub niejawnie konwertowany.
 
 Operator przypisania jest prawym przyciskiem asocjacyjnym, czyli wyrażeniem formularza
 
@@ -60,7 +60,11 @@ x = x op y
 
 z tą różnicą, że `x` jest obliczany tylko raz.
 
-Przypisanie złożone jest obsługiwane przez [arytmetyczne](arithmetic-operators.md#compound-assignment)operatory logiczne logiczne [i bitowe](bitwise-and-shift-operators.md#compound-assignment) . [](boolean-logical-operators.md#compound-assignment)
+Przypisanie złożone jest obsługiwane przez [arytmetyczne](arithmetic-operators.md#compound-assignment)operatory [logiczne logiczne](boolean-logical-operators.md#compound-assignment) [i bitowe](bitwise-and-shift-operators.md#compound-assignment) .
+
+## <a name="null-coalescing-assignment"></a>Przypisanie do łączenia o wartości null
+
+Począwszy od C# 8,0, można użyć operatora `??=` przypisania łączącego wartości null do przypisania wartości jego operandu po lewej stronie tylko wtedy, gdy argument operacji po lewej stronie ma `null`wartość. Aby uzyskać więcej informacji, zobacz [? =](null-coalescing-operator.md) — artykuł.
 
 ## <a name="operator-overloadability"></a>Przeciążanie operatora
 

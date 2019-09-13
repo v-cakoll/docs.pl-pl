@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ce16365f8aa9975a6ccb26415a6d091f65e1eef2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ea61b3abf920a5261933f56c71011b50bcd52bb2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943859"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927097"
 ---
 # <a name="net-framework-performance"></a>Wydajność środowiska .NET Framework
 Jeśli chcesz tworzyć aplikacje o doskonałej wydajności, należy zaprojektować i zaplanować wydajność tak samo jak w przypadku projektowania dowolnej innej funkcji aplikacji. Za pomocą narzędzi dostarczonych przez firmę Microsoft można mierzyć wydajność aplikacji oraz, w razie potrzeby, wprowadzać ulepszenia w zakresie użycia pamięci, przepływności kodu i czas odpowiedzi. W tym temacie wymieniono narzędzia analizy wydajności zapewniane przez firmę Microsoft oraz linki do innych tematów, które obejmują wydajność poszczególnych obszarów tworzenia aplikacji.  
@@ -34,7 +34,7 @@ Jeśli chcesz tworzyć aplikacje o doskonałej wydajności, należy zaprojektowa
 |----------|-----------------|  
 |Analiza wydajności programu Visual Studio|Służy do analizowania użycia procesora .NET Framework aplikacji, które zostaną wdrożone na komputerach z systemem operacyjnym Windows.<br /><br /> To narzędzie jest dostępne z menu **Debuguj** w programie Visual Studio po otwarciu projektu. Aby uzyskać więcej informacji, zobacz [Eksplorator wydajności](/visualstudio/profiling/performance-explorer). **Uwaga:**  Podczas określania wartości Windows Phone docelowej Użyj funkcji analizy aplikacji Windows Phone (patrz następny wiersz).|  
 |Analiza aplikacji Windows Phone|Służy do analizowania procesora i pamięci, szybkości transferu danych sieci, czasu reakcji aplikacji i zużycia baterii w aplikacjach Windows Phone.<br /><br /> To narzędzie jest dostępne z menu **Debuguj** dla projektu Windows Phone w programie Visual Studio po zainstalowaniu [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773). Aby uzyskać więcej informacji, zobacz [Profilowanie aplikacji dla Windows Phone 8](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105)).|  
-|[Narzędzia PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|Służy do identyfikowania problemów z wydajnością procesora i pamięci. To narzędzie używa funkcji śledzenia zdarzeń systemu Windows (ETW) i interfejsów API profilowania CLR w celu zapewnienia zaawansowanego badania pamięci i procesora, jak również informacji na temat odzyskiwania pamięci i kompilacji JIT. Aby uzyskać więcej informacji na temat korzystania z programu narzędzia PerfView, zobacz Samouczek i pliki pomocy dołączone do samouczków wideo aplikacji, [kanału 9](https://channel9.msdn.com/Series/PerfView-Tutorial)i wpisów w [blogu](https://blogs.msdn.com/b/vancem/archive/tags/perfview/).<br /><br /> Problemy związane z pamięcią znajdują się w temacie [using narzędzia PerfView for Memory](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots)rewizyjne.|  
+|[Narzędzia PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|Służy do identyfikowania problemów z wydajnością procesora i pamięci. To narzędzie używa funkcji śledzenia zdarzeń systemu Windows (ETW) i interfejsów API profilowania CLR w celu zapewnienia zaawansowanego badania pamięci i procesora, jak również informacji na temat odzyskiwania pamięci i kompilacji JIT. Aby uzyskać więcej informacji na temat korzystania z programu narzędzia PerfView, zobacz Samouczek i pliki pomocy dołączone do [samouczków wideo aplikacji, kanału 9](https://channel9.msdn.com/Series/PerfView-Tutorial)i wpisów w [blogu](https://blogs.msdn.microsoft.com/vancem/tag/perfview/).<br /><br /> Problemy związane z pamięcią znajdują się w temacie [using narzędzia PerfView for Memory rewizyjne](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots).|  
 |[Analizator wydajności systemu Windows](https://www.microsoft.com/download/details.aspx?id=30652)|Służy do określania ogólnej wydajności systemu, na przykład wykorzystania pamięci i magazynu aplikacji, gdy wiele aplikacji jest uruchomionych na tym samym komputerze. To narzędzie jest dostępne w centrum pobierania w ramach zestawu do oceny i wdrażania systemu Windows (ADK) dla programu [!INCLUDE[win8](../../../includes/win8-md.md)]. Aby uzyskać więcej informacji, zobacz [Analizator wydajności systemu Windows](/windows-hardware/test/wpt/windows-performance-analyzer).|  
   
 ### <a name="event-tracing-for-windows-etw"></a>Śledzenie zdarzeń systemu Windows (ETW)  

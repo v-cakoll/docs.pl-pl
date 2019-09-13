@@ -2,12 +2,12 @@
 title: 'Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 225046992badba7013193163a191dbf068f0da6a
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 72132c4884f3d9bc94de447a122354b3e0dc2ee5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106962"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928447"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)
 
@@ -22,6 +22,7 @@ Jeśli nie chcesz samodzielnie kompilować aplikacji, możesz pobrać "przykład
 W tym instruktażu wykonasz następujące zadania:
 
 > [!div class="checklist"]
+>
 > - [Tworzenie aplikacji WPF](#create-a-wpf-application)
 > - [Projektowanie prostego MainWindow WPF](#design-a-simple-wpf-mainwindow)
 > - [Dodaj odwołanie](#add-a-reference)
@@ -34,7 +35,7 @@ W tym instruktażu wykonasz następujące zadania:
 > - [Przetestuj rozwiązanie asynchroniczne](#test-the-asynchronous-solution)
 > - [Zastąp metodę GetURLContentsAsync metodą .NET Framework](#replace-the-geturlcontentsasync-method-with-a-net-framework-method)
 
-Zapoznaj [](#example) się z sekcją przykładową kompletnego przykładu asynchronicznego.
+Zapoznaj się z sekcją [przykładową](#example) kompletnego przykładu asynchronicznego.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 

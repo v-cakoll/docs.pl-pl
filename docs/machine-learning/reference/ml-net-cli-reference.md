@@ -1,31 +1,31 @@
 ---
-title: Polecenie train automatycznie za pomocą narzędzia interfejsu wiersza polecenia w strukturze ML.NET
-description: Omówienie, przykłady i dokumentacja dotycząca poleceń train automatycznie za pomocą narzędzia interfejsu wiersza polecenia w strukturze ML.NET.
+title: Polecenie autouczenie w narzędziu CLI ML.NET
+description: Przegląd, przykłady i dokumentacja polecenia autouczenie w narzędziu CLI ML.NET.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 73bae0165af76226152de322d2951086646a1a1d
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 8363a16ab5e793e715131ac37283106517850439
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397661"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929198"
 ---
-# <a name="the-auto-train-command-in-mlnet-cli"></a>Polecenie "auto-train" w interfejsie wiersza polecenia w strukturze ML.NET
+# <a name="the-auto-train-command-in-mlnet-cli"></a>Polecenie "autouczenie" w interfejsie wiersza polecenia ML.NET
 
 > [!NOTE]
-> W tym temacie odnosi się do interfejsu wiersza polecenia w strukturze ML.NET i strukturze ML.NET AutoML, które są obecnie dostępne w wersji zapoznawczej, a materiał może ulec zmianie.
+> Ten temat dotyczy ML.NET interfejsu wiersza polecenia i ML.NET AutoML, które są obecnie dostępne w wersji zapoznawczej, a materiał może ulec zmianie.
 
-`auto-train` Polecenie jest polecenie główne udostępniane przez narzędzie interfejsu wiersza polecenia w strukturze ML.NET. Polecenie umożliwia generowanie modelu strukturze ML.NET dobrej jakości (pliku zip Zserializowany model) oraz w przykładzie C# kodu w celu uruchomienia/wynik tego modelu. Ponadto C# kod, aby utworzyć/szkolenie modelu zostanie również wygenerowany się dowiedzieć, jakie algorytmu i korzysta z tego ustawienia wygenerowany "najlepiej modelu".
+`auto-train` Polecenie jest głównym poleceniem udostępnianym przez narzędzie interfejsu wiersza polecenia ml.NET. Polecenie umożliwia generowanie modelu dobrego jakości ML.NET (serializowany model. zip) oraz przykładowego C# kodu do uruchomienia/oceny modelu. Ponadto C# kod służący do tworzenia/uczenia modelu jest również generowany, aby zbadać, jakiego algorytmu i ustawień używa dla tego wygenerowanego "najlepszego modelu".
 
-Te zasoby można wygenerować z własne zestawy danych, bez kodowania przez siebie, więc również zwiększa wydajność pracy nawet wtedy, gdy znasz już strukturze ML.NET.
+Można generować te zasoby z własnych zestawów danych bez konieczności pisania ich przez siebie, dzięki czemu zwiększa się produktywność nawet wtedy, gdy znasz już ML.NET.
 
-Obecnie są obsługiwane przez interfejs wiersza polecenia strukturze ML.NET zadania uczenia Maszynowego:
+Obecnie zadania w ML obsługiwane przez interfejs wiersza polecenia ML.NET są następujące:
 
 - `binary-classification`
 - `multiclass-classification`
 - `regression`
 
-- Przyszłość: Inne usługi machine learning zadania, takie jak
+- Kontrakt Inne zadania uczenia maszynowego, takie jak
   - `recommendation`
   - `anomaly-detection`
   - `clustering`
@@ -38,39 +38,39 @@ Przykład użycia w wierszu polecenia:
 
 `mlnet auto-train` Polecenie generuje następujące zasoby:
 
-- Zserializowany model plik zip ("najlepszy model") gotowych do użycia.
-- C#kod w celu uruchomienia/wynik, który jest generowany modelu (w celu prognozowania w aplikacji użytkownika końcowego za pomocą modelu).
-- C#kod z kodem szkolenia, używany do generowania modelu (Learning celów).
+- Serializowany model. zip ("najlepszy model") jest gotowy do użycia.
+- C#kod do uruchomienia/oceny, który wygenerował model (aby dokonać prognoz w aplikacjach użytkowników końcowych przy użyciu tego modelu).
+- C#kod z kodem szkoleniowym używanym do generowania tego modelu (cele uczenia).
 
-Pierwsze dwa zasoby bezpośrednio można w aplikacjach użytkownika końcowego (aplikacji internetowej ASP.NET Core, usług, aplikacji klasycznej, itp.), tworzyć prognozy przy użyciu wygenerowanego modelu uczenia Maszynowego.
+Pierwsze dwa zasoby mogą być bezpośrednio używane w aplikacjach użytkowników końcowych (ASP.NET Core aplikacji sieci Web, usług, aplikacji klasycznej itp.) w celu utworzenia prognoz dla tego wygenerowanego modelu ML.
 
-Trzeci zasobu, kod szkolenia, dowiesz się, jaki kod interfejsu API w strukturze ML.NET był używany przez interfejs wiersza polecenia do trenowania wygenerowane, dzięki czemu możesz zbadać, jakie określonego trainer/algorytmu i hiper parametrami wybrano interfejsu wiersza polecenia, a aparat AutoML strukturze ML.NET.
+Trzeci element zawartości, kod szkoleniowy, pokazuje, jaki kod interfejsu API ML.NET był używany przez interfejs wiersza polecenia do uczenia wygenerowanego modelu, aby można było sprawdzić, jakie konkretne Trainer/algorytm i funkcja Hyper-Parameters zostały wybrane przez interfejs wiersza polecenia i aparat ML.NET AutoML.
 
-## <a name="the-auto-train-command-uses-the-automl-engine"></a>Polecenie "auto-train" używa aparatu AutoML
+## <a name="the-auto-train-command-uses-the-automl-engine"></a>Polecenie "autouczenie" używa aparatu AutoML
 
-Interfejs wiersza polecenia używa aparatu AutoML strukturze ML.NET (pakiet NuGet) inteligentne wyszukiwanie najlepsze modeli jakości, jak pokazano na poniższym diagramie:
+Interfejs wiersza polecenia używa aparatu ML.NET AutoML (pakiet NuGet) do inteligentnego wyszukiwania najlepszych modeli jakości, jak pokazano na poniższym diagramie:
 
-![obraz](./media/ml-net-automl-working-diagram.png "aparatu AutoML pracującym w strukturze ML.NET interfejsu wiersza polecenia")
+![obraz](./media/ml-net-automl-working-diagram.png "Aparat AutoML pracuje wewnątrz interfejsu wiersza polecenia ml.NET")
 
-Podczas uruchamiania narzędzia interfejsu wiersza polecenia w strukturze ML.NET z "auto-train polecenia zostaną wyświetlone narzędzie podjęcie próby liczby iteracji przy użyciu różnych algorytmów i kombinacji konfiguracji.
+W przypadku uruchamiania narzędzia interfejsu wiersza polecenia ML.NET z poleceniem "autouczenie" zobaczysz narzędzie próbujące wykonać wiele iteracji z różnymi algorytmami i kombinacjami konfiguracji.
 
-## <a name="reference-for-auto-train-command"></a>Dokumentacja dotycząca poleceń "auto-train"
+## <a name="reference-for-auto-train-command"></a>Odwołanie do polecenia "autouczenie"
 
 ## <a name="examples"></a>Przykłady
 
-Najprostsza interfejsu wiersza polecenia dla problemu klasyfikacji binarnej (AutoML będą musieli wywnioskować większość konfiguracji na podstawie podanych danych):
+Najprostszym poleceniem interfejsu wiersza polecenia dla binarnego problemu klasyfikacji (AutoML będzie musiał wnioskować większość konfiguracji z dostarczonych danych):
 
 ```console
 > mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
 ```
 
-Inny prosty polecenia interfejsu wiersza polecenia dla problem regresji:
+Inne proste polecenie interfejsu wiersza polecenia dla problemu z regresją:
 
 ``` console
 > mlnet auto-train --task regression --dataset "cars.csv" --label-column-name Price
 ```
 
-Utwórz i wytrenuj model klasyfikacji danych binarnych z train zestawu danych, zestawy danych testowych i dalsze dostosowanie jawnych argumentów:
+Tworzenie i uczenie modelu klasyfikacji binarnej z zestawem danych, testowym zestawem danych i dodatkowymi argumentami dostosowania:
 
 ```console
 > mlnet auto-train --task binary-classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-column-name "InsuranceRisk" --cache on --max-exploration-time 600
@@ -78,7 +78,7 @@ Utwórz i wytrenuj model klasyfikacji danych binarnych z train zestawu danych, z
 
 ## <a name="name"></a>Nazwa
 
-`mlnet auto-train` — Szkolenie modeli wielu modeli ("n" iteracji) na podstawie podanego zestawu danych, a na koniec wybiera najlepszy model, zapisuje go jako plik .zip serializacji, oraz generuje związane z C# kodu ocenianie i szkolenie.
+`mlnet auto-train`-Pociąga za sobą wiele modeli (iteracje "n") na podstawie podanego zestawu danych, a następnie wybiera najlepszy model, zapisuje go jako serializowany C# plik zip, a następnie generuje powiązany kod na potrzeby oceniania i uczenia.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -116,96 +116,96 @@ Utwórz i wytrenuj model klasyfikacji danych binarnych z train zestawu danych, z
 
 ```
 
-Nieprawidłowe opcje danych wejściowych powinna spowodować, że narzędzie interfejsu wiersza polecenia emitować listę prawidłowych danych wejściowych i komunikat o błędzie wyjaśniający arg, który nie istnieje, jeśli tak jest rzeczywiście.
+Nieprawidłowe Opcje wejściowe powinny spowodować, że narzędzie interfejsu wiersza polecenia emituje listę prawidłowych danych wejściowych, a komunikat o błędzie wyjaśniający, który argument nie występuje, jeśli tak się dzieje.
 
 ## <a name="options"></a>Opcje
 
  ----------------------------------------------------------
 
-`--task | --mltask | -T` (string)
+`--task | --mltask | -T`parametry
 
-Pojedynczy ciąg dostarczający problemu uczenia Maszynowego do rozwiązania. Na przykład dowolny z następujących czynności (interfejs wiersza polecenia po pewnym czasie będzie obsługiwać wszystkie zadania obsługiwane w AutoML):
+Pojedynczy ciąg, który umożliwia rozproszenie problemu. Na przykład dowolne z następujących zadań (interfejs wiersza polecenia będzie ostatecznie obsługiwał wszystkie zadania obsługiwane w AutoML):
 
-- `regression` — Wybierz, jeśli Model usługi uczenie Maszynowe będzie służyć do przewidywania wartości liczbowej
-- `binary-classification` — Wybierz, czy wynik modelu usługi uczenie Maszynowe ma dwa możliwe podzielonych na kategorie wartości logiczne (0 lub 1).
-- `multiclass-classification` — Wybierz, czy wynik modelu usługi uczenie Maszynowe ma wiele możliwych wartości podzielonych na kategorie.
+- `regression`-Wybierz, czy model ML będzie używany do przewidywania wartości liczbowej
+- `binary-classification`-Wybierz, czy wynik modelu ML ma dwie możliwe wartości logiczne kategorii (0 lub 1).
+- `multiclass-classification`-Wybierz, czy wynik modelu ML ma wiele możliwych wartości kategorii.
 
-W przyszłości zwalnia takich jak na dodatkowe zadania uczenia Maszynowego i scenariuszy `recommendations`, `clustering` i `ranking` będą obsługiwane.
+W przyszłych wersjach dodatkowe zadania i scenariusze, takie jak `recommendations`i `clustering` `ranking` , będą obsługiwane.
 
- Tylko jeden ML zadań należy podać ten argument.
+ W tym argumencie należy podać tylko jedno zadanie ML.
 
  ----------------------------------------------------------
 
-`--dataset | -d` (string)
+`--dataset | -d`parametry
 
-Ten argument zawiera ścieżkę pliku do jednego z następujących opcji:
+Ten argument zawiera jedną z następujących opcji:
 
-- *ODP.: Plik całego zestawu danych:* Jeśli przy użyciu tej opcji i użytkownik nie dostarcza `--test-dataset` i `--validation-dataset`, a następnie krzyżowego sprawdzania poprawności (k zwijania itp.) lub dane podejście split będzie używana wewnętrznie do sprawdzania poprawności modelu. W takim przypadku użytkownik po prostu należy podać ścieżkę pliku zestawu danych.
+- *Z Plik całego zestawu danych:* W przypadku korzystania z tej opcji, a użytkownik nie `--test-dataset` zapewnia `--validation-dataset`i, a następnie do walidacji modelu są używane wewnętrzne metody sprawdzania poprawności (z podziałem, itp.) lub zautomatyzowanego podziału danych. W takim przypadku użytkownik będzie musiał tylko podać ścieżkę zestawu danych.
 
-- *B: Plik zestawu danych szkolenia:* Jeśli użytkownik udostępnia także zestawy danych do sprawdzania poprawności modelu (przy użyciu `--test-dataset` i opcjonalnie `--validation-dataset`), a następnie `--dataset` argument oznacza, że tylko mają "zestaw danych szkoleniowych". Na przykład korzystając z podejścia 80 – 20% do sprawdzania jakości modelu i uzyskać metryki dokładności, "zestaw danych szkoleniowych" będzie mieć 80% danych, a "zestawu danych testowych" miałyby 20% rozmiaru danych.
-
-----------------------------------------------------------
-
-`--test-dataset | -t` (string)
-
-Ścieżka do pliku, który wskazuje plik zestawu danych testowych, na przykład korzystając z podejścia 80 – 20% podczas wprowadzania ocen regularnym uzyskać metryki dokładności.
-
-Jeśli przy użyciu `--test-dataset`, następnie `--dataset` jest również wymagany.
-
-`--test-dataset` Argument jest opcjonalny Jeśli użycia zestawu danych walidacji. W takim przypadku użytkownik musi użyć trzy argumenty.
+- *B: Plik zestawu danych szkoleniowych:* Jeśli użytkownik udostępnia również zestawy danych do walidacji modelu (za pomocą `--test-dataset` i opcjonalnie `--validation-dataset`), `--dataset` argument oznacza, aby miał jedynie "zestaw danych szkoleniowych". Na przykład w przypadku korzystania z 80%-20% podejścia do weryfikowania jakości modelu i uzyskiwania metryk dokładności, "zestaw danych szkoleniowych" będzie miał 80% danych, a "testowy zestaw danych" miałby 20% danych.
 
 ----------------------------------------------------------
 
-`--validation-dataset | -v` (string)
+`--test-dataset | -t`parametry
 
-Ścieżka do pliku, który wskazuje plik zestawu danych walidacji. Sprawdzanie poprawności zestawu danych jest opcjonalna, w każdym przypadku.
+Ścieżka pliku wskazująca plik zestawu danych testowych, na przykład w przypadku korzystania z 80%-20% podejścia podczas regularnego sprawdzania poprawności w celu uzyskania metryk dokładności.
 
-Jeśli przy użyciu `validation dataset`, działanie powinno być:
+Jeśli `--dataset` jest `--test-dataset`używana, również jest wymagane.
 
-- `test-dataset` i `--dataset` wymagane są również argumentów.
-
-- `validation-dataset` Zestawu danych jest używany do oszacowania błędów prognoz dla modelu zaznaczenia.
-
-- `test-dataset` Jest używana do oceny błąd Generalizacja końcowa wybranego modelu. W idealnym przypadku zestawu testowego powinny być przechowywane w "Magazyn" i można przełączyć tylko na końcu analizy danych.
-
-Zasadniczo korzystając z `validation dataset` plus `test dataset`, fazę weryfikacja zostanie podzielona na dwie części:
-
-1. W pierwszej części właśnie Przyjrzyj się do modeli i wybierz opcję najlepiej podejście przy użyciu danych sprawdzania poprawności (= weryfikacji)
-2. Następnie można oszacować dokładność wybranej metody (= test).
-
-Dzięki temu oddzielenie danych może być 80/10/10 lub 75/15/10. Na przykład:
-
-- `training-dataset` Plik powinien zawierać 75% danych.
-- `validation-dataset` Plik powinien zawierać 15% rozmiaru danych.
-- `test-dataset` Plik powinien mieć 10% rozmiaru danych.
-
-W każdym przypadku użytkownika przy użyciu interfejsu wiersza polecenia, który zapewni, że już Podziel pliki o tych wartości procentowe.
+`--test-dataset` Argument jest opcjonalny, chyba że jest używany element--Validation-DataSet. W takim przypadku użytkownik musi użyć trzech argumentów.
 
 ----------------------------------------------------------
 
-`--label-column-name | -n` (string)
+`--validation-dataset | -v`parametry
 
-Dzięki temu argumentowi kolumny określony cel/element docelowy (zmiennej, którą chcesz przewidzieć) można określić przy użyciu nazwy kolumny w nagłówku typizowanego zestawu danych.
+Ścieżka pliku wskazująca plik zestawu danych walidacji. Zestaw danych walidacji jest opcjonalny w każdym przypadku.
 
-Ten argument jest używany tylko do nadzorowanego uczenia Maszynowego wykonywania zadań, takich jak *problemu klasyfikacji*. Nie można używać dla nienadzorowanych ML zadań takich jak *klastrowania*.
+W przypadku korzystania `validation dataset`z programu zachowanie powinno być następujące:
+
+- Argumenty `test-dataset` i`--dataset` są również wymagane.
+
+- Ten `validation-dataset` zestaw danych służy do szacowania błędu prognozowania dla wyboru modelu.
+
+- `test-dataset` Służy do oceny błędu generalizacji końcowego wybranego modelu. Najlepiej, aby zestaw testów był przechowywany w "magazynie" i znajdować się tylko na końcu analizy danych.
+
+W zasadzie, podczas korzystania `validation dataset` z znaku `test dataset`Plus, faza walidacji jest dzielona na dwie części:
+
+1. W pierwszej części Przyjrzyjmy się modelom i wybieramy najlepsze podejście przy użyciu danych sprawdzania poprawności (= Walidacja).
+2. Następnie należy oszacować dokładność wybranego podejścia (= test).
+
+W związku z tym rozdzielenie danych może wynosić 80/10/10 lub 75/15/10. Przykład:
+
+- `training-dataset`plik powinien mieć 75% danych.
+- `validation-dataset`plik powinien mieć 15% danych.
+- `test-dataset`plik powinien mieć 10% danych.
+
+W każdym przypadku te wartości procentowe zostaną określone przez użytkownika przy użyciu interfejsu wiersza polecenia, który udostępni już pliki.
 
 ----------------------------------------------------------
 
-`--label-column-index | -i` (int)
+`--label-column-name | -n`parametry
 
-Dzięki temu argumentowi kolumny określony cel/element docelowy (zmiennej, którą chcesz przewidzieć) można określić przy użyciu indeksu liczbowego kolumny w pliku zestawu danych (indeks wartości w kolumnach są liczone od 1).
+W przypadku tego argumentu określona kolumna celu/Target (zmienna, która ma zostać przewidywalna) można określić za pomocą nazwy kolumny ustawionej w nagłówku zestawu danych.
 
-*Uwaga:* Jeśli użytkownik jest również za pomocą `--label-column-name`, `--label-column-name` jest używany.
-
-Ten argument jest używany tylko w przypadku nadzorowanych zadania uczenia Maszynowego, takich jak *problemu klasyfikacji*. Nie można używać dla nienadzorowanych ML zadań takich jak *klastrowania*.
+Ten argument jest używany tylko w przypadku zadań nadzorowanych ML, takich jak *problem klasyfikacji*. Nie można jej używać dla zadań nienadzorowanych ML, takich jak *klastrowanie*.
 
 ----------------------------------------------------------
 
-`--ignore-columns | -I` (string)
+`--label-column-index | -i`ZAOKR
 
-Dzięki temu argumentowi można zignorować istniejących kolumn w pliku zestawu danych, więc nie są ładowane i wykorzystywane przez procesy szkolenia.
+Z tym argumentem określona kolumna celu/Target (zmienna, która ma zostać przewidywalna) może być określana za pomocą indeksu liczbowego kolumny w pliku zestawu danych (wartości indeksu kolumn zaczynają się od 1).
 
-Określ nazwy kolumn, które chcesz zignorować. Użyj "," (przecinek ze spacją) lub "" (miejsca), aby oddzielić wiele nazw kolumn. Dla nazwy kolumny zawierające białe znaki (np. "zalogowany"), można użyć cudzysłowów.
+*Uwaga:* Jeśli użytkownik używa `--label-column-name`również `--label-column-name` , jest używany.
+
+Ten argument jest używany tylko dla zadania nadzorowanego ML, takiego jak *problem klasyfikacji*. Nie można jej używać dla zadań nienadzorowanych ML, takich jak *klastrowanie*.
+
+----------------------------------------------------------
+
+`--ignore-columns | -I`parametry
+
+Za pomocą tego argumentu można zignorować istniejące kolumny w pliku DataSet, aby nie zostały one załadowane i wykorzystane przez procesy szkoleniowe.
+
+Określ nazwy kolumn, które mają być ignorowane. Użyj "," (przecinek z spacją) lub "" (spacja), aby rozdzielić wiele nazw kolumn. Można używać cudzysłowów dla nazw kolumn zawierających odstępy (np. "zalogowane").
 
 Przykład:
 
@@ -213,84 +213,85 @@ Przykład:
 
 ----------------------------------------------------------
 
-`--has-header | -h` (wartość logiczna)
+`--has-header | -h`logiczna
 
-Określ, jeśli pliki zestawu danych ma wiersz nagłówka.
+Określ, czy pliki zestawu danych mają wiersz nagłówka.
 Możliwe wartości to:
+
 - `true`
 - `false`
 
-Domyślna wartość to `true` Jeśli ten argument nie zostanie określony przez użytkownika.
+Wartość domyślna to `true` Jeśli ten argument nie jest określony przez użytkownika.
 
-Aby można było używać `--label-column-name` argument, musisz mieć nagłówka w pliku zestawu danych i `--has-header` równa `true` (która jest domyślnie).
-
-----------------------------------------------------------
-
-`--max-exploration-time | -x` (string)
-
-Domyślnie podczas eksploracji maksymalna to 30 minut.
-
-Ten argument Ustawia maksymalny czas (w sekundach) dla procesu zapoznać się z wielu instruktorów i konfiguracji. Jeśli podany czas jest zbyt krótki (np. 2 sekund) dla jednej iteracji, może zostać przekroczony skonfigurowany czas. W tym przypadku rzeczywistego czasu jest wymagany czas, aby utworzyć jedną konfigurację modelu w jednej iteracji.
-
-Potrzebny czas dla iteracji, może się różnić w zależności od rozmiaru zestawu danych.
+Aby można było użyć `--label-column-name` argumentu, musisz mieć nagłówek w pliku DataSet i `--has-header` ustawić na `true` (domyślnie).
 
 ----------------------------------------------------------
 
-`--cache | -c` (string)
+`--max-exploration-time | -x`parametry
 
-Korzystając z buforowania, szkolenie całego zestawu danych będzie załadowanych w pamięci.
+Domyślnie maksymalny czas eksploracji to 30 minut.
 
-W przypadku małych i średnich zestawów danych przy użyciu pamięci podręcznej może znacząco zwiększyć wydajność szkolenia, co oznacza, że podczas szkolenia może być krótszy niż w przypadku nie użycia pamięci podręcznej.
+Ten argument ustawia maksymalny czas (w sekundach), przez który proces ma eksplorować wiele instruktorów i konfiguracji. Skonfigurowany czas może zostać przekroczony, jeśli podany czas jest zbyt krótki (wypowiedz 2 sekundy) dla jednej iteracji. W takim przypadku rzeczywisty czas to wymagany czas na utworzenie jednej konfiguracji modelu w jednej iteracji.
 
-Jednak dla dużych zestawów danych, podczas ładowania wszystkie dane w pamięci może wpłynąć na negatywny, ponieważ możesz otrzymać za mało pamięci. Podczas szkolenia z plikami duży zestaw danych i nie używa pamięci podręcznej, strukturze ML.NET będzie można przesyłanie strumieniowe dużych ilości danych z dysku kiedy zachodzi potrzeba załadowanie większej ilości danych podczas szkolenia.
+Czas trwania iteracji może się różnić w zależności od rozmiaru zestawu danych.
+
+----------------------------------------------------------
+
+`--cache | -c`parametry
+
+W przypadku korzystania z buforowania cały zestaw danych szkoleniowych zostanie załadowany w pamięci.
+
+W przypadku małych i średnich zestawów danych użycie pamięci podręcznej może znacząco poprawić wydajność uczenia, co oznacza, że czas uczenia może być krótszy niż w przypadku braku użycia pamięci podręcznej.
+
+Jednak w przypadku dużych zestawów danych ładowanie wszystkich znajdujących się w pamięci może wpływać negatywnie na brak pamięci. W przypadku szkolenia z plikami z dużymi zestawami danych, które nie używają pamięci podręcznej, ML.NET będzie przesyłać strumieniowo fragmenty danych z dysku, gdy będzie konieczne załadowanie większej ilości danych podczas uczenia się.
 
 Można określić następujące wartości:
 
-`on`: Pamięć podręczna wymusza, który będzie używany podczas szkolenia.
-`off`: Pamięć podręczna wymusza nie powinien być używany podczas szkolenia.
-`auto`: W zależności od heurystyki AutoML pamięci podręcznej będą używane, lub nie. Zwykle małe i średnie zestawów danych będzie korzystać z pamięci podręcznej i dużych zestawów danych nie używać pamięci podręcznej, jeśli używasz `auto` wybór.
+`on`: Wymusza użycie pamięci podręcznej do uczenia się.
+`off`: Wymusza użycie pamięci podręcznej w przypadku szkolenia.
+`auto`: W zależności od heurystyki AutoML pamięć podręczna zostanie użyta. Zazwyczaj małe i średnie zestawy danych będą używać pamięci podręcznej, a duże zestawy danych nie będą używać pamięci `auto` podręcznej, jeśli zostanie użyty wybór.
 
-Jeśli nie określisz `--cache` parametru, a następnie pamięci podręcznej `auto` konfiguracja będzie używana domyślnie.
-
-----------------------------------------------------------
-
-`--name | -N` (string)
-
-Nazwa wyjściowego utworzony projekt lub rozwiązanie. Jeśli nie określono nazwy, nazwa `sample-{mltask}` jest używany.
-
-Plik modelu strukturze ML.NET (. Plik ZIP) otrzyma taką samą nazwę, jak również.
+Jeśli `--cache` parametr nie zostanie określony, domyślnie zostanie użyta `auto` konfiguracja pamięci podręcznej.
 
 ----------------------------------------------------------
 
-`--output-path | -o` (string)
+`--name | -N`parametry
 
-Lokalizacja/folder główny do umieszczenia wygenerowanych danych wyjściowych. Ustawieniem domyślnym jest bieżący katalog.
+Nazwa utworzonego projektu lub rozwiązania wyjściowego. Jeśli nazwa nie zostanie określona, zostanie użyta nazwa `sample-{mltask}` .
+
+Plik modelu ML.NET (. Plik ZIP) będzie mieć taką samą nazwę, jak również.
 
 ----------------------------------------------------------
 
-`--verbosity | -V` (string)
+`--output-path | -o`parametry
 
-Ustawia poziom szczegółowości wyjścia standardowego.
+Główna lokalizacja/folder, w którym mają zostać umieszczone wygenerowane dane wyjściowe. Ustawieniem domyślnym jest bieżący katalog.
+
+----------------------------------------------------------
+
+`--verbosity | -V`parametry
+
+Ustawia poziom szczegółowości danych wyjściowych Standard.
 
 Dozwolone wartości to:
 
 - `q[uiet]`
-- `m[inimal]`  (domyślnie)
-- `diag[nostic]` (poziom rejestrowania informacji)
+- `m[inimal]`(domyślnie)
+- `diag[nostic]`(poziom informacji rejestrowania)
 
-Domyślnie narzędzie interfejsu wiersza polecenia powinny pokazywać niektóre minimalne opinii (minimalny) podczas pracy, takich jak wymienienie działa i jeśli to możliwe czas, jaki jest po lewej stronie lub zakończeniu jakie % czasu.
+Domyślnie narzędzie interfejsu wiersza polecenia powinno pokazać pewną minimalną opinię (minimalną) podczas pracy, na przykład wzmiankę o tym, że działa, a jeśli to możliwe, ile czasu pozostało lub jaki procent czasu jest zakończony.
 
 ----------------------------------------------------------
 
 `-h|--help`
 
-Drukuje pomoc dotyczącą polecenia opis parametru każdego polecenia.
+Drukuje pomoc dla polecenia z opisem dla każdego parametru polecenia.
 
 ----------------------------------------------------------
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Jak zainstalować narzędzie interfejsu wiersza polecenia w strukturze ML.NET](../how-to-guides/install-ml-net-cli.md)
-- [Automatyzowanie szkolenie modelu przy użyciu interfejsu wiersza polecenia strukturze ML.NET](../automate-training-with-cli.md)
-- [Samouczek: Automatycznie Generuj Klasyfikator binarny przy użyciu interfejsu wiersza polecenia strukturze ML.NET](../tutorials/mlnet-cli.md)
-- [Dane telemetryczne w interfejsie wiersza polecenia w strukturze ML.NET](../resources/ml-net-cli-telemetry.md)
+- [Jak zainstalować narzędzie interfejsu wiersza polecenia ML.NET](../how-to-guides/install-ml-net-cli.md)
+- [Automatyzacja szkoleń modeli przy użyciu interfejsu wiersza polecenia ML.NET](../automate-training-with-cli.md)
+- [Samouczek: Automatycznie Generuj klasyfikator binarny przy użyciu interfejsu wiersza polecenia ML.NET](../tutorials/mlnet-cli.md)
+- [Dane telemetryczne w interfejsie wiersza polecenia ML.NET](../resources/ml-net-cli-telemetry.md)

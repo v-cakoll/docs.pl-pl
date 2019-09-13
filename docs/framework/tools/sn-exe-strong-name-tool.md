@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35e89584f3916d748809960d33a31eb4e8fb9c6a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 643f0644bdeb2d3bdf6a08b482d0494affd92209
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938022"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894642"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Narzędzie silnych nazw)
-Narzędzie silnych nazw (SN. exe) pomaga podpisywać zestawy [](../../../docs/framework/app-domains/strong-named-assemblies.md)o silnych nazwach. Sn.exe dostarcza opcje do zarządzania kluczami, generowania podpisów i ich weryfikacji.  
+Narzędzie silnych nazw (SN. exe) pomaga podpisywać zestawy o [silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe dostarcza opcje do zarządzania kluczami, generowania podpisów i ich weryfikacji.  
   
 > [!WARNING]
 > Nie należy polegać na silnych nazwach zabezpieczeń. Zapewniają one tylko unikatową tożsamość.
@@ -36,7 +36,7 @@ Narzędzie silnych nazw (SN. exe) pomaga podpisywać zestawy [](../../../docs/fr
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console  
 sn [-quiet][option [parameter(s)]]  
 ```  
   
@@ -54,21 +54,21 @@ sn [-quiet][option [parameter(s)]]
 |**-i** *kontener infile*|Instaluje parę kluczy z *infile* w określonym kontenerze kluczy. Kontener kluczy mieści się w CSP silnej nazwy.|  
 |**-k** [*rozmiar rozmiaru*] *plik w pliku*|Generuje nowy <xref:System.Security.Cryptography.RSACryptoServiceProvider> klucz o określonym rozmiarze i zapisuje go w określonym pliku.  Oba klucze, publiczny i prywatny, są zapisywane do pliku.<br /><br /> Jeśli nie określono rozmiaru klucza, w przypadku gdy zainstalowany jest ulepszony dostawca kryptograficzny firmy Microsoft, domyślnie generowany jest 1024-bitowy klucz; w przeciwnym wypadku, generowany jest 512-bitowy klucz.<br /><br /> Parametr *rozmiaru* klucza obsługuje długości kluczy z 384 bitów do 16 384 bitów w przyrostach wynoszących 8 bitów, jeśli jest zainstalowany zaawansowany dostawca usług kryptograficznych firmy Microsoft.  Obsługuje on długości kluczy od 384 bitów do 512 bitów rosnąco co 8 bitów, jeśli zainstalowany jest podstawowy dostawca kryptograficzny firmy Microsoft.|  
 |**-m** [**y** *&#124;* **n**]|Określa, czy kontenery kluczy są specyficzne dla komputera, czy dla użytkownika. W przypadku określenia wartości *y*kontenery kluczy są specyficzne dla komputera. Jeśli określisz *n*, kontenery kluczy są specyficzne dla użytkownika.<br /><br /> Jeśli nie podano ani y ani n, ta opcja wyświetla bieżące ustawienie.|  
-|**-o**  *infile* [*outfile*]|Wyodrębnia klucz publiczny z infile i zapisuje go w pliku CSV. Poszczególne bajty klucza publicznego są rozdzielone przecinkami. Ten format jest użyteczny dla trwale zakodowanych odwołań do kluczy, takich jak zainicjowane tablice w kodzie źródłowym. Jeśli nie określisz *pliku*, ta opcja umieszcza dane wyjściowe w Schowku. **Uwaga:**  Ta opcja nie weryfikuje, czy na wejściu podano tylko klucz publiczny. `infile` Jeśli zawiera parę kluczy z kluczem prywatnym, klucz prywatny również zostanie wyodrębniony.|  
+|**-o**  *infile* [*outfile*]|Wyodrębnia klucz publiczny z *infile* i zapisuje go w pliku CSV. Poszczególne bajty klucza publicznego są rozdzielone przecinkami. Ten format jest użyteczny dla trwale zakodowanych odwołań do kluczy, takich jak zainicjowane tablice w kodzie źródłowym. Jeśli nie określisz *pliku*, ta opcja umieszcza dane wyjściowe w Schowku. **Uwaga:**  Ta opcja nie weryfikuje, czy na wejściu podano tylko klucz publiczny. `infile` Jeśli zawiera parę kluczy z kluczem prywatnym, klucz prywatny również zostanie wyodrębniony.|  
 |**-p** *plik infile* [*hashAlg*]|Wyodrębnia klucz publiczny z pary kluczy w *pliku infile* i zapisuje go w *pliku*, opcjonalnie używając algorytmu RSA określonego przez *hashAlg*. Ten klucz publiczny może służyć do opóźnienia podpisywania zestawu przy użyciu opcji **/delaysign +** i **/KeyFile** [konsolidatora zestawu (Al. exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Gdy zestaw jest podpisany z opóźnieniem, w czasie kompilacji ustawiany jest tylko klucz publiczny i rezerwowana jest przestrzeń w pliku na późniejsze dodanie podpisu, gdy znany będzie klucz prywatny.|  
-|**-pc**  *kontenera* *outfile* [*hashalg*]|Wyodrębnia klucz publiczny z pary kluczy w kontenerze i zapisuje je w *pliku*. W przypadku użycia opcji *hashAlg* algorytm RSA jest używany do wyodrębniania klucza publicznego.|  
+|**-pc**  *kontenera* *outfile* [*hashalg*]|Wyodrębnia klucz publiczny z pary kluczy w *kontenerze* i zapisuje je w *pliku*. W przypadku użycia opcji *hashAlg* algorytm RSA jest używany do wyodrębniania klucza publicznego.|  
 |**-Pb** [**y** *&#124;* **n**]|Określa, czy wymuszona jest zasada obejścia silnej nazwy. Jeśli określisz wartość *y*, silne nazwy dla zestawów pełnego zaufania nie są weryfikowane po załadowaniu do pełnego zaufania <xref:System.AppDomain>. Jeśli określisz *n*, silne nazwy są weryfikowane pod kątem poprawności, ale nie dla określonej silnej nazwy. Nie <xref:System.Security.Permissions.StrongNameIdentityPermission> ma wpływu na zestawy pełnego zaufania. Musisz wykonać swoje własne sprawdzenie dopasowania silnej nazwy.<br /><br /> Jeśli nie `y` określono `n` żadnego z tych opcji, ta opcja wyświetla bieżące ustawienie. Wartość domyślna to `y`. **Uwaga:**  Na komputerach 64-bitowych należy ustawić ten parametr w każdym wystąpieniu Sn.exe, zarówno 32-bitowym, jak i 64-bitowym.|  
 |**-q** [**uiet**]|Określa tryb cichy; pomija wyświetlanie komunikatów o powodzeniu.|  
 |**-R**[**a**] *zestawu* *PlikWejściowy*|Podpisuje wcześniej podpisany lub podpisany z opóźnieniem zestaw za pomocą pary kluczy w *pliku infile*.<br /><br /> Jeśli jest używany **-RA** , skróty są ponownie obliczane dla wszystkich plików w zestawie.|  
 |**Rc —** [**a**] *kontenera zestawu*|Podpisuje wcześniej podpisany lub podpisany z opóźnieniem zestaw za pomocą pary kluczy w *kontenerze*.<br /><br /> If **-RCA** jest używany, skróty są ponownie obliczane dla wszystkich plików w zestawie.|  
 |**-RH** *zestaw*|Oblicza ponownie skróty dla wszystkich plików w zestawie.|  
-|**-t** [**p**] *infile*|Wyświetla token dla klucza publicznego przechowywanego w *pliku infile*. Zawartość infile musi być kluczem publicznym wcześniej wygenerowanym z pliku pary kluczy przy użyciu **-p**.  Nie używaj opcji **-t [p]** , aby wyodrębnić token bezpośrednio z pliku pary kluczy.<br /><br /> Sn.exe oblicza token przy użyciu funkcji skrótu z klucza publicznego. Aby zaoszczędzić przestrzeń, środowisko uruchomieniowe języka wspólnego zapisuje tokeny klucza publicznego w manifeście jako część odwołania do innego zestawu, gdy rejestruje zależność do zestawu z silną nazwą. Opcja **-TP** wyświetla klucz publiczny oprócz tokenu. <xref:System.Reflection.AssemblySignatureKeyAttribute> Jeśli atrybut został zastosowany do zestawu, token ma wartość klucz tożsamości i zostanie wyświetlona nazwa algorytmu wyznaczania wartości skrótu i klucza tożsamości.<br /><br /> Zauważ, że ta opcja nie weryfikuje podpisu zestawu i nie powinna być używana do podejmowania decyzji dotyczących zaufania.  Ta opcja wyświetla jedynie surowe dane tokenu klucza publicznego.|  
+|**-t** [**p**] *infile*|Wyświetla token dla klucza publicznego przechowywanego w *pliku infile*. Zawartość *infile* musi być kluczem publicznym wcześniej wygenerowanym z pliku pary kluczy przy użyciu **-p**.  Nie używaj opcji **-t [p]** , aby wyodrębnić token bezpośrednio z pliku pary kluczy.<br /><br /> Sn.exe oblicza token przy użyciu funkcji skrótu z klucza publicznego. Aby zaoszczędzić przestrzeń, środowisko uruchomieniowe języka wspólnego zapisuje tokeny klucza publicznego w manifeście jako część odwołania do innego zestawu, gdy rejestruje zależność do zestawu z silną nazwą. Opcja **-TP** wyświetla klucz publiczny oprócz tokenu. <xref:System.Reflection.AssemblySignatureKeyAttribute> Jeśli atrybut został zastosowany do zestawu, token ma wartość klucz tożsamości i zostanie wyświetlona nazwa algorytmu wyznaczania wartości skrótu i klucza tożsamości.<br /><br /> Zauważ, że ta opcja nie weryfikuje podpisu zestawu i nie powinna być używana do podejmowania decyzji dotyczących zaufania.  Ta opcja wyświetla jedynie surowe dane tokenu klucza publicznego.|  
 |**-T** *zestaw* [**p**]|Wyświetla token klucza publicznego dla *zestawu.* *Zestaw* musi być nazwą pliku, który zawiera manifest zestawu.<br /><br /> Sn.exe oblicza token przy użyciu funkcji skrótu z klucza publicznego. Aby zaoszczędzić przestrzeń, środowisko uruchomieniowe przechowuje tokeny klucza publicznego w manifeście jako część odwołania do innego zestawu, gdy rejestruje zależność do zestawu z silną nazwą. Opcja **-TP** wyświetla klucz publiczny oprócz tokenu. <xref:System.Reflection.AssemblySignatureKeyAttribute> Jeśli atrybut został zastosowany do zestawu, token ma wartość klucz tożsamości i zostanie wyświetlona nazwa algorytmu wyznaczania wartości skrótu i klucza tożsamości.<br /><br /> Zauważ, że ta opcja nie weryfikuje podpisu zestawu i nie powinna być używana do podejmowania decyzji dotyczących zaufania.  Ta opcja wyświetla jedynie surowe dane tokenu klucza publicznego.|  
 |`-TS` `assembly` `infile`|Test — podpisuje podpisany lub częściowo podpisany `assembly` za pomocą pary kluczy w `infile`.|  
 |-`TSc` `assembly` `container`|Test — podpisuje podpisany lub częściowo podpisany `assembly` za pomocą pary kluczy w kontenerze `container`kluczy.|  
 |**-v** *zestaw*|Weryfikuje silną nazwę w *zestawie*, gdzie *Assembly* jest nazwą pliku, który zawiera manifest zestawu.|  
 |**-vf**  *zestawu*|Weryfikuje silną nazwę w *zestawie.* W przeciwieństwie do opcji **-v** , funkcja **-funkcji wirtualnej** wymusza weryfikację, nawet jeśli jest wyłączona przy użyciu opcji **-VR** .|  
-|**-Vk**  *regfile.reg* *zestawu* [*userlist*] [*infile*]|Tworzy plik wpisów rejestracji (reg), którego można użyć do zarejestrowania określonego zestawu, aby pomijał weryfikację. Reguły nazewnictwa zestawów, które mają zastosowanie do opcji **-VR** , mają również zastosowanie do **– VK** . Aby uzyskać informacje o opcjach *userlist* i infile, zobacz **-VR** .|  
+|**-Vk**  *regfile.reg* *zestawu* [*userlist*] [*infile*]|Tworzy plik wpisów rejestracji (reg), którego można użyć do zarejestrowania określonego zestawu, aby pomijał weryfikację. Reguły nazewnictwa zestawów, które mają zastosowanie do opcji **-VR** , mają również zastosowanie do **– VK** . Aby uzyskać informacje o opcjach *userlist* i *infile* , zobacz **-VR** .|  
 |**-VL**|Wyświetla listę bieżących ustawień dla weryfikacji silnych nazw na tym komputerze.|  
 |**-Vr**  *zestawu* [*userlist*] [*infile*]|Rejestruje *zestaw* do pomijania weryfikacji. Opcjonalnie można określić listę rozdzielonych przecinkami nazw użytkownika, do których powinno zostać zastosowane pominięcie weryfikacji. W przypadku określenia *infile*weryfikacja pozostanie włączona, ale klucz publiczny w *pliku infile* jest używany w operacjach weryfikacji. Możesz określić *zestaw* w formularzu  *\*, StrongName,* aby zarejestrować wszystkie zestawy z określoną silną nazwą. Dla elementu *StrongName*Określ ciąg znaków szesnastkowych reprezentujących postać tokenu w postaci klucza publicznego. Zobacz opcje **-t** i **-t** , aby wyświetlić token klucza publicznego. **Ostrzeżenie**  Używaj tej opcji tylko podczas tworzenia oprogramowania. Dodanie zestawu, który będzie pomijał listę weryfikacji, tworzy lukę w zabezpieczeniach. Złośliwy zestaw mógłby użyć w pełni określonej nazwy (nazwy zestawu, wersji, kultury i tokenu klucza publicznego) zestawu dodanego do listy pomijania weryfikacji, aby ukryć swoją tożsamość. Pozwoliłoby to złośliwemu zestawowi na ominięcie weryfikacji.|  
 |||  
@@ -90,37 +90,37 @@ Narzędzie silnej nazwy zakłada, że pary kluczy publiczny/prywatny są generow
 ## <a name="examples"></a>Przykłady  
  Następujące polecenie tworzy nową, losową parę kluczy i zapisuje ją w `keyPair.snk`.  
   
-```  
+```console  
 sn -k keyPair.snk  
 ```  
   
  Następujące polecenie przechowuje klucz w `keyPair.snk` w kontenerze `MyContainer` w dostawcy o silnej nazwie.  
   
-```  
+```console  
 sn -i keyPair.snk MyContainer  
 ```  
   
  Poniższe polecenie wyodrębnia klucz publiczny z `keyPair.snk` programu i zapisuje je w programie. `publicKey.snk`  
   
-```  
+```console  
 sn -p keyPair.snk publicKey.snk  
 ```  
   
  Następujące polecenie wyświetla klucz publiczny i token klucza publicznego zawarte w `publicKey.snk`.  
   
-```  
+```console  
 sn -tp publicKey.snk  
 ```  
   
  Poniższe polecenie weryfikuje zestaw `MyAsm.dll`.  
   
-```  
+```console  
 sn -v MyAsm.dll  
 ```  
   
  Następujące polecenie usuwa `MyContainer` z domyślnego dostawcy CSP.  
   
-```  
+```console  
 sn -d MyContainer  
 ```  
   

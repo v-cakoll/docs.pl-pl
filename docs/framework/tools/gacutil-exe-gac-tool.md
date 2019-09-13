@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31f9d045b4d784357896a628135d68365cc29937
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 99ffbccca8cd8a719e5571638308e28d494d687a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851240"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926875"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Narzędzie Global Assembly Cache)
 
@@ -103,6 +103,7 @@ myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 > ```
 >
 > Wynika to z faktu, że wewnętrznie Gacutil. exe konstruuje ścieżkę do znaków, które składają się z następujących elementów:
+>
 > - Katalog główny GAC — 34 znaków (IE. `C:\Windows\Microsoft.NET\assembly\`)
 > - Architektura-7 lub 9 znaków (IE. `GAC_32\`, `GAC_64\`, `GAC_MSIL`)
 > - AssemblyName — do 91 znaków, w zależności od rozmiaru innych elementów (np. `System.Xml.Linq\`)

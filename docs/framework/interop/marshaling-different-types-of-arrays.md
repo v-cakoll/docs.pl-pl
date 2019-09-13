@@ -10,85 +10,85 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fadccdf35429babce6e101d336c9ea1de150b276
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 358c7f1a339fd473271574a4e97e201f5c15f871
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648599"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894167"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Organizowanie różnych typów tablic
-Tablica jest typem odwołania w kodzie zarządzanym, który zawiera co najmniej jeden element tego samego typu. Mimo że tablice są typami odwołań, są one przekazywane tak jak parametry z funkcjami niezarządzanymi. To zachowanie jest niespójny z sposób zarządzanych tablic są przekazywane do obiektów zarządzanych, jak we/wy parametrów. Aby uzyskać więcej informacji, zobacz [kopiowanie i przypinanie](copying-and-pinning.md).  
+Tablica jest typem referencyjnym w zarządzanym kodzie, który zawiera co najmniej jeden element tego samego typu. Chociaż tablice są typami odwołań, są one przesyłane jako parametry do funkcji niezarządzanych. To zachowanie jest niespójne w sposób, w jaki zarządzane tablice są przesyłane do zarządzanych obiektów, które są jako parametry wejściowe/out. Aby uzyskać więcej informacji, zobacz [kopiowanie i Przypinanie](copying-and-pinning.md).  
   
- Poniższa tabela zawiera listę opcji marshaling dla tablic i opisano ich użycie.  
+ W poniższej tabeli wymieniono opcje organizowania dla tablic i opisano ich użycie.  
   
-|Tablica|Opis|  
+|Array|Opis|  
 |-----------|-----------------|  
-|Liczby całkowite przez wartość.|Przekazuje tablicę liczb całkowitych jako parametrem In.|  
-|Liczby całkowite przez odwołanie.|Przekazuje tablicę liczb całkowitych jako parametr wejście/wyjście.|  
-|Liczby całkowite przez wartość (dwuwymiarową).|Przekazuje macierzy liczb całkowitych jako parametrem In.|  
-|Ciągów według wartości.|Przekazuje tablicę ciągów, jako parametr w.|  
-|Struktury z liczbami całkowitymi.|Przekazuje tablicę struktury, które zawierają liczb całkowitych jako parametr w.|  
-|Struktury z ciągami.|Przekazuje tablicy struktur, które zawierają tylko ciągi jako parametr wejście/wyjście. Elementy członkowskie tablicy można zmieniać.|  
+|Liczby całkowite według wartości.|Przekazuje tablicę liczb całkowitych jako parametr in.|  
+|Liczb całkowitych przez odwołanie.|Przekazuje tablicę liczb całkowitych jako parametr we/out.|  
+|Liczby całkowite przez wartość (dwuwymiarowe).|Przekazuje tablicę liczb całkowitych jako parametr in.|  
+|Ciągów według wartości.|Przekazuje tablicę ciągów jako parametr.|  
+|Struktur z liczbami całkowitymi.|Przekazuje tablicę struktur, które zawierają liczby całkowite jako parametr in.|  
+|Struktur z ciągami.|Przekazuje tablicę struktur, które zawierają tylko ciągi jako parametr in/out. Elementy członkowskie tablicy można zmienić.|  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie pokazano, jak przekazać następujące typy tablic:  
+ Ten przykład pokazuje, jak przekazać następujące typy tablic:  
   
-- Tablica liczb całkowitych przez wartość.  
+- Tablica liczb całkowitych według wartości.  
   
-- Tablica liczb całkowitych według odwołania, którego rozmiar można zmieniać.  
+- Tablica liczb całkowitych według odwołania, które mogą być zmieniane.  
   
-- Tablica wielowymiarowa (macierzy) liczb całkowitych przez wartość.  
+- Tablica wielowymiarowa (macierz) liczb całkowitych według wartości.  
   
 - Tablica ciągów według wartości.  
   
-- Tablica struktury z liczbami całkowitymi.  
+- Tablica struktur z liczbami całkowitymi.  
   
-- Tablica struktury z ciągami.  
+- Tablica struktur z ciągami.  
   
- Jeśli tablica jest jawnie organizowane przez odwołanie, domyślne zachowanie kieruje tablicę jako parametr w. Można zmienić to zachowanie, stosując <xref:System.Runtime.InteropServices.InAttribute> i <xref:System.Runtime.InteropServices.OutAttribute> jawnie atrybutów.  
+ Jeśli tablica nie jest jawnie organizowana przez odwołanie, zachowanie domyślne służy do organizowania tablicy jako parametru in. To zachowanie można zmienić, stosując <xref:System.Runtime.InteropServices.InAttribute> jawnie atrybuty i. <xref:System.Runtime.InteropServices.OutAttribute>  
   
- Przykłady tablic używa następujących funkcji niezarządzanych, wyświetlane wraz z ich oryginalną deklaracją funkcji:  
+ Przykłady tablic używają następujących funkcji niezarządzanych, które są wyświetlane wraz z ich oryginalną deklaracją funkcji:  
   
-- **TestArrayOfInts** eksportowany z PinvokeLib.dll.  
+- **TestArrayOfInts** wyeksportowany z PinvokeLib. dll.  
   
-    ```  
+    ```cpp
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
-- **TestRefArrayOfInts** eksportowany z PinvokeLib.dll.  
+- **TestRefArrayOfInts** wyeksportowany z PinvokeLib. dll.  
   
-    ```  
+    ```cpp
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
-- **TestMatrixOfInts** eksportowany z PinvokeLib.dll.  
+- **TestMatrixOfInts** wyeksportowany z PinvokeLib. dll.  
   
-    ```  
+    ```cpp
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
-- **TestArrayOfStrings** exported from PinvokeLib.dll.  
+- **TestArrayOfStrings** wyeksportowany z PinvokeLib. dll.  
   
-    ```  
+    ```cpp
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
-- **TestArrayOfStructs** eksportowany z PinvokeLib.dll.  
+- **TestArrayOfStructs** wyeksportowany z PinvokeLib. dll.  
   
-    ```  
+    ```cpp
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
-- **TestArrayOfStructs2** eksportowany z PinvokeLib.dll.  
+- **TestArrayOfStructs2** wyeksportowany z PinvokeLib. dll.  
   
-    ```  
+    ```cpp
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) jest niestandardową biblioteką niezarządzaną, która zawiera implementacje dla wyżej wymienionych funkcji i dwie zmienne struktury, **MYPOINT** i **MYPERSON**. Struktury zawierają następujące elementy:  
+ [PinvokeLib. dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) jest niestandardową biblioteką niezarządzaną, która zawiera implementacje wcześniej wymienionych funkcji oraz dwie zmienne **struktury, i** **.** Struktury zawierają następujące elementy:  
   
-```  
+```cpp
 typedef struct _MYPOINT  
 {  
    int x;   
@@ -102,9 +102,9 @@ typedef struct _MYPERSON
 } MYPERSON;  
 ```  
   
- W tym przykładzie `MyPoint` i `MyPerson` struktury zawierają typów osadzonych. <xref:System.Runtime.InteropServices.StructLayoutAttribute> Ma ustawioną wartość atrybutu upewnij się, że elementy członkowskie są rozmieszczone w pamięci sekwencyjnej, w kolejności, w jakiej są wyświetlane.  
+ W tym przykładzie `MyPoint` struktury i `MyPerson` zawierają osadzone typy. <xref:System.Runtime.InteropServices.StructLayoutAttribute> Atrybut jest ustawiony tak, aby upewnić się, że elementy członkowskie są ułożone w pamięci sekwencyjnie, w kolejności, w jakiej są wyświetlane.  
   
- `LibWrap` Klasa zawiera metody wywoływane przez zbiór `App` klasy. Aby uzyskać szczegółowe informacje na temat przekazywania tablic Zobacz komentarze w następującym przykładzie. Tablica, która jest typem odwołania, jest przekazywany jako parametr w domyślnie. Do obiektu wywołującego do odbierania wyników **InAttribute** i **OutAttribute** muszą być jawnie stosowane do argumentu zawierający tablicę.  
+ Klasa zawiera zestaw metod wywoływanych `App` przez klasę. `LibWrap` Aby uzyskać szczegółowe informacje dotyczące przekazywania tablic, zobacz komentarze w poniższym przykładzie. Tablica, która jest typem referencyjnym, jest domyślnie przenoszona jako parametr in. Aby obiekt wywołujący otrzymywał wyniki, należy zastosować jawny **atrybut** i atrybut **Attribute** do argumentu zawierającego tablicę.  
   
 ### <a name="declaring-prototypes"></a>Deklarowanie prototypów  
  [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)]
@@ -116,5 +116,5 @@ typedef struct _MYPERSON
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Typy danych w wywołaniu platformy](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
+- [Typy danych wywołania platformy](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
 - [Tworzenie prototypów w kodzie zarządzanym](creating-prototypes-in-managed-code.md)

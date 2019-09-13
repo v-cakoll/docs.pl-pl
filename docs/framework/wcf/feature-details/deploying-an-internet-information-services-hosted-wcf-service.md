@@ -2,12 +2,12 @@
 title: Wdrażanie usługi WCF hostowanej przez Internetowe usługi informacyjne
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: b02c69e00aacafd928c59f06e0e7c050a2ca6509
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 95c56f767bbe8dce44ea742de00c65c357bd1378
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856124"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895111"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Wdrażanie usługi WCF hostowanej przez Internetowe usługi informacyjne
 
@@ -49,9 +49,7 @@ Należy pamiętać, że program IIS 6,0 i jego nowsze wersje okresowo ponownie u
 
 Usługi WCF hostowane w usługach IIS są reprezentowane jako specjalne pliki zawartości (pliki SVC) wewnątrz aplikacji usług IIS. Ten model jest podobny do sposobu, w jaki strony ASMX są reprezentowane w aplikacji usług IIS jako pliki. asmx. Plik SVC zawiera dyrektywę przetwarzania specyficzną dla programu WCF ([\@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)), która umożliwia infrastrukturze hostingu WCF aktywowanie usług hostowanych w odpowiedzi na komunikaty przychodzące. Najbardziej typowa Składnia pliku SVC znajduje się w poniższej instrukcji.
 
-```svc
-<% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>
-```
+`<% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>`
 
 Składa się z [ \@dyrektywy ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) i jednego atrybutu, `Service`. Wartość `Service` atrybutu jest nazwą typu środowiska uruchomieniowego języka wspólnego (CLR) dla implementacji usługi. Użycie tej dyrektywy jest zasadniczo równoważne z tworzeniem hosta usługi przy użyciu następującego kodu.
 

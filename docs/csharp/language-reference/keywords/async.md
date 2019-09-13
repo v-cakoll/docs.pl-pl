@@ -9,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 71e3781b08bca3441dbd55704bcb0f7de635097e
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: ab9c1be484d9cc77324e3105124a1b1f2257251d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168648"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925362"
 ---
 # <a name="async-c-reference"></a>async (odwołanie w C#)
 
@@ -58,6 +58,7 @@ Aby uruchomić kod jako aplikację WPF:
 - `using` Dodaj dyrektywę dla systemu .NET. http.  
   
 Aby uruchomić kod jako aplikację ze sklepu Windows:  
+
 - Wklej ten kod do `MainPage` klasy w MainPage.XAML.cs.  
 - Dodaj dyrektywy using dla systemu .NET. http i system. Threading. Tasks.  
   

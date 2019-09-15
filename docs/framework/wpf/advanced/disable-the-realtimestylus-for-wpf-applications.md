@@ -2,22 +2,22 @@
 title: Wyłącz RealTimeStylus dla aplikacji WPF
 ms.date: 03/30/2017
 ms.assetid: e0525309-5ede-4782-837d-dbf6e5554859
-ms.openlocfilehash: e44b71ac5af64ab3a6cb008db71e5a8881592e91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: acae177e1c49a6a1161bcf48f8e2e8ac1bfe13b8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962493"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991844"
 ---
-# <a name="disable-the-realtimestylus-for-wpf-applications"></a><span data-ttu-id="9255e-102">Wyłącz RealTimeStylus dla aplikacji WPF</span><span class="sxs-lookup"><span data-stu-id="9255e-102">Disable the RealTimeStylus for WPF Applications</span></span>
-<span data-ttu-id="9255e-103">Windows Presentation Foundation (WPF) zawiera wbudowaną obsługą dla przetwarzania wprowadzanie dotykowe Windows 7. Wsparcie przepływa wejście pióra w czasie rzeczywistym platformy tablet jako <xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusUp%2A>, i <xref:System.Windows.UIElement.OnStylusMove%2A> zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="9255e-103">Windows Presentation Foundation (WPF) has built in support for processing Windows 7 touch input.The support comes through the tablet platform’s real-time stylus input as <xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusUp%2A>, and <xref:System.Windows.UIElement.OnStylusMove%2A> events.</span></span> <span data-ttu-id="9255e-104">Windows 7 są także dane wejściowe wielodotyku jako komunikaty okna Win32 WM_TOUCH.</span><span class="sxs-lookup"><span data-stu-id="9255e-104">Windows 7 also provides multi-touch input as Win32 WM_TOUCH window messages.</span></span> <span data-ttu-id="9255e-105">Te dwa interfejsy API są wzajemnie wykluczających się na tym samym HWND.</span><span class="sxs-lookup"><span data-stu-id="9255e-105">These two APIs are mutually exclusive on the same HWND.</span></span> <span data-ttu-id="9255e-106">Włączanie touch wejściowych za pośrednictwem platformy tablet (domyślnie dla aplikacji WPF) wyłącza WM_TOUCH wiadomości.</span><span class="sxs-lookup"><span data-stu-id="9255e-106">Enabling touch input via the tablet platform (the default for WPF applications) disables WM_TOUCH messages.</span></span> <span data-ttu-id="9255e-107">W rezultacie WM_TOUCH można użyć w celu odbierania komunikatów touch z okna WPF, należy wyłączyć obsługę wbudowanych pióra na platformie WPF.</span><span class="sxs-lookup"><span data-stu-id="9255e-107">As a result, to use WM_TOUCH to receive touch messages from a WPF window, you must disable the built-in stylus support in WPF.</span></span> <span data-ttu-id="9255e-108">Ma to zastosowanie w przypadku takich jak okna WPF, obsługujący składnik, który używa WM_TOUCH.</span><span class="sxs-lookup"><span data-stu-id="9255e-108">This is applicable in a scenario such as a WPF window hosting a component that uses WM_TOUCH.</span></span>  
+# <a name="disable-the-realtimestylus-for-wpf-applications"></a><span data-ttu-id="c50c1-102">Wyłącz RealTimeStylus dla aplikacji WPF</span><span class="sxs-lookup"><span data-stu-id="c50c1-102">Disable the RealTimeStylus for WPF Applications</span></span>
+<span data-ttu-id="c50c1-103">Windows Presentation Foundation (WPF) ma wbudowaną obsługę przetwarzania danych wejściowych systemu Windows 7.</span><span class="sxs-lookup"><span data-stu-id="c50c1-103">Windows Presentation Foundation (WPF) has built in support for processing Windows 7 touch input.</span></span> <span data-ttu-id="c50c1-104">Pomoc techniczna obejmuje wprowadzanie piórem w czasie rzeczywistym na platformie tabletu jako <xref:System.Windows.UIElement.OnStylusDown%2A>zdarzenia <xref:System.Windows.UIElement.OnStylusUp%2A>, i <xref:System.Windows.UIElement.OnStylusMove%2A> .</span><span class="sxs-lookup"><span data-stu-id="c50c1-104">The support comes through the tablet platform’s real-time stylus input as <xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusUp%2A>, and <xref:System.Windows.UIElement.OnStylusMove%2A> events.</span></span> <span data-ttu-id="c50c1-105">System Windows 7 udostępnia także wielodotykowe dane wejściowe jako komunikaty okna WM_TOUCH Win32.</span><span class="sxs-lookup"><span data-stu-id="c50c1-105">Windows 7 also provides multi-touch input as Win32 WM_TOUCH window messages.</span></span> <span data-ttu-id="c50c1-106">Te dwa interfejsy API wzajemnie się wykluczają w tym samym kluczu HWND.</span><span class="sxs-lookup"><span data-stu-id="c50c1-106">These two APIs are mutually exclusive on the same HWND.</span></span> <span data-ttu-id="c50c1-107">Włączenie wprowadzania dotykowego za pośrednictwem platformy tabletu (domyślnie dla aplikacji WPF) powoduje wyłączenie komunikatów WM_TOUCH.</span><span class="sxs-lookup"><span data-stu-id="c50c1-107">Enabling touch input via the tablet platform (the default for WPF applications) disables WM_TOUCH messages.</span></span> <span data-ttu-id="c50c1-108">W związku z tym, aby używać WM_TOUCH do odbierania komunikatów dotykowych z okna WPF, należy wyłączyć wbudowaną obsługę pióra w WPF.</span><span class="sxs-lookup"><span data-stu-id="c50c1-108">As a result, to use WM_TOUCH to receive touch messages from a WPF window, you must disable the built-in stylus support in WPF.</span></span> <span data-ttu-id="c50c1-109">Ma to zastosowanie w scenariuszu, takim jak okno WPF obsługujące składnik korzystający z WM_TOUCH.</span><span class="sxs-lookup"><span data-stu-id="c50c1-109">This is applicable in a scenario such as a WPF window hosting a component that uses WM_TOUCH.</span></span>  
   
- <span data-ttu-id="9255e-109">Aby wyłączyć WPF nasłuchiwanie wejście pióra, należy usunąć wszelkie tablecie dodano obsługę przez okno WPF.</span><span class="sxs-lookup"><span data-stu-id="9255e-109">To disable WPF listening to stylus input, remove any tablet support added by the WPF window.</span></span>  
+ <span data-ttu-id="c50c1-110">Aby wyłączyć program WPF nasłuchuje na wejściu pióra, Usuń każdą obsługę rysownicy dodaną przez okno WPF.</span><span class="sxs-lookup"><span data-stu-id="c50c1-110">To disable WPF listening to stylus input, remove any tablet support added by the WPF window.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9255e-110">Przykład</span><span class="sxs-lookup"><span data-stu-id="9255e-110">Example</span></span>  
- <span data-ttu-id="9255e-111">Poniższy przykład kodu pokazuje, jak usunąć domyślną obsługę platform typu tablet przy użyciu odbicia.</span><span class="sxs-lookup"><span data-stu-id="9255e-111">The following sample code shows how to remove the default tablet platform support by using reflection.</span></span>  
+## <a name="example"></a><span data-ttu-id="c50c1-111">Przykład</span><span class="sxs-lookup"><span data-stu-id="c50c1-111">Example</span></span>  
+ <span data-ttu-id="c50c1-112">Poniższy przykładowy kod pokazuje, jak usunąć domyślną obsługę platformy tabletu przy użyciu odbicia.</span><span class="sxs-lookup"><span data-stu-id="c50c1-112">The following sample code shows how to remove the default tablet platform support by using reflection.</span></span>  
   
-```  
+```csharp  
 public static void DisableWPFTabletSupport()  
 {  
     // Get a collection of the tablet devices for this window.    
@@ -52,6 +52,6 @@ public static void DisableWPFTabletSupport()
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9255e-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9255e-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c50c1-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c50c1-113">See also</span></span>
 
-- [<span data-ttu-id="9255e-113">Przechwytywanie danych wejściowych z pisaka</span><span class="sxs-lookup"><span data-stu-id="9255e-113">Intercepting Input from the Stylus</span></span>](intercepting-input-from-the-stylus.md)
+- [<span data-ttu-id="c50c1-114">Przechwytywanie danych wejściowych z pisaka</span><span class="sxs-lookup"><span data-stu-id="c50c1-114">Intercepting Input from the Stylus</span></span>](intercepting-input-from-the-stylus.md)

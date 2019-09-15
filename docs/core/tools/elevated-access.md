@@ -3,106 +3,108 @@ title: Dostęp z podwyższonym poziomem uprawnień dla poleceń dotnet
 description: Zapoznaj się z najlepszymi rozwiązaniami dotyczącymi poleceń dotnet wymagających podwyższonego poziomu dostępu.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: b57e434fbb29a9c85ddf5086888a5291c7767ac9
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: b6de87f375a584da25e160d79f51f1bc48f3c302
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105074"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969862"
 ---
-# <a name="elevated-access-for-dotnet-commands"></a><span data-ttu-id="dd8de-103">Dostęp z podwyższonym poziomem uprawnień dla poleceń dotnet</span><span class="sxs-lookup"><span data-stu-id="dd8de-103">Elevated access for dotnet commands</span></span>
+# <a name="elevated-access-for-dotnet-commands"></a><span data-ttu-id="4cc27-103">Dostęp z podwyższonym poziomem uprawnień dla poleceń dotnet</span><span class="sxs-lookup"><span data-stu-id="4cc27-103">Elevated access for dotnet commands</span></span>
 
-<span data-ttu-id="dd8de-104">Wskazówki dotyczące tworzenia oprogramowania — Przewodnik po tworzeniu oprogramowania wymagającego najmniejszego poziomu uprawnień.</span><span class="sxs-lookup"><span data-stu-id="dd8de-104">Software development best practices guide developers to writing software that requires the least amount of privilege.</span></span> <span data-ttu-id="dd8de-105">Jednak niektóre programy, takie jak narzędzia do monitorowania wydajności, wymagają uprawnień administratora z powodu reguł systemu operacyjnego.</span><span class="sxs-lookup"><span data-stu-id="dd8de-105">However, some software, like performance monitoring tools, requires admin permission because of operating system rules.</span></span> <span data-ttu-id="dd8de-106">Poniższe wskazówki opisują obsługiwane scenariusze pisania oprogramowania przy użyciu programu .NET Core.</span><span class="sxs-lookup"><span data-stu-id="dd8de-106">The following guidance describes supported scenarios for writing such software with .NET Core.</span></span> 
+<span data-ttu-id="4cc27-104">Wskazówki dotyczące tworzenia oprogramowania — Przewodnik po tworzeniu oprogramowania wymagającego najmniejszego poziomu uprawnień.</span><span class="sxs-lookup"><span data-stu-id="4cc27-104">Software development best practices guide developers to writing software that requires the least amount of privilege.</span></span> <span data-ttu-id="4cc27-105">Jednak niektóre programy, takie jak narzędzia do monitorowania wydajności, wymagają uprawnień administratora z powodu reguł systemu operacyjnego.</span><span class="sxs-lookup"><span data-stu-id="4cc27-105">However, some software, like performance monitoring tools, requires admin permission because of operating system rules.</span></span> <span data-ttu-id="4cc27-106">Poniższe wskazówki opisują obsługiwane scenariusze pisania oprogramowania przy użyciu programu .NET Core.</span><span class="sxs-lookup"><span data-stu-id="4cc27-106">The following guidance describes supported scenarios for writing such software with .NET Core.</span></span> 
 
-<span data-ttu-id="dd8de-107">Następujące polecenia można uruchomić z podwyższonym poziomem uprawnień:</span><span class="sxs-lookup"><span data-stu-id="dd8de-107">The following commands can be run elevated:</span></span>
+<span data-ttu-id="4cc27-107">Następujące polecenia można uruchomić z podwyższonym poziomem uprawnień:</span><span class="sxs-lookup"><span data-stu-id="4cc27-107">The following commands can be run elevated:</span></span>
 
-- <span data-ttu-id="dd8de-108">`dotnet tool`polecenia, takie jak [Instalacja narzędzia dotnet](dotnet-tool-install.md).</span><span class="sxs-lookup"><span data-stu-id="dd8de-108">`dotnet tool` commands, such as [dotnet tool install](dotnet-tool-install.md).</span></span>
+- <span data-ttu-id="4cc27-108">`dotnet tool`polecenia, takie jak [Instalacja narzędzia dotnet](dotnet-tool-install.md).</span><span class="sxs-lookup"><span data-stu-id="4cc27-108">`dotnet tool` commands, such as [dotnet tool install](dotnet-tool-install.md).</span></span>
 - `dotnet run --no-build`
 
-<span data-ttu-id="dd8de-109">Nie zalecamy uruchamiania innych poleceń z podwyższonym poziomem uprawnień.</span><span class="sxs-lookup"><span data-stu-id="dd8de-109">We don't recommend running other commands elevated.</span></span> <span data-ttu-id="dd8de-110">W szczególności nie zaleca się podniesienia uprawnień za pomocą poleceń korzystających z programu MSBuild, takich jak [dotnet Restore](dotnet-restore.md), [kompilacja dotnet](dotnet-build.md)i [uruchomienie dotnet](dotnet-run.md).</span><span class="sxs-lookup"><span data-stu-id="dd8de-110">In particular, we don't recommend elevation with commands that use MSBuild, such as [dotnet restore](dotnet-restore.md), [dotnet build](dotnet-build.md), and [dotnet run](dotnet-run.md).</span></span> <span data-ttu-id="dd8de-111">Podstawowym problemem jest problemy z zarządzaniem uprawnieniami, gdy użytkownik przechodzi między głównym i ograniczonym kontem po wydaniu polecenia dotnet.</span><span class="sxs-lookup"><span data-stu-id="dd8de-111">The primary issue is permission management problems when a user transitions back and forth between root and a restricted account after issuing dotnet commands.</span></span> <span data-ttu-id="dd8de-112">Może się okazać, że użytkownik z ograniczeniami nie ma dostępu do pliku skompilowanego przez użytkownika root.</span><span class="sxs-lookup"><span data-stu-id="dd8de-112">You may find as a restricted user that you don't have access to the file built by a root user.</span></span> <span data-ttu-id="dd8de-113">Istnieją sposoby rozwiązania tej sytuacji, ale nie są one potrzebne do pierwszego miejsca.</span><span class="sxs-lookup"><span data-stu-id="dd8de-113">There are ways to resolve this situation, but they're unnecessary to get into in the first place.</span></span>
+<span data-ttu-id="4cc27-109">Nie zalecamy uruchamiania innych poleceń z podwyższonym poziomem uprawnień.</span><span class="sxs-lookup"><span data-stu-id="4cc27-109">We don't recommend running other commands elevated.</span></span> <span data-ttu-id="4cc27-110">W szczególności nie zaleca się podniesienia uprawnień za pomocą poleceń korzystających z programu MSBuild, takich jak [dotnet Restore](dotnet-restore.md), [kompilacja dotnet](dotnet-build.md)i [uruchomienie dotnet](dotnet-run.md).</span><span class="sxs-lookup"><span data-stu-id="4cc27-110">In particular, we don't recommend elevation with commands that use MSBuild, such as [dotnet restore](dotnet-restore.md), [dotnet build](dotnet-build.md), and [dotnet run](dotnet-run.md).</span></span> <span data-ttu-id="4cc27-111">Podstawowym problemem jest problemy z zarządzaniem uprawnieniami, gdy użytkownik przechodzi między głównym i ograniczonym kontem po wydaniu polecenia dotnet.</span><span class="sxs-lookup"><span data-stu-id="4cc27-111">The primary issue is permission management problems when a user transitions back and forth between root and a restricted account after issuing dotnet commands.</span></span> <span data-ttu-id="4cc27-112">Może się okazać, że użytkownik z ograniczeniami nie ma dostępu do pliku skompilowanego przez użytkownika root.</span><span class="sxs-lookup"><span data-stu-id="4cc27-112">You may find as a restricted user that you don't have access to the file built by a root user.</span></span> <span data-ttu-id="4cc27-113">Istnieją sposoby rozwiązania tej sytuacji, ale nie są one potrzebne do pierwszego miejsca.</span><span class="sxs-lookup"><span data-stu-id="4cc27-113">There are ways to resolve this situation, but they're unnecessary to get into in the first place.</span></span>
 
-<span data-ttu-id="dd8de-114">Polecenia można uruchamiać jako główne, o ile nie przechodzą z powrotem między głównym i ograniczonym kontem.</span><span class="sxs-lookup"><span data-stu-id="dd8de-114">You can run commands as root as long as you don’t transition back and forth between root and a restricted account.</span></span> <span data-ttu-id="dd8de-115">Na przykład kontenery platformy Docker są domyślnie uruchamiane jako główne, więc mają tę cechę.</span><span class="sxs-lookup"><span data-stu-id="dd8de-115">For example, Docker containers run as root by default, so they have this characteristic.</span></span>
+<span data-ttu-id="4cc27-114">Polecenia można uruchamiać jako główne, o ile nie przechodzą z powrotem między głównym i ograniczonym kontem.</span><span class="sxs-lookup"><span data-stu-id="4cc27-114">You can run commands as root as long as you don’t transition back and forth between root and a restricted account.</span></span> <span data-ttu-id="4cc27-115">Na przykład kontenery platformy Docker są domyślnie uruchamiane jako główne, więc mają tę cechę.</span><span class="sxs-lookup"><span data-stu-id="4cc27-115">For example, Docker containers run as root by default, so they have this characteristic.</span></span>
 
-## <a name="global-tool-installation"></a><span data-ttu-id="dd8de-116">Instalacja narzędzia globalnego</span><span class="sxs-lookup"><span data-stu-id="dd8de-116">Global tool installation</span></span>
+## <a name="global-tool-installation"></a><span data-ttu-id="4cc27-116">Instalacja narzędzia globalnego</span><span class="sxs-lookup"><span data-stu-id="4cc27-116">Global tool installation</span></span>
 
-<span data-ttu-id="dd8de-117">Poniższe instrukcje przedstawiają zalecaną metodę instalowania, uruchamiania i odinstalowywania narzędzi .NET Core, które wymagają podniesionych uprawnień do wykonania.</span><span class="sxs-lookup"><span data-stu-id="dd8de-117">The following instructions demonstrate the recommended way to install, run, and uninstall .NET Core tools that require elevated permissions to execute.</span></span>
+<span data-ttu-id="4cc27-117">Poniższe instrukcje przedstawiają zalecaną metodę instalowania, uruchamiania i odinstalowywania narzędzi .NET Core, które wymagają podniesionych uprawnień do wykonania.</span><span class="sxs-lookup"><span data-stu-id="4cc27-117">The following instructions demonstrate the recommended way to install, run, and uninstall .NET Core tools that require elevated permissions to execute.</span></span>
 
-# <a name="windowstabwindows"></a>[<span data-ttu-id="dd8de-118">Windows</span><span class="sxs-lookup"><span data-stu-id="dd8de-118">Windows</span></span>](#tab/windows)
+<!-- markdownlint-disable MD025 -->
 
-### <a name="install-the-global-tool"></a><span data-ttu-id="dd8de-119">Instalowanie narzędzia globalnego</span><span class="sxs-lookup"><span data-stu-id="dd8de-119">Install the global tool</span></span>
+# <a name="windowstabwindows"></a>[<span data-ttu-id="4cc27-118">Windows</span><span class="sxs-lookup"><span data-stu-id="4cc27-118">Windows</span></span>](#tab/windows)
 
-<span data-ttu-id="dd8de-120">Jeśli folder `%ProgramFiles%\dotnet-tools` już istnieje, wykonaj poniższe czynności, aby sprawdzić, czy grupa "Użytkownicy" ma uprawnienia do zapisywania lub modyfikowania tego katalogu:</span><span class="sxs-lookup"><span data-stu-id="dd8de-120">If the folder `%ProgramFiles%\dotnet-tools` already exists, do the following to check whether the "Users" group has permission to write or modify that directory:</span></span>
+### <a name="install-the-global-tool"></a><span data-ttu-id="4cc27-119">Instalowanie narzędzia globalnego</span><span class="sxs-lookup"><span data-stu-id="4cc27-119">Install the global tool</span></span>
 
-- <span data-ttu-id="dd8de-121">Kliknij prawym przyciskiem `%ProgramFiles%\dotnet-tools` myszy folder i wybierz polecenie **Właściwości**.</span><span class="sxs-lookup"><span data-stu-id="dd8de-121">Right-click the `%ProgramFiles%\dotnet-tools` folder and select **Properties**.</span></span> <span data-ttu-id="dd8de-122">Zostanie otwarte okno dialogowe **wspólne właściwości** .</span><span class="sxs-lookup"><span data-stu-id="dd8de-122">The **Common Properties** dialog box opens.</span></span> 
-- <span data-ttu-id="dd8de-123">Wybierz kartę **zabezpieczenia** . W obszarze **nazwy grup lub użytkowników**Sprawdź, czy grupa "Użytkownicy" ma uprawnienia do zapisywania lub modyfikowania katalogu.</span><span class="sxs-lookup"><span data-stu-id="dd8de-123">Select the **Security** tab. Under **Group or user names**, check whether the “Users” group has permission to write or modify the directory.</span></span> 
-- <span data-ttu-id="dd8de-124">Jeśli grupa "Użytkownicy" może zapisywać lub modyfikować katalog, użyj innej nazwy katalogu podczas instalowania narzędzi, a nie *narzędzi dotnet*.</span><span class="sxs-lookup"><span data-stu-id="dd8de-124">If the "Users" group can write or modify the directory, use a different directory name when installing the tools rather than *dotnet-tools*.</span></span>
+<span data-ttu-id="4cc27-120">Jeśli folder `%ProgramFiles%\dotnet-tools` już istnieje, wykonaj poniższe czynności, aby sprawdzić, czy grupa "Użytkownicy" ma uprawnienia do zapisywania lub modyfikowania tego katalogu:</span><span class="sxs-lookup"><span data-stu-id="4cc27-120">If the folder `%ProgramFiles%\dotnet-tools` already exists, do the following to check whether the "Users" group has permission to write or modify that directory:</span></span>
 
-<span data-ttu-id="dd8de-125">Aby zainstalować narzędzia, uruchom następujące polecenie w wierszu polecenia z podwyższonym poziomem uprawnień.</span><span class="sxs-lookup"><span data-stu-id="dd8de-125">To install tools, run the following command in elevated prompt.</span></span> <span data-ttu-id="dd8de-126">Podczas instalacji zostanie utworzony folder *narzędzi dotnet* .</span><span class="sxs-lookup"><span data-stu-id="dd8de-126">It will create the *dotnet-tools* folder during the installation.</span></span>
+- <span data-ttu-id="4cc27-121">Kliknij prawym przyciskiem `%ProgramFiles%\dotnet-tools` myszy folder i wybierz polecenie **Właściwości**.</span><span class="sxs-lookup"><span data-stu-id="4cc27-121">Right-click the `%ProgramFiles%\dotnet-tools` folder and select **Properties**.</span></span> <span data-ttu-id="4cc27-122">Zostanie otwarte okno dialogowe **wspólne właściwości** .</span><span class="sxs-lookup"><span data-stu-id="4cc27-122">The **Common Properties** dialog box opens.</span></span> 
+- <span data-ttu-id="4cc27-123">Wybierz kartę **zabezpieczenia** . W obszarze **nazwy grup lub użytkowników**Sprawdź, czy grupa "Użytkownicy" ma uprawnienia do zapisywania lub modyfikowania katalogu.</span><span class="sxs-lookup"><span data-stu-id="4cc27-123">Select the **Security** tab. Under **Group or user names**, check whether the “Users” group has permission to write or modify the directory.</span></span> 
+- <span data-ttu-id="4cc27-124">Jeśli grupa "Użytkownicy" może zapisywać lub modyfikować katalog, użyj innej nazwy katalogu podczas instalowania narzędzi, a nie *narzędzi dotnet*.</span><span class="sxs-lookup"><span data-stu-id="4cc27-124">If the "Users" group can write or modify the directory, use a different directory name when installing the tools rather than *dotnet-tools*.</span></span>
+
+<span data-ttu-id="4cc27-125">Aby zainstalować narzędzia, uruchom następujące polecenie w wierszu polecenia z podwyższonym poziomem uprawnień.</span><span class="sxs-lookup"><span data-stu-id="4cc27-125">To install tools, run the following command in elevated prompt.</span></span> <span data-ttu-id="4cc27-126">Podczas instalacji zostanie utworzony folder *narzędzi dotnet* .</span><span class="sxs-lookup"><span data-stu-id="4cc27-126">It will create the *dotnet-tools* folder during the installation.</span></span>
 
 ```cmd
 dotnet tool install PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools".
 ```
 
-### <a name="run-the-global-tool"></a><span data-ttu-id="dd8de-127">Uruchamianie narzędzia globalnego</span><span class="sxs-lookup"><span data-stu-id="dd8de-127">Run the global tool</span></span>
+### <a name="run-the-global-tool"></a><span data-ttu-id="4cc27-127">Uruchamianie narzędzia globalnego</span><span class="sxs-lookup"><span data-stu-id="4cc27-127">Run the global tool</span></span>
 
-<span data-ttu-id="dd8de-128">**Opcja 1** Użyj pełnej ścieżki z podniesionym poziomem uprawnień:</span><span class="sxs-lookup"><span data-stu-id="dd8de-128">**Option 1** Use the full path with elevated prompt:</span></span>
+<span data-ttu-id="4cc27-128">**Opcja 1** Użyj pełnej ścieżki z podniesionym poziomem uprawnień:</span><span class="sxs-lookup"><span data-stu-id="4cc27-128">**Option 1** Use the full path with elevated prompt:</span></span>
 
 ```cmd
 "%ProgramFiles%\dotnet-tools\TOOLCOMMAND"
 ```
 
-<span data-ttu-id="dd8de-129">**Opcja 2** Dodaj nowo utworzony folder do `%Path%`programu.</span><span class="sxs-lookup"><span data-stu-id="dd8de-129">**Option 2** Add the newly created folder to `%Path%`.</span></span> <span data-ttu-id="dd8de-130">Tę operację należy wykonać tylko raz.</span><span class="sxs-lookup"><span data-stu-id="dd8de-130">You only need to do this operation once.</span></span>
+<span data-ttu-id="4cc27-129">**Opcja 2** Dodaj nowo utworzony folder do `%Path%`programu.</span><span class="sxs-lookup"><span data-stu-id="4cc27-129">**Option 2** Add the newly created folder to `%Path%`.</span></span> <span data-ttu-id="4cc27-130">Tę operację należy wykonać tylko raz.</span><span class="sxs-lookup"><span data-stu-id="4cc27-130">You only need to do this operation once.</span></span>
 
 ```cmd
 setx Path "%Path%;%ProgramFiles%\dotnet-tools\"
 ```
 
-<span data-ttu-id="dd8de-131">I uruchom z:</span><span class="sxs-lookup"><span data-stu-id="dd8de-131">And run with:</span></span>
+<span data-ttu-id="4cc27-131">I uruchom z:</span><span class="sxs-lookup"><span data-stu-id="4cc27-131">And run with:</span></span>
 
 ```cmd
 TOOLCOMMAND
 ```
 
-### <a name="uninstall-the-global-tool"></a><span data-ttu-id="dd8de-132">Odinstaluj narzędzie globalne</span><span class="sxs-lookup"><span data-stu-id="dd8de-132">Uninstall the global tool</span></span>
+### <a name="uninstall-the-global-tool"></a><span data-ttu-id="4cc27-132">Odinstaluj narzędzie globalne</span><span class="sxs-lookup"><span data-stu-id="4cc27-132">Uninstall the global tool</span></span>
 
-<span data-ttu-id="dd8de-133">W wierszu polecenia z podwyższonym poziomem uprawnień wpisz następujące polecenie:</span><span class="sxs-lookup"><span data-stu-id="dd8de-133">In an elevated prompt, type the following command:</span></span>
+<span data-ttu-id="4cc27-133">W wierszu polecenia z podwyższonym poziomem uprawnień wpisz następujące polecenie:</span><span class="sxs-lookup"><span data-stu-id="4cc27-133">In an elevated prompt, type the following command:</span></span>
 
 ```cmd
 dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 ```
 
-# <a name="linuxtablinux"></a>[<span data-ttu-id="dd8de-134">Linux</span><span class="sxs-lookup"><span data-stu-id="dd8de-134">Linux</span></span>](#tab/linux)
+# <a name="linuxtablinux"></a>[<span data-ttu-id="4cc27-134">Linux</span><span class="sxs-lookup"><span data-stu-id="4cc27-134">Linux</span></span>](#tab/linux)
 
 [!INCLUDE [elevated-access-unix](../../../includes/elevated-access-unix.md)]
 
-# <a name="macostabmacos"></a>[<span data-ttu-id="dd8de-135">macOS</span><span class="sxs-lookup"><span data-stu-id="dd8de-135">macOS</span></span>](#tab/macos)
+# <a name="macostabmacos"></a>[<span data-ttu-id="4cc27-135">macOS</span><span class="sxs-lookup"><span data-stu-id="4cc27-135">macOS</span></span>](#tab/macos)
 
 [!INCLUDE [elevated-access-unix](../../../includes/elevated-access-unix.md)]
 
 ---
 
-## <a name="local-tools"></a><span data-ttu-id="dd8de-136">Narzędzia lokalne</span><span class="sxs-lookup"><span data-stu-id="dd8de-136">Local tools</span></span>
+## <a name="local-tools"></a><span data-ttu-id="4cc27-136">Narzędzia lokalne</span><span class="sxs-lookup"><span data-stu-id="4cc27-136">Local tools</span></span>
 
-<span data-ttu-id="dd8de-137">Narzędzia lokalne są objęte zakresem drzewa dla każdego użytkownika.</span><span class="sxs-lookup"><span data-stu-id="dd8de-137">Local tools are scoped per subdirectory tree, per user.</span></span> <span data-ttu-id="dd8de-138">W przypadku korzystania z podwyższonego poziomu uprawnień narzędzia lokalne udostępniają środowisko użytkownika z ograniczeniami do środowiska z podwyższonym poziomem uprawnień.</span><span class="sxs-lookup"><span data-stu-id="dd8de-138">When run elevated, local tools share a restricted user environment to the elevated environment.</span></span> <span data-ttu-id="dd8de-139">W systemie Linux i macOS w wyniku tego są ustawiane pliki z dostępem tylko do użytkownika root.</span><span class="sxs-lookup"><span data-stu-id="dd8de-139">In Linux and macOS, this results in files being set with root user-only access.</span></span> <span data-ttu-id="dd8de-140">Jeśli użytkownik przełączy się z powrotem do konta z ograniczeniami, użytkownik nie będzie mógł uzyskać dostępu do plików ani zapisywać do nich.</span><span class="sxs-lookup"><span data-stu-id="dd8de-140">If the user switches back to a restricted account, the user can no longer access or write to the files.</span></span> <span data-ttu-id="dd8de-141">Instalowanie narzędzi wymagających podniesienia uprawnień jako lokalnych narzędzi nie jest zalecane.</span><span class="sxs-lookup"><span data-stu-id="dd8de-141">So installing tools that require elevation as local tools isn't recommended.</span></span> <span data-ttu-id="dd8de-142">Zamiast tego należy użyć `--tool-path` opcji i poprzednich wytycznych dla narzędzi globalnych.</span><span class="sxs-lookup"><span data-stu-id="dd8de-142">Instead, use the `--tool-path` option and the previous guidelines for global tools.</span></span>
+<span data-ttu-id="4cc27-137">Narzędzia lokalne są objęte zakresem drzewa dla każdego użytkownika.</span><span class="sxs-lookup"><span data-stu-id="4cc27-137">Local tools are scoped per subdirectory tree, per user.</span></span> <span data-ttu-id="4cc27-138">W przypadku korzystania z podwyższonego poziomu uprawnień narzędzia lokalne udostępniają środowisko użytkownika z ograniczeniami do środowiska z podwyższonym poziomem uprawnień.</span><span class="sxs-lookup"><span data-stu-id="4cc27-138">When run elevated, local tools share a restricted user environment to the elevated environment.</span></span> <span data-ttu-id="4cc27-139">W systemie Linux i macOS w wyniku tego są ustawiane pliki z dostępem tylko do użytkownika root.</span><span class="sxs-lookup"><span data-stu-id="4cc27-139">In Linux and macOS, this results in files being set with root user-only access.</span></span> <span data-ttu-id="4cc27-140">Jeśli użytkownik przełączy się z powrotem do konta z ograniczeniami, użytkownik nie będzie mógł uzyskać dostępu do plików ani zapisywać do nich.</span><span class="sxs-lookup"><span data-stu-id="4cc27-140">If the user switches back to a restricted account, the user can no longer access or write to the files.</span></span> <span data-ttu-id="4cc27-141">Instalowanie narzędzi wymagających podniesienia uprawnień jako lokalnych narzędzi nie jest zalecane.</span><span class="sxs-lookup"><span data-stu-id="4cc27-141">So installing tools that require elevation as local tools isn't recommended.</span></span> <span data-ttu-id="4cc27-142">Zamiast tego należy użyć `--tool-path` opcji i poprzednich wytycznych dla narzędzi globalnych.</span><span class="sxs-lookup"><span data-stu-id="4cc27-142">Instead, use the `--tool-path` option and the previous guidelines for global tools.</span></span>
 
-## <a name="elevation-during-development"></a><span data-ttu-id="dd8de-143">Podniesienie uprawnień podczas opracowywania</span><span class="sxs-lookup"><span data-stu-id="dd8de-143">Elevation during development</span></span>
+## <a name="elevation-during-development"></a><span data-ttu-id="4cc27-143">Podniesienie uprawnień podczas opracowywania</span><span class="sxs-lookup"><span data-stu-id="4cc27-143">Elevation during development</span></span>
 
-<span data-ttu-id="dd8de-144">Podczas programowania może być potrzebny podwyższony poziom dostępu do testowania aplikacji.</span><span class="sxs-lookup"><span data-stu-id="dd8de-144">During development, you may need elevated access to test your application.</span></span> <span data-ttu-id="dd8de-145">Ten scenariusz jest typowy dla aplikacji IoT, na przykład.</span><span class="sxs-lookup"><span data-stu-id="dd8de-145">This scenario is common for IoT apps, for example.</span></span> <span data-ttu-id="dd8de-146">Zalecamy, aby skompilować aplikację bez podniesienia uprawnień, a następnie uruchomić ją z podniesionymi uprawnieniami.</span><span class="sxs-lookup"><span data-stu-id="dd8de-146">We recommend that you build the application without elevation and then run it with elevation.</span></span> <span data-ttu-id="dd8de-147">Istnieje kilka wzorców:</span><span class="sxs-lookup"><span data-stu-id="dd8de-147">There are a few patterns, as follows:</span></span>
+<span data-ttu-id="4cc27-144">Podczas programowania może być potrzebny podwyższony poziom dostępu do testowania aplikacji.</span><span class="sxs-lookup"><span data-stu-id="4cc27-144">During development, you may need elevated access to test your application.</span></span> <span data-ttu-id="4cc27-145">Ten scenariusz jest typowy dla aplikacji IoT, na przykład.</span><span class="sxs-lookup"><span data-stu-id="4cc27-145">This scenario is common for IoT apps, for example.</span></span> <span data-ttu-id="4cc27-146">Zalecamy, aby skompilować aplikację bez podniesienia uprawnień, a następnie uruchomić ją z podniesionymi uprawnieniami.</span><span class="sxs-lookup"><span data-stu-id="4cc27-146">We recommend that you build the application without elevation and then run it with elevation.</span></span> <span data-ttu-id="4cc27-147">Istnieje kilka wzorców:</span><span class="sxs-lookup"><span data-stu-id="4cc27-147">There are a few patterns, as follows:</span></span>
 
-- <span data-ttu-id="dd8de-148">Przy użyciu wygenerowanego pliku wykonywalnego (zapewnia najlepszą wydajność uruchamiania):</span><span class="sxs-lookup"><span data-stu-id="dd8de-148">Using generated executable (it provides the best startup performance):</span></span>
+- <span data-ttu-id="4cc27-148">Przy użyciu wygenerowanego pliku wykonywalnego (zapewnia najlepszą wydajność uruchamiania):</span><span class="sxs-lookup"><span data-stu-id="4cc27-148">Using generated executable (it provides the best startup performance):</span></span>
 
    ```bash
    dotnet build
    sudo ./bin/Debug/netcoreapp3.0/APPLICATIONNAME
    ```
     
-- <span data-ttu-id="dd8de-149">Za pomocą polecenia [dotnet Run](dotnet-run.md) z `—no-build` flagą, aby uniknąć generowania nowych plików binarnych:</span><span class="sxs-lookup"><span data-stu-id="dd8de-149">Using the [dotnet run](dotnet-run.md) command with the `—no-build` flag to avoid generating new binaries:</span></span>
+- <span data-ttu-id="4cc27-149">Za pomocą polecenia [dotnet Run](dotnet-run.md) z `—no-build` flagą, aby uniknąć generowania nowych plików binarnych:</span><span class="sxs-lookup"><span data-stu-id="4cc27-149">Using the [dotnet run](dotnet-run.md) command with the `—no-build` flag to avoid generating new binaries:</span></span>
 
    ```bash
    dotnet build
    sudo dotnet run --no-build
    ```
 
-## <a name="see-also"></a><span data-ttu-id="dd8de-150">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="dd8de-150">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4cc27-150">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4cc27-150">See also</span></span>
 
-- [<span data-ttu-id="dd8de-151">Globalne narzędzia platformy .NET Core — Omówienie</span><span class="sxs-lookup"><span data-stu-id="dd8de-151">.NET Core Global Tools overview</span></span>](global-tools.md)
+- [<span data-ttu-id="4cc27-151">Globalne narzędzia platformy .NET Core — Omówienie</span><span class="sxs-lookup"><span data-stu-id="4cc27-151">.NET Core Global Tools overview</span></span>](global-tools.md)

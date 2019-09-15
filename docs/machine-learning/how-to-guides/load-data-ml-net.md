@@ -5,12 +5,12 @@ ms.date: 09/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: 419b32f2a460ca153d28206524a38c7c9fa86173
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4008f38bf4a20113a3f5c865e38222e5b82f2acc
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929376"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991364"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>Ładowanie danych z plików i innych źródeł
 
@@ -33,7 +33,7 @@ public class HousingData
 {
     [LoadColumn(0)]
     public float Size { get; set; }
- 
+
     [LoadColumn(1, 3)]
     [VectorType(3)]
     public float[] HistoricalPrices { get; set; }
@@ -53,7 +53,7 @@ Ten [`LoadColumn`](xref:Microsoft.ML.Data.LoadColumnAttribute) atrybut określa 
 > [!IMPORTANT]
 > [`LoadColumn`](xref:Microsoft.ML.Data.LoadColumnAttribute)jest wymagana tylko w przypadku ładowania danych z pliku.
 
-Załaduj kolumny jako: 
+Załaduj kolumny jako:
 
 - Pojedyncze kolumny, `Size` takie `CurrentPrices` jak i `HousingData` w klasie.
 - Wiele kolumn w czasie w postaci wektora, tak jak `HistoricalPrices` `HousingData` w klasie.
@@ -108,7 +108,7 @@ IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubF
 ## <a name="load-data-from-a-relational-database"></a>Ładowanie danych z relacyjnej bazy danych
 
 > [!NOTE]
-> DatabaseLoader jest obecnie w wersji zapoznawczej. Można go użyć, odwołując się do pakietów NuGet [Microsoft. ml. eksperymentalnych](https://www.nuget.org/packages/Microsoft.ML.Experimental/0.16.0-preview) i [System. Data. SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.6.1) . 
+> DatabaseLoader jest obecnie w wersji zapoznawczej. Można go użyć, odwołując się do pakietów NuGet [Microsoft. ml. eksperymentalnych](https://www.nuget.org/packages/Microsoft.ML.Experimental/0.16.0-preview) i [System. Data. SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.6.1) .
 
 ML.NET obsługuje ładowanie danych z różnych relacyjnych baz danych obsługiwanych przez [`System.Data`](xref:System.Data) program, takich jak SQL Server, Azure SQL Database, Oracle, SQLite, PostgreSQL, Progress, IBM DB2 i wiele innych.
 
@@ -142,7 +142,7 @@ MLContext mlContext = new MLContext();
 DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<HouseData>();
 ```
 
-Zdefiniuj parametry połączenia oraz polecenie SQL do wykonania w bazie danych i Utwórz `DatabaseSource` wystąpienie. Ten przykład używa bazy danych LocalDB SQL Server z ścieżką do pliku. DatabaseLoader jednak obsługuje inne prawidłowe parametry połączenia dla baz danych lokalnie i w chmurze.  
+Zdefiniuj parametry połączenia oraz polecenie SQL do wykonania w bazie danych i Utwórz `DatabaseSource` wystąpienie. Ten przykład używa bazy danych LocalDB SQL Server z ścieżką do pliku. DatabaseLoader jednak obsługuje inne prawidłowe parametry połączenia dla baz danych lokalnie i w chmurze.
 
 ```csharp
 string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=<YOUR-DB-FILEPATH>;Database=<YOUR-DB-NAME>;Integrated Security=True;Connect Timeout=30";
@@ -196,7 +196,7 @@ HousingData[] inMemoryCollection = new HousingData[]
 Załaduj kolekcję znajdującą się w pamięci [`IDataView`](xref:Microsoft.ML.IDataView) do [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) metody:
 
 > [!IMPORTANT]
-> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*)zakłada, że [`IEnumerable`](xref:System.Collections.IEnumerable) ładowanie z programu jest bezpieczne dla wątków. 
+> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*)zakłada, że [`IEnumerable`](xref:System.Collections.IEnumerable) ładowanie z programu jest bezpieczne dla wątków.
 
 ```csharp
 // Create MLContext

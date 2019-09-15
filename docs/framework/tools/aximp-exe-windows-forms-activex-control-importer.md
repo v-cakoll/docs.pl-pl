@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8c3c293e28788143cd1bed07acc941d448700f2
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: a5f76f60c8474b1503dc4cebeeafe241cd40be96
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851465"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970597"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Importer kontrolki ActiveX formularzy systemu Windows)
 Importer formantów ActiveX konwertuje definicje typów w bibliotece typów modelu COM dla formantu ActiveX na formant programu Windows Forms.  
@@ -42,7 +42,7 @@ aximp [options]{file.dll | file.ocx}
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|`/delaysign`|Określa, że program Aximp.exe ma podpisać wynikowy formant, używając funkcji podpisywania opóźnionego. Należy określić tę opcję z `/keycontainer:`opcją, `/keyfile:`, lub `/publickey:` . Aby uzyskać więcej informacji o opóźnionym procesie podpisywania, zobacz [opóźnienie podpisywania zestawu](../../../docs/framework/app-domains/delay-sign-assembly.md).|  
+|`/delaysign`|Określa, że program Aximp.exe ma podpisać wynikowy formant, używając funkcji podpisywania opóźnionego. Należy określić tę opcję z `/keycontainer:`opcją, `/keyfile:`, lub `/publickey:` . Aby uzyskać więcej informacji o opóźnionym procesie podpisywania, zobacz [opóźnienie podpisywania zestawu](../../standard/assembly/delay-sign.md).|  
 |`/help`|Wyświetla składnię polecenia i opcje narzędzia.|  
 |`/keycontainer:`*ContainerName*|Podpisuje formant o silnej nazwie przy użyciu pary kluczy publicznych/prywatnych znalezionych w kontenerze kluczy określonym przez *ContainerName*.|  
 |`/keyfile:`*Nazwa pliku*|Podpisuje kontrolkę będącą silną nazwą, używając oficjalnej pary kluczy publiczny/prywatny wydawcy, która została znaleziona w *pliku filename*.|  

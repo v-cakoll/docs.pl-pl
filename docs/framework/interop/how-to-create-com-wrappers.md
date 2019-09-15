@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a6af73a5251cdc52589967178218f8675cac869
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e1c4423c20a9a485f3c40877ccd489c749dc0e2c
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946463"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971836"
 ---
 # <a name="how-to-create-com-wrappers"></a>Instrukcje: Tworzenie otok COM
 
@@ -55,7 +55,7 @@ Teraz można napisać kod, aby uzyskać dostęp do obiektu COM. Można rozpoczą
   
 1. Utwórz projekt biblioteki klas dla zarządzanej klasy, która ma być uruchamiana w kodzie natywnym. Klasa musi mieć konstruktora bez parametrów.  
   
-     Sprawdź, czy dla Twojego zestawu w pliku AssemblyInfo masz pełny numer wersji z czterema częścią. Ta liczba jest wymagana do obsługi wersji w rejestrze systemu Windows. Aby uzyskać więcej informacji o numerach wersji, zobacz [wersja zestawu](../../../docs/framework/app-domains/assembly-versioning.md).  
+     Sprawdź, czy dla Twojego zestawu w pliku AssemblyInfo masz pełny numer wersji z czterema częścią. Ta liczba jest wymagana do obsługi wersji w rejestrze systemu Windows. Aby uzyskać więcej informacji o numerach wersji, zobacz [wersja zestawu](../../standard/assembly/versioning.md).  
   
 2. W menu **projekt** kliknij polecenie **Właściwości**.  
   

@@ -2,19 +2,19 @@
 title: Współdziałanie z usługami ASP.NET w sieci Web
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: f2f1a8fd2bf34ff61784f2dcb88c0669585da573
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 59ee6412cde152588e8007fe530cc8e5708410e5
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67026021"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991531"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>Współdziałanie z usługami ASP.NET w sieci Web
-Współdziałanie usług sieci Web platformy ASP.NET i usług sieci Web Windows Communication Foundation (WCF), można osiągnąć przez zapewnienie, że usługi implementowane przy użyciu obie technologie są zgodne z WS-I Basic Profile 1.1 specyfikacji. Usługi sieci Web platformy ASP.NET, które odpowiadają WS-I Basic Profile 1.1 są zgodne z klientów programu WCF za pomocą powiązania dostarczane przez system WCF <xref:System.ServiceModel.BasicHttpBinding>.  
+Współdziałanie między usługami sieci Web ASP.NET Web Services i Windows Communication Foundation (WCF) można uzyskać, upewniając się, że usługi zaimplementowane przy użyciu obu technologii są zgodne ze specyfikacją WS-I Basic Profile 1,1. Usługi sieci Web ASP.NET, które są zgodne ze standardem WS-I Basic Profile 1,1, <xref:System.ServiceModel.BasicHttpBinding>współdziałają z klientami programu WCF przy użyciu powiązania dostarczonego przez system.  
   
- Za pomocą programu ASP.NET 2.0 opcji dodawania <xref:System.Web.Services.WebService> i <xref:System.Web.Services.WebMethodAttribute> atrybuty do interfejsu, a nie klasę w celu zapisywania klasy do zaimplementowania interfejsu, jak pokazano w poniższym przykładowym kodzie.  
+ Użyj opcji ASP.NET 2,0, aby dodać <xref:System.Web.Services.WebService> atrybuty <xref:System.Web.Services.WebMethodAttribute> i do interfejsu, a nie do klasy, i napisać klasę, aby zaimplementować interfejs, jak pokazano w poniższym przykładowym kodzie.  
   
-```  
+```csharp
 [WebService]  
 public interface IEcho  
 {  
@@ -32,22 +32,22 @@ public class Service : IEcho
 }  
 ```  
   
- Użycie tej opcji jest preferowana, ponieważ interfejs z <xref:System.Web.Services.WebService> atrybut definiuje kontrakt dla operacji wykonywanych przez usługę, która może być ponownie używane z różnymi klasami, które mogą implementować tej samej umowy na różne sposoby.  
+ Użycie tej opcji jest preferowane, ponieważ interfejs z <xref:System.Web.Services.WebService> atrybutem stanowi kontrakt dla operacji wykonywanych przez usługę, które mogą być ponownie używane z różnymi klasami, które mogą implementować ten sam kontrakt na różne sposoby.  
   
- Unikaj używania <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute> atrybutu powoduje, że wiadomości kierowane do metody oparte na w pełni kwalifikowana nazwa elementu treści komunikatu protokołu SOAP, a nie od `SOAPAction` nagłówka HTTP. Korzysta z usługi WCF `SOAPAction` nagłówka HTTP służącą do rozesłania wiadomości.  
+ Należy unikać używania <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute> atrybutu, aby komunikaty były kierowane do metod opartych na w pełni kwalifikowanej nazwie elementu treści komunikatu protokołu SOAP, a nie w `SOAPAction` nagłówku HTTP. Funkcja WCF używa `SOAPAction` nagłówka HTTP do routingu komunikatów.  
   
- Plik XML, do którego <xref:System.Xml.Serialization.XmlSerializer> serializuje semantycznie taka sama jak XML, do którego jest typem domyślnie <xref:System.Runtime.Serialization.DataContractSerializer> serializuje typem parametru przestrzeni nazw XML jest jawnie zdefiniowany. Podczas definiowania typu danych do użytku z usługami ASP.NETWeb w oczekiwaniu WCF pracy, wykonaj następujące czynności:  
+ Kod XML, do <xref:System.Xml.Serialization.XmlSerializer> którego serializowany jest typ domyślnie jest semantycznie identyczny z XML, do <xref:System.Runtime.Serialization.DataContractSerializer> którego jest serializowany typ, pod warunkiem, że przestrzeń nazw dla kodu XML jest jawnie zdefiniowana. Podczas definiowania typu danych do użycia z usługami ASP. NETWeb w celu przewidzenia wdrożenia WCF należy wykonać następujące czynności:  
   
-- Definiowanie typu przy użyciu klas .NET Framework, a nie schematu XML.  
+- Zdefiniuj typ przy użyciu klas .NET Framework, a nie schematu XML.  
   
-- Dodaj tylko <xref:System.SerializableAttribute> i <xref:System.Xml.Serialization.XmlRootAttribute> do klasy, za pomocą jego jawne definiowanie przestrzeni nazw dla typu. Nie należy dodawać dodatkowe atrybuty z <xref:System.Xml.Serialization> przestrzeń nazw w celu kontrolowania, jak klasy .NET Framework ma być przetłumaczone na XML.  
+- Dodaj tylko <xref:System.SerializableAttribute> <xref:System.Xml.Serialization.XmlRootAttribute> i do klasy, używając tej ostatniej, aby jawnie zdefiniować przestrzeń nazw dla tego typu. Nie dodawaj dodatkowych atrybutów z <xref:System.Xml.Serialization> przestrzeni nazw, aby kontrolować sposób tłumaczenia klasy .NET Framework na XML.  
   
-- Przyjmując takie podejście, powinno być możliwe zapewnienie później klas .NET w kontraktach danych dodając <xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute> bez zmiany znacznie XML, do którego klasy są serializowane w celu przesłania go. Typy używane w komunikatach przez usługi sieci Web platformy ASP.NET mogą być przetwarzane jako kontraktów danych przez aplikacje WCF reaguje pozwala między innymi, lepszej wydajności w aplikacjach usługi WCF.  
+- Przyjmując takie podejście, powinno być możliwe późniejsze przekazanie klas .NET do kontraktów danych z dodaniem <xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute> bez znacząco zmiany kodu XML, do którego klasy są serializowane do transmisji. Typy używane w komunikatach przez usługi sieci Web ASP.NET mogą być przetwarzane jako Kontrakty danych przez aplikacje WCF, a wśród innych korzyści, lepsza wydajność w aplikacjach WCF.  
   
- Należy unikać używania opcji uwierzytelniania udostępniane przez Internetowe usługi informacyjne (IIS). Klienci WCF nie obsługują je. Jeśli usługa musi zostać zabezpieczony, użyj opcji dostępnych przez architekturę WCF, ponieważ te opcje są niezawodne i bazują na standardowych protokołów.  
+ Należy unikać używania opcji uwierzytelniania zapewnianych przez Internet Information Services (IIS). Klienci WCF nie obsługują tych funkcji. Jeśli usługa musi być zabezpieczona, użyj opcji dostarczonych przez program WCF, ponieważ te opcje są niezawodne i są oparte na protokołach standardowych.  
   
-## <a name="performance-impact-caused-by-loading-the-servicemodel-httpmodule"></a>Wpływ na wydajność spowodowane przez ładowanie HttpModule modelu ServiceModel  
- W .NET Framework 3.0, WCF `HttpModule` został zainstalowany w folderze głównym pliku Web.config, tak, aby każda aplikacja ASP.NET została włączona WCF. To może mieć wpływ na wydajność, dzięki czemu możesz usunąć `ServiceModel` w pliku Web.config, jak pokazano w poniższym przykładzie.  
+## <a name="performance-impact-caused-by-loading-the-servicemodel-httpmodule"></a>Wpływ na wydajność spowodowany ładowaniem modułu ServiceModel HttpModule  
+ W .NET Framework 3,0 funkcja WCF `HttpModule` została zainstalowana w głównym pliku Web. config w taki sposób, że każda aplikacja ASP.NET była włączona w ramach funkcji WCF. Może to mieć wpływ na wydajność, dlatego można `ServiceModel` usunąć plik Web. config, jak pokazano w poniższym przykładzie.  
   
 ```xml  
 <httpModules>  
@@ -57,4 +57,4 @@ public class Service : IEcho
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Konfigurowanie usługi WCF do współdziałania z klientami usługi sieci Web platformy ASP.NET](../../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)
+- [Instrukcje: Konfigurowanie usługi WCF na potrzeby współdziałania z klientami usługi sieci Web ASP.NET](../../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)

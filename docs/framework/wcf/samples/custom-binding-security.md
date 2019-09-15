@@ -2,12 +2,12 @@
 title: Zabezpieczenia wiązania niestandardowego
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: a597e1fb7c239b49c03e964b513b4248a9c020c3
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b0b293c58e13f7add6f2cb49ea3c108a86292691
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045618"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990013"
 ---
 # <a name="custom-binding-security"></a>Zabezpieczenia wiązania niestandardowego
 
@@ -62,7 +62,7 @@ Ponadto niestandardowe powiązanie używa zabezpieczeń komunikatów z typem po�
 
 Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.
 
-```
+```console
 Press <ENTER> to terminate client.
 Result(100)
 Result(50)
@@ -97,7 +97,7 @@ Poniżej przedstawiono krótkie omówienie różnych sekcji plików wsadowych, k
 
   Poniższe wiersze w pliku Setup. bat kopiują certyfikat serwera do magazynu zaufanych osób klienta. Ten krok jest wymagany, ponieważ certyfikaty wygenerowane przez Makecert. exe nie są niejawnie zaufane przez system klienta. Jeśli masz już certyfikat, który znajduje się w zaufanym certyfikacie głównym klienta — na przykład certyfikat wystawiony przez firmę Microsoft — ten krok zapełniania magazynu certyfikatów klienta z certyfikatem serwera nie jest wymagany.
 
-  ```
+  ```console
   certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
   ```
 
@@ -152,7 +152,7 @@ Poniżej przedstawiono krótkie omówienie różnych sekcji plików wsadowych, k
 
     3. Wyeksportuj certyfikat usługi, otwierając wiersz polecenia dla deweloperów dla programu Visual Studio z uprawnieniami administracyjnymi, a następnie uruchamiając następujące polecenie na komputerze usługi ( `%SERVER_NAME%` zastępuje się w pełni kwalifikowaną nazwą komputera, na którym Usługa jest uruchomiona):
 
-        ```
+        ```console
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
         ```
 
@@ -160,7 +160,7 @@ Poniżej przedstawiono krótkie omówienie różnych sekcji plików wsadowych, k
 
     5. Zaimportuj certyfikat usługi, otwierając wiersz polecenia dla deweloperów dla programu Visual Studio z uprawnieniami administracyjnymi, a następnie uruchamiając następujące polecenie na komputerze klienckim (zamiennie% nazwa_serwera% z w pełni kwalifikowaną nazwą komputera, na którym Usługa jest uruchomiona):
 
-        ```
+        ```console
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
         ```
 

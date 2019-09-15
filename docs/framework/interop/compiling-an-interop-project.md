@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37dda10a3dcbcb0968674e04292c5dc1a79be66f
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+ms.openlocfilehash: 85841491ace5b8959c3517f407c14069b34733a7
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69013004"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969091"
 ---
 # <a name="compiling-an-interop-project"></a>Kompilowanie projektu międzyoperacyjnego
 
@@ -30,7 +30,7 @@ Projekty międzyoperacyjności modelu COM, które odwołują się do co najmniej
 
  Różnice między tymi dwoma technikami zostały omówione bardziej szczegółowo w temacie [Korzystanie z typów com w kodzie zarządzanym](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)).
 
- Osadzanie typów międzyoperacyjnych w programie Visual Studio jest [zademonstrowane w przewodniku: Typy osadzania z zestawów zarządzanych w programie Visual StudioC#(](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)) i [wskazówki: Osadzanie typów z zestawów zarządzanych w programie Visual Studio (Visual Basic](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)).
+ Osadzanie typów międzyoperacyjnych w programie Visual Studio jest [zademonstrowane w przewodniku: Osadzanie typów z zarządzanych zestawów w programie Visual](../../standard/assembly/embed-types-visual-studio.md)Studio.
 
  Aby odwołać się do zestawu międzyoperacyjnego przy użyciu kompilatora wiersza polecenia i informacje o typie osadzania w plikach wykonywalnych, należy użyć [opcji/link (C# opcje kompilatora)](../../csharp/language-reference/compiler-options/link-compiler-option.md) lub/ [/lub/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) kompilatora i określić nazwę zestawu międzyoperacyjnego.
 
@@ -44,6 +44,5 @@ Projekty międzyoperacyjności modelu COM, które odwołują się do co najmniej
 - [Udostępnianie składników COM programowi .NET Framework](exposing-com-components.md)
 - [Niezależność od języka i składniki niezależne od języka](../../standard/language-independence-and-language-independent-components.md)
 - [Używanie typów COM w kodzie zarządzanym](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
-- [Przewodnik: Osadzanie typów z zestawów zarządzanych w programie Visual StudioC#()](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
-- [Przewodnik: Osadzanie typów z zestawów zarządzanych w programie Visual Studio (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
+- [Przewodnik: Osadzanie typów z zestawów zarządzanych w programie Visual Studio](../../standard/assembly/embed-types-visual-studio.md)
 - [Importowanie biblioteki typów jako zestawu](importing-a-type-library-as-an-assembly.md)

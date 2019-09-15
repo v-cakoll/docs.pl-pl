@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: 9dffe06d340c7256ba8af687e30d90d51746ebe1
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: fce17979fbd43df0496f972cac525fd79dcbfe32
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364244"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991820"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Bezpieczne wzorce konstruktora DependencyObjects
 Ogólnie rzecz biorąc, konstruktory klas nie powinny wywoływać wywołań zwrotnych, takich jak metody wirtualne lub Delegaty, ponieważ konstruktory mogą być wywoływane jako podstawowe inicjowanie konstruktorów dla klasy pochodnej. Wprowadzenie do wirtualnego stanu może być wykonywane z niekompletnym stanem inicjalizacji danego obiektu. Jednak sam system właściwości wywołuje i ujawnia wywołania zwrotne wewnętrznie w ramach systemu właściwości zależności. Jako prostą operację, ponieważ ustawienie wartości właściwości zależności z <xref:System.Windows.DependencyObject.SetValue%2A> wywołaniem potencjalnie może zawierać wywołanie zwrotne w miejscu wyznaczania. Z tego powodu należy zachować ostrożność podczas ustawiania wartości właściwości zależności w treści konstruktora, które mogą stać się problematyczne, jeśli typ jest używany jako klasa bazowa. Istnieje szczególny wzorzec służący do implementowania <xref:System.Windows.DependencyObject> konstruktorów, które unikają określonych problemów ze Stanami właściwości zależności i nieodłącznymi wywołaniami zwrotnymi, które opisano tutaj.  
@@ -35,7 +35,7 @@ Ogólnie rzecz biorąc, konstruktory klas nie powinny wywoływać wywołań zwro
   
  Poniższy przykładowy kod (i kolejne przykłady) to pseudo-C# przykład, który narusza tę regułę i wyjaśnia problem:  
   
-```  
+```csharp  
 public class MyClass : DependencyObject  
 {  
     public MyClass() {}  
@@ -71,7 +71,7 @@ public class MyClass : DependencyObject
 #### <a name="parameterless-constructors-calling-base-initialization"></a>Konstruktory bez parametrów wywołujące podstawową inicjalizację  
  Zaimplementuj te konstruktory wywołujące podstawową wartość domyślną:  
   
-```  
+```csharp  
 public MyClass : SomeBaseClass {  
     public MyClass() : base() {  
         // ALL class initialization, including initial defaults for   
@@ -83,7 +83,7 @@ public MyClass : SomeBaseClass {
 #### <a name="non-default-convenience-constructors-not-matching-any-base-signatures"></a>Konstruktory inne niż domyślne (wygoda), niezgodne z żadnymi podpisami podstawowymi  
  Jeśli te konstruktory używają parametrów do ustawiania właściwości zależności podczas inicjowania, najpierw Wywołaj konstruktora bez parametrów klasy do inicjalizacji, a następnie użyj parametrów, aby ustawić właściwości zależności. Mogą to być właściwości zależności zdefiniowane przez klasę lub właściwości zależności dziedziczone z klas bazowych, ale w obu przypadkach używają następującego wzorca:  
   
-```  
+```csharp  
 public MyClass : SomeBaseClass {  
     public MyClass(object toSetProperty1) : this() {  
         // Class initialization NOT done by default.  

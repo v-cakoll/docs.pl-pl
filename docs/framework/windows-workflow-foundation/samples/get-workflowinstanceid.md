@@ -2,12 +2,12 @@
 title: Działanie GetWorkflowInstanceId
 ms.date: 03/30/2017
 ms.assetid: bd7eea3b-1c28-4b84-9a67-003bc553aa81
-ms.openlocfilehash: 73fee4376b1abe29620bfae05bbd96fccf7b17c4
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: f8bd3205f5b7a4b3bae5203dc90a3c393cedcbdd
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038153"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989370"
 ---
 # <a name="get-workflowinstanceid"></a>Działanie GetWorkflowInstanceId
 Ten przykład ilustruje sposób użycia działania `GetWorkflowInstanceId` niestandardowego w celu zwrócenia identyfikatora wystąpienia przepływu pracy.  
@@ -20,14 +20,14 @@ Ten przykład ilustruje sposób użycia działania `GetWorkflowInstanceId` niest
   
  `GetWorkflowInstanceId`jest zaimplementowany jako <xref:System.Activities.CodeActivity%601> , ponieważ musi zwrócić wartość typu <xref:System.Guid>i <xref:System.Activities.CodeActivityContext> musi mieć dostęp do elementu w celu pobrania identyfikatora wystąpienia przepływu pracy. Jego implementacja jest dość podstawowa.  
   
-```  
+```csharp  
 public sealed class GetWorkflowInstanceId : CodeActivity<Guid>  
 {  
-protected override Guid Execute(CodeActivityContext context)  
-        {  
-            return context.WorkflowInstanceId;  
-        }  
-}  
+    protected override Guid Execute(CodeActivityContext context)  
+    {  
+        return context.WorkflowInstanceId;  
+    }  
+}
 ```  
   
 > [!IMPORTANT]

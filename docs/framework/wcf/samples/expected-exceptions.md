@@ -2,12 +2,12 @@
 title: Oczekiwane wyjątki
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: 963606f4cfd34acb1c4400324cdbb318e3186103
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a874b291202cb8c3c8752c13b357679c7fd5a556
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039695"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989974"
 ---
 # <a name="expected-exceptions"></a>Oczekiwane wyjątki
 Ten przykład pokazuje, jak przechwytywać oczekiwane wyjątki przy użyciu klienta z określonym typem. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) , który implementuje usługę kalkulatora. W tym przykładzie klient jest aplikacją konsolową (. exe), a usługa jest hostowana przez Internet Information Services (IIS).  
@@ -54,7 +54,7 @@ catch (CommunicationException exception)
   
  Proces klienta uruchamia dwa scenariusze, z których każdy próbuje wywołać wywołanie `Add`. `Divide` Pierwszy scenariusz symuluje problem z siecią, przerywając działanie klienta przed wywołaniem do `Divide`programu. Drugi scenariusz powoduje przekroczenie limitu czasu przez ustawienie przekroczenia limitu czasu, aby można było ukończyć metodę. Oczekiwane dane wyjściowe procesu klienta to:  
   
-```  
+```output
 Add(100,15.99) = 115.99  
 Simulated network problem occurs...  
 Got System.ServiceModel.CommunicationObjectAbortedException  

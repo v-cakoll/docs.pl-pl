@@ -11,68 +11,68 @@ helpviewer_keywords:
 ms.assetid: 295c16e0-641b-4771-94b3-39c1ffa98c13
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5355666b95d75fc18d0188c978c186690ee9ccca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 03a5594b689a52b641ecece0f9a92fb6cdfe5735
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61819707"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991285"
 ---
 # <a name="dates-times-and-time-zones"></a>Daty, godziny i strefy czasowe
 
-Oprócz podstawowego <xref:System.DateTime> struktury .NET zawiera następujące klasy obsługujące pracy ze strefami czasowymi:
+Oprócz podstawowej <xref:System.DateTime> struktury platforma .NET udostępnia następujące klasy, które obsługują pracę z strefami czasowymi:
 
 * <xref:System.TimeZone>
 
-  Klasa jest używana do pracy z systemu w lokalnej strefie czasowej i strefy uniwersalnego czasu koordynowanego (UTC). Funkcje <xref:System.TimeZone> klasy stopniu zostało zastąpione przez <xref:System.TimeZoneInfo> klasy.
+  Użyj tej klasy, aby współdziałać z lokalną strefą czasową systemu i strefą czasu koordynowanego (UTC). Funkcjonalność <xref:System.TimeZone> klasy jest w dużym stopniu zastępowana <xref:System.TimeZoneInfo> przez klasę.
 
 * <xref:System.TimeZoneInfo>
 
-  Klasa jest używana do pracy z dowolnym strefę czasową, która jest wstępnie zdefiniowane w systemie, tworzenie nowych stref czasowych i prosty sposób konwertowania daty i godziny w jednej strefie czasowej na inny. W nowych wdrożeniach należy używać <xref:System.TimeZoneInfo> klasy zamiast <xref:System.TimeZone> klasy.
+  Ta klasa służy do pracy ze wszystkimi strefami czasowymi wstępnie zdefiniowanymi w systemie w celu tworzenia nowych stref czasowych oraz do łatwego konwertowania dat i godzin z jednej strefy czasowej na inną. W przypadku nowych rozwiązań należy użyć <xref:System.TimeZoneInfo> klasy zamiast <xref:System.TimeZone> klasy.
 
 * <xref:System.DateTimeOffset>
 
-  Ta struktura jest używana do pracy z datami i czasy którego przesunięcie (lub różnicy) z czasu UTC jest znany. <xref:System.DateTimeOffset> Struktury łączy daty i wartości godziny z tego czasu przesunięcie względem czasu UTC. Ze względu na jego relację z czasu UTC, daty i godziny wartość jednoznacznie identyfikuje pojedynczy punkt w czasie. To sprawia, że <xref:System.DateTimeOffset> bardziej przenośny z jednego komputera na inny niż wartość <xref:System.DateTime> wartość.
+  Ta struktura służy do pracy z datami i godzinami, których przesunięcie (lub różnica) od czasu UTC jest znane. <xref:System.DateTimeOffset> Struktura łączy wartość daty i godziny z przesunięciem czasu UTC. Ze względu na jego relację z czasem UTC, indywidualna wartość daty i godziny jednoznacznie identyfikuje pojedynczy punkt w czasie. Dzięki temu wartość <xref:System.DateTimeOffset> jest bardziej przenośna z jednego komputera na inny <xref:System.DateTime> niż wartość.
 
-Ta sekcja dokumentacji zawiera informacje potrzebne do pracy ze strefami czasowymi i tworzenie aplikacji uwzględniających strefy czasowe, które można przekonwertować daty i godziny w jednej strefie czasowej na inny.
+Ta sekcja dokumentacji zawiera informacje potrzebne do pracy z strefami czasowymi oraz do tworzenia aplikacji obsługujących strefy czasowe, które mogą konwertować daty i godziny z jednej strefy czasowej na inną.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Przegląd stref czasowych](../../../docs/standard/datetime/time-zone-overview.md) w tym artykule omówiono terminologii, pojęcia i zagadnienia związane z tworzeniem aplikacji uwzględniających strefy czasowe.
+[Przegląd strefy czasowej](../../../docs/standard/datetime/time-zone-overview.md) W tym artykule omówiono terminologię, koncepcje i problemy związane z tworzeniem aplikacji obsługujących strefy czasowe.
 
-[Wybieranie pomiędzy DateTime, DateTimeOffset, TimeSpan i TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md) omówiono, kiedy należy używać <xref:System.DateTime>, <xref:System.DateTimeOffset>, i <xref:System.TimeZoneInfo> typów podczas pracy z danymi daty i godziny.
+[Wybieranie między elementami DateTime, DateTimeOffset, TimeSpan i TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md) W tym artykule omówiono <xref:System.DateTime>, kiedy należy używać typów, <xref:System.DateTimeOffset>i <xref:System.TimeZoneInfo> podczas pracy z danymi daty i godziny.
 
-[Znajdowanie stref czasowych zdefiniowanych w systemie lokalnym](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md) opisano, jak wykazywanie stref czasowych znalezionych w systemie lokalnym.
+[Znajdowanie stref czasowych zdefiniowanych w systemie lokalnym](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md) Opisuje sposób wyliczania stref czasowych znalezionych w systemie lokalnym.
 
-[Instrukcje: Wykazywanie stref czasowych na komputerze](../../../docs/standard/datetime/enumerate-time-zones.md) zawiera przykłady, wyliczanie stref czasowych zdefiniowanych w rejestrze komputera i że umożliwienie użytkownikom wyboru wstępnie zdefiniowane strefy czasowej z listy.
+[Instrukcje: Wyliczenie strefy czasowe obecne na komputerze](../../../docs/standard/datetime/enumerate-time-zones.md) zawiera przykłady, które wyliczają strefy czasowe zdefiniowane w rejestrze komputera i umożliwiają użytkownikom wybranie wstępnie zdefiniowanej strefy czasowej z listy.
 
-[Instrukcje: Uzyskiwanie dostępu do wstępnie zdefiniowanych obiektów stref UTC i czasem lokalnym](../../../docs/standard/datetime/access-utc-and-local.md) opisano, jak uzyskać dostęp do uniwersalny czas koordynowany i lokalnej strefy czasowej.
+[Instrukcje: Dostęp do wstępnie zdefiniowanych obiektów](../../../docs/standard/datetime/access-utc-and-local.md) czasu UTC i lokalnej strefy czasowej opisuje sposób dostępu do uniwersalnego czasu koordynowanego i lokalnej strefy czasowej.
 
-[Instrukcje: Tworzenie wystąpień obiektów TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md) w tym artykule opisano sposób tworzenia wystąpienia <xref:System.TimeZoneInfo> obiektu z rejestru systemu lokalnego.
+[Instrukcje: Utworzenie wystąpienia obiektu](../../../docs/standard/datetime/instantiate-time-zone-info.md) TimeZoneInfo opisuje sposób tworzenia <xref:System.TimeZoneInfo> wystąpienia obiektu z rejestru systemu lokalnego.
 
-[Tworzenie wystąpień obiektów DateTimeOffset](../../../docs/standard/datetime/instantiating-a-datetimeoffset-object.md) w tym artykule omówiono sposób, w którym <xref:System.DateTimeOffset> można utworzyć wystąpienia obiektu i w ten sposób <xref:System.DateTime> można przekonwertować wartości na <xref:System.DateTimeOffset> wartość.
+[Tworzenie wystąpienia obiektu DateTimeOffset](../../../docs/standard/datetime/instantiating-a-datetimeoffset-object.md) Omówienie sposobów, w których <xref:System.DateTimeOffset> można utworzyć wystąpienie obiektu, oraz sposobów, w <xref:System.DateTime> których wartość <xref:System.DateTimeOffset> może zostać przekonwertowana na wartość.
 
-[Instrukcje: Tworzenie stref czasowych bez reguł korygowania](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) w tym artykule opisano sposób tworzenia niestandardowa strefa czasowa, która nie obsługuje przejścia do i z czasu letniego.
+[Instrukcje: Tworzenie stref czasowych bez reguł](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) korygowania opisuje sposób tworzenia niestandardowej strefy czasowej, która nie obsługuje przejścia do i z czasu letniego.
 
-[Instrukcje: Tworzenie stref czasowych przy użyciu reguł korygowania](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md) w tym artykule opisano sposób tworzenia niestandardowa strefa czasowa, który obsługuje co najmniej jeden przejścia do i z czasu letniego.
+[Instrukcje: Tworzenie stref czasowych przy użyciu](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md) reguł korygowania opisuje sposób tworzenia niestandardowej strefy czasowej, która obsługuje jedno lub więcej przejść do i z czasu letniego.
 
-[Zapisywanie i przywracanie stref czasowych](../../../docs/standard/datetime/saving-and-restoring-time-zones.md) w tym artykule opisano <xref:System.TimeZoneInfo> pomoc techniczna dotycząca serializacji i deserializacji obiektu danych strefy czasowej i przedstawia niektóre scenariusze, w których można użyć tych funkcji.
+[Zapisywanie i przywracanie stref czasowych](../../../docs/standard/datetime/saving-and-restoring-time-zones.md) Opisuje <xref:System.TimeZoneInfo> obsługę serializacji i deserializacji danych strefy czasowej oraz przedstawia niektóre scenariusze, w których można używać tych funkcji.
 
-[Instrukcje: Zapisywanie stref czasowych w zasobie osadzonym](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) w tym artykule opisano sposób tworzenia niestandardowej strefy czasowej i zapisać jego informacji w pliku zasobów.
+[Instrukcje: Zapisywanie stref czasowych w osadzonym](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) zasobie opisuje sposób tworzenia niestandardowej strefy czasowej i zapisywania jej informacji w pliku zasobów.
 
-[Instrukcje: Przywracanie stref czasowych z zasobu osadzonego](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md) opisano, jak utworzyć niestandardowe strefach czasowych, które zostały zapisane do pliku zasobów osadzonych.
+[Instrukcje: Przywróć strefy czasowe z osadzonego](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md) zasobu opisują sposób tworzenia niestandardowych stref czasowych, które zostały zapisane w osadzonym pliku zasobów.
 
-[Wykonywanie operacji arytmetycznych na wartościach dat i godzin](../../../docs/standard/datetime/performing-arithmetic-operations.md) omówiono problemy, które są zaangażowane w Dodawanie, odejmowanie i porównywanie <xref:System.DateTime> i <xref:System.DateTimeOffset> wartości.
+[Wykonywanie operacji arytmetycznych z datami i godzinami](../../../docs/standard/datetime/performing-arithmetic-operations.md) W tym artykule omówiono problemy związane z dodawaniem, odejmowaniem <xref:System.DateTime> i <xref:System.DateTimeOffset> porównywaniem oraz wartościami.
 
-[Instrukcje: Używanie stref czasowych w arytmetyka daty i godziny](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md) w tym artykule omówiono sposób wykonywania arytmetyka daty i godziny odzwierciedlającą reguł korygowania strefę czasową.
+[Instrukcje: Użycie stref czasowych w operacji arytmetycznych](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md) daty i godziny omawia sposób wykonywania operacji arytmetycznych daty i czasu, która odzwierciedla reguły dostosowania strefy czasowej.
 
-[Konwertowanie pomiędzy DateTime i DateTimeOffset](../../../docs/standard/datetime/converting-between-datetime-and-offset.md) w tym artykule opisano sposób konwertowania między <xref:System.DateTime> i <xref:System.DateTimeOffset> wartości.
+[Konwertowanie między elementami DateTime i DateTimeOffset](../../../docs/standard/datetime/converting-between-datetime-and-offset.md) Opisuje sposób konwersji <xref:System.DateTime> wartości i <xref:System.DateTimeOffset> .
 
-[Konwertowanie godzin między strefami czasowymi](../../../docs/standard/datetime/converting-between-time-zones.md) opisuje Konwertowanie godzin między strefami czasowymi.
+[Konwertowanie czasów między strefami czasowymi](../../../docs/standard/datetime/converting-between-time-zones.md) Opisuje sposób konwersji czasów z jednej strefy czasowej na inną.
 
-[Instrukcje: Rozwiązywanie niejednoznacznych wartości czasu](../../../docs/standard/datetime/resolve-ambiguous-times.md) opisuje sposób rozwiązywania niejednoznaczny czas przez mapowania ich na strefy czasowej (czas standardowy).
+[Instrukcje: Rozpoznaj niejednoznaczny czas, aby określić, jak rozpoznać niejednoznaczne czasy](../../../docs/standard/datetime/resolve-ambiguous-times.md) , mapując go do czasu standardowego strefy czasowej.
 
-[Instrukcje: Zezwala użytkownikom na rozwiązywanie niejednoznacznych wartości czasu](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md) w tym artykule opisano sposób umożliwić użytkownikowi określić mapowanie między niejednoznaczny czas lokalny i uniwersalny czas koordynowany.
+[Instrukcje: Pozwól użytkownikom na rozwiązywanie](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md) niejednoznacznych czasów, w jaki sposób można określić mapowanie między niejednoznacznym czasem lokalnym i uniwersalnym koordynowanym czasem.
 
 ## <a name="reference"></a>Tematy pomocy
 

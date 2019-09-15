@@ -2,12 +2,12 @@
 title: Rozszerzanie kontroli obsługi i raportowania błędów
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: 09216d8b0ff58ac90a0fd6183f43fd2ccf82ad52
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d7efc87d7d8a913642c4ac0e3d6d19cd0a9259c5
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039680"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989934"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Rozszerzanie kontroli obsługi i raportowania błędów
 Ten przykład pokazuje, jak rozciągnąć kontrolę nad obsługą błędów i raportowaniem błędów w usłudze Windows Communication Foundation (WCF) <xref:System.ServiceModel.Dispatcher.IErrorHandler> przy użyciu interfejsu. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) z dodatkowym kodem dodanym do usługi w celu obsługi błędów. Klient wymusza kilka warunków błędu. Usługa przechwytuje błędy i rejestruje je w pliku.  
@@ -21,7 +21,7 @@ Ten przykład pokazuje, jak rozciągnąć kontrolę nad obsługą błędów i ra
   
  <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>Metoda, `CalculatorErrorHandler` zapisuje dziennik błędu do pliku tekstowego Error. txt w c:\LOGS. Należy zauważyć, że przykład rejestruje błąd i nie pomija go, co umożliwia jego raportowanie z powrotem do klienta programu.  
   
-```  
+```csharp  
 public class CalculatorErrorHandler : IErrorHandler  
 {  
         // Provide a fault. The Message fault parameter can be replaced, or set to  
@@ -51,7 +51,7 @@ public class CalculatorErrorHandler : IErrorHandler
   
  `ErrorBehaviorAttribute` Istnieje jako mechanizm do rejestrowania programu obsługi błędów w usłudze. Ten atrybut przyjmuje jeden parametr typu. Ten typ powinien implementować <xref:System.ServiceModel.Dispatcher.IErrorHandler> interfejs i powinien mieć publicznego, pustego konstruktora. Ten atrybut następnie tworzy wystąpienie tego typu programu obsługi błędów i instaluje go w usłudze. Robi to przez implementację <xref:System.ServiceModel.Description.IServiceBehavior> interfejsu, a następnie <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> użycie metody w celu dodania wystąpień programu obsługi błędów do usługi.  
   
-```  
+```csharp  
 // This attribute can be used to install a custom error handler for a service.  
 public class ErrorBehaviorAttribute : Attribute, IServiceBehavior  
 {  
@@ -98,7 +98,7 @@ public class ErrorBehaviorAttribute : Attribute, IServiceBehavior
   
  Przykład implementuje usługę kalkulatora. Klient świadomie powoduje wystąpienie dwóch błędów w usłudze, dostarczając parametry z niedozwolonymi wartościami. `CalculatorErrorHandler` Program<xref:System.ServiceModel.Dispatcher.IErrorHandler> używa interfejsu do rejestrowania błędów w pliku lokalnym, a następnie umożliwia ich raportowanie z powrotem do klienta programu. Klient wymusza dzielenie przez zero i warunku argumentu-poza zakresem.  
   
-```  
+```csharp  
 try  
 {  
     Console.WriteLine("Forcing an error in Divide");  
@@ -134,7 +134,7 @@ Press <ENTER> to terminate client.
   
  Plik c:\logs\errors.txt zawiera rejestrowane informacje o błędach przez usługę. Należy pamiętać, że aby usługa mogła zapisywać w katalogu, należy się upewnić, że proces, w którym jest uruchomiona usługa (zazwyczaj ASP.NET lub usługa sieciowa), ma uprawnienia do zapisu w katalogu.  
   
-```  
+```txt
 Fault: Reason = Invalid Argument: The second argument must not be zero.  
 Fault: Reason = Invalid Argument: The argument must be greater than zero.  
 ```  

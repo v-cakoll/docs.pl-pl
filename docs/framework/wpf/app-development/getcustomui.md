@@ -4,46 +4,46 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-ms.openlocfilehash: 30084143949d2243fd310448c52e6b861505ad66
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9c4c9d597f5cc1b172213d49a3dd5b8f1c1f671
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947969"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991377"
 ---
 # <a name="getcustomui"></a>GetCustomUI
-Metoda wywoływana przez PresentationHost.exe można pobrać niestandardowych postępu i komunikaty o błędach z hosta, jeśli zaimplementowana.  
+Wywoływane przez PresentationHost. exe w celu uzyskania niestandardowych postępów i komunikatów o błędach z hosta, jeśli zostały zaimplementowane.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgressClassName, [out] BSTR* pwzErrorAssemblyName, [out] BSTR* pwzErrorClassName );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `pwzProgressAssemblyName`  
   
- [out] Wskaźnik do zestawu, który zawiera interfejs użytkownika postępu dostarczone z hosta.  
+ określoną Wskaźnik do zestawu, który zawiera interfejs użytkownika postępu dostarczonego przez hosta.  
   
  `pwzProgressClassName`  
   
- [out] Nazwa klasy, które jest dostarczone z hosta postępu interfejsu użytkownika, najlepiej [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] plik z <xref:System.Windows.Controls.Page> jest element najwyższego poziomu. Ta klasa znajduje się w zestawie, który jest określony przez `pwzProgressAssemblyName`.  
+ określoną Nazwa klasy, która jest interfejsem użytkownika postępu dostarczonego przez hosta, najlepiej do [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] pliku z <xref:System.Windows.Controls.Page> jest elementem najwyższego poziomu. Ta klasa znajduje się w zestawie, który jest określony przez `pwzProgressAssemblyName`.  
   
  `pwzErrorAssemblyName`  
   
- [out] Wskaźnik do zestawu, który zawiera interfejs użytkownika błędzie dostarczony przez hosta.  
+ określoną Wskaźnik do zestawu, który zawiera interfejs użytkownika o błędzie dostarczonym przez hosta.  
   
  `pwzErrorClassName`  
   
- [out] Nazwa klasy, która jest użytkownikiem błędzie dostarczony host interfejsu najlepiej plik XAML z <xref:System.Windows.Controls.Page> jest element najwyższego poziomu. Ta klasa znajduje się w zestawie, który jest określony przez `pwzErrorAssemblyName`.  
+ określoną Nazwa klasy, która jest interfejsem użytkownika o błędzie dostarczonym przez hosta, najlepiej do pliku XAML z <xref:System.Windows.Controls.Page> jest jego elementem najwyższego poziomu. Ta klasa znajduje się w zestawie, który jest określony przez `pwzErrorAssemblyName`.  
   
 ## <a name="property-valuereturn-value"></a>Wartość właściwości/Zwracana wartość  
- HRESULT: Ignorowane.  
+ WYNIK Ignorowane.  
   
 ## <a name="remarks"></a>Uwagi  
- Aplikacja hosta może mieć określonych motyw, który interfejsy użytkownika domyślnego PresentationHost.exe firmy nie będą zgodne z. Jeśli jest to możliwe, aplikacja hosta można zaimplementować [getcustomui —](getcustomui.md) do zwrotu postęp oraz błąd interfejsy użytkownika PresentationHost.exe. Zawsze spowoduje wywołanie PresentationHost.exe [getcustomui —](getcustomui.md) przed rozpoczęciem korzystania z jego interfejsów użytkownika domyślnego.  
+ Aplikacja hosta może mieć określony motyw, który PresentationHost. exe domyślne interfejsy użytkownika mogą nie być zgodne. W takim przypadku aplikacja hosta może zaimplementować [GetCustomUI](getcustomui.md) , aby zwracać interfejs użytkownika postępu i błędów do PresentationHost. exe. PresentationHost. exe zawsze będzie wywoływał [GetCustomUI](getcustomui.md) przed użyciem jego domyślnych interfejsów użytkownika.  
   
- Ta funkcja jest wywoływana jeden raz podczas inicjowania PresentationHost firmy.  
+ Ta funkcja jest wywoływana raz podczas inicjowania PresentationHost.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: ff60bb5de403970f432e938cba81ca4e99476e8a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 31a9183f541afa5365862b1e89704354cf7bd527
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925986"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969294"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>Korzystanie z biblioteki .NET Standard w programie Visual Studio 2017
 
@@ -26,6 +26,8 @@ Po utworzeniu biblioteki klas .NET Standard, wykonując kroki opisane w sekcji [
 ## <a name="including-a-library-as-a-project-in-a-solution"></a>Dołączanie biblioteki jako projektu w rozwiązaniu
 
 Podobnie jak w przypadku testów jednostkowych w tym samym rozwiązaniu co Biblioteka klas, możesz dołączyć aplikację jako część tego rozwiązania. Można na przykład użyć biblioteki klas w aplikacji konsolowej, która wyświetla użytkownikowi komunikat, aby wprowadzić ciąg i określić, czy jego pierwszy znak jest pisany wielkimi literami:
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 

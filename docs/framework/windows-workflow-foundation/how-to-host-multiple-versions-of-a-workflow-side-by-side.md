@@ -5,118 +5,78 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 85792aea8a72ffc0c9b579473332756c6ca3bb47
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 820ed324c8095e2f9f2823513a37965099f42c48
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663837"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989649"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Instrukcje: Równoczesne hostowanie wielu wersji przepływu pracy
 
-`WorkflowIdentity` Umożliwia deweloperom aplikacji przepływu pracy skojarzyć nazwę i wersję z definicji przepływu pracy i te informacje, które ma zostać skojarzony z istniejącym wystąpieniem przepływu pracy. Informacje o tożsamości może służyć przez deweloperów aplikacji przepływu pracy można obsługiwać scenariusze takie jak side-by-side wykonywanie wielu wersji definicji przepływu pracy i zapewnia podstawę dla innych funkcji, takich jak aktualizacja dynamiczna. Ten krok, w tym samouczku przedstawiono sposób użycia `WorkflowIdentity` do hostowania wielu wersji przepływu pracy w tym samym czasie.
+`WorkflowIdentity`umożliwia deweloperom aplikacji przepływu pracy kojarzenie nazwy i wersji z definicją przepływu pracy oraz dla tych informacji do skojarzenia z utrwalonym wystąpieniem przepływu pracy. Te informacje o tożsamości mogą być używane przez deweloperów aplikacji przepływu pracy do włączania scenariuszy, takich jak wykonywanie równoczesne wielu wersji definicji przepływu pracy i udostępniają one podstawę do innych funkcji, takich jak aktualizacja dynamiczna. Ten krok w samouczku pokazuje, jak używać `WorkflowIdentity` do hostowania wielu wersji przepływu pracy w tym samym czasie.
 
 > [!NOTE]
-> Aby pobrać wersję inną ukończone lub wyświetlić Przewodnik wideo tego samouczka, zobacz [Windows Workflow Foundation (WF45) — Samouczek wprowadzający](https://go.microsoft.com/fwlink/?LinkID=248976).
+> Aby pobrać kompletną wersję lub wyświetlić przewodnik wideo samouczka, zobacz [Windows Workflow Foundation (WF45) — samouczek wprowadzenie](https://go.microsoft.com/fwlink/?LinkID=248976).
 
 ## <a name="in-this-topic"></a>W tym temacie:
 
-W tym kroku samouczka `WriteLine` działań w przepływie pracy są modyfikowane w celu dodatkowe informacje i nową `WriteLine` dodanym działaniem. Kopia oryginalnego zestawu przepływu pracy jest przechowywana, a aplikacja hosta zostanie zaktualizowana, dzięki czemu można uruchamiać zarówno oryginał, jak i zaktualizowano przepływów pracy w tym samym czasie.
+W tym kroku samouczka `WriteLine` działania w przepływie pracy są modyfikowane w celu zapewnienia dodatkowych informacji i dodawane jest nowe `WriteLine` działanie. Kopia oryginalnego zestawu przepływu pracy jest przechowywana, a aplikacja hosta zostanie zaktualizowana tak, aby mogła jednocześnie uruchamiać zarówno oryginalny, jak i zaktualizowany przepływy pracy.
 
 - [Aby utworzyć kopię projektu NumberGuessWorkflowActivities](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)
 
-- [Aby zaktualizować przepływów pracy](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)
+- [Aby zaktualizować przepływy pracy](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)
 
-  - [Aktualizacja Automat stanów przepływu pracy](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)
+  - [Aby zaktualizować przepływ pracy StateMachine](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)
 
-  - [Aktualizacja przepływu pracy schematu blokowego](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)
+  - [Aby zaktualizować przepływ pracy Flowchart](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)
 
-  - [Aby zaktualizować sekwencyjnego przepływu pracy](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)
+  - [Aby zaktualizować sekwencyjny przepływ pracy](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)
 
-- [Aby zaktualizować WorkflowVersionMap obejmujący poprzednich wersji przepływu pracy](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)
+- [Aby zaktualizować WorkflowVersionMap w celu uwzględnienia poprzednich wersji przepływu pracy](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)
 
 - [Aby skompilować i uruchomić aplikację](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)
 
 > [!NOTE]
-> Przed wykonaniem kroków w tym temacie, uruchom aplikację, uruchom wiele przepływów pracy dla każdego typu, a dzięki jednej lub dwóch prób dla każdego z nich. Tych utrwalonych przepływów pracy są używane w tym kroku i następny krok [jak: Aktualizowanie definicji działającego wystąpienia przepływu pracy](how-to-update-the-definition-of-a-running-workflow-instance.md).
+> Przed wykonaniem kroków opisanych w tym temacie należy uruchomić aplikację, uruchomić kilka przepływów pracy każdego typu i wprowadzić jedną lub dwie wartości dla każdego z nich. Te utrwalone przepływy pracy są używane w tym kroku i w [następujących krokach: Zaktualizuj definicję uruchomionego wystąpienia](how-to-update-the-definition-of-a-running-workflow-instance.md)przepływu pracy.
 
 > [!NOTE]
-> Poszczególne kroki samouczka Wprowadzenie zależy od poprzednich kroków. Jeśli nie została ukończona poprzednich kroków możesz pobrać pełną wersję z samouczka w [Windows Workflow Foundation (WF45) — Samouczek wprowadzający](https://go.microsoft.com/fwlink/?LinkID=248976).
+> Każdy krok w samouczku Wprowadzenie zależy od poprzednich kroków. Jeśli poprzednie kroki nie zostały wykonane, możesz pobrać ukończoną wersję samouczka z [Windows Workflow Foundation (WF45) — wprowadzenie samouczka](https://go.microsoft.com/fwlink/?LinkID=248976).
 
-### <a name="BKMK_BackupCopy"></a> Aby utworzyć kopię projektu NumberGuessWorkflowActivities
+### <a name="BKMK_BackupCopy"></a>Aby utworzyć kopię projektu NumberGuessWorkflowActivities
 
-1. Otwórz **WF45GettingStartedTutorial** rozwiązania programu Visual Studio 2012, jeśli nie jest otwarty.
+1. Otwórz rozwiązanie **WF45GettingStartedTutorial** w programie Visual Studio 2012, jeśli nie jest otwarte.
 
-2. Naciśnij klawisze CTRL + SHIFT + B, aby skompilować rozwiązanie.
+2. Naciśnij kombinację klawiszy CTRL + SHIFT + B, aby skompilować rozwiązanie.
 
-3. Zamknij **WF45GettingStartedTutorial** rozwiązania.
+3. Zamknij rozwiązanie **WF45GettingStartedTutorial** .
 
-4. Otwórz Eksploratora Windows i przejdź do folderu, w którym znajdują się w pliku rozwiązania samouczka i folderów projektu.
+4. Otwórz Eksploratora Windows i przejdź do folderu, w którym znajdują się pliki rozwiązania samouczka i foldery projektu.
 
-5. Utwórz nowy folder o nazwie **PreviousVersions** w tym samym folderze co **NumberGuessWorkflowHost** i **NumberGuessWorkflowActivities**. Ten folder jest używany do zawierają zestawy, które zawierają różne wersje przepływy pracy, wykorzystywane w kolejnych krokach samouczka.
+5. Utwórz nowy folder o nazwie **PreviousVersions** w tym samym folderze, co **NumberGuessWorkflowHost** i **NumberGuessWorkflowActivities**. Ten folder służy do przechowywania zestawów zawierających różne wersje przepływów pracy używanych w kolejnych krokach samouczka.
 
-6. Przejdź do **NumberGuessWorkflowActivities\bin\debug** folder (lub **bin\release** w zależności od ustawień projektu). Kopiuj **NumberGuessWorkflowActivities.dll** i wklej go w **PreviousVersions** folderu.
+6. Przejdź do folderu **NumberGuessWorkflowActivities\bin\debug** (lub **bin\Release** w zależności od ustawień projektu). Skopiuj plik **NumberGuessWorkflowActivities. dll** i wklej go do folderu **PreviousVersions** .
 
-7. Zmień nazwę **NumberGuessWorkflowActivities.dll** w **PreviousVersions** folder **NumberGuessWorkflowActivities_v1.dll**.
+7. Zmień nazwę **NumberGuessWorkflowActivities. dll** w folderze **PreviousVersions** na **NumberGuessWorkflowActivities_v1. dll**.
 
     > [!NOTE]
-    > Kroki opisane w tym temacie pokazują jeden sposób zarządzania zestawów zawiera wiele wersji przepływów pracy. Można również zmienić innych metod, takich jak silnych nazw zestawów i rejestrowania ich w globalnej pamięci podręcznej.
+    > Kroki przedstawione w tym temacie przedstawiają jeden ze sposobów zarządzania zestawami używanymi do przechowywania wielu wersji przepływów pracy. Można również użyć innych metod, takich jak silne nazewnictwo zestawów i rejestrowanie ich w globalnej pamięci podręcznej zestawów.
 
-8. Utwórz nowy folder o nazwie **NumberGuessWorkflowActivities_du** w tym samym folderze co **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**, a nowo dodano **PreviousVersions** folder, a następnie skopiuj wszystkie pliki i podfoldery z **NumberGuessWorkflowActivities** do nowego folderu  **NumberGuessWorkflowActivities_du** folderu. Ta kopia zapasowa projektu dla początkowej wersji działania jest używana w [jak: Aktualizowanie definicji działającego wystąpienia przepływu pracy](how-to-update-the-definition-of-a-running-workflow-instance.md).
+8. Utwórz nowy folder o nazwie **NumberGuessWorkflowActivities_du** w tym samym folderze, co **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**i nowo dodany folder **PreviousVersions** , a następnie skopiuj wszystkie pliki i podfoldery z folderu **NumberGuessWorkflowActivities** do nowego folderu **NumberGuessWorkflowActivities_du** . Ta kopia zapasowa projektu dla początkowej wersji działań jest używana w [następujący sposób: Zaktualizuj definicję uruchomionego wystąpienia](how-to-update-the-definition-of-a-running-workflow-instance.md)przepływu pracy.
 
-9. Otwórz ponownie **WF45GettingStartedTutorial** rozwiązania w programie Visual Studio 2012.
+9. Otwórz ponownie rozwiązanie **WF45GettingStartedTutorial** w programie Visual Studio 2012.
 
-### <a name="BKMK_UpdateWorkflows"></a> Aby zaktualizować przepływów pracy
+### <a name="BKMK_UpdateWorkflows"></a>Aby zaktualizować przepływy pracy
 
-W tej sekcji definicji przepływu pracy są aktualizowane. Dwa `WriteLine` działań, które Prześlij opinię na temat odgadnięcia użytkownika są aktualizowane i nowej `WriteLine` dodanym działaniem, zawiera dodatkowe informacje o gry, gdy liczba jest złamać.
+W tej sekcji definicje przepływów pracy zostaną zaktualizowane. Dwa `WriteLine` działania, które dają opinię na temat odgadnięcia użytkownika, są aktualizowane i dodawane jest `WriteLine` nowe działanie, które zapewnia dodatkowe informacje o grze, gdy nastąpi odpuszczenie liczby.
 
-#### <a name="BKMK_UpdateStateMachine"></a> Aktualizacja Automat stanów przepływu pracy
+#### <a name="BKMK_UpdateStateMachine"></a>Aby zaktualizować przepływ pracy StateMachine
 
-1. W **Eksploratora rozwiązań**w obszarze **NumberGuessWorkflowActivities** projektu, kliknij dwukrotnie **StateMachineNumberGuessWorkflow.xaml**.
+1. W **Eksplorator rozwiązań**w projekcie **NumberGuessWorkflowActivities** kliknij dwukrotnie **StateMachineNumberGuessWorkflow. XAML**.
 
-2. Kliknij dwukrotnie **odgadnięcia niepoprawne** przejście maszyny stanu.
+2. Kliknij dwukrotnie **nieprawidłowe** przejście na komputerze stanu.
 
-3. Aktualizacja `Text` z lewym skrajnym `WriteLine` w `If` działania.
-
-    ```vb
-    Guess & " is too low."
-    ```
-
-    ```csharp
-    Guess + " is too low."
-    ```
-
-4. Aktualizacja `Text` z najbardziej po prawej stronie `WriteLine` w `If` działania.
-
-    ```vb
-    Guess & " is too high."
-    ```
-
-    ```csharp
-    Guess + " is too high."
-    ```
-
-5. Wróć do ogólnych stanu widoku maszyny w Projektancie przepływu pracy, klikając **StateMachine** w obszarze nawigacji wyświetlane w górnej części projektanta przepływów pracy.
-
-6. Kliknij dwukrotnie **odgadnięcia poprawne** przejście maszyny stanu.
-
-7. Przeciągnij **WriteLine** działanie z **podstawowych** części **przybornika** i upuść je na **działania Upuść działanie tutaj** etykiety przejście.
-
-8. Wpisz następujące wyrażenie do `Text` okno właściwości.
-
-    ```vb
-    Guess & " is correct. You guessed it in " & Turns & " turns."
-    ```
-
-    ```csharp
-    Guess + " is correct. You guessed it in " + Turns + " turns."
-    ```
-
-#### <a name="BKMK_UpdateFlowchart"></a> Aktualizacja przepływu pracy schematu blokowego
-
-1. W **Eksploratora rozwiązań**w obszarze **NumberGuessWorkflowActivities** projektu, kliknij dwukrotnie **FlowchartNumberGuessWorkflow.xaml**.
-
-2. Aktualizacja `Text` z lewym skrajnym `WriteLine` działania.
+3. Zaktualizuj część z lewej strony `WriteLine` `If` działania. `Text`
 
     ```vb
     Guess & " is too low."
@@ -126,7 +86,7 @@ W tej sekcji definicji przepływu pracy są aktualizowane. Dwa `WriteLine` dzia�
     Guess + " is too low."
     ```
 
-3. Aktualizacja `Text` z najbardziej po prawej stronie `WriteLine` działania.
+4. Zaktualizuj część z prawej strony `WriteLine` `If` działania. `Text`
 
     ```vb
     Guess & " is too high."
@@ -136,9 +96,13 @@ W tej sekcji definicji przepływu pracy są aktualizowane. Dwa `WriteLine` dzia�
     Guess + " is too high."
     ```
 
-4. Przeciągnij **WriteLine** działanie z **podstawowych** części **przybornika** i upuść je w punkcie listy `True` akcji najwyższy `FlowDecision` . `WriteLine` Działania zostaną dodane do schematu blokowego i połączone z `True` akcji `FlowDecision`.
+5. Wróć do widoku ogólnego automatu stanów w Projektancie przepływów pracy, klikając pozycję **StateMachine** w obszarze odsyłanie w górnej części projektanta przepływu pracy.
 
-5. Wpisz następujące wyrażenie do `Text` okno właściwości.
+6. Kliknij dwukrotnie **odpowiednie przejście na** komputerze stanu.
+
+7. Przeciągnij działanie **WriteLine** z sekcji elementy **pierwotne** w **przyborniku** i upuść je w **działaniu akcji upuść tutaj** etykieta przejścia.
+
+8. Wpisz następujące wyrażenie w `Text` polu właściwości.
 
     ```vb
     Guess & " is correct. You guessed it in " & Turns & " turns."
@@ -148,11 +112,11 @@ W tej sekcji definicji przepływu pracy są aktualizowane. Dwa `WriteLine` dzia�
     Guess + " is correct. You guessed it in " + Turns + " turns."
     ```
 
-#### <a name="BKMK_UpdateSequential"></a> Aby zaktualizować sekwencyjnego przepływu pracy
+#### <a name="BKMK_UpdateFlowchart"></a>Aby zaktualizować przepływ pracy Flowchart
 
-1. W **Eksploratora rozwiązań**w obszarze **NumberGuessWorkflowActivities** projektu, kliknij dwukrotnie **SequentialNumberGuessWorkflow.xaml**.
+1. W **Eksplorator rozwiązań**w projekcie **NumberGuessWorkflowActivities** kliknij dwukrotnie **FlowchartNumberGuessWorkflow. XAML**.
 
-2. Aktualizacja `Text` z lewym skrajnym `WriteLine` w `If` działania.
+2. Zaktualizuj wartość `Text` `WriteLine` działania z lewej strony.
 
     ```vb
     Guess & " is too low."
@@ -162,7 +126,7 @@ W tej sekcji definicji przepływu pracy są aktualizowane. Dwa `WriteLine` dzia�
     Guess + " is too low."
     ```
 
-3. Aktualizacja `Text` z najbardziej po prawej stronie `WriteLine` działania w `If` działania.
+3. `Text` Zaktualizuj część `WriteLine` działania z prawej strony.
 
     ```vb
     Guess & " is too high."
@@ -172,9 +136,9 @@ W tej sekcji definicji przepływu pracy są aktualizowane. Dwa `WriteLine` dzia�
     Guess + " is too high."
     ```
 
-4. Przeciągnij **WriteLine** działanie z **podstawowych** części **przybornika** i upuść je po **DoWhile** działanie tak, aby  **WriteLine** jest ostatnie działanie w katalogu głównym `Sequence` działania.
+4. Przeciągnij działanie **WriteLine** z sekcji elementy **pierwotne** w **przyborniku** i upuść je w punkcie `True` upuszczania akcji najwyższego `FlowDecision`poziomu. Działanie jest dodawane do schematu blokowego i połączone `True` z akcją `FlowDecision`. `WriteLine`
 
-5. Wpisz następujące wyrażenie do `Text` okno właściwości.
+5. Wpisz następujące wyrażenie w `Text` polu właściwości.
 
     ```vb
     Guess & " is correct. You guessed it in " & Turns & " turns."
@@ -184,11 +148,47 @@ W tej sekcji definicji przepływu pracy są aktualizowane. Dwa `WriteLine` dzia�
     Guess + " is correct. You guessed it in " + Turns + " turns."
     ```
 
-### <a name="BKMK_UpdateWorkflowVersionMap"></a> Aby zaktualizować WorkflowVersionMap obejmujący poprzednich wersji przepływu pracy
+#### <a name="BKMK_UpdateSequential"></a>Aby zaktualizować sekwencyjny przepływ pracy
 
-1. Kliknij dwukrotnie **WorkflowVersionMap.cs** (lub **WorkflowVersionMap.vb**) w obszarze **NumberGuessWorkflowHost** projektu, aby go otworzyć.
+1. W **Eksplorator rozwiązań**w projekcie **NumberGuessWorkflowActivities** kliknij dwukrotnie **SequentialNumberGuessWorkflow. XAML**.
 
-2. Dodaj następujący kod `using` (lub `Imports`) instrukcji na górze pliku razem z innymi `using` (lub `Imports`) instrukcji.
+2. Zaktualizuj część z lewej strony `WriteLine` `If` działania. `Text`
+
+    ```vb
+    Guess & " is too low."
+    ```
+
+    ```csharp
+    Guess + " is too low."
+    ```
+
+3. `WriteLine` Zaktualizuj działanie `If` z prawej strony `Text` w działaniu.
+
+    ```vb
+    Guess & " is too high."
+    ```
+
+    ```csharp
+    Guess + " is too high."
+    ```
+
+4. Przeciągnij działanie **WriteLine** z sekcji elementy **pierwotne** w **przyborniku** i upuść je po działaniu **DoWhile** , tak aby Metoda **WriteLine** była ostatnim działaniem w działaniu `Sequence` głównym.
+
+5. Wpisz następujące wyrażenie w `Text` polu właściwości.
+
+    ```vb
+    Guess & " is correct. You guessed it in " & Turns & " turns."
+    ```
+
+    ```csharp
+    Guess + " is correct. You guessed it in " + Turns + " turns."
+    ```
+
+### <a name="BKMK_UpdateWorkflowVersionMap"></a>Aby zaktualizować WorkflowVersionMap w celu uwzględnienia poprzednich wersji przepływu pracy
+
+1. Kliknij dwukrotnie pozycję **WorkflowVersionMap.cs** (lub **WorkflowVersionMap. vb**) w projekcie **NumberGuessWorkflowHost** , aby go otworzyć.
+
+2. Dodaj następujące `using` instrukcje (lub `Imports`) na początku pliku z innymi `using` instrukcjami (lub `Imports`).
 
     ```vb
     Imports System.Reflection
@@ -200,7 +200,7 @@ W tej sekcji definicji przepływu pracy są aktualizowane. Dwa `WriteLine` dzia�
     using System.IO;
     ```
 
-3. Dodaj trzy nowe tożsamości przepływu pracy po prostu poniższe trzy deklaracje tożsamość istniejącego przepływu pracy. Te nowe `v1` przepływu pracy będą używane tożsamości udostępniają definicje poprawne przepływu pracy do przepływów pracy uruchomionych przed aktualizacje zostały wprowadzone.
+3. Dodaj trzy nowe tożsamości przepływu pracy tuż poniżej trzech istniejących deklaracji tożsamości przepływu pracy. Te nowe `v1` tożsamości przepływu pracy będą używane do zapewnienia, że przepływy pracy zostały uruchomione przed wprowadzeniem aktualizacji.
 
     ```vb
     'Current version identities.
@@ -226,7 +226,7 @@ W tej sekcji definicji przepływu pracy są aktualizowane. Dwa `WriteLine` dzia�
     static public WorkflowIdentity SequentialNumberGuessIdentity_v1;
     ```
 
-4. W `WorkflowVersionMap` Konstruktor, aktualizacja `Version` właściwość trzy bieżącej tożsamości przepływu pracy do `2.0.0.0`.
+4. W konstruktorze `Version` zaktualizuj właściwość trzech bieżących tożsamości przepływu pracy do `2.0.0.0`. `WorkflowVersionMap`
 
     ```vb
     'Add the current workflow version identities.
@@ -281,9 +281,9 @@ W tej sekcji definicji przepływu pracy są aktualizowane. Dwa `WriteLine` dzia�
     map.Add(SequentialNumberGuessIdentity, new SequentialNumberGuessWorkflow());
     ```
 
-    Kod, który dodaje aktualne wersje przepływy pracy do słownika używa bieżące wersje, które są określone w projekcie, więc kod, który inicjuje definicji przepływu pracy nie musi zostać zaktualizowany.
+    Kod w programie, który dodaje bieżące wersje przepływów pracy do słownika używa bieżących wersji, do których odwołuje się projekt, więc kod inicjujący definicje przepływu pracy nie musi zostać zaktualizowany.
 
-5. Dodaj następujący kod w Konstruktorze zaraz po kod, który dodaje bieżące wersje do słownika.
+5. Dodaj następujący kod w konstruktorze bezpośrednio po kodzie, który dodaje bieżące wersje do słownika.
 
     ```vb
     'Initialize the previous workflow version identities.
@@ -327,9 +327,9 @@ W tej sekcji definicji przepływu pracy są aktualizowane. Dwa `WriteLine` dzia�
     };
     ```
 
-    Te tożsamości przepływu pracy są skojarzone z odpowiedniej definicji przepływu pracy w wersji początkowej.
+    Te tożsamości przepływu pracy są skojarzone z początkowymi wersjami odpowiednich definicji przepływu pracy.
 
-6. Następnie Załaduj zestaw, który zawiera wstępną wersję definicji przepływu pracy i tworzenie i dodawanie odpowiedniej definicji przepływu pracy do słownika.
+6. Następnie Załaduj zestaw zawierający początkową wersję definicji przepływu pracy i Utwórz i Dodaj odpowiednie definicje przepływów pracy do słownika.
 
     ```vb
     'Add the previous version workflow identities to the dictionary along with
@@ -369,7 +369,7 @@ W tej sekcji definicji przepływu pracy są aktualizowane. Dwa `WriteLine` dzia�
         v1Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow") as Activity);
     ```
 
-    Poniższy przykład przedstawia pełną listę, aby uzyskać zaktualizowany `WorkflowVersionMap` klasy.
+    Poniższy przykład to kompletna lista dla zaktualizowanej `WorkflowVersionMap` klasy.
 
     ```vb
     Public Module WorkflowVersionMap
@@ -552,13 +552,13 @@ W tej sekcji definicji przepływu pracy są aktualizowane. Dwa `WriteLine` dzia�
     }
     ```
 
-### <a name="BKMK_BuildAndRun"></a> Aby skompilować i uruchomić aplikację
+### <a name="BKMK_BuildAndRun"></a>Aby skompilować i uruchomić aplikację
 
-1. Naciśnij klawisze CTRL + SHIFT + B, aby skompilować aplikację i CTRL + F5, aby rozpocząć.
+1. Naciśnij kombinację klawiszy CTRL + SHIFT + B, aby skompilować aplikację, a następnie naciśnij klawisze CTRL + F5, aby rozpocząć.
 
-2. Rozpocznij nowy przepływ pracy, klikając **nową grę**. Wersja przepływu pracy jest wyświetlany w oknie stanu i uwzględnia zaktualizowaną wersję z powiązanego `WorkflowIdentity`. Zwróć uwagę na `InstanceId` , można wyświetlić pliku śledzenia dla przepływu pracy po jego ukończeniu, a następnie wprowadź liczbę prób, aż do zakończenia gry. Należy zauważyć, jak odgadnięcia użytkownika jest wyświetlany w informacjach wyświetlanych w oknie stanu na podstawie aktualizacji do `WriteLine` działań.
+2. Uruchom nowy przepływ pracy, klikając pozycję **Nowa gra**. Wersja przepływu pracy jest wyświetlana w oknie stanu i odzwierciedla zaktualizowaną wersję ze skojarzonego `WorkflowIdentity`. Zanotuj `InstanceId` , aby można było wyświetlić plik śledzenia dla przepływu pracy po jego zakończeniu, a następnie wprowadzić wartości odgadnięcia do momentu zakończenia gry. Zwróć uwagę, w jaki sposób odgadnięcie użytkownika jest wyświetlane w informacjach wyświetlanych w oknie stanu na podstawie aktualizacji `WriteLine` działań.
 
-    ```
+    ```console
     Please enter a number between 1 and 10
     5 is too high.
     Please enter a number between 1 and 10
@@ -570,11 +570,11 @@ W tej sekcji definicji przepływu pracy są aktualizowane. Dwa `WriteLine` dzia�
     ```
 
     > [!NOTE]
-    > Zaktualizowany tekst z `WriteLine` działania jest wyświetlane, ale dane wyjściowe końcowe `WriteLine` braku aktywności, który został dodany w tym temacie. Wynika to z okna stanu jest aktualizowana przez `PersistableIdle` programu obsługi. Ponieważ przepływ pracy zakończy i nie przechodzi bezczynności po ostatnim działaniu `PersistableIdle` nie zostanie wywołana procedura obsługi. Jednak podobny komunikat jest wyświetlany w oknie stanu przez `Completed` programu obsługi. Jeśli to konieczne, kod może zostać dodany do `Completed` obsługi do wyodrębniania tekstu z `StringWriter` i wyświetl ją w oknie stanu.
+    > Wyświetlany jest zaktualizowany tekst `WriteLine` działań, ale dane wyjściowe działania końcowego `WriteLine` , które zostało dodane w tym temacie, nie są obsługiwane. Wynika to z faktu, że okno stanu jest `PersistableIdle` aktualizowane przez program obsługi. Ponieważ przepływ pracy kończy się i nie przechodzi bezczynnie po zakończeniu działania końcowego `PersistableIdle` , program obsługi nie zostanie wywołany. Jednak podobny komunikat jest wyświetlany w oknie stanu przez `Completed` program obsługi. W razie potrzeby kod można dodać do `Completed` programu obsługi, aby wyodrębnić tekst `StringWriter` z i wyświetlić go w oknie stanu.
 
-3. Otwórz Eksploratora Windows i przejdź do **NumberGuessWorkflowHost\bin\debug** folder (lub **bin\release** w zależności od ustawień projektu), a następnie otwórz plik śledzenia za pomocą Notatnika, który odpowiada Aby ukończony przepływ pracy. Jeśli nie została wprowadzona Zanotuj `InstanceId`, plik śledzenia poprawne można zidentyfikować za pomocą **Data modyfikacji** informacji w Eksploratorze Windows.
+3. Otwórz Eksploratora Windows i przejdź do folderu **NumberGuessWorkflowHost\bin\debug** (lub **bin\Release** w zależności od ustawień projektu) i Otwórz plik śledzenia przy użyciu Notatnika odpowiadającego zakończonemu przepływowi pracy. Jeśli nie zanotujesz tego `InstanceId`, możesz zidentyfikować prawidłowy plik śledzenia przy użyciu informacji o **dacie modyfikacji** w Eksploratorze Windows.
 
-    ```
+    ```console
     Please enter a number between 1 and 10
     5 is too high.
     Please enter a number between 1 and 10
@@ -585,8 +585,8 @@ W tej sekcji definicji przepływu pracy są aktualizowane. Dwa `WriteLine` dzia�
     2 is correct. You guessed it in 4 turns.
     ```
 
-    Zaktualizowany interfejs `WriteLine` danych wyjściowych jest zawarty w pliku śledzenia, w tym dane wyjściowe `WriteLine` , dodanego w tym temacie.
+    Zaktualizowane `WriteLine` dane wyjściowe są zawarte w pliku śledzenia, łącznie z danymi wyjściowymi `WriteLine` , które zostały dodane w tym temacie.
 
-4. Przejdź z powrotem do odgadnięcia liczba aplikacji, a następnie wybierz jedno z przepływów pracy, które zostało uruchomione, zanim aktualizacje zostały wprowadzone. Wersję aktualnie wybranego przepływu pracy można zidentyfikować, sprawdzając informacje o wersji, która jest wyświetlana poniżej oknie stanu. Wprowadź kilka prób i należy pamiętać, że stan aktualizacji dopasowanie `WriteLine` działania dane wyjściowe z poprzedniej wersji i nie obejmują odgadnięcia użytkownika. To dlatego te przepływy pracy korzystają z poprzednią definicję przepływu pracy, który nie ma `WriteLine` aktualizacji.
+4. Przełącz się z powrotem do aplikacji umożliwiającej odgadnięcie i wybierz jeden z przepływów pracy, które zostały uruchomione przed wprowadzeniem aktualizacji. Wersję aktualnie wybranego przepływu pracy można zidentyfikować, przeglądając informacje o wersji, które są wyświetlane poniżej okna stanu. Wprowadź kilka prób i zwróć uwagę na to, że aktualizacje stanu `WriteLine` są zgodne z danymi wyjściowymi działania z poprzedniej wersji i nie uwzględniają odgadnięcia użytkownika. Wynika to z faktu, że te przepływy pracy używają poprzedniej definicji przepływu pracy `WriteLine` , która nie ma aktualizacji.
 
-    W następnym kroku [jak: Aktualizowanie definicji uruchomione wystąpienie przepływu pracy](how-to-update-the-definition-of-a-running-workflow-instance.md), uruchomienie `v1` wystąpienia przepływu pracy są aktualizowane i zawierają nową funkcjonalność w postaci `v2` wystąpień.
+    W następnym kroku, [jak: Aktualizacja definicji uruchomionego wystąpienia](how-to-update-the-definition-of-a-running-workflow-instance.md)przepływu pracy, uruchomione `v1` wystąpienia przepływu pracy są aktualizowane, aby zawierały nowe funkcje jako `v2` wystąpienia.

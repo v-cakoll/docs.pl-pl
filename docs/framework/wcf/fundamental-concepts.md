@@ -7,156 +7,156 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 8aceb94de4ed879834fd9ba833083c54ba1b4174
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: eb03a164ce0ff0140c32b3b56bcb502674e5fecd
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348353"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990293"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Podstawowe pojęcia programu Windows Communication Foundation
 
-Ten dokument zawiera ogólny widok architektury usług Windows Communication Foundation (WCF). Jej celem jest zrozumienie podstawowych pojęć i jak one współdziałają ze sobą. Aby uzyskać samouczek dotyczący tworzenia najprostszym wersję usługi i klienta WCF, zobacz [Samouczek wprowadzający](../../../docs/framework/wcf/getting-started-tutorial.md). Programowanie WCF można znaleźć [programowanie WCF Basic](../../../docs/framework/wcf/basic-wcf-programming.md).
+Ten dokument zawiera ogólny widok architektury Windows Communication Foundation (WCF). Ma ona na celu wyjaśnienie najważniejszych pojęć i ich dopasowania. Aby zapoznać się z samouczkiem dotyczącym tworzenia najprostszej wersji usługi i klienta WCF, zobacz [samouczek wprowadzenie](../../../docs/framework/wcf/getting-started-tutorial.md). Aby poznać programowanie WCF, zobacz [podstawowe programowanie WCF](../../../docs/framework/wcf/basic-wcf-programming.md).
 
-## <a name="wcf-fundamentals"></a>Podstawy usługi WCF
+## <a name="wcf-fundamentals"></a>Podstawy WCF
 
-Usługi WCF jest środowisko uruchomieniowe i zestaw interfejsów API do tworzenia systemów, które wysyłają wiadomości między usług i klientów. Tej samej infrastruktury i interfejsy API służą do tworzenia aplikacji, które komunikują się z innymi aplikacjami, w tym samym systemie komputera lub w systemie, który znajduje się w innej firmie i jest dostępny za pośrednictwem Internetu.
+WCF to środowisko uruchomieniowe i zestaw interfejsów API służących do tworzenia systemów wysyłających komunikaty między usługami i klientami. Ta sama infrastruktura i interfejsy API są używane do tworzenia aplikacji, które komunikują się z innymi aplikacjami w tym samym systemie komputerowym lub w systemie, który znajduje się w innej firmie i jest dostępny za pośrednictwem Internetu.
 
-### <a name="messaging-and-endpoints"></a>Obsługa komunikatów i punktów końcowych
+### <a name="messaging-and-endpoints"></a>Wiadomości i punkty końcowe
 
-Usługi WCF opiera się na koncepcji komunikacja oparta na komunikatach i nic, które mogą być modelowane zgodnie z komunikatu (na przykład żądanie HTTP lub wiadomości usługi MSMQ (MSMQ)) mogą być reprezentowane w jednolity sposób w modelu programowania. Dzięki temu ujednoliconego interfejsu API przez różne mechanizmy transportu.
+Program WCF jest oparty na koncepcji komunikacji opartej na komunikatach, a wszystkie elementy, które mogą być modelowane jako wiadomości (na przykład żądanie HTTP lub komunikat usługi kolejkowania komunikatów (znany również jako MSMQ), mogą być reprezentowane w jednolity sposób w modelu programowania. Umożliwia to ujednolicony interfejs API w różnych mechanizmach transportu.
 
-Rozróżnia modelu _klientów_, które są aplikacje, które inicjują komunikację, i _usług_, służą do aplikacji, które oczekiwania dla klientów w celu komunikowania się z nimi i odpowiedzieć na to Komunikacja. Jedna aplikacja może pełnić zarówno klient, jak i usługi. Aby uzyskać przykłady, zobacz [usługi dwukierunkowe](../../../docs/framework/wcf/feature-details/duplex-services.md) i [sieci Peer-to-Peer](../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).
+Model odróżnia _klientów_, czyli aplikacje inicjujące komunikację i _usługi_, które są aplikacjami, które oczekują na komunikowanie się z nimi i odpowiadają na tę komunikację. Pojedyncza aplikacja może działać zarówno jako klient, jak i usługa. Aby zapoznać się z przykładami, zobacz [usługi dupleks](../../../docs/framework/wcf/feature-details/duplex-services.md) i [sieci peer-to-peer](../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).
 
-Komunikaty są wysyłane między punktami końcowymi. _Punkty końcowe_ miejsca, w której wiadomości są wysyłane lub odbierane (lub obie) oraz definiują wszystkie informacje wymagane do wymiany komunikatów. Usługa uwidacznia punkty końcowe aplikacji (a także zero lub więcej punktów końcowych infrastruktury), a klient generuje punkt końcowy, który jest zgodny z jednego z punktów końcowych usługi.
+Komunikaty są wysyłane między punktami końcowymi. _Punkty końcowe_ to miejsca, w których komunikaty są wysyłane lub odbierane (lub oba), a także definiują wszystkie informacje wymagane do wymiany komunikatów. Usługa udostępnia jeden lub więcej punktów końcowych aplikacji (a także zero lub więcej punktów końcowych infrastruktury), a klient generuje punkt końcowy, który jest zgodny z jednym z punktów końcowych usługi.
 
-_Punktu końcowego_ opisano w taki sposób, oparta na standardach, gdzie mają być wysyłane wiadomości, jak mają być wysyłane i jak powinien wyglądać komunikaty. Usługi można ujawnić te informacje jako metadane, która pozwala na przetwarzanie do generowania odpowiednich klientów usługi WCF i komunikacji klientów _stosy_.
+_Punkt końcowy_ opisuje w standardowym sposobie, w jaki wiadomości powinny być wysyłane, jak powinny być wysyłane i jak powinny wyglądać komunikaty. Usługa może uwidaczniać te informacje jako metadane, które klienci mogą przetwarzać w celu generowania odpowiednich _stosów_komunikacji i klientów programu WCF.
 
 ### <a name="communication-protocols"></a>Protokoły komunikacyjne
 
-Jeden wymagany jest element stosu komunikacji _protokół transportowy_. Komunikaty mogą być wysyłane za pośrednictwem intranetowych i internetowych za pomocą transportu wspólne, takie jak HTTP i TCP. Uwzględniono innych transportów obsługujące komunikację z aplikacjami usługi kolejkowania komunikatów i węzły w sieci równorzędnej siatki. Można dodać więcej mechanizmy transportu za pomocą punktów wbudowane rozszerzenia programu WCF.
+Jednym z wymaganych elementów stosu komunikacji jest _Protokół transportowy_. Komunikaty mogą być wysyłane za pośrednictwem sieci intranet i Internetu przy użyciu wspólnych transportów, takich jak HTTP i TCP. Dołączono inne transporty obsługujące komunikację z aplikacjami i węzłami usługi kolejkowania komunikatów w sieci równorzędnej. Więcej mechanizmów transportu można dodać przy użyciu wbudowanych punktów rozszerzenia programu WCF.
 
-Innego wymaganego elementu w stosie komunikacji jest kodowania, które określa sposób formatowania dowolnego z podanym komunikatem. Usługi WCF zapewnia formie następującego kodowania:
+Innym wymaganym elementem w stosie komunikacyjnym jest kodowanie, które określa sposób formatowania danego komunikatu. Funkcja WCF udostępnia następujące kodowania:
 
-- Kodowanie, interoperacyjne kodowania tekstu.
+- Kodowanie tekstu, kodowanie międzyoperacyjnego.
 
-- Komunikat transmisji optymalizacji mechanizm (MTOM) kodowanie, czyli sposób interoperacyjny efektywne wysyłanie danych binarnych bez struktury, do i z usługi.
+- Kodowanie mechanizmu optymalizacji transmisji wiadomości (MTOM), który jest międzyoperacyjnym sposobem wydajnego wysyłania danych binarnych bez struktury do i z usługi.
 
-- Binarny kodowanie transferu wydajne.
+- Kodowanie binarne w celu wydajnego transferu.
 
-Mechanizmy bardziej kodowania (na przykład kompresji kodowanie) można dodać za pomocą punktów wbudowane rozszerzenia programu WCF.
+Więcej mechanizmów kodowania (na przykład kodowania kompresji) można dodać przy użyciu wbudowanych punktów rozszerzenia programu WCF.
 
-### <a name="message-patterns"></a>Wzorce wiadomości
+### <a name="message-patterns"></a>Wzorce komunikatów
 
-Usługi WCF obsługuje kilka wzorce obsługi komunikatów, w tym typu żądanie odpowiedź, jednokierunkowe i komunikację dupleksową. Innego transportu obsługują różne wzorce obsługi komunikatów, a zatem wpływają na typy interakcji, które obsługują. Interfejsy API usługi WCF i środowisko uruchomieniowe również ułatwić do wysyłania wiadomości w sposób bezpieczny i niezawodny.
+Usługa WCF obsługuje kilka wzorców obsługi komunikatów, takich jak żądanie-odpowiedź, jednokierunkowe i dupleksowe. Różne transporty obsługują różne wzorce obsługi komunikatów i w ten sposób wpływają na typy interakcji, które są przez nie obsługiwane. Interfejsy API i środowisko uruchomieniowe WCF ułatwiają również bezpieczne i niezawodne wysyłanie komunikatów.
 
-## <a name="wcf-terms"></a>WCF Terms
+## <a name="wcf-terms"></a>Warunki WCF
 
-Innych pojęć i terminów używanych w dokumentacji usługi WCF są następujące:
+Inne pojęcia i terminy używane w dokumentacji programu WCF obejmują następujące zagadnienia:
 
 **Komunikat**  
- Niezależna jednostka danych, który może zawierać kilka elementów, w tym nagłówki i treść.
+ Samodzielna jednostka danych, która może składać się z kilku części, w tym treści i nagłówków.
 
 **Usługa**  
- Konstrukcja, która udostępnia jeden lub więcej punktów końcowych z każdego punktu końcowego udostępnianie co najmniej jednej operacji usługi.
+ Konstrukcja, która uwidacznia jeden lub więcej punktów końcowych, przy czym każdy punkt końcowy uwidacznia jedną lub więcej operacji usługi.
 
 **Punkt końcowy**  
- Konstrukcja w wiadomości, które są wysyłane lub odbierane (lub obu). Składa się z lokalizacji (adres), która określa, gdzie mogą być wysyłane wiadomości, specyfikacja mechanizm komunikacji (powiązanie), który opisuje, jak mają być wysyłane wiadomości, i definicji zestaw komunikatów, które mogą być wysyłane lub odbierane (lub obie) w tym Lokalizacja (kontraktu usługi), który w tym artykule opisano, jakie komunikaty mogą być wysyłane.
+ Konstrukcja, w której wysyłane lub odbierane są komunikaty (lub oba te elementy). Składa się z lokalizacji (adresu), która określa, gdzie mogą być wysyłane komunikaty, specyfikację mechanizmu komunikacji (powiązanie) opisującą sposób wysyłania komunikatów oraz definicję zestawu komunikatów, które mogą być wysyłane lub odbierane (lub oba te elementy). Lokalizacja (kontrakt usługi) opisująca, jaki komunikat można wysłać.
 
-Usługa WCF jest uwidaczniany w świecie jako kolekcja punktów końcowych.
+Usługa WCF jest narażona na świecie jako zbiór punktów końcowych.
 
-**punkt końcowy aplikacji**  
- Punktu końcowego uwidocznionego przez aplikację i który odnosi się do umowy serwisowej implementowane przez aplikację.
+**Punkt końcowy aplikacji**  
+ Punkt końcowy uwidoczniony przez aplikację i odpowiadający kontraktowi usługi zaimplementowanemu przez aplikację.
 
-**punkt końcowy infrastruktury**  
- Punkt końcowy, który jest udostępniany przez infrastruktury w celu ułatwienia funkcji, które jest wymagane lub udostępniony przez usługę, która odnosi się do umowy serwisowej. Na przykład usługa może być punktem końcowym infrastruktury, która dostarcza informacje o metadanych.
+**Punkt końcowy infrastruktury**  
+ Punkt końcowy, który jest udostępniany przez infrastrukturę w celu ułatwienia funkcjonalności, która jest wymagana lub oferowana przez usługę, która nie jest powiązana z umową usługi. Na przykład usługa może mieć punkt końcowy infrastruktury, który zawiera informacje o metadanych.
 
 **Adres**  
- Określa lokalizację, w której wiadomości są odbierane. Został określony jako jednolite zasobów identyfikator (URI). Część schematu identyfikatora URI nazwy mechanizm transportu, aby osiągnąć adres, takie jak HTTP i TCP. Hierarchiczna część identyfikatora URI zawiera unikatową lokalizację, w których format jest zależny od mechanizm transportu.
+ Określa lokalizację, w której odbierane są komunikaty. Jest on określony jako Uniform Resource Identifier (URI). Część schematu identyfikatora URI nazywa mechanizm transportu, który ma być używany do uzyskiwania dostępu do adresu, takiego jak HTTP i TCP. Hierarchiczna część identyfikatora URI zawiera unikatową lokalizację, której format zależy od mechanizmu transportowego.
 
-Adres punktu końcowego można tworzyć adresy unikatowych punktów końcowych dla każdego punktu końcowego w usłudze, lub w określonych warunkach, aby udostępnić adres między punktami końcowymi. Poniższy przykład pokazuje adres przy użyciu protokołu HTTPS przy użyciu portów innych niż domyślne:
+Adres punktu końcowego umożliwia tworzenie unikatowych adresów punktów końcowych dla każdego punktu końcowego w usłudze lub w określonych warunkach, aby udostępnić adres między punktami końcowymi. Poniższy przykład przedstawia adres przy użyciu protokołu HTTPS z portem innym niż domyślny:
 
-```
+```http
 HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ```
 
 **Powiązanie**  
- Definiuje, jak punkt końcowy komunikuje się dla całego świata. Klucz jest tworzony zestaw o nazwie elementy wiązania, które "stos" jedną nad drugą do tworzenia infrastruktury komunikacji składników. Co najmniej powiązanie definiuje transportu (np. HTTP lub TCP) i kodowanie używane (np. tekstowo lub binarnie). Powiązanie może zawierać elementy wiązania, które określają szczegóły, takie jak mechanizmów zabezpieczeń używanych do zabezpieczenia wiadomości lub wzorzec wiadomości, używany przez punkt końcowy. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usług](../../../docs/framework/wcf/configuring-services.md).
+ Definiuje, w jaki sposób punkt końcowy komunikuje się ze światem. Jest zbudowana z zestawu składników nazywanych elementami powiązania, które "stosują" jeden na drugim, aby utworzyć infrastrukturę komunikacji. Co najmniej, powiązanie definiuje transport (na przykład HTTP lub TCP) i używane kodowanie (na przykład tekst lub binarny). Powiązanie może zawierać elementy wiążące, które określają szczegóły, takie jak mechanizmy zabezpieczeń używane do zabezpieczania komunikatów lub wzorzec wiadomości używany przez punkt końcowy. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usług](../../../docs/framework/wcf/configuring-services.md).
 
-**element powiązania**  
- Reprezentuje określonym wystąpieniem powiązania, takich jak transportu, kodowania, implementacja protokołu poziomie infrastruktury (na przykład WS-ReliableMessaging) lub jakikolwiek inny składnik stosu komunikacji.
+**Element powiązania**  
+ Reprezentuje szczególny element powiązania, na przykład transport, kodowanie, implementację protokołu poziomu infrastruktury (na przykład WS-ReliableMessaging) lub dowolny inny składnik stosu komunikacji.
 
 **Zachowania**  
- Składnik, który kontroluje różne aspekty środowiska wykonawczego usługi, punkt końcowy, określoną operację lub klienta. Zachowania są pogrupowane według zakresu: wspólny zbiór wykonywanych czynności mają wpływ na wszystkie punkty końcowe globalnie, zachowania usług mają wpływ na aspektach związanych tylko z usługą, zachowań punktu końcowego wpływa na tylko właściwości powiązanych z punktu końcowego i zachowania poziomu operacji mają wpływ na określonym operacje. Na przykład jeden zachowanie usługi jest ograniczanie przepustowości, która określa, w jaki sposób usługa reaguje, gdy nadmiar wiadomości nękania przeciąży jego możliwości obsługi. Zachowanie punktu końcowego, z drugiej strony, określa tylko aspektów, które są istotne dla punktów końcowych, takich jak i gdzie można znaleźć poświadczenia zabezpieczeń.
+ Składnik kontrolujący różne aspekty czasu wykonywania usługi, punkt końcowy, konkretną operację lub klienta. Zachowania są pogrupowane według zakresu: typowe zachowania mają na celu globalne wpływ na wszystkie punkty końcowe, zachowania usługi dotyczą tylko aspektów związanych z usługą, zachowania punktów końcowych wpływają wyłącznie na właściwości powiązane z punktem końcowym, a zachowania poziomu operacji mają wpływ na konkretną składowa. Na przykład, jedno zachowanie usługi ma ograniczenia, które określa, jak działa usługa, gdy nadmiarowe komunikaty grożą zaprzeciążeniem możliwości obsługi. Zachowanie punktu końcowego, z drugiej strony, kontroluje tylko aspekty, które są istotne dla punktów końcowych, takich jak i gdzie można znaleźć poświadczenia zabezpieczeń.
 
-**powiązania dostarczane przez system**  
- Usługi WCF obejmuje wiele powiązań dostarczanych przez system. Te są kolekcjami elementów, które są zoptymalizowane pod kątem konkretnych scenariuszy wiązania. Na przykład <xref:System.ServiceModel.WSHttpBinding> zaprojektowano na potrzeby współdziałania z usługami, które implementują różne WS -\* specyfikacji. Te wstępnie zdefiniowanych powiązań zaoszczędzić czas, przez umożliwienie korzystania z tych opcji, które można poprawnie zastosować do danego scenariusza. Jeśli wstępnie zdefiniowanych powiązań nie spełnia wymagań, można utworzyć własnego niestandardowego powiązania.
+**Powiązania dostarczone przez system**  
+ Program WCF zawiera wiele powiązań dostarczonych przez system. Są to kolekcje elementów powiązania, które są zoptymalizowane pod kątem określonych scenariuszy. Na przykład program <xref:System.ServiceModel.WSHttpBinding> jest przeznaczony do współdziałania z usługami, które implementują\* różne specyfikacje WS-Specification. Te wstępnie zdefiniowane powiązania oszczędzają czas, wyświetlając tylko te opcje, które można prawidłowo zastosować do konkretnego scenariusza. Jeśli wstępnie zdefiniowane powiązanie nie spełnia wymagań użytkownika, można utworzyć własne niestandardowe powiązania.
 
-**Konfiguracja i kodowania**  
- Kontrola aplikacji może odbywać się albo za pomocą kodowania, za pomocą konfiguracji lub jako kombinację obu tych. Konfiguracja ma tę zaletę, umożliwiając kogoś innego niż dla deweloperów (na przykład administrator sieci), aby ustawić parametry klienta i usługi, po zapisaniu kod bez konieczności ponownego kompilowania. Konfiguracja nie tylko umożliwia ustawianie wartości, takie jak adresy punktów końcowych, ale umożliwia także ściślej kontrolować, umożliwiając Dodaj punkty końcowe, powiązania i zachowania. Kodowania umożliwia deweloperowi zachować ścisłą kontrolę nad wszystkie składniki usługi lub klienta, a wszystkie ustawienia zrobić za pomocą konfiguracji można być kontrolowane i w razie potrzeby zastąpione przez kod.
+**Konfiguracja a kodowanie**  
+ Kontrolę nad aplikacją można wykonać za pomocą kodowania, za pomocą konfiguracji lub kombinacji obu tych elementów. W konfiguracji można umożliwić innym osobom niż deweloper (na przykład administratora sieci) Ustawianie parametrów klienta i usługi po napisaniu kodu i bez konieczności ponownego kompilowania. Konfiguracja umożliwia nie tylko Ustawianie wartości takich jak adresy punktów końcowych, ale również umożliwia dalsze kontrolowanie, umożliwiając dodawanie punktów końcowych, powiązań i zachowań. Kodowanie umożliwia deweloperowi zachowanie ścisłej kontroli nad wszystkimi składnikami usługi lub klienta, a także wszelkie ustawienia wykonywane przez konfigurację, a w razie potrzeby przesłonięte przez kod.
 
 **Operacja usługi**  
- Procedura zdefiniowane w kodzie usługi, który implementuje funkcje dla danej operacji. Ta operacja jest uwidaczniany dla klientów jako metody dla klienta programu WCF. Metoda może zwracają wartość, można wykonać opcjonalne liczbę argumentów, lub nie przyjmują argumentów i zwrócić odpowiedź nie. Na przykład operacja, która działa jako prosty "Hello" może służyć jako powiadomienie o obecności klienta lub w celu rozpoczęcia serii operacji.
+ Procedura zdefiniowana w kodzie usługi, która implementuje funkcje dla operacji. Ta operacja jest udostępniana klientom jako metody na kliencie WCF. Metoda może zwracać wartość i może przyjmować opcjonalną liczbę argumentów lub nie przyjmować argumentów i nie zwraca odpowiedzi. Na przykład operacja, która działa jako prosta "Hello", może służyć jako powiadomienie o obecności klienta i rozpocząć serię operacji.
 
-**kontrakt usługi**  
- Łączy ze sobą wiele powiązanych operacji w pojedynczą jednostkę funkcjonalności. Kontrakt można zdefiniować ustawienia poziomu usługi, takie jak przestrzeń nazw usługi, odpowiedni kontrakt wywołania zwrotnego i inne takie ustawienia. W większości przypadków kontrakt jest definiowany przez tworzenie interfejsu w wybranym języku programowania i stosowanie <xref:System.ServiceModel.ServiceContractAttribute> atrybutu do interfejsu. Wyniki kodu rzeczywistej usługi przez zaimplementowanie interfejsu.
+**Kontrakt usługi**  
+ Łączy wiele operacji związanych z pojedynczą jednostką funkcjonalną. Kontrakt może definiować ustawienia poziomu usługi, takie jak przestrzeń nazw usługi, odpowiedni kontrakt wywołania zwrotnego i inne ustawienia. W większości przypadków umowa jest definiowana przez utworzenie interfejsu w wybranym języku programowania i zastosowanie <xref:System.ServiceModel.ServiceContractAttribute> atrybutu do interfejsu. Rzeczywisty kod usługi powstaje przez implementację interfejsu.
 
 **Kontrakt operacji**  
- Kontrakt operacji określa parametry oraz zwracany typ operacji. Podczas tworzenia interfejsu, który definiuje kontrakt usługi, oznaczającego kontrakt operacji, stosując <xref:System.ServiceModel.OperationContractAttribute> atrybut do każdej definicji metody, która jest częścią kontraktu. Operacje mogą być modelowane jako biorąc pojedynczy komunikat i zwraca pojedynczą wiadomość lub pobierania zestaw typów i zwracająca typ. W tym ostatnim przypadku system określi format wiadomości, które muszą być wymieniane dla tej operacji.
+ Kontrakt operacji definiuje parametry i zwracany typ operacji. Podczas tworzenia interfejsu, który definiuje kontrakt usługi, oznacza to, że kontrakt operacji jest stosowany przez <xref:System.ServiceModel.OperationContractAttribute> zastosowanie atrybutu do każdej definicji metody, która jest częścią kontraktu. Operacje mogą być modelowane jako przejmowanie pojedynczej wiadomości i zwracanie pojedynczej wiadomości lub jako zestawu typów i zwracanie typu. W tym drugim przypadku system określi Format komunikatów, które muszą być wymieniane dla tej operacji.
 
-**kontrakt komunikatu**  
- W tym artykule opisano formatu wiadomości. Na przykład deklaruje, czy elementy wiadomości powinny przejść w nagłówki i treść, jaki poziom zabezpieczeń powinny być stosowane do elementy wiadomości i tak dalej.
+**Kontrakt komunikatu**  
+ Opisuje format wiadomości. Na przykład deklaruje, czy elementy wiadomości powinny znajdować się w nagłówkach, a treści, jakiego poziomu zabezpieczeń należy zastosować do elementów tego komunikatu itd.
 
-**kontrakt błędu**  
- Może być skojarzony z operacją usługi do określenia błędów, które mogą być zwracane do obiektu wywołującego. Operacja może mieć zero lub więcej błędów skojarzonych z nim. Takie błędy występują błędy protokołu SOAP, które są modelowane jako wyjątki w modelu programowania.
+**Umowa dotycząca błędów**  
+ Można skojarzyć z operacją usługi, aby zauważyć błędy, które mogą zostać zwrócone do obiektu wywołującego. Z operacją może być skojarzonych zero lub więcej błędów. Te błędy są błędami protokołu SOAP, które są modelowane jako wyjątki w modelu programowania.
 
-**kontrakt danych**  
- Opisy w metadanych typów danych, które korzysta z usługi. Dzięki temu inne osoby do współdziałania z usługą. Typy danych można w dowolnej części wiadomości, na przykład, jako parametry typów lub je zwracają. Usługa używa tylko typów prostych, czy nie trzeba jawnie użyć kontraktów danych.
+**Kontrakt danych**  
+ Opisy w metadanych typów danych używanych przez usługę. Dzięki temu inne osoby mogą współdziałać z usługą. Typy danych mogą być używane w dowolnej części komunikatu, na przykład jako parametry lub typy zwracane. Jeśli usługa używa tylko typów prostych, nie ma potrzeby jawnego używania kontraktów danych.
 
 **Hosting**  
- Usługa musi być obsługiwana przez niektóre procesy. A _hosta_ to aplikacja, która określa okres istnienia usługi. Usługi można samodzielnie hostowane lub zarządza istniejącego procesu hostingu.
+ Usługa musi być hostowana w pewnym procesie. _Host_ to aplikacja, która kontroluje okres istnienia usługi. Usługi mogą być samoobsługowe lub zarządzane przez istniejący proces hostingu.
 
-**hostowanie Samoobsługowe**  
- Usługa, która działa w ramach aplikacji procesu utworzonego przez dewelopera. Deweloper określa jego okres istnienia, ustawia właściwości usługi, zostanie otwarty usługi (która ustawia go w trybie nasłuchiwania) i zamknięcie usługi.
+**Usługa samodzielna**  
+ Usługa działająca w ramach aplikacji przetwarzanej utworzonej przez dewelopera. Deweloper kontroluje swój okres istnienia, ustawia właściwości usługi, otwiera usługę (która ustawia ją w tryb nasłuchiwania) i zamyka usługę.
 
-**proces hostingu**  
- Aplikacja, która jest przeznaczona do hostowania usług. Obejmują one Internet Information Services (IIS), usługi aktywacji Windows (WAS) i usługi Windows. W tych scenariuszach hostowanych host steruje okres istnienia usługi. Na przykład za pomocą usług IIS można skonfigurować katalog wirtualny, który zawiera plik zestawu i konfiguracji usługi. Gdy wiadomość zostaje odebrana, usługi IIS uruchamia usługę i kontroluje cały okres ich istnienia.
+**Proces hostingu**  
+ Aplikacja, która jest przeznaczona do hostowania usług. Obejmują one Internet Information Services (IIS), usługi aktywacji systemu Windows (WAS) i usługi systemu Windows. W tych scenariuszach hostowanych Host kontroluje okres istnienia usługi. Na przykład przy użyciu usług IIS można skonfigurować katalog wirtualny, który zawiera zestaw usługi i plik konfiguracji. Po odebraniu komunikatu Usługa IIS uruchamia usługę i kontroluje jej okres istnienia.
 
 **Tworzenie wystąpienia**  
- Usługa wykorzystuje model wystąpień. Istnieją trzy modele wystąpień: "jeden" w jakiej pojedynczy obiekt CLR usług wszystkich klientów; " dla połączenia"w jakiej tworzony jest nowy obiekt CLR, aby obsłużyć każde wywołanie klienta; i "wg"sesji, w której zestaw CLR obiektów, zostanie utworzony, jeden dla każdego oddzielną sesję. Wybór modelu wystąpień, zależy od wymagań aplikacji i oczekiwanego wzorca użycia usługi.
+ Usługa ma model wystąpień. Istnieją trzy modele wystąpienia: "Single", w których pojedynczej usłudze obiektów CLR wszyscy klienci; " na wywołanie "w którym tworzony jest nowy obiekt CLR w celu obsługi każdego wywołania klienta; i "na sesję", w której tworzony jest zestaw obiektów CLR, po jednej dla każdej oddzielnej sesji. Wybór modelu wystąpienia zależy od wymagań aplikacji i oczekiwanego wzorca użycia usługi.
 
 **Aplikacja kliencka**  
- Program, który wymienia komunikatów za pomocą jednego lub więcej punktów końcowych. Aplikacja kliencka rozpoczyna się od tworzenia wystąpienia obiektu klienta programu WCF i wywoływania metod klienta platformy WCF. Należy pamiętać, że pojedynczej aplikacji może być zarówno klient, jak i usługi.
+ Program, który wymienia komunikaty z co najmniej jednym elementem końcowym. Aplikacja kliencka rozpoczyna się od utworzenia wystąpienia klienta WCF i wywoływania metod klienta programu WCF. Należy pamiętać, że pojedyncza aplikacja może być zarówno klientem, jak i usługą.
 
 **Channel**  
- Konkretną implementację elementu powiązania. Powiązanie reprezentuje konfiguracji, a kanał jest implementacja skojarzone z tej konfiguracji. Dlatego jest skojarzony z każdego elementu powiązania kanału. Kanały stosu na siebie, aby utworzyć konkretną implementację powiązania: stos kanału.
+ Konkretna implementacja elementu powiązania. Powiązanie reprezentuje konfigurację, a kanał jest implementacją skojarzoną z tą konfiguracją. W związku z tym istnieje kanał skojarzony z każdym elementem powiązania. Stos kanałów na siebie, aby utworzyć konkretną implementację powiązania: stos kanałów.
 
-**Klienta programu WCF**  
- Konstrukcja aplikacji klienckiej, która udostępnia operacje usługi jako metody (platforma .NET Framework programowania w języku, np. Visual Basic lub Visual C#). Każda aplikacja może obsługiwać klienta WCF, łącznie z aplikacją, który jest hostem usługi. W związku z tym istnieje możliwość utworzyć usługę, która obejmuje klienci WCF innych usług.
+**Klient WCF**  
+ Konstrukcja klient-aplikacja, która uwidacznia operacje usługi jako metody (w wybranym języku programowania .NET Framework, takich jak Visual Basic lub Wizualizacja C#). Każda aplikacja może obsługiwać klienta WCF, w tym aplikację, która hostuje usługę. W związku z tym można utworzyć usługę, która obejmuje klientów programu WCF innych usług.
 
-Klienta programu WCF mogą być generowane automatycznie za pomocą [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) i wskazując uruchomiona usługa, która publikuje metadane.
+Klienta programu WCF można automatycznie wygenerować przy użyciu narzędzia do obsługi [metadanych ServiceModel (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) i wskazać w uruchomionej usłudze, która publikuje metadane.
 
 **Metadane**  
- W usłudze opisuje cechy usługa, która musi wiedzieć, do komunikowania się z usługą zewnętrznej jednostki. Metadane mogą być używane przez [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do generowania klienta WCF i towarzyszące konfiguracji, który aplikacja kliencka może służyć do interakcji z usługą.
+ W usłudze program opisuje charakterystykę usługi, którą zewnętrzna jednostka musi zrozumieć, aby komunikować się z usługą. Metadane mogą być używane przez narzędzie do obsługi [metadanych ServiceModel (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) w celu wygenerowania klienta programu WCF i dołączonej konfiguracji, która może być używana przez aplikację kliencką do współpracy z usługą.
 
-Metadane udostępnianych przez usługę obejmuje dokumentów schematu XML definiujące kontraktu danych, usługi i dokumenty WSDL, które opisują metody usługi.
+Metadane udostępniane przez usługę obejmują dokumenty schematu XML, które definiują kontrakt danych usługi i dokumenty WSDL opisujące metody usługi.
 
-Po włączeniu metadanych dla usługi jest generowany automatycznie przez architekturę WCF, sprawdzając usługę i jej punkty końcowe. Aby opublikować metadanych z usługi, musisz jawnie włączyć zachowanie metadanych.
+Po włączeniu tej funkcji metadane usługi są generowane automatycznie przez program WCF przez sprawdzenie usługi i jej punktów końcowych. Aby opublikować metadane z usługi, należy jawnie włączyć zachowanie metadanych.
 
 **Zabezpieczenia**  
- W programie WCF obejmuje poufność (szyfrowanie wiadomości, aby zapobiec podsłuchiwaniu), integralność (oznacza wykrywania naruszeniu wiadomości), uwierzytelniania (oznacza sprawdzanie poprawności serwery i klienci) i autoryzacji (kontrola dostępu do zasoby). Te funkcje są udostępniane przez albo wykorzystaniem istniejących mechanizmów zabezpieczeń, np. TLS za pośrednictwem protokołu HTTP (znany także jako HTTPS) lub wdrażanie co najmniej jedną z różnych WS -\* specyfikacje zabezpieczeń.
+ W programie WCF obejmuje poufność (szyfrowanie komunikatów, aby zapobiec podsłuchiwaniu), integralność (środki na potrzeby wykrywania manipulowania komunikatem), uwierzytelnianie (sposób sprawdzania poprawności serwerów i klientów) oraz autoryzację (kontrolę dostępu do zasoby). Te funkcje są udostępniane przy użyciu istniejących mechanizmów zabezpieczeń, takich jak TLS za pośrednictwem protokołu HTTP (znanego również jako https) lub przez implementację co najmniej jednej z różnych\* specyfikacji WS-Security.
 
-**Tryb zabezpieczeń Transport**  
- Określa, że poufność, integralność i uwierzytelniania są udostępniane przez mechanizmy warstwy transportu (np. HTTPS). Korzystając z transportu, takich jak HTTPS, w tym trybie ma tę zaletę, są wydajne pod względem wydajności i dobrze zrozumiałych ze względu na jego występowania w Internecie. Wadą jest to, że tego rodzaju zabezpieczeń są stosowane osobno na każdy przeskok w ścieżce komunikacji wprowadzania komunikacji podatny na ataki man-in middle".
+**Tryb zabezpieczeń transportu**  
+ Określa, że poufność, integralność i uwierzytelnianie są udostępniane przez mechanizmy warstwy transportowej (takie jak HTTPS). W przypadku korzystania z transportu, takiego jak HTTPS, ten tryb ma zaletę wydajnej wydajności i jest zrozumiały ze względu na jego powszechność w Internecie. Wadą jest to, że ten rodzaj zabezpieczeń jest stosowany osobno dla każdego przeskoku w ścieżce komunikacji, co sprawia, że komunikacja jest podatna na ataki "man in the middle".
 
-**Tryb zabezpieczeń komunikatów**  
- Określa, czy zabezpieczenia dzięki wdrożeniu co najmniej jednym specyfikacji zabezpieczenia, takie jak specyfikację o nazwie [zabezpieczeń usług sieci Web: Zabezpieczenia komunikatów SOAP](https://go.microsoft.com/fwlink/?LinkId=94684). Każdy komunikat zawiera mechanizmy niezbędne do zapewnienia bezpieczeństwa podczas jego przesyłania i włączyć odbiorniki naruszeniem i do odszyfrowywania wiadomości. W tym sensie zabezpieczenia są hermetyzowane w ramach każdej wiadomości, zapewniając bezpieczeństwo end-to-end wielu przeskoków. Ponieważ informacje o zabezpieczeniach staje się częścią wiadomości, istnieje również możliwość obejmują wiele rodzajów poświadczenia za pomocą komunikatu (są one określane jako _oświadczeń_). Takie podejście również ma tę zaletę, włączania komunikat, aby bezpiecznie przesyłane za pośrednictwem dowolnego transportu, w tym wiele transportu między jego początkowego i docelowego. Wadą tego podejścia jest złożoności mechanizmów kryptograficznych zatrudnieni, wynikiem wpływ na wydajność.
+**Tryb zabezpieczeń wiadomości**  
+ Określa, że zabezpieczenia są zapewniane przez implementację co najmniej jednej specyfikacji zabezpieczeń, takiej jak specyfikacja o [nazwie zabezpieczenia usług w sieci Web: Zabezpieczenia](https://go.microsoft.com/fwlink/?LinkId=94684)komunikatów protokołu SOAP. Każdy komunikat zawiera niezbędne mechanizmy zapewnienia bezpieczeństwa w trakcie jego przesyłania oraz umożliwienie odbiornikom wykrywania naruszenia i odszyfrowywania wiadomości. W tym sensie zabezpieczenia są hermetyzowane w każdym komunikacie, zapewniając kompleksowe zabezpieczenia dla wielu przeskoków. Ze względu na to, że informacje o zabezpieczeniach staną się częścią komunikatu, można również uwzględnić wiele rodzajów poświadczeń z komunikatem (są one określane jako _oświadczenia_). Takie podejście umożliwia również umożliwienie bezpiecznego przesyłania komunikatów w ramach dowolnego transportu, w tym wielu transportów między jej źródłem i miejscem docelowym. Wadą tej metody jest złożoność stosowanych mechanizmów kryptograficznych, co skutkuje wpływem na wydajność.
 
-**transportu przy użyciu trybu zabezpieczenia poświadczeń wiadomości**  
- Określa użycie warstwy transportowej zapewnienie poufności, uwierzytelniania i integralności wiadomości, gdy każda komunikatów może zawierać wiele poświadczeń (oświadczenia) są wymagane przez odbiorców w wiadomości.
+**Transport z użyciem poświadczeń komunikatów tryb zabezpieczeń**  
+ Określa użycie warstwy transportowej w celu zapewnienia poufności, uwierzytelniania i integralności komunikatów, natomiast każdy komunikat może zawierać wiele poświadczeń (oświadczeń) wymaganych przez odbiorniki wiadomości.
 
 **WS-\***  
- Skrót dla elementów z wciąż rosnącego zestawu specyfikacji usługi sieci Web (WS), takich jak usługi WS-Security, WS-ReliableMessaging i tak dalej, które są implementowane w usłudze WCF.
+ Skrót dla rosnącego zestawu specyfikacji usługi sieci Web (WS), takich jak WS-Security, WS-ReliableMessaging i tak dalej, które są implementowane w programie WCF.
 
 ## <a name="see-also"></a>Zobacz także
 

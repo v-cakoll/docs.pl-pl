@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: e8a0d28919d4d26e69fb5a5f926b0e96270a2407
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: d983ee09704ff69fdedfa95a31942161162f73eb
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925888"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970653"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Testowanie biblioteki .NET Standard na platformie .NET Core w programie Visual Studio 2017
 
@@ -22,6 +22,8 @@ W obszarze [Kompilowanie biblioteki .NET standard C# z programem i .NET Core w p
 ## <a name="creating-a-unit-test-project"></a>Tworzenie projektu testu jednostkowego
 
 Aby utworzyć projekt testu jednostkowego, wykonaj następujące czynności:
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 

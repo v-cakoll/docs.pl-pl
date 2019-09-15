@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2bfb1078478aea5dffab66ba5f8c7d553262968
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: e3b396210cf77cacf3d03439af24de40d2dadeee
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851590"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971170"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Pobieranie zasobów w aplikacjach klasycznych
 W przypadku pracy z zlokalizowanymi zasobami w .NET Framework aplikacjach klasycznych najlepiej jest spakować zasoby dla kultury domyślnej lub neutralnej z zestawem głównym i utworzyć oddzielny zestaw satelicki dla każdego języka lub kultury obsługiwanej przez aplikację. Następnie można użyć <xref:System.Resources.ResourceManager> klasy zgodnie z opisem w następnej sekcji, aby uzyskać dostęp do nazwanych zasobów. Jeśli nie zdecydujesz się na osadzanie zasobów w głównym zestawie i zestawach satelickich, możesz również uzyskać dostęp do plików binarnych. resources bezpośrednio, zgodnie z opisem w sekcji [pobieranie zasobów z plików. resources](#from_file) w dalszej części tego artykułu.  Aby pobrać zasoby w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacjach, zobacz [Tworzenie i pobieranie zasobów w aplikacjach ze sklepu Windows](https://go.microsoft.com/fwlink/p/?LinkID=241674) w centrum deweloperów systemu Windows.  
@@ -142,7 +142,7 @@ GetObject.exe
   
  Aby włączyć obsługę pełnej wersji zestawu, zalecamy wdrożenie zestawów o silnych nazwach w [globalnej pamięci podręcznej zestawów](../../../docs/framework/app-domains/gac.md) i wdrażanie zestawów, które nie mają silnych nazw w katalogu aplikacji. Jeśli chcesz wdrożyć zestawy o silnych nazwach w katalogu aplikacji, nie będzie można zwiększyć numeru wersji zestawu satelickiego podczas aktualizowania zestawu. Zamiast tego należy wykonać aktualizację w miejscu, w której Zastąp istniejący kod zaktualizowanym kodem i zachować ten sam numer wersji. Na przykład jeśli chcesz zaktualizować wersję 1.0.0.0 zestawu satelickiego za pomocą w pełni określonej nazwy zestawu "MojaApl. resources, Version = 1.0.0.0, Culture = de, PublicKeyToken = b03f5f11d50a3a", Zastąp ją zainstalowaną wersją MojaApl. resources. dll, która została skompilowane z tą samą, w pełni określoną nazwą zestawu "MojaApl. resources, Version = 1.0.0.0, Culture = de, PublicKeyToken = b03f5f11d50a3a". Należy pamiętać, że używanie aktualizacji w miejscu w plikach zestawu satelickiego utrudnia aplikacji dokładne określenie wersji zestawu satelickiego.  
   
- Aby uzyskać więcej informacji o wersji zestawu, zobacz [przechowywanie wersji zestawu](../../../docs/framework/app-domains/assembly-versioning.md) i [jak środowisko uruchomieniowe lokalizuje zestawy](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ Aby uzyskać więcej informacji o wersji zestawu, zobacz [przechowywanie wersji zestawu](../../standard/assembly/versioning.md) i [jak środowisko uruchomieniowe lokalizuje zestawy](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
 <a name="from_file"></a>   
 ## <a name="retrieving-resources-from-resources-files"></a>Pobieranie zasobów z plików Resources  

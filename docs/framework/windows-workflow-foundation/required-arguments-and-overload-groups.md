@@ -2,12 +2,12 @@
 title: Wymagane argumenty i grupy metod przeciążonych
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: 5249cbb127064ffa5023074481a47decad279128
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 84384e90be0036036477d9b4249832f544e17d08
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964916"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989307"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Wymagane argumenty i grupy metod przeciążonych
 Działania można skonfigurować tak, aby pewne argumenty były powiązane z prawidłowym działaniem do wykonania. Ten `RequiredArgument` atrybut służy do wskazywania, że określone argumenty działania są wymagane `OverloadGroup` , a atrybut jest używany do grupowania kategorii wymaganych argumentów razem. Przy użyciu atrybutów autorzy działań mogą zapewnić proste lub złożone konfiguracje weryfikacji działania.  
@@ -108,8 +108,8 @@ class CreateLocation: Activity
   
  W poniższym przykładzie z przykładu działania dotyczące [dostępu do bazy danych](./samples/database-access-activities.md) istnieją dwie grupy przeciążeń: `ConnectionString` i `ConfigFileSectionName`. Aby to działanie było prawidłowe, `ProviderName` argumenty i `ConnectionString` muszą `ConfigName` być powiązane albo argument, ale nie oba.  
   
-```  
-Public class DbUpdate: AsyncCodeActivity  
+```csharp  
+public class DbUpdate: AsyncCodeActivity  
 {  
     [RequiredArgument]  
     [OverloadGroup("ConnectionString")]  

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 09f0a1b34e88be995fb9a386161a930457e4bb56
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: d48398f31c1452821292a6feb2867dbd2971e739
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168990"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991417"
 ---
 # <a name="xaml-syntax-in-detail"></a>Szczegóły składni XAML
 Ten temat definiuje warunki, które są używane do opisywania elementów składni języka XAML. Te warunki są często używane w całej pozostałej części tej dokumentacji, zarówno w przypadku dokumentacji WPF, jak i dla innych struktur, które używają języka XAML lub podstawowych pojęć XAML włączonych przez obsługę języka XAML na poziomie system. XAML. W tym temacie opisano podstawową terminologię wprowadzoną w temacie [Omówienie języka XAML (WPF)](xaml-overview-wpf.md).  
@@ -112,7 +112,7 @@ Ten temat definiuje warunki, które są używane do opisywania elementów skład
   
  W przypadku wyliczeń flagwise zachowanie jest oparte na <xref:System.Enum.Parse%2A?displayProperty=nameWithType> metodzie. Można określić wiele wartości dla wyliczenia flagwise, oddzielając poszczególne wartości przecinkami. Nie można jednak łączyć wartości wyliczenia, które nie są flagwise. Na przykład nie można użyć składni przecinka, aby próbować utworzyć obiekt <xref:System.Windows.Trigger> , który działa na wielu warunkach wyliczenia nieflagi:  
   
-```  
+```xaml  
 <!--This will not compile, because Visibility is not a flagwise enumeration.-->  
 ...  
 <Trigger Property="Visibility" Value="Collapsed,Hidden">  
@@ -197,7 +197,7 @@ Ten temat definiuje warunki, które są używane do opisywania elementów skład
 ### <a name="xaml-content-property-values-must-be-contiguous"></a>Wartości właściwości zawartości XAML muszą być ciągłe  
  Wartość właściwości zawartości XAML musi zostać nadana całkowicie przed lub całkowicie po jakimkolwiek innym elementom właściwości w tym elemencie obiektu. Jest to prawdziwe, czy wartość właściwości zawartości XAML jest określona jako ciąg, czy jako jeden lub więcej obiektów. Na przykład następujące znaczniki nie są analizowane:  
   
-```  
+```xaml  
 <Button>I am a   
   <Button.Background>Blue</Button.Background>  
   blue button</Button>  
@@ -205,7 +205,7 @@ Ten temat definiuje warunki, które są używane do opisywania elementów skład
   
  Jest to niedozwolone, ponieważ w przypadku, gdy składnia została jawnie wprowadzona przy użyciu składni elementu właściwości dla właściwości content, właściwość content zostanie ustawiona dwukrotnie:  
   
-```xml  
+```xaml  
 <Button>  
   <Button.Content>I am a </Button.Content>  
   <Button.Background>Blue</Button.Background>  
@@ -215,7 +215,7 @@ Ten temat definiuje warunki, które są używane do opisywania elementów skład
   
  Podobnym przykładem jest to, że właściwość content jest kolekcją, a elementy podrzędne są przeplatane z elementami właściwości:  
   
-```xml  
+```xaml  
 <StackPanel>  
   <Button>This example</Button>  
   <StackPanel.Resources>  
@@ -270,7 +270,7 @@ Ten temat definiuje warunki, które są używane do opisywania elementów skład
   
 <a name="attached_events"></a>   
 ## <a name="attached-events"></a>Dołączone zdarzenia  
- Dołączone zdarzenia to inne koncepcje programowania wprowadzone w języku XAML, w którym zdarzenia mogą być definiowane przez określony typ, ale programy obsługi mogą być dołączane do dowolnego elementu obiektu. W implementacji WOF często typ, który definiuje dołączone zdarzenie, jest typem statycznym, który definiuje usługę i czasami te dołączone zdarzenia są udostępniane przez alias zdarzenia kierowanego w typach, które uwidaczniają usługę. Procedury obsługi dla dołączonych zdarzeń są określane za poorednictwem składni atrybutów. Podobnie jak w przypadku dołączonych zdarzeń, składnia atrybutu jest rozwinięta dla dołączonych zdarzeń, aby zezwolić na *Właściwość TypeName*. Nazwa zdarzenia użycie, gdzie *TypeName* jest klasą `Remove` , która `Add` zapewnia metody dostępu do obsługi zdarzeń dla dołączonej infrastruktury zdarzeń, a EventName jest nazwą zdarzenia.  
+ Dołączone zdarzenia to inne koncepcje programowania wprowadzone w języku XAML, w którym zdarzenia mogą być definiowane przez określony typ, ale programy obsługi mogą być dołączane do dowolnego elementu obiektu. W implementacji WOF często typ, który definiuje dołączone zdarzenie, jest typem statycznym, który definiuje usługę i czasami te dołączone zdarzenia są udostępniane przez alias zdarzenia kierowanego w typach, które uwidaczniają usługę. Procedury obsługi dla dołączonych zdarzeń są określane za poorednictwem składni atrybutów. Podobnie jak w przypadku dołączonych zdarzeń, składnia atrybutu jest rozwinięta dla dołączonych zdarzeń, aby zezwolić na *Właściwość TypeName*. Nazwa *zdarzenia użycie,* gdzie *TypeName* jest klasą `Remove` , która `Add` zapewnia metody dostępu do obsługi zdarzeń dla dołączonej infrastruktury zdarzeń, a EventName jest nazwą zdarzenia.  
   
 <a name="anatomy_of_a_xaml_page_root_element"></a>   
 ## <a name="anatomy-of-a-xaml-root-element"></a>Anatomia elementu głównego XAML  

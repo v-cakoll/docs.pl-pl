@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 643f0644bdeb2d3bdf6a08b482d0494affd92209
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: ef977206bf0d5b818cfd9779f063fbc2bd50632e
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894642"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971845"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Narzędzie silnych nazw)
-Narzędzie silnych nazw (SN. exe) pomaga podpisywać zestawy o [silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe dostarcza opcje do zarządzania kluczami, generowania podpisów i ich weryfikacji.  
+Narzędzie silnych nazw (SN. exe) pomaga podpisywać zestawy o [silnych nazwach](../../standard/assembly/strong-named.md). Sn.exe dostarcza opcje do zarządzania kluczami, generowania podpisów i ich weryfikacji.  
   
 > [!WARNING]
 > Nie należy polegać na silnych nazwach zabezpieczeń. Zapewniają one tylko unikatową tożsamość.
 
- Aby uzyskać więcej informacji na temat silnych nazw i zestawów o silnych nazwach, zobacz [ [zestawy o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md) i instrukcje: Podpisz zestaw silną nazwą](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).  
+ Aby uzyskać więcej informacji na temat silnych nazw i zestawów o silnych nazwach, zobacz [ [zestawy o silnych nazwach](../../standard/assembly/strong-named.md) i instrukcje: Podpisz zestaw silną nazwą](../../standard/assembly/sign-strong-name.md).  
   
  Narzędzie silnych nazw jest automatycznie instalowane z Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
 
@@ -128,5 +128,5 @@ sn -d MyContainer
 
 - [Narzędzia](../../../docs/framework/tools/index.md)
 - [Al.exe (konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [Zestawy o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Zestawy o silnych nazwach](../../standard/assembly/strong-named.md)
 - [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

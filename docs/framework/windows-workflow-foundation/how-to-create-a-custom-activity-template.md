@@ -2,50 +2,50 @@
 title: 'Instrukcje: Tworzenie niestandardowego szablonu działań'
 ms.date: 03/30/2017
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-ms.openlocfilehash: f54a625fbe5497406645ea29f824d361c0392eb3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4ec84658dbe3039a4d7d714f8da183e6a5eb6ca4
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637727"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989712"
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>Instrukcje: Tworzenie niestandardowego szablonu działań
 
-Szablony niestandardowe działania są używane do dostosowywania konfiguracji działań, w tym złożone działania niestandardowe, aby użytkownicy muszą utworzyć każde działanie indywidualnie i skonfigurować ich właściwości i inne ustawienia ręcznie. Te szablony niestandardowe mogą być udostępniane w **przybornika** na [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] lub rehostowanym projektancie, z którego użytkowników można przeciągnąć je na powierzchni projektowej wstępnie skonfigurowane. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] jest dostarczany z dobrym przykładem takich szablonów: [SendAndReceiveReply, Projektant szablonów](/visualstudio/workflow-designer/sendandreceivereply-template-designer) i [ReceiveAndSendReply, Projektant szablonów](/visualstudio/workflow-designer/receiveandsendreply-template-designer) w [Projektanci działań Messaging](/visualstudio/workflow-designer/messaging-activity-designers) kategorii.
+Niestandardowe szablony działań służą do dostosowywania konfiguracji działań, w tym niestandardowych działań złożonych, dzięki czemu użytkownicy nie muszą tworzyć poszczególnych działań osobno i konfigurować ich właściwości oraz inne ustawienia ręcznie. Te szablony niestandardowe można udostępnić w **przyborniku** w [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] programie lub z poziomu projektanta, z którego użytkownicy mogą przeciągać je na wstępnie skonfigurowaną powierzchnię projektu. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]są dostarczane z dobrymi przykładami takich szablonów: [Projektant szablonów SendAndReceiveReply](/visualstudio/workflow-designer/sendandreceivereply-template-designer) oraz [Projektant szablonów ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer) w kategorii [Projektant działań związanych z obsługą wiadomości](/visualstudio/workflow-designer/messaging-activity-designers) .
 
- Pierwsza procedura w tym temacie opisano sposób tworzenia niestandardowego szablonu działań dla **opóźnienie** działanie i druga procedura krótko opisano sposób udostępnić go w [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] można sprawdzić, czy działa szablonu niestandardowego.
+ W pierwszej procedurze w tym temacie opisano sposób tworzenia niestandardowego szablonu działania dla działania **opóźnienia** i drugiej procedury opisano krótko, jak udostępnić go w programie, [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] aby sprawdzić, czy szablon niestandardowy działa.
 
- Szablony niestandardowe działanie musi implementować <xref:System.Activities.Presentation.IActivityTemplateFactory>. Interfejs ma jeden <xref:System.Activities.Presentation.IActivityTemplateFactory.Create%2A> metoda, za pomocą którego można tworzyć i konfigurować wystąpienia działania używany w szablonie.
+ Niestandardowe szablony działań muszą implementować <xref:System.Activities.Presentation.IActivityTemplateFactory>. Interfejs ma pojedynczą <xref:System.Activities.Presentation.IActivityTemplateFactory.Create%2A> metodę, za pomocą której można tworzyć i konfigurować wystąpienia działań używane w szablonie.
 
-## <a name="to-create-a-template-for-the-delay-activity"></a>Aby utworzyć szablon działania opóźnienia
+## <a name="to-create-a-template-for-the-delay-activity"></a>Aby utworzyć szablon dla działania opóźnionego
 
-1. Start Visual Studio 2010.
+1. Uruchom program Visual Studio 2010.
 
-2. Na **pliku** menu wskaż **New**, a następnie wybierz pozycję **projektu**.
+2. W menu **plik** wskaż polecenie **Nowy**, a następnie wybierz pozycję **projekt**.
 
      **Nowy projekt** zostanie otwarte okno dialogowe.
 
-3. W **typów projektów** okienku wybierz **przepływu pracy** albo **Visual C#** projektów lub **języka Visual Basic** grupowania w zależności od usługi Preferencje językowe.
+3. W okienku **typy projektów** wybierz **przepływ pracy** z projektów **wizualnych C#**  lub grup **Visual Basic** w zależności od preferencji językowych.
 
-4. W **szablony** okienku wybierz **Biblioteka działań**.
+4. W okienku **Szablony** wybierz pozycję **Biblioteka działań**.
 
-5. W **nazwa** wprowadź `DelayActivityTemplate`.
+5. W polu **Nazwa** wprowadź `DelayActivityTemplate`wartość.
 
-6. Zaakceptuj ustawienia domyślne w **lokalizacji** i **Nazwa rozwiązania** pól tekstowych, a następnie kliknij **OK**.
+6. Zaakceptuj wartości domyślne w polach tekstowych **Lokalizacja** i **Nazwa rozwiązania** , a następnie kliknij przycisk **OK**.
 
-7. Kliknij prawym przyciskiem myszy katalog odwołania do projektu DelayActivityTemplate w **Eksploratora rozwiązań** i wybierz polecenie **Dodaj odwołanie** otworzyć **Dodaj odwołanie** okno dialogowe.
+7. Kliknij prawym przyciskiem myszy katalog odwołania projektu DelayActivityTemplate w **Eksplorator rozwiązań** i wybierz polecenie **Dodaj odwołanie** , aby otworzyć okno dialogowe **Dodawanie odwołania** .
 
-8. Przejdź do **.NET** kartę, a następnie wybierz pozycję **PresentationFramework** z **nazwa składnika** kolumnę po lewej stronie i kliknij przycisk **OK** można dodać odwołania w pliku PresentationFramework.dll.
+8. Przejdź do karty **.NET** i wybierz pozycję **platformie docelowej** w kolumnie **Nazwa składnika** po lewej stronie, a następnie kliknij przycisk **OK** , aby dodać odwołanie do pliku platformie docelowej. dll.
 
-9. Powtórz tę procedurę, aby dodać odwołania do plików WindowsBase.dll i System.Activities.Presentation.dll.
+9. Powtórz tę procedurę, aby dodać odwołania do plików system. Activities. Presentation. dll i 'Windowsbase. dll.
 
-10. Kliknij prawym przyciskiem myszy projekt DelayActivityTemplate w **Eksploratora rozwiązań** i wybierz polecenie **Dodaj** i następnie **nowy element** otworzyć **Dodaj nowy element**okno dialogowe.
+10. Kliknij prawym przyciskiem myszy projekt DelayActivityTemplate w **Eksplorator rozwiązań** a następnie wybierz pozycję **Dodaj** , a następnie pozycję **nowy element** , aby otworzyć okno dialogowe **Dodaj nowy element** .
 
-11. Wybierz **klasy** szablonu, nadaj jej nazwę MyDelayTemplate, a następnie kliknij przycisk **OK**.
+11. Wybierz szablon **klasy** , nadaj mu nazwę MyDelayTemplate, a następnie kliknij przycisk **OK**.
 
-12. Otwórz plik MyDelayTemplate.cs i dodaj następujące instrukcje.
+12. Otwórz plik MyDelayTemplate.cs i Dodaj następujące instrukcje.
 
-    ```
+    ```csharp
     //Namespaces added
     using System.Activities;
     using System.Activities.Statements;
@@ -53,9 +53,9 @@ Szablony niestandardowe działania są używane do dostosowywania konfiguracji d
     using System.Windows;
     ```
 
-13. Implementowanie <xref:System.Activities.Presentation.IActivityTemplateFactory> z `MyDelayActivity` klasy z następującym kodem. Umożliwia skonfigurowanie opóźnienie na czas trwania jest równy 10 sekund.
+13. Zaimplementuj <xref:System.Activities.Presentation.IActivityTemplateFactory> `MyDelayActivity` z klasą przy użyciu następującego kodu. Spowoduje to skonfigurowanie opóźnienia o długości 10 sekund.
 
-    ```
+    ```csharp
     public sealed class MyDelayActivity : IActivityTemplateFactory
     {
         public Activity Create(System.Windows.DependencyObject target)
@@ -70,32 +70,32 @@ Szablony niestandardowe działania są używane do dostosowywania konfiguracji d
     }
     ```
 
-14. Wybierz **Kompiluj rozwiązanie** z **kompilacji** menu, aby wygenerować plik DelayActivityTemplate.dll.
+14. Wybierz opcję **Kompiluj rozwiązanie** z menu **kompilacja** , aby wygenerować plik DelayActivityTemplate. dll.
 
-### <a name="to-make-the-template-available-in-a-workflow-designer"></a>Aby szablon był dostępny w Projektancie przepływu pracy
+### <a name="to-make-the-template-available-in-a-workflow-designer"></a>Aby udostępnić szablon w Projektant przepływu pracy
 
-1. Kliknij prawym przyciskiem myszy rozwiązanie DelayActivityTemplate w **Eksploratora rozwiązań** i wybierz polecenie **Dodaj** i następnie **nowy projekt** otworzyć **Dodaj nowy projekt** okno dialogowe.
+1. Kliknij prawym przyciskiem myszy rozwiązanie DelayActivityTemplate w **Eksplorator rozwiązań** i wybierz polecenie **Dodaj** , a następnie **Nowy projekt** , aby otworzyć okno dialogowe **Dodawanie nowego projektu** .
 
-2. Wybierz **Aplikacja konsoli przepływu pracy** szablonu, nadaj jej nazwę `CustomActivityTemplateApp`, a następnie kliknij przycisk **OK**.
+2. Wybierz szablon **aplikacja konsoli przepływu pracy** , nadaj mu `CustomActivityTemplateApp`nazwę, a następnie kliknij przycisk **OK**.
 
-3. Kliknij prawym przyciskiem myszy katalog odwołania do projektu CustomActivityTemplateApp w **Eksploratora rozwiązań** i wybierz polecenie **Dodaj odwołanie** otworzyć **Dodaj odwołanie** okna dialogowego pole.
+3. Kliknij prawym przyciskiem myszy katalog odwołania projektu CustomActivityTemplateApp w **Eksplorator rozwiązań** i wybierz polecenie **Dodaj odwołanie** , aby otworzyć okno dialogowe **Dodawanie odwołania** .
 
-4. Przejdź do **projektów** kartę, a następnie wybierz pozycję **DelayActivityTemplate** z **Nazwa projektu** kolumnę po lewej stronie i kliknij przycisk **OK** do dodania Odwołanie do pliku DelayActivityTemplate.dll, który został utworzony w pierwszej procedurze.
+4. Przejdź do karty **projekty** i wybierz pozycję **DelayActivityTemplate** z kolumny **Nazwa projektu** po lewej stronie, a następnie kliknij przycisk **OK** , aby dodać odwołanie do pliku DelayActivityTemplate. dll, który został utworzony w pierwszej procedurze.
 
-5. Kliknij prawym przyciskiem myszy projekt CustomActivityTemplateApp w **Eksploratora rozwiązań** i wybierz polecenie **kompilacji** do kompilowania aplikacji.
+5. Kliknij prawym przyciskiem myszy projekt CustomActivityTemplateApp w **Eksplorator rozwiązań** i wybierz polecenie **Kompiluj** , aby skompilować aplikację.
 
-6. Kliknij prawym przyciskiem myszy projekt CustomActivityTemplateApp w **Eksploratora rozwiązań** i wybierz polecenie **Ustaw jako projekt startowy**.
+6. Kliknij prawym przyciskiem myszy projekt CustomActivityTemplateApp w **Eksplorator rozwiązań** i wybierz pozycję **Ustaw jako projekt startowy**.
 
-7. Wybierz **Rozpocznij bez debugowania** z **debugowania** menu i naciśnij dowolny klawisz, aby kontynuować po wyświetleniu monitu z okna cmd.exe.
+7. Wybierz opcję **Uruchom bez debugowania** z menu **Debuguj** i naciśnij dowolny klawisz, aby kontynuować po wyświetleniu monitu z okna cmd. exe.
 
-8. Otwórz plik Workflow1.xaml a **przybornika**.
+8. Otwórz plik Workflow1. XAML i Otwórz **Przybornik**.
 
-9. Znajdź **MyDelayActivity** szablonu w **DelayActivityTemplate** kategorii. Przeciągnij go na powierzchni projektowej. Upewnij się, w **właściwości** okna, `Duration` właściwość została ustawiona na 10 sekund.
+9. Znajdź szablon " **Opóźnij** " w kategorii **DelayActivityTemplate** . Przeciągnij go na powierzchnię projektu. Upewnij się, że `Duration` w oknie właściwości ustawiono wartość 10 sekund.
 
 ## <a name="example"></a>Przykład
  Plik MyDelayActivity.cs powinien zawierać następujący kod.
 
-```
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;

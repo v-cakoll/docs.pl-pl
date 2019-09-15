@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df8f82605118f1af0f085aef6e76c1e4bedb2904
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09c54e58ef25afa28d2681719284c358d90bddc2
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69988155"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969058"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>Pakowanie zestawu .NET Framework dla modelu COM
 
@@ -33,7 +33,7 @@ Deweloperzy COM mogą skorzystać z następujących informacji o zarządzanych t
 
   Niektóre typy zarządzane są niewidoczne dla modelu COM. Niektóre są widoczne, ale nie mogą być możliwe do utworzenia; a niektóre są widoczne i możliwe do utworzenia. Zestaw może składać się z dowolnej kombinacji typów niewidocznych, widocznych, niemożliwych do utworzenia i do utworzenia. Aby uzyskać kompletność, zidentyfikuj typy w zestawie, które zamierzasz uwidocznić dla modelu COM, zwłaszcza gdy te typy są podzbiorem typów ujawnionych dla .NET Framework.
 
-  Aby uzyskać dodatkowe informacje, zobacz [kwalifikowanie typów .NET do](../../standard/native-interop/qualify-net-types-for-interoperation.md)międzyoperacyjności.
+  Aby uzyskać dodatkowe informacje, zobacz [kwalifikowanie typów .NET do międzyoperacyjności](../../standard/native-interop/qualify-net-types-for-interoperation.md).
 
 - Instrukcje dotyczące obsługi wersji
 
@@ -45,7 +45,7 @@ Deweloperzy COM mogą skorzystać z następujących informacji o zarządzanych t
 
   Zestawy o silnych nazwach, które są podpisane przez wydawcę, można zainstalować w globalnej pamięci podręcznej zestawów. Zestawy bez znaku muszą być zainstalowane na komputerze użytkownika jako prywatne zespoły.
 
-  Aby uzyskać dodatkowe informacje, zobacz [zagadnienia dotyczące zabezpieczeń zestawów](../app-domains/assembly-security-considerations.md).
+  Aby uzyskać dodatkowe informacje, zobacz [zagadnienia dotyczące zabezpieczeń zestawów](../../standard/assembly/security-considerations.md).
 
 - Dołączanie biblioteki typów
 
@@ -96,7 +96,7 @@ Klasa znajdująca się w przestrzeni nazw **System. Runtime. Interop** konwertuj
 - [Udostępnianie składników .NET Framework modelowi COM](exposing-dotnet-components-to-com.md)
 - [Kwalifikowanie typów .NET do międzyoperacyjności](../../standard/native-interop/qualify-net-types-for-interoperation.md)
 - [Wprowadzenie do interfejsu klasy](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
-- [Zagadnienia dotyczące zabezpieczeń zestawów](../app-domains/assembly-security-considerations.md)
+- [Zagadnienia dotyczące zabezpieczeń zestawów](../../standard/assembly/security-considerations.md)
 - [Tlbexp.exe (eksporter biblioteki typów)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Rejestrowanie zestawów do użycia z modelem COM](registering-assemblies-with-com.md)
 - [Instrukcje: Osadź biblioteki typów jako zasoby Win32 w aplikacjach](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 16d11147af7b54d492c099269a48a92ce83bc05d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 5484dfeb8cf5292fb43393bb39b9878114119d29
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043997"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991194"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Instrukcje: Tworzenie zasad wydawcy
 
@@ -53,59 +53,59 @@ Użyj [konsolidatora zestawu (Al. exe)](../tools/al-exe-assembly-linker.md) , ab
 
 #### <a name="to-create-a-publisher-policy-assembly"></a>Aby utworzyć zestaw zasad wydawcy
 
-1. W wierszu polecenia wpisz następujące polecenie:
+W wierszu polecenia wpisz następujące polecenie:
 
-    **Al/link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*
+**Al/link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*
 
-    W tym poleceniu:
+W tym poleceniu:
 
-    - Argument *publisherPolicyFile* jest nazwą pliku zasad wydawcy.
+- Argument *publisherPolicyFile* jest nazwą pliku zasad wydawcy.
 
-    - Argument *publisherPolicyAssemblyFile* jest nazwą zestawu zasad wydawcy, który jest wynikiem tego polecenia. Nazwa pliku zestawu musi być zgodna z formatem:
+- Argument *publisherPolicyAssemblyFile* jest nazwą zestawu zasad wydawcy, który jest wynikiem tego polecenia. Nazwa pliku zestawu musi być zgodna z formatem:
 
-      **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**
+  **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**
 
-    - Argument *keyPairFile* jest nazwą pliku zawierającego parę kluczy. Należy podpisać zestaw i zestaw zasad wydawcy z tą samą parą kluczy.
+- Argument *keyPairFile* jest nazwą pliku zawierającego parę kluczy. Należy podpisać zestaw i zestaw zasad wydawcy z tą samą parą kluczy.
 
-    - Argument *processorArchitecture* identyfikuje platformę objętą przez zestaw specyficzny dla procesora.
+- Argument *processorArchitecture* identyfikuje platformę objętą przez zestaw specyficzny dla procesora.
 
-      > [!NOTE]
-      > Możliwość kierowania określonej architektury procesora jest nowa w .NET Framework w wersji 2,0.
+  > [!NOTE]
+  > Możliwość określania architektury procesora zależy od .NET Framework 2,0.
 
-    Następujące polecenie tworzy zestaw zasad wydawcy o `policy.1.0.myAssembly` nazwie z pliku zasad wydawcy o nazwie `pub.config`, przypisuje silną nazwę do zestawu przy użyciu pary kluczy w `sgKey.snk` pliku i określa, że zestaw jest przeznaczony dla architektury x86 Architektura procesora.
+Możliwość kierowania określonej architektury procesora jest dostępna począwszy od .NET Framework 2.0. następujące polecenie tworzy zestaw zasad wydawcy o `policy.1.0.myAssembly` nazwie z pliku zasad wydawcy o nazwie `pub.config`, przypisuje silną nazwę do zestaw używający pary kluczy w `sgKey.snk` pliku i określa, że zestaw jest przeznaczony dla architektury procesora x86.
 
-    ```
-    al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
-    ```
+```
+al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
+```
 
-    Zestaw zasad wydawcy musi być zgodny z architekturą procesora zestawu, którego dotyczy. W takim przypadku, jeśli zestaw ma <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> <xref:System.Reflection.ProcessorArchitecture.MSIL>wartość, zestaw zasad wydawcy dla tego zestawu musi być utworzony przy użyciu `/platform:anycpu`. Należy podać osobny zestaw zasad wydawcy dla każdego zestawu specyficznego dla procesora.
+Zestaw zasad wydawcy musi być zgodny z architekturą procesora zestawu, którego dotyczy. W takim przypadku, jeśli zestaw ma <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> <xref:System.Reflection.ProcessorArchitecture.MSIL>wartość, zestaw zasad wydawcy dla tego zestawu musi być utworzony przy użyciu `/platform:anycpu`. Należy podać osobny zestaw zasad wydawcy dla każdego zestawu specyficznego dla procesora.
 
-    Wynikiem tej reguły jest zmiana architektury procesora dla zestawu, dlatego należy zmienić składnik główny lub pomocniczy numeru wersji, aby można było dostarczyć nowy zestaw zasad wydawcy z poprawną architekturą procesora. Stary zestaw zasad wydawcy nie może obtworzyć zestawu, gdy zestaw ma inną architekturę procesora.
+Wynikiem tej reguły jest zmiana architektury procesora dla zestawu, dlatego należy zmienić składnik główny lub pomocniczy numeru wersji, aby można było dostarczyć nowy zestaw zasad wydawcy z poprawną architekturą procesora. Stary zestaw zasad wydawcy nie może obtworzyć zestawu, gdy zestaw ma inną architekturę procesora.
 
-    Inna konsekwencja polega na tym, że konsolidator w wersji 2,0 nie może zostać użyty do utworzenia zestawu zasad wydawcy dla zestawu skompilowanego przy użyciu wcześniejszych wersji .NET Framework, ponieważ zawsze określa architekturę procesora.
+Inna konsekwencja polega na tym, że konsolidator w wersji 2,0 nie może zostać użyty do utworzenia zestawu zasad wydawcy dla zestawu skompilowanego przy użyciu wcześniejszych wersji .NET Framework, ponieważ zawsze określa architekturę procesora.
 
 ## <a name="adding-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Dodawanie zestawu zasad wydawcy do globalnej pamięci podręcznej zestawów
 
 Użyj [Narzędzia globalnej pamięci podręcznej zestawów (Gacutil. exe)](../tools/gacutil-exe-gac-tool.md) , aby dodać zestaw zasad wydawcy do globalnej pamięci podręcznej zestawów.
 
-#### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Aby dodać zestaw zasad wydawcy do globalnej pamięci podręcznej zestawów
+### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Aby dodać zestaw zasad wydawcy do globalnej pamięci podręcznej zestawów
 
-1. W wierszu polecenia wpisz następujące polecenie:
+W wierszu polecenia wpisz następujące polecenie:
 
-    **gacutil /i**  *publisherPolicyAssemblyFile*
+**gacutil /i**  *publisherPolicyAssemblyFile*
 
-    Następujące polecenie dodaje `policy.1.0.myAssembly.dll` do globalnej pamięci podręcznej zestawów.
+Następujące polecenie dodaje `policy.1.0.myAssembly.dll` do globalnej pamięci podręcznej zestawów.
 
-    ```
-    gacutil /i policy.1.0.myAssembly.dll
-    ```
+```
+gacutil /i policy.1.0.myAssembly.dll
+```
 
-    > [!IMPORTANT]
-    > Zestawu zasad wydawcy nie można dodać do globalnej pamięci podręcznej zestawów, chyba że oryginalny plik zasad wydawcy znajduje się w tym samym katalogu, w którym znajduje się zestaw.
+> [!IMPORTANT]
+> Zestawu zasad wydawcy nie można dodać do globalnej pamięci podręcznej zestawów, chyba że oryginalny plik zasad wydawcy znajduje się w tym samym katalogu, w którym znajduje się zestaw.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Programowanie za pomocą zestawów](../app-domains/programming-with-assemblies.md)
+- [Programowanie za pomocą zestawów](../../standard/assembly/program.md)
 - [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../deployment/how-the-runtime-locates-assemblies.md)
 - [Konfigurowanie aplikacji przy użyciu plików konfiguracji](index.md)
 - [Schemat ustawień środowiska uruchomieniowego](./file-schema/runtime/index.md)

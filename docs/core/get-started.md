@@ -4,12 +4,12 @@ description: Znajdź zasoby, aby dowiedzieć się, jak tworzyć aplikacje .NET C
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: 5c45364cfe725d47cbb6108cd9d6ec9f981cef25
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 3c530c71d1cfa9d0c4cf09f38519970f6ef8da51
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849123"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969895"
 ---
 # <a name="get-started-with-net-core"></a>Wprowadzenie do platformy .NET Core
 
@@ -39,6 +39,8 @@ Gratulacje! Utworzono prostą aplikację platformy .NET Core. Można również u
 ## <a name="tutorials"></a>Samouczki
 
 Możesz rozpocząć tworzenie aplikacji platformy .NET Core, wykonując te Samouczki krok po kroku.
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 

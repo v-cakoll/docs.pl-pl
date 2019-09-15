@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 62760cb9fe5832ee018ebdebf6275ea61691c738
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9f45f40cd66c63e660b9091c726533dcfe8db086
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927802"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971585"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Praca z zestawami i globalną pamięcią podręczną zestawów
 Jeśli zestaw ma być współużytkowany przez kilka aplikacji, można go zainstalować w globalnej pamięci podręcznej zestawów. Każdy komputer z zainstalowanym środowiskiem uruchomieniowym języka wspólnego posiada tę pamięć podręczną kodu dla całego komputera. Globalna pamięć podręczna zestawów przechowuje zestawy specjalnie wyznaczonych do współużytkowania przez kilka aplikacji na komputerze. Aby zestaw można było zainstalować w globalnej pamięci podręcznej zestawów, musi mieć silną nazwę.  
@@ -46,7 +46,7 @@ Jeśli zestaw ma być współużytkowany przez kilka aplikacji, można go zainst
  Istnieją też scenariusze, w których nie należy jawnie instalować zestawów w globalnej pamięci podręcznej zestawów. Umieszczenie w tej pamięci jednego z zestawów tworzących aplikację sprawi, że nie będzie już można zreplikować ani zainstalować aplikacji przy użyciu polecenia XCOPY kopiującego katalog aplikacji. W takim przypadku należy również przenieść zestaw do globalnej pamięci podręcznej zestawów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: Instalowanie zestawu w globalnej pamięci podręcznej zestawów](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
+ [Instrukcje: Instalowanie zestawu w globalnej pamięci podręcznej zestawów](install-assembly-into-gac.md)  
  Opis sposobów instalowania zestawu w globalnej pamięci podręcznej zestawów.  
   
  [Instrukcje: Wyświetlanie zawartości globalnej pamięci podręcznej zestawów](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
@@ -59,17 +59,17 @@ Jeśli zestaw ma być współużytkowany przez kilka aplikacji, można go zainst
  Wyjaśnienie, dlaczego obsługiwane składniki (zarządzanie składniki modelu COM+) należy umieszczać w globalnej pamięci podręcznej zestawów.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)  
+ [Tworzenie zestawów](../../standard/assembly/create.md)  
  Omówienie procesu tworzenia zestawów.  
   
  [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)  
  Opis globalnej pamięci podręcznej zestawów.  
   
- [Instrukcje: Wyświetl zawartość zestawu](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+ [Instrukcje: Wyświetl zawartość zestawu](../../standard/assembly/view-contents.md)  
  Wyjaśnia, jak używać programu [Ildasm. exe (Il dezasembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) do wyświetlania informacji o języku pośrednim (MSIL) firmy Microsoft w zestawie.  
   
  [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  Wyjaśnienie, jak środowisko uruchomieniowe języka wspólnego lokalizuje i ładuje zestawy składające się na aplikację.  
   
- [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [Programowanie za pomocą zestawów](../../standard/assembly/program.md)  
  Opis koncepcji zestawów jako bloków konstrukcyjnych zarządzanych aplikacji.

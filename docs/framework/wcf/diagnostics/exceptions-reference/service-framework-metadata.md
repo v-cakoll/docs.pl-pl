@@ -2,33 +2,33 @@
 title: Metadane struktury usługi
 ms.date: 03/30/2017
 ms.assetid: 76afc73a-0770-4084-93f3-6701a757911e
-ms.openlocfilehash: f65f53ff99202275876fb6e3c431bc49ae2bd38b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3e73df54b3389b2c9f27001953be147b27eb6f8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780802"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991202"
 ---
 # <a name="service-framework-metadata"></a>Metadane struktury usługi
-Ten temat zawiera listę wszystkich wyjątków generowanych przez metadane struktury usługi.  
+W tym temacie wymieniono wszystkie wyjątki wygenerowane przez metadane struktury usług.  
   
 ## <a name="exception-list"></a>Lista wyjątków  
   
 |Kod zasobu|Ciąg zasobu|  
 |-------------------|---------------------|  
-|AsyncEndCalledOnWrongChannel|Końca asynchronicznego została wywołana dla niewłaściwego kanału.|  
-|AsyncEndCalledWithAnIAsyncResult|Końca asynchronicznego została wywołana z elementem IAsyncResult z innej metody Begin.|  
-|AttemptedToGetContractTypeForButThatTypeIs1|Próbowano uzyskać typ kontraktu dla określonego. Typ nie jest typu ServiceContract i dziedziczy go.|  
-|CannotHaveTwoOperationsWithTheSameName3|Nie może mieć dwie operacje w tej samej umowy o takiej samej nazwie. Określonej metody w określonym typie narusza tę regułę. Zmień nazwę jednej z operacji, zmieniając nazwę metody lub używając właściwości Name obiektu OperationContractAttribute.|  
-|CannotInheritTwoOperationsWithTheSameName3|Nie można dziedziczyć dwóch różnych operacji o tej samej nazwie. Określona operacja z określonym umów narusza tę regułę. Zmień nazwę jednej z operacji, zmieniając nazwę metody lub używając właściwości Name obiektu OperationContractAttribute.|  
-|CantCreateChannelWithManualAddressing|Nie można utworzyć kanału dla kontraktu wymagającego żądań i odpowiedzi oraz powiązania wymagającego ręcznego adresowania, ale tylko obsługującego komunikację dupleksową.|  
+|AsyncEndCalledOnWrongChannel|Asynchroniczne zakończenie zostało wywołane dla niewłaściwego kanału.|  
+|AsyncEndCalledWithAnIAsyncResult|Asynchroniczne zakończenie zostało wywołane z elementem IAsyncResult z innej metody BEGIN.|  
+|AttemptedToGetContractTypeForButThatTypeIs1|Podjęto próbę pobrania typu kontraktu dla określonego elementu. Typ nie jest kontraktem ServiceContract i nie dziedziczy kontraktu ServiceContract.|  
+|CannotHaveTwoOperationsWithTheSameName3|Nie mogą istnieć dwie operacje w tym samym kontrakcie o tej samej nazwie. Określone metody w określonym typie naruszają tę regułę. Zmień nazwę jednej z operacji, zmieniając nazwę metody lub używając właściwości Name obiektu OperationContractAttribute.|  
+|CannotInheritTwoOperationsWithTheSameName3|Nie można dziedziczyć dwóch różnych operacji o tej samej nazwie. Określona operacja z określonych kontraktów narusza tę regułę. Zmień nazwę jednej z operacji, zmieniając nazwę metody lub używając właściwości Name obiektu OperationContractAttribute.|  
+|CantCreateChannelWithManualAddressing|Nie można utworzyć kanału dla kontraktu wymagającego żądania/odpowiedzi oraz powiązania wymagającego ręcznego adresowania, ale tylko obsługują komunikację dupleksową.|  
 |DuplicateBehavior1|Nie można dodać wartości do kolekcji. Kolekcja zawiera już element tego samego określonego typu. Ta kolekcja obsługuje tylko jedno wystąpienie każdego typu.|  
-|InAContractInheritanceHierarchyIfParentHasCallbackChildMustToo|Kontrakt określony usługi podstawowej ma kontrakt określonego wywołania zwrotnego, kontrakt określony pochodnej usługi należy także określić określonego typu lub typem pochodnym jako jej kontrakt wywołania zwrotnego.|  
-|InvalidAsyncBeginMethodSignatureForMethod2|Nieprawidłowy asynchronicznego Begin podpis metody dla określonej metody w określonym typie ServiceContract. Twoje rozpocząć metody musi przyjmować element AsyncCallback oraz dowolny obiekt jako dwa ostatnie argumenty i zwracać obiekt IAsyncResult.|  
-|InvalidAsyncEndMethodSignatureForMethod2|Nieprawidłowy asynchronicznego zakończenia podpis metody dla określonej metody w określonym typie ServiceContract. Metoda end musi przyjmować obiekt IAsyncResult jako ostatni argument.|  
-|MessagePropertiesArraySize0|Tablica, która została przekazana nie ma wystarczającej ilości miejsca do przechowywania wszystkich właściwości, które są zawarte w tej kolekcji.|  
-|OneWayAndFaultsIncompatible2|Określonej metodzie w określonym typie jest oznaczona jako IsOneWay = true, ale deklaruje co najmniej jeden element FaultContractAttributes. Metody jednokierunkowe nie mogą deklarować elementów FaultContractAttributes. Zmień ustawienie właściwości IsOneWay na wartość false lub Usuń element FaultContractAttributes.|  
-|UnsupportedWSDLOnlyOneMessage|Nieobsługiwana Web Services Description Language. Komunikaty o błędach jest obsługiwana tylko jednej części wiadomości. Ten komunikat o błędzie odnosi się do więcej niż jedną część komunikatu. Jeśli masz dostęp do edycji pliku Web Services Description Language można rozwiązanie problemu, usuwając zbędne części wiadomości w taki, który błędów komunikat odwołania tylko jeden element.|  
-|UnsupportedWSDLTheFault|Nieobsługiwana Web Services Description Language. Część wiadomości błędu musi odwoływać się do elementu. Ten komunikat o błędzie nie odwołuje się do elementu. Jeśli masz dostęp do edycji w dokumencie języka definicji usługi sieci Web, możesz rozwiązać problem, odwołując się do elementu schematu za pomocą atrybutu "element".|  
-|WsdlImportErrorDependencyDetail|Wystąpił błąd podczas importowania określonego to zależy od określonej wartości. Wyrażenie Xpath jest także określona.|  
+|InAContractInheritanceHierarchyIfParentHasCallbackChildMustToo|Ponieważ określony kontrakt usługi podstawowej ma określony kontrakt wywołania zwrotnego, określony kontrakt usługi pochodnej musi również określać określony typ lub typ pochodny jako kontrakt wywołania zwrotnego.|  
+|InvalidAsyncBeginMethodSignatureForMethod2|Nieprawidłowa sygnatura asynchronicznej metody BEGIN dla określonej metody w określonym typie ServiceContract. Metoda BEGIN musi przyjmować element AsyncCallback i Object jako ostatnie dwa argumenty i zwracać element IAsyncResult.|  
+|InvalidAsyncEndMethodSignatureForMethod2|Nieprawidłowa sygnatura asynchronicznej metody end dla określonej metody w określonym typie ServiceContract. Metoda End musi przyjmować element IAsyncResult jako ostatni argument.|  
+|MessagePropertiesArraySize0|Przekazano tablicę, która nie ma wystarczającej ilości miejsca, aby pomieścić wszystkie właściwości zawarte w tej kolekcji.|  
+|OneWayAndFaultsIncompatible2|Określona metoda w określonym typie jest oznaczona jako IsOneWay = true i deklaruje co najmniej jedną element FaultContractAttributes. Metody jednokierunkowe nie mogą deklarować element FaultContractAttributes. Zmień wartość IsOneWay na false lub Usuń element FaultContractAttributes.|  
+|UnsupportedWSDLOnlyOneMessage|Nieobsługiwana Web Services Description Language. Dla komunikatów o błędach jest obsługiwana tylko jedna część komunikatów. Ten komunikat o błędzie odnosi się do więcej niż jednej części wiadomości. Jeśli masz uprawnienia do edycji pliku Web Services Description Language, możesz rozwiązać ten problem, usuwając dodatkowe części komunikatów, takie jak komunikaty o błędach, które odwołują się tylko do jednej części.|  
+|UnsupportedWSDLTheFault|Nieobsługiwana Web Services Description Language. Część komunikatu o błędzie musi odwoływać się do elementu. Ten komunikat o błędzie nie odwołuje się do elementu. Jeśli masz uprawnienia do edycji dokumentu języka definicji usług sieci Web, możesz rozwiązać ten problem, odwołując się do elementu schematu przy użyciu atrybutu "element".|  
+|WsdlImportErrorDependencyDetail|Wystąpił błąd podczas importowania określonego, czy inna określona wartość jest zależna od. Określono również wyrażenie XPath.|  
 |XsdMissingRequiredAttribute1|Brak określonego wymaganego atrybutu.|

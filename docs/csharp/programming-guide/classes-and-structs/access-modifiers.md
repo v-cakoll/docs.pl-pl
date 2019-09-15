@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: 266ece1e63bf6d32bf59406dbc72a9e6bd92eb45
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b415bf143e7da46b3ecd2c0828a3f8151878435a
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924552"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971678"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modyfikatory dostępu (Przewodnik programowania w języku C#)
 Wszystkie typy i elementy członkowskie typu mają poziom dostępności, który kontroluje, czy mogą być używane z innego kodu w zestawie lub w innych zestawach. Można użyć następujących modyfikatorów dostępu, aby określić dostępność typu lub elementu członkowskiego podczas deklarowania:  
@@ -44,7 +44,7 @@ Wszystkie typy i elementy członkowskie typu mają poziom dostępności, który 
   
  Klasy pochodne nie mogą mieć większej dostępności niż ich typy podstawowe. Innymi słowy, nie można mieć klasy `B` publicznej, która pochodzi od klasy `A`wewnętrznej. Jeśli jest to dozwolone, miałoby to wpływ `A` na publiczną, ponieważ wszystkie chronione lub wewnętrzne `A` elementy członkowskie są dostępne z klasy pochodnej.  
   
- Można włączyć określone inne zestawy, aby uzyskać dostęp do typów wewnętrznych przy użyciu InternalsVisibleToAttribute. Aby uzyskać więcej informacji, zobacz [zaprzyjaźnione zestawy](../../../standard/assembly/friend-assemblies.md).  
+ Można włączyć określone inne zestawy, aby uzyskać dostęp do typów wewnętrznych przy użyciu InternalsVisibleToAttribute. Aby uzyskać więcej informacji, zobacz [zaprzyjaźnione zestawy](../../../standard/assembly/friend.md).  
   
 ## <a name="class-and-struct-member-accessibility"></a>Ułatwienia dostępu do elementów członkowskich klasy i struktury  
  Elementy członkowskie klasy (w tym zagnieżdżone klasy i struktury) mogą być deklarowane przy użyciu dowolnego z sześciu typów dostępu. Elementy członkowskie struktury nie mogą być deklarowane jako chronione, ponieważ struktury nie obsługują dziedziczenia.  

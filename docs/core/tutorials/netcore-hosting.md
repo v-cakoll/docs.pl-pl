@@ -4,12 +4,12 @@ description: Dowiedz się, jak hostować środowisko uruchomieniowe platformy .N
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 528d46f64c424dd0f58e57891c605ac5ab474240
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: ec63e1b87c4161dcd0dd3ab37aadbef53d4b3219
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925935"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970859"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Napisz niestandardowego hosta .NET Core, aby kontrolować środowisko uruchomieniowe platformy .NET z kodu natywnego
 
@@ -135,7 +135,7 @@ W przeciwieństwie do interfejsu API hosta mscoree. h (opisanego poniżej), inte
 
 ### <a name="step-5---run-managed-code"></a>Krok 5 — uruchamianie kodu zarządzanego!
 
-Po uruchomieniu środowiska uruchomieniowego host może wywołać kod zarządzany. Można to zrobić na kilka różnych sposobów. Przykładowy kod połączony z tym samouczkiem używa funkcji `coreclr_create_delegate` , aby utworzyć delegata do statycznej metody zarządzanej. Ten interfejs API przyjmuje [nazwę zestawu](../../framework/app-domains/assembly-names.md), nazwę typu kwalifikowanego przestrzeni nazw i nazwę metody jako dane wejściowe i zwraca delegat, którego można użyć do wywołania metody.
+Po uruchomieniu środowiska uruchomieniowego host może wywołać kod zarządzany. Można to zrobić na kilka różnych sposobów. Przykładowy kod połączony z tym samouczkiem używa funkcji `coreclr_create_delegate` , aby utworzyć delegata do statycznej metody zarządzanej. Ten interfejs API przyjmuje [nazwę zestawu](../../standard/assembly/names.md), nazwę typu kwalifikowanego przestrzeni nazw i nazwę metody jako dane wejściowe i zwraca delegat, którego można użyć do wywołania metody.
 
 [!code-cpp[CoreClrHost#5](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#5)]
 
@@ -231,7 +231,7 @@ W przypadku wystąpienia elementu AppDomain up i uruchomiona host może teraz ro
 
 [!code-cpp[NetCoreHost#8](~/samples/core/hosting/HostWithMscoree/host.cpp#8)]
 
-Inna opcja, jeśli `ExecuteAssembly` nie spełnia wymagań hosta, `CreateDelegate` służy do tworzenia wskaźnika funkcji do statycznej metody zarządzanej. Wymaga to, aby Host wiedział sygnaturę metody, w której jest wywoływany (w celu utworzenia typu wskaźnika funkcji), ale umożliwia hostom elastyczność wywoływania kodu innego niż punkt wejścia zestawu. Nazwa zestawu podana w drugim parametrze jest [pełną zarządzaną nazwą zestawu](../../framework/app-domains/assembly-names.md) biblioteki do załadowania.
+Inna opcja, jeśli `ExecuteAssembly` nie spełnia wymagań hosta, `CreateDelegate` służy do tworzenia wskaźnika funkcji do statycznej metody zarządzanej. Wymaga to, aby Host wiedział sygnaturę metody, w której jest wywoływany (w celu utworzenia typu wskaźnika funkcji), ale umożliwia hostom elastyczność wywoływania kodu innego niż punkt wejścia zestawu. Nazwa zestawu podana w drugim parametrze jest [pełną zarządzaną nazwą zestawu](../../standard/assembly/names.md) biblioteki do załadowania.
 
 ```C++
 void *pfnDelegate = NULL;

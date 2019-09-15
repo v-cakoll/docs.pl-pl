@@ -2,19 +2,19 @@
 title: 'Instrukcje: tworzenie usługi WCF komunikującej się przez protokół WebSockets'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 5190cdad08087b73eb247dfc236ae7b6f470af69
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 706c2886bda9497835d98eeeb594e68c2191d8d8
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626921"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970002"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Instrukcje: tworzenie usługi WCF komunikującej się przez protokół WebSockets
-Usługi WCF i klienci mogą używać <xref:System.ServiceModel.NetHttpBinding> powiązania do komunikowania się przez protokół WebSockets.  WebSockets będą używane podczas <xref:System.ServiceModel.NetHttpBinding> określa kontrakt usługi definiuje kontrakt wywołania zwrotnego. W tym temacie opisano, jak wdrożyć usługę WCF i klienta, który używa <xref:System.ServiceModel.NetHttpBinding> do komunikowania się przez protokół WebSockets.  
+Usługi i klienci WCF mogą używać <xref:System.ServiceModel.NetHttpBinding> powiązania do komunikacji za pośrednictwem obiektów WebSockets.  Usługa WebSockets zostanie użyta, <xref:System.ServiceModel.NetHttpBinding> gdy określi kontrakt usługi definiuje kontrakt wywołania zwrotnego. W tym temacie opisano sposób implementacji usługi WCF i klienta, który używa programu <xref:System.ServiceModel.NetHttpBinding> do komunikacji za pośrednictwem usług WebSockets.  
   
-### <a name="define-the-service"></a>Zdefiniuj usługę  
+### <a name="define-the-service"></a>Definiowanie usługi  
   
-1. Zdefiniuj kontrakt wywołania zwrotnego  
+1. Definiowanie kontraktu wywołania zwrotnego  
   
     ```csharp  
     [ServiceContract]  
@@ -25,9 +25,9 @@ Usługi WCF i klienci mogą używać <xref:System.ServiceModel.NetHttpBinding> p
         }  
     ```  
   
-     Niniejszej Umowy będą realizowane przez aplikację klienta, aby umożliwić usłudze wysyłać komunikaty do klienta.  
+     Ta umowa zostanie wdrożona przez aplikację kliencką, aby umożliwić usłudze wysyłanie komunikatów z powrotem do klienta programu.  
   
-2. Definiowanie kontraktu usługi i określ `IStockQuoteCallback` interfejs jako kontrakt wywołania zwrotnego.  
+2. Zdefiniuj kontrakt usługi i określ `IStockQuoteCallback` interfejs jako kontrakt wywołania zwrotnego.  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -38,9 +38,9 @@ Usługi WCF i klienci mogą używać <xref:System.ServiceModel.NetHttpBinding> p
         }  
     ```  
   
-3. Implementowanie kontraktu usługi.  
+3. Zaimplementuj kontrakt usługi.  
   
-    ```  
+    ```csharp
     public class StockQuoteService : IStockQuoteService  
         {  
             public async Task StartSendingQuotes()  
@@ -59,7 +59,7 @@ Usługi WCF i klienci mogą używać <xref:System.ServiceModel.NetHttpBinding> p
         }  
     ```  
   
-     Operacja usługi `StartSendingQuotes` jest implementowany jako wywołania asynchronicznego. Możemy pobrać za pomocą kanału zwrotnego `OperationContext` i jeśli kanał jest otwarty, udostępnimy asynchronicznego wywołania w kanale wywołania zwrotnego.  
+     Operacja `StartSendingQuotes` usługi jest zaimplementowana jako wywołanie asynchroniczne. Pobieramy kanał wywołania zwrotnego przy `OperationContext` użyciu i Jeśli kanał jest otwarty, my wywołamy wywołanie asynchroniczne w kanale wywołania zwrotnego.  
   
 4. Konfigurowanie usługi  
   
@@ -90,11 +90,11 @@ Usługi WCF i klienci mogą używać <xref:System.ServiceModel.NetHttpBinding> p
     </configuration>  
     ```  
   
-     Plik konfiguracji usługi opiera się na punktami końcowymi programu WCF na domyślne. `<protocolMapping>` Sekcja jest używana do określenia, że `NetHttpBinding` powinny być używane domyślne punkty końcowe utworzone.  
+     Plik konfiguracji usługi opiera się na domyślnych punktach końcowych programu WCF. Sekcja służy do określenia `NetHttpBinding` , że powinny być używane dla utworzonych domyślnych punktów końcowych. `<protocolMapping>`  
   
-### <a name="define-the-client"></a>Zdefiniuj klienta  
+### <a name="define-the-client"></a>Definiowanie klienta  
   
-1. Zaimplementować kontrakt wywołania zwrotnego.  
+1. Zaimplementuj kontrakt wywołania zwrotnego.  
   
     ```csharp  
     private class CallbackHandler : StockQuoteServiceReference.IStockQuoteServiceCallback  
@@ -106,7 +106,7 @@ Usługi WCF i klienci mogą używać <xref:System.ServiceModel.NetHttpBinding> p
             }  
     ```  
   
-     Operacja kontrakt wywołania zwrotnego jest implementowany jako metody asynchronicznej.  
+     Operacja kontraktu wywołania zwrotnego jest zaimplementowana jako Metoda asynchroniczna.  
   
     1. Zaimplementuj kod klienta.  
   
@@ -131,9 +131,9 @@ Usługi WCF i klienci mogą używać <xref:System.ServiceModel.NetHttpBinding> p
         }  
         ```  
   
-         Obiekt CallbackHandler jest powtarzany tutaj dla przejrzystości. Aplikacja kliencka tworzy nowy obiekt InstanceContext i określa implementację interfejs wywołania zwrotnego. Następnie tworzy wystąpienie klasy serwera proxy, wysyłanie odwołaniem do nowo utworzony obiekt InstanceContext. Gdy klient wywołuje usługę, usługa będzie wywoływać klienta przy użyciu określonych kontrakt wywołania zwrotnego.  
+         Obiekt callbackhandlera jest powtarzana w tym miejscu do przejrzystości. Aplikacja kliencka tworzy nową metodę InstanceContext i określa implementację interfejsu wywołania zwrotnego. Następnie tworzy wystąpienie klasy proxy, wysyłając odwołanie do nowo utworzonej metody InstanceContext. Gdy klient wywołuje usługę, usługa wywoła klienta przy użyciu określonego kontraktu wywołania zwrotnego.  
   
-    2. Konfigurowanie klienta  
+    2. Konfigurowanie klienta programu  
   
         ```xml  
         <?xml version="1.0" encoding="utf-8" ?>  
@@ -158,10 +158,10 @@ Usługi WCF i klienci mogą używać <xref:System.ServiceModel.NetHttpBinding> p
         </configuration>  
         ```  
   
-         Nic specjalnego nie należy wykonać w konfiguracji klienta, wystarczy tylko określić klienta po stronie punktu końcowego za pomocą `NetHttpBinding`.  
+         Nie ma żadnych specjalnych, które należy wykonać w konfiguracji klienta, wystarczy określić punkt końcowy po stronie klienta przy użyciu `NetHttpBinding`.  
   
 ## <a name="example"></a>Przykład  
- Oto kompletny kod używany w tym temacie.  
+ Poniżej znajduje się kompletny kod używany w tym temacie.  
   
 ```csharp  
 // IStockQuoteService.cs  
@@ -191,7 +191,7 @@ namespace Server
 }  
 ```  
   
-```  
+```csharp
 // StockQuoteService.svc.cs  
 using System;  
 using System.Collections.Generic;  
@@ -257,7 +257,7 @@ namespace Server
 </configuration>  
 ```  
   
-```  
+```
 <!-- StockQuoteService.svc -->  
 <%@ ServiceHost Language="C#" Debug="true" Service="Server.StockQuoteService" CodeBehind="StockQuoteService.svc.cs" %>  
 ```  

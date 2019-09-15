@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 19fff39969933baa2510458400cabf9646e0c48d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8e99402752b3fafb486735d56d66737f03ceec30
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589127"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972089"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Instrukcje: Dostęp do obiektów międzyoperacyjności pakietu C# Office zaC# pomocą funkcji wizualnych (Przewodnik programowania)
 
@@ -95,7 +95,7 @@ Aby ukończyć ten przewodnik, musisz mieć Microsoft Office Excel 2007 i Micros
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-     C#4, i nowsze wersje, konwertuje zwracaną `Object` wartość `dynamic` na automatycznie, jeśli zestaw jest przywoływany przez opcję kompilatora [/link](../../language-reference/compiler-options/link-compiler-option.md) lub, równoważne, jeśli właściwość " **Osadź typy** międzyoperacyjna programu Excel" ma wartość true. Wartość true jest wartością domyślną dla tej właściwości.
+     C#4, i nowsze wersje, konwertuje zwracaną `Object` wartość `dynamic` na automatycznie, jeśli zestaw jest przywoływany przez opcję kompilatora [/link](../../language-reference/compiler-options/link-compiler-option.md) lub, równoważne, jeśli właściwość " **Osadź typy międzyoperacyjna** programu Excel" ma wartość true. Wartość true jest wartością domyślną dla tej właściwości.
 
 ## <a name="to-run-the-project"></a>Aby uruchomić projekt
 
@@ -137,7 +137,7 @@ Aby ukończyć ten przewodnik, musisz mieć Microsoft Office Excel 2007 i Micros
 
 ## <a name="to-set-the-embed-interop-types-property"></a>Aby ustawić właściwość Osadź typy współdziałania
 
-1. Dodatkowe ulepszenia są możliwe w przypadku wywołania typu COM, który nie wymaga podstawowego zestawu międzyoperacyjnego (PIA) w czasie wykonywania. Usunięcie zależności od zestawów Pia powoduje niezależność wersji i łatwiejsze wdrażanie. Aby uzyskać więcej informacji na temat korzyści z programowania bez zestawów Pia, [zobacz Przewodnik: Osadzanie typów z zarządzanych zestawów](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).
+1. Dodatkowe ulepszenia są możliwe w przypadku wywołania typu COM, który nie wymaga podstawowego zestawu międzyoperacyjnego (PIA) w czasie wykonywania. Usunięcie zależności od zestawów Pia powoduje niezależność wersji i łatwiejsze wdrażanie. Aby uzyskać więcej informacji na temat korzyści z programowania bez zestawów Pia, [zobacz Przewodnik: Osadzanie typów z zarządzanych zestawów](../../../standard/assembly/embed-types-visual-studio.md).
 
      Ponadto programowanie jest łatwiejsze, ponieważ typy, które są wymagane i zwracane przez metody com mogą być reprezentowane przy użyciu typu `dynamic` `Object`zamiast. Zmienne o typie `dynamic` nie są oceniane do czasu uruchomienia, co eliminuje konieczność jawnego rzutowania. Aby uzyskać więcej informacji, zobacz [Korzystanie z typu dynamicznego](../types/using-type-dynamic.md).
 
@@ -149,7 +149,7 @@ Aby ukończyć ten przewodnik, musisz mieć Microsoft Office Excel 2007 i Micros
 
 3. Jeśli nie widzisz okna **Właściwości** , naciśnij klawisz **F4**.
 
-4. Znajdź **Osadź typy** międzyoperacyjności na liście właściwości i zmień jej wartość na **false**. Równoważne, można skompilować przy użyciu opcji kompilatora [/Reference](../../language-reference/compiler-options/reference-compiler-option.md) zamiast [/link](../../language-reference/compiler-options/link-compiler-option.md) w wierszu polecenia.
+4. Znajdź **Osadź typy międzyoperacyjności** na liście właściwości i zmień jej wartość na **false**. Równoważne, można skompilować przy użyciu opcji kompilatora [/Reference](../../language-reference/compiler-options/reference-compiler-option.md) zamiast [/link](../../language-reference/compiler-options/link-compiler-option.md) w wierszu polecenia.
 
 ## <a name="to-add-additional-formatting-to-the-table"></a>Aby dodać dodatkowe formatowanie do tabeli
 

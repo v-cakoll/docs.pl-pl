@@ -3,12 +3,12 @@ title: Dostęp z podwyższonym poziomem uprawnień dla poleceń dotnet
 description: Zapoznaj się z najlepszymi rozwiązaniami dotyczącymi poleceń dotnet wymagających podwyższonego poziomu dostępu.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: b57e434fbb29a9c85ddf5086888a5291c7767ac9
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: b6de87f375a584da25e160d79f51f1bc48f3c302
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105074"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969862"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Dostęp z podwyższonym poziomem uprawnień dla poleceń dotnet
 
@@ -26,6 +26,8 @@ Polecenia można uruchamiać jako główne, o ile nie przechodzą z powrotem mi�
 ## <a name="global-tool-installation"></a>Instalacja narzędzia globalnego
 
 Poniższe instrukcje przedstawiają zalecaną metodę instalowania, uruchamiania i odinstalowywania narzędzi .NET Core, które wymagają podniesionych uprawnień do wykonania.
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 

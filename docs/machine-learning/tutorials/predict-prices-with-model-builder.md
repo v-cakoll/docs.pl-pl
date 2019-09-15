@@ -3,15 +3,15 @@ title: Przewidywanie cen przy użyciu regresji z konstruktorem modelu
 description: W tym samouczku przedstawiono sposób tworzenia modelu regresji przy użyciu konstruktora modelu ML.NET do przewidywania cen, w oddziałach, w oddziałach, w oddziałach
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 07/15/2019
+ms.date: 09/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: bc1dacdad436cc5384bca4bbce224acc18d69201
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 675ca58ab071293fe5c04b1b85337fb1e48dfbea
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929431"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991348"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Przewidywanie cen przy użyciu regresji z konstruktorem modelu
 
@@ -89,17 +89,9 @@ Konstruktor modelu akceptuje dane z dwóch źródeł, bazy danych SQL Server lub
 
 Zadanie uczenia maszynowego używane do uczenia modelu prognozowania cen w tym samouczku to regresja. W trakcie procesu szkolenia modelu, Konstruktor modelu pociąga za siebie różne modele przy użyciu różnych algorytmów regresji i ustawień, aby znaleźć najlepszy model dla zestawu danych.
 
-Czas wymagany przez model do uczenia jest proporcjonalny do ilości danych. Użyj tego wykresu jako wskazówek, aby wybrać odpowiednią wartość dla `Time to train (seconds)` pola:
+Czas wymagany przez model do uczenia jest proporcjonalny do ilości danych. Konstruktor modelu automatycznie wybiera wartość domyślną dla **czasu do uczenia (w sekundach)** na podstawie rozmiaru źródła danych.
 
-\* Rozmiar zestawu danych  | Typ zestawu danych       | Średni Czas trwania uczenia *
-------------- | ------------------ | --------------
-0-10 MB     | Wartości numeryczne i tekstowe   | 10 sekund
-10-100 MB   | Wartości numeryczne i tekstowe   | 10 min
-100 – 500 MB  | Wartości numeryczne i tekstowe   | 30 minut
-500 – 1 GB    | Wartości numeryczne i tekstowe   | 60 min
-1 Gb+         | Wartości numeryczne i tekstowe   | 3 godziny +
-
-1. Ponieważ plik danych szkoleniowych jest większy niż 10 MB, użyj 600 sekund (10 minut) jako wartości *czasu do uczenia (w sekundach)* .
+1. Pozostaw wartość domyślną jako *czas do uczenia (w sekundach)* , chyba że wolisz dłużej uczenie się przez dłuższy czas.
 2. Wybierz pozycję *Rozpocznij szkolenie*.
 
 W trakcie całego procesu szkolenia dane o postępie są wyświetlane `Progress` w sekcji kroku uczenie.

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e4e3b1768086a1c57979a4c74643036294299a3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c9f7a0bc3a7a41a77db3c90c2f88fb5ddfd7bfa0
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787749"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971074"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework wersje i zależności
 Każda wersja programu.NET Framework zawiera środowisko uruchomieniowe języka wspólnego (CLR), biblioteki klas bazowych i inne zarządzane biblioteki. W tym temacie opisano kluczowe funkcje programu .NET Framework według wersji, podano informacje o bazowych wersjach środowiska CLR i skojarzonych środowiskach deweloperskich oraz zidentyfikowano wersje, które są instalowane przez system operacyjny Windows.  
@@ -68,7 +68,7 @@ Każda wersja programu.NET Framework zawiera środowisko uruchomieniowe języka 
   
 ## <a name="targeting-and-running-apps-for-older-versions"></a>Określanie platformy docelowej i uruchamianie aplikacji dla starszych wersji  
 
-.NET Framework wersje 2,0, 3,0 i 3,5 są kompilowane przy użyciu tej samej wersji środowiska CLR (CLR 2,0). Te wersje reprezentują kolejne warstwy jednej instalacji. Każda wersja jest kompilowana przyrostowo na poprzednich wersjach. Nie jest możliwe uruchomienie wersji 2.0, 3.0 i 3.5 równocześnie na komputerze. Po zainstalowaniu wersji 3.5 automatycznie są udostępniane warstwy 2.0 i 3.0, a aplikacje, które zostały zaprojektowane dla wersji 2.0, 3.0 i 3.5, można uruchamiać z użyciem wersji 3.5. Jednakże .NET Framework 4 kończy to podejście warstwowe i jego nowsze wersje (.NET Framework 4,5, 4.5.1, 4.5.2, 4,6, 4.6.1, 4.6.2, 4,7, 4.7.1, 4.7.2 i 4,8) również reprezentują kolejne warstwy pojedynczej instalacji.  Począwszy od .NET Framework 4, można użyć w procesie równoczesnego hostowania w celu uruchamiania wielu wersji środowiska CLR w pojedynczym procesie. Aby uzyskać więcej informacji, zobacz [zestawy i wykonywanie równoczesne](../app-domains/assemblies-and-side-by-side-execution.md).  
+.NET Framework wersje 2,0, 3,0 i 3,5 są kompilowane przy użyciu tej samej wersji środowiska CLR (CLR 2,0). Te wersje reprezentują kolejne warstwy jednej instalacji. Każda wersja jest kompilowana przyrostowo na poprzednich wersjach. Nie jest możliwe uruchomienie wersji 2.0, 3.0 i 3.5 równocześnie na komputerze. Po zainstalowaniu wersji 3.5 automatycznie są udostępniane warstwy 2.0 i 3.0, a aplikacje, które zostały zaprojektowane dla wersji 2.0, 3.0 i 3.5, można uruchamiać z użyciem wersji 3.5. Jednakże .NET Framework 4 kończy to podejście warstwowe i jego nowsze wersje (.NET Framework 4,5, 4.5.1, 4.5.2, 4,6, 4.6.1, 4.6.2, 4,7, 4.7.1, 4.7.2 i 4,8) również reprezentują kolejne warstwy pojedynczej instalacji.  Począwszy od .NET Framework 4, można użyć w procesie równoczesnego hostowania w celu uruchamiania wielu wersji środowiska CLR w pojedynczym procesie. Aby uzyskać więcej informacji, zobacz [zestawy i wykonywanie równoczesne](../../standard/assembly/side-by-side-execution.md).  
   
  Ponadto, jeśli aplikacja jest przeznaczona dla wersji 2,0, 3,0 lub 3,5, użytkownicy mogą być zobowiązani do włączenia .NET Framework 3,5 na komputerze z systemem Windows 8, Windows 8.1 lub Windows 10, zanim będą mogli uruchomić aplikację. Aby uzyskać więcej informacji, zobacz [instalowanie .NET Framework 3,5 w systemie Windows 10, Windows 8.1 i Windows 8](../install/dotnet-35-windows-10.md).  
   

@@ -2,29 +2,29 @@
 title: Używanie rozszerzeń działania
 ms.date: 03/30/2017
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
-ms.openlocfilehash: e524f7e7127eb215be85b0c317474eee70830c2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 551ce24db8c0adc8225ac94a1d05f998a26873a9
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669514"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988633"
 ---
 # <a name="using-activity-extensions"></a>Używanie rozszerzeń działania
-Działania mogą wchodzić w interakcje z rozszerzeniami aplikacji przepływu pracy, które zezwala na hostów w celu zapewnienia dodatkowych funkcji, która nie jest jawnie modelowane w przepływie pracy.  W tym temacie opisano sposób tworzenia i liczbę przypadków, gdy działanie wykonuje za pomocą rozszerzenia.
+Działania mogą współdziałać z rozszerzeniami aplikacji przepływu pracy, które umożliwiają hostowi dostarczanie dodatkowych funkcji, które nie są jawnie modelowane w przepływie pracy.  W tym temacie opisano sposób tworzenia i używania rozszerzenia w celu zliczenia liczby wykonywanych działań.
 
-### <a name="to-use-an-activity-extension-to-count-executions"></a>Liczba wykonań przy użyciu rozszerzenia działania
+### <a name="to-use-an-activity-extension-to-count-executions"></a>Aby użyć rozszerzenia działania do zliczenia wykonywania
 
-1. Open Visual Studio 2010. Wybierz **nowe**, **projektu**. W obszarze **Visual C#** węzeł **przepływu pracy**.  Wybierz **Aplikacja konsoli przepływu pracy** z listy szablonów. Nadaj projektowi nazwę `Extensions`. Kliknij przycisk **OK** do tworzenia projektu.
+1. Open Visual Studio 2010. Wybierz pozycję **Nowy**, **projekt**. W węźle **Wizualizacja C#**  wybierz pozycję **przepływ pracy**.  Z listy szablonów wybierz pozycję **aplikacja konsoli przepływu pracy** . Nadaj nazwę projektowi `Extensions`. Kliknij przycisk **OK** , aby utworzyć projekt.
 
-2. Dodaj `using` instrukcja w pliku Program.cs **System.Collections.Generic** przestrzeni nazw.
+2. Dodaj instrukcję w pliku program.cs dla przestrzeni nazw **System. Collections. Generic.** `using`
 
-    ```
+    ```csharp
     using System.Collections.Generic;
     ```
 
-3. W pliku Program.cs, Utwórz nową klasę o nazwie **ExecutionCountExtension**. Poniższy kod tworzy rozszerzenia przepływu pracy, który śledzi identyfikatorów wystąpień podczas jego **zarejestrować** metoda jest wywoływana.
+3. W pliku Program.cs Utwórz nową klasę o nazwie **ExecutionCountExtension**. Poniższy kod tworzy rozszerzenie przepływu pracy, które śledzi identyfikatory wystąpień w przypadku wywołania metody **register** .
 
-    ```
+    ```csharp
     // This extension collects a list of workflow Ids
     public class ExecutionCountExtension
     {
@@ -56,9 +56,9 @@ Działania mogą wchodzić w interakcje z rozszerzeniami aplikacji przepływu pr
     }
     ```
 
-4. Utwórz działanie, które zużywa **ExecutionCountExtension**. Poniższy kod definiuje działanie, które pobiera **ExecutionCountExtension** obiektu na podstawie czasu wykonywania i wywołuje jego **zarejestrować** metody, gdy działanie wykonuje.
+4. Utwórz działanie, które wykorzystuje **ExecutionCountExtension**. Poniższy kod definiuje działanie, które pobiera obiekt **ExecutionCountExtension** z środowiska uruchomieniowego i wywołuje metodę **register** , gdy działanie jest wykonywane.
 
-    ```
+    ```csharp
     // Activity that consumes an extension provided by the host. If the extension is available
     // in the context, it will invoke (in this case, registers the Id of the executing workflow)
     public class MyActivity: CodeActivity
@@ -75,9 +75,9 @@ Działania mogą wchodzić w interakcje z rozszerzeniami aplikacji przepływu pr
     }
     ```
 
-5. Implementowanie działania w **Main** metoda części pliku program.cs. Poniższy kod zawiera metody do generowania dwóch różnych przepływów pracy, wykonaj kilka razy każdego przepływu pracy i wyświetlić dane wynikowe, który jest zawarty w rozszerzeniu.
+5. Zaimplementuj działanie w metodzie **Main** pliku program.cs. Poniższy kod zawiera metody generowania dwóch różnych przepływów pracy, wykonywania każdego przepływu pracy kilka razy i wyświetlania wyników zawartych w rozszerzeniu.
 
-    ```
+    ```csharp
     class Program
     {
         // Creates a workflow that uses the activity that consumes the extension

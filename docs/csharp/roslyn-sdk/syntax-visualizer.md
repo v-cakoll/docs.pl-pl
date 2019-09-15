@@ -3,12 +3,12 @@ title: Eksplorowanie kodu za pomocą wizualizatora składni Roslyn w programie V
 description: Wizualizator składni zawiera narzędzie wizualne umożliwiające Eksplorowanie modeli, które zestaw .NET Compiler Platform SDK generuje dla kodu.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 55a1aa555a82d286a0e8e4359e814dfe2cc301c8
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: fa3b4fdbb8d573805119e13e8aa93f156c4111f9
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926785"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972016"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Eksplorowanie kodu za pomocą wizualizatora składni Roslyn w programie Visual Studio
 
@@ -29,6 +29,8 @@ To polecenie otwiera Syntax Visualizer jako okno narzędzi zmiennoprzecinkowych.
 Zadokuj to okno narzędzia w wygodnej lokalizacji wewnątrz programu Visual Studio, na przykład po lewej stronie. Wizualizator pokazuje informacje o bieżącym pliku kodu.
 
 Utwórz nowy projekt za pomocą polecenia **plik** > **Nowy projekt** . Można utworzyć projekt w języku VB lub C# . Gdy program Visual Studio otwiera główny plik kodu dla tego projektu, wizualizator Wyświetla drzewo składni. Można otworzyć każdy istniejący C# plik/VB w tym wystąpieniu programu Visual Studio, a wizualizator Wyświetla drzewo składni tego pliku. Jeśli masz otwartych wiele plików kodu w programie Visual Studio, wizualizatorer Wyświetla drzewo składni dla aktualnie aktywnego pliku kodu (plik kodu z fokusem klawiatury).
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![Wizualizowanie drzewa C# składni](media/syntax-visualizer/visualize-csharp.png)

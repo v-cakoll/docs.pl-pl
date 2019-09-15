@@ -2,12 +2,12 @@
 title: polecenie dotnet New
 description: Polecenie dotnet New umożliwia tworzenie nowych projektów platformy .NET Core na podstawie określonego szablonu.
 ms.date: 05/06/2019
-ms.openlocfilehash: c9e960bab0e28e88b0cc8d431dad3b9f3f00c9c0
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 57b198d13984fb4585e1df6303afe481e7e0552d
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660540"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969736"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -18,6 +18,8 @@ ms.locfileid: "69660540"
 `dotnet new`-Tworzy nowy projekt, plik konfiguracji lub rozwiązanie na podstawie określonego szablonu.
 
 ## <a name="synopsis"></a>Streszczenie
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
 
@@ -66,7 +68,7 @@ Polecenie wywołuje [aparat szablonu](https://github.com/dotnet/templating) , ab
 
 Szablon do wystąpienia po wywołaniu polecenia. Każdy szablon może mieć określone opcje, które można przekazać. Aby uzyskać więcej informacji, zobacz [Opcje szablonu](#template-options).
 
-Jeśli wartość nie jest dokładnym dopasowaniem do tekstu w kolumnie Templates lub **short name** , do tych dwóch kolumn jest wykonywane dopasowanie podciągów. `TEMPLATE`
+Jeśli wartość nie jest dokładnym dopasowaniem do tekstu w kolumnie **templates** lub **short name** , do tych dwóch kolumn jest wykonywane dopasowanie podciągów. `TEMPLATE`
 
 # <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
 
@@ -755,7 +757,7 @@ Wyświetl listę wszystkich szablonów dostępnych dla MVC:
 
 `dotnet new mvc -l`
 
-Wyświetl listę wszystkich szablonów pasujących do podciągu. Nie znaleziono dokładnego dopasowania, więc Dopasowywanie podciągów działa w odniesieniu do kolumn krótkich nazw i nazw.
+Wyświetl listę wszystkich szablonów pasujących *do* podciągu. Nie znaleziono dokładnego dopasowania, więc Dopasowywanie podciągów działa w odniesieniu do kolumn krótkich nazw i nazw.
 
 `dotnet new we -l`
 

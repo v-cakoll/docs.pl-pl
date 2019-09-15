@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 28a06139275f63571d9528d075946d97a19c9f3c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b2da9600e6947a1efcb13fc8b1127665cea63071
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912878"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972201"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Konfigurowanie aplikacji za pomocą plików konfiguracji
 .NET Framework, za pomocą plików konfiguracji, oferuje deweloperom i administratorom kontrolę i elastyczność nad sposobem uruchamiania aplikacji. Pliki konfiguracji to pliki XML, które można zmieniać w razie potrzeby. Administrator może kontrolować, do których chronionych zasobów aplikacja może uzyskać dostęp, które wersje zestawów będą używane przez aplikację, oraz miejsce, w którym znajdują się aplikacje zdalne i obiekty. Deweloperzy mogą umieszczać ustawienia w plikach konfiguracji, eliminując konieczność ponownego kompilowania aplikacji za każdym razem, gdy zmieni się ustawienie. W tej sekcji opisano, co można skonfigurować i dlaczego Konfigurowanie aplikacji może być przydatne.  
@@ -127,4 +127,4 @@ ms.locfileid: "69912878"
 - [Administrowanie witryną sieci Web ASP.NET](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
 - [Zarządzanie zasadami zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
 - [Caspol.exe (narzędzie zasad zabezpieczeń dostępu do kodu)](../tools/caspol-exe-code-access-security-policy-tool.md)
-- [Zestawy w środowisku uruchomieniowym CLR](../app-domains/assemblies-in-the-common-language-runtime.md)
+- [Zestawy w środowisku .NET](../../standard/assembly/index.md)

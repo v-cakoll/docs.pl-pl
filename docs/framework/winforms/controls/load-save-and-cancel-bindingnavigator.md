@@ -8,56 +8,56 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: f190bfa29af480fa104f30b21b1af517c413b838
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 2d4867c0bc4feb7b43e15614fc56a3c709cef9e7
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211574"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991742"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Instrukcje: dodawanie przycisków załaduj, zapisz i anuluj do kontrolki BindingNavigator formularzy systemu Windows
 
-<xref:System.Windows.Forms.BindingNavigator> Formant jest specjalny <xref:System.Windows.Forms.ToolStrip> formant, który jest przeznaczony do nawigowania i manipulowanie nimi formantów w formularzu, które są powiązane z danymi.
+Formant jest formantem specjalnego przeznaczenia <xref:System.Windows.Forms.ToolStrip> , który jest przeznaczony do nawigowania i manipulowania kontrolkami w formularzu, które są powiązane z danymi. <xref:System.Windows.Forms.BindingNavigator>
 
-Ponieważ jest on <xref:System.Windows.Forms.ToolStrip> kontroli <xref:System.Windows.Forms.BindingNavigator> składnika można łatwo zmodyfikowany w celu dodania dodatkowych lub alternatywnych poleceń dla użytkownika.
+Ponieważ jest <xref:System.Windows.Forms.ToolStrip> to formant <xref:System.Windows.Forms.BindingNavigator> , składnik można łatwo zmodyfikować w taki sposób, aby obejmował dodatkowe lub alternatywne polecenia dla użytkownika.
 
-W poniższej procedurze <xref:System.Windows.Forms.TextBox> kontrolka jest powiązana z danymi i <xref:System.Windows.Forms.ToolStrip> formant, który zostanie dodany do formularza zostanie zmodyfikowany na potrzeby obejmują Załaduj, Zapisz i przyciski "Anuluj".
+W poniższej procedurze <xref:System.Windows.Forms.TextBox> formant jest powiązany z danymi, <xref:System.Windows.Forms.ToolStrip> a kontrolka dodana do formularza zostanie zmodyfikowana w celu uwzględnienia przycisków ładowania, zapisywania i anulowania.
 
-## <a name="add-load-save-and-cancel-buttons-to-the-bindingnavigator-component"></a>Dodaj obciążenie, Zapisz i przyciski do składnika BindingNavigator "Anuluj"
+## <a name="add-load-save-and-cancel-buttons-to-the-bindingnavigator-component"></a>Dodawanie przycisków Załaduj, Zapisz i Anuluj do składnika BindingNavigator
 
-1. W programie Visual Studio, należy dodać <xref:System.Windows.Forms.TextBox> formantu do formularza.
+1. W programie Visual Studio Dodaj <xref:System.Windows.Forms.TextBox> kontrolkę do formularza.
 
-2. Powiązać <xref:System.Windows.Forms.BindingSource>, która jest powiązana ze źródłem danych. W tym przykładzie <xref:System.Windows.Forms.BindingSource> jest powiązana z bazą danych.
+2. Powiąż go z <xref:System.Windows.Forms.BindingSource>, który jest powiązany ze źródłem danych. W tym przykładzie <xref:System.Windows.Forms.BindingSource> jest on powiązany z bazą danych.
 
-3. Po wygenerowaniu karty zestaw danych i tabeli, przeciągnij <xref:System.Windows.Forms.BindingNavigator> formantu do formularza.
+3. Po wygenerowaniu zestawu danych i karty tabeli przeciągnij <xref:System.Windows.Forms.BindingNavigator> kontrolkę do formularza.
 
-4. Ustaw <xref:System.Windows.Forms.BindingNavigator> kontrolki <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> właściwości <xref:System.Windows.Forms.BindingSource> w formularzu, który jest powiązany z kontrolki.
+4. <xref:System.Windows.Forms.BindingNavigator> Ustaw Właściwość<xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> kontrolki na formularzu, który jest powiązany z kontrolkami. <xref:System.Windows.Forms.BindingSource>
 
-5. Wybierz <xref:System.Windows.Forms.BindingNavigator> kontroli.
+5. <xref:System.Windows.Forms.BindingNavigator> Zaznacz kontrolkę.
 
-6. Kliknij symbol tagu inteligentnego (![symbol tagu inteligentnego](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) więc **zadania BindingNavigator** pojawi się okno dialogowe i wybierz **Edytuj elementy**.
+6. Kliknij symbol taga inteligentnego (![tag inteligentny](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")), aby otworzyć okno dialogowe **zadania** , a następnie wybierz pozycję **Edytuj elementy**.
 
-     **Edytor kolekcji elementów** pojawia się.
+     Zostanie wyświetlony **Edytor kolekcji Items** .
 
-7. W **Edytor kolekcji elementów**, wykonaj następujące czynności:
+7. W **edytorze kolekcji elementów**wykonaj następujące czynności:
 
-    1. Dodaj <xref:System.Windows.Forms.ToolStripSeparator> i trzema <xref:System.Windows.Forms.ToolStripButton> elementów, wybierając odpowiedni typ <xref:System.Windows.Forms.ToolStripItem> i klikając **Dodaj** przycisku.
+    1. Dodaj a <xref:System.Windows.Forms.ToolStripButton>itrzy elementy, <xref:System.Windows.Forms.ToolStripItem> wybierając odpowiedni typ i klikając przycisk Dodaj. <xref:System.Windows.Forms.ToolStripSeparator>
 
-    2. Ustaw <xref:System.Windows.Forms.ToolStripItem.Name%2A> właściwość przyciski **LoadButton**, **SaveButton**, i **CancelButton**, odpowiednio.
+    2. Ustaw odpowiednioWłaściwość przycisków na LoadButton, SaveButton i CancelButton. <xref:System.Windows.Forms.ToolStripItem.Name%2A>
 
-    3. Ustaw <xref:System.Windows.Forms.ToolStripItem.Text%2A> właściwość przyciski **obciążenia**, **Zapisz**, i **anulować**.
+    3. Ustaw właściwość przycisków do **załadowania**, **zapisania**i **anulowania.** <xref:System.Windows.Forms.ToolStripItem.Text%2A>
 
-    4. Ustaw <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> właściwości dla każdego z przycisków, aby **tekstu**. Alternatywnie, można ustawić tę właściwość **obraz** lub **ImageAndText**i Ustaw obraz, który ma być wyświetlany w <xref:System.Windows.Forms.ToolStripItem.Image%2A> właściwości.
+    4. Ustaw właściwość dla każdego przycisku na **tekst.** <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> Alternatywnie możesz ustawić tę właściwość na **Image** lub **ImageAndText**i ustawić obraz, który ma być <xref:System.Windows.Forms.ToolStripItem.Image%2A> wyświetlany we właściwości.
 
-    5. Kliknij przycisk **OK** aby zamknąć okno dialogowe. Przyciski są dodawane do <xref:System.Windows.Forms.ToolStrip>.
+    5. Kliknij przycisk **OK** , aby zamknąć okno dialogowe. Przyciski zostaną dodane do <xref:System.Windows.Forms.ToolStrip>.
 
-8. Kliknij prawym przyciskiem myszy formularz, a następnie wybierz **Wyświetl kod**.
+8. Kliknij prawym przyciskiem myszy formularz i wybierz polecenie **Wyświetl kod**.
 
-9. W edytorze kodu Znajdź wiersz kodu, który ładuje dane do karty tabeli. Ten kod został wygenerowany podczas tworzenia powiązań danych, w kroku 2. Kod powinien być podobny do następującego: `TableAdapterName.Fill(DataSetName.TableName)`. Będzie ono najbardziej prawdopodobnie w formie <xref:System.Windows.Forms.Form.Load> zdarzeń.
+9. W edytorze kodu Znajdź wiersz kodu, który ładuje dane do karty tabeli. Ten kod został wygenerowany podczas konfigurowania powiązania danych w kroku 2. Kod powinien wyglądać podobnie do poniższego: `TableAdapterName.Fill(DataSetName.TableName)`. Najprawdopodobniej będzie to w <xref:System.Windows.Forms.Form.Load> przypadku zdarzenia formularza.
 
-10. Utwórz procedurę obsługi zdarzeń dla <xref:System.Windows.Forms.ToolStripItem.Click> zdarzenia **obciążenia** <xref:System.Windows.Forms.ToolStripButton> utworzonej wcześniej i przenieść ten kod ładowania danych do niego.
+10. Utwórz procedurę obsługi zdarzeń dla <xref:System.Windows.Forms.ToolStripItem.Click> zdarzenia utworzonego wcześniej **ładowania** <xref:System.Windows.Forms.ToolStripButton> i Przenieś do niego ten kod ładowania danych.
 
-     Kod powinien teraz wyglądać podobnie do poniższej:
+     Kod powinien teraz wyglądać podobnie do poniższego:
 
     ```vb
     Private Sub LoadButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LoadButton.Click
@@ -73,7 +73,7 @@ W poniższej procedurze <xref:System.Windows.Forms.TextBox> kontrolka jest powi�
     }
     ```
 
-11. Utwórz procedurę obsługi zdarzeń dla <xref:System.Windows.Forms.ToolStripItem.Click> zdarzenia **Zapisz** <xref:System.Windows.Forms.ToolStripButton> została utworzona wcześniej, a następnie napisz kod, aby zaktualizować dane w tabeli formant jest powiązany z.
+11. Utwórz procedurę obsługi zdarzeń dla <xref:System.Windows.Forms.ToolStripItem.Click> zdarzenia utworzonego wcześniej **zapisu** <xref:System.Windows.Forms.ToolStripButton> i napisz kod, aby zaktualizować dane w tabeli, z którą jest powiązany formant.
 
     ```vb
     Private Sub SaveButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SaveButton.Click
@@ -90,9 +90,9 @@ W poniższej procedurze <xref:System.Windows.Forms.TextBox> kontrolka jest powi�
     ```
 
     > [!NOTE]
-    > W niektórych przypadkach <xref:System.Windows.Forms.BindingNavigator> ma już składnik **Zapisz** przycisk, ale żaden kod został wygenerowany przez projektanta Windows Forms. W takim przypadku można umieścić powyższy kod w <xref:System.Windows.Forms.ToolStripItem.Click> program obsługi zdarzeń dla tego przycisku, zamiast tworzenia całkowicie nowego przycisku na <xref:System.Windows.Forms.ToolStrip>. Jednak przycisk jest domyślnie wyłączony, musisz więc ustawić <xref:System.Windows.Forms.ToolBarButton.Enabled%2A> właściwości przycisku `true` poprawnie mieć funkcję przycisku.
+    > W niektórych przypadkach <xref:System.Windows.Forms.BindingNavigator> składnik ma już przycisk **Zapisz** , ale nie Wygenerowano żadnego kodu przez Projektant formularzy systemu Windows. W takim przypadku można umieścić poprzedni kod w <xref:System.Windows.Forms.ToolStripItem.Click> obsłudze zdarzeń dla tego przycisku zamiast tworzyć zupełnie nowy przycisk <xref:System.Windows.Forms.ToolStrip>na. Jednak przycisk jest domyślnie wyłączony, dlatego należy ustawić <xref:System.Windows.Forms.ToolBarButton.Enabled%2A> właściwość przycisku na `true` tak, aby działał poprawnie.
 
-12. Utwórz procedurę obsługi zdarzeń dla <xref:System.Windows.Forms.ToolStripItem.Click> zdarzenia **anulować** <xref:System.Windows.Forms.ToolStripButton> utworzonej wcześniej i napisać kod, aby anulować wszelkie zmiany do rekordu danych, która jest wyświetlana.
+12. Utwórz procedurę obsługi zdarzeń dla <xref:System.Windows.Forms.ToolStripItem.Click> zdarzenia **anulowania** <xref:System.Windows.Forms.ToolStripButton> utworzonego wcześniej i napisz kod, aby anulować wszystkie zmiany w wyświetlonym rekordzie danych.
 
     ```vb
     Private Sub CancelButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CancelButton.Click
@@ -108,7 +108,7 @@ W poniższej procedurze <xref:System.Windows.Forms.TextBox> kontrolka jest powi�
     ```
 
     > [!NOTE]
-    > <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> Metody jest ograniczone do wiersza danych. Zapisz wszelkie zmiany wprowadzone podczas wyświetlania tego pojedynczego rekordu przed przejdź do następnego rekordu.
+    > <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> Metoda jest objęta zakresem wierszy danych. Zapisz wszelkie zmiany wprowadzone podczas wyświetlania danego rekordu przed przejściem do następnego rekordu.
 
 ## <a name="see-also"></a>Zobacz także
 

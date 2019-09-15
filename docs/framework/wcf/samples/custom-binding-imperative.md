@@ -2,12 +2,12 @@
 title: Powiązanie niestandardowe imperatywne
 ms.date: 03/30/2017
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
-ms.openlocfilehash: c0f72c8216492b48de8c863dc35880d3c0034ef2
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b5f6587567eaf7f719028a7d92f3db8f8259b6e1
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045664"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990038"
 ---
 # <a name="custom-binding-imperative"></a>Powiązanie niestandardowe imperatywne
 W przykładzie pokazano, jak napisać sam kod w celu zdefiniowania i użycia niestandardowych powiązań bez użycia pliku konfiguracji ani klienta wygenerowanego przez program Windows Communication Foundation (WCF). Ten przykład łączy funkcje zapewniane przez transport HTTP i kanał niezawodnej sesji w celu utworzenia niezawodnego powiązania opartego na protokole HTTP. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) , który implementuje usługę kalkulatora.  
@@ -54,7 +54,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);
 
  Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

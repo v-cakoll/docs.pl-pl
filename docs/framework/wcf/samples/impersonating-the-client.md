@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 61befdcaf1381120dba6f72ba592dade09d0490a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 40bde7d9bd2735dfd6f1a18f9359533db0e11724
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968341"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989823"
 ---
 # <a name="impersonating-the-client"></a>Personifikowanie klienta
 Przykład personifikacji demonstruje sposób personifikacji aplikacji wywołującej w usłudze, aby usługa mogła uzyskać dostęp do zasobów systemowych w imieniu obiektu wywołującego.  
   
- Ten przykład jest oparty na przykładu samoobsługowego. [](../../../../docs/framework/wcf/samples/self-host.md) Pliki konfiguracji usługi i klienta są takie same jak w przypadku przykładu samoobsługowego [hosta](../../../../docs/framework/wcf/samples/self-host.md) .  
+ Ten przykład jest oparty [na przykładu samoobsługowego](../../../../docs/framework/wcf/samples/self-host.md) . Pliki konfiguracji usługi i klienta są takie same jak w przypadku przykładu samoobsługowego [hosta](../../../../docs/framework/wcf/samples/self-host.md) .  
   
 > [!NOTE]
 > Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
@@ -117,7 +117,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
   
 4. Aby zademonstrować, że usługa personifikuje wywołującego, uruchom klienta przy użyciu innego konta niż to, w którym działa usługa. Aby to zrobić, w wierszu polecenia wpisz:  
   
-    ```  
+    ```console  
     runas /user:<machine-name>\<user-name> client.exe  
     ```  
   

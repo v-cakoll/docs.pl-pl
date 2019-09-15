@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: 66dd61210e36210f5444eb05355612eeb75c155a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bca07bf776f20443c4ccd2af69fc8c0b4eec5a88
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790242"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991105"
 ---
 # <a name="wcf-data-services-overview"></a>Przegląd Usługi danych programu WCF
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]umożliwia tworzenie i wykorzystywanie usług danych dla sieci Web lub intranet przy użyciu [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]umożliwia uwidocznienie danych jako zasobów, które są adresowane przez identyfikatory URI. Dzięki temu można uzyskać dostęp do danych i zmienić je przy użyciu semantyki przenoszonego transferu stanu (REST), w tym standardowych czasowników HTTP funkcji GET, PUT, POST i DELETE. Ten temat zawiera omówienie wzorców i praktyk zdefiniowanych przez [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] program, a także udogodnienia zapewniane przez program, dzięki [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] którym można [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] korzystać z aplikacji opartych na .NET Framework.  
@@ -18,9 +18,9 @@ ms.locfileid: "70790242"
 ## <a name="address-data-as-resources"></a>Adresowanie danych jako zasobów  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]udostępnia dane jako zasoby, które są adresowane przez identyfikatory URI. Ścieżki zasobów są konstruowane na podstawie Konwencji relacji jednostek Entity Data Model. W tym modelu jednostki reprezentują jednostki operacyjne danych w domenie aplikacji, takie jak klienci, zamówienia, elementy i produkty. Aby uzyskać więcej informacji, zobacz [Entity Data Model](../adonet/entity-data-model.md).  
   
- W [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]programie adresowanie zasobów jednostki jako zestawu jednostek, który zawiera wystąpienia typów jednostek. Na przykład identyfikator URI `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders` zwraca wszystkie zamówienia `Northwind` z usługi danych, które są powiązane z klientem z `CustomerID` wartością`ALFKI.`  
+ W [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]programie adresowanie zasobów jednostki jako zestawu jednostek, który zawiera wystąpienia typów jednostek. Na przykład identyfikator URI <https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders> zwraca wszystkie zamówienia `Northwind` z usługi danych, które są powiązane z klientem z `CustomerID` wartością`ALFKI.`  
   
- Wyrażenia zapytań umożliwiają wykonywanie tradycyjnych operacji zapytań względem zasobów, takich jak filtrowanie, sortowanie i stronicowanie. Na przykład identyfikator URI `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=Freight gt 50` filtruje zasoby, aby zwracały tylko zamówienia z kosztem frachtu większym niż $50. Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do zasobów usługi danych](accessing-data-service-resources-wcf-data-services.md).  
+ Wyrażenia zapytań umożliwiają wykonywanie tradycyjnych operacji zapytań względem zasobów, takich jak filtrowanie, sortowanie i stronicowanie. Na przykład identyfikator URI <https://services.odata.org/Northwind/Northwind.svc/Customers("ALFKI")/Orders? $Filter = fracht gt 50 > filtruje zasoby, aby zwracały tylko zamówienia z kosztem frachtu większym niż $50. Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do zasobów usługi danych](accessing-data-service-resources-wcf-data-services.md).  
   
 ## <a name="interoperable-data-access"></a>Dostęp do danych międzyoperacyjnych  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Program korzysta z standardowych protokołów internetowych, aby zapewnić, że usługi danych współdziałają z aplikacjami, które nie używają .NET Framework. Ze względu na to, że można używać standardowych identyfikatorów URI do adresowania danych, aplikacja może uzyskiwać dostęp do danych i zmieniać je przy użyciu semantyki przenoszonego transferu Stanów (REST), w tym standardowych zleceń HTTP funkcji GET, PUT, POST i DELETE. Dzięki temu można uzyskać dostęp do tych usług z dowolnego klienta, który może analizować dane przesyłane za pośrednictwem standardowych protokołów HTTP i uzyskiwać do nich dostęp.  

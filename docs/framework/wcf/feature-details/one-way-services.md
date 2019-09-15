@@ -6,27 +6,27 @@ helpviewer_keywords:
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-ms.openlocfilehash: b29585eabcc2549876f4b50e6b6e55a7f8ef2eee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d567674baa92ad096b10a1199fa3f04f05939df5
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621343"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991171"
 ---
 # <a name="one-way-services"></a>Usługi jednokierunkowe
-Domyślnym zachowaniem operacji usługi jest wzorzec "żądanie-odpowiedź". We wzorcu "żądanie-odpowiedź" klient czeka na komunikat odpowiedzi, nawet, jeśli operacja usługi jest reprezentowana w kodzie jako `void` metody. Za pomocą operacji jednokierunkowych są przesyłane tylko jeden komunikat. Odbiornik nie wysyła komunikat odpowiedzi nie jest nadawca oczekiwany jeden.  
+Domyślnym zachowaniem operacji usługi jest wzorzec żądanie-odpowiedź. W wzorcu żądanie-odpowiedź klient czeka na komunikat odpowiedzi, nawet jeśli operacja usługi jest reprezentowana w kodzie jako `void` Metoda. Z jednokierunkową operacją jest przesyłany tylko jeden komunikat. Odbiorca nie wysyła komunikatu odpowiedzi ani nie oczekuje takiego nadawcy.  
   
- Użyj wzorca projektowego jednokierunkowe:  
+ Użyj wzorca projektowego jednokierunkowego:  
   
-- Gdy klient musi wywoływanie operacji i nie występuje w wyniku operacji na poziomie operacji.  
+- Gdy klient musi wywoływać operacje i nie ma wpływ na wynik operacji na poziomie operacji.  
   
-- Korzystając z <xref:System.ServiceModel.NetMsmqBinding> lub <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> klasy. (Aby uzyskać więcej informacji na temat tego scenariusza, zobacz [kolejki programu WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
+- Przy użyciu <xref:System.ServiceModel.NetMsmqBinding> <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> lub klasy. (Aby uzyskać więcej informacji na temat tego scenariusza, zobacz [kolejki w programie WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)).  
   
- Gdy operacja jest jednokierunkowa, nie ma odpowiedzi do przenoszenia informacji o błędzie do klienta. Warunki błędów może wykryć, korzystając z funkcji podstawowych powiązania, takich jak niezawodnej sesji lub Projektując kontrakt usługi dwustronnej, które używa dwóch operacji jednokierunkowych — kontraktu jednokierunkowego od klienta do usługi do wywołania operacji usługi, a drugi jednokierunkowa Umowę między usługą i klienta, aby usługa może wysyłać błędy wstecz do klienta przy użyciu wywołania zwrotnego, który implementuje klienta.  
+ Gdy operacja jest jednokierunkowa, nie ma komunikatu odpowiedzi, aby uzyskać informacje o błędzie z powrotem do klienta. Można wykrywać błędy przy użyciu funkcji powiązania bazowego, takich jak Sesje niezawodne lub przez zaprojektowanie kontraktu usługi dupleksowej, który używa operacji 2 1-kierunkowych — jednokierunkowego kontraktu z klientem do usługi w celu wywołania operacji usługi i innej jednokierunkowa Umowa między usługą a klientem, dzięki czemu usługa może wysyłać błędy do klienta przy użyciu wywołania zwrotnego, które implementuje klient.  
   
- Aby utworzyć kontrakt usługi jednokierunkowej, definiowanie kontraktu usługi, usługi, zastosuj <xref:System.ServiceModel.OperationContractAttribute> klasy do każdej operacji, a następnie ustaw <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> właściwości `true`, jak pokazano w poniższym przykładowym kodzie.  
+ Aby utworzyć kontrakt usługi jednokierunkowej, zdefiniuj kontrakt usługi, Zastosuj <xref:System.ServiceModel.OperationContractAttribute> klasę do każdej operacji i <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> ustaw właściwość na `true`, jak pokazano w poniższym przykładowym kodzie.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOneWayCalculator  
 {  
@@ -41,18 +41,18 @@ public interface IOneWayCalculator
 }  
 ```  
   
- Aby uzyskać kompletny przykład, zobacz [jednokierunkowe](../../../../docs/framework/wcf/samples/one-way.md) próbki.  
+ Pełny przykład można znaleźć w przykładach [jednokierunkowych](../../../../docs/framework/wcf/samples/one-way.md) .  
   
-## <a name="clients-blocking-with-one-way-operations"></a>Klienci z blokowaniem za pomocą operacji jednokierunkowych  
- Należy weź pod uwagę, że mimo że niektóre aplikacje jednokierunkowe zwraca zaraz po danych wychodzących są zapisywane do połączenia sieciowego w kilku scenariuszach wdrożenia powiązania lub usługi może spowodować klienta WCF zablokować używanie operacji jednokierunkowych. W aplikacjach klienckich usługi WCF obiekt klienta WCF nie zwraca do momentu połączenia sieciowego został zapisany danych wychodzących. Ta zasada obowiązuje dla wszystkich typów wymiany wiadomości, łącznie z jednokierunkową; oznacza to, że każdy problem zapisu czy dane do transportu uniemożliwi zwracanie przez klienta. W zależności od problemu, może się zdarzyć, wyjątek lub opóźnienie podczas wysyłania komunikatów do usługi.  
+## <a name="clients-blocking-with-one-way-operations"></a>Klienci blokujący operacje jednokierunkowe  
+ Należy pamiętać, że podczas gdy pewne aplikacje jednokierunkowe zwracają się zaraz po zapisaniu danych wychodzących do połączenia sieciowego, w kilku scenariuszach implementacja powiązania lub usługi może spowodować, że klient programu WCF będzie blokował przy użyciu operacji jednokierunkowych. W aplikacjach klienckich WCF obiekt klienta WCF nie zwraca do momentu zapisania danych wychodzących do połączenia sieciowego. Dotyczy to wszystkich wzorców wymiany komunikatów, w tym operacji jednokierunkowych; oznacza to, że wszelkie problemy z zapisywaniem danych w transporcie uniemożliwiają zwrócenie przez klienta. W zależności od tego problemu wynikiem może być wyjątek lub opóźnienie wysyłania komunikatów do usługi.  
   
- Na przykład, jeśli transport nie można odnaleźć punktu końcowego <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType> wyjątek bez dużego opóźnienia. Jednak jest również możliwe, że usługa jest nie można odczytać danych poza przewodowy jakiegoś powodu, co uniemożliwia transport klienta wysyłać operację, zwraca. W takich przypadkach Jeśli <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A?displayProperty=nameWithType> kropki na transport klienta wiązanie zostanie przekroczony, <xref:System.TimeoutException?displayProperty=nameWithType> zgłaszany —, ale nie do czasu został przekroczony limit czasu. Istnieje również możliwość fire tak wiele wiadomości powinna być usługa, że usługa nie może przetworzyć je po pewnym. W tym przypadku, bloki klienta jednokierunkowe aż usługa może przetwarzać komunikatów, lub do momentu jest zgłaszany wyjątek.  
+ Na przykład jeśli transport nie może znaleźć punktu końcowego, <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType> wyjątek jest zgłaszany bez opóźnień. Istnieje również możliwość, że usługa nie będzie mogła odczytywać danych z sieci z jakiegoś powodu, co zapobiega zwracaniu przez nie operacji wysyłania przez klienta. W takich przypadkach, jeśli <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A?displayProperty=nameWithType> zostanie przekroczony okres powiązania transportu klienta <xref:System.TimeoutException?displayProperty=nameWithType> , jest zgłaszany, ale nie do czasu przekroczenia limitu czasu. Możliwe jest również wyzwolenie tego wielu komunikatów w usłudze, że usługa nie może przetworzyć ich poza określonym punktem. W tym przypadku jest to również blok klienta jednokierunkowego do momentu, gdy usługa będzie mogła przetwarzać komunikaty lub do momentu wyrzucania wyjątku.  
   
- Inna wersja jest sytuacja, w której usługa <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> właściwość jest ustawiona na <xref:System.ServiceModel.ConcurrencyMode.Single> i powiązanie używa sesji. W tym przypadku Dyspozytor wymusza kolejność na komunikaty przychodzące (wymaganie sesji), co zapobiega kolejnych komunikatów odczytywanych z sieci, aż usługa został przetworzony poprzedni komunikat w ramach danej sesji. Ponownie bloków klienta, ale czy wystąpi wyjątek zależy od tego, czy usługa jest w stanie przetwarzać dane oczekiwania przed ustawienia limitu czasu na komputerze klienckim.  
+ Inna odmiana to sytuacja, w której właściwość <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> usługi jest ustawiona na <xref:System.ServiceModel.ConcurrencyMode.Single> , a powiązanie używa sesji. W takim przypadku Dyspozytor wymusza porządkowanie komunikatów przychodzących (wymaganie sesji), które uniemożliwiają odczytanie kolejnych komunikatów z sieci do czasu przetworzenia przez usługę powyższej wiadomości dla danej sesji. Ponownie, bloki klienta, ale niezależnie od tego, czy występuje wyjątek, zależy od tego, czy usługa może przetwarzać dane oczekujące przed ustawieniami limitu czasu na kliencie.  
   
- Można ograniczyć część tego problemu, wstawiając bufora między obiektu klienta i operację wysyłania transportu klienta. Na przykład obiekt klienta szybko powrócić można włączyć za pomocą wywołania asynchronicznego lub kolejki komunikatów w pamięci. Oba podejścia może zwiększyć funkcjonalność, ale rozmiar puli wątków i kolejki komunikatów nadal wymuszanie limitów.  
+ Możesz złagodzić jakiś problem, wstawiając bufor między obiektem klienta a operacją wysyłania przez klienta. Na przykład za pomocą wywołań asynchronicznych lub przy użyciu kolejki komunikatów w pamięci można umożliwić szybkie zwracanie obiektu klienckiego. Obie metody mogą zwiększyć funkcjonalność, ale rozmiar puli wątków i kolejki komunikatów nadal wymusza limity.  
   
- Jest to zalecane, zamiast tego należy zbadać różne formanty w usłudze, a także na komputerze klienckim, a następnie przetestować swoich scenariuszy aplikacji, aby określić najlepszą konfigurację po obu stronach. Na przykład, jeśli korzystanie z sesji blokuje przetwarzanie komunikatów w usłudze, możesz ustawić <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> właściwości <xref:System.ServiceModel.InstanceContextMode.PerCall> tak, aby każdy komunikat może przetwarzane przez utworzone wystąpienie innej usługi i ustaw <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> do <xref:System.ServiceModel.ConcurrencyMode.Multiple> Aby zezwolić na więcej niż jeden wątek do wysyłania wiadomości w czasie. Innym rozwiązaniem jest zwiększyć te limity odczytu powiązań usługi i klienta.  
+ Zaleca się, aby przeanalizować różne kontrolki usługi, a także na kliencie, a następnie przetestować scenariusze aplikacji, aby określić najlepszą konfigurację po obu stronach. Na przykład jeśli użycie sesji blokuje przetwarzanie komunikatów w usłudze <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> , można ustawić właściwość na <xref:System.ServiceModel.InstanceContextMode.PerCall> tak, aby każdy komunikat mógł być przetwarzany przez inne <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> wystąpienie usługi, i ustawić na <xref:System.ServiceModel.ConcurrencyMode.Multiple> w celu zezwalania więcej niż jednemu wątkowi na wysyłanie komunikatów jednocześnie. Innym podejściem jest zwiększenie przydziałów odczytu usługi i klienta.  
   
 ## <a name="see-also"></a>Zobacz także
 

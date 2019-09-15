@@ -1,21 +1,25 @@
 ---
-title: polecenie pomocy DotNet
-description: Polecenia dotnet pomocy zawiera bardziej szczegółowe dokumentację online dla określonego polecenia.
-ms.date: 12/04/2018
-ms.openlocfilehash: 8694494720cdb9a540754fdf79eeb99d5dbe61ef
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+title: polecenie pomocy dotnet
+description: Polecenie pomocy dotnet zawiera bardziej szczegółową dokumentację w trybie online dla określonego polecenia.
+ms.date: 08/08/2019
+ms.openlocfilehash: e76f858f2529afc50646473f1aab9d52730cff16
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631987"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990462"
 ---
-# <a name="dotnet-help-reference"></a>Dokumentacja pomocy DotNet
+# <a name="dotnet-help-reference"></a>informacje pomocy dotyczące dotnet
 
+**Ten artykuł dotyczy: ✓** .net Core 2,0 SDK i nowszych wersji
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
+-->
 
 ## <a name="name"></a>Nazwa
 
-`dotnet help` -Przedstawiono bardziej szczegółowe dokumentację online dla określonego polecenia.
+`dotnet help`-Wyświetla bardziej szczegółową dokumentację w trybie online dla określonego polecenia.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -23,23 +27,23 @@ ms.locfileid: "65631987"
 
 ## <a name="description"></a>Opis
 
-`dotnet help` Polecenie otwiera stronę odwołania, aby uzyskać szczegółowe informacje dotyczące określonego polecenia w witrynie docs.microsoft.com.
+`dotnet help` Polecenie otwiera stronę referencyjną, aby uzyskać bardziej szczegółowe informacje na temat określonego polecenia w docs.Microsoft.com.
 
 ## <a name="arguments"></a>Argumenty
 
 * **`COMMAND_NAME`**
 
-  Nazwa polecenia interfejsu wiersza polecenia platformy .NET Core. Aby uzyskać listę prawidłowych poleceń interfejsu wiersza polecenia, zobacz [poleceń interfejsu wiersza polecenia](index.md#cli-commands).
+  Nazwa polecenia interfejs wiersza polecenia platformy .NET Core. Aby uzyskać listę prawidłowych poleceń interfejsu wiersza polecenia, zobacz [poleceń interfejsu wiersza polecenia](index.md#cli-commands).
 
 ## <a name="options"></a>Opcje
 
 * **`-h|--help`**
 
-  Drukuje krótki pomoc dotyczącą polecenia.
+  Drukuje krótką pomoc dla polecenia.
 
 ## <a name="examples"></a>Przykłady
 
-* Otwiera stronę dokumentacji [dotnet nowe](dotnet-new.md) polecenia:
+* Otwiera stronę dokumentacji dla nowego polecenia [dotnet](dotnet-new.md) :
 
   ```console
   dotnet help new

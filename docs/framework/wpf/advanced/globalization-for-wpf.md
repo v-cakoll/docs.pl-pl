@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 2f651b68d845e062ad950bb626e30c755d6d9df6
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: f1147bf090af23c2f27bac14ab895657ccee60e3
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169164"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991556"
 ---
 # <a name="globalization-for-wpf"></a>Globalizacja dla WPF
 Ten temat zawiera informacje o problemach, które należy wziąć pod [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uwagę podczas pisania aplikacji dla globalnego rynku. Elementy programistyczne globalizacji są zdefiniowane w programie .NET w <xref:System.Globalization> przestrzeni nazw.
@@ -39,7 +39,7 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 ### <a name="encoding"></a>Kodowanie
  Kodowanie obsługiwane przez [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] są ASCII, [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] UTF-16 i UTF-8. Instrukcja kodowania znajduje się na początku [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dokumentu. Jeśli żaden atrybut kodowania nie istnieje i nie ma kolejności bajtów, Analizator domyślnie używa kodowania UTF-8. Kodowanie UTF-8 i UTF-16 są preferowanymi kodowaniami. Kodowanie UTF-7 nie jest obsługiwane. W poniższym przykładzie pokazano, jak określić kodowanie UTF-8 w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku.
 
-```
+```xaml
 ?xml encoding="UTF-8"?
 ```
 
@@ -51,7 +51,7 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
  W poniższym [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] przykładzie zastosowano `fr-CA` atrybut Language, aby określić kanadyjski francuski.
 
-```xml
+```xaml
 <TextBlock xml:lang="fr-CA">Découvrir la France</TextBlock>
 ```
 
@@ -173,7 +173,7 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
  Rozwiązanie tego problemu powoduje ustawienie atrybutu rezerwy języka neutralnego. Deweloper aplikacji może opcjonalnie usunąć zasoby z głównego zestawu i określić, że zasoby można znaleźć w zestawie satelickim odpowiadającym określonej kulturze. Aby sterować tym procesem, <xref:System.Resources.NeutralResourcesLanguageAttribute>Użyj. Konstruktor <xref:System.Resources.NeutralResourcesLanguageAttribute> klasy ma dwa podpisy, jeden, który <xref:System.Resources.UltimateResourceFallbackLocation> przyjmuje parametr, aby <xref:System.Resources.ResourceManager> określić lokalizację, w której powinny zostać wyodrębnione zasoby rezerwowe: zestaw główny lub zestaw satelicki. Poniższy przykład pokazuje, jak używać atrybutu. W przypadku ostatecznej lokalizacji rezerwowej kod powoduje <xref:System.Resources.ResourceManager> wyszukanie zasobów w podkatalogu "de" katalogu aktualnie wykonywanego zestawu.
 
-```
+```csharp
 [assembly: NeutralResourcesLanguageAttribute(
     "de" , UltimateResourceFallbackLocation.Satellite)]
 ```

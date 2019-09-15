@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5ad89e24bfc55497af52b827717b8b3965bd600
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 29739625d29db6dc7c3876007f1e733b15f5c026
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041008"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970991"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Tworzenie zestawów satelickich dla aplikacji klasycznych
 
@@ -52,9 +52,9 @@ Model gwiazdy i gwiazdy wymaga umieszczenia zasobów w określonych lokalizacjac
 
 - Zestaw satelicki musi mieć taką samą nazwę jak aplikacja i musi używać rozszerzenia nazwy pliku ". resources. dll". Na przykład jeśli aplikacja ma nazwę example. exe, Nazwa każdego zestawu satelickiego powinna być przykładem. resources. dll. Należy zauważyć, że nazwa zestawu satelickiego nie wskazuje kultury plików zasobów. Jednak zestaw satelicki pojawia się w katalogu, który określa kulturę.
 
-- Informacje o kulturze zestawu satelickiego muszą być zawarte w metadanych zestawu. Aby zapisać nazwę kultury w metadanych zestawu satelickiego, należy określić `/culture` opcję przy użyciu konsolidatora [zestawu](../../../docs/framework/tools/al-exe-assembly-linker.md) do osadzenia zasobów w zestawie satelickim.
+- Informacje o kulturze zestawu satelickiego muszą być zawarte w metadanych zestawu. Aby zapisać nazwę kultury w metadanych zestawu satelickiego, należy określić `/culture` opcję przy użyciu [konsolidatora zestawu](../tools/al-exe-assembly-linker.md) do osadzenia zasobów w zestawie satelickim.
 
-Na poniższej ilustracji przedstawiono przykładową strukturę katalogów i wymagania dotyczące lokalizacji dla aplikacji, które nie są instalowane w [globalnej pamięci podręcznej zestawów](../../../docs/framework/app-domains/gac.md). Elementy z rozszerzeniami. txt i. resources nie będą dostarczane z aplikacją końcową. Są to pośrednie pliki zasobów używane do tworzenia końcowych zestawów zasobów satelitarnych. W tym przykładzie można zastąpić pliki RESX dla plików txt. Aby uzyskać więcej informacji, zobacz [pakowanie i wdrażanie zasobów](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).
+Na poniższej ilustracji przedstawiono przykładową strukturę katalogów i wymagania dotyczące lokalizacji dla aplikacji, które nie są instalowane w [globalnej pamięci podręcznej zestawów](../../framework/app-domains/gac.md). Elementy z rozszerzeniami. txt i. resources nie będą dostarczane z aplikacją końcową. Są to pośrednie pliki zasobów używane do tworzenia końcowych zestawów zasobów satelitarnych. W tym przykładzie można zastąpić pliki RESX dla plików txt. Aby uzyskać więcej informacji, zobacz [pakowanie i wdrażanie zasobów](packaging-and-deploying-resources-in-desktop-apps.md).
 
 Na poniższej ilustracji przedstawiono katalog zestawu satelickiego:
 
@@ -62,7 +62,7 @@ Na poniższej ilustracji przedstawiono katalog zestawu satelickiego:
 
 ## <a name="compiling-satellite-assemblies"></a>Kompilowanie zestawów satelickich
 
-Używasz [generatora plików zasobów (Resgen. exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) do kompilowania plików tekstowych lub plików XML (. resx) zawierających zasoby do plików binarnych. resources. Następnie należy użyć [konsolidatora zestawu (Al. exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) do kompilowania plików Resources do zestawów satelickich. Al. exe tworzy zestaw z plików Resources, które określisz. Zestawy satelickie mogą zawierać tylko zasoby; nie mogą zawierać żadnego kodu wykonywalnego.
+Używasz [generatora plików zasobów (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md) do kompilowania plików tekstowych lub plików XML (. resx) zawierających zasoby do plików binarnych. resources. Następnie należy użyć [konsolidatora zestawu (Al. exe)](../tools/al-exe-assembly-linker.md) do kompilowania plików Resources do zestawów satelickich. Al. exe tworzy zestaw z plików Resources, które określisz. Zestawy satelickie mogą zawierać tylko zasoby; nie mogą zawierać żadnego kodu wykonywalnego.
 
 Następujące polecenie Al. exe tworzy zestaw satelicki dla aplikacji `Example` z ciągów plików zasobów niemieckich. de. resources.
 
@@ -74,41 +74,40 @@ Następujące polecenie Al. exe tworzy również zestaw satelicki dla aplikacji 
 
 ```console
 al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll -template:Example.dll
-```
-
-W poniższej tabeli opisano opcje Al. exe używane w tych poleceniach bardziej szczegółowo.
-
+```  
+  
+ W poniższej tabeli opisano opcje Al. exe używane w tych poleceniach bardziej szczegółowo.
+  
 |Opcja|Opis|
 |------------|-----------------|
 |**-target:** lib|Określa, że zestaw satelicki jest kompilowany do pliku biblioteki (. dll). Ponieważ zestaw satelicki nie zawiera kodu wykonywalnego i nie jest głównym zestawem aplikacji, należy zapisać zestawy satelickie jako biblioteki DLL.|
 |**-embed:** String. de. resources|Określa nazwę pliku zasobu do osadzenia, gdy Al. exe kompiluje zestaw. Można osadzić wiele plików Resources w zestawie satelickim, ale jeśli korzystasz z modelu gwiazdy i szprych, musisz skompilować jeden zestaw satelicki dla każdej kultury. Można jednak tworzyć oddzielne pliki resources dla ciągów i obiektów.|
 |**-kultura:** de|Określa kulturę zasobu do skompilowania. Środowisko uruchomieniowe języka wspólnego używa tych informacji podczas wyszukiwania zasobów dla określonej kultury. W przypadku pominięcia tej opcji Al. exe będzie nadal kompilować zasób, ale środowisko uruchomieniowe nie będzie mogło go znaleźć, gdy użytkownik zażąda.|
-|**-out:** Przykład. resources. dll|Określa nazwę pliku wyjściowego. Nazwa musi następować po nazewnictwieStandard basename. resources. *rozszerzenie*, gdzie *basename* jest nazwą głównego zestawu, a *rozszerzenie* jest prawidłowym rozszerzeniem nazwy pliku (np. dll). Należy pamiętać, że środowisko uruchomieniowe nie może określić kultury zestawu satelickiego na podstawie jego nazwy pliku wyjściowego; Aby to określić, należy użyć opcji **/Culture** .|
-|**-szablon:** Przykład. dll|Określa zestaw, z którego zestaw satelicki będzie dziedziczyć wszystkie metadane zestawu z wyjątkiem pola kultury. Ta opcja ma wpływ na zestawy satelickie tylko w przypadku określenia zestawu o [silnej nazwie](../../../docs/framework/app-domains/strong-named-assemblies.md).|
-
-Aby zapoznać się z pełną listą opcji dostępnych w programie Al. exe, zobacz [konsolidator zestawu (Al. exe)](../../../docs/framework/tools/al-exe-assembly-linker.md).
-
-## <a name="satellite-assemblies-an-example"></a>Zestawy satelickie: Przykład
-
-Poniżej znajduje się prosty przykład "Hello World", który wyświetla okno komunikatu zawierające zlokalizowane powitanie. W przykładzie uwzględniono zasoby dla kultur angielskiej (Stany Zjednoczone), francuski (Francja) i rosyjski (Rosja), a jej kultura rezerwowa jest w języku angielskim. Aby utworzyć przykład, wykonaj następujące czynności:
-
+|**-out:** Przykład. resources. dll|Określa nazwę pliku wyjściowego. Nazwa musi następować po nazewnictwie standard *basename*. resources. *rozszerzenie*, gdzie *basename* jest nazwą głównego zestawu, a *rozszerzenie* jest prawidłowym rozszerzeniem nazwy pliku (np. dll). Należy pamiętać, że środowisko uruchomieniowe nie może określić kultury zestawu satelickiego na podstawie jego nazwy pliku wyjściowego; Aby to określić, należy użyć opcji **/Culture** .|
+|**-szablon:** Przykład. dll|Określa zestaw, z którego zestaw satelicki będzie dziedziczyć wszystkie metadane zestawu z wyjątkiem pola kultury. Ta opcja ma wpływ na zestawy satelickie tylko w przypadku określenia zestawu o [silnej nazwie](../../standard/assembly/strong-named.md).|
+  
+ Aby zapoznać się z pełną listą opcji dostępnych w programie Al. exe, zobacz [konsolidator zestawu (Al. exe)](../tools/al-exe-assembly-linker.md).
+  
+## <a name="satellite-assemblies-an-example"></a>Zestawy satelickie: Przykład  
+ Poniżej znajduje się prosty przykład "Hello World", który wyświetla okno komunikatu zawierające zlokalizowane powitanie. W przykładzie uwzględniono zasoby dla kultur angielskiej (Stany Zjednoczone), francuski (Francja) i rosyjski (Rosja), a jej kultura rezerwowa jest w języku angielskim. Aby utworzyć przykład, wykonaj następujące czynności:  
+  
 1. Utwórz plik zasobów o nazwie Greetings. resx lub Greeting. txt, aby zawierał zasób dla kultury domyślnej. Przechowywanie pojedynczego ciągu o nazwie `HelloString` "Hello World!" w tym pliku.
-
+  
 2. Aby wskazać, że angielski (EN) jest kulturą domyślną aplikacji, Dodaj następujący <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> atrybut do pliku AssemblyInfo aplikacji lub do głównego pliku kodu źródłowego, który zostanie skompilowany do głównego zestawu aplikacji.
-
-    [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
-    [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]
-
-3. Dodaj obsługę dodatkowych kultur (EN-US, fr-FR i ru-RU) do aplikacji w następujący sposób:
-
-    - Aby zapewnić obsługę kultury en-us lub English (Stany Zjednoczone), Utwórz plik zasobów o nazwie Greetings. en-us. resx lub Greetings. en-us. txt i Zapisz w nim w tym samym ciągu o `HelloString` nazwie "Witaj świecie!"
-
-    - Aby zapewnić obsługę kultury fr-fr lub francuski (Francja), Utwórz plik zasobów o nazwie Greeting.fr-fr. resx lub Greeting.fr-fr. txt, a następnie zapisz go w tym samym ciągu `HelloString` o nazwie, którego wartość to "Salut Tout Le Monde!"
-
-    - Aby zapewnić obsługę kultury ru-RU lub rosyjski (Rosja), Utwórz plik zasobów o nazwie Greeting.ru-RU. resx lub Greeting.ru-RU. txt i Zapisz w nim pojedynczy ciąg o nazwie `HelloString` "Всем Привет!"
-
-4. Użyj programu [Resgen. exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) , aby skompilować każdy plik tekstowy lub XML do pliku binarnego. resources. Dane wyjściowe to zestaw plików, które mają taką samą nazwę pliku głównego jak pliki resx lub txt, ale rozszerzenie. resources. Jeśli utworzysz przykład w programie Visual Studio, proces kompilacji jest obsługiwany automatycznie. Jeśli nie korzystasz z programu Visual Studio, uruchom następujące polecenia, aby skompilować pliki. resx do plików Resources:
-
+  
+     [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
+     [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
+  
+3. Dodaj obsługę dodatkowych kultur (EN-US, fr-FR i ru-RU) do aplikacji w następujący sposób:  
+  
+    - Aby zapewnić obsługę kultury en-us lub English (Stany Zjednoczone), Utwórz plik zasobów o nazwie Greetings. en-us. resx lub Greetings. en-us. txt i Zapisz w nim w tym samym ciągu o `HelloString` nazwie "Witaj świecie!"  
+  
+    - Aby zapewnić obsługę kultury fr-fr lub francuski (Francja), Utwórz plik zasobów o nazwie Greeting.fr-fr. resx lub Greeting.fr-fr. txt, a następnie zapisz go w tym samym ciągu `HelloString` o nazwie, którego wartość to "Salut Tout Le Monde!"  
+  
+    - Aby zapewnić obsługę kultury ru-RU lub rosyjski (Rosja), Utwórz plik zasobów o nazwie Greeting.ru-RU. resx lub Greeting.ru-RU. txt i Zapisz w nim pojedynczy ciąg o nazwie `HelloString` "Всем Привет!"  
+  
+4. Użyj programu [Resgen. exe](../tools/resgen-exe-resource-file-generator.md) , aby skompilować każdy plik tekstowy lub XML do pliku binarnego. resources. Dane wyjściowe to zestaw plików, które mają taką samą nazwę pliku głównego jak pliki resx lub txt, ale rozszerzenie. resources. Jeśli utworzysz przykład w programie Visual Studio, proces kompilacji jest obsługiwany automatycznie. Jeśli nie korzystasz z programu Visual Studio, uruchom następujące polecenia, aby skompilować pliki. resx do plików Resources:  
+  
     ```console
     resgen Greeting.resx
     resgen Greeting.en-us.resx
@@ -144,28 +143,25 @@ Poniżej znajduje się prosty przykład "Hello World", który wyświetla okno ko
 
     ```console
     al -target:lib -embed:Greeting.culture.resources -culture:culture -out:culture\Example.resources.dll
-    ```
-
-    gdzie *Culture* to nazwa kultury, której zasoby zawierają zestaw satelicki. Program Visual Studio obsługuje ten proces automatycznie.
-
-Następnie można uruchomić przykład. Spowoduje to losowo przetworzenie jednej z obsługiwanych kultur w bieżącej kulturze i wyświetlenie zlokalizowanego powitania.
-
-<a name="SN"></a>
-
-## <a name="installing-satellite-assemblies-in-the-global-assembly-cache"></a>Instalowanie zestawów satelickich w globalnej pamięci podręcznej zestawów
-
-Zamiast instalować zestawy w lokalnym podkatalogu aplikacji, można je zainstalować w globalnej pamięci podręcznej zestawów. Jest to szczególnie przydatne, jeśli dysponujesz bibliotekami klas i zestawami zasobów biblioteki klas, które są używane przez wiele aplikacji.
-
-Instalowanie zestawów w globalnej pamięci podręcznej zestawów wymaga posiadania silnych nazw. Zestawy o silnych nazwach są podpisane przy użyciu prawidłowej pary kluczy publiczny/prywatny. Zawierają informacje o wersji używane przez środowisko uruchomieniowe do określenia zestawu, który ma być używany w celu spełnienia żądania powiązania. Aby uzyskać więcej informacji na temat silnych nazw i wersji, zobacz [wersja zestawu](../../../docs/framework/app-domains/assembly-versioning.md). Aby uzyskać więcej informacji o silnych nazwach, zobacz [zestawy o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md).
-
-Podczas tworzenia aplikacji jest mało prawdopodobne, że będziesz mieć dostęp do ostatniej pary kluczy publiczny/prywatny. W celu zainstalowania zestawu satelickiego w globalnej pamięci podręcznej zestawów i upewnienia się, że działa zgodnie z oczekiwaniami, można użyć techniki o nazwie opóźnione podpisywanie. Gdy opóźniasz podpisywanie zestawu w czasie kompilacji, Zarezerwuj miejsce w pliku dla sygnatury silnej nazwy. Rzeczywiste podpisywanie jest opóźnione aż do późniejszego momentu udostępnienia ostatniej pary kluczy publiczny/prywatny. Aby uzyskać więcej informacji na temat opóźnionego podpisywania, zobacz [opóźnienie podpisywania zestawu](../../../docs/framework/app-domains/delay-sign-assembly.md).
-
-### <a name="obtaining-the-public-key"></a>Uzyskiwanie klucza publicznego
-
-Aby opóźnić podpisywanie zestawu, musisz mieć dostęp do klucza publicznego. Możesz uzyskać rzeczywisty klucz publiczny z organizacji w firmie, który będzie podpisywać ostateczne lub utworzyć klucz publiczny za pomocą [Narzędzia silnej nazwy (SN. exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).
-
-Następujące polecenie SN. exe tworzy parę kluczy publiczny/prywatny. Opcja **– k** określa, że SN. exe powinien utworzyć nową parę kluczy i zapisać ją w pliku o nazwie TestKeyPair. snk.
-
+    ```  
+  
+     gdzie *Culture* to nazwa kultury, której zasoby zawierają zestaw satelicki. Program Visual Studio obsługuje ten proces automatycznie.
+  
+ Następnie można uruchomić przykład. Spowoduje to losowo przetworzenie jednej z obsługiwanych kultur w bieżącej kulturze i wyświetlenie zlokalizowanego powitania.
+  
+<a name="SN"></a>   
+## <a name="installing-satellite-assemblies-in-the-global-assembly-cache"></a>Instalowanie zestawów satelickich w globalnej pamięci podręcznej zestawów  
+ Zamiast instalować zestawy w lokalnym podkatalogu aplikacji, można je zainstalować w globalnej pamięci podręcznej zestawów. Jest to szczególnie przydatne, jeśli dysponujesz bibliotekami klas i zestawami zasobów biblioteki klas, które są używane przez wiele aplikacji.
+  
+ Instalowanie zestawów w globalnej pamięci podręcznej zestawów wymaga posiadania silnych nazw. Zestawy o silnych nazwach są podpisane przy użyciu prawidłowej pary kluczy publiczny/prywatny. Zawierają informacje o wersji używane przez środowisko uruchomieniowe do określenia zestawu, który ma być używany w celu spełnienia żądania powiązania. Aby uzyskać więcej informacji na temat silnych nazw i wersji, zobacz [wersja zestawu](../../standard/assembly/versioning.md). Aby uzyskać więcej informacji o silnych nazwach, zobacz [zestawy o silnych nazwach](../../standard/assembly/strong-named.md).
+  
+ Podczas tworzenia aplikacji jest mało prawdopodobne, że będziesz mieć dostęp do ostatniej pary kluczy publiczny/prywatny. W celu zainstalowania zestawu satelickiego w globalnej pamięci podręcznej zestawów i upewnienia się, że działa zgodnie z oczekiwaniami, można użyć techniki o nazwie opóźnione podpisywanie. Gdy opóźniasz podpisywanie zestawu w czasie kompilacji, Zarezerwuj miejsce w pliku dla sygnatury silnej nazwy. Rzeczywiste podpisywanie jest opóźnione aż do późniejszego momentu udostępnienia ostatniej pary kluczy publiczny/prywatny. Aby uzyskać więcej informacji na temat opóźnionego podpisywania, zobacz [opóźnienie podpisywania zestawu](../../standard/assembly/delay-sign.md).
+  
+### <a name="obtaining-the-public-key"></a>Uzyskiwanie klucza publicznego  
+ Aby opóźnić podpisywanie zestawu, musisz mieć dostęp do klucza publicznego. Możesz uzyskać rzeczywisty klucz publiczny z organizacji w firmie, który będzie podpisywać ostateczne lub utworzyć klucz publiczny za pomocą [Narzędzia silnej nazwy (SN. exe)](../tools/sn-exe-strong-name-tool.md).
+  
+ Następujące polecenie SN. exe tworzy parę kluczy publiczny/prywatny. Opcja **– k** określa, że SN. exe powinien utworzyć nową parę kluczy i zapisać ją w pliku o nazwie TestKeyPair. snk.
+  
 ```console
 sn –k TestKeyPair.snk
 ```
@@ -178,7 +174,7 @@ sn –p TestKeyPair.snk PublicKey.snk
 
 ### <a name="delay-signing-an-assembly"></a>Opóźnione podpisywanie zestawu
 
-Po uzyskaniu lub utworzeniu klucza publicznego należy użyć [konsolidatora zestawu (Al. exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) do skompilowania zestawu i określić opóźnione podpisywanie.
+Po uzyskaniu lub utworzeniu klucza publicznego należy użyć [konsolidatora zestawu (Al. exe)](../tools/al-exe-assembly-linker.md) do skompilowania zestawu i określić opóźnione podpisywanie.
 
 Następujące polecenie Al. exe tworzy zestaw o silnej nazwie satelicki dla aplikacji StringLibrary z pliku String. ja. Resources:
 
@@ -200,7 +196,7 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
 
 ### <a name="installing-a-satellite-assembly-in-the-global-assembly-cache"></a>Instalowanie zestawu satelickiego w globalnej pamięci podręcznej zestawów
 
-Gdy środowisko uruchomieniowe wyszukuje zasoby w procesie rezerwowym zasobów, najpierw przeszukuje [globalną pamięć podręczną zestawów](../../../docs/framework/app-domains/gac.md) . (Aby uzyskać więcej informacji, zobacz sekcję "proces rezerwowy zasobów" tematu [pakowanie i wdrażanie zasobów](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) ). Gdy tylko zestaw satelicki zostanie podpisany przy użyciu silnej nazwy, można go zainstalować w globalnej pamięci podręcznej zestawów przy użyciu [Global Assembly Cache Tool (Gacutil. exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md).
+Gdy środowisko uruchomieniowe wyszukuje zasoby w procesie rezerwowym zasobów, najpierw przeszukuje [globalną pamięć podręczną zestawów](../../framework/app-domains/gac.md) . (Aby uzyskać więcej informacji, zobacz sekcję "proces rezerwowy zasobów" tematu [pakowanie i wdrażanie zasobów](packaging-and-deploying-resources-in-desktop-apps.md) ). Gdy tylko zestaw satelicki zostanie podpisany przy użyciu silnej nazwy, można go zainstalować w globalnej pamięci podręcznej zestawów przy użyciu [Global Assembly Cache Tool (Gacutil. exe)](../tools/gacutil-exe-gac-tool.md).
 
 Następujące polecenie Gacutil. exe instaluje StringLibrary. resources. dll w globalnej pamięci podręcznej zestawów:
 
@@ -214,15 +210,15 @@ gacutil -i:StringLibrary.resources.dll
 
 Poniższy przykład używa metody w bibliotece klas .NET Framework, aby wyodrębnić i zwrócić zlokalizowane powitanie z pliku zasobów. Biblioteka i jej zasoby są zarejestrowane w globalnej pamięci podręcznej zestawów. Przykład zawiera zasoby dla angielskiej wersji językowej (Stany Zjednoczone), francuski (Francja), rosyjski (Rosja) i kulturę w języku angielskim. Język angielski jest kulturą domyślną; jego zasoby są przechowywane w zestawie głównym. Przykładowe opóźnienie polega na podpisaniu biblioteki i jej zestawów satelickich za pomocą klucza publicznego, a następnie ponowne podpisanie ich za pomocą pary kluczy publicznych/prywatnych. Aby utworzyć przykład, wykonaj następujące czynności:
 
-1. Jeśli nie używasz programu Visual Studio, użyj następującego polecenia [silnej nazwy (SN. exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) , aby utworzyć parę kluczy publiczny/prywatny o nazwie ResKey. snk:
+1. Jeśli nie używasz programu Visual Studio, użyj następującego polecenia [silnej nazwy (SN. exe)](../tools/sn-exe-strong-name-tool.md) , aby utworzyć parę kluczy publiczny/prywatny o nazwie ResKey. snk:
 
     ```console
     sn –k ResKey.snk
     ```
 
-    Jeśli używasz programu Visual Studio, Użyj karty podpisywanie okna dialogowego **Właściwości** projektu, aby wygenerować plik klucza.
+    Jeśli używasz programu Visual Studio, Użyj karty **podpisywanie** okna dialogowego **Właściwości** projektu, aby wygenerować plik klucza.
 
-2. Użyj poniższego polecenia [silnej nazwy (SN. exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) , aby utworzyć plik klucza publicznego o nazwie PublicKey. snk:
+2. Użyj poniższego polecenia [silnej nazwy (SN. exe)](../tools/sn-exe-strong-name-tool.md) , aby utworzyć plik klucza publicznego o nazwie PublicKey. snk:
 
     ```console
     sn –p ResKey.snk PublicKey.snk
@@ -243,7 +239,7 @@ Poniższy przykład używa metody w bibliotece klas .NET Framework, aby wyodręb
 
     - Aby zapewnić obsługę kultury "ru-RU" lub rosyjski (Rosja), Utwórz plik zasobów o nazwie Strings.ru-RU. resx lub Strings.ru-RU. txt i Zapisz w nim pojedynczy ciąg o nazwie `Greeting` "Привет!"
 
-6. Użyj programu [Resgen. exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) , aby skompilować każdy plik tekstowy lub XML do pliku binarnego. resources. Dane wyjściowe to zestaw plików, które mają taką samą nazwę pliku głównego jak pliki resx lub txt, ale rozszerzenie. resources. Jeśli utworzysz przykład w programie Visual Studio, proces kompilacji jest obsługiwany automatycznie. Jeśli nie korzystasz z programu Visual Studio, uruchom następujące polecenie, aby skompilować pliki. resx do plików Resources:
+6. Użyj programu [Resgen. exe](../tools/resgen-exe-resource-file-generator.md) , aby skompilować każdy plik tekstowy lub XML do pliku binarnego. resources. Dane wyjściowe to zestaw plików, które mają taką samą nazwę pliku głównego jak pliki resx lub txt, ale rozszerzenie. resources. Jeśli utworzysz przykład w programie Visual Studio, proces kompilacji jest obsługiwany automatycznie. Jeśli nie korzystasz z programu Visual Studio, uruchom następujące polecenie, aby skompilować pliki. resx do plików Resources:
 
     ```console
     resgen filename
@@ -281,13 +277,13 @@ Poniższy przykład używa metody w bibliotece klas .NET Framework, aby wyodręb
 
     gdzie *Culture* jest nazwą kultury. W tym przykładzie nazwy kultur to en-US, fr-FR i ru-RU.
 
-10. Podpisz StringLibrary. dll przy użyciu [Narzędzia silnej nazwy (SN. exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) w następujący sposób:
+10. Podpisz StringLibrary. dll przy użyciu [Narzędzia silnej nazwy (SN. exe)](../tools/sn-exe-strong-name-tool.md) w następujący sposób:
 
     ```console
     sn –R StringLibrary.dll RealKeyPair.snk
     ```
 
-11. Ponowne podpisywanie poszczególnych zestawów satelickich. W tym celu należy użyć [Narzędzia silnej nazwy (SN. exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) w następujący sposób dla każdego zestawu satelickiego:
+11. Ponowne podpisywanie poszczególnych zestawów satelickich. W tym celu należy użyć [Narzędzia silnej nazwy (SN. exe)](../tools/sn-exe-strong-name-tool.md) w następujący sposób dla każdego zestawu satelickiego:
 
     ```console
     sn –R StringLibrary.resources.dll RealKeyPair.snk
@@ -322,9 +318,9 @@ Poniższy przykład używa metody w bibliotece klas .NET Framework, aby wyodręb
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Opakowanie i wdrażanie zasobów](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-- [Opóźnione podpisywanie zestawu](../../../docs/framework/app-domains/delay-sign-assembly.md)
-- [Al.exe (konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [Sn.exe (narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
-- [Gacutil.exe (narzędzie Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
-- [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)
+- [Opakowanie i wdrażanie zasobów](packaging-and-deploying-resources-in-desktop-apps.md)
+- [Opóźnione podpisywanie zestawu](../../standard/assembly/delay-sign.md)
+- [Al.exe (konsolidator zestawów)](../tools/al-exe-assembly-linker.md)
+- [Sn.exe (narzędzie silnych nazw)](../tools/sn-exe-strong-name-tool.md)
+- [Gacutil.exe (narzędzie Global Assembly Cache)](../tools/gacutil-exe-gac-tool.md)
+- [Zasoby w aplikacjach klasycznych](index.md)

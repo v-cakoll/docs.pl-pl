@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 080432670c68623433a6b4e61adba77cf6fa5ec7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6340bc3fb2291601ba2a9812e0a438839f0718bc
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786873"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971817"
 ---
 # <a name="code-access-security-and-adonet"></a>Zabezpieczenia dostępu kodu i ADO.NET
 .NET Framework oferuje zabezpieczenia oparte na rolach, a także zabezpieczenia dostępu kodu (CAS), które są implementowane przy użyciu wspólnej infrastruktury dostarczanej przez środowisko uruchomieniowe języka wspólnego (CLR). W świecie kodu niezarządzanego większość aplikacji jest wykonywanych z uprawnieniami użytkownika lub podmiotu zabezpieczeń. W związku z tym systemy komputerowe mogą być uszkodzone, a dane prywatne zostały naruszone, gdy złośliwe lub błędne oprogramowanie jest uruchamiane przez użytkownika z podniesionymi uprawnieniami.  
@@ -50,12 +50,12 @@ ms.locfileid: "70786873"
  W zależności od typu kompilowanej aplikacji należy również rozważyć zaimplementowanie uprawnień opartych na rolach w bazie danych. Aby uzyskać więcej informacji na temat zabezpieczeń opartych na rolach w SQL Server, zobacz [SQL Server Security](./sql/sql-server-security.md).  
   
 ## <a name="assemblies"></a>Zestawy  
- Zestawy stanowią podstawową jednostkę wdrożenia, kontrolę wersji, ponowne użycie, zakres aktywacji i uprawnienia zabezpieczeń dla aplikacji .NET Framework. Zestaw zawiera kolekcję typów i zasobów, które są tworzone w celu współdziałania i tworzą logiczną jednostkę funkcjonalności. W środowisku CLR typ nie istnieje poza kontekstem zestawu. Aby uzyskać więcej informacji na temat tworzenia i wdrażania zestawów, zobacz [programowanie z zestawami](../../app-domains/programming-with-assemblies.md).  
+ Zestawy stanowią podstawową jednostkę wdrożenia, kontrolę wersji, ponowne użycie, zakres aktywacji i uprawnienia zabezpieczeń dla aplikacji .NET Framework. Zestaw zawiera kolekcję typów i zasobów, które są tworzone w celu współdziałania i tworzą logiczną jednostkę funkcjonalności. W środowisku CLR typ nie istnieje poza kontekstem zestawu. Aby uzyskać więcej informacji na temat tworzenia i wdrażania zestawów, zobacz [programowanie z zestawami](../../../standard/assembly/program.md).  
   
 ### <a name="strong-naming-assemblies"></a>Zestawy o silnych nazwach  
  Silna nazwa lub podpis cyfrowy składa się z tożsamości zestawu, która obejmuje jego prostą nazwę tekstu, numer wersji i informacje o kulturze (jeśli zostały podane) oraz klucz publiczny i podpis cyfrowy. Podpis cyfrowy jest generowany na podstawie pliku zestawu przy użyciu odpowiedniego klucza prywatnego. Plik zestawu zawiera manifest zestawu, który zawiera nazwy i skróty wszystkich plików, które tworzą zestaw.  
   
- Silne nazewnictwo zestawu daje aplikacji lub składnikowi unikatową tożsamość, która może być używana przez inne oprogramowanie do jawnego odwoływania się do niego. Zestawy chroniące silne nazewnictwo przed fałszowaniem przez zestaw, który zawiera kod nieszkodliwy. Silne nazewnictwo zapewnia także spójność wersji między różnymi wersjami składnika. Należy wdrożyć zestawy o silnych nazwach, które zostaną wdrożone w globalnej pamięci podręcznej zestawów (GAC). Aby uzyskać więcej informacji, zobacz [Tworzenie i używanie zestawów o silnej nazwie](../../app-domains/create-and-use-strong-named-assemblies.md).  
+ Silne nazewnictwo zestawu daje aplikacji lub składnikowi unikatową tożsamość, która może być używana przez inne oprogramowanie do jawnego odwoływania się do niego. Zestawy chroniące silne nazewnictwo przed fałszowaniem przez zestaw, który zawiera kod nieszkodliwy. Silne nazewnictwo zapewnia także spójność wersji między różnymi wersjami składnika. Należy wdrożyć zestawy o silnych nazwach, które zostaną wdrożone w globalnej pamięci podręcznej zestawów (GAC). Aby uzyskać więcej informacji, zobacz [Tworzenie i używanie zestawów o silnej nazwie](../../../standard/assembly/create-use-strong-named.md).  
   
 ## <a name="partial-trust-in-adonet-20"></a>Częściowe zaufanie w ADO.NET 2,0  
  W ADO.NET 2,0 Dostawca danych .NET Framework, SQL Server .NET Framework Dostawca danych dla OLE DB, .NET Framework dostawca danych dla ODBC, a .NET Framework dostawca danych dla programu Oracle można teraz uruchamiać w częściowo zaufanych środowiskach. W poprzednich wersjach .NET Framework były obsługiwane tylko <xref:System.Data.SqlClient> w mniej niż aplikacje w pełni zaufane.  

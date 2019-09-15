@@ -2,12 +2,12 @@
 title: Nieogólne działanie ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: e467534ba2b233f1f3c279e89badf12846c6b7f7
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: cb040d8bd5fbb34cc00b246f2e51789866fd8e78
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038075"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989040"
 ---
 # <a name="non-generic-foreach"></a>Nieogólne działanie ForEach
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]dostarcza w swoim przyborniku zestaw działań przepływu sterowania, w tym <xref:System.Activities.Statements.ForEach%601>, które umożliwiają iterację <xref:System.Collections.Generic.IEnumerable%601> za pomocą kolekcji.  
@@ -24,7 +24,7 @@ ms.locfileid: "70038075"
 ## <a name="class-definition"></a>Definicja klasy  
  Poniższy przykład kodu pokazuje definicję działania nierodzajowego `ForEach` .  
   
-```  
+```csharp  
 [ContentProperty("Body")]  
 public class ForEach : NativeActivity  
 {  
@@ -47,7 +47,7 @@ public class ForEach : NativeActivity
 ## <a name="example-of-using-foreach"></a>Przykład użycia polecenia ForEach  
  Poniższy kod ilustruje sposób używania działania ForEach w aplikacji.  
   
-```  
+```csharp  
 string[] names = { "bill", "steve", "ray" };  
   
 DelegateInArgument<object> iterationVariable = new DelegateInArgument<object>() { Name = "iterationVariable" };  
@@ -74,7 +74,7 @@ Activity sampleUsage =
 ## <a name="foreach-designer"></a>Projektant ForEach  
  Projektant działań dla przykładu jest podobny do projektanta dostępnego dla <xref:System.Activities.Statements.ForEach%601> działania wbudowanego. Projektant pojawia się w przyborniku w kategorii **przykłady**, **nieogólne działania** . Projektant ma nazwę **ForEachWithBodyFactory** w przyborniku, ponieważ działanie uwidacznia <xref:System.Activities.Presentation.IActivityTemplateFactory> w przyborniku, który tworzy działanie z prawidłową konfiguracją. <xref:System.Activities.ActivityAction>  
   
-```  
+```csharp  
 public sealed class ForEachWithBodyFactory : IActivityTemplateFactory  
 {  
     public Activity Create(DependencyObject target)  

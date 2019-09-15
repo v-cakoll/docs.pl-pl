@@ -12,98 +12,98 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6007bc6085366e46e60696e412507026726f098a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d11567b3a5abca6e81ff0358295aa8516ef6443f
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593452"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969029"
 ---
 # <a name="managed-execution-process"></a>Proces zarządzanego wykonania
-<a name="introduction"></a> Proces zarządzanego wykonania obejmuje następujące kroki, które opisano szczegółowo w dalszej części tego tematu:  
+<a name="introduction"></a>Zarządzany proces wykonywania obejmuje następujące kroki, które opisano szczegółowo w dalszej części tego tematu:  
   
 1. [Wybieranie kompilatora](#choosing_a_compiler).  
   
-     Aby uzyskać korzyści dostarczane przez środowisko uruchomieniowe języka wspólnego, należy użyć co najmniej jeden Kompilatory języka przeznaczone dla środowiska uruchomieniowego.  
+     Aby uzyskać korzyści zapewniane przez środowisko uruchomieniowe języka wspólnego, należy użyć co najmniej jednego kompilatora języka, który jest przeznaczony dla środowiska uruchomieniowego.  
   
-2. [Kompilowanie kodu MSIL](#compiling_to_msil).  
+2. [Kompilowanie kodu do MSIL](#compiling_to_msil).  
   
-     Kompilowanie dokonuje translacji kodu źródłowego do języka Microsoft intermediate language (MSIL) i generuje wymaganych metadanych.  
+     Kompilowanie tłumaczy kod źródłowy do języka pośredniego firmy Microsoft (MSIL) i generuje wymagane metadane.  
   
-3. [Kompilowanie MSIL do kodu macierzystego](#compiling_msil_to_native_code).  
+3. [Kompilowanie MSIL do kodu natywnego](#compiling_msil_to_native_code).  
   
-     W czasie wykonywania kompilator just-in-time (JIT) tłumaczy MSIL w kodzie natywnym. Podczas tej kompilacji kod musi przejść proces weryfikacji, który analizuje MSIL i metadanych, aby dowiedzieć się, czy kod może być uznane za bezpieczne dla typów.  
+     W czasie wykonywania kompilator just-in-Time (JIT) tłumaczy MSIL na kod natywny. W trakcie tej kompilacji kod musi przejść proces weryfikacji, który sprawdza MSIL i metadane, aby dowiedzieć się, czy kod można ustalić jako bezpieczny.  
   
 4. [Uruchamianie kodu](#running_code).  
   
-     Środowisko uruchomieniowe języka wspólnego udostępnia infrastrukturę, która umożliwia wykonywanie i usług, które mogą być używane podczas wykonywania.  
+     Środowisko uruchomieniowe języka wspólnego zapewnia infrastrukturę, która umożliwia wykonywanie i korzystanie z usług, których można użyć podczas wykonywania.  
   
 <a name="choosing_a_compiler"></a>   
 ## <a name="choosing-a-compiler"></a>Wybieranie kompilatora  
- Aby uzyskać korzyści dostarczane przez środowisko uruchomieniowe języka wspólnego (CLR), należy użyć co najmniej jeden Kompilatory języka przeznaczone dla środowiska uruchomieniowego, takie jak Visual Basic C#, Visual C++, F#, lub jeden z wielu innych kompilatorów Eiffel, Perl lub COBOL Kompilator.  
+ Aby uzyskać korzyści zapewniane przez środowisko uruchomieniowe języka wspólnego (CLR), należy użyć co najmniej jednego kompilatora języka, który jest przeznaczony dla środowiska uruchomieniowego, takiego C#jak Visual Basic C++, F#, Wizualizacja lub jeden z wielu kompilatorów innych firm, takich jak Eiffel, Perl lub Kompilator COBOL.  
   
- Ponieważ środowisko wykonywania wielu języków, środowisko uruchomieniowe obsługuje wiele typów danych i funkcji języka. Kompilator języka, którego używasz, określa funkcji środowiska uruchomieniowego, które są dostępne i projektowania kodu przy użyciu tych funkcji. Kompilator nie środowiska uruchomieniowego, ustanawia składnię, z której należy użyć kodu. Jeśli składnik musi być całkowicie może być używany przez składników napisanych w innych językach, typów eksportowanych danego składnika musi ujawniać tylko funkcje języka, które są objęte [niezależność od języka i składniki niezależne od języka](../../docs/standard/language-independence-and-language-independent-components.md) (CLS). Możesz użyć <xref:System.CLSCompliantAttribute> atrybutu, aby upewnić się, że Twój kod jest zgodny ze specyfikacją CLS. Aby uzyskać więcej informacji, zobacz [niezależność od języka i składniki niezależne od języka](../../docs/standard/language-independence-and-language-independent-components.md).  
+ Ponieważ jest to środowisko wykonywania wielu języków, środowisko uruchomieniowe obsługuje szeroką gamę typów danych i funkcji językowych. Używany kompilator języka określa, które funkcje środowiska uruchomieniowego są dostępne i projektujesz kod przy użyciu tych funkcji. Kompilator, a nie środowisko uruchomieniowe, określa składnię, której kod musi używać. Jeśli składnik musi być całkowicie użyteczny przez składniki w innych językach, wyeksportowane typy składników muszą uwidaczniać tylko funkcje języka, które są zawarte w [niezależności od języka i składnikach niezależnych od języka](../../docs/standard/language-independence-and-language-independent-components.md) (CLS). Możesz użyć <xref:System.CLSCompliantAttribute> atrybutu, aby upewnić się, że kod jest zgodny ze specyfikacją CLS. Aby uzyskać więcej informacji, zobacz [niezależność od języka i składniki niezależne od języka](../../docs/standard/language-independence-and-language-independent-components.md).  
   
  [Powrót do początku](#introduction)  
   
 <a name="compiling_to_msil"></a>   
-## <a name="compiling-to-msil"></a>Kompilowanie na język MSIL  
- Podczas kompilowania do kodu zarządzanego, kompilator tłumaczy kod źródłowy do języka Microsoft intermediate language (MSIL), który jest niezależny od procesora CPU zbiór instrukcji, które mogą być skutecznie konwertowane do kodu macierzystego. MSIL zawiera instrukcje dotyczące ładowania, przechowywanie, inicjowanie i wywoływania metod obiektów, a także instrukcje dla operacji arytmetycznych i logicznych, przepływu sterowania, bezpośredni dostęp do pamięci, obsługa wyjątków i innych operacji. Przed uruchomieniem kodu MSIL muszą zostać skonwertowane do kodu specyficznego dla procesora CPU, zwykle przez [kompilator just-in-time (JIT)](#compiling_msil_to_native_code). Ponieważ środowisko uruchomieniowe języka wspólnego dostarcza co najmniej jeden kompilatory JIT dla każdej architektury komputera, który ją obsługuje, ten sam zestaw MSIL, może być kompilowany dokładnie na czas i działają w dowolnej obsługiwanej architektury.  
+## <a name="compiling-to-msil"></a>Kompilowanie do MSIL  
+ Podczas kompilowania do kodu zarządzanego kompilator tłumaczy kod źródłowy do języka pośredniego firmy Microsoft (MSIL), który jest zestawem instrukcji zależnych od procesora CPU, które mogą być efektywnie konwertowane na kod natywny. MSIL zawiera instrukcje dotyczące ładowania, przechowywania, inicjowania i wywoływania metod dla obiektów, a także instrukcje dotyczące operacji arytmetycznych i logicznych, przepływu sterowania, bezpośredniego dostępu do pamięci, obsługi wyjątków i innych operacji. Aby można było uruchomić kod, MSIL musi być konwertowany na kod specyficzny dla procesora CPU, zazwyczaj przez [kompilator just-in-Time (JIT)](#compiling_msil_to_native_code). Ponieważ środowisko uruchomieniowe języka wspólnego dostarcza co najmniej jeden kompilator JIT dla każdej obsługiwanej architektury komputera, ten sam zestaw MSIL może być skompilowany w sposób JIT i uruchamiany w dowolnej z obsługiwanych architektur.  
   
- Gdy kompilator generuje MSIL, również tworzy metadane. Metadane opisują typów w kodzie, łącznie z definicji każdego typu i podpisy członków poszczególnych typów, elementów członkowskich, które odwołuje się do kodu i innych danych, który używa środowiska uruchomieniowego, w czasie wykonywania. MSIL i metadane są zawarte w przenośny plik wykonywalny (PE) jest oparty na i rozszerzający opublikowanych Microsoft PE i wspólny format plików obiektu (COFF) używane w przeszłości, dla zawartości wykonywalnej. Tego formatu pliku, który obsługuje MSIL lub kodu natywnego, a także metadanych, umożliwia rozpoznawanie obrazów wspólnych środowiska uruchomieniowego języka systemu operacyjnego. Obecność metadane w pliku wraz z MSIL umożliwia kodzie w celu opisania siebie, co oznacza, że nie ma potrzeby bibliotek typów lub języka definicji interfejsu (IDL). Środowisko uruchomieniowe lokalizuje i wyodrębnia metadane z pliku, zgodnie z potrzebami w czasie wykonywania.  
+ Gdy kompilator tworzy MSIL, generuje również metadane. Metadane opisują typy w kodzie, w tym definicję każdego typu, sygnatury elementów członkowskich każdego typu, elementy członkowskie, do których odwołuje się kod, oraz inne dane używane przez środowisko uruchomieniowe w czasie wykonywania. MSIL i metadane są zawarte w przenośnym pliku wykonywalnym (PE), który jest oparty na systemie i który rozszerza opublikowany plik Microsoft PE i format Common Object File (COFF) używany historycznie dla zawartości wykonywalnej. Ten format pliku, który uwzględnia kod MSIL lub natywny, a także metadane, umożliwia systemowi operacyjnemu rozpoznawanie obrazów środowiska uruchomieniowego języka wspólnego. Obecność metadanych w pliku wraz z MSIL pozwala na opisywanie kodu, co oznacza, że nie ma potrzeby stosowania bibliotek typów ani języka definicji interfejsu (IDL). Środowisko uruchomieniowe lokalizuje i wyodrębnia metadane z pliku zgodnie z wymaganiami podczas wykonywania.  
   
  [Powrót do początku](#introduction)  
   
 <a name="compiling_msil_to_native_code"></a>   
 ## <a name="compiling-msil-to-native-code"></a>Kompilowanie MSIL do kodu natywnego  
- Przed uruchomieniem języka Microsoft intermediate language (MSIL), muszą być skompilowane dla środowiska uruchomieniowego języka wspólnego do kodu natywnego dla architektura komputera docelowego. Program .NET Framework oferuje wykonaj tę konwersję na dwa sposoby:  
+ Zanim będzie możliwe uruchomienie języka pośredniego firmy Microsoft (MSIL), należy go skompilować względem środowiska uruchomieniowego języka wspólnego do kodu natywnego dla architektury maszyny docelowej. .NET Framework zapewnia dwa sposoby przeprowadzenia tej konwersji:  
   
-- Kompilator just-in-time (JIT) .NET Framework.  
+- .NET Framework kompilator just-in-Time (JIT).  
   
-- .NET Framework [Ngen.exe (Generator obrazu natywnego)](../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+- .NET Framework [Ngen. exe (Generator obrazu natywnego)](../../docs/framework/tools/ngen-exe-native-image-generator.md).  
   
-### <a name="compilation-by-the-jit-compiler"></a>Kompilacja za pomocą kompilatora JIT  
- Kompilacja JIT konwertuje MSIL do kodu macierzystego na żądanie na czas, kiedy zawartość zestawu są ładowane i wykonywane uruchomienia aplikacji. Ponieważ środowisko uruchomieniowe języka wspólnego zawiera kompilator JIT dla każdej obsługiwanej architektury Procesora, deweloperzy mogą tworzyć zestaw zestawy MSIL, które mogą być kompilowany dokładnie na czas i działają na różnych komputerach przy użyciu architektury na innym komputerze. Jednak jeśli zarządzany kod wywołuje natywnych interfejsów API specyficznych dla platformy lub biblioteki klas specyficznych dla platformy, będzie uruchomić tylko w tym systemie operacyjnym.  
+### <a name="compilation-by-the-jit-compiler"></a>Kompilacja przez kompilator JIT  
+ Kompilacja JIT konwertuje MSIL na kod natywny na żądanie w czasie wykonywania aplikacji, gdy zawartość zestawu jest ładowana i wykonywana. Ponieważ środowisko uruchomieniowe języka wspólnego dostarcza kompilator JIT dla każdej obsługiwanej architektury procesora, deweloperzy mogą tworzyć zestawy zestawów MSIL, które mogą być kompilowane w trybie JIT i uruchamiane na różnych komputerach z różnymi architekturami komputera. Jeśli jednak kod zarządzany wywołuje natywne interfejsy API specyficzne dla platformy lub bibliotekę klas specyficznych dla platformy, będzie działać tylko w tym systemie operacyjnym.  
   
- Kompilacja JIT bierze pod uwagę możliwość, że jakiś kod nigdy nie może być wywoływana podczas wykonywania. Zamiast używania pamięci i czasu, aby przekonwertować wszystkie MSIL pliku PE do kodu macierzystego, konwertuje kod w języku MSIL odpowiednio do potrzeb podczas wykonywania i przechowuje wynikowy kodu natywnego w pamięci, dzięki czemu nie jest dostępny dla kolejnych wywołań w ramach tego procesu. Moduł ładujący tworzy i dołącza odcinek do każdej metody w typie, gdy typ jest ładowany i zainicjowany. Gdy metoda jest wywoływana po raz pierwszy, wycinka przekazuje sterowanie do kompilatora JIT, która konwertuje język MSIL dla tej metody w kodzie natywnym i modyfikuje wycinka bezpośrednio wskaż wygenerowanego kodu natywnego. W związku z tym kolejne wywołania do metody kompilowanego dokładnie na czas bezpośrednie przejście do kodu natywnego.  
+ Kompilacja JIT bierze pod uwagę możliwość, że jakiś kod może nigdy nie być wywoływany podczas wykonywania. Zamiast używać czasu i pamięci do konwersji wszystkich MSIL w pliku PE na kod natywny, konwertuje MSIL zgodnie z wymaganiami podczas wykonywania i przechowuje kod natywny w pamięci, tak aby był dostępny do kolejnych wywołań w kontekście tego procesu. Moduł ładujący tworzy i dołącza skrót do każdej metody w typie, gdy typ jest ładowany i zainicjowany. Gdy metoda jest wywoływana po raz pierwszy, szczątkowa przekazuje kontrolę do kompilatora JIT, który konwertuje MSIL dla tej metody na kod natywny i modyfikuje punkt wejścia bezpośrednio do wygenerowanego kodu natywnego. W związku z tym kolejne wywołania metody skompilowanej JIT przechodzą bezpośrednio do kodu natywnego.  
   
-### <a name="install-time-code-generation-using-ngenexe"></a>Generowanie kodu w czasie instalacji za pomocą NGen.exe  
- Ponieważ kompilator JIT konwertuje MSIL zestawu do kodu macierzystego, podczas gdy poszczególne są wywoływane metody zdefiniowane w tym zestawie, ma to wpływ na wydajność niekorzystnie w czasie wykonywania. W większości przypadków to dopuszczalne obniżone wydajności. Co ważniejsze kod wygenerowany przez kompilator JIT jest powiązany do procesu, który wyzwolił kompilacji. Nie może być współużytkowana przez wiele procesów. Aby zezwolić na wygenerowany kod w celu udostępnienia w wielu wywołań aplikacji lub w wielu wiele procesów, które współużytkują zbiór zestawów, środowisko uruchomieniowe języka wspólnego obsługuje kompilację ahead of time. W tym trybie kompilację ahead of time używa [Ngen.exe (Generator obrazu natywnego)](../../docs/framework/tools/ngen-exe-native-image-generator.md) przekonwertować MSIL zestawy do natywnego kodu znacznie takie jak kompilator JIT wykonuje. Jednak działanie programu Ngen.exe różni się od kompilator JIT na trzy sposoby:  
+### <a name="install-time-code-generation-using-ngenexe"></a>Generowanie kodu w czasie instalacji przy użyciu programu NGen. exe  
+ Ponieważ kompilator JIT konwertuje plik MSIL zestawu na kod natywny, gdy są wywoływane poszczególne metody zdefiniowane w tym zestawie, wpływ na wydajność jest niekorzystny w czasie wykonywania. W większości przypadków, że zmniejszana wydajność jest akceptowalna. Co ważniejsze, kod wygenerowany przez kompilator JIT jest powiązany z procesem, który wyzwolił kompilację. Nie może być współużytkowana przez wiele procesów. Aby zezwolić na udostępnianie wygenerowanego kodu między wieloma wywołaniami aplikacji lub wieloma procesami, które współużytkują zestaw zestawów, środowisko uruchomieniowe języka wspólnego obsługuje tryb kompilacji z wyprzedzeniem. Ten tryb kompilacji przed czasem używa programu [Ngen. exe (Generator obrazu natywnego)](../../docs/framework/tools/ngen-exe-native-image-generator.md) do konwertowania zestawów MSIL na kod natywny, podobnie jak kompilator JIT. Jednak operacja programu Ngen. exe różni się od kompilatora JIT na trzy sposoby:  
   
-- Wykonuje konwersję w języku MSIL do kodu macierzystego, przed uruchomieniem aplikacji zamiast, gdy aplikacja jest uruchomiona.  
+- Wykonuje konwersję z języka MSIL do kodu natywnego przed uruchomieniem aplikacji, a nie w czasie, gdy aplikacja jest uruchomiona.  
   
-- Kompiluje, aby cały zespół w czasie, zamiast jednej metody w danym momencie.  
+- Kompiluje cały zestaw jednocześnie zamiast jednej metody w danym momencie.  
   
-- Kod wygenerowany w pamięci podręcznej obrazów natywnych utrzymuje jako plik na dysku.  
+- Zachowuje wygenerowany kod w pamięci podręcznej obrazów natywnych jako plik na dysku.  
   
-### <a name="code-verification"></a>Kod weryfikacyjny  
- Jako część swojej kompilacji do kodu macierzystego kod MSIL musi pomyślnie przejść proces weryfikacji, chyba że administrator ustanowił zasady zabezpieczeń, które umożliwia kodu pomijania weryfikacji. Weryfikacji sprawdza, czy MSIL i metadanych, aby dowiedzieć się, czy kod jest bezpieczne dla typów, co oznacza, że uzyskuje dostęp do lokalizacji pamięci, który jest upoważniony do dostępu. Bezpieczeństwo typów pomaga wyizolować obiekty od siebie oraz chronić je przed przypadkowym lub złośliwym uszkodzenia. Zapewnia również zapewnienie, że ograniczeń zabezpieczeń dotyczących kodu można wymusić niezawodnie.  
+### <a name="code-verification"></a>Weryfikacja kodu  
+ W ramach kompilacji do kodu natywnego, kod MSIL musi przejść proces weryfikacji, chyba że administrator ustanowił zasady zabezpieczeń, które pozwalają kodowi pominąć weryfikację. Weryfikacja sprawdza MSIL i metadane, aby dowiedzieć się, czy kod jest bezpieczny, co oznacza, że uzyskuje dostęp tylko do lokalizacji pamięci, do której ma dostęp. Bezpieczeństwo typów ułatwia izolowanie obiektów od siebie i pomaga chronić je przed przypadkowym lub złośliwym uszkodzeniem. Zapewnia również gwarancję, że ograniczenia zabezpieczeń w kodzie mogą być niezawodnie wymuszane.  
   
- Środowisko uruchomieniowe opiera się na fakt, że następujące instrukcje są spełnione dla kodu, który jest weryfikowalny pod kątem bezpieczeństwa typów:  
+ Środowisko uruchomieniowe polega na tym, że prawdziwe są następujące instrukcje dla kodu, który jest typu "bezpieczny":  
   
-- Odwołanie do typu, jest ściśle zgodna z typem, do którego nastąpiło odwołanie.  
+- Odwołanie do typu jest ściśle zgodne z typem, do którego się odwołuje.  
   
-- Jedyne operacje odpowiednio zdefiniowane są wywoływane na obiekcie.  
+- Tylko odpowiednio zdefiniowane operacje są wywoływane w obiekcie.  
   
-- Tożsamości są na tym, co się podaje.  
+- Tożsamości to te, do których są one zgłaszane.  
   
- W procesie weryfikacji kodu MSIL jest badany w celu podjęcia próby potwierdzić, że kod może dostęp do lokalizacji pamięci i wywoływać metody tylko przy użyciu właściwie zdefiniowanych typów. Na przykład kod nie może dopuścić do pola obiektu były dostępne w taki sposób, który umożliwia lokalizacji pamięci można przepełnienie. Ponadto weryfikacji sprawdza kod w celu ustalenia, czy kod w języku MSIL został poprawnie wygenerowany, ponieważ niepoprawne MSIL może prowadzić do naruszenia zasad bezpieczeństwa typu. Proces weryfikacji przekazuje wyraźnie określonych kod bezpiecznego typu i przekazuje kod jest bezpiecznym typem. Jednak niektóre kod bezpiecznego typu nie może zostać przekazany weryfikacji z powodu ograniczenia procesu weryfikacji i niektórych języków zgodnie z projektem nie tworzą sprawdzalnie bezpieczny kod. Jeśli kod bezpiecznego typu jest wymagany przez zasady zabezpieczeń, ale kod nie zostały spełnione weryfikacji, wyjątek jest generowany, gdy kod jest uruchamiany.  
+ W trakcie procesu weryfikacji kod MSIL jest sprawdzany w próbie potwierdzenia, że kod może uzyskać dostęp do lokalizacji pamięci i wywołać metody tylko za pomocą poprawnie zdefiniowanych typów. Na przykład kod nie może zezwalać na dostęp do pól obiektu w sposób, który pozwala na przepełnienie lokalizacji pamięci. Ponadto weryfikacja sprawdza kod, aby określić, czy MSIL zostało prawidłowo wygenerowane, ponieważ nieprawidłowe MSIL może prowadzić do naruszenia reguł bezpieczeństwa typów. Proces weryfikacji przekazuje dobrze zdefiniowany zestaw bezpiecznego kodu i przekazuje tylko kod, który jest bezpiecznym typem. Niemniej jednak kod bezpieczny dla typu może nie przekazywać weryfikacji z powodu niektórych ograniczeń procesu weryfikacji, a w niektórych językach, przez zaprojektowanie, nie generują kodu z bezpiecznym typem. Jeśli zasady zabezpieczeń wymagają kodu z bezpiecznym typem, ale kod nie przeszedł weryfikacji, wyjątek jest zgłaszany podczas uruchamiania kodu.  
   
  [Powrót do początku](#introduction)  
   
 <a name="running_code"></a>   
 ## <a name="running-code"></a>Uruchamianie kodu  
- Środowisko uruchomieniowe języka wspólnego udostępnia infrastrukturę, która umożliwia wykonanie zarządzanej została wykonana i usługi, których może być używana podczas wykonywania. Przed uruchomieniem metody muszą być skompilowane do kodu specyficznego dla procesora. Każdej metody, dla którego wygenerowano MSIL jest kompilowany dokładnie na czas, po jego jest wywoływana po raz pierwszy, a następnie uruchom. Przy następnym uruchomieniu metoda uruchomić istniejący kod natywny kompilowanego dokładnie na czas. Proces kompilacji JIT, a następnie uruchamiając kod jest powtarzany do momentu wykonania.  
+ Środowisko uruchomieniowe języka wspólnego udostępnia infrastrukturę, która umożliwia zarządzanie wykonywaniem i usługami, które mogą być używane podczas wykonywania. Aby można było uruchomić metodę, należy ją skompilować do kodu specyficznego dla procesora. Każda metoda, dla której Wygenerowano MSIL, jest skompilowana w trybie JIT, gdy jest wywoływana po raz pierwszy, a następnie uruchamiana. Przy następnym uruchomieniu metody zostanie uruchomiony istniejący kod natywny skompilowany przez JIT. Proces kompilowania JIT i uruchamiania kodu jest powtarzany, dopóki wykonywanie nie zostanie ukończone.  
   
- W czasie wykonywania kodu zarządzanego odbiera usługi, takie jak wyrzucanie elementów bezużytecznych, zabezpieczenia, współdziałanie z kodem niezarządzanym, obsługę debugowania dla wielu języków i wdrożenia rozszerzonego oraz obsługą wersjonowania.  
+ Podczas wykonywania kod zarządzany odbiera usługi takie jak odzyskiwanie pamięci, zabezpieczenia, współdziałanie z kodem niezarządzanym, obsługa debugowania przez wiele języków oraz Ulepszona obsługa wdrażania i przechowywania wersji.  
   
- W programie Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] i [!INCLUDE[windowsver](../../includes/windowsver-md.md)], moduł ładujący systemu operacyjnego sprawdza, czy modułów zarządzanych, sprawdzając nieco nagłówka COFF. Bit ustawiania wskazuje, że moduł zarządzany. Jeśli moduł ładujący wykryje modułów zarządzanych, ładuje mscoree.dll, i `_CorValidateImage` i `_CorImageUnloading` powiadamia moduł ładujący, gdy obrazy modułu zarządzanego są ładowane i zwolnione. `_CorValidateImage` wykonuje następujące czynności:  
+ W firmie [!INCLUDE[winxp](../../includes/winxp-md.md)] Microsoft [!INCLUDE[windowsver](../../includes/windowsver-md.md)]i, moduł ładujący systemu operacyjnego sprawdza dla modułów zarządzanych, sprawdzając bit w nagłówku COFF. Bit ustawiany oznacza moduł zarządzany. Jeśli moduł ładujący wykryje moduły zarządzane, ładuje mscoree. dll i `_CorValidateImage` `_CorImageUnloading` powiadamia moduł ładujący, gdy obrazy modułu zarządzanego są ładowane i zwalniane. `_CorValidateImage`wykonuje następujące akcje:  
   
-1. Zapewnia, że kod jest prawidłowy kod zarządzany.  
+1. Zapewnia, że kod jest prawidłowym kodem zarządzanym.  
   
-2. Zmiany punktu wejścia w obrazie punktu wejścia w środowisku uruchomieniowym.  
+2. Zmienia punkt wejścia w obrazie na punkt wejścia w środowisku uruchomieniowym.  
   
- Na Windows 64-bitowych `_CorValidateImage` modyfikuje obrazu, który znajduje się w pamięci przez przekształcenie go z PE32 je typu PE32 + format.  
+ W 64-bitowym systemie `_CorValidateImage` Windows program modyfikuje obraz znajdujący się w pamięci, przekształcając go z PE32 na PE32 + format.  
   
  [Powrót do początku](#introduction)  
   
@@ -116,5 +116,5 @@ ms.locfileid: "65593452"
 - [Zabezpieczenia](../../docs/standard/security/index.md)
 - [Współdziałanie z kodem niezarządzanym](../../docs/framework/interop/index.md)
 - [Wdrażanie](../../docs/framework/deployment/net-framework-applications.md)
-- [Zestawy w środowisku uruchomieniowym CLR](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Zestawy w środowisku .NET](assembly/index.md)
 - [Domeny aplikacji](../../docs/framework/app-domains/application-domains.md)

@@ -3,12 +3,12 @@ title: Narzędzia interfejsu wiersza polecenia (CLI) platformy .NET Core
 description: Omówienie narzędzi i funkcji interfejsu wiersza polecenia (CLI) platformy .NET Core.
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 20a083f3e7496521243bebd6585a48c8a562c548
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 50d1bbdd87ecd275b97603a1b47c6f13f879365a
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105047"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969877"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Narzędzia interfejsu wiersza polecenia (CLI) platformy .NET Core
 
@@ -18,7 +18,7 @@ Interfejs wiersza polecenia platformy .NET Core (CLI) to nowe Międzyplatformowe
 
 Użyj natywnych instalatorów lub użyj skryptów powłoki instalacji:
 
-- Natywne Instalatory są używane przede wszystkim na maszynach deweloperskich i używają natywnego mechanizmu instalacji na platformie, na przykład DEB pakiety w pakietach Ubuntu i MSI w systemie Windows. Te Instalatory instalują i konfigurują środowisko do natychmiastowego użytku przez dewelopera, ale wymagają uprawnień administracyjnych na komputerze. Instrukcje dotyczące instalacji można wyświetlić w podręczniku [instalacji programu .NET Core](https://aka.ms/dotnetcoregs).
+- Natywne Instalatory są używane przede wszystkim na maszynach deweloperskich i używają natywnego mechanizmu instalacji na platformie, na przykład DEB pakiety w pakietach Ubuntu i MSI w systemie Windows. Te Instalatory instalują i konfigurują środowisko do natychmiastowego użytku przez dewelopera, ale wymagają uprawnień administracyjnych na komputerze. Instrukcje dotyczące instalacji można wyświetlić w [podręczniku instalacji programu .NET Core](https://aka.ms/dotnetcoregs).
 - Skrypty powłoki są używane głównie do konfigurowania serwerów kompilacji lub do instalowania narzędzi bez uprawnień administracyjnych. Skrypty instalacji nie instalują wstępnie wymaganych składników na komputerze, które należy zainstalować ręcznie. Aby uzyskać więcej informacji, zobacz [temat informacje o skrypcie instalacji](dotnet-install-script.md). Aby uzyskać informacje na temat sposobu konfigurowania interfejsu wiersza polecenia na serwerze kompilacji ciągłej integracji (CI), zobacz [używanie zestaw .NET Core SDK i narzędzi w ciągłej integracji (ci)](using-ci-with-cli.md).
 
 Domyślnie interfejs wiersza polecenia jest instalowany w sposób równoległy (SxS), dzięki czemu wiele wersji narzędzi interfejsu wiersza polecenia może współistnieć na jednej maszynie. Określanie, która wersja jest używana na komputerze, na którym zainstalowano wiele wersji, wyjaśniono bardziej szczegółowo w sekcji [sterownika](#driver) .
@@ -26,6 +26,8 @@ Domyślnie interfejs wiersza polecenia jest instalowany w sposób równoległy (
 ## <a name="cli-commands"></a>Poleceń interfejsu wiersza polecenia
 
 Następujące polecenia są instalowane domyślnie:
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 

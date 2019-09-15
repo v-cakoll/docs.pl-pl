@@ -2,29 +2,29 @@
 title: Narzędzie do znajdowania klucza prywatnego (FindPrivateKey.exe)
 ms.date: 09/11/2017
 ms.assetid: b8846a95-3fcc-4e8c-b9c0-128d975a6307
-ms.openlocfilehash: 00ad27d28ee3a589d5ee8702bd036b05d8ceb4b3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 316f55b93cf4d867b99878bf483b73cb3f09ad04
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637570"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990350"
 ---
 # <a name="find-private-key-tool-findprivatekeyexe"></a>Narzędzie do znajdowania klucza prywatnego (FindPrivateKey.exe)
 
-To narzędzie wiersza polecenia może służyć do pobierania klucza prywatnego z magazynu certyfikatów. Na przykład *FindPrivateKey.exe* można znaleźć lokalizację i nazwę pliku klucza prywatnego skojarzonego z certyfikatem X.509 określonych w magazynie certyfikatów.
+Za pomocą tego narzędzia wiersza polecenia można pobrać klucz prywatny z magazynu certyfikatów. Na przykład można użyć *FindPrivateKey. exe* , aby znaleźć lokalizację i nazwę pliku klucza prywatnego skojarzonego z konkretnym certyfikatem X. 509 w magazynie certyfikatów.
 
 > [!IMPORTANT]
-> Narzędzie FindPrivateKey jest dostarczany jako przykładowej usługi WCF. Aby uzyskać więcej informacji na temat miejsca znaleźć plik i jak ją skompilować, zobacz [FindPrivateKey](./samples/findprivatekey.md).
+> Narzędzie FindPrivateKey jest dostarczane jako przykład WCF. Aby uzyskać więcej informacji na temat miejsca znalezienia przykładu i sposobu jego kompilowania, zobacz [FindPrivateKey](./samples/findprivatekey.md).
 
 ## <a name="syntax"></a>Składnia
 
-```
+```console
 FindPrivateKey<storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprint>} } [-f | -d | -a]]
 ```
 
 ## <a name="remarks"></a>Uwagi
 
-W poniższych tabelach opisano argumentów i opcje, które mogą służyć za pomocą narzędzia Znajdź klucza prywatnego (FindPrivateKey.exe).
+W poniższych tabelach opisano argumenty i opcje, które mogą być używane z narzędziem Znajdź klucz prywatny (FindPrivateKey. exe).
 
 |Argument|Opis|
 |--------------|-----------------|
@@ -33,22 +33,22 @@ W poniższych tabelach opisano argumentów i opcje, które mogą służyć za po
 
 |Opcja|Opis|
 |------------|-----------------|
-|`/n <` *SubjectName* `>`|Określa nazwę podmiotu certyfikatu.|
-|`/t <` *Odcisk palca* `>`|Określa odcisk palca certyfikatu. Certmgr.exe umożliwia pobieranie odcisku palca certyfikatu.|
+|`/n <`Nr *podmiotu*`>`|Określa nazwę podmiotu certyfikatu.|
+|`/t <`*odcisk palca*`>`|Określa odcisk palca certyfikatu. Użyj certmgr. exe w celu pobrania odcisku palca certyfikatu.|
 |`/f`|Wyświetla tylko nazwę pliku.|
 |`/d`|Wyświetla tylko katalog.|
-|`/a`|Generuje bezwzględnej nazwy pliku.|
+|`/a`|Wyprowadza bezwzględną nazwę pliku.|
 
 ## <a name="examples"></a>Przykłady
 
-Następujące polecenie pobiera klucz prywatny dla John Doe:
+Następujące polecenie pobiera klucz prywatny dla John Nowak:
 
-```
+```console
 FindPrivateKey My CurrentUser -n "CN=John Doe"
 ```
 
-Następujące polecenie umożliwia pobranie klucza prywatnego na komputerze lokalnym:
+Następujące polecenie pobiera klucz prywatny komputera lokalnego:
 
-```
+```console
 FindPrivateKey My LocalMachine -t "03 33 98 63 d0 47 e7 48 71 33 62 64 76 5c 4c 9d 42 1d 6b 52" –a
 ```

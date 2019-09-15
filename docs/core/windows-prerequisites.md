@@ -3,12 +3,12 @@ title: Wymagania wstępne dotyczące platformy .NET Core w systemie Windows
 description: Dowiedz się, jakie zależności są potrzebne na komputerze z systemem Windows, aby opracowywać i uruchamiać aplikacje platformy .NET Core.
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 82d336bc4efb34d336d5078952683c1673c3fa8a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7b2bf2b8353c4f02fa11e9e7531e0d936007be0b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926035"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970287"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Wymagania wstępne dotyczące platformy .NET Core w systemie Windows
 
@@ -60,6 +60,8 @@ Program .NET Core 3,0 w wersji zapoznawczej 3 ma takie same wymagania wstępne j
 Za pomocą dowolnego edytora można opracowywać aplikacje platformy .NET Core przy użyciu zestaw .NET Core SDK. Program Visual Studio 2017 zapewnia zintegrowane środowisko programistyczne dla aplikacji platformy .NET Core w systemie Windows.
 
 Więcej informacji o zmianach w programie Visual Studio 2017 można znaleźć w [informacjach o wersji](/visualstudio/releasenotes/vs2017-relnotes).
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 

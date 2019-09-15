@@ -4,38 +4,38 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - raw input [WPF]
 ms.assetid: c4d37ecd-065a-4d1c-9e6c-26804ae968ca
-ms.openlocfilehash: 3531ff9f42289a3ad3b029f090f2dd4987e5886c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fc7a5021f9f8d9e6badcd3e13266fb8f4bfe7a4
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947917"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991746"
 ---
 # <a name="getrawinputdevices"></a>GetRawInputDevices
-Umożliwia PresentationHost.exe odnajdywania nieprzetworzonych danych wejściowych (urządzenia ludzi interfejs), które jest zainteresowany aplikacji hosta.  
+Zezwala programowi PresentationHost. exe na odnajdywanie nieprzetworzonych urządzeń wejściowych (urządzeń z interfejsem ludzkim), których aplikacja hosta interesuje.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetRawInputDevices( [out] IEnumRAWINPUTDEVICE **ppEnum );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `ppEnum`  
   
- [out] Wskaźnik do [ienumrawinputdevice —](ienumrawinputdevice.md) wyliczania urządzeniach niesformatowanych danych wejściowych.  
+ określoną Wskaźnik do [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) do wyliczania nieprzetworzonych urządzeń wejściowych.  
   
 ## <a name="property-valuereturn-value"></a>Wartość właściwości/Zwracana wartość  
- HRESULT:  
+ WYNIK  
   
- S_OK - [ienumrawinputdevice —](ienumrawinputdevice.md) tylko będą używane przez PresentationHost.exe, jeśli zostanie zwrócony S_OK.  
+ S_OK- [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) będzie używana tylko przez PresentationHost. exe, jeśli zostanie zwrócony S_OK.  
   
  E_NOTIMPL  
   
 ## <a name="remarks"></a>Uwagi  
- Urządzeniach niesformatowanych danych wejściowych to zbiór urządzeń, danych wejściowych, obejmującą klawiatur, myszy i mniej tradycyjnych urządzenia, na przykład zdalnego sterowania.  
+ Pierwotne urządzenia wejściowe to zbiór urządzeń wejściowych, które obejmują klawiatury, myszy i mniejsze tradycyjne urządzenia, takie jak zdalne sterowanie.  
   
- Po pobraniu listy urządzeniach niesformatowanych danych wejściowych PresentationHost.exe rejestruje się za pomocą urządzeń mają otrzymywać powiadomienia WM_INPUT.  
+ Po pobraniu listy nieprzetworzonych urządzeń wejściowych PresentationHost. exe rejestruje je na urządzeniach do odbierania komunikatów powiadomień WM_INPUT.  
   
 ## <a name="see-also"></a>Zobacz także
 

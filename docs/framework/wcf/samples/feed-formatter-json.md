@@ -2,12 +2,12 @@
 title: Program formatujący kanału informacyjnego (format JSON)
 ms.date: 03/30/2017
 ms.assetid: f9c0b295-55e7-48ea-b308-ba51c7d31143
-ms.openlocfilehash: 028d2f9abd7e23f18eb90e5ecae8c57da3a871d1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 516a114ee577597611c14ce10ad838d85d6a0fb1
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039641"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989889"
 ---
 # <a name="feed-formatter-json"></a>Program formatujący kanału informacyjnego (format JSON)
 Ten przykład pokazuje, jak serializować wystąpienie <xref:System.ServiceModel.Syndication.SyndicationFeed> klasy w formacie JavaScript Object Notation (JSON) przy użyciu niestandardowych <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> i <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
@@ -18,7 +18,7 @@ Ten przykład pokazuje, jak serializować wystąpienie <xref:System.ServiceModel
 ## <a name="writing-json-feeds"></a>Zapisywanie źródeł danych JSON  
  Pisanie kanału informacyjnego JSON można wykonać przy użyciu `JsonFeedFormatter` (zaimplementowane w tym przykładzie) <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> , tak jak pokazano w poniższym przykładowym kodzie.  
   
-```  
+```csharp  
 //Basic feed with sample data  
 SyndicationFeed feed = new SyndicationFeed("Custom JSON feed", "A Syndication extensibility sample", null);  
 feed.LastUpdatedTime = DateTime.Now;  

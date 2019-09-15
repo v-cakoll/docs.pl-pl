@@ -1,28 +1,21 @@
 ---
 title: polecenie migracji dotnet
 description: Polecenie Migruj z programu dotnet migruje projekt i wszystkie jego zależności.
-ms.date: 06/26/2019
-ms.openlocfilehash: 86f11592e774da12b010886aaa1e30cee063fea6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.date: 08/08/2019
+ms.openlocfilehash: 790c607070ff348ca7cfe30137268de18dcb0293
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202536"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990430"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
-**Ten temat dotyczy: ✓** .NET Core 1. x SDK i nowszych wersji
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**Ten artykuł dotyczy: ✓** .NET Core 1. x SDK **✓** .NET Core 2. x SDK
 
 ## <a name="name"></a>Nazwa
 
 `dotnet migrate`— Migruje projekt programu .NET Core w wersji zapoznawczej 2 do projektu w stylu zestaw .NET Core SDK.
-
-> [!NOTE]
-> `dotnet migrate`zostanie usunięty z zestawu SDK platformy .NET Core 3,0 w następnej wersji zapoznawczej.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -49,6 +42,8 @@ Polecenie zachowuje zmigrowany plik *Project. JSON* w `backup` katalogu, który 
 Domyślnie operacja migracji wyprowadza stan procesu migracji do wyjścia standardowego (STDOUT). Jeśli używasz `--report-file <REPORT_FILE>` opcji, dane wyjściowe są zapisywane w pliku Określ.
 
 Polecenie obsługuje tylko prawidłowe projekty w wersji zapoznawczej 2 dla *projektu.* `dotnet migrate` Oznacza to, że nie można używać go do migrowania środowiska DNX lub podglądu 1 projektów opartych na formacie *JSON*bezpośrednio do projektów MSBuild/csproj. Najpierw należy ręcznie zmigrować projekt do projektu w wersji zapoznawczej 2 *projektu. JSON*, a następnie użyć `dotnet migrate` polecenia w celu przeprowadzenia migracji projektu.
+
+`dotnet migrate` Polecenie nie jest już dostępne począwszy od zestawu SDK programu .NET Core 3,0.
 
 ## <a name="arguments"></a>Argumenty
 

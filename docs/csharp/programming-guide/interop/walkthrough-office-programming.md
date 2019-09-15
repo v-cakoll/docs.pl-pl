@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 8ed6e759f682f0db76938661fdcf668bec1eef1c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0f14cc6486e53cad8c3cbadc404d22d7e5458e84
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588970"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991272"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Przewodnik: Programowanie Office (C# i Visual Basic)
 
 Program Visual Studio oferuje funkcje C# programu i Visual Basic, które zwiększają Microsoft Office programowanie. Przydatne C# funkcje obejmują argumenty nazwane i opcjonalne oraz zwracane wartości typu `dynamic`. W programowaniu com można pominąć `ref` słowo kluczowe i uzyskać dostęp do właściwości indeksowanych. Funkcje w Visual Basic zawierają właściwości, które są implementowane przez funkcję autouzupełniania, instrukcje w wyrażeniach lambda i Inicjatory kolekcji.
 
-Oba języki umożliwiają osadzanie informacji o typie, dzięki czemu można wdrażać zestawy, które współdziałają ze składnikami modelu COM bez wdrażania podstawowych zestawów międzyoperacyjnych (zestawów PIA) na komputerze użytkownika. Aby uzyskać więcej informacji, [zobacz Przewodnik: Osadzanie typów z zarządzanych zestawów](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).
+Oba języki umożliwiają osadzanie informacji o typie, dzięki czemu można wdrażać zestawy, które współdziałają ze składnikami modelu COM bez wdrażania podstawowych zestawów międzyoperacyjnych (zestawów PIA) na komputerze użytkownika. Aby uzyskać więcej informacji, [zobacz Przewodnik: Osadzanie typów z zarządzanych zestawów](../../../standard/assembly/embed-types-visual-studio.md).
 
 W tym instruktażu przedstawiono te funkcje w kontekście programowania pakietu Office, ale wiele z tych funkcji jest również przydatnych w programowaniu ogólnym. W tym przewodniku używasz aplikacji dodatku programu Excel do tworzenia skoroszytu programu Excel. Następnie utworzysz dokument programu Word zawierający link do skoroszytu. Na koniec zobaczysz, jak włączyć i wyłączyć zależność PIA.
 
@@ -40,7 +40,7 @@ Aby ukończyć ten przewodnik, musisz mieć zainstalowany Microsoft Office Excel
 
 4. W okienku **Szablony** kliknij pozycję **Excel \<wersja > dodatek**.
 
-5. Sprawdź górną część okienka **Szablony** , aby upewnić się, że w polu **platforma** docelowa zostanie wyświetlona **.NET Framework 4**lub nowsza wersja.
+5. Sprawdź górną część okienka **Szablony** , aby upewnić się, że w polu **platforma docelowa** zostanie wyświetlona **.NET Framework 4**lub nowsza wersja.
 
 6. Jeśli chcesz, wpisz nazwę projektu w polu **Nazwa** .
 
@@ -70,7 +70,7 @@ Aby ukończyć ten przewodnik, musisz mieć zainstalowany Microsoft Office Excel
 
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy nazwę projektu, kliknij polecenie **Dodaj**, a następnie kliknij pozycję **Klasa**. Nadaj nazwę klasy Account. vb, jeśli używasz programu Visual Basic lub Account.cs C#. Kliknij przycisk **Dodaj**.
 
-2. Zastąp definicję `Account` klasy następującym kodem. Definicje klas używają *Właściwości*, które są implementowane. Aby uzyskać więcej informacji, zobacz [zaimplementowane właściwości](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).
+2. Zastąp definicję `Account` klasy następującym kodem. Definicje klas używają właściwości, które są *implementowane*. Aby uzyskać więcej informacji, zobacz [zaimplementowane właściwości](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).
 
      [!code-csharp[csOfficeWalkthrough#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/account.cs#2)]
 
@@ -96,7 +96,7 @@ Aby ukończyć ten przewodnik, musisz mieć zainstalowany Microsoft Office Excel
 
          Aby uzyskać więcej informacji, zobacz [argumenty nazwane i opcjonalne](../classes-and-structs/named-and-optional-arguments.md).
 
-    - Właściwości `Range` i `Offset` obiektu [Range](<xref:Microsoft.Office.Interop.Excel.Range>) używają funkcji *indeksowanych właściwości* . Ta funkcja umożliwia korzystanie z tych właściwości z typów COM przy użyciu następującej składni typowej C# . Właściwości indeksowane umożliwiają również korzystanie `Value` z właściwości `Range` obiektu, eliminując konieczność używania `Value2` właściwości. `Value` Właściwość jest indeksowana, ale indeks jest opcjonalny. Argumenty opcjonalne i właściwości indeksowane działają razem w poniższym przykładzie.
+    - Właściwości `Range` i`Offset` obiektu [Range](<xref:Microsoft.Office.Interop.Excel.Range>) używają funkcji *indeksowanych właściwości* . Ta funkcja umożliwia korzystanie z tych właściwości z typów COM przy użyciu następującej składni typowej C# . Właściwości indeksowane umożliwiają również korzystanie `Value` z właściwości `Range` obiektu, eliminując konieczność używania `Value2` właściwości. `Value` Właściwość jest indeksowana, ale indeks jest opcjonalny. Argumenty opcjonalne i właściwości indeksowane działają razem w poniższym przykładzie.
 
          [!code-csharp[csOfficeWalkthrough#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#5)]
 
@@ -114,7 +114,7 @@ Aby ukończyć ten przewodnik, musisz mieć zainstalowany Microsoft Office Excel
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]
 
-     Te dodatki przedstawiają kolejną funkcję C#w: `Object` traktowanie wartości zwracanych z hostów com, takich jak pakiet Office, tak jakby były typu [dynamicznego](../../language-reference/keywords/dynamic.md). Dzieje się tak automatycznie, gdy **osadzanie typów** międzyoperacyjnych jest ustawione `True`na wartość domyślną, lub, równoważne, gdy zestaw jest przywoływany przez opcję kompilatora [/link](../../language-reference/compiler-options/link-compiler-option.md) . Typ `dynamic` umożliwia późne wiązanie, już dostępne w Visual Basic i pozwala uniknąć jawnego rzutowania wymaganego w C# 3,0 i wcześniejszych wersjach języka.
+     Te dodatki przedstawiają kolejną funkcję C#w: `Object` traktowanie wartości zwracanych z hostów com, takich jak pakiet Office, tak jakby były typu [dynamicznego](../../language-reference/keywords/dynamic.md). Dzieje się tak automatycznie, gdy **osadzanie typów międzyoperacyjnych** jest ustawione `True`na wartość domyślną, lub, równoważne, gdy zestaw jest przywoływany przez opcję kompilatora [/link](../../language-reference/compiler-options/link-compiler-option.md) . Typ `dynamic` umożliwia późne wiązanie, już dostępne w Visual Basic i pozwala uniknąć jawnego rzutowania wymaganego w C# 3,0 i wcześniejszych wersjach języka.
 
      Na przykład `excelApp.Columns[1]` `AutoFit` zwraca, i jest metodą zakresu programu Excel. [](<xref:Microsoft.Office.Interop.Excel.Range>) `Object` Bez `dynamic`, należy rzutować obiekt zwracany przez `excelApp.Columns[1]` wystąpienie `Range` przed wywołaniem metody `AutoFit`.
 
@@ -160,7 +160,7 @@ Aby ukończyć ten przewodnik, musisz mieć zainstalowany Microsoft Office Excel
 
 4. W menu **plik** w oknie Il DASM wybierz pozycję **plik** > **Otwórz**. Kliknij dwukrotnie **program Visual Studio \<w wersji >** , a następnie kliknij dwukrotnie pozycję **projekty**. Otwórz folder dla projektu i sprawdź folder bin/debug dla *nazwy projektu*. dll. Kliknij dwukrotnie *nazwę projektu*. dll. Nowe okno wyświetla atrybuty projektu, oprócz odwołań do innych modułów i zestawów. Należy zauważyć, `Microsoft.Office.Interop.Excel` że `Microsoft.Office.Interop.Word` przestrzenie nazw i znajdują się w zestawie. Domyślnie w programie Visual Studio kompilator importuje wymagane typy z przywoływanego PIA do zestawu.
 
-     Aby uzyskać więcej informacji, zobacz [jak: Wyświetl zawartość](../../../framework/app-domains/how-to-view-assembly-contents.md)zestawu.
+     Aby uzyskać więcej informacji, zobacz [jak: Wyświetl zawartość](../../../standard/assembly/view-contents.md)zestawu.
 
 5. Kliknij dwukrotnie ikonę **manifestu** . Zostanie wyświetlone okno zawierające listę zestawów zawierających elementy, do których odwołuje się projekt. `Microsoft.Office.Interop.Excel`i `Microsoft.Office.Interop.Word` nie znajdują się na liście. Ponieważ typy wymagane przez projekt zostały zaimportowane do zestawu, odwołania do PIA nie są wymagane. Ułatwia to wdrażanie. Zestawów PIA nie muszą znajdować się na komputerze użytkownika, a ponieważ aplikacja nie wymaga wdrożenia określonej wersji PIA, aplikacje mogą być zaprojektowane do pracy z wieloma wersjami pakietu Office, pod warunkiem, że niezbędne interfejsy API istnieją we wszystkich wersjach .
 
@@ -185,7 +185,7 @@ Aby ukończyć ten przewodnik, musisz mieć zainstalowany Microsoft Office Excel
 
 6. Powtórz kroki 1-3 z poprzedniej procedury, aby otworzyć okno zestawu. Zwróć uwagę `Microsoft.Office.Interop.Word` , `Microsoft.Office.Interop.Excel` że nie znajdują się już na liście osadzonych zestawów.
 
-7. Kliknij dwukrotnie ikonę **manifestu** i przewiń listę przywoływanych zestawów. Obie `Microsoft.Office.Interop.Word` i`Microsoft.Office.Interop.Excel` znajdują się na liście. Ponieważ aplikacja odwołuje się do programów Excel i Word zestawów Pia, a właściwość **Osadź typy** międzyoperacyjna ma wartość **false**, oba zestawy muszą istnieć na komputerze użytkownika końcowego.
+7. Kliknij dwukrotnie ikonę **manifestu** i przewiń listę przywoływanych zestawów. Obie `Microsoft.Office.Interop.Word` i`Microsoft.Office.Interop.Excel` znajdują się na liście. Ponieważ aplikacja odwołuje się do programów Excel i Word zestawów Pia, a właściwość **Osadź typy międzyoperacyjna** ma wartość **false**, oba zestawy muszą istnieć na komputerze użytkownika końcowego.
 
 8. W programie Visual Studio kliknij pozycję **Wyczyść rozwiązanie** w menu **kompilacja** , aby wyczyścić ukończony projekt.
 
@@ -205,7 +205,7 @@ Aby ukończyć ten przewodnik, musisz mieć zainstalowany Microsoft Office Excel
 - [Lambda Expressions (C#)](../statements-expressions-operators/lambda-expressions.md)
 - [Instrukcje: Korzystanie z właściwości indeksowanych w programowaniu międzyoperacyjnym modelu COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [Przewodnik: Osadzanie informacji o typie z zestawów Microsoft Office w programie Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
-- [Przewodnik: Osadzanie typów z zarządzanych zestawów](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [Przewodnik: Osadzanie typów z zarządzanych zestawów](../../../standard/assembly/embed-types-visual-studio.md)
 - [Przewodnik: Tworzenie pierwszego dodatku narzędzi VSTO dla programu Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [Usługa międzyoperacyjna modelu COM](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Współdziałanie](./index.md)

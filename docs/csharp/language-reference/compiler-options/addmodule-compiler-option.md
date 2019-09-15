@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -addmodule compiler option [C#]
 - addmodule compiler option [C#]
 ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
-ms.openlocfilehash: f2fae0be3ba958dc9776ed253c178933e4f76024
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 148a63c37cfbc4c60448adccde10947e91e22bb9
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69607049"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970187"
 ---
 # <a name="-addmodule-c-compiler-options"></a>-addmodule (C# opcje kompilatora)
 Ta opcja dodaje moduł, który został utworzony za pomocą elementu docelowego: przełączenie modułu do bieżącej kompilacji.  
@@ -49,4 +49,4 @@ csc -addmodule:metad1.netmodule;metad2.netmodule -out:out.exe input.cs
 - [Opcje kompilatora C#](./index.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
 - [Zestawy wieloplikowe](../../../framework/app-domains/multifile-assemblies.md)
-- [Instrukcje: Kompilowanie zestawu wieloplikowego](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Instrukcje: Kompilowanie zestawu wieloplikowego](../../../framework/app-domains/build-multifile-assembly.md)

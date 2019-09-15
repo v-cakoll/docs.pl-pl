@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: 052d6937846df39bd94d532e1b63ebe522dbf6c7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dc4c0336c8a67a1b4e70f71ba5f5406da1fbb2ff
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964673"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972377"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 Określa nazwę zestawu, którego częścią ma być ten moduł.  
@@ -37,14 +37,14 @@ Określa nazwę zestawu, którego częścią ma być ten moduł.
   
 - Przywoływany zestaw ma udzielony dostęp do zestawu, do którego zostanie skompilowany moduł.  
   
- Aby uzyskać więcej informacji na temat tworzenia modułu, zobacz [/Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Aby uzyskać więcej informacji na temat znajomych zestawów, zobacz [zaprzyjaźnione zestawy](../../../standard/assembly/friend-assemblies.md).  
+ Aby uzyskać więcej informacji na temat tworzenia modułu, zobacz [/Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Aby uzyskać więcej informacji na temat znajomych zestawów, zobacz [zaprzyjaźnione zestawy](../../../standard/assembly/friend.md).  
   
 > [!NOTE]
 > `-moduleassemblyname` Opcja jest niedostępna w środowisku deweloperskim programu Visual Studio. jest ona dostępna tylko podczas kompilowania z wiersza polecenia.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Kompilowanie zestawu wieloplikowego](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Instrukcje: Kompilowanie zestawu wieloplikowego](../../../framework/app-domains/build-multifile-assembly.md)
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
@@ -52,4 +52,4 @@ Określa nazwę zestawu, którego częścią ma być ten moduł.
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [Zestawy w środowisku .NET](../../../standard/assembly/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Przyjazne zestawy](../../../standard/assembly/friend-assemblies.md)
+- [Przyjazne zestawy](../../../standard/assembly/friend.md)

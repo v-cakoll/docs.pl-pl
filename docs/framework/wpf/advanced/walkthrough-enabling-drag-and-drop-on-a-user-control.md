@@ -8,12 +8,12 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: 80fd55be9230729cb8336be91c1d8fb4f7f3f080
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 172e49c2c255db4d24d2180f919b1305326b5e82
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364253"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991807"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Przewodnik: włączanie przeciągania i upuszczania w kontrolce użytkownika
 
@@ -80,7 +80,7 @@ Aby ukończyć ten przewodnik, potrzebujesz programu Visual Studio.
 
 2. Dodaj następujący kod XAML do tagu otwierającego <xref:System.Windows.Window> , aby utworzyć odwołanie do przestrzeni nazw XML dla bieżącej aplikacji.
 
-    ```
+    ```xaml
     xmlns:local="clr-namespace:DragDropExample"
     ```
 
@@ -311,7 +311,7 @@ W tej sekcji włączasz panele obsługujące kontrolki użytkownika kółka, aby
 
     - Sprawdza, <xref:System.Windows.UIElement.Drop> czy zdarzenie zostało już obsłużone. Na przykład, jeśli okrąg zostanie porzucony w innym okręgu, który <xref:System.Windows.UIElement.Drop> obsługuje zdarzenie, nie chcesz, aby panel, który zawiera okrąg, również go obsłużyć.
 
-    - Jeśli zdarzenie nie jest obsługiwane, sprawdza, czy klawisz Ctrl został naciśnięty.  <xref:System.Windows.UIElement.Drop>
+    - Jeśli zdarzenie nie jest obsługiwane, sprawdza, czy klawisz Ctrl został naciśnięty. <xref:System.Windows.UIElement.Drop>
 
     - Jeśli klawisz **Ctrl** zostanie wciśnięty <xref:System.Windows.UIElement.Drop> , program tworzy kopię kontrolki Circle i <xref:System.Windows.Controls.Panel.Children%2A> dodaje ją do kolekcji <xref:System.Windows.Controls.StackPanel>.
 

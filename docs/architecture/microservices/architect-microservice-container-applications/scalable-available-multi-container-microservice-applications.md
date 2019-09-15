@@ -2,12 +2,12 @@
 title: Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
 description: Odkryj opcje organizowania mikrousług i wielokontenerowych aplikacji w celu zapewnienia wysokiej skalowalności i dostępności oraz możliwości Azure Dev Spaces podczas opracowywania cyklu życia aplikacji Kubernetes.
 ms.date: 09/20/2018
-ms.openlocfilehash: 76fa68cee41f8d1f34ec399c346f457efae57151
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9540ea3941e90b0f9ebfb79dff6f84bb368d0fb0
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296246"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991152"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
 
@@ -15,7 +15,7 @@ Korzystanie z koordynatorów dla aplikacji gotowych do użycia w środowisku pro
 
 Rysunek 4-23 ilustruje wdrożenie w klastrze aplikacji składającej się z wielu mikrousług (kontenerów).
 
-![Składają się aplikacje platformy Docker w klastrze: Dla każdego wystąpienia usługi należy użyć jednego kontenera. Kontenery platformy Docker to "jednostki wdrożenia", a kontener jest wystąpieniem platformy Docker. host obsługuje wiele kontenerów](./media/image23.png)
+![Składają się aplikacje platformy Docker w klastrze: Dla każdego wystąpienia usługi należy użyć jednego kontenera. Kontenery platformy Docker to "jednostki wdrożenia", a kontener to wystąpienie platformy Docker. Host obsługuje wiele kontenerów](./media/image23.png)
 
 **Rysunek 4-23**. Klaster kontenerów
 

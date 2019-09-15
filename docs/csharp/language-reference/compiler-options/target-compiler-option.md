@@ -9,12 +9,12 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: 0630639433aed4c8dfddbf0144e9802ed3f4ee73
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 073660fa732c04cdc987af5617b894a277ebcc0f
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606449"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970113"
 ---
 # <a name="-target-c-compiler-options"></a>-Target (C# opcje kompilatora)
 Opcja kompilatora **-Target** może być określona w jednej z czterech postaci:  
@@ -37,7 +37,7 @@ Opcja kompilatora **-Target** może być określona w jednej z czterech postaci:
  [-target:winmdobj](./target-winmdobj-compiler-option.md)  
  Aby utworzyć pośredni plik. winmdobj.  
   
- O ile nie określono **elementu-target: module**, **-Target** powoduje, że manifest zestawu .NET Framework zostanie umieszczony w pliku wyjściowym. Aby uzyskać więcej informacji, zobacz [zestawy w środowisku uruchomieniowym języka wspólnego](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md) i [wspólnych atrybutach](../../programming-guide/concepts/attributes/common-attributes.md).  
+ O ile nie określono **elementu-target: module**, **-Target** powoduje, że manifest zestawu .NET Framework zostanie umieszczony w pliku wyjściowym. Aby uzyskać więcej informacji, zobacz [zestawy w programie .NET](../../../standard/assembly/index.md) i [wspólne atrybuty](../../programming-guide/concepts/attributes/common-attributes.md).  
   
  Manifest zestawu jest umieszczany w pierwszym pliku wyjściowym exe w kompilacji lub w pierwszej bibliotece DLL, jeśli nie ma pliku wyjściowego. exe. Na przykład w następującym wierszu polecenia manifest zostanie umieszczony w `1.exe`:  
   

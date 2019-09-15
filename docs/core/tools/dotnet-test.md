@@ -1,13 +1,13 @@
 ---
-title: polecenie test DotNet
-description: Polecenia dotnet test służy do wykonywania testów jednostkowych w danym projekcie.
+title: polecenie testu dotnet
+description: Polecenie Test dotnet służy do wykonywania testów jednostkowych w danym projekcie.
 ms.date: 05/29/2018
-ms.openlocfilehash: 6b67273f549edd7712237756a5aba13d5cb59a61
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: 49926b35b418e93237a159758903c535ec6c4006
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410368"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988544"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -15,9 +15,11 @@ ms.locfileid: "67410368"
 
 ## <a name="name"></a>Nazwa
 
-`dotnet test` -Sterownik test .NET służących do wykonywania testów jednostkowych.
+`dotnet test`— Sterownik testowy .NET używany do wykonywania testów jednostkowych.
 
 ## <a name="synopsis"></a>Streszczenie
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -50,9 +52,9 @@ dotnet test [-h|--help]
 
 ## <a name="description"></a>Opis
 
-`dotnet test` Polecenie służy do wykonywania testów jednostkowych w danym projekcie. `dotnet test` Polecenie uruchamia aplikację konsolową modułu uruchamiającego test, określony dla projektu. Moduł uruchamiający testy zdefiniowane dla środowiska testów jednostkowych (np. MSTest, NUnit lub xUnit) są wykonywane i zgłasza powodzenie lub niepowodzenie każdego testu. Jeśli wszystkie testy zakończą się powodzeniem, narzędzia test runner zwraca wartość 0, kod zakończenia; Jeśli dowolny test zakończy się niepowodzeniem, w przeciwnym razie zwraca 1. Narzędzie test runner Biblioteka testów jednostkowych jest spakowany jako pakiety NuGet i zostaną przywrócone jako zwykłe zależności projektu.
+`dotnet test` Polecenie służy do wykonywania testów jednostkowych w danym projekcie. `dotnet test` Polecenie uruchamia aplikację konsolową Test Runner określoną dla projektu. Moduł uruchamiający testy wykonuje testy zdefiniowane dla struktury testów jednostkowych (na przykład MSTest, NUnit lub xUnit) i raportuje sukces lub niepowodzenie każdego testu. Jeśli wszystkie testy zakończą się pomyślnie, moduł uruchamiający testy zwraca 0 jako kod zakończenia; w przeciwnym razie, jeśli dowolny test zakończy się niepowodzeniem, zwraca 1. Moduł uruchamiający testy i Biblioteka testów jednostkowych są spakowane jako pakiety NuGet i są przywracane jako zwykłe zależności projektu.
 
-Projekty testowe określić modułu uruchamiającego testy przy użyciu zwykłej `<PackageReference>` elementu, jak pokazano w poniższym przykładowym pliku projektu:
+Projekty testowe określają Test Runner przy użyciu zwykłego `<PackageReference>` elementu, jak pokazano w poniższym przykładowym pliku projektu:
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
@@ -60,7 +62,7 @@ Projekty testowe określić modułu uruchamiającego testy przy użyciu zwykłej
 
 `PROJECT`
 
-Ścieżka do projektu testowego. Jeśli nie zostanie określony, domyślnie bieżącego katalogu.
+Ścieżka do projektu testowego. Jeśli nie zostanie określony, domyślnie jest bieżącym katalogiem.
 
 ## <a name="options"></a>Opcje
 
@@ -68,187 +70,187 @@ Projekty testowe określić modułu uruchamiającego testy przy użyciu zwykłej
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
-Używa niestandardowych adapterów testowych z określonej ścieżki w przebiegu testu.
+Użyj niestandardowych adapterów testowych z określonej ścieżki w przebiegu testu.
 
 `--blame`
 
-Uruchamia testy w trybie polecenia blame. Ta opcja jest przydatna polega na wyizolowaniu problematyczne testy, powodując hosta testów ulega awarii. Tworzy plik wyjściowy w bieżącym katalogu jako *Sequence.xml* , przechwytuje kolejność wykonywania testów przed awarią.
+Uruchamia testy w trybie polecenia Blame. Ta opcja jest pomocna w odizolowaniu problematycznych testów powodujących awarię hosta testowego. Tworzy plik wyjściowy w bieżącym katalogu jako *Sequence. XML* , który przechwytuje kolejność testów przed awarią.
 
 `-c|--configuration {Debug|Release}`
 
-Definiuje konfigurację kompilacji. Wartość domyślna to `Debug`, ale konfiguracji projektu można zastąpić to ustawienie SDK domyślne.
+Definiuje konfigurację kompilacji. Wartość domyślna to `Debug`, ale Konfiguracja projektu może zastąpić to domyślne ustawienie zestawu SDK.
 
 `--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
 
-Włącza moduł zbierający dane dla przebiegu testu. Aby uzyskać więcej informacji, zobacz [monitorowanie i analizowanie przebiegu testu](https://aka.ms/vstest-collect).
+Włącza moduł zbierający dane dla przebiegu testu. Aby uzyskać więcej informacji, zobacz [monitorowanie i analizowanie przebiegu testowego](https://aka.ms/vstest-collect).
 
 `-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
 
-Włącza tryb diagnostycznych dla testu platformy i zapisu komunikaty diagnostyczne do określonego pliku.
+Włącza tryb diagnostyczny dla platformy testowej i zapisuje komunikaty diagnostyczne do określonego pliku.
 
 `-f|--framework <FRAMEWORK>`
 
-Wyszukuje pliki binarne testu dla określonego [framework](../../standard/frameworks.md).
+Wyszukuje pliki binarne testów dla konkretnej [struktury](../../standard/frameworks.md).
 
 `--filter <EXPRESSION>`
 
-Filtruje testy w bieżącym projekcie za pomocą podanego wyrażenia. Aby uzyskać więcej informacji, zobacz [szczegóły opcji filtru](#filter-option-details) sekcji. Aby uzyskać dodatkowe informacje i przykłady dotyczące korzystania z jednostki selektywne testowanie filtrowania, zobacz [uruchamianie selektywnych testów jednostkowych](../testing/selective-unit-tests.md).
+Filtruje testy w bieżącym projekcie przy użyciu danego wyrażenia. Aby uzyskać więcej informacji, zobacz sekcję [szczegóły opcji filtrowania](#filter-option-details) . Aby uzyskać więcej informacji i zapoznać się z przykładami dotyczącymi używania selektywnego filtrowania testów jednostkowych, zobacz [Uruchamianie selektywnych testów jednostkowych](../testing/selective-unit-tests.md).
 
 `-h|--help`
 
-Drukuje krótki pomoc dotyczącą polecenia.
+Drukuje krótką pomoc dla polecenia.
 
 `-l|--logger <LoggerUri/FriendlyName>`
 
-Określa Rejestrator dla wyników badań.
+Określa Rejestrator dla wyników testu.
 
 `--no-build`
 
-Nie da się skompilować projektu testowego przed jego uruchomieniem. Ustawia ona również niejawne `--no-restore` flagi.
+Nie kompiluje projektu testowego przed jego uruchomieniem. Również niejawne ustawia `--no-restore` flagę.
 
 `--no-restore`
 
-Przy uruchamianiu polecenia niejawne przywracania nie jest wykonywany.
+Nie wykonuje przywracania niejawnego podczas wykonywania polecenia.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Katalog, w którym można znaleźć plików binarnych do uruchomienia.
+Katalog, w którym można znaleźć pliki binarne do uruchomienia.
 
 `-r|--results-directory <PATH>`
 
-Katalog, gdzie wyników testu do umieszczenia. Jeśli określony katalog nie istnieje, zostanie utworzony.
+Katalog, w którym zostaną umieszczone wyniki testu. Jeśli określony katalog nie istnieje, zostanie utworzony.
 
 `-s|--settings <SETTINGS_FILE>`
 
-`.runsettings` Plik używany do uruchamiania testów. [Konfigurowanie testów jednostkowych za pomocą `.runsettings` pliku.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
+Plik `.runsettings` , który ma być używany do uruchamiania testów. [Skonfiguruj testy jednostkowe przy użyciu `.runsettings` pliku.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
 
 `-t|--list-tests`
 
-Listę wszystkich odnalezionych testów w bieżącym projekcie.
+Wyświetl listę wszystkich odnalezionych testów w bieżącym projekcie.
 
 `-v|--verbosity <LEVEL>`
 
-Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, i `diag[nostic]`.
+Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i .`diag[nostic]`
 
 `RunSettings arguments`
 
-Argumenty są przekazywane jako RunSettings konfiguracji testu. Argumenty są określane jako `[name]=[value]` pary po "--" (Uwaga miejsca po —). Spacja jest używana do oddzielania wielu `[name]=[value]` pary.
+Argumenty przekazane jako konfiguracje RunSettings dla testu. Argumenty są określane jako `[name]=[value]` pary po "--" (należy zwrócić uwagę na spację po--). Spacja jest używana do rozdzielania wielu `[name]=[value]` par.
 
 Przykład: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-Aby uzyskać więcej informacji na temat RunSettings zobacz [vstest.console.exe: Przekazywanie argumentów RunSettings](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
+Aby uzyskać więcej informacji na temat runsettings [, zobacz VSTest. Console. exe: Przekazywanie argumentów](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)runsettings.
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
-Używa niestandardowych adapterów testowych z określonej ścieżki w przebiegu testu.
+Użyj niestandardowych adapterów testowych z określonej ścieżki w przebiegu testu.
 
 `-c|--configuration {Debug|Release}`
 
-Definiuje konfigurację kompilacji. Wartość domyślna to `Debug`, ale konfiguracji projektu można zastąpić to ustawienie SDK domyślne.
+Definiuje konfigurację kompilacji. Wartość domyślna to `Debug`, ale Konfiguracja projektu może zastąpić to domyślne ustawienie zestawu SDK.
 
 `--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
 
-Włącza moduł zbierający dane dla przebiegu testu. Aby uzyskać więcej informacji, zobacz [monitorowanie i analizowanie przebiegu testu](https://aka.ms/vstest-collect).
+Włącza moduł zbierający dane dla przebiegu testu. Aby uzyskać więcej informacji, zobacz [monitorowanie i analizowanie przebiegu testowego](https://aka.ms/vstest-collect).
 
 `-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
 
-Włącza tryb diagnostycznych dla testu platformy i zapisu komunikaty diagnostyczne do określonego pliku.
+Włącza tryb diagnostyczny dla platformy testowej i zapisuje komunikaty diagnostyczne do określonego pliku.
 
 `-f|--framework <FRAMEWORK>`
 
-Wyszukuje pliki binarne testu dla określonego [framework](../../standard/frameworks.md).
+Wyszukuje pliki binarne testów dla konkretnej [struktury](../../standard/frameworks.md).
 
 `--filter <EXPRESSION>`
 
-Filtruje testy w bieżącym projekcie za pomocą podanego wyrażenia. Aby uzyskać więcej informacji, zobacz [szczegóły opcji filtru](#filter-option-details) sekcji. Aby uzyskać dodatkowe informacje i przykłady dotyczące korzystania z jednostki selektywne testowanie filtrowania, zobacz [uruchamianie selektywnych testów jednostkowych](../testing/selective-unit-tests.md).
+Filtruje testy w bieżącym projekcie przy użyciu danego wyrażenia. Aby uzyskać więcej informacji, zobacz sekcję [szczegóły opcji filtrowania](#filter-option-details) . Aby uzyskać więcej informacji i zapoznać się z przykładami dotyczącymi używania selektywnego filtrowania testów jednostkowych, zobacz [Uruchamianie selektywnych testów jednostkowych](../testing/selective-unit-tests.md).
 
 `-h|--help`
 
-Drukuje krótki pomoc dotyczącą polecenia.
+Drukuje krótką pomoc dla polecenia.
 
 `-l|--logger <LoggerUri/FriendlyName>`
 
-Określa Rejestrator dla wyników badań.
+Określa Rejestrator dla wyników testu.
 
 `--no-build`
 
-Nie da się skompilować projektu testowego przed jego uruchomieniem. Ustawia ona również niejawne `--no-restore` flagi.
+Nie kompiluje projektu testowego przed jego uruchomieniem. Również niejawne ustawia `--no-restore` flagę.
 
 `--no-restore`
 
-Przy uruchamianiu polecenia niejawne przywracania nie jest wykonywany.
+Nie wykonuje przywracania niejawnego podczas wykonywania polecenia.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Katalog, w którym można znaleźć plików binarnych do uruchomienia.
+Katalog, w którym można znaleźć pliki binarne do uruchomienia.
 
 `-r|--results-directory <PATH>`
 
-Katalog, gdzie wyników testu do umieszczenia. Jeśli określony katalog nie istnieje, zostanie utworzony.
+Katalog, w którym zostaną umieszczone wyniki testu. Jeśli określony katalog nie istnieje, zostanie utworzony.
 
 `-s|--settings <SETTINGS_FILE>`
 
-`.runsettings` Plik używany do uruchamiania testów. [Konfigurowanie testów jednostkowych za pomocą `.runsettings` pliku.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
+Plik `.runsettings` , który ma być używany do uruchamiania testów. [Skonfiguruj testy jednostkowe przy użyciu `.runsettings` pliku.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
 
 `-t|--list-tests`
 
-Listę wszystkich odnalezionych testów w bieżącym projekcie.
+Wyświetl listę wszystkich odnalezionych testów w bieżącym projekcie.
 
 `-v|--verbosity <LEVEL>`
 
-Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, i `diag[nostic]`.
+Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i .`diag[nostic]`
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
-Używa niestandardowych adapterów testowych z określonej ścieżki w przebiegu testu.
+Użyj niestandardowych adapterów testowych z określonej ścieżki w przebiegu testu.
 
 `-c|--configuration {Debug|Release}`
 
-Definiuje konfigurację kompilacji. Wartość domyślna to `Debug`, ale konfiguracji projektu można zastąpić to ustawienie SDK domyślne.
+Definiuje konfigurację kompilacji. Wartość domyślna to `Debug`, ale Konfiguracja projektu może zastąpić to domyślne ustawienie zestawu SDK.
 
 `-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
 
-Włącza tryb diagnostycznych dla testu platformy i zapisu komunikaty diagnostyczne do określonego pliku.
+Włącza tryb diagnostyczny dla platformy testowej i zapisuje komunikaty diagnostyczne do określonego pliku.
 
 `-f|--framework <FRAMEWORK>`
 
-Wyszukuje pliki binarne testu dla określonego [framework](../../standard/frameworks.md).
+Wyszukuje pliki binarne testów dla konkretnej [struktury](../../standard/frameworks.md).
 
 `--filter <EXPRESSION>`
 
-Filtruje testy w bieżącym projekcie za pomocą podanego wyrażenia. Aby uzyskać więcej informacji, zobacz [szczegóły opcji filtru](#filter-option-details) sekcji. Aby uzyskać dodatkowe informacje i przykłady dotyczące korzystania z jednostki selektywne testowanie filtrowania, zobacz [uruchamianie selektywnych testów jednostkowych](../testing/selective-unit-tests.md).
+Filtruje testy w bieżącym projekcie przy użyciu danego wyrażenia. Aby uzyskać więcej informacji, zobacz sekcję [szczegóły opcji filtrowania](#filter-option-details) . Aby uzyskać więcej informacji i zapoznać się z przykładami dotyczącymi używania selektywnego filtrowania testów jednostkowych, zobacz [Uruchamianie selektywnych testów jednostkowych](../testing/selective-unit-tests.md).
 
 `-h|--help`
 
-Drukuje krótki pomoc dotyczącą polecenia.
+Drukuje krótką pomoc dla polecenia.
 
 `-l|--logger <LoggerUri/FriendlyName>`
 
-Określa Rejestrator dla wyników badań.
+Określa Rejestrator dla wyników testu.
 
 `--no-build`
 
-Nie da się skompilować projektu testowego przed jego uruchomieniem.
+Nie kompiluje projektu testowego przed jego uruchomieniem.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Katalog, w którym można znaleźć plików binarnych do uruchomienia.
+Katalog, w którym można znaleźć pliki binarne do uruchomienia.
 
 `-s|--settings <SETTINGS_FILE>`
 
-`.runsettings` Plik używany do uruchamiania testów. [Konfigurowanie testów jednostkowych za pomocą `.runsettings` pliku.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
+Plik `.runsettings` , który ma być używany do uruchamiania testów. [Skonfiguruj testy jednostkowe przy użyciu `.runsettings` pliku.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
 
 `-t|--list-tests`
 
-Listę wszystkich odnalezionych testów w bieżącym projekcie.
+Wyświetl listę wszystkich odnalezionych testów w bieżącym projekcie.
 
 `-v|--verbosity <LEVEL>`
 
-Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, i `diag[nostic]`.
+Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i .`diag[nostic]`
 
 ---
 
@@ -258,51 +260,51 @@ Uruchom testy w projekcie w bieżącym katalogu:
 
 `dotnet test`
 
-Uruchom testy `test1` projektu:
+Uruchom testy w `test1` projekcie:
 
 `dotnet test ~/projects/test1/test1.csproj`
 
-Uruchom testy w projekcie w bieżącym katalogu i wygenerować plik wyników testu w formacie trx:
+Uruchom testy w projekcie w bieżącym katalogu i wygeneruj plik wyników testu w formacie TRX:
 
-`dotnet test --logger:trx`
+`dotnet test --logger trx`
 
-## <a name="filter-option-details"></a>Szczegóły opcji filtru
+## <a name="filter-option-details"></a>Szczegóły opcji filtrowania
 
 `--filter <EXPRESSION>`
 
-`<Expression>` ma format `<property><operator><value>[|&<Expression>]`.
+`<Expression>`ma format `<property><operator><value>[|&<Expression>]`.
 
-`<property>` jest to atrybut `Test Case`. Poniżej przedstawiono właściwości obsługiwanych przez platform testów jednostkowych innych popularnych:
+`<property>`jest atrybutem `Test Case`klasy. Poniżej przedstawiono właściwości obsługiwane przez popularne struktury testów jednostkowych:
 
-| Struktury testowej | Obsługiwanych właściwości                                                                                      |
+| Struktury testowej | Obsługiwane właściwości                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>Nazwa</li><li>ClassName</li><li>Priorytet</li><li>TestCategory</li></ul> |
-| xUnit          | <ul><li>FullyQualifiedName</li><li>Nazwa wyświetlana</li><li>Cechy</li></ul>                                   |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>Nazwa</li><li>Nazwą</li><li>Priority</li><li>TestCategory</li></ul> |
+| xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Cech</li></ul>                                   |
 
-`<operator>` Opisuje relację między właściwości i wartości:
+`<operator>` Opisuje relację między właściwością a wartością:
 
 | Operator | Funkcja        |
 | :------: | --------------- |
 | `=`      | Dokładne dopasowanie     |
-| `!=`     | Nie dokładne dopasowanie |
+| `!=`     | Niedokładne dopasowanie |
 | `~`      | Zawiera        |
 
-`<value>` jest to ciąg. Wszystkie wyszukiwania jest rozróżniana wielkość liter.
+`<value>`jest ciągiem. Wszystkie wyszukiwania są rozróżniane wielkości liter.
 
-Wyrażenie bez `<operator>` jest automatycznie traktowane jako `contains` na `FullyQualifiedName` właściwości (na przykład `dotnet test --filter xyz` jest taka sama jak `dotnet test --filter FullyQualifiedName~xyz`).
+`<operator>` Wyrażenie bez elementu jest automatycznie uznawane `dotnet test --filter xyz` `contains` za Właściwość on `FullyQualifiedName` (na przykład jest takie samo jak `dotnet test --filter FullyQualifiedName~xyz`).
 
-Wyrażenia może być łączone z operatorów warunkowych:
+Wyrażenia mogą być dołączane za pomocą operatorów warunkowych:
 
 | Operator            | Funkcja |
 | ------------------- | -------- |
 | <code>&#124;</code> | LUB       |
 | `&`                 | AND      |
 
-Może być częścią wyrażenia w nawiasach przy użyciu operatorów warunkowych (na przykład `(Name~TestMethod1) | (Name~TestMethod2)`).
+Wyrażenia można ująć w nawiasy, gdy są używane operatory warunkowe (na przykład `(Name~TestMethod1) | (Name~TestMethod2)`).
 
-Aby uzyskać dodatkowe informacje i przykłady dotyczące korzystania z jednostki selektywne testowanie filtrowania, zobacz [uruchamianie selektywnych testów jednostkowych](../testing/selective-unit-tests.md).
+Aby uzyskać więcej informacji i zapoznać się z przykładami dotyczącymi używania selektywnego filtrowania testów jednostkowych, zobacz [Uruchamianie selektywnych testów jednostkowych](../testing/selective-unit-tests.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktury i obiekty docelowe](../../standard/frameworks.md)
-- [Katalog platformy .NET core środowiska uruchomieniowego identyfikator (RID)](../rid-catalog.md)
+- [Struktury i elementy docelowe](../../standard/frameworks.md)
+- [Wykaz identyfikatorów środowiska uruchomieniowego platformy .NET Core (RID)](../rid-catalog.md)

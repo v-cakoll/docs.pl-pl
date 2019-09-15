@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: bff89f1d81b16c8c66d73901ef951626f6d2cb9e
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a062095885e6c1fc8816a78847968b1c250eabf8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400621"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991447"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Przewodnik: hostowanie kontrolki złożonej WPF w Windows Forms
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]oferuje bogate środowisko do tworzenia aplikacji. Jeśli jednak masz znaczną inwestycję w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kod, może być bardziej skutecznym rozszerzeniem istniejącej [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , a nie od początku. Typowym scenariuszem jest osadzenie co najmniej jednej kontrolki zaimplementowanej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w ramach aplikacji Windows Forms. Aby uzyskać więcej informacji na temat dostosowywania formantów WPF, zobacz [Dostosowywanie kontroli](../controls/control-customization.md).  
@@ -116,7 +116,7 @@ Aby ukończyć ten przewodnik, potrzebujesz programu Visual Studio.
 #### <a name="the-basic-structure-of-the-code-behind-file"></a>Podstawowa struktura pliku związanego z kodem  
  Plik związany z kodem składa się z pojedynczej przestrzeni `MyControls`nazw, która będzie zawierać dwie klasy `MyControl1` , `MyControlEventArgs`i.  
   
-```  
+```csharp  
 namespace MyControls  
 {  
   public partial class MyControl1 : Grid  
@@ -305,7 +305,7 @@ Na poniższej ilustracji przedstawiono formant złożony WPF hostowany w aplikac
 ### <a name="handling-onbuttonclick"></a>Obsługa OnButtonClick  
  Zdarzenie występuje, gdy użytkownik kliknie przycisk **OK** lub **Anuluj.** `OnButtonClick`  
   
- Program obsługi zdarzeń sprawdza `IsOK` pole argumentu zdarzenia w celu określenia, który przycisk został kliknięty. Zmienne danych odpowiadają  formantom,którezostałyomówione<xref:System.Windows.Forms.Label>wcześniej. `lbl` Jeśli użytkownik kliknie przycisk **OK** , dane z <xref:System.Windows.Controls.TextBox> kontrolek kontrolki są przypisywane do odpowiedniej <xref:System.Windows.Forms.Label> kontrolki. Jeśli użytkownik kliknie **przycisk Anuluj**, <xref:System.Windows.Forms.Label.Text%2A> wartości są ustawiane na ciągi domyślne.  
+ Program obsługi zdarzeń sprawdza `IsOK` pole argumentu zdarzenia w celu określenia, który przycisk został kliknięty. Zmienne danych odpowiadają formantom,którezostałyomówione<xref:System.Windows.Forms.Label>wcześniej. `lbl` Jeśli użytkownik kliknie przycisk **OK** , dane z <xref:System.Windows.Controls.TextBox> kontrolek kontrolki są przypisywane do odpowiedniej <xref:System.Windows.Forms.Label> kontrolki. Jeśli użytkownik kliknie **przycisk Anuluj**, <xref:System.Windows.Forms.Label.Text%2A> wartości są ustawiane na ciągi domyślne.  
   
  Dodaj poniższy przycisk, a `Form1` następnie kliknij polecenie kod obsługi zdarzeń w klasie.  
   

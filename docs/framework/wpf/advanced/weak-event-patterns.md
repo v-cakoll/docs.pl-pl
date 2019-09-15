@@ -6,127 +6,127 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 61e7f6d29cf9275004238ca776d5af9bf027004f
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: f4cbb22a3cdd7b966c36f6c8246b13b5c58e056d
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859916"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991789"
 ---
 # <a name="weak-event-patterns"></a>Słabe wzorce zdarzeń
-W przypadku aplikacji jest możliwe, że programy obsługi, które są dołączone do źródła zdarzeń, nie jest niszczony w połączeniu z obiekt odbiornik, który jest dołączony program obsługi do źródła. Taka sytuacja może prowadzić do przecieków pamięci. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] wprowadzono szablon projektu, który może służyć do rozwiązania tego problemu, przesyłając klasy Menedżera dedykowane dla określonych zdarzeń i implementowania interfejsu na odbiorniki dla tego zdarzenia. Ten wzorzec projektowy jest znany jako *słaby wzorzec zdarzeń*.  
+W aplikacjach jest możliwe, że programy obsługi dołączone do źródeł zdarzeń nie zostaną zniszczone w koordynacji z obiektem odbiornika, który dołączył program obsługi do źródła. Ta sytuacja może prowadzić do przecieków pamięci. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]wprowadza Wzorzec projektowy, który może służyć do rozwiązywania tego problemu, dostarczając dedykowaną klasę Menedżera dla określonych zdarzeń i implementując interfejs w detektorach dla tego zdarzenia. Ten Wzorzec projektowy jest znany jako *słaby wzorzec zdarzeń*.  
   
-## <a name="why-implement-the-weak-event-pattern"></a>Dlaczego warto wdrażać słaby wzorzec zdarzeń?  
- Nasłuchiwanie zdarzeń może prowadzić do przecieków pamięci. Typowych technik w celu nasłuchiwania na zdarzenie jest należy użyć składni specyficzny dla języka, który dołącza obsługę do zdarzenia w źródle. Na przykład w C#, czy składnia jest: `source.SomeEvent += new SomeEventHandler(MyEventHandler)`.  
+## <a name="why-implement-the-weak-event-pattern"></a>Dlaczego warto zaimplementować słaby wzorzec zdarzeń?  
+ Nasłuchiwanie zdarzeń może prowadzić do przecieków pamięci. Typową techniką nasłuchiwania zdarzeń jest użycie składni charakterystycznej dla języka, która dołącza procedurę obsługi do zdarzenia w źródle. Na przykład w programie C#składnia jest następująca: `source.SomeEvent += new SomeEventHandler(MyEventHandler)`.  
   
- Ta metoda tworzy silne odwołanie ze źródła zdarzeń do odbiornika zdarzeń. Zazwyczaj Dołączanie programu obsługi zdarzeń dla odbiornika powoduje, że odbiornika mieć okresu istnienia obiektu, który ma wpływ okres istnienia obiektu źródłowego (chyba że program obsługi zdarzeń jest jawnie usunięte). Jednak w pewnych okolicznościach może być okres istnienia obiektu nasłuchującego kontrolowany przez inne czynniki, takie jak aktualnie przynależność do drzewa wizualnego w aplikacji, a nie przez okres istnienia źródła. Po każdym okresie istnienia obiektu źródłowego wykracza poza okres istnienia obiektu odbiornika, wzorzec zdarzeń normalne prowadzi do przeciek pamięci: odbiornika jest życiu dłużej, niż planowano.  
+ Ta technika tworzy silne odwołanie ze źródła zdarzenia do odbiornika zdarzeń. Zwykle dołączenie obsługi zdarzeń dla odbiornika powoduje, że odbiornik ma czas istnienia obiektu, na który ma wpływ okres istnienia obiektu (chyba że program obsługi zdarzeń został jawnie usunięty). W pewnych okolicznościach może być konieczne, aby okres istnienia obiektu odbiornika był kontrolowany przez inne czynniki, na przykład czy należy on do drzewa wizualnego aplikacji, a nie przez okres istnienia źródła. Za każdym razem, gdy okres istnienia obiektu źródłowego wykracza poza okres istnienia obiektu odbiornika, normalny wzorzec zdarzenia prowadzi do przecieku pamięci: odbiornik działa dłużej niż zamierzone.  
   
- Słaby wzorzec zdarzeń zaprojektowano w celu rozwiązania tego problemu przeciek pamięci. Słaby wzorzec zdarzeń można zawsze wtedy, gdy odbiornik musi zarejestrować zdarzenie, ale odbiornik nie jawnie wiedział, kiedy można wyrejestrować. Słaby wzorzec zdarzeń można również zawsze wtedy, gdy okres istnienia obiektu źródła przekracza okres istnienia obiektu przydatne odbiornika. (W tym przypadku *przydatne* jest określany przez użytkownika.) Słaby wzorzec zdarzeń umożliwia odbiornika przeprowadzać rejestrację i otrzymają zdarzenie bez wywierania wpływu na właściwości okresu istnienia obiektu odbiornika w dowolny sposób. W efekcie odwołanie domniemane ze źródła nie określa, czy odbiornik kwalifikują się do wyrzucania elementów bezużytecznych. Odwołanie jest słabe odwołanie, w związku z tym nazewnictwa słaby wzorzec zdarzeń i powiązanych interfejsów API. Odbiornik może zostać usunięte zebrane lub w przeciwnym razie zniszczenia obiektu, a źródła można kontynuować bez zachowania noncollectible obsługi odwołań do obiektu teraz niszczone.  
+ Niesłaby wzorzec zdarzeń został zaprojektowany w celu rozwiązania tego problemu przecieku pamięci. Wzorca zdarzeń słabych można użyć zawsze, gdy odbiornik musi zarejestrować się na potrzeby zdarzenia, ale odbiornik nie wie jawnie, kiedy należy wyrejestrować. Wzorca zdarzeń słabych można również użyć zawsze, gdy okres istnienia obiektu źródła przekracza użyteczny okres istnienia odbiornika. (W tym przypadku jest to *przydatne* przez użytkownika). Słaby wzorzec zdarzeń umożliwia odbiornikowi rejestrowanie i odbieranie zdarzenia bez wpływu na charakterystykę okresu istnienia obiektu odbiornika w jakikolwiek sposób. W efekcie odwołanie implikowane ze źródła nie określa, czy odbiornik kwalifikuje się do wyrzucania elementów bezużytecznych. Odwołanie to słabe odwołanie, w związku z czym nazwa słabego wzorca zdarzeń i powiązane interfejsy API. Odbiornik może być wyrzucony lub zniszczony w inny sposób, a źródło może kontynuować bez zachowywania odwołań niekolekcjonowanych do teraz zniszczonych obiektów.  
   
-## <a name="who-should-implement-the-weak-event-pattern"></a>Kto należy zaimplementować słaby wzorzec zdarzeń?  
- Implementacja wzorca zdarzeń słabych jest interesująca przede wszystkim dla autorów kontroli. Jako autor kontroli odpowiedzialność za stopniu zachowanie i zawierania kontroli nad oraz wpływ, znajdującymi się na aplikacjach, w których zostanie ona wstawiona. W tym kontroli zachowania okresu istnienia obiektu, w szczególności obsługi problem przeciek pamięci opisem.  
+## <a name="who-should-implement-the-weak-event-pattern"></a>Kto powinien zaimplementować słaby wzorzec zdarzeń?  
+ Implementacja niesłabego wzorca zdarzeń jest interesująca głównie dla autorów kontroli. Autorem kontrolki jest w dużym stopniu odpowiedzialny za zachowanie i zawieranie kontroli oraz wpływu na aplikacje, w których został wstawiony. Obejmuje to zachowanie okresu istnienia obiektu sterowania, w szczególności obsługę opisanego problemu przecieku pamięci.  
   
- Niektóre scenariusze natury nadają się do aplikacji słaby wzorzec zdarzeń. Taki scenariusz jest powiązanie danych. W powiązaniu danych to częsty problem w obiekcie źródłowym w celu całkowicie niezależne od obiektu odbiornika, który jest elementem docelowym powiązania. Wiele aspektów [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] już powiązania danych mają słaby wzorzec zdarzeń stosowane w implementacji zdarzenia.  
+ Niektóre scenariusze polegają na wykorzystaniu samego wzorca zdarzenia słabego. Jeden taki scenariusz to powiązanie danych. W powiązaniu danych wspólne jest, aby obiekt źródłowy był całkowicie niezależny od obiektu odbiornika, który jest obiektem docelowym powiązania. Wiele aspektów [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] powiązania danych ma już niesłaby wzorzec zdarzeń stosowany w sposobie implementacji zdarzeń.  
   
-## <a name="how-to-implement-the-weak-event-pattern"></a>Jak zaimplementować słaby wzorzec zdarzeń  
- Istnieją trzy sposoby, aby zaimplementować słaby wzorzec zdarzeń. Poniższa tabela zawiera trzy metody oraz zawiera pewne wskazówki dotyczące kiedy należy używać każdego.  
+## <a name="how-to-implement-the-weak-event-pattern"></a>Jak zaimplementować wzorzec słabych zdarzeń  
+ Istnieją trzy sposoby implementacji słabego wzorca zdarzeń. W poniższej tabeli wymieniono trzy podejścia i przedstawiono wskazówki dotyczące sytuacji, w których należy użyć każdego z nich.  
   
-|Podejście|O czasie implementacji|  
+|Podejście|Kiedy należy zaimplementować|  
 |--------------|-----------------------|  
-|Użyj istniejącej klasy menedżera zdarzeń słabych|Jeśli zdarzenie, aby subskrybować ma odpowiadające mu <xref:System.Windows.WeakEventManager>, przy użyciu istniejącego menedżera zdarzeń słabych. Listę menedżerów zdarzeń słabych, które są uwzględniane przy użyciu platformy WPF, na ten temat można znaleźć w hierarchii dziedziczenia w <xref:System.Windows.WeakEventManager> klasy. Ponieważ menedżerów zdarzeń słabych uwzględniane są ograniczone, prawdopodobnie musisz wybrać jedną z innych metod.|  
-|Używanie klasy menedżera zdarzeń słabych generycznych|Korzystają z ogólnego <xref:System.Windows.WeakEventManager%602> kiedy istniejący <xref:System.Windows.WeakEventManager> nie jest dostępny, chcesz, aby łatwo wdrożyć, a nie są faktycznie zajmuje się wydajność. Ogólny <xref:System.Windows.WeakEventManager%602> jest mniej wydajne niż do istniejącego lub niestandardowego Menedżera zdarzeń słabych. Na przykład klasy generycznej jest więcej odbicia, aby odnaleźć zdarzenie otrzymuje nazwę zdarzenia. Ponadto kod, aby rejestrować zdarzenia za pomocą ogólnego <xref:System.Windows.WeakEventManager%602> jest bardziej pełne niż korzystanie z istniejących lub niestandardowych <xref:System.Windows.WeakEventManager>.|  
-|Utwórz klasę Menedżera niestandardowych zdarzeń słabych|Utwórz niestandardową <xref:System.Windows.WeakEventManager> kiedy istniejący <xref:System.Windows.WeakEventManager> nie jest dostępna i uzyskania najlepszej wydajności. Za pomocą niestandardowego <xref:System.Windows.WeakEventManager> do subskrybowania zdarzenia będzie bardziej wydajne, ale wiąże się koszt pisania więcej kodu na początku.|  
-|Korzystanie z Menedżera zdarzeń słabych innych firm|NuGet ma [kilka zdarzeń słabych menedżerów](https://www.nuget.org/packages?q=weak+event+manager&prerel=false) i wiele struktur WPF obsługuje również wzorca (na przykład zobacz [firmy pryzmat dokumentację dotyczącą subskrypcji luźno powiązanych zdarzeń](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/Communication.md#subscribing-to-events)).|
+|Użyj istniejącej klasy słabego Menedżera zdarzeń|Jeśli zdarzenie, które chcesz subskrybować, ma odpowiednie <xref:System.Windows.WeakEventManager>użycie, użyj istniejącego słabego Menedżera zdarzeń. Aby zapoznać się z listą słabych menedżerów zdarzeń, które są dołączone do platformy WPF, <xref:System.Windows.WeakEventManager> Zobacz Hierarchia dziedziczenia w klasie. Ze względu na to, że wliczone Menedżery zdarzeń słabych są ograniczone, prawdopodobnie trzeba będzie wybrać jedną z innych metod.|  
+|Użyj generycznej słabej klasy Menedżera zdarzeń|Użyj generycznej <xref:System.Windows.WeakEventManager%602> , gdy istniejąca <xref:System.Windows.WeakEventManager> jest niedostępna, chcesz ułatwić wdrożenie i nie ma żadnych informacji o wydajności. Wartość ogólna <xref:System.Windows.WeakEventManager%602> jest mniej wydajna niż istniejący lub niestandardowy słaby Menedżer zdarzeń. Na przykład Klasa generyczna wykonuje więcej odbicia w celu odnalezienia zdarzenia uwzględniającego nazwę zdarzenia. Ponadto kod, aby zarejestrować zdarzenie przy użyciu generycznego <xref:System.Windows.WeakEventManager%602> , jest bardziej pełny niż użycie istniejącej lub niestandardowej. <xref:System.Windows.WeakEventManager>|  
+|Utwórz niestandardową klasę słabego Menedżera zdarzeń|Utwórz niestandardową <xref:System.Windows.WeakEventManager> , gdy <xref:System.Windows.WeakEventManager> istniejąca jest niedostępna, i potrzebujesz najlepszej wydajności. Użycie niestandardowego <xref:System.Windows.WeakEventManager> do subskrybowania zdarzenia będzie bardziej wydajne, ale powiąże się to z kosztem napisania większej ilości kodu na początku.|  
+|Korzystanie z niesłabego Menedżera zdarzeń innej firmy|Pakiet NuGet ma [kilku słabych menedżerów zdarzeń](https://www.nuget.org/packages?q=weak+event+manager&prerel=false) , a wiele struktur WPF obsługuje również wzorzec (na przykład zobacz [dokumentację biblioteki Prism na temat luźno powiązanej subskrypcji zdarzeń](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/Communication.md#subscribing-to-events)).|
 
- Poniżej opisano sposób implementacji słaby wzorzec zdarzeń.  Dla celów tej dyskusji zdarzenia, aby zasubskrybować ma następujące cechy.  
+ W poniższych sekcjach opisano sposób implementacji słabego wzorca zdarzeń.  Na potrzeby tej dyskusji wydarzenie subskrybowane ma następujące cechy.  
   
-- Nazwa zdarzenia jest `SomeEvent`.  
+- Nazwa zdarzenia to `SomeEvent`.  
   
-- Zdarzenie jest wywoływane przez `EventSource` klasy.  
+- Zdarzenie jest zgłaszane przez `EventSource` klasę.  
   
 - Program obsługi zdarzeń ma typ: `SomeEventEventHandler` (lub `EventHandler<SomeEventEventArgs>`).  
   
-- Zdarzenie przekazuje parametr typu `SomeEventEventArgs` do obsługi zdarzeń.  
+- Zdarzenie przekazuje parametr typu `SomeEventEventArgs` do programów obsługi zdarzeń.  
   
-### <a name="using-an-existing-weak-event-manager-class"></a>Przy użyciu istniejącej klasy Menedżer zdarzeń słabych  
+### <a name="using-an-existing-weak-event-manager-class"></a>Używanie istniejącej słabej klasy Menedżera zdarzeń  
   
-1. Znajdowanie istniejącego zdarzenia słabe menedżera.  
+1. Znajdź istniejący słaby Menedżer zdarzeń.  
   
-     Listę menedżerów zdarzeń słabych, które są uwzględniane przy użyciu platformy WPF, na ten temat można znaleźć w hierarchii dziedziczenia w <xref:System.Windows.WeakEventManager> klasy.  
+     Aby zapoznać się z listą słabych menedżerów zdarzeń, które są dołączone do platformy WPF, <xref:System.Windows.WeakEventManager> Zobacz Hierarchia dziedziczenia w klasie.  
   
-2. Użyj nowego menedżera zdarzeń słabych zamiast zaczep zdarzenia normalny.  
+2. Użyj nowego słabego Menedżera zdarzeń zamiast normalnego podłączenie zdarzeń.  
   
-     Na przykład, jeśli kod używa następującego wzorca do subskrybowania zdarzenia:  
+     Na przykład jeśli kod używa następującego wzorca do subskrybowania zdarzenia:  
   
-    ```  
+    ```csharp  
     source.SomeEvent += new SomeEventEventHandler(OnSomeEvent);  
     ```  
   
-     Zmień go na następujący wzór:  
+     Zmień go na następujący wzorzec:  
   
-    ```  
+    ```csharp  
     SomeEventWeakEventManager.AddHandler(source, OnSomeEvent);  
     ```  
   
-     Podobnie jeśli kod używa następującego wzorca, aby anulować subskrypcję zdarzenia:  
+     Podobnie, jeśli kod używa następującego wzorca, aby anulować subskrypcję zdarzenia:  
   
-    ```  
+    ```csharp  
     source.SomeEvent -= new SomeEventEventHandler(OnSomeEvent);  
     ```  
   
-     Zmień go na następujący wzór:  
+     Zmień go na następujący wzorzec:  
   
-    ```  
+    ```csharp  
     SomeEventWeakEventManager.RemoveHandler(source, OnSomeEvent);  
     ```  
   
-### <a name="using-the-generic-weak-event-manager-class"></a>Za pomocą klasy ogólnej słabe Menedżer zdarzeń  
+### <a name="using-the-generic-weak-event-manager-class"></a>Korzystanie z ogólnej słabej klasy Menedżera zdarzeń  
   
-1. Używać ogólnych <xref:System.Windows.WeakEventManager%602> klasy zamiast zaczep zdarzenia normalny.  
+1. Użyj klasy generycznej <xref:System.Windows.WeakEventManager%602> zamiast normalnej podłączenie zdarzeń.  
   
-     Kiedy używać <xref:System.Windows.WeakEventManager%602> rejestrowanie detektorów zdarzeń, podaj źródło zdarzenia i <xref:System.EventArgs> typu jako parametrów typu klasy i wywołania <xref:System.Windows.WeakEventManager%602.AddHandler%2A> jak pokazano w poniższym kodzie:  
+     W przypadku korzystania <xref:System.Windows.WeakEventManager%602> z programu do rejestrowania detektorów zdarzeń należy podać Źródło zdarzenia <xref:System.EventArgs> i typ jako parametry typu klasy i wywołania <xref:System.Windows.WeakEventManager%602.AddHandler%2A> , jak pokazano w poniższym kodzie:  
   
-    ```  
+    ```csharp  
     WeakEventManager<EventSource, SomeEventEventArgs>.AddHandler(source, "SomeEvent", source_SomeEvent);  
     ```  
   
-### <a name="creating-a-custom-weak-event-manager-class"></a>Tworzenie niestandardowych słabe klasy Menedżer zdarzeń  
+### <a name="creating-a-custom-weak-event-manager-class"></a>Tworzenie niestandardowej słabej klasy Menedżera zdarzeń  
   
 1. Skopiuj następujący szablon klasy do projektu.  
   
-     Ta klasa dziedziczy <xref:System.Windows.WeakEventManager> klasy.  
+     Ta klasa dziedziczy z <xref:System.Windows.WeakEventManager> klasy.  
   
      [!code-csharp[WeakEvents#WeakEventManagerTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
   
-2. Zastąp `SomeEventWeakEventManager` nazwa własną nazwą.  
+2. Zastąp `SomeEventWeakEventManager` nazwę własną nazwą.  
   
-3. Zastąp te trzy nazwy opisane wcześniej przy użyciu odpowiadających im nazw do zdarzenia. (`SomeEvent`, `EventSource`, i `SomeEventEventArgs`)  
+3. Zastąp trzy nazwy opisane wcześniej odpowiednimi nazwami dla zdarzenia. (`SomeEvent`, `EventSource`i )`SomeEventEventArgs`  
   
-4. Ustaw widoczność (publiczne / wewnętrzne / prywatne) klasy menedżera zdarzeń słabych na taką samą widoczność jak zdarzenia, którymi zarządza.  
+4. Ustaw widoczność (Public/Internal/Private) słabej klasy Menedżera zdarzeń w taki sam sposób jak zdarzenie, które zarządza.  
   
-5. Użyj nowego menedżera zdarzeń słabych zamiast zaczep zdarzenia normalny.  
+5. Użyj nowego słabego Menedżera zdarzeń zamiast normalnego podłączenie zdarzeń.  
   
-     Na przykład, jeśli kod używa następującego wzorca do subskrybowania zdarzenia:  
+     Na przykład jeśli kod używa następującego wzorca do subskrybowania zdarzenia:  
   
-    ```  
+    ```csharp  
     source.SomeEvent += new SomeEventEventHandler(OnSomeEvent);  
     ```  
   
-     Zmień go na następujący wzór:  
+     Zmień go na następujący wzorzec:  
   
-    ```  
+    ```csharp  
     SomeEventWeakEventManager.AddHandler(source, OnSomeEvent);  
     ```  
   
-     Podobnie jeśli kod używa następującego wzorca, aby anulować subskrypcję zdarzenia:  
+     Podobnie, jeśli kod używa następującego wzorca, aby anulować subskrypcję zdarzenia:  
   
-    ```  
+    ```csharp  
     source.SomeEvent -= new SomeEventEventHandler(OnSome);  
     ```  
   
-     Zmień go na następujący wzór:  
+     Zmień go na następujący wzorzec:  
   
-    ```  
+    ```csharp  
     SomeEventWeakEventManager.RemoveHandler(source, OnSomeEvent);  
     ```  
   

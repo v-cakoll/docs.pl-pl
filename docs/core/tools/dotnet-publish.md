@@ -2,12 +2,12 @@
 title: polecenie dotnet publish
 description: Dotnet publish polecenie publikuje projekt platformy .NET Core w katalogu.
 ms.date: 05/29/2018
-ms.openlocfilehash: 188a136c3e024f71f9b3e89d8e797fa3053f7e4c
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f9fea1a30e349ef949078e881756e2520d79ccbf
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202596"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969828"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -18,6 +18,8 @@ ms.locfileid: "70202596"
 `dotnet publish`-Pakuje aplikację i jej zależności do folderu w celu wdrożenia w systemie hostingu.
 
 ## <a name="synopsis"></a>Streszczenie
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 

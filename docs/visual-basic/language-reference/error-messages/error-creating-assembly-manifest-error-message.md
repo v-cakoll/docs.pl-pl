@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-ms.openlocfilehash: 0f67b772bab3104c00510954d01b200aadfa9e8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 560635718a931cc9cdb687154a1d23970136de97
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803353"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972290"
 ---
-# <a name="error-creating-assembly-manifest-error-message"></a>Wystąpił błąd podczas tworzenia manifestu zestawu: \<komunikat o błędzie >
-Kompilator Visual Basic wywołuje Assembly Linker (Al.exe, znany także jako Alink) do generowania manifestu zestawu. Konsolidator zgłosił błąd podczas etapu emisji wstępnego tworzenia zestawu.  
+# <a name="error-creating-assembly-manifest-error-message"></a>Wystąpił błąd podczas tworzenia \<manifestu zestawu: komunikat o błędzie >
+Kompilator Visual Basic wywołuje Assembly Linker (Al.exe, znany także jako Alink) do generowania manifestu zestawu. Konsolidator zgłosił błąd w fazie wstępnej emisji tworzenia zestawu.  
   
- Może to wystąpić, jeśli występują problemy z pliku klucza lub określony kontener kluczy. Aby w pełni Podpisz zestaw, należy podać prawidłowy plik klucza, który zawiera informacje o kluczach publicznych i prywatnych. Aby opóźnić Podpisz zestaw, należy wybrać **opóźnienie logowania tylko** pole wyboru, a następnie podaj prawidłowy plik klucza, który zawiera informacje o informacje o kluczu publicznym. Klucz prywatny nie jest konieczne w przypadku, gdy zestaw jest podpisany z opóźnieniem. Aby uzyskać więcej informacji, zobacz [jak: Podpisywanie zestawu silną nazwą](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).  
+ Taka sytuacja może wystąpić w przypadku problemów z plikiem klucza lub określonego kontenera kluczy. Aby w pełni podpisać zestaw, należy podać prawidłowy plik klucza zawierający informacje o kluczach publiczny i prywatny. Aby opóźnić podpisywanie zestawu, musisz zaznaczyć pole wyboru **Opóźnij tylko znak** i podać prawidłowy plik klucza, który zawiera informacje o kluczu publicznym. Klucz prywatny nie jest konieczny, gdy zestaw jest podpisany z opóźnieniem. Aby uzyskać więcej informacji, zobacz [jak: Podpisz zestaw silną nazwą](../../../standard/assembly/sign-strong-name.md).  
   
  **Identyfikator błędu:** BC30140  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Sprawdź komunikat o błędzie w cudzysłowach i zapoznaj się z tematem [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). Aby uzyskać dalsze wyjaśnienie błędu AL1019 i porady  
+1. Sprawdź komunikat o błędzie w cudzysłowach i zapoznaj się z tematem [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). Aby uzyskać informacje o błędzie, AL1019 dalsze wyjaśnienie i porady  
   
 2. Jeśli błąd będzie się powtarzać, należy zebrać informacje dotyczące okoliczności i powiadom pomoc techniczna firmy Microsoft.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Podpisywanie zestawu silną nazwą](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- [Instrukcje: Podpisz zestaw silną nazwą](../../../standard/assembly/sign-strong-name.md)
 - [Strona podpisywania, Projektant projektu](/visualstudio/ide/reference/signing-page-project-designer)
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)

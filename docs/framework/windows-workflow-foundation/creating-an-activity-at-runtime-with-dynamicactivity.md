@@ -1,39 +1,39 @@
 ---
-title: Tworzenie działania w czasie wykonywania za pomocą działania DynamicActivity
+title: Tworzenie działania w czasie wykonywania z dynamiczną
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: ed133e972caa9a3a62ab2ac1310cb1bd666947ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de67fdd71f28bc0f4b16017d253682ca2615f854
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774078"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989740"
 ---
-# <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>Tworzenie działania w czasie wykonywania za pomocą działania DynamicActivity
-<xref:System.Activities.DynamicActivity> jest klasą konkretną, sealed przy użyciu publicznego konstruktora. <xref:System.Activities.DynamicActivity> może służyć do włączenia funkcji działania w czasie wykonywania za pomocą działania modelu DOM.  
+# <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>Tworzenie działania w czasie wykonywania z dynamiczną
+<xref:System.Activities.DynamicActivity>jest konkretną klasą zapieczętowana z konstruktorem publicznym. <xref:System.Activities.DynamicActivity>może służyć do łączenia funkcji działania w środowisku uruchomieniowym przy użyciu modelu DOM działania.  
   
-## <a name="dynamicactivity-features"></a>Funkcje DynamicActivity  
- <xref:System.Activities.DynamicActivity> ma dostęp do właściwości wykonywania, argumentów i zmiennych, ale nie dostęp do usług czasu wykonywania, takich jak planowanie działania podrzędne lub śledzenia.  
+## <a name="dynamicactivity-features"></a>Funkcje dynamiczne  
+ <xref:System.Activities.DynamicActivity>ma dostęp do właściwości wykonywania, argumentów i zmiennych, ale nie ma dostępu do usług czasu wykonywania, takich jak planowanie działań podrzędnych lub śledzenie.  
   
- Można ustawić właściwości najwyższego poziomu za pomocą przepływu pracy <xref:System.Activities.Argument> obiektów. Kodu imperatywnego tych argumentów tworzonych za pomocą właściwości CLR dla nowego typu. W XAML, są deklarowane za pomocą `x:Class` i `x:Member` tagów.  
+ Właściwości najwyższego poziomu można ustawić za pomocą <xref:System.Activities.Argument> obiektów przepływu pracy. W kodzie bezwzględnym te argumenty są tworzone przy użyciu właściwości CLR dla nowego typu. W języku XAML są one deklarowane `x:Class` przy `x:Member` użyciu tagów i.  
   
- Tworzony przy użyciu działań <xref:System.Activities.DynamicActivity> interfejs za pomocą projektanta przy użyciu <xref:System.ComponentModel.ICustomTypeDescriptor>. Działania utworzone w Projektancie można załadować dynamicznie przy użyciu <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A>, jak pokazano w poniższej procedurze.  
+ Działania skonstruowane przy <xref:System.Activities.DynamicActivity> użyciu interfejsu z projektantem <xref:System.ComponentModel.ICustomTypeDescriptor>przy użyciu. Działania utworzone w projektancie mogą być ładowane dynamicznie przy użyciu <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A>, jak pokazano w poniższej procedurze.  
   
-#### <a name="to-create-an-activity-at-runtime-using-imperative-code"></a>Aby utworzyć działanie w czasie wykonywania przy użyciu kodu imperatywnego  
+#### <a name="to-create-an-activity-at-runtime-using-imperative-code"></a>Aby utworzyć działanie w czasie wykonywania przy użyciu kodu bezwzględnego  
   
 1. OpenVisual Studio 2010.  
   
-2. Wybierz **pliku**, **nowe**, **projektu**. Wybierz **Workflow 4.0** w obszarze **Visual C#** w **typów projektów** okna, a następnie wybierz **v2010** węzła. Wybierz **sekwencyjne Aplikacja konsoli przepływu pracy** w **szablony** okna. Nazwa nowego projektu DynamicActivitySample.  
+2. Wybierz **plik**, **Nowy**, **projekt**. Wybierz pozycję **Workflow 4,0** w obszarze **Wizualizacja C#**  w oknie **typy projektów** , a następnie wybierz węzeł **V2010** . W oknie **Szablony** wybierz **kolejno pozycje sekwencyjna aplikacja konsoli przepływu pracy** . Nazwij nowy projekt DynamicActivitySample.  
   
-3. Kliknij prawym przyciskiem myszy Workflow1.xaml w projekcie HelloActivity, a następnie wybierz pozycję **Usuń**.  
+3. Kliknij prawym przyciskiem myszy pozycję Workflow1. XAML w projekcie Hello i wybierz polecenie **Usuń**.  
   
-4. Otwórz plik Program.cs. Dodaj następującą dyrektywę na początku pliku.  
+4. Otwórz Program.cs. Dodaj następującą dyrektywę na początku pliku.  
   
-    ```  
+    ```csharp  
     using System.Collections.Generic;  
     ```  
   
-5. Zastąp zawartość `Main` metoda poniższym kodem, który tworzy <xref:System.Activities.Statements.Sequence> działania, który zawiera jeden <xref:System.Activities.Statements.WriteLine> działania i przypisuje go do <xref:System.Activities.DynamicActivity.Implementation%2A> właściwość nowe działanie dynamicznych.  
+5. Zamień zawartość `Main` metody na następujący kod, który <xref:System.Activities.Statements.Sequence> tworzy działanie zawierające pojedyncze <xref:System.Activities.Statements.WriteLine> działanie i przypisuje je do <xref:System.Activities.DynamicActivity.Implementation%2A> właściwości nowego działania dynamicznego.  
   
     ```csharp  
     //Define the input argument for the activity  
@@ -66,35 +66,35 @@ ms.locfileid: "61774078"
                 Console.ReadLine();  
     ```  
   
-6. Wykonania aplikacji. Okno konsoli z tekstu "Hello World!" Wyświetla.  
+6. Wykonaj aplikację. Okno konsoli z tekstem "Hello world!" listę.  
   
-#### <a name="to-create-an-activity-at-runtime-using-xaml"></a>Aby utworzyć działanie w czasie wykonywania przy użyciu XAML  
+#### <a name="to-create-an-activity-at-runtime-using-xaml"></a>Aby utworzyć działanie w środowisku uruchomieniowym przy użyciu języka XAML  
   
 1. Open Visual Studio 2010.  
   
-2. Wybierz **pliku**, **nowe**, **projektu**. Wybierz **Workflow 4.0** w obszarze **Visual C#** w **typów projektów** okna, a następnie wybierz **v2010** węzła. Wybierz **Aplikacja konsoli przepływu pracy** w **szablony** okna. Nazwa nowego projektu DynamicActivitySample.  
+2. Wybierz **plik**, **Nowy**, **projekt**. Wybierz pozycję **Workflow 4,0** w obszarze **Wizualizacja C#**  w oknie **typy projektów** , a następnie wybierz węzeł **V2010** . W oknie **Szablony** wybierz pozycję **aplikacja konsoli przepływu pracy** . Nazwij nowy projekt DynamicActivitySample.  
   
-3. Otwórz Workflow1.xaml w projekcie HelloActivity. Kliknij przycisk **argumenty** opcję w dolnej części projektanta. Utwórz nową `In` argument o nazwie `TextToWrite` typu `String`.  
+3. Otwórz Workflow1. XAML w projekcie Hello. Kliknij opcję **argumenty** u dołu okna projektanta. Utwórz nowy `In` argument o nazwie `TextToWrite` typu. `String`  
   
-4. Przeciągnij **WriteLine** działanie z **podstawowych** sekcji przybornika na powierzchni projektowej. Przypisz wartość `TextToWrite` do **tekstu** właściwości działania.  
+4. Przeciągnij działanie **WriteLine** z sekcji elementy **pierwotne** przybornika na powierzchnię projektanta. Przypisz wartość `TextToWrite` do właściwości **Text** działania.  
   
-5. Otwórz plik Program.cs. Dodaj następującą dyrektywę na początku pliku.  
+5. Otwórz Program.cs. Dodaj następującą dyrektywę na początku pliku.  
   
-    ```  
+    ```csharp  
     using System.Activities.XamlIntegration;  
     ```  
   
-6. Zastąp zawartość `Main` metoda następującym kodem.  
+6. Zamień zawartość `Main` metody na następujący kod.  
   
-    ```  
+    ```csharp  
     Activity act2 = ActivityXamlServices.Load(@"Workflow1.xaml");  
                     results = WorkflowInvoker.Invoke(act2, new Dictionary<string, object> { { "TextToWrite", "HelloWorld!" } });  
     Console.ReadLine();  
     ```  
   
-7. Wykonania aplikacji. Okno konsoli z tekstu "Hello World!" zostanie wyświetlone.  
+7. Wykonaj aplikację. Okno konsoli z tekstem "Hello world!" się.  
   
-8. Kliknij prawym przyciskiem myszy plik Workflow1.xaml **Eksploratora rozwiązań** i wybierz **Wyświetl kod**. Należy zauważyć, że klasa działania jest tworzona z `x:Class` , a właściwość jest tworzony przy użyciu `x:Property`.  
+8. Kliknij prawym przyciskiem myszy plik Workflow1. XAML w **Eksplorator rozwiązań** i wybierz polecenie **Wyświetl kod**. Należy zauważyć, że Klasa Activity jest tworzona `x:Class` z i właściwość jest tworzona przy `x:Property`użyciu.  
   
 ## <a name="see-also"></a>Zobacz także
 

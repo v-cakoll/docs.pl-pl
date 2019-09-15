@@ -1,17 +1,21 @@
 ---
 title: polecenie dotnet Pack
 description: Polecenie programu dotnet Pack tworzy pakiety NuGet dla projektu .NET Core.
-ms.date: 12/04/2018
-ms.openlocfilehash: c5c00f3bb06e5bc5579c0d3d6bdd39fbdf3db656
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.date: 08/08/2019
+ms.openlocfilehash: ba5a438d58963222c3fa55d2c585ef503dcd49db
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202842"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990409"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
+**Ten temat dotyczy: ✓** .NET Core 1. x SDK i nowszych wersji
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>Nazwa
 
@@ -19,27 +23,21 @@ ms.locfileid: "70202842"
 
 ## <a name="synopsis"></a>Streszczenie
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```console
-dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
-    [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive] 
+    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable] 
+    [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```console
-dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
-    [-s|--serviceable] [-v|--verbosity] [--version-suffix]
-dotnet pack [-h|--help]
-```
-
----
 
 ## <a name="description"></a>Opis
 
-`dotnet pack` Polecenie kompiluje projekt i tworzy pakiety NuGet. Wynikiem tego polecenia jest pakiet NuGet. Jeśli ta `--include-symbols` opcja jest obecna, tworzony jest inny pakiet zawierający symbole debugowania.
+`dotnet pack` Polecenie kompiluje projekt i tworzy pakiety NuGet. Wynikiem tego polecenia jest pakiet NuGet (czyli plik *. nupkg* ). 
+
+Jeśli chcesz wygenerować pakiet zawierający symbole debugowania, dostępne są dwie opcje:
+
+- `--include-symbols`— tworzy pakiet symboli.
+- `--include-source`— tworzy pakiet symboli z `src` folderem zawierającym pliki źródłowe.
 
 Zależności NuGet spakowanego projektu są dodawane do pliku *. nuspec* , więc są one poprawnie rozwiązane po zainstalowaniu pakietu. Odwołania projektu do projektu nie są spakowane w projekcie. Obecnie należy mieć pakiet dla każdego projektu, jeśli istnieją zależności między projektami.
 
@@ -59,13 +57,11 @@ Projekty sieci Web nie są domyślnie objęte pakietem. Aby zastąpić zachowani
 
 ## <a name="arguments"></a>Argumenty
 
-* **`PROJECT`**
+`PROJECT | SOLUTION`
 
-  Projekt do spakowania. Jest to ścieżka do [pliku csproj](csproj.md) lub katalogu. Jeśli nie zostanie określony, domyślnie jest bieżącym katalogiem.
+  Projekt lub rozwiązanie do spakowania. Jest to ścieżka do [pliku csproj](csproj.md), pliku rozwiązania lub do katalogu. Jeśli nie zostanie określony, polecenie przeszukuje bieżący katalog dla pliku projektu lub rozwiązania.
 
 ## <a name="options"></a>Opcje
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 * **`-c|--configuration {Debug|Release}`**
 
@@ -73,7 +69,7 @@ Projekty sieci Web nie są domyślnie objęte pakietem. Aby zastąpić zachowani
 
 * **`--force`**
 
-  Wymusza rozpoznanie wszystkich zależności, nawet jeśli ostatnie przywracanie zakończyło się pomyślnie. Określenie tej flagi jest takie samo jak usuwanie pliku *Project. assets. JSON* .
+  Wymusza rozpoznanie wszystkich zależności, nawet jeśli ostatnie przywracanie zakończyło się pomyślnie. Określenie tej flagi jest takie samo jak usuwanie pliku *Project. assets. JSON* . Opcja dostępna od wersji .NET Core 2,0 SDK.
 
 * **`-h|--help`**
 
@@ -81,11 +77,15 @@ Projekty sieci Web nie są domyślnie objęte pakietem. Aby zastąpić zachowani
 
 * **`--include-source`**
 
-  Zawiera pliki źródłowe w pakiecie NuGet. Pliki źródeł znajdują się w `src` folderze programu. `nupkg`
+  Obejmuje pakiety NuGet symboli debugowania oprócz zwykłych pakietów NuGet w katalogu wyjściowym. Pliki źródeł są dołączone `src` do folderu w pakiecie symboli.
 
 * **`--include-symbols`**
 
-  Generuje symbole `nupkg`.
+  Obejmuje pakiety NuGet symboli debugowania oprócz zwykłych pakietów NuGet w katalogu wyjściowym.
+
+* **`--interactive`**
+
+  Zezwala na zatrzymanie polecenia i oczekiwanie na dane wejściowe użytkownika lub akcję (na przykład w celu ukończenia uwierzytelniania). Dostępne od wersji .NET Core 3,0 SDK.
 
 * **`--no-build`**
 
@@ -93,11 +93,15 @@ Projekty sieci Web nie są domyślnie objęte pakietem. Aby zastąpić zachowani
 
 * **`--no-dependencies`**
 
-  Ignoruje odwołania projektu do projektu i przywraca tylko projekt główny.
+  Ignoruje odwołania projektu do projektu i przywraca tylko projekt główny. Opcja dostępna od wersji .NET Core 2,0 SDK.
 
 * **`--no-restore`**
 
-  Nie wykonuje przywracania niejawnego podczas wykonywania polecenia.
+  Nie wykonuje przywracania niejawnego podczas wykonywania polecenia. Opcja dostępna od wersji .NET Core 2,0 SDK.
+
+* **`--nologo`**
+
+  Nie wyświetla transparentu początkowego ani komunikatu o prawach autorskich. Dostępne od wersji .NET Core 3,0 SDK.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -105,7 +109,7 @@ Projekty sieci Web nie są domyślnie objęte pakietem. Aby zastąpić zachowani
 
 * **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  Określa docelowy środowisko uruchomieniowe, dla którego mają zostać przywrócone pakiety. Aby uzyskać listę identyfikatorów środowiska uruchomieniowego (RID), zobacz [wykaz identyfikatorów RID](../rid-catalog.md).
+  Określa docelowy środowisko uruchomieniowe, dla którego mają zostać przywrócone pakiety. Aby uzyskać listę identyfikatorów środowiska uruchomieniowego (RID), zobacz [wykaz identyfikatorów RID](../rid-catalog.md). Opcja dostępna od wersji .NET Core 2,0 SDK.
 
 * **`-s|--serviceable`**
 
@@ -118,46 +122,6 @@ Projekty sieci Web nie są domyślnie objęte pakietem. Aby zastąpić zachowani
 * **`-v|--verbosity <LEVEL>`**
 
   Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i .`diag[nostic]`
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-* **`-c|--configuration {Debug|Release}`**
-
-  Definiuje konfigurację kompilacji. Wartość domyślna to `Debug`.
-
-* **`-h|--help`**
-
-  Drukuje krótką pomoc dla polecenia.
-
-* **`--include-source`**
-
-  Zawiera pliki źródłowe w pakiecie NuGet. Pliki źródeł znajdują się w `src` folderze programu. `nupkg`
-
-* **`--include-symbols`**
-
-  Generuje symbole `nupkg`.
-
-* **`--no-build`**
-
-  Nie kompiluje projektu przed opakowaniem.
-
-* **`-o|--output <OUTPUT_DIRECTORY>`**
-
-  Umieszcza skompilowane pakiety w określonym katalogu.
-
-* **`-s|--serviceable`**
-
-  Ustawia flagę obsługi w pakiecie. Aby uzyskać więcej informacji, zobacz [blog platformy .NET: .NET 4.5.1 obsługuje aktualizacje zabezpieczeń firmy Microsoft dla bibliotek NuGet programu .NET](https://aka.ms/nupkgservicing).
-
-* **`--version-suffix <VERSION_SUFFIX>`**
-
-  Definiuje wartość `$(VersionSuffix)` właściwości programu MSBuild w projekcie.
-
-* **`-v|--verbosity <LEVEL>`**
-
-  Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i .`diag[nostic]`
-
----
 
 ## <a name="examples"></a>Przykłady
 
@@ -212,5 +176,5 @@ Projekty sieci Web nie są domyślnie objęte pakietem. Aby zastąpić zachowani
 * Pakowanie projektu przy użyciu [pliku. nuspec](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):
 
   ```console
-  dotnet pack ~/projects/app1/project.csproj /p:NuspecFile=~/projects/app1/project.nuspec /p:NuspecBasePath=~/projects/app1/nuget
+  dotnet pack ~/projects/app1/project.csproj -p:NuspecFile=~/projects/app1/project.nuspec -p:NuspecBasePath=~/projects/app1/nuget
   ```

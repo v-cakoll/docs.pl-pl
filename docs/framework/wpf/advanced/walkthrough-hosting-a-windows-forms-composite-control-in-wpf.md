@@ -8,55 +8,55 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: aa971f194b29096245ea8fe94ba96cc5e0cd763b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e4c1de17b131ee68c6e6fce0035b703eb5b489a0
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64605494"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991884"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>Przewodnik: hostowanie kontrolki złożonej Windows Forms w WPF
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferuje rozbudowane środowisko do tworzenia aplikacji. Jednak jeśli masz znaczne inwestycje [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu, może być bardziej efektywne ponownie użyć co najmniej część tego kodu w swojej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, a nie do jego przepisania od podstaw. Najbardziej typowym scenariuszem jest w przypadku istniejących kontrolek Windows Forms. W niektórych przypadkach możesz nawet utracić dostęp do kodu źródłowego dla tych formantów. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera procedury prostym do hostowania te kontrolki w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji. Na przykład, można użyć [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dla większości programowania w hostujący usługi specjalistyczne <xref:System.Windows.Forms.DataGridView> kontrolki.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]oferuje bogate środowisko do tworzenia aplikacji. Jeśli jednak masz znaczną inwestycję w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kod, może być bardziej efektywne ponowne użycie co najmniej jednego kodu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w aplikacji, a nie zapisanie go od podstaw. Najczęstszym scenariuszem jest to, że masz istniejące kontrolki Windows Forms. W niektórych przypadkach może nie mieć nawet dostępu do kodu źródłowego dla tych formantów. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zapewnia prostą procedurę hostingu takich kontrolek w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji. Na przykład można użyć [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dla większości programowania, jednocześnie udostępniając wyspecjalizowane <xref:System.Windows.Forms.DataGridView> kontrolki.  
   
- Ten przewodnik przeprowadzi Cię przez aplikację, która obsługuje złożone kontrolkę Windows Forms do wykonywania wprowadzania danych w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji. Złożonej kontrolki jest dostarczana w bibliotece DLL. Ta procedura ogólne można rozszerzyć do bardziej złożonych aplikacji i formantów. Ten przewodnik jest przeznaczony do niemal identyczne w wyglądu i działania [instruktażu: Hosting złożonego formantu WPF w formularzach Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md). Podstawowa różnica polega na tym, że scenariusza hostingu została odwrócona.  
+ Ten Instruktaż zawiera instrukcje dotyczące aplikacji, która hostuje Windows Forms formant złożony do wprowadzania danych w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji. Formant złożony jest spakowany w bibliotece DLL. Ta ogólna procedura może zostać rozszerzona na bardziej złożone aplikacje i kontrolki. Ten przewodnik został zaprojektowany tak, aby był niemal identyczny w wyglądzie i funkcji w celu [instruktażu: Hostowanie złożonego formantu WPF w](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)Windows Forms. Podstawowa różnica polega na tym, że scenariusz hostingu jest odwrócony.  
   
- Ekran instruktażu jest podzielony na dwie sekcje. Pierwsza sekcja krótko opisano wykonania złożonego formantu Windows Forms. Druga sekcja w tym artykule omówiono szczegółowo sposobu hostowania złożonej kontrolki w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, odbieranie zdarzeń z kontrolki i uzyskiwać dostęp do niektórych właściwości formantu.  
+ Przewodnik jest podzielony na dwie sekcje. W pierwszej sekcji krótko opisano implementację Windows Formsego formantu złożonego. W drugiej sekcji omówiono szczegółowo, jak hostować formant złożony w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, odbierać zdarzenia z kontrolki i uzyskiwać dostęp do niektórych właściwości kontrolki.  
   
- Zadania zilustrowane w tym przewodniku obejmują:  
+ Zadania przedstawione w tym instruktażu obejmują:  
   
-- Implementowanie złożonego formantu Windows Forms.  
+- Implementowanie Windows Formsgo formantu złożonego.  
   
-- Implementowanie aplikacja hosta WPF.  
+- Implementowanie aplikacji hosta WPF.  
   
- Lista zadań przedstawione w niniejszym przewodniku kompletny kod znajduje się [Hosting kontrolki złożonej formularzy Windows w przykładzie WPF](https://go.microsoft.com/fwlink/?LinkID=159999).  
+ Aby uzyskać pełną listę kodów zadań przedstawionych w tym instruktażu, zobacz [hostowanie złożonego formantu Windows Forms w przykładzie WPF](https://go.microsoft.com/fwlink/?LinkID=159999).  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
 
-Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
+Aby ukończyć ten przewodnik, potrzebujesz programu Visual Studio.
   
-## <a name="implementing-the-windows-forms-composite-control"></a>Implementowanie formantu złożonego programu Windows Forms  
- Kontrolek złożonych Windows Forms używane w tym przykładzie jest formą proste wprowadzanie danych. Ten formularz przyjmuje nazwę użytkownika i adres, a następnie używa niestandardowego zdarzenia w celu zwracania tych informacji do hosta. Poniższa ilustracja przedstawia renderowanych kontroli.  
+## <a name="implementing-the-windows-forms-composite-control"></a>Implementowanie Windows Formsgo formantu złożonego  
+ Formant złożony Windows Forms używany w tym przykładzie jest prostym formularzem wprowadzania danych. Ten formularz przyjmuje nazwę i adres użytkownika, a następnie używa zdarzenia niestandardowego, aby zwrócić te informacje do hosta. Poniższa ilustracja przedstawia renderowany formant.  
 
- Na poniższej ilustracji przedstawiono złożonego formantu Windows Forms:  
+ Na poniższej ilustracji przedstawiono Windows Forms formant złożony:  
 
  ![Zrzut ekranu, który pokazuje prosty formant Windows Forms.](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-forms-control.gif)  
   
 ### <a name="creating-the-project"></a>Tworzenie projektu  
- Aby uruchomić projekt:  
+ Aby rozpocząć projekt:  
   
-1. Uruchom [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], a następnie otwórz **nowy projekt** okno dialogowe.  
+1. Uruchom [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]i Otwórz okno dialogowe **Nowy projekt** .  
   
-2. W kategorii oknie Wybierz **Biblioteka kontrolek formularzy Windows** szablonu.  
+2. W kategorii okna wybierz szablon **Biblioteka formantów Windows Forms** .  
   
-3. Nazwa nowego projektu `MyControls`.  
+3. Nadaj nazwę nowemu projektowi `MyControls`.  
   
-4. Dla lokalizacji, określ wygodnie nazwane folder najwyższego poziomu, takie jak `WpfHostingWindowsFormsControl`. Później należy umieścić aplikacji hosta w tym folderze.  
+4. W polu Lokalizacja Określ wygodną nazwę folderu najwyższego poziomu, na przykład `WpfHostingWindowsFormsControl`. Później aplikacja hosta zostanie umieszczona w tym folderze.  
   
-5. Kliknij przycisk **OK** do tworzenia projektu. Domyślny projekt zawiera jeden formant o nazwie `UserControl1`.  
+5. Kliknij przycisk **OK** , aby utworzyć projekt. Domyślny projekt zawiera pojedynczy formant o nazwie `UserControl1`.  
   
-6. W Eksploratorze rozwiązań, zmienianie nazwy `UserControl1` do `MyControl1`.  
+6. W Eksplorator rozwiązań Zmień nazwę `UserControl1` na `MyControl1`.  
   
- Projekt powinien mieć odwołania do następujących systemowych bibliotek DLL. Jeśli dowolny z tych bibliotek DLL nie są włączone domyślnie, należy je dodać do projektu.  
+ Projekt powinien zawierać odwołania do następujących bibliotek DLL systemu. Jeśli dowolna z tych bibliotek DLL nie jest domyślnie dołączona, należy dodać je do projektu.  
   
 - System  
   
@@ -68,12 +68,12 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
   
 - System.Xml  
   
-### <a name="adding-controls-to-the-form"></a>Dodawanie formantów do formularza  
- Aby dodać formanty do formularza:  
+### <a name="adding-controls-to-the-form"></a>Dodawanie kontrolek do formularza  
+ Aby dodać kontrolki do formularza:  
   
 - Otwórz `MyControl1` w projektancie.  
   
- Dodaj 5 <xref:System.Windows.Forms.Label> kontrolek i odpowiadające im <xref:System.Windows.Forms.TextBox> formantów, rozmiar i tak jak są one na poprzedniej ilustracji, na formularzu. W tym przykładzie <xref:System.Windows.Forms.TextBox> formantów są nazywane:  
+ Dodaj pięć <xref:System.Windows.Forms.Label> formantów i ich odpowiadające im <xref:System.Windows.Forms.TextBox> kontrolki, rozmiar i uporządkowany, tak jak na poprzedniej ilustracji, w formularzu. W przykładzie <xref:System.Windows.Forms.TextBox> kontrolki są nazwane:  
   
 - `txtName`  
   
@@ -85,130 +85,130 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
   
 - `txtZip`  
   
- Dodaj dwie <xref:System.Windows.Forms.Button> przycisk kontrolek oznaczonych **OK** i **anulować**. W tym przykładzie są nazwy przycisków `btnOK` i `btnCancel`, odpowiednio.  
+ Dodaj dwie <xref:System.Windows.Forms.Button> kontrolki z etykietą **OK** i **Anuluj**. W tym przykładzie nazwy przycisków są `btnOK` odpowiednio i. `btnCancel`  
   
-### <a name="implementing-the-supporting-code"></a>Implementowanie obsługi kodu  
- Otwórz formularz w widoku kodu. Formant powraca zebranych danych do jej hosta, tworząc niestandardowy `OnButtonClick` zdarzeń. Dane są zawarte w obiekcie argumentu zdarzenia. Poniższy kod przedstawia deklaracji zdarzeń i delegata.  
+### <a name="implementing-the-supporting-code"></a>Implementowanie kodu pomocniczego  
+ Otwórz formularz w widoku kodu. Kontrolka zwraca zebrane dane do hosta przez podnoszenie poziomu zdarzenia niestandardowego `OnButtonClick` . Dane są zawarte w obiekcie argumentu zdarzenia. Poniższy kod przedstawia deklarację zdarzenia i delegata.  
   
  Dodaj następujący kod do `MyControl1` klasy.  
   
  [!code-csharp[WpfHostingWindowsFormsControl#2](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/MyControls/MyControl1.cs#2)]
  [!code-vb[WpfHostingWindowsFormsControl#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/VisualBasic/MyControls/MyControl1.vb#2)]
 
- `MyControlEventArgs` Klasa zawiera informacje, które mają zostać zwrócona do hosta.
+ `MyControlEventArgs` Klasa zawiera informacje, które mają zostać zwrócone do hosta.
 
- Dodaj poniższą klasę do formularza.
+ Dodaj następującą klasę do formularza.
 
  [!code-csharp[WpfHostingWindowsFormsControl#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/MyControls/MyControl1.cs#3)]
  [!code-vb[WpfHostingWindowsFormsControl#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/VisualBasic/MyControls/MyControl1.vb#3)]
 
- Po kliknięciu przez użytkownika **OK** lub **anulować** przycisku <xref:System.Windows.Forms.Control.Click> utworzyć procedury obsługi zdarzeń `MyControlEventArgs` obiekt, który zawiera dane i zgłasza `OnButtonClick` zdarzeń. Jedyną różnicą między dwoma obsługi jest argumentu zdarzenia `IsOK` właściwości. Ta właściwość umożliwia hostowi na określenie, której przycisk został kliknięty. Jest równa `true` dla **OK** przycisku i `false` dla **anulować** przycisku. Poniższy kod przedstawia programy obsługi dwóch przycisków.
+ Gdy użytkownik kliknie <xref:System.Windows.Forms.Control.Click> przycisk **OK** lub **Anuluj** , programy obsługi zdarzeń tworzą `MyControlEventArgs` obiekt, który zawiera dane i zgłasza `OnButtonClick` zdarzenie. Jedyną różnicą między dwoma uchwytami jest `IsOK` właściwość argumentu zdarzenia. Ta właściwość umożliwia hostowi określenie, który przycisk został kliknięty. Jest ona ustawiona `true` na przycisk **OK** , a `false` dla przycisku **Anuluj** . Poniższy kod przedstawia dwa programy obsługi przycisków.
 
  Dodaj następujący kod do `MyControl1` klasy.
 
  [!code-csharp[WpfHostingWindowsFormsControl#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/MyControls/MyControl1.cs#4)]
  [!code-vb[WpfHostingWindowsFormsControl#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/VisualBasic/MyControls/MyControl1.vb#4)]
 
-### <a name="giving-the-assembly-a-strong-name-and-building-the-assembly"></a>Zapewniając zestawu z silną nazwą i tworzenia zestawu
- Dla tego zestawu odwoływać się [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji musi mieć silną nazwę. Aby utworzyć silnej nazwy, Utwórz plik klucza o Sn.exe i dodaj go do projektu.
+### <a name="giving-the-assembly-a-strong-name-and-building-the-assembly"></a>Nadawanie zestawowi silnej nazwy i kompilowania zestawu
+ Aby ten zestaw odwołuje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] się do aplikacji, musi mieć silną nazwę. Aby utworzyć silną nazwę, Utwórz plik klucza z SN. exe i dodaj go do projektu.
 
-1. Otwórz [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] wiersza polecenia. Aby to zrobić, kliknij przycisk **Start** menu, a następnie wybierz pozycję **wszystkie programy/Microsoft Visual Studio 2010/Visual Studio narzędzia/Visual Studio Command Prompt**. Spowoduje to uruchomienie okna konsoli za pomocą zmiennych środowiskowych dostosowane.
+1. Otwórz wiersz [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] polecenia. Aby to zrobić, kliknij menu **Start** , a następnie wybierz pozycję **wszystkie programy/Microsoft Visual Studio 2010/Visual Studio Tools/wiersz polecenia programu Visual Studio**. Spowoduje to uruchomienie okna konsoli z dostosowanymi zmiennymi środowiskowymi.
 
-2. W wierszu polecenia użyj `cd` polecenie, aby przejść do folderu projektu.
+2. W wierszu polecenia Użyj `cd` polecenia, aby przejść do folderu projektu.
 
-3. Wygeneruj plik klucza o nazwie MyControls.snk, uruchamiając następujące polecenie.
+3. Wygeneruj plik klucza o nazwie SNK, uruchamiając następujące polecenie.
 
-    ```
+    ```console
     Sn.exe -k MyControls.snk
     ```
 
-4. Aby dołączyć plik klucza w projekcie, kliknij prawym przyciskiem myszy nazwę projektu w Eksploratorze rozwiązań, a następnie kliknij przycisk **właściwości**. W Projektancie projektu kliknij **podpisywanie** zaznacz **Podpisz zestaw** zaznacz pole wyboru, a następnie przejdź do Twojego pliku klucza.
+4. Aby dołączyć plik klucza w projekcie, kliknij prawym przyciskiem myszy nazwę projektu w Eksplorator rozwiązań a następnie kliknij pozycję **Właściwości**. W projektancie projektu kliknij kartę **podpisywanie** , zaznacz pole wyboru **podpisz zestaw** , a następnie przejdź do pliku klucza.
 
-5. Skompiluj rozwiązanie. Kompilacja generuje biblioteki DLL o nazwie MyControls.dll.
+5. Skompiluj rozwiązanie. Kompilacja spowoduje utworzenie biblioteki DLL o nazwie WebControls. dll.
 
-## <a name="implementing-the-wpf-host-application"></a>Implementowanie aplikacja hosta WPF
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Hostowanie aplikacji używa <xref:System.Windows.Forms.Integration.WindowsFormsHost> kontrolki hosta `MyControl1`. Uchwyty aplikacji `OnButtonClick` zdarzenia w celu odbierania danych z formantu. Ma również zbiór przycisków opcji, które umożliwiają zmianę niektórych właściwości formantu z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji. Na poniższej ilustracji przedstawiono ukończonej aplikacji.
+## <a name="implementing-the-wpf-host-application"></a>Implementowanie aplikacji hosta WPF
+ Aplikacja hosta używa kontrolki do hostowania `MyControl1`. <xref:System.Windows.Forms.Integration.WindowsFormsHost> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aplikacja obsługuje zdarzenie, `OnButtonClick` aby otrzymywać dane z formantu. Zawiera również zbiór przycisków opcji, które umożliwiają zmianę niektórych właściwości kontrolki z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji. Na poniższej ilustracji przedstawiono ukończoną aplikację.
 
-Na poniższej ilustracji przedstawiono kompletnej aplikacji, w tym formantu osadzonego w aplikacji WPF:
+Na poniższej ilustracji przedstawiono kompletną aplikację, w tym kontrolkę osadzoną w aplikacji WPF:
 
- ![Zrzut ekranu pokazujący kontrolki osadzony na stronie programu WPF.](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-presentation-foundation-page-control.gif)
+ ![Zrzut ekranu, który pokazuje kontrolkę osadzoną na stronie WPF.](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-presentation-foundation-page-control.gif)
 
 ### <a name="creating-the-project"></a>Tworzenie projektu
- Aby uruchomić projekt:
+ Aby rozpocząć projekt:
 
-1. Otwórz [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]i wybierz **nowy projekt**.
+1. Otwórz [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]i wybierz pozycję **Nowy projekt**.
 
-2. W kategorii oknie Wybierz **aplikacji WPF** szablonu.
+2. W kategorii okno Wybierz szablon **Aplikacja WPF** .
 
-3. Nazwa nowego projektu `WpfHost`.
+3. Nadaj nazwę nowemu projektowi `WpfHost`.
 
-4. Dla lokalizacji należy określić ten sam folder najwyższego poziomu, który zawiera projekt MyControls.
+4. Dla lokalizacji Określ ten sam folder najwyższego poziomu, który zawiera projekt kontrolek.
 
-5. Kliknij przycisk **OK** do tworzenia projektu.
+5. Kliknij przycisk **OK** , aby utworzyć projekt.
 
- Należy również dodać odwołania do biblioteki DLL, która zawiera `MyControl1` i innych zestawów.
+ Należy również dodać odwołania do biblioteki DLL, która zawiera `MyControl1` i inne zestawy.
 
-1. Kliknij prawym przyciskiem myszy nazwę projektu w Eksploratorze rozwiązań i wybierz **Dodaj odwołanie**.
+1. Kliknij prawym przyciskiem myszy nazwę projektu w Eksplorator rozwiązań i wybierz polecenie **Dodaj odwołanie**.
 
-2. Kliknij przycisk **Przeglądaj** , a następnie przejdź do folderu, który zawiera MyControls.dll. W tym przewodniku ten folder jest MyControls\bin\Debug.
+2. Kliknij kartę **Przeglądaj** i przejdź do folderu, który zawiera plik. dll. W tym instruktażu ten folder jest MyControls\bin\Debug.
 
-3. Wybierz MyControls.dll, a następnie kliknij przycisk **OK**.
+3. Wybierz pozycję Moja Controls. dll, a następnie kliknij przycisk **OK**.
 
-4. Dodaj odwołanie do zestawu WindowsFormsIntegration, która nosi nazwę WindowsFormsIntegration.dll.
+4. Dodaj odwołanie do zestawu WindowsFormsIntegration o nazwie WindowsFormsIntegration. dll.
 
-### <a name="implementing-the-basic-layout"></a>Implementowanie podstawowy układ
- [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Hosta aplikacji jest zaimplementowana w pliku MainWindow.xaml. Ten plik zawiera [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] znaczników, który definiuje układ i udostępnia kontrolki Windows Forms. Aplikacja jest podzielony na trzy regiony:
+### <a name="implementing-the-basic-layout"></a>Implementowanie układu podstawowego
+ [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Aplikacja hosta jest zaimplementowana w MainWindow. XAML. Ten plik zawiera [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] znacznik, który definiuje układ i hostuje kontrolkę Windows Forms. Aplikacja została podzielona na trzy regiony:
 
-- **Właściwości kontrolki** panel, który zawiera kolekcję przycisków opcji, które służy do modyfikowania różnych właściwości obiektu obsługiwanego formantu.
+- Panel **właściwości kontrolki** , który zawiera kolekcję przycisków opcji, których można użyć do modyfikacji różnych właściwości kontrolki hostowanej.
 
-- **Danych z formantu** panel, który zawiera kilka <xref:System.Windows.Controls.TextBlock> elementy, które wyświetlają dane zwrócone w wyniku obsługiwanego formantu.
+- **Dane z panelu sterowania** , które zawiera kilka <xref:System.Windows.Controls.TextBlock> elementów, które wyświetlają dane zwrócone przez kontrolkę hostowaną.
 
-- Hostowanej sama kontrolka.
+- Kontrolka hostowana.
 
- Układ podstawowy jest wyświetlany w następujących XAML. Kod znaczników, który jest potrzebny do hosta `MyControl1` pominięto w tym przykładzie, ale zostanie dokładnie omówione później.
+ Podstawowy układ jest przedstawiony w poniższym kodzie XAML. Znaczniki, które są potrzebne do hostowania `MyControl1` , są pomijane w tym przykładzie, ale zostaną omówione później.
 
- Zamień na XAML w pliku MainWindow.xaml poniżej. Jeśli używasz języka Visual Basic, zmień klasy, która ma `x:Class="MainWindow"`.
+ Zamień kod XAML w MainWindow. XAML na następujący. Jeśli używasz Visual Basic, Zmień klasę na `x:Class="MainWindow"`.
 
  [!code-xaml[WpfHostingWindowsFormsControl#100](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/WpfHost/Page1.xaml#100)]
 
- Pierwszy <xref:System.Windows.Controls.StackPanel> element zawiera kilka zestawów <xref:System.Windows.Controls.RadioButton> formantów, które umożliwiają modyfikowanie różne właściwości domyślne obsługiwanego formantu. Które następuje <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementu, która hostuje `MyControl1`. Końcowe <xref:System.Windows.Controls.StackPanel> element zawiera kilka <xref:System.Windows.Controls.TextBlock> elementy, które wyświetlają dane, który jest zwracany przez kontrolę hostowanej. Kolejność elementów i <xref:System.Windows.Controls.DockPanel.Dock%2A> i <xref:System.Windows.FrameworkElement.Height%2A> ustawień atrybutów osadzanie obsługiwanego formantu w oknie bez przerw i zakłóceń.
+ Pierwszy <xref:System.Windows.Controls.StackPanel> element zawiera kilka <xref:System.Windows.Controls.RadioButton> zestawów kontrolek, które umożliwiają modyfikowanie różnych domyślnych właściwości kontrolki hostowanej. Po którym następuje <xref:System.Windows.Forms.Integration.WindowsFormsHost> element, który hostuje `MyControl1`. Końcowy <xref:System.Windows.Controls.StackPanel> element zawiera kilka <xref:System.Windows.Controls.TextBlock> elementów, które wyświetlają dane zwracane przez hostowaną kontrolkę. Porządkowanie elementów i <xref:System.Windows.Controls.DockPanel.Dock%2A> ustawień atrybutów i <xref:System.Windows.FrameworkElement.Height%2A> osadza formant hostowany w oknie bez przerw ani zniekształceń.
 
 #### <a name="hosting-the-control"></a>Hostowanie kontrolki
- Następująca wersja edytowanych poprzedniego XAML koncentruje się na elementy, które są potrzebne do hosta `MyControl1`.
+ Następująca edytowana wersja poprzedniego języka XAML koncentruje się na elementach, które są konieczne `MyControl1`do hostowania.
 
  [!code-xaml[WpfHostingWindowsFormsControl#101](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/WpfHost/Page1.xaml#101)]
 [!code-xaml[WpfHostingWindowsFormsControl#102](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/WpfHost/Page1.xaml#102)]
 
- `xmlns` Atrybutu mapowania przestrzeni nazw tworzy odwołanie do `MyControls` przestrzeni nazw, który zawiera formant hostowanej. To mapowanie umożliwia reprezentują `MyControl1` w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jako `<mcl:MyControl1>`.
+ `MyControls` Atrybut mapowanie `xmlns` przestrzeni nazw tworzy odwołanie do przestrzeni nazw, która zawiera hostowaną kontrolkę. To mapowanie umożliwia reprezentowanie `MyControl1` w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jako `<mcl:MyControl1>`.
 
- Dwa elementy w XAML obsługi hostingu:
+ Dwa elementy w kodzie XAML obsługują hosting:
 
-- `WindowsFormsHost` reprezentuje <xref:System.Windows.Forms.Integration.WindowsFormsHost> element, który pozwala na hostowanie kontrolki Windows Forms w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.
+- `WindowsFormsHost`reprezentuje element, który umożliwia hostowanie Windows Formsej kontrolki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w aplikacji. <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 
-- `mcl:MyControl1`, który reprezentuje `MyControl1`, jest dodawany do <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementu kolekcji podrzędnej. W wyniku tego formantu Windows Forms jest renderowana jako część [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , a następnie może komunikować się z urządzeniem za pomocą aplikacji.
+- `mcl:MyControl1`, który reprezentuje `MyControl1`, jest dodawany <xref:System.Windows.Forms.Integration.WindowsFormsHost> do kolekcji podrzędnej elementu. W efekcie ten formant Windows Forms jest renderowany jako część [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] okna i można komunikować się z formantem z poziomu aplikacji.
 
-### <a name="implementing-the-code-behind-file"></a>Wdrażanie pliku związanego z kodem
- Plik związany z kodem, MainWindow.xaml.vb lub MainWindow.xaml.cs, zawiera kod proceduralny, która implementuje funkcje [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] omówione w poprzedniej sekcji. Dostępne są następujące podstawowe zadania:
+### <a name="implementing-the-code-behind-file"></a>Implementowanie pliku związanego z kodem
+ Plik związany z kodem, MainWindow. XAML. vb lub MainWindow.XAML.cs, zawiera kod proceduralny implementujący funkcje [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] omówione w poprzedniej sekcji. Zadania podstawowe są następujące:
 
-- Program obsługi zdarzeń do dołączania `MyControl1`firmy `OnButtonClick` zdarzeń.
+- Dołączanie obsługi zdarzeń `MyControl1`do `OnButtonClick` zdarzenia.
 
-- Modyfikowanie właściwości różnych `MyControl1`, zależnie od konfiguracji kolekcję przycisków opcji.
+- Modyfikowanie różnych właściwości `MyControl1`w zależności od sposobu ustawiania kolekcji przycisków opcji.
 
-- Wyświetlanie danych zebranych przez kontrolkę.
+- Wyświetlanie danych zebranych przez formant.
 
 #### <a name="initializing-the-application"></a>Inicjowanie aplikacji
- Kod inicjowania znajduje się w obsłudze zdarzeń dla okna <xref:System.Windows.FrameworkElement.Loaded> zdarzeń i dołącza program obsługi zdarzeń do formantu `OnButtonClick` zdarzeń.
+ Kod inicjalizacji jest zawarty w procedurze obsługi zdarzeń dla <xref:System.Windows.FrameworkElement.Loaded> zdarzenia okna i dołącza procedurę obsługi zdarzeń do `OnButtonClick` zdarzenia kontrolki.
 
- W pliku MainWindow.xaml.vb lub MainWindow.xaml.cs Dodaj następujący kod, aby `MainWindow` klasy.
+ W MainWindow. XAML. vb lub MainWindow.XAML.cs Dodaj następujący kod do `MainWindow` klasy.
 
  [!code-csharp[WpfHostingWindowsFormsControl#11](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/WpfHost/Page1.xaml.cs#11)]
  [!code-vb[WpfHostingWindowsFormsControl#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/VisualBasic/WpfHost/Page1.xaml.vb#11)]
 
- Ponieważ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] omówionych wcześniej dodano `MyControl1` do <xref:System.Windows.Forms.Integration.WindowsFormsHost> kolekcji elementów podrzędnych elementu, można rzutować <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> można pobrać odwołania do `MyControl1`. Następnie można użyć tego odwołania, można dołączyć program obsługi zdarzeń do `OnButtonClick`.
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Ponieważ omówione `MyControl1` wcześniej `MyControl1` elementypodrzędne<xref:System.Windows.Forms.Integration.WindowsFormsHost> kolekcji elementów, można rzutować elementu, Abyuzyskaćodwołaniedo.<xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> <xref:System.Windows.Forms.Integration.WindowsFormsHost> Następnie można użyć tego odwołania, aby dołączyć procedurę obsługi zdarzeń do `OnButtonClick`programu.
 
- Ponadto, aby zapewnić odwołanie do samej kontrolce, <xref:System.Windows.Forms.Integration.WindowsFormsHost> eksponuje pewną liczbę właściwości kontrolki, które można manipulować z aplikacji. Kod inicjowania przypisuje te wartości do prywatnej zmienne globalne do późniejszego użycia w aplikacji.
+ Oprócz podawania odniesienia do samego formantu, program <xref:System.Windows.Forms.Integration.WindowsFormsHost> ujawnia szereg właściwości kontrolki, które można manipulować z poziomu aplikacji. Kod inicjalizacji przypisuje te wartości do prywatnych zmiennych globalnych do późniejszego użycia w aplikacji.
 
- Tak, aby mogli łatwo uzyskiwać dostęp z typami w `MyControls` biblioteki DLL, Dodaj następujący kod `Imports` lub `using` instrukcji na górze pliku.
+ Dzięki temu można łatwo uzyskać dostęp do typów w `MyControls` bibliotece DLL, Dodaj następującą `Imports` instrukcję lub `using` na początku pliku.
 
 ```vb
 Imports MyControls
@@ -218,30 +218,30 @@ Imports MyControls
 using MyControls;
 ```
 
-#### <a name="handling-the-onbuttonclick-event"></a>Obsługa zdarzeń OnButtonClick
- `MyControl1` wywołuje `OnButtonClick` zdarzenie, kiedy użytkownik kliknie jeden z przycisków kontrolki.
+#### <a name="handling-the-onbuttonclick-event"></a>Obsługa zdarzenia OnButtonClick
+ `MyControl1`Podnosi zdarzenie `OnButtonClick` , gdy użytkownik kliknie jeden z przycisków kontrolki.
 
  Dodaj następujący kod do `MainWindow` klasy.
 
  [!code-csharp[WpfHostingWindowsFormsControl#12](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/WpfHost/Page1.xaml.cs#12)]
  [!code-vb[WpfHostingWindowsFormsControl#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/VisualBasic/WpfHost/Page1.xaml.vb#12)]
 
- Dane w polach tekstowych są pakowane w `MyControlEventArgs` obiektu. Jeśli użytkownik kliknie **OK** przycisk, program obsługi zdarzeń wyodrębnia dane i wyświetla go w panelu poniżej `MyControl1`.
+ Dane w polach tekstowych są pakowane do `MyControlEventArgs` obiektu. Jeśli użytkownik kliknie przycisk **OK** , program obsługi zdarzeń wyodrębni dane i wyświetli je w panelu poniżej `MyControl1`.
 
 #### <a name="modifying-the-controls-properties"></a>Modyfikowanie właściwości kontrolki
- <xref:System.Windows.Forms.Integration.WindowsFormsHost> Elementu udostępnia kilka właściwości domyślnych obsługiwanego formantu. Co w efekcie można zmienić wygląd formantu większe zbliżenie style aplikacji. Zestawy przycisków opcji znajdujących się w lewym panelu zezwolić użytkownikom na modyfikowanie kilka właściwości kolorów i czcionek. Każdy zestaw przycisków ma program obsługi dla <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzenie, które wykrywa przycisk Opcje użytkownika i zmienia odpowiedniej właściwości w formancie.
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element uwidacznia kilka domyślnych właściwości kontrolki hostowanej. W związku z tym można zmienić wygląd formantu tak, aby pasował do stylu aplikacji. Zestawy przycisków opcji w lewym panelu umożliwiają użytkownikowi modyfikowanie kilku właściwości koloru i czcionki. Każdy zestaw przycisków ma procedurę obsługi dla <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzenia, które wykrywa wybór przycisku opcji użytkownika i zmienia odpowiednią właściwość w kontrolce.
 
  Dodaj następujący kod do `MainWindow` klasy.
 
  [!code-csharp[WpfHostingWindowsFormsControl#13](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/WpfHost/Page1.xaml.cs#13)]
  [!code-vb[WpfHostingWindowsFormsControl#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/VisualBasic/WpfHost/Page1.xaml.vb#13)]  
   
- Skompiluj i uruchom aplikację. Dodaj tekst w złożonego formantu Windows Forms, a następnie kliknij przycisk **OK**. Tekst jest wyświetlany w etykietach. Kliknij przyciski radiowe różnych, aby zobaczyć efekt na formancie.  
+ Skompiluj i uruchom aplikację. Dodaj tekst do kontrolki złożonej Windows Forms, a następnie kliknij przycisk **OK**. Tekst zostanie wyświetlony w etykietach. Kliknij różne przyciski radiowe, aby zobaczyć efekt na kontrolce.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Przewodnik: Hosting kontrolki Windows Forms w WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
-- [Przewodnik: Hosting złożonego formantu WPF w formularzach Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Przewodnik: Hostowanie formantu Windows Forms w WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Przewodnik: Hostowanie złożonego formantu WPF w Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

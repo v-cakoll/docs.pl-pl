@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC31535
 ms.assetid: 6540c1d0-bb19-4051-a579-2e4f9094585e
-ms.openlocfilehash: 0c1526e32ddc64cb4124c6f8205d58deef911dd6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6eb46c6479adc69eaf65b34c69aa69977b4d62ef
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802483"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972395"
 ---
-# <a name="friend-assembly-reference-reference-is-invalid"></a>Odwołanie do przyjaznego zestawu \<odwołanie > jest nieprawidłowy
-Odwołanie do przyjaznego zestawu \<odwołanie > jest nieprawidłowy. Zestawy podpisane silnymi nazwami muszą określać klucz publiczny w swoich deklaracjach InternalsVisibleTo.  
+# <a name="friend-assembly-reference-reference-is-invalid"></a>Odwołanie do odwołania \<do zestawu zaprzyjaźnionego > jest nieprawidłowe
+Odwołanie do odwołania \<do zestawu zaprzyjaźnionego > jest nieprawidłowe. Zestawy podpisane silnymi nazwami muszą określać klucz publiczny w swoich deklaracjach InternalsVisibleTo.  
   
- Nazwa zestawu jest przekazywany do <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybut konstruktora identyfikuje zestawu z silną nazwą, ale nie obejmuje `PublicKey` atrybutu.  
+ Nazwa zestawu przeniesiona do <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> konstruktora atrybutu identyfikuje zestaw o silnej nazwie, ale nie `PublicKey` zawiera atrybutu.  
   
  **Identyfikator błędu:** BC31535  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Określ klucz publiczny dla zestawu o silnej nazwie przyjaciela. Dołącz klucz publiczny, jako część nazwy zestawu przekazywany do <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybut konstruktora przy użyciu `PublicKey` atrybutu.  
+1. Określ klucz publiczny dla zestawu o silnej nazwie zaprzyjaźnionej. Dołącz klucz publiczny jako część nazwy zestawu przesłanej do <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> konstruktora atrybutu przy `PublicKey` użyciu atrybutu.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Reflection.AssemblyName>
-- [Przyjazne zestawy](../../../standard/assembly/friend-assemblies.md)
+- [Przyjazne zestawy](../../../standard/assembly/friend.md)

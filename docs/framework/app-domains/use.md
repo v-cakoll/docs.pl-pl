@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ebd1de46eb2757098a369b58dd9a6c0009e5b95
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: ad05d005ece4a52e2df0dbb7e044522db58f1787
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "61674896"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971858"
 ---
 # <a name="using-application-domains"></a>Używanie domeny aplikacji
 Domeny aplikacji zapewniają jednostkę izolacji dla środowiska uruchomieniowego języka wspólnego. Są one tworzone i uruchamiane w ramach procesu. Domeny aplikacji są zwykle tworzone przez hosta środowiska uruchomieniowego, który jest aplikacją odpowiedzialną za ładowanie środowiska uruchomieniowego do procesu i wykonywanie kodu użytkownika w domenie aplikacji. Host środowiska uruchomieniowego tworzy proces i domyślną domenę aplikacji, a następnie uruchamia zarządzany kod. Hosty środowiska uruchomieniowego obejmują ASP.NET, program Microsoft Internet Explorer i powłokę systemu Windows.  
@@ -36,7 +36,7 @@ Domeny aplikacji zapewniają jednostkę izolacji dla środowiska uruchomienioweg
  [Instrukcje: Ładowanie zestawów do domeny aplikacji](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
  Opisuje sposób ładowania zestawu do domeny aplikacji.  
   
- [Instrukcje: Uzyskiwanie informacji o typie i elemencie członkowskim z zestawu](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
+ [Instrukcje: Uzyskiwanie informacji o typie i elemencie członkowskim z zestawu](../reflection-and-codedom/get-type-member-information.md)  
  Opisuje sposób pobierania informacji o zestawie.  
   
  [Kopiowanie zestawów w tle](../../../docs/framework/app-domains/shadow-copy-assemblies.md)  
@@ -45,7 +45,7 @@ Domeny aplikacji zapewniają jednostkę izolacji dla środowiska uruchomienioweg
  [Instrukcje: Odbieraj powiadomienia o wyjątkach pierwszej szansy](../../../docs/framework/app-domains/how-to-receive-first-chance-exception-notifications.md)  
  Wyjaśnia, jak można odebrać powiadomienie zgłoszone przez wyjątek, zanim środowisko uruchomieniowe języka wspólnego rozpoczęło wyszukiwanie obsługi wyjątków.  
   
- [Rozwiązywanie załadowań zestawów](../../../docs/framework/app-domains/resolve-assembly-loads.md)  
+ [Rozwiązywanie załadowań zestawów](../../standard/assembly/resolve-loads.md)  
  Zawiera wskazówki dotyczące używania <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzenia do rozwiązywania niepowodzeń ładowania zestawu.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -53,10 +53,10 @@ Domeny aplikacji zapewniają jednostkę izolacji dla środowiska uruchomienioweg
  Reprezentuje domenę aplikacji. Zapewnia metody tworzenia i kontrolowania domen aplikacji.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [Zestawy w środowisku .NET](../../standard/assembly/index.md)  
  Zawiera przegląd funkcji wykonywanych przez zestawy.  
   
- [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [Programowanie za pomocą zestawów](../../standard/assembly/program.md)  
  Opisuje sposób tworzenia, podpisywania i ustawiania atrybutów dla zestawów.  
   
  [Emitowanie dynamicznych metod i zestawów](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  

@@ -2,12 +2,12 @@
 title: Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
 description: Rzeczywiste aplikacje produkcyjne muszą być wdrażane i zarządzane przy użyciu programu Orchestrator, które obsługują kondycję, obciążenie i cykle życia wszystkich kontenerów.
 ms.date: 02/15/2019
-ms.openlocfilehash: 8c1161127eb6b239384444c369de7f11abd3d424
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 8f2cef774acde47e9a1bb4680342b5e2c66ac154
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373692"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990494"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
 
@@ -15,7 +15,7 @@ Korzystanie z koordynatorów dla aplikacji gotowych do produkcji jest niezbędne
 
 Rysunek 4-6 ilustruje wdrożenie w klastrze aplikacji składającej się z wielu mikrousług (kontenerów).
 
-![Składają się aplikacje platformy Docker w klastrze: Dla każdego wystąpienia usługi należy użyć jednego kontenera. Kontenery platformy Docker to "jednostki wdrożenia", a kontener jest wystąpieniem platformy Docker. host obsługuje wiele kontenerów](./media/image6.png)
+![Składają się aplikacje platformy Docker w klastrze: Dla każdego wystąpienia usługi należy użyć jednego kontenera. Kontenery platformy Docker to "jednostki wdrożenia", a kontener to wystąpienie platformy Docker. Host obsługuje wiele kontenerów](./media/image6.png)
 
 **Rysunek 4-6**. Klaster kontenerów
 

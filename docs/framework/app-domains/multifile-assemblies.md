@@ -1,6 +1,6 @@
 ---
 title: Zestawy wieloplikowe
-ms.date: 03/30/2017
+ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
 - entry point for assembly
@@ -12,36 +12,36 @@ helpviewer_keywords:
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 862fc7012c2c5c84a163d6716dfeb4b97f00cbcd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b4c288a54194e89eb90b6ac512cf45184376e952
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634177"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971876"
 ---
 # <a name="multifile-assemblies"></a>Zestawy wieloplikowe
 
-Można utworzyć zestawy wieloplikowe, za pomocą kompilatorów wiersza polecenia lub programu Visual Studio z programem Visual C++. Jeden plik w zestawie musi zawierać manifest zestawu. Zestaw, który uruchamia aplikację musi również zawierać punkt wejścia, takich jak metoda Main lub WinMain.
+Można tworzyć zestawy wieloplikowe przeznaczone dla .NET Framework przy użyciu kompilatorów wiersza polecenia lub programu Visual Studio z wizualizacją C++. Jeden plik w zestawie musi zawierać manifest zestawu. Zestaw, który uruchamia aplikację, musi również zawierać punkt wejścia, taki jak `Main` lub. `WinMain`
 
-Na przykład załóżmy, że gdy masz już aplikację, która zawiera dwa moduły kodu Client.cs i Stringer.cs. Tworzy Stringer.cs `myStringer` przestrzeni nazw, która odwołuje się kod w Client.cs. Zawiera Client.cs `Main` metoda, która jest punkt wejścia aplikacji. W tym przykładzie skompilować modułów kodu dwa, a następnie utwórz trzeci plik, który zawiera manifest zestawu, który uruchamia aplikację. Manifest zestawu odwołuje się do zarówno `Client` i `Stringer` modułów.
+Załóżmy na przykład, że masz aplikację, która zawiera dwa moduły kodu, *Client.cs* i *Stringer.cs*. *Stringer.cs* tworzy `myStringer` przestrzeń nazw, do której odwołuje się kod w *Client.cs*. *Client.cs* zawiera `Main` metodę, która jest punktem wejścia aplikacji. W tym przykładzie kompilujesz dwa moduły kodu, a następnie utworzysz trzeci plik, który zawiera manifest zestawu, który uruchamia aplikację. Manifest zestawu odwołuje się zarówno do modułów *klienta* , jak i *Stringer* .
 
 > [!NOTE]
-> Zestawy wieloplikowe może mieć tylko jeden wpis punktu, nawet jeśli zestaw ma wiele modułów kodu.
+> Zestawy wieloplikowe mogą mieć tylko jeden punkt wejścia, nawet jeśli zestaw ma wiele modułów kodu.
 
-Istnieje kilka powodów, warto utworzyć zestaw wieloplikowy:
+Istnieje kilka powodów, dla których warto utworzyć zestaw wieloplikowy:
 
-- Aby połączyć modułów napisanych w różnych językach. Jest to najbardziej typowe przyczyny tworzenia zestawu wieloplikowego.
+- Do łączenia modułów pisanych w różnych językach. Jest to najbardziej typowy powód tworzenia zestawu wieloplikowego.
 
-- Aby zoptymalizować, pobierania aplikacji poprzez umieszczenie rzadko używanych typów w module, który jest pobierany tylko wtedy, gdy jest to wymagane.
+- Aby zoptymalizować pobieranie aplikacji przez umieszczenie rzadko używanych typów w module, który jest pobierany tylko wtedy, gdy jest to konieczne.
 
     > [!NOTE]
-    > Jeśli tworzysz aplikacje, które będą pobierane przy użyciu `<object>` tagu za pomocą programu Microsoft Internet Explorer jest ważne, aby utworzyć zestawy wieloplikowe. W tym scenariuszu utworzysz plik oddzielnie od moduły kodu, które zawiera jedynie manifestu zestawu. Program Internet Explorer pliki do pobrania manifestu zestawu, a następnie tworzy wątków do pobierania dodatkowych modułów ani zestawów wymaganych. Podczas pobierania pliku zawierającego manifest zestawu Internet Explorer będzie odpowiadać na dane wejściowe użytkownika. Mniejszy plik zawierający manifest zestawu, tym krótszy czas programu Internet Explorer będzie odpowiadać.
+    > Jeśli tworzysz aplikacje, które zostaną pobrane przy użyciu `<object>` znacznika programu Microsoft Internet Explorer, ważne jest, aby utworzyć zestawy wieloplikowe. W tym scenariuszu utworzysz plik oddzielony od modułów kodu, który zawiera tylko manifest zestawu. Program Internet Explorer najpierw pobierze manifest zestawu, a następnie utworzy wątki robocze do pobrania wymaganych modułów lub zestawów. Podczas pobierania pliku zawierającego manifest zestawu program Internet Explorer nie będzie odpowiadać na dane wejściowe użytkownika. Im mniejszy plik zawierający manifest zestawu, tym mniej czasu program Internet Explorer nie odpowiada.
 
-- Aby połączyć modułów kodu, napisanych przez wielu deweloperów. Mimo że każdy deweloper może skompilować poszczególnych modułów kodu do zestawu, to wymuszenie pewnych typów publicznie narażonych, które nie są widoczne, jeśli wszystkie moduły są umieszczane w zestawu wieloplikowego.
+- Do łączenia modułów kodu pisanych przez kilku deweloperów. Chociaż każdy deweloper może kompilować każdy moduł kodu do zestawu, może to spowodować, że niektóre typy mają być ujawnione publicznie, które nie są ujawniane, jeśli wszystkie moduły są umieszczane w zestawie wieloplikowym.
 
-Po utworzeniu zestawu, możesz utworzyć plik, który zawiera manifest zestawu (i tym samym zestawie), lub możesz nadać silnej nazwy pliku (i zestawu) i umieścić go w globalnej pamięci podręcznej.
+Po utworzeniu zestawu można podpisać plik, który zawiera manifest zestawu, a tym samym zestaw lub można nadać plikowi i zestawowi silną nazwę i umieścić go w globalnej pamięci podręcznej zestawów.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Kompilacja zestawów wieloplikowych](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
-- [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Instrukcje: Kompilowanie zestawu wieloplikowego](build-multifile-assembly.md)
+- [Program z zestawami](../../standard/assembly/program.md)

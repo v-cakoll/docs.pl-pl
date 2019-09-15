@@ -2,12 +2,12 @@
 title: Niestandardowe działanie SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 9325817a24fee3ba04c2c305ebfdfbc6ff6da1bd
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 5797620c4938d7dcffb1f506b682141336b21eab
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038112"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988983"
 ---
 # <a name="sendmail-custom-activity"></a>Niestandardowe działanie SendMail
 Ten przykład pokazuje, jak utworzyć niestandardowe działanie, które wynika z <xref:System.Activities.AsyncCodeActivity> programu w celu wysłania wiadomości e-mail przy użyciu protokołu SMTP do użycia w aplikacji przepływu pracy. Działanie niestandardowe umożliwia wysyłanie wiadomości e-mail asynchronicznie i wysyłanie wiadomości z uwierzytelnianiem przy użyciu funkcji programu <xref:System.Net.Mail.SmtpClient> . Zapewnia również pewne funkcje użytkownika końcowego, takie jak tryb testu, Zastępowanie tokenu, szablony plików i ścieżka do usuwania testów.  
@@ -47,7 +47,7 @@ Ten przykład pokazuje, jak utworzyć niestandardowe działanie, które wynika z
 ### <a name="sending-an-email-using-tokens-specified-in-the-body"></a>Wysyłanie wiadomości e-mail przy użyciu tokenów określonych w treści  
  W tym fragmencie kodu pokazano, jak można wysyłać wiadomości e-mail z tokenami w treści. Zwróć uwagę na to, jak tokeny są udostępniane we właściwości treść. Wartości tych tokenów są udostępniane właściwości tokens.  
   
-```html  
+```csharp  
 IDictionary<string, string> tokens = new Dictionary<string, string>();  
 tokens.Add("@name", "John Doe");  
 tokens.Add("@date", DateTime.Now.ToString());  
@@ -69,7 +69,7 @@ new SendMail
 ### <a name="sending-an-email-using-a-template"></a>Wysyłanie wiadomości e-mail przy użyciu szablonu  
  W tym fragmencie kodu pokazano, jak wysłać wiadomość e-mail przy użyciu tokenów szablonu w treści. Należy zauważyć, że podczas `BodyTemplateFilePath` ustawiania właściwości nie musimy podawać wartości właściwości Body (zawartość pliku szablonu zostanie skopiowana do treści).  
   
-```  
+```csharp  
 new SendMail  
 {    
     From = new LambdaValue<MailAddress>(ctx => new MailAddress("john.doe@contoso.com")),  
@@ -86,7 +86,7 @@ new SendMail
 ### <a name="sending-mails-in-testing-mode"></a>Wysyłanie wiadomości w trybie testowania  
  W tym fragmencie kodu pokazano, jak ustawić dwie właściwości testowania: według ustawienia `TestMailTo` dla wszystkich wiadomości będą wysyłane do `john.doe@contoso.con` (bez względu na wartości do, DW, UDW). Ustawienie TestDropPath wszystkie wychodzące wiadomości e-mail zostanie również zarejestrowane w podanej ścieżce. Te właściwości można ustawiać niezależnie (nie są powiązane).  
   
-```  
+```csharp  
 new SendMail  
 {    
    From = new LambdaValue<MailAddress>(ctx => new MailAddress("john.doe@contoso.com")),  

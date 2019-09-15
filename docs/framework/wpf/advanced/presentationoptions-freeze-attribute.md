@@ -6,19 +6,19 @@ helpviewer_keywords:
 - Freezable elements [WPF]
 - PresentationOptions prefix [WPF]
 ms.assetid: 391032dd-2fba-4804-bb8a-3b071797a9f4
-ms.openlocfilehash: e60c4a505db42936f188354f52edd7832fb9632b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3e0cee293a9585b972b0145da953976ed94b74c
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772843"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991427"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>PresentationOptions:Freeze — Atrybut
-Zestawy <xref:System.Windows.Freezable.IsFrozen%2A> do stanu `true` na zawierający <xref:System.Windows.Freezable> elementu. Domyślne zachowanie dla <xref:System.Windows.Freezable> bez `PresentationOptions:Freeze` określony atrybut jest to, że <xref:System.Windows.Freezable.IsFrozen%2A> jest `false` na czas ładowania, w zależności od ogólnego <xref:System.Windows.Freezable> zachowanie w czasie wykonywania.  
+<xref:System.Windows.Freezable.IsFrozen%2A> Ustawia <xref:System.Windows.Freezable> stan na `true` dla elementu zawierającego. Zachowanie domyślne dla a <xref:System.Windows.Freezable> `PresentationOptions:Freeze` bez określonego <xref:System.Windows.Freezable.IsFrozen%2A> <xref:System.Windows.Freezable> atrybutu jest w czasie ładowania i zależne od ogólnego zachowania w czasie wykonywania. `false`  
   
 ## <a name="xaml-attribute-usage"></a>Użycie atrybutu języka XAML  
   
-```  
+```xaml  
 <object  
   xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"  
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
@@ -31,15 +31,15 @@ Zestawy <xref:System.Windows.Freezable.IsFrozen%2A> do stanu `true` na zawieraj�
   
 |||  
 |-|-|  
-|`PresentationOptions`|Prefiks przestrzeni nazw XML, który może być dowolnym ciągiem prawidłowy prefiks na Specyfikacja XML 1.0. Prefiks `PresentationOptions` jest używany w celach identyfikacyjnych w tej dokumentacji.|  
-|`freezableElement`|Element, który tworzy dowolne pochodne klasy <xref:System.Windows.Freezable>.|  
+|`PresentationOptions`|Prefiks przestrzeni nazw XML, który może być dowolnym prawidłowym ciągiem prefiksu na specyfikację XML 1,0. Prefiks `PresentationOptions` jest używany na potrzeby identyfikacji w tej dokumentacji.|  
+|`freezableElement`|Element, który tworzy wystąpienie klasy <xref:System.Windows.Freezable>pochodnej.|  
   
 ## <a name="remarks"></a>Uwagi  
- `Freeze` Atrybut jest to jedyny atrybut lub innego elementu programowania zdefiniowanych w `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options` przestrzeni nazw XML. `Freeze` Atrybut istnieje w tej przestrzeni nazw w specjalnych specjalnie tak, aby może zostać wyznaczony jako do pominięcia, za pomocą [mc: Ignorable — atrybut](mc-ignorable-attribute.md) jako część deklaracji elementu głównego. Przyczyna, `Freeze` musi być w stanie się ignorable jest, ponieważ nie wszystkie [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] implementacji procesora będą mogli zablokować <xref:System.Windows.Freezable> w czasie ładowania; ta funkcja nie jest częścią [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] specyfikacji.  
+ Ten `Freeze` atrybut jest jedynym atrybutem lub innym elementem programistycznym zdefiniowanym `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options` w przestrzeni nazw XML. Ten atrybut istnieje w tej specjalnej przestrzeni nazw, aby można było go wyznaczyć w sposób ignorowany, przy użyciu funkcji [MC: atrybut do ignorowania](mc-ignorable-attribute.md) jako część deklaracji elementu głównego. `Freeze` Przyczyną, że `Freeze` musi być możliwe ignorowanie, jest to, że nie [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] wszystkie implementacje procesora <xref:System.Windows.Freezable> mogą zamrozić w czasie ładowania [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ; ta funkcja nie jest częścią specyfikacji.  
   
- Możliwość przetwarzania `Freeze` atrybut specjalnie wbudowanej w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesora, który przetwarza [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dla skompilowanych aplikacji. Ten atrybut nie jest obsługiwany przez wszystkie klasy i składnia atrybutu nie jest rozszerzalna lub jako do modyfikacji. W przypadku wdrażania własnych [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesora, istnieje możliwość równoległego zamrożenia zachowanie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesora podczas przetwarzania `Freeze` atrybutu na <xref:System.Windows.Freezable> elementy w czasie ładowania.  
+ Możliwość przetwarzania `Freeze` atrybutu jest specjalnie wbudowana w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesor, który przetwarza [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] skompilowane aplikacje. Atrybut nie jest obsługiwany przez żadną klasę, a składnia atrybutu nie jest rozszerzalna ani modyfikowalna. Jeśli wdrażasz [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] własny procesor, możesz wybrać równoległe zachowanie [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] procesora podczas przetwarzania `Freeze` atrybutu dla <xref:System.Windows.Freezable> elementów w czasie ładowania.  
   
- Wszystkie wartości `Freeze` atrybutu innego niż `true` (bez uwzględniania wielkości liter) generuje błąd w czasie ładowania. (Określanie `Freeze` atrybutu jako `false` nie jest to błąd, ale która jest już domyślnie to ustawienie `false` nic nie robi).  
+ Dowolna wartość `Freeze` atrybutu innego niż `true` (bez uwzględniania wielkości liter) generuje błąd ładowania. (Określenie `Freeze` atrybutu jako `false` nie jest błędem, ale jest już ustawieniem `false` domyślnym, więc nie robi nic).  
   
 ## <a name="see-also"></a>Zobacz także
 

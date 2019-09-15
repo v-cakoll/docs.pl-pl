@@ -2,12 +2,12 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 9f24ccb5ba14e0b43f0e3f911a1672db5821d228
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1fc85838d7491f94b8da1e0ab458d6d021cd2b32
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039556"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989777"
 ---
 # <a name="jsonp"></a>JSONP
 Ten przykład pokazuje, jak obsługiwać kod JSON z dopełnieniem (JSONP) w usługach WCF REST. JSONP to Konwencja używana do wywoływania skryptów międzydomenowych przez generowanie tagów skryptów w bieżącym dokumencie. Wynik jest zwracany w określonej funkcji wywołania zwrotnego. JSONP opiera się na koncepcji, że Tagi takie jak `<script src="http://..." >` mogą ocenić skrypty z dowolnej domeny, a skrypt pobrany przez te Tagi jest oceniany w zakresie, w którym inne funkcje mogą już być zdefiniowane.
@@ -39,13 +39,13 @@ proxy.GetCustomer(onSuccess, onFail, null);
 
  Element ScriptManager zarządza interakcją z usługą i ukrywa złożoność ręcznej implementacji dostępu JSONP. Gdy `crossDomainScriptAccessEnabled` jest ustawiona na `true` i format odpowiedzi dla operacji to JSON, Infrastruktura WCF bada identyfikator URI żądania dla parametru ciągu zapytania wywołania zwrotnego i zawija odpowiedź JSON z wartością ciągu zapytania wywołania zwrotnego konstruktora. W przykładzie Strona sieci Web wywołuje usługę WCF REST z następującym identyfikatorem URI.
 
-```
+```http
 http://localhost:33695/CustomerService/GetCustomer?callback=Sys._json0
 ```
 
  Ponieważ parametr ciągu zapytania wywołania zwrotnego ma wartość `JsonPCallback`, usługa WCF zwraca odpowiedź JSONP pokazaną w poniższym przykładzie.
 
-```
+```json
 Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Way","Name":"Bob"});
 ```
 

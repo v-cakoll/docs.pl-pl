@@ -2,22 +2,22 @@
 title: Wyłącz RealTimeStylus dla aplikacji WPF
 ms.date: 03/30/2017
 ms.assetid: e0525309-5ede-4782-837d-dbf6e5554859
-ms.openlocfilehash: e44b71ac5af64ab3a6cb008db71e5a8881592e91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: acae177e1c49a6a1161bcf48f8e2e8ac1bfe13b8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962493"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991844"
 ---
 # <a name="disable-the-realtimestylus-for-wpf-applications"></a>Wyłącz RealTimeStylus dla aplikacji WPF
-Windows Presentation Foundation (WPF) zawiera wbudowaną obsługą dla przetwarzania wprowadzanie dotykowe Windows 7. Wsparcie przepływa wejście pióra w czasie rzeczywistym platformy tablet jako <xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusUp%2A>, i <xref:System.Windows.UIElement.OnStylusMove%2A> zdarzenia. Windows 7 są także dane wejściowe wielodotyku jako komunikaty okna Win32 WM_TOUCH. Te dwa interfejsy API są wzajemnie wykluczających się na tym samym HWND. Włączanie touch wejściowych za pośrednictwem platformy tablet (domyślnie dla aplikacji WPF) wyłącza WM_TOUCH wiadomości. W rezultacie WM_TOUCH można użyć w celu odbierania komunikatów touch z okna WPF, należy wyłączyć obsługę wbudowanych pióra na platformie WPF. Ma to zastosowanie w przypadku takich jak okna WPF, obsługujący składnik, który używa WM_TOUCH.  
+Windows Presentation Foundation (WPF) ma wbudowaną obsługę przetwarzania danych wejściowych systemu Windows 7. Pomoc techniczna obejmuje wprowadzanie piórem w czasie rzeczywistym na platformie tabletu jako <xref:System.Windows.UIElement.OnStylusDown%2A>zdarzenia <xref:System.Windows.UIElement.OnStylusUp%2A>, i <xref:System.Windows.UIElement.OnStylusMove%2A> . System Windows 7 udostępnia także wielodotykowe dane wejściowe jako komunikaty okna WM_TOUCH Win32. Te dwa interfejsy API wzajemnie się wykluczają w tym samym kluczu HWND. Włączenie wprowadzania dotykowego za pośrednictwem platformy tabletu (domyślnie dla aplikacji WPF) powoduje wyłączenie komunikatów WM_TOUCH. W związku z tym, aby używać WM_TOUCH do odbierania komunikatów dotykowych z okna WPF, należy wyłączyć wbudowaną obsługę pióra w WPF. Ma to zastosowanie w scenariuszu, takim jak okno WPF obsługujące składnik korzystający z WM_TOUCH.  
   
- Aby wyłączyć WPF nasłuchiwanie wejście pióra, należy usunąć wszelkie tablecie dodano obsługę przez okno WPF.  
+ Aby wyłączyć program WPF nasłuchuje na wejściu pióra, Usuń każdą obsługę rysownicy dodaną przez okno WPF.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje, jak usunąć domyślną obsługę platform typu tablet przy użyciu odbicia.  
+ Poniższy przykładowy kod pokazuje, jak usunąć domyślną obsługę platformy tabletu przy użyciu odbicia.  
   
-```  
+```csharp  
 public static void DisableWPFTabletSupport()  
 {  
     // Get a collection of the tablet devices for this window.    

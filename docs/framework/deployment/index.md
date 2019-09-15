@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7da023c5ab9247cde0ccd1126d4d639c6f355e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d9448edab101ef11447b54e12c53abcb578646a
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910971"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971605"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Wdrażanie programu .NET Framework i aplikacji
 
@@ -118,7 +118,7 @@ Skorzystaj z poniższych linków do innych tematów MSDN, aby uzyskać szczegó�
 
 ## <a name="packaging-and-distributing-net-framework-applications"></a>Pakowanie i dystrybucja .NET Framework aplikacji
 
-Niektóre informacje dotyczące pakowania i wdrażania dla .NET Framework są opisane w innych sekcjach dokumentacji. Te sekcje zawierają informacje o samoopisywanych jednostkach nazywanych [zestawami](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md), które nie wymagają wpisów rejestru, [zestawów o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md), które zapewniają unikatowość nazw i uniemożliwiają fałszowanie nazw oraz [przechowywanie wersji zestawu](../../../docs/framework/app-domains/assembly-versioning.md) , który dotyczy wielu problemów związanych z konfliktami DLL. Poniższe sekcje zawierają informacje o pakowaniu i dystrybucji aplikacji .NET Framework.
+Niektóre informacje dotyczące pakowania i wdrażania dla .NET Framework są opisane w innych sekcjach dokumentacji. Te sekcje zawierają informacje o samoopisywanych jednostkach nazywanych [zestawami](../../standard/assembly/index.md), które nie wymagają wpisów rejestru, [zestawów o silnych nazwach](../../standard/assembly/strong-named.md), które zapewniają unikatowość nazw i uniemożliwiają fałszowanie nazw oraz [przechowywanie wersji zestawu](../../standard/assembly/versioning.md) , który dotyczy wielu problemów związanych z konfliktami DLL. Poniższe sekcje zawierają informacje o pakowaniu i dystrybucji aplikacji .NET Framework.
 
 ### <a name="packaging"></a>Pakowanie
 

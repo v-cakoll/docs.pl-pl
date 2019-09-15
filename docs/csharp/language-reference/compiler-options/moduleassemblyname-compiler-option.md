@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: d57279128c0909ba3e62d55d596705cfde6be75c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7562c0609d61b2388f5063bc480a4dfc715155db
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606666"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970075"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname — (C# opcja kompilatora)
 Określa zestaw, którego typy niepubliczne a. module mogą uzyskać dostęp.  
@@ -39,7 +39,7 @@ Określa zestaw, którego typy niepubliczne a. module mogą uzyskać dostęp.
   
  Aby uzyskać więcej informacji na temat tworzenia modułu., zobacz [-target: module (C# opcje kompilatora)](./target-module-compiler-option.md).  
   
- Aby uzyskać więcej informacji o znajomych zestawach, zobacz [zaprzyjaźnione zestawy](../../../standard/assembly/friend-assemblies.md).  
+ Aby uzyskać więcej informacji o znajomych zestawach, zobacz [zaprzyjaźnione zestawy](../../../standard/assembly/friend.md).  
   
  Ta opcja jest niedostępna w środowisku programistycznym; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
   

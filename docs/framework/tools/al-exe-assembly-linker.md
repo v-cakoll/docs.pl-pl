@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9674e4d3f465cd3bad55a32d0a13136e6cff974d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7f83c67354e96e1da3a30ab2e30fffe026c4646b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946376"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971350"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Konsolidator zestawów)
 
@@ -178,5 +178,5 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 - [Narzędzia](../../../docs/framework/tools/index.md)
 - [*SN. exe* (Narzędzie silnej nazwy)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [*Gacutil. exe* (Global Assembly Cache Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
-- [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Programowanie za pomocą zestawów](../../standard/assembly/program.md)
 - [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

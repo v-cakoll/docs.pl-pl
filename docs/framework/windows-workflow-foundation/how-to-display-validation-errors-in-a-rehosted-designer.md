@@ -2,23 +2,23 @@
 title: 'Instrukcje: Wyświetlanie błędów walidacji w rehostowanym projektancie'
 ms.date: 03/30/2017
 ms.assetid: 5aa8fb53-8f75-433b-bc06-7c7d33583d5d
-ms.openlocfilehash: a3d993f55bf130039905f1a6512a7ae104512432
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 608868882f4bec23c03f0ec78f65673e76056030
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761477"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989662"
 ---
 # <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a>Instrukcje: Wyświetlanie błędów walidacji w rehostowanym projektancie
-W tym temacie opisano sposób pobierania i publikowanie błędów walidacji w rehostowanym [!INCLUDE[wfd1](../../../includes/wfd1-md.md)]. Zapewnia to nam za pomocą procedury, aby upewnić się, że w rehostowanym projektancie przepływu pracy jest nieprawidłowa.  
+W tym temacie opisano sposób pobierania i publikowania błędów walidacji w rehostie [!INCLUDE[wfd1](../../../includes/wfd1-md.md)]. Dzięki temu można sprawdzić, czy przepływ pracy w przewidzianym przez niego projektancie jest prawidłowy.  
   
- To zadanie ma dwie części. Pierwszy jest zapewnienie implementację <xref:System.Activities.Presentation.Validation.IValidationErrorService>.  Brak jednej metody krytycznej do zaimplementowania w tym interfejsie <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A> który zostanie przekazany listę <xref:System.Activities.Presentation.Validation.ValidationErrorInfo> obiektów zawierających informacje o błędach w dzienniku debugowania.  Po zaimplementowaniu interfejsu, możesz pobrać informacje o błędzie, publikując wystąpienie tę implementację Kontekst edycyjny.  
+ To zadanie ma dwie części. Pierwszym etapem jest dostarczenie implementacji <xref:System.Activities.Presentation.Validation.IValidationErrorService>.  Istnieje jedna metoda krytyczna do zaimplementowania w tym <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A> interfejsie, która przekaże do <xref:System.Activities.Presentation.Validation.ValidationErrorInfo> dziennika debugowania listę obiektów zawierających informacje o błędach.  Po wdrożeniu interfejsu można pobrać informacje o błędzie, publikując wystąpienie tej implementacji w kontekście edycji.  
   
-### <a name="implement-the-ivalidationerrorservice-interface"></a>Implementuj interfejs IValidationErrorService  
+### <a name="implement-the-ivalidationerrorservice-interface"></a>Implementowanie interfejsu IValidationErrorService  
   
-1. Poniżej przedstawiono przykładowy kod dla prostych implementacji, który będzie zapisywał się błędy sprawdzania poprawności w dzienniku debugowania.  
+1. Oto przykład kodu dla prostej implementacji, która będzie zapisywać błędy walidacji w dzienniku debugowania.  
   
-    ```  
+    ```csharp  
     using System.Activities.Presentation.Validation;  
     using System.Collections.Generic;  
     using System.Diagnostics;  
@@ -36,10 +36,10 @@ W tym temacie opisano sposób pobierania i publikowanie błędów walidacji w re
     }  
     ```  
   
-### <a name="publishing-to-the-editing-context"></a>Publikowanie Kontekst edycyjny  
+### <a name="publishing-to-the-editing-context"></a>Publikowanie w kontekście edycji  
   
-1. Poniżej przedstawiono kod, który będzie publikować to Kontekst edycyjny.  
+1. Oto kod, który zostanie opublikowany w kontekście edycji.  
   
-    ```  
+    ```csharp  
     wd.Context.Services.Publish<IValidationErrorService>(new DebugValidationErrorService());  
     ```

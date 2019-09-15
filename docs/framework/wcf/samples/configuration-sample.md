@@ -2,12 +2,12 @@
 title: Konfiguracja — przykład
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 52f8b5eae56db4b3a506d71c44ff2c49a8085067
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 87afeb0c562254e0f4cf6a85946a765a740c79ec
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040104"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990081"
 ---
 # <a name="configuration-sample"></a>Konfiguracja — przykład
 Ten przykład ilustruje użycie pliku konfiguracji w celu odnalezienia usługi.  
@@ -67,9 +67,7 @@ Ten przykład ilustruje użycie pliku konfiguracji w celu odnalezienia usługi.
   
  Ten plik konfiguracji wykracza poza tylko te proste kroki poprzez modyfikację dodatkowych zachowań. Można kontrolować informacje związane z odnajdywaniem za pomocą określonych punktów końcowych. Oznacza to, że użytkownik może kontrolować, czy można odnaleźć punkt końcowy, a użytkownik może również oznaczyć ten punkt końcowy <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> za pomocą i niestandardowych metadanych XML. W tym celu użytkownik musi dodać `behaviorConfiguration` właściwość do punktu końcowego aplikacji. W takim przypadku następująca właściwość jest dodawana do punktu końcowego aplikacji.  
   
-```  
-behaviorConfiguration="endpointBehaviorConfiguration"  
-```  
+`behaviorConfiguration="endpointBehaviorConfiguration"`  
   
  Teraz za pomocą elementu konfiguracja zachowania można kontrolować atrybuty związane z odnajdywaniem. W takim przypadku dwa zakresy są dodawane do punktu końcowego aplikacji.  
   

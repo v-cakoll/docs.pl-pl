@@ -2,12 +2,12 @@
 title: 'Instrukcje: używanie krótkiej nazwy usługi z kontraktami wymiany metadanych'
 ms.date: 03/30/2017
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
-ms.openlocfilehash: 00aa1bbde95c0636391f213f830fc67b2dedf459
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e114bc2c046ba7145a91121ce23c82912680a048
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968792"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70968960"
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Instrukcje: używanie krótkiej nazwy usługi z kontraktami wymiany metadanych
 Po rozpoczęciu tworzenia nowych usług WCF możesz zdecydować, że chcesz mieć możliwość wywoływania tych usług ze skryptu lub aplikacji Visual Basic 6,0. Jedną z metod jest generowanie zestawu klienta WCF, rejestrowanie zestawu przy użyciu modelu COM, Instalowanie zestawu w GAC, a następnie odwoływanie się do typów COM z kodu Visual Basic. Podczas dystrybucji aplikacji konieczne będzie również dystrybuowanie zestawu klienta WCF. Użytkownik będzie musiał następnie zarejestrować zestaw klienta programu WCF przy użyciu modelu COM i umieścić go w pamięci podręcznej GAC. Współdziałanie modelu COM WCF umożliwia również wykonywanie tych samych wywołań usługi bez polegania na zestawie klienta WCF. Moniker programu WCF umożliwia wywoływanie dowolnej usługi WCF z dowolnego języka zgodnego z modelem COM (Visual Basic, VBScript, Visual Basic for Applications (VBA) itd.) przez określenie identyfikatora URI punktu końcowego wymiany metadanych (Mex), którego moniker usługi używa do wyodrębniania typu Informacje o usłudze. W tym temacie opisano sposób wywoływania przykładu Wprowadzenie WCF przy użyciu monikera programu WCF określającego punkt końcowy MEX.  
@@ -21,7 +21,7 @@ Po rozpoczęciu tworzenia nowych usług WCF możesz zdecydować, że chcesz mie�
   
 2. Utwórz skrypt Visual Basic lub aplikację Visual Basic, która zawiera następujący kod:  
   
-    ```  
+    ```vb
     monString = "service:mexaddress=http://localhost/ServiceModelSamples/Service.svc/MEX"  
     monString = monString + ", address=http://localhost/ServiceModelSamples/Service.svc"  
     monString = monString + ", contract=ICalculator, contractNamespace=http://Microsoft.ServiceModel.Samples"  

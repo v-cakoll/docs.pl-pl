@@ -2,12 +2,12 @@
 title: Duże ilości danych i przesyłanie strumieniowe
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: b35fa4a6ca694fc9611869c7fcb03debf911542d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 70e43eaf4dc77e07af8ec65faf9cf0fa9a7a0fe4
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911864"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991517"
 ---
 # <a name="large-data-and-streaming"></a>Duże ilości danych i przesyłanie strumieniowe
 Windows Communication Foundation (WCF) to infrastruktura komunikacji oparta na języku XML. Ponieważ dane XML są powszechnie zakodowane w standardowym formacie tekstowym zdefiniowanym w [specyfikacji XML 1,0](https://go.microsoft.com/fwlink/?LinkId=94838), połączone systemy deweloperzy i architektów zwykle są zaangażowane w informacje o sieci (lub rozmiarze) komunikatów wysyłanych przez sieć i Kodowanie za pomocą tekstu XML stanowi specjalne wyzwania dotyczące wydajnego transferu danych binarnych.  
@@ -99,7 +99,7 @@ Windows Communication Foundation (WCF) to infrastruktura komunikacji oparta na j
 ### <a name="programming-model"></a>Model programowania  
  Niezależnie od tego, które z trzech wbudowanych koderów używanych w aplikacji, środowisko programistyczne jest identyczne z uwzględnieniem transferu danych binarnych. Różnica polega na tym, jak WCF obsługuje dane na podstawie ich typów danych.  
   
-```  
+```csharp
 [DataContract]  
 class MyData  
 {  
@@ -190,7 +190,7 @@ class MyData
 ### <a name="programming-model-for-streamed-transfers"></a>Model programowania dla transferów przesyłanych strumieniowo  
  Model programowania dla przesyłania strumieniowego jest prosty. W przypadku otrzymywania przesyłanych strumieniowo danych należy określić kontrakt operacji, <xref:System.IO.Stream> który ma parametr wejściowy z jednym typem. Aby można było zwracać dane przesyłane strumieniowo <xref:System.IO.Stream> , zwróć odwołanie.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IStreamedService  
 {  
@@ -209,7 +209,7 @@ public interface IStreamedService
   
  Ta reguła w podobny sposób dotyczy kontraktów komunikatów. Zgodnie z poniższą umową dotyczącą komunikatu można mieć tylko jeden element członkowski treści w ramach kontraktu, który jest strumieniem. Jeśli chcesz przekazać dodatkowe informacje ze strumieniem, te informacje muszą być przenoszone w nagłówkach wiadomości. Treść komunikatu jest zarezerwowana wyłącznie dla zawartości strumienia.  
   
-```  
+```csharp
 [MessageContract]  
 public class UploadStreamMessage  
 {  
@@ -233,7 +233,7 @@ public class UploadStreamMessage
   
  W związku z tym ograniczenie maksymalnego rozmiaru komunikatu przychodzącego nie jest wystarczające w tym przypadku. `MaxBufferSize` Właściwość jest wymagana, aby ograniczyć ilość pamięci buforów WCF. Należy pamiętać, aby ustawić wartość bezpieczną (lub zachować wartość domyślną) podczas przesyłania strumieniowego. Załóżmy na przykład, że usługa musi odbierać pliki o rozmiarze do 4 GB i przechowywać je na dysku lokalnym. Załóżmy również, że pamięć jest ograniczona w taki sposób, że w danym momencie można buforować tylko 64 KB danych. Następnie ustaw `MaxReceivedMessageSize` wartość 4 GB i `MaxBufferSize` na 64 KB. Ponadto w implementacji usługi należy upewnić się, że użytkownik ma uprawnienia tylko do odczytu ze strumienia przychodzącego w fragmentach 64-KB i nie odczytuje następnego fragmentu, zanim poprzedni zostanie zapisany na dysku i odrzucony z pamięci.  
   
- Ważne jest również, aby zrozumieć, że ten limit przydziału ogranicza buforowanie wykonywane przez WCF i nie może chronić użytkownika przed żadnym buforowaniem wykonywanym we własnej implementacji usługi lub klienta. Aby uzyskać więcej informacji o dodatkowych kwestiach dotyczących zabezpieczeń, zobacz Zagadnienia dotyczące [zabezpieczeń danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+ Ważne jest również, aby zrozumieć, że ten limit przydziału ogranicza buforowanie wykonywane przez WCF i nie może chronić użytkownika przed żadnym buforowaniem wykonywanym we własnej implementacji usługi lub klienta. Aby uzyskać więcej informacji o dodatkowych kwestiach dotyczących zabezpieczeń, zobacz [zagadnienia dotyczące zabezpieczeń danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 > [!NOTE]
 > Decyzja o użyciu buforowanych lub przesyłanych strumieniowo jest lokalną decyzją punktu końcowego. W przypadku transportów HTTP tryb transferu nie jest propagowany przez połączenie lub serwery proxy i innych pośredników. Ustawienie trybu transferu nie jest odzwierciedlone w opisie interfejsu usługi. Po wygenerowaniu klienta programu WCF do usługi należy edytować plik konfiguracji usług przeznaczonych do użycia z transferem strumieniowym w celu ustawienia trybu. W przypadku transportów TCP i nazwanych potoków tryb transferu jest propagowany jako potwierdzenie zasad.  

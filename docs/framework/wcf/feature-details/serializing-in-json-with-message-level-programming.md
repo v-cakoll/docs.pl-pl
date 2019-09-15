@@ -2,12 +2,12 @@
 title: Serializacja notacji JSON w przypadku programowania na poziomie komunikatu
 ms.date: 03/30/2017
 ms.assetid: 5f940ba2-57ee-4c49-a779-957c5e7e71fa
-ms.openlocfilehash: f50f6a699dff54e3d0950f5ce0e1049217b9dc45
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7576594f8fa694ce2d34cf38c88d2e28a00f5295
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928729"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991127"
 ---
 # <a name="serializing-in-json-with-message-level-programming"></a>Serializacja notacji JSON w przypadku programowania na poziomie komunikatu
 Usługa WCF obsługuje Serializowanie danych w formacie JSON. W tym temacie opisano sposób, w jaki program WCF może serializować typy <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>przy użyciu.  
@@ -21,7 +21,7 @@ Usługa WCF obsługuje Serializowanie danych w formacie JSON. W tym temacie opis
 ## <a name="untyped-message-programming"></a>Programowanie komunikatów niewpisanych  
  Podczas pracy bezpośrednio z niewpisanymi obiektami komunikatów należy jawnie ustawić właściwości niewpisanej wiadomości, aby serializować ją jako kod JSON. Poniższy fragment kodu przedstawia, jak to zrobić.  
   
-```  
+```csharp
  Message response = Message.CreateMessage(  
                   MessageVersion.None,    // No SOAP message version  
                              "*",                     // SOAP action, ignored since this is JSON  

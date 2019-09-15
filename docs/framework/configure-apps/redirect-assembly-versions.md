@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: c9670b00ea4a6b552469b7f33e924b8ab128d9d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c43ba119b92d4dc1a50b03d6359555ad25f37d08
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948026"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971561"
 ---
 # <a name="redirecting-assembly-versions"></a>Przekierowywanie wersji zestawu
 
@@ -21,7 +21,7 @@ Odwołania do powiązań w czasie kompilacji można przekierować do zestawów .
 
 <a name="BKMK_Assemblyunificationanddefaultbinding"></a>
 ## <a name="assembly-unification-and-default-binding"></a>Ujednolicenie zestawu i powiązanie domyślne
- Powiązania z zestawami .NET Framework czasami są przekierowane przez proces nazywany dezjednoczeniem *zestawu*. .NET Framework składa się z wersji środowiska uruchomieniowego języka wspólnego oraz o dwóch dziesiątych zestawach .NET Framework tworzących bibliotekę typów. Te zestawy .NET Framework są traktowane przez środowisko uruchomieniowe jako pojedynczą jednostkę. Domyślnie po uruchomieniu aplikacji wszystkie odwołania do typów w kodzie wykonywane przez środowisko uruchomieniowe są kierowane do zestawów .NET Framework, które mają ten sam numer wersji, co środowisko uruchomieniowe, które jest ładowane w procesie. Przekierowania, które występują w tym modelu, są domyślnym zachowaniem środowiska uruchomieniowego.
+ Powiązania z zestawami .NET Framework czasami są przekierowane przez proces nazywany *dezjednoczeniem zestawu*. .NET Framework składa się z wersji środowiska uruchomieniowego języka wspólnego oraz o dwóch dziesiątych zestawach .NET Framework tworzących bibliotekę typów. Te zestawy .NET Framework są traktowane przez środowisko uruchomieniowe jako pojedynczą jednostkę. Domyślnie po uruchomieniu aplikacji wszystkie odwołania do typów w kodzie wykonywane przez środowisko uruchomieniowe są kierowane do zestawów .NET Framework, które mają ten sam numer wersji, co środowisko uruchomieniowe, które jest ładowane w procesie. Przekierowania, które występują w tym modelu, są domyślnym zachowaniem środowiska uruchomieniowego.
 
  Na przykład jeśli aplikacja odwołuje się do typów w przestrzeni nazw System. XML i została skompilowana przy użyciu .NET Framework 4,5, zawiera statyczne odwołania do zestawu System. XML, który jest dostarczany ze środowiskiem uruchomieniowym w wersji 4,5. Jeśli chcesz przekierować odwołanie do powiązania, aby wskazywało zestaw system. XML dostarczany z .NET Framework 4, możesz umieścić informacje o przekierowaniu w pliku konfiguracji aplikacji. Przekierowanie powiązania w pliku konfiguracyjnym dla ujednoliconego zestawu .NET Framework anuluje ujednolicenie tego zestawu.
 
@@ -31,7 +31,7 @@ Odwołania do powiązań w czasie kompilacji można przekierować do zestawów .
 ## <a name="redirecting-assembly-versions-by-using-publisher-policy"></a>Przekierowywanie wersji zestawu przy użyciu zasad wydawcy
  Dostawcy zestawów mogą kierować aplikacje do nowszej wersji zestawu, dołączając plik zasad wydawcy z nowym zestawem. Plik zasad wydawcy, który znajduje się w globalnej pamięci podręcznej zestawów, zawiera ustawienia przekierowania zestawu.
 
- Każda *główna*. wersja pomocnicza zestawu ma swój własny plik zasad wydawcy. Na przykład przekierowania z wersji 2.0.2.222 do 2.0.3.000 i z wersji 2.0.2.321 do wersji 2.0.3.000 oba przechodzą do tego samego pliku, ponieważ są one skojarzone z wersją 2,0. Jednak przekierowanie z wersji 3.0.0.999 do wersji 4.0.0.000 przejdzie do pliku w wersji 3.0.999. Każda główna wersja .NET Framework ma swój własny plik zasad wydawcy.
+ Każda *główna*. wersja *pomocnicza* zestawu ma swój własny plik zasad wydawcy. Na przykład przekierowania z wersji 2.0.2.222 do 2.0.3.000 i z wersji 2.0.2.321 do wersji 2.0.3.000 oba przechodzą do tego samego pliku, ponieważ są one skojarzone z wersją 2,0. Jednak przekierowanie z wersji 3.0.0.999 do wersji 4.0.0.000 przejdzie do pliku w wersji 3.0.999. Każda główna wersja .NET Framework ma swój własny plik zasad wydawcy.
 
  Jeśli plik zasad wydawcy istnieje dla zestawu, środowisko uruchomieniowe sprawdzi ten plik po sprawdzeniu pliku konfiguracji manifestu i aplikacji. Dostawcy powinni używać plików zasad wydawcy tylko wtedy, gdy nowy zestaw jest zgodny z poprzednimi wersjami z przekierowanym zestawem.
 
@@ -157,8 +157,8 @@ Automatyczne przekierowywanie powiązań można włączyć, jeśli aplikacja jes
 - [Instrukcje: Włączanie i wyłączanie automatycznego przekierowywania powiązań](how-to-enable-and-disable-automatic-binding-redirection.md)
 - [\<bindingRedirect> Element](./file-schema/runtime/bindingredirect-element.md)
 - [Uprawnienia zabezpieczeń przekierowania powiązania zestawu](assembly-binding-redirection-security-permission.md)
-- [Zestawy w środowisku uruchomieniowym CLR](../app-domains/assemblies-in-the-common-language-runtime.md)
-- [Programowanie za pomocą zestawów](../app-domains/programming-with-assemblies.md)
+- [Zestawy w środowisku .NET](../../standard/assembly/index.md)
+- [Programowanie za pomocą zestawów](../../standard/assembly/program.md)
 - [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../deployment/how-the-runtime-locates-assemblies.md)
 - [Konfigurowanie aplikacji](index.md)
 - [Schemat ustawień środowiska uruchomieniowego](./file-schema/runtime/index.md)

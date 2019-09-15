@@ -9,37 +9,37 @@ helpviewer_keywords:
 ms.assetid: 96d3b8e3-bef8-4da0-9a81-9841e23a94e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7124b6b234601e3afc27109ac318f47e3fe40c35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4f0c2ad1290a7f9cf8d0c43c504a3e0a9628b86
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675354"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971924"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>Programowanie przy użyciu zestawów i domen aplikacji
-Tworzenie hostów, takich jak Microsoft Internet Explorer, ASP.NET i ładowanie powłoki Windows środowiska uruchomieniowego języka wspólnego w procesie [domeny aplikacji](../../../docs/framework/app-domains/application-domains.md) tego przetwarzania i następnie załadować i wykonywanie kodu użytkownika w tej domenie aplikacji podczas uruchamiania aplikacji .NET Framework. W większości przypadków nie trzeba martwić się o sposobie tworzenia domeny aplikacji i ładowanie zestawów do nich, ponieważ host środowiska uruchomieniowego wykonuje te zadania.  
+Hosty, takie jak Microsoft Internet Explorer, ASP.NET i powłoka systemu Windows, ładują środowisko uruchomieniowe języka wspólnego do procesu, tworzą w tym procesie [domenę aplikacji](../../../docs/framework/app-domains/application-domains.md) , a następnie ładują i wykonują kod użytkownika w tej domenie aplikacji podczas uruchamiania programu .NET Aplikacja struktury. W większości przypadków nie trzeba martwić się o tworzenie domen aplikacji i ładowaniem do nich zestawów, ponieważ host środowiska uruchomieniowego wykonuje te zadania.  
   
- Jednak jeśli tworzysz aplikację, która będzie obsługiwać środowisko uruchomieniowe języka wspólnego, utworzenie narzędzi lub kod, który chcesz zwolnić programowo, lub podłączanych składników, które może być zwolniony i ponownie załadowany na bieżąco, zostanie utworzona własne domeny aplikacji. Nawet wtedy, gdy host środowiska uruchomieniowego są nietworzenie, ta sekcja zawiera ważne informacje na temat pracy z domenami aplikacji i zestawy, ładowane w tych domenach aplikacji.  
+ Jeśli jednak tworzysz aplikację, która będzie hostować środowisko uruchomieniowe języka wspólnego, tworzysz narzędzia lub kod, który chcesz usunąć programowo, lub utworzyć podłączane składniki, które mogą zostać zwolnione i ponownie załadowane na bieżąco, będziesz tworzyć własne domeny aplikacji. Nawet jeśli nie tworzysz hosta środowiska uruchomieniowego, ta sekcja zawiera ważne informacje dotyczące pracy z domenami i zestawami aplikacji załadowanymi w tych domenach aplikacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Instrukcje dotyczące zestawów i domen aplikacji](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)  
- Zawiera łącza do wszystkich tematów instrukcje w dokumentacji koncepcyjnego dla programowania, korzystając z domeny aplikacji i zestawy.  
+ Zawiera łącza do wszystkich tematów, które znajdują się w dokumentacji koncepcyjnej dotyczącej programowania przy użyciu domen i zestawów aplikacji.  
   
  [Używanie domen aplikacji](../../../docs/framework/app-domains/use.md)  
- Przykłady tworzenia, konfigurowania i używania domen aplikacji.  
+ Zawiera przykłady tworzenia, konfigurowania i używania domen aplikacji.  
   
- [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- W tym artykule opisano sposób tworzenia, zaloguj się i ustawianie atrybutów zestawów.  
+ [Programowanie za pomocą zestawów](../../standard/assembly/program.md)  
+ Opisuje sposób tworzenia, podpisywania i ustawiania atrybutów dla zestawów.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Emitowanie dynamicznych metod i zestawów](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
- W tym artykule opisano sposób tworzenia zestawów dynamicznych.  
+ Opisuje sposób tworzenia zestawów dynamicznych.  
   
- [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [Zestawy w środowisku .NET](../../standard/assembly/index.md)  
  Omówienie koncepcyjne zestawów.  
   
  [Domeny aplikacji](../../../docs/framework/app-domains/application-domains.md)  
  Omówienie koncepcyjne domen aplikacji.  
   
- [Omówienie odbicia](../../../docs/framework/reflection-and-codedom/reflection.md)  
- Opisuje sposób używania **odbicia** klasy, aby uzyskać informacje o zestawie.
+ [Przegląd odbicia](../../../docs/framework/reflection-and-codedom/reflection.md)  
+ Opisuje sposób użycia klasy **odbicia** w celu uzyskania informacji o zestawie.

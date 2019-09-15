@@ -7,43 +7,43 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: b249137117f970a14284beb6439e501a3004eee1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f5418da63b2bc5fc9b20f5c262890b7a06ce5dd
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051978"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989923"
 ---
 # <a name="getting-started-sample"></a>Wprowadzenie — przykład
 
-Wprowadzenie do przykładu demonstruje sposób implementacji typowych usług i typowego klienta za pomocą usługi Windows Communication Foundation (WCF). Te przykładowe dane stanowią podstawę dla wszystkich przykładów podstawową technologię.
+Przykład Wprowadzenie ilustruje sposób implementacji typowej usługi i typowego klienta przy użyciu Windows Communication Foundation (WCF). Ten przykład jest podstawą dla wszystkich innych podstawowych przykładów technologii.
 
 > [!NOTE]
-> Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.
 
 > [!IMPORTANT]
-> Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted`
 
-Usługa opisuje operacje, które wykonuje w kontrakcie usługi, który publicznie udostępnia się jako metadane. Usługa również zawiera kod implementujący działania.
+Usługa opisuje operacje wykonywane w ramach kontraktu usługi, które ujawnia publicznie jako metadane. Usługa zawiera również kod umożliwiający zaimplementowanie operacji.
 
-Klient zawiera definicję kontraktu usługi i klasy serwera proxy do uzyskiwania dostępu do usługi. Kod serwera proxy jest generowany na podstawie przy użyciu metadanych usługi [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).
+Klient zawiera definicję kontraktu usługi i klasy proxy w celu uzyskania dostępu do usługi. Kod serwera proxy jest generowany na podstawie metadanych usługi przy użyciu [Narzędzia do obsługi metadanych ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).
 
-Na [!INCLUDE[wv](../../../../includes/wv-md.md)], usługa jest hostowana w Windows Activation Service (WAS). Na [!INCLUDE[wxp](../../../../includes/wxp-md.md)] i [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], jest hostowana w usłudze Internet Information Services (IIS) i programu ASP.NET. Hosting w usługach IIS i WAS umożliwia usłudze aktywowany automatycznie, gdy jest on dostępny po raz pierwszy.
+W [!INCLUDE[wv](../../../../includes/wv-md.md)]systemie usługa jest hostowana w usłudze aktywacji systemu Windows (was). W [!INCLUDE[wxp](../../../../includes/wxp-md.md)] systemach [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]i usługa jest hostowana przez Internet Information Services (IIS) i ASP.NET. Hostowanie usługi w usługach IIS lub zezwala na automatyczne Aktywowanie usługi przy pierwszym dostępie.
 
 > [!NOTE]
-> Jeśli chcesz użyć rozpocząć pracę przy użyciu przykładu hostującym usługę w aplikacji konsoli usług IIS, zobacz [hosta samodzielnego](../../../../docs/framework/wcf/samples/self-host.md) próbki.
+> Jeśli wolisz rozpocząć pracę z przykładem, który hostuje usługę w aplikacji konsolowej zamiast usług IIS, [Zobacz przykład samoobsługi.](../../../../docs/framework/wcf/samples/self-host.md)
 
-Usługi i klienta należy określić szczegóły dostępu w ustawieniach pliku konfiguracji, które zapewniają elastyczność w czasie wdrażania. W tym definicji punktu końcowego, który określa adres, powiązania i umowy. Powiązanie określa transportu i zabezpieczenia szczegółowe informacje o jak usługa ma być dostępny.
+Usługa i klient określają szczegóły dostępu w ustawieniach pliku konfiguracji, co zapewnia elastyczność w czasie wdrażania. Obejmuje to definicję punktu końcowego, który określa adres, powiązanie i kontrakt. Powiązanie określa szczegóły dotyczące transportu i zabezpieczeń dotyczące sposobu uzyskiwania dostępu do usługi.
 
-Usługa służy do konfigurowania zachowania w czasie wykonywania do publikowania metadanych.
+Usługa konfiguruje zachowanie w czasie wykonywania w celu opublikowania jego metadanych.
 
-Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź". Kontrakt jest definiowany przez `ICalculator` interfejs, który udostępnia operacje matematyczne (dodawania, odejmowania, mnożenia i dzielenia). Klient wysyła żądania do operacji matematycznych danego i odpowiedzi usługi z wynikiem. Implementuje usługi `ICalculator` kontraktu, który jest zdefiniowany w poniższym kodzie.
+Usługa implementuje kontrakt definiujący wzorzec komunikacji żądanie-odpowiedź. Kontrakt jest definiowany przez `ICalculator` interfejs, który udostępnia operacje matematyczne (Dodawanie, odejmowanie, mnożenie i dzielenie). Klient wysyła żądania do danej operacji matematycznej i zwraca odpowiedzi usługi z wynikiem. Usługa implementuje `ICalculator` kontrakt zdefiniowany w poniższym kodzie.
 
 ```vb
 ' Define a service contract.
@@ -76,7 +76,7 @@ public interface ICalculator
 }
 ```
 
-Wdrożenie usługi oblicza i zwraca odpowiedni wynik, jak pokazano w poniższym przykładowym kodzie.
+Implementacja usługi oblicza i zwraca odpowiedni wynik, jak pokazano w poniższym przykładowym kodzie.
 
 ```vb
 ' Service class which implements the service contract.
@@ -123,7 +123,7 @@ public class CalculatorService : ICalculator
 }
 ```
 
-Usługa udostępnia punkt końcowy do komunikacji z usługą zdefiniowane przy użyciu pliku konfiguracji (Web.config), jak pokazano na poniższej przykładowej konfiguracji.
+Usługa udostępnia punkt końcowy do komunikacji z usługą, zdefiniowany przy użyciu pliku konfiguracji (Web. config), jak pokazano w poniższej konfiguracji przykładowej.
 
 ```xaml
 <services>
@@ -140,11 +140,11 @@ Usługa udostępnia punkt końcowy do komunikacji z usługą zdefiniowane przy u
 </services>
 ```
 
-Usługa udostępnia punkt końcowy pod podstawowym adresem udostępniane przez hosta usług IIS i WAS. Powiązanie jest skonfigurowane przy użyciu standardowego <xref:System.ServiceModel.WSHttpBinding>, który zapewnia komunikacji HTTP i standardowych protokołów usług sieci Web do adresowania i zabezpieczeń. Kontrakt jest `ICalculator` implementowane przez usługę.
+Usługa uwidacznia punkt końcowy pod adresem podstawowym dostarczonym przez usługi IIS lub hosta. Powiązanie jest skonfigurowane przy użyciu standardu <xref:System.ServiceModel.WSHttpBinding>, który zapewnia komunikację HTTP i standardowe protokoły usług sieci Web do adresowania i zabezpieczenia. Kontrakt jest `ICalculator` implementowany przez usługę.
 
-Zgodnie z konfiguracją, usługi mogą być wyświetlane w `http://localhost/servicemodelsamples/service.svc` przez klienta na tym samym komputerze. W przypadku klientów na komputerach zdalnych w celu uzyskania dostępu do usługi należy określić w pełni kwalifikowanej nazwy domeny zamiast nazwy localhost.
+Zgodnie z konfiguracją usługa może być dostępna `http://localhost/servicemodelsamples/service.svc` przez klienta programu na tym samym komputerze. Aby klienci na komputerach zdalnych mogli uzyskać dostęp do usługi, należy określić w pełni kwalifikowaną nazwę domeny zamiast hosta lokalnego.
 
-Struktura nie ujawnia metadanych domyślnie. W efekcie usługa włącza <xref:System.ServiceModel.Description.ServiceMetadataBehavior> i udostępnia punkt końcowy programu exchange (MEX) metadanych w `http://localhost/servicemodelsamples/service.svc/mex`. Następującej konfiguracji pokazuje to.
+Struktura nie ujawnia domyślnie metadanych. W związku z tym usługa włącza <xref:System.ServiceModel.Description.ServiceMetadataBehavior> i uwidacznia punkt końcowy wymiany metadanych (Mex) pod adresem. `http://localhost/servicemodelsamples/service.svc/mex` Poniżej przedstawiono konfigurację.
 
 ```xaml
 <system.serviceModel>
@@ -174,19 +174,19 @@ Struktura nie ujawnia metadanych domyślnie. W efekcie usługa włącza <xref:Sy
 </system.serviceModel>
 ```
 
-Klient komunikuje się przy użyciu typu danego kontraktu za pomocą klasy klienta, który jest generowany przez [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Ta wygenerowanego klienta znajduje się w pliku generatedClient.cs lub generatedClient.vb. To narzędzie służy do pobierania metadanych dla danej usługi i generuje klienta do użycia przez aplikację kliencką do komunikowania się za pomocą typu danego kontraktu. Usługa hostowana musi być dostępny w celu generowania kodu klienta, ponieważ usługi służy do pobierania zaktualizowanych metadanych.
+Klient komunikuje się przy użyciu danego typu kontraktu przy użyciu klasy klienta, która jest generowana przez [Narzędzie narzędzia metadanych ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Ten wygenerowany klient jest zawarty w pliku generatedClient.cs lub generatedClient. vb. To narzędzie pobiera metadane dla danej usługi i generuje klienta do użytku przez aplikację kliencką w celu komunikowania się przy użyciu danego typu kontraktu. Usługa hostowana musi być dostępna do wygenerowania kodu klienta, ponieważ usługa jest używana do pobierania zaktualizowanych metadanych.
 
- Uruchom następujące polecenie w wierszu polecenia zestawu SDK w katalogu klienta można wygenerować typizowanego serwera proxy:
+ Uruchom następujące polecenie w wierszu polecenia zestawu SDK w katalogu klienta, aby wygenerować serwer proxy z określonym typem:
 
-```
+```console
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs
 ```
 
-Aby wygenerować klienta w języku Visual Basic typu następujących poleceń w wierszu polecenia zestawu SDK:
+Aby wygenerować klienta w Visual Basic wpisz następujące polecenie w wierszu polecenia zestawu SDK:
 
 `Svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /l:vb /out:generatedClient.vb`
 
-Za pomocą wygenerowanego klienta, ten klient uzyskuje dostęp punkt końcowy danej usługi, należy skonfigurować odpowiedni adres i powiązanie. Jak usługa Klient korzysta z plikiem konfiguracyjnym (App.config) do określania punktu końcowego, z którym chce nawiązać połączenia. Konfiguracja punktu końcowego klienta składa się z adresem bezwzględnym dla punktu końcowego usługi, powiązanie i umowy, jak pokazano w poniższym przykładzie.
+Korzystając z wygenerowanego klienta, klient może uzyskać dostęp do danego punktu końcowego usługi przez skonfigurowanie odpowiedniego adresu i powiązania. Podobnie jak w przypadku usługi, klient używa pliku konfiguracji (App. config) do określenia punktu końcowego, z którym chce się skomunikować. Konfiguracja punktu końcowego klienta składa się z adresu bezwzględnego dla punktu końcowego usługi, powiązania i kontraktu, jak pokazano w poniższym przykładzie.
 
 ```xaml
 <client>
@@ -197,7 +197,7 @@ Za pomocą wygenerowanego klienta, ten klient uzyskuje dostęp punkt końcowy da
 </client>
 ```
 
-Wdrożenie klienta tworzy klienta i korzysta z kontrolą typów interfejsu na rozpoczęcie komunikowania się z usługą, jak pokazano w poniższym przykładowym kodzie.
+Implementacja klienta tworzy wystąpienie klienta i używa określonego interfejsu do rozpoczęcia komunikacji z usługą, jak pokazano w poniższym przykładowym kodzie.
 
 ```vb
 ' Create a client
@@ -262,9 +262,9 @@ Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);
 client.Close();
 ```
 
-Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.
+Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.
 
-```
+```output
 Add(100,15.99) = 115.99
 Subtract(145,76.54) = 68.46
 Multiply(9,81.25) = 731.25
@@ -273,15 +273,15 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.
 ```
 
-Wprowadzenie do przykładu przedstawia standardowy sposób, aby utworzyć usługę i klienta. Druga [podstawowe](../../../../docs/framework/wcf/samples/basic-sample.md) kompilacji w tym przykładzie, aby zademonstrować funkcje określonego produktu.
+Wprowadzenie przykład pokazuje standardowy sposób tworzenia usługi i klienta. Druga [podstawowa](../../../../docs/framework/wcf/samples/basic-sample.md) Kompilacja tego przykładu w celu przedstawienia określonych funkcji produktu.
 
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład
 
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-3. Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 ## <a name="see-also"></a>Zobacz także
 

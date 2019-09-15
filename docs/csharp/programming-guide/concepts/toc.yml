@@ -1,24 +1,6 @@
 - name: Pojęcia związane z programowaniem
   href: index.md
   items:
-    - name: Zestawy
-      items:
-        - name: Przyjazne zestawy
-          items:
-            - name: 'Instrukcje: Tworzenie nieoznaczonych przyjaznych zestawów'
-              href: assemblies-gac/how-to-create-unsigned-friend-assemblies.md
-            - name: 'Instrukcje: Tworzenie oznaczonych przyjaznych zestawów'
-              href: assemblies-gac/how-to-create-signed-friend-assemblies.md
-        - name: 'Instrukcje: Tworzenie i korzystanie z zestawów przy użyciu wiersza polecenia'
-          href: assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md
-        - name: 'Instrukcje: Określanie, czy plik jest zestawem'
-          href: assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md
-        - name: 'Instrukcje: Ładowanie i zwalnianie zestawów'
-          href: assemblies-gac/how-to-load-and-unload-assemblies.md
-        - name: 'Instrukcje: Udostępnianie zestawu w innych aplikacjach'
-          href: assemblies-gac/how-to-share-an-assembly-with-other-applications.md
-        - name: 'Przewodnik: Osadzanie typów z zarządzanych zestawów w programie Visual Studio'
-          href: assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md
     - name: Programowanie asynchroniczne przy użyciu elementów async i await
       href: async/
     - name: Atrybuty

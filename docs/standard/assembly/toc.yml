@@ -1,11 +1,66 @@
 - name: Zestawy w środowisku .NET
   href: index.md
   items:
-    - name: Przyjazne zestawy
-      items:
-        - name: Omówienie
-          href: friend-assemblies.md
-    - name: Format pliku zestawu .NET
+    - name: Zawartość zestawu
+      href: contents.md
+    - name: Manifest zestawu
+      href: manifest.md
+    - name: Zestawy o silnych nazwach
+      href: strong-named.md
+    - name: Zagadnienia dotyczące zabezpieczeń zestawów
+      href: security-considerations.md
+    - name: Przechowywanie wersji zestawu
+      href: versioning.md
+    - name: Zestawy i wykonywanie równoczesne
+      href: side-by-side-execution.md
+    - name: Format pliku zestawu
       href: file-format.md
-    - name: Sposób używania i debugowania funkcji zwolnienia zestawu w programie .NET Core
-      href: unloadability-howto.md
+    - name: 'Instrukcje: używanie i debugowanie funkcji zwolnienia zestawu w programie .NET Core'
+      href: unloadability.md
+    - name: Rozwiązywanie załadowań zestawów
+      href: resolve-loads.md
+    - name: Programowanie przy użyciu zestawów
+      href: program.md
+      items:
+        - name: Tworzenie zestawów
+          href: create.md
+        - name: Nazwy zestawów
+          href: names.md
+        - name: 'Instrukcje: znajdowanie w pełni kwalifikowanej nazwy zestawu'
+          href: find-fully-qualified-name.md
+        - name: Lokalizacja zestawu
+          href: location.md
+        - name: Ustawianie atrybutów zestawu
+          href: set-attributes.md
+        - name: Tworzenie i używanie zestawów o silnej nazwie
+          href: create-use-strong-named.md
+          items:
+            - name: 'Instrukcje: tworzenie pary kluczy publiczny-prywatny'
+              href: create-public-private-key-pair.md
+            - name: 'Instrukcje: podpisywanie zestawu silną nazwą'
+              href: sign-strong-name.md
+            - name: Poprawa silnego nazywania
+              href: enhanced-strong-naming.md
+            - name: 'Instrukcje: odwołanie do zestawu o silnej nazwie'
+              href: reference-strong-named.md
+            - name: 'Instrukcje: wyłączanie funkcji pomijania silnej nazwy'
+              href: disable-strong-name-bypass-feature.md
+        - name: Podpisywanie zestawu z opóźnieniem
+          href: delay-sign.md
+        - name: 'Instrukcje: wyświetlanie zawartości zestawu'
+          href: view-contents.md
+        - name: Przekazywanie dalej typu w środowisku uruchomieniowym języka wspólnego
+          href: type-forwarding.md
+        - name: Przyjazne zestawy
+          href: friend.md
+          items:
+            - name: 'Instrukcje: tworzenie nieoznaczonych przyjaznych zestawów'
+              href: create-unsigned-friend.md
+            - name: 'Instrukcje: tworzenie oznaczonych przyjaznych zestawów'
+              href: create-signed-friend.md
+        - name: 'Instrukcje: określanie, czy plik jest zestawem'
+          href: identify.md
+        - name: 'Instrukcje: ładowanie i zwalnianie zestawów'
+          href: load-unload.md
+        - name: 'Przewodnik: osadzanie typów z zarządzanych zestawów w programie Visual Studio'
+          href: embed-types-visual-studio.md

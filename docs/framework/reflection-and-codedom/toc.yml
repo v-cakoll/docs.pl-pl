@@ -16,6 +16,8 @@
           href: dynamically-loading-and-using-types.md
         - name: 'Instrukcje: Ładowanie zestawów do kontekstu Reflection-Only'
           href: how-to-load-assemblies-into-the-reflection-only-context.md
+        - name: 'Instrukcje: uzyskiwanie informacji o typie i elemencie członkowskim za pomocą odbicia'
+          href: get-type-member-information.md
         - name: Uzyskiwanie dostępu do atrybutów niestandardowych
           href: accessing-custom-attributes.md
         - name: Określanie w pełni kwalifikowanych nazw typów

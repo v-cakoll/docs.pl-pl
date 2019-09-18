@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d32b7f35-29d8-4fb7-ad71-d219edc5e359
-ms.openlocfilehash: 74cb739d381c0b1422d9277be8c3c338a46f8fba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b3d24a958ec93084d03d2ad2e0eb6d9d2507e155
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647418"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048176"
 ---
-# <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a><span data-ttu-id="85a69-102">Instrukcje: żądanie strony internetowej i pobieranie wyników jako strumienia</span><span class="sxs-lookup"><span data-stu-id="85a69-102">How to: Request a Web Page and Retrieve the Results as a Stream</span></span>
-<span data-ttu-id="85a69-103">W tym przykładzie pokazano, jak żądania strony sieci Web do pobierania wyników w strumieniu.</span><span class="sxs-lookup"><span data-stu-id="85a69-103">This example shows how to request a Web page and retrieve the results in a stream.</span></span>  
+# <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a><span data-ttu-id="bbf23-102">Instrukcje: żądanie strony internetowej i pobieranie wyników jako strumienia</span><span class="sxs-lookup"><span data-stu-id="bbf23-102">How to: Request a Web Page and Retrieve the Results as a Stream</span></span>
+<span data-ttu-id="bbf23-103">Ten przykład pokazuje, jak zażądać strony sieci Web i pobrać wyniki w strumieniu.</span><span class="sxs-lookup"><span data-stu-id="bbf23-103">This example shows how to request a Web page and retrieve the results in a stream.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="85a69-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="85a69-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="bbf23-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="bbf23-104">Example</span></span>  
   
 ```csharp  
 WebClient myClient = new WebClient();  
@@ -31,11 +31,11 @@ Dim response As Stream = myClient.OpenRead("http://www.contoso.com/index.htm")
 response.Close()  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="85a69-105">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="85a69-105">Compiling the Code</span></span>  
- <span data-ttu-id="85a69-106">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="85a69-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="bbf23-105">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="bbf23-105">Compiling the Code</span></span>  
+ <span data-ttu-id="bbf23-106">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="bbf23-106">This example requires:</span></span>  
   
-- <span data-ttu-id="85a69-107">Odwołuje się do <xref:System.IO> i <xref:System.Net> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="85a69-107">References to the <xref:System.IO> and <xref:System.Net> namespaces.</span></span>  
+- <span data-ttu-id="bbf23-107">Odwołania do <xref:System.IO> przestrzeni nazw <xref:System.Net> i.</span><span class="sxs-lookup"><span data-stu-id="bbf23-107">References to the <xref:System.IO> and <xref:System.Net> namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="85a69-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="85a69-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bbf23-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="bbf23-108">See also</span></span>
 
-- [<span data-ttu-id="85a69-109">Żądanie danych</span><span class="sxs-lookup"><span data-stu-id="85a69-109">Requesting Data</span></span>](../../../docs/framework/network-programming/requesting-data.md)
+- [<span data-ttu-id="bbf23-109">Żądanie danych</span><span class="sxs-lookup"><span data-stu-id="bbf23-109">Requesting Data</span></span>](requesting-data.md)

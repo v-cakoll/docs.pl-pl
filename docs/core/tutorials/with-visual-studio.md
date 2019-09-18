@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b85f878d8a391581fcc7419b3ca4d656eb5595af
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b42a71993cb120c88b90e867b7af23873b99d280
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660444"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039595"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Kompilowanie C# aplikacji Hello World przy użyciu zestaw .NET Core SDK w programie Visual Studio 2017
 
@@ -18,7 +18,7 @@ W tym temacie przedstawiono krok po kroku wprowadzenie do kompilowania, debugowa
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-[Program Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) z zainstalowanym obciążeniem "Programowanie dla wielu platform w środowisku .NET Core". Aplikację można opracowywać przy użyciu platformy .NET Core 1,1 lub .NET Core 2,0.
+[Program Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) z zainstalowanym obciążeniem "Programowanie dla wielu platform w środowisku .NET Core". Aplikację można opracowywać przy użyciu platformy .NET Core 2,1 lub nowszej.
 
 Więcej informacji znajduje się w temacie [wymagania wstępne dotyczące programu .NET Core w systemie Windows](../windows-prerequisites.md) .
 
@@ -67,7 +67,7 @@ Zwiększ swoją aplikację, aby monitować użytkownika o ich nazwę i wyświetl
 
    Ten kod wyświetla "co to jest Twoja nazwa?" w oknie konsoli i czeka, aż użytkownik wprowadzi ciąg, a następnie klawisz ENTER. Ten ciąg jest przechowywany w zmiennej o nazwie `name`. Pobiera również wartość <xref:System.DateTime.Now?displayProperty=nameWithType> właściwości, która zawiera bieżący czas lokalny i przypisuje go do zmiennej o nazwie `date`. Na koniec używa [ciągu interpolowanego](../../csharp/language-reference/tokens/interpolated.md) , aby wyświetlić te wartości w oknie konsoli.
 
-1. Skompiluj program, wybierając opcję > Kompiluj**kompilację rozwiązania**.
+1. Skompiluj program, **wybierając opcję** > Kompiluj**kompilację rozwiązania**.
 
 1. Uruchom program w trybie debugowania w programie Visual Studio, wybierając zieloną strzałkę na pasku narzędzi, naciskając klawisz F5 lub wybierając > element menu**Rozpocznij debugowanie** debugowania. Odpowiedz na monit, wprowadzając nazwę i naciskając klawisz ENTER.
 
@@ -83,6 +83,6 @@ Aplikacja została utworzona i uruchomiona. Aby opracować profesjonalną aplika
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
-Zamiast aplikacji konsolowej, można również utworzyć bibliotekę klas przy użyciu platformy .NET Core i programu Visual Studio 2017. Aby zapoznać się z krok po kroku, zobacz [Kompilowanie biblioteki klas z C# i .NET Core w programie Visual Studio 2017](library-with-visual-studio.md).
+Zamiast aplikacji konsolowej, można również utworzyć bibliotekę klas przy użyciu platformy .NET Core i programu Visual Studio 2017. Aby zapoznać się z krok po kroku, zobacz [Kompilowanie biblioteki klas C# z i .NET Core w programie Visual Studio 2017](library-with-visual-studio.md).
 
 Możesz również opracować aplikację konsolową .NET Core na komputerach Mac, Linux i Windows za pomocą [Visual Studio Code](https://code.visualstudio.com/), do pobrania edytora kodu. Aby zapoznać się z samouczkiem krok po kroku, zobacz [wprowadzenie z Visual Studio Code](with-visual-studio-code.md).

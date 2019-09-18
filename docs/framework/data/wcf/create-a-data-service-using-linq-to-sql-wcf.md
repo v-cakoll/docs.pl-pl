@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, LINQ to SQL
 - WCF Data Services, providers
 ms.assetid: 3b01c2fd-8c6e-4bf5-b38f-9e61bdc3c328
-ms.openlocfilehash: 7a1075b680ec3310e1bd8d712579872333c6ebed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6489e451f3790e38ea821104fd2aca5a8c091ba6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791050"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053001"
 ---
 # <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>Instrukcje: Tworzenie usługi danych przy użyciu LINQ to SQL źródła danych (Usługi danych programu WCF)
 
@@ -52,7 +52,7 @@ Usługi danych programu WCF udostępnia dane jednostki jako usługę danych. Dos
 
 2. W oknie dialogowym **Dodaj nowy element** wybierz szablon **usługi danych programu WCF** z kategorii **Sieć Web** .
 
-   ![Szablon elementu usługi danych programu WCF w programie Visual Studio 2015](media/wcf-data-service-item-template.png)
+   ![Szablon elementu usługi danych programu WCF w programie Visual Studio 2015](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
    > Szablon **usługi danych programu WCF** jest dostępny w programie visual Studio 2015, ale nie w programie visual Studio 2017.

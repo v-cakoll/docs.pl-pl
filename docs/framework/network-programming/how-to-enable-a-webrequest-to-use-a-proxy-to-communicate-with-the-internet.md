@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 63c0ef2c-44b5-4c54-9804-ba0b9b001ac7
-ms.openlocfilehash: 99bbff5a3350f55f04fdbd6ce7147b6597773322
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d569603fe22e5d8c8f59d21c2777c7c1bfcd531d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624585"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048297"
 ---
 # <a name="how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet"></a>Instrukcje: włączanie korzystania z serwera proxy do komunikacji z Internetem przez element WebRequest
-Ten przykład tworzy wystąpienie globalnych serwera proxy, które spowoduje włączenie dowolnego <xref:System.Net.WebRequest> korzystania z serwera proxy do komunikacji z Internetem. W przykładzie założono, że serwer proxy ma nazwę `webproxy` i że komunikuje się ona na port 80, standardowego portu HTTP.  
+Ten przykład tworzy globalne wystąpienie serwera proxy, które umożliwi <xref:System.Net.WebRequest> korzystanie z serwera proxy do komunikowania się z Internetem. W przykładzie przyjęto założenie, że serwer `webproxy` proxy ma nazwę i komunikuje się z portem 80, standardowy port HTTP.  
   
 ## <a name="example"></a>Przykład  
   
@@ -30,9 +30,9 @@ GlobalProxySelection.Select = proxyObject
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- A [ `using` dyrektywy](../../csharp/language-reference/keywords/using-directive.md) dla **przestrzeni nazw System.Net** przestrzeni nazw.  
+- Dyrektywa dla przestrzeni nazw **System.NET** . [ `using` ](../../csharp/language-reference/keywords/using-directive.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Korzystanie z protokołów aplikacji](../../../docs/framework/network-programming/using-application-protocols.md)
-- [Dostęp do Internetu za pośrednictwem serwera proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+- [Korzystanie z protokołów aplikacji](using-application-protocols.md)
+- [Dostęp do Internetu za pośrednictwem serwera proxy](accessing-the-internet-through-a-proxy.md)

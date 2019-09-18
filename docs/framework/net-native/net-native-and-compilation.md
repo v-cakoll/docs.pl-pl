@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce93ea321c0441208e223efc22cf1f50e98b827c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1a15d30ea4d6e0f4456460248e96428419117d85
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044133"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049439"
 ---
 # <a name="net-native-and-compilation"></a>Architektura .NET Native i kompilacja
 
@@ -82,7 +82,7 @@ Ponieważ łańcuch narzędzi .NET Native łączy kod implementacji w aplikacji 
 
 - Międzyoperacyjność modelu COM.
 
-Jeśli w czasie wykonywania nie ma niezbędnych metadanych lub kodu implementacji, środowisko uruchomieniowe .NET Native zgłasza wyjątek. Można zapobiec tym wyjątkom i upewnić się, że łańcuch narzędzi .NET Native zawiera wymagane metadane i kod implementacji, przy użyciu [pliku dyrektywy środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md), pliku XML, który wyznacza elementy programu, których metadane lub implementacja kod musi być dostępny w czasie wykonywania i przypisuje do nich zasady środowiska uruchomieniowego. Poniżej przedstawiono domyślny plik dyrektywy środowiska uruchomieniowego, który jest dodawany do projektu sklepu Windows, który jest kompilowany przez łańcuch narzędzi .NET Native:
+Jeśli w czasie wykonywania nie ma niezbędnych metadanych lub kodu implementacji, środowisko uruchomieniowe .NET Native zgłasza wyjątek. Można zapobiec tym wyjątkom i upewnić się, że łańcuch narzędzi .NET Native zawiera wymagane metadane i kod implementacji, przy użyciu [pliku dyrektywy środowiska uruchomieniowego](runtime-directives-rd-xml-configuration-file-reference.md), pliku XML, który wyznacza elementy programu, których metadane lub implementacja kod musi być dostępny w czasie wykonywania i przypisuje do nich zasady środowiska uruchomieniowego. Poniżej przedstawiono domyślny plik dyrektywy środowiska uruchomieniowego, który jest dodawany do projektu sklepu Windows, który jest kompilowany przez łańcuch narzędzi .NET Native:
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -96,7 +96,7 @@ Dzięki temu wszystkie typy, a także wszystkie ich elementy członkowskie, we w
 
 ## <a name="net-native-and-ngen"></a>.NET Native i NGEN
 
-[(Natywny Generator obrazu](../../../docs/framework/tools/ngen-exe-native-image-generator.md) (Ngen) kompiluje zestawy do kodu natywnego i instaluje je w pamięci podręcznej obrazów natywnych na komputerze lokalnym. Jednak chociaż program NGEN, taki jak .NET Native, generuje kod natywny, różni się od .NET Native w znaczący sposób:
+[(Natywny Generator obrazu](../tools/ngen-exe-native-image-generator.md) (Ngen) kompiluje zestawy do kodu natywnego i instaluje je w pamięci podręcznej obrazów natywnych na komputerze lokalnym. Jednak chociaż program NGEN, taki jak .NET Native, generuje kod natywny, różni się od .NET Native w znaczący sposób:
 
 - Jeśli dla określonej metody nie jest dostępny obraz natywny, NGEN powróci do kodu JITing. Oznacza to, że obrazy natywne muszą nadal zawierać metadane i IL w przypadku, gdy NGEN wymaga powrotu do kompilacji JIT. Z kolei .NET Native wytwarza tylko obrazy natywne i nie wraca do kompilacji JIT. W związku z tym należy zachować tylko metadane wymagane dla niektórych scenariuszy odbicia, serializacji i międzyoperacyjności.
 
@@ -108,5 +108,5 @@ Dzięki temu wszystkie typy, a także wszystkie ich elementy członkowskie, we w
 
 - [Składniki samoopisujące się i metadane](../../standard/metadata-and-self-describing-components.md)
 - [Wewnątrz .NET Native (wideo Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
-- [Odbicie i architektura .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
-- [Ogólne wskazówki dotyczące rozwiązywania problemów z architekturą .NET Native](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
+- [Odbicie i architektura .NET Native](reflection-and-net-native.md)
+- [Ogólne wskazówki dotyczące rozwiązywania problemów z architekturą .NET Native](net-native-general-troubleshooting.md)

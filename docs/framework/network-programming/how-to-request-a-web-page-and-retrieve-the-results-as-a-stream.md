@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d32b7f35-29d8-4fb7-ad71-d219edc5e359
-ms.openlocfilehash: 74cb739d381c0b1422d9277be8c3c338a46f8fba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b3d24a958ec93084d03d2ad2e0eb6d9d2507e155
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647418"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048176"
 ---
 # <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a>Instrukcje: żądanie strony internetowej i pobieranie wyników jako strumienia
-W tym przykładzie pokazano, jak żądania strony sieci Web do pobierania wyników w strumieniu.  
+Ten przykład pokazuje, jak zażądać strony sieci Web i pobrać wyniki w strumieniu.  
   
 ## <a name="example"></a>Przykład  
   
@@ -34,8 +34,8 @@ response.Close()
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Odwołuje się do <xref:System.IO> i <xref:System.Net> przestrzeni nazw.  
+- Odwołania do <xref:System.IO> przestrzeni nazw <xref:System.Net> i.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Żądanie danych](../../../docs/framework/network-programming/requesting-data.md)
+- [Żądanie danych](requesting-data.md)

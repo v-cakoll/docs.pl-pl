@@ -9,15 +9,15 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
-ms.openlocfilehash: 637301385562247ef9c3dee4d01da319c0cd4d37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eee533e87c868fadc04e26b374b36a0256dcf38e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641869"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047139"
 ---
 # <a name="synchronous-server-socket-example"></a>Przykład synchronicznego gniazda serwera
-Poniższy przykład program tworzy serwer, który odbiera żądania połączenia od klientów. Serwer jest tworzone za pomocą synchronicznego gniazda, więc zawiesza wykonywanie aplikacji serwera podczas oczekiwania na połączenie z klientem. Aplikacja odbiera ciąg od klienta, wyświetla ciąg w konsoli i następnie zwraca ciąg do klienta. Ciąg z klienta może zawierać ciąg "\<EOF >" celu sygnalizowania, że koniec komunikatu.  
+Poniższy przykładowy program tworzy serwer, który odbiera żądania połączenia od klientów. Serwer został skompilowany za pomocą gniazda synchronicznego, więc wykonywanie aplikacji serwera jest zawieszone podczas oczekiwania na połączenie od klienta. Aplikacja otrzymuje ciąg z klienta, wyświetla ciąg w konsoli, a następnie zwraca ciąg z powrotem do klienta. Ciąg z klienta musi zawierać ciąg "\<EOF >", aby sygnalizować koniec komunikatu.  
   
 ```vb  
 Imports System  
@@ -157,6 +157,6 @@ public class SynchronousSocketListener {
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przykład synchronicznego gniazda klienta](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
-- [Używanie synchronicznego gniazda serwera](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
-- [Przykłady kodu gniazd](../../../docs/framework/network-programming/socket-code-examples.md)
+- [Przykład synchronicznego gniazda klienta](synchronous-client-socket-example.md)
+- [Używanie synchronicznego gniazda serwera](using-a-synchronous-server-socket.md)
+- [Przykłady kodu gniazd](socket-code-examples.md)

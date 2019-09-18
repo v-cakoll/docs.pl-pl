@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fff2d3309e5f8872a9333bf3d2f86e52bd67ea5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: ac60fa96b7c9ce6991f89e8c6a37ff5da4a34a50
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971779"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051775"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Instrukcje: Generowanie zestawów podstawowej obsługi międzyoperacyjnej przy użyciu programu Tlbimp.exe
 
 Istnieją dwa sposoby generowania podstawowego zestawu międzyoperacyjnego:
 
-- Przy użyciu [importera biblioteki typów (Tlbimp. exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) dostarczonego przez Windows SDK.
+- Przy użyciu [importera biblioteki typów (Tlbimp. exe)](../tools/tlbimp-exe-type-library-importer.md) dostarczonego przez Windows SDK.
 
-  Najbardziej prostym sposobem tworzenia podstawowych zestawów międzyoperacyjnych jest użycie [Tlbimp. exe (Importer biblioteki typów)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Tlbimp. exe zapewnia następujące zabezpieczenia:
+  Najbardziej prostym sposobem tworzenia podstawowych zestawów międzyoperacyjnych jest użycie [Tlbimp. exe (Importer biblioteki typów)](../tools/tlbimp-exe-type-library-importer.md). Tlbimp. exe zapewnia następujące zabezpieczenia:
 
   - Sprawdza inne zarejestrowane podstawowe zestawy międzyoperacyjności przed utworzeniem nowych zestawów międzyoperacyjnych dla dowolnych odwołań do bibliotek typów zagnieżdżonych.
 
@@ -71,4 +71,4 @@ tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /refer
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Rejestrowanie podstawowych zestawów międzyoperacyjnych](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)
+- [Instrukcje: Rejestrowanie podstawowych zestawów międzyoperacyjnych](how-to-register-primary-interop-assemblies.md)

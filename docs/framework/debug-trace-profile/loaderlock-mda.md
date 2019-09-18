@@ -12,38 +12,38 @@ helpviewer_keywords:
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a70b8c3509b785d70b041b449c759e7994e5984
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3e8769ec972ec76d04d2f22368fdde99de9c6de
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754235"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052544"
 ---
 # <a name="loaderlock-mda"></a>loaderLock MDA
-`loaderLock` Zarządzanego Asystenta debugowania (MDA) wykrywa próby wykonania kodu zarządzanego w wątku, który posiada blokady modułu ładującego systemu operacyjnego Microsoft Windows.  Takiego wykonania jest niedozwolona, ponieważ może to prowadzić do zakleszczenia i korzystanie z biblioteki dll, zanim zostały zainicjowane przez program ładujący systemu operacyjnego.  
+Asystent `loaderLock` debugowania zarządzanego (MDA) wykrywa próby wykonania kodu zarządzanego w wątku, który zawiera blokadę modułu ładującego systemu operacyjnego Microsoft Windows.  Wszelkie takie wykonywanie jest niedozwolone, ponieważ może prowadzić do zakleszczenia i korzystania z bibliotek DLL przed ich zainicjowaniem przez moduł ładujący systemu operacyjnego.  
   
 ## <a name="symptoms"></a>Symptomy  
- Najbardziej typowych błędów podczas wykonywania kodu wewnątrz blokady modułu ładującego systemu operacyjnego jest, że wątki będą zakleszczenie podczas próby wywołania innych funkcji Win32, które wymagają również blokady modułu ładującego.  Przykłady takich funkcji `LoadLibrary`, `GetProcAddress`, `FreeLibrary`, i `GetModuleHandle`.  Aplikacja nie może bezpośrednio wywołać te funkcje; środowisko uruchomieniowe języka wspólnego (CLR) może wywołać te funkcje, w wyniku wyższe wywołania poziomu, takie jak <xref:System.Reflection.Assembly.Load%2A> lub pierwsze wywołanie platformę wywołania metody.  
+ Najbardziej typowym błędem podczas wykonywania kodu wewnątrz blokady modułu ładującego systemu operacyjnego jest to, że wątki będą zakleszczony podczas próby wywołania innych funkcji Win32, które również wymagają blokady modułu ładującego.  Przykładami takich funkcji są `LoadLibrary` `FreeLibrary`, `GetProcAddress`,, i `GetModuleHandle`.  Aplikacja może nie wywoływać bezpośrednio tych funkcji; środowisko uruchomieniowe języka wspólnego (CLR) może wywoływać te funkcje w wyniku wywołania wyższego poziomu, <xref:System.Reflection.Assembly.Load%2A> takiego jak lub pierwszego wywołania metody wywołania platformy.  
   
- Zakleszczenie może również wystąpić, jeśli wątek oczekuje na inny wątek rozpoczęcia lub zakończenia.  Gdy wątku rozpoczyna się lub kończy wykonywanie, go uzyskać blokady modułu ładującego systemu operacyjnego do dostarczenia zdarzeń, do których to dotyczy bibliotek DLL.  
+ Zakleszczenie mogą również wystąpić, jeśli wątek oczekuje na uruchomienie lub zakończenie innego wątku.  Gdy wątek zostanie uruchomiony lub zakończy wykonywanie, musi uzyskać blokadę modułu ładującego systemu operacyjnego, aby dostarczyć zdarzenia do bibliotek DLL, których to dotyczy.  
   
- Ponadto istnieją przypadki, w których może wystąpić wywołania do biblioteki dll, zanim tych bibliotek DLL zostały poprawnie zainicjowane przez program ładujący systemu operacyjnego.  Inaczej niż w przypadku awarii zakleszczenia, których można zdiagnozować, sprawdzając stosów wszystkich wątków, związane z zakleszczaniem, jest bardzo trudne do zdiagnozowania użycie niezainicjowanej bibliotek DLL, bez korzystania z tego MDA.  
+ Na koniec istnieją przypadki, w których mogą wystąpić wywołania bibliotek DLL, zanim te biblioteki DLL zostały prawidłowo zainicjowane przez program ładujący systemu operacyjnego.  W przeciwieństwie do błędów zakleszczenia, które można zdiagnozować, sprawdzając stosy wszystkich wątków związanych z zakleszczeniem, trudno jest zdiagnozować użycie niezainicjowanych bibliotek DLL bez użycia tego MDA.  
   
 ## <a name="cause"></a>Przyczyna  
- Zarządzanych/niezarządzanych C++ zestawy mieszane stworzona z myślą o wersji programu .NET Framework 1.0 i 1.1, zazwyczaj próba wykonania kodu zarządzanego wewnątrz blokady modułu ładującego, chyba że specjalne jest zajęty, na przykład, łączenie za pomocą **/noentry**.
+ Mieszane zestawy zarządzane/ C++ niezarządzane skompilowane dla .NET Framework wersji 1,0 lub 1,1 zazwyczaj próbują wykonać kod zarządzany wewnątrz blokady modułu ładującego, chyba że zostanie podjęta specjalna opieka, na przykład łączenie z **/NOENTRY**.
   
- Zarządzanych/niezarządzanych C++ zestawów mieszanych stworzona z myślą o .NET Framework w wersji 2.0 są mniej podatne na te problemy mające zmniejszenie ryzyka, podobnie jak aplikacje przy użyciu niezarządzanych bibliotek DLL, które naruszają reguły systemu operacyjnego.  Na przykład, jeśli niezarządzane DLL `DllMain` wywołania punktu wejścia `CoCreateInstance` można uzyskać obiektu zarządzanego, która została udostępniona modelowi COM, wynik jest próba wykonania kodu zarządzanego wewnątrz blokady modułu ładującego. Aby uzyskać więcej informacji na temat problemów blokady modułu ładującego .NET Framework w wersji 2.0 lub nowszej, zobacz [inicjowanie zestawów mieszanych](/cpp/dotnet/initialization-of-mixed-assemblies).  
+ Mieszane zestawy zarządzane/ C++ niezarządzane skompilowane dla .NET Framework w wersji 2,0 są mniej podatne na te problemy, co zmniejsza ryzyko związane z aplikacjami korzystającymi z niezarządzanych bibliotek DLL, które naruszają reguły systemu operacyjnego.  Na przykład, jeśli niezarządzany punkt `DllMain` wejścia biblioteki DLL `CoCreateInstance` wywołuje obiekt zarządzany, który został ujawniony w modelu COM, wynikiem jest próba wykonania kodu zarządzanego wewnątrz blokady modułu ładującego. Aby uzyskać więcej informacji na temat problemów z blokadą modułu ładującego w .NET Framework w wersji 2,0 lub nowszej, zobacz [Inicjowanie zestawów mieszanych](/cpp/dotnet/initialization-of-mixed-assemblies).  
   
 ## <a name="resolution"></a>Rozwiązanie  
- W Visual C++ .NET 2002 i Visual C++ .NET 2003 biblioteki DLL skompilowany przy użyciu `/clr` — opcja kompilatora niejednoznaczny można zakleszczenie podczas ładowania; ten problem został wywołany mieszane problem DLL ładowania lub modułu ładującego blokady. W programie Visual C++ 2005 i nowszych prawie wszystkie niedeterminizmu został usunięty z mieszanych bibliotek DLL, proces ładowania. Istnieje jednak kilka pozostałe scenariusze, dla których moduł ładujący blokady (sposób deterministyczny) jest możliwe. Aby uzyskać szczegółowe zestawienie przyczynami i rozwiązaniami w przypadku pozostałych problemów blokady modułu ładującego, zobacz [inicjowanie zestawów mieszanych](/cpp/dotnet/initialization-of-mixed-assemblies). Ten temat nie wskazuje na problem blokady modułu ładującego, należy zbadać stosu wątku w celu ustalenia, dlaczego występuje blokady modułu ładującego i jak rozwiązać ten problem. Przyjrzyj się ślad stosu dla wątku, który uaktywnił to zdarzenie MDA.  Wątek podejmuje próbę nielegalnego mogą wywoływać kodu zarządzanego podczas utrzymywania blokady modułu ładującego systemu operacyjnego.  Widoczne będą prawdopodobnie bibliotekę DLL `DllMain` lub równoważne wpis punktu na stosie.  Zasady systemu operacyjnego zgodnie z prawem jak od wewnątrz punkt wejścia są bardzo ograniczona.  Te zasady uniemożliwiają dowolnego zarządzanego wykonania.  
+ W programie C++ Visual .NET 2002 i C++ Visual .NET 2003 biblioteki DLL `/clr` skompilowane z opcją kompilatora mogły być niezadeterministyczne zakleszczenie po załadowaniu; ten problem został wywołany przez mieszany plik DLL ładowania lub blokady modułu ładującego. W programie C++ Visual 2005 i nowszych prawie wszystkie inne niż jej ustalenia zostały usunięte z procesu ładowania mieszanej biblioteki DLL. Istnieje jednak kilka pozostałych scenariuszy, dla których zablokowanie modułu ładującego może być (deterministycznie). Aby zapoznać się ze szczegółowymi informacjami na temat przyczyn i rozwiązań dla pozostałych problemów z blokadą modułu ładującego, zobacz [Inicjowanie zestawów mieszanych](/cpp/dotnet/initialization-of-mixed-assemblies). Jeśli ten temat nie identyfikuje problemu blokady modułu ładującego, należy sprawdzić stos wątku, aby określić, dlaczego występuje blokada modułu ładującego i jak rozwiązać problem. Przyjrzyj się śladowi stosu dla wątku, który aktywuje to MDA.  Wątek podejmuje próbę niedozwolonego wywołania kodu zarządzanego podczas utrzymywania blokady modułu ładującego systemu operacyjnego.  Prawdopodobnie na stosie zobaczysz `DllMain` lub równoważny punkt wejścia biblioteki DLL.  Reguły systemu operacyjnego, dla których można legalnie wykonywać w tym punkcie wejścia, są dość ograniczone.  Te reguły nie wykluczają żadnego zarządzanego wykonania.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- Zazwyczaj będzie zakleszczenie kilku wątków wewnątrz procesu.  Jeden z tych wątków prawdopodobnie będzie odpowiedzialny za wykonanie wyrzucania elementów bezużytecznych, więc ten zakleszczeń może mieć istotny wpływ na cały proces wątku.  Ponadto uniemożliwi dodatkowych operacji, które wymagają blokady modułu ładującego systemu operacyjnego, takich jak ładowanie i zwalnianie zestawów i bibliotek DLL i uruchamianie lub zatrzymywanie wątków.  
+ Zazwyczaj kilka wątków w procesie zostanie zakleszczenie.  Jeden z tych wątków prawdopodobnie jest wątkiem odpowiedzialnym za wykonywanie wyrzucania elementów bezużytecznych, więc to zakleszczenie może mieć istotny wpływ na cały proces.  Ponadto uniemożliwią one wykonywanie dodatkowych operacji wymagających blokady modułu ładującego systemu operacyjnego, takich jak ładowanie i zwalnianie zestawów lub bibliotek DLL oraz uruchamianie lub zatrzymywanie wątków.  
   
- W niektórych przypadkach nietypowe użytkownik może również dla naruszenia zasad dostępu lub podobne problemy w bibliotekach DLL, które są wywoływane przed zostały zainicjowane.  
+ W niektórych nietypowych przypadkach możliwe jest również naruszenie zasad dostępu lub podobne problemy, które mogą zostać wyzwolone w bibliotekach DLL, które są wywoływane przed zainicjowaniem.  
   
 ## <a name="output"></a>Dane wyjściowe  
- To zdarzenie MDA zgłasza, że niedozwolony zarządzanego wykonania podjęto próbę.  Należy sprawdzić stosu wątku w celu ustalenia, dlaczego występuje blokady modułu ładującego i jak rozwiązać ten problem.  
+ To zdarzenie MDA zgłasza, że podjęto próbę wykonania niedozwolonego zarządzanego wykonania.  Należy sprawdzić stos wątku, aby określić, dlaczego występuje blokada modułu ładującego i jak rozwiązać problem.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -57,4 +57,4 @@ ms.locfileid: "61754235"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)

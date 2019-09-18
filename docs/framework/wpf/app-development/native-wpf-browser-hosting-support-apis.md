@@ -7,12 +7,12 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: 8b52ec2b1701d03bbcc11048610034a849a315e7
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 29ff388685c67d06d7c5866a46954d5ade72acb1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817931"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053364"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>Macierzysta przeglądarka WPF wsparcia API hostingu
 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Hosting aplikacji w przeglądarkach sieci Web jest ułatwiony przez aktywny serwer dokumentów (znany również jako DocObject) zarejestrowany z hosta WPF. Program Internet Explorer można bezpośrednio aktywować i zintegrować z aktywnym dokumentem. W przypadku hostowania aplikacji XBAP i luźnych dokumentów XAML w przeglądarkach przeglądarki Mozilla program [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] udostępnia wtyczkę NPAPI, która zapewnia podobne środowisko hostingu [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] na serwerze aktywnego dokumentu, jak w przypadku programu Internet Explorer. Jednak Najprostszym sposobem hostowania aplikacji XBAP i dokumentów XAML w innych przeglądarkach i aplikacjach autonomicznych jest za pośrednictwem kontrolki przeglądarki sieci Web programu Internet Explorer. Kontrolka przeglądarka sieci Web udostępnia złożone środowisko hostingu aktywnego dokumentu, ale umożliwia jego własnemu hostowi Dostosowywanie i zwiększanie tego środowiska oraz komunikowanie się bezpośrednio z bieżącym obiektem aktywnego dokumentu.  
@@ -22,7 +22,7 @@ ms.locfileid: "68817931"
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
  Implementacja programu [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) serwera aktywnego dokumentu WPF obsługuje liczne polecenia związane z nawigacją i przeglądarką dla standardowej grupy poleceń OLE (z identyfikatorem GUID grupy poleceń o wartości null). Ponadto rozpoznaje niestandardową grupę poleceń o nazwie CGID_PresentationHost. Obecnie istnieje tylko jedno polecenie zdefiniowane w tej grupie.  
   
-```  
+```cpp  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  
 enum PresentationHostCommands {   
    PHCMDID_TABINTO = 1   

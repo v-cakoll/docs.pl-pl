@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ff02c5856e4ee48c8e5cf375cc68d92c76737c7
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: d1d7e6e098b6ce497dfe74f0afe2322b33a787c6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988394"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053255"
 ---
 # <a name="64-bit-applications"></a>Aplikacje 64-bitowe
 Podczas kompilowania aplikacji można określić, że powinna być uruchamiana w systemie operacyjnym Windows 64-bitowym jako aplikacja natywna lub w emulatorze WOW64 (Windows 32-bit w systemie Windows 64-bit). Emulator WOW64 to środowisko zgodności, które umożliwia uruchamianie aplikacji 32-bitowych w systemie 64-bitowym. Emulator WOW64 jest uwzględniony we wszystkich 64-bitowych wersjach systemu operacyjnego Windows.  
@@ -26,7 +26,7 @@ Podczas kompilowania aplikacji można określić, że powinna być uruchamiana w
 > [!NOTE]
 > Ze względu na sposób projektowania emulacji x86 i podsystemu WOW64 dla rodziny procesorów Itanium aplikacje są ograniczone do wykonywania na jednym procesorze. Czynniki te zmniejszają wydajność i skalowalność 32-.NET Framework bitowych aplikacji, które działają w systemach opartych na procesorze Itanium. Zalecamy używanie .NET Framework 4, który obejmuje natywną 64-bitową obsługę systemów opartych na procesorze Itanium w celu zwiększenia wydajności i skalowalności.  
   
- Domyślnie po uruchomieniu 64-bitowej aplikacji zarządzanej w 64-bitowym systemie operacyjnym Windows można utworzyć obiekt o wartości nie większej niż 2 gigabajty (GB). Jednak w .NET Framework 4,5 można zwiększyć ten limit.  Aby uzyskać więcej informacji, zobacz [ \<gcAllowVeryLargeObjects > elementu](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md).  
+ Domyślnie po uruchomieniu 64-bitowej aplikacji zarządzanej w 64-bitowym systemie operacyjnym Windows można utworzyć obiekt o wartości nie większej niż 2 gigabajty (GB). Jednak w .NET Framework 4,5 można zwiększyć ten limit.  Aby uzyskać więcej informacji, zobacz [ \<gcAllowVeryLargeObjects > elementu](./configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md).  
   
  Wiele zestawów działa identycznie na 32-bitowym CLR i 64-bitowym środowisku CLR. Niektóre programy mogą jednak zachowywać się inaczej, w zależności od środowiska CLR, jeśli zawierają jedną lub więcej z następujących elementów:  
   
@@ -61,6 +61,6 @@ Podczas kompilowania aplikacji można określić, że powinna być uruchamiana w
 |Visual C++|Możesz tworzyć aplikacje platform-niezależny od, Microsoft pośredniego języka (MSIL) za pomocą **/CLR: Safe**. Aby uzyskać więcej informacji, zobacz [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Wizualizacja C++ zawiera oddzielny kompilator dla każdego 64-bitowego systemu operacyjnego. Aby uzyskać więcej informacji na temat sposobu użycia C++ wizualizacji do tworzenia natywnych aplikacji działających w 64-bitowym systemie operacyjnym Windows, zobacz [64-bitowe programowanie](/cpp/build/configuring-programs-for-64-bit-visual-cpp).|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Określanie stanu pliku .exe lub pliku .dll  
- Aby określić, czy plik. exe lub plik DLL ma być uruchamiany tylko na określonej platformie, czy w emulatorze WOW64, użyj [CorFlags. exe (narzędzie konwersji CorFlags)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md) bez opcji. Można również użyć CorFlags. exe, aby zmienić stan platformy pliku. exe lub pliku dll. W nagłówku CLR zestawu programu Visual Studio jest ustawiony numer wersji głównej środowiska uruchomieniowego na 2, a dla dodatkowego numeru wersji środowiska uruchomieniowego ustawiono wartość 5. Aplikacje, które mają niewielką wersję środowiska uruchomieniowego ustawioną na 0, są traktowane jako starsze aplikacje i są zawsze wykonywane w emulatorze WOW64.  
+ Aby określić, czy plik. exe lub plik DLL ma być uruchamiany tylko na określonej platformie, czy w emulatorze WOW64, użyj [CorFlags. exe (narzędzie konwersji CorFlags)](./tools/corflags-exe-corflags-conversion-tool.md) bez opcji. Można również użyć CorFlags. exe, aby zmienić stan platformy pliku. exe lub pliku dll. W nagłówku CLR zestawu programu Visual Studio jest ustawiony numer wersji głównej środowiska uruchomieniowego na 2, a dla dodatkowego numeru wersji środowiska uruchomieniowego ustawiono wartość 5. Aplikacje, które mają niewielką wersję środowiska uruchomieniowego ustawioną na 0, są traktowane jako starsze aplikacje i są zawsze wykonywane w emulatorze WOW64.  
   
  Aby programowo zbadać plik exe lub dll w celu sprawdzenia, czy ma on być uruchamiany tylko na określonej platformie lub w emulatorze WOW64, użyj <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=nameWithType> metody.

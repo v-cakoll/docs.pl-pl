@@ -10,19 +10,19 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: 563802be655e0cb66c9a2735a64da9d7723c2a43
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6e04085db0fa5a4c4170846dc4ac10d0131032a7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401524"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053799"
 ---
 # <a name="xclass-directive"></a>x:Class — dyrektywa
 Konfiguruje kompilację znaczników XAML, aby dołączyć klasy częściowe między adiustacją i kodem. Klasa fragmentu kodu jest definiowana w osobnym pliku kodu w języku Common Language Specification (CLS), natomiast Klasa fragmentu znaczników jest zazwyczaj tworzona przez generowanie kodu podczas kompilacji XAML.  
   
 ## <a name="xaml-attribute-usage"></a>Użycie atrybutu języka XAML  
   
-```  
+```xaml  
 <object x:Class="namespace.classname"...>  
   ...  
 </object>  
@@ -32,7 +32,7 @@ Konfiguruje kompilację znaczników XAML, aby dołączyć klasy częściowe mię
   
 |||  
 |-|-|  
-|`namespace`|Opcjonalny. Określa przestrzeń nazw CLR, która zawiera klasę częściową identyfikowaną przez `classname`. Jeśli `namespace` jest określony, kropka (.) `namespace` oddziela i `classname`. Zobacz uwagi.|  
+|`namespace`|Opcjonalna. Określa przestrzeń nazw CLR, która zawiera klasę częściową identyfikowaną przez `classname`. Jeśli `namespace` jest określony, kropka (.) `namespace` oddziela i `classname`. Zobacz uwagi.|  
 |`classname`|Wymagane. Określa nazwę CLR klasy częściowej, która łączy załadowany kod XAML i związany z kodem dla tego języka XAML.|  
   
 ## <a name="dependencies"></a>Zależności  

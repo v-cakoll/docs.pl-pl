@@ -2,44 +2,44 @@
 title: Współpraca równorzędna
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-ms.openlocfilehash: 0c257782ad391bb8de61caffdd13af1f2872ef6c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7cf92f6bf3c269e584cb8b3cdcf910be5b89fd7e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623175"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047384"
 ---
-# <a name="peer-to-peer-collaboration"></a>Peer-to-peer współpracy
+# <a name="peer-to-peer-collaboration"></a>Współpraca między elementami równorzędnymi
 
-Sieci peer-to-peer to wykorzystania stosunkowo zaawansowanych komputerów (komputery osobiste), znajdujące się na granicy Internetu dla zadań obliczeniowej więcej niż tylko opartego na kliencie. Nowoczesne komputer osobisty (PC) ma bardzo szybki procesor, pamięć ogromna i dużych dysków twardych, które są w pełni wykorzystywane podczas wykonywania typowych zadań obliczeniowych, takich jak wiadomości e-mail i przeglądania sieci Web. Nowoczesnych PC łatwo może działać jako klient i serwer (element równorzędny) dla wielu typów aplikacji.  
+Sieć równorzędna to użycie stosunkowo wydajnych komputerów (komputerów osobistych), które znajdują się na granicy Internetu przez więcej niż tylko zadania obliczeniowe oparte na kliencie. Nowoczesny komputer osobisty (komputer) ma bardzo szybki procesor, olbrzymią pamięć i duży dysk twardy, w którym żaden z nich nie jest w pełni wykorzystany podczas wykonywania typowych zadań obliczeniowych, takich jak poczta e-mail i przeglądanie w sieci Web. Nowoczesny komputer może łatwo pełnić rolę klienta i serwera (elementu równorzędnego) dla wielu typów aplikacji.  
   
-Infrastruktura współpracy Peer-to-Peer jest uproszczone wdrożenia infrastruktury Peer-to-Peer Microsoft Windows, który wykorzystuje osoby w pobliżu mnie usługi w systemach Windows Vista i nowszych platform. Najlepiej jest używana dla aplikacji z obsługą elementów równorzędnych w obrębie podsieci dla którego osoby w pobliżu mi usługa działa, chociaż może obsłużyć, punkty końcowe w Internecie lub także kontaktów. Zawiera typowe skontaktuj się z kierownika któremu jest używany przez Live Messenger i innych aplikacji obsługujących na żywo, aby określić, skontaktuj się z punktami końcowymi, dostępności i obecności.  
+Infrastruktura współpracy równorzędnej jest uproszczoną implementacją infrastruktury równorzędnej systemu Microsoft Windows, która wykorzystuje usługę osoby niemal ja w systemie Windows Vista i nowszych platformach. Najlepiej używać w przypadku aplikacji obsługujących elementy równorzędne w podsieci, dla której działa usługa osoby niemal ja, chociaż może ona również kierować do Internetu lub kontakty. Obejmuje wspólny Menedżer kontaktów używany przez program Live Messenger i inne aplikacje obsługujące informacje na żywo w celu określenia punktów końcowych kontaktu, dostępności i obecności.  
   
 ## <a name="collaboration-applications"></a>Aplikacje współpracy
 
- Aplikacja typowych współpracy peer-to-peer składa się z następujących czynności:  
+ Typowa aplikacja do współpracy równorzędnej składa się z następujących kroków:  
   
-- Elementu równorzędnego określa tożsamość elementu równorzędnego, kto jest zainteresowany hostingu sesji współpracy  
+- Element równorzędny Określa tożsamość elementu równorzędnego, który jest interesujący hosting sesji współpracy  
   
-- Do obsługi sesji zostaje wysłane żądanie licencjonowania, jakiś sposób, i elementu równorzędnego hosta wyraża zgodę na zarządzanie działania współpracy.  
+- Żądanie hostowania sesji jest wysyłane, w dowolny sposób, a element równorzędny hosta zgadza się na zarządzanie działaniem współpracy.  
   
-- Host zaprasza kontaktów w podsieci (w tym obiekt żądający) do sesji.  
+- Host zaprasza do sesji kontakty w podsieci (łącznie z obiektem żądającym).  
   
-- Wszystkich elementów równorzędnych, którzy chcą współpracy może dodać hosta do ich menedżerów skontaktuj się z pomocą.  
+- Wszystkie elementy równorzędne, które chcą współpracować, mogą dodać hosta do menedżerów kontaktu.  
   
-- Większość elementów równorzędnych będzie wysyłać odpowiedzi na zaproszenie zaakceptowane lub odrzucone, powrót do elementu równorzędnego hosta w odpowiednim czasie.  
+- Większość elementów równorzędnych wyśle odpowiedzi na zaproszenie, niezależnie od tego, czy zostały zaakceptowane lub odrzucone, z powrotem do węzła równorzędnego hosta.  
   
-- Wszystkie elementy równorzędne, którzy będą współpracować spowoduje subskrypcji na węźle równorzędnym hosta.  
+- Wszystkie elementy równorzędne, które chcą współpracować, będą subskrybować elementy równorzędne hosta.  
   
-- Podczas elementów równorzędnych wykonują czynności ich początkową współpracy, peer hosta mogą dodawać zdalnych elementów równorzędnych do swojego menedżera kontaktu. Również przetwarza wszystkie odpowiedzi zaproszenia, aby określić, kto zaakceptował, który została odrzucona, a który nie ma odpowiedzi.  Może spowodować anulowanie zaproszeń do tych, którzy nie ma odpowiedzi lub wykonywanie niektórych innych działań.  
+- Gdy elementy równorzędne wykonują swoje początkowe działania dotyczące współpracy, element równorzędny hosta może dodać zdalnych elementów równorzędnych do Menedżera kontaktów. Przetwarza także wszystkie odpowiedzi na zaproszenia, aby określić, kto zaakceptował, kto odrzucił i kto nie odpowiedział.  Może ona anulować zaproszenia do osób, które nie odpowiedziały lub wykonywać inne działania.  
   
-- W tym momencie równorzędnej hosta można uruchomić sesję współpracy z wszystkich elementów równorzędnych zaproszonego lub zarejestrować aplikację za pomocą infrastruktury współpracy.  P2p aplikacje korzystają z infrastruktury współpracy Peer-to-Peer i <xref:System.Net.PeerToPeer.Collaboration> przestrzeni nazw na potrzeby koordynowania komunikacji dla gier, biuletyny, konferencje i inne aplikacje bezserwerowe obecności.  
+- W tym momencie element równorzędny hosta może rozpocząć sesję współpracy ze wszystkimi zaproszonymi elementami równorzędnymi lub zarejestrować aplikację w infrastrukturze współpracy.  Aplikacje P2P wykorzystują infrastrukturę współpracy równorzędnej i <xref:System.Net.PeerToPeer.Collaboration> przestrzeń nazw w celu koordynowania komunikacji dla gier, tablic biuletynów, konferencji i innych aplikacji niezwiązanych z nieobecnością serwerów.  
   
-## <a name="peer-to-peer-networking-security"></a>Zabezpieczenia sieci peer-to-peer  
+## <a name="peer-to-peer-networking-security"></a>Zabezpieczenia sieci równorzędnej  
 
- W domenie usługi Active Directory kontrolery domeny zapewniają usługi uwierzytelniania, przy użyciu protokołu Kerberos. W środowisku bez użycia serwera elementu równorzędnego równorzędnym należy podać własny mechanizm uwierzytelniania. Peer-to-Peer Networking dowolny węzeł może pełnić urzędu certyfikacji, usuwając wymagania certyfikatu głównego w magazynie zaufany główny urząd certyfikacji każdego elementu równorzędnego. Uwierzytelnianie jest obsługiwane przy użyciu certyfikatów z podpisem własnym, w formacie certyfikatu x.509. Są certyfikaty, które są tworzone przez każdy komputer, która powoduje wygenerowanie pary kluczy publiczny klucz/prywatny i certyfikat, który jest podpisany przy użyciu klucza prywatnego. Certyfikat z podpisem własnym służy do uwierzytelniania i podaj informacje o jednostce elementów równorzędnych. Takich jak uwierzytelnianie X.509 uwierzytelnianie sieci węzłów równorzędnych opiera się na łańcuch certyfikatów śledzenia do klucza publicznego, który jest zaufany.  
+ W domenie Active Directory kontrolery domeny zapewniają usługi uwierzytelniania przy użyciu protokołu Kerberos. W środowisku równorzędnym bezserwerowym elementy równorzędne muszą zapewnić własne uwierzytelnianie. W przypadku sieci równorzędnej dowolny węzeł może pełnić rolę urzędu certyfikacji, usuwając wymóg certyfikatu głównego w zaufanym magazynie głównym każdego elementu równorzędnego. Uwierzytelnianie jest zapewniane przy użyciu certyfikatów z podpisem własnym, sformatowane jako certyfikaty X. 509. Są to certyfikaty, które są tworzone przez poszczególne elementy równorzędne, które generują parę klucz publiczny/prywatny i certyfikat podpisany przy użyciu klucza prywatnego. Certyfikat z podpisem własnym jest używany do uwierzytelniania i dostarczania informacji o jednostce równorzędnej. Podobnie jak w przypadku uwierzytelniania X. 509, Uwierzytelnianie sieci równorzędnej polega na śledzeniu łańcucha certyfikatów z powrotem do klucza publicznego, który jest zaufany.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Net.PeerToPeer.Collaboration>
-- [Przestrzeń nazw System.Net.PeerToPeer.Collaboration — informacje](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)
+- [Przestrzeń nazw System.Net.PeerToPeer.Collaboration — informacje](about-the-system-net-peertopeer-collaboration-namespace.md)

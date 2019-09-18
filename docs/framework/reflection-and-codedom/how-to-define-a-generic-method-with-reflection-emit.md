@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a224093b47241d951b463a7f3e0be389bba2806
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 857bad224d1a88c7011a42d0595b17b1810381aa
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043724"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046062"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Instrukcje: Definiowanie metody ogólnej przy użyciu emisji odbicia
 
@@ -27,7 +27,7 @@ Druga procedura pokazuje, jak emitować treść metody i jak używać parametró
 Trzecia procedura pokazuje, jak wywołać metodę rodzajową.
 
 > [!IMPORTANT]
-> Metoda nie jest typowa, ponieważ należy do typu ogólnego i używa parametrów typu tego typu. Metoda jest generyczna tylko wtedy, gdy ma własną listę parametrów typu. Metoda generyczna może być wyświetlana w nieogólnym typie, jak w tym przykładzie. Przykład niegenerycznej metody w typie ogólnym można znaleźć w temacie [How to: Zdefiniuj typ ogólny przy użyciu emisji](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)odbicia.
+> Metoda nie jest typowa, ponieważ należy do typu ogólnego i używa parametrów typu tego typu. Metoda jest generyczna tylko wtedy, gdy ma własną listę parametrów typu. Metoda generyczna może być wyświetlana w nieogólnym typie, jak w tym przykładzie. Przykład niegenerycznej metody w typie ogólnym można znaleźć w temacie [How to: Zdefiniuj typ ogólny przy użyciu emisji](how-to-define-a-generic-type-with-reflection-emit.md)odbicia.
 
 ### <a name="to-define-a-generic-method"></a>Aby zdefiniować metodę rodzajową
 
@@ -36,7 +36,7 @@ Trzecia procedura pokazuje, jak wywołać metodę rodzajową.
     [!code-csharp[GenericMethodHowTo#20](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#20)]
     [!code-vb[GenericMethodHowTo#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#20)]
 
-2. Zdefiniuj zestaw dynamiczny i moduł dynamiczny, aby zawierały typ, do którego należy Metoda ogólna. W tym przypadku zestaw ma tylko jeden moduł o nazwie `DemoMethodBuilder1`, a nazwa modułu jest taka sama jak nazwa zestawu i rozszerzenie. W tym przykładzie zestaw jest zapisywany na dysku, a także wykonywany, więc <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType> został określony. Można użyć [Ildasm. exe (Il dezasembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) , aby przejrzeć DemoMethodBuilder1. dll i porównać go z językiem pośrednim firmy Microsoft (MSIL) dla metody pokazanej w kroku 1.
+2. Zdefiniuj zestaw dynamiczny i moduł dynamiczny, aby zawierały typ, do którego należy Metoda ogólna. W tym przypadku zestaw ma tylko jeden moduł o nazwie `DemoMethodBuilder1`, a nazwa modułu jest taka sama jak nazwa zestawu i rozszerzenie. W tym przykładzie zestaw jest zapisywany na dysku, a także wykonywany, więc <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType> został określony. Można użyć [Ildasm. exe (Il dezasembler)](../tools/ildasm-exe-il-disassembler.md) , aby przejrzeć DemoMethodBuilder1. dll i porównać go z językiem pośrednim firmy Microsoft (MSIL) dla metody pokazanej w kroku 1.
 
     [!code-csharp[GenericMethodHowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#2)]
     [!code-vb[GenericMethodHowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#2)]
@@ -156,7 +156,7 @@ Poniższy przykład kodu tworzy typ `DemoType`nieogólny, przy użyciu `Factory`
 
 Metoda ma jeden parametr formalny, który jest tablicą `TInput`. Metoda zwraca wystąpienie `TOutput` , które zawiera wszystkie elementy tablicy wejściowej. `TOutput`może to być dowolny typ kolekcji ogólnej implementującej <xref:System.Collections.Generic.ICollection%601> interfejs generyczny.
 
-Gdy kod jest wykonywany, zestaw dynamiczny jest zapisywany jako DemoGenericMethod1. dll i można go sprawdzić przy użyciu [Ildasm. exe (Il dezasembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).
+Gdy kod jest wykonywany, zestaw dynamiczny jest zapisywany jako DemoGenericMethod1. dll i można go sprawdzić przy użyciu [Ildasm. exe (Il dezasembler)](../tools/ildasm-exe-il-disassembler.md).
 
 > [!NOTE]
 > Dobrym sposobem, aby dowiedzieć się, jak emitować kod, napisać Visual Basic, C#lub program wizualny C++ , który wykonuje zadanie, które próbujesz emitować, i użyć dezasembler do sprawdzenia MSIL utworzonego przez kompilator.
@@ -169,4 +169,4 @@ Przykład kodu zawiera kod źródłowy, który jest odpowiednikiem emitowanej me
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Reflection.Emit.MethodBuilder>
-- [Instrukcje: Definiowanie typu ogólnego przy użyciu emisji odbicia](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+- [Instrukcje: Definiowanie typu ogólnego przy użyciu emisji odbicia](how-to-define-a-generic-type-with-reflection-emit.md)

@@ -7,23 +7,23 @@ helpviewer_keywords:
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7876e21286ee16f16fa51939b09ffd0583b134d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92c7bbfe2c35aa1474c83eae49240af39b664714
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644521"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052048"
 ---
 # <a name="deploying-net-framework-applications"></a>Wdrażanie aplikacji .NET Framework
-Ta sekcja dokumentacji .NET Framework zawiera podstawowe informacje dotyczące wdrażania aplikacji .NET Framework, w tym wytyczne dotyczące ładowania zestawów, rozpoznawania odwołań do zestawów i zwiększanie wydajności aplikacji za pomocą generowanie obrazu natywnego.  
+W tej części dokumentacji .NET Framework znajdują się podstawowe informacje dotyczące wdrażania aplikacji .NET Framework, w tym wskazówki dotyczące ładowania zestawów, rozwiązywania odwołań do zestawów i ulepszania wydajności aplikacji. Dzięki generacji obrazu natywnego.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- W tym artykule opisano, jak środowisko uruchomieniowe języka wspólnego lokalizuje i wiąże zestawów, które składają się na aplikację.  
+ [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](how-the-runtime-locates-assemblies.md)  
+ Opisuje, jak środowisko uruchomieniowe języka wspólnego lokalizuje i tworzy powiązania z zestawami tworzącymi aplikację.  
   
- [Najlepsze praktyki dotyczące ładowania zestawu](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
- W tym artykule omówiono sposób, aby uniknąć problemów tożsamości typu, który może prowadzić do <xref:System.InvalidCastException>, <xref:System.MissingMethodException>i inne błędy.  
+ [Najlepsze praktyki dotyczące ładowania zestawu](best-practices-for-assembly-loading.md)  
+ Omawia sposoby, <xref:System.MissingMethodException>aby uniknąć problemów z tożsamością typu, które <xref:System.InvalidCastException>mogą prowadzić do innych błędów.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Podręcznik programowania](../../../docs/framework/development-guide.md)
+- [Podręcznik programowania](../development-guide.md)

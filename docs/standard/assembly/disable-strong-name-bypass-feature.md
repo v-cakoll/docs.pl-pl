@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wyłącz funkcję pomijania silnej nazwy'
+title: 'Instrukcje: wyłączanie funkcji pomijania silnej nazwy'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-name bypass feature
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8cdc700ecc8195da1b5e0975f00a4dc6785d330
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 35bf61ffd2a85221cdf33a0304765d94770c1eab
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973293"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053990"
 ---
-# <a name="how-to-disable-the-strong-name-bypass-feature"></a>Instrukcje: Wyłącz funkcję pomijania silnej nazwy
+# <a name="how-to-disable-the-strong-name-bypass-feature"></a>Instrukcje: wyłączanie funkcji pomijania silnej nazwy
 Począwszy od wersji 3,5 .NET Framework programu Service Pack 1 (SP1), sygnatury silnej nazwy nie są sprawdzane, gdy zestaw jest ładowany do obiektu pełnego <xref:System.AppDomain> zaufania, takiego jak domyślny <xref:System.AppDomain> dla `MyComputer` strefy. Jest to nazywane funkcją pomijania silnej nazwy. W środowisku z pełnym zaufaniem wymagania dotyczące <xref:System.Security.Permissions.StrongNameIdentityPermission> zawsze powiodło się w przypadku podpisanych, pełnego zaufania zestawów niezależnie od ich sygnatury. Jedynym ograniczeniem jest to, że zestaw musi być w pełni zaufany, ponieważ jego strefa jest w pełni zaufana. Ponieważ silna nazwa nie jest czynnikiem decydującym w tych warunkach, nie ma powodów, dla których nie można jej zweryfikować. Pomijanie sprawdzania poprawności sygnatur silnych nazw zapewnia znaczną poprawę wydajności.  
   
  Funkcja Bypass ma zastosowanie do dowolnego zestawu pełnego zaufania, który nie jest podpisany z opóźnieniem i który jest ładowany do dowolnego pełnego zaufania <xref:System.AppDomain> z katalogu określonego przez jego <xref:System.AppDomainSetup.ApplicationBase%2A> właściwość.  
@@ -36,7 +36,7 @@ Począwszy od wersji 3,5 .NET Framework programu Service Pack 1 (SP1), sygnatury
   
 1. Otwórz lub Utwórz plik konfiguracji aplikacji.  
   
-     Aby uzyskać więcej informacji na temat tego pliku, zapoznaj się z sekcją pliki konfiguracyjne aplikacji w artykule [Konfigurowanie aplikacji](../../framework/configure-apps/index.md).  
+    Aby uzyskać więcej informacji na temat tego pliku, zapoznaj się z sekcją pliki konfiguracyjne aplikacji w artykule [Konfigurowanie aplikacji](../../framework/configure-apps/index.md).  
   
 2. Dodaj następujący wpis:  
   

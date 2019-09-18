@@ -4,70 +4,70 @@ ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb3ad0d39d47297b7d26a5c28cfbbc269ce99e44
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 062f13ad92f37bb7ae29ed34dcf88f99f98e7612
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052410"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049274"
 ---
 # <a name="runtime-directive-elements"></a>Elementy dyrektyw środowiska uruchomieniowego
-Format pliku (rd.xml) dyrektyw środowiska uruchomieniowego obsługuje następujące elementy dyrektyw środowiska uruchomieniowego. Zobacz [dyrektywy środowiska uruchomieniowego (rd.xml) odwołanie do pliku konfiguracji](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) dla hierarchiczną reprezentację.  
+Format pliku dyrektyw środowiska uruchomieniowego (RD. xml) obsługuje następujące elementy dyrektywy środowiska uruchomieniowego. Zobacz sekcję [dyrektywy środowiska uruchomieniowego informacje o pliku konfiguracyjnym](runtime-directives-rd-xml-configuration-file-reference.md) dla reprezentacji hierarchicznej.  
   
- [\<Aplikacji >](../../../docs/framework/net-native/application-element-net-native.md)  
- Zastosowanie zasad odbicia środowiska uruchomieniowego dla wszystkich typów używanych przez aplikację i służy jako kontener dla całej aplikacji, typów i elementów członkowskich typu, w których metadane są dostępne w celu odbicia w czasie wykonywania. To jest elementem podrzędnym [ \<dyrektywy >](../../../docs/framework/net-native/directives-element-net-native.md) elementu.  
+ [\<> Aplikacji](application-element-net-native.md)  
+ Stosuje zasady odbicia środowiska uruchomieniowego do wszystkich typów używanych przez aplikację i służy jako kontener dla typów i składowych dla całej aplikacji, których metadane są dostępne do odbicia w czasie wykonywania. Jest to element podrzędny [ \<dyrektyw >](directives-element-net-native.md) elementu.  
   
- [\<Zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)  
- Dotyczy wszystkich typów w zestawie zasad wykonywania. To jest elementem podrzędnym [ \<aplikacji >](../../../docs/framework/net-native/application-element-net-native.md) i [ \<biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) elementów.  
+ [\<> Zestawu](assembly-element-net-native.md)  
+ Stosuje zasady środowiska uruchomieniowego do wszystkich typów w zestawie. Jest to element podrzędny [ \<> aplikacji](application-element-net-native.md) i [ \<biblioteki >](library-element-net-native.md) elementy.  
   
- [\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)  
- Jeśli jego zawierający [ \<typ >](../../../docs/framework/net-native/type-element-net-native.md) dyrektywa jest atrybut, elementy kodu, do których zastosowano ten atrybut ma zastosowanie zasad wykonywania.  
+ [\<AttributeImplies >](attributeimplies-element-net-native.md)  
+ Jeśli typ zawierający [ \<>](type-element-net-native.md) dyrektywie jest atrybut, stosuje zasady środowiska uruchomieniowego do elementów kodu, do których ten atrybut jest stosowany.  
   
- [\<Dyrektywy >](../../../docs/framework/net-native/directives-element-net-native.md)  
- Element główny w każdym pliku dyrektyw środowiska uruchomieniowego dla platformy .NET Native. Jego elementy podrzędne są [ \<aplikacji >](../../../docs/framework/net-native/application-element-net-native.md) i [ \<biblioteki >](../../../docs/framework/net-native/library-element-net-native.md).  
+ [\<Dyrektywy >](directives-element-net-native.md)  
+ Element główny w każdym pliku dyrektywy środowiska uruchomieniowego dla .NET Native. Jego elementami podrzędnymi są [ \<> aplikacji](application-element-net-native.md) i [ \<> biblioteki](library-element-net-native.md).  
   
- [\<Zdarzenie >](../../../docs/framework/net-native/event-element-net-native.md)  
- Zastosowanie zasad wykonywania na zdarzenie. To jest elementem podrzędnym [ \<typ >](../../../docs/framework/net-native/type-element-net-native.md) i [ \<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) elementów.  
+ [\<> Zdarzeń](event-element-net-native.md)  
+ Stosuje zasady środowiska uruchomieniowego do zdarzenia. Jest to element podrzędny [ \<typu >](type-element-net-native.md) i [ \<TypeInstantiation >](typeinstantiation-element-net-native.md) elementów.  
   
- [\<Field>](../../../docs/framework/net-native/field-element-net-native.md)  
- Stosuje zasady środowiska uruchomieniowego do pola. To jest elementem podrzędnym [ \<typ >](../../../docs/framework/net-native/type-element-net-native.md) i [ \<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) elementów.  
+ [\<> Pola](field-element-net-native.md)  
+ Stosuje zasady środowiska uruchomieniowego do pola. Jest to element podrzędny [ \<typu >](type-element-net-native.md) i [ \<TypeInstantiation >](typeinstantiation-element-net-native.md) elementów.  
   
- [\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)  
- Stosuje zasady obsługi z typem parametru typu ogólnego lub metody.  
+ [\<GenericParameter >](genericparameter-element-net-native.md)  
+ Stosuje zasady środowiska uruchomieniowego do typu parametru typu ogólnego lub metody.  
   
- [\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)  
- W przypadku zasad środowiska uruchomieniowego do typu, że zasady zostały zastosowane do zawierający typ lub metoda.  
+ [\<ImpliesType >](impliestype-element-net-native.md)  
+ Stosuje zasady środowiska uruchomieniowego do typu, jeśli te zasady zostały zastosowane do zawierającego go typu lub metody.  
   
- [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)  
- Dotyczy wszystkich typów w zestawie zasad wykonywania. To jest elementem podrzędnym [ \<aplikacji >](../../../docs/framework/net-native/application-element-net-native.md) i [ \<biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) elementów.  
+ [\<> Biblioteki](library-element-net-native.md)  
+ Stosuje zasady środowiska uruchomieniowego do wszystkich typów w zestawie. Jest to element podrzędny [ \<> aplikacji](application-element-net-native.md) i [ \<biblioteki >](library-element-net-native.md) elementy.  
   
- [\<Metoda >](../../../docs/framework/net-native/method-element-net-native.md)  
- Zastosowanie zasad wykonywania metody. To jest elementem podrzędnym [ \<typ >](../../../docs/framework/net-native/type-element-net-native.md) i [ \<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) elementów.  
+ [\<> Metody](method-element-net-native.md)  
+ Stosuje zasady środowiska uruchomieniowego do metody. Jest to element podrzędny [ \<typu >](type-element-net-native.md) i [ \<TypeInstantiation >](typeinstantiation-element-net-native.md) elementów.  
   
- [\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)  
- Ma zastosowanie zasad środowiska uruchomieniowego do skonstruowanego metody rodzajowej. To jest elementem podrzędnym [ \<typ >](../../../docs/framework/net-native/type-element-net-native.md) i [ \<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) elementów.  
+ [\<MethodInstantiation >](methodinstantiation-element-net-native.md)  
+ Stosuje zasady środowiska uruchomieniowego do skonstruowanej metody ogólnej. Jest to element podrzędny [ \<typu >](type-element-net-native.md) i [ \<TypeInstantiation >](typeinstantiation-element-net-native.md) elementów.  
   
- [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)  
- Stosuje zasady środowiska uruchomieniowego dla wszystkich typów w przestrzeni nazw.  
+ [\<Namespace>](namespace-element-net-native.md)  
+ Stosuje zasady środowiska uruchomieniowego do wszystkich typów w przestrzeni nazw.  
   
- [\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)  
- Stosuje zasady środowiska uruchomieniowego do typu argumentu przekazanego do metody.  
+ [\<> Parametru](parameter-element-net-native.md)  
+ Stosuje zasady środowiska uruchomieniowego do typu argumentu przesłanego do metody.  
   
- [\<Property>](../../../docs/framework/net-native/property-element-net-native.md)  
- Stosuje zasady środowiska uruchomieniowego do właściwości. To jest elementem podrzędnym [ \<typ >](../../../docs/framework/net-native/type-element-net-native.md) i [ \<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) elementów.  
+ [\<> Właściwości](property-element-net-native.md)  
+ Stosuje zasady środowiska uruchomieniowego do właściwości. Jest to element podrzędny [ \<typu >](type-element-net-native.md) i [ \<TypeInstantiation >](typeinstantiation-element-net-native.md) elementów.  
   
- [\<Podtypy >](../../../docs/framework/net-native/subtypes-element-net-native.md)  
- Stosuje zasady środowiska uruchomieniowego dla wszystkich klas dziedziczone z typu zawierającego.  
+ [\<Podtypy >](subtypes-element-net-native.md)  
+ Stosuje zasady środowiska uruchomieniowego do wszystkich klas dziedziczonych z typu zawierającego.  
   
- [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)  
+ [\<Type>](type-element-net-native.md)  
  Stosuje zasady środowiska uruchomieniowego do typu.  
   
- [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)  
- Skonstruowany typ rodzajowy dotyczy zasad wykonywania.  
+ [\<TypeInstantiation>](typeinstantiation-element-net-native.md)  
+ Stosuje zasady środowiska uruchomieniowego do skonstruowanego typu ogólnego.  
   
- [\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)  
- Zastosowanie zasad wykonywania na typ reprezentowany przez <xref:System.Type> argument przekazywany do metody.  
+ [\<TypeParameter >](typeparameter-element-net-native.md)  
+ Stosuje zasady środowiska uruchomieniowego do typu reprezentowanego <xref:System.Type> przez argument przesłany do metody.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja pliku konfiguracji RD.XML](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Dokumentacja pliku konfiguracji usług Rd. XML](runtime-directives-rd-xml-configuration-file-reference.md)

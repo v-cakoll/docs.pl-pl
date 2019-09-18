@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1692b93e09ec972e537e4a375774eeeb865bd58c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d06d1ef8e1508aefa8c9ed9327b89f58ff6976fa
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043429"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052751"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Instrukcje: Kompilowanie warunkowe ze śledzeniem i debugowaniem
 Podczas debugowania aplikacji podczas opracowywania dane wyjściowe śledzenia i debugowania są przechodzą do okna danych wyjściowych w programie Visual Studio. Aby jednak uwzględnić funkcje śledzenia we wdrożonej aplikacji, należy skompilować aplikacje Instrumentacji przy włączonej dyrektywie kompilatora **śledzenia** . Pozwala to na skompilowanie kodu śledzenia w wydanej wersji aplikacji. Jeśli nie włączysz dyrektywy **Trace** , cały kod śledzenia zostanie zignorowany podczas kompilacji i nie zostanie uwzględniony w kodzie wykonywalnym, który zostanie wdrożony.  
@@ -67,7 +67,7 @@ Podczas debugowania aplikacji podczas opracowywania dane wyjściowe śledzenia i
     |`-d:`|Definiuje symbol kompilacji warunkowej|  
   
     > [!NOTE]
-    > Należy sprawdzić poprawność śledzenia lub debugowania przy użyciu wielkich liter. Aby uzyskać więcej informacji na temat poleceń kompilacji warunkowej `vbc /?` , wprowadź (for Visual Basic `csc /?` ) lub C#(for) w wierszu polecenia. Aby uzyskać więcej informacji, zobacz [Kompilowanie z wiersza polecenia](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (C#) lub wywoływanie [kompilatora wiersza polecenia](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Visual Basic).  
+    > Należy sprawdzić poprawność śledzenia lub debugowania przy użyciu wielkich liter. Aby uzyskać więcej informacji na temat poleceń kompilacji warunkowej `vbc /?` , wprowadź (for Visual Basic `csc /?` ) lub C#(for) w wierszu polecenia. Aby uzyskać więcej informacji, zobacz [Kompilowanie z wiersza polecenia](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (C#) lub [wywoływanie kompilatora wiersza polecenia](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Visual Basic).  
   
 ### <a name="to-perform-conditional-compilation-using-const-or-define"></a>Aby przeprowadzić kompilację warunkową przy użyciu #CONST lub #define  
   
@@ -97,10 +97,10 @@ Dodaj komentarz do dyrektywy kompilatora.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Śledzenie i instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Instrukcje: Tworzenie, inicjowanie i konfigurowanie przełączników śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [Przełączniki śledzenia](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Obiekty nasłuchujące śledzenie](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [Instrukcje: Dodawanie instrukcji śledzenia do kodu aplikacji](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Śledzenie i instrumentacja aplikacji](tracing-and-instrumenting-applications.md)
+- [Instrukcje: Tworzenie, inicjowanie i konfigurowanie przełączników śledzenia](how-to-create-initialize-and-configure-trace-switches.md)
+- [Przełączniki śledzenia](trace-switches.md)
+- [Obiekty nasłuchujące śledzenie](trace-listeners.md)
+- [Instrukcje: Dodawanie instrukcji śledzenia do kodu aplikacji](how-to-add-trace-statements-to-application-code.md)
 - [Instrukcje: Ustawianie zmiennych środowiskowych dla wiersza polecenia programu Visual Studio](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [Instrukcje: wywoływanie kompilatora z wiersza polecenia](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

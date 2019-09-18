@@ -11,31 +11,31 @@ helpviewer_keywords:
 ms.assetid: 113646de-7ea0-4f0e-8df0-c46dab3e8733
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 98d363b6c0838ff1211d969391f04ce8ccddd003
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b842f44711d38a996b9d710dbe8bd369d30c5443
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643572"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051887"
 ---
 # <a name="calling-a-dll-function"></a>Wywołanie funkcji DLL
-Wywoływanie niezarządzanych funkcji DLL jest niemal identyczne do wywoływania innego kodu zarządzanego, istnieją różnice, które mogą ułatwić funkcji DLL wydawać się niejasne na początku. Ta sekcja wprowadza tematach opisano niektóre nietypowe problemy związane z wywołaniem.  
+Chociaż wywoływanie niezarządzanych funkcji DLL jest niemal identyczne z wywoływaniem innego kodu zarządzanego, istnieją różnice, które mogą sprawiać, że funkcje DLL pozornie pomyleją się w pierwszej kolejności. W tej sekcji przedstawiono tematy opisujące niektóre nietypowe problemy związane z wywoływaniem.  
   
- Wywołania struktury, które są zwracane z platformy musi być typy danych, które mają tę samą reprezentację w kodzie zarządzanym i niezarządzanym. Typy takie są nazywane *kopiowalnymi* , ponieważ nie wymaga konwersji (zobacz [Kopiowalne i typy danych Kopiowalnych inne niż](../../../docs/framework/interop/blittable-and-non-blittable-types.md)). Aby wywołać funkcję, która ma strukturę niekopiowalnych jako jego typem zwracanym, może definiowaniu typu Pomocnika danych kopiowalnych taki sam rozmiar jak typ niekopiowalnych i konwersji danych, po powrocie funkcji.  
+ Struktury zwracane przez wywołania wywołania platformy muszą być typami danych, które mają taką samą reprezentację w kodzie zarządzanym i niezarządzanym. Typy takie są nazywane *danych kopiowalnych* , ponieważ nie wymagają konwersji (zobacz [typy danych kopiowalnych i danych kopiowalnych](blittable-and-non-blittable-types.md)). Aby wywołać funkcję, która ma strukturę niedanych kopiowalnychną jako typ zwracany, można zdefiniować typ pomocnika danych kopiowalnych o takim samym rozmiarze co typ inny niż danych kopiowalnych i przekonwertować dane po powrocie funkcji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przekazywanie struktur](../../../docs/framework/interop/passing-structures.md)  
- Identyfikuje problemy dotyczące przekazywania struktur danych przy użyciu wstępnie zdefiniowanego układu.  
+ [Przekazywanie struktur](passing-structures.md)  
+ Identyfikuje problemy z przekazywaniem struktur danych ze wstępnie zdefiniowanym układem.  
   
- [Funkcje wywołania zwrotnego](../../../docs/framework/interop/callback-functions.md)  
- Zawiera podstawowe informacje o funkcjach wywołania zwrotnego.  
+ [Funkcje wywołania zwrotnego](callback-functions.md)  
+ Zawiera podstawowe informacje na temat funkcji wywołania zwrotnego.  
   
- [Instrukcje: Implementowanie funkcji wywołania zwrotnego](../../../docs/framework/interop/how-to-implement-callback-functions.md)  
- Opisuje sposób implementacji funkcji wywołania zwrotnego w kodzie zarządzanym.  
+ [Instrukcje: Implementowanie funkcji wywołania zwrotnego](how-to-implement-callback-functions.md)  
+ Opisuje sposób implementowania funkcji wywołania zwrotnego w kodzie zarządzanym.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Wykorzystywanie niezarządzanych funkcji DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- W tym artykule opisano sposób wywoływania niezarządzanego wywoływanie funkcji DLL za pomocą platformy.  
+ [Wykorzystywanie niezarządzanych funkcji DLL](consuming-unmanaged-dll-functions.md)  
+ Opisuje sposób wywoływania niezarządzanych funkcji DLL przy użyciu wywołania platformy.  
   
- [Marshaling danych w wywołaniu platformy](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)  
- W tym artykule opisano, jak deklarować parametrów metod i przekazywać argumenty do funkcji eksportowanych przez niezarządzanych bibliotek.
+ [Marshaling danych w wywołaniu platformy](marshaling-data-with-platform-invoke.md)  
+ Opisuje sposób deklarowania parametrów metody i przekazywania argumentów do funkcji wyeksportowanych przez niezarządzane biblioteki.

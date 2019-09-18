@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f8046852f847cd5493a2ed17b491a39e494ce2b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 01cef9646ca9c4f49ab8376364648f66b9651e4a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969122"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052125"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Sposoby lokalizowania zestawów przez środowisko uruchomieniowe
 
@@ -144,7 +144,9 @@ Tryb awaryjny można ustawić dla całej aplikacji lub dla wybranych zestawów. 
 Po trzecie środowisko uruchomieniowe sprawdzi plik konfiguracji maszyny. Ten plik o nazwie Machine. config znajduje się na komputerze lokalnym w podkatalogu config katalogu głównego, w którym zainstalowano środowisko uruchomieniowe. Ten plik może być używany przez administratorów do określania ograniczeń powiązania zestawu, które są lokalne dla tego komputera. Ustawienia w pliku konfiguracji komputera mają pierwszeństwo przed wszystkimi innymi ustawieniami konfiguracji; nie oznacza to jednak, że wszystkie ustawienia konfiguracji należy umieścić w tym pliku. Wersja określona przez plik zasad administratora jest końcowa i nie można jej zastąpić. Zastąpienia określone w pliku Machine. config mają wpływ na wszystkie aplikacje. Aby uzyskać więcej informacji na temat plików konfiguracji, zobacz [Konfigurowanie aplikacji przy użyciu plików konfiguracyjnych](../configure-apps/index.md).
 
 <a name="step2"></a> 
+
 ## <a name="step-2-checking-for-previously-referenced-assemblies"></a>Krok 2. Sprawdzanie zestawów poprzednio występujących w odwołaniu
+
 Jeśli żądany zestaw został również żądany w poprzednich wywołaniach, środowisko uruchomieniowe języka wspólnego używa zestawu, który jest już załadowany. Może to mieć konsekwencje podczas nazewnictwa zestawów tworzących aplikację. Aby uzyskać więcej informacji na temat nazewnictwa zestawów, zobacz [nazwy zestawów](../../standard/assembly/names.md).
 
 Jeśli poprzednie żądanie dotyczące zestawu nie powiodło się, kolejne żądania dla zestawu nie powiodły się natychmiast, bez próby załadowania zestawu. Począwszy od .NET Framework w wersji 2,0, są buforowane błędy powiązań zestawu, a buforowane informacje są używane do określenia, czy próbować załadować zestaw.

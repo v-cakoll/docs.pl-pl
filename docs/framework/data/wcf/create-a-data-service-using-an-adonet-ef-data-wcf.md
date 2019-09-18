@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 1d3c3628a32439d4847505e234b12b084b47ba3d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8c597738d656b32e7b4c75246027b726f425c6ef
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854122"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053015"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Instrukcje: Tworzenie usługi danych przy użyciu źródła danych ADO.NET Entity Framework (Usługi danych programu WCF)
 
@@ -57,7 +57,7 @@ Entity Framework udostępnia również narzędzie wiersza polecenia, które moż
 
 4. W oknie dialogowym **Dodaj nowy element** wybierz szablon **usługi danych programu WCF** w kategorii **Sieć Web** .
 
-   ![Szablon elementu usługi danych programu WCF w programie Visual Studio 2015](media/wcf-data-service-item-template.png)
+   ![Szablon elementu usługi danych programu WCF w programie Visual Studio 2015](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
    > Szablon **usługi danych programu WCF** jest dostępny w programie visual Studio 2015, ale nie w programie visual Studio 2017.

@@ -8,33 +8,33 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a491b0efd38ed7ff37c8c704b6646dddede5efb3
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 9da78fb161a906f6ef266f98a9f13633da91b61c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379915"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052037"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Zmniejszenie liczby ponownych uruchomień systemu podczas instalowania programu .NET Framework 4.5
-Instalator .NET Framework 4.5 używa [Menedżera ponownego uruchamiania](https://go.microsoft.com/fwlink/?LinkId=231425) do uniemożliwić systemu powoduje ponowne uruchomienie zawsze, gdy jest to możliwe podczas instalacji. Jeśli program instalacyjny aplikacji instaluje program .NET Framework, mogą łączyć się za pomocą Menedżera ponownego uruchamiania, aby móc korzystać z tej funkcji. Aby uzyskać więcej informacji, zobacz [jak: Pobieranie danych o postępie z Instalatora .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
+Instalator .NET Framework 4,5 korzysta z [Menedżera ponownego uruchamiania](https://go.microsoft.com/fwlink/?LinkId=231425) , aby zapobiec ponownemu uruchamianiu systemu, gdy jest to możliwe podczas instalacji. Jeśli program instalacyjny aplikacji zainstaluje .NET Framework, może to zrobić za pomocą Menedżera ponownego uruchamiania, aby skorzystać z tej funkcji. Aby uzyskać więcej informacji, zobacz [jak: Pobierz postęp z Instalatora](how-to-get-progress-from-the-dotnet-installer.md).NET Framework 4,5.  
   
-## <a name="reasons-for-a-restart"></a>Ze względu na ponowne uruchomienie  
- Instalacji programu .NET Framework 4.5 wymaga ponownego uruchomienia systemu, jeśli aplikacja .NET Framework 4 jest używana podczas instalacji. Jest to spowodowane .NET Framework 4.5 zastępuje pliki .NET Framework 4 i wymaga tych plików, które będą dostępne podczas instalacji. W wielu przypadkach można zapobiec ponownego uruchomienia przez prewencyjnego wykrywanie i closing.NET Framework 4 aplikacje, które są używane. Jednak niektóre aplikacje systemu nie muszą być zamknięte. W takich przypadkach nie można uniknąć ponownego uruchomienia komputera.  
+## <a name="reasons-for-a-restart"></a>Przyczyny ponownego uruchomienia  
+ Instalacja .NET Framework 4,5 wymaga ponownego uruchomienia systemu, jeśli aplikacja .NET Framework 4 jest używana podczas instalacji. Wynika to z faktu, że .NET Framework 4,5 zastępuje pliki .NET Framework 4 i wymaga, aby te pliki były dostępne podczas instalacji. W wielu przypadkach ponowne uruchomienie może być uniemożliwione przez zapobiegawczo wykrywanie i closing.NET aplikacji Framework 4, które są używane. Niektóre aplikacje systemowe nie powinny jednak być zamknięte. W takich przypadkach nie można uniknąć ponownego uruchomienia.  
   
 ## <a name="end-user-experience"></a>Środowisko użytkownika końcowego  
- Użytkownik końcowy, kto wykonuje pełnej instalacji programu .NET Framework 4.5 jest możliwość uniknąć ponownego uruchomienia systemu, jeśli Instalator wykryje aplikacji .NET Framework 4 w użyciu. Komunikat wyświetla listę wszystkich uruchomionych aplikacji .NET Framework 4 i zapewnia możliwość Zamknij te aplikacje, przed rozpoczęciem instalacji. Jeśli użytkownik potwierdzi, te aplikacje są zamykane przez Instalatora, a następnie ponowne uruchomienie systemu jest unikane. Jeśli użytkownik nie odpowiada na komunikat w określonym czasie, instalacja będzie kontynuowana bez zamykania aplikacji.  
+ Użytkownik końcowy, który wykonuje pełną instalację .NET Framework 4,5, ma możliwość uniknięcia ponownego uruchomienia systemu, jeśli Instalator wykryje aplikacje .NET Framework 4 w użyciu. Komunikat zawiera wszystkie uruchomione .NET Framework 4 aplikacje i udostępnia opcję zamykania tych aplikacji przed instalacją. Jeśli użytkownik potwierdzi, te aplikacje są zamykane przez Instalatora, a ponowne uruchomienie systemu jest możliwe. Jeśli użytkownik nie odpowie na komunikat w określonym czasie, instalacja będzie kontynuowana bez zamykania aplikacji.  
   
- Jeśli Menedżera ponownego uruchamiania wykryje sytuację, która będzie wymagać ponownego uruchomienia systemu, nawet wtedy, gdy działające aplikacje zostaną zamknięte, nie jest wyświetlany komunikat.  
+ Jeśli Menedżer ponownego uruchamiania wykryje sytuację, która będzie wymagała ponownego uruchomienia systemu, nawet jeśli uruchomione aplikacje są zamknięte, komunikat nie zostanie wyświetlony.  
   
- ![Okno dialogowe aplikacji Zamknij listę aktualnie uruchomione programy.](./media/reducing-system-restarts/close-application-dialog.png)  
+ ![Okno dialogowe Zamykanie aplikacji wyświetla listę aktualnie uruchomionych programów.](./media/reducing-system-restarts/close-application-dialog.png)  
   
-## <a name="using-a-chained-installer"></a>Za pomocą Instalatora łańcuchowa  
- Jeśli chcesz wykonać ponowną dystrybucję programu .NET Framework z aplikacją, ale chcesz użyć własnego interfejsu użytkownika i program instalacyjny, proces instalacji (łańcuch) .NET Framework można dołączyć do procesu instalacji. Aby uzyskać więcej informacji na temat instalacji łańcuchowych zobacz [przewodnik wdrażania dla deweloperów](../../../docs/framework/deployment/deployment-guide-for-developers.md). Aby ograniczyć ponowne uruchomienie systemu połączonych urządzeń, Instalatora programu .NET Framework dostarcza listę aplikacji, aby zamknąć program instalacyjny. Program instalacyjny, należy podać te informacje do użytkownika za pomocą interfejsu użytkownika, takich jak okno komunikatu, Uzyskaj odpowiedzi użytkownika, a następnie przekazać odpowiedź z powrotem do Instalatora programu .NET Framework. Na przykład łańcuchowych Instalatora artykuł [jak: Pobieranie danych o postępie z Instalatora .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
+## <a name="using-a-chained-installer"></a>Używanie Instalatora łańcucha  
+ Jeśli chcesz ponownie rozpowszechnić .NET Framework z aplikacją, ale chcesz użyć własnego programu instalacyjnego i interfejsu użytkownika, możesz dołączyć proces instalacji .NET Framework (łańcucha) do procesu instalacji. Aby uzyskać więcej informacji na temat instalacji łańcuchowych, zobacz [Przewodnik wdrażania dla deweloperów](deployment-guide-for-developers.md). Aby zmniejszyć liczbę ponownych uruchomień systemu w instalacjach łańcucha, Instalator .NET Framework dostarcza program instalacyjny z listą aplikacji do zamknięcia. Program instalacyjny musi przekazać użytkownikowi te informacje za pomocą interfejsu użytkownika, takiego jak okno komunikatu, uzyskać odpowiedzi użytkownika, a następnie przekazać odpowiedź z powrotem do Instalatora .NET Framework. Przykład Instalatora łańcucha można znaleźć w artykule [How to: Pobierz postęp z Instalatora](how-to-get-progress-from-the-dotnet-installer.md).NET Framework 4,5.  
   
- Jeśli używasz Instalatora łańcuchowych, ale nie chcesz podać własne okno komunikatu do zamykania aplikacji, można użyć `/showrmui` i `/passive` opcji w wierszu polecenia podczas tworzenia łańcucha programu .NET Framework procesu instalacji. Korzystając z tych opcji razem, Instalator Pokazuje okno komunikatu do zamykania aplikacji, jeśli może zostać zamknięty w celu uniknięcia ponownego uruchomienia systemu. To okno komunikatu działa tak samo w trybie pasywnym, nie pełny interfejs użytkownika. Zobacz [przewodnik wdrażania dla deweloperów](../../../docs/framework/deployment/deployment-guide-for-developers.md) uzyskania pełnego zestawu opcji wiersza polecenia dla pakiet redystrybucyjny programu .NET Framework.  
+ Jeśli używasz instalatora łańcucha, ale nie chcesz podawać własnego okna komunikatów do zamykania aplikacji, możesz użyć `/showrmui` opcji i `/passive` w wierszu polecenia w przypadku łańcucha procesu instalacji .NET Framework. Jeśli te opcje są używane razem, Instalator wyświetli okno komunikatu dotyczące zamykania aplikacji, jeśli można je zamknąć, aby uniknąć ponownego uruchomienia systemu. To okno komunikatu działa tak samo w trybie pasywnym, jak w przypadku pełnego interfejsu użytkownika. Aby uzyskać pełny zestaw opcji wiersza polecenia dla pakietu redystrybucyjnego .NET Framework, zobacz [Przewodnik wdrażania dla deweloperów](deployment-guide-for-developers.md) .  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wdrażanie](../../../docs/framework/deployment/index.md)
-- [Przewodnik wdrażania dla deweloperów](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [Instrukcje: Pobieranie danych o postępie z Instalatora .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [Wdrażanie](index.md)
+- [Przewodnik wdrażania dla deweloperów](deployment-guide-for-developers.md)
+- [Instrukcje: Pobierz postęp z Instalatora .NET Framework 4,5](how-to-get-progress-from-the-dotnet-installer.md)

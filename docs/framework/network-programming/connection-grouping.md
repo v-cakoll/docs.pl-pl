@@ -8,19 +8,19 @@ helpviewer_keywords:
 - network resources, connections
 - connection pooling
 ms.assetid: 2ec502e8-4ba0-4c22-9410-f28eaf4eee63
-ms.openlocfilehash: 00ccc11919f0ccd4f9361bfd8f265dea1ad2390d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 007366764a7b8e1208e22ef5895e6a9093b090e4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642779"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048644"
 ---
 # <a name="connection-grouping"></a>Grupowanie połączeń
-Grupowanie połączeń kojarzy określonego żądania w ramach jednej aplikacji z pulą określonego połączenia. Może to być wymagane przez aplikację warstwy środkowej, nawiązuje połączenie z serwerem zaplecza w imieniu użytkownika, która korzysta z protokołu uwierzytelniania, obsługującym delegowanie, takich jak Kerberos, lub przez aplikację warstwy środkowej, która udostępnia własne poświadczenia, podobnie jak w Poniższy przykład. Na przykład załóżmy, że użytkownik, Jan, odwiedzi wewnętrznej witryny sieci Web, który wyświetla jego informacji o płacach. Po uwierzytelnieniu Jan, serwera aplikacji warstwy środkowej używa poświadczeń Jana nawiązać połączenia z serwerem zaplecza w celu pobrania jego informacji o płacach. Następnie Susan odwiedza witryny i żąda jej informacji o płacach. Ponieważ aplikacja warstwy środkowej ma już nawiązaniu połączenia przy użyciu poświadczeń Jana, serwer zaplecza odpowiada Jana informacji. Jeśli jednak aplikacja przypisuje każdego żądania wysyłanego do serwerów zaplecza z grupą połączenia utworzonych na podstawie nazwy użytkownika, następnie każdy użytkownik należy do puli osobnego połączenia i przypadkowo nie można udostępniać informacje o uwierzytelnianiu przy użyciu innego użytkownika.  
+Grupowanie połączeń kojarzy określone żądania w ramach jednej aplikacji z określoną pulą połączeń. Może to być wymagane przez aplikację warstwy środkowej, która łączy się z serwerem zaplecza w imieniu użytkownika i używa protokołu uwierzytelniania obsługującego delegowanie, takiego jak Kerberos lub przez aplikację warstwy środkowej, która dostarcza własne poświadczenia, jak w przykład poniżej. Załóżmy na przykład, że użytkownik, Jan znajduje się w wewnętrznej witrynie sieci Web, która wyświetla informacje o płacach. Po uwierzytelnieniu Jan serwer aplikacji warstwy środkowej używa poświadczeń Jan do łączenia się z serwerem zaplecza w celu pobrania informacji o płacach. Następnie Susan odwiedza witrynę i żąda informacji o płacach. Ponieważ aplikacja warstwy środkowej ma już połączenie przy użyciu poświadczeń Jan, serwer zaplecza reaguje na informacje o Jan. Jeśli jednak aplikacja przypisze każde żądanie wysyłane do serwera zaplecza do grupy połączeń utworzonej przy użyciu nazwy użytkownika, każdy użytkownik należy do osobnej puli połączeń i nie może przypadkowo udostępnić informacji uwierzytelniania innym użytkownikom.  
   
- Aby przypisać grupy określone połączenie na żądanie, należy przypisać nazwy do <xref:System.Net.WebRequest.ConnectionGroupName%2A> właściwości usługi <xref:System.Net.WebRequest> przed wykonaniem żądania.  
+ Aby przypisać żądanie do określonej grupy połączeń, należy przypisać nazwę do <xref:System.Net.WebRequest.ConnectionGroupName%2A> właściwości <xref:System.Net.WebRequest> przed wykonaniem żądania.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zarządzanie połączeniami](../../../docs/framework/network-programming/managing-connections.md)
-- [Instrukcje: Przypisywanie informacji użytkownika do połączeń grupowych](../../../docs/framework/network-programming/how-to-assign-user-information-to-group-connections.md)
+- [Zarządzanie połączeniami](managing-connections.md)
+- [Instrukcje: Przypisywanie informacji o użytkowniku do połączeń grupowych](how-to-assign-user-information-to-group-connections.md)

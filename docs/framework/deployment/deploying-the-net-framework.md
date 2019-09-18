@@ -7,35 +7,35 @@ helpviewer_keywords:
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 096c818c1103835110478953d0a0d9082b33569e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6906ccf5b639d6b90b921b5d471aa723aeb4da78
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873720"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052168"
 ---
 # <a name="deploying-the-net-framework"></a>Wdrażanie programu .NET Framework
-Ta sekcja dokumentacji .NET Framework zawiera informacje dla deweloperów, którzy chcą zainstalować program .NET Framework za pomocą swoich aplikacji i administratorów, którzy chcą wdrożyć program .NET Framework w sieci. Również w tym artykule omówiono aktywacji i ponownie uruchom problemów związanych z wdrażaniem i jak monitorować postęp instalacji programu .NET Framework.  
+Ta sekcja dokumentacji .NET Framework zawiera informacje dla deweloperów, którzy chcą zainstalować .NET Framework z aplikacjami, a także administratorów, którzy chcą wdrożyć .NET Framework w sieci. Omówiono w nim również problemy dotyczące aktywacji i ponownego uruchomienia związane z wdrożeniem oraz sposób monitorowania postępu instalacji .NET Framework.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przewodnik wdrażania dla deweloperów](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
- W tym artykule wyjaśniono, jak deweloperzy mogą zainstalować program .NET Framework na komputerach swoich użytkowników przy użyciu swoich aplikacji.  
+ [Przewodnik wdrażania dla deweloperów](deployment-guide-for-developers.md)  
+ Wyjaśnia, w jaki sposób deweloperzy mogą instalować .NET Framework na komputerach użytkowników przy użyciu ich aplikacji.  
   
- [Przewodnik wdrażania dla administratorów](../../../docs/framework/deployment/guide-for-administrators.md)  
- W tym artykule wyjaśniono, jak administrator systemu może wdrożyć środowiska .NET Framework i jego zależności systemowe przez sieć przy użyciu programu System Center Configuration Manager (SCCM).  
+ [Przewodnik wdrażania dla administratorów](guide-for-administrators.md)  
+ Wyjaśnia, w jaki sposób administrator systemu może wdrożyć .NET Framework i zależności systemu w sieci przy użyciu System Center Configuration Manager (SCCM).  
   
- [Zmniejszenie liczby ponownych uruchomień systemu podczas instalowania programu .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)  
- W tym artykule opisano Menedżera ponownego uruchamiania co uniemożliwia ponowne uruchomienie, jeśli to możliwe i wyjaśniono, jak aplikacje, zainstaluj program .NET Framework, które można z niej korzystać.  
+ [Zmniejszenie liczby ponownych uruchomień systemu podczas instalowania programu .NET Framework 4.5](reducing-system-restarts.md)  
+ Opisuje Menedżera ponownego uruchamiania, który uniemożliwia ponowne uruchomienie w miarę możliwości, i wyjaśnia, jak aplikacje instalujące .NET Framework mogą korzystać z tej funkcji.  
   
- [Instrukcje: Pobieranie danych o postępie z Instalatora .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)  
- Opisuje sposób dyskretnie Uruchom i Śledź proces instalacji programu .NET Framework podczas wyświetlania własnego widoku postępu instalacji.  
+ [Instrukcje: Pobierz postęp z Instalatora .NET Framework 4,5](how-to-get-progress-from-the-dotnet-installer.md)  
+ Opisuje sposób dyskretnego uruchamiania i śledzenia procesu instalacji .NET Framework podczas wyświetlania własnego widoku postępu instalacji.  
   
- [Błędy inicjowania programu .NET framework: Zarządzanie wrażeniami użytkownika](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)  
- Wyjaśnia, co się stanie, gdy aplikacja .NET Framework wymaga wersji środowiska CLR, która jest nieprawidłowa lub nie jest zainstalowana na komputerze użytkownika, jak naprawić te błędy i sposobie kontrolowania komunikat o błędzie wyświetlany dla użytkownika.  
+ [Błędy inicjowania .NET Framework: Zarządzanie czynnościami użytkownika](initialization-errors-managing-the-user-experience.md)  
+ Wyjaśnia, co się stanie, gdy aplikacja .NET Framework wymaga wersji środowiska CLR, która jest nieprawidłowa lub niezainstalowana na komputerze użytkownika, jak rozwiązać te błędy i jak kontrolować komunikat o błędzie wyświetlany użytkownikowi.  
   
- [Instrukcje: Debugowanie problemów aktywacji środowiska CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
- Przedstawia sposób wyświetlić i debugowania dzienniki aktywacji środowiska CLR, aby rozwiązać problemy, które można napotkać podczas pobierania aplikację do uruchamiania w odpowiedniej wersji środowiska CLR.  
+ [Instrukcje: Debugowanie problemów dotyczących aktywacji środowiska CLR](how-to-debug-clr-activation-issues.md)  
+ Wyjaśnia, jak można wyświetlać i debugować dzienniki aktywacji środowiska CLR w celu rozwiązywania problemów, które mogą wystąpić podczas uruchamiania aplikacji z poprawną wersją środowiska CLR.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Podręcznik programowania](../../../docs/framework/development-guide.md)
+- [Podręcznik programowania](../development-guide.md)

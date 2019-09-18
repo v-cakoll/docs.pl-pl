@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control patterns, Scroll
 - Scroll control pattern
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
-ms.openlocfilehash: 22bb78040b023a59fd46f0a2be45659d6d7220b8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b8193ed8c7b5fab934d83eb31f5b562136a290ec
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914513"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043316"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>Implementacja wzorca kontrolki przewijania automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -21,10 +21,10 @@ ms.locfileid: "69914513"
   
  Wzorzec <xref:System.Windows.Automation.ScrollPattern> kontrolki służy do obsługi formantu, który działa jako kontener przewijalny dla kolekcji obiektów podrzędnych. Kontrolka nie jest wymagana do obsługi funkcji przewijania przy użyciu pasków przewijania, chociaż często jest to możliwe.  
   
- ![Kontrolka przewijania bez pasków przewijania.](../../../docs/framework/ui-automation/media/uia-scrollpattern-without-scrollbars.PNG "UIA_ScrollPattern_Without_Scrollbars")  
+ ![Kontrolka przewijania bez pasków przewijania.](./media/uia-scrollpattern-without-scrollbars.PNG "UIA_ScrollPattern_Without_Scrollbars")  
 Przykład kontrolki przewijania, która nie używa pasków przewijania  
   
- Przykłady formantów implementujących ten formant można znaleźć w temacie [Mapowanie wzorców formantów dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ Przykłady formantów implementujących ten formant można znaleźć w temacie [Mapowanie wzorców formantów dla klientów automatyzacji interfejsu użytkownika](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Wytyczne i konwencje dotyczące implementacji  
@@ -72,8 +72,8 @@ Przykład kontrolki przewijania, która nie używa pasków przewijania
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Obsługa wzorców kontrolek dostawcy automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [Wzorce kontrolek automatyzacji interfejsu użytkownika dla klientów](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Przegląd drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Używanie buforowania w automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie](ui-automation-control-patterns-overview.md)
+- [Obsługa wzorców kontrolek dostawcy automatyzacji interfejsu użytkownika](support-control-patterns-in-a-ui-automation-provider.md)
+- [Wzorce kontrolek automatyzacji interfejsu użytkownika dla klientów](ui-automation-control-patterns-for-clients.md)
+- [Przegląd drzewa automatyzacji interfejsu użytkownika](ui-automation-tree-overview.md)
+- [Używanie buforowania w automatyzacji interfejsu użytkownika](use-caching-in-ui-automation.md)

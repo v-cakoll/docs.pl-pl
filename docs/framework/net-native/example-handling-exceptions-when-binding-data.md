@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a54945ece2cbb06df5f778aba242f05d9b80373
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 8f7c40d1a179c29c3b92ca37848db6d1383e5d2d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894502"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049891"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>Przykład: Obsługa wyjątków podczas wiązania danych
 > [!NOTE]
 > Ten temat dotyczy wersji zapoznawczej programu .NET Native Developer, która jest oprogramowaniem w wersji wstępnej. Wersję zapoznawczą można pobrać z [witryny sieci Web Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (wymaga rejestracji).  
   
- Poniższy przykład pokazuje, jak rozpoznać wyjątek [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) , który jest generowany, gdy aplikacja skompilowana za pomocą łańcucha narzędzi .NET Native próbuje powiązać dane. Oto informacje o wyjątku:  
+ Poniższy przykład pokazuje, jak rozpoznać wyjątek [MissingMetadataException](missingmetadataexception-class-net-native.md) , który jest generowany, gdy aplikacja skompilowana za pomocą łańcucha narzędzi .NET Native próbuje powiązać dane. Oto informacje o wyjątku:  
   
 ```output
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:   
@@ -61,5 +61,5 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Przykład: Rozwiązywanie problemów z programowaniem dynamicznym](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
+- [Wprowadzenie](getting-started-with-net-native.md)
+- [Przykład: Rozwiązywanie problemów z programowaniem dynamicznym](example-troubleshooting-dynamic-programming.md)

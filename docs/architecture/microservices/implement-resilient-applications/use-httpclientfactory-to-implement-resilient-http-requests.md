@@ -1,13 +1,13 @@
 ---
 title: Używanie elementu HttpClientFactory do implementowania odpornych na błędy żądań HTTP
 description: Dowiedz się, jak używać usługi HttpClientFactory, dostępnej od platformy .NET Core `HttpClient` 2,1, do tworzenia wystąpień, co ułatwia korzystanie z niej w aplikacjach.
-ms.date: 01/07/2019
-ms.openlocfilehash: 68c841a6ba69a94eff420233124cf00fec506502
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 08/08/2019
+ms.openlocfilehash: 6c862171ee6b5eda6f95694878bfa43518a9bdfa
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296039"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039975"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Używanie elementu HttpClientFactory do implementowania odpornych na błędy żądań HTTP
 
@@ -15,24 +15,26 @@ ms.locfileid: "70296039"
 
 ## <a name="issues-with-the-original-httpclient-class-available-in-net-core"></a>Problemy z oryginalną klasą HttpClient dostępną w programie .NET Core
 
-Oryginalna i dobrze znana Klasa [HttpClient](/dotnet/api/system.net.http.httpclient?view=netstandard-2.0) można łatwo używać, ale w niektórych przypadkach nie jest ona prawidłowo używana przez wielu deweloperów. 
+Oryginalna i dobrze znana <xref:System.Net.Http.HttpClient> Klasa może być łatwo używana, ale w niektórych przypadkach nie jest ona prawidłowo używana przez wielu deweloperów.
 
 Podczas pierwszego problemu, gdy ta klasa jest dostępna, używanie jej z `using` instrukcją nie jest najlepszym wyborem, ponieważ nawet w przypadku usuwania `HttpClient` obiektu, bazowe gniazdo nie jest natychmiast uwalniane i może spowodować poważne wystąpienie problemu o nazwie "Sockets" wyczerpanie. Aby uzyskać więcej informacji o tym problemie, zobacz, [czy używasz programu HttpCliente, i destabilizująco wpis w blogu na oprogramowanie](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) .
 
-W związku `HttpClient` z tym, jest przeznaczony do tworzenia wystąpień i ponownie używany przez cały czas życia aplikacji. `HttpClient` Wystąpienie klasy dla każdego żądania spowoduje wyczerpanie liczby gniazd dostępnych w ramach dużych obciążeń. Ten problem spowoduje `SocketException` błędy. Możliwe podejścia do rozwiązania tego problemu są oparte na tworzeniu `HttpClient` obiektu jako singleton lub statyczny, jak wyjaśniono w tym [artykule firmy Microsoft w sprawie użycia HttpClient](/dotnet/csharp/tutorials/console-webapiclient). 
+W związku `HttpClient` z tym, jest przeznaczony do tworzenia wystąpień i ponownie używany przez cały czas życia aplikacji. `HttpClient` Wystąpienie klasy dla każdego żądania spowoduje wyczerpanie liczby gniazd dostępnych w ramach dużych obciążeń. Ten problem spowoduje `SocketException` błędy. Możliwe podejścia do rozwiązania tego problemu są oparte na tworzeniu `HttpClient` obiektu jako singleton lub statyczny, jak wyjaśniono w tym [artykule firmy Microsoft w sprawie użycia HttpClient](../../../csharp/tutorials/console-webapiclient.md).
 
-Ale występuje drugi problem `HttpClient` , który może być używany w przypadku używania go jako obiektu pojedynczego lub statycznego. W takim przypadku pojedyncze lub statyczne `HttpClient` nie respektują zmian DNS, jak wyjaśniono w tym [problemie w repozytorium GitHub platformy .NET Core](https://github.com/dotnet/corefx/issues/11224). 
+Ale występuje drugi problem `HttpClient` , który może być używany w przypadku używania go jako obiektu pojedynczego lub statycznego. W takim przypadku pojedyncze lub statyczne `HttpClient` nie respektują zmian DNS, jak wyjaśniono w tym [problemie](https://github.com/dotnet/corefx/issues/11224) w repozytorium GitHub/corefx. 
 
-Aby rozwiązać te problemy i ułatwić zarządzanie `HttpClient` wystąpieniami, w programie .NET Core 2,1 wprowadzono nowy `HttpClientFactory` , który może być również używany do implementowania odpornych wywołań http przez integrację z Polly.   
+Aby rozwiązać te problemy i ułatwić zarządzanie `HttpClient` wystąpieniami, w programie .NET Core 2,1 wprowadzono nowy `HttpClientFactory` , który może być również używany do implementowania odpornych wywołań http przez integrację z Polly.
+
+[Polly](http://www.thepollyproject.org/) jest biblioteką obsługi błędów przejściowych, która ułatwia deweloperom Dodawanie odporności do aplikacji przy użyciu wstępnie zdefiniowanych zasad w sposób bezpieczny dla bezpieczeństwa i bezpiecznego wątkowo.
 
 ## <a name="what-is-httpclientfactory"></a>Co to jest HttpClientFactory
 
 `HttpClientFactory`zaprojektowano w celu:
 
-- Podaj centralną lokalizację do nazywania i konfigurowania HttpClients logicznego. Można na przykład skonfigurować klienta (agenta usługi), który jest wstępnie skonfigurowany w celu uzyskania dostępu do konkretnej mikrousługi.
+- Podaj centralną lokalizację do nazywania i konfigurowania `HttpClient` obiektów logicznych. Można na przykład skonfigurować klienta (agenta usługi), który jest wstępnie skonfigurowany w celu uzyskania dostępu do konkretnej mikrousługi.
 - Codify koncepcję wychodzącego oprogramowania pośredniczącego przez delegowanie programów `HttpClient` obsługi w programie i implementację oprogramowania pośredniczącego opartego na Polly, aby wykorzystać zasady dotyczące odporności Polly.
-- Klasa `HttpClient` ma już pojęcie delegowania programów obsługi, które można połączyć ze sobą dla wychodzących żądań HTTP. Klienci protokołu HTTP można rejestrować do fabryki oraz korzystać z procedury obsługi Polly, która umożliwia używanie zasad Pollyymi do ponawiania prób, CircuitBreakers itd.
-- Zarządzaj okresem istnienia HttpClientMessageHandlers, aby uniknąć wspomnianych problemów lub problemów, które mogą `HttpClient` wystąpić w przypadku samodzielnego zarządzania okresami istnienia. 
+- Klasa `HttpClient` ma już pojęcie delegowania programów obsługi, które można połączyć ze sobą dla wychodzących żądań HTTP. Klienci HTTP są rejestrowani w fabryce i można użyć procedury obsługi Polly, aby używać zasad Polly do ponawiania, CircuitBreakers itd.
+- Zarządzaj okresem istnienia `HttpClientMessageHandlers` , aby uniknąć wspomnianych problemów i problemów, które mogą `HttpClient` wystąpić podczas samodzielnego zarządzania okresami istnienia.
 
 ## <a name="multiple-ways-to-use-httpclientfactory"></a>Wiele sposobów używania HttpClientFactory
 
@@ -43,7 +45,7 @@ Istnieje kilka sposobów, których można używać `HttpClientFactory` w aplikac
 - Używaj wpisanych klientów
 - Korzystanie z wygenerowanych klientów
 
-Ze względu na zwięzłości, te wskazówki przedstawiają najbardziej strukturalny sposób `HttpClientFactory` korzystania z tego typu klientów (wzorzec agenta usługi), ale wszystkie opcje są udokumentowane i są obecnie wymienione w tym artykule dotyczące [użycia HttpClientFactory](/aspnet/core/fundamentals/http-requests?#consumption-patterns).  
+Ze względu na zwięzłości te wskazówki przedstawiają najbardziej strukturalny sposób użycia `HttpClientFactory`, który jest używany jako klienci z określonym typem (wzorzec agenta usługi). Wszystkie opcje są jednak udokumentowane i są obecnie wymienione w tym [artykule dotyczące użycia HttpClientFactory](/aspnet/core/fundamentals/http-requests#consumption-patterns).
 
 ## <a name="how-to-use-typed-clients-with-httpclientfactory"></a>Jak używać klientów z określonym programem HttpClientFactory
 
@@ -55,7 +57,7 @@ Na poniższym diagramie pokazano, w jaki sposób typy klientów `HttpClientFacto
 
 **Rysunek 8-4**. Korzystanie z HttpClientFactory z klasami klienta z typem.
 
-Najpierw Instalatora `HttpClientFactory` w aplikacji, dodając odwołanie `Microsoft.Extensions.Http` do pakietu `AddHttpClient()` zawierającego metodę rozszerzenia dla `IServiceCollection`. Ta metoda rozszerzenia rejestruje `DefaultHttpClientFactory` do użycia jako pojedynczy dla interfejsu. `IHttpClientFactory` Definiuje konfigurację przejściową dla `HttpMessageHandlerBuilder`. Ta procedura obsługi komunikatów`HttpMessageHandler` (obiekt) pobierana z puli jest używana `HttpClient` przez zwracaną z fabryki.
+Najpierw Instalatora `HttpClientFactory` w aplikacji, `Microsoft.Extensions.Http` instalując pakiet `AddHttpClient()` NuGet, który zawiera metodę rozszerzenia dla `IServiceCollection`. Ta metoda rozszerzenia rejestruje `DefaultHttpClientFactory` do użycia jako pojedynczy dla interfejsu. `IHttpClientFactory` Definiuje konfigurację przejściową dla `HttpMessageHandlerBuilder`. Ta procedura obsługi komunikatów`HttpMessageHandler` (obiekt) pobierana z puli jest używana `HttpClient` przez zwracaną z fabryki.
 
 W następnym kodzie można zobaczyć, jak `AddHttpClient()` można użyć do rejestrowania klientów typu (agentów usług), których należy użyć. `HttpClient`
 
@@ -67,9 +69,32 @@ services.AddHttpClient<IBasketService, BasketService>();
 services.AddHttpClient<IOrderingService, OrderingService>();
 ```
 
-Zarejestrowanie usług klienta, jak pokazano w poprzednim kodzie, sprawia `DefaultClientFactory` , że `HttpClient` tworzenie skonfigurowane dla każdej usługi w sposób opisany w następnym akapicie.
+Zarejestrowanie usług klienta, jak pokazano w poprzednim kodzie, `DefaultClientFactory` tworzy standard `HttpClient` dla każdej usługi.
 
-Bezpośrednio przez zarejestrowanie klasy usługi klienta w `AddHttpClient()`programie `HttpClient` , obiekt, który zostanie dodany do klasy, będzie używać konfiguracji i zasad dostarczonych podczas rejestracji. W następnych sekcjach zostaną wyświetlone te zasady, takie jak ponowne próby Polly lub wyłączniki.
+Można również dodać konfigurację specyficzną dla wystąpienia w ramach rejestracji do programu, na przykład skonfigurować adres podstawowy i dodać zasady odporności, jak pokazano w poniższym kodzie:
+
+```csharp
+services.AddHttpClient<ICatalogService, CatalogService>(client =>
+{
+    client.BaseAddress = new Uri(Configuration["BaseUrl"])
+})
+    .AddPolicyHandler(GetRetryPolicy())
+    .AddPolicyHandler(GetCircuitBreakerPolicy());
+```
+
+Tylko w przypadku przykładu można zobaczyć jedną z powyższych zasad w następnym kodzie:
+
+```csharp
+static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
+{
+    return HttpPolicyExtensions
+        .HandleTransientHttpError()
+        .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
+        .WaitAndRetryAsync(6, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)));
+}
+```
+
+Więcej informacji o używaniu programu Polly można znaleźć w [następnym artykule](implement-http-call-retries-exponential-backoff-polly.md).
 
 ### <a name="httpclient-lifetimes"></a>HttpClient okresy istnienia
 
@@ -82,7 +107,7 @@ W obiektach w puli jest używany okres istnienia, który to czas, przez `HttpMes
 ```csharp
 //Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client 
 services.AddHttpClient<ICatalogService, CatalogService>()
-                 .SetHandlerLifetime(TimeSpan.FromMinutes(5));  
+    .SetHandlerLifetime(TimeSpan.FromMinutes(5));
 ```
 
 Każdy klient z określonym typem może mieć własną skonfigurowaną wartość okresu istnienia programu obsługi. Ustaw okres istnienia `InfiniteTimeSpan` w celu wyłączenia procedury obsługi.
@@ -122,7 +147,7 @@ Klient z określonym typem to, efektywnie, obiekt przejściowy, co oznacza, że 
 
 ### <a name="use-your-typed-client-classes"></a>Korzystanie z wpisanych klas klienta
 
-Na koniec po zaimplementowaniu klas typów i zarejestrowaniu ich przy użyciu AddHttpClient () można używać go wszędzie tam, gdzie można uzyskać usługi przez DI, na przykład w dowolnym kodzie strony Razor lub dowolnym kontrolerze aplikacji sieci Web MVC, jak w poniższym kodzie z eShopOnContainers.
+Na koniec po zaimplementowaniu klas wpisanych i zarejestrowaniu ich w `AddHttpClient()`programie można używać ich wszędzie tam, gdzie można korzystać z usług wstrzykiwanych przez di. Na przykład w kodzie lub kontrolerze strony Razor w aplikacji sieci Web MVC, jak w poniższym kodzie z eShopOnContainers:
 
 ```csharp
 namespace Microsoft.eShopOnContainers.WebMVC.Controllers
@@ -131,18 +156,18 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
     {
         private ICatalogService _catalogSvc;
 
-        public CatalogController(ICatalogService catalogSvc) => 
+        public CatalogController(ICatalogService catalogSvc) =>
                                                            _catalogSvc = catalogSvc;
 
-        public async Task<IActionResult> Index(int? BrandFilterApplied, 
-                                               int? TypesFilterApplied, 
-                                               int? page, 
+        public async Task<IActionResult> Index(int? BrandFilterApplied,
+                                               int? TypesFilterApplied,
+                                               int? page,
                                                [FromQuery]string errorMsg)
         {
             var itemsPage = 10;
-            var catalog = await _catalogSvc.GetCatalogItems(page ?? 0, 
-                                                            itemsPage, 
-                                                            BrandFilterApplied, 
+            var catalog = await _catalogSvc.GetCatalogItems(page ?? 0,
+                                                            itemsPage,
+                                                            BrandFilterApplied,
                                                             TypesFilterApplied);
             //… Additional code
         }
@@ -151,15 +176,18 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 }
 ```
 
-Do tego momentu pokazany kod jest tylko wykonywanie zwykłych żądań HTTP, ale "Magic" znajduje się w następujących sekcjach, w których po prostu przez dodanie zasad i delegowanie programów obsługi do zarejestrowanych klientów z określonym typem, wszystkie żądania HTTP, które mają `HttpClient` być wykonywane przez program, będą zachowywać się w celu uwzględnienia odpornych zasad, takich jak ponowne próby przy użyciu wykładniczej wycofywania, wyłączników lub wszelkich innych niestandardowych procedur delegowania do implementowania dodatkowych funkcji zabezpieczeń, takich jak tokeny uwierzytelniania lub jakakolwiek inna funkcja niestandardowa. 
+Do tego momentu pokazany kod jest tylko wykonywanie zwykłych żądań HTTP, ale "Magic" znajduje się w następujących sekcjach, w których po prostu przez dodanie zasad i delegowanie programów obsługi do zarejestrowanych klientów z określonym typem, wszystkie żądania HTTP, które mają `HttpClient` być wykonywane przez program, będą zachowywać się w celu uwzględnienia odpornych zasad, takich jak ponowne próby przy użyciu wykładniczej wycofywania, wyłączników lub wszelkich innych niestandardowych procedur delegowania do implementowania dodatkowych funkcji zabezpieczeń, takich jak tokeny uwierzytelniania lub jakakolwiek inna funkcja niestandardowa.
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Używanie HttpClientFactory w programie .NET Core**\
-  [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
+- **Używanie HttpClientFactory w programie .NET Core** \
+  [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
-- **Repozytorium GitHub HttpClientFactory**\
+- **Repozytorium GitHub HttpClientFactory** \
   <https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory>
+
+- **Polly (odporność platformy .NET i Biblioteka obsługi błędów przejściowych)**  \
+  <http://www.thepollyproject.org/>
 
 >[!div class="step-by-step"]
 >[Poprzedni](explore-custom-http-call-retries-exponential-backoff.md)Następny

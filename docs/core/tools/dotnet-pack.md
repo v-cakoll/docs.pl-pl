@@ -2,12 +2,12 @@
 title: polecenie dotnet Pack
 description: Polecenie programu dotnet Pack tworzy pakiety NuGet dla projektu .NET Core.
 ms.date: 08/08/2019
-ms.openlocfilehash: ba5a438d58963222c3fa55d2c585ef503dcd49db
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: c230fa201fce02ab537afc4e14468788d32b8c8a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990409"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039482"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -63,117 +63,117 @@ Projekty sieci Web nie są domyślnie objęte pakietem. Aby zastąpić zachowani
 
 ## <a name="options"></a>Opcje
 
-* **`-c|--configuration {Debug|Release}`**
+- **`-c|--configuration {Debug|Release}`**
 
   Definiuje konfigurację kompilacji. Wartość domyślna to `Debug`.
 
-* **`--force`**
+- **`--force`**
 
   Wymusza rozpoznanie wszystkich zależności, nawet jeśli ostatnie przywracanie zakończyło się pomyślnie. Określenie tej flagi jest takie samo jak usuwanie pliku *Project. assets. JSON* . Opcja dostępna od wersji .NET Core 2,0 SDK.
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   Drukuje krótką pomoc dla polecenia.
 
-* **`--include-source`**
+- **`--include-source`**
 
   Obejmuje pakiety NuGet symboli debugowania oprócz zwykłych pakietów NuGet w katalogu wyjściowym. Pliki źródeł są dołączone `src` do folderu w pakiecie symboli.
 
-* **`--include-symbols`**
+- **`--include-symbols`**
 
   Obejmuje pakiety NuGet symboli debugowania oprócz zwykłych pakietów NuGet w katalogu wyjściowym.
 
-* **`--interactive`**
+- **`--interactive`**
 
   Zezwala na zatrzymanie polecenia i oczekiwanie na dane wejściowe użytkownika lub akcję (na przykład w celu ukończenia uwierzytelniania). Dostępne od wersji .NET Core 3,0 SDK.
 
-* **`--no-build`**
+- **`--no-build`**
 
   Nie kompiluje projektu przed opakowaniem. Również niejawnie ustawia `--no-restore` flagę.
 
-* **`--no-dependencies`**
+- **`--no-dependencies`**
 
   Ignoruje odwołania projektu do projektu i przywraca tylko projekt główny. Opcja dostępna od wersji .NET Core 2,0 SDK.
 
-* **`--no-restore`**
+- **`--no-restore`**
 
   Nie wykonuje przywracania niejawnego podczas wykonywania polecenia. Opcja dostępna od wersji .NET Core 2,0 SDK.
 
-* **`--nologo`**
+- **`--nologo`**
 
   Nie wyświetla transparentu początkowego ani komunikatu o prawach autorskich. Dostępne od wersji .NET Core 3,0 SDK.
 
-* **`-o|--output <OUTPUT_DIRECTORY>`**
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
   Umieszcza skompilowane pakiety w określonym katalogu.
 
-* **`--runtime <RUNTIME_IDENTIFIER>`**
+- **`--runtime <RUNTIME_IDENTIFIER>`**
 
   Określa docelowy środowisko uruchomieniowe, dla którego mają zostać przywrócone pakiety. Aby uzyskać listę identyfikatorów środowiska uruchomieniowego (RID), zobacz [wykaz identyfikatorów RID](../rid-catalog.md). Opcja dostępna od wersji .NET Core 2,0 SDK.
 
-* **`-s|--serviceable`**
+- **`-s|--serviceable`**
 
   Ustawia flagę obsługi w pakiecie. Aby uzyskać więcej informacji, zobacz [blog platformy .NET: .NET 4.5.1 obsługuje aktualizacje zabezpieczeń firmy Microsoft dla bibliotek NuGet programu .NET](https://aka.ms/nupkgservicing).
 
-* **`--version-suffix <VERSION_SUFFIX>`**
+- **`--version-suffix <VERSION_SUFFIX>`**
 
   Definiuje wartość `$(VersionSuffix)` właściwości programu MSBuild w projekcie.
 
-* **`-v|--verbosity <LEVEL>`**
+- **`-v|--verbosity <LEVEL>`**
 
   Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i .`diag[nostic]`
 
 ## <a name="examples"></a>Przykłady
 
-* Pakowanie projektu w bieżącym katalogu:
+- Pakowanie projektu w bieżącym katalogu:
 
   ```console
   dotnet pack
   ```
 
-* `app1` Pakowanie projektu:
+- `app1` Pakowanie projektu:
 
   ```console
   dotnet pack ~/projects/app1/project.csproj
   ```
 
-* Pakowanie projektu w bieżącym katalogu i umieszczenie w nim pakietów `nupkgs` powstających:
+- Pakowanie projektu w bieżącym katalogu i umieszczenie w nim pakietów `nupkgs` powstających:
 
   ```console
   dotnet pack --output nupkgs
   ```
 
-* Pakowanie projektu w bieżącym katalogu do `nupkgs` folderu i pomijanie kroku kompilacji:
+- Pakowanie projektu w bieżącym katalogu do `nupkgs` folderu i pomijanie kroku kompilacji:
 
   ```console
   dotnet pack --no-build --output nupkgs
   ```
 
-* Przy użyciu sufiksu wersji projektu skonfigurowanego `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` jako w pliku *. csproj* należy spakować bieżący projekt i zaktualizować uzyskaną wersję pakietu przy użyciu danego sufiksu:
+- Przy użyciu sufiksu wersji projektu skonfigurowanego `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` jako w pliku *. csproj* należy spakować bieżący projekt i zaktualizować uzyskaną wersję pakietu przy użyciu danego sufiksu:
 
   ```console
   dotnet pack --version-suffix "ci-1234"
   ```
 
-* Ustaw wersję pakietu na `2.1.0` `PackageVersion` za pomocą właściwości MSBuild:
+- Ustaw wersję pakietu na `2.1.0` `PackageVersion` za pomocą właściwości MSBuild:
 
   ```console
   dotnet pack -p:PackageVersion=2.1.0
   ```
 
-* Pakowanie projektu dla konkretnej [platformy docelowej](../../standard/frameworks.md):
+- Pakowanie projektu dla konkretnej [platformy docelowej](../../standard/frameworks.md):
 
   ```console
   dotnet pack -p:TargetFrameworks=net45
   ```
 
-* Pakowanie projektu i użycie określonego środowiska uruchomieniowego (Windows 10) dla operacji przywracania (zestaw .NET Core SDK 2,0 i nowsze wersje):
+- Pakowanie projektu i użycie określonego środowiska uruchomieniowego (Windows 10) dla operacji przywracania (zestaw .NET Core SDK 2,0 i nowsze wersje):
 
   ```console
   dotnet pack --runtime win10-x64
   ```
 
-* Pakowanie projektu przy użyciu [pliku. nuspec](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):
+- Pakowanie projektu przy użyciu [pliku. nuspec](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):
 
   ```console
   dotnet pack ~/projects/app1/project.csproj -p:NuspecFile=~/projects/app1/project.nuspec -p:NuspecBasePath=~/projects/app1/nuget

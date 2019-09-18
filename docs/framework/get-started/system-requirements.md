@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bed0084fd576ba9b9f9eeb51e9e2466938e43490
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 6f867b53f168a394515a1b1eaa6575a72dfb8d91
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106507"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052011"
 ---
 # <a name="net-framework-system-requirements"></a>Wymagania systemowe .NET Framework
 
@@ -34,7 +34,7 @@ Aby uzyskać informacje o .NET Framework wersjach wcześniejszych niż .NET Fram
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
-Informacje dotyczące pobierania i linki znajdują się w temacie [Install the .NET Framework for Developers](../../../docs/framework/install/guide-for-developers.md).
+Informacje dotyczące pobierania i linki znajdują się w temacie [Install the .NET Framework for Developers](../install/guide-for-developers.md).
 
 Aby uzyskać informacje na temat cyklu pomocy technicznej .NET Framework wersji, zobacz [Pomoc techniczna firmy Microsoft cyklu życia](https://support.microsoft.com/lifecycle/search?sort=PN&alpha=Microsoft%20.NET%20Framework&Filter=FilterNO).
 
@@ -112,6 +112,6 @@ Aby uzyskać informacje na temat cyklu pomocy technicznej .NET Framework wersji,
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik instalacji](../../../docs/framework/install/index.md)
-- [Wprowadzenie](../../../docs/framework/get-started/index.md)
-- [Rozwiązywanie problemów z zablokowaną instalacją i odinstalowywaniem programu .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [Przewodnik instalacji](../install/index.md)
+- [Wprowadzenie](index.md)
+- [Rozwiązywanie problemów z zablokowaną instalacją i odinstalowywaniem programu .NET Framework](../install/troubleshoot-blocked-installations-and-uninstallations.md)

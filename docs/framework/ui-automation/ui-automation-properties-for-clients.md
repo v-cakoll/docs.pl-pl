@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-ms.openlocfilehash: 6f02a4825206da0dd4949083cc54f555a8ae40b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9c92ea154a078ff5a059edd82f06b8f3d5bab239
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914456"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042131"
 ---
 # <a name="ui-automation-properties-for-clients"></a>Właściwości automatyzacji interfejsu użytkownika dla klientów
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "69914456"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]właściwości są tylko do odczytu. Aby ustawić właściwości kontrolki, należy użyć metod odpowiedniego wzorca kontrolki. Na przykład użyj <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> , aby zmienić wartości pozycji okna przewijania.  
   
- Aby zwiększyć wydajność, wartości właściwości formantów i wzorców formantów mogą być buforowane podczas <xref:System.Windows.Automation.AutomationElement> pobierania obiektów. Aby uzyskać więcej informacji, zobacz [buforowanie w klientach automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md).  
+ Aby zwiększyć wydajność, wartości właściwości formantów i wzorców formantów mogą być buforowane podczas <xref:System.Windows.Automation.AutomationElement> pobierania obiektów. Aby uzyskać więcej informacji, zobacz [buforowanie w klientach automatyzacji interfejsu użytkownika](caching-in-ui-automation-clients.md).  
   
 ## <a name="property-ids"></a>Identyfikatory właściwości  
  Identyfikatory właściwości (identyfikatory) są unikatowe, stałe wartości, które są hermetyzowane <xref:System.Windows.Automation.AutomationProperty> w obiektach. Aplikacje klienckie automatyzacji interfejsu użytkownika uzyskują te identyfikatory <xref:System.Windows.Automation.AutomationElement> z klasy lub z odpowiedniej klasy wzorców kontroli, takiej jak <xref:System.Windows.Automation.ScrollPattern>. Dostawcy automatyzacji interfejsu użytkownika pobierają <xref:System.Windows.Automation.AutomationElementIdentifiers> je z lub z jednej z identyfikatorów wzorców formantów, takich jak <xref:System.Windows.Automation.ScrollPatternIdentifiers>.  
@@ -99,6 +99,6 @@ ms.locfileid: "69914456"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Buforowanie w klientach automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
-- [Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie serwera](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
-- [Subskrybowanie zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+- [Buforowanie w klientach automatyzacji interfejsu użytkownika](caching-in-ui-automation-clients.md)
+- [Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie serwera](server-side-ui-automation-provider-implementation.md)
+- [Subskrybowanie zdarzeń automatyzacji interfejsu użytkownika](subscribe-to-ui-automation-events.md)

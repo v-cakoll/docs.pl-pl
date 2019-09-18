@@ -12,27 +12,27 @@ helpviewer_keywords:
 - Internet, proxy instances
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
-ms.openlocfilehash: d9bd2ee7dab36172cba68532e50cfcd14fd884db
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 76566d06cac81d8ba4138369c6ee3ef807a99634
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649534"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049050"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>Dostęp do Internetu za pośrednictwem serwera proxy
-Jeśli Twoja witryna wymaga serwera proxy, aby uzyskać dostęp do Internetu, należy skonfigurować wystąpienie serwera proxy, aby umożliwić aplikacji do komunikowania się z serwera proxy sieci Web.  
+Jeśli witryna korzysta z serwera proxy w celu zapewnienia dostępu do Internetu, należy skonfigurować wystąpienie serwera proxy, aby umożliwić aplikacji komunikację z serwerem proxy sieci Web.  
   
  Ta sekcja zawiera następujące tematy:  
   
-- [Konfiguracja serwera proxy](../../../docs/framework/network-programming/proxy-configuration.md)  
+- [Konfiguracja serwera proxy](proxy-configuration.md)  
   
-- [Automatyczne wykrywanie serwera proxy](../../../docs/framework/network-programming/automatic-proxy-detection.md)  
+- [Automatyczne wykrywanie serwera proxy](automatic-proxy-detection.md)  
   
-- [Instrukcje: Włącz używanie serwera Proxy do komunikacji z Internetem przez element WebRequest](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
+- [Instrukcje: Włączanie żądania sieci webdo komunikacji z Internetem za pomocą serwera proxy](how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
-- [Instrukcje: Zastąp wyboru globalnego serwera Proxy](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
+- [Instrukcje: Zastąp globalny wybór globalnego serwera proxy](how-to-override-a-global-proxy-selection.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Korzystanie z protokołów aplikacji](../../../docs/framework/network-programming/using-application-protocols.md)
-- [Programowanie dla sieci w programie .NET Framework](../../../docs/framework/network-programming/index.md)
+- [Korzystanie z protokołów aplikacji](using-application-protocols.md)
+- [Programowanie dla sieci w programie .NET Framework](index.md)

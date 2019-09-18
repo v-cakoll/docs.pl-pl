@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, control patterns for clients
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-ms.openlocfilehash: f545cbbacac6670f11f28166191112c9fba4f70f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 320833bf147fa16889cd188c7c729cd4dc028843
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953236"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042524"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika dla klientów
 > [!NOTE]
@@ -20,7 +20,7 @@ ms.locfileid: "69953236"
   
  Wzorce kontrolek umożliwiają kategoryzowanie i Uwidacznianie funkcjonalności formantu niezależnie od typu formantu lub wyglądu kontrolki. Klienci automatyzacji interfejsu użytkownika mogą przeanalizować <xref:System.Windows.Automation.AutomationElement> , aby określić, które wzorce kontroli są obsługiwane, i zapewnić zachowanie formantu.  
   
- Aby uzyskać pełną listę wzorców kontrolek, zobacz [Omówienie wzorców kontrolek automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
+ Aby uzyskać pełną listę wzorców kontrolek, zobacz [Omówienie wzorców kontrolek automatyzacji interfejsu użytkownika](ui-automation-control-patterns-overview.md).  
   
 <a name="uiautomation_getting_control_patterns"></a>   
 ## <a name="getting-control-patterns"></a>Pobieranie wzorców kontrolek  
@@ -34,7 +34,7 @@ ms.locfileid: "69953236"
   
 <a name="uiautomation_properties_on_control_patterns"></a>   
 ## <a name="retrieving-properties-on-control-patterns"></a>Pobieranie właściwości dla wzorców formantów  
- Klienci mogą pobrać wartości właściwości w wzorcach kontroli przez wywołanie albo <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> lub <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> i rzutowanie obiektu zwróconego do odpowiedniego typu. Aby uzyskać więcej informacji [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] na temat właściwości, zobacz [właściwości automatyzacji interfejsu użytkownika dla klientów](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+ Klienci mogą pobrać wartości właściwości w wzorcach kontroli przez wywołanie albo <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> lub <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> i rzutowanie obiektu zwróconego do odpowiedniego typu. Aby uzyskać więcej informacji [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] na temat właściwości, zobacz [właściwości automatyzacji interfejsu użytkownika dla klientów](ui-automation-properties-for-clients.md).  
   
  Poza `GetPropertyValue` metodami wartości właściwości można pobierać za pomocą metod dostępu środowiska uruchomieniowego języka wspólnego (CLR), aby [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] uzyskać dostęp do właściwości wzorca.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "69953236"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wzorce kontrolek automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
-- [Wzorzec tekstu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)
-- [Wywoływanie kontrolki przy użyciu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
-- [Pobieranie stanu przełączenia pola wyboru przy użyciu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)
-- [Mapowanie wzorców kontrolek dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
+- [Wzorce kontrolek automatyzacji interfejsu użytkownika](ui-automation-control-patterns.md)
+- [Wzorzec tekstu automatyzacji interfejsu użytkownika](ui-automation-text-pattern.md)
+- [Wywoływanie kontrolki przy użyciu automatyzacji interfejsu użytkownika](invoke-a-control-using-ui-automation.md)
+- [Pobieranie stanu przełączenia pola wyboru przy użyciu automatyzacji interfejsu użytkownika](get-the-toggle-state-of-a-check-box-using-ui-automation.md)
+- [Mapowanie wzorców kontrolek dla klientów automatyzacji interfejsu użytkownika](control-pattern-mapping-for-ui-automation-clients.md)
 - [Przykład wstawiania TextPattern tekstu](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
 - [Przykład wyszukiwania i wybierania TextPattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FindText)
 - [Przykład InvokePattern, ExpandCollapsePattern i TogglePattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)

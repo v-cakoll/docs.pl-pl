@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 937577f86ec854f5a458fe6067836a85a540695a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ec8180da9637ec2b2c4e1b432773b4f9f1ac908b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913803"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049174"
 ---
 # <a name="serialization-and-metadata"></a>Serializacja i metadane
 
@@ -22,7 +22,7 @@ Jeśli aplikacja serializować i deserializacji obiektów, może być konieczne 
 <a name="ThirdParty"></a>
 ## <a name="third-party-serializers"></a>Serializatory innych firm
 
- Serializatory innych firm, w tym Newtonsoft. JSON, zazwyczaj są oparte na odbiciach. Przy użyciu binarnego dużego obiektu (BLOB) danych serializowanych pola w danych są przypisywane do konkretnego typu przez wyszukanie pól typu docelowego według nazwy. Co najmniej przy użyciu tych bibliotek powoduje wyjątki [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) dla każdego <xref:System.Type> obiektu, który próbujesz serializować `List<Type>` lub deserializować w kolekcji.  
+ Serializatory innych firm, w tym Newtonsoft. JSON, zazwyczaj są oparte na odbiciach. Przy użyciu binarnego dużego obiektu (BLOB) danych serializowanych pola w danych są przypisywane do konkretnego typu przez wyszukanie pól typu docelowego według nazwy. Co najmniej przy użyciu tych bibliotek powoduje wyjątki [MissingMetadataException](missingmetadataexception-class-net-native.md) dla każdego <xref:System.Type> obiektu, który próbujesz serializować `List<Type>` lub deserializować w kolekcji.  
   
  Najprostszym sposobem rozwiązania problemów spowodowanych brakiem metadanych dla tych serializatorów jest zbieranie typów, które będą używane w serializacji w ramach pojedynczej przestrzeni nazw (na `App.Models`przykład) i `Serialize` zastosowanie dyrektywy Metadata do niej:  
   
@@ -30,7 +30,7 @@ Jeśli aplikacja serializować i deserializacji obiektów, może być konieczne 
 <Namespace Name="App.Models" Serialize="Required PublicAndInternal" />  
 ```  
   
- Aby uzyskać informacje o składni używanej w tym przykładzie, zobacz [ \<Namespace > element](../../../docs/framework/net-native/namespace-element-net-native.md).  
+ Aby uzyskać informacje o składni używanej w tym przykładzie, zobacz [ \<Namespace > element](namespace-element-net-native.md).  
   
 <a name="Microsoft"></a>
 ## <a name="microsoft-serializers"></a>Serializatory firmy Microsoft
@@ -67,11 +67,11 @@ Jeśli aplikacja serializować i deserializacji obiektów, może być konieczne 
 <Type Name="t" Browse="Required Public" />  
 ```  
   
- Aby uzyskać informacje o składni używanej w tym przykładzie, zobacz [ \<Type > element](../../../docs/framework/net-native/type-element-net-native.md).  
+ Aby uzyskać informacje o składni używanej w tym przykładzie, zobacz [ \<Type > element](type-element-net-native.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [\<Typ > element](../../../docs/framework/net-native/type-element-net-native.md)
-- [\<Przestrzeń nazw > element](../../../docs/framework/net-native/namespace-element-net-native.md)
+- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementy dyrektyw środowiska uruchomieniowego](runtime-directive-elements.md)
+- [\<Typ > element](type-element-net-native.md)
+- [\<Przestrzeń nazw > element](namespace-element-net-native.md)

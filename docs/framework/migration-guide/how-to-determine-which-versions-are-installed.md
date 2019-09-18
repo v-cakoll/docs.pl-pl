@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d719debd39309415f996d655c68abd8c80ec5e3
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0df5a5be2997958faa43ee67ae64fc37e1998414
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928423"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051591"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Instrukcje: Ustal, które wersje .NET Framework są zainstalowane
 
@@ -72,7 +72,7 @@ Aby uzyskać informacje dotyczące wykrywania zainstalowanych aktualizacji dla k
 
 3. Wyszukaj wpis DWORD o nazwie **Release**. Jeśli istnieje, masz zainstalowaną .NET Framework 4,5 lub nowszą wersję. Wartość jest kluczem wydania, który odpowiada określonej wersji .NET Framework. Na przykład, wartość wpisu **zlecenia** to *378389*, który jest kluczem wydania dla .NET Framework 4,5.
 
-     ![Wpis rejestru dla .NET Framework 4,5](media/clr-installdir.png "Wpis rejestru dla .NET Framework 4,5")
+     ![Wpis rejestru dla .NET Framework 4,5](./media/clr-installdir.png "Wpis rejestru dla .NET Framework 4,5")
 
 W poniższej tabeli wymieniono wartości DWORD **wydania** w poszczególnych systemach operacyjnych dla .NET Framework 4,5 i nowszych.
 
@@ -163,7 +163,7 @@ Aby sprawdzić, czy wersja .NET Framework wymaga innej minimalnej wersji, Zastą
 
     Na poniższej ilustracji przedstawiono podklucz i jego **wersję** wpisu dla .NET Framework 3,5.
 
-    ![Wpis rejestru dla .NET Framework 3,5.](media/net-4-and-earlier.png ".NET Framework 3,5 i wcześniejsze wersje")
+    ![Wpis rejestru dla .NET Framework 3,5.](./media/net-4-and-earlier.png ".NET Framework 3,5 i wcześniejsze wersje")
 
 <a name="net_c"></a>
 

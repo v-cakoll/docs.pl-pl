@@ -31,17 +31,17 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: 255a4ab3d6d6e3fc133e809ce360b25d6f82c8d7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bb478f0742e85cadd9509de823abb0d486170d37
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940069"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048497"
 ---
 # <a name="handling-errors"></a>Obsługa błędów
 <xref:System.Net.WebRequest.GetResponse%2A> <xref:System.ArgumentException> <xref:System.Net.WebException> Klasy i generujązarównowyjątkisystemowe(takiejak),jakispecyficznedlasieciWebwyjątki(któresągenerowaneprzezmetodę).<xref:System.Net.WebResponse> <xref:System.Net.WebRequest>  
   
- Każdy element WebException zawiera <xref:System.Net.WebException.Status%2A> właściwość, która zawiera wartość z <xref:System.Net.WebExceptionStatus> wyliczenia. Można sprawdzić Właściwość **status** , aby określić błąd, który wystąpił, i podjąć odpowiednie kroki, aby rozwiązać ten problem.  
+ Każdy element **WebException** zawiera <xref:System.Net.WebException.Status%2A> właściwość, która zawiera wartość z <xref:System.Net.WebExceptionStatus> wyliczenia. Można sprawdzić Właściwość **status** , aby określić błąd, który wystąpił, i podjąć odpowiednie kroki, aby rozwiązać ten problem.  
   
  W poniższej tabeli opisano możliwe wartości właściwości **stan** .  
   
@@ -165,9 +165,9 @@ End Try
   
  Aplikacje korzystające z <xref:System.Net.Sockets.Socket> klasy throw <xref:System.Net.Sockets.SocketException> w przypadku wystąpienia błędów w gnieździe Windows. <xref:System.Net.Sockets.TcpClient>Klasy , <xref:System.Net.Sockets.TcpListener>, i<xref:System.Net.Sockets.UdpClient> są zbudowane na podstawie klasy Socket i generują **SocketExceptions** .  
   
- Gdy zostanie zgłoszony obiekt SocketException, <xref:System.Net.Sockets.SocketException.ErrorCode%2A> Klasa **SocketException** ustawia właściwość na ostatni błąd gniazda systemu operacyjnego, który wystąpił. Aby uzyskać więcej informacji na temat kodów błędów gniazda, zobacz dokumentację kodu błędu interfejsu API Winsock 2,0 w witrynie MSDN.  
+ Gdy zostanie zgłoszony obiekt <xref:System.Net.Sockets.SocketException.ErrorCode%2A> **SocketException** , Klasa **SocketException** ustawia właściwość na ostatni błąd gniazda systemu operacyjnego, który wystąpił. Aby uzyskać więcej informacji na temat kodów błędów gniazda, zobacz dokumentację kodu błędu interfejsu API Winsock 2,0 w witrynie MSDN.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Podstawy obsługi wyjątków](../../standard/exceptions/exception-handling-fundamentals.md)
-- [Żądanie danych](../../../docs/framework/network-programming/requesting-data.md)
+- [Żądanie danych](requesting-data.md)

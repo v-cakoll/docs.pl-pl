@@ -6,27 +6,27 @@ helpviewer_keywords:
 - FactoryMethod directive in XAML [XAML Services]
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
-ms.openlocfilehash: 8fff4d62e07bdfd4ecc27d2692c391251afdd6d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 586965dd4094e81fd830a09b64604cf33f195630
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971837"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053773"
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod — dyrektywa
-Określa metody innej niż konstruktora, który procesor XAML powinna być używana do inicjowania obiektu po rozwiązaniu jego zapasowego typu.  
+Określa metodę inną niż Konstruktor, który powinien być używany przez procesor XAML do inicjowania obiektu po rozwiązaniu jego typu zapasowego.  
   
-## <a name="xaml-attribute-usage-no-xarguments"></a>Użycie atrybutu XAML, x: Arguments  
+## <a name="xaml-attribute-usage-no-xarguments"></a>Użycie atrybutu języka XAML, brak X:arguments —  
   
-```  
+```xaml  
 <object x:FactoryMethod="methodname"...>  
   ...  
 </object>  
 ```  
   
-## <a name="xaml-attribute-usage-xarguments-as-elements"></a>Użycie atrybutu XAML, x: Arguments, jako elementów:  
+## <a name="xaml-attribute-usage-xarguments-as-elements"></a>Użycie atrybutu języka XAML, X:arguments — jako elementy  
   
-```  
+```xaml  
 <object x:FactoryMethod="methodname"...>  
   <x:Arguments>  
     oneOrMoreObjectElements  
@@ -38,23 +38,23 @@ Określa metody innej niż konstruktora, który procesor XAML powinna być używ
   
 |||  
 |-|-|  
-|`methodname`|Nazwa metody parametry metody, która procesorów XAML wywołania do inicjowania wystąpienia określony jako `object`. Zobacz uwagi.|  
-|`oneOrMoreObjectElements`|Co najmniej jeden element obiektu dla obiektów, które określają parametry metody fabryki. Kolejność jest znacząca; oznacza kolejność, w której argumenty powinien zostać przekazany do metody fabryki.|  
+|`methodname`|Nazwa metody ciągu metody, którą procesory XAML wywołują w celu zainicjowania wystąpienia określonego jako `object`. Zobacz uwagi.|  
+|`oneOrMoreObjectElements`|Co najmniej jeden element obiektu dla obiektów, które określają parametry metody fabryki. Kolejność jest istotna. oznacza kolejność, w jakiej argumenty powinny być przekazane do metody fabryki.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli `methodname` jest metodą wystąpienia nie może być kwalifikowana.  
+ Jeśli `methodname` jest to metoda wystąpienia, nie może być kwalifikowana.  
   
- Metody statyczne służące jako metodami factory są obsługiwane. Jeśli `methodname` jest statycznej metody `methodname` jest dostarczana jako *typeName*. *methodName* kombinacji, gdzie *typeName* nazwy klasy, która definiuje metody statyczne fabryki. *Element typeName* może być prefiksem kwalifikowanego Jeśli odwołujące się do typu w mapowanych xmlns. *Element typeName* może być typ inny niż `typeof(object)`.  
+ Metody statyczne jako metody fabryki są obsługiwane. If `methodname` jest metodą statyczną, `methodname` jest podana jako *TypeName*. *kombinacja methodName* , gdzie *TypeName* nazywa klasę, która definiuje metodę dla fabryki statycznej. *Właściwość TypeName* może być kwalifikowana przy użyciu prefiksu, jeśli odwołuje się do typu w zmapowanym xmlns. Typ *TypeName* może być inny niż `typeof(object)`.  
   
- Metoda fabryki musi być zadeklarowany publiczną metodę typu, która będzie tworzyć kopię elementu odpowiedniego obiektu.  
+ Metoda fabryki musi być zadeklarowaną metodą publiczną typu, który wykonuje kopię zapasową odpowiedniego elementu obiektu.  
   
- Metoda fabryki musi zwrócić wystąpienie, które można przypisać do odpowiedniego obiektu. Metodami Factory nigdy nie powinna zwracać wartość null.  
+ Metoda fabryki musi zwracać wystąpienie, które można przypisać do odpowiedniego obiektu. Metody fabryki nigdy nie powinny zwracać wartości null.  
   
- `x:Arguments` działa na zasadzie najlepiej dopasowana podpisy metod fabryki. Dopasowywanie najpierw sprawdza liczba parametrów. Jeśli istnieje więcej niż jeden odpowiadającego liczba parametrów, typ parametru jest następnie oceniany i najlepsze dopasowanie jest określana. Jeśli po tym etapie oceny nadal jest niejednoznaczności, XAML procesora zachowanie jest niezdefiniowane.  
+ `x:Arguments`działa na zasadzie najlepszego dopasowania dla sygnatur metod fabryki. Dopasowanie najpierw oblicza liczbę parametrów. Jeśli istnieje więcej niż jedno możliwe dopasowanie liczby parametrów, typ parametru jest następnie oceniany i jest określany optymalny odpowiednik. Jeśli po tej fazie oceny nadal występuje niejednoznaczność, zachowanie procesora XAML nie jest zdefiniowane.  
   
- `x:FactoryMethod` Użycie elementu nie jest użycie elementu właściwości w tym sensie, typowe, ponieważ znaczników dyrektywy nie odwołuje się do typu elementu obiektu nadrzędnego. Oczekuje się, że użycie elementu jest rzadziej niż użycie atrybutu. `x:Arguments` (użycie atrybutu lub elementu) może być używana wraz z `x:FactoryMethod` użycie elementu, ale nie jest specjalnie wyświetlany w sekcji użycia.  
+ Użycie `x:FactoryMethod` elementu nie jest użyciem elementu właściwości w typowym sensie, ponieważ znacznik dyrektywy nie odwołuje się do typu elementu obiektu zawierającego. Oczekuje się, że użycie elementu jest mniej typowe niż użycie atrybutu. `x:Arguments`(użycie atrybutu lub elementu) może być używane razem z `x:FactoryMethod` użyciem elementu, ale nie jest to pokazane w sekcjach użycia.  
   
- `x:FactoryMethod` jako element musi poprzedzać wszystkie inne elementy właściwości, należy poprzedzić dowolne `x:Arguments` również dostarczane jako elementy, a musi poprzedzać dowolny tekst zawartości/wewnętrzny tekst/inicjowania.  
+ `x:FactoryMethod`jako element musi poprzedzać wszystkie inne elementy właściwości, muszą poprzedzać `x:Arguments` wszelkie elementy, które również muszą poprzedzać dowolny tekst zawartości/wewnętrznego tekstu inicjującego.  
   
 ## <a name="see-also"></a>Zobacz także
 

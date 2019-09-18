@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45e38f70ded85e8db36068c19fdd1708511817db
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: df1c86f2d75b0046af851585e943e13d668d8c55
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040718"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053075"
 ---
 # <a name="shadow-copying-assemblies"></a>Kopiowanie zestawów w tle
 
@@ -76,7 +76,7 @@ Gdy domena aplikacji, która korzysta z kopiowania w tle, rozpocznie się, wyst�
 
 Począwszy od .NET Framework 4, domyślnym zachowaniem uruchamiania jest bezpośrednie porównanie daty i godziny pliku każdego zestawu w katalogu aplikacji z datą i godziną kopiowania w katalogu kopii w tle. Jeśli zestaw został zaktualizowany, jest kopiowany przy użyciu tej samej procedury jak we wcześniejszych wersjach .NET Framework; w przeciwnym razie zostanie załadowana kopia w katalogu kopii w tle.
 
-Wynikowe zwiększenie wydajności jest największe dla aplikacji, w których zestawy nie zmieniają się często, a zmiany zwykle występują w małym podzestawie zestawów. Jeśli większość zestawów w aplikacji często zmienia się, nowe domyślne zachowanie może spowodować regresję wydajności. Można przywrócić zachowanie uruchamiania poprzednich wersji .NET Framework przez dodanie [ \<elementu shadowCopyVerifyByTimestamp >](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) do pliku konfiguracji, z `enabled="false"`.
+Wynikowe zwiększenie wydajności jest największe dla aplikacji, w których zestawy nie zmieniają się często, a zmiany zwykle występują w małym podzestawie zestawów. Jeśli większość zestawów w aplikacji często zmienia się, nowe domyślne zachowanie może spowodować regresję wydajności. Można przywrócić zachowanie uruchamiania poprzednich wersji .NET Framework przez dodanie [ \<elementu shadowCopyVerifyByTimestamp >](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) do pliku konfiguracji, z `enabled="false"`.
 
 <a name="ObsoleteMethods"></a>
 
@@ -90,4 +90,4 @@ Klasa ma kilka metod, takich jak <xref:System.AppDomain.SetShadowCopyFiles%2A> i
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>
-- [\<shadowCopyVerifyByTimestamp, element >](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
+- [\<shadowCopyVerifyByTimestamp, element >](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)

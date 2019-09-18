@@ -12,32 +12,32 @@ helpviewer_keywords:
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90f59f4d593a8aa077a6710cc0f5c1747ac1a3ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3b65ecc226c1caf7b53d746f0583e1f57c7d8c1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754003"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052471"
 ---
 # <a name="memberinfocachecreation-mda"></a>memberInfoCacheCreation MDA
-`memberInfoCacheCreation` Zarządzanego Asystenta debugowania (MDA) jest aktywowany po <xref:System.Reflection.MemberInfo> utworzeniu pamięci podręcznej. To silne wskazanie program, który wykonuje korzystania z funkcji odbicia drogich zasobów.  
+Asystent debugowania <xref:System.Reflection.MemberInfo> zarządzanego (MDA) jest uaktywniany po utworzeniu pamięci podręcznej. `memberInfoCacheCreation` Jest to mocne wskazanie programu, który korzysta z funkcji odbicia kosztownych zasobów.  
   
 ## <a name="symptoms"></a>Symptomy  
- Program użytkownika działa zestaw rośnie, ponieważ program używa odbicia drogich zasobów.  
+ Zestaw roboczy programu zostaje zwiększony, ponieważ program korzysta z bardziej kosztownego odbicia zasobów.  
   
 ## <a name="cause"></a>Przyczyna  
- Operacje odbicia, obejmujące <xref:System.Reflection.MemberInfo> obiekty są traktowane jako zasób kosztowne, ponieważ będzie musi odczytać metadane, które są przechowywane na stronach zimnych i ogólnie rzecz biorąc wskazują program używa jakiegoś rodzaju scenariusza z późnym wiązaniem.  
+ Operacje odbicia obejmujące <xref:System.Reflection.MemberInfo> obiekty są uznawane za kosztowne, ponieważ muszą odczytywać metadane przechowywane na zimnych stronach i ogólnie wskazują, że program używa pewnego typu scenariusza z późnym wiązaniem.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Można określić, gdy odbicie jest używany w programie przez włączenie to zdarzenie MDA i ponownie uruchomić usługi kodu w debugerze lub dołączania za pomocą debugera, gdy zdarzenie MDA jest aktywowane. W debugerze, zostanie wyświetlony ślad stosu, przedstawiający miejsce <xref:System.Reflection.MemberInfo> pamięci podręcznej został utworzony, a w tym miejscu możesz określić, gdzie program używa odbicia.  
+ Możesz określić, gdzie odbicie jest używane w programie, włączając ten MDA, a następnie uruchamiając kod w debugerze lub dołączając debuger, gdy zostanie uaktywnione zdarzenie MDA. W ramach debugera uzyskasz śledzenie stosu pokazujące miejsce <xref:System.Reflection.MemberInfo> utworzenia pamięci podręcznej, a następnie można określić, gdzie program używa odbicia.  
   
- Rozwiązanie jest zależna od celów kodu. To zdarzenie MDA alertów, czy program ma scenariusza z późnym wiązaniem. Możesz chcieć ustalenia, czy należy zastąpić scenariusza z wczesnym wiązaniem lub należy wziąć pod uwagę wydajność pod koniec scenariusza związanego.  
+ Rozwiązanie zależy od celów kodu. To zdarzenie MDA ostrzega o tym, że program ma scenariusz z późnym wiązaniem. Warto określić, czy można zastąpić scenariusz wczesny, czy też wziąć pod uwagę wydajność scenariusza z późnym wiązaniem.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- To zdarzenie MDA jest aktywowane dla każdego <xref:System.Reflection.MemberInfo> pamięci podręcznej, który jest tworzony. Wpływ na wydajność jest niewielki.  
+ To zdarzenie MDA jest aktywowane dla <xref:System.Reflection.MemberInfo> każdej tworzonej pamięci podręcznej. Wpływ na wydajność jest nieznaczny.  
   
 ## <a name="output"></a>Dane wyjściowe  
- MDA wyświetla komunikat informujący o <xref:System.Reflection.MemberInfo> pamięć podręczna została utworzona. Należy użyć debugera, aby uzyskać ślad stosu przedstawiający, gdzie program używa odbicia.  
+ Po utworzeniu pamięci podręcznej MDA <xref:System.Reflection.MemberInfo> zostanie wyświetlony komunikat wskazujący, że została utworzona. Użyj debugera, aby uzyskać ślad stosu pokazujący, gdzie program używa odbicia.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -50,7 +50,7 @@ ms.locfileid: "61754003"
 ```  
   
 ## <a name="example"></a>Przykład  
- Ten przykładowy kod będą aktywowane `memberInfoCacheCreation` MDA.  
+ Ten przykładowy kod spowoduje aktywowanie `memberInfoCacheCreation` MDA.  
   
 ```csharp
 using System;  
@@ -67,4 +67,4 @@ public class Exe
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Reflection.MemberInfo>
-- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)

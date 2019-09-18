@@ -7,211 +7,211 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf874f9422db0038a421d5f61ce18d8af8ec401e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6177bdff873feb75eb15dba53bcdb5197260fa9d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616310"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046392"
 ---
 # <a name="loader-etw-events"></a>Zdarzenia ETW modułu ładującego
-<a name="top"></a> Te zdarzenia zbierać informacje dotyczące ładowanie i zwalnianie domen aplikacji, zestawów i modułów.  
+<a name="top"></a>Te zdarzenia zbierają informacje dotyczące ładowania i zwalniania domen aplikacji, zestawów i modułów.  
   
- Wszystkie zdarzenia modułu ładującego są wywoływane w obszarze `LoaderKeyword` — słowo kluczowe (0x8). `DCStart` i `DCEnd` zdarzenia są wywoływane w obszarze `LoaderRundownKeyword` (0x8) za pomocą `StartRundown` / `EndRundown` włączone. (Aby uzyskać więcej informacji, zobacz [słowa kluczowe CLR ETW i poziomy](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ Wszystkie zdarzenia modułu ładującego są wywoływane `LoaderKeyword` za pomocą słowa kluczowego (0x8). `LoaderRundownKeyword` `StartRundown` / Zdarzenia i są wywoływane w (0x8) z`EndRundown` włączony. `DCStart` `DCEnd` (Aby uzyskać więcej informacji, zobacz [słowa kluczowe i poziomy ETW CLR](clr-etw-keywords-and-levels.md)).  
   
- Zdarzenia modułu ładującego są podzielone na następujące czynności:  
+ Zdarzenia modułu ładującego są podzielone na następujące:  
   
 - [Zdarzenia domeny aplikacji](#application_domain_events)  
   
-- [Zdarzenia zestaw modułu ładującego CLR](#clr_loader_assembly_events)  
+- [Zdarzenia zestawu modułu ładującego CLR](#clr_loader_assembly_events)  
   
 - [Zdarzenia modułu](#module_events)  
   
-- [Zdarzenia modułu domeny CLR](#clr_domain_module_events)  
+- [Zdarzenia modułu CLR Domain](#clr_domain_module_events)  
   
-- [Zakres modułu zdarzeń](#module_range_events)  
+- [Zdarzenia zakresu modułu](#module_range_events)  
   
 <a name="application_domain_events"></a>   
 ## <a name="application-domain-events"></a>Zdarzenia domeny aplikacji  
- W poniższej tabeli przedstawiono — słowo kluczowe i poziomu.  
+ W poniższej tabeli przedstawiono słowo kluczowe i poziom.  
   
-|Słowo kluczowe dla podnoszonego zdarzenia|Zdarzenie|Poziom|  
+|Słowo kluczowe do podniesienia zdarzenia|Zdarzenie|Poziom|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`AppDomainLoad_V1` i `AppDomainUnLoad_V1`|Komunikat informacyjny (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Komunikat informacyjny (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|Komunikat informacyjny (4)|  
+|`LoaderKeyword`0x8|`AppDomainLoad_V1` i `AppDomainUnLoad_V1`|Informacyjny (4)|  
+|`LoaderRundownKeyword`(0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Informacyjny (4)|  
+|`LoaderRundownKeyword`(0x8) +<br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|Informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
 |Zdarzenie|Identyfikator zdarzenia|Opis|  
 |-----------|--------------|-----------------|  
-|`AppDomainLoad_V1` (rejestrowane dla wszystkich domen aplikacji)|156|Wywoływane, gdy domena aplikacji zostanie utworzony w okresie istnienia procesu.|  
-|`AppDomainUnLoad_V1`|157|Wywoływane, gdy domena aplikacji zostanie zniszczony w okresie istnienia procesu.|  
-|`AppDomainDCStart_V1`|157|Wylicza domen aplikacji podczas Początek podsumowania.|  
-|`AppDomainDCEnd_V1`|158|Wylicza domen aplikacji podczas koniec podsumowania.|  
+|`AppDomainLoad_V1`(zarejestrowane dla wszystkich domen aplikacji)|156|Uruchamiany zawsze, gdy domena aplikacji zostanie utworzona w okresie istnienia procesu.|  
+|`AppDomainUnLoad_V1`|157|Uruchamiany zawsze, gdy domena aplikacji zostanie zniszczona w okresie istnienia procesu.|  
+|`AppDomainDCStart_V1`|157|Wylicza domeny aplikacji podczas początkowego uwalniania.|  
+|`AppDomainDCEnd_V1`|158|Wylicza domeny aplikacji podczas końcowego uwalniania.|  
   
  W poniższej tabeli przedstawiono dane zdarzenia.  
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|AppDomainID|win:UInt64|Unikatowy identyfikator dla domeny aplikacji.|  
-|AppDomainFlags|win: UInt32.|0x1: Domyślna domena.<br /><br /> 0x2: Plik wykonywalny.<br /><br /> 0x4: Domeny aplikacji, bit 28 – 31: Udostępnianie zasad tej domeny.<br /><br /> 0: Udostępnione domenie.|  
-|AppDomainName|win:UnicodeString|Aplikacja przyjazna nazwa domeny. Mogą ulec zmianie w okresie istnienia procesu.|  
-|AppDomainIndex|win: UInt32.|Indeks tej domeny aplikacji.|  
-|ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|AppDomainID|win: UInt64|Unikatowy identyfikator domeny aplikacji.|  
+|AppDomainFlags|win: UInt32|0x1 Domena domyślna.<br /><br /> 0x2: Plik.<br /><br /> 0x4: Domena aplikacji, bit 28-31: Zasady udostępniania tej domeny.<br /><br /> 0: Domena udostępniona.|  
+|Element AppDomainname|win: UnicodeString|Przyjazna nazwa domeny aplikacji. Może ulec zmianie w okresie istnienia procesu.|  
+|AppDomainIndex|win: UInt32|Indeks domeny aplikacji.|  
+|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
  [Powrót do początku](#top)  
   
 <a name="clr_loader_assembly_events"></a>   
-## <a name="clr-loader-assembly-events"></a>Zdarzenia zestaw modułu ładującego CLR  
- W poniższej tabeli przedstawiono — słowo kluczowe i poziomu.  
+## <a name="clr-loader-assembly-events"></a>Zdarzenia zestawu modułu ładującego CLR  
+ W poniższej tabeli przedstawiono słowo kluczowe i poziom.  
   
-|Słowo kluczowe dla podnoszonego zdarzenia|Zdarzenie|Poziom|  
+|Słowo kluczowe do podniesienia zdarzenia|Zdarzenie|Poziom|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`AssemblyLoad` i `AssemblyUnload`|Komunikat informacyjny (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Komunikat informacyjny (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|Komunikat informacyjny (4)|  
+|`LoaderKeyword`0x8|`AssemblyLoad` i `AssemblyUnload`|Informacyjny (4)|  
+|`LoaderRundownKeyword`(0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Informacyjny (4)|  
+|`LoaderRundownKeyword`(0x8) +<br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|Informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
 |Zdarzenie|Identyfikator zdarzenia|Opis|  
 |-----------|--------------|-----------------|  
-|`AssemblyLoad_V1`|154|Wywoływane, gdy zestaw jest ładowany.|  
-|`AssemblyUnload_V1`|155|Wywoływane, gdy zestaw jest zwalniana.|  
-|`AssemblyDCStart_V1`|155|Wylicza zestawy podczas Początek podsumowania.|  
-|`AssemblyDCEnd_V1`|156|Wylicza zestawy podczas koniec podsumowania.|  
+|`AssemblyLoad_V1`|154|Uruchamiany po załadowaniu zestawu.|  
+|`AssemblyUnload_V1`|155|Uruchamiany, gdy zestaw zostanie zwolniony.|  
+|`AssemblyDCStart_V1`|155|Wylicza zestawy w trakcie początkowego uwalniania.|  
+|`AssemblyDCEnd_V1`|156|Wylicza zestawy podczas końcowego uwalniania.|  
   
  W poniższej tabeli przedstawiono dane zdarzenia.  
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|AssemblyID|win:UInt64|Unikatowy identyfikator dla zestawu.|  
-|AppDomainID|win:UInt64|Identyfikator domeny tego zestawu.|  
-|BindingID|win:UInt64|Identyfikator, który unikatowo identyfikuje powiązań zestawów.|  
-|Assemblyflags —|win: UInt32.|0x1: Zestaw neutralnej domeny.<br /><br /> 0x2: Zestaw dynamiczny.<br /><br /> 0x4: Zestaw ma obrazu natywnego.<br /><br /> 0x8: Zestaw kolekcjonowany.|  
-|AssemblyName|win:UnicodeString|W pełni kwalifikowanej nazwy zestawu.|  
-|ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|AssemblyID|win: UInt64|Unikatowy identyfikator zestawu.|  
+|AppDomainID|win: UInt64|Identyfikator domeny tego zestawu.|  
+|BindingID|win: UInt64|Identyfikator, który jednoznacznie identyfikuje powiązanie zestawu.|  
+|AssemblyFlags —|win: UInt32|0x1 Zestaw neutralny domeny.<br /><br /> 0x2: Zestaw dynamiczny.<br /><br /> 0x4: Zestaw ma obraz natywny.<br /><br /> 0x8 Zestaw kolekcjonowany.|  
+|AssemblyName|win: UnicodeString|W pełni kwalifikowana nazwa zestawu.|  
+|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
  [Powrót do początku](#top)  
   
 <a name="module_events"></a>   
 ## <a name="module-events"></a>Zdarzenia modułu  
- W poniższej tabeli przedstawiono — słowo kluczowe i poziomu.  
+ W poniższej tabeli przedstawiono słowo kluczowe i poziom.  
   
-|Słowo kluczowe dla podnoszonego zdarzenia|Zdarzenie|Poziom|  
+|Słowo kluczowe do podniesienia zdarzenia|Zdarzenie|Poziom|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`ModuleLoad_V2` i `ModuleUnload_V2`|Komunikat informacyjny (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Komunikat informacyjny (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|Komunikat informacyjny (4)|  
+|`LoaderKeyword`0x8|`ModuleLoad_V2` i `ModuleUnload_V2`|Informacyjny (4)|  
+|`LoaderRundownKeyword`(0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Informacyjny (4)|  
+|`LoaderRundownKeyword`(0x8) +<br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|Informacyjny (4)|  
 ||||  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
 |Zdarzenie|Identyfikator zdarzenia|Opis|  
 |-----------|--------------|-----------------|  
-|`ModuleLoad_V2`|152|Wywoływane, gdy moduł jest załadowany w okresie istnienia procesu.|  
-|`ModuleUnload_V2`|153|Wywoływane, gdy moduł jest zwalniana w okresie istnienia procesu.|  
-|`ModuleDCStart_V2`|153|Wylicza modułów podczas Początek podsumowania.|  
-|`ModuleDCEnd_V2`|154|Wylicza modułów podczas koniec podsumowania.|  
+|`ModuleLoad_V2`|152|Uruchamiany, gdy moduł jest ładowany w okresie istnienia procesu.|  
+|`ModuleUnload_V2`|153|Uruchamiany, gdy moduł zostanie zwolniony w okresie istnienia procesu.|  
+|`ModuleDCStart_V2`|153|Wylicza moduły podczas uruchamiania.|  
+|`ModuleDCEnd_V2`|154|Wylicza moduły podczas końcowego uwalniania.|  
   
  W poniższej tabeli przedstawiono dane zdarzenia.  
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|ModuleID|win:UInt64|Unikatowy identyfikator dla modułu.|  
-|AssemblyID|win:UInt64|Identyfikator zestawu, w której znajduje się w tym module.|  
-|ModuleFlags|win: UInt32.|0x1: Moduł neutralnej domeny.<br /><br /> 0x2: Moduł ma obrazu natywnego.<br /><br /> 0x4: Modułu dynamicznego.<br /><br /> 0x8: Manifest modułu.|  
-|Reserved1|win: UInt32.|Pole zarezerwowane.|  
-|ModuleILPath|win:UnicodeString|Ścieżka obrazu Microsoft intermediate language (MSIL) dla modułu lub nazwy modułu dynamicznego, jeśli zestaw dynamiczny (zakończony znakiem null).|  
-|ModuleNativePath|win:UnicodeString|Ścieżka modułu obrazu natywnego, jeśli jest obecny (zakończony znakiem null).|  
-|ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
-|ManagedPdbSignature|win: identyfikator GUID|Podpis identyfikator GUID zarządzanej bazy danych programu (PDB), która jest zgodna z ten moduł. (Zobacz Uwagi).|  
-|ManagedPdbAge|win: UInt32.|Wiek numer zapisywane do PDB zarządzanego, który pasuje do tego modułu. (Zobacz Uwagi).|  
-|ManagedPdbBuildPath|win:UnicodeString|Ścieżka do lokalizacji, w którym zarządzanych pliku PDB, która jest zgodna z ten moduł został skompilowany. W niektórych przypadkach może to być tylko nazwę pliku. (Zobacz Uwagi).|  
-|NativePdbSignature|win: identyfikator GUID|Identyfikator GUID podpis Native Image Generator (NGen) PDB zgodną tego modułu, jeśli ma to zastosowanie. (Zobacz Uwagi).|  
-|NativePdbAge|win: UInt32.|Wiek numer zapisywane w pliku PDB NGen, która jest zgodna z ten moduł, jeśli ma to zastosowanie. (Zobacz Uwagi).|  
-|NativePdbBuildPath|win:UnicodeString|Ścieżka do lokalizacji, w którym PDB NGen, która jest zgodna z ten moduł został skompilowany, jeśli ma to zastosowanie. W niektórych przypadkach może to być tylko nazwę pliku. (Zobacz Uwagi).|  
+|ModuleID|win: UInt64|Unikatowy identyfikator modułu.|  
+|AssemblyID|win: UInt64|Identyfikator zestawu, w którym znajduje się ten moduł.|  
+|ModuleFlags|win: UInt32|0x1 Moduł neutralny dla domeny.<br /><br /> 0x2: Moduł ma obraz natywny.<br /><br /> 0x4: Moduł dynamiczny.<br /><br /> 0x8 Moduł manifestu.|  
+|Reserved1|win: UInt32|Pole zastrzeżone.|  
+|ModuleILPath|win: UnicodeString|Ścieżka obrazu języka pośredniego firmy Microsoft (MSIL) dla modułu lub nazwy modułu dynamicznego, jeśli jest to zestaw dynamiczny (zakończony zerem).|  
+|ModuleNativePath|win: UnicodeString|Ścieżka do obrazu natywnego modułu, jeśli jest obecny (zakończony zerem).|  
+|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|ManagedPdbSignature|win: identyfikator GUID|Sygnatura identyfikatora GUID programu Managed Database (PDB), która jest zgodna z tym modułem. (Zobacz uwagi).|  
+|ManagedPdbAge|win: UInt32|Numer wieku zapisany w zarządzanym pliku PDB, który jest zgodny z tym modułem. (Zobacz uwagi).|  
+|ManagedPdbBuildPath|win: UnicodeString|Ścieżka do lokalizacji, w której został skompilowany zarządzany plik PDB zgodny z tym modułem. W niektórych przypadkach może to być nazwa pliku. (Zobacz uwagi).|  
+|NativePdbSignature|win: identyfikator GUID|Podpis GUID pliku PDB (Native Image Generator), który jest zgodny z tym modułem, jeśli ma zastosowanie. (Zobacz uwagi).|  
+|NativePdbAge|win: UInt32|Numer wieku zapisany w pliku PDB programu NGen, który jest zgodny z tym modułem, jeśli ma zastosowanie. (Zobacz uwagi).|  
+|NativePdbBuildPath|win: UnicodeString|Ścieżka do lokalizacji, w której został skompilowany plik PDB programu NGen pasujący do tego modułu, jeśli ma zastosowanie. W niektórych przypadkach może to być nazwa pliku. (Zobacz uwagi).|  
   
 ### <a name="remarks"></a>Uwagi  
   
-- Pola, które mają "Pdb" w nazwach może służyć przez narzędzia profilowania, aby zlokalizować pliki PDB, które odpowiadają moduły, które zostały załadowane podczas sesji profilowania. Wartości te pola odpowiadają zapisanych na sekcje IMAGE_DIRECTORY_ENTRY_DEBUG modułu zwykle używane przez debugery do lokalizowania plików PDB, które odpowiadają załadowane moduły danych.  
+- Pola, które mają "pdb" w swoich nazwach, mogą być używane przez narzędzia profilowania do lokalizowania plików PDB, które pasują do modułów, które zostały załadowane podczas sesji profilowania. Wartości tych pól odnoszą się do danych, które są zapisywane w sekcjach IMAGE_DIRECTORY_ENTRY_DEBUG modułu zwykle używanych przez debugery, aby ułatwić znalezienie plików PDB pasujących do załadowanych modułów.  
   
-- Nazwy pól, które zaczynają się od "ManagedPdb" odnoszą się do zarządzanego pliku PDB, odpowiadający moduł MSIL, który został wygenerowany przez kompilator zarządzanych (takie jak C# lub kompilator Visual Basic). Ten plik PDB używa zarządzanego format pliku PDB, a w tym artykule opisano, jak elementy z oryginalnego zarządzanym kodzie źródłowym, takie jak pliki, numery wierszy i nazwy symboli mapują do elementów MSIL, które są kompilowane do moduł MSIL.  
+- Nazwy pól zaczynające się od "ManagedPdb" odnoszą się do zarządzanego pliku PDB odpowiadającego modułowi MSIL, który został wygenerowany przez zarządzany kompilator (na C# przykład kompilator lub Visual Basic). Ten plik PDB używa zarządzanego formatu PDB i opisuje sposób, w jaki elementy z oryginalnego zarządzanego kodu źródłowego, takie jak pliki, numery wierszy i nazwy symboli, są mapowane na elementy MSIL, które są kompilowane do modułu MSIL.  
   
-- Nazwy pól, które zaczynają się od "NativePdb" odnoszą się do polecenia NGen pliku PDB, wygenerowanego przez wywołanie metody `NGEN createPDB`. Ten plik PDB używa natywnego formatu pliku PDB i opisuje sposób mapowania elementów od oryginalnego kodu zarządzanego źródła, takich jak pliki, numery wierszy i nazwy symboli do natywnego elementów, które są kompilowane do modułu programu NGen.  
+- Nazwy pól zaczynające się od ciągu "NativePdb" odnoszą się do pliku PDB programu `NGEN createPDB`NGen wygenerowanego przez wywołanie. Ten plik PDB używa natywnego formatu PDB i opisuje sposób, w jaki elementy z oryginalnego zarządzanego kodu źródłowego, takie jak pliki, numery wierszy i nazwy symboli, są mapowane na elementy natywne, które są kompilowane w module NGen.  
   
  [Powrót do początku](#top)  
   
 <a name="clr_domain_module_events"></a>   
-## <a name="clr-domain-module-events"></a>Zdarzenia modułu domeny CLR  
- W poniższej tabeli przedstawiono — słowo kluczowe i poziomu.  
+## <a name="clr-domain-module-events"></a>Zdarzenia modułu CLR Domain  
+ W poniższej tabeli przedstawiono słowo kluczowe i poziom.  
   
-|Słowo kluczowe dla podnoszonego zdarzenia|Zdarzenie|Poziom|  
+|Słowo kluczowe do podniesienia zdarzenia|Zdarzenie|Poziom|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|Komunikat informacyjny (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Komunikat informacyjny (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`DomainModuleDCEnd_V1`|Komunikat informacyjny (4)|  
+|`LoaderKeyword`0x8|`DomainModuleLoad_V1`|Informacyjny (4)|  
+|`LoaderRundownKeyword`(0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Informacyjny (4)|  
+|`LoaderRundownKeyword`(0x8) +<br /><br /> `EndRundownKeyword`|`DomainModuleDCEnd_V1`|Informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
 |Zdarzenie|Identyfikator zdarzenia|Opis|  
 |-----------|--------------|-----------------|  
-|`DomainModuleLoad_V1`|151|Wywoływane, gdy moduł jest ładowany do domeny aplikacji.|  
-|`DomainModuleDCStart_V1`|151|Wylicza moduły załadowane dla domeny aplikacji w czasie Początek podsumowania i jest rejestrowane dla wszystkich domen aplikacji.|  
-|`DomainModuleDCEnd_V1`|152|Wylicza moduły załadowane dla domeny aplikacji w czasie koniec podsumowania, a jest rejestrowane dla wszystkich domen aplikacji.|  
+|`DomainModuleLoad_V1`|151|Uruchamiany, gdy moduł jest ładowany dla domeny aplikacji.|  
+|`DomainModuleDCStart_V1`|151|Wylicza moduły załadowane dla domeny aplikacji podczas początkowego ładowania i rejestrowane dla wszystkich domen aplikacji.|  
+|`DomainModuleDCEnd_V1`|152|Wylicza moduły załadowane dla domeny aplikacji podczas końcowego ładowania i rejestrowane dla wszystkich domen aplikacji.|  
   
  W poniższej tabeli przedstawiono dane zdarzenia.  
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|ModuleID|win:UInt64|Identyfikuje zestaw, do której należy ten moduł.|  
-|AssemblyID|win:UInt64|Identyfikator zestawu, w której znajduje się w tym module.|  
-|AppDomainID|win:UInt64|Identyfikator domeny aplikacji, w którym ten moduł jest używany.|  
-|ModuleFlags|win: UInt32.|0x1: Moduł neutralnej domeny.<br /><br /> 0x2: Moduł ma obrazu natywnego.<br /><br /> 0x4: Modułu dynamicznego.<br /><br /> 0x8: Manifest modułu.|  
-|Reserved1|win: UInt32.|Pole zarezerwowane.|  
-|ModuleILPath|win:UnicodeString|Ścieżka obrazu MSIL dla modułu lub nazwy modułu dynamicznego, jeśli zestaw dynamiczny (zakończony znakiem null).|  
-|ModuleNativePath|win:UnicodeString|Ścieżka modułu obrazu natywnego, jeśli jest obecny (zakończony znakiem null).|  
-|ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|ModuleID|win: UInt64|Identyfikuje zestaw, do którego należy ten moduł.|  
+|AssemblyID|win: UInt64|Identyfikator zestawu, w którym znajduje się ten moduł.|  
+|AppDomainID|win: UInt64|Identyfikator domeny aplikacji, w której jest używany ten moduł.|  
+|ModuleFlags|win: UInt32|0x1 Moduł neutralny dla domeny.<br /><br /> 0x2: Moduł ma obraz natywny.<br /><br /> 0x4: Moduł dynamiczny.<br /><br /> 0x8 Moduł manifestu.|  
+|Reserved1|win: UInt32|Pole zastrzeżone.|  
+|ModuleILPath|win: UnicodeString|Ścieżka obrazu MSIL dla modułu lub nazwy modułu dynamicznego, jeśli jest to zestaw dynamiczny (zakończony zerem).|  
+|ModuleNativePath|win: UnicodeString|Ścieżka do obrazu natywnego modułu, jeśli jest obecny (zakończony zerem).|  
+|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
  [Powrót do początku](#top)  
   
 <a name="module_range_events"></a>   
-## <a name="module-range-events"></a>Zakres modułu zdarzeń  
- W poniższej tabeli przedstawiono — słowo kluczowe i poziomu.  
+## <a name="module-range-events"></a>Zdarzenia zakresu modułu  
+ W poniższej tabeli przedstawiono słowo kluczowe i poziom.  
   
-|Słowo kluczowe dla podnoszonego zdarzenia|Zdarzenie|Poziom|  
+|Słowo kluczowe do podniesienia zdarzenia|Zdarzenie|Poziom|  
 |-----------------------------------|-----------|-----------|  
-|`PerfTrackKeyWord`)|`ModuleRange`|Komunikat informacyjny (4)|  
-|`PerfTrackKeyWord`|`ModuleRangeDCStart`|Komunikat informacyjny (4)|  
-|`PerfTrackKeyWord`|`ModuleRangeDCEnd`|Komunikat informacyjny (4)|  
+|`PerfTrackKeyWord`)|`ModuleRange`|Informacyjny (4)|  
+|`PerfTrackKeyWord`|`ModuleRangeDCStart`|Informacyjny (4)|  
+|`PerfTrackKeyWord`|`ModuleRangeDCEnd`|Informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
 |Zdarzenie|Identyfikator zdarzenia|Opis|  
 |-----------|--------------|-----------------|  
-|`ModuleRange`|158|To zdarzenie jest obecny, jeśli ładowany obraz Native Image Generator (NGen) została zoptymalizowana z IBC i zawiera informacje o gorąca części obrazów NGen.|  
-|`ModuleRangeDCStart`|160|A `ModuleRange` Zdarzenie uruchamiane podczas uruchamiania podsumowania.|  
-|`ModuleRangeDCEnd`|161|A `ModuleRange` Zdarzenie uruchamiane na koniec podsumowania.|  
+|`ModuleRange`|158|To zdarzenie jest obecne, jeśli załadowanego obrazu generatora natywnego (NGen) został zoptymalizowany z technologią IBC i zawiera informacje o gorących sekcjach obrazu NGen.|  
+|`ModuleRangeDCStart`|160|`ModuleRange` Zdarzenie wywoływane na początku uwalniania.|  
+|`ModuleRangeDCEnd`|161|`ModuleRange` Zdarzenie zostało wyzwolone na końcu uwalniania.|  
   
  W poniższej tabeli przedstawiono dane zdarzenia.  
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|ClrInstanceID|win: UInt16.|Jednoznacznie identyfikuje określone wystąpienie CLR w procesie, jeśli wiele wystąpień środowiska CLR są ładowane.|  
-|ModuleID|win:UInt64|Identyfikuje zestaw, do której należy ten moduł.|  
-|RangeBegin|win: UInt32.|Przesunięcie w module, który reprezentuje początek zakresu dla typu określonego zakresu.|  
-|RangeSize|win: UInt32.|Rozmiar określony zakres, w bajtach.|  
-|RangeType|win: UInt32.|Pojedyncze wartości 0x4 do reprezentowania zimnych IBC zakresów. To pole może reprezentować więcej wartości w przyszłości.|  
-|RangeSize1|win: UInt32.|wartość 0 wskazuje nieprawidłowe dane.|  
-|RangeBegin2|win:UnicodeString||  
+|ClrInstanceID|win: UInt16|Jednoznacznie identyfikuje określone wystąpienie środowiska CLR w procesie w przypadku załadowania wielu wystąpień środowiska CLR.|  
+|ModuleID|win: UInt64|Identyfikuje zestaw, do którego należy ten moduł.|  
+|RangeBegin|win: UInt32|Przesunięcie w module reprezentujące początek zakresu dla określonego typu zakresu.|  
+|RangeSize|win: UInt32|Rozmiar określonego zakresu w bajtach.|  
+|Element RangeType|win: UInt32|Pojedyncza wartość, 0x4 do reprezentowania zimnych zakresów IBC. To pole może reprezentować więcej wartości w przyszłości.|  
+|RangeSize1|win: UInt32|wartość 0 oznacza złe dane.|  
+|RangeBegin2|win: UnicodeString||  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli został zoptymalizowany załadowanych obrazów NGen w procesie .NET Framework za pomocą IBC, `ModuleRange` jest rejestrowane zdarzenie, zawierający gorąca zakresów w obrazów NGen, wraz z jego `moduleID` i `ClrInstanceID`.  Jeśli nie zoptymalizowano obrazów NGen z IBC, to zdarzenie nie jest rejestrowane. Aby określić nazwę modułu, to zdarzenie musi być sortowane przy użyciu zdarzenia ETW modułu obciążenia.  
+ Jeśli załadowany obraz NGen w procesie .NET Framework został zoptymalizowany pod kątem IBC, `ModuleRange` zdarzenie zawierające zakresy aktywne w obrazie NGEN jest rejestrowane wraz `moduleID` z i `ClrInstanceID`.  Jeśli obraz NGen nie jest zoptymalizowany pod kątem IBC, to zdarzenie nie jest rejestrowane. Aby określić nazwę modułu, to zdarzenie musi być sortowane przy użyciu zdarzeń ETW ładowania modułu.  
   
- Rozmiar ładunku dla tego zdarzenia jest zmienna; `Count` pola wskazuje liczbę zakres przesunięcia zawarte w zdarzeniu.  To zdarzenie ma być sortowane przy użyciu Windows `IStart` zdarzenia w celu określenia rzeczywistego zakresów. Ładowanie obrazu Windows zdarzenie jest rejestrowane, zawsze wtedy, gdy obraz jest ładowany i zawiera adres wirtualny załadowanego obrazu.  
+ Rozmiar ładunku dla tego zdarzenia to zmienna; `Count` pole wskazuje liczbę przesunięć zakresu zawartych w zdarzeniu.  To zdarzenie należy posortować wraz ze zdarzeniem systemu `IStart` Windows, aby określić rzeczywiste zakresy. Zdarzenie ładowania obrazu systemu Windows jest rejestrowane za każdym razem, gdy obraz zostanie załadowany i zawiera adres wirtualny załadowanego obrazu.  
   
- Zdarzenia zakresu modułu są uruchamiane w ramach dowolnego poziomu ETW większa lub równa 4 i są klasyfikowane jako zdarzenia informacyjne.  
+ Zdarzenia zakresu modułów są uruchamiane na dowolnym poziomie ETW większym lub równym 4 i są klasyfikowane jako zdarzenia informacyjne.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zdarzenia CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+- [Zdarzenia CLR ETW](clr-etw-events.md)

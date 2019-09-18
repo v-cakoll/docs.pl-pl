@@ -2,12 +2,12 @@
 title: Używanie klas wyliczeń zamiast typów wyliczeń
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Wyczyść, w jaki sposób można używać klas wyliczenia, zamiast wyliczeniowych, w celu rozwiązania niektórych ograniczeń dotyczących tego ostatniego.
 ms.date: 10/08/2018
-ms.openlocfilehash: ba687b700d7a6105baf71aa08a0d888afc9a8ec3
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 575757b6022a9e7468c0ffc5d576dd16de3018f5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70296861"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039931"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Użyj klas wyliczenia zamiast typów wyliczeniowych
 
@@ -99,7 +99,7 @@ public class CardType : Enumeration
 
 - **CardType.cs**. Przykładowa Klasa wyliczenia w eShopOnContainers. \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs>
-    
+
 - **SmartEnum**. Ardalis-klasy, które ułatwiają tworzenie inteligentnych typów wyliczeniowych w programie .NET. \
   <https://www.nuget.org/packages/Ardalis.SmartEnum/>
 

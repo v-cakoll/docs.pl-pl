@@ -17,12 +17,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-ms.openlocfilehash: 58c9e0846e09774d8c97089016086ecddd2d17ee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 11ed53a4e51ba6993fd4e240116b0e1de910a01e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938401"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047047"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>Używanie asynchronicznego gniazda serwera
 Asynchroniczne gniazda serwera używają .NET Framework asynchronicznego modelu programowania do przetwarzania żądań obsługi sieci. Klasa <xref:System.Net.Sockets.Socket> jest zgodna ze standardowym wzorcem nazewnictwa asynchronicznego .NET Framework, na przykład <xref:System.Net.Sockets.Socket.Accept%2A> metoda synchroniczna odnosi się <xref:System.Net.Sockets.Socket.BeginAccept%2A> do <xref:System.Net.Sockets.Socket.EndAccept%2A> metod asynchronicznych i.  
@@ -270,7 +270,7 @@ public static void ReadCallback(IAsyncResult ar)
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Używanie synchronicznego gniazda serwera](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
-- [Przykład asynchronicznego gniazda serwera](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
+- [Używanie synchronicznego gniazda serwera](using-a-synchronous-server-socket.md)
+- [Przykład asynchronicznego gniazda serwera](asynchronous-server-socket-example.md)
 - [Wątkowość](../../standard/threading/index.md)
-- [Nasłuchiwanie przy użyciu gniazd](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [Nasłuchiwanie przy użyciu gniazd](listening-with-sockets.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d9d77ef20090e007e22a0d2f90b29f32ff94b46
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2a33d3c4216ed8c5d79aef4017c6b9256fc1ad7c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911116"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052102"
 ---
 # <a name="in-process-side-by-side-execution"></a>Wykonywanie równoczesne i wewnątrzprocesowe
 Począwszy od .NET Framework 4, można użyć w procesie równoczesnego hostowania do uruchamiania wielu wersji środowiska uruchomieniowego języka wspólnego (CLR) w ramach jednego procesu. Domyślnie zarządzane składniki COM są uruchamiane z .NET Framework wersją, z którą zostały skompilowane, niezależnie od wersji .NET Framework, która jest ładowana dla tego procesu.  
@@ -60,7 +60,7 @@ Począwszy od .NET Framework 4, można użyć w procesie równoczesnego hostowan
   
      Zainstalowane wersje .NET Framework: Starsza wersja .NET Framework i .NET Framework 4.  
   
-     Co należy zrobić: W [pliku konfiguracji aplikacji](../../../docs/framework/configure-apps/index.md) w katalogu aplikacji użyj [ \<elementu >](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) [ \<Start i zestawu elementów > supportedRuntime](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) w następujący sposób:  
+     Co należy zrobić: W [pliku konfiguracji aplikacji](../configure-apps/index.md) w katalogu aplikacji użyj [ \<elementu >](../configure-apps/file-schema/startup/startup-element.md) [ \<Start i zestawu elementów > supportedRuntime](../configure-apps/file-schema/startup/supportedruntime-element.md) w następujący sposób:  
   
     ```xml  
     <configuration>  
@@ -175,5 +175,5 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ## <a name="see-also"></a>Zobacz także
 
-- [\<> uruchomienia — element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
-- [\<supportedRuntime, element >](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<> uruchomienia — element](../configure-apps/file-schema/startup/startup-element.md)
+- [\<supportedRuntime, element >](../configure-apps/file-schema/startup/supportedruntime-element.md)

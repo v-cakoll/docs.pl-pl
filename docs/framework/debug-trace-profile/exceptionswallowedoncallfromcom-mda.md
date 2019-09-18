@@ -11,30 +11,30 @@ helpviewer_keywords:
 ms.assetid: 55d6ab12-f251-4aab-aa64-aacbe9d9f974
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4f076cbc556c7d9feff8a226f050743cd7728622
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a49bdce78c1445cd25de8755ded0f27a4902937
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874448"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052817"
 ---
 # <a name="exceptionswallowedoncallfromcom-mda"></a>exceptionSwallowedOnCallFromCom MDA
-`exceptionSwallowedOnCallFromCOM` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy wyjątek jest generowany z wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) kodu wywoływane z modelu COM za pomocą metody, która nie ma wartość HRESULT niezarządzany typ zwracany.  
+Asystent `exceptionSwallowedOnCallFromCOM` debugowania zarządzanego (MDA) jest uaktywniany, gdy wyjątek jest zgłaszany z kodu środowiska uruchomieniowego języka wspólnego (CLR) wywoływanego z modelu COM za pomocą metody, która nie ma niezarządzanego zwracanego typu HRESULT.  
   
 ## <a name="symptoms"></a>Symptomy  
- Wywołanie zarządzanego składnika z modelu COM zwraca wartość FALSE lub 0. Alternatywnie Jeśli metoda ma zwracać typ void, może istnieć żadnego wskazania, że wystąpił wyjątek podczas wykonywania metody. W tym przypadku wyjątek zostanie zgłoszony dyskretnie i wykonanie nastąpi powrót do obiektu wywołującego COM.  
+ Wywołanie zarządzanego składnika z modelu COM zwraca wartość FALSE lub 0. Alternatywnie, jeśli metoda ma typ zwracany void, może nie być wskazywać, że wyjątek został zgłoszony podczas wykonywania metody. W takim przypadku wyjątek zostanie przechwycony w trybie dyskretnym, a wykonywanie zwróci do obiektu wywołującego COM.  
   
 ## <a name="cause"></a>Przyczyna  
- Wystąpił wyjątek, ale nie istnieje prawidłowy sposób Zgłoś ją.  
+ Zgłoszono wyjątek, ale nie ma prawidłowego sposobu na jego raportowanie.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Komunikat o charakterze informacyjnym tylko, nie zawsze wskazuje usterkę.  
+ Tylko informacyjne, niekoniecznie wskazujące usterkę.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- To zdarzenie MDA nie ma wpływu na środowisko CLR. Informuje jedynie dane o dyskretnie przechwycone wyjątki.  
+ To zdarzenie MDA nie ma wpływu na środowisko CLR. Raport dotyczy tylko danych o przechwyconych dyskretnie wyjątkach.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Komunikat informacyjny, zawierające nazwę metody, wpisz nazwę i komunikat o wyjątku.  
+ Komunikat informacyjny zawierający nazwę metody, nazwę typu i komunikat o wyjątku.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -49,5 +49,5 @@ ms.locfileid: "61874448"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling międzyoperacyjny](../interop/interop-marshaling.md)

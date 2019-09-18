@@ -15,25 +15,25 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-ms.openlocfilehash: d14eb426c8e142f56d9f024dcbf37a1d2d78664d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 94dfedd317782b9e518df02c84d9af55b1ef2b69
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641973"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047400"
 ---
 # <a name="programming-pluggable-protocols"></a>Programowanie protokołów podłączanych
-Abstrakcyjna <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse> klasy zapewniają base podłączanych protokołów. Przez wyprowadzanie klasy związane z Protokołem z <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse>, aplikacja może dane żądania z zasobem internetowym i uzyskać odpowiedzi bez protokołu używanego do określania.  
+Abstrakcyjne <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse> klasy stanowią podstawę dla protokołów podłączanych. Dzięki wykorzystaniu klas specyficznych dla <xref:System.Net.WebRequest> protokołu <xref:System.Net.WebResponse>z i, aplikacja może zażądać danych z zasobu internetowego i odczytać odpowiedź bez określania używanego protokołu.  
   
- Aby można było utworzyć związane z protokołem <xref:System.Net.WebRequest>, należy zarejestrować jego metody Create. Używa się statycznej <xref:System.Net.WebRequest.RegisterPrefix%28System.String%2CSystem.Net.IWebRequestCreate%29> metody <xref:System.Net.WebRequest> zarejestrować <xref:System.Net.WebRequest> zależne do obsługi zestawu żądań do określonego schematu Internet, schemat i serwer lub do schematu, serwera i ścieżki.  
+ Aby można było utworzyć specyficzny <xref:System.Net.WebRequest>dla protokołu, należy zarejestrować metodę Create. Użyj <xref:System.Net.WebRequest.RegisterPrefix%28System.String%2CSystem.Net.IWebRequestCreate%29> <xref:System.Net.WebRequest> metody statycznej w celu zarejestrowania elementu podrzędnego w celu obsługi zestawu żądań do określonego schematu internetowego, schematu i serwera, lub schematu, serwera i ścieżki. <xref:System.Net.WebRequest>  
   
- W większości przypadków będzie wysyłać i odbierać dane przy użyciu metod i właściwości <xref:System.Net.WebRequest> klasy. Jednak jeśli potrzebujesz dostępu do właściwości specyficznych dla protokołu, użytkownik może rzutowanie typu <xref:System.Net.WebRequest> do określonego wystąpienia klasy pochodnej.  
+ W większości przypadków będzie można wysyłać i odbierać dane przy użyciu metod i właściwości <xref:System.Net.WebRequest> klasy. Jeśli jednak chcesz uzyskać dostęp do właściwości specyficznych dla protokołu, możesz rzutowanie a <xref:System.Net.WebRequest> do określonego wystąpienia klasy pochodnej.  
   
- Aby móc korzystać z protokołów podłączanych swoje <xref:System.Net.WebRequest> elementy podrzędne należy podać transakcji żądań i odpowiedzi domyślnej, która nie wymaga ustawiania właściwości specyficzne dla protokołu. Na przykład <xref:System.Net.HttpWebRequest> klasy, która implementuje <xref:System.Net.WebRequest> klasy do obsługi protokołu HTTP, zapewnia `GET` żądanie domyślnie i zwraca <xref:System.Net.HttpWebResponse> zawierający Strumień zwrócony z serwera sieci Web.  
+ Aby móc korzystać z protokołów podłączanych, <xref:System.Net.WebRequest> elementy podrzędne muszą udostępniać domyślną transakcję żądanie-odpowiedź, która nie wymaga ustawiania właściwości specyficznych dla protokołu. Na przykład <xref:System.Net.HttpWebRequest> Klasa, która <xref:System.Net.WebRequest> implementuje klasę `GET` dla protokołu HTTP, domyślnie zapewnia żądanie i zwraca <xref:System.Net.HttpWebResponse> wartość zawierającą Strumień zwrócony z serwera sieci Web.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wyprowadzanie z elementu WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)
-- [Wyprowadzanie z elementu WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
-- [Programowanie dla sieci w programie .NET Framework](../../../docs/framework/network-programming/index.md)
-- [Instrukcje: Rzutowanie elementu WebRequest do właściwości specyficznych dla protokołu dostępu](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)
+- [Wyprowadzanie z elementu WebRequest](deriving-from-webrequest.md)
+- [Wyprowadzanie z elementu WebResponse](deriving-from-webresponse.md)
+- [Programowanie dla sieci w programie .NET Framework](index.md)
+- [Instrukcje: Rzutowanie żądania sieci Webw celu uzyskania dostępu do właściwości specyficznych dla protokołu](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)

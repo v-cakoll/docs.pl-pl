@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties, retrieving
 - UI Automation, retrieving properties of elements
 ms.assetid: 09576b1a-291f-435c-980e-dee32d899ae1
-ms.openlocfilehash: e3b3b118c3db95f55c67c2b27149734efc8cbea8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 158ebf29bb504dd11f9e8416011226fc5846873e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968969"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043612"
 ---
 # <a name="get-ui-automation-element-properties"></a>Pobierz właściwości elementu automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -41,6 +41,6 @@ ms.locfileid: "69968969"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Właściwości automatyzacji interfejsu użytkownika dla klientów](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
-- [Używanie buforowania w automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
-- [Buforowanie w klientach automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
+- [Właściwości automatyzacji interfejsu użytkownika dla klientów](ui-automation-properties-for-clients.md)
+- [Używanie buforowania w automatyzacji interfejsu użytkownika](use-caching-in-ui-automation.md)
+- [Buforowanie w klientach automatyzacji interfejsu użytkownika](caching-in-ui-automation-clients.md)

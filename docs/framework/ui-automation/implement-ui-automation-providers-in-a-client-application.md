@@ -8,12 +8,12 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation within applications
 - UI Automation, implementing client-side provider within application
 ms.assetid: f325f0d8-1715-41ea-85ca-45b82ffea8bc
-ms.openlocfilehash: ef3d03bee412b97ed88ec76e81ad2fd19a9595eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a60253e62f814e9e3ea7ed4c5720e98e470d7f79
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968946"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043604"
 ---
 # <a name="implement-ui-automation-providers-in-a-client-application"></a>Implementacja dostawców automatyzacji interfejsu użytkownika w aplikacji klienta
 > [!NOTE]
@@ -31,7 +31,7 @@ ms.locfileid: "69968946"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd dostawców automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [Rejestrowanie zestawów dostawcy po stronie klienta](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)
-- [Tworzenie dostawcy automatyzacji interfejsu użytkownika po stronie klienta](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
-- [Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie klienta](../../../docs/framework/ui-automation/client-side-ui-automation-provider-implementation.md)
+- [Przegląd dostawców automatyzacji interfejsu użytkownika](ui-automation-providers-overview.md)
+- [Rejestrowanie zestawów dostawcy po stronie klienta](register-a-client-side-provider-assembly.md)
+- [Tworzenie dostawcy automatyzacji interfejsu użytkownika po stronie klienta](create-a-client-side-ui-automation-provider.md)
+- [Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie klienta](client-side-ui-automation-provider-implementation.md)

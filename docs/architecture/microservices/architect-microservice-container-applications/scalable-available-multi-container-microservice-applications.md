@@ -2,12 +2,12 @@
 title: Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
 description: Odkryj opcje organizowania mikrousług i wielokontenerowych aplikacji w celu zapewnienia wysokiej skalowalności i dostępności oraz możliwości Azure Dev Spaces podczas opracowywania cyklu życia aplikacji Kubernetes.
 ms.date: 09/20/2018
-ms.openlocfilehash: 9540ea3941e90b0f9ebfb79dff6f84bb368d0fb0
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: aef9dc2206c24d685610616a2a4d7850837b832d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991152"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040100"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
 
@@ -35,21 +35,10 @@ Koncepcje klastra i harmonogramu są ściśle powiązane, dlatego produkty udost
 
 ## <a name="software-platforms-for-container-clustering-orchestration-and-scheduling"></a>Platformy oprogramowania do klastrowania kontenerów, aranżacji i planowania
 
-### <a name="kubernetes"></a>Kubernetes
-
-![Logo Kubernetes](./media/image24.png)
-
-> [*Kubernetes*](https://kubernetes.io/) to produkt "open source", który oferuje funkcje, które są przeznaczone dla zakresu od infrastruktury klastra i planowania kontenera do organizowania możliwości. Umożliwia automatyzację wdrażania, skalowania i operacji kontenerów aplikacji między klastrami hostów.
->
-> *Kubernetes* zapewnia infrastrukturę skoncentrowaną na kontenerach, która grupuje kontenery aplikacji w jednostki logiczne do łatwego zarządzania i odnajdywania.
->
-> *Kubernetes* jest w systemie Linux, mniej dojrzały w systemach Windows.
-
-### <a name="azure-kubernetes-service-aks"></a>Usługa Azure Kubernetes Service (AKS)
-
-![Logo usługi Azure Kubernetes](./media/image41.png)
-
-> [Usługa Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/) to zarządzana usługa aranżacji kontenerów Kubernetes na platformie Azure, która upraszcza zarządzanie, wdrażanie i operacje klastra Kubernetes.
+|     |   |
+|-----|---|
+| **Kubernetes** <br> ![Logo Kubernetes](./media/image24.png) | [*Kubernetes*](https://kubernetes.io/) to produkt "open source", który oferuje funkcje, które są przeznaczone dla zakresu od infrastruktury klastra i planowania kontenera do organizowania możliwości. Umożliwia automatyzację wdrażania, skalowania i operacji kontenerów aplikacji między klastrami hostów. <br><br> *Kubernetes* zapewnia infrastrukturę skoncentrowaną na kontenerach, która grupuje kontenery aplikacji w jednostki logiczne do łatwego zarządzania i odnajdywania. <br><br> *Kubernetes* jest w systemie Linux, mniej dojrzały w systemach Windows. |
+| **Usługa Azure Kubernetes Service (AKS)** <br> ![Logo usługi Azure Kubernetes](./media/image41.png) | [AKS](https://azure.microsoft.com/services/kubernetes-service/) to zarządzana usługa aranżacji kontenerów Kubernetes na platformie Azure, która upraszcza zarządzanie, wdrażanie i operacje klastra Kubernetes. |
 
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>Korzystanie z koordynatorów opartych na kontenerach w Microsoft Azure
 

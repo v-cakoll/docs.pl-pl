@@ -10,75 +10,75 @@ helpviewer_keywords:
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d295d0b35b4b93425c825f75857881a2e2ddc57
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5993cfdb0f50d8e474a4f18280d181d9ec2fdfa4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660902"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049654"
 ---
 # <a name="compiling-apps-with-net-native"></a>Kompilowanie aplikacji z architekturą .NET Native
 
-.NET native jest technologia kompilacji wstępnej do kompilowania i wdrażania aplikacji Windows, który jest dołączony do programu Visual Studio 2015 i nowszych wersjach. Automatycznie skompiluje wersji aplikacji, które są zapisywane w kodzie zarządzanym (C# lub Visual Basic) i przeznaczone na platformę .NET Framework i Windows 10 do kodu macierzystego.
+.NET Native jest technologią prekompilacji do kompilowania i wdrażania aplikacji systemu Windows, które są dołączone do programu Visual Studio 2015 i jego nowszych wersji. Automatycznie kompiluje wydaną wersję aplikacji, które są zapisywane w kodzie zarządzanym (C# lub Visual Basic), które są przeznaczone dla .NET Framework i systemu Windows 10 do kodu natywnego.
 
-Zazwyczaj aplikacje, które obsługują program .NET Framework są kompilowane do języka pośredniego (IL). W czasie wykonywania kompilator just-in-time (JIT) tłumaczy IL do kodu macierzystego. Z kolei .NET Native kompiluje aplikacje Windows bezpośrednio do kodu macierzystego. Dla deweloperów oznacza to:
+Zazwyczaj aplikacje przeznaczone dla .NET Framework są kompilowane do języka pośredniego (IL). W czasie wykonywania kompilator just-in-Time (JIT) tłumaczy kod IL na natywny. Z kolei .NET Native kompiluje aplikacje systemu Windows bezpośrednio do kodu natywnego. Dla deweloperów oznacza to:
 
-- Twoje aplikacje są wyposażone w wydajności kodu natywnego. Zwykle wydajność będzie nadrzędne w stosunku do kodu, który jest najpierw skompilowane do IL, a następnie kompilowane do kodu macierzystego przy użyciu kompilatora JIT.
+- Twoje aplikacje mają wydajność kodu natywnego. Zwykle wydajność zostanie przewyższana do kodu, który jest najpierw kompilowany do IL, a następnie skompilowany do kodu natywnego przez kompilator JIT.
 
-- Można kontynuować programu C# lub Visual Basic.
+- Możesz kontynuować program w C# programie lub Visual Basic.
 
-- Można nadal korzystać z zasobów udostępnianych przez .NET Framework, w tym jego biblioteki klas, pamięcią automatyczną zarządzania i wyrzucania elementów kolekcji i obsługi wyjątków.
+- Można nadal korzystać z zasobów udostępnianych przez .NET Framework, w tym biblioteki klas, automatycznego zarządzania pamięcią i wyrzucania elementów bezużytecznych oraz obsługi wyjątków.
 
-W przypadku użytkowników aplikacji .NET Native oferuje następujące zalety:
+W przypadku użytkowników aplikacji .NET Native oferuje następujące korzyści:
 
-- Krótszy czas wykonywania dla większości scenariuszy i aplikacji.
+- Krótsze czasy wykonywania większości aplikacji i scenariuszy.
 
-- Krótszy czas uruchamiania dla większości scenariuszy i aplikacji.
+- Krótszy czas uruchamiania dla większości aplikacji i scenariuszy.
 
 - Niskie koszty wdrożenia i aktualizacji.
 
-- Zoptymalizowane pod kątem użycia pamięci aplikacji.
+- Zoptymalizowano użycie pamięci przez aplikację.
 
 > [!IMPORTANT]
-> Większość aplikacji i scenariuszy .NET Native oferuje znacznie krótszy czas uruchamiania i doskonałą wydajność w porównaniu do aplikacji skompilowanych IL lub obrazów NGEN. Jednak wyniki mogą się różnić. Aby upewnić się, że aplikacja skorzystał z ulepszenia wydajności programu .NET Native, należy porównać jego wydajność, korzystając z niego bez — .NET Native wersję aplikacji. Aby uzyskać więcej informacji, zobacz [sesja wydajności — omówienie](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview).
+> W przypadku większości aplikacji i scenariuszy .NET Native oferuje znacznie krótszy czas uruchamiania i wyższą wydajność w porównaniu z aplikacją skompilowaną do IL lub obrazu NGEN. Jednak wyniki mogą się różnić. Aby upewnić się, że aplikacja korzystała z ulepszeń .NET Native, należy porównać jej wydajność z wersją natywną aplikacji non-.NET. Aby uzyskać więcej informacji, zobacz [Omówienie sesji wydajności](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview).
 
-Jednak .NET Native obejmuje więcej niż kompilacji do kodu macierzystego. Jego zmienia sposób skompilowane i wykonywane aplikacje .NET Framework. W szczególności:
+Ale .NET Native zawiera więcej niż Kompilacja kodu natywnego. Przekształca on sposób kompilowania i wykonywania .NET Framework aplikacji. W szczególności:
 
-- Podczas wstępnej kompilacji wymagane części programu .NET Framework są łączone statycznie z Twoją aplikacją. Umożliwia to aplikacji do uruchamiania z bibliotekami lokalnego dla aplikacji programu .NET Framework i kompilator do przeprowadzenia analizy globalnego dostarczać wydajności usługi wins. W rezultacie aplikacje będą uruchamiać zawsze szybciej nawet po zakończeniu aktualizacji .NET Framework.
+- Podczas wstępnej kompilacji wymagane fragmenty .NET Framework są statycznie połączone z aplikacją. Dzięki temu aplikacja może działać z bibliotekami lokalnymi aplikacji .NET Framework i kompilatorem do wykonywania analizy globalnej w celu zapewnienia wydajności usługi WINS. W efekcie aplikacje są uruchamiane w sposób ciągły nawet po aktualizacji .NET Framework.
 
-- Środowisko uruchomieniowe platformy .NET Native została zoptymalizowana pod kątem statyczne wstępnej kompilacji i w zdecydowanej większości przypadków zapewnia najlepszą wydajność. W tym samym czasie zachowuje podstawowe funkcje odbicia, które więc produktywności deweloperów.
+- Środowisko uruchomieniowe .NET Native jest zoptymalizowane pod kątem statycznej kompilacji wstępnej, a w większości przypadków oferuje najwyższą wydajność. W tym samym czasie zachowuje podstawowe funkcje odbicia, które deweloperzy mogą znaleźć.
 
-- .NET native używa tego samego zaplecza co C++ kompilatora, który jest zoptymalizowany pod kątem statyczne scenariuszy wstępnej kompilacji.
+- .NET Native używa tego samego zaplecza, co C++ kompilator, który jest zoptymalizowany pod kątem statycznych scenariuszy prekompilacji.
 
-.NET native może przynieść korzyści wydajności C++ do zarządzanego kodu deweloperów, ponieważ używa ona narzędzi takie same lub podobne jak C++ kulisy, jak pokazano w poniższej tabeli.
+.NET Native jest w stanie obsłużyć zalety wydajności C++ programu dla deweloperów kodu zarządzanego, ponieważ używa tych samych lub podobnych narzędzi C++ , co w obszarze okapu, jak pokazano w tej tabeli.
 
 ||Architektura .NET Native|C++|
 |-|----------------------------------------------------------------|-----------|
-|Biblioteki|.NET Framework i środowiska wykonawczego Windows|Win32 i środowiska wykonawczego Windows|
-|Kompilator|Optymalizacja kompilatora UTC|Optymalizacja kompilatora UTC|
-|wdrożony|Pliki binarne gotowe do uruchomienia|Gotowe do uruchomienia pliki binarne (ASM)|
-|Środowisko uruchomieniowe|MRT.dll (środowisko uruchomieniowe CLR minimalny)|CRT.dll (środowiska wykonawczego języka C)|
+|Biblioteki|.NET Framework + środowisko wykonawcze systemu Windows|Win32 + środowisko wykonawcze systemu Windows|
+|Compiler|Kompilator optymalizacji UTC|Kompilator optymalizacji UTC|
+|Szczebl|Gotowe do uruchomienia pliki binarne|Gotowe do uruchomienia pliki binarne (ASM)|
+|Środowisko uruchomieniowe|MRT. dll (minimalne środowisko uruchomieniowe CLR)|CRT. dll (środowisko uruchomieniowe języka C)|
 
-W przypadku aplikacji Windows dla systemu Windows 10 możesz przekazać pliki binarne natywnej kompilacji kodu .NET, w pakiety aplikacji (pliki .appx) Store Windows.
+W przypadku aplikacji systemu Windows dla systemu Windows 10 przekazywanie plików binarnych kompilacji kodu .NET Native w pakietach aplikacji (pliki. appx) do sklepu Windows.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-Aby uzyskać więcej informacji na temat tworzenia aplikacji za pomocą natywnej kompilacji kodu .NET zobacz następujące tematy:
+Aby uzyskać więcej informacji na temat opracowywania aplikacji za pomocą kompilacji kodu .NET Native, zobacz następujące tematy:
 
-- [Wprowadzenie do kodu natywnej kompilacji .NET: Przewodnik doświadczenia dewelopera](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [Wprowadzenie z kompilacją kodu .NET Native: Przewodnik po samouczku dla deweloperów](getting-started-with-net-native.md)
 
-- [Architektura .NET native i kompilacja:](../../../docs/framework/net-native/net-native-and-compilation.md) Jak .NET Native kompiluje projekt do kodu natywnego.
+- [.NET Native i kompilacja:](net-native-and-compilation.md) Jak .NET Native kompiluje projekt na kod natywny.
 
-- [Odbicie i architektura .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
+- [Odbicie i architektura .NET Native](reflection-and-net-native.md)
 
-  - [Interfejsy API, które działają na podstawie odbicia](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
+  - [Interfejsy API, które działają na podstawie odbicia](apis-that-rely-on-reflection.md)
 
-  - [Dokumentacja interfejsu API odbicia](../../../docs/framework/net-native/net-native-reflection-api-reference.md)
+  - [Dokumentacja interfejsu API odbicia](net-native-reflection-api-reference.md)
 
-  - [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+  - [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 
-- [Serializacja i metadane](../../../docs/framework/net-native/serialization-and-metadata.md)
+- [Serializacja i metadane](serialization-and-metadata.md)
 
-- [Migrowanie aplikacji ze Sklepu Windows do architektury .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
+- [Migrowanie aplikacji ze Sklepu Windows do architektury .NET Native](migrating-your-windows-store-app-to-net-native.md)
 
-- [Ogólne wskazówki dotyczące rozwiązywania problemów z architekturą .NET Native](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
+- [Ogólne wskazówki dotyczące rozwiązywania problemów z architekturą .NET Native](net-native-general-troubleshooting.md)

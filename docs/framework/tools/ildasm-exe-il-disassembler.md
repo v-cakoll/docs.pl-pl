@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9e6d9e57528f3eae9b30706013a0529313877c7
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9d08d6164c00d2b5b750c9edda46a7be18153152
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894868"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044659"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Dezasembler IL)
 
 Dezasembler IL jest narzędziem towarzyszącym Asemblerowi IL (*Ilasm. exe*). *Ildasm. exe* pobiera przenośny plik wykonywalny (PE), który zawiera kod języka pośredniego (IL) i tworzy plik tekstowy odpowiedni jako dane wejściowe do *Ilasm. exe*.
 
-To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](developer-command-prompt-for-vs.md).
 
 W wierszu polecenia wpisz następujące polecenie:
 
@@ -186,7 +186,7 @@ Typ zagnieżdżony musi być poprzedzony klasą zawierającą i oddzielony od ni
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Narzędzia](../../../docs/framework/tools/index.md)
-- [Ilasm.exe (asembler IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
+- [Narzędzia](index.md)
+- [Ilasm.exe (asembler IL)](ilasm-exe-il-assembler.md)
 - [Proces zarządzanego wykonania](../../standard/managed-execution-process.md)
-- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Wiersze polecenia](developer-command-prompt-for-vs.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: 45e1cd9bdfcbcf592ce6708496282e2e66a4a2e3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c8db2e6cbd1f0c0dd61ecb8e147133b8c608ea8f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914391"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042041"
 ---
 # <a name="ui-automation-providers-overview"></a>Przegląd dostawców automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "69914391"
 ### <a name="navigation"></a>Nawigacja  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]elementy są udostępniane klientom jako [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewo. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]konstruuje drzewo, przechodząc od jednego elementu do drugiego. Nawigacja jest włączana przez dostawców dla każdego elementu, z których każdy może wskazywać element nadrzędny, elementy równorzędne i elementy podrzędne.  
   
- Aby uzyskać więcej informacji na temat widoku [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klienta drzewa, zobacz [Omówienie drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
+ Aby uzyskać więcej informacji na temat widoku [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klienta drzewa, zobacz [Omówienie drzewa automatyzacji interfejsu użytkownika](ui-automation-tree-overview.md).  
   
 ### <a name="views"></a>Widoki  
  Klient może zobaczyć [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewo w trzech głównych widokach, jak pokazano w poniższej tabeli.  
@@ -57,7 +57,7 @@ ms.locfileid: "69914391"
 |Widok kontrolki|Zawiera elementy, które są kontrolkami.|  
 |Widok zawartości|Zawiera elementy, które mają zawartość.|  
   
- Aby uzyskać więcej informacji na temat widoków [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klienta w drzewie, zobacz [Omówienie drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
+ Aby uzyskać więcej informacji na temat widoków [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klienta w drzewie, zobacz [Omówienie drzewa automatyzacji interfejsu użytkownika](ui-automation-tree-overview.md).  
   
  Jest odpowiedzialna za implementację dostawcy, aby zdefiniować element jako element zawartości lub element kontrolny. Elementy kontrolne mogą być również elementami zawartości, ale wszystkie elementy zawartości są elementami kontrolnymi.  
   
@@ -78,4 +78,4 @@ ms.locfileid: "69914391"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie serwera](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie serwera](server-side-ui-automation-provider-implementation.md)

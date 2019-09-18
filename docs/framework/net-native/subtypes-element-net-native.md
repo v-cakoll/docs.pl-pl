@@ -1,18 +1,18 @@
 ---
-title: <Subtypes> (Architektura .NET Native)
+title: <Subtypes>— Element (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e0ec1ed73148b319217a70cc3be99b486be2f8e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2af1acc02b18c5b97ef66ccae9b70c1f5327bff4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866857"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049124"
 ---
-# <a name="subtypes-element-net-native"></a>\<Podtypy > (architektura .NET Native)
-Stosuje zasady środowiska uruchomieniowego dla wszystkich klas dziedziczone z typu zawierającego.  
+# <a name="subtypes-element-net-native"></a>\<Podtypy > element (.NET Native)
+Stosuje zasady środowiska uruchomieniowego do wszystkich klas dziedziczonych z typu zawierającego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,22 +36,22 @@ Stosuje zasady środowiska uruchomieniowego dla wszystkich klas dziedziczone z t
   
 |Atrybut|Typ atrybutu|Opis|  
 |---------------|--------------------|-----------------|  
-|`Activate`|Odbicie|Atrybut opcjonalny. Kontroluje dostęp do środowiska uruchomieniowego do konstruktorów, aby włączyć aktywacji wystąpień.|  
-|`Browse`|Odbicie|Atrybut opcjonalny. Kontroluje, wykonanie zapytania dotyczącego informacji o elementach programu, ale nie uwzględnia żadnych dostęp do środowiska uruchomieniowego.|  
-|`Dynamic`|Odbicie|Atrybut opcjonalny. Kontroluje dostęp do środowiska uruchomieniowego do wszystkich typów elementów członkowskich, konstruktorzy, metody, pola, właściwości i zdarzenia, w tym umożliwiające programowanie dynamiczne.|  
-|`Serialize`|Serializacja|Atrybut opcjonalny. Kontroluje dostęp do środowiska uruchomieniowego do konstruktorów, pola i właściwości, aby umożliwić wystąpień typu serializacji i deserializacji, biblioteki, takie jak serializator Newtonsoft JSON.|  
-|`DataContractSerializer`|Serializacja|Atrybut opcjonalny. Określa zasady do serializacji, który używa <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> klasy.|  
-|`DataContractJsonSerializer`|Serializacja|Atrybut opcjonalny. Określa zasady dla serializacji JSON, który używa <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> klasy.|  
-|`XmlSerializer`|Serializacja|Atrybut opcjonalny. Określa zasady dla serializacji XML, który używa <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> klasy.|  
-|`MarshalObject`|Usługa międzyoperacyjna|Atrybut opcjonalny. Zasady kontroli marshaling typów referencyjnych do środowiska uruchomieniowego Windows i modelu COM.|  
-|`MarshalDelegate`|Usługa międzyoperacyjna|Atrybut opcjonalny. Określa zasady kierowanie typy delegatów jako wskaźniki funkcji do kodu macierzystego.|  
-|`MarshalStructure`|Usługa międzyoperacyjna|Atrybut opcjonalny. Określa zasady dla marshaling typów wartości do kodu natywnego.|  
+|`Activate`|Odbicie|Atrybut opcjonalny. Kontroluje dostęp środowiska uruchomieniowego do konstruktorów, aby umożliwić aktywację wystąpień.|  
+|`Browse`|Odbicie|Atrybut opcjonalny. Steruje wykonywaniem zapytań dotyczących informacji o elementach programu, ale nie umożliwia dostępu do środowiska uruchomieniowego.|  
+|`Dynamic`|Odbicie|Atrybut opcjonalny. Kontroluje dostęp środowiska uruchomieniowego do wszystkich elementów członkowskich typu, takich jak konstruktory, metody, pola, właściwości i zdarzenia, aby umożliwić programowanie dynamiczne.|  
+|`Serialize`|Serializacja|Atrybut opcjonalny. Kontroluje dostęp środowiska uruchomieniowego do konstruktorów, pól i właściwości, aby umożliwić Serializowanie i deserializacja wystąpień typów przez biblioteki, takie jak serializator JSON Newtonsoft.|  
+|`DataContractSerializer`|Serializacja|Atrybut opcjonalny. Kontroluje zasady dla serializacji, która używa <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> klasy.|  
+|`DataContractJsonSerializer`|Serializacja|Atrybut opcjonalny. Kontroluje zasady dla serializacji JSON używającej <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> klasy.|  
+|`XmlSerializer`|Serializacja|Atrybut opcjonalny. Kontroluje zasady dla serializacji XML, która używa <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> klasy.|  
+|`MarshalObject`|Interop|Atrybut opcjonalny. Kontroluje zasady dotyczące organizowania typów odwołań do środowisko wykonawcze systemu Windows i COM.|  
+|`MarshalDelegate`|Interop|Atrybut opcjonalny. Steruje zasadami organizowania typów delegatów jako wskaźników funkcji do kodu natywnego.|  
+|`MarshalStructure`|Interop|Atrybut opcjonalny. Steruje zasadami dotyczącymi organizowania typów wartości na kod natywny.|  
   
 ## <a name="all-attributes"></a>Wszystkie atrybuty  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*policy_setting*|Ustawienia do zastosowania do tego typu zasad. Możliwe wartości to `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal`, i `Required All`. Aby uzyskać więcej informacji, zobacz [ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Ustawienie, które ma zostać zastosowane do tego typu zasad. Możliwe wartości to `All`, `Auto` `Excluded` ,,`Public` ,,`Required All`, i. `PublicAndInternal` `Required Public` `Required PublicAndInternal` Aby uzyskać więcej informacji, zobacz [Ustawienia zasad dyrektywy środowiska uruchomieniowego](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -60,19 +60,19 @@ Stosuje zasady środowiska uruchomieniowego dla wszystkich klas dziedziczone z t
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Ma zastosowanie zasad odbicia do typu i jej elementów członkowskich.|  
+|[\<Type>](type-element-net-native.md)|Stosuje zasady odbicia do typu i wszystkich jego elementów członkowskich.|  
   
 ## <a name="remarks"></a>Uwagi  
- `<Subtypes>` Element dotyczy podtypy jej typ zawierający zasady. Możesz użyć, jeśli chcesz zastosować zasady różnych typów pochodnych i ich klasami podstawowymi.  
+ `<Subtypes>` Element stosuje zasady do wszystkich podtypów zawierającego go typu. Jest ona używana, gdy chcesz zastosować różne zasady do typów pochodnych i ich klas bazowych.  
   
- Odbicia, serializacja i atrybutów międzyoperacyjności są wszystkie opcjonalne, ale co najmniej jeden powinien być obecny.  
+ Atrybuty odbicia, serializacji i międzyoperacyjności są opcjonalne, chociaż co najmniej jeden z nich powinien być obecny.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie zdefiniowano klasę o nazwie `BaseClass` i podklasą klasy o nazwie `Derived1`.  
+ W poniższym przykładzie zdefiniowano klasę o `BaseClass` nazwie i podklasą o nazwie. `Derived1`  
   
  [!code-csharp[ProjectN_Reflection#4](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/subtypes.cs#4)]  
   
- Jak pokazano w poniższym kodzie, dyrektywy środowiska uruchomieniowego jawnie plików zestawów `Dynamic` i `Activate` zasad `BaseClass` do `Excluded`. Ze względu na to, obiekty typu `BaseClass` nie można utworzyć wystąpienia dynamicznie lub przez wywołania do `BaseClass` konstruktora klasy. Jednak `<Subtypes>` elementu umożliwia klasy pochodne `BaseClass` z myślą o uruchamianiu dynamicznie i za pośrednictwem wywołania ich Konstruktory klasy.  
+ Jak pokazano w poniższym kodzie, plik `Dynamic` dyrektywy środowiska uruchomieniowego jawnie ustawia zasady i `Activate` dla `BaseClass` na `Excluded`. Z tego powodu obiekty typu `BaseClass` nie mogą być tworzone dynamicznie lub przez wywołania `BaseClass` konstruktora klasy. Jednakże element pozwala na dynamiczne tworzenie wystąpień klas `BaseClass` pochodzących z programu, a za pomocą wywołań do ich konstruktorów klas. `<Subtypes>`  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -85,13 +85,13 @@ Stosuje zasady środowiska uruchomieniowego dla wszystkich klas dziedziczone z t
 </Directives>  
 ```  
   
- Z powodu `<Subtypes>` dyrektywy, następujący kod, który tworzy wystąpienie `Derived1` wystąpienia dynamicznie przez wywołanie metody <xref:System.Activator.CreateInstance%28System.Type%29?displayProperty=nameWithType> metoda wykonuje z powodzeniem.  W tym miejscu zmienna bloku jest <xref:System.Windows.Controls.TextBlock> obiektu w pustej aplikacji Windows Store.  
+ Ze względu `<Subtypes>` na dyrektywę, poniższy kod, który `Derived1` tworzy <xref:System.Activator.CreateInstance%28System.Type%29?displayProperty=nameWithType> wystąpienie dynamicznie przez wywołanie metody zostało wykonane pomyślnie.  Tutaj zmienna blokowa jest <xref:System.Windows.Controls.TextBlock> obiektem w pustej aplikacji ze sklepu Windows.  
   
  [!code-csharp[ProjectN_Reflection#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/subtypes.cs#5)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [\<Typ > Element](../../../docs/framework/net-native/type-element-net-native.md)
-- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [\<Typ > element](type-element-net-native.md)
+- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementy dyrektyw środowiska uruchomieniowego](runtime-directive-elements.md)
+- [Ustawienia zasad dyrektyw środowiska uruchomieniowego](runtime-directive-policy-settings.md)

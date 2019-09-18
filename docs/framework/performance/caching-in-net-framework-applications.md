@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: b1d9b12a46d674bf591457cdc90c66fc16818734
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 704efed96c18f23d34d8a583d3121fc08b9e22e1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927046"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046790"
 ---
 # <a name="caching-in-net-framework-applications"></a>Buforowanie w aplikacjach .NET Framework
 Buforowanie umożliwia przechowywanie danych w pamięci w celu szybkiego dostępu. Po ponownym uzyskaniu dostępu do danych aplikacje mogą pobrać dane z pamięci podręcznej, zamiast pobierać je z oryginalnego źródła. Może to poprawić wydajność i skalowalność. Ponadto buforowanie sprawia, że dane są dostępne, gdy źródło danych jest tymczasowo niedostępne.  
@@ -41,7 +41,7 @@ Buforowanie umożliwia przechowywanie danych w pamięci w celu szybkiego dostęp
 > [!NOTE]
 > Klasa jest modelowana na obiekcie pamięci podręcznej ASP.NET, który jest zdefiniowany <xref:System.Web.Caching> w przestrzeni nazw. <xref:System.Runtime.Caching.MemoryCache> W związku z tym wewnętrzna logika buforowania podobna do logiki podanej we wcześniejszych wersjach ASP.NET.  
   
- Aby zapoznać się z przykładem użycia do buforowania w aplikacji WPF, zobacz [Przewodnik: Buforowanie danych aplikacji w aplikacji](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)WPF.  
+ Aby zapoznać się z przykładem użycia do buforowania w aplikacji WPF, zobacz [Przewodnik: Buforowanie danych aplikacji w aplikacji](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)WPF.  
   
 ## <a name="caching-in-aspnet-applications"></a>Buforowanie w aplikacjach ASP.NET  
  Klasy buforowania w <xref:System.Runtime.Caching> przestrzeni nazw zapewniają funkcjonalność buforowania danych w ASP.NET.  
@@ -79,5 +79,5 @@ Buforowanie umożliwia przechowywanie danych w pamięci w celu szybkiego dostęp
 
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>
-- [Przewodnik: Buforowanie danych aplikacji w aplikacji WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Przewodnik: Buforowanie danych aplikacji w aplikacji WPF](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
 - [Przewodnik: Buforowanie danych aplikacji w ASP.NET](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))

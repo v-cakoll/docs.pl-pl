@@ -11,25 +11,25 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 5b4936a54627e6016cabc41954d1a18ae82cdf90
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 150198c2bda220e4b37981e461e19b8e4e30e483
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422477"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048121"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Instrukcje: określanie zasad pamięci podręcznej na podstawie lokalizacji dla aplikacji
-Zasady pamięci podręcznej oparte na lokalizacji zezwolić aplikacji na jawne zdefiniowanie zachowania buforowania na podstawie lokalizacji żądanego zasobu. W tym temacie przedstawiono programowe Ustawianie zasad pamięci podręcznej. Aby uzyskać informacje na temat ustawiania zasad dla aplikacji za pomocą plików konfiguracji, zobacz [ \<requestCaching — >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
+Zasady pamięci podręcznej oparte na lokalizacji pozwalają aplikacji jawnie definiować zachowanie buforowania na podstawie lokalizacji żądanego zasobu. W tym temacie pokazano, jak skonfigurować zasady pamięci podręcznej. Aby uzyskać informacje na temat ustawiania zasad dla aplikacji przy użyciu plików konfiguracji, zobacz [ \<requestCaching > element (Ustawienia sieci)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
-### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>Aby ustawić zasady oparte na lokalizacji pamięci podręcznej dla aplikacji  
+### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>Aby ustawić zasady pamięci podręcznej oparte na lokalizacji dla aplikacji  
   
-1. Tworzenie <xref:System.Net.Cache.RequestCachePolicy> lub <xref:System.Net.Cache.HttpRequestCachePolicy> obiektu.  
+1. Utwórz obiekt <xref:System.Net.Cache.HttpRequestCachePolicy>lub. <xref:System.Net.Cache.RequestCachePolicy>  
   
-2. Obiekt zasad należy ustawić jako domyślne dla domeny aplikacji.  
+2. Ustaw obiekt zasad jako domyślny dla domeny aplikacji.  
   
-### <a name="to-set-a-policy-that-takes-requested-resources-from-a-cache"></a>Aby ustawić zasady, która przyjmuje żądanych zasobów z pamięci podręcznej  
+### <a name="to-set-a-policy-that-takes-requested-resources-from-a-cache"></a>Aby ustawić zasady, które pobierają żądane zasoby z pamięci podręcznej  
   
-- Utworzyć zasadę, która przyjmuje żądanych zasobów z pamięci podręcznej, jeśli jest dostępny, a w przeciwnym razie wysyła żądania do serwera, przez ustawienie poziomie do pamięci podręcznej <xref:System.Net.Cache.HttpRequestCacheLevel.CacheIfAvailable>. Żądanie może być spełnione przez wszelkie pamięci między klientem i serwerem, w tym zdalnego pamięci podręcznych.  
+- Utwórz zasady, które żądają żądanych zasobów z pamięci podręcznej, jeśli są dostępne, a w przeciwnym razie wysyła żądania do serwera, <xref:System.Net.Cache.HttpRequestCacheLevel.CacheIfAvailable>ustawiając poziom pamięci podręcznej na. Żądanie może być spełnione przez dowolną pamięć podręczną klienta i serwera, w tym zdalnych pamięci podręcznych.  
   
     ```csharp  
     public static void UseCacheIfAvailable()  
@@ -48,9 +48,9 @@ Zasady pamięci podręcznej oparte na lokalizacji zezwolić aplikacji na jawne z
     End Sub  
     ```  
   
-### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-resources"></a>Aby ustawić zasady, który uniemożliwia dostarczanie zasobów wszelkie pamięci  
+### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-resources"></a>Aby ustawić zasady, które uniemożliwiają dostarczenie zasobów przez żadną pamięć podręczną  
   
-- Tworzenie zasad, który uniemożliwia dostarczanie żądanych zasobów przez ustawienie poziomie do pamięci podręcznej wszelkie pamięci <xref:System.Net.Cache.HttpRequestCacheLevel.NoCacheNoStore>. Ten poziom zasad Usuwa zasób z lokalnej pamięci podręcznej, jeśli jest obecny i wskazuje zdalnego pamięci podręcznych, że należy również usunąć zasób.  
+- Utwórz zasady, które uniemożliwiają każdej pamięci podręcznej dostarczenie żądanych zasobów przez ustawienie <xref:System.Net.Cache.HttpRequestCacheLevel.NoCacheNoStore>poziomu pamięci podręcznej na wartość. Ten poziom zasad usuwa zasób z lokalnej pamięci podręcznej, jeśli jest obecny, i wskazuje na zdalne pamięci podręczne, które powinny również usunąć zasób.  
   
     ```csharp  
     public static void DoNotUseCache()  
@@ -69,9 +69,9 @@ Zasady pamięci podręcznej oparte na lokalizacji zezwolić aplikacji na jawne z
     End Sub  
     ```  
   
-### <a name="to-set-a-policy-that-returns-requested-resources-only-if-they-are-in-the-local-cache"></a>Aby ustawić zasady, które zwraca żądanych zasobów tylko wtedy, gdy znajdują się w lokalnej pamięci podręcznej  
+### <a name="to-set-a-policy-that-returns-requested-resources-only-if-they-are-in-the-local-cache"></a>Aby ustawić zasady zwracające żądane zasoby tylko wtedy, gdy znajdują się w lokalnej pamięci podręcznej  
   
-- Utwórz zasadę, która zwraca żądanych zasobów tylko wtedy, gdy znajdują się w lokalnej pamięci podręcznej przez ustawienie poziomie do pamięci podręcznej <xref:System.Net.Cache.HttpRequestCacheLevel.CacheOnly>. Jeśli żądany zasób nie znajduje się w pamięci podręcznej, <xref:System.Net.WebException> wyjątku.  
+- Utwórz zasady zwracające żądane zasoby tylko wtedy, gdy znajdują się w lokalnej pamięci podręcznej, ustawiając <xref:System.Net.Cache.HttpRequestCacheLevel.CacheOnly>poziom pamięci podręcznej na. Jeśli żądany zasób nie znajduje się w pamięci podręcznej <xref:System.Net.WebException> , zostanie zgłoszony wyjątek.  
   
     ```csharp  
     public static void OnlyUseCache()  
@@ -90,9 +90,9 @@ Zasady pamięci podręcznej oparte na lokalizacji zezwolić aplikacji na jawne z
     End Sub  
     ```  
   
-### <a name="to-set-a-policy-that-prevents-the-local-cache-from-supplying-resources"></a>Aby ustawić zasady, który uniemożliwia dostarczanie zasobów w lokalnej pamięci podręcznej  
+### <a name="to-set-a-policy-that-prevents-the-local-cache-from-supplying-resources"></a>Aby ustawić zasady, które uniemożliwiają lokalnej pamięci podręcznej dostarczanie zasobów  
   
-- Tworzenie zasad, który uniemożliwia dostarczanie żądanych zasobów przez ustawienie poziomie do pamięci podręcznej lokalnej pamięci podręcznej <xref:System.Net.Cache.HttpRequestCacheLevel.Refresh>. Jeśli żądany zasób jest w pamięci podręcznej pośredniego, pomyślnie sprawdzony ponownie pośrednich pamięci podręcznej można podać żądanego zasobu.  
+- Utwórz zasady, które uniemożliwiają lokalnej pamięci podręcznej dostarczenie żądanych zasobów przez ustawienie poziomu <xref:System.Net.Cache.HttpRequestCacheLevel.Refresh>pamięci podręcznej na wartość. Jeśli żądany zasób znajduje się w pośredniej pamięci podręcznej i zostanie pomyślnie ponownie zweryfikowany, pośrednia pamięć podręczna może dostarczyć żądany zasób.  
   
     ```csharp  
     public static void DoNotUseLocalCache()  
@@ -111,9 +111,9 @@ Zasady pamięci podręcznej oparte na lokalizacji zezwolić aplikacji na jawne z
     End Sub  
     ```  
   
-### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-requested-resources"></a>Aby ustawić zasady, który uniemożliwia dostarczanie wszelkie pamięci żądana zasobów  
+### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-requested-resources"></a>Aby ustawić zasady, które uniemożliwiają dostarczenie żądanych zasobów przez żadną pamięć podręczną  
   
-- Tworzenie zasad, który uniemożliwia dostarczanie żądanych zasobów przez ustawienie poziomie do pamięci podręcznej wszelkie pamięci <xref:System.Net.Cache.HttpRequestCacheLevel.Reload>. Zasób, zwracany przez serwer mogą być przechowywane w pamięci podręcznej.  
+- Utwórz zasady, które uniemożliwiają każdej pamięci podręcznej dostarczenie żądanych zasobów przez ustawienie <xref:System.Net.Cache.HttpRequestCacheLevel.Reload>poziomu pamięci podręcznej na wartość. Zasób zwrócony przez serwer może być przechowywany w pamięci podręcznej.  
   
     ```csharp  
     public static void SendToServer()  
@@ -132,9 +132,9 @@ Zasady pamięci podręcznej oparte na lokalizacji zezwolić aplikacji na jawne z
     End Sub  
     ```  
   
-### <a name="to-set-a-policy-that-allows-any-cache-to-supply-requested-resources-if-the-resource-on-the-server-is-not-newer-than-the-cached-copy"></a>Aby skonfigurować zasady, które umożliwia dowolnym pamięci podręcznej, aby dostarczyć żądanych zasobów, jeśli zasobu na serwerze nie jest nowszy niż buforowana kopia  
+### <a name="to-set-a-policy-that-allows-any-cache-to-supply-requested-resources-if-the-resource-on-the-server-is-not-newer-than-the-cached-copy"></a>Aby ustawić zasady zezwalające każdej pamięci podręcznej na dostarczenie żądanych zasobów, jeśli zasób na serwerze nie jest nowszy niż w pamięci podręcznej  
   
-- Utworzyć zasadę, która zezwala na wszystkie pamięci podręcznej, aby dostarczyć żądanych zasobów, jeśli zasobu na serwerze nie jest nowszy niż pamięci podręcznej przez ustawienie poziomie do pamięci podręcznej <xref:System.Net.Cache.HttpRequestCacheLevel.Revalidate>.  
+- Utwórz zasady, które zezwalają dowolnej pamięci podręcznej na dostarczenie żądanych zasobów, jeśli zasób na serwerze nie jest nowszy niż w pamięci podręcznej, ustawiając poziom bufora na <xref:System.Net.Cache.HttpRequestCacheLevel.Revalidate>.  
   
     ```csharp  
     public static void CheckServer()  
@@ -155,8 +155,8 @@ Zasady pamięci podręcznej oparte na lokalizacji zezwolić aplikacji na jawne z
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zarządzanie pamięcią podręczną dla aplikacji sieciowych](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [Zasady pamięci podręcznej](../../../docs/framework/network-programming/cache-policy.md)
-- [Zasady pamięci podręcznej oparte na lokalizacji](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Zasady pamięci podręcznej oparte na czasie](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [\<requestCaching — >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [Zarządzanie pamięcią podręczną dla aplikacji sieciowych](cache-management-for-network-applications.md)
+- [Zasady pamięci podręcznej](cache-policy.md)
+- [Zasady pamięci podręcznej oparte na lokalizacji](location-based-cache-policies.md)
+- [Zasady pamięci podręcznej oparte na czasie](time-based-cache-policies.md)
+- [\<requestCaching >, element (Ustawienia sieci)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

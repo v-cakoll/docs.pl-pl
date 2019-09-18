@@ -4,25 +4,25 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
-ms.openlocfilehash: 850e266aed6fc2d69722ba6dac3baa3e115678a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0d4e274ad7b64820e74347908c08c7726e96bbe8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61953975"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053844"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>Konteksty usług dostępne dla typów konwerterów i rozszerzeń znaczników
-Autorzy typów, które obsługują typów konwerterów i znaczników rozszerzenie użycia często muszą mieć informacje kontekstowe o którym użycia znajduje się w znaczniku lub w otaczających struktura grafu obiektów. Informacje mogą być wymagane, aby poprawnie konkretyzacji udostępnionego obiektu lub tak, aby odwołania do obiektu w istniejących obiektach na grafie obiektu jest możliwe. Korzystając z usług programu .NET Framework XAML, kontekst, który może być wymagane jest udostępniany jako serię interfejsy usługi. Odpytuje typu konwertera lub języka znaczników, rozszerzenie kod pomocy technicznej dla usługi za pomocą kontekstu dostawcy usług, który jest dostępny i przekazanych z <xref:System.Xaml.XamlObjectWriter> lub typów pokrewnych. Kontekst schematu XAML jest bezpośrednio dostępny za pośrednictwem jednej takiej usługi. W tym temacie opisano, jak uzyskać dostęp do konteksty usług z implementacji konwertera wartości i wyświetla zazwyczaj dostępnych usług i ich ról.  
+Autorzy typów, którzy obsługują konwerter typów i użycie rozszerzeń znaczników, muszą często mieć kontekstowe informacje o tym, gdzie użycie znajduje się w znaczniku lub w strukturze wykresu otaczających obiektów. Informacje mogą być konieczne w celu poprawnego wystąpienia podanego obiektu lub odwołania do istniejących obiektów na grafie obiektów. W przypadku korzystania z .NET Framework usług XAML kontekst, który może być wymagany, jest ujawniany jako seria interfejsów usługi. Kod obsługi konwertera typów lub rozszerzeń znaczników może wysyłać zapytania dotyczące usługi przy użyciu kontekstu dostawcy usług, który jest dostępny i jest przeszukiwany przez typy powiązane z <xref:System.Xaml.XamlObjectWriter> lub. Kontekst schematu XAML jest dostępny bezpośrednio za pomocą jednej takiej usługi. W tym temacie opisano sposób uzyskiwania dostępu do kontekstów usługi z implementacji konwertera wartości i są wyświetlane zazwyczaj dostępne usługi i ich role.  
   
 <a name="obtaining_services"></a>   
-## <a name="obtaining-services"></a>Uzyskiwanie usługi  
- Jako implementującego konwerter wartości często trzeba dostępu do określonego typu kontekstu, w którym zastosowano konwertera wartości. Ten kontekst może zawierać informacje, takie jak active kontekst schematu XAML, dostęp do system mapowania typu, który kontekst schematu XAML i modułu zapisywania obiektu XAML zapewniają i tak dalej. Dostępne usługi dla implementacji konwertera rozszerzenia lub typu znaczników są przekazywane za pośrednictwem parametrów kontekstu, które są częścią podpis poszczególnych metod wirtualnych. W każdym przypadku masz <xref:System.IServiceProvider> zaimplementowane w kontekście, a może wywołać <xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType> żądania usługi.  
+## <a name="obtaining-services"></a>Uzyskiwanie usług  
+ Jako implementujący konwerter wartości często potrzebny jest dostęp do pewnego typu kontekstu, w którym zastosowano konwerter wartości. Ten kontekst może obejmować takie informacje, jak kontekst aktywnego schematu XAML, dostęp do systemu mapowania typów, który udostępnia kontekst schematu XAML i składnik zapisywania obiektów XAML, i tak dalej. Usługi dostępne dla wdrożenia znacznika lub implementacji konwertera typów są przekazywane przez parametry kontekstu, które są częścią podpisu każdej metody wirtualnej. W każdym przypadku <xref:System.IServiceProvider> zaimplementowane w kontekście i mogą wywołać <xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType> żądanie usługi.  
   
 <a name="services_for_a_markup_extension"></a>   
-## <a name="services-for-a-markup-extension"></a>Usługi rozszerzenia znaczników  
- <xref:System.Windows.Markup.MarkupExtension> ma tylko jedną metodę wirtualną, <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>. Dane wejściowe `serviceProvider` parametr jest jak usług są przekazywane do implementacji, gdy rozszerzenie znaczników jest wywoływana przez procesor XAML. Poniższym pseudokodzie ilustruje, jak Implementacja rozszerzenia znaczników może zapytanie dla usług w jej <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>:  
+## <a name="services-for-a-markup-extension"></a>Usługi dla rozszerzenia znaczników  
+ <xref:System.Windows.Markup.MarkupExtension>ma tylko jedną metodę wirtualną, <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>. Parametr wejściowy `serviceProvider` to sposób, w jaki usługi są przekazywane do implementacji, gdy rozszerzenie znacznika jest wywoływane przez procesor XAML. Poniższy pseudokodzie ilustruje, jak implementacja rozszerzenia znaczników może wysyłać zapytania o usługi w swojej <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>:  
   
-```  
+```csharp  
 public override object ProvideValue(IServiceProvider serviceProvider)  
 {  
 ...  
@@ -41,12 +41,12 @@ public override object ProvideValue(IServiceProvider serviceProvider)
 ```  
   
 <a name="services_for_a_type_converter"></a>   
-## <a name="services-for-a-type-converter"></a>Usługi konwertera typów  
- <xref:System.ComponentModel.TypeConverter> ma cztery metody wirtualne, które korzystają z kontekstu usługi, co umożliwia obsługę użycia XAML. Każda z tych metod przekazuje dane wejściowe `context` parametru. Ten parametr jest typu <xref:System.ComponentModel.ITypeDescriptorContext>, ale ten interfejs dziedziczy <xref:System.IServiceProvider>i dlatego istnieje <xref:System.IServiceProvider.GetService%2A> metody dostępne dla implementacji konwertera typów.  
+## <a name="services-for-a-type-converter"></a>Usługi dla konwertera typów  
+ <xref:System.ComponentModel.TypeConverter>Program ma cztery metody wirtualne korzystające z kontekstu usługi i obsługujące użycie języka XAML. Każda z tych metod przekazuje parametr wejściowy `context` . Ten parametr jest typu <xref:System.ComponentModel.ITypeDescriptorContext>, ale ten interfejs dziedziczy <xref:System.IServiceProvider>i w <xref:System.IServiceProvider.GetService%2A> związku z tym ma metodę dostępną dla implementacji konwertera typów.  
   
- Poniższym pseudokodzie ilustruje, jak implementacja konwerter typu dla XAML użycia może być zapytanie dla usług w jednej z jej zastąpienia, w tym przypadku <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>:  
+ Poniższy pseudokodzie ilustruje, jak implementacja konwertera typów dla użycia XAML może wykonywać zapytania dotyczące usług w jednym z jego zastąpień, w <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>tym przypadku:  
   
-```  
+```csharp  
 public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,  
   CultureInfo cultureInfo,  
   object source)  
@@ -61,126 +61,126 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ```  
   
 <a name="services_for_a_value_serializer"></a>   
-## <a name="services-for-a-value-serializer"></a>Usługi dla serializatora wartość  
- Dla wartości serializator kontekstowe, użyj typ dostawcy usług, które są specyficzne dla <xref:System.Windows.Markup.ValueSerializer> klasy <xref:System.Windows.Markup.IValueSerializerContext>. Ten kontekst jest przekazywany do zastąpienia cztery <xref:System.Windows.Markup.ValueSerializer> metod wirtualnych. Wywołaj <xref:System.IServiceProvider.GetService%2A> z kontekstu, aby uzyskać usług.  
+## <a name="services-for-a-value-serializer"></a>Usługi dla serializatora wartości  
+ W przypadku kontekstu serializatora wartości należy użyć typu dostawcy usługi, który jest specyficzny <xref:System.Windows.Markup.ValueSerializer> dla klasy <xref:System.Windows.Markup.IValueSerializerContext>,. Ten kontekst jest przesyłany do zastąpień <xref:System.Windows.Markup.ValueSerializer> czterech metod wirtualnych. Wywołaj <xref:System.IServiceProvider.GetService%2A> z kontekstu, aby uzyskać usługi.  
   
 <a name="using_the_xaml_service_provider_contexts"></a>   
-## <a name="using-the-xaml-service-provider-contexts"></a>Za pomocą konteksty dostawcy usług w XAML  
- Dostawcy usług dla <xref:System.IServiceProvider.GetService%2A> dostęp do usług XAML można konwertery rozszerzenia lub typu znaczników jest implementowany jako Wewnętrzna klasa, z ujawnienia wyłącznie za pośrednictwem interfejsu i jak jest przekazywany do odpowiedniego kontekstu. Zawsze, gdy operacja przetwarzania XAML w domyślnej implementacji .NET Framework XAML Services załadować ścieżki lub ścieżka zapisu wywołuje znaczników odpowiednie rozszerzenie lub typu konwertera metody, które wymagają kontekst usługi, ten obiekt wewnętrzny jest przekazywany. W zależności od okoliczności, w kontekście usługi systemu zawiera jedną `MarkupExtensionContext` lub `TextSyntaxContext`, ale szczegółowe informacje na temat obu tych klas są wewnętrzne. Interakcji z tych klas jest ograniczona do żądania usług z nich, przy użyciu <xref:System.IServiceProvider.GetService%2A>.  
+## <a name="using-the-xaml-service-provider-contexts"></a>Korzystanie z kontekstów dostawcy usług XAML  
+ Dostawca usług do <xref:System.IServiceProvider.GetService%2A> uzyskiwania dostępu do usług XAML dostępnych dla rozszerzeń znaczników lub konwerterów typów jest implementowany jako Klasa wewnętrzna, z narażeniem tylko za pomocą interfejsu i sposobu przekazywania go do odpowiedniego kontekstu. Za każdym razem, gdy operacja przetwarzania XAML w domyślnych .NET Framework implementacjach usługi XAML ścieżki ładowania lub ścieżki zapisu wywołuje odpowiednie rozszerzenie znaczników lub metody konwertera typów, które wymagają kontekstu usługi, ten obiekt wewnętrzny jest przekazaniem. W zależności od sytuacji kontekst usługi systemowej zawiera `MarkupExtensionContext` albo lub `TextSyntaxContext`, ale te, które są określone w obu tych klasach, są wewnętrzne. Interakcje z tymi klasami są ograniczone do wysyłania do nich usług za pośrednictwem <xref:System.IServiceProvider.GetService%2A>programu.  
   
 <a name="available_systemxaml_services"></a>   
-## <a name="available-services-from-the-net-framework-xaml-service-context"></a>Dostępne usługi w kontekście usługi .NET Framework XAML  
- .NET framework XAML Services definiuje usługi rozszerzenia znaczników, konwerterów typów, wartości serializatory i potencjalnie inne zastosowania. W poniższych sekcjach opisano każdą z tych usług i zapewniają wskazówki dotyczące sposobu usługi mogą być używane w celu wykonania.  
+## <a name="available-services-from-the-net-framework-xaml-service-context"></a>Dostępne usługi z .NET Framework kontekstu usługi XAML  
+ .NET Framework usługi XAML definiują usługi dla rozszerzeń znaczników, konwerterów typów, serializatorów wartości i potencjalnie innych zastosowań. W poniższych sekcjach opisano każdą z tych usług i przedstawiono wskazówki dotyczące sposobu używania usługi w implementacji.  
   
 ### <a name="iserviceprovider"></a>IServiceProvider  
- **Dokumentację referencyjną**: <xref:System.IServiceProvider>  
+ **Dokumentacja referencyjna**:<xref:System.IServiceProvider>  
   
- **Odpowiednie do:** Podstawowe operacji opartych na usługach infrastruktury w programie .NET Framework, dzięki czemu można wywołać <xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType>.  
+ **Istotne dla:** Podstawowa operacja infrastruktury opartej na usłudze w .NET Framework, aby można było wywoływać <xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType>.  
   
 ### <a name="itypedescriptorcontext"></a>ITypeDescriptorContext  
- **Dokumentację referencyjną**: <xref:System.ComponentModel.ITypeDescriptorContext>  
+ **Dokumentacja referencyjna**:<xref:System.ComponentModel.ITypeDescriptorContext>  
   
- Pochodzi od klasy <xref:System.IServiceProvider>. Ta klasa reprezentuje kontekst w standardzie <xref:System.ComponentModel.TypeConverter> podpisów. <xref:System.ComponentModel.TypeConverter> to klasa, która istniała od .NET Framework 1.0. Jest on starszy od XAML i XAML <xref:System.ComponentModel.TypeConverter> scenariusz konwersja typu wartości ciągu. W kontekście usług programu .NET Framework XAML metody <xref:System.ComponentModel.TypeConverter> są implementowane w sposób jawny. Jawna implementacja zachowanie wskazuje dotyczące obiektów wywołujących, <xref:System.ComponentModel.ITypeDescriptorContext> interfejsu API nie jest ważna, systemów typu XAML lub do odczytu lub zapisu obiektów z XAML. <xref:System.ComponentModel.ITypeDescriptorContext.Container%2A>, <xref:System.ComponentModel.ITypeDescriptorContext.Instance%2A>, i <xref:System.ComponentModel.ITypeDescriptorContext.PropertyDescriptor%2A> zazwyczaj zwraca `null` z usług programu .NET Framework XAML kontekstów.  
+ Pochodzi od <xref:System.IServiceProvider>. Ta klasa reprezentuje kontekst w standardowych <xref:System.ComponentModel.TypeConverter> sygnaturach; <xref:System.ComponentModel.TypeConverter> jest klasą, która istniała od .NET Framework 1,0. Jest to wstępnie aktualna wartość XAML i <xref:System.ComponentModel.TypeConverter> scenariusz języka XAML dla konwersji typu String-Value. W kontekście .NET Framework usług XAML metody <xref:System.ComponentModel.TypeConverter> są implementowane jawnie. Zachowanie jawnej implementacji wskazuje, że <xref:System.ComponentModel.ITypeDescriptorContext> interfejs API nie jest istotny dla systemów typu XAML lub do odczytu lub zapisu obiektów z XAML. <xref:System.ComponentModel.ITypeDescriptorContext.Container%2A>, <xref:System.ComponentModel.ITypeDescriptorContext.Instance%2A> `null` i <xref:System.ComponentModel.ITypeDescriptorContext.PropertyDescriptor%2A> generalnie zwracają z .NET Framework kontekstowych usług XAML.  
   
 ### <a name="ivalueserializercontext"></a>IValueSerializerContext  
- **Dokumentację referencyjną**: <xref:System.Windows.Markup.IValueSerializerContext>  
+ **Dokumentacja referencyjna**:<xref:System.Windows.Markup.IValueSerializerContext>  
   
- Pochodzi od klasy <xref:System.ComponentModel.ITypeDescriptorContext> i również opiera się na jawne implementacje do pomijania skutki fałszywe informacje o systemie typu XAML. Obsługuje wyszukiwanie statyczne metody pomocnicze na <xref:System.Windows.Markup.ValueSerializer>.  
+ Pochodzi z <xref:System.ComponentModel.ITypeDescriptorContext> i również polega na jawnych implementacjach, aby pominąć fałszywe konsekwencje dotyczące systemu typów XAML. Obsługuje metody pomocnika wyszukiwania statycznego <xref:System.Windows.Markup.ValueSerializer>w.  
   
 ### <a name="ixamltyperesolver"></a>IXamlTypeResolver  
- **Dokumentację referencyjną**: <xref:System.Windows.Markup.IXamlTypeResolver>  
+ **Dokumentacja referencyjna**:<xref:System.Windows.Markup.IXamlTypeResolver>  
   
- **Zdefiniowane przez:** <xref:System.Windows.Markup> przestrzeni nazw System.Xaml zestawu  
+ **Zdefiniowane przez:** <xref:System.Windows.Markup> przestrzeń nazw, zestaw system. XAML  
   
- **Odpowiednie do:** Scenariusze ścieżki obciążenia oraz interakcję z kontekst schematu XAML  
+ **Istotne dla:** Scenariusze Załaduj ścieżkę i interakcje z kontekstem schematu XAML  
   
  **Interfejs API usługi:**  <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A>  
   
- Może mieć wpływ na XAML do CLR mapowania typów, które są niezbędne, gdy Edytor XAML konstruuje obiekt CLR wykresu obiektu. <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A> przetwarza ciąg potencjalnie kwalifikowana prefiks odnosi się do nazwy typu XAML (<xref:System.Xaml.XamlType.Name%2A?displayProperty=nameWithType>), a następnie zwraca CLR <xref:System.Type>. Rozpoznawanie typów jest zazwyczaj znacznej mierze zależy od kontekst schematu XAML. Kontekst schematu XAML jest pamiętać o kwestiach, takich jak zestawy, które są ładowane i które te zestawy lub powinni mieć dostęp do rozpoznawania typu.  
+ Może mieć wpływ na mapowanie typu XAML-to-CLR, które są niezbędne, gdy moduł zapisujący XAML konstruuje obiekt CLR w grafie obiektu. <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A>przetwarza potencjalnie kwalifikowany prefiks ciągu, który odnosi się do nazwy typu XAML (<xref:System.Xaml.XamlType.Name%2A?displayProperty=nameWithType>) i zwraca CLR. <xref:System.Type> Rozwiązywanie typów jest zwykle silnie zależne od kontekstu schematu XAML. Tylko kontekst schematu XAML jest świadomy zagadnień, takich jak zestawy, które są ładowane, i które z tych zestawów mogą lub powinny być dostępne do rozpoznawania typów.  
   
 ### <a name="iuricontext"></a>IUriContext  
- **Dokumentację referencyjną**: <xref:System.Windows.Markup.IUriContext>  
+ **Dokumentacja referencyjna**:<xref:System.Windows.Markup.IUriContext>  
   
- **Zdefiniowane przez:** <xref:System.Windows.Markup> przestrzeni nazw System.Xaml zestawu  
+ **Zdefiniowane przez:** <xref:System.Windows.Markup> przestrzeń nazw, zestaw system. XAML  
   
- **Odpowiednie do:** Ładowanie ścieżki i Zapisz ścieżkę obsługi wartości elementów członkowskich, które są identyfikatory URI lub `x:Uri` wartości.  
+ **Istotne dla:** Załaduj ścieżkę i Zapisz obsługę ścieżki wartości elementów członkowskich, które są `x:Uri` identyfikatorami URI lub wartościami.  
   
  **Interfejs API usługi:**  <xref:System.Windows.Markup.IUriContext.BaseUri%2A>  
   
- Ta usługa raporty dostępnie głównego identyfikatora URI, jeśli istnieje. Głównego identyfikatora URI może służyć do rozwiązania względne identyfikatory URI, URI na bezwzględny lub odwrotnie. Ten scenariusz jest głównie dotyczą usługi aplikacji, które są dostępne w określonej struktury lub możliwości klasy elementu głównego często używanych w ramach. Podstawowy identyfikator URI może zostać nawiązana ustawienie do odczytu XAML, który jest następnie przekazywane do modułu zapisywania obiektu XAML i zgłoszone przez tę usługę.  
+ Ta usługa zgłasza globalnie dostępny katalog główny URI (jeśli istnieje). Główny identyfikator URI może służyć do rozpoznawania względnych identyfikatorów URI do bezwzględnych identyfikatorów URI lub odwrotnie. Ten scenariusz dotyczy głównie usług aplikacji, które są udostępniane przez określoną strukturę, lub możliwości często używanej klasy elementu głównego w strukturze. Podstawowy identyfikator URI można ustalić jako ustawienia czytnika XAML, które następnie są przekazywane do modułu zapisywania obiektów XAML i raportowane przez tę usługę.  
   
 ### <a name="iambientprovider"></a>IAmbientProvider  
- **Dokumentację referencyjną**: <xref:System.Xaml.IAmbientProvider>  
+ **Dokumentacja referencyjna**:<xref:System.Xaml.IAmbientProvider>  
   
- **Zdefiniowane przez:** <xref:System.Xaml> przestrzeni nazw System.Xaml zestawu  
+ **Zdefiniowane przez:** <xref:System.Xaml> przestrzeń nazw, zestaw system. XAML  
   
- **Odpowiednie do:** Załaduj optymalizacji lub odroczenia ścieżki obsługi i typu wyszukiwania.  
+ **Istotne dla:** Załaduj obsługę ścieżki i przeszukiwanie typów lub optymalizacje.  
   
- **Interfejsy API usługi:**<xref:System.Xaml.IAmbientProvider.GetAllAmbientValues%2A>, 3 innych użytkowników.  
+ **Interfejsy API usługi:** <xref:System.Xaml.IAmbientProvider.GetAllAmbientValues%2A>, 3 inne.  
   
- Koncepcja otoczenie w XAML jest techniką do oznaczania konkretnego składowej typu jako otoczenia. Alternatywnie typu mogą być otoczenia wartości wszystkich właściwości, zawierających wystąpienie tego typu należy rozważyć właściwości otoczenia. Rozszerzenia znaczników lub konwerterów typów, które są dalej w tym samym strumień węzłów XAML i które są elementy podrzędne na grafie obiektu można uzyskiwać dostęp do właściwości otoczenia lub wystąpienie typu w czasie ładowania; lub mogą używać informacji na temat struktury otoczenia na oszczędzić czas. Może to wpłynąć na stopień kwalifikacji, które są potrzebne do Rozwiązywanie typy dla innych usług, takich jak <xref:System.Windows.Markup.IXamlTypeResolver> lub `x:Type`. Zobacz też <xref:System.Xaml.AmbientPropertyValue>.  
+ Koncepcja Ambience w języku XAML jest techniką do oznaczania określonego elementu członkowskiego typu jako otoczenia. Alternatywnie, typ może być otaczający, aby wszystkie wartości właściwości, które przechowują wystąpienie typu, powinny być uznawane za właściwości otoczenia. Rozszerzenia znaczników lub konwertery typów, które znajdują się w strumieniu węzła XAML i są elementami podrzędnymi na grafie obiektów, mogą uzyskać dostęp do właściwości otoczenia lub wystąpienia typu w czasie ładowania; mogą też korzystać z wiedzy o strukturze otoczenia w czasie zapisywania. Może to mieć wpływ na stopień kwalifikacji, który jest wymagany do rozpoznawania typów dla innych usług, takich jak <xref:System.Windows.Markup.IXamlTypeResolver> dla `x:Type`lub. Zobacz też <xref:System.Xaml.AmbientPropertyValue>.  
   
 ### <a name="ixamlschemacontextprovider"></a>IXamlSchemaContextProvider  
- **Dokumentację referencyjną**: <xref:System.Xaml.IXamlSchemaContextProvider>  
+ **Dokumentacja referencyjna**:<xref:System.Xaml.IXamlSchemaContextProvider>  
   
- **Zdefiniowane przez:** <xref:System.Xaml> przestrzeni nazw System.Xaml zestawu  
+ **Zdefiniowane przez:** <xref:System.Xaml> przestrzeń nazw, zestaw system. XAML  
   
- **Odpowiednie do:** Ścieżka obciążenia i każdej operacji, która musi zostać rozpoznany typ XAML typ zapasowy.  
+ **Istotne dla:** Załaduj ścieżkę i wszystkie operacje, które muszą rozpoznać typ XAML, do typu zapasowego.  
   
  **Interfejs API usługi:**  <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A>  
   
- Kontekst schematu XAML jest niezbędne dla wszystkich operacji ładowania Ustąp, ponieważ ten sam kontekst schematu musi działać na obszarze odroczonego integrowana odroczonej zawartości. Aby uzyskać więcej informacji na temat roli kontekst schematu XAML, zobacz [XAML Services](index.md).  
+ Kontekst schematu XAML jest niezbędny do opóźniania operacji ładowania, ponieważ ten sam kontekst schematu musi działać na odroczonym obszarze w celu zintegrowania odroczonej zawartości. Aby uzyskać więcej informacji na temat roli kontekstu schematu XAML, zobacz [usługi XAML](index.md).  
   
 ### <a name="irootobjectprovider"></a>IRootObjectProvider  
- **Dokumentację referencyjną**: <xref:System.Xaml.IRootObjectProvider>  
+ **Dokumentacja referencyjna**:<xref:System.Xaml.IRootObjectProvider>  
   
- **Zdefiniowane przez:** <xref:System.Xaml> przestrzeni nazw System.Xaml zestawu  
+ **Zdefiniowane przez:** <xref:System.Xaml> przestrzeń nazw, zestaw system. XAML  
   
- **Odpowiednie do:** Ścieżka obciążenia.  
+ **Istotne dla:** Ścieżka ładowania.  
   
  **Interfejs API usługi:**  <xref:System.Xaml.IRootObjectProvider.RootObject%2A>  
   
- Usługa jest odpowiednie do usług aplikacji, które są udostępniane przez określonej struktury lub możliwości klasy elementu głównego często używanych w ramach. Jeden scenariusz do uzyskiwania obiektu głównego jest połączenie związane z kodem i okablowania zdarzeń. Na przykład implementacji WPF okna `x:Class` jest używany dla kompilacji znaczników i okablowania dowolny atrybut procedury obsługi zdarzeń, która znajduje się w dowolnym miejscu, w znaczniku XAML. Punkt połączenia z kodu znaczników i związane z kodem zdefiniowane klas częściowych, do kompilacji znaczników jest w elemencie głównym.  
+ Usługa ma zastosowanie do usług aplikacji, które są udostępniane przez określoną strukturę lub przez funkcje często używanej klasy elementu głównego w strukturze. Jeden z scenariuszy uzyskiwania obiektu głównego jest łączący związany z kodem i okablowanie zdarzeń. Na przykład implementacja `x:Class` WPF jest używana do kompilowania znaczników i okablowania dowolnego atrybutu programu obsługi zdarzeń, który znajduje się w innym miejscu znacznika XAML. Punkt połączenia znaczników i zdefiniowanej w kodzie klas częściowych do kompilowania znaczników znajduje się w elemencie głównym.  
   
 ### <a name="ixamlnamespaceresolver"></a>IXamlNamespaceResolver  
- **Dokumentację referencyjną**: <xref:System.Xaml.IXamlNamespaceResolver>  
+ **Dokumentacja referencyjna**:<xref:System.Xaml.IXamlNamespaceResolver>  
   
- **Zdefiniowane przez:** <xref:System.Xaml> przestrzeni nazw System.Xaml zestawu  
+ **Zdefiniowane przez:** <xref:System.Xaml> przestrzeń nazw, zestaw system. XAML  
   
- **Odpowiednie do:** Ścieżka obciążenia ścieżka zapisu.  
+ **Istotne dla:** Ścieżka ładowania, Zapisz ścieżkę.  
   
- **Interfejs API usługi:** <xref:System.Xaml.IXamlNamespaceResolver.GetNamespace%2A> dla ścieżki obciążenia <xref:System.Xaml.IXamlNamespaceResolver.GetNamespacePrefixes%2A> dla ścieżka zapisu.  
+ **Interfejs API usługi:** <xref:System.Xaml.IXamlNamespaceResolver.GetNamespace%2A> dla ścieżki<xref:System.Xaml.IXamlNamespaceResolver.GetNamespacePrefixes%2A> ładowania dla ścieżki zapisu.  
   
- <xref:System.Xaml.IXamlNamespaceResolver> jest to usługa, która może zwracać identyfikatora przestrzeni nazw XAML / identyfikator URI na podstawie jego prefiksu mapowane w znaczniku XAML źródłowy.  
+ <xref:System.Xaml.IXamlNamespaceResolver>to usługa, która może zwracać identyfikator przestrzeni nazw XAML/identyfikator URI na podstawie jego prefiksu zamapowanego w źródłowym znaczniku XAML.  
   
 ### <a name="iprovidevaluetarget"></a>IProvideValueTarget  
- **Dokumentację referencyjną**: <xref:System.Windows.Markup.IProvideValueTarget>  
+ **Dokumentacja referencyjna**:<xref:System.Windows.Markup.IProvideValueTarget>  
   
- **Zdefiniowane przez:** <xref:System.Windows.Markup> przestrzeni nazw System.Xaml zestawu  
+ **Zdefiniowane przez:** <xref:System.Windows.Markup> przestrzeń nazw, zestaw system. XAML  
   
- **Odpowiednie do:** Załaduj ścieżki i Zapisz ścieżkę.  
+ **Istotne dla:** Załaduj ścieżkę i Zapisz ścieżkę.  
   
- **Interfejsy API usługi:**<xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A>, <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A>.  
+ **Interfejsy API usługi:** <xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A>, <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A>.  
   
- <xref:System.Windows.Markup.IProvideValueTarget> Włącza rozszerzenia typu konwertera lub języka znaczników, można uzyskać kontekst dotyczący gdy działa w czasie ładowania. Implementacje przy użyciu tego kontekstu do unieważnienia użycia. Na przykład WPF ma logiki wewnątrz niektóre z jego rozszerzenia znaczników takich jak <xref:System.Windows.DynamicResourceExtension>. Testy logiczne <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A> aby upewnić się, że rozszerzenie jest używana tylko do ustawiania właściwości zależności (lub krótką listę innych właściwości bez zależności).  
+ <xref:System.Windows.Markup.IProvideValueTarget>Włącza konwerter typów lub rozszerzenie znaczników w celu uzyskania kontekstu, w którym działa w czasie ładowania. Implementacje mogą używać tego kontekstu, aby unieważnić użycie. Na przykład, WPF ma logikę wewnątrz niektórych rozszerzeń znaczników, takich jak <xref:System.Windows.DynamicResourceExtension>. Logika sprawdza, <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A> aby upewnić się, że rozszerzenie jest używane tylko do ustawiania właściwości zależności (lub krótką listę innych właściwości niezależności).  
   
 ### <a name="ixamlnameresolver"></a>IXamlNameResolver  
- **Dokumentację referencyjną**: <xref:System.Xaml.IXamlNameResolver>  
+ **Dokumentacja referencyjna**:<xref:System.Xaml.IXamlNameResolver>  
   
- **Zdefiniowane przez:** <xref:System.Xaml> przestrzeni nazw System.Xaml zestawu  
+ **Zdefiniowane przez:** <xref:System.Xaml> przestrzeń nazw, zestaw system. XAML  
   
- **Odpowiednie do:** Ładowanie definicji wykresu obiektu ścieżki, rozpoznawanie obiektów identyfikowane przez `x:Name`, `x:Reference`, lub techniki określonej platformy.  
+ **Istotne dla:** Ścieżka do definicji grafu obiektów, rozpoznawanie obiektów zidentyfikowanych przez `x:Name`, `x:Reference`lub technik specyficznych dla platformy.  
   
- **Interfejsy API usługi:**<xref:System.Xaml.IXamlNameResolver.Resolve%2A>; inne interfejsy API dla bardziej zaawansowanych scenariuszy, takich jak zajmowanie się odwołania w przód.  
+ **Interfejsy API usługi:** <xref:System.Xaml.IXamlNameResolver.Resolve%2A>; inne interfejsy API dla bardziej zaawansowanych scenariuszy, takich jak postępowanie z odwołaniami do przodu.  
   
- Implementacja programu .NET Framework XAML Services `x:Reference` obsługi opiera się na tę usługę. Określonych platform lub narzędzia, które obsługuje struktury, należy używać tej usługi dla `x:Name` obsługi lub równoważny (<xref:System.Windows.Markup.RuntimeNamePropertyAttribute> opartego na atrybutach) obsługi właściwości.  
+ Implementacja usług .NET Framework XAML jest `x:Reference` obsługiwana przez tę usługę. Określone struktury lub narzędzia, które obsługują platformę, korzystają z tej `x:Name` usługi w celu obsługi<xref:System.Windows.Markup.RuntimeNamePropertyAttribute> lub równoważnej obsługi właściwości (atrybutd).  
   
 ### <a name="idestinationtypeprovider"></a>IDestinationTypeProvider  
- **Dokumentację referencyjną**: <xref:System.Xaml.IDestinationTypeProvider>  
+ **Dokumentacja referencyjna**:<xref:System.Xaml.IDestinationTypeProvider>  
   
- **Zdefiniowane przez:** <xref:System.Xaml> przestrzeni nazw System.Xaml zestawu  
+ **Zdefiniowane przez:** <xref:System.Xaml> przestrzeń nazw, zestaw system. XAML  
   
- **Odpowiednie do:** Załaduj rozpoznawania ścieżek pośrednich informacji o typie CLR.  
+ **Istotne dla:** Rozpoznanie ścieżki dotyczącej pośrednich informacji o typie CLR.  
   
  **Interfejs API usługi:** <xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A>  
   

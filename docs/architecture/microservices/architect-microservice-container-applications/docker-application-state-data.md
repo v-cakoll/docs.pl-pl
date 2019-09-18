@@ -2,12 +2,12 @@
 title: Stan i dane w aplikacjach platformy Docker
 description: Zarządzanie stanem i danymi w aplikacjach platformy Docker. Wystąpienia mikrousług są expendablee, ale dane nie są, jak obsługiwać je za pomocą mikrousług.
 ms.date: 09/20/2018
-ms.openlocfilehash: 9d7b0ff0e73267c6b80be2f1c956c3b4eae140e2
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bd0ac007479dcd51f2c639881273b81d1fd8b6d7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295522"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039578"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Stan i dane w aplikacjach platformy Docker
 
@@ -47,7 +47,7 @@ Woluminy mogą mieć nazwy lub anonimowe (domyślnie). Nazwane woluminy są ewol
 
 Jak pokazano na rysunku 4-5, regularne woluminy platformy Docker mogą być przechowywane poza kontenerami, ale w granicach fizycznych serwera hosta lub maszyny wirtualnej. Kontenery platformy Docker nie mogą jednak uzyskać dostępu do woluminu z jednego serwera hosta lub maszyny wirtualnej do innej. Innymi słowy, z tymi woluminami nie jest możliwe zarządzanie danymi udostępnionymi między kontenerami, które działają na różnych hostach platformy Docker, chociaż można je osiągnąć za pomocą sterownika woluminu obsługującego hosty zdalne.
 
-![Woluminy mogą być udostępniane między kontenerami, ale tylko na tym samym hoście, chyba że używany jest sterownik zdalny obsługujący hosty zdalne. ](./media/image5.png)
+![Woluminy mogą być udostępniane między kontenerami, ale tylko na tym samym hoście, chyba że używany jest sterownik zdalny obsługujący hosty zdalne.](./media/image5.png)
 
 **Rysunek 4-5**. Woluminy i zewnętrzne źródła danych dla aplikacji opartych na kontenerach
 

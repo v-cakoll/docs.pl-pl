@@ -6,12 +6,12 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 9079dfa03ab81bfa6875e43bfa8a6e5351e0a35d
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 28179ecd27c98f1de5662908ced3ea0e49cb87ad
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015115"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043947"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie klienta
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "70015115"
   
  [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)]dostarcza dostawców dla kontrolek standardowych [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] i Windows Formsowych. Dodatkowo dostawca rezerwowy zapewnia częściową [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] obsługę każdej kontroli, która nie jest obsługiwana przez innego dostawcę po stronie serwera lub serwer proxy, ale ma implementację Microsoft Active Accessibility. Wszyscy dostawcy są automatycznie załadowana i dostępni dla aplikacji klienckich.  
   
- Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] obsługi formantów i Windows Forms, zobacz [Obsługa automatyzacji interfejsu użytkownika dla standardowych kontrolek](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).  
+ Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] obsługi formantów i Windows Forms, zobacz [Obsługa automatyzacji interfejsu użytkownika dla standardowych kontrolek](ui-automation-support-for-standard-controls.md).  
   
  Aplikacje mogą także rejestrować innych dostawców po stronie klienta.  
   
@@ -51,5 +51,5 @@ ms.locfileid: "70015115"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Tworzenie dostawcy automatyzacji interfejsu użytkownika po stronie klienta](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
-- [Implementacja dostawców automatyzacji interfejsu użytkownika w aplikacji klienta](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)
+- [Tworzenie dostawcy automatyzacji interfejsu użytkownika po stronie klienta](create-a-client-side-ui-automation-provider.md)
+- [Implementacja dostawców automatyzacji interfejsu użytkownika w aplikacji klienta](implement-ui-automation-providers-in-a-client-application.md)

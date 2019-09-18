@@ -7,62 +7,62 @@ helpviewer_keywords:
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8924ed14c597a691698180c7c362b80c41532c2c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7d0cbe66870fc75da02ad56da73de86d4837c0c8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614097"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052141"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Wytyczne dotyczące tworzenia składników pod kątem wykonywania równoczesnego
-Wykonaj te ogólne wytyczne do tworzenia aplikacji zarządzanych lub składników przeznaczonych do wykonywania side-by-side:  
+Postępuj zgodnie z tymi ogólnymi wskazówkami, aby utworzyć zarządzane aplikacje lub składniki przeznaczone do wykonywania równoczesnego:  
   
-- Typ tożsamości należy powiązać z określoną wersję pliku.  
+- Powiąż tożsamość typu z określoną wersją pliku.  
   
-     Środowisko uruchomieniowe języka wspólnego wiąże tożsamość typ wersji danego pliku przy użyciu zestawów o silnych nazwach. Aby utworzyć aplikację lub składnik do wykonania side-by-side, musisz udzielić wszystkich zestawów silną nazwą. Umożliwia utworzenie tożsamości typu dokładne i zapewnia, że wszystkie rozwiązania typu jest kierowane do prawidłowego pliku. Zestawu z silną nazwą zawiera wersji, kultury i informacje o wydawcy, że środowisko wykonawcze używa do zlokalizowania odpowiedniego pliku do spełnienia żądania powiązania.  
+     Środowisko uruchomieniowe języka wspólnego wiąże tożsamość typu z określoną wersją pliku przy użyciu zestawów o silnych nazwach. Aby utworzyć aplikację lub składnik do wykonywania równoczesnego, należy nadać wszystkie zestawy silną nazwą. Spowoduje to utworzenie precyzyjnej tożsamości typu i gwarantuje, że wszystkie typy rozpoznawania są kierowane do właściwego pliku. Zestaw o silnej nazwie zawiera informacje o wersji, kulturze i wydawcy, które są używane przez środowisko uruchomieniowe do lokalizowania właściwego pliku w celu spełnienia żądania powiązania.  
   
-- Usługa storage rozpoznający wersje.  
+- Użyj magazynu z obsługą wersji.  
   
-     Środowisko wykonawcze używa globalnej pamięci podręcznej, aby zapewnić rozpoznający wersje magazynu. Global assembly cache to struktura katalogu rozpoznający wersje zainstalowane na każdym komputerze, który używa programu .NET Framework. Po zainstalowaniu nowej wersji tego zestawu, nie są zastępowane zainstalowanych w globalnej pamięci podręcznej zestawów.  
+     Środowisko uruchomieniowe używa globalnej pamięci podręcznej zestawów, aby zapewnić magazyn z obsługą wersji. Globalna pamięć podręczna zestawów to struktura katalogów oparta na wersji zainstalowana na każdym komputerze, który używa .NET Framework. Zestawy zainstalowane w globalnej pamięci podręcznej zestawów nie są zastępowane w przypadku zainstalowania nowej wersji tego zestawu.  
   
-- Utwórz aplikację lub składnik, który działa w izolacji.  
+- Tworzenie aplikacji lub składnika, który działa w izolacji.  
   
-     Aplikacja lub składnik, który działa w izolacji muszą zarządzać zasobami w celu uniknięcia konfliktów, jeśli jednocześnie jest uruchomionych dwa wystąpienia aplikacji lub składnika. Aplikacja lub składnik należy również użyć struktury specyficzny dla wersji plików.  
+     Aplikacja lub składnik działający w izolacji musi zarządzać zasobami, aby uniknąć konfliktów, gdy dwa wystąpienia aplikacji lub składnika działają jednocześnie. Aplikacja lub składnik musi również używać struktury plików specyficznej dla wersji.  
   
-## <a name="application-and-component-isolation"></a>Aplikacji i składników izolacji  
- Jeden klucz do pomyślnie projektowania aplikacji lub składnika do wykonania side-by-side jest izolacji. Aplikacja lub składnik musi zarządzanie wszystkimi zasobami, szczególnie plików we/wy, w sposób izolowany. Należy przestrzegać następujących wytycznych, aby upewnić się, że Twoja aplikacja lub składnik działa w izolacji:  
+## <a name="application-and-component-isolation"></a>Izolacja aplikacji i składników  
+ Jednym kluczem do pomyślnego zaprojektowania aplikacji lub składnika do wykonywania równoczesnego jest izolacja. Aplikacja lub składnik musi zarządzać wszystkimi zasobami, w szczególności we/wy plików, w sposób izolowany. Postępuj zgodnie z poniższymi wskazówkami, aby upewnić się, że aplikacja lub składnik działa w izolacji:  
   
-- Wpisywanie do rejestru, w sposób specyficzny dla wersji. Store wartości w gałęzi lub klucze, które wskazują wersji i nie należy udostępniać informacje lub stan różnych wersji składnika. Zapobiega to dwie aplikacje lub składniki działające w tym samym czasie, informacje o zastępowaniu.  
+- Zapisz w rejestrze w sposób specyficzny dla wersji. Przechowuj wartości w gałęziach lub kluczach, które wskazują wersję, i nie udostępniaj informacji lub stanu w różnych wersjach składnika. Zapobiega to zastępowaniu informacji przez dwie aplikacje lub składniki w tym samym czasie.  
   
-- Wprowadź nazwany jądra obiektów specyficznych dla wersji, tak aby sytuacji wyścigu, która nie występuje. Na przykład sytuacja wyścigu występuje, gdy dwa semaforów z dwie wersje tej samej aplikacji czekać na siebie nawzajem.  
+- Ustaw nazwane obiekty jądra jako specyficzne dla konkretnej wersji, aby nie nastąpiła sytuacja wyścigu. Na przykład sytuacja wyścigu występuje, gdy dwa semafory z dwóch wersji tej samej aplikacji zaczekają na siebie.  
   
-- Wprowadź nazwy plików i katalogów rozpoznający wersje. Oznacza to, że struktury pliku należy polegać na informacje o wersji.  
+- Wprowadź nazwy plików i katalogów. Oznacza to, że struktury plików powinny opierać się na informacjach o wersji.  
   
-- Tworzenie kont użytkowników i grup w sposób specyficzny dla wersji. Konta użytkowników i grup utworzonych przez aplikację, powinny być określone przez wersję. Nie należy udostępniać konta użytkowników i grupy między wersjami aplikacji.  
+- Tworzenie kont użytkowników i grup w sposób specyficzny dla danej wersji. Konta użytkowników i grupy utworzone przez aplikację powinny być identyfikowane według wersji. Nie należy udostępniać kont użytkowników i grup między wersjami aplikacji.  
   
 ## <a name="installing-and-uninstalling-versions"></a>Instalowanie i odinstalowywanie wersji  
- Podczas projektowania aplikacji do wykonywania side-by-side, wykonaj te wytyczne dotyczące instalowania i odinstalowywania wersji:  
+ Podczas projektowania aplikacji do wykonywania równoczesnego postępuj zgodnie z poniższymi wskazówkami dotyczącymi instalowania i odinstalowywania wersji:  
   
-- Nie należy usuwać informacji z rejestru, który może być wymagany przez inne aplikacje uruchomione w innej wersji programu .NET Framework.  
+- Nie usuwaj informacji z rejestru, które mogą być potrzebne innym aplikacjom działającym w innej wersji .NET Framework.  
   
-- Nie należy wymieniać informacje w rejestrze, który może być wymagany przez inne aplikacje uruchomione w innej wersji programu .NET Framework.  
+- Nie zamieniaj informacji w rejestrze, które mogą być niewymagane przez inne aplikacje działające w ramach innej wersji .NET Framework.  
   
-- Nie wyrejestrować składników COM, które mogą być potrzebne przez inne aplikacje uruchomione w innej wersji programu .NET Framework.  
+- Nie należy wyrejestrować składników modelu COM, które mogą być niewymagane przez inne aplikacje działające w ramach innej wersji .NET Framework.  
   
-- Nie zmieniaj **InprocServer32** lub inne wpisy rejestru dotyczące serwera COM, który został już zarejestrowany.  
+- Nie należy zmieniać **InprocServer32** ani innych wpisów rejestru dla serwera com, który został już zarejestrowany.  
   
-- Nie należy usuwać konta użytkowników lub grupy, które mogą być potrzebne przez inne aplikacje uruchomione w innej wersji programu .NET Framework.  
+- Nie należy usuwać kont użytkowników ani grup, które mogą być potrzebne innym aplikacjom działającym w innej wersji .NET Framework.  
   
-- Nie należy dodawać żadnych w rejestrze, który zawiera ścieżkę wycofanie.  
+- Nie dodawaj niczego do rejestru, który zawiera ścieżkę bez wersji.  
   
 ## <a name="file-version-number-and-assembly-version-number"></a>Numer wersji pliku i numer wersji zestawu  
- Wersja pliku jest zasób wersji Win32, który nie jest używany w czasie wykonywania. Ogólnie rzecz biorąc należy zaktualizować wersję pliku, nawet w przypadku aktualizację w miejscu. Dwie identyczne pliki mogą zawierać informacje o wersji inny plik i dwóch różnych plikach może mieć te same informacje o wersji pliku.  
+ Wersja pliku jest zasobem wersji Win32, który nie jest używany przez środowisko uruchomieniowe. Ogólnie rzecz biorąc należy zaktualizować wersję pliku nawet dla aktualizacji w miejscu. Dwa identyczne pliki mogą mieć różne informacje o wersji pliku, a dwa różne pliki mogą mieć te same informacje o wersji pliku.  
   
- Wersja zestawu jest używana przez środowisko uruchomieniowe dla powiązań zestawów. Dwa identyczne zestawy za pomocą różnych numerów wersji, są traktowane jako dwa różne zestawy w czasie wykonywania.  
+ Wersja zestawu jest używana przez środowisko uruchomieniowe dla powiązania zestawu. Dwa identyczne zestawy o różnych numerach wersji są traktowane jak dwa różne zestawy w środowisku uruchomieniowym.  
   
- [Narzędzia Globalna pamięć podręczna zestawów (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) pozwala zastąpić zestawu, jeśli numer wersji pliku jest nowsza. Instalator ogólnie nie można zainstalować za pośrednictwem zestawu, chyba że numer wersji zestawu jest większa.  
+ [Globalne narzędzie pamięci podręcznej zestawów (Gacutil. exe)](../tools/gacutil-exe-gac-tool.md) umożliwia zastąpienie zestawu, gdy tylko numer wersji pliku jest nowszy. Instalator zazwyczaj nie instaluje zestawu, chyba że numer wersji zestawu jest większy.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wykonywanie równoczesne](../../../docs/framework/deployment/side-by-side-execution.md)
-- [Instrukcje: Włączanie i wyłączanie automatycznego przekierowania powiązań](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Wykonywanie równoczesne](side-by-side-execution.md)
+- [Instrukcje: Włączanie i wyłączanie automatycznego przekierowywania powiązań](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

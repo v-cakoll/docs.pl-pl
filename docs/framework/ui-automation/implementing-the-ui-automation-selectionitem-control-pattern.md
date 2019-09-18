@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Selection Item control pattern
 - control patterns, Selection Item
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
-ms.openlocfilehash: aef1d31499f65834fa1268147e45f82294fe560a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8b1492bbc9f761c08b178bf42bdf5287bc5ebfb1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935688"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043212"
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>Implementacja wzorca formantu SelectionItem dla automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "69935688"
   
  W tym temacie przedstawiono wskazówki i konwencje <xref:System.Windows.Automation.Provider.ISelectionItemProvider>dotyczące wdrażania, w tym informacje o właściwościach, metodach i zdarzeniach. Linki do dodatkowych odwołań znajdują się na końcu przeglądu.  
   
- Wzorzec kontrolki służy do obsługi kontrolek, które działają jako osoby indywidualnej, do wyboru elementów podrzędnych formantów kontenera, które implementują <xref:System.Windows.Automation.Provider.ISelectionProvider>. <xref:System.Windows.Automation.SelectionItemPattern> Aby zapoznać się z przykładami formantów implementujących wzorzec kontrolki SelectionItem dla, zobacz [Mapowanie wzorców formantów dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
+ Wzorzec kontrolki służy do obsługi kontrolek, które działają jako osoby indywidualnej, do wyboru elementów podrzędnych formantów kontenera, które implementują <xref:System.Windows.Automation.Provider.ISelectionProvider>. <xref:System.Windows.Automation.SelectionItemPattern> Aby zapoznać się z przykładami formantów implementujących wzorzec kontrolki SelectionItem dla, zobacz [Mapowanie wzorców formantów dla klientów automatyzacji interfejsu użytkownika](control-pattern-mapping-for-ui-automation-clients.md)  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Wytyczne i konwencje dotyczące implementacji  
@@ -50,10 +50,10 @@ ms.locfileid: "69935688"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Obsługa wzorców kontrolek dostawcy automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [Wzorce kontrolek automatyzacji interfejsu użytkownika dla klientów](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Implementacja wzorca kontrolki wyboru automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/implementing-the-ui-automation-selection-control-pattern.md)
-- [Przegląd drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Używanie buforowania w automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie](ui-automation-control-patterns-overview.md)
+- [Obsługa wzorców kontrolek dostawcy automatyzacji interfejsu użytkownika](support-control-patterns-in-a-ui-automation-provider.md)
+- [Wzorce kontrolek automatyzacji interfejsu użytkownika dla klientów](ui-automation-control-patterns-for-clients.md)
+- [Implementacja wzorca kontrolki wyboru automatyzacji interfejsu użytkownika](implementing-the-ui-automation-selection-control-pattern.md)
+- [Przegląd drzewa automatyzacji interfejsu użytkownika](ui-automation-tree-overview.md)
+- [Używanie buforowania w automatyzacji interfejsu użytkownika](use-caching-in-ui-automation.md)
 - [Przykład dostawcy fragmentu](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771502(v=vs.90))

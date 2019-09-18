@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07ac564b5a2b227a62b7073bb837ab8bd1f434fb
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 146aef8c1e085ee3146585c3b5b1cda8004b9f7e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894772"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044213"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (Narzędzie adnotacji dotyczące zabezpieczeń w programach .NET)
 Narzędzie do dodawania adnotacji zabezpieczeń .NET (SecAnnotate. exe) jest aplikacją wiersza polecenia, która identyfikuje `SecurityCritical` i `SecuritySafeCritical` części jednego lub kilku zestawów.  
   
  Rozszerzenie programu Visual Studio, [adnotacja zabezpieczeń](https://go.microsoft.com/fwlink/?LinkId=198007), udostępnia graficzny interfejs użytkownika do SecAnnotate. exe i umożliwia uruchamianie narzędzia z programu Visual Studio.  
   
- To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](developer-command-prompt-for-vs.md).  
   
  W wierszu polecenia wpisz następujące polecenie, gdzie *Parametry* są opisane w poniższej sekcji, a *zestawy* składają się z co najmniej jednej nazwy zestawu oddzielonej pustymi danymi:  
   

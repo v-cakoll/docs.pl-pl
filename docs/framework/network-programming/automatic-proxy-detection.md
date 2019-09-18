@@ -14,12 +14,12 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: d7d0dae2ffbec5e334057715cd1d8d44e52cec9d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6a52a38473e339b892673e7c1a2f9e1f58dad359
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910464"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048948"
 ---
 # <a name="automatic-proxy-detection"></a>Automatyczne wykrywanie serwera proxy
 Automatyczne wykrywanie serwera proxy to proces, za pomocą którego serwer proxy sieci Web jest identyfikowany przez system i używany do wysyłania żądań w imieniu klienta. Ta funkcja jest nazywana również autowykrywaniem serwera proxy sieci Web (WPAD). Gdy automatyczne wykrywanie serwera proxy jest włączone, system próbuje zlokalizować skrypt konfiguracji serwera proxy, który jest odpowiedzialny za zwracanie zestawu serwerów proxy, których można użyć dla żądania. Jeśli zostanie znaleziony skrypt konfiguracji serwera proxy, skrypt zostanie pobrany, skompilowany i uruchomiony na komputerze lokalnym, gdy informacje o serwerze proxy, strumieniu żądania lub odpowiedzi zostaną uzyskane dla żądania, które używa <xref:System.Net.WebProxy> wystąpienia.  
@@ -44,7 +44,7 @@ Automatyczne wykrywanie serwera proxy to proces, za pomocą którego serwer prox
   
  Serwery proxy są konfigurowane na podstawie Connectoid. Connectoid to element w oknie dialogowym połączenia sieciowego, który może być fizycznym urządzeniem sieciowym (modemem lub kartą sieci Ethernet) lub interfejsem wirtualnym (na przykład połączeniem sieci VPN działającym przez urządzenie sieciowe). Gdy Connectoid zmiany (na przykład połączenie bezprzewodowe zmienia punkt dostępu lub sieć VPN jest włączona), algorytm wykrywania serwera proxy jest uruchamiany ponownie.  
   
- Domyślnie ustawienia serwera proxy programu Internet Explorer są używane do wykrywania serwera proxy. Jeśli aplikacja działa na koncie nieinterakcyjnym (bez wygodnego sposobu konfigurowania ustawień serwera proxy programu IE) lub jeśli chcesz użyć ustawień serwera proxy innych niż ustawienia programu IE, możesz skonfigurować serwer proxy, tworząc plik konfiguracji z [ defaultProxy\<> element (Ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md) i [ \<element > serwera proxy (Ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md) zdefiniowane.  
+ Domyślnie ustawienia serwera proxy programu Internet Explorer są używane do wykrywania serwera proxy. Jeśli aplikacja działa na koncie nieinterakcyjnym (bez wygodnego sposobu konfigurowania ustawień serwera proxy programu IE) lub jeśli chcesz użyć ustawień serwera proxy innych niż ustawienia programu IE, możesz skonfigurować serwer proxy, tworząc plik konfiguracji z [ defaultProxy\<> element (Ustawienia sieci)](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md) i [ \<element > serwera proxy (Ustawienia sieci)](../configure-apps/file-schema/network/proxy-element-network-settings.md) zdefiniowane.  
   
  W przypadku żądań, które tworzysz, można wyłączyć automatyczne wykrywanie serwera proxy na poziomie żądania przy użyciu wartości null <xref:System.Net.WebRequest.Proxy%2A> z żądaniem, jak pokazano w poniższym przykładzie kodu.  
   
@@ -71,4 +71,4 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.WebRequest>
-- [\<System .net >, element (Ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
+- [\<System .net >, element (Ustawienia sieci)](../configure-apps/file-schema/network/system-net-element-network-settings.md)

@@ -13,30 +13,30 @@ helpviewer_keywords:
 ms.assetid: 96e7b2c1-843f-4d64-b519-740c3a18b50a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 30db07ddf935b5ce13b1fe4212f7f6a40270ae93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ddb6b0b5c2248d215245e0f881c8e7c91b13e480
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753702"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052427"
 ---
 # <a name="notmarshalable-mda"></a>notMarshalable MDA
-`notMarshalable` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy środowisko uruchomieniowe języka wspólnego (CLR) napotka wskaźnika interfejsu COM bez prawidłowe zarejestrowanych proxy/zastępczego lub niepoprawne `IMarshal` implementacji podczas próby interfejsu Kieruj interfejsu w różnych kontekstach.  
+Asystent debugowania `IMarshal` zarządzanego (MDA) jest uaktywniany, gdy środowisko uruchomieniowe języka wspólnego (CLR) napotyka wskaźnik interfejsu COM bez prawidłowego zarejestrowanego serwera proxy/szczątkowego lub nieprawidłowej implementacji interfejsu podczas próby `notMarshalable` kierowanie interfejsu między kontekstami.  
   
 ## <a name="symptoms"></a>Symptomy  
- Wywołania nie są obsługiwane lub występować wywołań w nieprawidłowym kontekście dla wskaźników interfejsu COM.  
+ Wywołania nie są obsługiwane lub wywołania występują w nieprawidłowym kontekście wskaźników interfejsu COM.  
   
 ## <a name="cause"></a>Przyczyna  
- Nie prawidłowe zarejestrowanych proxy/zastępczego lub niepoprawne `IMarshal` podczas próby kierować interfejsu w różnych kontekstach.  
+ Brak prawidłowego zarejestrowanego serwera proxy/zastępczego lub nieprawidłowej `IMarshal` próby zorganizowania interfejsu w wielu kontekstach.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Upewnij się, pełnomocnika namiastki zarejestrowany oraz że `IMarshal` wdrożenia jest prawidłowy.  
+ Upewnij się, że zarejestrowano procedurę pośredniczącą serwera `IMarshal` proxy i że implementacja jest prawidłowa.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- To zdarzenie MDA nie ma wpływu na środowiska uruchomieniowego.  
+ To zdarzenie MDA nie ma wpływu na środowisko uruchomieniowe.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Komunikat opisujący problem.  
+ Komunikat z opisem problemu.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -51,5 +51,5 @@ ms.locfileid: "61753702"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling międzyoperacyjny](../interop/interop-marshaling.md)

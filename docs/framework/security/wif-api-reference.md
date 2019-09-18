@@ -3,12 +3,12 @@ title: Dokumentacja interfejsu API programu WIF
 ms.date: 03/30/2017
 ms.assetid: a027d902-9314-4bfd-b172-4e81847b1d68
 author: BrucePerlerMS
-ms.openlocfilehash: 17a1da0a3b0ea6567fd805e7273f793ace35ae69
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fd7f34e619626ddca63074a89ec7253fd818ab55
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958345"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045153"
 ---
 # <a name="wif-api-reference"></a>Dokumentacja interfejsu API programu WIF
 Klasy Windows Identity Foundation (WIF) są podzielone `mscorlib` na następujące zestawy: (mscorlib. dll), `System.IdentityModel` (System. IdentityModel. dll), `System.IdentityModel.Services` (System. IdentityModel. Services. dll) i `System.ServiceModel` ( System. ServiceModel. dll). Ten temat zawiera linki do przestrzeni nazw WIF oraz krótkie wyjaśnienia dotyczące klas, które zawierają poszczególne obszary nazw.  
@@ -20,7 +20,7 @@ Klasy Windows Identity Foundation (WIF) są podzielone `mscorlib` na następują
  Zawiera klasy reprezentujące przekształcenia plików cookie, usługi tokenów zabezpieczających i wyspecjalizowane czytniki słownika XML.  
   
  <xref:System.IdentityModel.Configuration?displayProperty=nameWithType>  
- Zawiera klasy, które zapewniają konfigurację dla aplikacji i usług utworzonych przy użyciu programu Windows Identity Foundation (WIF). Klasy w tej przestrzeni nazw reprezentują ustawienia w [ \<elemencie IdentityConfiguration >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) .  
+ Zawiera klasy, które zapewniają konfigurację dla aplikacji i usług utworzonych przy użyciu programu Windows Identity Foundation (WIF). Klasy w tej przestrzeni nazw reprezentują ustawienia w [ \<elemencie IdentityConfiguration >](../configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) .  
   
  <xref:System.IdentityModel.Metadata?displayProperty=nameWithType>  
  Zawiera klasy, które reprezentują elementy w dokumencie metadanych Federacji.  
@@ -29,10 +29,10 @@ Klasy Windows Identity Foundation (WIF) są podzielone `mscorlib` na następują
  Zawiera klasy reprezentujące artefakty protokołu WS-Trust.  
   
  <xref:System.IdentityModel.Services?displayProperty=nameWithType>  
- Zawiera klasy, które są używane w scenariuszach pasywnych (WS-Federation). Zawiera również klasy, które reprezentują ustawienia w ramach [ \<elementu > System. IdentityModel. Services](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) . Ustawienia w obszarze tego elementu Konfigurowanie usługi WS-Federation dla aplikacji. `System.IdentityModel.Services.Configuration` Przestrzeń nazw zawiera większość klas, które są używane do konfigurowania usługi WS-Federation.  
+ Zawiera klasy, które są używane w scenariuszach pasywnych (WS-Federation). Zawiera również klasy, które reprezentują ustawienia w ramach [ \<elementu > System. IdentityModel. Services](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) . Ustawienia w obszarze tego elementu Konfigurowanie usługi WS-Federation dla aplikacji. `System.IdentityModel.Services.Configuration` Przestrzeń nazw zawiera większość klas, które są używane do konfigurowania usługi WS-Federation.  
   
  <xref:System.IdentityModel.Services.Configuration?displayProperty=nameWithType>  
- Zawiera klasy, które zapewniają konfigurację dla aplikacji WIF korzystających z protokołu WS-Federation. Klasy w tej przestrzeni nazw reprezentują ustawienia w ramach [ \<elementu > System. IdentityModel. Services](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) . `System.IdentityModel.Services` Przestrzeń nazw zawiera również kilka klas, które są używane do konfigurowania usługi WS-Federation.  
+ Zawiera klasy, które zapewniają konfigurację dla aplikacji WIF korzystających z protokołu WS-Federation. Klasy w tej przestrzeni nazw reprezentują ustawienia w ramach [ \<elementu > System. IdentityModel. Services](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) . `System.IdentityModel.Services` Przestrzeń nazw zawiera również kilka klas, które są używane do konfigurowania usługi WS-Federation.  
   
  <xref:System.IdentityModel.Services.Tokens?displayProperty=nameWithType>  
  Zawiera wyspecjalizowane programy obsługi tokenów zabezpieczeń dla scenariuszy farmy sieci Web.  
@@ -48,5 +48,5 @@ Klasy Windows Identity Foundation (WIF) są podzielone `mscorlib` na następują
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie konfiguracji programu WIF](../../../docs/framework/security/wif-configuration-reference.md)
-- [Mapowanie przestrzeni nazw między programami WIF 3.5 i WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+- [Odwołanie konfiguracji programu WIF](wif-configuration-reference.md)
+- [Mapowanie przestrzeni nazw między programami WIF 3.5 i WIF 4.5](namespace-mapping-between-wif-3-5-and-wif-4-5.md)

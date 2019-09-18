@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: 665b01b5-25f5-47a1-ab11-cffe8ebbf2a7
-ms.openlocfilehash: 8c3107ce2ee20b3369a2ba462775ec7c8a1d3f6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9a419f8ac8b94d4f33c7e771c68f230c80a24cbf
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935114"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042535"
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a>Klienci automatyzacji interfejsu użytkownika do kodu zarządzanego — Tematy porad
 > [!NOTE]
@@ -21,11 +21,11 @@ ms.locfileid: "69935114"
  Ta sekcja zawiera szczegółowe informacje dotyczące implementowania funkcji [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] programu w aplikacji klienckiej.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Znajdź element automatyzacji interfejsu użytkownika na podstawie warunku właściwości](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [Nawigowanie po elementach automatyzacji interfejsu użytkownika przy użyciu opcji TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
- [Odnajdywanie elementu automatyzacji interfejsu użytkownika dla elementu listy](../../../docs/framework/ui-automation/find-a-ui-automation-element-for-a-list-item.md)  
- [Pobieranie właściwości elementu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/get-ui-automation-element-properties.md)  
- [Używanie buforowania w automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [Subskrybowanie zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)  
- [Rejestrowanie zestawów dostawcy po stronie klienta](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)  
- [Używanie właściwości AutomationID](../../../docs/framework/ui-automation/use-the-automationid-property.md)
+ [Znajdź element automatyzacji interfejsu użytkownika na podstawie warunku właściwości](find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [Nawigowanie po elementach automatyzacji interfejsu użytkownika przy użyciu opcji TreeWalker](navigate-among-ui-automation-elements-with-treewalker.md)  
+ [Odnajdywanie elementu automatyzacji interfejsu użytkownika dla elementu listy](find-a-ui-automation-element-for-a-list-item.md)  
+ [Pobieranie właściwości elementu automatyzacji interfejsu użytkownika](get-ui-automation-element-properties.md)  
+ [Używanie buforowania w automatyzacji interfejsu użytkownika](use-caching-in-ui-automation.md)  
+ [Subskrybowanie zdarzeń automatyzacji interfejsu użytkownika](subscribe-to-ui-automation-events.md)  
+ [Rejestrowanie zestawów dostawcy po stronie klienta](register-a-client-side-provider-assembly.md)  
+ [Używanie właściwości AutomationID](use-the-automationid-property.md)

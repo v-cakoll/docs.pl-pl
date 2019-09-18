@@ -2,12 +2,12 @@
 title: Projektowanie aplikacji opartej na mikrousługach
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z korzyściami i downsidesami aplikacji zorientowanych na mikrousługach, aby móc podejmować świadome decyzje.
 ms.date: 10/02/2018
-ms.openlocfilehash: ddca4ecf0b0ed1103e4da75ecc759546d6e53800
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: dc3c8ccd95505cb828383f499b9bf950e7c12a30
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926541"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039814"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Projektowanie aplikacji opartej na mikrousługach
 
@@ -89,8 +89,8 @@ W związku z tym jednostki wdrożenia dla mikrousług (a nawet dla baz danych w 
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **eShopOnContainers GitHub repo. Kod źródłowy aplikacji referencyjnej**\
-    <https://aka.ms/eShopOnContainers/>
+- **eShopOnContainers GitHub repo. Kod źródłowy aplikacji referencyjnej** \
+  <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Zalety rozwiązań opartych na mikrousługach
 
@@ -118,7 +118,7 @@ Rozwiązanie oparte na mikrousługach, takie jak ta, ma wiele korzyści:
 
 Rozwiązanie oparte na mikrousługach, takie jak to również ma pewne wady:
 
-**Aplikacja rozproszona**. Dystrybucja aplikacji zwiększa złożoność dla deweloperów podczas projektowania i kompilowania usług. Na przykład deweloperzy muszą zaimplementować komunikację międzyusługową przy użyciu protokołów, takich jak HTTP lub AMPQ, które zwiększają złożoność testowania i obsługi wyjątków. Powoduje również dodanie opóźnienia do systemu.
+**Aplikacja rozproszona**. Dystrybucja aplikacji zwiększa złożoność dla deweloperów podczas projektowania i kompilowania usług. Na przykład deweloperzy muszą zaimplementować komunikację między usługami przy użyciu protokołów, takich jak HTTP lub AMPQ, które zwiększają złożoność testowania i obsługi wyjątków. Powoduje również dodanie opóźnienia do systemu.
 
 **Złożoność wdrożenia**. Aplikacja, która ma dziesiątki typów mikrousług i wymaga wysokiej skalowalności (musi być w stanie utworzyć wiele wystąpień na usługę i zrównoważyć te usługi na wielu hostach), oznacza wysoki stopień złożoności wdrożenia dla operacji IT i zarządzania. Jeśli nie korzystasz z infrastruktury z mikrousługą (na przykład Orchestrator i Scheduler), ta dodatkowa złożoność może wymagać znacznie większej liczby działań programistycznych niż sama aplikacja biznesowa.
 

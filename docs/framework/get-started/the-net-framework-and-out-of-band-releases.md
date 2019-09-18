@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3aaf64c2f0738d2db607a2476890b033ff9d06a2
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: c1df04df8aa08fa66c91d03d4b67318b434a93d8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063048"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051957"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>Program .NET Framework i wydania poza harmonogramem (OOB)
 
@@ -21,38 +21,38 @@ Program .NET Framework jest rozwijany, tak aby działał na nowych platformach, 
  Gdy w aplikacji jest używana funkcja OOB, użytkownicy nie muszą instalować najnowszej wersji programu systemu .NET Framework, aby uruchomić aplikację, ponieważ zestawy OOB są wdrażane z pakietem aplikacji.
 
 ## <a name="how-oob-packages-are-distributed"></a>Dystrybucja pakietów OOB
-Wydania OOB dla podstawowych składników środowiska uruchomieniowego (języka wspólnego CLR) języka wspólnego są dostarczane za pośrednictwem [NuGet](https://www.nuget.org/), czyli Menedżer pakietów dla platformy .NET. Program NuGet umożliwia łatwe przeglądanie i dodawanie bibliotek do projektów programu .NET Framework z poziomu Eksploratora rozwiązań w programie Visual Studio. Program NuGet jest dołączany do wszystkich wersji programu Visual Studio, począwszy od programu Visual Studio 2012. Aby sprawdzić, czy zainstalowano program NuGet, wyszukaj **Menedżera pakietów NuGet** w programie Visual Studio **narzędzia** menu. Jeśli nie jest zainstalowany:
+Wersje OOB dla podstawowych składników środowiska uruchomieniowego języka wspólnego (CLR) są dostarczane za pomocą narzędzia [NuGet](https://www.nuget.org/), który jest menedżerem pakietów dla platformy .NET. Program NuGet umożliwia łatwe przeglądanie i dodawanie bibliotek do projektów programu .NET Framework z poziomu Eksploratora rozwiązań w programie Visual Studio. Program NuGet jest dołączany do wszystkich wersji programu Visual Studio, począwszy od programu Visual Studio 2012. Aby sprawdzić, czy program NuGet jest zainstalowany, poszukaj **Menedżera pakietów NuGet** w menu **Narzędzia** programu Visual Studio. Jeśli nie jest zainstalowany:
 
-1. Na pasku menu programu Visual Studio, wybierz **narzędzia**, **rozszerzenia i aktualizacje** (w programie Visual Studio 2010, wybrać **Menedżera rozszerzeń**).
+1. Na pasku menu programu Visual Studio wybierz kolejno pozycje **Narzędzia**, **rozszerzenia i aktualizacje** (w programie Visual Studio 2010 wybierz pozycję **Menedżer rozszerzeń**).
 
-     **Rozszerzenia i aktualizacje** zostanie otwarte okno dialogowe.
+     Zostanie otwarte okno dialogowe **rozszerzenia i aktualizacje** .
 
-2. Wybierz **Online**, **Menedżera pakietów NuGet**, a następnie wybierz **Pobierz**.
+2. Wybierz pozycję **online**, **Menedżer pakietów NuGet**, a następnie wybierz pozycję **Pobierz**.
 
 3. Po zakończeniu pobierania ponownie uruchom program Visual Studio.
 
- Aby uzyskać szczegółowe instrukcje dotyczące instalacji, zobacz [Instalowanie systemu NuGet](/nuget/install-nuget-client-tools) w internetowej dokumentacji systemu NuGet. Aby uzyskać więcej informacji na temat programu NuGet, zobacz [dokumentacja programu NuGet](/nuget).
+ Aby uzyskać szczegółowe instrukcje dotyczące instalacji, zobacz [Instalowanie programu NuGet](/nuget/install-nuget-client-tools) w witrynie sieci Web programu NuGet docs. Więcej informacji o narzędziu NuGet można znaleźć w [dokumentacji programu NuGet](/nuget).
 
 ## <a name="using-a-nuget-oob-package"></a>Używanie pakietu NuGet OOB
  Po zainstalowaniu programu NuGet można wyszukiwać i dodawać odwołania do pakietów programu NuGet, używając Eksploratora rozwiązań w programie Visual Studio:
 
-1. Otwórz menu skrótów dla projektu w programie Visual Studio, a następnie wybierz **Zarządzaj pakietami NuGet**. (Ta opcja jest również dostępna z **projektu** menu.)
+1. Otwórz menu skrótów dla projektu w programie Visual Studio, a następnie wybierz polecenie **Zarządzaj pakietami NuGet**. (Ta opcja jest również dostępna w menu **projekt** ).
 
-2. W okienku po lewej stronie wybierz **Online**.
+2. W lewym okienku wybierz pozycję **online**.
 
-3. Jeśli chcesz używać pakietów wydań wstępnych, w polu listy rozwijanej w środkowym okienku wybierz **Uwzględnij wydania wstępne** zamiast **tylko stabilne**.
+3. Jeśli chcesz używać pakietów wstępnych, w polu listy rozwijanej w środkowym okienku wybierz opcję **Uwzględnij wersje wstępne** zamiast **tylko stabilne**.
 
-4. W okienku po prawej stronie użyj **wyszukiwania** pole, aby zlokalizować pakiet, który chcesz użyć. Niektóre pakiety firmy Microsoft są oznaczone za pomocą logo programu Microsoft .NET Framework, a wszystkie określają firmę Microsoft jako wydawcę.
+4. W okienku po prawej stronie użyj pola **wyszukiwania** , aby zlokalizować pakiet, którego chcesz użyć. Niektóre pakiety firmy Microsoft są oznaczone za pomocą logo programu Microsoft .NET Framework, a wszystkie określają firmę Microsoft jako wydawcę.
 
- ![Zrzut ekranu pokazujący Menedżera pakietów NuGet.](./media/the-net-framework-and-out-of-band-releases/nuget-package-manager-dialog.png)
+ ![Zrzut ekranu przedstawiający Menedżera pakietów NuGet.](./media/the-net-framework-and-out-of-band-releases/nuget-package-manager-dialog.png)
 
  Jak wspomniano wcześniej, podczas wdrażania aplikacji używającej pakietu OOB zestawy OOB będą dostarczane wraz z pakietem aplikacji.
 
 ## <a name="types-of-oob-releases"></a>Typy wersji OOB
- Zazwyczaj pakiet OOB ma jedną lub kilka wersji wstępnych i wersję stabilną. Licencja, który towarzyszy wersji wstępnej, zazwyczaj nie zezwala na redystrybucję, ale umożliwia wypróbowanie pakietu i wyrazić swoją opinię. Opinie są włączane do wszelkich aktualizacji wprowadzanych w pakiecie. Ostateczna wersja jest rozpowszechniana jako stabilny pakiet NuGet i zawiera licencję zezwalającą na dystrybucję pakietu NuGet wraz z aplikacją. Stabilne pakiety są obsługiwane przez firmę Microsoft. Firma Microsoft zapewnia obsługę technologii IntelliSense, jak również inne typy dokumentacji, takie jak wpisy w blogu i odpowiedzi na forum dla wszystkich pakietów. Ponadto kod źródłowy może być dostępny w niektórych, ale nie wszystkie pakiety. Zapowiedzi dotyczących nowych i zaktualizowanych pakietów, możesz zasubskrybować [Blog programu .NET Framework](https://devblogs.microsoft.com/dotnet/).
+ Zazwyczaj pakiet OOB ma jedną lub kilka wersji wstępnych i wersję stabilną. Licencja, która towarzyszy wersji wstępnej, zazwyczaj nie zezwala na ponowną dystrybucję, ale umożliwia wypróbowanie pakietu i przesłanie opinii. Opinie są włączane do wszelkich aktualizacji wprowadzanych w pakiecie. Ostateczna wersja jest rozpowszechniana jako stabilny pakiet NuGet i zawiera licencję zezwalającą na dystrybucję pakietu NuGet wraz z aplikacją. Pakiety stabilne są obsługiwane przez firmę Microsoft. Firma Microsoft zapewnia pomoc techniczną IntelliSense, jak również inne typy dokumentacji, takie jak wpisy w blogu i odpowiedzi na forum dla wszystkich pakietów. Ponadto kod źródłowy może być dostępny w przypadku niektórych, ale nie wszystkich pakietów. Anonse dotyczące nowych i zaktualizowanych pakietów można subskrybować [blogu .NET Framework](https://devblogs.microsoft.com/dotnet/).
 
- Aby znaleźć stabilne i wstępne pakiety, wybierz **Uwzględnij wydania wstępne** w Menedżerze pakietów NuGet.
+ Aby znaleźć zarówno wstępne, jak i stabilne pakiety, wybierz pozycję **Uwzględnij wersję wstępną** w Menedżerze pakietów NuGet.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie](../../../docs/framework/get-started/index.md)
+- [Wprowadzenie](index.md)

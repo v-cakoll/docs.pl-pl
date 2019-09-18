@@ -7,30 +7,30 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 793012b21ae6a3a597efaea23a6d3b6d1db58562
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 91099b9b4d230839bc14c5fe4d5eafd05ac95541
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379961"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052160"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework — Przewodnik wdrażania dla administratorów
 
-W tym artykule opisano, jak administrator systemu może wdrożyć program .NET Framework 4.5 i jego zależności systemowe przez sieć przy użyciu programu Microsoft System Center Configuration Manager. W tym artykule przyjęto założenie, że wszystkie docelowe komputery klienckie spełniają minimalne wymagania programu .NET Framework. Aby uzyskać listę wymagania sprzętowe i programowe dotyczące instalowania programu .NET Framework 4.5, zobacz [wymagania systemowe](../../../docs/framework/get-started/system-requirements.md).
+W tym artykule krok po kroku opisano, jak administrator systemu może wdrożyć .NET Framework 4,5 i zależności systemu w sieci za pomocą programu Microsoft System Center Configuration Manager. W tym artykule przyjęto założenie, że wszystkie docelowe komputery klienckie spełniają minimalne wymagania programu .NET Framework. Aby zapoznać się z listą wymagań oprogramowania i sprzętu dotyczących instalowania .NET Framework 4,5, zobacz [wymagania systemowe](../get-started/system-requirements.md).
 
 > [!NOTE]
-> Oprogramowanie wymienione w niniejszym dokumencie, w tym, bez ograniczenia, .NET Framework 4.5, programu System Center Configuration Manager i usługi Active Directory, objęte jest postanowieniami licencyjnymi. W tych instrukcjach przyjęto założenie, że takie postanowienia licencyjne i warunki zostały przejrzane i zaakceptowane przez właściwych licencjobiorców oprogramowania. Te instrukcje nie unieważniają żadnego postanowienia tych umów licencyjnych.
+> Oprogramowanie przywoływane w tym dokumencie, w tym, bez ograniczenia, .NET Framework 4,5, System Center Configuration Manager i Active Directory, podlega postanowieniom licencyjnym. W tych instrukcjach przyjęto założenie, że takie postanowienia licencyjne i warunki zostały przejrzane i zaakceptowane przez właściwych licencjobiorców oprogramowania. Te instrukcje nie unieważniają żadnego postanowienia tych umów licencyjnych.
 >
-> Aby uzyskać informacje na temat pomocy technicznej dla platformy .NET Framework, zobacz [obsługuje zasady cyklu życia programu Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607) w witrynie Microsoft Support.
+> Aby uzyskać informacje o obsłudze .NET Framework, zobacz [Zasady cyklu życia programu Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607) w witrynie sieci Web Pomoc techniczna firmy Microsoft.
 
 Ten temat zawiera następujące sekcje:
 
 - [Proces wdrażania](#the_deployment_process)
 - [Wdrażanie programu .NET Framework](#deploying_in_a_test_environment)
 - [Tworzenie kolekcji](#creating_a_collection)
-- [Tworzenie pakietów i programów](#creating_a_package)
+- [Tworzenie pakietu i programu](#creating_a_package)
 - [Wybierz punkt dystrybucji](#select_dist_point)
-- [Wdrażanie pakietu](#deploying_package)
+- [Wdróż pakiet](#deploying_package)
 - [Zasoby](#resources)
 - [Rozwiązywanie problemów](#troubleshooting)
 
@@ -40,56 +40,56 @@ Ten temat zawiera następujące sekcje:
 
 Gdy jest dostępna wymagana infrastruktura, należy użyć programu System Center 2012 Manager Configuration w celu wdrożenia pakietu redystrybucyjnego programu .NET Framework na komputerach w sieci. Tworzenie infrastruktury obejmuje utworzenie i zdefiniowanie pięciu podstawowych obszarów: kolekcji, pakietu i programu dla oprogramowania, punktów dystrybucji i wdrożeń.
 
-- **Kolekcje** grup zasobów programu Configuration Manager, takich jak użytkownicy, grupy użytkowników lub komputerów, na których jest wdrożona programu .NET Framework. Aby uzyskać więcej informacji, zobacz [wprowadzenie do kolekcji w programie System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections) w bibliotece dokumentacji programu Configuration Manager.
+- **Kolekcje** są grupami zasobów Configuration Manager, takich jak użytkownicy, grupy użytkowników lub komputery, na których wdrożono .NET Framework. Aby uzyskać więcej informacji, zobacz [wprowadzenie do kolekcji w System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections) w bibliotece dokumentacji Configuration Manager.
 
-- **Pakiety i programy** zazwyczaj reprezentują aplikacje do zainstalowania na komputerze klienckim, ale mogą także zawierać pojedyncze pliki, aktualizacji lub nawet polecenia. Aby uzyskać więcej informacji, zobacz [pakiety i programy w programie System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/deploy-use/packages-and-programs) w bibliotece dokumentacji programu Configuration Manager.
+- **Pakiety i programy** zwykle reprezentują aplikacje, które mają być zainstalowane na komputerze klienckim, ale mogą również zawierać pojedyncze pliki, aktualizacje lub nawet poszczególne polecenia. Aby uzyskać więcej informacji, zobacz [pakiety i programy w System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/deploy-use/packages-and-programs) w bibliotece dokumentacji Configuration Manager.
 
-- **Punkty dystrybucji** są przechowywania plików wymaganych do działania oprogramowania na komputery klienckie ról systemu lokacji programu Configuration Manager. Gdy klient programu Configuration Manager odbiera i przetwarza wdrożenie oprogramowania, kontaktuje się z punktem dystrybucji w celu pobrania zawartości skojarzonej z oprogramowaniem i rozpoczęcia procesu instalacji. Aby uzyskać więcej informacji, zobacz [podstawowe pojęcia związane z zarządzaniem zawartością w programie Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management) w bibliotece dokumentacji programu Configuration Manager.
+- **Punkty dystrybucji** są Configuration Manager ról systemu lokacji, które przechowują pliki wymagane do uruchamiania oprogramowania na komputerach klienckich. Gdy klient programu Configuration Manager odbiera i przetwarza wdrożenie oprogramowania, kontaktuje się z punktem dystrybucji w celu pobrania zawartości skojarzonej z oprogramowaniem i rozpoczęcia procesu instalacji. Aby uzyskać więcej informacji, zobacz [podstawowe pojęcia związane z zarządzaniem zawartością w programie Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management) w bibliotece dokumentacji Configuration Manager.
 
-- **Wdrożenia** poinstruować odpowiednie elementy członkowskie określonej kolekcji docelowej można zainstalować pakietu oprogramowania.
+- **Wdrożenia** instruują odpowiednich członków określonej kolekcji docelowej w celu zainstalowania pakietu oprogramowania.
 
 > [!IMPORTANT]
-> Procedury opisane w tym temacie zawierają typowe ustawienia służące do tworzenia i wdrażania pakietu oraz programu i mogą nie obejmować wszystkich możliwych ustawień. Inne opcje wdrażania programu Configuration Manager, zobacz [bibliotece dokumentacji programu Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682041%28v=technet.10%29).
+> Procedury opisane w tym temacie zawierają typowe ustawienia służące do tworzenia i wdrażania pakietu oraz programu i mogą nie obejmować wszystkich możliwych ustawień. Inne Configuration Manager opcje wdrażania można znaleźć w [bibliotece dokumentacji Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682041%28v=technet.10%29).
 
 <a name="deploying_in_a_test_environment"></a>
 
 ## <a name="deploying-the-net-framework"></a>Wdrażanie programu .NET Framework
 
-System Center 2012 Configuration Manager można użyć do wdrożenia dyskretnej instalacji programu .NET Framework 4.5, w których użytkownicy nie oddziałują na proces instalacji. Wykonaj następujące kroki:
+W celu wdrożenia instalacji dyskretnej .NET Framework 4,5 można użyć programu System Center 2012 Configuration Manager, w którym użytkownicy nie współpracują z procesem instalacji. Wykonaj następujące kroki:
 
 1. [Utwórz kolekcję](#creating_a_collection).
 
-2. [Tworzenie pakietów i programów w programie .NET Framework do dystrybucji](#creating_a_package).
+2. [Utwórz pakiet i program dla .NET Framework pakiet redystrybucyjny](#creating_a_package).
 
 3. [Wybierz punkt dystrybucji](#select_dist_point).
 
-4. [Wdrażanie pakietu](#deploying_package).
+4. [Wdróż pakiet](#deploying_package).
 
 <a name="creating_a_collection"></a>
 
 ### <a name="create-a-collection"></a>Tworzenie kolekcji
 
-W tym kroku należy wybrać komputery, na których będzie wdrażany pakiet i program, i zgrupować je w kolekcji urządzeń. Aby utworzyć kolekcję w programie Configuration Manager, można użyć bezpośrednich reguł członkostwa (elementy członkowskie kolekcji są określane ręcznie) lub reguł zapytań (program Configuration Manager określa elementy członkowskie kolekcji na podstawie określonych kryteriów). Aby uzyskać więcej informacji na temat reguł członkostwa, w tym o zapytaniach i regułach bezpośrednich, zobacz [wprowadzenie do kolekcji w programie System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections) w bibliotece dokumentacji programu Configuration Manager.
+W tym kroku należy wybrać komputery, na których będzie wdrażany pakiet i program, i zgrupować je w kolekcji urządzeń. Aby utworzyć kolekcję w programie Configuration Manager, można użyć bezpośrednich reguł członkostwa (elementy członkowskie kolekcji są określane ręcznie) lub reguł zapytań (program Configuration Manager określa elementy członkowskie kolekcji na podstawie określonych kryteriów). Aby uzyskać więcej informacji na temat reguł członkostwa, w tym zapytań i reguł bezpośrednich, zobacz [wprowadzenie do kolekcji w System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections) w bibliotece dokumentacji Configuration Manager.
 
 Aby utworzyć kolekcję:
 
-1. W konsoli programu Configuration Manager wybierz **zasoby i zgodność**.
+1. W konsoli Configuration Manager wybierz pozycję **zasoby i zgodność**.
 
-2. W **zasoby i zgodność** obszaru roboczego, wybierz **kolekcje urządzeń**.
+2. W obszarze roboczym **zasoby i zgodność** wybierz pozycję **Kolekcje urządzeń**.
 
-3. Na **Home** karcie **Utwórz** grupy, wybierz **Utwórz kolekcję urządzeń**.
+3. Na karcie **Narzędzia główne** w grupie **Tworzenie** wybierz pozycję **Utwórz kolekcję urządzeń**.
 
-4. Na **ogólne** strony **Kreatora tworzenia kolekcji urządzeń**, wprowadź nazwę kolekcji.
+4. Na stronie **Ogólne** **Kreatora tworzenia kolekcji urządzeń**wprowadź nazwę kolekcji.
 
-5. Wybierz **Przeglądaj** określić kolekcję ograniczającą.
+5. Wybierz pozycję **Przeglądaj** , aby określić kolekcję ograniczającą.
 
-6. Na **reguł członkostwa** wybierz **Dodaj regułę**, a następnie wybierz **reguły bezpośredniej** otworzyć **bezpośrednie Kreatora tworzenia reguły członkostwa**. Wybierz **dalej**.
+6. Na stronie **reguły członkostwa** wybierz pozycję **Dodaj regułę**, a następnie wybierz pozycję **reguła bezpośrednia** , aby otworzyć **Kreatora tworzenia reguły członkostwa bezpośredniego**. Wybierz **dalej**.
 
-7. Na **wyszukiwanie zasobów** stronie **klasy zasobów** wybierz **zasób systemowy**. W **nazwa atrybutu** wybierz **nazwa**. W **wartość** wprowadź `%`, a następnie wybierz **dalej**.
+7. Na stronie **Wyszukiwanie zasobów** na liście **Klasa zasobów** wybierz pozycję **zasób systemowy**. Na liście **nazwa atrybutu** wybierz pozycję **Nazwa**. W polu **wartość** wprowadź `%`, a następnie wybierz przycisk **dalej**.
 
-8. Na **Wybieranie zasobów** strony, zaznacz pole wyboru dla każdego komputera, który chcesz wdrożyć program .NET Framework do. Wybierz **dalej**, a następnie ukończ jego pracę.
+8. Na stronie **Wybierz zasoby** zaznacz pole wyboru obok każdego komputera, na którym chcesz wdrożyć .NET Framework. Wybierz pozycję **dalej**, a następnie Zakończ pracę kreatora.
 
-9. Na **reguł członkostwa** strony **Kreatora tworzenia kolekcji urządzeń**, wybierz **dalej**, a następnie ukończ jego pracę.
+9. Na stronie **reguły członkostwa** **Kreatora tworzenia kolekcji urządzeń**wybierz **dalej**, a następnie Ukończ pracę kreatora.
 
 <a name="creating_a_package"></a>
 
@@ -99,35 +99,35 @@ Wykonanie poniższych kroków umożliwia ręczne utworzenie pakietu redystrybucy
 
 Aby utworzyć pakiet:
 
-1. W konsoli programu Configuration Manager wybierz **Biblioteka oprogramowania**.
+1. W konsoli Configuration Manager wybierz pozycję **Biblioteka oprogramowania**.
 
-2. W **Biblioteka oprogramowania** obszaru roboczego, rozwiń węzeł **Zarządzanie aplikacjami**, a następnie wybierz **pakietów**.
+2. W obszarze roboczym **Biblioteka oprogramowania** rozwiń węzeł **Zarządzanie aplikacjami**, a następnie wybierz pozycję **pakiety**.
 
-3. Na **Home** na karcie **Utwórz** grupy, wybierz **tworzenia pakietu**.
+3. Na karcie **Narzędzia główne** w grupie **Tworzenie** wybierz pozycję **Utwórz pakiet**.
 
-4. Na **pakietu** strony **Kreatora tworzenia pakietu i programu**, wprowadź następujące informacje:
+4. Na stronie **pakiet** **Kreatora tworzenia pakietu i programu**wprowadź następujące informacje:
 
-    - Nazwa: `.NET Framework 4.5`
+    - Nazwij`.NET Framework 4.5`
 
-    - Producent: `Microsoft`
+    - Instrukcj`Microsoft`
 
     - Język. `English (US)`
 
-5. Wybierz **ten pakiet zawiera pliki źródłowe**, a następnie wybierz **Przeglądaj** wybrać lokalny lub zdalny folder zawierający pliki instalacyjne programu .NET Framework. Po wybraniu folderu, wybierz **OK**, a następnie wybierz **dalej**.
+5. Wybierz opcję **ten pakiet zawiera pliki źródłowe**, a następnie wybierz pozycję **Przeglądaj** , aby wybrać folder lokalny lub sieciowy zawierający pliki instalacyjne .NET Framework. Po wybraniu folderu wybierz **przycisk OK**, a następnie wybierz przycisk **dalej**.
 
-6. Na **typ programu** strony kreatora, wybierz **Program standardowy**, a następnie wybierz **dalej**.
+6. Na stronie **Typ programu** kreatora wybierz pozycję **program standardowy**, a następnie wybierz przycisk **dalej**.
 
-7. Na **Program** strony **Kreatora tworzenia pakietu i programu**, wprowadź następujące informacje:
+7. Na stronie **program** w **Kreatorze tworzenia pakietu i programu**wprowadź następujące informacje:
 
     1. **Nazwa:** `.NET Framework 4.5`
 
     2. **Wiersz polecenia:** `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage ADMINDEPLOYMENT` (Opcje wiersza polecenia są opisane w tabeli po wykonaniu tych kroków)
 
-    3. **Uruchom polecenie:** Wybierz **ukryte**.
+    3. **Wykonane** Wybierz **Ukryj**.
 
-    4. **Program może zostać uruchomiony:** Wybierz opcję określającą, czy program można uruchomić niezależnie od tego, czy użytkownik jest zalogowany.
+    4. **Program może zostać uruchomiony:** Wybierz opcję, która określa, że program może być uruchamiany niezależnie od tego, czy użytkownik jest zalogowany.
 
-8. Na **wymagania** wybierz **dalej** aby zaakceptować wartości domyślne, a następnie ukończ jego pracę.
+8. Na stronie **wymagania** wybierz pozycję **dalej** , aby zaakceptować wartości domyślne, a następnie Ukończ pracę kreatora.
 
 W poniższej tabeli opisano opcje wiersza polecenia określone w kroku 7.
 
@@ -135,9 +135,9 @@ W poniższej tabeli opisano opcje wiersza polecenia określone w kroku 7.
 |------------|-----------------|
 |**/q**|Ustawia tryb cichy. Nie jest wymagane wprowadzanie danych przez użytkownika i nie są wyświetlane dane wyjściowe.|
 |**/ norestart /**|Uniemożliwia Instalatorowi automatyczne wykonywanie ponownego rozruchu. Użycie tej opcji spowoduje, że program Configuration Manager będzie musiał obsługiwać ponowne uruchamianie komputera.|
-|**/chainingpackage** *PackageName*|Określa nazwę pakietu, który tworzy łańcuch. Te informacje są zgłaszane wraz z innymi informacjami sesji instalacji dla tych, którzy podpisali [Program poprawy jakości środowiska Microsoft klienta (CEIP)](https://go.microsoft.com/fwlink/p/?LinkId=248244). Jeśli nazwa pakietu zawiera spacje, należy użyć podwójnego cudzysłowu jako ogranicznika; na przykład: **chainingpackage "Chaining Product"** .|
+|**/chainingpackage** *PackageName*|Określa nazwę pakietu, który tworzy łańcuch. Te informacje są zgłaszane z innymi informacjami sesji instalacji dla tych, którzy zarejestrowali się w [programie Microsoft Program poprawy jakości obsługi klienta (CEIP)](https://go.microsoft.com/fwlink/p/?LinkId=248244). Jeśli nazwa pakietu zawiera spacje, użyj podwójnych cudzysłowów jako ograniczników; na przykład: **/chainingpackage "iloczyn łańcucha"** .|
 
-Wykonanie tych kroków spowoduje utworzenie pakietu o nazwie .NET Framework 4.5. Program wdraża instalację dyskretną programu .NET Framework 4.5. W trakcie instalacji dyskretnej użytkownicy nie oddziałują na proces instalacji, a aplikacja łańcuchowa musi przechwytywać kod powrotny i obsługiwać ponowny rozruch; zobacz [uzyskiwanie informacji o postępie z pakietu instalacyjnego](https://go.microsoft.com/fwlink/?LinkId=179606).
+Wykonanie tych kroków spowoduje utworzenie pakietu o nazwie .NET Framework 4.5. Program wdraża instalację dyskretną programu .NET Framework 4.5. W przypadku instalacji dyskretnej użytkownicy nie pracują z procesem instalacji, a aplikacja łańcucha musi przechwycić kod powrotny i obsłużyć ponowne uruchomienie. Zobacz [Uzyskiwanie informacji o postępie z pakietu instalacyjnego](https://go.microsoft.com/fwlink/?LinkId=179606).
 
 <a name="select_dist_point"></a>
 
@@ -147,23 +147,23 @@ Aby dystrybuować pakiet i program na komputery klienckie z serwera, należy naj
 
 Wykonując poniższe kroki, można wybrać punkt dystrybucji dla pakietu programu .NET Framework 4.5 utworzonego w poprzedniej sekcji:
 
-1. W konsoli programu Configuration Manager wybierz **Biblioteka oprogramowania**.
+1. W konsoli Configuration Manager wybierz pozycję **Biblioteka oprogramowania**.
 
-2. W **Biblioteka oprogramowania** obszaru roboczego, rozwiń węzeł **Zarządzanie aplikacjami**, a następnie wybierz **pakietów**.
+2. W obszarze roboczym **Biblioteka oprogramowania** rozwiń węzeł **Zarządzanie aplikacjami**, a następnie wybierz pozycję **pakiety**.
 
-3. Z listy pakietów wybierz pakiet **.NET Framework 4.5** utworzoną w poprzedniej sekcji.
+3. Z listy pakietów wybierz pakiet **.NET Framework 4,5** , który został utworzony w poprzedniej sekcji.
 
-4. Na **Home** na karcie **wdrożenia** grupy, wybierz **Dystrybuuj zawartość**.
+4. Na karcie **Narzędzia główne** w grupie **wdrożenie** wybierz pozycję **Dystrybuuj zawartość**.
 
-5. Na **ogólne** karcie **kreatora dystrybucji zawartości**, wybierz **dalej**.
+5. Na karcie **Ogólne** w **Kreatorze dystrybucji zawartości**wybierz pozycję **dalej**.
 
-6. Na **miejsce docelowe zawartości** strony kreatora, wybierz **Dodaj**, a następnie wybierz **punktu dystrybucji**.
+6. Na stronie **miejsce docelowe zawartości** kreatora wybierz pozycję **Dodaj**, a następnie wybierz pozycję **punkt dystrybucji**.
 
-7. W **Dodaj punkty dystrybucji** okna dialogowego Wybierz punkty dystrybucji, który będzie hostować pakiet i program, a następnie wybierz **OK**.
+7. W oknie dialogowym **Dodawanie punktów dystrybucji** wybierz punkty dystrybucji, które będą obsługiwać pakiet i program, a następnie wybierz **przycisk OK**.
 
 8. Ukończ pracę kreatora.
 
-Pakiet zawiera teraz wszystkie informacje niezbędne do dyskretnego wdrożenia programu .NET Framework 4.5. Przed przystąpieniem do wdrażania pakietów i programów, sprawdź, czy został on zainstalowany w punkcie dystrybucji; zobacz sekcję "Monitorowanie zawartości" [monitorowanie zawartości dystrybuowanej za pomocą System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed) w bibliotece dokumentacji programu Configuration Manager.
+Pakiet zawiera teraz wszystkie informacje niezbędne do dyskretnego wdrożenia programu .NET Framework 4.5. Przed wdrożeniem pakietu i programu należy się upewnić, że został on zainstalowany w punkcie dystrybucji. Zobacz sekcję "monitorowanie zawartości" tematu [monitorowanie zawartości dystrybuowanej za pomocą System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed) w bibliotece dokumentacji Configuration Manager.
 
 <a name="deploying_package"></a>
 
@@ -171,38 +171,38 @@ Pakiet zawiera teraz wszystkie informacje niezbędne do dyskretnego wdrożenia p
 
 Aby wdrożyć pakiet i program .NET Framework 4.5:
 
-1. W konsoli programu Configuration Manager wybierz **Biblioteka oprogramowania**.
+1. W konsoli Configuration Manager wybierz pozycję **Biblioteka oprogramowania**.
 
-2. W **Biblioteka oprogramowania** obszaru roboczego, rozwiń węzeł **Zarządzanie aplikacjami**, a następnie wybierz **pakietów**.
+2. W obszarze roboczym **Biblioteka oprogramowania** rozwiń węzeł **Zarządzanie aplikacjami**, a następnie wybierz pozycję **pakiety**.
 
-3. Z listy pakietów wybierz pakiet utworzony pod nazwą **.NET Framework 4.5**.
+3. Z listy pakietów wybierz utworzony pakiet o nazwie **.NET Framework 4,5**.
 
-4. Na **Home** na karcie **wdrożenia** grupy, wybierz **Wdróż**.
+4. Na karcie **Narzędzia główne** w grupie **wdrożenie** wybierz pozycję **Wdróż**.
 
-5. Na **ogólne** strony **Kreatora wdrażania oprogramowania**, wybierz **Przeglądaj**, a następnie wybierz kolekcję, do której została utworzona wcześniej. Wybierz **dalej**.
+5. Na stronie **Ogólne** **Kreatora wdrażania oprogramowania**wybierz pozycję **Przeglądaj**, a następnie wybierz utworzoną wcześniej kolekcję. Wybierz **dalej**.
 
-6. Na **zawartości** strony kreatora, sprawdź, czy jest wyświetlany punkt, z którego chcesz dystrybuować oprogramowanie, a następnie wybierz **dalej**.
+6. Na stronie **zawartość** kreatora sprawdź, czy jest wyświetlany punkt, z którego ma zostać rozdystrybuowane oprogramowanie, a następnie wybierz przycisk **dalej**.
 
-7. Na **ustawienia wdrażania** strony kreatora, upewnij się, że **akcji** jest ustawiona na **zainstalować**, i **przeznaczenia** jest ustawiona na **Wymagane**. Te wartości ustawień gwarantują, że pakiet oprogramowania będzie obowiązkowo instalowany na komputerach docelowych. Wybierz **dalej**.
+7. Na stronie **Ustawienia wdrożenia** w Kreatorze upewnij się, że **Akcja** jest ustawiona na **Zainstaluj**, a **cel** jest ustawiony na wartość **wymagane**. Te wartości ustawień gwarantują, że pakiet oprogramowania będzie obowiązkowo instalowany na komputerach docelowych. Wybierz **dalej**.
 
-8. Na **Planowanie** strony kreatora, określić, kiedy .NET Framework do zainstalowania. Możesz wybrać **New** Aby przypisać godzinę instalacji, ale można też oprogramowanie w celu zainstalowania, gdy użytkownik loguje się na wyloguje lub jak najszybciej. Wybierz **dalej**.
+8. Na stronie **Planowanie** w Kreatorze Określ, kiedy ma być zainstalowana .NET Framework. Możesz wybrać opcję **Nowy** , aby przypisać czas instalacji lub poinstruować oprogramowanie, które ma zostać zainstalowane, gdy użytkownik się zaloguje lub wyłączy lub najszybciej, jak to możliwe. Wybierz **dalej**.
 
-9. Na **komfortu** strony w Kreatorze Użyj wartości domyślnych i wybierz **dalej**.
+9. Na stronie **środowisko użytkownika** kreatora Użyj wartości domyślnych i kliknij przycisk **dalej**.
 
     > [!WARNING]
-    > W środowisku produkcyjnym mogą obowiązywać zasady wymagające wybrania innych ustawień harmonogramu wdrażania. Aby uzyskać informacje o tych opcjach, zobacz [właściwości nazwy reklamy: Zaplanuj kartę](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29).
+    > W środowisku produkcyjnym mogą obowiązywać zasady wymagające wybrania innych ustawień harmonogramu wdrażania. Aby uzyskać informacje o tych opcjach [, zobacz Właściwości nazwy anonsu: Karta](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29)harmonogram.
 
-10. Na **punktów dystrybucji** strony w Kreatorze Użyj wartości domyślnych i wybierz **dalej**.
+10. Na stronie **punkty dystrybucji** kreatora Użyj wartości domyślnych i kliknij przycisk **dalej**.
 
-11. Ukończ pracę kreatora. Możesz monitorować postęp wdrażania **wdrożeń** węźle **monitorowanie** obszaru roboczego.
+11. Ukończ pracę kreatora. Postęp wdrożenia można monitorować w węźle **wdrożenia** obszaru roboczego **monitorowanie** .
 
-Teraz pakiet zostanie wdrożony w kolekcji docelowej i rozpocznie się dyskretna instalacja programu .NET Framework 4.5. Aby uzyskać informacje o kodach błędów instalacji programu .NET Framework 4.5, zobacz [kody powrotne](#return_codes) w dalszej części tego tematu.
+Teraz pakiet zostanie wdrożony w kolekcji docelowej i rozpocznie się dyskretna instalacja programu .NET Framework 4.5. Informacje o kodach błędów instalacji .NET Framework 4,5 znajdują się w sekcji [kody powrotne](#return_codes) w dalszej części tego tematu.
 
 <a name="resources"></a>
 
 ## <a name="resources"></a>Zasoby
 
-Aby uzyskać więcej informacji na temat infrastruktury do testowania wdrożenia pakietu redystrybucyjnego programu .NET Framework 4.5 zobacz następujące zasoby.
+Aby uzyskać więcej informacji na temat infrastruktury testowania wdrożenia pakietu redystrybucyjnego .NET Framework 4,5, zobacz następujące zasoby.
 
 **Active Directory, DNS, DHCP:**
 
@@ -210,21 +210,21 @@ Aby uzyskać więcej informacji na temat infrastruktury do testowania wdrożenia
 
 - [System nazw domen (DNS)](/windows-server/networking/dns/dns-top)
 
-- [Protokół dynamicznej konfiguracji hosta (DHCP)](/windows-server/networking/technologies/dhcp/dhcp-top)
+- [Dynamic Host Configuration Protocol (DHCP)](/windows-server/networking/technologies/dhcp/dhcp-top)
 
 **SQL Server 2008:**
 
-- [Instalowanie programu SQL Server 2008 (SQL Server wideo)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd299415(v=sql.100))
+- [Instalowanie SQL Server 2008 (SQL Server wideo)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd299415(v=sql.100))
 
-- [Omówienie zabezpieczeń usługi SQL Server 2008 dla administratorów baz danych](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)
+- [SQL Server 2008 — Omówienie zabezpieczeń dla administratorów bazy danych](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)
 
-**System Center 2012 Configuration Manager, (punkt zarządzania, punkt dystrybucji):**
+**Configuration Manager programu System Center 2012 (punkt zarządzania, punkt dystrybucji):**
 
 - [Administrowanie lokacją dla programu System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)
 
-- [Menedżer konfiguracji pojedyncza witryna planowania i wdrażania](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680961%28v=technet.10%29)
+- [Configuration Manager planowanie i wdrażanie pojedynczej lokacji](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680961%28v=technet.10%29)
 
-**Klient programu System Center 2012 Configuration Manager dla komputerów Windows:**
+**Klient programu System Center 2012 Configuration Manager dla komputerów z systemem Windows:**
 
 - [Wdrażanie klientów dla programu System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391%28v=technet.10%29)
 
@@ -234,24 +234,24 @@ Aby uzyskać więcej informacji na temat infrastruktury do testowania wdrożenia
 
 ### <a name="log-file-locations"></a>Lokalizacje plików dziennika
 
-Następujące pliki dziennika są generowane podczas instalacji .NET Framework:
+Podczas instalacji .NET Framework są generowane następujące pliki dziennika:
 
-- .NET framework %Temp%\Microsoft *wersji*\*txt
-- .NET framework %Temp%\Microsoft *wersji*\*HTML
+- %temp%\Microsoft .NET Framework *wersja*\*. txt
+- %temp%\Microsoft .NET Framework *wersja*\*. html
 
-gdzie *wersji* jest wersja programu .NET Framework, który instalujesz, takie jak w wersji 4.5 lub 4.7.2.
+*wersja* , w której jest instalowana wersja .NET Framework, na przykład 4,5 lub 4.7.2.
 
-Możesz również określić katalog, w dzienniku, które pliki są zapisywane przy użyciu `/log` opcji wiersza polecenia w poleceniu instalacji .NET Framework. Aby uzyskać więcej informacji, zobacz [.NET Framework — przewodnik wdrażania dla deweloperów](deployment-guide-for-developers.md#command-line-options).
+Możesz również określić katalog, w którym zapisywane są pliki dziennika przy użyciu `/log` opcji wiersza polecenia w .NET Framework polecenie instalacji. Aby uzyskać więcej informacji, zobacz [.NET Framework Przewodnik wdrażania dla deweloperów](deployment-guide-for-developers.md#command-line-options).
 
-Możesz użyć [narzędzie do zbierania dzienników](https://www.microsoft.com/download/details.aspx?id=12493) zbierać pliki dziennika w programie .NET Framework i Utwórz plik skompresowany plik cabinet (cab), która zmniejsza rozmiar plików.
+Za pomocą narzędzia do [zbierania dzienników](https://www.microsoft.com/download/details.aspx?id=12493) można zbierać pliki dziennika .NET Framework i utworzyć skompresowany plik Cabinet (CAB), który zmniejsza rozmiar plików.
 
 <a name="return_codes"></a>
 
 ### <a name="return-codes"></a>Kody powrotne
 
-W poniższej tabeli wymieniono najbardziej typowe kody powrotne programu instalacyjnego redystrybucyjnego pakietu programu .NET Framework 4.5. Kody powrotne są takie same dla wszystkich wersji instalatora.
+W poniższej tabeli wymieniono najbardziej typowe kody powrotu z programu instalacyjnego pakietu redystrybucyjnego .NET Framework 4,5. Kody powrotne są takie same dla wszystkich wersji instalatora.
 
-Dla łącza do szczegółowych informacji, zobacz następną sekcję, [kody błędów pobierania](#additional_error_codes).
+Aby uzyskać linki do szczegółowych informacji, zobacz następną sekcję, [pobieranie kodów błędów](#additional_error_codes).
 
 |Kod powrotu|Opis|
 |-----------------|-----------------|
@@ -266,19 +266,19 @@ Dla łącza do szczegółowych informacji, zobacz następną sekcję, [kody bł�
 
 ### <a name="download-error-codes"></a>Kody błędów pobierania
 
-- [Kody błędów Intelligent Transfer Service (BITS) w tle](/windows/desktop/Bits/bits-return-values)
+- [Kody błędów Usługa inteligentnego transferu w tle (bity)](/windows/desktop/Bits/bits-return-values)
 
-- [Kody błędu krótkiej nazwy adresu URL](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145%28v=vs.85%29)
+- [Kody błędów monikera adresu URL](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145%28v=vs.85%29)
 
 - [Kody błędów usługi WinHttp](/windows/desktop/WinHttp/error-messages)
 
 Inne kody błędów:
 
-- [Kody błędów usługi Instalator Windows](/windows/desktop/msi/error-codes)
+- [Instalator Windows kody błędów](/windows/desktop/msi/error-codes)
 
-- [Kody wyników programu Windows Update Agent](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
+- [Kody wyników agenta Windows Update](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik wdrażania dla deweloperów](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [Wymagania systemowe](../../../docs/framework/get-started/system-requirements.md)
+- [Przewodnik wdrażania dla deweloperów](deployment-guide-for-developers.md)
+- [Wymagania systemowe](../get-started/system-requirements.md)

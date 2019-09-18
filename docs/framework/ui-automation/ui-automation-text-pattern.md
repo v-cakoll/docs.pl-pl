@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: b51206f2-1281-4ad0-9820-ea39d88ae577
-ms.openlocfilehash: 27d5bcee34bcbfa101f381a569428a64a45da0b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b7985e6cf3eaa810a893b0b5183a1c141a041768
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69954093"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040503"
 ---
 # <a name="ui-automation-text-pattern"></a>Wzorzec tekstu automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -22,14 +22,14 @@ ms.locfileid: "69954093"
  Ten temat zawiera przeglądy i Tematy porad ułatwiające rozpoczęcie programowania elementów tekstowych w programie [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przegląd automatyzacji interfejsu użytkownika — TextPattern](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
- [TextPattern i obiekty osadzone — omówienie](../../../docs/framework/ui-automation/textpattern-and-embedded-objects-overview.md)  
- [Tematy z instrukcjami](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
+ [Przegląd automatyzacji interfejsu użytkownika — TextPattern](ui-automation-textpattern-overview.md)  
+ [TextPattern i obiekty osadzone — omówienie](textpattern-and-embedded-objects-overview.md)  
+ [Tematy z instrukcjami](ui-automation-text-pattern-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Automation.Text>  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wzorce kontrolek automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
-- [Wzorce kontrolek automatyzacji interfejsu użytkownika dla klientów](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [Wzorce kontrolek automatyzacji interfejsu użytkownika](ui-automation-control-patterns.md)
+- [Wzorce kontrolek automatyzacji interfejsu użytkownika dla klientów](ui-automation-control-patterns-for-clients.md)

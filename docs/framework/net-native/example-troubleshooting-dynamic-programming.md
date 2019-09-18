@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85d64a5577acdaa15a40ae308eb728d75d6a4c69
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 866ec425fd66ee8b3b62263180ac7e6d776108f0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894489"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049805"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Przykład: Rozwiązywanie problemów z programowaniem dynamicznym
 > [!NOTE]
@@ -33,7 +33,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
 [snip]  
 ```  
   
- Spróbujmy rozwiązać ten wyjątek, korzystając z podejścia z trzech kroków opisanych w sekcji "Ręczne rozwiązywanie brakujących metadanych" [wprowadzenie](../../../docs/framework/net-native/getting-started-with-net-native.md).  
+ Spróbujmy rozwiązać ten wyjątek, korzystając z podejścia z trzech kroków opisanych w sekcji "Ręczne rozwiązywanie brakujących metadanych" [wprowadzenie](getting-started-with-net-native.md).  
   
 ## <a name="what-was-the-app-doing"></a>Co to jest aplikacja?  
  Pierwszą rzeczą, którą należy zwrócić, `async` jest maszyna słowa kluczowego na podstawie stosu.  Określenie, co aplikacja była naprawdę wykonywana w `async` metodzie, może być problematyczne, ponieważ stos utracił kontekst wywołania źródłowego i `async` uruchomił kod w innym wątku. Można jednak określić, że aplikacja próbuje załadować pierwszą stronę.  W implementacji dla `NavigationArgs.Setup`programu następujący kod spowodował naruszenie zasad dostępu:  
@@ -56,9 +56,9 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
  Inne problemy mogą również wystąpić podczas korzystania `App.Core.ViewModels`z programu.  Należy zdecydować, czy warto identyfikować i naprawiać każdy brakujący wyjątek metadanych lub zaoszczędzić czas i dodać dyrektywy dla większej klasy typów.  W tym miejscu `dynamic` dodawanie metadanych `App.Core.ViewModels` dla programu może być najlepszym rozwiązaniem, jeśli wzrost rozmiaru danych binarnych wyjściowych nie jest problemem.  
   
 ## <a name="could-the-code-be-rewritten"></a>Czy kod można napisać ponownie?  
- Jeśli aplikacja była używana `typeof(LayoutApplicationVM)` `Type.GetType("LayoutApplicationVM")`zamiast, łańcuch narzędzi mógłby zachować `browse` metadane.  Mimo to nadal nie utworzy `invoke` metadanych, co spowodowałoby wyjątek [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) podczas tworzenia wystąpienia typu. Aby zapobiec wyjątku, nadal trzeba dodać dyrektywę środowiska uruchomieniowego dla przestrzeni nazw lub typ, który określa `dynamic` zasady. Aby uzyskać informacje na temat dyrektyw środowiska uruchomieniowego, zobacz [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (RD. xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+ Jeśli aplikacja była używana `typeof(LayoutApplicationVM)` `Type.GetType("LayoutApplicationVM")`zamiast, łańcuch narzędzi mógłby zachować `browse` metadane.  Mimo to nadal nie utworzy `invoke` metadanych, co spowodowałoby wyjątek [MissingMetadataException](missingmetadataexception-class-net-native.md) podczas tworzenia wystąpienia typu. Aby zapobiec wyjątku, nadal trzeba dodać dyrektywę środowiska uruchomieniowego dla przestrzeni nazw lub typ, który określa `dynamic` zasady. Aby uzyskać informacje na temat dyrektyw środowiska uruchomieniowego, zobacz [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (RD. xml)](runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Przykład: Obsługa wyjątków podczas wiązania danych](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+- [Wprowadzenie](getting-started-with-net-native.md)
+- [Przykład: Obsługa wyjątków podczas wiązania danych](example-handling-exceptions-when-binding-data.md)

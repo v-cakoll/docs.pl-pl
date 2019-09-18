@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1c4423c20a9a485f3c40877ccd489c749dc0e2c
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 56a88a5719fc5630baf2f31ee62fd463980661c2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971836"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051804"
 ---
 # <a name="how-to-create-com-wrappers"></a>Instrukcje: Tworzenie otok COM
 
@@ -45,7 +45,7 @@ Teraz można napisać kod, aby uzyskać dostęp do obiektu COM. Można rozpoczą
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Aby utworzyć oddzielną otokę środowiska uruchomieniowego przy użyciu narzędzi .NET Framework  
   
-- Uruchom narzędzie [Tlbimp. exe (Importer biblioteki typów)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) .  
+- Uruchom narzędzie [Tlbimp. exe (Importer biblioteki typów)](../tools/tlbimp-exe-type-library-importer.md) .  
   
  To narzędzie tworzy zestaw zawierający metadane czasu wykonywania dla typów zdefiniowanych w oryginalnej bibliotece typów.  
   
@@ -67,11 +67,11 @@ Teraz można napisać kod, aby uzyskać dostęp do obiektu COM. Można rozpoczą
   
 ### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>Aby utworzyć zawywoływaną przez COM otokę przy użyciu narzędzi .NET Framework  
   
-Uruchom narzędzie [Regasm. exe (Narzędzie rejestracji zestawów)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) .  
+Uruchom narzędzie [Regasm. exe (Narzędzie rejestracji zestawów)](../tools/regasm-exe-assembly-registration-tool.md) .  
   
 To narzędzie odczytuje metadane zestawu i dodaje niezbędne wpisy do rejestru. W związku z tym klienci modelu COM mogą w niewidoczny sposób tworzyć klasy .NET Framework. Zestawu można użyć tak, jakby był natywną klasą COM.  
   
-Program Regasm. exe można uruchomić na zestawie znajdującym się w dowolnym katalogu, a następnie uruchomić [Gacutil. exe (Global Assembly Cache Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) , aby przenieść go do globalnej pamięci podręcznej zestawów. Przeniesienie zestawu nie unieważnia wpisów rejestru lokalizacji, ponieważ globalna pamięć podręczna zestawów jest zawsze sprawdzana, jeśli zestaw nie został znaleziony w innym miejscu.  
+Program Regasm. exe można uruchomić na zestawie znajdującym się w dowolnym katalogu, a następnie uruchomić [Gacutil. exe (Global Assembly Cache Tool)](../tools/gacutil-exe-gac-tool.md) , aby przenieść go do globalnej pamięci podręcznej zestawów. Przeniesienie zestawu nie unieważnia wpisów rejestru lokalizacji, ponieważ globalna pamięć podręczna zestawów jest zawsze sprawdzana, jeśli zestaw nie został znaleziony w innym miejscu.  
   
 ## <a name="see-also"></a>Zobacz także
 

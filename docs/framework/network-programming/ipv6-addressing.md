@@ -26,56 +26,56 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: 6243046e7e33a73f2479337cb64c2a236efcfafc
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 1bad43b96fc6f66724e5e40cdf0ae6d76b46d867
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662252"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047853"
 ---
 # <a name="ipv6-addressing"></a>Adresowanie IPv6
 
-W przypadku protokołu internetowego w wersji 6 (IPv6) adresy są długości 128 bitów. Jednym z powodów takich duża przestrzeń adresowa jest pozwalające na dalszy podział dostępnych adresów w hierarchii domen routingu, które odzwierciedlają topologii sieci Internet. Kolejny powód jest mapowania adresów karty sieciowe (lub interfejsy) łączące urządzenia w sieci. Protokół IPv6 funkcji nieprzerwaną pracę możliwość rozpoznania adresów na najniższym poziomie, znajduje się na poziomie interfejsu sieciowego, która ma również funkcji automatycznej konfiguracji.
+W przypadku protokołu internetowego w wersji 6 (IPv6) adresy mają długość 128 bitów. Jedną z przyczyn takiej dużej przestrzeni adresowej jest podział dostępnych adresów w hierarchię domen routingu, które odzwierciedlają topologię internetową. Kolejną przyczyną jest zamapowanie adresów kart sieciowych (lub interfejsów), które łączą urządzenia z siecią. Protokół IPv6 oferuje nieodłączną możliwość rozpoznawania adresów na ich najniższym poziomie, które znajdują się na poziomie interfejsu sieciowego, a także udostępnia funkcje automatycznej konfiguracji.
 
-## <a name="text-representation"></a>Tekst reprezentujący
+## <a name="text-representation"></a>Reprezentacja tekstu
 
-Poniżej przedstawiono trzy formy konwencjonalne używana do reprezentowania adresy IPv6 jako ciąg tekstowy:
+Poniżej przedstawiono trzy konwencjonalne formularze używane do reprezentowania adresów IPv6 jako ciągi tekstowe:
 
-- **Formularz szesnastkowe dwukropek**. Jest to n:n:n:n:n:n:n:n preferowaną formę. Każdy n oznacza wartość szesnastkową jednego z ośmiu elementów 16-bitowych w adresie. Na przykład: `3FFE:FFFF:7654:FEDA:1245:BA98:3210:4562`.
+- **Dwukropek — forma szesnastkowa**. Jest to preferowana postać n:n: n:n: n:n: n:n. Każdy n reprezentuje wartość szesnastkową jednego z 8 16-bitowych elementów adresu. Na przykład: `3FFE:FFFF:7654:FEDA:1245:BA98:3210:4562`.
 
-- **Skompresowane formularza**. Ze względu na długość adresu jest często mają adresów zawierających ciąg zer. Aby uprościć zapisywania tych adresów, należy użyć skompresowaną formą, w których pojedynczego ciągu ciągłych bloków 0 są reprezentowane przez symbol dwoma dwukropkami (::). Ten symbol może wystąpić tylko raz w adresie. Na przykład adres multiemisji `FFED:0:0:0:0:BA98:3210:4562` jest skompresowaną formą `FFED::BA98:3210:4562`. Adres emisji pojedynczej `3FFE:FFFF:0:0:8:800:20C4:0` jest skompresowaną formą `3FFE:FFFF::8:800:20C4:0`. Adres sprzężenia zwrotnego `0:0:0:0:0:0:0:1` jest skompresowaną formą `::`1. Nieokreślony adres `0:0:0:0:0:0:0:0` jest skompresowaną formą `::`.
+- **Forma skompresowana**. Ze względu na długość adresu często istnieją adresy zawierające długi ciąg zer. Aby uprościć Zapisywanie tych adresów, użyj skompresowanego formularza, w którym jedna ciągła sekwencja bloków jest reprezentowana przez symbol dwukropka (::). Ten symbol może wystąpić tylko raz w adresie. Na przykład adres `FFED:0:0:0:0:BA98:3210:4562` multiemisji w postaci skompresowanej to `FFED::BA98:3210:4562`. Adres `3FFE:FFFF:0:0:8:800:20C4:0` emisji pojedynczej w postaci skompresowanej to `3FFE:FFFF::8:800:20C4:0`. Adres `0:0:0:0:0:0:0:1` sprzężenia zwrotnego w postaci `::`skompresowanej wynosi 1. Nieokreślony adres `0:0:0:0:0:0:0:0` w postaci skompresowanej to `::`.
 
-- **Mieszane formularza**. Ten formularz łączy adresów IPv4 i IPv6. W tym przypadku format adresu jest n:n:n:n:n:n:d.d.d.d, gdzie każdy n wartości szesnastkowych sześciu elementów wyższego rzędu 16-bitowy adres IPv6, a każdy d reprezentuje wartość dziesiętna adres IPv4.
+- **Formularz mieszany**. Ten formularz łączy adresy IPv4 i IPv6. W tym przypadku format adresu to n:n: n:n: n:n: d. d. d. d, gdzie każda n reprezentuje wartości szesnastkowe z sześciu elementów 16-bitowych o dużej kolejności IPv6, a każda d reprezentuje wartość dziesiętną adresu IPv4.
 
 ## <a name="address-types"></a>Typy adresów
 
-Wiodący bitów w adresie zdefiniować określonego typu adresu IPv6. Pole o zmiennej długości, zawierające te bitów początkowych nosi nazwę formatu prefiksu (FP).
+Wiodące bity w adresie definiują konkretny typ adresu IPv6. Pole o zmiennej długości zawierające te wiodące bity nosi nazwę prefiksu formatu (FP).
 
-Adres IPv6 emisji pojedynczej jest podzielona na dwie części. Pierwsza część zawiera prefiks adresu, a druga część identyfikatora interfejsu. Zwięzły sposób wyrażania kombinację adresu/prefiks IPv6 jest następująca: ipv6 — adres/długością prefiksu.
+Adres IPv6 emisji pojedynczej jest podzielony na dwie części. Pierwsza część zawiera prefiks adresu, a druga część zawiera identyfikator interfejsu. Zwięzły sposób wyrażenia kombinacji adresu IPv6/prefiksu jest następujący: IPv6-Address/prefix-length.
 
-Oto przykład adresu z prefiksem 64-bitowych.
+Poniżej znajduje się przykład adresu z prefiksem 64-bitowym.
 
 `3FFE:FFFF:0:CD30:0:0:0:0/64`.
 
-Prefiks, w tym przykładzie jest `3FFE:FFFF:0:CD30`. Adres można również będą zapisywane w postaci skompresowanej jako `3FFE:FFFF:0:CD30::/64`.
+Prefiks w tym przykładzie to `3FFE:FFFF:0:CD30`. Adres może być również zapisany w postaci skompresowanej, tak jak `3FFE:FFFF:0:CD30::/64`.
 
 Protokół IPv6 definiuje następujące typy adresów:
 
-- **Adres emisji pojedynczej**. Identyfikator jednego interfejsu. Pakiet wysyłane na ten adres jest przekazywana do interfejsie zidentyfikowany. Adresy emisji pojedynczej różnią się od są adresami multiemisji przez wartość octet wyższego rzędu. Oktet adresy multiemisji z wartością szesnastkowe FF. Dowolna inna wartość do tego oktetu identyfikuje adresu emisji pojedynczej. Poniżej przedstawiono różne rodzaje adresy emisji pojedynczej:
+- **Adres emisji pojedynczej**. Identyfikator jednego interfejsu. Pakiet wysłany do tego adresu jest dostarczany do zidentyfikowanego interfejsu. Adresy emisji pojedynczej są rozróżniane na podstawie adresów multiemisji przez wartość oktetu o dużej kolejności. Oktet o wysokim poziomie adresów multiemisji ma wartość szesnastkową FF. Wszystkie inne wartości dla tego oktetu identyfikują adres emisji pojedynczej. Poniżej wymieniono różne typy adresów emisji pojedynczej:
 
-  - **Adresów połączenia lokalnego**. Te adresy są używane na jedno łącze i mają następujący format: FE80::*InterfaceID*. Adresów lokalnych łącza są używane między węzłami w link do konfiguracji adres automatycznego odnajdowania sąsiadów lub w przypadku routerów nie istnieje. Adres połączenia lokalnego jest używany głównie podczas uruchamiania i system nie uzyskał jeszcze adresów o większym zakresie.
+  - **Adresy lokalne łącza**. Te adresy są używane na jednym łączu i mają następujący format: FE80::*InterfaceID*. Adresy lokalne linków są używane między węzłami w linku do konfiguracji autoadres, odnajdywania sąsiadów lub gdy nie są obecne żadne routery. Adres lokalny łącza jest używany głównie podczas uruchamiania, a system nie uzyskał jeszcze adresów większych zakresów.
 
-  - **Adresy lokacji lokalnej**. Te adresy są używane w jednej lokacji i mają następujący format: FEC0::*SubnetID*:*InterfaceID*. Adresy lokacji lokalnej są używane na potrzeby adresowania wewnątrz witryny bez konieczności stosowania prefiksu globalnego.
+  - **Adresy lokalne lokacji**. Te adresy są używane w jednej lokacji i mają następujący format: FEC0::*SubnetID*:*InterfaceID*. Adresy lokalne lokacji są używane do adresowania wewnątrz lokacji bez konieczności stosowania prefiksu globalnego.
 
-  - **Adresy globalne emisji pojedynczej protokołu IPv6**. Te adresy mogą być używane w Internecie i ma następujący format: 010 (FP 3 bity) identyfikator TLA (13-bitowy) zarezerwowany (8 bitów), identyfikator umowy SLA ID NLA (24 bity) (16 bitów) *InterfaceID* (64-bitowy).
+  - **Adresy globalne IPv6 emisji pojedynczej**. Te adresy mogą być używane przez Internet i mają następujący format: 010 (FP, 3 bity) identyfikator TLA (13 bitów) zarezerwowany (8 bitów) identyfikator NLA (24 bity) Umowa SLA (16 bitów) *InterfaceID* (64 bitów).
 
-- **Adres multiemisji**. Identyfikator zestawu interfejsów (zazwyczaj należących do różnych węzłach). Pakiet wysyłane na ten adres jest dostarczane do wszystkich interfejsów, które są identyfikowane za pomocą adresu. Typy adresów multiemisji zastępują adresów IPv4 emisji.
+- **Adres multiemisji**. Identyfikator zestawu interfejsów (zwykle należący do różnych węzłów). Pakiet wysłany do tego adresu jest dostarczany do wszystkich interfejsów identyfikowanych przez adres. Typy adresów multiemisji zastępują adresy emisji IPv4.
 
-- **Adres emisji dowolnej**. Identyfikator zestawu interfejsów (zazwyczaj należących do różnych węzłach). Pakiet wysyłane na ten adres jest przekazywana do tylko jeden interfejs identyfikowanych przez ten adres. Jest to interfejs najbliższej identyfikowane za pomocą metryk routingu. Adresy emisji dowolnej są pobierane z przestrzeni adresowej emisji pojedynczej i są nie do odróżnienia składniowo. Interfejs zaadresowane wykonuje rozróżnienie między adresy emisji pojedynczej i emisji dowolnej, w zależności od jego konfiguracji.
+- **Adres emisji**. Identyfikator zestawu interfejsów (zwykle należący do różnych węzłów). Pakiet wysłany do tego adresu jest dostarczany tylko do jednego interfejsu identyfikowanego przez adres. Jest to najbliższy interfejs identyfikowany przez metryki routingu. Adresy emisji dowolnej są pobierane z przestrzeni adresowej emisji pojedynczej i nie są syntaktycznie odróżniane. Interfejs rozłożony wykonuje rozróżnienie między adresami emisji pojedynczej i emisji.
 
-Ogólnie rzecz biorąc węzeł ma zawsze adres połączenia lokalnego. Może mieć adres lokacji lokalnej i co najmniej jeden adres globalnego.
+Ogólnie rzecz biorąc, węzeł zawsze ma adres lokalny łącza. Może być adresem lokalnym lokacji i co najmniej jednym adresem globalnym.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Protokół IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [Gniazda](../../../docs/framework/network-programming/sockets.md)
+- [Protokół IPv6](internet-protocol-version-6.md)
+- [Gniazda](sockets.md)

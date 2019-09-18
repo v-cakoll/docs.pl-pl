@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 8aadcc213e92fd53490f639f37dc8d8f62762c2c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 63b00f8eb35fa58ea0257d5e996fc2c51a248040
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946483"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042584"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Automatyzacja interfejsu użytkownika a Microsoft Active Accessibility
 > [!NOTE]
@@ -110,7 +110,7 @@ ms.locfileid: "69946483"
 |ROLE_SYSTEM_OUTLINEITEM|Element drzewa|  
 |ROLE_SYSTEM_WINDOW|Okno|  
   
- Aby uzyskać więcej informacji na temat różnych typów formantów, zobacz [typy formantów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-types.md).  
+ Aby uzyskać więcej informacji na temat różnych typów formantów, zobacz [typy formantów automatyzacji interfejsu użytkownika](ui-automation-control-types.md).  
   
 <a name="States_and_Properties"></a>   
 ## <a name="states-and-properties"></a>Stany i właściwości  
@@ -176,7 +176,7 @@ ms.locfileid: "69946483"
 |STATE_SYSTEM_HOTTRACKED|Niedostępne w[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |STATE_SYSTEM_PRESSED|Niedostępne w[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
   
- Aby uzyskać pełną listę [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] identyfikatorów właściwości, zobacz [Omówienie właściwości automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+ Aby uzyskać pełną listę [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] identyfikatorów właściwości, zobacz [Omówienie właściwości automatyzacji interfejsu użytkownika](ui-automation-properties-overview.md).  
   
 <a name="uiautomation_events_compare"></a>   
 ## <a name="events"></a>Zdarzenia  
@@ -251,4 +251,4 @@ ms.locfileid: "69946483"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Podstawowe założenia automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/index.md)
+- [Podstawowe założenia automatyzacji interfejsu użytkownika](index.md)

@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28463bfd3e54e49461d9ce785d26e5dfca62e438
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6fba47c0ff6425a375715dcd4c08d62e0f7f598c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61722994"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046477"
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>Instrukcje: wykonywanie inicjalizacji obiektów z opóźnieniem
-<xref:System.Lazy%601?displayProperty=nameWithType> Klasa upraszcza pracę wykonywanie incjalizacji i wystąpienia obiektów. Inicjowanie obiektów w sposób z opóźnieniem, można uniknąć konieczności tworzenia ich w ogóle, jeśli nigdy nie są one potrzebne lub można odroczyć ich inicjowania, aż najpierw są one używane. Aby uzyskać więcej informacji, zobacz [inicjowania z opóźnieniem](../../../docs/framework/performance/lazy-initialization.md).  
+<xref:System.Lazy%601?displayProperty=nameWithType> Klasa upraszcza pracę wykonywaną podczas inicjowania z opóźnieniem i tworzenie wystąpienia obiektów. Inicjując obiekty w sposób opóźniony, można uniknąć konieczności ich tworzenia w ogóle, jeśli nigdy nie są potrzebne, lub można odroczyć ich inicjalizację do momentu pierwszego dostępu do nich. Aby uzyskać więcej informacji, zobacz [Inicjalizacja z opóźnieniem](lazy-initialization.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak zainicjować wartość składającą się z <xref:System.Lazy%601>. Przyjęto założenie, że zmienna z opóźnieniem nie konieczne może być w zależności od innego kodu, który ustawia `someCondition` zmiennej na wartość true lub false.  
+ Poniższy przykład pokazuje, jak zainicjować wartość za pomocą <xref:System.Lazy%601>. Załóżmy, że zmienna opóźniona może nie być wymagana, w zależności od innego kodu, który ustawia `someCondition` zmienną na wartość true lub false.  
   
 ```vb  
 Dim someCondition As Boolean = False  
@@ -71,7 +71,7 @@ End Sub
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak używać <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> klasy, aby zainicjować typu, która jest widoczna tylko dla bieżącego wystąpienia obiektu dla bieżącego wątku.  
+ Poniższy przykład pokazuje, <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> jak używać klasy do inicjowania typu, który jest widoczny tylko dla bieżącego wystąpienia obiektu w bieżącym wątku.  
   
  [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)]
  [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
@@ -79,4 +79,4 @@ End Sub
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>
-- [Inicjowanie z opóźnieniem](../../../docs/framework/performance/lazy-initialization.md)
+- [Inicjowanie z opóźnieniem](lazy-initialization.md)

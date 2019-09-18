@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f990c5194c2e5dc1422aab96c7608c019ae9855b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 84ae47b984d6a1a207e6678e30991073ba02a438
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894749"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044006"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Eksporter biblioteki typów)
 Eksporter biblioteki typów generuje bibliotekę typów, która opisuje typy zdefiniowane w zestawie środowiska uruchomieniowego języka wspólnego.  
   
- To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](developer-command-prompt-for-vs.md).  
   
  W wierszu polecenia wpisz następujące polecenie:  
   
@@ -64,11 +64,11 @@ tlbexp assemblyName [options]
   
  Cały zespół jest konwertowany na raz. Nie można użyć Tlbexp.exe do generowania informacji o typie dla podzbioru typów zdefiniowanych w zestawie.  
   
- Nie można użyć Tlbexp. exe do utworzenia biblioteki typów z zestawu, który został zaimportowany przy użyciu [importera biblioteki typów (Tlbimp. exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Zamiast tego należy odnieść się do oryginalnej biblioteki typów, która została importowana przy użyciu Tlbimp.exe. Można eksportować bibliotekę typów z zestawu, który odwołuje się do zestawów, które zostały importowane przy użyciu Tlbimp.exe. Zobacz przykłady poniżej.  
+ Nie można użyć Tlbexp. exe do utworzenia biblioteki typów z zestawu, który został zaimportowany przy użyciu [importera biblioteki typów (Tlbimp. exe)](tlbimp-exe-type-library-importer.md). Zamiast tego należy odnieść się do oryginalnej biblioteki typów, która została importowana przy użyciu Tlbimp.exe. Można eksportować bibliotekę typów z zestawu, który odwołuje się do zestawów, które zostały importowane przy użyciu Tlbimp.exe. Zobacz przykłady poniżej.  
   
  Tlbexp.exe umieszcza wygenerowane biblioteki typów w bieżącym katalogu roboczym lub katalogu określonym dla pliku wyjściowego. Pojedynczy zestaw może spowodować wygenerowanie kilku bibliotek typów.  
   
- Tlbexp.exe generuje bibliotekę typów, ale nie rejestruje jej. Jest to w przeciwieństwie do [narzędzia rejestracji zestawu (Regasm. exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md), które generuje i rejestruje bibliotekę typów. Aby wygenerować i zarejestrować bibliotekę typów w modelu COM, należy użyć Regasm.exe.  
+ Tlbexp.exe generuje bibliotekę typów, ale nie rejestruje jej. Jest to w przeciwieństwie do [narzędzia rejestracji zestawu (Regasm. exe)](regasm-exe-assembly-registration-tool.md), które generuje i rejestruje bibliotekę typów. Aby wygenerować i zarejestrować bibliotekę typów w modelu COM, należy użyć Regasm.exe.  
   
  Jeśli nie określisz `/win32` opcji lub `/win64` , program Tlbexp. exe generuje bibliotekę typów 32-bitową lub 64-bitową odpowiadającą typowi komputera, na którym wykonujesz kompilację (komputer 32-bitowy lub 64-bitowy). W celu wykonania wielu kompilacji można użyć `/win64` opcji na komputerze 32-bitowym, aby wygenerować bibliotekę typów 64-bitowej i można `/win32` użyć opcji na komputerze 64-bitowym, aby wygenerować bibliotekę typów 32-bitowego. W 32-bitowych bibliotekach <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> typów wartość jest ustawiana na. <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN32> W 64-bitowych bibliotekach <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> typów wartość jest ustawiana na. <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN64> Wszystkie przekształcenia typu danych (na przykład typy danych o rozmiarze wskaźnika, takie jak `IntPtr` i `UIntPtr`) są odpowiednio konwertowane.  
   
@@ -132,8 +132,8 @@ tlbexp Sample.dll
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
-- [Narzędzia](../../../docs/framework/tools/index.md)
-- [Regasm.exe (narzędzie rejestracji zestawów)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
+- [Narzędzia](index.md)
+- [Regasm.exe (narzędzie rejestracji zestawów)](regasm-exe-assembly-registration-tool.md)
 - [Podsumowanie konwersji zestawu na bibliotekę typów](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
-- [Tlbimp.exe (importer biblioteki typów)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
-- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Tlbimp.exe (importer biblioteki typów)](tlbimp-exe-type-library-importer.md)
+- [Wiersze polecenia](developer-command-prompt-for-vs.md)

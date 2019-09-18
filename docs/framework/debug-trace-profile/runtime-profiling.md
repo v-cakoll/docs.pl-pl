@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2486316cf582da09eaa8998d06efb8a4e4ea3a88
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 163022256dfbeb303a500d9c1d574054c5b550d7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967211"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052296"
 ---
 # <a name="runtime-profiling"></a>Profilowanie środowiska uruchomieniowego
 Profilowanie to metoda zbierania danych wydajności w dowolnym scenariuszu opracowywania i wdrażania. Ta sekcja jest przeznaczony dla deweloperów i administratorów systemu, którzy chcą zbierać informacje o wydajności aplikacji.  
@@ -34,7 +34,7 @@ Profilowanie to metoda zbierania danych wydajności w dowolnym scenariuszu oprac
   
 3. Na pasku narzędzi monitora wydajności kliknij ikonę **Dodaj** (znak plus), jeśli jest obecny. Jeśli go nie ma, kliknij prawym przyciskiem myszy w oknie monitorowanie i wybierz opcję **Dodaj liczniki** .  
   
-     Spowoduje to otwarcie okna dialogowego **Dodawanie liczników** . W polu listy **dostępne liczniki** są wyświetlane dostępne obiekty wydajności. Istnieje wiele wstępnie zdefiniowanych obiektów dla .NET Framework aplikacji, w tym tych dla zarządzania pamięcią (**pamięć programu .NET CLR**), współdziałanie (**Architektura .NET CLR Interop**), obsługa wyjątków (**wyjątki środowiska .NET CLR**) i wielowątkowość ( **.NET CLR LocksAndThreads**). Każdy obiekt wydajności zawiera szereg poszczególnych liczników wydajności. Listę liczników wydajności dostępnych w Monitorze wydajności można znaleźć w temacie [liczniki wydajności](../../../docs/framework/debug-trace-profile/performance-counters.md).  
+     Spowoduje to otwarcie okna dialogowego **Dodawanie liczników** . W polu listy **dostępne liczniki** są wyświetlane dostępne obiekty wydajności. Istnieje wiele wstępnie zdefiniowanych obiektów dla .NET Framework aplikacji, w tym tych dla zarządzania pamięcią (**pamięć programu .NET CLR**), współdziałanie (**Architektura .NET CLR Interop**), obsługa wyjątków (**wyjątki środowiska .NET CLR**) i wielowątkowość ( **.NET CLR LocksAndThreads**). Każdy obiekt wydajności zawiera szereg poszczególnych liczników wydajności. Listę liczników wydajności dostępnych w Monitorze wydajności można znaleźć w temacie [liczniki wydajności](performance-counters.md).  
   
 4. Zaznacz pole wyboru obok nazwy obiektu wydajności, aby wyświetlić listę poszczególnych obsługiwanych liczników wydajności.  
   
@@ -46,15 +46,15 @@ Profilowanie to metoda zbierania danych wydajności w dowolnym scenariuszu oprac
   
      W polu listy **wystąpienia wybranego obiektu** kliknij nazwę aplikacji, aby monitorować licznik wydajności dla tej aplikacji.  
   
-     Aby rozróżnić wiele wersji środowiska uruchomieniowego lub aby odróżnić wiele aplikacji o tej samej nazwie, należy również zmodyfikować klucz rejestru. Aby uzyskać więcej informacji, zobacz [liczniki wydajności i wewnątrzprocesowe aplikacje](../../../docs/framework/debug-trace-profile/performance-counters-and-in-process-side-by-side-applications.md)równoległe.  
+     Aby rozróżnić wiele wersji środowiska uruchomieniowego lub aby odróżnić wiele aplikacji o tej samej nazwie, należy również zmodyfikować klucz rejestru. Aby uzyskać więcej informacji, zobacz [liczniki wydajności i wewnątrzprocesowe aplikacje](performance-counters-and-in-process-side-by-side-applications.md)równoległe.  
   
 > [!NOTE]
 > Gdy podczas działania konsoli wydajności są instalowane nowe liczniki wydajności, Zatrzymaj i ponownie uruchom konsolę wydajności, aby wyświetlić nowe liczniki.  
   
- Jeśli chcesz utworzyć profil zestawu, który istnieje w strefie lub w udziale zdalnym, upewnij się, że zestaw zdalny ma pełne zaufanie na komputerze, na którym są uruchomione liczniki wydajności. Jeśli zestaw nie ma wystarczających relacji zaufania, liczniki wydajności nie będą działały. Informacje o przyznawaniu zaufania do różnych stref można znaleźć w temacie [Caspol. exe (Narzędzie zasad zabezpieczeń dostępu kodu)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
+ Jeśli chcesz utworzyć profil zestawu, który istnieje w strefie lub w udziale zdalnym, upewnij się, że zestaw zdalny ma pełne zaufanie na komputerze, na którym są uruchomione liczniki wydajności. Jeśli zestaw nie ma wystarczających relacji zaufania, liczniki wydajności nie będą działały. Informacje o przyznawaniu zaufania do różnych stref można znaleźć w temacie [Caspol. exe (Narzędzie zasad zabezpieczeń dostępu kodu)](../tools/caspol-exe-code-access-security-policy-tool.md).  
   
 > [!NOTE]
-> W systemach, w których zainstalowano .NET Framework 4, Monitor wydajności może nie wyświetlać danych dla liczników wydajności w niektórych kategoriach, takich jak **dane środowiska .NET CLR** i **sieci CLR platformy .NET**, dla aplikacji, które zostały opracowane przy użyciu platformy .NET. Framework 1,1. W takim przypadku można skonfigurować Monitor wydajności do wyświetlania tych danych przez dodanie [ \<elementu forcePerformanceCounterUniqueSharedMemoryReads >](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) do pliku konfiguracji aplikacji.  
+> W systemach, w których zainstalowano .NET Framework 4, Monitor wydajności może nie wyświetlać danych dla liczników wydajności w niektórych kategoriach, takich jak **dane środowiska .NET CLR** i **sieci CLR platformy .NET**, dla aplikacji, które zostały opracowane przy użyciu platformy .NET. Framework 1,1. W takim przypadku można skonfigurować Monitor wydajności do wyświetlania tych danych przez dodanie [ \<elementu forcePerformanceCounterUniqueSharedMemoryReads >](../configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) do pliku konfiguracji aplikacji.  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>Programowe odczytywanie i tworzenie liczników wydajności  
  .NET Framework zawiera klasy, których można użyć, aby programowo uzyskać dostęp do tych samych informacji o wydajności, które są dostępne w konsoli wydajności. Można również użyć tych klas do tworzenia niestandardowych liczników wydajności. W poniższej tabeli opisano niektóre klasy monitorowania wydajności, które są dostępne w .NET Framework.  
@@ -68,4 +68,4 @@ Profilowanie to metoda zbierania danych wydajności w dowolnym scenariuszu oprac
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Liczniki wydajności](../../../docs/framework/debug-trace-profile/performance-counters.md)
+- [Liczniki wydajności](performance-counters.md)

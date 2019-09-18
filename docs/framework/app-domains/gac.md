@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e94bb9d006febb4d8760ac481570dbed3a98341
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1a2ac0c7fb5f89c7d6b9daba8da7b37d1135acb6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972025"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053185"
 ---
 # <a name="global-assembly-cache"></a>Global Assembly Cache
 Każdy komputer, na którym jest zainstalowany środowisko uruchomieniowe języka wspólnego, ma pamięć podręczną kodu całego komputera o nazwie globalna pamięć podręczna zestawów. Globalna pamięć podręczna zestawów przechowuje zestawy specjalnie wyznaczonych do współużytkowania przez kilka aplikacji na komputerze.  
@@ -31,7 +31,7 @@ Każdy komputer, na którym jest zainstalowany środowisko uruchomieniowe język
   
 - Użyj Instalatora zaprojektowanego do pracy z globalną pamięcią podręczną zestawów. Jest to preferowana opcja instalowania zestawów w globalnej pamięci podręcznej zestawów.  
   
-- Użyj narzędzia deweloperskiego o nazwie [globalne narzędzie pamięci podręcznej zestawów (Gacutil. exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)dostarczonego przez Windows SDK.  
+- Użyj narzędzia deweloperskiego o nazwie [globalne narzędzie pamięci podręcznej zestawów (Gacutil. exe)](../tools/gacutil-exe-gac-tool.md)dostarczonego przez Windows SDK.  
   
     > [!NOTE]
     > W scenariuszach wdrażania należy użyć Instalator Windows, aby zainstalować zestawy w globalnej pamięci podręcznej zestawów. Narzędzia globalnej pamięci podręcznej zestawów można używać tylko w scenariuszach deweloperskich, ponieważ nie zapewnia to zliczania odwołań do zestawów i innych funkcji dostępnych podczas korzystania z Instalator Windows.  
@@ -45,5 +45,5 @@ Każdy komputer, na którym jest zainstalowany środowisko uruchomieniowe język
 ## <a name="see-also"></a>Zobacz także
 
 - [Zestawy w środowisku .NET](../../standard/assembly/index.md)
-- [Praca z zestawami i globalną pamięcią podręczną zestawów](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
+- [Praca z zestawami i globalną pamięcią podręczną zestawów](working-with-assemblies-and-the-gac.md)
 - [Zestawy o silnych nazwach](../../standard/assembly/strong-named.md)

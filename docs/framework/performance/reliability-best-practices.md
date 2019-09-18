@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2e24cd05bb1c1ed9425c9be8bc02cb92dc488005
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c8c47091d943aa0d710cec1af83e039bca9ee2d2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935732"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046256"
 ---
 # <a name="reliability-best-practices"></a>Najlepsze rozwiązania dotyczące niezawodności
 
@@ -91,7 +91,7 @@ Większość klas, które obecnie mają finalizator do zwykłego oczyszczenia do
 
 Należy pamiętać <xref:System.Runtime.InteropServices.SafeHandle> , że nie <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>zastępuje elementu.  Nadal istnieją potencjalne korzyści związane z rywalizacją o zasoby i wydajność w celu jawnego usuwania zasobów systemu operacyjnego.  Wystarczy pamiętać, `finally` że bloki, które jawnie usuwają zasoby, mogą nie zostać wykonane do ukończenia.
 
-<xref:System.Runtime.InteropServices.SafeHandle>umożliwia zaimplementowanie własnej <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> metody, która wykonuje zadania w celu zwolnienia dojścia, na przykład przekazanie stanu do procedury zwalniania obsługi systemu operacyjnego lub zwolnienie zestawu dojść w pętli.  Środowisko CLR gwarantuje, że ta metoda jest uruchamiana.  Jest odpowiedzialny za autora <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> implementacji, aby upewnić się, że dojście zostanie wydane we wszystkich okolicznościach. Niewykonanie tej czynności spowoduje przeciek uchwytu, co często skutkuje wyciekiem zasobów natywnych skojarzonych z dojściem. W związku z tym ma kluczowe <xref:System.Runtime.InteropServices.SafeHandle> znaczenie dla struktury klas pochodnych <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> , tak że implementacja nie wymaga przydziału żadnych zasobów, które mogą nie być dostępne w czasie wywołania. Należy zauważyć, że dozwolone jest wywoływanie metod, które mogą kończyć się niepowodzeniem w ramach implementacji <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> pod warunkiem, że kod może obsłużyć takie błędy i zakończyć kontrakt, aby zwolnić uchwyt macierzysty. Na potrzeby debugowania program <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> <xref:System.Boolean> ma wartość zwracaną, która może być ustawiona `false` na w przypadku napotkania błędu krytycznego, który uniemożliwia wydanie zasobu. Wykonanie tej czynności spowoduje aktywowanie [releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md) MDA, jeśli jest włączone, aby pomóc w zidentyfikowaniu problemu. Nie ma to wpływu na środowisko uruchomieniowe w żaden inny sposób; <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> nie zostanie wywołane ponownie dla tego samego zasobu i w związku z tym dojście zostanie ujawnione.
+<xref:System.Runtime.InteropServices.SafeHandle>umożliwia zaimplementowanie własnej <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> metody, która wykonuje zadania w celu zwolnienia dojścia, na przykład przekazanie stanu do procedury zwalniania obsługi systemu operacyjnego lub zwolnienie zestawu dojść w pętli.  Środowisko CLR gwarantuje, że ta metoda jest uruchamiana.  Jest odpowiedzialny za autora <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> implementacji, aby upewnić się, że dojście zostanie wydane we wszystkich okolicznościach. Niewykonanie tej czynności spowoduje przeciek uchwytu, co często skutkuje wyciekiem zasobów natywnych skojarzonych z dojściem. W związku z tym ma kluczowe <xref:System.Runtime.InteropServices.SafeHandle> znaczenie dla struktury klas pochodnych <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> , tak że implementacja nie wymaga przydziału żadnych zasobów, które mogą nie być dostępne w czasie wywołania. Należy zauważyć, że dozwolone jest wywoływanie metod, które mogą kończyć się niepowodzeniem w ramach implementacji <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> pod warunkiem, że kod może obsłużyć takie błędy i zakończyć kontrakt, aby zwolnić uchwyt macierzysty. Na potrzeby debugowania program <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> <xref:System.Boolean> ma wartość zwracaną, która może być ustawiona `false` na w przypadku napotkania błędu krytycznego, który uniemożliwia wydanie zasobu. Wykonanie tej czynności spowoduje aktywowanie [releaseHandleFailed](../debug-trace-profile/releasehandlefailed-mda.md) MDA, jeśli jest włączone, aby pomóc w zidentyfikowaniu problemu. Nie ma to wpływu na środowisko uruchomieniowe w żaden inny sposób; <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> nie zostanie wywołane ponownie dla tego samego zasobu i w związku z tym dojście zostanie ujawnione.
 
 <xref:System.Runtime.InteropServices.SafeHandle>nie jest odpowiednia w niektórych kontekstach.  Ponieważ metoda może być uruchamiana <xref:System.GC> w wątku finalizatora, wszelkie uchwyty, które są wymagane do zwolnienia w określonym wątku, <xref:System.Runtime.InteropServices.SafeHandle>nie powinny być opakowane w. <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>
 
@@ -316,4 +316,4 @@ Wykonanie tej czynności powoduje, że kompilator just in Time przygotowuje cał
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.ConstrainedExecution>
-- [Atrybuty ochrony hosta i programowanie SQL Server](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)
+- [Atrybuty ochrony hosta i programowanie SQL Server](sql-server-programming-and-host-protection-attributes.md)

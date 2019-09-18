@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29739625d29db6dc7c3876007f1e733b15f5c026
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 17465b07172788f18a432784653afadda18467fe
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970991"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045690"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Tworzenie zestawów satelickich dla aplikacji klasycznych
 
@@ -54,7 +54,7 @@ Model gwiazdy i gwiazdy wymaga umieszczenia zasobów w określonych lokalizacjac
 
 - Informacje o kulturze zestawu satelickiego muszą być zawarte w metadanych zestawu. Aby zapisać nazwę kultury w metadanych zestawu satelickiego, należy określić `/culture` opcję przy użyciu [konsolidatora zestawu](../tools/al-exe-assembly-linker.md) do osadzenia zasobów w zestawie satelickim.
 
-Na poniższej ilustracji przedstawiono przykładową strukturę katalogów i wymagania dotyczące lokalizacji dla aplikacji, które nie są instalowane w [globalnej pamięci podręcznej zestawów](../../framework/app-domains/gac.md). Elementy z rozszerzeniami. txt i. resources nie będą dostarczane z aplikacją końcową. Są to pośrednie pliki zasobów używane do tworzenia końcowych zestawów zasobów satelitarnych. W tym przykładzie można zastąpić pliki RESX dla plików txt. Aby uzyskać więcej informacji, zobacz [pakowanie i wdrażanie zasobów](packaging-and-deploying-resources-in-desktop-apps.md).
+Na poniższej ilustracji przedstawiono przykładową strukturę katalogów i wymagania dotyczące lokalizacji dla aplikacji, które nie są instalowane w [globalnej pamięci podręcznej zestawów](../app-domains/gac.md). Elementy z rozszerzeniami. txt i. resources nie będą dostarczane z aplikacją końcową. Są to pośrednie pliki zasobów używane do tworzenia końcowych zestawów zasobów satelitarnych. W tym przykładzie można zastąpić pliki RESX dla plików txt. Aby uzyskać więcej informacji, zobacz [pakowanie i wdrażanie zasobów](packaging-and-deploying-resources-in-desktop-apps.md).
 
 Na poniższej ilustracji przedstawiono katalog zestawu satelickiego:
 
@@ -95,8 +95,8 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 2. Aby wskazać, że angielski (EN) jest kulturą domyślną aplikacji, Dodaj następujący <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> atrybut do pliku AssemblyInfo aplikacji lub do głównego pliku kodu źródłowego, który zostanie skompilowany do głównego zestawu aplikacji.
   
-     [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
-     [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
+    [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
+    [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
   
 3. Dodaj obsługę dodatkowych kultur (EN-US, fr-FR i ru-RU) do aplikacji w następujący sposób:  
   
@@ -150,17 +150,19 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
  Następnie można uruchomić przykład. Spowoduje to losowo przetworzenie jednej z obsługiwanych kultur w bieżącej kulturze i wyświetlenie zlokalizowanego powitania.
   
 <a name="SN"></a>   
+
 ## <a name="installing-satellite-assemblies-in-the-global-assembly-cache"></a>Instalowanie zestawów satelickich w globalnej pamięci podręcznej zestawów  
- Zamiast instalować zestawy w lokalnym podkatalogu aplikacji, można je zainstalować w globalnej pamięci podręcznej zestawów. Jest to szczególnie przydatne, jeśli dysponujesz bibliotekami klas i zestawami zasobów biblioteki klas, które są używane przez wiele aplikacji.
+Zamiast instalować zestawy w lokalnym podkatalogu aplikacji, można je zainstalować w globalnej pamięci podręcznej zestawów. Jest to szczególnie przydatne, jeśli dysponujesz bibliotekami klas i zestawami zasobów biblioteki klas, które są używane przez wiele aplikacji.
   
- Instalowanie zestawów w globalnej pamięci podręcznej zestawów wymaga posiadania silnych nazw. Zestawy o silnych nazwach są podpisane przy użyciu prawidłowej pary kluczy publiczny/prywatny. Zawierają informacje o wersji używane przez środowisko uruchomieniowe do określenia zestawu, który ma być używany w celu spełnienia żądania powiązania. Aby uzyskać więcej informacji na temat silnych nazw i wersji, zobacz [wersja zestawu](../../standard/assembly/versioning.md). Aby uzyskać więcej informacji o silnych nazwach, zobacz [zestawy o silnych nazwach](../../standard/assembly/strong-named.md).
+Instalowanie zestawów w globalnej pamięci podręcznej zestawów wymaga posiadania silnych nazw. Zestawy o silnych nazwach są podpisane przy użyciu prawidłowej pary kluczy publiczny/prywatny. Zawierają informacje o wersji używane przez środowisko uruchomieniowe do określenia zestawu, który ma być używany w celu spełnienia żądania powiązania. Aby uzyskać więcej informacji na temat silnych nazw i wersji, zobacz [wersja zestawu](../../standard/assembly/versioning.md). Aby uzyskać więcej informacji o silnych nazwach, zobacz [zestawy o silnych nazwach](../../standard/assembly/strong-named.md).
   
- Podczas tworzenia aplikacji jest mało prawdopodobne, że będziesz mieć dostęp do ostatniej pary kluczy publiczny/prywatny. W celu zainstalowania zestawu satelickiego w globalnej pamięci podręcznej zestawów i upewnienia się, że działa zgodnie z oczekiwaniami, można użyć techniki o nazwie opóźnione podpisywanie. Gdy opóźniasz podpisywanie zestawu w czasie kompilacji, Zarezerwuj miejsce w pliku dla sygnatury silnej nazwy. Rzeczywiste podpisywanie jest opóźnione aż do późniejszego momentu udostępnienia ostatniej pary kluczy publiczny/prywatny. Aby uzyskać więcej informacji na temat opóźnionego podpisywania, zobacz [opóźnienie podpisywania zestawu](../../standard/assembly/delay-sign.md).
+Podczas tworzenia aplikacji jest mało prawdopodobne, że będziesz mieć dostęp do ostatniej pary kluczy publiczny/prywatny. W celu zainstalowania zestawu satelickiego w globalnej pamięci podręcznej zestawów i upewnienia się, że działa zgodnie z oczekiwaniami, można użyć techniki o nazwie opóźnione podpisywanie. Gdy opóźniasz podpisywanie zestawu w czasie kompilacji, Zarezerwuj miejsce w pliku dla sygnatury silnej nazwy. Rzeczywiste podpisywanie jest opóźnione aż do późniejszego momentu udostępnienia ostatniej pary kluczy publiczny/prywatny. Aby uzyskać więcej informacji na temat opóźnionego podpisywania, zobacz [opóźnienie podpisywania zestawu](../../standard/assembly/delay-sign.md).
   
 ### <a name="obtaining-the-public-key"></a>Uzyskiwanie klucza publicznego  
- Aby opóźnić podpisywanie zestawu, musisz mieć dostęp do klucza publicznego. Możesz uzyskać rzeczywisty klucz publiczny z organizacji w firmie, który będzie podpisywać ostateczne lub utworzyć klucz publiczny za pomocą [Narzędzia silnej nazwy (SN. exe)](../tools/sn-exe-strong-name-tool.md).
+
+Aby opóźnić podpisywanie zestawu, musisz mieć dostęp do klucza publicznego. Możesz uzyskać rzeczywisty klucz publiczny z organizacji w firmie, który będzie podpisywać ostateczne lub utworzyć klucz publiczny za pomocą [Narzędzia silnej nazwy (SN. exe)](../tools/sn-exe-strong-name-tool.md).
   
- Następujące polecenie SN. exe tworzy parę kluczy publiczny/prywatny. Opcja **– k** określa, że SN. exe powinien utworzyć nową parę kluczy i zapisać ją w pliku o nazwie TestKeyPair. snk.
+Następujące polecenie SN. exe tworzy parę kluczy publiczny/prywatny. Opcja **– k** określa, że SN. exe powinien utworzyć nową parę kluczy i zapisać ją w pliku o nazwie TestKeyPair. snk.
   
 ```console
 sn –k TestKeyPair.snk
@@ -196,7 +198,7 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
 
 ### <a name="installing-a-satellite-assembly-in-the-global-assembly-cache"></a>Instalowanie zestawu satelickiego w globalnej pamięci podręcznej zestawów
 
-Gdy środowisko uruchomieniowe wyszukuje zasoby w procesie rezerwowym zasobów, najpierw przeszukuje [globalną pamięć podręczną zestawów](../../framework/app-domains/gac.md) . (Aby uzyskać więcej informacji, zobacz sekcję "proces rezerwowy zasobów" tematu [pakowanie i wdrażanie zasobów](packaging-and-deploying-resources-in-desktop-apps.md) ). Gdy tylko zestaw satelicki zostanie podpisany przy użyciu silnej nazwy, można go zainstalować w globalnej pamięci podręcznej zestawów przy użyciu [Global Assembly Cache Tool (Gacutil. exe)](../tools/gacutil-exe-gac-tool.md).
+Gdy środowisko uruchomieniowe wyszukuje zasoby w procesie rezerwowym zasobów, najpierw przeszukuje [globalną pamięć podręczną zestawów](../app-domains/gac.md) . (Aby uzyskać więcej informacji, zobacz sekcję "proces rezerwowy zasobów" tematu [pakowanie i wdrażanie zasobów](packaging-and-deploying-resources-in-desktop-apps.md) ). Gdy tylko zestaw satelicki zostanie podpisany przy użyciu silnej nazwy, można go zainstalować w globalnej pamięci podręcznej zestawów przy użyciu [Global Assembly Cache Tool (Gacutil. exe)](../tools/gacutil-exe-gac-tool.md).
 
 Następujące polecenie Gacutil. exe instaluje StringLibrary. resources. dll w globalnej pamięci podręcznej zestawów:
 

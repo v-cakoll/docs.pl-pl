@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3b396210cf77cacf3d03439af24de40d2dadeee
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: f4c44bdb4be4c90c20cd6bdb56db6cd3380535c7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971170"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045617"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Pobieranie zasobów w aplikacjach klasycznych
 W przypadku pracy z zlokalizowanymi zasobami w .NET Framework aplikacjach klasycznych najlepiej jest spakować zasoby dla kultury domyślnej lub neutralnej z zestawem głównym i utworzyć oddzielny zestaw satelicki dla każdego języka lub kultury obsługiwanej przez aplikację. Następnie można użyć <xref:System.Resources.ResourceManager> klasy zgodnie z opisem w następnej sekcji, aby uzyskać dostęp do nazwanych zasobów. Jeśli nie zdecydujesz się na osadzanie zasobów w głównym zestawie i zestawach satelickich, możesz również uzyskać dostęp do plików binarnych. resources bezpośrednio, zgodnie z opisem w sekcji [pobieranie zasobów z plików. resources](#from_file) w dalszej części tego artykułu.  Aby pobrać zasoby w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacjach, zobacz [Tworzenie i pobieranie zasobów w aplikacjach ze sklepu Windows](https://go.microsoft.com/fwlink/p/?LinkID=241674) w centrum deweloperów systemu Windows.  
@@ -38,7 +38,7 @@ W przypadku pracy z zlokalizowanymi zasobami w .NET Framework aplikacjach klasyc
   
 - Przeciążenie, które ma dwa parametry: ciąg zawierający nazwę zasobu oraz <xref:System.Globalization.CultureInfo> obiekt, który reprezentuje kulturę, której zasób ma zostać pobrany. Jeśli nie można znaleźć zestawu zasobów dla tej kultury, Menedżer zasobów używa reguł powrotu do pobrania odpowiedniego zasobu. Aby uzyskać więcej informacji, zobacz <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>metody <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>, i <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> .  
   
- Menedżer zasobów używa procesu rezerwowego zasobów do kontrolowania sposobu, w jaki aplikacja pobiera zasoby specyficzne dla kultury. Aby uzyskać więcej informacji, zobacz sekcję "proces rezerwowy zasobów" w artykule [pakowanie i wdrażanie zasobów](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Aby uzyskać informacje o tworzeniu wystąpienia <xref:System.Resources.ResourceManager> obiektu, zobacz sekcję "Tworzenie wystąpienia obiektu ResourceManager" <xref:System.Resources.ResourceManager> w temacie dotyczącym klas.  
+ Menedżer zasobów używa procesu rezerwowego zasobów do kontrolowania sposobu, w jaki aplikacja pobiera zasoby specyficzne dla kultury. Aby uzyskać więcej informacji, zobacz sekcję "proces rezerwowy zasobów" w artykule [pakowanie i wdrażanie zasobów](packaging-and-deploying-resources-in-desktop-apps.md). Aby uzyskać informacje o tworzeniu wystąpienia <xref:System.Resources.ResourceManager> obiektu, zobacz sekcję "Tworzenie wystąpienia obiektu ResourceManager" <xref:System.Resources.ResourceManager> w temacie dotyczącym klas.  
   
 ### <a name="retrieving-string-data-an-example"></a>Pobieranie danych ciągu: Przykład  
  Poniższy przykład wywołuje metodę, <xref:System.Resources.ResourceManager.GetString%28System.String%29> aby pobrać zasoby ciągów dla bieżącej kultury interfejsu użytkownika. Zawiera on neutralny zasób ciągu dla kultur angielskiej (Stany Zjednoczone) i zlokalizowanych zasobów dla kultur francuski (Francja) i rosyjski (Rosja). Następujący zasób w języku angielskim (Stany Zjednoczone) znajduje się w pliku o nazwie Strings. txt:  
@@ -138,11 +138,11 @@ GetObject.exe
   
  Ten <xref:System.Resources.SatelliteContractVersionAttribute> atrybut zapewnia obsługę przechowywania wersji dla zestawu głównego. Określenie tego atrybutu w głównym zestawie aplikacji umożliwia aktualizowanie i ponowne wdrażanie zestawu głównego bez aktualizowania zestawów satelickich. Po zaktualizowaniu zestawu głównego należy zwiększyć numer wersji zestawu głównego, ale pozostawić numer wersji kontraktu satelitarnego bez zmian. Gdy Menedżer zasobów pobiera żądane zasoby, ładuje wersję zestawu satelickiego określoną przez ten atrybut.  
   
- Zestawy zasad wydawcy zapewniają obsługę wersji dla zestawów satelickich. Można zaktualizować i ponownie wdrożyć zestaw satelicki bez aktualizowania zestawu głównego. Po zaktualizowaniu zestawu satelickiego Zwiększ jego numer wersji i wyślij go z zestawem zasad wydawcy. W zestawie zasad wydawcy Określ, że nowy zestaw satelicki jest zgodny z poprzednią wersją. Menedżer zasobów użyje <xref:System.Resources.SatelliteContractVersionAttribute> atrybutu, aby określić wersję zestawu satelickiego, ale moduł ładujący zestawu zostanie powiązany z wersją zestawu satelickiego określoną przez zasady wydawcy. Aby uzyskać więcej informacji na temat zestawów zasad wydawcy, zobacz [Tworzenie pliku zasad wydawcy](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md).  
+ Zestawy zasad wydawcy zapewniają obsługę wersji dla zestawów satelickich. Można zaktualizować i ponownie wdrożyć zestaw satelicki bez aktualizowania zestawu głównego. Po zaktualizowaniu zestawu satelickiego Zwiększ jego numer wersji i wyślij go z zestawem zasad wydawcy. W zestawie zasad wydawcy Określ, że nowy zestaw satelicki jest zgodny z poprzednią wersją. Menedżer zasobów użyje <xref:System.Resources.SatelliteContractVersionAttribute> atrybutu, aby określić wersję zestawu satelickiego, ale moduł ładujący zestawu zostanie powiązany z wersją zestawu satelickiego określoną przez zasady wydawcy. Aby uzyskać więcej informacji na temat zestawów zasad wydawcy, zobacz [Tworzenie pliku zasad wydawcy](../configure-apps/how-to-create-a-publisher-policy.md).  
   
- Aby włączyć obsługę pełnej wersji zestawu, zalecamy wdrożenie zestawów o silnych nazwach w [globalnej pamięci podręcznej zestawów](../../../docs/framework/app-domains/gac.md) i wdrażanie zestawów, które nie mają silnych nazw w katalogu aplikacji. Jeśli chcesz wdrożyć zestawy o silnych nazwach w katalogu aplikacji, nie będzie można zwiększyć numeru wersji zestawu satelickiego podczas aktualizowania zestawu. Zamiast tego należy wykonać aktualizację w miejscu, w której Zastąp istniejący kod zaktualizowanym kodem i zachować ten sam numer wersji. Na przykład jeśli chcesz zaktualizować wersję 1.0.0.0 zestawu satelickiego za pomocą w pełni określonej nazwy zestawu "MojaApl. resources, Version = 1.0.0.0, Culture = de, PublicKeyToken = b03f5f11d50a3a", Zastąp ją zainstalowaną wersją MojaApl. resources. dll, która została skompilowane z tą samą, w pełni określoną nazwą zestawu "MojaApl. resources, Version = 1.0.0.0, Culture = de, PublicKeyToken = b03f5f11d50a3a". Należy pamiętać, że używanie aktualizacji w miejscu w plikach zestawu satelickiego utrudnia aplikacji dokładne określenie wersji zestawu satelickiego.  
+ Aby włączyć obsługę pełnej wersji zestawu, zalecamy wdrożenie zestawów o silnych nazwach w [globalnej pamięci podręcznej zestawów](../app-domains/gac.md) i wdrażanie zestawów, które nie mają silnych nazw w katalogu aplikacji. Jeśli chcesz wdrożyć zestawy o silnych nazwach w katalogu aplikacji, nie będzie można zwiększyć numeru wersji zestawu satelickiego podczas aktualizowania zestawu. Zamiast tego należy wykonać aktualizację w miejscu, w której Zastąp istniejący kod zaktualizowanym kodem i zachować ten sam numer wersji. Na przykład jeśli chcesz zaktualizować wersję 1.0.0.0 zestawu satelickiego za pomocą w pełni określonej nazwy zestawu "MojaApl. resources, Version = 1.0.0.0, Culture = de, PublicKeyToken = b03f5f11d50a3a", Zastąp ją zainstalowaną wersją MojaApl. resources. dll, która została skompilowane z tą samą, w pełni określoną nazwą zestawu "MojaApl. resources, Version = 1.0.0.0, Culture = de, PublicKeyToken = b03f5f11d50a3a". Należy pamiętać, że używanie aktualizacji w miejscu w plikach zestawu satelickiego utrudnia aplikacji dokładne określenie wersji zestawu satelickiego.  
   
- Aby uzyskać więcej informacji o wersji zestawu, zobacz [przechowywanie wersji zestawu](../../standard/assembly/versioning.md) i [jak środowisko uruchomieniowe lokalizuje zestawy](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ Aby uzyskać więcej informacji o wersji zestawu, zobacz [przechowywanie wersji zestawu](../../standard/assembly/versioning.md) i [jak środowisko uruchomieniowe lokalizuje zestawy](../deployment/how-the-runtime-locates-assemblies.md).  
   
 <a name="from_file"></a>   
 ## <a name="retrieving-resources-from-resources-files"></a>Pobieranie zasobów z plików Resources  
@@ -204,7 +204,7 @@ csc Example.cs
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Resources.ResourceManager>
-- [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)
-- [Opakowanie i wdrażanie zasobów](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Zasoby w aplikacjach klasycznych](index.md)
+- [Opakowanie i wdrażanie zasobów](packaging-and-deploying-resources-in-desktop-apps.md)
+- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../deployment/how-the-runtime-locates-assemblies.md)
 - [Tworzenie i pobieranie zasobów w aplikacjach ze sklepu Windows](https://go.microsoft.com/fwlink/p/?LinkID=241674)

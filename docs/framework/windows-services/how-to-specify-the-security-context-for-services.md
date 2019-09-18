@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-ms.openlocfilehash: 88dc9c40a2b8ff0ac9bba26c991ba2a4ac2dcb43
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dd2a9c4485e151d4cb1c9d5ae3a95a69fcc416d4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952437"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053580"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>Instrukcje: Określanie kontekstu zabezpieczeń dla usług
 Domyślnie usługi są uruchamiane w innym kontekście zabezpieczeń niż zalogowany użytkownik. Usługi są uruchamiane w kontekście domyślnego konta systemowego o nazwie `LocalSystem`, które daje im różne uprawnienia dostępu do zasobów systemowych niż użytkownik. Możesz zmienić to zachowanie, aby określić inne konto użytkownika, w ramach którego ma zostać uruchomiona usługa.  
@@ -35,7 +35,7 @@ Domyślnie usługi są uruchamiane w innym kontekście zabezpieczeń niż zalogo
   
 ### <a name="to-specify-the-security-context-for-a-service"></a>Aby określić kontekst zabezpieczeń dla usługi  
   
-1. Po utworzeniu usługi należy dodać do niej niezbędne Instalatory. Aby uzyskać więcej informacji, zobacz [jak: Dodaj Instalatory do aplikacji](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)usługi.  
+1. Po utworzeniu usługi należy dodać do niej niezbędne Instalatory. Aby uzyskać więcej informacji, zobacz [jak: Dodaj Instalatory do aplikacji](how-to-add-installers-to-your-service-application.md)usługi.  
   
 2. W projektancie uzyskaj dostęp `ProjectInstaller` do klasy i kliknij Instalatora procesów usługi dla usługi, z którą pracujesz.  
   
@@ -46,6 +46,6 @@ Domyślnie usługi są uruchamiane w innym kontekście zabezpieczeń niż zalogo
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Instrukcje: Dodawanie instalatorów do aplikacji usługi](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
-- [Instrukcje: Tworzenie usług systemu Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Wprowadzenie do aplikacji usług systemu Windows](introduction-to-windows-service-applications.md)
+- [Instrukcje: Dodawanie instalatorów do aplikacji usługi](how-to-add-installers-to-your-service-application.md)
+- [Instrukcje: Tworzenie usług systemu Windows](how-to-create-windows-services.md)

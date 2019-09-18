@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bf244271010a7eb47a6c7b283a84c405108d803
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 002434cf51b221a456c8752b5b1388912f875a28
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041464"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045754"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Przewodnik: Emitowanie kodu w scenariuszach częściowo zaufanych
 
@@ -35,13 +35,13 @@ W instruktażu przedstawiono następujące zagadnienia:
 - [Konfigurowanie prostej piaskownicy do testowania częściowo zaufanego kodu](#Setting_up).
 
   > [!IMPORTANT]
-  > Jest to prosty sposób na eksperymentowanie z kodem w częściowej relacji zaufania. Aby uruchomić kod, który rzeczywiście pochodzi z niezaufanych lokalizacji, zobacz [How to: Uruchom częściowo zaufany kod w piaskownicy](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
+  > Jest to prosty sposób na eksperymentowanie z kodem w częściowej relacji zaufania. Aby uruchomić kod, który rzeczywiście pochodzi z niezaufanych lokalizacji, zobacz [How to: Uruchom częściowo zaufany kod w piaskownicy](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
 
 - [Uruchamianie kodu w domenach częściowo zaufanych aplikacji](#Running_code).
 
 - [Używanie anonimowo obsługiwanych metod dynamicznych do emisji i wykonywania kodu w częściowej relacji zaufania](#Using_methods).
 
-Aby uzyskać więcej informacji na temat emitowania kodu w scenariuszach częściowej relacji zaufania, zobacz [problemy z zabezpieczeniami w emisji odbicia](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).
+Aby uzyskać więcej informacji na temat emitowania kodu w scenariuszach częściowej relacji zaufania, zobacz [problemy z zabezpieczeniami w emisji odbicia](security-issues-in-reflection-emit.md).
 
 Aby zapoznać się z pełną listą kodu podanego w tych procedurach, zobacz [sekcję przykład](#Example) na końcu tego przewodnika.
 
@@ -71,7 +71,7 @@ Poniższa procedura służy do tworzenia domeny aplikacji w trybie piaskownicy, 
 2. <xref:System.AppDomainSetup> Utwórz obiekt, aby zainicjować domenę aplikacji przy użyciu ścieżki aplikacji.
 
     > [!IMPORTANT]
-    > Dla uproszczenia ten przykład kodu używa bieżącego folderu. Aby uruchomić kod, który rzeczywiście pochodzi z Internetu, użyj oddzielnego folderu dla niezaufanego kodu, zgodnie z opisem w [temacie How to: Uruchom częściowo zaufany kod w piaskownicy](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
+    > Dla uproszczenia ten przykład kodu używa bieżącego folderu. Aby uruchomić kod, który rzeczywiście pochodzi z Internetu, użyj oddzielnego folderu dla niezaufanego kodu, zgodnie z opisem w [temacie How to: Uruchom częściowo zaufany kod w piaskownicy](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
 
     [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
     [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]
@@ -225,5 +225,5 @@ To porównanie pokazuje, <xref:System.Security.Permissions.ReflectionPermissionF
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Problemy związane z zabezpieczeniami w emisji odbicia](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
-- [Instrukcje: Uruchamianie częściowo zaufanego kodu w piaskownicy](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Problemy związane z zabezpieczeniami w emisji odbicia](security-issues-in-reflection-emit.md)
+- [Instrukcje: Uruchamianie częściowo zaufanego kodu w piaskownicy](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

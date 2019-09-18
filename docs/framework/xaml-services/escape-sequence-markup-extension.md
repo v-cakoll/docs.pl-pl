@@ -1,5 +1,5 @@
 ---
-title: '{} Znak ucieczki sekwencja — rozszerzenie znaczników'
+title: '{}Sekwencja unikowa — rozszerzenie znaczników'
 ms.date: 03/30/2017
 f1_keywords:
 - '{}'
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - escape sequence [XAML Services]
 ms.assetid: 3ce3e2ad-a868-43f9-9c98-b29561cb146e
-ms.openlocfilehash: 9f6743dd8a82891ac2233978550e5679130de0be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0646c62a1342eb160d1967e86ac286429013f3c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855612"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053875"
 ---
 # <a name="-escape-sequence--markup-extension"></a>{}, sekwencja ucieczki/rozszerzenie znaczników
-Sekwencja unikowa XAML zawiera wartości atrybutów. Sekwencja unikowa umożliwia kolejnych wartości w atrybucie należy interpretować jako literał.  
+Udostępnia sekwencję ucieczki XAML dla wartości atrybutów. Sekwencja ucieczki pozwala, aby kolejne wartości w atrybucie były interpretowane jako literał.  
   
 ## <a name="xaml-attribute-usage"></a>Użycie atrybutu języka XAML  
   
-```xml  
+```xaml  
 <object property="{} literalValue" .../>  
 ```  
   
 ## <a name="xaml-property-element-usage"></a>Użycie elementu właściwości języka XAML  
   
-```  
+```xaml  
 <object>  
   <object.property>  
     {} literalValue  
@@ -41,20 +41,20 @@ Sekwencja unikowa XAML zawiera wartości atrybutów. Sekwencja unikowa umożliwi
   
 |||  
 |-|-|  
-|*literalValue*|Literał ciągu następujący sekwencji unikowej. Ten ciąg zawiera zazwyczaj otwierania lub zamykania nawias klamrowy ({lub}).|  
+|*literalValue*|Ciąg literału, który następuje po sekwencji ucieczki. Zazwyczaj ten ciąg zawiera otwarty lub zamykający nawias klamrowy ({lub}).|  
   
 ## <a name="remarks"></a>Uwagi  
- Sekwencja unikowa ({}) jest używany, tak aby otwierający nawias klamrowy ({}) może być używany jako znak literałowy, w XAML.  
+ Sekwencja ucieczki ({}) jest używana, aby w języku XAML można było użyć otwierającego nawiasu klamrowego ({) jako znaku literału.  
   
- Czytelnicy XAML zazwyczaj używają otwierający nawias klamrowy ({}) do określenia punktu wejścia rozszerzenia znaczników; jednak najpierw sprawdzają następny znak w celu ustalenia, czy jest ono zamykającego nawiasu klamrowego (}). Tylko wtedy, gdy dwa nawiasów ({}) czy sąsiadujących, są one traktowane jako sekwencji unikowej.  
+ Czytelnicy XAML zazwyczaj używają nawiasu otwierającego ({) do określenia punktu wejścia rozszerzenia znaczników, jednak najpierw sprawdzają następny znak, aby określić, czy jest to zamykający nawias klamrowy (}). Tylko wtedy, gdy dwa nawiasy{}klamrowe () są przyległe, są traktowane jako sekwencje ucieczki.  
   
- Jeśli sekwencja unikowa czytnika XAML ma być przetwarzana w pozostałej części ciągu jako ciąg. Jednak jeśli sekwencja unikowa jest stosowany do składowej, która ma konwertera typów, ciąg może zostać poddane konwersji typu, gdy jest on interpretowany przez Edytor XAML.  
+ Jeśli zostanie wykryta sekwencja ucieczki, czytnik XAML powinien przetworzyć pozostałą część ciągu jako ciąg. Jeśli jednak sekwencja ucieczki zostanie zastosowana do elementu członkowskiego, który ma konwerter typu, ciąg może zostać przekształcony na konwersję typu, gdy jest interpretowany przez moduł zapisujący XAML.  
   
- Sekwencja unikowa nie jest rozszerzeniem znacznika i nie jest obsługiwane przez klasę. Jest jednak Konwencji, który należy przestrzegać czytelnicy XAML (w tym niestandardowych czytelnicy XAML).  
+ Sekwencja ucieczki nie jest rozszerzeniem znaczników i nie jest obsługiwana przez klasę. Jednak jest to Konwencja, którą powinni przestrzegać czytelnicy XAML (w tym niestandardowe czytniki XAML).  
   
- Znak cudzysłowu (") nie może służyć jako sekwencja unikowa w ten sposób. Jeśli musisz ustawić znak cudzysłowu jako wartość właściwości dla właściwości noncontent, należy użyć składni elementu właściwości i umieścić znak cudzysłowu jako ciąg w elemencie właściwości lub Użyj jednostki znaków XML. Właściwość zawartości znaku cudzysłowu mogą być całej zawartości.  
+ W ten sposób nie można użyć znaku cudzysłowu (") jako sekwencji unikowej. Jeśli musisz ustawić znak cudzysłowu jako wartość właściwości dla właściwości niezawartości, użyj składni elementu właściwości i umieść znak cudzysłowu jako ciąg wewnątrz elementu Property lub Użyj jednostki znaku XML. W przypadku właściwości content cudzysłowem może być cała zawartość.  
   
- Sekwencja unikowa ({}) często jest wymagany podczas określania typu XML, który musi zawierać kwalifikator przestrzeni nazw w miejscu, gdzie mogą być wyświetlane jako rozszerzenie znacznika XAML. Dotyczy to również początku wartości atrybutu XAML oraz rozszerzeniem znacznika bezpośrednio po znaku równości (=). Poniższy przykład pokazuje sekwencji unikowych dla przestrzeni nazw XML, który pojawia się na początku wartości atrybutu XAML.  
+ Sekwencja ucieczki ({}) jest często wymagana podczas określania typu XML, który musi zawierać kwalifikator przestrzeni nazw w lokalizacji, w której może się pojawić rozszerzenie XAML markup. Obejmuje to początek wartości atrybutu XAML i w rozszerzeniu znacznika bezpośrednio po znaku równości (=). Poniższy przykład pokazuje sekwencje ucieczki dla przestrzeni nazw XML, która pojawia się na początku wartości atrybutu XAML.  
   
  [!code-xaml[XLINQExample#StackPanelResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
   

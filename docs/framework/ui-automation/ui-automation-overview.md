@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 968660f2fa043ee4028cb144f368d9380729ffef
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: 4a88cf077c061746f9bc9f4aa0122d2f09b6fbd7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133801"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042278"
 ---
 # <a name="ui-automation-overview"></a>Przegląd automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -45,12 +45,12 @@ Automatyzacja interfejsu użytkownika zapewnia pełną funkcjonalność obsługi
   
 |`Section`|Temat|Odbiorcy|  
 |-------------|--------------------|--------------|  
-|[Podstawy automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/index.md) (w tej sekcji)|Szerokie przeglądy koncepcji.|Wszystkie.|  
-|[Dostawcy automatyzacji interfejsu użytkownika do kodu zarządzanego](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)|Przeglądy i Tematy porad ułatwiające korzystanie z interfejsu API dostawcy.|Kontroluj deweloperów.|  
-|[Klienci automatyzacji interfejsu użytkownika do kodu zarządzanego](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)|Przeglądy i Tematy porad ułatwiające korzystanie z interfejsu API klienta.|Deweloperzy aplikacji klienckich.|  
-|[Wzorce kontrolek automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)|Informacje dotyczące sposobu, w jaki wzorce kontroli powinny być implementowane przez dostawców i jakie funkcje są dostępne dla klientów.|Wszystkie.|  
-|[Wzorzec tekstu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)|Informacje dotyczące sposobu, w jaki wzorzec kontrolki tekstu powinien być zaimplementowany przez dostawców i jakie funkcje są dostępne dla klientów.|Wszystkie.|  
-|[Typy kontrolek automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-types.md)|Informacje na temat właściwości i wzorców formantów obsługiwanych przez różne typy kontrolek.|Wszystkie.|  
+|[Podstawy automatyzacji interfejsu użytkownika](index.md) (w tej sekcji)|Szerokie przeglądy koncepcji.|Wszystkie.|  
+|[Dostawcy automatyzacji interfejsu użytkownika do kodu zarządzanego](ui-automation-providers-for-managed-code.md)|Przeglądy i Tematy porad ułatwiające korzystanie z interfejsu API dostawcy.|Kontroluj deweloperów.|  
+|[Klienci automatyzacji interfejsu użytkownika do kodu zarządzanego](ui-automation-clients-for-managed-code.md)|Przeglądy i Tematy porad ułatwiające korzystanie z interfejsu API klienta.|Deweloperzy aplikacji klienckich.|  
+|[Wzorce kontrolek automatyzacji interfejsu użytkownika](ui-automation-control-patterns.md)|Informacje dotyczące sposobu, w jaki wzorce kontroli powinny być implementowane przez dostawców i jakie funkcje są dostępne dla klientów.|Wszystkie.|  
+|[Wzorzec tekstu automatyzacji interfejsu użytkownika](ui-automation-text-pattern.md)|Informacje dotyczące sposobu, w jaki wzorzec kontrolki tekstu powinien być zaimplementowany przez dostawców i jakie funkcje są dostępne dla klientów.|Wszystkie.|  
+|[Typy kontrolek automatyzacji interfejsu użytkownika](ui-automation-control-types.md)|Informacje na temat właściwości i wzorców formantów obsługiwanych przez różne typy kontrolek.|Wszystkie.|  
   
  W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] przestrzenie nazw, biblioteki DLL, które je zawierają, oraz odbiorców, którzy z nich korzystają.  
   
@@ -70,14 +70,14 @@ Automatyzacja interfejsu użytkownika zapewnia pełną funkcjonalność obsługi
  Ponadto elementy uwidaczniają wzorce kontroli, które udostępniają właściwości specyficzne dla ich typów kontrolek. Wzorce kontroli udostępniają również metody, które umożliwiają klientom uzyskanie dalszych informacji na temat elementu i dostarczenie danych wejściowych.  
   
 > [!NOTE]
-> Między typami formantów i wzorcami formantów nie istnieje taka sama zgodność. Wzorzec kontrolki może być obsługiwany przez wiele typów formantów, a kontrolka może obsługiwać wiele wzorców kontroli, z których każdy ujawnia różne aspekty jego działania. Na przykład pole kombi ma co najmniej dwa wzorce kontroli: jeden, który reprezentuje jego zdolność do rozwijania i zwijania, i drugi, który reprezentuje mechanizm wyboru. Aby uzyskać szczegółowe informacje, zobacz [typy formantów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-types.md).  
+> Między typami formantów i wzorcami formantów nie istnieje taka sama zgodność. Wzorzec kontrolki może być obsługiwany przez wiele typów formantów, a kontrolka może obsługiwać wiele wzorców kontroli, z których każdy ujawnia różne aspekty jego działania. Na przykład pole kombi ma co najmniej dwa wzorce kontroli: jeden, który reprezentuje jego zdolność do rozwijania i zwijania, i drugi, który reprezentuje mechanizm wyboru. Aby uzyskać szczegółowe informacje, zobacz [typy formantów automatyzacji interfejsu użytkownika](ui-automation-control-types.md).  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Program udostępnia również informacje dotyczące aplikacji klienckich za poorednictwem zdarzeń. W przeciwieństwie [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] do [!INCLUDE[TLA2#tla_winevents](../../../includes/tla2sharptla-winevents-md.md)], zdarzenia nie są oparte na mechanizmie emisji. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Klienci rejestrują się do określonych powiadomień o zdarzeniach i [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] mogą żądać przekazywania określonych właściwości i informacji o wzorcu kontroli do ich obsługi zdarzeń. Ponadto [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdarzenie zawiera odwołanie do elementu, który go spowodował. Dostawcy mogą zwiększyć wydajność, wybierając wybiórcze zdarzenia, w zależności od tego, czy klienci nasłuchuje.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Przegląd właściwości automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)
-- [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md)
-- [Przegląd zabezpieczeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-security-overview.md)
+- [Przegląd drzewa automatyzacji interfejsu użytkownika](ui-automation-tree-overview.md)
+- [Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie](ui-automation-control-patterns-overview.md)
+- [Przegląd właściwości automatyzacji interfejsu użytkownika](ui-automation-properties-overview.md)
+- [Przegląd zdarzeń automatyzacji interfejsu użytkownika](ui-automation-events-overview.md)
+- [Przegląd zabezpieczeń automatyzacji interfejsu użytkownika](ui-automation-security-overview.md)

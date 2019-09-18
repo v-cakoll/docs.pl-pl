@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: ca6ac045-7b21-4487-9379-59aa20909670
-ms.openlocfilehash: ca46eb01ee8a18e83cecbc26b2e9bf82778c210b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 450a3f3a4969287181aa031ab581b85447bfde56
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69954090"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040425"
 ---
 # <a name="ui-automation-text-pattern-how-to-topics"></a>Wzorce tekstu automatyzacji interfejsu użytkownika — Tematy porad
 > [!NOTE]
@@ -22,9 +22,9 @@ ms.locfileid: "69954090"
  Ta sekcja zawiera tematy objaśniające, jak używać wzorca tekstu automatyzacji interfejsu użytkownika.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Dodawanie zawartości do pola tekstowego przy użyciu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
- [Znajdowanie i wyróżnianie tekstu przy użyciu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
- [Uzyskiwanie atrybutów tekstu przy użyciu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)  
- [Uzyskiwanie szczegółów atrybutów tekstu mieszanego przy użyciu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/obtain-mixed-text-attribute-details-using-ui-automation.md)  
- [Przenoszenie tekstu przy użyciu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [Uzyskiwanie dostępu do obiektów osadzonych przy użyciu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
+ [Dodawanie zawartości do pola tekstowego przy użyciu automatyzacji interfejsu użytkownika](add-content-to-a-text-box-using-ui-automation.md)  
+ [Znajdowanie i wyróżnianie tekstu przy użyciu automatyzacji interfejsu użytkownika](find-and-highlight-text-using-ui-automation.md)  
+ [Uzyskiwanie atrybutów tekstu przy użyciu automatyzacji interfejsu użytkownika](obtain-text-attributes-using-ui-automation.md)  
+ [Uzyskiwanie szczegółów atrybutów tekstu mieszanego przy użyciu automatyzacji interfejsu użytkownika](obtain-mixed-text-attribute-details-using-ui-automation.md)  
+ [Przenoszenie tekstu przy użyciu automatyzacji interfejsu użytkownika](traverse-text-using-ui-automation.md)  
+ [Uzyskiwanie dostępu do obiektów osadzonych przy użyciu automatyzacji interfejsu użytkownika](access-embedded-objects-using-ui-automation.md)

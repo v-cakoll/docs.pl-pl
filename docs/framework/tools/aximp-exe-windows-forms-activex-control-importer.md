@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a5f76f60c8474b1503dc4cebeeafe241cd40be96
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: c879375a4b0622311c8731acc276ec79fe0217d5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970597"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044892"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Importer kontrolki ActiveX formularzy systemu Windows)
 Importer formantów ActiveX konwertuje definicje typów w bibliotece typów modelu COM dla formantu ActiveX na formant programu Windows Forms.  
@@ -24,7 +24,7 @@ Importer formantów ActiveX konwertuje definicje typów w bibliotece typów mode
   
  Aby hostować formant ActiveX, należy wygenerować formant otoki pochodzący z <xref:System.Windows.Forms.AxHost>. Ten formant otoki zawiera wystąpienie źródłowego formantu ActiveX. Umożliwia on komunikację z formantem ActiveX, ale jest widoczny jako formant programu Windows Forms. Ten wygenerowany formant obsługuje formant ActiveX i uwidacznia jego właściwości, metody i zdarzenia, tak jakby należały do wygenerowanego formantu.  
   
- To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](developer-command-prompt-for-vs.md).  
   
  W wierszu polecenia wpisz następujące polecenie:  
   
@@ -64,13 +64,13 @@ aximp [options]{file.dll | file.ocx}
 > [!NOTE]
 > Jeśli nazwa składowej formantu ActiveX pasuje do nazwy zdefiniowanej w programie .NET Framework, program Aximp.exe poprzedzi nazwę składowej prefiksem „Ctl”, gdy będzie tworzyć klasę pochodną AxHost. Na przykład jeśli formant ActiveX ma składową o nazwie Layout, jej nazwa w klasie pochodnej AxHost zostanie zmieniona na CtlLayout, ponieważ zdarzenie Layout jest zdefiniowane w programie .NET Framework.  
   
- Te wygenerowane pliki można przeanalizować za pomocą narzędzi, takich jak [Ildasm. exe (Il dezasembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).  
+ Te wygenerowane pliki można przeanalizować za pomocą narzędzi, takich jak [Ildasm. exe (Il dezasembler)](ildasm-exe-il-disassembler.md).  
   
  Nie można używać programu Aximp.exe do generowania zestawu platformy .NET dla formantu ActiveX WebBrowser.  
   
  Po uruchomieniu programu Aximp.exe dla biblioteki shdocvw.dll zawsze jest tworzony inny plik o nazwie shdocvw.dll w katalogu, z którego uruchomiono narzędzie. Jeśli ten wygenerowany plik zostanie umieszczony w katalogu Documents and Settings, będzie powodował problemy w programach Microsoft Internet Explorer i Eksplorator Windows. Gdy komputer jest uruchamiany ponownie, system Windows najpierw szuka kopii pliku shdocvw.dll w katalogu Documents and Settings, a dopiero potem w katalogu system32. Użyje kopii znalezionej w katalogu Documents and Settings i podejmie próbę załadowania zarządzanych otok. Programy Internet Explorer i Eksplorator Windows nie będą działać prawidłowo, ponieważ są zależne od aparatu renderowania znajdującego się w wersji pliku shdocvw.dll przechowywanej w katalogu system32. Jeśli wystąpi ten problem, usuń kopię pliku shdocvw.dll z katalogu Documents and Settings i uruchom ponownie komputer.  
   
- Użycie programu Aximp.exe z biblioteką shdocvw.dll w celu utworzenia formantu platformy .NET, który będzie używany podczas tworzenia aplikacji, także może powodować problemy. W tym przypadku aplikacja będzie ładować obie wersje biblioteki shdocvw.dll (systemową i wygenerowaną) i może nadać priorytet wersji systemowej. Gdy w takiej sytuacji użytkownik podejmie próbę załadowania strony sieci Web w formancie ActiveX WebBrowser, może zostać wyświetlone okno dialogowe Otwieranie/Zapisywanie. Gdy użytkownik kliknie przycisk **Otwórz**, zostanie otwarta strona sieci Web w programie Internet Explorer. Dzieje się tak tylko na komputerach, na których jest używany program Internet Explorer w wersji 6 lub starszy. Aby zapobiec temu problemowi, należy użyć <xref:System.Windows.Forms.WebBrowser> zarządzanego formantu lub użyć programu Visual Studio do wygenerowania zarządzanej biblioteki Shdocvw. [dll zgodnie z opisem w temacie How to: Dodaj odwołania do bibliotek](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)typów.  
+ Użycie programu Aximp.exe z biblioteką shdocvw.dll w celu utworzenia formantu platformy .NET, który będzie używany podczas tworzenia aplikacji, także może powodować problemy. W tym przypadku aplikacja będzie ładować obie wersje biblioteki shdocvw.dll (systemową i wygenerowaną) i może nadać priorytet wersji systemowej. Gdy w takiej sytuacji użytkownik podejmie próbę załadowania strony sieci Web w formancie ActiveX WebBrowser, może zostać wyświetlone okno dialogowe Otwieranie/Zapisywanie. Gdy użytkownik kliknie przycisk **Otwórz**, zostanie otwarta strona sieci Web w programie Internet Explorer. Dzieje się tak tylko na komputerach, na których jest używany program Internet Explorer w wersji 6 lub starszy. Aby zapobiec temu problemowi, należy użyć <xref:System.Windows.Forms.WebBrowser> zarządzanego formantu lub użyć programu Visual Studio do wygenerowania zarządzanej biblioteki Shdocvw. [dll zgodnie z opisem w temacie How to: Dodaj odwołania do bibliotek](../interop/how-to-add-references-to-type-libraries.md)typów.  
   
 ## <a name="example"></a>Przykład  
  Następujące polecenie generuje MediaPlayer. dll i AxMediaPlayer. dll dla formantu `msdxm.ocx`Media Player.  
@@ -81,5 +81,5 @@ aximp c:\systemroot\system32\msdxm.ocx
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Narzędzia](../../../docs/framework/tools/index.md)
-- [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+- [Narzędzia](index.md)
+- [Ildasm.exe (dezasembler IL)](ildasm-exe-il-disassembler.md)

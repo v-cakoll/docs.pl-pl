@@ -17,25 +17,25 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: 9f7d6bfcaa0d1cc4eb6c83cb53120bec695fe85e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa3fc56dc461d4fe22e2ff391f3561d8834128d8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583480"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046879"
 ---
 # <a name="using-streams-on-the-network"></a>Stosowanie strumieni w sieci
-Zasoby sieciowe są reprezentowane w .NET Framework jako strumieni. Traktując strumieni ogólną, .NET Framework oferuje następujące możliwości:  
+Zasoby sieciowe są reprezentowane w .NET Framework jako strumienie. Traktując strumienie ogólnie, .NET Framework oferuje następujące możliwości:  
   
-- Typowym sposobem wysyłania i odbierania danych w sieci Web. Niezależnie od rzeczywistej zawartości pliku — HTML, XML lub czymkolwiek — aplikacja będzie używać <xref:System.IO.Stream.Write%2A?displayProperty=nameWithType> i <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType> do wysyłania i odbierania danych.  
+- Typowy sposób wysyłania i odbierania danych w sieci Web. Bez względu na rzeczywistą zawartość pliku — HTML, XML lub coś innego — aplikacja będzie używać <xref:System.IO.Stream.Write%2A?displayProperty=nameWithType> programu oraz <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType> do wysyłania i odbierania danych.  
   
-- Zgodność ze strumieniami w programie .NET Framework. Strumienie są używane w .NET Framework, który ma rozbudowane infrastruktury do ich obsługi. Na przykład, można zmodyfikować aplikację, która odczytuje dane XML z <xref:System.IO.FileStream> można odczytać danych z <xref:System.Net.Sockets.NetworkStream> zamiast zmieniając tylko kilka wierszy kodu, które zainicjować strumienia. Główne różnice między **Strumień NetworkStream** klasy i inne strumienie są, **Strumień NetworkStream** nie można wyszukać, <xref:System.Net.Sockets.NetworkStream.CanSeek%2A> właściwość zawsze zwraca **false**i <xref:System.Net.Sockets.NetworkStream.Seek%2A> i <xref:System.Net.Sockets.NetworkStream.Position%2A> metod generują <xref:System.NotSupportedException>.  
+- Zgodność ze strumieniami w .NET Framework. Strumienie są używane w całym .NET Framework, który ma rozbudowaną infrastrukturę do ich obsługi. Na przykład można zmodyfikować aplikację, która odczytuje dane XML z <xref:System.IO.FileStream> pliku, aby odczytywać dane <xref:System.Net.Sockets.NetworkStream> z zamiast tego, zmieniając tylko kilka wierszy kodu, które inicjują strumień. Główne różnice między klasą **NetworkStream** i innymi strumieniami polegają na tym, że **NetworkStream** nie jest <xref:System.Net.Sockets.NetworkStream.CanSeek%2A> możliwy do odszukania, właściwość <xref:System.Net.Sockets.NetworkStream.Seek%2A> zawsze <xref:System.Net.Sockets.NetworkStream.Position%2A> zwraca **wartość false**, a metody i generują <xref:System.NotSupportedException>.  
   
-- Przetwarzanie danych podczas ich nadejściu. Strumienie zapewniają dostęp do danych niezapisywanie ich w sieci, zamiast wymuszania aplikacji oczekiwania dla całego zestawu danych do pobrania.  
+- Przetwarzanie danych po ich nadejściu. Strumienie zapewniają dostęp do danych w miarę docierania do sieci, a nie wymuszają, aby aplikacja czekała na pobranie całego zestawu danych.  
   
- <xref:System.Net.Sockets> Przestrzeń nazw zawiera **Strumień NetworkStream** klasę, która implementuje <xref:System.IO.Stream> klasy specjalnie do użytku z zasobów sieciowych. Klasy w <xref:System.Net.Sockets> przestrzeni nazw korzystają z **Strumień NetworkStream** klasy do reprezentowania strumieni.  
+ Przestrzeń nazw zawiera<xref:System.IO.Stream> klasę NetworkStream, która implementuje klasę specyficzną do użycia z zasobami sieciowymi. <xref:System.Net.Sockets> Klasy w <xref:System.Net.Sockets> przestrzeni nazw używają klasy **NetworkStream** do reprezentowania strumieni.  
   
- Aby wysyłać dane do sieci przy użyciu zwróconym strumieniu, należy wywołać <xref:System.Net.WebRequest.GetRequestStream%2A> na Twoje <xref:System.Net.WebRequest>. **WebRequest** wyśle nagłówki żądania do serwera; a następnie mogą wysyłać dane do zasobu sieciowego, wywołując <xref:System.IO.Stream.BeginWrite%2A>, <xref:System.IO.Stream.EndWrite%2A>, lub <xref:System.IO.Stream.Write%2A> metody w zwróconym strumieniu. Niektóre protokoły, takie jak HTTP, może wymagać ustawienia właściwości specyficzne dla protokołu przed wysłaniem danych. Poniższy przykład kodu pokazuje sposób ustawiania właściwości specyficzne dla protokołu HTTP do wysyłania danych. Założono, że zmienna `sendData` zawiera dane do wysłania oraz że zmiennej `sendLength` jest to liczba bajtów danych do wysłania.  
+ Aby wysłać dane do sieci przy użyciu zwróconego strumienia, wywołaj <xref:System.Net.WebRequest.GetRequestStream%2A> <xref:System.Net.WebRequest>polecenie. **Żądanie WebRequest** wyśle nagłówki żądań do serwera; następnie można wysłać dane do zasobu sieciowego przez wywołanie <xref:System.IO.Stream.BeginWrite%2A>metody, <xref:System.IO.Stream.EndWrite%2A>, lub <xref:System.IO.Stream.Write%2A> w zwróconym strumieniu. Niektóre protokoły, takie jak HTTP, mogą wymagać ustawienia właściwości specyficznych dla protokołu przed wysłaniem danych. Poniższy przykład kodu pokazuje, jak ustawić właściwości specyficzne dla protokołu HTTP na potrzeby wysyłania danych. Przyjęto założenie, `sendData` że zmienna zawiera dane do wysłania, a `sendLength` zmienna to liczba bajtów danych do wysłania.  
   
 ```csharp  
 HttpWebRequest request =   
@@ -68,19 +68,19 @@ Catch
 End Try  
 ```  
   
- Aby odbierać dane z sieci, należy wywołać <xref:System.Net.WebResponse.GetResponseStream%2A> na Twoje <xref:System.Net.WebResponse>. Można następnie odczytywać dane z zasobów sieciowych, wywołując <xref:System.IO.Stream.BeginRead%2A>, <xref:System.IO.Stream.EndRead%2A>, lub <xref:System.IO.Stream.Read%2A> metody w zwróconym strumieniu.  
+ Aby odbierać dane z sieci, wywołaj <xref:System.Net.WebResponse.GetResponseStream%2A>. <xref:System.Net.WebResponse> Następnie można odczytywać dane z zasobu sieciowego przez wywołanie <xref:System.IO.Stream.BeginRead%2A>metody, <xref:System.IO.Stream.EndRead%2A>, lub <xref:System.IO.Stream.Read%2A> w zwróconym strumieniu.  
   
- Podczas za pomocą strumieni z zasobów sieciowych, należy uwzględnić następujące kwestie:  
+ Korzystając ze strumieni z zasobów sieciowych, należy pamiętać o następujących kwestiach:  
   
-- **CanSeek** właściwość zawsze zwraca **false** ponieważ **Strumień NetworkStream** klasy nie można zmienić pozycji w strumieniu. **Seek** i **pozycji** metod generują **wyjątek NotSupportedException**.  
+- Właściwość **CanSeek** zawsze zwraca **wartość false** , ponieważ Klasa **NetworkStream** nie może zmienić pozycji w strumieniu. Metody **Seek** i **Position** zwracają **NotSupportedException**.  
   
-- Kiedy używasz **WebRequest** i **elementu WebResponse**, strumienia wystąpienia utworzone przez wywołanie metody **GetResponseStream dla** są przeznaczone tylko do odczytu i przesyłania strumieniowego utworzonych przez wywoływanie wystąpień **GetRequestStream** są przeznaczone tylko do zapisu.  
+- W przypadku używania **WebRequest** i **WebResponse**wystąpienia strumienia utworzone przez wywołanie **metody GetResponseStream** są tylko do odczytu, a wystąpienia strumienia utworzone przez wywołanie **GetRequestStream** są tylko do zapisu.  
   
-- Użyj <xref:System.IO.StreamReader> klasie, aby łatwiej kodowania. Poniższy przykład kodu wykorzystuje **StreamReader** do odczytu strumień zakodowany w formacie ASCII od **elementu WebResponse** (przykład wyświetla tworzenia żądania).  
+- Użyj klasy <xref:System.IO.StreamReader> , aby ułatwić kodowanie. Poniższy przykład kodu używa **StreamReader** , aby odczytać strumień zakodowany w formacie ASCII z **WebResponse** (przykład nie pokazuje tworzenia żądania).  
   
-- Wywołanie **metody GetResponse** można zablokować, jeśli zasoby sieciowe nie są dostępne. Należy rozważyć użycie żądania asynchronicznego przy użyciu <xref:System.Net.WebRequest.BeginGetResponse%2A> i <xref:System.Net.WebRequest.EndGetResponse%2A> metody.  
+- Wywołanie metody **GetResponse** może blokować, jeśli zasoby sieciowe są niedostępne. Należy rozważyć użycie żądania asynchronicznego z <xref:System.Net.WebRequest.BeginGetResponse%2A> metodami i. <xref:System.Net.WebRequest.EndGetResponse%2A>  
   
-- Wywołanie **GetRequestStream** można zablokować, gdy zostanie utworzone połączenie z serwerem. Należy rozważyć użycie żądania asynchronicznego strumienia z <xref:System.Net.WebRequest.BeginGetRequestStream%2A> i <xref:System.Net.WebRequest.EndGetRequestStream%2A> metody.  
+- Wywołanie **GetRequestStream** może blokować się podczas tworzenia połączenia z serwerem. Należy rozważyć użycie asynchronicznego żądania dla strumienia przy użyciu <xref:System.Net.WebRequest.BeginGetRequestStream%2A> metod i. <xref:System.Net.WebRequest.EndGetRequestStream%2A>  
   
 ```csharp  
 // Create a response object.  
@@ -104,5 +104,5 @@ sr.Close()
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Żądanie danych przy użyciu klasy WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
-- [Żądanie danych](../../../docs/framework/network-programming/requesting-data.md)
+- [Instrukcje: Żądanie danych przy użyciu klasy WebRequest](how-to-request-data-using-the-webrequest-class.md)
+- [Żądanie danych](requesting-data.md)

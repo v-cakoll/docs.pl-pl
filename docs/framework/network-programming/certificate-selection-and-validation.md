@@ -2,57 +2,57 @@
 title: Wybór i sprawdzanie poprawności certyfikatu
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-ms.openlocfilehash: 79cc46d91f6b1818154bac6f62df2acbac36fe20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aea47360ab1bb9dad446a5a7b19a91ea688953c4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642818"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048750"
 ---
 # <a name="certificate-selection-and-validation"></a>Wybór i sprawdzanie poprawności certyfikatu
-<xref:System.Net> Klasy obsługują kilka sposobów, aby wybrać i zweryfikować <xref:System.Security.Cryptography.X509Certificates> dla połączeń Secure Socket Layer (SSL). Klient może wybrać jeden lub kilka certyfikatów, aby uwierzytelniać się z serwerem. Serwer może wymagać, że jeden lub więcej określonych atrybutów do uwierzytelniania certyfikatu klienta.  
+Klasy obsługują kilka sposobów wybierania i weryfikowania <xref:System.Security.Cryptography.X509Certificates> połączeń Secure Socket Layer (SSL). <xref:System.Net> Klient może wybrać jeden lub więcej certyfikatów do samodzielnego uwierzytelnienia na serwerze. Serwer może wymagać, aby certyfikat klienta miał jeden lub więcej atrybutów określonych do uwierzytelnienia.  
   
 ## <a name="definition"></a>Definicja  
- Certyfikat jest strumień bajtów ASCII, który zawiera klucz publiczny, atrybutów (na przykład numer wersji, numer seryjny i datę wygaśnięcia) i podpis cyfrowy z urzędu certyfikacji. Certyfikaty są używane do nawiązywania zaszyfrowanego połączenia lub do uwierzytelniania klienta do serwera.  
+ Certyfikat to strumień bajtów ASCII, który zawiera klucz publiczny, atrybuty (takie jak numer wersji, numer seryjny i Data wygaśnięcia) oraz podpis cyfrowy z urzędu certyfikacji. Certyfikaty służą do nawiązywania zaszyfrowanego połączenia lub do uwierzytelniania klienta na serwerze.  
   
-## <a name="client-certificate-selection-and-validation"></a>Wyboru certyfikatu klienta i sprawdzanie poprawności  
- Klient może wybrać co najmniej jednego certyfikatu dla określonego połączenia SSL. Certyfikaty klienta można skojarzyć z połączenia SSL na serwerze sieci web lub serwera poczty SMTP. Klient dodaje certyfikaty do kolekcji <xref:System.Security.Cryptography.X509Certificates.X509Certificate> lub <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> klasy obiektów. Za pomocą poczty e-mail, na przykład, kolekcję certyfikatów jest wystąpieniem <xref:System.Security.Cryptography.X509Certificates.X509CertificateCollection>) skojarzony z <xref:System.Net.Mail.SmtpClient.ClientCertificates%2A> właściwość <xref:System.Net.Mail.SmtpClient> klasy. <xref:System.Net.HttpWebRequest> Klasa ma podobny <xref:System.Net.HttpWebRequest.ClientCertificates%2A> właściwości.  
+## <a name="client-certificate-selection-and-validation"></a>Wybór i walidacja certyfikatu klienta  
+ Klient może wybrać co najmniej jeden certyfikat dla określonego połączenia SSL. Certyfikaty klienta można kojarzyć z połączeniem SSL z serwerem sieci Web lub serwerem poczty SMTP. Klient dodaje certyfikaty do kolekcji <xref:System.Security.Cryptography.X509Certificates.X509Certificate> lub <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> obiektów klas. W przypadku używania poczty e-mail jako przykładu kolekcja certyfikatów jest wystąpieniem elementu <xref:System.Security.Cryptography.X509Certificates.X509CertificateCollection>, który jest skojarzony <xref:System.Net.Mail.SmtpClient.ClientCertificates%2A> z właściwością <xref:System.Net.Mail.SmtpClient> klasy. Klasa ma podobną <xref:System.Net.HttpWebRequest.ClientCertificates%2A>Właściwość. <xref:System.Net.HttpWebRequest>  
   
- Główną różnicą między <xref:System.Security.Cryptography.X509Certificates.X509Certificate> i <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> klasa jest, że klucz prywatny musi znajdować się w magazynie certyfikatów dla <xref:System.Security.Cryptography.X509Certificates.X509Certificate> klasy.  
+ Podstawowa różnica między <xref:System.Security.Cryptography.X509Certificates.X509Certificate> <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> i klasy polega na tym, że klucz prywatny musi znajdować się w magazynie certyfikatów dla <xref:System.Security.Cryptography.X509Certificates.X509Certificate> klasy.  
   
- Nawet, jeśli certyfikaty są dodawane do kolekcji i skojarzone z określonego połączenia SSL, certyfikaty nie będą wysyłane do serwera, chyba, że serwer zażąda je. Jeśli w przypadku połączenia wielu certyfikatów klienta, najlepiej, który będzie służyć oparte na algorytm, który uwzględnia zgodność między listy wystawców certyfikatów dostarczonych przez serwer i nazwę wystawcy certyfikatu klienta.  
+ Nawet jeśli certyfikaty są dodawane do kolekcji i skojarzone z określonym połączeniem SSL, do serwera nie będą wysyłane żadne certyfikaty, chyba że serwer wyśle żądania. Jeśli w ramach połączenia ustawiono wiele certyfikatów klienta, najlepszym rozwiązaniem będzie użycie algorytmu, który uwzględnia dopasowanie między listą wystawców certyfikatów dostarczonych przez serwer i nazwę wystawcy certyfikatu klienta.  
   
- <xref:System.Net.Security.SslStream> Klasy zapewnia większą kontrolę nad uzgadniania protokołu SSL. Klienta można określić obiekt delegowany, aby wybrać certyfikat klienta.  
+ <xref:System.Net.Security.SslStream> Klasa zapewnia jeszcze większą kontrolę nad uzgadnianiem protokołu SSL. Klient może określić delegata, aby wybrać certyfikat klienta, który ma być używany.  
   
- Serwer zdalny można sprawdzić, czy certyfikat klienta jest prawidłowy, bieżące i podpisane przez odpowiedni urząd certyfikacji. Obiekt delegowany mogą być dodawane do <xref:System.Net.ServicePointManager.ServerCertificateValidationCallback%2A> do wymuszania weryfikacji certyfikatu.  
+ Serwer zdalny może sprawdzić, czy certyfikat klienta jest prawidłowy, obecny i podpisany przez odpowiedni urząd certyfikacji. Delegat można dodać do, <xref:System.Net.ServicePointManager.ServerCertificateValidationCallback%2A> aby wymusić weryfikację certyfikatu.  
   
-## <a name="client-certificate-selection"></a>Wyboru certyfikatu klienta  
- .NET Framework wybiera certyfikat klienta do przedstawienia na serwer w następujący sposób:  
+## <a name="client-certificate-selection"></a>Wybór certyfikatu klienta  
+ .NET Framework wybiera certyfikat klienta, który ma być obecny na serwerze w następujący sposób:  
   
-1. Jeśli certyfikat klienta został przedstawiony wcześniej do serwera, certyfikat są buforowane, gdy najpierw przedstawiony zostanie ponownie użyty dla kolejnych żądań certyfikatów.  
+1. Jeśli certyfikat klienta został wcześniej przedstawiony na serwerze, certyfikat jest buforowany podczas pierwszego prezentowania i jest ponownie używany do kolejnych żądań certyfikatów klienta.  
   
-2. Jeśli obiekt delegowany jest obecny, zawsze używać wynikiem delegata jako certyfikat klienta do wybrania. Spróbuj użyć pamięci podręcznej certyfikatu, jeśli jest to możliwe, ale nie należy używać pamięci podręcznej poświadczenia anonimowe, jeśli pełnomocnik ma zwróciła wartość null i kolekcję certyfikatów nie jest pusty.  
+2. Jeśli istnieje delegat, należy zawsze używać wyniku z delegata jako certyfikatu klienta do wybrania. Spróbuj użyć certyfikatu w pamięci podręcznej, jeśli jest to możliwe, ale nie używaj buforowanych poświadczeń anonimowych, jeśli delegat zwrócił wartość null, a kolekcja certyfikatów nie jest pusta.  
   
-3. Jeśli jest to pierwsze wyzwanie dla certyfikatu klienta, Framework wylicza certyfikaty <xref:System.Security.Cryptography.X509Certificates.X509Certificate> lub <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> klasy obiektów skojarzonych z tym połączeniem szuka dopasowania między listy wystawców certyfikatów, dostarczone przez serwer i nazwę wystawcy certyfikatu klienta. Pierwszy certyfikat, który odpowiada są wysyłane do serwera. Jeśli nie dopasowania certyfikatu lub kolekcję certyfikatów jest pusty, a następnie poświadczenia anonimowe są wysyłane do serwera.  
+3. Jeśli jest to pierwsze wyzwanie dla certyfikatu klienta, struktura wylicza certyfikaty w <xref:System.Security.Cryptography.X509Certificates.X509Certificate> <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> lub obiektów klasy skojarzonych z połączeniem, szukając zgodności między listą wystawców certyfikatów udostępnianymi przez serwer i nazwa wystawcy certyfikatu klienta. Pierwszy zgodny certyfikat jest wysyłany na serwer. Jeśli żaden certyfikat nie jest zgodny lub kolekcja certyfikatów nie jest pusta, do serwera zostanie wysłane anonimowe poświadczenie.  
   
-## <a name="tools-for-certificate-configuration"></a>Narzędzia do konfiguracji certyfikatu  
- Wiele narzędzi, są dostępne dla klienta i serwera konfiguracji certyfikatu.  
+## <a name="tools-for-certificate-configuration"></a>Narzędzia do konfiguracji certyfikatów  
+ Dostępne są różne narzędzia do konfiguracji certyfikatu klienta i serwera.  
   
- *Winhttpcertcfg.exe* narzędzie może służyć do konfigurowania certyfikatów klienta. *Winhttpcertcfg.exe* narzędzie jest dostarczane jako jedno z narzędzi w programie Windows Server 2003 Resource Kit. To narzędzie jest również dostępny do pobrania w ramach systemu Windows Server 2003 Resource Kit Tools w [www.microsoft.com](https://www.microsoft.com).  
+ Narzędzie *WinHttpCertCfg. exe* może służyć do konfigurowania certyfikatów klienta. Narzędzie *WinHttpCertCfg. exe* jest dostępne jako jeden z narzędzi z zestawem Windows Server 2003 Resource Kit. To narzędzie jest również dostępne jako element do pobrania w ramach narzędzi zestawu Windows Server 2003 Resource Kit pod adresem [www.Microsoft.com](https://www.microsoft.com).  
   
-*HttpCfg.exe* narzędzie może służyć do konfigurowania certyfikatów serwera wdrażania <xref:System.Net.HttpListener> klasy. *HttpCfg.exe* narzędzie jest dostarczane jako jedno z narzędzi obsługi systemu Windows Server 2003 i Windows XP Service Pack 2. *HttpCfg.exe* i inne narzędzia pomocy technicznej nie są instalowane domyślnie w systemie Windows Server 2003 lub Windows XP. W systemie Windows Server 2003. narzędzia pomocy technicznej są instalowane osobno od następujący folder i plik na dysku CD systemu Windows Server 2003:  
+Narzędzie *HttpCfg. exe* może służyć do konfigurowania certyfikatów serwera dla <xref:System.Net.HttpListener> klasy. Narzędzie *HttpCfg. exe* jest dostępne jako jedno z narzędzi obsługi systemu windows Server 2003 i Windows XP z dodatkiem Service Pack 2. *HttpCfg. exe* i inne narzędzia obsługi nie są instalowane domyślnie w systemie windows Server 2003 lub Windows XP. W systemie Windows Server 2003. narzędzia obsługi są instalowane niezależnie od następującego folderu i pliku na dysku CD-ROM z systemem Windows Server 2003:  
   
  \Support\Tools\Suptools.msi  
   
- Do użytku z systemu Windows XP Service Pack 2, narzędzia obsługi Windows XP są dostępne do pobrania z [www.microsoft.com](https://www.microsoft.com).  
+ Do użycia z systemem Windows XP z dodatkiem Service Pack 2 narzędzia obsługi systemu Windows XP są dostępne jako pobieranie z [www.Microsoft.com](https://www.microsoft.com).  
   
- Kod źródłowy do wersji *HttpCfg.exe* narzędzie jest także podany jako przykład z zestawem SDK systemu Windows Server. Kod źródłowy w celu *HttpCfg.exe* próbki jest instalowany domyślnie w z przykładami sieci, jako część zestawu Windows SDK w następującym folderze:  
+ Kod źródłowy do wersji narzędzia *HttpCfg. exe* jest również dostępny jako przykład z zestawem SDK systemu Windows Server. Kod źródłowy do przykładu *HttpCfg. exe* jest instalowany domyślnie z przykładami sieciowymi w ramach Windows SDK w następującym folderze:  
   
  *C:\Program Files\Microsoft SDKs\Windows\v1.0\Samples\NetDS\http\serviceconfig*  
   
- Oprócz tych narzędzi <xref:System.Security.Cryptography.X509Certificates.X509Certificate> i <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> klasy udostępnia metody ładowania certyfikatu z systemu plików.  
+ Oprócz tych narzędzi <xref:System.Security.Cryptography.X509Certificates.X509Certificate> klasy i <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> oferują metody ładowania certyfikatu z systemu plików.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczenia w programowaniu sieciowym](../../../docs/framework/network-programming/security-in-network-programming.md)
-- [Programowanie dla sieci w programie .NET Framework](../../../docs/framework/network-programming/index.md)
+- [Zabezpieczenia w programowaniu sieciowym](security-in-network-programming.md)
+- [Programowanie dla sieci w programie .NET Framework](index.md)

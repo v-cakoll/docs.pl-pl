@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 791c6c8b0396ec958ff0c8378038051b23d486d1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 852490c57a2954e9d56799ef8deebbef31d5f665
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956706"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045887"
 ---
 # <a name="security-considerations-for-reflection"></a>Zagadnienia dotyczące zabezpieczeń dla odbicia
 
@@ -61,7 +61,7 @@ Te reguły są takie same, niezależnie od tego, czy dostęp do elementu członk
 
 Kod aplikacji uruchamiany z wiersza polecenia jest uruchamiany z pełnym zaufaniem. O ile nie jest oznaczona jako przezroczysta, może użyć odbicia w celu uzyskania dostępu do elementów członkowskich o znaczeniu krytycznym. Gdy ten sam kod jest uruchamiany z częściowym zaufaniem (na przykład w domenie aplikacji w trybie piaskownicy), poziom zaufania zestawu określa, czy może on uzyskać dostęp do kodu krytycznego dla zabezpieczeń: Jeśli zestaw ma silną nazwę i jest zainstalowany w globalnej pamięci podręcznej zestawów, jest to zaufany zestaw i może wywoływać członków o znaczeniu krytycznym. Jeśli nie jest zaufana, jego stan zmieni się na przezroczysty, mimo że nie został oznaczony jako przezroczysty i nie może uzyskać dostępu do elementów członkowskich o znaczeniu krytycznym.
 
-Aby uzyskać więcej informacji na temat modelu zabezpieczeń w .NET Framework 4, zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).
+Aby uzyskać więcej informacji na temat modelu zabezpieczeń w .NET Framework 4, zobacz [zmiany zabezpieczeń](../security/security-changes.md).
 
 ## <a name="reflection-and-transparency"></a>Odbicie i przezroczystość
 
@@ -117,9 +117,9 @@ Unikaj pisania publicznych elementów członkowskich <xref:System.Reflection.Met
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
-- [Zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md)
-- [Zabezpieczenia dostępu kodu](../../../docs/framework/misc/code-access-security.md)
-- [Problemy związane z zabezpieczeniami w emisji odbicia](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
-- [Wyświetlanie informacji o typie](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Zmiany zabezpieczeń](../security/security-changes.md)
+- [Zabezpieczenia dostępu kodu](../misc/code-access-security.md)
+- [Problemy związane z zabezpieczeniami w emisji odbicia](security-issues-in-reflection-emit.md)
+- [Wyświetlanie informacji o typie](viewing-type-information.md)
 - [Stosowanie atrybutów](../../standard/attributes/applying-attributes.md)
-- [Uzyskiwanie dostępu do atrybutów niestandardowych](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)
+- [Uzyskiwanie dostępu do atrybutów niestandardowych](accessing-custom-attributes.md)

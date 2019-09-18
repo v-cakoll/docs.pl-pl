@@ -13,26 +13,26 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-ms.openlocfilehash: abbb02b7bd22c4b301c5565037f55aa1019fc3ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8c799a50e5d63bbf411c338eb9e93f85a942bb0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642493"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048008"
 ---
 # <a name="http"></a>HTTP
-Program .NET Framework oferuje kompleksowe wsparcie dla protokołu HTTP, co sprawia, że większość cały ruch z Internetu za pomocą <xref:System.Net.HttpWebRequest> i <xref:System.Net.HttpWebResponse> klasy. Te klasy pochodne <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse>, zwracane są domyślnie zawsze wtedy, gdy metoda statyczna <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> napotka przez identyfikator URI rozpoczynający się od "http" lub "https". W większości przypadków **WebRequest** i **elementu WebResponse** klasy zapewnia wszystko co jest niezbędne do utworzenia żądania, ale jeśli potrzebujesz dostępu do funkcji specyficznych dla protokołu HTTP, widoczne jako właściwości, możesz rzutowanie typu te klasy **HttpWebRequest** lub **HttpWebResponse**.  
+.NET Framework zapewnia kompleksową pomoc techniczną dla protokołu HTTP, która stanowi większość całego ruchu internetowego z <xref:System.Net.HttpWebRequest> klasami i. <xref:System.Net.HttpWebResponse> Klasy pochodne <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse>, są zwracane domyślnie za każdym razem, gdy metoda <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> statyczna napotka identyfikator URI rozpoczynający się od ciągu "http" lub "https". W większości przypadków klasy **WebRequest** i **WebResponse** zapewniają wszystko, co jest niezbędne do wykonania żądania, ale jeśli potrzebujesz dostępu do funkcji specyficznych dla protokołu HTTP udostępnianych jako właściwości, można rzutowanie te klasy na **HttpWebRequest** lub **HttpWebResponse**.  
   
- **HttpWebRequest** i **HttpWebResponse** hermetyzują standardowy transakcji żądań i odpowiedzi HTTP i zapewniają dostęp do wspólnych nagłówków HTTP. W ramach tych zajęć również obsługiwać większość funkcje protokołu HTTP 1.1, w tym przetwarzanie potokowe, wysyłania i odbierania danych w fragmentów, uwierzytelnianie, wstępnego uwierzytelniania, szyfrowanie, obsługa serwera proxy, weryfikacji certyfikatu serwera i zarządzania połączeniami. Przechowywane w i dostępne za pośrednictwem niestandardowych nagłówków i nagłówki nie są dostarczane za pośrednictwem właściwości **nagłówki** właściwości.  
+ **HttpWebRequest** i **HttpWebResponse** hermetyzują standardową transakcję http żądanie i odpowiedź i zapewniają dostęp do typowych nagłówków HTTP. Te klasy obsługują również większość funkcji protokołu HTTP 1,1, w tym przetwarzanie potokowe, wysyłanie i pobieranie danych w fragmentach, uwierzytelnianiu, wstępnemu uwierzytelnianiu, szyfrowaniu, obsłudze serwera proxy, weryfikacji certyfikatu serwera i zarządzaniu połączeniami. Niestandardowe nagłówki i nagłówki, które nie są przekazywane za pomocą właściwości, mogą być przechowywane w i dostępne za pomocą właściwości **Headers** .  
   
- **HttpWebRequest** jest używany przez domyślną klasę **WebRequest** i nie musi zostać zarejestrowany, aby przekazać identyfikator URI, który ma **WebRequest.Create** metody.  
+ **HttpWebRequest** jest domyślną klasą używaną przez **WebRequest** i nie musi być zarejestrowana przed przekazaniem identyfikatora URI do metody **WebRequest. Create** .  
   
- Można uczynić aplikację automatycznie podążał za przekierowaniami HTTP, ustawiając <xref:System.Net.HttpWebRequest.AllowAutoRedirect%2A> właściwości **true** (ustawienie domyślne). Aplikacja będzie przekierowywać żądania oraz <xref:System.Net.HttpWebResponse.ResponseUri%2A> właściwość **HttpWebResponse** będzie zawierać rzeczywistego zasobu sieci Web, która odpowiedział na żądanie. Jeśli ustawisz **AllowAutoRedirect** do **false**, aplikacja musi być w stanie obsłużyć przekierowań jako błędy protokołu HTTP.  
+ Można sprawić, aby aplikacja automatycznie przekierowała protokół HTTP przez ustawienie <xref:System.Net.HttpWebRequest.AllowAutoRedirect%2A> dla właściwości **wartości true** (wartość domyślna). Aplikacja będzie przekierowywać żądania, a <xref:System.Net.HttpWebResponse.ResponseUri%2A> Właściwość **HttpWebResponse** będzie zawierać rzeczywisty zasób sieci Web, który odpowiedział na żądanie. Jeśli ustawisz **AllowAutoRedirect** na **false**, aplikacja musi być w stanie obsłużyć przekierowania jako błędy protokołu HTTP.  
   
- Aplikacje otrzymywać komunikaty o błędach protokołu HTTP przez Przechwytywanie <xref:System.Net.WebException> z <xref:System.Net.WebException.Status%2A> równa <xref:System.Net.WebExceptionStatus>. <xref:System.Net.WebException.Response%2A> Właściwość zawiera **elementu WebResponse** wysłanych przez serwer i wskazuje rzeczywiste Napotkano błąd HTTP.  
+ Aplikacje odbierają błędy protokołu HTTP przez przechwycenie <xref:System.Net.WebException> <xref:System.Net.WebException.Status%2A> z zestawem <xref:System.Net.WebExceptionStatus>do. Właściwość zawiera WebResponse wysyłany przez serwer i wskazuje rzeczywisty błąd http. <xref:System.Net.WebException.Response%2A>  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dostęp do Internetu za pośrednictwem serwera proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
-- [Korzystanie z protokołów aplikacji](../../../docs/framework/network-programming/using-application-protocols.md)
-- [Instrukcje: Przejdź do właściwości specyficzne dla protokołu HTTP](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)
+- [Dostęp do Internetu za pośrednictwem serwera proxy](accessing-the-internet-through-a-proxy.md)
+- [Korzystanie z protokołów aplikacji](using-application-protocols.md)
+- [Instrukcje: Dostęp do właściwości specyficznych dla protokołu HTTP](how-to-access-http-specific-properties.md)

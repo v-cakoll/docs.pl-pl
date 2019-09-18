@@ -16,19 +16,19 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-ms.openlocfilehash: b99720b9653b8454419acd35085bfe9a7ac4b5af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe2ad55c3f60347369c0e92bc834d81d98f3870e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796789"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046956"
 ---
 # <a name="using-client-sockets"></a>Używanie gniazd klientów
-Przed rozpoczęciem konwersacji za pośrednictwem <xref:System.Net.Sockets.Socket>, należy utworzyć potok danych między aplikacją i urządzenie zdalne. Mimo że istnieją inne rodziny adresów sieciowych i protokołów, w tym przykładzie pokazano, jak utworzyć połączenie TCP/IP do usługi zdalnej.  
+Aby można było zainicjować konwersację za pomocą <xref:System.Net.Sockets.Socket>programu, należy utworzyć potok danych między aplikacją a urządzeniem zdalnym. Chociaż istnieją inne rodziny i protokoły adresów sieciowych, w tym przykładzie pokazano, jak utworzyć połączenie TCP/IP z usługą zdalną.  
   
- Protokół TCP/IP używa adresu sieciowego i numer portu usługi do unikatowego identyfikowania usługi. Adres sieciowy identyfikuje konkretnym urządzeniu w sieci. numer portu identyfikuje określonej usługi na tym urządzeniu, aby nawiązać połączenie. Kombinacja portu adresu i usługi sieciowej jest nazywana punktu końcowego, która jest reprezentowana w .NET Framework według <xref:System.Net.EndPoint> klasy. Element podrzędny **punktu końcowego** jest zdefiniowana dla każdego obsługiwane rodziny adresów; Rodzina adresów IP, klasa jest <xref:System.Net.IPEndPoint>.  
+ Protokół TCP/IP używa adresu sieciowego i numeru portu usługi do unikatowego identyfikowania usługi. Adres sieciowy identyfikuje określone urządzenie w sieci; Numer portu identyfikuje konkretną usługę na tym urządzeniu, z którą ma zostać nawiązane połączenie. Kombinacja adresu sieciowego i portu usługi nosi nazwę punktu końcowego, który jest reprezentowany w .NET Framework przez <xref:System.Net.EndPoint> klasę. Element podrzędny **punktu końcowego** jest zdefiniowany dla każdej obsługiwanej rodziny adresów; w przypadku rodziny adresów IP Klasa jest <xref:System.Net.IPEndPoint>.  
   
- <xref:System.Net.Dns> Klasa udostępnia usługi nazwy domeny dla aplikacji korzystających z usług internetowych TCP/IP. <xref:System.Net.Dns.Resolve%2A> Metoda odpytuje serwer DNS, aby zamapować nazwę przyjazną dla użytkownika domeny (na przykład "host.contoso.com") do numerycznego adresu internetowego (np. 192.168.1.1). **Rozwiąż** zwraca <xref:System.Net.IPHostEntry> zawierający listę adresów i aliasy dla żądanej nazwy. W większości przypadków można użyć pierwszego adresu zwracane w <xref:System.Net.IPHostEntry.AddressList%2A> tablicy. Poniższy kod pobiera <xref:System.Net.IPAddress> zawierające adres IP dla host.contoso.com serwera.  
+ <xref:System.Net.Dns> Klasa zapewnia usługi nazw domen dla aplikacji, które korzystają z usług internetowych TCP/IP. <xref:System.Net.Dns.Resolve%2A> Metoda wysyła zapytanie do serwera DNS w celu zamapowania przyjaznej dla użytkownika nazwy domeny (takiej jak "host.contoso.com") na liczbowy adres internetowy (na przykład 192.168.1.1). Funkcja **Rozwiązuj** zwraca <xref:System.Net.IPHostEntry> element zawierający listę adresów i aliasów dla żądanej nazwy. W większości przypadków można użyć pierwszego adresu zwróconego w <xref:System.Net.IPHostEntry.AddressList%2A> tablicy. Poniższy kod pobiera <xref:System.Net.IPAddress> zawierający adres IP serwera Host.contoso.com.  
   
 ```vb  
 Dim ipHostInfo As IPHostEntry = Dns.Resolve("host.contoso.com")  
@@ -40,7 +40,7 @@ IPHostEntry ipHostInfo = Dns.Resolve("host.contoso.com");
 IPAddress ipAddress = ipHostInfo.AddressList[0];  
 ```  
   
- Internet Assigned Numbers Authority (Iana) definiuje numery portów dla usług common (Aby uzyskać więcej informacji, zobacz [nazwę usługi i rejestru numer portu protokołu transportu](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)). Inne usługi można zarejestrowano numery portów z zakresu od 1024 do 65 535. Poniższy kod łączy adres IP dla host.contoso.com z numerem portu, aby utworzyć zdalnego punktu końcowego połączenia.  
+ Urząd IANA (Internet Assigned Numbers Authority) definiuje numery portów dla typowych usług (Aby uzyskać więcej informacji, zobacz [rejestr numerów portów i protokołów transportu](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)). Inne usługi mogą mieć zarejestrowane numery portów z zakresu od 1 024 do 65 535. Poniższy kod łączy adres IP host.contoso.com z numerem portu, aby utworzyć zdalny punkt końcowy dla połączenia.  
   
 ```vb  
 Dim ipe As New IPEndPoint(ipAddress, 11000)  
@@ -50,7 +50,7 @@ Dim ipe As New IPEndPoint(ipAddress, 11000)
 IPEndPoint ipe = new IPEndPoint(ipAddress,11000);  
 ```  
   
- Po określająca adres urządzenia zdalnego, a następnie wybierając port do użycia na potrzeby połączenia, aplikacja może próbować nawiązać połączenie z urządzeniem zdalnym. W poniższym przykładzie użyto istniejącej **IPEndPoint** nawiązać połączenia z urządzeniem zdalnym i przechwytuje wszystkie wyjątki, które są generowane.  
+ Po ustaleniu adresu urządzenia zdalnego i wybraniu portu do użycia w ramach połączenia aplikacja może próbować nawiązać połączenie z urządzeniem zdalnym. Poniższy przykład używa istniejącej **IPEndPoint** do nawiązywania połączenia z urządzeniem zdalnym i przechwytuje wszystkie zgłoszone wyjątki.  
   
 ```vb  
 Try  
@@ -79,7 +79,7 @@ try {
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Używanie synchronicznego gniazda klienta](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
-- [Używanie asynchronicznego gniazda klienta](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
-- [Instrukcje: Tworzenie gniazda](../../../docs/framework/network-programming/how-to-create-a-socket.md)
-- [Gniazda](../../../docs/framework/network-programming/sockets.md)
+- [Używanie synchronicznego gniazda klienta](using-a-synchronous-client-socket.md)
+- [Używanie asynchronicznego gniazda klienta](using-an-asynchronous-client-socket.md)
+- [Instrukcje: Utwórz gniazdo](how-to-create-a-socket.md)
+- [Gniazda](sockets.md)

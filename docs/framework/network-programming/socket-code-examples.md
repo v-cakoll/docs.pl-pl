@@ -14,32 +14,32 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: f3fc7533-6956-42c6-bbc3-73e5a221027d
-ms.openlocfilehash: f709c2e0780b89e072c43e9acaf722e6851d4cbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cbb77907c018b9b8f56895adf21f1f353ab71f88
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641895"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047293"
 ---
 # <a name="socket-code-examples"></a>Przykłady kodu gniazd
-Poniższe przykłady kodu przedstawiają sposoby użycia <xref:System.Net.Sockets.Socket> klasy jako klienta, aby połączyć się z usługami sieci zdalnej, a serwer do nasłuchiwania połączeń z klientami zdalnymi.  
+Poniższy przykład kodu pokazuje, <xref:System.Net.Sockets.Socket> jak używać klasy jako klienta do nawiązywania połączenia ze zdalnymi usługami sieciowymi oraz jako serwer do nasłuchiwania połączeń z klientów zdalnych.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przykład synchronicznego gniazda klienta](../../../docs/framework/network-programming/synchronous-client-socket-example.md)  
- Pokazuje, jak zaimplementować synchronicznego <xref:System.Net.Sockets.Socket> klienta, który nawiązuje połączenie z serwerem i wyświetla dane zwrócone z serwera.  
+ [Przykład synchronicznego gniazda klienta](synchronous-client-socket-example.md)  
+ Pokazuje, jak zaimplementować klienta synchronicznego <xref:System.Net.Sockets.Socket> , który nawiązuje połączenie z serwerem i wyświetla dane zwrócone przez serwer.  
   
- [Przykład synchronicznego gniazda serwera](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
- Pokazuje, jak zaimplementować synchronicznego <xref:System.Net.Sockets.Socket> serwera, który akceptuje połączenia od klienta i zwraca ponownie dane otrzymane od klienta.  
+ [Przykład synchronicznego gniazda serwera](synchronous-server-socket-example.md)  
+ Pokazuje, jak zaimplementować serwer synchroniczny <xref:System.Net.Sockets.Socket> , który akceptuje połączenia od klienta i zwraca dane odebrane od klienta.  
   
- [Przykład asynchronicznego gniazda klienta](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)  
- Pokazuje sposób implementacji asynchronicznego <xref:System.Net.Sockets.Socket> klienta, który nawiązuje połączenie z serwerem i wyświetla dane zwrócone z serwera.  
+ [Przykład asynchronicznego gniazda klienta](asynchronous-client-socket-example.md)  
+ Pokazuje, w jaki sposób zaimplementować <xref:System.Net.Sockets.Socket> klienta asynchronicznego, który nawiązuje połączenie z serwerem i wyświetla dane zwrócone przez serwer.  
   
- [Przykład asynchronicznego gniazda serwera](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
- Pokazuje sposób implementacji asynchronicznego <xref:System.Net.Sockets.Socket> serwera, który akceptuje połączenia od klienta i zwraca ponownie dane otrzymane od klienta.  
+ [Przykład asynchronicznego gniazda serwera](asynchronous-server-socket-example.md)  
+ Pokazuje, w jaki sposób zaimplementować <xref:System.Net.Sockets.Socket> serwer asynchroniczny, który akceptuje połączenia od klienta i zwraca dane odebrane od klienta.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Gniazda](../../../docs/framework/network-programming/sockets.md)  
- Zawiera podstawowe informacje na temat <xref:System.Net.Sockets> przestrzeni nazw i <xref:System.Net.Sockets.Socket> klasy.  
+ [Gniazda](sockets.md)  
+ Zawiera podstawowe informacje o <xref:System.Net.Sockets> przestrzeni nazw <xref:System.Net.Sockets.Socket> i klasie.  
   
- [Zabezpieczenia w programowaniu sieciowym](../../../docs/framework/network-programming/security-in-network-programming.md)  
+ [Zabezpieczenia w programowaniu sieciowym](security-in-network-programming.md)  
  Opis używania standardowych technik zabezpieczania i uwierzytelniania w Internecie.

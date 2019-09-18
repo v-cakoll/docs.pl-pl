@@ -16,27 +16,27 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-ms.openlocfilehash: e074a487c39dfaf1c4704f9dadf7ed8e430fb630
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d35278ab7feb42453b5a0adbc86c47b7ac3ff5ca
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641856"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047114"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
-Aplikacje mogą używać usług Transmission Control Protocol (TCP) i protokołu UDP (User Datagram) za pomocą <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>, i <xref:System.Net.Sockets.UdpClient> klasy. W ramach tych zajęć protokołu są wbudowane w górnej części <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> klasy i zadbać o szczegółach transferu danych.  
+Aplikacje mogą używać usług Transmission Control Protocol (TCP) i UDP (User Datagram Protocol) z <xref:System.Net.Sockets.TcpClient>klasami, <xref:System.Net.Sockets.TcpListener>i <xref:System.Net.Sockets.UdpClient> . Te klasy protokołów są zbudowane na podstawie <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> klasy i należy wziąć pod uwagę Szczegóły transferu danych.  
   
- Klasy protokołu Użyj metod synchronicznych **gniazda** klasy w celu zapewnienia niezwykle proste dostępu do usług sieciowych bez konieczności utrzymywania informacji o stanie lub wiedząc, szczegółowe informacje o konfigurowaniu gniazda specyficzne dla protokołu. Aby używać asynchronicznych **gniazda** metody, można użyć metod asynchronicznych, dostarczone przez <xref:System.Net.Sockets.NetworkStream> klasy. Dostępu do funkcji z **gniazda** klasy nie jest udostępniany przez protokół klasy, należy użyć **gniazda** klasy.  
+ Klasy protokołu używają metod synchronicznych klasy **Socket** , aby zapewnić prosty i prosty dostęp do usług sieciowych bez konieczności utrzymywania informacji o stanie lub znajomości szczegółów dotyczących konfigurowania gniazd specyficznych dla protokołu. Aby użyć asynchronicznych metod **gniazda** , można użyć metod asynchronicznych dostarczonych przez <xref:System.Net.Sockets.NetworkStream> klasę. Aby uzyskać dostęp do funkcji klasy **Socket** , które nie są uwidaczniane przez klasy protokołów, należy użyć klasy **Socket** .  
   
- **TcpClient** i **TcpListener** reprezentują sieci za pomocą funkcji **Strumień NetworkStream** klasy. Możesz użyć <xref:System.Net.Sockets.TcpClient.GetStream%2A> metodę, aby zwrócić strumień sieci, a następnie wywołaj strumienia <xref:System.Net.Sockets.NetworkStream.Read%2A> i <xref:System.Net.Sockets.NetworkStream.Write%2A> metody. **Strumień NetworkStream** nie jest właścicielem gniazdo podstawowej z klas protokołu, zamykając go nie ma wpływu na gniazda.  
+ **TcpClient** i **TcpListener** reprezentują sieć przy użyciu klasy **NetworkStream** . Używasz metody do zwrócenia strumienia sieciowego, a następnie wywołaj metody <xref:System.Net.Sockets.NetworkStream.Read%2A> strumienia i <xref:System.Net.Sockets.NetworkStream.Write%2A>. <xref:System.Net.Sockets.TcpClient.GetStream%2A> **NetworkStream** nie jest własnością gniazda bazowego klasy protokołów, dlatego zamknięcie nie ma wpływu na gniazdo.  
   
- **UdpClient** klasy wykorzystuje tablicę bajtów zawierającą UDP datagram. Możesz użyć <xref:System.Net.Sockets.UdpClient.Send%2A> metodę, aby wysyłać dane do sieci i <xref:System.Net.Sockets.UdpClient.Receive%2A> metodę, aby otrzymywać datagram przychodzących.  
+ Klasa **UdpClient** używa tablicy bajtów do przechowywania datagramu UDP. Używasz metody do wysyłania danych do sieci <xref:System.Net.Sockets.UdpClient.Receive%2A> i metody odbierania przychodzącego datagramu. <xref:System.Net.Sockets.UdpClient.Send%2A>  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Stosowanie usług TCP](../../../docs/framework/network-programming/using-tcp-services.md)
-- [Stosowanie usług UDP](../../../docs/framework/network-programming/using-udp-services.md)
-- [Stosowanie strumieni w sieci](../../../docs/framework/network-programming/using-streams-on-the-network.md)
-- [Używanie asynchronicznego gniazda serwera](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [Używanie asynchronicznego gniazda klienta](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
-- [Korzystanie z protokołów aplikacji](../../../docs/framework/network-programming/using-application-protocols.md)
+- [Stosowanie usług TCP](using-tcp-services.md)
+- [Stosowanie usług UDP](using-udp-services.md)
+- [Stosowanie strumieni w sieci](using-streams-on-the-network.md)
+- [Używanie asynchronicznego gniazda serwera](using-an-asynchronous-server-socket.md)
+- [Używanie asynchronicznego gniazda klienta](using-an-asynchronous-client-socket.md)
+- [Korzystanie z protokołów aplikacji](using-application-protocols.md)

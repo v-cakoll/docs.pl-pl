@@ -7,25 +7,25 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8104d7cd6aa5a26fa69df7be838ea9b7cb2cc44
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: b5d7f97a4ec67e4932aaee922897a16362f6a78c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971773"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053235"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Porady dotyczące zestawów i domen aplikacji
 Poniższe sekcje zawierają linki do wszystkich tematów, które znajdują się w dokumentacji koncepcyjnej dotyczącej programowania przy użyciu domen i zestawów aplikacji.  
   
  **Domeny aplikacji**  
   
-- [Instrukcje: Tworzenie domeny aplikacji](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+- [Instrukcje: Tworzenie domeny aplikacji](how-to-create-an-application-domain.md)  
   
-- [Instrukcje: Zwalnianie domeny aplikacji](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
+- [Instrukcje: Zwalnianie domeny aplikacji](how-to-unload-an-application-domain.md)  
   
-- [Instrukcje: Konfigurowanie domeny aplikacji](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
+- [Instrukcje: Konfigurowanie domeny aplikacji](how-to-configure-an-application-domain.md)  
   
-- [Instrukcje: Ładowanie zestawów do domeny aplikacji](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
+- [Instrukcje: Ładowanie zestawów do domeny aplikacji](how-to-load-assemblies-into-an-application-domain.md)  
   
 - [Instrukcje: Uzyskiwanie informacji o typie i elemencie członkowskim z zestawu](../reflection-and-codedom/get-type-member-information.md)  
   
@@ -47,12 +47,12 @@ Poniższe sekcje zawierają linki do wszystkich tematów, które znajdują się 
   
 - [Instrukcje: Instalowanie zestawu w globalnej pamięci podręcznej zestawów](install-assembly-into-gac.md)  
   
-- [Instrukcje: Wyświetlanie zawartości globalnej pamięci podręcznej zestawów](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
+- [Instrukcje: Wyświetlanie zawartości globalnej pamięci podręcznej zestawów](how-to-view-the-contents-of-the-gac.md)  
   
-- [Instrukcje: Usuwanie zestawu z globalnej pamięci podręcznej zestawów](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
+- [Instrukcje: Usuwanie zestawu z globalnej pamięci podręcznej zestawów](how-to-remove-an-assembly-from-the-gac.md)  
   
 - [Instrukcje: Wyświetl zawartość zestawu](../../standard/assembly/view-contents.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Domeny aplikacji i zestawy](../../../docs/framework/app-domains/index.md)
+- [Domeny aplikacji i zestawy](index.md)

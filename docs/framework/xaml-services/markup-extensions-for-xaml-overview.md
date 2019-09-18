@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 5c29899846e7210c02b6bcc2b677b05581a5c6b1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: adcd224e30d541f27b1583389ca63b6f8a32fc38
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939707"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053858"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Rozszerzenia znaczników dla przeglądu XAML
 Rozszerzenia znaczników są techniką języka XAML do uzyskiwania wartości, która nie jest elementem pierwotnym ani określonym typem XAML. W przypadku użycia atrybutów rozszerzenia znaczników używają znanej sekwencji znaków otwierającego nawiasu `{` klamrowego, aby wprowadzić zakres rozszerzenia znacznika i zamykającego `}` nawiasu klamrowego. Korzystając z .NET Framework usług XAML, można użyć niektórych wstępnie zdefiniowanych rozszerzeń znaczników języka XAML z zestawu System. XAML. Można również utworzyć podklasę <xref:System.Windows.Markup.MarkupExtension> z klasy, zdefiniowanej w pliku System. XAML i zdefiniować własne rozszerzenia znaczników. Lub można użyć rozszerzeń znaczników zdefiniowanych przez określoną strukturę, jeśli już odwołujesz się do tej struktury.  
@@ -73,7 +73,7 @@ Rozszerzenia znaczników są techniką języka XAML do uzyskiwania wartości, kt
   
  Załóżmy `Collate` na przykład, że rozszerzenie znaczników jest przeznaczone do obsługi tylko trybu, w którym istnieje jeden argument pozycyjny reprezentujący tryb, określony `CollationMode` jako stała wyliczenia. W takim przypadku powinien być Konstruktor o następującej postaci:  
   
-```  
+```csharp  
 public Collate(CollationMode collationMode) {...}  
 ```  
   
@@ -91,7 +91,7 @@ public Collate(CollationMode collationMode) {...}
   
  Argumenty są nazywane argumentami pozycyjnymi, ponieważ kolejność, w której wykryto tokeny w wykorzystaniu, odpowiada kolejności pozycyjnyej parametru konstruktora, do którego są przypisane. Rozważmy na przykład następujący podpis konstruktora:  
   
-```  
+```csharp  
 public Collate(CollationMode collationMode, object collateThis) {...}  
 ```  
   

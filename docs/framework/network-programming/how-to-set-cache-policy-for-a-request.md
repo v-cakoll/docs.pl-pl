@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 3da60366ec1a8e2e0242cf78e0418fe76e18da68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b28cf6e27fa6f5a5d255621d8e21e9a565ddbc4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642467"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048116"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>Instrukcje: ustawianie zasad pamięci podręcznej dla żądania
-W poniższym przykładzie pokazano, ustawianie zasad pamięci podręcznej dla żądania. Przykładowe dane wejściowe to identyfikator URI, taki jak `http://www.contoso.com/`.  
+W poniższym przykładzie pokazano, jak ustawić zasady pamięci podręcznej dla żądania. Przykładowe dane wejściowe to identyfikator URI, taki `http://www.contoso.com/`jak.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu tworzy zasady pamięci podręcznej, która umożliwia żądany zasób do użycia z pamięci podręcznej, jeśli nie było w pamięci podręcznej przez czas dłuższy niż jeden dzień. Przykład wyświetla komunikat informujący o tym, czy zasób został użyty z pamięci podręcznej — na przykład `"The response was retrieved from the cache : False."`— a następnie wyświetla zasobu. Żądanie może być spełnione przez wszelkie pamięci między klientem i serwerem.  
+ Poniższy przykład kodu tworzy zasady pamięci podręcznej, które umożliwiają użycie żądanego zasobu z pamięci podręcznej, jeśli nie było w pamięci podręcznej dłużej niż jeden dzień. Przykład wyświetla komunikat wskazujący, czy zasób został użyty z pamięci podręcznej, na przykład, `"The response was retrieved from the cache : False."`, a następnie wyświetla zasób. Żądanie może być spełnione przez dowolną pamięć podręczną między klientem i serwerem.  
   
 ```csharp  
 using System;  
@@ -107,8 +107,8 @@ End Namespace
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zarządzanie pamięcią podręczną dla aplikacji sieciowych](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [Zasady pamięci podręcznej](../../../docs/framework/network-programming/cache-policy.md)
-- [Zasady pamięci podręcznej oparte na lokalizacji](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Zasady pamięci podręcznej oparte na czasie](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [\<requestCaching — >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [Zarządzanie pamięcią podręczną dla aplikacji sieciowych](cache-management-for-network-applications.md)
+- [Zasady pamięci podręcznej](cache-policy.md)
+- [Zasady pamięci podręcznej oparte na lokalizacji](location-based-cache-policies.md)
+- [Zasady pamięci podręcznej oparte na czasie](time-based-cache-policies.md)
+- [\<requestCaching >, element (Ustawienia sieci)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

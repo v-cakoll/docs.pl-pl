@@ -14,54 +14,54 @@ helpviewer_keywords:
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f5d529451f30a6785547410f5121dbb6f91fe01
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3fd58ae8f73fd932df641ea96a44ff618dd139e2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660392"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052806"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>fatalExecutionEngineError MDA
-`fatalExecutionEngineError` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy wykryto błąd krytyczny w środowisku uruchomieniowym języka (wspólnego CLR). Proces zostanie zakończony.  
+Asystent `fatalExecutionEngineError` debugowania zarządzanego (MDA) jest uaktywniany w przypadku wykrycia błędu krytycznego w środowisku uruchomieniowym języka wspólnego (CLR). Proces zostanie zakończony.  
   
 ## <a name="symptoms"></a>Symptomy  
- Kończenie procesu nieoczekiwany. Nie można określić inne objawy, ponieważ może wystąpić błąd CLR, z różnych powodów.  
+ Nieoczekiwane zakończenie procesu. Nie można ustalić innych objawów, ponieważ awaria środowiska CLR może wystąpić z różnych powodów.  
   
 ## <a name="cause"></a>Przyczyna  
- Środowisko CLR jest uszkodzony krytycznego. W większości przypadków jest to spowodowane uszkodzeniem danych, która może wpływać wiele problemów, takich jak wywołania platformy źle sformułowane wywołania funkcji i przekazanie nieprawidłowe dane do środowiska CLR.  
+ Środowisko CLR zostało uszkodzone w sposób krytyczny. Jest to najczęściej spowodowane uszkodzeniem danych, które może być spowodowane przez wiele problemów, takich jak wywołania źle sformułowanej platformy wywołania funkcji i przekazywanie nieprawidłowych danych do środowiska CLR.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Włączanie dodatkowych MDA może ułatwić zidentyfikowanie problemu. Następujące MDA może być szczególnie przydatne podczas diagnozowania problemu:  
+ Włączenie dodatkowych MDA może pomóc w zidentyfikowaniu problemu. Następujący MDA może być szczególnie przydatny w diagnozowaniu problemu:  
   
-- [invalidOverlappedToPinvoke](../../../docs/framework/debug-trace-profile/invalidoverlappedtopinvoke-mda.md)  
+- [invalidOverlappedToPinvoke](invalidoverlappedtopinvoke-mda.md)  
   
-- [overlappedFreeError](../../../docs/framework/debug-trace-profile/overlappedfreeerror-mda.md)  
+- [overlappedFreeError](overlappedfreeerror-mda.md)  
   
-- [pInvokeStackImbalance](../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)  
+- [pInvokeStackImbalance](pinvokestackimbalance-mda.md)  
   
-- [gcUnmanagedToManaged](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)  
+- [gcUnmanagedToManaged](gcunmanagedtomanaged-mda.md)  
   
-- [gcManagedToUnmanaged](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)  
+- [gcManagedToUnmanaged](gcmanagedtounmanaged-mda.md)  
   
-- [callbackOnCollectedDelegate](../../../docs/framework/debug-trace-profile/callbackoncollecteddelegate-mda.md)  
+- [callbackOnCollectedDelegate](callbackoncollecteddelegate-mda.md)  
   
-- [reportAvOnComRelease](../../../docs/framework/debug-trace-profile/reportavoncomrelease-mda.md)  
+- [reportAvOnComRelease](reportavoncomrelease-mda.md)  
   
-- [invalidVariant](../../../docs/framework/debug-trace-profile/invalidvariant-mda.md)  
+- [invalidVariant](invalidvariant-mda.md)  
   
-- [invalidIUnknown](../../../docs/framework/debug-trace-profile/invalidiunknown-mda.md)  
+- [invalidIUnknown](invalidiunknown-mda.md)  
   
-- [raceOnRCWCleanup](../../../docs/framework/debug-trace-profile/raceonrcwcleanup-mda.md)  
+- [raceOnRCWCleanup](raceonrcwcleanup-mda.md)  
   
-- [invalidFunctionPointerInDelegate](../../../docs/framework/debug-trace-profile/invalidfunctionpointerindelegate-mda.md)  
+- [invalidFunctionPointerInDelegate](invalidfunctionpointerindelegate-mda.md)  
   
-- [invalidGCHandleCookie](../../../docs/framework/debug-trace-profile/invalidgchandlecookie-mda.md)  
+- [invalidGCHandleCookie](invalidgchandlecookie-mda.md)  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- To zdarzenie MDA nie ma wpływu na działanie w środowisku uruchomieniowym.  
+ To zdarzenie MDA nie ma wpływu na zachowanie środowiska uruchomieniowego.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Adres funkcji CLR, który spowodował błąd krytyczny, identyfikator wątku, w którym wystąpił błąd i kod błędu.  
+ Adres funkcji CLR, która spowodowała błąd krytyczny, identyfikator wątku, w którym wystąpił błąd, oraz kod błędu.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -77,4 +77,4 @@ ms.locfileid: "64660392"
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution.Cer>
-- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)

@@ -1,19 +1,19 @@
 ---
-title: <Type> (Architektura .NET Native)
+title: <Type>— Element (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc93d1af65a34381005c3f3987dd18a8e7bba8d9
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 7ffe37540fe089bfd1e0eca1958498e725eb9b5b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689278"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049156"
 ---
-# <a name="type-element-net-native"></a>\<Typ > (architektura .NET Native)
+# <a name="type-element-net-native"></a>\<Typ > element (.NET Native)
 
-Ma zastosowanie zasad środowiska uruchomieniowego do określonego typu, takie jak klasy lub struktury.
+Stosuje zasady środowiska uruchomieniowego do określonego typu, takiego jak Klasa lub struktura.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,73 +40,73 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 |Atrybut|Typ atrybutu|Opis|
 |---------------|--------------------|-----------------|
 |`Name`|Ogólne|Atrybut wymagany. Określa nazwę typu.|
-|`Activate`|Odbicie|Atrybut opcjonalny. Kontroluje dostęp do środowiska uruchomieniowego do konstruktorów, aby włączyć aktywacji wystąpień.|
-|`Browse`|Odbicie|Atrybut opcjonalny. Kontroluje, wykonanie zapytania dotyczącego informacji o elementach programu, ale nie uwzględnia żadnych dostęp do środowiska uruchomieniowego.|
-|`Dynamic`|Odbicie|Atrybut opcjonalny. Kontroluje dostęp do środowiska uruchomieniowego do wszystkich typów elementów członkowskich, konstruktorzy, metody, pola, właściwości i zdarzenia, w tym umożliwiające programowanie dynamiczne.|
-|`Serialize`|Serializacja|Atrybut opcjonalny. Kontroluje dostęp do środowiska uruchomieniowego do konstruktorów, pola i właściwości, aby umożliwić wystąpień typu serializacji i deserializacji, biblioteki, takie jak serializator Newtonsoft JSON.|
-|`DataContractSerializer`|Serializacja|Atrybut opcjonalny. Określa zasady do serializacji, który używa <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> klasy.|
-|`DataContractJsonSerializer`|Serializacja|Atrybut opcjonalny. Określa zasady dla serializacji JSON, który używa <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> klasy.|
-|`XmlSerializer`|Serializacja|Atrybut opcjonalny. Określa zasady dla serializacji XML, który używa <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> klasy.|
-|`MarshalObject`|Interop|Atrybut opcjonalny. Zasady kontroli marshaling typów referencyjnych do środowiska uruchomieniowego Windows i modelu COM.|
-|`MarshalDelegate`|Interop|Atrybut opcjonalny. Określa zasady kierowanie typy delegatów jako wskaźniki funkcji do kodu macierzystego.|
-|`MarshalStructure`|Interop|Atrybut opcjonalny. Określa zasady dla marshaling typów wartości do kodu natywnego.|
+|`Activate`|Odbicie|Atrybut opcjonalny. Kontroluje dostęp środowiska uruchomieniowego do konstruktorów, aby umożliwić aktywację wystąpień.|
+|`Browse`|Odbicie|Atrybut opcjonalny. Steruje wykonywaniem zapytań dotyczących informacji o elementach programu, ale nie umożliwia dostępu do środowiska uruchomieniowego.|
+|`Dynamic`|Odbicie|Atrybut opcjonalny. Kontroluje dostęp środowiska uruchomieniowego do wszystkich elementów członkowskich typu, takich jak konstruktory, metody, pola, właściwości i zdarzenia, aby umożliwić programowanie dynamiczne.|
+|`Serialize`|Serializacja|Atrybut opcjonalny. Kontroluje dostęp środowiska uruchomieniowego do konstruktorów, pól i właściwości, aby umożliwić Serializowanie i deserializacja wystąpień typów przez biblioteki, takie jak serializator JSON Newtonsoft.|
+|`DataContractSerializer`|Serializacja|Atrybut opcjonalny. Kontroluje zasady dla serializacji, która używa <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> klasy.|
+|`DataContractJsonSerializer`|Serializacja|Atrybut opcjonalny. Kontroluje zasady dla serializacji JSON używającej <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> klasy.|
+|`XmlSerializer`|Serializacja|Atrybut opcjonalny. Kontroluje zasady dla serializacji XML, która używa <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> klasy.|
+|`MarshalObject`|Interop|Atrybut opcjonalny. Kontroluje zasady dotyczące organizowania typów odwołań do środowisko wykonawcze systemu Windows i COM.|
+|`MarshalDelegate`|Interop|Atrybut opcjonalny. Steruje zasadami organizowania typów delegatów jako wskaźników funkcji do kodu natywnego.|
+|`MarshalStructure`|Interop|Atrybut opcjonalny. Steruje zasadami dotyczącymi organizowania typów wartości na kod natywny.|
 
-## <a name="name-attribute"></a>Nazwa atrybutu
+## <a name="name-attribute"></a>Atrybut nazwy
 
 |Wartość|Opis|
 |-----------|-----------------|
-|*type_name*|Nazwa typu. Jeśli ten `<Type>` element jest elementem podrzędnym jednej [ \<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md) element lub innym `<Type>` elementu *type_name* można uwzględnić nazwę typu bez jego przestrzeń nazw. W przeciwnym razie *type_name* musi zawierać w pełni kwalifikowana nazwa typu.|
+|*type_name*|Nazwa typu. Jeśli ten `<Type>` element jest elementem podrzędnym [ \<przestrzeni nazw >](namespace-element-net-native.md) elementu lub innego `<Type>` elementu, *TYPE_NAME* może zawierać nazwę typu bez jego przestrzeni nazw. W przeciwnym razie *TYPE_NAME* musi zawierać w pełni kwalifikowaną nazwę typu.|
 
 ## <a name="all-other-attributes"></a>Wszystkie inne atrybuty
 
 |Wartość|Opis|
 |-----------|-----------------|
-|*policy_setting*|Ustawienia do zastosowania do tego typu zasad. Możliwe wartości to `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal`, i `Required All`. Aby uzyskać więcej informacji, zobacz [ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|
+|*policy_setting*|Ustawienie, które ma zostać zastosowane do tego typu zasad. Możliwe wartości to `All`, `Auto` `Excluded` ,,`Public` ,,`Required All`, i. `PublicAndInternal` `Required Public` `Required PublicAndInternal` Aby uzyskać więcej informacji, zobacz [Ustawienia zasad dyrektywy środowiska uruchomieniowego](runtime-directive-policy-settings.md).|
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
 |Element|Opis|
 |-------------|-----------------|
-|[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|Jeśli typ zawierający jest atrybut, zdefiniowano zasad wykonywania dla elementów kodu, do których zastosowano ten atrybut.|
-|[\<Zdarzenie >](../../../docs/framework/net-native/event-element-net-native.md)|Ma zastosowanie zasad odbicia do zdarzenia należące do tego typu.|
-|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|Ma zastosowanie zasad odbicia do pola należących do tego typu.|
-|[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|Stosuje zasady do typu parametru typu ogólnego.|
-|[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|Stosuje zasady do typu, jeśli te zasady zostały doliczone do typu reprezentowanego przez zawierający `<Type>` elementu.|
-|[\<Metoda >](../../../docs/framework/net-native/method-element-net-native.md)|Ma zastosowanie zasad odbicia do metody należących do tego typu.|
-|[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Ma zastosowanie zasad odbicia do skonstruowanego należących do tego typu metody ogólnej.|
-|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|Stosuje zasady odbicia właściwości należących do tego typu.|
-|[\<Podtypy >](../../../docs/framework/net-native/subtypes-element-net-native.md)|Stosuje zasady środowiska uruchomieniowego dla wszystkich klas dziedziczone z typu zawierającego.|
-|`<Type>`|Ma zastosowanie zasad odbicia do typu zagnieżdżonego.|
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Ma zastosowanie zasad odbicia do skonstruowanego typu ogólnego.|
+|[\<AttributeImplies >](attributeimplies-element-net-native.md)|Jeśli typ zawierający jest atrybutem, definiuje zasady środowiska uruchomieniowego dla elementów kodu, do których zastosowano atrybut.|
+|[\<> Zdarzeń](event-element-net-native.md)|Stosuje zasady odbicia do zdarzenia należącego do tego typu.|
+|[\<> Pola](field-element-net-native.md)|Stosuje zasady odbicia do pola należącego do tego typu.|
+|[\<GenericParameter >](genericparameter-element-net-native.md)|Stosuje zasady do typu parametru typu ogólnego.|
+|[\<ImpliesType >](impliestype-element-net-native.md)|Stosuje zasady do typu, jeśli te zasady zostały zastosowane do typu reprezentowanego przez element zawierający `<Type>` .|
+|[\<> Metody](method-element-net-native.md)|Stosuje zasady odbicia do metody należącej do tego typu.|
+|[\<MethodInstantiation >](methodinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanej metody ogólnej należącej do tego typu.|
+|[\<> Właściwości](property-element-net-native.md)|Stosuje zasady odbicia do właściwości należącej do tego typu.|
+|[\<Podtypy >](subtypes-element-net-native.md)|Stosuje zasady środowiska uruchomieniowego do wszystkich klas dziedziczonych z typu zawierającego.|
+|`<Type>`|Stosuje zasady odbicia do typu zagnieżdżonego.|
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego.|
 
 ### <a name="parent-elements"></a>Elementy nadrzędne
 
 |Element|Opis|
 |-------------|-----------------|
-|[\<Aplikacji >](../../../docs/framework/net-native/application-element-net-native.md)|Służy jako kontener dla całej aplikacji, typy i składowe typu, w których metadane są dostępne w celu odbicia w czasie wykonywania.|
-|[\<Zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|Zastosowanie zasad odbicia do wszystkich typów w określonym zestawie.|
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Definiuje zestaw, który zawiera typy i składowe typu, w których metadane są dostępne w celu odbicia w czasie wykonywania.|
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Zastosowanie zasad odbicia do wszystkich typów w przestrzeni nazw.|
-|`<Type>`|Ma zastosowanie zasad odbicia do typu i jej elementów członkowskich.|
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Ma zastosowanie zasad odbicia do skonstruowany typ rodzajowy i jej elementów członkowskich.|
+|[\<> Aplikacji](application-element-net-native.md)|Służy jako kontener dla typów i składowych dla całej aplikacji, których metadane są dostępne do odbicia w czasie wykonywania.|
+|[\<> Zestawu](assembly-element-net-native.md)|Stosuje zasady odbicia do wszystkich typów w określonym zestawie.|
+|[\<> Biblioteki](library-element-net-native.md)|Definiuje zestaw zawierający typy i elementy członkowskie typu, których metadane są dostępne do odbicia w czasie wykonywania.|
+|[\<Namespace>](namespace-element-net-native.md)|Stosuje zasady odbicia do wszystkich typów w przestrzeni nazw.|
+|`<Type>`|Stosuje zasady odbicia do typu i wszystkich jego elementów członkowskich.|
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego i wszystkich jego członków.|
 
 ## <a name="remarks"></a>Uwagi
 
-Odbicia, serializacja i atrybutów międzyoperacyjności są wszystkie opcjonalne. Jeśli żaden nie jest obecny, `<Type>` element służy jako kontener, w których typy podrzędne Definiowanie zasad dla poszczególnych członków.
+Atrybuty odbicia, serializacji i międzyoperacyjności są opcjonalne. Jeśli nie są obecne, `<Type>` element służy jako kontener, którego typy podrzędne definiują zasady dla poszczególnych członków.
 
-Jeśli `<Type>` element jest elementem podrzędnym elementu [ \<zestawu >](../../../docs/framework/net-native/assembly-element-net-native.md), [ \<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md), `<Type>`, lub [ \< TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) elementu zastępuje ustawienia zasad zdefiniowanych w elemencie nadrzędnym.
+[ \<](typeinstantiation-element-net-native.md) `<Type>` [ \<](assembly-element-net-native.md) [ \<](namespace-element-net-native.md)Jeśli element jest elementem podrzędnym > zestawu, przestrzeni nazw >, lub TypeInstantiation > element, zastępuje ustawienia zasad zdefiniowane przez `<Type>` element nadrzędny.
 
-Element `<Type>` elementu typu ogólnego stosuje swoje zasady do wszystkich wystąpień, które nie mają własnych zasad. Zasady skonstruowany typów ogólnych jest definiowany przez [ \<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) elementu.
+`<Type>` Element typu ogólnego stosuje swoje zasady do wszystkich wystąpień, które nie mają własnych zasad. Zasady skonstruowanych typów ogólnych są zdefiniowane przez [ \<element TypeInstantiation >](typeinstantiation-element-net-native.md) .
 
-Jeśli typ jest typem ogólnym, jego nazwa zostanie nadany przez symbol akcent (\`) i jego numer parametrów ogólnych. Na przykład `Name` atrybutu `<Type>` elementu <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> klasa jest wyświetlany jako ``Name="System.Collections.Generic.List`1"``.
+Jeśli typ jest typem ogólnym, jego nazwa jest uzupełniona symbolem akcentu słabego\`(), po którym następuje liczba parametrów ogólnych. Na przykład `Name` ``Name="System.Collections.Generic.List`1"``atrybut `<Type>` elementu<xref:System.Collections.Generic.List%601?displayProperty=nameWithType> klasy jest wyświetlany jako.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie użyto odbicia, aby wyświetlić informacje dotyczące pola, właściwości i metod <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> klasy. Zmienna `b` w tym przykładzie jest <xref:Windows.UI.Xaml.Controls.TextBlock> kontroli. Ponieważ w tym przykładzie po prostu pobiera informacje o typie, dostępność metadanych jest kontrolowany przez `Browse` ustawienie zasad.
+Poniższy przykład używa odbicia, aby wyświetlić informacje dotyczące pól, właściwości i metod <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> klasy. Zmienna `b` w przykładzie <xref:Windows.UI.Xaml.Controls.TextBlock> jest kontrolką. Ponieważ przykład po prostu pobiera informacje o typie, dostępność metadanych jest kontrolowana przez `Browse` ustawienie zasad.
 
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]
 
- Ponieważ metadane <xref:System.Collections.Generic.List%601> klasy nie jest automatycznie dołączany przez łańcuch narzędzi .NET Native, na przykład nie są wyświetlane żądane informacje w czasie wykonywania. Aby zapewnić potrzebnych metadanych, Dodaj następujący kod `<Type>` element do pliku dyrektyw środowiska uruchomieniowego. Należy zauważyć, że ponieważ udostępniliśmy nadrzędnego [< Namespace\> ](../../../docs/framework/net-native/namespace-element-net-native.md) elementu, firma Microsoft nie muszą podawać nazwę w pełni kwalifikowany typ `<Type>` elementu.
+ Ponieważ metadane <xref:System.Collections.Generic.List%601> klasy nie są automatycznie dołączane do łańcucha narzędzi .NET Native, w przykładzie nie można wyświetlić żądanych informacji o elementach członkowskich w czasie wykonywania. Aby zapewnić niezbędne metadane, Dodaj następujący `<Type>` element do pliku dyrektywy środowiska uruchomieniowego. Należy pamiętać, że ze względu na to, że podano nadrzędny element [\> przestrzeni nazw <](namespace-element-net-native.md) , nie musimy podawać w `<Type>` elemencie w pełni kwalifikowanej nazwy typu.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -120,11 +120,11 @@ W poniższym przykładzie użyto odbicia, aby wyświetlić informacje dotyczące
 ```
 
 ## <a name="example"></a>Przykład
- W poniższym przykładzie użyto odbicia w celu pobrania <xref:System.Reflection.PropertyInfo> obiekt, który reprezentuje <xref:System.String.Chars%2A?displayProperty=nameWithType> właściwości. Następnie używa <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metody można pobrać wartość siódmego znaku w ciągu, aby wyświetlić wszystkie znaki w ciągu. Zmienna `b` w tym przykładzie jest <xref:Windows.UI.Xaml.Controls.TextBlock> kontroli.
+ Poniższy przykład używa odbicia, aby pobrać <xref:System.Reflection.PropertyInfo> obiekt, który <xref:System.String.Chars%2A?displayProperty=nameWithType> reprezentuje właściwość. Następnie używa metody, <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> aby pobrać wartość siódmego znaku w ciągu i wyświetlić wszystkie znaki w ciągu. Zmienna `b` w przykładzie <xref:Windows.UI.Xaml.Controls.TextBlock> jest kontrolką.
 
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]
 
- Ponieważ metadane <xref:System.String> obiekt nie jest dostępna, wywołanie <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metoda zgłasza wyjątek <xref:System.NullReferenceException> wyjątek wykonywania czasu, gdy skompilowano z łańcucha narzędzi .NET Native. Aby wyeliminować wyjątek, a następnie podaj wymagane metadane, Dodaj następujący element `<Type>` elementu plik dyrektywy środowiska uruchomieniowego:
+ Ponieważ metadane dla <xref:System.String> obiektu nie są dostępne, wywołanie <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metody zgłasza <xref:System.NullReferenceException> wyjątek w czasie wykonywania, gdy jest kompilowany za pomocą łańcucha narzędzi .NET Native. Aby wyeliminować wyjątek i podać niezbędne metadane, Dodaj następujący `<Type>` element do pliku dyrektywy środowiska uruchomieniowego:
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -137,6 +137,6 @@ W poniższym przykładzie użyto odbicia, aby wyświetlić informacje dotyczące
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementy dyrektyw środowiska uruchomieniowego](runtime-directive-elements.md)
+- [Ustawienia zasad dyrektyw środowiska uruchomieniowego](runtime-directive-policy-settings.md)

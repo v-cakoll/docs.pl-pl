@@ -2,12 +2,12 @@
 title: Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
 description: Zapoznaj się ze szczegółami przepływu pracy dotyczącymi tworzenia aplikacji opartych na platformie Docker. Rozpocznij krok po kroku i przejdź do szczegółów, aby zoptymalizować wieloetapowe dockerfile i zakończyć pracę z uproszczonym przepływem pracy dostępnym w przypadku korzystania z programu Visual Studio.
 ms.date: 01/07/2019
-ms.openlocfilehash: 34d2a90cb5208736b1b414e25ac3e627929f45a0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 36caff247d031b8808ab953ec884b7ce292858eb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296176"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040218"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
 
@@ -204,28 +204,37 @@ Początkowy pliku dockerfile może wyglądać następująco:
 
 Są to szczegóły, wiersz po wierszu:
 
-<!-- markdownlint-disable MD029-->
-1. Rozpocznij etap z obrazem podstawowym "mały" tylko środowisko uruchomieniowe, wywołaj jego **bazę** jako odwołanie.
-2. Utwórz katalog **/App** w obrazie.
-3. Uwidocznij port **80**.
-<!-- skip -->
-5. Rozpocznij nowy etap przy użyciu obrazu "Large" do kompilowania/publikowania, wywołaj **kompilację do kompilacji** w celu uzyskania odwołania.
-6. Utwórz katalog **/src** w obrazie.
-7. Do wiersza 16, skopiuj przywoływane pliki projects **. csproj** , aby umożliwić późniejsze przywracanie pakietów.
-<!-- skip -->
-17. Przywróć pakiety dla projektu **Catalog. API** i projektów, do których istnieją odwołania.
-18. Skopiuj **wszystkie drzewa katalogów dla rozwiązania** (z wyjątkiem plików/katalogów znajdujących się w pliku **. dockerignore** ) z katalogu **/src** w obrazie.
-19. Zmień bieżący folder na **katalog. interfejs API** .
-20. Kompiluj projekt (i inne zależności projektu) i dane wyjściowe do katalogu **/App** w obrazie.
-<!-- skip -->
-22. Rozpocznij nowy etap Kontynuuj od kompilacji, wywołaj go **,** Aby uzyskać odwołanie.
-23. Publikuj projekt (i zależności) i dane wyjściowe do katalogu **/App** w obrazie.
-<!-- skip -->
-25. Rozpocznij nowy etap, kontynuując od **podstaw** i Wywołaj **ostateczną**
-26. Zmień bieżący katalog na **/App**
-27. Skopiuj katalog **/App** z **publikacji** Stage do bieżącego katalogu
-28. Zdefiniuj polecenie do uruchomienia po rozpoczęciu kontenera.
-<!-- markdownlint-enable MD029-->
+- **#1 wiersza:** Rozpocznij etap z obrazem podstawowym "mały" tylko środowisko uruchomieniowe, wywołaj jego **bazę** jako odwołanie.
+
+- **#2 wiersza:** Utwórz katalog **/App** w obrazie.
+
+- **#3 wiersza:** Uwidocznij port **80**.
+
+- **#5 wiersza:** Rozpocznij nowy etap przy użyciu obrazu "Large" do kompilowania/publikowania. Wywołaj **kompilację** IT dla odwołania.
+
+- **#6 wiersza:** Utwórz katalog **/src** w obrazie.
+
+- **#7 wiersza:** Do wiersza 16, skopiuj przywoływane pliki projektu **csproj** , aby można było później przywrócić pakiety.
+
+- **#17 wiersza:** Przywróć pakiety dla projektu **Catalog. API** i projektów, do których istnieją odwołania.
+
+- **#18 wiersza:** Skopiuj **wszystkie drzewa katalogów dla rozwiązania** (z wyjątkiem plików/katalogów znajdujących się w pliku **. dockerignore** ) do katalogu **/src** w obrazie.
+
+- **#19 wiersza:** Zmień bieżący folder na projekt **Catalog. API** .
+
+- **#20 wiersza:** Kompiluj projekt (i inne zależności projektu) i dane wyjściowe do katalogu **/App** w obrazie.
+
+- **#22 wiersza:** Rozpocznij nowy etap, kontynuując kompilację. Wywołaj **Publikowanie** w celu odwołania.
+
+- **#23 wiersza:** Opublikuj projekt (i zależności) i dane wyjściowe do katalogu **/App** w obrazie.
+
+- **#25 wiersza:** Rozpocznij nowy etap, kontynuując od **podstaw** i Wywołaj **ostateczną**.
+
+- **#26 wiersza:** Zmień bieżący katalog na **/App**.
+
+- **#27 wiersza:** Skopiuj katalog **/App** z **publikacji** Stage do bieżącego katalogu.
+
+- **#28 wiersza:** Zdefiniuj polecenie do uruchomienia po rozpoczęciu kontenera.
 
 Teraz zapoznaj się z pewnymi optymalizacjami, aby zwiększyć wydajność całego procesu, która w przypadku eShopOnContainers, oznacza około 22 minut lub dłużej, aby skompilować kompletne rozwiązanie w kontenerach systemu Linux.
 
@@ -239,9 +248,9 @@ COPY . .
 
 Następnie będzie ona taka sama dla każdej usługi, dlatego skopiuje całe rozwiązanie i utworzy większą warstwę, ale:
 
-1) Proces kopiowania będzie wykonywany tylko po raz pierwszy (oraz podczas ponownego kompilowania, gdy plik zostanie zmieniony) i użyje pamięci podręcznej dla wszystkich innych usług i
+1. Proces kopiowania będzie wykonywany tylko po raz pierwszy (oraz podczas ponownego kompilowania, gdy plik zostanie zmieniony) i użyje pamięci podręcznej dla wszystkich innych usług i
 
-2) Ponieważ większy obraz występuje w pośrednim etapie, nie ma wpływu na końcowy rozmiar obrazu.
+2. Ponieważ większy obraz występuje w pośrednim etapie, nie ma wpływu na końcowy rozmiar obrazu.
 
 Kolejna znacząca Optymalizacja obejmuje `restore` polecenie wykonane w wierszu 17, które jest również inne dla każdej usługi eShopOnContainers. Jeśli zmienisz ten wiersz na tylko:
 

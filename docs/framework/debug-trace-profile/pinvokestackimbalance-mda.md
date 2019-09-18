@@ -12,43 +12,43 @@ helpviewer_keywords:
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9ecdfd708217f260b0c02383159fab88948029c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc4a48c79fc39b12f8231bd913b4ca8970c0f46f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874214"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052367"
 ---
 # <a name="pinvokestackimbalance-mda"></a>PInvokeStackImbalance MDA
 
-`PInvokeStackImbalance` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy CLR wykryje, że głębokość stosu po wywołaniu wywołania platformy jest niezgodna Głębokość stosu oczekiwanego, podane konwencja wywołania określona w <xref:System.Runtime.InteropServices.DllImportAttribute> atrybutu i Deklaracja parametrów w zarządzanego podpisu.
+Asystent debugowania <xref:System.Runtime.InteropServices.DllImportAttribute> zarządzanego (MDA) jest uaktywniany, gdy środowisko CLR wykryje, że głębokość stosu po wywołaniu wywołania platformy nie jest zgodna z oczekiwaną głębokością stosu, przy uwzględnieniu konwencji wywoływania określonej w atrybucie i `PInvokeStackImbalance` Deklaracja parametrów w zarządzanym podpisie.
 
-`PInvokeStackImbalance` MDA jest zaimplementowanych tylko dla x86 32-bitowych platform.
+`PInvokeStackImbalance` Zdarzenie MDA jest implementowane tylko dla 32-bitowych platform x86.
 
 > [!NOTE]
-> `PInvokeStackImbalance` MDA jest domyślnie wyłączona. W programie Visual Studio 2017 `PInvokeStackImbalance` MDA pojawia się w **asystentów zarządzanego debugowania** listy w **ustawienia wyjątków** okno dialogowe (który jest wyświetlany po wybraniu **debugowania**  >  **Windows** > **ustawienia wyjątków**). Jednakże, zaznaczając lub usuwając **Przerwij gdy zgłoszony** pole wyboru jest w stanie włączać lub wyłączać MDA; tylko kontroluje, czy program Visual Studio zgłasza wyjątek, gdy zdarzenie MDA jest aktywowane.
+> `PInvokeStackImbalance` Zdarzenie MDA jest domyślnie wyłączone. W programie Visual `PInvokeStackImbalance` Studio 2017 zdarzenie MDA pojawia się na liście **asystentów debugowania zarządzanego** w oknie dialogowym **Ustawienia wyjątku** (które jest wyświetlane po wybraniu opcji **Debuguj** > **okna**  >   **Ustawienia wyjątku**). Jednak zaznaczenie lub wyczyszczenie pola wyboru **Przerwij, gdy zostało zgłoszone** , nie powoduje włączenia ani wyłączenia MDA; kontroluje tylko, czy program Visual Studio zgłasza wyjątek podczas aktywowania MDA.
 
 ## <a name="symptoms"></a>Symptomy
 
-Aplikacja napotyka naruszenie zasad dostępu lub uszkodzenie podczas wprowadzania lub po platformie wywołania wywołania pamięci.
+Aplikacja napotyka naruszenie zasad dostępu lub uszkodzenie pamięci podczas wykonywania lub po wywołaniu wywołania platformy.
 
 ## <a name="cause"></a>Przyczyna
 
-Zarządzanego podpisu platformy wywołania wywołania mogą być niezgodne z niezarządzanego podpisu metody wywoływane.  Taka niezgodność może być spowodowany zarządzanego podpisu nie deklarując poprawną liczbę parametrów lub brak określenia odpowiedniego rozmiaru dla parametrów.  MDA mogą także aktywować, ponieważ konwencji wywoływania, prawdopodobnie określony przez <xref:System.Runtime.InteropServices.DllImportAttribute> atrybutu, jest niezgodny z konwencji wywoływania niezarządzanego.
+Zarządzany podpis wywołania wywołania platformy może być niezgodny z niezarządzanym podpisem wywoływanej metody.  Niezgodność może być spowodowana przez zarządzaną sygnaturę, która nie deklaruje poprawnej liczby parametrów lub nie określa odpowiedniego rozmiaru parametrów.  Zdarzenie MDA można również uaktywnić, ponieważ Konwencja wywoływania, prawdopodobnie określona przez <xref:System.Runtime.InteropServices.DllImportAttribute> atrybut, nie jest zgodna z niezarządzaną konwencją wywoływania.
 
 ## <a name="resolution"></a>Rozwiązanie
 
-Przegląd zarządzanej platformie wywołać podpisu i konwencji wywoływania, aby upewnić się, że jest on zgodny podpis i konwencji wywoływania natywnego obiektu docelowego.  Spróbuj jawnie określić konwencję wywołania po obu stronach zarządzanych i niezarządzanych. Jest również możliwe, ale nie jako prawdopodobne, że niezarządzanej funkcji niezrównoważone stosu innego powodu, takie jak usterki w kompilatorze niezarządzanych.
+Przejrzyj sygnaturę wywołania i konwencję wywoływania zarządzanej platformy, aby potwierdzić, że jest zgodna z sygnaturą i konwencją wywoływania natywnego elementu docelowego.  Spróbuj jawnie określić konwencję wywoływania zarówno dla stron zarządzanych, jak i niezarządzanych. Istnieje również możliwość, chociaż nie jest to prawdopodobne, że niezarządzana funkcja nierównoważy stos z innego powodu, na przykład błąd w kompilatorze niezarządzanym.
 
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe
 
-Wymusza platformy wszystkie wywołania do podjęcia nonoptimized ścieżki w CLR.
+Wymusza, aby wszystkie wywołania wywoływane przez platformę przejmowanie niezoptymalizowanej ścieżki w środowisku CLR.
 
 ## <a name="output"></a>Dane wyjściowe
 
-Komunikat MDA zapewnia nazwę platformy wywołania metody, która powoduje nierównowaga stosu wywołania. Przykładowy komunikat platformy wywołania wywołanie metody `SampleMethod` jest:
+Komunikat MDA zawiera nazwę wywołania metody wywoływanej przez platformę, która powoduje Niezrównoważenie stosu. Przykładowy komunikat wywołującego wywołanie metody `SampleMethod` jest:
 
-**Wywołanie funkcji PInvoke "SampleMethod" ma niezrównoważone stosu. Jest to prawdopodobnie, ponieważ zarządzanego podpisu PInvoke jest niezgodna z niezarządzanego podpisu docelowego. Sprawdź, czy Konwencja wywoływania i parametry podpisu funkcji PInvoke odpowiadają niezarządzanego podpisu docelowego.**
+**Wywołanie funkcji PInvoke "SampleMethod" ma niezrównoważony stos. Prawdopodobnie jest to spowodowane tym, że zarządzana sygnatura PInvoke nie jest zgodna z niezarządzanym podpisem docelowym. Sprawdź, czy Konwencja wywoływania i parametry sygnatury PInvoke pasują do docelowego podpisu niezarządzanego.**
 
 ## <a name="configuration"></a>Konfiguracja
 
@@ -63,5 +63,5 @@ Komunikat MDA zapewnia nazwę platformy wywołania metody, która powoduje nier�
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling międzyoperacyjny](../interop/interop-marshaling.md)

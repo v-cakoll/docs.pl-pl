@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 544d04236a8f1b824a15c6ee7912020346841076
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b9781e7ef8edde182a13779a01e042cb44c92881
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912535"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045998"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Instrukcje: Definiowanie typu ogólnego przy użyciu emisji odbicia
 W tym temacie pokazano, jak utworzyć prosty typ ogólny z dwoma parametrami typu, jak zastosować ograniczenia klas, ograniczenia interfejsu i ograniczenia specjalne do parametrów typu oraz jak tworzyć składowe, które używają parametrów typu klasy jako typów parametrów i typy zwracane.  
   
 > [!IMPORTANT]
-> Metoda nie jest typowa, ponieważ należy do typu ogólnego i używa parametrów typu tego typu. Metoda jest generyczna tylko wtedy, gdy ma własną listę parametrów typu. Większość metod na typach ogólnych nie jest ogólna, jak w tym przykładzie. Przykład emisji metody ogólnej można znaleźć w temacie [How to: Zdefiniuj metodę rodzajową przy użyciu emisji](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md)odbicia.  
+> Metoda nie jest typowa, ponieważ należy do typu ogólnego i używa parametrów typu tego typu. Metoda jest generyczna tylko wtedy, gdy ma własną listę parametrów typu. Większość metod na typach ogólnych nie jest ogólna, jak w tym przykładzie. Przykład emisji metody ogólnej można znaleźć w temacie [How to: Zdefiniuj metodę rodzajową przy użyciu emisji](how-to-define-a-generic-method-with-reflection-emit.md)odbicia.  
   
 ### <a name="to-define-a-generic-type"></a>Aby zdefiniować typ ogólny  
   
@@ -121,7 +121,7 @@ W tym temacie pokazano, jak utworzyć prosty typ ogólny z dwoma parametrami typ
   
  Program zawiera metodę, która wyświetla informacje o typie ogólnym i metodę, która wyświetla specjalne ograniczenia w parametrze typu. Te metody są używane do wyświetlania informacji o ukończonej `Sample` klasie.  
   
- Program zapisuje gotowy moduł na dysku jako `GenericEmitExample1.dll`, więc można go otworzyć za pomocą [Ildasm. exe (Il dezasembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) i przejrzeć MSIL dla `Sample` klasy.  
+ Program zapisuje gotowy moduł na dysku jako `GenericEmitExample1.dll`, więc można go otworzyć za pomocą [Ildasm. exe (Il dezasembler)](../tools/ildasm-exe-il-disassembler.md) i przejrzeć MSIL dla `Sample` klasy.  
   
  [!code-cpp[EmitGenericType#1](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#1)]
  [!code-csharp[EmitGenericType#1](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#1)]

@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99ffbccca8cd8a719e5571638308e28d494d687a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 437d2d1bb026795dfa01a4c01ca12acf2b8f5792
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926875"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044664"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Narzędzie Global Assembly Cache)
 
 Narzędzie globalnej pamięci podręcznej zestawów umożliwia wyświetlenie zawartości globalnej pamięci podręcznej zestawów i wykonywanie na niej operacji oraz pobieranie pamięci podręcznej.
 
-To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](developer-command-prompt-for-vs.md).
 
 W wierszu polecenia wpisz następujące polecenie:
 
@@ -66,7 +66,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |**/u** *assemblyName*|Odinstalowuje zestaw z globalnej pamięci podręcznej zestawów.|
 |**/Uf** *assemblyName*|Wymusza odinstalowanie określonego zestawu przez usunięcie wszystkich odwołań do tego zestawu.<br /><br /> Określenie tej opcji jest równoznaczne z użyciem opcji **/u** i **/f** razem. **Uwaga:**  Nie można używać tej opcji, aby usunąć zestaw, który został zainstalowany przy użyciu Instalatora Microsoft Windows. Przy próbie wykonania tej operacji narzędzie wyświetli komunikat o błędzie.|
 |**/ul** *pliku plikListyZestawów*|Odinstalowuje co najmniej jeden zestaw określony w *pliku plikListyZestawów* z globalnej pamięci podręcznej zestawów.|
-|**/u** [**NGen**] *AssemblyName*|Odinstalowuje określony zestaw z globalnej pamięci podręcznej zestawów. Jeśli istnieją odwołania do określonego zestawu, narzędzie wyświetla liczbę odwołań i nie usuwa zestawu z globalnej pamięci podręcznej zestawów. **Uwaga:**  W .NET Framework w wersji 2,0 `/ungen` nie jest obsługiwana. Zamiast tego należy użyć `uninstall` polecenia [Ngen. exe (Generator obrazu natywnego)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). <br /><br /> W .NET Framework wersje 1,0 i 1,1, określenie **/ungen** powoduje, że Gacutil. exe usuwa zestaw z pamięci podręcznej obrazów natywnych. Ta pamięć podręczna przechowuje obrazy natywne dla zestawów, które zostały utworzone przy użyciu programu [Ngen. exe (Generator obrazu natywnego)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).|
+|**/u** [**NGen**] *AssemblyName*|Odinstalowuje określony zestaw z globalnej pamięci podręcznej zestawów. Jeśli istnieją odwołania do określonego zestawu, narzędzie wyświetla liczbę odwołań i nie usuwa zestawu z globalnej pamięci podręcznej zestawów. **Uwaga:**  W .NET Framework w wersji 2,0 `/ungen` nie jest obsługiwana. Zamiast tego należy użyć `uninstall` polecenia [Ngen. exe (Generator obrazu natywnego)](ngen-exe-native-image-generator.md). <br /><br /> W .NET Framework wersje 1,0 i 1,1, określenie **/ungen** powoduje, że Gacutil. exe usuwa zestaw z pamięci podręcznej obrazów natywnych. Ta pamięć podręczna przechowuje obrazy natywne dla zestawów, które zostały utworzone przy użyciu programu [Ngen. exe (Generator obrazu natywnego)](ngen-exe-native-image-generator.md).|
 |**/UR** *assemblyName*<br /><br /> *scheme*<br /><br /> *id*<br /><br /> *zharmonizowan*|Odinstalowuje odwołanie do określonego zestawu z globalnej pamięci podręcznej zestawów. Aby usunąć odwołanie do zestawu, należy określić te same parametry *schemat*, *Identyfikator*i *Opis* , które zostały określone z opcjami **/i** i **/r** (lub **/IR)** podczas instalowania zestawu. Aby uzyskać opis prawidłowych wartości, które można określić dla tych parametrów, zobacz **/r** opcji.<br /><br /> Określenie tej opcji jest równoznaczne z użyciem opcji **/u** i **/r** razem.|
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|
 
@@ -180,7 +180,7 @@ gacutil /l
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Narzędzia](../../../docs/framework/tools/index.md)
-- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)
-- [Regasm.exe (narzędzie rejestracji zestawów)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
-- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Narzędzia](index.md)
+- [Global Assembly Cache](../app-domains/gac.md)
+- [Regasm.exe (narzędzie rejestracji zestawów)](regasm-exe-assembly-registration-tool.md)
+- [Wiersze polecenia](developer-command-prompt-for-vs.md)

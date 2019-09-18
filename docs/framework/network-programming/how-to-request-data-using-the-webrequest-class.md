@@ -11,12 +11,12 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-ms.openlocfilehash: eb38a95891afaf4cab98e43a250b67823fa5eb24
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e670a2a503ce704eff847e9e0b3ee340ab52fe62
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040878"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048166"
 ---
 # <a name="how-to-request-data-by-using-the-webrequest-class"></a>Instrukcje: Żądanie danych przy użyciu klasy WebRequest
 
@@ -27,17 +27,17 @@ Poniższa procedura zawiera opis czynności, które należy wykonać w celu zaż
 1. Utwórz wystąpienie, wywołując <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> identyfikator URI zasobu. <xref:System.Net.WebRequest> Na przykład:
 
     ```csharp
-    WebRequest request = WebRequest.Create("http://www.contoso.com/default.html");
+    WebRequest request = WebRequest.Create("https://docs.microsoft.com");
     ```
 
     ```vb
-    Dim request as WebRequest = WebRequest.Create("http://www.contoso.com/default.html")
+    Dim request as WebRequest = WebRequest.Create("https://docs.microsoft.com")
     ```
 
     > [!NOTE]
     > .NET Framework zawiera klasy specyficzne <xref:System.Net.WebRequest> dla protokołu pochodzące od klas i <xref:System.Net.WebResponse> dla identyfikatorów URI, które zaczynają się od *http:* , *https:* , *FTP:* i *File:* .
 
-    Jeśli konieczne jest ustawienie lub odczytanie właściwości specyficznych dla protokołu, należy rzutować <xref:System.Net.WebRequest> obiekt <xref:System.Net.WebResponse> lub na typ obiektu specyficzny dla protokołu. Aby uzyskać więcej informacji, zobacz [programowanie protokołów](programming-pluggable-protocols.md)podłączanych.
+    Jeśli konieczne jest ustawienie lub odczytanie właściwości specyficznych dla protokołu, należy rzutować <xref:System.Net.WebRequest> obiekt <xref:System.Net.WebResponse> lub na typ obiektu specyficzny dla protokołu. Aby uzyskać więcej informacji, zobacz [programowanie protokołów podłączanych](programming-pluggable-protocols.md).
 
 2. Ustaw wartości właściwości, które są potrzebne w `WebRequest` obiekcie. Na przykład aby włączyć uwierzytelnianie, należy ustawić <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> właściwość na wystąpienie <xref:System.Net.NetworkCredential> klasy:
 
@@ -49,7 +49,7 @@ Poniższa procedura zawiera opis czynności, które należy wykonać w celu zaż
     request.Credentials = CredentialCache.DefaultCredentials
     ```
 
-3. Wyślij żądanie do serwera przez wywołanie metody <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType>. Ta metoda zwraca obiekt zawierający odpowiedź serwera. Typ zwracanego <xref:System.Net.WebResponse> obiektu jest określany przez schemat identyfikatora URI żądania. Przykład:
+3. Wyślij żądanie do serwera przez wywołanie metody <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType>. Ta metoda zwraca obiekt zawierający odpowiedź serwera. Typ zwracanego <xref:System.Net.WebResponse> obiektu jest określany przez schemat identyfikatora URI żądania. Na przykład:
 
     ```csharp
     WebResponse response = request.GetResponse();

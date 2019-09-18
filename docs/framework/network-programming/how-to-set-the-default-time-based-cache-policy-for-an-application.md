@@ -9,26 +9,26 @@ helpviewer_keywords:
 - cache [.NET Framework], time-based policies
 - default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
-ms.openlocfilehash: 99f9905109a4deabe3cfb2e3616913e84f565cb7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0aaa26f67ef1ef191060e682690fa14de328b812
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642441"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048094"
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>Instrukcje: określanie zasad pamięci podręcznej na podstawie czasu domyślnego dla aplikacji
-Domyślne zasady pamięci podręcznej na podstawie czasu umożliwia aplikacji jej zachowanie pamięci podręcznej, zdefiniowany przez nagłówki wysyłane z pamięci podręcznej zasobów i zachowanie pamięci podręcznej, zdefiniowane w sekcji 13 i 14 dokumencie RFC 2616, dostępne pod adresem [(Internet Engineering Task Force IETF)](https://www.ietf.org/) witryny sieci Web. Jest to zachowanie pamięci podręcznej odpowiedniej dla większości aplikacji.  
+Domyślne zasady pamięci podręcznej oparte na czasie umożliwiają aplikacji zachowanie pamięci podręcznej zdefiniowanej przez nagłówki wysyłane z buforowanym zasobem, a zachowanie pamięci podręcznej zdefiniowane w sekcjach 13 i 14 RFC 2616, dostępne w [sieci Internet Engineering Task Force (IETF)](https://www.ietf.org/) producenta. Jest to odpowiednie zachowanie pamięci podręcznej dla większości aplikacji.  
   
-### <a name="to-set-the-default-automatic-policy-for-an-application"></a>Aby ustawić domyślną zasadę automatycznego dla aplikacji  
+### <a name="to-set-the-default-automatic-policy-for-an-application"></a>Aby ustawić domyślne zasady automatyczne dla aplikacji  
   
-1. Utwórz obiekt zasad na podstawie czasu domyślnego.  
+1. Utwórz domyślny obiekt zasad oparty na czasie.  
   
-2. Obiekt zasad należy ustawić jako domyślne dla domeny aplikacji.  
+2. Ustaw obiekt zasad jako domyślny dla domeny aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Dwa przykłady w tej sekcji produktu identycznymi zasadami.  
+ Dwa przykłady w tej sekcji generują identyczne zasady.  
   
- Poniższy przykład tworzy domyślne zasady oparte na czasie i ustawia go jako domyślnej domeny aplikacji.  
+ Poniższy przykład tworzy domyślne zasady oparte na czasie i ustawia je jako domyślne dla domeny aplikacji.  
   
 ```csharp  
 public static void SetDefaultTimeBasedPolicy ()  
@@ -45,7 +45,7 @@ Public Shared Sub SetDefaultTimeBasedPolicy ()
 End Sub  
 ```  
   
- Możesz również tworzyć, używając zasad pamięci podręcznej na podstawie czasu domyślnego <xref:System.Net.Cache.RequestCachePolicy> klasy, jak pokazano w poniższym przykładzie:  
+ Możesz również utworzyć domyślne zasady pamięci podręcznej oparte na czasie za <xref:System.Net.Cache.RequestCachePolicy> pomocą klasy, jak pokazano w następującym przykładzie:  
   
 ```csharp  
 public static void SetDefaultTimeBasedPolicy2()  
@@ -64,8 +64,8 @@ End Sub
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zarządzanie pamięcią podręczną dla aplikacji sieciowych](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [Zasady pamięci podręcznej](../../../docs/framework/network-programming/cache-policy.md)
-- [Zasady pamięci podręcznej oparte na lokalizacji](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Zasady pamięci podręcznej oparte na czasie](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [\<requestCaching — >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [Zarządzanie pamięcią podręczną dla aplikacji sieciowych](cache-management-for-network-applications.md)
+- [Zasady pamięci podręcznej](cache-policy.md)
+- [Zasady pamięci podręcznej oparte na lokalizacji](location-based-cache-policies.md)
+- [Zasady pamięci podręcznej oparte na czasie](time-based-cache-policies.md)
+- [\<requestCaching >, element (Ustawienia sieci)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

@@ -1,18 +1,18 @@
 ---
-title: <Property> (Architektura .NET Native)
+title: <Property>— Element (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 374ace4ec5e25731e4a7e958be145a660ff2ef7f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 54daf15c593327bf3255f40f6eb6931ffc8bd3c6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614868"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049308"
 ---
-# <a name="property-element-net-native"></a>\<Właściwość > (architektura .NET Native)
-Zastosowanie zasad odbicia środowiska uruchomieniowego do właściwości.  
+# <a name="property-element-net-native"></a>\<Element > Właściwości (.NET Native)
+Stosuje zasady odbicia środowiska uruchomieniowego do właściwości.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -31,21 +31,21 @@ Zastosowanie zasad odbicia środowiska uruchomieniowego do właściwości.
 |Atrybut|Typ atrybutu|Opis|  
 |---------------|--------------------|-----------------|  
 |`Name`|Ogólne|Atrybut wymagany. Określa nazwę właściwości.|  
-|`Browse`|Odbicie|Atrybut opcjonalny. Określa wykonanie zapytania dotyczącego informacji o wyliczanie właściwości, ale nie uwzględnia żadnych dostępu dynamicznego w czasie wykonywania.|  
-|`Dynamic`|Odbicie|Atrybut opcjonalny. Dostęp do środowiska uruchomieniowego formanty do właściwości, aby włączyć dynamiczne programowania. Te zasady zapewniają, że właściwość można ustawić lub pobrać dynamicznie w czasie wykonywania.|  
-|`Serialize`|Serializacja|Atrybut opcjonalny. Kontroluje dostęp do środowiska uruchomieniowego do właściwości w celu włączenia wystąpień typu przez biblioteki, takie jak serializator Newtonsoft JSON lub ma być używany dla powiązania danych.|  
+|`Browse`|Odbicie|Atrybut opcjonalny. Kontroluje wykonywanie zapytań dotyczących informacji o lub wyliczania właściwości, ale nie umożliwia dostępu dynamicznego w czasie wykonywania.|  
+|`Dynamic`|Odbicie|Atrybut opcjonalny. Kontroluje dostęp środowiska uruchomieniowego do właściwości w celu włączenia programowania dynamicznego. Te zasady zapewniają, że właściwość może być ustawiana lub pobierana dynamicznie w czasie wykonywania.|  
+|`Serialize`|Serializacja|Atrybut opcjonalny. Kontroluje dostęp środowiska uruchomieniowego do właściwości, aby umożliwić Serializowanie wystąpień typu przez biblioteki takie jak serializator JSON Newtonsoft lub używany do wiązania danych.|  
   
-## <a name="name-attribute"></a>Nazwa atrybutu  
+## <a name="name-attribute"></a>Atrybut nazwy  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*method_name*|Nazwa właściwości. Typ właściwości jest definiowany przez nadrzędne [ \<typ >](../../../docs/framework/net-native/type-element-net-native.md) lub [ \<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) elementu.|  
+|*method_name*|Nazwa właściwości. Typ właściwości jest zdefiniowany przez [ \<typ nadrzędny >](type-element-net-native.md) lub [ \<element > TypeInstantiation](typeinstantiation-element-net-native.md) .|  
   
 ## <a name="all-other-attributes"></a>Wszystkie inne atrybuty  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*policy_setting*|Ustawienia do zastosowania do tego typu zasad dla właściwości. Możliwe wartości to `Auto`, `Excluded`, `Included`, i `Required`. Aby uzyskać więcej informacji, zobacz [ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Ustawienie, które ma zostać zastosowane do tego typu zasad dla właściwości. Możliwe wartości to `Auto`, `Excluded`, `Included`, i `Required`. Aby uzyskać więcej informacji, zobacz [Ustawienia zasad dyrektywy środowiska uruchomieniowego](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -54,14 +54,14 @@ Zastosowanie zasad odbicia środowiska uruchomieniowego do właściwości.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Ma zastosowanie zasad odbicia do typu i jej elementów członkowskich.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Ma zastosowanie zasad odbicia do skonstruowany typ rodzajowy i jej elementów członkowskich.|  
+|[\<Type>](type-element-net-native.md)|Stosuje zasady odbicia do typu i wszystkich jego elementów członkowskich.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego i wszystkich jego członków.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli właściwość zasad nie jest jawnie zdefiniowany, dziedziczy zasad wykonywania odpowiedniego elementu nadrzędnego.  
+ Jeśli zasady właściwości nie są jawnie zdefiniowane, dziedziczy zasad środowiska uruchomieniowego jego elementu nadrzędnego.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto odbicia w celu utworzenia wystąpienia `Book` obiektów i wyświetlić jego wartości właściwości. Oryginalny plik default.rd.xml projektu wygląda następująco:  
+ Poniższy przykład używa odbicia, aby utworzyć `Book` wystąpienie obiektu i wyświetlić jego wartości właściwości. Oryginalny plik default. Rd. XML dla projektu jest wyświetlany w następujący sposób:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -73,17 +73,17 @@ Zastosowanie zasad odbicia środowiska uruchomieniowego do właściwości.
 </Directives>  
 ```  
   
- Plik ma zastosowanie `All` wartość `Activate` zasady dla `Book` klasy, która zezwala na dostęp do konstruktorów klas przy użyciu odbicia. `Browse` Zasady `Book` klasy jest dziedziczony z jego nadrzędna przestrzeń nazw. Jest ono ustawione na `Required Public`, co sprawia, że metadane dostępne w czasie wykonywania.  
+ Plik stosuje `All` wartość `Activate` do zasad dla `Book` klasy, co umożliwia dostęp do konstruktorów klas poprzez odbicie. `Browse` Zasady`Book` dla klasy są dziedziczone z jego nadrzędnej przestrzeni nazw. Ta wartość jest ustawiona `Required Public`na, co sprawia, że metadane są dostępne w czasie wykonywania.  
   
- Poniżej znajduje się kod źródłowy dla przykładu. `outputBlock` Reprezentuje zmienną <xref:Windows.UI.Xaml.Controls.TextBlock> kontroli.  
+ Poniżej znajduje się kod źródłowy dla przykładu. `outputBlock` Zmienna<xref:Windows.UI.Xaml.Controls.TextBlock> reprezentuje kontrolkę.  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   
- Jednak kompilowanie i wykonywania w tym przykładzie zgłasza [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) wyjątku. Mimo że wprowadziliśmy metadanych `Book` typ jest dostępny, już nie możemy udostępnić implementacji metody pobierające właściwości dynamicznie. Możemy naprawić ten błąd, wybierając w jeden z dwóch sposobów:  
+ Jednak Kompilowanie i wykonywanie tego przykładu zgłasza wyjątek [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) . Mimo że zostały zgłoszone metadane dla `Book` dostępnego typu, nie udało nam się zapewnić, że implementacje metod pobierających właściwości są dostępne dynamicznie. Możemy naprawić ten błąd w jeden z dwóch sposobów:  
   
-- Definiując `Dynamic` zasady `Book` wpisz jego [ \<typ >](../../../docs/framework/net-native/type-element-net-native.md) elementu.  
+- przez zdefiniowanie `Dynamic` zasad `Book` dla typu w [ \<typie >](type-element-net-native.md) element.  
   
-- Dodając zagnieżdżoną [ \<właściwości >](../../../docs/framework/net-native/property-element-net-native.md) dla każdej właściwości, której metody pobierającej, prosimy o poświęcenie do wywołania, tak jak w następującym pliku default.rd.xml.  
+- Dodając [ \<> Właściwość](property-element-net-native.md) zagnieżdżoną dla każdej właściwości, której ma dotyczyć metoda pobierająca, jako następujący domyślny plik. Rd. XML.  
   
     ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -101,6 +101,6 @@ Zastosowanie zasad odbicia środowiska uruchomieniowego do właściwości.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementy dyrektyw środowiska uruchomieniowego](runtime-directive-elements.md)
+- [Ustawienia zasad dyrektyw środowiska uruchomieniowego](runtime-directive-policy-settings.md)

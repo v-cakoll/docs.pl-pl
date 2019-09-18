@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b3f7363ec5f8c954dd55a9500dcf8f2e302424f
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: c932587c13532e14c956f3ebd058ae41d30519dc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894903"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046044"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>Instrukcje: Tworzenie klasy za pomocą modelu CodeDOM
 Poniższe procedury ilustrują sposób tworzenia i kompilowania wykresu CodeDOM, który generuje klasę zawierającą dwa pola, trzy właściwości, metodę, Konstruktor i punkt wejścia.  
@@ -120,5 +120,5 @@ The object:
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Używanie modelu CodeDOM](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)
-- [Generowanie i kompilowanie kodu źródłowego z wykresu CodeDOM](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)
+- [Używanie modelu CodeDOM](using-the-codedom.md)
+- [Generowanie i kompilowanie kodu źródłowego z wykresu CodeDOM](generating-and-compiling-source-code-from-a-codedom-graph.md)

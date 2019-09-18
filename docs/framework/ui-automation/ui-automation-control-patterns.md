@@ -7,12 +7,12 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 1f8b5ab3-c193-4d0f-9e67-a0076225a1a5
-ms.openlocfilehash: d4b4817c9b5cd59486c0ce5288d7860933405664
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 75ce2d997efbc465c8a98bce1d42296b37f84f64
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941279"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042332"
 ---
 # <a name="ui-automation-control-patterns"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -21,21 +21,21 @@ ms.locfileid: "69941279"
  Ta sekcja zawiera szczegółowe informacje na temat używania [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] wzorców kontroli.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Implementacja wzorca kontrolki dokowania automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/implementing-the-ui-automation-dock-control-pattern.md)  
- [Implementacja wzorca kontrolki ExpandCollapse dla automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)  
- [Implementacja wzorca kontrolki siatki automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)  
- [Implementacja wzorca kontrolki GridItem dla automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)  
- [Implementacja wzorca kontrolki wywołania automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/implementing-the-ui-automation-invoke-control-pattern.md)  
- [Implementacja wzorca kontrolki MultipleView dla automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/implementing-the-ui-automation-multipleview-control-pattern.md)  
- [Implementacja wzorca kontrolki RangeValue dla automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/implementing-the-ui-automation-rangevalue-control-pattern.md)  
- [Implementacja wzorca kontrolki przewijania automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/implementing-the-ui-automation-scroll-control-pattern.md)  
- [Implementacja wzorca kontrolki ScrollItem dla automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/implementing-the-ui-automation-scrollitem-control-pattern.md)  
- [Implementacja wzorca kontrolki wyboru automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/implementing-the-ui-automation-selection-control-pattern.md)  
- [Implementacja wzorca kontrolki SelectionItem dla automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/implementing-the-ui-automation-selectionitem-control-pattern.md)  
- [Implementacja wzorca kontrolki tabeli automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/implementing-the-ui-automation-table-control-pattern.md)  
- [Implementacja wzorca kontrolki TableItem dla automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/implementing-the-ui-automation-tableitem-control-pattern.md)  
- [Implementacja wzorca kontrolki przełącznika automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/implementing-the-ui-automation-toggle-control-pattern.md)  
- [Implementacja wzorca kontrolki przekształcania automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/implementing-the-ui-automation-transform-control-pattern.md)  
- [Implementacja wzorca kontrolki wartości automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/implementing-the-ui-automation-value-control-pattern.md)  
- [Implementacja wzorca kontrolki okna automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/implementing-the-ui-automation-window-control-pattern.md)  
- [Tematy z instrukcjami](../../../docs/framework/ui-automation/ui-automation-control-patterns-how-to-topics.md)
+ [Implementacja wzorca kontrolki dokowania automatyzacji interfejsu użytkownika](implementing-the-ui-automation-dock-control-pattern.md)  
+ [Implementacja wzorca kontrolki ExpandCollapse dla automatyzacji interfejsu użytkownika](implementing-the-ui-automation-expandcollapse-control-pattern.md)  
+ [Implementacja wzorca kontrolki siatki automatyzacji interfejsu użytkownika](implementing-the-ui-automation-grid-control-pattern.md)  
+ [Implementacja wzorca kontrolki GridItem dla automatyzacji interfejsu użytkownika](implementing-the-ui-automation-griditem-control-pattern.md)  
+ [Implementacja wzorca kontrolki wywołania automatyzacji interfejsu użytkownika](implementing-the-ui-automation-invoke-control-pattern.md)  
+ [Implementacja wzorca kontrolki MultipleView dla automatyzacji interfejsu użytkownika](implementing-the-ui-automation-multipleview-control-pattern.md)  
+ [Implementacja wzorca kontrolki RangeValue dla automatyzacji interfejsu użytkownika](implementing-the-ui-automation-rangevalue-control-pattern.md)  
+ [Implementacja wzorca kontrolki przewijania automatyzacji interfejsu użytkownika](implementing-the-ui-automation-scroll-control-pattern.md)  
+ [Implementacja wzorca kontrolki ScrollItem dla automatyzacji interfejsu użytkownika](implementing-the-ui-automation-scrollitem-control-pattern.md)  
+ [Implementacja wzorca kontrolki wyboru automatyzacji interfejsu użytkownika](implementing-the-ui-automation-selection-control-pattern.md)  
+ [Implementacja wzorca kontrolki SelectionItem dla automatyzacji interfejsu użytkownika](implementing-the-ui-automation-selectionitem-control-pattern.md)  
+ [Implementacja wzorca kontrolki tabeli automatyzacji interfejsu użytkownika](implementing-the-ui-automation-table-control-pattern.md)  
+ [Implementacja wzorca kontrolki TableItem dla automatyzacji interfejsu użytkownika](implementing-the-ui-automation-tableitem-control-pattern.md)  
+ [Implementacja wzorca kontrolki przełącznika automatyzacji interfejsu użytkownika](implementing-the-ui-automation-toggle-control-pattern.md)  
+ [Implementacja wzorca kontrolki przekształcania automatyzacji interfejsu użytkownika](implementing-the-ui-automation-transform-control-pattern.md)  
+ [Implementacja wzorca kontrolki wartości automatyzacji interfejsu użytkownika](implementing-the-ui-automation-value-control-pattern.md)  
+ [Implementacja wzorca kontrolki okna automatyzacji interfejsu użytkownika](implementing-the-ui-automation-window-control-pattern.md)  
+ [Tematy z instrukcjami](ui-automation-control-patterns-how-to-topics.md)

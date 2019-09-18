@@ -2,38 +2,38 @@
 title: Routing IPv6
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
-ms.openlocfilehash: caa1f33f46d13440eab18ba321ebcd8fa4eef129
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 93300107710164d755d578633b7fa6651f984987
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647275"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047789"
 ---
 # <a name="ipv6-routing"></a>Routing IPv6
-Elastyczny mechanizm routingu jest to korzyść protokołu IPv6. Ze względu na sposób, w których IPv4 zostały identyfikatory sieci i nie są przydzielone, duże tabele routingu muszą być przechowywane przez routery, które znajdują się na szkieletowymi Internet. Te routery musi znać wszystkie trasy, aby przekazywać pakiety, które są potencjalnie skierowany do dowolnego węzła w Internecie. Zdolność do agregacji adresów IPv6 umożliwia elastyczne adresowania i znacząco zmniejsza rozmiar tabele routingu. W tej nowej architektury adresowania routery pośrednie musi śledzić tylko lokalnej części sieci w celu przekazywania wiadomości odpowiednio.  
+Elastyczny mechanizm routingu to korzyść z protokołu IPv6. Ze względu na sposób, w jaki identyfikatory sieci IPv4 zostały i są przydzielone, należy zachować duże tabele routingu na routerach, które są podłączone do Internetu. Te routery muszą znać wszystkie trasy w celu przekazywania pakietów, które mogą być kierowane do dowolnego węzła w Internecie. Dzięki możliwości agregowania adresów protokół IPv6 umożliwia elastyczne adresowanie, a radykalnie zmniejsza rozmiar tabel routingu. W tej nowej architekturze, routery pośrednie muszą śledzić tylko lokalną część swojej sieci, aby zapewnić odpowiednie przesyłanie komunikatów.  
   
-## <a name="neighbor-discovery"></a>Odnajdywanie sąsiadujących  
- Niektóre z funkcji oferowanych przez funkcję odnajdowania sąsiadów to:  
+## <a name="neighbor-discovery"></a>Odnajdywanie sąsiadów  
+ Niektóre funkcje dostępne w ramach odnajdywania sąsiadów są następujące:  
   
-- Odnajdywanie routera. To pozwala hostom na identyfikację lokalne routery.  
+- Odnajdywanie routerów. Pozwala to hostom na identyfikację routerów lokalnych.  
   
-- Adres rozdzielczości. Dzięki temu węzłów do rozpoznania adresu warstwy linku, aby uzyskać odpowiedni adres następnego przeskoku (wymiana Address Resolution Protocol [ARP]).  
+- Rozpoznawanie adresów. Pozwala to węzłom na rozpoznanie adresu warstwy łącza dla odpowiedniego adresu następnego przeskoku (zastępowanie protokołu ARP).  
   
-- Adres automatycznej konfiguracji. Dzięki temu hosty automatycznie skonfigurować adresów lokalnych i globalnych.  
+- Automatycznej konfiguracji adresu. Pozwala to hostom na automatyczne konfigurowanie adresów lokalnych i globalnych lokacji.  
   
- Odnajdywanie sąsiadujących używa Internet Control Message Protocol dla IPv6 (ICMPv6) wiadomości, które obejmują:  
+ Funkcja odnajdywania sąsiadów korzysta z protokołu komunikatów sterowania Internetem dla protokołu IPv6 (ICMPv6), które obejmują:  
   
-- Anons routera. Wysyłany przez router pseudolosowego okresowo lub w odpowiedzi na żądanie routera. Routery IPv6 użyć anonse routera, aby anonsować ich dostępności, prefiksów adresów i inne parametry.  
+- Anons routera. Wysyłany przez router na zasadzie okresowo lub w odpowiedzi na żądanie routera. Routery IPv6 używają anonsów routera do anonsowania dostępności, prefiksów adresów i innych parametrów.  
   
-- Żądanie routera. Wysyłany przez hosta, by zażądać, routery łącze natychmiast wysyłać anons routera.  
+- Żądanie routera. Wysyłany przez hosta w celu uzyskania natychmiastowego wysłania anonsu routera.  
   
-- Żądanie sąsiadów. Wysyłane przez węzły do rozpoznawania adresów, wykrywanie powtarzających się adresów, lub sprawdź, czy sąsiada jest nadal dostępny.  
+- Żądanie sąsiada. Wysyłany przez węzły do rozpoznawania adresów, wykrywania zduplikowanych adresów lub do sprawdzenia, czy sąsiad jest nadal dostępny.  
   
-- Anons sąsiadów. Wysyłane przez węzły, aby odpowiedzieć na żądanie sąsiadów lub powiadamiania sąsiadów zmianę adresu warstwy linku.  
+- Anons sąsiada. Wysyłany przez węzły odpowiadające na żądanie sąsiada lub do powiadamiania sąsiadów o zmianie adresu warstwy łącza.  
   
-- Przekierowanie. Wysyłane przez routery, aby wskazać, lepsze adres następnego przeskoku do określonego miejsca docelowego dla wysyłania węzła.  
+- Przekierowania. Wysyłany przez routery, aby wskazać lepszy adres następnego przeskoku do określonego miejsca docelowego dla węzła wysyłającego.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Protokół IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [Gniazda](../../../docs/framework/network-programming/sockets.md)
+- [Protokół IPv6](internet-protocol-version-6.md)
+- [Gniazda](sockets.md)

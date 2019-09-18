@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0664a68d258380fd9e4824b80f0d7a244cb61e85
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 0b3cf60d670e7fdfa624599bc0eeddc99219c202
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894781"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044019"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (narzędzie eksportowania metadanych środowiska wykonawczego systemu Windows)
 Narzędzie do eksportu metadanych środowisko wykonawcze systemu Windows (Winmdexp. exe) przekształca moduł .NET Framework do pliku, który zawiera środowisko wykonawcze systemu Windows metadane. Chociaż zestawy .NET Framework i środowisko wykonawcze systemu Windows pliki metadanych używają tego samego formatu fizycznego, istnieją różnice w zawartości tabel metadanych, co oznacza, że zestawy .NET Framework nie są automatycznie używane jako składniki środowisko wykonawcze systemu Windows . Proces przekształcania modułu .NET Framework do składnika środowisko wykonawcze systemu Windows jest określany jako *Eksportowanie*. W .NET Framework 4,5 i .NET Framework 4.5.1 utworzony plik metadanych systemu Windows (WinMD) zawiera metadane i implementację.  
   
  W przypadku korzystania z szablonu **składnika Środowisko wykonawcze systemu Windows** , który znajduje się w obszarze **Sklep Windows** dla C# i Visual Basic w Visual Studio 2013 lub w programie Visual Studio 2012, obiekt docelowy kompilatora jest plikiem. winmdobj, a kolejny krok kompilacji wywołuje Winmdexp. exe eksportuje plik winmdobj do pliku winmd. Jest to zalecany sposób tworzenia składnika środowisko wykonawcze systemu Windows. Programu Winmdexp.exe należy używać bezpośrednio, gdy potrzebna jest większa kontrola nad procesem kompilacji niż dostępna w Visual Studio.  
   
- To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](developer-command-prompt-for-vs.md).  
   
  W wierszu polecenia wpisz następujące polecenie:  
   
@@ -54,5 +54,5 @@ winmdexp [options] winmdmodule
 
 - [Obsługa programu .NET Framework dla aplikacji ze Sklepu Windows i środowiska wykonawczego systemu Windows](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 - [Tworzenie składników środowisko wykonawcze systemu Windows w C# i Visual Basic](https://go.microsoft.com/fwlink/p/?LinkID=238313)
-- [Winmdexp.exe — komunikaty o błędach](../../../docs/framework/tools/winmdexp-exe-error-messages.md)
+- [Winmdexp.exe — komunikaty o błędach](winmdexp-exe-error-messages.md)
 - [Kompilacja, wdrażanie i Narzędzia konfiguracji (.NET Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))

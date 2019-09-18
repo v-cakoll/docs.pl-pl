@@ -9,15 +9,15 @@ helpviewer_keywords:
 - sockets, code examples
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
-ms.openlocfilehash: f52dfce66b6d62a8eb7bf75b626feacfb9172c29
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 555b0661bf68a7461f87bf2895e47284a03c41a6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927533"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048956"
 ---
 # <a name="asynchronous-server-socket-example"></a>Przykład asynchronicznego gniazda serwera
-Poniższy przykład program tworzy serwer, który odbiera żądania połączenia od klientów. Serwer jest tworzone za pomocą asynchronicznego gniazda, więc wykonywanie aplikacji serwera nie jest wstrzymany, podczas oczekiwania na połączenie z klientem. Aplikacja odbiera ciąg od klienta, wyświetla ciąg w konsoli i następnie zwraca ciąg do klienta. Ciąg z klienta może zawierać ciąg "\<EOF >" celu sygnalizowania, że koniec komunikatu.  
+Poniższy przykładowy program tworzy serwer, który odbiera żądania połączenia od klientów. Serwer jest oparty na asynchronicznym gnieździe, więc wykonywanie aplikacji serwera nie jest wstrzymane podczas oczekiwania na połączenie od klienta. Aplikacja otrzymuje ciąg z klienta, wyświetla ciąg w konsoli, a następnie zwraca ciąg z powrotem do klienta. Ciąg z klienta musi zawierać ciąg "\<EOF >", aby sygnalizować koniec komunikatu.  
   
 ```vb  
 Imports System  
@@ -291,6 +291,6 @@ public class AsynchronousSocketListener {
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przykład asynchronicznego gniazda klienta](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
-- [Używanie asynchronicznego gniazda serwera](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [Przykłady kodu gniazd](../../../docs/framework/network-programming/socket-code-examples.md)
+- [Przykład asynchronicznego gniazda klienta](asynchronous-client-socket-example.md)
+- [Używanie asynchronicznego gniazda serwera](using-an-asynchronous-server-socket.md)
+- [Przykłady kodu gniazd](socket-code-examples.md)

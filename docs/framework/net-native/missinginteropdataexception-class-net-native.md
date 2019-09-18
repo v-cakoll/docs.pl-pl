@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3b8d84f8ea9cf8f94cb7a2b155c5d40c6de2979a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d916aa5e19b8ce583984d9a8e9708d34cf0adfb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941694"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049544"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>Klasa MissingInteropDataException (architektura .NET Native)
 **Aplikacje .NET dla systemu Windows 10, tylko .NET Native**  
@@ -22,7 +22,7 @@ ms.locfileid: "69941694"
  **Obszaru** System.Runtime.CompilerServices  
   
 > [!IMPORTANT]
-> `MissingInteropDataException` Klasa jest przeznaczona wyłącznie do użytku wewnętrznego w łańcuchu narzędzi .NET Native. Nie jest on przeznaczony do użycia w kodzie innej firmy ani nie powinien obsługiwać wyjątku w kodzie aplikacji. Zamiast tego należy wyeliminować wyjątek poprzez dodanie wpisów do [pliku dyrektywy środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
+> `MissingInteropDataException` Klasa jest przeznaczona wyłącznie do użytku wewnętrznego w łańcuchu narzędzi .NET Native. Nie jest on przeznaczony do użycia w kodzie innej firmy ani nie powinien obsługiwać wyjątku w kodzie aplikacji. Zamiast tego należy wyeliminować wyjątek poprzez dodanie wpisów do [pliku dyrektywy środowiska uruchomieniowego](runtime-directives-rd-xml-configuration-file-reference.md). Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
   
 ## <a name="syntax"></a>Składnia  
  [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)]
@@ -72,7 +72,7 @@ ms.locfileid: "69941694"
 ## <a name="usage-details"></a>Szczegóły użycia  
  Wyjątek `MissingInteropDataException` jest zgłaszany, gdy wywołanie metody do składnika com lub środowisko wykonawcze systemu Windows nie może zostać wykonane pomyślnie, ponieważ informacje o typie są niedostępne.  
   
- Metadane dostępne dla aplikacji w czasie wykonywania są zdefiniowane przez dyrektywy środowiska uruchomieniowego (XML Configuration), \*. Rd. XML. Aby zapobiec zgłaszaniu tego wyjątku przez aplikację, należy zmodyfikować ten plik w celu zdefiniowania metadanych, które muszą być obecne w czasie wykonywania. Najczęściej można rozwiązać ten problem, dodając `MarshalObject`atrybut, `MarshalDelegate`lub `MarshalStructure` do odpowiedniego elementu programu w pliku dyrektywy środowiska uruchomieniowego. Aby uzyskać informacje o formacie tego pliku, zobacz [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (RD. xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+ Metadane dostępne dla aplikacji w czasie wykonywania są zdefiniowane przez dyrektywy środowiska uruchomieniowego (XML Configuration), \*. Rd. XML. Aby zapobiec zgłaszaniu tego wyjątku przez aplikację, należy zmodyfikować ten plik w celu zdefiniowania metadanych, które muszą być obecne w czasie wykonywania. Najczęściej można rozwiązać ten problem, dodając `MarshalObject`atrybut, `MarshalDelegate`lub `MarshalStructure` do odpowiedniego elementu programu w pliku dyrektywy środowiska uruchomieniowego. Aby uzyskać informacje o formacie tego pliku, zobacz [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (RD. xml)](runtime-directives-rd-xml-configuration-file-reference.md).  
   
 > [!IMPORTANT]
 > Ponieważ ten wyjątek wskazuje, że metadane potrzebne przez aplikację nie są dostępne w czasie wykonywania, nie należy obsługiwać tego wyjątku w `try` / `catch` bloku. Zamiast tego należy zdiagnozować przyczynę wyjątku i wyeliminować go przez dodanie odpowiedniego wpisu do pliku dyrektywy środowiska uruchomieniowego.  
@@ -82,5 +82,5 @@ ms.locfileid: "69941694"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Exception?displayProperty=nameWithType>
-- [Klasa MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)
-- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Klasa MissingMetadataException](missingmetadataexception-class-net-native.md)
+- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)

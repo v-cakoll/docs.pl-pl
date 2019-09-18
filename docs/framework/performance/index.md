@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ea61b3abf920a5261933f56c71011b50bcd52bb2
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: e58c7b3ce134139950de54d98b590ec2e6b0f3de
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927097"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046456"
 ---
 # <a name="net-framework-performance"></a>Wydajność środowiska .NET Framework
 Jeśli chcesz tworzyć aplikacje o doskonałej wydajności, należy zaprojektować i zaplanować wydajność tak samo jak w przypadku projektowania dowolnej innej funkcji aplikacji. Za pomocą narzędzi dostarczonych przez firmę Microsoft można mierzyć wydajność aplikacji oraz, w razie potrzeby, wprowadzać ulepszenia w zakresie użycia pamięci, przepływności kodu i czas odpowiedzi. W tym temacie wymieniono narzędzia analizy wydajności zapewniane przez firmę Microsoft oraz linki do innych tematów, które obejmują wydajność poszczególnych obszarów tworzenia aplikacji.  
@@ -38,14 +38,14 @@ Jeśli chcesz tworzyć aplikacje o doskonałej wydajności, należy zaprojektowa
 |[Analizator wydajności systemu Windows](https://www.microsoft.com/download/details.aspx?id=30652)|Służy do określania ogólnej wydajności systemu, na przykład wykorzystania pamięci i magazynu aplikacji, gdy wiele aplikacji jest uruchomionych na tym samym komputerze. To narzędzie jest dostępne w centrum pobierania w ramach zestawu do oceny i wdrażania systemu Windows (ADK) dla programu [!INCLUDE[win8](../../../includes/win8-md.md)]. Aby uzyskać więcej informacji, zobacz [Analizator wydajności systemu Windows](/windows-hardware/test/wpt/windows-performance-analyzer).|  
   
 ### <a name="event-tracing-for-windows-etw"></a>Śledzenie zdarzeń systemu Windows (ETW)  
- ETW to technika, która umożliwia uzyskiwanie informacji diagnostycznych dotyczących uruchamiania kodu i jest istotna dla wielu opisanych wcześniej narzędzi wydajności. System ETW tworzy dzienniki, gdy określone zdarzenia są zgłaszane przez .NET Framework aplikacje i Windows. Za pomocą funkcji ETW można dynamicznie włączać i wyłączać rejestrowanie, dzięki czemu można wykonywać szczegółowe śledzenie w środowisku produkcyjnym bez ponownego uruchamiania aplikacji. .NET Framework oferuje obsługę zdarzeń ETW, a ETW jest używana przez wiele narzędzi do profilowania i wydajności do generowania danych wydajności. Te narzędzia często włączają i wyłączają zdarzenia ETW, dlatego znane z nich. Aby zbierać informacje o wydajności określonych składników aplikacji, można użyć określonych zdarzeń funkcji ETW. Aby uzyskać więcej informacji na temat obsługi funkcji ETW w .NET Framework, zobacz [zdarzenia ETW w środowisku uruchomieniowym języka wspólnego](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md) i [zdarzenia ETW w bibliotece zadań równoległych i PLINQ](../../../docs/framework/performance/etw-events-in-task-parallel-library-and-plinq.md).  
+ ETW to technika, która umożliwia uzyskiwanie informacji diagnostycznych dotyczących uruchamiania kodu i jest istotna dla wielu opisanych wcześniej narzędzi wydajności. System ETW tworzy dzienniki, gdy określone zdarzenia są zgłaszane przez .NET Framework aplikacje i Windows. Za pomocą funkcji ETW można dynamicznie włączać i wyłączać rejestrowanie, dzięki czemu można wykonywać szczegółowe śledzenie w środowisku produkcyjnym bez ponownego uruchamiania aplikacji. .NET Framework oferuje obsługę zdarzeń ETW, a ETW jest używana przez wiele narzędzi do profilowania i wydajności do generowania danych wydajności. Te narzędzia często włączają i wyłączają zdarzenia ETW, dlatego znane z nich. Aby zbierać informacje o wydajności określonych składników aplikacji, można użyć określonych zdarzeń funkcji ETW. Aby uzyskać więcej informacji na temat obsługi funkcji ETW w .NET Framework, zobacz [zdarzenia ETW w środowisku uruchomieniowym języka wspólnego](etw-events-in-the-common-language-runtime.md) i [zdarzenia ETW w bibliotece zadań równoległych i PLINQ](etw-events-in-task-parallel-library-and-plinq.md).  
   
 ## <a name="performance-by-app-type"></a>Wydajność przez typ aplikacji  
  Każdy typ aplikacji .NET Framework ma własne najlepsze rozwiązania, zagadnienia i narzędzia służące do oceny wydajności. Poniższa tabela zawiera linki do tematów dotyczących wydajności dla określonych typów aplikacji .NET Framework.  
   
 |Typ aplikacji|Zobacz|  
 |--------------|---------|  
-|.NET Framework aplikacje dla wszystkich platform|[Odzyskiwanie pamięci i wydajność](../../standard/garbage-collection/performance.md)<br /><br /> [Wskazówki dotyczące wydajności](../../../docs/framework/performance/performance-tips.md)|  
+|.NET Framework aplikacje dla wszystkich platform|[Odzyskiwanie pamięci i wydajność](../../standard/garbage-collection/performance.md)<br /><br /> [Wskazówki dotyczące wydajności](performance-tips.md)|  
 |[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]aplikacje w programie C++, C#i Visual Basic|[Najlepsze rozwiązania w zakresie wydajności dla aplikacji ze C++sklepu C#Windows przy użyciu systemów, i Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
 |Windows Presentation Foundation (WPF)|[Pakiet wydajności WPF](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
 |ASP.NET|[Przegląd wydajności ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
@@ -54,7 +54,7 @@ Jeśli chcesz tworzyć aplikacje o doskonałej wydajności, należy zaprojektowa
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Buforowanie w aplikacjach .NET Framework](../../../docs/framework/performance/caching-in-net-framework-applications.md)|Opisuje techniki buforowania danych w celu zwiększenia wydajności aplikacji.|  
-|[Inicjowanie z opóźnieniem](../../../docs/framework/performance/lazy-initialization.md)|Opisuje sposób inicjowania obiektów w miarę potrzeby w celu zwiększenia wydajności, szczególnie podczas uruchamiania aplikacji.|  
-|[Niezawodność](../../../docs/framework/performance/reliability.md)|Zawiera informacje na temat zapobiegania asynchronicznym wyjątkom w środowisku serwera.|  
-|[Pisanie dużych i sprawnie działających aplikacji platformy .NET Framework](../../../docs/framework/performance/writing-large-responsive-apps.md)|Zawiera porady dotyczące wydajności zebrane z przepisywania kompilatorów C# i Visual Basic w kodzie zarządzanym i zawiera kilka rzeczywistych przykładów z C# kompilatora.|
+|[Buforowanie w aplikacjach .NET Framework](caching-in-net-framework-applications.md)|Opisuje techniki buforowania danych w celu zwiększenia wydajności aplikacji.|  
+|[Inicjowanie z opóźnieniem](lazy-initialization.md)|Opisuje sposób inicjowania obiektów w miarę potrzeby w celu zwiększenia wydajności, szczególnie podczas uruchamiania aplikacji.|  
+|[Niezawodność](reliability.md)|Zawiera informacje na temat zapobiegania asynchronicznym wyjątkom w środowisku serwera.|  
+|[Pisanie dużych i sprawnie działających aplikacji platformy .NET Framework](writing-large-responsive-apps.md)|Zawiera porady dotyczące wydajności zebrane z przepisywania kompilatorów C# i Visual Basic w kodzie zarządzanym i zawiera kilka rzeczywistych przykładów z C# kompilatora.|

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: b7b94b01f737d10b035d85ee938829e14f3af43b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e577b9d221760544e95b1d6098d0becbf5d776b0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69987631"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042677"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern i obiekty osadzone — omówienie
 > [!NOTE]
@@ -26,10 +26,10 @@ ms.locfileid: "69987631"
 ## <a name="embedded-objects-and-the-ui-automation-tree"></a>Obiekty osadzone i drzewo automatyzacji interfejsu użytkownika  
  Obiekty osadzone są traktowane jako pojedyncze elementy w widoku [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] kontroli drzewa. Są one widoczne jako elementy podrzędne kontenera tekstu, dzięki czemu można uzyskać do nich dostęp za pomocą tego samego modelu co inne [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]kontrolki w.  
   
- ![Osadzona tabela z obrazem w kontenerze tekstu](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-example1.png "UIA_TextPattern_Embedded_Objects_Overview_Example1")  
+ ![Osadzona tabela z obrazem w kontenerze tekstu](./media/uia-textpattern-embedded-objects-overview-example1.png "UIA_TextPattern_Embedded_Objects_Overview_Example1")  
 Przykład kontenera tekstowego z osadzonymi obiektami tabeli, obrazu i hiperłącza  
   
- ![Widok zawartości dla poprzedniego przykładu](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-example2.PNG "UIA_TextPattern_Embedded_Objects_Overview_Example2")  
+ ![Widok zawartości dla poprzedniego przykładu](./media/uia-textpattern-embedded-objects-overview-example2.PNG "UIA_TextPattern_Embedded_Objects_Overview_Example2")  
 Przykład widoku zawartości dla części poprzedniego kontenera tekstu  
   
 <a name="Expose_Embedded_Objects_Using_TextPattern_and"></a>   
@@ -38,7 +38,7 @@ Przykład widoku zawartości dla części poprzedniego kontenera tekstu
   
  Zawartość tekstowa (lub tekst wewnętrzny) kontenera tekstu i osadzonego obiektu, takiego jak hiperłącze lub komórka tabeli, jest udostępniana jako pojedynczy, ciągły strumień tekstowy w widoku kontrolki i widok [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zawartości drzewa; granice obiektów są ignorowane. Jeśli klient automatyzacji interfejsu użytkownika Pobiera tekst służący do przeszukiwania, interpretacji lub analizy w jakiś sposób, zakres tekstu należy sprawdzać pod kątem specjalnych przypadków, takich jak tabela z zawartością tekstową lub innymi osadzonymi obiektami. Można to osiągnąć, wywołując <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> do <xref:System.Windows.Automation.AutomationElement> uzyskania dla każdego osadzonego obiektu, a następnie wywołując <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> do uzyskania zakresu tekstu dla każdego elementu. Jest to wykonywane cyklicznie, dopóki cała zawartość tekstowa nie zostanie pobrana.  
   
- ![Zakresy tekstu łączone przez obiekty osadzone.](../../../docs/framework/ui-automation/media/uia-textpattern-embeddedobjecttextranges.png "UIA_TextPattern_EmbeddedObjectTextRanges")  
+ ![Zakresy tekstu łączone przez obiekty osadzone.](./media/uia-textpattern-embeddedobjecttextranges.png "UIA_TextPattern_EmbeddedObjectTextRanges")  
 Przykładowy strumień tekstowy z obiektami osadzonymi i zakresem ich zakresu  
   
  Gdy konieczne jest przechodzenie zawartości zakresu tekstu, seria kroków jest uwzględniana w <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> tle, aby metoda została pomyślnie wykonana.  
@@ -51,7 +51,7 @@ Przykładowy strumień tekstowy z obiektami osadzonymi i zakresem ich zakresu
   
 4. Zakres jest następnie rozwinięty z stanu degeneracji przez przeniesienie <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> punktu końcowego przez jedną żądaną <xref:System.Windows.Automation.Text.TextUnit> granicę.  
   
- ![Dopasowanie zakresu według przenoszenia & ExpandToEnclosingUnit](../../../docs/framework/ui-automation/media/uia-textpattern-moveandexpand-examples.png "UIA_TextPattern_MoveAndExpand_Examples")  
+ ![Dopasowanie zakresu według przenoszenia & ExpandToEnclosingUnit](./media/uia-textpattern-moveandexpand-examples.png "UIA_TextPattern_MoveAndExpand_Examples")  
 Przykłady sposobu, w jaki zakres tekstu jest dostosowywany dla operacji Move () i ExpandToEnclosingUnit ()  
   
 <a name="Common_Scenarios"></a>   
@@ -101,18 +101,18 @@ Przykłady sposobu, w jaki zakres tekstu jest dostosowywany dla operacji Move ()
 ### <a name="image"></a>Obraz  
  **Przykład 1 — zakres tekstu, który zawiera osadzony obraz**  
   
- {Osadzony ![obraz obrazu przykład](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") jest osadzony w tekście}.  
+ { ![Osadzony obraz obrazu przykład](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") jest osadzony w tekście}.  
   
 |Wywołana metoda|Wynik|  
 |-------------------|------------|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Zwraca ciąg "element jest osadzony w tekście". W strumieniu tekstowym nie można oczekiwać żadnego tekstu ALTERNATYWNEgo skojarzonego z obrazem.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Zwraca wewnętrzna <xref:System.Windows.Automation.AutomationElement> , która zawiera zakres tekstu, w tym przypadku <xref:System.Windows.Automation.AutomationElement> , która reprezentuje dostawcę tekstu.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|<xref:System.Windows.Automation.AutomationElement> Zwraca reprezentującą kontrolkę obrazu.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A>gdzie <xref:System.Windows.Automation.AutomationElement> jest obiekt zwracany przez poprzednią <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> metodę.|Zwraca zakres degeneracji reprezentujący ciąg "![przykład obrazu osadzonego]"(../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")".|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A>gdzie <xref:System.Windows.Automation.AutomationElement> jest obiekt zwracany przez poprzednią <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> metodę.|Zwraca zakres degeneracji reprezentujący ciąg "![przykład obrazu osadzonego]"(./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")".|  
   
  **Przykład 2 — zakres tekstu, który częściowo obejmuje zawartość kontenera tekstu. Kontener tekstu ma osadzony obraz, który nie jest częścią zakresu tekstu.**  
   
- {Obraz} ![Przykład osadzonego obrazu](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") jest osadzony w tekście.  
+ {Obraz} ![Przykład osadzonego obrazu](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") jest osadzony w tekście.  
   
 |Wywołana metoda|Wynik|  
 |-------------------|------------|  
@@ -127,16 +127,16 @@ Przykłady sposobu, w jaki zakres tekstu jest dostosowywany dla operacji Move ()
   
 |Komórka z obrazem|Komórka z tekstem|  
 |---------------------|--------------------|  
-|![Przykład osadzonego obrazu](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")|X|  
-|![Przykład obrazu osadzonego 2](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample2.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample2")|T|  
-|![Przykład osadzonego obrazu 3](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample3.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample3")<br /><br /> Obraz Z|Z|  
+|![Przykład osadzonego obrazu](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")|X|  
+|![Przykład obrazu osadzonego 2](./media/uia-textpattern-embedded-objects-overview-imageexample2.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample2")|T|  
+|![Przykład osadzonego obrazu 3](./media/uia-textpattern-embedded-objects-overview-imageexample3.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample3")<br /><br /> Obraz Z|Z|  
   
  **Przykład 1 — pobieranie kontenera tekstu z zawartości komórki.**  
   
 |Wywołana metoda|Wynik|  
 |-------------------|------------|  
 |<xref:System.Windows.Automation.GridPattern.GetItem%2A>z parametrami (0, 0)|<xref:System.Windows.Automation.AutomationElement> Zwraca reprezentowanie zawartości komórki tabeli. w tym przypadku element jest formantem tekstowym.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A>gdzie <xref:System.Windows.Automation.AutomationElement> jest obiekt zwracany przez poprzednią `GetItem` metodę.|Zwraca zakres, który obejmuje ![przykład]obrazu osadzony obraz(../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample").|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A>gdzie <xref:System.Windows.Automation.AutomationElement> jest obiekt zwracany przez poprzednią `GetItem` metodę.|Zwraca zakres, który obejmuje ![przykład obrazu osadzony]obraz(./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample").|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>dla obiektu zwróconego przez poprzednią `RangeFromChild` metodę.|Zwraca wartość <xref:System.Windows.Automation.AutomationElement> reprezentującą komórkę tabeli. w tym przypadku element jest formantem tekstowym, który obsługuje TableItemPattern.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>dla obiektu zwróconego przez poprzednią `GetEnclosingElement` metodę.|Zwraca wartość <xref:System.Windows.Automation.AutomationElement> reprezentującą tabelę.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>dla obiektu zwróconego przez poprzednią `GetEnclosingElement` metodę.|<xref:System.Windows.Automation.AutomationElement> Zwraca wartość reprezentującą sam dostawcę tekstu.|  
@@ -154,7 +154,7 @@ Przykłady sposobu, w jaki zakres tekstu jest dostosowywany dla operacji Move ()
 - <xref:System.Windows.Automation.Text.TextPatternRange>
 - <xref:System.Windows.Automation.Provider.ITextProvider>
 - <xref:System.Windows.Automation.Provider.ITextRangeProvider>
-- [Uzyskiwanie dostępu do obiektów osadzonych przy użyciu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
-- [Udostępnianie zawartości tabel za pomocą automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)
-- [Przenoszenie tekstu przy użyciu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)
+- [Uzyskiwanie dostępu do obiektów osadzonych przy użyciu automatyzacji interfejsu użytkownika](access-embedded-objects-using-ui-automation.md)
+- [Udostępnianie zawartości tabel za pomocą automatyzacji interfejsu użytkownika](expose-the-content-of-a-table-using-ui-automation.md)
+- [Przenoszenie tekstu przy użyciu automatyzacji interfejsu użytkownika](traverse-text-using-ui-automation.md)
 - [Przykład wyszukiwania i wybierania TextPattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FindText)

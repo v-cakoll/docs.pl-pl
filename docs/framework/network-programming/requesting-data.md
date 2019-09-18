@@ -17,30 +17,30 @@ helpviewer_keywords:
 - receiving data, about receiving data
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
-ms.openlocfilehash: 4e93b9395e92ff4c1c153f53e0f40ff18c12416a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f367caf7656a83597b6262a5746686df15d33b4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641947"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047314"
 ---
 # <a name="requesting-data"></a>Żądanie danych
-Tworzenie aplikacji działających w rozproszonym środowisku operacyjnym Internet współczesnych wymaga wydajne i łatwy w użyciu metody pobierania danych z wszystkich typów zasobów. Podłączanych protokołów umożliwiają tworzenie aplikacji korzystających z jednego interfejsu do pobierania danych z wielu protokołów internetowych.  
+Tworzenie aplikacji działających w rozproszonym środowisku operacyjnym dzisiejszej sieci Internet wymaga wydajnej, łatwej w użyciu metody do pobierania danych z zasobów wszystkich typów. Protokoły podłączane umożliwiają tworzenie aplikacji korzystających z jednego interfejsu do pobierania danych z wielu protokołów internetowych.  
   
 ## <a name="uploading-and-downloading-data-from-an-internet-server"></a>Przekazywanie i pobieranie danych z serwera internetowego  
- Dla prostego żądania i odpowiedzi transakcji <xref:System.Net.WebClient> klasy zapewnia najprostszą przekazywanie danych do lub pobieranie danych z serwera internetowego. **Usługa WebClient** zawiera metody służące do przekazywania i pobierania plików, wysyłania i odbierania strumieni i wysyłania bufor danych do serwera i odbierania odpowiedzi. **Usługa WebClient** używa <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse> klasy, aby tworzyć rzeczywiste połączenia z zasobem internetowym, co zarejestrowany dowolny protokół podłączania jest dostępny do użytku.  
+ W przypadku prostych transakcji <xref:System.Net.WebClient> żądań i odpowiedzi Klasa zapewnia najłatwą metodę przekazywania danych do lub pobierania danych z serwera internetowego. **Klient WebClient** oferuje metody przekazywania i pobierania plików, wysyłania i otrzymywania strumieni oraz wysyłania bufora danych do serwera i otrzymywania odpowiedzi. **Klient WebClient** używa <xref:System.Net.WebRequest> klas <xref:System.Net.WebResponse> i, aby nawiązać rzeczywiste połączenia z zasobem internetowym, tak aby wszystkie zarejestrowane protokoły podłączane były dostępne do użycia.  
   
- Aplikacje klienckie, które muszą stosować bardziej złożone dane żądania transakcji z serwerów za pomocą **WebRequest** klasy i jego obiektów podrzędnych. **WebRequest** hermetyzuje szczegóły połączenia z serwerem, wysyłania żądania i odbierania odpowiedzi. **WebRequest** jest klasą abstrakcyjną, który definiuje zestaw właściwości i metod, które są dostępne dla wszystkich aplikacji, które za pomocą podłączanych protokołów. Elementy podrzędne **WebRequest**, takich jak <xref:System.Net.HttpWebRequest>, implementować właściwości i metody zdefiniowane przez **WebRequest** w sposób, który jest zgodny z podstawowym protokole.  
+ Aplikacje klienckie, które muszą wykonywać bardziej złożone transakcje żądania danych z serwerów przy użyciu klasy **WebRequest** i jej obiektów podrzędnych. **Żądanie WebRequest** hermetyzuje szczegóły dotyczące łączenia się z serwerem, wysyłania żądania i otrzymywania odpowiedzi. **WebRequest** to Klasa abstrakcyjna, która definiuje zestaw właściwości i metod, które są dostępne dla wszystkich aplikacji, które korzystają z protokołów podłączanych. Elementy podrzędne **żądania WebRequest**, takie jak <xref:System.Net.HttpWebRequest>, implementują właściwości i metody zdefiniowane przez **WebRequest** w sposób, który jest zgodny z bazowym protokołem.  
   
- **WebRequest** klasy tworzy wystąpienia oparte na protokole **WebRequest** elementy podrzędne, używając wartości identyfikatora URI przekazywany do jego <xref:System.Net.WebRequest.Create%2A> metodę pozwala ustalić określonej klasy pochodnej wystąpienie do utworzenia. Wskazać aplikacje, które **WebRequest** podrzędny powinien być używany do obsługi żądania, rejestrując elementów podrzędnych konstruktora z <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> metody.  
+ Klasa **WebRequest** tworzy wystąpienia obiektów podrzędnych **żądania WebRequest** zależnych od protokołu przy użyciu wartości identyfikatora URI <xref:System.Net.WebRequest.Create%2A> przesłanej do metody, aby określić konkretne wystąpienie klasy pochodnej do utworzenia. Aplikacje wskazują, które elementy podrzędne **żądania WebRequest** mają być używane do obsługi żądania przez zarejestrowanie konstruktora elementu podrzędnego za pomocą <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> metody.  
   
- Żądania z zasobem internetowym, wywołując <xref:System.Net.WebRequest.GetResponse%2A> metody **WebRequest**. **Metody GetResponse** metoda konstrukcje żądania związane z protokołem we właściwościach **WebRequest**sprawia, że połączenie gniazda TCP lub UDP do serwera i wysyła żądanie. Dla żądań, które wysyłają dane do serwera, takich jak HTTP **wpis** lub FTP **umieścić** żądania, <xref:System.Net.WebRequest.GetRequestStream%2A?displayProperty=nameWithType> metoda zapewnia strumienia sieci, w której chcesz wysłać dane.  
+ Do zasobu internetowego jest wykonywane żądanie wywołujące <xref:System.Net.WebRequest.GetResponse%2A> metodę w **żądaniu WebRequest**. Metoda **GetResponse** konstruuje żądanie specyficzne dla protokołu ze wszystkich właściwości **żądania WebRequest**, sprawia, że połączenie TCP lub UDP gniazda z serwerem i wysyła żądanie. W przypadku żądań wysyłających dane do serwera, takich jak <xref:System.Net.WebRequest.GetRequestStream%2A?displayProperty=nameWithType> żądania HTTP **post** lub FTP **Put** , Metoda zawiera strumień sieciowy, do którego mają być wysyłane dane.  
   
- **Metody GetResponse** metoda zwraca związane z protokołem **elementu WebResponse** odpowiadający **WebRequest.**  
+ Metoda **GetResponse** zwraca **WebResponse** specyficzny dla protokołu, który jest zgodny z **żądaniem WebRequest.**  
   
- **Elementu WebResponse** klasy jest również klasę abstrakcyjną, która definiuje właściwości i metody, które są dostępne dla wszystkich aplikacji, które za pomocą podłączanych protokołów. **Elementu WebResponse** elementów potomnych zaimplementować te właściwości i metody dla podstawowych protokołów. <xref:System.Net.HttpWebResponse> Klasy, na przykład implementuje **elementu WebResponse** klasy do obsługi protokołu HTTP.  
+ Klasa **WebResponse** jest również klasą abstrakcyjną, która definiuje właściwości i metody, które są dostępne dla wszystkich aplikacji, które korzystają z protokołów podłączanych. Elementy podrzędne **WebResponse** implementują te właściwości i metody dla bazowego protokołu. Klasa, na przykład implementuje klasę WebResponse dla protokołu HTTP. <xref:System.Net.HttpWebResponse>  
   
- Dane zwrócone przez serwer jest prezentowana w aplikacji w Strumień zwrócony przez <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> metody. Można użyć tego strumienia, jak każdy inny, jak pokazano w poniższym przykładzie.  
+ Dane zwrócone przez serwer są prezentowane aplikacji w strumieniu zwracanym przez <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> metodę. Tego strumienia można użyć jak dowolnego innego, jak pokazano w poniższym przykładzie.  
   
 ```csharp  
 StreamReader sr =  
@@ -54,6 +54,6 @@ sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Programowanie dla sieci w programie .NET Framework](../../../docs/framework/network-programming/index.md)
-- [Instrukcje: Żądanie strony internetowej i pobieranie wyników jako Stream](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
-- [Instrukcje: Pobieranie elementu WebResponse specyficznego dla protokołu, który odpowiada elementowi WebRequest](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+- [Programowanie dla sieci w programie .NET Framework](index.md)
+- [Instrukcje: Zażądaj strony sieci Web i Pobierz wyniki jako strumień](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
+- [Instrukcje: Pobieranie WebResponse specyficznych dla protokołu, które pasują do żądania sieci](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

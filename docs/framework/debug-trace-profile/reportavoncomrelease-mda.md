@@ -13,30 +13,30 @@ helpviewer_keywords:
 ms.assetid: a2b86b63-08b2-4943-b344-3c2cf46ccd31
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f0ecb05dba70dc9c8aba7f04928fd0ab49c900c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0bea73a30cb103f0e72caf73a633229a0719dc6c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873954"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052324"
 ---
 # <a name="reportavoncomrelease-mda"></a>reportAvOnComRelease MDA
-`reportAvOnComRelease` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy wyjątki zostaną zgłoszone ze względu na użytkownika zliczanie błędów podczas wykonywania COM międzyoperacyjności i korzystać z funkcji <xref:System.Runtime.InteropServices.Marshal.Release%2A> lub <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> metody w połączeniu z pierwotnych wywołania COM.  
+Asystent `reportAvOnComRelease` debugowania zarządzanego (MDA) jest uaktywniany, gdy wyjątki są zgłaszane z powodu błędów zliczania odwołań do użytkownika podczas wykonywania międzyoperacyjności <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> modelu COM i <xref:System.Runtime.InteropServices.Marshal.Release%2A> używania metody lub w połączeniu z nieprzetworzonymi wywołaniami com.  
   
 ## <a name="symptoms"></a>Symptomy  
- Naruszenia zasad dostępu i uszkodzenie pamięci.  
+ Naruszenia dostępu i uszkodzenie pamięci.  
   
 ## <a name="cause"></a>Przyczyna  
- Czasami wyjątek jest zgłaszany z powodu użytkownika zliczanie błędów podczas wykonywania COM międzyoperacyjności i korzystać z funkcji <xref:System.Runtime.InteropServices.Marshal.Release%2A> lub <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> metody w połączeniu z pierwotnych wywołania COM. Zazwyczaj ten wyjątek jest pomijany, ponieważ w przeciwnym razie mogłoby spowodować naruszenie zasad dostępu w środowisku CLR, wyłączania go. Po włączeniu tego Asystenta wyjątków można wykryte i zgłaszane zamiast po prostu zostanie odrzucony.  
+ Czasami wyjątek jest zgłaszany z powodu błędów zliczania odwołań użytkownika podczas wykonywania międzyoperacyjności modelu COM <xref:System.Runtime.InteropServices.Marshal.Release%2A> i <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> używania metody lub w połączeniu z nieprzetworzonymi wywołaniami com. Zwykle ten wyjątek jest odrzucany, ponieważ nie spowoduje to naruszenia zasad dostępu w środowisku CLR. Po włączeniu tego asystenta takie wyjątki mogą być wykrywane i raportowane zamiast po prostu odrzucone.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Sprawdź, której można się odwołać zliczanie kodu i poszukaj błędów, a także sprawdzając klientów natywnych obiektów dla zliczanie błędów odwołań.  
+ Zbadaj kod zliczania odwołań i Wyszukaj błędy, a także Zbadaj natywnych klientów obiektu, aby uzyskać odwołania do błędów.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- Dostępne są dwa tryby. Jeśli `allowAv` atrybut jest `true`, Asystenta zapobiega środowiska uruchomieniowego odrzucanie naruszenie zasad dostępu. Jeśli `allowAv` jest `false`, co jest ustawieniem domyślnym, środowisko uruchomieniowe odrzuca naruszenie zasad dostępu, ale komunikat ostrzegawczy jest zgłaszany użytkownikowi, aby wskazać, czy wyjątek został zgłoszony i odrzucone.  
+ Dostępne są dwa tryby. Jeśli atrybut ma `true`wartość, asystent uniemożliwia odrzucanie naruszenia zasad dostępu przez środowisko uruchomieniowe. `allowAv` Jeśli `allowAv` jest`false`to ustawienie domyślne, środowisko uruchomieniowe odrzuca naruszenie zasad dostępu, ale komunikat ostrzegawczy jest raportowany użytkownikowi, aby wskazać, że wyjątek został zgłoszony i odrzucony.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Jeśli to możliwe dane wyjściowe zawierają wskaźnika interfejsu COM vtable oryginalnej. W przeciwnym razie zostanie wyświetlony komunikat informacyjny.  
+ Jeśli to możliwe, dane wyjściowe zawierają oryginalną tablicę sieciową wskaźnika interfejsu COM. W przeciwnym razie zostanie wyświetlony komunikat informacyjny.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -51,5 +51,5 @@ ms.locfileid: "61873954"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling międzyoperacyjny](../interop/interop-marshaling.md)

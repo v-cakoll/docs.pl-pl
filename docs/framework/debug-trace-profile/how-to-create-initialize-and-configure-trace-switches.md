@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b1575d484c58afa3558d9f5b446473b4c89bc51
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 13f89af41520fa023d8841d6dc6d7766e2abe6da
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947999"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052710"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Instrukcje: Tworzenie, inicjowanie i konfigurowanie przełączników śledzenia
 Przełączniki śledzenia umożliwiają włączenie, wyłączenie i filtrowanie danych wyjściowych śledzenia.  
@@ -62,7 +62,7 @@ Przełączniki śledzenia umożliwiają włączenie, wyłączenie i filtrowanie 
   
  Podczas tworzenia wystąpienia przełącznika, można go również zainicjować przez określenie dwóch argumentów: argumentu *DisplayName* i argumentu *Description* . Argument *DisplayName* konstruktora ustawia <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=nameWithType> Właściwość <xref:System.Diagnostics.Switch> wystąpienia klasy. *DisplayName* jest nazwą, która jest używana do konfigurowania przełącznika w pliku. config, a argument *Description* powinien zwrócić krótki opis przełącznika i komunikaty, które kontroluje.  
   
- Oprócz określenia nazwy przełącznika do skonfigurowania należy również określić wartość dla przełącznika. Ta wartość jest liczbą całkowitą. Dla <xref:System.Diagnostics.BooleanSwitch>, wartość 0 odpowiada **off**, a każda wartość różna od zera odpowiada wartości **on**. Dla <xref:System.Diagnostics.TraceSwitch>, 0, 1, 2, 3 i 4 odpowiadająodpowiednio wartościom, **błędom**, **ostrzeżeniem**, **informacjom**i **pełnym**. Każda liczba większa niż 4 jest traktowana jako **pełna**, a każda liczba mniejsza od zera jest traktowana jako **wyłączona**.  
+ Oprócz określenia nazwy przełącznika do skonfigurowania należy również określić wartość dla przełącznika. Ta wartość jest liczbą całkowitą. Dla <xref:System.Diagnostics.BooleanSwitch>, wartość 0 odpowiada **off**, a każda wartość różna od zera odpowiada wartości **on**. Dla <xref:System.Diagnostics.TraceSwitch>, 0, 1, 2, 3 i **4 odpowiadają**odpowiednio wartościom, **błędom**, **ostrzeżeniem**, **informacjom**i **pełnym**. Każda liczba większa niż 4 jest traktowana jako **pełna**, a każda liczba mniejsza od zera jest traktowana jako **wyłączona**.  
   
 > [!NOTE]
 > W .NET Framework w wersji 2,0 można użyć tekstu, aby określić wartość dla przełącznika. Na przykład `true` `Error` dla lub tekst reprezentujący wartość wyliczenia, na przykład dla elementu <xref:System.Diagnostics.TraceSwitch>. <xref:System.Diagnostics.BooleanSwitch> Wiersz `<add name="myTraceSwitch" value="Error" />` jest`<add name="myTraceSwitch" value="1" />`odpowiednikiem.  
@@ -127,7 +127,7 @@ Przełączniki śledzenia umożliwiają włączenie, wyłączenie i filtrowanie 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Śledzenie i instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Instrukcje: Dodawanie instrukcji śledzenia do kodu aplikacji](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Przełączniki śledzenia](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Schemat ustawień śledzenia i debugowania](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Śledzenie i instrumentacja aplikacji](tracing-and-instrumenting-applications.md)
+- [Instrukcje: Dodawanie instrukcji śledzenia do kodu aplikacji](how-to-add-trace-statements-to-application-code.md)
+- [Przełączniki śledzenia](trace-switches.md)
+- [Schemat ustawień śledzenia i debugowania](../configure-apps/file-schema/trace-debug/index.md)

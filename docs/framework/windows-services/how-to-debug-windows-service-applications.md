@@ -9,12 +9,12 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 74f834261d464430547ba3e1113db0ea780f593e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 860f2ae22eb6510dc1f1a454ae3e51ccb366078b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044442"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053627"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Instrukcje: Debugowanie aplikacji usług systemu Windows
 Usługa musi być uruchomiona w kontekście menedżera kontroli usług, a nie z poziomu programu Visual Studio. Z tego powodu debugowanie usługi nie jest tak proste jak debugowanie innych typów aplikacji programu Visual Studio. Aby debugować usługę, należy ją uruchomić, a następnie dołączyć debuger do procesu, w którym jest uruchomiony. Następnie można debugować aplikację przy użyciu wszystkich standardowych funkcji debugowania programu Visual Studio.  
@@ -29,7 +29,7 @@ Usługa musi być uruchomiona w kontekście menedżera kontroli usług, a nie z 
  W tym artykule opisano debugowanie usługi, która jest uruchomiona na komputerze lokalnym, ale można również debugować usługi systemu Windows, które są uruchomione na komputerze zdalnym. Zobacz [debugowanie zdalne](/visualstudio/debugger/debug-installed-app-package).  
   
 > [!NOTE]
-> <xref:System.ServiceProcess.ServiceBase.OnStart%2A> Debugowanie metody może być trudne, ponieważ Menedżer kontroli usług nakłada limit 30 sekund na wszystkie próby uruchomienia usługi. Aby uzyskać więcej informacji, [zobacz Rozwiązywanie problemów: Debugowanie usług](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md)systemu Windows.  
+> <xref:System.ServiceProcess.ServiceBase.OnStart%2A> Debugowanie metody może być trudne, ponieważ Menedżer kontroli usług nakłada limit 30 sekund na wszystkie próby uruchomienia usługi. Aby uzyskać więcej informacji, [zobacz Rozwiązywanie problemów: Debugowanie usług](troubleshooting-debugging-windows-services.md)systemu Windows.  
   
 > [!WARNING]
 > Aby uzyskać istotne informacje na potrzeby debugowania, debuger programu Visual Studio musi znaleźć pliki symboli dla debugowanych plików binarnych. W przypadku debugowania usługi skompilowanej w programie Visual Studio pliki symboli (pliki. pdb) znajdują się w tym samym folderze co plik wykonywalny lub biblioteka, a debuger ładuje je automatycznie. W przypadku debugowania nieskompilowanej usługi należy najpierw znaleźć symbole usługi i upewnić się, że są one dostępne przez debuger. Zobacz [Określanie symboli (. pdb) i plików źródłowych w debugerze programu Visual Studio](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger). Jeśli debugujesz proces systemowy lub chcesz mieć symbole dla wywołań systemowych w usługach, należy dodać serwery symboli Microsoft. Zobacz [debugowanie symboli](/windows/desktop/DxTechArts/debugging-with-symbols).  
@@ -38,9 +38,9 @@ Usługa musi być uruchomiona w kontekście menedżera kontroli usług, a nie z 
   
 1. Kompiluj swoją usługę w konfiguracji debugowania.  
   
-2. Zainstaluj usługę. Aby uzyskać więcej informacji, zobacz [jak: Instalowanie i odinstalowywanie](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)usług.  
+2. Zainstaluj usługę. Aby uzyskać więcej informacji, zobacz [jak: Instalowanie i odinstalowywanie](how-to-install-and-uninstall-services.md)usług.  
   
-3. Uruchom usługę z **Menedżera sterowania usługami**, **Eksplorator serwera**lub z kodu. Aby uzyskać więcej informacji, zobacz [jak: Uruchom usługi](../../../docs/framework/windows-services/how-to-start-services.md).  
+3. Uruchom usługę z **Menedżera sterowania usługami**, **Eksplorator serwera**lub z kodu. Aby uzyskać więcej informacji, zobacz [jak: Uruchom usługi](how-to-start-services.md).  
   
 4. Uruchom program Visual Studio z poświadczeniami administracyjnymi, aby umożliwić dołączenie do procesów systemowych.  
   
@@ -66,7 +66,7 @@ Usługa musi być uruchomiona w kontekście menedżera kontroli usług, a nie z 
   
 10. Ustaw wszystkie punkty przerwania, które mają być używane w kodzie.  
   
-11. Dostęp do Menedżera sterowania usługami i manipulowanie usługą, wysyłanie poleceń Zatrzymaj, Wstrzymaj i Kontynuuj, aby trafiać z punktów przerwania. Aby uzyskać więcej informacji na temat uruchamiania Menedżera sterowania usługami, [zobacz How to: Uruchom usługi](../../../docs/framework/windows-services/how-to-start-services.md). Zobacz [również Rozwiązywanie problemów: Debugowanie usług](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md)systemu Windows.  
+11. Dostęp do Menedżera sterowania usługami i manipulowanie usługą, wysyłanie poleceń Zatrzymaj, Wstrzymaj i Kontynuuj, aby trafiać z punktów przerwania. Aby uzyskać więcej informacji na temat uruchamiania Menedżera sterowania usługami, [zobacz How to: Uruchom usługi](how-to-start-services.md). Zobacz [również Rozwiązywanie problemów: Debugowanie usług](troubleshooting-debugging-windows-services.md)systemu Windows.  
   
 ## <a name="debugging-tips-for-windows-services"></a>Wskazówki dotyczące debugowania dla usług systemu Windows  
  Dołączenie do procesu usługi pozwala debugować większość, ale nie wszystkie, kod dla tej usługi. Na przykład, ponieważ usługa została już uruchomiona, nie można debugować kodu w <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metodzie usługi lub kodzie `Main` w metodzie, która jest używana do załadowania usługi w ten sposób. Jednym ze sposobów obejścia tego ograniczenia jest utworzenie tymczasowej drugiej usługi w aplikacji usługi, która istnieje tylko w celu ułatwienia debugowania. Można zainstalować obie usługi, a następnie uruchomić tę fikcyjną usługę w celu załadowania procesu usługi. Po rozpoczęciu procesu przez usługę tymczasową możesz użyć menu **Debuguj** w programie Visual Studio w celu dołączenia do procesu usługi.  
@@ -115,7 +115,7 @@ Usługa musi być uruchomiona w kontekście menedżera kontroli usług, a nie z 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Instrukcje: Instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
-- [Instrukcje: Uruchom usługi](../../../docs/framework/windows-services/how-to-start-services.md)
+- [Wprowadzenie do aplikacji usług systemu Windows](introduction-to-windows-service-applications.md)
+- [Instrukcje: Instalowanie i odinstalowywanie usług](how-to-install-and-uninstall-services.md)
+- [Instrukcje: Uruchom usługi](how-to-start-services.md)
 - [Debugowanie usługi](/windows/desktop/Services/debugging-a-service)

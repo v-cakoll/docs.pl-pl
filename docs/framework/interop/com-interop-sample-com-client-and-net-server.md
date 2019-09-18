@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a928dde8615589cbc8e502a9b5dd033beded4c9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 48bd536cedd6a9689cdb18cca457ff06473396b5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643494"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051868"
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a>Przykład usługi międzyoperacyjnej modelu COM: Klient modelu COM i serwer .NET
-W tym przykładzie przedstawiono współdziałanie z [klient modelu COM](#cpconcominteropsamplecomclientnetserveranchor1) i [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) wykonująca hipoteczny obliczeń. W tym przykładzie tworzy klienta, a wywołuje wystąpienie zarządzane `Loan` klasy, przekazuje cztery argumenty (jedna z tych czterech jest większy od zera) do wystąpienia i wyświetla obliczeń. Przykłady kodu, w tym przykładzie są wyświetlane w tej sekcji.  
+Ten przykład pokazuje międzyoperacyjność [klienta com](#cpconcominteropsamplecomclientnetserveranchor1) i [serwera .NET](#cpconcominteropsamplecomclientnetserveranchor2) , który wykonuje obliczenia hipoteczne. W tym przykładzie klient tworzy i wywołuje wystąpienie klasy zarządzanej `Loan` , przekazuje cztery argumenty (jeden z czterech równa zero) do wystąpienia i wyświetla obliczenia. Przykłady kodu z tego przykładu pojawiają się w tej sekcji.  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>   
-## <a name="com-client"></a>Klient modelu COM  
+## <a name="com-client"></a>Klient COM  
   
 ```cpp  
 // ConLoan.cpp : Defines the entry point for the console application.  
@@ -88,7 +88,7 @@ int main(int argc, char* argv[])
 ```  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor2"></a>   
-## <a name="net-server"></a>.NET Server  
+## <a name="net-server"></a>Serwer .NET  
   
 ```vb  
 Imports System  
@@ -391,4 +391,4 @@ namespace LoanLib {
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Udostępnianie składników .NET Framework modelowi COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [Udostępnianie składników .NET Framework modelowi COM](exposing-dotnet-components-to-com.md)

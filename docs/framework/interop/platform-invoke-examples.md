@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 15926806-f0b7-487e-93a6-4e9367ec689f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37a864083fa7cfbea16614a94454571f31deed3a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 89c2043570b9e2798ef41984b889791ddfe1d526
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61872615"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051662"
 ---
 # <a name="platform-invoke-examples"></a>Przykłady wywołań platformy
-W poniższych przykładach pokazano, jak definiować i wywoływać **MessageBox** funkcji w bibliotece User32.dll, przekazując prostego ciągu jako argument. W przykładach <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> pole jest ustawione na **automatycznie** umożliwiające platformę docelową określić szerokość znaków i ciągów marshaling.  
+W poniższych przykładach pokazano, jak definiować i wywoływać funkcję **MessageBox** w User32. dll, przekazując prosty ciąg jako argument. W przykładach <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> pole jest ustawione na wartość **automatycznie** , aby umożliwić platformie docelowej określenie szerokości znaków i organizowania ciągu.  
   
  [!code-cpp[Conceptual.Interop.PInvoke#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.Interop.PInvoke/cpp/Example.cpp#1)] 
  [!code-csharp[Conceptual.Interop.PInvoke#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.Interop.PInvoke/cs/Example1.cs#1)] 
  [!code-vb[Conceptual.Interop.PInvoke#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.Interop.PInvoke/vb/Example1.vb#1)]  
   
- Aby uzyskać więcej przykładów, zobacz [Marshaling danych za pomocą wywołania platformy](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+ Aby uzyskać więcej przykładów, zobacz [kierowanie danych za pomocą wywołania platformy](marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
-- [Tworzenie prototypów w kodzie zarządzanym](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [Określanie zestawu znaków](../../../docs/framework/interop/specifying-a-character-set.md)
+- [Tworzenie prototypów w kodzie zarządzanym](creating-prototypes-in-managed-code.md)
+- [Określanie zestawu znaków](specifying-a-character-set.md)

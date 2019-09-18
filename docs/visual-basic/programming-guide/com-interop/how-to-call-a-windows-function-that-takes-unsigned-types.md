@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wywoływanie funkcji Windows wykorzystującej typy bez znaku (Visual Basic)'
+title: 'Instrukcje: Wywołaj funkcję systemu Windows, która pobiera typy bez znaku (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -14,28 +14,28 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: d1a679242f89c17e58a837ac2d356e1594972fb3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97075fb6149ed8c0ce06318d0e5bb6f01b841f30
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022366"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053326"
 ---
-# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Instrukcje: Wywoływanie funkcji Windows wykorzystującej typy bez znaku (Visual Basic)
+# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Instrukcje: Wywołaj funkcję systemu Windows, która pobiera typy bez znaku (Visual Basic)
 
-Używanym klasy, modułu lub struktura, która ma składowych typu Liczba całkowita bez znaku, można uzyskać dostęp do tych członków, za pomocą Visual Basic.
+Jeśli korzystasz z klasy, modułu lub struktury, która ma elementy członkowskie z niepodpisanymi typami całkowitymi, możesz uzyskać dostęp do tych elementów członkowskich za pomocą Visual Basic.
 
-### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Aby wywołać funkcję Windows, która przyjmuje typ bez znaku
+## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Aby wywołać funkcję systemu Windows, która ma typ bez znaku
 
-1. Użyj [instrukcji Declare](../../../visual-basic/language-reference/statements/declare-statement.md) mówić języka Visual Basic, biblioteki, która zawiera funkcję, jego nazwa jest w tej bibliotece, co to jest jego sekwencja wywoływania i sposób konwertowania ciągów przy wywoływaniu tego elementu.
+1. Użyj [instrukcji DECLARE](../../../visual-basic/language-reference/statements/declare-statement.md) , aby poinformować Visual Basic bibliotekę, w której znajduje się ta funkcja, jak jej nazwa znajduje się w tej bibliotece, co to jest sekwencja wywoływania i jak konwertować ciągi podczas wywoływania.
 
-2. W `Declare` instrukcji, użyj `UInteger`, `ULong`, `UShort`, lub `Byte` odpowiednio dla każdego parametru za pomocą typ bez znaku.
+2. `UInteger`W instrukcji Użyj ,`ULong` ,`UShort`, lub`Byte` , w zależności od parametru z niepodpisanym typem. `Declare`
 
-3. Zajrzyj do dokumentacji dla funkcji Windows, wywoływany można znaleźć nazwy i wartości stałe, które są używane. Wiele z nich są zdefiniowane w pliku WinUser.h.
+3. Zapoznaj się z dokumentacją funkcji systemu Windows, która jest wywoływana, aby znaleźć nazwy i wartości stałych, z których korzysta. Wiele z nich jest zdefiniowanych w pliku WinUser. h.
 
-4. Deklarowanie stałych niezbędne w kodzie. Wiele stałe Windows są wartości bez znaku 32-bitowe i należy je zadeklarować `As UInteger`.
+4. Zadeklaruj niezbędne stałe w kodzie. Wiele stałych systemu Windows to 32-bitowe wartości bez znaku i należy je `As UInteger`zadeklarować.
 
-5. Wywołaj funkcję w normalny sposób. Poniższy przykład wywołuje funkcję Windows `MessageBox`, który przyjmuje argument typu Liczba całkowita bez znaku.
+5. Wywołaj funkcję w zwykły sposób. Poniższy przykład wywołuje funkcję `MessageBox`systemu Windows, która przyjmuje argument liczby całkowitej bez znaku.
 
     ```vb
     Public Class windowsMessage
@@ -60,7 +60,7 @@ Używanym klasy, modułu lub struktura, która ma składowych typu Liczba całko
     End Class
     ```
 
-     Możesz przetestować funkcję `messageThroughWindows` następującym kodem.
+     Funkcję `messageThroughWindows` można przetestować przy użyciu następującego kodu.
 
     ```vb
     Public Sub consumeWindowsMessage()
@@ -70,13 +70,13 @@ Używanym klasy, modułu lub struktura, która ma składowych typu Liczba całko
     ```
 
     > [!CAUTION]
-    > `UInteger`, `ULong`, `UShort`, I `SByte` typy danych nie są częścią [niezależność od języka i składniki niezależne od języka](../../../standard/language-independence-and-language-independent-components.md) (CLS), więc kodu zgodne ze specyfikacją CLS nie może używać składnika, są one używane.
+    > `UInteger` ,`ULong`, ,I`SByte` typy danych nie są częścią [niezależności od języka i składników niezależnych od języka](../../../standard/language-independence-and-language-independent-components.md) (CLS), więc kod zgodny ze specyfikacją CLS nie może zużywać składnika, który z nich korzysta. `UShort`
 
     > [!IMPORTANT]
-    > Wywołania do kodu niezarządzanego, takich jak interfejsu programowania aplikacji (API), Windows udostępnia kod na potencjalne zagrożenia bezpieczeństwa.
+    > Wywoływanie kodu niezarządzanego, takiego jak interfejs programowania aplikacji (API) systemu Windows, uwidacznia swój kod na potencjalne zagrożenia bezpieczeństwa.
 
     > [!IMPORTANT]
-    > Wywołanie interfejsu API Windows wymaga uprawnienie niezarządzanego kodu, które mogą mieć wpływ na jej wykonanie w sytuacjach częściowego zaufania. Aby uzyskać więcej informacji, zobacz <xref:System.Security.Permissions.SecurityPermission> i [uprawnienia dostępu kodu](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
+    > Wywołanie interfejsu API systemu Windows wymaga uprawnień do kodu niezarządzanego, co może mieć wpływ na wykonywanie w sytuacjach częściowej relacji zaufania. Aby uzyskać więcej informacji, <xref:System.Security.Permissions.SecurityPermission> Zobacz i [uprawnienia dostępu kodu](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
 
 ## <a name="see-also"></a>Zobacz także
 

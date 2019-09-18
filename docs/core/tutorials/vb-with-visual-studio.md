@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 7787121afcfae4978141d36d25ddfa0a4f54df56
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b4f3cc055f73332db1348ef35174beab614df147
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660437"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039612"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Tworzenie aplikacji Hello world Visual Basic przy użyciu zestaw .NET Core SDK w programie Visual Studio 2017
 
@@ -20,7 +20,7 @@ W tym temacie przedstawiono krok po kroku wprowadzenie do kompilowania, debugowa
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-[Program Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) z zainstalowanym obciążeniem "Programowanie dla wielu platform w środowisku .NET Core". Aplikację można opracowywać przy użyciu platformy .NET Core 2,0.
+[Program Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) z zainstalowanym obciążeniem "Programowanie dla wielu platform w środowisku .NET Core". Aplikację można opracowywać przy użyciu platformy .NET Core 2,1 lub nowszej.
 
 Aby uzyskać więcej informacji, zobacz [wymagania wstępne dotyczące platformy .NET Core w systemie Windows](../windows-prerequisites.md).
 
@@ -69,7 +69,7 @@ Zwiększ swoją aplikację, aby monitować użytkownika o jego nazwę i wyświet
 
    Ten kod wyświetla "co to jest Twoja nazwa?" w oknie konsoli i czeka, aż użytkownik wprowadzi ciąg, a następnie klawisz ENTER. Ten ciąg jest przechowywany w zmiennej o nazwie `name`. Pobiera również wartość <xref:System.DateTime.Now?displayProperty=nameWithType> właściwości, która zawiera bieżący czas lokalny i przypisuje go do zmiennej o nazwie `currentDate`. Na koniec używa [ciągu interpolowanego](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) , aby wyświetlić te wartości w oknie konsoli.
 
-1. Skompiluj program, wybierając opcję > Kompiluj**kompilację rozwiązania**.
+1. Skompiluj program, **wybierając opcję** > Kompiluj**kompilację rozwiązania**.
 
 1. Uruchom program w trybie debugowania w programie Visual Studio, wybierając zieloną strzałkę na pasku narzędzi, naciskając klawisz F5 lub wybierając > element menu**Rozpocznij debugowanie** debugowania. Odpowiedz na monit, wprowadzając nazwę i naciskając klawisz ENTER.
 

@@ -6,21 +6,21 @@ helpviewer_keywords:
 - marshaling data, COM interop
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 279310fe7aa17a73d129edf98f3477a00fd50767
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 3dd667f681e9b6749f33d6ccfd91035477c56030
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567245"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051699"
 ---
 # <a name="marshaling-data-with-com-interop"></a>Organizowanie danych za pomocą modelu COM
 Współdziałanie modelu COM zapewnia obsługę zarówno obiektów COM z kodu zarządzanego, jak i Uwidacznianie obiektów zarządzanych w modelu COM. Obsługa przekazywania danych do i z modelu COM jest obszerna i prawie zawsze zapewnia prawidłowe zachowanie organizowania.  
   
  Windows SDK obejmuje następujące narzędzia międzyoperacyjności modelu COM:  
   
-- [Importer biblioteki typów (Tlbimp. exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), który konwertuje bibliotekę typów com na zestaw międzyoperacyjny. Z tego zestawu usługa Marshaling Interop generuje otoki, które wykonują kierowanie danych między zarządzaną i niezarządzaną pamięcią.  
+- [Importer biblioteki typów (Tlbimp. exe)](../tools/tlbimp-exe-type-library-importer.md), który konwertuje bibliotekę typów com na zestaw międzyoperacyjny. Z tego zestawu usługa Marshaling Interop generuje otoki, które wykonują kierowanie danych między zarządzaną i niezarządzaną pamięcią.  
   
-- [Eksporter biblioteki typów (Tlbexp. exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), który tworzy bibliotekę typów com z zestawu i generuje otokę wykonującą operacje organizowania podczas wywołań metod.  
+- [Eksporter biblioteki typów (Tlbexp. exe)](../tools/tlbexp-exe-type-library-exporter.md), który tworzy bibliotekę typów com z zestawu i generuje otokę wykonującą operacje organizowania podczas wywołań metod.  
   
  W poniższych sekcjach znajdują się łącza do tematów opisujących procesy dostosowywania otok międzyoperacyjnych, gdy użytkownik może (lub musi) dostarczyć Organizatorowi dodatkowe informacje o typie.  
   
@@ -28,7 +28,7 @@ Współdziałanie modelu COM zapewnia obsługę zarówno obiektów COM z kodu za
 [Instrukcje: Ręczne tworzenie otok](how-to-create-wrappers-manually.md)   
 Opisuje sposób ręcznego tworzenia otoki COM w zarządzanym kodzie źródłowym. 
  
- [Instrukcje: Migrowanie kodu zarządzanego DCOM do programu WCF](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)  
+ [Instrukcje: Migrowanie kodu zarządzanego DCOM do programu WCF](how-to-migrate-managed-code-dcom-to-wcf.md)  
  Opisuje sposób migrowania zarządzanego kodu DCOM do usługi WCF w celu zapewnienia najbezpieczniejszego rozwiązania.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

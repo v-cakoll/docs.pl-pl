@@ -9,38 +9,38 @@ helpviewer_keywords:
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 632d9119cf32aab66c87e345ec98c6867ed51592
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 89605a119e8251ffd577ff402366dff0fd4af4d7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614371"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052516"
 ---
 # <a name="loadfromcontext-mda"></a>loadFromContext MDA
-`loadFromContext` Zarządzanego Asystenta debugowania (MDA) jest włączone, jeśli zestaw jest ładowany do `LoadFrom` kontekstu. Taka sytuacja może wystąpić w wyniku wywołania <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> lub inne podobne metody.  
+Asystent `loadFromContext` debugowania zarządzanego (MDA) jest aktywowany, jeśli zestaw jest ładowany `LoadFrom` do kontekstu. Taka sytuacja może wystąpić w wyniku wywołania <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> lub innych podobnych metod.  
   
 ## <a name="symptoms"></a>Symptomy  
- Korzystanie z niektórych metod modułu ładującego może doprowadzić do zestawów, które są ładowane `LoadFrom` kontekstu. Użycie tego kontekstu może spowodować nieoczekiwane zachowanie serializacji, rzutowania i rozpoznawania zależności. Ogólnie rzecz biorąc, zalecane jest, że zestawy wczytanie `Load` kontekstu, aby uniknąć tych problemów. Trudno określić, w którym kontekście zestaw został załadowany do bez to zdarzenie MDA.  
+ Użycie niektórych metod ładujących może spowodować załadowanie zestawów w `LoadFrom` kontekście. Użycie tego kontekstu może spowodować nieoczekiwane zachowanie serializacji, rzutowania i rozpoznawania zależności. Ogólnie rzecz biorąc, zaleca się, aby zestawy zostały załadowane `Load` do kontekstu, aby uniknąć tych problemów. Trudno jest określić kontekst, do którego zestaw został załadowany, bez tego MDA.  
   
 ## <a name="cause"></a>Przyczyna  
- Ogólnie rzecz biorąc, zestaw został załadowany do `LoadFrom` kontekstu, jeśli został załadowany ze ścieżki poza `Load` kontekstu, takich jak pamięci podręcznej zestawów globalnych lub <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> właściwości.  
+ Ogólnie rzecz biorąc, zestaw został załadowany do `LoadFrom` kontekstu, jeśli został załadowany ze ścieżki `Load` poza kontekstem, takiej jak <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> globalna pamięć podręczna zestawu lub właściwość.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Skonfigurowanie aplikacji tak, aby <xref:System.Reflection.Assembly.LoadFrom%2A> wywołania nie są już potrzebne. Aby to zrobić, można użyć następujących technik:  
+ Skonfiguruj aplikacje, takie <xref:System.Reflection.Assembly.LoadFrom%2A> jak wywołania, które nie są już potrzebne. W tym celu można użyć następujących technik:  
   
-- Instalowanie zestawów w globalnej pamięci podręcznej.  
+- Zainstaluj zestawy w globalnej pamięci podręcznej zestawów.  
   
-- Umieść zestawów w <xref:System.AppDomainSetup.ApplicationBase%2A> katalog dla <xref:System.AppDomain>. W przypadku domyślnej domeny <xref:System.AppDomainSetup.ApplicationBase%2A> katalog jest ten, który zawiera plik wykonywalny, który uruchomił proces. Może to również wymagać utworzenie nowego <xref:System.AppDomain> Jeśli nie jest wygodne przenieść zestawu.  
+- Umieść zestawy w <xref:System.AppDomainSetup.ApplicationBase%2A> katalogu <xref:System.AppDomain>dla. W przypadku domeny <xref:System.AppDomainSetup.ApplicationBase%2A> domyślnej katalog jest tym, który zawiera plik wykonywalny, który uruchomił proces. Może to również wymagać utworzenia nowego <xref:System.AppDomain> , jeśli nie jest wygodne przenoszenie zestawu.  
   
-- Dodaj badania ścieżki do pliku konfiguracji (.config) aplikacji lub do domen aplikacji dodatkowych zestawów zależnych znajdują się w katalogach podrzędnych względem pliku wykonywalnego.  
+- Dodaj ścieżkę do sondowania do pliku konfiguracji aplikacji (. config) lub do domen aplikacji pomocniczych, jeśli zależne zestawy znajdują się w katalogach podrzędnych względem pliku wykonywalnego.  
   
- W każdym przypadku można zmienić kod do użycia <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> metody.  
+ W każdym przypadku kod można zmienić, aby użyć <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> metody.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- MDA nie ma żadnego wpływu na środowisko CLR. Zgłasza kontekstu, który został użyty w wyniku żądania obciążenia.  
+ Zdarzenie MDA nie ma żadnego wpływu na środowisko CLR. Raportuje kontekst, który został użyty w wyniku żądania załadowania.  
   
 ## <a name="output"></a>Dane wyjściowe  
- MDA zgłasza, że zestaw został załadowany do `LoadFrom` kontekstu. Określa prostą nazwę zestawu oraz ścieżki. Podano tu także środków zaradczych, które należy unikać `LoadFrom` kontekstu.  
+ Raport MDA, że zestaw został załadowany do `LoadFrom` kontekstu. Określa prostą nazwę zestawu i ścieżkę. Sugeruje również środki zaradcze, aby uniknąć korzystania `LoadFrom` z kontekstu.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -53,7 +53,7 @@ ms.locfileid: "64614371"
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie kodu pokazano sytuację, która może aktywować to zdarzenie MDA:  
+ Poniższy przykład kodu demonstruje sytuację, w której można aktywować to MDA:  
   
 ```csharp
 using System.Reflection;  
@@ -74,4 +74,4 @@ namespace ConsoleApplication1
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)

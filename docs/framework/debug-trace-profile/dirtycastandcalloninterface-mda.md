@@ -12,32 +12,32 @@ helpviewer_keywords:
 ms.assetid: aa388ed3-7e3d-48ea-a0b5-c47ae19cec38
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a28820479ca15ad72475ae9a7754bbbf99ce5c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ac43f6b92198fec03e722b6cf5e12b86df6f4b8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754716"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052869"
 ---
 # <a name="dirtycastandcalloninterface-mda"></a>dirtyCastAndCallOnInterface MDA
-`dirtyCastAndCallOnInterface` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy próba zostanie podjęta na interfejs klasy, która została oznaczona z późnym wiązaniem tylko wywołanie wczesnym wiązaniem przy użyciu wartości vtable.  
+Asystent `dirtyCastAndCallOnInterface` debugowania zarządzanego (MDA) jest uaktywniany, gdy podejmowana jest próba wywołania wczesnego za pośrednictwem tablicy tablicowej interfejsu klasy, który został oznaczony jako późny.  
   
 ## <a name="symptoms"></a>Symptomy  
- Aplikacja zgłasza naruszenie zasad dostępu lub ma nieoczekiwane zachowanie podczas umieszczania wywołania z wczesnym wiązaniem za pośrednictwem modelu COM do środowiska CLR.  
+ Aplikacja zgłasza naruszenie zasad dostępu lub ma nieoczekiwane zachowanie podczas umieszczania na wczesnym połączeniu wywołania przy użyciu modelu COM do środowiska CLR.  
   
 ## <a name="cause"></a>Przyczyna  
- Kod próbuje wywołania wczesnym wiązaniem vtable za pośrednictwem interfejsu klasy, która jest tylko z późnym wiązaniem. Należy pamiętać, że przez domyślną klasę interfejsy są identyfikowane jako trwa z późnym wiązaniem tylko. Można również zidentyfikować jako z późnym wiązaniem przy użyciu <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> atrybutem <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch> wartość (`[ClassInterface(ClassInterfaceType.AutoDispatch)]`).  
+ Kod próbuje nawiązać połączenie z wczesnym wiązaniem przez tablicę czasową za pośrednictwem interfejsu klasy, który jest tylko z późnym wiązaniem. Należy zauważyć, że domyślnie interfejsy klasy są identyfikowane jako późne wiązanie. Mogą być również identyfikowane jako późne powiązania z <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> atrybutem <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch> o wartości (`[ClassInterface(ClassInterfaceType.AutoDispatch)]`).  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Zalecane rozwiązanie jest zdefiniowanie interfejsu jawnego do użycia przez model COM i mieć wywołania klientów modelu COM za pośrednictwem tego interfejsu, zamiast za pośrednictwem interfejsu automatycznie wygenerowana klasa. Alternatywnie wywołania z modelu COM mogą zostać przekształcone do wywołania późnego wiązania za pośrednictwem `IDispatch`.  
+ Zalecanym rozwiązaniem jest zdefiniowanie jawnego interfejsu do użycia przez model COM i zadzwonienie klientów modelu COM za pomocą tego interfejsu zamiast za pomocą automatycznie wygenerowanego interfejsu klasy. Alternatywnie wywołanie z modelu COM może być przekształcone w wywołanie z późnym wiązaniem za pośrednictwem `IDispatch`.  
   
- Na koniec jest możliwe zidentyfikować klasę jako <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> (`[ClassInterface(ClassInterfaceType.AutoDual)]`) umożliwia wywołania z wczesnym wiązaniem do umieszczenia z modelu COM; jednak za pomocą <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> jest zdecydowanie odradzane ze względu na ograniczenia wersji opisanego w <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>.  
+ Na koniec istnieje <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> możliwość zidentyfikowania klasy jako (`[ClassInterface(ClassInterfaceType.AutoDual)]`) w celu umożliwienia umieszczenia wywołań wczesnego wiązania z modelu COM, jednak użycie <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> jest zdecydowanie odradzane ze względu na ograniczenia wersji opisane w <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>temacie.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- To zdarzenie MDA nie ma wpływu na środowisko CLR. Informuje jedynie dane o wywołaniach wczesnym wiązaniem dla interfejsów z późnym wiązaniem.  
+ To zdarzenie MDA nie ma wpływu na środowisko CLR. Raportuje tylko dane dotyczące wczesnych wywołań w interfejsach z późnym wiązaniem.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Nazwa metody lub nazwę pola, którego uzyskiwany jest dostęp wczesnym wiązaniem.  
+ Nazwa metody lub nazwy pola, do którego uzyskuje się wczesne powiązanie.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -52,4 +52,4 @@ ms.locfileid: "61754716"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
-- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)

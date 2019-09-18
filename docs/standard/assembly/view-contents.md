@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wyświetl zawartość zestawu'
+title: 'Instrukcje: wyświetlanie zawartości zestawu'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, viewing information
@@ -16,14 +16,15 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 8f27afafde0b83dfe886d218f3148d8ff07b30cb
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 40ed31bb2231775bb2b6eb24586e07c8b07a85bb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973027"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053944"
 ---
-# <a name="how-to-view-assembly-contents"></a>Instrukcje: Wyświetl zawartość zestawu
+# <a name="how-to-view-assembly-contents"></a>Instrukcje: wyświetlanie zawartości zestawu
+
 Do wyświetlania informacji o języku pośrednim (MSIL) firmy Microsoft w pliku można użyć [Ildasm. exe (Il dezasembler)](../../framework/tools/ildasm-exe-il-disassembler.md) . Jeśli rozpatrywany plik jest zestawem, te informacje mogą obejmować atrybuty zestawu, a także odwołania do innych modułów i zestawów. Te informacje mogą być pomocne w ustaleniu, czy plik jest zestawem lub częścią zestawu oraz czy plik zawiera odwołania do innych modułów lub zestawów.  
   
 Aby wyświetlić zawartość zestawu przy użyciu *Ildasm. exe*, w wierszu polecenia wpisz **Ildasm** \< *nazwę zestawu*, >. Na przykład następujące polecenie deasembleruje zestaw *Hello. exe* .  
@@ -35,6 +36,7 @@ ildasm Hello.exe
 Aby wyświetlić informacje o manifeście zestawu, kliknij dwukrotnie ikonę **manifestu** w oknie MSIL dezasembler.  
   
 ## <a name="example"></a>Przykład  
+
 Poniższy przykład rozpoczyna się od podstawowego programu "Hello world". Po skompilowaniu programu należy użyć *Ildasm. exe* do rozbudowy zestawu *Hello. exe* i wyświetlić manifest zestawu.  
 
 ```cpp

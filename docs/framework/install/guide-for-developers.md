@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de7df6ae2d6463d05d1680c288dd202edc639b09
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8902f9a6f37ab45929e147af5f899ef49c4a42b0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949118"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051942"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Zainstaluj .NET Framework dla deweloperów
 
@@ -28,7 +28,7 @@ Ten artykuł zawiera linki do instalowania wszystkich wersji .NET Framework z .N
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
-Aby uzyskać więcej informacji o wersjach .NET Framework i sposobach ustalania, które wersje są zainstalowane na komputerze, zobacz [wersje i zależności](../migration-guide/versions-and-dependencies.md) oraz [instrukcje: Ustal, które wersje .NET Framework są](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)zainstalowane.
+Aby uzyskać więcej informacji o wersjach .NET Framework i sposobach ustalania, które wersje są zainstalowane na komputerze, zobacz [wersje i zależności](../migration-guide/versions-and-dependencies.md) oraz [instrukcje: Ustal, które wersje .NET Framework są](../migration-guide/how-to-determine-which-versions-are-installed.md)zainstalowane.
 
 > [!NOTE]
 > Aby uzyskać informacje dotyczące .NET Framework 3,5, zobacz [instalowanie .NET Framework 3,5 w systemie Windows 10, Windows 8.1 i Windows 8](dotnet-35-windows-10.md).
@@ -104,7 +104,7 @@ Strona pobierania jest dostępna w kilku językach, ale większość plików do 
 
 Dostępne są dwa typy instalatorów redystrybucyjnych:
 
-- **Instalator sieci Web** (program inicjujący sieci Web) Pobiera wymagane składniki i pakiet językowy, który pasuje do systemu operacyjnego komputera instalacyjnego z sieci Web. Ten pakiet jest znacznie mniejszy niż Instalator w trybie offline, ale wymaga spójnego połączenia z Internetem. Możesz pobrać autonomiczne [pakiety językowe](#to-install-language-packs) , aby zainstalować dodatkową obsługę języka.
+- **Instalator sieci Web** (program inicjujący sieci Web) Pobiera wymagane składniki i pakiet językowy, który pasuje do systemu operacyjnego komputera instalacyjnego z sieci Web. Ten pakiet jest znacznie mniejszy niż Instalator w trybie offline, ale wymaga spójnego połączenia z Internetem. Możesz pobrać [Autonomiczne pakiety językowe](#to-install-language-packs) , aby zainstalować dodatkową obsługę języka.
 
 - **Instalator w trybie offline** (Autonomiczny pakiet redystrybucyjny) zawiera wszystkie składniki wymagane do zainstalowania .NET Framework ale nie zawiera pakietów językowych. Ten pobrany rozmiar jest większy niż Instalator sieci Web. Instalator w trybie offline nie wymaga połączenia z Internetem. Po uruchomieniu Instalatora w trybie offline można pobrać [Autonomiczne pakiety językowe](#to-install-language-packs) , aby zainstalować obsługę języka. Jeśli nie możesz polegać na spójnym połączeniu internetowym, użyj Instalatora w trybie offline.
 
@@ -147,7 +147,7 @@ Programy instalacyjne sieci Web i offline są przeznaczone dla komputerów opart
 1. Jeśli chcesz pobrać zasoby dla dodatkowych języków, postępuj zgodnie z instrukcjami w następnej sekcji, aby zainstalować jeden lub więcej pakietów językowych.
 
 > [!NOTE]
-> Jeśli wystąpią problemy podczas instalacji, zobacz Rozwiązywanie [problemów](troubleshoot-blocked-installations-and-uninstallations.md).
+> Jeśli wystąpią problemy podczas instalacji, zobacz [Rozwiązywanie problemów](troubleshoot-blocked-installations-and-uninstallations.md).
 
 **Uwagi dotyczące instalacji:**
 
@@ -212,7 +212,7 @@ Poniższa tabela zawiera listę obsługiwanych języków.
 | Włoski               | go      |
 | japoński              | ja      |
 | koreański                | ko      |
-| Norweski             | znaleziono      |
+| Norweski             | Znaleziono      |
 | polski                | pl      |
 | portugalski (Brazylia)   | pt-BR   |
 | Portugalski (Portugalia) | pt-PT   |
@@ -227,7 +227,7 @@ Poniższa tabela zawiera listę obsługiwanych języków.
 
 - Jeśli jesteś nowym .NET Framework, zapoznaj się z [omówieniem](../get-started/overview.md) , aby zapoznać się z wprowadzeniem do kluczowych pojęć i składników.
 
-- Nowe funkcje i ulepszenia w .NET Framework 4,5 i wszystkich nowszych wersjach można znaleźć w artykule [co nowego](../../../docs/framework/whats-new/index.md).
+- Nowe funkcje i ulepszenia w .NET Framework 4,5 i wszystkich nowszych wersjach można znaleźć w artykule [co nowego](../whats-new/index.md).
 
 - Aby uzyskać szczegółowe informacje na temat wdrażania .NET Framework za pomocą aplikacji, zobacz [Przewodnik wdrażania dla deweloperów](../deployment/deployment-guide-for-developers.md).
 

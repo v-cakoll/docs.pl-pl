@@ -2,12 +2,12 @@
 title: Mapowania typów środowiska SQL-CLR
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: b209283f5d4e87d1faab06184bda3f79bf1adaed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6710c58a430c35dae41a1a381335019fd3e75192
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792523"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053037"
 ---
 # <a name="sql-clr-type-mapping"></a>Mapowania typów środowiska SQL-CLR
 W LINQ to SQL model danych relacyjnej bazy danych jest mapowany na model obiektów, który jest wyrażony w wybranym języku programowania. Gdy aplikacja zostanie uruchomiona, LINQ to SQL przetłumaczy zapytania zintegrowane z językiem w modelu obiektów na SQL i wyśle je do bazy danych w celu wykonania. Gdy baza danych zwróci wyniki, LINQ to SQL przekształca wyniki z powrotem do obiektów, z których można korzystać w własnym języku programowania.  
@@ -44,7 +44,7 @@ W LINQ to SQL model danych relacyjnej bazy danych jest mapowany na model obiekt�
 ## <a name="type-mapping-run-time-behavior-matrix"></a>Macierz zachowań czasu wykonywania mapowania typów  
  Na poniższym diagramie przedstawiono oczekiwane zachowanie w czasie wykonywania mapowania określonego typu, gdy dane są pobierane lub zapisywane w bazie danych. Z wyjątkiem serializacji, LINQ to SQL nie obsługuje mapowania między dowolnymi typami danych CLR lub SQL Server, które nie są określone w tej macierzy. Aby uzyskać więcej informacji o obsłudze serializacji, zobacz [Serializacja binarna](#BinarySerialization).  
  
-![Tabela mapowania typu danych SQL CLR SQL Server](media/sql-clr-type-mapping.png)
+![Tabela mapowania typu danych SQL CLR SQL Server](./media/sql-clr-type-mapping.png)
 
 > [!NOTE]
 > Niektóre mapowania typów mogą spowodować przepełnienie lub wyjątki utraty danych podczas tłumaczenia do bazy danych lub z niej.  

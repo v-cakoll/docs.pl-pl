@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20e5f166aad8bc2504ed27b93ec6730bcd26387d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5079f0243faefaab6ada23cc98f5214a616c1d22
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911597"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044366"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Generator obrazu natywnego)
 
@@ -59,7 +59,7 @@ Aby uzyskać dodatkowe informacje na temat korzystania z programu Ngen. exe i us
 > [!NOTE]
 > Składnię programu Ngen. exe dla wersji 1,0 i 1,1 .NET Framework można znaleźć w [starszej składni generatora obrazów natywnych (Ngen. exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms165073(v=vs.100)).
 
-To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](developer-command-prompt-for-vs.md).
 
 W wierszu polecenia wpisz następujące polecenie:
 
@@ -392,7 +392,7 @@ Program Ngen.exe rejestruje te informacje podczas generowania obrazu natywnego. 
 
      Zmiana zasad zabezpieczeń komputera ograniczająca uprawnienia udzielone uprzednio zestawowi może spowodować, że poprzednio skompilowane obrazy natywne dla tego zestawu staną się nieprawidłowe.
 
-     Aby uzyskać szczegółowe informacje na temat sposobu, w jaki środowisko uruchomieniowe języka wspólnego administruje zabezpieczeniami dostępu kodu i jak korzystać z uprawnień, zobacz [zabezpieczenia dostępu kodu](../../../docs/framework/misc/code-access-security.md).
+     Aby uzyskać szczegółowe informacje na temat sposobu, w jaki środowisko uruchomieniowe języka wspólnego administruje zabezpieczeniami dostępu kodu i jak korzystać z uprawnień, zobacz [zabezpieczenia dostępu kodu](../misc/code-access-security.md).
 
 <a name="Troubleshooting"></a>
 
@@ -404,13 +404,13 @@ Poniższe tematy dotyczące rozwiązywania problemów umożliwiają sprawdzenie,
 
 ### <a name="assembly-binding-log-viewer"></a>podgląd dziennika powiązań zestawów
 
-Aby potwierdzić, że obrazy natywne są używane przez aplikację, można użyć [Fuslogvw. exe (Podgląd dziennika powiązań zestawów)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md). Wybierz opcję **obrazy natywne** w polu **kategorie dzienników** w oknie Przeglądarka dzienników powiązań. Program Fuslogvw.exe dostarcza informacje o tym, dlaczego obraz natywny został odrzucony.
+Aby potwierdzić, że obrazy natywne są używane przez aplikację, można użyć [Fuslogvw. exe (Podgląd dziennika powiązań zestawów)](fuslogvw-exe-assembly-binding-log-viewer.md). Wybierz opcję **obrazy natywne** w polu **kategorie dzienników** w oknie Przeglądarka dzienników powiązań. Program Fuslogvw.exe dostarcza informacje o tym, dlaczego obraz natywny został odrzucony.
 
 <a name="MDA"></a>
 
 ### <a name="the-jitcompilationstart-managed-debugging-assistant"></a>Asystent debugowania zarządzanego JITCompilationStart
 
-Za pomocą asystenta debugowania zarządzanego [jitCompilationStart](../../../docs/framework/debug-trace-profile/jitcompilationstart-mda.md) (MDA) można określić, kiedy kompilator JIT zacznie kompilować funkcję.
+Za pomocą asystenta debugowania zarządzanego [jitCompilationStart](../debug-trace-profile/jitcompilationstart-mda.md) (MDA) można określić, kiedy kompilator JIT zacznie kompilować funkcję.
 
 <a name="OptOut"></a>
 
@@ -463,7 +463,7 @@ Aby odinstalować zależność, należy użyć tych samych opcji wiersza polecen
 ngen uninstall c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ```
 
-Aby utworzyć obraz natywny dla zestawu w globalnej pamięci podręcznej zestawów, należy użyć nazwy wyświetlanej zestawu. Na przykład:
+Aby utworzyć obraz natywny dla zestawu w globalnej pamięci podręcznej zestawów, należy użyć nazwy wyświetlanej zestawu. Przykład:
 
 ```console
 ngen install "ClientApp, Version=1.0.0.0, Culture=neutral,
@@ -562,7 +562,7 @@ Aby zapoznać się z przykładami dotyczącymi usługi obrazów natywnych, zobac
 
 ## <a name="native-image-task"></a>Obraz macierzysty — zadanie
 
-Zadanie obrazu natywnego to zadanie systemu Windows, które generuje i utrzymuje obrazy natywne. Zadanie obrazu natywnego generuje i automatycznie przejmuje obrazy natywne dla obsługiwanych scenariuszy. Umożliwia także instalatorom używanie programu [Ngen. exe (Generator obrazu natywnego)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) do tworzenia i aktualizowania obrazów natywnych w odłożonym czasie.
+Zadanie obrazu natywnego to zadanie systemu Windows, które generuje i utrzymuje obrazy natywne. Zadanie obrazu natywnego generuje i automatycznie przejmuje obrazy natywne dla obsługiwanych scenariuszy. Umożliwia także instalatorom używanie programu [Ngen. exe (Generator obrazu natywnego)](ngen-exe-native-image-generator.md) do tworzenia i aktualizowania obrazów natywnych w odłożonym czasie.
 
 Zadanie obrazu natywnego jest rejestrowane raz dla każdej architektury procesora obsługiwanej na komputerze, aby umożliwić kompilację dla aplikacji przeznaczonych dla każdej architektury:
 
@@ -639,7 +639,7 @@ W .NET Framework w wersji 2,0 jedyną interakcją z usługą obrazów natywnych 
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Narzędzia](../../../docs/framework/tools/index.md)
+- [Narzędzia](index.md)
 - [Proces zarządzanego wykonania](../../standard/managed-execution-process.md)
-- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../deployment/how-the-runtime-locates-assemblies.md)
+- [Wiersze polecenia](developer-command-prompt-for-vs.md)

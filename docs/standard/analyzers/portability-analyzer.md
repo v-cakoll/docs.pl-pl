@@ -1,19 +1,21 @@
 ---
 title: Analizator przenośności .NET — .NET
 description: Dowiedz się, jak używać narzędzia analizatora przenośności platformy .NET do oceniania sposobu, w jaki przenośny kod znajduje się wśród różnych implementacji platformy .NET, w tym .NET Core, .NET Standard, platformy UWP i Xamarin.
-ms.date: 07/18/2019
+ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: fdd2e9f288649b35b778b5da505408822e0ea8fe
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 246c1d25a99e61d7e2f69f1b65ae3534d22571ba
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107506"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054002"
 ---
 # <a name="the-net-portability-analyzer"></a>Analizator przenośności platformy .NET
 
-Czy chcesz, aby biblioteki obsługiwały wiele platform? Chcesz zobaczyć, ile pracy jest wymagane, aby aplikacja była zgodna z innymi implementacjami i profilami .NET, w tym .NET Core, .NET Standard, platformy UWP i Xamarin dla systemów iOS, Android i Mac? [Analizator przenośności platformy .NET](https://github.com/microsoft/dotnet-apiport) to narzędzie, które udostępnia szczegółowy raport dotyczący sposobu, w jaki program jest elastyczny od implementacji platformy .NET przez analizowanie zestawów. Analizator przenośności jest oferowany jako [rozszerzenie programu Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), które analizuje zestaw na projekt, oraz jako [aplikację konsolową ApiPort](https://aka.ms/apiportdownload), która analizuje zestawy według określonych plików lub katalogów.
+Czy chcesz, aby biblioteki obsługiwały wiele platform? Chcesz sprawdzić, ile pracy jest wymagane do uruchomienia aplikacji .NET Framework na platformie .NET Core?  [Analizator przenośności .NET](https://github.com/microsoft/dotnet-apiport) to narzędzie, które udostępnia szczegółowy raport dotyczący brakujących interfejsów API platformy .NET dla aplikacji lub bibliotek, które mają być przenośne na określonych przeznaczonych dla platformy .NET platformach przez analizowanie zestawów. Analizator przenośności jest oferowany jako [rozszerzenie programu Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), które analizuje zestaw na projekt, oraz jako [aplikację konsolową ApiPort](https://aka.ms/apiportdownload), która analizuje zestawy według określonych plików lub katalogów.
+
+Po przekonwertowaniu projektu na platformę docelową, na przykład .NET Core, możesz użyć Roslyn na podstawie [API Analyzer Tool][https://docs.microsoft.com/en-us/dotnet/standard/analyzers/api-analyzer](api-analyzer.md) (aby identyfikować interfejsy API zgłaszające PlatformNotSupportedException i inne problemy ze zgodnością.
 
 ## <a name="common-targets"></a>Wspólne elementy docelowe
 
@@ -58,7 +60,7 @@ Sekcja podsumowania przenośności raportu przedstawia wartość procentową prz
 
 ![Szczegóły przenośności](./media/portability-analyzer/portabilitydetails.png)
 
-Sekcja szczegóły raportu zawiera listę interfejsów API, których brakuje na jednej z platform docelowych. 
+Sekcja **szczegóły** raportu zawiera listę interfejsów API, których brakuje na żadnej z wybranych **platform**. 
 
 - Typ docelowy: typ ma brakujący interfejs API z platformy docelowej 
 - Docelowy element członkowski: brak metody z platformy docelowej 

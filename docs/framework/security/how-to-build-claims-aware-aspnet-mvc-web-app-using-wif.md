@@ -3,12 +3,12 @@ title: 'Instrukcje: Tworzenie obsługującej oświadczenia aplikacji internetowe
 ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
-ms.openlocfilehash: f2ac263d8869c770594283923a45c7c53c9df4cb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4d245288b04d8ed3d997bc5572b40c7f8a9334e5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626118"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045445"
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Instrukcje: Tworzenie obsługującej oświadczenia aplikacji internetowej MVC ASP.NET za pomocą programu WIF
 ## <a name="applies-to"></a>Dotyczy:  
@@ -18,7 +18,7 @@ ms.locfileid: "64626118"
 - ASP.NET® MVC  
   
 ## <a name="summary"></a>Podsumowanie  
- Niniejszy instruktaż zawiera szczegółowe procedury krok po kroku dotyczące tworzenia prostego obsługującej oświadczenia aplikacji sieci web platformy ASP.NET MVC. Zawiera również instrukcje dotyczące testowania prostą aplikację sieci web obsługującej oświadczenia platformy ASP.NET MVC w dla pomyślnego wdrożenia opartego na oświadczeniach uwierzytelniania. Niniejszy instruktaż nie zawiera szczegółowych instrukcji tworzenia Usługa tokenu zabezpieczającego (STS), a przyjęto założenie, że zostały już skonfigurowane usługi tokenu Zabezpieczającego.  
+ Ten sposób zawiera szczegółowe procedury krok po kroku dotyczące tworzenia prostej aplikacji sieci Web ASP.NET MVC z obsługą oświadczeń. Zawiera również instrukcje dotyczące testowania prostej aplikacji sieci Web ASP.NET MVC z obsługą oświadczeń w celu pomyślnego wdrożenia uwierzytelniania opartego na oświadczeniach. Ta instrukcja nie zawiera szczegółowych instrukcji dotyczących tworzenia usługi tokenu zabezpieczającego (STS) i zakłada, że już skonfigurowano usługę STS.  
   
 ## <a name="contents"></a>Spis treści  
   
@@ -26,51 +26,51 @@ ms.locfileid: "64626118"
   
 - Zestawienie czynności  
   
-- Krok 1 — utworzenie aplikacji proste platformy ASP.NET MVC  
+- Krok 1 — Tworzenie prostej aplikacji ASP.NET MVC  
   
-- Krok 2 — Konfigurowanie aplikacji platformy ASP.NET MVC dla uwierzytelniania opartego na oświadczeniach  
+- Krok 2 — Konfigurowanie aplikacji ASP.NET MVC na potrzeby uwierzytelniania opartego na oświadczeniach  
   
 - Krok 3 — Przetestowanie rozwiązania  
   
-- Powiązane elementy  
+- Elementy pokrewne  
   
 ## <a name="objectives"></a>Cele  
   
-- Konfigurowanie aplikacji sieci web platformy ASP.NET MVC dla uwierzytelniania opartego na oświadczeniach  
+- Konfigurowanie aplikacji sieci Web ASP.NET MVC na potrzeby uwierzytelniania opartego na oświadczeniach  
   
-- Testowanie pomyślne obsługującej oświadczenia aplikacji sieci web platformy ASP.NET MVC  
+- Testowanie pomyślnej aplikacji sieci Web ASP.NET MVC z obsługą oświadczeń  
   
 ## <a name="summary-of-steps"></a>Zestawienie czynności  
   
-- Krok 1 — utworzenie aplikacji proste platformy ASP.NET MVC  
+- Krok 1 — Tworzenie prostej aplikacji ASP.NET MVC  
   
-- Krok 2 — Konfigurowanie aplikacji platformy ASP.NET MVC dla uwierzytelniania opartego na oświadczeniach  
+- Krok 2 — Konfigurowanie aplikacji ASP.NET MVC na potrzeby uwierzytelniania opartego na oświadczeniach  
   
 - Krok 3 — Przetestowanie rozwiązania  
   
-## <a name="step-1--create-simple-aspnet-mvc-application"></a>Krok 1 — utworzenie aplikacji proste platformy ASP.NET MVC  
- W tym kroku utworzysz nową aplikację ASP.NET MVC.  
+## <a name="step-1--create-simple-aspnet-mvc-application"></a>Krok 1 — Tworzenie prostej aplikacji ASP.NET MVC  
+ W tym kroku zostanie utworzona nowa aplikacja ASP.NET MVC.  
   
-#### <a name="to-create-simple-aspnet-mvc-application"></a>Aby utworzyć prostą aplikację platformy ASP.NET MVC  
+#### <a name="to-create-simple-aspnet-mvc-application"></a>Aby utworzyć prostą aplikację ASP.NET MVC  
   
-1. Uruchom program Visual Studio, a następnie kliknij przycisk **pliku**, **New**, a następnie **projektu**.  
+1. Uruchom program Visual Studio i kliknij kolejno pozycje **plik**, **Nowy**i **projekt**.  
   
-2. W **nowy projekt** okna, kliknij przycisk **aplikacji sieci Web programu ASP.NET MVC 3**.  
+2. W oknie **Nowy projekt** kliknij pozycję **ASP.NET aplikacji sieci Web MVC 3**.  
   
-3. W **nazwa**, wprowadź `TestApp` i naciśnij klawisz **OK**.  
+3. W polu **Nazwa**wprowadź `TestApp` i naciśnij przycisk **OK**.  
   
-4. W **nowego projektu programu ASP.NET MVC 3** okno dialogowe, wybierz opcję **aplikacji internetowej** spośród dostępnych szablonów, upewnij się, **aparat widoku** ustawiono **Razor**, a następnie kliknij przycisk **OK**.  
+4. W oknie dialogowym **Nowy projekt ASP.NET MVC 3** wybierz pozycję **aplikacja internetowa** z dostępnych szablonów, upewnij się, że jest ustawiony **aparat widoku** **Razor**, a następnie kliknij przycisk **OK**.  
   
-5. Po otwarciu nowego projektu, kliknij prawym przyciskiem myszy **TestApp** projektu w **Eksploratora rozwiązań** i wybierz **właściwości** opcji.  
+5. Gdy zostanie otwarty nowy projekt, kliknij prawym przyciskiem myszy projekt **TestApp** w **Eksplorator rozwiązań** i wybierz opcję **Właściwości** .  
   
-6. Na stronie właściwości projektu, kliknąć **Web** karcie po lewej stronie, a następnie upewnij się, że **użycia lokalnego serwera sieci Web usług IIS** opcja jest zaznaczona.  
+6. Na stronie właściwości projektu kliknij kartę **Sieć Web** po lewej stronie i upewnij się, że wybrano opcję **Użyj lokalnego serwera sieci Web usług IIS** .  
   
-## <a name="step-2--configure-aspnet-mvc-application-for-claims-based-authentication"></a>Krok 2 — Konfigurowanie aplikacji platformy ASP.NET MVC dla uwierzytelniania opartego na oświadczeniach  
- W tym kroku dodasz wpisy konfiguracji *Web.config* pliku konfiguracji aplikacji sieci web platformy ASP.NET MVC, aby obsługujących oświadczenia.  
+## <a name="step-2--configure-aspnet-mvc-application-for-claims-based-authentication"></a>Krok 2 — Konfigurowanie aplikacji ASP.NET MVC na potrzeby uwierzytelniania opartego na oświadczeniach  
+ W tym kroku dodasz wpisy konfiguracyjne do pliku konfiguracyjnego *Web. config* aplikacji sieci Web ASP.NET MVC, aby zapewnić obsługę oświadczeń.  
   
-#### <a name="to-configure-aspnet-mvc-application-for-claims-based-authentication"></a>Aby skonfigurować aplikację ASP.NET MVC dla uwierzytelniania opartego na oświadczeniach  
+#### <a name="to-configure-aspnet-mvc-application-for-claims-based-authentication"></a>Aby skonfigurować aplikację ASP.NET MVC na potrzeby uwierzytelniania opartego na oświadczeniach  
   
-1. Dodaj następujące definicje konfiguracji w sekcji, aby *Web.config* pliku konfiguracji. Te definiują sekcji konfiguracji wymaganych przez program Windows Identity Foundation. Dodaj definicje natychmiast po  **\<konfiguracji >** otwarcia elementu:  
+1. Dodaj następujące definicje sekcji konfiguracji do pliku konfiguracyjnego *Web. config* . Definiują sekcje konfiguracyjne wymagane przez program Windows Identity Foundation. Dodaj definicje bezpośrednio po  **\<elemencie Configuration >** otwierającym:  
   
     ```xml  
     <configSections>  
@@ -79,7 +79,7 @@ ms.locfileid: "64626118"
     </configSections>  
     ```  
   
-2. Dodaj  **\<lokalizacja >** elementu, który umożliwia dostęp do metadanych Federacji aplikacji:  
+2. Dodaj **lokalizację > elementu, który umożliwia dostęp do metadanych federacji aplikacji: \<**  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -91,7 +91,7 @@ ms.locfileid: "64626118"
     </location>  
     ```  
   
-3. Dodaj następujące wpisy konfiguracji w ramach  **\<system.web >** elementy, aby odmówić użytkownikom, Wyłącz uwierzytelnianie natywnych i włączanie programu WIF zarządzać uwierzytelnianiem.  
+3. Dodaj następujące wpisy konfiguracji w  **\<elementach system. Web >** , aby odmówić użytkowników, wyłączyć uwierzytelnianie natywne i włączyć WIF do zarządzania uwierzytelnianiem.  
   
     ```xml  
     <authorization>  
@@ -100,7 +100,7 @@ ms.locfileid: "64626118"
     <authentication mode="None" />  
     ```  
   
-4. Dodaj następujące Windows Identity Foundation powiązane wpisy konfiguracji i upewnij się, że adres URL aplikacji ASP.NET i numer portu pasuje do wartości w  **\<audienceUris >** wpisu **obszaru**  atrybutu  **\<wsFederation >** elementu, a **odpowiedzi** atrybutu  **\<wsFederation >** elementu. Ponadto upewnij się, że **wystawcy** pasuje do wartości adresu URL Usługa tokenu zabezpieczającego (STS).  
+4. Dodaj następujące wpisy konfiguracji powiązane z usługą Windows Identity Foundation i upewnij się, że adres URL i numer portu aplikacji ASP.NET są zgodne z wartościami we  **\<wpisie audienceUris >** , atrybut obszaru  **\<wsFederation >** element i atrybut odpowiedzi elementu wsFederation >.  **\<** Upewnij się również, że wartość **wystawcy** mieści się w adresie URL usługi tokenu zabezpieczającego (STS).  
   
     ```xml  
     <system.identityModel>  
@@ -126,14 +126,14 @@ ms.locfileid: "64626118"
   
 5. Dodaj odwołanie do <xref:System.IdentityModel> zestawu.  
   
-6. Skompiluj rozwiązanie, aby upewnić się, że ma błędów.  
+6. Skompiluj rozwiązanie, aby upewnić się, że wystąpiły błędy.  
   
 ## <a name="step-3--test-your-solution"></a>Krok 3 — Przetestowanie rozwiązania  
- W tym kroku przetestujesz aplikację sieci web platformy ASP.NET MVC, skonfigurowany do uwierzytelniania opartego na oświadczeniach. Aby wykonać podstawowy test należy dodać prosty kod, który przedstawia oświadczenia w tokenie, wystawiony przez Usługa tokenu zabezpieczającego (STS).  
+ W tym kroku przetestujesz aplikację sieci Web ASP.NET MVC skonfigurowaną pod kątem uwierzytelniania opartego na oświadczeniach. Aby przeprowadzić podstawowy test, należy dodać prosty kod, który wyświetla oświadczenia w tokenie wystawionym przez usługę tokenu zabezpieczającego (STS).  
   
-#### <a name="to-test-your-aspnet-mvc-application-for-claims-based-authentication"></a>Aby przetestować aplikację ASP.NET MVC dla uwierzytelniania opartego na oświadczeniach  
+#### <a name="to-test-your-aspnet-mvc-application-for-claims-based-authentication"></a>Aby przetestować aplikację ASP.NET MVC na potrzeby uwierzytelniania opartego na oświadczeniach  
   
-1. W **Eksploratora rozwiązań**, rozwiń węzeł **kontrolerów** folder i Otwórz *HomeController.cs* plik w edytorze. Dodaj następujący kod do **indeksu** metody:  
+1. W **Eksplorator rozwiązań**rozwiń folder **controllers** i Otwórz plik *HomeController.cs* w edytorze. Dodaj następujący kod do metody **index** :  
   
     ```csharp  
     public ActionResult Index()  
@@ -144,7 +144,7 @@ ms.locfileid: "64626118"
     }  
     ```  
   
-2. W **Eksploratora rozwiązań** rozwiń **widoków** i następnie **Home** folderów i Otwórz *Index.cshtml* plik w edytorze. Usunąć jej zawartość i Dodaj następujący kod:  
+2. W **Eksplorator rozwiązań** rozwiń **Widok widoki** , a następnie folder Foldery **Główne** i Otwórz plik *index. cshtml* w edytorze. Usuń jego zawartość i Dodaj następujące znaczniki:  
   
     ```html  
     @{  
@@ -212,10 +212,10 @@ ms.locfileid: "64626118"
     </table>  
     ```  
   
-3. Uruchom rozwiązanie, naciskając klawisz **F5** klucza.  
+3. Uruchom rozwiązanie, naciskając klawisz **F5** .  
   
-4. Powinno zostać wyświetlone ze stroną, które zostaną wyświetlone oświadczenia w tokenie, który został wystawiony przez usługę tokenu zabezpieczającego.  
+4. Powinna zostać wyświetlona strona zawierająca oświadczenia w tokenie, który został wystawiony przez usługę tokenu zabezpieczającego.  
   
-## <a name="related-items"></a>Powiązane elementy  
+## <a name="related-items"></a>Elementy pokrewne  
   
-- [Instrukcje: Tworzenie aplikacji formularzy sieci Web programu ASP.NET obsługującej oświadczenia za pomocą programu WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+- [Instrukcje: Tworzenie aplikacji opartych na oświadczeniach ASP.NET Web Forms przy użyciu WIF](how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd27bebdc71c70226a61ad8d912135e0e1671dd8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 6077acab533ecb755ae42b7c4359a6c77ff33449
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851249"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044680"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Podgląd dziennika powiązań zasobów)
 
@@ -25,7 +25,7 @@ Podgląd dziennika powiązań zestawów wyświetla szczegóły dotyczące powią
 > [!IMPORTANT]
 > Program fuslogvw.exe musi być uruchomione z uprawnieniami administratora.
 
-To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7) z poświadczeniami administratora. Aby uzyskać więcej informacji, zobacz [wiersza polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7) z poświadczeniami administratora. Aby uzyskać więcej informacji, zobacz [wiersza polecenia](developer-command-prompt-for-vs.md).
 
 W wierszu polecenia wpisz następujące polecenie:
 
@@ -60,7 +60,7 @@ Przeglądarka wyświetla wpis dla każdego nieudanego powiązania zestawu. Dla k
 
     - Opis dowolnych zastosowanych polityk wersji Aplikacji, Wydawcy lub Administratora.
 
-    - Czy zestaw został znaleziony w [globalnej pamięci podręcznej zestawów](../../../docs/framework/app-domains/gac.md).
+    - Czy zestaw został znaleziony w [globalnej pamięci podręcznej zestawów](../app-domains/gac.md).
 
     - Lista wszystkich badających adresów URL.
 
@@ -122,7 +122,7 @@ LOG: All probing URLs attempted and failed.
 
 ## <a name="binding-logs-for-native-images"></a>Dzienniki powiązań dla obrazów macierzystych
 
-Domyślnie Fuslogvw.exe rejestruje normalne żądania powiązania zestawów. Alternatywnie można rejestrować powiązania zestawów dla obrazów natywnych, które zostały utworzone przy użyciu programu [Ngen. exe (Generator obrazu natywnego)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).
+Domyślnie Fuslogvw.exe rejestruje normalne żądania powiązania zestawów. Alternatywnie można rejestrować powiązania zestawów dla obrazów natywnych, które zostały utworzone przy użyciu programu [Ngen. exe (Generator obrazu natywnego)](ngen-exe-native-image-generator.md).
 
 #### <a name="to-log-assembly-binds-for-native-images"></a>Aby rejestrować powiązania zestawów dla obrazów macierzystych
 
@@ -218,7 +218,7 @@ Za pomocą okna dialogowego **ustawienia dziennika** można wykonać następują
 2. Wprowadź ścieżkę do pola tekstowego **niestandardowa ścieżka dziennika** .
 
 > [!NOTE]
-> [Podgląd dziennika powiązań zestawów (Fuslogvw. exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) używa pamięci podręcznej programu Internet Explorer (IE) do przechowywania dziennika powiązań. Ze względu na sporadyczne uszkodzenie w pamięci podręcznej programu IE, [Przeglądarka dzienników powiązań zestawu (Fuslogvw. exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) może czasami zatrzymać wyświetlanie nowych dzienników powiązań w oknie wyświetlania. W wyniku tego uszkodzenia infrastruktura powiązań .NET (fusion) nie może zapisywać w dzienniku powiązań ani z niego odczytywać. (Ten problem nie wystąpi, jeśli używana jest niestandardowa ścieżka dziennika).  Aby naprawić uszkodzenie i umożliwić programowi fusion ponowne wyświetlanie dzienników powiązań, należy wyczyścić pamięć podręczną programu IE poprzez usunięcie tymczasowych plików internetowych w oknie Opcji internetowych programu IE.
+> [Podgląd dziennika powiązań zestawów (Fuslogvw. exe)](fuslogvw-exe-assembly-binding-log-viewer.md) używa pamięci podręcznej programu Internet Explorer (IE) do przechowywania dziennika powiązań. Ze względu na sporadyczne uszkodzenie w pamięci podręcznej programu IE, [Przeglądarka dzienników powiązań zestawu (Fuslogvw. exe)](fuslogvw-exe-assembly-binding-log-viewer.md) może czasami zatrzymać wyświetlanie nowych dzienników powiązań w oknie wyświetlania. W wyniku tego uszkodzenia infrastruktura powiązań .NET (fusion) nie może zapisywać w dzienniku powiązań ani z niego odczytywać. (Ten problem nie wystąpi, jeśli używana jest niestandardowa ścieżka dziennika).  Aby naprawić uszkodzenie i umożliwić programowi fusion ponowne wyświetlanie dzienników powiązań, należy wyczyścić pamięć podręczną programu IE poprzez usunięcie tymczasowych plików internetowych w oknie Opcji internetowych programu IE.
 >
 > Jeśli niezarządzana aplikacja obsługuje środowisko uruchomieniowe języka wspólnego przez `IHostAssemblyManager` implementację interfejsów i `IHostAssemblyStore` , wpisy dziennika nie mogą być przechowywane w pamięci podręcznej WinINet.  Aby wyświetlić wpisy dziennika dla hostów niestandardowych, które implementują te interfejsy, należy określić alternatywną ścieżkę dziennika.
 
@@ -234,7 +234,7 @@ Za pomocą okna dialogowego **ustawienia dziennika** można wykonać następują
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.TypeLoadException>
-- [Narzędzia](../../../docs/framework/tools/index.md)
-- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)
-- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Narzędzia](index.md)
+- [Global Assembly Cache](../app-domains/gac.md)
+- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../deployment/how-the-runtime-locates-assemblies.md)
+- [Wiersze polecenia](developer-command-prompt-for-vs.md)

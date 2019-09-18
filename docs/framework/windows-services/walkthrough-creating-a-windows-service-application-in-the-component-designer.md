@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: df2a99b6fe288cfa8b8a5d60bb127849323ed3a9
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: e5ff40d8413acf64e7a8a129a7b268f58780d591
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545323"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053484"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Samouczek: Tworzenie aplikacji usługi systemu Windows
 
@@ -28,7 +28,7 @@ Aby rozpocząć, Utwórz projekt i ustaw wartości, które są wymagane do popra
 
 2. Przejdź do i wybierz szablon projektu **usługi systemu Windows (.NET Framework)** . Aby go znaleźć, rozwiń węzeł **zainstalowane** i **Wizualizacja C#**  lub **Visual Basic**, a następnie wybierz pozycję **Windows Desktop**. Lub wprowadź *usługę systemu Windows* w polu wyszukiwania w prawym górnym rogu, a następnie naciśnij klawisz **Enter**.
 
-   ![Szablon usługi systemu Windows w oknie dialogowym Nowy projekt w programie Visual Studio](media/new-project-dialog.png)
+   ![Szablon usługi systemu Windows w oknie dialogowym Nowy projekt w programie Visual Studio](./media/new-project-dialog.png)
 
    > [!NOTE]
    > Jeśli szablon **usługi systemu Windows** nie jest widoczny, może być konieczne zainstalowanie obciążeń **programistycznych programu .NET Desktop** :
@@ -51,11 +51,11 @@ Zmień nazwę usługi z **Service1** na **MyNewService**.
 
 2. W oknie podręcznym wybierz pozycję **tak**.
 
-    ![Zmień nazwę monitu](media/windows-service-rename.png "Monit o zmianę nazwy usługi systemu Windows")
+    ![Zmień nazwę monitu](./media/windows-service-rename.png "Monit o zmianę nazwy usługi systemu Windows")
 
 3. Na karcie **projektowanie** wybierz pozycję **Właściwości** z menu skrótów. W oknie **Właściwości** Zmień wartość właściwości **ServiceName** na *MyNewService*.
 
-    ![Właściwości usługi](media/windows-service-properties.png "Właściwości usługi systemu Windows")
+    ![Właściwości usługi](./media/windows-service-properties.png "Właściwości usługi systemu Windows")
 
 4. Wybierz pozycję **Zapisz wszystko** w menu **plik** .
 
@@ -296,7 +296,7 @@ Ustawienia stanu SERVICE_START_PENDING i SERVICE_STOP_PENDING można zaimplement
 
 6. Obowiązkowe Jeśli <xref:System.ServiceProcess.ServiceBase.OnStop%2A> jest metodą długotrwałą, powtórz tę procedurę `OnStop` w metodzie. Zaimplementuj stan SERVICE_STOP_PENDING i zwróć stan SERVICE_STOPPED przed wyjściem `OnStop` z metody.
 
-   Przykład:
+   Na przykład:
 
     ```csharp
     // Update the service state to Stop Pending.
@@ -340,7 +340,7 @@ Przed uruchomieniem usługi systemu Windows należy ją zainstalować, co spowod
 
      Ten tekst jest wyświetlany w kolumnie **Opis** okna **usługi** i zawiera opis usługi dla użytkownika.
 
-    ![Opis usługi w oknie usługi.](media/windows-service-description.png "Opis usługi")
+    ![Opis usługi w oknie usługi.](./media/windows-service-description.png "Opis usługi")
 
 6. Dodaj tekst do <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> właściwości. Na przykład *MyNewService nazwa wyświetlana*.
 
@@ -350,7 +350,7 @@ Przed uruchomieniem usługi systemu Windows należy ją zainstalować, co spowod
 
 8. Po zakończeniu okna **Właściwości** powinny wyglądać tak, jak na poniższej ilustracji:
 
-     ![Właściwości Instalatora dla usługi systemu Windows](media/windows-service-installer-properties.png "Właściwości Instalatora usługi systemu Windows")
+     ![Właściwości Instalatora dla usługi systemu Windows](./media/windows-service-installer-properties.png "Właściwości Instalatora usługi systemu Windows")
 
 9. W widoku **projekt** dla **ProjectInstaller**wybierz pozycję **ServiceProcessInstaller1** dla projektu wizualnego C# lub **ServiceProcessInstaller1** dla projektu Visual Basic, a następnie wybierz **Właściwości** z menu skrótów. . Ustaw właściwość na <xref:System.ServiceProcess.ServiceAccount.LocalSystem> wartość z listy rozwijanej. <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A>
 
@@ -497,7 +497,7 @@ Aby uzyskać więcej informacji, zobacz [jak: Instalowanie i odinstalowywanie](h
 
      Twoja usługa powinna zostać wyświetlona na liście **usługi**, w kolejności alfabetycznej według nazwy wyświetlanej, która została ustawiona dla tego ustawienia.
 
-     ![MyNewService w oknie usługi.](media/windowsservices-serviceswindow.PNG)
+     ![MyNewService w oknie usługi.](./media/windowsservices-serviceswindow.PNG)
 
 2. Aby uruchomić usługę, wybierz pozycję **Rozpocznij** od menu skrótów usługi.
 
@@ -516,7 +516,7 @@ Aby uzyskać więcej informacji, zobacz [jak: Instalowanie i odinstalowywanie](h
 
 3. Znajdź listę dla **myNewLog** (lub **MyLogFile1** , jeśli wykonano procedurę dodawania argumentów wiersza polecenia) i rozwiń ją. Powinny zostać wyświetlone wpisy dotyczące dwóch akcji (uruchamiania i zatrzymywania) wykonywanych przez usługę.
 
-     ![Użyj Podgląd zdarzeń, aby wyświetlić wpisy dziennika zdarzeń](media/windows-service-event-viewer.png)
+     ![Użyj Podgląd zdarzeń, aby wyświetlić wpisy dziennika zdarzeń](./media/windows-service-event-viewer.png)
 
 ## <a name="clean-up-resources"></a>Oczyszczanie zasobów
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 30c44b9f98bcc61d54b8103b6b40d14fd35715f4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a2cc7cb1b6da860a2c27bc8d2fe74e0ffde5f5e1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589177"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053277"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfejsy (Przewodnik programowania w języku C#)
 
@@ -27,7 +27,7 @@ Nazwa struktury musi być prawidłową C# [nazwą identyfikatora](../inside-a-pr
 
 Każda klasa lub struktura implementująca <xref:System.IEquatable%601> interfejs musi zawierać definicję <xref:System.IEquatable%601.Equals%2A> metody, która pasuje do sygnatury określanej przez interfejs. W związku z tym można obliczyć na klasie implementującej `IEquatable<T>` `Equals` metodę, za pomocą której wystąpienie klasy może określić, czy jest ono równe innemu wystąpieniu tej samej klasy.  
   
-Definicja `IEquatable<T>` nie zawiera implementacji dla programu `Equals`. Interfejs definiuje tylko sygnaturę. W ten sposób interfejs w C# jest podobny do klasy abstrakcyjnej, w której wszystkie metody są abstrakcyjne. Jednak Klasa lub struktura może zaimplementować wiele interfejsów, ale Klasa może dziedziczyć tylko pojedynczą klasę, abstrakcyjną lub nie.
+Definicja `IEquatable<T>` nie zawiera implementacji dla programu `Equals`. Klasa lub struktura może implementować wiele interfejsów, ale Klasa może dziedziczyć tylko z pojedynczej klasy.
   
 Aby uzyskać więcej informacji na temat klas abstrakcyjnych, zobacz [klasy abstrakcyjne i zapieczętowane oraz składowe klas](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
@@ -82,7 +82,7 @@ Interfejs ma następujące właściwości:
 - [Zdarzenia](../events/index.md)  
 - [Indeksatory](../indexers/index.md)  
   
-## <a name="featured-book-chapter"></a>polecany rozdział książki
+## <a name="featured-book-chapter"></a>Polecany rozdział książki
 
 [Interfejsy](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29) w [uczeniu C# 3,0: Główne podstawy C# 3,0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)
 

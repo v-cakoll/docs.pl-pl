@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9ab95124264b2b59be77695755ab1d1f1c3b1aa
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 4a0a6a00fc76a646b4295db726bd8ae67733e321
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040734"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053223"
 ---
 # <a name="application-domains"></a>Domeny aplikacji
 
@@ -64,7 +64,7 @@ Systemy operacyjne i środowiska uruchomieniowe zwykle zapewniają pewną posta�
   
 - Jeśli zestaw nie jest wczytywany jako neutralny dla domen, musi być kompilowany dokładnie na czas w każdej domenie aplikacji, do której jest ładowany. Zestaw można jednak zwolnić z pamięci procesu poprzez zwolnienie wszystkich domen aplikacji, w których został załadowany.  
   
- Host środowiska uruchomieniowego określa, czy podczas ładowania środowiska uruchomieniowego do procesu ma ładować zestawy jako neutralne dla domen. W przypadku zarządzanych aplikacji należy zastosować atrybut <xref:System.LoaderOptimizationAttribute> do metody punktu wejścia procesu oraz określić wartość z powiązanego wyliczenia <xref:System.LoaderOptimization>. W przypadku niezarządzanych aplikacji, które obsługują środowisko uruchomieniowe języka wspólnego, należy określić odpowiednią flagę w przypadku wywołania metody [funkcji CorBindToRuntimeEx](../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) .  
+ Host środowiska uruchomieniowego określa, czy podczas ładowania środowiska uruchomieniowego do procesu ma ładować zestawy jako neutralne dla domen. W przypadku zarządzanych aplikacji należy zastosować atrybut <xref:System.LoaderOptimizationAttribute> do metody punktu wejścia procesu oraz określić wartość z powiązanego wyliczenia <xref:System.LoaderOptimization>. W przypadku niezarządzanych aplikacji, które obsługują środowisko uruchomieniowe języka wspólnego, należy określić odpowiednią flagę w przypadku wywołania metody [funkcji CorBindToRuntimeEx](../unmanaged-api/hosting/corbindtoruntimeex-function.md) .  
   
  Istnieją trzy sposoby wczytywania zestawów jako neutralnych dla domen:  
   
@@ -76,7 +76,7 @@ Systemy operacyjne i środowiska uruchomieniowe zwykle zapewniają pewną posta�
   
  Kod kompilowany dokładnie na czas nie może być współużytkowany przez zestawy ładowane w kontekście ich źródła pochodzenia za pomocą metody <xref:System.Reflection.Assembly.LoadFrom%2A> klasy <xref:System.Reflection.Assembly> ani ładowane z obrazów przy użyciu przeciążeń metody <xref:System.Reflection.Assembly.Load%2A>, która określa tablice bajtowe.  
   
- Zestawy, które zostały skompilowane do kodu natywnego przy użyciu programu [Ngen. exe (Generator obrazu natywnego)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) , mogą być współużytkowane między domenami aplikacji, jeśli są załadowane jako niezależne od domeny podczas pierwszego ładowania do procesu.  
+ Zestawy, które zostały skompilowane do kodu natywnego przy użyciu programu [Ngen. exe (Generator obrazu natywnego)](../tools/ngen-exe-native-image-generator.md) , mogą być współużytkowane między domenami aplikacji, jeśli są załadowane jako niezależne od domeny podczas pierwszego ładowania do procesu.  
   
  Kod zestawu kompilowany dokładnie na czas, który zawiera punkt wejścia aplikacji, jest udostępniany tylko wtedy, gdy można współużytkować jego wszystkie zależności.  
   

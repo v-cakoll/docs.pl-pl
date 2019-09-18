@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 3d1e514b1ff5f71982a3c0d35cfc190ff9327b4e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1699d39f5f456fe08b043e5b6a687d4c59d28e89
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044096"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040340"
 ---
 # <a name="use-the-automationid-property"></a>Użyj właściwości AutomationID
 > [!NOTE]
@@ -22,7 +22,7 @@ ms.locfileid: "70044096"
   
  Ten temat zawiera scenariusze i przykładowy kod, który pokazuje, jak i <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> kiedy można używać do lokalizowania elementu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] w drzewie.  
   
- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>jednoznacznie identyfikuje element automatyzacji interfejsu użytkownika na podstawie jego elementów równorzędnych. Aby uzyskać więcej informacji na temat identyfikatorów właściwości związanych z identyfikacją kontroli, zobacz [Omówienie właściwości automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+ <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>jednoznacznie identyfikuje element automatyzacji interfejsu użytkownika na podstawie jego elementów równorzędnych. Aby uzyskać więcej informacji na temat identyfikatorów właściwości związanych z identyfikacją kontroli, zobacz [Omówienie właściwości automatyzacji interfejsu użytkownika](ui-automation-properties-overview.md).  
   
 > [!NOTE]
 > <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>nie gwarantuje unikatowej tożsamości w całym drzewie; zwykle potrzebuje informacji o kontenerach i zakresach. Na przykład aplikacja może zawierać formant menu z wieloma elementami menu najwyższego poziomu, które z kolei mają wiele elementów menu podrzędnych. Te elementy menu pomocniczego mogą być identyfikowane przez schemat generyczny, taki jak "Item1 —", "Item 2" i tak dalej, co umożliwia duplikowanie identyfikatorów dla elementów podrzędnych w elementach menu najwyższego poziomu.  
@@ -59,5 +59,5 @@ ms.locfileid: "70044096"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>
-- [Przegląd drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Znajdź element automatyzacji interfejsu użytkownika na podstawie warunku właściwości](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+- [Przegląd drzewa automatyzacji interfejsu użytkownika](ui-automation-tree-overview.md)
+- [Znajdź element automatyzacji interfejsu użytkownika na podstawie warunku właściwości](find-a-ui-automation-element-based-on-a-property-condition.md)

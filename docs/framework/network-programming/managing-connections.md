@@ -17,12 +17,12 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-ms.openlocfilehash: 2b7b54ab569a3f03363b2f30bf595c2087b9fe70
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 11c17c6893800fce8bbff8f49b3a207c161bcdfa
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963954"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047649"
 ---
 # <a name="managing-connections"></a>Zarządzanie połączeniami
 Aplikacje korzystające z protokołu HTTP do łączenia się z zasobami danych mogą używać <xref:System.Net.ServicePoint> .NET Framework <xref:System.Net.ServicePointManager> i klas do zarządzania połączeniami z Internetem, aby ułatwić im osiągnięcie optymalnej skali i wydajności.  
@@ -31,14 +31,14 @@ Aplikacje korzystające z protokołu HTTP do łączenia się z zasobami danych m
   
  Każdy **ServicePoint** jest identyfikowany przez Uniform Resource Identifier (URI) i jest kategoryzowany według identyfikatora schematu i fragmentów hosta identyfikatora URI. Na przykład to samo wystąpienie **ServicePoint** będzie dostarczać żądania do identyfikatorów URI `http://www.contoso.com/index.htm` , `http://www.contoso.com/news.htm?date=today` ponieważ mają one ten sam identyfikator schematu (http) i fragmenty hosta (`www.contoso.com`). Jeśli aplikacja ma już stałe połączenie z serwerem `www.contoso.com`, używa tego połączenia do pobierania obu żądań, unikając konieczności tworzenia dwóch połączeń.  
   
- ServicePointManager jest klasą statyczną, która zarządza tworzeniem i zniszczeniem wystąpień **ServicePoint** . ServicePointManager tworzy **ServicePoint** , gdy aplikacja żąda zasobu internetowego, który nie znajduje się w kolekcji istniejących wystąpień **ServicePoint** . Wystąpienia **ServicePoint** są niszczone po przekroczeniu maksymalnego czasu bezczynności lub liczby istniejących wystąpień **ServicePoint** przekraczających maksymalną liczbę wystąpień **ServicePoint** dla aplikacji. Można kontrolować zarówno domyślny maksymalny czas bezczynności, jak i maksymalną liczbę wystąpień **ServicePoint** przez ustawienie <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A> właściwości i <xref:System.Net.ServicePointManager.MaxServicePoints%2A> w ServicePointManager.  
+ **ServicePointManager** jest klasą statyczną, która zarządza tworzeniem i zniszczeniem wystąpień **ServicePoint** . **ServicePointManager** tworzy **ServicePoint** , gdy aplikacja żąda zasobu internetowego, który nie znajduje się w kolekcji istniejących wystąpień **ServicePoint** . Wystąpienia **ServicePoint** są niszczone po przekroczeniu maksymalnego czasu bezczynności lub liczby istniejących wystąpień **ServicePoint** przekraczających maksymalną liczbę wystąpień **ServicePoint** dla aplikacji. Można kontrolować zarówno domyślny maksymalny czas bezczynności, jak i maksymalną liczbę wystąpień **ServicePoint** przez ustawienie <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A> właściwości i <xref:System.Net.ServicePointManager.MaxServicePoints%2A> w **ServicePointManager**.  
   
  Liczba połączeń między klientem a serwerem może mieć znaczący wpływ na przepływność aplikacji. Domyślnie aplikacja używająca <xref:System.Net.HttpWebRequest> klasy używa maksymalnie dwóch trwałych połączeń z danym serwerem, ale można ustawić maksymalną liczbę połączeń dla poszczególnych aplikacji.  
   
 > [!NOTE]
 > Specyfikacja protokołu HTTP/1.1 ogranicza liczbę połączeń z aplikacji do dwóch połączeń na serwer.  
   
- Optymalna liczba połączeń zależy od rzeczywistych warunków, w których działa aplikacja. Zwiększenie liczby połączeń dostępnych dla aplikacji może nie wpływać na wydajność aplikacji. Aby określić wpływ większej liczby połączeń, należy uruchomić testy wydajnościowe, zmieniając liczbę połączeń. Można zmienić liczbę połączeń używanych przez aplikację, zmieniając właściwość statyczną <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> w klasie ServicePointManager podczas inicjowania aplikacji, jak pokazano w poniższym przykładzie kodu.  
+ Optymalna liczba połączeń zależy od rzeczywistych warunków, w których działa aplikacja. Zwiększenie liczby połączeń dostępnych dla aplikacji może nie wpływać na wydajność aplikacji. Aby określić wpływ większej liczby połączeń, należy uruchomić testy wydajnościowe, zmieniając liczbę połączeń. Można zmienić liczbę połączeń używanych przez aplikację, zmieniając właściwość statyczną <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> w klasie **ServicePointManager** podczas inicjowania aplikacji, jak pokazano w poniższym przykładzie kodu.  
   
 ```csharp  
 // Set the maximum number of connections per server to 4.  
@@ -66,5 +66,5 @@ sp.ConnectionLimit = newLimit
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Grupowanie połączeń](../../../docs/framework/network-programming/connection-grouping.md)
-- [Korzystanie z protokołów aplikacji](../../../docs/framework/network-programming/using-application-protocols.md)
+- [Grupowanie połączeń](connection-grouping.md)
+- [Korzystanie z protokołów aplikacji](using-application-protocols.md)

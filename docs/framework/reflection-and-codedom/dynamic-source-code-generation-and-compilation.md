@@ -12,44 +12,44 @@ helpviewer_keywords:
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8feb94f3d57c25d634bd51b8f41eca42d5e5757a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5fb95ab7ff4fcac7169238d90637d7b83078d6dd
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793331"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046107"
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>Dynamiczne generowanie i kompilacja kodu źródłowego
-Program .NET Framework zawiera do tego mechanizm nazywany kodu Document Object Model (CodeDOM) umożliwia deweloperom programy, które emitują kod źródłowy do generowania kodu źródłowego w wielu językach programowania, w czasie wykonywania, oparty na jednym modelu, który reprezentuje kod do renderowania.  
+.NET Framework obejmuje mechanizm o nazwie Code Document Object Model (CodeDOM), który umożliwia deweloperom programów, które emitują kod źródłowy w celu generowania kodu źródłowego w wielu językach programowania w czasie wykonywania, na podstawie jednego modelu, który reprezentuje kod do renderowania.  
   
- Do reprezentowania kodem źródłowym, elementami CodeDOM są połączone ze sobą w celu utworzenia struktury danych, nazywane wykresu CodeDOM, który modeluje struktury kodu źródłowego.  
+ Aby reprezentować kod źródłowy, elementy CodeDOM są połączone ze sobą, aby utworzyć strukturę danych znaną jako wykres CodeDOM, który modeluje strukturę pewnego kodu źródłowego.  
   
- `System.CodeDom` Przestrzeni nazw definiuje typy, które mogą reprezentować logicznej struktury kodu źródłowego, niezależnie od określonego języka programowania. `System.CodeDom.Compiler` Przestrzeni nazw definiuje typy, generowanie kodu źródłowego z wykresu CodeDOM i zarządzania nimi kompilacja kodu źródłowego w obsługiwanych językach. Kompilator dostawców lub deweloperów, można rozszerzyć zbiór języków.  
+ `System.CodeDom` Przestrzeń nazw definiuje typy, które mogą reprezentować logiczną strukturę kodu źródłowego niezależnie od określonego języka programowania. `System.CodeDom.Compiler` Przestrzeń nazw definiuje typy do generowania kodu źródłowego z wykresów CodeDOM i zarządzania kompilacją kodu źródłowego w obsługiwanych językach. Dostawcy lub deweloperzy kompilatora mogą rozciągnąć zestaw obsługiwanych języków.  
   
- Modelowanie kodu źródłowego niezależnego od języka mogą być przydatne, gdy program wymaga wygenerować kod źródłowy dla modelu programu, w wielu językach lub niepewne języka docelowego. Na przykład niektóre projektantów umożliwia CodeDOM jako interfejs abstrakcji języka generuje kod źródłowy w języku programowania, jeśli dostępna jest obsługa CodeDOM dla języka.  
+ Modelowanie kodu źródłowego niezależne od języka może być przydatne, gdy program musi wygenerować kod źródłowy dla modelu programu w wielu językach lub dla nieokreślonego języka docelowego. Na przykład niektórzy projektanci używają języka CodeDOM jako interfejsu abstrakcji języka do tworzenia kodu źródłowego w prawidłowym języku programowania, jeśli dostępna jest obsługa języka CodeDOM.  
   
- Program .NET Framework zawiera generatorów kodu i kompilatory kodu <xref:Microsoft.CSharp.CSharpCodeProvider>, <xref:Microsoft.JScript.JScriptCodeProvider>, i <xref:Microsoft.VisualBasic.VBCodeProvider>.  
+ .NET Framework obejmuje generatory kodu i kompilatory kodu dla <xref:Microsoft.CSharp.CSharpCodeProvider>, <xref:Microsoft.JScript.JScriptCodeProvider>i <xref:Microsoft.VisualBasic.VBCodeProvider>.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Używanie modelu CodeDOM](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)  
- W tym artykule opisano typowe zastosowania i pokazuje, tworzenia grafu prostego obiektu za pomocą modelu CodeDOM.  
+ [Używanie modelu CodeDOM](using-the-codedom.md)  
+ Opisuje typowe zastosowania i demonstruje Tworzenie prostego grafu obiektów przy użyciu CodeDOM.  
   
- [Generowanie kodu źródłowego i kompilacja programu z wykresu CodeDOM](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)  
- W tym artykule opisano sposób generowania kodu źródłowego i kompilowania wygenerowanego kodu za pomocą zewnętrznego kompilatora przy użyciu klas zdefiniowanych w `System.CodeDom.Compiler` przestrzeni nazw.  
+ [Generowanie kodu źródłowego i kompilowanie programu z wykresu CodeDOM](generating-and-compiling-source-code-from-a-codedom-graph.md)  
+ Opisuje sposób generowania kodu źródłowego i kompilowania wygenerowanego kodu z kompilatorem zewnętrznym przy użyciu klas `System.CodeDom.Compiler` zdefiniowanych w przestrzeni nazw.  
   
- [Instrukcje: Tworzenie pliku dokumentacji XML przy użyciu modelu CodeDOM](../../../docs/framework/reflection-and-codedom/how-to-create-an-xml-documentation-file-using-codedom.md)  
- W tym artykule opisano, jak za pomocą modelu CodeDOM generowanie kodu za pomocą komentarzy dokumentacji XML i kompilowania wygenerowanego kodu, aby tworzy dane wyjściowe dokumentacji XML.  
+ [Instrukcje: Utwórz plik dokumentacji XML przy użyciu CodeDOM](how-to-create-an-xml-documentation-file-using-codedom.md)  
+ Opisuje, jak używać CodeDOM do generowania kodu za pomocą komentarzy dokumentacji XML i kompilowania wygenerowanego kodu w celu utworzenia danych wyjściowych dokumentacji XML.  
   
- [Instrukcje: Utwórz klasę za pomocą modelu CodeDOM](../../../docs/framework/reflection-and-codedom/how-to-create-a-class-using-codedom.md)  
- W tym artykule opisano, jak wygenerować klasę, zawierający pola, właściwości, metody, Konstruktor i punktu wejścia za pomocą modelu CodeDOM.  
+ [Instrukcje: Tworzenie klasy przy użyciu CodeDOM](how-to-create-a-class-using-codedom.md)  
+ Opisuje, jak używać CodeDOM do wygenerowania klasy zawierającej pola, właściwości, metodę, Konstruktor i punkt wejścia.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.CodeDom>  
- Definiuje elementy, które reprezentują elementy kodu w językach programowania przeznaczonych środowiska uruchomieniowego języka wspólnego.  
+ Definiuje elementy reprezentujące elementy kodu w językach programowania przeznaczonych dla środowiska uruchomieniowego języka wspólnego.  
   
  <xref:System.CodeDom.Compiler>  
- Definiuje interfejsów Generowanie i kompilowanie kodu w czasie wykonywania.  
+ Definiuje interfejsy do generowania i kompilowania kodu w czasie wykonywania.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [CodeDOM — podręczny wykaz](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))  
- Umożliwia szybkie dla deweloperów można znaleźć elementów CodeDOM, które reprezentują elementy kodu źródłowego.
+ [Zwięzłe odwołanie CodeDOM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))  
+ Umożliwia deweloperom znalezienie elementów CodeDOM, które reprezentują elementy kodu źródłowego.

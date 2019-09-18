@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5dbbf0f71eaefd0ef7fc7f2b5e69e47ce7b8db26
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 21d0425de072c91cf7111162e405f826e00e849d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894880"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046094"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Dynamiczne ładowanie i używanie typów
 Odbicie zapewnia infrastrukturę używaną przez kompilatory języka do implementowania niejawnego późnego wiązania. Powiązanie jest procesem lokalizowania deklaracji (czyli implementacji), która odnosi się do jednoznacznie określonego typu. Gdy ten proces wystąpi w czasie wykonywania, a nie w czasie kompilacji, jest nazywany późnym wiązaniem. Visual Basic umożliwia użycie niejawnego późnego wiązania w kodzie. Kompilator Visual Basic wywołuje metodę pomocnika, która używa odbicia w celu uzyskania typu obiektu. Argumenty przekazane do metody pomocnika powodują wywołanie odpowiedniej metody w czasie wykonywania. Te argumenty są wystąpieniem (obiektem), na którym należy wywołać metodę, nazwę wywołanej metody (ciąg) i argumenty przekazane do wywołanej metody (tablicę obiektów).  
@@ -102,5 +102,5 @@ End Module
 
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
-- [Wyświetlanie informacji o typie](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Wyświetlanie informacji o typie](viewing-type-information.md)
 - [Konwersja typu w .NET Framework](../../standard/base-types/type-conversion.md)

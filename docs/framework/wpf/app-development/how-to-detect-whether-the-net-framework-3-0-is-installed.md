@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Wykrywanie, czy wtyczka .NET Framework 3.0 jest zainstalowana'
+title: 'Instrukcje: Wykryj, czy wtyczka .NET Framework 3.0 jest zainstalowana'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WinFX Runtime user-agent string
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: e307125a2a8de3edc4df2fc1022c6e3de1904879
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c68daf2cb5687497e66ad3022ce42352a17ae0f7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960242"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053435"
 ---
-# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Instrukcje: Wykrywanie, czy wtyczka .NET Framework 3.0 jest zainstalowana
+# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Instrukcje: Wykryj, czy wtyczka .NET Framework 3.0 jest zainstalowana
 Aby Administratorzy mogli wdrożyć aplikacje Microsoft .NET Framework w systemie, należy najpierw potwierdzić, że .NET Framework środowisko uruchomieniowe jest obecne. Ten temat zawiera skrypt zapisany w języku HTML/JavaScript, za pomocą którego Administratorzy mogą określić, czy .NET Framework jest obecny w systemie.  
   
 > [!NOTE]
@@ -23,7 +23,7 @@ Aby Administratorzy mogli wdrożyć aplikacje Microsoft .NET Framework w systemi
 ## <a name="detect-the-net-clr-user-agent-string"></a>Wykrywanie ciągu agenta użytkownika platformy .NET CLR  
  Po zainstalowaniu .NET Framework MSI dodaje ".NET CLR" i numer wersji do ciągu UserAgent. Poniższy przykład przedstawia skrypt osadzony na prostej stronie HTML. Skrypt przeszukuje ciąg UserAgent, aby określić, czy .NET Framework jest zainstalowana, i wyświetla komunikat o stanie na wynikach wyszukiwania.  
   
-```  
+```html  
 <HTML>  
   <HEAD>  
     <TITLE>Test for the .NET Framework 3.0</TITLE>  

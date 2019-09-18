@@ -16,39 +16,39 @@ helpviewer_keywords:
 ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 459465064fe9db9f2f0aebb4153a3caea173af4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f7f5a6ef2d4e8d4a987ed74a6a04e31f87cc46f3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875072"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052938"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>callbackOnCollectedDelegate MDA
-`callbackOnCollectedDelegate` Zarządzanego Asystenta debugowania (MDA) jest włączone, jeśli obiekt delegowany jest przekazywane z kodu zarządzanego do kodu niezarządzanego jako wskaźnik funkcji i wywołanie zwrotne jest umieszczany na ten wskaźnik funkcji bezużyteczne po delegata.  
+Asystent `callbackOnCollectedDelegate` debugowania zarządzanego (MDA) jest aktywowany, jeśli delegat jest zorganizowany z zarządzanego do niezarządzanego kodu jako wskaźnik funkcji, a wywołanie zwrotne jest umieszczane na tym wskaźniku funkcji, gdy delegat został pobrany jako bezużyteczny.  
   
 ## <a name="symptoms"></a>Symptomy  
- Naruszenia zasad dostępu wystąpić, gdy próba wywołania kodu zarządzanego za pomocą wskaźników funkcji, które zostały uzyskane z zarządzanych obiektów delegowanych. Te błędy, podczas nie typowych błędów języka środowiska uruchomieniowego (języka wspólnego CLR), może wydawać się być tak, ponieważ naruszenie zasad dostępu odbywa się w kodzie CLR.  
+ Podczas próby wywołania kodu zarządzanego za pomocą wskaźników funkcji uzyskanych z zarządzanych delegatów nastąpiły naruszenia zasad dostępu. Te błędy, podczas gdy nie występują usterki środowiska uruchomieniowego języka wspólnego (CLR), mogą wydawać się tak, ponieważ w kodzie CLR występuje naruszenie zasad dostępu.  
   
- Błąd nie jest zgodne ze sobą. Czasami połączenie na wskaźnik funkcji zakończy się powodzeniem, a czasami kończy się niepowodzeniem. Błąd może wystąpić tylko pod dużym obciążeniem, lub na liczbę losową liczbę prób.  
+ Błąd nie jest spójny; Czasami wywołanie funkcji powiedzie się i czasami kończy się niepowodzeniem. Awaria może wystąpić tylko przy dużym obciążeniu lub losowej liczbie prób.  
   
 ## <a name="cause"></a>Przyczyna  
- Delegat, z którego została utworzona i udostępniana dla kodu niezarządzanego wskaźnik funkcji było bezużyteczne. Gdy składnik niezarządzanych próbuje wywołać na wskaźnik funkcji, generuje naruszenie zasad dostępu.  
+ Delegat, z którego został utworzony wskaźnik funkcji i ujawniony w kodzie niezarządzanym, został odrzucony. Gdy składnik niezarządzany próbuje wywołać wskaźnik funkcji, generuje naruszenie zasad dostępu.  
   
- Błąd pojawia się losowych, ponieważ zależy podczas wyrzucania elementów bezużytecznych. Jeśli obiekt delegowany kwalifikuje się do kolekcji wyrzucania elementów bezużytecznych może wystąpić po wywołania zwrotnego i wywołanie powiedzie się. W pozostałym czasie wyrzucania elementów bezużytecznych występuje przed wywołania zwrotnego, wywołanie zwrotne generuje naruszenie zasad dostępu i zatrzymuje program.  
+ Błąd pojawia się losowo, ponieważ zależy od momentu wyrzucania elementów bezużytecznych. Jeśli delegat kwalifikuje się do kolekcji, wyrzucanie elementów bezużytecznych może wystąpić po wywołaniu wywołania zwrotnego i wywołaniu. W innych przypadkach wyrzucanie elementów bezużytecznych występuje przed wywołaniem zwrotnym, wywołanie zwrotne generuje naruszenie zasad dostępu, a program zostanie zatrzymany.  
   
- Prawdopodobieństwo awarii zależy od czasu między marshaling delegata i wywołania zwrotnego na wskaźnik funkcji, jak i częstotliwość wyrzucania elementów bezużytecznych. Błąd jest sporadyczne, jeśli czas między marshaling delegata i wynikający z tego wywołania zwrotnego jest krótki. Jest to zazwyczaj tak, jeśli metoda niezarządzanego odbieranie wskaźnik funkcji nie jest zapisywany wskaźnik funkcji do późniejszego użycia, ale zamiast tego ponownie wywołuje na wskaźnik funkcji, aby ukończyć jej działania przed zwróceniem. Podobnie więcej wyrzucania elementów bezużytecznych wystąpić, gdy system jest mocno obciążony, co pozwala na bardziej prawdopodobne, że wyrzucania elementów bezużytecznych nastąpi przed wywołania zwrotnego.  
+ Prawdopodobieństwo wystąpienia błędu zależy od czasu między kierowaniem delegata i wywołaniem zwrotnym na wskaźniku funkcji, a także częstotliwością wyrzucania elementów bezużytecznych. Awaria jest sporadyczna, jeśli czas między kierowaniem delegata i wynikający z wywołania zwrotnego jest krótki. Zwykle jest to przypadek, jeśli niezarządzana Metoda otrzymująca wskaźnik funkcji nie zapisuje wskaźnika funkcji do późniejszego użycia, ale zamiast tego ponownie wywołuje wskaźnik funkcji, aby zakończyć operację przed zwróceniem. Podobnie więcej wyrzucania elementów bezużytecznych występuje, gdy system jest mocno obciążony, co sprawia, że wyrzucanie elementów bezużytecznych zostanie przeprowadzone przed wywołaniem zwrotnym.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Gdy obiekt delegowany został przekazany się jak wskaźnik funkcji niezarządzanej, moduł odśmiecania pamięci nie można śledzić jego okres istnienia. Zamiast tego kod musi przechowywać odwołanie do obiektu delegowanego okres istnienia wskaźnika funkcji niezarządzanej. Jednak zanim to zrobić, należy najpierw zidentyfikować delegata, który został zebrany. Gdy zdarzenie MDA jest aktywowane, zawiera nazwę typu delegata. Należy użyć tej nazwy do wyszukiwania wywołania kodu platformy lub podpisy COM, które przekazać delegata do kodu niezarządzanego. Naruszającym delegata jest przekazywana jeden z nich wywołania. Można również włączyć `gcUnmanagedToManaged` MDA do wymuszenia wyrzucania elementów bezużytecznych przed każdym wywołania zwrotnego w czasie wykonywania. Spowoduje to usunięcie niepewności wprowadzone przez wyrzucanie elementów bezużytecznych poprzez zapewnienie, że zawsze wyrzucania elementów bezużytecznych występuje przed wywołania zwrotnego. Wiesz, jakie delegata został zebrany, zmień swój kod, aby zachować odwołanie do delegata stronie zarządzanej okres istnienia wskaźnika zorganizowanej niezarządzanej funkcji.  
+ Gdy delegat został zorganizowany jako wskaźnik funkcji niezarządzanej, Moduł wyrzucania elementów bezużytecznych nie może śledzić swojego okresu istnienia. Zamiast tego kod musi przechowywać odwołanie do delegata dla okresu istnienia wskaźnika funkcji niezarządzanej. Jednak przed wykonaniem tej czynności należy najpierw określić, który delegat został zebrany. Gdy zdarzenie MDA zostanie aktywowane, zawiera nazwę typu delegata. Użyj tej nazwy, aby przeszukać swój kod dla wywołania platformy lub sygnatur COM, które są przekazywane przez delegata do kodu niezarządzanego. Nieprawidłowy delegat jest przepuszczany przez jedną z tych lokacji wywołań. Można również włączyć funkcję MDA `gcUnmanagedToManaged` , aby wymusić wyrzucanie elementów bezużytecznych przed każdym wywołaniem zwrotnym do środowiska uruchomieniowego. Spowoduje to usunięcie niepewności wprowadzonej przez wyrzucanie elementów bezużytecznych przez zapewnienie, że wyrzucanie elementów bezużytecznych zawsze występuje przed wywołaniem zwrotnym. Po uzyskaniu informacji o tym, który delegat został zebrany, Zmień kod, aby zachować odwołanie do tego delegata po stronie zarządzanej na potrzeby okresu istnienia organizowanego wskaźnika funkcji niezarządzanej.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- Gdy obiekty delegowane są przekazywane jako wskaźniki funkcji, środowisko uruchomieniowe przydziela thunk, który wykonuje przejścia z niezarządzanych w zarządzanych. To wywołanie jest co kod niezarządzany wywołuje przed zarządzany obiekt delegowany na koniec jest wywoływany. Bez `callbackOnCollectedDelegate` MDA włączona, organizowanie kodu niezarządzanego jest usuwany po delegata są zbierane. Za pomocą `callbackOnCollectedDelegate` MDA włączona, niezarządzanych organizowanie kodu nie są natychmiast usuwane w przypadku delegata są zbierane. Zamiast tego ostatniego 1000 wystąpień są życiu domyślnie i zmienione w celu aktywowania MDA, gdy zostanie wywołana. Thunk został usunięty po pewnym czasie, gdy 1,001 bardziej zorganizowanej obiekty delegowane są zbierane.  
+ Gdy Delegaty są organizowane jako wskaźniki funkcji, środowisko uruchomieniowe przydziela element thunk, który powoduje, że przejście z niezarządzanego do zarządzanego. Thunk jest to, co faktycznie wywołuje kod niezarządzany, zanim zarządzany delegat jest ostatecznie wywoływany. Bez włączonego `callbackOnCollectedDelegate` MDA, niezarządzany kod kierujący jest usuwany podczas zbierania delegata. Po włączeniu trybu MDA niezarządzany kod kierujący nie jest natychmiast usuwany po zebraniu delegata. `callbackOnCollectedDelegate` Zamiast tego ostatnie wystąpienia 1 000 są utrzymywane domyślnie i zmieniane w celu aktywowania MDA po wywołaniu. Thunk jest ostatecznie usuwana po 1 001 większej liczby delegatów zorganizowanych.  
   
 ## <a name="output"></a>Dane wyjściowe  
- MDA raporty nazwę typu delegata, który został zebrany przed podjęto próbę wywołania zwrotnego na swojego wskaźnika funkcji niezarządzanej.  
+ Zdarzenie MDA raportuje nazwę typu delegata, który został zebrany przed podjęciem próby wywołania zwrotnego na niezarządzanym wskaźniku funkcji.  
   
 ## <a name="configuration"></a>Konfiguracja  
- Poniższy przykład przedstawia opcje konfiguracji aplikacji. Ustawia liczbę sekcje Thunk, który MDA utrzymuje aktywność do 1500. Wartość domyślna `listSize` wartość wynosi 1000, minimum to 50, a wartość maksymalna to 2000.  
+ W poniższym przykładzie przedstawiono opcje konfiguracji aplikacji. Ustawia liczbę sekcje thunk, że zdarzenie MDA utrzymuje aktywność do 1 500. Wartość domyślna `listSize` to 1 000, minimum to 50, a maksymalna to 2 000.  
   
 ```xml  
 <mdaConfig>  
@@ -59,7 +59,7 @@ ms.locfileid: "61875072"
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sytuację, która może aktywować to zdarzenie MDA:  
+ Poniższy przykład ilustruje sytuację, w której można aktywować to MDA:  
   
 ```cpp
 // Library.cpp : Defines the unmanaged entry point for the DLL application.  
@@ -114,6 +114,6 @@ public class Entry
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
-- [gcUnmanagedToManaged](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling międzyoperacyjny](../interop/interop-marshaling.md)
+- [gcUnmanagedToManaged](gcunmanagedtomanaged-mda.md)

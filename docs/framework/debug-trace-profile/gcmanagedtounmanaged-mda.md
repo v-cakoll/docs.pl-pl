@@ -14,30 +14,30 @@ helpviewer_keywords:
 ms.assetid: 7417f837-805e-4fed-a430-ca919c8421dc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7bb4779e300df71a5d075a322bcac8398ce42f34
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afc0fd47e51723a7b3ba1b07dffc49260f88917d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754443"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052784"
 ---
 # <a name="gcmanagedtounmanaged-mda"></a>gcManagedToUnmanaged MDA
-`gcManagedToUnmanaged` Zarządzanego Asystenta debugowania (MDA) powoduje wyrzucania elementów bezużytecznych, zawsze wtedy, gdy wątku przechodzi z kodu zarządzanego do kodu niezarządzanego.  
+Asystent `gcManagedToUnmanaged` debugowania zarządzanego (MDA) powoduje wyrzucanie elementów bezużytecznych za każdym razem, gdy wątek przechodzi z zarządzanego do niezarządzanego kodu.  
   
 ## <a name="symptoms"></a>Symptomy  
- Składnik użytkownika niezarządzanego zgłasza naruszenie zasad dostępu podczas próby użycia obiektu zarządzanego, który ma być narażone na model COM. Obiekt COM, prawdopodobnie zostały zwolnione. Naruszenie zasad dostępu jest niedeterministyczny.  
+ Niezarządzany składnik użytkownika zgłasza naruszenie zasad dostępu podczas próby użycia zarządzanego obiektu, który został ujawniony w modelu COM. Obiekt COM wydaje się być wystawiony. Naruszenie zasad dostępu jest niejednoznaczne.  
   
 ## <a name="cause"></a>Przyczyna  
- Jeśli niezarządzane składnika nie jest zliczanie zarządzanego obiektu COM poprawnie, środowisko uruchomieniowe można zebrać uwidaczniany w modelu COM, gdy składnik niezarządzanych nadal zawiera odwołanie do obiektu zarządzanego obiektu. Środowisko uruchomieniowe wywołuje <xref:System.Runtime.InteropServices.Marshal.Release%2A> podczas wyrzucania elementów bezużytecznych, więc jeśli użytkownik składnik używa obiektu, zanim wystąpi wyrzucania elementów bezużytecznych, następnie go będzie nie jeszcze zostać zebrane. To źródło nondeterminism.  
+ Jeśli składnik niezarządzany nie odwołuje się prawidłowo do prawidłowego zliczania zarządzanego obiektu COM, środowisko uruchomieniowe może zebrać obiekt zarządzany uwidoczniony do modelu COM, gdy składnik niezarządzany nadal utrzymuje odwołanie do obiektu. Środowisko uruchomieniowe <xref:System.Runtime.InteropServices.Marshal.Release%2A> wywołuje podczas odzyskiwania pamięci, więc jeśli składnik użytkownika używa obiektu przed wystąpieniem bezużyteczności, wówczas nie został jeszcze zebrany. To jest źródło nieustalenia.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Włączenie tego Asystenta skraca czas między po obiekcie kwalifikuje się do kolekcji i <xref:System.Runtime.InteropServices.Marshal.Release%2A> jest wywoływana, pomaga śledzić określają składnik niezarządzanych po raz pierwszy próbuje uzyskać dostępu do obiektu zebrane.  
+ Włączenie tego asystenta skraca czas od momentu, gdy obiekt kwalifikuje się <xref:System.Runtime.InteropServices.Marshal.Release%2A> do kolekcji i jest wywoływany, ułatwiając śledzenie, który składnik niezarządzany najpierw próbuje uzyskać dostęp do zebranego obiektu.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- Powoduje, że wyrzucania elementów bezużytecznych zawsze wtedy, gdy przejścia wątków, z kodu zarządzanego do kodu niezarządzanego.  
+ Powoduje wyrzucanie elementów bezużytecznych po każdym przejścia wątku z zarządzanego do niezarządzanego kodu.  
   
 ## <a name="output"></a>Dane wyjściowe  
- To zdarzenie MDA nie daje żadnych danych wyjściowych.  
+ To zdarzenie MDA nie generuje danych wyjściowych.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -52,6 +52,6 @@ ms.locfileid: "61754443"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
-- [gcUnmanagedToManaged](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling międzyoperacyjny](../interop/interop-marshaling.md)
+- [gcUnmanagedToManaged](gcunmanagedtomanaged-mda.md)

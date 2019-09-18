@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc8395492992c22da3c635f0de010516127f9be4
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 656b82daffc62824ed663ea7080bd6d20cd0dadc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "61793006"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045819"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Określanie w pełni kwalifikowanych nazw typów
 
@@ -149,7 +149,7 @@ Minimalnymi informacjami wymaganymi w specyfikacji nazwy zestawu jest nazwa teks
 |**PublicKey**|Pełny klucz publiczny|Wartość ciągu pełnego klucza publicznego w formacie szesnastkowym. Określ odwołanie o wartości null (**Nothing** w Visual Basic), aby jawnie wskazać prywatny zestaw.|
 |**PublicKeyToken**|Token klucza publicznego (skrót 8-bajtowy pełnego klucza publicznego)|Wartość ciągu tokenu klucza publicznego w formacie szesnastkowym. Określ odwołanie o wartości null (**Nothing** w Visual Basic), aby jawnie wskazać prywatny zestaw.|
 |**Dziedzinie**|Kultura zestawu|Kultura zestawu w formacie RFC-1766 lub "neutralna" dla zestawów niezależnych od języka (niesatelity).|
-|**Custom**|Niestandardowy duży obiekt binarny (BLOB). Jest to obecnie używane tylko w zestawach wygenerowanych przez [Generator obrazu natywnego (Ngen)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).|Niestandardowy ciąg używany przez Narzędzie Generator obrazu macierzystego do powiadamiania pamięci podręcznej zestawów, że instalowany zestaw jest obrazem natywnym i dlatego jest instalowany w pamięci podręcznej obrazów natywnych. Nazywana również ciągiem zap.|
+|**Custom**|Niestandardowy duży obiekt binarny (BLOB). Jest to obecnie używane tylko w zestawach wygenerowanych przez [Generator obrazu natywnego (Ngen)](../tools/ngen-exe-native-image-generator.md).|Niestandardowy ciąg używany przez Narzędzie Generator obrazu macierzystego do powiadamiania pamięci podręcznej zestawów, że instalowany zestaw jest obrazem natywnym i dlatego jest instalowany w pamięci podręcznej obrazów natywnych. Nazywana również ciągiem zap.|
 
 W poniższym przykładzie pokazano element **AssemblyName** dla jednoplikowego zestawu z domyślną kulturą.
 
@@ -224,4 +224,4 @@ Dla **ModuleBuilder. GetType** `MyArray[0..5]` wskazuje tablicę jednowymiarową
 - <xref:System.Type.FullName%2A?displayProperty=nameWithType>
 - <xref:System.Type.GetType%2A?displayProperty=nameWithType>
 - <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>
-- [Wyświetlanie informacji o typie](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Wyświetlanie informacji o typie](viewing-type-information.md)

@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ea5db2ba1060479f55bbd7f67266d36085a2535f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a67bd2c0daa8acc81113a1e38ea463753ae34077
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754378"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052731"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>Instrukcje: Tworzenie i inicjowanie obiektów nasłuchujących śledzenia
 
-<xref:System.Diagnostics.Debug?displayProperty=nameWithType> i <xref:System.Diagnostics.Trace?displayProperty=nameWithType> klasy wysyłania komunikatów do obiektów o nazwie obiektów nasłuchujących odbierać i przetwarzać te komunikaty. Jedno takie odbiornik <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, jest automatycznie tworzone i inicjowana, gdy włączone jest śledzenie lub debugowania. Jeśli chcesz <xref:System.Diagnostics.Trace> lub <xref:System.Diagnostics.Debug> dane wyjściowe były kierowane do żadnych dodatkowych źródeł, należy utworzyć i zainicjować odbiorniki śledzenia dodatkowe.
+Klasy <xref:System.Diagnostics.Debug?displayProperty=nameWithType> i<xref:System.Diagnostics.Trace?displayProperty=nameWithType> wysyłają komunikaty do obiektów o nazwie detektory, które odbierają i przetwarzają te komunikaty. Jeden taki odbiornik <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>jest automatycznie tworzony i inicjowany po włączeniu śledzenia lub debugowania. Jeśli chcesz <xref:System.Diagnostics.Trace> <xref:System.Diagnostics.Debug> , aby dane wyjściowe były kierowane do wszelkich dodatkowych źródeł, należy utworzyć i zainicjować dodatkowe detektory śledzenia.
 
-Odbiorniki, tworzonych powinny odzwierciedlać potrzeb aplikacji. Na przykład rekord tekstu z wszystkich danych wyjściowych śledzenia, utworzyć <xref:System.Diagnostics.TextWriterTraceListener> odbiornika, który zapisuje wszystkie dane wyjściowe w nowy plik tekstowy, gdy jest włączone. Z drugiej strony, jeśli chcesz wyświetlić dane wyjściowe tylko podczas wykonywania aplikacji, należy utworzyć <xref:System.Diagnostics.ConsoleTraceListener> odbiornika, który określa, że wszystkie dane wyjściowe do okna konsoli. <xref:System.Diagnostics.EventLogTraceListener> Można skierować dane wyjściowe śledzenia do dziennika zdarzeń. Aby uzyskać więcej informacji, zobacz [detektorów śledzenia](../../../docs/framework/debug-trace-profile/trace-listeners.md).
+Utworzone odbiorniki powinny odzwierciedlać potrzeby aplikacji. Na przykład, jeśli chcesz, aby rekord tekstowy wszystkich danych wyjściowych śledzenia, Utwórz <xref:System.Diagnostics.TextWriterTraceListener> odbiornik, który zapisuje wszystkie dane wyjściowe w nowym pliku tekstowym, gdy jest włączony. Z drugiej strony, jeśli chcesz wyświetlić dane wyjściowe tylko podczas wykonywania aplikacji, Utwórz <xref:System.Diagnostics.ConsoleTraceListener> odbiornik, który kieruje wszystkie dane wyjściowe do okna konsoli. <xref:System.Diagnostics.EventLogTraceListener> Może kierować dane wyjściowe śledzenia do dziennika zdarzeń. Aby uzyskać więcej informacji, zobacz [detektory śledzenia](trace-listeners.md).
 
-Możesz utworzyć śledzenia słuchaczy w [pliku konfiguracji aplikacji](../../../docs/framework/configure-apps/index.md) lub w kodzie. Firma Microsoft zaleca korzystanie z plików konfiguracji aplikacji, ponieważ umożliwiają dodawanie, modyfikowanie lub usuwanie obiektów nasłuchujących śledzenia bez konieczności zmian w kodzie.
+Można utworzyć detektory śledzenia w [pliku konfiguracyjnym aplikacji](../configure-apps/index.md) lub w kodzie. Zalecamy korzystanie z plików konfiguracji aplikacji, ponieważ umożliwiają one Dodawanie, modyfikowanie lub usuwanie detektorów śledzenia bez konieczności zmiany kodu.
 
-### <a name="to-create-and-use-a-trace-listener-by-using-a-configuration-file"></a>Tworzenie i używanie odbiornika śledzenia przy użyciu pliku konfiguracji
+### <a name="to-create-and-use-a-trace-listener-by-using-a-configuration-file"></a>Aby utworzyć odbiornik śledzenia i używać go przy użyciu pliku konfiguracji
 
-1. Zadeklaruj detektor śledzenia w pliku konfiguracyjnym aplikacji. Jeśli odbiornik, który tworzysz wymaga wszystkimi innymi obiektami, je zadeklarować także. Poniższy przykład pokazuje, jak utworzyć odbiornik o nazwie `myListener` zapisuje plik tekstowy `TextWriterOutput.log`.
+1. Zadeklaruj odbiornik śledzenia w pliku konfiguracyjnym aplikacji. Jeśli tworzony odbiornik wymaga innych obiektów, należy je także zadeklarować. Poniższy przykład pokazuje, jak utworzyć odbiornik o nazwie `myListener` zapis w pliku `TextWriterOutput.log`tekstowym.
 
     ```xml
     <configuration>
@@ -45,7 +45,7 @@ Możesz utworzyć śledzenia słuchaczy w [pliku konfiguracji aplikacji](../../.
     </configuration>
     ```
 
-2. Użyj <xref:System.Diagnostics.Trace> klasy w kodzie, aby zapisać komunikat do odbiorników śledzenia.
+2. <xref:System.Diagnostics.Trace> Użyj klasy w kodzie, aby napisać komunikat do detektorów śledzenia.
 
     ```vb
     Trace.TraceInformation("Test message.")
@@ -61,7 +61,7 @@ Możesz utworzyć śledzenia słuchaczy w [pliku konfiguracji aplikacji](../../.
 
 ### <a name="to-create-and-use-a-trace-listener-in-code"></a>Tworzenie i używanie odbiornika śledzenia w kodzie
 
-- Dodawanie odbiornika śledzenia do <xref:System.Diagnostics.Trace.Listeners%2A> kolekcji i wysłać informacje, do odbiorników śledzenia.
+- Dodaj odbiornik śledzenia do <xref:System.Diagnostics.Trace.Listeners%2A> kolekcji i Wyślij do odbiorników informacje o śledzeniu.
 
     ```vb
     Trace.Listeners.Add(New TextWriterTraceListener("TextWriterOutput.log", "myListener"))
@@ -79,7 +79,7 @@ Możesz utworzyć śledzenia słuchaczy w [pliku konfiguracji aplikacji](../../.
 
     \- lub —
 
-- Jeśli nie chcesz otrzymywać dane wyjściowe śledzenia z odbiornikiem, nie należy dodawać go do <xref:System.Diagnostics.Trace.Listeners%2A> kolekcji. Może emitować dane wyjściowe za pośrednictwem niezależne od odbiornika <xref:System.Diagnostics.Trace.Listeners%2A> kolekcji przez wywołanie metody własnych odbiornika danych wyjściowych metody. Poniższy przykład pokazuje, jak zapisywać odbiornik, który nie znajduje się w linię <xref:System.Diagnostics.Trace.Listeners%2A> kolekcji.
+- Jeśli nie chcesz, aby odbiornik odbierał dane wyjściowe śledzenia, nie dodawaj go do <xref:System.Diagnostics.Trace.Listeners%2A> kolekcji. Można emitować dane wyjściowe przez odbiornik niezależny <xref:System.Diagnostics.Trace.Listeners%2A> od kolekcji, wywołując własne metody wyjściowe odbiornika. Poniższy przykład pokazuje, jak napisać wiersz do odbiornika, który nie znajduje się w <xref:System.Diagnostics.Trace.Listeners%2A> kolekcji.
 
     ```vb
     Dim myListener As New TextWriterTraceListener("TextWriterOutput.log", "myListener")
@@ -97,7 +97,7 @@ Możesz utworzyć śledzenia słuchaczy w [pliku konfiguracji aplikacji](../../.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Obiekty nasłuchujące śledzenie](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [Przełączniki śledzenia](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Instrukcje: Dodawanie instrukcji śledzenia do kodu aplikacji](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Śledzenie i instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Obiekty nasłuchujące śledzenie](trace-listeners.md)
+- [Przełączniki śledzenia](trace-switches.md)
+- [Instrukcje: Dodawanie instrukcji śledzenia do kodu aplikacji](how-to-add-trace-statements-to-application-code.md)
+- [Śledzenie i instrumentacja aplikacji](tracing-and-instrumenting-applications.md)

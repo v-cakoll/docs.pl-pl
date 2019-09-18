@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec97861a9d748767199da3e1fb7f53361c3a48ee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 867157b329218b79c8cc1255b2158bbe83666531
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966122"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045369"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Wytyczne dotyczące bezpiecznego programowania dla niezarządzanego kodu
 Kod biblioteki musi być wywoływany w kodzie niezarządzanym (na przykład interfejsy API kodu natywnego, takie jak Win32). Ponieważ oznacza to przechodzenie poza obwód zabezpieczeń dla kodu zarządzanego, wymagane jest zachowanie ostrożności. Jeśli kod jest neutralny pod względem zabezpieczeń, zarówno kod, jak i kod, który wywołuje ten element musi mieć uprawnienia<xref:System.Security.Permissions.SecurityPermission> <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> do kodu niezarządzanego (z określoną flagą).  
   
- Jednak często jest to nieuzasadnione, aby obiekt wywołujący miał takie zaawansowane uprawnienia. W takich przypadkach zaufany kod może być przechodzeniem między elementami, podobnymi do zarządzanej otoki lub kodu biblioteki opisanym w artykule [Zabezpieczanie kodu otoki](../../../docs/framework/misc/securing-wrapper-code.md). Jeśli podstawowa funkcja kodu niezarządzanego jest całkowicie bezpieczna, można ją bezpośrednio uwidocznić; w przeciwnym razie najpierw wymagane jest odpowiednie sprawdzenie uprawnień (żądanie).  
+ Jednak często jest to nieuzasadnione, aby obiekt wywołujący miał takie zaawansowane uprawnienia. W takich przypadkach zaufany kod może być przechodzeniem między elementami, podobnymi do zarządzanej otoki lub kodu biblioteki opisanym w artykule [Zabezpieczanie kodu otoki](../misc/securing-wrapper-code.md). Jeśli podstawowa funkcja kodu niezarządzanego jest całkowicie bezpieczna, można ją bezpośrednio uwidocznić; w przeciwnym razie najpierw wymagane jest odpowiednie sprawdzenie uprawnień (żądanie).  
   
  Gdy kod wywołuje się w niezarządzanym kodzie, ale nie chcesz wymagać od wywołujących uprawnień dostępu do niezarządzanego kodu, musisz pomusić to prawo. Potwierdzenie blokuje stos w ramce. Należy zachować ostrożność, aby w tym procesie nie utworzyć otworu zabezpieczeń. Zazwyczaj oznacza to, że należy zażądać odpowiednich uprawnień dla obiektów wywołujących, a następnie użyć kodu niezarządzanego do wykonania tylko tego, co zezwala na to uprawnienie i nie tylko. W niektórych przypadkach (na przykład funkcja Get of Day) kod niezarządzany może być bezpośrednio narażony na wywołujących bez żadnych kontroli zabezpieczeń. W każdym przypadku każdy kod, który potwierdza, musi być odpowiedzialny za zabezpieczenia.  
   

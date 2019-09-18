@@ -3,17 +3,17 @@ title: Program WIF i farmy serwerów internetowych
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 09d5f3f745f170439a7fbf160b78439c103623b9
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 32d2875ebe0a46b9f9b1856ed70a30114793e492
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851525"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045255"
 ---
 # <a name="wif-and-web-farms"></a>Program WIF i farmy serwerów internetowych
 W przypadku korzystania z programu Windows Identity Foundation (WIF) w celu zabezpieczenia zasobów jednostki uzależnionej (RP) wdrożonej w kolektywie serwerów sieci Web należy wykonać określone kroki, aby upewnić się, że WIF może przetwarzać tokeny z wystąpień aplikacji RP uruchomionej w różnych Komputery w farmie. Przetwarzanie obejmuje sprawdzanie poprawności sygnatur tokenów sesji, szyfrowanie i odszyfrowywanie tokenów sesji, buforowanie tokenów sesji oraz Wykrywanie powtarzających się tokenów zabezpieczających.  
   
- W typowym przypadku, gdy WIF jest używany do zabezpieczania zasobów aplikacji RP — czy jednostka UZALEŻNIONa jest uruchomiona na pojedynczym komputerze lub w kolektywie serwerów sieci Web — sesja jest ustanawiana z klientem na podstawie tokenu zabezpieczającego uzyskanego z usługi tokenu zabezpieczającego (STS). Ma to na celu uniknięcie wymuszenia uwierzytelniania klienta w usłudze STS dla każdego zasobu aplikacji, który jest zabezpieczony za pomocą WIF. Aby uzyskać więcej informacji o tym, jak WIF obsługuje sesje, zobacz [Zarządzanie sesją WIF](../../../docs/framework/security/wif-session-management.md).  
+ W typowym przypadku, gdy WIF jest używany do zabezpieczania zasobów aplikacji RP — czy jednostka UZALEŻNIONa jest uruchomiona na pojedynczym komputerze lub w kolektywie serwerów sieci Web — sesja jest ustanawiana z klientem na podstawie tokenu zabezpieczającego uzyskanego z usługi tokenu zabezpieczającego (STS). Ma to na celu uniknięcie wymuszenia uwierzytelniania klienta w usłudze STS dla każdego zasobu aplikacji, który jest zabezpieczony za pomocą WIF. Aby uzyskać więcej informacji o tym, jak WIF obsługuje sesje, zobacz [Zarządzanie sesją WIF](wif-session-management.md).  
   
  Gdy są używane ustawienia domyślne, WIF wykonuje następujące czynności:  
   
@@ -40,7 +40,7 @@ W przypadku korzystania z programu Windows Identity Foundation (WIF) w celu zabe
     </securityTokenHandlers>  
     ```  
   
-- Pochodzą z <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> i Implementuj rozproszone buforowanie, czyli pamięć podręczną, która jest dostępna ze wszystkich komputerów w farmie, w której może zostać uruchomiony system RP. Skonfiguruj składnik RP, aby używał rozproszonej pamięci podręcznej przez określenie [ \<elementu sessionSecurityTokenCache >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) w pliku konfiguracji. Można zastąpić <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> metodę w klasie pochodnej, aby zaimplementować elementy podrzędne elementu, `<sessionSecurityTokenCache>` jeśli są wymagane.  
+- Pochodzą z <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> i Implementuj rozproszone buforowanie, czyli pamięć podręczną, która jest dostępna ze wszystkich komputerów w farmie, w której może zostać uruchomiony system RP. Skonfiguruj składnik RP, aby używał rozproszonej pamięci podręcznej przez określenie [ \<elementu sessionSecurityTokenCache >](../configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) w pliku konfiguracji. Można zastąpić <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> metodę w klasie pochodnej, aby zaimplementować elementy podrzędne elementu, `<sessionSecurityTokenCache>` jeśli są wymagane.  
   
     ```xml  
     <caches>  
@@ -52,7 +52,7 @@ W przypadku korzystania z programu Windows Identity Foundation (WIF) w celu zabe
   
      Jednym ze sposobów implementacji rozproszonej pamięci podręcznej jest zapewnienie frontonu programu WCF dla niestandardową pamięć podręczną. Aby uzyskać więcej informacji na temat implementowania usługi buforowania WCF, zobacz [Usługa buforowania WCF](#BKMK_TheWCFCachingService). Aby uzyskać więcej informacji na temat implementowania klienta WCF, który może być używany przez aplikację RP do wywoływania usługi buforowania, zobacz [klienta buforowania WCF](#BKMK_TheWCFClient).  
   
-- Jeśli aplikacja wykryje ponownie uruchomione tokeny, należy przestrzegać podobnej strategii rozproszonej pamięci podręcznej dla buforu powtarzania tokenów, pobierając z <xref:System.IdentityModel.Tokens.TokenReplayCache> i wskazując usługę buforowania powtarzania tokenów [ \<w tokenReplayCache >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) element konfiguracji.  
+- Jeśli aplikacja wykryje ponownie uruchomione tokeny, należy przestrzegać podobnej strategii rozproszonej pamięci podręcznej dla buforu powtarzania tokenów, pobierając z <xref:System.IdentityModel.Tokens.TokenReplayCache> i wskazując usługę buforowania powtarzania tokenów [ \<w tokenReplayCache >](../configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) element konfiguracji.  
   
 > [!IMPORTANT]
 > Wszystkie przykładowe XML i kod w tym temacie są pobierane z przykładu [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408) .  
@@ -137,7 +137,7 @@ namespace WcfSessionSecurityTokenCacheService
   
 <a name="BKMK_TheWCFClient"></a>   
 ## <a name="the-wcf-caching-client"></a>Klient buforowania WCF  
- W tej sekcji przedstawiono implementację klasy, która pochodzi od <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> i która deleguje wywołania do usługi buforowania. Aplikację RP można skonfigurować tak, aby używała tej klasy za pomocą [ \<elementu sessionSecurityTokenCache >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) , jak w poniższym kodzie XML  
+ W tej sekcji przedstawiono implementację klasy, która pochodzi od <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> i która deleguje wywołania do usługi buforowania. Aplikację RP można skonfigurować tak, aby używała tej klasy za pomocą [ \<elementu sessionSecurityTokenCache >](../configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) , jak w poniższym kodzie XML  
   
 ```xml  
 <caches>  
@@ -255,4 +255,4 @@ namespace CacheLibrary
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>
 - <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>
-- [Zarządzanie sesjami programu WIF](../../../docs/framework/security/wif-session-management.md)
+- [Zarządzanie sesjami programu WIF](wif-session-management.md)

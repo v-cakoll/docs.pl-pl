@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3134477198f0cd4c821bea456450e98cc73c6ad2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0ae92232b1d50d1381b6873e21a4c185db6efd25
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957471"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051649"
 ---
 # <a name="registration-free-com-interop"></a>Współdziałanie z modelem COM bez rejestrowania
 Niezależna od rejestracji międzyoperacyjność modelu COM aktywuje składnik bez używania rejestru systemu Windows do przechowywania informacji o zestawie. Zamiast rejestrować składnik na komputerze podczas wdrażania, można tworzyć pliki manifestu w stylu Win32 w czasie projektowania, które zawierają informacje o powiązaniu i aktywacji. Te pliki manifestu, a nie klucze rejestru, kierują aktywację obiektu.  
@@ -56,4 +56,4 @@ Niezależna od rejestracji międzyoperacyjność modelu COM aktywuje składnik b
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Konfigurowanie składników COM opartych na .NET Framework na potrzeby aktywacji bez rejestracji](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)
+- [Instrukcje: Konfigurowanie składników COM opartych na .NET Framework na potrzeby aktywacji bez rejestracji](configure-net-framework-based-com-components-for-reg.md)

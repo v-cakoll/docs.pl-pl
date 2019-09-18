@@ -13,42 +13,42 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4c56712460d772426a2d8d6d328cba9bb03373d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: deae99f5bdc7c187997d4bad4957b2fcdccdc166
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648661"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051727"
 ---
 # <a name="identifying-functions-in-dlls"></a>Identyfikowanie funkcji w bibliotekach DLL
 Tożsamość funkcji DLL składa się z następujących elementów:  
   
-- Nazwa funkcji lub liczbę porządkową  
+- Nazwa funkcji lub liczba porządkowa  
   
-- Nazwa pliku DLL, w którym można znaleźć implementacji  
+- Nazwa pliku DLL, w którym można znaleźć implementację  
   
- Na przykład określenie **MessageBox** funkcji w bibliotece User32.dll identyfikuje funkcję (**MessageBox**) i jego lokalizacji (User32.dll, User32 lub user32). Interfejs (Windows API) programu Microsoft Windows może zawierać dwie wersje każdej funkcji, który obsługuje znaków i ciągów: 1-bajtowych wartości znakowych wersji ANSI i wersji 2-bajtowych wartości znakowych Unicode. Jeśli nie zostanie podany, zestaw znaków, reprezentowane przez <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> pola i wartość domyślna to ANSI. Niektóre funkcje mogą mieć więcej niż dwie wersje.  
+ Na przykład określenie funkcji **MessageBox** w User32. dll identyfikuje funkcję (**MessageBox**) i jej lokalizację (User32. dll, User32 lub User32). Interfejs programowania aplikacji systemu Microsoft Windows (Windows API) może zawierać dwie wersje każdej funkcji, która obsługuje znaki i ciągi: 1-bajtowego znaku ANSI i 2-bajtowego znaku Unicode. Gdy nie zostanie określony, zestaw znaków reprezentowany przez <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> pole jest wartością domyślną ANSI. Niektóre funkcje mogą mieć więcej niż dwie wersje.  
   
- **MessageBoxA** jest punktem wejścia ANSI dla **MessageBox** funkcji; **MessageBoxW** jest wersją Unicode. Możesz wyświetlić listę nazw funkcji dla określonej biblioteki DLL, takie jak user32.dll, uruchamiając szeroką gamą narzędzi wiersza polecenia. Na przykład, można użyć `dumpbin /exports user32.dll` lub `link /dump /exports user32.dll` można uzyskać nazwy funkcji.  
+ **MessageBox** jest punktem wejścia ANSI dla funkcji **MessageBox** ; **MessageBoxW** to wersja Unicode. Nazwy funkcji dla określonej biblioteki DLL, takiej jak User32. dll, można wyświetlić, uruchamiając różne narzędzia wiersza polecenia. Na przykład można użyć `dumpbin /exports user32.dll` lub `link /dump /exports user32.dll` , aby uzyskać nazwy funkcji.  
   
- Możesz zmienić nazwę funkcji niezarządzanej, wedle uznania w kodzie tak długo, jak mapować Nowa nazwa do oryginalnego punktu wejścia w DLL. Aby uzyskać instrukcje dotyczące zmiany nazwy niezarządzanych funkcji DLL w zarządzanym kodzie źródłowym, zobacz [Określanie punktu wejścia](../../../docs/framework/interop/specifying-an-entry-point.md).  
+ Można zmienić nazwę funkcji niezarządzanej na dowolnie w kodzie, tak długo, jak mapowanie nowej nazwy do oryginalnego punktu wejścia w bibliotece DLL. Aby uzyskać instrukcje dotyczące zmiany nazwy niezarządzanej funkcji DLL w zarządzanym kodzie źródłowym, zobacz [Określanie punktu wejścia](specifying-an-entry-point.md).  
   
- Umożliwia wywołania platformy do kontrolowania znaczna część systemu operacyjnego przez wywołanie funkcji interfejsu Windows API i inne biblioteki dll. Oprócz interfejsu API Windows istnieje wiele innych interfejsów API i wywołania biblioteki dll, dostępne za pośrednictwem platformy.  
+ Wywołanie platformy umożliwia sterowanie znaczną częścią systemu operacyjnego przez wywoływanie funkcji w interfejsie API systemu Windows i innych bibliotekach DLL. Oprócz interfejsu API systemu Windows istnieje wiele innych interfejsów API i bibliotek DLL dostępnych dla użytkownika za pomocą wywołania platformy.  
   
- W poniższej tabeli opisano kilka często używanych bibliotek DLL w interfejsie API Windows.  
+ W poniższej tabeli opisano kilka często używanych bibliotek DLL w interfejsie API systemu Windows.  
   
 |DLL|Opis zawartości|  
 |---------|-----------------------------|  
-|GDI32.dll|Grafika funkcje interfejs urządzenia (GDI) dla urządzenia, dane wyjściowe, takie jak te dla zarządzania związane z rysowaniem i czcionki.|  
-|Kernel32.dll|Funkcje niskiego poziomu systemu operacyjnego, zarządzanie pamięcią i obsługi zasobów.|  
-|User32.dll|Funkcje zarządzania Windows do obsługi komunikatów, czasomierze, menu i komunikacji.|  
+|GDI32.dll|Funkcje GDI (GDI) dla danych wyjściowych urządzenia, takie jak te na potrzeby rysowania i zarządzania czcionkami.|  
+|Kernel32.dll|Funkcje systemu operacyjnego niskiego poziomu dla zarządzania pamięcią i obsługi zasobów.|  
+|User32.dll|Funkcje zarządzania systemu Windows do obsługi komunikatów, czasomierzy, menu i komunikacji.|  
   
- Aby uzyskać pełną dokumentację interfejsu API Windows zobacz zestaw SDK platformy. Aby uzyskać przykłady pokazujące, jak utworzyć. Na podstawie NET deklaracje do użycia z platformą wywołania, zobacz [Marshaling danych za pomocą wywołania platformy](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+ Aby uzyskać pełną dokumentację dotyczącą interfejsu API systemu Windows, zobacz zestaw SDK platformy. Przykłady, które demonstrują sposób konstruowania. Deklaracje oparte na sieci, które mają być używane z wywołaniem platformy, można znaleźć w temacie [kierowanie danych za pomocą wywołania platformy](marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wykorzystywanie niezarządzanych funkcji DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
-- [Określanie punktu wejścia](../../../docs/framework/interop/specifying-an-entry-point.md)
-- [Tworzenie klasy utrzymującej funkcje DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)
-- [Tworzenie prototypów w kodzie zarządzanym](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [Wywołanie funkcji DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+- [Wykorzystywanie niezarządzanych funkcji DLL](consuming-unmanaged-dll-functions.md)
+- [Określanie punktu wejścia](specifying-an-entry-point.md)
+- [Tworzenie klasy utrzymującej funkcje DLL](creating-a-class-to-hold-dll-functions.md)
+- [Tworzenie prototypów w kodzie zarządzanym](creating-prototypes-in-managed-code.md)
+- [Wywołanie funkcji DLL](calling-a-dll-function.md)

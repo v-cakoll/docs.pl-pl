@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e658b2c86eecdbc45a9adde8d28cfb890dd591b9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5417f330040c2b6ce08a53920f9a92117624a80
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956661"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045773"
 ---
 # <a name="viewing-type-information"></a>Wyświetlanie informacji o typie
 <xref:System.Type?displayProperty=nameWithType> Klasa jest centralną odbiciem. Środowisko uruchomieniowe języka wspólnego tworzy **Typ** załadowanego typu podczas odbicia żądania. Możesz użyć metod, pól, właściwości i klas zagnieżdżonych obiektu **typu** , aby dowiedzieć się wszystkiego o tym typie.  
@@ -26,7 +26,7 @@ ms.locfileid: "69956661"
  Użyj <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> lub<xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> , aby uzyskać obiekty **typu** z zestawów, które nie zostały załadowane, przekazując nazwę żądanego typu lub typów. Służy <xref:System.Type.GetType%2A?displayProperty=nameWithType> do pobierania obiektów **typu** z zestawu, który jest już załadowany. Użyj <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> i <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType> , aby uzyskać obiekty **typu** modułu.  
   
 > [!NOTE]
-> Jeśli chcesz sprawdzić typy ogólne i metody i manipulować nimi, zapoznaj się z dodatkowymi informacjami podanymi w obszarze odbicie [ [i typy ogólne](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md) oraz jak: Sprawdzanie i Tworzenie wystąpień typów ogólnych za](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)pomocą odbicia.  
+> Jeśli chcesz sprawdzić typy ogólne i metody i manipulować nimi, zapoznaj się z dodatkowymi informacjami podanymi w obszarze [odbicie i typy ogólne](reflection-and-generic-types.md) oraz [jak: Sprawdzanie i Tworzenie wystąpień typów ogólnych za](how-to-examine-and-instantiate-generic-types-with-reflection.md)pomocą odbicia.  
   
  Poniższy przykład pokazuje składnię niezbędną do pobrania <xref:System.Reflection.Assembly> obiektu i modułu dla zestawu.  
   
@@ -90,4 +90,4 @@ ms.locfileid: "69956661"
 - <xref:System.Reflection.FieldInfo>
 - <xref:System.Reflection.EventInfo>
 - <xref:System.Reflection.ParameterInfo>
-- [Odbicie i typy ogólne](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
+- [Odbicie i typy ogólne](reflection-and-generic-types.md)

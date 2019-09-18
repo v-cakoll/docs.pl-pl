@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c52c9bf37e67e4d26867d2b3754945e86e2bf609
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 787c6221b651a53dbb932a5a9d0edea123e1d97d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422423"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046435"
 ---
 # <a name="interop-etw-events"></a>Zdarzenia ETW międzyoperacyjności
-<a name="top"></a> Zdarzenia międzyoperacyjności przechwytywania informacji na temat generowania szkieletu intermediate language (MSIL) firmy Microsoft i buforowania.  
+<a name="top"></a>Zdarzenia międzyoperacyjności przechwytują informacje o generacji i buforowaniu klasy języka pośredniego firmy Microsoft (MSIL).  
   
  Ta kategoria obejmuje następujące zdarzenia:  
   
@@ -25,64 +25,64 @@ ms.locfileid: "67422423"
   
 <a name="ilstubgenerated_event"></a>   
 ## <a name="ilstubgenerated-event"></a>Zdarzenie ILStubGenerated  
- W poniższej tabeli przedstawiono — słowo kluczowe i poziomu. (Aby uzyskać więcej informacji, zobacz [słowa kluczowe CLR ETW i poziomy](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ W poniższej tabeli przedstawiono słowo kluczowe i poziom. (Aby uzyskać więcej informacji, zobacz [słowa kluczowe i poziomy ETW CLR](clr-etw-keywords-and-levels.md)).  
   
-|Słowo kluczowe dla podnoszonego zdarzenia|Poziom|  
+|Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`InteropKeyword` (0x2000)|Informational(4)|  
+|`InteropKeyword` (0x2000)|Informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Wywołane, gdy|  
+|Zdarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
 |-----------|--------------|-----------------|  
-|`ILStubGenerated`|88|Klasy zastępczej MSIL został wygenerowany.|  
+|`ILStubGenerated`|88|Wygenerowało procedurę pośredniczącą MSIL.|  
   
  W poniższej tabeli przedstawiono dane zdarzenia.  
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|ModuleID|win: UInt16.|Identyfikator modułu.|  
-|StubMethodID|win:UInt64|Identyfikator metody klasy zastępczej.|  
-|StubFlags|win:UInt64|Flagi dla wycinka:<br /><br /> 0x1 — interop wstecznego.<br /><br /> 0x2 — Usługa międzyoperacyjna modelu COM.<br /><br /> 0x4 - wycinku wygenerowanym przez NGen.exe.<br /><br /> 0x8 - delegata.<br /><br /> 0x10 - zmiennych argumentów.<br /><br /> 0x20 — niezarządzane / / wywoływany.|  
-|ManagedInteropMethodToken|win: UInt32.|Token dla zarządzanej metody międzyoperacyjnego.|  
-|ManagedInteropMethodNameSpace|win:UnicodeString|Przestrzeń nazw zarządzanych metoda międzyoperacyjna.|  
-|ManagedInteropMethodName|win:UnicodeString|Nazwa zarządzaną metodą międzyoperacyjnego.|  
-|ManagedInteropMethodSignature|win:UnicodeString|Podpis zarządzaną metodą międzyoperacyjnego.|  
-|NativeMethodSignature|win:UnicodeString|Podpis metody natywnej.|  
-|StubMethodSignature|win:UnicodeString|Podpis metody klasy zastępczej.|  
-|StubMethodILCode|win:UnicodeString|Kod MSIL metody klasy zastępczej.|  
-|ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|ModuleID|win: UInt16|Identyfikator modułu.|  
+|StubMethodID|win: UInt64|Identyfikator metody zastępczej.|  
+|StubFlags|win: UInt64|Flagi dla elementu zastępczego:<br /><br /> 0x1 — odwrotna współdziałanie.<br /><br /> 0x2 — międzyoperacyjność COM.<br /><br /> 0x4-stub wygenerowane przez program NGen. exe.<br /><br /> 0x8 — delegat.<br /><br /> 0x10 — argument zmiennej.<br /><br /> 0x20 — niezarządzany wywoływany.|  
+|ManagedInteropMethodToken|win: UInt32|Token dla zarządzanej metody międzyoperacyjnego.|  
+|ManagedInteropMethodNameSpace|win: UnicodeString|Przestrzeń nazw zarządzanej metody międzyoperacyjnego.|  
+|ManagedInteropMethodName|win: UnicodeString|Nazwa zarządzanej metody międzyoperacyjnego.|  
+|ManagedInteropMethodSignature|win: UnicodeString|Sygnatura zarządzanej metody międzyoperacyjnego.|  
+|NativeMethodSignature|win: UnicodeString|Podpis metody natywnej.|  
+|StubMethodSignature|win: UnicodeString|Sygnatura metody zastępczej.|  
+|StubMethodILCode|win: UnicodeString|Kod MSIL dla metody zastępczej.|  
+|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
  [Powrót do początku](#top)  
   
 <a name="ilstubcachehit_event"></a>   
 ## <a name="ilstubcachehit-event"></a>ILStubCacheHit Event  
- W poniższej tabeli przedstawiono — słowo kluczowe i poziomu.  
+ W poniższej tabeli przedstawiono słowo kluczowe i poziom.  
   
-|Słowo kluczowe dla podnoszonego zdarzenia|Poziom|  
+|Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`InteropKeyword` (0x2000)|Informational(4)|  
+|`InteropKeyword` (0x2000)|Informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Wywołane, gdy|  
+|Zdarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
 |-----------|--------------|-----------------|  
-|`ILStubCacheHit`|89|Uzyskał dostęp do pamięci podręcznej MSIL.|  
+|`ILStubCacheHit`|89|Dostęp do pamięci podręcznej MSIL został uzyskany.|  
   
  W poniższej tabeli przedstawiono dane zdarzenia.  
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|ModuleID|win: UInt16.|Identyfikator modułu.|  
-|StubMethodID|win:UInt64|Identyfikator metody klasy zastępczej.|  
-|ManagedInteropMethodToken|win: UInt32.|Token dla zarządzanej metody międzyoperacyjnego.|  
-|ManagedInteropMethodNameSpace|win:UnicodeString|Przestrzeń nazw zarządzanych metoda międzyoperacyjna.|  
-|ManagedInteropMethodName|win:UnicodeString|Nazwa zarządzaną metodą międzyoperacyjnego.|  
-|ManagedInteropMethodSignature|win:UnicodeString|Podpis zarządzaną metodą międzyoperacyjnego.|  
-|ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|ModuleID|win: UInt16|Identyfikator modułu.|  
+|StubMethodID|win: UInt64|Identyfikator metody zastępczej.|  
+|ManagedInteropMethodToken|win: UInt32|Token dla zarządzanej metody międzyoperacyjnego.|  
+|ManagedInteropMethodNameSpace|win: UnicodeString|Przestrzeń nazw zarządzanej metody międzyoperacyjnego.|  
+|ManagedInteropMethodName|win: UnicodeString|Nazwa zarządzanej metody międzyoperacyjnego.|  
+|ManagedInteropMethodSignature|win: UnicodeString|Sygnatura zarządzanej metody międzyoperacyjnego.|  
+|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
  [Powrót do początku](#top)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zdarzenia CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+- [Zdarzenia CLR ETW](clr-etw-events.md)

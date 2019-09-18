@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: d83713a81e7675a68482890c2401f1a0a6803abc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6cbf31c8a1cdf6e853e56445d22f4a7513bd1859
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914230"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71041997"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Obsługa automatyzacji interfejsu użytkownika dla standardowych formantów
 > [!NOTE]
@@ -55,7 +55,7 @@ ms.locfileid: "69914230"
 |#32768|Menu|  
 |#32768|MenuItem|  
 |msctls_progress32|ProgressBar|  
-|RichEdit|Dokumentu. Zobacz Uwaga.|  
+|RichEdit|dokumentu. Zobacz Uwaga.|  
 |RichEdit20A|dokument|  
 |RichEdit20W|dokument|  
 |RichEdit50W|dokument|  
@@ -169,4 +169,4 @@ ms.locfileid: "69914230"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Typy kontrolek automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-types.md)
+- [Typy kontrolek automatyzacji interfejsu użytkownika](ui-automation-control-types.md)

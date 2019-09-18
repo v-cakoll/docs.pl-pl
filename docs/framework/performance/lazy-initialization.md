@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c13445b8b7c72d1c66efe5a9db3aaa027001ecf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 549030b7e5f7544f593e5aa481a6dc85d5a85329
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943818"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046413"
 ---
 # <a name="lazy-initialization"></a>Inicjalizacja z opóźnieniem
 *Inicjalizacja* z opóźnieniem obiektu oznacza, że jego tworzenie jest odroczone do czasu jego pierwszego użycia. (W tym temacie warunki inicjalizacji z opóźnieniem i *utworzenia wystąpienia* z opóźnieniem są równoznaczne). Inicjalizacja z opóźnieniem służy głównie do poprawy wydajności, unikania obliczeń wasteful i zmniejszania wymagań dotyczących pamięci programu. Są to najczęstsze scenariusze:  
@@ -62,7 +62,7 @@ ms.locfileid: "69943818"
  Domyślnie <xref:System.Lazy%601> obiekty są bezpieczne wątkowo. Oznacza to, że jeśli Konstruktor nie określi rodzaju bezpieczeństwa wątków, <xref:System.Lazy%601> tworzone obiekty są bezpieczne wątkowo. W scenariuszach wielowątkowych pierwszy wątek uzyskuje dostęp <xref:System.Lazy%601.Value%2A> do właściwości obiektu bezpiecznego <xref:System.Lazy%601> wątkowo inicjuje go dla wszystkich kolejnych operacji dostępu we wszystkich wątkach, a wszystkie wątki współużytkują te same dane. W związku z tym nie ma znaczenia, który wątek inicjuje obiekt, a warunki wyścigu są niegroźne.  
   
 > [!NOTE]
-> Tę spójność można zwiększyć do warunków błędów przy użyciu buforowania wyjątków. Aby uzyskać więcej informacji, zobacz następną sekcję [wyjątki w odniesieniu do obiektów z opóźnieniem](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects).  
+> Tę spójność można zwiększyć do warunków błędów przy użyciu buforowania wyjątków. Aby uzyskać więcej informacji, zobacz następną sekcję [wyjątki w odniesieniu do obiektów z opóźnieniem](lazy-initialization.md#ExceptionsInLazyObjects).  
   
  Poniższy przykład pokazuje, że to samo `Lazy<int>` wystąpienie ma tę samą wartość dla trzech oddzielnych wątków.  
   
@@ -157,4 +157,4 @@ ms.locfileid: "69943818"
 - [Zarządzana wątkowość — podstawy](../../standard/threading/managed-threading-basics.md)
 - [Wątki i wątkowość](../../standard/threading/threads-and-threading.md)
 - [Biblioteka zadań równoległych (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)
-- [Instrukcje: Wykonaj opóźnione inicjowanie obiektów](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [Instrukcje: Wykonaj opóźnione inicjowanie obiektów](how-to-perform-lazy-initialization-of-objects.md)

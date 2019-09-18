@@ -21,21 +21,21 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-ms.openlocfilehash: ddc4717c873e65311a8502e66f3edaf39dd89ff9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ee4dc87383153ae4e8df0a3bed7cce5220e65405
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642805"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048634"
 ---
 # <a name="configuring-internet-applications"></a>Konfigurowanie aplikacji internetowych
-[ \<Przestrzeni nazw system.Net >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) element konfiguracji zawiera informacje o konfiguracji sieci dla aplikacji. Przy użyciu [ \<przestrzeni nazw system.Net >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) elementu, ustaw serwerów proxy, Ustaw połączenie z parametrami zarządzania i obejmują moduły niestandardowe uwierzytelnianie i żądanie w aplikacji.  
+Element konfiguracji system .NET [> (Ustawienia sieci) zawiera informacje o konfiguracji sieci dla aplikacji. \<](../configure-apps/file-schema/network/system-net-element-network-settings.md) Za pomocą elementu [ System.net>element(Ustawieniasieci)możnaustawićserweryproxy,ustawićparametryzarządzaniapołączeniamiiuwzględnićniestandardoweuwierzytelnianieimodułyżądańwaplikacji.\<](../configure-apps/file-schema/network/system-net-element-network-settings.md)  
   
- [ \<DefaultProxy >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md) element definiuje zwrócony przez serwer proxy `GlobalProxySelection` klasy. Wszelkie <xref:System.Net.HttpWebRequest> , nie ma swój własny <xref:System.Net.HttpWebRequest.Proxy%2A> właściwość o określonej wartości korzysta z domyślnego serwera proxy. Oprócz skonfigurowania adres serwera proxy, można utworzyć listę adresów serwerów, które nie będzie używać serwera proxy, a może wskazywać, że nie należy używać serwera proxy dla adresów lokalnych.  
+ `GlobalProxySelection` [ ElementdefaultProxy>(Ustawieniasieci)definiujeserwer\<](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md) proxy zwracany przez klasę. Wszystkie <xref:System.Net.HttpWebRequest> <xref:System.Net.HttpWebRequest.Proxy%2A> właściwości, które nie mają przypisanej do określonej wartości, używają domyślnego serwera proxy. Oprócz ustawiania adresu serwera proxy można utworzyć listę adresów serwerów, które nie będą używać serwera proxy, i można wskazać, że serwer proxy nie powinien być używany dla adresów lokalnych.  
   
- Jest to należy zwrócić uwagę, czy ustawienia programu Microsoft Internet Explorer są łączone z ustawienia konfiguracji z pierwszeństwem ostatnie wykonywanie.  
+ Należy pamiętać, że ustawienia programu Microsoft Internet Explorer są łączone z ustawieniami konfiguracji z ostatnim pierwszeństwem.  
   
- Poniższy przykład ustawia domyślny serwer proxy adres serwera `http://proxyserver`, wskazuje, że serwer proxy nie powinna być używana dla adresów lokalnych i określa, czy wszystkich żądań do serwerów znajdujących się w domenie contoso.com, należy pominąć serwer proxy.  
+ Poniższy przykład ustawia domyślny adres serwera proxy na `http://proxyserver`, wskazuje, że serwer proxy nie powinien być używany do adresów lokalnych, i określa, że wszystkie żądania kierowane do serwerów znajdujących się w domenie contoso.com powinny ominąć serwer proxy.  
   
 ```xml  
 <configuration>  
@@ -54,7 +54,7 @@ ms.locfileid: "61642805"
 </configuration>  
 ```  
   
- Użyj [ \<connectionManagement >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) element, aby skonfigurować liczbę połączeń trwałych, które mogą być wykonane na określonym serwerze lub na inne serwery. Poniższy przykład umożliwia skonfigurowanie aplikacji do korzystania z dwóch trwałego połączenia z serwerem `www.contoso.com`, cztery trwałego połączenia z serwerem o adresie IP 192.168.1.2 i jedno połączenie trwałe na inne serwery.  
+ Użyj elementu connectionManagement > [(Ustawienia sieci), aby skonfigurować liczbę trwałych połączeń, które mogą zostać wprowadzone do określonego serwera lub do wszystkich innych serwerów. \<](../configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) Poniższy przykład konfiguruje aplikację do używania dwóch trwałych połączeń z serwerem `www.contoso.com`, czterech stałych połączeń z serwerem z adresem IP 192.168.1.2 i jednego połączenia trwałego z innymi serwerami.  
   
 ```xml  
 <configuration>  
@@ -68,9 +68,9 @@ ms.locfileid: "61642805"
 </configuration>  
 ```  
   
- Uwierzytelnianie niestandardowe moduły są skonfigurowane przy użyciu [ \<authenticationModules >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md) elementu. Moduły niestandardowe uwierzytelnianie musi implementować <xref:System.Net.IAuthenticationModule> interfejsu.  
+ Niestandardowe moduły uwierzytelniania są konfigurowane za pomocą [ \<elementu authenticationModules > (Ustawienia sieci)](../configure-apps/file-schema/network/authenticationmodules-element-network-settings.md) . Niestandardowe moduły uwierzytelniania muszą implementować <xref:System.Net.IAuthenticationModule> interfejs.  
   
- Poniższy przykład umożliwia skonfigurowanie uwierzytelniania niestandardowego modułu.  
+ Poniższy przykład służy do konfigurowania niestandardowego modułu uwierzytelniania.  
   
 ```xml  
 <configuration>  
@@ -82,7 +82,7 @@ ms.locfileid: "61642805"
 </configuration>  
 ```  
   
- Możesz użyć [ \<webRequestModules >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md) elementu, aby skonfigurować aplikację na potrzeby niestandardowe moduły oparte na protokole żądanie informacji z zasobów internetowych. Określone moduły muszą implementować <xref:System.Net.IWebRequestCreate> interfejsu. Można zastąpić domyślny HTTP, HTTPS i pliku żądania modułów, określając niestandardowego modułu w pliku konfiguracji, jak w poniższym przykładzie.  
+ Za pomocą [ \<elementu webRequestModules > (Ustawienia sieci)](../configure-apps/file-schema/network/webrequestmodules-element-network-settings.md) można skonfigurować aplikację do używania niestandardowych modułów specyficznych dla protokołu, aby żądać informacji z zasobów internetowych. Określone moduły muszą implementować <xref:System.Net.IWebRequestCreate> interfejs. Można zastąpić domyślne moduły HTTP, HTTPS i File Request przez określenie niestandardowego modułu w pliku konfiguracji, jak w poniższym przykładzie.  
   
 ```xml  
 <configuration>  
@@ -99,6 +99,6 @@ ms.locfileid: "61642805"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Programowanie dla sieci w programie .NET Framework](../../../docs/framework/network-programming/index.md)
-- [Schemat ustawień sieci](../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [\<przestrzeni nazw system.Net >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
+- [Programowanie dla sieci w programie .NET Framework](index.md)
+- [Schemat ustawień sieci](../configure-apps/file-schema/network/index.md)
+- [\<System .net >, element (Ustawienia sieci)](../configure-apps/file-schema/network/system-net-element-network-settings.md)

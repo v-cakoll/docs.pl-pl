@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 808f0f8ac6caf15be0bf1ba8735521871c9b94d7
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 417550397582641c5a8fa97c061377beadfb0e6f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851598"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045576"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Pakowanie i wdrażanie zasobów w aplikacjach .NET
 
@@ -58,7 +58,7 @@ Ten model ma kilka zalet:
 Podczas pakowania zasobów aplikacji należy nadać im nazwy przy użyciu konwencji nazewnictwa zasobów, których oczekuje środowisko uruchomieniowe języka wspólnego. Środowisko uruchomieniowe identyfikuje zasób według jego nazwy kultury. Każda kultura ma unikatową nazwę, która zwykle jest kombinacją dwuliterowej nazwy kultury, która jest skojarzona z językiem i, w razie potrzeby, z dwuliterową nazwą podkultury Wielkiej, skojarzoną z danym krajem lub regionem. Nazwa kultury jest zgodna z nazwą kultury, oddzieloną kreską (-). Przykłady obejmują ja-JP dla języka japońskiego w Japonii, en-US dla języka angielskiego w Stany Zjednoczone, de-DE dla języka niemieckiego w Niemczech lub w odniesieniu do języka niemieckiego, który jest mówiony w Austrii. Zobacz kolumnę **tag języka** na [liście nazw języków/regionów obsługiwanych przez system Windows](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Nazwy kultur są zgodne ze standardem zdefiniowanym przez [BCP 47](https://tools.ietf.org/html/bcp47).
 
 > [!NOTE]
-> Informacje o tworzeniu plików zasobów można znaleźć w temacie [Tworzenie plików zasobów](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) i [Tworzenie zestawów satelickich](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).
+> Informacje o tworzeniu plików zasobów można znaleźć w temacie [Tworzenie plików zasobów](creating-resource-files-for-desktop-apps.md) i [Tworzenie zestawów satelickich](creating-satellite-assemblies-for-desktop-apps.md).
 
 <a name="cpconpackagingdeployingresourcesanchor1"></a>
 
@@ -73,9 +73,9 @@ Aby zwiększyć wydajność wyszukiwania, Zastosuj <xref:System.Resources.Neutra
 Proces rezerwowy zasobów .NET Framework obejmuje następujące kroki:
 
 > [!TIP]
-> Aby zoptymalizować proces rezerwowy zasobów i proces [ \<](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) , w którym sondy środowiska uruchomieniowego dla zestawów zasobów, może być możliwe użycie elementu konfiguracji > relativeBindForResources. Aby uzyskać więcej informacji, zobacz sekcję [Optymalizacja procesu rezerwowego zasobów](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#Optimizing) .
+> Aby zoptymalizować proces rezerwowy zasobów i proces [ \<](../configure-apps/file-schema/runtime/relativebindforresources-element.md) , w którym sondy środowiska uruchomieniowego dla zestawów zasobów, może być możliwe użycie elementu konfiguracji > relativeBindForResources. Aby uzyskać więcej informacji, zobacz sekcję [Optymalizacja procesu rezerwowego zasobów](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing) .
 
-1. Środowisko uruchomieniowe najpierw sprawdza [globalną pamięć podręczną zestawów](../../../docs/framework/app-domains/gac.md) dla zestawu, który jest zgodny z żądaną kulturą dla aplikacji.
+1. Środowisko uruchomieniowe najpierw sprawdza [globalną pamięć podręczną zestawów](../app-domains/gac.md) dla zestawu, który jest zgodny z żądaną kulturą dla aplikacji.
 
      Globalna pamięć podręczna zestawów może przechowywać zestawy zasobów, które są współużytkowane przez wiele aplikacji. Pozwala to na dołączenie określonych zestawów zasobów do struktury katalogów każdej utworzonej aplikacji. Jeśli środowisko uruchomieniowe odnajdzie odwołanie do zestawu, przeszukuje zestaw dla żądanego zasobu. Jeśli odnajdzie wpis w zestawie, używa żądanego zasobu. Jeśli nie znajdzie wpisu, kontynuuje wyszukiwanie.
 
@@ -112,13 +112,13 @@ Załóżmy na przykład, że aplikacja żąda zasobu zlokalizowanego w języku h
 
 W następujących warunkach można zoptymalizować proces, za pomocą którego środowisko uruchomieniowe wyszukuje zasoby w zestawach satelickich
 
-- Zestawy satelickie są wdrażane w tej samej lokalizacji co zestaw kodu. Jeśli zestaw kodu jest zainstalowany w [globalnej pamięci podręcznej zestawów](../../../docs/framework/app-domains/gac.md), zestawy satelickie są również zainstalowane w globalnej pamięci podręcznej zestawów. Jeśli zestaw kodu jest zainstalowany w katalogu, zestawy satelickie są instalowane w folderach specyficznych dla kultury tego katalogu.
+- Zestawy satelickie są wdrażane w tej samej lokalizacji co zestaw kodu. Jeśli zestaw kodu jest zainstalowany w [globalnej pamięci podręcznej zestawów](../app-domains/gac.md), zestawy satelickie są również zainstalowane w globalnej pamięci podręcznej zestawów. Jeśli zestaw kodu jest zainstalowany w katalogu, zestawy satelickie są instalowane w folderach specyficznych dla kultury tego katalogu.
 
 - Zestawy satelickie nie są zainstalowane na żądanie.
 
 - Kod aplikacji nie <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> obsługuje zdarzenia.
 
-Możesz zoptymalizować sondę dla zestawów satelitarnych, dołączając [ \<element relativeBindForResources >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) i ustawiając jego `enabled` atrybut na `true` w pliku konfiguracyjnym aplikacji, jak pokazano na poniższej liście przyklad.
+Możesz zoptymalizować sondę dla zestawów satelitarnych, dołączając [ \<element relativeBindForResources >](../configure-apps/file-schema/runtime/relativebindforresources-element.md) i ustawiając jego `enabled` atrybut na `true` w pliku konfiguracyjnym aplikacji, jak pokazano na poniższej liście przyklad.
 
 ```xml
 <configuration>
@@ -128,7 +128,7 @@ Możesz zoptymalizować sondę dla zestawów satelitarnych, dołączając [ \<el
 </configuration>
 ```
 
-Optymalizacja pod kątem zestawów satelitarnych to funkcja opcjonalna. Oznacza to, że środowisko uruchomieniowe postępuje zgodnie z krokami opisanymi w [procesie rezerwowym zasobu](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1) , chyba że [ \<element relativeBindForResources >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) jest obecny w `enabled` pliku konfiguracji aplikacji, a jego atrybut jest ustawiony do `true`programu. W takim przypadku proces sondowania dla zestawu satelickiego jest modyfikowany w następujący sposób:
+Optymalizacja pod kątem zestawów satelitarnych to funkcja opcjonalna. Oznacza to, że środowisko uruchomieniowe postępuje zgodnie z krokami opisanymi w [procesie rezerwowym zasobu](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1) , chyba że [ \<element relativeBindForResources >](../configure-apps/file-schema/runtime/relativebindforresources-element.md) jest obecny w `enabled` pliku konfiguracji aplikacji, a jego atrybut jest ustawiony do `true`programu. W takim przypadku proces sondowania dla zestawu satelickiego jest modyfikowany w następujący sposób:
 
 - Środowisko uruchomieniowe używa lokalizacji zestawu kodu nadrzędnego do sondowania dla zestawu satelickiego. Jeśli zestaw nadrzędny jest zainstalowany w globalnej pamięci podręcznej zestawów, sondy środowiska uruchomieniowego w pamięci podręcznej, ale nie w katalogu aplikacji. Jeśli zestaw nadrzędny jest zainstalowany w katalogu aplikacji, sondy środowiska uruchomieniowego w katalogu aplikacji, ale nie w globalnej pamięci podręcznej zestawów.
 
@@ -186,7 +186,7 @@ Drugi, zasoby, ru. txt, zawiera zasób języka rosyjskiego.
 Greeting=Добрый день
 ```
 
-Te dwa pliki są kompilowane do plików Resources, uruchamiając [Generator plików zasobów (Resgen. exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) z wiersza polecenia. Dla zasobu języka francuskiego polecenie to:
+Te dwa pliki są kompilowane do plików Resources, uruchamiając [Generator plików zasobów (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md) z wiersza polecenia. Dla zasobu języka francuskiego polecenie to:
 
 **resgen.exe resources.fr.txt**
 
@@ -194,7 +194,7 @@ Dla zasobu języka rosyjskiego polecenie to:
 
 **resgen.exe resources.ru.txt**
 
-Pliki resources są osadzane w bibliotekach dołączanych dynamicznie przez uruchomienie [konsolidatora zestawu (Al. exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) z wiersza polecenia dla zasobu języka francuskiego w następujący sposób:
+Pliki resources są osadzane w bibliotekach dołączanych dynamicznie przez uruchomienie [konsolidatora zestawu (Al. exe)](../tools/al-exe-assembly-linker.md) z wiersza polecenia dla zasobu języka francuskiego w następujący sposób:
 
 **al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll**
 
@@ -233,7 +233,7 @@ Ograniczenia czasu lub budżetu mogą uniemożliwiać utworzenie zestawu zasobó
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)
-- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)
-- [Tworzenie plików zasobów](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
-- [Tworzenie zestawów satelickich](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+- [Zasoby w aplikacjach klasycznych](index.md)
+- [Global Assembly Cache](../app-domains/gac.md)
+- [Tworzenie plików zasobów](creating-resource-files-for-desktop-apps.md)
+- [Tworzenie zestawów satelickich](creating-satellite-assemblies-for-desktop-apps.md)

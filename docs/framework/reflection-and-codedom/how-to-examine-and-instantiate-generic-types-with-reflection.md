@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6517edcc2784b7d70c08c4d15d837fc1f209c49
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6e15ef69c4777cdafe2e5861050a1ccc1f6a1a70
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928240"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046017"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Instrukcje: Badanie i tworzenie wystąpień typów ogólnych za pomocą odbicia
 Informacje o typach ogólnych są uzyskiwane w taki sam sposób jak informacje o innych typach: przez badanie <xref:System.Type> obiektu, który reprezentuje typ ogólny. Różnica między zasadami polega na tym, że typ ogólny ma listę <xref:System.Type> obiektów reprezentujących parametry typu ogólnego. Pierwsza procedura w tej sekcji bada typy ogólne.  
@@ -119,6 +119,6 @@ Informacje o typach ogólnych są uzyskiwane w taki sam sposób jak informacje o
 
 - <xref:System.Type>
 - <xref:System.Reflection.MethodInfo>
-- [Odbicie i typy ogólne](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
-- [Wyświetlanie informacji o typie](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Odbicie i typy ogólne](reflection-and-generic-types.md)
+- [Wyświetlanie informacji o typie](viewing-type-information.md)
 - [Typy ogólne](../../standard/generics/index.md)

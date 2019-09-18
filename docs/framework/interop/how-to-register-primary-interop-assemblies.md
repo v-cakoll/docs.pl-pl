@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e61ae55673cbf745ea4c637c5206efe41d8ab276
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e0eeaee969eda5e4d0ea1a119991456668c7d44f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946676"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051743"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Instrukcje: Rejestrowanie podstawowych zestawów międzyoperacyjnych
 
@@ -24,7 +24,7 @@ Klasy mogą być organizowane tylko przez międzyoperacyjność modelu COM i są
 
  Nawet jeśli nie planujesz udostępniania typów COM innych firm, użycie podstawowego zestawu międzyoperacyjnego może ułatwić zadanie współdziałania ze składnikami modelu COM. Jednak ta strategia nie zapewnia żadnych izolacji od zmian, które dostawca może wprowadzać do typów zdefiniowanych w podstawowym zestawie międzyoperacyjnym. Gdy aplikacja wymaga takiej izolacji, wygeneruj własny zestaw międzyoperacyjny zamiast korzystać z podstawowego zestawu międzyoperacyjnego.
 
- Aby można było odwoływać się do nich za pomocą programu Visual Studio, należy zarejestrować wszystkie nabyte podstawowe zestawy międzyoperacyjności na komputerze deweloperskim. Program Visual Studio szuka i używa podstawowego zestawu międzyoperacyjnego podczas pierwszego odwoływania się do typu z biblioteki typów COM. Jeśli program Visual Studio nie może zlokalizować podstawowego zestawu międzyoperacyjnego skojarzonego z biblioteką typów, zostanie wyświetlony komunikat z prośbą o pozyskanie lub ofertę utworzenia zestawu międzyoperacyjnego. Analogicznie, [Importer biblioteki typów (Tlbimp. exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) używa również rejestru do lokalizowania podstawowych zestawów międzyoperacyjnych.
+ Aby można było odwoływać się do nich za pomocą programu Visual Studio, należy zarejestrować wszystkie nabyte podstawowe zestawy międzyoperacyjności na komputerze deweloperskim. Program Visual Studio szuka i używa podstawowego zestawu międzyoperacyjnego podczas pierwszego odwoływania się do typu z biblioteki typów COM. Jeśli program Visual Studio nie może zlokalizować podstawowego zestawu międzyoperacyjnego skojarzonego z biblioteką typów, zostanie wyświetlony komunikat z prośbą o pozyskanie lub ofertę utworzenia zestawu międzyoperacyjnego. Analogicznie, [Importer biblioteki typów (Tlbimp. exe)](../tools/tlbimp-exe-type-library-importer.md) używa również rejestru do lokalizowania podstawowych zestawów międzyoperacyjnych.
 
  Mimo że nie jest konieczne rejestrowanie podstawowych zestawów międzyoperacyjnych, chyba że zamierzasz korzystać z programu Visual Studio, rejestracja oferuje dwie korzyści:
 
@@ -32,7 +32,7 @@ Klasy mogą być organizowane tylko przez międzyoperacyjność modelu COM i są
 
 - Można uniknąć przypadkowego generowania i używania nowego zestawu międzyoperacyjnego, jeśli w danym momencie w przyszłości używasz programu Visual Studio do odwoływania się do typu, dla którego masz niezarejestrowany podstawowy zestaw międzyoperacyjny.
 
-Użyj [narzędzia rejestracji zestawu (Regasm. exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) do zarejestrowania podstawowego zestawu międzyoperacyjnego.
+Użyj [narzędzia rejestracji zestawu (Regasm. exe)](../tools/regasm-exe-assembly-registration-tool.md) do zarejestrowania podstawowego zestawu międzyoperacyjnego.
 
 ## <a name="to-register-a-primary-interop-assembly"></a>Aby zarejestrować podstawowy zestaw międzyoperacyjny
 

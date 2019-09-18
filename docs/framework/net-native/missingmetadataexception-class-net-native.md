@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb9300917f06ec8e48f2dd412e008efec4dc6917
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 251d63fe8e025fe73b148c7deb368ab95ca3b1f7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941671"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049479"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>Klasa MissingMetadataException (architektura .NET Native)
 
@@ -20,7 +20,7 @@ Wyjątek, który jest generowany, gdy odbicie jest używane do pobierania nieobe
 **Obszaru** System. odbicie
 
 > [!IMPORTANT]
-> `MissingMetadataException` Klasa jest przeznaczona wyłącznie do użytku wewnętrznego w łańcuchu narzędzi .NET Native. Nie jest on przeznaczony do użycia w kodzie innej firmy ani nie powinien obsługiwać wyjątku w kodzie aplikacji. Zamiast tego należy wyeliminować wyjątek poprzez dodanie wpisów do [pliku dyrektywy środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.
+> `MissingMetadataException` Klasa jest przeznaczona wyłącznie do użytku wewnętrznego w łańcuchu narzędzi .NET Native. Nie jest on przeznaczony do użycia w kodzie innej firmy ani nie powinien obsługiwać wyjątku w kodzie aplikacji. Zamiast tego należy wyeliminować wyjątek poprzez dodanie wpisów do [pliku dyrektywy środowiska uruchomieniowego](runtime-directives-rd-xml-configuration-file-reference.md). Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.
 
 ## <a name="syntax"></a>Składnia
 
@@ -74,7 +74,7 @@ Należy zauważyć, `MissingMetadataException` że Klasa pochodzi <xref:System.T
 
 `MissingMetadataException` Wyjątek jest zgłaszany, gdy odbicie jest używane w celu uzyskania dostępu do metadanych, które nie są dostępne w zestawie.
 
-Metadane dostępne dla aplikacji w czasie wykonywania są zdefiniowane przez dyrektywy środowiska uruchomieniowego (XML Configuration), \*. Rd. XML. Aby zapobiec zgłaszaniu tego wyjątku przez aplikację, należy zmodyfikować \*plik RD. XML w celu zdefiniowania metadanych, które muszą być obecne w czasie wykonywania. Aby uzyskać informacje o formacie \*pliku Rd. XML, zobacz [Dokumentacja pliku konfiguracji dyrektywy środowiska uruchomieniowego (RD. xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).
+Metadane dostępne dla aplikacji w czasie wykonywania są zdefiniowane przez dyrektywy środowiska uruchomieniowego (XML Configuration), \*. Rd. XML. Aby zapobiec zgłaszaniu tego wyjątku przez aplikację, należy zmodyfikować \*plik RD. XML w celu zdefiniowania metadanych, które muszą być obecne w czasie wykonywania. Aby uzyskać informacje o formacie \*pliku Rd. XML, zobacz [Dokumentacja pliku konfiguracji dyrektywy środowiska uruchomieniowego (RD. xml)](runtime-directives-rd-xml-configuration-file-reference.md).
 
 > [!IMPORTANT]
 > Ponieważ ten wyjątek wskazuje, że metadane potrzebne przez aplikację nie są dostępne w czasie wykonywania, nie należy obsługiwać tego wyjątku w `try` / `catch` bloku. Zamiast tego należy zdiagnozować przyczynę wyjątku i wyeliminować go przy użyciu pliku dyrektywy środowiska uruchomieniowego. Aby uzyskać wpis, który można dodać do pliku dyrektywy środowiska uruchomieniowego, który eliminuje wyjątek, można użyć jednego z dwóch narzędzi do rozwiązywania problemów:
@@ -88,6 +88,6 @@ Klasa nie zawiera żadnych unikatowych elementów członkowskich; wszystkie jej 
 
 - <xref:System.Exception?displayProperty=nameWithType>
 - <xref:System.TypeAccessException>
-- [Klasa MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)
-- [Klasa MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)
-- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Klasa MissingInteropDataException](missinginteropdataexception-class-net-native.md)
+- [Klasa MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md)
+- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)

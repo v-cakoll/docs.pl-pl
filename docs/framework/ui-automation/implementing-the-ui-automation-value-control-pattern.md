@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: 4af35b3ad1277723d4102b3aeac48748588ef8bf
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 54991ce16aa905f4138013944fb8b5a317675d9b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70244004"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043161"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>Implementacja wzorca formantu wartości automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "70244004"
   
  W tym temacie przedstawiono wskazówki i konwencje <xref:System.Windows.Automation.Provider.IValueProvider>dotyczące wdrażania, w tym informacje dotyczące zdarzeń i właściwości. Linki do dodatkowych odwołań znajdują się na końcu tematu.  
   
- Wzorzec <xref:System.Windows.Automation.ValuePattern> kontrolki służy do obsługi kontrolek, które mają wewnętrzną wartość bez łączenia zakresu i które mogą być reprezentowane jako ciąg. Ten ciąg można edytować w zależności od kontrolki i jej ustawień. Przykłady formantów implementujących ten wzorzec można znaleźć w temacie [Mapowanie wzorców formantów dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ Wzorzec <xref:System.Windows.Automation.ValuePattern> kontrolki służy do obsługi kontrolek, które mają wewnętrzną wartość bez łączenia zakresu i które mogą być reprezentowane jako ciąg. Ten ciąg można edytować w zależności od kontrolki i jej ustawień. Przykłady formantów implementujących ten wzorzec można znaleźć w temacie [Mapowanie wzorców formantów dla klientów automatyzacji interfejsu użytkownika](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Wytyczne i konwencje dotyczące implementacji  
@@ -27,7 +27,7 @@ ms.locfileid: "70244004"
   
 - Kontrolki takie <xref:System.Windows.Automation.ControlType.ListItem> jak <xref:System.Windows.Automation.ControlType.TreeItem> i muszą <xref:System.Windows.Automation.ValuePattern> obsługiwać, jeśli wartość któregokolwiek z elementów jest edytowalna, niezależnie od bieżącego trybu edycji kontrolki. Formant nadrzędny musi również obsługiwać <xref:System.Windows.Automation.ValuePattern> , jeśli elementy podrzędne są edytowalne.  
   
- ![Edytowalny element listy.](../../../docs/framework/ui-automation/media/uia-valuepattern-editable-listitem.PNG "UIA_ValuePattern_Editable_ListItem")  
+ ![Edytowalny element listy.](./media/uia-valuepattern-editable-listitem.PNG "UIA_ValuePattern_Editable_ListItem")  
 Przykład edytowalnego elementu listy  
   
 - Kontrolki edycji pojedynczej linii obsługują dostęp programistyczny do zawartości przez <xref:System.Windows.Automation.Provider.IValueProvider>implementację. Jednak wielowierszowe kontrolki edycji nie są implementowane <xref:System.Windows.Automation.Provider.IValueProvider>; zamiast tego zapewniają dostęp do ich zawartości przez implementację. <xref:System.Windows.Automation.Provider.ITextProvider>  
@@ -38,7 +38,7 @@ Przykład edytowalnego elementu listy
   
 - <xref:System.Windows.Automation.Provider.IValueProvider>musi być zaimplementowany przez kontrolki, takie jak formant wyboru **selektora kolorów** z [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (przedstawiony poniżej), który obsługuje mapowanie ciągów między wartością koloru (na przykład "żółta") i równoważną wewnętrzną strukturę RGB.  
   
- ![Selektor kolorów z wyróżnioną żółtą opcją.](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
+ ![Selektor kolorów z wyróżnioną żółtą opcją.](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Przykład mapowania ciągu próbnika kolorów  
   
 - <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> Kontrolka powinna mieć <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> `true` ustawioną wartość i ustawioną `false` przed zezwoleniem na wywołanie <xref:System.Windows.Automation.Provider.IValueProvider.SetValue%2A>.  
@@ -65,9 +65,9 @@ Przykład mapowania ciągu próbnika kolorów
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Obsługa wzorców kontrolek dostawcy automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [Wzorce kontrolek automatyzacji interfejsu użytkownika dla klientów](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie](ui-automation-control-patterns-overview.md)
+- [Obsługa wzorców kontrolek dostawcy automatyzacji interfejsu użytkownika](support-control-patterns-in-a-ui-automation-provider.md)
+- [Wzorce kontrolek automatyzacji interfejsu użytkownika dla klientów](ui-automation-control-patterns-for-clients.md)
 - [Przykład wstawiania ValuePattern tekstu](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
-- [Przegląd drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Używanie buforowania w automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Przegląd drzewa automatyzacji interfejsu użytkownika](ui-automation-tree-overview.md)
+- [Używanie buforowania w automatyzacji interfejsu użytkownika](use-caching-in-ui-automation.md)

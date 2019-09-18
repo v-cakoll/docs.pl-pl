@@ -12,33 +12,33 @@ helpviewer_keywords:
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b204eacd43db2c562fbe6d519b5fa91df3466cc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 275aa5bb664e9f5a50f44a72f2506d7984234b31
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626412"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051823"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>Tworzenie klasy utrzymującej funkcje DLL
-Zawijanie często używanych funkcji DLL w klasie zarządzanej jest efektywne podejście do hermetyzacji funkcje platformy. Chociaż nie jest wymagane, aby to zrobić w każdym przypadku, zapewniając otoka klasy jest wygodne, ponieważ Definiowanie funkcji DLL może być skomplikowane i podatne na błędy. Jeśli programujesz w języku Visual Basic lub C#, należy zadeklarować funkcji DLL w obrębie klasy lub w module języka Visual Basic.  
+Otoka często używanej funkcji DLL w klasie zarządzanej jest skutecznym podejściem do hermetyzacji funkcjonalności platformy. Chociaż nie jest to konieczne w każdym przypadku, zapewnienie otoki klasy jest wygodne, ponieważ Definiowanie funkcji DLL może być kłopotliwe i podatne na błędy. W przypadku programowania w Visual Basic lub C#należy zadeklarować funkcje DLL w ramach klasy lub modułu Visual Basic.  
   
- W obrębie klasy można zdefiniować metody statycznej dla każdej funkcji DLL, który ma zostać wywołana. Definicja może zawierać dodatkowe informacje, takie jak zestaw znaków lub konwencji wywoływania, używane do przekazywania argumentów metody; pomijając te informacje, możesz wybrać ustawienia domyślne. Aby uzyskać pełną listę opcji deklaracji i domyślne ustawienia, zobacz [tworzenie prototypów w kodzie zarządzany](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
+ W obrębie klasy należy zdefiniować metodę statyczną dla każdej funkcji DLL, która ma zostać wywołana. Definicja może zawierać dodatkowe informacje, takie jak zestaw znaków lub Konwencja wywoływania używana w argumentach metod przekazywania; Pomijając te informacje, należy wybrać ustawienia domyślne. Aby zapoznać się z pełną listą opcji deklaracji i ich ustawień domyślnych, zobacz [Tworzenie prototypów w kodzie zarządzanym](creating-prototypes-in-managed-code.md).  
   
- Po opakowaniu można wywołać metody w klasie, jak wywołanie metody statycznej na inne klasy. Obsługuje wywołania platformy bazowej automatycznie wyeksportowanej funkcji.  
+ Po zapakowaniu można wywołać metody klasy podczas wywoływania metod statycznych dla każdej innej klasy. Funkcja Invoke platformy obsługuje automatycznie wyeksportowaną funkcję.  
   
- Podczas projektowania klas zarządzanych dla platformy wywołać, należy wziąć pod uwagę relacji między klasami i funkcji DLL. Możesz na przykład:  
+ Podczas projektowania zarządzanej klasy dla wywołania platformy należy wziąć pod uwagę relacje między klasami i funkcjami DLL. Możesz na przykład:  
   
-- Deklarowanie funkcji DLL w ramach istniejącej klasy.  
+- Deklarowanie funkcji DLL w obrębie istniejącej klasy.  
   
-- Utwórz klasę poszczególnych dla każdej funkcji DLL, utrzymywanie funkcji w izolowanej i łatwe do znalezienia.  
+- Utwórz pojedynczą klasę dla każdej funkcji DLL, utrzymując funkcje izolowane i łatwe do odnalezienia.  
   
-- Utwórz jedną klasę zbiór powiązanych funkcji DLL, które tworzą logiczne grupowanie i zmniejszyć obciążenie.  
+- Utwórz jedną klasę dla zestawu powiązanych funkcji DLL, aby tworzyć logiczne grupowania i zmniejszać obciążenie.  
   
- Możesz nazwać klasy i jego metod, jak należy. Aby uzyskać przykłady pokazujące, jak utworzyć. Na podstawie NET deklaracje do użycia z platformą wywołania, zobacz [Marshaling danych za pomocą wywołania platformy](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+ W tym celu można nazwać klasę i jej metody. Przykłady, które demonstrują sposób konstruowania. Deklaracje oparte na sieci, które mają być używane z wywołaniem platformy, można znaleźć w temacie [kierowanie danych za pomocą wywołania platformy](marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wykorzystywanie niezarządzanych funkcji DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
-- [Identyfikowanie funkcji w bibliotekach DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md)
-- [Tworzenie prototypów w kodzie zarządzanym](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [Wywołanie funkcji DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+- [Wykorzystywanie niezarządzanych funkcji DLL](consuming-unmanaged-dll-functions.md)
+- [Identyfikowanie funkcji w bibliotekach DLL](identifying-functions-in-dlls.md)
+- [Tworzenie prototypów w kodzie zarządzanym](creating-prototypes-in-managed-code.md)
+- [Wywołanie funkcji DLL](calling-a-dll-function.md)

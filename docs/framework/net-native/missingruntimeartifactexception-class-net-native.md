@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: caa929225701a62c0abb3b335bfd7fb6a129e9e3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: aa882762479995448a99d9cb63fbdea941a253d4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941625"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049487"
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>Klasa MissingRuntimeArtifactException (architektura .NET Native)
 **Aplikacje .NET dla systemu Windows 10, tylko .NET Native**  
@@ -19,7 +19,7 @@ ms.locfileid: "69941625"
  **Obszaru** System. odbicie  
   
 > [!IMPORTANT]
-> `MissingRuntimeArtifactException` Klasa jest przeznaczona wyłącznie do użytku wewnętrznego w łańcuchu narzędzi .NET Native. Nie jest on przeznaczony do użycia w kodzie innej firmy ani nie powinien obsługiwać wyjątku w kodzie aplikacji. Zamiast tego należy wyeliminować wyjątek poprzez dodanie wpisów do [pliku dyrektywy środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
+> `MissingRuntimeArtifactException` Klasa jest przeznaczona wyłącznie do użytku wewnętrznego w łańcuchu narzędzi .NET Native. Nie jest on przeznaczony do użycia w kodzie innej firmy ani nie powinien obsługiwać wyjątku w kodzie aplikacji. Zamiast tego należy wyeliminować wyjątek poprzez dodanie wpisów do [pliku dyrektywy środowiska uruchomieniowego](runtime-directives-rd-xml-configuration-file-reference.md). Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
   
 ## <a name="syntax"></a>Składnia  
  [!code-csharp[ProjectN#22](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missingruntimeartifactexception_syntax1.cs#22)]  
@@ -70,7 +70,7 @@ ms.locfileid: "69941625"
 ## <a name="usage-details"></a>Szczegóły użycia  
  `MissingRuntimeArtifactException` Wyjątek jest zgłaszany, gdy podejmowana jest próba utworzenia wystąpienia typu lub wywołania elementu członkowskiego typu, chociaż istnieją metadane typu lub elementu członkowskiego. jego implementacja została usunięta.  
   
- Czy metadane i kod implementacji do dynamicznego wykonywania metody są dostępne dla aplikacji w czasie wykonywania jest zdefiniowany przez dyrektywy środowiska uruchomieniowego (XML Configuration), \*. Rd. XML. Aby zapobiec zgłaszaniu tego wyjątku przez aplikację, należy zmodyfikować \*plik RD. XML, aby upewnić się, że metadane wymagane przez typ lub składową typu są obecne w czasie wykonywania. Aby uzyskać informacje o formacie \*pliku Rd. XML, zobacz [Dokumentacja pliku konfiguracji dyrektywy środowiska uruchomieniowego (RD. xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+ Czy metadane i kod implementacji do dynamicznego wykonywania metody są dostępne dla aplikacji w czasie wykonywania jest zdefiniowany przez dyrektywy środowiska uruchomieniowego (XML Configuration), \*. Rd. XML. Aby zapobiec zgłaszaniu tego wyjątku przez aplikację, należy zmodyfikować \*plik RD. XML, aby upewnić się, że metadane wymagane przez typ lub składową typu są obecne w czasie wykonywania. Aby uzyskać informacje o formacie \*pliku Rd. XML, zobacz [Dokumentacja pliku konfiguracji dyrektywy środowiska uruchomieniowego (RD. xml)](runtime-directives-rd-xml-configuration-file-reference.md).  
   
 > [!IMPORTANT]
 > Ponieważ ten wyjątek wskazuje, że kod implementacji wymagany przez aplikację nie jest dostępny w czasie wykonywania, nie należy obsługiwać tego wyjątku w `try` / `catch` bloku. Zamiast tego należy zdiagnozować przyczynę wyjątku i wyeliminować go przy użyciu pliku dyrektywy środowiska uruchomieniowego. Zwykle eliminujesz ten wyjątek, określając odpowiednie `Activate` zasady lub `Dynamic` zasad dla elementu programu w pliku dyrektywy środowiska uruchomieniowego (\*plik. Rd. xml). Aby uzyskać wpis, który można dodać do pliku dyrektywy środowiska uruchomieniowego, który eliminuje wyjątek, można użyć jednego z dwóch narzędzi do rozwiązywania problemów:  
@@ -82,5 +82,5 @@ ms.locfileid: "69941625"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Ustawienia zasad dyrektyw środowiska uruchomieniowego](runtime-directive-policy-settings.md)

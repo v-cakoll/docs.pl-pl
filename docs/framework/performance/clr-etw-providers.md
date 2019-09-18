@@ -7,28 +7,28 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec83bfd08277c79f15904d50a85e43cc61ecd527
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 93a0271c521de6e390e323d92e93a5e7bf94444f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894697"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046733"
 ---
 # <a name="clr-etw-providers"></a>Dostawcy CLR ETW
 Środowisko uruchomieniowe języka wspólnego (CLR) ma dwóch dostawców: dostawcę środowiska uruchomieniowego i dostawcę.  
   
  Dostawca środowiska uruchomieniowego zgłasza zdarzenia, w zależności od tego, które słowa kluczowe (kategorie zdarzeń) są włączone. Na przykład można zbierać zdarzenia modułu ładującego przez włączenie `LoaderKeyword` słowa kluczowego.  
   
- Zdarzenia śledzenia zdarzeń systemu Windows (ETW) są rejestrowane w pliku z rozszerzeniem. etl, które może później być przetworzone w plikach z wartościami rozdzielanymi przecinkami (CSV), zgodnie z wymaganiami. Informacje o sposobach konwertowania pliku. etl do pliku CSV znajdują się w temacie [sterowanie rejestrowaniem .NET Framework](../../../docs/framework/performance/controlling-logging.md).  
+ Zdarzenia śledzenia zdarzeń systemu Windows (ETW) są rejestrowane w pliku z rozszerzeniem. etl, które może później być przetworzone w plikach z wartościami rozdzielanymi przecinkami (CSV), zgodnie z wymaganiami. Informacje o sposobach konwertowania pliku. etl do pliku CSV znajdują się w temacie [sterowanie rejestrowaniem .NET Framework](controlling-logging.md).  
   
 ## <a name="the-runtime-provider"></a>Dostawca środowiska uruchomieniowego  
  Dostawca środowiska uruchomieniowego jest głównym dostawcą funkcji ETW CLR.  
   
  Identyfikator GUID dostawcy środowiska uruchomieniowego CLR to e13c0d23-ccbc-4e12-931b-d9cc2eee27e4.  
   
- Aby zapoznać się z przykładami rejestrowania i wyświetlania zdarzeń ETW CLR przy użyciu powszechnie dostępnych narzędzi, zobacz [kontrolowanie rejestrowania .NET Framework](../../../docs/framework/performance/controlling-logging.md).  
+ Aby zapoznać się z przykładami rejestrowania i wyświetlania zdarzeń ETW CLR przy użyciu powszechnie dostępnych narzędzi, zobacz [kontrolowanie rejestrowania .NET Framework](controlling-logging.md).  
   
- Oprócz używania słów kluczowych, takich jak `LoaderKeyword`, może być konieczne włączenie słów kluczowych do rejestrowania zdarzeń, które mogą być zgłaszane zbyt często. Słowakluczowe`EndEnumerationKeyword` i umożliwiają włączenie tych zdarzeń i są podsumowywane w [słowach kluczowych i poziomach funkcji ETW CLR.](../../../docs/framework/performance/clr-etw-keywords-and-levels.md) `StartEnumerationKeyword`  
+ Oprócz używania słów kluczowych, takich jak `LoaderKeyword`, może być konieczne włączenie słów kluczowych do rejestrowania zdarzeń, które mogą być zgłaszane zbyt często. Słowakluczowe`EndEnumerationKeyword` i umożliwiają włączenie tych zdarzeń i są podsumowywane w [słowach kluczowych i poziomach funkcji ETW CLR.](clr-etw-keywords-and-levels.md) `StartEnumerationKeyword`  
   
 ## <a name="the-rundown-provider"></a>Dostawca uwalniania  
  Dostawca uwalniania musi być włączony do określonych zastosowań specjalnych. Jednak w przypadku większości użytkowników należy mieć wystarczające dla nich dostawca środowiska uruchomieniowego.  
@@ -93,4 +93,4 @@ ms.locfileid: "70894697"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zdarzenia ETW w środowisku CLR](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [Zdarzenia ETW w środowisku CLR](etw-events-in-the-common-language-runtime.md)

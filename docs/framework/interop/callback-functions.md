@@ -7,27 +7,27 @@ helpviewer_keywords:
 ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65f5e11a8fb40527387c14cdd8dec7f0bfc5c697
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb30e7daed938b14bd0d936352c7455db6975e73
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643705"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051908"
 ---
 # <a name="callback-functions"></a>Funkcje wywołania zwrotnego
-Funkcja wywołania zwrotnego jest kod w zarządzanej aplikacji, która pomaga niezarządzanych funkcji DLL ukończenia zadania. Wywołania do funkcji wywołania zwrotnego przekazać pośrednio z aplikacji zarządzanych, za pomocą funkcji DLL i z powrotem do zarządzaną implementację. Niektóre z wielu funkcji DLL o nazwie z platformą wywołania wymagają funkcji wywołania zwrotnego w kodzie zarządzanym działać prawidłowo.  
+Funkcja wywołania zwrotnego jest kodem w aplikacji zarządzanej, która ułatwia wykonywanie zadania przez niezarządzaną funkcję DLL. Wywołania funkcji wywołania zwrotnego są przekazywane pośrednio z aplikacji zarządzanej za pośrednictwem funkcji DLL i z powrotem do zarządzanej implementacji. Niektóre z wielu funkcji DLL wywoływanych za pomocą wywołania platformy wymagają poprawnego działania funkcji wywołania zwrotnego w kodzie zarządzanym.  
   
- Aby wywołać większość funkcji DLL z kodu zarządzanego, tworzenie zarządzanych definicji funkcji, a następnie wywołać ją. Ten proces jest bardzo proste.  
+ Aby wywołać większość funkcji DLL z kodu zarządzanego, należy utworzyć zarządzaną definicję funkcji, a następnie wywołać ją. Proces jest prosty.  
   
- Za pomocą funkcji biblioteki DLL, która wymaga funkcji wywołania zwrotnego ma kilka dodatkowych kroków. Najpierw należy określić, czy funkcja wymaga wywołania zwrotnego, analizując w dokumentacji dotyczącej funkcji. Następnie należy utworzyć funkcję wywołania zwrotnego w zarządzanej aplikacji. Na koniec wywołania funkcji DLL przekazywania wskaźnika do funkcji wywołania zwrotnego jako argument. 
+ Użycie funkcji DLL, która wymaga funkcji wywołania zwrotnego, zawiera kilka dodatkowych kroków. Najpierw należy określić, czy funkcja wymaga wywołania zwrotnego, przeglądając dokumentację funkcji. Następnie musisz utworzyć funkcję wywołania zwrotnego w aplikacji zarządzanej. Na koniec należy wywołać funkcję DLL, przekazując wskaźnik do funkcji wywołania zwrotnego jako argument. 
  
- Poniższa ilustracja zawiera podsumowanie kroków funkcji i implementacji wywołania zwrotnego:  
+ Poniższa ilustracja zawiera podsumowanie funkcji wywołania zwrotnego i kroków implementacji:  
   
- ![Diagram przedstawiający platformy wywołania zwrotnego procesu.](./media/callback-functions/platform-invoke-callback-process.gif)  
+ ![Diagram przedstawiający proces wywołania zwrotnego platformy.](./media/callback-functions/platform-invoke-callback-process.gif)  
   
- Funkcje wywołania zwrotnego to idealne rozwiązanie w sytuacjach, w których zadanie jest wykonywane wielokrotnie. Inny wspólne użycie jest przy użyciu funkcji wyliczania, takich jak **EnumFontFamilies**, **EnumPrinters**, i **EnumWindows** w interfejsie API Windows. **EnumWindows** funkcja wylicza wszystkie istniejące systemu windows na komputerze, w wywołaniu funkcji wywołania zwrotnego do wykonywania zadań na każde okno. Aby uzyskać instrukcje i przykłady, zobacz [jak: Implementowanie funkcji wywołania zwrotnego](../../../docs/framework/interop/how-to-implement-callback-functions.md).  
+ Funkcje wywołania zwrotnego są idealne do użycia w sytuacjach, w których zadanie jest wykonywane wielokrotnie. Innym typowym użyciem jest z funkcjami wyliczania, takimi jak **EnumFontFamilies**, **EnumPrinters**i **EnumWindows** w interfejsie API systemu Windows. Funkcja **EnumWindows** wylicza wszystkie istniejące okna na komputerze, wywołując funkcję wywołania zwrotnego do wykonania zadania w poszczególnych oknach. Aby uzyskać instrukcje i przykład, zobacz [How to: Implementowanie funkcji](how-to-implement-callback-functions.md)wywołania zwrotnego.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Implementowanie funkcji wywołania zwrotnego](../../../docs/framework/interop/how-to-implement-callback-functions.md)
-- [Wywołanie funkcji DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+- [Instrukcje: Implementowanie funkcji wywołania zwrotnego](how-to-implement-callback-functions.md)
+- [Wywołanie funkcji DLL](calling-a-dll-function.md)

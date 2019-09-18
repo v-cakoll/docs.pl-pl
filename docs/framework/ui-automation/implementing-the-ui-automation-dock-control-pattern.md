@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dock control pattern
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-ms.openlocfilehash: 9bc4f80569dc2bab68e3f65c9e99df72df372171
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b72d7f9a68c2309f2bd1a73741ac621cde1f3115
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968905"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043472"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>Implementacja wzorca formantu dokowania automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -19,9 +19,9 @@ ms.locfileid: "69968905"
   
  W tym temacie przedstawiono wskazówki i konwencje <xref:System.Windows.Automation.Provider.IDockProvider>dotyczące wdrażania, w tym informacje o właściwościach. Linki do dodatkowych odwołań znajdują się na końcu tematu.  
   
- Wzorzec <xref:System.Windows.Automation.DockPattern> kontrolki służy do uwidaczniania właściwości dokowania kontrolki wewnątrz kontenera dokowania. Kontener dokowania jest formantem, który umożliwia rozmieszczenie elementów podrzędnych w poziomie i w pionie względem siebie. Aby zapoznać się z przykładami formantów implementujących ten wzorzec kontrolek, zobacz [Mapowanie wzorców formantów dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ Wzorzec <xref:System.Windows.Automation.DockPattern> kontrolki służy do uwidaczniania właściwości dokowania kontrolki wewnątrz kontenera dokowania. Kontener dokowania jest formantem, który umożliwia rozmieszczenie elementów podrzędnych w poziomie i w pionie względem siebie. Aby zapoznać się z przykładami formantów implementujących ten wzorzec kontrolek, zobacz [Mapowanie wzorców formantów dla klientów automatyzacji interfejsu użytkownika](control-pattern-mapping-for-ui-automation-clients.md).  
   
- ![Dokowanie kontenera z dwoma zadokowanymi elementami podrzędnymi.](../../../docs/framework/ui-automation/media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
+ ![Dokowanie kontenera z dwoma zadokowanymi elementami podrzędnymi.](./media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
 Przykład dokowania z programu Visual Studio, w którym znajduje się okno "Widok klasy". DockPosition. Right i okno "Lista błędów" to DockPosition. Bottom  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
@@ -57,8 +57,8 @@ Przykład dokowania z programu Visual Studio, w którym znajduje się okno "Wido
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Obsługa wzorców kontrolek dostawcy automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [Wzorce kontrolek automatyzacji interfejsu użytkownika dla klientów](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Przegląd drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Używanie buforowania w automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie](ui-automation-control-patterns-overview.md)
+- [Obsługa wzorców kontrolek dostawcy automatyzacji interfejsu użytkownika](support-control-patterns-in-a-ui-automation-provider.md)
+- [Wzorce kontrolek automatyzacji interfejsu użytkownika dla klientów](ui-automation-control-patterns-for-clients.md)
+- [Przegląd drzewa automatyzacji interfejsu użytkownika](ui-automation-tree-overview.md)
+- [Używanie buforowania w automatyzacji interfejsu użytkownika](use-caching-in-ui-automation.md)

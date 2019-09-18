@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 410f95b373e079fe959068a6540642a6ad043e95
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 22e1ae495276b0c474ad47f695d8410288289f83
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952821"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053725"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Co nowego w ułatwieniach dostępu w .NET Framework
 
@@ -169,7 +169,7 @@ W aplikacjach, które są przeznaczone .NET Framework 4.7.2 i starszych wersji, 
 
 Na poniższej ilustracji przedstawiono etykietkę narzędzia, gdy użytkownik wybierze przycisk z klawiaturą.
 
-![Etykietka narzędzia, gdy użytkownik przechodzi do przycisku przy użyciu klawiatury](media/tooltip.png)
+![Etykietka narzędzia, gdy użytkownik przechodzi do przycisku przy użyciu klawiatury](./media/tooltip.png)
 
 <a name="wpf48" />
 
@@ -189,7 +189,7 @@ W .NET Framework 4.7.2, WPF dodaliśmy możliwość rysowania <xref:System.Windo
 
 Aby użyć tej właściwości, wystarczy dodać ją do kodu XAML i użyć odpowiedniego pędzla lub powiązania. Wynikowy wybór tekstu wygląda następująco:
 
-![Etykietka narzędzia, gdy użytkownik przechodzi do przycisku przy użyciu klawiatury](media/selectiontextbrush-property.png)
+![Etykietka narzędzia, gdy użytkownik przechodzi do przycisku przy użyciu klawiatury](./media/selectiontextbrush-property.png)
 
 Można połączyć użycie `SelectionBrush` właściwości i `SelectionTextBrush` , aby wygenerować wszelkie kombinacje kolorów tła i pierwszego planu, które są uważane za odpowiednie.
 
@@ -482,77 +482,77 @@ Począwszy od .NET Framework 4.7.1, wprowadzono ulepszenia w różnych kontrolka
 
   Przed: 
 
-  ![Kontrolka ekspandera z fokusem przed udoskonaleniami ułatwień dostępu](media/expander-before.png)
+  ![Kontrolka ekspandera z fokusem przed udoskonaleniami ułatwień dostępu](./media/expander-before.png)
 
   Otrzyma 
 
-  ![Kontrolka ekspandera z fokusem po udoskonaleniach ułatwień dostępu](media/expander-after.png)
+  ![Kontrolka ekspandera z fokusem po udoskonaleniach ułatwień dostępu](./media/expander-after.png)
 
 - <xref:System.Windows.Controls.CheckBox>i <xref:System.Windows.Controls.RadioButton> kontrolki
 
-  Tekst w <xref:System.Windows.Controls.CheckBox> kontrolkach i <xref:System.Windows.Controls.RadioButton> jest teraz łatwiejszy do sprawdzenia, gdy wybrane są motywy o dużym kontraście. Przykład:
+  Tekst w <xref:System.Windows.Controls.CheckBox> kontrolkach i <xref:System.Windows.Controls.RadioButton> jest teraz łatwiejszy do sprawdzenia, gdy wybrane są motywy o dużym kontraście. Na przykład:
 
   Przed: 
 
-  ![Przycisk radiowy o dużym kontraście z fokusem przed udoskonaleniami ułatwień dostępu](media/radio-button-before.png)
+  ![Przycisk radiowy o dużym kontraście z fokusem przed udoskonaleniami ułatwień dostępu](./media/radio-button-before.png)
 
   Otrzyma 
 
-  ![Przycisk radiowy o dużym kontraście z fokusem po ulepszeniach ułatwień dostępu](media/radio-button-after.png)
+  ![Przycisk radiowy o dużym kontraście z fokusem po ulepszeniach ułatwień dostępu](./media/radio-button-after.png)
 
 - <xref:System.Windows.Controls.ComboBox>kontroli
 
-  Począwszy od .NET Framework 4.7.1, obramowanie wyłączonej <xref:System.Windows.Controls.ComboBox> kontrolki ma taki sam kolor jak wyłączony tekst. Na przykład:
+  Począwszy od .NET Framework 4.7.1, obramowanie wyłączonej <xref:System.Windows.Controls.ComboBox> kontrolki ma taki sam kolor jak wyłączony tekst. Przykład:
 
   Przed: 
 
-  ![Pole kombi wyłączone obramowanie i tekst przed ulepszeniem ułatwień dostępu](media/combo-disabled-before.png)
+  ![Pole kombi wyłączone obramowanie i tekst przed ulepszeniem ułatwień dostępu](./media/combo-disabled-before.png)
 
   Otrzyma   
 
-  ![Pole kombi wyłączone obramowanie i tekst po udoskonaleniach ułatwień dostępu](media/combo-disabled-after.png)
+  ![Pole kombi wyłączone obramowanie i tekst po udoskonaleniach ułatwień dostępu](./media/combo-disabled-after.png)
 
   Ponadto przyciski wyłączone i priorytetowe używają poprawnego koloru motywu.
 
   Przed:
 
-  ![Kolory motywu przycisków przed ulepszeniami ułatwień dostępu](media/button-themes-before.png) 
+  ![Kolory motywu przycisków przed ulepszeniami ułatwień dostępu](./media/button-themes-before.png) 
 
   Otrzyma 
 
-  ![Kolory motywu przycisków po ulepszeniach ułatwień dostępu](media/button-themes-after.png) 
+  ![Kolory motywu przycisków po ulepszeniach ułatwień dostępu](./media/button-themes-after.png) 
 
   Na koniec, w .NET Framework 4,7 i wcześniejszych wersjach, ustawienie <xref:System.Windows.Controls.ComboBox> stylu kontrolki tak `Toolbar.ComboBoxStyleKey` , aby powodowała, że strzałka listy rozwijanej ma być niewidoczna. Ten problem został rozwiązany, rozpoczynając od .NET Framework 4.7.1. Na przykład:
 
   Przed: 
 
-  ![Pasek narzędzi. ComboBoxStyleKey przed udoskonaleniami ułatwień dostępu](media/comboboxstylekey-before.png) 
+  ![Pasek narzędzi. ComboBoxStyleKey przed udoskonaleniami ułatwień dostępu](./media/comboboxstylekey-before.png) 
 
   Otrzyma 
 
-  ![Pasek narzędzi. ComboBoxStyleKey po udoskonaleniach ułatwień dostępu](media/comboboxstylekey-after.png) 
+  ![Pasek narzędzi. ComboBoxStyleKey po udoskonaleniach ułatwień dostępu](./media/comboboxstylekey-after.png) 
 
 - <xref:System.Windows.Controls.DataGrid>kontroli
 
-  Począwszy od .NET Framework 4.7.1, strzałka sortowania w <xref:System.Windows.Controls.DataGrid> kontrolkach używa teraz poprawnych kolorów motywu. Przykład:
+  Począwszy od .NET Framework 4.7.1, strzałka sortowania w <xref:System.Windows.Controls.DataGrid> kontrolkach używa teraz poprawnych kolorów motywu. Na przykład:
 
   Przed: 
 
-  ![Sortuj strzałkę wskaźnika przed ulepszeniami ułatwień dostępu](media/sort-indicator-before.png) 
+  ![Sortuj strzałkę wskaźnika przed ulepszeniami ułatwień dostępu](./media/sort-indicator-before.png) 
 
   Otrzyma   
 
-  ![Sortuj strzałkę wskaźnika po udoskonaleniach ułatwień dostępu](media/sort-indicator-after.png) 
+  ![Sortuj strzałkę wskaźnika po udoskonaleniach ułatwień dostępu](./media/sort-indicator-after.png) 
 
   Ponadto w .NET Framework 4,7 i wcześniejszych wersjach domyślny styl łącza został zmieniony na nieprawidłowy kolor na przycisku myszy nad trybem dużego kontrastu. Jest to rozwiązane, rozpoczynając od .NET Framework 4.7.1. Podobnie kolumny <xref:System.Windows.Controls.DataGrid> CheckBox używają oczekiwanych kolorów dla opinii o fokusie klawiatury, zaczynając od .NET Framework 4.7.1.
 
   Przed: 
 
-  ![Domyślny styl linku DataGrid przed ulepszeniami ułatwień dostępu](media/default-link-style-before.png) 
+  ![Domyślny styl linku DataGrid przed ulepszeniami ułatwień dostępu](./media/default-link-style-before.png) 
 
   Otrzyma    
 
-  ![Domyślny styl linku DataGrid po ulepszeniach ułatwień dostępu](media/default-link-style-after.png) 
+  ![Domyślny styl linku DataGrid po ulepszeniach ułatwień dostępu](./media/default-link-style-after.png) 
 
 Aby uzyskać więcej informacji na temat ulepszeń ułatwień dostępu WPF w .NET Framework 4.7.1, zobacz [ulepszenia ułatwień dostępu w programie WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
@@ -579,15 +579,15 @@ Niektóre przykłady zmian wysokiego kontrastu obejmują:
 
 - Tekst w wybranym <xref:System.Windows.Forms.Button> formancie różni się od koloru zaznaczenia.
 
-- Wyłączony tekst jest łatwiejszy do odczytania. Przykład:
+- Wyłączony tekst jest łatwiejszy do odczytania. Na przykład:
 
   Przed:
 
-  ![Wyłączony tekst przed udoskonaleniami ułatwień dostępu](media/wf-disabled-before.png) 
+  ![Wyłączony tekst przed udoskonaleniami ułatwień dostępu](./media/wf-disabled-before.png) 
 
   Otrzyma
 
-  ![Wyłączony tekst po udoskonaleniach ułatwień dostępu](media/wf-disabled-after.png) 
+  ![Wyłączony tekst po udoskonaleniach ułatwień dostępu](./media/wf-disabled-after.png) 
 
 - Ulepszenia dużego kontrastu w oknie dialogowym wyjątku wątku.
 

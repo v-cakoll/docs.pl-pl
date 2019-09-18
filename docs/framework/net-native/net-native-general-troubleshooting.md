@@ -4,45 +4,45 @@ ms.date: 03/30/2017
 ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9599ee25e77bf6f44e5c6733deed8dc23fc0d022
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: ea5f61b0e250c4f51a966bc60959f7559d8e2fe2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662324"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049400"
 ---
 # <a name="net-native-general-troubleshooting"></a>Ogólne wskazówki dotyczące rozwiązywania problemów z architekturą .NET Native
 
-W tym temacie opisano sposób rozwiązywania potencjalnych problemów, które można napotkać podczas tworzenia aplikacji przy użyciu platformy .NET Native.
+W tym temacie opisano sposób rozwiązywania potencjalnych problemów, które mogą wystąpić podczas opracowywania aplikacji z .NET Native.
 
-- **Problem:** Okno danych wyjściowych kompilacji nie są prawidłowo aktualizowane.
+- **Wykonaj** Okno dane wyjściowe kompilacji nie zostało prawidłowo zaktualizowane.
 
-  **Rozwiązanie:** W oknie danych wyjściowych kompilacji nie są aktualizowane, do momentu ukończenia kompilacji. Czasy kompilacji może pochodzić maksymalnie kilka minut, więc mogą wystąpić opóźnienia w widzisz aktualizacji.
+  **Tłumaczenia** Okno dane wyjściowe kompilacji nie jest aktualizowane, dopóki kompilacja nie zostanie ukończona. Czasy kompilacji mogą przypadać do kilku minut, więc może wystąpić opóźnienie wyświetlania aktualizacji.
 
-- **Problem:** Został zwiększony czas kompilacji detalicznej Twojej aplikacji dla ARM.
+- **Wykonaj** Czas kompilacji detalicznej aplikacji dla platformy ARM wzrósł.
 
-  **Rozwiązanie:** Gdy wdrażasz aplikację z urządzeniem ARM, jest wywoływana infrastrukturę programu .NET Native. Tej kompilacji wykonuje dużej liczby optymalizacje przy jednoczesnym zapewnieniu tej semantyki niestatyczna, takich jak odbicie w dalszym ciągu działać. Ponadto część .NET Framework, która aplikacja używa statycznie połączone w celu uzyskania optymalnej wydajności i musi być kompilowane do kodu macierzystego, jak również. Jest to, dlaczego Kompilacja trwa dłużej.
+  **Tłumaczenia** Po wdrożeniu aplikacji na urządzeniu ARM zostanie wywołana infrastruktura .NET Native. Ta kompilacja wykonuje dużą liczbę optymalizacji przy jednoczesnym zapewnieniu, że niestatyczna semantyka, taka jak odbicie nadal działa. Ponadto część .NET Framework, z której korzysta aplikacja, jest statycznie połączona w celu uzyskania optymalnej wydajności i musi być również skompilowana w kodzie natywnym. To właśnie kompilacja trwa dłużej.
 
-  Czasy kompilacji są jednak nadal w ciągu minuty kompilacji standardowych dla większości aplikacji na maszynie deweloperskiej standardowych.  Po prostu generowanie obrazów macierzystych na platformie .NET na maszynie deweloperskiej standardowych zazwyczaj trwa kilka minut.  Nawet w przypadku wszystkich optymalizacji usprawniających wygenerowany kod i za pomocą programu .NET Framework w tym aplikacji, czasy kompilacji są zazwyczaj minutę lub dwie.
+  Czasy kompilacji są jednak nadal w ciągu minuty standardowej kompilacji dla większości aplikacji na standardowej maszynie programistycznej.  Zwykle generowanie obrazów natywnych dla .NET Framework na standardowej maszynie deweloperskiej trwa kilka minut.  Nawet w przypadku wszystkich optymalizacji w celu poprawienia wygenerowanego kodu i uwzględnienia .NET Framework czasy kompilacji aplikacji są zwykle minuty lub dwa.
 
-  Kontynuujemy pracę nad poprawa wydajności kompilacji, badając wielowątkowych kompilacji i inne optymalizacje.
+  Kontynuujemy pracę nad ulepszaniem wydajności kompilacji, badając kompilacje wielowątkowe i inne optymalizacje.
 
-- **Problem:** Nie wiem, jeśli aplikacja został skompilowany przy użyciu platformy .NET Native.
+- **Wykonaj** Nie wiesz, czy Twoja aplikacja została skompilowana przy użyciu .NET Native.
 
-  **Rozwiązanie:** Wywoływany jest kompilator platformy .NET Native, można zauważyć, że różne procesy składnik .NET Native, takie jak ILC.exe i nutc_driver.exe będzie wyświetlana dłuższe czasy kompilacji i Menedżera zadań.
+  **Tłumaczenia** Jeśli kompilator .NET Native jest wywoływany, zobaczysz dłuższe czasy kompilacji, a Menedżer zadań będzie wyświetlał różne .NET Native procesy składników, takie jak ILC {0}. exe i nutc_driver. exe.
 
-  Po pomyślnie skompilować projekt przy użyciu platformy .NET Native, znajdują się dane wyjściowe w obszarze obj\\*config*\ *arch*\\*projectname*. ilc\out.  Zawartość pakietu natywnej końcowego można znaleźć w bin\\*arch*\\*config*\AppX. Zawartość pakietu natywnej końcowego podlegają \bin\\*arch*\\*config*\AppX Jeśli aplikacja została wdrożona.
+  Po pomyślnym skompilowaniu projektu przy użyciu .NET Native można znaleźć dane wyjściowe w obszarze\\\ \\*ProjectName*. ilc\out.  Ostateczną zawartość pakietu natywnego można znaleźć w sekcji bin\\*Arch*\\*config*\AppX. Końcowa zawartość pakietu natywnego znajduje się\\w obszarze\\\AppX*pliku konfiguracji*, jeśli aplikacja została wdrożona.
 
-- **Problem:** Aplikacja platformy .NET Native skompilowany zgłasza wyjątki środowiska uruchomieniowego (zazwyczaj [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) lub [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) wyjątki), nie generują kiedy skompilowany bez. NET Native.
+- **Wykonaj** Aplikacja skompilowana przez .NET Native ma zgłaszać wyjątki środowiska uruchomieniowego (zazwyczaj wyjątki [MissingMetadataException](missingmetadataexception-class-net-native.md) lub [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) ), które nie zostały wyrzucane podczas kompilacji bez .NET Native.
 
-  **Rozwiązanie:** Wyjątki są zgłaszane, ponieważ .NET Native nie dostarczył metadanych lub kod implementacji, który jest dostępny za pośrednictwem odbicia. (Aby uzyskać więcej informacji, zobacz [.NET Native i kompilacja](../../../docs/framework/net-native/net-native-and-compilation.md).) Aby wyeliminować wyjątek, należy dodać wpis do swojej [środowiska uruchomieniowego (rd.xml) dyrektywy pliku](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) tak, aby .NET Native łańcucha narzędzi można udostępnić metadanych lub wykonania kodu w czasie wykonywania. Dostępne są dwa narzędzia do rozwiązywania problemów, spowoduje wygenerowanie niezbędnych wpis, aby dodać do pliku dyrektyw środowiska uruchomieniowego:
+  **Tłumaczenia** Wyjątki są zgłaszane, ponieważ .NET Native nie dostarczył metadanych lub kodu implementacji, który jest w inny sposób dostępny w wyniku odbicia. (Aby uzyskać więcej informacji, zobacz [.NET Native i kompilacja](net-native-and-compilation.md)). Aby wyeliminować wyjątek, należy dodać wpis do [pliku dyrektywy środowiska uruchomieniowego (RD. xml)](runtime-directives-rd-xml-configuration-file-reference.md) , dzięki czemu łańcuch narzędzi .NET Native może sprawić, że metadane lub kod implementacji będą dostępne w czasie wykonywania. Dostępne są dwa narzędzia do rozwiązywania problemów, które spowodują wygenerowanie niezbędnego wpisu do dodania do pliku dyrektywy środowiska uruchomieniowego:
 
-  - [MissingMetadataException narzędzia do rozwiązywania problemów](https://dotnet.github.io/native/troubleshooter/type.html) dla typów.
+  - [Narzędzie do rozwiązywania problemów z MissingMetadataException](https://dotnet.github.io/native/troubleshooter/type.html) dla typów.
 
-  - [MissingMetadataException narzędzia do rozwiązywania problemów](https://dotnet.github.io/native/troubleshooter/method.html) dla metod.
+  - [Narzędzie do rozwiązywania problemów z MissingMetadataException](https://dotnet.github.io/native/troubleshooter/method.html) .
 
-  Aby uzyskać więcej informacji, zobacz [odbicia i platforma .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md).
+  Aby uzyskać więcej informacji, zobacz [odbicie i .NET Native](reflection-and-net-native.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Migrowanie aplikacji ze Sklepu Windows do architektury .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
+- [Migrowanie aplikacji ze Sklepu Windows do architektury .NET Native](migrating-your-windows-store-app-to-net-native.md)

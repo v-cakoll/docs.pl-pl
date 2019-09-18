@@ -2,12 +2,12 @@
 title: Wdrażanie usługi WCF hostowanej przez Internetowe usługi informacyjne
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 95c56f767bbe8dce44ea742de00c65c357bd1378
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e46bcec846fcc8f9455c436bb551564e1cb5b5ea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895111"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053310"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Wdrażanie usługi WCF hostowanej przez Internetowe usługi informacyjne
 
@@ -29,7 +29,7 @@ Szczegółowy przewodnik dotyczący tworzenia usługi WCF hostowanej przez usłu
 
 Do poprawnego działania usług WCF hostowanych przez usługi IIS należy zainstalować usługi WCF, IIS i ASP.NET. Procedury instalacji WCF (w ramach .NET Framework), ASP.NET i IIS różnią się w zależności od używanego systemu operacyjnego. Aby uzyskać więcej informacji na temat instalowania programu WCF i .NET Framework, zobacz [instalowanie .NET Framework dla deweloperów](../../install/guide-for-developers.md). Aby zainstalować usługi IIS w systemie Windows 10, Otwórz aplet **programy i funkcje** w **Panelu sterowania** , a następnie wybierz opcję **Włącz lub wyłącz funkcje systemu Windows**. W obszarze **funkcje systemu Windows**wybierz pozycję **Internet Information Services** a następnie wybierz przycisk **OK**.
 
-![Funkcje systemu Windows z wyróżnionymi usługami IIS](media/windows-features-iis.png)
+![Funkcje systemu Windows z wyróżnionymi usługami IIS](./media/windows-features-iis.png)
 
 Instrukcje dotyczące instalowania usług IIS w innych systemach operacyjnych znajdują się w [tematach Instalowanie usług IIS w systemach Windows Vista i Windows 7](/iis/install/installing-iis-7/installing-iis-on-windows-vista-and-windows-7) oraz [instalowanie usług IIS 8,5 w systemie Windows Server 2012 R2](/iis/install/installing-iis-85/installing-iis-85-on-windows-server-2012-r2).
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c5033b32c1623885b5408f428ce4bc4202d50ce1
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9a8d41228c46de0f18b5a92def0591d6373d3d69
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894627"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044098"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS. dll (rozszerzenie debugowania SOS)
 
@@ -74,7 +74,7 @@ Rozszerzenie debugowania SOS (SOS. dll) ułatwia debugowanie programów zarządz
 |**IP2MD** \< *Adres kodu*>|`MethodDesc` Wyświetla strukturę pod określonym adresem w kodzie, który został skompilowany w trybie JIT.|
 |`ListNearObj`(`lno` *) obj_address\<>*|Wyświetla obiekty poprzedzające i następujące po określonym adresie. Polecenie wyszukuje adres w stercie modułu odśmiecania pamięci podobny do prawidłowego początku obiektu zarządzanego (na podstawie prawidłowej metody tabel) i obiektu następującego po adresie argumentu.|
 |**MinidumpMode** [**0**] [**1**]|Uniemożliwia uruchamianie poleceń niebezpiecznych podczas używania minizrzutu.<br /><br /> Przekaż **wartość 0** , aby wyłączyć tę funkcję lub **1** , aby włączyć tę funkcję. Domyślnie wartość **MinidumpMode** jest równa **0**.<br /><br /> Minizrzutów utworzony za pomocą polecenia **. dump/m** lub polecenia **. dump** mają ograniczone dane specyficzne dla środowiska CLR i umożliwiają poprawne uruchamianie tylko podzbioru poleceń sos. Niektóre polecenia mogą zakończyć się nieoczekiwanym błędem, ponieważ wymagane obszary pamięci nie są mapowane lub są tylko częściowo mapowane. Ta opcja chroni przed uruchamianiem poleceń niebezpiecznych w stosunku do minizrzutów.|
-|**Name2EE** \<typ nazwymodułulub> *Nazwa metody*\<><br /><br /> —lub—<br /><br /> **Name2EE** \< nazwamodułu>! *Typ lub nazwa metody* \<>|Wyświetla strukturę i `EEClass` strukturę określonego typu lub metody w określonym module. `MethodTable`<br /><br /> Określony moduł musi zostać załadowany w procesie.<br /><br /> Aby uzyskać poprawną nazwę typu, przejrzyj moduł przy użyciu [Ildasm. exe (Il dezasembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md). Możesz również przekazać `*` jako parametr nazwy modułu, aby przeszukać wszystkie załadowane moduły zarządzane. Parametr *name modułu* może być również nazwą debugera dla modułu, taką jak `mscorlib` lub. `image00400000`<br /><br /> To polecenie obsługuje składnię debugera systemu Windows <`module`<>`!``type`>. Typ musi być w pełni kwalifikowany.|
+|**Name2EE** \<typ nazwymodułulub> *Nazwa metody*\<><br /><br /> —lub—<br /><br /> **Name2EE** \< nazwamodułu>! *Typ lub nazwa metody* \<>|Wyświetla strukturę i `EEClass` strukturę określonego typu lub metody w określonym module. `MethodTable`<br /><br /> Określony moduł musi zostać załadowany w procesie.<br /><br /> Aby uzyskać poprawną nazwę typu, przejrzyj moduł przy użyciu [Ildasm. exe (Il dezasembler)](ildasm-exe-il-disassembler.md). Możesz również przekazać `*` jako parametr nazwy modułu, aby przeszukać wszystkie załadowane moduły zarządzane. Parametr *name modułu* może być również nazwą debugera dla modułu, taką jak `mscorlib` lub. `image00400000`<br /><br /> To polecenie obsługuje składnię debugera systemu Windows <`module`<>`!``type`>. Typ musi być w pełni kwalifikowany.|
 |**ObjSize** [\<*Object address*>] &#124; [ **-aggregate**] [ **-stat**]|Wyświetla rozmiar określonego obiektu. Jeśli nie określisz żadnych parametrów, polecenie **ObjSize** Wyświetla rozmiar wszystkich obiektów znalezionych w zarządzanych wątkach, wyświetla wszystkie uchwyty modułu wyrzucania elementów bezużytecznych w procesie i sumuje rozmiar wszystkich obiektów wskazywanych przez te uchwyty. **ObjSize** polecenie zawiera rozmiar wszystkich obiektów podrzędnych oprócz elementu nadrzędnego.<br /><br /> Opcja **-Aggregate** może być używana w połączeniu z argumentem **-stat** , aby uzyskać szczegółowy widok typów, które są nadal odblokowane. Za pomocą **! DumpHeap-stat** i **! ObjSize-Aggregate-stat**, można określić, które obiekty nie są już w katalogu głównym, i diagnozować różne problemy z pamięcią.|
 |**PrintException** [ **-nested**] [ **-linie**] [\<*Adres obiektu wyjątku*>]<br /><br /> —lub—<br /><br /> **Środowisko PE** [ **-nested**] [\<*Adres obiektu wyjątku*>]|Wyświetla i formatuje pola dowolnego obiektu pochodnego od <xref:System.Exception> klasy pod określonym adresem. Jeśli nie określisz adresu, polecenie **PrintException** wyświetli ostatni wyjątek zgłoszony w bieżącym wątku.<br /><br /> Opcja **-nested** wyświetla szczegóły dotyczące zagnieżdżonych obiektów wyjątków.<br /><br /> Opcja **-wierszy** wyświetla informacje o źródle, jeśli są dostępne.<br /><br /> To polecenie służy do formatowania i wyświetlania `_stackTrace` pola, które jest tablicą binarną.|
 |**ProcInfo** [ **-ENV**] [ **-Time**] [ **-MEM**]|Wyświetla zmienne środowiskowe dla procesu, czasu procesora dla jądra i statystyki użycia pamięci.|
@@ -206,5 +206,5 @@ Następujące polecenie wyświetla informacje o tokenie metadanych pod adresem `
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Narzędzia](../../../docs/framework/tools/index.md)
-- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Narzędzia](index.md)
+- [Wiersze polecenia](developer-command-prompt-for-vs.md)

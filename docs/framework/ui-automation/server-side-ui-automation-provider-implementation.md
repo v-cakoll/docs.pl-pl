@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 5fd17f9ca9d83ab3b226ce9fc0a4aebca4f9352a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: eb7156e0e2794fb7cb18e7bfce0e8488d0b145c3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044160"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042763"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie serwera
 
@@ -34,7 +34,7 @@ W szczególności nie należy używać pól z klas w UIAutomationClient. dll, ta
 
 ## <a name="provider-implementation-by-windows-presentation-foundation-elements"></a>Implementacja dostawcy przez Windows Presentation Foundation elementy
 
-Aby uzyskać więcej informacji na temat tego tematu, zobacz [Automatyzacja interfejsu użytkownika dla kontrolki NIESTANDARDOWEJ WPF](../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md).
+Aby uzyskać więcej informacji na temat tego tematu, zobacz [Automatyzacja interfejsu użytkownika dla kontrolki NIESTANDARDOWEJ WPF](../wpf/controls/ui-automation-of-a-wpf-custom-control.md).
 
 <a name="Provider_Implementation_by_non_WPF_Elements"></a>
 
@@ -121,7 +121,7 @@ Dostawcy formantów opartych na HWND nie muszą zazwyczaj podawać następujący
 >
 > <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> Jest zazwyczaj dostarczany przez dostawcę hosta. Na przykład, Jeśli kontrolka niestandardowa pochodzi <xref:System.Windows.Forms.Control>od, nazwa pochodzi `Text` od właściwości formantu.
 
-Na przykład kod, zobacz [zwracają właściwości z dostawcy automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md).
+Na przykład kod, zobacz [zwracają właściwości z dostawcy automatyzacji interfejsu użytkownika](return-properties-from-a-ui-automation-provider.md).
 
 <a name="Events_in_Non_WPF_Providers"></a>
 
@@ -191,9 +191,9 @@ Aby to osiągnąć, główny dostawca fragmentów dla paska pomocniczego uwidacz
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd dostawców automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [Udostępnianie dostawcy automatyzacji interfejsu użytkownika po stronie serwera](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
-- [Zwracanie właściwości od dostawcy automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
-- [Wywoływanie zdarzeń od dostawcy automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
-- [Włączanie nawigacji w dostawcy fragmentu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
-- [Obsługa wzorców kontrolek dostawcy automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Przegląd dostawców automatyzacji interfejsu użytkownika](ui-automation-providers-overview.md)
+- [Udostępnianie dostawcy automatyzacji interfejsu użytkownika po stronie serwera](expose-a-server-side-ui-automation-provider.md)
+- [Zwracanie właściwości od dostawcy automatyzacji interfejsu użytkownika](return-properties-from-a-ui-automation-provider.md)
+- [Wywoływanie zdarzeń od dostawcy automatyzacji interfejsu użytkownika](raise-events-from-a-ui-automation-provider.md)
+- [Włączanie nawigacji w dostawcy fragmentu automatyzacji interfejsu użytkownika](enable-navigation-in-a-ui-automation-fragment-provider.md)
+- [Obsługa wzorców kontrolek dostawcy automatyzacji interfejsu użytkownika](support-control-patterns-in-a-ui-automation-provider.md)

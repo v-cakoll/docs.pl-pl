@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef977206bf0d5b818cfd9779f063fbc2bd50632e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 262ee168dabafcdc0b284f1ae5528843975a7e9d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971845"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044163"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Narzędzie silnych nazw)
 Narzędzie silnych nazw (SN. exe) pomaga podpisywać zestawy o [silnych nazwach](../../standard/assembly/strong-named.md). Sn.exe dostarcza opcje do zarządzania kluczami, generowania podpisów i ich weryfikacji.  
@@ -27,7 +27,7 @@ Narzędzie silnych nazw (SN. exe) pomaga podpisywać zestawy o [silnych nazwach]
 
  Aby uzyskać więcej informacji na temat silnych nazw i zestawów o silnych nazwach, zobacz [ [zestawy o silnych nazwach](../../standard/assembly/strong-named.md) i instrukcje: Podpisz zestaw silną nazwą](../../standard/assembly/sign-strong-name.md).  
   
- Narzędzie silnych nazw jest automatycznie instalowane z Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Narzędzie silnych nazw jest automatycznie instalowane z Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](developer-command-prompt-for-vs.md).  
 
 > [!NOTE]
 > Na komputerach 64-bitowych Uruchom 32-bitową wersję SN. exe przy użyciu wiersz polecenia dla deweloperów dla programu Visual Studio i wersji 64-bitowej przy użyciu wiersza polecenia programu Visual Studio x64 Win64. 
@@ -55,7 +55,7 @@ sn [-quiet][option [parameter(s)]]
 |**-k** [*rozmiar rozmiaru*] *plik w pliku*|Generuje nowy <xref:System.Security.Cryptography.RSACryptoServiceProvider> klucz o określonym rozmiarze i zapisuje go w określonym pliku.  Oba klucze, publiczny i prywatny, są zapisywane do pliku.<br /><br /> Jeśli nie określono rozmiaru klucza, w przypadku gdy zainstalowany jest ulepszony dostawca kryptograficzny firmy Microsoft, domyślnie generowany jest 1024-bitowy klucz; w przeciwnym wypadku, generowany jest 512-bitowy klucz.<br /><br /> Parametr *rozmiaru* klucza obsługuje długości kluczy z 384 bitów do 16 384 bitów w przyrostach wynoszących 8 bitów, jeśli jest zainstalowany zaawansowany dostawca usług kryptograficznych firmy Microsoft.  Obsługuje on długości kluczy od 384 bitów do 512 bitów rosnąco co 8 bitów, jeśli zainstalowany jest podstawowy dostawca kryptograficzny firmy Microsoft.|  
 |**-m** [**y** *&#124;* **n**]|Określa, czy kontenery kluczy są specyficzne dla komputera, czy dla użytkownika. W przypadku określenia wartości *y*kontenery kluczy są specyficzne dla komputera. Jeśli określisz *n*, kontenery kluczy są specyficzne dla użytkownika.<br /><br /> Jeśli nie podano ani y ani n, ta opcja wyświetla bieżące ustawienie.|  
 |**-o**  *infile* [*outfile*]|Wyodrębnia klucz publiczny z *infile* i zapisuje go w pliku CSV. Poszczególne bajty klucza publicznego są rozdzielone przecinkami. Ten format jest użyteczny dla trwale zakodowanych odwołań do kluczy, takich jak zainicjowane tablice w kodzie źródłowym. Jeśli nie określisz *pliku*, ta opcja umieszcza dane wyjściowe w Schowku. **Uwaga:**  Ta opcja nie weryfikuje, czy na wejściu podano tylko klucz publiczny. `infile` Jeśli zawiera parę kluczy z kluczem prywatnym, klucz prywatny również zostanie wyodrębniony.|  
-|**-p** *plik infile* [*hashAlg*]|Wyodrębnia klucz publiczny z pary kluczy w *pliku infile* i zapisuje go w *pliku*, opcjonalnie używając algorytmu RSA określonego przez *hashAlg*. Ten klucz publiczny może służyć do opóźnienia podpisywania zestawu przy użyciu opcji **/delaysign +** i **/KeyFile** [konsolidatora zestawu (Al. exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Gdy zestaw jest podpisany z opóźnieniem, w czasie kompilacji ustawiany jest tylko klucz publiczny i rezerwowana jest przestrzeń w pliku na późniejsze dodanie podpisu, gdy znany będzie klucz prywatny.|  
+|**-p** *plik infile* [*hashAlg*]|Wyodrębnia klucz publiczny z pary kluczy w *pliku infile* i zapisuje go w *pliku*, opcjonalnie używając algorytmu RSA określonego przez *hashAlg*. Ten klucz publiczny może służyć do opóźnienia podpisywania zestawu przy użyciu opcji **/delaysign +** i **/KeyFile** [konsolidatora zestawu (Al. exe)](al-exe-assembly-linker.md). Gdy zestaw jest podpisany z opóźnieniem, w czasie kompilacji ustawiany jest tylko klucz publiczny i rezerwowana jest przestrzeń w pliku na późniejsze dodanie podpisu, gdy znany będzie klucz prywatny.|  
 |**-pc**  *kontenera* *outfile* [*hashalg*]|Wyodrębnia klucz publiczny z pary kluczy w *kontenerze* i zapisuje je w *pliku*. W przypadku użycia opcji *hashAlg* algorytm RSA jest używany do wyodrębniania klucza publicznego.|  
 |**-Pb** [**y** *&#124;* **n**]|Określa, czy wymuszona jest zasada obejścia silnej nazwy. Jeśli określisz wartość *y*, silne nazwy dla zestawów pełnego zaufania nie są weryfikowane po załadowaniu do pełnego zaufania <xref:System.AppDomain>. Jeśli określisz *n*, silne nazwy są weryfikowane pod kątem poprawności, ale nie dla określonej silnej nazwy. Nie <xref:System.Security.Permissions.StrongNameIdentityPermission> ma wpływu na zestawy pełnego zaufania. Musisz wykonać swoje własne sprawdzenie dopasowania silnej nazwy.<br /><br /> Jeśli nie `y` określono `n` żadnego z tych opcji, ta opcja wyświetla bieżące ustawienie. Wartość domyślna to `y`. **Uwaga:**  Na komputerach 64-bitowych należy ustawić ten parametr w każdym wystąpieniu Sn.exe, zarówno 32-bitowym, jak i 64-bitowym.|  
 |**-q** [**uiet**]|Określa tryb cichy; pomija wyświetlanie komunikatów o powodzeniu.|  
@@ -126,7 +126,7 @@ sn -d MyContainer
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Narzędzia](../../../docs/framework/tools/index.md)
-- [Al.exe (konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Narzędzia](index.md)
+- [Al.exe (konsolidator zestawów)](al-exe-assembly-linker.md)
 - [Zestawy o silnych nazwach](../../standard/assembly/strong-named.md)
-- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Wiersze polecenia](developer-command-prompt-for-vs.md)

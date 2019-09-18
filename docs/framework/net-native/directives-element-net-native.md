@@ -1,18 +1,18 @@
 ---
-title: <Directives> (Architektura .NET Native)
+title: <Directives>— Element (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cfc9dc5c8122f9b1b1696cedcd5d9a8ceead403
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9ec9a09e2fc03adbfcff0d7e69489e37da6e4a5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868591"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049883"
 ---
-# <a name="directives-element-net-native"></a>\<Dyrektywy > (architektura .NET Native)
-Element główny w każdym pliku dyrektyw środowiska uruchomieniowego dla platformy .NET Native.  
+# <a name="directives-element-net-native"></a>\<Dyrektywy > element (.NET Native)
+Element główny w każdym pliku dyrektywy środowiska uruchomieniowego dla .NET Native.  
   
  `<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">` 
   
@@ -28,21 +28,21 @@ Element główny w każdym pliku dyrektyw środowiska uruchomieniowego dla platf
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`xmlns`|Przestrzeń nazw XML. Jego wartość jest zawsze **"http://schemas.microsoft.com/netfx/2013/01/metadata"**.|  
+|`xmlns`|Przestrzeń nazw XML. Jego wartość to zawsze **"http://schemas.microsoft.com/netfx/2013/01/metadata"** .|  
   
 ## <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Aplikacji >](../../../docs/framework/net-native/application-element-net-native.md)|Służy jako kontener dla całej aplikacji, typy i składowe typu, w których metadane są dostępne w celu odbicia.|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Definiuje zestaw, w których typy podrzędne i elementy członkowskie typu wymagają metadanych w czasie wykonywania.|  
+|[\<> Aplikacji](application-element-net-native.md)|Służy jako kontener dla typów i składowych dla całej aplikacji, których metadane są dostępne do odbicia.|  
+|[\<> Biblioteki](library-element-net-native.md)|Definiuje zestaw, którego typy podrzędne i elementy członkowskie typu wymagają metadanych w czasie wykonywania.|  
   
 ## <a name="remarks"></a>Uwagi  
- Każdy plik dyrektywy środowiska uruchomieniowego może zawierać tylko jeden `<Directives>` elementu.  
+ Każdy plik dyrektywy środowiska uruchomieniowego może zawierać `<Directives>` tylko jeden element.  
   
- `<Directives>` Element może zawierać zero lub jeden [ \<aplikacji >](../../../docs/framework/net-native/application-element-net-native.md) elementu, a wartość zero, co najmniej jeden [ \<biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) elementów.  
+ Element może zawierać zero lub jeden [ \<element > aplikacji](application-element-net-native.md) oraz zero, jeden lub więcej [ \<elementów > biblioteki.](library-element-net-native.md) `<Directives>`  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementy dyrektyw środowiska uruchomieniowego](runtime-directive-elements.md)

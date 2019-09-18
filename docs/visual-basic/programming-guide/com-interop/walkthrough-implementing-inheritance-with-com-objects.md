@@ -7,12 +7,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: f632df919417c04701727be3e99eb2bf3f6ff1f7
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7cbf71d7a2bbd1e94864e785894fdea41d522486
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627036"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053335"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Przewodnik: Implementowanie dziedziczenia z obiektami COM (Visual Basic)
 
@@ -22,7 +22,7 @@ Poniższa procedura pokazuje, jak używać Visual Basic 6,0 do tworzenia obiektu
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-### <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>Aby skompilować obiekt COM, który jest używany w tym instruktażu
+## <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>Aby skompilować obiekt COM, który jest używany w tym instruktażu
 
 1. W Visual Basic 6,0 Otwórz nowy projekt biblioteki DLL ActiveX. Projekt o nazwie `Project1` jest tworzony. Ma klasę o nazwie `Class1`.
 
@@ -70,13 +70,13 @@ Poniższa procedura pokazuje, jak używać Visual Basic 6,0 do tworzenia obiektu
 10. Utwórz i zarejestruj obiekt COM, klikając pozycję **Utwórz ComObject1. dll** w menu **plik** .
 
     > [!NOTE]
-    > Chociaż można również uwidocznić klasę utworzoną za pomocą Visual Basic jako obiekt COM, nie jest to prawdziwy obiekt COM i nie można jej użyć w tym instruktażu. Aby uzyskać szczegółowe informacje, zobacz Współdziałanie [com w aplikacjach .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).
+    > Chociaż można również uwidocznić klasę utworzoną za pomocą Visual Basic jako obiekt COM, nie jest to prawdziwy obiekt COM i nie można jej użyć w tym instruktażu. Aby uzyskać szczegółowe informacje, zobacz [współdziałanie com w aplikacjach .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).
 
 ## <a name="interop-assemblies"></a>Zestawy międzyoperacyjności
 
-Poniższa procedura polega na utworzeniu zestawu międzyoperacyjnego, który działa jako Most między kodem niezarządzanym (takim jak obiekt COM) i zarządzanym przez program Visual Studio. Zestaw międzyoperacyjny, który Visual Basic tworzy obsługę wielu szczegółów pracy z obiektami COM, takimi jak *organizowanie*międzyoperacyjności, proces pakowania parametrów i zwracanie wartości na równoważne typy danych podczas przenoszenia ich do i z obiektów com. Odwołanie w Visual Basic wskazuje zestaw międzyoperacyjny, a nie rzeczywisty obiekt COM.
+Poniższa procedura polega na utworzeniu zestawu międzyoperacyjnego, który działa jako Most między kodem niezarządzanym (takim jak obiekt COM) i zarządzanym przez program Visual Studio. Zestaw międzyoperacyjny, który Visual Basic tworzy obsługę wielu szczegółów pracy z obiektami COM, takimi jak *organizowanie międzyoperacyjności*, proces pakowania parametrów i zwracanie wartości na równoważne typy danych podczas przenoszenia ich do i z obiektów com. Odwołanie w Visual Basic wskazuje zestaw międzyoperacyjny, a nie rzeczywisty obiekt COM.
 
-#### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Aby użyć obiektu COM z Visual Basic 2005 i nowszymi wersjami
+### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Aby użyć obiektu COM z Visual Basic 2005 i nowszymi wersjami
 
 1. Otwórz nowy projekt aplikacji Visual Basic systemu Windows.
 
@@ -108,7 +108,7 @@ Poniższa procedura polega na utworzeniu zestawu międzyoperacyjnego, który dzi
 
 Nowa klasa dziedziczy właściwości klasy podstawowej w obiekcie COM, przeciążuje metodę i definiuje nową metodę, aby zwiększyć klasę.
 
-#### <a name="to-test-the-inherited-class"></a>Aby przetestować dziedziczonej klasy
+### <a name="to-test-the-inherited-class"></a>Aby przetestować dziedziczonej klasy
 
 1. Dodaj przycisk do formularza startowego, a następnie kliknij go dwukrotnie, aby wyświetlić jego kod.
 

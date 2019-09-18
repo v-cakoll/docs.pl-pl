@@ -4,29 +4,29 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Clone method [WPF]
 ms.assetid: 2a6a1900-aa55-45fa-9382-241d569a2dc4
-ms.openlocfilehash: abc8a6e4780c8fe50afcf1b04f7e14aeb6452704
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cd634b4d4a88d83d425b787ed8493f9aa2504988
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949594"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053419"
 ---
 # <a name="ienumrawinputdevicclone"></a>IEnumRAWINPUTDEVIC:Clone
-Tworzy inny moduł wyliczający pierwotne urządzenia wejściowego o ten sam stan jako bieżący modułu wyliczającego do wykonywania iteracji w tej samej listy.  
+Tworzy inny nieprzetworzony moduł wyliczający urządzenia wejściowe z tym samym stanem co bieżący moduł wyliczający, aby wykonać iterację na tej samej liście.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT Clone( [out] IEnumRAWINPUTDEVICE **ppenum);  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `ppenum`  
   
- [out] Adres zmiennej danych wyjściowych, który odbiera [ienumrawinputdevice —](ienumrawinputdevice.md) wskaźnika interfejsu. Jeśli metoda zakończy się niepowodzeniem, wartość tej zmiennej danych wyjściowych jest niezdefiniowane.  
+ określoną Adres zmiennej wyjściowej, która odbiera wskaźnik interfejsu [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) . Jeśli metoda nie powiedzie się, wartość tej zmiennej wyjściowej jest niezdefiniowana.  
   
 ## <a name="property-valuereturn-value"></a>Wartość właściwości/Zwracana wartość  
- HRESULT: Ta metoda obsługuje standardowe wartości zwracane E_INVALIDARG E_OUTOFMEMORY i wartość E_UNEXPECTED.  
+ WYNIK Ta metoda obsługuje standardowe wartości zwracane E_INVALIDARG, E_OUTOFMEMORY i E_UNEXPECTED.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda umożliwia rejestrowanie punkt w kolejności wyliczenia, aby można było powrócić do tego punktu w późniejszym czasie. Obiekt wywołujący musi zwolnić ten nowy moduł wyliczający, niezależnie od pierwszego modułu wyliczającego.
+ Ta metoda umożliwia zapisanie punktu w sekwencji wyliczenia w celu powrotu do tego punktu w późniejszym czasie. Obiekt wywołujący musi zwolnić ten nowy moduł wyliczający niezależnie od pierwszego modułu wyliczającego.

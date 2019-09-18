@@ -1,21 +1,21 @@
 ---
-title: <Application> (Architektura .NET Native)
+title: <Application>— Element (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c346b23bd49abaabde9cc4adfdeb134c4267cbf8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2183a64f4e30a5188940abd5108a7ca1bddfe120
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64657183"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049931"
 ---
-# <a name="application-element-net-native"></a>\<Aplikacja > (architektura .NET Native)
-Służy jako kontener dla całej aplikacji, typy i składowe typu, którego metadanych dotyczących odbicia w czasie wykonywania oraz będzie miało zastosowanie zasad odbicia środowiska uruchomieniowego do wszystkich elementów programu w aplikacji.  
+# <a name="application-element-net-native"></a>\<> Aplikacji, element (.NET Native)
+Służy jako kontener dla typów i składowych dla całej aplikacji, których metadane są dostępne do odbicia w czasie wykonywania, i stosuje zasady odbicia środowiska uruchomieniowego do wszystkich elementów programu w aplikacji.  
   
- \<Dyrektywy > Element  
-\<Aplikacja > — Element (rd.xml)  
+ \<Dyrektywy > element  
+\<> Aplikacji — element (RD. xml)  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,61 +33,61 @@ Służy jako kontener dla całej aplikacji, typy i składowe typu, którego meta
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne. W tabeli elementów podrzędnych zasad odwołuje się do rodzaju metadanych, który ma zostać udostępnione dla elementów konkretnego programu w czasie wykonywania.  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne. W tabeli elementy podrzędne zasady odnoszą się do rodzaju metadanych, które są udostępniane dla określonych elementów programu w czasie wykonywania.  
   
 ### <a name="attributes"></a>Atrybuty  
   
 |Atrybut|Typ atrybutu|Opis|  
 |---------------|--------------------|-----------------|  
-|`Activate`|Odbicie|Atrybut opcjonalny. Kontroluje dostęp do środowiska uruchomieniowego do konstruktorów, aby włączyć aktywacji wystąpień.|  
-|`Browse`|Odbicie|Atrybut opcjonalny. Określa wykonanie zapytania dotyczącego informacji o wyliczanie typów, ale nie uwzględnia żadnych dostępu dynamicznego w czasie wykonywania.|  
-|`Dynamic`|Odbicie|Atrybut opcjonalny. Kontroluje dostęp do środowiska uruchomieniowego do wszystkich typów elementów członkowskich, konstruktorzy, metody, pola, właściwości i zdarzenia, w tym umożliwiające programowanie dynamiczne.|  
-|`Serialize`|Serializacja|Atrybut opcjonalny. Kontroluje dostęp do środowiska uruchomieniowego do konstruktorów, pola i właściwości, aby umożliwić wystąpień typu serializacji i deserializacji, biblioteki, takie jak serializator Newtonsoft JSON.|  
-|`DataContractSerializer`|Serializacja|Atrybut opcjonalny. Określa zasady do serializacji, który używa <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> klasy.|  
-|`DataContractJsonSerializer`|Serializacja|Atrybut opcjonalny. Określa zasady dla serializacji JSON, który używa <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> klasy.|  
-|`XmlSerializer`|Serializacja|Atrybut opcjonalny. Określa zasady dla serializacji XML, który używa <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> klasy.|  
-|`MarshalObject`|Usługa międzyoperacyjna|Atrybut opcjonalny. Zasady kontroli marshaling typów referencyjnych do środowiska uruchomieniowego Windows i modelu COM.|  
-|`MarshalDelegate`|Usługa międzyoperacyjna|Atrybut opcjonalny. Określa zasady kierowanie typy delegatów jako wskaźniki funkcji do kodu macierzystego.|  
-|`MarshalStructure`|Usługa międzyoperacyjna|Atrybut opcjonalny. Określa zasady marshalingu struktur do kodu macierzystego.|  
+|`Activate`|Odbicie|Atrybut opcjonalny. Kontroluje dostęp środowiska uruchomieniowego do konstruktorów, aby umożliwić aktywację wystąpień.|  
+|`Browse`|Odbicie|Atrybut opcjonalny. Kontroluje wykonywanie zapytań dotyczących informacji na temat lub wyliczanie typów, ale nie umożliwia dostępu dynamicznego w czasie wykonywania.|  
+|`Dynamic`|Odbicie|Atrybut opcjonalny. Kontroluje dostęp środowiska uruchomieniowego do wszystkich elementów członkowskich typu, takich jak konstruktory, metody, pola, właściwości i zdarzenia, aby umożliwić programowanie dynamiczne.|  
+|`Serialize`|Serializacja|Atrybut opcjonalny. Kontroluje dostęp środowiska uruchomieniowego do konstruktorów, pól i właściwości, aby umożliwić Serializowanie i deserializacja wystąpień typów przez biblioteki, takie jak serializator JSON Newtonsoft.|  
+|`DataContractSerializer`|Serializacja|Opcjonalny atrybut. Kontroluje zasady dla serializacji, która używa <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> klasy.|  
+|`DataContractJsonSerializer`|Serializacja|Opcjonalny atrybut. Kontroluje zasady dla serializacji JSON używającej <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> klasy.|  
+|`XmlSerializer`|Serializacja|Opcjonalny atrybut. Kontroluje zasady dla serializacji XML, która używa <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> klasy.|  
+|`MarshalObject`|Interop|Opcjonalny atrybut. Kontroluje zasady dotyczące organizowania typów odwołań do środowisko wykonawcze systemu Windows i COM.|  
+|`MarshalDelegate`|Interop|Opcjonalny atrybut. Steruje zasadami organizowania typów delegatów jako wskaźników funkcji do kodu natywnego.|  
+|`MarshalStructure`|Interop|Opcjonalny atrybut. Steruje zasadami organizowania struktur w kodzie natywnym.|  
   
 ## <a name="all-attributes"></a>Wszystkie atrybuty  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*policy_setting*|Ustawienie dla tej zasady mają zastosowanie do typów w aplikacji. Możliwe wartości to `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal`, i `Required All`. Aby uzyskać więcej informacji, zobacz [ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Ustawienie tych zasad, które mają być stosowane do typów w aplikacji. Możliwe wartości to `All`, `Auto` `Excluded` ,,`Public` ,,`Required All`, i. `PublicAndInternal` `Required Public` `Required PublicAndInternal` Aby uzyskać więcej informacji, zobacz [Ustawienia zasad dyrektywy środowiska uruchomieniowego](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|Stosuje zasady do wszystkich typów w określonym zestawie.|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Stosuje zasady do wszystkich typów w określonej przestrzeni nazw.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Stosuje zasady do określonego typu, takie jak klasy lub struktury.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Stosuje zasady do skonstruowanego typu ogólnego. Na przykład [ \<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) element może służyć do definiowania zasad dla `List<String>` typu.|  
-|[\<Metoda >](../../../docs/framework/net-native/method-element-net-native.md)|Stosuje zasady do metody dla określonego typu.|  
-|[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Stosuje zasady do skonstruowanego metody rodzajowej.|  
-|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|Stosuje zasady do właściwości dla określonego typu.|  
-|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|Stosuje zasady do pola dla określonego typu.|  
-|[\<Zdarzenie >](../../../docs/framework/net-native/event-element-net-native.md)|Stosuje zasady do zdarzenia określonego typu.|  
+|[\<> Zestawu](assembly-element-net-native.md)|Stosuje zasady do wszystkich typów w określonym zestawie.|  
+|[\<Namespace>](namespace-element-net-native.md)|Stosuje zasady do wszystkich typów w konkretnym obszarze nazw.|  
+|[\<Type>](type-element-net-native.md)|Stosuje zasady do określonego typu, na przykład klasy lub struktury.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Stosuje zasady do skonstruowanego typu ogólnego. Na przykład [ \<element TypeInstantiation >](typeinstantiation-element-net-native.md) może służyć do `List<String>` definiowania zasad dla typu.|  
+|[\<> Metody](method-element-net-native.md)|Stosuje zasady do metody dla określonego typu.|  
+|[\<MethodInstantiation >](methodinstantiation-element-net-native.md)|Stosuje zasady do skonstruowanej metody ogólnej.|  
+|[\<> Właściwości](property-element-net-native.md)|Stosuje zasady do właściwości określonego typu.|  
+|[\<> Pola](field-element-net-native.md)|Stosuje zasady do pola określonego typu.|  
+|[\<> Zdarzeń](event-element-net-native.md)|Stosuje zasady do zdarzenia w określonym typie.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Dyrektywy >](../../../docs/framework/net-native/directives-element-net-native.md)|Element główny plik dyrektywy środowiska uruchomieniowego.|  
+|[\<Dyrektywy >](directives-element-net-native.md)|Element główny pliku dyrektywy środowiska uruchomieniowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- [ \<Dyrektywy >](../../../docs/framework/net-native/directives-element-net-native.md) element może zawierać zero lub jeden `<Application>` elementu. Wiele `<Application>` elementy w pliku dyrektywy pojedynczego odbicia nie są obsługiwane.  
+ Dyrektywy > element może zawierać zero lub jeden `<Application>` element. [ \<](directives-element-net-native.md) Wiele `<Application>` elementów w jednym pliku dyrektywy odbicia nie jest obsługiwane.  
   
- `<Application>` Elementu mogą być używane w jeden z dwóch sposobów:  
+ `<Application>` Element może być używany na jeden z dwóch sposobów:  
   
-- Jako kontener, aby zdefiniować elementy programu, w których metadanych jest potrzebnych w czasie wykonywania. W tym przypadku `<Application>` elementu nie wymagają żadnych atrybutów. W czasie kompilacji narzędzia kompilatora wyszukiwać wszystkie biblioteki, w tym podstawowe biblioteki .NET Framework, dla elementów programu identyfikowane przez elementy podrzędne `<Application>` elementu. Z kolei narzędzia kompilatora wyszukiwanie tylko w bibliotece, które są oznaczane [ \<biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) element dla elementów programu identyfikowane przez elementy podrzędne [ \<biblioteki >](../../../docs/framework/net-native/library-element-net-native.md).  
+- Jako kontener do definiowania elementów programu, których metadane są konieczne w czasie wykonywania. W takim przypadku `<Application>` element nie musi mieć żadnych atrybutów. W czasie kompilacji narzędzia kompilatora przeszukują wszystkie biblioteki, w tym .NET Framework biblioteki podstawowe, dla elementów programu identyfikowanych przez elementy `<Application>` podrzędne elementu. W przeciwieństwie do narzędzia kompilatora przeszukiwana jest tylko biblioteka wyznaczony przez [ \<bibliotekę >](library-element-net-native.md) element dla elementów programu identyfikowanych przez elementy [ \<podrzędne biblioteki >](library-element-net-native.md).  
   
-- Jako element, który ustawia zasady dla całej aplikacji odbicia, serializacja i współdziałania. Atrybuty `<Application>` element Definiowanie zasad całej aplikacji, które mogą zostać zastąpione przez elementy podrzędne, zdefiniowane przez `<Application>` lub [ \<biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) elementu.  
+- Jako element, który ustawia zasady dla całej aplikacji na potrzeby odbicia, serializacji i międzyoperacyjności. Atrybuty `<Application>` elementu definiują zasady na poziomie aplikacji, które mogą zostać zastąpione przez elementy podrzędne zdefiniowane `<Application>` przez lub [ \<>](library-element-net-native.md) elementu.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [\<Biblioteka > Element](../../../docs/framework/net-native/library-element-net-native.md)
-- [\<Dyrektywy > Element](../../../docs/framework/net-native/directives-element-net-native.md)
-- [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [\<Biblioteka > element](library-element-net-native.md)
+- [\<Dyrektywy > element](directives-element-net-native.md)
+- [Elementy dyrektyw środowiska uruchomieniowego](runtime-directive-elements.md)
+- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)

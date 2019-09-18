@@ -10,30 +10,30 @@ helpviewer_keywords:
 ms.assetid: 613ad742-3c11-401d-a6b3-893ceb8de4f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 876f0fe3c40cb6754b4ba714833dd160dc4de3a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7452ae28d63c89845b45bf500c02e771f0b8f4df
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754404"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052611"
 ---
 # <a name="invalidgchandlecookie-mda"></a>invalidGCHandleCookie MDA
-`invalidGCHandleCookie` Zarządzanego Asystenta debugowania (MDA) jest uaktywniany podczas konwersji z nieprawidłową <xref:System.IntPtr> pliku cookie do <xref:System.Runtime.InteropServices.GCHandle> zostanie podjęta.  
+Asystent `invalidGCHandleCookie` debugowania zarządzanego (MDA) jest aktywowany, gdy <xref:System.Runtime.InteropServices.GCHandle> zostanie podjęta próba konwersji <xref:System.IntPtr> z nieprawidłowego pliku cookie na plik.  
   
 ## <a name="symptoms"></a>Symptomy  
- Niezdefiniowane zachowanie, takie jak naruszenia zasad dostępu i uszkodzenie pamięci podczas próby użycia lub pobrać <xref:System.Runtime.InteropServices.GCHandle> z <xref:System.IntPtr>.  
+ Niezdefiniowane zachowanie, takie jak naruszenia zasad dostępu i uszkodzenie pamięci podczas próby użycia lub pobrania <xref:System.Runtime.InteropServices.GCHandle> <xref:System.IntPtr>z.  
   
 ## <a name="cause"></a>Przyczyna  
- Plik cookie jest prawdopodobnie nieprawidłowy, ponieważ nie został pierwotnie utworzony z <xref:System.Runtime.InteropServices.GCHandle>, reprezentuje <xref:System.Runtime.InteropServices.GCHandle> który już został zwolniony, plik cookie do <xref:System.Runtime.InteropServices.GCHandle> w domenie innej aplikacji lub został przekazywania do kodu macierzystego jako <xref:System.Runtime.InteropServices.GCHandle>ale przekazany do CLR jako <xref:System.IntPtr>, gdzie próbowano rzutowania.  
+ Plik cookie prawdopodobnie jest nieprawidłowy, ponieważ nie został pierwotnie utworzony z <xref:System.Runtime.InteropServices.GCHandle>, <xref:System.Runtime.InteropServices.GCHandle> oznacza, że został już zwolniony, <xref:System.Runtime.InteropServices.GCHandle> jest plikiem cookie w innej domenie aplikacji lub został zorganizowany do kodu natywnego jako <xref:System.Runtime.InteropServices.GCHandle>ale przeszedł z powrotem do środowiska CLR <xref:System.IntPtr>jako, gdzie podjęto próbę rzutowania.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Podaj prawidłową <xref:System.IntPtr> plik cookie na potrzeby <xref:System.Runtime.InteropServices.GCHandle>.  
+ Określ prawidłowy <xref:System.IntPtr> plik cookie <xref:System.Runtime.InteropServices.GCHandle>dla.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- Gdy to zdarzenie MDA jest włączona, debuger nie jest już możliwość prześledzenia korzenie powrót do ich obiektów, ponieważ wartości plików cookie przekazane z powrotem różnią się od tych zwracane, gdy zdarzenie MDA nie jest włączona.  
+ Po włączeniu tego MDA debuger nie będzie już mógł śledzić katalogów głównych z powrotem do swoich obiektów, ponieważ wartości plików cookie przenoszone z powrotem różnią się od tych, które są zwracane, gdy MDA nie jest włączone.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Nieprawidłowa <xref:System.IntPtr> zgłaszane wartości pliku cookie.  
+ Zgłoszono <xref:System.IntPtr> nieprawidłową wartość pliku cookie.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -49,4 +49,4 @@ ms.locfileid: "61754404"
 
 - <xref:System.Runtime.InteropServices.GCHandle.FromIntPtr%2A>
 - <xref:System.Runtime.InteropServices.GCHandle>
-- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)

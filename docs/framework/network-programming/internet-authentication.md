@@ -15,32 +15,32 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 8b17f5a7167eb539e04a19db797bc1b0cc6c5eaa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3e0b5cd58270cec758db5d4dad6f3ad48962921a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642350"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047919"
 ---
 # <a name="internet-authentication"></a>Uwierzytelnianie internetowe
-<xref:System.Net> Klasy obsługi różnych mechanizmów uwierzytelniania klienta, w tym standardowa Internet metod uwierzytelniania, podstawowe, szyfrowane, negocjowania NTLM, a uwierzytelnianie Kerberos, a także niestandardowych metod, które można utworzyć.  
+<xref:System.Net> Klasy obsługują różne mechanizmy uwierzytelniania klientów, w tym standardowe metody uwierzytelniania internetowego Basic, Digest, Negotiate, NTLM i Kerberos, a także metody niestandardowe, które można utworzyć.  
   
- Poświadczenia uwierzytelniania są przechowywane w <xref:System.Net.NetworkCredential> i <xref:System.Net.CredentialCache> klas, które implementują <xref:System.Net.ICredentials> interfejsu. Gdy jeden z tych klas zostanie zapytany o poświadczenia, zwraca wystąpienie **NetworkCredential** klasy. Proces uwierzytelniania jest zarządzana przez <xref:System.Net.AuthenticationManager> klasy, a proces uwierzytelniania rzeczywiste odbywa się przez klasę moduł uwierzytelniania, która implementuje <xref:System.Net.IAuthenticationModule> interfejsu. Musisz się zarejestrować, moduł uwierzytelniania niestandardowego o **słowniku** zanim będzie można używać; moduły podstawowe, szyfrowane negocjowania NTLM, i metody uwierzytelniania Kerberos jest zarejestrowana domyślnie.  
+ Poświadczenia uwierzytelniania są przechowywane w <xref:System.Net.NetworkCredential> <xref:System.Net.ICredentials> klasach <xref:System.Net.CredentialCache> i, które implementują interfejs. Gdy jedna z tych klas jest kwerendą dla poświadczeń, zwraca wystąpienie klasy **NetworkCredential** . Proces uwierzytelniania jest zarządzany przez <xref:System.Net.AuthenticationManager> klasę, a rzeczywisty proces uwierzytelniania jest wykonywany przez klasę modułu uwierzytelniania, która <xref:System.Net.IAuthenticationModule> implementuje interfejs. Aby można było użyć niestandardowego **modułu uwierzytelniania,** należy zarejestrować go. moduły dla metod uwierzytelniania podstawowa, Digest, Negotiate, NTLM i Kerberos są domyślnie zarejestrowane.  
   
- **NetworkCredential** przechowuje zestaw poświadczeń skojarzonych z pojedynczego zasobu internetowego identyfikowane przez identyfikator URI i zwraca je w odpowiedzi na każde wywołanie <xref:System.Net.NetworkCredential.GetCredential%2A> metody. **NetworkCredential** klasa jest zazwyczaj używana przez aplikacje uzyskujące dostęp do ograniczonej liczby zasoby internetowe lub aplikacje, które używają tego samego zestawu poświadczeń we wszystkich przypadkach.  
+ **NetworkCredential** przechowuje zestaw poświadczeń skojarzonych z pojedynczym zasobem internetowym identyfikowanym przez identyfikator URI i zwraca je w odpowiedzi na każde wywołanie <xref:System.Net.NetworkCredential.GetCredential%2A> metody. Klasa **NetworkCredential** jest zwykle używana przez aplikacje, które uzyskują dostęp do ograniczonej liczby zasobów internetowych lub przez aplikacje korzystające z tego samego zestawu poświadczeń we wszystkich przypadkach.  
   
- **CredentialCache** klasa przechowuje kolekcję poświadczeń dla różnych zasobów sieci Web. Gdy <xref:System.Net.CredentialCache.GetCredential%2A> metoda jest wywoływana, **CredentialCache** zwraca odpowiedniego zestawu poświadczeń, zgodnie z ustaleniami identyfikator URI zasobu sieci Web i schemat uwierzytelniania żądanej. Aplikacje, które używają różnych zasobów w Internecie przy użyciu schematów uwierzytelniania różnych korzyści ze stosowania **CredentialCache** klasy, ponieważ przechowuje wszystkie poświadczenia i udostępnia je zgodnie z żądaniem.  
+ Klasa **CredentialCache** przechowuje kolekcję poświadczeń dla różnych zasobów sieci Web. Gdy metoda jest wywoływana, CredentialCache zwraca właściwy zestaw poświadczeń, określony przez identyfikator URI zasobu sieci Web i żądany schemat uwierzytelniania. <xref:System.Net.CredentialCache.GetCredential%2A> Aplikacje korzystające z różnych zasobów internetowych z różnymi schematami uwierzytelniania korzystają z klasy **CredentialCache** , ponieważ przechowuje wszystkie poświadczenia i udostępnia je zgodnie z żądaniem.  
   
- Podczas uwierzytelniania, żądania zasobów internetowych <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> metoda wysyła <xref:System.Net.WebRequest> do **słowniku** wraz z żądaniem o poświadczenia. Żądanie jest uwierzytelniane zgodnie z następującego procesu:  
+ Gdy zasób internetowy żąda uwierzytelnienia, <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> Metoda <xref:System.Net.WebRequest> wysyła do elementu **AuthenticationManager** wraz z żądaniem poświadczeń. Żądanie jest następnie uwierzytelniane zgodnie z następującym procesem:  
   
-1. **Słowniku** wywołania <xref:System.Net.IAuthenticationModule.Authenticate%2A> metoda dla każdego z modułów uwierzytelniania zarejestrowanego w kolejności, zostały one zarejestrowane. **Słowniku** używa pierwszego modułu, która nie zwraca **null** przeprowadzić proces uwierzytelniania. Szczegółowe informacje o procesie różnią się w zależności od typu uwierzytelniania modułu związane.  
+1. <xref:System.Net.IAuthenticationModule.Authenticate%2A> Metoda **AuthenticationManager** wywołuje metodę dla każdego z zarejestrowanych modułów uwierzytelniania w kolejności, w której zostały zarejestrowane. Program **AuthenticationManager** używa pierwszego modułu, który nie zwraca **wartości null** w celu przeprowadzenia procesu uwierzytelniania. Szczegóły procesu różnią się w zależności od typu używanego modułu uwierzytelniania.  
   
-2. Po zakończeniu procesu uwierzytelniania moduł uwierzytelniania zwraca <xref:System.Net.Authorization> do **WebRequest** zawierający informacje wymagane do dostępu do zasobu internetowego.  
+2. Po zakończeniu procesu uwierzytelniania moduł uwierzytelniania zwraca <xref:System.Net.Authorization> do **żądania webżądanie** , które zawiera informacje konieczne do uzyskania dostępu do zasobu internetowego.  
   
- Niektóre schematy uwierzytelniania można uwierzytelnić użytkownika bez wcześniejszego utworzenia żądania dla zasobu. Aplikację można zaoszczędzić czas i preauthenticating użytkownika z zasobem, eliminując co najmniej jedną rundę do serwera. Lub, aby później można zwiększyć szybkość reakcji użytkownika może wykonywać uwierzytelnianie podczas uruchamiania programu. Schematy uwierzytelniania, które można użyć uwierzytelniania wstępnego zestawu <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> właściwości **true**.  
+ Niektóre schematy uwierzytelniania mogą uwierzytelniać użytkownika bez uprzedniego utworzenia żądania dla zasobu. Aplikacja może zaoszczędzić czas poprzez preuwierzytelnianie użytkownika przy użyciu zasobu, co eliminuje co najmniej jedną rundę na serwerze. Można też przeprowadzić uwierzytelnianie podczas uruchamiania programu w celu późniejszego reagowania na użytkownika. Schematy uwierzytelniania, które mogą używać wstępnego uwierzytelniania <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> , mają ustawioną właściwość na **wartość true**.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Uwierzytelnianie podstawowe i szyfrowane](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
-- [Uwierzytelnianie NTLM i uwierzytelnianie Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
-- [Zabezpieczenia w programowaniu sieciowym](../../../docs/framework/network-programming/security-in-network-programming.md)
+- [Uwierzytelnianie podstawowe i szyfrowane](basic-and-digest-authentication.md)
+- [Uwierzytelnianie NTLM i uwierzytelnianie Kerberos](ntlm-and-kerberos-authentication.md)
+- [Zabezpieczenia w programowaniu sieciowym](security-in-network-programming.md)

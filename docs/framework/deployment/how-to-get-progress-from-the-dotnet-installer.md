@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c71816b1bd2e9c95e8c7efb44e3e689dce4ab93
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: bdd2832f112706cef6050774ce3f6db5a940424a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853961"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052089"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Instrukcje: pobieranie danych o postępie z Instalatora .NET Framework 4.5
 
@@ -50,7 +50,7 @@ ms.locfileid: "70853961"
 
 ## <a name="chainer-sample"></a>Przykład łańcucha
 
-Przykładowy moduł łańcucha uruchamia dyskretnie i śledzi konfigurację .NET Framework 4,5 podczas wyświetlania postępu. Ten przykład jest podobny do przykładu łańcucha dostarczonego dla .NET Framework 4. Ponadto może to uniemożliwić ponowne uruchomienie systemu przez przetworzenie okna komunikatu do zamykania aplikacji .NET Framework 4. Aby uzyskać informacje na temat tego okna komunikatu, zobacz [ograniczanie ponownych uruchomień systemu podczas instalacji .NET Framework 4,5](../../../docs/framework/deployment/reducing-system-restarts.md). Tego przykładu można użyć w Instalatorze programu .NET Framework 4. w tym scenariuszu wiadomość jest po prostu niewysłana.
+Przykładowy moduł łańcucha uruchamia dyskretnie i śledzi konfigurację .NET Framework 4,5 podczas wyświetlania postępu. Ten przykład jest podobny do przykładu łańcucha dostarczonego dla .NET Framework 4. Ponadto może to uniemożliwić ponowne uruchomienie systemu przez przetworzenie okna komunikatu do zamykania aplikacji .NET Framework 4. Aby uzyskać informacje na temat tego okna komunikatu, zobacz [ograniczanie ponownych uruchomień systemu podczas instalacji .NET Framework 4,5](reducing-system-restarts.md). Tego przykładu można użyć w Instalatorze programu .NET Framework 4. w tym scenariuszu wiadomość jest po prostu niewysłana.
 
 > [!WARNING]
 > Należy uruchomić przykład jako administrator.
@@ -311,5 +311,5 @@ Typowy serwer tworzy losową nazwę pliku MMIO, tworzy plik (jak pokazano w popr
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik wdrażania dla deweloperów](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [Wdrażanie](../../../docs/framework/deployment/index.md)
+- [Przewodnik wdrażania dla deweloperów](deployment-guide-for-developers.md)
+- [Wdrażanie](index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46dd9c0c1f9f5759bc9160aadeb0538b5403fb52
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c7a3548cb0d7e841f32824eda52565e64279536e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917976"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052001"
 ---
 # <a name="overview-of-the-net-framework"></a>Przegląd programu .NET Framework
 
@@ -33,7 +33,7 @@ ms.locfileid: "69917976"
 - Aby utworzyć całą komunikację z normami branżowymi w celu zapewnienia, że kod oparty na .NET Framework integruje się z jakimkolwiek innym kodem.
 
 > [!NOTE]
-> Aby uzyskać ogólne wprowadzenie do .NET Framework dla użytkowników i deweloperów, zobacz [wprowadzenie](../../../docs/framework/get-started/index.md).
+> Aby uzyskać ogólne wprowadzenie do .NET Framework dla użytkowników i deweloperów, zobacz [wprowadzenie](index.md).
 
 .NET Framework składa się ze środowiska uruchomieniowego języka wspólnego (CLR) i biblioteki klas .NET Framework. Środowisko uruchomieniowe języka wspólnego jest podstawą .NET Framework. Należy traktować środowisko uruchomieniowe jako agenta, który zarządza kodem w czasie wykonywania, zapewniającym podstawowe usługi, takie jak zarządzanie pamięcią, zarządzanie wątkami i komunikacja zdalna, a także wymuszanie ścisłego bezpieczeństwa typów i inne formy dokładności kodu, które promują bezpieczeństwo i niezawodność. W rzeczywistości koncepcja zarządzania kodem jest podstawową zasadą środowiska uruchomieniowego. Kod przeznaczony dla środowiska uruchomieniowego jest znany jako kod zarządzany, podczas gdy kod, który nie jest celem środowiska uruchomieniowego, jest znany jako kod niezarządzany. Biblioteka klas to kompleksowa, zorientowana obiektowo Kolekcja typów wielokrotnego użytku, które służą do opracowywania aplikacji w oparciu o tradycyjne aplikacje wiersza polecenia lub graficznego interfejsu użytkownika (GUI) do aplikacji na podstawie najnowszych innowacji oferowanych przez ASP.NET, takich jak sieć Web Formularze i usługi sieci Web XML.
 
@@ -77,15 +77,15 @@ Zgodnie z oczekiwaniami z biblioteki klas zorientowanej obiektowo typy .NET Fram
 
 - Aplikacje konsolowe. Zobacz [Kompilowanie aplikacji konsolowych](../../standard/building-console-apps.md).
 
-- Aplikacje GUI systemu Windows (Windows Forms). Zobacz [Windows Forms](../../../docs/framework/winforms/index.md).
+- Aplikacje GUI systemu Windows (Windows Forms). Zobacz [Windows Forms](../winforms/index.md).
 
-- Aplikacje Windows Presentation Foundation (WPF). Zobacz [Windows Presentation Foundation](../../../docs/framework/wpf/index.md).
+- Aplikacje Windows Presentation Foundation (WPF). Zobacz [Windows Presentation Foundation](../wpf/index.md).
 
-- Aplikacje ASP.NET. Zobacz [aplikacje sieci Web za pomocą ASP.NET](../../../docs/framework/develop-web-apps-with-aspnet.md).
+- Aplikacje ASP.NET. Zobacz [aplikacje sieci Web za pomocą ASP.NET](../develop-web-apps-with-aspnet.md).
 
-- Usługi systemu Windows. Zobacz [wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md).
+- Usługi systemu Windows. Zobacz [wprowadzenie do aplikacji usług systemu Windows](../windows-services/introduction-to-windows-service-applications.md).
 
-- Aplikacje zorientowane na usługę korzystające z Windows Communication Foundation (WCF). Zobacz [aplikacje zorientowane na usługę za pomocą programu WCF](../../../docs/framework/wcf/index.md).
+- Aplikacje zorientowane na usługę korzystające z Windows Communication Foundation (WCF). Zobacz [aplikacje zorientowane na usługę za pomocą programu WCF](../wcf/index.md).
 
 - Aplikacje obsługujące przepływy pracy korzystające z Windows Workflow Foundation (WF). Zobacz [Windows Workflow Foundation](../windows-workflow-foundation/index.md).
 
@@ -93,9 +93,9 @@ Klasy Windows Forms to kompleksowy zestaw typów wielokrotnego użytku, które z
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wymagania systemowe](../../../docs/framework/get-started/system-requirements.md)
-- [Przewodnik instalacji](../../../docs/framework/install/index.md)
-- [Podręcznik programowania](../../../docs/framework/development-guide.md)
-- [Narzędzia](../../../docs/framework/tools/index.md)
+- [Wymagania systemowe](system-requirements.md)
+- [Przewodnik instalacji](../install/index.md)
+- [Podręcznik programowania](../development-guide.md)
+- [Narzędzia](../tools/index.md)
 - [Przykłady i samouczki dotyczące platformy .NET](../../samples-and-tutorials/index.md)
 - [Biblioteka klas .NET Framework](https://go.microsoft.com/fwlink/?LinkID=227195)

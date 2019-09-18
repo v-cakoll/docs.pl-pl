@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe78e2bd9c31bfb122e90b97977117adfc0235d5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 33253c249842824a529f4e8b24d4ca4228733041
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967889"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049216"
 ---
 # <a name="runtime-directive-policy-settings"></a>Ustawienia zasad dyrektyw środowiska uruchomieniowego
 
 > [!NOTE]
 > Ten temat dotyczy wersji zapoznawczej programu .NET Native Developer, która jest oprogramowaniem w wersji wstępnej. Wersję zapoznawczą można pobrać z [witryny sieci Web Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (wymaga rejestracji).
 
-Ustawienia zasad dyrektywy środowiska uruchomieniowego dla .NET Native określają dostępność metadanych dla typów i elementów członkowskich typu w czasie wykonywania. Bez wymaganych metadanych operacje, które polegają na odbiciu, serializacji i deserializacji lub kierowaniu typów .NET Framework do modelu COM lub środowisko wykonawcze systemu Windows mogą zakończyć się niepowodzeniem i zgłosić wyjątek. Najczęstszymi wyjątkami są [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) i (w przypadku współdziałania) [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md).
+Ustawienia zasad dyrektywy środowiska uruchomieniowego dla .NET Native określają dostępność metadanych dla typów i elementów członkowskich typu w czasie wykonywania. Bez wymaganych metadanych operacje, które polegają na odbiciu, serializacji i deserializacji lub kierowaniu typów .NET Framework do modelu COM lub środowisko wykonawcze systemu Windows mogą zakończyć się niepowodzeniem i zgłosić wyjątek. Najczęstszymi wyjątkami są [MissingMetadataException](missingmetadataexception-class-net-native.md) i (w przypadku współdziałania) [MissingInteropDataException](missinginteropdataexception-class-net-native.md).
 
-Ustawienia zasad środowiska uruchomieniowego są kontrolowane przez plik dyrektywy środowiska uruchomieniowego (. Rd. xml). Każda dyrektywa środowiska uruchomieniowego definiuje zasady dla określonego elementu programu, takie jak zestaw ( [ \<element > zestawu](../../../docs/framework/net-native/assembly-element-net-native.md) ), typ ( [ \<element >](../../../docs/framework/net-native/type-element-net-native.md) ) lub metodę ( [ \<Metoda >](../../../docs/framework/net-native/method-element-net-native.md) element). Dyrektywa zawiera jeden lub więcej atrybutów, które definiują typy zasad odbicia, typy zasad serializacji i typy zasad międzyoperacyjnych omówione w następnej sekcji. Wartość atrybutu definiuje ustawienie zasad.
+Ustawienia zasad środowiska uruchomieniowego są kontrolowane przez plik dyrektywy środowiska uruchomieniowego (. Rd. xml). Każda dyrektywa środowiska uruchomieniowego definiuje zasady dla określonego elementu programu, takie jak zestaw ( [ \<element > zestawu](assembly-element-net-native.md) ), typ ( [ \<element >](type-element-net-native.md) ) lub metodę ( [ \<Metoda >](method-element-net-native.md) element). Dyrektywa zawiera jeden lub więcej atrybutów, które definiują typy zasad odbicia, typy zasad serializacji i typy zasad międzyoperacyjnych omówione w następnej sekcji. Wartość atrybutu definiuje ustawienie zasad.
 
 ## <a name="policy-types"></a>Typy zasad
 
@@ -34,24 +34,24 @@ Pliki dyrektyw środowiska uruchomieniowego rozpoznają trzy kategorie typów za
 
   Poniższa tabela zawiera listę typów zasad odbicia i elementów programu, za pomocą których można ich używać.
 
-  |Element|Zdezaktywować|Przycisku|Dynamiczne|
+  |Element|zdezaktywować|Przycisku|Dynamiczne|
   |-------------|--------------|------------|-------------|
-  |[\<> Aplikacji](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|
-  |[\<> Zestawu](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|
-  |[\<AttributeImplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|
-  |[\<> Zdarzeń](../../../docs/framework/net-native/event-element-net-native.md)||✓|✓|
-  |[\<> Pola](../../../docs/framework/net-native/field-element-net-native.md)||✓|✓|
-  |[\<GenericParameter >](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|
-  |[\<ImpliesType >](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|
-  |[\<> Metody](../../../docs/framework/net-native/method-element-net-native.md)||✓|✓|
-  |[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||✓|✓|
-  |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|
-  |[\<> Parametru](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|
-  |[\<> Właściwości](../../../docs/framework/net-native/property-element-net-native.md)||✓|✓|
-  |[\<Podtypy >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|
-  |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|
-  |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|
-  |[\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|
+  |[\<> Aplikacji](application-element-net-native.md)|✓|✓|✓|
+  |[\<> Zestawu](assembly-element-net-native.md)|✓|✓|✓|
+  |[\<AttributeImplies >](attributeimplies-element-net-native.md)|✓|✓|✓|
+  |[\<> Zdarzeń](event-element-net-native.md)||✓|✓|
+  |[\<> Pola](field-element-net-native.md)||✓|✓|
+  |[\<GenericParameter >](genericparameter-element-net-native.md)|✓|✓|✓|
+  |[\<ImpliesType >](impliestype-element-net-native.md)|✓|✓|✓|
+  |[\<> Metody](method-element-net-native.md)||✓|✓|
+  |[\<MethodInstantiation >](methodinstantiation-element-net-native.md)||✓|✓|
+  |[\<Namespace>](namespace-element-net-native.md)|✓|✓|✓|
+  |[\<> Parametru](parameter-element-net-native.md)|✓|✓|✓|
+  |[\<> Właściwości](property-element-net-native.md)||✓|✓|
+  |[\<Podtypy >](subtypes-element-net-native.md)|✓|✓|✓|
+  |[\<Type>](type-element-net-native.md)|✓|✓|✓|
+  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✓|✓|✓|
+  |[\<TypeParameter >](typeparameter-element-net-native.md)|✓|✓|✓|
 
 - Typy zasad serializacji określają, które metadane są udostępniane w czasie wykonywania na potrzeby serializacji i deserializacji:
 
@@ -67,22 +67,22 @@ Pliki dyrektyw środowiska uruchomieniowego rozpoznają trzy kategorie typów za
 
   |Element|Potrzeby|DataContractSerializer|DataContractJsonSerializer|XmlSerializer|
   |-------------|---------------|----------------------------|--------------------------------|-------------------|
-  |[\<> Aplikacji](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|✓|
-  |[\<> Zestawu](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|✓|
-  |[\<AttributeImplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|✓|
-  |[\<> Zdarzeń](../../../docs/framework/net-native/event-element-net-native.md)|||||
-  |[\<> Pola](../../../docs/framework/net-native/field-element-net-native.md)|✓||||
-  |[\<GenericParameter >](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|✓|
-  |[\<ImpliesType >](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|✓|
-  |[\<> Metody](../../../docs/framework/net-native/method-element-net-native.md)|||||
-  |[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|||||
-  |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|✓|
-  |[\<> Parametru](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|✓|
-  |[\<> Właściwości](../../../docs/framework/net-native/property-element-net-native.md)|✓||||
-  |[\<Podtypy >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|✓|
-  |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|✓|
-  |[\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|✓|
+  |[\<> Aplikacji](application-element-net-native.md)|✓|✓|✓|✓|
+  |[\<> Zestawu](assembly-element-net-native.md)|✓|✓|✓|✓|
+  |[\<AttributeImplies >](attributeimplies-element-net-native.md)|✓|✓|✓|✓|
+  |[\<> Zdarzeń](event-element-net-native.md)|||||
+  |[\<> Pola](field-element-net-native.md)|✓||||
+  |[\<GenericParameter >](genericparameter-element-net-native.md)|✓|✓|✓|✓|
+  |[\<ImpliesType >](impliestype-element-net-native.md)|✓|✓|✓|✓|
+  |[\<> Metody](method-element-net-native.md)|||||
+  |[\<MethodInstantiation >](methodinstantiation-element-net-native.md)|||||
+  |[\<Namespace>](namespace-element-net-native.md)|✓|✓|✓|✓|
+  |[\<> Parametru](parameter-element-net-native.md)|✓|✓|✓|✓|
+  |[\<> Właściwości](property-element-net-native.md)|✓||||
+  |[\<Podtypy >](subtypes-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Type>](type-element-net-native.md)|✓|✓|✓|✓|
+  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✓|✓|✓|✓|
+  |[\<TypeParameter >](typeparameter-element-net-native.md)|✓|✓|✓|✓|
 
 - Typy zasad międzyoperacyjnych określają, które metadane są udostępniane w czasie wykonywania, aby przekazywać typy odwołań, typy wartości i wskaźniki funkcji do modelu COM i środowisko wykonawcze systemu Windows:
 
@@ -96,22 +96,22 @@ Pliki dyrektyw środowiska uruchomieniowego rozpoznają trzy kategorie typów za
 
   |Element|Marshalobject|MarshalDelegate|MarshalStructure|
   |-------------|-------------------|---------------------|----------------------|
-  |[\<> Aplikacji](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|
-  |[\<> Zestawu](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|
-  |[\<AttributeImplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|
-  |[\<> Zdarzeń](../../../docs/framework/net-native/event-element-net-native.md)||||
-  |[\<> Pola](../../../docs/framework/net-native/field-element-net-native.md)||||
-  |[\<GenericParameter >](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|
-  |[\<ImpliesType >](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|
-  |[\<> Metody](../../../docs/framework/net-native/method-element-net-native.md)||||
-  |[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||||
-  |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|
-  |[\<> Parametru](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|
-  |[\<> Właściwości](../../../docs/framework/net-native/property-element-net-native.md)||||
-  |[\<Podtypy >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|
-  |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|
-  |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|
-  |[\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|
+  |[\<> Aplikacji](application-element-net-native.md)|✓|✓|✓|
+  |[\<> Zestawu](assembly-element-net-native.md)|✓|✓|✓|
+  |[\<AttributeImplies >](attributeimplies-element-net-native.md)|✓|✓|✓|
+  |[\<> Zdarzeń](event-element-net-native.md)||||
+  |[\<> Pola](field-element-net-native.md)||||
+  |[\<GenericParameter >](genericparameter-element-net-native.md)|✓|✓|✓|
+  |[\<ImpliesType >](impliestype-element-net-native.md)|✓|✓|✓|
+  |[\<> Metody](method-element-net-native.md)||||
+  |[\<MethodInstantiation >](methodinstantiation-element-net-native.md)||||
+  |[\<Namespace>](namespace-element-net-native.md)|✓|✓|✓|
+  |[\<> Parametru](parameter-element-net-native.md)|✓|✓|✓|
+  |[\<> Właściwości](property-element-net-native.md)||||
+  |[\<Podtypy >](subtypes-element-net-native.md)|✓|✓|✓|
+  |[\<Type>](type-element-net-native.md)|✓|✓|✓|
+  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✓|✓|✓|
+  |[\<TypeParameter >](typeparameter-element-net-native.md)|✓|✓|✓|
 
 ## <a name="policy-settings"></a>Ustawienia zasad
 
@@ -132,5 +132,5 @@ Każdy typ zasad może być ustawiony na jedną z wartości wymienionych w poni�
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementy dyrektyw środowiska uruchomieniowego](runtime-directive-elements.md)

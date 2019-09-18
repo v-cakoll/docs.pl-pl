@@ -14,32 +14,32 @@ helpviewer_keywords:
 ms.assetid: 7417f837-805e-4fed-a430-ca919c8421dc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7bb4779e300df71a5d075a322bcac8398ce42f34
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afc0fd47e51723a7b3ba1b07dffc49260f88917d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754443"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052784"
 ---
-# <a name="gcmanagedtounmanaged-mda"></a><span data-ttu-id="0697d-102">gcManagedToUnmanaged MDA</span><span class="sxs-lookup"><span data-stu-id="0697d-102">gcManagedToUnmanaged MDA</span></span>
-<span data-ttu-id="0697d-103">`gcManagedToUnmanaged` Zarządzanego Asystenta debugowania (MDA) powoduje wyrzucania elementów bezużytecznych, zawsze wtedy, gdy wątku przechodzi z kodu zarządzanego do kodu niezarządzanego.</span><span class="sxs-lookup"><span data-stu-id="0697d-103">The `gcManagedToUnmanaged` managed debugging assistant (MDA) causes a garbage collection whenever a thread transitions from managed to unmanaged code.</span></span>  
+# <a name="gcmanagedtounmanaged-mda"></a><span data-ttu-id="28235-102">gcManagedToUnmanaged MDA</span><span class="sxs-lookup"><span data-stu-id="28235-102">gcManagedToUnmanaged MDA</span></span>
+<span data-ttu-id="28235-103">Asystent `gcManagedToUnmanaged` debugowania zarządzanego (MDA) powoduje wyrzucanie elementów bezużytecznych za każdym razem, gdy wątek przechodzi z zarządzanego do niezarządzanego kodu.</span><span class="sxs-lookup"><span data-stu-id="28235-103">The `gcManagedToUnmanaged` managed debugging assistant (MDA) causes a garbage collection whenever a thread transitions from managed to unmanaged code.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="0697d-104">Symptomy</span><span class="sxs-lookup"><span data-stu-id="0697d-104">Symptoms</span></span>  
- <span data-ttu-id="0697d-105">Składnik użytkownika niezarządzanego zgłasza naruszenie zasad dostępu podczas próby użycia obiektu zarządzanego, który ma być narażone na model COM.</span><span class="sxs-lookup"><span data-stu-id="0697d-105">An unmanaged user component throws an access violation when trying to use a managed object that had been exposed to COM.</span></span> <span data-ttu-id="0697d-106">Obiekt COM, prawdopodobnie zostały zwolnione.</span><span class="sxs-lookup"><span data-stu-id="0697d-106">The COM object appears to have been released.</span></span> <span data-ttu-id="0697d-107">Naruszenie zasad dostępu jest niedeterministyczny.</span><span class="sxs-lookup"><span data-stu-id="0697d-107">The access violation is nondeterministic.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="28235-104">Symptomy</span><span class="sxs-lookup"><span data-stu-id="28235-104">Symptoms</span></span>  
+ <span data-ttu-id="28235-105">Niezarządzany składnik użytkownika zgłasza naruszenie zasad dostępu podczas próby użycia zarządzanego obiektu, który został ujawniony w modelu COM.</span><span class="sxs-lookup"><span data-stu-id="28235-105">An unmanaged user component throws an access violation when trying to use a managed object that had been exposed to COM.</span></span> <span data-ttu-id="28235-106">Obiekt COM wydaje się być wystawiony.</span><span class="sxs-lookup"><span data-stu-id="28235-106">The COM object appears to have been released.</span></span> <span data-ttu-id="28235-107">Naruszenie zasad dostępu jest niejednoznaczne.</span><span class="sxs-lookup"><span data-stu-id="28235-107">The access violation is nondeterministic.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="0697d-108">Przyczyna</span><span class="sxs-lookup"><span data-stu-id="0697d-108">Cause</span></span>  
- <span data-ttu-id="0697d-109">Jeśli niezarządzane składnika nie jest zliczanie zarządzanego obiektu COM poprawnie, środowisko uruchomieniowe można zebrać uwidaczniany w modelu COM, gdy składnik niezarządzanych nadal zawiera odwołanie do obiektu zarządzanego obiektu.</span><span class="sxs-lookup"><span data-stu-id="0697d-109">If an unmanaged component is not reference counting a managed COM object correctly, then the runtime could collect a managed object exposed to COM when the unmanaged component still holds a reference to the object.</span></span> <span data-ttu-id="0697d-110">Środowisko uruchomieniowe wywołuje <xref:System.Runtime.InteropServices.Marshal.Release%2A> podczas wyrzucania elementów bezużytecznych, więc jeśli użytkownik składnik używa obiektu, zanim wystąpi wyrzucania elementów bezużytecznych, następnie go będzie nie jeszcze zostać zebrane.</span><span class="sxs-lookup"><span data-stu-id="0697d-110">The runtime calls <xref:System.Runtime.InteropServices.Marshal.Release%2A> during garbage collections, so if the user component uses the object before the garbage collection occurs, then it will not yet have been collected.</span></span> <span data-ttu-id="0697d-111">To źródło nondeterminism.</span><span class="sxs-lookup"><span data-stu-id="0697d-111">This is the source of the nondeterminism.</span></span>  
+## <a name="cause"></a><span data-ttu-id="28235-108">Przyczyna</span><span class="sxs-lookup"><span data-stu-id="28235-108">Cause</span></span>  
+ <span data-ttu-id="28235-109">Jeśli składnik niezarządzany nie odwołuje się prawidłowo do prawidłowego zliczania zarządzanego obiektu COM, środowisko uruchomieniowe może zebrać obiekt zarządzany uwidoczniony do modelu COM, gdy składnik niezarządzany nadal utrzymuje odwołanie do obiektu.</span><span class="sxs-lookup"><span data-stu-id="28235-109">If an unmanaged component is not reference counting a managed COM object correctly, then the runtime could collect a managed object exposed to COM when the unmanaged component still holds a reference to the object.</span></span> <span data-ttu-id="28235-110">Środowisko uruchomieniowe <xref:System.Runtime.InteropServices.Marshal.Release%2A> wywołuje podczas odzyskiwania pamięci, więc jeśli składnik użytkownika używa obiektu przed wystąpieniem bezużyteczności, wówczas nie został jeszcze zebrany.</span><span class="sxs-lookup"><span data-stu-id="28235-110">The runtime calls <xref:System.Runtime.InteropServices.Marshal.Release%2A> during garbage collections, so if the user component uses the object before the garbage collection occurs, then it will not yet have been collected.</span></span> <span data-ttu-id="28235-111">To jest źródło nieustalenia.</span><span class="sxs-lookup"><span data-stu-id="28235-111">This is the source of the nondeterminism.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="0697d-112">Rozwiązanie</span><span class="sxs-lookup"><span data-stu-id="0697d-112">Resolution</span></span>  
- <span data-ttu-id="0697d-113">Włączenie tego Asystenta skraca czas między po obiekcie kwalifikuje się do kolekcji i <xref:System.Runtime.InteropServices.Marshal.Release%2A> jest wywoływana, pomaga śledzić określają składnik niezarządzanych po raz pierwszy próbuje uzyskać dostępu do obiektu zebrane.</span><span class="sxs-lookup"><span data-stu-id="0697d-113">Enabling this assistant reduces the time between when the object is eligible for collection and <xref:System.Runtime.InteropServices.Marshal.Release%2A> is called, helping to track down which unmanaged component first tries to access the collected object.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="28235-112">Rozwiązanie</span><span class="sxs-lookup"><span data-stu-id="28235-112">Resolution</span></span>  
+ <span data-ttu-id="28235-113">Włączenie tego asystenta skraca czas od momentu, gdy obiekt kwalifikuje się <xref:System.Runtime.InteropServices.Marshal.Release%2A> do kolekcji i jest wywoływany, ułatwiając śledzenie, który składnik niezarządzany najpierw próbuje uzyskać dostęp do zebranego obiektu.</span><span class="sxs-lookup"><span data-stu-id="28235-113">Enabling this assistant reduces the time between when the object is eligible for collection and <xref:System.Runtime.InteropServices.Marshal.Release%2A> is called, helping to track down which unmanaged component first tries to access the collected object.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="0697d-114">Wpływ na środowisko uruchomieniowe</span><span class="sxs-lookup"><span data-stu-id="0697d-114">Effect on the Runtime</span></span>  
- <span data-ttu-id="0697d-115">Powoduje, że wyrzucania elementów bezużytecznych zawsze wtedy, gdy przejścia wątków, z kodu zarządzanego do kodu niezarządzanego.</span><span class="sxs-lookup"><span data-stu-id="0697d-115">Causes a garbage collection whenever a thread transitions from managed to unmanaged code.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="28235-114">Wpływ na środowisko uruchomieniowe</span><span class="sxs-lookup"><span data-stu-id="28235-114">Effect on the Runtime</span></span>  
+ <span data-ttu-id="28235-115">Powoduje wyrzucanie elementów bezużytecznych po każdym przejścia wątku z zarządzanego do niezarządzanego kodu.</span><span class="sxs-lookup"><span data-stu-id="28235-115">Causes a garbage collection whenever a thread transitions from managed to unmanaged code.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="0697d-116">Dane wyjściowe</span><span class="sxs-lookup"><span data-stu-id="0697d-116">Output</span></span>  
- <span data-ttu-id="0697d-117">To zdarzenie MDA nie daje żadnych danych wyjściowych.</span><span class="sxs-lookup"><span data-stu-id="0697d-117">This MDA produces no output.</span></span>  
+## <a name="output"></a><span data-ttu-id="28235-116">Dane wyjściowe</span><span class="sxs-lookup"><span data-stu-id="28235-116">Output</span></span>  
+ <span data-ttu-id="28235-117">To zdarzenie MDA nie generuje danych wyjściowych.</span><span class="sxs-lookup"><span data-stu-id="28235-117">This MDA produces no output.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="0697d-118">Konfiguracja</span><span class="sxs-lookup"><span data-stu-id="0697d-118">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="28235-118">Konfiguracja</span><span class="sxs-lookup"><span data-stu-id="28235-118">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -49,9 +49,9 @@ ms.locfileid: "61754443"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0697d-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0697d-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="28235-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="28235-119">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [<span data-ttu-id="0697d-120">Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania</span><span class="sxs-lookup"><span data-stu-id="0697d-120">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="0697d-121">Marshaling międzyoperacyjny</span><span class="sxs-lookup"><span data-stu-id="0697d-121">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
-- [<span data-ttu-id="0697d-122">gcUnmanagedToManaged</span><span class="sxs-lookup"><span data-stu-id="0697d-122">gcUnmanagedToManaged</span></span>](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)
+- [<span data-ttu-id="28235-120">Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania</span><span class="sxs-lookup"><span data-stu-id="28235-120">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="28235-121">Marshaling międzyoperacyjny</span><span class="sxs-lookup"><span data-stu-id="28235-121">Interop Marshaling</span></span>](../interop/interop-marshaling.md)
+- [<span data-ttu-id="28235-122">gcUnmanagedToManaged</span><span class="sxs-lookup"><span data-stu-id="28235-122">gcUnmanagedToManaged</span></span>](gcunmanagedtomanaged-mda.md)

@@ -35,12 +35,16 @@
           href: tutorials/sales-anomaly-detection.md
         - name: Wykrywanie obiektów w obrazach (wykrywanie obiektów)
           href: tutorials/object-detection-onnx.md
+        - name: Klasyfikowanie tonacji za pomocą biblioteki TensorFlow (klasyfikacja tekstu)
+          href: tutorials/text-classification-tf.md
     - name: Narzędzia
       items:
         - name: Przewidywanie cen za pomocą konstruktora modelu
           href: tutorials/predict-prices-with-model-builder.md
         - name: Analizowanie tonacji przy użyciu interfejsu wiersza polecenia platformy ML.NET
           href: tutorials/mlnet-cli.md
+        - name: Analizowanie tonacji za pomocą konstruktora modelu i produktu Razor Pages
+          href: tutorials/sentiment-analysis-model-builder.md
 - name: Pojęcia
   items:
     - name: Zadania platformy ML.NET (typy modelu)

@@ -2,12 +2,12 @@
 title: dotnet sln — polecenie
 description: Polecenie dotnet-sln udostępnia wygodną opcję dodawania, usuwania i wyświetlania listy projektów w pliku rozwiązania.
 ms.date: 06/13/2018
-ms.openlocfilehash: 3f18d6a2851d955d07cecc0cbc4c161cf0ec3e08
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 84508aaefff61b31e2965576ebc2daaae7331951
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202792"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117584"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -19,7 +19,7 @@ ms.locfileid: "70202792"
 
 ## <a name="synopsis"></a>Streszczenie
 
-```console
+```dotnetcli
 dotnet sln [<SOLUTION_NAME>] add <PROJECT> <PROJECT> ...
 dotnet sln [<SOLUTION_NAME>] add <GLOBBING_PATTERN>
 dotnet sln [<SOLUTION_NAME>] remove <PROJECT> <PROJECT> ...
@@ -34,7 +34,7 @@ dotnet sln [-h|--help]
 
 Aby użyć `dotnet sln` polecenia, plik rozwiązania musi już istnieć. Jeśli trzeba ją utworzyć, użyj polecenia [dotnet New](dotnet-new.md) , tak jak w poniższym przykładzie:
 
-```console
+```dotnetcli
 dotnet new sln
 ```
 

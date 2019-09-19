@@ -2,12 +2,12 @@
 title: Wprowadzenie do F# narzędzia wiersza polecenia
 description: Dowiedz się, jak utworzyć proste rozwiązanie z obsługą F# kilku projektów przy użyciu interfejs wiersza polecenia platformy .NET Core w dowolnym systemie operacyjnym (Windows, MacOS lub Linux).
 ms.date: 03/26/2018
-ms.openlocfilehash: 1376b6b5384f380c06a96cdc568ad108de8a6e5f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f9177e653273e5a2191407c4fb22343ded11fece
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855821"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117918"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Wprowadzenie do programu F# z interfejs wiersza polecenia platformy .NET Core
 
@@ -23,7 +23,7 @@ W tym artykule przyjęto założenie, że wiesz, jak używać wiersza polecenia 
 
 Otwórz wiersz polecenia/Terminal i użyj polecenia [dotnet New](../../core/tools/dotnet-new.md) , aby utworzyć nowy plik rozwiązania o nazwie `FSNetCore`:
 
-```console
+```dotnetcli
 dotnet new sln -o FSNetCore
 ```
 
@@ -40,7 +40,7 @@ Zmień katalogi na *FSNetCore*.
 
 Za pomocą polecenia Utwórz projekt biblioteki klas w folderze src o nazwie Library. `dotnet new`
 
-```console
+```dotnetcli
 dotnet new classlib -lang F# -o src/Library
 ```
 
@@ -68,13 +68,13 @@ let getJsonNetJson value =
 
 Dodaj pakiet NuGet Newtonsoft. JSON do projektu biblioteki.
 
-```console
+```dotnetcli
 dotnet add src/Library/Library.fsproj package Newtonsoft.Json
 ```
 
 Dodaj projekt do rozwiązania przy użyciu polecenia [dotnet sln Add:](../../core/tools/dotnet-sln.md) `FSNetCore` `Library`
 
-```console
+```dotnetcli
 dotnet sln add src/Library/Library.fsproj
 ```
 
@@ -84,7 +84,7 @@ Uruchom `dotnet build` , aby skompilować projekt. Nierozwiązane zależności z
 
 Za pomocą polecenia Utwórz aplikację konsolową w folderze src o nazwie App. `dotnet new`
 
-```console
+```dotnetcli
 dotnet new console -lang F# -o src/App
 ```
 
@@ -121,13 +121,13 @@ let main argv =
 
 Dodaj odwołanie do `Library` projektu przy użyciu [dodatku dotnet Dodaj odwołanie](../../core/tools/dotnet-add-reference.md).
 
-```console
+```dotnetcli
 dotnet add src/App/App.fsproj reference src/Library/Library.fsproj
 ```
 
 Dodaj projekt do rozwiązania przy użyciu `dotnet sln add` polecenia: `FSNetCore` `App`
 
-```console
+```dotnetcli
 dotnet sln add src/App/App.fsproj
 ```
 

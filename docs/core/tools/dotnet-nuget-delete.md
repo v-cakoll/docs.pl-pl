@@ -3,12 +3,12 @@ title: polecenie usunięcia NuGet narzędzia dotnet
 description: Polecenie dotnet-NuGet-DELETE Usuwa pakiet z serwera lub go wystawia.
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 70316a0baa2cf9923738a53af561b5c77014c3ff
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 79634baa9d6d7ff1f388f6a794ffd816687be105
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202571"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117639"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
@@ -24,7 +24,7 @@ ms.locfileid: "70202571"
 
 ## <a name="synopsis"></a>Streszczenie
 
-```console
+```dotnetcli
 dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [--interactive] [-k|--api-key] [--no-service-endpoint]
     [--non-interactive] [-s|--source]
 dotnet nuget delete [-h|--help]
@@ -78,12 +78,12 @@ dotnet nuget delete [-h|--help]
 
 * Usuwa wersję 1,0 pakietu `Microsoft.AspNetCore.Mvc`:
 
-  ```console
+  ```dotnetcli
   dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0
   ```
 
 * Usuwa wersję 1,0 pakietu `Microsoft.AspNetCore.Mvc`, bez monitowania użytkownika o poświadczenia lub inne dane wejściowe:
 
-  ```console
+  ```dotnetcli
   dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0 --non-interactive
   ```

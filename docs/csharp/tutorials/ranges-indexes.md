@@ -3,16 +3,16 @@ title: Eksplorowanie zakresów danych przy użyciu indeksów i zakresów
 description: Ten zaawansowany Samouczek uczy się, jak eksplorować dane przy użyciu indeksów i zakresów w celu zbadania wycinków sekwencyjnego zestawu danych.
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 27f4b90f130345dd10517a5de78c759066afdf07
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: d0eeadfff9732ced22e045536a88ed49cd98bbaa
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926640"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117837"
 ---
 # <a name="indices-and-ranges"></a>Indeksy i zakresy
 
-Zakresy i indeksy zapewniają zwięzłą składnię do uzyskiwania dostępu do pojedynczych elementów lub zakresów w <xref:System.Array>, <xref:System.Span%601>, lub <xref:System.ReadOnlySpan%601>. Te funkcje umożliwiają bardziej zwięzłą, przejrzystą składnię w celu uzyskania dostępu do pojedynczych elementów lub zakresów elementów w sekwencji.
+Zakresy i indeksy zapewniają zwięzłą składnię do uzyskiwania dostępu do pojedynczych elementów lub zakresów w <xref:System.Array>, <xref:System.String>, <xref:System.Span%601>, lub <xref:System.ReadOnlySpan%601>. Te funkcje umożliwiają bardziej zwięzłą, przejrzystą składnię w celu uzyskania dostępu do pojedynczych elementów lub zakresów elementów w sekwencji.
 
 W tym samouczku dowiesz się, jak:
 
@@ -24,12 +24,12 @@ W tym samouczku dowiesz się, jak:
 
 ## <a name="language-support-for-indices-and-ranges"></a>Obsługa języków w przypadku indeksów i zakresów
 
-Ten język obsługuje dwa nowe typy i dwa nowe operatory.
+Ten język obsługuje dwa nowe typy i dwa nowe operatory:
 
 - <xref:System.Index?displayProperty=nameWithType>reprezentuje indeks w sekwencji.
-- `^` Operator, który określa, że indeks jest względem końca sekwencji.
+- Indeks od operatora `^`końcowego, który określa, że indeks jest względem końca sekwencji.
 - <xref:System.Range?displayProperty=nameWithType>reprezentuje Podzakres sekwencji.
-- Operator zakresu (`..`), który określa początek i koniec zakresu jako jego operandy.
+- Operator `..`zakresu, który określa początek i koniec zakresu jako jego operandy.
 
 Zacznijmy od reguł dotyczących indeksów. Weź pod uwagę `sequence`tablicę. Indeks jest taki sam jak `sequence[0]`. `0` Indeks jest taki sam jak `sequence[sequence.Length]`. `^0` Należy pamiętać `sequence[^0]` , że generuje wyjątek, podobnie jak `sequence[sequence.Length]` . Dla dowolnej liczby `n`indeks `^n` jest taki sam jak `sequence[sequence.Length - n]`.
 

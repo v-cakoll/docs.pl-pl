@@ -4,12 +4,12 @@ description: Znajdź zasoby, aby dowiedzieć się, jak tworzyć aplikacje .NET C
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: 3c530c71d1cfa9d0c4cf09f38519970f6ef8da51
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5846b3c62a4a44b0d6bcdfbaaa00e12e5a157ab0
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969895"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116528"
 ---
 # <a name="get-started-with-net-core"></a>Wprowadzenie do platformy .NET Core
 
@@ -23,7 +23,7 @@ Najpierw pobierz i zainstaluj [zestaw .NET Core SDK](https://dotnet.microsoft.co
 
 Następnie otwórz Terminal, taki jak **PowerShell**, **wiersza polecenia**lub **bash**. Wpisz następujące `dotnet` polecenia, aby utworzyć i uruchomić C# aplikację.
 
-```console
+```dotnetcli
 dotnet new console --output sample1
 dotnet run --project sample1
 ```

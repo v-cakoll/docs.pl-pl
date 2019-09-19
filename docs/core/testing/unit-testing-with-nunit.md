@@ -4,12 +4,12 @@ description: Poznaj koncepcje testów jednostkowych w C# oprogramowaniu i .NET C
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 4d378e68143192e2f56fb411ae6ee709af753750
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 20f81981458b7e805a917202edce671ced69d89a
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849665"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117307"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Testowanie C# jednostkowe za pomocą nunit i .NET Core
 
@@ -26,7 +26,7 @@ Ten samouczek przeprowadzi Cię przez interaktywny proces tworzenia przykładowe
 
 Otwórz okno powłoki. Utwórz katalog o nazwie *Unit-Test-using-nunit* , aby pomieścić rozwiązanie. W tym nowym katalogu Uruchom następujące polecenie, aby utworzyć nowy plik rozwiązania dla biblioteki klas i projektu testowego:
 
-```console
+```dotnetcli
 dotnet new sln
 ```
  
@@ -40,7 +40,7 @@ Następnie Utwórz katalog *PrimeService* . Poniższy konspekt przedstawia struk
 
 Ustaw *PrimeService* w bieżącym katalogu i uruchom następujące polecenie, aby utworzyć projekt źródłowy:
 
-```console
+```dotnetcli
 dotnet new classlib
 ```
 
@@ -63,7 +63,7 @@ namespace Prime.Services
 
 Zmień katalog z powrotem do katalogu *testowego nunit* . Uruchom następujące polecenie, aby dodać projekt biblioteki klas do rozwiązania:
 
-```console
+```dotnetcli
 dotnet sln add PrimeService/PrimeService.csproj
 ```
 
@@ -82,7 +82,7 @@ Następnie Utwórz katalog *PrimeService. Tests* . Poniższy konspekt przedstawi
 
 Utwórz katalog *PrimeService. Tests* jako bieżący katalog i Utwórz nowy projekt za pomocą następującego polecenia:
 
-```console
+```dotnetcli
 dotnet new nunit
 ```
 
@@ -92,7 +92,7 @@ Polecenie [dotnet New](../tools/dotnet-new.md) umożliwia utworzenie projektu te
 
 Projekt testowy wymaga innych pakietów do tworzenia i uruchamiania testów jednostkowych. `dotnet new`w poprzednim kroku dodano zestaw Microsoft Test SDK, NUnit Test Framework oraz adapter testowy NUnit. Teraz Dodaj `PrimeService` bibliotekę klas jako inną zależność do projektu. [`dotnet add reference`](../tools/dotnet-add-reference.md) Użyj polecenia:
 
-```console
+```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
@@ -113,7 +113,7 @@ W poniższym konspekcie przedstawiono końcowy układ rozwiązania:
 
 Wykonaj następujące polecenie w katalogu *Unit-Test-using-nunit* :
 
-```console
+```dotnetcli
 dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 ```
 

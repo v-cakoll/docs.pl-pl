@@ -2,12 +2,12 @@
 title: Co nowego w C# 8,0 — C# Przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8,0. Ten artykuł jest aktualny w wersji zapoznawczej 5.
 ms.date: 09/10/2019
-ms.openlocfilehash: 141f7a2fa0bc5f6a2a253e196a218938dd4c170e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 1d6d52692a9a3f8b6fa4e333f086a880c54106b4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926527"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117824"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego w C# 8,0
 
@@ -377,7 +377,7 @@ Możesz samodzielnie wypróbować strumienie asynchroniczne w naszym samouczku d
 
 ## <a name="indices-and-ranges"></a>Indeksy i zakresy
 
-Zakresy i indeksy zapewniają zwięzłą składnię do określania podzakresów w tablicy, <xref:System.Span%601>lub. <xref:System.ReadOnlySpan%601>
+Zakresy i indeksy zapewniają zwięzłą składnię do określania podzakresów w tablicy, [ciągu znaków](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601>lub <xref:System.ReadOnlySpan%601>.
 
 Ten język obsługuje dwa nowe typy i dwa nowe operatory:
 

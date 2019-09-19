@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: e10f09d3f7146817770e74aa173f742322aafafc
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4a9c24455136fe4ccd13379d05c16d6b7cbf85de
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926598"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117013"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Używanie generatora serializatorów Microsoft XML na platformie .NET Core
 
@@ -44,7 +44,7 @@ Poniższe instrukcje pokazują, jak używać generatora serializatorów XML w ap
 
 Otwórz wiersz polecenia i Utwórz folder o nazwie *MojaApl*. Przejdź do utworzonego folderu i wpisz następujące polecenie:
 
-```console
+```dotnetcli
 dotnet new console
 ```
 
@@ -54,7 +54,7 @@ Użyj polecenia [`dotnet add package`](../tools//dotnet-add-package.md) , aby do
 
 Wpisz:
 
-```console
+```dotnetcli
 dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
 ```
 
@@ -107,7 +107,7 @@ Nadal w folderze *MojaApl* Uruchom aplikację za pośrednictwem [`dotnet run`](.
 
 W oknie konsoli wpisz następujące polecenie:
 
-```console
+```dotnetcli
 dotnet run
 ```
 

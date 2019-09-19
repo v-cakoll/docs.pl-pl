@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 4bd51f579231b13b0831ef7114c2a648c55cd6a2
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 520af5022e061236c0cfe80379679d9c7b5896b2
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926083"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117400"
 ---
 # <a name="tutorial-create-a-template-pack"></a>Samouczek: Tworzenie pakietu szablonów
 
@@ -45,7 +45,7 @@ Tworzony pakiet będzie obejmował [szablon elementu](cli-templates-create-item-
 
 W terminalu przejdź do folderu _roboczego_ . Utwórz nowy projekt i ustaw dla niego nazwę `templatepack` i folder wyjściowy w bieżącym folderze.
 
-```console
+```dotnetcli
 dotnet new console -n templatepack -o .
 ```
 
@@ -103,7 +103,7 @@ Ostatnie trzy ustawienia należy wykonać w celu poprawnego skonfigurowania proj
 
 Zapisz ten plik, a następnie uruchom polecenie Pack
 
-```console
+```dotnetcli
 dotnet pack
 ```
 

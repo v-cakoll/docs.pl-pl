@@ -4,12 +4,12 @@ description: Omówienie narzędzi globalnych platformy .NET Core i dostępnych d
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9ff7e33a50eb0c5fb649b44dda6d72412a134584
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 01c1463ceddcd64e5bab05b95a5ae4a91b6da838
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202593"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117461"
 ---
 # <a name="net-core-global-tools-overview"></a>Globalne narzędzia platformy .NET Core — Omówienie
 
@@ -49,7 +49,7 @@ Jeśli narzędzie jest hostowane w usłudze NuGet, można sprawdzić autora i st
 
 Aby zainstalować narzędzie globalne, należy użyć [Narzędzia dotnet zainstaluj](dotnet-tool-install.md) interfejs wiersza polecenia platformy .NET Core polecenie. Poniższy przykład pokazuje, jak zainstalować narzędzie globalne w lokalizacji domyślnej:
 
-```console
+```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
@@ -57,7 +57,7 @@ Jeśli nie można zainstalować narzędzia, zostaną wyświetlone komunikaty o b
 
 Jeśli próbujesz zainstalować wersję wstępną lub określoną wersję narzędzia, możesz określić numer wersji w następującym formacie:
 
-```console
+```dotnetcli
 dotnet tool install -g <package-name> --version <version-number>
 ```
 
@@ -94,7 +94,7 @@ dotnetsay
 
 Jeśli narzędzie ma być wyświetlane w kontekście `dotnet` monitu, może napisać je w taki sposób, aby była wywoływana `dotnet <command>`w taki sposób, jak:
 
-```console
+```dotnetcli
 dotnet doc
 ```
 
@@ -120,7 +120,7 @@ Jeśli aplikacja nie może znaleźć odpowiedniego środowiska uruchomieniowego,
 
 Innym problemem, który może się zdarzyć, jest to, że narzędzie globalne, które zostało utworzone podczas wcześniejszej wersji zapoznawczej, może nie działać z aktualnie zainstalowanymi środowiskami uruchomieniowymi platformy .NET Core. Możesz zobaczyć, które środowiska uruchomieniowe są zainstalowane na maszynie, za pomocą następującego polecenia:
 
-```console
+```dotnetcli
 dotnet --list-runtimes
 ```
 
@@ -141,24 +141,24 @@ Zestaw .NET Core SDK zawiera inne polecenia, które obsługują narzędzia platf
 
 Aby dowiedzieć się, które polecenia są dostępne dla narzędzi globalnych:
 
-```console
+```dotnetcli
 dotnet tool --help
 ```
 
 Aktualizacja narzędzia globalnego polega na odinstalowaniu i ponownym zainstalowaniu programu z najnowszą stabilną wersją. Aby zaktualizować narzędzie globalne, użyj polecenia [aktualizacji narzędzia dotnet](dotnet-tool-update.md) :
 
-```console
+```dotnetcli
 dotnet tool update -g <packagename>
 ```
 
 Usuń narzędzie globalne przy użyciu [Narzędzia dotnet Uninstall](dotnet-tool-uninstall.md):
 
-```console
+```dotnetcli
 dotnet tool uninstall -g <packagename>
 ```
 
 Aby wyświetlić wszystkie narzędzia globalne aktualnie zainstalowane na komputerze wraz z ich wersjami i poleceniami, użyj polecenia z [listy narzędzi dotnet](dotnet-tool-list.md) :
 
-```console
+```dotnetcli
 dotnet tool list -g
 ```

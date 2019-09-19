@@ -3,12 +3,12 @@ title: Jak zainstalować narzędzie ML.NET interfejsu wiersza polecenia (CLI)
 description: Omówienie i instalacja narzędzia ML.NET interfejsu wiersza polecenia (CLI).
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 8b6de466a6cf72b44a16c80fc024671bc4e975e8
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: baced9bbcc72153458d42d4b6d8206921bf187b8
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106901"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118002"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Jak zainstalować narzędzie ML.NET interfejsu wiersza polecenia (CLI)
 
@@ -33,7 +33,7 @@ Interfejs wiersza polecenia ML.NET jest instalowany jak każdy inny narzędzie g
 
 Poniższy przykład pokazuje, jak zainstalować interfejs wiersza polecenia ML.NET w domyślnej lokalizacji źródła danych NuGet:
 
-```console
+```dotnetcli
 dotnet tool install -g mlnet
 ```
 
@@ -58,13 +58,13 @@ Powinna zostać wyświetlona Pomoc dotycząca dostępnych poleceń dla narzędzi
 
 Jeśli próbujesz zainstalować wersję wstępną lub określoną wersję narzędzia, możesz określić [strukturę](../../standard/frameworks.md) przy użyciu następującego formatu:
 
-```console
+```dotnetcli
 dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 Możesz również sprawdzić, czy pakiet jest prawidłowo zainstalowany, wpisując następujące polecenie:
 
-```console
+```dotnetcli
 dotnet tool list -g
 ```
 
@@ -72,7 +72,7 @@ dotnet tool list -g
 
 Wpisz następujące polecenie, aby odinstalować pakiet z komputera lokalnego:
 
-```console
+```dotnetcli
 dotnet tool uninstall mlnet -g
 ```
 
@@ -80,7 +80,7 @@ dotnet tool uninstall mlnet -g
 
 Wpisz następujące polecenie, aby zaktualizować pakiet z komputera lokalnego:
 
-```console
+```dotnetcli
 dotnet tool update -g mlnet
 ```
 
@@ -100,7 +100,7 @@ Na komputerze, na którym chcesz włączyć uzupełnianie, musisz wykonać dwie 
 
 1. Zainstaluj narzędzie `dotnet-suggest` globalne, uruchamiając następujące polecenie:
 
-    ```console
+    ```dotnetcli
     dotnet tool install dotnet-suggest -g
     ```
 
@@ -114,7 +114,7 @@ Na komputerze, na którym chcesz włączyć uzupełnianie, musisz wykonać dwie 
     echo $profile
     ``` 
 
-(W przypadku innych powłok należy [](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22) poszukać lub otworzyć [problem](https://github.com/dotnet/System.CommandLine/issues)).
+(W przypadku innych powłok należy [poszukać](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22) lub otworzyć [problem](https://github.com/dotnet/System.CommandLine/issues)).
 
 ## <a name="installation-directory"></a>Katalog instalacji
 

@@ -4,12 +4,12 @@ description: Opisuje sposób tworzenia narzędzia globalnego. Narzędzie globaln
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: f60e26d14e89b6b7c34b32bf9a114fe4ad691981
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 5c2b1e459f0308f5f96eb041c10f4d7a7ae0ca20
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202767"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117438"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Tworzenie globalnego narzędzia platformy .NET Core przy użyciu interfejs wiersza polecenia platformy .NET Core
 
@@ -23,7 +23,7 @@ W tym artykule interfejs wiersza polecenia platformy .NET Core tworzenia projekt
 
 Nasze przykładowe narzędzie będzie aplikacją konsolową, która generuje bot ASCII i drukuje komunikat. Najpierw utwórz nową aplikację konsolową platformy .NET Core.
 
-```console
+```dotnetcli
 dotnet new console -o botsay
 ```
 
@@ -117,7 +117,7 @@ static void ShowBot(string message)
 
 Uruchom projekt i zobacz dane wyjściowe. Wypróbuj te zmiany w wierszu polecenia, aby zobaczyć różne wyniki:
 
-```csharp
+```dotnetcli
 dotnet run
 dotnet run -- "Hello from the bot"
 dotnet run -- hello from the bot
@@ -158,7 +158,7 @@ Mimo że `<PackageOutputPath>` jest to opcjonalne, użyj go w tym przykładzie. 
 
 Następnie Utwórz pakiet NuGet dla swojej aplikacji.
 
-```console
+```dotnetcli
 dotnet pack
 ```
 
@@ -166,7 +166,7 @@ Plik jest tworzony w folderze identyfikowanym `<PackageOutputPath>` przez warto�
 
 Teraz, gdy masz pakiet, zainstaluj narzędzie z tego pakietu:
 
-```console
+```dotnetcli
 dotnet tool install --global --add-source ./nupkg botsay
 ```
 
@@ -188,6 +188,6 @@ Teraz powinno być możliwe wpisywanie `botsay` i pobieranie odpowiedzi z narzę
 
 Po zakończeniu eksperymentowania z narzędziem można je usunąć za pomocą następującego polecenia:
 
-```console
+```dotnetcli
 dotnet tool uninstall -g botsay
 ```

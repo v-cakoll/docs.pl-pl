@@ -6,24 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 09/05/2019
-ms.openlocfilehash: 2d18e7750e0c2e2a44028d1e906a8536e47d979d
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.date: 09/17/2019
+ms.openlocfilehash: 08ad77fbad7ad468e45fe629041ded82544792f2
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394288"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116122"
 ---
-# <a name="whats-new-in-net-core-30-preview-9"></a>Co nowego w programie .NET Core 3,0 (wersja zapoznawcza 9)
+# <a name="whats-new-in-net-core-30-release-candidate-1"></a>Co nowego w programie .NET Core 3,0 (wersja Release Candidate 1)
 
-W tym artykule opisano nowości w programie .NET Core 3,0 (w wersji zapoznawczej 9). Jednym z największych ulepszeń jest obsługa aplikacji klasycznych systemu Windows (tylko system Windows). Korzystając z pulpitu systemu Windows składnika zestawu SDK platformy .NET Core 3,0, można przenieść aplikacje Windows Forms i Windows Presentation Foundation (WPF). Aby można było wyczyścić, składnik pulpitu systemu Windows jest obsługiwany i uwzględniany w systemie Windows. Aby uzyskać więcej informacji, zobacz sekcję [pulpitu systemu Windows](#windows-desktop) w dalszej części tego artykułu.
+W tym artykule opisano nowości w programie .NET Core 3,0 do wersji Release Candidate 1 (RC1). Jednym z największych ulepszeń jest obsługa aplikacji klasycznych systemu Windows (tylko system Windows). Korzystając z pulpitu systemu Windows składnika zestawu SDK platformy .NET Core 3,0, można przenieść aplikacje Windows Forms i Windows Presentation Foundation (WPF). Aby można było wyczyścić, składnik pulpitu systemu Windows jest obsługiwany i uwzględniany w systemie Windows. Aby uzyskać więcej informacji, zobacz sekcję [pulpitu systemu Windows](#windows-desktop) w dalszej części tego artykułu.
 
-Program .NET Core 3,0 dodaje obsługę C# 8,0. Zdecydowanie zaleca się używanie [programu Visual Studio 2019 16,3 w wersji zapoznawczej 3](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview), [Visual Studio dla komputerów Mac 8,3](https://docs.microsoft.com/visualstudio/mac/install-preview?view=vsmac-2019)lub [Visual Studio Code](https://code.visualstudio.com/) z  **C# rozszerzeniem**.
+Program .NET Core 3,0 dodaje obsługę C# 8,0. Zdecydowanie zaleca się używanie [programu Visual Studio 2019 16,3 Preview 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview), [Visual Studio dla komputerów Mac 8,3](https://docs.microsoft.com/visualstudio/mac/install-preview?view=vsmac-2019)lub [Visual Studio Code](https://code.visualstudio.com/) z  **C# rozszerzeniem**.
 
-[Pobierz i Rozpocznij pracę z programem .NET Core 3,0 Preview 9](https://aka.ms/netcore3download) teraz w systemie Windows, MacOS lub Linux.
+[Pobierz i Rozpocznij pracę z platformą .NET Core 3,0 RC1](https://aka.ms/netcore3download) teraz w systemie Windows, MacOS lub Linux.
 
 Aby uzyskać więcej informacji na temat każdej wersji zapoznawczej, zobacz następujące powiadomienia:
 
+- [Anons platformy .NET Core 3,0 RC1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-release-candidate-1/)
 - [Anons programu .NET Core 3,0 Preview 9](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)
 - [Anons programu .NET Core 3,0 Preview 8](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
 - [Anons programu .NET Core 3,0 w wersji zapoznawczej 7](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
@@ -36,9 +37,9 @@ Aby uzyskać więcej informacji na temat każdej wersji zapoznawczej, zobacz nas
 
 ## <a name="production-supported-preview"></a>Wersja zapoznawcza obsługiwanej produkcji
 
-Program .NET Core Preview 9 jest uznawany za gotowy do produkcji przez firmę Microsoft i jest w pełni obsługiwany. Począwszy od wersji zapoznawczej 7, wersje będą skoncentrowane na polerowaniu platformy .NET Core 3,0 zamiast dodawania nowych funkcji. Aby uzyskać więcej informacji o zmianach w wersji zapoznawczej 9, zapoznaj się z [ogłoszeniem w wersji zapoznawczej 9](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/).
+Środowisko .NET Core RC1 jest uznawane za gotowe do produkcji przez firmę Microsoft i jest w pełni obsługiwane. Począwszy od wersji zapoznawczej 7, wersje będą skoncentrowane na polerowaniu platformy .NET Core 3,0 zamiast dodawania nowych funkcji. Aby uzyskać więcej informacji na temat zmian w wersji RC1, zobacz [anons RC1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-release-candidate-1/).
 
-Jeśli używasz starszej wersji zapoznawczej, musisz przejść do wersji zapoznawczej 9, aby kontynuować obsługę "go na żywo".
+Jeśli używasz starszej wersji zapoznawczej, musisz przejść do usługi RC1, aby kontynuować obsługę "go na żywo".
 
 ## <a name="net-core-sdk-windows-installer"></a>Zestaw .NET Core SDK Instalator Windows
 
@@ -68,7 +69,7 @@ Jeśli używasz programu Visual Studio, potrzebujesz [programu Visual studio 201
 
 ## <a name="improved-net-core-version-apis"></a>Ulepszone interfejsy API wersji platformy .NET Core
 
-Począwszy od platformy .NET Core 3,0, interfejsy API wersji dostarczone z platformą .NET Core teraz zwracają oczekiwane informacje. Przykład:
+Począwszy od platformy .NET Core 3,0, interfejsy API wersji dostarczone z platformą .NET Core teraz zwracają oczekiwane informacje. Na przykład:
 
 ```csharp
 System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");
@@ -125,7 +126,7 @@ Aby opublikować plik wykonywalny pojedynczego pliku, ustaw `PublishSingleFile` 
 
 —lub—
 
-```console
+```dotnetcli
 dotnet publish -r win10-x64 /p:PublishSingleFile=true
 ```
 
@@ -147,7 +148,7 @@ Aby włączyć to narzędzie, Dodaj `<PublishTrimmed>` ustawienie w projekcie i 
 </PropertyGroup>
 ```
 
-```console
+```dotnetcli
 dotnet publish -r <rid> -c Release
 ```
 
@@ -197,7 +198,7 @@ Aby skompilować projekt jako ReadyToRun, wykonaj następujące czynności:
 
 01. Publikowanie aplikacji samodzielnej. Na przykład to polecenie tworzy samodzielną aplikację dla 64-bitowej wersji systemu Windows:
 
-    ```console
+    ```dotnetcli
     dotnet publish -c Release -r win-x64 --self-contained true
     ```
 
@@ -266,7 +267,7 @@ Składnik pulpitu systemu Windows jest częścią zestawu SDK systemu Windows .N
 
 Nową aplikację WPF lub Windows Forms można utworzyć przy użyciu następujących `dotnet` poleceń:
 
-```console
+```dotnetcli
 dotnet new wpf
 dotnet new winforms
 ```

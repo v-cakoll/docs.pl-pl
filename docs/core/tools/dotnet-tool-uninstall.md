@@ -1,25 +1,25 @@
 ---
-title: polecenie odinstalowania narzędzia DotNet
-description: Polecenie odinstalowania narzędzia dotnet odinstalowuje określonego narzędzia globalnej podstawowych platformy .NET z poziomu Twojej maszyny.
+title: polecenie Narzędzia dotnet narzędzie do odinstalowywania
+description: Polecenie Narzędzia dotnet narzędzie do odinstalowywania Odinstalowuje określone narzędzie globalne platformy .NET Core z maszyny.
 ms.date: 05/29/2018
-ms.openlocfilehash: 4d53d305131e3399ab5d9c19f9319f3ba3544c19
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 033753f44464e78b826e908e0b6cdf276da8a179
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61648558"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117543"
 ---
-# <a name="dotnet-tool-uninstall"></a>Odinstalowywanie narzędzia DotNet
+# <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
 [!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
 
 ## <a name="name"></a>Nazwa
 
-`dotnet tool uninstall` -Odinstalowuje określony [narzędzia programu .NET Core globalnego](global-tools.md) z Twojego komputera.
+`dotnet tool uninstall`-Odinstalowuje określone [Narzędzie globalne platformy .NET Core](global-tools.md) z komputera.
 
 ## <a name="synopsis"></a>Streszczenie
 
-```console
+```dotnetcli
 dotnet tool uninstall <PACKAGE_NAME> <-g|--global>
 dotnet tool uninstall <PACKAGE_NAME> <--tool-path>
 dotnet tool uninstall <-h|--help>
@@ -27,42 +27,42 @@ dotnet tool uninstall <-h|--help>
 
 ## <a name="description"></a>Opis
 
-`dotnet tool uninstall` Polecenia umożliwia należy odinstalować narzędzia globalnej platformy .NET Core z poziomu Twojej maszyny. Można użyć polecenia, masz albo określić, czy chcesz usunąć, przy użyciu narzędzia użytkownika na poziomie `--global` opcję lub określ ścieżkę do miejsca narzędzie jest instalowana za pomocą `--tool-path` opcji.
+`dotnet tool uninstall` Polecenie umożliwia odinstalowanie narzędzi globalnych platformy .NET Core z komputera. Aby użyć polecenia, musisz określić, że chcesz usunąć narzędzie dostępne dla użytkownika przy użyciu `--global` opcji lub określić ścieżkę do lokalizacji, w której narzędzie zostanie zainstalowane `--tool-path` przy użyciu opcji.
 
 ## <a name="arguments"></a>Argumenty
 
 `PACKAGE_NAME`
 
-Nazwy/Identyfikatora pakietu NuGet, który zawiera .NET Core globalnego narzędzie, aby odinstalować. Możesz znaleźć przy użyciu nazwy pakietu [lista narzędzi dotnet](dotnet-tool-list.md) polecenia.
+Nazwa/identyfikator pakietu NuGet zawierającego narzędzie globalne programu .NET Core do odinstalowania. Nazwę pakietu można znaleźć przy użyciu polecenia [listy narzędzi dotnet](dotnet-tool-list.md) .
 
 ## <a name="options"></a>Opcje
 
 `-g|--global`
 
-Określa, że narzędzie ma zostać usunięty z instalacji na poziomie użytkownika. Nie można połączyć z `--tool-path` opcji. Jeśli nie określisz tę opcję, należy określić `--tool-path` opcji.
+Określa, że narzędzie ma zostać usunięte z instalacji na poziomie użytkownika. Nie można łączyć z `--tool-path` opcją. Jeśli ta opcja nie zostanie określona, należy określić `--tool-path` opcję.
 
 `-h|--help`
 
-Drukuje krótki pomoc dotyczącą polecenia.
+Drukuje krótką pomoc dla polecenia.
 
 `--tool-path <PATH>`
 
-Określa lokalizację, gdzie można odinstalować narzędzie globalne. ŚCIEŻKA może być bezwzględny lub względny. Nie można połączyć z `--global` opcji. Jeśli nie określisz tę opcję, należy określić `--global` opcji.
+Określa lokalizację, w której ma zostać odinstalowane narzędzie globalne. ŚCIEŻKA może być bezwzględna lub względna. Nie można łączyć z `--global` opcją. Jeśli ta opcja nie zostanie określona, należy określić `--global` opcję.
 
 ## <a name="examples"></a>Przykłady
 
-Odinstalowuje [dotnetsay](https://www.nuget.org/packages/dotnetsay/) narzędzie globalne:
+Odinstalowuje narzędzie globalne [dotnetsay](https://www.nuget.org/packages/dotnetsay/) :
 
 `dotnet tool uninstall -g dotnetsay`
 
-Odinstalowuje [dotnetsay](https://www.nuget.org/packages/dotnetsay/) narzędzie globalne z określonego folderu Windows:
+Odinstalowuje narzędzie globalne [dotnetsay](https://www.nuget.org/packages/dotnetsay/) z określonego folderu systemu Windows:
 
 `dotnet tool uninstall dotnetsay --tool-path c:\global-tools`
 
-Odinstalowuje [dotnetsay](https://www.nuget.org/packages/dotnetsay/) narzędzie globalne z określonego folderu w systemie Linux/macOS:
+Odinstalowuje narzędzie globalne [dotnetsay](https://www.nuget.org/packages/dotnetsay/) z określonego folderu Linux/macOS:
 
 `dotnet tool uninstall dotnetsay --tool-path ~/bin`
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Narzędzia globalnej platformy .NET core](global-tools.md)
+- [Narzędzia globalne platformy .NET Core](global-tools.md)

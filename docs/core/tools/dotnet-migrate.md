@@ -2,12 +2,12 @@
 title: polecenie migracji dotnet
 description: Polecenie Migruj z programu dotnet migruje projekt i wszystkie jego zależności.
 ms.date: 08/08/2019
-ms.openlocfilehash: 790c607070ff348ca7cfe30137268de18dcb0293
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: afc16161761d151e743e53a8572a6564add43517
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990430"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117692"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
@@ -19,7 +19,7 @@ ms.locfileid: "70990430"
 
 ## <a name="synopsis"></a>Streszczenie
 
-```console
+```dotnetcli
 dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json] [-r|--report-file] [-s|--skip-project-references] [--skip-backup] [-t|--template-file] [-v|--sdk-package-version] [-x|--xproj-file]
 dotnet migrate [-h|--help]
 ```

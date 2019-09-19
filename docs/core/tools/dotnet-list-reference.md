@@ -1,17 +1,17 @@
 ---
-title: polecenie odwołania list DotNet
-description: Polecenia dotnet list odwołania zapewnia wygodny sposób do listy odwołania projekt-projekt.
+title: polecenie odwołania do listy dotnet
+description: Polecenie odwołania do listy dotnet udostępnia wygodną opcję wyświetlania listy odwołań do projektu.
 ms.date: 06/26/2019
-ms.openlocfilehash: 1f87ff89997cdaa6d0095a4db9f28a2e7cb7e6a9
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: b4b82ca1e7aeb2b73d9f99aff1c97452b2166770
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67421830"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117681"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
-**Ten temat dotyczy: ✓** platformy .NET Core SDK w wersji 1.x i nowszymi wersjami
+**Ten temat dotyczy: ✓** .NET Core 1. x SDK i nowszych wersji
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -19,7 +19,7 @@ ms.locfileid: "67421830"
 
 ## <a name="name"></a>Nazwa
 
-`dotnet list reference` — Wyświetla listę odwołania projekt projekt.
+`dotnet list reference`-Wyświetla odwołania projektu do projektu.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -27,30 +27,30 @@ ms.locfileid: "67421830"
 
 ## <a name="description"></a>Opis
 
-`dotnet list reference` Polecenia oferuje wygodne opcję do listy odwołań projektu dla danego projektu lub rozwiązania.
+`dotnet list reference` Polecenie udostępnia wygodną opcję wyświetlania listy odwołań projektu dla danego projektu lub rozwiązania.
 
 ## <a name="arguments"></a>Argumenty
 
 * **`PROJECT | SOLUTION`**
 
-  Określa plik projektu lub rozwiązania służące do wyświetlania listy odwołania. Jeśli nie zostanie określony, polecenie wyszukuje w bieżącym katalogu dla pliku projektu.
+  Określa plik projektu lub rozwiązania, który ma być używany na potrzeby wyświetlania listy odwołań. Jeśli nie zostanie określony, polecenie przeszukuje bieżący katalog dla pliku projektu.
 
 ## <a name="options"></a>Opcje
 
 * **`-h|--help`**
 
-  Drukuje krótki pomoc dotyczącą polecenia.
+  Drukuje krótką pomoc dla polecenia.
 
 ## <a name="examples"></a>Przykłady
 
-* Utwórz listę odwołań projektu dla określonego projektu.
+* Wyświetl listę odwołań projektu dla określonego projektu:
 
-  ```console
+  ```dotnetcli
   dotnet list app/app.csproj reference
   ```
 
-* Listy odwołań projektu dla projektu w bieżącym katalogu:
+* Wyświetl listę odwołań projektu dla projektu w bieżącym katalogu:
 
-  ```console
+  ```dotnetcli
   dotnet list reference
   ```

@@ -8,12 +8,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 7927cd65de31ba6e835aabdbbd89e410d10d2822
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: ba68425fe37c5b939da22edad38bb03afd2b9068
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104787"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117329"
 ---
 # <a name="get-started-with-c"></a>Wprowadzenie do języka C\#
 
@@ -27,7 +27,7 @@ Dostępne są następujące tematy:
 
 - [Tworzenie aplikacji Hello world w języku C# na platformie .NET Core w programie Visual Studio 2017](../../core/tutorials/with-visual-studio.md)
 
-   Program Visual Studio 2017, Najnowsza wersja programu Visual Studio, umożliwia wykonywanie kodu, kompilowanie, uruchamianie, debugowanie, profilowanie i publikowanie aplikacji z poziomu zintegrowanego środowiska projektowego dla systemu Windows.
+   Program Visual Studio 2019 umożliwia wykonywanie kodu, kompilowanie, uruchamianie, debugowanie, profilowanie i publikowanie aplikacji z poziomu zintegrowanego środowiska programistycznego dla systemu Windows lub Mac.
 
    Temat ten umożliwi Ci utworzenie i uruchomienie prostej aplikacji Hello World, a następnie zmodyfikowanie jej do formy nieco bardziej interaktywnej. Kiedy już utworzysz i uruchomisz swoją aplikację, możesz też dowiedzieć się, jak ją [debugować](../../core/tutorials/debugging-with-visual-studio.md) oraz [opublikować](../../core/tutorials/publishing-with-visual-studio.md), tak aby można było ją uruchomić na dowolnej platformie obsługiwanej przez .NET Core.
 
@@ -53,7 +53,7 @@ Dostępne są następujące tematy:
 
 - [Przewodniki](../walkthroughs.md)
 
-    Zawiera linki do przewodników programowania w języku C# wraz z krótkimi opisami poszczególnych przewodników.
+    Łącza do przewodników programowania z użyciem języka C# wraz z krótkimi opisami poszczególnych przewodników.
 
 ## <a name="see-also"></a>Zobacz także
 

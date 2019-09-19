@@ -2,12 +2,12 @@
 title: Atrybuty
 description: Dowiedz F# się, jak atrybuty umożliwiają stosowanie metadanych do konstrukcji programistycznej.
 ms.date: 05/16/2016
-ms.openlocfilehash: c9691a13ff1e9e892e93a967136a99849da25f1f
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 08d50f7f57b6c0a81221e8f635f77f67750d0ff9
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567499"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082943"
 ---
 # <a name="attributes"></a>Atrybuty
 
@@ -27,8 +27,8 @@ W poprzedniej składni *obiekt docelowy* jest opcjonalny i, jeśli jest obecny, 
 
 *Argumenty* są argumentami konstruktora dla typu atrybutu. Jeśli atrybut ma konstruktora domyślnego, lista argumentów i nawiasy mogą być pominięte. Atrybuty obsługują zarówno argumenty pozycyjne, jak i nazwane argumenty. *Argumenty pozycyjne* są argumentami, które są używane w kolejności, w jakiej są wyświetlane. Nazwanych argumentów można użyć, jeśli atrybut ma właściwości publiczne. Można je ustawić przy użyciu następującej składni na liście argumentów.
 
-```
-*property-name* = *property-value*
+```fsharp
+property-name = property-value
 ```
 
 Takie inicjalizacje właściwości mogą być w dowolnej kolejności, ale muszą być zgodne z dowolnymi argumentami pozycyjnymi. Poniżej znajduje się przykład atrybutu, który używa argumentów pozycyjnych i inicjalizacji właściwości.
@@ -85,7 +85,7 @@ Mimo że zwykle nie trzeba określać obiektu docelowego atrybutu, w poniższej 
     <td><pre lang="fsharp"><code>[&lt;property: Obsolete&gt;] this.MyProperty = x</code></pre></td> 
   </tr>
   <tr>
-    <td>param</td>
+    <td>Param</td>
     <td><pre lang="fsharp"><code>member this.MyMethod([&lt;param: Out&gt;] x : ref&lt;int&gt;) = x := 10</code></pre></td> 
   </tr>
   <tr>

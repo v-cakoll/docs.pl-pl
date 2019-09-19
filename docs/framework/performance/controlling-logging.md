@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1648af8c3dc407581714e8e863fe4972d6ffadbc
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 45df41e10dc81bc6011e5329723bca55925825f9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894933"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046685"
 ---
 # <a name="controlling-net-framework-logging"></a>Kontrolowanie logowania w programie .NET Framework
 
@@ -85,7 +85,7 @@ Aby włączyć rejestrowanie, użytkownik musi określić trzy rzeczy:
 
 ## <a name="viewing-clr-etw-events"></a>Wyświetlanie zdarzeń CLR ETW
 
-Aby wyświetlić zdarzenia CLR ETW, należy użyć poleceń wymienionych poniżej. Opis zdarzeń można znaleźć w temacie [zdarzenia ETW środowiska CLR](../../../docs/framework/performance/clr-etw-events.md).
+Aby wyświetlić zdarzenia CLR ETW, należy użyć poleceń wymienionych poniżej. Opis zdarzeń można znaleźć w temacie [zdarzenia ETW środowiska CLR](clr-etw-events.md).
 
 ### <a name="to-view-clr-etw-events-using-tracerpt"></a>Aby wyświetlić zdarzenia CLR ETW przy użyciu narzędzia Tracerpt
 
@@ -114,4 +114,4 @@ Aby wyświetlić zdarzenia CLR ETW, należy użyć poleceń wymienionych poniże
 ## <a name="see-also"></a>Zobacz także
 
 - [Zestaw narzędzi wydajności systemu Windows](/windows-hardware/test/wpt/)
-- [Zdarzenia ETW w środowisku CLR](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [Zdarzenia ETW w środowisku CLR](etw-events-in-the-common-language-runtime.md)

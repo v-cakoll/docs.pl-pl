@@ -2,7 +2,7 @@
   items:
     - name: Ocenianie zmian powodujących niezgodność
       href: index.md
-    - name: Fundamentalne zmiany
-      href: breaking-changes.md
     - name: Kategorie zmian powodujących niezgodność
       href: categories.md
+    - name: Fundamentalne zmiany
+      href: breaking-changes.md

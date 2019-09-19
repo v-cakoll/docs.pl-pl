@@ -4,12 +4,12 @@ description: Dowiedz się, jak wdrożyć aplikację .NET for Apache Spark w usł
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 8cde4f173fb1de5ebf271f4f080d21d587d3229e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0eea5a40ae4643c7447e2f7281dc8b0db609ca79
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928539"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117947"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>Wdrażanie aplikacji .NET dla Apache Spark w usłudze Amazon EMR Spark
 
@@ -49,7 +49,7 @@ Przed rozpoczęciem wykonaj następujące czynności:
 
    Uruchom następujące polecenie w systemie Linux.
 
-   ```bash
+   ```dotnetcli
    dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
    ```
 

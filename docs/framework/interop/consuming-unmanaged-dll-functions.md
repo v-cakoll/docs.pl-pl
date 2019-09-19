@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e9308d6bf0eefaa60af17a721cd1c26827469eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9ef6a31ba9589ded9527d15e90724d0d04749579
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946845"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051844"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Wykorzystywanie niezarządzanych funkcji DLL
 Wywołanie platformy to usługa, która umożliwia kodowi zarządzanemu wywoływanie funkcji niezarządzanych wdrożonych w bibliotekach dołączanych dynamicznie (dll), takich jak te w interfejsie API systemu Windows. Lokalizuje i wywołuje wyeksportowaną funkcję i kierującie jej argumentów (liczbami całkowitymi, ciągami, tablicami, strukturami itd.) w granicach międzyoperacyjnych, zgodnie z wymaganiami.  
@@ -29,15 +29,15 @@ Wywołanie platformy to usługa, która umożliwia kodowi zarządzanemu wywoływ
   
 #### <a name="to-consume-exported-dll-functions"></a>Aby korzystać z wyeksportowanych funkcji DLL  
   
-1. [Zidentyfikuj funkcje w bibliotekach DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md).  
+1. [Zidentyfikuj funkcje w bibliotekach DLL](identifying-functions-in-dlls.md).  
   
      W minimalnym stopniu należy określić nazwę funkcji i nazwy biblioteki DLL, która ją zawiera.  
   
-2. [Utwórz klasę, aby przechowywać funkcje DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md).  
+2. [Utwórz klasę, aby przechowywać funkcje DLL](creating-a-class-to-hold-dll-functions.md).  
   
      Można użyć istniejącej klasy, utworzyć pojedynczą klasę dla każdej funkcji niezarządzanej lub utworzyć jedną klasę, która zawiera zestaw powiązanych funkcji niezarządzanych.  
   
-3. [Tworzenie prototypów w kodzie zarządzanym](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
+3. [Tworzenie prototypów w kodzie zarządzanym](creating-prototypes-in-managed-code.md).  
   
      [Visual Basic] Użyj instrukcji **DECLARE** ze słowami kluczowymi **funkcji** i **lib** . W niektórych rzadkich przypadkach można użyć **DllImportAttribute** ze słowami kluczowymi **funkcji udostępnionych** . Te przypadki zostały omówione w dalszej części tej sekcji.  
   
@@ -45,11 +45,11 @@ Wywołanie platformy to usługa, która umożliwia kodowi zarządzanemu wywoływ
   
      [C++] Użyj parametru **DllImportAttribute** , aby zidentyfikować bibliotekę DLL i funkcję. Oznacz metodę otoki lub funkcję **nieextern "C"** .  
   
-4. [Wywoływanie funkcji DLL](../../../docs/framework/interop/calling-a-dll-function.md).  
+4. [Wywoływanie funkcji DLL](calling-a-dll-function.md).  
   
-     Wywołaj metodę w klasie zarządzanej, tak jak każdą inną zarządzaną metodę. [Przekazywanie struktur](../../../docs/framework/interop/passing-structures.md) i [Implementowanie funkcji wywołania zwrotnego](../../../docs/framework/interop/callback-functions.md) to specjalne przypadki.  
+     Wywołaj metodę w klasie zarządzanej, tak jak każdą inną zarządzaną metodę. [Przekazywanie struktur](passing-structures.md) i [Implementowanie funkcji wywołania zwrotnego](callback-functions.md) to specjalne przypadki.  
   
- Przykłady, które demonstrują sposób konstruowania. Deklaracje oparte na sieci, które mają być używane z wywołaniem platformy, można znaleźć w temacie [kierowanie danych za pomocą wywołania platformy](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+ Przykłady, które demonstrują sposób konstruowania. Deklaracje oparte na sieci, które mają być używane z wywołaniem platformy, można znaleźć w temacie [kierowanie danych za pomocą wywołania platformy](marshaling-data-with-platform-invoke.md).  
   
 ## <a name="a-closer-look-at-platform-invoke"></a>Bliższe spojrzenie na wywołanie platformy  
  Wywołanie platformy polega na metadanych, aby znaleźć eksportowane funkcje i zorganizować ich argumenty w czasie wykonywania. Na poniższej ilustracji przedstawiono ten proces.  
@@ -73,6 +73,6 @@ Wywołanie platformy to usługa, która umożliwia kodowi zarządzanemu wywoływ
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Współdziałanie z kodem niezarządzanym](../../../docs/framework/interop/index.md)
-- [Przykłady wywołań platformy](../../../docs/framework/interop/platform-invoke-examples.md)
-- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
+- [Współdziałanie z kodem niezarządzanym](index.md)
+- [Przykłady wywołań platformy](platform-invoke-examples.md)
+- [Marshaling międzyoperacyjny](interop-marshaling.md)

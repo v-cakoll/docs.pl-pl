@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 981f5f23bf2aafc41426c858e150ec3664a494f9
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: db4380e97cf4d556248f42981b350160710f1dd8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205804"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051818"
 ---
 # <a name="exposing-net-components-to-com"></a>Udostępnianie składników .NET do modelu COM
 
@@ -27,7 +27,7 @@ Pisanie typu .NET i używanie tego typu z kodu niezarządzanego to odrębne dzia
 
      Atrybuty niestandardowe w kodzie zarządzanym mogą wzmocnić współdziałanie składnika.
 
-- [Pakowanie zestawu dla modelu COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md).
+- [Pakowanie zestawu dla modelu COM](packaging-an-assembly-for-com.md).
 
      Deweloperzy COM mogą wymagać podsumowania kroków związanych z odwołującymi się i wdrażaniem zestawów.
 
@@ -35,11 +35,11 @@ Pisanie typu .NET i używanie tego typu z kodu niezarządzanego to odrębne dzia
 
 ## <a name="to-consume-a-managed-type-from-com"></a>Aby użyć typu zarządzanego z modelu COM
 
-1. [Zarejestruj zestawy przy użyciu modelu COM](../../../docs/framework/interop/registering-assemblies-with-com.md).
+1. [Zarejestruj zestawy przy użyciu modelu COM](registering-assemblies-with-com.md).
 
      Typy w zestawie (i biblioteki typów) muszą być zarejestrowane w czasie projektowania. Jeśli Instalator nie rejestruje zestawu, poinstruuj deweloperów COM, aby korzystali z Regasm. exe.
 
-2. [Odwołuj się do typów .NET z modelu COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).
+2. [Odwołuj się do typów .NET z modelu COM](how-to-reference-net-types-from-com.md).
 
      Deweloperzy COM mogą odwoływać się do typów w zestawie przy użyciu tych samych narzędzi i technik, których używają dzisiaj.
 
@@ -53,5 +53,5 @@ Pisanie typu .NET i używanie tego typu z kodu niezarządzanego to odrębne dzia
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Współdziałanie z kodem niezarządzanym](../../../docs/framework/interop/index.md)
-- [Przykład międzyoperacyjnego modelu COM: Klient modelu COM i serwer .NET](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
+- [Współdziałanie z kodem niezarządzanym](index.md)
+- [Przykład międzyoperacyjnego modelu COM: Klient modelu COM i serwer .NET](com-interop-sample-com-client-and-net-server.md)

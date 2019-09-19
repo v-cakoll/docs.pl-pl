@@ -2,12 +2,12 @@
 title: Kiedy należy wybrać oprogramowanie .NET Framework dla kontenerów Docker
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Kiedy należy wybrać .NET Framework kontenerów platformy Docker
 ms.date: 01/07/2019
-ms.openlocfilehash: 0b948017c3bbbcc8c43d5d2d9698d9a1a6f9deed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 575af1bc1966a25a01acdcfe106870ad1b7c477d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784081"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039645"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Kiedy należy wybrać oprogramowanie .NET Framework dla kontenerów Docker
 
@@ -45,22 +45,22 @@ Mimo że program .NET Core 3 (w czasie tego pisania jest w programie Works) będ
 
 ## <a name="using-a-platform-or-api-that-does-not-support-net-core"></a>Korzystanie z platformy lub interfejsu API, który nie obsługuje programu .NET Core
 
-Niektóre platformy firmy Microsoft lub innych firm nie obsługują platformy .NET Core. Na przykład niektóre usługi platformy Azure udostępniają zestaw SDK, który nie jest jeszcze dostępny do użycia w programie .NET Core. Jest to tymczasowe, ponieważ wszystkie usługi platformy Azure ostatecznie będą korzystać z platformy .NET Core. Na przykład [usługa Azure DOCUMENTDB SDK dla platformy .NET Core](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core/1.2.1) została wydana jako wersja zapoznawcza 16 listopada 2016, ale teraz jest ogólnie dostępna (ga) jako stabilna.
+Niektóre platformy firmy Microsoft lub innych firm nie obsługują platformy .NET Core. Na przykład niektóre usługi platformy Azure udostępniają zestaw SDK, który nie jest jeszcze dostępny do użycia w programie .NET Core. Jest to tymczasowe, ponieważ wszystkie usługi platformy Azure ostatecznie będą korzystać z platformy .NET Core. Na przykład [usługa Azure DOCUMENTDB SDK dla platformy .NET Core](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core) została wydana jako wersja zapoznawcza 16 listopada 2016, ale teraz jest ogólnie dostępna (ga) jako stabilna.
 
 W międzyczasie, jeśli jakakolwiek platforma lub usługa na platformie Azure nadal nie obsługuje platformy .NET Core z interfejsem API klienta, można użyć równoważnego interfejsu API REST z usługi platformy Azure lub zestawu SDK klienta na .NET Framework.
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Przewodnik platformy .NET Core**  
-    [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
+  [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
 
 - **Przenoszenie z .NET Framework do platformy .NET Core**  
-    [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
+  [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
 - **.NET Core w przewodniku Docker**[https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
 
 - **Przegląd składników platformy .NET**  
-    [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)
+  [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)
 
 >[!div class="step-by-step"]
 >[Poprzedni](net-core-container-scenarios.md)Następny

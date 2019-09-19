@@ -7,12 +7,12 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 72c80262-8ca9-4624-9bd6-96984c5b7c5c
-ms.openlocfilehash: fea9bf959a0537ead01f27bbeb43874d0e5408df
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5d75eddd5314067a364bc8e76108ee7794bcfda
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953096"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042370"
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika — Tematy porad
 > [!NOTE]
@@ -21,8 +21,8 @@ ms.locfileid: "69953096"
  Ta sekcja zawiera szczegółowe informacje dotyczące implementowania wzorców kontrolek.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Udostępnianie zawartości tabel za pomocą automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
- [Pobieranie obsługiwanych wzorców kontrolek automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
- [Pobieranie stanu przełączenia pola wyboru przy użyciu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
- [Wywoływanie kontrolki przy użyciu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
- [Przenoszenie elementu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)
+ [Udostępnianie zawartości tabel za pomocą automatyzacji interfejsu użytkownika](expose-the-content-of-a-table-using-ui-automation.md)  
+ [Pobieranie obsługiwanych wzorców kontrolek automatyzacji interfejsu użytkownika](get-supported-ui-automation-control-patterns.md)  
+ [Pobieranie stanu przełączenia pola wyboru przy użyciu automatyzacji interfejsu użytkownika](get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [Wywoływanie kontrolki przy użyciu automatyzacji interfejsu użytkownika](invoke-a-control-using-ui-automation.md)  
+ [Przenoszenie elementu automatyzacji interfejsu użytkownika](move-a-ui-automation-element.md)

@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac0b45db0e9aebae830155cbe2469514c392921d
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 4f0828409a8c57baecf7c81fd7a4df6e7844c7ce
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894831"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044332"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (narzędzie PEVerify)
 Narzędzie PEVerify pomaga deweloperom, którzy generują język Microsoft intermediate language (MSIL) (na przykład twórcom kompilatorów, deweloperom aparatów skryptów itd.), w ustalaniu, czy ich kod MSIL i związane z nim metadane spełniają wymogi bezpieczeństwa typu. Niektóre kompilatory generują weryfikowalny kod bezpieczny ze względu na typy tylko wtedy, gdy unika się używania pewnych konstrukcji języka. Jeśli jako programista używasz takiego kompilatora, możesz chcieć sprawdzić, czy nie występują zagrożenia bezpieczeństwa typów kodu. W tej sytuacji możesz uruchomić narzędzie PEVerify, aby sprawdzić MSIL i metadane plików.  
   
- To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](developer-command-prompt-for-vs.md).  
   
  W wierszu polecenia wpisz następujące polecenie:  
   
@@ -122,7 +122,7 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Narzędzia](../../../docs/framework/tools/index.md)
-- [Pisanie kodu z bezpiecznym typem](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)
+- [Narzędzia](index.md)
+- [Pisanie kodu z bezpiecznym typem](../misc/code-access-security-basics.md#typesafe_code)
 - [Bezpieczeństwo i zabezpieczenia typów](../../standard/security/key-security-concepts.md#type-safety-and-security)
-- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Wiersze polecenia](developer-command-prompt-for-vs.md)

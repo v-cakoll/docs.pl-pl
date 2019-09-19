@@ -14,30 +14,30 @@ helpviewer_keywords:
 ms.assetid: 103eb3a3-1cf0-4406-8a9a-a7798fdc22d1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 66f662114868832f909d734a482e1dc9aefb841a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1679f87276262a08f5717ea81d263f4600542971
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754482"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052762"
 ---
 # <a name="gcunmanagedtomanaged-mda"></a>gcUnmanagedToManaged MDA
-`gcUnmanagedToManaged` Zarządzanego Asystenta debugowania (MDA) powoduje wyrzucania elementów bezużytecznych, zawsze wtedy, gdy wątku przechodzi z niezarządzane do zarządzanego kodu.  
+Asystent `gcUnmanagedToManaged` debugowania zarządzanego (MDA) powoduje wyrzucanie elementów bezużytecznych za każdym razem, gdy wątek przechodzi z niezarządzanych do kodu zarządzanego.  
   
 ## <a name="symptoms"></a>Symptomy  
- Wywoływanie uruchomione składniki niezarządzane użytkownika za pomocą modelu COM i platformy aplikacji powoduje naruszenie zasad dostępu niedeterministyczne w CLR.  
+ Aplikacja, która uruchamia niezarządzane składniki użytkownika przy użyciu modelu COM i wywołania platformy, powoduje niedeterministyczne naruszenie dostępu w środowisku CLR.  
   
 ## <a name="cause"></a>Przyczyna  
- Jeśli aplikacja jest uruchomiona składniki niezarządzane użytkownika, następnie tych składników może mieć uszkodzony stosu odśmieconej pamięci. Powoduje naruszenie zasad dostępu w CLR, gdy moduł zbierający elementy bezużyteczne próbuje zapoznaj się z wykresu obiektu.  
+ Jeśli aplikacja działa w niezarządzanych składnikach użytkownika, wówczas te składniki mogły spowodować uszkodzenie sterty zebranej przez elementy bezużyteczne. Powoduje to naruszenie zasad dostępu w środowisku CLR, gdy moduł zbierający elementy bezużyteczne podejmie próbę wykonania grafu obiektów.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Włączenie tego Asystenta skraca czas między po niezarządzanych składnika wykonana spowoduje uszkodzenie stosu odśmieconej pamięci i kiedy naruszenie zasad dostępu ma miejsce wymuszenia wyrzucania elementów bezużytecznych występuje przed każdym Zarządzanie zmianami.  
+ Włączenie tego asystenta skraca czas od momentu, gdy składnik niezarządzany uszkadza stertę zebraną przez elementy bezużyteczne i gdy występuje naruszenie zasad dostępu, wymuszając wyrzucanie elementów bezużytecznych przed każdym zarządzanym przejściem.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- Powoduje, że wyrzucania elementów bezużytecznych zawsze wtedy, gdy przejścia wątków, z niezarządzanych w kodzie zarządzanym.  
+ Powoduje wyrzucanie elementów bezużytecznych przy każdym przejścia wątku z niezarządzanego do kodu zarządzanego.  
   
 ## <a name="output"></a>Dane wyjściowe  
- To zdarzenie MDA nie daje żadnych danych wyjściowych.  
+ To zdarzenie MDA nie generuje danych wyjściowych.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -52,6 +52,6 @@ ms.locfileid: "61754482"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [gcManagedToUnmanaged](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)
-- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)
+- [gcManagedToUnmanaged](gcmanagedtounmanaged-mda.md)
+- [Marshaling międzyoperacyjny](../interop/interop-marshaling.md)

@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 12de3cd1663d9dfea66f32fcb7f456d44e31dc60
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 1ca9b10623e4a8a1a977c926262c63f3f2ab076e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894600"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044130"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (Narzędzie wydzielonej pamięci masowej)
 Narzędzie Isolated Storage obsługujące izolowane magazyny wyświetla lub usuwa wszystkie istniejące magazyny bieżącego użytkownika.  
   
- To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](developer-command-prompt-for-vs.md).  
   
  W wierszu polecenia wpisz następujące polecenie:  
   
@@ -62,6 +62,6 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Narzędzia](../../../docs/framework/tools/index.md)
+- [Narzędzia](index.md)
 - [Wydzielona pamięć masowa](../../standard/io/isolated-storage.md)
-- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Wiersze polecenia](developer-command-prompt-for-vs.md)

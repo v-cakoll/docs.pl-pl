@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba60b6d97d1441cefc9392067c797504f454ac59
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9d120dcf49f1c9097eee04434062a0363a7e144a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894521"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049972"
 ---
 # <a name="apis-that-rely-on-reflection"></a>Interfejsy API, które działają na podstawie odbicia
-W niektórych przypadkach użycie odbicia w kodzie nie jest oczywiste i dlatego łańcuch narzędzi .NET Native nie zachowuje metadanych wymaganych w czasie wykonywania. W tym temacie opisano niektóre typowe interfejsy API lub typowe wzorce programowania, które nie są uważane za część interfejsu API odbicia, ale które polegają na pomyślnym wykonaniu odbicia. Jeśli używasz ich w kodzie źródłowym, możesz dodać informacje o nich do pliku dyrektywy środowiska uruchomieniowego (. Rd. xml), tak aby wywołania tych interfejsów API nie zgłaszają wyjątku [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) ani innego wyjątku w czasie wykonywania.  
+W niektórych przypadkach użycie odbicia w kodzie nie jest oczywiste i dlatego łańcuch narzędzi .NET Native nie zachowuje metadanych wymaganych w czasie wykonywania. W tym temacie opisano niektóre typowe interfejsy API lub typowe wzorce programowania, które nie są uważane za część interfejsu API odbicia, ale które polegają na pomyślnym wykonaniu odbicia. Jeśli używasz ich w kodzie źródłowym, możesz dodać informacje o nich do pliku dyrektywy środowiska uruchomieniowego (. Rd. xml), tak aby wywołania tych interfejsów API nie zgłaszają wyjątku [MissingMetadataException](missingmetadataexception-class-net-native.md) ani innego wyjątku w czasie wykonywania.  
   
 ## <a name="typemakegenerictype-method"></a>Type. MakeGenericType, Metoda  
  Można dynamicznie utworzyć wystąpienie typu `AppClass<T>` ogólnego, <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> wywołując metodę przy użyciu kodu w następujący sposób:  
@@ -27,7 +27,7 @@ W niektórych przypadkach użycie odbicia w kodzie nie jest oczywiste i dlatego 
   
  Dzięki temu <xref:System.Type.GetType%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> wywołanie metody powiodło się i zwróci prawidłowy <xref:System.Type> obiekt.  
   
- Jednak nawet w przypadku dodania metadanych dla typu ogólnego bez wystąpienia, wywołanie <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> metody zgłasza wyjątek [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) :  
+ Jednak nawet w przypadku dodania metadanych dla typu ogólnego bez wystąpienia, wywołanie <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> metody zgłasza wyjątek [MissingMetadataException](missingmetadataexception-class-net-native.md) :  
   
 Nie można wykonać tej operacji, ponieważ metadane następującego typu zostały usunięte ze względu na wydajność:  
   
@@ -92,5 +92,5 @@ Unfortunately, no further information is available.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Wprowadzenie](getting-started-with-net-native.md)
+- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)

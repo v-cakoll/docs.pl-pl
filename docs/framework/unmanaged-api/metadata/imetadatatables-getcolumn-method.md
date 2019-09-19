@@ -1,6 +1,6 @@
 ---
 title: IMetaDataTables::GetColumn — Metoda
-ms.date: 03/30/2017
+ms.date: 02/25/2019
 api_name:
 - IMetaDataTables.GetColumn
 api_location:
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 22f9ceab2f01ac12762710f313c56f3f0ee4e6be
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 853f137d91e1b3eb4f3f65a06522618f8441dcb3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781543"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053673"
 ---
 # <a name="imetadatatablesgetcolumn-method"></a>IMetaDataTables::GetColumn — Metoda
-Pobiera wskaźnik do wartości znajdujących się w komórce określonej kolumny i wiersza w danej tabeli.  
+Pobiera wskaźnik do wartości zawartej w komórce określonej kolumny i wiersza w danej tabeli.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,27 +38,49 @@ HRESULT GetColumn (
 );  
 ```  
   
-## <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry
+
  `ixTbl`  
- [in] Indeks tabeli.  
+ podczas Indeks tabeli.  
   
  `ixCol`  
- [in] Indeks kolumny w tabeli.  
+ podczas Indeks kolumny w tabeli.  
   
  `rid`  
- [in] Indeks wiersza w tabeli.  
+ podczas Indeks wiersza w tabeli.  
   
  `pVal`  
- [out] Wskaźnik do wartości w komórce.  
+ określoną Wskaźnik do wartości w komórce.  
+ 
+## <a name="remarks"></a>Uwagi
+
+Interpretacja wartości zwracanej przez `pVal` jest zależna od typu kolumny. Typ kolumny można określić przez wywołanie metody [IMetaDataTables. GetColumnInfo](imetadatatables-getcolumninfo-method.md).
+
+- Metoda **GetColumn** automatycznie konwertuje kolumny typu **RID** lub **CodedToken** na pełne wartości 32-bitowe `mdToken` .
+- Automatycznie konwertuje wartości 8-bitowe lub 16-bitowe na pełne wartości 32-bitowe. 
+- W przypadku kolumn typu *sterty* zwracany *Pval* będzie indeksem do odpowiedniej sterty.
+
+| Typ kolumny              | pVal zawiera | Komentarz                          |
+|--------------------------|---------------|-----------------------------------|
+| `0`..`iRidMax`<br>(0.. 63)  | mdToken     | *Pval* będzie zawierać pełny token. Funkcja automatycznie konwertuje identyfikator RID na pełny token. |
+| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | mdToken | Po powrocie *Pval* będzie zawierać pełny token. Funkcja automatycznie dekompresuje CodedToken do pełnego tokenu. |
+| `iSHORT`(96)            | Int16         | Automatycznie Podpisz do 32-bitowego.  |
+| `iUSHORT`(97)           | UInt16        | Automatycznie Podpisz do 32-bitowego.  |
+| `iLONG`(98)             | Int32         |                                        | 
+| `iULONG`(99)            | UInt32        |                                        |
+| `iBYTE`(100)            | Byte          | Automatycznie Podpisz do 32-bitowego.  |
+| `iSTRING`(101)          | Indeks sterty ciągu | *Pval* jest indeksem do sterty ciągu. Użyj [IMetadataTables:: GetString](imetadatatables-getstring-method.md) , aby uzyskać rzeczywistą wartość ciągu kolumny. |
+| `iGUID`(102)            | Indeks sterty identyfikatora GUID | *Pval* jest indeksem do sterty identyfikatora GUID. Użyj [IMetadataTables:: GetGuid](imetadatatables-getguid-method.md) , aby uzyskać rzeczywistą wartość identyfikatora GUID kolumny. |
+| `iBLOB`(103)            | Indeks sterty obiektu BLOB | *Pval* jest indeksem do sterty obiektu BLOB. Użyj [IMetadataTables:: GetBlob](imetadatatables-getblob-method.md) , aby uzyskać rzeczywistą wartość obiektu BLOB kolumny. |
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Nagłówki** Cor. h  
   
- **Biblioteka:** Używany jako zasób w MsCorEE.dll  
+ **Biblioteki** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET framework** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

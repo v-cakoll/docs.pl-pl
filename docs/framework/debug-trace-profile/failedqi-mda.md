@@ -10,35 +10,35 @@ helpviewer_keywords:
 ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ca7d98dba7f66aee96d0f2059086c442df17f5b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fec1bfb402f3b394ceb36590c3a880f82c5cb101
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660458"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052797"
 ---
 # <a name="failedqi-mda"></a>failedQI MDA
-`failedQI` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy środowisko wykonawcze wywołuje `QueryInterface` na wskaźnik interfejsu COM w imieniu wywoływana otoka środowiska uruchomieniowego (RCW), a `QueryInterface` wywołanie zakończy się niepowodzeniem.  
+Asystent debugowania `QueryInterface` `QueryInterface` zarządzanego (MDA) jest uaktywniany, gdy środowisko uruchomieniowe wywołuje wskaźnik interfejsu com w imieniu otoki (RCW) środowiska uruchomieniowego, a wywołanie kończy się niepowodzeniem. `failedQI`  
   
 ## <a name="symptoms"></a>Symptomy  
- Rzutowanie na RCW zakończy się niepowodzeniem lub wywołania dla modelu COM z RCW nieoczekiwanie zakończy się niepowodzeniem.  
+ Rzutowanie otoki RCW kończy się niepowodzeniem lub wywołanie modelu COM z otoki RCW nieoczekiwanie zakończyło się niepowodzeniem.  
   
 ## <a name="cause"></a>Przyczyna  
   
-- Wykonano wywołanie z nieprawidłowym kontekście.  
+- Wywołanie zostało wykonane z niewłaściwego kontekstu.  
   
-- Zarejestrowany serwer proxy, kończy się niepowodzeniem `QueryInterface` wywołania, ponieważ podjęto próbę wywołania w nieprawidłowym kontekście.  
+- Zarejestrowanego serwera proxy nie powiodło się, `QueryInterface` ponieważ wywołanie było podejmowane w nieprawidłowym kontekście.  
   
-- Serwer proxy należące do OLE zwróciła błąd HRESULT.  
+- Serwer proxy należący do OLE zwrócił błąd HRESULT.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Na karcie reguły COM można znaleźć w dokumentacji MSDN.  
+ Zapoznaj się z dokumentacją MSDN dotyczącą reguł COM.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- Jeśli `QueryInterface` wywołanie zakończy się niepowodzeniem, kontekst jest włączane i `QueryInterface` wywołanie podejmowana jest próba ponownie zobaczyć był nieprawidłowy kontekst na pozycji błędu.  
+ Jeśli wywołanie zakończy się niepowodzeniem, kontekst jest przełączany, `QueryInterface` a wywołanie zostanie ponowione, aby sprawdzić, czy wystąpił błąd w nieprawidłowym kontekście. `QueryInterface`  
   
 ## <a name="output"></a>Dane wyjściowe  
- Zarządzane nazwy interfejsu, identyfikator GUID interfejsu i HRESULT błędu.  
+ Zarządzana nazwa interfejsu, identyfikator GUID interfejsu i HRESULT błędu.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -53,5 +53,5 @@ ms.locfileid: "64660458"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling międzyoperacyjny](../interop/interop-marshaling.md)

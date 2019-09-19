@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UI Automation, custom user interface (UI) elements
 - providers, UI Automation
 ms.assetid: 88bc4212-3f4e-4bac-bae0-faef31944b71
-ms.openlocfilehash: ac9b20d1fd3356941b75df686b2556b3c3c4f179
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d5f2651c6a74a7f9ac275a55a4e37baebf653305
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914426"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042085"
 ---
 # <a name="ui-automation-providers-for-managed-code-how-to-topics"></a>Dostawcy automatyzacji interfejsu użytkownika do kodu zarządzanego — Tematy porad
 > [!NOTE]
@@ -22,10 +22,10 @@ ms.locfileid: "69914426"
  Ta sekcja zawiera przykłady kodu, które demonstrują zadania [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] w przypadku [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] pisania dostawców dla elementów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Udostępnianie dostawcy automatyzacji interfejsu użytkownika po stronie serwera](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  
- [Zwracanie właściwości od dostawcy automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
- [Wywoływanie zdarzeń od dostawcy automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
- [Włączanie nawigacji w dostawcy fragmentu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
- [Obsługa wzorców kontrolek dostawcy automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [Tworzenie dostawcy automatyzacji interfejsu użytkownika po stronie klienta](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)  
- [Implementacja dostawców automatyzacji interfejsu użytkownika w aplikacji klienta](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)
+ [Udostępnianie dostawcy automatyzacji interfejsu użytkownika po stronie serwera](expose-a-server-side-ui-automation-provider.md)  
+ [Zwracanie właściwości od dostawcy automatyzacji interfejsu użytkownika](return-properties-from-a-ui-automation-provider.md)  
+ [Wywoływanie zdarzeń od dostawcy automatyzacji interfejsu użytkownika](raise-events-from-a-ui-automation-provider.md)  
+ [Włączanie nawigacji w dostawcy fragmentu automatyzacji interfejsu użytkownika](enable-navigation-in-a-ui-automation-fragment-provider.md)  
+ [Obsługa wzorców kontrolek dostawcy automatyzacji interfejsu użytkownika](support-control-patterns-in-a-ui-automation-provider.md)  
+ [Tworzenie dostawcy automatyzacji interfejsu użytkownika po stronie klienta](create-a-client-side-ui-automation-provider.md)  
+ [Implementacja dostawców automatyzacji interfejsu użytkownika w aplikacji klienta](implement-ui-automation-providers-in-a-client-application.md)

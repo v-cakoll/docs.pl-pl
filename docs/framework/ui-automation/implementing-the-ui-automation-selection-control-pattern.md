@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Selection control pattern
 - control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
-ms.openlocfilehash: f12ab6cc776daa4d6cca65d682cd299a0733a3a5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8ce37b71846f227c753e8d217e96482f623d3bd1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935772"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043236"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>Implementacja wzorca formantu wyboru automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "69935772"
   
  W tym temacie przedstawiono wskazówki i konwencje <xref:System.Windows.Automation.Provider.ISelectionProvider>dotyczące wdrażania, w tym informacje o zdarzeniach i właściwościach. Linki do dodatkowych odwołań znajdują się na końcu tematu.  
   
- Wzorzec <xref:System.Windows.Automation.SelectionPattern> kontrolki służy do obsługi kontrolek, które działają jako kontenery dla kolekcji elementów podrzędnych, które można wybrać. Elementy podrzędne tego elementu muszą implementować <xref:System.Windows.Automation.Provider.ISelectionItemProvider>. Aby zapoznać się z przykładami formantów implementujących ten wzorzec kontrolek, zobacz [Mapowanie wzorców formantów dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ Wzorzec <xref:System.Windows.Automation.SelectionPattern> kontrolki służy do obsługi kontrolek, które działają jako kontenery dla kolekcji elementów podrzędnych, które można wybrać. Elementy podrzędne tego elementu muszą implementować <xref:System.Windows.Automation.Provider.ISelectionItemProvider>. Aby zapoznać się z przykładami formantów implementujących ten wzorzec kontrolek, zobacz [Mapowanie wzorców formantów dla klientów automatyzacji interfejsu użytkownika](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Wytyczne i konwencje dotyczące implementacji  
@@ -31,7 +31,7 @@ ms.locfileid: "69935772"
   
 - Kontrolki pojedynczego wyboru, które zarządzają kontrolkami <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>podrzędnymi, które implementują, takich jak suwak **rozdzielczość ekranu** w oknie dialogowym **właściwości wyświetlania** lub kontrolka [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] wyboru **selektora kolorów** z ( przedstawiony poniżej) powinien implementować <xref:System.Windows.Automation.Provider.ISelectionProvider>; ich elementy podrzędne powinny implementować zarówno <xref:System.Windows.Automation.Provider.ISelectionItemProvider> <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> , jak i.  
   
- ![Selektor kolorów z wyróżnioną żółtą opcją.](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
+ ![Selektor kolorów z wyróżnioną żółtą opcją.](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Przykład mapowania ciągu próbnika kolorów  
   
 - Menu nie są obsługiwane <xref:System.Windows.Automation.SelectionPattern>. Jeśli pracujesz z elementami menu, które zawierają zarówno grafikę, jak i tekst (takie jak elementy **okienka podglądu** w menu **Widok** w programie Microsoft Outlook) i chcesz przekazać stan, należy zaimplementować <xref:System.Windows.Automation.Provider.IToggleProvider>.  
@@ -60,9 +60,9 @@ Przykład mapowania ciągu próbnika kolorów
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Obsługa wzorców kontrolek dostawcy automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [Wzorce kontrolek automatyzacji interfejsu użytkownika dla klientów](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Implementacja wzorca kontrolki SelectionItem dla automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/implementing-the-ui-automation-selectionitem-control-pattern.md)
-- [Przegląd drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Używanie buforowania w automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie](ui-automation-control-patterns-overview.md)
+- [Obsługa wzorców kontrolek dostawcy automatyzacji interfejsu użytkownika](support-control-patterns-in-a-ui-automation-provider.md)
+- [Wzorce kontrolek automatyzacji interfejsu użytkownika dla klientów](ui-automation-control-patterns-for-clients.md)
+- [Implementacja wzorca kontrolki SelectionItem dla automatyzacji interfejsu użytkownika](implementing-the-ui-automation-selectionitem-control-pattern.md)
+- [Przegląd drzewa automatyzacji interfejsu użytkownika](ui-automation-tree-overview.md)
+- [Używanie buforowania w automatyzacji interfejsu użytkownika](use-caching-in-ui-automation.md)

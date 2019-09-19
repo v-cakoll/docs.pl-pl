@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46475cbc8517fc73d8b7fd868c7632e5c85a7726
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: f99b2fd4716b069d4ec7a21e369c5178990ce16d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894795"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044194"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Narzędzie podpisu)
 Narzędzie podpisywania to narzędzie wiersza polecenia, które cyfrowo podpisuje pliki, weryfikuje podpisy w plikach i oznacza pliki znacznikami czasu.  
   
- To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](developer-command-prompt-for-vs.md).  
   
  W wierszu polecenia wpisz następujące polecenie:  
   
@@ -39,10 +39,10 @@ signtool [command] [options] [file_name | ...]
   
 |Polecenie|Opis|  
 |-------------|-----------------|  
-|`catdb`|Dodaje plik wykazu do bazy danych wykazów lub usuwa go z niej. Bazy danych wykazów służą do automatycznego wyszukiwania plików wykazu i są identyfikowane przez identyfikator GUID. Aby uzyskać listę opcji obsługiwanych przez `catdb` polecenie, zobacz [Opcje polecenia Catdb](../../../docs/framework/tools/signtool-exe.md#catdb).|  
-|`sign`|Cyfrowo podpisuje pliki. Podpisy cyfrowe chronią pliki przed ingerencją osób niepowołanych i umożliwiają użytkownikom weryfikację podpisującego na podstawie certyfikatu podpisywania. Aby uzyskać listę opcji obsługiwanych przez `sign` polecenie, zobacz [Opcje polecenia podpisywania](../../../docs/framework/tools/signtool-exe.md#sign).|  
-|`Timestamp`|Oznacza pliki znacznikami czasu. Aby uzyskać listę opcji obsługiwanych przez `TimeStamp` polecenie, zobacz [Opcje polecenia timestamp](../../../docs/framework/tools/signtool-exe.md#TimeStamp).|  
-|`Verify`|Weryfikuje podpis cyfrowy plików, ustalając, czy certyfikat podpisywania został wystawiony przez zaufany urząd, czy certyfikat podpisywania został odwołany i, opcjonalnie, czy certyfikat podpisywania jest ważny dla określonych zasad. Aby uzyskać listę opcji obsługiwanych przez `Verify` polecenie, zobacz temat [Sprawdzanie opcji polecenia](../../../docs/framework/tools/signtool-exe.md#Verify).|  
+|`catdb`|Dodaje plik wykazu do bazy danych wykazów lub usuwa go z niej. Bazy danych wykazów służą do automatycznego wyszukiwania plików wykazu i są identyfikowane przez identyfikator GUID. Aby uzyskać listę opcji obsługiwanych przez `catdb` polecenie, zobacz [Opcje polecenia Catdb](signtool-exe.md#catdb).|  
+|`sign`|Cyfrowo podpisuje pliki. Podpisy cyfrowe chronią pliki przed ingerencją osób niepowołanych i umożliwiają użytkownikom weryfikację podpisującego na podstawie certyfikatu podpisywania. Aby uzyskać listę opcji obsługiwanych przez `sign` polecenie, zobacz [Opcje polecenia podpisywania](signtool-exe.md#sign).|  
+|`Timestamp`|Oznacza pliki znacznikami czasu. Aby uzyskać listę opcji obsługiwanych przez `TimeStamp` polecenie, zobacz [Opcje polecenia timestamp](signtool-exe.md#TimeStamp).|  
+|`Verify`|Weryfikuje podpis cyfrowy plików, ustalając, czy certyfikat podpisywania został wystawiony przez zaufany urząd, czy certyfikat podpisywania został odwołany i, opcjonalnie, czy certyfikat podpisywania jest ważny dla określonych zasad. Aby uzyskać listę opcji obsługiwanych przez `Verify` polecenie, zobacz temat [Sprawdzanie opcji polecenia](signtool-exe.md#Verify).|  
   
  Poniższe opcje są stosowane do wszystkich poleceń narzędzia podpisywania.  
   
@@ -211,5 +211,5 @@ signtool verify /c MyCatalog.cat SystemFile.dll
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Narzędzia](../../../docs/framework/tools/index.md)
-- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Narzędzia](index.md)
+- [Wiersze polecenia](developer-command-prompt-for-vs.md)

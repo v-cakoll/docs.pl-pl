@@ -2,16 +2,16 @@
 title: Wyrażenia obliczeń
 description: Dowiedz się, jak utworzyć wygodną składnię do F# pisania obliczeń w programie, które mogą być sekwencjonowane i łączone przy użyciu konstrukcji przepływu sterowania i powiązań.
 ms.date: 03/15/2019
-ms.openlocfilehash: bca328a09ff61fb76d30960221ee3350fcc25fc1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 9222be5a585914761d3001d6649b196030eec05e
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106569"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083057"
 ---
 # <a name="computation-expressions"></a>Wyrażenia obliczeń
 
-Wyrażenia obliczeń w F# programie zapewniają wygodną składnię do pisania obliczeń, które mogą być sekwencjonowane i łączone przy użyciu konstrukcji przepływu sterowania i powiązań. W zależności od rodzaju wyrażenia obliczeń można traktować ich jako metodę wyrażania monads, monoids, Monad i applicative funktory. Jednak, w przeciwieństwie do innych języków ( takich jak Haskell), nie są one powiązane z pojedynczym abstrakcją i nie polegają na makrach ani innych formach programowania, aby osiągnąć wygodną i zależną od kontekstu składnię.
+Wyrażenia obliczeń w F# programie zapewniają wygodną składnię do pisania obliczeń, które mogą być sekwencjonowane i łączone przy użyciu konstrukcji przepływu sterowania i powiązań. W zależności od rodzaju wyrażenia obliczeń można traktować ich jako metodę wyrażania monads, monoids, Monad i applicative funktory. Jednak, w przeciwieństwie do innych języków ( *takich jak Haskell* ), nie są one powiązane z pojedynczym abstrakcją i nie polegają na makrach ani innych formach programowania, aby osiągnąć wygodną i zależną od kontekstu składnię.
 
 ## <a name="overview"></a>Omówienie
 
@@ -22,7 +22,7 @@ Obliczenia mogą mieć wiele form. Najbardziej powszechną formą obliczeń jest
 - Wpływ obliczeń
 - Obliczenia dotyczące przetworzenia
 
-Ogólnie rzecz biorąc, istnieją operacje obliczeniowe zależne od *kontekstu* , które należy wykonać w niektórych częściach aplikacji. Pisanie kodu wrażliwego na kontekst może być trudne, ponieważ jest to łatwe w obsłudze obliczenia poza danym kontekstem bez abstrakcji, aby zapobiec temu. Te streszczenia są często trudne do napisania przez siebie, co oznacza F# , że jest to ogólny sposób, nazywany **wyrażeniami obliczeń**.
+Ogólnie rzecz biorąc, istnieją operacje obliczeniowe *zależne od kontekstu* , które należy wykonać w niektórych częściach aplikacji. Pisanie kodu wrażliwego na kontekst może być trudne, ponieważ jest to łatwe w obsłudze obliczenia poza danym kontekstem bez abstrakcji, aby zapobiec temu. Te streszczenia są często trudne do napisania przez siebie, co oznacza F# , że jest to ogólny sposób, nazywany **wyrażeniami obliczeń**.
 
 Wyrażenia obliczeń oferują ujednoliconą składnię i abstrakcyjny model dla obliczeń z uwzględnieniem kontekstu.
 
@@ -32,7 +32,7 @@ Każde wyrażenie obliczeniowe jest obsługiwane przez typ *konstruktora* . Typ 
 
 Wszystkie wyrażenia obliczeń mają następującą postać:
 
-```
+```fsharp
 builder-expr { cexper }
 ```
 
@@ -77,7 +77,7 @@ let doThingsAsync url =
     }
 ```
 
-W przypadku powiązania wywołania z wyrażeniem obliczeniowym z `let`, wynik wyrażenia obliczeń nie zostanie pobrany. Zamiast tego nastąpi powiązanie wartości niezrealizowanego wywołania tego wyrażenia obliczeń. Użyj `let!` , aby powiązać z wynikiem.
+W przypadku powiązania wywołania z wyrażeniem obliczeniowym z `let`, wynik wyrażenia obliczeń nie zostanie pobrany. Zamiast tego nastąpi powiązanie wartości *niezrealizowanego* wywołania tego wyrażenia obliczeń. Użyj `let!` , aby powiązać z wynikiem.
 
 `let!`jest definiowana przez `Bind(x, f)` element członkowski w typie konstruktora.
 

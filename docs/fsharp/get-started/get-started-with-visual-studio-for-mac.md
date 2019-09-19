@@ -2,12 +2,12 @@
 title: Rozpoczynanie pracy F# z usługą w Visual Studio dla komputerów Mac
 description: Dowiedz się, F# jak korzystać z programu z Visual Studio dla komputerów Mac.
 ms.date: 07/03/2018
-ms.openlocfilehash: 679ed1ea28f5d0e0d910dbd407b38d1d2f0314f6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d3604178f93cf17d21f25b09084be7e7977378b5
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629755"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082975"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Rozpoczynanie pracy F# z usługą w Visual Studio dla komputerów Mac
 
@@ -35,7 +35,7 @@ Zacznijmy od zapisania najpierw kodu.  Upewnij się, że `Program.fs` plik jest 
 
 W poprzednim przykładzie kodu zdefiniowano funkcję `square` , która przyjmuje `x` dane wejściowe i mnoży ją przez siebie.  Ponieważ F# używa [wnioskowania o typie](../language-reference/type-inference.md), `x` nie trzeba określać typu.  F# Kompilator rozumie typy, w których mnożenie jest prawidłowe i przypisuje typ `x` na podstawie sposobu wywoływania metody `square` .  Po umieszczeniu wskaźnika myszy `square`na stronie powinny zostać wyświetlone następujące elementy:
 
-```
+```console
 val square: x:int -> int
 ```
 
@@ -51,7 +51,7 @@ Możesz uruchomić kod i zobaczyć wyniki, klikając polecenie **Uruchom** w men
 
 W oknie konsoli powinna zostać wyświetlona następująca wartość, która Visual Studio dla komputerów Mac zdjęte:
 
-```
+```console
 12 squared is 144!
 ```
 
@@ -61,9 +61,9 @@ Gratulacje!  Został utworzony pierwszy F# projekt w Visual Studio dla komputer�
 
 Jedną z najlepszych funkcji narzędzi wizualnych F# w Visual Studio dla komputerów Mac jest okno F# interaktywne.  Umożliwia wysyłanie kodu do procesu, w którym można wywołać ten kod i interaktywnie zobaczyć wynik.
 
-Aby rozpocząć korzystanie z niego, zaznacz `square` funkcję zdefiniowaną w kodzie.  Następnie kliknij pozycję **Edytuj** w menu najwyższego poziomu.  Następnie wybierz pozycję **Wyślij zaznaczenie F# do**opcji interaktywny.  Spowoduje to wykonanie kodu w oknie F# interaktywnym.  Alternatywnie możesz kliknąć prawym przyciskiem myszy zaznaczenie i wybrać polecenie **Wyślij zaznaczenie do F#** opcji interaktywny.  Powinno zostać wyświetlone okno F# interaktywne z następującym w nim:
+Aby rozpocząć korzystanie z niego, zaznacz `square` funkcję zdefiniowaną w kodzie.  Następnie kliknij pozycję **Edytuj** w menu najwyższego poziomu.  Następnie wybierz pozycję **Wyślij zaznaczenie F# do opcji interaktywny**.  Spowoduje to wykonanie kodu w oknie F# interaktywnym.  Alternatywnie możesz kliknąć prawym przyciskiem myszy zaznaczenie i wybrać polecenie **Wyślij zaznaczenie do F# opcji interaktywny**.  Powinno zostać wyświetlone okno F# interaktywne z następującym w nim:
 
-```
+```console
 >
 
 val square : x:int -> int
@@ -73,7 +73,7 @@ val square : x:int -> int
 
 Pokazuje to ten sam podpis funkcji dla `square` funkcji, która została wcześniej umieszczona po umieszczeniu wskaźnika myszy nad funkcją.  Ponieważ `square` jest teraz zdefiniowany w procesie F# interaktywnym, można wywołać go z różnymi wartościami:
 
-```
+```console
 > square 12;;
 val it : int = 144
 >square 13;;
@@ -82,7 +82,7 @@ val it : int = 169
 
 Wykonuje funkcję, wiąże wynik z nową nazwą `it`i wyświetla typ i `it`wartość.  Należy pamiętać, że każdy wiersz należy zamknąć `;;`za pomocą.  Jest to sposób F# interaktywny wie, gdy wywołanie funkcji zostało zakończone.  Możesz również definiować nowe funkcje w F# trybie interaktywnym:
 
-```
+```console
 > let isOdd x = x % 2 <> 0;;
 
 val isOdd : x:int -> bool
@@ -93,14 +93,14 @@ val it : bool = false
 
 Powyższe definiuje nową funkcję, która `isOdd` `int` pobiera i sprawdza, czy jest nieparzysta.  Możesz wywołać tę funkcję, aby zobaczyć, co zwraca z innymi danymi wejściowymi.  Można wywoływać funkcje w ramach wywołań funkcji:
 
-```
+```console
 > isOdd (square 15);;
 val it : bool = true
 ```
 
 Można również użyć [operatora przekazywania potoków](../language-reference/symbol-and-operator-reference/index.md) , aby przekierować wartość do dwóch funkcji:
 
-```
+```console
 > 15 |> square |> isOdd;;
 val it : bool = true
 ```
@@ -111,7 +111,7 @@ To tylko możliwość wypróbowania innowacyjnego, co możesz zrobić z F# inter
 
 ## <a name="next-steps"></a>Następne kroki
 
-Jeśli jeszcze tego nie zrobiono, zapoznaj się [z F#przewodnikiem ](../tour.md), który obejmuje niektóre podstawowe funkcje F# języka.  Udostępnimy przegląd niektórych możliwości programu F#i udostępniamy dużo przykładów kodu, które można skopiować do Visual Studio dla komputerów Mac i uruchamiać.  Istnieją również pewne doskonałe zasoby zewnętrzne, których można użyć w [ F# przewodniku](../index.md).
+Jeśli jeszcze tego nie zrobiono, zapoznaj się [ F#z przewodnikiem ](../tour.md), który obejmuje niektóre podstawowe funkcje F# języka.  Udostępnimy przegląd niektórych możliwości programu F#i udostępniamy dużo przykładów kodu, które można skopiować do Visual Studio dla komputerów Mac i uruchamiać.  Istnieją również pewne doskonałe zasoby zewnętrzne, których można użyć w [ F# przewodniku](../index.md).
 
 ## <a name="see-also"></a>Zobacz także
 

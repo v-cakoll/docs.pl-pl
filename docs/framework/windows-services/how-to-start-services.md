@@ -6,12 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: 5be803e2f4face60318a4c9ed12f1b58edaeace6
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 75fd3aba88bdffbe536ad5dab14996913d0a9d22
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044426"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053574"
 ---
 # <a name="how-to-start-services"></a>Instrukcje: Uruchamianie usług
 
@@ -28,7 +28,7 @@ Należy ustawić <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> wła
 
 ### <a name="to-specify-how-a-service-should-start"></a>Aby określić sposób uruchamiania usługi
 
-1. Po utworzeniu usługi należy dodać do niej niezbędne Instalatory. Aby uzyskać więcej informacji, zobacz [jak: Dodaj Instalatory do aplikacji](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)usługi.
+1. Po utworzeniu usługi należy dodać do niej niezbędne Instalatory. Aby uzyskać więcej informacji, zobacz [jak: Dodaj Instalatory do aplikacji](how-to-add-installers-to-your-service-application.md)usługi.
 
 2. W projektancie kliknij Instalatora usługi dla usługi, z którą pracujesz.
 
@@ -80,6 +80,6 @@ Należy ustawić <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> wła
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Instrukcje: Tworzenie usług systemu Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
-- [Instrukcje: Dodawanie instalatorów do aplikacji usługi](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Wprowadzenie do aplikacji usług systemu Windows](introduction-to-windows-service-applications.md)
+- [Instrukcje: Tworzenie usług systemu Windows](how-to-create-windows-services.md)
+- [Instrukcje: Dodawanie instalatorów do aplikacji usługi](how-to-add-installers-to-your-service-application.md)

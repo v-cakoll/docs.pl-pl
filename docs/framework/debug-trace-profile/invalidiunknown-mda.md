@@ -10,24 +10,24 @@ helpviewer_keywords:
 ms.assetid: c7924771-a16b-40fe-b337-ce51dcdf6a12
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 35560b966d5fba60ac35b2eb1e559e196fc868f5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea7f48ab61c16cb0430717074f1b1feab4827763
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754544"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052595"
 ---
 # <a name="invalidiunknown-mda"></a>invalidIUnknown MDA
-`invalidIUnknown` Zarządzanego Asystenta debugowania (MDA) jest uaktywniany podczas nieprawidłową `IUnknown` wskaźnik jest przekazywany do kodu zarządzanego z kodu natywnego. `IUnknown` Nie zwraca Powodzenie po otrzymaniu kwerendy dla `IUnknown` interfejsu.  
+Asystent debugowania `IUnknown` zarządzanego (MDA) jest uaktywniany podczas przekazywania nieprawidłowego wskaźnika do kodu zarządzanego z kodu natywnego. `invalidIUnknown` Nie `IUnknown` można zwrócić sukcesu, gdy zapytanie `IUnknown` dotyczące interfejsu.  
   
 ## <a name="symptoms"></a>Symptomy  
- Wystąpił nieoczekiwany błąd występuje, gdy marshaling wskaźnika interfejsu COM podczas przekazywania międzyprocesowego argumentu.  
+ Wystąpił nieoczekiwany błąd podczas organizowania wskaźnika interfejsu COM podczas organizowania argumentów.  
   
 ## <a name="cause"></a>Przyczyna  
- Nieprawidłowe `QueryInterface` implementacji interfejsu COM jest przekazywany do środowiska CLR.  
+ Niepoprawna `QueryInterface` implementacja interfejsu com przeniesiona do środowiska CLR.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Popraw `QueryInterface` implementacji.  
+ `QueryInterface` Popraw implementację.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
  To zdarzenie MDA nie ma wpływu na środowisko CLR.  
@@ -48,5 +48,5 @@ ms.locfileid: "61754544"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling międzyoperacyjny](../interop/interop-marshaling.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e1eff9d1ef9f36c80f71e738fdd4dc56a9b6ec6
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: eef52827bfe36977c9c4c844f4f431e7404adc97
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894142"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051678"
 ---
 # <a name="passing-structures"></a>Przekazywanie struktur
 Wiele niezarządzanych funkcji oczekuje, że jako parametr funkcji, elementy członkowskie struktur (typy zdefiniowane przez użytkownika w Visual Basic) lub elementy członkowskie klas, które są zdefiniowane w kodzie zarządzanym. Podczas przekazywania struktur lub klas do niezarządzanego kodu przy użyciu funkcji Invoke platformy należy podać dodatkowe informacje, aby zachować oryginalny układ i wyrównanie. W tym temacie wprowadzono <xref:System.Runtime.InteropServices.StructLayoutAttribute> atrybut, którego można użyć do zdefiniowania sformatowanych typów. Dla zarządzanych struktur i klas można wybrać spośród kilku przewidzianych zachowań układu **LayoutKind** .  
@@ -177,6 +177,6 @@ public class TestPlatformInvoke
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wywołanie funkcji DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+- [Wywołanie funkcji DLL](calling-a-dll-function.md)
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - <xref:System.Runtime.InteropServices.FieldOffsetAttribute>

@@ -1,17 +1,16 @@
 ---
-title: Wprowadzenie do platformy .NET Core w systemie macOS
+title: 'Samouczek: Tworzenie rozwiązania .NET Core w macOS przy użyciu Visual Studio Code'
 description: Ten dokument zawiera instrukcje i przepływ pracy służące do tworzenia rozwiązania platformy .NET Core przy użyciu Visual Studio Code.
-author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: 572174cb09dbde03095fa9444989356038bab9b7
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 022afd99c6d36d7a60ac40f3f27ba073c5470bd2
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849346"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082813"
 ---
-# <a name="get-started-with-net-core-on-macos"></a>Wprowadzenie do platformy .NET Core w systemie macOS
+# <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>Samouczek: Tworzenie rozwiązania .NET Core w macOS przy użyciu Visual Studio Code
 
 Ten dokument zawiera kroki i przepływ pracy służące do tworzenia rozwiązania .NET Core dla macOS. Dowiedz się, jak tworzyć projekty, testy jednostkowe, korzystać z narzędzi debugowania i dołączać biblioteki innych firm za pośrednictwem programu [NuGet](https://www.nuget.org/).
 
@@ -32,13 +31,13 @@ W tym samouczku utworzysz trzy projekty: projekt biblioteki, testy dla tego proj
 
 Rozpocznij Visual Studio Code. Naciśnij klawisz <kbd>Ctrl</kbd> + <kbd>\`</kbd> (znak cudzysłowu lub nadmiaru) lub wybierz opcję **Wyświetl > zintegrowany terminal** z menu, aby otworzyć osadzony terminal w Visual Studio Code. Można nadal otworzyć powłokę zewnętrzną za pomocą Eksploratora **Otwórz w wierszu polecenia** (**Otwórz w terminalu** na komputerach Mac lub Linux), jeśli wolisz pracować poza Visual Studio Code.
 
-Zacznij od utworzenia pliku rozwiązania, który służy jako kontener dla co najmniej jednego projektu .NET Core. W terminalu Utwórz folder w postaci *złota* i Otwórz folder. Ten folder jest katalogiem głównym rozwiązania. Uruchom polecenie, aby utworzyć nowe rozwiązanie, na *przykład:* [`dotnet new`](../tools/dotnet-new.md)
+Zacznij od utworzenia pliku rozwiązania, który służy jako kontener dla co najmniej jednego projektu .NET Core. W terminalu uruchom [`dotnet new`](../tools/dotnet-new.md) polecenie, aby utworzyć nowe rozwiązanie *złot. sln* w nowym folderze o nazwie *złota*:
 
 ```console
-dotnet new sln
+dotnet new sln -o golden
 ```
 
-W folderze z *złotą* wykonaj następujące polecenie, aby utworzyć projekt biblioteki, który tworzy dwa pliki,*Library. csproj* i *Class1.cs*, w folderze *Library* :
+Przejdź do nowego folderu *złota* i wykonaj następujące polecenie, aby utworzyć projekt biblioteki, który tworzy dwa pliki,*Library. csproj* i *Class1.cs*, w folderze *Library* :
 
 ```console
 dotnet new classlib -o library

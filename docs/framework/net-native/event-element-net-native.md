@@ -1,18 +1,18 @@
 ---
-title: <Event> (Architektura .NET Native)
+title: <Event>— Element (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89e8ddf9ea72db63c72bfb5393709b4c20de2a14
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7fb0245c50677da0397ba9c4918f171dcb217ba6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868581"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049845"
 ---
-# <a name="event-element-net-native"></a>\<Event > (architektura .NET Native)
-Zastosowanie zasad odbicia środowiska uruchomieniowego do zdarzenia.  
+# <a name="event-element-net-native"></a>\<Event > — element (.NET Native)
+Stosuje zasady odbicia środowiska uruchomieniowego do zdarzenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -30,20 +30,20 @@ Zastosowanie zasad odbicia środowiska uruchomieniowego do zdarzenia.
 |Atrybut|Typ atrybutu|Opis|  
 |---------------|--------------------|-----------------|  
 |`Name`|Ogólne|Atrybut wymagany. Określa nazwę zdarzenia.|  
-|`Browse`|Odbicie|Atrybut opcjonalny. Określa wykonanie zapytania dotyczącego informacji o wyliczanie zdarzenia, ale nie uwzględnia żadnych dostępu dynamicznego w czasie wykonywania.|  
-|`Dynamic`|Odbicie|Atrybut opcjonalny. Dostęp do środowiska uruchomieniowego formantów na zdarzenie, aby włączyć dynamiczne programowania. Te zasady zapewniają, że zdarzenia mogą być obsługiwane dynamicznie w czasie wykonywania.|  
+|`Browse`|Odbicie|Atrybut opcjonalny. Kontroluje wykonywanie zapytań dotyczących informacji na temat lub wyliczanie zdarzenia, ale nie umożliwia dostępu dynamicznego w czasie wykonywania.|  
+|`Dynamic`|Odbicie|Atrybut opcjonalny. Kontroluje dostęp środowiska uruchomieniowego do zdarzenia w celu włączenia programowania dynamicznego. Te zasady zapewniają, że zdarzenie może być obsługiwane dynamicznie w czasie wykonywania.|  
   
-## <a name="name-attribute"></a>Nazwa atrybutu  
+## <a name="name-attribute"></a>Atrybut nazwy  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*method_name*|Nazwa zdarzenia. Typ zdarzenia jest definiowany przez nadrzędne [ \<typ >](../../../docs/framework/net-native/type-element-net-native.md) lub [ \<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) elementu.|  
+|*method_name*|Nazwa zdarzenia. Typ zdarzenia jest definiowany przez [ \<typ nadrzędny >](type-element-net-native.md) lub [ \<element > TypeInstantiation](typeinstantiation-element-net-native.md) .|  
   
 ## <a name="all-other-attributes"></a>Wszystkie inne atrybuty  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*policy_setting*|Ustawienia do zastosowania do tego typu zasad w wydarzeniu. Możliwe wartości to `Auto`, `Excluded`, `Included`, i `Required`. Aby uzyskać więcej informacji, zobacz [ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Ustawienie, które ma zostać zastosowane do tego typu zasad dla zdarzenia. Możliwe wartości to `Auto`, `Excluded`, `Included`, i `Required`. Aby uzyskać więcej informacji, zobacz [Ustawienia zasad dyrektywy środowiska uruchomieniowego](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -52,14 +52,14 @@ Zastosowanie zasad odbicia środowiska uruchomieniowego do zdarzenia.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Ma zastosowanie zasad odbicia do typu i jej elementów członkowskich.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Ma zastosowanie zasad odbicia do skonstruowany typ rodzajowy i jej elementów członkowskich.|  
+|[\<Type>](type-element-net-native.md)|Stosuje zasady odbicia do typu i wszystkich jego elementów członkowskich.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego i wszystkich jego członków.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli zasady zdarzeń nie jest jawnie zdefiniowany, dziedziczy zasad wykonywania odpowiedniego elementu nadrzędnego.  
+ Jeśli zasady zdarzenia nie są jawnie zdefiniowane, dziedziczy zasad środowiska uruchomieniowego jego elementu nadrzędnego.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementy dyrektyw środowiska uruchomieniowego](runtime-directive-elements.md)
+- [Ustawienia zasad dyrektyw środowiska uruchomieniowego](runtime-directive-policy-settings.md)

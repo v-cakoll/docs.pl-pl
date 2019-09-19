@@ -2,12 +2,12 @@
 title: Wzorce aktywne
 description: Dowiedz się, jak używać aktywnych wzorców do definiowania nazwanych partycji, które dzielą dane wejściowe w języku F# programowania.
 ms.date: 05/16/2016
-ms.openlocfilehash: 12f423abe05e649e0b527ed04124b991feb5d592
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0c1315f2386b3cea2def698f4725e4c1cf030609
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629950"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083082"
 ---
 # <a name="active-patterns"></a>Wzorce aktywne
 
@@ -30,7 +30,7 @@ let (|identifier|_|) [arguments ] valueToMatch = expression
 
 ## <a name="remarks"></a>Uwagi
 
-W poprzedniej składni identyfikatory są nazwami dla partycji danych wejściowych, które są reprezentowane przez *argumenty*lub, innymi słowy, nazwy podzestawów zestawu wszystkich wartości argumentów. W definicji aktywnego wzorca może istnieć maksymalnie siedem partycji. *Wyrażenie* opisuje formularz, w którym mają zostać rozdzielone dane. Możesz użyć aktywnej definicji wzorca, aby zdefiniować reguły określania, które z nazwanych partycji są wartościami podaną jako argumenty należą do. Symbole (| i |) są określane jako klipy *bananów* , a funkcja utworzona przez ten typ powiązania Let jest nazywana *aktywnym aparatem rozpoznawania*.
+W poprzedniej składni identyfikatory są nazwami dla partycji danych wejściowych, które są reprezentowane przez *argumenty*lub, innymi słowy, nazwy podzestawów zestawu wszystkich wartości argumentów. W definicji aktywnego wzorca może istnieć maksymalnie siedem partycji. *Wyrażenie* opisuje formularz, w którym mają zostać rozdzielone dane. Możesz użyć aktywnej definicji wzorca, aby zdefiniować reguły określania, które z nazwanych partycji są wartościami podaną jako argumenty należą do. Symbole (| i |) są określane jako *klipy bananów* , a funkcja utworzona przez ten typ powiązania Let jest nazywana *aktywnym aparatem rozpoznawania*.
 
 Na przykład rozważmy następujący Aktywny wzorzec z argumentem.
 
@@ -42,7 +42,7 @@ Możesz użyć aktywnego wzorca w wyrażeniu dopasowania do wzorca, jak w poniż
 
 Dane wyjściowe tego programu są następujące:
 
-```
+```console
 7 is odd
 11 is odd
 32 is even
@@ -54,7 +54,7 @@ Innym sposobem użycia aktywnych wzorców jest rozkład typów danych na wiele s
 
 Dane wyjściowe powyższego programu są następujące:
 
-```
+```console
 Red
  Red: 255 Green: 0 Blue: 0
  Hue: 360.000000 Saturation: 1.000000 Brightness: 0.500000
@@ -84,7 +84,7 @@ Czasami należy podzielić tylko część przestrzeni wejściowej. W takim przyp
 
 W poprzednim przykładzie przedstawiono dane wyjściowe poniższego przykładu:
 
-```
+```console
 1.100000 : Floating point
 0 : Integer
 0.000000 : Floating point
@@ -98,7 +98,7 @@ W przypadku używania częściowych aktywnych wzorców czasami poszczególne opc
 
 Wynik jest następujący:
 
-```
+```console
 1 is a cube and a square
 8 is a cube
 27 is a cube
@@ -119,7 +119,7 @@ Aktywne wzorce zawsze przyjmują co najmniej jeden argument dla elementu, który
 
 Dane wyjściowe poprzedniego kodu są następujące:
 
-```
+```console
 12/22/2008 12:00:00 AM 1/1/2009 12:00:00 AM 1/15/2008 12:00:00 AM 12/28/1995 12:00:00 AM
 ```
 
@@ -129,7 +129,7 @@ Aktywne wzorce nie są ograniczone tylko do wyrażeń dopasowania wzorca, ale mo
 
 Dane wyjściowe poprzedniego kodu są następujące:
 
-```
+```console
 Hello, random citizen!
 Hello, George!
 ```

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3fa2238976df9f570fad9eb6947790565a4b0c5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 937dca59be8b83526ebf6cd4c369532b1a8b9afe
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935711"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045980"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Instrukcje: Podłączanie delegata za pomocą odbicia
 W przypadku używania odbicia do ładowania i uruchamiania zestawów nie można użyć funkcji języka, takich C# `+=` jak operator lub Visual Basic [AddHandler](../../visual-basic/language-reference/statements/addhandler-statement.md) , aby podłączyć zdarzenia. W poniższych procedurach pokazano, jak podłączyć istniejącą metodę do zdarzenia, pobierając wszystkie niezbędne typy poprzez odbicie i jak utworzyć metodę dynamiczną przy użyciu emisji odbicia i podłączyć ją do zdarzenia.  
@@ -80,7 +80,7 @@ W przypadku używania odbicia do ładowania i uruchamiania zestawów nie można 
      [!code-csharp[HookUpDelegate#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#9)]
      [!code-vb[HookUpDelegate#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#9)]  
   
-2. Generuj treść metody. Ta metoda ładuje ciąg, wywołuje Przeciążenie <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> metody, która pobiera ciąg znaków, wyświetla wartość zwracaną przez stos (ponieważ program obsługi nie ma zwracanego typu) i zwraca. Aby dowiedzieć się więcej o emitowaniu metod dynamicznych [, zobacz How to: Definiowanie i wykonywanie metod](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)dynamicznych.  
+2. Generuj treść metody. Ta metoda ładuje ciąg, wywołuje Przeciążenie <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> metody, która pobiera ciąg znaków, wyświetla wartość zwracaną przez stos (ponieważ program obsługi nie ma zwracanego typu) i zwraca. Aby dowiedzieć się więcej o emitowaniu metod dynamicznych [, zobacz How to: Definiowanie i wykonywanie metod](how-to-define-and-execute-dynamic-methods.md)dynamicznych.  
   
      [!code-cpp[HookUpDelegate#10](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#10)]
      [!code-csharp[HookUpDelegate#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#10)]
@@ -111,5 +111,5 @@ W przypadku używania odbicia do ładowania i uruchamiania zestawów nie można 
 - <xref:System.Reflection.Emit.DynamicMethod>
 - <xref:System.Activator.CreateInstance%2A>
 - <xref:System.Delegate.CreateDelegate%2A>
-- [Instrukcje: Definiowanie i wykonywanie metod dynamicznych](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)
-- [Odbicie](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [Instrukcje: Definiowanie i wykonywanie metod dynamicznych](how-to-define-and-execute-dynamic-methods.md)
+- [Odbicie](reflection.md)

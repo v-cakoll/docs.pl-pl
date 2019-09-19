@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d9a8eae2-7454-46f9-b43b-c98477c5bcde
-ms.openlocfilehash: a9488e484aad7ba3df23c33b2cb5b79f234b758e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a224d9dbab0157d77c05a5937fe35c027296a674
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642428"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048022"
 ---
 # <a name="how-to-typecast-a-webrequest-to-access-protocol-specific-properties"></a>Instrukcje: rzutowanie elementu WebRequest w celu uzyskania dostępu do właściwości specyficznych dla protokołu
-W tym przykładzie przedstawiono sposób rzutowanie elementu WebRequest, dzięki czemu można dostęp do właściwości specyficznych dla protokołu.  
+Ten przykład pokazuje, jak rzutowanie żądanie WebRequest, aby można było uzyskać dostęp do właściwości specyficznych dla protokołu.  
   
 ## <a name="example"></a>Przykład  
   
@@ -29,4 +29,4 @@ Dim httpreq As HttpWebRequest = _
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Programowanie protokołów podłączanych](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [Programowanie protokołów podłączanych](programming-pluggable-protocols.md)

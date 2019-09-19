@@ -12,30 +12,30 @@ helpviewer_keywords:
 ms.assetid: 2f5d9e7c-ae51-4155-a435-54347aa1f091
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2399f72b6efcdf69d8ff4bb3bce541073063c750
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab3690cac28ef572b19cadb632662590d1ea04c7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753936"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052479"
 ---
 # <a name="marshalcleanuperror-mda"></a>marshalCleanupError MDA
-`marshalCleanupError` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy środowisko uruchomieniowe języka wspólnego (CLR) napotka błąd podczas próby czyszczenie tymczasowej struktur i pamięci używanej dla marshaling typów danych między granicami kodu natywnego i zarządzanego.  
+Asystent `marshalCleanupError` debugowania zarządzanego (MDA) jest uaktywniany, gdy środowisko uruchomieniowe języka wspólnego (CLR) napotka błąd podczas próby oczyszczenia tymczasowych struktur i pamięci używanej do organizowania typów danych między natywnymi i zarządzanymi granicami kodu.  
   
 ## <a name="symptoms"></a>Symptomy  
- Podczas wprowadzania kodu natywnego i zarządzanego przejścia występuje przeciek pamięci, środowisko uruchomieniowe stan, takich jak kultury wątku nie jest przywracane lub błędy występują w <xref:System.Runtime.InteropServices.SafeHandle> oczyszczania.  
+ Przeciek pamięci występuje podczas wykonywania natywnych i zarządzanych przejść do kodu, stan środowiska uruchomieniowego, taki jak kultura wątku nie jest przywracany <xref:System.Runtime.InteropServices.SafeHandle> lub błędy pojawiają się w wyniku czyszczenia.  
   
 ## <a name="cause"></a>Przyczyna  
- Wystąpił nieoczekiwany błąd podczas usuwania tymczasowego struktury.  
+ Wystąpił nieoczekiwany błąd podczas czyszczenia struktur tymczasowych.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Przejrzyj wszystkie <xref:System.Runtime.InteropServices.SafeHandle> destruktora, finalizator i implementacje organizatora niestandardowego dla błędów.  
+ Przejrzyj wszystkie <xref:System.Runtime.InteropServices.SafeHandle> implementacje destruktora, finalizatora i niestandardowego organizatora pod kątem błędów.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
  To zdarzenie MDA nie ma wpływu na środowisko CLR.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Komunikat operacji, który uległ awarii podczas oczyszczania funkcji raportowania.  
+ Komunikat zgłaszający operację, która nie powiodła się podczas czyszczenia.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -50,5 +50,5 @@ ms.locfileid: "61753936"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling międzyoperacyjny](../interop/interop-marshaling.md)

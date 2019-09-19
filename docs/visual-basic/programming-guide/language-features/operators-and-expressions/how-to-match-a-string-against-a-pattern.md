@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dopasowanie ciągu do wzorca (Visual Basic)'
+title: 'Instrukcje: Dopasowuje ciąg do wzorca (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - comparison operators [Visual Basic], comparing strings
@@ -13,71 +13,73 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: e5eb6bd5b5e7b2f0c3692c0fa2431a0b8f295299
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0bac0869d9e319071abb31dd0576edf0450aa198
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649718"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054153"
 ---
-# <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Instrukcje: Dopasowanie ciągu do wzorca (Visual Basic)
-Jeśli chcesz sprawdzić, czy wyrażenie [String — typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md) spełnia wzorzec, wówczas można użyć [takich jak Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
-  
- `Like` przyjmuje dwa argumenty operacji. Lewy operand jest wyrażeniem, a prawy operand jest ciąg zawierający wzorzec, który ma być używany do dopasowania. `Like` Zwraca `Boolean` wartość wskazującą, czy wyrażenie ciągu spełnia wzorzec.  
-  
- Można dopasować do każdego znaku w wyrażeniu ciąg względem określonego znaku, symbolu wieloznacznego, lista znak lub zakres znaków. Położenie specyfikacji w ciągu wzorca odpowiadają pozycji znaków, które mają zostać dopasowane w wyrażenia ciągu.  
-  
-### <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>Aby dopasować znak w wyrażeniu ciąg względem określonego znaku  
-  
-- Umieść znaków specyficznych bezpośrednio w ciągu wzorca. Niektóre znaki specjalne, muszą być ujęte w nawiasy kwadratowe (`[ ]`). Aby uzyskać więcej informacji, zobacz [takich jak Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
-  
-     Poniższy przykład sprawdza czy `myString` składa się dokładnie z jednego znaku `H`.  
-  
-     [!code-vb[VbVbalrOperators#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#70)]  
-  
-### <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>Aby dopasować znak w wyrażeniu ciąg z symbolem wieloznacznym  
-  
-- Umieść znak zapytania (`?`) w ciągu wzorca. Dowolny prawidłowy znak, w tym miejscu sprawia, że udane dopasowanie.  
-  
-     Poniższy przykład sprawdza czy `myString` składa się z jednego znaku `W` następuje dokładnie dwa znaki żadnych wartości.  
-  
-     [!code-vb[VbVbalrOperators#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#71)]  
-  
-### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>Aby dopasować znak w wyrażeniu ciąg z listą znaków  
-  
-- Umieść nawiasy kwadratowe (`[ ]`) w ciągu wzorca, znajduje się wewnątrz nawiasów, umieść listę znaków. Nie należy oddzielić znaków za pomocą przecinków lub wszelkich innych separatorów. Dowolny pojedynczy znak na liście sprawia, że udane dopasowanie.  
-  
-     Poniższy przykład sprawdza czy `myString` składa się z dowolnym prawidłowym znakiem następuje z dokładnie jednym ze znaków `A`, `C`, lub `E`.  
-  
-     [!code-vb[VbVbalrOperators#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#72)]  
-  
-     Należy pamiętać, że ta rozróżniana jest wielkość liter.  
-  
-### <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>Aby dopasować znak w wyrażeniu ciąg z zakresu znaków  
-  
-- Umieść nawiasy kwadratowe (`[ ]`) w ciągu wzorca oraz w nawiasie umieścić najmniejsza i największa znaki w zakresie rozdzielonych łącznikiem (`–`). Dowolny pojedynczy znak w zakresie sprawia, że udane dopasowanie.  
-  
-     Poniższy przykład sprawdza czy `myString` składa się ze znaków `num` następuje z dokładnie jednym ze znaków `i`, `j`, `k`, `l`, `m`, lub `n`.  
-  
-     [!code-vb[VbVbalrOperators#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#73)]  
-  
-     Należy pamiętać, że ta rozróżniana jest wielkość liter.  
-  
-## <a name="matching-empty-strings"></a>Dopasowywanie puste ciągi  
- `Like` traktuje sekwencji `[]` jako ciąg o zerowej długości (`""`). Możesz użyć `[]` do sprawdzenia, czy wyrażenie cały ciąg jest pusty, ale nie można użyć go, aby sprawdzić, czy w określonej pozycji w wyrażeniu ciąg jest pusty. Jeśli pusty pozycja jest jedną z opcji należy przetestować dla można użyć `Like` więcej niż jeden raz.  
-  
-#### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>Aby dopasować znak w wyrażeniu ciąg z listą znaków lub nie znaku  
-  
-1. Wywołaj `Like` operator dwa razy na tym samym wyrażenia ciągu i połączyć z dwoma połączeniami z oboma [operatora Or](../../../../visual-basic/language-reference/operators/or-operator.md) lub [orelse — Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md).  
-  
-2. W ciągu wzorca w pierwszym `Like` klauzuli zawierają listę znaków, ujęte w nawiasy kwadratowe (`[ ]`).  
-  
-3. W ciągu wzorca dla drugiego `Like` klauzuli, nie umieszczaj dowolny znak na pozycji w danym.  
-  
-     Następujący przykład sprawdza 7 cyfrowy numer telefonu `phoneNum` dla dokładnie trzech cyfr, spację, myślnik (`–`), okres (`.`), lub nie znaku, a następnie dokładnie cztery cyfry.  
-  
-     [!code-vb[VbVbalrOperators#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#74)]  
-  
+# <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Instrukcje: Dopasowuje ciąg do wzorca (Visual Basic)
+
+Jeśli chcesz dowiedzieć się, czy wyrażenie [typu danych ciąg](../../../../visual-basic/language-reference/data-types/string-data-type.md) spełnia warunki wzorca, możesz użyć [operatora like](../../../../visual-basic/language-reference/operators/like-operator.md).
+
+`Like`przyjmuje dwa operandy. Lewy operand jest wyrażeniem ciągu, a prawy operand jest ciągiem zawierającym wzorzec, który ma być używany do dopasowywania. `Like``Boolean` zwraca wartość wskazującą czy wyrażenie ciągu spełnia warunki wzorca.
+
+Można dopasować każdy znak w wyrażeniu ciągu do określonego znaku, symbolu wieloznacznego, listy znaków lub zakresu znaków. Pozycje specyfikacji w ciągu wzorca odpowiadają pozycjom znaków, które mają być dopasowane w wyrażeniu ciągu.
+
+## <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>Aby dopasować znak w wyrażeniu ciągu do określonego znaku
+
+Umieść określony znak bezpośrednio w ciągu wzorca. Niektóre znaki specjalne muszą być ujęte w nawiasy kwadratowe (`[ ]`). Aby uzyskać więcej informacji, zobacz [operator like](../../../../visual-basic/language-reference/operators/like-operator.md).
+
+Poniższy przykład sprawdza, czy `myString` zawiera dokładnie jeden znak. `H`
+
+[!code-vb[VbVbalrOperators#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#70)]
+
+## <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>Aby dopasować znak w wyrażeniu ciągu do symbolu wieloznacznego
+
+Umieść znak zapytania (`?`) w ciągu wzorca. Każdy prawidłowy znak w tym miejscu powoduje pomyślne dopasowanie.
+
+Poniższy przykład sprawdza, czy `myString` składa się z pojedynczego `W` znaku, po którym następuje dokładnie dwa znaki każdej wartości.
+
+[!code-vb[VbVbalrOperators#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#71)]
+
+## <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>Aby dopasować znak w wyrażeniu ciągu do listy znaków
+
+Umieść nawiasy`[ ]`() w ciągu wzorca i wewnątrz nawiasów, umieszczając listę znaków. Nie oddzielaj znaków przecinkami ani innymi separatorami. Każdy pojedynczy znak na liście powoduje pomyślne dopasowanie.
+
+Poniższy przykład sprawdza, czy `myString` składa się z dowolnego prawidłowego znaku, po którym występuje dokładnie `A`jeden `C`z znaków `E`, lub.
+
+[!code-vb[VbVbalrOperators#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#72)]
+
+Należy pamiętać, że ten odpowiednik uwzględnia wielkość liter.
+
+## <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>Aby dopasować znak w wyrażeniu ciągu do zakresu znaków
+
+Umieść nawiasy`[ ]`() w ciągu wzorca, a wewnątrz nawiasów Umieść najniższy i najwyższe znaki z zakresu, oddzielone łącznikiem (`–`). Każdy pojedynczy znak w zakresie powoduje pomyślne dopasowanie.
+
+Poniższy przykład sprawdza, czy `myString` zawiera znaki `num` , po których następuje dokładnie jeden `k`z `m`znaków `i`, `j`,, `l`, lub `n`.
+
+[!code-vb[VbVbalrOperators#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#73)]
+
+Należy pamiętać, że ten odpowiednik uwzględnia wielkość liter.
+
+## <a name="matching-empty-strings"></a>Dopasowywanie pustych ciągów
+
+`Like`traktuje sekwencję `[]` jako ciąg o zerowej długości`""`(). Można użyć `[]` do sprawdzenia, czy całe wyrażenie ciągu jest puste, ale nie można go użyć do przetestowania, jeśli określone położenie w wyrażeniu ciągu jest puste. Jeśli puste położenie jest jedną z opcji, które należy wykonać w celu przetestowania, można `Like` użyć więcej niż raz.
+
+### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>Aby dopasować znak w wyrażeniu ciągu do listy znaków lub bez znaku
+
+1. Wywołaj [](../../../../visual-basic/language-reference/operators/or-operator.md) operatora dwa razy w tym samym wyrażeniu ciągu i połącz dwa wywołania z operatorem OR lub [operatorem OrElse.](../../../../visual-basic/language-reference/operators/orelse-operator.md) `Like`
+
+2. W ciągu wzorca dla pierwszej `Like` klauzuli należy uwzględnić listę znaków ujętą w nawiasy kwadratowe (`[ ]`).
+
+3. W ciągu wzorca dla drugiej `Like` klauzuli nie umieszczaj żadnego znaku w podanym położeniu.
+
+    Poniższy przykład sprawdza numer `phoneNum` telefonu siedmiu cyfr dla dokładnie trzech cyfr, po którym następuje spacja, łącznik (`–`), kropka (`.`) lub bez znaku, a następnie dokładnie cztery cyfry.
+
+    [!code-vb[VbVbalrOperators#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#74)]
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Operatory porównania](../../../../visual-basic/language-reference/operators/comparison-operators.md)

@@ -7,113 +7,113 @@ helpviewer_keywords:
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 719e24652ea40d601523e32ecbdb58ce5d4fa645
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a0561ff5212fd6bc4e9015bea8da1d1082dd027e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616597"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046696"
 ---
 # <a name="constrained-execution-regions"></a>Ograniczone regiony wykonania
-Region ograniczonego wykonania (CER) jest częścią mechanizm służący do tworzenia niezawodnego kodu zarządzanego. CER definiuje obszar, w której środowisko uruchomieniowe języka wspólnego (CLR) jest ograniczony z zgłaszanie wyjątków poza pasmem, które mogłyby uniemożliwić wykonanie w całości kodu w obszarze. W tym regionie kod użytkownika jest ograniczony z wykonywania kodu, które mogłyby spowodować zgłaszanie wyjątków poza pasmem. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> Metody musi bezpośrednio poprzedzać `try` bloku i znaczniki `catch`, `finally`, i `fault` bloków jako ograniczone regiony wykonania. Gdy oznaczony jako ograniczone region, kod tylko należy wywołać inny kod z kontrakty niezawodności silne, a kod nie może przydzielić lub wykonywać wywołania wirtualnego nieprzygotowane lub zawodnej metody, chyba że kod jest przygotowana do obsługi błędów. Przerywa wątku opóźnienia środowiska CLR dla kodu, który jest wykonywany w CER.  
+Ograniczony region wykonywania (CER) jest częścią mechanizmu tworzenia niezawodnego kodu zarządzanego. CER definiuje obszar, w którym środowisko uruchomieniowe języka wspólnego (CLR) jest ograniczone od zgłaszania wyjątków poza pasmem, które mogłyby uniemożliwić wykonywanie kodu w obszarze w całości. W tym regionie kod użytkownika jest ograniczony do wykonywania kodu, który mógłby spowodować Przerzucanie wyjątków poza pasmem. `catch` `finally` `fault` Metoda musi bezpośrednio `try` poprzedzać blok i znaczniki, i bloki jako ograniczone regiony wykonywania. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> Po oznaczeniu jako regionu ograniczonego kod musi wywoływać inny kod tylko z silną umową niezawodności, a kod nie powinien przydzielać ani wykonywać połączeń wirtualnych do nieprzygotowanych lub wiarygodnych metod, chyba że kod jest przygotowany do obsługi błędów. Wątek CLR opóźnia przerwanie dla kodu, który jest wykonywany w CER.  
   
- Ograniczone regiony wykonania są używane w różnych formularzach w środowisku CLR, oprócz adnotacjami `try` zablokować, szczególnie krytyczne finalizatory wykonywanie w klasach pochodzących od <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> klasy i kod, posługując się <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> metody.  
+ Ograniczone regiony wykonywania są używane w różnych formularzach środowiska CLR oprócz `try` bloku z adnotacjami, szczególnie dla kluczowych finalizatorów wykonywanych w klasach pochodnych <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> klasy <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> i kodu wykonywanych przy użyciu metody.  
   
-## <a name="cer-advance-preparation"></a>Przygotowań CER  
- Środowisko CLR przygotowuje CERs z wyprzedzeniem, aby uniknąć warunków braku pamięci. Przygotowań jest wymagane, aby środowisko CLR nie powoduje, że stan braku pamięci podczas ładowania kompilacji lub typu just-in-time.  
+## <a name="cer-advance-preparation"></a>Zaawansowane przygotowanie do CER  
+ Środowisko CLR przygotuje CERs z wyprzedzeniem, aby uniknąć braku pamięci. Przygotowywanie z wyprzedzeniem jest wymagane, aby środowisko CLR nie powodowało braku pamięci w czasie kompilacji just in Time lub typu ładowania.  
   
- Deweloper jest wymagana do wskazania, że region kodu jest CER:  
+ Deweloper jest zobowiązany do wskazania, że region kodu jest CER:  
   
-- Najwyższego poziomu region CER i wykresie pełną wywołania metod, które mają <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> zastosowany są przygotowywane z wyprzedzeniem. <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> Można tylko stan gwarancji <xref:System.Runtime.ConstrainedExecution.Cer.Success> lub <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>.  
+- Region i metody CER najwyższego poziomu w grafie <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> pełnego wywołania z zastosowanym atrybutem są przygotowywane z wyprzedzeniem. Tylko gwarancje stanu <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>lub. <xref:System.Runtime.ConstrainedExecution.Cer.Success> <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute>  
   
-- Nie można wykonać przygotowań do wywołań, które statycznie nieokreślonym, takie jak wirtualne wysyłania. Użyj <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> metody w tych przypadkach. Korzystając z <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> metody <xref:System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute> atrybut powinien zostać zastosowany na kod czyszczenia.  
+- Nie można wykonać przygotowania zaawansowania dla wywołań, które nie mogą być określane statycznie, takie jak wysyłanie wirtualne. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> Użyj metody w takich przypadkach. W przypadku korzystania <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> z metody <xref:System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute> atrybut powinien zostać zastosowany do kodu czyszczącego.  
   
 ## <a name="constraints"></a>Ograniczenia  
- Użytkownicy są ograniczone w typu kodu, które mogą zapisywać w CER. Kod nie może spowodować wyjątek poza pasmem, takich jak może wynikać z następujących czynności:  
+ Użytkownicy są ograniczeniami w typie kodu, który można napisać w CER. Kod nie może spowodować wyjątku poza pasmem, na przykład może wynikać z następujących operacji:  
   
-- Jawne alokacji.  
+- Jawna alokacja.  
   
-- Pakowanie.  
+- Opakowanie.  
   
-- Pobieranie blokady.  
+- Uzyskiwanie blokady.  
   
-- Wywoływanie metody nieprzygotowane praktycznie.  
+- Wywoływanie nieprzygotowanych metod praktycznie.  
   
-- Wywoływanie metod za pomocą kontraktu niezawodność słabych lub nie istnieje.  
+- Wywoływanie metod z słabym lub nieistniejącym kontraktem niezawodności.  
   
- W .NET Framework w wersji 2.0 te ograniczenia są wskazówki. Diagnostyka są realizowane za pośrednictwem narzędzi analizy kodu.  
+ W .NET Framework w wersji 2,0 te ograniczenia są wskazówkami. Diagnostyka jest świadczona za poorednictwem narzędzi do analizy kodu.  
   
 ## <a name="reliability-contracts"></a>Kontrakty niezawodności  
- <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> Jest atrybutem niestandardowym, która dokumentuje gwarancje niezawodności i stanu uszkodzenia danej metody.  
+ <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> Jest atrybutem niestandardowym, który dokumentuje gwarancje niezawodności i stan uszkodzenia danej metody.  
   
 ### <a name="reliability-guarantees"></a>Gwarancje niezawodności  
- Gwarancje niezawodności, reprezentowane przez <xref:System.Runtime.ConstrainedExecution.Cer> wartości wyliczenia, wskazać stopnia niezawodności danej metody:  
+ Gwarancje niezawodności, reprezentowane <xref:System.Runtime.ConstrainedExecution.Cer> przez wartości wyliczenia, wskazują stopień niezawodności danej metody:  
   
-- <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>. W wyjątkowych warunkach metoda może zakończyć się niepowodzeniem. W tym przypadku metoda raportuje ją do wywoływania metody czy zakończyła się powodzeniem lub nie powiodło się. Metoda musi być zawarty w CER, aby upewnić się, że zwracana wartość może raportować.  
+- <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>. W przypadku wyjątkowych warunków Metoda może zakończyć się niepowodzeniem. W tym przypadku Metoda raportuje z powrotem do metody wywołującej, czy zakończyła się powodzeniem, czy niepowodzeniem. Metoda musi być zawarta w CER, aby można było zgłosić wartość zwracaną.  
   
-- <xref:System.Runtime.ConstrainedExecution.Cer.None>. Metoda, typ lub zespół nie używa koncepcji CER i najprawdopodobniej nie można bezpiecznie wywołać w ramach CER bez znaczne ograniczenie ze stanu uszkodzenia. Go nie korzystaj z gwarancje CER. Oznacza to, że:  
+- <xref:System.Runtime.ConstrainedExecution.Cer.None>. Metoda, typ lub zestaw nie ma koncepcji CER i najprawdopodobniej nie jest to bezpieczne do wywołania w programie CER bez znacznego ograniczenia uszkodzenia stanu. Nie wykorzystuje ona gwarancji CER. Oznacza to następujące kwestie:  
   
-    1. W wyjątkowych warunkach metoda może zakończyć się niepowodzeniem.  
+    1. W wyjątkowych warunkach Metoda może zakończyć się niepowodzeniem.  
   
-    2. Metoda może być lub może nie raportować, że jej nie powiodło się.  
+    2. Metoda może lub nie zgłasza, że zakończyła się niepowodzeniem.  
   
-    3. Metoda nie jest zapisywany do użycia CER, najbardziej prawdopodobnym scenariuszem.  
+    3. Metoda nie jest zapisywana, aby używać CER, najbardziej prawdopodobną przyczyną.  
   
-    4. Jeśli metoda, typ lub zestawu nie jest jawnie zidentyfikowana zakończyło się sukcesem, niejawnie jest identyfikowany jako <xref:System.Runtime.ConstrainedExecution.Cer.None>.  
+    4. Jeśli metoda, typ lub zestaw nie został jawnie zidentyfikowany do sukcesu, jest on niejawnie zidentyfikowany jako <xref:System.Runtime.ConstrainedExecution.Cer.None>.  
   
-- <xref:System.Runtime.ConstrainedExecution.Cer.Success>. W wyjątkowych warunkach metoda jest gwarantowane zakończyło się sukcesem. Aby osiągają ten poziom niezawodności należy zawsze utworzyć CER wokół metodę, która jest wywoływana, nawet gdy jest wywoływana z w obrębie regionu innego niż CER. Metoda jest powodzenia, jeśli rozwiązanie przeznaczenie, mimo że sukces, które mogą być wyświetlane subiektywnie. Na przykład oznaczenie liczba z `ReliabilityContractAttribute(Cer.Success)` oznacza, że po uruchomieniu w obszarze CER zawsze zwraca liczbę elementów w <xref:System.Collections.ArrayList> i nigdy nie można pozostawić pola wewnętrzne w stanie nieokreślony.  Jednak <xref:System.Threading.Interlocked.CompareExchange%2A> metoda jest oznaczona jako Powodzenie, przy założeniu, że sukces może oznaczać, że wartość mogły nie zostać zastąpione nowymi wartościami z powodu sytuacji wyścigu.  Kluczowym punktem jest metoda działa w taki sposób, który jest udokumentowany zachowanie i CER kodu nie jest konieczne można zapisać oczekiwać wszelkie nietypowe zachowanie poza wyglądałyby jaki kod poprawna, ale nieprzewidywalne.  
+- <xref:System.Runtime.ConstrainedExecution.Cer.Success>. W wyjątkowych warunkach Metoda ma gwarancję pomyślnego zakończenia. Aby osiągnąć ten poziom niezawodności, należy zawsze skonstruować plik CER wokół metody, która jest wywoływana, nawet gdy jest wywoływana z poziomu regionu innego niż CER. Metoda zakończyła się powodzeniem, jeśli osiąga to zamierzone, chociaż sukces może być przeglądany w sposób subiektywny. Na przykład liczba oznaczania z `ReliabilityContractAttribute(Cer.Success)` oznacza, że gdy jest uruchamiany w ramach cer, zawsze zwraca liczbę elementów <xref:System.Collections.ArrayList> w i nigdy nie pozostawia pól wewnętrznych w stanie nieokreślonym.  <xref:System.Threading.Interlocked.CompareExchange%2A> Jednak metoda jest oznaczona jako sukces, a zrozumienie, że powodzenie może oznaczać, że wartość nie może zostać zastąpiona nową wartością ze względu na sytuację wyścigu.  Kluczowym punktem jest to, że metoda zachowuje się w sposób, w jaki jest zachowywać się, a kod CER nie musi być zapisany, aby oczekiwać dowolnego nietypowego zachowania poza zakresem prawidłowym, ale kod niezawodny.  
   
-### <a name="corruption-levels"></a>Uszkodzenie poziomy  
- Poziomy uszkodzeniem, reprezentowane przez <xref:System.Runtime.ConstrainedExecution.Consistency> wartości wyliczenia wskazuje, ile stanu może być uszkodzona w danym środowisku:  
+### <a name="corruption-levels"></a>Poziomy uszkodzeń  
+ Poziomy uszkodzeń reprezentowane przez <xref:System.Runtime.ConstrainedExecution.Consistency> wartości wyliczenia, wskazują, ile stanu może być uszkodzony w danym środowisku:  
   
-- <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>. W wyjątkowych warunkach środowisko uruchomieniowe języka wspólnego (CLR) nie udziela żadnych gwarancji dotyczących spójności stanu w bieżącej domenie aplikacji.  
+- <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>. W wyjątkowych warunkach środowisko uruchomieniowe języka wspólnego (CLR) nie gwarantuje spójności stanu w bieżącej domenie aplikacji.  
   
-- <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>. W wyjątkowych warunkach metody jest gwarantowane, aby ograniczyć uszkodzenia stanu do bieżącego wystąpienia.  
+- <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>. W ramach wyjątkowych warunków Metoda ma ograniczyć uszkodzenie stanu do bieżącego wystąpienia.  
   
-- <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>, W wyjątkowych warunkach, środowisko CLR nie udziela żadnych gwarancji dotyczących stanu spójności; oznacza to, że ten stan może spowodować uszkodzenie procesu.  
+- <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>W warunkach wyjątkowych środowisko CLR nie gwarantuje spójności stanu. oznacza to, że warunek może uszkodzić proces.  
   
-- <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>. W wyjątkowych warunkach metody daje gwarancję doprowadzić do uszkodzenia.  
+- <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>. W warunkach wyjątkowych Metoda ma gwarancję nieuszkodzenia stanu.  
   
 ## <a name="reliability-trycatchfinally"></a>Niezawodność try/catch/finally  
- Niezawodność `try/catch/finally` to mechanizm, za pomocą takiego samego poziomu gwarancji przewidywalności jako niezarządzana wersja obsługi wyjątków. `catch/finally` Blok jest CER. W bloku metody wymagają przygotowań i musi być noninterruptible.  
+ Niezawodność `try/catch/finally` to mechanizm obsługi wyjątków o tym samym poziomie gwarancji przewidywalności jako wersja niezarządzana. `catch/finally` Blok jest CER. Metody w bloku wymagają przygotowania z wyprzedzeniem i muszą być noninterruptible.  
   
- W programie .NET Framework 2.0, kod informuje środowisko uruchomieniowe try to niezawodne, wywołując <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> bezpośrednio przed blokiem try. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> jest elementem członkowskim <xref:System.Runtime.CompilerServices.RuntimeHelpers>, klasę obsługi kompilatora. Wywołaj <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> bezpośrednio do czasu jej udostępnienia ich za pomocą kompilatorów.  
+ W .NET Framework w wersji 2,0 kod informuje środowisko uruchomieniowe, że próbka jest niezawodna, <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> wywołując bezpośrednio poprzedzające blok try. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>jest członkiem <xref:System.Runtime.CompilerServices.RuntimeHelpers>klasy obsługi kompilatora. Wywoływanie <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> bezpośrednio w oczekiwany sposób za jego dostępność za poorednictwem kompilatorów.  
   
 ## <a name="noninterruptible-regions"></a>Regiony Noninterruptible  
- Noninterruptible region grupuje zestaw instrukcji do CER.  
+ Region noninterruptible grupuje zestaw instrukcji do CER.  
   
- W programie .NET Framework w wersji 2.0, do czasu udostępnienia ich za pomocą obsługa kompilatora kod użytkownika, tworzy bez przerywania regionów przy użyciu niezawodnych try/catch/finally, zawiera blok try/catch pusty poprzedzone <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> wywołania metody.  
+ W .NET Framework wersja 2,0, oczekująca dostępność za pomocą obsługi kompilatora, kod użytkownika tworzy regiony inne niż przerywania z niezawodną instrukcją try/catch/finally, która zawiera pusty blok try/ <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> catch poprzedzony wywołaniem metody.  
   
-## <a name="critical-finalizer-object"></a>Obiekt krytyczny Finalizator  
- A <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> gwarantuje, że wyrzucanie elementów bezużytecznych będzie wykonywał finalizatora. Po alokacji finalizator i jego wykresu wywołań są przygotowany wcześniej. Metodzie finalizacji wykonuje CER, a następnie należy przestrzegać wszystkich ograniczeń CERs i finalizatorów.  
+## <a name="critical-finalizer-object"></a>Krytyczny obiekt finalizatora  
+ <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> Gwarantuje, że wyrzucanie elementów bezużytecznych wykona finalizator. Po przydzieleniu, finalizator i jego Graf wywołań są przygotowane z wyprzedzeniem. Metoda finalizatora jest wykonywana przez program CER i musi przestrzegać wszystkich ograniczeń dotyczących CERs i finalizatorów.  
   
- Żadnych typów dziedziczących <xref:System.Runtime.InteropServices.SafeHandle> i <xref:System.Runtime.InteropServices.CriticalHandle> jest gwarantowane ma finalizator, ich wykonania w ramach CER. Implementowanie <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> w <xref:System.Runtime.InteropServices.SafeHandle> pochodne klasy do wykonywania kodu, który jest wymagany, aby zwolnić uchwytu.  
+ Wszystkie typy dziedziczenia z <xref:System.Runtime.InteropServices.SafeHandle> i <xref:System.Runtime.InteropServices.CriticalHandle> są gwarantowane, że finalizator jest wykonywany w ramach CER. <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> Zaimplementuj <xref:System.Runtime.InteropServices.SafeHandle> w klasach pochodnych, aby wykonać dowolny kod, który jest wymagany do zwolnienia dojścia.  
   
-## <a name="code-not-permitted-in-cers"></a>Kod nie jest dozwolona w CERs  
- Następujące operacje nie są dozwolone w CERs:  
+## <a name="code-not-permitted-in-cers"></a>Kod nie jest dozwolony w CERs  
+ Następujące operacje są niedozwolone w CERs:  
   
-- Jawne alokacji.  
+- Jawne alokacje.  
   
-- Pobieranie blokady.  
+- Uzyskiwanie blokady.  
   
-- Pakowanie.  
+- Opakowanie.  
   
 - Dostęp do tablicy wielowymiarowej.  
   
-- Metoda wywołania przy użyciu odbicia.  
+- Wywołania metody poprzez odbicie.  
   
-- <xref:System.Threading.Monitor.Enter%2A> lub <xref:System.IO.FileStream.Lock%2A>.  
+- <xref:System.Threading.Monitor.Enter%2A>lub <xref:System.IO.FileStream.Lock%2A>.  
   
-- Sprawdzanie zabezpieczeń. Wykonaj żądania, nie tylko Konsolidacja zapotrzebowania.  
+- Sprawdzanie zabezpieczeń. Nie wykonuj wymagań, tylko w przypadku żądań linków.  
   
-- <xref:System.Reflection.Emit.OpCodes.Isinst> i <xref:System.Reflection.Emit.OpCodes.Castclass> dla obiektów COM i serwery proxy  
+- <xref:System.Reflection.Emit.OpCodes.Isinst>i <xref:System.Reflection.Emit.OpCodes.Castclass> dla obiektów com i serwerów proxy  
   
-- Pobieranie lub ustawianie pól w przezroczystym serwerem proxy.  
+- Pobieranie lub Ustawianie pól na przezroczystym serwerze proxy.  
   
 - Serializacji.  
   
-- Wskaźniki funkcji i obiektów delegowanych.  
+- Wskaźniki funkcji i delegatów.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Najlepsze rozwiązania dotyczące niezawodności](../../../docs/framework/performance/reliability-best-practices.md)
+- [Najlepsze rozwiązania dotyczące niezawodności](reliability-best-practices.md)

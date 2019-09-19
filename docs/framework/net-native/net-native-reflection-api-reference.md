@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69a4addbd00c119af4336faae2cd0f8fc31f8852
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9c1fbef46231fed3af0d335e9396b301fe503254
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941619"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049380"
 ---
 # <a name="net-native-reflection-api-reference"></a>Dokumentacja interfejsu API odbicia dla platformy .NET Native
-.NET Native zawiera trzy nowe typy wyjątków: [System. Runtime. CompilerServices. MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), [System. odbicie. MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)oraz [System. odbicie. MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md). Zwróć uwagę na następujące informacje o wszystkich trzech typach wyjątków:  
+.NET Native zawiera trzy nowe typy wyjątków: [System. Runtime. CompilerServices. MissingInteropDataException](missinginteropdataexception-class-net-native.md), [System. odbicie. MissingMetadataException](missingmetadataexception-class-net-native.md)oraz [System. odbicie. MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md). Zwróć uwagę na następujące informacje o wszystkich trzech typach wyjątków:  
   
  Te typy są przeznaczone tylko do użytku wewnętrznego.  
  Te trzy typy wyjątków służą tylko do używania łańcucha narzędzi .NET Native. Wyjątki są generowane, gdy łańcuch narzędzi .NET Native wykrywa brakujące dane, które nie zezwalają na kontynuowanie wykonywania programu.  
   
  Nie należy obsługiwać tych wyjątków w kodzie.  
- Te wyjątki wskazują, że brak [](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) [](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) [metadanych wymaganych przez aplikację (wyjątki MissingInteropDataException i MissingMetadataException) albo kod implementacji wymagany przez aplikację. Wyjątek MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) ). Te warunki wyjątków można skorygować, modyfikując plik dyrektywy środowiska uruchomieniowego (. Rd. xml) w celu udostępnienia wymaganych metadanych lub kodu implementacji w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (RD. xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Dostępne są dwa narzędzia do rozwiązywania problemów, które dostarczają odpowiednich wpisów dla plików dyrektywy środowiska uruchomieniowego, które spowodują eliminację wyjątków [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) i [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) :  
+ Te wyjątki wskazują, że brak [](missinginteropdataexception-class-net-native.md) [](missingmetadataexception-class-net-native.md) [metadanych wymaganych przez aplikację (wyjątki MissingInteropDataException i MissingMetadataException) albo kod implementacji wymagany przez aplikację. Wyjątek MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) ). Te warunki wyjątków można skorygować, modyfikując plik dyrektywy środowiska uruchomieniowego (. Rd. xml) w celu udostępnienia wymaganych metadanych lub kodu implementacji w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (RD. xml)](runtime-directives-rd-xml-configuration-file-reference.md). Dostępne są dwa narzędzia do rozwiązywania problemów, które dostarczają odpowiednich wpisów dla plików dyrektywy środowiska uruchomieniowego, które spowodują eliminację wyjątków [MissingMetadataException](missingmetadataexception-class-net-native.md) i [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) :  
   
 - [Narzędzie do rozwiązywania problemów z MissingMetadataException](https://dotnet.github.io/native/troubleshooter/type.html) dla typów.  
   
@@ -32,8 +32,8 @@ ms.locfileid: "69941619"
   
 |Class|Opis|  
 |-----------|-----------------|  
-|[MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)|Wyjątek, który jest generowany, gdy odbicie jest używane do pobierania nieobecnych metadanych.|  
-|[MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)|Wyjątek, który jest generowany, gdy jest dostępny metadanych typu lub elementu członkowskiego typu, ale jego implementacja została usunięta.|  
+|[MissingMetadataException](missingmetadataexception-class-net-native.md)|Wyjątek, który jest generowany, gdy odbicie jest używane do pobierania nieobecnych metadanych.|  
+|[MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md)|Wyjątek, który jest generowany, gdy jest dostępny metadanych typu lub elementu członkowskiego typu, ale jego implementacja została usunięta.|  
   
  Aby uzyskać dokumentację dotyczącą innych typów w tej przestrzeni nazw, <xref:System.Reflection> Zobacz strony referencyjne w zestawie dokumentacji .NET Framework.  
   
@@ -42,13 +42,13 @@ ms.locfileid: "69941619"
   
 |Class|Opis|  
 |-----------|-----------------|  
-|[MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)|Wyjątek, który jest generowany, gdy wywoływana jest metoda ręcznego kierowania, ale nie można odnaleźć metadanych dla typu przez analizę statyczną lub plik dyrektywy środowiska uruchomieniowego.|  
+|[MissingInteropDataException](missinginteropdataexception-class-net-native.md)|Wyjątek, który jest generowany, gdy wywoływana jest metoda ręcznego kierowania, ale nie można odnaleźć metadanych dla typu przez analizę statyczną lub plik dyrektywy środowiska uruchomieniowego.|  
   
  Aby uzyskać dokumentację dotyczącą innych typów w tej przestrzeni nazw, <xref:System.Runtime.CompilerServices> Zobacz strony referencyjne w zestawie dokumentacji .NET Framework.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Klasa MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)
-- [Klasa MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)
-- [Klasa MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)
-- [Wprowadzenie](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [Klasa MissingInteropDataException](missinginteropdataexception-class-net-native.md)
+- [Klasa MissingMetadataException](missingmetadataexception-class-net-native.md)
+- [Klasa MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md)
+- [Wprowadzenie](getting-started-with-net-native.md)

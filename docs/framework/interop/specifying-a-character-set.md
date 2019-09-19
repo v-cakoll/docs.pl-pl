@@ -12,61 +12,61 @@ helpviewer_keywords:
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0f732eb7b6ee77cb6b16130fc41655922127c3b
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 9ee68d0da3b7f23d4de0192da076ef6f71d6d222
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469688"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051633"
 ---
 # <a name="specifying-a-character-set"></a>Określanie zestawu znaków
-<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> Pole kontroluje kierowanie ciągu i określa, jak wywołanie platformy znajduje nazwy funkcji w bibliotece DLL. W tym temacie opisano obie zachowania.  
+<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> Pole steruje kierowaniem ciągów i określa, w jaki sposób metoda Invoke odnajduje nazwy funkcji w bibliotece DLL. W tym temacie opisano oba zachowania.  
   
- Niektóre interfejsy API wyeksportować dwie wersje funkcji, które przyjmują argumenty typu string: wąskiego (ANSI) i dwubajtowych (Unicode). Interfejs API Windows, na przykład zawiera następujące nazwy punktu wejścia dla **MessageBox** funkcji:  
+ Niektóre interfejsy API eksportują dwie wersje funkcji przyjmujących argumenty ciągów: wąski (ANSI) i szeroki (Unicode). Interfejs API systemu Windows, na przykład, zawiera następujące nazwy punktów wejścia dla funkcji **MessageBox** :  
   
 - **MessageBoxA**  
   
-     Zawiera formatowanie ANSI 1-bajtowych wartości znakowych rozróżnianych na podstawie "A", po której dołączany do wybranej nazwy punktu wejścia. Wywołania **MessageBoxA** zawsze przeprowadzanie marshalingu ciągów w formacie ANSI.  
+     Zawiera 1-bajtowe znaki formatowania ANSI, rozróżniane przez "A" do nazwy punktu wejścia. Wywołania klasy **MessageBox** są zawsze organizowane w formacie ANSI.  
   
 - **MessageBoxW**  
   
-     Zawiera formatowanie 2-bajtowych wartości znakowych Unicode, rozróżnianych na podstawie "W" dołączany do wybranej nazwy punktu wejścia. Wywołania **MessageBoxW** zawsze przeprowadzanie marshalingu ciągów w formacie Unicode.  
+     Zawiera 2-bajtowe znaki formatowania Unicode, rozróżniane "W" dołączone do nazwy punktu wejścia. Wywołania **MessageBoxW** zawsze marshalą ciągi w formacie Unicode.  
   
-## <a name="string-marshaling-and-name-matching"></a>Marshaling ciągów i dopasowywanie nazw  
+## <a name="string-marshaling-and-name-matching"></a>Kierowanie ciągów i dopasowywanie nazw  
  `CharSet` Pole akceptuje następujące wartości:  
   
- <xref:System.Runtime.InteropServices.CharSet.Ansi> (wartość domyślna)  
+ <xref:System.Runtime.InteropServices.CharSet.Ansi>(wartość domyślna)  
   
-- Ciąg marshalingu  
+- Kierowanie ciągów  
   
-     Wywołanie platformy marshals ciągi z ich formatu zarządzanych (Unicode) na ANSI format.  
+     Wywołanie platformy umożliwia kierowanie ciągów z formatu zarządzanego (Unicode) do formatu ANSI.  
   
-- Dopasowywanie nazw  
+- Dopasowanie nazw  
   
-     Gdy <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> pole jest `true`, ponieważ jest domyślnie w języku Visual Basic platforma wywołania wyszukuje tylko należy określić nazwę. Na przykład, jeśli określisz **MessageBox**, wyszukuje wywołania platformy **MessageBox** i kończy się niepowodzeniem, gdy nie można odnaleźć dokładnej pisowni.  
+     Gdy pole ma `true`wartość domyślną w Visual Basic, platforma wywoła wyszukiwanie tylko dla określonej nazwy. <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> Na przykład jeśli określisz element **MessageBox**, funkcja Invoke wywoła wyszukiwanie dla **MessageBox** i zakończy się niepowodzeniem, gdy nie będzie można zlokalizować dokładnej pisowni.  
   
-     Gdy `ExactSpelling` pole jest `false`, ponieważ jest ona domyślnie w języku C++ i C#, pierwsze wywołanie platformy wyszukuje unmangled aliasu (**MessageBox**), następnie zniekształcone nazwy (**MessageBoxA**) Jeśli nie zostanie znaleziony unmangled aliasu. Należy zauważyć, że zachowanie Dopasowywanie nazw ANSI różni się od zachowania Dopasowywanie nazw Unicode.  
+     `false` C++ C#Gdy pole jest, ponieważ jest domyślnie w i, wywołanie platformy wyszuka alias niezniekształconej najpierw (MessageBox), a następnie nazwę zniekształcona (MessageBox), jeśli alias niezniekształconej nie zostanie znaleziony. `ExactSpelling` Należy zauważyć, że zachowanie dopasowania nazw ANSI różni się od zachowania dopasowywania nazw Unicode.  
   
  <xref:System.Runtime.InteropServices.CharSet.Unicode>  
   
-- Ciąg marshalingu  
+- Kierowanie ciągów  
   
-     Wywołanie platformy ciągi kopie z ich formatu zarządzanych (Unicode) do formatu Unicode.  
+     Wywołanie platformy kopiuje ciągi z formatu zarządzanego (Unicode) do formatu Unicode.  
   
-- Dopasowywanie nazw  
+- Dopasowanie nazw  
   
-     Gdy `ExactSpelling` pole jest `true`, ponieważ jest domyślnie w języku Visual Basic platforma wywołania wyszukuje tylko należy określić nazwę. Na przykład, jeśli określisz **MessageBox**, wyszukuje wywołania platformy **MessageBox** i kończy się niepowodzeniem, jeśli nie może zlokalizować dokładnej pisowni.  
+     Gdy pole ma `true`wartość domyślną w Visual Basic, platforma wywoła wyszukiwanie tylko dla określonej nazwy. `ExactSpelling` Na przykład jeśli określisz element **MessageBox**, funkcja Invoke wywoła wyszukiwanie dla **MessageBox** i zakończy się niepowodzeniem, jeśli nie można zlokalizować dokładnej pisowni.  
   
-     Gdy `ExactSpelling` pole jest `false`, ponieważ jest ona domyślnie w języku C++ i C#, pierwsze wywołanie platformy wyszukuje zniekształcone nazwy (**MessageBoxW**), następnie unmangled aliasu (**MessageBox**) Jeśli nie znaleziono zniekształcone nazwy. Należy zauważyć, że zachowanie Dopasowywanie nazw Unicode różni się od zachowania Dopasowywanie nazw ANSI.  
+     `false` C++ C#Gdy pole jest, ponieważ jest domyślnie w i, wywołanie platformy wyszukuje najpierw nazwę zniekształcona (MessageBoxW), a następnie alias niezniekształconej (MessageBox), jeśli nazwa zniekształcona nie zostanie znaleziona. `ExactSpelling` Zauważ, że zachowanie dopasowywania nazw Unicode różni się od zachowania dopasowania nazw ANSI.  
   
  <xref:System.Runtime.InteropServices.CharSet.Auto>  
   
-- Wywołanie platformy wybiera między ANSI i Unicode formaty w czasie wykonywania, oparte na platformie docelowej.  
+- Wywołanie platformy wybiera między formatami ANSI i Unicode w czasie wykonywania, na podstawie platformy docelowej.  
   
-## <a name="specifying-a-character-set-in-visual-basic"></a>Określanie zestawu znaków w języku Visual Basic  
- Poniższy przykład deklaruje **MessageBox** funkcja trzy razy, każdorazowo przy użyciu różnych zachowanie zestawu znaków. Można określić zachowanie zestawu znaków w języku Visual Basic, dodając **Ansi**, **Unicode**, lub **automatycznie** — słowo kluczowe do instrukcji deklaracji.  
+## <a name="specifying-a-character-set-in-visual-basic"></a>Określanie zestawu znaków w Visual Basic  
+ Poniższy przykład deklaruje funkcję **MessageBox** trzykrotnie, za każdym razem z innym zachowaniem zestawu znaków. Możesz określić zachowanie zestawu znaków w Visual Basic, dodając słowo kluczowe **ANSI**, **Unicode**lub słowa kluczowego do instrukcji deklaracji.  
   
- Jeżeli pominięto słowa kluczowego zestaw znaków, jak odbywa się w pierwszej instrukcji deklaracji <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> pola wartość domyślna to zestawu znaków ANSI. Drugi i trzeci instrukcji w przykładzie jawnie określić znak, który został ustawiony za pomocą słowa kluczowego.  
+ W przypadku pominięcia słowa kluczowego zestawu znaków, jak zostało to zrobione w pierwszej instrukcji deklaracji <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> , pole jest domyślnie ustawione na zestaw znaków ANSI. Drugie i trzecie instrukcje w przykładzie jawnie określają zestaw znaków za pomocą słowa kluczowego.  
   
 ```vb
 Friend Class NativeMethods
@@ -90,8 +90,8 @@ Friend Class NativeMethods
 End Class
 ```
   
-## <a name="specifying-a-character-set-in-c-and-c"></a>Określanie zestawu znaków w C# i C++  
- <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> Pole identyfikuje podstawowy zestaw znaków jako ANSI lub Unicode. Formanty, jak powinny być wprowadzane argumenty typu string do metody zestawu znaków. Aby wskazać zestaw znaków, użyj jednej z następujących form:  
+## <a name="specifying-a-character-set-in-c-and-c"></a>Określanie zestawu znaków w C# iC++  
+ <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> Pole Identyfikuje podstawowy zestaw znaków jako ANSI lub Unicode. Zestaw znaków kontroluje sposób organizowania argumentów ciągów dla metody. Aby wskazać zestaw znaków, użyj jednej z następujących form:  
   
 ```csharp
 [DllImport("DllName", CharSet = CharSet.Ansi)]
@@ -105,7 +105,7 @@ End Class
 [DllImport("DllName", CharSet = CharSet::Auto)]
 ```
   
- W poniższym przykładzie przedstawiono trzy definicje zarządzanych **MessageBox** opartego na atrybutach funkcji do określenia zestawu znaków. W pierwszym definicji przez jej pominięcia `CharSet` pola wartość domyślna to zestawu znaków ANSI.  
+ W poniższym przykładzie przedstawiono trzy zarządzane definicje funkcji **MessageBox** przypisanej do określenia zestawu znaków. W pierwszej definicji, z pominięciem, pole domyślnie `CharSet` jest zestaw znaków ANSI.  
   
 ```csharp  
 using System;
@@ -149,6 +149,6 @@ extern "C" int MessageBox(
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
-- [Tworzenie prototypów w kodzie zarządzanym](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [Przykłady wywołań platformy](../../../docs/framework/interop/platform-invoke-examples.md)
-- [Marshaling danych w wywołaniu platformy](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+- [Tworzenie prototypów w kodzie zarządzanym](creating-prototypes-in-managed-code.md)
+- [Przykłady wywołań platformy](platform-invoke-examples.md)
+- [Marshaling danych w wywołaniu platformy](marshaling-data-with-platform-invoke.md)

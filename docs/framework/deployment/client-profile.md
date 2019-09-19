@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 86058eb288b54a4bc316900f165ec61e4d05eb1f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 25aa7b7c88047a95af3cd1d8f99d96771f252ef4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457288"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052200"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
-.NET Client Profile jest podzbiorem .NET Framework, która została dostarczona z .NET Framework 4 i starszych wersji i został zoptymalizowany dla aplikacji klienckich. .NET Framework to platforma deweloperska dla Windows, Windows Phone i platformą Microsoft Azure i zapewnia zarządzanie środowisko wykonywania aplikacji i biblioteki klas .NET Framework. .NET Framework 4 i starszych wersji oferowały dwie opcje wdrożenia: pełny program .NET Framework i Client Profile. Program Client Profile umożliwiał szybsze wdrażanie i tworzenie mniejszych pakietów instalacyjnych aplikacji, niż pełny program .NET Framework.  
+Profil klienta platformy .NET to podzestaw .NET Framework, który został dostarczony z .NET Framework 4 i wcześniejszych wersji i został zoptymalizowany pod kątem aplikacji klienckich. .NET Framework jest platformą programistyczną dla systemu Windows, Windows Phone i Microsoft Azure i udostępnia zarządzane środowisko wykonywania aplikacji oraz bibliotekę klas .NET Framework. W .NET Framework 4 i starszych wersjach przedstawiono dwie opcje wdrożenia: pełny .NET Framework i profil klienta. Program Client Profile umożliwiał szybsze wdrażanie i tworzenie mniejszych pakietów instalacyjnych aplikacji, niż pełny program .NET Framework.  
   
- Począwszy od programu .NET Framework 4.5, Client Profile został wycofany i jedynie pełny pakiet redystrybucyjny jest dostępny. Optymalizacje dostarczane w programie .NET Framework 4.5, takie jak mniejszy rozmiar do pobrania i szybsze wdrożenie, wyeliminowały konieczność oddzielnego pakietu wdrażania. Pojedynczy pakiet redystrybucyjny usprawnia proces instalacji i upraszcza opcje wdrażania aplikacji.  
+ Począwszy od .NET Framework 4,5, profil klienta został wycofany i dostępny jest tylko pełny pakiet redystrybucyjny. Optymalizacje zapewniane przez .NET Framework 4,5, takie jak mniejszy rozmiar pobierania i szybsze wdrażanie, nie wymagały oddzielnego pakietu wdrożeniowego. Pojedynczy pakiet redystrybucyjny usprawnia proces instalacji i upraszcza opcje wdrażania aplikacji.  
   
- Jednakże, jeśli są przeznaczone dla .NET Framework 4 lub 3.5 i chcesz dowiedzieć się więcej na temat Client Profile oraz kiedy go używać, zobacz [.NET Framework Client Profile](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29) w dokumentacji programu .NET Framework 4.  
+ Jeśli jednak chcesz dowiedzieć się więcej na temat .NET Framework 4 lub 3,5 i Dowiedz się więcej o profilu klienta i kiedy z niego korzystać, zobacz [.NET Framework profilu klienta](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29) w dokumentacji .NET Framework 4.  
   
- Po zainstalowaniu programu .NET Framework 4.5, .NET Framework 4 Client Profile jest aktualizowana do pełnej wersji programu .NET Framework. Aby uzyskać informacje o instalowaniu programu .NET Framework 4.5, zobacz [Instalowanie programu .NET Framework dla deweloperów](../../../docs/framework/install/guide-for-developers.md).  
+ Po zainstalowaniu .NET Framework 4,5 profil klienta .NET Framework 4 zostanie zaktualizowany do pełnej wersji .NET Framework. Informacje o instalowaniu .NET Framework 4,5 znajdują się w temacie [Install the .NET Framework for Developers](../install/guide-for-developers.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [.NET framework Client Profile (.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)
+- [.NET Framework profilu klienta (.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)
 - [Wielowersyjność kodu w programie Visual Studio ― przegląd](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [Rozwiązywanie problemów z błędami obiektów docelowych programu .NET Framework](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)
 - [Instrukcje: Określanie wersji docelowej programu .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)

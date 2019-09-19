@@ -2,12 +2,12 @@
 title: Rekordy
 description: Dowiedz F# się, jak rekordy reprezentują proste Agregowanie wartości nazwanych, opcjonalnie z elementami członkowskimi.
 ms.date: 06/09/2019
-ms.openlocfilehash: d92a1a7517e5b05ee687926df29f33fab123b4dd
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1ba002407b1ccbcbceed32df8636fb860e89e3b6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627283"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053938"
 ---
 # <a name="records"></a>Rekordy
 
@@ -68,7 +68,7 @@ Inna forma konstruowania rekordów może być przydatna, gdy trzeba skopiować i
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1906.fs)]
 
-Ta forma wyrażenia rekordu jest nazywana wyrażeniem *Copy i Update Record*.
+Ta forma wyrażenia rekordu jest nazywana *wyrażeniem Copy i Update Record*.
 
 Rekordy są domyślnie niezmienne; można jednak łatwo tworzyć zmodyfikowane rekordy przy użyciu wyrażenia Copy i Update. Można również jawnie określić pole modyfikowalne.
 
@@ -108,7 +108,8 @@ type Person =
 and Address =
   { Line1: string
     Line2: string
-    PostCode: string }
+    PostCode: string
+    Occupant: Person }
 ```
 
 Jeśli zdefiniowano poprzedni przykład bez `and` słowa kluczowego, nie zostanie on skompilowany. `and` Słowo kluczowe jest wymagane dla wzajemnie cyklicznych definicji.

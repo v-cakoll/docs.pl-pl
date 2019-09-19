@@ -2,16 +2,16 @@
 title: Rozpoczynanie pracy F# z usługą w Visual Studio Code
 description: Dowiedz się, F# jak używać programu z Visual Studio Code i pakietem wtyczek Ionide.
 ms.date: 12/23/2018
-ms.openlocfilehash: baaa87207122cfe314972aee5dfaf8a41de2c394
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2fa0518488d37b2130aaba96028ac92dac77eb97
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629980"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082990"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Rozpoczynanie pracy F# z usługą w Visual Studio Code
 
-Możesz pisać F# w [Visual Studio Code](https://code.visualstudio.com) z wtyczką [Ionide](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp) , aby uzyskać wspaniałe Międzyplatformowe, uproszczone zintegrowane środowisko programistyczne (IDE) z technologią IntelliSense i podstawowymi refaktoryzacjami kodu. Odwiedź stronę [Ionide.IO](http://ionide.io) , aby dowiedzieć się więcej na temat wtyczki.
+Możesz pisać F# w [Visual Studio Code](https://code.visualstudio.com) z [wtyczką Ionide](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp) , aby uzyskać wspaniałe Międzyplatformowe, uproszczone zintegrowane środowisko programistyczne (IDE) z technologią IntelliSense i podstawowymi refaktoryzacjami kodu. Odwiedź stronę [Ionide.IO](http://ionide.io) , aby dowiedzieć się więcej na temat wtyczki.
 
 Aby rozpocząć, upewnij się, że [ F# poprawnie zainstalowano wtyczkę Ionide](install-fsharp.md#install-f-with-visual-studio-code).
 
@@ -24,7 +24,7 @@ Aby utworzyć nowy F# projekt, otwórz Visual Studio Code w nowym folderze (moż
 
 Następnie Otwórz paletę poleceń (**wyświetl > palecie poleceń**) i wpisz następujące polecenie:
 
-```
+```console
 > F# new project
 ```
 
@@ -62,7 +62,7 @@ Otwórz `Script.fsx`i Dodaj następujący kod na końcu:
 
 [!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/to-pig-latin.fsx)]
 
-Ta funkcja konwertuje wyraz na formę surówki. [](https://en.wikipedia.org/wiki/Pig_Latin) Następnym krokiem jest oszacowanie go przy użyciu opcji F# Interactive (fsi).
+Ta funkcja konwertuje wyraz na formę [surówki](https://en.wikipedia.org/wiki/Pig_Latin). Następnym krokiem jest oszacowanie go przy użyciu opcji F# Interactive (fsi).
 
 Zaznacz całą funkcję (powinna być 11 wierszy). Gdy zostanie ono wyróżnione, przytrzymaj klawisz **Alt** i naciśnij klawisz **Enter**. Zobaczysz okno podręczne poniżej i będzie ono wyglądać następująco:
 
@@ -117,7 +117,7 @@ W FSI mogły być zauważone następujące elementy:
 val toPigLatin : word:string -> string
 ```
 
-To Stany `toPigLatin` , które są funkcją, która przyjmuje `string` jako dane wejściowe (nazywane `word`) i zwraca inną `string`. Jest to nazywane sygnaturą [typu funkcji](https://fsharpforfunandprofit.com/posts/function-signatures/), podstawową częścią F# tego klucza do poznania F# kodu. Zauważmy również, że po umieszczeniu wskaźnika myszy nad funkcją w Visual Studio Code.
+To Stany `toPigLatin` , które są funkcją, która przyjmuje `string` jako dane wejściowe (nazywane `word`) i zwraca inną `string`. Jest to nazywane [sygnaturą typu funkcji](https://fsharpforfunandprofit.com/posts/function-signatures/), podstawową częścią F# tego klucza do poznania F# kodu. Zauważmy również, że po umieszczeniu wskaźnika myszy nad funkcją w Visual Studio Code.
 
 W treści funkcji widoczne są dwie odrębne części:
 
@@ -158,7 +158,7 @@ Zaznacz oba wiersze tekstu i naciśnij klawisze ALT + ENTER, aby wykonać te wie
 
 Następnie w oknie FSI wywołaj funkcję przy użyciu `PigLatin` zdefiniowanego wcześniej modułu:
 
-```
+```console
 > PigLatin.toPigLatin "banana";;
 val it : string = "ananabay"
 > PigLatin.toPigLatin "apple";;

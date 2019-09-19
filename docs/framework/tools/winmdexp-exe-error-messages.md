@@ -159,21 +159,21 @@ helpviewer_keywords:
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b9844505516550b9d817b52c72cea15a2468f7b
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: ad4ea3b2d5fb828c425f30e76244772f5ca9a11a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025955"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043972"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe — komunikaty o błędach
-Wywołania procesu kompilacji [Winmdexp.exe (Windows Runtime narzędzie do eksportu metadanych)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) zastosowania **składnika środowiska wykonawczego Windows** szablonu w programie Visual Studio 2012, dzięki czemu komunikaty o błędach Winmdexp.exe są wyświetlane w **Lista błędów**. Winmdexp.exe działa w module, który jest kompilowany za pomocą `/target:winmdobj` opcji. Ponieważ wymaga, aby moduł skompilowany jako dane wejściowe, jego komunikaty o błędach nie są wyświetlane, chyba że kompilacja zakończy się pomyślnie.  
+Proces kompilacji wywołuje [Winmdexp. exe (narzędzie eksportu metadanych środowisko wykonawcze systemu Windows)](winmdexp-exe-windows-runtime-metadata-export-tool.md) w przypadku używania szablonu **składnika Środowisko wykonawcze systemu Windows** w programie Visual Studio 2012, dlatego w **Lista błędów**są wyświetlane komunikaty o błędach Winmdexp. exe. Winmdexp. exe działa na module, który jest kompilowany przy użyciu `/target:winmdobj` opcji. Ponieważ wymaga skompilowanego modułu jako dane wejściowe, jego komunikaty o błędach nie są wyświetlane, chyba że kompilacja zakończy się pomyślnie.  
   
- Komunikaty o błędach są przeznaczone do zawierają wszystkie informacje, które należy spełnić warunki błędów, które zgłaszają. Jednak niektóre problemy, wymaga więcej informacji, niż mieści się w komunikacie. Można znaleźć dodatkowe informacje w [warunki błędu składnika diagnozowanie środowiska uruchomieniowego Windows](https://go.microsoft.com/fwlink/p/?LinkId=251127) w Centrum deweloperów Windows.  
+ Komunikaty o błędach zostały zaprojektowane tak, aby zawierały wszystkie informacje potrzebne do rozwiązania warunków błędów zgłaszanych przez użytkownika. Jednak niektóre problemy wymagają więcej informacji niż mieści się w komunikacie. Dodatkowe informacje można znaleźć w temacie [diagnozowanie środowisko wykonawcze systemu Windowsych warunków błędów składników](https://go.microsoft.com/fwlink/p/?LinkId=251127) w centrum deweloperów systemu Windows.  
   
- Jeśli w tym artykule nie omówiono błędu i uważasz, że komunikat nie zawiera wystarczających informacji, aby rozwiązać ten problem, użyj łącza opinii, w tym artykule i Uwzględnij komunikat o błędzie. Alternatywnie możesz zgłosić usterkę w [witryny sieci Web Microsoft Connect](https://go.microsoft.com/fwlink/p/?LinkId=251130). Można także wyszukać więcej informacji [Forums firmy Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=251129).  
+ Jeśli błąd nie został omówiony w tym artykule i uważasz, że komunikat nie zawiera wystarczających informacji, aby rozwiązać ten problem, Użyj linku opinii znajdującego się w tym artykule i Dołącz komunikat o błędzie. Alternatywnie możesz zgłosić usterkę w [witrynie sieci Web Microsoft Connect](https://go.microsoft.com/fwlink/p/?LinkId=251130). Możesz również wyszukać więcej informacji na [forach firmy Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=251129).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Winmdexp.exe (narzędzie eksportowania metadanych środowiska uruchomieniowego systemu Windows)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)
-- [Diagnozowanie błędów składników Windows Runtime](https://go.microsoft.com/fwlink/p/?LinkId=251127)
+- [Winmdexp.exe (narzędzie eksportowania metadanych środowiska uruchomieniowego systemu Windows)](winmdexp-exe-windows-runtime-metadata-export-tool.md)
+- [Diagnozowanie warunków błędów składników środowisko wykonawcze systemu Windows](https://go.microsoft.com/fwlink/p/?LinkId=251127)

@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: b830444a-5003-49fe-b89b-b8bee22f7b1a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7fe0b33bbd77143da6d2f4a26b170e4d7afe1fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0883849eee12922601e50c2337bb0048d77cab68
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874110"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052376"
 ---
 # <a name="pinvokelog-mda"></a>pInvokeLog MDA
-`pInvokeLog` Zarządzanego Asystenta debugowania (MDA) jest aktywowana dla każdej z platform unikatowy wywołania podpis używany podczas wykonywania.  
+Asystent `pInvokeLog` debugowania zarządzanego (MDA) jest uaktywniany dla każdego unikatowego podpisu wywołania platformy używanego podczas wykonywania.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
  To zdarzenie MDA nie ma wpływu na środowisko CLR.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Komunikat informujący o platformie wywołać podpis używany podczas wykonywania.  
+ Komunikat wskazujący podpis wywołania platformy używany podczas wykonywania.  
   
 ## <a name="configuration"></a>Konfiguracja  
- Każdy filtry elementu dopasowania plików dll na poszczególnych platformach wywołania zostały wprowadzone.  
+ Każdy element dopasowania filtruje pliki. dll, do których są tworzone wywołania wywołania platformy.  
   
 ```xml  
 <mdaConfig>  
@@ -45,5 +45,5 @@ ms.locfileid: "61874110"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Wykorzystywanie niezarządzanych funkcji DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Wykorzystywanie niezarządzanych funkcji DLL](../interop/consuming-unmanaged-dll-functions.md)

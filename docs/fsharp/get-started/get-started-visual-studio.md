@@ -2,12 +2,12 @@
 title: Wprowadzenie F# do programu Visual Studio
 description: Dowiedz się, F# jak korzystać z programu Visual Studio.
 ms.date: 07/03/2018
-ms.openlocfilehash: 24c9a81cfa61dc904db9b2213224677696d7eb9b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e573af67a1fc00b0a340f8c73ab1ee0ed2b97810
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629767"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082697"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Wprowadzenie F# do programu Visual Studio
 
@@ -47,11 +47,11 @@ Jest to funkcja, która wywołuje `square` funkcję z `12`argumentem.  Następni
 
 ## <a name="running-your-code"></a>Uruchamianie kodu
 
-Możesz uruchomić kod i zobaczyć wyniki, naciskając klawisz **Ctrl**+**F5**.  Spowoduje to uruchomienie programu bez debugowania i pozwala zobaczyć wyniki.  Alternatywnie możesz wybrać element menu **najwyższego** poziomu w programie Visual Studio i wybrać polecenie **Uruchom bez debugowania**.
+Możesz uruchomić kod i zobaczyć wyniki, naciskając klawisz **Ctrl**+**F5**.  Spowoduje to uruchomienie programu bez debugowania i pozwala zobaczyć wyniki.  Alternatywnie możesz wybrać element menu **najwyższego poziomu w programie** Visual Studio i wybrać polecenie **Uruchom bez debugowania**.
 
 W oknie konsoli programu Visual Studio należy teraz zobaczyć następujące elementy:
 
-```
+```console
 12 squared is 144!
 ```
 
@@ -59,7 +59,7 @@ Gratulacje!  Został utworzony pierwszy F# projekt w programie Visual Studio, a 
 
 ## <a name="next-steps"></a>Następne kroki
 
-Jeśli jeszcze tego nie zrobiono, zapoznaj się [z F#przewodnikiem ](../tour.md), który obejmuje niektóre podstawowe funkcje F# języka.  Udostępnimy przegląd niektórych możliwości programu F#i udostępniamy dużo przykładów kodu, które można skopiować do programu Visual Studio i uruchomić.  Istnieją również pewne doskonałe zasoby zewnętrzne, których można użyć w [ F# przewodniku](../index.md).
+Jeśli jeszcze tego nie zrobiono, zapoznaj się [ F#z przewodnikiem ](../tour.md), który obejmuje niektóre podstawowe funkcje F# języka.  Udostępnimy przegląd niektórych możliwości programu F#i udostępniamy dużo przykładów kodu, które można skopiować do programu Visual Studio i uruchomić.  Istnieją również pewne doskonałe zasoby zewnętrzne, których można użyć w [ F# przewodniku](../index.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -10,30 +10,30 @@ helpviewer_keywords:
 ms.assetid: a84dd9a3-d6cf-4824-989a-ecbbf443eeb4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e5b4cb4a04a79a748f4ea2292bac67a88a6e9f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe15d718a9c5f91bfae4f37c04e726990e2fbd45
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754365"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052585"
 ---
 # <a name="invalidmemberdeclaration-mda"></a>invalidMemberDeclaration MDA
-`invalidMemberDeclaration` Zarządzanego Asystenta debugowania (MDA) jest aktywowana Aby zgłosić błąd występujący podczas określania sposobu organizowania parametrów elementu członkowskiego, wywoływana z modelu COM.  
+Asystent `invalidMemberDeclaration` debugowania zarządzanego (MDA) został aktywowany, aby zgłosić błąd, który występuje podczas określania sposobu organizowania parametrów elementu członkowskiego, który ma być wywoływany z modelu com.  
   
 ## <a name="symptoms"></a>Symptomy  
- Błąd HRESULT jest zwracana do COM bez zarządzanej metody o została wywołana.  
+ Błąd HRESULT jest zwracany do modelu COM bez wywołania metody zarządzanej.  
   
 ## <a name="cause"></a>Przyczyna  
- Jest to najprawdopodobniej z powodu niezgodnej <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybutu na jeden z parametrów.  
+ Najprawdopodobniej ze względu na niezgodny <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybut na jednym z parametrów.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Określ prawidłowy <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybuty w parametrach.  
+ Określ prawidłowe <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybuty dla parametrów.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
  To zdarzenie MDA nie ma wpływu na środowisko CLR.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Komunikat informacyjny zawierające nazwy elementu członkowskiego, wpisz nazwę i komunikat o błędzie.  
+ Komunikat informacyjny zawierający nazwę elementu członkowskiego, nazwę typu i komunikat o błędzie.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -48,5 +48,5 @@ ms.locfileid: "61754365"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling międzyoperacyjny](../interop/interop-marshaling.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
 author: ghogen
-ms.openlocfilehash: c9a783c0e7df39381ad1d9a8fedd7419605fd241
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a10e05b0460608a9e67ee4527adf80be3d47438e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935542"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053635"
 ---
 # <a name="how-to-continue-a-windows-service-visual-basic"></a>Instrukcje: Kontynuowanie usługi systemu Windows (Visual Basic)
 Ten przykład używa <xref:System.ServiceProcess.ServiceController> składnika do kontynuowania usługi administratora usług IIS na komputerze lokalnym.  
@@ -31,7 +31,7 @@ Ten przykład używa <xref:System.ServiceProcess.ServiceController> składnika d
   
 - Odwołanie do projektu do System. ServiceProcess. dll.  
   
-- Dostęp do elementów członkowskich <xref:System.ServiceProcess> przestrzeni nazw. `Imports` Dodaj instrukcję, jeśli nie masz w pełni kwalifikowanej nazwy elementu członkowskiego w kodzie. Aby uzyskać więcej informacji, zobacz Imports — [instrukcja (przestrzeń nazw i typ .NET)](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- Dostęp do elementów członkowskich <xref:System.ServiceProcess> przestrzeni nazw. `Imports` Dodaj instrukcję, jeśli nie masz w pełni kwalifikowanej nazwy elementu członkowskiego w kodzie. Aby uzyskać więcej informacji, zobacz [Imports — Instrukcja (przestrzeń nazw i typ .NET)](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  <xref:System.ServiceProcess.ServiceController.MachineName%2A> Właściwość<xref:System.ServiceProcess.ServiceController> klasy jest domyślnie komputerem lokalnym. Aby odwoływać się do usług systemu Windows na innym <xref:System.ServiceProcess.ServiceController.MachineName%2A> komputerze, należy zmienić właściwość na nazwę tego komputera.  
@@ -53,4 +53,4 @@ Ten przykład używa <xref:System.ServiceProcess.ServiceController> składnika d
 
 - <xref:System.ServiceProcess.ServiceController>
 - <xref:System.ServiceProcess.ServiceControllerStatus>
-- [Instrukcje: Wstrzymywanie usługi systemu Windows (Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)
+- [Instrukcje: Wstrzymywanie usługi systemu Windows (Visual Basic)](how-to-pause-a-windows-service-visual-basic.md)

@@ -2,12 +2,12 @@
 title: Listy
 description: Dowiedz F# się więcej na temat list, uporządkowanej, niemodyfikowalnej serii elementów tego samego typu.
 ms.date: 05/16/2016
-ms.openlocfilehash: e8c4a464306cfedfd36a4685507684d3a1a97a2e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 72f1779d7d077da0f1f4804df93fa4ac11f9b2e3
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630732"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082912"
 ---
 # <a name="lists"></a>Listy
 
@@ -62,7 +62,7 @@ Listy w F# programie są implementowane jako odrębnie połączone listy, co ozn
 
 Typ listy obsługuje następujące właściwości:
 
-|Właściwość|Typ|Opis|
+|Właściwość|Type|Opis|
 |--------|----|-----------|
 |[MTP](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740)|`'T`|Pierwszy element.|
 |[pusty](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|Właściwość statyczna zwracająca pustą listę odpowiedniego typu.|
@@ -99,7 +99,7 @@ Funkcja `RemoveAllMultiples` jest funkcją cykliczną, która przyjmuje dwie lis
 
 Wynik jest następujący:
 
-```
+```console
 Primes Up To 100:
 [2; 3; 5; 7; 11; 13; 17; 19; 23; 29; 31; 37; 41; 43; 47; 53; 59; 61; 67; 71; 73; 79; 83; 89; 97]
 ```
@@ -120,7 +120,7 @@ Poniższy kod ilustruje użycie `List.exists`.
 
 Wynik jest następujący:
 
-```
+```console
 For list [0; 1; 2; 3], contains zero is true
 ```
 
@@ -130,7 +130,7 @@ Poniższy przykład ilustruje użycie `List.exists2`.
 
 Wynik jest następujący:
 
-```
+```console
 Lists [1; 2; 3; 4; 5] and [5; 4; 3; 2; 1] have at least one equal element at the same position.
 ```
 
@@ -140,7 +140,7 @@ Możesz użyć [list. ForAll](https://msdn.microsoft.com/library/e11a5233-d612-4
 
 Wynik jest następujący:
 
-```
+```console
 true
 false
 ```
@@ -151,7 +151,7 @@ Podobnie, [list. forall2 —](https://msdn.microsoft.com/library/bb611f02-8277-4
 
 Wynik jest następujący:
 
-```
+```console
 true
 false
 ```
@@ -168,7 +168,7 @@ Poniższy przykład ilustruje użycie `List.sort`.
 
 Wynik jest następujący:
 
-```
+```console
 [-2; 1; 4; 5; 8]
 ```
 
@@ -178,7 +178,7 @@ Poniższy przykład ilustruje użycie `List.sortBy`.
 
 Wynik jest następujący:
 
-```
+```console
 [1; -2; 4; 5; 8]
 ```
 
@@ -188,7 +188,7 @@ W następnym przykładzie pokazano użycie `List.sortWith`. W tym przykładzie f
 
 Wynik jest następujący:
 
-```
+```console
 [{ID = 92;
 Rev = 1;}; {ID = 92;
 Rev = 1;}; {ID = 100;
@@ -213,7 +213,7 @@ Jeśli elementy muszą zostać przekształcone w pierwszej kolejności, wywołaj
 
 Wynik jest następujący:
 
-```
+```console
 "b"
 ```
 
@@ -223,7 +223,7 @@ Inna grupa operacji wyszukiwania, [list. tryFind —](https://msdn.microsoft.com
 
 Wynik jest następujący:
 
-```
+```console
 The first even value is 22.
 The first even value is at position 8.
 ```
@@ -252,7 +252,7 @@ Listy zawierające krotki mogą być przetwarzane przy użyciu funkcji zip i roz
 
 Wynik jest następujący:
 
-```
+```console
 [(1, -1); (2, -2); (3; -3)]
 ```
 
@@ -262,7 +262,7 @@ Poniższy przykład kodu demonstruje użycie `List.zip3`.
 
 Wynik jest następujący:
 
-```
+```console
 [(1, -1, 0); (2, -2, 0); (3, -3, 0)]
 ```
 
@@ -274,7 +274,7 @@ Poniższy przykład kodu demonstruje użycie [list.](https://msdn.microsoft.com/
 
 Wynik jest następujący:
 
-```
+```console
 ([1; 3], [2; 4])
 [1; 3] [2; 4]
 ```
@@ -285,7 +285,7 @@ Poniższy przykład kodu demonstruje użycie [list. unzip3 —](https://msdn.mic
 
 Wynik jest następujący:
 
-```
+```console
 ([1; 4], [2; 5], [3; 6])
 ```
 
@@ -297,7 +297,7 @@ F#obsługuje różne operacje na elementach listy. Najprostszą jest [Lista. ITE
 
 Wynik jest następujący:
 
-```
+```console
 List.iter: element is 1
 List.iter: element is 2
 List.iter: element is 3
@@ -318,7 +318,7 @@ Inna często używana funkcja, która przekształca elementy listy to [list. map
 
 Wynik jest następujący:
 
-```
+```console
 [2; 3; 4]
 ```
 
@@ -328,7 +328,7 @@ W poniższym przykładzie pokazano użycie `List.map2`.
 
 Wynik jest następujący:
 
-```
+```console
 [5; 7; 9]
 ```
 
@@ -338,7 +338,7 @@ W poniższym przykładzie pokazano użycie `List.map3`.
 
 Wynik jest następujący:
 
-```
+```console
 [7; 10; 13]
 ```
 
@@ -348,7 +348,7 @@ W poniższym przykładzie pokazano użycie `List.mapi`.
 
 Wynik jest następujący:
 
-```
+```console
 [1; 3; 5]
 ```
 
@@ -358,7 +358,7 @@ W poniższym przykładzie pokazano użycie `List.mapi2`.
 
 Wynik jest następujący:
 
-```
+```console
 [0; 7; 18]
 ```
 
@@ -368,7 +368,7 @@ Wynik jest następujący:
 
 Wynik jest następujący:
 
-```
+```console
 [1; 2; 3; 2; 4; 6; 3; 6; 9]
 ```
 
@@ -386,7 +386,7 @@ Poniższy kod ilustruje użycie `List.choose` do zaznaczania wersalików wyrazó
 
 Wynik jest następujący:
 
-```
+```console
 ["Rome's"; "Bob's"]
 ```
 

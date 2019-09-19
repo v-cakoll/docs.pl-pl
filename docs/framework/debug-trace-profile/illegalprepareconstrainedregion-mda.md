@@ -10,30 +10,30 @@ helpviewer_keywords:
 ms.assetid: 2f9b5031-f910-4e01-a196-f89eab313eaf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 23a36d1709f03583ce39af0e7c80bb1ecd7cf809
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 623aff91eb801b4b32fc180bd97ed3822ad7f163
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754391"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052678"
 ---
 # <a name="illegalprepareconstrainedregion-mda"></a>illegalPrepareConstrainedRegion MDA
-`illegalPrepareConstrainedRegion` Zarządzanego Asystenta debugowania (MDA) jest aktywowany po <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> wywołanie metody nie bezpośrednio poprzedzać `try` instrukcji obsługi wyjątków. To ograniczenie jest w MSIL poziomu, więc jest dozwolone do generowania kodu źródło między wywołanie i `try`, takich jak komentarze.  
+Asystent `illegalPrepareConstrainedRegion` debugowania zarządzanego (MDA) jest uaktywniany, <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> gdy wywołanie metody nie poprzedza `try` bezpośrednio instrukcji programu obsługi wyjątków. To ograniczenie jest na poziomie MSIL, dlatego można mieć źródło `try`, które nie umożliwia generowania kodu między wywołaniem i, takimi jak komentarze.  
   
 ## <a name="symptoms"></a>Symptomy  
- Region ograniczonego wykonania (CER), która nigdy nie jest traktowana jako takie, ale jako prosty bloku obsługi wyjątków (`finally` lub `catch`). W konsekwencji regionie nie działa w przypadku warunku braku pamięci lub przerwanie wątku.  
+ Ograniczony region wykonywania (CER), który nigdy nie jest traktowany jak taki, ale jako prosty blok obsługi wyjątków (`finally` lub `catch`). W związku z tym region nie jest uruchamiany w przypadku warunku braku pamięci lub przerwania wątku.  
   
 ## <a name="cause"></a>Przyczyna  
- Wzorzec przygotowania CER nie jest prawidłowo zakończony.  To zdarzenie błędu. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> Wywołania metody, używany do oznaczania obsługi wyjątków jako wprowadzenie do CER w ich `catch` / `finally` / `fault` / `filter` bloków musi używać bezpośrednio przed `try` instrukcji.  
+ Wzorzec przygotowania dla programu CER nie działa poprawnie.  Jest to zdarzenie błędu. / / `catch` `filter` `finally` / `fault` Wywołanie metody używane do oznaczania procedur obsługi wyjątków, które wprowadza CER w swoich blokach, musi być używane bezpośrednio przed <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> `try` instrukcja.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Upewnij się, że wywołanie <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> ma miejsce bezpośrednio przed `try` instrukcji.  
+ Upewnij się, że wywołanie <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> jest wykonywane bezpośrednio `try` przed instrukcją.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
  To zdarzenie MDA nie ma wpływu na środowisko CLR.  
   
 ## <a name="output"></a>Dane wyjściowe  
- MDA Wyświetla nazwę wywołanie metody <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> metodę, przesunięcie MSIL i komunikat informujący o wywołaniu nie bezpośrednio poprzedzać początku bloku try.  
+ MDA Wyświetla nazwę metody wywołującej <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> metodę, przesunięcie MSIL i komunikat wskazujący, że wywołanie nie następuje bezpośrednio przed początkiem bloku try.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -46,7 +46,7 @@ ms.locfileid: "61754391"
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu demonstruje wzorzec, który powoduje, że to zdarzenie MDA zostanie uaktywniony.  
+ Poniższy przykład kodu demonstruje wzorzec, który powoduje aktywowanie tego MDA.  
   
 ```csharp
 void MethodWithInvalidPCR()  
@@ -68,5 +68,5 @@ void MethodWithInvalidPCR()
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>
-- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling międzyoperacyjny](../interop/interop-marshaling.md)

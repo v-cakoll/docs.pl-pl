@@ -7,101 +7,101 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 50ecb2aad84bd5b6c32f655b1dbbd34cf03a5b29
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9a96fd4c45113afd2ab918b714bd6e12a429917c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624294"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046185"
 ---
 # <a name="thread-pool-etw-events"></a>Zdarzenia ETW puli wątków
-<a name="top"></a> Te zdarzenia zbierać informacji na temat procesu roboczego i wątki We/Wy.  
+<a name="top"></a>Te zdarzenia zbierają informacje o wątkach procesów roboczych i we/wy.  
   
- Istnieją dwie grupy zdarzenia puli wątków:  
+ Istnieją dwie grupy zdarzeń puli wątków:  
   
-- [Zdarzenia puli wątków roboczych](#worker), które zawierają informacje o jak aplikacja korzysta z puli wątków i efekt obciążeń na kontroli współbieżności.  
+- [Zdarzenia puli wątków roboczych](#worker), które zawierają informacje o sposobie używania puli wątków przez aplikację oraz o wpływie obciążeń na kontrolę współbieżności.  
   
-- [Zdarzenia puli wątków We/Wy](#io), które zawierają informacje o wątków We/Wy, które są tworzone wycofany, unretired lub przerwana w puli wątków.  
+- [Zdarzenia puli wątków we/wy](#io), które zawierają informacje o wątkach we/wy, które są tworzone, wycofywane lub kończone w puli wątków.  
   
 <a name="worker"></a>   
-## <a name="worker-thread-pool-events"></a>Zdarzenia puli wątków procesów roboczych  
- Zdarzenia te odnoszą się do puli wątków procesów roboczych w środowisku uruchomieniowym i zapewniają powiadomienia o zdarzeniach wątku (na przykład, gdy wątek jest tworzony lub zatrzymana). Wątków roboczych używa adaptacyjnych algorytmów do sterowania współbieżnością, gdy liczba wątków jest obliczana na podstawie zmierzonego przepływności. Zdarzenia puli wątków roboczych może służyć do zrozumienia, jak aplikacja używa puli wątków oraz wpływ, jaki niektóre obciążenia mogą mieć sterowanie współbieżnością.  
+## <a name="worker-thread-pool-events"></a>Zdarzenia puli wątków roboczych  
+ Te zdarzenia odnoszą się do puli wątków roboczych środowiska uruchomieniowego i udostępniają powiadomienia dla zdarzeń wątku (na przykład podczas tworzenia lub zatrzymywania wątku). Pula wątków roboczych używa algorytmu adaptacyjnego na potrzeby kontroli współbieżności, gdzie liczba wątków jest obliczana na podstawie zmierzonej przepływności. Zdarzenia puli wątków roboczych mogą służyć do zrozumienia, w jaki sposób aplikacja korzysta z puli wątków, a wpływ niektórych obciążeń na kontrolę współbieżności.  
   
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart i ThreadPoolWorkerThreadStop  
- W poniższej tabeli przedstawiono — słowo kluczowe i poziom dla tych zdarzeń. (Aby uzyskać więcej informacji, zobacz [słowa kluczowe CLR ETW i poziomy](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ W poniższej tabeli przedstawiono słowo kluczowe i poziom dla tych zdarzeń. (Aby uzyskać więcej informacji, zobacz [słowa kluczowe i poziomy ETW CLR](clr-etw-keywords-and-levels.md)).  
   
-|Słowo kluczowe dla podnoszonego zdarzenia|Poziom|  
+|Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Komunikat informacyjny (4)|  
+|`ThreadingKeyword`0x10000|Informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Wywołane, gdy|  
+|Zdarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
 |-|-|-|  
-|`ThreadPoolWorkerThreadStart`|50|Wątek roboczy jest tworzony.|  
-|`ThreadPoolWorkerThreadStop`|51|Wątek roboczy jest zatrzymana.|  
-|`ThreadPoolWorkerThreadRetirementStart`|52|Wątek roboczy wycofaniu.|  
-|`ThreadPoolWorkerThreadRetirementStop`|53|Wątek roboczy wycofane ponownie staje się aktywny.|  
+|`ThreadPoolWorkerThreadStart`|50|Tworzony jest wątek roboczy.|  
+|`ThreadPoolWorkerThreadStop`|51|Wątek roboczy został zatrzymany.|  
+|`ThreadPoolWorkerThreadRetirementStart`|52|Wątek roboczy jest przeoponą.|  
+|`ThreadPoolWorkerThreadRetirementStop`|53|Wycofywany wątek roboczy zostanie ponownie uaktywniony.|  
   
  W poniższej tabeli przedstawiono dane zdarzenia.  
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|ActiveWorkerThreadCount|win: UInt32.|Liczba wątków roboczych dostępnych do przetworzenia pracy, w tym te, które są już przetwarzania.|  
-|RetiredWorkerThreadCount|win: UInt32.|Liczba wątków roboczych, które nie są dostępne do przetwarzania pracy, ale trwa odbywające się w rezerwie w przypadku większej liczby wątków jest potrzebna później.|  
-|ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|ActiveWorkerThreadCount|win: UInt32|Liczba wątków roboczych dostępnych do przetwarzania pracy, w tym tych, które już przetwarzają prace.|  
+|RetiredWorkerThreadCount|win: UInt32|Liczba wątków roboczych, które nie są dostępne do przetwarzania pracy, ale które są przechowywane w rezerwie w przypadku późniejszej liczby wątków.|  
+|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
 ### <a name="threadpoolworkerthreadadjustment"></a>ThreadPoolWorkerThreadAdjustment  
- Te zdarzenia puli wątków zawierają informacje do zrozumienia i debugowania zachowania algorytm (kontrola współbieżności) iniekcji wątku. Informacje są używane wewnętrznie przez wątków roboczych.  
+ Te zdarzenia puli wątków zawierają informacje dotyczące interpretacji i debugowania zachowania algorytmu wstrzykiwania wątku (kontrola współbieżności). Informacje są używane wewnętrznie przez pulę wątków roboczych.  
   
 #### <a name="threadpoolworkerthreadadjustmentsample"></a>ThreadPoolWorkerThreadAdjustmentSample  
- W poniższej tabeli przedstawiono — słowo kluczowe i poziomu.  
+ W poniższej tabeli przedstawiono słowo kluczowe i poziom.  
   
-|Słowo kluczowe dla podnoszonego zdarzenia|Poziom|  
+|Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Komunikat informacyjny (4)|  
+|`ThreadingKeyword`0x10000|Informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
 |Zdarzenie|Identyfikator zdarzenia|Opis|  
 |-----------|--------------|-----------------|  
-|`ThreadPoolWorkerThreadAdjustmentSample`|54|Odwołuje się do zbierania informacji dla jednego przykładu; oznacza to pomiar przepływności, zapewniając niektórych współbieżności poziomu, w chwili czasu.|  
+|`ThreadPoolWorkerThreadAdjustmentSample`|54|Odnosi się do kolekcji informacji dla jednej próbki; oznacza to, że pomiar przepływności z pewnym poziomem współbieżności w czasie.|  
   
  W poniższej tabeli przedstawiono dane zdarzenia.  
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Przepływność|win: Double|Liczba uzupełnienia na jednostkę czasu.|  
-|ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|Kazany|win: Double|Liczba zaawansowania na jednostkę czasu.|  
+|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
 #### <a name="threadpoolworkerthreadadjustmentadjustment"></a>ThreadPoolWorkerThreadAdjustmentAdjustment  
- W poniższej tabeli przedstawiono — słowo kluczowe i poziomu.  
+ W poniższej tabeli przedstawiono słowo kluczowe i poziom.  
   
-|Słowo kluczowe dla podnoszonego zdarzenia|Poziom|  
+|Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Komunikat informacyjny (4)|  
+|`ThreadingKeyword`0x10000|Informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
 |Zdarzenie|Identyfikator zdarzenia|Opis|  
 |-----------|--------------|-----------------|  
-|`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|Rejestruje zmiany w kontrolce, gdy wątek algorytm iniekcji (Wspinanie hill) określa zmiana poziomu współbieżności w miejscu.|  
+|`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|Rejestruje zmianę w kontrolce, gdy algorytm iniekcji wątku (Hill-wspinanie się) określa, że zmiana na poziomie współbieżności jest na miejscu.|  
   
  W poniższej tabeli przedstawiono dane zdarzenia.  
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|AverageThroughput|win: Double|Średniej przepływności wynoszącej próbkę pomiarów.|  
-|NewWorkerThreadCount|win: UInt32.|Nowe liczba aktywnych wątków roboczych.|  
-|Przyczyna|win: UInt32.|Przyczyna korekty.<br /><br /> 0x00 - rozgrzewania.<br /><br /> 0x01 — inicjowanie.<br /><br /> 0x02 — losowych przenoszenia.<br /><br /> 0x03 - Wspinanie się przenoszenia.<br /><br /> 0x04 — Zmień punkt.<br /><br /> 0x05 - stabilizowanie.<br /><br /> wartość-0x06 do zablokowania.<br /><br /> 0x07 - wątku upłynął limit czasu.|  
-|ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|AverageThroughput|win: Double|Średnia przepływność próbki pomiarów.|  
+|NewWorkerThreadCount|win: UInt32|Nowa liczba aktywnych wątków roboczych.|  
+|Przyczyna|win: UInt32|Przyczyna korekty.<br /><br /> 0x00-rozgrzewania.<br /><br /> 0x01 — inicjowanie.<br /><br /> 0x02 — ruch losowy.<br /><br /> 0x03 — wspinanie się Przenieś.<br /><br /> 0x04 — punkt zmiany.<br /><br /> 0x05-stabilizacja.<br /><br /> 0x06 — przetrzymanie.<br /><br /> 0x07 — Przekroczono limit czasu wątku.|  
+|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
 #### <a name="threadpoolworkerthreadadjustmentstats"></a>ThreadPoolWorkerThreadAdjustmentStats  
- W poniższej tabeli przedstawiono — słowo kluczowe i poziomu.  
+ W poniższej tabeli przedstawiono słowo kluczowe i poziom.  
   
-|Słowo kluczowe dla podnoszonego zdarzenia|Poziom|  
+|Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Komunikat informacyjny (4)|  
+|`ThreadingKeyword`0x10000|Informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
@@ -113,108 +113,108 @@ ms.locfileid: "64624294"
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Czas trwania|win: Double|Ilość czasu w sekundach, w których zebrano te statystyki.|  
-|Przepływność|win: Double|Średnia liczba uzupełnienia na sekundę w tym przedziale czasu.|  
+|Duration|win: Double|Czas (w sekundach), w którym te statystyki zostały zebrane.|  
+|Kazany|win: Double|Średnia liczba zaawansowanych na sekundę w tym interwale.|  
 |ThreadWave|win: Double|Zarezerwowane do użytku wewnętrznego.|  
 |ThroughputWave|win: Double|Zarezerwowane do użytku wewnętrznego.|  
 |ThroughputErrorEstimate|win: Double|Zarezerwowane do użytku wewnętrznego.|  
 |AverageThroughputErrorEstimate|win: Double|Zarezerwowane do użytku wewnętrznego.|  
-|ThroughputRatio|win: Double|Względna poprawę przepływności spowodowane wahania liczby wątków aktywnego procesu roboczego w tym przedziale czasu.|  
-|Ufność|win: Double|Miara ważności pola ThroughputRatio.|  
-|NewcontrolSetting|win: Double|Liczba aktywnych wątków roboczych, które będzie służyć jako podstawa dla przyszłych wahania liczba aktywnych wątków.|  
-|NewThreadWaveMagnitude|win: UInt16.|Wielkość przyszłe zmiany liczba aktywnych wątków.|  
-|ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|ThroughputRatio|win: Double|Względne ulepszenie przepływności spowodowane przez różnice w liczbie wątków roboczych w tym interwale.|  
+|Confidence|win: Double|Miara ważności pola ThroughputRatio.|  
+|NewcontrolSetting|win: Double|Liczba aktywnych wątków roboczych, które będą stanowić podstawę dla przyszłych różnic w aktywnej liczbie wątków.|  
+|NewThreadWaveMagnitude|win: UInt16|Wielkość przyszłych wariantów w aktywnej liczbie wątków.|  
+|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
  [Powrót do początku](#top)  
   
 <a name="io"></a>   
-## <a name="io-thread-events"></a>Zdarzenia wejścia/wyjścia wątku  
- Te zdarzenia puli wątków miejsce w przypadku wątków w puli wątków We/Wy (uzupełnianie porty), który jest asynchroniczna.  
+## <a name="io-thread-events"></a>Zdarzenia wątku we/wy  
+ Te zdarzenia puli wątków występują dla wątków w puli wątków we/wy (porty zakończenia), która jest asynchroniczna.  
   
-### <a name="iothreadcreatev1"></a>IOThreadCreate_V1  
- W poniższej tabeli przedstawiono — słowo kluczowe i poziomu.  
+### <a name="iothreadcreate_v1"></a>IOThreadCreate_V1  
+ W poniższej tabeli przedstawiono słowo kluczowe i poziom.  
   
-|Słowo kluczowe dla podnoszonego zdarzenia|Poziom|  
+|Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Komunikat informacyjny (4)|  
+|`ThreadingKeyword`0x10000|Informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Wywołane, gdy|  
+|Zdarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
 |-|-|-|  
-|`IOThreadCreate_V1`|44|Wątek wiadomości we/wy jest tworzony w puli wątków.|  
+|`IOThreadCreate_V1`|44|W puli wątków tworzony jest wątek we/wy.|  
   
  W poniższej tabeli przedstawiono dane zdarzenia.  
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Count|win:UInt64|Liczba wątków We/Wy, łącznie z nowo utworzonego wątku.|  
-|NumRetired|win:UInt64|Liczba wątków roboczych wycofane.|  
-|ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|Count|win: UInt64|Liczba wątków we/wy, łącznie z nowo utworzonym wątkiem.|  
+|NumRetired|win: UInt64|Liczba wycofanych wątków roboczych.|  
+|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
-### <a name="iothreadretirev1"></a>IOThreadRetire_V1  
- W poniższej tabeli przedstawiono — słowo kluczowe i poziomu.  
+### <a name="iothreadretire_v1"></a>IOThreadRetire_V1  
+ W poniższej tabeli przedstawiono słowo kluczowe i poziom.  
   
-|Słowo kluczowe dla podnoszonego zdarzenia|Poziom|  
+|Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Komunikat informacyjny (4)|  
+|`ThreadingKeyword`0x10000|Informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Wywołane, gdy|  
+|Zdarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
 |-----------|--------------|-----------------|  
-|`IOThreadRetire_V1`|46|Operacje We/Wy wątek staje się kandydat wycofania.|  
+|`IOThreadRetire_V1`|46|Wątek we/wy zostaje kandydatem do wycofania.|  
   
  W poniższej tabeli przedstawiono dane zdarzenia.  
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Count|win:UInt64|Liczba wątków We/Wy, które pozostało w puli wątków.|  
-|NumRetired|win:UInt64|Liczba wycofanych wątków We/Wy.|  
-|ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|Count|win: UInt64|Liczba wątków we/wy pozostałych w puli wątków.|  
+|NumRetired|win: UInt64|Liczba wycofanych wątków we/wy.|  
+|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
-### <a name="iothreadunretirev1"></a>IOThreadUnretire_V1  
- W poniższej tabeli przedstawiono — słowo kluczowe i poziomu.  
+### <a name="iothreadunretire_v1"></a>IOThreadUnretire_V1  
+ W poniższej tabeli przedstawiono słowo kluczowe i poziom.  
   
-|Słowo kluczowe dla podnoszonego zdarzenia|Poziom|  
+|Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Komunikat informacyjny (4)|  
+|`ThreadingKeyword`0x10000|Informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Wywołane, gdy|  
+|Zdarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
 |-----------|--------------|-----------------|  
-|`IOThreadUnretire_V1`|47|Wątek operacji We/Wy jest unretired ze względu na operacje We/Wy, przychodzący w okresie oczekiwania po wątek staje się kandydat wycofania.|  
+|`IOThreadUnretire_V1`|47|Wątek we/wy jest wycofywany ze względu na liczbę operacji we/wy, która dotarła w czasie oczekiwania, gdy wątek stanie się kandydatem wycofania.|  
   
  W poniższej tabeli przedstawiono dane zdarzenia.  
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Count|win:UInt64|Liczba operacji We/Wy wątków w puli wątków, w tym tego jednego.|  
-|NumRetired|win:UInt64|Liczba wycofanych wątków We/Wy.|  
-|ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|Count|win: UInt64|Liczba wątków we/wy w puli wątków, z uwzględnieniem tego.|  
+|NumRetired|win: UInt64|Liczba wycofanych wątków we/wy.|  
+|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
 ### <a name="iothreadterminate"></a>IOThreadTerminate  
- W poniższej tabeli przedstawiono — słowo kluczowe i poziomu.  
+ W poniższej tabeli przedstawiono słowo kluczowe i poziom.  
   
-|Słowo kluczowe dla podnoszonego zdarzenia|Poziom|  
+|Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Komunikat informacyjny (4)|  
+|`ThreadingKeyword`0x10000|Informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Wywołane, gdy|  
+|Zdarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
 |-----------|--------------|-----------------|  
-|`IOThreadTerminate`|45|Wątek wiadomości we/wy jest tworzony w puli wątków.|  
+|`IOThreadTerminate`|45|W puli wątków tworzony jest wątek we/wy.|  
   
  W poniższej tabeli przedstawiono dane zdarzenia.  
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Count|win:UInt64|Liczba wątków We/Wy, które pozostało w puli wątków.|  
-|NumRetired|win:UInt64|Liczba wycofanych wątków We/Wy.|  
-|ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|Count|win: UInt64|Liczba wątków we/wy pozostałych w puli wątków.|  
+|NumRetired|win: UInt64|Liczba wycofanych wątków we/wy.|  
+|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zdarzenia CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+- [Zdarzenia CLR ETW](clr-etw-events.md)

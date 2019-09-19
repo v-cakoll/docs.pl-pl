@@ -6,35 +6,35 @@ helpviewer_keywords:
 - network resources, caching
 - Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
-ms.openlocfilehash: 265b4e451ebb76dbabe0d3e0df065504a3891f32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e131963999db3e3d5e0e6f3fa110da36e6452a1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033166"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048874"
 ---
 # <a name="cache-management-for-network-applications"></a>Zarządzanie pamięcią podręczną dla aplikacji sieciowych
-Ten temat i jego powiązane tematy podrzędne opisują, buforowania dla zasobów pobranych przy użyciu <xref:System.Net.WebClient>, <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest>, i <xref:System.Net.FtpWebRequest> klasy.  
+Ten temat i powiązane z nim tematy zawierają opis buforowania zasobów uzyskanych przy użyciu <xref:System.Net.WebClient>klas <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest>, i <xref:System.Net.FtpWebRequest> .  
   
- Pamięć podręczna udostępnia magazyn tymczasowy zasobów, które zostały żądane przez aplikację. Jeśli aplikacja żąda tego samego zasobu więcej niż jeden raz, zasobu mogą być zwracane z pamięci podręcznej, unikając konieczności ponownie żąda od serwera. Buforowanie może poprawić wydajność aplikacji, skracając czas potrzebny na żądany zasób. Buforowanie można także zmniejszyć ruch w sieci dzięki zmniejszeniu liczby rund do serwera. Gdy pamięć podręczna zwiększa wydajność, zwiększa się ryzyko, że zasób powrót do aplikacji jest nieodświeżona, co oznacza, że nie jest taka sama jak zasób, który będzie została wysłana przez serwer pamięci podręcznej nie były używane.  
+ Pamięć podręczna zapewnia tymczasowy magazyn zasobów, które zostały zlecone przez aplikację. Jeśli aplikacja żąda tego samego zasobu więcej niż jeden raz, można zwrócić zasób z pamięci podręcznej, unikając ponownego zażądania od serwera. Buforowanie może zwiększyć wydajność aplikacji przez skrócenie czasu wymaganego do uzyskania żądanego zasobu. Buforowanie może również zmniejszyć ruch sieciowy, zmniejszając liczbę podróży do serwera. Buforowanie zwiększa wydajność, ale zwiększa ryzyko, że zasób zwrócony do aplikacji jest nieodświeżony, co oznacza, że nie jest on identyczny z zasobem, który został wysłany przez serwer, Jeśli buforowanie nie było używane.  
   
- Buforowanie może umożliwić nieautoryzowanych użytkowników lub procesy, które można odczytać danych poufnych. Uwierzytelniony odpowiedź, która jest buforowana może pobrać z pamięci podręcznej bez autoryzacji dodatkowe. Jeśli włączone jest buforowanie, zmień <xref:System.Net.WebRequest.CachePolicy%2A> do <xref:System.Net.Cache.RequestCacheLevel.BypassCache> lub <xref:System.Net.Cache.RequestCacheLevel.NoCacheNoStore> wyłączenie buforowania dla tego żądania.  
+ Buforowanie może umożliwić nieautoryzowanym użytkownikom lub procesom odczytywanie poufnych danych. Uwierzytelniona odpowiedź w pamięci podręcznej może być pobierana z pamięci podręcznej bez dodatkowej autoryzacji. Jeśli buforowanie jest włączone, Zmień na <xref:System.Net.WebRequest.CachePolicy%2A> <xref:System.Net.Cache.RequestCacheLevel.BypassCache> lub <xref:System.Net.Cache.RequestCacheLevel.NoCacheNoStore> , aby wyłączyć buforowanie dla tego żądania.  
   
- Ze względów bezpieczeństwa buforowanie jest **nie** zalecane w przypadku scenariuszy warstwy środkowej.  
+ Ze względu na kwestie bezpieczeństwa buforowanie **nie** jest zalecane w przypadku scenariuszy warstwy środkowej.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Zasady pamięci podręcznej](../../../docs/framework/network-programming/cache-policy.md)  
- Wyjaśnia, jakie zasady pamięci podręcznej jest i jak zdefiniować jedną.  
+ [Zasady pamięci podręcznej](cache-policy.md)  
+ Wyjaśnia, co to są zasady pamięci podręcznej i jak je definiować.  
   
- [Zasady pamięci podręcznej oparte na lokalizacji](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- Definiuje każdego typu zasad na podstawie lokalizacji pamięci podręcznej dostępne dla zasobów Hypertext Transfer Protocol (protokół http i https).  
+ [Zasady pamięci podręcznej oparte na lokalizacji](location-based-cache-policies.md)  
+ Definiuje każdy typ zasad pamięci podręcznej opartych na lokalizacji dostępnych dla zasobów protokołu HTTP i https.  
   
- [Zasady pamięci podręcznej oparte na czasie](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- W tym artykule opisano kryteria, które można dostosować zasady na podstawie czasu pamięci podręcznej.  
+ [Zasady pamięci podręcznej oparte na czasie](time-based-cache-policies.md)  
+ Opisuje kryteria, których można użyć do dostosowania zasad pamięci podręcznej opartej na czasie.  
   
- [Konfigurowanie pamięci podręcznej w aplikacjach sieciowych](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
- W tym artykule opisano, jak programowo utworzyć zasady pamięci podręcznej i żądania, które używają pamięci podręcznej.  
+ [Konfigurowanie pamięci podręcznej w aplikacjach sieciowych](configuring-caching-in-network-applications.md)  
+ Opisuje sposób programistycznego tworzenia zasad pamięci podręcznej i żądań korzystających z buforowania.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Net.Cache>  
- Określa typy i wyliczenia używane do definiowania zasad buforowania dla zasobów pobranych przy użyciu <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest>, i <xref:System.Net.FtpWebRequest> klasy.
+ Definiuje typy i wyliczenia używane do definiowania zasad pamięci podręcznej dla zasobów uzyskanych <xref:System.Net.WebRequest>przy <xref:System.Net.HttpWebRequest>użyciu klas <xref:System.Net.FtpWebRequest> , i.

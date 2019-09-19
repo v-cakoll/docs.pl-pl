@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac21e8aa67eabcb3e837cb5eca02d1145b765946
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fdff7aa92e4c1c357c83b625a6daadbf0a8d556b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941736"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049517"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migrowanie aplikacji ze Sklepu Windows do architektury .NET Native
 
-.NET Native zapewnia statyczną kompilację aplikacji w Sklepie Windows lub na komputerze dewelopera. Różni się to od kompilacji dynamicznej wykonywanej dla aplikacji ze sklepu Windows przez kompilator just-in-Time (JIT) lub [natywny Generator obrazu (Ngen. exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) na urządzeniu. Pomimo różnic, .NET Native próbuje zachować zgodność z platformą [.NET dla aplikacji ze sklepu Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29). W większości przypadków elementy, które działają na platformie .NET dla aplikacji ze sklepu Windows, działają również z .NET Native.  Jednak w niektórych przypadkach mogą wystąpić zmiany behawioralne. W tym dokumencie omówiono różnice między standardową platformą .NET dla aplikacji ze sklepu Windows i .NET Native w następujących obszarach:
+.NET Native zapewnia statyczną kompilację aplikacji w Sklepie Windows lub na komputerze dewelopera. Różni się to od kompilacji dynamicznej wykonywanej dla aplikacji ze sklepu Windows przez kompilator just-in-Time (JIT) lub [natywny Generator obrazu (Ngen. exe)](../tools/ngen-exe-native-image-generator.md) na urządzeniu. Pomimo różnic, .NET Native próbuje zachować zgodność z platformą [.NET dla aplikacji ze sklepu Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29). W większości przypadków elementy, które działają na platformie .NET dla aplikacji ze sklepu Windows, działają również z .NET Native.  Jednak w niektórych przypadkach mogą wystąpić zmiany behawioralne. W tym dokumencie omówiono różnice między standardową platformą .NET dla aplikacji ze sklepu Windows i .NET Native w następujących obszarach:
 
 - [Ogólne różnice w środowisku uruchomieniowym](#Runtime)
 
@@ -67,7 +67,7 @@ Domyślna konfiguracja .NET Native jest wystarczająca dla większości dewelope
 - Ponieważ kompilator nie może określić wystąpień, typ ogólny, który ma być uwzględniany, musi być określony przez dyrektywy środowiska uruchomieniowego. To nie tylko dlatego, że cały kod musi być uwzględniony, ale odbicie na typach ogólnych może tworzyć nieskończony cykl (na przykład gdy metoda ogólna jest wywoływana w typie ogólnym).
 
 > [!NOTE]
-> Dyrektywy środowiska uruchomieniowego są zdefiniowane w pliku dyrektywy środowiska uruchomieniowego (. Rd. xml). Aby uzyskać ogólne informacje na temat korzystania z tego pliku, zobacz [wprowadzenie](../../../docs/framework/net-native/getting-started-with-net-native.md). Aby uzyskać informacje o dyrektywach środowiska uruchomieniowego, zobacz [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (RD. xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).
+> Dyrektywy środowiska uruchomieniowego są zdefiniowane w pliku dyrektywy środowiska uruchomieniowego (. Rd. xml). Aby uzyskać ogólne informacje na temat korzystania z tego pliku, zobacz [wprowadzenie](getting-started-with-net-native.md). Aby uzyskać informacje o dyrektywach środowiska uruchomieniowego, zobacz [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (RD. xml)](runtime-directives-rd-xml-configuration-file-reference.md).
 
 .NET Native również zawiera narzędzia profilowania, które ułatwiają deweloperom określenie, które typy poza domyślnym zestawem powinny obsługiwać odbicie.
 
@@ -665,7 +665,7 @@ Włączanie .NET Native w bibliotece testów jednostkowych dla projektu aplikacj
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Wprowadzenie](getting-started-with-net-native.md)
+- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Omówienie programu .NET dla aplikacji do sklepu Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
 - [Obsługa programu .NET Framework dla aplikacji ze Sklepu Windows i środowiska wykonawczego systemu Windows](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

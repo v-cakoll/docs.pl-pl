@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42daa241d0ebbfeb184b57e682fbb50bdaeead65
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 6eba8202f0284b7b1054585039f12da9364ca1e9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894199"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051764"
 ---
 # <a name="how-to-implement-callback-functions"></a>Instrukcje: Implementowanie funkcji wywołania zwrotnego
 Poniższa procedura i przykład przedstawiają sposób, w jaki aplikacja zarządzana używająca funkcji wywołania platformy może drukować wartość dojścia dla każdego okna na komputerze lokalnym. W ramach procedury i przykładu Użyj funkcji **EnumWindows** , aby przejść przez listę systemu Windows i zarządzaną funkcję wywołania zwrotnego (nazwanego wywołania zwrotnego) w celu wydrukowania wartości uchwytu okna.  
@@ -38,7 +38,7 @@ Poniższa procedura i przykład przedstawiają sposób, w jaki aplikacja zarząd
   
 4. Upewnij się, że moduł zbierający elementy bezużyteczne nie odzyska delegata, zanim funkcja wywołania zwrotnego zakończy pracę. Gdy przekazujesz delegata jako parametr lub Przekaż delegata zawarty jako pole w strukturze, pozostanie ono niezebrane na czas trwania wywołania. Tak więc, podobnie jak w poniższym przykładzie wyliczenia, funkcja wywołania zwrotnego uzupełnia swoją pracę przed wywołaniem zwrotnym i nie wymaga żadnych dodatkowych akcji przez zarządzany obiekt wywołujący.  
   
-     Jeśli jednak funkcja wywołania zwrotnego może być wywoływana po wywołaniu zwrotnym, zarządzany obiekt wywołujący musi wykonać kroki, aby upewnić się, że delegat pozostanie niepobrany do momentu zakończenia funkcji wywołania zwrotnego. Aby uzyskać szczegółowe informacje na temat zapobiegania wyrzucaniu elementów bezużytecznych, zobacz [Marshaling Interop](../../../docs/framework/interop/interop-marshaling.md) with platform Invoke.  
+     Jeśli jednak funkcja wywołania zwrotnego może być wywoływana po wywołaniu zwrotnym, zarządzany obiekt wywołujący musi wykonać kroki, aby upewnić się, że delegat pozostanie niepobrany do momentu zakończenia funkcji wywołania zwrotnego. Aby uzyskać szczegółowe informacje na temat zapobiegania wyrzucaniu elementów bezużytecznych, zobacz [Marshaling Interop](interop-marshaling.md) with platform Invoke.  
   
 ## <a name="example"></a>Przykład  
   
@@ -131,5 +131,5 @@ int main()
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Funkcje wywołania zwrotnego](../../../docs/framework/interop/callback-functions.md)
-- [Wywołanie funkcji DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+- [Funkcje wywołania zwrotnego](callback-functions.md)
+- [Wywołanie funkcji DLL](calling-a-dll-function.md)

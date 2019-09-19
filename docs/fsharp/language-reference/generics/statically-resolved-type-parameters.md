@@ -2,12 +2,12 @@
 title: Statycznie rozwiązywane parametry typu
 description: Dowiedz się, jak F# używać statycznie rozpoznanego parametru typu, który jest zastępowany rzeczywistym typem w czasie kompilacji, a nie w czasie wykonywania.
 ms.date: 05/16/2016
-ms.openlocfilehash: 43ed79b6e5f43a499a27b05e26472b021c455e44
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bc3310192cdaa5ae4862b8aee46b6152f61da38a
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630582"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082927"
 ---
 # <a name="statically-resolved-type-parameters"></a>Statycznie rozwiązywane parametry typu
 
@@ -15,7 +15,7 @@ ms.locfileid: "68630582"
 
 ## <a name="syntax"></a>Składnia
 
-```
+```fsharp
 ˆtype-parameter
 ```
 
@@ -52,7 +52,7 @@ when (^a or ^b) : (static member ( + ) : ^a * ^b -> ^d) and
 
 Dane wyjściowe są następujące:
 
-```
+```console
 2
 1.500000
 ```

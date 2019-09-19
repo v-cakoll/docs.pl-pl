@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: ba1fa43e-49f5-47d9-bd7f-3024af16f4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff85f5737babb73d87f4918ca0f4981263f7dadc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f42f85adf3e9b0874df6c0360bea25b07facc0d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705717"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053161"
 ---
 # <a name="how-to-create-an-application-domain"></a>Instrukcje: Tworzenie domeny aplikacji
-Typowe host środowiska uruchomieniowego języka automatycznie tworzy domen aplikacji, gdy są potrzebne. Można jednak tworzenie domen aplikacji i ładowania ich te zestawy, które mają być zarządzane osobiście. Można również utworzyć domen aplikacji, z których wykonywanie kodu.  
+Host środowiska uruchomieniowego języka wspólnego automatycznie tworzy domeny aplikacji, gdy są potrzebne. Można jednak tworzyć własne domeny aplikacji i ładować je do tych zestawów, które mają być zarządzane osobiście. Możesz również utworzyć domeny aplikacji, z których wykonywany jest kod.  
   
- Tworzenie nowej domeny aplikacji przy użyciu jednej z przeciążonych **createdomain —** metody <xref:System.AppDomain?displayProperty=nameWithType> klasy. Można podać nazwę domeny aplikacji i odwoływać się do niego o takiej nazwie.  
+ Tworzysz nową domenę aplikacji przy użyciu jednej **z przeciążonych** metod w <xref:System.AppDomain?displayProperty=nameWithType> klasie. Możesz nadać domenie aplikacji nazwę i odwołać się do niej przy użyciu tej nazwy.  
   
- Poniższy przykład tworzy nową domenę aplikacji, przypisuje mu nazwę `MyDomain`, a następnie drukuje nazwę domeny hosta i domeny aplikacji nowo utworzony do konsoli.  
+ Poniższy przykład tworzy nową domenę aplikacji, przypisuje jej nazwę `MyDomain`, a następnie drukuje nazwę domeny hosta i nowo utworzoną domenę podrzędnej aplikacji do konsoli programu.  
   
 ## <a name="example"></a>Przykład  
  [!code-cpp[ADCreateDomain#2](../../../samples/snippets/cpp/VS_Snippets_CLR/ADCreateDomain/CPP/source2.cpp#2)]
@@ -31,5 +31,5 @@ Typowe host środowiska uruchomieniowego języka automatycznie tworzy domen apli
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Programowanie z domenami aplikacji](application-domains.md#programming-with-application-domains)
-- [Używanie domen aplikacji](../../../docs/framework/app-domains/use.md)
+- [Programowanie przy użyciu domen aplikacji](application-domains.md#programming-with-application-domains)
+- [Używanie domen aplikacji](use.md)

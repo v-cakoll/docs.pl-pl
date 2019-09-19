@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 626e9823bbf7d379a21ae353a9189485259f3c42
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4517da87603dcdd398d536cd9bf9e441430be375
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948007"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052738"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Instrukcje: Dodawanie instrukcji śledzenia do kodu aplikacji
 Metody używane najczęściej do śledzenia są metodami zapisywania danych wyjściowych w detektorach: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**i **zakończony niepowodzeniem**. Te metody można podzielić na dwie kategorie: **Zapis**, **WriteLine**i **Niepowodzenie** wszystkie emitowanie danych wyjściowych bezwarunkowo, podczas gdy **WriteIf**, **WriteLineIf**i **Assert** testuje warunek logiczny i zapisują lub nie zapisu na podstawie wartości warunku. **WriteIf** i **WriteLineIf** Emituj dane wyjściowe, jeśli warunek `true`jest, i **Assert** emituje dane wyjściowe, jeśli `false`warunek to.  
@@ -82,7 +82,7 @@ Metody używane najczęściej do śledzenia są metodami zapisywania danych wyj�
     ```  
   
     > [!NOTE]
-    > Można użyć metody **Assert** zarówno do śledzenia, jak i debugowania. Ten przykład wyprowadza stos wywołań do dowolnego odbiornika w kolekcji **odbiorników** . Aby uzyskać więcej informacji, zobacz [potwierdzenia w kodzie](/visualstudio/debugger/assertions-in-managed-code) zarządzanym <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>i.  
+    > Można użyć metody **Assert** zarówno do śledzenia, jak i debugowania. Ten przykład wyprowadza stos wywołań do dowolnego odbiornika w kolekcji **odbiorników** . Aby uzyskać więcej informacji, zobacz [potwierdzenia w kodzie zarządzanym](/visualstudio/debugger/assertions-in-managed-code) i <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -90,7 +90,7 @@ Metody używane najczęściej do śledzenia są metodami zapisywania danych wyj�
 - <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
-- [Śledzenie i instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Instrukcje: Tworzenie, inicjowanie i konfigurowanie przełączników śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [Przełączniki śledzenia](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Obiekty nasłuchujące śledzenie](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Śledzenie i instrumentacja aplikacji](tracing-and-instrumenting-applications.md)
+- [Instrukcje: Tworzenie, inicjowanie i konfigurowanie przełączników śledzenia](how-to-create-initialize-and-configure-trace-switches.md)
+- [Przełączniki śledzenia](trace-switches.md)
+- [Obiekty nasłuchujące śledzenie](trace-listeners.md)

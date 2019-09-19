@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fcc9ba5e379897247f50175603b1002d5688d215
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: b8d1ad081c8d783cd18054078a6eeb82428faa4d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894689"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044636"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Asembler IL)
 
 Program IL Assembler generuje przenośny plik wykonywalny (PE) na podstawie języka pośredniego (IL). (Aby uzyskać więcej informacji na temat IL, zobacz [zarządzany proces wykonywania](../../standard/managed-execution-process.md)). Można uruchomić wynikowy plik wykonywalny, który zawiera instrukcje języka IL i wymagane metadane, aby ustalić, czy kod w języku IL działa zgodnie z oczekiwaniami.
 
-To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](developer-command-prompt-for-vs.md).
 
 W wierszu polecenia wpisz następujące polecenie:
 
@@ -92,7 +92,7 @@ Program IL Assembler może wyrazić wszystkie istniejące metadane i funkcje IL 
 > [!NOTE]
 > Kompilacja może się nie powieść, jeśli ostatni wiersz kodu w pliku źródłowym il nie kończy się znakiem odstępu ani znakiem końca wiersza.
 
-Programu *Ilasm. exe* można użyć w połączeniu z jego narzędziem towarzyszącym [*Ildasm. exe*](../../../docs/framework/tools/ildasm-exe-il-disassembler.md). *Ildasm. exe* pobiera plik PE zawierający kod IL i tworzy plik tekstowy odpowiedni jako dane wejściowe do *Ilasm. exe*. Jest to przydatne na przykład podczas kompilowania kodu w języku programowania, który nie obsługuje wszystkich atrybutów metadanych środowiska uruchomieniowego. Po skompilowaniu kodu i uruchomieniu danych wyjściowych za pomocą *Ildasm. exe*wynikowy plik tekstowy Il może być edytowany ręcznie w celu dodania brakujących atrybutów. Następnie można uruchomić ten plik tekstowy za pomocą *Ilasm. exe* , aby utworzyć końcowy plik wykonywalny.
+Programu *Ilasm. exe* można użyć w połączeniu z jego narzędziem towarzyszącym [*Ildasm. exe*](ildasm-exe-il-disassembler.md). *Ildasm. exe* pobiera plik PE zawierający kod IL i tworzy plik tekstowy odpowiedni jako dane wejściowe do *Ilasm. exe*. Jest to przydatne na przykład podczas kompilowania kodu w języku programowania, który nie obsługuje wszystkich atrybutów metadanych środowiska uruchomieniowego. Po skompilowaniu kodu i uruchomieniu danych wyjściowych za pomocą *Ildasm. exe*wynikowy plik tekstowy Il może być edytowany ręcznie w celu dodania brakujących atrybutów. Następnie można uruchomić ten plik tekstowy za pomocą *Ilasm. exe* , aby utworzyć końcowy plik wykonywalny.
 
 Tej techniki można również użyć, aby utworzyć pojedynczy plik PE z kilku plików PE, oryginalnie utworzonych przez różne kompilatory.
 
@@ -159,7 +159,7 @@ Następujące polecenie składa plik IL *myTestFile.Il* i tworzy plik *dll* *myN
 ilasm myTestFile /dll /output:myNewTestFile.dll
 ```
 
-Poniższy przykład kodu pokazuje niezwykle prostą aplikację, która wyświetla "Hello world!" do konsoli programu. Można skompilować ten kod, a następnie użyć narzędzia [*Ildasm. exe*](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) do wygenerowania pliku Il.
+Poniższy przykład kodu pokazuje niezwykle prostą aplikację, która wyświetla "Hello world!" do konsoli programu. Można skompilować ten kod, a następnie użyć narzędzia [*Ildasm. exe*](ildasm-exe-il-disassembler.md) do wygenerowania pliku Il.
 
 ```csharp
 using System;
@@ -229,7 +229,7 @@ Poniższy przykład kodu w języku IL odpowiada poprzedniemu przykładowi kodu w
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Narzędzia](../../../docs/framework/tools/index.md)
-- [*Ildasm. exe* (Il dezasembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+- [Narzędzia](index.md)
+- [*Ildasm. exe* (Il dezasembler)](ildasm-exe-il-disassembler.md)
 - [Proces zarządzanego wykonania](../../standard/managed-execution-process.md)
-- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Wiersze polecenia](developer-command-prompt-for-vs.md)

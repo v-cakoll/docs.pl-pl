@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0683499241f594b8b37b7dd69b91ed5929670024
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: df7ce0795daabdf34f46e20460bef23e7c486467
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894570"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043905"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres. exe (Edytor lokalizacji zasobów systemu Windows)
 
-Edytor lokalizacji zasobów systemu Windows, Winres. exe, to narzędzie do układu wizualizacji, które ułatwia ekspertom Lokalizowanie Windows Forms zasobów interfejsu użytkownika (UI) używanych w formularzach. Pliki resx lub resources używane jako dane wejściowe do Winres.exe mogą być tworzone przy użyciu środowiska projektowania wizualnego, takiego jak Microsoft Visual Studio. Aby uzyskać informacje na temat wdrażania zasobów w aplikacjach .NET Framework, zobacz [zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md).
+Edytor lokalizacji zasobów systemu Windows, Winres. exe, to narzędzie do układu wizualizacji, które ułatwia ekspertom Lokalizowanie Windows Forms zasobów interfejsu użytkownika (UI) używanych w formularzach. Pliki resx lub resources używane jako dane wejściowe do Winres.exe mogą być tworzone przy użyciu środowiska projektowania wizualnego, takiego jak Microsoft Visual Studio. Aby uzyskać informacje na temat wdrażania zasobów w aplikacjach .NET Framework, zobacz [zasoby w aplikacjach klasycznych](../resources/index.md).
 
-Środowisko Winres. exe jest instalowane z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio. Aby uzyskać więcej informacji, zobacz [wiersza polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Środowisko Winres. exe jest instalowane z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio. Aby uzyskać więcej informacji, zobacz [wiersza polecenia](developer-command-prompt-for-vs.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,7 +55,7 @@ Stan elementów interfejsu użytkownika z formularza w projekcie programu Window
 
 Zapoznaj się również [z hierarchiczną organizacją zasobów dla lokalizacji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110)) lub [hierarchicznej organizacji zasobów do lokalizacji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120)).
 
-Winres.exe nie może skonwertować pliku resx na odpowiedni plik resources; użyj narzędzia Resgen.exe. Aby uzyskać więcej informacji na temat programu Resgen. exe, zobacz [Resgen. exe (Generator plików zasobów)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md).
+Winres.exe nie może skonwertować pliku resx na odpowiedni plik resources; użyj narzędzia Resgen.exe. Aby uzyskać więcej informacji na temat programu Resgen. exe, zobacz [Resgen. exe (Generator plików zasobów)](resgen-exe-resource-file-generator.md).
 
 Winres.exe jest aplikacją graficzną, która odtwarza wersję formularza Windows Forms czasu projektowania z samego pliku zasobów, bez dostępu do kodu źródłowego. Winres. exe hostuje **Windows Forms projektanta formularzy** i **Właściwości** programu Visual Studio. Te funkcje umożliwiają wizualne edytowanie pliku resources lub resx zawierającego formularz Windows Forms. Zazwyczaj lokalizatory używają środowiska Winres. exe do edytowania etykiet kontrolek i dostosowywania lokalizacji i rozmiaru formantów w celu dostosowania ich do etykiet dla kultury docelowej.
 
@@ -76,7 +76,7 @@ Aby zlokalizować przy użyciu programu Winres. exe, należy najpierw opracować
 > [!NOTE]
 > Programu Winres.exe nie można używać do edytowania domyślnego pliku zasobów. Winres.exe interpretuje wszystkie zmienione właściwości jako właściwości zlokalizowane i zapisuje je do pliku zasobów docelowej kultury.
 
-Ostateczna wersja pliku zasobów kultury może zostać użyta do utworzenia zlokalizowanej wersji aplikacji. Aby uzyskać więcej informacji, zobacz [zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md).
+Ostateczna wersja pliku zasobów kultury może zostać użyta do utworzenia zlokalizowanej wersji aplikacji. Aby uzyskać więcej informacji, zobacz [zasoby w aplikacjach klasycznych](../resources/index.md).
 
 Środowiska Winres. exe mają następujące funkcje i możliwości:
 
@@ -127,7 +127,7 @@ Należy użyć wersji środowiska Winres. exe wydanej z używanym .NET Framework
     ```
 
     > [!NOTE]
-    > Jeśli formularz, którego zasoby są edytowane, jest odziedziczonym formularzem, zarówno zestaw zawierający formularz, po którym został odziedziczony edytowany formularz, jak i zestaw zawierający dziedziczący formularz muszą być albo zarejestrowane w globalnej pamięci podręcznej zestawów (GAC) lub znajdować się w tym samym katalogu co plik WinRes.exe. Aby uzyskać więcej informacji na temat instalowania składników .NET Framework w pamięci GAC, zobacz [Global Assembly Cache](../../../docs/framework/app-domains/gac.md).
+    > Jeśli formularz, którego zasoby są edytowane, jest odziedziczonym formularzem, zarówno zestaw zawierający formularz, po którym został odziedziczony edytowany formularz, jak i zestaw zawierający dziedziczący formularz muszą być albo zarejestrowane w globalnej pamięci podręcznej zestawów (GAC) lub znajdować się w tym samym katalogu co plik WinRes.exe. Aby uzyskać więcej informacji na temat instalowania składników .NET Framework w pamięci GAC, zobacz [Global Assembly Cache](../app-domains/gac.md).
 
 3. Wybierz kontrolki w formularzu i zmień ich <xref:System.Windows.Forms.Control.Text%2A> właściwości i inne, aby odzwierciedlały Lokalizowaną kulturę i jej język. Przenoszenie lub zmienianie rozmiaru formantów w celu dostosowania zlokalizowanego tekstu.
 
@@ -135,7 +135,7 @@ Należy użyć wersji środowiska Winres. exe wydanej z używanym .NET Framework
 
 5. Wybierz odpowiednią kulturę i tryb plików, a następnie kliknij przycisk **OK**.
 
-   Narzędzie zapisuje plik przy użyciu konwencji nazewnictwa, która jest oczekiwana w czasie wykonywania dla zlokalizowanych plików zasobów. Na przykład w przypadku zlokalizowania `TestApp.resources` dla języka niemieckiego w Niemczech, narzędzie zapisuje plik jako. `TestApp.de-DE.resources` W przypadku zlokalizowania `TestApp.resx` dla języka niemieckiego w Niemczech narzędzie zapisuje plik jako. `TestApp.de-DE.resx` Aby uzyskać więcej informacji na temat konwencji nazewnictwa zasobów, zobacz [pakowanie i wdrażanie zasobów](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Aby zapoznać się z listą wstępnie zdefiniowanych nazw kultur używanych w czasie wykonywania, zobacz <xref:System.Globalization.CultureInfo> Klasa.
+   Narzędzie zapisuje plik przy użyciu konwencji nazewnictwa, która jest oczekiwana w czasie wykonywania dla zlokalizowanych plików zasobów. Na przykład w przypadku zlokalizowania `TestApp.resources` dla języka niemieckiego w Niemczech, narzędzie zapisuje plik jako. `TestApp.de-DE.resources` W przypadku zlokalizowania `TestApp.resx` dla języka niemieckiego w Niemczech narzędzie zapisuje plik jako. `TestApp.de-DE.resx` Aby uzyskać więcej informacji na temat konwencji nazewnictwa zasobów, zobacz [pakowanie i wdrażanie zasobów](../resources/packaging-and-deploying-resources-in-desktop-apps.md). Aby zapoznać się z listą wstępnie zdefiniowanych nazw kultur używanych w czasie wykonywania, zobacz <xref:System.Globalization.CultureInfo> Klasa.
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -144,6 +144,6 @@ Należy użyć wersji środowiska Winres. exe wydanej z używanym .NET Framework
 - <xref:System.Resources.ResourceManager>
 - <xref:System.Resources.ResourceReader>
 - <xref:System.Resources.ResourceWriter>
-- [Narzędzia](../../../docs/framework/tools/index.md)
-- [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)
+- [Narzędzia](index.md)
+- [Zasoby w aplikacjach klasycznych](../resources/index.md)
 - [Globalizacja i lokalizacja](../../standard/globalization-localization/index.md)

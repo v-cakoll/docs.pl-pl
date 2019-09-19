@@ -11,32 +11,32 @@ helpviewer_keywords:
 ms.assetid: b6ab2d48-6eee-4bab-97a3-046b3b0a5470
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: defd7f90fcac8d1e98104796682058638c9bd799
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70d31bc187cabe49351e86a20023e2ec65e87b94
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753689"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052401"
 ---
 # <a name="overlappedfreeerror-mda"></a>overlappedFreeError MDA
-`overlappedFreeError` Zarządzanego Asystenta debugowania (MDA) jest aktywowany po <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> metoda zostaje wywołana zanim nakładające się operacja została ukończona.  
+Asystent `overlappedFreeError` debugowania zarządzanego (MDA) jest uaktywniany, <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> gdy metoda jest wywoływana przed ukończeniem operacji nakładania się.  
   
 ## <a name="symptoms"></a>Symptomy  
- Naruszenia zasad dostępu lub uszkodzenie stosu odśmieconej pamięci.  
+ Naruszenia dostępu lub uszkodzenie sterty zebranych przez elementy bezużyteczne.  
   
 ## <a name="cause"></a>Przyczyna  
- Nachodzące struktury została zwolniona przed operacja została ukończona. Funkcja, która używa nakładającego się wskaźnika napisać do struktury później, po został zwolniony. Co może powodować uszkodzenie sterty, ponieważ inny obiekt teraz mogą zajmować tego regionu.  
+ Nakładająca się struktura została zwolniona przed ukończeniem operacji. Funkcja, która używa nakładającego się wskaźnika, może później pisać do struktury, po jej zwolnieniu. Może to spowodować uszkodzenie sterty, ponieważ inny obiekt może teraz zajmować ten region.  
   
- To zdarzenie MDA nie może reprezentować błąd, jeśli operacja się nie został pomyślnie uruchomiony.  
+ To zdarzenie MDA może nie reprezentować błędu, jeśli nakładająca się operacja nie została pomyślnie uruchomiona.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Upewnij się, że operacja We/Wy przy użyciu nachodzące struktury ukończona przed wywołaniem <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29> metody.  
+ Przed wywołaniem <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29> metody upewnij się, że operacja we/wy z nakładającą się strukturą została ukończona.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
  To zdarzenie MDA nie ma wpływu na środowisko CLR.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Poniżej przedstawiono przykładowy wynik to zdarzenie MDA.  
+ Poniżej przedstawiono przykładowe dane wyjściowe dla tego MDA.  
   
  `An overlapped pointer (0x00ea3430) that was not allocated on the GC heap was passed via Pinvoke to the win32 function 'WriteFile' in module 'KERNEL32.DLL'. If the AppDomain is shut down, this can cause heap corruption when the async I/O completes. The best solution is to pass a NativeOverlappedStructure retrieved from a call to System.Threading.Overlapped.Pack(). If the AppDomain exits, the CLR will keep this structure alive and pinned until the I/O completes.`  
   
@@ -53,5 +53,5 @@ ms.locfileid: "61753689"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling międzyoperacyjny](../interop/interop-marshaling.md)

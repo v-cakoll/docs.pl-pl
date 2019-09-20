@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 358c7f1a339fd473271574a4e97e201f5c15f871
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 8cbc904b56237d3c875566ee1276c121dae70c4c
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894167"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151744"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Organizowanie różnych typów tablic
 Tablica jest typem referencyjnym w zarządzanym kodzie, który zawiera co najmniej jeden element tego samego typu. Chociaż tablice są typami odwołań, są one przesyłane jako parametry do funkcji niezarządzanych. To zachowanie jest niespójne w sposób, w jaki zarządzane tablice są przesyłane do zarządzanych obiektów, które są jako parametry wejściowe/out. Aby uzyskać więcej informacji, zobacz [kopiowanie i Przypinanie](copying-and-pinning.md).  
@@ -104,7 +104,7 @@ typedef struct _MYPERSON
   
  W tym przykładzie `MyPoint` struktury i `MyPerson` zawierają osadzone typy. <xref:System.Runtime.InteropServices.StructLayoutAttribute> Atrybut jest ustawiony tak, aby upewnić się, że elementy członkowskie są ułożone w pamięci sekwencyjnie, w kolejności, w jakiej są wyświetlane.  
   
- Klasa zawiera zestaw metod wywoływanych `App` przez klasę. `LibWrap` Aby uzyskać szczegółowe informacje dotyczące przekazywania tablic, zobacz komentarze w poniższym przykładzie. Tablica, która jest typem referencyjnym, jest domyślnie przenoszona jako parametr in. Aby obiekt wywołujący otrzymywał wyniki, należy zastosować jawny **atrybut** i atrybut **Attribute** do argumentu zawierającego tablicę.  
+ Klasa zawiera zestaw metod wywoływanych `App` przez klasę. `NativeMethods` Aby uzyskać szczegółowe informacje dotyczące przekazywania tablic, zobacz komentarze w poniższym przykładzie. Tablica, która jest typem referencyjnym, jest domyślnie przenoszona jako parametr in. Aby obiekt wywołujący otrzymywał wyniki, należy zastosować jawny **atrybut** i atrybut **Attribute** do argumentu zawierającego tablicę.  
   
 ### <a name="declaring-prototypes"></a>Deklarowanie prototypów  
  [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)]

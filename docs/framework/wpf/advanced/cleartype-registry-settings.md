@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 5113de6d8d333983e6e26579ff9803a9f5a62816
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ab6ff2ba6e0f3f1ea9e34de80b67276a990bc83b
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254173"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151848"
 ---
 # <a name="cleartype-registry-settings"></a>Ustawienia rejestru ClearType
 Ten temat zawiera omówienie ustawień rejestru Microsoft ClearType, które są używane przez aplikacje WPF.  
@@ -63,7 +63,7 @@ Ten temat zawiera omówienie ustawień rejestru Microsoft ClearType, które są 
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Poziom gamma  
- Poziom gamma odnosi się do nieliniowej relacji między wartością piksela a luminancją. Ustawienie poziomu gamma powinno odpowiadać charakterystyce fizycznej urządzenia wyświetlającego; w przeciwnym razie zniekształcenia w renderowanych danych wyjściowych może wystąpić. Na przykład test może wydawać się zbyt szerokim lub zbyt wąskim lub naruszyć kolory na krawędziach pionowych łodyg symboli.  
+ Poziom gamma odnosi się do nieliniowej relacji między wartością piksela a luminancją. Ustawienie poziomu gamma powinno odpowiadać charakterystyce fizycznej urządzenia wyświetlającego; w przeciwnym razie zniekształcenia w renderowanych danych wyjściowych może wystąpić. Na przykład tekst może wydawać się zbyt szeroki lub zbyt wąski lub naruszyć kolory na krawędziach pionowych łodyg symboli.  
   
  Poziom gamma jest wartością całkowitą z zakresu od 1000 do 2200. Poziom domyślny to 1900.  
   

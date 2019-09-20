@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71d7bb4cc85b0388e18cc7304dfa8c7951eab629
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9469cc5db1ada479e97026cae40b3019ae10c2c6
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894152"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151733"
 ---
 # <a name="msgbox-sample"></a>MsgBox — Przykład
 Ten przykład pokazuje, jak przekazywać typy ciągów według wartości, jak w parametrach i kiedy <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>należy <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>używać pól <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> ,, i.  
@@ -30,7 +30,7 @@ Ten przykład pokazuje, jak przekazywać typy ciągów według wartości, jak w 
        UINT uType);  
     ```  
   
- W tym przykładzie `LibWrap` Klasa zawiera zarządzany prototyp dla każdej funkcji niezarządzanej wywoływanej `MsgBoxSample` przez klasę. Zarządzane metody `MsgBox`prototypów, `MsgBox2`i `MsgBox3` mają różne deklaracje dla tej samej funkcji niezarządzanej.  
+ W tym przykładzie `NativeMethods` Klasa zawiera zarządzany prototyp dla każdej funkcji niezarządzanej wywoływanej `MsgBoxSample` przez klasę. Zarządzane metody `MsgBox`prototypów, `MsgBox2`i `MsgBox3` mają różne deklaracje dla tej samej funkcji niezarządzanej.  
   
  Deklaracja dla `MsgBox2` generuje nieprawidłowe dane wyjściowe w oknie komunikatu, ponieważ typ znaku określony jako ANSI jest niezgodny z punktem `MessageBoxW`wejścia, który jest nazwą funkcji Unicode. Deklaracja `MsgBox3` dla tworzy niezgodność między polami **EntryPoint**, **charset**i **ExactSpelling** . Gdy wywoływana, `MsgBox3` zgłasza wyjątek. Aby uzyskać szczegółowe informacje na temat nazewnictwa ciągów i organizowania nazw, zobacz [Określanie zestawu znaków](specifying-a-character-set.md).  
   

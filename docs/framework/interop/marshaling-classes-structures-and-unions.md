@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09179ebe123f1287c8b057783bb421153f5e1183
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: a53c8b7b88bd25a6611c33218c7a386de55889e9
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894183"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151762"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshaling klas, struktur i unii
 Klasy i struktury są podobne do .NET Framework. Oba mogą mieć pola, właściwości i zdarzenia. Mogą także mieć statyczne i niestatyczne metody. Istotną różnicą jest to, że struktury są typami wartości, a klasy są typami referencyjnymi.  
@@ -108,7 +108,7 @@ typedef struct _MYARRAYSTRUCT
   
  Dla wszystkich struktur w tym przykładzie <xref:System.Runtime.InteropServices.StructLayoutAttribute> atrybut jest stosowany, aby upewnić się, że elementy członkowskie są uporządkowane w pamięci sekwencyjnie, w kolejności, w jakiej są wyświetlane.  
   
- `TestStructInStruct3` `TestStructInStruct` `App` `TestArrayInStruct` Klasa zawiera zarządzane prototypy dla metod, i wywoływanych przez klasę. `LibWrap` Każdy prototyp deklaruje jeden parametr w następujący sposób:  
+ `TestStructInStruct3` `TestStructInStruct` `App` `TestArrayInStruct` Klasa zawiera zarządzane prototypy dla metod, i wywoływanych przez klasę. `NativeMethods` Każdy prototyp deklaruje jeden parametr w następujący sposób:  
   
 - `TestStructInStruct`deklaruje odwołanie do typu `MyPerson2` jako jego parametru.  
   
@@ -159,7 +159,7 @@ typedef struct _WIN32_FIND_DATA
   
  W tym przykładzie `FindData` Klasa zawiera odpowiedni element członkowski danych dla każdego elementu oryginalnej struktury i osadzonej struktury. Zamiast dwóch oryginalnych buforów znaków Klasa zastępuje ciągi. **MarshalAsAttribute** ustawia <xref:System.Runtime.InteropServices.UnmanagedType> Wyliczenie na **ByValTStr**, które służy do identyfikowania wbudowanych tablic znaków o stałej długości, które są wyświetlane w strukturze niezarządzanych.  
   
- Klasa zawiera zarządzany prototyp `FindFirstFile` `FindData` metody, która przekazuje klasę jako parametr. `LibWrap` Parametr musi być zadeklarowany za pomocą <xref:System.Runtime.InteropServices.InAttribute> atrybutów <xref:System.Runtime.InteropServices.OutAttribute> i, ponieważ klasy, które są typami odwołań, są domyślnie przenoszone jako parametry w parametrach.  
+ Klasa zawiera zarządzany prototyp `FindFirstFile` `FindData` metody, która przekazuje klasę jako parametr. `NativeMethods` Parametr musi być zadeklarowany za pomocą <xref:System.Runtime.InteropServices.InAttribute> atrybutów <xref:System.Runtime.InteropServices.OutAttribute> i, ponieważ klasy, które są typami odwołań, są domyślnie przenoszone jako parametry w parametrach.  
   
 ### <a name="declaring-prototypes"></a>Deklarowanie prototypów  
  [!code-cpp[Conceptual.Interop.Marshaling#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/findfile.cpp#17)]
@@ -202,7 +202,7 @@ union MYUNION2
   
  `MyUnion2_1`i `MyUnion2_2` zawierają odpowiednio typ wartości (Integer) i ciąg. W kodzie zarządzanym, typy wartości i typy referencyjne nie mogą nakładać się na siebie. Ten przykład używa przeciążania metody, aby umożliwić wywołującemu używanie obu typów podczas wywoływania tej samej funkcji niezarządzanej. Układ `MyUnion2_1` jest jawny i ma precyzyjną wartość przesunięcia. W przeciwieństwie `MyUnion2_2` ma układ sekwencyjny, ponieważ jawne układy są niedozwolone w przypadku typów referencyjnych. Atrybut ustawia Wyliczenie na ByValTStr, który jest używany do identyfikowania wbudowanej tablicy znaków o stałej długości, która pojawia się w niezarządzanej reprezentacji Unii. <xref:System.Runtime.InteropServices.MarshalAsAttribute> <xref:System.Runtime.InteropServices.UnmanagedType>  
   
- Klasa zawiera prototypy `TestUnion` dla metod i `TestUnion2`. `LibWrap` `TestUnion2`jest przeciążony do `MyUnion2_1` zadeklarowania lub `MyUnion2_2` jako parametry.  
+ Klasa zawiera prototypy `TestUnion` dla metod i `TestUnion2`. `NativeMethods` `TestUnion2`jest przeciążony do `MyUnion2_1` zadeklarowania lub `MyUnion2_2` jako parametry.  
   
 ### <a name="declaring-prototypes"></a>Deklarowanie prototypów  
  [!code-cpp[Conceptual.Interop.Marshaling#28](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/unions.cpp#28)]
@@ -242,7 +242,7 @@ typedef struct _SYSTEMTIME {
   
  W tym przykładzie `SystemTime` Klasa zawiera elementy oryginalnej struktury reprezentowane jako elementy członkowskie klasy. <xref:System.Runtime.InteropServices.StructLayoutAttribute> Atrybut jest ustawiony tak, aby upewnić się, że elementy członkowskie są ułożone w pamięci sekwencyjnie, w kolejności, w jakiej są wyświetlane.  
   
- Klasa zawiera zarządzany prototyp `GetSystemTime` `SystemTime` metody, która domyślnie przekazuje klasę jako parametr we/out. `LibWrap` Parametr musi być zadeklarowany za pomocą <xref:System.Runtime.InteropServices.InAttribute> atrybutów <xref:System.Runtime.InteropServices.OutAttribute> i, ponieważ klasy, które są typami odwołań, są domyślnie przenoszone jako parametry w parametrach. Aby obiekt wywołujący otrzymywał wyniki, należy jawnie zastosować te [atrybuty kierunkowe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100)) . Klasa tworzy nowe wystąpienie `SystemTime` klasy i uzyskuje dostęp do jego pól danych. `App`  
+ Klasa zawiera zarządzany prototyp `GetSystemTime` `SystemTime` metody, która domyślnie przekazuje klasę jako parametr we/out. `NativeMethods` Parametr musi być zadeklarowany za pomocą <xref:System.Runtime.InteropServices.InAttribute> atrybutów <xref:System.Runtime.InteropServices.OutAttribute> i, ponieważ klasy, które są typami odwołań, są domyślnie przenoszone jako parametry w parametrach. Aby obiekt wywołujący otrzymywał wyniki, należy jawnie zastosować te [atrybuty kierunkowe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100)) . Klasa tworzy nowe wystąpienie `SystemTime` klasy i uzyskuje dostęp do jego pól danych. `App`  
   
 ### <a name="code-samples"></a>Przykłady kodu  
  [!code-cpp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/systime.cpp#25)]
@@ -266,7 +266,7 @@ typedef struct _MYSTRSTRUCT2
   
  `MyStruct` Klasa zawiera obiekt String znaków ANSI. <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> Pole określa format ANSI. `MyUnsafeStruct`, jest strukturą zawierającą <xref:System.IntPtr> typ zamiast ciągu.  
   
- Klasa zawiera przeciążoną `TestOutArrayOfStructs` metodę prototypu. `LibWrap` Jeśli Metoda deklaruje wskaźnik jako parametr, Klasa powinna być oznaczona za pomocą `unsafe` słowa kluczowego. Ponieważ Visual Basic nie może używać niebezpiecznego kodu, przeciążona metoda, modyfikator niebezpieczny i `MyUnsafeStruct` struktura nie są potrzebne.  
+ Klasa zawiera przeciążoną `TestOutArrayOfStructs` metodę prototypu. `NativeMethods` Jeśli Metoda deklaruje wskaźnik jako parametr, Klasa powinna być oznaczona za pomocą `unsafe` słowa kluczowego. Ponieważ Visual Basic nie może używać niebezpiecznego kodu, przeciążona metoda, modyfikator niebezpieczny i `MyUnsafeStruct` struktura nie są potrzebne.  
   
  `App` Klasa`UsingMarshaling` implementuje metodę, która wykonuje wszystkie zadania niezbędne do przekazania tablicy. Tablica jest oznaczona za pomocą `out` słowa kluczowego (`ByRef` w Visual Basic), aby wskazać, że dane są przekazywane do obiektu wywołującego. Implementacja używa następujących <xref:System.Runtime.InteropServices.Marshal> metod klasy:  
   

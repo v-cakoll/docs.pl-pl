@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2697950a371d66f2e57731e0ff01ed531a07955e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0e2289b3c12c7c83a39f1ad8d5a1365349ca6442
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946399"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151798"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>Marshaling delegata jako metoda wywołania zwrotnego
 Ten przykład ilustruje sposób przekazywania delegatów do funkcji niezarządzanej, oczekiwanie wskaźników funkcji. Delegat jest klasą, która może przechowywać odwołanie do metody i jest równoznaczna z bezpiecznym dla typu wskaźnikiem funkcji lub funkcją wywołania zwrotnego.
@@ -40,7 +40,7 @@ Przykład wywołania zwrotnego używa następujących funkcji niezarządzanych, 
 
 [PinvokeLib. dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) to niestandardowa Biblioteka niezarządzana, która zawiera implementację wcześniej wymienionych funkcji.
 
-W tym przykładzie `LibWrap` Klasa zawiera zarządzane prototypy `TestCallBack` dla metod i `TestCallBack2` . Obie metody przekażą delegata do funkcji wywołania zwrotnego jako parametr. Podpis delegata musi być zgodny z podpisem metody, do której się odwołuje. Na przykład `FPtr` Delegaty i `FPtr2` mają podpisy identyczne `DoSomething` z metodami i `DoSomething2` .
+W tym przykładzie `NativeMethods` Klasa zawiera zarządzane prototypy `TestCallBack` dla metod i `TestCallBack2` . Obie metody przekażą delegata do funkcji wywołania zwrotnego jako parametr. Podpis delegata musi być zgodny z podpisem metody, do której się odwołuje. Na przykład `FPtr` Delegaty i `FPtr2` mają podpisy identyczne `DoSomething` z metodami i `DoSomething2` .
 
 ## <a name="declaring-prototypes"></a>Deklarowanie prototypów
 [!code-cpp[Conceptual.Interop.Marshaling#37](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/callback.cpp#37)]

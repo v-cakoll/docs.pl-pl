@@ -25,6 +25,8 @@
       href: ../../../../_vblang/spec/expressions.md
     - name: Komentarze dokumentacji
       href: ../../../../_vblang/spec/documentation-comments.md
+    - name: Rozpoznanie przeciążenia
+      href: ../../../../_vblang/spec/overload-resolution.md
     - name: Gramatyka
       items:
         - name: vb.html

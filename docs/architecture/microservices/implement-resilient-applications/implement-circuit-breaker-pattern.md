@@ -2,12 +2,12 @@
 title: Implementowanie wzorca wyłącznika
 description: Dowiedz się, jak zaimplementować wzorzec wyłącznika jako uzupełniający system do ponawiania prób http.
 ms.date: 10/16/2018
-ms.openlocfilehash: f40a8eec50a4293e4dfb4df647ce3f69f6dc361b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: eec14273cb9480df51d6e5865106ccfc045845c4
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296101"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181929"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementowanie wzorca wyłącznika
 
@@ -55,7 +55,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-W powyższym przykładzie kodu zasady wyłącznika są skonfigurowane w taki sposób, że przerywają lub otwierają obwód, gdy wystąpią pięć kolejnych błędów podczas ponawiania żądań HTTP. Gdy tak się stanie, obwód zostanie przerwany przez 30 sekund: w tym czasie wywołania będą kończyły się niepowodzeniem natychmiast po wyłączniku, a nie w rzeczywistości.  Zasady automatycznie interpretują [odpowiednie wyjątki i kody stanu HTTP](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) jako błędy.  
+W powyższym przykładzie kodu zasady wyłącznika są skonfigurowane w taki sposób, że przerywają lub otwierają obwód, gdy wystąpią pięć kolejnych błędów podczas ponawiania żądań HTTP. Gdy tak się stanie, obwód zostanie przerwany przez 30 sekund: w tym czasie wywołania będą kończyły się niepowodzeniem natychmiast po wyłączniku, a nie w rzeczywistości.  Zasady automatycznie interpretują [odpowiednie wyjątki i kody stanu HTTP](/aspnet/core/fundamentals/http-requests#handle-transient-faults) jako błędy.  
 
 Wyłączniki powinny być również używane do przekierowywania żądań do infrastruktury rezerwowej, jeśli występują problemy w konkretnym zasobie, który jest wdrażany w innym środowisku niż aplikacja kliencka lub usługa wykonująca wywołanie HTTP. Dzięki temu w przypadku awarii w centrum danych, która ma wpływ tylko na mikrousługi zaplecza, ale nie aplikacji klienckich, aplikacje klienckie mogą przekierować do usługi rezerwowej. Polly planowania nowych zasad w celu zautomatyzowania tego scenariusza [zasad trybu failover](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) . 
 
@@ -148,5 +148,5 @@ Kolejną możliwością `CircuitBreakerPolicy` jest użycie `Isolate` (które wy
   [https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker](/azure/architecture/patterns/circuit-breaker)
 
 >[!div class="step-by-step"]
->[Poprzedni](implement-http-call-retries-exponential-backoff-polly.md)Następny
->[](monitor-app-health.md)
+>[Poprzedni](implement-http-call-retries-exponential-backoff-polly.md)
+>[Następny](monitor-app-health.md)

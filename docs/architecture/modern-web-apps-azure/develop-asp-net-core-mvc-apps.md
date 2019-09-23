@@ -4,12 +4,12 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 51feb770e84af170bf31a6ba363a1d9e72616284
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 19d1d5f81b5be9b843698b6e61d8571d4edfa66f
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373777"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181940"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Opracowywanie aplikacji ASP.NET Core MVC
 
@@ -109,7 +109,7 @@ Projekty interfejsu API sieci Web należy rozważyć `[ApiController]` przy uży
 > - **Filtry**
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **ApiController — atrybut**
- > <https://docs.microsoft.com/aspnet/core/web-api/?view=aspnetcore-2.2>
+ > <https://docs.microsoft.com/aspnet/core/web-api/>
 
 ## <a name="working-with-dependencies"></a>Praca z zależnościami
 
@@ -603,5 +603,5 @@ _Dowiedz się więcej o opcjach wdrażania platformy Azure w [rozdziale 10](deve
 >   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
->[Poprzedni](common-client-side-web-technologies.md)Następny
->[](work-with-data-in-asp-net-core-apps.md)
+>[Poprzedni](common-client-side-web-technologies.md)
+>[Następny](work-with-data-in-asp-net-core-apps.md)

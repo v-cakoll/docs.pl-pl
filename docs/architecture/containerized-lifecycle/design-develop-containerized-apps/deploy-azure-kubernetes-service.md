@@ -2,12 +2,12 @@
 title: Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
 description: Dowiedz się, jak wdrożyć aplikację przy użyciu usługi Azure Kubernetes Service.
 ms.date: 02/15/2019
-ms.openlocfilehash: 88e76b4b0a3686f4227a6aee1b7fbd2bfe55fdcc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0aa2f83fbf8f9a8815d65730002943cca748643d
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295376"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182374"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>Wdrażanie w usłudze Azure Kubernetes Service (AKS)
 
@@ -19,12 +19,12 @@ Przed użyciem AKS są spełnione wymagania wstępne:
 - Komputer deweloperski systemu Windows
   - Tryb dewelopera włączony w systemie Windows
   - Podsystem Windows dla systemu Linux
-- Azure — interfejs wiersza polecenia zainstalowany w [systemie Windows, Mac lub Linux](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)
+- Azure — interfejs wiersza polecenia zainstalowany w [systemie Windows, Mac lub Linux](https://docs.microsoft.com/cli/azure/install-azure-cli)
 
 > [!NOTE]
 > Aby uzyskać pełne informacje na temat:
 >
-> Azure — interfejs wiersza polecenia:<https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest>
+> Azure — interfejs wiersza polecenia:<https://docs.microsoft.com/cli/azure/index>
 >
 > Podsystem Windows dla systemu Linux:<https://docs.microsoft.com/windows/wsl/about>
 
@@ -79,5 +79,5 @@ kubectl get nodes
 **Rysunek 4-20**. `kubectl get nodes`wynik polecenia.
 
 >[!div class="step-by-step"]
->[Poprzedni](orchestrate-high-scalability-availability.md)Następny
->[](docker-apps-development-environment.md)
+>[Poprzedni](orchestrate-high-scalability-availability.md)
+>[Następny](docker-apps-development-environment.md)

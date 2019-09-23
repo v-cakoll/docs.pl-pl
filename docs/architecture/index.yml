@@ -12,13 +12,19 @@ abstract:
 sections:
   - title: Dostępne książki elektroniczne
     items:
-      - html: <ul><li><p><a href="containerized-lifecycle/index">Cykl życia konteneryzowanych aplikacji platformy Docker korzystających z platformy i narzędzi firmy Microsoft</a></p>
+      - html: <ul><li><p><a href="containerized-lifecycle/index">Cykl życia aplikacji platformy Docker w kontenerze z platformą i narzędziami firmy Microsoft</a></p>
       - html: '<p>Ten przewodnik zawiera wprowadzenie do zalecanych kompleksowych procesów cyklu życia, z których można korzystać w celu opracowywania, weryfikowania i wdrażania aplikacji platformy Docker przy użyciu programu Visual Studio i Microsoft Azure.</p></li></ul>'
-      - html: <ul><li><p><a href="modernize-with-azure-containers/index">Modernizacja istniejących aplikacji platformy .NET za pomocą chmury platformy Azure i kontenerów systemu Windows</a></p>
+      - html: <ul><li><p><a href="modernize-with-azure-containers/index">Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows</a></p>
       - html: '<p>Ten przewodnik zawiera wprowadzenie do strategii potrzebnych do migrowania istniejących aplikacji sieci Web do usługi Azure Cloud i kontenerów systemu Windows. Zapoznaj się z strategiami kodu, migracją danych, koordynatorami i procesami ciągłej integracji/ciągłego wdrażania.</p></li></ul>'
       - html: <ul><li><p><a href="modern-web-apps-azure/index">Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyciu ASP.NET Core i platformy Azure</a></p>
       - html: '<p>Ten przewodnik zawiera wprowadzenie do zalecanej architektury, projektu i procesów wdrażania, które będą używane do kompilowania aplikacji ASP.NET i ASP.NET Core oraz hostowania aplikacji na platformie Azure.</p></li></ul>'
-      - html: <ul><li><p><a href="microservices/index">Tworzenie aplikacji opartych na kontenerach i mikrousługach</a></p>
+      - html: <ul><li><p><a href="microservices/index">Tworzenie architektury aplikacji opartych na kontenerach i mikrousługach</a></p>
       - html: <p>Ten przewodnik stanowi wprowadzenie do tworzenia aplikacji opartych na mikrousługach i zarządzania nimi przy użyciu kontenerów. Omówiono podejścia projektowania i implementacji architektury przy użyciu programu .NET Core i kontenerów platformy Docker.</p></li></ul>
+      - html: <ul><li><p><a href="cloud-native/index">Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure</a></p>
+      - html: '<p>W tym przewodniku opisano, co jest natywne w chmurze, wprowadzono przykładową aplikację utworzoną przy użyciu zasad natywnych w chmurze i omówiono tematy wspólne dla większości aplikacji natywnych w chmurze.</p></li></ul>'
       - html: '<ul><li><p><a href="serverless/index">Aplikacje bezserwerowe: architektura, wzorce i implementacja platformy Azure</a></p>'
       - html: '<p>Jest to przewodnik dotyczący tworzenia aplikacji bezserwerowych z przykładami przy użyciu platformy Azure. W tym artykule omówiono różne podejścia do architektury i projektowania, korzyści i wyzwania związane z bez serwera oraz scenariusze i przypadki użycia dla aplikacji bezserwerowych.</p></li></ul>'
+      - html: <ul><li><p><a href="blazor-for-web-forms-developers/index">Blazor dla deweloperów formularzy sieci Web ASP.NET</a></p>
+      - html: '<p>Wprowadzenie do Blazor dla deweloperów formularzy sieci Web ASP.NET. Dowiedz się, jak tworzyć aplikacje sieci Web w pełnym stosie przy użyciu platformy .NET, Blazor i .NET Core w prosty i znany sposób.</p></li></ul>'
+      - html: <ul><li><p><a href="grpc-for-wcf-developers/index">ASP.NET Core gRPC dla deweloperów WCF</a></p>
+      - html: '<p>W tym przewodniku wyjaśniono, co to jest gRPC, odnoszące się do poszczególnych koncepcji funkcji WCF, i przedstawiono wskazówki dotyczące migrowania istniejącej aplikacji WCF do gRPC.</p></li></ul>'

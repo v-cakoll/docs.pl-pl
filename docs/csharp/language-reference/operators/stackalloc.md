@@ -1,23 +1,23 @@
 ---
 title: operator stackalloc — C# odwołanie
 ms.custom: seodec18
-ms.date: 06/10/2019
+ms.date: 09/20/2019
 f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: f211acaa8c47ab42a1f7f06cff6c35570cd22b75
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 9ef5f98f2b4973c5873417ecc9a71c187e7299b9
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433827"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182422"
 ---
 # <a name="stackalloc-operator-c-reference"></a>stackalloc — operatorC# (odwołanie)
 
-`stackalloc` Operator przydziela blok pamięci na stosie. Blok pamięci przydzielony przez stos utworzony podczas wykonywania metody jest automatycznie usuwany, gdy ta metoda zwraca. Nie można jawnie zwolnić pamięci przydzieloną z `stackalloc` operatorem. Przydzielony blok pamięci stosu nie podlega wyrzucaniu [elementów](../../../standard/garbage-collection/index.md) bezużytecznych i nie musi być przypięty za pomocą [ `fixed` instrukcji](../keywords/fixed-statement.md).
+`stackalloc` Operator przydziela blok pamięci na stosie. Blok pamięci przydzielony przez stos utworzony podczas wykonywania metody jest automatycznie usuwany, gdy ta metoda zwraca. Nie można jawnie zwolnić pamięci przydzieloną z `stackalloc` operatorem. Przydzielony blok pamięci stosu nie podlega [wyrzucaniu elementów bezużytecznych](../../../standard/garbage-collection/index.md) i nie musi być przypięty za pomocą [ `fixed` instrukcji](../keywords/fixed-statement.md).
 
-W `stackalloc T[E]`wyrażeniu `T` element musi być [typem](../builtin-types/unmanaged-types.md) niezarządzanym i `E` musi być wyrażeniem `int`typu.
+W `stackalloc T[E]`wyrażeniu `T` element musi być [typem niezarządzanym](../builtin-types/unmanaged-types.md) i `E` musi być wyrażeniem `int`typu.
 
 Można przypisać wynik `stackalloc` operatora do zmiennej jednego z następujących typów:
 
@@ -25,11 +25,15 @@ Można przypisać wynik `stackalloc` operatora do zmiennej jednego z następują
 
   [!code-csharp[stackalloc span](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToSpan)]
 
-  Nie trzeba używać niebezpiecznego [](../keywords/unsafe.md) kontekstu, gdy przypiszesz blok pamięci przydzielony przez stos do <xref:System.Span%601> zmiennej <xref:System.ReadOnlySpan%601> lub.
+  Nie trzeba używać [niebezpiecznego](../keywords/unsafe.md) kontekstu, gdy przypiszesz blok pamięci przydzielony przez stos do <xref:System.Span%601> zmiennej <xref:System.ReadOnlySpan%601> lub.
 
   Podczas pracy z tymi typami można użyć `stackalloc` wyrażenia w wyrażeniach [warunkowych](conditional-operator.md) lub przypisywania, jak pokazano na poniższym przykładzie:
 
   [!code-csharp[stackalloc expression](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AsExpression)]
+
+  Począwszy od C# 8,0, można użyć `stackalloc` wyrażenia wewnątrz <xref:System.Span%601> innych wyrażeń, gdy zmienna lub <xref:System.ReadOnlySpan%601> jest dozwolona, jak pokazano w poniższym przykładzie:
+
+  [!code-csharp[stackalloc in nested expressions](~/samples/csharp/language-reference/operators/StackallocOperator.cs#Nested)]
 
   > [!NOTE]
   > Zalecamy używanie <xref:System.Span%601> lub typy <xref:System.ReadOnlySpan%601> do pracy z przydzieloną pamięcią stosu, jeśli jest to możliwe.
@@ -39,6 +43,8 @@ Można przypisać wynik `stackalloc` operatora do zmiennej jednego z następują
   [!code-csharp[stackalloc pointer](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToPointer)]
 
   Jak pokazano w powyższym przykładzie, należy użyć `unsafe` kontekstu podczas pracy z typami wskaźników.
+
+  W przypadku typów wskaźnika można użyć `stackalloc` wyrażenia tylko w deklaracji zmiennej lokalnej, aby zainicjować zmienną.
 
 Zawartość nowo przydzieloną pamięci jest niezdefiniowana. Począwszy od C# 7,3, można użyć składni inicjatora tablicy do zdefiniowania zawartości nowo przydzieloną pamięć. Poniższy przykład ilustruje różne sposoby, aby to zrobić:
 

@@ -1,13 +1,13 @@
 ---
 title: Co nowego w C# 8,0 — C# Przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8,0. Ten artykuł jest aktualny w wersji zapoznawczej 5.
-ms.date: 09/10/2019
-ms.openlocfilehash: 1d6d52692a9a3f8b6fa4e333f086a880c54106b4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 09/20/2019
+ms.openlocfilehash: a434d1f7598bc3f6787f7466e48fb161db192761
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117824"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182409"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego w C# 8,0
 
@@ -28,6 +28,7 @@ Istnieje wiele ulepszeń C# języka, który można wypróbować już.
 - [Indeksy i zakresy](#indices-and-ranges)
 - [Przypisanie do łączenia o wartości null](#null-coalescing-assignment)
 - [Niezarządzane typy skonstruowane](#unmanaged-constructed-types)
+- [stackalloc w wyrażeniach zagnieżdżonych](#stackalloc-in-nested-expressions)
 - [Ulepszenie interpolowanych ciągów Verbatim](#enhancement-of-interpolated-verbatim-strings)
 
 > [!NOTE]
@@ -493,6 +494,16 @@ Span<Coords<int>> coordinates = stackalloc[]
 ```
 
 Aby uzyskać więcej informacji, zobacz [typy niezarządzane](../language-reference/builtin-types/unmanaged-types.md).
+
+## <a name="stackalloc-in-nested-expressions"></a>stackalloc w wyrażeniach zagnieżdżonych
+
+Rozpoczynając od C# 8,0, jeśli wynik wyrażenia [stackalloc](../language-reference/operators/stackalloc.md) <xref:System.Span%601?displayProperty=nameWithType> jest typu lub <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> , można użyć `stackalloc` wyrażenia w innych wyrażeniach:
+
+```csharp
+Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
+var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6 ,8 });
+Console.WriteLine(ind);  // output: 1
+```
 
 ## <a name="enhancement-of-interpolated-verbatim-strings"></a>Ulepszenie interpolowanych ciągów Verbatim
 

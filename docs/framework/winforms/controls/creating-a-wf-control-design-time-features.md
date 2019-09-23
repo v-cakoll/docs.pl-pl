@@ -13,12 +13,12 @@ ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: b72c449ab68c9bb2ceea6f8ee78abe6771b9a8bd
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 53824336e1ae47870e6acffe20340f145caf9b4d
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016009"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182594"
 ---
 # <a name="walkthrough-create-a-control-that-takes-advantage-of-design-time-features"></a>Przewodnik: Tworzenie kontrolki korzystającej z funkcji czasu projektowania
 
@@ -34,7 +34,7 @@ Po zakończeniu pracy z tym przewodnikiem kontrolka niestandardowa będzie wygl�
 
 ![Aplikacja wyświetlająca Neon z tekstem i przyciskami uruchamiania i zatrzymywania.](./media/creating-a-wf-control-design-time-features/demo-marquee-control.gif)
 
-Aby zapoznać się z pełną listą [kodu, zobacz How to: Utwórz formant Windows Forms, który korzysta z funkcji](/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))czasu projektowania.
+Aby zapoznać się z pełną listą [kodu, zobacz How to: Utwórz formant Windows Forms, który korzysta z funkcji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))czasu projektowania.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -124,7 +124,7 @@ Formant można skojarzyć z jego projektantem za pomocą <xref:System.ComponentM
 
 5. Otwórz formularz Form1 w Projektant formularzy systemu Windows.
 
-6. Znajdź kartę **składniki MarqueeControlTest** w przyborniku i otwórz ją. Przeciągnij z `DemoMarqueeControl` przybornika do formularza.
+6. Znajdź kartę **składniki MarqueeControlTest** w **przyborniku** i otwórz ją. Przeciągnij z `DemoMarqueeControl` **przybornika** do formularza.
 
 7. Skompiluj projekt.
 
@@ -212,7 +212,7 @@ Aby zaimplementować funkcję okresowej animacji, użyjesz <xref:System.Componen
 
 4. Dodaj nowy element **kontrolki niestandardowej** do `MarqueeControlLibrary` projektu. Nadaj nowemu plikowi źródłowej nazwę podstawową "MarqueeText".
 
-5. Przeciągnij składnik z **przybornika** na kontrolkę.`MarqueeText` <xref:System.ComponentModel.BackgroundWorker> Ten składnik umożliwi `MarqueeText` formantowi aktualizację siebie asynchronicznie.
+5. Przeciągnij składnik z **przybornika** na `MarqueeText`kontrolkę <xref:System.ComponentModel.BackgroundWorker> . Ten składnik umożliwi `MarqueeText` formantowi aktualizację siebie asynchronicznie.
 
 6. W oknie **Właściwości** Ustaw <xref:System.ComponentModel.BackgroundWorker> dla składnika `WorkerReportsProgress` i <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> właściwości **wartość true**. Te ustawienia umożliwiają <xref:System.ComponentModel.BackgroundWorker> składnikowi okresowe <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> zgłaszanie zdarzenia i anulowanie aktualizacji asynchronicznych.
 
@@ -273,7 +273,7 @@ Ponieważ kontrolka może mieć kontrolki podrzędne, musi mieć <xref:System.Wi
 
 1. Dodaj nowy element **kontrolki niestandardowej** do `MarqueeControlLibrary` projektu. Nadaj nowemu plikowi źródłowej nazwę podstawową "MarqueeBorder".
 
-2. Przeciągnij składnik z **przybornika** na kontrolkę.`MarqueeBorder` <xref:System.ComponentModel.BackgroundWorker> Ten składnik umożliwi `MarqueeBorder` formantowi aktualizację siebie asynchronicznie.
+2. Przeciągnij składnik z **przybornika** na `MarqueeBorder`kontrolkę <xref:System.ComponentModel.BackgroundWorker> . Ten składnik umożliwi `MarqueeBorder` formantowi aktualizację siebie asynchronicznie.
 
 3. W oknie **Właściwości** Ustaw <xref:System.ComponentModel.BackgroundWorker> dla składnika `WorkerReportsProgress` i <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> właściwości **wartość true**. Te ustawienia umożliwiają <xref:System.ComponentModel.BackgroundWorker> składnikowi okresowe <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> zgłaszanie zdarzenia i anulowanie aktualizacji asynchronicznych. Aby uzyskać więcej informacji, zobacz [składnik BackgroundWorker](backgroundworker-component.md).
 
@@ -486,7 +486,7 @@ Właściwość obsługuje dwa typy jasnych kształtów: `Square` i `Circle`. `Ma
 
 1. Dodaj nowy <xref:System.Windows.Forms.UserControl> element `MarqueeControlLibrary` do projektu. Nadaj nowemu plikowi źródłowej nazwę bazową **LightShapeSelectionControl**.
 
-2. Przeciągnij dwie <xref:System.Windows.Forms.Panel> kontrolki z `LightShapeSelectionControl`przybornika na. Nadaj mu `squarePanel` nazwę `circlePanel`i. Rozmieść je obok siebie. Ustaw właściwość obu <xref:System.Windows.Forms.Panel> kontrolek na **(60, 60).** <xref:System.Windows.Forms.Control.Size%2A> <xref:System.Windows.Forms.Control.Location%2A> Ustaw właściwość `squarePanel` kontrolki na **(8, 10)** . <xref:System.Windows.Forms.Control.Location%2A> Ustaw właściwość `circlePanel` kontrolki na **(80, 10)** . Na koniec Ustaw <xref:System.Windows.Forms.Control.Size%2A> Właściwość `LightShapeSelectionControl` na **(150, 80)** .
+2. Przeciągnij dwie <xref:System.Windows.Forms.Panel> kontrolki `LightShapeSelectionControl`z **przybornika** na. Nadaj mu `squarePanel` nazwę `circlePanel`i. Rozmieść je obok siebie. Ustaw właściwość obu <xref:System.Windows.Forms.Panel> kontrolek na **(60, 60).** <xref:System.Windows.Forms.Control.Size%2A> <xref:System.Windows.Forms.Control.Location%2A> Ustaw właściwość `squarePanel` kontrolki na **(8, 10)** . <xref:System.Windows.Forms.Control.Location%2A> Ustaw właściwość `circlePanel` kontrolki na **(80, 10)** . Na koniec Ustaw <xref:System.Windows.Forms.Control.Size%2A> Właściwość `LightShapeSelectionControl` na **(150, 80)** .
 
 3. Otwórz plik źródłowy w **edytorze kodu.** `LightShapeSelectionControl` W górnej części pliku zaimportuj <xref:System.Windows.Forms.Design?displayProperty=nameWithType> przestrzeń nazw:
 

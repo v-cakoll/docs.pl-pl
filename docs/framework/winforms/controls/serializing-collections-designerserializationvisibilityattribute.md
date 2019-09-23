@@ -14,18 +14,18 @@ ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 4fd1f1dc0c2c0ad9ae2009ed592e48b8eeaa2783
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: f051d7a51a5f4ff8debf40fafbb8acfd8f7098f5
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373686"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182630"
 ---
 # <a name="walkthrough-serialize-collections-of-standard-types"></a>Przewodnik: Serializacja kolekcji typów standardowych
 
 Niestandardowe kontrolki będą czasami uwidaczniać kolekcję jako właściwość. W tym instruktażu pokazano, <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> jak używać klasy do kontrolowania, w jaki sposób kolekcja jest serializowana w czasie projektowania. <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> Zastosowanie wartości do właściwości kolekcji gwarantuje, że właściwość zostanie zserializowana.
 
-Aby skopiować kod w tym temacie jako pojedynczą listę, zobacz [How to: Serializacja kolekcji typów standardowych z za pomocą DesignerSerializationVisibilityAttribute](/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).
+Aby skopiować kod w tym temacie jako pojedynczą listę, zobacz [How to: Serializacja kolekcji typów standardowych z za pomocą DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -129,11 +129,11 @@ Aby przetestować zachowanie serializacji formantu, należy umieścić go w form
 
 Gdy wiesz, jak serializować kolekcję typów standardowych, rozważ integrację formantów niestandardowych w środowisku czasu projektowania. W poniższych tematach opisano sposób ulepszania integracji niestandardowych kontrolek w czasie projektowania:
 
-- [Architektura czasu projektowania](/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))
+- [Architektura czasu projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))
 
 - [Atrybuty w kontrolkach formularzy Windows Forms](attributes-in-windows-forms-controls.md)
 
-- [Omówienie serializacji projektanta](/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
+- [Omówienie serializacji projektanta](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
 
 - [Przewodnik: Tworzenie kontrolki Windows Forms, która wykorzystuje funkcje czasu projektowania programu Visual Studio](creating-a-wf-control-design-time-features.md)
 

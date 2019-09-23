@@ -5,12 +5,12 @@ ms.date: 08/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: e1dcc719738a2beb3e63463245d4721c5298cf85
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 8d21ae5ae3aa4701ddd7d042d5069351c22864bb
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666661"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182550"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>Wdrażanie modelu w ASP.NET Core Web API
 
@@ -37,11 +37,11 @@ Dowiedz się, jak obsłużyć wstępnie szkolony model uczenia maszynowego ML.NE
 
 1. Zainstaluj **pakiet NuGet Microsoft.ml**:
 
-    W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz kartę Przeglądaj, Wyszukaj pozycję **Microsoft.ml**, wybierz ten pakiet z listy, a następnie wybierz przycisk Instaluj. Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian** , a następnie wybierz przycisk Akceptuję w oknie dialogowym akceptacji licencji, jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów.
+    W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz kartę Przeglądaj, Wyszukaj pozycję **Microsoft.ml**, wybierz ten pakiet z listy, a następnie wybierz przycisk Instaluj. Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian** , a następnie **Wybierz przycisk** Akceptuję w oknie dialogowym akceptacji licencji, jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów.
 
 1. Zainstaluj **pakiet Nuget Microsoft.Extensions.ml**:
 
-    W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz kartę Przeglądaj, Wyszukaj pozycję **Microsoft.Extensions.ml**, wybierz ten pakiet z listy, a następnie wybierz przycisk Instaluj. Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian** , a następnie wybierz przycisk Akceptuję w oknie dialogowym akceptacji licencji, jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów.
+    W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz kartę Przeglądaj, Wyszukaj pozycję **Microsoft.Extensions.ml**, wybierz ten pakiet z listy, a następnie wybierz przycisk Instaluj. Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian** , a następnie **Wybierz przycisk** Akceptuję w oknie dialogowym akceptacji licencji, jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów.
 
 ### <a name="add-model-to-aspnet-core-web-api-project"></a>Dodaj model do projektu interfejsu API sieci Web ASP.NET Core
 
@@ -52,11 +52,11 @@ Dowiedz się, jak obsłużyć wstępnie szkolony model uczenia maszynowego ML.NE
 
 Należy utworzyć klasy dla danych wejściowych i prognoz. Dodaj nową klasę do projektu:
 
-1. Utwórz katalog o nazwie datamodels w projekcie, aby zapisać modele danych:
+1. Utwórz katalog o nazwie *Datamodels* w projekcie, aby zapisać modele danych:
 
     W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie Dodaj > nowy folder. Wpisz "datamodels" i naciśnij klawisz **Enter**.
 
-2. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy katalog datamodels, a następnie wybierz pozycję Dodaj > nowy element.
+2. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy katalog *Datamodels* , a następnie wybierz pozycję Dodaj > nowy element.
 3. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **Klasa** i zmień wartość pola **Nazwa** na *SentimentData.cs*. Następnie wybierz przycisk **Dodaj** . Plik *SentimentData.cs* zostanie otwarty w edytorze kodu. Dodaj następującą instrukcję using na początku *SentimentData.cs*:
 
     ```csharp
@@ -77,7 +77,7 @@ Należy utworzyć klasy dla danych wejściowych i prognoz. Dodaj nową klasę do
     }
     ```
 
-4. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy katalog datamodels, a następnie wybierz pozycję **Dodaj > nowy element**.
+4. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy katalog *Datamodels* , a następnie wybierz pozycję **Dodaj > nowy element**.
 5. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **Klasa** i zmień wartość pola **Nazwa** na *SentimentPrediction.cs*. Następnie wybierz przycisk Dodaj. Plik *SentimentPrediction.cs* zostanie otwarty w edytorze kodu. Dodaj następującą instrukcję using na początku *SentimentPrediction.cs*:
 
     ```csharp
@@ -105,7 +105,7 @@ Należy utworzyć klasy dla danych wejściowych i prognoz. Dodaj nową klasę do
 
 Aby wykonać pojedyncze prognozowanie, użyj [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). Aby można było używać [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) w aplikacji, należy ją utworzyć w razie potrzeby. W takim przypadku najlepszym rozwiązaniem jest wstrzyknięcie zależności.
 
-Poniższy link zawiera więcej informacji, aby dowiedzieć się więcej o [iniekcji zależności w ASP.NET Core](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).
+Poniższy link zawiera więcej informacji, aby dowiedzieć się więcej o [iniekcji zależności w ASP.NET Core](/aspnet/core/fundamentals/dependency-injection).
 
 1. Otwórz klasę *Startup.cs* i Dodaj następującą instrukcję using na początku pliku:
 
@@ -139,7 +139,7 @@ Na wysokim poziomie ten kod inicjuje obiekty i usługi automatycznie, gdy jest t
 
 Aby przetwarzać przychodzące żądania HTTP, Utwórz kontroler.
 
-1. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy katalog controllers, a następnie wybierz pozycję **Dodaj kontroler >** .
+1. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy katalog *controllers* , a następnie wybierz pozycję **Dodaj kontroler >** .
 1. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **kontroler interfejsu API puste** i wybierz pozycję **Dodaj**.
 1. W oknie monitu Zmień **nazwę kontrolera** na *PredictController.cs*. Następnie wybierz przycisk Dodaj. Plik *PredictController.cs* zostanie otwarty w edytorze kodu. Dodaj następującą instrukcję using na początku *PredictController.cs*:
 
@@ -202,4 +202,4 @@ Gratulacje! Udało Ci się pomyślnie obsłużyć model, aby przekonywać progno
 
 ## <a name="next-steps"></a>Następne kroki
 
-- [Wdrażanie na platformie Azure](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-2.1#deploy-the-app-to-azure)
+- [Wdrażanie na platformie Azure](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs#deploy-the-app-to-azure)

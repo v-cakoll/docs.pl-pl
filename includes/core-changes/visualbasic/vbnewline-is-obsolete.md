@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 2a0ebcf61fd96df6d2235962c1f1e9cac3fb22e6
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 5ef785f476b795a9c53e511d51b2683b99e6da05
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117158"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181994"
 ---
 ### <a name="microsoftvisualbasicconstantsvbnewline-is-obsolete"></a>Microsoft. VisualBasic. Stałychs. vbNewLine jest przestarzała
 
-Stała jest oznaczona jako [przestarzała](xref:System.ObsoleteAttribute) w .NET Framework, ale atrybut nie był wcześniej w bibliotece .NET Core 3,0. <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName>
+Stała jest oznaczona jako [przestarzała](xref:System.ObsoleteAttribute) , począwszy od platformy .NET Core 3,0 w wersji zapoznawczej 8. <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName>
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,10 +16,10 @@ Stała jest oznaczona jako [przestarzała](xref:System.ObsoleteAttribute) w .NET
 
 #### <a name="details"></a>Szczegóły
 
-Począwszy od programu .NET Core 3,0 w wersji zapoznawczej 8, [przestarzały](xref:System.ObsoleteAttribute) atrybut <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> został zastosowany do `vbNewLine` stałej, która jest zgodna z .NET Framework. `vbNewLine` Użycie stałej powoduje wygenerowanie ostrzeżenia kompilatora. 
+Począwszy od programu .NET Core 3,0 w wersji zapoznawczej 8, [przestarzały](xref:System.ObsoleteAttribute) atrybut <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> został zastosowany do stałej. Użycie stałej powoduje wygenerowanie ostrzeżenia kompilatora. W poprzednich wersjach programu .NET Core i .NET Framework nie została oznaczona jako przestarzała.
 
-W poprzednich wersjach programu .NET Core program `vbNewLine` nie wygenerował ostrzeżenia kompilatora.
-
+Ta zmiana została wprowadzona w celu obsługi Visual Basic jako języka dla tworzenia wielu platform. Stała jest równoznaczna z `\r\n`sekwencją znaków nowego wiersza w systemie Windows. `vbNewLine` W systemach opartych na systemie UNIX znak nowego wiersza `\n`to.
+ 
 #### <a name="recommended-action"></a>Zalecana akcja
 
 Komunikat o [przestarzałym](xref:System.ObsoleteAttribute) atrybucie `vbNewLine` dla programu zawiera następujące zalecenia:

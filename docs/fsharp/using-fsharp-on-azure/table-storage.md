@@ -3,12 +3,12 @@ title: Rozpoczynanie pracy z usługą Azure Table Storage przy użyciu języka F
 description: Przechowuj dane strukturalne w chmurze przy użyciu usługi Azure Table Storage lub Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: f5fe2fe667b6d529bba4d29729a975c7890b5aba
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 509435d47231040362586fa263fbecb1125f862b
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929002"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182597"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Rozpoczynanie pracy z usługą Azure Table Storage i interfejs API tabel Azure Cosmos DB przy użyciu języka F\#
 
@@ -192,7 +192,7 @@ Tabelę można usunąć z konta magazynu. Usunięta tabela będzie niedostępna 
 Teraz, gdy znasz już podstawowe informacje o usłudze Table Storage, Skorzystaj z poniższych linków, aby dowiedzieć się więcej na temat bardziej złożonych zadań magazynu i interfejs API tabel Azure Cosmos DB.
 
 - [Wprowadzenie do Azure Cosmos DB interfejs API tabel](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
-- [Dokumentacja biblioteki klienta usługi Storage dla platformy .NET](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
+- [Dokumentacja biblioteki klienta usługi Storage dla platformy .NET](https://docs.microsoft.com/dotnet/api/overview/azure/storage)
 - [Dostawca typów usługi Azure Storage](https://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Blog zespołu usługi Azure Storage](https://blogs.msdn.microsoft.com/windowsazurestorage/)
 - [Konfigurowanie parametrów połączenia](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)

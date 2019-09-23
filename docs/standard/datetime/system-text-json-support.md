@@ -13,17 +13,17 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 83b1b3a7db63154dccc07325b1a1948a2db3953a
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 000a6b6dc892e65b50ae413ab3cb95d2a73ef0ef
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151823"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182572"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>Obsługa elementów DateTime i DateTimeOffset w pliku System.Text.Json
 
 Biblioteka system. Text. JSON analizuje i zapisuje <xref:System.DateTime> dane oraz <xref:System.DateTimeOffset> wartości zgodnie z rozszerzonym profilem ISO 8601:-2019.
-[Konwertery](https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1?view=netcore-3.0) zapewniają obsługę niestandardową do serializacji i deserializacji <xref:System.Text.Json.JsonSerializer>za pomocą.
+[Konwertery](xref:System.Text.Json.Serialization.JsonConverter%601) zapewniają obsługę niestandardową do serializacji i deserializacji <xref:System.Text.Json.JsonSerializer>za pomocą.
 Obsługę niestandardową można również zaimplementować przy <xref:System.Text.Json.Utf8JsonReader> użyciu <xref:System.Text.Json.Utf8JsonWriter>i.
 
 ## <a name="support-for-the-iso-8601-12019-format"></a>Obsługa formatu ISO 8601-1:2019
@@ -67,7 +67,7 @@ Próba odczytania niezgodnych formatów w programie <xref:System.Text.Json.Utf8J
 
 ### <a name="when-using-xrefsystemtextjsonjsonserializer"></a>W przypadku korzystania z<xref:System.Text.Json.JsonSerializer>
 
-Jeśli chcesz, aby serializator wykonywał niestandardowe analizy lub formatowanie, możesz zaimplementować [niestandardowe konwertery](https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1?view=netcore-3.0).
+Jeśli chcesz, aby serializator wykonywał niestandardowe analizy lub formatowanie, możesz zaimplementować [niestandardowe konwertery](xref:System.Text.Json.Serialization.JsonConverter%601).
 Oto kilka przykładów:
 
 #### <a name="using-datetimeoffsetparse-and-datetimeoffsettostring"></a>Korzystanie `DateTime(Offset).Parse` z i`DateTime(Offset).ToString`

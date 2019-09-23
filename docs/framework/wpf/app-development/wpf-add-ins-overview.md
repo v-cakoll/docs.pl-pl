@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 4fd8fe00fe6974bdcbf7b4af4da25150996de8c3
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a146f15a1c2755f254e198d471a42ca9ec29b072
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401699"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182536"
 ---
 # <a name="wpf-add-ins-overview"></a>Przegląd Dodatki WPF
 
@@ -27,7 +27,7 @@ ms.locfileid: "68401699"
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Wymagana jest znajomość modelu dodatku .NET Framework. Aby uzyskać więcej informacji, zobacz [Dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
+Wymagana jest znajomość modelu dodatku .NET Framework. Aby uzyskać więcej informacji, zobacz [Dodatki i rozszerzalność](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
 
 <a name="AddInsOverview"></a>
 
@@ -43,7 +43,7 @@ Aby uniknąć złożoności ponownej kompilacji i ponownego wdrożenia aplikacji
 
 Na przykład model dodatku systemu Windows Media Player umożliwia deweloperom innych firm implementowanie dodatków plug-in, które poszerzają Media Player systemu Windows na różne sposoby, w tym tworzenie dekoderów i koderów dla formatów multimedialnych, które nie są obsługiwane natywnie przez system Windows Media Player (na przykład DVD, MP3), efekty audio i karnacje. Każdy model dodatku jest zbudowany w celu udostępnienia funkcji, która jest unikatowa dla aplikacji, chociaż istnieje kilka podmiotów i zachowań, które są wspólne dla wszystkich modeli dodatków.
 
-Trzy główne jednostki typowych rozwiązań rozszerzalności dodatków to kontrakty,  *Dodatki*i *aplikacje obsługujące hosty*. Kontrakty definiują sposób integracji dodatków z aplikacjami hosta na dwa sposoby:
+Trzy główne jednostki typowych rozwiązań rozszerzalności dodatków to kontrakty, *Dodatki*i *aplikacje obsługujące hosty*. Kontrakty definiują sposób integracji dodatków z aplikacjami hosta na dwa sposoby:
 
 - Dodatki integrują się z funkcją wdrożoną przez aplikacje hosta.
 
@@ -66,13 +66,13 @@ Aby można było używać dodatków, aplikacje hosta muszą je znaleźć i zała
 Ostatecznie tworzenie niezawodnego modelu dodatków jest nieuproszczonym przedsiębiorstwem. Z tego powodu .NET Framework zapewnia infrastrukturę do tworzenia modeli dodatków.
 
 > [!NOTE]
-> Aby uzyskać bardziej szczegółowe informacje na temat dodatków, zobacz [Dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
+> Aby uzyskać bardziej szczegółowe informacje na temat dodatków, zobacz [Dodatki i rozszerzalność](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
 
 <a name="NETFrameworkAddInModelOverview"></a>
 
 ## <a name="net-framework-add-in-model-overview"></a>Omówienie modelu dodatku .NET Framework
 
-.NET Framework model dodatku, który znajduje się w <xref:System.AddIn> przestrzeni nazw, zawiera zestaw typów, które są zaprojektowane w celu uproszczenia opracowywania rozszerzalności dodatków. Podstawową jednostką modelu dodatku .NET Framework jest *kontrakt*, który definiuje sposób, w jaki aplikacja hosta i dodatek komunikują się ze sobą. Kontrakt jest udostępniany aplikacji hosta za pomocą *widoku* określonego dla aplikacji hosta. Podobnie, szczegółowy *Widok* kontraktu jest narażony na dodatek. *Adapter* służy do zezwalania aplikacji hosta i dodatku do komunikacji między odpowiednimi widokami kontraktu. Kontrakty, widoki i karty są określane jako segmenty, a zestaw powiązanych segmentów stanowi potoku . Potoki stanowią podstawę, w której model dodatku .NET Framework obsługuje odnajdywanie, aktywację, izolację zabezpieczeń, izolację wykonania (przy użyciu aplikacji i procesów, zarządzania komunikacją, okresem istnienia i przechowywania wersji).
+.NET Framework model dodatku, który znajduje się w <xref:System.AddIn> przestrzeni nazw, zawiera zestaw typów, które są zaprojektowane w celu uproszczenia opracowywania rozszerzalności dodatków. Podstawową jednostką modelu dodatku .NET Framework jest *kontrakt*, który definiuje sposób, w jaki aplikacja hosta i dodatek komunikują się ze sobą. Kontrakt jest udostępniany aplikacji hosta za pomocą *widoku* określonego dla aplikacji hosta. Podobnie, szczegółowy *Widok* kontraktu jest narażony na dodatek. *Adapter* służy do zezwalania aplikacji hosta i dodatku do komunikacji między odpowiednimi widokami kontraktu. Kontrakty, widoki i karty są określane jako segmenty, a zestaw powiązanych segmentów stanowi potoku. Potoki stanowią podstawę, w której model dodatku .NET Framework obsługuje odnajdywanie, aktywację, izolację zabezpieczeń, izolację wykonania (przy użyciu aplikacji i procesów, zarządzania komunikacją, okresem istnienia i przechowywania wersji).
 
 Suma tej obsługi umożliwia deweloperom tworzenie dodatków, które integrują się z funkcjonalnością aplikacji hosta. Jednak niektóre scenariusze wymagają, aby aplikacje hosta wyświetlały interfejsy użytkownika udostępniane przez dodatki. Ponieważ każda Technologia prezentacji w .NET Framework ma własny model do implementowania interfejsów użytkownika, .NET Framework model dodatku nie obsługuje żadnej konkretnej technologii prezentacji. Zamiast tego, WPF rozszerza model dodatku .NET Framework z obsługą interfejsu użytkownika dla dodatków.
 
@@ -127,7 +127,7 @@ Sposób <xref:System.AddIn.Contract.INativeHandleContract>użycia <xref:System.A
 
 Aby dodatek mógł zwrócić interfejs użytkownika do aplikacji hosta, wymagane są następujące elementy:
 
-1. Należy utworzyć aplikację hosta, dodatek i potok, zgodnie z opisem w temacie .NET Framework [Dodatki i](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) dokumentacja rozszerzalności.
+1. Należy utworzyć aplikację hosta, dodatek i potok, zgodnie z opisem w temacie .NET Framework [Dodatki i](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) dokumentacja rozszerzalności.
 
 2. Kontrakt musi implementować <xref:System.AddIn.Contract.IContract> i, aby zwracał interfejs użytkownika, kontrakt musi deklarować metodę z wartością zwracaną typu. <xref:System.AddIn.Contract.INativeHandleContract>
 
@@ -147,7 +147,7 @@ Przykład demonstrujący sposób implementacji dodatku, który zwraca interfejs 
 
 Gdy dodatek jest interfejsem użytkownika, wymagane są następujące elementy:
 
-1. Należy utworzyć aplikację hosta, dodatek i potok, zgodnie z opisem w temacie .NET Framework [Dodatki i](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) dokumentacja rozszerzalności.
+1. Należy utworzyć aplikację hosta, dodatek i potok, zgodnie z opisem w temacie .NET Framework [Dodatki i](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) dokumentacja rozszerzalności.
 
 2. Interfejs kontraktu dla dodatku musi implementować <xref:System.AddIn.Contract.INativeHandleContract>.
 
@@ -207,7 +207,7 @@ Ostatnim krokiem jest skonfigurowanie manifestu aplikacji w celu uwzględnienia 
 
 1. Kliknij prawym przyciskiem [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] myszy projekt, kliknij polecenie **Właściwości**, kliknij przycisk **Opublikuj**, a następnie kliknij przycisk **pliki aplikacji** .
 
-2. W oknie dialogowym **pliki aplikacji** Ustaw **stan publikacji** każdego potoku i dodatku dll na wartość (Auto) i ustaw **grupę pobierania** dla każdego potoku i dodatku dll na **(wymagane)** .
+2. W oknie dialogowym **pliki aplikacji** Ustaw **stan publikacji** każdego potoku i dodatku dll na wartość (Auto)i ustaw **grupę pobierania** dla każdego potoku i dodatku dll na **(wymagane)** .
 
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Korzystanie z potoku i dodatku z bazy aplikacji
 
@@ -311,7 +311,7 @@ Domyślnie, gdy są używane wiele domen aplikacji, do domeny tej aplikacji są 
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.LoaderOptimizationAttribute>
-- [Dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [Dodatki i rozszerzalność](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Domeny aplikacji](../../app-domains/application-domains.md)
 - [.NET Framework Omówienie usług zdalnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Udostępnianie obiektów zdalnie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))

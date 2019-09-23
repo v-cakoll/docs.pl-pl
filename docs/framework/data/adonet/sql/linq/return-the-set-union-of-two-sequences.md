@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b8bd3cb-86d4-4a3b-9906-61f68726dd1f
-ms.openlocfilehash: 1b981d3002cf4a23897ce98927aebe96086f8a4a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 058856243b2a8daaecd653a9b5999013de5407a8
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781231"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182524"
 ---
 # <a name="return-the-set-union-of-two-sequences"></a>Zwracanie sumy zbiorów dwóch sekwencji
 <xref:System.Linq.Queryable.Union%2A> Użyj operatora, aby zwrócić zestaw zbiorów dwóch sekwencji.  
@@ -21,7 +21,7 @@ ms.locfileid: "70781231"
  [!code-csharp[DLinqQueryExamples#43](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#43)]
  [!code-vb[DLinqQueryExamples#43](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#43)]  
   
- W programie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]operatorjestzdefiniowany dla wielozbiorów jako nieuporządkowane łączenie wielozestawów (w efekcie w wyniku [`UNION ALL`](https://docs.microsoft.com/sql/t-sql/language-elements/set-operators-union-transact-sql?view=sql-server-2017) klauzuli w języku SQL). <xref:System.Linq.Queryable.Union%2A>
+ W programie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]operatorjestzdefiniowany dla wielozbiorów jako nieuporządkowane łączenie wielozestawów (w efekcie w wyniku [`UNION ALL`](/sql/t-sql/language-elements/set-operators-union-transact-sql) klauzuli w języku SQL). <xref:System.Linq.Queryable.Union%2A>
 
 Aby uzyskać więcej informacji i przykładów, <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>Zobacz.
   

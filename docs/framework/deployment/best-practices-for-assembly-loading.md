@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 727d1b4ecb17eafb448205aa0c7eea36c5545b98
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a95679f659f13956fd230f07e9401af9097a043c
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052221"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182467"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Najlepsze praktyki dotyczące ładowania zestawu
 W tym artykule omówiono sposoby unikania problemów z tożsamością typu, które <xref:System.InvalidCastException>mogą <xref:System.MissingMethodException>prowadzić do innych błędów. W tym artykule omówiono następujące zalecenia:  
@@ -154,7 +154,7 @@ W tym artykule omówiono sposoby unikania problemów z tożsamością typu, któ
  Jeśli nie można umieścić wszystkich zestawów w ścieżce sondowania, należy rozważyć alternatywy, takie jak użycie modelu dodatku .NET Framework, umieszczenie zestawów w globalnej pamięci podręcznej zestawów lub utworzenie domen aplikacji.  
   
 ### <a name="consider-using-the-net-framework-add-in-model"></a>Rozważ użycie modelu dodatku .NET Framework  
- Jeśli używasz kontekstu Załaduj-from do implementowania dodatków, które zwykle nie są zainstalowane w bazie aplikacji, użyj modelu dodatku .NET Framework. Ten model zapewnia izolację na poziomie domeny aplikacji lub procesu, bez konieczności samodzielnego zarządzania domenami aplikacji. Aby uzyskać informacje o modelu dodatków, zobacz [Dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
+ Jeśli używasz kontekstu Załaduj-from do implementowania dodatków, które zwykle nie są zainstalowane w bazie aplikacji, użyj modelu dodatku .NET Framework. Ten model zapewnia izolację na poziomie domeny aplikacji lub procesu, bez konieczności samodzielnego zarządzania domenami aplikacji. Aby uzyskać informacje o modelu dodatków, zobacz [Dodatki i rozszerzalność](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
   
 ### <a name="consider-using-the-global-assembly-cache"></a>Rozważ użycie globalnej pamięci podręcznej zestawów  
  Umieść zestawy w globalnej pamięci podręcznej zestawów, aby uzyskać korzyści wynikające ze wspólnej ścieżki zestawu, która znajduje się poza bazą aplikacji, bez utraty korzyści wynikającej z domyślnego kontekstu ładowania lub wyłączania wad innych kontekstów.  

@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: 3fd07c9f2cdea3987602502cf242893b44aaddba
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 09c2879c0a46efe6258685d8201959a626735a85
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331573"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182653"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Opcje kompilatora Visual Basic w porządku alfabetycznym
 Kompilator Visual Basic wiersza polecenia jest dostępny jako alternatywa dla kompilowania programów z zintegrowanego środowiska programistycznego (IDE) programu Visual Studio. Poniżej znajduje się lista opcji kompilatora wiersza polecenia Visual Basic sortowanych alfabetycznie.  
@@ -83,4 +83,4 @@ Kompilator Visual Basic wiersza polecenia jest dostępny jako alternatywa dla ko
 ## <a name="see-also"></a>Zobacz także
 
 - [Opcje kompilatora Visual Basic wymienione według kategorii](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)
-- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)
+- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)

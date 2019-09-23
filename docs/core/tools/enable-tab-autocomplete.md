@@ -4,12 +4,12 @@ description: W tym artykule opisano, jak włączyć uzupełnianie kart dla inter
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2018
-ms.openlocfilehash: c7673d95f3710d78d3a09b26f031396587f9c669
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 0f29ba2ef1d419339a0e2dc44f67c93b326eb40d
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202501"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182456"
 ---
 # <a name="how-to-enable-tab-completion-for-net-core-cli"></a>Jak włączyć uzupełnianie kart dla interfejs wiersza polecenia platformy .NET Core
 
@@ -44,7 +44,7 @@ Dane wejściowe                                | stanowi                        
 
 ## <a name="powershell"></a>PowerShell
 
-Aby dodać uzupełnianie tabulatorów do **programu PowerShell** dla interfejs wiersza polecenia platformy .NET Core, Utwórz lub Edytuj profil przechowywany w zmiennej `$PROFILE`. Aby uzyskać więcej informacji, zobacz [jak utworzyć profil](/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-6#how-to-create-a-profile) i [zasady wykonywania](/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-6#profiles-and-execution-policy). 
+Aby dodać uzupełnianie tabulatorów do **programu PowerShell** dla interfejs wiersza polecenia platformy .NET Core, Utwórz lub Edytuj profil przechowywany w zmiennej `$PROFILE`. Aby uzyskać więcej informacji, zobacz [jak utworzyć profil](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) i [zasady wykonywania](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy). 
 
 Dodaj następujący kod do swojego profilu:
 

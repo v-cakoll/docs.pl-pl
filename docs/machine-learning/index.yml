@@ -1,69 +1,97 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Dokumentacja ML.NET
+summary: Dowiedz się, jak używać ML.NET open source do kompilowania rozwiązań uczenia maszynowego i integrowania ich z aplikacjami. Samouczki, przykłady kodu i inne pokazują, jak to zrobić.
 metadata:
-  document_id: na
   title: ML.NET Documentation — samouczki i dokumentacja interfejsu API
-  meta.description: 'Learn how to use ML.NET, an open-source and cross-platform machine learning framework you can use to build custom machine learning solutions and integrate them into .NET applications. Incorporate AI into your apps using the .NET skills you already have and without leaving .NET.'
+  description: Dowiedz się, jak używać ML.NET open source do kompilowania rozwiązań uczenia maszynowego i integrowania ich z aplikacjami. Samouczki, przykłady kodu i inne pokazują, jak to zrobić.
+  ms.prod: dotnet-ml
   ms.topic: landing-page
-  ms.date: 09/16/2019
-  ms.author: nakersha
+  ms.collection: collection
   author: natke
-abstract:
-  description: 'Dowiedz się, jak korzystać z ML.NET, platformy Open Source i międzyplatformowej platformy uczenia maszynowego do tworzenia niestandardowych rozwiązań do uczenia maszynowego i integrowania ich z aplikacjami platformy .NET. Samouczki, przykłady kodu, dokumentacja interfejsu API i inne dokumenty przedstawiające, jak to zrobić.'
-sections:
-  - title: Samouczki krok po kroku
-    items:
-      - type: paragraph
-        text: 'Dowiedz się, jak tworzyć popularne rozwiązania za pomocą ML.NET:'
-      - type: paragraph
-        text: '<b>Tworzenie za pomocą interfejsu API ml.NET</b>:'
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/machine-learning/tutorials/sentiment-analysis">Analizowanie tonacji przy użyciu klasyfikacji binarnej</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/github-issue-classification">Kategoryzacja problemów usługi GitHub przy użyciu klasyfikacji wieloklasowej</a></li>
-          - html: <a href="/dotnet/machine-learning/tutorials/predict-prices">Przewidywanie cen przy użyciu regresji</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">Klasyfikowanie kwiatów według cech przy użyciu klastrowania</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">Tworzenie polecania filmu za pomocą factorization macierzy</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/image-classification">Tworzenie niestandardowego klasyfikatora obrazu za pomocą TensorFlow</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/object-detection-onnx">Wykrywanie obiektów w obrazach za pomocą ONNX</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/text-classification-tf">Klasyfikowanie tonacji przeglądów filmów przy użyciu TensorFlow</a>
-      - type: paragraph
-        text: '<b>Użyj konstruktora modeli</b>, graficznego rozszerzenia programu Visual Studio:'
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/machine-learning/tutorials/predict-prices-with-model-builder">Prognozowanie cen przy użyciu konstruktora modelu</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/sentiment-analysis-model-builder">Tworzenie aplikacji sieci Web Razor Pages do analizowania tonacji</a>
-      - type: paragraph
-        text: '<b>Uruchom interfejs wiersza polecenia ml.NET</b>:'
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/machine-learning/tutorials/mlnet-cli">Analizowanie tonacji za pomocą interfejsu wiersza polecenia ML.NET</a>
-  - title: Przykłady
-    items:
-      - type: paragraph
-        text: 'Zapoznaj się z <a href="https://github.com/dotnet/machinelearning-samples">repozytorium przykładów</a> w witrynie GitHub C# dla F#aplikacji w systemach i.'
-  - title: Tematy pomocy
-    items:
-      - type: paragraph
-        text: <b>Interfejs API ML.NET</b>
-      - type: list
-        style: unordered
-        items:
-          - html: '<a href="/dotnet/api/?view=ml-dotnet">Interfejs API Release ml.NET</a> zawiera składniki do obsługi danych, algorytmy dla klasyfikacji binarnej, klasyfikacji wieloklasowej, regresji, wykrywania anomalii, szeregów czasowych i prognozowania, klasyfikacji, zapisywania modelu i ładowania, ONNX i TensorFlow Obsługa modelu i wiele innych.'
-          - html: <a href="/dotnet/api/?view=ml-dotnet-preview">Interfejs API ml.NET w wersji zapoznawczej</a> zawiera algorytmy dla zadań zaleceń oraz obsługę standardowych modeli uczenia głębokiego.
-      - type: paragraph
-        text: <b>Interfejs API AutoML</b>
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/api/index?view=automl-dotnet">Interfejs API automl</a>
-      - type: paragraph
-        text: <b>Dokumentacja interfejsu wiersza polecenia ML.NET</b>
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/machine-learning/reference/ml-net-cli-reference">Dokumentacja poleceń interfejsu wiersza polecenia ML.NET</a>
+  ms.author: nakersha
+  ms.date: 09/23/2019
+  ms.openlocfilehash: f6f4d0c516a1310df5c497a3f4e7331877f3c5a9
+  ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 09/24/2019
+  ms.locfileid: "71216641"
+landingContent:
+- title: Informacje o ML.NET
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Co to jest struktura ML.NET?
+      url: how-does-mldotnet-work.md
+  - linkListType: concept
+    links:
+    - text: Typy modeli uczenia maszynowego
+      url: resources/tasks.md
+    - text: Jak wybrać algorytm
+      url: how-to-choose-an-ml-net-algorithm.md
+    - text: Przekształcenia danych
+      url: resources/transforms.md
+- title: Korzystanie z konstruktora modelu
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Co to jest konstruktor modelu?
+      url: automate-training-with-model-builder.md
+  - linkListType: quickstart
+    links:
+    - text: Instalowanie konstruktora modelu
+      url: how-to-guides/install-model-builder.md
+  - linkListType: tutorial
+    links:
+    - text: Przewidywanie cen — Konstruktor modelu
+      url: tutorials/predict-prices-with-model-builder.md
+    - text: Tworzenie aplikacji sieci Web Razor Pages do analizowania tonacji
+      url: tutorials/sentiment-analysis-model-builder.md
+- title: Wprowadzenie do interfejsu API
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Tworzenie klasyfikatora obrazu TensorFlow z uczeniem transferu
+      url: tutorials/image-classification.md
+    - text: Analizuj tonacji komentarzy witryny sieci Web
+      url: tutorials/sentiment-analysis.md
+    - text: Wykrywanie obiektów w obrazach przy użyciu ONNX
+      url: tutorials/object-detection-onnx.md
+  - linkListType: how-to-guide
+    links:
+    - text: Ładowanie danych z różnych źródeł
+      url: how-to-guides/load-data-ml-net.md
+    - text: Przygotowywanie danych do kompilowania modelu
+      url: how-to-guides/prepare-data-ml-net.md
+    - text: Uczenie & ocenę modelu
+      url: how-to-guides/train-machine-learning-model-ml-net.md
+    - text: Tworzenie prognoz przy użyciu przeszkolonego modelu
+      url: how-to-guides/machine-learning-model-predictions-ml-net.md
+    - text: Zapisz & Załaduj szkolony model
+      url: how-to-guides/save-load-machine-learning-models-ml-net.md
+- title: Korzystanie z interfejsu wiersza polecenia ML.NET
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Automatyzacja szkoleń modeli przy użyciu interfejsu wiersza polecenia ML.NET
+      url: automate-training-with-cli.md
+  - linkListType: quickstart
+    links:
+    - text: Instalowanie interfejsu wiersza polecenia ML.NET
+      url: how-to-guides/install-ml-net-cli.md
+  - linkListType: tutorial
+    links:
+    - text: Analizowanie interfejsu wiersza polecenia tonacji-ML.NET & AutoML
+      url: tutorials/mlnet-cli.md
+- title: Odwołanie API
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Dokumentacja interfejsów API ML.NET
+      url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
+    - text: Dokumentacja interfejsu API ML.NET (wersja zapoznawcza)
+      url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview
+    - text: Dokumentacja interfejsu wiersza polecenia ML.NET
+      url: reference/ml-net-cli-reference.md
+    - text: Dokumentacja interfejsu API AutoML
+      url: https://docs.microsoft.com/dotnet/api/?view=automl-dotnet

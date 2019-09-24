@@ -19,6 +19,9 @@
             - name: Mikrousługi na platformie .NET — achitektura (książka elektroniczna)
               tocHref: /dotnet/architecture/microservices/
               topicHref: /dotnet/architecture/microservices/index
+            - name: Natywne dla chmury
+              tocHref: /dotnet/architecture/cloud-native/
+              topicHref: /dotnet/architecture/cloud-native/index
             - name: Modernizowanie aplikacji .NET (książka elektroniczna)
               tocHref: /dotnet/architecture/modernize-with-azure-containers/
               topicHref: /dotnet/architecture/modernize-with-azure-containers/index
@@ -28,6 +31,12 @@
             - name: Aplikacje bezserwerowe — książka elektroniczna
               tocHref: /dotnet/architecture/serverless/
               topicHref: /dotnet/architecture/serverless/index
+            - name: Platforma Blazor dla deweloperów technologii ASP.NET Web Forms — książka elektroniczna
+              tocHref: /dotnet/architecture/blazor-for-web-forms-developers/
+              topicHref: /dotnet/architecture/blazor-for-web-forms-developers/index
+            - name: Usługa gRPC platformy ASP.NET Core dla deweloperów WCF
+              tocHref: /dotnet/architecture/grpc-for-wcf-developers/
+              topicHref: /dotnet/architecture/grpc-for-wcf-developers/index
         - name: .NET — przewodnik
           tocHref: /dotnet/standard/
           topicHref: /dotnet/standard/index

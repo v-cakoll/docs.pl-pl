@@ -1,0 +1,31 @@
+- name: Platforma Blazor dla deweloperów technologii ASP.NET Web Forms — książka elektroniczna
+  href: index.md
+  items:
+    - name: Wprowadzenie
+      href: introduction.md
+    - name: Porównanie architektur
+      href: architecture-comparison.md
+    - name: Modele hostingu
+      href: hosting-models.md
+    - name: Struktura projektu
+      href: project-structure.md
+    - name: Uruchamianie
+      href: app-startup.md
+    - name: Składniki
+      href: components.md
+    - name: 'Strony, routing i układy'
+      href: pages-routing-layouts.md
+    - name: Zarządzanie stanem
+      href: state-management.md
+    - name: Formularze i walidacja
+      href: forms-validation.md
+    - name: Obsługa danych
+      href: data.md
+    - name: Oprogramowanie pośredniczące
+      href: middleware.md
+    - name: Konfiguracja
+      href: config.md
+    - name: Zabezpieczenia
+      href: security-authentication-authorization.md
+    - name: Migracja
+      href: migration.md

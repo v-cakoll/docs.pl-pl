@@ -2,12 +2,12 @@
 title: Typy referencyjne dopuszczające wartość null
 description: Ten artykuł zawiera omówienie typów referencyjnych dopuszczających wartość null C# , które dodano w 8. Dowiesz się, jak funkcja zapewnia bezpieczeństwo przed wyjątkami odwołania o wartości null dla nowych i istniejących projektów.
 ms.date: 02/19/2019
-ms.openlocfilehash: e66d74cdde3b3de9ec3f1b435cdbd3e3b24c2663
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7ca3ebc413fbe335f79d415249b952132c38f552
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851067"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214399"
 ---
 # <a name="nullable-reference-types"></a>Typy referencyjne dopuszczające wartość null
 
@@ -83,7 +83,7 @@ Możesz również użyć dyrektyw, aby ustawić te same konteksty w dowolnym mie
 
 Domyślne adnotacje dopuszczające wartość null i `disabled`konteksty ostrzeżenia są. Ta decyzja oznacza, że istniejący kod kompiluje się bez zmian i bez generowania nowych ostrzeżeń.
 
-### <a name="nullable-annotation-context"></a>Kontekst adnotacji dopuszczający wartość null
+## <a name="nullable-annotation-context"></a>Kontekst adnotacji dopuszczający wartość null
 
 Kompilator używa następujących reguł w wyłączonym kontekście adnotacji nullable:
 

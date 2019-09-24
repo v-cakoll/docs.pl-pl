@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c99e3bc59266846fcd5c5774b6050b4e075cbc3f
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: b2f997cf398e59f8e30ac87c1e0360e43a448e85
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374500"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216711"
 ---
 # <a name="standard-numeric-format-strings"></a>Standardowe ciągi formatujące liczby
 
@@ -117,10 +117,10 @@ Informacje o formatowaniu bieżącego <xref:System.Globalization.NumberFormatInf
 |<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSeparator%2A>|Definiuje ciąg oddzielający grupy liczb całkowitych.|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSizes%2A>|Definiuje liczbę cyfr liczby całkowitej, które pojawiają się w grupie.|
 
-Poniższy przykład formatuje <xref:System.Double> wartość przy użyciu specyfikatora formatu waluty.
+Poniższy przykład formatuje <xref:System.Double> wartość przy użyciu specyfikatora formatu waluty:
 
 [!code-cpp[Formatting.Numeric.Standard#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#1)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
+[!code-csharp[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
 [!code-vb[Formatting.Numeric.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#1)]
 
 [Wróć do tabeli](#table)
@@ -165,10 +165,10 @@ Informacje o formatowaniu bieżącego <xref:System.Globalization.NumberFormatInf
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Określa ciąg oddzielający cyfry całkowite od cyfr dziesiętnych we współczynniku.|
 |<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|Określa ciąg, który wskazuje, że wykładnik jest dodatni.|
 
-Poniższy przykład formatuje <xref:System.Double> wartość przy użyciu specyfikatora formatu wykładniczego.
+Poniższy przykład formatuje <xref:System.Double> wartość przy użyciu specyfikatora formatu wykładniczego:
 
 [!code-cpp[Formatting.Numeric.Standard#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#3)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
+[!code-csharp[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
 [!code-vb[Formatting.Numeric.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#3)]
 
 [Wróć do tabeli](#table)
@@ -189,10 +189,10 @@ Informacje o formatowaniu bieżącego <xref:System.Globalization.NumberFormatInf
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Definiuje ciąg oddzielający cyfry całkowite od cyfr dziesiętnych.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A>|Definiuje domyślną liczbę cyfr dziesiętnych. Tę wartość można zastąpić przy użyciu specyfikatora dokładności.|
 
-Poniższy przykład formatuje <xref:System.Double> <xref:System.Int32> i wartość przy użyciu specyfikatora formatu stałego.
+Poniższy przykład formatuje <xref:System.Double> <xref:System.Int32> i wartość przy użyciu specyfikatora formatu ustalonego:
 
 [!code-cpp[Formatting.Numeric.Standard#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#4)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
+[!code-csharp[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
 [!code-vb[Formatting.Numeric.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#4)]
 
 [Wróć do tabeli](#table)
@@ -236,10 +236,10 @@ Informacje o formatowaniu bieżącego <xref:System.Globalization.NumberFormatInf
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Definiuje ciąg oddzielający cyfry całkowite od cyfr dziesiętnych.|
 |<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|Określa ciąg, który wskazuje, że wykładnik jest dodatni.|
 
-W poniższym przykładzie różne wartości zmiennoprzecinkowe są formatowane przy użyciu specyfikatora formatu ogólnego.
+Poniższy przykład formatuje różne wartości zmiennoprzecinkowe przy użyciu specyfikatora formatu ogólnego:
 
 [!code-cpp[Formatting.Numeric.Standard#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#5)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
+[!code-csharp[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
 [!code-vb[Formatting.Numeric.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#5)]
 
 [Wróć do tabeli](#table)
@@ -261,10 +261,10 @@ Informacje o formatowaniu bieżącego <xref:System.Globalization.NumberFormatInf
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Definiuje ciąg oddzielający cyfry całkowite i cyfry dziesiętne.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A>|Definiuje domyślną liczbę cyfr dziesiętnych. Tę wartość można zastąpić przy użyciu specyfikatora dokładności.|
 
-W poniższym przykładzie różne wartości zmiennoprzecinkowe są formatowane przy użyciu specyfikatora formatu liczby.
+Poniższy przykład formatuje różne wartości zmiennoprzecinkowe przy użyciu specyfikatora formatu liczb:
 
 [!code-cpp[Formatting.Numeric.Standard#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#6)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
+[!code-csharp[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
 [!code-vb[Formatting.Numeric.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#6)]
 
 [Wróć do tabeli](#table)
@@ -288,10 +288,10 @@ Poniższa tabela zawiera listę <xref:System.Globalization.NumberFormatInfo> wł
 |<xref:System.Globalization.NumberFormatInfo.PercentGroupSeparator%2A>|Definiuje ciąg oddzielający grupy liczb całkowitych.|
 |<xref:System.Globalization.NumberFormatInfo.PercentGroupSizes%2A>|Definiuje liczbę cyfr liczby całkowitej, które pojawiają się w grupie.|
 
-W poniższym przykładzie wartości zmiennoprzecinkowe są formatowane przy użyciu specyfikatora formatu wartości procentowej.
+W poniższym przykładzie wartości zmiennoprzecinkowe są formatowane przy użyciu specyfikatora formatu wartości procentowej:
 
 [!code-cpp[Formatting.Numeric.Standard#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#7)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
+[!code-csharp[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
 [!code-vb[Formatting.Numeric.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#7)]
 
 [Wróć do tabeli](#table)
@@ -324,9 +324,9 @@ Poniższy przykład formatuje <xref:System.Numerics.BigInteger> wartość przy u
 > [!IMPORTANT]
 > W niektórych przypadkach <xref:System.Double> wartości sformatowane przy `/platform:x64` użyciu standardowego ciągu formatu liczbowego "R" nie przeprowadzono pomyślnie rundy w przypadku skompilowania za pomocą `/platform:anycpu` przełącznika lub i uruchomienia w systemach 64-bitowych. Więcej informacji można znaleźć w poniższym akapicie.
 
-Aby obejść problem z <xref:System.Double> wartościami sformatowanymi przy `/platform:x64` użyciu standardowego ciągu formatu liczbowego "R", który nie został pomyślnie zaokrąglony, w przypadku `/platform:anycpu` skompilowania za pomocą przełącznika lub i uruchomienia w systemach 64-bitowych <xref:System.Double> . można formatować wartości przy użyciu standardowego ciągu formatu liczbowego "G17". Poniższy przykład używa ciągu formatu "R" z <xref:System.Double> wartością, która nie jest pomyślna, a także używa ciągu formatu "G17", aby pomyślnie zaokrąglić oryginalną wartość.
+Aby obejść problem z <xref:System.Double> wartościami sformatowanymi przy `/platform:x64` użyciu standardowego ciągu formatu liczbowego "R", który nie został pomyślnie zaokrąglony, w przypadku `/platform:anycpu` skompilowania za pomocą przełącznika lub i uruchomienia w systemach 64-bitowych <xref:System.Double> . można formatować wartości przy użyciu standardowego ciągu formatu liczbowego "G17". Poniższy przykład używa ciągu formatu "R" z <xref:System.Double> wartością, która nie jest pomyślna, a także używa ciągu formatu "G17", aby pomyślnie zaokrąglić oryginalną wartość:
 
-[!code-csharp-interactive[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#RoundTrip)]
+[!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#RoundTrip)]
 [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]
 
 [Wróć do tabeli](#table)
@@ -380,7 +380,7 @@ Bez <xref:System.Single> względu na ciąg formatu, jeśli wartość typu lub <x
 
 W poniższym przykładzie całkowita i zmiennoprzecinkowa wartość liczbowa jest formatowana przy użyciu kultury en-US i wszystkich specyfikatorów standardowego formatu liczb. W tym przykładzie używamy dwóch określonych typów<xref:System.Double> liczbowych (i <xref:System.Int32>), ale byłyby podobne wyniki dla dowolnego z pozostałych liczbowych<xref:System.Byte> <xref:System.Int32>typów <xref:System.SByte>podstawowych <xref:System.Int16> <xref:System.Int64>(,, ,,,<xref:System.UInt16>, ,<xref:System.UInt32> ,<xref:System.Decimal>, i )<xref:System.Single>. <xref:System.UInt64> <xref:System.Numerics.BigInteger>
 
-[!code-csharp-interactive[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#FinalExample)]
+[!code-csharp[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#FinalExample)]
 [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]
 
 ## <a name="see-also"></a>Zobacz także

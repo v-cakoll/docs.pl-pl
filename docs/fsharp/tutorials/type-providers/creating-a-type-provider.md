@@ -2,12 +2,12 @@
 title: 'Samouczek: Tworzenie dostawcy typów'
 description: Dowiedz się, jak utworzyć F# własnych dostawców typów F# w 3,0, badając kilku dostawców typów prostych, aby zilustrować podstawowe pojęcia.
 ms.date: 02/02/2019
-ms.openlocfilehash: 800b5a670b7f25f462e1ce23c3d40fd2eab3b102
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 8d1a1fedf03437ccbacd40616cc7dc3e1da435b2
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991865"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214270"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Samouczek: Tworzenie dostawcy typów
 
@@ -152,13 +152,13 @@ Przed ponownym skompilowaniem dostawcy upewnij się, że wszystkie wystąpienia 
 
 Aby debugować tego dostawcę przy użyciu instrukcji Print, należy utworzyć skrypt, który ujawnia problem z dostawcą, a następnie użyć następującego kodu:
 
-```
+```console
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
 Aby debugować tego dostawcę przy użyciu programu Visual Studio, Otwórz wiersz polecenia dla deweloperów dla programu Visual Studio z poświadczeniami administracyjnymi i uruchom następujące polecenie:
 
-```
+```console
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
@@ -899,7 +899,7 @@ let function1 () =
 
 Poniżej znajduje się obraz kodu pochodzącego z dekompilowanego przy użyciu programu Ildasm. exe:
 
-```
+```il
 .class public abstract auto ansi sealed Module1
 extends [mscorlib]System.Object
 {
@@ -933,13 +933,11 @@ Podczas tworzenia dostawców typów należy przestrzegać następujących konwen
 
 **Dostawcy dla protokołów łączności** Ogólnie rzecz biorąc nazwy większości bibliotek DLL dostawcy dla protokołów łączności danych i usług, takich jak połączenia OData lub SQL, powinny kończyć się `TypeProvider` na `TypeProviders`lub. Na przykład użyj nazwy biblioteki DLL, która jest podobna do następującego ciągu:
 
-```
-  Fabrikam.Management.BasicTypeProviders.dll
-```
+`Fabrikam.Management.BasicTypeProviders.dll`
 
 Upewnij się, że podane typy są członkami odpowiadającej przestrzeni nazw, i wskaż wdrożony protokół łączności:
 
-```
+```fsharp
   Fabrikam.Management.BasicTypeProviders.WmiConnection<…>
   Fabrikam.Management.BasicTypeProviders.DataProtocolConnection<…>
 ```
@@ -1128,8 +1126,8 @@ Dostawców typów można wywoływać przy użyciu następujących narzędzi:
 
 Często można debugować dostawców typów, korzystając z usługi nadzoru. exe w pliku skryptu testowego (na przykład Script. FSX). Debuger można uruchomić z poziomu wiersza polecenia.
 
-```
-  devenv /debugexe fsc.exe script.fsx
+```console
+devenv /debugexe fsc.exe script.fsx
 ```
 
   Możesz użyć rejestrowania do-stdout.

@@ -2,12 +2,12 @@
 title: Sekwencje
 description: Dowiedz się, F# jak używać sekwencji, gdy masz dużą uporządkowaną kolekcję danych, ale niekoniecznie używać wszystkich elementów.
 ms.date: 02/19/2019
-ms.openlocfilehash: a57142c5d07455cff02b0b691ebccb9cb9f347fd
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 63e878c2c11db25a08d449070ab779a6e6a2c2eb
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627166"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216760"
 ---
 # <a name="sequences"></a>Sekwencje
 
@@ -82,7 +82,7 @@ Za pomocą [SEQ. init](https://msdn.microsoft.com/library/059de69d-812c-4f8e-be8
 
 Dane wyjściowe to
 
-```
+```console
 0 10 20 30 40
 ```
 
@@ -104,7 +104,7 @@ Można zdefiniować nieskończone sekwencje przy użyciu funkcji [SEQ. initInfin
 
 Wynik jest następujący:
 
-```
+```console
 The sequence seq1 contains numbers from 0 to 20.
 
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
@@ -134,7 +134,7 @@ Poniższy kod przedstawia zachowanie i różnice między `Seq.truncate` i. `Seq.
 
 Dane wyjściowe przed wystąpieniem błędu są następujące.
 
-```
+```console
 1 4 9 16 25 
 1 4 9 16 25 36 49 64 81 100 
 1 4 9 16 25 
@@ -149,7 +149,7 @@ Poniższy przykład kodu ilustruje zachowanie i różnice między `Seq.takeWhile
 
 Dane wyjściowe są następujące:
 
-```
+```console
 1 4 9 
 36 49 64 81 100 
 16 25 36 49 64 81 100
@@ -171,7 +171,7 @@ Dane wyjściowe są następujące:
 
 Sekwencja początkowa:
 
-```
+```console
 1.0 1.5 2.0 1.5 1.0 1.5 
 
 Windows of length 3: 
@@ -203,7 +203,7 @@ W poprzednim kodzie tylko pierwszy element jest obliczany i sprawdzany, a wynik 
 
 Dane wyjściowe są następujące:
 
-```
+```console
 (1, 34) (2, 33) (0, 33)
 ```
 
@@ -217,7 +217,7 @@ Poniższy przykład kodu ilustruje użycie programu `Seq.groupBy` do partycjonow
 
 Dane wyjściowe są następujące:
 
-```
+```console
 (1, seq [1; 4; 7; 10; ...]) (2, seq [2; 5; 8; 11; ...]) (0, seq [3; 6; 9; 12; ...])
 ```
 

@@ -2,12 +2,12 @@
 title: Komórki odwołań
 description: Dowiedz F# się, w jaki sposób komórki referencyjne są lokalizacjami przechowywania, które umożliwiają tworzenie modyfikowalnych wartości przy użyciu semantyki odwołania.
 ms.date: 05/16/2016
-ms.openlocfilehash: faaa4a6b54ff0366163b6821edff7fa4cb2f5a88
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2bca7797b272c0e7d5bf54df07041dc08e33709a
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627251"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216769"
 ---
 # <a name="reference-cells"></a>Komórki odwołań
 
@@ -66,7 +66,7 @@ Istnieje kilka sposobów dostępu do podstawowej wartości. Wartość zwrócona 
 
 Dane wyjściowe są następujące:
 
-```
+```console
 10
 10
 11

@@ -3,12 +3,12 @@ title: Bezpiecznie Aktualizuj interfejsy przy użyciu domyślnych elementów cz�
 description: W tym zaawansowanym samouczku przedstawiono sposób bezpiecznego dodawania nowych funkcji do istniejących definicji interfejsów bez przerywania wszystkich klas i struktur, które implementują ten interfejs.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 6a723a116d420dd43d2adeef98b824445dd4f0d7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 271c737e17cc2b93424108e7e1d434fd1c7198be
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926702"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216567"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Samouczek: Aktualizowanie interfejsów z domyślnymi elementami członkowskimi interfejsu w C# 8,0
 
@@ -24,7 +24,7 @@ W tym samouczku dowiesz się, jak:
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Musisz skonfigurować maszynę do uruchamiania programu .NET Core, w tym kompilatora 8,0 w C# wersji zapoznawczej. Kompilator C# 8,0 w wersji zapoznawczej jest dostępny w programie [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)lub najnowszej wersji [zestawu SDK programu .NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0). Domyślne elementy członkowskie interfejsu są dostępne począwszy od programu .NET Core 3,0 w wersji zapoznawczej 4.
+Musisz skonfigurować maszynę do uruchamiania programu .NET Core, w tym kompilatora C# 8,0. Kompilator C# 8,0 jest dostępny, począwszy od [programu Visual Studio 2019 w wersji 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) lub [zestawu .NET Core 3,0 SDK](https://dotnet.microsoft.com/download).
 
 ## <a name="scenario-overview"></a>Omówienie scenariusza
 

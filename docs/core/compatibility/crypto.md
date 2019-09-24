@@ -1,15 +1,15 @@
 ---
-title: Istotne zmiany, wersja 2,2 do 3,0 — .NET Core
+title: Krytyczne zmiany kryptografii, wersja 2,2 do 3,0-.NET Core
 description: Wymienia istotne zmiany z wersji 2,2 do wersji 3,0 programu .NET Core, ASP.NET Core i EF Core.
 ms.date: 09/10/2019
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e488e04c06972399bb2b20f349c216098b6dd41d
+ms.openlocfilehash: 44caf042404d44ec4c5cb7b7e25883d8460efeb5
 ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216366"
+ms.locfileid: "71217067"
 ---
 # <a name="breaking-changes-for-migration-from-version-22-to-30"></a>Istotne zmiany dotyczące migracji z wersji 2,2 do 3,0
 
@@ -65,10 +65,6 @@ W przypadku migrowania z wersji 2,2 do wersji 3,0 programu .NET Core, ASP.NET Co
 ## <a name="visual-basic"></a>Visual Basic
 
 [!INCLUDE[vbNewLine is obsolete](~/includes/core-changes/visualbasic/vbnewline-is-obsolete.md)]
-
-## <a name="aspnet-core"></a>ASP.NET Core
-
-[ASP.NET Core powiadomienia o zmianie](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0)
 
 ## <a name="entity-framework-core"></a>Entity Framework Core
 

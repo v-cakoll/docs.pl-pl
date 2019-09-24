@@ -2,14 +2,14 @@
 title: Przewodnik platformy .NET Core
 description: .NET Core to modularna, wielowydajna implementacja platformy .NET do tworzenia aplikacji dla systemów Windows, Linux i Mac. Dowiedz się więcej o programie .NET Core, aby rozpocząć pracę.
 author: richlander
-ms.date: 08/01/2018
+ms.date: 09/23/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: a6112851a3d9b46f02c26313e6537170786df10b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 95f18ca09852ce139a4b99ed7aef4802d4883e13
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117073"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216217"
 ---
 # <a name="net-core-guide"></a>Przewodnik platformy .NET Core
 
@@ -19,19 +19,19 @@ Zobacz [Informacje o programie .NET Core](about.md) , aby dowiedzieć się więc
 
 Zapoznaj się z [samouczkami dotyczącymi platformy .NET Core](tutorials/index.md) , aby dowiedzieć się, jak utworzyć prostą aplikację platformy .NET Core. Rozpoczęcie pracy z pierwszą aplikacją może zająć zaledwie kilka minut. Jeśli chcesz wypróbować platformę .NET Core w przeglądarce, poszukaj [cyfr w C# ](../csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml) samouczku online.
 
-## <a name="download-net-core-22"></a>Pobierz program .NET Core 2,2
+## <a name="download-net-core"></a>Pobierz program .NET Core
 
-Pobierz [zestaw .net core 2,2 SDK](https://dotnet.microsoft.com/download) , aby wypróbować platformę .NET Core na komputerze z systemem Windows, MacOS lub Linux. Jeśli wolisz używać kontenerów platformy Docker, odwiedź stronę [dotnet/Core](https://hub.docker.com/_/microsoft-dotnet-core/) .
+Pobierz [zestaw .NET Core SDK](https://www.microsoft.com/net/download) , aby wypróbować platformę .NET Core na komputerze z systemem Windows, MacOS lub Linux. Jeśli wolisz używać kontenerów platformy Docker, odwiedź stronę programu [.NET Core Docker Hub](https://hub.docker.com/_/microsoft-dotnet-core/).
 
 Wszystkie wersje programu .NET Core są dostępne w [programie .NET Core downloads](https://dotnet.microsoft.com/download/dotnet-core) , jeśli szukasz innej wersji platformy .NET Core.
 
-## <a name="net-core-22"></a>.NET Core 2.2
+## <a name="net-core-30"></a>.NET Core 3.0
 
-Najnowsza wersja to [.NET Core 2,2](whats-new/dotnet-core-2-2.md). Nowe funkcje obejmują: wdrożenia zależne od platformy, punkty uruchomienia, uwierzytelnianie w usłudze AAD z użyciem usługi Azure SQL i obsługę systemu Windows ARM32.
+Najnowsza wersja to .NET Core 3,0. Nowe funkcje obejmują obsługę pulpitu systemu Windows z Windows Presentation Foundation (WPF) i Windows Forms, tworzenie C# aplikacji sieci Web w pełnym stosie przy użyciu usługi Blazor, nowe udoskonalenia funkcji sygnalizujących i usługa Azure Signal, nowe C# funkcje języka: C# 8 i wiele innych. Aby zapoznać się z pełną listą nowych funkcji w programie .NET Core 3,0, zobacz [co nowego w programie .net core 3,0](./whats-new/dotnet-core-3-0.md).
 
 ## <a name="create-your-first-application"></a>Tworzenie pierwszej aplikacji
 
-Po zainstalowaniu zestaw .NET Core SDK Otwórz wiersz polecenia. Wpisz następujące `dotnet` polecenia, aby utworzyć i uruchomić C# aplikację.
+Po zainstalowaniu zestaw .NET Core SDK Otwórz wiersz polecenia. Wpisz następujące `dotnet` polecenia, aby utworzyć i uruchomić C# aplikację:
 
 ```dotnetcli
 dotnet new console

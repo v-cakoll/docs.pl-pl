@@ -2,12 +2,12 @@
 title: Rekordy
 description: Dowiedz F# się, jak rekordy reprezentują proste Agregowanie wartości nazwanych, opcjonalnie z elementami członkowskimi.
 ms.date: 06/09/2019
-ms.openlocfilehash: 1ba002407b1ccbcbceed32df8636fb860e89e3b6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 874c5fa30a36f2778f7a43266316deb8c59d1d72
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053938"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216787"
 ---
 # <a name="records"></a>Rekordy
 
@@ -122,7 +122,7 @@ Rekordy mogą być używane z dopasowywaniem do wzorca. Niektóre pola można ok
 
 Dane wyjściowe tego kodu są następujące.
 
-```
+```console
 Point is at the origin.
 Point is on the x-axis. Value is 100.000000.
 Point is at (10.000000, 0.000000, -1.000000).
@@ -138,7 +138,7 @@ Podobnie jak w przypadku typów Unii i struktury, rekordy mają semantykę równ
 
 Dane wyjściowe tego kodu są następujące:
 
-```
+```console
 The records are equal.
 ```
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e9d76d5907e7d700fc57117ccb43f8c430c615b0
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: d48ced9d0201a33f9149aba155ddd3d8bc04c93f
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181834"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71217046"
 ---
 ### <a name="serializableattribute-removed-from-some-windows-forms-types"></a>SerializableAttribute usunięte z niektórych typów Windows Forms
 
@@ -28,7 +28,7 @@ Następujące typy są dekoracyjne <xref:System.SerializableAttribute> w .NET Fr
 
 W przeszłości ten mechanizm serializacji miał poważne problemy związane z konserwacją i bezpieczeństwem. Utrzymywanie `SerializableAttribute` na typach oznacza, że te typy muszą być testowane pod kątem zmian serializacji z wersji do wersji oraz ewentualnych zmian serializacji między platformami. Dzięki temu trudniej jest rozwijać te typy i mogą być kosztowne do utrzymania. Te typy nie mają znanych scenariuszy serializacji binarnej, co minimalizuje wpływ usuwania atrybutu.
 
-Aby uzyskać więcej informacji, zobacz <https://docs.microsoft.com/en-us/dotnet/standard/serialization/binary-serialization>.
+Aby uzyskać więcej informacji, zobacz [Serializacja binarna](~/docs/standard/serialization/binary-serialization.md).
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -46,7 +46,7 @@ Windows Forms
 
 - Brak
 
-<!-- 
+<!--
 
 ### Affected APIs
 

@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 2dd10c0843b2bea4755d5f4f0aceea6509c7cf46
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 38b935814d713284dae1ca931b90c63bbcac332b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054308"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216897"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Samouczek: Analizuj tonacjie przeglądy filmów przy użyciu wstępnie przeszkolonego modelu TensorFlow w ML.NET
 
@@ -19,8 +19,9 @@ W tym samouczku przedstawiono sposób użycia wstępnie przeszkolonego modelu Te
 
 Model TensorFlow używany w tym samouczku został przeszkolony przy użyciu recenzji filmów z bazy danych IMDB. Po zakończeniu opracowywania aplikacji będzie można dostarczyć tekst z recenzji filmu, a aplikacja poinformuje użytkownika o tym, czy przegląd ma pozytywne czy negatywne tonacji.
 
-Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
+Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 > [!div class="checklist"]
+>
 > * Załaduj wstępnie szkolony model TensorFlow
 > * Przekształć tekst komentarza witryny internetowej w funkcje odpowiednie dla modelu
 > * Tworzenie prognoz przy użyciu modelu
@@ -120,7 +121,7 @@ Rozmiar tablicy funkcji o zmiennej długości jest zmieniany na stałą długoś
     [!code-csharp[Prediction](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#Prediction "Declare prediction class")]
 
     `MovieReviewSentimentPrediction`jest klasą predykcyjną używaną po przekształceniu modelu. `MovieReviewSentimentPrediction`ma jedną `float` tablicę (`Prediction`) i `VectorType` atrybut.
-    
+
 ### <a name="create-the-mlcontext-lookup-dictionary-and-action-to-resize-features"></a>Tworzenie MLContext, słownika wyszukiwania i akcji w celu zmiany rozmiaru funkcji
 
 [Klasa MLContext](xref:Microsoft.ML.MLContext) jest punktem początkowym dla wszystkich operacji ml.NET. Inicjowanie `mlContext` tworzy nowe środowisko ml.NET, które może być współużytkowane przez obiekty przepływu pracy tworzenia modelu. Jest to podobne, pojęciowo do `DBContext` w Entity Framework.
@@ -191,7 +192,7 @@ Rozmiar tablicy funkcji o zmiennej długości jest zmieniany na stałą długoś
 
 1. Dodaj kod, aby utworzyć model z potoku:
 
-    [!code-csharp[SnippetCreateModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCreateModel)]  
+    [!code-csharp[SnippetCreateModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCreateModel)]
 
     Model ml.NET jest tworzony na podstawie łańcucha szacowania w potoku przez wywołanie `Fit` metody. W takim przypadku nie dopasowujemy żadnych danych w celu utworzenia modelu, ponieważ model TensorFlow został już wcześniej przeszkolony. Dostarczamy pusty obiekt widoku danych w celu spełnienia wymagań `Fit` metody.
 
@@ -200,10 +201,10 @@ Rozmiar tablicy funkcji o zmiennej długości jest zmieniany na stałą długoś
 1. `PredictSentiment` Dodaj metodę`Main` poniżej metody:
 
     ```csharp
-        public static void PredictSentiment(MLContext mlContext, ITransformer model)
-        {
+    public static void PredictSentiment(MLContext mlContext, ITransformer model)
+    {
 
-        }
+    }
     ```
 
 1. Dodaj następujący kod, aby utworzyć `PredictionEngine` jako pierwszy wiersz `PredictSentiment()` w metodzie:
@@ -241,8 +242,8 @@ Kompiluj i uruchamiaj aplikację.
 Wyniki powinny wyglądać podobnie do poniższego. Podczas przetwarzania wyświetlane są komunikaty. Mogą pojawić się ostrzeżenia lub przetwarzanie komunikatów. Te komunikaty zostały usunięte z następujących wyników dla przejrzystości.
 
 ```console
-   Number of classes: 2
-   Is sentiment/review positive ? Yes
+Number of classes: 2
+Is sentiment/review positive ? Yes
 ```
 
 Gratulacje! Pomyślnie skompilowano model uczenia maszynowego do klasyfikowania i przewidywania komunikatów tonacji przez ponowne użycie wstępnie nauczonego `TensorFlow` modelu w ml.NET.
@@ -251,6 +252,7 @@ Kod źródłowy dla tego samouczka można znaleźć w repozytorium [dotnet/Sampl
 
 W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
+>
 > * Załaduj wstępnie szkolony model TensorFlow
 > * Przekształć tekst komentarza witryny internetowej w funkcje odpowiednie dla modelu
 > * Tworzenie prognoz przy użyciu modelu

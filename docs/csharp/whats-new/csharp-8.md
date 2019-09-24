@@ -1,17 +1,17 @@
 ---
 title: Co nowego w C# 8,0 — C# Przewodnik
-description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8,0. Ten artykuł jest aktualny w wersji zapoznawczej 5.
+description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8,0.
 ms.date: 09/20/2019
-ms.openlocfilehash: a434d1f7598bc3f6787f7466e48fb161db192761
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 95331c8dd8e8b5e0d5af242752565d8e93120937
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182409"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216491"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego w C# 8,0
 
-Istnieje wiele ulepszeń C# języka, który można wypróbować już.
+C#8,0 dodaje do C# języka następujące funkcje i ulepszenia:
 
 - [Elementy członkowskie tylko do odczytu](#readonly-members)
 - [Domyślne elementy członkowskie interfejsu](#default-interface-members)
@@ -30,9 +30,6 @@ Istnieje wiele ulepszeń C# języka, który można wypróbować już.
 - [Niezarządzane typy skonstruowane](#unmanaged-constructed-types)
 - [stackalloc w wyrażeniach zagnieżdżonych](#stackalloc-in-nested-expressions)
 - [Ulepszenie interpolowanych ciągów Verbatim](#enhancement-of-interpolated-verbatim-strings)
-
-> [!NOTE]
-> Ten artykuł został ostatnio zaktualizowany do C# wersji 8,0 Preview 5.
 
 W pozostałej części tego artykułu krótko opisano te funkcje. Tam, gdzie są dostępne szczegółowe artykuły, znajdują się linki do samouczków i przeglądów. Te funkcje można eksplorować w środowisku za pomocą `dotnet try` narzędzia globalnego:
 

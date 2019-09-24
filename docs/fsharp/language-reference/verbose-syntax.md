@@ -1,27 +1,27 @@
 ---
 title: Pełna składnia
-description: Różnice między pełnego i uproszczonego składni w F# języka programowania.
+description: Zapoznaj się z różnicą między pełną i uproszczoną F# składnią w języku programowania.
 ms.date: 05/16/2016
-ms.openlocfilehash: c95965d7d9d18a0fca11663a474dbbc9375a9494
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d2459da60bba5d88bd23615c8bf09ba64f7c22c4
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641665"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214040"
 ---
 # <a name="verbose-syntax"></a>Pełna składnia
 
-Istnieją dwie formy składnia dla wielu konstrukcji w F# języka: *Pełna składnia* i *lightweight — składnia*. Pełna składnia nie jest tak często używane, ale ma tę zaletę są mniej podatne na wcięcia. Lightweight — składnia jest krótsza i używa wcięcia w celu sygnalizowania, że na początku i na końcu konstrukcji, zamiast dodatkowych słów kluczowych, takich jak `begin`, `end`, `in`i tak dalej. Domyślnie przyjmowana jest składnia składni lekkiej. W tym temacie opisano składnię F# konstrukcji, gdy lightweight — składnia nie jest włączone. Pełna składnia jest zawsze włączone, dlatego nawet jeśli włączysz lightweight — składnia, nadal mogą używać Pełna składnia dla niektórych konstrukcji. Lightweight — składnia można wyłączyć za pomocą `#light "off"` dyrektywy.
+Istnieją dwie formy składni dostępne dla wielu konstrukcji w F# języku: *Pełna składnia* i *składnia uproszczona*. Składnia verbose nie jest zgodna z powszechnie używanymi, ale ma zalety mniejszej czułości do wcięcia. Uproszczona składnia jest krótsza i używa wcięć do sygnalizowania początku i końca konstrukcji, zamiast dodatkowych słów kluczowych `begin` `in`, takich jak `end`,, i tak dalej. Domyślną składnią jest składnia uproszczona. W tym temacie opisano składnię F# dla konstrukcji, gdy nie jest włączona składnia uproszczona. Pełna składnia jest zawsze włączona, więc nawet w przypadku włączenia uproszczonej składni można nadal używać składni pełnej dla niektórych konstrukcji. Można wyłączyć składnię uproszczoną za pomocą `#light "off"` dyrektywy.
 
 ## <a name="table-of-constructs"></a>Tabela konstrukcji
 
-W poniższej tabeli przedstawiono składnię uproszczona i pełne F# konstrukcji językowych w kontekstach w przypadku, gdy istnieje różnica między dwoma formularzami. W tej tabeli, kąt nawiasy kwadratowe (&lt;&gt;) należy ująć elementy składni dostarczone przez użytkownika. Zapoznaj się z dokumentacją dla każdego konstrukcją języka pierwszej klasy, aby uzyskać szczegółowe informacje o składni używane w ramach te konstrukcje.
+W poniższej tabeli przedstawiono składnię uproszczoną i pełną dla F# konstrukcji języka w kontekstach, w których istnieje różnica między dwoma formularzami. W tej tabeli, nawiasy kątowe (&lt;&gt;) otaczają elementy składni dostarczone przez użytkownika. Zapoznaj się z dokumentacją dla każdej konstrukcji języka, aby uzyskać bardziej szczegółowe informacje na temat składni używanej w ramach tych konstrukcji.
 
 <table>
 <tr>
-<th>Konstrukcją języka pierwszej klasy</th>
-<th>Lightweight — Składnia</th>
-<th>Pełna składnia</th>
+<th>Konstrukcja języka</th>
+<th>Składnia uproszczona</th>
+<th>Verbose — składnia</th>
 </tr>
 <tr>
 <td>
@@ -44,7 +44,7 @@ wyrażenia złożone
 </tr>
 <tr><td>
 
-zagnieżdżone `let` powiązania
+powiązania `let` zagnieżdżone
 
 </td><td>
 
@@ -99,7 +99,7 @@ for counter = start to finish do
 
 </td><td>
 
-```
+```fsharp
 for counter = start to finish do
     ...
 done
@@ -164,7 +164,7 @@ in
 
 </td>
 </tr>
-<tr><td>Rekord
+<tr><td>record
 </td><td>
 
 ```fsharp
@@ -227,7 +227,7 @@ type <structure-name> =
 
 </td>
 </tr>
-<tr><td>złożenia dyskryminowanego</td><td>
+<tr><td>Unia rozłączna</td><td>
 
 ```fsharp
 type <union-name> =
@@ -311,7 +311,7 @@ interface <interface-name>
 
 </td>
 </tr>
-<tr><td>rozszerzenia typu</td><td>
+<tr><td>rozszerzenie typu</td><td>
 
 ```fsharp
 type <type-name>

@@ -3,12 +3,12 @@ title: Generowanie i używanie strumieni asynchronicznych
 description: Ten zaawansowany samouczek ilustruje scenariusze, w których generowanie i zużywanie strumieni asynchronicznych zapewnia bardziej naturalny sposób pracy z sekwencjami danych, które mogą być generowane asynchronicznie.
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: 3fdf5299deca365c62a00a8320ea335e96d9078c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 04c4fe1c7e33138273c5b49c6985efc60767a724
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926688"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216553"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Samouczek: Generowanie i używanie strumieni asynchronicznych C# przy użyciu 8,0 i .net Core 3,0
 
@@ -24,7 +24,7 @@ W tym samouczku dowiesz się, jak:
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Musisz skonfigurować maszynę do uruchamiania programu .NET Core, w tym kompilatora C# 8,0 beta. Kompilator C# 8-Beta jest dostępny począwszy od [programu Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)lub najnowszej wersji [zapoznawczej zestawu SDK programu .NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0). Strumienie asynchroniczne są najpierw dostępne w programie .NET Core 3,0 w wersji zapoznawczej 1.
+Musisz skonfigurować maszynę do uruchamiania programu .NET Core, w tym kompilatora C# 8,0. C# 8 kompilator jest dostępny w programie [Visual Studio 2019 w wersji 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) lub [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download).
 
 Musisz utworzyć [token dostępu GitHub](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token) , aby uzyskać dostęp do punktu końcowego usługi GitHub GraphQL. Wybierz następujące uprawnienia dla tokenu dostępu usługi GitHub:
 

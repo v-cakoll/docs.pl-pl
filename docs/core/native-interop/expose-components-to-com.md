@@ -1,5 +1,5 @@
 ---
-title: Udostępnianie składników .NET Core modelowi COM
+title: Udostępnianie składników .NET Core do modelu COM
 ms.date: 07/12/2019
 helpviewer_keywords:
 - exposing .NET Core components to COM
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 686d1b31478121a8b2c907d99672a5fcc3438a71
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8f9624414a2b423bd43e8790d11b70ae1ca6286d
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849030"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216225"
 ---
-# <a name="exposing-net-core-components-to-com"></a>Udostępnianie składników .NET Core modelowi COM
+# <a name="exposing-net-core-components-to-com"></a>Udostępnianie składników .NET Core do modelu COM
 
 W programie .NET Core proces uwidaczniania obiektów .NET do modelu COM został znacznie ulepszony w porównaniu do .NET Framework. Poniższy proces przeprowadzi Cię przez sposób udostępnienia klasy modelowi COM. W tym samouczku pokazano, jak:
 
@@ -25,16 +25,24 @@ W programie .NET Core proces uwidaczniania obiektów .NET do modelu COM został 
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Zainstaluj [zestaw SDK programu .NET Core 3,0 w wersji 7](https://dotnet.microsoft.com/download) lub nowszej.
+- Zainstaluj program [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download) lub nowszą wersję.
 
 ## <a name="create-the-library"></a>Utwórz bibliotekę
 
 Pierwszym krokiem jest utworzenie biblioteki.
 
-1. Utwórz nowy folder i w tym folderze zostanie uruchomiony `dotnet new classlib`.
+1. Utwórz nowy folder, a w tym folderze Uruchom następujące polecenie:
+    
+    ```dotnetcli
+    dotnet new classlib
+    ```
+
 2. Otwórz `Class1.cs`.
 3. Dodaj `using System.Runtime.InteropServices;` na początku pliku.
-4. Utwórz interfejs o nazwie `IServer`. Na przykład:[!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
+4. Utwórz interfejs o nazwie `IServer`. Na przykład:
+
+   [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
+
 5. `[Guid("<IID>")]` Dodaj atrybut do interfejsu przy użyciu identyfikatora GUID interfejsu dla implementowanego interfejsu com. Na przykład `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`. Należy zauważyć, że ten identyfikator GUID musi być unikatowy, ponieważ jest jedynym identyfikatorem tego interfejsu dla modelu COM. W programie Visual Studio można wygenerować identyfikator GUID, przechodząc do menu Narzędzia > Utwórz GUID, aby otworzyć narzędzie Tworzenie identyfikatora GUID.
 6. `[InterfaceType]` Dodaj atrybut do interfejsu i określ podstawowe interfejsy com, które ma zaimplementować interfejs.
 7. Utwórz klasę o nazwie `Server` implementującej `IServer`.

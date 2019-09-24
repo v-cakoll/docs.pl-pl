@@ -2,12 +2,12 @@
 title: 'Pętle: for...in — Wyrażenie'
 description: Zobacz, F# jak... w konstrukcji zapętlania wyrażeń jest używany do iteracji na dopasowaniach wzorca w wyliczalnej kolekcji.
 ms.date: 05/16/2016
-ms.openlocfilehash: 640b0f91f6c641f3b49a99dc67abe7e4c31911ea
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5a2ca59ca4199ece5d78010ff780e86ae2b25181
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630715"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216445"
 ---
 # <a name="loops-forin-expression"></a>Pętle: for...in — Wyrażenie
 
@@ -44,7 +44,7 @@ Poniższe przykłady kodu ilustrują użycie `for...in` wyrażenia.
 
 Dane wyjściowe są następujące:
 
-```
+```console
 1
 5
 100
@@ -58,7 +58,7 @@ Poniższy przykład pokazuje, jak wykonać pętlę w sekwencji i jak używać wz
 
 Dane wyjściowe są następujące:
 
-```
+```console
 1 squared is 1
 2 squared is 4
 3 squared is 9
@@ -77,7 +77,7 @@ Poniższy przykład pokazuje, jak wykonać pętlę dla prostego zakresu liczb ca
 
 Dane wyjściowe function1 są następujące.
 
-```
+```console
 1 2 3 4 5 6 7 8 9 10
 ```
 
@@ -87,7 +87,7 @@ Poniższy przykład pokazuje, jak pętla w zakresie z pominięciem 2, które obe
 
 Dane wyjściowe `function2` są w następujący sposób.
 
-```
+```console
 1 3 5 7 9
 ```
 
@@ -97,7 +97,7 @@ Poniższy przykład pokazuje, jak używać zakresu znaków.
 
 Dane wyjściowe `function3` są w następujący sposób.
 
-```
+```console
 a b c d e f g h i j k l m n o p q r s t u v w x y z
 ```
 
@@ -107,7 +107,7 @@ Poniższy przykład pokazuje, jak używać ujemnej wartości pomijania dla itera
 
 Dane wyjściowe `function4` są w następujący sposób.
 
-```
+```console
 10 9 8 7 6 5 4 3 2 1 ... Lift off!
 ```
 
@@ -117,7 +117,7 @@ Początek i koniec zakresu mogą również być wyrażeniami, takimi jak funkcje
 
 Dane wyjściowe `function5` z tymi danymi wejściowymi są następujące.
 
-```
+```console
 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
 ```
 
@@ -127,11 +127,11 @@ W następnym przykładzie pokazano użycie symbolu wieloznacznego (\_), gdy elem
 
 Dane wyjściowe są następujące:
 
-```
+```console
 Number of elements in list1: 5
 ```
 
-`Note`Można używać `for...in` w wyrażeniach sekwencji i innych wyrażeniach obliczeniowych, w tym przypadku używana jest dostosowana wersja `for...in` wyrażenia. Aby uzyskać więcej informacji, [](sequences.md)Zobacz sekwencje, [asynchroniczne przepływy pracy](asynchronous-workflows.md)i [wyrażenia obliczeń](computation-expressions.md).
+`Note`Można używać `for...in` w wyrażeniach sekwencji i innych wyrażeniach obliczeniowych, w tym przypadku używana jest dostosowana wersja `for...in` wyrażenia. Aby uzyskać więcej informacji, zobacz [sekwencje](sequences.md), [asynchroniczne przepływy pracy](asynchronous-workflows.md)i [wyrażenia obliczeń](computation-expressions.md).
 
 ## <a name="see-also"></a>Zobacz także
 

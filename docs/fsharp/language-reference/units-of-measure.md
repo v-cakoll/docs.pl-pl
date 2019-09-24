@@ -2,12 +2,12 @@
 title: Jednostki miary
 description: Dowiedz się, w jaki sposób zmiennoprzecinkowe F# i podpisane wartości całkowite w programie mogą mieć skojarzone jednostki miary, które zwykle są używane do wskazywania długości, ilości i masy.
 ms.date: 05/16/2016
-ms.openlocfilehash: f97eac9984f934c55aff8cf9f287afbc3aa098f3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a81f7760301dc580e333d4659a72e6259d2c916b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630157"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216686"
 ---
 # <a name="units-of-measure"></a>Jednostki miary
 
@@ -81,7 +81,7 @@ Ponadto, gdy wartości wymiarów są przekazywane do funkcji, które oczekują l
 
 Poniższa przykładowa sesja pokazuje dane wyjściowe z i wejścia do tego kodu.
 
-```
+```console
 Enter a temperature in degrees Fahrenheit.
 90
 That temperature in degrees Celsius is    32.22.

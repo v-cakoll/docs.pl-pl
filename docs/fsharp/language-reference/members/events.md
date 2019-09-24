@@ -2,12 +2,12 @@
 title: Zdarzenia
 description: Dowiedz F# się, jak zdarzenia umożliwiają kojarzenie wywołań funkcji z akcjami użytkownika, które są ważne w programowaniu graficznego interfejsu użytkownika.
 ms.date: 05/16/2016
-ms.openlocfilehash: 7c3f16204b762609323fc2bcdc05f80e85a298e8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e581d9c31c1b8f3c114b86c898011dec3bd52535
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917277"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216464"
 ---
 # <a name="events"></a>Zdarzenia
 
@@ -36,7 +36,7 @@ Aby utworzyć zdarzenie na klasie, która działa podobnie jak wszystkie inne zd
 
 Dane wyjściowe są następujące:
 
-```
+```console
 Event1 occurred! Object data: Hello World!
 ```
 
@@ -46,7 +46,7 @@ Dodatkowe funkcje zapewniane przez `Event` moduł przedstawiono w tym miejscu. P
 
 Dane wyjściowe poprzedniego kodu wyglądają następująco:
 
-```
+```console
 Event occurred.
 Given a value: Event occurred.
 ```

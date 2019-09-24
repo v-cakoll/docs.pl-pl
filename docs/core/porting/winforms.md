@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: b2a660d2fc42f0dfe932afce167058f7c1efc92b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 7480c86af1acd482adff5e3e24dc229f24af0e5b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116525"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216321"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Instrukcje: Port aplikacji klasycznej Windows Forms do programu .NET Core
 
@@ -50,7 +50,7 @@ Podczas przenoszenia aplikacji Windows Forms .NET Framework należy wziąć pod 
 
 01. Używasz innej wersji Windows Forms.
 
-    Po wydaniu programu .NET Core 3,0 w wersji zapoznawczej 1 Windows Forms poszło do otwarcia źródła w serwisie GitHub. Kod dla Windows Forms .NET Core jest rozwidleniem podstawy kodu .NET Framework Windows Forms. Istnieją pewne różnice, które nie są dostępne dla aplikacji.
+    Po wydaniu programu .NET Core 3,0 w wersji zapoznawczej 1 Windows Forms mógł zostać otwartym źródłem w serwisie GitHub. Kod dla Windows Forms .NET Core jest rozwidleniem bazy kodu .NET Framework Windows Forms. Istnieją pewne różnice, które nie są dostępne dla aplikacji.
 
 01. [Pakiet zgodności systemu Windows][compat-pack] może pomóc w migracji.
 

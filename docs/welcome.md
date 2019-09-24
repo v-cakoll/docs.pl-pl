@@ -3,14 +3,14 @@ title: .NET — Zapraszamy!
 description: Wprowadzenie do rodziny .NET Technologies.
 author: mairaw
 ms.author: mairaw
-ms.date: 05/06/2019
+ms.date: 09/23/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 2927b892f8f83366a46cb113b3f0233bbd168974
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 0b4a2380bf2ddb59c181a07d7f8a006d6252d11f
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855479"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216851"
 ---
 # <a name="welcome-to-net"></a>.NET — Zapraszamy!
 
@@ -29,10 +29,10 @@ Aby uzyskać informacje na temat platformy .NET, zapoznaj się z następującymi
 
 Należy również przestrzegać najnowszych zdarzeń platformy .NET:
 
-- [Microsoft Connect()](https://www.microsoft.com/connectevent)
-- [Microsoft Build 2018](https://channel9.msdn.com/Events/Build/2018)
+- [Kompilacja firmy Microsoft](https://www.microsoft.com/build)
 - [.NET conf](https://www.dotnetconf.net/)
-
+- [Microsoft Connect()](https://www.microsoft.com/connectevent)
+- 
 Informacje o najnowszych funkcjach dodanych do implementacji platformy .NET i obsługiwanych języków można znaleźć w następujących artykułach:
 
 - [Co nowego w programie .NET Core](core/whats-new/index.md)
@@ -52,8 +52,15 @@ Ta dokumentacja obejmuje szeroki zakres platformy .NET dla różnych platform i 
 - [Przewodnik po Visual Basic](visual-basic/index.md)
 - [Przewodnik po strukturze ML.NET](machine-learning/index.yml)
 - [.NET dla Apache Spark](spark/index.yml)
+- [Architektura aplikacji .NET](architecture/index.yml)
 
 Ponadto można przeglądać [Informacje o interfejsie API platformy .NET](/dotnet/api).
+
+## <a name="videos"></a>Wideo
+
+Eksploruj wideo w sieci Web, na urządzeniach przenośnych C#, komputerach stacjonarnych, uczeniu maszynowym, kontenerach/platformie Docker, dostępie do danych i nie tylko:
+
+[Seria filmów programu .NET 101](https://dotnet.microsoft.com/learn/videos)
 
 ## <a name="open-source"></a>Kod open source
 

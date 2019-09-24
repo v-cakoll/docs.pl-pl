@@ -2,12 +2,12 @@
 title: Przeciążanie operatora
 description: Dowiedz się, jak przeciążać operatory arytmetyczne w klasie lub typie rekordu oraz na F#poziomie globalnym w.
 ms.date: 05/16/2016
-ms.openlocfilehash: c656c1c47938e62386c8f063cf9a6caaaf69d0fe
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d902a06193481ed87131b3336cd8a2ff54b811b4
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627388"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216837"
 ---
 # <a name="operator-overloading"></a>Przeciążanie operatora
 
@@ -123,7 +123,7 @@ Jako operatorów można również używać innych, niewymienionych tutaj kombina
 
 ## <a name="prefix-and-infix-operators"></a>Operatory przedrostkowe i wrostkowe
 
-Operatory prefiksów powinny być umieszczone przed operandem lub operandami, podobnie jak funkcja. Operatory *wrostkowe* powinny być umieszczane między dwoma operandami.
+Operatory *prefiksów* powinny być umieszczone przed operandem lub operandami, podobnie jak funkcja. Operatory *wrostkowe* powinny być umieszczane między dwoma operandami.
 
 Jako operatorów przedrostkowych można używać tylko niektórych operatorów. Niektóre operatory są zawsze operatorami przedrostkowymi, inne mogą być wrostkowe lub przedrostkowe, a pozostałe są zawsze operatorami wrostkowymi. Operatory, które zaczynają się znakiem `!` (z wyjątkiem `!=`), oraz operator `~` lub powtarzające się sekwencje operatora `~`, są zawsze operatorami przedrostkowymi. Operatory `+`, `-`, `+.`, `-.`, `&`, `&&`, `%` i `%%` mogą być przedrostkowe lub wrostkowe. Przedrostkowe wersje tych operatorów można odróżnić od wersji wrostkowych przez dodanie znaku `~` na początku operatora przedrostkowego podczas jego definiowania. Znak `~` nie jest wykorzystywany podczas używania operatora, a tylko podczas jego definiowania.
 
@@ -135,7 +135,7 @@ Poniższy kod ilustruje zastosowania przeciążenia operatora w celu zaimplement
 
 **Dane wyjściowe:**
 
-```
+```console
 3/4 + 1/2 = 5/4
 3/4 - 1/2 = 1/4
 3/4 * 1/2 = 3/8

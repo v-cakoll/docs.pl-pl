@@ -6,40 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 09/17/2019
-ms.openlocfilehash: 45d5117f264a24c2658debad9a111d4d4b9b9a8e
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 09/22/2019
+ms.openlocfilehash: ddb758b942099657708e79b590c7817c309396d7
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182441"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216264"
 ---
-# <a name="whats-new-in-net-core-30-release-candidate-1"></a>Co nowego w programie .NET Core 3,0 (wersja Release Candidate 1)
+# <a name="whats-new-in-net-core-30"></a>Co nowego w programie .NET Core 3.0
 
-W tym artykule opisano nowości w programie .NET Core 3,0 do wersji Release Candidate 1 (RC1). Jednym z największych ulepszeń jest obsługa aplikacji klasycznych systemu Windows (tylko system Windows). Korzystając z pulpitu systemu Windows składnika zestawu SDK platformy .NET Core 3,0, można przenieść aplikacje Windows Forms i Windows Presentation Foundation (WPF). Aby można było wyczyścić, składnik pulpitu systemu Windows jest obsługiwany i uwzględniany w systemie Windows. Aby uzyskać więcej informacji, zobacz sekcję [pulpitu systemu Windows](#windows-desktop) w dalszej części tego artykułu.
+W tym artykule opisano nowości w programie .NET Core 3,0. Jednym z największych ulepszeń jest obsługa aplikacji klasycznych systemu Windows (tylko system Windows). Korzystając z pulpitu systemu Windows składnika zestawu SDK platformy .NET Core 3,0, można przenieść aplikacje Windows Forms i Windows Presentation Foundation (WPF). Aby można było wyczyścić, składnik pulpitu systemu Windows jest obsługiwany i uwzględniany w systemie Windows. Aby uzyskać więcej informacji, zobacz sekcję [pulpitu systemu Windows](#windows-desktop) w dalszej części tego artykułu.
 
-Program .NET Core 3,0 dodaje obsługę C# 8,0. Zdecydowanie zaleca się używanie [programu Visual Studio 2019 16,3 Preview 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview), [Visual Studio dla komputerów Mac 8,3](/visualstudio/mac/install-preview)lub [Visual Studio Code](https://code.visualstudio.com/) z  **C# rozszerzeniem**.
+Program .NET Core 3,0 dodaje obsługę C# 8,0. Zdecydowanie zaleca się używanie [programu Visual Studio 2019 16,3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), [Visual Studio dla komputerów Mac 8,3](/visualstudio/mac/install-preview)lub [Visual Studio Code](https://code.visualstudio.com/) z  **C# rozszerzeniem**.
 
-[Pobierz i Rozpocznij pracę z platformą .NET Core 3,0 RC1](https://aka.ms/netcore3download) teraz w systemie Windows, MacOS lub Linux.
+[Pobierz i Rozpocznij pracę z platformą .NET Core 3,0](https://aka.ms/netcore3download) teraz w systemie Windows, MacOS lub Linux.
 
-Aby uzyskać więcej informacji na temat każdej wersji zapoznawczej, zobacz następujące powiadomienia:
+Aby uzyskać więcej informacji o wersji, zobacz [anons programu .NET Core 3,0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/).
 
-- [Anons platformy .NET Core 3,0 RC1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-release-candidate-1/)
-- [Anons programu .NET Core 3,0 Preview 9](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)
-- [Anons programu .NET Core 3,0 Preview 8](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
-- [Anons programu .NET Core 3,0 w wersji zapoznawczej 7](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
-- [Anons programu .NET Core 3,0 w wersji 6](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
-- [Anons programu .NET Core 3,0 Preview 5](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
-- [Anons programu .NET Core 3,0 Preview 4](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-4/)
-- [Anons programu .NET Core 3,0 Preview 3](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-3/)
-- [Anons programu .NET Core 3,0 w wersji zapoznawczej 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
-- [Powiadomienie dotyczące programu .NET Core 3,0 Preview 1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
-
-## <a name="production-supported-preview"></a>Wersja zapoznawcza obsługiwanej produkcji
-
-Środowisko .NET Core RC1 jest uznawane za gotowe do produkcji przez firmę Microsoft i jest w pełni obsługiwane. Począwszy od wersji zapoznawczej 7, wersje będą skoncentrowane na polerowaniu platformy .NET Core 3,0 zamiast dodawania nowych funkcji. Aby uzyskać więcej informacji na temat zmian w wersji RC1, zobacz [anons RC1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-release-candidate-1/).
-
-Jeśli używasz starszej wersji zapoznawczej, musisz przejść do usługi RC1, aby kontynuować obsługę "go na żywo".
+Środowisko .NET Core RC1 zostało uznane za gotowe do produkcji przez firmę Microsoft i zostało w pełni obsługiwane. Jeśli korzystasz z wersji zapoznawczej, musisz przejść do wersji RTM, aby uzyskać pomoc techniczną.
 
 ## <a name="net-core-sdk-windows-installer"></a>Zestaw .NET Core SDK Instalator Windows
 
@@ -47,13 +32,13 @@ Instalator MSI dla systemu Windows został zmieniony począwszy od platformy .NE
 
 Aby uzyskać więcej informacji na temat przechowywania wersji, zobacz [Omówienie wersji platformy .NET Core](../versions/index.md).
 
-## <a name="c-80-preview"></a>C#wersja zapoznawcza 8,0
+## <a name="c-80"></a>C#8,0
 
-Program .NET Core 3,0 C# obsługuje 8 wersji zapoznawczych. Aby uzyskać więcej informacji C# o funkcjach 8,0, zobacz [co nowego C# w programie 8,0](../../csharp/whats-new/csharp-8.md).
+C#8,0 jest również częścią tej wersji, która obejmuje funkcję typów referencyjnych dopuszczających wartość null, strumienie asynchroniczne i więcej wzorców. Aby uzyskać więcej informacji C# o funkcjach 8,0, zobacz [co nowego C# w programie 8,0](../../csharp/whats-new/csharp-8.md).
 
 ## <a name="net-standard-21"></a>.NET Standard 2,1
 
-Mimo że program .NET Core 3,0 obsługuje **.NET Standard 2,1**, szablon `dotnet new classlib` domyślny generuje projekt, który jest przeznaczony dla **.NET Standard 2,0**. Aby docelowa **.NET Standard 2,1**, edytuj plik projektu i Zmień `TargetFramework` właściwość na `netstandard2.1`:
+Mimo że program .NET Core 3,0 obsługuje **.NET Standard 2,1**, szablon `dotnet new classlib` domyślny generuje projekt, który nadal jest celem **.NET Standard 2,0**. Aby docelowa **.NET Standard 2,1**, edytuj plik projektu i Zmień `TargetFramework` właściwość na `netstandard2.1`:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -515,7 +500,7 @@ Aby uzyskać więcej informacji o ograniczonej obsłudze portu szeregowego w sys
 
 ## <a name="docker-and-cgroup-memory-limits"></a>Limity pamięci Docker i cgroup
 
-Począwszy od wersji zapoznawczej 3, uruchomienie programu .NET Core 3,0 w systemie Linux z rozwiązaniem Docker działa lepiej z limitami pamięci cgroup. Uruchamianie kontenera Docker z limitami pamięci, na przykład z `docker run -m`, zmienia sposób działania programu .NET Core.
+Uruchamianie programu .NET Core 3,0 w systemie Linux przy użyciu platformy Docker działa lepiej z limitami pamięci cgroup. Uruchamianie kontenera Docker z limitami pamięci, na przykład z `docker run -m`, zmienia sposób działania programu .NET Core.
 
 - Domyślny rozmiar sterty modułu wyrzucania elementów bezużytecznych (GC): maksymalnie 20 MB lub 75% limitu pamięci w kontenerze.
 - Rozmiar jawny można ustawić jako liczbę bezwzględną lub procent limitu cgroup.

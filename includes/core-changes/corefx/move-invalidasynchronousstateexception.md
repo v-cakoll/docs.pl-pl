@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4b41e5fcb6da638457ca8029a635f391b6a7b8ec
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 82835915efa0e113e81bb09bd5062ee3252f2a64
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182011"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71217102"
 ---
 ### <a name="invalidasynchronousstateexception-moved-to-another-assembly"></a>InvalidAsynchronousStateException — przeniesiony do innego zestawu
 
@@ -32,7 +32,7 @@ CoreFx
 
 - Brak
 
-<!-- 
+<!--
 
 ### Affected APIs
 

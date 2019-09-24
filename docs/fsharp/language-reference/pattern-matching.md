@@ -2,12 +2,12 @@
 title: Dopasowanie wzorca
 description: Dowiedz się, w jaki F# sposób wzorce są używane w programie, aby porównać dane ze strukturami logicznymi, rozłożyć dane na części składowe lub Wyodrębnij informacje z danych.
 ms.date: 05/16/2016
-ms.openlocfilehash: 60e0d6cd550724bc8448fddd7b163c2c9f1637be
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 0e14fa00103742bbf5f054f8c04a7669ed767e63
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733468"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216801"
 ---
 # <a name="pattern-matching"></a>Dopasowanie wzorca
 
@@ -25,7 +25,7 @@ match expression with
 ...
 ```
 
-Każdy wzorzec działa jako reguła do przekształcania danych wejściowych w jakiś sposób. `match` W wyrażeniu każdy wzorzec jest sprawdzany z kolei, aby sprawdzić, czy dane wejściowe są zgodne ze wzorcem. W przypadku znalezienia dopasowania zostanie wykonane wyrażenie wynik. Jeśli dopasowanie nie zostanie znalezione, zostanie przetestowana następna reguła wzorca. Wartość opcjonalna , gdy część warunku jest objaśniona w [wyrażeniach dopasowania](match-expressions.md).
+Każdy wzorzec działa jako reguła do przekształcania danych wejściowych w jakiś sposób. `match` W wyrażeniu każdy wzorzec jest sprawdzany z kolei, aby sprawdzić, czy dane wejściowe są zgodne ze wzorcem. W przypadku znalezienia dopasowania zostanie wykonane wyrażenie wynik. Jeśli dopasowanie nie zostanie znalezione, zostanie przetestowana następna reguła wzorca. Wartość opcjonalna, gdy część *warunku* jest objaśniona w [wyrażeniach dopasowania](match-expressions.md).
 
 Obsługiwane wzorce przedstawiono w poniższej tabeli. W czasie wykonywania, dane wejściowe są testowane względem każdego z następujących wzorców w kolejności wymienionej w tabeli, a wzorce są stosowane cyklicznie, od pierwszego do ostatniego, jak pojawiają się w kodzie, i od lewej do prawej dla wzorców w każdym wierszu.
 
@@ -95,7 +95,7 @@ Użycie nazwanego pola jest opcjonalne, dlatego w poprzednim przykładzie oba `C
 
 Po określeniu wielu pól Użyj średnika (;) jako separator.
 
-```
+```fsharp
 match shape with
 | Rectangle(height = h; width = w) -> printfn "Rectangle with height %f and width %f" h w
 | _ -> ()

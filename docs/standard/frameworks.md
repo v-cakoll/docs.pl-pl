@@ -1,17 +1,17 @@
 ---
 title: Platformy docelowe
 description: Dowiedz się więcej na temat platform docelowych dla aplikacji i bibliotek platformy .NET Core.
-author: richlander
+author: mairaw
 ms.author: mairaw
-ms.date: 04/02/2019
+ms.date: 09/23/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 20b13bb590a63a807c1894bf08051053f90c0fc4
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b05923b293b1a5bb94a69ddd0154f8701b9326b0
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666520"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216661"
 ---
 # <a name="target-frameworks"></a>Platformy docelowe
 
@@ -23,7 +23,7 @@ W celu uzyskania dostępu do interfejsów API specyficznych dla implementacji ap
 
 W przypadku niektórych platform docelowych (na przykład .NET Framework) interfejsy API są definiowane przez Zestawy instalowane przez platformę w systemie i mogą zawierać interfejsy API struktury aplikacji (na przykład ASP.NET).
 
-W przypadku platform docelowych opartych na pakietach (na przykład .NET Standard i .NET Core) interfejsy API są definiowane przez pakiety zawarte w aplikacji lub bibliotece. Pakiet jest pakietem NuGet, który nie ma własnej zawartości, ale jest listą zależności (inne pakiety). Platforma docelowa oparta na pakiecie NuGet niejawnie określa pakiet, który odwołuje się do wszystkich pakietów, które razem tworzą strukturę.
+W przypadku platform docelowych opartych na pakietach (na przykład .NET Standard i .NET Core) interfejsy API są definiowane przez pakiety zawarte w aplikacji lub bibliotece. Pakiet *jest* pakietem NuGet, który nie ma własnej zawartości, ale jest listą zależności (inne pakiety). Platforma docelowa oparta na pakiecie NuGet niejawnie określa pakiet, który odwołuje się do wszystkich pakietów, które razem tworzą strukturę.
 
 ## <a name="latest-target-framework-versions"></a>Najnowsze wersje platformy docelowej
 
@@ -31,8 +31,8 @@ Poniższa tabela zawiera definicje najpopularniejszych platform docelowych, spos
 
 | Struktura docelowa      | Najnowsza <br/> Stabilna wersja | Moniker platformy docelowej (TFM) | Realizowane <br/> Wersja .NET Standard |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
-| .NET Standard         | 2.0                         | netstandard2.0                 | Brak                                     |
-| .NET Core             | 2.2                         | netcoreapp 2.2                  | 2.0                                     |
+| .NET Standard         | 2.1                         | Standard 2.1                 | Brak                                     |
+| .NET Core             | 3.0                         | netcoreapp 3.0                  | 2.1                                     |
 | .NET Framework        | 4.8                         | net48                          | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>Obsługiwane wersje platformy docelowej
@@ -41,8 +41,8 @@ Platforma docelowa jest zwykle przywoływana przez TFM. W poniższej tabeli prze
 
 | Struktura docelowa           | TFM |
 | -------------------------- | --- |
-| .NET Standard              | Standard 1.0<br>Standard 1.1<br>Standard 1.2<br>Standard 1.3<br>Standardowa 1.4<br>Standard 1.5<br>Standard 1.6<br>netstandard2.0 |
-| .NET Core                  | netcoreapp 1.0<br>netcoreapp 1.1<br>netcoreapp 2.0<br>netcoreapp 2.1<br>netcoreapp 2.2 |
+| .NET Standard              | Standard 1.0<br>Standard 1.1<br>Standard 1.2<br>Standard 1.3<br>Standardowa 1.4<br>Standard 1.5<br>Standard 1.6<br>netstandard2.0<br>Standard 2.1 |
+| .NET Core                  | netcoreapp 1.0<br>netcoreapp 1.1<br>netcoreapp 2.0<br>netcoreapp 2.1<br>netcoreapp 2.2<br>netcoreapp 3.0 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
 | Sklep Windows              | Rdzeń [netcore45]<br>netcore45 [win] [Win8]<br>netcore451 [Win81] |
 | .NET Micro Framework       | netmf |
@@ -52,14 +52,14 @@ Platforma docelowa jest zwykle przywoływana przez TFM. W poniższej tabeli prze
 
 ## <a name="how-to-specify-target-frameworks"></a>Jak określić Platformy docelowe
 
-Struktury docelowe są określone w pliku projektu. W przypadku określenia pojedynczej platformy docelowej należy użyć elementu **TargetFramework** . Poniższy plik projektu aplikacji konsolowej pokazuje, jak kierować platformą .NET Core 2,2:
+Struktury docelowe są określone w pliku projektu. W przypadku określenia pojedynczej platformy docelowej należy użyć elementu **TargetFramework** . Poniższy plik projektu aplikacji konsolowej pokazuje, jak kierować platformą .NET Core 3,0:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
 </Project>
@@ -112,7 +112,7 @@ System kompilacji ma świadomość symboli preprocesora reprezentujących Platfo
 
 Kompletna lista symboli preprocesora dla platform .NET Core Target Framework to:
 
-[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
+[!INCLUDE [Preprocessor symbols](../../includes/preprocessor-symbols.md)]
 
 ## <a name="deprecated-target-frameworks"></a>Przestarzałe Platformy docelowe
 

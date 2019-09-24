@@ -1,0 +1,93 @@
+- name: Projektowanie natywnych dla chmury aplikacji platformy .NET dla platformy Azure
+  href: index.md
+  items:
+    - name: Wprowadzenie do natywnych aplikacji w chmurze
+      href: introduction.md
+      items:
+        - name: Definiowanie rozwiązań natywnych dla chmury
+          href: definition.md
+        - name: Aplikacje kandydujące rozwiązań natywnych dla chmury
+          href: candidate-apps.md
+    - name: Wprowadzenie do aplikacji referencyjnej eShopOnContainers
+      href: introduce-eshoponcontainers-reference-app.md
+      items:
+        - name: Mapowanie aplikacji eShopOnContainers na usługi platformy Azure
+          href: map-eshoponcontainers-azure-services.md
+        - name: Wdrażanie aplikacji eShopOnContainers na platformie Azure
+          href: deploy-eshoponcontainers-azure.md
+        - name: Konfiguracja scentralizowana
+          href: centralized-configuration.md
+    - name: Skalowanie natywnych dla chmury aplikacji platformy .NET
+      href: scale-applications.md
+      items:
+        - name: Korzystanie z kontenerów i orkiestratorów
+          href: leverage-containers-orchestrators.md
+        - name: Korzystanie z funkcji bezserwerowych
+          href: leverage-serverless-functions.md
+        - name: Łączenie kontenerów i rozwiązań bezserwerowych
+          href: combine-containers-serverless-approaches.md
+        - name: Wdrażanie kontenerów na platformie Azure
+          href: deploy-containers-azure.md
+        - name: Skalowanie kontenerów i aplikacji bezserwerowych
+          href: scale-containers-serverless.md
+        - name: Inne opcje wdrożenia
+          href: other-deployment-options.md
+    - name: Wzorce komunikacji rozwiązań natywnych dla chmury
+      href: communication-patterns.md
+      items:
+        - name: Komunikacja z klientem frontonu
+          href: front-end-communication.md
+        - name: Komunikacja między usługami
+          href: service-to-service-communication.md
+        - name: REST i gRPC
+          href: rest-grpc.md
+        - name: Infrastruktura komunikacji z siatką usług
+          href: service-mesh-communication-infrastructure.md
+    - name: Rozproszone dane
+      href: distributed-data.md
+      items:
+        - name: Wzorce danych natywnych w chmurze
+          href: data-patterns.md
+        - name: Magazyn danych na platformie Azure
+          href: azure-data-storage.md
+    - name: Odporność rozwiązań natywnych dla chmury
+      href: resiliency.md
+      items:
+        - name: Wzorce odporności aplikacji
+          href: application-resiliency-patterns.md
+        - name: Odporność infrastruktury chmury na platformie Azure
+          href: infrastructure-resiliency-azure.md
+        - name: Komunikacja odporna
+          href: resilient-communications.md
+    - name: Monitorowanie i kondycja
+      href: monitoring-health.md
+      items:
+        - name: Wzorce wglądu
+          href: observability-patterns.md
+        - name: Rejestrowanie przy użyciu elastycznego stosu
+          href: logging-with-elastic-stack.md
+        - name: Monitorowanie w usługach Azure Kubernetes Services
+          href: monitoring-azure-kubernetes.md
+        - name: Azure Monitor
+          href: azure-monitor.md
+    - name: Tożsamość
+      href: identity.md
+      items:
+        - name: Uwierzytelnianie i autoryzacja w aplikacjach natywnych dla chmury
+          href: authentication-authorization.md
+        - name: Azure Active Directory
+          href: azure-active-directory.md
+        - name: Serwer tożsamości
+          href: identity-server.md
+    - name: Zabezpieczenia
+      href: security.md
+      items:
+        - name: Zabezpieczenia platformy Azure dla aplikacji natywnych dla chmury
+          href: azure-security.md
+    - name: Usługa DevOps natywna dla chmury
+      href: devops.md
+      items:
+        - name: Infrastruktura jako kod
+          href: infrastructure-as-code.md
+        - name: Pakiety aplikacji natywnych dla chmury
+          href: application-bundles.md

@@ -2,12 +2,12 @@
 title: Przepływ pracy wewnętrznej pętli tworzenia kodu dla aplikacji platformy Docker
 description: Zapoznaj się z przepływem pracy "pętla wewnętrzna" na potrzeby opracowywania aplikacji platformy Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: ce573546f61b98c2f93e998203497fa949e9efe8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 04e1b29e6a0cef89df05cc9124806c74a38b5249
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295846"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214351"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Przepływ pracy wewnętrznej pętli tworzenia kodu dla aplikacji platformy Docker
 
@@ -47,8 +47,7 @@ Sposób tworzenia aplikacji jest podobny do sposobu, w jaki to zrobisz, bez doko
 
 Najnowsze wersje platformy Docker dla komputerów Mac i systemu Windows ułatwiają tworzenie aplikacji platformy Docker, a instalacja jest prosta.
 
-> [! ZAWARTYCH
->
+> [!TIP]
 > Aby uzyskać instrukcje dotyczące konfigurowania Docker for Windows, przejdź do <https://docs.docker.com/docker-for-windows/>.
 >
 >Aby uzyskać instrukcje dotyczące konfigurowania platformy Docker dla komputerów Mac, <https://docs.docker.com/docker-for-mac/>przejdź do.
@@ -57,8 +56,7 @@ Ponadto potrzebny jest Edytor kodu, dzięki czemu można w rzeczywistości oprac
 
 Firma Microsoft udostępnia Visual Studio Code, który jest lekkim edytorem kodu obsługiwanym w systemach Mac, Windows i Linux oraz udostępnia technologię IntelliSense z [obsługą wielu języków](https://code.visualstudio.com/docs/languages/overview) (JavaScript, .NET, go, Java, Ruby, Python i większość nowoczesnych języków). [ Debugowanie](https://code.visualstudio.com/Docs/editor/debugging), [integracja z](https://code.visualstudio.com/Docs/editor/versioncontrol) [obsługą git i rozszerzeniami](https://code.visualstudio.com/docs/extensions/overview). Ten Edytor jest doskonałym rozwiązaniem dla deweloperów systemów Mac i Linux. W systemie Windows można również użyć pełnej aplikacji programu Visual Studio.
 
-> [! ZAWARTYCH
->
+> [!TIP]
 > Aby uzyskać instrukcje dotyczące instalowania Visual Studio Code dla systemu Windows, Mac lub Linux, przejdź <https://code.visualstudio.com/docs/setup/setup-overview/>do.
 >
 > Aby uzyskać instrukcje dotyczące konfigurowania platformy Docker dla komputerów Mac, <https://docs.docker.com/docker-for-mac/>przejdź do.
@@ -94,7 +92,6 @@ Musisz `DockerFile` utworzyć obraz niestandardowy do skompilowania i na kontene
 `DockerFile` Jest to zwykle umieszczane w folderze głównym aplikacji lub usługi i zawiera wymagane polecenia, dzięki czemu platforma Docker wie, jak skonfigurować i uruchomić tę aplikację lub usługę. Możesz utworzyć `DockerFile` i dodać go do projektu wraz z kodem (Node. js, .NET Core itp.) lub, jeśli jesteś nowym środowiskiem, zapoznaj się z poniższą wskazówką.
 
 > [!TIP]
->
 > Możesz użyć rozszerzenia Docker, aby poprowadzić Cię podczas korzystania `Dockerfile` z `docker-compose.yml` plików i związanych z kontenerami platformy Docker. Na koniec prawdopodobnie napiszesz te rodzaje plików bez tego narzędzia, ale przy użyciu rozszerzenia Docker jest dobrym punktem wyjścia, który przyspiesza uczenie się.
 
 Na rysunku 4-24 można zobaczyć, jak zostanie dodany plik do redagowania platformy Docker przy użyciu rozszerzenia Docker dla VS Code.
@@ -133,8 +130,7 @@ W pliku dockerfile można także nakazać platformie Docker nasłuchiwanie portu
 
 Możesz określić dodatkowe ustawienia konfiguracji w pliku dockerfile, w zależności od używanego języka i platformy. Na przykład `ENTRYPOINT` wiersz z `["dotnet", "MySingleContainerWebApp.dll"]` poleceniem instruuje platformę Docker, aby uruchomić aplikację .NET Core. Jeśli używasz zestawu SDK i interfejs wiersza polecenia platformy .NET Core (`dotnet CLI`) do kompilowania i uruchamiania aplikacji .NET, to ustawienie będzie inne. Kluczowym punktem jest to, że wiersz punktu wejścia i inne ustawienia zależą od języka i platformy wybranej dla aplikacji.
 
-> [! ZAWARTYCH
->
+> [!TIP]
 > Aby uzyskać więcej informacji na temat tworzenia obrazów platformy Docker dla aplikacji platformy .NET <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>Core, przejdź do.
 >
 > Aby dowiedzieć się więcej na temat tworzenia własnych obrazów, <https://docs.docker.com/engine/tutorials/dockerimages/>przejdź do.
@@ -154,7 +150,6 @@ Możesz utworzyć własny obraz podstawowy platformy Docker od podstaw, jak wyja
 Dla każdej usługi niestandardowej, która składa się z aplikacji, konieczne będzie utworzenie powiązanego obrazu. Jeśli aplikacja składa się z pojedynczej usługi lub aplikacji sieci Web, będzie potrzebny tylko jeden obraz.
 
 > [!NOTE]
->
 > Podczas wzięcia pod uwagę "przepływu pracy DevOps pętla zewnętrzna" obrazy zostaną utworzone przez zautomatyzowany proces kompilacji po każdym wypchnięciu kodu źródłowego do repozytorium git (ciągłej integracji), dzięki czemu obrazy zostaną utworzone w tym środowisku globalnym z kod źródłowy.
 >
 > Jednak przed rozważeniem przechodzenia do tej trasy z pętlą zewnętrzną musimy upewnić się, że aplikacja platformy Docker rzeczywiście działa prawidłowo, aby nie wypchnięcia kodu, który może nie działać prawidłowo w systemie kontroli źródła (git itp.).
@@ -275,5 +270,5 @@ Można również debugować kontenery .NET Core lub .NET Framework w programie D
 > Aby dowiedzieć się więcej na temat debugowania kontenerów platformy Docker Node <https://blog.docker.com/2016/07/live-debugging-docker/> . <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/>js, przejdź do i.
 
 >[!div class="step-by-step"]
->[Poprzedni](docker-apps-development-environment.md)Następny
->[](visual-studio-tools-for-docker.md)
+>[Poprzedni](docker-apps-development-environment.md)
+>[Następny](visual-studio-tools-for-docker.md)

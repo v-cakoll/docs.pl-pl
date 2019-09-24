@@ -2,12 +2,12 @@
 title: Środowisko deweloperskie dla aplikacji platformy Docker
 description: Poznaj najważniejsze opcje narzędzia deweloperskiego, które obsługują cykl życia platformy Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 0f71ffa5e6870f45908e4def6577120a17ec744c
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 35236e75f47e830d0970ca9cfd074d9a69e6f85c
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295302"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214302"
 ---
 # <a name="development-environment-for-docker-apps"></a>Środowisko deweloperskie dla aplikacji platformy Docker
 
@@ -20,7 +20,6 @@ Niezależnie od tego, czy wolisz pełną i wydajną platformę IDE, czy też Edy
 Jeśli wolisz lekki Edytor Międzyplatformowy obsługujący dowolny język programowania, możesz użyć Visual Studio Code i interfejsu wiersza polecenia platformy Docker. Te produkty zapewniają proste, a jeszcze niezawodne środowisko, które ma kluczowe znaczenie dla usprawnienia przepływu pracy dewelopera. Instalując "Docker for Mac" lub "Docker for Windows" (środowisko programistyczne), deweloperzy platformy Docker mogą używać jednego interfejsu wiersza polecenia platformy Docker do kompilowania aplikacji dla systemu Windows lub Linux (środowisko uruchomieniowe). Dodatkowo Visual Studio Code obsługuje rozszerzenia dla platformy Docker z technologią IntelliSense dla wieloetapowe dockerfile oraz zadania skrótów do uruchamiania poleceń platformy Docker z edytora.
 
 > [!NOTE]
->
 > Aby pobrać Visual Studio Code, przejdź do <https://code.visualstudio.com/download>.
 >
 > Aby pobrać platformę Docker dla komputerów Mac i Windows <https://www.docker.com/products/docker>, przejdź do.
@@ -47,5 +46,5 @@ Aplikacje platformy Docker można opracowywać przy użyciu narzędzi firmy Micr
 W zasadzie można użyć dowolnego nowoczesnego języka obsługiwanego przez platformę Docker w systemie Linux lub Windows.
 
 >[!div class="step-by-step"]
->[Poprzedni](deploy-azure-kubernetes-service.md)Następny
->[](docker-apps-inner-loop-workflow.md)
+>[Poprzedni](deploy-azure-kubernetes-service.md)
+>[Następny](docker-apps-inner-loop-workflow.md)

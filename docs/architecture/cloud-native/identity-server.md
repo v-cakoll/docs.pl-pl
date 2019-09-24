@@ -2,12 +2,12 @@
 title: IdentityServer dla natywnych aplikacji w chmurze
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | IdentityServer
 ms.date: 06/30/2019
-ms.openlocfilehash: 69084ad19a353b2152b67957ee944f6ce36ce370
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 6217f6093d8dc9df6ab058ebdbf99197752aee0c
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183078"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214022"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>IdentityServer dla aplikacji natywnych w chmurze
 
@@ -47,7 +47,7 @@ Usługi identityserver4 to "open source" i bezpłatna do użycia. Możesz dodać
 
 ## <a name="configuration"></a>Konfiguracja
 
-Program IdentityServer obsługuje różne rodzaje protokołów i dostawców uwierzytelniania społecznościowego, które można skonfigurować w ramach każdej instalacji niestandardowej. Jest to zazwyczaj wykonywane w `Startup` klasie aplikacji ASP.NET Core `ConfigureServices` w metodzie. Konfiguracja obejmuje określenie obsługiwanych protokołów i ścieżek do serwerów i punktów końcowych, które będą używane. Rysunek 8-X przedstawia przykładową konfigurację wykonywaną w projekcie interfejsu użytkownika usługi identityserver4 szybkiego startu:
+Program IdentityServer obsługuje różne rodzaje protokołów i dostawców uwierzytelniania społecznościowego, które można skonfigurować w ramach każdej instalacji niestandardowej. Jest to zazwyczaj wykonywane w `Startup` klasie aplikacji ASP.NET Core `ConfigureServices` w metodzie. Konfiguracja obejmuje określenie obsługiwanych protokołów i ścieżek do serwerów i punktów końcowych, które będą używane. Na rysunku 8-2 przedstawiono przykładową konfigurację wykonywaną w projekcie interfejsu użytkownika szybkiego startu usługi identityserver4:
 
 ```csharp
 public class Startup
@@ -90,7 +90,7 @@ public class Startup
 }
 ```
 
-**Rysunek 8-X**. Konfigurowanie IdentityServer.
+**Rysunek 8-2**. Konfigurowanie IdentityServer.
 
 IdentityServer również udostępnia publiczną witrynę demonstracyjną, która może służyć do testowania różnych protokołów i konfiguracji. Znajduje się on w [https://demo.identityserver.io/](https://demo.identityserver.io/) systemie i zawiera informacje dotyczące sposobu konfigurowania jego zachowania na podstawie `client_id` dostarczonego do niego działania.
 
@@ -106,4 +106,4 @@ Wiele aplikacji natywnych w chmurze korzysta z interfejsów API po stronie serwe
 
 >[!div class="step-by-step"]
 >[Poprzedni](azure-active-directory.md)
->[Następny](security.md) <!-- Next Chapter -->
+>[Następny](security.md)

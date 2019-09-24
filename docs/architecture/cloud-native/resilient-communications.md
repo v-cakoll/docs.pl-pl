@@ -2,12 +2,12 @@
 title: Komunikacja odporna
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Komunikacja odporna
 ms.date: 06/30/2019
-ms.openlocfilehash: 75a2ffe611ad0cf4bfa20efb49a6993bdbe6b073
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: d7fd4552059f527ad5166dcb6be04248bfad8e4a
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184849"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214495"
 ---
 # <a name="resilient-communications"></a>Komunikacja odporna
 
@@ -75,4 +75,4 @@ Chmura Azure obejmuje usługę Istio i zapewnia bezpośrednią pomoc techniczną
 
 >[!div class="step-by-step"]
 >[Poprzedni](infrastructure-resiliency-azure.md)
->[Następny](monitoring-health.md) <!-- Next Chapter -->
+>[Następny](monitoring-health.md)

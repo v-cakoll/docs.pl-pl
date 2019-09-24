@@ -2,12 +2,12 @@
 title: Zabezpieczenia platformy Azure dla aplikacji natywnych w chmurze
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Zabezpieczenia platformy Azure dla natywnych aplikacji w chmurze
 ms.date: 06/30/2019
-ms.openlocfilehash: 79e1ec9bd91285041791e36275b03f128f2fe136
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 1eb371e5c8497d769265791ae28fd2b3fcfd7387
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183610"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214131"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Zabezpieczenia platformy Azure dla aplikacji natywnych w chmurze
 
@@ -265,8 +265,8 @@ Mimo że Cosmos DB nie zapewnia do dostarczania kluczy szyfrowania klienta, w ce
 
 ## <a name="keeping-secure"></a>Zabezpieczanie
 
-Platforma Azure ma wszystkie narzędzia niezbędne do zwolnienia wysoce bezpiecznego produktu. Jednak łańcuch jest tylko tak silny jak jego słaby link. Jeśli aplikacje wdrożone na platformie Azure nie są opracowywane przy użyciu właściwej sposób myślenia zabezpieczeń i dobrych inspekcji zabezpieczeń, stają się one słabymi łączami w łańcuchu. Istnieje wiele doskonałych narzędzi do analizy statycznej, bibliotek szyfrowania i praktyk zabezpieczeń, których można użyć w celu zapewnienia, że oprogramowanie zainstalowane na platformie Azure jest tak bezpieczne jak platforma Azure. WhiteSource ([statyczne narzędzia do analizy](https://www.whitesourcesoftware.com/), [biblioteki szyfrowania](https://www.libressl.org/)i [praktyki zabezpieczeń](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/), LibreSSL (https://www.libressl.org/) i [czerwona a Testy z przedziału zabezpieczeń Blue-](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/) Internal Microsoft Azure są odpowiednio przykłady. 
+Platforma Azure ma wszystkie narzędzia niezbędne do zwolnienia wysoce bezpiecznego produktu. Jednak łańcuch jest tylko tak silny jak jego słaby link. Jeśli aplikacje wdrożone na platformie Azure nie są opracowywane przy użyciu właściwej sposób myślenia zabezpieczeń i dobrych inspekcji zabezpieczeń, stają się one słabymi łączami w łańcuchu. Istnieje wiele doskonałych narzędzi do analizy statycznej, bibliotek szyfrowania i praktyk zabezpieczeń, których można użyć w celu zapewnienia, że oprogramowanie zainstalowane na platformie Azure jest tak bezpieczne jak platforma Azure. [statyczne narzędzia do analizy](https://www.whitesourcesoftware.com/), [biblioteki szyfrowania](https://www.libressl.org/)i [praktyki zabezpieczeń](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/), [LibreSSL](https://www.libressl.org/) i [Red a Testy z przedziału zabezpieczeń Blue-](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/) Internal Microsoft Azure są odpowiednio przykłady. 
 
 >[!div class="step-by-step"]
 >[Poprzedni](security.md)
->[Następny](devops.md) <!-- Next Chapter -->
+>[Następny](devops.md)

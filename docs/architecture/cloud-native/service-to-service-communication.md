@@ -3,12 +3,12 @@ title: Komunikacja między usługami
 description: Dowiedz się, jak mikrousługi zaplecza w chmurze komunikują się z innymi mikrousługami zaplecza.
 author: robvet
 ms.date: 09/09/2019
-ms.openlocfilehash: 7a69678fd38a69c3c2d7e91d4aea019c39141cb6
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: e9f27309fd6b03830ab3098d0fb08a7ecf5c0eaa
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184674"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214391"
 ---
 # <a name="service-to-service-communication"></a>Komunikacja między usługami
 
@@ -60,7 +60,7 @@ Popularną opcją usunięcia sprzęgu mikrousług jest [wzorzec widoku materiał
 
 ### <a name="service-aggregator-pattern"></a>Wzorzec agregatora usług
 
-Kolejną opcją wyeliminowania sprzęgu mikrousług do micrservice jest [mikrousługa agregatora](https://devblogs.microsoft.com/cesardelatorre/designing-and-implementing-api-gateways-with-ocelot-in-a-microservices-and-container-based-architecture/), pokazana w kolorze purpurowym na rysunku 4-10. 
+Kolejną opcją wyeliminowania mikrousług na mikrousługach jest mikrousługa [agregatora](https://devblogs.microsoft.com/cesardelatorre/designing-and-implementing-api-gateways-with-ocelot-in-a-microservices-and-container-based-architecture/), pokazana w kolorze purpurowym na rysunku 4-10. 
 
 ![Usługa agregatora](./media/aggregator-service.png)
 
@@ -232,4 +232,4 @@ W przypadku aplikacji natywnych w chmurze, które muszą przesyłać strumieniow
 
 >[!div class="step-by-step"]
 >[Poprzedni](front-end-communication.md)
->[Następny](rest-grpc.md) <!-- Next Chapter -->
+>[Następny](rest-grpc.md)

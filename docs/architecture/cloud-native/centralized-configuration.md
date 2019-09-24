@@ -2,12 +2,12 @@
 title: Konfiguracja scentralizowana
 description: Centralna konfiguracja przy użyciu Azure Key Vault może ułatwić zarządzanie aplikacjami natywnymi w chmurze.
 ms.date: 06/30/2019
-ms.openlocfilehash: f4f495591550abccf2c64ef24cbe7620b039d8ca
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 4c516b6773d913acd71ff06742302e9766a141e2
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183519"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71213999"
 ---
 # <a name="centralized-configuration"></a>Konfiguracja scentralizowana
 
@@ -27,4 +27,4 @@ W przypadku scentralizowanej konfiguracji ustawienia, które mają zastosowanie 
 
 >[!div class="step-by-step"]
 >[Poprzedni](deploy-eshoponcontainers-azure.md)
->[Następny](scale-applications.md) <!-- Next Chapter -->
+>[Następny](scale-applications.md)

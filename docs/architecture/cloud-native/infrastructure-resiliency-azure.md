@@ -2,12 +2,12 @@
 title: Odporność na platformę Azure
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Odporność infrastruktury chmurowej na platformę Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 5d8ddc65ccdf4bb305be62e5caca30eab49f87e2
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 7f148588be97fa6bf8a055f5f5bed8e23908277f
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182980"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214201"
 ---
 # <a name="azure-platform-resiliency"></a>Odporność na platformę Azure
 
@@ -68,7 +68,7 @@ Chmura jest w trakcie skalowania. Możliwość zwiększenia/zmniejszenia zasobó
 
 - *Skorzystaj z funkcji skalowania automatycznego platformy.* Korzystaj z wbudowanych funkcji skalowania automatycznego, jeśli jest to możliwe, a nie mechanizmów niestandardowych lub innych firm. Jeśli to możliwe, Użyj reguł skalowania zaplanowanego, aby upewnić się, że zasoby są dostępne bez opóźnień uruchamiania, ale Dodaj aktywne Skalowanie automatyczne do odpowiednich reguł, aby sprostać nieoczekiwanym zmianom popytu. Aby uzyskać więcej informacji, zobacz [wskazówki dotyczące skalowania](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling)automatycznego.
 
- - *Agresywne skalowanie w górę.* Ostatecznym celem jest agresywne skalowanie w górę, dzięki czemu można szybko zaspokoić natychmiastowe wzrosty ruchu bez utraty firmy. A następnie skalowanie w dół (czyli usuwanie niepotrzebnych zasobów) jest bardziej ostrożne, aby zapewnić stabilny system. Prostym sposobem wdrożenia tego ustawienia jest ustawienie okresu dla chłodzenia, czyli czasu oczekiwania między operacjami skalowania, do pięciu minut w przypadku dodawania zasobów oraz do 15 minut na usuwanie wystąpień.
+- *Agresywne skalowanie w górę.* Ostatecznym celem jest agresywne skalowanie w górę, dzięki czemu można szybko zaspokoić natychmiastowe wzrosty ruchu bez utraty firmy. A następnie skalowanie w dół (czyli usuwanie niepotrzebnych zasobów) jest bardziej ostrożne, aby zapewnić stabilny system. Prostym sposobem wdrożenia tego ustawienia jest ustawienie okresu dla chłodzenia, czyli czasu oczekiwania między operacjami skalowania, do pięciu minut w przypadku dodawania zasobów oraz do 15 minut na usuwanie wystąpień.
 
 ## <a name="built-in-retry-in-services"></a>Wbudowane ponawianie próby w usługach
 

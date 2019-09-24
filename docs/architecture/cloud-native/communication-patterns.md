@@ -1,16 +1,16 @@
 ---
-title: Wzorce komunikacji natywnej w chmurze
+title: Wzorce komunikacji rozwiązań natywnych dla chmury
 description: Informacje o problemach z łącznością usług w aplikacjach natywnych w chmurze
 author: robvet
 ms.date: 08/31/2019
-ms.openlocfilehash: 0123d2e3da1bf8df29efcf2595a38c377dd1d1a1
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 3bda9baa516b7bd8f893e0f58bbe5e2bfde2b61d
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183379"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214018"
 ---
-# <a name="cloud-native-communication-patterns"></a>Wzorce komunikacji natywnej w chmurze
+# <a name="cloud-native-communication-patterns"></a>Wzorce komunikacji rozwiązań natywnych dla chmury
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -20,7 +20,7 @@ Podczas konstruowania systemu natywnego w chmurze komunikacja jest istotną decy
 
 W aplikacji monolitycznej komunikacja jest prosta. Moduły kodu są wykonywane razem w tym samym obszarze plików wykonywalnych (proces) na serwerze. Takie podejście może mieć zalety wydajności, ponieważ wszystkie elementy działają razem w pamięci współdzielonej, ale w przypadku ściśle sprzężonego kodu trudno zachować, rozwijać i skalować.
 
-Systemy natywne w chmurze implementują architekturę opartą na mikrousługach z wieloma małymi, niezależnymi mikrousługami. Każda mikrousługa jest wykonywana w osobnym procesie i zazwyczaj jest uruchamiana wewnątrz kontenera wdrożonego w *klastrze*. 
+Systemy natywne w chmurze implementują architekturę opartą na mikrousługach z wieloma małymi, niezależnymi mikrousługami. Każda mikrousługa jest wykonywana w osobnym procesie i zazwyczaj jest uruchamiana wewnątrz kontenera wdrożonego w *klastrze*.
 
 Klaster grupuje pulę maszyn wirtualnych w celu tworzenia środowiska o wysokiej dostępności. Są one zarządzane za pomocą narzędzia Orchestration, które jest odpowiedzialne za wdrażanie mikrousług kontenerów i zarządzanie nimi. Rysunek 4-1 przedstawia klaster [Kubernetes](https://kubernetes.io) wdrożony w chmurze platformy Azure z w pełni zarządzanymi [usługami Kubernetes platformy Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes).
 
@@ -46,8 +46,7 @@ Chociaż zapewniają wiele korzyści, mikrousługi nie są bezpłatnymi obiadami
 
 Mikrousługi [książki .NET: Architektura kontenerów aplikacji](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)platformy .NET, które są dostępne bezpłatnie od firmy Microsoft, zapewnia szczegółowe pokrycie wzorców komunikacji dla aplikacji mikrousług. W tym rozdziale udostępniamy ogólne omówienie tych wzorców wraz z opcjami implementacji dostępnymi w chmurze platformy Azure.
 
-W tym rozdziale będziemy najpierw rozwiązywać komunikaty między aplikacjami frontonu a mikrousługami zaplecza. Następnie będziemy informować o mikrousługach zaplecza. Będziemy poznać technologię komunikacji w górę i w gRPC. Na koniec będziemy szukać nowych innowacyjnych wzorców komunikacji przy użyciu technologii siatki usług. Zobaczymy również, w jaki sposób usługa Azure Cloud oferuje różne rodzaje *usług zapasowych* w celu obsługi komunikacji natywnej w chmurze.  
-
+W tym rozdziale będziemy najpierw rozwiązywać komunikaty między aplikacjami frontonu a mikrousługami zaplecza. Następnie będziemy informować o mikrousługach zaplecza. Będziemy poznać technologię komunikacji w górę i w gRPC. Na koniec będziemy szukać nowych innowacyjnych wzorców komunikacji przy użyciu technologii siatki usług. Zobaczymy również, w jaki sposób usługa Azure Cloud oferuje różne rodzaje *usług zapasowych* w celu obsługi komunikacji natywnej w chmurze.
 
 >[!div class="step-by-step"]
 >[Poprzedni](other-deployment-options.md)

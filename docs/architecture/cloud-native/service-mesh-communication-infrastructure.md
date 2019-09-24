@@ -3,12 +3,12 @@ title: Infrastruktura komunikacji z siatką usług
 description: Dowiedz się więcej na temat sposobu, w jaki technologie sieci w chmurze upraszczają natywną komunikację mikrousług
 author: robvet
 ms.date: 09/10/2019
-ms.openlocfilehash: dc9237197732ea622aad726583140623b0a5a4f4
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 884b3bf9afd80144a36d3328af916f1c1f12bf4f
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184786"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214346"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>Infrastruktura komunikacji z siatką usług
 
@@ -74,4 +74,4 @@ Następnie następnym przejdziemy do danych rozproszonych w systemach natywnych 
 
 >[!div class="step-by-step"]
 >[Poprzedni](rest-grpc.md)
->[Następny](distributed-data.md) <!-- Next Chapter -->
+>[Następny](distributed-data.md)

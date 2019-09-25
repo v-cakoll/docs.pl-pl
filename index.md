@@ -5,13 +5,13 @@ hide_bc: true
 title: Dokumentacja platformy .NET
 description: Dowiedz się, jak używać platformy .NET do tworzenia różnych aplikacji na dowolnej platformie w języku C#, Visual Basic i F#. Przeglądaj dokumentację dotyczącą interfejsu API, przykładowy kod, samouczki i inne zasoby.
 ms.custom: updateeachrelease
-ms.date: 09/04/2019
-ms.openlocfilehash: ec8b780100a41109f31084de0f37bec8c0fc680c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.date: 09/23/2019
+ms.openlocfilehash: cb567ea473e99c3bbd3d63a2328d45e94ca742ff
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928941"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216702"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -36,7 +36,7 @@ ms.locfileid: "70928941"
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netcore-2.2">
+                <a href="/dotnet/api/?view=netcore-3.0">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -496,7 +496,7 @@ ms.locfileid: "70928941"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">Mobilne</a>
+                        <a href="#mobile">Urządzenia przenośne</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios/">
@@ -558,7 +558,7 @@ ms.locfileid: "70928941"
                         </ul>
                     </li>
                     <li>
-                        <a href="#desktop">Aplikacje klasyczne</a>
+                        <a href="#desktop">Komputer stacjonarny</a>
                         <ul id="desktop" class="cardsC">
                             <li>
                                 <a href="/uwp/">

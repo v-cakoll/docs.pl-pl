@@ -599,7 +599,7 @@
       href: csharp/tour-of-csharp/
     - name: 'Co nowego w języku C#'
       items:
-        - name: 'C# 8.0 — wersja zapoznawcza 5'
+        - name: 'C# 8.0'
           href: csharp/whats-new/csharp-8.md
         - name: 'C# 7.3'
           href: csharp/whats-new/csharp-7-3.md
@@ -1020,7 +1020,7 @@
         - name: Programowanie w Visual Basic
           href: visual-basic/developing-apps/programming/index.md
           items:
-            - name: Uzyskiwanie dostępu do zasobów komputera
+            - name: Uzyskiwanie dostępu zasobów komputera
               href: visual-basic/developing-apps/programming/computer-resources/index.md
             - name: Rejestrowanie informacji z aplikacji
               href: visual-basic/developing-apps/programming/log-info/index.md
@@ -1067,7 +1067,7 @@
               href: visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md
             - name: 'Dostosowywanie, które obiekty są dostępne w My'
               href: visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md
-    - name: Pojęcia związane z programowaniem
+    - name: Koncepcje programowania
       href: visual-basic/programming-guide/concepts/index.md
       items:
         - name: Programowanie asynchroniczne z Async i Await
@@ -1522,7 +1522,7 @@
                   href: visual-basic/language-reference/operators/bit-shift-operators.md
                 - name: Operatory porównania
                   href: visual-basic/language-reference/operators/comparison-operators.md
-                - name: Operatory łączenia
+                - name: Concatenation — Operatory
                   href: visual-basic/language-reference/operators/concatenation-operators.md
                 - name: Operatory logiczne bitowe
                   href: visual-basic/language-reference/operators/logical-bitwise-operators.md
@@ -1536,17 +1536,17 @@
                   href: visual-basic/language-reference/operators/and-assignment-operator.md
                 - name: '* Operator'
                   href: visual-basic/language-reference/operators/multiplication-operator.md
-                - name: '*=, operator'
+                - name: Operator *=
                   href: visual-basic/language-reference/operators/multiplication-assignment-operator.md
                 - name: + Operator
                   href: visual-basic/language-reference/operators/addition-operator.md
-                - name: '+=, operator'
+                - name: += — Operator
                   href: visual-basic/language-reference/operators/addition-assignment-operator.md
-                - name: '=, operator'
+                - name: = — Operator
                   href: visual-basic/language-reference/operators/assignment-operator.md
                 - name: '- Operator'
                   href: visual-basic/language-reference/operators/subtraction-operator.md
-                - name: '-=, operator'
+                - name: Operator -=
                   href: visual-basic/language-reference/operators/subtraction-assignment-operator.md
                 - name: '<, operator'
                   href: visual-basic/language-reference/operators/comparison-operators.md
@@ -1554,7 +1554,7 @@
                   href: visual-basic/language-reference/operators/comparison-operators.md
                 - name: '> Operator'
                   href: visual-basic/language-reference/operators/comparison-operators.md
-                - name: '>=, operator'
+                - name: '>= — Operator'
                   href: visual-basic/language-reference/operators/comparison-operators.md
                 - name: '<<, operator'
                   href: visual-basic/language-reference/operators/left-shift-operator.md
@@ -1562,19 +1562,19 @@
                   href: visual-basic/language-reference/operators/left-shift-assignment-operator.md
                 - name: '>> Operator'
                   href: visual-basic/language-reference/operators/right-shift-operator.md
-                - name: '>>=, operator'
+                - name: '>>= — Operator'
                   href: visual-basic/language-reference/operators/right-shift-assignment-operator.md
-                - name: '/, operator'
+                - name: / — Operator
                   href: visual-basic/language-reference/operators/floating-point-division-operator.md
-                - name: '/=, operator'
+                - name: Operator /=
                   href: visual-basic/language-reference/operators/floating-point-division-assignment-operator.md
                 - name: \ — Operator
                   href: visual-basic/language-reference/operators/integer-division-operator.md
                 - name: '\=, operator'
                   href: visual-basic/language-reference/operators/integer-division-assignment-operator.md
-                - name: '^, operator'
+                - name: ^ — Operator
                   href: visual-basic/language-reference/operators/exponentiation-operator.md
-                - name: '^=, operator'
+                - name: Operator ^=
                   href: visual-basic/language-reference/operators/exponentiation-assignment-operator.md
                 - name: '?(), operator'
                   href: visual-basic/language-reference/operators/null-conditional-operators.md

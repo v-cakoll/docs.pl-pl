@@ -1,59 +1,59 @@
 ---
-title: 'Instrukcje: Tworzenie niestandardowego projektanta działań'
+title: 'Porady: Tworzenie niestandardowego projektanta działań'
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: 7c6d2ae695a04c85ade6ae4da0b812f4043fa2f6
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 3c326508744f2aa2b34f5ee574cc9ec1e2863cf6
+ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170668"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71306349"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Instrukcje: Tworzenie niestandardowego projektanta działań
 
-Niestandardowi Projektanci działań są zazwyczaj implementowane tak, aby ich skojarzonych działań jest konfigurowalna z innymi działaniami, projektantów, których można było porzucić do powierzchni projektowej z nimi. Ta funkcja wymaga, że niestandardowego projektanta działań zapewniają "strefy listy" gdzie można umieścić dowolne działanie, a także sposób zarządzać wynikowy kolekcję elementów na powierzchni projektowej. W tym temacie opisano sposób tworzenia niestandardowego projektanta działań zawierający strefę listy oraz sposób tworzenia niestandardowego projektanta działań zapewniający, że edytowanie funkcji wymaganych do zarządzania kolekcję elementów projektanta.
+Projektanci działań niestandardowych są zwykle implementowane, dzięki czemu ich skojarzone działania są przeznaczone do tworzenia z innymi działaniami, których projektanci mogą zostać porzucone do powierzchni projektowej. Ta funkcja wymaga, aby niestandardowy Projektant działań zapewniał "upuszczania strefy", w której można umieścić dowolne działanie, a także środki do zarządzania wynikiem zebrania elementów na powierzchni projektowej. W tym temacie opisano sposób tworzenia niestandardowego projektanta działań zawierającego taką strefę upuszczania oraz sposób tworzenia niestandardowego projektanta działań, który zapewnia, że funkcje edytowania potrzebne do zarządzania kolekcją elementów projektanta.
 
-Niestandardowi Projektanci działań, ale zazwyczaj dziedziczyć <xref:System.Activities.Presentation.ActivityDesigner> czyli domyślny typ projektanta podstawowego elementu activity dla dowolnego działania bez określonego projektanta. Ten typ zapewnia środowisko czasu projektowania interakcji z siatką właściwości i konfigurowania podstawowe kwestie, takie jak zarządzanie kolorów i ikon.
+Projektanci działań niestandardowych zwykle dziedziczą <xref:System.Activities.Presentation.ActivityDesigner> z, który jest domyślnym typem projektanta działań podstawowych dla wszystkich działań bez określonego projektanta. Ten typ zapewnia środowisko czasu projektowania do współpracy z siatką właściwości i konfigurowania podstawowych aspektów, takich jak zarządzanie kolorami i ikonami.
 
-<xref:System.Activities.Presentation.ActivityDesigner> używa dwóch kontrolek pomocnika, <xref:System.Activities.Presentation.WorkflowItemPresenter> i <xref:System.Activities.Presentation.WorkflowItemsPresenter> ułatwiają tworzenie Projektanci działań niestandardowych. Obsługują one często używane funkcje takie jak przeciągnięcie i upuszczenie elementów podrzędnych, usunięcie, wybór i dodanie tych elementów podrzędnych. <xref:System.Activities.Presentation.WorkflowItemPresenter> Umożliwia pojedynczy element podrzędny elementu interfejsu użytkownika wewnątrz, zapewniając "docelowej strefie", jego podczas <xref:System.Activities.Presentation.WorkflowItemsPresenter> może zapewnić obsługuje wiele elementów interfejsu użytkownika, takie jak dodatkowe funkcje, takie jak kolejność, przenoszenie i dodawania elementów podrzędnych.
+<xref:System.Activities.Presentation.ActivityDesigner>używa dwóch kontrolek <xref:System.Activities.Presentation.WorkflowItemPresenter> pomocnika <xref:System.Activities.Presentation.WorkflowItemsPresenter> i ułatwia Opracowywanie niestandardowych projektantów działań. Obsługują one typowe funkcje, takie jak przeciąganie i upuszczanie elementów podrzędnych, usuwanie, wybieranie i Dodawanie tych elementów podrzędnych. Zezwala na pojedynczy podrzędny element interfejsu użytkownika wewnątrz, co zapewnia "strefę upuszczania", <xref:System.Activities.Presentation.WorkflowItemsPresenter> podczas gdy może zapewnić obsługę wielu elementów interfejsu użytkownika, w tym dodatkowych funkcji, takich jak porządkowanie, przesuwanie, usuwanie i Dodawanie elementów podrzędnych. <xref:System.Activities.Presentation.WorkflowItemPresenter>
 
-Kluczowym elementem z historią, która wymaga wyróżniania w implementacji niestandardowego projektanta działań dotyczy sposób, w którym zmiany wizualne powiązane przy użyciu powiązanie danych WPF do wystąpienia, przechowywane w pamięci w procentach co możemy edycji w projektancie. Jest to realizowane przez drzewo elementów modelu, który jest również odpowiedzialny za włączanie powiadomień o zmianach i śledzenia zdarzeń, takich jak zmiany stanów.
+Druga część tego wątku, która wymaga wyróżnienia w implementacji niestandardowego projektanta działań, ma wpływ na sposób, w jaki zmiany wizualne są powiązane przy użyciu powiązania danych WPF z wystąpieniem przechowywanym w pamięci w projektancie. Jest to realizowane przez drzewo elementów modelu, które jest również odpowiedzialne za Włączanie powiadomień o zmianach i śledzenie zdarzeń, takich jak zmiany w Stanach.
 
-W tym temacie opisano dwie procedury.
+W tym temacie przedstawiono dwie procedury.
 
-1. Pierwsza procedura w tym artykule opisano sposób tworzenia niestandardowego projektanta działań z <xref:System.Activities.Presentation.WorkflowItemPresenter> zapewniający strefy listy, który odbiera innych działań. Ta procedura jest oparty na [niestandardowe projektantów złożonych — Prezenter elementu przepływu pracy](./samples/custom-composite-designers-workflow-item-presenter.md) próbki.
+1. W pierwszej procedurze opisano sposób tworzenia niestandardowego projektanta działań z programem <xref:System.Activities.Presentation.WorkflowItemPresenter> , który zapewnia strefę upuszczania, która odbiera inne działania. Ta procedura jest oparta na [niestandardowym projektantom złożonym — przykładowi prezentera elementu przepływu pracy](./samples/custom-composite-designers-workflow-item-presenter.md) .
 
-2. W drugiej procedurze opisano sposób tworzenia niestandardowego projektanta działań z <xref:System.Activities.Presentation.WorkflowItemsPresenter> zapewniająca funkcje potrzebne do edycji zbioru zawarte elementy. Ta procedura jest oparty na [niestandardowe projektantów złożonych — Prezenter elementy przepływu pracy](./samples/custom-composite-designers-workflow-items-presenter.md) próbki.
+2. Druga procedura zawiera opis sposobu tworzenia niestandardowego projektanta działań z programem <xref:System.Activities.Presentation.WorkflowItemsPresenter> , który zapewnia funkcje konieczne do edytowania kolekcji zawartych elementów. Ta procedura jest oparta na [niestandardowym projektantom złożonym — przykładowi dla prezenterów elementów przepływu pracy](./samples/custom-composite-designers-workflow-items-presenter.md) .
 
-## <a name="to-create-a-custom-activity-designer-with-a-drop-zone-using-workflowitempresenter"></a>Aby utworzyć niestandardowego projektanta działań ze strefą listy przy użyciu WorkflowItemPresenter
+## <a name="to-create-a-custom-activity-designer-with-a-drop-zone-using-workflowitempresenter"></a>Aby utworzyć niestandardowy Projektant działań ze strefą upuszczania przy użyciu WorkflowItemPresenter
 
-1. Start Visual Studio 2010.
+1. Uruchom program Visual Studio 2010.
 
-2. Na **pliku** menu wskaż **New**, a następnie wybierz pozycję **projektu...** .
+2. W menu **plik** wskaż polecenie **Nowy**, a następnie wybierz pozycję **projekt...** .
 
      **Nowy projekt** zostanie otwarte okno dialogowe.
 
-3. W **zainstalowane szablony** okienku wybierz **Windows** z kategorii Twojego preferowanego języka.
+3. W okienku **zainstalowane szablony** wybierz pozycję **Windows** z preferowanej kategorii języka.
 
-4. W **szablony** okienku wybierz **aplikacji WPF**.
+4. W okienku **Szablony** wybierz pozycję **Aplikacja WPF**.
 
-5. W **nazwa** wprowadź `UsingWorkflowItemPresenter`.
+5. W polu **Nazwa** wprowadź `UsingWorkflowItemPresenter`wartość.
 
-6. W **lokalizacji** wprowadź katalog, w którym chcesz zapisać projekt, lub kliknij przycisk **Przeglądaj** można przejść do niego.
+6. W polu **Lokalizacja** wprowadź katalog, w którym chcesz zapisać projekt, lub kliknij przycisk **Przeglądaj** , aby przejść do niego.
 
-7. W **rozwiązania** zaakceptuj wartość domyślną.
+7. W polu **rozwiązanie** Zaakceptuj wartość domyślną.
 
 8. Kliknij przycisk **OK**.
 
-9. Kliknij prawym przyciskiem myszy plik MainWindows.xaml **Eksploratora rozwiązań**, wybierz opcję **Usuń** i upewnij się, **OK** w **programu Microsoft Visual Studio**okno dialogowe.
+9. Kliknij prawym przyciskiem myszy plik *MainWindows. XAML* w **Eksplorator rozwiązań**, wybierz pozycję **Usuń** i Potwierdź **OK** w oknie dialogowym **Microsoft Visual Studio** .
 
-10. Kliknij prawym przyciskiem myszy projekt UsingWorkflowItemPresenter w **Eksploratora rozwiązań**, wybierz opcję **Dodaj**, następnie **nowy element...** Aby wyświetlić **Dodaj nowy element** dialog i wybierz **WPF** kategorię z **zainstalowane szablony** sekcji po lewej stronie.
+10. Kliknij prawym przyciskiem myszy projekt UsingWorkflowItemPresenter w **Eksplorator rozwiązań**, wybierz pozycję **Dodaj**, a następnie pozycję **nowy element...** Aby wyświetlić okno dialogowe **Dodaj nowy element** i wybrać kategorię **WPF** z sekcji **zainstalowane szablony** po lewej stronie.
 
-11. Wybierz **okno (WPF)** szablonu, nadaj jej nazwę `RehostingWFDesigner`i kliknij przycisk **Dodaj**.
+11. Wybierz szablon **okna (WPF)** , nadaj mu `RehostingWFDesigner`nazwę, a następnie kliknij przycisk **Dodaj**.
 
-12. Otwórz plik RehostingWFDesigner.xaml i wklej następujący kod do niej, aby zdefiniować interfejsu użytkownika dla aplikacji.
+12. Otwórz plik *RehostingWFDesigner. XAML* i wklej do niego następujący kod, aby zdefiniować interfejs użytkownika dla aplikacji:
 
-    ```xml
+    ```xaml
     <Window x:Class=" UsingWorkflowItemPresenter.RehostingWFDesigner"
             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -104,7 +104,7 @@ W tym temacie opisano dwie procedury.
     </Window>
     ```
 
-13. Aby skojarzyć projektanta działań z typem działania, należy zarejestrować tego projektanta działań przy użyciu magazynu metadanych. Aby to zrobić, Dodaj `RegisterMetadata` metody `RehostingWFDesigner` klasy. W zakresie `RegisterMetadata` metody tworzenia <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder> obiektu, a następnie wywołać <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder.AddCustomAttributes%2A> metodę, aby dodać atrybuty do niego. Wywołaj <xref:System.Activities.Presentation.Metadata.MetadataStore.AddAttributeTable%2A> metody w celu dodania <xref:System.Activities.Presentation.Metadata.AttributeTable> w magazynie metadanych. Poniższy kod zawiera logikę rehosting projektanta. Rejestruje metadanych, umieszcza `SimpleNativeActivity` w przyborniku i tworzy przepływ pracy. Umieść ten kod w pliku RehostingWFDesigner.xaml.cs.
+13. Aby skojarzyć projektanta działań z typem działania, należy zarejestrować ten Projektant działań w magazynie metadanych. Aby to zrobić, Dodaj `RegisterMetadata` metodę `RehostingWFDesigner` do klasy. W zakresie `RegisterMetadata` metody <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder> Utwórz obiekt i Wywołaj <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder.AddCustomAttributes%2A> metodę, aby dodać do niej atrybuty. <xref:System.Activities.Presentation.Metadata.AttributeTable> Wywołaj <xref:System.Activities.Presentation.Metadata.MetadataStore.AddAttributeTable%2A> metodę, aby dodać do magazynu metadanych. Poniższy kod zawiera logikę rehostowania dla projektanta. Rejestruje metadane, umieszcza je `SimpleNativeActivity` w przyborniku i tworzy przepływ pracy. Umieść ten kod w pliku *RehostingWFDesigner.XAML.cs* .
 
     ```csharp
     using System;
@@ -129,15 +129,15 @@ W tym temacie opisano dwie procedury.
             protected override void OnInitialized(EventArgs e)
             {
                 base.OnInitialized(e);
-                // register metadata
+                // Register metadata.
                 (new DesignerMetadata()).Register();
                 RegisterCustomMetadata();
-                // add custom activity to toolbox
+                // Add custom activity to toolbox.
                 Toolbox.Categories.Add(new ToolboxCategory("Custom activities"));
                 Toolbox.Categories[1].Add(new ToolboxItemWrapper(typeof(SimpleNativeActivity)));
 
-                // create the workflow designer
-                WorkflowDesigner wd = new WorkflowDesigner();
+                // Create the workflow designer.
+                var wd = new WorkflowDesigner();
                 wd.Load(new Sequence());
                 DesignerBorder.Child = wd.View;
                 PropertyBorder.Child = wd.PropertyInspectorView;
@@ -146,7 +146,7 @@ W tym temacie opisano dwie procedury.
 
             void RegisterCustomMetadata()
             {
-                AttributeTableBuilder builder = new AttributeTableBuilder();
+                var builder = new AttributeTableBuilder();
                 builder.AddCustomAttributes(typeof(SimpleNativeActivity), new DesignerAttribute(typeof(SimpleNativeDesigner)));
                 MetadataStore.AddAttributeTable(builder.CreateTable());
             }
@@ -154,11 +154,11 @@ W tym temacie opisano dwie procedury.
     }
     ```
 
-14. Kliknij prawym przyciskiem myszy katalog odwołania w Eksploratorze rozwiązań i wybierz **Dodaj odwołanie...** Aby wyświetlić **Dodaj odwołanie** dialogu.
+14. Kliknij prawym przyciskiem myszy katalog odwołania w Eksplorator rozwiązań i wybierz polecenie **Dodaj odwołanie...** Aby wyświetlić okno dialogowe **Dodawanie odwołania** .
 
-15. Kliknij przycisk **.NET** kartę, Znajdź zestaw o nazwie **System.Activities.Core.Presentation**, zaznacz go i kliknij przycisk **OK**.
+15. Kliknij kartę **.NET** , odszukaj zestaw o nazwie **System. Activities. Core. Presentation**, zaznacz go i kliknij przycisk **OK**.
 
-16. Korzystając z tej samej procedury, dodaj odwołania do następujących zestawów:
+16. Korzystając z tej samej procedury, Dodaj odwołania do następujących zestawów:
 
     1. System.Data.DataSetExtensions.dll
 
@@ -166,18 +166,18 @@ W tym temacie opisano dwie procedury.
 
     3. System.ServiceModel.Activities.dll
 
-17. Otwórz plik App.xaml i zmień wartość StartUpUri na "RehostingWFDesigner.xaml".
+17. Otwórz plik *App. XAML* i zmień wartość StartUpUri na "RehostingWFDesigner. XAML".
 
-18. Kliknij prawym przyciskiem myszy projekt UsingWorkflowItemPresenter w **Eksploratora rozwiązań**, wybierz opcję **Dodaj**, następnie **nowy element...** Aby wyświetlić **Dodaj nowy element** dialog i wybierz **przepływu pracy** formularz kategorii **zainstalowane szablony** sekcji po lewej stronie.
+18. Kliknij prawym przyciskiem myszy projekt UsingWorkflowItemPresenter w **Eksplorator rozwiązań**, wybierz pozycję **Dodaj**, a następnie pozycję **nowy element...** Aby wyświetlić okno dialogowe **Dodaj nowy element** , a następnie wybierz kategorię **przepływ pracy** formularz w sekcji **zainstalowane szablony** po lewej stronie.
 
-19. Wybierz **projektanta działań** szablonu, nadaj jej nazwę `SimpleNativeDesigner`i kliknij przycisk **Dodaj**.
+19. Wybierz szablon **projektanta działań** , nadaj mu `SimpleNativeDesigner`nazwę, a następnie kliknij przycisk **Dodaj**.
 
-20. Otwórz plik SimpleNativeDesigner.xaml i wklej następujący kod. Należy pamiętać, ten kod używa <xref:System.Activities.Presentation.ActivityDesigner> jako element główny i pokazuje, jak powiązania jest używany do integracji <xref:System.Activities.Presentation.WorkflowItemPresenter> do projektanta, typ elementu podrzędnego, może być wyświetlany na projektanta działań złożonych.
+20. Otwórz plik *SimpleNativeDesigner. XAML* i wklej do niego następujący kod. Zwróć uwagę, że <xref:System.Activities.Presentation.ActivityDesigner> ten kod używa jako elementu głównego i pokazuje, jak powiązanie jest <xref:System.Activities.Presentation.WorkflowItemPresenter> używane do integrowania z projektantem, dzięki czemu typ podrzędny może być wyświetlany w projektancie działań złożonych.
 
     > [!NOTE]
-    > Schemat dla <xref:System.Activities.Presentation.ActivityDesigner> zezwala na dodawanie tylko jeden element podrzędny elementu definicję projektanta działań niestandardowych; jednak ten element może być `StackPanel`, `Grid`, lub innego złożonego elementu interfejsu użytkownika.
+    > Schemat dla programu <xref:System.Activities.Presentation.ActivityDesigner> umożliwia dodanie tylko jednego elementu podrzędnego do definicji projektanta działań niestandardowych, jednak ten element może `StackPanel`być, `Grid`lub innego złożonego elementu interfejsu użytkownika.
 
-    ```xml
+    ```xaml
     <sap:ActivityDesigner x:Class=" UsingWorkflowItemPresenter.SimpleNativeDesigner"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -211,11 +211,11 @@ W tym temacie opisano dwie procedury.
     </sap:ActivityDesigner>
     ```
 
-21. Kliknij prawym przyciskiem myszy projekt UsingWorkflowItemPresenter w **Eksploratora rozwiązań**, wybierz opcję **Dodaj**, następnie **nowy element...** Aby wyświetlić **Dodaj nowy element** dialog i wybierz **przepływu pracy** formularz kategorii **zainstalowane szablony** sekcji po lewej stronie.
+21. Kliknij prawym przyciskiem myszy projekt UsingWorkflowItemPresenter w **Eksplorator rozwiązań**, wybierz pozycję **Dodaj**, a następnie pozycję **nowy element...** Aby wyświetlić okno dialogowe **Dodaj nowy element** , a następnie wybierz kategorię **przepływ pracy** formularz w sekcji **zainstalowane szablony** po lewej stronie.
 
-22. Wybierz **działanie kodu** szablonu, nadaj jej nazwę `SimpleNativeActivity`i kliknij przycisk **Dodaj**.
+22. Wybierz szablon **działania kod** , nadaj mu `SimpleNativeActivity`nazwę, a następnie kliknij przycisk **Dodaj**.
 
-23. Implementowanie `SimpleNativeActivity` klasy, wprowadzając następujący kod do pliku SimpleNativeActivity.cs.
+23. Zaimplementuj klasę, wprowadzając następujący kod do pliku *SimpleNativeActivity.cs:* `SimpleNativeActivity`
 
     ```csharp
     using System.Activities;
@@ -244,17 +244,17 @@ W tym temacie opisano dwie procedury.
     }
     ```
 
-24. Wybierz **Kompiluj rozwiązanie** z **kompilacji** menu.
+24. Wybierz opcję **Kompiluj rozwiązanie** z menu **kompilacja** .
 
-25. Wybierz **Rozpocznij bez debugowania** z **debugowania** menu, aby otworzyć okno rehostowanym projektowania niestandardowego.
+25. Wybierz pozycję **Uruchom bez debugowania** z menu **Debuguj** , aby otworzyć okno zaprojektowanie niestandardowe.
 
-### <a name="to-create-a-custom-activity-designer-using-workflowitemspresenter"></a>Aby utworzyć niestandardowego projektanta działań przy użyciu WorkflowItemsPresenter
+### <a name="to-create-a-custom-activity-designer-using-workflowitemspresenter"></a>Tworzenie niestandardowego projektanta działań za pomocą WorkflowItemsPresenter
 
-1. Procedura drugi niestandardowego projektanta działań jest parallels, pierwszy z kilka zmian, z których pierwszy to nazwa drugiej aplikacji `UsingWorkflowItemsPresenter`. Ta aplikacja nie definiuje również nowe niestandardowe działanie.
+1. Procedura drugiego niestandardowego projektanta działań jest równoległa do pierwszego z kilku modyfikacji, a pierwszy to nazwa drugiej aplikacji `UsingWorkflowItemsPresenter`. Ponadto ta aplikacja nie definiuje nowego działania niestandardowego.
 
-2. Podstawowe różnice są zawarte w plikach CustomParallelDesigner.xaml i RehostingWFDesigner.xaml.cs. Poniżej przedstawiono kod z pliku CustomParallelDesigner.xaml, który określa interfejs użytkownika.
+2. Kluczowe różnice są zawarte w plikach *CustomParallelDesigner. XAML* i *RehostingWFDesigner.XAML.cs* . Oto kod z pliku *CustomParallelDesigner. XAML* , który definiuje interfejs użytkownika:
 
-    ```xml
+    ```xaml
     <sap:ActivityDesigner x:Class=" UsingWorkflowItemsPresenter.CustomParallelDesigner"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -298,7 +298,7 @@ W tym temacie opisano dwie procedury.
     </sap:ActivityDesigner>
     ```
 
-3. Poniżej przedstawiono kod z pliku RehostingWFDesigner.xaml.cs, który udostępnia logikę rehosting.
+3. Oto kod z pliku *RehostingWFDesigner.XAML.cs* , który udostępnia logikę rehostowania:
 
     ```csharp
     using System;
@@ -321,12 +321,12 @@ W tym temacie opisano dwie procedury.
             protected override void OnInitialized(EventArgs e)
             {
                 base.OnInitialized(e);
-                // register metadata
+                // Register metadata.
                 (new DesignerMetadata()).Register();
                 RegisterCustomMetadata();
 
-                // create the workflow designer
-                WorkflowDesigner wd = new WorkflowDesigner();
+                // Create the workflow designer.
+                var wd = new WorkflowDesigner();
                 wd.Load(new Sequence());
                 DesignerBorder.Child = wd.View;
                 PropertyBorder.Child = wd.PropertyInspectorView;
@@ -335,7 +335,7 @@ W tym temacie opisano dwie procedury.
 
             void RegisterCustomMetadata()
             {
-                AttributeTableBuilder builder = new AttributeTableBuilder();
+                var builder = new AttributeTableBuilder();
                 builder.AddCustomAttributes(typeof(Parallel), new DesignerAttribute(typeof(CustomParallelDesigner)));
                 MetadataStore.AddAttributeTable(builder.CreateTable());
             }

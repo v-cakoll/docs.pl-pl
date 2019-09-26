@@ -5,13 +5,16 @@ helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
+dev_langs:
+- csharp
+- vb
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 5768177401504f4776a34e499d07b7600597175a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: de25c3dcf33471a1aadb4445a83affab9c40914b
+ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957193"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71306337"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Przewodnik: Tworzenie dostępnej aplikacji bazującej na systemie Windows
 
@@ -68,77 +71,77 @@ Podczas dodawania kontrolek do formularza należy wziąć pod uwagę następują
 
 - Dodaj kontrolki do formularza i ustaw właściwości zgodnie z poniższym opisem. Zapoznaj się z obrazem na końcu tabeli, aby zapoznać się z modelem jak rozmieścić kontrolki w formularzu.
 
-   |Obiekt|Właściwość|Wartość|
+   |Object|Właściwość|Value|
    |------------|--------------|-----------|
    |Formularz|AccessibleDescription|Formularz zamówienia|
    ||AccessibleName|Formularz zamówienia|
    ||Rozmiar czcionki|10|
-   ||Tekst|Formularz zamówienia Pizza|
-   |Elemencie|Nazwa|logo|
+   ||Text|Formularz zamówienia Pizza|
+   |Elemencie|Name|logo|
    ||AccessibleDescription|Wycinek elementu Pizza|
    ||AccessibleName|Logo firmy|
-   ||Obraz|Dowolna ikona lub mapa bitowa|
-   |Etykieta|Nazwa|companyLabel|
-   ||Tekst|Dobre Pizza|
+   ||Image|Dowolna ikona lub mapa bitowa|
+   |Etykieta|Name|companyLabel|
+   ||Text|Dobre Pizza|
    ||TabIndex|1|
    ||AccessibleDescription|Nazwa firmy|
    ||AccessibleName|Nazwa firmy|
    ||BackColor|Niebieski|
    ||ForeColor|Kryje|
    ||Rozmiar czcionki|18|
-   |Etykieta|Nazwa|customerLabel|
-   ||Tekst|Nazwa &|
+   |Etykieta|Name|customerLabel|
+   ||Text|Nazwa &|
    ||TabIndex|2|
    ||AccessibleDescription|Etykieta nazwy klienta|
    ||AccessibleName|Etykieta nazwy klienta|
    ||UseMnemonic|Prawda|
-   |TextBox|Nazwa|customerName|
-   ||Tekst|dawaj|
+   |TextBox|Name|customerName|
+   ||Text|dawaj|
    ||TabIndex|3|
    ||AccessibleDescription|Nazwa klienta|
    ||AccessibleName|Nazwa klienta|
-   |GroupBox|Nazwa|sizeOptions|
+   |GroupBox|Name|sizeOptions|
    ||AccessibleDescription|Opcje rozmiaru Pizza|
    ||AccessibleName|Opcje rozmiaru Pizza|
-   ||Tekst|Rozmiar Pizza|
+   ||Text|Rozmiar Pizza|
    ||TabIndex|4|
-   |RadioButton|Nazwa|smallPizza|
-   ||Tekst|& mała $6,00|
+   |RadioButton|Name|smallPizza|
+   ||Text|& mała $6,00|
    ||Zaznaczone|Prawda|
    ||TabIndex|0|
    ||AccessibleDescription|Mały Pizza|
    ||AccessibleName|Mały Pizza|
-   |RadioButton|Nazwa|largePizza|
-   ||Tekst|& duże $10,00|
+   |RadioButton|Name|largePizza|
+   ||Text|& duże $10,00|
    ||TabIndex|1|
    ||AccessibleDescription|Duże Pizza|
    ||AccessibleName|Duże Pizza|
-   |Etykieta|Nazwa|toppingsLabel|
-   ||Tekst|& toppings ($0,75)|
+   |Etykieta|Name|toppingsLabel|
+   ||Text|& toppings ($0,75)|
    ||TabIndex|5|
    ||AccessibleDescription|Etykieta toppings|
    ||AccessibleName|Etykieta toppings|
    ||UseMnemonic|Prawda|
-   |CheckedListBox|Nazwa|toppings|
+   |CheckedListBox|Name|toppings|
    ||TabIndex|6|
    ||AccessibleDescription|Dostępne toppings|
    ||AccessibleName|Dostępne toppings|
    ||Elementy|Pepperoni, kiełbasy, grzyby|
-   |Przycisk|Nazwa|kolejność|
-   ||Tekst|Kolejność &|
+   |Przycisk|Name|kolejność|
+   ||Text|Kolejność &|
    ||TabIndex|7|
    ||AccessibleDescription|Suma zamówienia|
    ||AccessibleName|Suma zamówień|
-   |Przycisk|Nazwa|Anuluj|
-   ||Tekst|& Anuluj|
+   |Przycisk|Name|Anuluj|
+   ||Text|& Anuluj|
    ||TabIndex|8|
    ||AccessibleDescription|Anulowanie zamówienia|
    ||AccessibleName|Anuluj zamówienie|
-   |MainMenu|Nazwa|theMainMenu|
-   |MenuItem|Nazwa|fileCommands|
-   ||Tekst|Plik &|
-   |MenuItem|Nazwa|exitApp|
-   ||Tekst|E & kończ|
+   |MainMenu|Name|theMainMenu|
+   |MenuItem|Name|fileCommands|
+   ||Text|Plik &|
+   |MenuItem|Name|exitApp|
+   ||Text|E & kończ|
 
    Formularz będzie wyglądać podobnie jak na poniższym obrazie:
 
@@ -165,96 +168,88 @@ W naszej aplikacji jedynym elementem, który nie korzysta z ustawień systemowyc
 1. Utwórz metodę, aby ustawić kolory etykiety na kolory systemowe.
 
     ```vb
-    ' Visual Basic
     Private Sub SetColorScheme()
-       If SystemInformation.HighContrast Then
-          companyLabel.BackColor = SystemColors.Window
-          companyLabel.ForeColor = SystemColors.WindowText
-       Else
-          companyLabel.BackColor = Color.Blue
-          companyLabel.ForeColor = Color.Yellow
-       End If
+        If SystemInformation.HighContrast Then
+            companyLabel.BackColor = SystemColors.Window
+            companyLabel.ForeColor = SystemColors.WindowText
+        Else
+            companyLabel.BackColor = Color.Blue
+            companyLabel.ForeColor = Color.Yellow
+        End If
     End Sub
     ```
 
     ```csharp
-    // C#
     private void SetColorScheme()
     {
-       if (SystemInformation.HighContrast)
-       {
-          companyLabel.BackColor = SystemColors.Window;
-          companyLabel.ForeColor = SystemColors.WindowText;
-       }
-       else
-       {
-          companyLabel.BackColor = Color.Blue;
-          companyLabel.ForeColor = Color.Yellow;
-       }
+        if (SystemInformation.HighContrast)
+        {
+            companyLabel.BackColor = SystemColors.Window;
+            companyLabel.ForeColor = SystemColors.WindowText;
+        }
+        else
+        {
+            companyLabel.BackColor = Color.Blue;
+            companyLabel.ForeColor = Color.Yellow;
+        }
     }
     ```
 
-2. Wywołaj`Public Sub New()` `public class Form1` C#procedurę w konstruktorze formularzy (w Visual Basic i w wizualizacji). `SetColorScheme` Aby uzyskać dostęp do konstruktora w Visual Basic, należy rozwinąć region o nazwie **kod wygenerowany przez projektanta formularzy systemu Windows**.
+2. Wywołaj`Public Sub New()` `public Form1()` C#procedurę w konstruktorze formularzy (w Visual Basic i w wizualizacji). `SetColorScheme` Aby uzyskać dostęp do konstruktora w Visual Basic, należy rozwinąć region o nazwie **kod wygenerowany przez projektanta formularzy systemu Windows**.
 
     ```vb
-    ' Visual Basic
     Public Sub New()
-       MyBase.New()
-       InitializeComponent()
-       SetColorScheme()
+        MyBase.New()
+        InitializeComponent()
+        SetColorScheme()
     End Sub
     ```
 
     ```csharp
-    // C#
     public Form1()
     {
-       InitializeComponent();
-       SetColorScheme();
+        InitializeComponent();
+        SetColorScheme();
     }
     ```
 
 3. Utwórz procedurę zdarzenia z odpowiednim podpisem, aby odpowiedzieć na <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> zdarzenie.
 
     ```vb
-    ' Visual Basic
-    Protected Sub UserPreferenceChanged(ByVal sender As Object, _
-    ByVal e As Microsoft.Win32.UserPreferenceChangedEventArgs)
-       SetColorScheme()
+    Protected Sub UserPreferenceChanged(sender As Object, _
+    e As Microsoft.Win32.UserPreferenceChangedEventArgs)
+        SetColorScheme()
     End Sub
     ```
 
     ```csharp
-    // C#
     public void UserPreferenceChanged(object sender,
     Microsoft.Win32.UserPreferenceChangedEventArgs e)
     {
-       SetColorScheme();
+        SetColorScheme();
     }
     ```
 
 4. Dodaj kod do konstruktora formularzy po wywołaniu do `InitializeComponents`, aby podłączyć procedurę zdarzenia do zdarzenia systemowego. Ta metoda wywołuje `SetColorScheme` procedurę.
 
     ```vb
-    ' Visual Basic
     Public Sub New()
-       MyBase.New()
-       InitializeComponent()
-       SetColorScheme()
-       AddHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
-          AddressOf Me.UserPreferenceChanged
+        MyBase.New()
+        InitializeComponent()
+        SetColorScheme()
+        AddHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
+           AddressOf Me.UserPreferenceChanged
     End Sub
     ```
 
     ```csharp
-    // C#
     public Form1()
     {
-       InitializeComponent();
-       SetColorScheme();
-       Microsoft.Win32.SystemEvents.UserPreferenceChanged
-          += new Microsoft.Win32.UserPreferenceChangedEventHandler(
-          this.UserPreferenceChanged);
+        InitializeComponent();
+        SetColorScheme();
+        Microsoft.Win32.SystemEvents.UserPreferenceChanged
+           += new Microsoft.Win32.UserPreferenceChangedEventHandler(
+           this.UserPreferenceChanged);
     }
     ```
 
@@ -264,34 +259,27 @@ W naszej aplikacji jedynym elementem, który nie korzysta z ustawień systemowyc
     > Kod zdarzenia systemowego uruchamia wątek oddzielony od głównej aplikacji. Jeśli nie zwolnisz zdarzenia, kod, który zostanie poddany do zdarzenia, zostanie uruchomiony nawet po zamknięciu programu.
 
     ```vb
-    ' Visual Basic
     Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
-       If disposing Then
-          If Not (components Is Nothing) Then
-             components.Dispose()
-          End If
-       End If
-       RemoveHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
-          AddressOf Me.UserPreferenceChanged
-       MyBase.Dispose(disposing)
+        If disposing AndAlso components IsNot Nothing Then
+            components.Dispose()
+        End If
+        RemoveHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
+           AddressOf Me.UserPreferenceChanged
+        MyBase.Dispose(disposing)
     End Sub
     ```
 
     ```csharp
-    // C#
-    protected override void Dispose( bool disposing )
+    protected override void Dispose(bool disposing)
     {
-       if( disposing )
-       {
-          if (components != null)
-          {
-             components.Dispose();
-          }
-       }
-       Microsoft.Win32.SystemEvents.UserPreferenceChanged
-          -= new Microsoft.Win32.UserPreferenceChangedEventHandler(
-          this.UserPreferenceChanged);
-       base.Dispose( disposing );
+        if(disposing && components != null)
+        {
+            components.Dispose();
+        }
+        Microsoft.Win32.SystemEvents.UserPreferenceChanged
+           -= new Microsoft.Win32.UserPreferenceChangedEventHandler(
+           this.UserPreferenceChanged);
+        base.Dispose( disposing );
     }
     ```
 

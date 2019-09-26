@@ -532,6 +532,8 @@
       href: framework/tools/
     - name: Dodatkowe biblioteki klas i interfejsy API
       href: framework/additional-apis/
+- name: Przewodnik klasyczny .NET — WPF
+  href: desktop-wpf/
 - name: 'Przewodnik dla języka C#'
   href: csharp/index.md
   items:

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a236103b8ca1501ae4c9109c1fd9e78865ab9c9c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c59ddec655f3127e8dab8d8c41543f03a896cf63
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740601"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274035"
 ---
-# <a name="corheapobject-structure"></a>COR_HEAPOBJECT — Struktura
-Zawiera informacje dotyczące obiektu na stosie zarządzanym.  
+# <a name="cor_heapobject-structure"></a>COR_HEAPOBJECT — Struktura
+Zawiera informacje o obiekcie na zarządzanym stosie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,30 +41,30 @@ typedef struct _COR_HEAPOBJECT {
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`address`|Adres obiektu w pamięci.|  
-|`size`|Całkowity rozmiar obiektu w bajtach.|  
-|`type`|A [cor_typeid —](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) token, który reprezentuje typ obiektu.|  
+|`size`|Łączny rozmiar obiektu w bajtach.|  
+|`type`|Token [COR_TYPEID](cor-typeid-structure.md) , który reprezentuje typ obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `COR_HEAPOBJECT` wystąpienia mogą być pobierane według wyliczania [icordebugheapenum —](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) obiektu interfejsu, który jest wypełniana przez wywołanie metody [ICorDebugProcess5::EnumerateHeap](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheap-method.md) metody.  
+ `COR_HEAPOBJECT`wystąpienia mogą być pobierane przez Wyliczenie obiektu interfejsu [ICorDebugHeapEnum](icordebugheapenum-interface.md) , który jest wypełniany przez wywołanie metody [ICorDebugProcess5:: EnumerateHeap —](icordebugprocess5-enumerateheap-method.md) .  
   
- A `COR_HEAPOBJECT` wystąpienie zawiera informacje o obiekt na żywo w zarządzanym stosie albo o obiekt, który nie jest ścieżką przez dowolny obiekt, ale jeszcze nie został zebrany przez moduł odśmiecania pamięci.  
+ `COR_HEAPOBJECT` Wystąpienie zawiera informacje dotyczące aktywnego obiektu na zarządzanym stosie lub o obiekcie, który nie jest odblokowany przez żaden obiekt, ale nie został jeszcze zebrany przez moduł wyrzucania elementów bezużytecznych.  
   
- Aby uzyskać lepszą wydajność `COR_HEAPOBJECT.address` pole jest `CORDB_ADDRESS` wartość, a nie icordebugvalue — interfejs wartość używana przez wiele interfejsu API debugowania. Aby uzyskać obiekt ICorDebugValue adresu podanego obiektu, można przekazać `CORDB_ADDRESS` wartość, która [ICorDebugProcess5::GetObject](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getobject-method.md) metody.  
+ W celu uzyskania lepszej wydajności `COR_HEAPOBJECT.address` pole `CORDB_ADDRESS` to wartość, a nie wartość interfejsu ICorDebugValue użyta w większości interfejsu API debugowania. Aby uzyskać obiekt ICorDebugValue dla danego adresu obiektu, można przekazać `CORDB_ADDRESS` wartość do metody [ICorDebugProcess5:: GetObject](icordebugprocess5-getobject-method.md) .  
   
- Aby uzyskać lepszą wydajność `COR_HEAPOBJECT.type` pole jest `COR_TYPEID` wartość, a nie icordebugtype — interfejs wartość używana przez wiele interfejsu API debugowania. Aby uzyskać obiekt ICorDebugType dla Identyfikatora danego typu, możesz przekazać `COR_TYPEID` wartość, która [ICorDebugProcess5::GetTypeForTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md) metody.  
+ W celu uzyskania lepszej wydajności `COR_HEAPOBJECT.type` pole `COR_TYPEID` to wartość, a nie wartość interfejsu ICorDebugType użyta w większości interfejsu API debugowania. Aby uzyskać obiekt ICorDebugType dla danego identyfikatora typu, można przekazać `COR_TYPEID` wartość do metody [ICorDebugProcess5:: GetTypeForTypeID —](icordebugprocess5-gettypefortypeid-method.md) .  
   
- `COR_HEAPOBJECT` Struktura zawiera interfejsu COM zliczonych odwołań. Jeśli pobierasz `COR_HEAPOBJECT` wystąpienia z modułu wyliczającego, wywołując [ICorDebugHeapEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md) metody, należy następnie zwolnij odwołanie.  
+ `COR_HEAPOBJECT` Struktura zawiera interfejs com liczony z odwołaniami. Jeśli pobrano `COR_HEAPOBJECT` wystąpienie z modułu wyliczającego, wywołując metodę [ICorDebugHeapEnum:: Next](icordebugheapenum-next-method.md) , należy następnie zwolnić odwołanie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Struktury debugowania](debugging-structures.md)
+- [Debugowanie](index.md)

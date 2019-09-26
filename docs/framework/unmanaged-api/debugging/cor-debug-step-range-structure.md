@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bda8079cff8f5e8fafade03a02c3dfe8798c5ca
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 11d5e2eb5e2743fca4876ed09add79be3eba514f
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740770"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274206"
 ---
-# <a name="cordebugsteprange-structure"></a>COR_DEBUG_STEP_RANGE — Struktura
-Zawiera informacje przesunięcia w zakresie kodu.  
+# <a name="cor_debug_step_range-structure"></a>COR_DEBUG_STEP_RANGE — Struktura
+Zawiera informacje o przesunięciu dla zakresu kodu.  
   
- Ta struktura jest używany przez [ICorDebugStepper::StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) metody.  
+ Ta struktura jest używana przez metodę [ICorDebugStepper:: StepRange —](icordebugstepper-steprange-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,19 +42,19 @@ typedef struct {
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`startOffset`|Przesunięcie początku zakresu.|  
-|`endOffset`|Przesunięcie koniec zakresu.|  
+|`endOffset`|Przesunięcie końca zakresu.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl  
+ **Nagłówki** CorDebug.idl  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [StepRange, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)
-- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [StepRange, metoda](icordebugstepper-steprange-method.md)
+- [Struktury debugowania](debugging-structures.md)
+- [Debugowanie](index.md)

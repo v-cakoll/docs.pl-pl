@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a839eb2edd36dc726c819a819fd4d427fbaea40
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a5d44f9b5dc42147959d3f1d127a64d39258f515
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740992"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274265"
 ---
 # <a name="clrdatacreateinstance-function"></a>CLRDataCreateInstance — Funkcja
-Tworzy obiekt interfejs dla elementu określonego obiektu docelowego.  
+Tworzy obiekt interfejsu dla określonego elementu docelowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,26 +39,26 @@ HRESULT CLRDataCreateInstance (
   
 ## <a name="parameters"></a>Parametry  
  `iid`  
- [in] Identyfikator interfejs, który ma zostać utworzona.  
+ podczas Identyfikator interfejsu, który ma zostać utworzony.  
   
  `target`  
- [in] Wskaźnik do użytkownika zaimplementowane [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) obiekt, który reprezentuje element docelowy, dla której chcesz utworzyć obiekt interfejsu.  
+ podczas Wskaźnik do obiektu [ICLRDataTarget](iclrdatatarget-interface.md) zaimplementowanego przez użytkownika, który reprezentuje element docelowy, dla którego ma zostać utworzony obiekt interfejsu.  
   
  `iface`  
- [out] Wskaźnik na adres obiektu zwróconego interfejsu.  
+ określoną Wskaźnik do adresu zwróconego obiektu interfejsu.  
   
 ## <a name="remarks"></a>Uwagi  
- `ICLRDataTarget` Obiektu jest implementowany przez twórcę debugowania aplikacji. Implementacja zależy od typu elementu docelowego, reprezentowanego. Element docelowy może być procesem, zrzut pamięci, komputer zdalny i tak dalej.  
+ `ICLRDataTarget` Obiekt jest implementowany przez moduł zapisujący aplikacji debugowania. Implementacja zależy od typu reprezentowanego elementu docelowego. Element docelowy może być procesem, zrzutem pamięci, maszyną zdalną i tak dalej.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** ClrData.idl  
+ **Nagłówki** ClrData. idl  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [Debugowanie statycznych funkcji globalnych](debugging-global-static-functions.md)

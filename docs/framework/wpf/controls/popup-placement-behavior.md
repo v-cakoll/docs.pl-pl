@@ -8,10 +8,10 @@ helpviewer_keywords:
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
 ms.openlocfilehash: ca984aa724cf3f076d6073aa8b8179abfb91d26c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69951731"
 ---
 # <a name="popup-placement-behavior"></a>Zachowanie położenia okna podręcznego
@@ -80,7 +80,7 @@ ms.locfileid: "69951731"
  ![Podręczny z PlacementRectangle i bez] niego (./media/popup-placement-behavior/popup-placement-placement-rectangle.png "Podręczny z PlacementRectangle i bez niego.")  
 
 ### <a name="target-origin-and-popup-alignment-point"></a>Punkt wyrównania docelowej i wyskakującego okienka  
- *Punkt wyrównania* *lokalizacji docelowej* i wyskakującego okienka są punktami odniesienia w obszarze docelowym i podręcznym, które są używane do pozycjonowania. Możesz użyć <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> właściwości i <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> , aby przesunąć okno podręczne z obszaru docelowego.  <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> I<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> są względne względem pochodzenia docelowego i punktu wyrównania okienka podręcznego. Wartość <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> właściwości określa, gdzie znajdują się punkt wyrównania docelowej i wyskakującego okienka.  
+ Punkt wyrównania *lokalizacji docelowej* i *wyskakującego okienka* są punktami odniesienia w obszarze docelowym i podręcznym, które są używane do pozycjonowania. Możesz użyć <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> właściwości i <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> , aby przesunąć okno podręczne z obszaru docelowego.  <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> I<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> są względne względem pochodzenia docelowego i punktu wyrównania okienka podręcznego. Wartość <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> właściwości określa, gdzie znajdują się punkt wyrównania docelowej i wyskakującego okienka.  
   
  Poniższy przykład tworzy <xref:System.Windows.Controls.Primitives.Popup> i <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> ustawia właściwości i <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> na 20.  Właściwość jest ustawiona na <xref:System.Windows.Controls.Primitives.PlacementMode.Bottom> (wartość domyślna), więc miejsce docelowe wskazuje dolny róg obszaru docelowego, a punkt wyrównania okienka podręcznego jest lewym górnym rogu <xref:System.Windows.Controls.Primitives.Popup>. <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>  
   
@@ -115,11 +115,11 @@ ms.locfileid: "69951731"
   
  ![Podręczny z rozmieszczeniem bezwzględnym lub AbsolutePoint](./media/popup-placement-behavior/popup-placement-absolute.png "Umieszczanie jest bezwzględne lub AbsolutePoint.")    
   
- ![Podręczny z dolnym] rozmieszczeniem (./media/popup-placement-behavior/popup-placement-bottom.png "Położenie jest na dole.")   
+ ![Podręczny z dolnym rozmieszczeniem](./media/popup-placement-behavior/popup-placement-bottom.png "Położenie jest na dole.")   
   
  ![Podręczny z rozmieszczeniem w środku](./media/popup-placement-behavior/popup-placement-center.png "Położenie to Center.")    
   
- ![Podręczny z lewym] rozmieszczeniem (./media/popup-placement-behavior/popup-placement-left.png "Położenie pozostanie puste.")   
+ ![Podręczny z lewym rozmieszczeniem](./media/popup-placement-behavior/popup-placement-left.png "Położenie pozostanie puste.")   
   
  ![Podręczny z położeniem myszy](./media/popup-placement-behavior/popup-placement-mouse.png "Położenie jest myszą.")  
   
@@ -127,7 +127,7 @@ ms.locfileid: "69951731"
   
  ![Podręczny z rozmieszczeniem względnym lub RelativePoint](./media/popup-placement-behavior/popup-placement-relative.png "Umieszczanie jest względne lub RelativePoint.")    
   
- ![Podręczny z prawym] rozmieszczeniem (./media/popup-placement-behavior/popup-placement-right.png "Położenie jest prawidłowe.")    
+ ![Podręczny z prawym rozmieszczeniem](./media/popup-placement-behavior/popup-placement-right.png "Położenie jest prawidłowe.")    
   
  ![Podręczny z górnym umieszczaniem](./media/popup-placement-behavior/popup-placement-top.png "Położenie jest na początku.")    
   
@@ -201,7 +201,7 @@ ms.locfileid: "69951731"
  ![nowy punkt wyrównania ze względu na krawędź myszy na ekranie](./media/popup-placement-behavior/popup-placement-mouse-screen-edge.png "Umieszczenie jest myszą, a okno podręczne pojawia się na dolnej krawędzi ekranu.")    
   
 ### <a name="customizing-popup-placement"></a>Dostosowywanie rozmieszczenia okienka podręcznego  
- Można dostosować punkt wyrównania docelowej i wyskakującego okienka, ustawiając <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> właściwość na <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Następnie zdefiniuj <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> delegata, który zwraca zestaw możliwych punktów umieszczania i osie podstawowe (w kolejności preferencji) <xref:System.Windows.Controls.Primitives.Popup>dla. Punkt, który pokazuje największą część elementu, <xref:System.Windows.Controls.Primitives.Popup> jest zaznaczone.  Pozycja <xref:System.Windows.Controls.Primitives.Popup> jest automatycznie dostosowywana, <xref:System.Windows.Controls.Primitives.Popup> jeśli jest ukryta przez brzeg ekranu. Aby zapoznać się z przykładem, zobacz [Określanie niestandardowego położenia okienka](how-to-specify-a-custom-popup-position.md)podręcznego.  
+ Można dostosować punkt wyrównania docelowej i wyskakującego okienka, ustawiając <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> właściwość na <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Następnie zdefiniuj <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> delegata, który zwraca zestaw możliwych punktów umieszczania i osie podstawowe (w kolejności preferencji) <xref:System.Windows.Controls.Primitives.Popup>dla. Punkt, który pokazuje największą część elementu, <xref:System.Windows.Controls.Primitives.Popup> jest zaznaczone.  Pozycja <xref:System.Windows.Controls.Primitives.Popup> jest automatycznie dostosowywana, <xref:System.Windows.Controls.Primitives.Popup> jeśli jest ukryta przez brzeg ekranu. Aby zapoznać się z przykładem, zobacz [Określanie niestandardowego położenia okienka podręcznego](how-to-specify-a-custom-popup-position.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

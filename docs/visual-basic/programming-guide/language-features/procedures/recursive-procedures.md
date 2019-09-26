@@ -10,42 +10,44 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: de9a2af9fc3cd78879b6525245727a6f52d51c63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b08a06a07f134b7c95251848862d39339e59fe61
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791849"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274344"
 ---
 # <a name="recursive-procedures-visual-basic"></a>Procedury rekurencyjne (Visual Basic)
-A *cyklicznego* procedura jest taki, który wywołuje sam siebie. Ogólnie rzecz biorąc to nie jest najbardziej skutecznym sposobem pisania kodu języka Visual Basic.  
+
+Procedura *cykliczna* to taka, która wywołuje sam siebie. Ogólnie rzecz biorąc, nie jest to najbardziej skuteczny sposób pisania kodu Visual Basic.  
   
- W poniższej procedurze użyto rekursji, aby obliczyć silnię, oryginalnym argumentu.  
+ Poniższa procedura używa rekursji do obliczenia silni pierwotnego argumentu.  
   
  [!code-vb[VbVbcnProcedures#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#51)]  
   
-## <a name="considerations-with-recursive-procedures"></a>Zagadnienia dotyczące z procedury rekurencyjne  
- **Ograniczanie warunki**. Należy projektować procedury cykliczne do testowania dla co najmniej jeden warunek, który może obsłużyć rekursji, a także musi obsłużyć przypadek, gdzie żaden taki warunek jest spełniony w ramach uzasadnioną liczbę wywołań rekurencyjnych. Bez co najmniej jeden warunek, które mogą zostać spełnione bez błędów procedura jest uruchamiana wysokiego ryzyka wykonywania w pętli nieskończonej.  
-  
- **Użycie pamięci**. Twoja aplikacja ma ograniczoną ilość miejsca dla zmiennych lokalnych. Każdorazowo procedury wywołuje sam siebie, używa więcej miejsca dla dodatkowych kopii jego zmiennych lokalnych. Jeśli ten proces jest kontynuowany przez czas nieokreślony, ostatecznie powoduje <xref:System.StackOverflowException> błędu.  
-  
- **Wydajność**. Prawie zawsze można zastąpić pętli rekursji. Pętli nie ma konieczności przekazywanie argumentów, inicjowanie dodatkowego miejsca do magazynowania i zwracanie wartości. Wydajność może być znacznie lepsze bez wywołania cykliczne.  
-  
- **Rekursja wzajemna**. Bardzo niska wydajność lub nawet wejścia w nieskończoną pętlę, może obserwować, jeśli dwie procedury wywołują się wzajemnie. Taki projekt przedstawia informacje o tych samych problemów jako procedura pojedynczego cyklicznego, ale może być trudniejsze wykrycie i zdebugowanie.  
-  
- **Wywoływanie za pomocą nawiasów**. Gdy `Function` procedury wywołuje cyklicznie, należy wykonać Nazwa procedury za pomocą nawiasów, nawet jeśli dostępny jest nie listy argumentów. W przeciwnym razie nazwa funkcji jest pobierana jako wartość zwracaną przez funkcję.  
-  
- **Testowanie**. Jeśli piszesz procedury cykliczne, należy go przetestować dokładnie aby upewnić się, że spełnia on zawsze jakiegoś warunku ograniczającego. Należy upewnić się, że nie można uruchomić za mało pamięci z powodu konieczności zbyt wiele wywołań rekurencyjnych.  
-  
+## <a name="considerations-with-recursive-procedures"></a>Zagadnienia dotyczące procedur cyklicznych
+
+ **Warunki ograniczające**. Należy zaprojektować procedurę cykliczną w celu przetestowania dla co najmniej jednego warunku, który może zakończyć rekursję, a także obsłużyć przypadek, w którym taki warunek nie jest spełniony w ramach rozsądnej liczby wywołań cyklicznych. Bez co najmniej jednego warunku, który może zostać spełniony bez niepowodzenia, procedura wykonuje wysokie ryzyko wykonania w pętli nieskończonej.
+
+ **Użycie pamięci**. Twoja aplikacja ma ograniczoną ilość miejsca dla zmiennych lokalnych. Za każdym razem, gdy procedura wywołuje samą siebie, używa większej ilości miejsca, aby uzyskać dodatkowe kopie swoich zmiennych lokalnych. W przypadku kontynuowania <xref:System.StackOverflowException> tego procesu wystąpi błąd.
+
+ **Wydajność**. Prawie zawsze można zastąpić pętlę do rekursji. Pętla nie ma nakładu na przekazywanie argumentów, inicjowanie dodatkowego magazynu i zwracanie wartości. Wydajność może być znacznie lepsza bez wywołań cyklicznych.
+
+ **Wzajemna rekursja**. Można zaobserwować bardzo niską wydajność lub nawet nieskończoną pętlę, jeśli dwie procedury wywołują siebie nawzajem. Taki projekt przedstawia te same problemy co pojedyncza procedura cykliczna, ale może być trudniejszy do wykrycia i debugowania.
+
+ **Wywoływanie za pomocą nawiasów**. `Function` Gdy procedura wywołuje samo cyklicznie, należy postępować zgodnie z nazwą procedury z nawiasami, nawet jeśli nie ma listy argumentów. W przeciwnym razie nazwa funkcji jest traktowana jak reprezentująca wartość zwracaną funkcji.
+
+ **Testowanie**. Jeśli napiszesz procedurę cykliczną, należy dokładnie ją przetestować, aby upewnić się, że zawsze spełnia pewne warunki ograniczające. Należy również upewnić się, że nie można zalogować się za mało pamięci z powodu zbyt wielu wywołań cyklicznych.
+
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.StackOverflowException>
-- [Procedury](./index.md)
-- [Sub, procedury](./sub-procedures.md)
-- [Procedury funkcji](./function-procedures.md)
-- [Procedury właściwości](./property-procedures.md)
-- [Procedury operatorów](./operator-procedures.md)
-- [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
-- [Przeciążanie procedury](./procedure-overloading.md)
-- [Rozwiązywanie problemów z procedurami](./troubleshooting-procedures.md)
-- [Struktury pętli](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Procedury](index.md)
+- [Sub, procedury](sub-procedures.md)
+- [Procedury funkcji](function-procedures.md)
+- [Procedury właściwości](property-procedures.md)
+- [Procedury operatorów](operator-procedures.md)
+- [Parametry i argumenty procedur](procedure-parameters-and-arguments.md)
+- [Przeciążanie procedury](procedure-overloading.md)
+- [Rozwiązywanie problemów z procedurami](troubleshooting-procedures.md)
+- [Struktury pętli](../control-flow/loop-structures.md)

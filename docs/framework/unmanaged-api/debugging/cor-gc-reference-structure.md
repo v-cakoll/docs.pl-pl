@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61a9cad9d0ce807d62c811e77402b8cc6d8c6905
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc0b67621f77c0741e0b63b84ab1794530d6280b
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740694"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274224"
 ---
-# <a name="corgcreference-structure"></a>COR_GC_REFERENCE — Struktura
-Zawiera informacje dotyczące obiektu, który ma być zebranych elementów bezużytecznych.  
+# <a name="cor_gc_reference-structure"></a>COR_GC_REFERENCE — Struktura
+Zawiera informacje o obiekcie, który ma zostać pobrany do pamięci podręcznej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,38 +41,38 @@ typedef struct _COR_GC_REFERENCE {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`domain`|Wskaźnik do domeny aplikacji, do której należy dany dojścia lub obiektu. Wartość może być `null`.|  
-|`location`|ICorDebugValue lub icordebugreferencevalue — interfejs, który odnosi się do obiektu, aby być zebranych elementów bezużytecznych.|  
-|`type`|A [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) wartość wyliczenia, która wskazuje, skąd pochodzą katalogu głównego. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.|  
-|`extraData`|Dodatkowe dane dotyczące obiekt zebranych elementów bezużytecznych. Te informacje zależy od źródła obiektu, wskazane przez `type` pola. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.|  
+|`domain`|Wskaźnik do domeny aplikacji, do której należy dojście lub obiekt. Jego wartość może być `null`równa.|  
+|`location`|Interfejs ICorDebugValue lub ICorDebugReferenceValue, który odnosi się do obiektu, który ma zostać pobrany jako bezużyteczny.|  
+|`type`|Wartość wyliczenia [CorGCReferenceType](corgcreferencetype-enumeration.md) , która wskazuje, skąd pochodzi element główny. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.|  
+|`extraData`|Dodatkowe dane dotyczące obiektu, który ma zostać pobrany do pamięci. Te informacje są zależne od źródła obiektu, jak wskazano `type` w polu. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.|  
   
 ## <a name="remarks"></a>Uwagi  
- `type` Pole jest [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) wartości wyliczenia, która wskazuje, skąd pochodzą odwołania. Konkretny `COR_GC_REFERENCE` wartość może odzwierciedlać jedną z następujących rodzajów obiekty zarządzane:  
+ Pole to CorGCReferenceType wartość wyliczenia, która wskazuje, skąd pochodzi odwołanie. [](corgcreferencetype-enumeration.md) `type` Określona `COR_GC_REFERENCE` wartość może odzwierciedlać dowolny z następujących rodzajów obiektów zarządzanych:  
   
-- Obiekty z wszystkie stosy zarządzane (`CorGCReferenceType.CorReferenceStack`). Obejmuje to odwołań na żywo w kodu zarządzanego, a także obiekty utworzone przez środowisko uruchomieniowe języka wspólnego.  
+- Obiekty ze wszystkich stosów zarządzanych`CorGCReferenceType.CorReferenceStack`(). Obejmuje to dynamiczne odwołania w kodzie zarządzanym, a także obiekty utworzone przez środowisko uruchomieniowe języka wspólnego.  
   
-- Obiekty z tabelę uchwytów (`CorGCReferenceType.CorHandle*`). Obejmuje to odwołań do silnych (`HNDTYPE_STRONG` i `HNDTYPE_REFCOUNT`) i zmiennych statycznych w module.  
+- Obiekty z tabeli uchwytów (`CorGCReferenceType.CorHandle*`). Obejmuje to ścisłe odwołania`HNDTYPE_STRONG` ( `HNDTYPE_REFCOUNT`i) oraz zmienne statyczne w module.  
   
-- Obiekty z; kolejka finalizatorów (`CorGCReferenceType.CorReferenceFinalizer`). Elementy główne obiektów; kolejka finalizatorów, aż finalizator zostało uruchomione.  
+- Obiekty z kolejki finalizatora (`CorGCReferenceType.CorReferenceFinalizer`). Obiekty główne kolejki finalizatora do momentu uruchomienia finalizatora.  
   
- `extraData` Pole zawiera dane dodatkowe, w zależności od źródła (lub typ) odwołanie. Możliwe wartości to:  
+ `extraData` Pole zawiera dodatkowe dane w zależności od źródła (lub typu) odwołania. Możliwe wartości to:  
   
-- `DependentSource`. Jeśli `type` jest `CorGCREferenceType.CorHandleStrongDependent`, to pole jest obiekt, który, jeśli jest aktywny, elementy główne obiekt zebranych elementów bezużytecznych w `COR_GC_REFERENCE.Location`.  
+- `DependentSource`. Jeśli jest, `CorGCREferenceType.CorHandleStrongDependent`to pole jest obiektem, który, jeśli działa, jest katalogiem głównym obiektu, który ma `COR_GC_REFERENCE.Location`zostać odrzucony. `type`  
   
-- `RefCount`. Jeśli `type` jest `CorGCREferenceType.CorHandleStrongRefCount`, to pole jest licznik odwołań uchwytu.  
+- `RefCount`. `type` Jeśli jest `CorGCREferenceType.CorHandleStrongRefCount`, to pole jest liczbą odwołań do dojścia.  
   
-- `Size`. Jeśli `type` jest `CorGCREferenceType.CorHandleStrongSizedByref`, to pole jest ostatnim rozmiar drzewa obiektów, dla którego moduł zbierający elementy bezużyteczne obliczana korzenie obiektów. Należy pamiętać, że to obliczenie nie zawsze aktualne.  
+- `Size`. `type` Jeśli jest `CorGCREferenceType.CorHandleStrongSizedByref`, to pole jest ostatnim rozmiarem drzewa obiektów, dla którego Moduł wyrzucania elementów bezużytecznych oblicza elementy główne obiektu. Należy zauważyć, że to obliczenie nie jest zawsze aktualne.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Struktury debugowania](debugging-structures.md)
+- [Debugowanie](index.md)

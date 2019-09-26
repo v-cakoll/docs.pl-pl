@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5787f9f143e99ab30879ddcf8168b0e840b2fb4e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 67b85917be590bdba7ed3f10972ad39b731dbcdd
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740985"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274241"
 ---
 # <a name="clrdataenummemoryflags-enumeration"></a>CLRDataEnumMemoryFlags — Wyliczenie
-Wskazuje, które regiony pamięci wywołanie [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) powinna zawierać metodę.  
+Wskazuje, które regiony pamięci są wywoływane przez wywołanie metody [ICLRDataEnumMemoryRegions:: EnumMemoryRegions —](iclrdataenummemoryregions-enummemoryregions-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,18 +40,18 @@ typedef enum CLRDataEnumMemoryFlags {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`CLRDATA_ENUM_MEM_DEFAULT`|Minizrzutu, czyli zrzutu pamięci rozrzedzone.|  
-|`CLRDATA_ENUM_MEM_HEAP`|Zrzut pełnego stosu.|  
+|`CLRDATA_ENUM_MEM_DEFAULT`|Minizrzutu, czyli zrzut pamięci rozrzedzonej.|  
+|`CLRDATA_ENUM_MEM_HEAP`|Pełny zrzut sterty.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** ClrData.idl, ClrData.h  
+ **Nagłówki** ClrData. idl, ClrData. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debugowanie, wyliczenia](debugging-enumerations.md)

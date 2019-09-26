@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 426420175a7d05f39859b9e217a888a8c01b6d63
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d76fa4b2352da18b5ef0e547ebc4e2e99d980b8
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740507"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273993"
 ---
-# <a name="cortypeid-structure"></a>COR_TYPEID — Struktura
+# <a name="cor_typeid-structure"></a>COR_TYPEID — Struktura
 Zawiera identyfikator typu.  
   
 ## <a name="syntax"></a>Składnia  
@@ -40,23 +40,23 @@ typedef struct COR_TYPEID{
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`token1`|Pierwszy token.|  
-|`token2`|Drugiego tokena.|  
+|`token2`|Drugi token.|  
   
 ## <a name="remarks"></a>Uwagi  
- `COR_TYPEID` Struktury jest zwracany przez szereg metod debugowania, które zawierają informacje dotyczące obiektów zebranych elementów bezużytecznych. Go może być następnie przekazywany jako argument do innych metod debugowania, które zapewniają dodatkowe informacje na temat tego elementu. Na przykład, wyliczając [icordebugheapenum —](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) obiektu, możesz pobrać poszczególne [cor_heapobject —](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) obiektami, które reprezentują poszczególne obiekty na zarządzanej stercie. Możesz następnie przekazać `COR_TYPEID` wartość z `COR_HEAPOBJECT.type` pole [ICorDebugProcess5::GetTypeForTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md) metodę, aby pobrać obiekt ICorDebugType, który zawiera informacje o typie o obiekcie.  
+ `COR_TYPEID` Struktura jest zwracana przez wiele metod debugowania, które dostarczają informacji o obiektach, które mają być zbierane jako elementy bezużyteczne. Następnie można przekazać jako argument do innych metod debugowania, które zawierają dodatkowe informacje na temat tego elementu. Na przykład przez Wyliczenie obiektu [ICorDebugHeapEnum](icordebugheapenum-interface.md) można pobrać pojedyncze obiekty [COR_HEAPOBJECT](cor-heapobject-structure.md) , które reprezentują poszczególne obiekty na stercie zarządzanym. Następnie można przekazać `COR_TYPEID` wartość `COR_HEAPOBJECT.type` z pola do metody [ICorDebugProcess5:: GetTypeForTypeID —](icordebugprocess5-gettypefortypeid-method.md) , aby pobrać obiekt ICorDebugType, który zawiera informacje o typie obiektu.  
   
- A `COR_TYPEID` obiekt ma być nieprzezroczyste. Nie należy uzyskać dostępu do ani modyfikować jego poszczególne pola. Jej jedyny użycie jest jako identyfikator, który jest dostarczana jako `out` parametr w wywołaniu metody i który może z kolei można przekazać do innych metod, aby podać dodatkowe informacje.  
+ `COR_TYPEID` Obiekt ma być nieprzezroczysty. Nie można uzyskać dostępu do poszczególnych pól ani manipulować nimi. Jego jedynym zastosowaniem jest jako identyfikator, który jest dostarczany jako `out` parametr w wywołaniu metody i który może z kolei być przekazywany do innych metod w celu dostarczenia dodatkowych informacji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Struktury debugowania](debugging-structures.md)
+- [Debugowanie](index.md)

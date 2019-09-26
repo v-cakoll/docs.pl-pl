@@ -1,5 +1,5 @@
 ---
-title: CodeChunkInfo, struktura
+title: CodeChunkInfo — Struktura
 ms.date: 03/30/2017
 api_name:
 - CodeChunkInfo
@@ -16,16 +16,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2baefa45deb8c13e8c1e627724fbe271b210a9ce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 36afee8af3de046683c55215a677a529b0837c77
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740883"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274256"
 ---
-# <a name="codechunkinfo-structure"></a>CodeChunkInfo, struktura
+# <a name="codechunkinfo-structure"></a>CodeChunkInfo — Struktura
 
-Reprezentuje jeden fragment kodu w pamięci.  
+Reprezentuje pojedynczy fragment kodu w pamięci.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,23 +40,23 @@ typedef struct _CodeChunkInfo {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`startAddr`|A `CORDB_ADDRESS` wartość, która określa adres początkowy fragmentów.|  
-|`length`|Rozmiar w bajtach fragmentów.|  
+|`startAddr`|`CORDB_ADDRESS` Wartość określająca początkowy adres fragmentu.|  
+|`length`|Rozmiar fragmentu, w bajtach.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeden fragment kodu jest obszarem kodu macierzystego, który jest częścią obiektu kodu, takich jak funkcja.  
+ Pojedynczy fragment kodu jest regionem kodu natywnego, który jest częścią obiektu kodu, takiego jak funkcja.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl  
+ **Nagłówki** CorDebug.idl  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [GetCodeChunks, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
-- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [GetCodeChunks, metoda](icordebugcode2-getcodechunks-method.md)
+- [Struktury debugowania](debugging-structures.md)
+- [Debugowanie](index.md)

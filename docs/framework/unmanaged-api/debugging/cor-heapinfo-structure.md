@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dd233643bd18b60b7d6176c34ee57e4061daf7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f7b340a73aa9eaebca9c0d78563ae298557039b8
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740655"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274188"
 ---
-# <a name="corheapinfo-structure"></a>COR_HEAPINFO — Struktura
-Zawiera ogólne informacje o stercie wyrzucania elementów bezużytecznych, w tym, czy jest wyliczalna.  
+# <a name="cor_heapinfo-structure"></a>COR_HEAPINFO — Struktura
+Zawiera ogólne informacje o stercie wyrzucania elementów bezużytecznych, w tym o tym, czy są wyliczalne  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,27 +42,27 @@ typedef struct _COR_HEAPINFO {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`areGCStructuresValid`|`true` Jeśli odzyskiwanie kolekcji struktury są prawidłowe i mogą być wyliczane sterty; w przeciwnym razie `false`.|  
-|`pointerSize`|Rozmiar w bajtach, wskaźników na architektury docelowej.|  
-|`numHeaps`|Liczba logicznych wyrzucania elementów bezużytecznych sterty procesu.|  
-|`concurrent`|`TRUE` Jeśli jest to równoczesne (w tle) wyrzucanie elementów bezużytecznych jest włączony; w przeciwnym razie `FALSE`.|  
-|`gcType`|Członek [cordebuggctype —](../../../../docs/framework/unmanaged-api/debugging/cordebuggctype-enumeration.md) wyliczenia, która wskazuje, czy moduł garbage collector jest uruchomiona na serwerze lub stacji roboczej.|  
+|`areGCStructuresValid`|`true`Jeśli struktury wyrzucania elementów bezużytecznych są prawidłowe i sterta może zostać wyliczona; w przeciwnym razie. `false`|  
+|`pointerSize`|Rozmiar (w bajtach) wskaźników na architekturze docelowej.|  
+|`numHeaps`|Liczba sterty logicznego wyrzucania elementów bezużytecznych w procesie.|  
+|`concurrent`|`TRUE`Jeśli włączono współbieżne (w tle) odzyskiwanie pamięci; w przeciwnym razie. `FALSE`|  
+|`gcType`|Element członkowski wyliczenia [CorDebugGCType —](cordebuggctype-enumeration.md) , który wskazuje, czy moduł wyrzucania elementów bezużytecznych jest uruchomiony na stacji roboczej lub na serwerze.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wystąpienie `COR_HEAPINFO` struktury jest zwracany przez wywołanie metody [ICorDebugProcess5::GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) metody.  
+ Wystąpienie `COR_HEAPINFO` struktury jest zwracane przez wywołanie metody [ICorDebugProcess5:: GetGCHeapInformation —](icordebugprocess5-getgcheapinformation-method.md) .  
   
- Przed wyliczania obiektów na stercie wyrzucania elementów bezużytecznych, należy zawsze sprawdzić `areGCStructuresValid` pola, aby upewnić się, że stos jest w stanie wyliczalny. Aby uzyskać więcej informacji, zobacz [ICorDebugProcess5::GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) metody.  
+ Przed wyliczeniem obiektów na stercie wyrzucania elementów bezużytecznych należy `areGCStructuresValid` zawsze zaznaczyć pole, aby upewnić się, że sterta jest w stanie wyliczalnym. Aby uzyskać więcej informacji, zobacz metodę [ICorDebugProcess5:: GetGCHeapInformation —](icordebugprocess5-getgcheapinformation-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Struktury debugowania](debugging-structures.md)
+- [Debugowanie](index.md)

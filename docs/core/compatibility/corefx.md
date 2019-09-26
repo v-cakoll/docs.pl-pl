@@ -4,17 +4,17 @@ description: Wyświetla listę istotnych zmian w programie .NET CoreFx, bibliote
 ms.date: 09/20/2019
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7940da342bae6a745b6729ad00c42dbde27a96c8
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 3838bcd7c127860a8307fe31bd85ed5addffb59e
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71217137"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71272712"
 ---
 # <a name="corefx-breaking-changes"></a>CoreFx istotne zmiany
 
 > [!IMPORTANT]
-> Ten artykuł jest w fazie tworzenia. Nie jest to kompletna lista podstawowych zmian w programie .NET Core. Aby uzyskać więcej informacji na temat podstawowych zmian w programie .NET Core, możesz zapoznać się [ze wszystkimi problemami dotyczącymi zmiany](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) w repozytorium dotnet/docs w witrynie GitHub. 
+> Ten artykuł jest w fazie tworzenia. Nie jest to kompletna lista podstawowych zmian w programie .NET Core. Aby uzyskać więcej informacji na temat podstawowych zmian w programie .NET Core, możesz zapoznać się [ze wszystkimi problemami dotyczącymi zmiany](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) w repozytorium dotnet/docs w witrynie GitHub.
 
 Poniżej znajduje się lista CoreFxch zmian w wersji platformy .NET Core. CoreFx zawiera elementy pierwotne i inne typy ogólne używane przez platformę .NET Core.
 
@@ -65,4 +65,3 @@ Poniżej znajduje się lista CoreFxch zmian w wersji platformy .NET Core. CoreFx
 ***
 
 [!INCLUDE[ZipArchiveEntry no longer handles archives with inconsistent entry sizes](~/includes/core-changes/corefx/ziparchiveentry-and-inconsistent-entry-sizes.md)]
-

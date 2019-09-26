@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Podpinanie polecenia do kontrolki bez użycia obsługi poleceń'
+title: 'Porady: Podepnij polecenie do formantu bez użycia obsługi poleceń'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,35 +11,35 @@ helpviewer_keywords:
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: dad08f64-700b-46fb-ad3f-fbfee95f0dfe
 ms.openlocfilehash: 3ae45c9a9e33a3cb53ada6e1e5430ae0f9e6c198
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "71263305"
 ---
-# <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a>Instrukcje: Podpinanie polecenia do kontrolki bez użycia obsługi poleceń
-Poniższy przykład pokazuje, jak podpiąć <xref:System.Windows.Input.RoutedCommand> do <xref:System.Windows.Controls.Control> który nie ma wbudowaną obsługą dla polecenia.  Aby uzyskać pełny przykład, który przechwytuje się polecenia do wielu źródeł, zobacz [tworzenie przykładowej routedcommand — niestandardowe](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand) próbki.  
+# <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a>Instrukcje: Podepnij polecenie do formantu bez użycia obsługi poleceń
+Poniższy przykład pokazuje, <xref:System.Windows.Input.RoutedCommand> <xref:System.Windows.Controls.Control> jak podłączyć do programu, który nie ma wbudowanej obsługi polecenia.  Aby uzyskać kompletny przykład, który łączy polecenia z wieloma źródłami, zobacz przykład [Create a Custom RoutedCommand Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand) .  
   
 ## <a name="example"></a>Przykład  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zawiera bibliotekę typowych poleceń, które napotykają Programiści aplikacji, regularnie.  Klasy, które obejmują Biblioteka poleceń są: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, i <xref:System.Windows.Documents.EditingCommands>.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]udostępnia bibliotekę typowych poleceń, które programiści aplikacji napotykają regularnie.  Klasy wchodzące w skład biblioteki poleceń to: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands> <xref:System.Windows.Input.MediaCommands>, i <xref:System.Windows.Documents.EditingCommands>.  
   
- Statyczne <xref:System.Windows.Input.RoutedCommand> obiekty, które tworzą te klasy nie trzeba dostarczać logiki polecenia.  Logiki dla polecenia jest skojarzony z polecenie <xref:System.Windows.Input.CommandBinding>.  Wiele kontrolek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mają wbudowaną obsługą dla niektórych poleceń w bibliotece poleceń.  <xref:System.Windows.Controls.TextBox>, na przykład obsługuje wiele poleceń edycji aplikacji, takie jak <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A>, i <xref:System.Windows.Input.ApplicationCommands.Undo%2A>.  Deweloper aplikacji nie trzeba wykonywać żadnych specjalnych, aby uzyskać następujące polecenia, aby pracować z tych kontrolek czynności.  Jeśli <xref:System.Windows.Controls.TextBox> jest miejscem docelowym polecenia podczas wykonywania polecenia obsłuży polecenie, używając <xref:System.Windows.Input.CommandBinding> utworzonego w formancie.  
+ Obiekty statyczne <xref:System.Windows.Input.RoutedCommand> , które tworzą te klasy, nie dostarczają logiki poleceń.  Logika polecenia jest skojarzona z poleceniem <xref:System.Windows.Input.CommandBinding>.  Wiele kontrolek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w programie wbudowano obsługę niektórych poleceń w bibliotece poleceń.  <xref:System.Windows.Controls.TextBox>Program obsługuje na przykład wiele poleceń edycji aplikacji, takich jak <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A>i <xref:System.Windows.Input.ApplicationCommands.Undo%2A>.  Deweloper aplikacji nie musi wykonywać żadnych specjalnych czynności, aby te polecenia mogły pracować z tymi kontrolkami.  Jeśli jest obiektem docelowym polecenia, gdy polecenie jest wykonywane, będzie obsługiwać polecenie <xref:System.Windows.Input.CommandBinding> przy użyciu wbudowanej kontrolki. <xref:System.Windows.Controls.TextBox>  
   
- Poniżej pokazano sposób użycia <xref:System.Windows.Controls.Button> jako źródło polecenia <xref:System.Windows.Input.ApplicationCommands.Open%2A> polecenia.  A <xref:System.Windows.Input.CommandBinding> jest tworzony w tym kojarzy określonego <xref:System.Windows.Input.CanExecuteRoutedEventHandler> i <xref:System.Windows.Input.CanExecuteRoutedEventHandler> z <xref:System.Windows.Input.RoutedCommand>.  
+ Poniżej przedstawiono sposób użycia <xref:System.Windows.Controls.Button> jako źródła <xref:System.Windows.Input.ApplicationCommands.Open%2A> poleceń polecenia.  Jest tworzony, który kojarzy określony <xref:System.Windows.Input.CanExecuteRoutedEventHandler> i <xref:System.Windows.Input.CanExecuteRoutedEventHandler> z <xref:System.Windows.Input.RoutedCommand>. <xref:System.Windows.Input.CommandBinding>  
   
- Najpierw tworzone jest źródło polecenia.  Element <xref:System.Windows.Controls.Button> jest używany jako źródło polecenia.  
+ Najpierw tworzone jest źródło polecenia.  <xref:System.Windows.Controls.Button> Jest używany jako źródło polecenia.  
   
  [!code-xaml[commandWithHandler#CommandHandlerCommandSource](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandsource)]  
   
  [!code-csharp[CommandHandlerProcedural#CommandHandlerButtonCommandSource](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbuttoncommandsource)]
  [!code-vb[CommandHandlerProcedural#CommandHandlerButtonCommandSource](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbuttoncommandsource)]  
   
- Następnie <xref:System.Windows.Input.ExecutedRoutedEventHandler> i <xref:System.Windows.Input.CanExecuteRoutedEventHandler> są tworzone.  <xref:System.Windows.Input.ExecutedRoutedEventHandler> Po prostu otwiera <xref:System.Windows.MessageBox> oznaczającego, że polecenie jest wykonywane.  <xref:System.Windows.Input.CanExecuteRoutedEventHandler> Ustawia <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> właściwość `true`.  Zazwyczaj można wykonać procedury obsługi wykona sprawdza bardziej niezawodne, jeśli polecenie można wykonać na aktualnym elemencie docelowym polecenia.  
+ Następnie są<xref:System.Windows.Input.CanExecuteRoutedEventHandler> tworzone i.<xref:System.Windows.Input.ExecutedRoutedEventHandler>  Po prostu otwiera a <xref:System.Windows.MessageBox> , aby oznacza, że polecenie zostało wykonane. <xref:System.Windows.Input.ExecutedRoutedEventHandler>  Ustawia właściwość na`true`. <xref:System.Windows.Input.CanExecuteRoutedEventHandler> <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A>  Zwykle program obsługi może wykonywać bardziej niezawodne testy, aby sprawdzić, czy polecenie może zostać wykonane na bieżącym obiekcie docelowym polecenia.  
   
  [!code-csharp[commandWithHandler#CommandHandlerBothHandlers](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlerbothhandlers)]
  [!code-vb[commandWithHandler#CommandHandlerBothHandlers](~/samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlerbothhandlers)]  
   
- Na koniec <xref:System.Windows.Input.CommandBinding> jest tworzony w katalogu głównym <xref:System.Windows.Window> aplikacji, które kojarzy programów obsługi zdarzeń trasowanych do <xref:System.Windows.Input.ApplicationCommands.Open%2A> polecenia.  
+ Na koniec <xref:System.Windows.Window> <xref:System.Windows.Input.ApplicationCommands.Open%2A> jest tworzony w folderze głównym aplikacji, która kojarzy procedury obsługi zdarzeń kierowanych z poleceniem. <xref:System.Windows.Input.CommandBinding>  
   
  [!code-xaml[commandWithHandler#CommandHandlerCommandBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
   

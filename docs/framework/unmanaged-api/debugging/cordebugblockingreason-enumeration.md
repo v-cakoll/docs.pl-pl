@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3ea71439c9a6c494c218a7cfc18508f4f8173b03
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 99fcf160b3e3b2b238520e3db5ba2e74b270380a
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740389"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274140"
 ---
 # <a name="cordebugblockingreason-enumeration"></a>CorDebugBlockingReason — Wyliczenie
-Określa przyczyny, dlaczego wątek może stać się zablokowany dla danego obiektu.  
+Określa przyczyny, dla których wątek może zostać zablokowany dla danego obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,23 +41,23 @@ Typedef enum CorDebugBlockingReason
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`BLOCKING_NONE`|Wyłącznie do użytku wewnętrznego.|  
-|`BLOCKING_MONITOR_CRITICAL_SECTION`|Wątek próbuje pobrać sekcję krytyczną, skojarzonego z blokadą monitora na obiekcie. Zazwyczaj ten błąd występuje podczas wywołania jednej z <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> lub <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> metody.|  
-|`BLOCKING_MONITOR_EVENT`|Wątek jest oczekiwanie na zdarzenia skojarzonego z blokadą monitor dla obiektu. Zazwyczaj ten błąd występuje podczas wywołania jednej z <xref:System.Threading.Monitor?displayProperty=nameWithType> `Wait` metody.|  
+|`BLOCKING_NONE`|Tylko do użytku wewnętrznego.|  
+|`BLOCKING_MONITOR_CRITICAL_SECTION`|Wątek próbuje uzyskać sekcję krytyczną, która jest skojarzona z blokadą monitora dla obiektu. Zwykle zdarza się to w przypadku wywołania jednej z <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> metod lub. <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>|  
+|`BLOCKING_MONITOR_EVENT`|Wątek oczekuje na zdarzenie skojarzone z blokadą monitora dla obiektu. Zwykle zdarza się to w przypadku wywołania jednej z <xref:System.Threading.Monitor?displayProperty=nameWithType> `Wait` metod.|  
   
 ## <a name="remarks"></a>Uwagi  
- Gdy `BLOCKING_MONITOR_CRITICAL_SECTION` lub `BLOCKING_MONITOR_EVENT` elementu członkowskiego jest używany w [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) struktury, `pBlockingObject` składowej struktury punktami interfejs "ICorDebugValue", który reprezentuje obiekt, który jest wprowadzanych . Również musi implementować [icordebugheapvalue3 —](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-interface.md) interfejsu.  
+ Gdy element `BLOCKING_MONITOR_EVENT` `pBlockingObject` or jest używany w strukturze CorDebugBlockingObject, element członkowski struktury wskazuje interfejs "ICorDebugValue", który reprezentuje obiekt, który jest wprowadzany. [](cordebugblockingobject-structure.md) `BLOCKING_MONITOR_CRITICAL_SECTION` Należy również zastanowić się nad implementacją interfejsu [ICorDebugHeapValue3](icordebugheapvalue3-interface.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debugowanie, wyliczenia](debugging-enumerations.md)
+- [Debugowanie](index.md)

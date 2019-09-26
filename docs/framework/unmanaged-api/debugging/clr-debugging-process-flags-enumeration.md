@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef142ed5284262fd758ff13af8207b2290938e77
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 292f6953fad0d65b368642543af107c73ec42ab5
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741149"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274113"
 ---
-# <a name="clrdebuggingprocessflags-enumeration"></a>CLR_DEBUGGING_PROCESS_FLAGS — Wyliczenie
-Zawiera wartości, które są używane przez [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) metody.  
+# <a name="clr_debugging_process_flags-enumeration"></a>CLR_DEBUGGING_PROCESS_FLAGS — Wyliczenie
+Dostarcza wartości, które są używane przez metodę [ICLRDebugging:: OpenVirtualProcess —](iclrdebugging-openvirtualprocess-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,24 +40,24 @@ typedef enum CLR_DEBUGGING_PROCESS_FLAGS
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|To środowisko uruchomieniowe ma zdarzenia-się w górę catch zarządzanego debugera do wysłania. Zobacz sekcję Uwagi w celu dokonania rozróżnienia między zdarzeniami zapoznać się ze zmianami i się w górę catch.|  
-|`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|To zdarzenie zarządzane, który jest w stanie oczekiwania <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> żądania.|  
+|`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|To środowisko uruchomieniowe ma niecatche zarządzane zdarzenie debugera do wysłania. Zapoznaj się z sekcją uwagi w celu rozróżnienia między zdarzeniami przechwytywania i niecatch.|  
+|`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|Oczekiwane zdarzenie zarządzane to <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> żądanie.|  
   
 ## <a name="remarks"></a>Uwagi  
- Zdarzenia — wyrównywanie obejmują procesu domeny aplikacji, zestawu, modułu i powiadomienia o tworzenia wątku, które ożywiają debugera do bieżącego stanu po został on dołączony do procesu. Zdarzenia non-catch-up, które są wskazywane przez `CLR_DEBUGGING_MANAGED_EVENT_PENDING` flagi, zawierają wszystkie inne zdarzenia debugera, takie jak wyjątki i zarządzanego debugowania (MDA) Asystenta ustawień powiadomień.  
+ Zdarzenia dotyczące przechwytywania obejmują proces, domenę aplikacji, zestaw, moduł i powiadomienia o tworzeniu wątku, które umożliwiają debugerowi dostęp do bieżącego stanu po dołączeniu go do procesu. Zdarzenia niecatch, które są wskazywane przez `CLR_DEBUGGING_MANAGED_EVENT_PENDING` flagę, obejmują wszystkie inne zdarzenia debugera, takie jak wyjątki i powiadomienia programu Managed Debug Assistant (MDA).  
   
- `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH` Flagi włącza środowisko uruchomieniowe do rozróżniania wyjątek powodujący przerwanie oraz żądanie dołączenia zarządzanych debugerów, który może być anulowany.  
+ `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH` Flaga włącza środowisko uruchomieniowe, aby odróżnić między wyjątkami kończącymi i żądaniem dołączenia zarządzanego debugera, który można anulować.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Metahost.IDL, Metahost.h  
+ **Nagłówki** Obiekt ServiceHost. idl, dbhost. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debugowanie, wyliczenia](debugging-enumerations.md)
+- [Debugowanie](index.md)

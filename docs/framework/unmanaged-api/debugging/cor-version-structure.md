@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1f0a36d186c6d9788d43b075bf9d67c36ed1acb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ffbe571ebc3d14c12e57b1f805d77e56e97d12e1
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740566"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274175"
 ---
-# <a name="corversion-structure"></a>COR_VERSION — Struktura
-Przechowuje standardowe Czteroczęściowy numer środowiska uruchomieniowego języka wspólnego.  
+# <a name="cor_version-structure"></a>COR_VERSION — Struktura
+Przechowuje numer standardowej wersji 4-częściowej środowiska uruchomieniowego języka wspólnego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,21 +44,21 @@ typedef struct _COR_VERSION {
 |`dwMajor`|Główny numer wersji.|  
 |`dwMinor`|Pomocniczy numer wersji.|  
 |`dwBuild`|Numer kompilacji.|  
-|`dwSubBuild`|Numer kompilacji podrzędnych.|  
+|`dwSubBuild`|Numer kompilacji podrzędnej.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli numer wersji jest 1.0.3705.288, 1 to główny numer wersji, 0 to pomocniczy numer wersji, 3705 jest numerem kompilacji i 288 jest numer kompilackji podrzędnych.  
+ Jeśli numer wersji to 1.0.3705.288, 1 jest głównym numerem wersji, 0 jest numerem wersji pomocniczej, 3705 jest numerem kompilacji, a 288 jest numerem kompilacji podrzędnej.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl  
+ **Nagłówki** CorDebug.idl  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Struktury debugowania](debugging-structures.md)
+- [Debugowanie](index.md)

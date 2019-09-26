@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: grupowanie elementów w kontrolce ListView formularzy systemu Windows przy użyciu narzędzia Projektant'
+title: 'Porady: grupowanie elementów w kontrolce ListView formularzy systemu Windows przy użyciu narzędzia Projektant'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView control [Windows Forms], grouping items
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
 ms.openlocfilehash: b63bcd9e5e357db350cc2987e09af84eb58bdcff
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69039398"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Instrukcje: grupowanie elementów w kontrolce ListView formularzy systemu Windows przy użyciu narzędzia Projektant
@@ -28,7 +28,7 @@ Aby włączyć grupowanie, należy najpierw utworzyć jeden lub więcej <xref:Sy
 
 ## <a name="to-add-or-remove-groups-in-the-designer"></a>Aby dodać lub usunąć grupy w projektancie
 
-1. W oknie **Właściwości** kliknij przycisk wielokropka (![przycisk wielokropka (...) w okno właściwości programu Visual Studio <xref:System.Windows.Forms.ListView.Groups%2A> .](./media/visual-studio-ellipsis-button.png)) obok właściwości.
+1. W oknie **Właściwości** kliknij przycisk **wielokropka** (![przycisk wielokropka (...) w okno właściwości programu Visual Studio <xref:System.Windows.Forms.ListView.Groups%2A> .](./media/visual-studio-ellipsis-button.png)) obok właściwości.
 
      Zostanie wyświetlony **Edytor kolekcji ListView** .
 
@@ -36,7 +36,7 @@ Aby włączyć grupowanie, należy najpierw utworzyć jeden lub więcej <xref:Sy
 
 ## <a name="to-assign-items-to-groups-in-the-designer"></a>Aby przypisać elementy do grup w projektancie
 
-1. W oknie **Właściwości** kliknij przycisk wielokropka (![przycisk wielokropka (...) w okno właściwości programu Visual Studio <xref:System.Windows.Forms.ListView.Items%2A> .](./media/visual-studio-ellipsis-button.png)) obok właściwości.
+1. W oknie **Właściwości** kliknij przycisk **wielokropka** (![przycisk wielokropka (...) w okno właściwości programu Visual Studio <xref:System.Windows.Forms.ListView.Items%2A> .](./media/visual-studio-ellipsis-button.png)) obok właściwości.
 
      Zostanie wyświetlony **Edytor kolekcji ListViewItem** .
 

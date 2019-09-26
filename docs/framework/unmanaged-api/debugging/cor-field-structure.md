@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2efe159eaa8b49d4d3825e9737593d0a12fc4d4c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f857f773f02da25fe6650000be777b8290f5af91
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740734"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274061"
 ---
-# <a name="corfield-structure"></a>COR_FIELD — Struktura
-Zawiera informacje dotyczące pól w obiekcie.  
+# <a name="cor_field-structure"></a>COR_FIELD — Struktura
+Zawiera informacje dotyczące pola w obiekcie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,23 +41,23 @@ typedef struct COR_FIELD{
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`token`|`mdFieldDef` Token, którego można uzyskać informacji o polu.|  
-|`offset`|Przesunięcie w bajtach, do pola danych w obiekcie.|  
-|`id`|A [cor_typeid —](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) wartość, która identyfikuje typ tego pola.|  
-|`fieldType`|Corelementtype — wartość wyliczenia, który wskazuje typ pola.|  
+|`token`|`mdFieldDef` Token, który może służyć do uzyskiwania informacji o polu.|  
+|`offset`|Przesunięcie, w bajtach, do danych pola w obiekcie.|  
+|`id`|Wartość [COR_TYPEID](cor-typeid-structure.md) , która identyfikuje typ tego pola.|  
+|`fieldType`|Wartość wyliczenia CorElementType —, która wskazuje typ pola.|  
   
 ## <a name="remarks"></a>Uwagi  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Struktury debugowania](debugging-structures.md)
+- [Debugowanie](index.md)

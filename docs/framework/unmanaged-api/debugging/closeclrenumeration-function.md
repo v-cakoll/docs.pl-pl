@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9eb9bb1e4abeb98d8d0ba2b052612d918c45f22
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3a05a779d4a56eb8f881da1824d5ffaa363b5a01
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741086"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274279"
 ---
 # <a name="closeclrenumeration-function"></a>CloseCLREnumeration — Funkcja
-Zamyka wszystkie prawidłowe typowe języka środowiska uruchomieniowego (języka wspólnego CLR) kontynuować uruchamianie zdarzenia znajdujące się w tablicy, uchwyt zwracany przez [enumerateclrs — funkcja](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)i zwalnia pamięć dla tablic ścieżka dojścia i parametry.  
+Zamyka wszystkie prawidłowe zdarzenia uruchamiania środowiska uruchomieniowego języka wspólnego (CLR), które znajdują się w tablicy dojść zwracanych przez [funkcję EnumerateCLRs —](enumerateclrs-function.md), i zwalnia pamięć dla tablic uchwytów i ścieżek ciągów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,29 +40,29 @@ HRESULT CloseCLREnumeration (
   
 ## <a name="parameters"></a>Parametry  
  `pHandleArray`  
- [in] Wskaźnik do tablicy uchwytów zdarzeń zwróciło [enumerateclrs — funkcja](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md).  
+ podczas Wskaźnik do tablicy dojść do zdarzeń zwróconych z [funkcji EnumerateCLRs —](enumerateclrs-function.md).  
   
  `pStringArray`  
- [in] Wskaźnik do tablicy CLR ciąg ścieżki zwróciło [enumerateclrs — funkcja](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md).  
+ podczas Wskaźnik do tablicy ścieżek ciągów CLR zwracanych z [funkcji EnumerateCLRs —](enumerateclrs-function.md).  
   
  `dwArrayLength`  
- [in] DWORD, zawierający rozmiaru (o długości) albo `pHandleArray` lub `pStringArray` (są one takie same).  
+ podczas Wartość DWORD, która zawiera rozmiar (długość) `pHandleArray` lub `pStringArray` (jest taka sama).  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK  
- Uchwyty otwierane przez [enumerateclrs — funkcja](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md) zostały zamknięte, i jest zwalniana pamięci przydzielonej dla tablic dojścia i parametry.  
+ Uchwyty otwarte przez [funkcję EnumerateCLRs —](enumerateclrs-function.md) są zamknięte, a pamięć przydzieloną dla dojścia i tablic ciągów jest zwalniana.  
   
  E_INVALIDARG  
- Długość `pHandleArray` pasuje do długości, który jest przekazywany `dwArrayLength`.  
+ Długość `pHandleArray` nie pasuje do długości, która została `dwArrayLength`przeniesiona.  
   
- E_FAIL (lub inne kody powrotne e_)  
- Funkcja nie może zwolnić pamięć dla `pHandleArray` i `pStringArray`.  
+ E_FAIL (lub inne kody powrotne E_)  
+ Funkcja nie może zwolnić pamięci dla `pHandleArray` i. `pStringArray`  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** dbgshim.h  
+ **Nagłówek:** dbgshim. h  
   
- **Biblioteka:** dbgshim.dll  
+ **Biblioteka:** dbgshim. dll  
   
- **Wersje programu .NET framework:** 3.5 z dodatkiem SP1
+ **.NET Framework wersje:** 3.5 z dodatkiem SP1

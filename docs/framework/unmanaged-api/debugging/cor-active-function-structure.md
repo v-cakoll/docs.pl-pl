@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6875ce0e7ae4cefa9b0c8abaded0dd4535bdf838
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 50dd4acece43628b20b6bc50a539ee197e865855
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740824"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274156"
 ---
-# <a name="coractivefunction-structure"></a>COR_ACTIVE_FUNCTION — Struktura
-Zawiera informacje na temat funkcji, które są aktualnie aktywne w ramkach w wątku. Ta struktura jest używany przez [ICorDebugThread2::GetActiveFunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) metody.  
+# <a name="cor_active_function-structure"></a>COR_ACTIVE_FUNCTION — Struktura
+Zawiera informacje o funkcjach, które są obecnie aktywne w ramkach wątku. Ta struktura jest używana przez metodę [ICorDebugThread2:: GetActiveFunctions —](icordebugthread2-getactivefunctions-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,22 +42,22 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`pAppDomain`|Wskaźnik do właściciela domeny aplikacji `ilOffset` pola.|  
-|`pModule`|Wskaźnik do właściciela modułu `ilOffset` pola.|  
-|`pFunction`|Wskaźnik do funkcji właściciela `ilOffset` pola.|  
-|`ilOffset`|Przesunięcia języka pośredniego (MSIL) firmy Microsoft ramki.|  
-|`flags`|Zarezerwowane dla przyszłej rozszerzalności.|  
+|`pAppDomain`|Wskaźnik do właściciela `ilOffset` domeny aplikacji pola.|  
+|`pModule`|Wskaźnik do właściciela `ilOffset` modułu pola.|  
+|`pFunction`|Wskaźnik do właściciela `ilOffset` funkcji pola.|  
+|`ilOffset`|Przesunięcie języka pośredniego (MSIL) firmy Microsoft dla ramki.|  
+|`flags`|Zarezerwowane do użytku w przyszłości.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl  
+ **Nagłówki** CorDebug.idl  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Struktury debugowania](debugging-structures.md)
+- [Debugowanie](index.md)

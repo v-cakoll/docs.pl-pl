@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: eaf92bea30b80a47d0f623e38eed7768bccdbb6a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 9e70e2fff0bee22bcb7d7668f33302f7e7013117
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928501"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273134"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Scenariusze aplikacji (Usługi danych programu WCF)
 
@@ -18,7 +18,7 @@ ms.locfileid: "70928501"
 
 Uwidaczniaj dane relacyjne z bazy danych [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] jako źródło danych.
 
-- [Szybki start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Szybki start](quickstart-wcf-data-services.md)
 
 - [Udostępnianie danych jako usługi](exposing-your-data-as-a-service-wcf-data-services.md)
 
@@ -26,7 +26,7 @@ Uwidaczniaj dane relacyjne z bazy danych [!INCLUDE[ssODataShort](../../../../inc
 
 Uwidacznianie dowolnych klas danych [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] CLR jako źródła strumieniowego.
 
-- [Udostępnianie danych jako usługi](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)
+- [Udostępnianie danych jako usługi](exposing-your-data-as-a-service-wcf-data-services.md)
 
 - [Instrukcje: Tworzenie usługi danych przy użyciu dostawcy odbicia](create-a-data-service-using-rp-wcf-data-services.md)
 
@@ -34,7 +34,7 @@ Uwidacznianie dowolnych klas danych [!INCLUDE[ssODataShort](../../../../includes
 
 Korzystaj z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] kanału informacyjnego w aplikacji klienckiej opartej na .NET Framework.
 
-- [Szybki start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Szybki start](quickstart-wcf-data-services.md)
 
 - [Używanie usługi danych w aplikacji klienta](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
@@ -50,7 +50,7 @@ Korzystaj z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ka
 
 Korzystanie ze [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych w aplikacji klienckiej opartej na technologii AJAX.
 
-- [Używanie usługi danych w aplikacji klienta](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)
+- [Używanie usługi danych w aplikacji klienta](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
 - [Wykonała Konwencje identyfikatora URI](https://go.microsoft.com/fwlink/?LinkId=185564)
 
@@ -58,7 +58,7 @@ Korzystanie ze [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]
 
 Tworzenie kompleksowego rozwiązania do przesyłania danych używanego [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] do transferowania danych między klientem i serwerem.
 
-- [Szybki start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Szybki start](quickstart-wcf-data-services.md)
 
 - [Używanie usługi danych w aplikacji klienta](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
@@ -66,7 +66,7 @@ Tworzenie kompleksowego rozwiązania do przesyłania danych używanego [!INCLUDE
 
 Tworzenie aplikacji klienckiej opartej na .NET Framework, która asynchronicznie korzysta [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] z kanału informacyjnego w celu uniknięcia problemów z opóźnieniami na kliencie.
 
-- [Instrukcje: Wykonaj zapytania asynchronicznej usługi danych](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)
+- [Instrukcje: Wykonaj zapytania asynchronicznej usługi danych](how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)
 
 - [Operacje asynchroniczne](asynchronous-operations-wcf-data-services.md)
 
@@ -74,13 +74,13 @@ Tworzenie aplikacji klienckiej opartej na .NET Framework, która asynchronicznie
 
 Uwidaczniaj i korzystaj [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] z kanału informacyjnego przy użyciu dużego obiektu binarnego, który jest dostępny i zmieniony jako strumień.
 
-- [Dostawca przesyłania strumieniowego](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)
+- [Dostawca przesyłania strumieniowego](streaming-provider-wcf-data-services.md)
 
 - [Praca z danymi binarnymi](working-with-binary-data-wcf-data-services.md)
 
 Powiąż [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych z kontrolkami w aplikacji Windows Presentation Framework (WPF).
 
-- [Wiązanie danych do kontrolki](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+- [Wiązanie danych do kontrolki](binding-data-to-controls-wcf-data-services.md)
 
 - [Instrukcje: Powiąż dane z Windows Presentation Foundation elementami](bind-data-to-wpf-elements-wcf-data-services.md)
 
@@ -88,13 +88,13 @@ Powiąż [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źró
 
 Przechwytuje komunikaty przychodzące do usługi danych w celu sprawdzenia poprawności danych i filtrowania zapytań na podstawie ról.
 
-- [Instrukcje: Komunikaty usługi przechwytywania danych](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)
+- [Instrukcje: Komunikaty usługi przechwytywania danych](how-to-intercept-data-service-messages-wcf-data-services.md)
 
 - [Interceptory](interceptors-wcf-data-services.md)
 
 Tworzenie punktów końcowych w usłudze danych w celu włączenia niestandardowych zachowań usługi.
 
-- [Instrukcje: Zdefiniuj operację usługi](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)
+- [Instrukcje: Zdefiniuj operację usługi](how-to-define-a-service-operation-wcf-data-services.md)
 
 - [Operacje usługi](service-operations-wcf-data-services.md)
 

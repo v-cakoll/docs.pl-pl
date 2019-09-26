@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 31e0ef6d1eaf06caf7f258a38e8a9a79c0d50a07
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 9b8d28f7f5508b4ba7c46306b5e78aa3d53d95e0
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202646"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71263344"
 ---
-| .NET Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1,5]              | [1.6]              | [2.0]               | [2,1] <br /> Wersja zapoznawcza |
+| .NET Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1,5]              | [1.6]              | [2.0]               | [2,1] |
 |----------------------------|--------|--------|-------|-------|-------|--------------------|--------------------|---------------------|---------------------
 | .NET Core                  | 1.0    | 1.0    | 1.0   | 1.0   | 1.0   | 1.0                | 1.0                | 2.0                 | 3.0 |
 | .NET Framework <sup>1</sup>| 4.5    | 4.5    | 4.5.1 | 4.6   | 4.6.1 | 4.6.1 <sup>2</sup> | 4.6.1 <sup>2</sup> | 4.6.1 <sup>2</sup>  | NIE DOTYCZY<sup>3</sup> |
@@ -25,7 +25,7 @@ ms.locfileid: "70202646"
 
 - Kolumny reprezentują wersje .NET Standard. Każda komórka nagłówka jest łączem do dokumentu, który pokazuje, które interfejsy API zostały dodane do tej wersji programu .NET Standard.
 - Wiersze reprezentują różne implementacje platformy .NET.
-- Numer wersji w każdej komórce wskazuje minimalną wersję implementacji, która będzie potrzebna, aby docelowa była wersja .NET Standard.
+- Numer wersji w każdej komórce wskazuje *minimalną* wersję implementacji, która będzie potrzebna, aby docelowa była wersja .NET Standard.
 - Aby zapoznać się z tabelą interaktywną, zobacz [wersje .NET Standard](https://dotnet.microsoft.com/platform/dotnet-standard#versions).
 
 [1.0]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.0.md

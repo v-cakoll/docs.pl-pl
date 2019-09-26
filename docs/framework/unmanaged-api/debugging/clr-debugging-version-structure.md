@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e71a1538e42061c6cb949b22bb63fe6b17a0dfc9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4528ccd77fed2ea2a9b2d08243ffa1535bfad1ae
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741107"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274086"
 ---
-# <a name="clrdebuggingversion-structure"></a>CLR_DEBUGGING_VERSION — Struktura
-Określa wersję produktu środowisko uruchomieniowe języka wspólnego (CLR) na potrzeby debugowania.  
+# <a name="clr_debugging_version-structure"></a>CLR_DEBUGGING_VERSION — Struktura
+Definiuje wersję produktu środowiska uruchomieniowego języka wspólnego (CLR) do celów debugowania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -50,18 +50,18 @@ typedef struct _CLR_DEBUGGING_VERSION
 |`wRevision`|Numer poprawki.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CLR_DEBUGGING_VERSION` Struktura jest taka sama jak cor_version — struktura, jednak, `CLR_DEBUGGING_VERSION` struktura zapewnia dodatkową strukturę pole wersji (`wStructVersion`). Obecnie to pole musi być równa zero.  
+ Struktura jest taka sama jak struktura COR_VERSION, jednak `CLR_DEBUGGING_VERSION` struktura zawiera dodatkowe pole wersji struktury (`wStructVersion`). `CLR_DEBUGGING_VERSION` Obecnie to pole musi mieć wartość zero.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl  
+ **Nagłówki** CorDebug.idl  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Struktury debugowania](debugging-structures.md)
+- [Debugowanie](index.md)

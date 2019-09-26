@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: formatowanie kontrolki DataGrid formularzy systemu Windows przy użyciu narzędzia Projektant'
+title: 'Porady: formatowanie kontrolki DataGrid formularzy systemu Windows przy użyciu narzędzia Projektant'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], DataGrid controls
@@ -10,10 +10,10 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
 ms.openlocfilehash: b3a85f5f9e51dae50a40058b8f07f92976da66f2
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69666162"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Instrukcje: formatowanie kontrolki DataGrid formularzy systemu Windows przy użyciu narzędzia Projektant
@@ -76,7 +76,7 @@ Poniższa procedura wymaga projektu **aplikacji systemu Windows** z formularzem 
 
 1. <xref:System.Windows.Forms.DataGrid> Zaznacz kontrolkę w formularzu.
 
-2. W oknie **Właściwości** wybierz <xref:System.Windows.Forms.DataGrid.TableStyles%2A> właściwość, a następnie kliknij wielokropek (![przycisk wielokropka (...) w okno Właściwości przycisku programu Visual Studio.](./media/visual-studio-ellipsis-button.png)).
+2. W oknie **Właściwości** wybierz <xref:System.Windows.Forms.DataGrid.TableStyles%2A> właściwość, a następnie kliknij **wielokropek** (![przycisk wielokropka (...) w okno Właściwości przycisku programu Visual Studio.](./media/visual-studio-ellipsis-button.png)).
 
 3. W oknie dialogowym **Edytor kolekcji element DataGridTableStyle** kliknij przycisk **Dodaj** , aby dodać styl tabeli do kolekcji.
 

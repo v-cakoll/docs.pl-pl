@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
 ms.openlocfilehash: 289a8427540c713758c3f155e72efffe9f3c85bc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69666804"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą TableLayoutPanel
@@ -65,9 +65,9 @@ Pierwszym krokiem jest utworzenie projektu i skonfigurowanie formularza.
 
 1. Przeciągnij kontrolkę z przybornika do formularza. <xref:System.Windows.Forms.TableLayoutPanel> Należy pamiętać, że domyślnie <xref:System.Windows.Forms.TableLayoutPanel> kontrolka ma cztery komórki.
 
-2. Przeciągnij kontrolkę z <xref:System.Windows.Forms.TableLayoutPanel> przybornika do kontrolki i upuść ją na jedną z komórek. <xref:System.Windows.Forms.Button> Należy zauważyć, <xref:System.Windows.Forms.Button> że formant jest tworzony w wybranej komórce.
+2. Przeciągnij kontrolkę z <xref:System.Windows.Forms.TableLayoutPanel> **przybornika** do kontrolki i upuść ją na jedną z komórek. <xref:System.Windows.Forms.Button> Należy zauważyć, <xref:System.Windows.Forms.Button> że formant jest tworzony w wybranej komórce.
 
-3. Przeciągnij trzy inne <xref:System.Windows.Forms.Button> kontrolki z <xref:System.Windows.Forms.TableLayoutPanel> przybornika do kontrolki, aby każda komórka zawierała przycisk.
+3. Przeciągnij trzy inne <xref:System.Windows.Forms.Button> kontrolki z <xref:System.Windows.Forms.TableLayoutPanel> **przybornika** do kontrolki, aby każda komórka zawierała przycisk.
 
 4. Należy pomieścić pionowy uchwyt zmiany rozmiarów między dwiema kolumnami i przenieść go w lewo. Należy zauważyć, <xref:System.Windows.Forms.Button> że zmiany rozmiaru kontrolek w pierwszej kolumnie są zmieniane na mniejszą szerokość, podczas gdy rozmiar <xref:System.Windows.Forms.Button> formantów w drugiej kolumnie jest niezmieniony.
 
@@ -129,7 +129,7 @@ Można ustawić poszczególne właściwości wierszy i kolumn za pomocą <xref:S
 
 2. Kliknij dwukrotnie ikonę kontrolkiwprzyborniku<xref:System.Windows.Forms.Button> . Należy zauważyć, że w <xref:System.Windows.Forms.TableLayoutPanel> pierwszej komórce kontrolki pojawia się nowa Kontrolka przycisku.
 
-3. Kliknij dwukrotnie kilka kontrolek w przyborniku. Należy zauważyć, że nowe kontrolki pojawiają <xref:System.Windows.Forms.TableLayoutPanel> się kolejno w niezajętych komórkach kontrolki. Należy również zauważyć, <xref:System.Windows.Forms.TableLayoutPanel> że formant rozszerza się, aby uwzględnić nowe kontrolki, jeśli nie są dostępne żadne otwarte komórki.
+3. Kliknij dwukrotnie kilka kontrolek w **przyborniku**. Należy zauważyć, że nowe kontrolki pojawiają <xref:System.Windows.Forms.TableLayoutPanel> się kolejno w niezajętych komórkach kontrolki. Należy również zauważyć, <xref:System.Windows.Forms.TableLayoutPanel> że formant rozszerza się, aby uwzględnić nowe kontrolki, jeśli nie są dostępne żadne otwarte komórki.
 
 ## <a name="automatic-handling-of-overflows"></a>Automatyczna obsługa przepełnień
 
@@ -139,9 +139,9 @@ Gdy wstawiasz kontrolki do <xref:System.Windows.Forms.TableLayoutPanel> kontrolk
 
 1. Jeśli w <xref:System.Windows.Forms.TableLayoutPanel> kontrolce nadal znajdują się puste komórki, Kontynuuj Wstawianie <xref:System.Windows.Forms.Button> nowych kontrolek <xref:System.Windows.Forms.TableLayoutPanel> do momentu zapełnienia formantu.
 
-2. Gdy kontrolka jest pełna, <xref:System.Windows.Forms.Button> kliknij dwukrotnie ikonę w przyborniku, aby wstawić inną <xref:System.Windows.Forms.Button> kontrolkę. <xref:System.Windows.Forms.TableLayoutPanel> Należy zauważyć, <xref:System.Windows.Forms.TableLayoutPanel> że formant tworzy nowe komórki, aby pomieścić nową kontrolkę. Wstaw jeszcze kilka kontrolek i obserwuj zachowanie zmiany rozmiarów.
+2. Gdy kontrolka jest pełna, <xref:System.Windows.Forms.Button> kliknij dwukrotnie ikonę w **przyborniku** , aby wstawić inną <xref:System.Windows.Forms.Button> kontrolkę. <xref:System.Windows.Forms.TableLayoutPanel> Należy zauważyć, <xref:System.Windows.Forms.TableLayoutPanel> że formant tworzy nowe komórki, aby pomieścić nową kontrolkę. Wstaw jeszcze kilka kontrolek i obserwuj zachowanie zmiany rozmiarów.
 
-3. Zmień wartość <xref:System.Windows.Forms.TableLayoutPanel> <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A> właściwości kontrolki na <xref:System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize>. Kliknij dwukrotnie <xref:System.Windows.Forms.Button> <xref:System.Windows.Forms.TableLayoutPanel> ikonę w przyborniku, aby wstawić kontrolki do momentu zapełnienia formantu. <xref:System.Windows.Forms.Button> Kliknij <xref:System.Windows.Forms.Button> dwukrotnie ikonę w przyborniku. Należy zauważyć, że zostanie wyświetlony komunikat o błędzie z **Projektant formularzy systemu Windows** informujący o tym, że nie można utworzyć dodatkowych wierszy i kolumn.
+3. Zmień wartość <xref:System.Windows.Forms.TableLayoutPanel> <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A> właściwości kontrolki na <xref:System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize>. Kliknij dwukrotnie <xref:System.Windows.Forms.Button> <xref:System.Windows.Forms.TableLayoutPanel> ikonę w przyborniku, aby wstawić kontrolki do momentu zapełnienia formantu. <xref:System.Windows.Forms.Button> Kliknij <xref:System.Windows.Forms.Button> dwukrotnie ikonę w **przyborniku** . Należy zauważyć, że zostanie wyświetlony komunikat o błędzie z **Projektant formularzy systemu Windows** informujący o tym, że nie można utworzyć dodatkowych wierszy i kolumn.
 
 ## <a name="inserting-a-control-by-drawing-its-outline"></a>Wstawianie kontrolki przez rysowanie jej konspektu
 
@@ -165,7 +165,7 @@ Można wstawić kontrolkę do <xref:System.Windows.Forms.TableLayoutPanel> kontr
 
 #### <a name="to-demonstrate-that-multiple-controls-within-cells-are-not-permitted"></a>Aby udowodnić, że wiele kontrolek w komórkach jest niedozwolonych
 
-- Przeciągnij kontrolkę z <xref:System.Windows.Forms.TableLayoutPanel> przybornika do kontrolki i upuść ją na jedną z zajmowanych komórek. <xref:System.Windows.Forms.Button> Należy zauważyć, <xref:System.Windows.Forms.TableLayoutPanel> że formant nie zezwala na <xref:System.Windows.Forms.Button> porzucenie kontrolki w komórce zajmowanej.
+- Przeciągnij kontrolkę z <xref:System.Windows.Forms.TableLayoutPanel> **przybornika** do kontrolki i upuść ją na jedną z zajmowanych komórek. <xref:System.Windows.Forms.Button> Należy zauważyć, <xref:System.Windows.Forms.TableLayoutPanel> że formant nie zezwala na <xref:System.Windows.Forms.Button> porzucenie kontrolki w komórce zajmowanej.
 
 ## <a name="swapping-controls"></a>Zamiana formantów
 

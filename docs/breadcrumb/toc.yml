@@ -374,6 +374,19 @@
             - name: Usługi XAML
               tocHref: /dotnet/framework/xaml-services/
               topicHref: /dotnet/framework/xaml-services/index
+        - name: Przewodnik klasyczny — WPF
+          tocHref: /dotnet/desktop-wpf/
+          topicHref: /dotnet/desktop-wpf/index
+          items:
+            - name: Wprowadzenie
+              tocHref: /visualstudio/get-started/csharp/tutorial-wpf
+              topicHref: /dotnet/desktop-wpf/getting-started/index
+            - name: Migracja
+              tocHref: /dotnet/desktop-wpf/migration
+              topicHref: /dotnet/desktop-wpf/migration/index
+            - name: Powiązanie danych
+              tocHref: /dotnet/desktop-wpf/data
+              topicHref: /dotnet/desktop-wpf/data/index
         - name: 'Przewodnik dla języka C#'
           tocHref: /dotnet/csharp/
           topicHref: /dotnet/csharp/index

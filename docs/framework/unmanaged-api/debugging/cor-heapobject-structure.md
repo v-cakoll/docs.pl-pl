@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a236103b8ca1501ae4c9109c1fd9e78865ab9c9c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c59ddec655f3127e8dab8d8c41543f03a896cf63
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740601"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274035"
 ---
-# <a name="corheapobject-structure"></a><span data-ttu-id="3a1ac-102">COR_HEAPOBJECT — Struktura</span><span class="sxs-lookup"><span data-stu-id="3a1ac-102">COR_HEAPOBJECT Structure</span></span>
-<span data-ttu-id="3a1ac-103">Zawiera informacje dotyczące obiektu na stosie zarządzanym.</span><span class="sxs-lookup"><span data-stu-id="3a1ac-103">Provides information about an object on the managed heap.</span></span>  
+# <a name="cor_heapobject-structure"></a><span data-ttu-id="6d5f2-102">COR_HEAPOBJECT — Struktura</span><span class="sxs-lookup"><span data-stu-id="6d5f2-102">COR_HEAPOBJECT Structure</span></span>
+<span data-ttu-id="6d5f2-103">Zawiera informacje o obiekcie na zarządzanym stosie.</span><span class="sxs-lookup"><span data-stu-id="6d5f2-103">Provides information about an object on the managed heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3a1ac-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="3a1ac-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6d5f2-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="6d5f2-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct _COR_HEAPOBJECT {  
@@ -36,35 +36,35 @@ typedef struct _COR_HEAPOBJECT {
 } COR_HEAPOBJECT;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="3a1ac-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="3a1ac-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="6d5f2-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="6d5f2-105">Members</span></span>  
   
-|<span data-ttu-id="3a1ac-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="3a1ac-106">Member</span></span>|<span data-ttu-id="3a1ac-107">Opis</span><span class="sxs-lookup"><span data-stu-id="3a1ac-107">Description</span></span>|  
+|<span data-ttu-id="6d5f2-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="6d5f2-106">Member</span></span>|<span data-ttu-id="6d5f2-107">Opis</span><span class="sxs-lookup"><span data-stu-id="6d5f2-107">Description</span></span>|  
 |------------|-----------------|  
-|`address`|<span data-ttu-id="3a1ac-108">Adres obiektu w pamięci.</span><span class="sxs-lookup"><span data-stu-id="3a1ac-108">The address of the object in memory.</span></span>|  
-|`size`|<span data-ttu-id="3a1ac-109">Całkowity rozmiar obiektu w bajtach.</span><span class="sxs-lookup"><span data-stu-id="3a1ac-109">The total size of the object, in bytes.</span></span>|  
-|`type`|<span data-ttu-id="3a1ac-110">A [cor_typeid —](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) token, który reprezentuje typ obiektu.</span><span class="sxs-lookup"><span data-stu-id="3a1ac-110">A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) token that represents the type of the object.</span></span>|  
+|`address`|<span data-ttu-id="6d5f2-108">Adres obiektu w pamięci.</span><span class="sxs-lookup"><span data-stu-id="6d5f2-108">The address of the object in memory.</span></span>|  
+|`size`|<span data-ttu-id="6d5f2-109">Łączny rozmiar obiektu w bajtach.</span><span class="sxs-lookup"><span data-stu-id="6d5f2-109">The total size of the object, in bytes.</span></span>|  
+|`type`|<span data-ttu-id="6d5f2-110">Token [COR_TYPEID](cor-typeid-structure.md) , który reprezentuje typ obiektu.</span><span class="sxs-lookup"><span data-stu-id="6d5f2-110">A [COR_TYPEID](cor-typeid-structure.md) token that represents the type of the object.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3a1ac-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="3a1ac-111">Remarks</span></span>  
- <span data-ttu-id="3a1ac-112">`COR_HEAPOBJECT` wystąpienia mogą być pobierane według wyliczania [icordebugheapenum —](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) obiektu interfejsu, który jest wypełniana przez wywołanie metody [ICorDebugProcess5::EnumerateHeap](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheap-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="3a1ac-112">`COR_HEAPOBJECT` instances can be retrieved by enumerating an [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) interface object that is populated by calling the [ICorDebugProcess5::EnumerateHeap](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheap-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6d5f2-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="6d5f2-111">Remarks</span></span>  
+ <span data-ttu-id="6d5f2-112">`COR_HEAPOBJECT`wystąpienia mogą być pobierane przez Wyliczenie obiektu interfejsu [ICorDebugHeapEnum](icordebugheapenum-interface.md) , który jest wypełniany przez wywołanie metody [ICorDebugProcess5:: EnumerateHeap —](icordebugprocess5-enumerateheap-method.md) .</span><span class="sxs-lookup"><span data-stu-id="6d5f2-112">`COR_HEAPOBJECT` instances can be retrieved by enumerating an [ICorDebugHeapEnum](icordebugheapenum-interface.md) interface object that is populated by calling the [ICorDebugProcess5::EnumerateHeap](icordebugprocess5-enumerateheap-method.md) method.</span></span>  
   
- <span data-ttu-id="3a1ac-113">A `COR_HEAPOBJECT` wystąpienie zawiera informacje o obiekt na żywo w zarządzanym stosie albo o obiekt, który nie jest ścieżką przez dowolny obiekt, ale jeszcze nie został zebrany przez moduł odśmiecania pamięci.</span><span class="sxs-lookup"><span data-stu-id="3a1ac-113">A `COR_HEAPOBJECT` instance provides information either about a live object on the managed heap, or about an object that is not rooted by any object but has not yet been collected by the garbage collector.</span></span>  
+ <span data-ttu-id="6d5f2-113">`COR_HEAPOBJECT` Wystąpienie zawiera informacje dotyczące aktywnego obiektu na zarządzanym stosie lub o obiekcie, który nie jest odblokowany przez żaden obiekt, ale nie został jeszcze zebrany przez moduł wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="6d5f2-113">A `COR_HEAPOBJECT` instance provides information either about a live object on the managed heap, or about an object that is not rooted by any object but has not yet been collected by the garbage collector.</span></span>  
   
- <span data-ttu-id="3a1ac-114">Aby uzyskać lepszą wydajność `COR_HEAPOBJECT.address` pole jest `CORDB_ADDRESS` wartość, a nie icordebugvalue — interfejs wartość używana przez wiele interfejsu API debugowania.</span><span class="sxs-lookup"><span data-stu-id="3a1ac-114">For better performance, the `COR_HEAPOBJECT.address` field is a `CORDB_ADDRESS` value rather than the ICorDebugValue interface value used in much of the debugging API.</span></span> <span data-ttu-id="3a1ac-115">Aby uzyskać obiekt ICorDebugValue adresu podanego obiektu, można przekazać `CORDB_ADDRESS` wartość, która [ICorDebugProcess5::GetObject](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getobject-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="3a1ac-115">To obtain an ICorDebugValue object for a given object address, you can pass the `CORDB_ADDRESS` value to the [ICorDebugProcess5::GetObject](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getobject-method.md) method.</span></span>  
+ <span data-ttu-id="6d5f2-114">W celu uzyskania lepszej wydajności `COR_HEAPOBJECT.address` pole `CORDB_ADDRESS` to wartość, a nie wartość interfejsu ICorDebugValue użyta w większości interfejsu API debugowania.</span><span class="sxs-lookup"><span data-stu-id="6d5f2-114">For better performance, the `COR_HEAPOBJECT.address` field is a `CORDB_ADDRESS` value rather than the ICorDebugValue interface value used in much of the debugging API.</span></span> <span data-ttu-id="6d5f2-115">Aby uzyskać obiekt ICorDebugValue dla danego adresu obiektu, można przekazać `CORDB_ADDRESS` wartość do metody [ICorDebugProcess5:: GetObject](icordebugprocess5-getobject-method.md) .</span><span class="sxs-lookup"><span data-stu-id="6d5f2-115">To obtain an ICorDebugValue object for a given object address, you can pass the `CORDB_ADDRESS` value to the [ICorDebugProcess5::GetObject](icordebugprocess5-getobject-method.md) method.</span></span>  
   
- <span data-ttu-id="3a1ac-116">Aby uzyskać lepszą wydajność `COR_HEAPOBJECT.type` pole jest `COR_TYPEID` wartość, a nie icordebugtype — interfejs wartość używana przez wiele interfejsu API debugowania.</span><span class="sxs-lookup"><span data-stu-id="3a1ac-116">For better performance, the `COR_HEAPOBJECT.type` field is a `COR_TYPEID` value rather than the ICorDebugType interface value used in much of the debugging API.</span></span> <span data-ttu-id="3a1ac-117">Aby uzyskać obiekt ICorDebugType dla Identyfikatora danego typu, możesz przekazać `COR_TYPEID` wartość, która [ICorDebugProcess5::GetTypeForTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="3a1ac-117">To obtain an ICorDebugType object for a given type ID, you can pass the `COR_TYPEID` value to the [ICorDebugProcess5::GetTypeForTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md) method.</span></span>  
+ <span data-ttu-id="6d5f2-116">W celu uzyskania lepszej wydajności `COR_HEAPOBJECT.type` pole `COR_TYPEID` to wartość, a nie wartość interfejsu ICorDebugType użyta w większości interfejsu API debugowania.</span><span class="sxs-lookup"><span data-stu-id="6d5f2-116">For better performance, the `COR_HEAPOBJECT.type` field is a `COR_TYPEID` value rather than the ICorDebugType interface value used in much of the debugging API.</span></span> <span data-ttu-id="6d5f2-117">Aby uzyskać obiekt ICorDebugType dla danego identyfikatora typu, można przekazać `COR_TYPEID` wartość do metody [ICorDebugProcess5:: GetTypeForTypeID —](icordebugprocess5-gettypefortypeid-method.md) .</span><span class="sxs-lookup"><span data-stu-id="6d5f2-117">To obtain an ICorDebugType object for a given type ID, you can pass the `COR_TYPEID` value to the [ICorDebugProcess5::GetTypeForTypeID](icordebugprocess5-gettypefortypeid-method.md) method.</span></span>  
   
- <span data-ttu-id="3a1ac-118">`COR_HEAPOBJECT` Struktura zawiera interfejsu COM zliczonych odwołań.</span><span class="sxs-lookup"><span data-stu-id="3a1ac-118">The `COR_HEAPOBJECT` structure includes a reference-counted COM interface.</span></span> <span data-ttu-id="3a1ac-119">Jeśli pobierasz `COR_HEAPOBJECT` wystąpienia z modułu wyliczającego, wywołując [ICorDebugHeapEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md) metody, należy następnie zwolnij odwołanie.</span><span class="sxs-lookup"><span data-stu-id="3a1ac-119">If you retrieve a `COR_HEAPOBJECT` instance from the enumerator by calling the [ICorDebugHeapEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md) method, you must subsequently release the reference.</span></span>  
+ <span data-ttu-id="6d5f2-118">`COR_HEAPOBJECT` Struktura zawiera interfejs com liczony z odwołaniami.</span><span class="sxs-lookup"><span data-stu-id="6d5f2-118">The `COR_HEAPOBJECT` structure includes a reference-counted COM interface.</span></span> <span data-ttu-id="6d5f2-119">Jeśli pobrano `COR_HEAPOBJECT` wystąpienie z modułu wyliczającego, wywołując metodę [ICorDebugHeapEnum:: Next](icordebugheapenum-next-method.md) , należy następnie zwolnić odwołanie.</span><span class="sxs-lookup"><span data-stu-id="6d5f2-119">If you retrieve a `COR_HEAPOBJECT` instance from the enumerator by calling the [ICorDebugHeapEnum::Next](icordebugheapenum-next-method.md) method, you must subsequently release the reference.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3a1ac-120">Wymagania</span><span class="sxs-lookup"><span data-stu-id="3a1ac-120">Requirements</span></span>  
- <span data-ttu-id="3a1ac-121">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3a1ac-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6d5f2-120">Wymagania</span><span class="sxs-lookup"><span data-stu-id="6d5f2-120">Requirements</span></span>  
+ <span data-ttu-id="6d5f2-121">**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6d5f2-121">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3a1ac-122">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3a1ac-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6d5f2-122">**Nagłówki** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6d5f2-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3a1ac-123">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3a1ac-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6d5f2-123">**Biblioteki** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6d5f2-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3a1ac-124">**Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3a1ac-124">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="6d5f2-124">**.NET Framework wersje:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6d5f2-124">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3a1ac-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3a1ac-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6d5f2-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6d5f2-125">See also</span></span>
 
-- [<span data-ttu-id="3a1ac-126">Struktury debugowania</span><span class="sxs-lookup"><span data-stu-id="3a1ac-126">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="3a1ac-127">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="3a1ac-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="6d5f2-126">Struktury debugowania</span><span class="sxs-lookup"><span data-stu-id="6d5f2-126">Debugging Structures</span></span>](debugging-structures.md)
+- [<span data-ttu-id="6d5f2-127">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="6d5f2-127">Debugging</span></span>](index.md)

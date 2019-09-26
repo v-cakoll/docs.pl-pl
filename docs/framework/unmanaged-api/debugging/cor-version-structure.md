@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1f0a36d186c6d9788d43b075bf9d67c36ed1acb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ffbe571ebc3d14c12e57b1f805d77e56e97d12e1
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740566"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274175"
 ---
-# <a name="corversion-structure"></a><span data-ttu-id="f214a-102">COR_VERSION — Struktura</span><span class="sxs-lookup"><span data-stu-id="f214a-102">COR_VERSION Structure</span></span>
-<span data-ttu-id="f214a-103">Przechowuje standardowe Czteroczęściowy numer środowiska uruchomieniowego języka wspólnego.</span><span class="sxs-lookup"><span data-stu-id="f214a-103">Stores the standard four-part version number of the common language runtime.</span></span>  
+# <a name="cor_version-structure"></a><span data-ttu-id="5d5b5-102">COR_VERSION — Struktura</span><span class="sxs-lookup"><span data-stu-id="5d5b5-102">COR_VERSION Structure</span></span>
+<span data-ttu-id="5d5b5-103">Przechowuje numer standardowej wersji 4-częściowej środowiska uruchomieniowego języka wspólnego.</span><span class="sxs-lookup"><span data-stu-id="5d5b5-103">Stores the standard four-part version number of the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f214a-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="f214a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5d5b5-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="5d5b5-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct _COR_VERSION {  
@@ -37,28 +37,28 @@ typedef struct _COR_VERSION {
 } COR_VERSION;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="f214a-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="f214a-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="5d5b5-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="5d5b5-105">Members</span></span>  
   
-|<span data-ttu-id="f214a-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="f214a-106">Member</span></span>|<span data-ttu-id="f214a-107">Opis</span><span class="sxs-lookup"><span data-stu-id="f214a-107">Description</span></span>|  
+|<span data-ttu-id="5d5b5-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="5d5b5-106">Member</span></span>|<span data-ttu-id="5d5b5-107">Opis</span><span class="sxs-lookup"><span data-stu-id="5d5b5-107">Description</span></span>|  
 |------------|-----------------|  
-|`dwMajor`|<span data-ttu-id="f214a-108">Główny numer wersji.</span><span class="sxs-lookup"><span data-stu-id="f214a-108">The major version number.</span></span>|  
-|`dwMinor`|<span data-ttu-id="f214a-109">Pomocniczy numer wersji.</span><span class="sxs-lookup"><span data-stu-id="f214a-109">The minor version number.</span></span>|  
-|`dwBuild`|<span data-ttu-id="f214a-110">Numer kompilacji.</span><span class="sxs-lookup"><span data-stu-id="f214a-110">The build number.</span></span>|  
-|`dwSubBuild`|<span data-ttu-id="f214a-111">Numer kompilacji podrzędnych.</span><span class="sxs-lookup"><span data-stu-id="f214a-111">The sub-build number.</span></span>|  
+|`dwMajor`|<span data-ttu-id="5d5b5-108">Główny numer wersji.</span><span class="sxs-lookup"><span data-stu-id="5d5b5-108">The major version number.</span></span>|  
+|`dwMinor`|<span data-ttu-id="5d5b5-109">Pomocniczy numer wersji.</span><span class="sxs-lookup"><span data-stu-id="5d5b5-109">The minor version number.</span></span>|  
+|`dwBuild`|<span data-ttu-id="5d5b5-110">Numer kompilacji.</span><span class="sxs-lookup"><span data-stu-id="5d5b5-110">The build number.</span></span>|  
+|`dwSubBuild`|<span data-ttu-id="5d5b5-111">Numer kompilacji podrzędnej.</span><span class="sxs-lookup"><span data-stu-id="5d5b5-111">The sub-build number.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f214a-112">Uwagi</span><span class="sxs-lookup"><span data-stu-id="f214a-112">Remarks</span></span>  
- <span data-ttu-id="f214a-113">Jeśli numer wersji jest 1.0.3705.288, 1 to główny numer wersji, 0 to pomocniczy numer wersji, 3705 jest numerem kompilacji i 288 jest numer kompilackji podrzędnych.</span><span class="sxs-lookup"><span data-stu-id="f214a-113">If the version number is 1.0.3705.288, 1 is the major version number, 0 is the minor version number, 3705 is the build number, and 288 is the sub-build number.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5d5b5-112">Uwagi</span><span class="sxs-lookup"><span data-stu-id="5d5b5-112">Remarks</span></span>  
+ <span data-ttu-id="5d5b5-113">Jeśli numer wersji to 1.0.3705.288, 1 jest głównym numerem wersji, 0 jest numerem wersji pomocniczej, 3705 jest numerem kompilacji, a 288 jest numerem kompilacji podrzędnej.</span><span class="sxs-lookup"><span data-stu-id="5d5b5-113">If the version number is 1.0.3705.288, 1 is the major version number, 0 is the minor version number, 3705 is the build number, and 288 is the sub-build number.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f214a-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f214a-114">Requirements</span></span>  
- <span data-ttu-id="f214a-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f214a-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5d5b5-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="5d5b5-114">Requirements</span></span>  
+ <span data-ttu-id="5d5b5-115">**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5d5b5-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f214a-116">**Nagłówek:** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="f214a-116">**Header:** CorDebug.idl</span></span>  
+ <span data-ttu-id="5d5b5-116">**Nagłówki** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="5d5b5-116">**Header:** CorDebug.idl</span></span>  
   
- <span data-ttu-id="f214a-117">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f214a-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5d5b5-117">**Biblioteki** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5d5b5-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f214a-118">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f214a-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5d5b5-118">**.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5d5b5-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f214a-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f214a-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d5b5-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5d5b5-119">See also</span></span>
 
-- [<span data-ttu-id="f214a-120">Struktury debugowania</span><span class="sxs-lookup"><span data-stu-id="f214a-120">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="f214a-121">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="f214a-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="5d5b5-120">Struktury debugowania</span><span class="sxs-lookup"><span data-stu-id="5d5b5-120">Debugging Structures</span></span>](debugging-structures.md)
+- [<span data-ttu-id="5d5b5-121">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="5d5b5-121">Debugging</span></span>](index.md)

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bda8079cff8f5e8fafade03a02c3dfe8798c5ca
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 11d5e2eb5e2743fca4876ed09add79be3eba514f
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740770"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274206"
 ---
-# <a name="cordebugsteprange-structure"></a><span data-ttu-id="dbc30-102">COR_DEBUG_STEP_RANGE — Struktura</span><span class="sxs-lookup"><span data-stu-id="dbc30-102">COR_DEBUG_STEP_RANGE Structure</span></span>
-<span data-ttu-id="dbc30-103">Zawiera informacje przesunięcia w zakresie kodu.</span><span class="sxs-lookup"><span data-stu-id="dbc30-103">Contains the offset information for a range of code.</span></span>  
+# <a name="cor_debug_step_range-structure"></a><span data-ttu-id="31606-102">COR_DEBUG_STEP_RANGE — Struktura</span><span class="sxs-lookup"><span data-stu-id="31606-102">COR_DEBUG_STEP_RANGE Structure</span></span>
+<span data-ttu-id="31606-103">Zawiera informacje o przesunięciu dla zakresu kodu.</span><span class="sxs-lookup"><span data-stu-id="31606-103">Contains the offset information for a range of code.</span></span>  
   
- <span data-ttu-id="dbc30-104">Ta struktura jest używany przez [ICorDebugStepper::StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="dbc30-104">This structure is used by the [ICorDebugStepper::StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) method.</span></span>  
+ <span data-ttu-id="31606-104">Ta struktura jest używana przez metodę [ICorDebugStepper:: StepRange —](icordebugstepper-steprange-method.md) .</span><span class="sxs-lookup"><span data-stu-id="31606-104">This structure is used by the [ICorDebugStepper::StepRange](icordebugstepper-steprange-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dbc30-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="dbc30-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="31606-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="31606-105">Syntax</span></span>  
   
 ```cpp  
 typedef struct {  
@@ -37,24 +37,24 @@ typedef struct {
 } COR_DEBUG_STEP_RANGE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="dbc30-106">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="dbc30-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="31606-106">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="31606-106">Members</span></span>  
   
-|<span data-ttu-id="dbc30-107">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="dbc30-107">Member</span></span>|<span data-ttu-id="dbc30-108">Opis</span><span class="sxs-lookup"><span data-stu-id="dbc30-108">Description</span></span>|  
+|<span data-ttu-id="31606-107">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="31606-107">Member</span></span>|<span data-ttu-id="31606-108">Opis</span><span class="sxs-lookup"><span data-stu-id="31606-108">Description</span></span>|  
 |------------|-----------------|  
-|`startOffset`|<span data-ttu-id="dbc30-109">Przesunięcie początku zakresu.</span><span class="sxs-lookup"><span data-stu-id="dbc30-109">The offset of the beginning of the range.</span></span>|  
-|`endOffset`|<span data-ttu-id="dbc30-110">Przesunięcie koniec zakresu.</span><span class="sxs-lookup"><span data-stu-id="dbc30-110">The offset of the end of the range.</span></span>|  
+|`startOffset`|<span data-ttu-id="31606-109">Przesunięcie początku zakresu.</span><span class="sxs-lookup"><span data-stu-id="31606-109">The offset of the beginning of the range.</span></span>|  
+|`endOffset`|<span data-ttu-id="31606-110">Przesunięcie końca zakresu.</span><span class="sxs-lookup"><span data-stu-id="31606-110">The offset of the end of the range.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="dbc30-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="dbc30-111">Requirements</span></span>  
- <span data-ttu-id="dbc30-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dbc30-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="31606-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="31606-111">Requirements</span></span>  
+ <span data-ttu-id="31606-112">**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="31606-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dbc30-113">**Nagłówek:** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="dbc30-113">**Header:** CorDebug.idl</span></span>  
+ <span data-ttu-id="31606-113">**Nagłówki** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="31606-113">**Header:** CorDebug.idl</span></span>  
   
- <span data-ttu-id="dbc30-114">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dbc30-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="31606-114">**Biblioteki** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="31606-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="dbc30-115">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dbc30-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="31606-115">**.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="31606-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dbc30-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="dbc30-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="31606-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="31606-116">See also</span></span>
 
-- [<span data-ttu-id="dbc30-117">StepRange, metoda</span><span class="sxs-lookup"><span data-stu-id="dbc30-117">StepRange Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)
-- [<span data-ttu-id="dbc30-118">Struktury debugowania</span><span class="sxs-lookup"><span data-stu-id="dbc30-118">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="dbc30-119">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="dbc30-119">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="31606-117">StepRange, metoda</span><span class="sxs-lookup"><span data-stu-id="31606-117">StepRange Method</span></span>](icordebugstepper-steprange-method.md)
+- [<span data-ttu-id="31606-118">Struktury debugowania</span><span class="sxs-lookup"><span data-stu-id="31606-118">Debugging Structures</span></span>](debugging-structures.md)
+- [<span data-ttu-id="31606-119">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="31606-119">Debugging</span></span>](index.md)

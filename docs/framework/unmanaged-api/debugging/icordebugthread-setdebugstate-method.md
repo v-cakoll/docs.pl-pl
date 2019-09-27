@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 66f60b2342b6ff64f1329cbe57032291d5139384
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 15e18888e307a14c4396966afc0a623e1acba104
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770590"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332812"
 ---
 # <a name="icordebugthreadsetdebugstate-method"></a>ICorDebugThread::SetDebugState — Metoda
 Ustawia flagi opisujące stan debugowania tego ICorDebugThread.  
@@ -37,16 +37,16 @@ HRESULT SetDebugState (
   
 ## <a name="parameters"></a>Parametry  
  `state`  
- [in] Bitowa kombinacja wartości wyliczenia cordebugthreadstate —, określające stan debugowania tego wątku.  
+ podczas Bitowa kombinacja CorDebugThreadState — wartości wyliczenia, które określają stan debugowania tego wątku.  
   
 ## <a name="remarks"></a>Uwagi  
- `SetDebugState` Ustawia bieżący stan debugowania w wątku. ("Bieżący stan debugowania" reprezentuje stan debugowania, gdyby proces będzie kontynuowane nie rzeczywiste bieżącego stanu.) Normalna wartość to jest THREAD_RUNNING. Tylko debuger może wpłynąć na stan debugowania wątku. Debugowanie stany ostatniego na będzie nadal występował, więc jeśli chcesz zachować wątku THREAD_SUSPENDed za pośrednictwem wielu będzie się powtarzać, można ustawić go jeden raz i dzięki temu nie trzeba martwić. Zawieszanie wątków i wznawianie procesu może spowodować zakleszczenia, chociaż jest mało prawdopodobne, zwykle. To jest wewnętrzne jakość wątków i procesów i projektem. Debuger asynchronicznie można przerwać i wznawianie wątków można przerwać zakleszczenia. Jeśli stan użytkownika dla wątku zawiera USER_UNSAFE_POINT, wątek może blokować wyrzucania elementów bezużytecznych (GC). Oznacza to, że wątek wstrzymania ma znacznie wyższe prawdopodobieństwo powoduje zakleszczenia. Nie może to mieć wpływ na debugowania, który już do kolejki zdarzeń. Ten sposób debuger powinien opróżnienia kolejki całe zdarzenie (przez wywołanie metody [ICorDebugController::HasQueuedCallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)) przed zawieszanie lub wznawianie wątków. Inne może ją odbierać zdarzenia w wątku, który uważa, że została już wstrzymana.  
+ `SetDebugState` ustawia bieżący stan debugowania wątku. ("Bieżący stan debugowania" reprezentuje stan debugowania, jeśli proces ma być kontynuowany, a nie z rzeczywistym bieżącym stanem). Wartość normalna to THREAD_RUN. Tylko debuger może mieć wpływ na stan debugowania wątku. Stany debugowania są w dalszym ciągu kontynuowane, więc jeśli chcesz zachować wątek THREAD_SUSPENDed przez wiele kontynuuje, możesz go skonfigurować raz i jeszcze nie musi się martwić. Wstrzymywanie wątków i wznawianie procesu może spowodować zakleszczenie, chociaż zwykle jest to mało prawdopodobne. Jest to wewnętrzna jakość wątków i procesów. jest ona zaprojektowana. Debuger może asynchronicznie przerwać i wznowić wątki w celu przerwania zakleszczenia. Jeśli stan użytkownika wątku zawiera USER_UNSAFE_POINT, wątek może blokować wyrzucanie elementów bezużytecznych (GC). Oznacza to, że zawieszony wątek ma znacznie większą szansę na spowodowanie zakleszczenia. To może nie wpływać na zdarzenia debugowania, które zostały już dodane do kolejki. W ten sposób debuger powinien opróżnić całą kolejkę zdarzeń (przez wywołanie [ICorDebugController:: HasQueuedCallbacks —](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)) przed zawieszeniem lub wznowieniem wątków. W przeciwnym razie mogą wystąpić zdarzenia w wątku, który uważa, że jest już wstrzymany.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

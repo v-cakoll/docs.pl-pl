@@ -3,12 +3,12 @@ title: Jak korzystać z interfejsu API zautomatyzowanej ML.NET ML
 description: Interfejs API zautomatyzowanej sieci ML.NET automatyzuje proces tworzenia modelu i generuje model gotowy do wdrożenia. Informacje na temat opcji, których można użyć do konfigurowania automatycznych zadań uczenia maszynowego.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 02e4203b0d9f388c7bd7133f3cd4e97cc60cff14
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: a7057337fb6ff19a1e402d7bf74a766b246ea3c1
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929391"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332718"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Jak korzystać z interfejsu API automatycznego uczenia maszynowego ML.NET
 
@@ -126,6 +126,9 @@ Metryka optymalizacji, jak pokazano w powyższym przykładzie, określa metrykę
 |PositiveRecall
 
 ## <a name="data-pre-processing-and-featurization"></a>Wstępne przetwarzanie danych i cechowania
+
+> [!NOTE]
+> W kolumnie funkcji obsługiwane są tylko typy [`Boolean`](https://docs.microsoft.com/en-us/dotnet/api/system.boolean), [`Single`](https://docs.microsoft.com/en-us/dotnet/api/system.single)i [`String`](https://docs.microsoft.com/en-us/dotnet/api/system.string).
 
 Przetwarzanie wstępne danych odbywa się domyślnie, a następujące kroki są wykonywane automatycznie:
 

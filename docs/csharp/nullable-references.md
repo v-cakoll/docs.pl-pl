@@ -2,12 +2,12 @@
 title: Typy referencyjne dopuszczające wartość null
 description: Ten artykuł zawiera omówienie typów referencyjnych dopuszczających wartość null C# , które dodano w 8. Dowiesz się, jak funkcja zapewnia bezpieczeństwo przed wyjątkami odwołania o wartości null dla nowych i istniejących projektów.
 ms.date: 02/19/2019
-ms.openlocfilehash: 80018aaa409e7b4c188362482705de33ac5afd85
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 05a8e14a7c51df685b3ffdf16aab997da0a8036f
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71272794"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332371"
 ---
 # <a name="nullable-reference-types"></a>Typy referencyjne dopuszczające wartość null
 
@@ -74,9 +74,12 @@ Możesz również użyć dyrektyw, aby ustawić te same konteksty w dowolnym mie
 - `#nullable enable`: Ustawia kontekst adnotacji dopuszczający wartość null i kontekst ostrzeżenia nullable do **włączenia**.
 - `#nullable disable`: Ustawia kontekst adnotacji dopuszczający wartość null i kontekst ostrzeżenia dopuszczający wartość **null.**
 - `#nullable restore`: Przywraca kontekst adnotacji dopuszczający wartość null i kontekst ostrzeżenia do wartości null w ustawieniach projektu.
-- `#pragma warning disable nullable`: Ustaw dla kontekstu ostrzeżenia o wartości null wartość **wyłączone**.
-- `#pragma warning enable nullable`: Ustaw kontekst ostrzeżenia wartości null na **włączone**.
-- `#pragma warning restore nullable`: Przywraca kontekst ostrzegawczy dopuszczający wartość null do ustawień projektu.
+- `#nullable disable warnings`: Ustaw dla kontekstu ostrzeżenia o wartości null wartość **wyłączone**.
+- `#nullable enable warnings`: Ustaw kontekst ostrzeżenia wartości null na **włączone**.
+- `#nullable restore warnings`: Przywraca kontekst ostrzegawczy dopuszczający wartość null do ustawień projektu.
+- `#nullable disable annotations`: Ustaw dla kontekstu adnotacji wartości null wartość **wyłączone**.
+- `#nullable enable annotations`: Ustaw dla kontekstu adnotacji nullable wartość **włączone**.
+- `#nullable restore annotations`: Przywraca kontekst ostrzeżenia adnotacji do ustawień projektu.
 
 Domyślne adnotacje dopuszczające wartość null i `disabled`konteksty ostrzeżenia są. Ta decyzja oznacza, że istniejący kod kompiluje się bez zmian i bez generowania nowych ostrzeżeń.
 

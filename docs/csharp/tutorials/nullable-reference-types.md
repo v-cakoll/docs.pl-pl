@@ -3,12 +3,12 @@ title: Projektowanie przy użyciu typów referencyjnych dopuszczających wartoś
 description: Ten zaawansowany samouczek zawiera wprowadzenie do typów referencyjnych dopuszczających wartość null. Dowiesz się, w jaki sposób projekt zostanie zastosowany, gdy wartości odniesienia mogą mieć wartość null, i że kompilator wymusi, gdy nie mogą mieć wartości null.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: ea8059061dccc85060b4f6244ff0d7be9b7708b8
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 6b127cce66f2f9ced3cee29336b39e2976e03619
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214416"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332344"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Samouczek: Dokładniej zamierzanie projektu z typami odwołań dopuszczających wartości null i niedopuszczające wartości null
 
@@ -43,12 +43,6 @@ Utwórz nową aplikację konsolową w programie Visual Studio lub za pomocą `do
 <LangVersion>8.0</LangVersion>
 <Nullable>enable</Nullable>
 ```
-
-> [!IMPORTANT]
-> Element miał wcześniej nazwę `NullableContextOptions`. `Nullable` Zmiana nazwy jest dostarczana z programem Visual Studio 2019, 16,2-P1. Ta zmiana nie ma zestaw .NET Core SDK 3.0.100-preview5-011568. Jeśli używasz interfejs wiersza polecenia platformy .NET Core, musisz użyć `NullableContextOptions` do momentu udostępnienia kolejnej wersji zapoznawczej.
-
-> [!NOTE]
-> Po C# wydaniu 8 (w trybie podglądu) `Nullable` element zostanie dodany przez nowe szablony projektu. Do tego momentu należy dodać ją ręcznie.
 
 ### <a name="design-the-types-for-the-application"></a>Projektowanie typów aplikacji
 

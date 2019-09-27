@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: ebfd05a39c290e379bea2b925e7ea30c40d303fe
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: f56e5defa2328011d222bfca05334b610e805055
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046315"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332786"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next — Instrukcja (Visual Basic)
 
@@ -35,7 +35,7 @@ Powtarza grupę instrukcji dla każdego elementu w kolekcji.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```vb
 For Each element [ As datatype ] In group
     [ statements ]
     [ Continue For ]
@@ -49,22 +49,22 @@ Next [ element ]
 
 |Termin|Definicja|
 |---|---|
-|`element`|Wymagane w `For Each` instrukcji. Opcjonalne w `Next` instrukcji. Zmiennej. Służy do iteracji elementów kolekcji.|
-|`datatype`|Opcjonalne Jeśli [`Option Infer`](option-infer-statement.md) jest włączone (wartość domyślna) lub `element` jest już zadeklarowane; wymagane `Option Infer` , jeśli jest `element` wyłączone i nie jest już zadeklarowane. Typ `element`danych.|
-|`group`|Wymagany. Zmienna z typem, który jest typem kolekcji lub obiektem. Odwołuje się do kolekcji, w `statements` której mają być powtarzane.|
-|`statements`|Opcjonalny. Co najmniej jedna instrukcja między `For Each` i `Next` , która jest uruchamiana dla `group`każdego elementu w.|
-|`Continue For`|Opcjonalny. Przenosi kontrolę na początek `For Each` pętli.|
-|`Exit For`|Opcjonalny. Przenosi kontrolę z `For Each` pętli.|
-|`Next`|Wymagany. Kończy definicję `For Each` pętli.|
+|`element`|Wymagane w instrukcji `For Each`. Opcjonalne w instrukcji `Next`. Zmiennej. Służy do iteracji elementów kolekcji.|
+|`datatype`|Opcjonalne, jeśli [`Option Infer`](option-infer-statement.md) jest włączona (wartość domyślna) lub `element` jest już zadeklarowana; wymagany, jeśli `Option Infer` jest wyłączony i `element` nie jest już zadeklarowany. Typ danych `element`.|
+|`group`|Wymagany. Zmienna z typem, który jest typem kolekcji lub obiektem. Odwołuje się do kolekcji, w której `statements` należy powtarzać.|
+|`statements`|Opcjonalny. Jedna lub więcej instrukcji między `For Each` i `Next`, które są uruchamiane dla każdego elementu w `group`.|
+|`Continue For`|Opcjonalny. Przenosi kontrolę na początek pętli `For Each`.|
+|`Exit For`|Opcjonalny. Przenosi kontrolę z pętli `For Each`.|
+|`Next`|Wymagany. Kończy definicję pętli `For Each`.|
 
 ## <a name="simple-example"></a>Prosty przykład
 
-`For Each`Użyj... `Next` pętla, gdy chcesz powtórzyć zestaw instrukcji dla każdego elementu kolekcji lub tablicy.
+Użyj `For Each`... `Next` pętla, gdy chcesz powtórzyć zestaw instrukcji dla każdego elementu kolekcji lub tablicy.
 
 > [!TIP]
-> A [dla... Następna instrukcja](../../../visual-basic/language-reference/statements/for-next-statement.md) działa prawidłowo, gdy można skojarzyć każdą iterację pętli z zmienną kontroli i określić początkową i końcową wartość tej zmiennej. Jednak podczas pracy z kolekcją pojęcie wartości początkowych i końcowych nie ma znaczenia, a użytkownik nie musi wiedzieć, ile elementów ma kolekcja. W tym rodzaju przypadku `For Each`... `Next` pętla jest często lepszym wyborem.
+> A [dla... Następna instrukcja](../../../visual-basic/language-reference/statements/for-next-statement.md) działa prawidłowo, gdy można skojarzyć każdą iterację pętli z zmienną kontroli i określić początkową i końcową wartość tej zmiennej. Jednak podczas pracy z kolekcją pojęcie wartości początkowych i końcowych nie ma znaczenia, a użytkownik nie musi wiedzieć, ile elementów ma kolekcja. W tym rodzaju przypadku pętla `For Each`... `Next` jest często lepszym wyborem.
 
-W poniższym przykładzie, `For Each`...`Next` instrukcja wykonuje iterację przez wszystkie elementy kolekcji list.
+W poniższym przykładzie `For Each`... `Next` instrukcja wykonuje iterację przez wszystkie elementy kolekcji list.
 
 [!code-vb[VbVbalrStatements#121](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#121)]
 
@@ -72,113 +72,113 @@ Aby uzyskać więcej przykładów, zobacz [kolekcje](../../../standard/collectio
 
 ## <a name="nested-loops"></a>Pętle zagnieżdżone
 
-Pętle można `For Each` zagnieżdżać, umieszczając jedną pętlę w innej.
+Można zagnieżdżać pętle `For Each` przez umieszczenie jednej pętli w innej.
 
-W poniższym przykładzie pokazano zagnieżdżonych `For Each`...`Next` ds.
+Poniższy przykład ilustruje zagnieżdżony `For Each`... `Next` ds.
 
 [!code-vb[VbVbalrStatements#122](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#122)]
 
-Podczas zagnieżdżania pętli Każda pętla musi mieć unikatową `element` zmienną.
+Podczas zagnieżdżania pętli Każda pętla musi mieć unikatową zmienną `element`.
 
 Można również zagnieżdżać różne rodzaje struktur kontroli w obrębie siebie. Aby uzyskać więcej informacji, zobacz [struktury formantów zagnieżdżonych](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
 
 ## <a name="exit-for-and-continue-for"></a>Zamknij i Kontynuuj dla
 
-Instrukcja [Exit for](../../../visual-basic/language-reference/statements/exit-statement.md) powoduje wyjście `For`z...`Next` Pętla i przeniesie sterowanie do instrukcji, która `Next` następuje po instrukcji.
+Instrukcja [Exit for](../../../visual-basic/language-reference/statements/exit-statement.md) powoduje wyjście z `For`... `Next` Pętla i transferuje sterowanie do instrukcji, która następuje po instrukcji `Next`.
 
-`Continue For` Instrukcja natychmiast przenosi kontrolę do następnej iteracji pętli. Aby uzyskać więcej informacji, zobacz [Kontynuacja instrukcji](../../../visual-basic/language-reference/statements/continue-statement.md).
+Instrukcja `Continue For` przenosi bezpośrednio kontrolę do następnej iteracji pętli. Aby uzyskać więcej informacji, zobacz [Kontynuacja instrukcji](../../../visual-basic/language-reference/statements/continue-statement.md).
 
-Poniższy przykład pokazuje, jak używać `Continue For` instrukcji i. `Exit For`
+Poniższy przykład pokazuje, jak używać instrukcji `Continue For` i `Exit For`.
 
 [!code-vb[VbVbalrStatements#123](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#123)]
 
-W pętli można umieścić dowolną liczbę `Exit For` instrukcji. `For Each` W przypadku użycia w `For Each` `Exit For` pętlach zagnieżdżonych powoduje wyjście z wewnętrznej pętli i przeniesienie kontroli do następnego wyższego poziomu zagnieżdżenia.
+W pętli `For Each` można umieścić dowolną liczbę instrukcji `Exit For`. Gdy jest używany w zagnieżdżonych pętlach `For Each`, `Exit For` powoduje, że wykonanie zamyka najbliższą pętlę i przenosi kontrolę na następny wyższy poziom zagnieżdżenia.
 
-`Exit For`jest często używany po ocenie pewnego stanu, na przykład w `If`... `Then`... `Else` struktura. Może być konieczne użycie `Exit For` następujących warunków:
+`Exit For` jest często używany po ocenie pewnego stanu, na przykład w `If`... `Then`... `Else`. Możesz chcieć użyć `Exit For` z następujących warunków:
 
 - Kontynuowanie iteracji jest niepotrzebne lub niemożliwe. Może to być spowodowane błędną wartością lub żądaniem zakończenia.
 
-- Wyjątek jest przechwytywany w `Try`... `Catch`... `Finally`. Możesz użyć `Exit For` na końcu `Finally` bloku.
+- Wyjątek jest przechwytywany w `Try`... `Catch`... `Finally`. Możesz użyć `Exit For` na końcu bloku `Finally`.
 
-- Istnieje nieskończona pętla, która jest pętlą, która może uruchamiać dużą lub nawet nieskończoną liczbę razy. Jeśli wykryjesz taki warunek, możesz użyć `Exit For` , aby wyjść z pętli. Aby uzyskać więcej informacji, zobacz [... Loop — instrukcja](../../../visual-basic/language-reference/statements/do-loop-statement.md).
+- Istnieje nieskończona pętla, która jest pętlą, która może uruchamiać dużą lub nawet nieskończoną liczbę razy. Jeśli wykryjesz taki warunek, możesz użyć `Exit For`, aby wyjść z pętli. Aby uzyskać więcej informacji, zobacz [... Loop — instrukcja](../../../visual-basic/language-reference/statements/do-loop-statement.md).
 
 ## <a name="iterators"></a>Iteratory
 
-Za pomocą *iteratora* można wykonać niestandardową iterację w kolekcji. Iterator może być funkcją lub `Get` akcesorem. Używa `Yield` instrukcji, aby zwrócić każdy element kolekcji pojedynczo.
+Za pomocą *iteratora* można wykonać niestandardową iterację w kolekcji. Iterator może być funkcją lub `Get` akcesor. Używa instrukcji `Yield`, aby zwrócić każdy element kolekcji pojedynczo.
 
-Należy wywołać iterator przy użyciu `For Each...Next` instrukcji. Każda iteracja `For Each` pętli wywołuje iterator. Po osiągnięciu `Yield`instrukcjiw iteratorze zwracane jest wyrażenie w instrukcji, a bieżąca lokalizacja w kodzie jest zachowywana. `Yield` Wykonanie jest uruchamiane ponownie z tej lokalizacji przy następnym wywołaniu iteratora.
+Iterator jest wywoływany przy użyciu instrukcji `For Each...Next`. Każda iteracja pętli `For Each` wywołuje iterator. Po osiągnięciu instrukcji `Yield` w iteratoru wyrażenie w instrukcji `Yield` jest zwracane, a bieżąca lokalizacja w kodzie jest zachowywana. Wykonanie jest uruchamiane ponownie z tej lokalizacji przy następnym wywołaniu iteratora.
 
-Poniższy przykład używa funkcji iteratora. Funkcja iteratora zawiera `Yield` instrukcję, która znajduje się wewnątrz elementu [... Następna](../../../visual-basic/language-reference/statements/for-next-statement.md) pętla. W metodzie każda iteracja `For Each` treści instrukcji tworzy wywołanie funkcji iteratora, która przechodzi do następnej `Yield` instrukcji. `ListEvenNumbers`
+Poniższy przykład używa funkcji iteratora. Funkcja iteratora zawiera instrukcję `Yield`, która znajduje się wewnątrz elementu [... Następna](../../../visual-basic/language-reference/statements/for-next-statement.md) pętla. W metodzie `ListEvenNumbers` każda iteracja treści instrukcji `For Each` tworzy wywołanie funkcji iteratora, która przechodzi do następnej instrukcji `Yield`.
 
 [!code-vb[VbVbalrStatements#127](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#127)]
 
-Aby uzyskać więcej informacji, [](../../programming-guide/concepts/iterators.md)zobacz Iteratory, [instrukcja Yield](../../../visual-basic/language-reference/statements/yield-statement.md)i [iterator](../../../visual-basic/language-reference/modifiers/iterator.md).
+Aby uzyskać więcej informacji, zobacz [Iteratory](../../programming-guide/concepts/iterators.md), [instrukcja Yield](../../../visual-basic/language-reference/statements/yield-statement.md)i [iterator](../../../visual-basic/language-reference/modifiers/iterator.md).
 
 ## <a name="technical-implementation"></a>Realizacja techniczna
 
-`For Each`Gdy...`Next` zostanie uruchomiona instrukcja, Visual Basic oblicza tylko jeden raz, zanim zostanie uruchomiona pętla. Jeśli instrukcja zablokuje `element` zmiany `group`lub zmiany nie wpłyną na iterację pętli.
+Gdy `For Each`... `Next` zostanie uruchomiona instrukcja, Visual Basic oblicza tylko jeden raz, zanim zostanie uruchomiona pętla. Jeśli instrukcja blokuje zmiany `element` lub `group`, te zmiany nie wpłyną na iterację pętli.
 
-Gdy wszystkie elementy w kolekcji zostały po raz kolejny przypisane do `element` `For Each` , pętla przestanie działać i kontrola przechodzi `Next` do instrukcji następującej po instrukcji.
+Gdy wszystkie elementy w kolekcji zostały po razeniu przypisane do `element`, pętla `For Each` przestanie działać i kontrola przechodzi do instrukcji następującej po instrukcji `Next`.
 
-Jeśli [opcja wnioskowanie](option-infer-statement.md) jest włączona (ustawienie domyślne), kompilator Visual Basic może wywnioskować typ `element`danych. Jeśli jest wyłączona i `element` nie została zadeklarowana poza pętlą, należy zadeklarować ją `For Each` w instrukcji. Aby `element` jawnie zadeklarować typ danych, `As` należy użyć klauzuli. Chyba że typ danych elementu jest zdefiniowany poza `For Each`... `Next` konstrukcja, jej zakres jest treścią pętli. Należy zauważyć, że nie `element` można zadeklarować jednocześnie zewnątrz i wewnątrz pętli.
+Jeśli [opcja wnioskowanie](option-infer-statement.md) jest włączona (ustawienie domyślne), kompilator Visual Basic może wywnioskować typ danych `element`. Jeśli jest wyłączona, a `element` nie została zadeklarowana poza pętlą, należy zadeklarować ją w instrukcji `For Each`. Aby jawnie zadeklarować typ danych `element`, użyj klauzuli `As`. Jeśli typ danych elementu nie jest zdefiniowany poza konstrukcją `For Each`... `Next`, jego zakres jest treścią pętli. Należy zauważyć, że nie można zadeklarować wartości `element` zarówno na zewnątrz, jak i wewnątrz pętli.
 
-Opcjonalnie można określić `element` `Next` w instrukcji. Poprawia to czytelność programu, zwłaszcza jeśli istnieją zagnieżdżone `For Each` pętle. Należy określić tę samą zmienną, która pojawia się w odpowiedniej `For Each` instrukcji.
+Opcjonalnie można określić `element` w instrukcji `Next`. Poprawia to czytelność programu, zwłaszcza jeśli istnieją zagnieżdżone pętle `For Each`. Należy określić tę samą zmienną, która pojawia się w odpowiedniej instrukcji `For Each`.
 
 Można uniknąć zmiany wartości `element` wewnątrz pętli. Może to utrudnić odczytywanie i debugowanie kodu. Zmiana wartości `group` nie ma wpływu na kolekcję lub jej elementy, które zostały określone podczas pierwszego wprowadzenia pętli.
 
-Gdy są zagnieżdżane pętle, jeśli `Next` zostanie napotkana instrukcja zewnętrznego poziomu zagnieżdżenia `Next` przed poziomem wewnętrzny, kompilator sygnalizuje błąd. Jednak kompilator może wykryć ten błąd nakładający się tylko wtedy, gdy określisz `element` w każdej `Next` instrukcji.
+Gdy są zagnieżdżane pętle, jeśli zostanie wykryty `Next` instrukcji zewnętrznego poziomu zagnieżdżenia przed `Next` wewnętrznego poziomu, kompilator sygnalizuje błąd. Jednak kompilator może wykryć ten błąd nakładający się tylko wtedy, gdy określisz `element` w każdej instrukcji `Next`.
 
-Jeśli kod zależy od przechodzenia kolekcji w określonej kolejności, a `For Each`... `Next` pętla nie jest najlepszym wyborem, chyba że znasz charakterystykę obiektu modułu wyliczającego. Kolejność przechodzenia nie jest określana przez Visual Basic, ale przez <xref:System.Collections.IEnumerator.MoveNext%2A> metodę obiektu modułu wyliczającego. W związku z tym może nie być możliwe przewidywalnie, który element kolekcji jest pierwszy do zwrócenia w `element`, lub który jest kolejnym, który ma zostać zwrócony po danym elemencie. Możesz uzyskać bardziej niezawodne wyniki przy użyciu innej struktury pętli, takiej jak `For`... `Next` lub`Do`... `Loop`.
+Jeśli Twój kod zależy od przechodzenia do kolekcji w określonej kolejności, pętla `For Each`... `Next` nie jest najlepszym wyborem, chyba że znasz charakterystykę obiektu modułu wyliczającego. Kolejność przechodzenia nie jest określana przez Visual Basic, ale przez metodę <xref:System.Collections.IEnumerator.MoveNext%2A> obiektu modułu wyliczającego. W związku z tym może nie być możliwe przewidywalnie, który element kolekcji jest pierwszy do zwrócenia w `element` lub który jest kolejnym, który ma zostać zwrócony po danym elemencie. Możliwe jest uzyskanie bardziej niezawodnych wyników przy użyciu innej struktury pętli, takiej jak `For`... `Next` lub `Do`... `Loop`.
 
-Środowisko uruchomieniowe musi mieć możliwość konwersji elementów w `group` na. `element` Instrukcja [`Option Strict`] kontroluje, czy dozwolone są zarówno konwersje rozszerzające, jak i wąskie (`Option Strict` jest wyłączone, jego wartość domyślna) czy dozwolone są tylko konwersje rozszerzające (`Option Strict` jest on włączony). Aby uzyskać więcej informacji, zobacz temat [zwężanie konwersji](#narrowing-conversions).
+Środowisko uruchomieniowe musi mieć możliwość przekonwertowania elementów w `group` do `element`. Instrukcja [`Option Strict`] kontroluje, czy dozwolone są zarówno konwersje rozszerzające, jak i wąskie (`Option Strict`, jego wartość domyślna), czy tylko konwersje rozszerzające są dozwolone (`Option Strict` jest włączone). Aby uzyskać więcej informacji, zobacz temat [zwężanie konwersji](#narrowing-conversions).
 
-Typ `group` danych musi być typem referencyjnym, który odwołuje się do kolekcji lub tablicy, która jest wyliczalna. Najczęściej oznacza to, że `group` odwołuje się do obiektu, który <xref:System.Collections.IEnumerable> implementuje interfejs `System.Collections` przestrzeni nazw lub <xref:System.Collections.Generic.IEnumerable%601> Interfejs `System.Collections.Generic` przestrzeni nazw. `System.Collections.IEnumerable`<xref:System.Collections.IEnumerable.GetEnumerator%2A> definiuje metodę, która zwraca obiekt modułu wyliczającego dla kolekcji. Obiekt `System.Collections.IEnumerator` Enumerator implementuje <xref:System.Collections.IEnumerator.MoveNext%2A> Interfejs `System.Collections` przestrzeni nazw i <xref:System.Collections.IEnumerator.Reset%2A> uwidacznia <xref:System.Collections.IEnumerator.Current%2A> Właściwość oraz metody i. Visual Basic używa ich do przechodzenia do kolekcji.
+Typ danych `group` musi być typem referencyjnym, który odwołuje się do kolekcji lub tablicy, która jest wyliczalna. Najczęściej oznacza to, że `group` odwołuje się do obiektu, który implementuje interfejs <xref:System.Collections.IEnumerable> dla przestrzeni nazw `System.Collections` lub <xref:System.Collections.Generic.IEnumerable%601> interfejsu przestrzeni nazw `System.Collections.Generic`. `System.Collections.IEnumerable` definiuje metodę <xref:System.Collections.IEnumerable.GetEnumerator%2A>, która zwraca obiekt modułu wyliczającego dla kolekcji. Obiekt Enumerator implementuje interfejs `System.Collections.IEnumerator` przestrzeni nazw `System.Collections` i uwidacznia Właściwość <xref:System.Collections.IEnumerator.Current%2A> oraz <xref:System.Collections.IEnumerator.Reset%2A> i <xref:System.Collections.IEnumerator.MoveNext%2A> metod. Visual Basic używa ich do przechodzenia do kolekcji.
 
 ### <a name="narrowing-conversions"></a>Konwersje zawężające
 
-Gdy `Option Strict` jest ustawiona na `On`, zawężanie konwersji zwykle powoduje błędy kompilatora. Jednakże w `group` `element` instrukcji konwersje z elementów w do są oceniane i wykonywane w czasie wykonywania, a błędy kompilatora spowodowane przez zawężanie konwersji są pomijane. `For Each`
+Gdy `Option Strict` jest ustawiona na `On`, zawężanie konwersji zwykle powoduje błędy kompilatora. Jednakże w instrukcji `For Each` konwersje z elementów w `group` do `element` są oceniane i wykonywane w czasie wykonywania, a błędy kompilatora spowodowane przez zawężanie konwersji są pomijane.
 
-`m` W poniższym przykładzie przypisanie jako wartość początkowa dla elementu `n` nie kompiluje, gdy `Option Strict` jest `Integer` włączone, ponieważ konwersja do a `Long` jest konwersją wąskią. W instrukcji nie jest jednak raportowany błąd kompilatora, mimo że przypisanie do `number` wymaga tej samej konwersji z `Long` do `Integer`. `For Each` W instrukcji zawierającej dużą liczbę błąd czasu wykonywania występuje, gdy <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A> jest stosowany do dużej liczby. `For Each`
+W poniższym przykładzie przypisanie `m` jako wartości początkowej dla `n` nie kompiluje się, gdy `Option Strict` jest włączone, ponieważ konwersja `Long` na `Integer` jest konwersją na wąskie. W instrukcji `For Each` nie raportowany jest błąd kompilatora, nawet jeśli przypisanie do `number` wymaga tej samej konwersji z `Long` do `Integer`. W instrukcji `For Each`, która zawiera dużą liczbę, wystąpi błąd czasu wykonywania, gdy <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A> zostanie zastosowany do dużej liczby.
 
 [!code-vb[VbVbalrStatements#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class3.vb#89)]
 
 ### <a name="ienumerator-calls"></a>Wywołania IEnumerator
 
-Podczas wykonywania `For Each`... zaczyna się pętla, Visual Basic sprawdza `group` , czy odwołuje się do prawidłowego obiektu kolekcji. `Next` Jeśli nie, zgłasza wyjątek. W przeciwnym razie wywołuje <xref:System.Collections.IEnumerator.MoveNext%2A> metodę <xref:System.Collections.IEnumerator.Current%2A> i właściwość obiektu modułu wyliczającego w celu zwrócenia pierwszego elementu. Jeśli `MoveNext` wskazuje, że nie ma następnego elementu, czyli jeśli kolekcja jest pusta `For Each` , pętla przestanie działać i kontrola przechodzi `Next` do instrukcji następującej po instrukcji. W przeciwnym razie Visual Basic `element` ustawia jako pierwszy element i uruchamia blok instrukcji.
+Podczas wykonywania `For Each`... `Next` pętla, Visual Basic sprawdza, czy `group` odwołuje się do prawidłowego obiektu kolekcji. Jeśli nie, zgłasza wyjątek. W przeciwnym razie wywołuje metodę <xref:System.Collections.IEnumerator.MoveNext%2A> i Właściwość <xref:System.Collections.IEnumerator.Current%2A> obiektu modułu wyliczającego w celu zwrócenia pierwszego elementu. Jeśli `MoveNext` wskazuje, że nie ma następnego elementu, czyli jeśli kolekcja jest pusta, pętla `For Each` przestanie działać i kontrola przechodzi do instrukcji następującej po instrukcji `Next`. W przeciwnym razie Visual Basic ustawia `element` do pierwszego elementu i uruchamia blok instrukcji.
 
-Za każdym razem, gdy Visual Basic `Next` napotka instrukcję, wraca `For Each` do instrukcji. Ponownie wywołuje `MoveNext` i `Current` zwraca następny element, a następnie ponownie uruchamia blok lub przerywa pętlę w zależności od wyniku. Ten proces jest kontynuowany do momentu, gdy `MoveNext` nie ma żadnego elementu Next `Exit For` ani instrukcji.
+Za każdym razem, gdy Visual Basic napotka instrukcję `Next`, wraca do instrukcji `For Each`. Ponownie wywołuje `MoveNext` i `Current` do zwrócenia następnego elementu, a następnie ponownie uruchamia blok lub przerywa pętlę w zależności od wyniku. Ten proces jest kontynuowany do momentu, gdy `MoveNext` wskazuje, że nie ma żadnego elementu Next lub `Exit For` instrukcji.
 
-**Modyfikowanie kolekcji.** Obiekt modułu wyliczającego <xref:System.Collections.IEnumerable.GetEnumerator%2A> zwrócony przez zwykle nie pozwala na zmianę kolekcji poprzez dodanie, usunięcie, zastąpienie lub zmianę kolejności elementów. W przypadku zmiany kolekcji po zainicjowaniu `For Each`... Pętla, obiekt modułu wyliczającego jest nieprawidłowy, a następna próba uzyskania dostępu do elementu <xref:System.InvalidOperationException> powoduje wyjątek. `Next`
+**Modyfikowanie kolekcji.** Obiekt modułu wyliczającego zwrócony przez <xref:System.Collections.IEnumerable.GetEnumerator%2A> zwykle nie pozwala na zmianę kolekcji poprzez dodanie, usunięcie, zastąpienie lub zmianę kolejności elementów. Jeśli po zainicjowaniu pętli `For Each`... `Next` zostanie zmieniona kolekcja, obiekt modułu wyliczającego jest nieprawidłowy, a kolejna próba uzyskania dostępu do elementu powoduje wyjątek <xref:System.InvalidOperationException>.
 
-Jednak ten blok modyfikacji nie jest określany przez Visual Basic, ale raczej przez implementację <xref:System.Collections.IEnumerable> interfejsu. Istnieje możliwość wdrożenia `IEnumerable` w sposób umożliwiający modyfikację podczas iteracji. Jeśli rozważasz taką modyfikację dynamiczną, upewnij się, że rozumiesz charakterystykę `IEnumerable` implementacji w używanej kolekcji.
+Jednak ten blok modyfikacji nie jest określany przez Visual Basic, ale raczej przez implementację interfejsu <xref:System.Collections.IEnumerable>. Możliwe jest wdrożenie `IEnumerable` w sposób umożliwiający modyfikację podczas iteracji. Jeśli rozważasz taką modyfikację dynamiczną, upewnij się, że rozumiesz charakterystykę implementacji `IEnumerable` w używanej kolekcji.
 
-**Modyfikowanie elementów kolekcji.** Właściwość obiektu Enumerator jest tylko do odczytu i zwraca lokalną kopię każdego elementu kolekcji. [](../../../visual-basic/language-reference/modifiers/readonly.md) <xref:System.Collections.IEnumerator.Current%2A> Oznacza to, że nie można modyfikować samych elementów w `For Each`... `Next` pętla. Wszelkie wprowadzone zmiany mają wpływ tylko na kopię lokalną `Current` z i nie są odzwierciedlone w źródłowej kolekcji. Jeśli jednak element jest typem referencyjnym, można modyfikować członków wystąpienia, do którego wskazuje. Poniższy przykład modyfikuje `BackColor` element członkowski każdego `thisControl` elementu. Nie można jednak modyfikować `thisControl` samego siebie.
+**Modyfikowanie elementów kolekcji.** Właściwość <xref:System.Collections.IEnumerator.Current%2A> obiektu Enumerator jest [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md)i zwraca lokalną kopię każdego elementu kolekcji. Oznacza to, że nie można modyfikować samych elementów w pętli `For Each`... `Next`. Wszelkie wprowadzone zmiany mają wpływ tylko na kopię lokalną z `Current` i nie zostaną odzwierciedlone w źródłowej kolekcji. Jeśli jednak element jest typem referencyjnym, można modyfikować członków wystąpienia, do którego wskazuje. Poniższy przykład modyfikuje składową `BackColor` każdego elementu `thisControl`. Nie można jednak modyfikować samego `thisControl`.
 
 ```vb
-Sub lightBlueBackground(ByVal thisForm As System.Windows.Forms.Form)
-    For Each thisControl As System.Windows.Forms.Control In thisForm.Controls
+Sub LightBlueBackground(thisForm As System.Windows.Forms.Form)
+    For Each thisControl In thisForm.Controls
         thisControl.BackColor = System.Drawing.Color.LightBlue
     Next thisControl
 End Sub
 ```
 
-Poprzedni przykład może zmodyfikować `BackColor` składową każdego `thisControl` elementu, chociaż nie może on modyfikować `thisControl` samego siebie.
+Poprzedni przykład może zmodyfikować składową `BackColor` każdego elementu `thisControl`, chociaż nie można modyfikować `thisControl`.
 
-**Przechodzenie między tablicami.** Ponieważ klasa implementuje interfejs, wszystkie tablice uwidaczniają metodę. <xref:System.Array.GetEnumerator%2A> <xref:System.Collections.IEnumerable> <xref:System.Array> Oznacza to, że można wykonać iterację tablicy za pomocą `For Each`... `Next` pętla. Można jednak tylko odczytać elementy tablicy. Nie można ich zmienić.
+**Przechodzenie między tablicami.** Ponieważ Klasa <xref:System.Array> implementuje interfejs <xref:System.Collections.IEnumerable>, wszystkie tablice uwidaczniają metodę <xref:System.Array.GetEnumerator%2A>. Oznacza to, że można wykonać iterację tablicy z pętlą `For Each`... `Next`. Można jednak tylko odczytać elementy tablicy. Nie można ich zmienić.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład wyświetla listę wszystkich folderów w C:\ Katalog przy użyciu <xref:System.IO.DirectoryInfo> klasy.
+Poniższy przykład wyświetla listę wszystkich folderów w C:\ Katalog przy użyciu klasy <xref:System.IO.DirectoryInfo>.
 
 [!code-vb[VbVbalrStatements#124](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#124)]
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje procedurę sortowania kolekcji. Przykład sortuje wystąpienia `Car` klasy, które są przechowywane <xref:System.Collections.Generic.List%601>w. Klasa implementuje interfejs, który wymaga, aby Metodazostałazaimplementowana.<xref:System.IComparable%601.CompareTo%2A> <xref:System.IComparable%601> `Car`
+Poniższy przykład ilustruje procedurę sortowania kolekcji. Przykład sortuje wystąpienia klasy `Car`, które są przechowywane w <xref:System.Collections.Generic.List%601>. Klasa `Car` implementuje interfejs <xref:System.IComparable%601>, który wymaga zaimplementowania metody <xref:System.IComparable%601.CompareTo%2A>.
 
-Każde wywołanie <xref:System.IComparable%601.CompareTo%2A> metody wykonuje pojedyncze porównanie, które jest używane do sortowania. Kod pisany przez użytkownika w `CompareTo` metodzie zwraca wartość dla każdego porównania bieżącego obiektu z innym obiektem. Zwracana wartość jest mniejsza niż zero, jeśli bieżący obiekt jest mniejszy niż inny obiekt, większy niż zero, jeśli bieżący obiekt jest większy niż inny obiekt, i zero, jeśli są równe. Dzięki temu można zdefiniować w kodzie kryteria dla wartości większej niż, mniejszej niż i równej.
+Każde wywołanie metody <xref:System.IComparable%601.CompareTo%2A> wykonuje pojedyncze porównanie, które jest używane do sortowania. Kod pisany przez użytkownika w metodzie `CompareTo` zwraca wartość dla każdego porównania bieżącego obiektu z innym obiektem. Zwracana wartość jest mniejsza niż zero, jeśli bieżący obiekt jest mniejszy niż inny obiekt, większy niż zero, jeśli bieżący obiekt jest większy niż inny obiekt, i zero, jeśli są równe. Dzięki temu można zdefiniować w kodzie kryteria dla wartości większej niż, mniejszej niż i równej.
 
-W metodzie `cars.Sort()` instrukcja sortuje listę. `ListCars` <xref:System.Collections.Generic.List%601.Sort%2A> To wywołanie metody <xref:System.Collections.Generic.List%601> powoduje `Car` `List`automatyczne wywoływanie metody dla obiektów w obiekcie. `CompareTo`
+W metodzie `ListCars` instrukcja `cars.Sort()` sortuje listę. To wywołanie metody <xref:System.Collections.Generic.List%601.Sort%2A> <xref:System.Collections.Generic.List%601> powoduje automatyczne wywoływanie metody `CompareTo` dla obiektów `Car` w `List`.
 
 [!code-vb[VbVbalrStatements#125](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#125)]
 
@@ -190,6 +190,6 @@ W metodzie `cars.Sort()` instrukcja sortuje listę. `ListCars` <xref:System.Coll
 - [While...End While, instrukcja](../../../visual-basic/language-reference/statements/while-end-while-statement.md)
 - [Do...Loop, instrukcja](../../../visual-basic/language-reference/statements/do-loop-statement.md)
 - [Rozszerzanie i zwężanie konwersji](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
-- [Inicjatory obiektów: Typy nazwane i anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- Inicjatory @no__t 0Object: Typy nazwane i anonimowe @ no__t-0
 - [Inicjatory kolekcji](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
 - [Tablice](../../../visual-basic/programming-guide/language-features/arrays/index.md)

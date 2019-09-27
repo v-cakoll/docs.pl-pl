@@ -4,12 +4,12 @@ description: Omówienie narzędzi globalnych platformy .NET Core i dostępnych d
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 01c1463ceddcd64e5bab05b95a5ae4a91b6da838
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 40a0aabcf523e8dac9a3ad226064bbb3c1b3ce5b
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117461"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332022"
 ---
 # <a name="net-core-global-tools-overview"></a>Globalne narzędzia platformy .NET Core — Omówienie
 
@@ -70,7 +70,7 @@ Tool 'dotnetsay' (version '2.0.0') was successfully installed.
 
 Narzędzia globalne można zainstalować w katalogu domyślnym lub w określonej lokalizacji. Domyślne katalogi są następujące:
 
-| OS          | Ścieżka                          |
+| OS          | Path                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -107,31 +107,6 @@ Możesz również wyszukać instrukcje dotyczące użycia w witrynie sieci Web n
 dotnet <command> --help
 ```
 
-### <a name="what-could-go-wrong"></a>Co się stało
-
-Narzędzia globalne są [aplikacjami zależnymi od platformy](../deploying/index.md#framework-dependent-deployments-fdd), co oznacza, że korzystają z środowiska uruchomieniowego .NET Core zainstalowanego na komputerze. Jeśli nie odnaleziono oczekiwanego środowiska uruchomieniowego, są one zgodne z normalnymi regułami przetaczania w czasie wykonywania platformy .NET Core, takimi jak:
-
-* Aplikacja przenosi do przodu do najwyższej wersji poprawki określonej głównej i pomocniczej.
-* Jeśli nie ma pasującego środowiska uruchomieniowego z odpowiadającym mu numerem wersji głównej i pomocniczej, używana jest kolejna wyższa wersja pomocnicza.
-* Przewinięcie do przodu nie występuje między wersjami w wersji zapoznawczej środowiska uruchomieniowego a wersjami zapoznawczymi i wersjami. W tym celu narzędzia globalne utworzone przy użyciu wersji zapoznawczej muszą zostać odbudowane i ponownie opublikowane przez autora oraz ponowne zainstalowanie.
-* Dodatkowe problemy mogą wystąpić w przypadku narzędzi globalnych utworzonych w programie .NET Core 2,1 w wersji zapoznawczej 1. Aby uzyskać więcej informacji, zobacz temat [znane problemy w programie .NET Core 2,1 (wersja zapoznawcza 2](https://github.com/dotnet/core/blob/master/release-notes/2.1/Preview/2.1.0-preview2-known-issues.md)).
-
-Jeśli aplikacja nie może znaleźć odpowiedniego środowiska uruchomieniowego, jego uruchomienie nie powiedzie się i zgłosi błąd.
-
-Innym problemem, który może się zdarzyć, jest to, że narzędzie globalne, które zostało utworzone podczas wcześniejszej wersji zapoznawczej, może nie działać z aktualnie zainstalowanymi środowiskami uruchomieniowymi platformy .NET Core. Możesz zobaczyć, które środowiska uruchomieniowe są zainstalowane na maszynie, za pomocą następującego polecenia:
-
-```dotnetcli
-dotnet --list-runtimes
-```
-
-Skontaktuj się z autorem narzędzia globalnego i sprawdź, czy można ponownie skompilować pakiet narzędzi do narzędzia NuGet przy użyciu zaktualizowanego numeru wersji. Po zaktualizowaniu pakietu w pakiecie NuGet możesz zaktualizować swoją kopię.
-
-Interfejs wiersza polecenia platformy .NET Core próbuje dodać domyślne lokalizacje do zmiennej środowiskowej PATH przy pierwszym użyciu. Istnieje jednak kilka scenariuszy, w których lokalizacja nie może być automatycznie dodawana do ścieżki, na przykład:
-
-* W `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` przypadku ustawienia zmiennej środowiskowej.
-* W systemie macOS, jeśli zainstalowano zestaw .NET Core SDK przy użyciu plików *tar. gz* , a nie *. pkg*.
-* W systemie Linux należy edytować plik środowiska powłoki, aby skonfigurować ścieżkę.
-
 ## <a name="other-cli-commands"></a>Inne polecenia interfejsu CLI
 
 Zestaw .NET Core SDK zawiera inne polecenia, które obsługują narzędzia platformy .NET Core. Użyj dowolnego `dotnet tool` polecenia z jedną z następujących opcji:
@@ -162,3 +137,7 @@ Aby wyświetlić wszystkie narzędzia globalne aktualnie zainstalowane na komput
 ```dotnetcli
 dotnet tool list -g
 ```
+
+## <a name="see-also"></a>Zobacz także
+
+* [Rozwiązywanie problemów z użyciem narzędzia .NET Core](troubleshoot-usage-issues.md)

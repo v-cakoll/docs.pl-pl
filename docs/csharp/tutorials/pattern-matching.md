@@ -3,12 +3,12 @@ title: Korzystanie z funkcji dopasowania wzorców w celu poszerzenia typów dany
 description: W tym zaawansowanym samouczku pokazano, jak używać technik dopasowywania wzorców do tworzenia funkcji przy użyciu danych i algorytmów, które są tworzone osobno.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 9266bb1e998fba77c27e17e498b72f4a5925dd7a
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 036a6bcda04771eb8cf3699af8756e83bb144389
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216540"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332353"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Samouczek: Używanie funkcji dopasowywania wzorców do zwiększania typów danych
 
@@ -240,6 +240,9 @@ vehicle switch
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
+    
+    { }     => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
+    null    => throw new ArgumentNullException(nameof(vehicle))
 };
 ```
 
@@ -294,7 +297,7 @@ Użyjesz dopasowania do wzorca dla tej funkcji, ale będziesz zintegrować ją z
 
 W poniższej tabeli przedstawiono kombinacje wartości wejściowych i mnożnik cen szczytowych:
 
-| Dzień        | Godzina         | Kierunek | Premium |
+| Dzień        | Time         | Direction | Premium |
 | ---------- | ------------ | --------- |--------:|
 | Dzień tygodnia    | rano szczytu | Dotycząc   | x 2,00  |
 | Dzień tygodnia    | rano szczytu | Wyjściowy  | x 1,00  |

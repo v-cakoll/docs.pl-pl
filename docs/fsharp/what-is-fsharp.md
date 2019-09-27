@@ -2,14 +2,14 @@
 title: Co to jest F#
 description: Dowiedz się więcej F# na temat tego, co F# to jest język programowania i jaki jest sposób programowania. Dowiedz się więcej o zaawansowanych typach danych, funkcjach i sposobach ich dopasowania.
 ms.date: 08/03/2018
-ms.openlocfilehash: 0c576fe49fadebd68e4fc9d2b20ea8f0cb991af5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3cba509f59a8e81e1a0264de7451e9d80304d768
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630461"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332733"
 ---
-# <a name="what-is-f"></a>Co to jest F\#
+# <a name="what-is-f"></a>Co to jest F @ no__t-0
 
 F#to funkcjonalny język programowania, dzięki któremu można łatwo pisać kod poprawny i łatwiejszy w obsłudze.
 
@@ -42,7 +42,7 @@ F#ma wiele funkcji, w tym:
 * Wnioskowanie o typie i automatyczne uogólnianie
 * Funkcje pierwszoklasowe
 * Zaawansowane typy danych
-* Dopasowanie do wzorca
+* Dopasowanie wzorca
 * Programowanie asynchroniczne
 
 Pełny zestaw funkcji jest udokumentowany w [ F# dokumentacji języka](./language-reference/index.md).
@@ -100,7 +100,7 @@ F#funkcje są również pierwszą klasą, co oznacza, że mogą być przesyłane
 F#ma pełną obsługę obiektów, które są przydatnymi typami danych w przypadku konieczności mieszania danych i funkcjonalności. F#funkcje są używane do manipulowania obiektami.
 
 ```fsharp
-type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
+type Set<'T when 'T: comparison>(elements: seq<'T>) =
     member s.IsEmpty = // Implementation elided
     member s.Contains (value) =// Implementation elided
     member s.Add (value) = // Implementation elided
@@ -110,7 +110,6 @@ type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
     interface IEnumerable<‘T>
     interface IReadOnlyCollection<‘T>
 
-[<RequireQualifiedAccess>]
 module Set =
     let isEmpty (set: Set<'T>) = set.IsEmpty
 

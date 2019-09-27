@@ -1,17 +1,17 @@
 ---
 title: 'Samouczek: Analizuj klasyfikację tonacji-Binary'
 description: W tym samouczku przedstawiono sposób tworzenia aplikacji Razor Pages, która klasyfikuje tonacji z komentarzy w witrynie sieci Web i podejmuje odpowiednie działania. Tonacji klasyfikator binarny używa konstruktora modelu w programie Visual Studio.
-ms.date: 09/13/2019
+ms.date: 09/26/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 375440d98fd728cc89c1ac620614067edbd3adf8
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 0878a9318e7c60be29eeac9fb4efd47e408ab660
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216882"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332579"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Samouczek: Analizowanie tonacji komentarzy witryny internetowej w aplikacji sieci Web przy użyciu konstruktora modelu ML.NET
 
@@ -19,7 +19,7 @@ Dowiedz się, jak analizować tonacji z komentarzy w czasie rzeczywistym w aplik
 
 W tym samouczku pokazano, jak utworzyć aplikację Razor Pages ASP.NET Core, która klasyfikuje tonacji z komentarzy w witrynie sieci Web w czasie rzeczywistym.
 
-Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
+Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 
 > [!div class="checklist"]
 >
@@ -66,7 +66,7 @@ Każdy wiersz w zestawie danych *Wikipedia-detox-250-line-Data. tsv* reprezentuj
 
 ## <a name="choose-a-scenario"></a>Wybierz scenariusz
 
-![](./media/sentiment-analysis-model-builder/model-builder-screen.png)
+![Kreator konstruktora modelu w programie Visual Studio](./media/sentiment-analysis-model-builder/model-builder-screen.png)
 
 Aby szkolić model, musisz wybrać z listy dostępnych scenariuszy uczenia maszynowego udostępnianych przez konstruktora modelu.
 
@@ -79,7 +79,8 @@ Konstruktor modelu akceptuje dane z dwóch źródeł, bazy danych SQL Server lub
 
 1. W kroku dane narzędzia model Builder wybierz pozycję **plik** z listy rozwijanej Źródło danych.
 1. Wybierz przycisk obok pola tekstowego **Wybierz plik** i Użyj Eksploratora plików, aby przeglądać i wybrać plik *Wikipedia-detox-250-line-Data. tsv* .
-1. Wybierz **tonacji** w **etykiecie lub kolumnie do** listy rozwijanej przewidywania
+1. Wybierz pozycję **tonacji** w **kolumnie do przewidywania (etykieta)** listy rozwijanej.
+1. Pozostaw wartości domyślne dla listy rozwijanej **kolumny wejściowe (Features)** .
 1. Wybierz łącze **uczenie** , aby przejść do następnego kroku w narzędziu model Builder.
 
 ## <a name="train-the-model"></a>Uczenie modelu
@@ -117,23 +118,13 @@ W wyniku procesu szkolenia zostaną utworzone dwa projekty.
     Następujące projekty powinny pojawić się w **Eksplorator rozwiązań**:
 
     - *SentimentRazorML. ConsoleApp*: Aplikacja konsolowa platformy .NET Core, która zawiera model szkoleń i kodu przewidywania.
-    - *SentimentRazorML. model*: Biblioteka klas .NET Standard zawierająca modele danych, które definiują schemat danych wejściowych i wyjściowych, a także utrwalaną wersję najlepszego modelu podczas uczenia.
+    - *SentimentRazorML. model*: Biblioteka klas .NET Standard zawierająca modele danych, które definiują schemat danych wejściowych i wyjściowych, a także zapisane wersje modelu najlepszego przebiegu podczas uczenia się.
 
     W tym samouczku używany jest tylko projekt *SentimentRazorML. model* , ponieważ przewidywania zostaną wykonane w aplikacji sieci Web *SentimentRazor* , a nie w konsoli programu. Chociaż *SentimentRazorML. ConsoleApp* nie będzie używany do oceniania, może służyć do ponownego uczenia modelu przy użyciu nowych danych w późniejszym czasie. W tym samouczku przeszkolenie zostało przeprowadzone poza zakresem.
 
-1. Aby użyć nauczonego modelu w aplikacji Razor Pages, Dodaj odwołanie do projektu *SentimentRazorML. model* .
-
-    1. Kliknij prawym przyciskiem myszy projekt **SentimentRazor** .
-    1. Wybierz pozycję **Dodaj odwołanie >** .
-    1. Wybierz węzeł **projekty > rozwiązanie** i z listy Sprawdź projekt **SentimentRazorML. model** .
-    1. Kliknij przycisk **OK**.
-
 ### <a name="configure-the-predictionengine-pool"></a>Konfigurowanie puli PredictionEngine
 
-Aby wykonać pojedyncze prognozowanie, użyj [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). Aby można było korzystać [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) z aplikacji, należy ją utworzyć w razie potrzeby. W takim przypadku najlepszym rozwiązaniem jest wstrzyknięcie zależności.
-
-> [!WARNING]
-> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)nie jest bezpieczny wątkowo. Aby zwiększyć wydajność i bezpieczeństwo wątków, użyj `PredictionEnginePool` usługi, która [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) tworzy `PredictionEngine` obiekty do użycia w aplikacji. Przeczytaj następujący wpis w blogu, aby dowiedzieć się więcej na temat [tworzenia i używania `PredictionEngine` pul obiektów w ASP.NET Core](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/).
+Aby wykonać pojedyncze prognozowanie, należy utworzyć [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)nie jest bezpieczny wątkowo. Ponadto należy utworzyć wystąpienie go wszędzie tam, gdzie jest to potrzebne w aplikacji. Gdy aplikacja zostanie powiększona, ten proces może być niezarządzany. Aby zwiększyć wydajność i bezpieczeństwo wątków, użyj kombinacji iniekcji zależności i usługi `PredictionEnginePool`, która tworzy [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) obiektów do użycia w całej aplikacji.
 
 1. Zainstaluj pakiet NuGet *Microsoft.Extensions.ml* :
 
@@ -250,7 +241,7 @@ Teraz, gdy aplikacja jest skonfigurowana, uruchom aplikację, która powinna by�
 
 Po uruchomieniu aplikacji, wprowadź *wartość Konstruktor modeli jest chłodna!* w obszarze tekstu. Wyświetlona tonacji nie powinna być *toksyczna*.
 
-![](./media/sentiment-analysis-model-builder/web-app.png)
+![Uruchamianie okna z przewidywanym oknem tonacji](./media/sentiment-analysis-model-builder/web-app.png)
 
 Jeśli musisz odwołać się do projektów wygenerowanych przez konstruktora modeli w późniejszym czasie w innym rozwiązaniu, możesz je znaleźć `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` w katalogu.
 

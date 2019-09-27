@@ -3,12 +3,12 @@ title: Projektowanie przy użyciu typów referencyjnych dopuszczających wartoś
 description: Ten zaawansowany samouczek zawiera wprowadzenie do typów referencyjnych dopuszczających wartość null. Dowiesz się, w jaki sposób projekt zostanie zastosowany, gdy wartości odniesienia mogą mieć wartość null, i że kompilator wymusi, gdy nie mogą mieć wartości null.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 616c9fdbe62d8147fb74fefc878f9277c2a1156b
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 842b1bb6e0d3032c6181cccf77934541754ff8ec
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214283"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332329"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Samouczek: Migruj istniejący kod z typami referencyjnymi Nullable
 
@@ -52,9 +52,6 @@ Dobrym następnym krokiem jest włączenie kontekstu adnotacji nullable i zobacz
 ```xml
 <Nullable>enable</Nullable>
 ```
-
-> [!IMPORTANT]
-> Element miał wcześniej nazwę `NullableContextOptions`. `Nullable` Zmiana nazwy jest dostarczana z programem Visual Studio 2019, 16,2-P1. Ta zmiana nie ma zestaw .NET Core SDK 3.0.100-preview5-011568. Jeśli używasz interfejs wiersza polecenia platformy .NET Core, musisz użyć `NullableContextOptions` do momentu udostępnienia kolejnej wersji zapoznawczej.
 
 Wykonaj kompilację testową i zwróć uwagę na listę ostrzeżeń. W tej małej aplikacji kompilator generuje pięć ostrzeżeń, więc prawdopodobnie pozostawisz kontekst adnotacji z dopuszczaniem wartości null i Rozpocznij naprawianie ostrzeżeń dla całego projektu.
 

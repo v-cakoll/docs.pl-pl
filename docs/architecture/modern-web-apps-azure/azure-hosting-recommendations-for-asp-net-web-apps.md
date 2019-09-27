@@ -4,17 +4,17 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: 7cfb9ada4f963aa392a41cfb9f1b2df22f542d41
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ed8771a4d79b45d8fad0e5309c886c2e00402ec7
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296400"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71331989"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Zalecenia dotyczące hostingu platformy Azure dla ASP.NET Core aplikacji sieci Web
 
 > "Liderzy biznesowi wszędzie są pomijani usługi IT, aby uzyskiwać aplikacje z chmury (znane również jako SaaS) i płacić za nie tak jak w przypadku subskrypcji magazynu. Gdy usługa nie jest już wymagana, może anulować subskrypcję bez żadnego sprzętu nieużywanego w rogu ".  
-> _\-Daryl Plummer, analityk firmy Gartner_
+> _\- Daryl Plummer, analityk firmy Gartner_
 
 W zależności od potrzeb i architektury aplikacji Microsoft Azure może ją obsłużyć. Twoje potrzeby hostingu mogą być proste jako statyczna Witryna internetowa lub zaawansowana aplikacja składająca się z wielu usług. W przypadku ASP.NET Core monolitycznych aplikacji sieci Web i usług pomocniczych istnieje kilka dobrze znanych konfiguracji, które są zalecane. Zalecenia dotyczące tego artykułu są pogrupowane w zależności od rodzaju zasobu, który ma być hostowany, od tego, czy są to pełne aplikacje, poszczególne procesy czy dane.
 
@@ -108,9 +108,9 @@ Jeśli masz istniejącą aplikację, która będzie wymagała znaczących modyfi
 
 ## <a name="logical-processes"></a>Procesy logiczne
 
-Poszczególne procesy logiczne, które mogą być oddzielone od reszty aplikacji, mogą zostać wdrożone niezależnie w celu Azure Functions w sposób "bezserwerowy". Azure Functions pozwala napisać kod, który jest potrzebny dla danego problemu, bez obaw o działanie aplikacji lub infrastruktury w celu jej uruchomienia. Dostępne są różne języki programowania, w tym C\#, F\#, Node. js, Python i php, dzięki czemu można wybrać najbardziej wydajny język zadania. Podobnie jak w przypadku większości rozwiązań opartych na chmurze, płacisz tylko za wykorzystywany czas i możesz ufać Azure Functions w miarę potrzeb.
+Poszczególne procesy logiczne, które mogą być oddzielone od reszty aplikacji, mogą zostać wdrożone niezależnie w celu Azure Functions w sposób "bezserwerowy". Azure Functions pozwala napisać kod, który jest potrzebny dla danego problemu, bez obaw o działanie aplikacji lub infrastruktury w celu jej uruchomienia. Możesz wybierać spośród różnych języków programowania, w tym C @ no__t-0, F @ no__t-1, Node. js, Python i PHP, co pozwala na wybranie najbardziej wydajnego języka dla tego zadania. Podobnie jak w przypadku większości rozwiązań opartych na chmurze, płacisz tylko za wykorzystywany czas i możesz ufać Azure Functions w miarę potrzeb.
 
-## <a name="data"></a>Dane
+## <a name="data"></a>Data
 
 System Azure oferuje szeroką gamę opcji przechowywania danych, dzięki czemu aplikacja może używać odpowiedniego dostawcy danych dla danych, których dotyczy.
 
@@ -124,9 +124,9 @@ Przejściowe lub oparte na zdarzeniach dane służące do organizowania zachowa�
 
 Wymagania aplikacji powinny dyktować swoją architekturę. Dostępnych jest wiele różnych usług platformy Azure. Wybranie jednego z nich jest ważną decyzją. Firma Microsoft oferuje galerię architektur referencyjnych, która pomaga identyfikować typowe architektury zoptymalizowane pod kątem typowych scenariuszy. Możesz znaleźć architekturę referencyjną, która jest ściśle mapowana na wymagania aplikacji, lub co najmniej oferuje punkt początkowy.
 
-Na rysunku 11-2 przedstawiono przykładową architekturę referencyjną. Na tym diagramie opisano zalecane podejście architektury dla witryny sieci Web systemu zarządzania zawartością Sitecore zoptymalizowanej pod kątem marketingu.
+Na rysunku 11-1 przedstawiono przykładową architekturę referencyjną. Na tym diagramie opisano zalecane podejście architektury dla witryny sieci Web systemu zarządzania zawartością Sitecore zoptymalizowanej pod kątem marketingu.
 
-![](./media/image11-2.png)
+![Rysunek 11-1](./media/image11-2.png)
 
 **Rysunek 11-1.** Architektura referencyjna witryny internetowej marketingowej Sitecore.
 

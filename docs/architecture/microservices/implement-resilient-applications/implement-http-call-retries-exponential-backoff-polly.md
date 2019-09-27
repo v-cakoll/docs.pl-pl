@@ -2,12 +2,12 @@
 title: Implementowanie ponownych prób wywołania HTTP wykonywanych przy użyciu wycofywania wykładniczego usługi Polly
 description: Dowiedz się, jak obsługiwać błędy HTTP za pomocą Polly i HttpClientFactory.
 ms.date: 01/07/2019
-ms.openlocfilehash: aa500b5525eff9f0bbf91bf98de8945f7c84704f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: de1dad44b1ddc7b04438fb380f240d3be33bbb83
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296073"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71331981"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Zaimplementuj ponowne próby wywołania HTTP przy użyciu wykładniczej wycofywania z zasadami HttpClientFactory i Polly
 
@@ -21,7 +21,7 @@ W poniższych krokach pokazano, jak można użyć ponownych prób http z Polly z
 
 **Odwoływanie się do pakietów ASP.NET Core 2,2**
 
-`HttpClientFactory`jest dostępny od platformy .NET Core 2,1, ale zalecamy używanie najnowszych pakietów programu ASP.NET Core 2,2 z narzędzia NuGet w projekcie. Zwykle potrzebny jest pakiet `AspNetCore` z `Microsoft.Extensions.Http.Polly`pakietem.
+`HttpClientFactory` jest dostępna od programu .NET Core 2,1, ale zalecamy używanie najnowszych pakietów ASP.NET Core 2,2 z narzędzia NuGet w projekcie. Zwykle potrzebny jest pakiet `AspNetCore`, a pakiet rozszerzenia `Microsoft.Extensions.Http.Polly`.
 
 **Konfigurowanie klienta przy użyciu zasad ponawiania Polly w programie startowym**
 
@@ -34,9 +34,9 @@ services.AddHttpClient<IBasketService, BasketService>()
         .AddPolicyHandler(GetRetryPolicy());
 ```
 
-Metoda **AddPolicyHandler ()** dodaje zasady do `HttpClient` obiektów, które będą używane. W takim przypadku dodajemy zasady Polly do ponawiania prób http przy użyciu wykładniczej wycofywania.
+Metoda **AddPolicyHandler ()** dodaje zasady do obiektów `HttpClient`, które będą używane. W takim przypadku dodajemy zasady Polly do ponawiania prób http przy użyciu wykładniczej wycofywania.
 
-Aby zastosować bardziej modularne podejście, zasady ponawiania http można zdefiniować w oddzielnej metodzie w `Startup.cs` pliku, jak pokazano w poniższym kodzie:
+Aby zastosować bardziej modularne podejście, zasady ponawiania http można zdefiniować w oddzielnej metodzie w pliku `Startup.cs`, jak pokazano w poniższym kodzie:
 
 ```csharp
 static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
@@ -50,8 +50,6 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 ```
 
 Za pomocą Polly można zdefiniować zasady ponawiania z liczbą ponownych prób, wykładniczą konfiguracją wycofywania i akcjami, które należy wykonać w przypadku wystąpienia wyjątku HTTP, takiego jak rejestrowanie błędu. W takim przypadku zasady są skonfigurowane do wypróbowania sześć razy z ponowieniem wykładniczym, rozpoczynając od dwóch sekund. 
-
-Dzięki temu będzie można wypróbować sześć razy, a liczba sekund między kolejnymi próbami będzie wykładnicza, rozpoczynając od dwóch sekund.
 
 ## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>Dodawanie strategii o wahaniu do zasad ponowień
 
@@ -78,9 +76,9 @@ Policy
 - **Polly (odporność platformy .NET i Biblioteka obsługi błędów przejściowych)**  
   <https://github.com/App-vNext/Polly>
 
-- **Brooker wytłoczyn. Zakłócenia Zwiększanie losowości**  
+- **Marc Brooker. Zakłócenia Zwiększenie wartości losowości @ no__t-0  
   <https://brooker.co.za/blog/2015/03/21/backoff.html>
 
 >[!div class="step-by-step"]
->[Poprzedni](explore-custom-http-call-retries-exponential-backoff.md)Następny
->[](implement-circuit-breaker-pattern.md)
+>[Poprzedni](explore-custom-http-call-retries-exponential-backoff.md)
+>[Następny](implement-circuit-breaker-pattern.md)

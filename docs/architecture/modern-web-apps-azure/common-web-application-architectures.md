@@ -4,12 +4,12 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: a521be147c462146775caa81b6a31fb37b4103af
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 8985434467346acc360e9a89c052803f495e87d1
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926679"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332009"
 ---
 # <a name="common-web-application-architectures"></a>Typowe architektury aplikacji internetowych
 
@@ -186,7 +186,7 @@ Można utworzyć pojedynczą i monolityczną aplikację sieci Web lub usługę o
 
 Aby zarządzać tym modelem, należy wdrożyć pojedynczy kontener do reprezentowania aplikacji. Aby skalować, po prostu Dodaj dodatkowe kopie przy użyciu modułu równoważenia obciążenia. Prostota pochodzi z zarządzania pojedynczym wdrożeniem w jednym kontenerze lub maszynie wirtualnej.
 
-![](./media/image5-13.png)
+![Rysunek 5-13](./media/image5-13.png)
 
 W każdym kontenerze można uwzględnić wiele składników/bibliotek lub warstwy wewnętrzne, jak pokazano na rysunku 5-13. Jednak zgodnie z zasadą kontenera _"kontener wykonuje jedną czynność i robi to w jednym procesie_", wzorzec monolityczny może stanowić konflikt.
 
@@ -198,7 +198,7 @@ Oprócz problemu "Skaluj wszystko" zmiany w pojedynczym składniku wymagają pe�
 
 Podejście monolityczne jest wspólne, a wiele organizacji opracowuje w ramach tego podejścia do architektury. Wiele z nich ma wystarczającą ilość wyników, a inne to limity. Wiele zaprojektowanych aplikacji w tym modelu, ponieważ narzędzia i infrastruktura były zbyt trudne do budowania architektury zorientowanej na usługi (SOA) i nie widzą potrzeb, dopóki aplikacja nie przezwiększyła się. Jeśli okaże się, że zbliżasz się do ograniczeń podejścia monolitycznego, Podziel aplikację, aby umożliwić jej lepsze wykorzystanie kontenerów i mikrousług.
 
-![](./media/image5-14.png)
+![Rysunek 5-14](./media/image5-14.png)
 
 Wdrażanie aplikacji monolitycznych w Microsoft Azure można osiągnąć przy użyciu dedykowanych maszyn wirtualnych dla każdego wystąpienia. Za pomocą [usługi Azure Virtual Machine Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/)można łatwo skalować maszyny wirtualne. [Usługa Azure App Services](https://azure.microsoft.com/services/app-service/) może uruchamiać aplikacje monolityczne i łatwo skalować wystąpienia bez potrzeby zarządzania maszynami wirtualnymi. Usługa Azure App Services może również uruchamiać pojedyncze wystąpienia kontenerów platformy Docker, upraszczając wdrażanie. Przy użyciu platformy Docker można wdrożyć pojedynczą maszynę wirtualną jako hosta platformy Docker i uruchamiać wiele wystąpień. Korzystając z modułu równoważenia obciążenia platformy Azure, jak pokazano na rysunku 5-14, można zarządzać skalowaniem.
 
@@ -305,5 +305,5 @@ Jeśli chcesz dodać obsługę platformy Docker do aplikacji przy użyciu progra
   <https://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
->[Poprzedni](architectural-principles.md)Następny
->[](common-client-side-web-technologies.md)
+>[Poprzedni](architectural-principles.md)
+>[Następny](common-client-side-web-technologies.md)

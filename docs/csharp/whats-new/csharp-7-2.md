@@ -2,12 +2,12 @@
 title: Co nowego w C# 7,2
 description: Omówienie nowych funkcji w C# 7,2.
 ms.date: 08/16/2017
-ms.openlocfilehash: a2010b2bda769a625deb545964a2cc127aaf2e06
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: d559f07c501b2a79472d01e2815b50cd8f0f57a5
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105745"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332318"
 ---
 # <a name="whats-new-in-c-72"></a>Co nowego w C# 7,2
 
@@ -42,10 +42,10 @@ Pozostała część tego artykułu zawiera omówienie każdej funkcji. Dla każd
 
 Funkcje języka wprowadzone w 7,2 umożliwiają współpracę z typami wartości przy użyciu semantyki odwołań. Są one przeznaczone do zwiększania wydajności poprzez minimalizowanie kopiowania typów wartości bez ponoszenia alokacji pamięci skojarzonej z użyciem typów referencyjnych. Funkcje obejmują:
 
-- `in` Modyfikator parametrów, aby określić, że argument jest przesyłany przez odwołanie, ale nie modyfikowane przez wywołaną metodę. Dodanie modyfikatora do argumentu jest zgodną [zmianą źródłową.](version-update-considerations.md#source-compatible-changes) `in`
-- `ref readonly` Modyfikator metody zwraca, aby wskazać, że metoda zwraca swoją wartość przez odwołanie, ale nie zezwala na zapis w tym obiekcie. Dodanie modyfikatora jest zgodną ze [źródłem zmian](version-update-considerations.md#source-compatible-changes), jeśli powrót jest przypisany do wartości. `ref readonly` Dodanie modyfikatora do istniejącej `ref` instrukcji return jest niezgodną zmianą. [](version-update-considerations.md#incompatible-changes) `readonly` Wymaga, `ref` `readonly` aby wywołujący zaktualizował deklarację zmiennych lokalnych w celu uwzględnienia modyfikatora.
-- Deklaracja wskazująca, że struktura jest niezmienna i powinna zostać przeniesiona `in` jako parametr do metod składowych. `readonly struct` Dodanie modyfikatora do istniejącej deklaracji struktury jest zgodną [binarną zmianą.](version-update-considerations.md#binary-compatible-changes) `readonly`
-- `ref struct` Deklaracja wskazująca, że typ struktury bezpośrednio uzyskuje dostęp do pamięci zarządzanej i zawsze musi mieć przydzieloną stos. Dodanie modyfikatora do istniejącej `struct` deklaracji jest niezgodną zmianą. [](version-update-considerations.md#incompatible-changes) `ref` Element `ref struct` a nie może być składową klasy ani używać w innych lokalizacjach, w których może być przydzielony na stercie.
+- `in` Modyfikator parametrów, aby określić, że argument jest przesyłany przez odwołanie, ale nie modyfikowane przez wywołaną metodę. Dodanie modyfikatora do argumentu jest [zgodną zmianą źródłową.](version-update-considerations.md#source-compatible-changes) `in`
+- `ref readonly` Modyfikator metody zwraca, aby wskazać, że metoda zwraca swoją wartość przez odwołanie, ale nie zezwala na zapis w tym obiekcie. Dodanie modyfikatora jest [zgodną ze źródłem zmian](version-update-considerations.md#source-compatible-changes), jeśli powrót jest przypisany do wartości. `ref readonly` Dodanie modyfikatora do istniejącej `ref` instrukcji return jest [niezgodną zmianą.](version-update-considerations.md#incompatible-changes) `readonly` Wymaga, `ref` `readonly` aby wywołujący zaktualizował deklarację zmiennych lokalnych w celu uwzględnienia modyfikatora.
+- Deklaracja wskazująca, że struktura jest niezmienna i powinna zostać przeniesiona `in` jako parametr do metod składowych. `readonly struct` Dodanie modyfikatora do istniejącej deklaracji struktury jest [zgodną binarną zmianą.](version-update-considerations.md#binary-compatible-changes) `readonly`
+- `ref struct` Deklaracja wskazująca, że typ struktury bezpośrednio uzyskuje dostęp do pamięci zarządzanej i zawsze musi mieć przydzieloną stos. Dodanie modyfikatora do istniejącej `struct` deklaracji jest [niezgodną zmianą.](version-update-considerations.md#incompatible-changes) `ref` Element `ref struct` a nie może być składową klasy ani używać w innych lokalizacjach, w których może być przydzielony na stercie.
 
 Więcej informacji na temat tych zmian można znaleźć w artykule [pisanie bezpiecznego wydajnego kodu](../write-safe-efficient-code.md).
 
@@ -63,7 +63,7 @@ Na przykład:
 int binaryValue = 0b_0101_0101;
 ```
 
-## <a name="_private-protected_-access-modifier"></a>modyfikator _prywatnego_ dostępu chronionego
+## <a name="private-protected-access-modifier"></a>modyfikator *prywatnego dostępu chronionego*
 
 Nowy modyfikator dostępu złożonego: `private protected` wskazuje, że element członkowski może być dostępny przez zawiera klasy lub klasy pochodne, które są zadeklarowane w tym samym zestawie. Zezwala na dostęp przez klasy pochodne lub klasy, które znajdują się w tym `private protected` samym zestawie, ogranicza dostęp do typów pochodnych zadeklarowanych w tym samym zestawie. `protected internal`
 

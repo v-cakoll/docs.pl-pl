@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 2bbbac098096b46c659c4efde2d1c998c8e2d9ae
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2a3e7f02ee9d210acae881edd170edbced82dab6
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608377"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353752"
 ---
 # <a name="value-types-c-reference"></a>Typy wartości (C# odwołanie)
 
@@ -32,7 +32,7 @@ Wszystkie typy wartości są wyprowadzane niejawnie <xref:System.ValueType?displ
 
 W przeciwieństwie do typów referencyjnych nie można utworzyć nowego typu z typu wartości. Jednak takie jak typy odwołań, struktury mogą implementować interfejsy.
 
-Zmienne typu wartości nie mogą `null` być domyślnie. Jednak zmienne odpowiednich [typów dopuszczających wartości null](../../programming-guide/nullable-types/index.md) mogą być `null`.
+Zmienne typu wartości nie mogą `null` być domyślnie. Jednak zmienne odpowiednich [typów wartości dopuszczających wartość null](../../programming-guide/nullable-types/index.md) mogą być `null`.
 
 Każdy typ wartości ma niejawny Konstruktor bez parametrów, który inicjuje wartość domyślną tego typu. Aby uzyskać informacje o domyślnych wartościach typów wartości, zobacz [tabela wartości domyślnych](default-values-table.md).
 
@@ -109,4 +109,4 @@ Informacje o formatowaniu danych wyjściowych typów liczbowych znajdują się w
 - [Słowa kluczowe języka C#](index.md)
 - [Typy](types.md)
 - [Typy odwołań](reference-types.md)
-- [Typy dopuszczające wartości null](../../programming-guide/nullable-types/index.md)
+- [Typy wartości null](../../programming-guide/nullable-types/index.md)

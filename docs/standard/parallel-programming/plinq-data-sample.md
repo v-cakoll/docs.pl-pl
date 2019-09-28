@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b5cf6f0ae66141957d545134a2f8ff8eb799097
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 60693a6570eff6f9d4980d8f29f1385bc7462f08
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946453"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353158"
 ---
 # <a name="plinq-data-sample"></a>Próbka danych PLINQ
-Ten przykład zawiera przykładowe dane w formacie CSV, a także metody, które przekształcają je na kolekcje klientów, produkty, zamówienia i szczegóły zamówienia. Aby dodatkowo eksperymentować z PLINQ, możesz wkleić przykłady kodu z niektórych innych tematów do kodu w tym temacie i wywoływać go z `Main` metody. Możesz również używać tych danych przy użyciu własnych zapytań PLINQ.  
+Ten przykład zawiera przykładowe dane w formacie CSV, a także metody, które przekształcają je na kolekcje klientów, produkty, zamówienia i szczegóły zamówienia. Aby dodatkowo eksperymentować z PLINQ, możesz wkleić przykłady kodu z niektórych innych tematów do kodu w tym temacie i wywoływać go z metody `Main`. Możesz również używać tych danych przy użyciu własnych zapytań PLINQ.  
   
  Dane przedstawiają podzestaw bazy danych Northwind. 50 (50) rekordy klientów są uwzględniane, ale nie wszystkie pola. Uwzględniono podzestaw wierszy z zamówień i odpowiadające im dane Order_Detail dla każdego klienta. Wszystkie produkty są dołączone.  
   
 > [!NOTE]
-> Zestaw danych nie jest wystarczająco duży, aby pokazać, że PLINQ jest szybsze niż LINQ to Objects dla zapytań, które zawierają `where` tylko `select` klauzule podstawowe i. Aby obsłużyć szybkość rośnie w przypadku małych zestawów danych, takich jak to, należy użyć zapytań, które zawierają obliczenia kosztownych operacji dla każdego elementu w zestawie danych.  
+> Zestaw danych nie jest wystarczająco duży, aby pokazać, że PLINQ jest szybsze niż LINQ to Objects dla zapytań, które zawierają tylko podstawowe `where` i `select` klauzule. Aby obsłużyć szybkość rośnie w przypadku małych zestawów danych, takich jak to, należy użyć zapytań, które zawierają obliczenia kosztownych operacji dla każdego elementu w zestawie danych.  
   
 ### <a name="to-set-up-this-sample"></a>Aby skonfigurować ten przykład  
   
@@ -35,7 +35,7 @@ Ten przykład zawiera przykładowe dane w formacie CSV, a także metody, które 
   
 4. Naciśnij klawisz F5, aby sprawdzić, czy projekt jest poprawnie kompilowany i uruchamiany. Poniższe dane wyjściowe powinny być wyświetlane w oknie konsoli.  
   
-    ```  
+    ```console  
     Customer count: 50  
     Product count: 77  
     Order count: 190  
@@ -46,9 +46,9 @@ Ten przykład zawiera przykładowe dane w formacie CSV, a także metody, które 
  [!code-csharp[PLINQ#50](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#50)]
  [!code-vb[PLINQ#50](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#50)]  
   
-## <a name="data"></a>Dane  
+## <a name="data"></a>Data  
   
-```  
+```console  
 CUSTOMERS  
 ALFKI,Alfreds Futterkiste,Obere Str. 57,Berlin,12209  
 ANATR,Ana Trujillo Emparedados y helados,Avda. de la Constitución 2222,México D.F.,05021  

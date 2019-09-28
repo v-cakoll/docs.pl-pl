@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Obiekty odwołanie COM z Visual Basic'
+title: 'Instrukcje: Odwołuje się do obiektów COM z Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop [Visual Basic], referencing COM objects
@@ -8,49 +8,49 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: df234ecaf25243dbdf2d6552942ca86001d4a6fe
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8e502dc9a279d9271a61fd2cf7a6afb564f09125
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592176"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352001"
 ---
-# <a name="how-to-reference-com-objects-from-visual-basic"></a>Instrukcje: Obiekty odwołanie COM z Visual Basic
-W języku Visual Basic dodanie odwołania do obiektów COM, które mają bibliotek typów wymaga utworzenia zestawu międzyoperacyjnego dla biblioteki COM. Odwołania do elementów członkowskich obiektu COM są kierowane do zestawu międzyoperacyjnego, a następnie przekazywane do rzeczywistego obiektu COM. Odpowiedzi z obiektu COM są kierowane do zestawu międzyoperacyjnego, a następnie przekazywane do aplikacji środowiska .NET Framework.  
+# <a name="how-to-reference-com-objects-from-visual-basic"></a>Instrukcje: Odwołuje się do obiektów COM z Visual Basic
+W Visual Basic Dodawanie odwołań do obiektów COM, które mają biblioteki typów, wymaga utworzenia zestawu międzyoperacyjnego dla biblioteki COM. Odwołania do elementów członkowskich obiektu COM są kierowane do zestawu międzyoperacyjnego, a następnie przekazywane do rzeczywistego obiektu COM. Odpowiedzi z obiektu COM są kierowane do zestawu międzyoperacyjnego i przekazywane do aplikacji .NET Framework.  
   
- Obiekt COM można odwoływać się bez użycia zestaw międzyoperacyjny przez osadzanie informacji o typie dla obiektu COM w zestawie .NET. Aby osadzić informacje o typie, należy ustawić `Embed Interop Types` właściwość `True` odwołania do obiektu COM. Jeśli kompilujesz za pomocą kompilatora wiersza polecenia, użyj `/link` opcję, aby odwoływać się do biblioteki COM. Aby uzyskać więcej informacji, zobacz [/Link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
+ Można odwołać się do obiektu COM bez użycia zestawu międzyoperacyjnego przez osadzenie informacji o typie dla obiektu COM w zestawie .NET. Aby osadzić informacje o typie, ustaw właściwość `Embed Interop Types` na `True` dla odwołania do obiektu COM. Jeśli kompilujesz przy użyciu kompilatora wiersza polecenia, użyj opcji `/link`, aby odwołać się do biblioteki COM. Aby uzyskać więcej informacji, zobacz [/link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
   
- Po dodaniu odwołania do biblioteki typów z zintegrowanego środowiska programistycznego (IDE) Visual Basic automatycznie tworzy zestawy międzyoperacyjne. Podczas pracy z poziomu wiersza polecenia, można użyć narzędzia Tlbimp, aby ręcznie utworzyć zestawy międzyoperacyjne.  
+ Visual Basic automatycznie tworzy zestawy międzyoperacyjności podczas dodawania odwołania do biblioteki typów z zintegrowanego środowiska programistycznego (IDE). Podczas pracy z wiersza polecenia można użyć narzędzia Tlbimp do ręcznego tworzenia zestawów międzyoperacyjnych.  
   
 ### <a name="to-add-references-to-com-objects"></a>Aby dodać odwołania do obiektów COM  
   
-1. Na **projektu** menu, wybierz **Dodaj odwołanie** a następnie kliknij przycisk **COM** karty w oknie dialogowym.  
+1. W menu **projekt** wybierz polecenie **Dodaj odwołanie** , a następnie kliknij kartę **com** w oknie dialogowym.  
   
-2. Wybierz składnik, który chcesz używać, z listy obiektów COM.  
+2. Wybierz składnik, którego chcesz użyć z listy obiektów COM.  
   
-3. Aby uprościć dostęp do zestawu międzyoperacyjnego, należy dodać `Imports` instrukcji na górze klasę lub moduł, w której będzie używać obiektu COM. Na przykład, poniższy kod importuje przestrzeń nazw `INKEDLib` dla obiektów, do którego odwołuje się `Microsoft InkEdit Control 1.0` biblioteki.  
+3. Aby uprościć dostęp do zestawu międzyoperacyjnego, Dodaj instrukcję `Imports` na początku klasy lub modułu, w którym będzie używany obiekt COM. Poniższy przykład kodu importuje przestrzeń nazw `INKEDLib` dla obiektów, do których odwołuje się biblioteka `Microsoft InkEdit Control 1.0`.  
   
      [!code-vb[VbVbalrInterop#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#40)]  
   
 ### <a name="to-create-an-interop-assembly-using-tlbimp"></a>Aby utworzyć zestaw międzyoperacyjny przy użyciu Tlbimp  
   
-1. Dodaj lokalizację testowanego Tlbimp do ścieżki wyszukiwania, jeśli nie jest już częścią ścieżki wyszukiwania, a nie jesteś obecnie w katalogu, w którym znajduje się.  
+1. Dodaj lokalizację Tlbimp do ścieżki wyszukiwania, jeśli nie jest ona jeszcze częścią ścieżki wyszukiwania i nie znajduje się obecnie w katalogu, w którym się znajduje.  
   
-2. Wywołanie Tlbimp z wiersza polecenia, podając następujące informacje:  
+2. Wywołaj Tlbimp z wiersza polecenia, dostarczając następujące informacje:  
   
-    - Nazwa i lokalizacja pliku dll, który zawiera biblioteki typów  
+    - Nazwa i lokalizacja biblioteki DLL zawierającej bibliotekę typów  
   
-    - Nazwa i lokalizacja przestrzeni nazw, gdzie ma zostać umieszczony informacje  
+    - Nazwa i lokalizacja przestrzeni nazw, w której należy umieścić informacje  
   
-    - Nazwy i lokalizacji docelowych zestawu międzyoperacyjnego  
+    - Nazwa i lokalizacja docelowego zestawu międzyoperacyjnego  
   
-     Poniższy kod stanowi przykład:  
+     Poniższy kod zawiera przykład:  
   
-    ```  
+    ```console  
     Tlbimp test3.dll /out:NameSpace1 /out:Interop1.dll  
     ```  
   
-     Tlbimp umożliwia tworzenie usług międzyoperacyjnych dla biblioteki typów, nawet w przypadku niezarejestrowanych obiektów COM. Jednak z obiektami COM, które odwołują się zestawy międzyoperacyjne musi być poprawnie zarejestrowany na komputerze, na którym mają być użyte do. Obiekt COM można zarejestrować za pomocą narzędzia Regsvr32 dołączone do systemu operacyjnego Windows.  
+     Można użyć Tlbimp do tworzenia zestawów międzyoperacyjnych dla bibliotek typów, nawet dla niezarejestrowanych obiektów COM. Jednak obiekty COM, do których odwołują się zestawy międzyoperacyjności, muszą być poprawnie zarejestrowane na komputerze, na którym mają być używane. Obiekt COM można zarejestrować za pomocą narzędzia regsvr32 dołączonego do systemu operacyjnego Windows.  
   
 ## <a name="see-also"></a>Zobacz także
 

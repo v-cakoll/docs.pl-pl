@@ -8,18 +8,18 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 5b135fee12ac5b78b41a657f2eb458ea104143fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f0df3170289d780852ee14232e92c3b71412c548
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923933"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392378"
 ---
 # <a name="indexers-c-programming-guide"></a>Indeksatory (Przewodnik programowania w języku C#)
 
 Indeksatory umożliwiają indeksowanie wystąpień klasy lub struktury tak samo jak w przypadku tablic. Indeksowaną wartość można ustawić lub pobrać bez jawnego określenia typu lub elementu członkowskiego wystąpienia. Indeksatory przypominają [Właściwości](../classes-and-structs/properties.md) , z tą różnicą, że ich metody dostępu pobierają parametry.  
- 
- W poniższym przykładzie zdefiniowano klasę generyczną z prostymi metodami dostępu [Get](../../language-reference/keywords/get.md) i [Set](../../language-reference/keywords/set.md) do przypisywania i pobierania wartości. `Program` Klasa tworzy wystąpienie tej klasy do przechowywania ciągów.  
+
+ W poniższym przykładzie zdefiniowano klasę generyczną z prostymi metodami dostępu [Get](../../language-reference/keywords/get.md) i [Set](../../language-reference/keywords/set.md) do przypisywania i pobierania wartości. Klasa `Program` tworzy wystąpienie tej klasy do przechowywania ciągów.  
   
  [!code-csharp[indexers#1](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-1.cs)]  
   
@@ -32,9 +32,9 @@ Metoda dostępu "Get" lub "Set" może składać się z pojedynczej instrukcji, k
 
 [!code-csharp[indexers#2](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-2.cs)]  
 
-Należy zauważyć `=>` , że wprowadza treść wyrażenia, a `get` słowo kluczowe nie jest używane. 
+Należy zauważyć, że `=>` wprowadza treść wyrażenia, a słowo kluczowe `get` nie jest używane. 
 
-Począwszy od C# 7,0, obie metody dostępu get i Set mogą być zaimplementowane jako elementy członkowskie z wyrażeniami. W takim przypadku `get` należy użyć słów `set` kluczowych i. Na przykład:
+Począwszy od C# 7,0, obie metody dostępu get i Set mogą być zaimplementowane jako elementy członkowskie z wyrażeniami. W takim przypadku należy użyć słów kluczowych `get` i `set`. Na przykład:
 
 [!code-csharp[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   
@@ -42,11 +42,11 @@ Począwszy od C# 7,0, obie metody dostępu get i Set mogą być zaimplementowane
   
 - Indeksatory umożliwiają indeksowanie obiektów w podobny sposób do tablic.  
   
-- `get` Metoda dostępu zwraca wartość. `set` Metoda dostępu przypisuje wartość.  
+- Metoda dostępu `get` zwraca wartość. Metoda dostępu `set` przypisuje wartość.  
   
 - [To](../../language-reference/keywords/this.md) słowo kluczowe jest używane do definiowania indeksatora.  
   
-- Słowo kluczowe [Value](../../language-reference/keywords/value.md) służy do definiowania wartości przypisanej przez `set` indeksator.  
+- Słowo kluczowe [Value](../../language-reference/keywords/value.md) służy do definiowania wartości przypisanej przez indeksator `set`.  
   
 - Indeksatory nie muszą być indeksowane przez wartość całkowitą; Istnieje możliwość zdefiniowania określonego mechanizmu wyszukiwania.  
   
@@ -66,7 +66,7 @@ Począwszy od C# 7,0, obie metody dostępu get i Set mogą być zaimplementowane
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
 
-Aby uzyskać więcej informacji, [](~/_csharplang/spec/classes.md#indexers) Zobacz indeksatory w [ C# specyfikacji języka](../../language-reference/language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
+Aby uzyskać więcej informacji, zobacz [indeksatory](~/_csharplang/spec/classes.md#indexers) w [ C# specyfikacji języka](../../language-reference/language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
   
 ## <a name="see-also"></a>Zobacz także
 

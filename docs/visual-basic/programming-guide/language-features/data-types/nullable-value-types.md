@@ -1,5 +1,5 @@
 ---
-title: Typy o wartości zerowalnej - Visual Basic
+title: Typy wartości null-Visual Basic
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Nullable
@@ -10,63 +10,63 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 46564d2c509fe2b53b9662ee441ab8b85fccc693
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 072496a560775a8f79274f1d44dd389d6ed5b40d
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642132"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351762"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Typy o wartości zerowalnej (Visual Basic)
 
-Czasami pracuje się z typem wartości, która nie ma zdefiniowanej wartości w pewnych okolicznościach. Na przykład pola w bazie danych może być do rozróżniania masz przypisaną wartość, która ma znaczenie i nie ma przypisaną wartość. Typy wartości można rozszerzyć do wykonania w ich normalnym wartości lub wartość null. Takie rozszerzenia jest wywoływana *typu dopuszczającego wartość null*.
+Czasami pracujesz z typem wartości, który nie ma zdefiniowanej wartości w pewnych okolicznościach. Na przykład w przypadku pola w bazie danych może być konieczne odróżnienie od posiadania przypisanej wartości, która jest istotna i nie ma przypisanej wartości. Typy wartości można rozszerzyć, aby przyjmować ich normalne wartości lub wartość null. Takie rozszerzenie jest nazywane *typem dopuszczającym wartość null*.
 
-Każdy typ dopuszczający wartość null jest zbudowany z ogólnego <xref:System.Nullable%601> struktury. Należy wziąć pod uwagę bazy danych, który śledzi działania związane z pracą. Poniższy przykład tworzy dopuszczający wartości null `Boolean` wpisz i deklaruje zmienną typu. Deklaracji można napisać na trzy sposoby:
+Każdy typ dopuszczający wartość null jest konstruowany z ogólnej struktury <xref:System.Nullable%601>. Rozważmy bazę danych, która śledzi działania związane z pracą. Poniższy przykład tworzy wartość null typu `Boolean` i deklaruje zmienną tego typu. Deklarację można napisać na trzy sposoby:
 
 [!code-vb[VbVbalrNullableValue#1](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#1)]
 
-Zmienna `ridesBusToWork` może zawierać wartości `True`, wartość `False`, lub nie ma wartości wszystkie. Wartość początkową domyślną jest żadnej wartości, który w tym przypadku może oznaczać, że że informacje nie ma jeszcze uzyskać danej osoby. Z kolei `False` może oznaczać, że uzyskano informacje, a osoby nie zastąpienie magistrali do pracy.
+Zmienna `ridesBusToWork` może mieć wartość `True`, wartość `False` lub brak wartości. Jego początkowa wartość domyślna nie jest wcale, co w tym przypadku może oznaczać, że informacje nie zostały jeszcze uzyskane dla tej osoby. W przeciwieństwie do `False` może oznaczać, że informacje zostały uzyskane i osoba nie przełączy magistrali do pracy.
 
-Możesz deklarować zmienne i właściwości z typami zerowalnymi. Ponadto można zadeklarować tablicy o liczbie elementów typu dopuszczającego wartość null. Można zadeklarować procedur z typami zerowalnymi jako parametry i może zwracać typ dopuszczający wartość null z `Function` procedury.
+Można zadeklarować zmienne i właściwości z typami dopuszczających wartość null i można zadeklarować tablicę z elementami typu dopuszczającego wartość null. Można zadeklarować procedury z typami dopuszczających wartość null jako parametry, a typ dopuszczający wartość null można zwrócić z procedury `Function`.
 
-Nie można skonstruować typu dopuszczającego wartość null na typ referencyjny, takich jak tablica, `String`, lub klasy. Typ podstawowy musi być typem wartości. Aby uzyskać więcej informacji, zobacz [typy wartości i odwołań](value-types-and-reference-types.md).
+Nie można skonstruować typu dopuszczającego wartość null w typie referencyjnym, takim jak tablica, `String` lub Klasa. Typ podstawowy musi być typem wartości. Aby uzyskać więcej informacji, zobacz [typy wartości i typy odwołań](value-types-and-reference-types.md).
 
-## <a name="using-a-nullable-type-variable"></a>Przy użyciu zmiennej typu dopuszczającego wartość null
+## <a name="using-a-nullable-type-variable"></a>Użycie zmiennej typu dopuszczającego wartość null
 
-Najważniejsze elementy członkowskie typu dopuszczającego wartość null są jego <xref:System.Nullable%601.HasValue%2A> i <xref:System.Nullable%601.Value%2A> właściwości. Dla zmiennej typu dopuszczającego wartość null <xref:System.Nullable%601.HasValue%2A> informujący o tym, czy zmienna zawiera wartość zdefiniowana. Jeśli <xref:System.Nullable%601.HasValue%2A> jest `True`, można odczytać wartości z <xref:System.Nullable%601.Value%2A>. Należy pamiętać, że oba <xref:System.Nullable%601.HasValue%2A> i <xref:System.Nullable%601.Value%2A> są `ReadOnly` właściwości.
+Najważniejszymi elementami członkowskimi typu dopuszczającego wartość null są właściwości <xref:System.Nullable%601.HasValue%2A> i <xref:System.Nullable%601.Value%2A>. Dla zmiennej typu dopuszczającego wartość null, <xref:System.Nullable%601.HasValue%2A> informuje, czy zmienna zawiera zdefiniowaną wartość. Jeśli <xref:System.Nullable%601.HasValue%2A> jest `True`, można odczytać wartość z <xref:System.Nullable%601.Value%2A>. Należy zauważyć, że obie <xref:System.Nullable%601.HasValue%2A> i <xref:System.Nullable%601.Value%2A> są właściwościami `ReadOnly`.
 
 ### <a name="default-values"></a>Wartości domyślne
 
-Kiedy Deklarujesz zmienną typu dopuszczającego wartość null, jego <xref:System.Nullable%601.HasValue%2A> właściwość ma wartość domyślną `False`. Oznacza to, że domyślnie zmiennej nie ma zdefiniowanej wartości, zamiast wartości domyślne, jego bazowego typu wartości. W poniższym przykładzie zmienna `numberOfChildren` początkowo nie ma zdefiniowanej wartości, nawet jeśli wartość domyślną `Integer` typu wynosi 0.
+Po zadeklarowaniu zmiennej z typem dopuszczającym wartość null, jej Właściwość <xref:System.Nullable%601.HasValue%2A> ma wartość domyślną `False`. Oznacza to, że domyślnie zmienna nie ma zdefiniowanej wartości, a nie wartości domyślnej jej bazowego typu wartości. W poniższym przykładzie zmienna `numberOfChildren` początkowo nie ma zdefiniowanej wartości, mimo że wartość domyślna typu `Integer` wynosi 0.
 
 [!code-vb[VbVbalrNullableValue#2](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#2)]
 
-Wartość null jest przydatne do wskazania wartość niezdefiniowana lub nieznany. Jeśli `numberOfChildren` zadeklarowano jako `Integer`, nie będzie żadnej wartości, które mogą wskazywać, że informacje nie są obecnie dostępne.
+Wartość null jest przydatna do wskazania niezdefiniowanej lub nieznanej wartości. Jeśli `numberOfChildren` został zadeklarowany jako `Integer`, nie byłoby żadnej wartości, która może wskazywać, że informacje nie są obecnie dostępne.
 
 ### <a name="storing-values"></a>Przechowywanie wartości
 
-Wartość jest przechowywana w zmiennej lub właściwości typu dopuszczającego wartość null w typowy sposób. Poniższy przykład przypisuje wartość do zmiennej `numberOfChildren` zadeklarowanej w poprzednim przykładzie.
+W typowy sposób przechowujesz wartość w zmiennej lub właściwości typu dopuszczającego wartość null. Poniższy przykład przypisuje wartość do zmiennej `numberOfChildren` zadeklarowane w poprzednim przykładzie.
 
 [!code-vb[VbVbalrNullableValue#3](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#3)]
 
-Zmiennej lub właściwości typu dopuszczającego wartość null, zawiera wartość zdefiniowana, może spowodować, aby powrócić do stanu początkowego nie ma przypisaną wartość. Możesz to zrobić przez ustawienie zmiennej lub właściwości `Nothing`, jak pokazano w poniższym przykładzie.
+Jeśli zmienna lub właściwość typu Nullable zawiera zdefiniowaną wartość, można spowodować przywrócenie stanu początkowego nieprzypisanej wartości. W tym celu należy ustawić zmienną lub właściwość na `Nothing`, jak pokazano w poniższym przykładzie.
 
 [!code-vb[VbVbalrNullableValue#4](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#4)]
 
 > [!NOTE]
-> Chociaż można przypisać `Nothing` do zmiennej typu dopuszczającego wartość null, nie możesz przetestować ją dla `Nothing` przy użyciu znaku równości. Porównanie, które używa znaku równości `someVar = Nothing`, zawsze daje w wyniku `Nothing`. Możesz przetestować zmiennej <xref:System.Nullable%601.HasValue%2A> właściwość `False`, lub testowania przy użyciu `Is` lub `IsNot` operatora.
+> Chociaż można przypisać `Nothing` do zmiennej typu dopuszczającego wartość null, nie można go przetestować dla `Nothing` przy użyciu znaku równości. Porównanie, które używa znaku równości, `someVar = Nothing`, zawsze jest obliczane do `Nothing`. Można przetestować Właściwość <xref:System.Nullable%601.HasValue%2A> zmiennej dla `False` lub test przy użyciu operatora `Is` lub `IsNot`.
 
 ### <a name="retrieving-values"></a>Pobieranie wartości
 
-Aby pobrać wartość zmiennej typu dopuszczającego wartość null, najpierw należy przetestować jego <xref:System.Nullable%601.HasValue%2A> właściwości, aby upewnić się, że ma ona wartość. Jeśli użytkownik próbuje odczytać wartości podczas <xref:System.Nullable%601.HasValue%2A> jest `False`, Visual Basic zgłasza <xref:System.InvalidOperationException> wyjątku. W poniższym przykładzie przedstawiono zalecaną metodą odczyt zmiennej `numberOfChildren` z poprzednich przykładów.
+Aby pobrać wartość zmiennej typu Nullable, należy najpierw przetestować jej <xref:System.Nullable%601.HasValue%2A> właściwość, aby potwierdzić, że ma wartość. Jeśli spróbujesz odczytać wartość, gdy <xref:System.Nullable%601.HasValue%2A> jest `False`, Visual Basic zgłasza wyjątek <xref:System.InvalidOperationException>. W poniższym przykładzie przedstawiono zalecany sposób odczytywania zmiennej `numberOfChildren` z poprzednich przykładów.
 
 [!code-vb[VbVbalrNullableValue#5](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#5)]
 
-## <a name="comparing-nullable-types"></a>Porównywanie typów dopuszczających wartości zerowe
+## <a name="comparing-nullable-types"></a>Porównywanie typów dopuszczających wartości null
 
-Gdy nullable `Boolean` zmienne są używane w wyrażeniach logicznych, może to spowodować `True`, `False`, lub `Nothing`. Poniżej znajduje się w tabeli prawdziwych danych `And` i `Or`. Ponieważ `b1` i `b2` powstał trzema możliwymi wartościami, istnieją dziewięć kombinacji do oceny.
+Gdy wartości null są używane w wyrażeniach logicznych `Boolean`, wynik może być `True`, `False` lub `Nothing`. Poniżej przedstawiono tabelę prawdziwą dla `And` i `Or`. Ponieważ `b1` i `b2` ma teraz trzy możliwe wartości, istnieje dziewięć kombinacji do obliczenia.
 
-|b1|b2|B1 i b2|B1 i b2|
+|b1|b2|B1 i B2|B1 lub B2|
 |--------|--------|---------------|--------------|
 |`Nothing`|`Nothing`|`Nothing`|`Nothing`|
 |`Nothing`|`True`|`Nothing`|`True`|
@@ -78,38 +78,37 @@ Gdy nullable `Boolean` zmienne są używane w wyrażeniach logicznych, może to 
 |`False`|`True`|`False`|`True`|
 |`False`|`False`|`False`|`False`|
 
-Gdy wartość zmiennej typu Boolean lub wyrażenia jest `Nothing`, nie jest `true` ani `false`. Rozważmy następujący przykład.
+Gdy wartość zmiennej lub wyrażenia logicznego jest `Nothing`, nie jest `true` ani `false`. Rozważmy następujący przykład.
 
 [!code-vb[VbVbalrNullableValue#6](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#6)]
 
-W tym przykładzie `b1 And b2` daje w wyniku `Nothing`. W rezultacie `Else` klauzula jest wykonywana w każdym `If` instrukcji i dane wyjściowe są następujące:
+W tym przykładzie `b1 And b2` szacuje się na `Nothing`. W efekcie klauzula `Else` jest wykonywana w każdej instrukcji `If`, a dane wyjściowe są następujące:
 
 `Expression is not true`
 
 `Expression is not false`
 
 > [!NOTE]
-> `AndAlso` i `OrElse`, wykorzystującymi zwarcia musi wzięcia pod uwagę drugiej operandy przy pierwszym daje w wyniku `Nothing`.
+> `AndAlso` i `OrElse`, które korzystają z oceny krótkiego obwodu, muszą ocenić dwa operandy, gdy pierwsze szacuje się na `Nothing`.
 
 ## <a name="propagation"></a>Propagacja
 
-Jeśli jeden lub oba operandy operacje arytmetyczne, porównanie, przesunięcia lub operację typu ma wartość null, wynik operacji jest również dopuszczającego wartość null. Jeśli oba operandy mają wartości, które nie są `Nothing`, operacja jest wykonywana na podstawowej wartości argumentów, tak, jakby nie były typu dopuszczającego wartość null. W poniższym przykładzie zmienne `compare1` i `sum1` są wpisywane niejawnie. Jeśli przytrzymasz wskaźnik myszy nad nimi, zobaczysz, że kompilator wnioskuje typy dopuszczające wartości null dla obu z nich.
+Jeśli jeden lub oba operandy operacji arytmetycznych, porównywania, przesunięcia lub typu mają wartość null, wynik operacji również dopuszcza wartość null. Jeśli oba operandy mają wartości, które nie są `Nothing`, operacja jest wykonywana na podstawowych wartościach operandów, tak jakby nie były typem dopuszczającym wartość null. W poniższym przykładzie zmienne `compare1` i `sum1` są wpisane niejawnie. Jeśli umieścisz wskaźnik myszy nad nimi, zobaczysz, że kompilator wnioskuje Typy dopuszczające wartość null dla obu tych elementów.
 
 [!code-vb[VbVbalrNullableValue#7](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#7)]
 
-Jeśli jeden lub oba argumenty mają wartość `Nothing`, wynik będzie `Nothing`.
+Jeśli jeden lub oba operandy mają wartość `Nothing`, wynik będzie `Nothing`.
 
 [!code-vb[VbVbalrNullableValue#8](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#8)]
 
-## <a name="using-nullable-types-with-data"></a>Używanie typów dopuszczających wartości zerowe z danymi
+## <a name="using-nullable-types-with-data"></a>Używanie typów dopuszczających wartości null z danymi
 
-Baza danych jest jednym z najważniejszych miejsc do użycia typy dopuszczające wartości null. Nie wszystkie obiekty bazy danych obecnie obsługuje typy dopuszczające wartości null, ale działają adaptery wygenerowany przez projektanta tabel. Zobacz [TableAdapter obsługę typów dopuszczających wartości zerowe](/visualstudio/data-tools/fill-datasets-by-using-tableadapters#tableadapter-support-for-nullable-types).
+Baza danych jest jednym z najważniejszych miejsc, w których można używać typów dopuszczających wartość null. Nie wszystkie obiekty bazy danych obsługują obecnie Typy dopuszczające wartość null, ale adaptery tabeli generowane przez projektanta. Zobacz [TableAdapter support for nullable Types](/visualstudio/data-tools/fill-datasets-by-using-tableadapters#tableadapter-support-for-nullable-types).
 
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
-- [Używanie typów dopuszczających wartości null](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [Typy danych](index.md)
 - [Typy wartości i odwołań](value-types-and-reference-types.md)
 - [Rozwiązywanie problemów związanych z typami danych](troubleshooting-data-types.md)
@@ -118,3 +117,4 @@ Baza danych jest jednym z najważniejszych miejsc do użycia typy dopuszczające
 - [Wnioskowanie o typie lokalnym](../variables/local-type-inference.md)
 - [Is, operator](../../../language-reference/operators/is-operator.md)
 - [IsNot, operator](../../../language-reference/operators/isnot-operator.md)
+- [Używanie typów wartości null (C#)](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)

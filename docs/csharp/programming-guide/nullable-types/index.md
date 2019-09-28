@@ -1,66 +1,65 @@
 ---
-title: Typy dopuszczające wartości zerowe — C# Programming Guide
+title: Typy wartości null — C# Przewodnik programowania
 ms.custom: seodec18
-description: Informacje na temat typów dopuszczających wartości zerowe C# i sposobu ich używania
-ms.date: 07/30/2018
+description: Dowiedz C# się więcej o typach wartości null i sposobach ich użycia
+ms.date: 09/26/2019
 helpviewer_keywords:
-- nullable types [C#]
-- C# language, nullable types
-- types [C#], nullable
+- nullable value types [C#]
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: 740b39c9c729f0768e75b0465eb8ca98eb5b318f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8b52e7fb34adf65d5c76d59811ea6dd0ab16a98
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710150"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71396221"
 ---
-# <a name="nullable-types-c-programming-guide"></a>Typy dopuszczające wartości zerowe (C# Programming Guide)
+# <a name="nullable-value-types-c-programming-guide"></a>Typy wartości null (C# Przewodnik programowania)
 
-Typy dopuszczające wartości null są wystąpieniami <xref:System.Nullable%601?displayProperty=nameWithType> struktury. Typy dopuszczające wartość null może reprezentować wszystkie wartości typu bazowego `T`wraz z dodatkowymi [null](../../language-reference/keywords/null.md) wartość. Typ podstawowy `T` może być dowolne niedopuszczający [typu wartości](../../language-reference/keywords/value-types.md). `T` nie może być typem referencyjnym.
+Typy wartości null są wystąpieniami struktury <xref:System.Nullable%601?displayProperty=nameWithType>. Typy wartości null mogą reprezentować wszystkie wartości typu podstawowego `T` i dodatkową wartość [null](../../language-reference/keywords/null.md) . Typ podstawowy `T` może być dowolnym [typem wartości](../../language-reference/keywords/value-types.md)innym niż null. `T` nie może być typem referencyjnym.
 
-Na przykład możesz przypisać `null` lub dowolnej wartości liczby całkowitej z <xref:System.Int32.MinValue?displayProperty=nameWithType> do <xref:System.Int32.MaxValue?displayProperty=nameWithType> do `Nullable<int>` i [true](../../language-reference/keywords/true-literal.md), [false](../../language-reference/keywords/false-literal.md), lub `null` do `Nullable<bool>`.
+> [!NOTE]
+> C#8,0 wprowadza funkcję typów odwołań do wartości null. Aby uzyskać więcej informacji, zobacz [typy referencyjne dopuszczające wartość null](../../nullable-references.md). Typy wartości null są dostępne od C# 2.
 
-Używasz typu dopuszczającego wartość null, jeśli potrzebujesz do reprezentowania niezdefiniowane wartości typu podstawowego. Wartość logiczna może mieć tylko dwie wartości: true i false. Nie ma żadnej wartości "undefined". W wielu aplikacjach programowania głównie interakcji bazy danych, wartość zmiennej może być niezdefiniowana lub jego brak. Na przykład pola w bazie danych może zawierać wartości true lub false lub może zawierać żadnej wartości w ogóle. Możesz użyć `Nullable<bool>` typu w takiej sytuacji.
+Na przykład można przypisać wartość `null` lub dowolną liczbę całkowitą z zakresu od <xref:System.Int32.MinValue?displayProperty=nameWithType> do <xref:System.Int32.MaxValue?displayProperty=nameWithType> do `Nullable<int>` i [true](../../language-reference/keywords/true-literal.md), [false](../../language-reference/keywords/false-literal.md)lub `null` do `Nullable<bool>`.
 
-Typy dopuszczające wartości zerowe mają następującą charakterystykę:
-  
-- Typy dopuszczające wartości zerowe reprezentują zmienne typu wartości, które można przypisać `null` wartość. Nie można utworzyć typu dopuszczającego wartość null, w oparciu o typ odwołania. (Już obsługuje typy odwołań `null` wartości.)  
-  
-- Składnia `T?` jest skrótem `Nullable<T>`. Dwa formularze są wymienne.  
-  
-- Przypisania wartości do typu dopuszczającego wartość null, tak samo jak dla podstawowego typu wartości: `int? x = 10;` lub `double? d = 4.108;`. Możesz również przypisać `null` wartość: `int? x = null;`.  
-  
-- Użyj <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> i <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> właściwości tylko do odczytu, aby sprawdzić wartość null i pobierać wartości, jak pokazano w poniższym przykładzie: `if (x.HasValue) y = x.Value;`  
-  
-  - <xref:System.Nullable%601.HasValue%2A> Właściwość zwraca `true` Jeśli zmienna zawiera wartość, lub `false` , gdy jest `null`.
-  
-  - <xref:System.Nullable%601.Value%2A> Właściwość zwraca wartość, jeśli <xref:System.Nullable%601.HasValue%2A> zwraca `true`. W przeciwnym razie <xref:System.InvalidOperationException> zgłaszany.  
-  
-- Można również użyć `==` i `!=` operatory o typu dopuszczającego wartość null, jak pokazano w poniższym przykładzie: `if (x != null) y = x.Value;`. Jeśli `a` i `b` są ma wartość null, `a == b` daje w wyniku `true`.  
+Typ wartości null jest używany w przypadku konieczności reprezentowania niezdefiniowanej wartości typu podstawowego. Zmienna logiczna może mieć tylko dwie wartości: `true` i `false`. Brak wartości "undefined". W wielu aplikacjach programistycznych, szczególnie w przypadku interakcji z bazami danych, wartość zmiennej może być niezdefiniowana lub brakująca. Na przykład pole w bazie danych może zawierać wartości true lub false lub nie może zawierać żadnej wartości. W takim przypadku należy użyć typu `Nullable<bool>`.
 
-- Począwszy od języka C# 7.0, można użyć [dopasowywania do wzorca](../../pattern-matching.md#the-is-type-pattern-expression) do zbadania i Pobierz wartość typu dopuszczającego wartość null: `if (x is int valueOfX) y = valueOfX;`.
-  
-- Wartość domyślna `T?` jest wystąpieniem którego <xref:System.Nullable%601.HasValue%2A> właściwość zwraca `false`.  
+Typy wartości null mają następującą charakterystykę:
 
-- Użyj <xref:System.Nullable%601.GetValueOrDefault> metodę, aby zwrócić albo przypisaną wartość, lub [domyślne](../../language-reference/keywords/default-values-table.md) wartość bazowego typu wartości, jeśli wartość typu dopuszczającego wartość null jest `null`.  
+- Typy wartości null reprezentują zmienne typu wartości, do których można przypisać wartość `null`.
 
-- Użyj <xref:System.Nullable%601.GetValueOrDefault(%600)> metody do zwrócenia przypisaną wartość lub wartość domyślną podany, jeśli wartość typu dopuszczającego wartość null jest `null`.
-  
-- Użyj [operatorem łączenia wartości null](../../language-reference/operators/null-coalescing-operator.md), `??`, aby przypisać wartość do typu podstawowego, na podstawie wartości typu dopuszczającego wartość null: `int? x = null; int y = x ?? -1;`. W tym przykładzie ponieważ `x` jest null, wartość wyniku `y` jest `-1`.
+- Składnia `T?` jest skrótem dla `Nullable<T>`. Dwa formularze są zamienne.
 
-- Jeśli nie zdefiniowano konwersji zdefiniowanej przez użytkownika między dwoma typami danych, tej samej konwersji można również z tych typów danych w wersji dopuszczającego wartość null.
-  
-- Zagnieżdżone typy dopuszczające wartości null są niedozwolone. Kompilacji nie następujący wiersz: `Nullable<Nullable<int>> n;`  
+- Przypisz wartość do typu wartości null tak samo jak dla bazowego typu wartości: `int? x = 10;` lub `double? d = 4.108;`. Można również przypisać wartość `null`: `int? x = null;`.
 
-Aby uzyskać więcej informacji, zobacz [przy użyciu typów dopuszczających wartości zerowe](using-nullable-types.md) i [jak: Identyfikowanie typu dopuszczającego wartość null](how-to-identify-a-nullable-type.md) tematów.
-  
+- Użyj właściwości typu <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> i <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> do przetestowania wartości null i pobrania wartości, jak pokazano w następującym przykładzie: `if (x.HasValue) y = x.Value;`
+
+  - Właściwość <xref:System.Nullable%601.HasValue%2A> zwraca `true`, jeśli zmienna zawiera wartość lub `false`, jeśli jest `null`.
+
+  - Właściwość <xref:System.Nullable%601.Value%2A> zwraca wartość, jeśli <xref:System.Nullable%601.HasValue%2A> zwróci `true`. W przeciwnym razie zostanie zgłoszony <xref:System.InvalidOperationException>.
+
+- Można również użyć operatorów `==` i `!=` z typem wartości null, jak pokazano w następującym przykładzie: `if (x != null) y = x.Value;`. Jeśli `a` i `b` są równe null, `a == b` szacuje się do `true`.
+
+- Począwszy od C# 7,0, można użyć [dopasowania wzorca](../../pattern-matching.md#the-is-type-pattern-expression) do obu badań i pobrać wartość typu dopuszczającego wartości null: `if (x is int valueOfX) y = valueOfX;`.
+
+- Wartość domyślna `T?` to wystąpienie, którego właściwość <xref:System.Nullable%601.HasValue%2A> zwraca `false`.
+
+- Użyj metody <xref:System.Nullable%601.GetValueOrDefault> do zwrócenia przypisanej wartości lub wartości [domyślnej](../../language-reference/keywords/default-values-table.md) bazowego typu wartości, jeśli wartość tego typu jest `null`.
+
+- Użyj metody <xref:System.Nullable%601.GetValueOrDefault(%600)> do zwrócenia przypisanej wartości lub podanej wartości domyślnej, jeśli wartość tego typu jest `null`.
+
+- Użyj [operatora łączenia wartości null](../../language-reference/operators/null-coalescing-operator.md), `??`, aby przypisać wartość do zmiennej bazowego typu wartości na podstawie wartości typu nullable: `int? x = null; int y = x ?? -1;`. W przykładzie, ponieważ `x` jest `null`, wartość wyniku `y` jest `-1`.
+
+- Jeśli zdefiniowana przez użytkownika konwersja jest zdefiniowana między dwoma typami wartości, można także użyć tej samej konwersji z odpowiadającymi im typami dopuszczającymi wartość null.
+
+- Zagnieżdżone typy wartości null są niedozwolone. Następujący wiersz nie kompiluje się: `Nullable<Nullable<int>> n;`
+
+Aby uzyskać więcej informacji, zobacz [Korzystanie z typów wartości null](using-nullable-types.md) i [instrukcje: Identyfikowanie tematów o typie wartości null](how-to-identify-a-nullable-type.md) .
+
 ## <a name="see-also"></a>Zobacz także
 
+- [Przewodnik programowania w języku C#](../index.md)
+- [?? operator](../../language-reference/operators/null-coalescing-operator.md)
+- [Typy wartości null (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
 - <xref:System.Nullable%601?displayProperty=nameWithType>
 - <xref:System.Nullable?displayProperty=nameWithType>
-- [??, operator](../../language-reference/operators/null-coalescing-operator.md)
-- [Przewodnik programowania w języku C#](../index.md)
-- [Przewodnik dla języka C#](../../index.md)
-- [Dokumentacja języka C#](../../language-reference/index.md)
-- [Typy o wartości zerowalnej (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

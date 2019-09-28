@@ -1,23 +1,23 @@
 ---
-title: 'Instrukcje: CATCH, analizowanie błędów (Visual Basic)'
+title: 'Instrukcje: Błędy analizy catch (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 22e9068e-ea58-447b-816e-cd1852c11787
-ms.openlocfilehash: 1a5d01d4853a9fd0cc7f0a0e5071b394ab3f218b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0c0749e8bc6d3fb1a71595778bfc5effaaf8533
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855640"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352943"
 ---
-# <a name="how-to-catch-parsing-errors-visual-basic"></a>Instrukcje: CATCH, analizowanie błędów (Visual Basic)
-W tym temacie pokazano, jak wykryć XML źle sformułowana lub jest nieprawidłowy.  
+# <a name="how-to-catch-parsing-errors-visual-basic"></a>Porady: Błędy analizy catch (Visual Basic)
+W tym temacie pokazano, jak wykryć źle sformułowany lub nieprawidłowy kod XML.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest implementowana przy użyciu <xref:System.Xml.XmlReader>. Jeśli źle sformułowany lub nieprawidłowy XML jest przekazywany do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], podstawowe <xref:System.Xml.XmlReader> klasy spowoduje zgłoszenie wyjątku. Różne metody analizy XML, takie jak <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, nie Przechwytuj wyjątek; wyjątek, następnie może zostać przechwycony przez aplikację.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest implementowana przy użyciu <xref:System.Xml.XmlReader>. Jeśli nieprawidłowo sformułowany lub nieprawidłowy kod XML jest przenoszona do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], bazowa Klasa <xref:System.Xml.XmlReader> zwróci wyjątek. Różne metody, które analizują XML, takie jak <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, nie przechwytują wyjątku; wyjątek może następnie być przechwytywany przez aplikację.  
   
- Błędy analizy należy pamiętać, że nie można uzyskać, korzystając z literałów XML. Kompilator Visual Basic będzie przechwytywać błędy XML źle sformułowana lub jest nieprawidłowy.  
+ Należy zauważyć, że nie można uzyskać błędów analizy, jeśli używasz literałów XML. Kompilator Visual Basic przechwytuje błędy źle uformowanego lub nieprawidłowego kodu XML.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod próbuje przeanalizować nieprawidłowy kod XML:  
+ Następujący kod próbuje przeanalizować nieprawidłowego kodu XML:  
   
 ```vb  
 Try  
@@ -33,13 +33,13 @@ Catch e As System.Xml.XmlException
 End Try  
 ```  
   
- Po uruchomieniu tego kodu, zgłasza następujący wyjątek:  
+ Po uruchomieniu tego kodu zgłasza następujący wyjątek:  
   
-```  
+```console  
 The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line 5, position 13.  
 ```  
   
- Dla informacji o wyjątkach, których można oczekiwać, że <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>, i <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> metody throw, zobacz <xref:System.Xml.XmlReader> dokumentacji.  
+ Aby uzyskać informacje o wyjątkach, które można zgłosić <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> i <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> metod zgłaszania, zobacz dokumentację dotyczącą <xref:System.Xml.XmlReader>.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Oblicz wartości pośrednie (Visual Basic)'
+title: 'Porady: Oblicz wartości pośrednie (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 933a97b2-dfe7-4f4d-94ad-e6e20df84abd
-ms.openlocfilehash: d3af616fc3de4baa4bb42d9f9c04d654b7438ab0
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 63067c42da37d71ad0fc5488c68d296ac7589aec
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710473"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352909"
 ---
 # <a name="how-to-calculate-intermediate-values-visual-basic"></a>Instrukcje: Oblicz wartości pośrednie (Visual Basic)
 Ten przykład pokazuje sposób obliczania wartości pośrednich, które mogą być używane do sortowania, filtrowania i wybierania.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie zastosowano `Let` klauzulę.  
+ W poniższym przykładzie jest używana klauzula `Let`.  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Dane liczbowe (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Dane liczbowe (LINQ to XML) ](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("Data.xml")  
@@ -32,7 +32,7 @@ Next
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```console  
 55.92  
 73.50  
 89.99  
@@ -43,7 +43,7 @@ Next
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano to samo zapytanie dla kodu XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw — omówienie (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Dane liczbowe w przestrzeni nazw](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Dane liczbowe w przestrzeni nazw @ no__t-0.  
   
 ```vb  
 Imports <xmlns="http://www.adatum.com">  
@@ -66,7 +66,7 @@ End Module
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```console  
 55.92  
 73.50  
 89.99  

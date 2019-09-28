@@ -1,18 +1,18 @@
 ---
 title: Eksplorowanie zakresów danych przy użyciu indeksów i zakresów
 description: Ten zaawansowany Samouczek uczy się, jak eksplorować dane przy użyciu indeksów i zakresów w celu zbadania wycinków sekwencyjnego zestawu danych.
-ms.date: 04/19/2019
+ms.date: 09/20/2019
 ms.custom: mvc
-ms.openlocfilehash: d0eeadfff9732ced22e045536a88ed49cd98bbaa
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a879601e1358f72e80983992a3cd96ba1fb06a38
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117837"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71391967"
 ---
 # <a name="indices-and-ranges"></a>Indeksy i zakresy
 
-Zakresy i indeksy zapewniają zwięzłą składnię do uzyskiwania dostępu do pojedynczych elementów lub zakresów w <xref:System.Array>, <xref:System.String>, <xref:System.Span%601>, lub <xref:System.ReadOnlySpan%601>. Te funkcje umożliwiają bardziej zwięzłą, przejrzystą składnię w celu uzyskania dostępu do pojedynczych elementów lub zakresów elementów w sekwencji.
+Zakresy i indeksy zapewniają zwięzłą składnię do uzyskiwania dostępu do pojedynczych elementów lub zakresów w sekwencji.
 
 W tym samouczku dowiesz się, jak:
 
@@ -74,6 +74,14 @@ Można również zadeklarować zakresy lub indeksy jako zmienne. Zmienna może b
 Poniższy przykład pokazuje wiele przyczyn tego wyboru. Zmodyfikuj `x`, `y` i`z` , aby wypróbować różne kombinacje. Podczas eksperymentowania Użyj wartości, gdzie `x` jest mniejsza niż `y`i `y` jest mniejsze niż `z` w przypadku prawidłowych kombinacji. Dodaj następujący kod w nowej metodzie. Wypróbuj różne kombinacje:
 
 [!code-csharp[SemanticsExamples](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Semantics)]
+
+## <a name="type-support-for-indices-and-ranges"></a>Obsługa typów indeksów i zakresów
+
+Jeśli typ udostępnia [indeksator](../programming-guide/indexers/index.md) z parametrem <xref:System.Index> lub <xref:System.Range>, jawnie obsługuje odpowiednio indeksy lub zakresy.
+
+Typ jest możliwy do **zliczenia** , jeśli ma właściwość o nazwie `Length` lub `Count` z dostępną metodę pobierającą i typem zwracanym `int`. Typ z liczbą, która nie obsługuje jawnie indeksów lub zakresów może zapewnić niejawną obsługę. Aby uzyskać więcej informacji, zapoznaj się z sekcją obsługa niejawnych [indeksów](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) i [Obsługa niejawnego zakresu](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) w artykule [propozycja funkcji](~/_csharplang/proposals/csharp-8.0/ranges.md).
+
+Na przykład następujące typy .NET obsługują zarówno indeksy, jak i zakresy: <xref:System.Array>, <xref:System.String>, <xref:System.Span%601> i <xref:System.ReadOnlySpan%601>. @No__t-0 obsługuje indeksy, ale nie obsługuje zakresów.
 
 ## <a name="scenarios-for-indices-and-ranges"></a>Scenariusze dotyczące indeksów i zakresów
 

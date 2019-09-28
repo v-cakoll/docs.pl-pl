@@ -2,12 +2,12 @@
 title: Co nowego w C# 8,0 — C# Przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8,0.
 ms.date: 09/20/2019
-ms.openlocfilehash: 95331c8dd8e8b5e0d5af242752565d8e93120937
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: ee0f6c9d7cfbe829508e3e0900e249c204266ca3
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216491"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71396028"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego w C# 8,0
 
@@ -375,18 +375,18 @@ Możesz samodzielnie wypróbować strumienie asynchroniczne w naszym samouczku d
 
 ## <a name="indices-and-ranges"></a>Indeksy i zakresy
 
-Zakresy i indeksy zapewniają zwięzłą składnię do określania podzakresów w tablicy, [ciągu znaków](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601>lub <xref:System.ReadOnlySpan%601>.
+Indeksy i zakresy zapewniają zwięzłą składnię do uzyskiwania dostępu do pojedynczych elementów lub zakresów w sekwencji.
 
 Ten język obsługuje dwa nowe typy i dwa nowe operatory:
 
 - <xref:System.Index?displayProperty=nameWithType>reprezentuje indeks w sekwencji.
-- `^` Operator, który określa, że indeks jest względem końca sekwencji.
+- Indeks z operatora końcowego `^`, który określa, że indeks jest względem końca sekwencji.
 - <xref:System.Range?displayProperty=nameWithType>reprezentuje Podzakres sekwencji.
-- Operator zakresu (`..`), który określa początek i koniec zakresu jako jego operandy.
+- Operator `..`zakresu, który określa początek i koniec zakresu jako jego operandy.
 
 Zacznijmy od reguł dotyczących indeksów. Weź pod uwagę `sequence`tablicę. Indeks jest taki sam jak `sequence[0]`. `0` Indeks jest taki sam jak `sequence[sequence.Length]`. `^0` Należy pamiętać `sequence[^0]` , że generuje wyjątek, podobnie jak `sequence[sequence.Length]` . Dla dowolnej liczby `n`indeks `^n` jest taki sam jak `sequence.Length - n`.
 
-Zakres określa *początek* i *koniec* zakresu. Początek zakresu jest włączony, ale koniec zakresu jest na wyłączność, co oznacza, że *początek* znajduje się w zakresie, ale *koniec* nie jest uwzględniony w zakresie. Zakres `[0..^0]` reprezentuje cały zakres, tak jak `[0..sequence.Length]` reprezentuje cały zakres. 
+Zakres określa *początek* i *koniec* zakresu. Początek zakresu jest włączony, ale koniec zakresu jest na wyłączność, co oznacza, że *początek* znajduje się w zakresie, ale *koniec* nie jest uwzględniony w zakresie. Zakres `[0..^0]` reprezentuje cały zakres, tak jak `[0..sequence.Length]` reprezentuje cały zakres.
 
 Przyjrzyjmy się kilku przykładom. Rozważmy następującą tablicę zawierającą adnotację z jej indeksem od początku i od końca:
 
@@ -444,6 +444,8 @@ Zakres może być następnie używany wewnątrz `[` znaków i: `]`
 ```csharp
 var text = words[phrase];
 ```
+
+Nie tylko tablice obsługują indeksy i zakresy. Można również użyć indeksów i zakresów z [ciągiem](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601> lub <xref:System.ReadOnlySpan%601>. Aby uzyskać więcej informacji, zobacz [Obsługa typów indeksów i zakresów](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
 
 Więcej informacji o indeksach i zakresach można dowiedzieć się w samouczku dotyczącym [indeksów i zakresów](../tutorials/ranges-indexes.md).
 

@@ -2,12 +2,12 @@
 title: Konfigurowanie śledzenia dla przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: d8d3293fd2b271c0e1a00a1fca30d5ecd166df12
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 889efc804bb45b384dfde5b4deb520a81d1e5486
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690565"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353053"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Konfigurowanie śledzenia dla przepływu pracy
 
@@ -15,17 +15,17 @@ Przepływ pracy można wykonać na trzy sposoby:
 
 - Hostowane w <xref:System.ServiceModel.Activities.WorkflowServiceHost>
 
-- Wykonywane jako <xref:System.Activities.WorkflowApplication>
+- Wykonane jako <xref:System.Activities.WorkflowApplication>
 
-- Posługując się bezpośrednio <xref:System.Activities.WorkflowInvoker>
+- Wykonywane bezpośrednio przy użyciu <xref:System.Activities.WorkflowInvoker>
 
-W zależności od opcji obsługi przepływu pracy można dodać uczestnika śledzenia za pomocą kodu lub za pomocą pliku konfiguracji. W tym temacie opisano sposób śledzenia jest skonfigurowany, dodając uczestnikiem śledzenia do <xref:System.Activities.WorkflowApplication> i <xref:System.ServiceModel.Activities.WorkflowServiceHost>oraz jak włączyć śledzenie, korzystając z <xref:System.Activities.WorkflowInvoker>.
+W zależności od opcji hostingu przepływu pracy można dodać uczestnika śledzenia za pomocą kodu lub pliku konfiguracji. W tym temacie opisano sposób skonfigurowania śledzenia przez dodanie uczestnika śledzenia do <xref:System.Activities.WorkflowApplication> i do <xref:System.ServiceModel.Activities.WorkflowServiceHost> oraz sposób włączania śledzenia podczas korzystania z <xref:System.Activities.WorkflowInvoker>.
 
-## <a name="configuring-workflow-application-tracking"></a>Skonfigurowanie aplikacji przepływu pracy śledzenia
+## <a name="configuring-workflow-application-tracking"></a>Konfigurowanie śledzenia aplikacji przepływu pracy
 
-Przepływ pracy można uruchomić przy użyciu <xref:System.Activities.WorkflowApplication> klasy. W tym temacie przedstawiono sposób śledzenia jest skonfigurowany dla [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] aplikacji przepływu pracy, dodając uczestnikiem śledzenia do <xref:System.Activities.WorkflowApplication> hosta przepływu pracy. W takim przypadku przepływ pracy działa jako aplikacja przepływu pracy. Konfigurowanie poziomu aplikacji przepływu pracy za pomocą kodu (zamiast przy użyciu pliku konfiguracji), czyli Self-Hosted .exe plików przy użyciu <xref:System.Activities.WorkflowApplication> klasy. Śledzenia uczestnika zostanie dodany jako rozszerzenie <xref:System.Activities.WorkflowApplication> wystąpienia. Jest to realizowane przez dodanie <xref:System.Activities.Tracking.TrackingParticipant> kolekcji rozszerzeń dla tego wystąpienia WorkflowApplication.
+Przepływ pracy można uruchomić za pomocą klasy <xref:System.Activities.WorkflowApplication>. W tym temacie przedstawiono sposób skonfigurowania śledzenia dla aplikacji przepływu pracy [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] przez dodanie uczestnika śledzenia do hosta przepływów pracy @no__t 1. W takim przypadku przepływ pracy jest uruchamiany jako aplikacja przepływu pracy. Aplikację przepływu pracy konfiguruje się za pomocą kodu (a nie przy użyciu pliku konfiguracji), który jest nieobsługiwanym plikiem exe przy użyciu klasy <xref:System.Activities.WorkflowApplication>. Uczestnik śledzenia jest dodawany jako rozszerzenie wystąpienia <xref:System.Activities.WorkflowApplication>. W tym celu należy dodać <xref:System.Activities.Tracking.TrackingParticipant> do kolekcji rozszerzeń dla wystąpienia obiektu WorkflowApplication.
 
-W przypadku aplikacji przepływu pracy, możesz dodać <xref:System.Activities.Tracking.EtwTrackingParticipant> rozszerzenia zachowania, jak pokazano w poniższym kodzie.
+W przypadku aplikacji przepływu pracy można dodać rozszerzenie zachowanie <xref:System.Activities.Tracking.EtwTrackingParticipant>, jak pokazano w poniższym kodzie.
 
 ```csharp
 LogActivity activity = new LogActivity();
@@ -48,11 +48,11 @@ EtwTrackingParticipant trackingParticipant =
 instance.Extensions.Add(trackingParticipant);
 ```
 
-### <a name="configuring-workflow-service-tracking"></a>Konfigurowanie usługi przepływu pracy śledzenia
+### <a name="configuring-workflow-service-tracking"></a>Konfigurowanie śledzenia usługi przepływu pracy
 
-Przepływ pracy może być udostępniany jako usługi WCF w przypadku hostowania w <xref:System.ServiceModel.Activities.WorkflowServiceHost> hosta usługi. <xref:System.ServiceModel.Activities.WorkflowServiceHost> to Wyspecjalizowana implementacja .NET ServiceHost dla usługi opartej na przepływie pracy. W tej sekcji opisano sposób konfigurowania śledzenia [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] usługi przepływu pracy w <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Jest skonfigurowany za pomocą pliku Web.config (usługi hostowane w sieci Web) lub plik App.config (dla usługi hostowanej w aplikacji autonomicznej, np. aplikację konsolową w języku), określając zachowanie usługi, lub za pomocą kodu przez dodanie zachowania specyficzny dla śledzenia do <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> kolekcji dla hosta usługi.
+Przepływ pracy może być ujawniony jako usługa WCF, gdy jest hostowany na hoście usługi <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowServiceHost> to wyspecjalizowana implementacja ServiceHost platformy .NET dla usługi opartej na przepływie pracy. W tej sekcji wyjaśniono, jak skonfigurować śledzenie dla usługi przepływu pracy [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] działającej w <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Jest ona konfigurowana za pośrednictwem pliku Web. config (dla usługi hostowanej w sieci Web) lub pliku App. config (dla usługi hostowanej w aplikacji autonomicznej, takiej jak Aplikacja konsolowa) przez określenie zachowania usługi lub za pośrednictwem kodu przez dodanie zachowania specyficznego dla śledzenia Kolekcja <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> dla hosta usługi.
 
-Dla usługi przepływu pracy hostowanych w <xref:System.ServiceModel.WorkflowServiceHost>, możesz dodać <xref:System.Activities.Tracking.EtwTrackingParticipant> przy użyciu <`behavior`> element pliku konfiguracji, jak pokazano w poniższym przykładzie.
+W przypadku usługi przepływu pracy hostowanej w <xref:System.ServiceModel.WorkflowServiceHost> można dodać <xref:System.Activities.Tracking.EtwTrackingParticipant> przy użyciu elementu < `behavior` > w pliku konfiguracyjnym, jak pokazano w poniższym przykładzie.
 
 ```xml
 <behaviors>
@@ -64,10 +64,10 @@ Dla usługi przepływu pracy hostowanych w <xref:System.ServiceModel.WorkflowSer
 <behaviors>
 ```
 
-Alternatywnie przepływu pracy usługi hostowanej w <xref:System.ServiceModel.WorkflowServiceHost>, możesz dodać <xref:System.Activities.Tracking.EtwTrackingParticipant> rozszerzenia zachowania za pomocą kodu. Aby dodać uczestnikiem niestandardowe śledzenia, Utwórz nowe rozszerzenie zachowanie i dodaj go do <xref:System.ServiceModel.ServiceHost> jak pokazano w poniższym przykładowym kodzie.
+Alternatywnie w przypadku usługi przepływu pracy hostowanej w <xref:System.ServiceModel.WorkflowServiceHost> można dodać rozszerzenie zachowania <xref:System.Activities.Tracking.EtwTrackingParticipant> za pomocą kodu. Aby dodać uczestnika śledzenia niestandardowego, Utwórz nowe rozszerzenie zachowania i Dodaj je do <xref:System.ServiceModel.ServiceHost>, jak pokazano w poniższym przykładowym kodzie.
 
 > [!NOTE]
-> Aby wyświetlić przykładowy kod, który pokazuje, jak można utworzyć elementu niestandardowe zachowanie, który dodaje niestandardowego uczestnika śledzenia, zapoznaj się [śledzenia](./samples/tracking.md) przykładów.
+> Jeśli chcesz wyświetlić przykładowy kod, który pokazuje, jak utworzyć niestandardowy element zachowania, który dodaje niestandardowego uczestnika śledzenia, zapoznaj się z przykładami [śledzenia](./samples/tracking.md) .
 
 ```csharp
 ServiceHost svcHost = new ServiceHost(typeof(WorkflowService), new
@@ -81,9 +81,9 @@ svcHost.Description.Behaviors.Add(trackingBehavior);
 svcHost.Open();
 ```
 
-Śledzenia uczestnika zostanie dodany do hosta usługi przepływu pracy jako rozszerzenie do zachowania.
+Uczestnik śledzenia jest dodawany do hosta usługi przepływu pracy jako rozszerzenie zachowania.
 
-Ten przykładowy kod poniżej pokazano, jak odczytać profil śledzenia w pliku konfiguracji.
+Poniższy przykładowy kod pokazuje, jak odczytać profil śledzenia z pliku konfiguracyjnego.
 
 ```csharp
 TrackingProfile GetProfile(string profileName, string displayName)
@@ -95,10 +95,7 @@ TrackingProfile GetProfile(string profileName, string displayName)
                 return null;
             }
 
-            if (profileName == null)
-            {
-                profileName = "";
-            }
+            profileName ??= "";
 
             //Find the profile with the specified profile name in the list of profile found in config
             var match = from p in new List<TrackingProfile>(trackingSection.TrackingProfiles)
@@ -122,7 +119,7 @@ TrackingProfile GetProfile(string profileName, string displayName)
             return trackingProfile;
 ```
 
-Ten przykładowy kod przedstawia sposób dodawania profilu śledzenia do hosta przepływu pracy.
+Ten przykładowy kod pokazuje, jak dodać profil śledzenia do hosta przepływu pracy.
 
 ```csharp
 WorkflowServiceHost workflowServiceHost = serviceHostBase as WorkflowServiceHost;
@@ -137,11 +134,11 @@ if (null != workflowServiceHost)
 ```
 
 > [!NOTE]
-> Aby uzyskać więcej informacji na temat śledzenia profilów, dotyczą [profile śledzenia](https://go.microsoft.com/fwlink/?LinkId=201310).
+> Więcej informacji o profilach śledzenia można znaleźć w tematach [śledzenie profilów](https://go.microsoft.com/fwlink/?LinkId=201310).
 
-### <a name="configuring-tracking-using-workflowinvoker"></a>Konfigurowanie śledzenia za pomocą obiektu WorkflowInvoker
+### <a name="configuring-tracking-using-workflowinvoker"></a>Konfigurowanie śledzenia przy użyciu WorkflowInvoker
 
-Do konfigurowania śledzenia dla przepływu pracy, posługując się <xref:System.Activities.WorkflowInvoker>, Dodaj dostawcę śledzenia jako rozszerzenie <xref:System.Activities.WorkflowInvoker> wystąpienia. Poniższy przykładowy kod pochodzi z [niestandardowe śledzenia](./samples/custom-tracking.md) próbki.
+Aby skonfigurować śledzenie dla przepływu pracy wykonywanego przy użyciu <xref:System.Activities.WorkflowInvoker>, Dodaj dostawcę śledzenia jako rozszerzenie do wystąpienia <xref:System.Activities.WorkflowInvoker>. Poniższy przykład kodu pochodzi z niestandardowego przykładu [śledzenia](./samples/custom-tracking.md) .
 
 ```csharp
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());
@@ -149,47 +146,47 @@ invoker.Extensions.Add(customTrackingParticipant);
 invoker.Invoke();
 ```
 
-### <a name="viewing-tracking-records-in-event-viewer"></a>Wyświetlanie śledzenia rekordów w Podglądzie zdarzeń
+### <a name="viewing-tracking-records-in-event-viewer"></a>Wyświetlanie rekordów śledzenia w Podgląd zdarzeń
 
-Istnieją dwa dzienniki Podglądu zdarzeń szczególne znaczenie w odniesieniu do wyświetlenia podczas śledzenia wykonywanie WF — dziennik analityczny i dziennik debugowania. Znajdują się zarówno w ramach programu Microsoft&#124;Windows&#124;węzła aplikacje serwera aplikacji. Dzienniki w tej sekcji zawierają zdarzenia z pojedynczą aplikacją, a nie zdarzenia, które mają wpływ na cały system.
+Istnieją dwa Podgląd zdarzeń Dzienniki o szczególnym znaczeniu do wyświetlenia podczas śledzenia wykonywania funkcji WF — dziennik analityczny i Dziennik debugowania. Oba znajdują się w węźle&#124;serwer&#124;aplikacji systemu Microsoft Windows — aplikacje. Dzienniki w tej sekcji zawierają zdarzenia z pojedynczej aplikacji, a nie zdarzenia mające wpływ na cały system.
 
-Debugowanie śledzenia są zapisywane w dzienniku debugowania. Aby zbierać zdarzenia śledzenia debugowania WF w Podglądzie zdarzeń, włączyć dziennik debugowania.
+Zdarzenia śledzenia debugowania są zapisywane w dzienniku debugowania. Aby zbierać zdarzenia śledzenia debugowania WF w Podgląd zdarzeń, Włącz Dziennik debugowania.
 
-1. Aby otworzyć Podgląd zdarzeń, kliknij przycisk **Start**, a następnie kliknij przycisk **uruchomienia.** W oknie dialogowym Uruchamianie wpisz `eventvwr`.
+1. Aby otworzyć Podgląd zdarzeń, kliknij przycisk **Start**, a następnie kliknij przycisk **Uruchom.** W oknie dialogowym Uruchamianie wpisz `eventvwr`.
 
-2. W oknie dialogowym podglądu zdarzeń, rozwiń węzeł **Dzienniki aplikacji i usług** węzła.
+2. W oknie dialogowym Podgląd zdarzeń rozwiń węzeł **Dzienniki aplikacji i usług** .
 
-3. Rozwiń **Microsoft**, **Windows**, i **aplikacje serwera aplikacji** węzłów.
+3. Rozwiń węzły **Microsoft**, **Windows**i **Application Server-Applications** .
 
-4. Kliknij prawym przyciskiem myszy **debugowania** węźle **aplikacje serwera aplikacji** , a następnie wybierz węzeł **Włącz dziennik**.
+4. Kliknij prawym przyciskiem myszy węzeł **debugowanie** w węźle **serwer aplikacji — aplikacje** , a następnie wybierz pozycję **Włącz dziennik**.
 
-5. Wykonaj włączone śledzenie aplikacji generowanie zdarzeń śledzenia.
+5. Uruchom aplikację obsługującą śledzenie, aby wygenerować zdarzenia śledzenia.
 
-6. Kliknij prawym przyciskiem myszy **debugowania** a następnie wybierz węzeł **odświeżania.** Śledzenie zdarzeń powinny być widoczne w środkowym okienku.
+6. Kliknij prawym przyciskiem myszy węzeł **debugowanie** i wybierz polecenie **Odśwież.** Zdarzenia śledzenia powinny być widoczne w środkowym okienku.
 
-WF 4 udostępnia śledzenia uczestnika, który zapisuje rekordy śledzenia sesji funkcji ETW (Event Tracing for Windows). Uczestnika śledzenia zdarzeń systemu Windows jest skonfigurowany z profil śledzenia do subskrybowania śledzenie rekordów. Po włączeniu śledzenia błędów, śledzenia rekordów są emitowane zdarzeń systemu Windows. Dziennik analityczny odpowiadający zdarzenia śledzenia emitowane przez uczestnika śledzenia zdarzeń systemu Windows są zapisywane ETW śledzenia zdarzeń (między zakres 100 113).
+WF 4 udostępnia uczestnika śledzenia, który zapisuje rekordy śledzenia do sesji ETW (śledzenie zdarzeń systemu Windows). Uczestnik śledzenia ETW jest skonfigurowany przy użyciu profilu śledzenia w celu subskrybowania śledzenia rekordów. Po włączeniu śledzenia błędy śledzenia rekordów są emitowane do funkcji ETW. Zdarzenia śledzenia funkcji ETW (między zakresem 100-113) odpowiadające zdarzeniom śledzenia emitowanym przez uczestnika śledzenia ETW są zapisywane w dzienniku analitycznym.
 
 Aby wyświetlić rekordy śledzenia, wykonaj następujące kroki.
 
-1. Aby otworzyć Podgląd zdarzeń, kliknij przycisk **Start**, a następnie kliknij przycisk **uruchomienia.** W oknie dialogowym Uruchamianie wpisz `eventvwr`.
+1. Aby otworzyć Podgląd zdarzeń, kliknij przycisk **Start**, a następnie kliknij przycisk **Uruchom.** W oknie dialogowym Uruchamianie wpisz `eventvwr`.
 
-2. W oknie dialogowym podglądu zdarzeń, rozwiń węzeł **Dzienniki aplikacji i usług** węzła.
+2. W oknie dialogowym Podgląd zdarzeń rozwiń węzeł **Dzienniki aplikacji i usług** .
 
-3. Rozwiń **Microsoft**, **Windows**, i **aplikacje serwera aplikacji** węzłów.
+3. Rozwiń węzły **Microsoft**, **Windows**i **Application Server-Applications** .
 
-4. Kliknij prawym przyciskiem myszy **analityczne** węźle **aplikacje serwera aplikacji** , a następnie wybierz węzeł **Włącz dziennik**.
+4. Kliknij prawym przyciskiem myszy węzeł **analityczny** w węźle **serwer aplikacji — aplikacje** , a następnie wybierz pozycję **Włącz dziennik**.
 
-5. Wykonywanie aplikacji z obsługą śledzenia do generowania rekordów śledzenia.
+5. Wykonaj swoją aplikację obsługującą śledzenie, aby generować rekordy śledzenia.
 
-6. Kliknij prawym przyciskiem myszy **analityczne** a następnie wybierz węzeł **odświeżania.** Rekordy śledzenia powinny być widoczne w środkowym okienku.
+6. Kliknij prawym przyciskiem myszy węzeł **analityczny** i wybierz polecenie **Odśwież.** Rekordy śledzenia powinny być widoczne w środkowym okienku.
 
-Na poniższej ilustracji przedstawiono zdarzeń śledzenia w Podglądzie zdarzeń:
+Na poniższej ilustracji przedstawiono śledzenie zdarzeń w Podglądzie zdarzeń:
 
-![Zrzut ekranu przedstawiający Podgląd zdarzeń, śledzenia rekordów.](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
+![Zrzut ekranu przedstawiający Podgląd zdarzeń pokazujący śledzone rekordy.](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
 
-### <a name="registering-an-application-specific-provider-id"></a>Rejestrowanie identyfikator dostawcy specyficzne dla aplikacji
+### <a name="registering-an-application-specific-provider-id"></a>Rejestrowanie identyfikatora dostawcy specyficznego dla aplikacji
 
-Jeśli zdarzenia muszą być zapisywane w dzienniku aplikacji, wykonaj następujące kroki, aby zarejestrować nowy manifest dostawcy.
+Jeśli zdarzenia muszą być zapisywane w określonym dzienniku aplikacji, wykonaj następujące kroki, aby zarejestrować nowy manifest dostawcy.
 
 1. Zadeklaruj identyfikator dostawcy w pliku konfiguracyjnym aplikacji.
 
@@ -199,7 +196,7 @@ Jeśli zdarzenia muszą być zapisywane w dzienniku aplikacji, wykonaj następuj
     </system.serviceModel>
     ```
 
-2. Skopiuj plik manifestu z %windir%\Microsoft.NET\Framework\\\<najnowszą wersję [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man do tymczasowej lokalizacji i zmień jej nazwę na Microsoft.Windows.ApplicationServer.Applications_Provider1.man
+2. Skopiuj plik manifestu z%windir%\Microsoft.NET\Framework @ no__t-0 @ no__t-1latest wersja [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] > \Microsoft.Windows.ApplicationServer.Applications.man do lokalizacji tymczasowej, a następnie zmień jej nazwę na Microsoft. Windows. ApplicationServer. Applications_Provider1. Man
 
 3. Zmień identyfikator GUID w pliku manifestu na nowy identyfikator GUID.
 
@@ -207,13 +204,13 @@ Jeśli zdarzenia muszą być zapisywane w dzienniku aplikacji, wykonaj następuj
     <provider name="Microsoft-Windows-Application Server-Applications" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}"
     ```
 
-4. Jeśli nie chcesz odinstalować domyślnego dostawcę, należy zmienić nazwę dostawcy.
+4. Zmień nazwę dostawcy, jeśli nie chcesz odinstalować domyślnego dostawcy.
 
     ```xml
     <provider name="Microsoft-Windows-Application Server-Applications" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}"
     ```
 
-5. Jeśli zmienisz nazwę dostawcy w poprzednim kroku, należy zmienić nazwy kanałów w pliku manifestu na nową nazwę dostawcy.
+5. Jeśli zmieniono nazwę dostawcy w poprzednim kroku, należy zmienić nazwy kanałów w pliku manifestu na nazwę nowego dostawcy.
 
     ```xml
     <channel name="Microsoft-Windows-Application Server-Applications_Provider1/Admin" chid="ADMIN_CHANNEL" symbol="ADMIN_CHANNEL" type="Admin" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.ADMIN_CHANNEL.message)" />
@@ -223,37 +220,37 @@ Jeśli zdarzenia muszą być zapisywane w dzienniku aplikacji, wykonaj następuj
     <channel name="Microsoft-Windows-Application Server-Applications_Provider1/Perf" chid="PERF_CHANNEL" symbol="PERF_CHANNEL" type="Analytic" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.PERF_CHANNEL.message)" />
     ```
 
-6. Generowanie biblioteki DLL zasobu, wykonaj następujące czynności.
+6. Wygeneruj bibliotekę DLL zasobów, wykonując następujące kroki.
 
-    1. Zainstaluj Windows SDK. Zestaw Windows SDK zawiera kompilator komunikat ([mc.exe](https://go.microsoft.com/fwlink/?LinkId=184606)) i kompilator zasobów ([rc.exe](https://go.microsoft.com/fwlink/?LinkId=184605)).
+    1. Zainstaluj Windows SDK. Windows SDK obejmuje kompilator komunikatów ([mc. exe](https://go.microsoft.com/fwlink/?LinkId=184606)) i kompilator zasobów ([RC. exe](https://go.microsoft.com/fwlink/?LinkId=184605)).
 
-    2. W wierszu polecenia zestawu Windows SDK należy uruchomić mc.exe nowego pliku manifestu.
+    2. W Windows SDK wierszu polecenia Uruchom polecenie mc. exe w nowym pliku manifestu.
 
         ```console
         mc.exe Microsoft.Windows.ApplicationServer.Applications_Provider1.man
         ```
 
-    3. Uruchom rc.exe plik resource wygenerowany w poprzednim kroku.
+    3. Uruchom RC. exe w pliku zasobów wygenerowanym w poprzednim kroku.
 
         ```console
         rc.exe  Microsoft.Windows.ApplicationServer.Applications_Provider1.rc
         ```
 
-    4. Utwórz plik pusty cs o nazwie NewProviderReg.cs.
+    4. Utwórz pusty plik CS o nazwie NewProviderReg.cs.
 
-    5. Utwórz zasób biblioteki DLL za pomocą kompilatora C#.
+    5. Utwórz bibliotekę DLL zasobów przy użyciu C# kompilatora.
 
         ```console
         csc /target:library /win32res:Microsoft.Windows.ApplicationServer.Applications_Provider1.res NewProviderReg.cs /out:Microsoft.Windows.ApplicationServer.Applications_Provider1.dll
         ```
 
-    6. Zmień nazwę biblioteki dll zasobu i komunikatów w pliku manifestu z `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` na nową nazwę biblioteki dll.
+    6. Zmień nazwę biblioteki DLL zasobu i komunikatu w pliku manifestu z `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` na nową nazwę dll.
 
         ```xml
         <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">
         ```
 
-    7. Użyj [wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608) można zarejestrować w manifeście.
+    7. Użyj [wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608) , aby zarejestrować manifest.
 
         ```console
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man
@@ -261,5 +258,5 @@ Jeśli zdarzenia muszą być zapisywane w dzienniku aplikacji, wykonaj następuj
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Windows Server AppFabric monitorowania](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [Monitorowanie aplikacji przy użyciu rozwiązania AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Monitorowanie aplikacji sieci szkieletowej systemu Windows Server](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [Monitorowanie aplikacji przy użyciu sieci szkieletowej aplikacji](https://go.microsoft.com/fwlink/?LinkId=201275)

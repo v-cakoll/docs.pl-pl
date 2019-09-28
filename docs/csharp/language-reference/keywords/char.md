@@ -8,34 +8,34 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 754c04bfc3b4090906420d55d55e51606b72f187
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 255e69d3715a22e7933b4036e968e610657748cf
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605951"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353769"
 ---
 # <a name="char-c-reference"></a>char (odwołanie w C#)
 
-Słowo kluczowe jest używane do deklarowania instancji <xref:System.Char?displayProperty=nameWithType> struktury używanej przez .NET Framework do reprezentowania znaku Unicode. `char` Wartość `Char` obiektu jest 16-bitową wartością numeryczną (porządkową).
+Słowo kluczowe `char` służy do deklarowania instancji struktury <xref:System.Char?displayProperty=nameWithType> używanej przez .NET Framework do reprezentowania znaku Unicode. Wartość obiektu `Char` jest wartością 16-bitową liczbową (porządkową).
 
  Znaki Unicode służą do reprezentowania większości języków pisanych na całym świecie.
 
-|Typ|Zakres|Rozmiar|Typ .NET|
+|Type|Zakres|Size|Typ .NET|
 |----------|-----------|----------|-------------------------|
 |`char`|U + 0000 do U + FFFF|16-bitowy znak Unicode|<xref:System.Char?displayProperty=nameWithType>|
 
 ## <a name="literals"></a>Literały
 
-`char` Stałe typu można zapisać jako literały znakowe, szesnastkową sekwencję ucieczki lub reprezentację Unicode. Można również rzutować kody znaków całkowitych. W poniższym przykładzie są inicjowane cztery `char` zmienne z tym samym znakiem: `X`
+Stałe typu `char` można zapisać jako literały znakowe, szesnastkową sekwencję ucieczki lub reprezentację Unicode. Można również rzutować kody znaków całkowitych. W poniższym przykładzie są inicjowane cztery zmienne `char` z tym samym znakiem `X`:
 
 [!code-csharp[csrefKeywordsTypes#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#19)]
 
 ## <a name="conversions"></a>Konwersje
 
-[](../builtin-types/floating-point-numeric-types.md) [](../builtin-types/integral-numeric-types.md) [](../builtin-types/integral-numeric-types.md) [](../builtin-types/floating-point-numeric-types.md) [](../builtin-types/integral-numeric-types.md)Może być niejawnie konwertowany na UShort, int, uint, Double lub Decimal. `char` Jednak nie istnieją niejawne konwersje z innych typów do `char` typu.
+@No__t-0 może być niejawnie konwertowany na [UShort](../builtin-types/integral-numeric-types.md), [int](../builtin-types/integral-numeric-types.md), [uint](../builtin-types/integral-numeric-types.md), [Double](../builtin-types/floating-point-numeric-types.md)lub [Decimal](../builtin-types/floating-point-numeric-types.md). Niejawne konwersje z innych typów nie są jednak typu `char`.
 
-Typ zawiera kilka metod statycznych do pracy z `char` wartościami. <xref:System.Char?displayProperty=nameWithType>
+Typ <xref:System.Char?displayProperty=nameWithType> zawiera kilka metod statycznych do pracy z wartościami `char`.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#  
 
@@ -51,5 +51,4 @@ Aby uzyskać więcej informacji, zobacz [Typy całkowite](~/_csharplang/spec/typ
 - [Tabela typów wbudowanych](./built-in-types-table.md)
 - [Tabela niejawnych konwersji liczbowych](./implicit-numeric-conversions-table.md)
 - [Tabela jawnych konwersji liczbowych](./explicit-numeric-conversions-table.md)
-- [Typy dopuszczające wartości null](../../programming-guide/nullable-types/index.md)
 - [Ciągi](../../programming-guide/strings/index.md)

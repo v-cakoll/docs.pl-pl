@@ -1,29 +1,29 @@
 ---
-title: Rozproszone obiekty XName i Xnamespace (LINQ to XML) (Visual Basic)
+title: Atomed XName and XNamespace Objects (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 21ee7585-7df9-40b4-8c76-a12bb5f29bb3
-ms.openlocfilehash: fe0c4429c89e0028b3b012c87684bd14048de27a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae6d21c21aac4455e7932015c131fb4295673056
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61951934"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351823"
 ---
-# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>Rozproszone obiekty XName i Xnamespace (LINQ to XML) (Visual Basic)
+# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>Atomed XName and XNamespace Objects (LINQ to XML) (Visual Basic)
 
-<xref:System.Xml.Linq.XName> i <xref:System.Xml.Linq.XNamespace> obiekty są *rozproszone obiekty*; oznacza to, jeśli zawierają one taką samą nazwę kwalifikowaną, odnoszą się do tego samego obiektu. Daje to zalety korzystania z zapytania: Podczas porównywania dwóch nazw rozproszone obiekty pod kątem równości, podstawowy język pośredni ma tylko do określenia, czy dwa odwołania wskazują ten sam obiekt. Podstawowy kod ma ciągów porównań, i może zająć dużo czasu.
+obiekty <xref:System.Xml.Linq.XName> i <xref:System.Xml.Linq.XNamespace> są *atomowe*; oznacza to, że jeśli zawierają one taką samą kwalifikowaną nazwę, odwołują się do tego samego obiektu. Zapewnia to korzyści z wydajności dla zapytań: Porównując dwie nazwy atomowe ze względu na równość, podstawowy język pośredni musi określić, czy dwa odwołania wskazują na ten sam obiekt. Kod źródłowy nie musi wykonywać porównań ciągów, co byłoby czasochłonne.
 
-## <a name="atomization-semantics"></a>Rozproszenie semantyki
+## <a name="atomization-semantics"></a>Semantyka rozproszenie
 
-Rozproszenie oznacza, że jeśli dwa <xref:System.Xml.Linq.XName> obiekty mają taką samą nazwę lokalnego i w tej samej przestrzeni nazw, są one współużytkują to samo wystąpienie. W ten sam sposób, jeśli dwa <xref:System.Xml.Linq.XNamespace> obiekty mają ten sam identyfikator URI przestrzeni nazw, mają tego samego wystąpienia.
+Rozproszenie oznacza, że jeśli dwa obiekty <xref:System.Xml.Linq.XName> mają tę samą nazwę lokalną i znajdują się w tej samej przestrzeni nazw, współużytkują to samo wystąpienie. W taki sam sposób, jeśli dwa obiekty <xref:System.Xml.Linq.XNamespace> mają ten sam identyfikator URI przestrzeni nazw, współużytkują one to samo wystąpienie.
 
-Klasy umożliwiające rozproszone obiekty obiektów Konstruktor dla klasy musi być prywatna, nie jest publiczny. Jest to spowodowane gdyby publiczny konstruktor można utworzyć obiektu nierozproszonym. <xref:System.Xml.Linq.XName> i <xref:System.Xml.Linq.XNamespace> klasy implementuje operator niejawnej konwersji do przekonwertowania ciągu na <xref:System.Xml.Linq.XName> lub <xref:System.Xml.Linq.XNamespace>. Jest to, jak uzyskać wystąpienie tych obiektów. Za pomocą konstruktora, nie można pobrać wystąpienia, ponieważ Konstruktor jest niedostępny.
+Aby można było włączyć obiekt Atoms, Konstruktor dla klasy musi być prywatny, a nie publiczny. Wynika to z faktu, że jeśli Konstruktor był publiczny, można utworzyć obiekt niebędący atomem. Klasy <xref:System.Xml.Linq.XName> i <xref:System.Xml.Linq.XNamespace> implementują Operator niejawnej konwersji w celu przekonwertowania ciągu na <xref:System.Xml.Linq.XName> lub <xref:System.Xml.Linq.XNamespace>. W ten sposób można uzyskać wystąpienie tych obiektów. Nie można uzyskać wystąpienia przy użyciu konstruktora, ponieważ Konstruktor jest niedostępny.
 
-<xref:System.Xml.Linq.XName> i <xref:System.Xml.Linq.XNamespace> także implementować Operatory równości i nierówności, aby ustalić, czy dwa obiekty są porównywane są odwołaniami do tego samego wystąpienia.
+<xref:System.Xml.Linq.XName> i <xref:System.Xml.Linq.XNamespace> implementują również operatory równości i nierówności, aby określić, czy dwa obiekty, które są porównywane, są odwołaniami do tego samego wystąpienia.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod tworzy niektóre <xref:System.Xml.Linq.XElement> obiektów i pokazuje, że identyczne nazwy współużytkują to samo wystąpienie.
+Poniższy kod tworzy niektóre obiekty <xref:System.Xml.Linq.XElement> i pokazuje, że identyczne nazwy współużytkują to samo wystąpienie.
 
 ```vb
 Dim r1 As New XElement("Root", "data1")
@@ -46,14 +46,14 @@ End If
 
 Ten przykład generuje następujące wyniki:
 
-```
+```console
 r1 and r2 have names that refer to the same instance.
 The name of r1 and the name in 'n' refer to the same instance.
 ```
 
-Jak wspomniano wcześniej, zaletą rozproszone obiekty obiektów jest fakt, że możesz użyć jednej z metod osi, które przyjmują <xref:System.Xml.Linq.XName> jako parametru metody osi tylko musi ustalić, to samo wystąpienie, aby wybrać żądaną elementy dwie nazwy odwołania.
+Jak wspomniano wcześniej, korzyść z obiektów atomowych polega na tym, że w przypadku użycia jednej z metod osi, które przyjmują <xref:System.Xml.Linq.XName> jako parametr, metoda osi ma tylko określić, że dwie nazwy odwołują się do tego samego wystąpienia w celu wybrania żądanych elementów.
 
-Poniższy przykład przekazuje <xref:System.Xml.Linq.XName> do <xref:System.Xml.Linq.XContainer.Descendants%2A> wywołania metody, który następnie ma lepszą wydajność ze względu na wzorcu rozproszenie.
+Poniższy przykład przekazuje <xref:System.Xml.Linq.XName> do wywołania metody <xref:System.Xml.Linq.XContainer.Descendants%2A>, które następnie ma lepszą wydajność ze względu na wzorzec rozproszenie.
 
 ```vb
 Dim root As New XElement("Root", New XElement("C1", 1), New XElement("Z1", New XElement("C1", 2), New XElement("C1", 1)))

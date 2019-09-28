@@ -2,12 +2,12 @@
 title: Anulowanie zadania asynchronicznego lub listy zadań (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 2b2fa7447c046f70c840791e7fe9bd874ff3795f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 73627455b1f4460edfe165126a388e961e98921f
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630956"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353127"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Anulowanie zadania asynchronicznego lub listy zadań (Visual Basic)
 
@@ -48,7 +48,7 @@ Aby zbudować przykład samodzielnie, krok po kroku, postępuj zgodnie z instruk
 
 Następnie Dodaj następujące zmiany do pliku MainWindow. XAML. vb tego projektu.
 
-1. Zadeklaruj `cts`zmienną, która znajduje się w zakresie dla wszystkich metod, które mają do niego dostęp. `CancellationTokenSource`
+1. Zadeklaruj zmienną `CancellationTokenSource`, `cts`, która znajduje się w zakresie dla wszystkich metod, które mają do niego dostęp.
 
     ```vb
     Class MainWindow
@@ -57,7 +57,7 @@ Następnie Dodaj następujące zmiany do pliku MainWindow. XAML. vb tego projekt
         Dim cts As CancellationTokenSource
     ```
 
-2. Dodaj następujący program obsługi zdarzeń dla przycisku **Anuluj** . Procedura obsługi zdarzeń używa <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> metody do powiadamiania `cts` , gdy użytkownik zażąda anulowania.
+2. Dodaj następujący program obsługi zdarzeń dla przycisku **Anuluj** . Procedura obsługi zdarzeń używa metody <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> do powiadomienia `cts`, gdy użytkownik zażąda anulowania.
 
     ```vb
     ' ***Add an event handler for the Cancel button.
@@ -69,16 +69,16 @@ Następnie Dodaj następujące zmiany do pliku MainWindow. XAML. vb tego projekt
     End Sub
     ```
 
-3. Wprowadź następujące zmiany w obsłudze zdarzeń dla przycisku `startButton_Click` **Start** .
+3. Wprowadź następujące zmiany w obsłudze zdarzeń dla przycisku **Start** `startButton_Click`.
 
-    - Utwórz wystąpienie obiektu `cts`,. `CancellationTokenSource`
+    - Utwórz wystąpienie `CancellationTokenSource`, `cts`.
 
       ```vb
       ' ***Instantiate the CancellationTokenSource.
       cts = New CancellationTokenSource()
       ```
 
-    - W wywołaniu `AccessTheWebAsync`elementu, który pobiera zawartość określonej witryny sieci Web, <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> Wyślij Właściwość `cts` jako argument. `Token` Właściwość propaguje komunikat w przypadku żądania anulowania. Dodaj blok catch, który wyświetla komunikat, jeśli użytkownik zdecyduje się anulować operację pobierania. Poniższy kod przedstawia zmiany.
+    - W wywołaniu do `AccessTheWebAsync`, który pobiera zawartość określonej witryny sieci Web, Wyślij Właściwość <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> `cts` jako argument. Właściwość `Token` propaguje komunikat w przypadku żądania anulowania. Dodaj blok catch, który wyświetla komunikat, jeśli użytkownik zdecyduje się anulować operację pobierania. Poniższy kod przedstawia zmiany.
 
       ```vb
       Try
@@ -97,7 +97,7 @@ Następnie Dodaj następujące zmiany do pliku MainWindow. XAML. vb tego projekt
       End Try
       ```
 
-4. W `AccessTheWebAsync`programie <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> Użyj przeciążenia`GetAsync` metody w<xref:System.Net.Http.HttpClient> typie, aby pobrać zawartość witryny sieci Web. Pass `ct` ,parametr`AccessTheWebAsync`,jakodrugiargument. <xref:System.Threading.CancellationToken> Token przenosi komunikat, jeśli użytkownik wybierze przycisk **Anuluj** .
+4. W `AccessTheWebAsync` Użyj przeciążenia <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> metody `GetAsync` w typie <xref:System.Net.Http.HttpClient>, aby pobrać zawartość witryny sieci Web. Przekazanie @no__t-@no__t 0 `AccessTheWebAsync` jako drugi argument. Token przenosi komunikat, jeśli użytkownik wybierze przycisk **Anuluj** .
 
     Poniższy kod przedstawia zmiany w `AccessTheWebAsync`.
 
@@ -125,23 +125,23 @@ Następnie Dodaj następujące zmiany do pliku MainWindow. XAML. vb tego projekt
     End Function
     ```
 
-5. Jeśli nie anulujesz programu, program generuje następujące dane wyjściowe.
+5. Jeśli nie anulujesz programu, program generuje następujące dane wyjściowe:
 
-    ```
+    ```console
     Ready to download.
     Length of the downloaded string: 158125.
     ```
 
-    Jeśli wybierzesz przycisk **Anuluj** , zanim program zakończy pobieranie zawartości, program generuje następujące dane wyjściowe.
+    Jeśli wybierzesz przycisk **Anuluj** , zanim program zakończy pobieranie zawartości, program generuje następujące dane wyjściowe:
 
-    ```
+    ```console
     Ready to download.
     Download canceled.
     ```
 
 ## <a name="BKMK_CancelaListofTasks"></a>Anulowanie listy zadań
 
-Możesz poszerzyć poprzedni przykład, aby anulować wiele zadań, kojarząc to samo `CancellationTokenSource` wystąpienie z każdym zadaniem. Jeśli wybierzesz przycisk **Anuluj** , anulujesz wszystkie zadania, które nie zostały jeszcze ukończone.
+Możesz poszerzyć poprzedni przykład, aby anulować wiele zadań, kojarząc to samo wystąpienie `CancellationTokenSource` z każdym zadaniem. Jeśli wybierzesz przycisk **Anuluj** , anulujesz wszystkie zadania, które nie zostały jeszcze ukończone.
 
 ### <a name="downloading-the-example"></a>Pobieranie przykładu
 
@@ -192,7 +192,7 @@ Aby poszerzyć przykład samodzielnie, krok po kroku, postępuj zgodnie z instru
     Dim urlList As List(Of String) = SetUpURLList()
     ```
 
-3. Dodaj następującą pętlę w `AccessTheWebAsync` programie, aby przetwarzać poszczególne adresy sieci Web na liście.
+3. Dodaj następującą pętlę w `AccessTheWebAsync`, aby przetwarzać poszczególne adresy sieci Web na liście.
 
     ```vb
     ' ***Add a loop to process the list of web addresses.
@@ -210,7 +210,7 @@ Aby poszerzyć przykład samodzielnie, krok po kroku, postępuj zgodnie z instru
     Next
     ```
 
-4. Ponieważ `AccessTheWebAsync` wyświetla długości, metoda nie musi zwracać żadnych elementów. Usuń instrukcję return i Zmień zwracany typ metody na <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601>zamiast.
+4. Ponieważ `AccessTheWebAsync` wyświetla długości, metoda nie musi zwracać żadnych elementów. Usuń instrukcję return i Zmień zwracany typ metody na <xref:System.Threading.Tasks.Task> zamiast <xref:System.Threading.Tasks.Task%601>.
 
     ```vb
     Async Function AccessTheWebAsync(ct As CancellationToken) As Task
@@ -222,9 +222,9 @@ Aby poszerzyć przykład samodzielnie, krok po kroku, postępuj zgodnie z instru
     Await AccessTheWebAsync(cts.Token)
     ```
 
-5. Jeśli nie anulujesz programu, program generuje następujące dane wyjściowe.
+5. Jeśli nie anulujesz programu, program generuje następujące dane wyjściowe:
 
-    ```
+    ```console
     Length of the downloaded string: 35939.
 
     Length of the downloaded string: 237682.
@@ -244,7 +244,7 @@ Aby poszerzyć przykład samodzielnie, krok po kroku, postępuj zgodnie z instru
 
     Jeśli wybierzesz przycisk **Anuluj** przed ukończeniem pobierania, dane wyjściowe zawierają długości plików do pobrania, które zakończyły się przed anulowaniem.
 
-    ```
+    ```console
     Length of the downloaded string: 35939.
 
     Length of the downloaded string: 237682.
@@ -258,7 +258,7 @@ Aby poszerzyć przykład samodzielnie, krok po kroku, postępuj zgodnie z instru
 
 Poniższe sekcje zawierają kod dla każdego z powyższych przykładów. Należy zauważyć, że należy dodać odwołanie do <xref:System.Net.Http>.
 
-Możesz pobrać projekty z [przykładu asynchronicznego: Dostosuj aplikację](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
+Możesz pobrać projekty z przykładu [Async: Dostosuj aplikację](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
 
 ### <a name="cancel-a-task-example"></a>Anulowanie zadania przykładowego
 

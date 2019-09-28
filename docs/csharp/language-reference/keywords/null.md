@@ -1,5 +1,5 @@
 ---
-title: null — słowo kluczowe - C# odwołania
+title: null — słowo C# kluczowe — odwołanie
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
-ms.openlocfilehash: 12b7f69d7cbcac4a0270dcecfeb0c2cb8eb77fe2
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 34157b19e342d4e10ac652aaf46c7186c4a19358
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66421993"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353435"
 ---
 # <a name="null-c-reference"></a>null (C# Reference)
 
-`null` — Słowo kluczowe jest literałem reprezentującym odwołanie o wartości null, który nie odwołuje się do każdego obiektu. `null` jest wartością domyślną zmiennych typu odwołania. Typy wartości zwykłych nie może mieć wartości null. Jednakże C# w wersji 2.0 wprowadzono typy o wartości zerowalnej. Zobacz [typów dopuszczających wartości zerowe](../../programming-guide/nullable-types/index.md).
+Słowo kluczowe `null` jest literałem, która reprezentuje odwołanie o wartości null, która nie odwołuje się do żadnego obiektu. `null` jest wartością domyślną zmiennych typu odwołania. Zwykłe typy wartości nie mogą mieć wartości null, z wyjątkiem [typów wartości dopuszczających wartość null](../../programming-guide/nullable-types/index.md).
 
-W poniższym przykładzie pokazano niektóre zachowania null — słowo kluczowe:
+Poniższy przykład demonstruje niektóre zachowania słowa kluczowego null:
 
 [!code-csharp[csrefKeywordsLiteral#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsLiteral/CS/csrefKeywordsLiteral.cs#1)]
 
@@ -29,8 +29,7 @@ W poniższym przykładzie pokazano niektóre zachowania null — słowo kluczowe
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../language-reference/index.md)
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [C#odwoła](../../language-reference/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Tabela wartości domyślnych](default-values-table.md)
-- [Nothing](../../../visual-basic/language-reference/nothing.md)
+- [Nic (Visual Basic)](../../../visual-basic/language-reference/nothing.md)

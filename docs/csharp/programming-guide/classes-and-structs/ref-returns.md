@@ -1,46 +1,46 @@
 ---
-title: Wartości zwracane ref i zmienne lokalne ref (Przewodnik C#)
-description: Dowiedz się, jak zdefiniować i zastosować zwracane ref i wartości lokalnych typu ref
+title: Wartości zwracane ref i lokalne elementy ref (C# przewodnik)
+description: Dowiedz się, jak definiować i używać lokalnych wartości zwrotnych i ref
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: fcac162f63438b6cbe54908383467d4b0f227c39
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e23007deffea0f542d623be918cd1c61496d1362
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703052"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353885"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Wartości zwracane ref i zmienne lokalne ref
 
-Począwszy od języka C# 7.0, C# obsługuje wartości zwracane odwołanie (ref zwraca). Odwołanie zwracana wartość umożliwia metodę przywrócić odwołania do zmiennej, a nie wartość, obiekt wywołujący. Obiekt wywołujący możliwość traktować zwrócone zmiennej tak, jakby zostały zwrócone, przez wartość lub przez odwołanie. Obiekt wywołujący, można utworzyć nową zmienną, która sama jest odwołaniem do wartości zwracane ref o nazwie lokalnej.
+Począwszy od C# 7,0, C# obsługuje zwracane wartości odwołania (zwroty ref). Wartość zwracana przez odwołanie umożliwia metodzie zwracanie odwołania do zmiennej, a nie wartości, z powrotem do obiektu wywołującego. Obiekt wywołujący może następnie traktować zwracaną zmienną, tak jakby była zwracana przez wartość lub przez odwołanie. Obiekt wywołujący może utworzyć nową zmienną, która sama jest odwołaniem do zwracanej wartości o nazwie ref Local.
 
-## <a name="what-is-a-reference-return-value"></a>Co to jest zwracana wartość odniesienia?
+## <a name="what-is-a-reference-return-value"></a>Co to jest zwrócona wartość odwołania?
 
-Większość programistów zaczynasz przekazywanie argumentu metody o nazwie *przez odwołanie*. Listy argumentów o nazwie metody zawiera zmienną przekazywany przez odwołanie. Wszelkie zmiany wprowadzone do jego wartości przez metodę o nazwie są przestrzegane przez obiekt wywołujący. A *odwoływać się do wartości zwracanej* oznacza, że metoda zwraca *odwołania* (lub aliasem) do niektórych zmiennej. Tę zmienną zakresu musi zawierać metodę. Okres istnienia tej zmiennej musi wykraczać poza zwrotu metody. Do metody wartości zwracanej przez obiekt wywołujący modyfikacje wprowadza do zmiennej, która jest zwracana przez metodę.
+Większość deweloperów zna przekazywanie argumentu do wywoływanej metody *przez odwołanie*. Lista argumentów wywoływanej metody zawiera zmienną przekazaną przez odwołanie. Wszystkie zmiany wprowadzone do jego wartości przez wywołaną metodę są obserwowane przez obiekt wywołujący. *Wartość zwracana przez odwołanie* oznacza, że metoda zwraca *odwołanie* (lub alias) do pewnej zmiennej. Zakres tej zmiennej musi zawierać metodę. Okres istnienia tej zmiennej musi przekraczać wartość zwracaną przez metodę. Modyfikacje wartości zwracanej metody przez obiekt wywołujący są wprowadzane do zmiennej, która jest zwracana przez metodę.
 
-Deklarowanie, metoda zwraca *odwoływać się do wartości zwracanej* wskazuje, że metoda zwraca alias do zmiennej. Celem projektu jest często, że kod wywołujący powinni mieć dostęp do tej zmiennej za pomocą aliasu, włączając go zmodyfikować. Wynika, że metody zwracanie przez odwołanie nie może mieć typ zwracany `void`.
+Deklarowanie, że metoda zwraca *odwołanie* do zwracanej wartości wskazuje, że metoda zwraca alias do zmiennej. Zamiarem projektowania często jest to, że kod wywołujący powinien mieć dostęp do tej zmiennej za pomocą aliasu, w tym do modyfikowania. Wynika to z tego, że metody zwracające przez odwołanie nie mogą mieć zwracanego typu `void`.
 
-Istnieją pewne ograniczenia na wyrażenie, które metoda może zwracać jako odwołanie do wartości zwracanej. Ograniczenia obejmują:
+Istnieją pewne ograniczenia dotyczące wyrażenia, które Metoda może zwrócić jako wartość zwracana przez odwołanie. Ograniczenia obejmują:
 
-- Zwracana wartość musi mieć okresu istnienia, który wykracza poza wykonywanie metody. Innymi słowy nie może być zmienną lokalną w metodzie, która zwraca go. Może to być wystąpienia lub pole statyczne klasy lub może być argument przekazany do metody. Podjęto próbę zwracanych zmienną lokalną generuje błąd kompilatora CS8168, "nie może zwrócić lokalnego"obj"przez odwołanie, ponieważ nie jest zmienna lokalna ref."
+- Wartość zwracana musi mieć okres istnienia wykraczający poza wykonywanie metody. Innymi słowy, nie może być zmienną lokalną w metodzie, która zwraca ją. Może to być wystąpienie lub statyczne pole klasy albo argument przeszedł do metody. Próba zwrócenia zmiennej lokalnej powoduje wygenerowanie błędu kompilatora CS8168, "nie można zwrócić lokalnego elementu" obj "przez odwołanie, ponieważ nie jest to lokalne odwołanie".
 
-- Zwracana wartość nie może być literał `null`. Zwracanie `null` generuje błąd kompilatora CS8156, "nie można użyć wyrażenia w tym kontekście, ponieważ nie mogą być zwrócone przez odwołanie."
+- Zwracana wartość nie może być literałem `null`. Zwrócenie `null` generuje błąd kompilatora CS8156 "wyrażenie nie może być używane w tym kontekście, ponieważ może nie zostać zwrócone przez odwołanie".
 
-   Metoda z zwracane ref może zwracać alias do zmiennej, którego wartość jest obecnie wartość null (bez wystąpień) lub [typu dopuszczającego wartość null](../nullable-types/index.md) dla typu wartości.
- 
-- Zwracana wartość nie może być stała, elementu członkowskiego wyliczenia, wartość zwracana przez wartość właściwości lub metody `class` lub `struct`. Naruszenie tej zasady generuje błąd kompilatora CS8156, "nie można użyć wyrażenia w tym kontekście, ponieważ nie mogą być zwrócone przez odwołanie."
+   Metoda ze zwróceniem ref może zwracać alias do zmiennej, której wartość jest obecnie wartością null (niebędącą wystąpieniem) lub [typem wartości null](../nullable-types/index.md) dla typu wartości.
 
-Ponadto odwołania zwracanych wartości nie są dozwolone w metodach async. Metoda asynchroniczna może zwracać, zanim zakończy wykonywanie, gdy jego wartość zwracana jest nadal nieznany.
- 
-## <a name="defining-a-ref-return-value"></a>Definiowanie wartości zwracane ref
+- Zwracana wartość nie może być stałą, składową wyliczenia, wartością zwracaną przez wartość z właściwości lub metodą `class` lub `struct`. Naruszenie tej reguły powoduje wygenerowanie błędu kompilatora CS8156, "nie można użyć wyrażenia w tym kontekście, ponieważ może ono nie zostać zwrócone przez odwołanie".
 
-Metoda, która zwraca *odwoływać się do wartości zwracanej* musi spełniać następujące dwa warunki:
+Dodatkowo odwołania do zwracanych wartości nie są dozwolone w metodach asynchronicznych. Metoda asynchroniczna może zostać zwrócona przed zakończeniem wykonywania, podczas gdy jej wartość zwracana jest nadal nieznana.
 
-- Podpis metody zawiera [ref](../../language-reference/keywords/ref.md) — słowo kluczowe przed zwracanym typem.
-- Każdy [zwracają](../../language-reference/keywords/return.md) instrukcja w treści metody zawiera [ref](../../language-reference/keywords/ref.md) — słowo kluczowe przed nazwą zwracanego wystąpienia.
+## <a name="defining-a-ref-return-value"></a>Definiowanie wartości zwracanej ref
 
-W poniższym przykładzie pokazano metodę, która spełnia te warunki i zwraca odwołanie do `Person` obiektu o nazwie `p`:
+Metoda zwracająca *wartość zwracaną przez odwołanie* musi spełniać następujące dwa warunki:
+
+- Podpis metody zawiera słowo kluczowe [ref](../../language-reference/keywords/ref.md) przed typem zwracanym.
+- Każda instrukcja [Return](../../language-reference/keywords/return.md) w treści metody zawiera słowo kluczowe [ref](../../language-reference/keywords/ref.md) przed nazwą zwracanego wystąpienia.
+
+Poniższy przykład przedstawia metodę, która spełnia te warunki i zwraca odwołanie do obiektu `Person` o nazwie `p`:
 
 ```csharp
 public ref Person GetContactInformation(string fname, string lname)
@@ -50,78 +50,78 @@ public ref Person GetContactInformation(string fname, string lname)
 }
 ```
 
-## <a name="consuming-a-ref-return-value"></a>Korzystanie z wartością zwracaną ref
+## <a name="consuming-a-ref-return-value"></a>Zużywanie referencyjnej wartości zwracanej
 
-Odwołania zwracana wartość jest alias do innej zmiennej w zakresie wywoływanej metody. Może interpretować jakiekolwiek użycie zwracane ref, używając zmiennej go aliasy:
+Zwracana wartość Ref jest aliasem innej zmiennej w zakresie wywołanej metody. Można interpretować dowolne użycie Return ref jako przy użyciu zmiennej aliasu IT:
 
-- Po przypisaniu jej wartość są przypisywania wartości do zmiennej go aliasów.
-- Podczas odczytywania wartości odczytujesz wartość zmiennej go aliasów.
-- Jeśli przywrócić go *przez odwołanie*, alias jest zwracany do tej samej zmiennej.
-- W przypadku przekazania do innej metody *przez odwołanie*, kończy się sukcesem odwołania do zmiennej go aliasów.
-- Po ustawieniu [odwołanie lokalne](#ref-locals) alias, należy wprowadzić nowy alias tę samą zmienną.
+- Po przypisaniu jego wartości przypisujesz wartość do zmiennej aliasu IT.
+- Podczas odczytywania wartości, odczytywana jest wartość zmiennej aliasu IT.
+- Jeśli zwracasz ją *przez odwołanie*, zwracasz alias do tej samej zmiennej.
+- Jeśli przekażesz go do innej metody *przez odwołanie*, przekazujesz odwołanie do zmiennej aliasu IT.
+- Po wprowadzeniu aliasu [lokalnego ref](#ref-locals) należy utworzyć nowy alias do tej samej zmiennej.
 
-## <a name="ref-locals"></a>Zmienne lokalne REF
+## <a name="ref-locals"></a>Odwołania lokalne
 
-Załóżmy `GetContactInformation` metody jest zadeklarowany jako ref zwracany:
+Załóżmy, że metoda `GetContactInformation` jest zadeklarowana jako zwrot ref:
 
 ```csharp
 public ref Person GetContactInformation(string fname, string lname)
 ```
 
-Przypisania przez wartość odczytuje wartość zmiennej, a następnie przypisuje go do nowej zmiennej:
+Przypisanie przez wartość odczytuje wartość zmiennej i przypisuje ją do nowej zmiennej:
 
 ```csharp
 Person p = contacts.GetContactInformation("Brandie", "Best");
 ```
 
-Deklaruje poprzedniego przypisania `p` jako zmienna lokalna. Wartość początkowa jest kopiowany z odczytywania wartości zwracanej przez `GetContactInformation`. Wszystkie przyszłe przypisania do `p` nie zmieni się wartość zmiennej zwrócony przez `GetContactInformation`. Zmienna `p` nie jest już aliasem do zmiennej, zwracany.
+Poprzednie przypisanie deklaruje `p` jako zmienną lokalną. Jego początkowa wartość jest kopiowana z odczytywania wartości zwracanej przez `GetContactInformation`. Wszelkie przyszłe przypisania do `p` nie zmienią wartości zmiennej zwracanej przez `GetContactInformation`. Zmienna `p` nie jest już aliasem zwracanej zmiennej.
 
-Możesz deklarować *odwołanie lokalne* zmiennej, aby skopiować alias do oryginalnej wartości. W następujących przypisaniu `p` alias dla zmiennej zwróciło `GetContactInformation`.
+Zadeklaruj zmienną *lokalną ref* , aby skopiować alias do oryginalnej wartości. W poniższym przypisaniu `p` jest aliasem zmiennej zwracanej z `GetContactInformation`.
 
 ```csharp
 ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 ```
 
-Kolejne użycie `p` jest taka sama jak za pomocą zmiennej zwrócony przez `GetContactInformation` ponieważ `p` jest aliasem dla tej zmiennej. Zmienia się na `p` również zmienić zmienną zwróciło `GetContactInformation`.
+Kolejne użycie `p` jest takie samo jak przy użyciu zmiennej zwracanej przez `GetContactInformation`, ponieważ `p` jest aliasem dla tej zmiennej. Zmiany `p` zmieniają również zmienną zwróconą z `GetContactInformation`.
 
-`ref` Słowo kluczowe jest używane zarówno przed deklaracji zmiennej lokalnej *i* przed wywołaniem metody. 
+Słowo kluczowe `ref` jest używane przed deklaracją zmiennej lokalnej *i* przed wywołaniem metody. 
 
-Dostępne wartości przez odwołanie, w taki sam sposób. W niektórych przypadkach uzyskiwanie dostępu do wartości przez odwołanie zwiększa wydajność, unikając operacji kopiowania potencjalnie kosztowne. Na przykład następująca instrukcja pokazuje, jak jeden można zdefiniować wartości lokalnej ref, służący do odwoływać się do wartości.
+Możesz uzyskać dostęp do wartości przez odwołanie w ten sam sposób. W niektórych przypadkach uzyskanie dostępu do wartości przez odwołanie zwiększa wydajność poprzez uniknięcie potencjalnie kosztownej operacji kopiowania. Na przykład poniższa instrukcja pokazuje, jak jedna z nich może definiować wartość lokalna ref, która jest używana do odwoływania się do wartości.
 
 ```csharp
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-`ref` Słowo kluczowe jest używane zarówno przed deklaracji zmiennej lokalnej *i* przed wartością w drugim przykładzie. Niepodanie zarówno `ref` słów kluczowych w deklaracji zmiennej i przydziałów w obu przykładach skutkuje błąd kompilatora CS8172, "nie można zainicjować zmiennej o wartości przez odwołanie." 
+Słowo kluczowe `ref` jest używane przed deklaracją zmiennej lokalnej *i* przed wartością w drugim przykładzie. Nie można dołączyć słów kluczowych `ref` w deklaracji zmiennej i przypisaniu w obu przykładach skutkuje błędem kompilatora CS8172 ". 
 
-Przed C# 7.3 zmienne lokalne ref nie można ponownie przypisać do odwoływania się do innego magazynu zostały już zainicjowane. Tego ograniczenia zostały usunięte. Poniższy przykład przedstawia ponowne przypisanie:
+Przed C# 7,3, nie można ponownie przypisać odwołań do zmiennych lokalnych w celu odwoływania się do innego magazynu po zainicjowaniu. To ograniczenie zostało usunięte. W poniższym przykładzie przedstawiono ponowne przypisanie:
 
 ```csharp
 ref VeryLargeStruct reflocal = ref veryLargeStruct; // initialization
 refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to different storage.
 ```
 
- Zmienne lokalne REF nadal musi być inicjowana, gdy są one zgłoszone.
+ Po zadeklarowaniu należy nadal inicjować zmienne lokalne ref.
 
-## <a name="ref-returns-and-ref-locals-an-example"></a>Wartości zwracane ref i zmienne lokalne ref: przykład
+## <a name="ref-returns-and-ref-locals-an-example"></a>Zwroty ref i lokalne elementy ref: przykład
 
-W poniższym przykładzie zdefiniowano `NumberStore` klasę, która przechowuje tablicę wartości całkowitych. `FindNumber` Metoda zwraca wartość przez odwołanie pierwsza liczba, która jest większa lub równa liczbie przekazywany jako argument. Jeśli żadna liczba nie jest większa lub równa wartości argumentu, metoda zwraca numer indeksu 0. 
+W poniższym przykładzie zdefiniowano klasę `NumberStore`, która przechowuje tablicę wartości całkowitych. Metoda `FindNumber` zwraca przez odwołanie do pierwszej liczby, która jest większa lub równa liczbie przesłanej jako argument. Jeśli żadna liczba nie jest większa lub równa argumentowi, metoda zwraca liczbę w indeksie 0. 
 
 [!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStore.cs#1)]
 
-Poniższy przykład wywołuje `NumberStore.FindNumber` metodę, która pobierze pierwszą wartość, która jest większa niż lub równe 16. Obiekt wywołujący podwaja się następnie wartość zwracana przez metodę. Dane wyjściowe z przykładu przedstawia zmiany zostaną uwzględnione w wartości elementów tablicy `NumberStore` wystąpienia.
+Poniższy przykład wywołuje metodę `NumberStore.FindNumber` w celu pobrania pierwszej wartości, która jest większa lub równa 16. Obiekt wywołujący następnie podwaja wartość zwróconą przez metodę. Dane wyjściowe z przykładu przedstawiają zmianę odzwierciedloną w wartości elementów tablicy wystąpienia `NumberStore`.
 
 [!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStore.cs#2)]
 
-Bez obsługi wartości zwracane odwołanie taka operacja jest wykonywana przez zwraca indeks elementu tablicy, wraz z jego wartość. Obiekt wywołujący do modyfikowania wartości w wywołaniu metody oddzielne, następnie można użyć tego indeksu. Jednak obiekt wywołujący, można również zmodyfikować indeks, aby uzyskać dostęp i możliwie zmodyfikować pozostałe wartości w tablicy.  
+Bez obsługi wartości zwracanych odwołań, taka operacja jest wykonywana przez zwrócenie indeksu elementu tablicy wraz z jego wartością. Obiekt wywołujący może następnie użyć tego indeksu do zmodyfikowania wartości w osobnym wywołaniu metody. Jednak obiekt wywołujący może także zmodyfikować indeks, aby uzyskać dostęp do innych wartości tablicy i prawdopodobnie je zmodyfikować.  
 
-W poniższym przykładzie pokazano sposób, w jaki `FindNumber` metody, które można dopasować po języka C# 7.3 do użycia lokalnego ponowne przypisanie atrybutu ref:
+W poniższym przykładzie pokazano, jak można ponownie napisać metodę `FindNumber` po C# 7,3, aby użyć lokalnego ponownego przypisania odwołania:
 
 [!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStoreUpdated.cs#1)]
 
-Ta druga wersja jest bardziej wydajne, za pomocą sekwencji dłużej w scenariuszach, gdzie numer poszukiwane jest bliżej końca tablicy.
+Ta druga wersja jest wydajniejsza z dłuższymi sekwencjami w scenariuszach, w których liczba poszukiwanych elementów jest bliżej końca tablicy.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [ref keyword](../../language-reference/keywords/ref.md)
-- [Pisanie kodu efektywne bezpieczne](../../write-safe-efficient-code.md)
+- [Zapisz bezpieczny wydajny kod](../../write-safe-efficient-code.md)

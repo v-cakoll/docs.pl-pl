@@ -2,22 +2,22 @@
 title: 'Instrukcje: wdrażanie serwera proxy odnajdywania'
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-ms.openlocfilehash: 350baa6047d11a2d262e4a6c1d54cc874939ed9d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dafd5e25f998f2dda3f736caeea51cd534ce8e5e
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045925"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351581"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Instrukcje: wdrażanie serwera proxy odnajdywania
 
-W tym temacie wyjaśniono, jak zaimplementować serwer proxy odnajdywania. Aby uzyskać więcej informacji na temat funkcji odnajdywania w programie Windows Communication Foundation (WCF), zobacz [Omówienie odnajdywania WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Serwer proxy odnajdywania można zaimplementować przez utworzenie klasy rozszerzającej <xref:System.ServiceModel.Discovery.DiscoveryProxy> klasę abstrakcyjną. Istnieje wiele innych klas pomocy technicznej zdefiniowanych i użytych w tym przykładzie. `OnResolveAsyncResult`, `OnFindAsyncResult`i .`AsyncResult` Te klasy implementują <xref:System.IAsyncResult> interfejs. Aby uzyskać więcej informacji <xref:System.IAsyncResult> na temat [interfejsu system. IAsyncResult](xref:System.IAsyncResult).
+W tym temacie wyjaśniono, jak zaimplementować serwer proxy odnajdywania. Aby uzyskać więcej informacji na temat funkcji odnajdywania w programie Windows Communication Foundation (WCF), zobacz [Omówienie odnajdywania WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Serwer proxy odnajdywania można zaimplementować przez utworzenie klasy rozszerzającej klasę abstrakcyjną <xref:System.ServiceModel.Discovery.DiscoveryProxy>. Istnieje wiele innych klas pomocy technicznej zdefiniowanych i użytych w tym przykładzie. `OnResolveAsyncResult`, `OnFindAsyncResult`i .`AsyncResult` Te klasy implementują interfejs <xref:System.IAsyncResult>. Aby uzyskać więcej informacji na temat <xref:System.IAsyncResult> zobacz [System. IAsyncResult Interface](xref:System.IAsyncResult).
 
  Implementowanie serwera proxy odnajdywania jest podzielone na trzy główne części w tym temacie:
 
-- Zdefiniuj klasę zawierającą magazyn danych i rozszerza klasę abstrakcyjną <xref:System.ServiceModel.Discovery.DiscoveryProxy> .
+- Zdefiniuj klasę, która zawiera magazyn danych, i rozszerza klasę abstrakcyjną <xref:System.ServiceModel.Discovery.DiscoveryProxy>.
 
-- Zaimplementuj klasę `AsyncResult` pomocnika.
+- Zaimplementuj klasę pomocnika `AsyncResult`.
 
 - Hostowanie serwera proxy odnajdywania.
 
@@ -25,7 +25,7 @@ W tym temacie wyjaśniono, jak zaimplementować serwer proxy odnajdywania. Aby u
 
 1. Start Visual Studio 2012.
 
-2. Utwórz nowy projekt aplikacji konsolowej. Nazwij projekt `DiscoveryProxy` i nadaj mu nazwę rozwiązanie `DiscoveryProxyExample`.
+2. Utwórz nowy projekt aplikacji konsolowej. Nadaj projektowi nazwę `DiscoveryProxy` i nadaj nazwę rozwiązanie `DiscoveryProxyExample`.
 
 3. Dodaj następujące odwołania do projektu
 
@@ -40,7 +40,7 @@ W tym temacie wyjaśniono, jak zaimplementować serwer proxy odnajdywania. Aby u
 
 1. Dodaj nowy plik kodu do projektu i nadaj mu nazwę DiscoveryProxy.cs.
 
-2. Dodaj następujące `using` instrukcje do DiscoveryProxy.cs.
+2. Dodaj następujące instrukcje `using` do DiscoveryProxy.cs.
 
     ```csharp
     using System;
@@ -50,7 +50,7 @@ W tym temacie wyjaśniono, jak zaimplementować serwer proxy odnajdywania. Aby u
     using System.Xml;
     ```
 
-3. Utwórz wartość `DiscoveryProxyService` z <xref:System.ServiceModel.Discovery.DiscoveryProxy>. `ServiceBehavior` Zastosuj atrybut do klasy, jak pokazano w poniższym przykładzie.
+3. Utwórz `DiscoveryProxyService` z <xref:System.ServiceModel.Discovery.DiscoveryProxy>. Zastosuj atrybut `ServiceBehavior` do klasy, jak pokazano w poniższym przykładzie.
 
     ```csharp
     // Implement DiscoveryProxy by extending the DiscoveryProxy class and overriding the abstract methods
@@ -60,7 +60,7 @@ W tym temacie wyjaśniono, jak zaimplementować serwer proxy odnajdywania. Aby u
     }
     ```
 
-4. `DiscoveryProxy` Wewnątrz klasy Zdefiniuj słownik do przechowywania zarejestrowanych usług.
+4. Wewnątrz klasy `DiscoveryProxy` Zdefiniuj słownik do przechowywania zarejestrowanych usług.
 
     ```csharp
     // Repository to store EndpointDiscoveryMetadata.
@@ -78,7 +78,7 @@ W tym temacie wyjaśniono, jak zaimplementować serwer proxy odnajdywania. Aby u
 
 ### <a name="to-define-the-methods-used-to-update-the-discovery-proxy-cache"></a>Aby zdefiniować metody służące do aktualizowania pamięci podręcznej serwera proxy odnajdywania
 
-1. Zaimplementuj `AddOnlineservice` metodę, aby dodać usługi do pamięci podręcznej. Ta wartość jest wywoływana za każdym razem, gdy serwer proxy odbiera komunikat anonsu.
+1. Zaimplementuj metodę `AddOnlineservice`, aby dodać usługi do pamięci podręcznej. Ta wartość jest wywoływana za każdym razem, gdy serwer proxy odbiera komunikat anonsu.
 
     ```csharp
     void AddOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -92,7 +92,7 @@ W tym temacie wyjaśniono, jak zaimplementować serwer proxy odnajdywania. Aby u
     }
     ```
 
-2. Zaimplementuj `RemoveOnlineService` metodę, która jest używana do usuwania usług z pamięci podręcznej.
+2. Zaimplementuj metodę `RemoveOnlineService`, która jest używana do usuwania usług z pamięci podręcznej.
 
     ```csharp
     void RemoveOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -109,7 +109,7 @@ W tym temacie wyjaśniono, jak zaimplementować serwer proxy odnajdywania. Aby u
     }
     ```
 
-3. Zaimplementuj `MatchFromOnlineService` metody, które próbują dopasować do usługi za pomocą usługi w słowniku.
+3. Zaimplementuj metody `MatchFromOnlineService` próbujące dopasować usługę do usługi w słowniku.
 
     ```csharp
     void MatchFromOnlineService(FindRequestContext findRequestContext)
@@ -145,7 +145,7 @@ W tym temacie wyjaśniono, jak zaimplementować serwer proxy odnajdywania. Aby u
     }
     ```
 
-4. Zaimplementuj `PrintDiscoveryMetadata` metodę, która udostępnia użytkownikowi dane wyjściowe z konsoli, co robi serwer proxy odnajdywania.
+4. Zaimplementuj metodę `PrintDiscoveryMetadata`, która udostępnia użytkownikowi tekst w konsoli dane wyjściowe, co robi serwer proxy odnajdywania.
 
     ```csharp
     void PrintDiscoveryMetadata(EndpointDiscoveryMetadata endpointDiscoveryMetadata, string verb)
@@ -320,7 +320,7 @@ W tym temacie wyjaśniono, jak zaimplementować serwer proxy odnajdywania. Aby u
     }
     ```
 
-Onbegin.. /OnEnd.. Metody zapewniają logikę dla kolejnych operacji odnajdywania. Na przykład <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> metody i <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> implementują Znajdowanie logiki dla serwera proxy odnajdywania. Gdy serwer proxy odnajdywania odbiera komunikat sondy, te metody są wykonywane w celu wysłania odpowiedzi z powrotem do klienta. Możesz zmodyfikować logikę Znajdź zgodnie z potrzebami, na przykład można uwzględnić niestandardowe dopasowanie zakresu przez algorytmy lub analizę metadanych XML specyficzną dla aplikacji w ramach operacji znajdowania.
+Onbegin.. /OnEnd.. Metody zapewniają logikę dla kolejnych operacji odnajdywania. Na przykład metody <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> i <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> implementują procedurę znajdowania dla serwera proxy odnajdywania. Gdy serwer proxy odnajdywania odbiera komunikat sondy, te metody są wykonywane w celu wysłania odpowiedzi z powrotem do klienta. Możesz zmodyfikować logikę Znajdź zgodnie z potrzebami, na przykład można uwzględnić niestandardowe dopasowanie zakresu przez algorytmy lub analizę metadanych XML specyficzną dla aplikacji w ramach operacji znajdowania.
 
 ### <a name="to-implement-the-asyncresult-class"></a>Aby zaimplementować klasę AsyncResult
 
@@ -328,7 +328,7 @@ Onbegin.. /OnEnd.. Metody zapewniają logikę dla kolejnych operacji odnajdywani
 
 2. Utwórz nowy plik kodu o nazwie AsyncResult.cs.
 
-3. Dodaj następujące `using` instrukcje do AsyncResult.cs.
+3. Dodaj następujące instrukcje `using` do AsyncResult.cs.
 
     ```csharp
     using System;
@@ -374,10 +374,7 @@ Onbegin.. /OnEnd.. Metody zapewniają logikę dla kolejnych operacji odnajdywani
                 }
                 lock (ThisLock)
                 {
-                    if (manualResetEvent == null)
-                    {
-                        manualResetEvent = new ManualResetEvent(isCompleted);
-                    }
+                    manualResetEvent ??= new ManualResetEvent(isCompleted);
                 }
                 return manualResetEvent;
             }
@@ -490,7 +487,7 @@ Onbegin.. /OnEnd.. Metody zapewniają logikę dla kolejnych operacji odnajdywani
 
 1. Otwórz plik Program.cs w projekcie DiscoveryProxyExample.
 
-2. Dodaj następujące `using` instrukcje.
+2. Dodaj następujące instrukcje `using`.
 
     ```csharp
     using System;
@@ -498,7 +495,7 @@ Onbegin.. /OnEnd.. Metody zapewniają logikę dla kolejnych operacji odnajdywani
     using System.ServiceModel.Discovery;
     ```
 
-3. `Main()` W metodzie Dodaj następujący kod. Spowoduje to utworzenie wystąpienia `DiscoveryProxy` klasy.
+3. W metodzie `Main()` Dodaj następujący kod. Spowoduje to utworzenie wystąpienia klasy `DiscoveryProxy`.
 
     ```csharp
     Uri probeEndpointAddress = new Uri("net.tcp://localhost:8001/Probe");
@@ -549,7 +546,7 @@ Onbegin.. /OnEnd.. Metody zapewniają logikę dla kolejnych operacji odnajdywani
     }
     ```
 
-Zakończono implementowanie serwera proxy odnajdywania. Przejdź do [: Zaimplementuj odnajdywaną usługę, która rejestruje się w serwerze](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)proxy odnajdywania.
+Zakończono implementowanie serwera proxy odnajdywania. Przejdź do [How: Zaimplementuj odnajdywaną usługę, która rejestruje przy użyciu serwera proxy odnajdywania @ no__t-0.
 
 ## <a name="example"></a>Przykład
 
@@ -803,10 +800,7 @@ namespace Microsoft.Samples.Discovery
                 }
                 lock (ThisLock)
                 {
-                    if (manualResetEvent == null)
-                    {
-                        manualResetEvent = new ManualResetEvent(isCompleted);
-                    }
+                    manualResetEvent ??= new ManualResetEvent(isCompleted);
                 }
                 return manualResetEvent;
             }
@@ -982,6 +976,6 @@ namespace Microsoft.Samples.Discovery
 ## <a name="see-also"></a>Zobacz także
 
 - [Omówienie odnajdywania WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Instrukcje: Implementowanie usługi wykrywalnej zarejestrowanej za pomocą serwera proxy odnajdywania](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [Instrukcje: Implementowanie aplikacji klienckiej korzystającej z serwera proxy odnajdywania w celu znalezienia usługi](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
-- [Instrukcje: Testowanie serwera proxy odnajdywania](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+- [Instrukcje: Zaimplementuj odnajdywaną usługę, która rejestruje przy użyciu serwera proxy odnajdywania @ no__t-0
+- [Instrukcje: Implementowanie aplikacji klienckiej korzystającej z serwera proxy odnajdywania w celu znalezienia usługi @ no__t-0
+- [Instrukcje: Testowanie serwera proxy odnajdywania @ no__t-0

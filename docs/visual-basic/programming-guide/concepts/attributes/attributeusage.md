@@ -2,15 +2,15 @@
 title: AttributeUsage (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-ms.openlocfilehash: 1841171f2f3fc26ba9244c72c69960b765d39807
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84c3d175aede5d8066198592ffac601c0bd97620
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789119"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351831"
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
-Określa, jak używać klasy atrybutu niestandardowego. `AttributeUsage` jest atrybutem, którego może odnosić się do definicji atrybutów niestandardowych do kontrolowania, jak można zastosować nowy atrybut. Po zastosowaniu jawnie, domyślne ustawienia wyglądała następująco:  
+Określa, w jaki sposób można używać klasy atrybutów niestandardowych. `AttributeUsage` to atrybut, który można zastosować do definicji atrybutów niestandardowych w celu kontrolowania, jak można zastosować nowy atrybut. Ustawienia domyślne wyglądają następująco:  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.All,   
@@ -21,9 +21,9 @@ Class NewAttribute
 End Class  
 ```  
   
- W tym przykładzie `NewAttribute` klasy mogą być stosowane do dowolnej jednostki kodu atrybutu można, ale mogą być stosowane tylko raz do każdej jednostki. Jest dziedziczone przez klasy pochodne, gdy jest stosowany do klasy bazowej.  
+ W tym przykładzie Klasa `NewAttribute` może być stosowana do dowolnej jednostki kodu, która może być stosowana tylko raz do każdej jednostki. Jest dziedziczona przez klasy pochodne w przypadku zastosowania do klasy bazowej.  
   
- `AllowMultiple` i `Inherited` argumenty są opcjonalne, dlatego ten kod działa tak samo:  
+ Argumenty `AllowMultiple` i `Inherited` są opcjonalne, więc ten kod ma ten sam skutek:  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.All)>   
@@ -32,7 +32,7 @@ Class NewAttribute
 End Class  
 ```  
   
- Pierwszy `AttributeUsage` argument musi być jeden lub więcej elementów <xref:System.AttributeTargets> wyliczenia. Wiele typów docelowej mogą być połączone razem z operatora OR, w następujący sposób:  
+ Pierwszy argument `AttributeUsage` musi mieć co najmniej jeden element wyliczenia <xref:System.AttributeTargets>. Z operatorem OR można łączyć wiele typów docelowych, takich jak:  
   
 ```vb  
 Imports System  
@@ -45,7 +45,7 @@ Class NewPropertyOrFieldAttribute
 End Class  
 ```  
   
- Jeśli `AllowMultiple` argument ma wartość `true`, a następnie wynikowy atrybut można stosować więcej niż jeden raz na pojedynczej jednostce, np. to:  
+ Jeśli argument `AllowMultiple` jest ustawiony na `true`, wówczas atrybut otrzymany można zastosować więcej niż raz do pojedynczej jednostki, na przykład:  
   
 ```vb  
 Imports System  
@@ -62,9 +62,9 @@ Class Class1
 End Class  
 ```  
   
- W tym przypadku `MultiUseAttr` mogą być stosowane wielokrotnie, ponieważ `AllowMultiple` ustawiono `true`. Obu formatów pokazano stosowania wiele atrybutów są prawidłowe.  
+ W tym przypadku `MultiUseAttr` można wielokrotnie zastosować, ponieważ `AllowMultiple` jest ustawiona na `true`. Oba formaty wyświetlane na potrzeby stosowania wielu atrybutów są prawidłowe.  
   
- Jeśli `Inherited` ustawiono `false`, a następnie ten atrybut nie jest dziedziczone przez klasy, które są uzyskiwane z klasą, która jest przypisana. Na przykład:  
+ Jeśli `Inherited` jest ustawiona na `false`, atrybut nie jest dziedziczony przez klasy, które pochodzą z klasy, która ma atrybut. Na przykład:  
   
 ```vb  
 Imports System  
@@ -86,15 +86,15 @@ Class DClass
 End Class  
 ```  
   
- W tym przypadku `Attr1` nie ma zastosowania do `DClass` za pomocą dziedziczenia.  
+ W tym przypadku `Attr1` nie jest stosowany do `DClass` przez dziedziczenie.  
   
 ## <a name="remarks"></a>Uwagi  
- `AttributeUsage` Atrybut jest atrybutem jednorazowy — nie można zastosować w więcej niż jeden raz do tej samej klasy. `AttributeUsage` jest aliasem <xref:System.AttributeUsageAttribute>.  
+ Atrybut `AttributeUsage` jest atrybutem pojedynczego użycia — nie można go zastosować więcej niż raz do tej samej klasy. `AttributeUsage` jest aliasem dla <xref:System.AttributeUsageAttribute>.  
   
- Aby uzyskać więcej informacji, zobacz [uzyskiwania dostępu do atrybutów przy użyciu odbicia (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
+ Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład ilustruje efekt `Inherited` i `AllowMultiple` argumenty `AttributeUsage` atrybut i jak mogą być wyliczane atrybuty niestandardowe zastosowane do klasy.  
+ Poniższy przykład demonstruje wpływ argumentów `Inherited` i `AllowMultiple` na atrybut `AttributeUsage`, a także sposób wyliczania atrybutów niestandardowych zastosowanych do klasy.  
   
 ```vb  
 Imports System  
@@ -151,7 +151,7 @@ End Class
   
 ## <a name="sample-output"></a>Przykładowe dane wyjściowe  
   
-```  
+```console  
 Attributes on Base Class:  
 A1  
 A2  
@@ -165,7 +165,7 @@ A2
 
 - <xref:System.Attribute>
 - <xref:System.Reflection>
-- [Przewodnik programowania w języku Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Przewodnik programowania Visual Basic](../../../../visual-basic/programming-guide/index.md)
 - [Atrybuty](../../../../standard/attributes/index.md)
 - [Odbicie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
 - [Atrybuty (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)

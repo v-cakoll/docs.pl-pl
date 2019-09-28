@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b47f4c093acb094188cbd5a8a0a0026c67eb3f2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f768242bffe619051779f87e950138ae9fcec6c
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795164"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353189"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Instrukcje: Tworzenie obiektów GenericPrincipal i GenericIdentity
 
-Możesz użyć <xref:System.Security.Principal.GenericIdentity> klasy w połączeniu z <xref:System.Security.Principal.GenericPrincipal> klasy, aby utworzyć schemat autoryzacji, która istnieje jako niezależne od domeny Windows.
+Klasy <xref:System.Security.Principal.GenericIdentity> można użyć w połączeniu z klasą <xref:System.Security.Principal.GenericPrincipal> w celu utworzenia schematu autoryzacji, który istnieje niezależnie od domeny systemu Windows.
 
-### <a name="to-create-a-genericprincipal-object"></a>Aby utworzyć obiekt obiektów GenericPrincipal
+### <a name="to-create-a-genericprincipal-object"></a>Aby utworzyć obiekt GenericPrincipal —
 
-1. Utwórz nowe wystąpienie klasy tożsamości i Zainicjuj go przy użyciu nazwy, chcesz, aby pomieścić. Poniższy kod tworzy nową **genericidentity —** obiektu i inicjuje ją o nazwie `MyUser`.
+1. Utwórz nowe wystąpienie klasy Identity i zainicjuj je nazwą, która ma zostać wstrzymana. Poniższy kod tworzy nowy obiekt **GenericIdentity** i inicjuje go nazwą `MyUser`.
 
     ```vb
     Dim myIdentity As New GenericIdentity("MyUser")
@@ -36,7 +36,7 @@ Możesz użyć <xref:System.Security.Principal.GenericIdentity> klasy w połącz
     GenericIdentity myIdentity = new GenericIdentity("MyUser");
     ```
 
-2. Utwórz nowe wystąpienie klasy **obiektów GenericPrincipal** klasy i zainicjuj ją przy użyciu utworzonej wcześniej **genericidentity —** obiekt i Tablica ciągów, które reprezentują role, które mają skojarzone z tej jednostki. Poniższy przykład kodu Określa tablicę ciągów, które reprezentują rolę administratora użytkownikowi i rolę użytkownika. **Obiektów GenericPrincipal** następnie jest inicjowany z poprzedniego **genericidentity —** i tablicy ciągów.
+2. Utwórz nowe wystąpienie klasy **GenericPrincipal —** i zainicjuj je za pomocą wcześniej utworzonego obiektu **GenericIdentity** i tablicy ciągów reprezentujących role, które mają być skojarzone z tym podmiotem zabezpieczeń. Poniższy przykład kodu określa tablicę ciągów, które reprezentują rolę administratora i rolę użytkownika. **GenericPrincipal —** zostaje następnie zainicjowany z poprzednią **GenericIdentity** i tablicą ciągów.
 
     ```vb
     Dim myStringArray As String() = {"Manager", "Teller"}
@@ -48,7 +48,7 @@ Możesz użyć <xref:System.Security.Principal.GenericIdentity> klasy w połącz
     GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity, myStringArray);
     ```
 
-3. Użyj poniższego kodu, aby dołączyć podmiot zabezpieczeń do bieżącego wątku. Jest to przydatne w sytuacjach, w których podmiot zabezpieczeń muszą być weryfikowane kilka razy, muszą być weryfikowane przez inny kod uruchomiony w swojej aplikacji lub muszą być weryfikowane przez <xref:System.Security.Permissions.PrincipalPermission> obiektu. Walidacja oparta na rolach można wciąż wykonywać na obiekt podmiotu zabezpieczeń bez dołączania ich do wątku. Aby uzyskać więcej informacji, zobacz [zastępowanie obiektu głównego](../../../docs/standard/security/replacing-a-principal-object.md).
+3. Użyj poniższego kodu, aby dołączyć podmiot zabezpieczeń do bieżącego wątku. Jest to przydatne w sytuacjach, w których podmiot zabezpieczeń musi być zweryfikowany kilka razy, musi być zweryfikowany przez inny kod uruchomiony w aplikacji lub musi być zweryfikowany przez obiekt <xref:System.Security.Permissions.PrincipalPermission>. Można nadal wykonywać walidację na obiekcie Principal, bez dołączania go do wątku. Aby uzyskać więcej informacji, zobacz [zastępowanie obiektu podmiotu zabezpieczeń](../../../docs/standard/security/replacing-a-principal-object.md).
 
     ```vb
     Thread.CurrentPrincipal = myPrincipal
@@ -60,7 +60,7 @@ Możesz użyć <xref:System.Security.Principal.GenericIdentity> klasy w połącz
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu pokazuje, jak utworzyć wystąpienie **obiektów GenericPrincipal** i **genericidentity —**. Ten kod wyświetla wartości z tych obiektów do konsoli.
+Poniższy przykład kodu demonstruje, jak utworzyć wystąpienie elementu **GenericPrincipal —** i **GenericIdentity**. Ten kod wyświetla wartości tych obiektów w konsoli programu.
 
 ```vb
 Imports System
@@ -134,9 +134,9 @@ public class Class1
 }
 ```
 
-Po wykonaniu aplikacja wyświetla dane wyjściowe podobne do następujących.
+Po wykonaniu aplikacja wyświetli dane wyjściowe podobne do poniższych.
 
-```
+```console
 The Name is: MyIdentity
 The IsAuthenticated is: True
 Is this a Manager? True

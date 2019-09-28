@@ -2,12 +2,12 @@
 title: 'Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: 7b56185b98d89572e6a8e3b9bc8ed54ad6ef7b37
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d521e56f9ae311eea53028ba189416db289839cd
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631040"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352883"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ) (Visual Basic)
 
@@ -17,7 +17,7 @@ Ten przykład pokazuje, jak scalać pliki zawierające wiersze tekstu, a następ
 
 1. Skopiuj te nazwy do pliku tekstowego o nazwie names1. txt i Zapisz go w folderze projektu:
 
-    ```
+    ```text
     Bankov, Peter
     Holm, Michael
     Garcia, Hugo
@@ -32,7 +32,7 @@ Ten przykład pokazuje, jak scalać pliki zawierające wiersze tekstu, a następ
 
 2. Skopiuj te nazwy do pliku tekstowego o nazwie names2. txt i Zapisz go w folderze projektu. Należy pamiętać, że dwa pliki mają nazwy wspólne.
 
-    ```
+    ```text
     Liu, Jinghao
     Bankov, Peter
     Holm, Michael
@@ -165,7 +165,7 @@ End Class
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Utwórz projekt aplikacji konsolowej VB.NET z `Imports` instrukcją dla przestrzeni nazw System. LINQ.
+Utwórz projekt aplikacji konsolowej VB.NET z instrukcją `Imports` dla przestrzeni nazw System. LINQ.
 
 ## <a name="see-also"></a>Zobacz także
 

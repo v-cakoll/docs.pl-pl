@@ -13,44 +13,44 @@ helpviewer_keywords:
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
 author: KrzysztofCwalina
-ms.openlocfilehash: c0790cd20daf859ec81e2252dc9bce46673daf90
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ecd708ccb8eb91270e8ef9c174b8d7e599a2629
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945512"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353700"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>Nazwy klas, struktur i interfejsów
-Wskazówkami nazewnictwa, które należy wykonać dotyczą nazewnictwa typ ogólny.  
+Poniższe wskazówki dotyczące nazewnictwa mają zastosowanie do ogólnego nazewnictwa typów.  
   
  **✓ DO** nazwy klas i struktur rzeczowniki lub fraz rzeczownik, przy użyciu PascalCasing.  
   
- Nazwy typów to odróżnia od metody, które są nazywane oraz oznaczenia zlecenie.  
+ Spowoduje to odróżnienie nazw typów od metod, które są nazywane wyrażeniami czasownik.  
   
  **✓ DO** nazwy interfejsów przymiotników fraz lub czasami rzeczowniki ani fraz rzeczownik.  
   
- Rzeczowniki i fraz rzeczownik powinny być rzadko używane i może wskazywać, że typ powinien być klasą abstrakcyjną, a nie interfejsu.  
+ Rzeczowniki i frazy rzeczowników powinny być używane rzadko i mogą wskazywać, że typ powinien być klasą abstrakcyjną, a nie interfejsem.  
   
  **X DO NOT** nadaj nazwę klasy prefiksu (np. "C").  
   
  **✓ CONSIDER** kończy nazwę klasy o nazwie klasy podstawowej pochodne.  
   
- To jest bardzo czytelny i wyraźnie opisano relację. Oto kilka przykładów tego kodu: `ArgumentOutOfRangeException`, który jest rodzajem z `Exception`, i `SerializableAttribute`, co jest rodzajem z `Attribute`. Jednak warto użyć uzasadnione orzeczenia stosowania ta wytyczna; na przykład `Button` klasy jest rodzajem elementu `Control` zdarzeń, mimo że `Control` nie pojawia się w jego nazwę.  
+ Jest to bardzo czytelne i jasno wyjaśniono relację. Oto kilka przykładów tego kodu: `ArgumentOutOfRangeException`, który jest rodzajem `Exception` i `SerializableAttribute`, który jest rodzajem `Attribute`. Jednak ważne jest, aby użyć odpowiednich orzeczeń w zastosowaniu niniejszych wytycznych; na przykład Klasa `Button` jest rodzajem zdarzenia `Control`, chociaż `Control` nie pojawia się w jego nazwie.  
   
  **✓ DO** interfejsu prefiksu nazwy z literą I, aby wskazać, że typ jest interfejsem.  
   
- Na przykład `IComponent` (opisowego rzeczownika) `ICustomAttributeProvider` (rzeczownik oznaczenie), i `IPersistable` (przymiotnik) są nazwami odpowiedniego interfejsu. Podobnie jak w przypadku innych nazwami typów, unikaj skrótów.  
+ Na przykład, `IComponent` (opis rzeczownik), `ICustomAttributeProvider` (phrase rzeczownik) i `IPersistable` (przymiotnik) są odpowiednimi nazwami interfejsów. Podobnie jak w przypadku innych nazw typów, należy unikać skrótów.  
   
  **✓ DO** upewnij się, że nazwy są różne tylko przez "I" prefiksu nazwy interfejsu podczas definiowania parę klasy — interfejs klasy w przypadku standardowej implementacji interfejsu.  
   
 ## <a name="names-of-generic-type-parameters"></a>Nazwy parametrów typu ogólnego  
- Typy ogólne zostały dodane do programu .NET Framework 2.0. Wprowadzonej nowego rodzaju identyfikatora zwanego *parametr typu*.  
+ Typy ogólne zostały dodane do .NET Framework 2,0. Funkcja wprowadziła nowy rodzaj identyfikatora o nazwie *parametr typu*.  
   
  **✓ DO** nazwa parametry typu ogólnego z nazw opisowych, chyba że jednym litera jest całkowicie oczywiste i nazwę opisową nie może dodać wartość.  
   
  **✓ CONSIDER** przy użyciu `T` jako nazwę parametru typu dla typów z jednym parametrem litery jednego typu.  
   
-```  
+```csharp  
 public int IComparer<T> { ... }  
 public delegate bool Predicate<T>(T item);  
 public struct Nullable<T> where T:struct { ... }  
@@ -58,7 +58,7 @@ public struct Nullable<T> where T:struct { ... }
   
  **✓ DO** prefiksu nazwy parametrów typu opisową z `T`.  
   
-```  
+```csharp  
 public interface ISessionChannel<TSession> where TSession : ISession {  
     TSession Session { get; }  
 }  
@@ -66,25 +66,25 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
  **✓ CONSIDER** wskazujący ograniczenia umieścić w parametrze typu nazwy parametru.  
   
- Na przykład parametr ograniczone do `ISession` może być wywoływana `TSession`.  
+ Na przykład parametr ograniczony do `ISession` może być wywołany `TSession`.  
   
 ## <a name="names-of-common-types"></a>Nazwy typów wspólnych  
  **✓ DO** postępuj zgodnie z wytycznymi opisane w poniższej tabeli w nazwach typów pochodnych lub wykonania pewnych typów .NET Framework.  
   
-|Typ podstawowy|Pochodne Implementowanie wskazówek dotyczących typów|  
+|Typ podstawowy|Wytyczne typu pochodnego/implementującego|  
 |---------------|------------------------------------------|  
 |`System.Attribute`|**✓ DO** dodać sufiks "Atrybutu" do nazwy klasy atrybutu niestandardowego.|  
 |`System.Delegate`|**✓ DO** dodać sufiks "EventHandler" do nazwy obiektów delegowanych, które są używane w zdarzeniach.<br /><br /> **✓ DO** dodać sufiks "Wywołania zwrotnego" do nazwy obiektów delegowanych innych niż te używane jako procedury obsługi zdarzeń.<br /><br /> **X DO NOT** dodać sufiks "Delegowanie" do delegata.|  
 |`System.EventArgs`|**✓ DO** dodać sufiks "EventArgs."|  
 |`System.Enum`|**X DO NOT** pochodzi od tej klasy; użyj słowa kluczowego zamiast obsługiwane przez język; na przykład w języku C#, użyj `enum` — słowo kluczowe.<br /><br /> **X DO NOT** dodać sufiks "Enum" lub "Flaga".|  
 |`System.Exception`|**✓ DO** dodać sufiks "Wyjątku."|  
-|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ DO** dodać sufiks "Słownik". Należy pamiętać, że `IDictionary` jest określonego typu kolekcji, ale ta wytyczna ma pierwszeństwo przed bardziej ogólne wytyczne kolekcji, który następuje po.|  
+|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ DO** dodać sufiks "Słownik". Należy pamiętać, że `IDictionary` jest określonym typem kolekcji, ale wskazówki te mają pierwszeństwo przed bardziej ogólnymi wskazówkami dotyczącymi kolekcji.|  
 |`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|**✓ DO** dodać sufiksem "Collection".|  
 |`System.IO.Stream`|**✓ DO** dodać sufiks "Strumień".|  
 |`CodeAccessPermission IPermission`|**✓ DO** dodać sufiks "Uprawnienia."|  
   
-## <a name="naming-enumerations"></a>Nazwy wyliczeń  
- Ogólnie rzecz biorąc nazwy Typy wyliczeniowe (nazywane również Typy wyliczeniowe) powinien być zgodny standardowe reguły nazewnictwa typu (PascalCasing itp.). Jednakże istnieją dodatkowe wskazówki, które mają zastosowanie szczególnie w przypadku typów wyliczeniowych.  
+## <a name="naming-enumerations"></a>Wyliczanie nazw  
+ Nazwy typów wyliczeniowych (nazywane również wyliczeniami) ogólnie powinny być zgodne ze standardowymi regułami nazewnictwa typów (PascalCasing itp.). Istnieją jednak dodatkowe wytyczne, które dotyczą wyłącznie wyliczeń.  
   
  **✓ DO** Użyj nazwy typu pojedynczej wyliczania, chyba że jego wartości pól bitowych.  
   
@@ -98,7 +98,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
+ *Reprinted przez uprawnienie Pearson Education, Inc. od [Framework — wytyczne dotyczące projektowania: Konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, druga wersja @ no__t-0 przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Zobacz także
 

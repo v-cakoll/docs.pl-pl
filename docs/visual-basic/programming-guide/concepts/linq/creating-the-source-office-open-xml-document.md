@@ -2,12 +2,12 @@
 title: Tworzenie źródłowego dokumentu Office Open XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: d01755442a9b64e0577ace4eb05c6818dac9a824
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 75030f3d1c2940cc84f81b85dca921497137439f
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965253"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352946"
 ---
 # <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Tworzenie źródłowego dokumentu Office Open XML (Visual Basic)
 W tym temacie przedstawiono sposób tworzenia dokumentu Office Open XML WordprocessingML, który jest używany przez inne przykłady w tym samouczku. Jeśli wykonasz te instrukcje, dane wyjściowe będą zgodne z danymi wyjściowymi podanymi w każdym przykładzie.  
@@ -24,7 +24,7 @@ W tym temacie przedstawiono sposób tworzenia dokumentu Office Open XML Wordproc
   
 2. Wklej następujący tekst do nowego dokumentu:  
   
-    ```  
+    ```text  
     Parsing WordprocessingML with LINQ to XML  
   
     The following example prints to the console.  
@@ -44,9 +44,9 @@ W tym temacie przedstawiono sposób tworzenia dokumentu Office Open XML Wordproc
   
 3. Sformatuj pierwszy wiersz za pomocą stylu "Nagłówek 1".  
   
-4. Wybierz wiersze, które zawierają kod Visual Basic. Pierwszy wiersz rozpoczyna `Imports` się od słowa kluczowego. Ostatnim wierszem jest "End Class". Sformatuj linie przy użyciu czcionki Courier. Sformatuj je przy użyciu nowego stylu i nazwij nowy styl "Code".  
+4. Wybierz wiersze, które zawierają kod Visual Basic. Pierwszy wiersz rozpoczyna się od słowa kluczowego `Imports`. Ostatnim wierszem jest "End Class". Sformatuj linie przy użyciu czcionki Courier. Sformatuj je przy użyciu nowego stylu i nazwij nowy styl "Code".  
   
-5. Na koniec zaznacz cały wiersz zawierający dane wyjściowe i sformatuj go przy użyciu `Code` stylu.  
+5. Na koniec zaznacz cały wiersz zawierający dane wyjściowe i sformatuj go przy użyciu stylu `Code`.  
   
 6. Zapisz dokument i nadaj mu nazwę SampleDoc. docx.  
   
@@ -55,4 +55,4 @@ W tym temacie przedstawiono sposób tworzenia dokumentu Office Open XML Wordproc
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

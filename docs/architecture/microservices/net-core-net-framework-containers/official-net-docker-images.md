@@ -2,18 +2,18 @@
 title: Oficjalne obrazy Docker w programie .NET
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Oficjalne obrazy platformy Docker .NET
 ms.date: 01/07/2019
-ms.openlocfilehash: 749485bfe07e0245493da67af915805f644a1897
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 43b2f47912e38e99926d7f06c3cda72f17d0e3fc
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039635"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353868"
 ---
 # <a name="official-net-docker-images"></a>Oficjalne obrazy Docker w programie .NET
 
 Oficjalne obrazy platformy .NET Docker to obrazy platformy Docker utworzone i zoptymalizowane przez firmę Microsoft. Są one publicznie dostępne w repozytoriach firmy Microsoft w usłudze [Docker Hub](https://hub.docker.com/u/microsoft/). Każde repozytorium może zawierać wiele obrazów, w zależności od wersji .NET, a także w zależności od systemu operacyjnego i wersji (Linux Debian, .NET Alpine, Windows nano Server, Windows Server Core itp.).
 
-Od platformy .NET Core 2,1 wszystkie obrazy .NET Core, w tym dla ASP.NET Core są dostępne w usłudze Docker Hub w repozytorium obrazu platformy .NET Core <https://hub.docker.com/\_/microsoft-dotnet-core/>:.
+Od platformy .NET Core 2,1 wszystkie obrazy .NET Core, w tym dla ASP.NET Core są dostępne w usłudze Docker Hub w repozytorium obrazu platformy .NET Core <https://hub.docker.com/_/microsoft-dotnet-core/>:.
 
 Większość repozytoriów obrazów zapewnia szeroką tagowanie, która ułatwia wybranie nie tylko określonej wersji platformy, ale również wybranie systemu operacyjnego (Linux dystrybucji lub Windows version).
 
@@ -43,11 +43,11 @@ Mimo że istnieje wiele wersji programu .NET Core i obrazów ASP.NET Core, wszys
 
 Podczas eksplorowania repozytoriów obrazów platformy .NET w usłudze Docker Hub można znaleźć wiele wersji obrazów sklasyfikowanych lub oznaczonych tagami. Tagi te pomagają określić, która z nich ma być używana, w zależności od używanej wersji, np. w poniższej tabeli:
 
-| Obraz | Komentarze |
+| Image | Komentarze |
 |-------|----------|
 | mcr.microsoft.com/dotnet/core/aspnet:**2,2** | ASP.NET Core, tylko w przypadku środowiska uruchomieniowego i optymalizacje ASP.NET Core, w systemach Linux i Windows (wiele archów) |
 | mcr.microsoft.com/dotnet/core/sdk:**2,2** | .NET Core, z dołączonymi zestawami SDK, w systemach Linux i Windows (wiele Arch) |
 
 > [!div class="step-by-step"]
-> [Poprzedni](net-container-os-targets.md)Następny
-> [](../architect-microservice-container-applications/index.md)
+> [Poprzedni](net-container-os-targets.md)
+> [Następny](../architect-microservice-container-applications/index.md)

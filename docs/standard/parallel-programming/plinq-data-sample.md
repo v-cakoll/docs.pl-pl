@@ -10,32 +10,32 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b5cf6f0ae66141957d545134a2f8ff8eb799097
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 60693a6570eff6f9d4980d8f29f1385bc7462f08
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946453"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353158"
 ---
-# <a name="plinq-data-sample"></a><span data-ttu-id="cf70d-102">Próbka danych PLINQ</span><span class="sxs-lookup"><span data-stu-id="cf70d-102">PLINQ Data Sample</span></span>
-<span data-ttu-id="cf70d-103">Ten przykład zawiera przykładowe dane w formacie CSV, a także metody, które przekształcają je na kolekcje klientów, produkty, zamówienia i szczegóły zamówienia.</span><span class="sxs-lookup"><span data-stu-id="cf70d-103">This sample contains example data in .csv format, together with methods that transform it into in-memory collections of Customers, Products, Orders, and Order Details.</span></span> <span data-ttu-id="cf70d-104">Aby dodatkowo eksperymentować z PLINQ, możesz wkleić przykłady kodu z niektórych innych tematów do kodu w tym temacie i wywoływać go z `Main` metody.</span><span class="sxs-lookup"><span data-stu-id="cf70d-104">To further experiment with PLINQ, you can paste code examples from certain other topics into the code in this topic and invoke it from the `Main` method.</span></span> <span data-ttu-id="cf70d-105">Możesz również używać tych danych przy użyciu własnych zapytań PLINQ.</span><span class="sxs-lookup"><span data-stu-id="cf70d-105">You can also use this data with your own PLINQ queries.</span></span>  
+# <a name="plinq-data-sample"></a><span data-ttu-id="aef28-102">Próbka danych PLINQ</span><span class="sxs-lookup"><span data-stu-id="aef28-102">PLINQ Data Sample</span></span>
+<span data-ttu-id="aef28-103">Ten przykład zawiera przykładowe dane w formacie CSV, a także metody, które przekształcają je na kolekcje klientów, produkty, zamówienia i szczegóły zamówienia.</span><span class="sxs-lookup"><span data-stu-id="aef28-103">This sample contains example data in .csv format, together with methods that transform it into in-memory collections of Customers, Products, Orders, and Order Details.</span></span> <span data-ttu-id="aef28-104">Aby dodatkowo eksperymentować z PLINQ, możesz wkleić przykłady kodu z niektórych innych tematów do kodu w tym temacie i wywoływać go z metody `Main`.</span><span class="sxs-lookup"><span data-stu-id="aef28-104">To further experiment with PLINQ, you can paste code examples from certain other topics into the code in this topic and invoke it from the `Main` method.</span></span> <span data-ttu-id="aef28-105">Możesz również używać tych danych przy użyciu własnych zapytań PLINQ.</span><span class="sxs-lookup"><span data-stu-id="aef28-105">You can also use this data with your own PLINQ queries.</span></span>  
   
- <span data-ttu-id="cf70d-106">Dane przedstawiają podzestaw bazy danych Northwind.</span><span class="sxs-lookup"><span data-stu-id="cf70d-106">The data represents a subset of the Northwind database.</span></span> <span data-ttu-id="cf70d-107">50 (50) rekordy klientów są uwzględniane, ale nie wszystkie pola.</span><span class="sxs-lookup"><span data-stu-id="cf70d-107">Fifty (50) customer records are included, but not all fields.</span></span> <span data-ttu-id="cf70d-108">Uwzględniono podzestaw wierszy z zamówień i odpowiadające im dane Order_Detail dla każdego klienta.</span><span class="sxs-lookup"><span data-stu-id="cf70d-108">A subset of the rows from the Orders and corresponding Order_Detail data for every Customer is included.</span></span> <span data-ttu-id="cf70d-109">Wszystkie produkty są dołączone.</span><span class="sxs-lookup"><span data-stu-id="cf70d-109">All Products are included.</span></span>  
+ <span data-ttu-id="aef28-106">Dane przedstawiają podzestaw bazy danych Northwind.</span><span class="sxs-lookup"><span data-stu-id="aef28-106">The data represents a subset of the Northwind database.</span></span> <span data-ttu-id="aef28-107">50 (50) rekordy klientów są uwzględniane, ale nie wszystkie pola.</span><span class="sxs-lookup"><span data-stu-id="aef28-107">Fifty (50) customer records are included, but not all fields.</span></span> <span data-ttu-id="aef28-108">Uwzględniono podzestaw wierszy z zamówień i odpowiadające im dane Order_Detail dla każdego klienta.</span><span class="sxs-lookup"><span data-stu-id="aef28-108">A subset of the rows from the Orders and corresponding Order_Detail data for every Customer is included.</span></span> <span data-ttu-id="aef28-109">Wszystkie produkty są dołączone.</span><span class="sxs-lookup"><span data-stu-id="aef28-109">All Products are included.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="cf70d-110">Zestaw danych nie jest wystarczająco duży, aby pokazać, że PLINQ jest szybsze niż LINQ to Objects dla zapytań, które zawierają `where` tylko `select` klauzule podstawowe i.</span><span class="sxs-lookup"><span data-stu-id="cf70d-110">The data set is not large enough to demonstrate that PLINQ is faster than LINQ to Objects for queries that contain just basic `where` and `select` clauses.</span></span> <span data-ttu-id="cf70d-111">Aby obsłużyć szybkość rośnie w przypadku małych zestawów danych, takich jak to, należy użyć zapytań, które zawierają obliczenia kosztownych operacji dla każdego elementu w zestawie danych.</span><span class="sxs-lookup"><span data-stu-id="cf70d-111">To observe speed increases for small data sets such as this, use queries that contain computationally expensive operations on every element in the data set.</span></span>  
+> <span data-ttu-id="aef28-110">Zestaw danych nie jest wystarczająco duży, aby pokazać, że PLINQ jest szybsze niż LINQ to Objects dla zapytań, które zawierają tylko podstawowe `where` i `select` klauzule.</span><span class="sxs-lookup"><span data-stu-id="aef28-110">The data set is not large enough to demonstrate that PLINQ is faster than LINQ to Objects for queries that contain just basic `where` and `select` clauses.</span></span> <span data-ttu-id="aef28-111">Aby obsłużyć szybkość rośnie w przypadku małych zestawów danych, takich jak to, należy użyć zapytań, które zawierają obliczenia kosztownych operacji dla każdego elementu w zestawie danych.</span><span class="sxs-lookup"><span data-stu-id="aef28-111">To observe speed increases for small data sets such as this, use queries that contain computationally expensive operations on every element in the data set.</span></span>  
   
-### <a name="to-set-up-this-sample"></a><span data-ttu-id="cf70d-112">Aby skonfigurować ten przykład</span><span class="sxs-lookup"><span data-stu-id="cf70d-112">To set up this sample</span></span>  
+### <a name="to-set-up-this-sample"></a><span data-ttu-id="aef28-112">Aby skonfigurować ten przykład</span><span class="sxs-lookup"><span data-stu-id="aef28-112">To set up this sample</span></span>  
   
-1. <span data-ttu-id="cf70d-113">Utwórz projekt aplikacji Visual Basic lub C# konsoli wizualnej.</span><span class="sxs-lookup"><span data-stu-id="cf70d-113">Create a Visual Basic or Visual C# console application project.</span></span>  
+1. <span data-ttu-id="aef28-113">Utwórz projekt aplikacji Visual Basic lub C# konsoli wizualnej.</span><span class="sxs-lookup"><span data-stu-id="aef28-113">Create a Visual Basic or Visual C# console application project.</span></span>  
   
-2. <span data-ttu-id="cf70d-114">Zastąp zawartość Module1. vb lub Program.cs przy użyciu kodu, który następuje po wykonaniu tych kroków.</span><span class="sxs-lookup"><span data-stu-id="cf70d-114">Replace the contents of Module1.vb or Program.cs by using the code that follows these steps.</span></span>  
+2. <span data-ttu-id="aef28-114">Zastąp zawartość Module1. vb lub Program.cs przy użyciu kodu, który następuje po wykonaniu tych kroków.</span><span class="sxs-lookup"><span data-stu-id="aef28-114">Replace the contents of Module1.vb or Program.cs by using the code that follows these steps.</span></span>  
   
-3. <span data-ttu-id="cf70d-115">W menu **projekt** kliknij polecenie **Dodaj nowy element**.</span><span class="sxs-lookup"><span data-stu-id="cf70d-115">On the **Project** menu, click **Add New Item**.</span></span> <span data-ttu-id="cf70d-116">Wybierz pozycję **plik tekstowy** , a następnie kliknij przycisk **OK**.</span><span class="sxs-lookup"><span data-stu-id="cf70d-116">Select **Text File** and then click **OK**.</span></span> <span data-ttu-id="cf70d-117">Skopiuj dane z tego tematu, a następnie wklej je w nowym pliku tekstowym.</span><span class="sxs-lookup"><span data-stu-id="cf70d-117">Copy the data in this topic and then paste it in the new text file.</span></span> <span data-ttu-id="cf70d-118">W menu **plik** kliknij polecenie **Zapisz**, Nazwij plik Plinqdata. csv, a następnie zapisz go w folderze zawierającym pliki kodu źródłowego.</span><span class="sxs-lookup"><span data-stu-id="cf70d-118">On the **File** menu, click **Save**, name the file Plinqdata.csv, and then save it in the folder that contains your source code files.</span></span>  
+3. <span data-ttu-id="aef28-115">W menu **projekt** kliknij polecenie **Dodaj nowy element**.</span><span class="sxs-lookup"><span data-stu-id="aef28-115">On the **Project** menu, click **Add New Item**.</span></span> <span data-ttu-id="aef28-116">Wybierz pozycję **plik tekstowy** , a następnie kliknij przycisk **OK**.</span><span class="sxs-lookup"><span data-stu-id="aef28-116">Select **Text File** and then click **OK**.</span></span> <span data-ttu-id="aef28-117">Skopiuj dane z tego tematu, a następnie wklej je w nowym pliku tekstowym.</span><span class="sxs-lookup"><span data-stu-id="aef28-117">Copy the data in this topic and then paste it in the new text file.</span></span> <span data-ttu-id="aef28-118">W menu **plik** kliknij polecenie **Zapisz**, Nazwij plik Plinqdata. csv, a następnie zapisz go w folderze zawierającym pliki kodu źródłowego.</span><span class="sxs-lookup"><span data-stu-id="aef28-118">On the **File** menu, click **Save**, name the file Plinqdata.csv, and then save it in the folder that contains your source code files.</span></span>  
   
-4. <span data-ttu-id="cf70d-119">Naciśnij klawisz F5, aby sprawdzić, czy projekt jest poprawnie kompilowany i uruchamiany.</span><span class="sxs-lookup"><span data-stu-id="cf70d-119">Press F5 to verify that the project builds and runs correctly.</span></span> <span data-ttu-id="cf70d-120">Poniższe dane wyjściowe powinny być wyświetlane w oknie konsoli.</span><span class="sxs-lookup"><span data-stu-id="cf70d-120">The following output should be displayed in the console window.</span></span>  
+4. <span data-ttu-id="aef28-119">Naciśnij klawisz F5, aby sprawdzić, czy projekt jest poprawnie kompilowany i uruchamiany.</span><span class="sxs-lookup"><span data-stu-id="aef28-119">Press F5 to verify that the project builds and runs correctly.</span></span> <span data-ttu-id="aef28-120">Poniższe dane wyjściowe powinny być wyświetlane w oknie konsoli.</span><span class="sxs-lookup"><span data-stu-id="aef28-120">The following output should be displayed in the console window.</span></span>  
   
-    ```  
+    ```console  
     Customer count: 50  
     Product count: 77  
     Order count: 190  
@@ -46,9 +46,9 @@ ms.locfileid: "69946453"
  [!code-csharp[PLINQ#50](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#50)]
  [!code-vb[PLINQ#50](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#50)]  
   
-## <a name="data"></a><span data-ttu-id="cf70d-121">Dane</span><span class="sxs-lookup"><span data-stu-id="cf70d-121">Data</span></span>  
+## <a name="data"></a><span data-ttu-id="aef28-121">Data</span><span class="sxs-lookup"><span data-stu-id="aef28-121">Data</span></span>  
   
-```  
+```console  
 CUSTOMERS  
 ALFKI,Alfreds Futterkiste,Obere Str. 57,Berlin,12209  
 ANATR,Ana Trujillo Emparedados y helados,Avda. de la Constitución 2222,México D.F.,05021  
@@ -862,6 +862,6 @@ PRODUCTS
 END PRODUCTS  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="cf70d-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="cf70d-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aef28-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="aef28-122">See also</span></span>
 
-- [<span data-ttu-id="cf70d-123">Równoległe LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="cf70d-123">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [<span data-ttu-id="aef28-123">Równoległe LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="aef28-123">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

@@ -1,5 +1,5 @@
 ---
-title: '&amp;= — Operator (Visual Basic)'
+title: '&amp; = — operator (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.&=
@@ -10,37 +10,37 @@ helpviewer_keywords:
 - '&= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 0cf262fc-1a05-419a-a503-60013f111c8a
-ms.openlocfilehash: a79e779d8fcf549daeabc494e0a55deee30b5d22
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82d791e5d66c301442c99d2cc73e3172c3e30f17
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608440"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591638"
 ---
-# <a name="amp-operator-visual-basic"></a>&amp;= — Operator (Visual Basic)
-Łączy `String` wyrażenie `String` zmiennej lub właściwości i przypisuje wynik do zmiennej lub właściwości.  
+# <a name="amp-operator-visual-basic"></a>&amp; = — operator (Visual Basic)
+Łączy wyrażenie `String` z zmienną lub właściwością `String` i przypisuje wynik do zmiennej lub właściwości.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 variableorproperty &= expression  
 ```  
   
 ## <a name="parts"></a>Części  
  `variableorproperty`  
- Wymagana. Wszelkie `String` zmiennej lub właściwości.  
+ Wymagany. Dowolna `String` zmienna lub właściwość.  
   
  `expression`  
- Wymagana. Wszelkie `String` wyrażenia.  
+ Wymagany. Dowolne wyrażenie `String`.  
   
 ## <a name="remarks"></a>Uwagi  
- Element w lewej części `&=` operator może być prosta zmienna skalarne, właściwości lub elementu w tablicy. Zmiennej lub właściwości nie może być [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md). `&=` Łączy operator `String` wyrażenie po jego prawej stronie, aby `String` zmiennej lub właściwości po lewej stronie, a następnie przypisuje wynik do zmiennej lub właściwość po lewej stronie.  
+ Element po lewej stronie operatora `&=` może być prostą zmienną skalarną, właściwością lub elementem tablicy. Zmienna lub właściwość nie może być [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md). Operator `&=` łączy wyrażenie `String` po prawej stronie z zmienną `String` lub właściwością po lewej stronie, a następnie przypisuje wynik do zmiennej lub właściwości po lewej stronie.  
   
 ## <a name="overloading"></a>Przeciążenie  
- [& — Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md) może być *przeciążone*, co oznacza, że klasy lub struktury można ponownie zdefiniować jej zachowanie, gdy argument operacji ma typ tej klasy lub struktury. Przeciążanie `&` operator ma wpływ na zachowanie `&=` operatora. Jeśli kod używa `&=` dla klasy lub struktury, która przeciążenia `&`, należy zrozumieć zachowanie zmieniony. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ [Operator &](../../../visual-basic/language-reference/operators/concatenation-operator.md) może być *przeciążony*, co oznacza, że Klasa lub struktura może przedefiniować jej zachowanie, gdy operand ma typ tej klasy lub struktury. Przeciążanie operatora `&` wpływa na zachowanie operatora `&=`. Jeśli kod używa `&=` na klasie lub strukturze, która przeciąża `&`, należy zrozumieć jego ponownie zdefiniowane zachowanie. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto `&=` operatora do łączenia dwóch `String` zmienne i przypisz wynik do pierwszej zmiennej.  
+ Poniższy przykład używa operatora `&=`, aby połączyć dwie zmienne `String` i przypisać wynik do pierwszej zmiennej.  
   
  [!code-vb[VbVbalrOperators#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#3)]  
   
@@ -50,6 +50,6 @@ variableorproperty &= expression
 - [+=, operator](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)
 - [Operatory przypisania](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Operatory łączenia](../../../visual-basic/language-reference/operators/concatenation-operators.md)
-- [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Pierwszeństwo operatorów w Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Instrukcje](../../../visual-basic/programming-guide/language-features/statements.md)

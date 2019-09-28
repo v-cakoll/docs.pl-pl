@@ -5,12 +5,12 @@ f1_keywords:
 - NETSDK1045
 ms.custom: updateeachvsrelease
 ms.date: 09/20/2019
-ms.openlocfilehash: c46a1f12ca20c0e21ee205e409a2a5a89e3389b3
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: b1557e6910cb6d0b6d7e2b3ce2aec97d3715fec7
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214551"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591672"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Wymagania wstępne dotyczące platformy .NET Core w systemie Windows
 
@@ -29,13 +29,10 @@ Następujące artykuły zawierają pełną listę obsługiwanych systemów opera
 * [.NET Core 3.0](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)
 * [.NET Core 2.2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)
 * [.NET Core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
-* [.NET Core 1.0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)
 
 Aby uzyskać linki do pobrania i więcej informacji, zobacz artykuł [pobieranie z platformy .NET](https://dotnet.microsoft.com/download) , aby pobrać najnowszą wersję lub [archiwum pobierania programu .NET](https://dotnet.microsoft.com/download/archives#dotnet-core) dla starszych wersji.
 
 ## <a name="net-core-dependencies"></a>Zależności .NET Core
-
-Program .NET Core 1,1 i jego wcześniejsze wersje wymagają C++ , aby pakiet redystrybucyjny wizualizacji był uruchamiany w wersjach systemu Windows starszych niż Windows 10 i windows Server 2016. Ta zależność jest automatycznie instalowana przez Instalatora .NET Core.
 
 [Pakiet redystrybucyjny Microsoft Visual C++ 2015 z aktualizacją Update 3](https://www.microsoft.com/download/details.aspx?id=52685) należy zainstalować ręcznie, gdy:
 
@@ -66,7 +63,7 @@ Każda wersja programu .NET Core ma wymaganą minimalną wersję programu Visual
 
 W poniższej tabeli wymieniono minimalną wersję każdego zestawu SDK:
 
-| Wersja zestaw .NET Core SDK | Wersja programu Visual Studio                      |
+| Wersja zestaw .NET Core SDK | Visual Studio w wersji                      |
 | --------------------- | ------------------------------------------ |
 | 3.0                   | Program Visual Studio 2019 w wersji 16,3 lub nowszej. |
 | 2.2                   | Program Visual Studio 2017 w wersji 15,9 lub nowszej. |
@@ -108,6 +105,7 @@ Po skonfigurowaniu programu Visual Studio przy użyciu zestawu SDK platformy .NE
 
 Aby tworzyć aplikacje platformy .NET Core w programie Visual Studio 2017 przy użyciu zestawu SDK programu .NET Core 2,2:
 
+* [Pobierz i zainstaluj program Visual Studio 2019 w wersji 16,3 lub nowszej](/visualstudio/install/install-visual-studio) przy użyciu obciążenia **międzyplatformowego platformy .NET Core** (w sekcji **inne zestawy narzędzi** ).
 * [Pobierz i zainstaluj program Visual Studio 2017 w wersji 15.9.0 lub nowszej](/visualstudio/install/install-visual-studio) z wybranym obciążeniem międzyplatformowym **platformy .NET Core** (w sekcji **inne zestawy narzędzi** ).
 
 ![Zrzut ekranu instalacji programu Visual Studio 2017 z wybranym obciążeniem "Programowanie dla wielu platform" platformy .NET Core](./media/windows-prerequisites/vs-2017-workloads.jpg)
@@ -131,19 +129,5 @@ Po skonfigurowaniu programu Visual Studio przy użyciu zestawu SDK platformy .NE
 * Otwórz, skompiluj i uruchom istniejące projekty platformy .NET Core 1. x i 2. x.
 * Przekieruj projekty platformy .NET Core 1. x i 2. x do platformy .NET Core 2,2, kompilacji i uruchomienia.
 * Utwórz nowe projekty platformy .NET Core 2,2.
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-Aby opracowywać aplikacje platformy .NET Core 1. x w programie Visual Studio, [Pobierz i zainstaluj program Visual Studio 2017](/visualstudio/install/install-visual-studio) z użyciem obciążenia międzyplatformowego dla **platformy .NET Core** (w sekcji **inne zestawy narzędzi** ).
-
-![Zrzut ekranu instalacji programu Visual Studio 2017 z wybranym obciążeniem "Programowanie dla wielu platform" platformy .NET Core](./media/windows-prerequisites/vs-workloads.jpg)
-
-> [!IMPORTANT]
-> Możliwe jest korzystanie z programu Visual Studio 2015 do programowania w środowisku .NET Core 1. x, ale nie jest to zalecane z następujących powodów:
->
-> * Narzędzia .NET Core są w wersji zapoznawczej, która nie jest obsługiwana.
-> * Projekty to oparte na pliku Project. JSON, które jest przestarzałe.
->
-> Aby uzyskać więcej informacji na temat zmian w formacie projektu, zobacz [Ogólne omówienie zmian](./tools/cli-msbuild-architecture.md).
 
 ---

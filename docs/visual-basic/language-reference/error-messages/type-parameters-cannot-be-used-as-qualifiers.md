@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC32098
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
-ms.openlocfilehash: ba7348ae50965ffcf2719b20934451916c8fa95a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 88b5f365c47b98964d9f5a0d22a941d85dcfb95f
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923724"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592136"
 ---
 # <a name="type-parameters-cannot-be-used-as-qualifiers"></a>Parametrów typu nie można używać jako kwalifikatorów
-Elementu programistycznego kwalifikuje się ciągiem kwalifikacji, który zawiera parametr typu.  
+Element programistyczny jest kwalifikowana za pomocą ciągu kwalifikacji, który zawiera parametr typu.  
   
- Parametr typu reprezentuje typ, która jest przekazywana, gdy typ ogólny jest skonstruowany. Go nie reprezentuje określonego typu zdefiniowane. Ciąg kwalifikacji musi zawierać tylko elementy, które są zdefiniowane w czasie kompilacji.  
+ Parametr typu reprezentuje wymaganie dla typu, który ma zostać dostarczony podczas konstruowania typu ogólnego. Nie reprezentuje określonego zdefiniowanego typu. Ciąg kwalifikacji musi zawierać tylko elementy, które są zdefiniowane w czasie kompilacji.  
   
- Poniższe instrukcje może wygenerować tego błędu.  
+ Poniższe instrukcje mogą generować ten błąd.  
   
-```  
+```vb  
 Public Function checkText(Of c As System.Windows.Forms.Control)(  
     ByVal badText As String) As Boolean  
   
@@ -34,9 +34,9 @@ End Function
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Usuń parametr typu z ciągu kwalifikacji lub Zamień zdefiniowanego typu.  
+1. Usuń parametr typu z ciągu kwalifikacji lub zastąp go zdefiniowanym typem.  
   
-2. Jeśli musisz użyć skonstruowanego typu można zlokalizować elementu programistycznego, jest kwalifikowana, należy użyć dodatkowej logiki programu.  
+2. Jeśli musisz użyć skonstruowanego typu do zlokalizowania kwalifikowanego elementu programistycznego, musisz użyć dodatkowej logiki programu.  
   
 ## <a name="see-also"></a>Zobacz także
 

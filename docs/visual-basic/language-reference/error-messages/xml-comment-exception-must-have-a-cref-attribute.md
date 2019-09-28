@@ -7,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-ms.openlocfilehash: 91bde92e2184c90b14838a09a89a6d261447f139
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2e57dc63cb7ad8b2e061296a082d6fa79b464f08
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662607"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592041"
 ---
 # <a name="xml-comment-exception-must-have-a-cref-attribute"></a>Wyjątek komentarza XML musi mieć atrybut „cref”
-\<Wyjątku > tag umożliwia dokumentowanie wyjątki, które mogą być generowane przez metodę. Wymagane `cref` atrybut określa nazwę elementu członkowskiego, która jest sprawdzana przez generator dokumentacji. Jeśli istnieje elementu członkowskiego, jest tłumaczony nazwy kanonicznej elementu w pliku dokumentacji.  
+Tag \<exception > umożliwia dokumentowanie wyjątków, które mogą być zgłaszane przez metodę. Wymagany atrybut `cref` Określa nazwę elementu członkowskiego, który jest sprawdzany przez generator dokumentacji. Jeśli element członkowski istnieje, jest tłumaczony na nazwę elementu kanonicznego w pliku dokumentacji.  
   
  **Identyfikator błędu:** BC42319  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Dodaj `cref` atrybutu wyjątku w następujący sposób:  
+- Dodaj atrybut `cref` do wyjątku w następujący sposób:  
   
-    ```  
-    '''<exception cref="member">description</exception>  
+    xml  
+    <exception cref="member">Opis</exception> "" "  
     ```  
   
-## <a name="see-also"></a>Zobacz także
+## See also
 
-- [\<wyjątku >](../../../visual-basic/language-reference/xmldoc/exception.md)
-- [Instrukcje: Tworzenie dokumentacji XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
-- [Tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/index.md)
+- [\<exception>](../../../visual-basic/language-reference/xmldoc/exception.md)
+- [How to: Create XML Documentation](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/index.md)

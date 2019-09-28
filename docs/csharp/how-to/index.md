@@ -2,12 +2,12 @@
 title: Instrukcje (C# przewodnik)
 description: Kolekcja szybkich porad i krótkich, ukierunkowanych przykładów kodu
 ms.date: 12/20/2017
-ms.openlocfilehash: 92f7e94d8003823c0b166cc617563e63aba78027
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: f764bd0183e3881bfb81ebda7d3c7dd49a4cbdde
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038018"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591607"
 ---
 # <a name="how-to-c"></a>Instrukcje (C#)
 
@@ -66,7 +66,7 @@ Może być konieczne przekonwertowanie obiektu na inny typ.
 - [Użyj `as` dopasowania wzorca `is` i operatorów, aby bezpiecznie rzutować do innego typu](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).
 - [Zdefiniuj konwersje typów niestandardowych](../language-reference/operators/user-defined-conversion-operators.md).
 - [Ustal, czy typ jest typem wartości null](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md).
-- [Konwersja pomiędzy typami wartości null i](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type)niedopuszczających wartości null.
+- [Konwersja pomiędzy typami wartości null i](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-value-type-to-an-underlying-type)niedopuszczających wartości null.
 
 ## <a name="equality-and-ordering-comparisons"></a>Porównania równości i określania kolejności
 

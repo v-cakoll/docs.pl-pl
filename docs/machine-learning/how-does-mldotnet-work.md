@@ -1,21 +1,23 @@
 ---
 title: Co to jest ML.NET i jak to działa?
 description: ML.NET umożliwia dodawanie uczenia maszynowego do aplikacji .NET, w scenariuszach w trybie online lub offline. Dzięki tej możliwości można dokonać automatycznych prognoz przy użyciu danych dostępnych dla aplikacji bez konieczności podłączania do sieci w celu użycia ML.NET. W tym artykule objaśniono podstawowe informacje dotyczące uczenia maszynowego w programie ML.NET.
-ms.date: 08/26/2019
+ms.date: 09/27/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: d49a4bdfec133fe805bc9d534e04edf2f9ca5726
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 1ae6b82ada841ad172cbe6a59b667aaaf619e714
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929412"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592050"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Co to jest ML.NET i jak to działa?
 
-ML.NET umożliwia dodawanie uczenia maszynowego do aplikacji .NET, w scenariuszach w trybie online lub offline. Dzięki tej możliwości można dokonać automatycznych prognoz przy użyciu danych dostępnych dla aplikacji bez konieczności podłączania do sieci. W tym artykule objaśniono podstawowe informacje dotyczące uczenia maszynowego w programie ML.NET. 
+ML.NET umożliwia dodawanie uczenia maszynowego do aplikacji .NET, w scenariuszach w trybie online lub offline. Dzięki tej możliwości można dokonać automatycznych prognoz przy użyciu danych dostępnych dla aplikacji bez konieczności podłączania do sieci. W tym artykule objaśniono podstawowe informacje dotyczące uczenia maszynowego w programie ML.NET.
+
+ML.NET działa w systemach Windows, Linux i macOS przy użyciu platformy .NET Core lub systemu Windows przy użyciu .NET Framework. 64 bit jest obsługiwany na wszystkich platformach. 32 bit jest obsługiwany w systemie Windows, z wyjątkiem funkcji związanych z TensorFlow, LightGBM i ONNX.
 
 Przykłady typu przewidywania, które można wprowadzić za pomocą ML.NET, to m.in.:
 
@@ -99,7 +101,7 @@ Przyjrzyjmy się nieco bardziej szczegółowym koncepcjom.
 
 Model ML.NET jest obiektem, który zawiera przekształcenia do wykonania na danych wejściowych w celu osiągnięcia przewidywanych danych wyjściowych.
 
-### <a name="basic"></a>Podstawowy
+### <a name="basic"></a>Podstawowa
 
 Najpopularniejszym modelem jest dwuwymiarowa regresja liniowa, w której jedna ciągła ilość jest proporcjonalna do innej, jak w powyższym przykładzie cen domu. 
 

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: 4bef609289cdbb192116469bac4fca66ee10fd09
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0ab4a77395b478df06f34240212438f3e6e18f6e
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662520"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592205"
 ---
 # <a name="function-expression-visual-basic"></a>Function — Wyrażenie (Visual Basic)
-Deklaruje parametry i kod, który definiuje wyrażenie lambda funkcji.  
+Deklaruje parametry i kod, który definiuje funkcję wyrażenia lambda.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 Function ( [ parameterlist ] ) expression  
 - or -  
 Function ( [ parameterlist ] )  
@@ -30,49 +30,49 @@ End Function
   
 |Termin|Definicja|  
 |---|---|  
-|`parameterlist`|Opcjonalna. Lista nazwy zmiennych lokalnych, które reprezentują parametry tej procedury. Nawiasy musi być obecny, nawet wtedy, gdy lista jest pusta. Zobacz [listy parametrów](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`expression`|Wymagana. Pojedyncze wyrażenie. Typ wyrażenia jest zwracany typ funkcji.|  
-|`statements`|Wymagana. Listę instrukcji, która zwraca wartość przy użyciu `Return` instrukcji. (Zobacz [Return, instrukcja](../../../visual-basic/language-reference/statements/return-statement.md).) Typ wartości zwracanej jest zwracany typ funkcji.|  
+|`parameterlist`|Opcjonalny. Lista nazw zmiennych lokalnych, które reprezentują parametry tej procedury. Nawiasy muszą być obecne nawet wtedy, gdy lista jest pusta. Zobacz [listę parametrów](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`expression`|Wymagany. Pojedyncze wyrażenie. Typ wyrażenia jest zwracanym typem funkcji.|  
+|`statements`|Wymagany. Lista instrukcji zwracających wartość przy użyciu instrukcji `Return`. (Patrz [instrukcja return](../../../visual-basic/language-reference/statements/return-statement.md)). Typ zwracanej wartości jest zwracanym typem funkcji.|  
   
 ## <a name="remarks"></a>Uwagi  
- A *wyrażenia lambda* jest funkcją bez nazwy, który oblicza i zwraca wartość. Można użyć wyrażenia lambda dowolnym można użyć typu delegata, z wyjątkiem jako argument do `RemoveHandler`. Aby uzyskać więcej informacji na temat delegatów i użycie wyrażeń lambda z obiektów delegowanych, zobacz [instrukcji delegata](../../../visual-basic/language-reference/statements/delegate-statement.md) i [swobodna konwersja delegatów](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
+ *Wyrażenie lambda* jest funkcją bez nazwy, która oblicza i zwraca wartość. Możesz użyć wyrażenia lambda wszędzie tam, gdzie można użyć typu delegata, z wyjątkiem argumentu `RemoveHandler`. Aby uzyskać więcej informacji na temat delegatów i użycie wyrażeń lambda z delegatami, zobacz [instrukcja Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md) i [Swobodna konwersja delegata](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
 ## <a name="lambda-expression-syntax"></a>Składnia wyrażenia lambda  
- Składnia wyrażenia lambda przypomina w przypadku standardowej funkcji. Różnice są następujące:  
+ Składnia wyrażenia lambda jest podobna do funkcji standardowej. Różnice są następujące:  
   
 - Wyrażenie lambda nie ma nazwy.  
   
-- Wyrażenia lambda nie może mieć modyfikatorów, takich jak `Overloads` lub `Overrides`.  
+- Wyrażenia lambda nie mogą mieć modyfikatorów, takich jak `Overloads` lub `Overrides`.  
   
-- Nie należy używać wyrażeń lambda `As` klauzuli do wyznaczenia zwracany typ funkcji. Zamiast tego typ jest wnioskowany z wartość, która daje w wyniku treść wyrażenia lambda jeden wiersz lub wartość zwracana wyrażenia lambda wielowierszowe. Na przykład, jeśli treść wyrażenia lambda jednowierszowego jest `Where cust.City = "London"`, jego typem zwracanym jest `Boolean`.  
+- Wyrażenia lambda nie używają klauzuli `As` do wyznaczania zwracanego typu funkcji. Zamiast tego, typ jest wywnioskowany na podstawie wartości, do której szacuje się treść wyrażenia lambda pojedynczego wiersza, lub wartości zwracanej wielowierszowego wyrażenia lambda. Na przykład jeśli treść wyrażenia lambda pojedynczego wiersza jest `Where cust.City = "London"`, jego typ zwracany to `Boolean`.  
   
-- Treść wyrażenia lambda w pojedynczej linii musi być wyrażeniem, nie instrukcję. Treść może obejmować wywołania procedurę function, ale nie po wywołaniu procedury sub.  
+- Treść wyrażenia lambda pojedynczego wiersza musi być wyrażeniem, a nie instrukcją. Treść może składać się z wywołania procedury funkcji, ale nie wywołania procedury Sub.  
   
-- Musi mieć określony albo wszystkie parametry można wywnioskować typów danych lub wszystkich.  
+- Wszystkie parametry muszą mieć określone typy danych lub muszą zostać wywnioskowane.  
   
-- Parametry opcjonalne i Paramarray nie są dozwolone.  
+- Parametry opcjonalne i ParamArray są niedozwolone.  
   
-- Parametry ogólne nie są dozwolone.  
+- Parametry ogólne są niedozwolone.  
   
 ## <a name="example"></a>Przykład  
- W poniższych przykładach pokazano dwa sposoby tworzenia wyrażeń lambda proste. Używa pierwszego `Dim` Podaj nazwę dla tej funkcji. Aby wywołać funkcję, Wyślij w wartości parametru.  
+ W poniższych przykładach pokazano dwa sposoby tworzenia prostych wyrażeń lambda. Pierwszy używa `Dim`, aby podać nazwę funkcji. Aby wywołać funkcję, należy wysłać w wartości parametru.  
   
  [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
   
  [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
 ## <a name="example"></a>Przykład  
- Alternatywnie można zadeklarować i uruchom funkcję w tym samym czasie.  
+ Alternatywnie można zadeklarować i uruchomić funkcję w tym samym czasie.  
   
  [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>Przykład  
- Oto przykład wyrażenie lambda, która zwiększa jej argument i zwraca wartość. W przykładzie pokazano oba jeden wiersz i wielowierszowe składnia wyrażenia lambda dla funkcji. Aby uzyskać więcej przykładów, zobacz [wyrażeń Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Poniżej znajduje się przykład wyrażenia lambda, które zwiększa jego argument i zwraca wartość. Przykład pokazuje składnię jednowierszową i wieloliniową wyrażenia lambda dla funkcji. Aby uzyskać więcej przykładów, zobacz [lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
  [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Przykład  
- Wyrażenia lambda podstawą wielu operatorów zapytań w [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]i może służyć jawnie oparte na metodzie zapytania. W poniższym przykładzie przedstawiono typowe [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania, następuje tłumaczenie zapytania do formatu metody.  
+ Wyrażenia lambda podstawą wiele operatorów zapytań w [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] i mogą być używane jawnie w zapytaniach opartych na metodzie. W poniższym przykładzie przedstawiono typowe zapytanie [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], a następnie tłumaczenie zapytania do formatu metody.  
   
 ```vb  
 Dim londonCusts = From cust In db.Customers  
@@ -85,7 +85,7 @@ Dim londonCusts = db.Customers.
                   Select(Function(cust) cust)  
 ```  
   
- Aby uzyskać więcej informacji na temat metody zapytań, zobacz [zapytania](../../../visual-basic/language-reference/queries/index.md). Aby uzyskać więcej informacji na temat standardowych operatorów zapytań, zobacz [standardowe operatory zapytań — Przegląd](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Aby uzyskać więcej informacji na temat metod zapytań, zobacz [zapytania](../../../visual-basic/language-reference/queries/index.md). Aby uzyskać więcej informacji na temat standardowych operatorów zapytań, zobacz [standardowe operatory zapytań — Omówienie](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

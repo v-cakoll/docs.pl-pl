@@ -1,15 +1,15 @@
 ---
 title: Wymagania wstępne dotyczące programu .NET Core w systemie Linux
 description: Obsługiwane wersje systemów Linux i .NET Core umożliwiają tworzenie, wdrażanie i uruchamianie aplikacji platformy .NET Core na maszynach z systemem Linux.
-author: thraka
-ms.author: adegeo
-ms.date: 12/14/2018
-ms.openlocfilehash: 31c53b2cc0fe576e56685f4a5561258136fd2541
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+author: leecow
+ms.author: leecow
+ms.date: 09/25/2019
+ms.openlocfilehash: 4c5d79459c9d69111ca6452d9305f0deb37212b8
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116586"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591701"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Wymagania wstępne dotyczące programu .NET Core w systemie Linux
 
@@ -25,69 +25,82 @@ W tym artykule przedstawiono zależności, które są konieczne do tworzenia apl
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
-Program .NET Core 2. x traktuje system Linux jako pojedynczy systemu operacyjnego. Istnieje jedna kompilacja systemu Linux (dla architektury mikroukład) dla obsługiwanych dystrybucji systemu Linux. 
-
-Aby uzyskać linki do pobrania i więcej informacji, zobacz pliki do pobrania w [programie .net core 2,2](https://dotnet.microsoft.com/download/dotnet-core/2.2) lub w [programie .NET Core 2,1](https://dotnet.microsoft.com/download/dotnet-core/2.1).
-
-Platforma .NET Core 2. x jest obsługiwana w następujących dystrybucjach/wersjach systemu Linux:
-
-* Red Hat Enterprise Linux 7, 6-64-bitowy (`x86_64` lub `amd64`)
-* CentOS 7-64-bit (`x86_64` lub `amd64`) 
-* Oracle Linux 7-64-bitowy (`x86_64` lub `amd64`) 
-* Fedora 28, 27-64-bitowy (`x86_64` lub `amd64`) 
-* Debian 9 (64-bitowy, `arm32`), 8,7 i nowsze wersje — 64-bit (`x86_64` lub `amd64`)
-* Ubuntu 18,04 (64-bit, `arm32`), 16,04, 14,04-64-bit (`x86_64` lub `amd64`)
-* Linux mennic 18, 17-64-bitowy (`x86_64` lub `amd64`)
-* openSUSE 42,3 lub nowszy — 64-bitowy (`x86_64` lub) `amd64`
-* SUSE Enterprise Linux (SLES) 12 z dodatkiem Service Pack 2 lub nowszym — 64`x86_64` - `amd64`bitowy (lub)
-* System Alpine Linux 3,7 lub nowszy — 64-bitowy (`x86_64` lub `amd64`)
-
-Zobacz obsługiwane wersje systemu operacyjnego .NET [core 2,1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) i [obsługiwane wersje systemu operacyjnego .NET Core 2,2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) , aby zapoznać się z pełną listą systemów operacyjnych .NET Core 2,1 i .NET Core 2,2 Obsługiwane systemy operacyjne, dystrybucje i wersje, nieobsługiwane wersje systemu operacyjnego i zasady cyklu życia linki.
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-Aby uzyskać linki do pobrania i więcej informacji, zobacz pliki do pobrania w [programie .net core 1,1](https://dotnet.microsoft.com/download/dotnet-core/1.1) lub w [programie .NET Core 1,0](https://dotnet.microsoft.com/download/dotnet-core/1.0).
-
-Platforma .NET Core 1. x jest obsługiwana w następujących dystrybucjach/wersjach systemu`x86_64` Linux `amd64`64-bit (lub):
-
-* Red Hat Enterprise Linux 7
-* CentOS 7
-* Oracle Linux 7
-* Fedora 28 (.NET Core 1.1), 27
-* Debian 8,2 lub nowszy
-* Ubuntu 18.04 (.NET Core 1.1), 16.04, 14.04
-* Linux Mint 17
-* openSUSE 42,3 lub nowsza (.NET Core 1,1)
-
-Zobacz [obsługiwane wersje systemu operacyjnego na platformie .NET Core 1. x](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) , aby uzyskać pełną listę obsługiwanych systemów operacyjnych .NET Core 1. x, wersje systemu operacyjnego i linki do zasad cyklu życia.
-
-# <a name="net-core-30-preview-1tabnetcore30"></a>[.NET Core 3,0 — wersja zapoznawcza 1](#tab/netcore30)
-
-Program .NET Core 3,0 w wersji zapoznawczej 1 traktuje system Linux jako pojedynczą wersję systemu operacyjnego. Istnieje jedna kompilacja systemu Linux (dla architektury mikroukład) dla obsługiwanych dystrybucji systemu Linux. 
+Program .NET Core 3,0 traktuje system Linux jako pojedynczy systemu operacyjnego. Istnieje jedna kompilacja systemu Linux (dla architektury mikroukład) dla obsługiwanych dystrybucji systemu Linux. 
 
 Aby uzyskać linki do pobrania i więcej informacji, zobacz temat [pobieranie z programu .NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
-Program .NET Core 3,0 wersja zapoznawcza 1 jest obsługiwany w następujących dystrybucjach/wersjach systemu Linux. 
+Platforma .NET Core 3,0 jest obsługiwana w następujących dystrybucjach/wersjach systemu Linux:
 
-OS                            | Wersja               | Architektury  
-------------------------------|-----------------------|----------------
-Red Hat Enterprise Linux      | 6                     | X64
-Red Hat Enterprise Linux<br>CentOS<br>Oracle Linux  | 7                     | X64
-Fedora                        | 28                    | X64
-Debian                        | 9                     | x64, ARM32\*, ARM64\*
-Ubuntu                        | 16.04 +, 18.04 +        | x64, ARM32\*, ARM64\*
-Mennic systemu Linux                    | 18                    | X64
-openSUSE                      | 42.3 +                 | X64
-SUSE Enterprise Linux (SLES)  | 12 SP2+               | X64
-Alpine Linux                  | 3.8 +                  | x64, ARM64
+> [!NOTE]
+> Symbol `+` reprezentuje wersję minimalną.
 
-\*Obsługa ARM32 i ARM64 rozpoczyna się od Debian 9 i Ubuntu 16,04. Wcześniejsze wersje tych dystrybucje nie są obsługiwane w mikroukładach ARM.
+| OS                             | Version               | Architektury    |
+| ------------------------------ | --------------------- | ---------------- |
+| Red Hat Enterprise Linux       | 6 +, 7                 | x64 |
+| Oracle Linux                   | 7                     | x64 |
+| CentOS                         | 7                     | x64 |
+| Fedora                         | 29 +                   | x64 |
+| Debian                         | 9+                    | x64, ARM32, ARM64 |
+| Ubuntu                         | 16.04 +                | x64, ARM32, ARM64 |
+| Mennic systemu Linux                     | 18 +                   | x64 |
+| openSUSE                       | 15 +                   | x64 |
+| SUSE Enterprise Linux (SLES)   | 12 SP2+               | x64 |
+| Alpine Linux                   | 3.8 +                  | x64, ARM64 |
 
 Zobacz [obsługiwane wersje systemu operacyjnego .net core 3,0](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) , aby uzyskać pełną listę obsługiwanych systemów operacyjnych, dystrybucje i wersje programu .net Core 3,0, wersje systemu operacyjnego i linki do zasad cyklu życia.
 
 Aby uzyskać więcej informacji na temat instalowania programu .NET Core 3,0 w systemie ARM64, zobacz [Instalowanie programu .net core 3,0 w systemie Linux arm64](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213).
+
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+
+Program .NET Core 2,2 traktuje system Linux jako pojedynczy systemu operacyjnego. Istnieje jedna kompilacja systemu Linux (dla architektury mikroukład) dla obsługiwanych dystrybucji systemu Linux.
+
+Aby uzyskać linki do pobrania i więcej informacji, zobacz temat [pobieranie z programu .NET Core 2,2](https://dotnet.microsoft.com/download/dotnet-core/2.2).
+
+Platforma .NET Core 2,2 jest obsługiwana w następujących dystrybucjach/wersjach systemu Linux:
+
+> [!NOTE]
+> Symbol `+` reprezentuje wersję minimalną.
+
+| OS                             |  Version                |  Architektury   |
+| ------------------------------ | ----------------------- | ---------------- |
+| Red Hat Enterprise Linux       |  6, 7                   | x64 |
+| Oracle Linux                   |  7                      | x64 |
+| CentOS                         |  7                      | x64 |
+| Fedora                         |  29, 30                 | x64 |
+| Debian                         |  9                      | x64, ARM32 |
+| Ubuntu                         |  16,04, 18,04, 18,10    | x64, ARM32 |
+| Mennic systemu Linux                     |  17, 18                 | x64 |
+| openSUSE                       |  15 +                    | x64 |
+| SUSE Enterprise Linux (SLES)   |  12 SP2+                | x64 |
+| Alpine Linux                   |  3.7 +                   | x64 |
+
+Zobacz [obsługiwane wersje systemu operacyjnego .net core 2,2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) , aby uzyskać pełną listę obsługiwanych systemów operacyjnych, dystrybucje i wersje programu .net Core 2,2, wersje systemu operacyjnego i linki do zasad cyklu życia.
+
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+Program .NET Core 2,1 traktuje system Linux jako pojedynczy systemu operacyjnego. Istnieje jedna kompilacja systemu Linux (dla architektury mikroukład) dla obsługiwanych dystrybucji systemu Linux.
+
+Aby uzyskać linki do pobrania i więcej informacji, zobacz temat [pobieranie z programu .NET Core 2,1](https://dotnet.microsoft.com/download/dotnet-core/2.1).
+
+Platforma .NET Core 2,1 jest obsługiwana w następujących dystrybucjach/wersjach systemu Linux:
+
+| OS                             |  Version                |  Architektury   |
+| ------------------------------ | ----------------------- | ---------------- |
+| Red Hat Enterprise Linux       |  6, 7, 8                | x64 |
+| Oracle Linux                   |  7                      | x64 |
+| CentOS                         |  7                      | x64 |
+| Fedora                         |  29, 30                 | x64 |
+| Debian                         |  9                      | x64, ARM32 |
+| Ubuntu                         |  16,04, 18,04, 19,04    | x64, ARM32 |
+| Mennic systemu Linux                     |  17, 18                 | x64 |
+| openSUSE                       |  42.3 +                  | x64 |
+| SUSE Enterprise Linux (SLES)   |  12 SP2+                | x64 |
+| Alpine Linux                   |  3.7 +                   | x64 |
+
+Zobacz [obsługiwane wersje systemu operacyjnego .net core 2,1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) , aby uzyskać pełną listę obsługiwanych systemów operacyjnych, dystrybucje i wersje programu .net Core 2,1, wersje systemu operacyjnego i linki do zasad cyklu życia.
 
 ---
 

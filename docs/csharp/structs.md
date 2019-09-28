@@ -1,69 +1,72 @@
 ---
-title: Struktury — przewodnik języka C#
-description: Dowiedz się więcej o typ struktury i jak je utworzyć
+title: Struktury — C# Przewodnik
+description: Dowiedz się więcej na temat typu struktury i sposobu ich tworzenia
 ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: fbaa7fcc26009fe3117784b411941d30af0ba3c5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e0974b7dcf3c0888cb52bea81b07a58e3a98640b
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608017"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71396122"
 ---
 # <a name="structs"></a>Struktury
-A *struktury* jest typem wartości. Po utworzeniu struktury, zmienna, do którego jest przypisana struktura zawiera rzeczywiste dane struktury. Struktura jest przypisywana do nowej zmiennej, są kopiowane. Nowa zmienna i pierwotna zmienna zatem zawierają dwie oddzielne kopie tych samych danych. Zmiany wprowadzone w jednym egzemplarzu nie wpływają na drugi egzemplarz.
 
-Zmienne typu wartości bezpośrednio zawierają swoje wartości, co oznacza, że pamięć jest alokowana wewnątrz niezależnie od kontekstu, ta zmienna została zgłoszona. Nie ma oddzielnej alokacji stosu lub wyrzucania elementów bezużytecznych dla zmiennych typu wartości.  
+*Struktura* jest typem wartości. Po utworzeniu struktury zmienna, do której jest przypisana struktura, zawiera rzeczywiste dane struktury. Gdy struktura jest przypisana do nowej zmiennej, zostanie ona skopiowana. Nowa zmienna i oryginalna zmienna w związku z tym zawierają dwie oddzielne kopie tych samych danych. Zmiany wprowadzone w jednej kopii nie mają wpływu na inną kopię.
+
+Zmienne typu wartości bezpośrednio zawierają swoje wartości, co oznacza, że pamięć jest alokowana w dowolnym kontekście, w którym jest zadeklarowana zmienna. Nie ma oddzielnego przydziału sterty lub wyrzucania elementów bezużytecznych dla zmiennych typu wartości.  
   
-Istnieją dwie kategorie typów wartości: [struktury](./language-reference/keywords/struct.md) i [wyliczenia](./language-reference/keywords/enum.md).  
+Istnieją dwie kategorie typów wartości: [struct](./language-reference/keywords/struct.md) i [enum](./language-reference/keywords/enum.md).  
   
-Wbudowane typy liczbowe są strukturami i mają właściwości i metody, do których masz dostęp:  
+Wbudowane typy liczbowe to struktury i mają właściwości i metody, do których można uzyskać dostęp:  
   
 [!code-csharp[Static Method](../../samples/snippets/csharp/concepts/structs/static-method.cs)]
   
-Ale zadeklarować i przypisać do nich wartości, tak jakby były one proste typami-aggregacji:  
+Ale deklaruję i przypisujesz wartości do nich, tak jakby były to proste typy nieagregujące:  
   
 [!code-csharp[Assign Values](../../samples/snippets/csharp/concepts/structs/assign-value.cs)] 
   
-Typy wartości są *zapieczętowanego*, oznacza to, na przykład, że nie możesz wywodzić typu z <xref:System.Int32>, i nie możesz definiować dziedziczenia struktury od dowolnego użytkownika klasy lub struktury, ponieważ struktura może dziedziczyć tylko z <xref:System.ValueType> . Jednakże struktura może zaimplementować jeden lub więcej interfejsów. Można rzutować na typ interfejsu; typ struktury Powoduje to, że *pakowania* operację, aby opakować obiekt typu odwołania na stosie zarządzanym. Operacje na polach występują, gdy typ wartości są przekazywane do metody, która przyjmuje <xref:System.Object> jako parametr wejściowy. Aby uzyskać więcej informacji, zobacz [opakowywanie i rozpakowywanie](./programming-guide/types/boxing-and-unboxing.md ).  
+Typy wartości są *zapieczętowane*, co oznacza, że nie można utworzyć typu z <xref:System.Int32> i nie można zdefiniować struktury dziedziczonej z żadnej klasy lub struktury zdefiniowanej przez użytkownika, ponieważ struktura może dziedziczyć tylko po <xref:System.ValueType>. Jednak struktura może zaimplementować jeden lub więcej interfejsów. Typ struktury można rzutować na typ interfejsu; powoduje *to, że operacja opakowywania* otacza strukturę wewnątrz obiektu typu odwołania na zarządzanym stosie. Operacje pakowania są wykonywane, gdy przekazujesz typ wartości do metody, która przyjmuje <xref:System.Object> jako parametr wejściowy. Aby uzyskać więcej informacji, zobacz [opakowanie i rozpakowywanie](./programming-guide/types/boxing-and-unboxing.md ).  
   
-Możesz użyć [struktury](./language-reference/keywords/struct.md) — słowo kluczowe, aby utworzyć własne typy niestandardowych wartości. Typowo, struct jest używany jako kontener dla mniejszego zestawu powiązanych zmiennych, jak pokazano w poniższym przykładzie:  
+Za pomocą słowa kluczowego [struct](./language-reference/keywords/struct.md) można tworzyć własne niestandardowe typy wartości. Zazwyczaj struktura jest używana jako kontener dla małego zestawu powiązanych zmiennych, jak pokazano w następującym przykładzie:  
   
 [!code-csharp[Struct Keyword](../../samples/snippets/csharp/concepts/structs/struct-keyword.cs)]  
   
-Aby uzyskać więcej informacji na temat typów wartości w programie .NET Framework, zobacz [Wspólny System typów](../standard/common-type-system.md).  
+Aby uzyskać więcej informacji na temat typów wartości w .NET Framework, zobacz [Common Type System](../standard/common-type-system.md).  
     
-Struktury udostępniać większość tej samej składni jak klasy, chociaż struktur są bardziej ograniczone niż klasy:  
+Struktury współużytkują większość tej samej składni co klasy, chociaż struktury są bardziej ograniczone niż klasy:  
   
-- W deklaracji struktury, pola nie można zainicjować, chyba że są one zadeklarowane jako `const` lub `static`.  
+- W deklaracji struktury nie można inicjować pól, chyba że są one zadeklarowane jako `const` lub `static`.  
   
-- Struktura nie można zadeklarować konstruktora bez parametrów (Konstruktor bez parametrów) lub finalizatora.  
+- Struktura nie może deklarować bezparametrowego konstruktora (Konstruktor bez parametrów) lub finalizatora.  
   
-- Struktury są kopiowane w przydziale. Gdy struktura jest przypisywana nowej zmiennej, wszystkie dane są kopiowane, a wszelkie zmiany nowa kopia nie zmienia danych do oryginalnej kopii. Jest to ważne podczas pracy z kolekcjami typów wartości, takich jak Dictionary < string, myStruct >.  
+- Struktury są kopiowane podczas przypisywania. Gdy struktura jest przypisana do nowej zmiennej, wszystkie dane są kopiowane i wszelkie modyfikacje nowej kopii nie zmieniają danych dla oryginalnej kopii. Jest to ważne, aby pamiętać, że podczas pracy z kolekcjami typów wartości, takimi jak słownik < ciągu, moja Struktura >.  
   
-- Struktury są typami wartości i klasy są typami odwołań.  
+- Struktury są typami wartości, a klasy są typami referencyjnymi.  
   
-- W przeciwieństwie do klasy, struktury mogą być utworzone bez użycia `new` operatora.  
+- W przeciwieństwie do klas, struktury mogą być tworzone bez użycia operatora `new`.  
   
-- Struktury można zadeklarować konstruktorów, które mają parametry.  
+- Struktury mogą deklarować konstruktory z parametrami.  
   
-- Struktura nie może dziedziczyć z innej struktury lub klasy, a nie może być podstawą klasy. Wszystkie struktury dziedziczyć bezpośrednio <xref:System.ValueType>, który dziedziczy z <xref:System.Object>.  
+- Struktura nie może dziedziczyć z innej struktury lub klasy i nie może być podstawą klasy. Wszystkie struktury dziedziczą bezpośrednio z <xref:System.ValueType>, które dziedziczy po <xref:System.Object>.  
   
-- Struktura może zaimplementować interfejsów.
+- Struktura może implementować interfejsy.
 
-## <a name="literal-values"></a>Wartości literałów  
-W języku C# wartości literału otrzymują typ z kompilatora. Możesz określić jak literał liczbowy powinien wpisana przez dołączenie litery na końcu numeru. Na przykład aby określić, że wartość 4,56 powinny być traktowane jako zmiennoprzecinkowa, dołączyć "f" lub "F" po liczbie: `4.56f`. Jeśli żadna litera nie zostanie dołączony, kompilator wywnioskuje `double` typ dla literału. Aby uzyskać więcej informacji na temat tego, jakie typy można określić za pomocą literowych sufiksów, zobacz strony pomocy dla poszczególnych typów w [typów wartości](./language-reference/keywords/value-types.md).  
+## <a name="literal-values"></a>Wartości literału
+
+W C#programie wartości literałów otrzymują typ z kompilatora. Możesz określić sposób wpisywania literału liczbowego, dołączając literę do końca liczby. Na przykład, aby określić, że wartość 4,56 powinna być traktowana jako zmiennoprzecinkowa, należy dołączyć "f" lub "F" po liczbie: `4.56f`. Jeśli nie zostanie dołączona żadna litera, kompilator będzie wywnioskować typ `double` dla literału. Aby uzyskać więcej informacji na temat typów, które można określić za pomocą sufiksów liter, zobacz strony referencyjne dla poszczególnych typów w [typach wartości](./language-reference/keywords/value-types.md).  
   
-Ponieważ wpisywane są literały, a wszystkie typy ostatecznie pochodzą z <xref:System.Object>, można pisać i kompilować następujący kod:  
+Ponieważ wpisywane są literały, a wszystkie typy wynikają z wartości <xref:System.Object>, można napisać i skompilować kod, taki jak następujące:  
   
 [!code-csharp[Literal Values](../../samples/snippets/csharp/concepts/structs/literals.cs)]
 
-W ostatnich dwóch przykładach pokazano funkcje językowe, które wprowadzono w języku C# 7.0. Pierwszy pozwala na używanie znaku podkreślenia jako *separator cyfr* w literałach numerycznych. Można je umieścić wszędzie tam, gdzie ma się od cyfr w celu poprawienia czytelności. Mają one wpływu na wartość.
+W ostatnich dwóch przykładach przedstawiono funkcje języka wprowadzone C# w 7,0. Pierwszy umożliwia użycie znaku podkreślenia jako *separatora cyfr* wewnątrz literałów liczbowych. Możesz umieścić je wszędzie tam, gdzie chcesz, aby zwiększyć czytelność. Nie mają one wpływu na wartość.
 
-Drugi pokazuje *literały binarne*, które pozwalają na określenie wzorców bezpośrednio zamiast przy użyciu notacji szesnastkowej.
+Druga ilustruje *literały binarne*, które umożliwiają bezpośrednie Określanie wzorców bitowych zamiast używania notacji szesnastkowej.
 
-## <a name="nullable-types"></a>Typy dopuszczające wartości null  
-Typy wartości zwykłych nie może mieć wartość [null](./language-reference/keywords/null.md). Można jednak utworzyć typy o wartości zerowalnej przez umieszczenie **?** po typie. Na przykład **int?** jest **int** typu, który może mieć również wartość [null](./language-reference/keywords/null.md). W CTS, typy null są wystąpieniami typu struktury ogólnej <xref:System.Nullable%601>. Typy dopuszczające wartości null są szczególnie przydatne podczas przekazywania danych do i z baz danych, w których wartości liczbowe mogą przyjąć wartości null. Aby uzyskać więcej informacji, zobacz [typów dopuszczających wartości zerowe (C# Programming Guide)](./programming-guide/nullable-types/index.md).
+## <a name="nullable-value-types"></a>Typy wartości null
+
+Typy wartości zwykłych nie mogą mieć wartości [null](language-reference/keywords/null.md). Można jednak utworzyć typy wartości null, umieszczając `?` po typie. Na przykład `int?` to typ `int`, który może mieć również wartość [null](./language-reference/keywords/null.md). Typy wartości null są wystąpieniami typu struktury generycznej <xref:System.Nullable%601>. Typy wartości null są szczególnie przydatne podczas przekazywania danych do i z baz danych, w których wartości liczbowe mogą mieć wartość null lub być niezdefiniowane. Aby uzyskać więcej informacji, zobacz [typy wartości null](programming-guide/nullable-types/index.md).
 
 ## <a name="see-also"></a>Zobacz także
 

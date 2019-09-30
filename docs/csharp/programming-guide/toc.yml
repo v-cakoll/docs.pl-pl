@@ -31,7 +31,7 @@
       href: generics/
     - name: Namespaces
       href: namespaces/
-    - name: Typy dopuszczające wartości null
+    - name: Typy wartości dopuszczające wartość null
       href: nullable-types/
     - name: Niebezpieczny kod i wskaźniki
       href: unsafe-code-pointers/

@@ -140,7 +140,7 @@
       href: standard/design-guidelines/
     - name: Dokumenty i dane XML
       href: standard/data/xml/
-    - name: Zabezpieczenia
+    - name: Bezpieczeństwo
       href: standard/security/
     - name: Serializacja
       href: standard/serialization/
@@ -151,7 +151,7 @@
   items:
     - name: Informacje o platformie .NET Core
       href: core/about.md
-    - name: Wprowadzenie
+    - name: Rozpoczęcie pracy
       href: core/get-started.md
       items:
         - name: 'Wprowadzenie do języka C# i programu Visual Studio Code'
@@ -302,7 +302,7 @@
           href: /visualstudio/test/live-unit-testing-start
     - name: Ciągła integracja
       href: core/tools/using-ci-with-cli.md
-    - name: Przechowywanie wersji
+    - name: Obsługa wersji
       href: core/versions/index.md
       items:
         - name: Wybieranie wersji platformy .NET Core
@@ -317,13 +317,18 @@
       items:
         - name: Omówienie
           href: core/tools/index.md
-        - name: Narzędzia globalne
+        - name: Narzędzia
           expanded: true
           items:
-            - name: Omówienie
-              href: core/tools/global-tools.md
-            - name: Tworzenie narzędzia globalnego
-              href: core/tools/global-tools-how-to-create.md
+            - name: Narzędzia globalne
+              expanded: true
+              items:
+                - name: Omówienie
+                  href: core/tools/global-tools.md
+                - name: Tworzenie narzędzia globalnego
+                  href: core/tools/global-tools-how-to-create.md
+            - name: Rozwiązywanie problemów dotyczących użycia narzędzi
+              href: core/tools/troubleshoot-usage-issues.md
         - name: Podwyższony poziom dostępu
           href: core/tools/elevated-access.md
         - name: Model rozszerzalności
@@ -468,9 +473,9 @@
 - name: .NET framework — przewodnik
   href: framework/index.md
   items:
-    - name: Nowości
+    - name: Co nowego
       href: framework/whats-new/
-    - name: Rozpocznij
+    - name: Rozpoczęcie pracy
       href: framework/get-started/
     - name: Przewodnik instalacji
       href: framework/install/
@@ -514,7 +519,7 @@
           href: framework/security/
         - name: 'Debugowanie, śledzenie i profilowanie'
           href: framework/debug-trace-profile/
-        - name: wdrażania
+        - name: Wdrożenie
           href: framework/deployment/
         - name: Wydajność
           href: framework/performance/
@@ -537,7 +542,7 @@
 - name: 'Przewodnik dla języka C#'
   href: csharp/index.md
   items:
-    - name: Rozpocznij
+    - name: Rozpoczęcie pracy
       href: csharp/getting-started/
     - name: Samouczki
       items:
@@ -547,7 +552,7 @@
           items:
             - name: Wybieranie pierwszej lekcji
               href: csharp/tutorials/intro-to-csharp/index.md
-            - name: Hello world
+            - name: Witaj świecie
               href: csharp/tutorials/intro-to-csharp/hello-world.yml
             - name: 'Liczby w języku C#'
               href: csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml
@@ -587,7 +592,7 @@
           href: csharp/tutorials/generate-consume-asynchronous-stream.md
         - name: Zwiększanie możliwości danych za pomocą dopasowania wzorca
           href: csharp/tutorials/pattern-matching.md
-        - name: Aplikacja konsoli
+        - name: Aplikacja konsolowa
           href: csharp/tutorials/console-teleprompter.md
         - name: Klient REST
           href: csharp/tutorials/console-webapiclient.md
@@ -627,7 +632,7 @@
           href: csharp/nullable-references.md
         - name: Opisywanie interfejsów API dopuszczających wartość null przy użyciu atrybutów i ograniczeń
           href: csharp/nullable-attributes.md
-        - name: Namespaces
+        - name: Przestrzenie nazw
           href: csharp/programming-guide/namespaces/index.md
         - name: Typy podstawowe
           href: csharp/basic-types.md
@@ -647,7 +652,7 @@
           href: csharp/programming-guide/statements-expressions-operators/lambda-expressions.md
         - name: Właściwości
           href: csharp/properties.md
-        - name: Indeksatory
+        - name: Indexers (Indeksatory)
           href: csharp/indexers.md
         - name: Odrzucenia
           href: csharp/discards.md
@@ -703,7 +708,7 @@
           href: csharp/programming-guide/interop/index.md
         - name: Dokumentowanie kodu
           href: csharp/codedoc.md
-        - name: Przechowywanie wersji
+        - name: Obsługa wersji
           href: csharp/versioning.md
     - name: 'Tematy z instrukcjami dotyczącymi języka C#'
       items:
@@ -734,7 +739,7 @@
 - name: 'Podręcznik języka F#'
   href: fsharp/index.md
   items:
-    - name: Rozpocznij
+    - name: Rozpoczęcie pracy
       href: fsharp/get-started/index.md
       items:
         - name: 'Instalowanie języka F#'
@@ -942,7 +947,7 @@
           href: fsharp/language-reference/attributes.md
         - name: 'Zarządzanie zasobami: use — Słowo kluczowe'
           href: fsharp/language-reference/resource-management-the-use-keyword.md
-        - name: Namespaces
+        - name: Przestrzenie nazw
           href: fsharp/language-reference/namespaces.md
         - name: Moduły
           href: fsharp/language-reference/modules.md
@@ -1009,7 +1014,7 @@
   items:
     - name: Co nowego w języku Visual Basic
       href: visual-basic/getting-started/whats-new.md
-    - name: Rozpocznij
+    - name: Rozpoczęcie pracy
       href: visual-basic/getting-started/index.md
       items:
         - name: Visual Basic — przełomowe zmiany w Visual Studio
@@ -1103,7 +1108,7 @@
           href: visual-basic/programming-guide/program-structure/main-procedure.md
         - name: Referencje i instrukcja Imports
           href: visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md
-        - name: Namespaces
+        - name: Przestrzenie nazw
           href: visual-basic/programming-guide/program-structure/namespaces.md
         - name: Konwencje nazewnictwa
           href: visual-basic/programming-guide/program-structure/naming-conventions.md
@@ -1386,7 +1391,7 @@
               href: visual-basic/language-reference/modifiers/byref.md
             - name: ByVal
               href: visual-basic/language-reference/modifiers/byval.md
-            - name: Domyślny
+            - name: Domyślne
               href: visual-basic/language-reference/modifiers/default.md
             - name: Friend
               href: visual-basic/language-reference/modifiers/friend.md
@@ -1394,7 +1399,7 @@
               href: visual-basic/language-reference/modifiers/in-generic-modifier.md
             - name: Iterator
               href: visual-basic/language-reference/modifiers/iterator.md
-            - name: Key
+            - name: Klucz
               href: visual-basic/language-reference/modifiers/key.md
             - name: Moduł
               href: visual-basic/language-reference/modifiers/module-keyword.md
@@ -1420,7 +1425,7 @@
               href: visual-basic/language-reference/modifiers/overrides.md
             - name: ParamArray
               href: visual-basic/language-reference/modifiers/paramarray.md
-            - name: Częściowe
+            - name: Częściowo
               href: visual-basic/language-reference/modifiers/partial.md
             - name: Private
               href: visual-basic/language-reference/modifiers/private.md
@@ -1436,9 +1441,9 @@
               href: visual-basic/language-reference/modifiers/readonly.md
             - name: Shadows
               href: visual-basic/language-reference/modifiers/shadows.md
-            - name: Shared
+            - name: Udostępnione
               href: visual-basic/language-reference/modifiers/shared.md
-            - name: Static
+            - name: Statyczny
               href: visual-basic/language-reference/modifiers/static.md
             - name: Unicode
               href: visual-basic/language-reference/modifiers/unicode.md
@@ -1630,7 +1635,7 @@
                   href: visual-basic/language-reference/operators/xor-operator.md
         - name: Właściwości
           href: visual-basic/language-reference/properties.md
-        - name: Kwerendy
+        - name: Zapytania
           href: visual-basic/language-reference/queries/index.md
           items:
             - name: 'Aggregate, klauzula'

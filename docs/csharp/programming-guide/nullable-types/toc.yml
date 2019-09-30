@@ -1,7 +1,7 @@
-- name: Typy dopuszczające wartości null
+- name: Typy wartości dopuszczające wartość null
   href: index.md
   items:
-    - name: Używanie typów dopuszczających wartości null
+    - name: Korzystanie z typów wartości dopuszczających wartość null
       href: using-nullable-types.md
-    - name: 'Instrukcje: Identyfikowanie typu dopuszczającego wartość null'
+    - name: 'Instrukcje: identyfikowanie typu wartości dopuszczającego wartość null'
       href: how-to-identify-a-nullable-type.md

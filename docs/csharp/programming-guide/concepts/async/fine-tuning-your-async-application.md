@@ -37,7 +37,7 @@ Możesz dodać precyzję i elastyczność do aplikacji asynchronicznych przy uż
   
  Projekty tworzą interfejs użytkownika, który zawiera przycisk uruchamiający proces i przycisk, który go anuluje, jak pokazano na poniższej ilustracji. Przyciski mają nazwę `startButton` i `cancelButton`.  
   
- ![Okno WPF z przyciskiem Anuluj] Okno (./media/fine-tuning-your-async-application/cancellation-and-start-button.png "dialogowe z przyciskiem uruchamiania i zatrzymywania")  
+ ![Okno WPF z przyciskiem Anuluj](./media/fine-tuning-your-async-application/cancellation-and-start-button.png "dialogowe z przyciskiem uruchamiania i zatrzymywania")  
   
  Możesz pobrać kompletne projekty Windows Presentation Foundation (WPF) z [przykładu asynchronicznego: Dostosuj aplikację](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   

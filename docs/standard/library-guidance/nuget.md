@@ -15,7 +15,7 @@ ms.locfileid: "70895211"
 
 NuGet jest menedżerem pakietów dla ekosystemu .NET i jest głównym sposobem, aby deweloperzy odkrywali i nabywali biblioteki typu open-source platformy .NET. [NuGet.org](https://www.nuget.org/), bezpłatna usługa oferowana przez firmę Microsoft do hostowania pakietów NuGet, jest głównym hostem dla publicznych pakietów NuGet, ale możesz publikować w niestandardowych usługach NuGet, takich jak [MyGet](https://www.myget.org/) i [Azure Artifacts](https://azure.microsoft.com/services/devops/artifacts/).
 
-Pakiet ![NuGet] Pakiet (./media/nuget/nuget-logo.png "NuGet")
+![NuGet](./media/nuget/nuget-logo.png "NuGet")
 
 ## <a name="create-a-nuget-package"></a>Tworzenie pakietu NuGet
 

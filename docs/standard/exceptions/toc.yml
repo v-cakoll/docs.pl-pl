@@ -11,6 +11,8 @@
       href: how-to-explicitly-throw-exceptions.md
     - name: 'Instrukcje: Tworzenie wyjątków zdefiniowanych przez użytkownika'
       href: how-to-create-user-defined-exceptions.md
+    - name: 'Instrukcje: tworzenie wyjątków zdefiniowanych przez użytkownika z zastosowaniem zlokalizowanych komunikatów o wyjątkach'
+      href: how-to-create-localized-exception-messages.md
     - name: Używanie obsługi wyjątków filtrowanych przez użytkownika
       href: using-user-filtered-exception-handlers.md
     - name: 'Instrukcje: Użycie bloków finally'

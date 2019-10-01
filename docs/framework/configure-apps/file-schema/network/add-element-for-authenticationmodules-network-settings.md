@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: d72371921a85ff5a68dd9017f0fe8cf5d28557dd
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: a68434aaa118db60a502c2bcc0bb188b83b0f463
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664238"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698428"
 ---
-# <a name="add-element-for-authenticationmodules-network-settings"></a>\<Dodaj element > dla authenticationModules (Ustawienia sieci)
+# <a name="add-element-for-authenticationmodules-network-settings"></a>\<add > elementu authenticationModules (Ustawienia sieci)
 Dodaje moduł uwierzytelniania do aplikacji.  
   
- \<> konfiguracji  
-\<system.net>  
-\<authenticationModules >  
-\<add>  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<add >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,7 +40,7 @@ Dodaje moduł uwierzytelniania do aplikacji.
   
 |**Atrybut**|**Opis**|  
 |-------------------|---------------------|  
-|`type`|W pełni kwalifikowana nazwa typu (wskazywana przez <xref:System.Type.FullName%2A> Właściwość) i nazwa zestawu (wskazywanym <xref:System.Reflection.Assembly.FullName%2A> przez właściwość) oddzielone przecinkami.|  
+|`type`|W pełni kwalifikowana nazwa typu (wskazywana przez właściwość <xref:System.Type.FullName%2A>) i nazwa zestawu (wskazywanym przez właściwość <xref:System.Reflection.Assembly.FullName%2A>) oddzielone przecinkami.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -52,9 +52,9 @@ Dodaje moduł uwierzytelniania do aplikacji.
 |[authenticationModules](authenticationmodules-element-network-settings.md)|Określa moduły używane do uwierzytelniania żądań sieci.|  
   
 ## <a name="remarks"></a>Uwagi  
- `add` Element dodaje moduł uwierzytelniania na końcu listy zarejestrowanych modułów uwierzytelniania. Moduły uwierzytelniania są wywoływane w kolejności, w jakiej zostały dodane do listy.  
+ Element `add` dodaje moduł uwierzytelniania na końcu listy zarejestrowanych modułów uwierzytelniania. Moduły uwierzytelniania są wywoływane w kolejności, w jakiej zostały dodane do listy.  
   
- Wartość `type` atrybutu powinna być prawidłową nazwą typu i odpowiadającą jej nazwą zestawu, rozdzieloną przecinkami.  
+ Wartość atrybutu `type` powinna być prawidłową nazwą typu i odpowiadającą jej nazwą zestawu, rozdzieloną przecinkami.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
  Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  

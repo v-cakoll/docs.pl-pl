@@ -8,129 +8,132 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-ms.openlocfilehash: 1a8cd568f1a9a05721f311cc72a22bfc2b6bcfc9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8309b9bd63a2a3d1b0b56f97be121a06b78d6b6
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625457"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700134"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Procedury rozwiązywania problemów (Visual Basic)
-Ta strona zawiera listę typowych problemów występujących podczas pracy z procedurami.  
+
+Ta strona zawiera listę typowych problemów, które mogą wystąpić podczas pracy z procedurami.
+
+## <a name="returning-an-array-type-from-a-function-procedure"></a>Zwracanie typu tablicy z procedury funkcji
+
+ Jeśli procedura `Function` zwróci typ danych tablicy, nie można użyć nazwy `Function` do przechowywania wartości w elementach tablicy. Jeśli podjęto próbę wykonania tej czynności, kompilator interpretuje ją jako wywołanie `Function`. Poniższy przykład generuje błędy kompilatora.
+
+ ```vb
+ Function AllOnes(n As Integer) As Integer()
+     For i = 1 To n - 1
+         ' The following statement generates a COMPILER ERROR.
+         AllOnes(i) = 1
+     Next
+     ' The following statement generates a COMPILER ERROR.
+     Return AllOnes()
+ End Function
+ ```
   
-## <a name="returning-an-array-type-from-a-function-procedure"></a>Zwraca typ tablicy z procedury — funkcja  
- Jeśli `Function` procedury zwraca typ danych tablicy, nie można użyć `Function` nazwy do przechowywania wartości elementów w tablicy. Jeśli użytkownik spróbuje to zrobić, kompilator zinterpretuje ją jako wywołanie `Function`. Poniższy przykład generuje błędy kompilatora.  
-  
- `Function allOnes(ByVal n As Integer) As Integer()`  
-  
- `For i As Integer = 1 To n - 1`  
-  
- `' The following statement generates a`   `COMPILER ERROR`  `.`  
-  
- `allOnes(i) = 1`  
-  
- `Next i`  
-  
- `' The following statement generates a`   `COMPILER ERROR`  `.`  
-  
- `Return allOnes()`  
-  
- `End Function`  
-  
- Wykonywanie instrukcji `allOnes(i) = 1` generuje błąd kompilatora, ponieważ może on wywołać `allOnes` z nieprawidłowym argumentem niewłaściwy typ danych (pojedynczego `Integer` zamiast `Integer` tablicy). Wykonywanie instrukcji `Return allOnes()` generuje błąd kompilatora, ponieważ może on wywołać `allOnes` z żadnego argumentu.  
-  
- **Właściwe podejście:** Aby móc modyfikować elementy w tablicy, która jest zwracana, należy zdefiniować tablicę wewnętrzny jako zmienna lokalna. Poniższy przykład skompiluje się bez błędów.  
-  
- [!code-vb[VbVbcnProcedures#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#66)]  
-  
-## <a name="argument-not-being-modified-by-procedure-call"></a>Argument nie jest modyfikowany przez wywołanie procedury  
- Jeśli zamierzasz zezwolić procedury można zmienić elementu programistycznego, bazowy argumentu w wywoływanym kodzie, musisz przekazać go przez odwołanie. Ale procedury mogą uzyskać dostęp do elementów argumentu typu odwołania, nawet wtedy, gdy przekazywane przez wartość.  
-  
-- **Bazowy zmiennej**. Aby zezwolić na procedury zastąpić wartość zmiennej bazowego samego elementu, procedury należy zadeklarować parametr [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Ponadto kod wywołujący nie ująć argument w nawiasach, ponieważ mogłoby, które zastępują `ByRef` mechanizm przekazywania.  
-  
-- **Elementy typu odwołania**. Przy deklarowaniu parametru [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), procedury nie można zmodyfikować bazowego zmiennej elementu. Jednak jeśli argument jest typem referencyjnym, procedura modyfikować elementów członkowskich obiektu, na który wskazuje, nawet jeśli nie można zastąpić, wartość zmiennej. Na przykład jeśli argument jest zmienną tablicową, procedury nie można przypisać nową tablicę do niego, ale można zmienić, co najmniej jeden z jego elementów. Zmienione elementy są odzwierciedlane w podstawowej zmienną tablicy w wywoływanym kodzie.  
-  
- W poniższym przykładzie zdefiniowano dwie procedury potrwać zmienną tablicową według wartości, które działają na jego elementach. Procedura `increase` po prostu dodaje je do każdego elementu. Procedura `replace` przypisuje nową tablicę z parametrem `a()` , a następnie dodaje je do każdego elementu. Jednak ponowne przypisanie nie ma wpływu na podstawowe zmienną tablicy w wywoływanym kodzie ponieważ `a()` zadeklarowano `ByVal`.  
-  
- [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
-  
- [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]  
-  
- Poniższy przykład wykonuje wywołania `increase` i `replace`.  
-  
- [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
-  
- Pierwszy `MsgBox` wywołać Wyświetla "po increase(n): 11, 21, 31, 41". Ponieważ `n` jest typem referencyjnym `increase` można zmienić jej członków, nawet jeśli jest przekazywana `ByVal`.  
-  
- Drugi `MsgBox` wywołać Wyświetla "po replace(n): 11, 21, 31, 41". Ponieważ `n` jest przekazywany `ByVal`, `replace` nie można zmodyfikować zmienną `n` przez przypisanie nowej tablicy. Gdy `replace` tworzy nowe wystąpienie tablicy `k` i przypisuje go do zmiennej lokalnej `a`, utracie odwołanie do `n` przekazany kod wywołujący. Gdy zwiększa członkowie `a`, tylko lokalnej tablicy `k` dotyczy problem.  
-  
- **Właściwe podejście:** Aby można było zmodyfikować samego podstawowego elementu zmiennej, przekazać go przez odwołanie. Poniższy kod przedstawia zmiany w deklaracji `replace` która umożliwia zastąpienie jednej tablicy na inną w wywoływanym kodzie.  
-  
- [!code-vb[VbVbcnProcedures#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#64)]  
-  
-## <a name="unable-to-define-an-overload"></a>Nie można zdefiniować przeciążenia  
- Jeśli chcesz zdefiniować przeciążoną wersję procedurę, musisz podać samą nazwę, ale inny podpis. Jeśli kompilator nie można odróżnić swojej deklaracji z przeciążenia z tym samym podpisie, spowoduje wygenerowanie błędu.  
-  
- *Podpisu* procedura zależy od nazwy procedury i listy parametrów. Każde przeciążenie musi mieć taką samą nazwę jak wszystkie inne przeciążenia, ale muszą różnić się od wszystkich z nich w co najmniej jeden ze składników podpisu. Aby uzyskać więcej informacji, zobacz [przeciążanie procedury](./procedure-overloading.md).  
-  
- Następujące elementy, mimo że odnoszą się do listy parametrów nie są składniki sygnatury procedury:  
-  
-- Słowa kluczowe modyfikator procedury, takich jak `Public`, `Shared`, i `Static`  
-  
-- Nazwy parametrów  
-  
-- Słowa kluczowe modyfikator parametrów, takich jak `ByRef` i `Optional`  
-  
-- Typ danych wartości zwracanej (z wyjątkiem operatora konwersji)  
-  
- Procedury nie mogą przeciążać przez zróżnicowanie tylko co najmniej jeden z wymienionych elementów.  
-  
- **Właściwe podejście:** Aby można było zdefiniować przeciążenia procedurę, trzeba zmieniać podpis. Musisz użyć takiej samej nazwie, gdy trzeba zmieniać liczbę, kolejność lub typów danych parametrów. Ogólna procedura może się różnić liczbę parametrów typu. W operator konwersji ([funkcja CType](../../../../visual-basic/language-reference/functions/ctype-function.md)), zwracany typ może się różnić.  
-  
-### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Przeciążenia rozdzielczość z opcjonalnymi i ParamArray-argumenty  
- Jeśli są przeciążanie procedury z jednej lub kilku [opcjonalne](../../../../visual-basic/language-reference/modifiers/optional.md) parametrów lub [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametru, użytkownik musi uniknąć duplikowania wszystkich *niejawne przeładowania*. Aby uzyskać informacje, zobacz [zagadnienia dotyczące przeciążania procedur](./considerations-in-overloading-procedures.md).  
-  
-## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a>Wywoływanie niewłaściwą wersję procedury przeciążenia  
- Jeśli procedura ma kilka przeciążone wersje, należy należy zapoznać się z ich list parametrów i zrozumieć, jak Visual Basic jest rozpoznawana jako wywołania między przeciążenia. W przeciwnym razie można wywoływać przeciążenia innym niż zamierzony.  
-  
- Po określeniu przeciążenia, które ma zostać wywołana Uważaj obserwować następujące reguły:  
-  
-- Podaj prawidłową liczbę argumentów i w odpowiedniej kolejności.  
-  
-- W idealnym przypadku argumenty powinny mieć dokładnie te same typy danych jako odpowiednich parametrów. W każdym przypadku typ danych każdego argumentu musi mogą zostać poszerzone do, jego odpowiadającego mu parametru. Ta zasada obowiązuje nawet w przypadku [Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md) równa `Off`. Jeśli przeciążenia wymaga wszelkie konwersja zawężająca z listy argumentów, które przeciążenia nie jest uprawnione do wywołania.  
-  
-- Jeśli podasz argumenty, które wymagają rozszerzenia, należy ich typów danych, jak najbliżej odpowiednich typów danych parametrów. Jeśli dwa lub więcej przeciążenia akceptuje argument typów danych, kompilator rozpoznaje wywołania do przeciążenia, które wymaga minimalnej liczbie rozszerzanie.  
-  
- Można zmniejszyć ryzyko niezgodności typu danych przy użyciu [funkcja CType](../../../../visual-basic/language-reference/functions/ctype-function.md) konwersji — słowo kluczowe podczas przygotowywania argumenty.  
-  
-### <a name="overload-resolution-failure"></a>Błąd rozpoznawania przeciążenia  
- Po wywołaniu procedury przeciążenia, kompilator spróbuje wyeliminować wszystkie oprócz jednego z przeciążeń. Jeśli się powiedzie, jest rozpoznawana jako wywołanie tego przeciążenia. Jeśli eliminuje wszystkie przeciążenia lub nie można zmniejszyć, przeciążenia kwalifikujących się do pojedynczego Release candidate, spowoduje wygenerowanie błędu.  
-  
- Poniższy przykład ilustruje procesu rozpoznawania przeciążenia.  
-  
- [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
-  
- [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
-  
- W pierwszym wywołaniu kompilator eliminuje pierwsze przeciążenie, ponieważ typ pierwszego argumentu (`Short`) powoduje zawężenie typu odpowiadającego mu parametru (`Byte`). Następnie eliminuje trzecie przeciążenie ponieważ każdy argument typu w drugie przeciążenie (`Short` i `Single`) rozszerza się na odpowiedni typ w trzecie przeciążenie (`Integer` i `Single`). Drugie przeciążenie wymaga mniej rozszerzenia, dlatego kompilator używa go na potrzeby wywołania.  
-  
- W drugim wywołaniu kompilator nie może wyeliminować żadnego przeciążenia na podstawie zawężanie. Eliminuje to trzecie przeciążenie dla tego samego powodu, tak jak w pierwszym wywołaniu, ponieważ może wywołać drugie przeciążenie z mniej rozszerzanie typy argumentów. Jednak kompilator nie może rozpoznać między przeciążeniami pierwszego i drugiego. Każda z nich ma jeden typ zdefiniowany parametr, który rozszerza się na odpowiedni typ w innym (`Byte` do `Short`, ale `Single` do `Double`). Kompilator generuje w związku z tym błędem rozpoznawania przeciążenia.  
-  
- **Właściwe podejście:** Aby umożliwić wywoływanie procedury przeciążenia bez niejasności, należy użyć [funkcja CType](../../../../visual-basic/language-reference/functions/ctype-function.md) do dopasowania typy danych argumentów do typów parametrów. W poniższym przykładzie pokazano wywołanie `z` rozdzielczości, wymusza na drugie przeciążenie.  
-  
- [!code-vb[VbVbcnProcedures#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#65)]  
-  
-### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Przeciążenia rozdzielczość z opcjonalnymi i ParamArray-argumenty  
- Jeśli dwa przeciążenia procedury, posiadające identyczne oznaczenie, z tą różnicą, że ostatni parametr jest zadeklarowana [opcjonalnie](../../../../visual-basic/language-reference/modifiers/optional.md) w jednym i [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) w innych, kompilator rozpoznaje wywołania tej procedury zgodnie z najlepiej dopasowany. Aby uzyskać więcej informacji, zobacz [rozdzielczość przeciążenia](./overload-resolution.md).  
-  
+ Instrukcja `AllOnes(i) = 1` generuje błąd kompilatora, ponieważ wydaje się wywołać metodę `AllOnes` z argumentem nieprawidłowego typu danych (skalarną `Integer` zamiast tablicą `Integer`). Instrukcja `Return AllOnes()` generuje błąd kompilatora, ponieważ wydaje się wywołać `AllOnes` bez argumentu.
+
+ **Poprawne podejście:** Aby można było modyfikować elementy tablicy, która ma zostać zwrócona, zdefiniuj tablicę wewnętrzną jako zmienną lokalną. Poniższy przykład kompiluje się bez błędu.
+
+ [!code-vb[VbVbcnProcedures#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#66)]
+
+## <a name="argument-not-being-modified-by-procedure-call"></a>Argument nie jest modyfikowany przez wywołanie procedury
+
+ Jeśli zamierzasz zezwolić procedurze na zmianę elementu programistycznego bazowego argumentu w wywoływanym kodzie, musisz przekazać go przez odwołanie. Ale procedura może uzyskać dostęp do elementów argumentu typu odwołania, nawet jeśli przekażesz go przez wartość.
+
+- **Zmienna bazowa**. Aby zezwolić procedurze na zastępowanie wartości bazowego elementu zmiennej, procedura musi deklarować parametr [ByRef](../../../language-reference/modifiers/byref.md). Ponadto kod wywołujący nie może ujmować argumentu w nawiasach, ponieważ spowodowałoby to przesłonięcie mechanizmu przekazywania `ByRef`.
+
+- **Elementy typu referencyjnego**. Jeśli deklarujesz parametr [ByVal](../../../language-reference/modifiers/byval.md), procedura nie może zmodyfikować bazowego elementu zmiennej. Jeśli jednak argument jest typem referencyjnym, procedura może modyfikować elementy członkowskie obiektu, do którego wskazuje, nawet jeśli nie może zastąpić wartości zmiennej. Na przykład, jeśli argument jest zmienną tablicową, procedura nie może przypisać do niej nowej tablicy, ale może zmienić jeden lub więcej elementów. Zmienione elementy są odzwierciedlone w źródłowej zmiennej tablicowej w kodzie wywołującym.
+
+ W poniższym przykładzie zdefiniowano dwie procedury, które pobierają zmienną tablicową według wartości i działają na jej elementach. Procedura `increase` po prostu dodaje jeden do każdego elementu. Procedura `replace` przypisuje nową tablicę do parametru `a()`, a następnie dodaje jeden do każdego elementu. Jednak ponowne przypisanie nie ma wpływu na podstawową zmienną tablicową w kodzie wywołującym, ponieważ `a()` jest zadeklarowany `ByVal`.
+
+ [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]
+
+ [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]
+
+ Poniższy przykład wykonuje wywołania `increase` i `replace`.
+
+ [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]
+
+ Pierwsze wywołanie `MsgBox` wyświetla "po zwiększeniu (n): 11, 21, 31, 41". Ponieważ `n` jest typem referencyjnym, `increase` może zmienić jego składowe, nawet jeśli jest on zakończony `ByVal`.
+
+ Drugie wywołanie `MsgBox` wyświetla "po zamianie (n): 11, 21, 31, 41". Ponieważ `n` jest przenoszona `ByVal`, `replace` nie można zmodyfikować zmiennej `n`, przypisując do niej nową tablicę. Gdy `replace` tworzy nowe wystąpienie tablicy `k` i przypisuje go do zmiennej lokalnej `a`, utraci odwołanie do `n` przekazaną przez wywołujący kod. Po zwiększeniu liczby elementów członkowskich `a` dotyczy tylko tablicy lokalnej `k`.
+
+ **Poprawne podejście:** Aby można było zmodyfikować bazowy element zmiennej, przekaż go przez odwołanie. Poniższy przykład pokazuje zmianę w deklaracji `replace`, która pozwala na zastępowanie jednej tablicy innym w kodzie wywołującym.
+
+ [!code-vb[VbVbcnProcedures#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#64)]
+
+## <a name="unable-to-define-an-overload"></a>Nie można zdefiniować przeciążenia
+
+ Jeśli chcesz zdefiniować przeciążoną wersję procedury, należy użyć tej samej nazwy, ale innej sygnatury. Jeśli kompilator nie może odróżnić deklaracji od przeciążenia z tym samym podpisem, generuje błąd.
+
+ *Podpis* procedury jest określany na podstawie nazwy procedury i listy parametrów. Każde Przeciążenie musi mieć taką samą nazwę jak wszystkie inne przeciążenia, ale muszą się różnić od wszystkich w co najmniej jednym z pozostałych składników podpisu. Aby uzyskać więcej informacji, zobacz [przeciążanie procedur](procedure-overloading.md).
+
+ Następujące elementy, chociaż odnoszą się do listy parametrów, nie są częścią podpisu procedury:
+
+- Słowa kluczowe modyfikujące procedurę, takie jak `Public`, `Shared` i `Static`
+
+- Nazwy parametrów
+
+- Słowa kluczowe modyfikatora parametrów, takie jak `ByRef` i `Optional`
+
+- Typ danych wartości zwracanej (z wyjątkiem operatora konwersji)
+
+ Nie można przeciążyć procedury, zmieniając tylko jeden lub więcej z poprzednich elementów.
+
+ **Poprawne podejście:** Aby można było zdefiniować Przeciążenie procedury, należy zmienić sygnaturę. Ponieważ należy użyć tej samej nazwy, należy zmienić liczbę, kolejność lub typy danych parametrów. W procedurze ogólnej można zmienić liczbę parametrów typu. W operatorze konwersji ([Funkcja CType](../../../language-reference/functions/ctype-function.md)) można zróżnicować typ zwracany.
+
+### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Rozpoznawanie przeciążenia przy użyciu argumentów opcjonalnych i ParamArray
+
+ Jeśli przeładujesz procedurę z co najmniej jednym parametrem [opcjonalnym](../../../language-reference/modifiers/optional.md) lub parametrem [ParamArray](../../../language-reference/modifiers/paramarray.md) , musisz uniknąć duplikowania dowolnego *niejawnego przeciążenia*. Aby uzyskać więcej informacji, zobacz [zagadnienia dotyczące przeciążania procedur](considerations-in-overloading-procedures.md).
+
+## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a>Wywoływanie nieprawidłowej wersji procedury przeciążonej
+
+ Jeśli procedura zawiera kilka przeciążonych wersji, należy zapoznać się ze wszystkimi ich listami parametrów i zrozumieć, jak Visual Basic rozpoznaje wywołania między przeciążeniami. W przeciwnym razie można wywołać Przeciążenie inne niż zamierzone.
+
+ Po ustaleniu, którego przeciążenia chcesz wywołać, należy uważnie przestrzegać następujących zasad:
+
+- Podaj poprawną liczbę argumentów, a w odpowiedniej kolejności.
+
+- W idealnym przypadku argumenty powinny mieć dokładnie te same typy danych co odpowiednie parametry. W każdym przypadku typ danych każdego argumentu musi być rozszerzony do odpowiadającego mu parametru. Jest to prawdziwe nawet z [opcją Strict Option](../../../language-reference/statements/option-strict-statement.md) ustawioną na `Off`. Jeśli Przeciążenie wymaga wszelkiej konwersji zawężanej z listy argumentów, Przeciążenie nie jest uprawnione do wywoływania.
+
+- W przypadku podania argumentów, które wymagają poszerzenia, należy sprawić, aby ich typy danych były zbliżone jak najprawdopodobniej do odpowiednich typów danych parametrów. Jeśli co najmniej dwa przeciążenia akceptują typy danych argumentów, kompilator rozpoznaje wywołanie przeciążenia, które wywołuje najmniejszą ilość rozszerzania.
+
+ Podczas przygotowywania argumentów można zmniejszyć prawdopodobieństwo niezgodności typów danych przy użyciu słowa kluczowego konwersji [funkcji CType](../../../language-reference/functions/ctype-function.md) .
+
+### <a name="overload-resolution-failure"></a>Niepowodzenie rozpoznawania przeciążenia
+
+ Gdy wywołujesz przeciążoną procedurę, kompilator próbuje wyeliminować wszystkie oprócz jednego z przeciążeń. Jeśli to się powiedzie, rozwiązuje wywołanie do tego przeciążenia. Jeśli eliminuje wszystkie przeciążenia lub nie może zmniejszyć kwalifikujących się przeciążeń do pojedynczego kandydata, generuje błąd.
+
+ Poniższy przykład ilustruje proces rozwiązywania przeciążenia.
+
+ [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]
+
+ [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]
+
+ W pierwszym wywołaniu kompilator eliminuje pierwsze Przeciążenie, ponieważ typ pierwszego argumentu (`Short`) jest wąski do typu odpowiadającego parametru (`Byte`). Następnie eliminuje trzecie Przeciążenie, ponieważ każdy typ argumentu w drugim przeciążeniu (`Short` i `Single`) poszerza do odpowiedniego typu w trzecim przeciążenia (`Integer` i `Single`). Drugie Przeciążenie wymaga mniej poszerzania, więc kompilator używa go do wywołania.
+
+ W drugim wywołaniu kompilator nie może wyeliminować żadnych przeciążeń na podstawie zawężania. Eliminuje trzecie Przeciążenie z tego samego powodu, co w pierwszym wywołaniu, ponieważ może wywoływać drugie Przeciążenie przy mniejszej poszerzeniu typów argumentów. Jednak kompilator nie może rozpoznać pierwszego i drugiego przeciążenia. Każdy z nich ma jeden zdefiniowany typ parametru, który jest poszerzany do odpowiedniego typu w drugim (`Byte` do `Short`, ale `Single` do `Double`). W związku z tym kompilator generuje błąd rozpoznawania przeciążenia.
+
+ **Poprawne podejście:** Aby można było wywołać przeciążoną procedurę bez niejednoznaczności, należy użyć [funkcji CType](../../../language-reference/functions/ctype-function.md) do dopasowania typów danych argumentów do typów parametrów. W poniższym przykładzie pokazano wywołanie `z`, które wymusza rozdzielczość do drugiego przeciążenia.
+
+ [!code-vb[VbVbcnProcedures#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#65)]
+
+### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Rozpoznawanie przeciążenia przy użyciu argumentów opcjonalnych i ParamArray
+
+ Jeśli dwa przeciążenia procedury mają identyczne podpisy, z wyjątkiem tego, że ostatni parametr jest zadeklarowany jako [opcjonalny](../../../language-reference/modifiers/optional.md) w jednym i [ParamArray](../../../language-reference/modifiers/paramarray.md) w drugim, kompilator rozpoznaje wywołanie tej procedury zgodnie z najbliższym dopasowaniem. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie przeciążenia](overload-resolution.md).
+
 ## <a name="see-also"></a>Zobacz także
 
-- [Procedury](./index.md)
-- [Sub, procedury](./sub-procedures.md)
-- [Procedury funkcji](./function-procedures.md)
-- [Procedury właściwości](./property-procedures.md)
-- [Procedury operatorów](./operator-procedures.md)
-- [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
-- [Przeciążanie procedury](./procedure-overloading.md)
-- [Zagadnienia dotyczące przeciążania procedur](./considerations-in-overloading-procedures.md)
-- [Rozpoznanie przeciążenia](./overload-resolution.md)
+- [Procedury](index.md)
+- [Sub, procedury](sub-procedures.md)
+- [Procedury funkcji](function-procedures.md)
+- [Procedury właściwości](property-procedures.md)
+- [Procedury operatorów](operator-procedures.md)
+- [Parametry i argumenty procedur](procedure-parameters-and-arguments.md)
+- [Przeciążanie procedury](procedure-overloading.md)
+- [Zagadnienia dotyczące przeciążania procedur](considerations-in-overloading-procedures.md)
+- [Rozpoznanie przeciążenia](overload-resolution.md)

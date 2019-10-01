@@ -8,18 +8,18 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 449146612938700f59f5e2ec761526d1dc66a3fc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 810e942394c75c192e4423afe4c674ef3a2b9900
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663957"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697507"
 ---
-# <a name="systemnet-element-network-settings"></a>\<System .net >, element (Ustawienia sieci)
+# <a name="systemnet-element-network-settings"></a>\<system .net >, element (Ustawienia sieci)
 Zawiera ustawienia, które określają, w jaki sposób .NET Framework nawiązuje połączenie z siecią.  
   
- \<> konfiguracji  
-\<system.net>  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1 **@no__t -3system. net >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,7 +43,7 @@ Zawiera ustawienia, które określają, w jaki sposób .NET Framework nawiązuje
 |[defaultProxy](defaultproxy-element-network-settings.md)|Konfiguruje serwer proxy protokołu HTTP (Hypertext Transfer Protocol).|  
 |[mailSettings](mailsettings-element-network-settings.md)|Konfiguruje opcje wysyłania poczty SMTP (Simple Mail Transport Protocol).|  
 |[requestCaching](requestcaching-element-network-settings.md)|Kontroluje mechanizm buforowania dla żądań sieci.|  
-|[Ustawienia](settings-element-network-settings.md)|Konfiguruje podstawowe opcje sieci dla klas w <xref:System.Net> i powiązanych podrzędnych obszarach nazw.|  
+|[Ustawienia](settings-element-network-settings.md)|Konfiguruje podstawowe opcje sieci dla klas w <xref:System.Net> i pokrewnych podrzędnych obszarach nazw.|  
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Określa moduły, które mają być używane do żądania informacji z hostów internetowych.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
@@ -53,10 +53,10 @@ Zawiera ustawienia, które określają, w jaki sposób .NET Framework nawiązuje
 |[skonfigurować](../configuration-element.md)|Zawiera ustawienia dla wszystkich przestrzeni nazw.|  
   
 ## <a name="remarks"></a>Uwagi  
- <xref:System.Net> [ ElementSystem.net>zawieraustawieniadlaklaswi\<](system-net-element-network-settings.md) powiązanych podrzędnych obszarach nazw. Ustawienia Konfiguruj moduły uwierzytelniania, zarządzanie połączeniami, ustawienia poczty, serwer proxy i moduły żądania internetowe, aby otrzymywać informacje z hostów internetowych.  
+ Element [@no__t -1System. net >](system-net-element-network-settings.md) zawiera ustawienia dla klas w <xref:System.Net> i powiązanych przestrzeniach nazw. Ustawienia Konfiguruj moduły uwierzytelniania, zarządzanie połączeniami, ustawienia poczty, serwer proxy i moduły żądania internetowe, aby otrzymywać informacje z hostów internetowych.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia typową konfigurację używaną przez <xref:System.Net> klasy.  
+ W poniższym przykładzie przedstawiono typową konfigurację używaną przez klasy <xref:System.Net>.  
   
 ```xml  
 <configuration>  

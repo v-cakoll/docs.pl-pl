@@ -3,14 +3,14 @@ title: C#Obsługa wersji — C# Przewodnik
 description: Informacje o C# działaniu wersji i programie .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: bfad7abe6b2b5c6a19324656963a79212a317110
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4c0d5b5c2ac40cb27c90b4908623dc75b26a80cc
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926579"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699924"
 ---
-# <a name="versioning-in-c"></a>Przechowywanie wersji w języku C\#
+# <a name="versioning-in-c"></a>Przechowywanie wersji w języku C @ no__t-0
 
 W tym samouczku dowiesz się, jakie wersje są używane w programie .NET. Poznasz również czynniki, które należy wziąć pod uwagę w przypadku przechowywania wersji biblioteki, a także uaktualniania do nowej wersji biblioteki.
 
@@ -23,11 +23,11 @@ Jako deweloper, który utworzył biblioteki platformy .NET do użytku publiczneg
 [Wersja semantyczna](https://semver.org/) (SemVer for Short) to Konwencja nazewnictwa stosowana do wersji biblioteki do oznaczania określonych zdarzeń punktów kontrolnych.
 W idealnym przypadku informacje o wersji, którą udostępnia Twoja biblioteka, powinny pomóc deweloperom w ustaleniu zgodności z projektami, które korzystają ze starszych wersji tej samej biblioteki.
 
-Najbardziej podstawowym podejściem do SemVer jest format `MAJOR.MINOR.PATCH`3 składników, gdzie:
+Najbardziej podstawowym podejściem do SemVer jest format 3 składników `MAJOR.MINOR.PATCH`, gdzie:
 
-* `MAJOR`zwiększa się po wprowadzeniu niezgodnych zmian interfejsu API
-* `MINOR`zwiększa się w przypadku dodawania funkcji w sposób zgodny z poprzednimi wersjami
-* `PATCH`zwiększa się w przypadku wprowadzania poprawek błędów zgodnych z poprzednimi wersjami
+- `MAJOR` jest zwiększana w przypadku wprowadzania niezgodnych zmian interfejsu API
+- `MINOR` jest zwiększana w przypadku dodawania funkcji w sposób zgodny z poprzednimi wersjami
+- `PATCH` jest zwiększana w przypadku wprowadzania poprawek błędów zgodnych z poprzednimi wersjami
 
 Istnieją również sposoby określania innych scenariuszy, takich jak wersje wstępne itp. w przypadku stosowania informacji o wersji do biblioteki platformy .NET.
 
@@ -38,31 +38,31 @@ Nowa wersja biblioteki jest zgodna ze źródłem w poprzedniej wersji, jeśli ko
 
 Poniżej przedstawiono kilka kwestii, które należy wziąć pod uwagę podczas próby utrzymania zgodności z poprzednimi wersjami w przypadku starszych wersji biblioteki:
 
-* Metody wirtualne: Po wprowadzeniu wirtualnej metody w nowej wersji oznacza to, że projekty, które przesłaniają tę metodę, będą musiały zostać zaktualizowane. Jest to ogromna istotna zmiana i zdecydowanie odradza się.
-* Sygnatury metod: Podczas aktualizowania zachowania metody, należy również zmienić jego sygnaturę, zamiast tego należy utworzyć Przeciążenie, aby kod wywołujący metodę będzie nadal działał.
+- Metody wirtualne: w przypadku wybrania w nowej wersji metody wirtualnej, która nie jest wirtualna, oznacza to, że projekty, które przesłaniają tę metodę, będą musiały zostać zaktualizowane. Jest to ogromna istotna zmiana i zdecydowanie odradza się.
+- Sygnatury metod: w przypadku aktualizowania zachowania metody wymaga również zmiany jego podpisu, dlatego należy utworzyć Przeciążenie, aby kod wywołujący do tej metody nadal działał.
 Zawsze możesz manipulować starym podpisem metody, aby wywołać nową metodę sygnatury, tak aby implementacja była spójna.
-* [Przestarzały atrybut](programming-guide/concepts/attributes/common-attributes.md#Obsolete): Tego atrybutu można użyć w kodzie, aby określić klasy lub elementy członkowskie klasy, które są przestarzałe i które mogą zostać usunięte w przyszłych wersjach. Dzięki temu deweloperzy korzystający z biblioteki są lepiej przygotowani do istotnych zmian.
-* Argumenty metody opcjonalnej: Po wprowadzeniu wcześniej argumentów metody opcjonalnej lub zmianie ich wartości domyślnej, należy zaktualizować cały kod, który nie dostarcza tych argumentów.
+- [Przestarzały atrybut](programming-guide/concepts/attributes/common-attributes.md#Obsolete): można użyć tego atrybutu w kodzie, aby określić klasy lub członków klasy, które są przestarzałe i które mogą zostać usunięte w przyszłych wersjach. Dzięki temu deweloperzy korzystający z biblioteki są lepiej przygotowani do istotnych zmian.
+- Argumenty metody opcjonalnej: po wprowadzeniu poprzednio opcjonalne argumenty metody obowiązkowo lub zmiany wartości domyślnej, cały kod, który nie dostarcza tych argumentów, będzie musiał zostać zaktualizowany.
 
 > [!NOTE]
-> Obowiązkowe opcjonalne argumenty powinny mieć bardzo niewielki wpływ, zwłaszcza jeśli nie zmieniają zachowań metody.
+> Obowiązkowe argumenty opcjonalne powinny mieć bardzo niewielki wpływ, zwłaszcza jeśli nie zmieni zachowanie metody.
 
 Dzięki temu użytkownicy będą mogli uaktualnić do nowej wersji biblioteki, im większa jest możliwość ich uaktualnienia.
 
 ### <a name="application-configuration-file"></a>Plik konfiguracji aplikacji
 
-Deweloperem platformy .NET jest bardzo wysoka szansa [ `app.config` ](../framework/configure-apps/file-schema/index.md) , że plik jest obecny w większości typów projektów.
-Ten prosty plik konfiguracji może być długim sposobem ulepszania wdrażania nowych aktualizacji. Zazwyczaj należy zaprojektować biblioteki w taki sposób, że informacje, które mogą być regularnie zmieniane, są przechowywane `app.config` w pliku, w ten sposób, gdy takie informacje zostaną zaktualizowane, plik konfiguracyjny starszych wersji musi zostać zastąpiony nowym bez potrzeby ponownej kompilacji biblioteki.
+Deweloperem platformy .NET jest bardzo wysoka szansa, że w większości typów projektów występuje [plik `app.config`](../framework/configure-apps/file-schema/index.md) .
+Ten prosty plik konfiguracji może być długim sposobem ulepszania wdrażania nowych aktualizacji. Zazwyczaj należy zaprojektować biblioteki w taki sposób, że informacje, które prawdopodobnie zmieniają się regularnie, są przechowywane w pliku `app.config`. w ten sposób w przypadku aktualizacji tych informacji plik konfiguracyjny starszych wersji musi zostać zastąpiony nowym programem bez potrzeba ponownej kompilacji biblioteki.
 
 ## <a name="consuming-libraries"></a>Używanie bibliotek
 
 Deweloperzy korzystający z bibliotek .NET zbudowanych przez innych deweloperów najprawdopodobniej wiedzą, że nowa wersja biblioteki może nie być w pełni zgodna z projektem i często można sprawdzić, czy trzeba zaktualizować swój kod, aby pracować z tymi zmianami.
 
-Cieszymy dla Ciebie C# i ekosystem platformy .NET zawiera funkcje i techniki umożliwiające łatwą aktualizację naszej aplikacji do pracy z nowymi wersjami bibliotek, które mogą spowodować istotne zmiany.
+Cieszymy dla Ciebie, C# a ekosystem .NET obejmuje funkcje i techniki, które umożliwiają łatwe aktualizowanie naszej aplikacji do pracy z nowymi wersjami bibliotek, które mogą spowodować istotne zmiany.
 
 ### <a name="assembly-binding-redirection"></a>Przekierowanie powiązania zestawu
 
-Możesz użyć `app.config` pliku do zaktualizowania wersji biblioteki używanej przez aplikację. Dodając jak nazywa się [*przekierowanie powiązania*](../framework/configure-apps/redirect-assembly-versions.md) , możesz użyć nowej wersji biblioteki bez konieczności ponownego kompilowania aplikacji. W poniższym przykładzie pokazano, jak `app.config` zaktualizować plik aplikacji tak, `1.0.1` aby korzystał z `1.0.0` wersji `ReferencedLibrary` poprawki zamiast wersji, która została pierwotnie skompilowana za pomocą programu.
+Plik *App. config* służy do aktualizowania wersji biblioteki używanej przez aplikację. Dodając jak nazywa się [*przekierowanie powiązania*](../framework/configure-apps/redirect-assembly-versions.md), możesz użyć nowej wersji biblioteki bez konieczności ponownego kompilowania aplikacji. W poniższym przykładzie pokazano, jak zaktualizować plik *App. config* aplikacji, tak aby korzystał z wersji poprawki `1.0.1` `ReferencedLibrary` zamiast wersji `1.0.0`, która była pierwotnie skompilowana przy użyciu programu.
 
 ```xml
 <dependentAssembly>
@@ -72,43 +72,43 @@ Możesz użyć `app.config` pliku do zaktualizowania wersji biblioteki używanej
 ```
 
 > [!NOTE]
-> Ta metoda będzie działała tylko wtedy, gdy nowa `ReferencedLibrary` wersja pliku jest binarna zgodna z Twoją aplikacją.
+> Ta metoda będzie działała tylko wtedy, gdy nowa wersja `ReferencedLibrary` będzie binarna zgodna z Twoją aplikacją.
 > W sekcji [zgodność z poprzednimi wersjami](#backwards-compatibility) powyżej znajdziesz zmiany, które należy wyszukać podczas określania zgodności.
 
 ### <a name="new"></a>new
 
-`new` Modyfikator służy do ukrywania dziedziczonych elementów członkowskich klasy bazowej. Jest to jeden ze sposobów, w jaki klasy pochodne mogą odpowiadać na aktualizacje w klasach bazowych.
+Modyfikator `new` służy do ukrywania dziedziczonych elementów członkowskich klasy bazowej. Jest to jeden ze sposobów, w jaki klasy pochodne mogą odpowiadać na aktualizacje w klasach bazowych.
 
 Wykonaj następujące czynności:
 
-[!code-csharp[Sample usage of the 'new' modifier](../../samples/csharp/versioning/new/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'new' modifier](~/samples/csharp/versioning/new/Program.cs#sample)]
 
 **Output**
 
-```
+```console
 A base method
 A derived method
 ```
 
-Z powyższego przykładu można zobaczyć `DerivedClass` , `MyMethod` jak ukrywa metodę `BaseClass`.
-Oznacza to, że gdy klasa bazowa w nowej wersji biblioteki dodaje element członkowski, który już istnieje w klasie pochodnej, można po prostu użyć `new` modyfikatora w składowej klasy pochodnej, aby ukryć element członkowski klasy bazowej.
+Z powyższego przykładu można zobaczyć, jak `DerivedClass` ukrywa metodę `MyMethod` w `BaseClass`.
+Oznacza to, że gdy klasa bazowa w nowej wersji biblioteki dodaje element członkowski, który już istnieje w klasie pochodnej, można po prostu użyć modyfikatora `new` w składowej klasy pochodnej, aby ukryć element członkowski klasy bazowej.
 
-Gdy nie `new` określono modyfikatora, Klasa pochodna domyślnie ukrywa elementy członkowskie powodujące konflikt w klasie bazowej, mimo że zostanie wygenerowane Ostrzeżenie kompilatora, kod nadal zostanie skompilowany. Oznacza to, że po prostu dodanie nowych elementów członkowskich do istniejącej klasy powoduje, że nowa wersja biblioteki jest zgodna z kodem, który od niego zależy.
+Gdy nie jest określony modyfikator `new`, Klasa pochodna domyślnie ukrywa elementy członkowskie powodujące konflikt w klasie bazowej, mimo że zostanie wygenerowane Ostrzeżenie kompilatora, kod nadal zostanie skompilowany. Oznacza to, że po prostu dodanie nowych elementów członkowskich do istniejącej klasy powoduje, że nowa wersja biblioteki jest zgodna z kodem, który od niego zależy.
 
 ### <a name="override"></a>override
 
-`override` Modyfikator oznacza implementację pochodną rozszerza implementację składowej klasy bazowej, a nie ukrywa ją. Do elementu członkowskiego klasy podstawowej należy `virtual` zastosować modyfikator.
+Modyfikator `override` oznacza implementację pochodną rozszerza implementację składowej klasy bazowej, a nie ukrywa ją. Element członkowski klasy bazowej musi mieć zastosowany modyfikator `virtual`.
 
 [!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
 
 **Output**
 
-```
+```console
 Base Method One: Method One
 Derived Method One: Derived Method One
 ```
 
-`override` Modyfikator jest oceniany w czasie kompilacji, a kompilator zgłosi błąd, jeśli nie znajdzie wirtualnego elementu członkowskiego do przesłonięcia.
+Modyfikator `override` jest oceniany w czasie kompilacji, a kompilator zgłosi błąd, jeśli nie znajdzie wirtualnego elementu członkowskiego do przesłonięcia.
 
 Wiedza na temat omawianych technik, a także zrozumienie, jakie sytuacje ich używania, będzie zbyt długim sposobem, aby zwiększyć łatwość przechodzenia między wersjami biblioteki.
  

@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-ms.openlocfilehash: 20a586e945a889d1fd8a8d4c5c09c8b790c56fc3
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f8209ea89ac8cd214389feddee8c475e10bc939a
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664015"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697819"
 ---
-# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<Usuń element > dla webRequestModules (Ustawienia sieci)
+# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<remove > elementu webRequestModules (Ustawienia sieci)
 Usuwa niestandardowy moduł żądania sieci Web z aplikacji.  
   
- \<> konfiguracji  
-\<system.net>  
-\<webRequestModules>  
-\<remove>  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<remove >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -52,16 +52,16 @@ Usuwa niestandardowy moduł żądania sieci Web z aplikacji.
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Określa moduły, które mają być używane do żądania informacji z hostów sieciowych.|  
   
 ## <a name="remarks"></a>Uwagi  
- `remove` Element usuwa zarejestrowany moduł żądania sieci Web dla określonego prefiksu URI.  
+ Element `remove` usuwa zarejestrowany moduł żądania sieci Web dla określonego prefiksu URI.  
   
- Wartość `prefix` atrybutu powinna być wiodącymi znakami prawidłowego identyfikatora URI — na przykład "`http`" lub "`http://www.contoso.com`".  
+ Wartość atrybutu `prefix` powinna być wiodącymi znakami prawidłowego identyfikatora URI — na przykład "`http`" lub "`http://www.contoso.com`".  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
  Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
   
 ## <a name="example"></a>Przykład  
 
-Poniższy przykład usuwa istniejący moduł żądania sieci Web dla protokołu HTTP, a następnie rejestruje nowy niestandardowy moduł żądania sieci Web dla żądań `www.contoso.com`http.
+Poniższy przykład usuwa istniejący moduł żądania sieci Web dla protokołu HTTP, a następnie rejestruje nowy niestandardowy moduł żądania sieci Web dla żądań HTTP do `www.contoso.com`.
   
 ```xml  
 <configuration>  

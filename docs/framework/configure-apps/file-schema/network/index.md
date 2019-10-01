@@ -12,15 +12,17 @@ helpviewer_keywords:
 - connections [.NET Framework], network configuration elements
 - network resources, network configuration elements
 ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
-ms.openlocfilehash: 0f5d762a2b688bebcb7c027be6c639b6d64c069d
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5e3bd1b1734fc7fba50b72785531a8b001d6d741
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664107"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698151"
 ---
 # <a name="network-settings-schema"></a>Schemat ustawień sieci
-Ustawienia sieci określają, w jaki sposób .NET Framework nawiązuje połączenie z Internetem. W poniższej tabeli opisano funkcję każdego podrzędnego elementu konfiguracji w ramach [ \<elementu System .net > (ustawienia sieciowe)](system-net-element-network-settings.md).  
+Ustawienia sieci określają, w jaki sposób .NET Framework nawiązuje połączenie z Internetem.
+
+Ustawienia @no__t -0system. net > określają, jak .NET Framework łączy się z siecią. W poniższej tabeli opisano funkcję każdego podrzędnego elementu konfiguracji w ramach [elementu \<System .net > (Ustawienia sieci)](system-net-element-network-settings.md).  
   
 |Element|Opis|  
 |-------------|-----------------|  
@@ -31,13 +33,13 @@ Ustawienia sieci określają, w jaki sposób .NET Framework nawiązuje połącze
 |[\<requestCaching >, element (Ustawienia sieci)](requestcaching-element-network-settings.md)|Kontroluje mechanizm buforowania dla żądań sieci.|  
 |[\<webRequestModules >, element (Ustawienia sieci)](webrequestmodules-element-network-settings.md)|Określa moduły używane do żądania informacji z hostów internetowych.|  
   
- Ustawienia identyfikatora URI określają, w jaki sposób .NET Framework obsługuje adresy sieci Web wyrażone przy użyciu Uniform Resource Identifier (URI). W poniższej tabeli opisano funkcję każdego podrzędnego elementu konfiguracji w ramach [ \<identyfikatora URI > element (ustawienia identyfikatora URI)](uri-element-uri-settings.md).  
+Ustawienia > \<uri określają, jak .NET Framework obsługuje adresy sieci Web wyrażone przy użyciu Uniform Resource Identifier (URI). W poniższej tabeli opisano funkcję każdego podrzędnego elementu konfiguracji w ramach [elementu \<uri > (ustawienia identyfikatora URI)](uri-element-uri-settings.md).  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> IDN — element (ustawienia identyfikatora URI)](idn-element-uri-settings.md)|Określa, czy do nazw domen są stosowane analizowanie międzynarodowych nazw domen (IDN).|  
-|[\<iriParsing >, element (ustawienia identyfikatora URI)](iriparsing-element-uri-settings.md)|Określa <xref:System.Uri> , czy do i czy należy zastosować analizę IRI (International Resource Identifier).|  
-|[\<schemeSettings >, element (ustawienia identyfikatora URI)](schemesettings-element-uri-settings.md)|Określa, w <xref:System.Uri> jaki sposób będzie analizowana dla określonych schematów.|  
+|[\<idn >, element (ustawienia identyfikatora URI)](idn-element-uri-settings.md)|Określa, czy do nazw domen są stosowane analizowanie międzynarodowych nazw domen (IDN).|  
+|[\<iriParsing >, element (ustawienia identyfikatora URI)](iriparsing-element-uri-settings.md)|Określa, czy do <xref:System.Uri> ma być stosowana analiza międzynarodowego identyfikatora zasobów (IRI) i czy mają być stosowane reguły analizy IRI.|  
+|[\<schemeSettings >, element (ustawienia identyfikatora URI)](schemesettings-element-uri-settings.md)|Określa sposób, w jaki <xref:System.Uri> będzie analizowana dla określonych schematów.|  
   
 ## <a name="see-also"></a>Zobacz także
 

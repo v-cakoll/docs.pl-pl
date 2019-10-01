@@ -17,35 +17,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95ba19ae908dbf37052c0a74ef8f99090f3313ba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1605ee92c8743606ff0e958f112a2d90af43e03a
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748567"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700715"
 ---
 # <a name="icordebugcode2getcompilerflags-method"></a>ICorDebugCode2::GetCompilerFlags — Metoda
-Pobiera flagi, które określają warunki, na których ten obiekt kod był albo just-in-time (JIT) skompilowanego lub wygenerowany za pomocą generator obrazu natywnego (Ngen.exe).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-HRESULT GetCompilerFlags (  
-    [out] DWORD *pdwFlags  
-);  
-```  
-  
-## <a name="parameters"></a>Parametry  
+
+Pobiera flagi określające warunki, w których ten obiekt kodu był skompilowany lub generowany przy użyciu natywnego generatora obrazu (Ngen. exe).
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+HRESULT GetCompilerFlags (
+    [out] DWORD *pdwFlags
+);
+```
+
+## <a name="parameters"></a>Parametry
+
  `pdwFlags`  
- [out] Wskaźnik do wartości [cordebugjitcompilerflags —](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) wyliczenia, która określa zachowanie kompilatora JIT lub generator obrazu natywnego.  
-  
-## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Nagłówek:** CorDebug.idl, CorDebug.h  
-  
- **Biblioteka:** CorGuids.lib  
-  
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
-  
-## <a name="see-also"></a>Zobacz także
+ określoną Wskaźnik do wartości wyliczenia [CorDebugJITCompilerFlags —](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) , który określa zachowanie kompilatora JIT lub generatora obrazu natywnego.
+
+## <a name="requirements"></a>Wymagania
+
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+
+ **Nagłówek:** CorDebug. idl, CorDebug. h
+
+ **Biblioteka:** CorGuids. lib
+
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ 

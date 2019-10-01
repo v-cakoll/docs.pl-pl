@@ -5,72 +5,72 @@ helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-ms.openlocfilehash: c0b47521c6a62071466ae4193cd8553bdfb3dcde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: caddad463f7c525c8b715d70f49bf8bebcc7cfbd
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014235"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701263"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Dostosowywanie, które obiekty są dostępne w My (Visual Basic)
 
-W tym temacie opisano, jak można kontrolować, które `My` obiekty są włączone, ustawiając projektu `_MYTYPE` Stała kompilacji warunkowej. Przechowuje zintegrowanego rozwoju środowiska (IDE) Visual Studio `_MYTYPE` Stała kompilacji warunkowej w projekcie w synchronizacji z typem projektu.  
+W tym temacie opisano, jak można kontrolować, które obiekty `My` są włączane przez ustawienie stałej kompilacji warunkowej @no__t dla projektu. Zintegrowane środowisko programistyczne (IDE) programu Visual Studio utrzymuje stałą `_MYTYPE`, aby projekt był synchronizowany z typem projektu.  
   
-## <a name="predefined-mytype-values"></a>Wstępnie zdefiniowane \_MYTYPE wartości  
+## <a name="predefined-_mytype-values"></a>Wstępnie zdefiniowane wartości \_MYTYPE  
 
-Należy użyć `/define` opcję kompilatora, aby ustawić `_MYTYPE` Stała kompilacji warunkowej. Określając wartość dla `_MYTYPE` wartością stałą, należy ująć wartość ciągu w odwróconej kreski ułamkowej/znak cudzysłowu (\\") sekwencji. Na przykład można użyć:  
+Należy użyć opcji kompilatora `/define`, aby ustawić stałą kompilacji warunkowej `_MYTYPE`. Podczas określania własnej wartości dla stałej `_MYTYPE` należy ująć wartość ciągu w sekwencjach ukośników odwrotnych/cudzysłowów (\\). Można na przykład użyć:  
   
-```  
+```console  
 /define:_MYTYPE=\"WindowsForms\"  
 ```  
   
- W poniższej tabeli przedstawiono co `_MYTYPE` Stała kompilacji warunkowej jest ustawiona na dla kilku typów projektów.  
+ W tej tabeli przedstawiono wartość stałej kompilacji warunkowej `_MYTYPE` dla kilku typów projektów.  
   
-|Typ projektu|\_Wartość MYTYPE|  
+|Typ projektu|@no__t — wartość 0MYTYPE|  
 |------------------|--------------------|  
-|Biblioteka klas|"Windows"|  
-|Aplikacja konsoli|"Konsola"|  
-|sieć Web|"Web"|  
+|Biblioteka klas|Systemy|  
+|Aplikacja konsoli|Konsoli|  
+|sieć Web|Witrynę|  
 |Biblioteka formantów sieci Web|"WebControl"|  
-|Aplikacja Windows|"WindowsForms"|  
-|Windows aplikacji, podczas uruchamiania za pomocą niestandardowego `Sub Main`|"WindowsFormsWithCustomSubMain"|  
-|Biblioteka formantów Windows|"Windows"|  
-|Usługa systemu Windows|"Konsola"|  
-|Pusty|"Pusty"|  
+|Aplikacja systemu Windows|WindowsForms|  
+|Aplikacja systemu Windows, podczas uruchamiania z niestandardowym `Sub Main`|"WindowsFormsWithCustomSubMain"|  
+|Biblioteka formantów systemu Windows|Systemy|  
+|Usługa systemu Windows|Konsoli|  
+|Pusty|Ciągiem|  
   
 > [!NOTE]
-> Wszystkie porównania ciągu kompilacji warunkowej uwzględniają wielkość liter, niezależnie od tego, jak `Option Compare` ustawić instrukcji.  
+> Wszystkie porównania w ciągu kompilacji warunkowej są rozróżniane wielkości liter, niezależnie od sposobu ustawiania instrukcji `Option Compare`.  
   
-## <a name="dependent-my-compilation-constants"></a>Zależne \_Moje stałe kompilacji  
+## <a name="dependent-_my-compilation-constants"></a>@No__t — stałe kompilacji 0MY  
 
-`_MYTYPE` Stała kompilacji warunkowej, z kolei kontroluje wartości kilka innych `_MY` stałe kompilacji:  
+Z kolei `_MYTYPE` stała Kompilacja warunkowa kontroluje wartości kilku innych `_MY` dla stałych kompilacji:  
   
-|\_MYTYPE|\_MYAPPLICATIONTYPE|\_MYCOMPUTERTYPE|\_MYFORMS|\_MYUSERTYPE|\_MYWEBSERVICES|  
+|@no__t — 0MYTYPE|@no__t — 0MYAPPLICATIONTYPE|@no__t — 0MYCOMPUTERTYPE|@no__t — 0MYFORMS|@no__t — 0MYUSERTYPE|@no__t — 0MYWEBSERVICES|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
-|"Konsola"|"Konsola"|"Windows"|Niezdefiniowane|"Windows"|WARTOŚĆ TRUE|  
-|"Niestandardowe"|Niezdefiniowane|Niezdefiniowane|Niezdefiniowane|Niezdefiniowane|Niezdefiniowane|  
-|"Pusty"|Niezdefiniowane|Niezdefiniowane|Niezdefiniowane|Niezdefiniowane|Niezdefiniowane|  
-|"Web"|Niezdefiniowane|"Web"|FAŁSZ|"Web"|FAŁSZ|  
-|"WebControl"|Niezdefiniowane|"Web"|FAŁSZ|"Web"|WARTOŚĆ TRUE|  
-|"Windows" lub ""|"Windows"|"Windows"|Niezdefiniowane|"Windows"|WARTOŚĆ TRUE|  
-|"WindowsForms"|"WindowsForms"|"Windows"|WARTOŚĆ TRUE|"Windows"|WARTOŚĆ TRUE|  
-|"WindowsFormsWithCustomSubMain"|"Konsola"|"Windows"|WARTOŚĆ TRUE|"Windows"|WARTOŚĆ TRUE|  
+|Konsoli|Konsoli|Systemy|definicji|Systemy|OZNACZA|  
+|Celnej|definicji|definicji|definicji|definicji|definicji|  
+|Ciągiem|definicji|definicji|definicji|definicji|definicji|  
+|Witrynę|definicji|Witrynę|FAŁSZ|Witrynę|FAŁSZ|  
+|"WebControl"|definicji|Witrynę|FAŁSZ|Witrynę|OZNACZA|  
+|"Windows" lub ""|Systemy|Systemy|definicji|Systemy|OZNACZA|  
+|WindowsForms|WindowsForms|Systemy|OZNACZA|Systemy|OZNACZA|  
+|"WindowsFormsWithCustomSubMain"|Konsoli|Systemy|OZNACZA|Systemy|OZNACZA|  
   
- Domyślnie, niezdefiniowane stałe kompilacji warunkowej rozpoznać `FALSE`. Można określić wartości dla stałych Niezdefiniowany, podczas kompilowania projektu, aby zastąpić domyślne zachowanie.  
+ Domyślnie niezdefiniowane stałe kompilacji warunkowej rozwiązują `FALSE`. Podczas kompilowania projektu można określić wartości dla niezdefiniowanych stałych.  
   
 > [!NOTE]
-> Gdy `_MYTYPE` jest ustawiona na "Niestandardowe", projekt zawiera `My` przestrzeni nazw, ale nie zawiera obiektów. Jednak ustawienie `_MYTYPE` do "Puste" uniemożliwia kompilator Dodawanie `My` przestrzeni nazw i jej obiektów.  
+> Gdy `_MYTYPE` jest ustawiona na wartość "Custom", projekt zawiera przestrzeń nazw `My`, ale nie zawiera żadnych obiektów. Ustawienie wartości `_MYTYPE` na wartość "puste" uniemożliwia kompilatorowi dodanie przestrzeni nazw `My` i jego obiektów.  
   
- W tej tabeli opisano wpływ wstępnie zdefiniowane wartości `_MY` stałe kompilacji.  
+ W tej tabeli opisano efekty wstępnie zdefiniowanych wartości stałych kompilacji `_MY`.  
   
 |Stała|Znaczenie|  
 |--------------|-------------|  
-|`_MYAPPLICATIONTYPE`|Włącza `My.Application`, gdy stała jest "Konsoli", Windows, "lub"WindowsForms":<br /><br /> — Wersja "Konsola" pochodzi z <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>. i ma mniejszą liczbę elementów członkowskich niż wersja "Windows".<br />— Wersja "Windows" pochodzi z <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>.a ma mniej elementów członkowskich niż wersja "WindowsForms".<br />— "WindowsForms" wersja `My.Application` pochodzi od klasy <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>. Jeśli `TARGET` stała jest zdefiniowany jako "winexe", a następnie zawiera klasę `Sub Main` metody.|  
-|`_MYCOMPUTERTYPE`|Włącza `My.Computer`, gdy stała jest "Web" lub "Windows":<br /><br /> — Wersja "Web" pochodzi z <xref:Microsoft.VisualBasic.Devices.ServerComputer>, i ma mniejszą liczbę elementów członkowskich niż wersja "Windows".<br />— "Windows" wersja `My.Computer` pochodzi od klasy <xref:Microsoft.VisualBasic.Devices.Computer>.|  
-|`_MYFORMS`|Włącza `My.Forms`, gdy stała jest `TRUE`.|  
-|`_MYUSERTYPE`|Włącza `My.User`, gdy stała jest "Web" lub "Windows":<br /><br /> — "Web" wersja `My.User` jest skojarzone z tożsamością użytkownika bieżącego żądania HTTP.<br />— "Windows" wersja `My.User` jest skojarzony z jednostką bieżącego wątku.|  
-|`_MYWEBSERVICES`|Włącza `My.WebServices`, gdy stała jest `TRUE`.|  
-|`_MYTYPE`|Włącza `My.Log`, `My.Request`, i `My.Response`, gdy stała jest "Web".|  
+|`_MYAPPLICATIONTYPE`|Włącza `My.Application`, jeśli stała to "konsola", "Windows" lub "WindowsForms":<br /><br /> — Wersja "konsoli" pochodzi z <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>. i ma mniejszą liczbę elementów członkowskich niż wersja systemu Windows.<br />-Wersja "Windows" pochodzi z @no__t -0. i ma mniejszą liczbę elementów członkowskich niż wersja "WindowsForms".<br />-Wersja "WindowsForms" `My.Application` pochodzi od <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>. Jeśli stała `TARGET` jest zdefiniowana jako "winexe", Klasa zawiera metodę `Sub Main`.|  
+|`_MYCOMPUTERTYPE`|Włącza `My.Computer`, jeśli stała to "Web" lub "Windows":<br /><br /> -Wersja "Web" pochodzi od <xref:Microsoft.VisualBasic.Devices.ServerComputer> i ma mniejszą liczbę członków niż wersja "Windows".<br />-Wersja "Windows" `My.Computer` pochodzi od <xref:Microsoft.VisualBasic.Devices.Computer>.|  
+|`_MYFORMS`|Włącza `My.Forms`, jeśli stała jest `TRUE`.|  
+|`_MYUSERTYPE`|Włącza `My.User`, jeśli stała to "Web" lub "Windows":<br /><br /> -Wersja "Web" `My.User` jest skojarzona z tożsamością użytkownika bieżącego żądania HTTP.<br />-Wersja "Windows" `My.User` jest skojarzona z bieżącym podmiotem zabezpieczeń wątku.|  
+|`_MYWEBSERVICES`|Włącza `My.WebServices`, jeśli stała jest `TRUE`.|  
+|`_MYTYPE`|Włącza `My.Log`, `My.Request` i `My.Response`, jeśli stała to "Web".|  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -80,7 +80,7 @@ Należy użyć `/define` opcję kompilatora, aby ustawić `_MYTYPE` Stała kompi
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>
 - [Jak My zależy od typu projektu](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
 - [Kompilacja warunkowa](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
-- [/ define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
+- [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
 - [My.Forms, obiekt](../../../visual-basic/language-reference/objects/my-forms-object.md)
 - [My.Request, obiekt](../../../visual-basic/language-reference/objects/my-request-object.md)
 - [My.Response, obiekt](../../../visual-basic/language-reference/objects/my-response-object.md)

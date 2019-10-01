@@ -9,18 +9,20 @@ helpviewer_keywords:
 - <requiredRuntime> element
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-ms.openlocfilehash: f5a9f99133c153401694372abaeea10a02e492e5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: fe96673b95f48cb75d36662a680bf56a59363f9f
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634189"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697485"
 ---
-# <a name="requiredruntime-element"></a>\<requiredRuntime > element
+# <a name="requiredruntime-element"></a>\<requiredRuntime > elementu
 
-Określa, że aplikacja obsługuje tylko wersję 1.0 środowiska uruchomieniowego języka wspólnego. Ten element jest przestarzała i nie powinna być używana. [ `supportedRuntime` ](supportedruntime-element.md) Zamiast tego należy użyć elementu.
+Określa, że aplikacja obsługuje tylko wersję 1,0 środowiska uruchomieniowego języka wspólnego. Ten element jest przestarzały i nie powinien już być używany. Zamiast tego należy użyć elementu [`supportedRuntime`](supportedruntime-element.md) .
 
-\<Konfiguracja > \<uruchamiania > \<requiredRuntime >
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<startup >** ](startup-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<requiredRuntime >**  
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,15 +40,15 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|`version`|Atrybut opcjonalny.<br /><br /> Wartość ciągu określająca wersję programu .NET Framework, którą obsługuje ta aplikacja. Wartość ciągu musi odpowiadać nazwa katalogu znajdują się w katalogu głównym instalacji .NET Framework. Zawartość wartości ciągu nie są analizowane.|
-|`safemode`|Atrybut opcjonalny.<br /><br /> Określa, czy kod uruchamiający środowisko uruchomieniowe wyszukuje rejestr w celu ustalenia wersji środowiska uruchomieniowego.|
+|`version`|Atrybut opcjonalny.<br /><br /> Wartość ciągu określająca wersję .NET Framework obsługiwanej przez tę aplikację. Wartość ciągu musi być zgodna z nazwą katalogu znajdującą się w katalogu głównym instalacji .NET Framework. Zawartość ciągu nie jest analizowana.|
+|`safemode`|Atrybut opcjonalny.<br /><br /> Określa, czy kod uruchomienia środowiska uruchomieniowego przeszukuje rejestr w celu określenia wersji środowiska uruchomieniowego.|
 
 ## <a name="safemode-attribute"></a>safemode — atrybut
 
 |Wartość|Opis|
 |-----------|-----------------|
-|`false`|Kod uruchamiający środowisko uruchomieniowe wyszukuje w rejestrze. Jest to wartość domyślna.|
-|`true`|Kod startowy środowiska uruchomieniowego nie znajduje się w rejestrze.|
+|`false`|Kod uruchomienia środowiska uruchomieniowego przeszukuje rejestr. Jest to wartość domyślna.|
+|`true`|Kod uruchomienia środowiska uruchomieniowego nie przeszukuje rejestru.|
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
@@ -57,22 +59,22 @@ Brak.
 |Element|Opis|
 |-------------|-----------------|
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|
-|`startup`|Zawiera `<requiredRuntime>` elementu.|
+|`startup`|Zawiera element `<requiredRuntime>`.|
 
 ## <a name="remarks"></a>Uwagi
- Aplikacje stworzone z myślą o obsługiwały tylko wersję 1.0 środowiska uruchomieniowego muszą używać `<requiredRuntime>` elementu. Aplikacje utworzone przy użyciu wersji 1.1 lub nowszej środowiska uruchomieniowego muszą używać `<supportedRuntime>` elementu.
+ Aplikacje skompilowane w celu obsługi tylko wersji 1,0 środowiska uruchomieniowego muszą używać elementu `<requiredRuntime>`. Aplikacje skompilowane przy użyciu wersji 1,1 lub nowszej środowiska uruchomieniowego muszą używać elementu `<supportedRuntime>`.
 
 > [!NOTE]
-> Jeśli używasz [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) funkcji, aby określić plik konfiguracji, należy użyć `<requiredRuntime>` elementu dla wszystkich wersji środowiska uruchomieniowego. `<supportedRuntime>` Element jest ignorowany, gdy używasz [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md).
+> Jeśli używasz funkcji [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) do określenia pliku konfiguracji, musisz użyć elementu `<requiredRuntime>` dla wszystkich wersji środowiska uruchomieniowego. Element `<supportedRuntime>` jest ignorowany w przypadku korzystania z [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md).
 
- `version` Ciągu atrybutu musi odpowiadać nazwie folder instalacji dla określonej wersji programu .NET Framework. Ten ciąg nie jest interpretowany. Jeśli kod startowy środowiska uruchomieniowego nie znajdzie folderem dopasowania, środowisko uruchomieniowe nie jest załadowany; kod startowy pokazuje komunikat o błędzie i kończy działanie.
+ Ciąg atrybutu `version` musi być zgodny z nazwą folderu instalacji określonej wersji .NET Framework. Ten ciąg nie jest interpretowany. Jeśli kod uruchomienia środowiska uruchomieniowego nie odnajdzie pasującego folderu, środowisko uruchomieniowe nie zostanie załadowane; kod uruchamiania pokazuje komunikat o błędzie i kończy pracę.
 
 > [!NOTE]
-> Ignoruje kodu startowego dla aplikacji, która jest obsługiwana w programie Internet Explorer `<requiredRuntime>` elementu.
+> Kod uruchamiania aplikacji hostowanej w programie Microsoft Internet Explorer ignoruje `<requiredRuntime>` elementu.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak określić wersji środowiska uruchomieniowego w pliku konfiguracji.
+Poniższy przykład pokazuje, jak określić wersję środowiska uruchomieniowego w pliku konfiguracji.
 
 ```xml
 <configuration>
@@ -86,4 +88,4 @@ Poniższy przykład pokazuje, jak określić wersji środowiska uruchomieniowego
 
 - [Schemat ustawień uruchamiania](index.md)
 - [Schemat pliku konfiguracji](../index.md)
-- [Instrukcje: Konfigurowanie aplikacji do obsługi w programie .NET Framework 4 lub nowszy](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Instrukcje: Konfigurowanie aplikacji do obsługi .NET Framework 4 lub nowszej wersji](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

@@ -8,69 +8,69 @@ helpviewer_keywords:
 - << operator [Visual Basic]
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
-ms.openlocfilehash: d6b186ad519bcd7cf82cce12523f2d75e09317cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1300ab60e825e7910825be2c65dcab90135ba988
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966884"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701112"
 ---
-# <a name="-operator-visual-basic"></a>\<\<Operator (Visual Basic)
+# <a name="-operator-visual-basic"></a>Operator \< @ no__t-1 (Visual Basic)
 Wykonuje arytmetyczne przesunięcie w lewo na wzorcu bitowym.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 result = pattern << amount  
 ```  
   
 ## <a name="parts"></a>Części  
  `result`  
- Wymagany. Całkowita wartość liczbowa. Wynik przesunięcia wzorca bitowego. Typ danych jest taki sam jak w przypadku programu `pattern`.  
+ Wymagany. Całkowita wartość liczbowa. Wynik przesunięcia wzorca bitowego. Typ danych jest taki sam jak w przypadku `pattern`.  
   
  `pattern`  
- Wymagane. Całkowite wyrażenie liczbowe. Wzorzec bitowy, który ma zostać przesunięty. Typ danych musi być typem całkowitym (`SByte`, `Byte`, `Integer` `UShort` `Short` `Long`,,, `ULong`, lub). `UInteger`  
+ Wymagany. Całkowite wyrażenie liczbowe. Wzorzec bitowy, który ma zostać przesunięty. Typ danych musi być typem całkowitym (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long` lub `ULong`).  
   
  `amount`  
- Wymagany. Wyrażenie liczbowe. Liczba bitów do przesunięcia wzorca bitowego. Typ danych musi być lub `Integer` być rozszerzony do `Integer`.  
+ Wymagany. Wyrażenie liczbowe. Liczba bitów do przesunięcia wzorca bitowego. Typ danych musi mieć wartość `Integer` lub być rozszerzony do `Integer`.  
   
 ## <a name="remarks"></a>Uwagi  
  Przesunięcia arytmetyczne nie są cykliczne, co oznacza, że bity przesunięte poza jeden koniec wyniku nie są ponownie wprowadzane na drugim końcu. W przypadku przesunięcia w lewo po lewej stronie bity przesunięte poza zakres typu danych wynik są odrzucane, a pozycje bitowe opuszczone po prawej stronie są ustawione na wartość zero.  
   
- Aby zapobiec przesunięciu przez więcej bitów niż w wyniku, Visual Basic maskuje wartość `amount` z maską rozmiaru odpowiadającą `pattern`typowi danych. Wartość binarna i z tych wartości są używane na potrzeby przesunięcia. Maski rozmiaru są następujące:  
+ Aby zapobiec przesunięciu przez więcej bitów niż w wyniku, Visual Basic masek `amount` z maską rozmiaru odpowiadającą typowi danych `pattern`. Wartość binarna i z tych wartości są używane na potrzeby przesunięcia. Maski rozmiaru są następujące:  
   
-|Typ danych`pattern`|Maska rozmiaru (dziesiętna)|Maska rozmiaru (szesnastkowo)|  
+|Typ danych `pattern`|Maska rozmiaru (dziesiętna)|Maska rozmiaru (szesnastkowo)|  
 |----------------------------|---------------------------|-------------------------------|  
-|`SByte`, `Byte`|7|&H00000007|  
-|`Short`, `UShort`|15|& H0000000F|  
-|`Integer`, `UInteger`|31|&H0000001F|  
-|`Long`, `ULong`|63|&H0000003F|  
+|`SByte`, `Byte`|7|& H00000007|  
+|`Short`, `UShort`|15000|& H0000000F|  
+|`Integer`, `UInteger`|niż|& H0000001F|  
+|`Long`, `ULong`|63|& H0000003F|  
   
- Jeśli `amount` jest równa zero, `result` wartość jest `pattern`taka sama jak wartość. Jeśli `amount` jest ujemna, jest traktowana jako wartość bez znaku i zamaskowany przy odpowiedniej masce rozmiaru.  
+ Jeśli `amount` wynosi zero, wartość `result` jest taka sama jak wartość `pattern`. Jeśli wartość `amount` jest ujemna, jest ona traktowana jako nieoznaczona i zamaskowane przy użyciu odpowiedniej maski rozmiaru.  
   
  Przesunięcia arytmetyczne nigdy nie generują wyjątków przepełnienia.  
   
 > [!NOTE]
-> Operator może być przeciążony, co oznacza, że Klasa lub struktura może przedefiniować jej zachowanie, gdy operand ma typ tej klasy lub struktury. `<<` Jeśli kod używa tego operatora dla takiej klasy lub struktury, upewnij się, że rozumiesz jego ponownie zdefiniowane zachowanie. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> Operator `<<` może być *przeciążony*, co oznacza, że Klasa lub struktura może przedefiniować jej zachowanie, gdy operand ma typ tej klasy lub struktury. Jeśli kod używa tego operatora dla takiej klasy lub struktury, upewnij się, że rozumiesz jego ponownie zdefiniowane zachowanie. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład używa operatora, `<<` aby przeprowadzić arytmetyczne przesunięcie w lewo na wartościach całkowitych. Wynik zawsze ma ten sam typ danych co w przypadku przesunięcia wyrażenia.  
+ Poniższy przykład używa operatora `<<`, aby przeprowadzić arytmetyczne przesunięcie w lewo na wartościach całkowitych. Wynik zawsze ma ten sam typ danych co w przypadku przesunięcia wyrażenia.  
   
  [!code-vb[VbVbalrOperators#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#12)]  
   
  Wyniki poprzedniego przykładu są następujące:  
   
-- `result1`jest 192 (0000 0000 1100 0000).  
+- `result1` to 192 (0000 0000 1100 0000).  
   
-- `result2`jest 3072 (0000 1100 0000 0000).  
+- `result2` to 3072 (0000 1100 0000 0000).  
   
-- `result3`is-32768 (1000 0000 0000 0000).  
+- `result3` to-32768 (1000 0000 0000 0000).  
   
-- `result4`jest 384 (0000 0001 1000 0000).  
+- `result4` to 384 (0000 0001 1000 0000).  
   
-- `result5`jest 0 (przesunięte 15 miejsc w lewo).  
+- `result5` to 0 (przesunięte 15 miejsc w lewo).  
   
- Wartość przesunięcia dla `result4` jest obliczana jako 17 i 15, która jest równa 1.  
+ Kwota przesunięcia dla `result4` jest obliczana jako 17 i 15, która jest równa 1.  
   
 ## <a name="see-also"></a>Zobacz także
 

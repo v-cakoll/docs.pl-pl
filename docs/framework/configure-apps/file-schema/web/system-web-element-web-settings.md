@@ -8,18 +8,18 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: 41a638afa93e605221d5ef8172e243b1c61676bf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5c5c857d4494b6d78b819e56bae4213abc5e2035
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941384"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699092"
 ---
-# <a name="systemweb-element-web-settings"></a>\<System. Web >, element (Ustawienia sieci Web)
+# <a name="systemweb-element-web-settings"></a>@no__t -0system. Web > element (Ustawienia sieci Web)
 Zawiera informacje o sposobie zarządzania zachowaniem całego procesu przez warstwę hostingu ASP.NET.  
   
- \<> konfiguracji  
-\<System. Web >, element (Ustawienia sieci Web)  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1 **@no__t -3system. web >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -29,28 +29,32 @@ Zawiera informacje o sposobie zarządzania zachowaniem całego procesu przez war
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
+
+W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
   
 ### <a name="attributes"></a>Atrybuty  
- Brak.  
+
+Brak.  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<applicationPool>](applicationpool-element-web-settings.md)|Określa ustawienia konfiguracji dla pul aplikacji usług IIS w pliku aspnet. config.|  
+|[@no__t — 1applicationPool >](applicationpool-element-web-settings.md)|Określa ustawienia konfiguracji dla pul aplikacji usług IIS w pliku aspnet. config.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> konfiguracji](../configuration-element.md)|Określa element główny w każdym pliku konfiguracji, który jest używany przez środowisko uruchomieniowe języka wspólnego i aplikacje .NET Framework.|  
+|[@no__t — 1configuration >](../configuration-element.md)|Określa element główny w każdym pliku konfiguracji, który jest używany przez środowisko uruchomieniowe języka wspólnego i aplikacje .NET Framework.|  
   
 ## <a name="remarks"></a>Uwagi  
- Element i jego element podrzędny `applicationPool` zostały dodane do .NET Framework w ramach .NET Framework 3,5 SP1. `system.web` W przypadku uruchamiania usług IIS 7,0 lub nowszych w trybie zintegrowanym Ta kombinacja elementów umożliwia skonfigurowanie sposobu, w jaki program ASP.NET zarządza wątkami i w jaki sposób kolejki są wysyłane w puli aplikacji usług IIS. W przypadku uruchomienia usług IIS 7,0 lub nowszych w trybie klasycznym lub ISAPI te ustawienia zostaną zignorowane.  
+
+Element `system.web` i jego element podrzędny `applicationPool` zostały dodane do .NET Framework w ramach .NET Framework 3,5 z dodatkiem SP1. W przypadku uruchamiania usług IIS 7,0 lub nowszych w trybie zintegrowanym Ta kombinacja elementów umożliwia skonfigurowanie sposobu, w jaki program ASP.NET zarządza wątkami i w jaki sposób kolejki są wysyłane w puli aplikacji usług IIS. W przypadku uruchomienia usług IIS 7,0 lub nowszych w trybie klasycznym lub ISAPI te ustawienia zostaną zignorowane.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak skonfigurować zachowanie ASP.NET całego procesu w pliku aspnet. config, gdy ASP.NET jest hostowany w puli aplikacji IIS. W przykładzie przyjęto założenie, że usługi IIS działają w trybie zintegrowanym i że aplikacja korzysta z .NET Framework 3,5 z dodatkiem SP1 lub nowszej wersji. To zachowanie nie występuje w wersjach .NET Framework starszych niż .NET Framework 3,5 SP1. Wartości w przykładzie są wartościami domyślnymi.  
+
+Poniższy przykład pokazuje, jak skonfigurować zachowanie ASP.NET całego procesu w pliku aspnet. config, gdy ASP.NET jest hostowany w puli aplikacji IIS. W przykładzie przyjęto założenie, że usługi IIS działają w trybie zintegrowanym i że aplikacja korzysta z .NET Framework 3,5 z dodatkiem SP1 lub nowszej wersji. To zachowanie nie występuje w wersjach .NET Framework starszych niż .NET Framework 3,5 SP1. Wartości w przykładzie są wartościami domyślnymi.  
   
 ```xml  
 <configuration>  

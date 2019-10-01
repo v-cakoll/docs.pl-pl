@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Odczyt z plików tekstowych w wielu formatach w Visual Basic'
+title: 'Porady: odczyt z plików tekstowych w wielu formatach w Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object, reading from a file
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-ms.openlocfilehash: 9fa484f0a74d900bd6f0365f2ce71fd32e1422db
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eae60b2fc72ee8b8653d3a0517eeaaf8012e0372
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623183"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696751"
 ---
-# <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>Instrukcje: Odczyt z plików tekstowych w wielu formatach w Visual Basic
-<xref:Microsoft.VisualBasic.FileIO.TextFieldParser> Obiekt umożliwia łatwe oraz efektywne analizowanie strukturyzowanych plików tekstowych, takie jak dzienniki. Pozwala na przetwarzanie plików w wielu formatach za pomocą `PeekChars` metodę, aby określić format każdego wiersza, ponieważ przeanalizować za pomocą pliku.  
+# <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>Porady: odczyt z plików tekstowych w wielu formatach w Visual Basic
+Obiekt <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> umożliwia łatwe i wydajne analizowanie strukturalnych plików tekstowych, takich jak dzienniki. Można przetworzyć plik z wieloma formatami przy użyciu metody `PeekChars`, aby określić format każdego wiersza podczas analizowania pliku.  
   
-### <a name="to-parse-a-text-file-with-multiple-formats"></a>Można przeanalizować pliku tekstowego w wielu formatach  
+### <a name="to-parse-a-text-file-with-multiple-formats"></a>Aby przeanalizować plik tekstowy z wieloma formatami  
   
-1. Dodaj plik tekstowy o nazwie testfile.txt do projektu. Dodaj następującą zawartość do pliku tekstowego.  
+1. Dodaj plik tekstowy o nazwie TestFile. txt do projektu. Dodaj następującą zawartość do pliku tekstowego.  
   
-    ```  
+    ```text  
     Err  1001 Cannot access resource.  
     Err  2014 Resource not found.  
     Acc  10/03/2009User1      Administrator.  
@@ -34,37 +34,37 @@ ms.locfileid: "64623183"
     Acc  10/04/2009User2      Standard user.  
     ```  
   
-2. Zdefiniuj oczekiwanego formatu i format używany przy zwróci błąd. Ostatni wpis w każdej macierzy -1, w związku z tym ostatnim polu zakłada się, że o zmiennej szerokości. Dzieje się tak, gdy ostatni wpis w tablicy jest mniejsza lub równa 0.  
+2. Zdefiniuj oczekiwany format i format używany, gdy zostanie zgłoszony błąd. Ostatni wpis w każdej tablicy to-1, w związku z czym przyjmuje się, że ostatnie pole ma szerokość zmiennej. Dzieje się tak, gdy ostatni wpis w tablicy jest mniejszy lub równy 0.  
   
      [!code-vb[VbFileIORead#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#4)]  
   
-3. Utwórz nową <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> obiekt, definiujący szerokości i format.  
+3. Utwórz nowy obiekt <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>, definiując szerokość i format.  
   
      [!code-vb[VbFileIORead#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#5)]  
   
-4. W pętli poprzez wierszy, testowanie pod kątem formatu przed przeczytaniem.  
+4. Przechodzenie między wierszami, testowanie formatu przed odczytem.  
   
      [!code-vb[VbFileIORead#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#6)]  
   
-5. Błędy zapisu do konsoli.  
+5. Zapisuj błędy w konsoli.  
   
      [!code-vb[VbFileIORead#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#7)]  
   
 ## <a name="example"></a>Przykład  
- Oto kompletny przykład, która odczytuje z pliku `testfile.txt`.  
+ Poniżej znajduje się kompletny przykład, który odczytuje z pliku `testfile.txt`.  
   
  [!code-vb[VbFileIORead#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#8)]  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować wyjątek:  
   
-- Nie można przeanalizować wiersz w określonym formacie (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). Komunikat o wyjątku Określa wiersz, powoduje wyjątek, podczas gdy <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> właściwość jest przypisany do tekstu w wierszu.  
+- Nie można przeanalizować wiersza przy użyciu określonego formatu (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). Komunikat o wyjątku określa wiersz powodujący wyjątek, podczas gdy właściwość <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> jest przypisana do tekstu zawartego w wierszu.  
   
 - Określony plik nie istnieje (<xref:System.IO.FileNotFoundException>).  
   
-- Sytuacja częściowego zaufania, użytkownik nie ma wystarczających uprawnień dostępu do tego pliku. (<xref:System.Security.SecurityException>).  
+- Sytuacja częściowej relacji zaufania, w której użytkownik nie ma wystarczających uprawnień dostępu do pliku. (<xref:System.Security.SecurityException>).  
   
-- Ścieżka jest zbyt długa (<xref:System.IO.PathTooLongException>).  
+- Ścieżka jest za długa (<xref:System.IO.PathTooLongException>).  
   
 - Użytkownik nie ma wystarczających uprawnień dostępu do pliku (<xref:System.UnauthorizedAccessException>).  
   
@@ -76,6 +76,6 @@ ms.locfileid: "64623183"
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.EndOfData%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TextFieldType%2A>
-- [Instrukcje: Odczyt z plików tekstowych rozdzielonych przecinkami](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
-- [Instrukcje: Odczyt z plików testowych o stałej szerokości](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
+- [Instrukcje: odczyt z rozdzielonych przecinkami plików testowych](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
+- [Instrukcje: odczyt z plików testowych o stałej szerokości](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
 - [Analizowanie plików tekstowych za pomocą obiektu TextFieldParser](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)

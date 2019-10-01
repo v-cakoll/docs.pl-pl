@@ -2,22 +2,19 @@
 title: <iriParsing>, element (ustawienia identyfikatora URI)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: 2c99edf2f1a03e0e510858c106cad43b0eaa27b4
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: fd617d1b4ac8e532c6f9aeaa01465e9866b059e9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664085"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698094"
 ---
 # <a name="iriparsing-element-uri-settings"></a>\<iriParsing >, element (ustawienia identyfikatora URI)
-Określa <xref:System.Uri> , czy do i czy należy zastosować analizę IRI (International Resource Identifier).  
+Określa, czy do <xref:System.Uri> ma być stosowana analiza międzynarodowego identyfikatora zasobów (IRI) i czy mają być stosowane reguły analizy IRI.  
   
-## <a name="schema-hierarchy"></a>Hierarchia schematu  
- [\<> elementu konfiguracji](../configuration-element.md)  
-  
- [\<Identyfikator URI > element (ustawienia identyfikatora URI)](uri-element-uri-settings.md)  
-  
- [\<iriParsing >](iriparsing-element-uri-settings.md)  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<iriParsing >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,10 +40,10 @@ Określa <xref:System.Uri> , czy do i czy należy zastosować analizę IRI (Inte
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[uri](uri-element-uri-settings.md)|Zawiera ustawienia, które określają, w jaki sposób .NET Framework obsługuje adresy sieci Web wyrażone przy użyciu Uniform Resource Identifier (URI).|  
+|[adresu](uri-element-uri-settings.md)|Zawiera ustawienia, które określają, w jaki sposób .NET Framework obsługuje adresy sieci Web wyrażone przy użyciu Uniform Resource Identifier (URI).|  
   
 ## <a name="remarks"></a>Uwagi  
- Istniejąca <xref:System.Uri> Klasa została rozszerzona w .NET Framework 3,5. 3,0 SP1 i 2,0 SP1, aby zapewnić obsługę międzynarodowych identyfikatorów zasobów (IRI) i międzynarodowych nazw domen (IDN). Bieżąca użytkownicy nie będą widzieć żadnych zmian w zachowaniu .NET Framework 2,0, o ile nie włączą one obsługi IRI i IDN. Zapewnia to zgodność aplikacji z wcześniejszymi wersjami .NET Framework.  
+ Istniejąca Klasa <xref:System.Uri> została rozszerzona w .NET Framework 3,5. 3,0 SP1 i 2,0 SP1, aby zapewnić obsługę międzynarodowych identyfikatorów zasobów (IRI) i międzynarodowych nazw domen (IDN). Bieżąca użytkownicy nie będą widzieć żadnych zmian w zachowaniu .NET Framework 2,0, o ile nie włączą one obsługi IRI i IDN. Zapewnia to zgodność aplikacji z wcześniejszymi wersjami .NET Framework.  
   
  Aby włączyć obsługę IRI, wymagane są następujące dwie zmiany:  
   
@@ -58,7 +55,7 @@ Określa <xref:System.Uri> , czy do i czy należy zastosować analizę IRI (Inte
   
 2. Określ, czy mają być stosowane reguły analizy IRI. Tę czynność można wykonać w pliku Machine. config lub w oknie App. config.  
   
- Włączenie analizy IRI (iriParsing Enabled = `true`) umożliwi normalizację i sprawdzanie znaków zgodnie z najnowszymi regułami IRI w dokumencie RFC 3987. Wartość domyślna to `false` i umożliwia normalizację i sprawdzanie znaków zgodnie ze standardami RFC 2396 i RFC 3986 (dla literałów IPv6).  
+ Włączenie analizy IRI (iriParsing Enabled = `true`) umożliwi normalizację i sprawdzanie znaków zgodnie z najnowszymi regułami IRI w dokumencie RFC 3987. Wartość domyślna to `false` i będzie wykonywać normalizację i sprawdzanie znaków zgodnie ze standardami RFC 2396 i RFC 3986 (dla literałów IPv6).  
   
 ### <a name="configuration-files"></a>Pliki konfiguracji  
  Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
@@ -66,7 +63,7 @@ Określa <xref:System.Uri> , czy do i czy należy zastosować analizę IRI (Inte
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- W poniższym przykładzie przedstawiono konfigurację używaną przez <xref:System.Uri> klasę do obsługi analizy IRI i nazw IDN.  
+ W poniższym przykładzie przedstawiono konfigurację używaną przez klasę <xref:System.Uri> do obsługi IRI analizy nazw i IDN.  
   
 ### <a name="code"></a>Kod  
   

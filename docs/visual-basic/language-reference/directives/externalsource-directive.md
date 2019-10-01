@@ -1,5 +1,5 @@
 ---
-title: '#ExternalSource-dyrektywa (Visual Basic)'
+title: '#ExternalSource — dyrektywa (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - '#Externalsource'
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - ExternalSource directive (#ExternalSource)
 - '#ExternalSource directive'
 ms.assetid: 243bc6a2-34c3-4eeb-a776-9fd2bf988149
-ms.openlocfilehash: 39e6963c97340daab3f0ab7ad6860695f1f6c135
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac7096e998dd8d2a416dc739e1d7625e1abff7a6
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747047"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696821"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource — dyrektywa
-Wskazuje mapowanie między poszczególne wiersze kodu źródłowego, a tekstem zewnętrznym do źródła.  
+Wskazuje mapowanie między określonymi wierszami kodu źródłowego a tekstem zewnętrznym do źródła.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 #ExternalSource( StringLiteral , IntLiteral )  
     [ LogicalLine+ ]  
 #End ExternalSource  
@@ -32,23 +32,23 @@ Wskazuje mapowanie między poszczególne wiersze kodu źródłowego, a tekstem z
   
 ## <a name="parts"></a>Części  
  `StringLiteral`  
- Ścieżka do źródła zewnętrznego.  
+ Ścieżka do zewnętrznego źródła.  
   
  `IntLiteral`  
- Numer wiersza w pierwszej linii źródła zewnętrznego.  
+ Numer wiersza pierwszego wiersza zewnętrznego źródła.  
   
  `LogicalLine`  
- Wiersz, w którym występuje błąd ze źródła zewnętrznego.  
+ Wiersz, w którym wystąpił błąd w zewnętrznym źródle.  
   
  `#End ExternalSource`  
  Kończy blok `#ExternalSource`.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta dyrektywa jest używany tylko przez kompilator i debugera.  
+ Ta dyrektywa jest używana tylko przez kompilator i debuger.  
   
- Plik źródłowy może zawierać dyrektyw zewnętrznego źródła, które wskazują mapowanie między poszczególne wiersze kodu w pliku źródłowym i tekstem zewnętrznym do źródła, takich jak plik .aspx. Jeśli wystąpią błędy w kodzie źródłowym wyznaczonej podczas kompilacji, są one zidentyfikowane jako pochodzące z zewnętrznego źródła.  
+ Plik źródłowy może zawierać dyrektywy zewnętrznego źródła, które wskazują mapowanie między określonymi wierszami kodu w pliku źródłowym a tekstem zewnętrznym ze źródłem, takim jak plik. aspx. Jeśli w wyznaczonym kodzie źródłowym wystąpią błędy podczas kompilacji, są one identyfikowane jako pochodzące ze źródła zewnętrznego.  
   
- Dyrektywy zewnętrznego źródła, nie mają wpływu na kompilację i nie mogą być zagnieżdżone. Są one przeznaczone do użytku wewnętrznego przez aplikację tylko.  
+ Dyrektywy źródła zewnętrznego nie mają wpływu na kompilację i nie mogą być zagnieżdżone. Są one przeznaczone do użytku wewnętrznego tylko przez aplikację.  
   
 ## <a name="see-also"></a>Zobacz także
 

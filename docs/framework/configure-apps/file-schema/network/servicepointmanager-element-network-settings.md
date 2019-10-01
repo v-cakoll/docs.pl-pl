@@ -8,20 +8,20 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-ms.openlocfilehash: a6a40d97bf16a3125452311e7762617e657ca384
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 95ad1880cbb832a17311e7e63e9203f53257f65f
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659146"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697711"
 ---
-# <a name="servicepointmanager-element-network-settings"></a>\<ServicePointManager — element > (Ustawienia sieci)
+# <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager >, element (Ustawienia sieci)
 Konfiguruje połączenia z zasobami sieciowymi.  
   
- \<> konfiguracji  
-\<system.net>  
-\<settings>  
-\<servicePointManager>  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<servicePointManager >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,8 +48,8 @@ Konfiguruje połączenia z zasobami sieciowymi.
 |`checkCertificateRevocationList`|Określa, czy system powinien sprawdzić, czy certyfikat został odwołany przed użyciem certyfikatu. Wartość domyślna to `false`.|  
 |`dnsRefreshTimeout`|Określa, jak długo w milisekundach jest buforowanych rozwiązań usługi nazw domen (DNS) w połączeniu z opcją działania okrężnego systemu DNS. Wartość domyślna to 120 000 milisekund (dwie minuty).|  
 |`enableDnsRoundRobin`|Określa, czy rozwiązania DNS nazw hostów z wieloma adresami IP (Internet Protocol) zwracają wszystkie adresy, czy tylko pierwszy. Wartość domyślna to `false`.|  
-|`encryptionPolicy`|Określa zasady szyfrowania stosowane do sesji SSL/TLS w <xref:System.Net.ServicePointManager> wystąpieniu. Możliwe wartości są równoważne z wartościami <xref:System.Net.Security.EncryptionPolicy> wyliczenia. Użycie <xref:System.Security.Authentication.CipherAlgorithmType.Null> jest wymagane, gdy zasady szyfrowania są ustawione na `NoEncryption`. Wartość domyślna to `RequireEncryption`.|  
-|`expect100Continue`|Określa, `100-continue` czy metody post powinny oczekiwać odpowiedzi z serwera. Wartość domyślna to `true`.|  
+|`encryptionPolicy`|Określa zasady szyfrowania stosowane do sesji SSL/TLS w wystąpieniu <xref:System.Net.ServicePointManager>. Możliwe wartości są równoważne wartościom wyliczenia <xref:System.Net.Security.EncryptionPolicy>. Użycie <xref:System.Security.Authentication.CipherAlgorithmType.Null> jest wymagane, gdy dla zasad szyfrowania ustawiono wartość `NoEncryption`. Wartość domyślna to `RequireEncryption`.|  
+|`expect100Continue`|Określa, czy metody POST powinny otrzymać odpowiedź na `100-continue` z serwera. Wartość domyślna to `true`.|  
 |`useNagleAlgorithm`|Określa, czy połączenia kontrolowane przez Menedżera punktów usług używają algorytmu nagle. Wartość domyślna to `true`.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
@@ -59,7 +59,7 @@ Konfiguruje połączenia z zasobami sieciowymi.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[Ustawienia](settings-element-network-settings.md)|Konfiguruje podstawowe opcje sieci dla <xref:System.Net> przestrzeni nazw.|  
+|[Ustawienia](settings-element-network-settings.md)|Konfiguruje podstawowe opcje sieci dla przestrzeni nazw <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Uwagi  
   

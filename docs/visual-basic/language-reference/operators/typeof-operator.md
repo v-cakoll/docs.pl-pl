@@ -12,61 +12,61 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: e5cb1ddc130a8b1913f30b0d20d27941005dd9d3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: c6028f524a16b836310f0c8d564205244515cdc9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063255"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701285"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf — Operator (Visual Basic)
-Sprawdza, czy typ środowiska uruchomieniowego, wynikiem wyrażenia jest typ zgodny z określonym typem.
+Sprawdza, czy typ środowiska uruchomieniowego wyniku wyrażenia jest zgodny z typem określonego typu.
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 result = TypeOf objectexpression Is typename  
 ```  
   
-```  
+```vb  
 result = TypeOf objectexpression IsNot typename  
 ```  
   
 ## <a name="parts"></a>Części  
  `result`  
- Zwracane. A `Boolean` wartość.  
+ Zwracać. Wartość `Boolean`.  
   
  `objectexpression`  
- Wymagana. Dowolne wyrażenie, którego wynikiem jest typem referencyjnym.  
+ Wymagany. Dowolne wyrażenie, którego wynikiem jest typ referencyjny.  
   
  `typename`  
- Wymagana. Nazwa typu żadnych danych.  
+ Wymagany. Dowolna nazwa typu danych.  
   
 ## <a name="remarks"></a>Uwagi  
- `TypeOf` Operator określa, czy środowiska wykonawczego typu `objectexpression` jest zgodny z `typename`. Zgodność jest zależna od typu kategorii `typename`. W poniższej tabeli przedstawiono, jak jest określana zgodność.  
+ Operator `TypeOf` Określa, czy typ czasu wykonywania `objectexpression` jest zgodny z `typename`. Zgodność zależy od kategorii typu `typename`. W poniższej tabeli przedstawiono sposób określania zgodności.  
   
-|Typ kategorii `typename`|Kryterium zgodności|  
+|Kategoria typu `typename`|Kryterium zgodności|  
 |---------------------------------|-----------------------------|  
-|Class|`objectexpression` Typ jest `typename` lub dziedziczy z `typename`|  
+|Class|`objectexpression` jest typu `typename` lub dziedziczy po `typename`|  
 |Struktura|`objectexpression` jest typu `typename`|  
-|Interface|`objectexpression` implementuje `typename` lub dziedziczy z klasy, która implementuje `typename`|  
+|Interface|`objectexpression` implementuje `typename` lub dziedziczy z klasy implementującej `typename`|  
   
- Jeśli typ środowiska wykonawczego `objectexpression` spełnia kryterium zgodności `result` jest `True`. W przeciwnym razie `result` jest `False`.  Jeśli `objectexpression` ma wartość null, następnie `TypeOf`... `Is` zwraca `False`, i... `IsNot` zwraca `True`.  
+ Jeśli typ czasu wykonywania `objectexpression` spełnia kryteria zgodności, `result` jest `True`. W przeciwnym razie `result` jest `False`.  Jeśli `objectexpression` ma wartość null, wówczas `TypeOf`... `Is` zwraca `False`, i... `IsNot` zwraca `True`.  
   
- `TypeOf` zawsze jest używana z `Is` — słowo kluczowe do konstruowania `TypeOf`... `Is` wyrażenie, lub za pomocą `IsNot` — słowo kluczowe do konstruowania `TypeOf`... `IsNot` wyrażenia.  
+ `TypeOf` jest zawsze używana ze słowem kluczowym `Is` do konstruowania wyrażenia `TypeOf`... `Is` lub za pomocą słowa kluczowego `IsNot`, aby utworzyć `TypeOf`... `IsNot` wyrażenie.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto `TypeOf`... `Is` wyrażeń, które umożliwiają przetestowanie zgodności typu dwóch obiektów zmienne odwołania z różnych typów danych.  
+ W poniższym przykładzie są stosowane wyrażenia `TypeOf`... `Is` do testowania zgodności typów dwóch zmiennych odwołań do obiektów z różnymi typami danych.  
   
  [!code-vb[VbVbalrOperators#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#39)]  
   
- Zmienna `refInteger` ma typ środowiska wykonawczego `Integer`. Jest to zgodne z `Integer` , ale nie z `Double`. Zmienna `refForm` ma typ środowiska wykonawczego <xref:System.Windows.Forms.Form>. Jest to zgodne z <xref:System.Windows.Forms.Form> , ponieważ jego typ, jest z <xref:System.Windows.Forms.Control> ponieważ <xref:System.Windows.Forms.Form> dziedziczy <xref:System.Windows.Forms.Control>i <xref:System.ComponentModel.IComponent> ponieważ <xref:System.Windows.Forms.Form> dziedziczy <xref:System.ComponentModel.Component>, który implementuje <xref:System.ComponentModel.IComponent>. Jednak `refForm` nie jest zgodny z <xref:System.Windows.Forms.Label>.  
+ Zmienna `refInteger` ma typ czasu wykonywania `Integer`. Jest on zgodny z `Integer`, ale nie z `Double`. Zmienna `refForm` ma typ czasu wykonywania <xref:System.Windows.Forms.Form>. Jest on zgodny z <xref:System.Windows.Forms.Form>, ponieważ jest to jego typ z <xref:System.Windows.Forms.Control>, ponieważ <xref:System.Windows.Forms.Form> dziedziczy z <xref:System.Windows.Forms.Control> i z <xref:System.ComponentModel.IComponent>, ponieważ <xref:System.ComponentModel.Component> dziedziczy z @no__t-, który implementuje <xref:System.ComponentModel.IComponent>. Jednak `refForm` nie jest zgodny z <xref:System.Windows.Forms.Label>.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Is, operator](../../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot, operator](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Operatory porównania w języku Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operatory porównania w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Pierwszeństwo operatorów w Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

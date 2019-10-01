@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36556
 ms.assetid: e3ba1f33-3a71-4f03-9b04-ed5ec17de17c
-ms.openlocfilehash: f657048a8aa9748104e40503e727a5e6d90a87ad
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 38f669fe183ac79ebed6e5a122bc70aedc9bb753
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646853"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701228"
 ---
 # <a name="anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>Nazwę członka typu anonimowego można wywnioskować tylko na podstawie prostej lub kwalifikowanej nazwy bez argumentów
-Nie można wywnioskować nazwę członka typu anonimowego z wyrażenie złożone.  
+Nie można wywnioskować nazwy elementu członkowskiego typu anonimowego na podstawie wyrażenia złożonego.  
   
 ```vb  
 Dim numbers() As Integer = {1, 2, 3, 4, 5}  
@@ -23,19 +23,19 @@ Dim numbers() As Integer = {1, 2, 3, 4, 5}
 ' Dim instanceName1 = New With {numbers(3)}  
 ```  
   
- Aby uzyskać więcej informacji na temat źródeł, z których można typy anonimowe i nie można wywnioskować nazwy elementów członkowskich i typy, zobacz [jak: Wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
+ Aby uzyskać więcej informacji o źródłach, z których typy anonimowe mogą i nie można wywnioskować nazw składowych i typów, zobacz [How to: wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
   
  **Identyfikator błędu:** BC36556  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Przypisz wyrażenia na nazwę elementu członkowskiego, jak pokazano w poniższym kodzie:  
+- Przypisz wyrażenie do nazwy elementu członkowskiego, jak pokazano w poniższym kodzie:  
   
-    ```  
+    ```vb  
     Dim instanceName2 = New With {.number = numbers(3)}  
     ```  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Typy anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [Instrukcje: Wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [Instrukcje: wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)

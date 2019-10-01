@@ -1,5 +1,5 @@
 ---
-title: Konwertowanie pomiędzy ciągami a innymi typami danych w Visual Basic
+title: Konwertowanie między ciągami a innymi typami danych w Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, strings
@@ -7,25 +7,33 @@ helpviewer_keywords:
 - conversions [Visual Basic], Visual Basic
 - string conversion [Visual Basic], Visual Basic
 ms.assetid: 06085ed5-191d-4930-8fbc-da63930da400
-ms.openlocfilehash: dbd563b01fc7c3afbfc558a277f17a4318f5c634
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 040e22ab75ef144f0572fc682e3e182f4b06b25e
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054071"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700081"
 ---
-# <a name="converting-between-strings-and-other-data-types-in-visual-basic"></a>Konwertowanie pomiędzy ciągami a innymi typami danych w Visual Basic
-W tej sekcji opisano sposób konwertowania ciągów na inne typy danych.  
+# <a name="converting-between-strings-and-other-data-types-in-visual-basic"></a>Konwertowanie między ciągami a innymi typami danych w Visual Basic
+
+W tej sekcji opisano sposób konwersji ciągów na inne typy danych.
+
+## <a name="in-this-section"></a>W tej sekcji
+
+ [Instrukcje: konwertowanie tablicy bajtów na ciąg w Visual Basic](how-to-convert-an-array-of-bytes-into-a-string.md)  
+ Jak przekonwertować bajty z tablicy bajtowej na ciąg.  
   
-## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: Konwertuj tablicę bajtów na ciąg w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-an-array-of-bytes-into-a-string.md)  
- Jak konwertować bajtów z tablicy bajtów na ciąg.  
-  
- [Instrukcje: Konwertowanie ciągów na tablice bajtów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-strings-into-an-array-of-bytes.md)  
+ [Instrukcje: konwertowanie ciągów na tablicę bajtów w Visual Basic](how-to-convert-strings-into-an-array-of-bytes.md)  
  Jak przekonwertować ciąg na tablicę bajtów.  
   
- [Instrukcje: Tworzenie ciągu z tablicy wartości znaków](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-a-string-from-an-array-of-char-values.md)  
- Jak utworzyć ciągu "abcd" z pojedynczych znaków.  
+ [Instrukcje: Tworzenie ciągu z tablicy wartości znaków](how-to-create-a-string-from-an-array-of-char-values.md)  
+ Jak utworzyć ciąg "abcd" z pojedynczych znaków.  
   
- [Instrukcje: Konwertowanie ciągów szestnastkowych na numery](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-hexadecimal-strings-to-numbers.md)  
- Jak przekonwertować ciągu szesnastkowego na liczbę całkowitą.
+ [Instrukcje: Konwertowanie ciągów szesnastkowych na liczby](how-to-convert-hexadecimal-strings-to-numbers.md)  
+ Jak przekonwertować ciąg szesnastkowy na liczbę całkowitą.
+ 
+ [Instrukcje: konwertowanie ciągu na tablicę znaków w Visual Basic](how-to-convert-a-string-to-an-array-of-characters.md)  
+ Konwertowanie ciągu na tablicę znaków.
+ 
+ [Instrukcje: dostęp do znaków w ciągach w Visual Basic](how-to-access-characters-in-strings.md)  
+ Jak uzyskać dostęp do znaku w ciągu przez jego indeks.

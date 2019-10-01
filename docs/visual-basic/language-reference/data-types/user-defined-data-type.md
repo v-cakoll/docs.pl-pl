@@ -23,16 +23,16 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-ms.openlocfilehash: 76073037dcaac0e87bc8a352f3b438332d11d881
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d95feec3a976a38c92a215f6da58ae6324085fe8
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630133"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696863"
 ---
 # <a name="user-defined-data-type"></a>User-Defined Data Type
 
-Przechowuje dane w formacie zdefiniowanym przez użytkownika. `Structure` Instrukcja definiuje format.
+Przechowuje dane w formacie zdefiniowanym przez użytkownika. Instrukcja `Structure` definiuje format.
 
 Poprzednie wersje Visual Basic obsługują typ zdefiniowany przez użytkownika (UDT). Bieżąca wersja rozszerza UDT do *struktury*. Struktura jest połączeniem jednego lub większej liczby *elementów członkowskich* różnych typów danych. Visual Basic traktuje strukturę jako pojedynczą jednostkę, chociaż można także uzyskać dostęp do jej elementów członkowskich pojedynczo.
 
@@ -44,31 +44,31 @@ Wartość domyślna struktury typu danych składa się z kombinacji wartości do
 
 ## <a name="declaration-format"></a>Format deklaracji
 
-Deklaracja struktury rozpoczyna się od [instrukcji Structure](../../../visual-basic/language-reference/statements/structure-statement.md) i kończyć się `End Structure` instrukcją. `Structure` Instrukcja dostarcza nazwę struktury, która jest również identyfikatorem typu danych, który definiuje struktura. Inne części kodu mogą używać tego identyfikatora do deklarowania zmiennych, parametrów i wartości zwracanych funkcji jako typu danych tej struktury.
+Deklaracja struktury rozpoczyna się od [instrukcji Structure](../../../visual-basic/language-reference/statements/structure-statement.md) i kończyć się instrukcją `End Structure`. Instrukcja `Structure` dostarcza nazwę struktury, która jest również identyfikatorem typu danych definiującego strukturę. Inne części kodu mogą używać tego identyfikatora do deklarowania zmiennych, parametrów i wartości zwracanych funkcji jako typu danych tej struktury.
 
-Deklaracje między `Structure` instrukcjami i `End Structure` definiują elementy członkowskie struktury.
+Deklaracje między instrukcjami `Structure` i `End Structure` definiują elementy członkowskie struktury.
 
 ## <a name="member-access-levels"></a>Poziomy dostępu członków
 
-Należy zadeklarować każdy element członkowski przy użyciu [instrukcji Dim](../../../visual-basic/language-reference/statements/dim-statement.md) lub instrukcji, która określa poziom dostępu, na przykład [Public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md)lub [Private](../../../visual-basic/language-reference/modifiers/private.md). Jeśli używasz `Dim` instrukcji, poziom dostępu jest domyślnie publiczny.
+Należy zadeklarować każdy element członkowski przy użyciu [instrukcji Dim](../../../visual-basic/language-reference/statements/dim-statement.md) lub instrukcji, która określa poziom dostępu, na przykład [Public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md)lub [Private](../../../visual-basic/language-reference/modifiers/private.md). Jeśli używasz instrukcji `Dim`, poziom dostępu jest domyślnie publiczny.
 
 ## <a name="programming-tips"></a>Porady dla programistów
 
-- **Użycie pamięci.** Podobnie jak w przypadku wszystkich złożonych typów danych, nie można bezpiecznie obliczyć łącznego zużycia pamięci przez strukturę, dodając do siebie nominalne alokacje magazynu jej składowych. Ponadto nie można bezpiecznie założyć, że kolejność magazynowania w pamięci jest taka sama jak kolejność deklaracji. Jeśli musisz kontrolować układ magazynu struktury, możesz zastosować atrybut <xref:System.Runtime.InteropServices.StructLayoutAttribute> w instrukcji `Structure`.
+- **Użycie pamięci.** Podobnie jak w przypadku wszystkich złożonych typów danych, nie można bezpiecznie obliczyć całkowitego zużycia pamięci przez dodanie do nich nominalnych przydziałów pamięci masowej. Ponadto nie można bezpiecznie założyć, że kolejność przechowywania w pamięci jest taka sama jak w przypadku kolejności deklaracji. Jeśli konieczne jest kontrolowanie układu pamięci masowej struktury, można zastosować atrybut <xref:System.Runtime.InteropServices.StructLayoutAttribute> do instrukcji `Structure`.
 
 - **Zagadnienia dotyczące międzyoperacyjnych.** Jeśli masz połączenie ze składnikami niezapisanymi dla .NET Framework, na przykład obiekty automatyzacji lub COM, pamiętaj, że typy zdefiniowane przez użytkownika w innych środowiskach nie są zgodne z typami struktur Visual Basic.
 
-- **Rozszerzającą.** Nie istnieje Automatyczna konwersja do lub z dowolnego typu danych struktury. Operatory konwersji można definiować w strukturze przy użyciu [instrukcji operatora](../../../visual-basic/language-reference/statements/operator-statement.md)i można zadeklarować każdy operator konwersji jako `Widening` lub. `Narrowing`
+- **Rozszerzającą.** Nie istnieje Automatyczna konwersja do lub z dowolnego typu danych struktury. Operatory konwersji można definiować w strukturze przy użyciu [instrukcji operatora](../../../visual-basic/language-reference/statements/operator-statement.md)i można zadeklarować każdy operator konwersji jako `Widening` lub `Narrowing`.
 
 - **Znaki typu.** Typy danych struktury nie mają znaku typu literału lub znaku typu identyfikatora.
 
-- **Typ struktury.** Brak odpowiedniego typu w .NET Framework. Wszystkie struktury dziedziczą z klasy <xref:System.ValueType?displayProperty=nameWithType>.NET Framework, ale żadna konkretna struktura nie odnosi się do. <xref:System.ValueType?displayProperty=nameWithType>
+- **Typ struktury.** Brak odpowiedniego typu w .NET Framework. Wszystkie struktury dziedziczą z klasy .NET Framework <xref:System.ValueType?displayProperty=nameWithType>, ale żadna konkretna struktura nie odnosi się do <xref:System.ValueType?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Przykład
 
 Poniższy model przedstawia kontur deklaracji struktury.
 
-```
+```vb
 [Public | Protected | Friend | Protected Friend | Private] Structure structname
     {Dim | Public | Friend | Private} member1 As datatype1
     ' ...

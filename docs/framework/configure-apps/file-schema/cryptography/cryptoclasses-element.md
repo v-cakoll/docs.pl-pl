@@ -1,5 +1,5 @@
 ---
-title: <cryptoClasses>, element
+title: <cryptoClasses> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/cryptoClasses
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <cryptoClasses> element
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
-ms.openlocfilehash: 87e64ecd79ebc54a669d33550790781c87b5917c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 89f1d89ea397794e366b53205ac23b94d7892869
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921132"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699754"
 ---
-# <a name="cryptoclasses-element"></a>\<cryptoClasses> Element
-Zawiera listę klas kryptograficznych, które mają mapowanie do przyjaznej nazwy w [ \<elemencie nameEntry >](nameentry-element.md) .  
+# <a name="cryptoclasses-element"></a>\<cryptoClasses > elementu
+Zawiera listę klas kryptograficznych, które mają mapowanie do przyjaznej nazwy w elemencie [\<nameEntry >](nameentry-element.md) .  
   
- \<> konfiguracji  
-\<mscorlib>  
-\<cryptographySettings>  
-\<cryptoNameMapping>  
-\<cryptoClasses>  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<cryptoClasses >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,7 +41,7 @@ Zawiera listę klas kryptograficznych, które mają mapowanie do przyjaznej nazw
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<cryptoClass>](cryptoclass-element.md)|Zawiera klasę kryptografii, która ma mapowanie do przyjaznej nazwy w  **\<elemencie nameEntry >** .|  
+|[@no__t — 1cryptoClass >](cryptoclass-element.md)|Zawiera klasę kryptografii, która ma mapowanie do przyjaznej nazwy w elemencie **\<nameEntry >** .|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -50,10 +50,10 @@ Zawiera listę klas kryptograficznych, które mają mapowanie do przyjaznej nazw
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
 |`cryptographySettings`|Zawiera ustawienia kryptografii.|  
 |`cryptoNameMapping`|Zawiera mapowania klas do przyjaznych nazw.|  
-|`mscorlib`|`cryptographySettings` Zawiera element.|  
+|`mscorlib`|Zawiera element `cryptographySettings`.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje,  **\<** jak używać elementu cryptoClass >, aby odwoływać się do klasy kryptografii i skonfigurować środowisko uruchomieniowe. Następnie można przekazać ciąg "RSA" do <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> metody i <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> użyć metody do zwrócenia `MyCryptoRSAClass` obiektu.  
+ Poniższy przykład pokazuje, jak używać elementu **\<cryptoClass >** , aby odwoływać się do klasy kryptografii i skonfigurować środowisko uruchomieniowe. Następnie można przekazać ciąg "RSA" do metody <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> i użyć metody <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> do zwrócenia obiektu `MyCryptoRSAClass`.  
   
 ```xml  
 <configuration>  
@@ -82,5 +82,5 @@ Zawiera listę klas kryptograficznych, które mają mapowanie do przyjaznej nazw
 - [Schemat pliku konfiguracji](../index.md)
 - [Schemat ustawień kryptografii](index.md)
 - [Usługi kryptograficzne](../../../../standard/security/cryptographic-services.md)
-- [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
+- [System. Security. Cryptography. obiektu CryptoConfig. isfromname](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
 - [Konfigurowanie klas kryptografii](../../configure-cryptography-classes.md)

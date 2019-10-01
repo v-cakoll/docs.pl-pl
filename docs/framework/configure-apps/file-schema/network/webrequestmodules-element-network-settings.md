@@ -8,19 +8,19 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-ms.openlocfilehash: c30a7a0bcce62c99d7c1ec0ff17389b8c2cd2f17
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e119d9ce1f8bb6f07f8050612550db459a2f065c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663943"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697463"
 ---
 # <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules >, element (Ustawienia sieci)
 Określa moduły, które mają być używane do żądania informacji z hostów sieciowych.  
   
- \<> konfiguracji  
-\<system.net>  
-\<webRequestModules>  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4webRequestModules >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -50,9 +50,9 @@ Określa moduły, które mają być używane do żądania informacji z hostów s
 |[system.net](system-net-element-network-settings.md)|Zawiera ustawienia, które określają, w jaki sposób .NET Framework nawiązuje połączenie z siecią.|  
   
 ## <a name="remarks"></a>Uwagi  
- Element rejestruje elementy podrzędne <xref:System.Net.WebRequest> klasy do obsługi żądań informacji do hostów sieciowych. `webRequestModules` Moduły żądania sieci Web muszą implementować <xref:System.Net.IWebRequestCreate> interfejs.  
+ Element `webRequestModules` rejestruje elementy podrzędne klasy <xref:System.Net.WebRequest> do obsługi żądań informacji na hostach sieci. Moduły żądania sieci Web muszą implementować interfejs <xref:System.Net.IWebRequestCreate>.  
   
- .NET Framework obejmuje moduły żądania sieci Web dla identyfikatorów URI zaczynających `http://`się `https://`od, `file://`i. Moduły domyślne można zastąpić tylko przez zarejestrowanie modułu niestandardowego w pliku konfiguracji.  
+ .NET Framework obejmuje moduły żądania sieci Web dla identyfikatorów URI zaczynających się od `http://`, `https://` i `file://`. Moduły domyślne można zastąpić tylko przez zarejestrowanie modułu niestandardowego w pliku konfiguracji.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
  Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  

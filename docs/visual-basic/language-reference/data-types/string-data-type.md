@@ -18,30 +18,30 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-ms.openlocfilehash: 11c4f119360af386fa2c5609ea7815b9ae7a64f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d2fd226735622de5cd7197060c05b8ac12b69f1
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647003"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696844"
 ---
 # <a name="string-data-type-visual-basic"></a>String — Typ danych (Visual Basic)
-Zawiera sekwencje punktów niepodpisanego kodu (2-bajtowych) 16-bitowych tego zakresu wartości od 0 do 65 535. Każdy *punktem kodu*, lub kod znaku reprezentuje pojedynczy znak Unicode. Ciąg może zawierać od 0 do około miliarda dwóch (2 ^ 31) znaków Unicode.  
+Przechowuje sekwencje 16-bitowego (2-bajtowego) kodu bez znaku, który ma wartość z zakresu od 0 do 65535. Każdy *punkt kodu*lub znak, reprezentuje pojedynczy znak Unicode. Ciąg może zawierać od 0 do około 2 000 000 000 (2 ^ 31) znaków Unicode.  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj `String` typ danych do przechowywania wielu znaków, bez konieczności zarządzania tablicy `Char()`, tablicę `Char` elementów.  
+ Użyj typu danych `String`, aby przechowywać wiele znaków bez obciążeń związanych z zarządzaniem tablicą `Char()`, tablicy elementów `Char`.  
   
- Wartość domyślna `String` jest `Nothing` (odwołanie o wartości null). Należy pamiętać, że nie jest taka sama jak pusty ciąg (wartość `""`).  
+ Wartość domyślna `String` to `Nothing` (odwołanie o wartości null). Należy zauważyć, że nie jest to ten sam ciąg, który jest ciągiem pustym (wartość `""`).  
   
 ## <a name="unicode-characters"></a>Znaki Unicode  
- Pierwsze punkty kodowe 128 (0 – 127), znaków Unicode odpowiadają litery i symbole na klawiaturze standardowej Stanów Zjednoczonych. Te pierwsze punkty kodowe 128 są takie same, jak definiuje zestaw znaków ASCII. Drugi 128 punkty kodowe (128-255) reprezentują znaków specjalnych, takich jak litery alfabetu alfabetu łacińskiego, akcentów, symbole walut i ułamki. Unicode używa różnorodnych symbole pozostałe punkty kodowe (256-65535). W tym znaki tekstowe na całym świecie, znaki diakrytyczne i symbole matematyczne i technicznych.  
+ Pierwsze 128 punktów kodowych (0 – 127) Unicode odpowiada literom i symbolom na standardowej klawiaturze amerykańskiej. Te pierwsze 128 punktów kodowych są takie same jak w zestawie znaków ASCII. Drugie 128 punktów kodowych (128 – 255) reprezentuje znaki specjalne, takie jak litery alfabetu łacińskiego, akcenty, symbole waluty i ułamki. Unicode używa pozostałych punktów kodowych (256-65535) dla wielu różnych symboli. Obejmuje to ogólnoświatowe znaki tekstowe, znaki diakrytyczne i symbole matematyczne i techniczne.  
   
- Można używać metod, takich jak <xref:System.Char.IsDigit%2A> i <xref:System.Char.IsPunctuation%2A> na pojedynczy znak w `String` zmiennej, aby określić klasyfikację Unicode.  
+ Możesz użyć metod, takich jak <xref:System.Char.IsDigit%2A> i <xref:System.Char.IsPunctuation%2A> dla pojedynczego znaku w zmiennej `String`, aby określić jego klasyfikację Unicode.  
   
 ## <a name="format-requirements"></a>Wymagania dotyczące formatu  
- Należy ująć `String` literału w cudzysłowie (`" "`). Musi zawierać znak cudzysłowu, jako jeden ze znaków w ciągu, użycie dwóch sąsiadujących znaków cudzysłowu (`""`). Ilustruje to poniższy przykład.  
+ Należy ująć literał `String` w cudzysłowie (`" "`). Jeśli musisz zawierać znak cudzysłowu jako jeden ze znaków w ciągu, użyj dwóch znaków cudzysłowu (`""`). Ilustruje to poniższy przykład.  
   
-```  
+```vb  
 Dim j As String = "Joe said ""Hello"" to me."  
 Dim h As String = "Hello"  
 ' The following messages all display the same thing:  
@@ -51,32 +51,32 @@ MsgBox("Joe said " & """" & h & """" & " to me.")
 MsgBox("Joe said """ & h & """ to me.")  
 ```  
   
- Należy zauważyć, że ciągłych znaków cudzysłowu, które reprezentują znak cudzysłowu w ciągu niezależne od znaków cudzysłowu, rozpoczęcia i zakończenia `String` literału.  
+ Należy zauważyć, że ciągły cudzysłów, który reprezentuje znak cudzysłowu w ciągu, jest niezależny od znaków cudzysłowu, które zaczynają i kończą literał `String`.  
   
-## <a name="string-manipulations"></a>Działań na ciągach  
- Po przypisaniu ciąg `String` zmiennej, ten ciąg jest *niezmienne*, co oznacza nie można zmienić jego długość lub zawartości. Zmianę ciągu w jakikolwiek sposób języka Visual Basic tworzy nowy ciąg i porzuca poprzedniego. `String` Zmienna następnie wskazuje nowe parametry.  
+## <a name="string-manipulations"></a>Manipulowanie ciągami  
+ Po przypisaniu ciągu do zmiennej `String` ten ciąg jest *niezmienny*, co oznacza, że nie można zmienić jego długości ani zawartości. Gdy zmieniasz ciąg w dowolny sposób, Visual Basic tworzy nowy ciąg i porzuca poprzednią wartość. Zmienna `String` wskazuje nowy ciąg.  
   
- Możesz manipulować zawartością `String` zmiennej przy użyciu różnych funkcji ciągów. W poniższym przykładzie pokazano <xref:Microsoft.VisualBasic.Strings.Left%2A> — funkcja  
+ Zawartość zmiennej `String` można manipulować przy użyciu różnych funkcji ciągu. Poniższy przykład ilustruje funkcję <xref:Microsoft.VisualBasic.Strings.Left%2A>  
   
-```  
+```vb  
 Dim S As String = "Database"  
 ' The following statement sets S to a new string containing "Data".  
 S = Microsoft.VisualBasic.Left(S, 4)  
 ```  
   
- Ciąg, który został utworzony przez inny składnik, może być dopełniana spacji wiodących albo końcowych. Jeśli wystąpi taki ciąg, możesz użyć <xref:Microsoft.VisualBasic.Strings.Trim%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A>, i <xref:Microsoft.VisualBasic.Strings.RTrim%2A> funkcji, aby usunąć te miejsca do magazynowania.  
+ Ciąg utworzony przez inny składnik może być uzupełniony spacjami wiodącymi lub końcowymi. Jeśli otrzymasz taki ciąg, możesz użyć funkcji <xref:Microsoft.VisualBasic.Strings.Trim%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A> i <xref:Microsoft.VisualBasic.Strings.RTrim%2A>, aby usunąć te spacje.  
   
- Aby uzyskać więcej informacji na temat działań na ciągach, zobacz [ciągi](../../../visual-basic/programming-guide/language-features/strings/index.md).  
+ Aby uzyskać więcej informacji na temat manipulowania ciągami, zobacz [ciągi](../../../visual-basic/programming-guide/language-features/strings/index.md).  
   
 ## <a name="programming-tips"></a>Porady dla programistów  
   
-- **Liczby ujemne.** Należy pamiętać, że znaki w posiadaniu `String` niepodpisanych i nie może reprezentować wartości ujemnych. W każdym przypadku, nie należy używać `String` do przechowywania wartości liczbowych.  
+- **Liczby ujemne.** Należy pamiętać, że znaki przechowywane przez `String` są niepodpisane i nie mogą reprezentować wartości ujemnych. W każdym przypadku nie należy używać `String` do przechowywania wartości numerycznych.  
   
-- **Uwagi dotyczące współdziałania.** Jeśli są komunikowanie się ze składnikami programu .NET Framework na przykład obiektami automatyzacji lub COM, pamiętaj, że znaków w ciągu ma różną szerokość danych (8 bitów) w innych środowiskach. Jeśli przekazujesz argumentu ciągu znaków 8-bitowych do takiego składnika, Zadeklaruj go jako `Byte()`, tablicę `Byte` elementów, zamiast `String` nowego kodu języka Visual Basic.  
+- **Zagadnienia dotyczące międzyoperacyjnych.** Jeśli masz połączenie ze składnikami niezapisanymi dla .NET Framework, na przykład obiekty automatyzacji lub COM, pamiętaj, że znaki ciągu mają różną szerokość danych (8 bitów) w innych środowiskach. Jeśli przekazujesz argument ciągu znaków 8-bitowy do takiego składnika, zadeklaruj go jako `Byte()`, tablicę elementów `Byte`, a nie `String` w nowym kodzie Visual Basic.  
   
-- **Znaki typu.** Dołączanie znaku typu identyfikator `$` do jakiegokolwiek identyfikatora wymusza `String` typu danych. `String` nie ma typ literału znaku. Jednak kompilator traktuje literały ujęta w znaki cudzysłowu (`" "`) jako `String`.  
+- **Znaki typu.** Dołączanie znaku typu identyfikatora `$` do dowolnego identyfikatora zmusza go do typu danych `String`. `String` nie ma znaku typu literału. Jednak kompilator traktuje literały ujęte w znaki cudzysłowu (`" "`) jako `String`.  
   
-- **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.String?displayProperty=nameWithType> klasy.  
+- **Typ struktury.** Odpowiedni typ w .NET Framework jest klasą <xref:System.String?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -85,5 +85,5 @@ S = Microsoft.VisualBasic.Left(S, 4)
 - [Char, typ danych](../../../visual-basic/language-reference/data-types/char-data-type.md)
 - [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [Instrukcje: wywoływanie funkcji systemu Windows wykorzystującej typy bez znaku](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [Instrukcje: wywoływanie funkcji Windows wykorzystującej typy bez znaku](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
 - [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

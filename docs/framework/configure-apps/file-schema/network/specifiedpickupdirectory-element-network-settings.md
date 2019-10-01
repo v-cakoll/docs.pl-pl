@@ -8,21 +8,21 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: b2e31dee4f5aff2bf6cedf5c4e9ca235695b0a53
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 47aa357dac8b6bf71ce8c391004af16f8c98e347
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659099"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697593"
 ---
 # <a name="specifiedpickupdirectory-element-network-settings"></a>\<specifiedPickupDirectory >, element (Ustawienia sieci)
 Konfiguruje katalog lokalny dla serwera SMTP (Simple Mail Transport Protocol).  
   
- \<> konfiguracji  
-\<system.net>  
-\<mailSettings>  
-\<smtp>  
-\<specifiedPickupDirectory>  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<mailSettings >** ](mailsettings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<smtp >** ](smtp-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<specifiedPickupDirectory >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,10 +48,10 @@ Konfiguruje katalog lokalny dla serwera SMTP (Simple Mail Transport Protocol).
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> SMTP — element (Ustawienia sieci)](smtp-element-network-settings.md)|Konfiguruje opcje wysyłania poczty SMTP (Simple Mail Transport Protocol).|  
+|[\<smtp >, element (Ustawienia sieci)](smtp-element-network-settings.md)|Konfiguruje opcje wysyłania poczty SMTP (Simple Mail Transport Protocol).|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten `specifiedPickupDirectory` atrybut określa katalog, w którym aplikacje zapisują wiadomości e-mail, które mają być przetwarzane przez serwer SMTP.  
+ Atrybut `specifiedPickupDirectory` ustawia katalog, w którym aplikacje zapisują wiadomości e-mail, które mają być przetwarzane przez serwer SMTP.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład określa c:\maildrop jako katalog podnoszenia poczty.  

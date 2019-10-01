@@ -8,19 +8,19 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 7e49762ee017564734bfb2b2f7074d94b7eabe11
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 0945629c1395917bc1cf825f2ba84d20afa99957
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659391"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698208"
 ---
 # <a name="defaultproxy-element-network-settings"></a>\<defaultProxy >, element (Ustawienia sieci)
 Konfiguruje serwer proxy protokołu HTTP (Hypertext Transfer Protocol).  
   
- \<> konfiguracji  
-\<system.net>  
-\<defaultProxy>  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<defaultProxy >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -61,7 +61,7 @@ Konfiguruje serwer proxy protokołu HTTP (Hypertext Transfer Protocol).
 ## <a name="remarks"></a>Uwagi  
  Jeśli element defaultProxy jest pusty, zostaną użyte ustawienia serwera proxy z programu Internet Explorer. To zachowanie różni się od wersji 1,1 .NET Framework.  
   
- Wyjątek jest zgłaszany, jeśli element [module](module-element-network-settings.md) określa typ niepubliczny, typ nie jest wyprowadzany z <xref:System.Net.IWebProxy> klasy, wystąpił wyjątek z konstruktora bez parametrów tego obiektu lub wystąpił wyjątek podczas pobierania domyślny serwer proxy określony przez system. <xref:System.Exception.InnerException%2A> Właściwość wyjątku powinna zawierać więcej informacji o głównej przyczynie błędu.  
+ Wyjątek jest zgłaszany, jeśli element [module](module-element-network-settings.md) określa typ niepubliczny, typ nie jest wyprowadzany z klasy <xref:System.Net.IWebProxy>, wystąpił wyjątek z konstruktora bez parametrów tego obiektu lub wystąpił wyjątek podczas pobierania domyślny serwer proxy określony przez system. Właściwość <xref:System.Exception.InnerException%2A> tego wyjątku powinna zawierać więcej informacji o głównej przyczynie błędu.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
  Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  

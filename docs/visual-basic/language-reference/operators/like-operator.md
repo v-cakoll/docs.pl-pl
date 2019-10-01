@@ -22,86 +22,86 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-ms.openlocfilehash: 38e56b8c0ec6bab89052ee42a2cd9c24053c658e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 795ecc2e80d57af29ccd50c50d2dd209c6425e40
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768332"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701134"
 ---
 # <a name="like-operator-visual-basic"></a>Like — Operator (Visual Basic)
-Porównuje ciąg do wzorca.  
+Porównuje ciąg ze wzorcem.  
 
 > [!IMPORTANT]
-> `Like` Operator nie jest obecnie obsługiwane w projektach .NET Core i .NET Standard.
+> Operator `Like` nie jest obecnie obsługiwany w projektach .NET Core i .NET Standard.
 
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 result = string Like pattern  
 ```  
   
 ## <a name="parts"></a>Części  
  `result`  
- Wymagana. Wszelkie `Boolean` zmiennej. Wynik jest `Boolean` wartość wskazującą czy `string` spełnia `pattern`.  
+ Wymagany. Dowolna zmienna `Boolean`. Wynik jest wartością `Boolean` wskazującą, czy `string` spełnia `pattern`.  
   
  `string`  
- Wymagana. Wszelkie `String` wyrażenia.  
+ Wymagany. Dowolne wyrażenie `String`.  
   
  `pattern`  
- Wymagana. Wszelkie `String` wyrażeń zgodnych z konwencjami dopasowania do wzorca opisanego w "Uwagi".  
+ Wymagany. Dowolne wyrażenie `String` zgodne z konwencjami dopasowania wzorca opisanymi w "uwagi".  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli wartość w `string` spełnia wzorzec zawarte w `pattern`, `result` jest `True`. Jeśli ciąg nie spełnia wzorzec, `result` jest `False`. Jeśli oba `string` i `pattern` są puste ciągi, wynik jest `True`.  
+ Jeśli wartość w `string` spełnia wzorzec zawarty w `pattern`, `result` jest `True`. Jeśli ciąg nie spełnia wzorca, `result` jest `False`. Jeśli oba `string` i `pattern` są pustymi ciągami, wynik jest `True`.  
   
-## <a name="comparison-method"></a>Metody porównania  
- Zachowanie `Like` zależy od operatora [instrukcji porównanie opcji](../../../visual-basic/language-reference/statements/option-compare-statement.md). Domyślną metodę porównywania ciągów dla każdego pliku źródłowego jest `Option Compare Binary`.  
+## <a name="comparison-method"></a>Metoda porównania  
+ Zachowanie operatora `Like` zależy od [instrukcji Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md). Domyślną metodą porównywania ciągów dla każdego pliku źródłowego jest `Option Compare Binary`.  
   
-## <a name="pattern-options"></a>Opcje wzorzec  
- Dopasowanie wzorca wbudowanych zapewnia wszechstronne narzędzie do porównywania ciągów znaków. Dopasowanie wzorca funkcje umożliwiają pasuje do każdego znaku w `string` względem określonego znaku, symbolu wieloznacznego, lista znak lub zakres znaków. W poniższej tabeli przedstawiono znaki są dozwolone w `pattern` i są zgodne.  
+## <a name="pattern-options"></a>Opcje wzorca  
+ Wbudowane dopasowania wzorców zapewniają uniwersalne narzędzie do porównywania ciągów. Funkcje dopasowania wzorców umożliwiają dopasowanie każdego znaku w `string` względem określonego znaku, symbolu wieloznacznego, listy znaków lub zakresu znaków. W poniższej tabeli przedstawiono znaki dozwolone w `pattern` i ich dopasowanie.  
   
-|Znaków `pattern`|Dopasowania w `string`|  
+|Znaki w `pattern`|Dopasowania w `string`|  
 |-----------------------------|-------------------------|  
 |`?`|Dowolny pojedynczy znak|  
 |`*`|Zero lub więcej znaków|  
-|`#`|Dowolna cyfra (0 – 9)|  
-|`[charlist]`|Dowolny pojedynczy znak `charlist`|  
-|`[!charlist]`|Dowolny pojedynczy znak, nie w `charlist`|  
+|`#`|Dowolna pojedyncza cyfra (0 – 9)|  
+|`[charlist]`|Dowolny pojedynczy znak w `charlist`|  
+|`[!charlist]`|Dowolny pojedynczy znak nie w `charlist`|  
   
-## <a name="character-lists"></a>Znak list  
- Grupy z jednego lub więcej znaków (`charlist`) w nawiasach (`[ ]`) może służyć do Dopasuj jeden dowolny znak w `string` i może zawierać niemal dowolnego kodu znaku, w tym cyfr.  
+## <a name="character-lists"></a>Listy znaków  
+ Grupa zawierająca jeden lub więcej znaków (`charlist`) ujęta w nawiasy kwadratowe (`[ ]`) może być używana do dopasowania dowolnego pojedynczego znaku w `string` i może zawierać prawie dowolny kod znaków, w tym cyfry.  
   
- Znak wykrzyknika (`!`) na początku `charlist` oznacza, że dopasowanie jest wykonywane, gdy dowolny znak z wyjątkiem znaków `charlist` znajduje się w `string`. W przypadku użycia poza nawiasem kwadratowym, wykrzyknik wykrzyknikami.  
+ Wykrzyknik (`!`) na początku `charlist` oznacza, że jest to dopasowanie, jeśli dowolny znak z wyjątkiem znaków w `charlist` zostanie znaleziony w `string`. Gdy używany jest nawiasy klamrowe, wykrzyknik dopasowuje się do samego siebie.  
   
 ## <a name="special-characters"></a>Znaki specjalne  
- Aby dopasować lewy nawias znaków specjalnych (`[`), znaku zapytania (`?`), krzyżyk (`#`), a gwiazdka (`*`), Otaczaj ich nawiasami kwadratowymi. Prawy nawias kwadratowy (`]`) nie można użyć w obrębie grupy do dopasowania, ale mogą być używane na zewnątrz grupy jako pojedynczy znak.  
+ Aby dopasować znaki specjalne do lewego nawiasu (`[`), znaku zapytania (`?`), znaku numeru (`#`) i gwiazdki (`*`), umieść je w nawiasach. Nie można użyć prawego nawiasu (`]`) w grupie, aby dopasować się do siebie, ale można go użyć poza grupą jako pojedynczym znakiem.  
   
- Sekwencja znaków `[]` jest traktowana jako ciąg o zerowej długości (`""`). Jednak nie może być częścią listy znaków, ujęte w nawiasy kwadratowe. Jeśli chcesz sprawdzić, czy pozycja w `string` zawiera jeden grupy znaków lub żaden znak w ogóle, można użyć `Like` dwa razy. Aby uzyskać przykład, zobacz [jak: Dopasowanie ciągu do wzorca](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
+ Sekwencja znaków `[]` jest traktowana jako ciąg o zerowej długości (`""`). Jednak nie może być częścią listy znaków ujętej w nawiasy klamrowe. Jeśli chcesz sprawdzić, czy pozycja w `string` zawiera jedną z grup znaków lub nie ma żadnego znaku, możesz użyć dwa razy `Like`. Aby zapoznać się z przykładem, zobacz [jak: dopasowywanie ciągu do wzorca](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
   
-## <a name="character-ranges"></a>Zakres znaków  
- Za pomocą łącznika (`–`) do oddzielenia dolną i górną granicą zakresu, `charlist` można określić zakres znaków. Na przykład `[A–Z]` skutkuje dopasowania, jeśli znak odpowiedniej pozycji w `string` zawierającej dowolny znak w zakresie `A`—`Z`, i `[!H–L]` skutkuje dopasowania, jeśli pozycji odpowiedniego znaku zawierającej dowolny znak spoza zakresu `H`—`L`.  
+## <a name="character-ranges"></a>Zakresy znaków  
+ Używając łącznika (`–`), aby oddzielić dolną i górną granicę zakresu, `charlist` może określić zakres znaków. Na przykład, `[A–Z]` powoduje dopasowanie, jeśli pozycja znaku w `string` zawiera dowolny znak z zakresu `A` – `Z`, a `[!H–L]` powoduje dopasowanie, Jeśli odpowiednia pozycja znaku zawiera dowolny znak poza zakres `H` – `L`.  
   
- Po określeniu zakresu znaków, musi znajdować się w kolejności rosnącej, oznacza to, z od najmniejszych do największych. W związku z tym `[A–Z]` jest prawidłowy wzorzec, ale `[Z–A]` nie jest.  
+ Po określeniu zakresu znaków muszą one znajdować się w rosnącej kolejności sortowania, czyli od najniższego do najwyższego. W tym celu `[A–Z]` jest prawidłowym wzorcem, ale `[Z–A]` nie jest.  
   
-### <a name="multiple-character-ranges"></a>Multiple Character Ranges  
- Aby określić wiele zakresów dla tej samej pozycji znaku, umieść je w ramach tej samej nawiasów bez ograniczników. Na przykład `[A–CX–Z]` skutkuje dopasowania, jeśli znak odpowiedniej pozycji w `string` zawierającej dowolny znak w zakresie albo `A`—`C` lub zakres `X`—`Z`.  
+### <a name="multiple-character-ranges"></a>Wiele zakresów znaków  
+ Aby określić wiele zakresów dla tej samej pozycji znaku, umieść je w tych samych nawiasach bez ograniczników. Na przykład `[A–CX–Z]` powoduje dopasowanie, jeśli pozycja znaku w `string` zawiera dowolny znak w zakresie `A` – `C` lub zakres `X` – `Z`.  
   
 ### <a name="usage-of-the-hyphen"></a>Użycie łącznika  
- Znak minusa (`–`) może znajdować się na początku (po wykrzyknik, jeśli istnieje) lub na końcu `charlist` do dopasowania. W dowolnym miejscu łącznik określa zakres znaków rozdzielone znaki po obu stronach łącznik.  
+ Łącznik (`–`) może pojawić się na początku (po wykrzykniku, jeśli istnieje) lub na końcu `charlist`, aby dopasować sam siebie. W każdej innej lokalizacji łącznik identyfikuje zakres znaków, które są rozdzielane znakami po obu stronach łącznika.  
   
 ## <a name="collating-sequence"></a>Kolejność sortowania  
- Znaczenie określony zakres jest zależna od znaków, kolejności w czasie wykonywania, zgodnie z ustaleniami `Option Compare` i ustawień regionalnych systemu kod działa na. Za pomocą `Option Compare Binary`, zakres `[A–E]` odpowiada `A`, `B`, `C`, `D`, i `E`. Za pomocą `Option Compare Text`, `[A–E]` odpowiada `A`, `a`, `À`, `à`, `B`, `b`, `C`, `c`, `D`, `d`, `E`, i `e`. Zakres nie jest zgodny `Ê` lub `ê` ponieważ znaki akcentowane sortowane po nieakcentowane znaki w porządku sortowania.  
+ Znaczenie określonego zakresu zależy od kolejności znaków w czasie wykonywania określony przez `Option Compare` i ustawienia regionalne systemu, w którym uruchomiono kod. W przypadku `Option Compare Binary` zakres `[A–E]` pasuje do `A`, `B`, `C`, `D` i `E`. W przypadku `Option Compare Text` `[A–E]` dopasowuje `A`, `a`, `À`, `à`, `B`, `b`, `C`, `c`, 0, 1, 2 i 3. Zakres nie pasuje do `Ê` lub `ê`, ponieważ znaki akcentowane są sortowane po nieakcentowane znaki w kolejności sortowania.  
   
-## <a name="digraph-characters"></a>Dwuznak znaków  
- W przypadku niektórych języków istnieją, które reprezentują dwa oddzielne znaki alfabetu. Na przykład użyć znaku w kilku językach `æ` do reprezentowania znaków `a` i `e` kiedy pojawiają się razem. `Like` Operator rozpoznaje dwuznak pojedynczy znak i dwóch pojedynczych znaków są równoważne.  
+## <a name="digraph-characters"></a>Znaki odgrafu  
+ W niektórych językach istnieją znaki alfabetyczne, które reprezentują dwa oddzielne znaki. Na przykład w kilku językach użyto znaku `æ`, aby reprezentować znaki `a` i `e`, gdy pojawiają się razem. Operator `Like` rozpoznaje, że pojedynczy znak dwugrafu i dwa poszczególne znaki są równoważne.  
   
- Gdy języka, który używa znaku dwuznak jest określony w ustawieniach regionalnych systemu, wystąpienia tego znaku pojedynczego dwuznak albo `pattern` lub `string` pasuje do równoważne sekwencji dwuznakowy w innym ciągu. Podobnie, znak dwuznak w `pattern` ujęte w nawiasy kwadratowe (samodzielnie, na liście lub w zakresie) dopasowuje równoważne sekwencję dwóch znaków w `string`.  
+ Gdy język, który używa znaku oddzielenia jest określony w ustawieniach regionalnych systemu, wystąpienie pojedynczego znaku w `pattern` lub `string` dopasowuje równoważną dwuznakową sekwencję w innym ciągu. Podobnie, znak podgrafu w `pattern` ujęty w nawiasy kwadratowe (na liście lub w zakresie) jest zgodny z równoważną dwuznakową sekwencją w `string`.  
   
 ## <a name="overloading"></a>Przeciążenie  
- `Like` Operator może być *przeciążone*, co oznacza, że klasy lub struktury można ponownie zdefiniować jej zachowanie, gdy argument operacji ma typ tej klasy lub struktury. Jeśli kod używa tego operatora dla klasy lub struktury, upewnij się, że rozumiesz jej zachowanie zmieniony. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Operator `Like` może być *przeciążony*, co oznacza, że Klasa lub struktura może przedefiniować jej zachowanie, gdy operand ma typ tej klasy lub struktury. Jeśli Twój kod używa tego operatora dla takiej klasy lub struktury, pamiętaj o tym, aby zrozumieć jego ponownie zdefiniowane zachowanie. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto `Like` operatora porównania ciągów do różnych wzorców. Wyniki są przekazywane do `Boolean` wskazującą, czy każdy ciąg spełnia wzorzec zmiennej.  
+ W tym przykładzie używa operatora `Like` do porównywania ciągów z różnymi wzorcami. Wyniki przejdą do zmiennej `Boolean` wskazującej, czy każdy ciąg spełnia wzorzec.  
   
  [!code-vb[VbVbalrOperators#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#30)]  
   
@@ -110,8 +110,8 @@ result = string Like pattern
 - <xref:Microsoft.VisualBasic.Strings.InStr%2A>
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
 - [Operatory porównania](../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Pierwszeństwo operatorów w Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Option Compare, instrukcja](../../../visual-basic/language-reference/statements/option-compare-statement.md)
 - [Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [Instrukcje: Dopasowanie ciągu do wzorca](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)
+- [Instrukcje: dopasowywanie ciągu do wzorca](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)

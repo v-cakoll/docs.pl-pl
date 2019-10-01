@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 2f17e9828f46e6355cdbbddb1b8a83f1188b1a01
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6d85cc041850300d1d079b227dcb8ed9201a0502
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791742"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699059"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Izolacja migawki w programie SQL Server
 Izolacja migawki podwyższa poziom współbieżności dla aplikacji OLTP.  
   
 ## <a name="understanding-snapshot-isolation-and-row-versioning"></a>Omówienie izolacji migawek i przechowywania wersji wierszy  
- Gdy izolacja migawki jest włączona, zaktualizowane wersje wierszy dla każdej transakcji są zachowywane w **bazie danych tempdb**. Unikatowy numer sekwencyjny transakcji identyfikuje każdą transakcję, a te unikatowe numery są rejestrowane dla każdej wersji wiersza. Transakcja współdziała z najnowszymi wersjami wierszy mającymi numer sekwencyjny przed numerem sekwencyjnym transakcji. Nowsze wersje wierszy utworzone po rozpoczęciu transakcji są ignorowane przez transakcję.  
+ Po włączeniu izolacji migawki należy zachować zaktualizowane wersje wierszy dla każdej transakcji.  Przed SQL Server 2019 te wersje były przechowywane w bazie danych **tempdb**. W SQL Server 2019 wprowadzono nową funkcję, przyspieszone odzyskiwanie bazy danych (ADR), które wymaga własnego zestawu wersji wierszy.  Tak więc, jak w SQL Server 2019, jeśli ADR nie jest włączona, wersje wierszy są przechowywane w **bazie danych tempdb** jako zawsze.  Jeśli jest włączona funkcja ADR, wszystkie wersje wierszy, powiązane z izolacją migawki i ADR, są przechowywane w trwałym magazynie wersji (PVS) ADR, który znajduje się w bazie danych użytkownika w grupie plików, która określi użytkownik. Unikatowy numer sekwencyjny transakcji identyfikuje każdą transakcję, a te unikatowe numery są rejestrowane dla każdej wersji wiersza. Transakcja współdziała z najnowszymi wersjami wierszy mającymi numer sekwencyjny przed numerem sekwencyjnym transakcji. Nowsze wersje wierszy utworzone po rozpoczęciu transakcji są ignorowane przez transakcję.  
   
  Termin "migawka" odzwierciedla fakt, że wszystkie zapytania w transakcji widzą tę samą wersję lub migawkę bazy danych, na podstawie stanu bazy danych w momencie rozpoczęcia transakcji. Żadne blokady nie są uzyskiwane na bazowych wierszach danych lub stronach danych w transakcji migawek, co umożliwia wykonywanie innych transakcji bez blokowania przez poprzednią nieukończoną transakcję. Transakcje, które modyfikują dane, nie blokują transakcji, które odczytują dane, a transakcje, które odczytują dane, nie blokują transakcji, które zapisują dane, tak jak zwykle w ramach domyślnego, ZATWIERDZONEgo poziomu izolacji odczytu w SQL Server. Takie zachowanie bez blokowania znacznie zmniejsza prawdopodobieństwo zakleszczenia złożonych transakcji.  
   
@@ -76,7 +76,7 @@ SET READ_COMMITTED_SNAPSHOT ON
  Transakcja migawki zawsze korzysta z optymistycznej kontroli współbieżności, co powoduje wstrzymanie wszelkich blokad, które mogłyby uniemożliwić innym transakcjom aktualizowanie wierszy. Jeśli transakcja migawki próbuje zatwierdzić aktualizację wiersza, który został zmieniony po rozpoczęciu transakcji, transakcja zostanie wycofana i zostanie zgłoszony błąd.  
   
 ## <a name="working-with-snapshot-isolation-in-adonet"></a>Praca z izolacją migawki w ADO.NET  
- Izolacja migawki jest obsługiwana w ADO.NET przez <xref:System.Data.SqlClient.SqlTransaction> klasę. Jeśli baza danych została włączona na potrzeby izolacji migawki, ale nie jest skonfigurowana do READ_COMMITTED_SNAPSHOT na, należy zainicjować <xref:System.Data.SqlClient.SqlTransaction> przy użyciu <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> wartości wyliczenia **IsolationLevel. snapshot** podczas wywoływania metody. W tym fragmencie kodu założono, że połączenie <xref:System.Data.SqlClient.SqlConnection> jest otwartym obiektem.  
+ Izolacja migawki jest obsługiwana w ADO.NET przez klasę <xref:System.Data.SqlClient.SqlTransaction>. Jeśli dla bazy danych włączono izolację migawki, ale nie skonfigurowano jej do READ_COMMITTED_SNAPSHOT na, należy zainicjować <xref:System.Data.SqlClient.SqlTransaction> przy użyciu wartości wyliczenia **IsolationLevel. snapshot** podczas wywoływania metody <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A>. W tym fragmencie kodu założono, że połączenie jest otwartym obiektem <xref:System.Data.SqlClient.SqlConnection>.  
   
 ```vb  
 Dim sqlTran As SqlTransaction = _  

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: 2a3d0b182acad2351ed095934ca97c6194d344fc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f0979d2e0caeb0b22b90572aef0ad53235020f1d
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659135"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697823"
 ---
 # <a name="requestcaching-element-network-settings"></a>\<requestCaching >, element (Ustawienia sieci)
 Kontroluje mechanizm buforowania dla żądań sieci.  
   
- \<> konfiguracji  
-\<system.net>  
-\<requestCaching >  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<requestCaching >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,7 +44,7 @@ Kontroluje mechanizm buforowania dla żądań sieci.
 |---------------|-----------------|  
 |`isPrivateCache`|Określa, czy pamięć podręczna zapewnia izolację między informacjami różnych użytkowników. Wartość domyślna to `true`. Ta wartość powinna być `false` dla aplikacji warstwy środkowej.|  
 |`disableAllCaching`|Określa, że buforowanie jest wyłączone dla wszystkich odpowiedzi sieci Web i nie może zostać przesłonięte programowo.|  
-|`defaultPolicyLevel`|Jedna z wartości w <xref:System.Net.Cache.RequestCacheLevel> wyliczeniu. Wartość domyślna to `BypassCache`.|  
+|`defaultPolicyLevel`|Jedna z wartości w wyliczeniu <xref:System.Net.Cache.RequestCacheLevel>. Wartość domyślna to `BypassCache`.|  
 |`unspecifiedMaximumAge`|Określa domyślny czas, po którym zawartość jest oznaczona jako wygasła.|  
   
 ## <a name="policylevel-attribute"></a>policyLevel — atrybut  

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: a183c4160c4cd55b05c5c23f7a10e3a1d1c74ea4
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 94858f141e7d540454fca9c151c760c37f9ebbb0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659289"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697947"
 ---
-# <a name="proxy-element-network-settings"></a>\<> proxy — element (Ustawienia sieci)
+# <a name="proxy-element-network-settings"></a>\<proxy >, element (Ustawienia sieci)
 Definiuje serwer proxy.  
   
- \<> konfiguracji  
-\<system.net>  
-\<defaultProxy>  
-\<> proxy  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<proxy >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,10 +43,10 @@ Definiuje serwer proxy.
 |**Atrybut**|**Opis**|  
 |-------------------|---------------------|  
 |`autoDetect`|Określa, czy serwer proxy jest wykrywany automatycznie. Wartość domyślna to `unspecified`.|  
-|`bypassonlocal`|Określa, czy serwer proxy jest pomijany dla zasobów lokalnych. Zasoby lokalne obejmują serwer lokalny`http://localhost`(, `http://loopback`lub `http://127.0.0.1`) oraz identyfikator URI bez kropki (`http://webserver`). Wartość domyślna to `unspecified`.|  
+|`bypassonlocal`|Określa, czy serwer proxy jest pomijany dla zasobów lokalnych. Zasoby lokalne obejmują serwer lokalny (`http://localhost`, `http://loopback` lub `http://127.0.0.1`) i identyfikator URI bez kropki (`http://webserver`). Wartość domyślna to `unspecified`.|  
 |`proxyaddress`|Określa identyfikator URI serwera proxy do użycia.|  
-|`scriptLocation`|Określa lokalizację skryptu konfiguracji. Nie należy używać `bypassonlocal` atrybutu z tym atrybutem. |  
-|`usesystemdefault`|Określa, czy mają być używane ustawienia serwera proxy programu Internet Explorer. Jeśli jest ustawiona `true`na, kolejne atrybuty zastąpią ustawienia proxy programu Internet Explorer. Wartość domyślna to `unspecified`.|  
+|`scriptLocation`|Określa lokalizację skryptu konfiguracji. Nie należy używać atrybutu `bypassonlocal` z tym atrybutem. |  
+|`usesystemdefault`|Określa, czy mają być używane ustawienia serwera proxy programu Internet Explorer. Ustawienie wartości `true` spowoduje zastąpienie ustawień serwera proxy programu Internet Explorer. Wartość domyślna to `unspecified`.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -60,15 +60,15 @@ Definiuje serwer proxy.
 ## <a name="text-value"></a>Wartość tekstowa  
   
 ## <a name="remarks"></a>Uwagi  
- `proxy` Element definiuje serwer proxy dla aplikacji. Jeśli w pliku konfiguracji brakuje tego elementu, .NET Framework będzie używać ustawień serwera proxy w programie Internet Explorer.  
+ Element `proxy` definiuje serwer proxy dla aplikacji. Jeśli w pliku konfiguracji brakuje tego elementu, .NET Framework będzie używać ustawień serwera proxy w programie Internet Explorer.  
   
- Wartość `proxyaddress` atrybutu powinna być poprawnie sformułowanym jednolitym wskaźnikiem zasobów (URI).  
+ Wartość atrybutu `proxyaddress` powinna być poprawnie sformułowanym jednolitym wskaźnikiem zasobów (URI).  
   
- Ten `scriptLocation` atrybut odnosi się do automatycznego wykrywania skryptów konfiguracji serwera proxy. Klasa podejmie próbę zlokalizowania skryptu konfiguracji (o nazwie WPAD. dat), gdy opcja **Użyj skryptu automatycznej konfiguracji** jest zaznaczona w programie Internet Explorer. <xref:System.Net.WebProxy> Jeśli `bypassonlocal` jest ustawiona na dowolną wartość, `scriptLocation` jest ignorowana.
+ Atrybut `scriptLocation` odnosi się do automatycznego wykrywania skryptów konfiguracji serwera proxy. Klasa <xref:System.Net.WebProxy> podejmie próbę zlokalizowania skryptu konfiguracji (o nazwie WPAD. dat) w przypadku wybrania opcji **Użyj skryptu automatycznej konfiguracji** w programie Internet Explorer. Jeśli `bypassonlocal` jest ustawiona na dowolną wartość, `scriptLocation` jest ignorowany.
   
- `usesystemdefault` Użyj atrybutu dla aplikacji .NET Framework w wersji 1,1, które są migrowane do wersji 2,0.  
+ Użyj atrybutu `usesystemdefault` dla aplikacji .NET Framework w wersji 1,1, które są migrowane do wersji 2,0.  
   
- Wyjątek jest generowany, jeśli `proxyaddress` atrybut określa nieprawidłowy domyślny serwer proxy. <xref:System.Exception.InnerException%2A> Właściwość wyjątku powinna zawierać więcej informacji o głównej przyczynie błędu.  
+ Wyjątek jest generowany, jeśli atrybut `proxyaddress` określa nieprawidłowy domyślny serwer proxy. Właściwość <xref:System.Exception.InnerException%2A> tego wyjątku powinna zawierać więcej informacji o głównej przyczynie błędu.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
  Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  

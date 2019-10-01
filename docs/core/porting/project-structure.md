@@ -1,72 +1,72 @@
 ---
-title: Organizowanie projektów programu .NET Framework i .NET Core
-description: Pomoc dla właścicieli projektu, którzy chcą Kompiluj swoje rozwiązanie dla platformy .NET Framework i .NET Core side-by-side.
+title: Organizuj projekty dla .NET Framework i .NET Core
+description: Pomoc dla właścicieli projektu, którzy chcą kompilować rozwiązanie względem .NET Framework i .NET Core obok siebie.
 author: conniey
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: ab484ccc2c5b51b2ee1dca57df51669d288f3e6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e120e1aee60e88ea33a8290f3bf36eb93bfc91c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663198"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698936"
 ---
-# <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Zorganizować projekt do obsługi środowiska .NET Framework i .NET Core
+# <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Organizuj projekt, aby obsługiwał zarówno .NET Framework, jak i .NET Core
 
-Dowiedz się, jak utworzyć rozwiązanie, które jest kompilowany dla środowiska .NET Framework i .NET Core side-by-side. Zobacz kilka opcji do organizowania projektów, aby pomóc Ci osiągnąć ten cel. Poniżej przedstawiono niektóre typowe scenariusze należy wziąć pod uwagę podczas wybierania sposobu konfigurowania układ projektu za pomocą programu .NET Core. Lista nie może obejmować wszystkie potrzebne mu; Ustaw priorytet zależnie od potrzeb Twojego projektu.
+Dowiedz się, jak utworzyć rozwiązanie, które kompiluje zarówno .NET Framework, jak i .NET Core. Zobacz kilka opcji, aby zorganizować projekty w celu ułatwienia osiągnięcia tego celu. Poniżej przedstawiono kilka typowych scenariuszy, które należy wziąć pod uwagę w przypadku podejmowania decyzji o sposobie konfigurowania układu projektu przy użyciu programu .NET Core. Lista może nie obejmować wszystkiego, czego potrzebujesz; ustalanie priorytetów w zależności od potrzeb projektu.
 
-* [**Łączenie istniejących projektów i projektów .NET Core w jednym projektów**](#replace-existing-projects-with-a-multi-targeted-net-core-project)
+* [**Połącz istniejące projekty i projekty .NET Core w pojedyncze projekty**](#replace-existing-projects-with-a-multi-targeted-net-core-project)
 
   *Co to jest dobre dla:*
-  * Upraszczanie procesu kompilacji, kompilowanie pojedynczego projektu, a nie każdego przeznaczonych dla różnych wersji programu .NET Framework lub platformy kompilacji wielu projektów.
-  * Upraszczanie zarządzanie plikami źródła dla projektów docelowych multi, ponieważ musisz zarządzać pliku pojedynczego projektu. Podczas dodawania/usuwania plików źródłowych, alternatyw wymagają ręcznie zsynchronizować je z innych projektów.
+  * Uproszczenie procesu kompilacji przez skompilowanie pojedynczego projektu, a nie kompilowanie wielu projektów, każdy przeznaczony dla innej wersji .NET Framework lub platformy.
+  * Uproszczenie zarządzania plikami źródłowymi dla projektów wielowymiarowych, ponieważ należy zarządzać pojedynczym plikiem projektu. W przypadku dodawania/usuwania plików źródłowych alternatywa wymaga ręcznej synchronizacji z innymi projektami.
   * Łatwe generowanie pakietu NuGet do użycia.
-  * Umożliwia pisanie kodu dla określonej wersji środowiska .NET Framework w bibliotekach przy użyciu dyrektywy kompilatora.
+  * Umożliwia pisanie kodu dla konkretnej wersji .NET Framework w bibliotekach za pomocą dyrektyw kompilatora.
 
   *Nieobsługiwane scenariusze:*
-  * Wymaga deweloperzy mogą używać programu Visual Studio 2017 można otworzyć istniejące projekty. Do obsługi starszych wersji programu Visual Studio [przechowywanie plików projektu w różnych folderach](#support-vs) jest lepszym rozwiązaniem.
+  * Aby otworzyć istniejące projekty, deweloperzy muszą używać programu Visual Studio 2017. Aby można było obsługiwać starsze wersje programu Visual Studio, [zachowywanie plików projektu w różnych folderach](#support-vs) jest lepszym rozwiązaniem.
 
-* <a name="support-vs"></a>[**Zachowaj istniejące projekty i nowych projektów .NET Core, oddzielne**](#keep-existing-projects-and-create-a-net-core-project)
+* <a name="support-vs"></a>[**Przechowuj istniejące projekty i nowe projekty .NET Core**](#keep-existing-projects-and-create-a-net-core-project)
 
   *Co to jest dobre dla:*
-  * W dalszym ciągu obsługuje programowanie na istniejące projekty bez konieczności aktualizacji dla deweloperów lub współautorzy, którzy nie mają Visual Studio 2017.
-  * Zmniejsza możliwości tworzenia nowych usterek w istniejących projektów, ponieważ postęp dokonany w kodzie jest wymagany w tych projektach.
+  * Kontynuuje obsługę opracowywania istniejących projektów bez konieczności przeprowadzania uaktualnienia dla deweloperów/współautorów, którzy nie mają programu Visual Studio 2017.
+  * Zmniejszenie możliwości tworzenia nowych usterek w istniejących projektach, ponieważ w tych projektach nie są wymagane żadne zmiany w kodzie.
 
 ## <a name="example"></a>Przykład
 
-Należy wziąć pod uwagę poniższe repozytorium:
+Rozważ następujące repozytorium:
 
 ![Istniejący projekt](./media/project-structure/existing-project-structure.png)
 
 [**Kod źródłowy**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library/)
 
-Poniżej przedstawiono kilka sposobów dodawania pomocy technicznej dla platformy .NET Core dla tego repozytorium, w zależności od ograniczeń i złożoność istniejących projektów.
+Poniżej opisano kilka sposobów dodawania obsługi platformy .NET Core dla tego repozytorium w zależności od ograniczeń i złożoności istniejących projektów.
 
-## <a name="replace-existing-projects-with-a-multi-targeted-net-core-project"></a>Zamień istniejące projekty projektu .NET Core ukierunkowane na wielu
+## <a name="replace-existing-projects-with-a-multi-targeted-net-core-project"></a>Zastąp istniejące projekty z wielowymiarowym projektem platformy .NET Core
 
-Reorganizować tak, aby każda istniejącego repozytorium  *\*.csproj* pliki są usuwane i pojedynczą  *\*.csproj* tworzony jest plik, który jest przeznaczony dla wielu platform. Jest to doskonałe rozwiązanie, ponieważ jeden projekt jest w stanie kompilowanie dla różnych platform. Ma również uprawnienia do obsługi opcji różnych kompilacji i zależności dla platformy docelowej.
+Uporządkuj repozytorium, aby wszystkie istniejące pliki *@no__t -1. csproj* zostały usunięte i utworzono pojedynczy plik *@no__t -3. csproj* , który jest przeznaczony dla wielu struktur. Jest to świetna opcja, ponieważ pojedynczy projekt jest w stanie kompilować dla różnych platform. Ma także moc do obsługi różnych opcji kompilacji i zależności dla platformy dostosowanej.
 
-![Tworzenie pliku csproj, który jest przeznaczony dla wielu platform](./media/project-structure/multi-targeted-project.png)
+![Utwórz element csproj, który jest przeznaczony dla wielu struktur](./media/project-structure/multi-targeted-project.png)
 
 [**Kod źródłowy**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/)
 
-Zmiany, należy pamiętać, są następujące:
+Zmiany w notatce:
 
-* Zastąpienie *packages.config* i  *\*.csproj* dzięki nowemu [platformy .NET Core  *\*.csproj*](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj). Pakiety NuGet są określane za pomocą `<PackageReference> ItemGroup`.
+* Zastąpienie *pakietów Packages. config* i *@no__t -2. csproj* przy użyciu nowej [platformy .NET Core *@no__t -5. csproj*](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj). Pakiety NuGet są określane przy użyciu `<PackageReference> ItemGroup`.
 
-## <a name="keep-existing-projects-and-create-a-net-core-project"></a>Zachowaj istniejące projekty i utworzyć projekt .NET Core
+## <a name="keep-existing-projects-and-create-a-net-core-project"></a>Zachowaj istniejące projekty i Utwórz projekt platformy .NET Core
 
-W przypadku istniejących projektów przeznaczonych dla platform starszych można pozostawić te projekty w charakterze, a przyszłe ustalać platformy docelowe za pomocą projektu .NET Core.
+Jeśli istnieją projekty, które są przeznaczone dla starszych platform, możesz pozostawić te projekty jako nienaruszone i użyć projektu .NET Core, aby określić przyszłe struktury.
 
-![Projekt .NET core z istniejącego projektu w innym folderze](./media/project-structure/separate-projects-same-source.png)
+![Projekt .NET Core z istniejącym projektem w innym folderze](./media/project-structure/separate-projects-same-source.png)
 
 [**Kod źródłowy**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/)
 
-Zmiany, należy pamiętać, są następujące:
+Zmiany w notatce:
 
-* .NET Core i istniejące projekty są przechowywane w oddzielnych folderach.
-  * Utrzymywanie projektów w oddzielnych folderach pozwala uniknąć, co zmuszało do programu Visual Studio 2017. Możesz utworzyć oddzielne rozwiązanie, które otwiera tylko starych projektów.
+* Środowisko .NET Core i istniejące projekty są przechowywane w oddzielnych folderach.
+  * Utrzymywanie projektów w oddzielnych folderach unika wymuszania posiadania programu Visual Studio 2017. Można utworzyć oddzielne rozwiązanie, które otwiera tylko stare projekty.
 
 ## <a name="see-also"></a>Zobacz także
 
-Zobacz [platformy .NET Core, przenoszenie dokumentacji](index.md) Aby uzyskać więcej wskazówek na temat migracji do platformy .NET Core.
+- [Dokumentacja dotycząca portów .NET Core](index.md)

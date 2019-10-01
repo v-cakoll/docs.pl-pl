@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30801
 ms.assetid: 67743319-2d1c-496e-bfd9-22b046b43b5a
-ms.openlocfilehash: 3634ea4b97f25e41e27629c51119f2ea4df5f887
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fa474aaff4b1ceaf9b80be5dbc869276a54a6e65
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589775"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700985"
 ---
 # <a name="labels-that-are-numbers-must-be-followed-by-colons"></a>Po etykietach, które są liczbami, muszą następować dwukropki
-Numery wierszy są zgodne z regułami innymi rodzajami etykiety i musi zawierać dwukropka.  
+Numery wierszy są zgodne z tymi samymi regułami, co inne rodzaje etykiet i muszą zawierać dwukropek.  
   
  **Identyfikator błędu:** BC30801  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Umieść numer dwukropkiem na początku wiersza kodu. na przykład:  
+- Umieść liczbę, po której następuje dwukropek na początku wiersza kodu. na przykład:  
   
-    ```  
+    ```vb  
     400:    X += 1  
     ```  
   

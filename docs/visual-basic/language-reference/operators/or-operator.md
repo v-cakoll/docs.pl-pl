@@ -15,36 +15,36 @@ helpviewer_keywords:
 - logical disjunction
 - disjunction operator [Visual Basic]
 ms.assetid: 41ed6905-bf3d-468a-9e3b-03c10d461891
-ms.openlocfilehash: 1d11a6d009f6ecfea9fb1a86b00c67b87d5555dc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 03decb4ad32e8ff2c03e3b64a272bce779282973
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955839"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701239"
 ---
 # <a name="or-operator-visual-basic"></a>Or — Operator (Visual Basic)
-Wykonuje logiczne rozłączenie dwóch `Boolean` wyrażeń lub bitowego rozłączenia dwóch wyrażeń liczbowych.  
+Wykonuje logiczne rozłączenie dwóch wyrażeń `Boolean` lub bitowego rozłączenia dwóch wyrażeń liczbowych.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 result = expression1 Or expression2  
 ```  
   
 ## <a name="parts"></a>Części  
  `result`  
- Wymagane. Wyrażenie `Boolean` dowolne lub liczbowe. W `Boolean` przypadku `result` porównania jest to łączne logiczne rozłączenie `Boolean` dwóch wartości. W przypadku operacji `result` bitowych jest wartością liczbową reprezentującą łączny czas rozłączenia dwóch wzorców bitowych liczbowych.  
+ Wymagany. Dowolny `Boolean` lub wyrażenie liczbowe. W przypadku porównania `Boolean` `result` to łączne logiczne rozłączenie dwóch wartości `Boolean`. W przypadku operacji bitowych `result` jest wartością liczbową reprezentującą łączny czas rozłączenia dwóch wzorców bitowych liczbowych.  
   
  `expression1`  
- Wymagane. Wyrażenie `Boolean` dowolne lub liczbowe.  
+ Wymagany. Dowolny `Boolean` lub wyrażenie liczbowe.  
   
  `expression2`  
- Wymagane. Wyrażenie `Boolean` dowolne lub liczbowe.  
+ Wymagany. Dowolny `Boolean` lub wyrażenie liczbowe.  
   
 ## <a name="remarks"></a>Uwagi  
- W `Boolean` przypadku `False` `expression1` `expression2` porównania ma wartość i tylko wtedy, gdy oba i są oceniane do `False`. `result` W poniższej tabeli przedstawiono sposób `result` określania.  
+ W przypadku porównania `Boolean` `result` jest `False`, jeśli i tylko wtedy, gdy `expression1` i `expression2` zostaną oszacowane do `False`. W poniższej tabeli przedstawiono sposób określania `result`.  
   
-|Jeśli `expression1` jest|I `expression2` jest|Wartość `result` jest|  
+|Jeśli `expression1` to|I `expression2` to|Wartość `result` to|  
 |-------------------------|--------------------------|------------------------------|  
 |`True`|`True`|`True`|  
 |`True`|`False`|`True`|  
@@ -52,11 +52,11 @@ result = expression1 Or expression2
 |`False`|`False`|`False`|  
   
 > [!NOTE]
-> `Boolean` W porównaniu `Or` operator zawsze oblicza oba wyrażenia, które mogą obejmować wykonywanie wywołań procedur. [Operator OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md) wykonuje *krótkie obwody*, co oznacza, że `expression1` jeśli jest `True`, `expression2` to nie jest oceniane.  
+> W porównaniu do `Boolean` operator `Or` zawsze oblicza oba wyrażenia, które mogą obejmować wykonywanie wywołań procedur. [Operator OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md) wykonuje *krótkie obwody*, co oznacza, że jeśli `expression1` jest `True`, wówczas `expression2` nie jest oceniane.  
   
- W przypadku operacji `Or` bitowych operator wykonuje bitowe porównanie identycznie ustawionych bitów w dwóch wyrażeniach liczbowych i ustawia odpowiedni bit w `result` zależności od poniższej tabeli.  
+ W przypadku operacji bitowych operator `Or` wykonuje bitowe porównanie identycznie rozłożonych bitów w dwóch wyrażeniach liczbowych i ustawia odpowiedni bit w `result` zgodnie z poniższą tabelą.  
   
-|Jeśli bit w `expression1` jest|I bit w `expression2` jest|Bit w `result` jest|  
+|Jeśli bit w `expression1` jest|I bit w `expression2` to|Bit w `result` to|  
 |--------------------------------|---------------------------------|----------------------------|  
 |1|1|1|  
 |1|0|1|  
@@ -67,22 +67,22 @@ result = expression1 Or expression2
 > Ponieważ operatory logiczne i bitowe mają niższy priorytet niż inne operatory arytmetyczne i relacyjne, każda operacja bitowa powinna być ujęta w nawiasy, aby zapewnić dokładne wykonanie.  
   
 ## <a name="data-types"></a>Typy danych  
- Jeśli operandy składają się z jednego `Boolean` wyrażenia i jednego wyrażenia liczbowego, Visual Basic `Boolean` konwertuje wyrażenie na wartość liczbową (– 1 dla `True` i 0 dla `False`) i wykonuje operację bitową.  
+ Jeśli operandy składają się z jednego wyrażenia `Boolean` i jednego wyrażenia liczbowego, Visual Basic konwertuje wyrażenie `Boolean` na wartość liczbową (– 1 dla `True` i 0 dla `False`) i wykonuje operację bitową.  
   
- Dla porównania, typ danych `Boolean`wyniku. `Boolean` W przypadku porównania bitowego typem danych wynik jest typ liczbowy odpowiedni dla typów `expression1` danych i. `expression2` Zobacz tabelę "porównania relacyjne i bitowe" w [typach danych wyników operatora](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
+ W przypadku porównania `Boolean` typ danych wyniku to `Boolean`. W przypadku porównania bitowego typem danych wynik jest typ liczbowy odpowiedni dla typów danych `expression1` i `expression2`. Zobacz tabelę "porównania relacyjne i bitowe" w [typach danych wyników operatora](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
   
 ## <a name="overloading"></a>Przeciążenie  
- Operator może być przeciążony, co oznacza, że Klasa lub struktura może przedefiniować jej zachowanie, gdy operand ma typ tej klasy lub struktury. `Or` Jeśli Twój kod używa tego operatora dla takiej klasy lub struktury, pamiętaj o tym, aby zrozumieć jego ponownie zdefiniowane zachowanie. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Operator `Or` może być *przeciążony*, co oznacza, że Klasa lub struktura może przedefiniować jej zachowanie, gdy operand ma typ tej klasy lub struktury. Jeśli Twój kod używa tego operatora dla takiej klasy lub struktury, pamiętaj o tym, aby zrozumieć jego ponownie zdefiniowane zachowanie. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład używa operatora, `Or` aby wykonać łączne logiczne rozłączenie dwóch wyrażeń. Wynik jest `Boolean` wartością, która reprezentuje, czy jedno z dwóch wyrażeń jest `True`.  
+ W poniższym przykładzie za pomocą operatora `Or` można wykonać łączne logiczne rozłączenie dwóch wyrażeń. Wynikiem jest wartość `Boolean`, która reprezentuje, czy jeden z dwóch wyrażeń jest `True`.  
   
  [!code-vb[VbVbalrOperators#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#35)]  
   
- Powyższy przykład daje wyniki `True`, `True`i `False`, odpowiednio.  
+ W powyższym przykładzie wyniki są odpowiednio `True`, `True` i `False`.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład używa operatora, `Or` aby wykonać łączne logiczne rozłączenie dla poszczególnych bitów dwóch wyrażeń liczbowych. Bit w wzorcu wyniku jest ustawiany, jeśli jeden z odpowiednich bitów w operandach jest ustawiony na 1.  
+ Poniższy przykład używa operatora `Or`, aby wykonać łączne logiczne rozłączenie dla poszczególnych bitów dwóch wyrażeń liczbowych. Bit w wzorcu wyniku jest ustawiany, jeśli jeden z odpowiednich bitów w operandach jest ustawiony na 1.  
   
  [!code-vb[VbVbalrOperators#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#36)]  
   

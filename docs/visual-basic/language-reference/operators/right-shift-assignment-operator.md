@@ -10,41 +10,41 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 - '>>= operator [Visual Basic]'
 ms.assetid: 2bcd9abb-7a8c-4229-b75d-8816ff1dc700
-ms.openlocfilehash: 1076ce62077391f2c88ebdd621d1dbd6fb40d647
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08d4e251a96ca387a709319e752351db6825d9e8
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982387"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701354"
 ---
-# <a name="-operator-visual-basic"></a>>> = — operator (Visual Basic)
-Wykonuje arytmetyczne przesunięcie w prawo na wartość zmiennej lub właściwości, a następnie przypisuje wynik do zmiennej lub właściwości.  
+# <a name="-operator-visual-basic"></a>> > = — operator (Visual Basic)
+Wykonuje arytmetyczne przesunięcie w prawo wartości zmiennej lub właściwości i przypisuje wynik z powrotem do zmiennej lub właściwości.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 variableorproperty >>= amount  
 ```  
   
 ## <a name="parts"></a>Części  
  `variableorproperty`  
- Wymagana. Zmiennej lub właściwości typu całkowitego (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, lub `ULong`).  
+ Wymagany. Zmienna lub właściwość typu całkowitego (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long` lub `ULong`).  
   
  `amount`  
- Wymagana. Wyrażenia liczbowego typu danych, która rozszerza się na `Integer`.  
+ Wymagany. Wyrażenie liczbowe typu danych, które poszerza do `Integer`.  
   
 ## <a name="remarks"></a>Uwagi  
- Element w lewej części `>>=` operator może być prosta zmienna skalarne, właściwości lub elementu w tablicy. Zmiennej lub właściwości nie może być [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ Element po lewej stronie operatora `>>=` może być prostą zmienną skalarną, właściwością lub elementem tablicy. Zmienna lub właściwość nie może być [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- `>>=` Operator najpierw wykonuje arytmetyczne przesunięcie w prawo na wartość zmiennej lub właściwości. Operator następnie przypisuje wynik tej operacji do zmiennej lub właściwości.  
+ Operator `>>=` najpierw wykonuje arytmetyczne przesunięcie w prawo na wartości zmiennej lub właściwości. Następnie operator przypisuje wynik tej operacji z powrotem do zmiennej lub właściwości.  
   
- Arytmetycznego przesunięcia nie są cykliczne, co oznacza, że bity przesunięte poza jednym końcu wynik nie są ponownie wprowadzone po drugiej stronie. W arytmetyczne przesunięcie w prawo bity przesunięte poza Pozycja bitu po prawej stronie są odrzucane i skrajnie po lewej stronie bit jest propagowana do pozycji bitów zwolnione w wyniku po lewej stronie. Oznacza to, że jeśli `variableorproperty` ma wartość ujemną, opuszczone pozycje są ustawione na jeden. Jeśli `variableorproperty` jest dodatnia, lub jeśli jego typem jest typ bez znaku, pozycje opuszczonych zostaną ustawione na zero.  
+ Przesunięcia arytmetyczne nie są cykliczne, co oznacza, że bity przesunięte poza jeden koniec wyniku nie są ponownie wprowadzane na drugim końcu. W wyniku przesunięcia w prawo arytmetyczne bity przesunięte poza skrajną prawą pozycję bitu są odrzucane, a bit z lewej strony jest propagowany do pozycji bitowych opuszczone w lewo. Oznacza to, że jeśli `variableorproperty` ma wartość ujemną, pozycje opuszczone są ustawione na jeden. Jeśli `variableorproperty` jest dodatnia lub jeśli typ danych jest typem bez znaku, pozycje opuszczone są ustawione na wartość zero.  
   
 ## <a name="overloading"></a>Przeciążenie  
- [>> Operator](../../../visual-basic/language-reference/operators/right-shift-operator.md) może być *przeciążone*, co oznacza, że klasy lub struktury można ponownie zdefiniować jej zachowanie, gdy argument operacji ma typ tej klasy lub struktury. Przeciążanie `>>` operator ma wpływ na zachowanie `>>=` operatora. Jeśli kod używa `>>=` dla klasy lub struktury, która przeciążenia `>>`, należy zrozumieć zachowanie zmieniony. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ [Operator > >](../../../visual-basic/language-reference/operators/right-shift-operator.md) może być *przeciążony*, co oznacza, że Klasa lub struktura może przedefiniować jej zachowanie, gdy operand ma typ tej klasy lub struktury. Przeciążanie operatora `>>` wpływa na zachowanie operatora `>>=`. Jeśli kod używa `>>=` na klasie lub strukturze, która przeciąża `>>`, należy zrozumieć jego ponownie zdefiniowane zachowanie. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto `>>=` operatora przesunięcia wzorca bitowego `Integer` zmiennej bezpośrednio przez określony przedział i przypisz wynik do zmiennej.  
+ Poniższy przykład używa operatora `>>=`, aby przesunąć wzorzec bitowy zmiennej `Integer` bezpośrednio o określoną wartość i przypisać wynik do zmiennej.  
   
  [!code-vb[VbVbalrOperators#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#15)]  
   
@@ -53,6 +53,6 @@ variableorproperty >>= amount
 - [>>, operator](../../../visual-basic/language-reference/operators/right-shift-operator.md)
 - [Operatory przypisania](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Operatory Bit Shift](../../../visual-basic/language-reference/operators/bit-shift-operators.md)
-- [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Pierwszeństwo operatorów w Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Instrukcje](../../../visual-basic/programming-guide/language-features/statements.md)

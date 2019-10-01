@@ -1,5 +1,5 @@
 ---
-title: <performanceCounters>, element
+title: <performanceCounters> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/performanceCounters
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - performanceCounters element
 - <performanceCounters> element
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
-ms.openlocfilehash: 6144bcbda69b2ba799e87c3e7fa2118fbe4d9bf6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f52fdb2d5b0b7911de63f96663e70735d2f2496c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673746"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697151"
 ---
-# <a name="performancecounters-element"></a>\<performanceCounters> Element
+# <a name="performancecounters-element"></a>\<performanceCounters > elementu
 
-Określa rozmiar pamięci globalnej współużytkowane przez liczniki wydajności.
+Określa rozmiar pamięci globalnej udostępnionej przez liczniki wydajności.
 
- \<Konfiguracja > \
-\<system.diagnostics>\
-\<performanceCounters>
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<performanceCounters >**  
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,7 +37,7 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|filemappingsize|Atrybut wymagany.<br /><br /> Określa rozmiar w bajtach pamięci globalnej współużytkowane przez liczniki wydajności. Wartość domyślna to 524288.|
+|filemappingsize|Atrybut wymagany.<br /><br /> Określa rozmiar pamięci globalnej udostępnionej przez liczniki wydajności w bajtach. Wartość domyślna to 524288.|
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
@@ -48,15 +48,15 @@ Brak.
 |Element|Opis|
 |-------------|-----------------|
 |`Configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|
-|`system.diagnostics`|Określa element root dla sekcji konfiguracyjnej platformy ASP.NET.|
+|`system.diagnostics`|Określa element główny dla sekcji konfiguracji ASP.NET.|
 
 ## <a name="remarks"></a>Uwagi
 
-Liczniki wydajności użycia plików zamapowanych w pamięci lub pamięci współdzielonej, do publikowania danych wydajności.  Rozmiar pamięci współużytkowanej Określa, ile wystąpień, które może być użyty tylko raz.  Istnieją dwa rodzaje pamięci współużytkowanej: globalnego udostępnionych i oddzielnych pamięci udostępnionej.  Globalne pamięci współużytkowanej jest używana przez wszystkich kategorii licznika wydajności, instalowany z .NET Framework w wersji 1.0 i 1.1.  Kategorie liczników wydajności, instalowany z .NET Framework w wersji 2.0 za pomocą osobnych pamięci współużytkowanej, każdej kategorii licznika wydajności własnej pamięci posiadające.
+Liczniki wydajności używają pliku mapowanego na pamięć lub pamięci współdzielonej do publikowania danych wydajności.  Rozmiar pamięci współdzielonej określa, ile wystąpień może być używanych jednocześnie.  Istnieją dwa typy pamięci współdzielonej: globalna pamięć udostępniona i oddzielna pamięć współdzielona.  Globalna pamięć współdzielona jest używana przez wszystkie kategorie liczników wydajności zainstalowane z .NET Framework wersjami 1,0 lub 1,1.  Kategorie liczników wydajności zainstalowane z .NET Framework w wersji 2,0 używają oddzielnej pamięci współdzielonej, z każdą kategorią licznika wydajności mającą własną pamięć.
 
-Rozmiar pamięci współużytkowanej globalnych można ustawić tylko przy użyciu pliku konfiguracji.  Domyślny rozmiar to 524,288 bTak, maksymalny rozmiar to 33,554,432 bajtów i minimalny rozmiar to 32 768 bajtów.  Ponieważ globalnej pamięci współdzielonej jest współużytkowany przez wszystkie procesy i kategorie, pierwszy twórca Określa rozmiar.  Jeśli rozmiar jest zdefiniowana w pliku konfiguracyjnym aplikacji, ten rozmiar jest używana tylko, jeśli aplikacja jest pierwszą aplikację, który powoduje, że liczników wydajności do wykonania.  W związku z tym poprawnej lokalizacji, aby określić `filemappingsize` wartość jest pliku Machine.config.  Nie można zwolnić pamięć w globalnej pamięci współdzielonej przez liczniki wydajności poszczególnych, więc po pewnym czasie wyczerpania globalnej pamięci współdzielonej, gdy tworzonych jest wiele wystąpień licznika wydajności pod różnymi nazwami.
+Rozmiar globalnej pamięci współdzielonej można ustawić tylko przy użyciu pliku konfiguracji.  Domyślny rozmiar to 524 288 bTak, maksymalny rozmiar to 33 554 432 bajtów, a minimalny rozmiar to 32 768 bajtów.  Ponieważ globalna pamięć udostępniona jest współdzielona przez wszystkie procesy i kategorie, pierwszy twórca określa rozmiar.  W przypadku zdefiniowania rozmiaru w pliku konfiguracyjnym aplikacji ten rozmiar jest używany tylko wtedy, gdy aplikacja jest pierwszą aplikacją, która powoduje wykonanie liczników wydajności.  W związku z tym poprawną lokalizacją określającą wartość `filemappingsize` jest plik Machine. config.  Pamięć w globalnej pamięci współdzielonej nie może zostać wydana przez poszczególne liczniki wydajności, więc ostatecznie globalna pamięć udostępniona jest wyczerpana, jeśli utworzono dużą liczbę wystąpień liczników wydajności o różnych nazwach.
 
-Dla rozmiaru pamięci współużytkowanej oddzielne w rejestrze wartość DWORD FileMappingSize klucza HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<nazwa kategorii >* mowa \Performance Po pierwsze a następnie wartość określona dla globalnych pamięci współużytkowanej w pliku konfiguracji. Jeśli wartość FileMappingSize nie istnieje, a następnie rozmiar oddzielne Pamięć współużytkowana jest ustawiony do jednej czwartej (1/4) ustawienie globalne w pliku konfiguracji.
+W przypadku rozmiaru oddzielnej pamięci współdzielonej wartość DWORD FileMappingSize w kluczu rejestru HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services @ no__t-0 *\<category name >* \Performance jest przywoływana jako pierwsza, a następnie wartość określony dla globalnej pamięci współdzielonej w pliku konfiguracji. Jeśli wartość FileMappingSize nie istnieje, oddzielny rozmiar pamięci współdzielonej jest ustawiany na jeden czwarty (1/4) ustawienia globalne w pliku konfiguracji.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 1f7248a23d53fb90202595defbf70e231bd1d5d3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 687990cc86b3303bdef96af26be63af47410f8c0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605974"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698791"
 ---
 # <a name="built-in-types-table-c-reference"></a>Tabela typów wbudowanych (C# odwołanie)
 
-W poniższej tabeli przedstawiono słowa kluczowe dla C# typów wbudowanych, które są aliasami wstępnie zdefiniowanych typów w <xref:System> przestrzeni nazw.  
-  
+W poniższej tabeli przedstawiono słowa kluczowe dla C# typów wbudowanych, które są aliasami wstępnie zdefiniowanych typów w przestrzeni nazw <xref:System>:
+
 |C#Wprowadź|Typ .NET|  
 |--------------|-------------------------|  
 |[bool](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
@@ -38,16 +38,16 @@ W poniższej tabeli przedstawiono słowa kluczowe dla C# typów wbudowanych, kt�
   
 ## <a name="remarks"></a>Uwagi
 
-Wszystkie typy w tabeli, z wyjątkiem `object` i `string`, są określane jako typy proste.  
-  
-Typy .NET i ich C# aliasy słów kluczowych są zamienne. Na przykład można zadeklarować zmienną całkowitą przy użyciu jednej z następujących deklaracji:  
+Wszystkie typy w tabeli, z wyjątkiem `object` i `string`, są określane jako typy proste.
+
+Typy .NET i ich C# aliasy słów kluczowych są zamienne. Na przykład można zadeklarować zmienną całkowitą przy użyciu jednej z następujących deklaracji:
 
 ```csharp
 int x = 123;
 System.Int32 y = 123;
 ```
 
-Użyj operatora [typeof](../operators/type-testing-and-cast.md#typeof-operator) , aby uzyskać <xref:System.Type?displayProperty=nameWithType> wystąpienie, które reprezentuje określony typ:
+Użyj operatora [typeof](../operators/type-testing-and-cast.md#typeof-operator) , aby uzyskać wystąpienie <xref:System.Type?displayProperty=nameWithType>, które reprezentuje określony typ:
 
 ```csharp
 Type stringType = typeof(string);
@@ -63,7 +63,7 @@ Console.WriteLine(doubleType.FullName);
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
+- [C#Odwoła](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Typy wartości](value-types.md)

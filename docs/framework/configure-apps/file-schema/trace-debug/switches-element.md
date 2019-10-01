@@ -1,5 +1,5 @@
 ---
-title: <switches>, element
+title: <switches> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - switches element
 - trace switches, <switches> element
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
-ms.openlocfilehash: 92a1c8db43579048945d76082e3ebd2862efd7ed
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c161f842192396101dcc6850f3b3da328958eac3
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920443"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697082"
 ---
-# <a name="switches-element"></a>\<przełącza > elementu
+# <a name="switches-element"></a>\<switches > elementu
 Zawiera przełączniki śledzenia i poziom, w którym są ustawione przełączniki śledzenia.  
   
- \<> konfiguracji  
-\<system.diagnostics>  
-\<Przełączniki >  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<switches >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,7 +40,7 @@ Zawiera przełączniki śledzenia i poziom, w którym są ustawione przełączni
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<add>](add-element-for-switches.md)|Określa poziom, w którym jest ustawiony przełącznik śledzenia.|  
+|[@no__t — 1add >](add-element-for-switches.md)|Określa poziom, w którym jest ustawiony przełącznik śledzenia.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -50,10 +50,10 @@ Zawiera przełączniki śledzenia i poziom, w którym są ustawione przełączni
 |`System.diagnostics`|Określa detektory śledzenia, które zbierają, przechowują i rozsyłają komunikaty oraz poziom, w którym ustawiono przełącznik śledzenia.|  
   
 ## <a name="remarks"></a>Uwagi  
- Możesz zmienić poziom przełącznika śledzenia, umieszczając go w pliku konfiguracji. Jeśli przełącznik jest <xref:System.Diagnostics.BooleanSwitch>, możesz go włączyć i wyłączyć. Jeśli przełącznik jest <xref:System.Diagnostics.TraceSwitch>, można przypisać do niego różne poziomy, aby określić typy komunikatów śledzenia lub debugowania, które są wyprowadzane przez aplikację.  
+ Możesz zmienić poziom przełącznika śledzenia, umieszczając go w pliku konfiguracji. Jeśli przełącznik jest <xref:System.Diagnostics.BooleanSwitch>, można go włączyć i wyłączyć. Jeśli przełącznik jest <xref:System.Diagnostics.TraceSwitch>, można przypisać do niego różne poziomy, aby określić typy komunikatów śledzenia lub debugowania, które są wyprowadzane przez aplikację.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak <xref:System.Diagnostics.TraceLevel> używać `Data` `General`  **\<elementu Switch >** , aby ustawić przełącznik śledzenia na poziomie i włączyć przełącznik logiczny śledzenia.  
+ W poniższym przykładzie pokazano, jak użyć elementu **\<switch >** , aby ustawić przełącznik śledzenia `General` na poziomie <xref:System.Diagnostics.TraceLevel> i włączyć przełącznik śledzenia wartości logicznej `Data`.  
   
 ```xml  
 <configuration>  
@@ -72,3 +72,4 @@ Zawiera przełączniki śledzenia i poziom, w którym są ustawione przełączni
 - <xref:System.Diagnostics.TraceSwitch>
 - <xref:System.Diagnostics.BooleanSwitch>
 - [Schemat ustawień śledzenia i debugowania](index.md)
+ 

@@ -10,20 +10,20 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 608c591b910252dd60950bf2aa7565d6df04d5fc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3742a040e8c16c38e495a0fd886c4c1f23780758
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664230"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698388"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a>\<Dodaj element > dla connectionManagement (Ustawienia sieci)
+# <a name="add-element-for-connectionmanagement-network-settings"></a>\<add > elementu connectionManagement (Ustawienia sieci)
 Dodaje adres IP lub nazwę DNS do listy zarządzania połączeniami.  
   
- \<> konfiguracji  
-\<system.net>  
-\<connectionManagement >  
-\<add>  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<add >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -54,15 +54,15 @@ Dodaje adres IP lub nazwę DNS do listy zarządzania połączeniami.
 |[connectionManagement](connectionmanagement-element-network-settings.md)|Określa maksymalną liczbę połączeń z hostem sieciowym.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość `address` atrybutu powinna być gwiazdką wskazującą wszystkie połączenia lub ciąg formularza `<schema>://<idn_hostname>[:<port>]`.  
+ Wartość atrybutu `address` powinna być gwiazdką wskazującą wszystkie połączenia lub ciągiem `<schema>://<idn_hostname>[:<port>]`.  
   
- Jeśli identyfikator URI przesłany do dowolnego interfejsu API protokołu HTTP zawiera Unicode, nazwa zostanie przekonwertowane <xref:System.Uri.DnsSafeHost%2A> wewnętrznie przy użyciu, co może zwrócić ciąg punicode (zachowanie zależne od bieżącej konfiguracji IDN).  
+ Jeśli identyfikator URI przesłany do dowolnego interfejsu API protokołu HTTP zawiera Unicode, nazwa zostanie przekonwertowane wewnętrznie przy użyciu <xref:System.Uri.DnsSafeHost%2A>, co może zwrócić ciąg punicode (zachowanie zależne od bieżącej konfiguracji IDN).  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
  Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład służy do konfigurowania aplikacji do korzystania z czterech połączeń z serwerem `www.contoso.com` i dwóch połączeń z innymi serwerami.  
+ Poniższy przykład służy do konfigurowania aplikacji do używania czterech połączeń z serwerem `www.contoso.com` i dwóch połączeń z innymi serwerami.  
   
 ```xml  
 <configuration>  

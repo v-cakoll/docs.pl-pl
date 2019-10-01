@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wiązanie ze źródłem danych ADO.NET'
+title: Jak powiązać ze źródłem danych ADO.NET
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - ADO.NET data sources [WPF], binding to
 - binding [WPF], to ADO.NET data sources
 ms.assetid: a70c6d7b-7b38-4fdf-b655-4804db7c8315
-ms.openlocfilehash: 96f846db3f705972a4749460bf2c410483258572
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: dbe34cba8f01320fbf37beea65ed95656e09395c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238426"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697145"
 ---
-# <a name="how-to-bind-to-an-adonet-data-source"></a>Instrukcje: Wiązanie ze źródłem danych ADO.NET
+# <a name="how-to-bind-to-an-adonet-data-source"></a>Jak powiązać ze źródłem danych ADO.NET
 
-W tym przykładzie pokazano, jak powiązać [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Controls.ListBox> kontrolki ADO.NET `DataSet`.
+Ten przykład pokazuje, jak powiązać formant [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Controls.ListBox> z ADO.NET `DataSet`.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie `OleDbConnection` obiekt jest używany do łączenia się ze źródłem danych, która jest `Access MDB` pliku, który jest określony w parametrach połączenia. Po nawiązaniu połączenia `OleDbDataAdapter` obiekt zostanie utworzony. `OleDbDataAdapter` Obiektu wykonuje select [!INCLUDE[TLA#tla_sql](../../../../includes/tlasharptla-sql-md.md)] instrukcję, aby pobrać zestaw rekordów z bazy danych. Wyniki z [!INCLUDE[TLA2#tla_sql](../../../../includes/tla2sharptla-sql-md.md)] polecenia są przechowywane w `DataTable` z `DataSet` przez wywołanie metody `Fill` metody `OleDbDataAdapter`. `DataTable` w tym przykładzie nosi nazwę `BookTable`. Następnie w przykładzie <xref:System.Windows.FrameworkElement.DataContext%2A> właściwość <xref:System.Windows.Controls.ListBox> do `DataSet` obiektu.
+W tym przykładzie obiekt `OleDbConnection` jest używany do nawiązywania połączenia ze źródłem danych, który jest plikiem `Access MDB` określonym w parametrach połączenia. Po nawiązaniu połączenia zostanie utworzony obiekt `OleDbDataAdapter`. Obiekt `OleDbDataAdapter` wykonuje instrukcję SELECT Structured Query Language (SQL), aby pobrać zestaw rekordów z bazy danych. Wyniki polecenia SQL są przechowywane w `DataTable` `DataSet` przez wywołanie metody `Fill` `OleDbDataAdapter`. @No__t-0 w tym przykładzie nosi nazwę `BookTable`. Następnie przykład ustawia właściwość <xref:System.Windows.FrameworkElement.DataContext%2A> <xref:System.Windows.Controls.ListBox> na obiekt `DataSet`.
 
 [!code-csharp[ADODataSet#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml.cs#1)]
 [!code-vb[ADODataSet#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ADODataSet/VisualBasic/Window1.xaml.vb#1)]
 
-Firma Microsoft może następnie powiązać <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> właściwość <xref:System.Windows.Controls.ListBox> do `BookTable` z `DataSet`:
+Następnie można powiązać Właściwość <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> <xref:System.Windows.Controls.ListBox> do `BookTable` `DataSet`:
 
 [!code-xaml[ADODataSet#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml#2)]
 
-`BookItemTemplate` jest <xref:System.Windows.DataTemplate> definiuje sposób wyświetlania danych:
+`BookItemTemplate` to <xref:System.Windows.DataTemplate> definiująca sposób wyświetlania danych:
 
 [!code-xaml[ADODataSet#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml#3)]
 
-`IntColorConverter` Konwertuje `int` na kolor. Przy użyciu tego konwertera <xref:System.Windows.Controls.TextBlock.Background%2A> kolor trzeciego <xref:System.Windows.Controls.TextBlock> pojawi się jako zielony Jeśli wartość `NumPages` jest mniejsza niż 350 i czerwone. Implementacja konwerter nie został tutaj pokazany.
+@No__t-0 konwertuje `int` na kolor. Przy użyciu tego konwertera kolor <xref:System.Windows.Controls.TextBlock.Background%2A> trzeciego <xref:System.Windows.Controls.TextBlock> pojawia się jako zielony, jeśli wartość `NumPages` jest mniejsza niż 350 i czerwona w przeciwnym razie. Implementacja konwertera nie jest wyświetlana w tym miejscu.
 
 ## <a name="see-also"></a>Zobacz także
 

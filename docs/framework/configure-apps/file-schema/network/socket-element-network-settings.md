@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: aa455945b839ada4100138d5bdf9fc239376e5cb
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ec2c8388411e24940041dc9dcb7f6a6755e89805
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663985"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697583"
 ---
-# <a name="socket-element-network-settings"></a>\<Socket > — element (Ustawienia sieci)
+# <a name="socket-element-network-settings"></a>\<socket >, element (Ustawienia sieci)
 Określa, czy operacje gniazda używają portów zakończenia.  
   
- \<> konfiguracji  
-\<system.net>  
-\<settings>  
-\<> gniazda  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<socket >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,7 +42,7 @@ Określa, czy operacje gniazda używają portów zakończenia.
 |-------------------|---------------------|  
 |`alwaysUseCompletionPortsForAccept`|Wskazuje, czy gniazdo ma zawsze używać portów zakończenia dla wywołań metod akceptowania. Wartość domyślna to `false`.|  
 |`alwaysUseCompletionPortsForConnect`|Wskazuje, czy gniazdo ma zawsze używać portów zakończenia dla wywołań metod Connect. Wartość domyślna to `false`.|  
-|`ipProtectionLevel`|Określa wartość domyślną <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> dla gniazda. Wartość domyślna zależy od wersji systemu Windows.|  
+|`ipProtectionLevel`|Określa domyślną <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> do użycia w gnieździe. Wartość domyślna zależy od wersji systemu Windows.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -51,18 +51,18 @@ Określa, czy operacje gniazda używają portów zakończenia.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[Ustawienia](settings-element-network-settings.md)|Konfiguruje podstawowe opcje sieci dla <xref:System.Net> przestrzeni nazw.|  
+|[Ustawienia](settings-element-network-settings.md)|Konfiguruje podstawowe opcje sieci dla przestrzeni nazw <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Uwagi  
- Atrybuty `alwaysUseCompletionPortsForAccept` <xref:System.Net.Sockets?displayProperty=nameWithType>i `alwaysUseCompletionPortsForConnect` służą do określania domyślnego zachowania dotyczącego używania portów zakończenia przez klasy w przestrzeni nazw. Porty uzupełniania są zalecane w przypadku aplikacji serwera o wysokiej wydajności.  
+ Atrybuty `alwaysUseCompletionPortsForAccept` i `alwaysUseCompletionPortsForConnect` służą do określenia domyślnego zachowania dotyczącego używania portów zakończenia przez klasy w @no__t -2. Namespace. Porty uzupełniania są zalecane w przypadku aplikacji serwera o wysokiej wydajności.  
   
- Wartość domyślna dla `alwaysUseCompletionPortsForAccept` atrybutów i `alwaysUseCompletionPortsForConnect` jest równa **false**.  
+ Wartością domyślną dla atrybutów `alwaysUseCompletionPortsForAccept` i `alwaysUseCompletionPortsForConnect` jest **Fałsz**.  
   
- Można <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept%2A> użyć, aby pobrać bieżącą wartość `alwaysUseCompletionPortsForAccept` atrybutu z odpowiednich plików konfiguracji. Można <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForConnect%2A> użyć, aby pobrać bieżącą wartość `alwaysUseCompletionPortsForConnect` atrybutu z odpowiednich plików konfiguracji.  
+ @No__t-0 można użyć, aby uzyskać bieżącą wartość atrybutu `alwaysUseCompletionPortsForAccept` z odpowiednich plików konfiguracji. @No__t-0 można użyć, aby uzyskać bieżącą wartość atrybutu `alwaysUseCompletionPortsForConnect` z odpowiednich plików konfiguracji.  
   
- Ten `ipProtectionLevel` atrybut określa wartość domyślną <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> do użycia w gnieździe. <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> Właściwość umożliwia konfigurowanie ograniczenia dla gniazda IPv6 w określonym zakresie, na przykład adresów z tym samym prefiksem lokalnym lub lokalnym. Ta opcja umożliwia aplikacjom nakładanie ograniczeń dostępu w gniazdach IPv6. Takie ograniczenia umożliwiają aplikacji działającej w prywatnej sieci LAN, aby po prostu i niezawodnie zabezpieczyć się przed atakami zewnętrznymi. Ta opcja rozszerza lub zawęża zakres gniazda nasłuchiwania, umożliwiając nieograniczony dostęp z publicznych i prywatnych użytkowników, jeśli jest to konieczne, lub ograniczanie dostępu tylko do tej samej lokacji, zgodnie z wymaganiami.  
+ Atrybut `ipProtectionLevel` Określa domyślny <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> do użycia w gnieździe. Właściwość <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> umożliwia konfigurowanie ograniczenia dotyczącego gniazda IPv6 w określonym zakresie, na przykład adresów z tym samym prefiksem lokalnym lub lokalnym. Ta opcja umożliwia aplikacjom nakładanie ograniczeń dostępu w gniazdach IPv6. Takie ograniczenia umożliwiają aplikacji działającej w prywatnej sieci LAN, aby po prostu i niezawodnie zabezpieczyć się przed atakami zewnętrznymi. Ta opcja rozszerza lub zawęża zakres gniazda nasłuchiwania, umożliwiając nieograniczony dostęp z publicznych i prywatnych użytkowników, jeśli jest to konieczne, lub ograniczanie dostępu tylko do tej samej lokacji, zgodnie z wymaganiami.  
   
- To `ipProtectionLevel` ustawienie atrybutu ma wpływ tylko na początkowy ruch przychodzący:  
+ To ustawienie atrybutu `ipProtectionLevel` ma wpływ tylko na początkowy ruch przychodzący:  
   
 - Serwer TCP nasłuchuje połączeń przychodzących w gnieździe.  
   
@@ -70,7 +70,7 @@ Określa, czy operacje gniazda używają portów zakończenia.
   
  To ustawienie konfiguracji nie ma wpływu na już ustanowione połączenia TCP (ruch nie jest ograniczony w obu kierunkach) i nie ma wpływu na aplikację wysyłającą pakiety UDP.  
   
- Możliwe wartości `ipProtectionLevel` ustawienia atrybutu odpowiadają zdefiniowanym poziomom ochrony określonym <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> w wyliczeniu w następujący sposób:  
+ Możliwe wartości dla ustawienia atrybutu `ipProtectionLevel` odpowiadają zdefiniowanym poziomom ochrony określonym w wyliczeniu <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> w następujący sposób:  
   
 |**Wartość atrybutu**|**Opis**|  
 |-|-|  
@@ -79,15 +79,15 @@ Określa, czy operacje gniazda używają portów zakończenia.
 |Nieograniczone|Poziom ochrony adresów IP nie jest ograniczony. Ta wartość będzie używana przez aplikacje przeznaczone do działania przez Internet, w tym aplikacje korzystające z możliwości przechodzenia do translatora adresów sieciowych IPv6 wbudowanych w system Windows (na przykład Teredo). Aplikacje te mogą pomijać zapory IPv4, więc aplikacje muszą być wzmocnione przed atakami z Internetu kierowanymi na otwarty port. W systemach Windows Server 2008 R2 i Windows Vista wartość domyślna dla poziomu ochrony adresów IP w gnieździe jest nieograniczona.|  
 |Nieokreślony|Nie określono poziomu ochrony adresów IP. W systemach Windows 7 i Windows Server 2008 R2 nie określono wartości domyślnej dla poziomu ochrony adresów IP w gnieździe.|  
   
- Wartość domyślna dla `ipProtectionLevel` atrybutu jest nieokreślona.  
+ Wartość domyślna dla atrybutu `ipProtectionLevel` jest **nieokreślona**.  
   
- Właściwość może służyć do uzyskiwania bieżącej wartości `ipProtectionLevel` atrybutu z odpowiednich plików konfiguracji. <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A>  
+ Właściwość <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> umożliwia uzyskanie bieżącej wartości atrybutu `ipProtectionLevel` z odpowiednich plików konfiguracji.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
  Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak określić, że powinny być używane porty zakończenia oraz że wartość domyślna <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> powinna być bez ograniczeń.  
+ Poniższy przykład pokazuje, jak określić, że powinny być używane porty zakończenia, a wartość domyślna <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> powinna być bez ograniczeń.  
   
 ```xml  
 <configuration>  

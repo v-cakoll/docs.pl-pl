@@ -1,5 +1,5 @@
 ---
-title: << = — operator (Visual Basic)
+title: < < = — operator (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.<<=
@@ -11,41 +11,41 @@ helpviewer_keywords:
 - operator<<=
 - compound assignment statements [Visual Basic]
 ms.assetid: 8ad26613-faff-4e2f-89ee-63feee33bfda
-ms.openlocfilehash: da2b5ca0b7538d77c3c8d8bc7d45712d656ce63a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aae71069bdcb88efa5842526dd7eb47806f248d0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768319"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701108"
 ---
-# <a name="-operator-visual-basic"></a>\<\<= — Operator (Visual Basic)
-Wykonuje arytmetyczne przesunięcie w lewo na wartość zmiennej lub właściwości, a następnie przypisuje wynik do zmiennej lub właściwości.  
+# <a name="-operator-visual-basic"></a>\< @ no__t-1 = — operator (Visual Basic)
+Wykonuje arytmetyczne przesunięcie w lewo wartości zmiennej lub właściwości i przypisuje wynik z powrotem do zmiennej lub właściwości.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 variableorproperty <<= amount  
 ```  
   
 ## <a name="parts"></a>Części  
  `variableorproperty`  
- Wymagana. Zmiennej lub właściwości typu całkowitego (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, lub `ULong`).  
+ Wymagany. Zmienna lub właściwość typu całkowitego (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long` lub `ULong`).  
   
  `amount`  
- Wymagana. Wyrażenia liczbowego typu danych, która rozszerza się na `Integer`.  
+ Wymagany. Wyrażenie liczbowe typu danych, które poszerza do `Integer`.  
   
 ## <a name="remarks"></a>Uwagi  
- Element w lewej części `<<=` operator może być prosta zmienna skalarne, właściwości lub elementu w tablicy. Zmiennej lub właściwości nie może być [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ Element po lewej stronie operatora `<<=` może być prostą zmienną skalarną, właściwością lub elementem tablicy. Zmienna lub właściwość nie może być [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- `<<=` Operator najpierw wykonuje arytmetyczne przesunięcie w lewo na wartość zmiennej lub właściwości. Operator następnie przypisuje wynik tej operacji do tej zmiennej lub właściwości.  
+ Operator `<<=` najpierw wykonuje arytmetyczne przesunięcie w lewo na wartości zmiennej lub właściwości. Następnie operator przypisuje wynik tej operacji z powrotem do tej zmiennej lub właściwości.  
   
- Arytmetycznego przesunięcia nie są cykliczne, co oznacza, że bity przesunięte poza jednym końcu wynik nie są ponownie wprowadzone po drugiej stronie. W arytmetyczne przesunięcie w lewo bity przesunięte poza zakresem typu danych wyniku są odrzucane i pozycje bitów zwolnione w wyniku po prawej stronie zostaną ustawione na zero.  
+ Przesunięcia arytmetyczne nie są cykliczne, co oznacza, że bity przesunięte poza jeden koniec wyniku nie są ponownie wprowadzane na drugim końcu. W przypadku przesunięcia w lewo po lewej stronie bity przesunięte poza zakres typu danych wynik są odrzucane, a pozycje bitowe opuszczone po prawej stronie są ustawione na wartość zero.  
   
 ## <a name="overloading"></a>Przeciążenie  
- [<< Operator](../../../visual-basic/language-reference/operators/left-shift-operator.md) może być *przeciążone*, co oznacza, że klasy lub struktury można ponownie zdefiniować jej zachowanie, gdy argument operacji ma typ tej klasy lub struktury. Przeciążanie `<<` operator ma wpływ na zachowanie `<<=` operatora. Jeśli kod używa `<<=` dla klasy lub struktury, która przeciążenia `<<`, należy zrozumieć zachowanie zmieniony. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ [Operator < <](../../../visual-basic/language-reference/operators/left-shift-operator.md) może być *przeciążony*, co oznacza, że Klasa lub struktura może przedefiniować jej zachowanie, gdy operand ma typ tej klasy lub struktury. Przeciążanie operatora `<<` wpływa na zachowanie operatora `<<=`. Jeśli kod używa `<<=` na klasie lub strukturze, która przeciąża `<<`, należy zrozumieć jego ponownie zdefiniowane zachowanie. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto `<<=` operatora przesunięcia wzorca bitowego `Integer` zmiennej pozostawiony przez określony przedział i przypisz wynik do zmiennej.  
+ Poniższy przykład używa operatora `<<=` w celu przesunięcia wzorca bitowego zmiennej `Integer` po lewej stronie o określoną wartość i przypisaniu wyniku do zmiennej.  
   
  [!code-vb[VbVbalrOperators#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#13)]  
   
@@ -54,6 +54,6 @@ variableorproperty <<= amount
 - [<<, operator](../../../visual-basic/language-reference/operators/left-shift-operator.md)
 - [Operatory przypisania](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Operatory Bit Shift](../../../visual-basic/language-reference/operators/bit-shift-operators.md)
-- [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Pierwszeństwo operatorów w Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Instrukcje](../../../visual-basic/programming-guide/language-features/statements.md)

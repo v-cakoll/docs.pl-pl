@@ -1,7 +1,7 @@
 ---
 title: Operatory logiczne Boolean — C# odwołanie
 description: Dowiedz C# się więcej na temat operatorów, które wykonują logiczne negacje, połączenie (i) i Włączne i wyłączne operacje odłączania (lub) z argumentami operacji logicznych.
-ms.date: 04/08/2019
+ms.date: 09/27/2019
 author: pkulikov
 f1_keywords:
 - '!_CSharpKeyword'
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 39f5be7a667b4e37e84246ef0bfeb03c0099d4b7
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: cc25d4bfd444dc0acb30fc1c6e6c3c9918af537c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353367"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698683"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Logiczna operatory logiczne (C# odwołanie)
 
@@ -54,6 +54,8 @@ Dla argumentów operacji typów [całkowitych](../builtin-types/integral-numeric
 Operator `!` oblicza logiczne Negacja operandu. Oznacza to, że generuje `true`, jeśli operand zostanie obliczony do `false` i `false`, jeśli operand zostanie obliczony do `true`:
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
+
+Począwszy od C# 8,0, jednoargumentowy przyrostek `!` jest operatorem o wartości null-łagodniejszej. W włączonym kontekście dopuszczającym wartość null można używać go do deklarowania wyrażenia `x` typu odwołania do wartości null nie ma wartości null: `x!`. Aby uzyskać więcej informacji, zobacz [typy referencyjne dopuszczające wartość null](../../nullable-references.md).
 
 ## <a name="logical-and-operator-"></a>Operatory logiczne i &amp;
 
@@ -115,7 +117,7 @@ W poniższym przykładzie operand z prawej strony operatora `||` jest wywołanie
 
 W przypadku operandów `bool?` operatory `&` i `|` obsługują logikę z trzema wartościami. Semantyka tych operatorów jest definiowana przez następującą tabelę:  
   
-|x|Y|x & y|x&#124;y|  
+|x|t|x & y|x&#124;y|  
 |----|----|----|----|  
 |true|true|true|true|  
 |true|false|false|true|  
@@ -137,19 +139,19 @@ Warunkowe operatory logiczne `&&` i `||` nie obsługują argumentów operacji `b
 
 ## <a name="compound-assignment"></a>Przypisanie złożone
 
-Dla operatora `op`binarnego wyrażenie złożonego przypisania formularza
+Dla operatora binarnego `op` wyrażenie złożonego przypisania formularza
 
 ```csharp
 x op= y
 ```
 
-odpowiada wyrażeniu
+jest równoważny
 
 ```csharp
 x = x op y
 ```
 
-z tą różnicą, że `x` jest obliczany tylko raz.
+z tą różnicą, że `x` jest obliczana tylko raz.
 
 Operatory `&`, `|` i `^` obsługują przypisanie złożone, co ilustruje poniższy przykład:
 
@@ -161,7 +163,7 @@ Warunkowe operatory logiczne `&&` i `||` nie obsługują przypisania złożonego
 
 Poniższa lista porządkuje operatory logiczne rozpoczynając od najwyższego priorytetu do najniższego:
 
-- Operator logiczny negacji`!`
+- Operator logiczny negacji `!`
 - Operatory logiczne i `&`
 - Operator wyłączny logicznego OR `^`
 - @No__t operatora logicznego OR — 0

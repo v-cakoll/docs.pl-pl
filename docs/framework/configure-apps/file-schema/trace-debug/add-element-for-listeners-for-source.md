@@ -1,5 +1,5 @@
 ---
-title: <add>Element dla <listeners> elementu<source>
+title: Element <add> dla <listeners> dla <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - add element for <listeners> for <source>
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-ms.openlocfilehash: 96bfde3ec425f6f77d1d655808d155eb0e6fcd0f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0818d7ec248b210f215759069b9f69a3e29637f5
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927199"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699407"
 ---
-# <a name="add-element-for-listeners-for-source"></a>\<Dodaj > element dla \<odbiorników > \<dla źródła >
-Dodaje odbiornik do `Listeners` kolekcji dla źródła śledzenia.  
+# <a name="add-element-for-listeners-for-source"></a>\<add > elementu \<listeners > dla @no__t 2source >
+Dodaje odbiornik do kolekcji `Listeners` dla źródła śledzenia.  
   
- \<> konfiguracji  
-\<system.diagnostics>  
-\<> źródeł  
-\<> źródłowa  
-\<> odbiorników  
-\<add>  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0listeners >** ](listeners-element-for-source.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 **&nbsp;1add >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,17 +40,17 @@ Dodaje odbiornik do `Listeners` kolekcji dla źródła śledzenia.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`type`|Wymagany atrybut, chyba że odwołujesz się do odbiornika `sharedListeners` w kolekcji, w takim przypadku należy tylko odwołać się do niego według nazwy (zobacz [przykład](#example)).<br /><br /> Określa typ odbiornika. Należy użyć ciągu, który spełnia wymagania określone w podaniu w [pełni kwalifikowanych nazw typów](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|`initializeData`|Atrybut opcjonalny.<br /><br /> Ciąg przesłany do konstruktora dla określonej klasy. <xref:System.Configuration.ConfigurationException> Jest zgłaszany, jeśli Klasa nie ma konstruktora, który przyjmuje ciąg.|  
+|`type`|Wymagany atrybut, chyba że odwołujesz się do odbiornika w kolekcji `sharedListeners`, w takim przypadku należy tylko odwołać się do niego według nazwy (zobacz [przykład](#example)).<br /><br /> Określa typ odbiornika. Należy użyć ciągu, który spełnia wymagania określone w podaniu w [pełni kwalifikowanych nazw typów](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`initializeData`|Atrybut opcjonalny.<br /><br /> Ciąg przesłany do konstruktora dla określonej klasy. Jeśli Klasa nie ma konstruktora, który przyjmuje ciąg, zostanie zgłoszony <xref:System.Configuration.ConfigurationException>.|  
 |`name`|Atrybut opcjonalny.<br /><br /> Określa nazwę odbiornika.|  
-|`traceOutputOptions`|Atrybut opcjonalny.<br /><br /> Określa wartość <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> właściwości dla odbiornika śledzenia.|  
-|[atrybuty niestandardowe]|Atrybuty opcjonalne.<br /><br /> Określa wartość dla atrybutów specyficznych dla odbiornika identyfikowanych przez <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> metodę dla tego odbiornika. <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>jest przykładem dodatkowego atrybutu unikatowego dla <xref:System.Diagnostics.DelimitedListTraceListener> klasy.|  
+|`traceOutputOptions`|Atrybut opcjonalny.<br /><br /> Określa wartość właściwości <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> dla odbiornika śledzenia.|  
+|[atrybuty niestandardowe]|Atrybuty opcjonalne.<br /><br /> Określa wartość dla atrybutów specyficznych dla odbiornika identyfikowanych przez metodę <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> dla tego odbiornika. <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> to przykład dodatkowego atrybutu unikatowego dla klasy <xref:System.Diagnostics.DelimitedListTraceListener>.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Filtr >](filter-element-for-add-for-listeners-for-source.md)|Dodaje filtr do odbiornika w `Listeners` kolekcji dla źródła śledzenia.|  
+|[@no__t — 1Filter >](filter-element-for-add-for-listeners-for-source.md)|Dodaje filtr do odbiornika w kolekcji `Listeners` dla źródła śledzenia.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -63,34 +63,34 @@ Dodaje odbiornik do `Listeners` kolekcji dla źródła śledzenia.
 |`listeners`|Określa detektory, które zbierają, przechowują i rozsyłają komunikaty.|  
   
 ## <a name="remarks"></a>Uwagi  
- Klasy odbiornika dostarczane z .NET Framework pochodzą od <xref:System.Diagnostics.TraceListener> klasy.  
+ Klasy odbiornika dostarczane z .NET Framework pochodzą z klasy <xref:System.Diagnostics.TraceListener>.  
   
- Jeśli nie określisz `name` atrybutu odbiornika śledzenia <xref:System.Diagnostics.TraceListener.Name%2A> , właściwość odbiornika śledzenia domyślnie będzie pustym ciągiem (""). Jeśli aplikacja ma tylko jeden odbiornik, możesz ją dodać bez określenia nazwy i można ją usunąć, określając pusty ciąg w polu Nazwa. Jeśli jednak aplikacja ma więcej niż jeden odbiornik, należy określić unikatową nazwę dla każdego odbiornika śledzenia, co pozwala identyfikować poszczególne detektory śledzenia i zarządzać nimi w <xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=nameWithType> kolekcji.  
-  
-> [!NOTE]
-> Dodanie więcej niż jednego odbiornika śledzenia tego samego typu i z tą samą nazwą powoduje tylko jeden odbiornik śledzenia tego typu i nazwę dodawane do `Listeners` kolekcji. Można jednak programowo dodać wiele identycznych odbiorników do `Listeners` kolekcji.  
-  
- Wartość `initializeData` atrybutu zależy od typu tworzonego odbiornika. Nie wszystkie detektory śledzenia wymagają określenia `initializeData`.  
+ Jeśli nie określisz atrybutu `name` odbiornika śledzenia, właściwość <xref:System.Diagnostics.TraceListener.Name%2A> obiektu nasłuchującego śledzenia domyślnie będzie pustym ciągiem (""). Jeśli aplikacja ma tylko jeden odbiornik, możesz ją dodać bez określenia nazwy i można ją usunąć, określając pusty ciąg w polu Nazwa. Jeśli jednak aplikacja ma więcej niż jeden odbiornik, należy określić unikatową nazwę dla każdego odbiornika śledzenia, co pozwala identyfikować poszczególne detektory śledzenia i zarządzać nimi w kolekcji <xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=nameWithType>.  
   
 > [!NOTE]
-> W przypadku korzystania z `initializeData` atrybutu może zostać wyświetlone ostrzeżenie kompilatora "initializeData" nie jest zadeklarowany. " To ostrzeżenie występuje, ponieważ ustawienia konfiguracji są weryfikowane względem abstrakcyjnej klasy <xref:System.Diagnostics.TraceListener>bazowej, która nie `initializeData` rozpoznaje atrybutu. Zazwyczaj można zignorować to ostrzeżenie dla implementacji detektorów śledzenia, które mają konstruktora, który pobiera parametr.  
+> Dodanie więcej niż jednego odbiornika śledzenia tego samego typu i z tą samą nazwą powoduje tylko jeden odbiornik śledzenia tego typu i nazwę dodawane do kolekcji `Listeners`. Można jednak programowo dodać wiele identycznych odbiorników do kolekcji `Listeners`.  
   
- W poniższej tabeli przedstawiono detektory śledzenia, które są dołączone do .NET Framework i opisano wartości ich `initializeData` atrybutów.  
+ Wartość atrybutu `initializeData` zależy od typu tworzonego odbiornika. Nie wszystkie detektory śledzenia wymagają określenia `initializeData`.  
+  
+> [!NOTE]
+> W przypadku korzystania z atrybutu `initializeData` może zostać wyświetlone ostrzeżenie kompilatora "initializeData" nie jest zadeklarowany. " To ostrzeżenie występuje, ponieważ ustawienia konfiguracji są weryfikowane względem abstrakcyjnej klasy bazowej <xref:System.Diagnostics.TraceListener>, która nie rozpoznaje atrybutu `initializeData`. Zazwyczaj można zignorować to ostrzeżenie dla implementacji detektorów śledzenia, które mają konstruktora, który pobiera parametr.  
+  
+ W poniższej tabeli przedstawiono detektory śledzenia, które są dołączone do .NET Framework i opisano wartości atrybutów `initializeData`.  
   
 |Trace — Klasa odbiornika|wartość atrybutu initializeData|  
 |--------------------------|------------------------------------|  
-|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|`useErrorStream` Wartość<xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> dla konstruktora.  Ustaw atrybut na "`true`", aby zapisać dane wyjściowe śledzenia i debugowania do strumienia błędu standardowego; Ustaw dla niego wartość`false`"", aby zapisać w standardowym strumieniu wyjściowym. `initializeData`|  
-|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>|Nazwa pliku, w którym są <xref:System.Diagnostics.DelimitedListTraceListener> zapisywane dane.|  
+|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|Wartość `useErrorStream` dla konstruktora <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A>.  Ustaw atrybut `initializeData` na wartość "`true`", aby zapisać dane wyjściowe śledzenia i debugowania do strumienia błędu standardowego; Ustaw dla niego wartość "`false`", aby zapisać w standardowym strumieniu wyjściowym.|  
+|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>|Nazwa pliku, do którego <xref:System.Diagnostics.DelimitedListTraceListener> zapisu.|  
 |<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|Nazwa istniejącego źródła dziennika zdarzeń.|  
-|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|Nazwa pliku, w którym zapisuje dane <xref:System.Diagnostics.EventSchemaTraceListener> .|  
-|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|Nazwa pliku, w którym zapisuje dane <xref:System.Diagnostics.TextWriterTraceListener> .|  
-|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|Nazwa pliku, w którym zapisuje dane <xref:System.Diagnostics.XmlWriterTraceListener> .|  
+|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|Nazwa pliku, do którego <xref:System.Diagnostics.EventSchemaTraceListener> zapisu.|  
+|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|Nazwa pliku, do którego <xref:System.Diagnostics.TextWriterTraceListener> zapisu.|  
+|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|Nazwa pliku, do którego <xref:System.Diagnostics.XmlWriterTraceListener> zapisu.|  
   
 ## <a name="configuration-file"></a>Plik konfiguracji  
  Ten element może być używany w pliku konfiguracji komputera (Machine. config) i w pliku konfiguracji aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak za pomocą `<add>` elementów dodać odbiorniki `console` i `textListener` do `Listeners` kolekcji dla źródła `TraceSourceApp`śledzenia. `textListener` Odbiornik zapisuje dane wyjściowe śledzenia do pliku listen. log.  
+ W poniższym przykładzie pokazano, jak za pomocą elementów `<add>` dodać detektory `console` i `textListener` do kolekcji `Listeners` dla źródła śledzenia `TraceSourceApp`. Odbiornik `textListener` zapisuje dane wyjściowe śledzenia do pliku listen. log.  
   
 ```xml  
 <configuration>  

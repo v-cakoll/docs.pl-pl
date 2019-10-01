@@ -10,20 +10,20 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: f99c5b0dc7eab57d4e3e86f49dbbb3228c7b7d8b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 0248706ed78de160ef0131a0c7595374febf1aa9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664218"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699588"
 ---
-# <a name="add-element-for-webrequestmodules-network-settings"></a>\<Dodaj element > dla webRequestModules (Ustawienia sieci)
+# <a name="add-element-for-webrequestmodules-network-settings"></a>\<add > elementu webRequestModules (Ustawienia sieci)
 Dodaje niestandardowy moduł żądania sieci Web do aplikacji.  
   
- \<> konfiguracji  
-\<system.net>  
-\<webRequestModules>  
-\<add>  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<add >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,7 +42,7 @@ Dodaje niestandardowy moduł żądania sieci Web do aplikacji.
 |**Atrybut**|**Opis**|  
 |-------------------|---------------------|  
 |`prefix`|Prefiks identyfikatora URI dla żądań obsłużonych przez ten moduł żądania sieci Web.|  
-|`type`|W pełni kwalifikowana nazwa typu (wskazywana przez <xref:System.Type.FullName%2A> Właściwość) i nazwa zestawu (wskazywanym <xref:System.Reflection.Assembly.FullName%2A> przez właściwość) oddzielona przecinkem, który implementuje ten moduł żądania sieci Web.|  
+|`type`|W pełni kwalifikowana nazwa typu (wskazywana przez właściwość <xref:System.Type.FullName%2A>) i nazwa zestawu (wskazywanym przez właściwość <xref:System.Reflection.Assembly.FullName%2A>) oddzielone przecinkami, które implementują ten moduł żądania sieci Web.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -54,13 +54,13 @@ Dodaje niestandardowy moduł żądania sieci Web do aplikacji.
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Określa moduły, które mają być używane do żądania informacji z hostów sieciowych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten `prefix` atrybut definiuje prefiks identyfikatora URI, który używa określonego modułu żądania sieci Web. Moduły żądania sieci Web są zwykle zarejestrowane w celu obsługi określonego protokołu, takiego jak HTTP lub FTP, ale mogą być zarejestrowane w celu obsługi żądania do określonego serwera lub ścieżki na serwerze.  
+ Atrybut `prefix` definiuje prefiks identyfikatora URI, który używa określonego modułu żądania sieci Web. Moduły żądania sieci Web są zwykle zarejestrowane w celu obsługi określonego protokołu, takiego jak HTTP lub FTP, ale mogą być zarejestrowane w celu obsługi żądania do określonego serwera lub ścieżki na serwerze.  
   
- Moduł żądania sieci Web jest tworzony, gdy do <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> metody jest przesyłany prefiks zgodny z identyfikatorem URI.  
+ Moduł żądania sieci Web jest tworzony, gdy do metody <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> jest przesyłany prefiks pasujący do identyfikatora URI.  
   
- Wartość `prefix` atrybutu powinna być wiodącymi znakami prawidłowego identyfikatora URI. Na przykład `http` lub `http://www.contoso.com`.
+ Wartość atrybutu `prefix` powinna być wiodącym znakiem prawidłowego identyfikatora URI. Na przykład `http` lub `http://www.contoso.com`.
   
- Wartość `type` atrybutu powinna być prawidłową nazwą typu i odpowiadającą jej nazwą zestawu, rozdzieloną przecinkami.
+ Wartość atrybutu `type` powinna być prawidłową nazwą typu i odpowiadającą jej nazwą zestawu, rozdzieloną przecinkami.
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
  Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  

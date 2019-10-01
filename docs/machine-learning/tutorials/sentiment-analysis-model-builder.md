@@ -1,25 +1,25 @@
 ---
-title: 'Samouczek: Analizuj klasyfikację tonacji-Binary'
+title: 'Samouczek: analizowanie klasyfikacji tonacji-Binary'
 description: W tym samouczku przedstawiono sposób tworzenia aplikacji Razor Pages, która klasyfikuje tonacji z komentarzy w witrynie sieci Web i podejmuje odpowiednie działania. Tonacji klasyfikator binarny używa konstruktora modelu w programie Visual Studio.
-ms.date: 09/26/2019
+ms.date: 09/30/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 0878a9318e7c60be29eeac9fb4efd47e408ab660
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: ce64f0d11b1da65e460235fdabc2b07e05ffcbe4
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332579"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700913"
 ---
-# <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Samouczek: Analizowanie tonacji komentarzy witryny internetowej w aplikacji sieci Web przy użyciu konstruktora modelu ML.NET
+# <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Samouczek: analizowanie tonacji komentarzy witryny internetowej w aplikacji sieci Web przy użyciu konstruktora modelu ML.NET
 
 Dowiedz się, jak analizować tonacji z komentarzy w czasie rzeczywistym w aplikacji sieci Web.
 
 W tym samouczku pokazano, jak utworzyć aplikację Razor Pages ASP.NET Core, która klasyfikuje tonacji z komentarzy w witrynie sieci Web w czasie rzeczywistym.
 
-Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
+Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 
 > [!div class="checklist"]
 >
@@ -49,7 +49,7 @@ Listę wymagań wstępnych i instrukcji instalacji można znaleźć w [podręczn
     1. Następnie wybierz szablon projektu **aplikacji sieci Web ASP.NET Core** .
     1. W polu tekstowym **Nazwa** wpisz "SentimentRazor".
     1. Pole wyboru **Utwórz katalog dla rozwiązania** powinno być domyślnie zaznaczone. Jeśli tak nie jest, należy go sprawdzić.
-    1. Wybierz przycisk **OK**.
+    1. Wybierz przycisk **OK** .
     1. W oknie Wybierz **aplikację sieci Web** , która wyświetla różne typy projektów ASP.NET Core, a następnie wybierz przycisk **OK** .
 
 ## <a name="prepare-and-understand-the-data"></a>Przygotuj i poznanie danych
@@ -70,12 +70,12 @@ Każdy wiersz w zestawie danych *Wikipedia-detox-250-line-Data. tsv* reprezentuj
 
 Aby szkolić model, musisz wybrać z listy dostępnych scenariuszy uczenia maszynowego udostępnianych przez konstruktora modelu.
 
-1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt *SentimentRazor* , a następnie wybierz pozycję **Dodaj** > **Machine Learning**.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt *SentimentRazor* i wybierz polecenie **Dodaj** > **Machine Learning**.
 1. Na potrzeby tego przykładu scenariusz jest tonacji analizy. W kroku *scenariusz* narzędzia model Builder wybierz scenariusz **Analiza tonacji** .
 
 ## <a name="load-the-data"></a>Ładowanie danych
 
-Konstruktor modelu akceptuje dane z dwóch źródeł, bazy danych SQL Server lub lokalnego pliku w `csv` formacie lub. `tsv`
+Konstruktor modelu akceptuje dane z dwóch źródeł, bazy danych SQL Server lub pliku lokalnego w formacie `csv` lub `tsv`.
 
 1. W kroku dane narzędzia model Builder wybierz pozycję **plik** z listy rozwijanej Źródło danych.
 1. Wybierz przycisk obok pola tekstowego **Wybierz plik** i Użyj Eksploratora plików, aby przeglądać i wybrać plik *Wikipedia-detox-250-line-Data. tsv* .
@@ -92,7 +92,7 @@ Czas wymagany przez model do uczenia jest proporcjonalny do ilości danych. Kons
 1. Chociaż Konstruktor modelu ustawia wartość **czasu do uczenia (sekundy)** do 10 sekund, zwiększ go do 30 sekund. Szkolenie przez dłuższy czas umożliwia konstruktorowi modelu Eksplorowanie większej liczby algorytmów i kombinacji parametrów podczas wyszukiwania najlepszego modelu.
 1. Wybierz pozycję **Rozpocznij szkolenie**.
 
-    W trakcie całego procesu szkolenia dane o postępie są wyświetlane `Progress` w sekcji kroku uczenie.
+    W trakcie całego procesu szkolenia dane o postępie są wyświetlane w sekcji `Progress` kroku uczenie.
 
     - Stan przedstawia stan zakończenia procesu szkolenia.
     - Najlepsza dokładność przedstawia dokładność najlepszego modelu, który został znaleziony przez konstruktora modelu do tej pory. Większa dokładność oznacza, że model przewidywalno dokładniej na danych testowych.
@@ -103,7 +103,7 @@ Czas wymagany przez model do uczenia jest proporcjonalny do ilości danych. Kons
 
 ## <a name="evaluate-the-model"></a>Oceń model
 
-Wynikiem kroku szkolenia będzie jeden model, który miał najlepszą wydajność. W kroku szacowania narzędzia model Builder sekcja Output będzie zawierać algorytm używany przez model najlepszego wykonywania w najlepszym wpisie **modelu** oraz metryki w **najlepszej jakości modelu (RSquared)** . Ponadto tabela podsumowująca zawierająca pięć najważniejszych modeli i ich metryki.
+Wynikiem kroku szkolenia będzie jeden model, który miał najlepszą wydajność. W kroku szacowania narzędzia model Builder sekcja Output zawiera algorytm używany przez model najlepiej działający w najlepszym wpisie **modelu** oraz metryki o **najwyższej dokładności modelu**. Ponadto tabela podsumowująca zawierająca pięć najważniejszych modeli i ich metryki.
 
 Jeśli Twoje metryki dokładności nie są zadowalające, niektóre proste sposoby wypróbowania i poprawienia dokładności modelu mają na celu zwiększenie ilości czasu na nauczenie modelu lub użycie większej ilości danych. W przeciwnym razie wybierz łącze **kod** , aby przejść do ostatniego kroku w narzędziu model Builder.
 
@@ -118,13 +118,13 @@ W wyniku procesu szkolenia zostaną utworzone dwa projekty.
     Następujące projekty powinny pojawić się w **Eksplorator rozwiązań**:
 
     - *SentimentRazorML. ConsoleApp*: Aplikacja konsolowa platformy .NET Core, która zawiera model szkoleń i kodu przewidywania.
-    - *SentimentRazorML. model*: Biblioteka klas .NET Standard zawierająca modele danych, które definiują schemat danych wejściowych i wyjściowych, a także zapisane wersje modelu najlepszego przebiegu podczas uczenia się.
+    - *SentimentRazorML. model*: biblioteka klas .NET Standard zawierająca modele danych, które definiują schemat danych wejściowych i wyjściowych, a także zapisaną wersję najlepszego modelu podczas uczenia się.
 
     W tym samouczku używany jest tylko projekt *SentimentRazorML. model* , ponieważ przewidywania zostaną wykonane w aplikacji sieci Web *SentimentRazor* , a nie w konsoli programu. Chociaż *SentimentRazorML. ConsoleApp* nie będzie używany do oceniania, może służyć do ponownego uczenia modelu przy użyciu nowych danych w późniejszym czasie. W tym samouczku przeszkolenie zostało przeprowadzone poza zakresem.
 
 ### <a name="configure-the-predictionengine-pool"></a>Konfigurowanie puli PredictionEngine
 
-Aby wykonać pojedyncze prognozowanie, należy utworzyć [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)nie jest bezpieczny wątkowo. Ponadto należy utworzyć wystąpienie go wszędzie tam, gdzie jest to potrzebne w aplikacji. Gdy aplikacja zostanie powiększona, ten proces może być niezarządzany. Aby zwiększyć wydajność i bezpieczeństwo wątków, użyj kombinacji iniekcji zależności i usługi `PredictionEnginePool`, która tworzy [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) obiektów do użycia w całej aplikacji.
+Aby wykonać pojedyncze prognozowanie, należy utworzyć [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nie jest bezpieczny wątkowo. Ponadto należy utworzyć wystąpienie go wszędzie tam, gdzie jest to potrzebne w aplikacji. Gdy aplikacja zostanie powiększona, ten proces może być niezarządzany. Aby zwiększyć wydajność i bezpieczeństwo wątków, użyj kombinacji iniekcji zależności i usługi `PredictionEnginePool`, która tworzy [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) obiektów do użycia w całej aplikacji.
 
 1. Zainstaluj pakiet NuGet *Microsoft.Extensions.ml* :
 
@@ -138,45 +138,75 @@ Aby wykonać pojedyncze prognozowanie, należy utworzyć [`PredictionEngine`](xr
 1. Otwórz plik *Startup.cs* w projekcie *SentimentRazor* .
 1. Dodaj następujące instrukcje using, aby odwołać się do pakietu NuGet *Microsoft.Extensions.ml* i projektu *SentimentRazorML. model* :
 
-    [!code-csharp [StartupUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L12-L14)]
+    ```csharp
+    using System.IO;
+    using Microsoft.Extensions.ML;
+    using SentimentRazorML.Model;
+    ```
 
 1. Utwórz zmienną globalną do przechowywania lokalizacji pliku z przeszkolonym modelem.
 
-    [!code-csharp [ModelPath](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L20)]
+    ```csharp
+    private readonly string _modelPath;
+    ```
 
-1. Plik modelu jest przechowywany w katalogu kompilacji obok plików zestawu aplikacji. Aby ułatwić dostęp, należy utworzyć metodę pomocnika wywołana `GetAbsolutePath` `Configure` po metodzie
+1. Plik modelu jest przechowywany w katalogu kompilacji obok plików zestawu aplikacji. Aby ułatwić dostęp, należy utworzyć metodę pomocnika o nazwie `GetAbsolutePath` po metodzie `Configure`
 
-    [!code-csharp [GetAbsolutePathMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L66-L73)]
+    ```csharp
+    public static string GetAbsolutePath(string relativePath)
+    {
+        FileInfo _dataRoot = new FileInfo(typeof(Program).Assembly.Location);
+        string assemblyFolderPath = _dataRoot.Directory.FullName;
 
-1. Użyj metody z konstruktora`_modelPath`klasy, aby ustawić. `Startup` `GetAbsolutePath`
+        string fullPath = Path.Combine(assemblyFolderPath, relativePath);
+        return fullPath;
+    }    
+    ```
 
-    [!code-csharp [InitModelPath](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L25)]
+1. Użyj metody `GetAbsolutePath` w konstruktorze klasy `Startup`, aby ustawić `_modelPath`.
 
-1. Skonfiguruj aplikację `ConfigureServices` dla aplikacji w metodzie: `PredictionEnginePool`
+    ```csharp
+    _modelPath = GetAbsolutePath("MLModel.zip");
+    ```
 
-    [!code-csharp [InitPredEnginePool](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L42)]
+1. Skonfiguruj `PredictionEnginePool` dla aplikacji w metodzie `ConfigureServices`:
+
+    ```csharp
+    services.AddPredictionEnginePool<ModelInput, ModelOutput>()
+            .FromFile(_modelPath);
+    ```
 
 ### <a name="create-sentiment-analysis-handler"></a>Utwórz procedurę obsługi analizy tonacji
 
-Przewidywania zostaną wykonane wewnątrz strony głównej aplikacji. W związku z tym metoda, która pobiera dane wejściowe użytkownika i `PredictionEnginePool` używa do zwrócenia prognozy, musi zostać dodana.
+Przewidywania zostaną wykonane wewnątrz strony głównej aplikacji. W związku z tym metoda, która pobiera dane wejściowe użytkownika i używa `PredictionEnginePool`, aby zwrócić prognozę, należy dodać.
 
 1. Otwórz plik *index.cshtml.cs* znajdujący się w katalogu *Pages* i Dodaj następujące instrukcje using:
 
-    [!code-csharp [IndexUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L7-L8)]
+    ```csharp
+    using Microsoft.Extensions.ML;
+    using SentimentRazorML.Model;
+    ```
 
-    Aby można było użyć `PredictionEnginePool` skonfigurowanej `Startup` klasy w klasie, należy wstrzyknąć ją do konstruktora modelu, w którym ma być używany.
+    Aby można było użyć `PredictionEnginePool` skonfigurowanego w klasie `Startup`, należy wstrzyknąć ją do konstruktora modelu, w którym ma być używany.
 
-1. Dodaj zmienną, aby odwołać `PredictionEnginePool` się do `IndexModel` wewnątrz klasy.
+1. Dodaj zmienną, aby odwołać się do `PredictionEnginePool` w klasie `IndexModel`.
 
-    [!code-csharp [PredEnginePool](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L14)]
+    ```csharp
+    private readonly PredictionEnginePool<ModelInput, ModelOutput> _predictionEnginePool;
+    ```
 
-1. Utwórz konstruktora w `IndexModel` klasie i `PredictionEnginePool` wstrzyknąć do niego usługę.
+1. Utwórz konstruktora w klasie `IndexModel` i wstrzyknąć do niego usługę `PredictionEnginePool`.
 
-    [!code-csharp [IndexConstructor](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L16-L19)]
+    ```csharp
+    public IndexModel(PredictionEnginePool<ModelInput, ModelOutput> predictionEnginePool)
+    {
+        _predictionEnginePool = predictionEnginePool;
+    }    
+    ```
 
 1. Utwórz procedurę obsługi metody, która używa `PredictionEnginePool` do tworzenia prognoz z danych wejściowych użytkownika otrzymanych ze strony sieci Web.
 
-    1. `OnGet` Poniżej metody Utwórz nową metodę o nazwie`OnGetAnalyzeSentiment`
+    1. Poniżej metody `OnGet` Utwórz nową metodę o nazwie `OnGetAnalyzeSentiment`
 
         ```csharp
         public IActionResult OnGetAnalyzeSentiment([FromQuery] string text)
@@ -185,29 +215,39 @@ Przewidywania zostaną wykonane wewnątrz strony głównej aplikacji. W związku
         }
         ```
 
-    1. Wewnątrz metody Zwróć neutralną tonacji, jeśli dane wejściowe użytkownika są puste lub mają wartość null. `OnGetAnalyzeSentiment`
+    1. Wewnątrz metody `OnGetAnalyzeSentiment` Zwróć *neutralną* tonacji, jeśli dane wejściowe użytkownika są puste lub mają wartość null.
 
-        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L28)]
+        ```csharp
+        if (String.IsNullOrEmpty(text)) return Content("Neutral");
+        ```
 
-    1. Podaje prawidłowe dane wejściowe, Utwórz nowe wystąpienie `ModelInput`.
+    1. Uwzględniając prawidłowe dane wejściowe, Utwórz nowe wystąpienie `ModelInput`.
 
-        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L29)]
+        ```csharp
+        var input = new ModelInput { SentimentText = text };
+        ```
 
-    1. `PredictionEnginePool` Użyj do przewidywania tonacji.
+    1. Użyj `PredictionEnginePool`, aby przewidzieć tonacji.
 
-        [!code-csharp [MakePrediction](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L30)]
+        ```csharp
+        var prediction = _predictionEnginePool.Predict(input);
+        ```
 
-    1. Przekonwertuj przewidywaną `bool` wartość na toksyczną lub nietoksyczną przy użyciu poniższego kodu.
+    1. Przekonwertuj przewidywaną wartość `bool` na toksyczne lub nietoksyczne przy użyciu poniższego kodu.
 
-        [!code-csharp [ConvertPrediction](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L31)]
+        ```csharp
+        var sentiment = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
+        ```
 
     1. Na koniec Zwróć tonacji z powrotem do strony sieci Web.
 
-        [!code-csharp [ReturnSentiment](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L32)]
+        ```csharp
+        return Content(sentiment);
+        ```
 
 ### <a name="configure-the-web-page"></a>Skonfiguruj stronę sieci Web
 
-Wyniki zwrócone przez `OnGetAnalyzeSentiment` program będą dynamicznie wyświetlane `Index` na stronie sieci Web.
+Wyniki zwrócone przez `OnGetAnalyzeSentiment` będą dynamicznie wyświetlane na stronie sieci Web `Index`.
 
 1. Otwórz plik *index. cshtml* w katalogu *stron* i Zastąp jego zawartość następującym kodem:
 
@@ -217,25 +257,25 @@ Wyniki zwrócone przez `OnGetAnalyzeSentiment` program będą dynamicznie wyświ
 
     [!code-css [CssStyling](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/css/site.css#L61-L105)]
 
-1. Następnie Dodaj kod, aby wysłać dane wejściowe ze strony sieci Web do `OnGetAnalyzeSentiment` procedury obsługi.
+1. Następnie Dodaj kod, aby wysłać dane wejściowe ze strony internetowej do programu obsługi `OnGetAnalyzeSentiment`.
 
-    1. W pliku *site. js* znajdującym się w katalogu *wwwroot\js* Utwórz funkcję o nazwie `getSentiment` , aby wykonać żądanie Get http `OnGetAnalyzeSentiment` z danymi wejściowymi użytkownika do programu obsługi.
+    1. W pliku *site. js* znajdującym się w katalogu *wwwroot\js* utwórz funkcję o nazwie `getSentiment`, aby wykonać żądanie Get http z danymi wejściowymi użytkownika do programu obsługi `OnGetAnalyzeSentiment`.
 
         [!code-javascript [GetSentimentMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L5-L10)]
 
-    1. Poniżej można dodać kolejną funkcję o nazwie `updateMarker` , aby dynamicznie aktualizować pozycję znacznika na stronie sieci Web w miarę przewidywania tonacji.
+    1. Poniżej można dodać kolejną funkcję o nazwie `updateMarker`, aby dynamicznie aktualizować pozycję znacznika na stronie sieci Web w miarę przewidywania tonacji.
 
         [!code-javascript [UpdateMarkerMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L12-L15)]
 
-    1. Utwórz funkcję programu obsługi zdarzeń o `updateSentiment` nazwie, aby pobrać dane wejściowe od użytkownika, wysłać je `OnGetAnalyzeSentiment` do funkcji przy użyciu `getSentiment` funkcji i zaktualizować znacznik przy `updateMarker` użyciu funkcji.
+    1. Utwórz funkcję programu obsługi zdarzeń o nazwie `updateSentiment`, aby pobrać dane wejściowe od użytkownika, wyślij je do funkcji `OnGetAnalyzeSentiment` przy użyciu funkcji `getSentiment` i zaktualizuj znacznik przy użyciu funkcji `updateMarker`.
 
         [!code-javascript [UpdateSentimentMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L17-L34)]
 
-    1. Na koniec Zarejestruj program obsługi zdarzeń i powiąż go `textarea` `id=Message` z elementem z atrybutem.
+    1. Na koniec Zarejestruj program obsługi zdarzeń i powiąż go z elementem `textarea` z atrybutem `id=Message`.
 
         [!code-javascript [UpdateSentimentEvtHandler](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L36)]
 
-## <a name="run-the-application"></a>Uruchamianie aplikacji
+## <a name="run-the-application"></a>Uruchom aplikację
 
 Teraz, gdy aplikacja jest skonfigurowana, uruchom aplikację, która powinna być uruchamiana w przeglądarce.
 
@@ -243,11 +283,11 @@ Po uruchomieniu aplikacji, wprowadź *wartość Konstruktor modeli jest chłodna
 
 ![Uruchamianie okna z przewidywanym oknem tonacji](./media/sentiment-analysis-model-builder/web-app.png)
 
-Jeśli musisz odwołać się do projektów wygenerowanych przez konstruktora modeli w późniejszym czasie w innym rozwiązaniu, możesz je znaleźć `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` w katalogu.
+Jeśli musisz odwołać się do projektów wygenerowanych przez konstruktora modeli w późniejszym czasie w innym rozwiązaniu, możesz je znaleźć w katalogu `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools`.
 
 ## <a name="next-steps"></a>Następne kroki
 
-W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
+W tym samouczku przedstawiono sposób wykonywania tych instrukcji:
 > [!div class="checklist"]
 >
 > - Tworzenie aplikacji Razor Pages ASP.NET Core

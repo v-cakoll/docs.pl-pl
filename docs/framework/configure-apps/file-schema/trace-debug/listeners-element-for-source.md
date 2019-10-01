@@ -7,21 +7,21 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: 853bc94978218fd4d426e6070b3a36e20435cd6d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d7641611e5d8257b49bc6a6abd0a2fadfde66e91
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920489"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697304"
 ---
-# <a name="listeners-element-for-source"></a>\<> elementu odbiorników \<dla > źródłowych
-Dodaje lub usuwa detektory w <xref:System.Diagnostics.TraceSource.Listeners%2A> kolekcji dla elementu <xref:System.Diagnostics.TraceSource>. Odbiornik kieruje dane wyjściowe śledzenia do odpowiedniego obiektu docelowego, takiego jak dziennik, okno lub plik tekstowy.  
+# <a name="listeners-element-for-source"></a>\<listeners > elementu \<source >
+Dodaje lub usuwa detektory w kolekcji <xref:System.Diagnostics.TraceSource.Listeners%2A> dla <xref:System.Diagnostics.TraceSource>. Odbiornik kieruje dane wyjściowe śledzenia do odpowiedniego obiektu docelowego, takiego jak dziennik, okno lub plik tekstowy.  
   
- \<> konfiguracji  
-\<system.diagnostics>  
-\<> źródeł  
-\<> źródłowa  
-\<Elementy > odbiorników  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<listeners >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,9 +43,9 @@ Dodaje lub usuwa detektory w <xref:System.Diagnostics.TraceSource.Listeners%2A> 
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<add>](add-element-for-listeners-for-source.md)|Dodaje odbiornik do `Listeners` kolekcji.|  
-|[\<remove>](remove-element-for-listeners-for-source.md)|Usuwa odbiornik z `Listeners` kolekcji.|  
-|[\<Wyczyść >](clear-element-for-listeners-for-source.md)|`Listeners` Czyści kolekcję dla źródła śledzenia.|  
+|[@no__t — 1add >](add-element-for-listeners-for-source.md)|Dodaje odbiornik do kolekcji `Listeners`.|  
+|[@no__t — 1remove >](remove-element-for-listeners-for-source.md)|Usuwa odbiornik z kolekcji `Listeners`.|  
+|[@no__t — 1clear >](clear-element-for-listeners-for-source.md)|Czyści kolekcję `Listeners` dla źródła śledzenia.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -62,7 +62,7 @@ Dodaje lub usuwa detektory w <xref:System.Diagnostics.TraceSource.Listeners%2A> 
  Ten element może być używany w pliku konfiguracji komputera (Machine. config) i w pliku konfiguracji aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak użyć elementu, `<listeners>` aby dodać odbiornik śledzenia konsoli `mySource` do źródła i usunąć domyślny odbiornik śledzenia.  
+ W poniższym przykładzie pokazano, jak za pomocą elementu `<listeners>` dodać odbiornik śledzenia konsoli do źródła `mySource` i usunąć domyślny odbiornik śledzenia.  
   
 ```xml  
 <configuration>  

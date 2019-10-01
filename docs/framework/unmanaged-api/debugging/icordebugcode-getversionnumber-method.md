@@ -17,38 +17,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 155a8d5465e0fb19c55c9d11b67c6031c2b2c4a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4b6fd6e8043f1c62da8994b43a9b9af45fb2e3c0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747516"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700823"
 ---
 # <a name="icordebugcodegetversionnumber-method"></a>ICorDebugCode::GetVersionNumber — Metoda
-Pobiera numer liczonego od jednego, który identyfikuje wersję kodu, który reprezentuje to "ICorDebugCode".  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-HRESULT GetVersionNumber (  
-    [out] ULONG32    *nVersion  
-);  
-```  
-  
-## <a name="parameters"></a>Parametry  
+
+Pobiera jednostronicowy numer identyfikujący wersję kodu, który reprezentuje ten "ICorDebugCode".
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+HRESULT GetVersionNumber (
+    [out] ULONG32    *nVersion
+);
+```
+
+## <a name="parameters"></a>Parametry
+
  `nVersion`  
- [out] Wskaźnik do numer wersji kodu.  
+ określoną Wskaźnik do numeru wersji kodu.
+
+## <a name="remarks"></a>Uwagi
+
+ Numer wersji jest zwiększany za każdym razem, gdy operacja Edit-and-Continue (EnC) jest wykonywana na kodzie.
+
+## <a name="requirements"></a>Wymagania
+
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
-## <a name="remarks"></a>Uwagi  
- Numer wersji jest zwiększany każdorazowo, gdy operacja edit-and-continue (EnC) odbywa się na kodzie.  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
-## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Biblioteka:** CorGuids. lib  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
-  
- **Biblioteka:** CorGuids.lib  
-  
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>Zobacz także
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

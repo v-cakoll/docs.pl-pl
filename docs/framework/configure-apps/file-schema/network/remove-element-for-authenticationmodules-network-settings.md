@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <remove> element, authenticationModules
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
-ms.openlocfilehash: 7f923ce73760fa42a2c435d346f9d1097a5ed82f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 9b73c0dc1fe161616c08ef0501241d55e9fea9bc
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664051"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697930"
 ---
-# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<Usuń element > dla authenticationModules (Ustawienia sieci)
+# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<remove > elementu authenticationModules (Ustawienia sieci)
 Usuwa moduł uwierzytelniania z aplikacji.  
   
- \<> konfiguracji  
-\<system.net>  
-\<authenticationModules >  
-\<remove>  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<remove >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,7 +40,7 @@ Usuwa moduł uwierzytelniania z aplikacji.
   
 |**Atrybut**|**Opis**|  
 |-------------------|---------------------|  
-|**type**|Nazwa modułu uwierzytelniania do usunięcia.|  
+|**Wprowadź**|Nazwa modułu uwierzytelniania do usunięcia.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -52,9 +52,9 @@ Usuwa moduł uwierzytelniania z aplikacji.
 |[authenticationModules](authenticationmodules-element-network-settings.md)|Określa moduły używane do uwierzytelniania żądań sieci.|  
   
 ## <a name="remarks"></a>Uwagi  
- `remove` Element usuwa moduły uwierzytelniania zdefiniowane wcześniej w pliku konfiguracyjnym lub na wyższym poziomie w hierarchii konfiguracji.  
+ Element `remove` usuwa moduły uwierzytelniania zdefiniowane wcześniej w pliku konfiguracyjnym lub na wyższym poziomie w hierarchii konfiguracji.  
   
- Wartość `type` atrybutu powinna być prawidłową nazwą klasy.  
+ Wartość atrybutu `type` powinna być prawidłową nazwą klasy.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
  Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  

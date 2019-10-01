@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 255e69d3715a22e7933b4036e968e610657748cf
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 63f8871926e8c279678c59a2256bef46b2ff514e
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353769"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698772"
 ---
 # <a name="char-c-reference"></a>char (odwołanie w C#)
 
@@ -21,13 +21,13 @@ Słowo kluczowe `char` służy do deklarowania instancji struktury <xref:System.
 
  Znaki Unicode służą do reprezentowania większości języków pisanych na całym świecie.
 
-|Type|Zakres|Size|Typ .NET|
+|Typ|Zakres|Rozmiar|Typ .NET|
 |----------|-----------|----------|-------------------------|
 |`char`|U + 0000 do U + FFFF|16-bitowy znak Unicode|<xref:System.Char?displayProperty=nameWithType>|
 
 ## <a name="literals"></a>Literały
 
-Stałe typu `char` można zapisać jako literały znakowe, szesnastkową sekwencję ucieczki lub reprezentację Unicode. Można również rzutować kody znaków całkowitych. W poniższym przykładzie są inicjowane cztery zmienne `char` z tym samym znakiem `X`:
+Stałe typu `char` można zapisać jako literały znakowe, szesnastkową sekwencję ucieczki lub reprezentację Unicode. Można również rzutować kody znaków całkowitych. W poniższym przykładzie cztery elementy tablicy `char` są inicjowane przy użyciu tego samego znaku `X`:
 
 [!code-csharp[csrefKeywordsTypes#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#19)]
 
@@ -44,7 +44,7 @@ Aby uzyskać więcej informacji, zobacz [Typy całkowite](~/_csharplang/spec/typ
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Char>
-- [Dokumentacja języka C#](../index.md)
+- [C#Odwoła](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](./index.md)
 - [Typy całkowite](../builtin-types/integral-numeric-types.md)

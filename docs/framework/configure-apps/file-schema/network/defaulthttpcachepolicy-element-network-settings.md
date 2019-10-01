@@ -8,20 +8,20 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: 1dd31884a072d16ed004c0b49be61e8cee399787
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f3b029e8b931e976bee85c98dd926e020c5b8743
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664153"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698278"
 ---
 # <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy >, element (Ustawienia sieci)
 Opisuje, czy buforowanie HTTP jest aktywne i opisuje domyślne zasady buforowania.  
   
- \<> konfiguracji  
-\<system.net>  
-\<requestCaching >  
-\<defaultHttpCachePolicy>  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<requestCaching >** ](requestcaching-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<defaultHttpCachePolicy >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -56,9 +56,9 @@ Opisuje, czy buforowanie HTTP jest aktywne i opisuje domyślne zasady buforowani
 |[requestCaching](requestcaching-element-network-settings.md)|Kontroluje mechanizm buforowania dla żądań sieci.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość `policyLevel` atrybutu `BypassCache` jest`Default`albo.  
+ Wartość atrybutu `policyLevel` jest równa `BypassCache` lub `Default`.  
   
- Wartości dla `maximumAge`elementów, `maximumStale`i `minimumFresh` są jawnym przedziałem czasu o formacie *d*. *HH*:*mm*:*SS* (dni, godziny, minuty i sekundy) albo stałe `minValue` lub `maxValue`, zgodnie z potrzebami.  
+ Wartości dla elementów `maximumAge`, `maximumStale` i `minimumFresh` są jawnym interwałem czasu w formacie *d*. *hh*:*mm*:*SS* (dni, godziny, minuty i sekundy) lub stałe `minValue` lub `maxValue`, zgodnie z potrzebami.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
  Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  

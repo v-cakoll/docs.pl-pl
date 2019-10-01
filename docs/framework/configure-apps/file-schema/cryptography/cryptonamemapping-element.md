@@ -1,5 +1,5 @@
 ---
-title: <cryptoNameMapping>, element
+title: <cryptoNameMapping> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoNameMapping
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <cryptoNameMapping> element
 - cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
-ms.openlocfilehash: 87b24595f5013ad3b981256fd97bc758863c600b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 45d2da22a7c3486d4c7a638e92d1f3fce6f9883c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921099"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699716"
 ---
-# <a name="cryptonamemapping-element"></a>\<cryptoNameMapping> Element
+# <a name="cryptonamemapping-element"></a>\<cryptoNameMapping > elementu
 Zawiera mapowania klas do przyjaznych nazw.  
   
- \<> konfiguracji  
-\<mscorlib>  
-\<cryptographySettings>  
-\<cryptoNameMapping>  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<cryptoNameMapping >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,7 +40,7 @@ Zawiera mapowania klas do przyjaznych nazw.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|`cryptoClasses`|Zawiera listę klas kryptograficznych, które mają mapowanie do przyjaznej nazwy w  **\<elemencie nameEntry >** .|  
+|`cryptoClasses`|Zawiera listę klas kryptograficznych, które mają mapowanie do przyjaznej nazwy w elemencie **\<nameEntry >** .|  
 |`nameEntry`|Mapuje nazwę klasy na przyjazną nazwę algorytmu, która pozwala jednej klasie mieć wiele przyjaznych nazw.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
@@ -50,10 +50,10 @@ Zawiera mapowania klas do przyjaznych nazw.
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
 |`cryptographySettings`|Zawiera ustawienia kryptografii.|  
 |`cryptoNameMapping`|Zawiera mapowania klas do przyjaznych nazw.|  
-|`mscorlib`|Zawiera element > cryptographySettings. \<|  
+|`mscorlib`|Zawiera element \<cryptographySettings >.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje,  **\<** jak używać elementu cryptoNameMapping >, aby odwoływać się do klasy kryptografii i skonfigurować środowisko uruchomieniowe. Następnie można przekazać ciąg "RSA" do <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> metody i <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> użyć metody do zwrócenia `MyCryptoRSAClass` obiektu.  
+ Poniższy przykład pokazuje, jak używać elementu **\<cryptoNameMapping >** do odwoływania się do klasy kryptografii i konfigurowania środowiska uruchomieniowego. Następnie można przekazać ciąg "RSA" do metody <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> i użyć metody <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> do zwrócenia obiektu `MyCryptoRSAClass`.  
   
 ```xml  
 <configuration>  

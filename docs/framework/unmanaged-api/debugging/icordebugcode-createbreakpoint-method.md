@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07f8be1a1831bc00eea3cfb659b46b67b6a78711
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1ec7d615b99ac301948d7ea25318115713ce06ea
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747724"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700840"
 ---
 # <a name="icordebugcodecreatebreakpoint-method"></a>ICorDebugCode::CreateBreakpoint — Metoda
-Tworzy punkt przerwania w tym segmencie kodu od określonego przesunięcia.  
+Tworzy punkt przerwania w tym segmencie kodu w określonym przesunięciu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,23 +38,21 @@ HRESULT CreateBreakpoint (
   
 ## <a name="parameters"></a>Parametry  
  `offset`  
- [in] Przesunięcie, przy którym chcesz utworzyć punkt przerwania.  
+ podczas Przesunięcie, od którego ma zostać utworzony punkt przerwania.  
   
  `ppBreakpoint`  
- [out] Wskaźnik na adres obiektu "icordebugfunctionbreakpoint —", który reprezentuje punkt przerwania.  
+ określoną Wskaźnik do adresu obiektu "ICorDebugFunctionBreakpoint", który reprezentuje punkt przerwania.  
   
 ## <a name="remarks"></a>Uwagi  
- Zanim punkt przerwania jest aktywna, należy dodać do obiektu procesu.  
+ Przed aktywnym punktem przerwania należy dodać go do obiektu procesu.  
   
- Jeśli ten kod jest kod intermediate language (MSIL) firmy Microsoft, a istnieje just-in-time (JIT)-skompilowanego, natywne wersję kodu, punkt przerwania zostaną zastosowane również kod kompilowany dokładnie na czas. (Taka sama jest wartość true, jeśli kod jest kompilowany dokładnie na czas później).  
+ Jeśli ten kod jest kodem języka pośredniego (MSIL) firmy Microsoft, a istnieje skompilowana, natywna wersja kodu, punkt przerwania zostanie zastosowany w kodzie skompilowanym JIT. (To samo jest prawdziwe, jeśli kod jest kompilowany w trybie JIT później).  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>Zobacz także
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

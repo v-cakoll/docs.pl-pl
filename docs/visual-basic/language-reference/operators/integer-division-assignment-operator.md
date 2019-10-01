@@ -1,5 +1,5 @@
 ---
-title: '\= — Operator (Visual Basic)'
+title: Operator \= (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - '\='
@@ -11,50 +11,50 @@ helpviewer_keywords:
 - operator \= [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 6f39915d-e398-4045-afcc-da6885e57b9c
-ms.openlocfilehash: 377a14a76f67e938f24c973b5946abd63f851bfd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7b4a6946cc38984272a6b63e14e8c1db2825a5e
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768355"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700678"
 ---
-# <a name="-operator"></a>\\= — Operator
-Dzieli wartość zmiennej lub właściwości przez wartość wyrażenia i przypisuje wyniku liczby całkowitej do zmiennej lub właściwości.  
+# <a name="-operator"></a>Operator \\ =
+Dzieli wartość zmiennej lub właściwości przez wartość wyrażenia i przypisuje wynik całkowity do zmiennej lub właściwości.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 variableorproperty \= expression  
 ```  
   
 ## <a name="parts"></a>Części  
  `variableorproperty`  
- Wymagana. Zmienna numeryczna lub właściwość.  
+ Wymagany. Dowolna zmienna lub właściwość numeryczna.  
   
  `expression`  
- Wymagana. Dowolne wyrażenie numeryczne.  
+ Wymagany. Dowolne wyrażenie liczbowe.  
   
 ## <a name="remarks"></a>Uwagi  
- Element w lewej części `\=` operator może być prosta zmienna skalarne, właściwości lub elementu w tablicy. Zmiennej lub właściwości nie może być [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ Element po lewej stronie operatora `\=` może być prostą zmienną skalarną, właściwością lub elementem tablicy. Zmienna lub właściwość nie może być [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- `\=` Operator dzieli wartość zmiennej lub właściwość po lewej stronie według wartości w jego prawej stronie, a następnie przypisuje wyniku liczby całkowitej, zmienna lub właściwość po lewej stronie  
+ Operator `\=` dzieli wartość zmiennej lub właściwości po lewej stronie przez wartość po prawej stronie, a następnie przypisuje wynik całkowity do zmiennej lub właściwości po jej lewej stronie.  
   
- Aby uzyskać więcej informacji na temat dzielenie liczby całkowitej, zobacz [\ — Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md).  
+ Aby uzyskać więcej informacji na temat dzielenia liczb całkowitych, zobacz element [\ operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md).  
   
 ## <a name="overloading"></a>Przeciążenie  
- `\` Operator może być *przeciążone*, co oznacza, że klasy lub struktury można ponownie zdefiniować jej zachowanie, gdy argument operacji ma typ tej klasy lub struktury. Przeciążanie `\` operator ma wpływ na zachowanie `\=` operatora. Jeśli kod używa `\=` dla klasy lub struktury, która przeciążenia `\`, należy zrozumieć zachowanie zmieniony. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Operator `\` może być *przeciążony*, co oznacza, że Klasa lub struktura może przedefiniować jej zachowanie, gdy operand ma typ tej klasy lub struktury. Przeciążanie operatora `\` wpływa na zachowanie operatora `\=`. Jeśli kod używa `\=` na klasie lub strukturze, która przeciąża `\`, należy zrozumieć jego ponownie zdefiniowane zachowanie. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto `\=` operator podziału jeden `Integer` zmiennej, sekundy i Przypisz liczbę całkowitą wyniku do pierwszej zmiennej.  
+ Poniższy przykład używa operatora `\=` w celu podzielenia jednej zmiennej `Integer` przez sekundę i przypisanie wyniku całkowitego do pierwszej zmiennej.  
   
  [!code-vb[VbVbalrOperators#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#19)]  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [\ — Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
-- [/ = — Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [Operator/= (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
 - [Operatory przypisania](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Operatory arytmetyczne](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Pierwszeństwo operatorów w Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Instrukcje](../../../visual-basic/programming-guide/language-features/statements.md)

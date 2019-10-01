@@ -2,12 +2,12 @@
 title: Funkcje matematyczne
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: 5e5658e28c7d806f7fd38f941bfa7254e7806e11
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 664d1a4f67ecced6713f83bf3dd11931c9b4dc18
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182484"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699998"
 ---
 # <a name="mathematical-functions"></a>Funkcje matematyczne
 
@@ -19,7 +19,7 @@ Wykonuje funkcję wartość bezwzględną.
 
 **Argumenty**
 
-`expression`: `Int32`, ,,`Double`Lub .`Decimal` `Int64`
+`expression`: `Int32`, `Int64`, `Double` lub `Decimal`.
 
 **Wartość zwracana**
 
@@ -35,11 +35,11 @@ Zwraca wartość arcus cosinus określonego wyrażenia.
 
 **Argumenty**
 
-`expression`: A `Double`.
+`expression`: `Double`.
 
 **Wartość zwracana**
 
-A `Double`.
+@No__t-0.
 
 **Przykład**
 
@@ -51,11 +51,11 @@ Zwraca wartość arcus sinus określonego wyrażenia.
 
 **Argumenty**
 
-`expression`: A `Double`.
+`expression`: `Double`.
 
 **Wartość zwracana**
 
-A `Double`.
+@No__t-0.
 
 **Przykład**
 
@@ -67,11 +67,11 @@ Zwraca wartość arcus tangens określonego wyrażenia liczbowego.
 
 **Argumenty**
 
-`expression`: A `Double`.
+`expression`: `Double`.
 
 **Wartość zwracana**
 
-A `Double`.
+@No__t-0.
 
 **Przykład**
 
@@ -83,11 +83,11 @@ Zwraca kąt w radianach, którego tangens jest między dwoma określonymi wyraż
 
 **Argumenty**
 
-`expression`: A `Double`.
+`expression`: `Double`.
 
 **Wartość zwracana**
 
-A `Double`.
+@No__t-0.
 
 **Przykład**
 
@@ -99,15 +99,14 @@ Konwertuje określone wyrażenie na najmniejszą liczbę całkowitą, która jes
 
 **Argumenty**
 
-`expression`: `Int32`, ,,`Double`Lub .`Decimal` `Int64`
+`expression`: `Int32`, `Int64`, `Double` lub `Decimal`.
 
 **Wartość zwracana**
 
-`Int32`, ,,`Double`Lub .`Decimal` `Int64`
+@No__t-0, `Int64`, `Double` lub `Decimal`.
 
 **Przykład** 
 
-[!code-csharp[DP EntityServices Concepts#SQLSERVER_CEILING](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_ceiling)]
 [!code-sql[DP EntityServices Concepts#SQLSERVER_CEILING](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_ceiling)]
 
 ## <a name="cosexpression"></a>COS (wyrażenie)
@@ -116,11 +115,11 @@ Oblicza cosinus kąta określony kąt w radianach.
 
 **Argumenty** 
 
-`expression`: A `Double`. 
+`expression`: `Double`. 
 
 **Wartość zwracana** 
 
-A `Double`. 
+@No__t-0. 
 
 **Przykład** 
 
@@ -132,11 +131,11 @@ Oblicza cotangens w postaci wartości kąta w radianach.
 
 **Argumenty** 
 
-`expression`: A `Double`. 
+`expression`: `Double`. 
 
 **Wartość zwracana** 
 
-A `Double`. 
+@No__t-0. 
 
 **Przykład** 
 
@@ -148,11 +147,11 @@ Zwraca odpowiedni kąt w stopniach.
 
 **Argumenty** 
 
-`expression`: `Int32`, ,,`Double`Lub .`Decimal` `Int64` 
+`expression`: `Int32`, `Int64`, `Double` lub `Decimal`. 
 
 **Wartość zwracana** 
 
-`Int32`, ,,`Double`Lub .`Decimal` `Int64` 
+@No__t-0, `Int64`, `Double` lub `Decimal`. 
 
 **Przykład** 
 
@@ -164,13 +163,13 @@ Oblicza wartość wykładniczą określonego wyrażenia liczbowego.
 
 **Argumenty** 
 
-`expression`: A `Double`. 
+`expression`: `Double`. 
 
 **Wartość zwracana** 
 
-A `Double`. 
+@No__t-0. 
 
-**Przykład**`SqlServer.EXP(1)`
+**Przykład** `SqlServer.EXP(1)`
 
 ## <a name="floorexpression"></a>FLOOR (wyrażenie)
 
@@ -178,28 +177,27 @@ Konwertuje określone wyrażenie na największą liczbę całkowitą mniejszą l
 
 **Argumenty** 
 
-`expression`: A `Double`. 
+`expression`: `Double`. 
 
 **Wartość zwracana** 
 
-A `Double`. 
+@No__t-0. 
 
 **Przykład** 
 
-[!code-csharp[DP EntityServices Concepts#SQLSERVER_FLOOR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_floor)] 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_FLOOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_floor)]
 
 ## <a name="logexpression"></a>Dziennik (wyrażenie)
 
-Oblicza logarytm naturalny określonego `float` wyrażenia. 
+Oblicza logarytm naturalny określonego wyrażenia `float`. 
 
 **Argumenty** 
 
-`expression`: A `Double`. 
+`expression`: `Double`. 
 
 **Wartość zwracana** 
 
-A `Double`. 
+@No__t-0. 
 
 **Przykład** 
 
@@ -207,27 +205,27 @@ A `Double`.
 
 ## <a name="log10expression"></a>LOG10 — (wyrażenie)
 
-Zwraca logarytm dziesiętny dla podanego `Double` wyrażenia. 
+Zwraca logarytm dziesiętny określonego wyrażenia `Double`. 
 
 **Argumenty** 
 
-`expression`: A `Double`. 
+`expression`: `Double`. 
 
 **Wartość zwracana** 
 
-A `Double`. 
+@No__t-0. 
 
 **Przykład** 
 
 `SqlServer.LOG10(100)`
 
-## <a name="pi"></a>PI()
+## <a name="pi"></a>PI ()
 
 Zwraca wartość stałą liczby pi jako `Double`. 
 
 **Wartość zwracana** 
 
-A `Double`. 
+@No__t-0. 
 
 **Przykład** 
 
@@ -241,12 +239,12 @@ Oblicza wartość określonego wyrażenia do określonej potęgi.
 
 |  |  |
 |--|--|
-|`numeric_expression`| `Int32`, ,,`Double`Lub .`Decimal` `Int64`|
-|`power_expression`| Reprezentuje moc, do której należy `numeric_expression`podnieść. `Double`| 
+|`numeric_expression`| @No__t-0, `Int64`, `Double` lub `Decimal`.|
+|`power_expression`| @No__t-0 reprezentuje moc, do której należy podnieść `numeric_expression`.| 
 
 **Wartość zwracana** 
 
-Wartość określonego `numeric_expression` `power_expression`elementu. 
+Wartość określonego `numeric_expression` do określonego `power_expression`. 
 
 **Przykład** 
 
@@ -258,11 +256,11 @@ Konwertuje stopnie na radiany.
 
 **Argumenty** 
 
-`expression`: `Int32`, ,,`Double`Lub .`Decimal` `Int64` 
+`expression`: `Int32`, `Int64`, `Double` lub `Decimal`. 
 
 **Wartość zwracana** 
 
-`Int32`, ,,`Double`Lub .`Decimal` `Int64` 
+@No__t-0, `Int64`, `Double` lub `Decimal`. 
 
 **Przykład** 
 
@@ -278,7 +276,7 @@ Wartość inicjatora jako `Int32`. Jeśli inicjator nie zostanie określony, apa
 
 **Wartość zwracana** 
 
-Wartość losowa `Double` od 0 do 1. 
+Wartość losowa `Double` z przestawu od 0 do 1. 
 
 **Przykład** 
 
@@ -292,13 +290,13 @@ Zwraca wyrażenie liczbowe zaokrąglone do określonej długości lub dokładno�
 
 |  |  |
 |--|--|
-|`numeric_expression`| `Int32`, ,,`Double`Lub .`Decimal` `Int64` 
-|`length`| Reprezentuje precyzję, do której `numeric_expression` ma zostać zaokrąglona wartość. `Int32` Gdy `length` jest liczbą dodatnią, `numeric_expression` jest zaokrąglana do liczby pozycji dziesiętnych określonych przez `length`. Gdy `length` jest liczbą ujemną, `numeric_expression` jest zaokrąglana po lewej stronie przecinka dziesiętnego, zgodnie z opisem w `length`.|
-|`function` | Opcjonalny. `Int32` Reprezentuje typ operacji do wykonania. Gdy funkcja jest pomijana lub ma wartość 0 (domyślnie), `numeric_expression` jest zaokrąglana. Gdy określona jest wartość inna niż 0, `numeric_expression` zostanie obcięta. |
+|`numeric_expression`| @No__t-0, `Int64`, `Double` lub `Decimal`. 
+|`length`| @No__t-0 reprezentuje precyzję, do której ma zostać zaokrąglony `numeric_expression`. Gdy `length` jest liczbą dodatnią, `numeric_expression` jest zaokrąglana do liczby miejsc dziesiętnych określonych przez `length`. Gdy `length` jest liczbą ujemną, `numeric_expression` jest zaokrąglana po lewej stronie przecinka dziesiętnego, jak określono przez `length`.|
+|`function` | Opcjonalny. @No__t-0 reprezentujący typ operacji do wykonania. Gdy funkcja jest pomijana lub ma wartość 0 (ustawienie domyślne), `numeric_expression` jest zaokrąglana. Gdy określona jest wartość inna niż 0, `numeric_expression` zostanie obcięta. |
 
 **Wartość zwracana** 
 
-Wartość określonego `numeric_expression` `power_expression`elementu.
+Wartość określonego `numeric_expression` do określonego `power_expression`.
 
 **Przykład** 
 
@@ -310,11 +308,11 @@ Zwraca wartość dodatnią (+ 1), zero (0) lub ujemną (-1) znak podanego wyraż
 
 **Argumenty** 
 
-`expression`: `Int32`, `Int64`, lub`Double``Decimal` 
+`expression`: `Int32`, `Int64`, `Double` lub `Decimal` 
 
 **Wartość zwracana** 
 
-`Int32`, ,,`Double`Lub .`Decimal` `Int64` 
+@No__t-0, `Int64`, `Double` lub `Decimal`. 
 
 **Przykład** 
 
@@ -322,17 +320,17 @@ Zwraca wartość dodatnią (+ 1), zero (0) lub ujemną (-1) znak podanego wyraż
 
 ## <a name="sinexpression"></a>SIN (wyrażenie)
 
-Oblicza sinus kątów o określonym kącie w radianach i zwraca `Double` wyrażenie. 
+Oblicza sinus kątów o określonym kącie w radianach i zwraca wyrażenie `Double`. 
 
 **Argumenty** 
 
-`expression`: A `Double`. 
+`expression`: `Double`. 
 
 **Wartość zwracana** 
 
-A `Double`. 
+@No__t-0. 
 
-**Przykład**`SqlServer.SIN(20)`
+**Przykład** `SqlServer.SIN(20)`
 
 ## <a name="sqrtexpression"></a>SQRT (wyrażenie)
 
@@ -340,13 +338,13 @@ Zwraca pierwiastek kwadratowy z podanego wyrażenia.
 
 **Argumenty** 
 
-`expression`: A `Double`. 
+`expression`: `Double`. 
 
 **Wartość zwracana** 
 
-A `Double`. 
+@No__t-0. 
 
-**Przykład**`SqlServer.SQRT(3600)`
+**Przykład** `SqlServer.SQRT(3600)`
 
 ## <a name="squareexpression"></a>KWADRAT (wyrażenie)
 
@@ -354,11 +352,11 @@ Zwraca kwadrat z podanego wyrażenia.
 
 **Argumenty** 
 
-`expression`: A `Double`. 
+`expression`: `Double`. 
 
 **Wartość zwracana** 
 
-A `Double`. 
+@No__t-0. 
 
 **Przykład** 
 
@@ -382,10 +380,5 @@ Oblicza tangens podanego wyrażenia.
   
 ## <a name="see-also"></a>Zobacz także
 
-Aby uzyskać więcej informacji na temat funkcji matematycznych obsługiwanych przez program SqlClient, zapoznaj się z dokumentacją dla SQL Server wersji określonej w manifeście dostawcy SqlClient:
-
-- **SQL Server 2005:** [Funkcje matematyczne (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))
-- **SQL Server 2008:** [Funkcje matematyczne (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))
-- **SQL Server 2012 i nowsze:** [Funkcje matematyczne (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql)
-
+- [Funkcje matematyczne (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql)
 - [Klient SQL dla funkcji programu Entity Framework](sqlclient-for-ef-functions.md)

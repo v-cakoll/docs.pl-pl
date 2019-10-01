@@ -9,18 +9,19 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-ms.openlocfilehash: 022f0efbbb2e6e9a4ac9d3d7ddcc1fb1022cdbee
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 634d9c5248c33619abec50d441d95c111febdcbf
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169775"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699418"
 ---
-# <a name="startup-element"></a>\<Uruchamianie > element
+# <a name="startup-element"></a>\<startup > elementu
 
-Określa informacje o uruchamianiu środowisko uruchomieniowe wspólnego języka.
+Określa informacje uruchamiania środowiska uruchomieniowego języka wspólnego.
 
- \<Konfiguracja > \<uruchamiania >
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1 **\<startup >**  
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,21 +38,21 @@ Określa informacje o uruchamianiu środowisko uruchomieniowe wspólnego języka
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|`useLegacyV2RuntimeActivationPolicy`|Atrybut opcjonalny.<br /><br /> Określa, czy włączyć zasady aktywacji .NET Framework 2.0 środowisko uruchomieniowe zasady aktywacji .NET Framework 4.|
+|`useLegacyV2RuntimeActivationPolicy`|Atrybut opcjonalny.<br /><br /> Określa, czy włączyć zasady aktywacji środowiska uruchomieniowego .NET Framework 2,0 lub użyć zasad aktywacji .NET Framework 4.|
 
-## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>Atrybut useLegacyV2RuntimeActivationPolicy
+## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy — atrybut
 
 |Wartość|Opis|
 |-----------|-----------------|
-|`true`|Włączanie zasad aktywacji środowiska uruchomieniowego .NET Framework 2.0 dla wybranego środowiska uruchomieniowego, czyli można powiązać technik aktywacji starszej wersji środowiska uruchomieniowego (takie jak [corbindtoruntimeex — funkcja](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)) do środowiska uruchomieniowego zamiast tego wybrać z pliku konfiguracji z nakładanie je na wersji CLR 2.0. W związku z tym Jeśli wersja środowiska CLR 4 lub nowszego jest wybierany z pliku konfiguracji, zestawy mieszane utworzonych w starszych wersjach programu .NET Framework są ładowane z wybranej wersji środowiska CLR. Ustawienie tej wartości zapobiega środowisko CLR w wersji 1.1 lub środowisko CLR w wersji 2.0 ładowanie do tego samego procesu i efektywne wyłączenie funkcji side-by-side w procesie.|
-|`false`|Używanie domyślnych zasad aktywacji dla programu .NET Framework 4 i nowszych wersji, aby zezwolić na starszej wersji środowiska uruchomieniowego technik aktywacji można załadować środowiska CLR w wersji 1.1 lub 2.0 do procesu. Ta wartość zapobiega zestawy mieszane ładowanie do programu .NET Framework 4 lub nowszy, chyba że zostały skompilowane przy użyciu programu .NET Framework 4 lub nowszej. Ta wartość jest domyślna.|
+|`true`|Włącz zasady aktywacji środowiska uruchomieniowego .NET Framework 2,0 dla wybranego środowiska uruchomieniowego, czyli powiązać starsze techniki aktywacji w środowisku uruchomieniowym (takie jak [Funkcja CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)) w środowisku uruchomieniowym wybranym z pliku konfiguracji zamiast przeznaczyć je na środowisko CLR Wersja 2,0. W takim przypadku, jeśli środowisko CLR w wersji 4 lub nowszej zostanie wybrane z pliku konfiguracji, zestawy w trybie mieszanym utworzone przy użyciu wcześniejszych wersji .NET Framework są ładowane z wybraną wersją środowiska CLR. Ustawienie tej wartości uniemożliwia załadowanie środowiska CLR w wersji 1,1 lub 2,0 CLR w ramach tego samego procesu, co skutecznie wyłącza funkcję równoczesną w procesie.|
+|`false`|Użyj domyślnych zasad aktywacji dla .NET Framework 4 i nowszych, co umożliwia stosowanie starszych technik aktywacji środowiska uruchomieniowego w celu załadowania środowiska CLR w wersji 1,1 lub 2,0 do procesu. Ustawienie tej wartości uniemożliwia ładowanie zestawów w trybie mieszanym do .NET Framework 4 lub nowszego, chyba że zostały skompilowane przy użyciu .NET Framework 4 lub nowszego. Jest to wartość domyślna.|
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
 |Element|Opis|
 |-------------|-----------------|
-|[\<requiredRuntime>](requiredruntime-element.md)|Określa, że aplikacja obsługuje tylko wersję 1.0 środowiska uruchomieniowego języka wspólnego. Skorzystaj z aplikacji utworzonych za pomocą środowiska uruchomieniowego wersji 1.1 lub nowszej  **\<supportedRuntime >** elementu.|
-|[\<supportedRuntime>](supportedruntime-element.md)|Określa wersje środowiska uruchomieniowego języka wspólnego, które obsługuje aplikacja.|
+|[@no__t — 1requiredRuntime >](requiredruntime-element.md)|Określa, że aplikacja obsługuje tylko wersję 1,0 środowiska uruchomieniowego języka wspólnego. Aplikacje skompilowane przy użyciu środowiska uruchomieniowego w wersji 1,1 lub nowszej powinny używać elementu **\<supportedRuntime >** .|
+|[@no__t — 1supportedRuntime >](supportedruntime-element.md)|Określa wersje środowiska uruchomieniowego języka wspólnego, które obsługuje aplikacja.|
 
 ### <a name="parent-elements"></a>Elementy nadrzędne
 
@@ -61,20 +62,20 @@ Określa informacje o uruchamianiu środowisko uruchomieniowe wspólnego języka
 
 ## <a name="remarks"></a>Uwagi
 
- **\<SupportedRuntime >** element powinien być używany przez wszystkie aplikacje kompilowane przy użyciu wersji 1.1 lub nowszej środowiska uruchomieniowego. Aplikacje stworzone z myślą o obsługiwały tylko wersję 1.0 środowiska uruchomieniowego muszą używać  **\<requiredRuntime >** elementu.
+ Element **\<supportedRuntime >** powinien być używany przez wszystkie aplikacje skompilowane przy użyciu wersji 1,1 lub nowszej środowiska uruchomieniowego. Aplikacje skompilowane do obsługi tylko wersji 1,0 środowiska uruchomieniowego muszą używać elementu **\<requiredRuntime >** .
 
- Ignoruje kodu startowego dla aplikacji hostowanej w programie Internet Explorer  **\<uruchamiania >** elementu i jego elementy podrzędne.
+ Kod uruchamiania aplikacji hostowanej w programie Microsoft Internet Explorer ignoruje **\<startup >** elementu i jego elementów podrzędnych.
 
 ## <a name="the-uselegacyv2runtimeactivationpolicy-attribute"></a>Atrybut useLegacyV2RuntimeActivationPolicy
 
- Ten atrybut jest przydatna, jeśli aplikacja używa ścieżki aktywacji starszych [corbindtoruntimeex — funkcja](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), i potrzebujesz tych ścieżek do aktywacji w wersji 4 środowiska CLR zamiast wcześniejszej wersji, czy aplikacja jest utworzonych za pomocą programu .NET Framework 4, lecz jest zależność w zestawie mieszanym skompilowanych przy użyciu wcześniejszej wersji programu .NET Framework. W tych scenariuszach atrybut na `true`.
+ Ten atrybut jest przydatny, jeśli aplikacja używa starszych ścieżek aktywacji, takich jak [Funkcja CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), i chcesz, aby te ścieżki uaktywniali wersję 4 środowiska CLR zamiast wcześniejszej wersji, lub jeśli aplikacja została skompilowana przy użyciu platformy .NET Framework 4, ale ma zależność od zestawu w trybie mieszanym skompilowanego za pomocą wcześniejszej wersji .NET Framework. W tych scenariuszach ustaw wartość atrybutu na `true`.
 
 > [!NOTE]
-> Ustawienie atrybutu `true` uniemożliwia ładowanie do tego samego procesu i efektywne wyłączenie funkcji side-by-side w trakcie środowisko CLR w wersji 1.1 lub środowisko CLR w wersji 2.0 (zobacz [Side-by-Side wykonywania COM Interop](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))).
+> Ustawienie atrybutu na `true` uniemożliwia ładowanie środowiska CLR w wersji 1,1 lub CLR Version 2,0 do tego samego procesu, co skutecznie wyłącza wbudowane funkcje równoległe (zobacz [Wykonywanie równoczesne dla](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))współdziałania z modelem com).
 
 ## <a name="example"></a>Przykład
 
- Poniższy przykład pokazuje, jak określić wersji środowiska uruchomieniowego w pliku konfiguracji.
+ Poniższy przykład pokazuje, jak określić wersję środowiska uruchomieniowego w pliku konfiguracji.
 
 ```xml
 <!-- When used with version 1.0 of the .NET Framework runtime -->
@@ -96,6 +97,6 @@ Określa informacje o uruchamianiu środowisko uruchomieniowe wspólnego języka
 
 - [Schemat ustawień uruchamiania](index.md)
 - [Schemat pliku konfiguracji](../index.md)
-- [Instrukcje: Konfigurowanie aplikacji do obsługi w programie .NET Framework 4 lub nowszy](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
-- [Wykonanie Side-by-Side dla współdziałania z modelem COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))
+- [Instrukcje: Konfigurowanie aplikacji do obsługi .NET Framework 4 lub nowszej wersji](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Wykonywanie równoczesne dla współdziałania z modelem COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))
 - [Wykonywanie równoczesne i wewnątrzprocesowe](../../../deployment/in-process-side-by-side-execution.md)

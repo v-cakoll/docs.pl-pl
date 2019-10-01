@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: de5672e5c6762b1e0742e717a3d499a4f93ee8ec
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: fa00aed2cd1e96ec788d4bc9c1c63f20561d8d1c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659341"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698185"
 ---
 # <a name="httpwebrequest-element-network-settings"></a>\<httpWebRequest >, element (Ustawienia sieci)
 Dostosowuje parametry żądania sieci Web.  
   
- \<> konfiguracji  
-\<system.net>  
-\<settings>  
-\<httpWebRequest>  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<httpWebRequest >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -53,10 +53,10 @@ Dostosowuje parametry żądania sieci Web.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[Ustawienia](settings-element-network-settings.md)|Konfiguruje podstawowe opcje sieci dla <xref:System.Net> przestrzeni nazw.|  
+|[Ustawienia](settings-element-network-settings.md)|Konfiguruje podstawowe opcje sieci dla przestrzeni nazw <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie .NET Framework ściśle wymusza analizowanie identyfikatorów URI w dokumencie RFC 2616. Niektóre odpowiedzi serwera mogą zawierać znaki kontrolne w zabronionych polach, co spowoduje <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> , że metoda <xref:System.Net.WebException>wygeneruje. Jeśli **UseUnsafeHeaderParsing** ma **wartość true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> program nie będzie zgłaszany w tym przypadku, jednak aplikacja będzie narażona na kilka form ataków dotyczących analizy identyfikatorów URI. Najlepszym rozwiązaniem jest zmiana serwera tak, aby odpowiedź nie zawierała znaków kontrolnych.  
+ Domyślnie .NET Framework ściśle wymusza analizowanie identyfikatorów URI w dokumencie RFC 2616. Niektóre odpowiedzi serwera mogą zawierać znaki kontrolne w zabronionych polach, co spowoduje wygenerowanie <xref:System.Net.WebException> metody <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType>. Jeśli **UseUnsafeHeaderParsing** ma **wartość true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> nie będzie w tym przypadku zgłaszany; Jednak aplikacja będzie narażona na kilka form ataków z analizowaniem identyfikatorów URI. Najlepszym rozwiązaniem jest zmiana serwera tak, aby odpowiedź nie zawierała znaków kontrolnych.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
  Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  

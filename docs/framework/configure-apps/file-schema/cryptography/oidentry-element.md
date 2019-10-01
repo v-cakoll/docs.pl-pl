@@ -1,5 +1,5 @@
 ---
-title: <oidEntry>, element
+title: <oidEntry> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap/oidEntry
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: cbdf6150010ca2dace3f0610d9caa90c2bf52746
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eed2a4d06906d2928be62aed20a75484c3eea946
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921057"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699768"
 ---
-# <a name="oidentry-element"></a>\<oidEntry, element >
+# <a name="oidentry-element"></a>\<oidEntry > elementu
 Mapuje identyfikator obiektu ASN. 1 (OID) na przyjazną nazwę.  
   
- \<> konfiguracji  
-\<mscorlib>  
-\<cryptographySettings>  
-\<oidMap>  
-\<oidEntry >  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<oidMap >** ](oidmap-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 **\<oidEntry >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,7 +38,7 @@ Mapuje identyfikator obiektu ASN. 1 (OID) na przyjazną nazwę.
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |**OID**|Atrybut wymagany.<br /><br /> Określa identyfikator OID ASN. 1 odpowiadający algorytmowi zaimplementowanemu przez klasę.|  
-|**name**|Atrybut wymagany.<br /><br /> Określa wartość atrybutu **name** w [ \<tagu > nameEntry](nameentry-element.md) .|  
+|**Nazwij**|Atrybut wymagany.<br /><br /> Określa wartość atrybutu **name** w tagu [\<nameEntry >](nameentry-element.md) .|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -49,14 +49,14 @@ Mapuje identyfikator obiektu ASN. 1 (OID) na przyjazną nazwę.
 |-------------|-----------------|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
 |`cryptographySettings`|Zawiera ustawienia kryptografii.|  
-|`mscorlib`|`cryptographySettings` Zawiera element.|  
+|`mscorlib`|Zawiera element `cryptographySettings`.|  
 |`oidMap`|Zawiera mapowania identyfikatorów obiektów ASN. 1 (OID) do klas.|  
   
 ## <a name="remarks"></a>Uwagi  
  Identyfikatory obiektu ASN. 1 identyfikują algorytmy w niektórych formatach kryptograficznych. Mapuj identyfikatory obiektów na przyjazne nazwy dla algorytmów, które chcesz zidentyfikować.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje,  **\<** jak używać elementu oidEntry > do mapowania identyfikatora obiektu dla algorytmu wyznaczania wartości skrótu RIPEMD-160 do implementacji algorytmu wyznaczania wartości skrótu.  
+ Poniższy przykład pokazuje, jak używać elementu **\<oidEntry >** do mapowania identyfikatora obiektu dla algorytmu wyznaczania wartości skrótu RIPEMD-160 do implementacji algorytmu wyznaczania wartości skrótu.  
   
 ```xml  
 <configuration>  

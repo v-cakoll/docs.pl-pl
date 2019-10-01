@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-ms.openlocfilehash: 71f8cb96c9981bbfc55236ea815fa5f5cb0e8aaf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 06e0d8863c74041f81977b3187fe99a1d05bcd53
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622652"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700882"
 ---
-# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a>"\<membername >" jest niejednoznaczny w dziedziczonych interfejsach\<interfacename1 > "i"\<interfacename2 > "
-Interfejs dziedziczy dwóch lub więcej elementów członkowskich o takiej samej nazwie z wielu interfejsów.  
+# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a>element "\<membername >" jest niejednoznaczny w dziedziczonych interfejsach "\<interfacename1 >" i "\<interfacename2 >"
+Interfejs dziedziczy co najmniej dwa elementy członkowskie o tej samej nazwie z wielu interfejsów.  
   
  **Identyfikator błędu:** BC30685  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Rzutuj wartość interfejs podstawowy, który chcesz użyć. na przykład:  
+- Rzutowanie wartości na interfejs podstawowy, który ma być używany; na przykład:  
   
-    ```  
+    ```vb  
     Interface Left  
         Sub MySub()  
     End Interface  

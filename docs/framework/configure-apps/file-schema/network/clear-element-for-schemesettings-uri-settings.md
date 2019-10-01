@@ -2,20 +2,20 @@
 title: <clear>, element dla schemeSettings (ustawienia identyfikatora URI)
 ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
-ms.openlocfilehash: 51c669aff767948523172aa075677ad3fb6478a2
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e954fef455d0279a945c33f2014913fea9d63064
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664181"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699446"
 ---
-# <a name="clear-element-for-schemesettings-uri-settings"></a>\<Wyczyść element > dla schemeSettings (ustawienia identyfikatora URI)
+# <a name="clear-element-for-schemesettings-uri-settings"></a>\<clear > elementu schemeSettings (ustawienia identyfikatora URI)
 Czyści wszystkie istniejące ustawienia schematu.  
   
- \<> konfiguracji  
-\<> identyfikatora URI  
-\<schemeSettings>  
-\<clear>  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<schemeSettings >** ](schemesettings-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<clear >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,10 +36,10 @@ Czyści wszystkie istniejące ustawienia schematu.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<schemeSettings >, element (ustawienia identyfikatora URI)](schemesettings-element-uri-settings.md)|Określa, w <xref:System.Uri> jaki sposób będzie analizowana dla określonych schematów.|  
+|[\<schemeSettings >, element (ustawienia identyfikatora URI)](schemesettings-element-uri-settings.md)|Określa sposób, w jaki <xref:System.Uri> będzie analizowana dla określonych schematów.|  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie <xref:System.Uri?displayProperty=nameWithType> Klasa cofa ograniczniki ścieżki kodowanej procentowo przed wykonaniem kompresji ścieżki. Ta implementacja została zaimplementowana jako mechanizm zabezpieczeń przed atakami podobnymi do następujących:  
+ Domyślnie Klasa <xref:System.Uri?displayProperty=nameWithType> cofa ograniczniki ścieżki kodowanej procentowo przed wykonaniem kompresji ścieżki. Ta implementacja została zaimplementowana jako mechanizm zabezpieczeń przed atakami podobnymi do następujących:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -47,7 +47,7 @@ Czyści wszystkie istniejące ustawienia schematu.
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Z <xref:System.Uri?displayProperty=nameWithType> tego powodu Klasa najpierw cofa ograniczniki ścieżki, a następnie stosuje kompresję ścieżki. Wynikiem przekazania złośliwego adresu URL powyżej do <xref:System.Uri?displayProperty=nameWithType> konstruktora klasy są następujące identyfikatory URI:  
+ Z tego powodu Klasa <xref:System.Uri?displayProperty=nameWithType> najpierw cofa ograniczniki ścieżki, a następnie stosuje kompresję ścieżki. Wynikiem przekazania złośliwego adresu URL powyżej do konstruktora klasy <xref:System.Uri?displayProperty=nameWithType> skutkuje następujący identyfikator URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -57,7 +57,7 @@ Czyści wszystkie istniejące ustawienia schematu.
  Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono konfigurację używaną przez <xref:System.Uri> klasę, która czyści wszystkie ustawienia schematu, a następnie dodaje obsługę nieprawidłowych ograniczników Path (procentowo) dla schematu http.  
+ W poniższym przykładzie przedstawiono konfigurację używaną przez klasę <xref:System.Uri>, która czyści wszystkie ustawienia schematu, a następnie dodaje obsługę nieprawidłowych ograniczników ścieżek (procentowo) dla schematu http.  
   
 ```xml  
 <configuration>  

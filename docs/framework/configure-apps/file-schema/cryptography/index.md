@@ -10,44 +10,36 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - configuration settings [.NET Framework], cryptography
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
-ms.openlocfilehash: a7964d01905be4e3dd6e8149e5533e9a2cfd9a71
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 474c3274bfba6803ebb17289f138251d755250e4
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927631"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699803"
 ---
 # <a name="cryptography-settings-schema"></a>Schemat ustawień kryptografii
 Schemat ustawień kryptografii zawiera elementy, które określają sposób mapowania przyjaznych nazw algorytmów na klasy implementujące algorytmy kryptografii.  
   
- [ **\<> konfiguracji**](../configuration-element.md)  
-  
- [ **\<mscorlib>** ](mscorlib-element-for-cryptography-settings.md)  
-  
- [ **\<cryptographySettings>** ](cryptographysettings-element.md)  
-  
- [ **\<cryptoNameMapping>** ](cryptonamemapping-element.md)  
-  
- [ **\<cryptoClasses>** ](cryptoclasses-element.md)  
-  
- [ **\<cryptoClass>** ](cryptoclass-element.md)  
-  
- [ **\<nameEntry >** ](nameentry-element.md)  
-  
- [ **\<oidMap>** ](oidmap-element.md)  
-  
- [ **\<oidEntry>** ](oidentry-element.md)  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0cryptoClasses >** ](cryptoclasses-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9[ **&nbsp;2cryptoClass >** ](cryptoclass-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0nameEntry >** ](nameentry-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<oidMap >** ](oidmap-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6[ **\<oidEntry >** ](oidentry-element.md)  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[ **\<cryptoClasses**>](cryptoclasses-element.md)|Zawiera listę klas kryptograficznych, które mają mapowanie do przyjaznej nazwy w  **\<elemencie nameEntry >** .|  
-|[ **\<cryptoClass**>](cryptoclass-element.md)|Zawiera klasę kryptografii, która ma mapowanie do przyjaznej nazwy w  **\<elemencie nameEntry >** .|  
+|[ **\<cryptoClasses**>](cryptoclasses-element.md)|Zawiera listę klas kryptograficznych, które mają mapowanie do przyjaznej nazwy w elemencie **\<nameEntry >** .|  
+|[ **\<cryptoClass**>](cryptoclass-element.md)|Zawiera klasę kryptografii, która ma mapowanie do przyjaznej nazwy w elemencie **\<nameEntry >** .|  
 |[ **\<cryptographySettings**>](cryptographysettings-element.md)|Zawiera ustawienia kryptografii.|  
 |[ **\<cryptoNameMapping**>](cryptonamemapping-element.md)|Zawiera mapowania klas do przyjaznych nazw.|  
-|[Element > mscorlib dla ustawień kryptografii  **\<** ](mscorlib-element-for-cryptography-settings.md)|Zawiera element **> cryptographySettings.\<**|  
-|[ **\<nameEntry >** ](nameentry-element.md)|Mapuje nazwę klasy na przyjazną nazwę algorytmu, która pozwala jednej klasie mieć wiele przyjaznych nazw.|  
-|[ **\<oidEntry>** ](oidentry-element.md)|Mapuje identyfikator obiektu ASN. 1 (OID) na przyjazną nazwę.|  
-|[ **\<oidMap>** ](oidmap-element.md)|Zawiera mapowania identyfikatorów OID ASN. 1 do klas.|  
+|[ **\<mscorlib >** elementu dla ustawień kryptografii](mscorlib-element-for-cryptography-settings.md)|Zawiera element **\<cryptographySettings >** .|  
+|[ **@no__t — 2nameEntry >** ](nameentry-element.md)|Mapuje nazwę klasy na przyjazną nazwę algorytmu, która pozwala jednej klasie mieć wiele przyjaznych nazw.|  
+|[ **@no__t — 2oidEntry >** ](oidentry-element.md)|Mapuje identyfikator obiektu ASN. 1 (OID) na przyjazną nazwę.|  
+|[ **@no__t — 2oidMap >** ](oidmap-element.md)|Zawiera mapowania identyfikatorów OID ASN. 1 do klas.|  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: 7ff44f0251936d51b4e396c37c53322efa110227
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: fd1649edbf7a2c8546992019df667f27df68e02c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659421"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698319"
 ---
 # <a name="defaultftpcachepolicy-element-network-settings"></a>\<defaultFtpCachePolicy >, element (Ustawienia sieci)
 Opisuje, czy buforowanie FTP jest aktywne i opisuje domyślne zasady buforowania.  
   
- \<> konfiguracji  
-\<system.net>  
-\<requestCaching >  
-\<defaultFtpCachePolicy>  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<requestCaching >** ](requestcaching-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<defaultFtpCachePolicy >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -65,7 +65,7 @@ Opisuje, czy buforowanie FTP jest aktywne i opisuje domyślne zasady buforowania
 ## <a name="remarks"></a>Uwagi  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak określić zasady `NoCacheNoStore`buforowania FTP.  
+ Poniższy przykład pokazuje, jak określić zasady buforowania FTP `NoCacheNoStore`.  
   
 ```xml  
 <configuration>  

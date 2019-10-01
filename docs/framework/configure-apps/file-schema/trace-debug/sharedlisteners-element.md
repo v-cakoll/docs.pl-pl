@@ -1,5 +1,5 @@
 ---
-title: <sharedListeners>, element
+title: <sharedListeners> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#sharedListeners
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: 41cabcbce13409b0842cbbd625028b51d32d59d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b419ecf451b79808e545525c7b8761175f390200
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926983"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699304"
 ---
-# <a name="sharedlisteners-element"></a>\<sharedListeners, element >
+# <a name="sharedlisteners-element"></a>\<sharedListeners > elementu
 Zawiera detektory, do których może odwoływać się każdy element źródłowy lub Trace.  Te odbiorniki nie odbierają domyślnie żadnych śladów i nie można ich pobrać w czasie wykonywania. Odbiorniki identyfikowane jako odbiorniki udostępnione mogą być dodawane do źródeł lub śladów według nazwy.  
   
- \<> konfiguracji  
-\<system.diagnostics>  
-\<sharedListeners >  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<sharedListeners >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,7 +43,7 @@ Zawiera detektory, do których może odwoływać się każdy element źródłowy
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<add>](add-element-for-listeners-for-trace.md)|Dodaje odbiornik do `sharedListeners` kolekcji.|  
+|[@no__t — 1add >](add-element-for-listeners-for-trace.md)|Dodaje odbiornik do kolekcji `sharedListeners`.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -53,12 +53,12 @@ Zawiera detektory, do których może odwoływać się każdy element źródłowy
 |`system.diagnostics`|Określa element główny dla sekcji konfiguracji ASP.NET.|  
   
 ## <a name="remarks"></a>Uwagi  
- Dodanie odbiornika do kolekcji udostępnionych odbiorników nie powoduje aktywnego odbiornika. Nadal musi być dodany do źródła śledzenia lub śledzenia przez dodanie go do `Listeners` kolekcji dla tego elementu śledzenia. Klasy odbiornika w .NET Framework pochodne od <xref:System.Diagnostics.TraceListener> klasy.  
+ Dodanie odbiornika do kolekcji udostępnionych odbiorników nie powoduje aktywnego odbiornika. Nadal musi być dodany do źródła śledzenia lub śledzenia przez dodanie go do kolekcji `Listeners` dla tego elementu śledzenia. Klasy odbiornika w .NET Framework pochodzą od klasy <xref:System.Diagnostics.TraceListener>.  
   
  Ten element może być używany w pliku konfiguracji komputera (Machine. config) i w pliku konfiguracji aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak użyć elementu, `<sharedListeners>` aby dodać odbiornik `console` do `Listeners` kolekcji dla <xref:System.Diagnostics.TraceSource> klas i <xref:System.Diagnostics.Trace> . Odbiornik śledzenia konsoli zapisuje informacje o śledzeniu do konsoli za pomocą wywołań do <xref:System.Diagnostics.TraceSource> lub <xref:System.Diagnostics.Trace>.  
+ Poniższy przykład pokazuje, jak za pomocą elementu `<sharedListeners>` dodać odbiornik `console` do kolekcji `Listeners` dla klas <xref:System.Diagnostics.TraceSource> i <xref:System.Diagnostics.Trace>. Odbiornik śledzenia konsoli zapisuje informacje o śledzeniu do konsoli za pomocą wywołań do <xref:System.Diagnostics.TraceSource> lub <xref:System.Diagnostics.Trace>.  
   
 ```xml  
 <configuration>  

@@ -1,5 +1,5 @@
 ---
-title: <filter>Element dla <add> elementu<sharedListeners>
+title: Element <filter> dla <add> dla <sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: 571a3add232f3e4f9747040dc104b85e8cc3085e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4e92f80e9f6069b5fa70501e13a55d5a6fe95e7a
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920511"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697326"
 ---
-# <a name="filter-element-for-add-for-sharedlisteners"></a>\<Filtr > elementu do \<dodania > dla \<sharedListeners >
-Dodaje filtr do odbiornika w `sharedListeners` kolekcji.  
+# <a name="filter-element-for-add-for-sharedlisteners"></a>\<filter > elementu \<add > dla @no__t 2sharedListeners >
+Dodaje filtr do odbiornika w kolekcji `sharedListeners`.  
   
- \<> konfiguracji  
-\<system.diagnostics>  
-\<sharedListeners, element >  
-\<add>  
-\<Filtr >  
+[ **@no__t — 2configuration >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sharedListeners >** ](sharedlisteners-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<add >** ](add-element-for-sharedlisteners.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<filter >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,7 +40,7 @@ Dodaje filtr do odbiornika w `sharedListeners` kolekcji.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|**type**|Atrybut wymagany.<br /><br /> Określa typ filtru. Można użyć tylko pełnej nazwy typu (w formacie <xref:System.Type.FullName%2A?displayProperty=nameWithType> właściwości) lub użyć w pełni kwalifikowanej nazwy typu, w tym informacji o zestawie (w formacie <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> właściwości). Aby uzyskać informacje na temat tworzenia w pełni kwalifikowanej nazwy typu, zobacz [Określanie w pełni kwalifikowanych nazw typów](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|**Wprowadź**|Atrybut wymagany.<br /><br /> Określa typ filtru. Można użyć tylko pełnej nazwy typu (w formacie <xref:System.Type.FullName%2A?displayProperty=nameWithType>) lub użyć w pełni kwalifikowanej nazwy typu, w tym informacji o zestawie (w formacie właściwości <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>). Aby uzyskać informacje na temat tworzenia w pełni kwalifikowanej nazwy typu, zobacz [Określanie w pełni kwalifikowanych nazw typów](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |**initializeData**|Atrybut opcjonalny.<br /><br /> Ciąg przesłany do konstruktora dla określonej klasy.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
@@ -56,12 +56,12 @@ Dodaje filtr do odbiornika w `sharedListeners` kolekcji.
 |`add`|Dodaje odbiornik do kolekcji **sharedListeners** .|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli odbiornik jest zdefiniowany `<add>` w elemencie `<sharedListeners>` elementu, filtr dla tego odbiornika `<filter>` powinien być zdefiniowany w elemencie, który jest elementem podrzędnym `<add>` elementu.  
+ Jeśli odbiornik jest zdefiniowany w elemencie `<add>` elementu `<sharedListeners>`, filtr dla tego odbiornika powinien być zdefiniowany w elemencie `<filter>`, który jest elementem podrzędnym elementu `<add>`.  
   
  Ten element może być używany w pliku konfiguracji komputera (Machine. config) i w pliku konfiguracji aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, `<filter>` jak za pomocą elementu dodać filtr do odbiornika `console` śledzenia w `sharedListeners` kolekcji.  
+ Poniższy przykład pokazuje, jak za pomocą elementu `<filter>` dodać filtr do odbiornika śledzenia `console` w kolekcji `sharedListeners`.  
   
 ```xml  
 <configuration>  

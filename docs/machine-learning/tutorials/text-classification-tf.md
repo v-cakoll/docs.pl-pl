@@ -1,19 +1,19 @@
 ---
-title: 'Samouczek: Analizuj tonacjie przeglądy filmów przy użyciu wstępnie przeszkolonego modelu TensorFlow'
+title: 'Samouczek: analizowanie tonacji przeglądów filmów przy użyciu wstępnie przeszkolonego modelu TensorFlow'
 description: W tym samouczku przedstawiono sposób użycia wstępnie przeszkolonego modelu TensorFlow do klasyfikowania tonacji w komentarzach w witrynie sieci Web. Tonacji klasyfikator binarny jest aplikacją C# konsolową opracowaną przy użyciu programu Visual Studio.
-ms.date: 09/11/2019
+ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 38b935814d713284dae1ca931b90c63bbcac332b
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: e25e884769ad62d3d888986b1475000b543b24b1
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216897"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700939"
 ---
-# <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Samouczek: Analizuj tonacjie przeglądy filmów przy użyciu wstępnie przeszkolonego modelu TensorFlow w ML.NET
+# <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Samouczek: analizowanie tonacji przeglądów filmów przy użyciu wstępnie przeszkolonego modelu TensorFlow w ML.NET
 
 W tym samouczku przedstawiono sposób użycia wstępnie przeszkolonego modelu TensorFlow do klasyfikowania tonacji w komentarzach w witrynie sieci Web. Tonacji klasyfikator binarny jest aplikacją C# konsolową opracowaną przy użyciu programu Visual Studio.
 
@@ -42,7 +42,7 @@ Kod źródłowy dla tego samouczka można znaleźć w repozytorium [dotnet/Sampl
 
 3. Zainstaluj **pakiet NuGet Microsoft.ml**:
 
-    W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, a następnie wybierz kartę **przeglądanie** . Wyszukaj pozycję **Microsoft.ml**, wybierz żądany pakiet, a następnie wybierz przycisk **Instaluj** . Kontynuuj instalację, zgadzając się z postanowieniami licencyjnymi dotyczącymi wybranego pakietu. Powtórz te kroki dla **Microsoft. ml. TensorFlow**.
+    W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, a następnie wybierz kartę **Przeglądaj** . wyszukaj pozycję **Microsoft.ml**, wybierz pakiet, a następnie wybierz przycisk **Instaluj** . Kontynuuj instalację, zgadzając się z postanowieniami licencyjnymi dotyczącymi wybranego pakietu. Powtórz te kroki dla **Microsoft. ml. TensorFlow**.
 
 ### <a name="add-the-tensorflow-model-to-the-project"></a>Dodawanie modelu TensorFlow do projektu
 
@@ -54,26 +54,26 @@ Kod źródłowy dla tego samouczka można znaleźć w repozytorium [dotnet/Sampl
     Plik zip zawiera:
 
     * `saved_model.pb`: sam model TensorFlow. Model przyjmuje stałą długość (w rozmiarze 600) tablicę funkcji reprezentujących tekst w ciągu przeglądu IMDB i wyprowadza dwa prawdopodobieństwa, które są sumowane do 1: prawdopodobieństwo, że przegląd danych wejściowych ma pozytywne tonacji, i prawdopodobieństwo, że przegląd danych wejściowych ma ujemna tonacji.
-    * `imdb_word_index.csv`: mapowanie poszczególnych wyrazów na wartość całkowitą. Mapowanie jest używane do generowania funkcji wejściowych dla modelu TensorFlow.
+    * `imdb_word_index.csv`: mapowanie z pojedynczych wyrazów na wartość całkowitą. Mapowanie jest używane do generowania funkcji wejściowych dla modelu TensorFlow.
 
-2. Skopiuj zawartość wewnętrznego `sentiment_model` katalogu do katalogu projektu `sentiment_model` *TextClassificationTF* . Ten katalog zawiera model i dodatkowe pliki pomocnicze, które są odpowiednie dla tego samouczka, jak pokazano na poniższej ilustracji:
+2. Skopiuj zawartość wewnętrznego katalogu `sentiment_model` do katalogu projektu programu *TextClassificationTF* `sentiment_model`. Ten katalog zawiera model i dodatkowe pliki pomocnicze, które są odpowiednie dla tego samouczka, jak pokazano na poniższej ilustracji:
 
    ![zawartość katalogu sentiment_model](./media/text-classification-tf/sentiment-model-files.png)
 
-3. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy każdy plik w `sentiment_model` katalogu i podkatalogu, a następnie wybierz polecenie **Właściwości**. W obszarze **Zaawansowane**Zmień wartość opcji **Kopiuj do katalogu wyjściowego** na Kopiuj, **jeśli nowszy**.
+3. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy każdy z plików w katalogu `sentiment_model` i podkatalogu, a następnie wybierz polecenie **Właściwości**. W obszarze **Zaawansowane**Zmień wartość opcji **Kopiuj do katalogu wyjściowego** na Kopiuj, **jeśli nowszy**.
 
 ### <a name="add-using-statements-and-global-variables"></a>Dodaj instrukcje using i zmienne globalne
 
-1. Dodaj następujące dodatkowe `using` instrukcje na początku pliku *program.cs* :
+1. Dodaj następujące dodatkowe instrukcje `using` na początku pliku *program.cs* :
 
    [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TextClassificationTF/Program.cs#AddUsings "Add necessary usings")]
 
-1. Utwórz dwie zmienne globalne bezpośrednio powyżej `Main` metody przechowywania zapisanej ścieżki pliku modelu i długość wektora funkcji.
+1. Utwórz dwie zmienne globalne bezpośrednio powyżej metody `Main` w celu przechowywania zapisanej ścieżki pliku modelu i długość wektora funkcji.
 
    [!code-csharp[DeclareGlobalVariables](../../../samples/machine-learning/tutorials/TextClassificationTF/Program.cs#DeclareGlobalVariables "Declare global variables")]
 
-    * `_modelPath`jest ścieżką do pliku nauczonego modelu.
-    * `FeatureLength`jest długością tablicy funkcji całkowitej, której oczekuje model.
+    * `_modelPath` to ścieżka do pliku nauczonego modelu.
+    * `FeatureLength` to długość tablicy funkcji liczby całkowitej, której oczekuje model.
 
 ### <a name="model-the-data"></a>Modelowanie danych
 
@@ -94,43 +94,43 @@ Rozmiar tablicy funkcji o zmiennej długości jest zmieniany na stałą długoś
 |VariableLengthFeatures|14, 22, 9, 66, 78,... |int []|
 |Funkcje|14, 22, 9, 66, 78,... |int [600]|
 
-1. Utwórz klasę danych wejściowych po `Main` metodzie:
+1. Utwórz klasę danych wejściowych po metodzie `Main`:
 
     [!code-csharp[MovieReviewClass](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#MovieReviewClass "Declare movie review type")]
 
-    Klasa danych wejściowych, `MovieReview`, `string` ma dla komentarzy użytkownika (`ReviewText`).
+    Klasa danych wejściowych, `MovieReview`, ma `string` dla komentarzy użytkownika (`ReviewText`).
 
-1. Utwórz klasę dla funkcji o zmiennej długości, po `Main` metodzie:
+1. Utwórz klasę dla funkcji o zmiennej długości po metodzie `Main`:
 
     [!code-csharp[VariableLengthFeatures](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#VariableLengthFeatures "Declare variable length features type")]
 
-    Właściwość ma atrybut vectortype służący do wyznaczania go jako wektor. [](xref:Microsoft.ML.Data.VectorTypeAttribute.%23ctor%2A) `VariableLengthFeatures`  Wszystkie elementy wektorowe muszą być tego samego typu. W przypadku zestawów danych z dużą liczbą kolumn ładowanie wielu kolumn jako jednego wektora zmniejsza liczbę danych przekazywanych w przypadku zastosowania transformacji danych.
+    Właściwość `VariableLengthFeatures` ma atrybut [vectortype](xref:Microsoft.ML.Data.VectorTypeAttribute.%23ctor%2A) służący do wyznaczania go jako wektor.  Wszystkie elementy wektorowe muszą być tego samego typu. W przypadku zestawów danych z dużą liczbą kolumn ładowanie wielu kolumn jako jednego wektora zmniejsza liczbę danych przekazywanych w przypadku zastosowania transformacji danych.
 
-    Ta klasa jest używana w `ResizeFeatures` akcji. Nazwy jego właściwości (w tym przypadku tylko jeden) są używane do wskazania kolumn w widoku danych, które mogą być używane jako _dane wejściowe_ niestandardowej akcji mapowania.
+    Ta klasa jest używana w akcji `ResizeFeatures`. Nazwy jego właściwości (w tym przypadku tylko jeden) są używane do wskazania kolumn w widoku danych, które mogą być używane jako _dane wejściowe_ niestandardowej akcji mapowania.
 
-1. Utwórz klasę dla funkcji o stałej długości, po zastosowaniu `Main` metody:
+1. Utwórz klasę dla funkcji o stałej długości po metodzie `Main`:
 
     [!code-csharp[FixedLengthFeatures](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#FixedLengthFeatures)]
 
-    Ta klasa jest używana w `ResizeFeatures` akcji. Nazwy jego właściwości (w tym przypadku tylko jeden) są używane do wskazania kolumn w widoku danych, które mogą być używane jako _dane wyjściowe_ niestandardowej akcji mapowania.
+    Ta klasa jest używana w akcji `ResizeFeatures`. Nazwy jego właściwości (w tym przypadku tylko jeden) są używane do wskazania kolumn w widoku danych, które mogą być używane jako _dane wyjściowe_ niestandardowej akcji mapowania.
 
     Należy zauważyć, że nazwa właściwości `Features` jest określana przez model TensorFlow. Nie można zmienić tej nazwy właściwości.
 
-1. Utwórz klasę dla przewidywania po `Main` metodzie:
+1. Utwórz klasę dla przewidywania po metodzie `Main`:
 
     [!code-csharp[Prediction](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#Prediction "Declare prediction class")]
 
-    `MovieReviewSentimentPrediction`jest klasą predykcyjną używaną po przekształceniu modelu. `MovieReviewSentimentPrediction`ma jedną `float` tablicę (`Prediction`) i `VectorType` atrybut.
+    `MovieReviewSentimentPrediction` jest klasą przewidywania używaną po przekształceniu modelu. `MovieReviewSentimentPrediction` ma jedną tablicę `float` (`Prediction`) i atrybut `VectorType`.
 
 ### <a name="create-the-mlcontext-lookup-dictionary-and-action-to-resize-features"></a>Tworzenie MLContext, słownika wyszukiwania i akcji w celu zmiany rozmiaru funkcji
 
-[Klasa MLContext](xref:Microsoft.ML.MLContext) jest punktem początkowym dla wszystkich operacji ml.NET. Inicjowanie `mlContext` tworzy nowe środowisko ml.NET, które może być współużytkowane przez obiekty przepływu pracy tworzenia modelu. Jest to podobne, pojęciowo do `DBContext` w Entity Framework.
+[Klasa MLContext](xref:Microsoft.ML.MLContext) jest punktem początkowym dla wszystkich operacji ml.NET. Inicjowanie `mlContext` tworzy nowe środowisko ML.NET, które może być współużytkowane przez obiekty przepływu pracy tworzenia modelu. Jest to podobne, pojęciowo, aby `DBContext` w Entity Framework.
 
-1. Zastąp `Main` wiersz w metodzie poniższym kodem, aby zadeklarować i zainicjować zmienną mlContext: `Console.WriteLine("Hello World!")`
+1. Zastąp wiersz `Console.WriteLine("Hello World!")` w metodzie `Main` następującym kodem, aby zadeklarować i zainicjować zmienną mlContext:
 
    [!code-csharp[CreateMLContext](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreateMLContext "Create the ML Context")]
 
-1. Utwórz słownik do kodowania wyrazów jako liczby całkowite przy użyciu [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A) metody ładowania danych mapowania z pliku, jak pokazano w poniższej tabeli:
+1. Utwórz słownik służący do kodowania wyrazów jako liczby całkowite przy użyciu metody [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A) do ładowania danych mapowania z pliku, jak pokazano w poniższej tabeli:
 
     |Word     |Indeks    |
     |---------|---------|
@@ -144,7 +144,7 @@ Rozmiar tablicy funkcji o zmiennej długości jest zmieniany na stałą długoś
 
     [!code-csharp[CreateLookupMap](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreateLookupMap)]
 
-1. Dodaj, `Action` aby zmienić rozmiar tablicy tablica liczb całkowitych wyrazów o zmiennej długości do tablicy o stałym rozmiarze, z następnymi wierszami kodu:
+1. Dodaj `Action`, aby zmienić rozmiar tablicy wyrazów całkowitych o zmiennej długości na tablicę liczb całkowitych o stałym rozmiarze, z następnymi wierszami kodu:
 
    [!code-csharp[ResizeFeatures](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#ResizeFeatures)]
 
@@ -180,13 +180,13 @@ Rozmiar tablicy funkcji o zmiennej długości jest zmieniany na stałą długoś
 
     [!code-csharp[ScoreTensorFlowModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#ScoreTensorFlowModel)]
 
-    Zostanie wywołana `Prediction/Softmax`wartość wyjściowa modelu TensorFlow. Należy zauważyć, że `Prediction/Softmax` nazwa jest określana przez model TensorFlow. Nie można zmienić tej nazwy.
+    Dane wyjściowe modelu TensorFlow są nazywane `Prediction/Softmax`. Należy zauważyć, że nazwa `Prediction/Softmax` jest określana przez model TensorFlow. Nie można zmienić tej nazwy.
 
 1. Utwórz nową kolumnę przewidywania danych wyjściowych:
 
     [!code-csharp[SnippetCopyColumns](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCopyColumns)]
 
-    Należy skopiować `Prediction/Softmax` kolumnę na jedną z nazwą, która może być używana jako właściwość w C# klasie: `Prediction`. Znak jest niedozwolony w nazwie C# właściwości. `/`
+    Należy skopiować kolumnę `Prediction/Softmax` na jedną z nazwą, która może być używana jako właściwość w C# klasie: `Prediction`. Znak `/` jest niedozwolony w nazwie C# właściwości.
 
 ## <a name="create-the-mlnet-model-from-the-pipeline"></a>Tworzenie modelu ML.NET z potoku
 
@@ -194,11 +194,11 @@ Rozmiar tablicy funkcji o zmiennej długości jest zmieniany na stałą długoś
 
     [!code-csharp[SnippetCreateModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCreateModel)]
 
-    Model ml.NET jest tworzony na podstawie łańcucha szacowania w potoku przez wywołanie `Fit` metody. W takim przypadku nie dopasowujemy żadnych danych w celu utworzenia modelu, ponieważ model TensorFlow został już wcześniej przeszkolony. Dostarczamy pusty obiekt widoku danych w celu spełnienia wymagań `Fit` metody.
+    Model ML.NET jest tworzony na podstawie łańcucha szacowania w potoku przez wywołanie metody `Fit`. W takim przypadku nie dopasowujemy żadnych danych w celu utworzenia modelu, ponieważ model TensorFlow został już wcześniej przeszkolony. Dostarczamy pusty obiekt widoku danych, aby spełnić wymagania metody `Fit`.
 
 ## <a name="use-the-model-to-make-a-prediction"></a>Tworzenie prognoz przy użyciu modelu
 
-1. `PredictSentiment` Dodaj metodę`Main` poniżej metody:
+1. Dodaj metodę `PredictSentiment` poniżej metody `Main`:
 
     ```csharp
     public static void PredictSentiment(MLContext mlContext, ITransformer model)
@@ -207,17 +207,20 @@ Rozmiar tablicy funkcji o zmiennej długości jest zmieniany na stałą długoś
     }
     ```
 
-1. Dodaj następujący kod, aby utworzyć `PredictionEngine` jako pierwszy wiersz `PredictSentiment()` w metodzie:
+1. Dodaj następujący kod, aby utworzyć `PredictionEngine` jako pierwszy wiersz w metodzie `PredictSentiment()`:
 
     [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreatePredictionEngine)]
 
-    [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) jest WYGODNYm interfejsem API, który umożliwia prognozowanie jednego wystąpienia danych.
+    [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) jest WYGODNYm interfejsem API, który umożliwia prognozowanie jednego wystąpienia danych. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nie jest bezpieczny wątkowo. Jest to możliwe do użycia w środowiskach wielowątkowych lub prototypowych. Aby zwiększyć wydajność i bezpieczeństwo wątków w środowiskach produkcyjnych, Użyj usługi `PredictionEnginePool`, która tworzy [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) obiektów do użycia w całej aplikacji. Zapoznaj się z tym przewodnikiem dotyczącym [korzystania z `PredictionEnginePool` w ASP.NET Core Web API](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)
 
-1. Dodaj komentarz, aby przetestować prognozę przeszkolonego modelu w `Predict()` metodzie, tworząc `MovieReview`wystąpienie:
+    > [!NOTE]
+    > rozszerzenie usługi `PredictionEnginePool` jest obecnie w wersji zapoznawczej.
+
+1. Dodaj komentarz, aby przetestować prognozę przeszkolonego modelu w metodzie `Predict()` przez utworzenie wystąpienia `MovieReview`:
 
     [!code-csharp[CreateTestData](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreateTestData)]
 
-1. Przekaż dane komentarza testowego do `Prediction Engine` obiektu przez dodanie następnych wierszy kodu `PredictSentiment()` w metodzie:
+1. Przekaż dane komentarzy testowych do `Prediction Engine` przez dodanie następnych wierszy kodu w metodzie `PredictSentiment()`:
 
     [!code-csharp[Predict](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#Predict)]
 
@@ -225,13 +228,13 @@ Rozmiar tablicy funkcji o zmiennej długości jest zmieniany na stałą długoś
 
     |Właściwość| Wartość|Typ|
     |-------------|-----------------------|------|
-    |Prognozy|[0,5459937, 0,454006255]|float []|
+    |przewidując|[0,5459937, 0,454006255]|float []|
 
 1. Wyświetl prognozowanie tonacji przy użyciu następującego kodu:
 
     [!code-csharp[DisplayPredictions](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#DisplayPredictions)]
 
-1. Dodaj wywołanie do `PredictSentiment` końca `Main` metody:
+1. Dodaj wywołanie do `PredictSentiment` na końcu metody `Main`:
 
     [!code-csharp[CallPredictSentiment](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CallPredictSentiment)]
 
@@ -246,11 +249,11 @@ Number of classes: 2
 Is sentiment/review positive ? Yes
 ```
 
-Gratulacje! Pomyślnie skompilowano model uczenia maszynowego do klasyfikowania i przewidywania komunikatów tonacji przez ponowne użycie wstępnie nauczonego `TensorFlow` modelu w ml.NET.
+Nabycia! Pomyślnie skompilowano model uczenia maszynowego do klasyfikowania i przewidywania komunikatów tonacji przez ponowne użycie wstępnie nauczonego modelu `TensorFlow` w ML.NET.
 
 Kod źródłowy dla tego samouczka można znaleźć w repozytorium [dotnet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TextClassificationTF) .
 
-W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
+W tym samouczku przedstawiono sposób wykonywania tych instrukcji:
 > [!div class="checklist"]
 >
 > * Załaduj wstępnie szkolony model TensorFlow

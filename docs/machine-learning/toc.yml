@@ -45,6 +45,10 @@
           href: tutorials/mlnet-cli.md
         - name: Analizowanie tonacji za pomocą konstruktora modelu i produktu Razor Pages
           href: tutorials/sentiment-analysis-model-builder.md
+    - name: Infer.NET
+      items:
+        - name: Probabilistyczne programowanie za pomocą Infer.NET
+          href: how-to-guides/matchup-app-infer-net.md
 - name: Pojęcia
   items:
     - name: Zadania platformy ML.NET (typy modelu)
@@ -95,10 +99,6 @@
           href: how-to-guides/install-ml-net-cli.md
         - name: Używanie interfejsu API automatycznego uczenia maszynowego
           href: how-to-guides/how-to-use-the-automl-api.md
-    - name: Infer.NET
-      items:
-        - name: Probabilistyczne programowanie za pomocą Infer.NET
-          href: how-to-guides/matchup-app-infer-net.md
 - name: Tematy pomocy
   items:
     - name: interfejs API

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Jawne zgłaszanie wyjątków'
+title: 'Porady: jawne zgłaszanie wyjątków'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 72bdd157-caa9-4478-9ee3-cb4500b84528
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a1a8658999f08d295e76afc9df6ec8acd146abe2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a71cefc0a6483dbbe6513a64d8111a07a2e5af42
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970901"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696743"
 ---
-# <a name="how-to-explicitly-throw-exceptions"></a><span data-ttu-id="f4469-102">Jak jawne zgłaszanie wyjątków</span><span class="sxs-lookup"><span data-stu-id="f4469-102">How to explicitly throw exceptions</span></span>
+# <a name="how-to-explicitly-throw-exceptions"></a><span data-ttu-id="0ec51-102">Jak jawnie zgłosić wyjątki</span><span class="sxs-lookup"><span data-stu-id="0ec51-102">How to explicitly throw exceptions</span></span>
 
-<span data-ttu-id="f4469-103">Można jawnie zgłosić wyjątek za pomocą `throw` instrukcji.</span><span class="sxs-lookup"><span data-stu-id="f4469-103">You can explicitly throw an exception using the `throw` statement.</span></span> <span data-ttu-id="f4469-104">Może również zgłosić wyjątek zgłoszony ponownie, używając `throw` instrukcji.</span><span class="sxs-lookup"><span data-stu-id="f4469-104">You can also throw a caught exception again using the `throw` statement.</span></span> <span data-ttu-id="f4469-105">Jest dobrą praktyką, aby dodać informacje do wyjątek, który jest zgłoszony ponownie, aby dostarczyć dodatkowych informacji podczas debugowania kodu.</span><span class="sxs-lookup"><span data-stu-id="f4469-105">It is good coding practice to add information to an exception that is re-thrown to provide more information when debugging.</span></span>
+<span data-ttu-id="0ec51-103">Wyjątek można jawnie zgłosić przy użyciu C# instrukcji [`throw`](../../csharp/language-reference/keywords/throw.md) lub Visual Basic [`Throw`](../../visual-basic/language-reference/statements/throw-statement.md) .</span><span class="sxs-lookup"><span data-stu-id="0ec51-103">You can explicitly throw an exception using the C# [`throw`](../../csharp/language-reference/keywords/throw.md) or the Visual Basic [`Throw`](../../visual-basic/language-reference/statements/throw-statement.md) statement.</span></span> <span data-ttu-id="0ec51-104">Przechwycony wyjątek można również zgłosić ponownie, używając instrukcji `throw`.</span><span class="sxs-lookup"><span data-stu-id="0ec51-104">You can also throw a caught exception again using the `throw` statement.</span></span> <span data-ttu-id="0ec51-105">Dobrym sposobem kodowania jest dodanie informacji do wyjątku, który został ponownie wygenerowany, aby uzyskać więcej informacji podczas debugowania.</span><span class="sxs-lookup"><span data-stu-id="0ec51-105">It is good coding practice to add information to an exception that is re-thrown to provide more information when debugging.</span></span>
 
-<span data-ttu-id="f4469-106">Poniższy przykład kodu wykorzystuje `try` / `catch` bloku catch możliwe <xref:System.IO.FileNotFoundException>.</span><span class="sxs-lookup"><span data-stu-id="f4469-106">The following code example uses a `try`/`catch` block to catch a possible <xref:System.IO.FileNotFoundException>.</span></span> <span data-ttu-id="f4469-107">Następujące `try` blok `catch` blok, który przechwytuje <xref:System.IO.FileNotFoundException> i zapisuje komunikat w konsoli, jeśli nie można odnaleźć pliku danych.</span><span class="sxs-lookup"><span data-stu-id="f4469-107">Following the `try` block is a `catch` block that catches the <xref:System.IO.FileNotFoundException> and writes a message to the console if the data file is not found.</span></span> <span data-ttu-id="f4469-108">Następna instrukcja znajduje się `throw` instrukcji generującej nową <xref:System.IO.FileNotFoundException> i dodaje informacje tekstowe do wyjątku.</span><span class="sxs-lookup"><span data-stu-id="f4469-108">The next statement is the `throw` statement that throws a new <xref:System.IO.FileNotFoundException> and adds text information to the exception.</span></span>
+<span data-ttu-id="0ec51-106">Poniższy przykład kodu używa bloku `try` @ no__t-1 @ no__t-2, aby przechwycić możliwe <xref:System.IO.FileNotFoundException>.</span><span class="sxs-lookup"><span data-stu-id="0ec51-106">The following code example uses a `try`/`catch` block to catch a possible <xref:System.IO.FileNotFoundException>.</span></span> <span data-ttu-id="0ec51-107">Następujący blok `try` jest blokiem `catch`, który przechwytuje <xref:System.IO.FileNotFoundException> i zapisuje komunikat w konsoli, jeśli plik danych nie zostanie znaleziony.</span><span class="sxs-lookup"><span data-stu-id="0ec51-107">Following the `try` block is a `catch` block that catches the <xref:System.IO.FileNotFoundException> and writes a message to the console if the data file is not found.</span></span> <span data-ttu-id="0ec51-108">Następną instrukcją jest instrukcja `throw`, która zgłasza nowy <xref:System.IO.FileNotFoundException> i dodaje do wyjątku informacje tekstowe.</span><span class="sxs-lookup"><span data-stu-id="0ec51-108">The next statement is the `throw` statement that throws a new <xref:System.IO.FileNotFoundException> and adds text information to the exception.</span></span>
 
-[!code-csharp[Exception.Throwing#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Exception.Throwing/CS/throw.cs#1)]
-[!code-vb[Exception.Throwing#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Exception.Throwing/VB/throw.vb#1)]  
+[!code-csharp[Exception.Throwing#1](~/samples/snippets/csharp/VS_Snippets_CLR/Exception.Throwing/CS/throw.cs#1)]
+[!code-vb[Exception.Throwing#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Exception.Throwing/VB/throw.vb#1)]  
 
-## <a name="see-also"></a><span data-ttu-id="f4469-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f4469-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0ec51-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0ec51-109">See also</span></span>
 
-- [<span data-ttu-id="f4469-110">Wyjątki</span><span class="sxs-lookup"><span data-stu-id="f4469-110">Exceptions</span></span>](index.md)
+- [<span data-ttu-id="0ec51-110">Wyjątki</span><span class="sxs-lookup"><span data-stu-id="0ec51-110">Exceptions</span></span>](index.md)

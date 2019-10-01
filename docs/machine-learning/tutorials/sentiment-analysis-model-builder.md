@@ -1,182 +1,212 @@
 ---
-title: 'Samouczek: Analizuj klasyfikację tonacji-Binary'
+title: 'Samouczek: analizowanie klasyfikacji tonacji-Binary'
 description: W tym samouczku przedstawiono sposób tworzenia aplikacji Razor Pages, która klasyfikuje tonacji z komentarzy w witrynie sieci Web i podejmuje odpowiednie działania. Tonacji klasyfikator binarny używa konstruktora modelu w programie Visual Studio.
-ms.date: 09/26/2019
+ms.date: 09/30/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 0878a9318e7c60be29eeac9fb4efd47e408ab660
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: ce64f0d11b1da65e460235fdabc2b07e05ffcbe4
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332579"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700913"
 ---
-# <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a><span data-ttu-id="a1651-104">Samouczek: Analizowanie tonacji komentarzy witryny internetowej w aplikacji sieci Web przy użyciu konstruktora modelu ML.NET</span><span class="sxs-lookup"><span data-stu-id="a1651-104">Tutorial: Analyze sentiment of website comments in a web application using ML.NET Model Builder</span></span>
+# <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a><span data-ttu-id="18629-104">Samouczek: analizowanie tonacji komentarzy witryny internetowej w aplikacji sieci Web przy użyciu konstruktora modelu ML.NET</span><span class="sxs-lookup"><span data-stu-id="18629-104">Tutorial: Analyze sentiment of website comments in a web application using ML.NET Model Builder</span></span>
 
-<span data-ttu-id="a1651-105">Dowiedz się, jak analizować tonacji z komentarzy w czasie rzeczywistym w aplikacji sieci Web.</span><span class="sxs-lookup"><span data-stu-id="a1651-105">Learn how to analyze sentiment from comments in real-time inside a web application.</span></span>
+<span data-ttu-id="18629-105">Dowiedz się, jak analizować tonacji z komentarzy w czasie rzeczywistym w aplikacji sieci Web.</span><span class="sxs-lookup"><span data-stu-id="18629-105">Learn how to analyze sentiment from comments in real-time inside a web application.</span></span>
 
-<span data-ttu-id="a1651-106">W tym samouczku pokazano, jak utworzyć aplikację Razor Pages ASP.NET Core, która klasyfikuje tonacji z komentarzy w witrynie sieci Web w czasie rzeczywistym.</span><span class="sxs-lookup"><span data-stu-id="a1651-106">This tutorial shows you how to create an ASP.NET Core Razor Pages application that classifies sentiment from website comments in real-time.</span></span>
+<span data-ttu-id="18629-106">W tym samouczku pokazano, jak utworzyć aplikację Razor Pages ASP.NET Core, która klasyfikuje tonacji z komentarzy w witrynie sieci Web w czasie rzeczywistym.</span><span class="sxs-lookup"><span data-stu-id="18629-106">This tutorial shows you how to create an ASP.NET Core Razor Pages application that classifies sentiment from website comments in real-time.</span></span>
 
-<span data-ttu-id="a1651-107">Ten samouczek zawiera informacje na temat wykonywania następujących czynności:</span><span class="sxs-lookup"><span data-stu-id="a1651-107">In this tutorial, you learn how to:</span></span>
+<span data-ttu-id="18629-107">Z tego samouczka dowiesz się, jak wykonywać następujące czynności:</span><span class="sxs-lookup"><span data-stu-id="18629-107">In this tutorial, you learn how to:</span></span>
 
 > [!div class="checklist"]
 >
-> - <span data-ttu-id="a1651-108">Tworzenie aplikacji Razor Pages ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="a1651-108">Create an ASP.NET Core Razor Pages application</span></span>
-> - <span data-ttu-id="a1651-109">Przygotuj i poznanie danych</span><span class="sxs-lookup"><span data-stu-id="a1651-109">Prepare and understand the data</span></span>
-> - <span data-ttu-id="a1651-110">Wybierz scenariusz</span><span class="sxs-lookup"><span data-stu-id="a1651-110">Choose a scenario</span></span>
-> - <span data-ttu-id="a1651-111">Ładowanie danych</span><span class="sxs-lookup"><span data-stu-id="a1651-111">Load the data</span></span>
-> - <span data-ttu-id="a1651-112">Uczenie modelu</span><span class="sxs-lookup"><span data-stu-id="a1651-112">Train the model</span></span>
-> - <span data-ttu-id="a1651-113">Oceń model</span><span class="sxs-lookup"><span data-stu-id="a1651-113">Evaluate the model</span></span>
-> - <span data-ttu-id="a1651-114">Używanie modelu dla prognoz</span><span class="sxs-lookup"><span data-stu-id="a1651-114">Use the model for predictions</span></span>
+> - <span data-ttu-id="18629-108">Tworzenie aplikacji Razor Pages ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="18629-108">Create an ASP.NET Core Razor Pages application</span></span>
+> - <span data-ttu-id="18629-109">Przygotuj i poznanie danych</span><span class="sxs-lookup"><span data-stu-id="18629-109">Prepare and understand the data</span></span>
+> - <span data-ttu-id="18629-110">Wybierz scenariusz</span><span class="sxs-lookup"><span data-stu-id="18629-110">Choose a scenario</span></span>
+> - <span data-ttu-id="18629-111">Ładowanie danych</span><span class="sxs-lookup"><span data-stu-id="18629-111">Load the data</span></span>
+> - <span data-ttu-id="18629-112">Uczenie modelu</span><span class="sxs-lookup"><span data-stu-id="18629-112">Train the model</span></span>
+> - <span data-ttu-id="18629-113">Oceń model</span><span class="sxs-lookup"><span data-stu-id="18629-113">Evaluate the model</span></span>
+> - <span data-ttu-id="18629-114">Używanie modelu dla prognoz</span><span class="sxs-lookup"><span data-stu-id="18629-114">Use the model for predictions</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="a1651-115">Konstruktor modeli jest obecnie w wersji zapoznawczej.</span><span class="sxs-lookup"><span data-stu-id="a1651-115">Model Builder is currently in Preview.</span></span>
+> <span data-ttu-id="18629-115">Konstruktor modeli jest obecnie w wersji zapoznawczej.</span><span class="sxs-lookup"><span data-stu-id="18629-115">Model Builder is currently in Preview.</span></span>
 
-<span data-ttu-id="a1651-116">Kod źródłowy dla tego samouczka można znaleźć w repozytorium [dotnet/machinelearning-Samples](https://github.com/dotnet/machinelearning-samples) .</span><span class="sxs-lookup"><span data-stu-id="a1651-116">You can find the source code for this tutorial at the [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples) repository.</span></span>
+<span data-ttu-id="18629-116">Kod źródłowy dla tego samouczka można znaleźć w repozytorium [dotnet/machinelearning-Samples](https://github.com/dotnet/machinelearning-samples) .</span><span class="sxs-lookup"><span data-stu-id="18629-116">You can find the source code for this tutorial at the [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples) repository.</span></span>
 
-## <a name="pre-requisites"></a><span data-ttu-id="a1651-117">Wymagania wstępne</span><span class="sxs-lookup"><span data-stu-id="a1651-117">Pre-requisites</span></span>
+## <a name="pre-requisites"></a><span data-ttu-id="18629-117">Wymagania wstępne</span><span class="sxs-lookup"><span data-stu-id="18629-117">Pre-requisites</span></span>
 
-<span data-ttu-id="a1651-118">Listę wymagań wstępnych i instrukcji instalacji można znaleźć w [podręczniku instalacji konstruktora modeli](../how-to-guides/install-model-builder.md).</span><span class="sxs-lookup"><span data-stu-id="a1651-118">For a list of pre-requisites and installation instructions, visit the [Model Builder installation guide](../how-to-guides/install-model-builder.md).</span></span>
+<span data-ttu-id="18629-118">Listę wymagań wstępnych i instrukcji instalacji można znaleźć w [podręczniku instalacji konstruktora modeli](../how-to-guides/install-model-builder.md).</span><span class="sxs-lookup"><span data-stu-id="18629-118">For a list of pre-requisites and installation instructions, visit the [Model Builder installation guide](../how-to-guides/install-model-builder.md).</span></span>
 
-## <a name="create-a-razor-pages-application"></a><span data-ttu-id="a1651-119">Tworzenie aplikacji Razor Pages</span><span class="sxs-lookup"><span data-stu-id="a1651-119">Create a Razor Pages application</span></span>
+## <a name="create-a-razor-pages-application"></a><span data-ttu-id="18629-119">Tworzenie aplikacji Razor Pages</span><span class="sxs-lookup"><span data-stu-id="18629-119">Create a Razor Pages application</span></span>
 
-1. <span data-ttu-id="a1651-120">Utwórz **aplikację Razor Pages ASP.NET Core**.</span><span class="sxs-lookup"><span data-stu-id="a1651-120">Create a **ASP.NET Core Razor Pages Application**.</span></span>
+1. <span data-ttu-id="18629-120">Utwórz **aplikację Razor Pages ASP.NET Core**.</span><span class="sxs-lookup"><span data-stu-id="18629-120">Create a **ASP.NET Core Razor Pages Application**.</span></span>
 
-    1. <span data-ttu-id="a1651-121">Otwórz program Visual Studio i wybierz pozycję **plik > nowy > projekt** na pasku menu.</span><span class="sxs-lookup"><span data-stu-id="a1651-121">Open Visual Studio and select **File > New > Project** from the menu bar.</span></span>
-    1. <span data-ttu-id="a1651-122">W oknie dialogowym Nowy projekt wybierz węzeł **wizualizacji C#**  , a następnie węzeł **sieci Web** .</span><span class="sxs-lookup"><span data-stu-id="a1651-122">In the New Project dialog, select the **Visual C#** node followed by the **Web** node.</span></span>
-    1. <span data-ttu-id="a1651-123">Następnie wybierz szablon projektu **aplikacji sieci Web ASP.NET Core** .</span><span class="sxs-lookup"><span data-stu-id="a1651-123">Then select the **ASP.NET Core Web Application** project template.</span></span>
-    1. <span data-ttu-id="a1651-124">W polu tekstowym **Nazwa** wpisz "SentimentRazor".</span><span class="sxs-lookup"><span data-stu-id="a1651-124">In the **Name** text box, type "SentimentRazor".</span></span>
-    1. <span data-ttu-id="a1651-125">Pole wyboru **Utwórz katalog dla rozwiązania** powinno być domyślnie zaznaczone.</span><span class="sxs-lookup"><span data-stu-id="a1651-125">The **Create a directory for solution** checkbox should be checked by default.</span></span> <span data-ttu-id="a1651-126">Jeśli tak nie jest, należy go sprawdzić.</span><span class="sxs-lookup"><span data-stu-id="a1651-126">If that's not the case, check it.</span></span>
-    1. <span data-ttu-id="a1651-127">Wybierz przycisk **OK**.</span><span class="sxs-lookup"><span data-stu-id="a1651-127">Select the **OK** button.</span></span>
-    1. <span data-ttu-id="a1651-128">W oknie Wybierz **aplikację sieci Web** , która wyświetla różne typy projektów ASP.NET Core, a następnie wybierz przycisk **OK** .</span><span class="sxs-lookup"><span data-stu-id="a1651-128">Choose **Web Application** in the window that displays the different types of ASP.NET Core Projects, and then select the **OK** button.</span></span>
+    1. <span data-ttu-id="18629-121">Otwórz program Visual Studio i wybierz pozycję **plik > nowy > projekt** na pasku menu.</span><span class="sxs-lookup"><span data-stu-id="18629-121">Open Visual Studio and select **File > New > Project** from the menu bar.</span></span>
+    1. <span data-ttu-id="18629-122">W oknie dialogowym Nowy projekt wybierz węzeł **wizualizacji C#**  , a następnie węzeł **sieci Web** .</span><span class="sxs-lookup"><span data-stu-id="18629-122">In the New Project dialog, select the **Visual C#** node followed by the **Web** node.</span></span>
+    1. <span data-ttu-id="18629-123">Następnie wybierz szablon projektu **aplikacji sieci Web ASP.NET Core** .</span><span class="sxs-lookup"><span data-stu-id="18629-123">Then select the **ASP.NET Core Web Application** project template.</span></span>
+    1. <span data-ttu-id="18629-124">W polu tekstowym **Nazwa** wpisz "SentimentRazor".</span><span class="sxs-lookup"><span data-stu-id="18629-124">In the **Name** text box, type "SentimentRazor".</span></span>
+    1. <span data-ttu-id="18629-125">Pole wyboru **Utwórz katalog dla rozwiązania** powinno być domyślnie zaznaczone.</span><span class="sxs-lookup"><span data-stu-id="18629-125">The **Create a directory for solution** checkbox should be checked by default.</span></span> <span data-ttu-id="18629-126">Jeśli tak nie jest, należy go sprawdzić.</span><span class="sxs-lookup"><span data-stu-id="18629-126">If that's not the case, check it.</span></span>
+    1. <span data-ttu-id="18629-127">Wybierz przycisk **OK** .</span><span class="sxs-lookup"><span data-stu-id="18629-127">Select the **OK** button.</span></span>
+    1. <span data-ttu-id="18629-128">W oknie Wybierz **aplikację sieci Web** , która wyświetla różne typy projektów ASP.NET Core, a następnie wybierz przycisk **OK** .</span><span class="sxs-lookup"><span data-stu-id="18629-128">Choose **Web Application** in the window that displays the different types of ASP.NET Core Projects, and then select the **OK** button.</span></span>
 
-## <a name="prepare-and-understand-the-data"></a><span data-ttu-id="a1651-129">Przygotuj i poznanie danych</span><span class="sxs-lookup"><span data-stu-id="a1651-129">Prepare and understand the data</span></span>
+## <a name="prepare-and-understand-the-data"></a><span data-ttu-id="18629-129">Przygotuj i poznanie danych</span><span class="sxs-lookup"><span data-stu-id="18629-129">Prepare and understand the data</span></span>
 
-<span data-ttu-id="a1651-130">Pobierz [zestaw danych detox Wikipedia](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv).</span><span class="sxs-lookup"><span data-stu-id="a1651-130">Download [Wikipedia detox dataset](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv).</span></span> <span data-ttu-id="a1651-131">Gdy zostanie otwarta strona sieci Web, kliknij prawym przyciskiem myszy na stronie, wybierz polecenie **Zapisz jako** i Zapisz plik w dowolnym miejscu na komputerze.</span><span class="sxs-lookup"><span data-stu-id="a1651-131">When the webpage opens, right-click on the page, select **Save As** and save the file anywhere on your computer.</span></span>
+<span data-ttu-id="18629-130">Pobierz [zestaw danych detox Wikipedia](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv).</span><span class="sxs-lookup"><span data-stu-id="18629-130">Download [Wikipedia detox dataset](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv).</span></span> <span data-ttu-id="18629-131">Gdy zostanie otwarta strona sieci Web, kliknij prawym przyciskiem myszy na stronie, wybierz polecenie **Zapisz jako** i Zapisz plik w dowolnym miejscu na komputerze.</span><span class="sxs-lookup"><span data-stu-id="18629-131">When the webpage opens, right-click on the page, select **Save As** and save the file anywhere on your computer.</span></span>
 
-<span data-ttu-id="a1651-132">Każdy wiersz w zestawie danych *Wikipedia-detox-250-line-Data. tsv* reprezentuje inny przegląd, który został pozostawiony przez użytkownika w witrynie Wikipedia.</span><span class="sxs-lookup"><span data-stu-id="a1651-132">Each row in the *wikipedia-detox-250-line-data.tsv* dataset represents a different review left by a user on Wikipedia.</span></span> <span data-ttu-id="a1651-133">Pierwsza kolumna reprezentuje tonacji tekstu (0 to nietoksyczne, 1 jest toksyczny), a druga kolumna reprezentuje komentarz, który został pozostawiony przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="a1651-133">The first column represents the sentiment of the text (0 is non-toxic, 1 is toxic), and the second column represents the comment left by the user.</span></span> <span data-ttu-id="a1651-134">Kolumny są oddzielane znakami tabulacji.</span><span class="sxs-lookup"><span data-stu-id="a1651-134">The columns are separated by tabs.</span></span> <span data-ttu-id="a1651-135">Dane wyglądają następująco:</span><span class="sxs-lookup"><span data-stu-id="a1651-135">The data looks like the following:</span></span>
+<span data-ttu-id="18629-132">Każdy wiersz w zestawie danych *Wikipedia-detox-250-line-Data. tsv* reprezentuje inny przegląd, który został pozostawiony przez użytkownika w witrynie Wikipedia.</span><span class="sxs-lookup"><span data-stu-id="18629-132">Each row in the *wikipedia-detox-250-line-data.tsv* dataset represents a different review left by a user on Wikipedia.</span></span> <span data-ttu-id="18629-133">Pierwsza kolumna reprezentuje tonacji tekstu (0 to nietoksyczne, 1 jest toksyczny), a druga kolumna reprezentuje komentarz, który został pozostawiony przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="18629-133">The first column represents the sentiment of the text (0 is non-toxic, 1 is toxic), and the second column represents the comment left by the user.</span></span> <span data-ttu-id="18629-134">Kolumny są oddzielane znakami tabulacji.</span><span class="sxs-lookup"><span data-stu-id="18629-134">The columns are separated by tabs.</span></span> <span data-ttu-id="18629-135">Dane wyglądają następująco:</span><span class="sxs-lookup"><span data-stu-id="18629-135">The data looks like the following:</span></span>
 
-| <span data-ttu-id="a1651-136">Tonacji</span><span class="sxs-lookup"><span data-stu-id="a1651-136">Sentiment</span></span> | <span data-ttu-id="a1651-137">SentimentText</span><span class="sxs-lookup"><span data-stu-id="a1651-137">SentimentText</span></span> |
+| <span data-ttu-id="18629-136">Tonacji</span><span class="sxs-lookup"><span data-stu-id="18629-136">Sentiment</span></span> | <span data-ttu-id="18629-137">SentimentText</span><span class="sxs-lookup"><span data-stu-id="18629-137">SentimentText</span></span> |
 | :---: | :---: |
-<span data-ttu-id="a1651-138">1</span><span class="sxs-lookup"><span data-stu-id="a1651-138">1</span></span> | <span data-ttu-id="a1651-139">= = Prosta = = informatyku, prosta to Carl Picture lub else.</span><span class="sxs-lookup"><span data-stu-id="a1651-139">==RUDE== Dude, you are rude upload that carl picture back, or else.</span></span>
-<span data-ttu-id="a1651-140">1</span><span class="sxs-lookup"><span data-stu-id="a1651-140">1</span></span> | <span data-ttu-id="a1651-141">= = OK!</span><span class="sxs-lookup"><span data-stu-id="a1651-141">== OK!</span></span> <span data-ttu-id="a1651-142">= = BŁYSKAWICZNE PRZECHODZENIE DO VANDALIZE DZIKICH WITRYN TYPU WIKI, A NASTĘPNIE!!!</span><span class="sxs-lookup"><span data-stu-id="a1651-142">==  IM GOING TO VANDALIZE WILD ONES WIKI THEN!!!</span></span>
-<span data-ttu-id="a1651-143">0</span><span class="sxs-lookup"><span data-stu-id="a1651-143">0</span></span> | <span data-ttu-id="a1651-144">Mam nadzieję, że to pomoże.</span><span class="sxs-lookup"><span data-stu-id="a1651-144">I hope this helps.</span></span>
+<span data-ttu-id="18629-138">1</span><span class="sxs-lookup"><span data-stu-id="18629-138">1</span></span> | <span data-ttu-id="18629-139">= = Prosta = = informatyku, prosta to Carl Picture lub else.</span><span class="sxs-lookup"><span data-stu-id="18629-139">==RUDE== Dude, you are rude upload that carl picture back, or else.</span></span>
+<span data-ttu-id="18629-140">1</span><span class="sxs-lookup"><span data-stu-id="18629-140">1</span></span> | <span data-ttu-id="18629-141">= = OK!</span><span class="sxs-lookup"><span data-stu-id="18629-141">== OK!</span></span> <span data-ttu-id="18629-142">= = BŁYSKAWICZNE PRZECHODZENIE DO VANDALIZE DZIKICH WITRYN TYPU WIKI, A NASTĘPNIE!!!</span><span class="sxs-lookup"><span data-stu-id="18629-142">==  IM GOING TO VANDALIZE WILD ONES WIKI THEN!!!</span></span>
+<span data-ttu-id="18629-143">0</span><span class="sxs-lookup"><span data-stu-id="18629-143">0</span></span> | <span data-ttu-id="18629-144">Mam nadzieję, że to pomoże.</span><span class="sxs-lookup"><span data-stu-id="18629-144">I hope this helps.</span></span>
 
-## <a name="choose-a-scenario"></a><span data-ttu-id="a1651-145">Wybierz scenariusz</span><span class="sxs-lookup"><span data-stu-id="a1651-145">Choose a scenario</span></span>
+## <a name="choose-a-scenario"></a><span data-ttu-id="18629-145">Wybierz scenariusz</span><span class="sxs-lookup"><span data-stu-id="18629-145">Choose a scenario</span></span>
 
 ![Kreator konstruktora modelu w programie Visual Studio](./media/sentiment-analysis-model-builder/model-builder-screen.png)
 
-<span data-ttu-id="a1651-147">Aby szkolić model, musisz wybrać z listy dostępnych scenariuszy uczenia maszynowego udostępnianych przez konstruktora modelu.</span><span class="sxs-lookup"><span data-stu-id="a1651-147">To train your model, you need to select from the list of available machine learning scenarios provided by Model Builder.</span></span>
+<span data-ttu-id="18629-147">Aby szkolić model, musisz wybrać z listy dostępnych scenariuszy uczenia maszynowego udostępnianych przez konstruktora modelu.</span><span class="sxs-lookup"><span data-stu-id="18629-147">To train your model, you need to select from the list of available machine learning scenarios provided by Model Builder.</span></span>
 
-1. <span data-ttu-id="a1651-148">W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt *SentimentRazor* , a następnie wybierz pozycję **Dodaj** > **Machine Learning**.</span><span class="sxs-lookup"><span data-stu-id="a1651-148">In **Solution Explorer**, right-click the *SentimentRazor* project, and select **Add** > **Machine Learning**.</span></span>
-1. <span data-ttu-id="a1651-149">Na potrzeby tego przykładu scenariusz jest tonacji analizy.</span><span class="sxs-lookup"><span data-stu-id="a1651-149">For this sample, the scenario is sentiment analysis.</span></span> <span data-ttu-id="a1651-150">W kroku *scenariusz* narzędzia model Builder wybierz scenariusz **Analiza tonacji** .</span><span class="sxs-lookup"><span data-stu-id="a1651-150">In the *scenario* step of the Model Builder tool, select the **Sentiment Analysis** scenario.</span></span>
+1. <span data-ttu-id="18629-148">W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt *SentimentRazor* i wybierz polecenie **Dodaj** > **Machine Learning**.</span><span class="sxs-lookup"><span data-stu-id="18629-148">In **Solution Explorer**, right-click the *SentimentRazor* project, and select **Add** > **Machine Learning**.</span></span>
+1. <span data-ttu-id="18629-149">Na potrzeby tego przykładu scenariusz jest tonacji analizy.</span><span class="sxs-lookup"><span data-stu-id="18629-149">For this sample, the scenario is sentiment analysis.</span></span> <span data-ttu-id="18629-150">W kroku *scenariusz* narzędzia model Builder wybierz scenariusz **Analiza tonacji** .</span><span class="sxs-lookup"><span data-stu-id="18629-150">In the *scenario* step of the Model Builder tool, select the **Sentiment Analysis** scenario.</span></span>
 
-## <a name="load-the-data"></a><span data-ttu-id="a1651-151">Ładowanie danych</span><span class="sxs-lookup"><span data-stu-id="a1651-151">Load the data</span></span>
+## <a name="load-the-data"></a><span data-ttu-id="18629-151">Ładowanie danych</span><span class="sxs-lookup"><span data-stu-id="18629-151">Load the data</span></span>
 
-<span data-ttu-id="a1651-152">Konstruktor modelu akceptuje dane z dwóch źródeł, bazy danych SQL Server lub lokalnego pliku w `csv` formacie lub. `tsv`</span><span class="sxs-lookup"><span data-stu-id="a1651-152">Model Builder accepts data from two sources, a SQL Server database or a local file in `csv` or `tsv` format.</span></span>
+<span data-ttu-id="18629-152">Konstruktor modelu akceptuje dane z dwóch źródeł, bazy danych SQL Server lub pliku lokalnego w formacie `csv` lub `tsv`.</span><span class="sxs-lookup"><span data-stu-id="18629-152">Model Builder accepts data from two sources, a SQL Server database or a local file in `csv` or `tsv` format.</span></span>
 
-1. <span data-ttu-id="a1651-153">W kroku dane narzędzia model Builder wybierz pozycję **plik** z listy rozwijanej Źródło danych.</span><span class="sxs-lookup"><span data-stu-id="a1651-153">In the data step of the Model Builder tool, select **File** from the data source dropdown.</span></span>
-1. <span data-ttu-id="a1651-154">Wybierz przycisk obok pola tekstowego **Wybierz plik** i Użyj Eksploratora plików, aby przeglądać i wybrać plik *Wikipedia-detox-250-line-Data. tsv* .</span><span class="sxs-lookup"><span data-stu-id="a1651-154">Select the button next to the **Select a file** text box and use File Explorer to browse and select the *wikipedia-detox-250-line-data.tsv* file.</span></span>
-1. <span data-ttu-id="a1651-155">Wybierz pozycję **tonacji** w **kolumnie do przewidywania (etykieta)** listy rozwijanej.</span><span class="sxs-lookup"><span data-stu-id="a1651-155">Choose **Sentiment** in the **Column to Predict (Label)** dropdown.</span></span>
-1. <span data-ttu-id="a1651-156">Pozostaw wartości domyślne dla listy rozwijanej **kolumny wejściowe (Features)** .</span><span class="sxs-lookup"><span data-stu-id="a1651-156">Leave the default values for the **Input Columns (Features)** dropdown.</span></span>
-1. <span data-ttu-id="a1651-157">Wybierz łącze **uczenie** , aby przejść do następnego kroku w narzędziu model Builder.</span><span class="sxs-lookup"><span data-stu-id="a1651-157">Select the **Train** link to move to the next step in the Model Builder tool.</span></span>
+1. <span data-ttu-id="18629-153">W kroku dane narzędzia model Builder wybierz pozycję **plik** z listy rozwijanej Źródło danych.</span><span class="sxs-lookup"><span data-stu-id="18629-153">In the data step of the Model Builder tool, select **File** from the data source dropdown.</span></span>
+1. <span data-ttu-id="18629-154">Wybierz przycisk obok pola tekstowego **Wybierz plik** i Użyj Eksploratora plików, aby przeglądać i wybrać plik *Wikipedia-detox-250-line-Data. tsv* .</span><span class="sxs-lookup"><span data-stu-id="18629-154">Select the button next to the **Select a file** text box and use File Explorer to browse and select the *wikipedia-detox-250-line-data.tsv* file.</span></span>
+1. <span data-ttu-id="18629-155">Wybierz pozycję **tonacji** w **kolumnie do przewidywania (etykieta)** listy rozwijanej.</span><span class="sxs-lookup"><span data-stu-id="18629-155">Choose **Sentiment** in the **Column to Predict (Label)** dropdown.</span></span>
+1. <span data-ttu-id="18629-156">Pozostaw wartości domyślne dla listy rozwijanej **kolumny wejściowe (Features)** .</span><span class="sxs-lookup"><span data-stu-id="18629-156">Leave the default values for the **Input Columns (Features)** dropdown.</span></span>
+1. <span data-ttu-id="18629-157">Wybierz łącze **uczenie** , aby przejść do następnego kroku w narzędziu model Builder.</span><span class="sxs-lookup"><span data-stu-id="18629-157">Select the **Train** link to move to the next step in the Model Builder tool.</span></span>
 
-## <a name="train-the-model"></a><span data-ttu-id="a1651-158">Uczenie modelu</span><span class="sxs-lookup"><span data-stu-id="a1651-158">Train the model</span></span>
+## <a name="train-the-model"></a><span data-ttu-id="18629-158">Uczenie modelu</span><span class="sxs-lookup"><span data-stu-id="18629-158">Train the model</span></span>
 
-<span data-ttu-id="a1651-159">Zadanie uczenia maszynowego używane do uczenia modelu prognozowania cen w tym samouczku jest klasyfikacją binarną.</span><span class="sxs-lookup"><span data-stu-id="a1651-159">The machine learning task used to train the price prediction model in this tutorial is binary classification.</span></span> <span data-ttu-id="a1651-160">Podczas procesu uczenia modelowego, Konstruktor modelu pociąga za siebie różne modele przy użyciu różnych binarnych algorytmów klasyfikacji i ustawień, aby znaleźć najlepszy model dla zestawu danych.</span><span class="sxs-lookup"><span data-stu-id="a1651-160">During the model training process, Model Builder trains separate models using different binary classification algorithms and settings to find the best performing model for your dataset.</span></span>
+<span data-ttu-id="18629-159">Zadanie uczenia maszynowego używane do uczenia modelu prognozowania cen w tym samouczku jest klasyfikacją binarną.</span><span class="sxs-lookup"><span data-stu-id="18629-159">The machine learning task used to train the price prediction model in this tutorial is binary classification.</span></span> <span data-ttu-id="18629-160">Podczas procesu uczenia modelowego, Konstruktor modelu pociąga za siebie różne modele przy użyciu różnych binarnych algorytmów klasyfikacji i ustawień, aby znaleźć najlepszy model dla zestawu danych.</span><span class="sxs-lookup"><span data-stu-id="18629-160">During the model training process, Model Builder trains separate models using different binary classification algorithms and settings to find the best performing model for your dataset.</span></span>
 
-<span data-ttu-id="a1651-161">Czas wymagany przez model do uczenia jest proporcjonalny do ilości danych.</span><span class="sxs-lookup"><span data-stu-id="a1651-161">The time required for the model to train is proportionate to the amount of data.</span></span> <span data-ttu-id="a1651-162">Konstruktor modelu automatycznie wybiera wartość domyślną dla **czasu do uczenia (w sekundach)** na podstawie rozmiaru źródła danych.</span><span class="sxs-lookup"><span data-stu-id="a1651-162">Model Builder automatically selects a default value for **Time to train (seconds)** based on the size of your data source.</span></span>
+<span data-ttu-id="18629-161">Czas wymagany przez model do uczenia jest proporcjonalny do ilości danych.</span><span class="sxs-lookup"><span data-stu-id="18629-161">The time required for the model to train is proportionate to the amount of data.</span></span> <span data-ttu-id="18629-162">Konstruktor modelu automatycznie wybiera wartość domyślną dla **czasu do uczenia (w sekundach)** na podstawie rozmiaru źródła danych.</span><span class="sxs-lookup"><span data-stu-id="18629-162">Model Builder automatically selects a default value for **Time to train (seconds)** based on the size of your data source.</span></span>
 
-1. <span data-ttu-id="a1651-163">Chociaż Konstruktor modelu ustawia wartość **czasu do uczenia (sekundy)** do 10 sekund, zwiększ go do 30 sekund.</span><span class="sxs-lookup"><span data-stu-id="a1651-163">Although Model Builder sets the value of **Time to train (seconds)** to 10 seconds, increase it to 30 seconds.</span></span> <span data-ttu-id="a1651-164">Szkolenie przez dłuższy czas umożliwia konstruktorowi modelu Eksplorowanie większej liczby algorytmów i kombinacji parametrów podczas wyszukiwania najlepszego modelu.</span><span class="sxs-lookup"><span data-stu-id="a1651-164">Training for a longer period of time allows Model Builder to explore a larger number of algorithms and combination of parameters in search of the best model.</span></span>
-1. <span data-ttu-id="a1651-165">Wybierz pozycję **Rozpocznij szkolenie**.</span><span class="sxs-lookup"><span data-stu-id="a1651-165">Select **Start Training**.</span></span>
+1. <span data-ttu-id="18629-163">Chociaż Konstruktor modelu ustawia wartość **czasu do uczenia (sekundy)** do 10 sekund, zwiększ go do 30 sekund.</span><span class="sxs-lookup"><span data-stu-id="18629-163">Although Model Builder sets the value of **Time to train (seconds)** to 10 seconds, increase it to 30 seconds.</span></span> <span data-ttu-id="18629-164">Szkolenie przez dłuższy czas umożliwia konstruktorowi modelu Eksplorowanie większej liczby algorytmów i kombinacji parametrów podczas wyszukiwania najlepszego modelu.</span><span class="sxs-lookup"><span data-stu-id="18629-164">Training for a longer period of time allows Model Builder to explore a larger number of algorithms and combination of parameters in search of the best model.</span></span>
+1. <span data-ttu-id="18629-165">Wybierz pozycję **Rozpocznij szkolenie**.</span><span class="sxs-lookup"><span data-stu-id="18629-165">Select **Start Training**.</span></span>
 
-    <span data-ttu-id="a1651-166">W trakcie całego procesu szkolenia dane o postępie są wyświetlane `Progress` w sekcji kroku uczenie.</span><span class="sxs-lookup"><span data-stu-id="a1651-166">Throughout the training process, progress data is displayed in the `Progress` section of the train step.</span></span>
+    <span data-ttu-id="18629-166">W trakcie całego procesu szkolenia dane o postępie są wyświetlane w sekcji `Progress` kroku uczenie.</span><span class="sxs-lookup"><span data-stu-id="18629-166">Throughout the training process, progress data is displayed in the `Progress` section of the train step.</span></span>
 
-    - <span data-ttu-id="a1651-167">Stan przedstawia stan zakończenia procesu szkolenia.</span><span class="sxs-lookup"><span data-stu-id="a1651-167">Status displays the completion status of the training process.</span></span>
-    - <span data-ttu-id="a1651-168">Najlepsza dokładność przedstawia dokładność najlepszego modelu, który został znaleziony przez konstruktora modelu do tej pory.</span><span class="sxs-lookup"><span data-stu-id="a1651-168">Best accuracy displays the accuracy of the best performing model found by Model Builder so far.</span></span> <span data-ttu-id="a1651-169">Większa dokładność oznacza, że model przewidywalno dokładniej na danych testowych.</span><span class="sxs-lookup"><span data-stu-id="a1651-169">Higher accuracy means the model predicted more correctly on test data.</span></span>
-    - <span data-ttu-id="a1651-170">Najlepszym algorytmem jest wyświetlana nazwa najlepszego wykonywania algorytmu, który został wykonany przez konstruktora modelu do tej pory.</span><span class="sxs-lookup"><span data-stu-id="a1651-170">Best algorithm displays the name of the best performing algorithm performed found by Model Builder so far.</span></span>
-    - <span data-ttu-id="a1651-171">Ostatni algorytm wyświetla nazwę algorytmu ostatnio używanego przez konstruktora modelu do uczenia modelu.</span><span class="sxs-lookup"><span data-stu-id="a1651-171">Last algorithm displays the name of the algorithm most recently used by Model Builder to train the model.</span></span>
+    - <span data-ttu-id="18629-167">Stan przedstawia stan zakończenia procesu szkolenia.</span><span class="sxs-lookup"><span data-stu-id="18629-167">Status displays the completion status of the training process.</span></span>
+    - <span data-ttu-id="18629-168">Najlepsza dokładność przedstawia dokładność najlepszego modelu, który został znaleziony przez konstruktora modelu do tej pory.</span><span class="sxs-lookup"><span data-stu-id="18629-168">Best accuracy displays the accuracy of the best performing model found by Model Builder so far.</span></span> <span data-ttu-id="18629-169">Większa dokładność oznacza, że model przewidywalno dokładniej na danych testowych.</span><span class="sxs-lookup"><span data-stu-id="18629-169">Higher accuracy means the model predicted more correctly on test data.</span></span>
+    - <span data-ttu-id="18629-170">Najlepszym algorytmem jest wyświetlana nazwa najlepszego wykonywania algorytmu, który został wykonany przez konstruktora modelu do tej pory.</span><span class="sxs-lookup"><span data-stu-id="18629-170">Best algorithm displays the name of the best performing algorithm performed found by Model Builder so far.</span></span>
+    - <span data-ttu-id="18629-171">Ostatni algorytm wyświetla nazwę algorytmu ostatnio używanego przez konstruktora modelu do uczenia modelu.</span><span class="sxs-lookup"><span data-stu-id="18629-171">Last algorithm displays the name of the algorithm most recently used by Model Builder to train the model.</span></span>
 
-1. <span data-ttu-id="a1651-172">Po zakończeniu szkolenia wybierz łącze **Oceń** , aby przejść do następnego kroku.</span><span class="sxs-lookup"><span data-stu-id="a1651-172">Once training is complete, select the **evaluate** link to move to the next step.</span></span>
+1. <span data-ttu-id="18629-172">Po zakończeniu szkolenia wybierz łącze **Oceń** , aby przejść do następnego kroku.</span><span class="sxs-lookup"><span data-stu-id="18629-172">Once training is complete, select the **evaluate** link to move to the next step.</span></span>
 
-## <a name="evaluate-the-model"></a><span data-ttu-id="a1651-173">Oceń model</span><span class="sxs-lookup"><span data-stu-id="a1651-173">Evaluate the model</span></span>
+## <a name="evaluate-the-model"></a><span data-ttu-id="18629-173">Oceń model</span><span class="sxs-lookup"><span data-stu-id="18629-173">Evaluate the model</span></span>
 
-<span data-ttu-id="a1651-174">Wynikiem kroku szkolenia będzie jeden model, który miał najlepszą wydajność.</span><span class="sxs-lookup"><span data-stu-id="a1651-174">The result of the training step will be one model which had the best performance.</span></span> <span data-ttu-id="a1651-175">W kroku szacowania narzędzia model Builder sekcja Output będzie zawierać algorytm używany przez model najlepszego wykonywania w najlepszym wpisie **modelu** oraz metryki w **najlepszej jakości modelu (RSquared)** .</span><span class="sxs-lookup"><span data-stu-id="a1651-175">In the evaluate step of the Model Builder tool, the output section, will contain the algorithm used by the best performing model in the **Best Model** entry along with metrics in **Best Model Quality (RSquared)**.</span></span> <span data-ttu-id="a1651-176">Ponadto tabela podsumowująca zawierająca pięć najważniejszych modeli i ich metryki.</span><span class="sxs-lookup"><span data-stu-id="a1651-176">Additionally, a summary table containing top five models and their metrics.</span></span>
+<span data-ttu-id="18629-174">Wynikiem kroku szkolenia będzie jeden model, który miał najlepszą wydajność.</span><span class="sxs-lookup"><span data-stu-id="18629-174">The result of the training step will be one model which had the best performance.</span></span> <span data-ttu-id="18629-175">W kroku szacowania narzędzia model Builder sekcja Output zawiera algorytm używany przez model najlepiej działający w najlepszym wpisie **modelu** oraz metryki o **najwyższej dokładności modelu**.</span><span class="sxs-lookup"><span data-stu-id="18629-175">In the evaluate step of the Model Builder tool, the output section, will contain the algorithm used by the best performing model in the **Best Model** entry along with metrics in **Best Model Accuracy**.</span></span> <span data-ttu-id="18629-176">Ponadto tabela podsumowująca zawierająca pięć najważniejszych modeli i ich metryki.</span><span class="sxs-lookup"><span data-stu-id="18629-176">Additionally, a summary table containing top five models and their metrics.</span></span>
 
-<span data-ttu-id="a1651-177">Jeśli Twoje metryki dokładności nie są zadowalające, niektóre proste sposoby wypróbowania i poprawienia dokładności modelu mają na celu zwiększenie ilości czasu na nauczenie modelu lub użycie większej ilości danych.</span><span class="sxs-lookup"><span data-stu-id="a1651-177">If you're not satisfied with your accuracy metrics, some easy ways to try and improve model accuracy are to increase the amount of time to train the model or use more data.</span></span> <span data-ttu-id="a1651-178">W przeciwnym razie wybierz łącze **kod** , aby przejść do ostatniego kroku w narzędziu model Builder.</span><span class="sxs-lookup"><span data-stu-id="a1651-178">Otherwise, select the **code** link to move to the final step in the Model Builder tool.</span></span>
+<span data-ttu-id="18629-177">Jeśli Twoje metryki dokładności nie są zadowalające, niektóre proste sposoby wypróbowania i poprawienia dokładności modelu mają na celu zwiększenie ilości czasu na nauczenie modelu lub użycie większej ilości danych.</span><span class="sxs-lookup"><span data-stu-id="18629-177">If you're not satisfied with your accuracy metrics, some easy ways to try and improve model accuracy are to increase the amount of time to train the model or use more data.</span></span> <span data-ttu-id="18629-178">W przeciwnym razie wybierz łącze **kod** , aby przejść do ostatniego kroku w narzędziu model Builder.</span><span class="sxs-lookup"><span data-stu-id="18629-178">Otherwise, select the **code** link to move to the final step in the Model Builder tool.</span></span>
 
-## <a name="add-the-code-to-make-predictions"></a><span data-ttu-id="a1651-179">Dodaj kod, aby tworzyć przewidywania</span><span class="sxs-lookup"><span data-stu-id="a1651-179">Add the code to make predictions</span></span>
+## <a name="add-the-code-to-make-predictions"></a><span data-ttu-id="18629-179">Dodaj kod, aby tworzyć przewidywania</span><span class="sxs-lookup"><span data-stu-id="18629-179">Add the code to make predictions</span></span>
 
-<span data-ttu-id="a1651-180">W wyniku procesu szkolenia zostaną utworzone dwa projekty.</span><span class="sxs-lookup"><span data-stu-id="a1651-180">Two projects will be created as a result of the training process.</span></span>
+<span data-ttu-id="18629-180">W wyniku procesu szkolenia zostaną utworzone dwa projekty.</span><span class="sxs-lookup"><span data-stu-id="18629-180">Two projects will be created as a result of the training process.</span></span>
 
-### <a name="reference-the-trained-model"></a><span data-ttu-id="a1651-181">Odwołuje się do przeszkolonego modelu</span><span class="sxs-lookup"><span data-stu-id="a1651-181">Reference the trained model</span></span>
+### <a name="reference-the-trained-model"></a><span data-ttu-id="18629-181">Odwołuje się do przeszkolonego modelu</span><span class="sxs-lookup"><span data-stu-id="18629-181">Reference the trained model</span></span>
 
-1. <span data-ttu-id="a1651-182">W kroku *Code* narzędzia model Builder wybierz pozycję **Dodaj projekty** , aby dodać automatycznie generowane projekty do rozwiązania.</span><span class="sxs-lookup"><span data-stu-id="a1651-182">In the *code* step of the Model Builder tool, select **Add Projects** to add the autogenerated projects to the solution.</span></span>
+1. <span data-ttu-id="18629-182">W kroku *Code* narzędzia model Builder wybierz pozycję **Dodaj projekty** , aby dodać automatycznie generowane projekty do rozwiązania.</span><span class="sxs-lookup"><span data-stu-id="18629-182">In the *code* step of the Model Builder tool, select **Add Projects** to add the autogenerated projects to the solution.</span></span>
 
-    <span data-ttu-id="a1651-183">Następujące projekty powinny pojawić się w **Eksplorator rozwiązań**:</span><span class="sxs-lookup"><span data-stu-id="a1651-183">The following projects should appear in the **Solution Explorer**:</span></span>
+    <span data-ttu-id="18629-183">Następujące projekty powinny pojawić się w **Eksplorator rozwiązań**:</span><span class="sxs-lookup"><span data-stu-id="18629-183">The following projects should appear in the **Solution Explorer**:</span></span>
 
-    - <span data-ttu-id="a1651-184">*SentimentRazorML. ConsoleApp*: Aplikacja konsolowa platformy .NET Core, która zawiera model szkoleń i kodu przewidywania.</span><span class="sxs-lookup"><span data-stu-id="a1651-184">*SentimentRazorML.ConsoleApp*: A .NET Core Console application that contains the model training and prediction code.</span></span>
-    - <span data-ttu-id="a1651-185">*SentimentRazorML. model*: Biblioteka klas .NET Standard zawierająca modele danych, które definiują schemat danych wejściowych i wyjściowych, a także zapisane wersje modelu najlepszego przebiegu podczas uczenia się.</span><span class="sxs-lookup"><span data-stu-id="a1651-185">*SentimentRazorML.Model*: A .NET Standard class library containing the data models that define the schema of input and output model data as well as the saved version of the best performing model during training.</span></span>
+    - <span data-ttu-id="18629-184">*SentimentRazorML. ConsoleApp*: Aplikacja konsolowa platformy .NET Core, która zawiera model szkoleń i kodu przewidywania.</span><span class="sxs-lookup"><span data-stu-id="18629-184">*SentimentRazorML.ConsoleApp*: A .NET Core Console application that contains the model training and prediction code.</span></span>
+    - <span data-ttu-id="18629-185">*SentimentRazorML. model*: biblioteka klas .NET Standard zawierająca modele danych, które definiują schemat danych wejściowych i wyjściowych, a także zapisaną wersję najlepszego modelu podczas uczenia się.</span><span class="sxs-lookup"><span data-stu-id="18629-185">*SentimentRazorML.Model*: A .NET Standard class library containing the data models that define the schema of input and output model data as well as the saved version of the best performing model during training.</span></span>
 
-    <span data-ttu-id="a1651-186">W tym samouczku używany jest tylko projekt *SentimentRazorML. model* , ponieważ przewidywania zostaną wykonane w aplikacji sieci Web *SentimentRazor* , a nie w konsoli programu.</span><span class="sxs-lookup"><span data-stu-id="a1651-186">For this tutorial, only the *SentimentRazorML.Model* project is used because predictions will be made in the *SentimentRazor* web application rather than in the console.</span></span> <span data-ttu-id="a1651-187">Chociaż *SentimentRazorML. ConsoleApp* nie będzie używany do oceniania, może służyć do ponownego uczenia modelu przy użyciu nowych danych w późniejszym czasie.</span><span class="sxs-lookup"><span data-stu-id="a1651-187">Although the *SentimentRazorML.ConsoleApp* won't be used for scoring, it can be used to retrain the model using new data at a later time.</span></span> <span data-ttu-id="a1651-188">W tym samouczku przeszkolenie zostało przeprowadzone poza zakresem.</span><span class="sxs-lookup"><span data-stu-id="a1651-188">Retraining is outside the scope of this tutorial though.</span></span>
+    <span data-ttu-id="18629-186">W tym samouczku używany jest tylko projekt *SentimentRazorML. model* , ponieważ przewidywania zostaną wykonane w aplikacji sieci Web *SentimentRazor* , a nie w konsoli programu.</span><span class="sxs-lookup"><span data-stu-id="18629-186">For this tutorial, only the *SentimentRazorML.Model* project is used because predictions will be made in the *SentimentRazor* web application rather than in the console.</span></span> <span data-ttu-id="18629-187">Chociaż *SentimentRazorML. ConsoleApp* nie będzie używany do oceniania, może służyć do ponownego uczenia modelu przy użyciu nowych danych w późniejszym czasie.</span><span class="sxs-lookup"><span data-stu-id="18629-187">Although the *SentimentRazorML.ConsoleApp* won't be used for scoring, it can be used to retrain the model using new data at a later time.</span></span> <span data-ttu-id="18629-188">W tym samouczku przeszkolenie zostało przeprowadzone poza zakresem.</span><span class="sxs-lookup"><span data-stu-id="18629-188">Retraining is outside the scope of this tutorial though.</span></span>
 
-### <a name="configure-the-predictionengine-pool"></a><span data-ttu-id="a1651-189">Konfigurowanie puli PredictionEngine</span><span class="sxs-lookup"><span data-stu-id="a1651-189">Configure the PredictionEngine pool</span></span>
+### <a name="configure-the-predictionengine-pool"></a><span data-ttu-id="18629-189">Konfigurowanie puli PredictionEngine</span><span class="sxs-lookup"><span data-stu-id="18629-189">Configure the PredictionEngine pool</span></span>
 
-<span data-ttu-id="a1651-190">Aby wykonać pojedyncze prognozowanie, należy utworzyć [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602).</span><span class="sxs-lookup"><span data-stu-id="a1651-190">To make a single prediction, you have to create a [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602).</span></span> <span data-ttu-id="a1651-191">[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)nie jest bezpieczny wątkowo.</span><span class="sxs-lookup"><span data-stu-id="a1651-191">[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) is not thread-safe.</span></span> <span data-ttu-id="a1651-192">Ponadto należy utworzyć wystąpienie go wszędzie tam, gdzie jest to potrzebne w aplikacji.</span><span class="sxs-lookup"><span data-stu-id="a1651-192">Additionally, you have to create an instance of it everywhere it is needed within your application.</span></span> <span data-ttu-id="a1651-193">Gdy aplikacja zostanie powiększona, ten proces może być niezarządzany.</span><span class="sxs-lookup"><span data-stu-id="a1651-193">As your application grows, this process can become unmanageable.</span></span> <span data-ttu-id="a1651-194">Aby zwiększyć wydajność i bezpieczeństwo wątków, użyj kombinacji iniekcji zależności i usługi `PredictionEnginePool`, która tworzy [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) obiektów do użycia w całej aplikacji.</span><span class="sxs-lookup"><span data-stu-id="a1651-194">For improved performance and thread safety, use a combination of dependency injection and the `PredictionEnginePool` service, which creates an [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) of [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) objects for use throughout your application.</span></span>
+<span data-ttu-id="18629-190">Aby wykonać pojedyncze prognozowanie, należy utworzyć [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602).</span><span class="sxs-lookup"><span data-stu-id="18629-190">To make a single prediction, you have to create a [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602).</span></span> <span data-ttu-id="18629-191">[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nie jest bezpieczny wątkowo.</span><span class="sxs-lookup"><span data-stu-id="18629-191">[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) is not thread-safe.</span></span> <span data-ttu-id="18629-192">Ponadto należy utworzyć wystąpienie go wszędzie tam, gdzie jest to potrzebne w aplikacji.</span><span class="sxs-lookup"><span data-stu-id="18629-192">Additionally, you have to create an instance of it everywhere it is needed within your application.</span></span> <span data-ttu-id="18629-193">Gdy aplikacja zostanie powiększona, ten proces może być niezarządzany.</span><span class="sxs-lookup"><span data-stu-id="18629-193">As your application grows, this process can become unmanageable.</span></span> <span data-ttu-id="18629-194">Aby zwiększyć wydajność i bezpieczeństwo wątków, użyj kombinacji iniekcji zależności i usługi `PredictionEnginePool`, która tworzy [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) obiektów do użycia w całej aplikacji.</span><span class="sxs-lookup"><span data-stu-id="18629-194">For improved performance and thread safety, use a combination of dependency injection and the `PredictionEnginePool` service, which creates an [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) of [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) objects for use throughout your application.</span></span>
 
-1. <span data-ttu-id="a1651-195">Zainstaluj pakiet NuGet *Microsoft.Extensions.ml* :</span><span class="sxs-lookup"><span data-stu-id="a1651-195">Install the *Microsoft.Extensions.ML* NuGet package:</span></span>
+1. <span data-ttu-id="18629-195">Zainstaluj pakiet NuGet *Microsoft.Extensions.ml* :</span><span class="sxs-lookup"><span data-stu-id="18629-195">Install the *Microsoft.Extensions.ML* NuGet package:</span></span>
 
-    1. <span data-ttu-id="a1651-196">W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**.</span><span class="sxs-lookup"><span data-stu-id="a1651-196">In **Solution Explorer**, right-click the project and select **Manage NuGet Packages**.</span></span>
-    1. <span data-ttu-id="a1651-197">Wybierz pozycję "nuget.org" jako źródło pakietu.</span><span class="sxs-lookup"><span data-stu-id="a1651-197">Choose "nuget.org" as the Package source.</span></span>
-    1. <span data-ttu-id="a1651-198">Wybierz kartę **Przeglądaj** i wyszukaj ciąg **Microsoft.Extensions.ml**.</span><span class="sxs-lookup"><span data-stu-id="a1651-198">Select the **Browse** tab and search for **Microsoft.Extensions.ML**.</span></span>
-    1. <span data-ttu-id="a1651-199">Wybierz pakiet z listy, a następnie wybierz przycisk **Instaluj** .</span><span class="sxs-lookup"><span data-stu-id="a1651-199">Select the package in the list, and select the **Install** button.</span></span>
-    1. <span data-ttu-id="a1651-200">Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian**</span><span class="sxs-lookup"><span data-stu-id="a1651-200">Select the **OK** button on the **Preview Changes** dialog</span></span>
-    1. <span data-ttu-id="a1651-201">Jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów, **Wybierz przycisk Akceptuję w oknie** dialogowym **akceptacji licencji** .</span><span class="sxs-lookup"><span data-stu-id="a1651-201">Select the **I Accept** button on the **License Acceptance** dialog if you agree with the license terms for the packages listed.</span></span>
+    1. <span data-ttu-id="18629-196">W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**.</span><span class="sxs-lookup"><span data-stu-id="18629-196">In **Solution Explorer**, right-click the project and select **Manage NuGet Packages**.</span></span>
+    1. <span data-ttu-id="18629-197">Wybierz pozycję "nuget.org" jako źródło pakietu.</span><span class="sxs-lookup"><span data-stu-id="18629-197">Choose "nuget.org" as the Package source.</span></span>
+    1. <span data-ttu-id="18629-198">Wybierz kartę **Przeglądaj** i wyszukaj ciąg **Microsoft.Extensions.ml**.</span><span class="sxs-lookup"><span data-stu-id="18629-198">Select the **Browse** tab and search for **Microsoft.Extensions.ML**.</span></span>
+    1. <span data-ttu-id="18629-199">Wybierz pakiet z listy, a następnie wybierz przycisk **Instaluj** .</span><span class="sxs-lookup"><span data-stu-id="18629-199">Select the package in the list, and select the **Install** button.</span></span>
+    1. <span data-ttu-id="18629-200">Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian**</span><span class="sxs-lookup"><span data-stu-id="18629-200">Select the **OK** button on the **Preview Changes** dialog</span></span>
+    1. <span data-ttu-id="18629-201">Jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów, **Wybierz przycisk Akceptuję w oknie** dialogowym **akceptacji licencji** .</span><span class="sxs-lookup"><span data-stu-id="18629-201">Select the **I Accept** button on the **License Acceptance** dialog if you agree with the license terms for the packages listed.</span></span>
 
-1. <span data-ttu-id="a1651-202">Otwórz plik *Startup.cs* w projekcie *SentimentRazor* .</span><span class="sxs-lookup"><span data-stu-id="a1651-202">Open the *Startup.cs* file in the *SentimentRazor* project.</span></span>
-1. <span data-ttu-id="a1651-203">Dodaj następujące instrukcje using, aby odwołać się do pakietu NuGet *Microsoft.Extensions.ml* i projektu *SentimentRazorML. model* :</span><span class="sxs-lookup"><span data-stu-id="a1651-203">Add the following using statements to reference the *Microsoft.Extensions.ML* NuGet package and *SentimentRazorML.Model* project:</span></span>
+1. <span data-ttu-id="18629-202">Otwórz plik *Startup.cs* w projekcie *SentimentRazor* .</span><span class="sxs-lookup"><span data-stu-id="18629-202">Open the *Startup.cs* file in the *SentimentRazor* project.</span></span>
+1. <span data-ttu-id="18629-203">Dodaj następujące instrukcje using, aby odwołać się do pakietu NuGet *Microsoft.Extensions.ml* i projektu *SentimentRazorML. model* :</span><span class="sxs-lookup"><span data-stu-id="18629-203">Add the following using statements to reference the *Microsoft.Extensions.ML* NuGet package and *SentimentRazorML.Model* project:</span></span>
 
-    [!code-csharp [StartupUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L12-L14)]
+    ```csharp
+    using System.IO;
+    using Microsoft.Extensions.ML;
+    using SentimentRazorML.Model;
+    ```
 
-1. <span data-ttu-id="a1651-204">Utwórz zmienną globalną do przechowywania lokalizacji pliku z przeszkolonym modelem.</span><span class="sxs-lookup"><span data-stu-id="a1651-204">Create a global variable to store the location of the trained model file.</span></span>
+1. <span data-ttu-id="18629-204">Utwórz zmienną globalną do przechowywania lokalizacji pliku z przeszkolonym modelem.</span><span class="sxs-lookup"><span data-stu-id="18629-204">Create a global variable to store the location of the trained model file.</span></span>
 
-    [!code-csharp [ModelPath](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L20)]
+    ```csharp
+    private readonly string _modelPath;
+    ```
 
-1. <span data-ttu-id="a1651-205">Plik modelu jest przechowywany w katalogu kompilacji obok plików zestawu aplikacji.</span><span class="sxs-lookup"><span data-stu-id="a1651-205">The model file is stored in the build directory alongside the assembly files of your application.</span></span> <span data-ttu-id="a1651-206">Aby ułatwić dostęp, należy utworzyć metodę pomocnika wywołana `GetAbsolutePath` `Configure` po metodzie</span><span class="sxs-lookup"><span data-stu-id="a1651-206">To make it easier to access, create a helper method called `GetAbsolutePath` after the `Configure` method</span></span>
+1. <span data-ttu-id="18629-205">Plik modelu jest przechowywany w katalogu kompilacji obok plików zestawu aplikacji.</span><span class="sxs-lookup"><span data-stu-id="18629-205">The model file is stored in the build directory alongside the assembly files of your application.</span></span> <span data-ttu-id="18629-206">Aby ułatwić dostęp, należy utworzyć metodę pomocnika o nazwie `GetAbsolutePath` po metodzie `Configure`</span><span class="sxs-lookup"><span data-stu-id="18629-206">To make it easier to access, create a helper method called `GetAbsolutePath` after the `Configure` method</span></span>
 
-    [!code-csharp [GetAbsolutePathMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L66-L73)]
+    ```csharp
+    public static string GetAbsolutePath(string relativePath)
+    {
+        FileInfo _dataRoot = new FileInfo(typeof(Program).Assembly.Location);
+        string assemblyFolderPath = _dataRoot.Directory.FullName;
 
-1. <span data-ttu-id="a1651-207">Użyj metody z konstruktora`_modelPath`klasy, aby ustawić. `Startup` `GetAbsolutePath`</span><span class="sxs-lookup"><span data-stu-id="a1651-207">Use the `GetAbsolutePath` method in the `Startup` class constructor to set the `_modelPath`.</span></span>
+        string fullPath = Path.Combine(assemblyFolderPath, relativePath);
+        return fullPath;
+    }    
+    ```
 
-    [!code-csharp [InitModelPath](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L25)]
+1. <span data-ttu-id="18629-207">Użyj metody `GetAbsolutePath` w konstruktorze klasy `Startup`, aby ustawić `_modelPath`.</span><span class="sxs-lookup"><span data-stu-id="18629-207">Use the `GetAbsolutePath` method in the `Startup` class constructor to set the `_modelPath`.</span></span>
 
-1. <span data-ttu-id="a1651-208">Skonfiguruj aplikację `ConfigureServices` dla aplikacji w metodzie: `PredictionEnginePool`</span><span class="sxs-lookup"><span data-stu-id="a1651-208">Configure the `PredictionEnginePool` for your application in the `ConfigureServices` method:</span></span>
+    ```csharp
+    _modelPath = GetAbsolutePath("MLModel.zip");
+    ```
 
-    [!code-csharp [InitPredEnginePool](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L42)]
+1. <span data-ttu-id="18629-208">Skonfiguruj `PredictionEnginePool` dla aplikacji w metodzie `ConfigureServices`:</span><span class="sxs-lookup"><span data-stu-id="18629-208">Configure the `PredictionEnginePool` for your application in the `ConfigureServices` method:</span></span>
 
-### <a name="create-sentiment-analysis-handler"></a><span data-ttu-id="a1651-209">Utwórz procedurę obsługi analizy tonacji</span><span class="sxs-lookup"><span data-stu-id="a1651-209">Create sentiment analysis handler</span></span>
+    ```csharp
+    services.AddPredictionEnginePool<ModelInput, ModelOutput>()
+            .FromFile(_modelPath);
+    ```
 
-<span data-ttu-id="a1651-210">Przewidywania zostaną wykonane wewnątrz strony głównej aplikacji.</span><span class="sxs-lookup"><span data-stu-id="a1651-210">Predictions will be made inside the main page of the application.</span></span> <span data-ttu-id="a1651-211">W związku z tym metoda, która pobiera dane wejściowe użytkownika i `PredictionEnginePool` używa do zwrócenia prognozy, musi zostać dodana.</span><span class="sxs-lookup"><span data-stu-id="a1651-211">Therefore, a method that takes the user input and uses the `PredictionEnginePool` to return a prediction needs to be added.</span></span>
+### <a name="create-sentiment-analysis-handler"></a><span data-ttu-id="18629-209">Utwórz procedurę obsługi analizy tonacji</span><span class="sxs-lookup"><span data-stu-id="18629-209">Create sentiment analysis handler</span></span>
 
-1. <span data-ttu-id="a1651-212">Otwórz plik *index.cshtml.cs* znajdujący się w katalogu *Pages* i Dodaj następujące instrukcje using:</span><span class="sxs-lookup"><span data-stu-id="a1651-212">Open the *Index.cshtml.cs* file located in the *Pages* directory and add the following using statements:</span></span>
+<span data-ttu-id="18629-210">Przewidywania zostaną wykonane wewnątrz strony głównej aplikacji.</span><span class="sxs-lookup"><span data-stu-id="18629-210">Predictions will be made inside the main page of the application.</span></span> <span data-ttu-id="18629-211">W związku z tym metoda, która pobiera dane wejściowe użytkownika i używa `PredictionEnginePool`, aby zwrócić prognozę, należy dodać.</span><span class="sxs-lookup"><span data-stu-id="18629-211">Therefore, a method that takes the user input and uses the `PredictionEnginePool` to return a prediction needs to be added.</span></span>
 
-    [!code-csharp [IndexUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L7-L8)]
+1. <span data-ttu-id="18629-212">Otwórz plik *index.cshtml.cs* znajdujący się w katalogu *Pages* i Dodaj następujące instrukcje using:</span><span class="sxs-lookup"><span data-stu-id="18629-212">Open the *Index.cshtml.cs* file located in the *Pages* directory and add the following using statements:</span></span>
 
-    <span data-ttu-id="a1651-213">Aby można było użyć `PredictionEnginePool` skonfigurowanej `Startup` klasy w klasie, należy wstrzyknąć ją do konstruktora modelu, w którym ma być używany.</span><span class="sxs-lookup"><span data-stu-id="a1651-213">In order to use the `PredictionEnginePool` configured in the `Startup` class, you have to inject it into the constructor of the model where you want to use it.</span></span>
+    ```csharp
+    using Microsoft.Extensions.ML;
+    using SentimentRazorML.Model;
+    ```
 
-1. <span data-ttu-id="a1651-214">Dodaj zmienną, aby odwołać `PredictionEnginePool` się do `IndexModel` wewnątrz klasy.</span><span class="sxs-lookup"><span data-stu-id="a1651-214">Add a variable to reference the `PredictionEnginePool` inside the `IndexModel` class.</span></span>
+    <span data-ttu-id="18629-213">Aby można było użyć `PredictionEnginePool` skonfigurowanego w klasie `Startup`, należy wstrzyknąć ją do konstruktora modelu, w którym ma być używany.</span><span class="sxs-lookup"><span data-stu-id="18629-213">In order to use the `PredictionEnginePool` configured in the `Startup` class, you have to inject it into the constructor of the model where you want to use it.</span></span>
 
-    [!code-csharp [PredEnginePool](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L14)]
+1. <span data-ttu-id="18629-214">Dodaj zmienną, aby odwołać się do `PredictionEnginePool` w klasie `IndexModel`.</span><span class="sxs-lookup"><span data-stu-id="18629-214">Add a variable to reference the `PredictionEnginePool` inside the `IndexModel` class.</span></span>
 
-1. <span data-ttu-id="a1651-215">Utwórz konstruktora w `IndexModel` klasie i `PredictionEnginePool` wstrzyknąć do niego usługę.</span><span class="sxs-lookup"><span data-stu-id="a1651-215">Create a constructor in the `IndexModel` class and inject the `PredictionEnginePool` service into it.</span></span>
+    ```csharp
+    private readonly PredictionEnginePool<ModelInput, ModelOutput> _predictionEnginePool;
+    ```
 
-    [!code-csharp [IndexConstructor](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L16-L19)]
+1. <span data-ttu-id="18629-215">Utwórz konstruktora w klasie `IndexModel` i wstrzyknąć do niego usługę `PredictionEnginePool`.</span><span class="sxs-lookup"><span data-stu-id="18629-215">Create a constructor in the `IndexModel` class and inject the `PredictionEnginePool` service into it.</span></span>
 
-1. <span data-ttu-id="a1651-216">Utwórz procedurę obsługi metody, która używa `PredictionEnginePool` do tworzenia prognoz z danych wejściowych użytkownika otrzymanych ze strony sieci Web.</span><span class="sxs-lookup"><span data-stu-id="a1651-216">Create a method handler that uses the `PredictionEnginePool` to make predictions from user input received from the web page.</span></span>
+    ```csharp
+    public IndexModel(PredictionEnginePool<ModelInput, ModelOutput> predictionEnginePool)
+    {
+        _predictionEnginePool = predictionEnginePool;
+    }    
+    ```
 
-    1. <span data-ttu-id="a1651-217">`OnGet` Poniżej metody Utwórz nową metodę o nazwie`OnGetAnalyzeSentiment`</span><span class="sxs-lookup"><span data-stu-id="a1651-217">Below the `OnGet` method, create a new method called `OnGetAnalyzeSentiment`</span></span>
+1. <span data-ttu-id="18629-216">Utwórz procedurę obsługi metody, która używa `PredictionEnginePool` do tworzenia prognoz z danych wejściowych użytkownika otrzymanych ze strony sieci Web.</span><span class="sxs-lookup"><span data-stu-id="18629-216">Create a method handler that uses the `PredictionEnginePool` to make predictions from user input received from the web page.</span></span>
+
+    1. <span data-ttu-id="18629-217">Poniżej metody `OnGet` Utwórz nową metodę o nazwie `OnGetAnalyzeSentiment`</span><span class="sxs-lookup"><span data-stu-id="18629-217">Below the `OnGet` method, create a new method called `OnGetAnalyzeSentiment`</span></span>
 
         ```csharp
         public IActionResult OnGetAnalyzeSentiment([FromQuery] string text)
@@ -185,83 +215,93 @@ ms.locfileid: "71332579"
         }
         ```
 
-    1. <span data-ttu-id="a1651-218">Wewnątrz metody Zwróć neutralną tonacji, jeśli dane wejściowe użytkownika są puste lub mają wartość null. `OnGetAnalyzeSentiment`</span><span class="sxs-lookup"><span data-stu-id="a1651-218">Inside the `OnGetAnalyzeSentiment` method, return *Neutral* sentiment if the input from the user is blank or null.</span></span>
+    1. <span data-ttu-id="18629-218">Wewnątrz metody `OnGetAnalyzeSentiment` Zwróć *neutralną* tonacji, jeśli dane wejściowe użytkownika są puste lub mają wartość null.</span><span class="sxs-lookup"><span data-stu-id="18629-218">Inside the `OnGetAnalyzeSentiment` method, return *Neutral* sentiment if the input from the user is blank or null.</span></span>
 
-        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L28)]
+        ```csharp
+        if (String.IsNullOrEmpty(text)) return Content("Neutral");
+        ```
 
-    1. <span data-ttu-id="a1651-219">Podaje prawidłowe dane wejściowe, Utwórz nowe wystąpienie `ModelInput`.</span><span class="sxs-lookup"><span data-stu-id="a1651-219">Given a valid input, create a new instance of `ModelInput`.</span></span>
+    1. <span data-ttu-id="18629-219">Uwzględniając prawidłowe dane wejściowe, Utwórz nowe wystąpienie `ModelInput`.</span><span class="sxs-lookup"><span data-stu-id="18629-219">Given a valid input, create a new instance of `ModelInput`.</span></span>
 
-        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L29)]
+        ```csharp
+        var input = new ModelInput { SentimentText = text };
+        ```
 
-    1. <span data-ttu-id="a1651-220">`PredictionEnginePool` Użyj do przewidywania tonacji.</span><span class="sxs-lookup"><span data-stu-id="a1651-220">Use the `PredictionEnginePool` to predict sentiment.</span></span>
+    1. <span data-ttu-id="18629-220">Użyj `PredictionEnginePool`, aby przewidzieć tonacji.</span><span class="sxs-lookup"><span data-stu-id="18629-220">Use the `PredictionEnginePool` to predict sentiment.</span></span>
 
-        [!code-csharp [MakePrediction](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L30)]
+        ```csharp
+        var prediction = _predictionEnginePool.Predict(input);
+        ```
 
-    1. <span data-ttu-id="a1651-221">Przekonwertuj przewidywaną `bool` wartość na toksyczną lub nietoksyczną przy użyciu poniższego kodu.</span><span class="sxs-lookup"><span data-stu-id="a1651-221">Convert the predicted `bool` value into toxic or not toxic with the following code.</span></span>
+    1. <span data-ttu-id="18629-221">Przekonwertuj przewidywaną wartość `bool` na toksyczne lub nietoksyczne przy użyciu poniższego kodu.</span><span class="sxs-lookup"><span data-stu-id="18629-221">Convert the predicted `bool` value into toxic or not toxic with the following code.</span></span>
 
-        [!code-csharp [ConvertPrediction](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L31)]
+        ```csharp
+        var sentiment = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
+        ```
 
-    1. <span data-ttu-id="a1651-222">Na koniec Zwróć tonacji z powrotem do strony sieci Web.</span><span class="sxs-lookup"><span data-stu-id="a1651-222">Finally, return the sentiment back to the web page.</span></span>
+    1. <span data-ttu-id="18629-222">Na koniec Zwróć tonacji z powrotem do strony sieci Web.</span><span class="sxs-lookup"><span data-stu-id="18629-222">Finally, return the sentiment back to the web page.</span></span>
 
-        [!code-csharp [ReturnSentiment](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L32)]
+        ```csharp
+        return Content(sentiment);
+        ```
 
-### <a name="configure-the-web-page"></a><span data-ttu-id="a1651-223">Skonfiguruj stronę sieci Web</span><span class="sxs-lookup"><span data-stu-id="a1651-223">Configure the web page</span></span>
+### <a name="configure-the-web-page"></a><span data-ttu-id="18629-223">Skonfiguruj stronę sieci Web</span><span class="sxs-lookup"><span data-stu-id="18629-223">Configure the web page</span></span>
 
-<span data-ttu-id="a1651-224">Wyniki zwrócone przez `OnGetAnalyzeSentiment` program będą dynamicznie wyświetlane `Index` na stronie sieci Web.</span><span class="sxs-lookup"><span data-stu-id="a1651-224">The results returned by the `OnGetAnalyzeSentiment` will be dynamically displayed on the `Index` web page.</span></span>
+<span data-ttu-id="18629-224">Wyniki zwrócone przez `OnGetAnalyzeSentiment` będą dynamicznie wyświetlane na stronie sieci Web `Index`.</span><span class="sxs-lookup"><span data-stu-id="18629-224">The results returned by the `OnGetAnalyzeSentiment` will be dynamically displayed on the `Index` web page.</span></span>
 
-1. <span data-ttu-id="a1651-225">Otwórz plik *index. cshtml* w katalogu *stron* i Zastąp jego zawartość następującym kodem:</span><span class="sxs-lookup"><span data-stu-id="a1651-225">Open the *Index.cshtml* file in the *Pages* directory and replace its contents with the following code:</span></span>
+1. <span data-ttu-id="18629-225">Otwórz plik *index. cshtml* w katalogu *stron* i Zastąp jego zawartość następującym kodem:</span><span class="sxs-lookup"><span data-stu-id="18629-225">Open the *Index.cshtml* file in the *Pages* directory and replace its contents with the following code:</span></span>
 
     [!code-cshtml [IndexPage](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml)]
 
-1. <span data-ttu-id="a1651-226">Następnie Dodaj kod stylów CSS do końca strony *site. css* w katalogu *wwwroot\css* :</span><span class="sxs-lookup"><span data-stu-id="a1651-226">Next, add css styling code to the end of the *site.css* page in the *wwwroot\css* directory:</span></span>
+1. <span data-ttu-id="18629-226">Następnie Dodaj kod stylów CSS do końca strony *site. css* w katalogu *wwwroot\css* :</span><span class="sxs-lookup"><span data-stu-id="18629-226">Next, add css styling code to the end of the *site.css* page in the *wwwroot\css* directory:</span></span>
 
     [!code-css [CssStyling](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/css/site.css#L61-L105)]
 
-1. <span data-ttu-id="a1651-227">Następnie Dodaj kod, aby wysłać dane wejściowe ze strony sieci Web do `OnGetAnalyzeSentiment` procedury obsługi.</span><span class="sxs-lookup"><span data-stu-id="a1651-227">After that, add code to send inputs from the web page to the `OnGetAnalyzeSentiment` handler.</span></span>
+1. <span data-ttu-id="18629-227">Następnie Dodaj kod, aby wysłać dane wejściowe ze strony internetowej do programu obsługi `OnGetAnalyzeSentiment`.</span><span class="sxs-lookup"><span data-stu-id="18629-227">After that, add code to send inputs from the web page to the `OnGetAnalyzeSentiment` handler.</span></span>
 
-    1. <span data-ttu-id="a1651-228">W pliku *site. js* znajdującym się w katalogu *wwwroot\js* Utwórz funkcję o nazwie `getSentiment` , aby wykonać żądanie Get http `OnGetAnalyzeSentiment` z danymi wejściowymi użytkownika do programu obsługi.</span><span class="sxs-lookup"><span data-stu-id="a1651-228">In the *site.js* file located in the *wwwroot\js* directory, create a function called `getSentiment` to make a GET HTTP request with the user input to the `OnGetAnalyzeSentiment` handler.</span></span>
+    1. <span data-ttu-id="18629-228">W pliku *site. js* znajdującym się w katalogu *wwwroot\js* utwórz funkcję o nazwie `getSentiment`, aby wykonać żądanie Get http z danymi wejściowymi użytkownika do programu obsługi `OnGetAnalyzeSentiment`.</span><span class="sxs-lookup"><span data-stu-id="18629-228">In the *site.js* file located in the *wwwroot\js* directory, create a function called `getSentiment` to make a GET HTTP request with the user input to the `OnGetAnalyzeSentiment` handler.</span></span>
 
         [!code-javascript [GetSentimentMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L5-L10)]
 
-    1. <span data-ttu-id="a1651-229">Poniżej można dodać kolejną funkcję o nazwie `updateMarker` , aby dynamicznie aktualizować pozycję znacznika na stronie sieci Web w miarę przewidywania tonacji.</span><span class="sxs-lookup"><span data-stu-id="a1651-229">Below that, add another function called `updateMarker` to dynamically update the position of the marker on the web page as sentiment is predicted.</span></span>
+    1. <span data-ttu-id="18629-229">Poniżej można dodać kolejną funkcję o nazwie `updateMarker`, aby dynamicznie aktualizować pozycję znacznika na stronie sieci Web w miarę przewidywania tonacji.</span><span class="sxs-lookup"><span data-stu-id="18629-229">Below that, add another function called `updateMarker` to dynamically update the position of the marker on the web page as sentiment is predicted.</span></span>
 
         [!code-javascript [UpdateMarkerMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L12-L15)]
 
-    1. <span data-ttu-id="a1651-230">Utwórz funkcję programu obsługi zdarzeń o `updateSentiment` nazwie, aby pobrać dane wejściowe od użytkownika, wysłać je `OnGetAnalyzeSentiment` do funkcji przy użyciu `getSentiment` funkcji i zaktualizować znacznik przy `updateMarker` użyciu funkcji.</span><span class="sxs-lookup"><span data-stu-id="a1651-230">Create an event handler function called `updateSentiment` to get the input from the user, send it to the `OnGetAnalyzeSentiment` function using the `getSentiment` function and update the marker with the `updateMarker` function.</span></span>
+    1. <span data-ttu-id="18629-230">Utwórz funkcję programu obsługi zdarzeń o nazwie `updateSentiment`, aby pobrać dane wejściowe od użytkownika, wyślij je do funkcji `OnGetAnalyzeSentiment` przy użyciu funkcji `getSentiment` i zaktualizuj znacznik przy użyciu funkcji `updateMarker`.</span><span class="sxs-lookup"><span data-stu-id="18629-230">Create an event handler function called `updateSentiment` to get the input from the user, send it to the `OnGetAnalyzeSentiment` function using the `getSentiment` function and update the marker with the `updateMarker` function.</span></span>
 
         [!code-javascript [UpdateSentimentMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L17-L34)]
 
-    1. <span data-ttu-id="a1651-231">Na koniec Zarejestruj program obsługi zdarzeń i powiąż go `textarea` `id=Message` z elementem z atrybutem.</span><span class="sxs-lookup"><span data-stu-id="a1651-231">Finally, register the event handler and bind it to the `textarea` element with the `id=Message` attribute.</span></span>
+    1. <span data-ttu-id="18629-231">Na koniec Zarejestruj program obsługi zdarzeń i powiąż go z elementem `textarea` z atrybutem `id=Message`.</span><span class="sxs-lookup"><span data-stu-id="18629-231">Finally, register the event handler and bind it to the `textarea` element with the `id=Message` attribute.</span></span>
 
         [!code-javascript [UpdateSentimentEvtHandler](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L36)]
 
-## <a name="run-the-application"></a><span data-ttu-id="a1651-232">Uruchamianie aplikacji</span><span class="sxs-lookup"><span data-stu-id="a1651-232">Run the application</span></span>
+## <a name="run-the-application"></a><span data-ttu-id="18629-232">Uruchom aplikację</span><span class="sxs-lookup"><span data-stu-id="18629-232">Run the application</span></span>
 
-<span data-ttu-id="a1651-233">Teraz, gdy aplikacja jest skonfigurowana, uruchom aplikację, która powinna być uruchamiana w przeglądarce.</span><span class="sxs-lookup"><span data-stu-id="a1651-233">Now that your application is set up, run the application which should launch in your browser.</span></span>
+<span data-ttu-id="18629-233">Teraz, gdy aplikacja jest skonfigurowana, uruchom aplikację, która powinna być uruchamiana w przeglądarce.</span><span class="sxs-lookup"><span data-stu-id="18629-233">Now that your application is set up, run the application which should launch in your browser.</span></span>
 
-<span data-ttu-id="a1651-234">Po uruchomieniu aplikacji, wprowadź *wartość Konstruktor modeli jest chłodna!*</span><span class="sxs-lookup"><span data-stu-id="a1651-234">When the application launches, enter *Model Builder is cool!*</span></span> <span data-ttu-id="a1651-235">w obszarze tekstu.</span><span class="sxs-lookup"><span data-stu-id="a1651-235">into the text area.</span></span> <span data-ttu-id="a1651-236">Wyświetlona tonacji nie powinna być *toksyczna*.</span><span class="sxs-lookup"><span data-stu-id="a1651-236">The predicted sentiment displayed should be *Not Toxic*.</span></span>
+<span data-ttu-id="18629-234">Po uruchomieniu aplikacji, wprowadź *wartość Konstruktor modeli jest chłodna!*</span><span class="sxs-lookup"><span data-stu-id="18629-234">When the application launches, enter *Model Builder is cool!*</span></span> <span data-ttu-id="18629-235">w obszarze tekstu.</span><span class="sxs-lookup"><span data-stu-id="18629-235">into the text area.</span></span> <span data-ttu-id="18629-236">Wyświetlona tonacji nie powinna być *toksyczna*.</span><span class="sxs-lookup"><span data-stu-id="18629-236">The predicted sentiment displayed should be *Not Toxic*.</span></span>
 
 ![Uruchamianie okna z przewidywanym oknem tonacji](./media/sentiment-analysis-model-builder/web-app.png)
 
-<span data-ttu-id="a1651-238">Jeśli musisz odwołać się do projektów wygenerowanych przez konstruktora modeli w późniejszym czasie w innym rozwiązaniu, możesz je znaleźć `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` w katalogu.</span><span class="sxs-lookup"><span data-stu-id="a1651-238">If you need to reference the Model Builder generated projects at a later time inside of another solution, you can find them inside the `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` directory.</span></span>
+<span data-ttu-id="18629-238">Jeśli musisz odwołać się do projektów wygenerowanych przez konstruktora modeli w późniejszym czasie w innym rozwiązaniu, możesz je znaleźć w katalogu `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools`.</span><span class="sxs-lookup"><span data-stu-id="18629-238">If you need to reference the Model Builder generated projects at a later time inside of another solution, you can find them inside the `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` directory.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="a1651-239">Następne kroki</span><span class="sxs-lookup"><span data-stu-id="a1651-239">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="18629-239">Następne kroki</span><span class="sxs-lookup"><span data-stu-id="18629-239">Next steps</span></span>
 
-<span data-ttu-id="a1651-240">W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:</span><span class="sxs-lookup"><span data-stu-id="a1651-240">In this tutorial, you learned how to:</span></span>
+<span data-ttu-id="18629-240">W tym samouczku przedstawiono sposób wykonywania tych instrukcji:</span><span class="sxs-lookup"><span data-stu-id="18629-240">In this tutorial, you learned how to:</span></span>
 > [!div class="checklist"]
 >
-> - <span data-ttu-id="a1651-241">Tworzenie aplikacji Razor Pages ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="a1651-241">Create an ASP.NET Core Razor Pages application</span></span>
-> - <span data-ttu-id="a1651-242">Przygotuj i poznanie danych</span><span class="sxs-lookup"><span data-stu-id="a1651-242">Prepare and understand the data</span></span>
-> - <span data-ttu-id="a1651-243">Wybierz scenariusz</span><span class="sxs-lookup"><span data-stu-id="a1651-243">Choose a scenario</span></span>
-> - <span data-ttu-id="a1651-244">Ładowanie danych</span><span class="sxs-lookup"><span data-stu-id="a1651-244">Load the data</span></span>
-> - <span data-ttu-id="a1651-245">Uczenie modelu</span><span class="sxs-lookup"><span data-stu-id="a1651-245">Train the model</span></span>
-> - <span data-ttu-id="a1651-246">Oceń model</span><span class="sxs-lookup"><span data-stu-id="a1651-246">Evaluate the model</span></span>
-> - <span data-ttu-id="a1651-247">Używanie modelu dla prognoz</span><span class="sxs-lookup"><span data-stu-id="a1651-247">Use the model for predictions</span></span>
+> - <span data-ttu-id="18629-241">Tworzenie aplikacji Razor Pages ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="18629-241">Create an ASP.NET Core Razor Pages application</span></span>
+> - <span data-ttu-id="18629-242">Przygotuj i poznanie danych</span><span class="sxs-lookup"><span data-stu-id="18629-242">Prepare and understand the data</span></span>
+> - <span data-ttu-id="18629-243">Wybierz scenariusz</span><span class="sxs-lookup"><span data-stu-id="18629-243">Choose a scenario</span></span>
+> - <span data-ttu-id="18629-244">Ładowanie danych</span><span class="sxs-lookup"><span data-stu-id="18629-244">Load the data</span></span>
+> - <span data-ttu-id="18629-245">Uczenie modelu</span><span class="sxs-lookup"><span data-stu-id="18629-245">Train the model</span></span>
+> - <span data-ttu-id="18629-246">Oceń model</span><span class="sxs-lookup"><span data-stu-id="18629-246">Evaluate the model</span></span>
+> - <span data-ttu-id="18629-247">Używanie modelu dla prognoz</span><span class="sxs-lookup"><span data-stu-id="18629-247">Use the model for predictions</span></span>
 
-### <a name="additional-resources"></a><span data-ttu-id="a1651-248">Dodatkowe zasoby</span><span class="sxs-lookup"><span data-stu-id="a1651-248">Additional Resources</span></span>
+### <a name="additional-resources"></a><span data-ttu-id="18629-248">Dodatkowe zasoby</span><span class="sxs-lookup"><span data-stu-id="18629-248">Additional Resources</span></span>
 
-<span data-ttu-id="a1651-249">Aby dowiedzieć się więcej na temat tematów wymienionych w tym samouczku, odwiedź następujące zasoby:</span><span class="sxs-lookup"><span data-stu-id="a1651-249">To learn more about topics mentioned in this tutorial, visit the following resources:</span></span>
+<span data-ttu-id="18629-249">Aby dowiedzieć się więcej na temat tematów wymienionych w tym samouczku, odwiedź następujące zasoby:</span><span class="sxs-lookup"><span data-stu-id="18629-249">To learn more about topics mentioned in this tutorial, visit the following resources:</span></span>
 
-- [<span data-ttu-id="a1651-250">Scenariusze konstruktora modelu</span><span class="sxs-lookup"><span data-stu-id="a1651-250">Model Builder Scenarios</span></span>](../automate-training-with-model-builder.md#scenarios)
-- [<span data-ttu-id="a1651-251">Klasyfikacja binarna</span><span class="sxs-lookup"><span data-stu-id="a1651-251">Binary Classification</span></span>](../resources/glossary.md#binary-classification)
-- [<span data-ttu-id="a1651-252">Metryki binarnego modelu klasyfikacji</span><span class="sxs-lookup"><span data-stu-id="a1651-252">Binary Classification Model Metrics</span></span>](../resources/metrics.md#metrics-for-binary-classification)
+- [<span data-ttu-id="18629-250">Scenariusze konstruktora modelu</span><span class="sxs-lookup"><span data-stu-id="18629-250">Model Builder Scenarios</span></span>](../automate-training-with-model-builder.md#scenarios)
+- [<span data-ttu-id="18629-251">Klasyfikacja binarna</span><span class="sxs-lookup"><span data-stu-id="18629-251">Binary Classification</span></span>](../resources/glossary.md#binary-classification)
+- [<span data-ttu-id="18629-252">Metryki binarnego modelu klasyfikacji</span><span class="sxs-lookup"><span data-stu-id="18629-252">Binary Classification Model Metrics</span></span>](../resources/metrics.md#metrics-for-binary-classification)

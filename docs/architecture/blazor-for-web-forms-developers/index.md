@@ -1,21 +1,23 @@
 ---
-title: Blazor dla deweloperów formularzy sieci Web ASP.NET
+title: Platforma Blazor dla deweloperów technologii ASP.NET Web Forms
 description: Dowiedz się, jak tworzyć aplikacje sieci Web w pełnym stosie przy użyciu platformy .NET, Blazor i .NET Core w prosty i znany sposób.
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: a80483f6a1f1cb9e5a3e2ffff18cbd59c5b67af3
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 936f85d4fda9c5396a6586810735877488226157
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183799"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696929"
 ---
-# <a name="blazor-for-aspnet-web-forms-developers"></a>Blazor dla deweloperów formularzy sieci Web ASP.NET
+# <a name="blazor-for-aspnet-web-forms-developers"></a>Platforma Blazor dla deweloperów technologii ASP.NET Web Forms
+
+[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ![Zrzut ekranu przedstawiający stronę obejmującą książkę elektroniczną aplikacji bezserwerowych.](./media/index/blazor-for-web-forms-developers-cover.png)
 
-> Pobieranie dostępne o:<https://aka.ms/blazor-ebook>
+> Pobieranie dostępne o: <https://aka.ms/blazor-ebook>
 
 OPUBLIKOWANO PRZEZ
 
@@ -35,7 +37,7 @@ Ta książka jest świadczona w postaci "AS-IS" i zawiera widoki i opinie autora
 
 Niektóre przykłady opisane w niniejszym dokumencie są dostępne tylko dla ilustracji i są fikcyjne. Żadne prawdziwe skojarzenie lub połączenie nie jest zamierzone ani nie powinno zostać wywnioskowane.
 
-Firma Microsoft i znaki towarowe <https://www.microsoft.com> wymienione na stronie "znaki towarowe" są znakami towarowymi grupy firm Microsoft.
+Firma Microsoft i znaki towarowe wymienione w <https://www.microsoft.com> na stronie "znaki towarowe" są znakami towarowymi grupy firm Microsoft.
 
 Komputery Mac i macOS są znakami towarowymi firmy Apple Inc.
 

@@ -3,14 +3,16 @@ title: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy A
 description: Przewodnik tworzenia aplikacji natywnych w chmurze wykorzystujących kontenery, mikrousługi i funkcje bezserwerowe platformy Azure.
 author: ardalis
 ms.date: 03/07/2019
-ms.openlocfilehash: 67e235b051702308d2455b2501bfb59a4317635b
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 7f14a690d0153edc43f0ce7f4e91c9e9cd2c6858
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214167"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696773"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure
+
+[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ![obraz okładki](./media/cover.png)
 
@@ -32,11 +34,11 @@ Ta książka jest świadczona w postaci "AS-IS" i zawiera widoki i opinie autora
 
 Niektóre przykłady opisane w niniejszym dokumencie są dostępne tylko dla ilustracji i są fikcyjne. Żadne prawdziwe skojarzenie lub połączenie nie jest zamierzone ani nie powinno zostać wywnioskowane.
 
-Firma Microsoft i znaki towarowe https://www.microsoft.com wymienione na stronie "znaki towarowe" są znakami towarowymi grupy firm Microsoft.
+Firma Microsoft i znaki towarowe wymienione w https://www.microsoft.com na stronie "znaki towarowe" są znakami towarowymi grupy firm Microsoft.
 
 Komputery Mac i macOS są znakami towarowymi firmy Apple Inc.
 
-Logo Docker Whale jest zastrzeżonym znakiem towarowym platformy Docker, Inc. Używane przez uprawnienie.
+Logo Docker Whale jest zastrzeżonym znakiem towarowym platformy Docker, Inc. używanym przez uprawnienie.
 
 Wszystkie inne znaczniki i logo są własnością odpowiednich właścicieli.
 

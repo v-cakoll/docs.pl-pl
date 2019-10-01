@@ -3,14 +3,16 @@ title: ASP.NET Core gRPC for WCF Developers — gRPC dla deweloperów WCF
 description: DO ZAPISANIA
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 7d02d7914aed39613b4a41da55515df80abddfe8
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: dc39fc96e7154fb50acd0b65a58586b3fa12ab50
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184450"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696921"
 ---
-# <a name="aspnet-core-grpc-for-wcf-developers"></a>ASP.NET Core gRPC dla deweloperów WCF
+# <a name="aspnet-core-grpc-for-wcf-developers"></a>Usługa gRPC platformy ASP.NET Core dla deweloperów WCF
+
+[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ![obraz okładki](./media/cover.png)
 
@@ -32,9 +34,9 @@ Ta książka jest świadczona w postaci "AS-IS" i zawiera widoki i opinie autora
 
 Niektóre przykłady opisane w niniejszym dokumencie są dostępne tylko dla ilustracji i są fikcyjne. Żadne prawdziwe skojarzenie lub połączenie nie jest zamierzone ani nie powinno zostać wywnioskowane.
 
-Firma Microsoft i znaki towarowe https://www.microsoft.com wymienione na stronie "znaki towarowe" są znakami towarowymi grupy firm Microsoft.
+Firma Microsoft i znaki towarowe wymienione w https://www.microsoft.com na stronie "znaki towarowe" są znakami towarowymi grupy firm Microsoft.
 
-Logo Docker Whale jest zastrzeżonym znakiem towarowym platformy Docker, Inc. Używane przez uprawnienie.
+Logo Docker Whale jest zastrzeżonym znakiem towarowym platformy Docker, Inc. używanym przez uprawnienie.
 
 Wszystkie inne znaczniki i logo są własnością odpowiednich właścicieli.
 

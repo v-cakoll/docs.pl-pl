@@ -2,12 +2,12 @@
 title: Atrybuty
 description: Dowiedz F# się, jak atrybuty umożliwiają stosowanie metadanych do konstrukcji programistycznej.
 ms.date: 05/16/2016
-ms.openlocfilehash: 08d50f7f57b6c0a81221e8f635f77f67750d0ff9
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 17822891109b8e8eaa10044f82f0b872ce9d30b5
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71082943"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736813"
 ---
 # <a name="attributes"></a>Atrybuty
 
@@ -23,45 +23,45 @@ Atrybuty umożliwiają stosowanie metadanych do konstrukcji programistycznej.
 
 W poprzedniej składni *obiekt docelowy* jest opcjonalny i, jeśli jest obecny, określa rodzaj jednostki programu, do której odnosi się ten atrybut. W tabeli, która pojawia się w dalszej części tego dokumentu, są wyświetlane prawidłowe wartości dla *elementu docelowego* .
 
-*Atrybut-name* odnosi się do nazwy (możliwej do zakwalifikowania z przestrzenią nazw) prawidłowego typu atrybutu, z `Attribute` lub bez sufiksu, który jest zazwyczaj używany w nazwach typu atrybutu. Na przykład typ `ObsoleteAttribute` może być skrócony do tylko `Obsolete` w tym kontekście.
+*Atrybut-name* odnosi się do nazwy (możliwej do zakwalifikowania z przestrzenią nazw) prawidłowego typu atrybutu, z lub bez sufiksu `Attribute`, który jest zazwyczaj używany w nazwach typu atrybutu. Na przykład typ `ObsoleteAttribute` może być skrócony do zaledwie `Obsolete` w tym kontekście.
 
-*Argumenty* są argumentami konstruktora dla typu atrybutu. Jeśli atrybut ma konstruktora domyślnego, lista argumentów i nawiasy mogą być pominięte. Atrybuty obsługują zarówno argumenty pozycyjne, jak i nazwane argumenty. *Argumenty pozycyjne* są argumentami, które są używane w kolejności, w jakiej są wyświetlane. Nazwanych argumentów można użyć, jeśli atrybut ma właściwości publiczne. Można je ustawić przy użyciu następującej składni na liście argumentów.
+*Argumenty* są argumentami konstruktora dla typu atrybutu. Jeśli atrybut ma konstruktora bez parametrów, lista argumentów i nawiasy mogą być pominięte. Atrybuty obsługują zarówno argumenty pozycyjne, jak i nazwane argumenty. *Argumenty pozycyjne* są argumentami, które są używane w kolejności, w jakiej są wyświetlane. Nazwanych argumentów można użyć, jeśli atrybut ma właściwości publiczne. Można je ustawić przy użyciu następującej składni na liście argumentów.
 
 ```fsharp
 property-name = property-value
 ```
 
-Takie inicjalizacje właściwości mogą być w dowolnej kolejności, ale muszą być zgodne z dowolnymi argumentami pozycyjnymi. Poniżej znajduje się przykład atrybutu, który używa argumentów pozycyjnych i inicjalizacji właściwości.
+Takie inicjalizacje właściwości mogą być w dowolnej kolejności, ale muszą być zgodne z dowolnymi argumentami pozycyjnymi. Poniżej znajduje się przykład atrybutu, który używa argumentów pozycyjnych i inicjalizacji właściwości:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6202.fs)]
 
-W tym przykładzie atrybut jest `DllImportAttribute`używany w skróconej postaci. Pierwszy argument jest parametrem pozycyjnym, a drugi jest właściwością.
+W tym przykładzie atrybut jest `DllImportAttribute`, w tym miejscu używanym w skróconej postaci. Pierwszy argument jest parametrem pozycyjnym, a drugi jest właściwością.
 
 Atrybuty to konstrukcja programistyczna platformy .NET, która umożliwia obiektowi znanemu jako *atrybut* , który ma być skojarzony z typem lub innym elementem programu. Element programu, do którego zastosowano atrybut, jest określany jako *element docelowy atrybutu*. Ten atrybut zwykle zawiera metadane dotyczące jego obiektu docelowego. W tym kontekście metadane mogą zawierać dowolne dane dotyczące typu innego niż jego pola i elementy członkowskie.
 
-Atrybuty w F# programie można stosować do następujących konstrukcji programistycznych: funkcji, metod, zestawów, modułów, typów (klas, rekordów, struktur, interfejsów, delegatów, wyliczeń, Unii itd.), konstruktorów, właściwości, pól parametry, parametry typu i wartości zwracane. Atrybuty są niedozwolone w `let` powiązaniach wewnątrz klas, wyrażeń lub wyrażeń przepływu pracy.
+Atrybuty w F# programie można stosować do następujących konstrukcji programistycznych: funkcji, metod, zestawów, modułów, typów (klas, rekordów, struktur, interfejsów, delegatów, wyliczeń, Unii itd.), konstruktorów, właściwości, pól parametry, parametry typu i wartości zwracane. Atrybuty są niedozwolone w powiązaniach `let` w klasach, wyrażeniach lub wyrażeniach przepływu pracy.
 
-Zwykle deklaracja atrybutu pojawia się bezpośrednio przed deklaracją obiektu docelowego atrybutu. Deklaracje wielu atrybutów mogą być używane razem w następujący sposób.
+Zwykle deklaracja atrybutu pojawia się bezpośrednio przed deklaracją obiektu docelowego atrybutu. Deklaracje wielu atrybutów mogą być używane razem w następujący sposób:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6603.fs)]
 
 Można badać atrybuty w czasie wykonywania przy użyciu odbicia platformy .NET.
 
-Można zadeklarować wiele atrybutów pojedynczo, jak w poprzednim przykładzie kodu lub można je zadeklarować w jednym zestawie nawiasów, jeśli używasz średnika do oddzielenia poszczególnych atrybutów i konstruktorów, jak pokazano poniżej.
+Można zadeklarować wiele atrybutów pojedynczo, jak w poprzednim przykładzie kodu lub można je zadeklarować w jednym zestawie nawiasów, jeśli używasz średnika do oddzielenia poszczególnych atrybutów i konstruktorów w następujący sposób:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6604.fs)]
 
-Zazwyczaj napotkane atrybuty obejmują `Obsolete` atrybut, atrybuty dla zagadnień związanych z bezpieczeństwem, atrybuty obsługi modelu COM, atrybuty, które odnoszą się do własności kodu, oraz atrybuty wskazujące, czy typ może być serializowany. Poniższy przykład demonstruje użycie `Obsolete` atrybutu.
+Zazwyczaj napotkane atrybuty obejmują atrybut `Obsolete`, atrybuty dla zagadnień związanych z bezpieczeństwem, atrybuty obsługi modelu COM, atrybuty, które odnoszą się do własności kodu, oraz atrybuty wskazujące, czy typ może być serializowany. Poniższy przykład demonstruje użycie atrybutu `Obsolete`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6605.fs)]
 
-Dla elementów docelowych `assembly` atrybutu i `module`należy zastosować atrybuty do powiązania najwyższego poziomu `do` w zestawie. Można uwzględnić słowo `assembly` lub `module` w deklaracji atrybutu w następujący sposób.
+Dla atrybutu targets `assembly` i `module` należy zastosować atrybuty do powiązania `do` najwyższego poziomu w zestawie. W deklaracji atrybutu można uwzględnić słowo `assembly` lub `module` w następujący sposób:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6606.fs)]
 
-Jeśli pominięto element docelowy atrybutu dla atrybutu zastosowanego do `do` powiązania, F# kompilator próbuje określić obiekt docelowy atrybutu, który jest zrozumiały dla tego atrybutu. Wiele klas atrybutów ma atrybut typu `System.AttributeUsageAttribute` , który zawiera informacje o możliwych celach obsługiwanych przez ten atrybut. `System.AttributeUsageAttribute` Jeśli wskazuje, że atrybut obsługuje funkcje jako elementy docelowe, atrybut jest stosowany do głównego punktu wejścia programu. `System.AttributeUsageAttribute` Jeśli wskazuje, że atrybut obsługuje zestawy jako elementy docelowe, kompilator Pobiera atrybut, który ma zostać zastosowany do zestawu. Większość atrybutów nie ma zastosowania do obu funkcji i zestawów, ale w przypadkach, w których są one wykonywane, atrybut jest stosowany do funkcji Main programu. Jeśli obiekt docelowy atrybutu jest jawnie określony, atrybut jest stosowany do określonego celu.
+Jeśli pominięto element docelowy atrybutu dla atrybutu zastosowanego do powiązania `do`, F# kompilator próbuje określić obiekt docelowy atrybutu, który ma sens dla tego atrybutu. Wiele klas atrybutów ma atrybut typu `System.AttributeUsageAttribute`, który zawiera informacje o możliwych celach obsługiwanych przez ten atrybut. Jeśli `System.AttributeUsageAttribute` wskazuje, że atrybut obsługuje funkcje jako elementy docelowe, atrybut jest stosowany do głównego punktu wejścia programu. Jeśli `System.AttributeUsageAttribute` wskazuje, że atrybut obsługuje zestawy jako elementy docelowe, kompilator Pobiera atrybut, który ma zostać zastosowany do zestawu. Większość atrybutów nie ma zastosowania do obu funkcji i zestawów, ale w przypadkach, w których są one wykonywane, atrybut jest stosowany do funkcji Main programu. Jeśli obiekt docelowy atrybutu jest jawnie określony, atrybut jest stosowany do określonego celu.
 
-Mimo że zwykle nie trzeba określać obiektu docelowego atrybutu, w poniższej tabeli podano prawidłowe wartości dla *elementu Target* , a także przykłady użycia.
+Mimo że zwykle nie trzeba określać obiektu docelowego atrybutu, prawidłowe wartości dla *elementu docelowego* w atrybucie oraz przykłady użycia przedstawiono w poniższej tabeli:
 
 <table>
   <tr>

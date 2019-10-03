@@ -1,15 +1,15 @@
 ---
-title: Architektura logiczna a architektura fizyczna
+title: Architektura logiczna w porównaniu z architekturą fizyczną
 description: Zapoznaj się z różnicami między architekturami logicznymi a fizycznymi.
 ms.date: 09/20/2018
-ms.openlocfilehash: c269369e9b5391e8d25ece46e6b08e34a82fbbba
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 8d1bfca190eb9b18d46625fa4afdec963eb07054
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295494"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834402"
 ---
-# <a name="logical-architecture-versus-physical-architecture"></a>Architektura logiczna a architektura fizyczna
+# <a name="logical-architecture-versus-physical-architecture"></a>Architektura logiczna w porównaniu z architekturą fizyczną
 
 Jest to przydatne w tym momencie, aby zatrzymywać i omawiać rozróżnienie między architekturą logiczną i architekturą fizyczną oraz jak ma to zastosowanie do projektowania aplikacji opartych na mikrousługach.
 
@@ -25,7 +25,7 @@ W związku z tym, mikrousługa biznesowa lub ograniczone kontekst jest architekt
 
 Jak pokazano na rysunku 4-8, usługa biznesowa katalogu może składać się z kilku usług lub procesów. Mogą to być wiele usług internetowego interfejsu API ASP.NET lub dowolnego innego rodzaju usług korzystających z protokołu HTTP lub dowolnego innego protokołu. Co ważniejsze, usługi mogą współużytkować te same dane, o ile te usługi są spójne w odniesieniu do tej samej domeny biznesowej.
 
-![Diagram mikrousługi biznesowej katalogu, który zawiera usługę interfejsu API usługi wyszukiwania i bazę danych SQL Server.](./media/image8.png)
+![Diagram mikrousługi biznesowej wykazu z serwerami fizycznymi.](./media/logical-versus-physical-architecture/multiple-physical-services.png)
 
 **Rysunek 4-8**. Mikrousługa biznesowa z kilkoma usługami fizycznymi
 
@@ -34,5 +34,5 @@ Usługi w tym przykładzie korzystają z tego samego modelu danych, ponieważ us
 W skrócie logicznej architekturze mikrousług nie zawsze jest konieczna zbieżność z fizyczną architekturą wdrażania. W tym przewodniku, gdy wspominamy mikrousługi, oznacza to, że firma lub logiczna mikrousługa, która może mapować do jednej lub kilku (fizycznych) usług. W większości przypadków jest to jedna usługa, ale może być większa.
 
 >[!div class="step-by-step"]
->[Poprzedni](data-sovereignty-per-microservice.md)Następny
->[](distributed-data-management.md)
+>[Poprzedni](data-sovereignty-per-microservice.md)
+>[dalej](distributed-data-management.md)

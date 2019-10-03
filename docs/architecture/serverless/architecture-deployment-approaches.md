@@ -4,14 +4,14 @@ description: Przewodnik dotyczący różnych rozwiązań dla przedsiębiorstw je
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 8a1203ea2fc7089223c03b3a3e02fd3303610272
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 4cc8442509fc8a0e2cc0eb797365423458e77684
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676815"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834335"
 ---
-# <a name="architecture-deployment-approaches"></a>Podejścia do wdrażania architektury
+# <a name="architecture-deployment-approaches"></a>Podejście do wdrożenia architektury
 
 Niezależnie od metody architektury używanej do projektowania aplikacji biznesowej, implementacja lub wdrożenie tych aplikacji może się różnić. Firmy obsługują aplikacje na wszystkich urządzeniach fizycznych niż w przypadku funkcji bezserwerowych.
 
@@ -97,7 +97,7 @@ Zalety kontenerów obejmują:
 
 Kontener jest uruchamiany na hoście kontenera (który z kolei może działać na komputerze bez systemu operacyjnego lub maszynie wirtualnej). Wiele kontenerów lub wystąpień tych samych kontenerów może działać na jednym hoście. W przypadku prawdziwej pracy awaryjnej i odporności kontenery muszą być skalowane między hostami.
 
-Aby uzyskać więcej informacji na temat kontenerów platformy Docker, zobacz [co to jest](../microservices/container-docker-introduction/docker-defined.md)platforma Docker?
+Aby uzyskać więcej informacji na temat kontenerów platformy Docker, zobacz [co to jest platforma Docker](../microservices/container-docker-introduction/docker-defined.md).
 
 Zarządzanie kontenerami między hostami wymaga zwykle narzędzia Orchestration, takiego jak Kubernetes. Konfigurowanie rozwiązań aranżacji i zarządzanie nimi może zwiększyć obciążenie i złożoność projektów. Na szczęście wielu dostawców chmury zapewnia usługi aranżacji za pomocą rozwiązań PaaS, co upraszcza zarządzanie kontenerami.
 
@@ -109,7 +109,7 @@ Aby uzyskać więcej informacji o aranżacji, zobacz [Kubernetes na platformie A
 
 Funkcja jako usługa (FaaS) to wyspecjalizowana Usługa kontenera, która jest podobna do bezserwerowej. Określona implementacja FaaS o nazwie [OpenFaaS](https://github.com/openfaas/faas)znajduje się na szczycie kontenerów w celu zapewnienia bezserwerowych funkcji. OpenFaaS udostępnia szablony, które pakują wszystkie zależności kontenera niezbędne do uruchomienia fragmentu kodu. Używanie szablonów upraszcza proces wdrażania kodu jako jednostki funkcjonalnej. OpenFaaS docelowe architektury, które zawierają już kontenery i Koordynatory, ponieważ mogą korzystać z istniejącej infrastruktury programu. Chociaż oferuje ona funkcje bezserwerowe, w tym celu należy użyć platformy Docker i programu Orchestrator.
 
-## <a name="serverless"></a>Bezserwerowej
+## <a name="serverless"></a>Bez serwerów
 
 Architektura bezserwerowa zapewnia wyraźne rozdzielenie kodu i jego środowiska hostingu. Zaimplementuj kod w *funkcji* , która jest wywoływana przez *wyzwalacz*. Po zakończeniu tej funkcji wszystkie jej zasoby muszą być zwolnione. Wyzwalacz może być ręczny, proces przekroczenia limitu czasu, żądanie HTTP lub przekazywanie pliku. Wynikiem wyzwalacza jest wykonanie kodu. Chociaż platformy bezserwerowe różnią się, większość zapewniają dostęp do wstępnie zdefiniowanych interfejsów API i powiązań, aby usprawnić zadania, takie jak zapisywanie w bazie danych lub kolejkowanie wyników.
 
@@ -126,7 +126,7 @@ Na poniższej ilustracji przedstawiono wykresy czterech składników bezserwerow
 Zalety serwera obejmują:
 
 * **Wysoka gęstość.** Wiele wystąpień tego samego kodu bezserwerowego można uruchomić na tym samym hoście w porównaniu z kontenerami lub maszynami wirtualnymi. Wystąpienia są skalowane na wielu hostach w poziomie i w odporności.
-* Rozliczanie. Większość dostawców bezserwerowych jest rozliczana na podstawie wykonań bezserwerowych, co zapewnia duże oszczędności kosztów w niektórych scenariuszach.
+* **Rozliczanie**. Większość dostawców bezserwerowych jest rozliczana na podstawie wykonań bezserwerowych, co zapewnia duże oszczędności kosztów w niektórych scenariuszach.
 * **Natychmiastowa Skala**. Bezserwerowe skalowanie może być skalowane w celu automatycznego i szybkiego dopasowania obciążeń.
 * **Krótszy czas wprowadzenia na rynek** Deweloperzy koncentrują się na kodzie i wdrażają bezpośrednio na platformie bezserwerowej. Składniki mogą być wydzierżawione niezależnie od siebie.
 
@@ -136,12 +136,12 @@ Bezserwerowe jest najczęściej omawiane w kontekście obliczeń, ale mogą rów
 
 Istnieje szeroki zakres dostępnych opcji architektury, w tym podejście hybrydowe. Bezserwerowy upraszcza podejście, zarządzanie i koszt funkcji aplikacji przy kosztach kontroli i przenośności. Jednak wiele platform bezserwerowych uwidacznia konfigurację, aby ułatwić dostosowanie rozwiązania. Dobre praktyki programistyczne mogą również prowadzić do bardziej przenośnego kodu i mniejszej blokady platformy bezserwerowej. W poniższej tabeli przedstawiono podejścia do architektury obok siebie. Wybierz opcję bezserwerowa zależna od potrzeb skalowania, niezależnie od tego, czy chcesz zarządzać środowiskiem uruchomieniowym, a także jak można przerwać obciążenia w małych składnikach. Zapoznaj się z potencjalnymi wyzwaniami dotyczącymi bezserwerowych i innych decyzji w następnym rozdziale.
 
-|         |IaaS     |PaaS     |Kontener|Bezserwerowej|
+|         |IaaS     |PaaS     |Kontener|Bez serwerów|
 |---------|---------|---------|---------|----------|
-|**Zasięgu**|VM       |Wystąpienie |Aplikacja      |Funkcja  |
+|**Skalowanie**|VM       |Wystąpienie |aplikacja      |Funkcja  |
 |**Streszczenia**|Sprzęt|Platforma|Host systemu operacyjnego|Środowisko uruchomieniowe   |
-|**Unit** |VM       |Projekt  |Obraz    |Kod      |
-|**Okres istnienia**|Od|Dni do miesięcy|Minuty na dni|Milisekundy na minuty|
+|**Jednostka** |VM       |Project  |Image (Obraz)    |Kod      |
+|**Okres istnienia**|Miesiące|Dni do miesięcy|Minuty na dni|Milisekundy na minuty|
 |**Odpowiedzialność za**|Aplikacje, zależności, środowisko uruchomieniowe i system operacyjny|Aplikacje i zależności|Aplikacje, zależności i środowisko uruchomieniowe|Funkcja
 
 * **Skala** odnosi się do jednostki, która jest używana do skalowania aplikacji.
@@ -152,19 +152,19 @@ Istnieje szeroki zakres dostępnych opcji architektury, w tym podejście hybrydo
 
 Następny rozdział koncentruje się na architekturze bezserwerowej, przypadków użycia i wzorcach projektowych.
 
-## <a name="recommended-resources"></a>Zalecane zasoby
+## <a name="recommended-resources"></a>Polecane zasoby
 
 * [Przewodnik po architekturze aplikacji platformy Azure](https://docs.microsoft.com/azure/architecture/guide/)
-* [Usługi Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
+* [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
 * [Azure SQL](https://docs.microsoft.com/azure/sql-database)
 * [Wzorzec architektury N-warstwowej](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
 * [Kubernetes na platformie Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes)
-* [Mikrousług](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
+* [Mikrousługi](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
 * [Architektura referencyjna N-warstwowej maszyny wirtualnej](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
 * [Maszyny wirtualne](https://docs.microsoft.com/azure/virtual-machines/)
-* [Co to jest Docker?](../microservices/container-docker-introduction/docker-defined.md)
+* [Co to jest platforma Docker?](../microservices/container-docker-introduction/docker-defined.md)
 * [Wingtip bilety SaaS aplikacji](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
 
 >[!div class="step-by-step"]
->[Poprzedni](architecture-approaches.md)Następny
->[](serverless-architecture.md)
+>[Poprzedni](architecture-approaches.md)
+>[dalej](serverless-architecture.md)

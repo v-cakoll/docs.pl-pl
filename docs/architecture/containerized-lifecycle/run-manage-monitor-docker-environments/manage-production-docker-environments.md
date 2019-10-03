@@ -1,15 +1,15 @@
 ---
-title: Zarządzanie środowiskami produkcyjnymi platformy Docker
+title: Zarządzaj produkcyjnymi środowiskami platformy Docker
 description: Poznaj najważniejsze kwestie związane z zarządzaniem środowiskiem produkcyjnym opartym na kontenerach.
 ms.date: 02/15/2019
-ms.openlocfilehash: 7d10f670745f8bac1084b8c33c5acde67bac6229
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 26e7a3319afe593d75e2384d023c901a389245dc
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295623"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834504"
 ---
-# <a name="manage-production-docker-environments"></a>Zarządzanie środowiskami produkcyjnymi platformy Docker
+# <a name="manage-production-docker-environments"></a>Zarządzaj produkcyjnymi środowiskami platformy Docker
 
 Zarządzanie klastrem i aranżacja to proces sterowania grupą hostów. Może to dotyczyć dodawania i usuwania hostów z klastra, uzyskiwania informacji o bieżącym stanie hostów i kontenerów oraz uruchamiania i zatrzymywania procesów. Zarządzanie klastrem i aranżacja są ściśle powiązane z planowaniem, ponieważ harmonogram musi mieć dostęp do każdego hosta w klastrze w celu zaplanowania usług. Z tego powodu to samo narzędzie jest często używane w obu celach.
 
@@ -17,7 +17,7 @@ Zarządzanie klastrem i aranżacja to proces sterowania grupą hostów. Może to
 
 Usługa Container Service umożliwia szybkie wdrażanie popularnych rozwiązań typu "klaster" typu "open source" i "aranżacja". Używa obrazów platformy Docker, aby upewnić się, że kontenery aplikacji są w pełni przenośne. Za pomocą usługi Container Service można wdrożyć systemy DC/OS (obsługiwane przez mesosphere i Apache Mesos) oraz klastry Docker Swarm z szablonami Azure Resource Manager lub Azure Portal, aby mieć pewność, że można skalować te aplikacje do tysięcy — nawet dziesiątki tysięcy — z opakowania.
 
-Te klastry są wdrażane przy użyciu usługi Azure Virtual Machine Scale Sets, a klastry wykorzystują oferty dotyczące sieci i magazynu platformy Azure. Aby uzyskać dostęp do usługi Container Service, musisz mieć subskrypcję platformy Azure. Usługa Container Service umożliwia korzystanie z funkcji klasy korporacyjnej platformy Azure z zachowaniem możliwości przenoszenia aplikacji, w tym w warstwach aranżacji.
+Te klastry są wdrażane za pomocą zestawów skali maszyny wirtualnej Azure, a podczas pracy korzystają z ofert magazynu i pracy w sieci na platformie Azure. Aby uzyskać dostęp do usługi Container Service, musisz mieć subskrypcję platformy Azure. Usługa Container Service umożliwia korzystanie z funkcji klasy korporacyjnej platformy Azure z zachowaniem możliwości przenoszenia aplikacji, w tym w warstwach aranżacji.
 
 W tabeli 6-1 przedstawiono typowe narzędzia do zarządzania związane z koordynatorami, harmonogramami i platformą klastrowania.
 
@@ -26,9 +26,9 @@ W tabeli 6-1 przedstawiono typowe narzędzia do zarządzania związane z koordyn
 | Narzędzia do zarządzania | Opis | Powiązane usługi Orchestrator |
 |------------------|-------------|-----------------------|
 | [Azure Monitor kontenerów](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Dedykowane narzędzie do zarządzania Kubernetes platformy Azure | Usługi Azure Kubernetes Services (AKS) |
-| [Interfejs użytkownika sieci Web Kubernetes (pulpit nawigacyjny)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Narzędzie do zarządzania Kubernetes, które umożliwia monitorowanie lokalnego klastra Kubernetes i zarządzanie nim | Usługa Azure Kubernetes Service (AKS)<br/>Kubernetes lokalny |
+| [Interfejs użytkownika sieci Web Kubernetes (pulpit nawigacyjny)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Narzędzie do zarządzania Kubernetes, które umożliwia monitorowanie lokalnego klastra Kubernetes i zarządzanie nim | Azure Kubernetes Service (AKS)<br/>Kubernetes lokalny |
 | [Azure Portal Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Service Fabric Explorer platformy Azure](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | Wersja online i klasyczna do zarządzania klastrami Service Fabric, na platformie Azure, lokalnie i w innych chmurach | Azure Service Fabric |
-| [Monitorowanie kontenerów (Azure Monitor)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | Ogólne rozwiązanie do monitorowania zarządzania kontenerami. Może zarządzać klastrami Kubernetes za [Azure monitor kontenerów](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview). | Azure Service Fabric<br/>Usługa Azure Kubernetes Service (AKS)<br/>Mesosphere DC/OS i innych. |
+| [Monitorowanie kontenerów (Azure Monitor)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | Ogólne rozwiązanie do monitorowania zarządzania kontenerami. Może zarządzać klastrami Kubernetes za [Azure monitor kontenerów](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview). | Azure Service Fabric<br/>Azure Kubernetes Service (AKS)<br/>Mesosphere DC/OS i innych. |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 
@@ -41,5 +41,5 @@ Poniżej przedstawiono Service Fabric narzędzia do zarządzania:
 - [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) to WYSPECJALIZOWANY interfejs użytkownika sieci Web i narzędzie do obsługi wielu platform, które zapewnia wgląd w dane i pewne operacje w klastrze Service Fabric, z punktu widzenia węzłów/maszyn wirtualnych oraz z punktu widzenia aplikacji i usług.
 
 >[!div class="step-by-step"]
->[Poprzedni](run-microservices-based-applications-in-production.md)Następny
->[](monitor-containerized-application-services.md)
+>[Poprzedni](run-microservices-based-applications-in-production.md)
+>[dalej](monitor-containerized-application-services.md)

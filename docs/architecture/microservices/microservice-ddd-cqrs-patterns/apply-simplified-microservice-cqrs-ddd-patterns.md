@@ -1,13 +1,13 @@
 ---
-title: Stosowanie uproszczonych wzorców CQRS i DDD w mikrousługach
+title: Stosowanie uproszczonych wzorców CQRS i DDD w mikrousłudze
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z ogólną relacją między wzorcami CQRS i DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: 36bffce37176aed6c7d9daea7f2995952b58e895
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f42b553fd30fdffdc6e325b11740fe9162aab7c8
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296002"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834315"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Stosowanie uproszczonych wzorców CQRS i DDD w mikrousłudze
 
@@ -27,17 +27,19 @@ CQRS oznacza, że istnieją dwa obiekty dla operacji odczytu/zapisu, gdzie w inn
 
 Przykładem tego rodzaju usługi jest kolejność mikrousług z eShopOnContainers odwołania do aplikacji. Ta usługa implementuje mikrousługi na podstawie uproszczonego podejścia CQRS. Używa jednego źródła danych lub bazy danych, ale dwa modele logiczne Plus w przypadku domen transakcyjnych, jak pokazano na rysunku 7-2.
 
-![Mikrousługa określania kolejności logicznej obejmuje jej bazę danych porządkowania, która może być lub nie znajduje się na tym samym hoście platformy Docker. Baza danych znajdująca się na tym samym hoście platformy Docker jest dobrym rozwiązaniem do programowania, ale nie dla środowiska produkcyjnego.](./media/image2.png)
+![Diagram przedstawiający uproszczony CQRS i DDD mikrousług.](./media/apply-simplified-microservice-cqrs-ddd-patterns/simplified-cqrs-ddd-microservice.png)
 
 **Rysunek 7-2**. Uproszczona mikrousługa oparta na CQRS i DDD
 
+Mikrousługa logiczna "porządkowanie" obejmuje jej bazę danych porządkowania, która może być, ale nie musi być tym samym hostem platformy Docker. Baza danych znajdująca się na tym samym hoście platformy Docker jest dobrym rozwiązaniem do programowania, ale nie dla środowiska produkcyjnego.
+
 Warstwa aplikacji może być interfejsem API sieci Web. Ważnym aspektem projektowym jest to, że mikrousługa dzieli zapytania i modele widoków (modele danych specjalnie utworzone dla aplikacji klienckich) z poleceń, modelu domeny i transakcji po wzorcu CQRS. Takie podejście utrzymuje zapytania niezależne od ograniczeń i ograniczeń pochodzących z wzorców DDD, które mają sens tylko w przypadku transakcji i aktualizacji, jak wyjaśniono w kolejnych sekcjach.
 
-## <a name="additional-resources"></a>Dodatkowe zasoby
+## <a name="additional-resources"></a>Zasoby dodatkowe
 
-- **Greg Young. Przechowywanie wersji w systemie** źródła zdarzeń (bezpłatny do odczytu online — książka elektroniczna) \
+- **Greg Young. Przechowywanie wersji w systemie źródła zdarzeń** (bezpłatny do odczytu online — książka elektroniczna) \
    <https://leanpub.com/esversioning/read>
 
 >[!div class="step-by-step"]
->[Poprzedni](index.md)Następny
->[](eshoponcontainers-cqrs-ddd-microservice.md)
+>[Poprzedni](index.md)
+>[dalej](eshoponcontainers-cqrs-ddd-microservice.md)

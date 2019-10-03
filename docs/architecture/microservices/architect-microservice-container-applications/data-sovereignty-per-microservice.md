@@ -1,15 +1,15 @@
 ---
-title: Suwerenność danych przypadająca na mikrousługę
+title: Niezależność danych na mikrousługi
 description: Niezależność danych jest jednym z najważniejszych punktów mikrousług. Każda mikrousługa musi być jedynym właścicielem swojej bazy danych, udostępniając ją innym osobom. Oczywiście wszystkie wystąpienia mikrousług nawiązują połączenie z tą samą bazą danych o wysokiej dostępności.
 ms.date: 09/20/2018
-ms.openlocfilehash: cd7be23800394b231e15bdc503d15a960a25a20a
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 3261446a84038b7b634242b0a0737472965168de
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "70296805"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834464"
 ---
-# <a name="data-sovereignty-per-microservice"></a>Suwerenność danych przypadająca na mikrousługę
+# <a name="data-sovereignty-per-microservice"></a>Niezależność danych na mikrousługi
 
 Ważną regułą dla architektury mikrousług jest to, że każda mikrousługa musi być własnością swoich danych i logiki domeny. Tak samo jak Pełna aplikacja jest właścicielem swojej logiki i danych, dlatego musi każda mikrousługa była własnością logiki i danych w autonomicznym cyklu życia z niezależnym wdrożeniem na mikrousługę.
 
@@ -19,13 +19,13 @@ Ta zasada jest podobna do [projektu opartego na domenie (DDD)](https://en.wikipe
 
 Z drugiej strony podejście tradycyjne (monolityczne dane) używane w wielu aplikacjach ma jedną scentralizowaną bazę danych lub kilka baz danych. Jest to często znormalizowana baza danych SQL, która jest używana dla całej aplikacji i wszystkich jej wewnętrznych podsystemów, jak pokazano na rysunku 4-7.
 
-![W tradycyjnym podejściu istnieje pojedyncza baza danych współdzielona przez wszystkie usługi, zazwyczaj w architekturze warstwowej. W podejściu mikrousług każda mikrousługa posiada swój model/dane](./media/image7.png)
+![Diagram przedstawiający dwa podejścia do bazy danych.](./media/data-sovereignty-per-microservice/data-sovereignty-comparison.png)
 
 **Rysunek 4-7**. Porównanie suwerenności danych: monolityczna baza danych a mikrousługi
 
-Scentralizowane podejście do bazy danych początkowo wygląda prostsze i wygląda na to, aby umożliwić ponowne użycie jednostek w różnych podsystemach, aby zapewnić spójność wszystkich elementów. Jednak rzeczywistość ma duże tabele, które obsługują wiele różnych podsystemów i zawiera atrybuty i kolumny, które nie są potrzebne w większości przypadków. Jest to podobne do próby użycia tej samej mapy fizycznej dla górach krótkiej, co zajmuje się codziennym podróżem i nauką geograficzną.
+W tradycyjnym podejściu istnieje pojedyncza baza danych współdzielona przez wszystkie usługi, zazwyczaj w architekturze warstwowej. W podejściu mikrousług każda mikrousługa posiada swój model/dane. Scentralizowane podejście do bazy danych początkowo wygląda prostsze i wygląda na to, aby umożliwić ponowne użycie jednostek w różnych podsystemach, aby zapewnić spójność wszystkich elementów. Jednak rzeczywistość ma duże tabele, które obsługują wiele różnych podsystemów i zawiera atrybuty i kolumny, które nie są potrzebne w większości przypadków. Jest to podobne do próby użycia tej samej mapy fizycznej dla górach krótkiej, co zajmuje się codziennym podróżem i nauką geograficzną.
 
-Aplikacja monolityczna z zazwyczaj jedną relacyjną bazą danych ma dwie istotne zalety: [Transakcje kwasowe](https://en.wikipedia.org/wiki/ACID) i język SQL — działają we wszystkich tabelach i danych związanych z Twoją aplikacją. Takie podejście umożliwia łatwe pisanie zapytania, które łączy dane z wielu tabel.
+Aplikacja monolityczna z zazwyczaj jedną relacyjną bazą danych ma dwie istotne zalety: [transakcje kwasowe](https://en.wikipedia.org/wiki/ACID) i język SQL — zarówno pracujące we wszystkich tabelach, jak i danych związanych z Twoją aplikacją. Takie podejście umożliwia łatwe pisanie zapytania, które łączy dane z wielu tabel.
 
 Jednak dostęp do danych jest znacznie bardziej skomplikowany po przejściu do architektury mikrousług. Jednak nawet w przypadku, gdy w ramach mikrousług lub ograniczonego kontekstu nie można używać transakcji KWASowych, dane należące do każdej mikrousługi są prywatne dla tej mikrousługi i można uzyskać do nich dostęp tylko za pośrednictwem interfejsu API mikrousług. Hermetyzowanie danych gwarantuje, że mikrousługi są luźno powiązane i mogą być od siebie niezależne. Jeśli wiele usług uzyskuje dostęp do tych samych danych, aktualizacje schematu wymagają skoordynowanej aktualizacji do wszystkich usług. Spowoduje to przerwanie autonomii cyklu życia mikrousług. Jednak rozproszone struktury danych oznaczają, że nie można wykonać jednej KWAŚNej transakcji na mikrousługach. To z kolei oznacza, że należy użyć spójności ostatecznej, gdy proces biznesowy obejmuje wiele mikrousług. Jest to znacznie trudniejsze do zaimplementowania niż proste sprzężenia SQL, ponieważ nie można utworzyć ograniczeń integralności ani używać transakcji rozproszonych między oddzielnymi bazami danych, ponieważ wyjaśnimy to później. Podobnie wiele innych funkcji relacyjnych baz danych nie jest dostępnych w wielu mikrousługach.
 
@@ -45,9 +45,9 @@ Należy zaznaczyć, że zdefiniowanie usługi dla każdego powiązanego kontekst
 
 DDD zalety mikrousług, uzyskując rzeczywiste granice w postaci rozproszonych mikrousług. Jednak pomysły, takie jak nieudostępniające modelu między mikrousługami, są również potrzebne w ograniczonym kontekście.
 
-### <a name="additional-resources"></a>Dodatkowe zasoby
+### <a name="additional-resources"></a>Zasoby dodatkowe
 
-- **Krzysztof Richardson. Znaczne Baza danych na usługę** \
+- **Krzysztof Richardson. Wzorzec: baza danych na usługę** \
   <https://microservices.io/patterns/data/database-per-service.html>
 
 - **Fowlera Martin. BoundedContext** \
@@ -60,5 +60,5 @@ DDD zalety mikrousług, uzyskując rzeczywiste granice w postaci rozproszonych m
   <https://www.infoq.com/articles/ddd-contextmapping>
 
 >[!div class="step-by-step"]
->[Poprzedni](microservices-architecture.md)Następny
->[](logical-versus-physical-architecture.md)
+>[Poprzedni](microservices-architecture.md)
+>[dalej](logical-versus-physical-architecture.md)

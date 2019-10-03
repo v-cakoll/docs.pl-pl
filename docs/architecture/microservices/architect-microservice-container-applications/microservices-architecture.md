@@ -2,12 +2,12 @@
 title: Architektura mikrousług
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Widok 30,000 metrów architektury mikrousług.
 ms.date: 09/20/2018
-ms.openlocfilehash: 3cf2a94140042d3cf76b5b63fe4e98638c56dbfe
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d1c58d218be9e5f8c0ae8ae732f9bdd06674a2c2
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295479"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834385"
 ---
 # <a name="microservices-architecture"></a>Architektura mikrousług
 
@@ -19,11 +19,11 @@ Dlaczego architektura mikrousług? Krótko mówiąc, zapewnia elastyczność dł
 
 Dodatkową korzyścią jest możliwość niezależnego skalowania mikrousług. Zamiast korzystać z pojedynczej monolitycznej aplikacji, którą trzeba skalować w poziomie jako jednostki, można zamiast tego skalować konkretne mikrousługi. Dzięki temu można skalować tylko obszar funkcjonalny wymagający większej mocy obliczeniowej lub przepustowości sieci, aby obsługiwać zapotrzebowanie, zamiast skalować inne obszary aplikacji, które nie muszą być skalowane. Oznacza to oszczędność kosztów, ponieważ potrzeba mniej sprzętu.
 
-![W tradycyjnych metodach monolitycznych aplikacja skaluje się przez klonowanie całej aplikacji na kilku serwerach/maszynach wirtualnych. W podejściu mikrousług funkcje są segregowane w mniejszych usługach, więc każda usługa może być skalowana niezależnie.](./media/image6.png)
+![Diagram różnic między dwoma metodami wdrażania.](./media/microservices-architecture/monolith-deployment-vs-microservice-approach.png)
 
 **Rysunek 4-6**. Niemonolityczne wdrożenie a podejście mikrousług
 
-Jak pokazano na rysunku 4-6, podejście mikrousługowe umożliwia zmiany Agile i szybką iterację każdej mikrousługi, ponieważ można zmienić konkretne, małe obszary złożonych, dużych i skalowalnych aplikacji.
+Jak pokazano na rysunku 4-6, w tradycyjnych podejścia monolitycznego aplikacja skaluje się przez klonowanie całej aplikacji na kilku serwerach/maszynach wirtualnych. W podejściu mikrousług funkcje są segregowane w mniejszych usługach, więc każda usługa może być skalowana niezależnie. Podejście mikrousługowe umożliwia zmiany Agile i szybką iterację każdej mikrousługi, ponieważ można zmienić konkretne, małe obszary złożonych, dużych i skalowalnych aplikacji.
 
 Projektowanie szczegółowych aplikacji opartych na mikrousługach pozwala na ciągłą integrację i ciągłe dostarczanie. Przyspiesza również dostarczanie nowych funkcji do aplikacji. Szczegółowe składanie aplikacji umożliwia również uruchamianie i testowanie mikrousług w izolacji oraz niezależne programowanie z zachowaniem wyraźnych umów między nimi. Dopóki nie zmienisz interfejsów lub kontraktów, możesz zmienić wewnętrzną implementację dowolnej mikrousługi lub dodać nowe funkcje bez przerywania innych mikrousług.
 
@@ -41,23 +41,23 @@ Poniżej przedstawiono ważne aspekty umożliwiające pomyślne przechodzenie do
 
 Z tych wskazówek tylko pierwsze trzy zostały omówione lub wprowadzone w tym przewodniku. Ostatnie dwa punkty, które są związane z cyklem życia aplikacji, zostały omówione w dodatkowym [cyklu życia aplikacji platformy Docker z platformą i narzędziami firmy Microsoft](https://aka.ms/dockerlifecycleebook) .
 
-## <a name="additional-resources"></a>Dodatkowe zasoby
+## <a name="additional-resources"></a>Zasoby dodatkowe
 
-- **Oznacz Russinovich. Mikrousług Rewolucja aplikacji obsługiwanej przez chmurę** \
+- **Oznacz Russinovich. Mikrousługi: obroty aplikacji obsługiwane przez @no__t w chmurze**— 1
   <https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/>
 
-- **Fowlera Martin. Mikrousług** \
+- **Fowlera Martin. Mikrousługi** \
   <https://www.martinfowler.com/articles/microservices.html>
 
 - **Fowlera Martin. Wymagania wstępne mikrousług** \
   <https://martinfowler.com/bliki/MicroservicePrerequisites.html>
 
-- **Jimmy Nilsson. Przetwarzanie w chmurze fragmentów** \
+- **Jimmy Nilsson. Przetwarzanie w chmurze fragmentu** \
   <https://www.infoq.com/articles/CCC-Jimmy-Nilsson>
 
-- **Cesar de La Torre. Cykl życia aplikacji platformy Docker w kontenerze z platformą i narzędziami** firmy Microsoft (do pobrania książek elektronicznych) \
+- **Cesar de La Torre. Cykl życia aplikacji platformy Docker w kontenerze z platformą i narzędziami firmy Microsoft (do** pobrania książek elektronicznych) \
   <https://aka.ms/dockerlifecycleebook>
 
 >[!div class="step-by-step"]
->[Poprzedni](service-oriented-architecture.md)Następny
->[](data-sovereignty-per-microservice.md)
+>[Poprzedni](service-oriented-architecture.md)
+>[dalej](data-sovereignty-per-microservice.md)

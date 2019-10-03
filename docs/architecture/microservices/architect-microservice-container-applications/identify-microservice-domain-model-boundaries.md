@@ -1,13 +1,13 @@
 ---
-title: Identyfikowanie ograniczeń modelu domeny dla poszczególnych mikrousług
+title: Identyfikowanie granic modelu domeny dla każdej mikrousługi
 description: Zapoznaj się z istotą partycjonowania dużej aplikacji do mikrousług w celu osiągnięcia architektury dźwiękowej.
 ms.date: 09/20/2018
-ms.openlocfilehash: aa903e13b20be1084fad60e6fb7bbb1c61403deb
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9c433066dd8e93dbb09b15e58c9c85617775723d
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295503"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834413"
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>Określ granice modelu domeny dla każdej mikrousługi
 
@@ -27,21 +27,21 @@ Wiadomo, że masz odpowiednie granice i rozmiary każdego modelu BC i domeny, je
 
 Prawdopodobnie najlepszą odpowiedzią na pytanie, jak duży model domeny dla każdej mikrousługi powinien być następujący: powinien mieć autonomiczną metodę BC, jak to możliwe, która pozwala na działanie bez konieczności ciągłego przełączania się do innych kontekstów (innych modele mikrousług). Na rysunku 4-10 można zobaczyć, jak wiele mikrousług (wiele BCs) ma własny model i jak można definiować ich jednostki, w zależności od określonych wymagań dla każdej z określonych domen w aplikacji.
 
-![Jednostki w kilku granicach modelu (powiązane konteksty), w których ta sama jednostka jest wyświetlana jako "Users", "Kupcs", "Payers" i "Customers" w zależności od powiązanego kontekstu](./media/image10.png)
+![Diagram przedstawiający jednostki w kilku granicach modeli.](./media/identify-microservice-domain-model-boundaries/identify-entities-microservice-model-boundries.png)
 
 **Rysunek 4-10**. Identyfikowanie jednostek i granic modelu mikrousług
 
-Rysunek 4-10 ilustruje przykładowy scenariusz związany z systemem zarządzania konferencją online. Zidentyfikowano kilka usług BCs, które mogą być zaimplementowane jako mikrousługi, na podstawie domen zdefiniowanych dla Ciebie przez ekspertów domeny. Jak widać, istnieją jednostki, które znajdują się tylko w jednym modelu mikrousług, np. w przypadku płatności w mikrousłudze. Ich wdrożenie będzie łatwe.
+Rysunek 4-10 ilustruje przykładowy scenariusz związany z systemem zarządzania konferencją online. Ta sama jednostka jest wyświetlana jako "Users", "Kupcs", "Payers" i "Customers" w zależności od kontekstu ograniczonego. Zidentyfikowano kilka usług BCs, które mogą być zaimplementowane jako mikrousługi, na podstawie domen zdefiniowanych dla Ciebie przez ekspertów domeny. Jak widać, istnieją jednostki, które znajdują się tylko w jednym modelu mikrousług, np. w przypadku płatności w mikrousłudze. Ich wdrożenie będzie łatwe.
 
 Można jednak również mieć jednostki o innym kształcie, ale współużytkować tę samą tożsamość w modelach wielu domen z wielu mikrousług. Na przykład jednostka użytkownika jest identyfikowana w mikrousłudze konferencji do zarządzania. Ten sam użytkownik, o tej samej tożsamości, jest jednym z nazwanymi kupującymi w mikrousłudze porządkowania lub jeden nazwany płatnika w mikrousłudze płatniczej, a nawet jeden nazwany klient w mikrousłudze klienta. Wynika to z faktu, że w zależności od [języka powszechnie](https://martinfowler.com/bliki/UbiquitousLanguage.html) używanego przez każdego eksperta domeny użytkownik może mieć inną perspektywę nawet z innymi atrybutami. Jednostka użytkownika w modelu mikrousług o nazwie Zarządzanie konferencjami może mieć większość prywatnych atrybutów danych. Jednak ten sam użytkownik w kształcie płatnika w płatności mikrousług lub w kształcie klienta w usłudze mikrousług klienta może nie potrzebować tej samej listy atrybutów.
 
 Podobne podejście przedstawiono na rysunku 4-11.
 
-![Podczas deredagowania tradycyjnego modelu danych między ograniczonymi kontekstami można mieć różne jednostki, które współużytkują tę samą tożsamość (jest to również użytkownik) z innymi atrybutami w każdym związanym kontekście.](./media/image11.png)
+![Diagram przedstawiający sposób rozdzielania modelu danych na wiele modeli domen.](./media/identify-microservice-domain-model-boundaries/decompose-traditional-data-models.png)
 
 **Rysunek 4-11**. Tworzenie tradycyjnych modeli danych w wielu modelach domen
 
-Aby zobaczyć, jak użytkownik jest obecny w modelu mikrousług zarządzania konferencjami jako podmiot użytkownika i jest również obecny w formie jednostki kupca w mikrousłudze cenowej, z alternatywnymi atrybutami lub szczegółami dotyczącymi użytkownika, gdy jest on rzeczywiście nabywcą. Każda mikrousługa lub BC może nie potrzebować wszystkich danych związanych z jednostką użytkownika, w zależności od problemu do rozwiązania lub kontekstu. Na przykład w modelu mikrousług cenowych nie jest potrzebny adres ani nazwa użytkownika, tylko identyfikator (tożsamość) i stan, które będą miały wpływ na rabaty w przypadku, gdy ceny są dostępne dla każdego nabywcy.
+Podczas deredagowania tradycyjnego modelu danych między ograniczonymi kontekstami można mieć różne jednostki, które współużytkują tę samą tożsamość (jest to również użytkownik) z innymi atrybutami w każdym związanym kontekście. Aby zobaczyć, jak użytkownik jest obecny w modelu mikrousług zarządzania konferencjami jako podmiot użytkownika i jest również obecny w formie jednostki kupca w mikrousłudze cenowej, z alternatywnymi atrybutami lub szczegółami dotyczącymi użytkownika, gdy jest on rzeczywiście nabywcą. Każda mikrousługa lub BC może nie potrzebować wszystkich danych związanych z jednostką użytkownika, w zależności od problemu do rozwiązania lub kontekstu. Na przykład w modelu mikrousług cenowych nie jest potrzebny adres ani nazwa użytkownika, tylko identyfikator (tożsamość) i stan, które będą miały wpływ na rabaty w przypadku, gdy ceny są dostępne dla każdego nabywcy.
 
 Jednostka stanowiska ma taką samą nazwę, ale różne atrybuty w każdym modelu domeny. Jednak stanowisko ma tożsamość na podstawie tego samego identyfikatora, co dzieje się z użytkownikami i nabywcą.
 
@@ -50,5 +50,5 @@ Zasadniczo istnieje współdzielona koncepcja użytkownika, która istnieje w wi
 Istnieje kilka korzyści, aby nie współużytkować tej samej jednostki użytkownika z tą samą liczbą atrybutów w różnych domenach. Jedną z korzyści jest zredukowanie poziomu duplikowania, dzięki czemu modele mikrousług nie mają żadnych niepotrzebnych danych. Kolejną zaletą jest posiadanie mikrousługi, która jest właścicielem pewnego typu danych na jednostkę, tak aby aktualizacje i zapytania dla tego typu danych były sterowane tylko przez tę mikrousługę.
 
 >[!div class="step-by-step"]
->[Poprzedni](distributed-data-management.md)Następny
->[](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)
+>[Poprzedni](distributed-data-management.md)
+>[dalej](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)

@@ -1,17 +1,17 @@
 ---
-title: Problemy i rozwiązania dotyczące rozproszonego zarządzania danymi
+title: Wyzwania i rozwiązania dotyczące rozproszonego zarządzania danymi
 description: Zapoznaj się z wyzwaniami i rozwiązaniami dotyczącymi rozproszonego zarządzania danymi na świecie mikrousług.
 ms.date: 09/20/2018
-ms.openlocfilehash: 7733a4523e147591151cd0dda26c43992dbe9a41
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c30de24591d5a73fd34087f34a69e9c7ed54cd35
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295525"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834457"
 ---
-# <a name="challenges-and-solutions-for-distributed-data-management"></a>Problemy i rozwiązania dotyczące rozproszonego zarządzania danymi
+# <a name="challenges-and-solutions-for-distributed-data-management"></a>Wyzwania i rozwiązania dotyczące rozproszonego zarządzania danymi
 
-## <a name="challenge-1-how-to-define-the-boundaries-of-each-microservice"></a>Wyzwanie \#1: Jak zdefiniować granice każdej mikrousług
+## <a name="challenge-1-how-to-define-the-boundaries-of-each-microservice"></a>Wyzwanie \#1: jak definiować granice każdej mikrousługi
 
 Definiowanie granic mikrousług jest prawdopodobnie pierwszym wyzwaniem. Każda mikrousługa musi być częścią aplikacji, a każda mikrousługa powinna być autonomiczna ze wszystkimi korzyściami i wyzwaniami, które przekazuje. Ale jak zidentyfikować te granice?
 
@@ -19,7 +19,7 @@ Najpierw należy skoncentrować się na modelach domeny logicznej aplikacji i po
 
 Sposób identyfikacji granic między wieloma kontekstami aplikacji z inną domeną dla każdego kontekstu to dokładne określenie granic dla każdej mikrousługi biznesowej i powiązanego modelu domeny i danych. Zawsze należy podjąć próbę zminimalizowania sprzęgu między tymi mikrousługami. Ten przewodnik zawiera bardziej szczegółowe informacje o tej identyfikacji i projekcie modelu domeny w sekcji [Identyfikowanie granic modelu domeny dla każdej mikrousługi](identify-microservice-domain-model-boundaries.md) później.
 
-## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>Wyzwanie \#2: Jak tworzyć zapytania, które pobierają dane z kilku mikrousług
+## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>Wyzwanie \#2: jak tworzyć zapytania, które pobierają dane z kilku mikrousług
 
 Drugim wyzwaniem jest zaimplementowanie zapytań, które pobierają dane z kilku mikrousług, jednocześnie unikając komunikacji między mikrousługami ze zdalnych aplikacji klienckich. Przykładem może być pojedynczy ekran z poziomu aplikacji mobilnej, który musi zawierać informacje o użytkowniku, którego właścicielem jest koszyk, katalog i mikrousługi tożsamości użytkowników. Innym przykładem jest złożony raport obejmujący wiele tabel znajdujących się w wielu mikrousługach. Odpowiednie rozwiązanie zależy od złożoności zapytań. Jednak w dowolnym przypadku trzeba będzie mieć możliwość agregowania informacji, jeśli chcesz zwiększyć efektywność komunikacji w systemie. Poniżej przedstawiono najpopularniejsze rozwiązania.
 
@@ -37,7 +37,7 @@ Należy pamiętać, że ta Scentralizowana baza danych byłaby używana tylko w 
 
 Jeśli jednak projekt aplikacji obejmuje stałe agregowanie informacji z wielu mikrousług dla złożonych zapytań, może to być objawem nieprawidłowego projektu — mikrousługa powinna być tak izolowana jak to możliwe z innych mikrousług. (Spowoduje to wykluczenie raportów/analiz, które zawsze powinny korzystać z scentralizowanych centralnych baz danych). Występowanie tego problemu często może być przyczyną scalania mikrousług. Należy zrównoważyć autonomię ewolucji i wdrożenia każdej mikrousługi przy użyciu silnych zależności, spójności i agregacji danych.
 
-## <a name="challenge-3-how-to-achieve-consistency-across-multiple-microservices"></a>Wyzwanie \#3: Jak zapewnić spójność w wielu mikrousługach
+## <a name="challenge-3-how-to-achieve-consistency-across-multiple-microservices"></a>Wyzwanie \#3: jak zapewnić spójność w wielu mikrousługach
 
 Jak wspomniano wcześniej, dane należące do każdej mikrousługi są prywatne dla tej mikrousługi i można uzyskać do nich dostęp tylko przy użyciu interfejsu API mikrousług. Z tego względu zaprezentowano wyzwanie polegające na implementacji kompleksowych procesów firmy przy zachowaniu spójności w wielu mikrousługach.
 
@@ -47,7 +47,7 @@ W hipotetycznej wersji monolitycznej tej aplikacji po zmianie ceny w tabeli Prod
 
 Jednak w aplikacji opartej na mikrousługach tabele produktów i koszyka są własnością odpowiednich mikrousług. Żadna mikrousługa nie powinna obejmować tabel/magazynów należących do innej mikrousług w swoich własnych transakcjach, a nie nawet zapytań bezpośrednich, jak pokazano na rysunku 4-9.
 
-![Mikrousługa nie może bezpośrednio uzyskać dostępu do tabeli w innej mikrousług, w celu zsynchronizowania danych należy użyć spójności ostatecznej.](./media/image9.png)
+![Diagram przedstawiający, że dane bazy danych mikrousług nie mogą być udostępniane.](./media/distributed-data-management/indepentent-microservice-databases.png)
 
 **Rysunek 4-9**. Mikrousługa nie może bezpośrednio uzyskać dostępu do tabeli w innej mikrousłudze
 
@@ -59,7 +59,7 @@ Ponadto w przypadku transakcji zatwierdzania w stylu KWASowym lub dwufazowym nie
 
 Dobrym rozwiązaniem dla tego problemu jest użycie ostatecznej spójności między mikrousługami przegubowymi przy użyciu komunikacji opartej na zdarzeniach i systemu publikowania i subskrybowania. Te tematy zostały omówione w sekcji [asynchroniczna komunikacja oparta na zdarzeniach](asynchronous-message-based-communication.md#asynchronous-event-driven-communication) w dalszej części tego przewodnika.
 
-## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>Wyzwanie \#4: Projektowanie komunikacji między granicami mikrousług
+## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>Wyzwanie \#4: jak projektować komunikację między granicami mikrousług
 
 Komunikacja między granicami mikrousług jest rzeczywistym wyzwaniem. W tym kontekście komunikacja nie odnosi się do używanego protokołu (HTTP i REST, AMQP, Messaging itd.). Zamiast tego określa styl komunikacji, który powinien być używany, a zwłaszcza na to, jak to mikrousługi. W zależności od poziomu sprzęgu, gdy wystąpi awaria, wpływ tego błędu na system różni się znacznie.
 
@@ -81,15 +81,15 @@ W związku z tym w celu wymuszenia autonomii mikrousług i uzyskania lepszej odp
 
 Korzystanie z komunikacji asynchronicznej jest wyjaśnione z dodatkowymi szczegółami w dalszej części tego przewodnika w sekcjach [asynchronicznej integracji mikrousług wymusza międzyusługową](communication-in-microservice-architecture.md#asynchronous-microservice-integration-enforces-microservices-autonomy) i [asynchroniczną komunikację opartą na komunikatach](asynchronous-message-based-communication.md).
 
-## <a name="additional-resources"></a>Dodatkowe zasoby
+## <a name="additional-resources"></a>Zasoby dodatkowe
 
-- **Theorem CAP** \
+- **Cap theorem** \
   <https://en.wikipedia.org/wiki/CAP_theorem>
 
-- **Spójność ostateczna** \
+- @No__t **spójności ostatecznej**— 1
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Podstawy spójności danych** \
+- @No__t o **spójności danych**-1
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
 - **Fowlera Martin. CQRS (Command and Query Responsibility Segregation)**  \
@@ -98,15 +98,15 @@ Korzystanie z komunikacji asynchronicznej jest wyjaśnione z dodatkowymi szczeg�
 - **Widok z materiałami** \
   <https://docs.microsoft.com/azure/architecture/patterns/materialized-view>
 
-- **Charles wiersz. Kwas a OPIERA Przesunięcie pH przetwarzania transakcji bazy danych** \
+- **Charles wiersz. Kwas a BASE: przesunięcie pH przetwarzania transakcji bazy danych** \
   <https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/>
 
 - **Kompensowanie transakcji** \
   <https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction>
 
-- **Udi Dahan. Składowe zorientowane na usługę** \
+- **UDI Dahan. Składowe zorientowane na usługę** \
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 >[!div class="step-by-step"]
->[Poprzedni](logical-versus-physical-architecture.md)Następny
->[](identify-microservice-domain-model-boundaries.md)
+>[Poprzedni](logical-versus-physical-architecture.md)
+>[dalej](identify-microservice-domain-model-boundaries.md)

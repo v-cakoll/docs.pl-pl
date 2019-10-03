@@ -2,12 +2,12 @@
 title: Asynchroniczna komunikacja oparta na komunikatach
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Asynchroniczna komunikacja oparta na komunikatach to podstawowe koncepcje w architekturze mikrousług, ponieważ jest to najlepszy sposób, aby mikrousługi były niezależne od siebie, a także ostatecznie zsynchronizowane.
 ms.date: 09/20/2018
-ms.openlocfilehash: 65bd0cd2b316fe7011ad8e878852547ee5949f09
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 109737a04eac8cfc30c746d283ca71c697f5b29d
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295573"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834485"
 ---
 # <a name="asynchronous-message-based-communication"></a>Asynchroniczna komunikacja oparta na komunikatach
 
@@ -31,7 +31,7 @@ Komunikacja oparta na komunikatach pojedynczego odbiorcy jest szczególnie przyd
 
 Po rozpoczęciu wysyłania komunikacji opartej na komunikatach (z poleceniami lub zdarzeniami) należy unikać mieszania komunikacji opartej na komunikatach z synchroniczną komunikacją protokołu HTTP.
 
-![Jedna mikrousługa otrzymująca komunikat asynchroniczny](./media/image18.png)
+![Jedna mikrousługa otrzymująca komunikat asynchroniczny](./media/asynchronous-message-based-communication/single-receiver-message-based-communication.png)
 
 **Rysunek 4-18**. Jedna mikrousługa otrzymująca komunikat asynchroniczny
 
@@ -53,11 +53,11 @@ Jak wspomniano wcześniej w sekcji [wyzwania i rozwiązania dotyczące zarządza
 
 Ważnym punktem jest to, że możesz chcieć komunikować się z wieloma mikrousługami subskrybowanymi na tym samym zdarzeniu. W tym celu można użyć komunikatów publikowania/subskrybowania na podstawie komunikacji sterowanej zdarzeniami, jak pokazano na rysunku 4-19. Ten mechanizm publikowania/subskrybowania nie jest wyłączny dla architektury mikrousług. Jest to podobne do sposobu, w jaki [ograniczone konteksty](https://martinfowler.com/bliki/BoundedContext.html) w DDD powinny komunikować się, lub w sposób propagowania aktualizacji z bazy danych zapisu do bazy danych odczytu w wzorcu architektury [Command and Query Responsibility Segregation (CQRS)](https://martinfowler.com/bliki/CQRS.html) . Celem jest zachowanie spójności ostatecznej między wieloma źródłami danych w systemie rozproszonym.
 
-![W przypadku asynchronicznej komunikacji opartej na zdarzeniach jedna mikrousługa publikuje zdarzenia do magistrali zdarzeń, a wiele mikrousług może subskrybować ten element, aby otrzymywać powiadomienia i podejmować działania.](./media/image19.png)
+![Diagram przedstawiający asynchroniczne komunikację sterowaną zdarzeniami.](./media/asynchronous-message-based-communication/asynchronous-event-driven-communication.png)
 
 **Rysunek 4-19**. Asynchroniczna komunikacja komunikatów oparta na zdarzeniach
 
-Twoja implementacja określi, który protokół ma być używany na potrzeby komunikacji opartej na zdarzeniach. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) może pomóc w osiągnięciu niezawodnej komunikacji kolejkowanej.
+W przypadku asynchronicznej komunikacji opartej na zdarzeniach jedna mikrousługa publikuje zdarzenia do magistrali zdarzeń, a wiele mikrousług może subskrybować ten element, aby otrzymywać powiadomienia i podejmować działania. Twoja implementacja określi, który protokół ma być używany na potrzeby komunikacji opartej na zdarzeniach. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) może pomóc w osiągnięciu niezawodnej komunikacji kolejkowanej.
 
 Korzystając z magistrali zdarzeń, można użyć poziomu abstrakcji (na przykład interfejsu magistrali zdarzeń) na podstawie powiązanej implementacji w klasach z kodem przy użyciu interfejsu API z brokera komunikatów, takiego jak [RabbitMQ](https://www.rabbitmq.com/) , lub usługi Service Bus, takiej jak [Azure Service Bus z tematami ](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). Alternatywnie możesz chcieć użyć magistrali usług wyższego poziomu, takiej jak NServiceBus, MassTransit lub jaśniejszy, aby ideach swoją magistralę zdarzeń i system publikowania/subskrybowania.
 
@@ -81,7 +81,7 @@ Wyzwanie w przypadku implementowania architektury opartej na zdarzeniach w wielu
 
 Dodatkowe tematy, które należy wziąć pod uwagę podczas korzystania z komunikacji asynchronicznej, to idempotentność komunikatów i Deduplikacja komunikatów. Te tematy zostały omówione w sekcji [implementowanie komunikacji opartej na zdarzeniach między mikrousługami (zdarzenia integracji)](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md) w dalszej części tego przewodnika.
 
-## <a name="additional-resources"></a>Dodatkowe zasoby
+## <a name="additional-resources"></a>Zasoby dodatkowe
 
 - **Obsługa komunikatów opartych na zdarzeniach** \
   <http://soapatterns.org/design_patterns/event_driven_messaging>
@@ -89,7 +89,7 @@ Dodatkowe tematy, które należy wziąć pod uwagę podczas korzystania z komuni
 - **Kanał publikowania/subskrybowania** \
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
-- **Udi Dahan. Wyjaśniono CQRS** \
+- **UDI Dahan. Wyjaśniono CQRS** \
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 - **Command and Query Responsibility Segregation (CQRS)**  \
@@ -98,12 +98,12 @@ Dodatkowe tematy, które należy wziąć pod uwagę podczas korzystania z komuni
 - **Komunikacja między kontekstami ograniczonymi** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
-- **Spójność ostateczna** \
+- @No__t **spójności ostatecznej**— 1
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Jimmy Bogard. Refaktoryzacja względem odporności: Ocenianie sprzęgu** \
+- **Jimmy Bogard. Refaktoryzacja do odporności: Ocena sprzęgu** \
   <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 > [!div class="step-by-step"]
-> [Poprzedni](communication-in-microservice-architecture.md)Następny
-> [](maintain-microservice-apis.md)
+> [Poprzedni](communication-in-microservice-architecture.md)
+> [dalej](maintain-microservice-apis.md)

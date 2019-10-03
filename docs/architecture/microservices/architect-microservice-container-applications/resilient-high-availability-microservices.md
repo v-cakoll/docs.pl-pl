@@ -1,15 +1,15 @@
 ---
-title: Odporność i wysoka dostępność w ramach mikrousług
+title: Odporność i wysoka dostępność w mikrousługach
 description: Mikrousługi muszą zostać zaprojektowane w celu wyizolowania przejściowych błędów sieci i zależności, które muszą być odporne na uzyskanie wysokiej dostępności.
 ms.date: 09/20/2018
-ms.openlocfilehash: bb1bef0c9cc08e43aed80a29effe89587fb296f6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6c110b0fe7a80842f12779494e5b0bdd29c5fb64
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296255"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834352"
 ---
-# <a name="resiliency-and-high-availability-in-microservices"></a>Odporność i wysoka dostępność w ramach mikrousług
+# <a name="resiliency-and-high-availability-in-microservices"></a>Odporność i wysoka dostępność w mikrousługach
 
 Postępowanie z nieoczekiwanymi awariami jest jednym z najtrudniejszych problemów, które należy rozwiązać, szczególnie w systemie rozproszonym. Większość kodu, który deweloperzy piszą, obejmuje obsługę wyjątków, a także to, w jaki sposób jest to najbardziej czasochłonne w testowaniu. Ten problem jest większy niż podczas pisania kodu do obsługi błędów. Co się stanie, gdy maszyna, na której działa mikrousługa, nie powiedzie się? Nie tylko należy wykryć ten błąd mikrousługi (na swoim własnym problemie), ale konieczne jest również ponowne uruchomienie mikrousługi.
 
@@ -31,8 +31,8 @@ W sekcji [implementujące testy kondycji w usługach ASP.NET Core Services](../i
 
 Istnieje również możliwość użycia doskonałej biblioteki typu open source o nazwie puls pulsu, dostępnej w witrynie [GitHub](https://github.com/Xabaril/BeatPulse) i jako [pakietu NuGet](https://www.nuget.org/packages/BeatPulse/). Ta biblioteka przeprowadza również kontrole kondycji z symbolem, który obsługuje dwa typy kontroli:
 
-- **Dynamiczna**: Sprawdza, czy mikrousługa jest aktywna, czyli jeśli jest w stanie akceptować żądania i odpowiadać na nie. 
-- **Gotowość**: Sprawdza, czy zależności mikrousług (baza danych, usługi kolejek itp.) są gotowe, więc mikrousługi mogą wykonywać czynności, które należy wykonać. 
+- Wartość **dynamiczna**: sprawdza, czy usługa jest aktywna, czyli jeśli jest w stanie akceptować żądania i odpowiadać na nie. 
+- **Gotowość**: sprawdza, czy zależności mikrousług (baza danych, usługi kolejek itp.) są gotowe, więc mikrousługa może wykonać to działanie. 
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>Używanie diagnostyki i dzienników strumieni zdarzeń
 
@@ -46,7 +46,7 @@ Aplikacja oparta na mikrousługach nie powinna próbować przechowywać strumien
 
 Podczas tworzenia aplikacji opartej na mikrousługach należy zająć się złożonością. Oczywiście jedną mikrousługą jest prosta do rozpatrzenia, ale dziesiątki lub setki typów i tysięcy wystąpień mikrousług są skomplikowanym problemem. Nie dotyczy to jedynie kompilowania architektury mikrousług — potrzebna jest również wysoka dostępność, możliwość obsługi, odporność, kondycja i diagnostyka, jeśli zamierzasz mieć stabilny i spójny system.
 
-![Koordynatorzy dostarczają platformę pomocy technicznej do uruchamiania mikrousług.](./media/image22.png)
+![Diagram klastrów dostarczających platformę obsługi dla mikrousług.](./media/resilient-high-availability-microservices/microservice-platform.png)
 
 **Rysunek 4-22**. Platforma mikrousług ma podstawowe znaczenie dla zarządzania kondycją aplikacji
 
@@ -54,9 +54,9 @@ Złożone problemy pokazane na rysunku 4-22 są bardzo trudne do rozwiązania pr
 
 Różne koordynatorzy mogą dźwiękować podobnie, ale testy diagnostyczne i kondycji oferowane przez poszczególne z nich różnią się w zależności od platformy systemu operacyjnego, jak wyjaśniono w następnej sekcji.
 
-## <a name="additional-resources"></a>Dodatkowe zasoby
+## <a name="additional-resources"></a>Zasoby dodatkowe
 
-- **Aplikacja 12-Factor. XI. Dziennik Traktuj dzienniki jako strumienie zdarzeń** \
+- **12-składnikowa aplikacja. XI. Dzienniki: Traktuj dzienniki jako strumienie zdarzeń** \
   <https://12factor.net/logs>
 
 - **Biblioteka diagnostyki użyciu struktury eventflow firmy Microsoft** Repozytorium GitHub. \
@@ -68,7 +68,7 @@ Różne koordynatorzy mogą dźwiękować podobnie, ale testy diagnostyczne i ko
 - **Łączenie komputerów z systemem Windows z usługą Azure Monitor** \
   <https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows>
 
-- **Rejestrowanie znaczenia: Korzystanie z bloku aplikacji rejestrowania semantycznego** \
+- **Rejestrowanie informacji o znaczeniu: przy użyciu bloku aplikacji do rejestrowania semantyki** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
 - **Splunk** Oficjalna lokacja. \
@@ -78,5 +78,5 @@ Różne koordynatorzy mogą dźwiękować podobnie, ale testy diagnostyczne i ko
   [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)
 
 >[!div class="step-by-step"]
->[Poprzedni](microservice-based-composite-ui-shape-layout.md)Następny
->[](scalable-available-multi-container-microservice-applications.md)
+>[Poprzedni](microservice-based-composite-ui-shape-layout.md)
+>[dalej](scalable-available-multi-container-microservice-applications.md)

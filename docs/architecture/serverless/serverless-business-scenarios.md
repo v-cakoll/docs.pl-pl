@@ -4,14 +4,14 @@ description: Dowiedz się bezserwerowo Dzięki praktycznemu podejściu, uzyskuj�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: cb761524976125c816aae925f0c369eb8c76e7de
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7024a33f8a7fccd6afa51c126454afedd87cceee
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926469"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834301"
 ---
-# <a name="serverless-business-scenarios-and-use-cases"></a>Scenariusze biznesowe i przypadki użycia bez korzystania z serwera
+# <a name="serverless-business-scenarios-and-use-cases"></a>Scenariusze biznesowe bezserwerowe i przypadki użycia
 
 Istnieje wiele przypadków użycia i scenariuszy dotyczących aplikacji bezserwerowych. Ten rozdział zawiera przykłady ilustrujące różne scenariusze. Scenariusze obejmują linki do powiązanej dokumentacji i repozytoriów kodu publicznego. Przykłady w tym rozdziale umożliwiają rozpoczęcie pracy nad tworzeniem i implementowaniem rozwiązań bezserwerowych.
 
@@ -27,13 +27,13 @@ Oddzielna aplikacja jednostronicowa (SPA) wywołuje funkcję bezserwerową, aby 
 
 ![Galeria obrazów automatycznych](./media/automated-image-gallery.png)
 
-Pełne repozytorium i instrukcje dotyczące kompilowania aplikacji logiki są dostępne tutaj: [Przyklejanie do siatki zdarzeń](https://github.com/JeremyLikness/Event-Grid-Glue).
+Pełne repozytorium i instrukcje dotyczące kompilowania aplikacji logiki są dostępne tutaj: [przyklej do siatki zdarzeń](https://github.com/JeremyLikness/Event-Grid-Glue).
 
 ## <a name="cross-platform-mobile-client-using-xamarinforms-and-functions"></a>Międzyplatformowy klient mobilny korzystający z narzędzi Xamarin. Forms i Functions
 
 Zobacz, jak zaimplementować prostą bezserwerową funkcję platformy Azure w portalu internetowym platformy Azure lub w programie Visual Studio. Kompiluj klienta przy użyciu interfejsu Xamarin. Forms działającego w systemach Android, iOS i Windows. Następnie aplikacja jest udoskonalana, aby używać JavaScript Object Notation (JSON) jako średniej komunikacji między serwerem a klientami mobilnymi z zapleczem bezserwerowym.
 
-Aby uzyskać więcej informacji, zobacz [implementowanie prostej funkcji platformy Azure przy użyciu klienta Xamarin. Forms](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+Aby uzyskać więcej informacji, zobacz [implementowanie prostej funkcji platformy Azure przy użyciu klienta Xamarin. Forms](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/).
 
 ## <a name="generate-a-photo-mosaic-with-serverless-image-recognition"></a>Generowanie mozaiki zdjęć z rozpoznawaniem obrazu bez serwera
 
@@ -55,7 +55,7 @@ Aplikacja używa funkcji proxy Azure Functions, aby umożliwić refaktoryzację 
 
 Serwer proxy udostępnia jeden punkt końcowy interfejsu API, który został zaktualizowany do przekierowywania poszczególnych żądań, gdy są one przenoszone do funkcji bezserwerowych.
 
-Możesz wyświetlić film wideo, który przeprowadzi Cię przez całą migrację: [Podnieś i Przenieś do usługi Azure Functions bez serwera](https://channel9.msdn.com/Events/Connect/2017/E102). Dostęp do przykładowego kodu: [Przenieś własną aplikację](https://github.com/JeremyLikness/bring-own-app-connect-17).
+Możesz wyświetlić film wideo, który przeprowadzi Cię przez całą migrację: [Unieś i Przenieś z usługą Azure Functions bez serwera](https://channel9.msdn.com/Events/Connect/2017/E102). Dostęp do przykładowego kodu: [Przeprowadź własną aplikację](https://github.com/JeremyLikness/bring-own-app-connect-17).
 
 ## <a name="parse-a-csv-file-and-insert-into-a-database"></a>Analizowanie pliku CSV i wstawianie do bazy danych
 
@@ -77,7 +77,7 @@ Następnie możesz utworzyć pulpit nawigacyjny Power BI, aby zebrać szczegół
 
 ![Przykład Power BI](./media/power-bi-example.png)
 
-Pełne łącze Shortener repozytorium z instrukcjami jest dostępne tutaj: [Shortener adres URL bezserwerowy](https://github.com/jeremylikness/serverless-url-shortener). Informacje o wersji uproszczonej można znaleźć tutaj: [Usługa Azure Storage dla aplikacji platformy .NET bezserwerowych w ciągu kilku minut](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/).
+Pełne link Shortener repozytorium z instrukcjami jest dostępny tutaj: [adres URL bezserwerowy Shortener](https://github.com/jeremylikness/serverless-url-shortener). Możesz zapoznać się z wersją uproszczoną tutaj: [usługa Azure Storage dla aplikacji .NET bezserwerowych w ciągu kilku minut](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/).
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>Weryfikowanie łączności urządzenia przy użyciu polecenia ping
 
@@ -85,7 +85,7 @@ Przykład składa się z IoT Hub platformy Azure i funkcji platformy Azure. Nowy
 
 Aby uzyskać więcej informacji, zobacz [Azure IoT Hub ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/).
 
-## <a name="recommended-resources"></a>Zalecane zasoby
+## <a name="recommended-resources"></a>Polecane zasoby
 
 * [Generator mozaiki zdjęć Azure Functions](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
 * [Usługa Azure IoT Hub ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
@@ -98,5 +98,5 @@ Aby uzyskać więcej informacji, zobacz [Azure IoT Hub ping](https://azure.micro
 * [Shortener adres URL bezserwerowy](https://github.com/jeremylikness/serverless-url-shortener)
 
 >[!div class="step-by-step"]
->[Poprzedni](orchestration-patterns.md)Następny
->[](serverless-conclusion.md)
+>[Poprzedni](orchestration-patterns.md)
+>[dalej](serverless-conclusion.md)

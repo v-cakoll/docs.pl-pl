@@ -2,12 +2,12 @@
 title: Stan i dane w aplikacjach platformy Docker
 description: Zarządzanie stanem i danymi w aplikacjach platformy Docker. Wystąpienia mikrousług są expendablee, ale dane nie są, jak obsługiwać je za pomocą mikrousług.
 ms.date: 09/20/2018
-ms.openlocfilehash: bd0ac007479dcd51f2c639881273b81d1fd8b6d7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 193ac143ca0cc42c248f449b1e1a1339af6f69d1
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039578"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834426"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Stan i dane w aplikacjach platformy Docker
 
@@ -47,17 +47,17 @@ Woluminy mogą mieć nazwy lub anonimowe (domyślnie). Nazwane woluminy są ewol
 
 Jak pokazano na rysunku 4-5, regularne woluminy platformy Docker mogą być przechowywane poza kontenerami, ale w granicach fizycznych serwera hosta lub maszyny wirtualnej. Kontenery platformy Docker nie mogą jednak uzyskać dostępu do woluminu z jednego serwera hosta lub maszyny wirtualnej do innej. Innymi słowy, z tymi woluminami nie jest możliwe zarządzanie danymi udostępnionymi między kontenerami, które działają na różnych hostach platformy Docker, chociaż można je osiągnąć za pomocą sterownika woluminu obsługującego hosty zdalne.
 
-![Woluminy mogą być udostępniane między kontenerami, ale tylko na tym samym hoście, chyba że używany jest sterownik zdalny obsługujący hosty zdalne.](./media/image5.png)
+![Diagram przedstawiający woluminy i zewnętrzne źródła danych dla aplikacji opartych na kontenerach.](./media/docker-application-state-data/volumes-external-data-sources.png)
 
 **Rysunek 4-5**. Woluminy i zewnętrzne źródła danych dla aplikacji opartych na kontenerach
 
-Ponadto, gdy kontenery platformy Docker są zarządzane przez program Orchestrator, kontenery mogą "przenosić" między hostami, w zależności od optymalizacji wykonywanych przez klaster. W związku z tym nie zaleca się używania woluminów danych dla danych firmowych. Jednak są dobrym mechanizmem do pracy z plikami śledzenia, plikami czasowymi lub podobnymi, które nie wpłyną na spójność danych firmy.
+Woluminy mogą być udostępniane między kontenerami, ale tylko na tym samym hoście, chyba że używany jest sterownik zdalny obsługujący hosty zdalne. Ponadto, gdy kontenery platformy Docker są zarządzane przez program Orchestrator, kontenery mogą "przenosić" między hostami, w zależności od optymalizacji wykonywanych przez klaster. W związku z tym nie zaleca się używania woluminów danych dla danych firmowych. Jednak są dobrym mechanizmem do pracy z plikami śledzenia, plikami czasowymi lub podobnymi, które nie wpłyną na spójność danych firmy.
 
 **Zdalne źródła danych i narzędzia pamięci podręcznej** , takie jak Azure SQL Database, Azure Cosmos DB lub zdalna pamięć podręczna, takie jak Redis, mogą być używane w aplikacjach kontenerowych w taki sam sposób, w jaki są używane podczas tworzenia bez kontenerów. Jest to sprawdzona metoda przechowywania danych aplikacji biznesowej.
 
 **Usługa Azure Storage.** Dane biznesowe zwykle trzeba umieścić w zasobach zewnętrznych lub bazach danych, takich jak usługa Azure Storage. Usługa Azure Storage w konkretnym przypadku udostępnia następujące usługi w chmurze:
 
-- Magazyn obiektów BLOB przechowuje dane obiektu bez struktury. Obiekt BLOB może być dowolnego typu danych tekstowych lub binarnych, takich jak pliki dokumentów lub plików multimedialnych (obrazy, pliki audio i wideo). Magazyn obiektów BLOB jest również określany jako Storage Object.
+- Magazyn obiektów BLOB przechowuje dane obiektu bez struktury. Obiekt BLOB może być dowolnego typu danych tekstowych lub binarnych, takich jak pliki dokumentów lub plików multimedialnych (obrazy, pliki audio i wideo). Magazyn obiektów Blob jest także nazywany magazynem obiektów.
 
 - Magazyn plików oferuje udostępniony magazyn dla starszych aplikacji używających standardowego protokołu SMB. Usługa Azure Virtual Machines i usługi w chmurze mogą udostępniać dane plików między składnikami aplikacji za pośrednictwem zainstalowanych udziałów. Aplikacje lokalne mogą uzyskiwać dostęp do danych plików w udziale za pośrednictwem interfejsu API REST usługi plików.
 
@@ -66,5 +66,5 @@ Ponadto, gdy kontenery platformy Docker są zarządzane przez program Orchestrat
 **Relacyjne bazy danych i bazy danych NoSQL.** Istnieje wiele opcji zewnętrznych baz danych, z relacyjnych baz danych, takich jak SQL Server, PostgreSQL, Oracle lub NoSQL, takich jak Azure Cosmos DB, MongoDB itd. Te bazy danych nie są wyjaśnione jako część tego przewodnika, ponieważ znajdują się w zupełnie innym temacie.
 
 >[!div class="step-by-step"]
->[Poprzedni](containerize-monolithic-applications.md)Następny
->[](service-oriented-architecture.md)
+>[Poprzedni](containerize-monolithic-applications.md)
+>[dalej](service-oriented-architecture.md)

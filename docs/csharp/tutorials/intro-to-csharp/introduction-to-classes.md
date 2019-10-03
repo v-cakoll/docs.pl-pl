@@ -3,20 +3,20 @@ title: Klasy i obiekty — wprowadzenie do C# samouczka
 description: Utwórz pierwszy C# program i Eksploruj koncepcje zorientowane obiektowo
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 092639e86b3e8e683a7d5f6ecf5b732991581b71
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f4199f709ee0011af9f00f6909193f08345bc49e
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850735"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834104"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Eksploruj programowanie zorientowane obiektowo przy użyciu klas i obiektów
 
-Ten samouczek oczekuje, że masz maszynę, której możesz użyć do programowania. Samouczek platformy .NET [Hello World w ciągu 10 minut](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) zawiera instrukcje dotyczące konfigurowania lokalnego środowiska deweloperskiego na komputerach Mac, komputerze lub Linux. Krótkie omówienie poleceń, z których będziesz korzystać, znajduje się w zapoznanie [z narzędziami programistycznymi](local-environment.md) zawierającymi linki do dalszych szczegółów.
+Ten samouczek oczekuje, że masz maszynę, której możesz użyć do programowania. Samouczek platformy .NET [Hello World w ciągu 10 minut](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) zawiera instrukcje dotyczące konfigurowania lokalnego środowiska deweloperskiego w systemie Windows, Linux lub macOS. Krótkie omówienie poleceń, z których będziesz korzystać, znajduje się w zapoznanie [z narzędziami programistycznymi](local-environment.md) zawierającymi linki do dalszych szczegółów.
 
 ## <a name="create-your-application"></a>Tworzenie aplikacji
 
-Za pomocą okna terminalu Utwórz katalog o nazwie **Classes**. W tym miejscu utworzysz aplikację. Przejdź do tego katalogu i wpisz `dotnet new console` w oknie konsoli. To polecenie tworzy aplikację. Otwórz **program.cs**. Powinny wyglądać następująco:
+Za pomocą okna terminalu Utwórz katalog o nazwie *Classes*. W tym miejscu utworzysz aplikację. Przejdź do tego katalogu i wpisz `dotnet new console` w oknie konsoli. To polecenie tworzy aplikację. Otwórz *program.cs*. Powinien wyglądać następująco:
 
 ```csharp
 using System;
@@ -33,9 +33,9 @@ namespace classes
 }
 ```
 
-W tym samouczku utworzysz nowe typy reprezentujące konto bankowe. Zazwyczaj deweloperzy definiują każdą klasę w innym pliku tekstowym. Ułatwia to zarządzanie w miarę zwiększania się rozmiaru programu.  Utwórz nowy plik o nazwie **BankAccount.cs** w katalogu **Classes** . 
+W tym samouczku utworzysz nowe typy reprezentujące konto bankowe. Zazwyczaj deweloperzy definiują każdą klasę w innym pliku tekstowym. Ułatwia to zarządzanie w miarę zwiększania się rozmiaru programu. Utwórz nowy plik o nazwie *BankAccount.cs* w katalogu *Classes* . 
 
-Ten plik będzie zawierać definicję ***konta bankowego***. Programowanie zorientowane obiektowo organizuje kod przez tworzenie typów w postaci ***klas***. Klasy te zawierają kod, który reprezentuje konkretną jednostkę. `BankAccount` Klasa reprezentuje konto bankowe. Kod implementuje określone operacje za pomocą metod i właściwości. W tym samouczku konto bankowe obsługuje takie zachowanie:
+Ten plik będzie zawierać definicję ***konta bankowego***. Programowanie zorientowane obiektowo organizuje kod przez tworzenie typów w postaci ***klas***. Klasy te zawierają kod, który reprezentuje konkretną jednostkę. Klasa `BankAccount` reprezentuje konto bankowe. Kod implementuje określone operacje za pomocą metod i właściwości. W tym samouczku konto bankowe obsługuje takie zachowanie:
 
 1. Ma 10-cyfrowy numer, który jednoznacznie identyfikuje konto bankowe.
 1. Zawiera on ciąg przechowujący nazwę lub nazwy właścicieli.
@@ -71,15 +71,15 @@ namespace classes
 }
 ```
 
-Przed rozpoczęciem przejdźmy do tego, co zostało skompilowane.  `namespace` Deklaracja umożliwia logicznie organizowanie kodu. Ten samouczek jest stosunkowo mały, więc umieścisz cały kod w jednej przestrzeni nazw. 
+Przed rozpoczęciem przejdźmy do tego, co zostało skompilowane.  Deklaracja `namespace` umożliwia logicznie organizowanie kodu. Ten samouczek jest stosunkowo mały, więc umieścisz cały kod w jednej przestrzeni nazw. 
 
-`public class BankAccount`definiuje klasę lub typ, który tworzysz. Wszystko wewnątrz `{` i `}` , które następuje po deklaracji klasy, definiuje zachowanie klasy. Istnieje pięć ***członków*** `BankAccount` klasy. Pierwsze trzy są ***właściwościami***. Właściwości są elementami danych i mogą mieć kod, który wymusza walidację lub inne reguły. Ostatnie dwa są ***metodami***. Metody to bloki kodu, które wykonują pojedynczą funkcję. Odczytywanie nazw każdego z członków powinno zapewnić wystarczającą ilość informacji dla Ciebie lub innego dewelopera, aby zrozumieć, co robi Klasa.
+`public class BankAccount` definiuje klasę lub typ, który tworzysz. Wszystko w `{` i `}`, które następuje po deklaracji klasy, definiuje zachowanie klasy. Istnieje pięć ***członków*** klasy `BankAccount`. Pierwsze trzy są ***właściwościami***. Właściwości są elementami danych i mogą mieć kod, który wymusza walidację lub inne reguły. Ostatnie dwa są ***metodami***. Metody to bloki kodu, które wykonują pojedynczą funkcję. Odczytywanie nazw każdego z członków powinno zapewnić wystarczającą ilość informacji dla Ciebie lub innego dewelopera, aby zrozumieć, co robi Klasa.
 
 ## <a name="open-a-new-account"></a>Otwórz nowe konto
 
 Pierwsza funkcja do wdrożenia polega na otwarciu konta bankowego. Gdy klient otworzy konto, musi podać początkowe saldo i informacje o właścicielu lub właściciele tego konta. 
 
-Tworzenie nowego obiektu `BankAccount` typu oznacza zdefiniowanie ***konstruktora*** , który przypisuje te wartości. ***Konstruktor*** jest członkiem, który ma taką samą nazwę jak Klasa. Służy do inicjowania obiektów tego typu klasy. Dodaj następujący Konstruktor do `BankAccount` typu:
+Tworzenie nowego obiektu typu `BankAccount` oznacza zdefiniowanie ***konstruktora*** , który przypisuje te wartości. ***Konstruktor*** jest członkiem, który ma taką samą nazwę jak Klasa. Służy do inicjowania obiektów tego typu klasy. Dodaj następujący Konstruktor do typu `BankAccount`:
 
 ```csharp
 public BankAccount(string name, decimal initialBalance)
@@ -89,69 +89,69 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-Konstruktory są wywoływane podczas tworzenia obiektu za pomocą [`new`](../../language-reference/operators/new-operator.md). Zastąp wiersz `Console.WriteLine("Hello World!");` w ***program.cs*** następującym wierszem (Zastąp `<name>` nazwą):
+Konstruktory są wywoływane podczas tworzenia obiektu przy użyciu [`new`](../../language-reference/operators/new-operator.md). Zastąp wiersz `Console.WriteLine("Hello World!");` w *program.cs* następującym wierszem (zastąp `<name>` nazwą użytkownika):
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
 Console.WriteLine($"Account {account.Number} was created for {account.Owner} with {account.Balance} initial balance.");
 ```
 
-Wpisz `dotnet run` , aby zobaczyć, co się dzieje.  
+Wpisz `dotnet run`, aby zobaczyć, co się dzieje.  
 
-Czy na pewno numer konta jest pusty? Czas na rozwiązanie tego problemu. Numer konta powinien być przypisany podczas konstruowania obiektu. Ale nie powinien być odpowiedzialny za utworzenie go przez obiekt wywołujący. Kod `BankAccount` klasy powinien wiedzieć, jak przypisać nowe numery kont.  Prostym sposobem, aby to zrobić, jest rozpoczęcie z 10-cyfrową liczbą. Zwiększ ją po utworzeniu każdego nowego konta. Na koniec Zapisz bieżący numer konta w przypadku konstruowania obiektu.
+Czy na pewno numer konta jest pusty? Czas na rozwiązanie tego problemu. Numer konta powinien być przypisany podczas konstruowania obiektu. Ale nie powinien być odpowiedzialny za utworzenie go przez obiekt wywołujący. Kod klasy `BankAccount` powinien wiedzieć, jak przypisać nowe numery kont.  Prostym sposobem, aby to zrobić, jest rozpoczęcie z 10-cyfrową liczbą. Zwiększ ją po utworzeniu każdego nowego konta. Na koniec Zapisz bieżący numer konta w przypadku konstruowania obiektu.
 
-Dodaj następującą deklarację elementu członkowskiego `BankAccount` do klasy:
+Dodaj następującą deklarację elementu członkowskiego do klasy `BankAccount`:
 
 ```csharp
 private static int accountNumberSeed = 1234567890;
 ```
 
-To jest element członkowski danych. Oznacza to `BankAccount` , że można uzyskać do niego dostęp tylko przez kod wewnątrz klasy. `private` Jest to sposób oddzielenia publicznych obowiązków (na przykład numeru konta) od implementacji prywatnej (jak są generowane numery kont). Jest to również `static`, co oznacza, że jest ono współużytkowane `BankAccount` przez wszystkie obiekty. Wartość zmiennej niestatycznej jest unikatowa dla każdego wystąpienia `BankAccount` obiektu. Dodaj następujące dwa wiersze do konstruktora, aby przypisać numer konta:
+To jest element członkowski danych. Jest on `private`, co oznacza, że dostęp do niego jest możliwy tylko za pomocą kodu w klasie `BankAccount`. Jest to sposób oddzielenia publicznych obowiązków (na przykład numeru konta) od implementacji prywatnej (jak są generowane numery kont). Jest on również `static`, co oznacza, że jest współużytkowany przez wszystkie obiekty `BankAccount`. Wartość zmiennej niestatycznej jest unikatowa dla każdego wystąpienia obiektu `BankAccount`. Dodaj następujące dwa wiersze do konstruktora, aby przypisać numer konta:
 
 ```csharp
 this.Number = accountNumberSeed.ToString();
 accountNumberSeed++;
 ```
 
-Wpisz `dotnet run` , aby wyświetlić wyniki.
+Wpisz `dotnet run`, aby wyświetlić wyniki.
 
 ## <a name="create-deposits-and-withdrawals"></a>Utwórz depozyty i Wycofaj
 
 Twoja Klasa konta bankowego musi akceptować depozyty i wycofywania, aby działały prawidłowo. Zaimplementujmy depozyty i wycofania, tworząc arkusz każdej transakcji dla konta. Ma kilka korzyści w porównaniu do zwykłego aktualizowania salda każdej transakcji. Historia może służyć do inspekcji wszystkich transakcji i zarządzania bilansami dziennymi. Dzięki wykorzystaniu salda z historii wszystkich transakcji, gdy jest to potrzebne, wszelkie błędy w pojedynczej transakcji, które są stałe, zostaną prawidłowo odzwierciedlone w saldzie następnego obliczenia.
 
-Zacznijmy od utworzenia nowego typu do reprezentowania transakcji. Jest to prosty typ, który nie ma żadnych obowiązków. Potrzebuje on kilku właściwości. Utwórz nowy plik o nazwie ***Transaction.cs***. Dodaj do niego następujący kod:
+Zacznijmy od utworzenia nowego typu do reprezentowania transakcji. Jest to prosty typ, który nie ma żadnych obowiązków. Potrzebuje on kilku właściwości. Utwórz nowy plik o nazwie *Transaction.cs*. Dodaj do niego następujący kod:
 
-[!code-csharp[Transaction](../../../../samples/csharp/classes-quickstart/Transaction.cs "Transaction declaration")]
+[!code-csharp[Transaction](~/samples/csharp/classes-quickstart/Transaction.cs)]
 
-Teraz Dodajmy <xref:System.Collections.Generic.List%601> `Transaction` obiekty do `BankAccount` klasy. Dodaj następującą deklarację:
+Teraz Dodajmy do klasy `BankAccount` <xref:System.Collections.Generic.List%601> obiektów `Transaction`. Dodaj następującą deklarację:
 
-[!code-csharp[TransactionDecl](../../../../samples/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration "Transaction declaration")]
+[!code-csharp[TransactionDecl](~/samples/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
 
-<xref:System.Collections.Generic.List%601> Klasa wymaga zaimportowania innej przestrzeni nazw. Dodaj następujące elementy na początku **BankAccount.cs**:
+Klasa <xref:System.Collections.Generic.List%601> wymaga zaimportowania innej przestrzeni nazw. Dodaj następujące elementy na początku *BankAccount.cs*:
 
 ```csharp
 using System.Collections.Generic;
 ```
 
-Teraz Zmieńmy sposób `Balance` zgłaszania raportu.  Można go znaleźć, sumując wartości wszystkich transakcji. Zmodyfikuj deklarację `Balance` `BankAccount` klasy w klasie w następujący sposób:
+Teraz Zmieńmy sposób zgłaszania `Balance`.  Można go znaleźć, sumując wartości wszystkich transakcji. Zmodyfikuj deklarację `Balance` w klasie `BankAccount` w następujący sposób:
 
-[!code-csharp[BalanceComputation](../../../../samples/csharp/classes-quickstart/BankAccount.cs#BalanceComputation "Computing the balance")]
+[!code-csharp[BalanceComputation](~/samples/csharp/classes-quickstart/BankAccount.cs#BalanceComputation)]
 
 Ten przykład pokazuje istotny aspekt ***Właściwości***. Teraz trwa obliczanie salda, gdy inny programista pyta o wartość. Wyliczenie wylicza wszystkie transakcje i zawiera sumę jako bieżące saldo.
 
-Następnie Zaimplementuj `MakeDeposit` metody i `MakeWithdrawal` . Te metody wymuszą dwie ostatnie reguły: początkowe saldo musi być dodatnie i że każde wycofanie nie może utworzyć salda ujemnego. 
+Następnie Zaimplementuj metody `MakeDeposit` i `MakeWithdrawal`. Te metody wymuszą dwie ostatnie reguły: początkowe saldo musi być dodatnie i że każde wycofanie nie może utworzyć salda ujemnego. 
 
-Wprowadza to koncepcję ***wyjątków***. Standardowy sposób wskazujący, że metoda nie może zakończyć pracy, to zgłosić wyjątek. Typ wyjątku i komunikat skojarzony z nim opisują błąd. W `MakeDeposit` tym miejscu Metoda zgłasza wyjątek, jeśli kwota depozytu jest ujemna. `MakeWithdrawal` Metoda zgłasza wyjątek, jeśli kwota wycofania jest ujemna lub jeśli zastosowanie wycofania powoduje ujemne saldo:
+Wprowadza to koncepcję ***wyjątków***. Standardowy sposób wskazujący, że metoda nie może zakończyć pracy, to zgłosić wyjątek. Typ wyjątku i komunikat skojarzony z nim opisują błąd. W tym miejscu Metoda `MakeDeposit` zgłasza wyjątek, jeśli kwota kaucji jest ujemna. Metoda `MakeWithdrawal` zgłasza wyjątek, jeśli kwota wycofania jest ujemna lub w przypadku zastosowania wycofania powoduje ujemną wartość:
 
-[!code-csharp[DepositAndWithdrawal](../../../../samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal "Make deposits and withdrawals")]
+[!code-csharp[DepositAndWithdrawal](~/samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
 
-Instrukcja zgłasza wyjątek. [`throw`](../../language-reference/keywords/throw.md) Wykonanie bieżącego bloku i sterowanie transferami do pierwszego zgodnego `catch` bloku znalezionego w stosie wywołań. Dodasz `catch` blok, aby przetestować ten kod nieco później.
+Instrukcja [`throw`](../../language-reference/keywords/throw.md) **zgłasza** wyjątek. Wykonanie bieżącego bloku i sterowanie transferami do pierwszego pasującego bloku `catch` znalezionego w stosie wywołań. Dodasz blok `catch`, aby przetestować ten kod nieco później.
 
-Konstruktor powinien otrzymać jedną zmianę, aby dodać początkową transakcję zamiast bezpośrednio aktualizować saldo. Ponieważ już zapisano `MakeDeposit` metodę, wywołaj ją z konstruktora. Gotowy Konstruktor powinien wyglądać następująco:
+Konstruktor powinien otrzymać jedną zmianę, aby dodać początkową transakcję zamiast bezpośrednio aktualizować saldo. Ponieważ już zapisano metodę `MakeDeposit`, wywołaj ją z konstruktora. Gotowy Konstruktor powinien wyglądać następująco:
 
-[!code-csharp[Constructor](../../../../samples/csharp/classes-quickstart/BankAccount.cs#Constructor "The final version of the constructor")]
+[!code-csharp[Constructor](~/samples/csharp/classes-quickstart/BankAccount.cs#Constructor)]
 
-<xref:System.DateTime.Now?displayProperty=nameWithType>jest właściwością zwracającą bieżącą datę i godzinę. Przetestuj to poprzez dodanie kilku depozytów i wycofaeń `Main` w ramach metody:
+<xref:System.DateTime.Now?displayProperty=nameWithType> to właściwość zwracająca bieżącą datę i godzinę. Przetestuj to poprzez dodanie kilku depozytów i wycofaeń w metodzie `Main`:
 
 ```csharp
 account.MakeWithdrawal(500, DateTime.Now, "Rent payment");
@@ -175,7 +175,7 @@ catch (ArgumentOutOfRangeException e)
 }
 ```
 
-Za pomocą [ `try` instrukcji i `catch` ](../../language-reference/keywords/try-catch.md) można oznaczyć blok kodu, który może generować wyjątki i przechwytywać te błędy, których oczekujesz. Możesz użyć tej samej techniki, aby przetestować kod, który zgłasza wyjątek dla nieujemnego salda:
+[Instrukcje `try` i `catch`](../../language-reference/keywords/try-catch.md) umożliwiają oznaczenie bloku kodu, który może generować wyjątki i przechwytywać te błędy, których oczekujesz. Możesz użyć tej samej techniki, aby przetestować kod, który zgłasza wyjątek dla nieujemnego salda:
 
 ```csharp
 // Test for a negative balance:
@@ -190,23 +190,23 @@ catch (InvalidOperationException e)
 }
 ```
 
-Zapisz plik i wpisz `dotnet run` , aby go wypróbować.
+Zapisz plik i wpisz `dotnet run`, aby go wypróbować.
 
 ## <a name="challenge---log-all-transactions"></a>Wyzwanie — Rejestruj wszystkie transakcje
 
-Aby ukończyć ten samouczek, można napisać `GetAccountHistory` metodę, która `string` tworzy dla historii transakcji. Dodaj tę metodę do `BankAccount` typu:
+Aby ukończyć ten samouczek, można napisać metodę `GetAccountHistory`, która tworzy `string` dla historii transakcji. Dodaj tę metodę do typu `BankAccount`:
 
-[!code-csharp[History](../../../../samples/csharp/classes-quickstart/BankAccount.cs#History "Display transaction history")]
+[!code-csharp[History](~/samples/csharp/classes-quickstart/BankAccount.cs#History)]
 
-Używa <xref:System.Text.StringBuilder> klasy do formatowania ciągu, który zawiera jeden wiersz dla każdej transakcji. W tych samouczkach pojawił się kod formatowania ciągu. Jeden nowy znak to `\t`. Spowoduje to wstawienie karty w celu sformatowania danych wyjściowych.
+Używa klasy <xref:System.Text.StringBuilder> do formatowania ciągu, który zawiera jeden wiersz dla każdej transakcji. W tych samouczkach pojawił się kod formatowania ciągu. Jeden nowy znak jest `\t`. Spowoduje to wstawienie karty w celu sformatowania danych wyjściowych.
 
-Dodaj ten wiersz, aby przetestować go w **program.cs**:
+Dodaj ten wiersz, aby przetestować go w *program.cs*:
 
 ```csharp
 Console.WriteLine(account.GetAccountHistory());
 ```
 
-Wpisz `dotnet run` , aby wyświetlić wyniki.
+Wpisz `dotnet run`, aby wyświetlić wyniki.
 
 ## <a name="next-steps"></a>Następne kroki
 

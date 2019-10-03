@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Korzystanie z funkcji dokumentacji XML — C# Przewodnik programowania'
+title: 'Instrukcje: korzystanie z funkcji dokumentacji XML — C# Przewodnik programowania'
 ms.custom: seodec18
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 259f0d5e7e1a67a273bccc7847c38a4d694c69ba
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 06b0c3b7877337d8a5703403af98dbacdf3ea93c
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588108"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834173"
 ---
-# <a name="how-to-use-the-xml-documentation-features"></a>Instrukcje: Korzystanie z funkcji dokumentacji XML
+# <a name="how-to-use-the-xml-documentation-features"></a>Instrukcje: korzystanie z funkcji dokumentacji XML
 
 Poniższy przykład zawiera podstawowe Omówienie typu, który został udokumentowany.
 
@@ -123,11 +123,11 @@ Dokumentacja XML zaczyna się od///. Podczas tworzenia nowego projektu kreatory 
 
 - Deweloperzy mogą bezpłatnie tworzyć własne zestawy tagów. Istnieje zalecany zestaw tagów (zobacz [zalecane Tagi dla komentarzy do dokumentacji](recommended-tags-for-documentation-comments.md)). Niektóre z zalecanych tagów mają specjalne znaczenie:
 
-  - Tag \<> param służy do opisywania parametrów. Jeśli jest używany, kompilator sprawdza, czy parametr istnieje i że wszystkie parametry zostały opisane w dokumentacji. Jeśli weryfikacja nie powiodła się, kompilator generuje ostrzeżenie.
+  - Tag \<param > służy do opisywania parametrów. Jeśli jest używany, kompilator sprawdza, czy parametr istnieje i że wszystkie parametry zostały opisane w dokumentacji. Jeśli weryfikacja nie powiodła się, kompilator generuje ostrzeżenie.
 
-  - Ten `cref` atrybut może być dołączany do dowolnego tagu w celu zapewnienia odwołania do elementu kodu. Kompilator sprawdza, czy ten element kodu istnieje. Jeśli weryfikacja nie powiodła się, kompilator generuje ostrzeżenie. Kompilator przestrzega wszelkich `using` instrukcji, gdy szuka typu opisanego `cref` w atrybucie.
+  - Atrybut `cref` może być dołączany do dowolnego tagu w celu zapewnienia odwołania do elementu kodu. Kompilator sprawdza, czy ten element kodu istnieje. Jeśli weryfikacja nie powiodła się, kompilator generuje ostrzeżenie. Kompilator szanuje wszystkie instrukcje `using`, gdy szuka typu opisanego w atrybucie `cref`.
 
-  - Tag \<> podsumowujący jest używany przez funkcję IntelliSense w programie Visual Studio do wyświetlania dodatkowych informacji na temat typu lub elementu członkowskiego.
+  - Tag \<summary > jest używany przez funkcję IntelliSense w programie Visual Studio do wyświetlania dodatkowych informacji na temat typu lub elementu członkowskiego.
 
     > [!NOTE]
     > Plik XML nie zawiera pełnych informacji o typie i elementach członkowskich (na przykład nie zawierają żadnych informacji o typie). Aby uzyskać pełne informacje na temat typu lub elementu członkowskiego, należy użyć pliku dokumentacji wraz z odbiciem w rzeczywistym typie lub elemencie członkowskim.
@@ -137,3 +137,5 @@ Dokumentacja XML zaczyna się od///. Podczas tworzenia nowego projektu kreatory 
 - [Przewodnik programowania w języku C#](../index.md)
 - [/doc (C# opcje kompilatora)](../../language-reference/compiler-options/doc-compiler-option.md)
 - [Komentarze dokumentacji XML](./index.md)
+- [Procesor dokumentacji DocFX](https://dotnet.github.io/docfx/)
+- [Procesor dokumentacji Sandcastle](https://github.com/EWSoftware/SHFB)

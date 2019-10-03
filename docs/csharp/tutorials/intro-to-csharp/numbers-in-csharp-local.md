@@ -3,24 +3,24 @@ title: Cyfry w C# programie — wprowadzenie C# do samouczka
 description: Poznaj C# typy liczbowe, ich właściwości i metody.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: b0dbb654253b7c6a1ead8f0454be86227a4afb68
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 731824fefcf4966a885c53be8f71e77140541383
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736718"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834098"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipuluj liczby całkowite i zmiennoprzecinkowe w C @ no__t-0
 
 Ten samouczek zawiera informacje o typach liczbowych w C# sposób interaktywny. Zapiszesz małe ilości kodu, a następnie utworzysz i uruchomisz ten kod. Samouczek zawiera serię lekcji, które eksplorują liczby i operacje matematyczne C#w programie. Te lekcje uczyją się podstaw C# języka.
 
-Ten samouczek oczekuje, że masz maszynę, której możesz użyć do programowania. Samouczek platformy .NET [Hello World w ciągu 10 minut](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) zawiera instrukcje dotyczące konfigurowania lokalnego środowiska deweloperskiego na komputerach Mac, komputerze lub Linux. Krótkie omówienie poleceń, z których będziesz korzystać, znajduje się w zapoznanie [z narzędziami programistycznymi](local-environment.md) zawierającymi linki do dalszych szczegółów.
+Ten samouczek oczekuje, że masz maszynę, której możesz użyć do programowania. Samouczek platformy .NET [Hello World w ciągu 10 minut](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) zawiera instrukcje dotyczące konfigurowania lokalnego środowiska deweloperskiego w systemie Windows, Linux lub macOS. Krótkie omówienie poleceń, z których będziesz korzystać, znajduje się w zapoznanie [z narzędziami programistycznymi](local-environment.md) zawierającymi linki do dalszych szczegółów.
 
 ## <a name="explore-integer-math"></a>Eksploruj liczbę całkowitą
 
-Utwórz katalog o nazwie **Numbers — szybki start**. Upewnij się, że bieżący katalog i uruchomiono `dotnet new console -n NumbersInCSharp -o .`.
+Utwórz katalog o nazwie *Numbers — szybki start*. Upewnij się, że bieżący katalog i uruchomiono `dotnet new console -n NumbersInCSharp -o .`.
 
-Otwórz **program.cs** w ulubionym edytorze i Zastąp wiersz `Console.WriteLine("Hello World!");` następującym:
+Otwórz *program.cs* w ulubionym edytorze i Zastąp wiersz `Console.WriteLine("Hello World!");` następującym:
 
 ```csharp
 int a = 18;
@@ -31,7 +31,7 @@ Console.WriteLine(c);
 
 Uruchom ten kod, wpisując `dotnet run` w oknie poleceń.
 
-Właśnie zaobserwowano jedną z podstawowych operacji matematycznych z liczbami całkowitymi. Typ `int` reprezentuje liczbę **całkowitą**, dodatnią lub ujemną. Użyj symbolu `+` do dodania. Inne typowe operacje matematyczne na liczbach całkowitych obejmują:
+Właśnie zaobserwowano jedną z podstawowych operacji matematycznych z liczbami całkowitymi. Typ `int` reprezentuje liczbę **całkowitą**, zero, dodatnią lub ujemną. Użyj symbolu `+` do dodania. Inne typowe operacje matematyczne na liczbach całkowitych obejmują:
 
 - `-` w przypadku odejmowania
 - `*` dla mnożenia
@@ -277,7 +277,7 @@ Wiadomo, że powtarzające się `0.3` nie są dokładnie takie same, jak `1/3`.
 
 ***Sprawdz***
 
-Wypróbuj inne obliczenia z dużymi liczbami, małymi liczbami, mnożeniem i dzieleniem przy użyciu typu `double`.  Wypróbuj bardziej skomplikowane obliczenia.
+Wypróbuj inne obliczenia z dużymi liczbami, małymi liczbami, mnożeniem i dzieleniem przy użyciu typu `double`. Wypróbuj bardziej skomplikowane obliczenia.
 
 Po pewnym czasie z wezwaniem Zrób wpisany kod i umieść go w nowej metodzie. Nazwa nowej metody `WorkWithDoubles`.
 

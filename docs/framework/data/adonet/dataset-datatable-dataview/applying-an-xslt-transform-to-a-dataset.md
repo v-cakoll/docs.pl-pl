@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: d9767844400d67e81c7065148b22c62352af0428
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2641637d176b411108aeb2fa00ef4268584e9cb3
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784790"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834271"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>Stosowanie transformacji XSLT do elementu DataSet
-Metoda **WriteXml** w <xref:System.Data.DataSet> programie umożliwia zapisywanie zawartości **zestawu danych** jako danych XML. Typowym zadaniem jest następnie przekształcenie tego pliku XML do innego formatu przy użyciu transformacji XSL (XSLT). Synchronizowanie **zestawu danych** z <xref:System.Xml.XmlDataDocument> programem pozwala jednak zastosować arkusz stylów XSLT do zawartości **zestawu danych** bez konieczności uprzedniego zapisania zawartości **zestawu** danych jako danych XML przy użyciu **WriteXml**.  
+
+@No__t Metoda **WriteXml** -1 umożliwia zapisanie zawartości **zestawu** danych jako danych XML. Typowym zadaniem jest następnie przekształcenie tego pliku XML do innego formatu przy użyciu transformacji XSL (XSLT). Jednak synchronizowanie **zestawu danych** z <xref:System.Xml.XmlDataDocument> umożliwia zastosowanie arkusza stylów XSLT do zawartości **zestawu danych** bez konieczności uprzedniego zapisania zawartości **zestawu danych** jako danych XML przy użyciu **WriteXml**.  
   
- Poniższy przykład wypełnia **zestaw danych** z tabelami i relacjami, synchronizuje **zestaw danych** z **XmlDataDocument**i zapisuje część **zestawu danych** jako plik HTML przy użyciu arkusza stylów XSLT. Poniżej znajduje się zawartość arkusza stylów XSLT.  
+ Poniższy przykład wypełnia **zestaw danych** z tabelami i relacjami, synchronizuje **zestaw danych** z **XmlDataDocument**i zapisuje część **zestawu danych** jako plik HTML przy użyciu arkusza stylów XSLT. Poniżej znajduje się zawartość arkusza stylów XSLT:
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
@@ -59,7 +60,7 @@ Metoda **WriteXml** w <xref:System.Data.DataSet> programie umożliwia zapisywani
  Poniższy kod wypełnia **zestaw danych** i stosuje arkusz stylów XSLT.  
   
 > [!NOTE]
-> Jeśli stosujesz arkusz stylów XSLT do **zestawu danych** , który zawiera relacje, osiągasz najlepszą wydajność, jeśli ustawisz <xref:System.Data.DataRelation> Właściwość **zagnieżdżoną** do **true** dla każdej zagnieżdżonej relacji. Pozwala to na korzystanie z arkuszy stylów XSLT, które implementują naturalne przetwarzanie w dół w celu nawigowania po hierarchii i przekształcania danych, w przeciwieństwie do korzystania z osi lokalizacji XPath intensywnie korzystających z wydajności (na przykład poprzedzający element równorzędny i następujący element w stylu wyrażenia testowe węzła arkusza) do nawigowania. Aby uzyskać więcej informacji na temat relacji zagnieżdżonych, zobacz [zagnieżdżanie relacji](nesting-datarelations.md)danych.  
+> Jeśli stosujesz arkusz stylów XSLT do **zestawu danych** , który zawiera relacje, osiągasz najlepszą wydajność, jeśli ustawisz właściwość **zagnieżdżoną** <xref:System.Data.DataRelation> na **true** dla każdej zagnieżdżonej relacji. Pozwala to na korzystanie z arkuszy stylów XSLT, które implementują naturalne przetwarzanie w dół w celu nawigowania po hierarchii i przekształcania danych, w przeciwieństwie do korzystania z osi lokalizacji XPath intensywnie korzystających z wydajności (na przykład poprzedzający element równorzędny i następujący element w stylu wyrażenia testowe węzła arkusza) do nawigowania. Aby uzyskać więcej informacji na temat relacji zagnieżdżonych, zobacz [zagnieżdżanie relacji](nesting-datarelations.md)danych.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  

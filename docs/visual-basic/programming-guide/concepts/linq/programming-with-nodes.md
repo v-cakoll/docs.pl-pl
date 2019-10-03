@@ -1,24 +1,24 @@
 ---
-title: Programowanie za pomocą węzłów (Visual Basic)
+title: Programowanie z węzłami (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d8422a9b-dd37-44a3-8aac-2237ed9561e0
-ms.openlocfilehash: ed7f460b441a5973c33841f1f53ce4679b627071
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a331d77f1c54f6428d36b6ccb403dcc01094c98
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756939"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834931"
 ---
-# <a name="programming-with-nodes-visual-basic"></a>Programowanie za pomocą węzłów (Visual Basic)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Deweloperzy, którzy trzeba było pisać programy, takie jak edytora XML, system transformacji lub Edytor raportu, często trzeba było pisać programy, które działają na większym poziomie szczegółowości niż elementów i atrybutów. Często muszą wykonywać pracę w węźle poziomu manipulowanie węzły tekstowe, instrukcje przetwarzania i komentarze. Ten temat zawiera informacje na temat programowania na poziomie węzła.  
+# <a name="programming-with-nodes-visual-basic"></a>Programowanie z węzłami (Visual Basic)
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] deweloperów, którzy muszą pisać programy takie jak Edytor XML, system transformacji lub moduł zapisujący raport często muszą pisać programy, które pracują na bardziej szczegółowym poziomie niż elementy i atrybuty. Często muszą oni korzystać z poziomu węzła, manipulowania węzłami tekstu, instrukcjami przetwarzania i komentarzami. W tym temacie przedstawiono szczegółowe informacje na temat programowania na poziomie węzła.  
   
 ## <a name="node-details"></a>Szczegóły węzła  
- Istnieje kilka szczegóły programowania, który programistą działa na poziomie węzła należy wiedzieć.  
+ Istnieje kilka szczegółów programowania, które programista pracuje na poziomie węzła.  
   
-### <a name="parent-property-of-children-nodes-of-xdocument-is-set-to-null"></a>Nadrzędny właściwości z podrzędnych węzłów z dokumentem ma wartość Null  
- <xref:System.Xml.Linq.XObject.Parent%2A> Właściwość zawiera element nadrzędny <xref:System.Xml.Linq.XElement>, nie węzła nadrzędnego. Węzły podrzędne <xref:System.Xml.Linq.XDocument> mają Brak elementu nadrzędnego <xref:System.Xml.Linq.XElement>. Jego element nadrzędny jest dokumentu, więc <xref:System.Xml.Linq.XObject.Parent%2A> do tych węzłów zostaje ustalona wartość null.  
+### <a name="parent-property-of-children-nodes-of-xdocument-is-set-to-null"></a>Właściwość nadrzędna węzłów podrzędnych klasy XDocument ma wartość null.  
+ Właściwość <xref:System.Xml.Linq.XObject.Parent%2A> zawiera nadrzędny <xref:System.Xml.Linq.XElement>, a nie węzeł nadrzędny. Węzły podrzędne <xref:System.Xml.Linq.XDocument> nie mają elementu nadrzędnego <xref:System.Xml.Linq.XElement>. Ich element nadrzędny jest dokumentem, więc Właściwość <xref:System.Xml.Linq.XObject.Parent%2A> dla tych węzłów ma wartość null.  
   
- Poniższy przykład przedstawia to:  
+ Poniższy przykład ilustruje:  
   
 ```vb  
 Dim doc As XDocument = XDocument.Parse("<!-- a comment --><Root/>")  
@@ -26,17 +26,17 @@ Console.WriteLine(doc.Nodes().OfType(Of XComment).First().Parent Is Nothing)
 Console.WriteLine(doc.Root.Parent Is Nothing)  
 ```  
   
- Ten przykład generuje następujące wyniki:  
+ Ten przykład generuje następujące dane wyjściowe:  
   
-```  
+```console  
 True  
 True  
 ```  
   
-### <a name="adjacent-text-nodes-are-possible"></a>Sąsiadująco węzły tekstowe jest to możliwe  
- Wiele modeli programowania XML węzły tekstowe sąsiadujących zawsze są scalane. Jest to czasem nazywane normalizacji węzły tekstowe. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nie normalizacji węzły tekstowe. Jeśli dodasz dwa węzły tekstowe do tego samego elementu spowoduje w węzły tekstowe sąsiadująco. Jednak jeśli dodasz zawartość określona jako ciąg, a nie jako <xref:System.Xml.Linq.XText> węzła [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] może scalić ciągu z węzłem tekstem.  
+### <a name="adjacent-text-nodes-are-possible"></a>Możliwe są sąsiadujące węzły tekstowe  
+ W wielu modelach programowania XML sąsiadujące węzły tekstowe są zawsze scalane. Jest to czasami nazywane normalizacją węzłów tekstowych. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nie normalizuje węzłów tekstowych. Jeśli dodasz dwa węzły tekstowe do tego samego elementu, spowoduje to sąsiednie węzły tekstowe. Jeśli jednak zostanie dodana zawartość określona jako ciąg, a nie jako węzeł <xref:System.Xml.Linq.XText>, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] może scalić ciąg z sąsiednim węzłem tekstowym.  
   
- Poniższy przykład przedstawia to:  
+ Poniższy przykład ilustruje:  
   
 ```vb  
 Dim xmlTree As XElement = <Root>Content</Root>  
@@ -51,16 +51,16 @@ xmlTree.Add(New XText("more text"))
 Console.WriteLine(xmlTree.Nodes().OfType(Of XText)().Count())  
 ```  
   
- Ten przykład generuje następujące wyniki:  
+ Ten przykład generuje następujące dane wyjściowe:  
   
-```  
+```console  
 1  
 1  
 2  
 ```  
   
-### <a name="empty-text-nodes-are-possible"></a>Pusty węzły tekstowe jest to możliwe  
- W niektórych modelach programowania XML węzły tekstowe są gwarantowane zawiera pusty ciąg. Przyczyny, dla których jest to, że węzeł tekstowy nie ma wpływu na serializacji XML. Jednak tego samego powodu, że węzły tekstowe sąsiadujących są możliwe, jeśli usuniesz tekst z węzła tekstowego, ustawiając jej wartość na ciąg pusty, sam węzeł tekstu nie zostaną usunięte.  
+### <a name="empty-text-nodes-are-possible"></a>Możliwe są puste węzły tekstowe  
+ W niektórych modelach programowania XML węzły tekstowe są gwarantowane, że nie zawierają pustego ciągu. Powodem jest to, że taki węzeł tekstowy nie ma wpływu na serializacji XML. Jednak z tego samego powodu, gdy jest możliwy sąsiednie węzły tekstowe, jeśli usuniesz tekst z węzła tekstowego przez ustawienie jego wartości na pusty ciąg, sam węzeł tekstu nie zostanie usunięty.  
   
 ```vb  
 Dim xmlTree As XElement = <Root>Content</Root>  
@@ -73,14 +73,14 @@ Dim textNode2 As XText = xmlTree.Nodes().OfType(Of XText)().First()
 Console.WriteLine(">>{0}<<", textNode2)  
 ```  
   
- Ten przykład generuje następujące wyniki:  
+ Ten przykład generuje następujące dane wyjściowe:  
   
-```  
+```console  
 >><<  
 ```  
   
-### <a name="an-empty-text-node-impacts-serialization"></a>Pusty węzeł tekstowy wpływa na serializacji  
- Jeśli element zawiera tylko tekst węzeł podrzędny, która jest pusta, jest serializowany ze składnią długich znaczników: `<Child></Child>`. Jeśli element zawiera bez jakiejkolwiek węzłów podrzędnych, jest serializowany ze składnią krótki tagu: `<Child />`.  
+### <a name="an-empty-text-node-impacts-serialization"></a>Pusty węzeł tekstowy wpływa na serializację  
+ Jeśli element zawiera tylko podrzędny węzeł tekstowy, który jest pusty, jest serializowany z składnią długiego tagu: `<Child></Child>`. Jeśli element nie zawiera żadnych węzłów podrzędnych, zostaje Zserializowany za pomocą składni krótkiej tagu: `<Child />`.  
   
 ```vb  
 Dim child1 As XElement = New XElement("Child1", _  
@@ -91,17 +91,17 @@ Console.WriteLine(child1)
 Console.WriteLine(child2)  
 ```  
   
- Ten przykład generuje następujące wyniki:  
+ Ten przykład generuje następujące dane wyjściowe:  
   
 ```xml  
 <Child1></Child1>  
 <Child2 />  
 ```  
   
-### <a name="namespaces-are-attributes-in-the-linq-to-xml-tree"></a>Przestrzenie nazw są atrybuty w składniku LINQ to drzewa XML  
- Mimo że deklaracje przestrzeni nazw mają identyczne składni atrybutów, w niektórych interfejsach programowania, takich jak XSLT i XPath, deklaracje przestrzeni nazw nie są uwzględniane jako atrybuty. Jednak w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], przestrzenie nazw są przechowywane jako <xref:System.Xml.Linq.XAttribute> obiektów w drzewie XML. Jeśli iterację atrybuty dla elementu, który zawiera deklarację przestrzeni nazw deklaracji przestrzeni nazw zostanie wyświetlona jako jeden z elementów w kolekcji zwrócone.  
+### <a name="namespaces-are-attributes-in-the-linq-to-xml-tree"></a>Przestrzenie nazw są atrybutami drzewa LINQ to XML  
+ Mimo że deklaracje przestrzeni nazw mają identyczną składnię atrybutów, w niektórych interfejsach programowania, takich jak XSLT i XPath, deklaracje przestrzeni nazw nie są uważane za atrybuty. Jednak w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] przestrzenie nazw są przechowywane jako obiekty <xref:System.Xml.Linq.XAttribute> w drzewie XML. W przypadku iteracji przez atrybuty elementu, który zawiera deklarację przestrzeni nazw, Deklaracja przestrzeni nazw będzie widoczna jako jeden z elementów w zwróconej kolekcji.  
   
- <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A> Właściwość wskazuje, czy atrybut deklaracji przestrzeni nazw.  
+ Właściwość <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A> wskazuje, czy atrybut jest deklaracją przestrzeni nazw.  
   
 ```vb  
 Dim root As XElement = _   
@@ -115,16 +115,16 @@ For Each att As XAttribute In root.Attributes()
 Next  
 ```  
   
- Ten przykład generuje następujące wyniki:  
+ Ten przykład generuje następujące dane wyjściowe:  
   
-```  
+```console  
 xmlns="http://www.adventure-works.com"  IsNamespaceDeclaration:True  
 xmlns:fc="www.fourthcoffee.com"  IsNamespaceDeclaration:True  
 AnAttribute="abc"  IsNamespaceDeclaration:False  
 ```  
   
-### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a>Metody osi XPath nie zwracają podrzędnych biały znak z dokumentem  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Umożliwia węzły tekstowe podrzędne <xref:System.Xml.Linq.XDocument>, tak długo, jak węzły tekstowe, zawierać samych znaków odstępu. Jednak model obiektów XPath nie zawiera biały znak jako węzły podrzędne dokumentu, więc podczas iteracji elementów podrzędnych <xref:System.Xml.Linq.XDocument> przy użyciu <xref:System.Xml.Linq.XContainer.Nodes%2A> osi, węzły tekstowe białe miejsca zostaną zwrócone. Jednak podczas iteracji przez elementy podrzędne <xref:System.Xml.Linq.XDocument> przy użyciu metody XPath osi, węzły tekstowe białe miejsca nie zostaną zwrócone.  
+### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a>Metody osi XPath nie zwracają białych znaków elementu XDocument  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zezwala na podrzędne węzły tekstowe <xref:System.Xml.Linq.XDocument>, tak długo, jak węzły tekstowe zawierają tylko biały znak. Jednak model obiektów XPath nie zawiera białych znaków jako węzłów podrzędnych dokumentu, więc gdy przejdziesz do iteracji przez elementy podrzędne <xref:System.Xml.Linq.XDocument> przy użyciu osi <xref:System.Xml.Linq.XContainer.Nodes%2A>, zostaną zwrócone wolne węzły tekstu. Jednak podczas iteracji przez elementy podrzędne <xref:System.Xml.Linq.XDocument> przy użyciu metod osi XPath, węzły tekstu odstępu nie zostaną zwrócone.  
   
 ```vb  
 ' Create a document with some white space child nodes of the document.  
@@ -141,15 +141,15 @@ Dim nodes As IEnumerable = CType(root.XPathEvaluate("text()"), IEnumerable)
 Console.WriteLine(nodes.OfType(Of XText)().Count())  
 ```  
   
- Ten przykład generuje następujące wyniki:  
+ Ten przykład generuje następujące dane wyjściowe:  
   
-```  
+```console  
 3  
 0  
 ```  
   
-### <a name="xdeclaration-objects-are-not-nodes"></a>XDeclaration obiekty nie są węzłami  
- Podczas iteracji węzłów podrzędnych <xref:System.Xml.Linq.XDocument>, nie będą widzieć obiekt deklaracji XML. Jest właściwości dokumentu nie elementem podrzędnym go.  
+### <a name="xdeclaration-objects-are-not-nodes"></a>Obiekty XDeclaration nie są węzłami  
+ Gdy przejdziesz do iteracji węzłów podrzędnych <xref:System.Xml.Linq.XDocument>, obiekt deklaracji XML nie zostanie wyświetlony. Jest to właściwość dokumentu, a nie jego węzeł podrzędny.  
   
 ```vb  
 Dim doc As XDocument = _  
@@ -163,7 +163,7 @@ Console.WriteLine(File.ReadAllText("Temp.xml"))
 Console.WriteLine(doc.Nodes().Count())  
 ```  
   
- Ten przykład generuje następujące wyniki:  
+ Ten przykład generuje następujące dane wyjściowe:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -173,4 +173,4 @@ Console.WriteLine(doc.Nodes().Count())
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zaawansowane LINQ to XML programowania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Zaawansowane programowanie LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

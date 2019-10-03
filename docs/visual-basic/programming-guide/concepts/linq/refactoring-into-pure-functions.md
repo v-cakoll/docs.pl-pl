@@ -2,34 +2,34 @@
 title: Refaktoryzacja do czystych funkcji (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-ms.openlocfilehash: 0a37b30278c850256355612cec09a4c017c7adc2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e951b3e9108f26a9c861eb49c44bb0a510131819
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787169"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834915"
 ---
 # <a name="refactoring-into-pure-functions-visual-basic"></a>Refaktoryzacja do czystych funkcji (Visual Basic)
 
-Ważnym aspektem czystych przekształceń funkcjonalnych jest nauki refaktoryzacji kodu przy użyciu czystej funkcji.
+Ważnym aspektem czystych transformacji funkcjonalnych jest uczenie się, jak kod refaktoryzacji przy użyciu czystych funkcji.
 
-Jak wspomniano wcześniej w tej sekcji, czystej funkcji ma dwie właściwości przydatne:
+Jak wspomniano wcześniej w tej sekcji, czysta funkcja ma dwie przydatne cechy:
 
-- Nie ma żadnych efektów ubocznych. Funkcja nie zmienia żadnych zmiennych lub danych dowolnego typu spoza tej funkcji.
+- Nie ma żadnych efektów ubocznych. Funkcja nie zmienia żadnych zmiennych ani danych dowolnego typu poza funkcją.
 
-- Jest ona zgodna. Biorąc pod uwagę ten sam zestaw danych wejściowych, która zawsze zwraca tę samą wartość w danych wyjściowych.
+- Jest ona spójna. Mając ten sam zestaw danych wejściowych, zawsze zwróci tę samą wartość wyjściową.
 
- Jednym ze sposobów przechodzenia do programowania funkcyjnego jest Przeprowadź refaktoryzację istniejącego kodu, aby wyeliminować niepotrzebne efekty uboczne i zależności zewnętrznych. W ten sposób można utworzyć wersji czystą funkcję istniejącego kodu.
+ Jednym ze sposobów przejścia do programowania funkcjonalnego jest Refaktoryzacja istniejącego kodu w celu wyeliminowania zbędnych efektów ubocznych i zewnętrznych zależności. W ten sposób można utworzyć czystą wersję funkcji istniejącego kodu.
 
-W tym temacie omówiono funkcja czystego jest i co nie jest. [Samouczka: Manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) samouczek przedstawia sposób modyfikowania dokumentu WordprocessingML i zawiera dwa przykłady jak Refaktoryzacja, przy użyciu czystej funkcji.
+W tym temacie omówiono czystą funkcję i jej znaczenie. [Samouczek: manipulowanie zawartością w samouczku WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) pokazuje, jak manipulować dokumentem WordprocessingML i zawiera dwa przykłady sposobu refaktoryzacji przy użyciu czystej funkcji.
 
-## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminując skutki uboczne i zależności zewnętrznych
+## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminowanie efektów ubocznych i zależności zewnętrznych
 
-Poniższe przykłady porównać dwie funkcje — czyste i czystą funkcję.
+Poniższe przykłady różnią się dwoma nieczystymi funkcjami i czystą funkcją.
 
-### <a name="non-pure-function-that-changes-a-class-member"></a>Czystej funkcji, która zmienia składowej klasy
+### <a name="non-pure-function-that-changes-a-class-member"></a>Nieczysta funkcja, która zmienia element członkowski klasy
 
-W poniższym kodzie `HyphenatedConcat` funkcja nie jest funkcją czystego, ponieważ modyfikuje `aMember` element członkowski danych w klasie:
+W poniższym kodzie funkcja `HyphenatedConcat` nie jest czystą funkcją, ponieważ modyfikuje element członkowski danych `aMember` w klasie:
 
 ```vb
 Module Module1
@@ -48,15 +48,15 @@ End Module
 
 Ten kod generuje następujące dane wyjściowe:
 
-```
+```console
 StringOne-StringTwo
 ```
 
-Zwróć uwagę, że jej nie ma znaczenia tego, czy ma modyfikacji danych `public` lub `private` dostępu lub jest `shared` elementu członkowskiego lub elementu członkowskiego wystąpienia. Czystą funkcję nie zmienia żadnych danych poza funkcją.
+Należy zauważyć, że nie ma znaczenia, czy modyfikowane dane mają dostęp `public` lub `private`, czy jest składową `shared` lub składową wystąpienia. Czysta funkcja nie zmienia żadnych danych poza funkcją.
 
-### <a name="non-pure-function-that-changes-an-argument"></a>Czystej funkcji, która zmienia argumentu
+### <a name="non-pure-function-that-changes-an-argument"></a>Nieczysta funkcja, która zmienia argument
 
-Ponadto, następująca wersja tej samej funkcji nie jest czysty ponieważ modyfikuje zawartość jako parametr `sb`.
+Ponadto następująca wersja tej samej funkcji nie jest czysta, ponieważ modyfikuje zawartość parametru, `sb`.
 
 ```vb
 Module Module1
@@ -72,14 +72,14 @@ Module Module1
 End Module
 ```
 
-Ta wersja programu daje takie same dane wyjściowe jako pierwsza wersja, ponieważ `HyphenatedConcat` funkcja została zmieniona wartość (stan) jako pierwszy parametr, wywołując <xref:System.Text.StringBuilder.Append%2A> funkcja elementu członkowskiego. Uwaga występowanie tej zmiany, pomimo faktu, `HyphenatedConcat` używa wywołań przez wartość parametru przekazywania.
+Ta wersja programu daje te same dane wyjściowe co w pierwszej wersji, ponieważ funkcja `HyphenatedConcat` zmieniła wartość (stan) pierwszego parametru, wywołując funkcję członkowską <xref:System.Text.StringBuilder.Append%2A>. Należy zauważyć, że ta zmiana występuje pomimo tego, że `HyphenatedConcat` używa przekazywania parametrów wywołania przez wartość.
 
 > [!IMPORTANT]
-> Dla typów odwołań w przypadku przekazania parametr przez wartość, jej powoduje kopię odwołanie do obiektu przekazywana. Ta kopia jest nadal skojarzone z tymi samymi danymi wystąpienia jako odwołanie do oryginalnego (aż do zmiennej odwołania jest przypisany do nowego obiektu). Wywołanie przez odwołanie nie jest zawsze wymagane dla funkcji zmodyfikować parametr.
+> W przypadku typów referencyjnych, Jeśli przekażesz parametr według wartości, wynikiem jest kopia odwołania do obiektu, który jest przekazywany. Ta kopia jest nadal skojarzona z tymi samymi danymi wystąpienia co oryginalne odwołanie (do momentu przypisania zmiennej odniesienia do nowego obiektu). Wywołanie przez odwołanie nie musi być wymagane do zmodyfikowania parametru przez funkcję.
 
-### <a name="pure-function"></a>Czystej funkcji
+### <a name="pure-function"></a>Czysta funkcja
 
-Ten następnej wersji programu, jak wybierać sposób implementacji `HyphenatedConcat` pełnią czystą funkcję.
+Ta Następna wersja programu hows, jak zaimplementować funkcję `HyphenatedConcat` jako czystą funkcję.
 
 ```vb
 Module Module1
@@ -95,17 +95,17 @@ Module Module1
 End Module
 ```
 
-Ponownie generuje ten sam wiersz danych wyjściowych w tej wersji: `StringOne-StringTwo`. Należy pamiętać, aby zachować wartość połączone, jest on przechowywany w zmiennej pośrednich `s2`.
+Ta wersja generuje ten sam wiersz danych wyjściowych: `StringOne-StringTwo`. Należy pamiętać, że aby zachować łączną wartość, jest ona przechowywana w zmiennej pośredniej `s2`.
 
-Jedno podejście, które mogą być bardzo przydatne jest napisanie funkcje, które są lokalnie oczyścić zanieczyszczony (oznacza to, mogą zadeklarować i modyfikowanie zmiennych lokalnych), ale są globalnie czysty. Takie funkcje, ma wiele cech pożądane możliwości tworzenia, ale uniknąć niektórych bardziej zawiłe funkcjonalności idiomy programowania, takich jak konieczności rekursję, gdy prostej pętli może osiągnąć to samo.
+Jednym z metod, które może być bardzo przydatne, jest zapisanie funkcji, które są w sposób nieczysty (to oznacza, że deklarują i modyfikują zmienne lokalne), ale są globalnie czyste. Takie funkcje mają wiele pożądanych cech tworzenia, ale unikają niektórych bardziej zawiłeych idiomy programowania, takich jak korzystanie z rekursji, gdy pętla prosta osiągnie tę samą wartość.
 
 ## <a name="standard-query-operators"></a>Standardowe operatory zapytań
 
-Ważną cechą standardowych operatorów zapytań jest, że są implementowane jako czystych funkcji.
+Ważną cechą standardowych operatorów zapytań jest zaimplementowanie ich jako czystych funkcji.
 
-Aby uzyskać więcej informacji, zobacz [standardowe operatory zapytań — Przegląd (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
+Aby uzyskać więcej informacji, zobacz [standardowe operatory zapytań — Omówienie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do czystych przekształceń funkcjonalnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [Programowanie funkcjonalne a Programowanie imperatywne (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [Wprowadzenie do czystych transformacji funkcjonalnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Programowanie funkcjonalne a programowanie bezwzględne (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

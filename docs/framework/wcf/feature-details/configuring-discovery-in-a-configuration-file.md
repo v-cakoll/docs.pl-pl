@@ -2,18 +2,18 @@
 title: Konfigurowanie odnajdywania w pliku konfiguracji
 ms.date: 03/30/2017
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-ms.openlocfilehash: c282767e686ac8a6382268aee8b45eb2d1297f5a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ad44d0ad1f0d67d84cc42f6b9938d096c245417
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857522"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834763"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Konfigurowanie odnajdywania w pliku konfiguracji
-Istnieją cztery główne grupy ustawienia konfiguracji używane podczas odnajdywania. W tym temacie zostaną krótko opisano każdą i wyświetlić przykłady sposobów ich konfigurowania. Po każdej sekcji będzie znajdował się link do dokumentację o każdy z tych obszarów.  
+Odnajdywanie obejmuje cztery główne grupy ustawień konfiguracji. W tym temacie krótko opisano poszczególne i przedstawiono przykłady sposobu ich konfigurowania. Poniższe sekcje będą linkiem do bardziej szczegółowej dokumentacji dotyczącej każdego obszaru.  
   
-## <a name="behavior-configuration"></a>Konfigurację zachowania  
- Odnajdywanie używa zachowania usług i zachowań punktu końcowego. <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> Zachowanie umożliwia odnajdowanie dla wszystkich punktów końcowych usługi i umożliwia określenie ogłoszenie punktów końcowych.  Poniższy przykład pokazuje, jak dodać <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> i określania punktu końcowego anonsu.  
+## <a name="behavior-configuration"></a>Konfiguracja zachowania  
+ Funkcja odnajdywania używa zachowań usługi i zachowań punktów końcowych. Zachowanie <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> umożliwia odnajdywanie dla wszystkich punktów końcowych usługi i pozwala określić punkty końcowe anonsu.  Poniższy przykład pokazuje, jak dodać <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> i określić punkt końcowy anonsu.  
   
 ```xml  
 <behaviors>  
@@ -28,7 +28,7 @@ Istnieją cztery główne grupy ustawienia konfiguracji używane podczas odnajdy
       </serviceBehaviors>  
 ```  
   
- Po określeniu zachowanie, odwołaj się do niego z <`service`> elementu, jak pokazano w następującym przykładzie.  
+ Po określeniu zachowania należy odwołać się do niego za pomocą < `service` > elementu, jak pokazano w poniższym przykładzie.  
   
 ```xml  
 <system.serviceModel>  
@@ -44,9 +44,9 @@ Istnieją cztery główne grupy ustawienia konfiguracji używane podczas odnajdy
     </service>  
 ```  
   
- Aby usługa być wykrywalny, musisz również dodać punkt końcowy odnajdywania w powyższym przykładzie dodaje <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> standardowy punkt końcowy.  
+ Aby można było odnaleźć usługę, należy również dodać punkt końcowy odnajdywania, ale powyższy przykład dodaje standardowy punkt końcowy <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
   
- Po dodaniu punktów końcowych anons, należy także dodać usługi odbiornika anonsu do <`services`> elementu, jak pokazano w poniższym przykładzie.  
+ Po dodaniu punktów końcowych anonsów należy również dodać usługę odbiornika anonsu do < `services` > elementu, jak pokazano w poniższym przykładzie.  
   
 ```xml  
 <services>  
@@ -64,7 +64,7 @@ Istnieją cztery główne grupy ustawienia konfiguracji używane podczas odnajdy
    </service>  
 ```  
   
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> Zachowanie jest używany, aby włączyć lub wyłączyć odnajdywanie określonego punktu końcowego.  Poniższy przykład umożliwia skonfigurowanie usługi za pomocą dwóch punktów końcowych w aplikacji z włączoną funkcję odnajdowania i jeden z odnajdywaniem wyłączone. Dla każdego punktu końcowego <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> zachowanie zostanie dodany.  
+ Zachowanie <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> służy do włączania lub wyłączania odnajdywania określonego punktu końcowego.  Poniższy przykład konfiguruje usługę z dwoma punktami końcowymi aplikacji, jedną z włączonym odnajdywaniem i z wyłączonym odnajdywaniem. Dla każdego punktu końcowego zostaje dodane zachowanie <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>.  
   
 ```xml  
 <system.serviceModel>  
@@ -104,7 +104,7 @@ Istnieją cztery główne grupy ustawienia konfiguracji używane podczas odnajdy
    </behaviors>  
 ```  
   
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> Zachowanie można również dodać niestandardowych metadanych do punktu końcowego metadanych zwróconych przez usługę. W przykładzie poniżej pokazano, jak to zrobić.  
+ Zachowanie <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> umożliwia także Dodawanie niestandardowych metadanych do metadanych punktów końcowych zwracanych przez usługę. W przykładzie poniżej pokazano, jak to zrobić.  
   
 ```xml  
 <behavior name="ep4Behavior">  
@@ -120,7 +120,7 @@ Istnieją cztery główne grupy ustawienia konfiguracji używane podczas odnajdy
 </behavior>  
 ```  
   
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> Zachowanie można również dodać zakresy i typów używanych przez klientów do wyszukiwania dla usług. Poniższy przykład pokazuje, jak to zrobić w pliku konfiguracji po stronie klienta.  
+ Zachowanie <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> umożliwia także dodawanie zakresów i typów używanych przez klientów do wyszukiwania usług. Poniższy przykład pokazuje, jak to zrobić w pliku konfiguracji po stronie klienta.  
   
 ```xml  
 <behavior name="ep2Behavior">  
@@ -137,10 +137,10 @@ Istnieją cztery główne grupy ustawienia konfiguracji używane podczas odnajdy
 </behavior>  
 ```  
   
- Aby uzyskać więcej informacji na temat <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> i <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> zobacz [omówienie odnajdywania WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).  
+ Aby uzyskać więcej informacji na temat <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> i <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> zobacz [Omówienie odnajdywania WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).  
   
 ## <a name="binding-element-configuration"></a>Konfiguracja elementu powiązania  
- Konfiguracja elementu powiązania jest najbardziej interesujących po stronie klienta. Można użyć konfiguracji użytkownikowi określić kryteria wyszukiwania, używanej do odnajdywania usług od aplikacji klienckiej usługi WCF.  Poniższy przykład obejmuje tworzenie niestandardowego powiązania za pomocą <xref:System.ServiceModel.Discovery.DiscoveryClient> kanału i określa kryteria wyszukiwania, które zawiera, typie i zakresie. Ponadto określa wartości dla <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> i <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> właściwości.  
+ Konfiguracja elementu powiązania jest najbardziej interesująca po stronie klienta. Za pomocą konfiguracji można określić kryteria wyszukiwania używane do odnajdywania usług z aplikacji klienckiej programu WCF.  Poniższy przykład tworzy niestandardowe powiązanie z kanałem <xref:System.ServiceModel.Discovery.DiscoveryClient> i określa kryteria wyszukiwania, które zawierają typ i zakres. Dodatkowo określa ona wartości właściwości <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> i <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>.  
   
 ```xml  
 <bindings>  
@@ -166,7 +166,7 @@ Istnieją cztery główne grupy ustawienia konfiguracji używane podczas odnajdy
         </binding>  
 ```  
   
- Ta konfiguracja powiązania niestandardowego muszą być przywoływane przez punkt końcowy klienta:  
+ Ta konfiguracja powiązania niestandardowego musi być przywoływana przez punkt końcowy klienta:  
   
 ```xml  
 <client>  
@@ -177,10 +177,10 @@ Istnieją cztery główne grupy ustawienia konfiguracji używane podczas odnajdy
     </client>  
 ```  
   
- Aby uzyskać więcej informacji na temat kryteria znajdowania zobacz [odnajdywania Znajdowanie i kryteria znajdowania](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). Aby uzyskać więcej informacji na temat odnajdowania i Zobacz elementy powiązania [omówienie odnajdywania WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ Aby uzyskać więcej informacji na temat kryteriów wyszukiwania [, zobacz odnajdywanie Znajdź i kryteria znajdowania](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). Aby uzyskać więcej informacji na temat odnajdywania i elementów powiązań, zobacz [Omówienie odnajdywania WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
   
-## <a name="standard-endpoint-configuration"></a>Konfiguracja standardowego punktu końcowego  
- Standardowe punkty końcowe są wstępnie zdefiniowanych punktów końcowych, które mają przypisane wartości domyślne dla co najmniej jednej właściwości (adres, powiązanie lub umowy) lub wartości właściwości, których nie można zmienić. .NET 4, który jest dostarczany z 3 odnajdywania powiązane standardowe punkty końcowe: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>, i <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> Wiąże standardowy punkt końcowy, który jest wstępnie skonfigurowana dla operacji odnajdowania za pośrednictwem multiemisji UDP. <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> Jest standardowy punkt końcowy, który jest wstępnie skonfigurowana do wysyłania komunikatów Anons za pośrednictwem powiązania protokołu UDP. <xref:System.ServiceModel.Discovery.DynamicEndpoint> Jest standardowy punkt końcowy, który używa odnajdywania można znaleźć adres punktu końcowego usługi odnalezionych dynamicznie w czasie wykonywania.  Standardowe powiązania są określane za pomocą <`endpoint`> element, który zawiera rodzaj atrybut, który określa typ Standardowy punkt końcowy, aby dodać. Poniższy przykład pokazuje, jak dodać <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> i <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.  
+## <a name="standard-endpoint-configuration"></a>Standardowa konfiguracja punktu końcowego  
+ Standardowe punkty końcowe są wstępnie zdefiniowanymi punktami końcowymi, które mają wartości domyślne dla jednej lub wielu właściwości (adresu, powiązania lub kontraktu) lub jednej lub więcej wartości właściwości, których nie można zmienić. Platforma .NET 4 jest dostarczana z 3 punktami końcowymi związanymi z odnajdywaniem: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> i <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  @No__t-0 to standardowy punkt końcowy, który jest wstępnie skonfigurowany dla operacji odnajdywania za pośrednictwem powiązania multiemisji UDP. @No__t-0 to standardowy punkt końcowy, który jest wstępnie skonfigurowany do wysyłania komunikatów anonsu za pośrednictwem powiązania UDP. @No__t-0 jest standardowym punktem końcowym, który używa odnajdywania do dynamicznego znajdowania adresu punktu końcowego wykrytej usługi w czasie wykonywania.  Standardowe powiązania są określane za pomocą < `endpoint` > elementu, który zawiera atrybut Kind, który określa typ standardowego punktu końcowego do dodania. Poniższy przykład pokazuje, jak dodać <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> i <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.  
   
 ```xml  
 <services>  
@@ -194,7 +194,7 @@ Istnieją cztery główne grupy ustawienia konfiguracji używane podczas odnajdy
 </services>  
 ```  
   
- Standardowe punkty końcowe są konfigurowane w <`standardEndpoints`> element. Poniższy przykład przedstawia sposób konfigurowania <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> i <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.  
+ Standardowe punkty końcowe są konfigurowane w < `standardEndpoints` > elementu. Poniższy przykład pokazuje, jak skonfigurować <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> i <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.  
   
 ```xml  
 <standardEndpoints>  
@@ -226,7 +226,7 @@ Istnieją cztery główne grupy ustawienia konfiguracji używane podczas odnajdy
       </udpDiscoveryEndpoint>  
 ```  
   
- Po dodaniu konfiguracji standardowy punkt końcowy odwoływać się do konfiguracji w <`endpoint`>, element dla każdego punktu końcowego, jak pokazano w następującym przykładzie.  
+ Po dodaniu standardowej konfiguracji punktu końcowego odwołując się do konfiguracji w < `endpoint` > dla każdego punktu końcowego, jak pokazano w poniższym przykładzie.  
   
 ```xml  
 <services>  
@@ -240,7 +240,7 @@ Istnieją cztery główne grupy ustawienia konfiguracji używane podczas odnajdy
 </services>  
 ```  
   
- W przeciwieństwie do innych standardowych punktów końcowych używanych podczas odnajdywania, określanie wiązań i kontrakt dla <xref:System.ServiceModel.Discovery.DynamicEndpoint>. Poniższy przykład pokazuje, jak dodać i skonfigurować <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  
+ W przeciwieństwie do innych standardowych punktów końcowych używanych podczas odnajdywania, należy określić powiązanie i kontrakt dla <xref:System.ServiceModel.Discovery.DynamicEndpoint>. Poniższy przykład pokazuje, jak dodać i skonfigurować <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  
   
 ```xml  
 <system.serviceModel>  
@@ -269,4 +269,4 @@ Istnieją cztery główne grupy ustawienia konfiguracji używane podczas odnajdy
 </system.ServiceModel>  
 ```  
   
- Aby uzyskać więcej informacji na temat standardowych punktów końcowych zobacz [standardowe punkty końcowe](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)
+ Aby uzyskać więcej informacji na temat standardowych punktów końcowych, zobacz [standardowe punkty końcowe](standard-endpoints.md).

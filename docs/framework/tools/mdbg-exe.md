@@ -66,7 +66,7 @@ MDbg [ProgramName[arguments]] [options]
 |**Opendump** *pathToDumpFile*|Otwiera określony plik zrzutu na potrzeby debugowania.|  
 |**o** [**UT**]|Przechodzi na koniec bieżącej funkcji.|  
 |**PA** [**th**] [*nazwa_ścieżki*]|Wyszukuje pliki źródłowe w określonej ścieżce, jeśli lokalizacja w plikach binarnych jest niedostępna.|  
-|**p** [**rukuj**] [*var*] &#124; [`-d`]|Drukuje wszystkie zmienne w zakresie (**Drukowanie**), drukuje określoną zmienną ( *wariancję***drukowania** ) lub drukuje zmienne debugera (**drukowania**`-d`).|  
+|**p** [**rukuj**] [*var*] &#124; [`-d`]|Drukuje wszystkie zmienne w zakresie (**Drukowanie**), drukuje określoną zmienną ( *wariancję* **drukowania** ) lub drukuje zmienne debugera (**drukowania**`-d`).|  
 |**Drukuj** [**wyjątków**] [ *-r*]|Drukuje ostatni wyjątek w bieżącym wątku. Użyj opcji `InnerException` (rekursywnie), aby przejść przez właściwość obiektu Exception w celu uzyskania informacji na temat całego łańcucha wyjątków. `–r`|  
 |**pakiet Pro** [**cessenum**]|Wyświetla aktywne procesy.|  
 |**p** [**UIT**] [*ExitCode*]|Zamyka powłokę programu MDbg.exe i opcjonalnie określa kod zakończenia procesu.|  

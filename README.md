@@ -8,13 +8,13 @@ ms.locfileid: "69658437"
 ---
 # <a name="net-docs"></a>Dokumentacja platformy .NET
 
-To repozytorium zawiera dokumentację koncepcyjną dla platformy .NET. [Witryna dokumentacji programu .NET](https://docs.microsoft.com/dotnet) została utworzona na podstawie wielu repozytoriów, a także do tego:
+To repozytorium zawiera dokumentację koncepcyjną dla platformy .NET. [Witryna dokumentacji programu .NET](https://docs.microsoft.com/dotnet) została utworzona na podstawie wielu repozytoriów, włącznie z tym:
 
 - [Przykłady i fragmenty kodu](https://github.com/dotnet/samples)
 - [Dokumentacja interfejsu API](https://github.com/dotnet/dotnet-api-docs)
 - [Dokumentacja zestawu SDK .NET Compiler Platform](https://github.com/dotnet/roslyn-api-docs)
 
-Informacje o problemach i zadaniach dla wszystkich oprócz repozytorium odwołań API są śledzone w tym miejscu. Mamy dużą społeczność używające tych zasobów. Nasz najlepszy nakład na reagowanie na problemy w odpowiednim czasie. Więcej informacji na temat procedur klasyfikowania i rozwiązywania problemów znajduje się w temacie [zasady problemów](issues-policy.md) .
+Informacje o problemach i zadaniach dotyczących wszystkiego oprócz repozytorium referencyjnego dla API są śledzone w tym miejscu. Te zasoby są używane przez całą naszą społeczność. Staramy się jak najszybciej reagować na wszystkie zgłoszenia. Więcej informacji na temat procedur klasyfikowania i rozwiązywania problemów można znaleźć w [tym dokumencie](issues-policy.md).
 
 Zapraszamy do poprawienia i zakończenia dokumentacji platformy .NET. Aby współtworzyć, zapoznaj się z tematem [projekty współpracowników platformy .NET dla społeczności](https://github.com/dotnet/docs/projects/35) . [Przewodnik](CONTRIBUTING.md) współautora zawiera instrukcje dotyczące procedur, których używamy. Lub zapoznaj się z [listą problemów](https://github.com/dotnet/docs/issues) , aby zapoznać się z interesującymi Cię zadaniami. 
 

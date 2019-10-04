@@ -354,7 +354,7 @@ GO
 Następująca lista kodu:
 
 > [!TIP]
-> Lista kod odnosi się do pliku bazy danych programu Access o nazwie plik *. mdb. Możesz pobrać szkołę. mdb (jako część pełnego C# lub Visual Basic przykładowego projektu) z [Code.MSDN.Microsoft.com](https://code.msdn.microsoft.com/How-to-Retrieve-the-511acece).
+> Lista kod odnosi się do pliku bazy danych programu Access o nazwie plik . mdb. Możesz pobrać szkołę. mdb (jako część pełnego C# lub Visual Basic przykładowego projektu) z [Code.MSDN.Microsoft.com](https://code.msdn.microsoft.com/How-to-Retrieve-the-511acece).
 
 ```csharp
 using System;

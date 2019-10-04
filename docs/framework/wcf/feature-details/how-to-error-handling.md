@@ -1,29 +1,29 @@
 ---
-title: 'Instrukcje: Obsługa błędów'
+title: 'Instrukcje: obsługa błędów'
 ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
-ms.openlocfilehash: 4958e7914d9feb32dc00d11a215cf8247e9baffc
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 3b8e48a74ff7671b942b5499fb3a0b5d0f389d61
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424603"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834713"
 ---
-# <a name="how-to-error-handling"></a>Instrukcje: Obsługa błędów
+# <a name="how-to-error-handling"></a>Instrukcje: obsługa błędów
 
-W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji routingu, który używa obsługi błędów. W tym przykładzie komunikaty są kierowane do docelowego punktu końcowego. Jeśli nie można dostarczyć komunikatu z powodu błędu związanego z komunikacji lub sieci (<xref:System.ServiceModel.CommunicationException>), wiadomości jest wysyłane ponownie do alternatywnego punktu końcowego.
-
-> [!NOTE]
-> Symulowanie awarii sieci, docelowy punkt końcowy, w tym przykładzie zawiera nieprawidłowy adres. Wiadomości kierowane do tego niepowodzenia punktu końcowego jako żadna usługa nasłuchuje na określonym adresie.
+W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji routingu korzystającej z obsługi błędów. W tym przykładzie komunikaty są kierowane do docelowego punktu końcowego. Jeśli nie można dostarczyć komunikatu z powodu niepowodzenia sieci lub komunikacji (<xref:System.ServiceModel.CommunicationException>), komunikat jest ponownie wysyłany do alternatywnego punktu końcowego.
 
 > [!NOTE]
-> Podczas przykład zawarte w tym temacie nie omówiono jawnie ustawienia limitu czasu, należy wykonać je pod uwagę podczas korzystania z obsługi błędów. Gdy wystąpią błędy, nastąpi dodatkowych opóźnień, napotkano zanim klient otrzyma odpowiedź. Jest to spowodowane jest błąd w usługa routingu, który próbuje wysłać wiadomość do kopii zapasowej punktu końcowego. Jeśli wartości limitu czasu skojarzony z podstawowego i zapasowego docelowych punktów końcowych są duże, klienta mogą wystąpić znaczne opóźnienie, jak komunikat przechodzi w trybie Failover wiele punktów końcowych na liście kopii zapasowej przed wysłaniem pomyślnie.
+> Aby symulować awarię sieci, docelowy punkt końcowy użyty w tym przykładzie zawiera nieprawidłowy adres. Komunikaty kierowane do tego punktu końcowego nie powiodą się, ponieważ żadna usługa nie nasłuchuje na określonym adresie.
+
+> [!NOTE]
+> Chociaż w przykładzie zawartym w tym temacie nie omówiono jawnie ustawień limitu czasu, należy wziąć pod uwagę podczas korzystania z obsługi błędów. Po napotkaniu błędów zostanie wykryte dodatkowe opóźnienie, zanim klient otrzyma odpowiedź. Wynika to z faktu, że błąd jest odbierany w usłudze routingu, a następnie próbuje wysłać komunikat do punktu końcowego kopii zapasowej. Jeśli wartość limitu czasu skojarzona z punktami końcowymi podstawowego i docelowego kopii zapasowej jest duża, klient może wystąpić z długim opóźnieniem, ponieważ komunikat przejdzie do trybu failover w wielu punktach końcowych na liście kopii zapasowych przed pomyślnym wysłaniem.
 >
-> Ponieważ usługa routingu z tym może wystąpić opóźnienie maksymalna równa sumie wartość limitu czasu dla wszystkich punktów końcowych skojarzonych z filtrem, zaleca się odpowiednio zwiększyć oczekiwanego limit czasu po stronie klienta.
+> Ponieważ usługa routingu może napotkać maksymalne opóźnienie równe sumie wartości limitu czasu dla wszystkich punktów końcowych skojarzonych z filtrem, zalecamy odpowiednio zwiększyć oczekiwany limit czasu na kliencie.
 
-### <a name="implement-error-handling"></a>Implementowanie obsługi błędów
+### <a name="implement-error-handling"></a>Zaimplementuj obsługę błędów
 
-1. Tworzenie podstawowej konfiguracji usługa routingu, określając punkt końcowy usługi udostępniane przez usługę. Poniższy przykład definiuje pojedynczą usługę punktu końcowego, na który jest używany do odbierania komunikatów. Umożliwia on również definiowanie punktów końcowych klienta, które są używane do wysyłania wiadomości; deadDestination i realDestination. Punkt końcowy deadDestination zawiera adres który nie odwołuje się do uruchomionej usługi i jest używana do symulacji awarii sieci, podczas wysyłania komunikatów do tego punktu końcowego.
+1. Utwórz podstawową konfigurację usługi routingu, określając punkt końcowy usługi uwidoczniony przez usługę. W poniższym przykładzie zdefiniowano pojedynczy punkt końcowy usługi, który jest używany do odbierania komunikatów. Definiuje również punkty końcowe klienta, które są używane do wysyłania wiadomości; deadDestination i realDestination. Punkt końcowy deadDestination zawiera adres, który nie odwołuje się do działającej usługi i służy do symulowania awarii sieci podczas wysyłania komunikatów do tego punktu końcowego.
 
     ```xml
     <services>
@@ -58,7 +58,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji
     </client>
     ```
 
-2. Zdefiniuj filtry używane do przesyłania wiadomości do docelowych punktów końcowych.  Na przykład filtr MatchAll jest używany do dopasowywania wszystkich komunikatów odebranych przez usługę routingu.
+2. Zdefiniuj filtry służące do kierowania komunikatów do docelowych punktów końcowych.  W tym przykładzie filtr MatchAll jest używany do dopasowania wszystkich komunikatów odebranych przez usługę routingu.
 
     ```xml
     <filters>
@@ -67,9 +67,9 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji
     </filters>
     ```
 
-3. Zdefiniuj listę kopii zapasowych punktu końcowego, która zawiera punkty końcowe, które wiadomość jest wysyłana do awarii sieci lub komunikacji podczas wysyłania do docelowego podstawowego punktu końcowego. W poniższym przykładzie zdefiniowano listę kopii zapasowych, która zawiera jeden punkt końcowy; jednak można określić wiele punktów końcowych na liście kopii zapasowych.
+3. Zdefiniuj listę punktów końcowych kopii zapasowych, która zawiera punkty końcowe, do których komunikat jest wysyłany w przypadku awarii sieci lub komunikacji podczas wysyłania do podstawowego docelowego punktu końcowego. W poniższym przykładzie zdefiniowano listę kopii zapasowych, która zawiera jeden punkt końcowy; na liście kopii zapasowych można jednak określić wiele punktów końcowych.
 
-     Jeśli lista kopii zapasowych zawiera wiele punktów końcowych, gdy sieć lub usługa routingu wystąpi awaria łączności próbuje wysłać wiadomość do pierwszego punktu końcowego na liście. Jeśli wystąpi awaria sieci lub komunikacji przy wysyłaniu do tego punktu końcowego, usługa routingu próbuje wysłać wiadomość do następnego punktu końcowego znajdujących się na liście. Usługa będzie wysyłania komunikatu do każdego punktu końcowego na liście punktów końcowych kopii zapasowej, dopóki pomyślnie wysłania komunikatu, wszystkie punkty końcowe kopii zapasowej zwracają sieci lub w przypadku błąd związany z komunikacji lub komunikat jest wysyłany i poza siecią, zwracany przez punkt końcowy Błąd dotyczące komunikacji.
+     Jeśli lista kopii zapasowych zawiera wiele punktów końcowych, gdy wystąpi awaria sieci lub komunikacji, usługa routingu próbuje wysłać komunikat do pierwszego punktu końcowego na liście. Jeśli podczas wysyłania do tego punktu końcowego wystąpi awaria sieci lub komunikacji, usługa routingu podejmie próbę wysłania komunikatu do następnego punktu końcowego znajdującego się na liście. Usługa kontynuuje Wysyłanie komunikatu do każdego punktu końcowego na liście punktów końcowych kopii zapasowej do momentu jego pomyślnego wysłania, wszystkie punkty końcowe kopii zapasowej zwracają błąd sieciowy lub związany z komunikacją, a komunikat jest wysyłany, a punkt końcowy zwraca niesieć. błąd niezwiązany z komunikacją.
 
     ```xml
     <backupLists>
@@ -79,7 +79,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji
     </backupLists>
     ```
 
-4. Definiowanie tabeli filtru, które kojarzy filtr z punktu końcowego deadDestination i listy kopii zapasowej punktu końcowego.  Usługa routingu najpierw próbuje wysłać wiadomość do docelowego punktu końcowego skojarzone z filtrem. Ponieważ deadDestination zawiera adres który nie odwołuje się do czynnej usługi, powoduje to błąd sieci. Następnie usługa routingu próbuje wysłać wiadomość do punktu końcowego określonego w backupEndpointList.
+4. Zdefiniuj tabelę filtrów, która kojarzy filtr z punktem końcowym deadDestination oraz listą punktów końcowych kopii zapasowych.  Usługa routingu najpierw próbuje wysłać komunikat do docelowego punktu końcowego skojarzonego z filtrem. Ponieważ deadDestination zawiera adres, który nie odwołuje się do działającej usługi, spowoduje to błąd sieciowy. Następnie usługa routingu próbuje wysłać komunikat do punktu końcowego określonego w backupEndpointList.
 
     ```xml
     <filterTables>
@@ -93,7 +93,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji
           </filterTables>
     ```
 
-5. Aby ocenić komunikaty przychodzące za filtr zawartych w tabeli filtru, należy skojarzyć tabelę filtru z punktami końcowymi usługi za pomocą zachowania routingu.  W poniższym przykładzie pokazano kojarzenie "filterTable1" z punktami końcowymi usługi.
+5. Aby oszacować komunikaty przychodzące względem filtru zawartego w tabeli filtrów, należy skojarzyć tabelę filtru z punktami końcowymi usługi przy użyciu zachowania routingu.  Poniższy przykład demonstruje kojarzenie "filterTable1" z punktami końcowymi usługi.
 
     ```xml
     <behaviors>
@@ -108,7 +108,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji
 
 ## <a name="example"></a>Przykład
 
-Poniżej przedstawiono pełną listę pliku konfiguracji.
+Poniżej znajduje się kompletna lista plików konfiguracyjnych:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

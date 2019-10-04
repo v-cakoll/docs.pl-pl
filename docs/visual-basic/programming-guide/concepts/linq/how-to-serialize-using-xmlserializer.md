@@ -2,18 +2,18 @@
 title: 'Instrukcje: Serializowanie przy użyciu elementu XmlSerializer (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: cace24eb-0f43-4016-8e4b-199e5ef73a1c
-ms.openlocfilehash: 1799ef4a0d0f20cddc4514c9dc901047c631b158
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afde54ed7d0e8049f52468e17f4500fb090f3124
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614261"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835126"
 ---
 # <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>Instrukcje: Serializowanie przy użyciu elementu XmlSerializer (Visual Basic)
-W tym temacie przedstawiono przykład, który serializuje i deserializuje przy użyciu <xref:System.Xml.Serialization.XmlSerializer>.  
+W tym temacie przedstawiono przykład serializacji i deserializacji przy użyciu <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy wiele obiektów, które zawierają <xref:System.Xml.Linq.XElement> obiektów. Szereguje je do strumienia pamięci i deserializuje ze strumienia pamięci.  
+ Poniższy przykład tworzy wiele obiektów, które zawierają <xref:System.Xml.Linq.XElement> obiektów. Następnie deserializacji je do strumienia pamięci, a następnie deserializacji je ze strumienia pamięci.  
   
 ```vb  
 Imports System  
@@ -71,7 +71,7 @@ End Class
   
  Ten przykład generuje następujące wyniki:  
   
-```  
+```console  
 Testing for type: XElementNullContainer  
   Deserialized type: XElementNullContainer  
 Testing for type: System.Xml.Linq.XElement  
@@ -82,4 +82,4 @@ Testing for type: XElementContainer
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Serializowanie wykresów obiektów, które zawierają obiekty XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [Serializacja grafów obiektów, które zawierają obiekty XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

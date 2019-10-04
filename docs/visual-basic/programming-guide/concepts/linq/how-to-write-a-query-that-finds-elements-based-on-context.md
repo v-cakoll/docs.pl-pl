@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Napisz zapytanie, które znajduje elementy na podstawie kontekstu (Visual Basic)'
+title: 'Instrukcje: pisanie zapytania, które znajduje elementy na podstawie kontekstu (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 0b085290-ddc1-4126-aaa0-e4c95a3d9a09
-ms.openlocfilehash: 1743a0793a8b572cb212d45a31924fe8eb93bf45
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: a7661ea35ff829875ee4c625c45da533865fea9f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710403"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835028"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>Instrukcje: Napisz zapytanie, które znajduje elementy na podstawie kontekstu (Visual Basic)
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>Instrukcje: pisanie zapytania, które znajduje elementy na podstawie kontekstu (Visual Basic)
 Czasami może być konieczne zapisanie zapytania, które wybiera elementy na podstawie ich kontekstu. Można filtrować na podstawie poprzedzających lub następujących elementów równorzędnych. Można filtrować na podstawie elementów podrzędnych lub nadrzędnych.  
   
- Można to zrobić przez zapisanie zapytania i użycie wyników zapytania w `where` klauzuli. Jeśli konieczne jest pierwsze przetestowanie na wartość null, a następnie przetestowanie wartości, bardziej wygodne jest wykonanie zapytania w `let` klauzuli, a następnie użycie wyników `where` w klauzuli.  
+ Można to zrobić przez zapisanie zapytania i użycie wyników zapytania w klauzuli `where`. Jeśli konieczne jest pierwsze przetestowanie na wartość null, a następnie przetestowanie wartości, bardziej wygodne jest wykonanie zapytania w klauzuli `let`, a następnie użycie wyników w klauzuli `where`.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie wybrano `p` wszystkie elementy, które są bezpośrednio następuje `ul` po elemencie.  
+ Poniższy przykład wybiera wszystkie elementy `p`, po których bezpośrednio następuje element `ul`.  
   
 ```vb  
 Dim doc As XElement = _  
@@ -51,7 +51,7 @@ Next
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```console  
 id = 1  
 id = 3  
 id = 6  
@@ -100,7 +100,7 @@ End Module
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```console  
 id = 1  
 id = 3  
 id = 6  

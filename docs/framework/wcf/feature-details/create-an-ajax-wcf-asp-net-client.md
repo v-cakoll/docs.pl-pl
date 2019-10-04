@@ -2,12 +2,12 @@
 title: Tworzenie usługi WCF z włączoną obsługą technologii AJAX i klienta ASP.NET w programie Visual Studio
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 1f5c9eb1750b0df28836f147d5b4be1b223bb52e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a6d6e87de6200a5cb9bba566d595066673cdf9cf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053694"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834786"
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Instrukcje: Tworzenie usługi WCF z włączoną obsługą technologii AJAX i klienta ASP.NET korzystającego z tej usługi
 
@@ -17,9 +17,9 @@ W tym temacie przedstawiono sposób użycia programu Visual Studio do utworzenia
 
 1. Otwórz program Visual Studio.
 
-1. Z menu **plik** wybierz pozycję **Nowy** > **projekt** .
+1. Z menu **plik** wybierz pozycję **Nowy** > **projekt**
 
-1. W oknie dialogowym **Nowy projekt** rozwiń kategorię **zainstalowaną** >   > **wizualizację C#**  **internetową** , a następnie wybierz pozycję **aplikacja sieci Web ASP.NET (.NET Framework)** .
+1. W oknie dialogowym **Nowy projekt** rozwiń kategorię **zainstalowaną**@no__t-**2 C#Visual**  >  dla**sieci Web** , a następnie wybierz pozycję **aplikacja sieci Web ASP.NET (.NET Framework)** .
 
 1. Nadaj projektowi nazwę **SandwichServices** i kliknij przycisk **OK**.
 
@@ -31,13 +31,13 @@ W tym temacie przedstawiono sposób użycia programu Visual Studio do utworzenia
 
 1. Kliknij prawym przyciskiem myszy projekt SandwichServices w **Eksplorator rozwiązań** a następnie wybierz pozycję **Dodaj** > **nowy element**.
 
-1. W oknie dialogowym **Dodaj nowy element** rozwiń kategorię **zainstalowaną** >   > **wizualizację C#**  **internetową** , a następnie wybierz szablon **formularza sieci Web** .
+1. W oknie dialogowym **Dodaj nowy element** rozwiń kategorię **zainstalowaną**@no__t-**2 C#Visual**  >  dla**sieci Web** , a następnie wybierz szablon **formularza sieci Web** .
 
 1. Zaakceptuj nazwę domyślną (**WebForm1**), a następnie wybierz pozycję **Dodaj**.
 
    W widoku **źródła** zostanie otwarty *formularz WebForm1. aspx* .
 
-1. Dodaj następującą adiustację wewnątrz  **\<tagów > treści** :
+1. Dodaj następujący znacznik wewnątrz tagów **@no__t 1body >** :
 
    ```html
    <input type="button" value="Price of 3 sandwiches" onclick="Calculate()"/>
@@ -49,7 +49,7 @@ W tym temacie przedstawiono sposób użycia programu Visual Studio do utworzenia
 
 1. Kliknij prawym przyciskiem myszy projekt SandwichServices w **Eksplorator rozwiązań** a następnie wybierz pozycję **Dodaj** > **nowy element**.
 
-1. W oknie dialogowym **Dodaj nowy element** rozwiń kategorię **zainstalowaną** >   > **wizualizację C#**  **internetową** , a następnie wybierz szablon **usługi WCF (z włączoną obsługą technologii AJAX)** .
+1. W oknie dialogowym **Dodaj nowy element** rozwiń kategorię **zainstalowaną**@no__t-**2 C#Visual**  >  dla**sieci Web** , a następnie wybierz szablon **usługi WCF (z włączoną obsługą technologii AJAX)** .
 
    ![Szablon elementu usługi WCF (z obsługą technologii AJAX) w programie Visual Studio](./media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
 
@@ -75,7 +75,7 @@ W tym temacie przedstawiono sposób użycia programu Visual Studio do utworzenia
 
 3. Rozwiń węzeł **rozszerzenia AJAX** i przeciągnij i upuść element **ScriptManager** do formularza.
 
-4. W widoku **źródła** Dodaj następujący kod między  **\<tagami > ScriptManager** , aby określić ścieżkę do usługi WCF:
+4. W widoku **źródła** Dodaj następujący kod między tagami **\<ScriptManager >** , aby określić ścieżkę do usługi WCF:
 
     ```xml
     <Services>
@@ -83,7 +83,7 @@ W tym temacie przedstawiono sposób użycia programu Visual Studio do utworzenia
     </Services>
     ```
 
-5. Dodaj kod dla funkcji `Calculate()`JavaScript. Umieść poniższy kod w sekcji **nagłówka** formularza sieci Web:
+5. Dodaj kod dla funkcji JavaScript `Calculate()`. Umieść poniższy kod w sekcji **nagłówka** formularza sieci Web:
 
     ```html
     <script type="text/javascript">
@@ -104,9 +104,9 @@ W tym temacie przedstawiono sposób użycia programu Visual Studio do utworzenia
 
 ## <a name="run-the-program"></a>Uruchom program
 
-Upewnij się, że *WebForm1. aspx* ma fokus, a następnie naciśnij przycisk **Start** , aby uruchomić klienta sieci Web. Przycisk ma zielony trójkąt i przypomina **IIS Express (Microsoft Edge)** . Możesz też nacisnąć klawisz **F5**. Kliknij przycisk **Cena 3 Sandwiches** , aby wygenerować oczekiwane dane wyjściowe "3,75".
+Upewnij się, że *WebForm1. aspx* ma fokus, a następnie naciśnij przycisk **Start** , aby uruchomić klienta sieci Web. Przycisk ma zielony trójkąt i przypomina **IIS Express (Microsoft Edge)** . Możesz też nacisnąć klawisz <kbd>F5</kbd>. Kliknij przycisk **Cena 3 Sandwiches** , aby wygenerować oczekiwane dane wyjściowe "3,75".
 
-## <a name="example-code"></a>Przykładowy kod
+## <a name="example"></a>Przykład
 
 Poniżej znajduje się pełny kod w pliku *CostService.svc.cs* :
 

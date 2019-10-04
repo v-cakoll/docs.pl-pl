@@ -3,12 +3,12 @@ title: Projektowanie przy użyciu typów referencyjnych dopuszczających wartoś
 description: Ten zaawansowany samouczek zawiera wprowadzenie do typów referencyjnych dopuszczających wartość null. Dowiesz się, w jaki sposób projekt zostanie zastosowany, gdy wartości odniesienia mogą mieć wartość null, i że kompilator wymusi, gdy nie mogą mieć wartości null.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 8b7c512a2f6bd67b07d8e344ad126026048be172
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 5327a9babdf080a535e292cdcefba6da9d0a725b
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736745"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834070"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Samouczek: wyraźny cel projektowania dokładniej z typami referencyjnymi nullable i niedopuszczających wartości null
 
@@ -196,7 +196,7 @@ Ostatnim krokiem jest wyświetlenie wyników ankiety. Dodasz kod do wielu utworz
 
 [!code-csharp[ReportResponses](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#SurveyStatus)]
 
-Ponieważ `surveyResponses` to typ referencyjny niedopuszczający wartości null, przed cofnięciem odwołania nie są wymagane żadne testy. Metoda `Answer` zwraca ciąg niedopuszczający wartości null, dlatego należy wybrać Przeciążenie `GetValueOrDefault`, które przyjmuje drugi argument dla wartości domyślnej.
+Ponieważ `surveyResponses` to typ referencyjny dopuszczający wartości null są wymagane przed cofnięciem odwołania. Metoda `Answer` zwraca ciąg niedopuszczający wartości null, dlatego musimy uwzględnić przypadek brakującej odpowiedzi przy użyciu operatora łączenia wartości null.
 
 Następnie Dodaj te trzy składowe z wyrażeniami do klasy `SurveyRun`:
 

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dostęp do obiektów międzyoperacyjności pakietu C# Office za C# pomocą funkcji wizualnych — Przewodnik programowania'
+title: 'Instrukcje: uzyskiwanie dostępu do obiektów międzyoperacyjności C# pakietu Office C# za pomocą funkcji wizualnych — Przewodnik programowania'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 8e99402752b3fafb486735d56d66737f03ceec30
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 3399d1aad8a2118775f7779727d4d03ee2002547
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972089"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834210"
 ---
-# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Instrukcje: Dostęp do obiektów międzyoperacyjności pakietu C# Office zaC# pomocą funkcji wizualnych (Przewodnik programowania)
+# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Porady: uzyskiwanie dostępu do obiektów międzyoperacyjności pakietu Office za pomocą funkcji Visual C# (Przewodnik po programowaniu w języku C#)
 
-Wizualizacja C# zawiera funkcje, które upraszczają dostęp do obiektów interfejsu API pakietu Office. Nowe funkcje obejmują argumenty nazwane i opcjonalne, nowy typ o nazwie `dynamic`oraz możliwość przekazywania argumentów do parametrów odwołań w metodach com, tak jakby były parametrami wartości.
+Wizualizacja C# zawiera funkcje, które upraszczają dostęp do obiektów interfejsu API pakietu Office. Nowe funkcje obejmują argumenty nazwane i opcjonalne, nowy typ o nazwie `dynamic` i możliwość przekazywania argumentów do parametrów odwołań w metodach COM, tak jakby były parametrami wartości.
 
 W tym temacie zostaną użyte nowe funkcje do napisania kodu, który tworzy i wyświetla Microsoft Office arkusz programu Excel. Następnie napiszesz kod, aby dodać dokument programu Office Word, który zawiera ikonę, która jest połączona z arkuszem programu Excel.
 
@@ -31,7 +31,7 @@ Aby ukończyć ten przewodnik, musisz mieć Microsoft Office Excel 2007 i Micros
 
 1. Uruchom program Visual Studio.
 
-2. W menu **plik** wskaż polecenie **Nowy**, a następnie kliknij pozycję **projekt**. **Nowy projekt** pojawi się okno dialogowe.
+2. W menu **plik** wskaż polecenie **Nowy**, a następnie kliknij pozycję **projekt**. Pojawi się okno dialogowe **Nowy projekt** .
 
 3. W okienku **zainstalowane szablony** rozwiń pozycję **Wizualizacja C#** , a następnie kliknij pozycję **Windows**.
 
@@ -49,33 +49,33 @@ Aby ukończyć ten przewodnik, musisz mieć Microsoft Office Excel 2007 i Micros
 
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy nazwę projektu, a następnie kliknij pozycję **Dodaj odwołanie**. Zostanie wyświetlone okno dialogowe **Dodawanie odwołania** .
 
-2. Na stronie **zestawy** wybierz pozycję **Microsoft. Office. Interop. Word** na liście **Nazwa składnika** , a następnie przytrzymaj naciśnięty klawisz Ctrl i wybierz pozycję **Microsoft. Office. Interop. Excel**.  Jeśli zestawy nie są widoczne, może być konieczne zagwarantowanie, że są one zainstalowane i wyświetlone ( [zobacz How to: Instalowanie podstawowych zestawów](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)międzyoperacyjnych pakietu Office
+2. Na stronie **zestawy** wybierz pozycję **Microsoft. Office. Interop. Word** na liście **Nazwa składnika** , a następnie przytrzymaj naciśnięty klawisz Ctrl i wybierz pozycję **Microsoft. Office. Interop. Excel**.  Jeśli zestawy nie są widoczne, może być konieczne zagwarantowanie, że są one zainstalowane i wyświetlane. Zobacz [jak: Instalowanie podstawowych zestawów międzyoperacyjnych pakietu Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies).
 
 3. Kliknij przycisk **OK**.
 
 ## <a name="to-add-necessary-using-directives"></a>Aby dodać wymagane dyrektywy using
 
-1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy plik **program.cs** , a następnie kliknij polecenie **Wyświetl kod**.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy plik *program.cs* , a następnie kliknij polecenie **Wyświetl kod**.
 
-2. Dodaj następujące `using` dyrektywy na początku pliku kodu.
+2. Dodaj następujące dyrektywy `using` na początku pliku kodu:
 
      [!code-csharp[csProgGuideOfficeHowTo#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#1)]
 
 ## <a name="to-create-a-list-of-bank-accounts"></a>Aby utworzyć listę kont bankowych
 
-1. Wklej następującą definicję klasy do **program.cs**, w obszarze `Program` klasy.
+1. Wklej następującą definicję klasy do **program.cs**, w obszarze klasy `Program`.
 
      [!code-csharp[csProgGuideOfficeHowTo#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#2)]
 
-2. Dodaj następujący kod do `Main` metody, aby `bankAccounts` utworzyć listę zawierającą dwa konta.
+2. Dodaj następujący kod do metody `Main`, aby utworzyć listę `bankAccounts` zawierającą dwa konta.
 
      [!code-csharp[csProgGuideOfficeHowTo#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#3)]
 
 ## <a name="to-declare-a-method-that-exports-account-information-to-excel"></a>Aby zadeklarować metodę, która eksportuje informacje o koncie do programu Excel
 
-1. Dodaj następującą metodę do klasy, `Program` aby skonfigurować arkusz programu Excel.
+1. Dodaj następującą metodę do klasy `Program`, aby skonfigurować arkusz programu Excel.
 
-     Metoda <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> ma opcjonalny parametr służący do określania określonego szablonu. Parametry opcjonalne, nowość w C# 4, umożliwiają pominięcie argumentu dla tego parametru, jeśli ma być używana wartość domyślna parametru. Ponieważ żaden argument nie jest wysyłany w poniższym kodzie `Add` , używa szablonu domyślnego i tworzy nowy skoroszyt. Równoważna instrukcja we wcześniejszych wersjach programu C# wymaga argumentu symbolu zastępczego `ExcelApp.Workbooks.Add(Type.Missing)`:.
+     Metoda <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> ma opcjonalny parametr służący do określania określonego szablonu. Parametry opcjonalne, nowość w C# 4, umożliwiają pominięcie argumentu dla tego parametru, jeśli ma być używana wartość domyślna parametru. Ponieważ żaden argument nie jest wysyłany w poniższym kodzie, `Add` używa szablonu domyślnego i tworzy nowy skoroszyt. Równoważna instrukcja we wcześniejszych wersjach programu C# wymaga argumentu symbolu zastępczego: `ExcelApp.Workbooks.Add(Type.Missing)`.
 
      [!code-csharp[csProgGuideOfficeHowTo#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#4)]
 
@@ -83,19 +83,19 @@ Aby ukończyć ten przewodnik, musisz mieć Microsoft Office Excel 2007 i Micros
 
      [!code-csharp[csProgGuideOfficeHowTo#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#5)]
 
-3. Dodaj następujący kod na końcu `DisplayInExcel`. `foreach` Pętla umieszcza informacje z listy kont do pierwszych dwóch kolumn w kolejnych wierszach arkusza.
+3. Dodaj następujący kod na końcu `DisplayInExcel`. Pętla `foreach` umieszcza informacje z listy kont w pierwszych dwóch kolumnach arkusza.
 
      [!code-csharp[csProgGuideOfficeHowTo#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#7)]
 
-4. Dodaj następujący kod na końcu `DisplayInExcel` , aby dostosować szerokości kolumn w celu dopasowania do zawartości.
+4. Dodaj następujący kod na końcu `DisplayInExcel`, aby dopasować szerokości kolumn w celu dopasowania do zawartości.
 
      [!code-csharp[csProgGuideOfficeHowTo#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#13)]
 
-     Wcześniejsze C# wersje wymagają jawnego rzutowania dla tych operacji `ExcelApp.Columns[1]` `Object`, ponieważ zwraca i `AutoFit` jest metodą programu <xref:Microsoft.Office.Interop.Excel.Range> Excel. W poniższych wierszach przedstawiono rzutowanie.
+     Starsze wersje C# wymagają jawnego rzutowania dla tych operacji, ponieważ `ExcelApp.Columns[1]` zwraca `Object`, a `AutoFit` to metoda programu Excel <xref:Microsoft.Office.Interop.Excel.Range>. W poniższych wierszach przedstawiono rzutowanie.
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-     C#4, i nowsze wersje, konwertuje zwracaną `Object` wartość `dynamic` na automatycznie, jeśli zestaw jest przywoływany przez opcję kompilatora [/link](../../language-reference/compiler-options/link-compiler-option.md) lub, równoważne, jeśli właściwość " **Osadź typy międzyoperacyjna** programu Excel" ma wartość true. Wartość true jest wartością domyślną dla tej właściwości.
+     C#4 i nowsze wersje konwertują zwrócone `Object` do `dynamic` automatycznie, jeśli odwołuje się do zestawu opcję kompilatora [/link](../../language-reference/compiler-options/link-compiler-option.md) lub, równoważne, jeśli właściwość " **Osadź typy międzyoperacyjna** programu Excel" ma wartość true. Wartość true jest wartością domyślną dla tej właściwości.
 
 ## <a name="to-run-the-project"></a>Aby uruchomić projekt
 
@@ -103,7 +103,7 @@ Aby ukończyć ten przewodnik, musisz mieć Microsoft Office Excel 2007 i Micros
 
      [!code-csharp[csProgGuideOfficeHowTo#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#8)]
 
-2. Naciśnij kombinację klawiszy CTRL + F5.
+2. Naciśnij klawisze CTRL + F5.
 
      Zostanie wyświetlony arkusz programu Excel zawierający dane z dwóch kont.
 
@@ -111,11 +111,11 @@ Aby ukończyć ten przewodnik, musisz mieć Microsoft Office Excel 2007 i Micros
 
 1. Aby zilustrować dodatkowe sposoby, w których C# 4 i nowsze wersje rozszerzają Programowanie Office, poniższy kod otwiera aplikację Word i tworzy ikonę, która łączy się z arkuszem programu Excel.
 
-     Metoda `CreateIconInWordDoc`wklejenia, przedmieszczona w dalszej części tego `Program` kroku, do klasy. `CreateIconInWordDoc`używa argumentów nazwanych i opcjonalnych, aby zmniejszyć złożoność wywołań metod <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> do <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>i. Te wywołania obejmują dwie inne nowe funkcje wprowadzone w C# 4, które upraszczają wywołania metod com, które mają parametry referencyjne. Najpierw można wysłać argumenty do parametrów odwołania, tak jakby były one parametrami wartości. Oznacza to, że można wysyłać wartości bezpośrednio, bez tworzenia zmiennej dla każdego parametru odwołania. Kompilator generuje zmienne tymczasowe do przechowywania wartości argumentów i odrzuca zmienne po powrocie z wywołania. Następnie możesz pominąć `ref` słowo kluczowe na liście argumentów.
+     Wklej metodę `CreateIconInWordDoc`, która znajduje się w dalszej części tego kroku, do klasy `Program`. `CreateIconInWordDoc` używa argumentów nazwanych i opcjonalnych, aby zmniejszyć złożoność wywołań metod do <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> i <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>. Te wywołania obejmują dwie inne nowe funkcje wprowadzone w C# 4, które upraszczają wywołania metod com, które mają parametry referencyjne. Najpierw można wysłać argumenty do parametrów odwołania, tak jakby były one parametrami wartości. Oznacza to, że można wysyłać wartości bezpośrednio, bez tworzenia zmiennej dla każdego parametru odwołania. Kompilator generuje zmienne tymczasowe do przechowywania wartości argumentów i odrzuca zmienne po powrocie z wywołania. Następnie można pominąć słowo kluczowe `ref` na liście argumentów.
 
-     `Add` Metoda ma cztery parametry referencyjne, z których wszystkie są opcjonalne. W C# 4,0 i nowszych wersjach można pominąć argumenty dla dowolnego lub wszystkich parametrów, jeśli chcesz użyć ich wartości domyślnych. W C# 3,0 i wcześniejszych wersjach argument musi być podany dla każdego parametru, a argument musi być zmienną, ponieważ parametry są parametrami odwołania.
+     Metoda `Add` ma cztery parametry referencyjne, z których wszystkie są opcjonalne. W C# 4,0 i nowszych wersjach można pominąć argumenty dla dowolnego lub wszystkich parametrów, jeśli chcesz użyć ich wartości domyślnych. W C# 3,0 i wcześniejszych wersjach argument musi być podany dla każdego parametru, a argument musi być zmienną, ponieważ parametry są parametrami odwołania.
 
-     `PasteSpecial` Metoda wstawia zawartość schowka. Metoda ma siedem parametrów referencyjnych, z których wszystkie są opcjonalne. Poniższy kod określa argumenty dla dwóch z nich: `Link`,, aby utworzyć łącze do źródła zawartości Schowka, i `DisplayAsIcon`, aby wyświetlić łącze jako ikonę. W C# 4,0 i nowszych wersjach, można użyć nazwanych argumentów dla tych dwóch i pominąć pozostałe. Chociaż są to parametry odwołania, nie trzeba używać `ref` słowa kluczowego ani do tworzenia zmiennych, które mają być wysyłane jako argumenty. Można wysłać wartości bezpośrednio. W C# 3,0 i wcześniejszych wersjach, należy podać zmienną argumentu dla każdego parametru odwołania.
+     Metoda `PasteSpecial` Wstawia zawartość schowka. Metoda ma siedem parametrów referencyjnych, z których wszystkie są opcjonalne. Poniższy kod określa argumenty dla dwóch z nich: `Link`, aby utworzyć łącze do źródła zawartości Schowka i `DisplayAsIcon`, aby wyświetlić łącze jako ikonę. W C# 4,0 i nowszych wersjach, można użyć nazwanych argumentów dla tych dwóch i pominąć pozostałe. Chociaż są to parametry odwołania, nie trzeba używać słowa kluczowego `ref` ani do tworzenia zmiennych, które mają być wysyłane jako argumenty. Można wysłać wartości bezpośrednio. W C# 3,0 i wcześniejszych wersjach, należy podać zmienną argumentu dla każdego parametru odwołania.
 
      [!code-csharp[csProgGuideOfficeHowTo#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#9)]
 
@@ -127,21 +127,21 @@ Aby ukończyć ten przewodnik, musisz mieć Microsoft Office Excel 2007 i Micros
 
      [!code-csharp[csProgGuideOfficeHowTo#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#11)]
 
-3. Dodaj następującą instrukcję na końcu `DisplayInExcel`. `Copy` Metoda dodaje arkusz do Schowka.
+3. Dodaj następującą instrukcję na końcu `DisplayInExcel`. Metoda `Copy` dodaje arkusz do Schowka.
 
      [!code-csharp[csProgGuideOfficeHowTo#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#12)]
 
-4. Naciśnij kombinację klawiszy CTRL + F5.
+4. Naciśnij klawisze CTRL + F5.
 
      Zostanie wyświetlony dokument programu Word zawierający ikonę. Kliknij dwukrotnie ikonę, aby przenieść arkusz na pierwszy plan.
 
 ## <a name="to-set-the-embed-interop-types-property"></a>Aby ustawić właściwość Osadź typy współdziałania
 
-1. Dodatkowe ulepszenia są możliwe w przypadku wywołania typu COM, który nie wymaga podstawowego zestawu międzyoperacyjnego (PIA) w czasie wykonywania. Usunięcie zależności od zestawów Pia powoduje niezależność wersji i łatwiejsze wdrażanie. Aby uzyskać więcej informacji na temat korzyści z programowania bez zestawów Pia, [zobacz Przewodnik: Osadzanie typów z zarządzanych zestawów](../../../standard/assembly/embed-types-visual-studio.md).
+1. Dodatkowe ulepszenia są możliwe w przypadku wywołania typu COM, który nie wymaga podstawowego zestawu międzyoperacyjnego (PIA) w czasie wykonywania. Usunięcie zależności od zestawów Pia powoduje niezależność wersji i łatwiejsze wdrażanie. Aby uzyskać więcej informacji na temat korzyści z programowania bez zestawów Pia, zobacz [Przewodnik: osadzanie typów z zarządzanych zestawów](../../../standard/assembly/embed-types-visual-studio.md).
 
-     Ponadto programowanie jest łatwiejsze, ponieważ typy, które są wymagane i zwracane przez metody com mogą być reprezentowane przy użyciu typu `dynamic` `Object`zamiast. Zmienne o typie `dynamic` nie są oceniane do czasu uruchomienia, co eliminuje konieczność jawnego rzutowania. Aby uzyskać więcej informacji, zobacz [Korzystanie z typu dynamicznego](../types/using-type-dynamic.md).
+     Ponadto programowanie jest łatwiejsze, ponieważ typy, które są wymagane i zwracane przez metody modelu COM mogą być reprezentowane za pomocą typu `dynamic` zamiast `Object`. Zmienne o typie `dynamic` nie są oceniane do czasu uruchomienia, co eliminuje konieczność jawnego rzutowania. Aby uzyskać więcej informacji, zobacz [Korzystanie z typu dynamicznego](../types/using-type-dynamic.md).
 
-     W C# 4, osadzanie informacji o typie zamiast używania zestawów PIA jest zachowaniem domyślnym. Ze względu na to, że niektóre z powyższych przykładów są uproszczone, ponieważ jawne rzutowanie nie jest wymagane. Na przykład deklaracja `worksheet` w programie `DisplayInExcel` jestzapisywana`Excel._Worksheet workSheet = excelApp.ActiveSheet` jako zamiast. `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet` Wywołania `AutoFit` w tej samej metodzie również wymagają jawnego rzutowania bez użycia domyślnego, ponieważ `ExcelApp.Columns[1]` zwraca `Object`i `AutoFit` jest metodą programu Excel. Poniższy kod przedstawia rzutowanie.
+     W C# 4, osadzanie informacji o typie zamiast używania zestawów PIA jest zachowaniem domyślnym. Ze względu na to, że niektóre z powyższych przykładów są uproszczone, ponieważ jawne rzutowanie nie jest wymagane. Na przykład deklaracja `worksheet` w `DisplayInExcel` jest zapisywana jako `Excel._Worksheet workSheet = excelApp.ActiveSheet`, a nie `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`. Wywołania `AutoFit` w tej samej metodzie również wymagają jawnego rzutowania bez użycia domyślnego, ponieważ `ExcelApp.Columns[1]` zwraca `Object`, a `AutoFit` to metoda programu Excel. Poniższy kod przedstawia rzutowanie.
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
@@ -153,15 +153,15 @@ Aby ukończyć ten przewodnik, musisz mieć Microsoft Office Excel 2007 i Micros
 
 ## <a name="to-add-additional-formatting-to-the-table"></a>Aby dodać dodatkowe formatowanie do tabeli
 
-1. Zastąp dwa wywołania `AutoFit` w programie `DisplayInExcel` , używając następującej instrukcji.
+1. Zastąp dwa wywołania `AutoFit` w `DisplayInExcel` z następującą instrukcją.
 
      [!code-csharp[csProgGuideOfficeHowTo#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#15)]
 
-     <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> Metoda ma siedem parametrów wartości, z których wszystkie są opcjonalne. Argumenty nazwane i opcjonalne umożliwiają podanie argumentów dla braku, niektórych lub wszystkich z nich. W poprzedniej instrukcji argument jest dostarczany tylko dla jednego z parametrów, `Format`. Ponieważ `Format` jest pierwszym parametrem na liście parametrów, nie trzeba podawać nazwy parametru. Jednak instrukcja może być łatwiejsza do zrozumienia, jeśli nazwa parametru jest uwzględniona, jak pokazano w poniższym kodzie.
+     Metoda <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> ma siedem parametrów wartości, z których wszystkie są opcjonalne. Argumenty nazwane i opcjonalne umożliwiają podanie argumentów dla braku, niektórych lub wszystkich z nich. W poprzedniej instrukcji argument jest dostarczany tylko dla jednego z parametrów, `Format`. Ponieważ `Format` jest pierwszym parametrem na liście parametrów, nie trzeba podawać nazwy parametru. Jednak instrukcja może być łatwiejsza do zrozumienia, jeśli nazwa parametru jest uwzględniona, jak pokazano w poniższym kodzie.
 
      [!code-csharp[csProgGuideOfficeHowTo#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#16)]
 
-2. Naciśnij klawisze CTRL + F5, aby zobaczyć wynik. Inne formaty są wymienione w <xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat> wyliczeniu.
+2. Naciśnij klawisze CTRL + F5, aby zobaczyć wynik. Inne formaty są wymienione w wyliczeniu <xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat>.
 
 3. Porównaj instrukcję w kroku 1 z poniższym kodem, który pokazuje argumenty wymagane w C# 3,0 i wcześniejszych wersjach.
 
@@ -179,4 +179,4 @@ Poniższy kod przedstawia kompletny przykład.
 - [dynamic](../../language-reference/keywords/dynamic.md)
 - [Używanie typu dynamicznego](../types/using-type-dynamic.md)
 - [Argumenty nazwane i opcjonalne](../classes-and-structs/named-and-optional-arguments.md)
-- [Instrukcje: Używanie argumentów nazwanych i opcjonalnych w programowaniu pakietu Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Instrukcje: użycie argumentów nazwanych i opcjonalnych w programowaniu Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

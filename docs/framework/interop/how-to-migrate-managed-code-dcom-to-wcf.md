@@ -1,17 +1,17 @@
 ---
-title: 'Instrukcje: Migrowanie zarządzanego kodu DCOM do WCF'
+title: 'Instrukcje: migrowanie zarządzanego kodu DCOM do WCF'
 ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2e37de4d3032db6d9578eae7ba0be5c1e39f39d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 42edce63856b629511faeb165362da18ea3cecad
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051757"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833631"
 ---
-# <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Instrukcje: Migrowanie zarządzanego kodu DCOM do WCF
+# <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Instrukcje: migrowanie zarządzanego kodu DCOM do WCF
 Windows Communication Foundation (WCF) to zalecany i bezpieczny wybór dla rozproszonych Component Object Model (DCOM) dla wywołań kodu zarządzanego między serwerami i klientami w środowisku rozproszonym. W tym artykule przedstawiono sposób migrowania kodu z modelu DCOM do usługi WCF w następujących scenariuszach.  
   
 - Usługa zdalna zwraca obiekt przez wartość do klienta  
@@ -61,7 +61,7 @@ public interface IRemoteService
  W tym scenariuszu klient otrzymuje deserializowaną kopię obiektu z usługi zdalnej. Klient może korzystać z tej kopii lokalnej bez wywołania zwrotnego do usługi.  Innymi słowy klient ma gwarancję, że usługa nie będzie uczestniczyć w żaden sposób w przypadku wywołania metod w kopii lokalnej. Program WCF zawsze zwraca obiekty z usługi według wartości, dlatego w poniższych krokach opisano tworzenie zwykłej usługi WCF.  
   
 ### <a name="step-1-define-the-wcf-service-interface"></a>Krok 1. Definiowanie interfejsu usługi WCF  
- Zdefiniuj publiczny interfejs dla usługi WCF i oznacz go atrybutem [<xref:System.ServiceModel.ServiceContractAttribute>].  Oznacz metody, które chcesz uwidocznić klientom z atrybutem [<xref:System.ServiceModel.OperationContractAttribute>]. Poniższy przykład pokazuje, jak używać tych atrybutów do identyfikowania interfejsów po stronie serwera i metod interfejsu, które klient może wywoływać. Metoda użyta w tym scenariuszu jest pogrubienie.  
+ Zdefiniuj interfejs publiczny dla usługi WCF i oznacz go przy użyciu atrybutu [<xref:System.ServiceModel.ServiceContractAttribute>].  Oznacz metody, które chcesz uwidocznić klientom z atrybutem [<xref:System.ServiceModel.OperationContractAttribute>]. Poniższy przykład pokazuje, jak używać tych atrybutów do identyfikowania interfejsów po stronie serwera i metod interfejsu, które klient może wywoływać. Metoda użyta w tym scenariuszu jest pogrubienie.  
   
 ```csharp  
 using System.Runtime.Serialization;  
@@ -80,7 +80,7 @@ public interface ICustomerManager
 ```  
   
 ### <a name="step-2-define-the-data-contract"></a>Krok 2. Definiowanie kontraktu danych  
- Następnie należy utworzyć kontrakt danych dla usługi, która będzie opisywać, w jaki sposób dane będą wymieniane między usługą i jej klientami.  Klasy opisane w kontrakcie danych powinny być oznaczone atrybutem [<xref:System.Runtime.Serialization.DataContractAttribute>]. Poszczególne właściwości lub pola, które mają być widoczne zarówno dla klienta, jak i serwera, powinny być<xref:System.Runtime.Serialization.DataMemberAttribute>oznaczone atrybutem []. Jeśli chcesz, aby typy pochodne od klasy w kontrakcie danych były dozwolone, należy je zidentyfikować przy użyciu atrybutu [<xref:System.Runtime.Serialization.KnownTypeAttribute>]. Funkcja WCF będzie serializować lub deserializować typy w interfejsie usługi i typach identyfikowanych jako znane typy. Jeśli spróbujesz użyć typu, który nie jest typem znanym, wystąpi wyjątek.  
+ Następnie należy utworzyć kontrakt danych dla usługi, która będzie opisywać, w jaki sposób dane będą wymieniane między usługą i jej klientami.  Klasy opisane w kontrakcie danych powinny być oznaczone atrybutem [<xref:System.Runtime.Serialization.DataContractAttribute>]. Poszczególne właściwości lub pola, które mają być widoczne zarówno dla klienta, jak i serwera, powinny być oznaczone atrybutem [<xref:System.Runtime.Serialization.DataMemberAttribute>]. Jeśli chcesz, aby typy pochodne od klasy w kontrakcie danych były dozwolone, należy je zidentyfikować przy użyciu atrybutu [<xref:System.Runtime.Serialization.KnownTypeAttribute>]. Funkcja WCF będzie serializować lub deserializować typy w interfejsie usługi i typach identyfikowanych jako znane typy. Jeśli spróbujesz użyć typu, który nie jest typem znanym, wystąpi wyjątek.  
   
  Aby uzyskać więcej informacji na temat umów dotyczących danych, zobacz [Kontrakty danych](../wcf/samples/data-contracts.md).  
   
@@ -138,7 +138,7 @@ public class CustomerService: ICustomerManager
 }  
 ```  
   
-### <a name="step-4-configure-the-service-and-the-client"></a>Krok 4. Skonfiguruj usługę i klienta  
+### <a name="step-4-configure-the-service-and-the-client"></a>Krok 4. Konfigurowanie usługi i klienta  
  Aby uruchomić usługę WCF, należy zadeklarować punkt końcowy, który uwidacznia ten interfejs usługi w określonym adresie URL przy użyciu określonego powiązania WCF. Powiązanie określa informacje o transportach, kodowaniu i protokole dla klientów i serwera do komunikacji. Zazwyczaj można dodawać powiązania do pliku konfiguracji projektu usługi (Web. config). Poniżej przedstawiono wpis powiązania dla przykładowej usługi:  
   
 ```xml  
@@ -169,7 +169,7 @@ public class CustomerService: ICustomerManager
 </configuration>  
 ```  
   
-### <a name="step-5-run-the-service"></a>Krok 5. Uruchamianie usługi  
+### <a name="step-5-run-the-service"></a>Krok 5. uruchomienie usługi  
  Na koniec możesz go hostować w aplikacji konsolowej, dodając następujące wiersze do aplikacji usługi i uruchamiając aplikację. Aby uzyskać więcej informacji na temat innych sposobów hostowania aplikacji usługi WCF, [usług hostingowych](../wcf/hosting-services.md).  
   
 ```csharp  
@@ -178,7 +178,7 @@ customerServiceHost.Open();
 ```  
   
 ### <a name="step-6-call-the-service-from-the-client"></a>Krok 6. Wywoływanie usługi z klienta  
- Aby wywołać usługę od klienta, należy utworzyć fabrykę kanałów dla usługi i zażądać kanału, co umożliwi bezpośrednie wywoływanie `GetCustomer` metody bezpośrednio od klienta. Kanał implementuje interfejs usługi i obsługuje podstawową logikę żądania/odpowiedzi.  Wartością zwracaną z tego wywołania metody jest deserializowana kopia odpowiedzi usługi.  
+ Aby wywołać usługę od klienta, należy utworzyć fabrykę kanałów dla usługi i zażądać kanału, co umożliwi bezpośrednie wywoływanie metody `GetCustomer` bezpośrednio od klienta. Kanał implementuje interfejs usługi i obsługuje podstawową logikę żądania/odpowiedzi.  Wartością zwracaną z tego wywołania metody jest deserializowana kopia odpowiedzi usługi.  
   
 ```csharp  
 ChannelFactory<ICustomerManager> factory =   
@@ -213,9 +213,9 @@ public interface ICustomerManager
 ```  
   
 ### <a name="add-code-to-the-client-that-sends-a-by-value-object"></a>Dodawanie kodu do klienta wysyłającego obiekt przez wartość  
- Poniższy kod pokazuje, jak klient tworzy nowy obiekt klienta według wartości, tworzy kanał do komunikowania się z `ICustomerManager` usługą i wysyła do niego obiekt klienta.  
+ Poniższy kod pokazuje, jak klient tworzy nowy obiekt klienta według wartości, tworzy kanał do komunikacji z usługą `ICustomerManager` i wysyła do niego obiekt klienta.  
   
- Obiekt klienta zostanie Zserializowany i wysłany do usługi, w którym zostanie odszeregowany przez usługę w nowej kopii tego obiektu.  Wszystkie metody wywołania usługi na tym obiekcie będą wykonywane tylko lokalnie na serwerze. Należy pamiętać, że ten kod ilustruje wysyłanie typu pochodnego (`PremiumCustomer`).  Kontrakt usługi oczekuje `Customer` obiektu, ale kontrakt danych usługi używa atrybutu [<xref:System.Runtime.Serialization.KnownTypeAttribute>], aby wskazać, że `PremiumCustomer` jest również dozwolone.  Funkcja WCF nie będzie podejmować próby serializacji lub deserializacji dowolnego innego typu za pośrednictwem tego interfejsu usługi.  
+ Obiekt klienta zostanie Zserializowany i wysłany do usługi, w którym zostanie odszeregowany przez usługę w nowej kopii tego obiektu.  Wszystkie metody wywołania usługi na tym obiekcie będą wykonywane tylko lokalnie na serwerze. Należy zauważyć, że ten kod ilustruje wysyłanie typu pochodnego (`PremiumCustomer`).  Kontrakt usługi oczekuje obiektu `Customer`, ale kontrakt danych usługi używa atrybutu [<xref:System.Runtime.Serialization.KnownTypeAttribute>], aby wskazać, że `PremiumCustomer` jest również dozwolone.  Funkcja WCF nie będzie podejmować próby serializacji lub deserializacji dowolnego innego typu za pośrednictwem tego interfejsu usługi.  
   
 ```csharp  
 PremiumCustomer customer = new PremiumCustomer();  
@@ -235,9 +235,9 @@ customerManager.StoreCustomer(customer);
 ## <a name="the-service-returns-an-object-by-reference"></a>Usługa zwraca obiekt przez odwołanie  
  W tym scenariuszu aplikacja kliencka wysyła wywołanie do usługi zdalnej, a metoda zwraca obiekt, który jest przesyłany przez odwołanie z usługi do klienta.  
   
- Jak wspomniano wcześniej, usługi WCF zawsze zwracają obiekt według wartości.  Można jednak osiągnąć podobny wynik przy użyciu <xref:System.ServiceModel.EndpointAddress10> klasy.  <xref:System.ServiceModel.EndpointAddress10> Jest obiektem możliwym do serializacji przez wartość, który może być używany przez klienta w celu uzyskania na serwerze sesji na podstawie obiektu referencyjnego.  
+ Jak wspomniano wcześniej, usługi WCF zawsze zwracają obiekt według wartości.  Można jednak osiągnąć podobny wynik przy użyciu klasy <xref:System.ServiceModel.EndpointAddress10>.  @No__t-0 to obiekt możliwy do serializacji przez wartość, który może być używany przez klienta w celu uzyskania na serwerze sesji na podstawie obiektu odniesienia.  
   
- Zachowanie obiektu przez odwołanie w programie WCF przedstawionym w tym scenariuszu różni się od modelu DCOM.  W modelu DCOM serwer może bezpośrednio zwrócić do klienta obiekt przez odwołanie, a klient może wywołać metody tego obiektu, które są wykonywane na serwerze.  W programie WCF jednak zwracany obiekt jest zawsze przez wartość.  Klient musi wykonać ten obiekt przez wartość, reprezentowany przez <xref:System.ServiceModel.EndpointAddress10> i za jego pomocą, aby utworzyć własny obiekt sesji.  Metoda kliencka wywołuje na serwerze. Innymi słowy, ten obiekt odwołujący się do programu WCF to normalna usługa WCF, która jest skonfigurowana do sesji.  
+ Zachowanie obiektu przez odwołanie w programie WCF przedstawionym w tym scenariuszu różni się od modelu DCOM.  W modelu DCOM serwer może bezpośrednio zwrócić do klienta obiekt przez odwołanie, a klient może wywołać metody tego obiektu, które są wykonywane na serwerze.  W programie WCF jednak zwracany obiekt jest zawsze przez wartość.  Klient musi wykonać ten obiekt przez wartość, reprezentowany przez <xref:System.ServiceModel.EndpointAddress10> i użyć go do utworzenia własnej sesji na obiekt-odwołanie.  Metoda kliencka wywołuje na serwerze. Innymi słowy, ten obiekt odwołujący się do programu WCF to normalna usługa WCF, która jest skonfigurowana do sesji.  
   
  W programie WCF sesja jest sposobem skorelowania wielu wiadomości przesyłanych między dwoma punktami końcowymi.  Oznacza to, że gdy klient uzyska połączenie z tą usługą, zostanie ustanowiona sesja między klientem a serwerem.  Klient będzie używać jednego unikatowego wystąpienia obiektu po stronie serwera dla wszystkich jego interakcji w ramach jednej sesji. Umowy WCF dotyczące sesji są podobne do wzorców żądań i odpowiedzi sieciowych zorientowanych na połączenia.  
   
@@ -250,10 +250,10 @@ public interface IRemoteService
 }  
 ```  
   
-### <a name="step-1-define-the-sessionful-wcf-service-interface-and-implementation"></a>Krok 1. Definiowanie interfejsu i implementacji sesji usługi WCF  
+### <a name="step-1-define-the-sessionful-wcf-service-interface-and-implementation"></a>Krok 1. Definiowanie sesji interfejsu i implementacji usługi WCF  
  Najpierw Zdefiniuj interfejs usługi WCF, który zawiera obiekt session.  
   
- W tym kodzie obiekt sesji jest oznaczony `ServiceContract` atrybutem, który identyfikuje go jako zwykły interfejs usługi WCF.  Ponadto <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> właściwość jest ustawiona na wartość wskazującą, że będzie ona sesją usługi.  
+ W tym kodzie obiekt sesji jest oznaczony atrybutem `ServiceContract`, który identyfikuje go jako zwykły interfejs usługi WCF.  Ponadto Właściwość <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> ma ustawioną wartość wskazującą, że będzie to usługa sesji.  
   
 ```csharp  
 [ServiceContract(SessionMode = SessionMode.Allowed)]  
@@ -290,8 +290,8 @@ public interface ISessionBoundObject
     }  
 ```  
   
-### <a name="step-2-define-the-wcf-factory-service-for-the-sessionful-object"></a>Krok 2. Zdefiniuj usługę fabryki WCF dla obiektu sesji  
- Usługa, która tworzy obiekt sesji, musi być zdefiniowana i zaimplementowana. Poniższy kod pokazuje, jak to zrobić. Ten kod tworzy kolejną usługę WCF, która zwraca <xref:System.ServiceModel.EndpointAddress10> obiekt.  Jest to możliwy do serializacji formularz punktu końcowego, którego można użyć do utworzenia obiektu z pełnymi sesjami.  
+### <a name="step-2-define-the-wcf-factory-service-for-the-sessionful-object"></a>Krok 2. Definiowanie usługi fabryki WCF dla obiektu sesji  
+ Usługa, która tworzy obiekt sesji, musi być zdefiniowana i zaimplementowana. Poniższy kod pokazuje, jak to zrobić. Ten kod tworzy kolejną usługę WCF, która zwraca obiekt <xref:System.ServiceModel.EndpointAddress10>.  Jest to możliwy do serializacji formularz punktu końcowego, którego można użyć do utworzenia obiektu z pełnymi sesjami.  
   
 ```csharp  
 [ServiceContract]  
@@ -302,7 +302,7 @@ public interface ISessionBoundObject
     }  
 ```  
   
- Poniżej przedstawiono implementację tej usługi. Ta implementacja obsługuje pojedyncze fabryki kanałów do tworzenia obiektów sesji.  Gdy `GetInstanceAddress` jest wywoływana, tworzy kanał i <xref:System.ServiceModel.EndpointAddress10> tworzy obiekt, który wskazuje na adres zdalny skojarzony z tym kanałem.   <xref:System.ServiceModel.EndpointAddress10>jest typem danych, który może być zwracany do klienta przez wartość.  
+ Poniżej przedstawiono implementację tej usługi. Ta implementacja obsługuje pojedyncze fabryki kanałów do tworzenia obiektów sesji.  Po wywołaniu `GetInstanceAddress` tworzy kanał i tworzy obiekt <xref:System.ServiceModel.EndpointAddress10>, który wskazuje na adres zdalny skojarzony z tym kanałem.   <xref:System.ServiceModel.EndpointAddress10> to typ danych, który może być zwracany do klienta przez wartość.
   
 ```csharp  
 public class SessionBoundFactory : ISessionBoundFactory  
@@ -325,11 +325,11 @@ public class SessionBoundFactory : ISessionBoundFactory
 ### <a name="step-3-configure-and-start-the-wcf-services"></a>Krok 3. Konfigurowanie i uruchamianie usług WCF  
  Aby hostować te usługi, należy wprowadzić następujące dodatki do pliku konfiguracji serwera (Web. config).  
   
-1. `<client>` Dodaj sekcję opisującą punkt końcowy dla obiektu sesji.  W tym scenariuszu serwer działa również jako klient i musi być skonfigurowany, aby go włączyć.  
+1. Dodaj sekcję `<client>` opisującą punkt końcowy dla obiektu sesji.  W tym scenariuszu serwer działa również jako klient i musi być skonfigurowany, aby go włączyć.  
   
-2. `<services>` W sekcji Zadeklaruj punkty końcowe usługi dla obiektu fabryki i sesji.  Dzięki temu Klient może komunikować się z punktami końcowymi usługi, <xref:System.ServiceModel.EndpointAddress10> uzyskać i utworzyć kanał sesji.  
+2. W sekcji `<services>` Zadeklaruj punkty końcowe usługi dla obiektu fabryki i sesji.  Dzięki temu Klient może komunikować się z punktami końcowymi usługi, uzyskać <xref:System.ServiceModel.EndpointAddress10> i utworzyć kanał sesji.  
   
- Poniżej znajduje się przykładowy plik konfiguracji z następującymi ustawieniami:  
+ Poniżej przedstawiono przykładowy plik konfiguracji z następującymi ustawieniami:  
   
 ```xml  
 <configuration>  
@@ -390,13 +390,13 @@ sessionBoundServiceHost.Open();
   
  Aby wywołać usługę, Dodaj kod do klienta, aby wykonać następujące czynności:  
   
-1. Utwórz kanał do `ISessionBoundFactory` usługi.  
+1. Utwórz kanał dla usługi `ISessionBoundFactory`.  
   
-2. Użyj kanału, aby wywołać `ISessionBoundFactory` usługę w celu <xref:System.ServiceModel.EndpointAddress10> uzyskania obiektu.  
+2. Użyj kanału, aby wywołać usługę `ISessionBoundFactory` i uzyskać obiekt <xref:System.ServiceModel.EndpointAddress10>.  
   
-3. Użyj, <xref:System.ServiceModel.EndpointAddress10> aby utworzyć kanał, aby uzyskać obiekt sesji.  
+3. Użyj <xref:System.ServiceModel.EndpointAddress10>, aby utworzyć kanał do uzyskania obiektu sesji.  
   
-4. Wywołaj metody `GetCurrentValue`i, aby zademonstrować, pozostaje to samo wystąpienie obiektu w wielu wywołaniach. `SetCurrentValue`  
+4. Wywołaj metody `SetCurrentValue` i `GetCurrentValue`, aby pokazać, że to samo wystąpienie obiektu jest używane w wielu wywołaniach.  
   
 ```csharp  
 ChannelFactory<ISessionBoundFactory> factory =  

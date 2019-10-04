@@ -1,27 +1,27 @@
 ---
-title: Refaktoryzacja przy użyciu metody rozszerzenia (Visual Basic)
+title: Refaktoryzacja przy użyciu metody rozszerzającej (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-ms.openlocfilehash: 360b723fd8ef63338213dfcaa2c00f659ba3e74a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e6ed0e81a7139411507d8f3c16b34a50b2e7aebf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666077"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834905"
 ---
-# <a name="refactoring-using-an-extension-method-visual-basic"></a>Refaktoryzacja przy użyciu metody rozszerzenia (Visual Basic)
-W tym przykładzie opiera się na poprzednim przykładzie [pobieranie tekstu akapitów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), przez refaktoryzacji łączenia ciągów przy użyciu czystej funkcji, który jest implementowany jako metodę rozszerzenia.  
+# <a name="refactoring-using-an-extension-method-visual-basic"></a>Refaktoryzacja przy użyciu metody rozszerzającej (Visual Basic)
+Ten przykład kompiluje się w poprzednim przykładzie, [pobierając tekst akapitów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)przez refaktoryzację łączenia ciągów przy użyciu czystej funkcji, która jest zaimplementowana jako Metoda rozszerzenia.  
   
- W poprzednim przykładzie użyto <xref:System.Linq.Enumerable.Aggregate%2A> standardowego operatora zapytania na łączenie wielu ciągów w jeden ciąg. Jednak jest bardziej wygodne do zapisania metodę rozszerzenia, aby to zrobić, ponieważ wynikowy zapytania mniejsze i bardziej proste.  
+ W poprzednim przykładzie użyto standardowego operatora zapytania <xref:System.Linq.Enumerable.Aggregate%2A> do łączenia wielu ciągów w jeden ciąg. Jednak bardziej wygodne jest zapisanie metody rozszerzającej, ponieważ wyniki zapytania są mniejsze i prostsze.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie przetwarza dokumentu WordprocessingML pobieranie akapitów, styl każdego akapitu, a tekst każdego akapitu. W tym przykładzie opiera się na poprzednich przykładach w tym samouczku.  
+ Ten przykład przetwarza dokument WordprocessingML, pobierając akapity, styl każdego akapitu i tekst każdego akapitu. Ten przykład kompiluje się zgodnie z poprzednimi przykładami w tym samouczku.  
   
- Przykład zawiera wiele przeciążeń `StringConcatenate` metody.  
+ Przykład zawiera wiele przeciążeń metody `StringConcatenate`.  
   
- Można znaleźć instrukcje dotyczące tworzenia dokumentu źródłowego, w tym przykładzie w [tworzenie źródłowego dokumentu pakietu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Instrukcje dotyczące tworzenia dokumentu źródłowego dla tego przykładu można znaleźć w temacie [Tworzenie źródłowego dokumentu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- W tym przykładzie użyto klasy z zestawu WindowsBase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
+ W tym przykładzie zastosowano klasy z zestawu 'Windowsbase. Używa typów w przestrzeni nazw <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 <System.Runtime.CompilerServices.Extension()> _  
@@ -65,9 +65,9 @@ End Function
 ```  
   
 ## <a name="example"></a>Przykład  
- Istnieją cztery przeciążenia `StringConcatenate` metody. Kilkoma przeciążeniami po prostu kolekcji ciągów i zwraca jeden ciąg. Innego przeciążenia metody może potrwać kolekcji dowolnego typu i delegata tego projektów z pojedynczego kolekcji na ciąg. Istnieją dwa więcej przeciążenia metody, które pozwalają na określenie ciągu separatora.  
+ Istnieją cztery przeciążenia metody `StringConcatenate`. Jedno Przeciążenie po prostu Pobiera kolekcję ciągów i zwraca jeden ciąg. Inne Przeciążenie może pobrać kolekcję dowolnego typu i delegata, który projektuje z pojedynczej kolekcji do ciągu. Istnieją dwa więcej przeciążenia, które umożliwiają określenie ciągu separatora.  
   
- W poniższym kodzie użyto wszystkie cztery przeciążenia.  
+ Poniższy kod używa wszystkich czterech przeciążeń.  
   
 ```vb  
 Dim numbers As String() = {"one", "two", "three"}  
@@ -82,7 +82,7 @@ Console.WriteLine("{0}", intNumbers.StringConcatenate(Function(i) i.ToString(), 
   
  Ten przykład generuje następujące wyniki:  
   
-```  
+```console  
 onetwothree  
 one:two:three:  
 123  
@@ -90,7 +90,7 @@ one:two:three:
 ```  
   
 ## <a name="example"></a>Przykład  
- Teraz można zmodyfikować przykładu, aby korzystać z zalet nowej metody rozszerzenia:  
+ Teraz można zmodyfikować przykład, aby skorzystać z nowej metody rozszerzenia:  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -216,9 +216,9 @@ Module Module1
 End Module  
 ```  
   
- Ten przykład generuje następujące dane wyjściowe po zastosowaniu do dokumentu opisano w [tworzenie źródłowego dokumentu pakietu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Ten przykład generuje następujące dane wyjściowe w przypadku zastosowania do dokumentu opisanego w temacie [Tworzenie źródłowego dokumentu Office Open XML (Visual Basic)](creating-the-source-office-open-xml-document.md).
   
-```  
+```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  
@@ -236,14 +236,14 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
- Należy pamiętać, że ta Refaktoryzacja jest wariant Refaktoryzacja do czystych funkcji. Następny temat przedstawiono koncepcję wyprowadzenie do czystych funkcji bardziej szczegółowo.  
+ Należy zauważyć, że Refaktoryzacja jest odmianą refaktoryzacji w czystej funkcji. W następnym temacie zawarto informacje na temat sposobu refaktoryzacji do czystych funkcji.  
   
 ## <a name="next-steps"></a>Następne kroki  
- W kolejnym przykładzie pokazano sposób Refaktoryzuj ten kod w inny sposób, przy użyciu czystej funkcji:  
+ W następnym przykładzie pokazano, jak refaktoryzacji ten kod w inny sposób przy użyciu czystych funkcji:  
   
 - [Refaktoryzacja przy użyciu czystej funkcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Samouczek: manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 - [Refaktoryzacja do czystych funkcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

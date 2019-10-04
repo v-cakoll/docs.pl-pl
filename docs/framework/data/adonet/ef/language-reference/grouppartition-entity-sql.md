@@ -1,75 +1,75 @@
 ---
-title: GROUPPARTITION (jednostka SQL)
+title: GROUPPARTITION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d0482e9b-086c-451c-9dfa-ccb024a9efb6
-ms.openlocfilehash: 9f0f917380e6422da753282216529580f87f1a1a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 19df566c254a3f3202eb3554ab43ee0d7c944181
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774728"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833755"
 ---
-# <a name="grouppartition-entity-sql"></a>GROUPPARTITION (jednostka SQL)
-Zwraca kolekcję wartości argumentów, które są pokazane poza bieżącą partycję grupy, do którego odnosi się agregacji. `GroupPartition` Agregacji jest oparte na grupach agregacji i nie ma związanych z kolekcjami formy.  
+# <a name="grouppartition-entity-sql"></a>GROUPPARTITION (Entity SQL)
+Zwraca kolekcję wartości argumentów, które są rzutowane na bieżącą partycję grupy, z którą jest powiązana agregacja. Agregacja `GroupPartition` jest agregacją opartą na grupach i nie ma formy opartej na kolekcji.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```sql  
 GROUPPARTITION( [ALL|DISTINCT] expression )  
 ```  
   
 ## <a name="arguments"></a>Argumenty  
  `expression`  
- Wszelkie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] wyrażenia.  
+ Dowolne wyrażenie [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 ## <a name="remarks"></a>Uwagi  
- Następujące zapytanie generuje listę produktów i zbiór ilości wierszy w kolejności dla każdego produktu:  
+ Następujące zapytanie tworzy listę produktów i zbiór ilości wierszy zamówień dla każdego produktu:  
   
-```  
-select p, GroupPartition(ol.Quantity) from LOB.OrderLines as ol  
-  group by ol.Product as p  
+```sql  
+SELECT p, GroupPartition(ol.Quantity) FROM LOB.OrderLines AS ol
+  GROUP BY ol.Product AS p
 ```  
   
  Następujące dwa zapytania są semantycznie równe:  
   
-```  
-select p, Sum(GroupPartition(ol.Quantity)) from LOB.OrderLines as ol  
+```sql  
+SELECT p, Sum(GroupPartition(ol.Quantity)) FROM LOB.OrderLines AS ol
+  GROUP BY ol.Product AS p
+SELET p, Sum(ol.Quantity) FROM LOB.OrderLines AS ol
   group by ol.Product as p  
-select p, Sum(ol.Quantity) from LOB.OrderLines as ol  
-  group by ol.Product as p  
 ```  
   
- `GROUPPARTITION` Operatora można używać w połączeniu z funkcjami agregującymi zdefiniowanych przez użytkownika.  
+ Operatora `GROUPPARTITION` można używać w połączeniu z funkcjami agregującymi zdefiniowanymi przez użytkownika.  
   
- `GROUPPARTITION` to specjalne aggregate-operator, który zawiera odwołanie do zestawu pogrupowanych danych wejściowych. Ta dokumentacja może służyć wszędzie w zapytaniu gdzie GROUP BY znajduje się w zakresie. Na przykład  
+`GROUPPARTITION` jest specjalnym operatorem agregującym, który przechowuje odwołanie do zgrupowanego zestawu danych wejściowych. Tego odwołania można użyć w dowolnym miejscu w zapytaniu, w którym Grupuj według znajduje się w zakresie. Na przykład:
   
-```  
-select p, GroupPartition(ol.Quantity) from LOB.OrderLines as ol group by ol.Product as p  
-```  
-  
- Za pomocą regularnego GROUP BY wyniki grupowania są ukryte. Wyniki można używać tylko w funkcji agregującej. Aby wyświetlić wyniki grupowania, należy skorelować wyniki, grupowanie i ustawić za pomocą podzapytania danych wejściowych. Następujące dwa zapytania są równoważne:  
-  
-```  
-select p, (select q from GroupPartition(ol.Quantity) as q) from LOB.OrderLines as ol group by ol.Product as p  
-select p, (select ol.Quantity as q from LOB.OrderLines as ol2 where ol2.Product = p) from LOB.OrderLines as ol group by ol.Product as p  
+```sql  
+SELECT p, GroupPartition(ol.Quantity) FROM LOB.OrderLines AS ol GROUP BY ol.Product AS p
 ```  
   
- Jak widać w przykładzie, aggregate-operator GROUPPARTITION sprawia, że łatwiej uzyskać odwołanie do ustawienia po grupowania danych wejściowych.  
+ W przypadku zwykłego `GROUP BY` wyniki grupowania są ukryte. Wyniki można używać tylko w funkcji agregującej. Aby wyświetlić wyniki grupowania, należy skorelować wyniki grupowania i zestawu wejściowego za pomocą podzapytania... Następujące dwa zapytania są równoważne:  
   
- GROUPPARTITION operator można określić dowolną [!INCLUDE[esql](../../../../../../includes/esql-md.md)] wyrażenie w operatorze danych wejściowych, gdy używasz `expression` parametru.  
-  
- Na przykład wszystkie poniższe wyrażenia wejściowego do partycji grupy są prawidłowe:  
-  
+```sql  
+SELET p, (SELECT q FROM GroupPartition(ol.Quantity) AS q) FROM LOB.OrderLines AS ol GROUP BY ol.Product AS p
+SELECT p, (SELECT ol.Quantity AS q FROM LOB.OrderLines AS ol2 WHERE ol2.Product = p) FROM LOB.OrderLines AS ol GROUP BY ol.Product AS p
 ```  
-select groupkey, GroupPartition(b) from {1,2,3} as a inner join {4,5,6} as b on true group by a as groupkey  
-select groupkey, GroupPartition(1) from {1,2,3} as a inner join {4,5,6} as b on true group by a as groupkey  
-select groupkey, GroupPartition(a + b) from {1,2,3} as a inner join {4,5,6} as b on true group by a as groupkey  
-select groupkey, GroupPartition({a + b}) from {1,2,3} as a inner join {4,5,6} as b on true group by a as groupkey  
-select groupkey, GroupPartition({42}) from {1,2,3} as a inner join {4,5,6} as b on true group by a as groupkey  
-select groupkey, GroupPartition(b > a) from {1,2,3} as a inner join {4,5,6} as b on true group by a as groupkey  
+  
+ Jak pokazano na przykładzie, operator agregujący GROUPPARTITION ułatwia uzyskanie odwołania do zestawu wejściowego po grupowaniu.  
+  
+ Operator GROUPPARTITION może określić dowolne wyrażenie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] w danych wejściowych operatora, gdy używany jest parametr `expression`.  
+  
+ Dla wystąpienia wszystkie następujące wyrażenia wejściowe do partycji grupy są prawidłowe:  
+  
+```sql  
+SELECT groupkey, GroupPartition(b) FROM {1,2,3} AS a INNER JOIN {4,5,6} AS b ON true GROUP BY a AS groupkey
+SELECT groupkey, GroupPartition(1) FROM {1,2,3} AS a INNER JOIN {4,5,6} AS b ON true GROUP BY a AS groupkey
+SELECT groupkey, GroupPartition(a + b) FROM {1,2,3} AS a INNER JOIN {4,5,6} AS b ON true GROUP BY a AS groupkey
+SELECT groupkey, GroupPartition({a + b}) FROM {1,2,3} AS a INNER JOIN {4,5,6} AS b ON true GROUP BY a AS groupkey  
+SELECT groupkey, GroupPartition({42}) FROM {1,2,3} AS a INNER JOIN {4,5,6} AS b ON true GROUP BY a AS groupkey  
+SELECT groupkey, GroupPartition(b > a) FROM {1,2,3} AS a INNER JOIN {4,5,6} AS b ON true GROUP BY a AS groupkey  
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób użycia klauzuli GROUPPARTITION z klauzuli GROUP BY. Grupy klauzuli GROUP BY `SalesOrderHeader` jednostek według ich `Contact`. Klauzula GROUPPARTITION, a następnie projekty `TotalDue` właściwości dla każdej grupy, wynikiem kolekcji miejsc po przecinku.  
+ Poniższy przykład pokazuje, jak używać klauzuli GROUPPARTITION z klauzulą GROUP BY. Klauzula GROUP BY grupuje jednostki `SalesOrderHeader` według ich `Contact`. Klauzula GROUPPARTITION następnie projektuje Właściwość `TotalDue` dla każdej grupy, co skutkuje kolekcją miejsc dziesiętnych.  
   
- [!code-csharp[DP EntityServices Concepts 2#Collection_GroupPartition](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#collection_grouppartition)]
+ [!code-sql[DP EntityServices Concepts#Collection_GroupPartition](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#collection_grouppartition)]

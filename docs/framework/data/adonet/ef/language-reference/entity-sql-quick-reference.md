@@ -2,15 +2,15 @@
 title: Szybkie odwołanie do języka Entity SQL
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-ms.openlocfilehash: 7780359d981b130118cb73d4892f3dcb4b6e2e7d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9ccfc461d394af8804c960ebf460e7fbfb025b64
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251028"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833872"
 ---
 # <a name="entity-sql-quick-reference"></a>Szybkie odwołanie do języka Entity SQL
-Ten temat zawiera krótkie informacje o [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytaniach. Zapytania w tym temacie są oparte na modelu sprzedaży AdventureWorks.  
+Ten temat zawiera krótkie informacje o [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytań. Zapytania w tym temacie są oparte na modelu sprzedaży AdventureWorks.  
   
 ## <a name="literals"></a>Literały  
   
@@ -19,7 +19,7 @@ Ten temat zawiera krótkie informacje o [!INCLUDE[esql](../../../../../../includ
   
  Poniżej znajduje się przykład literału ciągu innego niż Unicode:  
   
-```  
+```sql  
 'hello'  
 --same as  
 "hello"  
@@ -36,7 +36,7 @@ Ten temat zawiera krótkie informacje o [!INCLUDE[esql](../../../../../../includ
   
  Przykład:  
   
-```  
+```sql  
 DATETIME '2006-12-25 01:01:00.000'   
 --same as  
 DATETIME '2006-12-25 01:01'  
@@ -53,7 +53,7 @@ DATETIME '2006-12-25 01:01'
   
  Przykład:  
   
-```  
+```sql  
 --a collection of integers  
 {1, 2, 3}  
 ```  
@@ -67,23 +67,23 @@ DATETIME '2006-12-25 01:01'
 |3|  
   
 ### <a name="other"></a>Inne  
- Inne literały obsługiwane przez [!INCLUDE[esql](../../../../../../includes/esql-md.md)] program to GUID, Binary, float/Double, Decimal i `null`. Literały o wartości [!INCLUDE[esql](../../../../../../includes/esql-md.md)] null w są uważane za zgodne z każdym innym typem w modelu koncepcyjnym.  
+ Inne literały obsługiwane przez [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to GUID, Binary, float/Double, Decimal i `null`. Literały null w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] są uważane za zgodne z każdym innym typem w modelu koncepcyjnym.  
   
 ## <a name="type-constructors"></a>Konstruktory typów  
   
 ### <a name="row"></a>ROW  
- [Wiersz](row-entity-sql.md) konstruuje anonimową, strukturalnie wpisaną wartość w postaci:`ROW(1 AS myNumber, ‘Name’ AS myName).`  
+ [Wiersz](row-entity-sql.md) konstruuje anonimową, strukturalnie wpisaną wartość w postaci: `ROW(1 AS myNumber, ‘Name’ AS myName).`  
   
  Przykład:  
   
-```  
-SELECT VALUE row (product.ProductID as ProductID, product.Name   
-    as ProductName) FROM AdventureWorksEntities.Product AS product  
+```sql  
+SELECT VALUE row (product.ProductID AS ProductID, product.Name
+    AS ProductName) FROM AdventureWorksEntities.Product AS product
 ```  
   
  Dane wyjściowe:  
   
-|Identyfikator produktu|Nazwa|  
+|Produktu|Nazwa|  
 |---------------|----------|  
 |1|Wyścigi regulowane|  
 |879|Podstawa roweru ogólnego przeznaczenia|  
@@ -97,22 +97,22 @@ SELECT VALUE row (product.ProductID as ProductID, product.Name
   
  Przykład:  
   
-```  
+```sql  
 SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE product.ListPrice IN MultiSet (125, 300)  
 ```  
   
  Dane wyjściowe:  
   
-|Identyfikator produktu|Name (Nazwa)|ProductNumber|…|  
+|Produktu|Nazwa|ProductNumber|...|  
 |---------------|----------|-------------------|-------|  
-|842|Touring-Panniers, Large|PA-T100|…|  
+|842|Touring-Panniers, Large|PA-T100|...|  
   
 ### <a name="object"></a>Obiekt  
- Konstrukcje [konstruktorów nazwanych](named-type-constructor-entity-sql.md) (o nazwach) obiekty zdefiniowane przez użytkownika `person("abc", 12)`, takie jak.  
+ Obiekty zdefiniowane przez użytkownika [(nazwane)](named-type-constructor-entity-sql.md) , takie jak `person("abc", 12)`.  
   
  Przykład:  
   
-```  
+```sql  
 SELECT VALUE AdventureWorksModel.SalesOrderDetail (o.SalesOrderDetailID, o.CarrierTrackingNumber, o.OrderQty,   
 o.ProductID, o.SpecialOfferID, o.UnitPrice, o.UnitPriceDiscount,   
 o.rowguid, o.ModifiedDate) FROM AdventureWorksEntities.SalesOrderDetail   
@@ -121,7 +121,7 @@ AS o
   
  Dane wyjściowe:  
   
-|SalesOrderDetailID|CarrierTrackingNumber|OrderQty|Identyfikator produktu|...|  
+|SalesOrderDetailID|CarrierTrackingNumber|OrderQty|Produktu|...|  
 |------------------------|---------------------------|--------------|---------------|---------|  
 |1|4911-403C-98|1|776|...|  
 |2|4911-403C-98|3|777|...|  
@@ -132,7 +132,7 @@ AS o
 ### <a name="ref"></a>REF  
  [Ref](ref-entity-sql.md) tworzy odwołanie do wystąpienia typu jednostki. Na przykład następujące zapytanie zwraca odwołania do każdej jednostki zamówienia w zestawie jednostek Orders:  
   
-```  
+```sql  
 SELECT REF(o) AS OrderID FROM Orders AS o  
 ```  
   
@@ -149,9 +149,9 @@ SELECT REF(o) AS OrderID FROM Orders AS o
   
  Przykład:  
   
-```  
+```sql  
 SELECT VALUE REF(p).Name FROM   
-    AdventureWorksEntities.Product as p  
+    AdventureWorksEntities.Product AS p
 ```  
   
  Dane wyjściowe:  
@@ -168,9 +168,9 @@ SELECT VALUE REF(p).Name FROM
   
  Przykład:  
   
-```  
+```sql  
 SELECT VALUE DEREF(REF(p)).Name FROM   
-    AdventureWorksEntities.Product as p  
+    AdventureWorksEntities.Product AS p
 ```  
   
  Dane wyjściowe:  
@@ -187,14 +187,14 @@ SELECT VALUE DEREF(REF(p)).Name FROM
   
  Przykład:  
   
-```  
+```sql  
 SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))   
-    FROM AdventureWorksEntities.Product as p  
+    FROM AdventureWorksEntities.Product AS p
 ```  
   
  Dane wyjściowe:  
   
-|Identyfikator produktu|  
+|Produktu|  
 |---------------|  
 |980|  
 |365|  
@@ -203,13 +203,13 @@ SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))
   
 ## <a name="functions"></a>Funkcje  
   
-### <a name="canonical"></a>Canonical  
- Przestrzeń nazw dla [funkcji kanonicznych](canonical-functions.md) to EDM, jak `Edm.Length("string")`w. Nie trzeba określać przestrzeni nazw, chyba że zostanie zaimportowana inna przestrzeń nazw, która zawiera funkcję o takiej samej nazwie jak funkcja kanoniczna. Jeśli dwie przestrzenie nazw mają tę samą funkcję, użytkownik powinien mieć określoną pełną nazwę.  
+### <a name="canonical"></a>Postaci  
+ Przestrzeń nazw dla [funkcji kanonicznych](canonical-functions.md) to EDM, jak w `Edm.Length("string")`. Nie trzeba określać przestrzeni nazw, chyba że zostanie zaimportowana inna przestrzeń nazw, która zawiera funkcję o takiej samej nazwie jak funkcja kanoniczna. Jeśli dwie przestrzenie nazw mają tę samą funkcję, użytkownik powinien mieć określoną pełną nazwę.  
   
  Przykład:  
   
-```  
-SELECT Length(c. FirstName) As NameLen FROM   
+```sql  
+SELECT Length(c. FirstName) AS NameLen FROM
     AdventureWorksEntities.Contact AS c   
     WHERE c.ContactID BETWEEN 10 AND 12  
 ```  
@@ -222,13 +222,13 @@ SELECT Length(c. FirstName) As NameLen FROM
 |6|  
 |5|  
   
-### <a name="microsoft-provider-specific"></a>Microsoft Provider-Specific  
- [Funkcje specyficzne dla dostawcy firmy Microsoft](../sqlclient-for-ef-functions.md) znajdują `SqlServer` się w przestrzeni nazw.  
+### <a name="microsoft-provider-specific"></a>Specyficzne dla dostawcy firmy Microsoft  
+ [Funkcje specyficzne dla dostawcy firmy Microsoft](../sqlclient-for-ef-functions.md) znajdują się w przestrzeni nazw `SqlServer`.  
   
  Przykład:  
   
-```  
-SELECT SqlServer.LEN(c.EmailAddress) As EmailLen FROM   
+```sql  
+SELECT SqlServer.LEN(c.EmailAddress) AS EmailLen FROM
     AdventureWorksEntities.Contact AS c WHERE   
     c.ContactID BETWEEN 10 AND 12  
 ```  
@@ -239,14 +239,14 @@ SELECT SqlServer.LEN(c.EmailAddress) As EmailLen FROM
 |--------------|  
 |27|  
 |27|  
-|26|  
+|25|  
   
 ## <a name="namespaces"></a>Namespaces  
  [Użycie](using-entity-sql.md) określa przestrzenie nazw używane w wyrażeniu zapytania.  
   
  Przykład:  
   
-```  
+```sql  
 using SqlServer; LOWER('AA');  
 ```  
   
@@ -261,14 +261,14 @@ using SqlServer; LOWER('AA');
   
  Przykład:  
   
-```  
-SELECT c.ContactID as ID, c.LastName as Name FROM   
+```sql  
+SELECT c.ContactID as ID, c.LastName AS Name FROM
     AdventureWorks.Contact AS c ORDER BY c.ContactID SKIP 9 LIMIT 3;  
 ```  
   
  Dane wyjściowe:  
   
-|id|Nazwa|  
+|ID|Nazwa|  
 |--------|----------|  
 |10|Adina|  
 |11|Agcaoili|  
@@ -279,8 +279,8 @@ SELECT c.ContactID as ID, c.LastName as Name FROM
   
  Przykład:  
   
-```  
-SELECT VALUE name FROM AdventureWorksEntities.Product as P   
+```sql  
+SELECT VALUE name FROM AdventureWorksEntities.Product AS P
     GROUP BY P.Name HAVING MAX(P.ListPrice) > 5  
 ```  
   
@@ -294,11 +294,11 @@ SELECT VALUE name FROM AdventureWorksEntities.Product as P
 |...|  
   
 ## <a name="navigation"></a>Nawigacja  
- Operator nawigacji relacji umożliwia nawigowanie po relacji od jednej jednostki (od końca) do innej (do końca). [Nawigacja](navigate-entity-sql.md) przyjmuje typ relacji kwalifikowana jako \<przestrzeń nazw >.\< Nazwa typu relacji >. Funkcja nawigacji zwraca\<wartość Ref T >, jeśli Kardynalność do końca jest równa 1. Jeśli Kardynalność do końca to n, zostanie zwrócona kolekcja < ref\<T > >.  
+ Operator nawigacji relacji umożliwia nawigowanie po relacji od jednej jednostki (od końca) do innej (do końca). [Nawigowanie](navigate-entity-sql.md) przyjmuje typ relacji kwalifikowana jako \<namespace >. \<relationship typu >. Funkcja nawigacji zwraca wartość Ref @ no__t-0T >, jeśli Kardynalność do końca wynosi 1. Jeśli Kardynalność do końca to n, zostanie zwrócona kolekcja < ref @ no__t-0T > >.  
   
  Przykład:  
   
-```  
+```sql  
 SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM   
     NAVIGATE(a, AdventureWorksModel.FK_SalesOrderHeader_Address_BillToAddressID) AS v)   
     FROM AdventureWorksEntities.Address AS a  
@@ -316,12 +316,12 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 ## <a name="select-value-and-select"></a>WYBIERZ POZYCJĘ WARTOŚĆ I WYBIERZ POZYCJĘ  
   
 ### <a name="select-value"></a>WYBIERZ WARTOŚĆ  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]udostępnia klauzulę SELECT VALUE, aby pominąć konstruowanie niejawnego wiersza. W klauzuli SELECT VALUE można określić tylko jeden element. Gdy taka klauzula jest używana, żadna otoka wiersza nie jest zbudowana wokół elementów w klauzuli SELECT i można utworzyć kolekcję żądanego kształtu, na przykład: `SELECT VALUE a`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] udostępnia klauzulę SELECT VALUE, aby pominąć konstrukcję niejawnego wiersza. W klauzuli SELECT VALUE można określić tylko jeden element. Gdy taka klauzula jest używana, żadna otoka wiersza nie jest zbudowana wokół elementów w klauzuli SELECT i można utworzyć kolekcję żądanego kształtu, na przykład: `SELECT VALUE a`.  
   
  Przykład:  
   
-```  
-SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p  
+```sql  
+SELECT VALUE p.Name FROM AdventureWorksEntities.Product AS p
 ```  
   
  Dane wyjściowe:  
@@ -334,13 +334,13 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
 |...|  
   
 ### <a name="select"></a>SELECT  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]udostępnia także konstruktora wierszy do konstruowania dowolnych wierszy. Zaznacz powoduje, że co najmniej jeden element w projekcji i wyniki w rekordzie danych z polami, na `SELECT a, b, c`przykład:.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] udostępnia także konstruktora wierszy do konstruowania dowolnych wierszy. Zaznacz powoduje, że co najmniej jeden element w projekcji i wyniki w rekordzie danych z polami, na przykład: `SELECT a, b, c`.  
   
  Przykład:  
   
  Wybierz pozycję p.Name, p. ProductID z AdventureWorksEntities. Product jako p Output:  
   
-|Nazwa|Identyfikator produktu|  
+|Nazwa|Produktu|  
 |----------|---------------|  
 |Wyścigi regulowane|1|  
 |Podstawa roweru ogólnego przeznaczenia|879|  
@@ -352,7 +352,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
   
  Przykład:  
   
-```  
+```sql  
 CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END  
 ```  
   

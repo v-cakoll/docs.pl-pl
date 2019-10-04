@@ -1,5 +1,5 @@
 ---
-title: Ulepszone silne nazewnictwo
+title: Poprawa silnego nazywania
 ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 88f9a5c848a8a46b72fb39865ffa861424107438
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1ab1087a840fe41b9fac7779c73797c470899408
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973251"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834890"
 ---
-# <a name="enhanced-strong-naming"></a>Ulepszone silne nazewnictwo
+# <a name="enhanced-strong-naming"></a>Poprawa silnego nazywania
 Sygnatura silnej nazwy jest mechanizmem tożsamości w .NET Framework do identyfikowania zestawów. Jest to podpis cyfrowy klucza publicznego, który zwykle jest używany do weryfikacji integralności danych, które są przesyłane z nadawcy (osoby podpisującej) do adresata (weryfikatora). Ta sygnatura jest używana jako unikatowa tożsamość zestawu i zapewnia, że odwołania do zestawu nie są niejednoznaczne. Zestaw jest podpisany jako część procesu kompilacji, a następnie weryfikowany po jego załadowaniu.  
   
  Podpisy silnej nazwy uniemożliwiają złośliwym stronom manipulowanie zestawem, a następnie ponowne podpisywanie zestawu przy użyciu oryginalnego klucza osoby podpisującej. Jednak klucze o silnych nazwach nie zawierają żadnych wiarygodnych informacji o wydawcy ani nie zawierają hierarchii certyfikatów. Podpis silnej nazwy nie gwarantuje wiarygodności osoby, która podpisała zestaw lub wskazuje, czy osoba była uprawnionym właścicielem klucza; wskazuje tylko, że właściciel klucza podpisuje zestaw. W związku z tym nie zaleca się używania podpisu silnej nazwy jako modułu sprawdzania zabezpieczeń w celu zaufania kodu innej firmy. Microsoft Authenticode jest zalecanym sposobem uwierzytelniania kodu.  
@@ -36,32 +36,32 @@ Sygnatura silnej nazwy jest mechanizmem tożsamości w .NET Framework do identyf
 ## <a name="use-enhanced-strong-names"></a>Użyj ulepszonych silnych nazw  
  Klucze silnej nazwy składają się z klucza podpisu i klucza tożsamości. Zestaw jest podpisany przy użyciu klucza podpisu i jest identyfikowany przez klucz tożsamości. Przed .NET Framework 4,5 te dwa klucze były takie same. Począwszy od .NET Framework 4,5, klucz tożsamości pozostaje taki sam jak w starszych wersjach .NET Framework, ale klucz podpisu zostanie rozszerzony przy użyciu silniejszego algorytmu wyznaczania wartości skrótu. Ponadto klucz podpisu jest podpisany przy użyciu klucza tożsamości w celu utworzenia podpisu licznika.  
   
- Ten <xref:System.Reflection.AssemblySignatureKeyAttribute> atrybut umożliwia metadanych zestawu użycie istniejącego klucza publicznego dla tożsamości zestawu, co pozwala na kontynuowanie pracy przez stare odwołania do zestawu.  Ten <xref:System.Reflection.AssemblySignatureKeyAttribute> atrybut używa sygnatury licznika, aby upewnić się, że właściciel nowego klucza podpisu jest również właścicielem starego klucza tożsamości.  
+ Atrybut <xref:System.Reflection.AssemblySignatureKeyAttribute> umożliwia metadanych zestawu użycie istniejącego klucza publicznego dla tożsamości zestawu, co umożliwia kontynuowanie pracy przez stare odwołania do zestawu.  Atrybut <xref:System.Reflection.AssemblySignatureKeyAttribute> używa sygnatury licznika, aby upewnić się, że właściciel nowego klucza podpisu jest również właścicielem starego klucza tożsamości.  
   
 ### <a name="sign-with-sha-2-without-key-migration"></a>Podpisz przy użyciu algorytmu SHA-2 bez migracji klucza  
  Uruchom następujące polecenia z wiersza polecenia, aby podpisać zestaw bez migrowania sygnatury silnej nazwy:  
   
 1. Generuj nowy klucz tożsamości (w razie potrzeby).  
   
-    ```  
+    ```console  
     sn -k IdentityKey.snk  
     ```  
   
 2. Wyodrębnij klucz publiczny tożsamości i określ, że algorytm SHA-2 powinien być używany podczas podpisywania przy użyciu tego klucza.  
   
-    ```  
+    ```console  
     sn -p IdentityKey.snk IdentityPubKey.snk sha256  
     ```  
   
 3. Opóźnij podpisanie zestawu przy użyciu pliku klucza publicznego tożsamości.  
   
-    ```  
+    ```console  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
 4. Ponowne podpisywanie zestawu za pomocą pary kluczy pełnej tożsamości.  
   
-    ```  
+    ```console  
     sn -Ra MyAssembly.exe IdentityKey.snk  
     ```  
   
@@ -70,32 +70,32 @@ Sygnatura silnej nazwy jest mechanizmem tożsamości w .NET Framework do identyf
   
 1. Wygeneruj parę kluczy tożsamości i sygnatury (w razie potrzeby).  
   
-    ```  
+    ```console  
     sn -k IdentityKey.snk  
     sn -k SignatureKey.snk  
     ```  
   
 2. Wyodrębnij klucz publiczny podpisu i określ, że algorytm SHA-2 powinien być używany podczas podpisywania przy użyciu tego klucza.  
   
-    ```  
+    ```console  
     sn -p SignatureKey.snk SignaturePubKey.snk sha256  
     ```  
   
 3. Wyodrębnij klucz publiczny tożsamości, który określa algorytm wyznaczania wartości skrótu, który generuje sygnaturę licznika.  
   
-    ```  
+    ```console  
     sn -p IdentityKey.snk IdentityPubKey.snk  
     ```  
   
-4. Generuj parametry dla <xref:System.Reflection.AssemblySignatureKeyAttribute> atrybutu i Dołącz atrybut do zestawu.  
+4. Wygeneruj parametry dla atrybutu <xref:System.Reflection.AssemblySignatureKeyAttribute> i Dołącz atrybut do zestawu.  
   
-    ```  
+    ```console  
     sn -a IdentityPubKey.snk IdentityKey.snk SignaturePubKey.snk  
     ```  
 
     Daje to wynik podobny do poniższego.
 
-    ```
+    ```output
     Information for key migration attribute.
     (System.Reflection.AssemblySignatureKeyAttribute):
     publicKey=
@@ -123,13 +123,13 @@ Sygnatura silnej nazwy jest mechanizmem tożsamości w .NET Framework do identyf
   
 5. Opóźnij podpisanie zestawu przy użyciu klucza publicznego tożsamości.  
   
-    ```  
+    ```console  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
 6. W pełni podpisz zestaw za pomocą pary kluczy podpisu.  
   
-    ```  
+    ```console  
     sn -Ra MyAssembly.exe SignatureKey.snk  
     ```  
   

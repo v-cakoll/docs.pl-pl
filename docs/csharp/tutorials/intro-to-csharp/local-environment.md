@@ -2,25 +2,25 @@
 title: Wprowadzenie do C# — zapoznaj się z narzędziami programistycznymi
 description: Ten artykuł zawiera podstawowe wprowadzenie do narzędzi, które będą używane do tworzenia C# aplikacji i platformy .NET na komputerze.
 ms.date: 10/23/2018
-ms.openlocfilehash: fe39bd5e89bb168316b19c62d6e022e36c58fc2f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b18c71c54e4450902f576a1074058abcd5e8aa91
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850750"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834081"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>Zapoznaj się z narzędziami programistycznymi dla platformy .NET
 
 Pierwszym krokiem uruchamiania samouczka na komputerze jest skonfigurowanie środowiska programistycznego.
-Samouczek platformy .NET [Hello World w ciągu 10 minut](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) zawiera instrukcje dotyczące konfigurowania lokalnego środowiska deweloperskiego na komputerach Mac, komputerze lub Linux.
+Samouczek platformy .NET [Hello World w ciągu 10 minut](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) zawiera instrukcje dotyczące konfigurowania lokalnego środowiska deweloperskiego w systemie Windows, Linux lub macOS.
 
 Alternatywnie możesz zainstalować [zestaw .NET Core SDK](https://dotnet.microsoft.com/download) i [Visual Studio Code](https://code.visualstudio.com/).
 
 ## <a name="basic-application-development-flow"></a>Podstawowy przepływ tworzenia aplikacji
 
-Aplikacje można tworzyć przy użyciu [`dotnet new`](../../../core/tools/dotnet-new.md) polecenia. To polecenie generuje pliki i zasoby niezbędne do Twojej aplikacji. Wprowadzenie do C# samouczków wszystkie używają `console` typu aplikacji. Po uzyskaniu podstawowych podstaw można rozszerzyć na inne typy aplikacji.
+Aplikacje można tworzyć przy użyciu [`dotnet new`](../../../core/tools/dotnet-new.md) polecenia. To polecenie generuje pliki i zasoby niezbędne do Twojej aplikacji. Wprowadzenie do C# samouczków wszystkie używa typu aplikacji `console`. Po uzyskaniu podstawowych podstaw można rozszerzyć na inne typy aplikacji.
 
-Inne polecenia, które będą używane, [`dotnet build`](../../../core/tools/dotnet-build.md) są do kompilowania pliku wykonywalnego i [`dotnet run`](../../../core/tools/dotnet-run.md) uruchamiania pliku wykonywalnego.
+Inne polecenia, które będą używane, to [`dotnet build`](../../../core/tools/dotnet-build.md) do kompilowania pliku wykonywalnego i [`dotnet run`](../../../core/tools/dotnet-run.md) do uruchomienia pliku wykonywalnego.
 
 ## <a name="pick-your-tutorial"></a>Wybierz samouczek
 

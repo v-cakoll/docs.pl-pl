@@ -2,19 +2,19 @@
 title: Funkcja (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: ae8da3985f11a2e9f52852876a21f50a412e3b27
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: bacc773351812a5db60f493f3025c8e4b07dbaa2
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250940"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833801"
 ---
 # <a name="function-entity-sql"></a>Funkcja (Entity SQL)
 Definiuje funkcję w zakresie polecenia kwerendy Entity SQL.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```sql  
 FUNCTION function-name  
 ( [ { parameter_name <type_definition>   
         [ ,...n ]  
@@ -36,12 +36,12 @@ FUNCTION function-name
  Nazwa parametru w funkcji.  
   
  `function_expression`  
- Prawidłowe wyrażenie Entity SQL, które jest funkcją. Polecenie w funkcji może działać na `parameter_name` parametrach przekazaną do funkcji.  
+ Prawidłowe wyrażenie Entity SQL, które jest funkcją. Polecenie w funkcji może działać na `parameter_name` parametrów przekazano do funkcji.  
   
  `data_type`  
  Nazwa obsługiwanego typu.  
   
- Kolekcja (< type_definition`>` )  
+ Kolekcja (< type_definition @ no__t-0)  
  Wyrażenie zwracające kolekcję obsługiwanych typów, wierszy lub odwołań.  
   
  REF **(** `data_type` **)**  
@@ -61,19 +61,19 @@ FUNCTION function-name
   
  `A()`  
   
- Aby uzyskać więcej informacji, zobacz [jak: Wywoływanie funkcji](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))zdefiniowanej przez użytkownika.  
+ Aby uzyskać więcej informacji, zobacz [instrukcje: wywoływanie funkcji zdefiniowanej przez użytkownika](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).  
   
  Funkcje mogą być również deklarowane w samym modelu. Funkcje zadeklarowane w modelu są wykonywane w taki sam sposób jak funkcje zadeklarowane jako wbudowane w poleceniu. Aby uzyskać więcej informacji, zobacz [funkcje zdefiniowane przez użytkownika](user-defined-functions-entity-sql.md).  
   
 ## <a name="example"></a>Przykład  
- Następujące polecenie Entity SQL definiuje funkcję `Products` , która pobiera liczbę całkowitą do odfiltrowania zwróconych produktów.  
+ Następujące polecenie Entity SQL definiuje funkcję `Products`, która pobiera liczbę całkowitą do odfiltrowania zwróconych produktów.  
   
- [!code-csharp[DP EntityServices Concepts 2#FUNCTION1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#function1)]  
+ [!code-sql[DP EntityServices Concepts#FUNCTION1](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function1)]  
   
 ## <a name="example"></a>Przykład  
- Następujące polecenie Entity SQL definiuje funkcję `StringReturnsCollection` pobierającą ciągi do filtrowania zwróconych kontaktów.  
+ Następujące polecenie Entity SQL definiuje funkcję `StringReturnsCollection`, która pobiera kolekcję ciągów do filtrowania zwróconych kontaktów.  
   
- [!code-csharp[DP EntityServices Concepts 2#FUNCTION2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#function2)]  
+ [!code-sql[DP EntityServices Concepts#FUNCTION2](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function2)]  
   
 ## <a name="see-also"></a>Zobacz także
 

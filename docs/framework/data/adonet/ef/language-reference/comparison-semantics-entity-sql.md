@@ -2,15 +2,15 @@
 title: Semantyka porównania (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
-ms.openlocfilehash: da7b8f662d10376abd649e674701b43b7b740a6f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8d7868b0166f0a18824ec25e6cdf639deec665ac
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251179"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833945"
 ---
 # <a name="comparison-semantics-entity-sql"></a>Semantyka porównania (Entity SQL)
-Wykonywanie któregokolwiek z następujących [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatorów obejmuje porównanie wystąpień typu:  
+Wykonanie dowolnego z następujących operatorów [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obejmuje porównanie wystąpień typu:  
   
 ## <a name="explicit-comparison"></a>Jawne porównanie  
  Operacje równości:  
@@ -66,19 +66,19 @@ Wykonywanie któregokolwiek z następujących [!INCLUDE[esql](../../../../../../
 ## <a name="supported-combinations"></a>Obsługiwane kombinacje  
  W poniższej tabeli przedstawiono wszystkie obsługiwane kombinacje operatorów porównania dla każdego rodzaju typu:  
   
-|**Typ**|**=**<br /><br /> **\!=**|**GROUP BY**<br /><br /> **ITP**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**MA WARTOŚĆ NULL**<br /><br /> **NIE MA WARTOŚCI NULL**|  
+|**Wprowadź**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **ITP**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**< < =**<br /><br /> **> > =**|**ORDER BY**|**MA WARTOŚĆ NULL**<br /><br /> **NIE MA WARTOŚCI NULL**|  
 |-|-|-|-|-|-|-|-|  
 |Typ jednostki|Odwołanie<sup>1</sup>|Wszystkie właściwości<sup>2</sup>|Wszystkie właściwości<sup>2</sup>|Wszystkie właściwości<sup>2</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Odwołanie<sup>1</sup>|  
-|Typ złożony|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|  
-|Wiersz|Wszystkie właściwości<sup>4</sup>|Wszystkie właściwości<sup>4</sup>|Wszystkie właściwości<sup>4</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Wszystkie właściwości<sup>4</sup>|Zgłoś<sup>3</sup>|  
+|typ złożony|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|  
+|Wiersza|Wszystkie właściwości<sup>4</sup>|Wszystkie właściwości<sup>4</sup>|Wszystkie właściwości<sup>4</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Wszystkie właściwości<sup>4</sup>|Zgłoś<sup>3</sup>|  
 |Typ pierwotny|Specyficzne dla dostawcy|Specyficzne dla dostawcy|Specyficzne dla dostawcy|Specyficzne dla dostawcy|Specyficzne dla dostawcy|Specyficzne dla dostawcy|Specyficzne dla dostawcy|  
 |Multiset|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|  
-|Umieszczone|Tak<sup>5</sup>|Tak<sup>5</sup>|Tak<sup>5</sup>|Tak<sup>5</sup>|Throw|Throw|Tak<sup>5</sup>|  
+|umieszczone|Tak<sup>5</sup>|Tak<sup>5</sup>|Tak<sup>5</sup>|Tak<sup>5</sup>|Throw|Throw|Tak<sup>5</sup>|  
 |Skojarzenie<br /><br /> — typ|Zgłoś<sup>3</sup>|Throw|Throw|Throw|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|  
   
  <sup>1</sup> Odwołania do danego wystąpienia typu jednostki są niejawnie porównywane, jak pokazano w następującym przykładzie:  
   
-```  
+```sql  
 SELECT p1, p2   
 FROM AdventureWorksEntities.Product AS p1   
      JOIN AdventureWorksEntities.Product AS p2   
@@ -87,7 +87,7 @@ WHERE p1 != p2 OR p1 IS NULL
   
  Nie można porównać wystąpienia jednostki z jawnym odwołaniem. Jeśli zostanie podjęta taka próba, zostanie zgłoszony wyjątek. Na przykład następujące zapytanie spowoduje zgłoszenie wyjątku:  
   
-```  
+```sql  
 SELECT p1, p2   
 FROM AdventureWorksEntities.Product AS p1   
      JOIN AdventureWorksEntities.Product AS p2   

@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: baeb091f7c1757e62ba049afc7a92ae8e73d3925
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: f43cd61fbcb3c1c872961476449822c574f76cff
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70014945"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835278"
 ---
 # <a name="net-architectural-components"></a>Składniki architektury .NET
 
@@ -20,7 +20,7 @@ Aplikacja platformy .NET jest opracowana dla i działa w co najmniej jednej *imp
 
 .NET Standard to zestaw interfejsów API, które są implementowane przez podstawową bibliotekę klas implementacji platformy .NET. Bardziej formalnie jest to specyfikacja interfejsów API platformy .NET, które składają się na jednolity zestaw kontraktów, dla których kompilujesz swój kod. Te kontrakty są implementowane w każdej implementacji platformy .NET. Pozwala to na przenośność różnych implementacji platformy .NET, co skutecznie pozwala na uruchamianie kodu wszędzie.
 
-.NET Standard jest również platformą [](glossary.md#target-framework)docelową. Jeśli kod jest przeznaczony dla wersji .NET Standard, można go uruchomić w dowolnej implementacji platformy .NET, która obsługuje tę wersję .NET Standard.
+.NET Standard jest również [platformą docelową](glossary.md#target-framework). Jeśli kod jest przeznaczony dla wersji .NET Standard, można go uruchomić w dowolnej implementacji platformy .NET, która obsługuje tę wersję .NET Standard.
 
 Aby dowiedzieć się więcej na temat .NET Standard i sposobu ich określania jako docelowej, zobacz temat [.NET Standard](net-standard.md) .
 
@@ -28,7 +28,7 @@ Aby dowiedzieć się więcej na temat .NET Standard i sposobu ich określania ja
 
 Każda implementacja platformy .NET obejmuje następujące składniki:
 
-- Co najmniej jedno środowisko uruchomieniowe. Przykłady: Środowisko CLR dla .NET Framework, CoreCLR i CoreRT dla platformy .NET Core.
+- Co najmniej jedno środowisko uruchomieniowe. Przykłady: CLR dla .NET Framework, CoreCLR i CoreRT dla platformy .NET Core.
 - Biblioteka klas, która implementuje .NET Standard i może implementować dodatkowe interfejsy API. Przykłady: .NET Framework podstawowa Biblioteka klas, podstawowa Biblioteka klas .NET Core.
 - Opcjonalnie co najmniej jedna struktura aplikacji. Przykłady: [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md)i [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) są zawarte w .NET Framework i .NET Core.
 - Opcjonalnie narzędzia programistyczne. Niektóre narzędzia programistyczne są współużytkowane przez wiele implementacji.
@@ -84,6 +84,26 @@ Masz dostęp do obszernego zestawu narzędzi i składników infrastruktury, któ
 - Pakiet [NuGet](/nuget/), Menedżer pakietów firmy Microsoft dla platformy .NET
 - Narzędzia aranżacji kompilacji typu open source, takie jak [ciastka](https://cakebuild.net/) i [fałszywe](https://fake.build/)
 
+## <a name="applicable-standards"></a>Odpowiednie standardy
+
+Specyfikacje C# języka i Common Language Infrastructure (CLI) są znormalizowane przez standard [Ecma International®](https://www.ecma-international.org/). Pierwsze wersje tych standardów zostały opublikowane przez ECMA w grudniu 2001.
+
+Kolejne wersje standardów zostały opracowane przez grupy zadań TC49-TG2 (C#) i TC49-TG3 (CLI) w ramach języka programowania ([TC49](https://www.ecma-international.org/memento/tc49.htm)), a następnie zgodnie z ogólnym zestawem ECMA, a następnie ISO/IEC JTC 1 za pośrednictwem procesu szybkiego śledzenia obrazu ISO.
+
+### <a name="latest-standards"></a>Najnowsze standardy
+
+Następujące oficjalne dokumenty ECMA są dostępne dla [C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm) i [interfejsu wiersza polecenia](http://www.ecma-international.org/publications/standards/Ecma-335.htm) ([TR-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm)):
+
+- **Standard C# języka (wersja 5,0)** : [ECMA-334. PDF](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
+- **Common Language Infrastructure**: jest to dostępne w formacie [PDF](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) i w postaci pliku [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) .
+- **Informacje pochodzące z pliku XML partycji IV**: jest to dostępne w formatach [PDF](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) i [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) .
+ 
+Oficjalne dokumenty ISO/IEC są dostępne na stronie [standardy dostępne publicznie](https://standards.iso.org/ittf/PubliclyAvailableStandards/) ISO/IEC. Te linki są bezpośrednie ze strony:
+
+- **Technologia informacyjna — Języki C#programowania** : [ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
+- **Technologia informacyjna — Common Language Infrastructure (CLI) partycje I do VI**: [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
+- **Technologia informacyjna — Common Language Infrastructure (CLI) — raport techniczny dotyczący informacji pochodnych z pliku XML partycji IV**: [ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Wybieranie między programami .NET Core i .NET Framework na potrzeby aplikacji serwerowych](choosing-core-framework-server.md)
@@ -92,4 +112,4 @@ Masz dostęp do obszernego zestawu narzędzi i składników infrastruktury, któ
 - [.NET framework — przewodnik](../framework/index.md)
 - [Przewodnik dla języka C#](../csharp/index.md)
 - [Podręcznik języka F#](../fsharp/index.md)
-- [VB.NET Guide](../visual-basic/index.md)
+- [Przewodnik VB.NET](../visual-basic/index.md)

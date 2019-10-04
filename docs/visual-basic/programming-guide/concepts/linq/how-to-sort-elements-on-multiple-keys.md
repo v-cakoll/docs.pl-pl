@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Sortuj elementy w wielu kluczach (Visual Basic)'
+title: 'Instrukcje: sortowanie elementów w wielu kluczach (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 0c4c1462-3047-4766-b9e2-7e0e9cc7f421
-ms.openlocfilehash: dfb70a0ea4430d6771c319ab8ed351e8507bd89d
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 9e70a54dcf7ff8cd2e0f767773ad7a56b1da2330
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710293"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835141"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>Instrukcje: Sortuj elementy w wielu kluczach (Visual Basic)
+# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>Instrukcje: sortowanie elementów w wielu kluczach (Visual Basic)
 W tym temacie pokazano, jak sortować według wielu kluczy.  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie wyniki są uporządkowane najpierw według kodu pocztowego wysyłki, a następnie według daty zamówienia.  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -36,7 +36,7 @@ Next
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```console  
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997  
 CustomerID:LETSS EmployeeID:8 ShipPostalCode:94117 OrderDate:10/27/1997  
 CustomerID:LETSS EmployeeID:6 ShipPostalCode:94117 OrderDate:11/10/1997  
@@ -64,7 +64,7 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano to samo zapytanie dla kodu XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw — omówienie (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia w przestrzeni nazw](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: klienci i zamówienia w przestrzeni nazw](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adventure-works.com'>  
@@ -91,7 +91,7 @@ End Module
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```console  
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997  
 CustomerID:LETSS EmployeeID:8 ShipPostalCode:94117 OrderDate:10/27/1997  
 CustomerID:LETSS EmployeeID:6 ShipPostalCode:94117 OrderDate:11/10/1997  

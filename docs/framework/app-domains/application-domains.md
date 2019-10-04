@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a0a6a00fc76a646b4295db726bd8ae67733e321
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0ce9d5f706a473d64e97fb02e0426060878d9c75
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053223"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834028"
 ---
 # <a name="application-domains"></a>Domeny aplikacji
 
@@ -94,21 +94,21 @@ Systemy operacyjne i środowiska uruchomieniowe zwykle zapewniają pewną posta�
   
  Między domenami i wątkami aplikacji nie istnieje korelacja typu jeden-do-jednego. Kilka wątków można wykonać w jednej domenie aplikacji w dowolnym momencie, a określony wątek nie jest ograniczany do pojedynczej domeny aplikacji. Oznacza to, że wątki są bezpłatne, aby przekroczyć granice domeny aplikacji; dla każdej domeny aplikacji nie jest tworzony nowy wątek.  
   
- W danym momencie każdy wątek jest wykonywany w domenie aplikacji. W każdej domenie aplikacji może być wykonywane zero, jeden lub wiele wątków. Środowisko uruchomieniowe śledzi, które wątki działają w ramach których domen aplikacji. Można zlokalizować domenę, w której wykonywany jest wątek w dowolnym momencie, wywołując <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType> metodę.
+ W danym momencie każdy wątek jest wykonywany w domenie aplikacji. W każdej domenie aplikacji może być wykonywane zero, jeden lub wiele wątków. Środowisko uruchomieniowe śledzi, które wątki działają w ramach których domen aplikacji. Można zlokalizować domenę, w której wykonywany jest wątek w dowolnym momencie, wywołując metodę <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType>.
 
 ### <a name="application-domains-and-cultures"></a>Domeny aplikacji i kultury
 
- Kultura, która jest reprezentowana przez <xref:System.Globalization.CultureInfo> obiekt, jest skojarzona z wątkami. Można uzyskać kulturę, która jest skojarzona z aktualnie wykonywanym wątkiem przy <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> użyciu właściwości i można pobrać lub ustawić kulturę skojarzoną z aktualnie wykonywanym wątkiem przy <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> użyciu właściwości. Jeśli kultura skojarzona z wątkiem została jawnie ustawiona przy użyciu <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> właściwości, będzie nadal skojarzona z tym wątkiem, gdy wątek przekroczy granice domeny aplikacji. W przeciwnym razie kultura, która jest skojarzona z wątkiem w danym momencie jest określona przez wartość <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> właściwości w domenie aplikacji, w której jest wykonywany wątek:  
+ Kultura, która jest reprezentowana przez obiekt <xref:System.Globalization.CultureInfo>, jest skojarzona z wątkami. Można uzyskać kulturę, która jest skojarzona z aktualnie wykonywanym wątkiem za pomocą właściwości <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> i można pobrać lub ustawić kulturę skojarzoną z aktualnie wykonywanym wątkiem za pomocą właściwości <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>. Jeśli kultura, która jest skojarzona z wątkiem, została jawnie ustawiona przy użyciu właściwości <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>, będzie nadal skojarzona z tym wątkiem, gdy wątek przekroczy granice domeny aplikacji. W przeciwnym razie kultura, która jest skojarzona z wątkiem w danym momencie jest określona przez wartość właściwości <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> w domenie aplikacji, w której jest wykonywany wątek:  
   
-- Jeśli wartość właściwości nie `null`jest, kultura zwracana przez właściwość jest skojarzona z wątkiem (i w związku z tym zwracany <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> przez właściwości i <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> ).  
+- Jeśli wartość właściwości nie jest `null`, kultura zwracana przez właściwość jest skojarzona z wątkiem (i dlatego jest zwracana przez właściwości <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> i <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>).  
   
-- Jeśli wartość właściwości to `null`, bieżąca kultura systemu jest skojarzona z wątkiem.  
+- Jeśli wartość właściwości jest `null`, bieżąca kultura systemu jest skojarzona z wątkiem.  
   
 ## <a name="programming-with-application-domains"></a>Programowanie przy użyciu domen aplikacji
 
  Zazwyczaj domeny aplikacji tworzy się i wykonuje na nich operacje programowo za pomocą hostów środowiska uruchomieniowego. Czasami jednak z domenami aplikacji chcą pracować programy. Na przykład program może wczytywać składnik aplikacji do domeny, aby umożliwić zwolnienie domeny (i składnika) z pamięci bez konieczności zatrzymywania całej aplikacji.  
   
- <xref:System.AppDomain> Jest to interfejs programistyczny dla domen aplikacji. Zawiera ona metody tworzenia domen i zwalniania ich z pamięci, tworzenia wystąpień typów w domenach oraz rejestrowania w celu otrzymywania różnych powiadomień, np. o zwalnianiu domen aplikacji z pamięci. Poniższa tabela zawiera listę często <xref:System.AppDomain> używanych metod.  
+ @No__t-0 to interfejs programistyczny dla domen aplikacji. Zawiera ona metody tworzenia domen i zwalniania ich z pamięci, tworzenia wystąpień typów w domenach oraz rejestrowania w celu otrzymywania różnych powiadomień, np. o zwalnianiu domen aplikacji z pamięci. W poniższej tabeli wymieniono często używane metody <xref:System.AppDomain>.  
   
 |Metoda klasy AppDomain|Opis|  
 |----------------------|-----------------|  
@@ -128,7 +128,7 @@ Systemy operacyjne i środowiska uruchomieniowe zwykle zapewniają pewną posta�
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```env  
 COMPLUS_LoaderOptimization = 1  
 ```  
   
@@ -149,9 +149,9 @@ COMPLUS_LoaderOptimization = 1
   
 ### <a name="code-example"></a>Przykład kodu
 
- Aby wymusić, że wszystkie zestawy nie mają zostać załadowane jako niezależne od domeny dla usługi IISADMIN można osiągnąć `COMPLUS_LoaderOptimization=1` , dołączając do wartości wielociągowej środowiska w kluczu HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\IISADMIN.  
+ Aby wymusić, że wszystkie zestawy nie mają zostać załadowane jako niezależne od domeny dla usługi IISADMIN można osiągnąć przez dołączenie `COMPLUS_LoaderOptimization=1` do wartości wielociągowej środowiska w kluczu HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\IISADMIN.  
   
-```  
+```env  
 Key = HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\IISADMIN  
 Name = Environment  
 Type = REG_MULTI_SZ  

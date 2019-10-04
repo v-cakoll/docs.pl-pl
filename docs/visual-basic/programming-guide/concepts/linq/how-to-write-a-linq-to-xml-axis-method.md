@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Zapis LINQ do metody osi XML (Visual Basic)'
+title: 'Instrukcje: pisanie metody osi LINQ to XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b676f025-a24c-4076-8713-aa809b2b8ce0
-ms.openlocfilehash: f10ee90076a71aa44f480639d3bc460ea59044ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87c068c3a59f1ca8e62c092bf4841f50a26a7f6a
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614599"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835048"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>Instrukcje: Zapis LINQ do metody osi XML (Visual Basic)
-Można napisać swoje własne metody osi, aby pobierać kolekcje z drzewa XML. Jednym z najlepszych sposobów realizacji tego jest zapisywanie metody rozszerzenia, które zwraca kolekcję elementów lub atrybutów. Można napisać metodę Twojego rozszerzenia w taki sposób, aby zwrócić określony podzbiór elementów lub atrybutów, w zależności od wymagań aplikacji.  
+# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>Instrukcje: pisanie metody osi LINQ to XML (Visual Basic)
+Można napisać własne metody osi, aby pobierać kolekcje z drzewa XML. Najlepszym sposobem, aby to zrobić, jest zapisanie metody rozszerzającej zwracającej kolekcję elementów lub atrybutów. Można napisać metodę rozszerzenia w celu zwrócenia określonych podzbiorów elementów lub atrybutów na podstawie wymagań aplikacji.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto dwóch metod rozszerzenia. Z pierwszą metodą rozszerzenia `GetXPath`, działa na <xref:System.Xml.Linq.XObject>i zwraca wyrażenie XPath, podczas oceny zwróci atrybutu lub węzła. Druga metoda rozszerzenia `Find`, działa na <xref:System.Xml.Linq.XElement>. Zwraca kolekcję <xref:System.Xml.Linq.XAttribute> obiektów i <xref:System.Xml.Linq.XElement> obiektów, które zawierają niektóre określony tekst.  
+ W poniższym przykładzie zastosowano dwie metody rozszerzenia. Pierwsza metoda rozszerzająca, `GetXPath`, działa na <xref:System.Xml.Linq.XObject> i zwraca wyrażenie XPath, które po obliczeniu zwróci węzeł lub atrybut. Druga metoda rozszerzenia, `Find`, działa na <xref:System.Xml.Linq.XElement>. Zwraca kolekcję obiektów <xref:System.Xml.Linq.XAttribute> i obiektów <xref:System.Xml.Linq.XElement>, które zawierają określony tekst.  
   
- W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Wiele zamówień zakupu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: wiele zamówień zakupu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -204,7 +204,7 @@ End Module
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```console  
 /PurchaseOrders/PurchaseOrder[1]/@OrderDate  
 1999-10-20  
 /PurchaseOrders/PurchaseOrder[1]/Items/Item[2]/ShipDate  

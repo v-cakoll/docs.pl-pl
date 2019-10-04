@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Tworzenie dostępnej aplikacji bazującej na systemie Windows'
+title: 'Przewodnik: Tworzenie dostępnej aplikacji opartej na systemie Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
@@ -9,14 +9,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: de25c3dcf33471a1aadb4445a83affab9c40914b
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: b8f0c7c4584505d382e78aca68e2e99c9fa7748f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306337"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834631"
 ---
-# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Przewodnik: Tworzenie dostępnej aplikacji bazującej na systemie Windows
+# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Przewodnik: Tworzenie dostępnej aplikacji opartej na systemie Windows
 
 Tworzenie dostępnej aplikacji ma istotne znaczenie biznesowe. Wiele rządów ma regulacje dotyczące ułatwień dostępu do zakupu oprogramowania. Logo certyfikowane dla systemu Windows zawiera wymagania dotyczące ułatwień dostępu. W przypadku, gdy wszyscy potencjalni klienci mają wpływ na 30 000 000y, mogą oni uzyskać dostęp do oprogramowania.
 
@@ -38,7 +38,7 @@ Aby uzyskać informacje na temat obsługi różnych układów klawiatury, zobacz
 
 ## <a name="creating-the-project"></a>Tworzenie projektu
 
-W tym instruktażu tworzony jest interfejs użytkownika dla aplikacji, która przyjmuje zamówienia Pizza. Składa się z <xref:System.Windows.Forms.TextBox> nazwy klienta <xref:System.Windows.Forms.RadioButton> , grupy w celu wybrania rozmiaru Pizza, a <xref:System.Windows.Forms.CheckedListBox> do wybrania toppings, dwóch kontrolek z etykietą kolejność i Anuluj oraz menu z poleceniem Exit.
+W tym instruktażu tworzony jest interfejs użytkownika dla aplikacji, która przyjmuje zamówienia Pizza. Składa się z <xref:System.Windows.Forms.TextBox> dla nazwy klienta, grupy <xref:System.Windows.Forms.RadioButton> do wybrania rozmiaru Pizza, <xref:System.Windows.Forms.CheckedListBox> do wybrania toppings, dwóch kontrolek z etykietą Order i Cancel oraz menu z poleceniem Exit.
 
 Użytkownik wprowadza nazwę klienta, rozmiar Pizza i żądany toppings. Gdy użytkownik kliknie przycisk zamówienie, w oknie komunikatu zostanie wyświetlone podsumowanie zamówienia i jego koszt, a kontrolki są wyczyszczone i gotowe do kolejnej kolejności. Gdy użytkownik kliknie przycisk Anuluj, formanty są wyczyszczone i gotowe do kolejnej kolejności. Gdy użytkownik kliknie element menu Zakończ, program zostanie zamknięty.
 
@@ -46,13 +46,13 @@ Nacisk tego instruktażu nie jest kodem dla systemu zamówień sprzedaży detali
 
 #### <a name="to-begin-making-the-application"></a>Aby rozpocząć tworzenie aplikacji
 
-- Utwórz nową aplikację systemu Windows w Visual Basic lub wizualizacji C#. Nazwij projekt **PizzaOrder**. (Aby uzyskać szczegółowe informacje [, zobacz Tworzenie nowych rozwiązań i projektów](/visualstudio/ide/creating-solutions-and-projects)).
+- Utwórz nową aplikację systemu Windows w Visual Basic lub wizualizacji C#. Nazwij projekt **PizzaOrder**. Aby uzyskać szczegółowe informacje, zobacz [Tworzenie nowych rozwiązań i projektów](/visualstudio/ide/creating-solutions-and-projects).
 
 ## <a name="adding-the-controls-to-the-form"></a>Dodawanie kontrolek do formularza
 
 Podczas dodawania kontrolek do formularza należy wziąć pod uwagę następujące wytyczne, aby udostępnić dostępną aplikację:
 
-- Ustaw właściwości <xref:System.Windows.Forms.Control.AccessibleName%2A>i. <xref:System.Windows.Forms.Control.AccessibleDescription%2A> W tym przykładzie domyślnym ustawieniem <xref:System.Windows.Forms.Control.AccessibleRole%2A> jest wystarczające. Aby uzyskać więcej informacji na temat właściwości ułatwień dostępu, zobacz temat [zapewnianie informacji o ułatwieniach dostępu dla kontrolek w formularzu systemu Windows](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).
+- Ustaw właściwości <xref:System.Windows.Forms.Control.AccessibleDescription%2A> i <xref:System.Windows.Forms.Control.AccessibleName%2A>. W tym przykładzie jest to ustawienie domyślne dla <xref:System.Windows.Forms.Control.AccessibleRole%2A>. Aby uzyskać więcej informacji na temat właściwości ułatwień dostępu, zobacz temat [zapewnianie informacji o ułatwieniach dostępu dla kontrolek w formularzu systemu Windows](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).
 
 - Ustaw rozmiar czcionki na 10 punktów lub większy.
 
@@ -61,9 +61,9 @@ Podczas dodawania kontrolek do formularza należy wziąć pod uwagę następują
 
 - Upewnij się, że każda kontrolka etykieta opisująca kontrolkę TextBox bezpośrednio poprzedza formant TextBox w kolejności tabulacji.
 
-- Dodaj klucz dostępu, używając znaku "&", do <xref:System.Windows.Forms.Control.Text%2A> właściwości każdej kontrolki, do której użytkownik może chcieć przejść.
+- Dodaj klucz dostępu przy użyciu znaku "&" do właściwości <xref:System.Windows.Forms.Control.Text%2A> każdej kontrolki, do której użytkownik może chcieć przejść.
 
-- Dodaj klucz dostępu przy użyciu znaku "&" do <xref:System.Windows.Forms.Control.Text%2A> właściwości etykiety, która poprzedza kontrolkę, do której użytkownik może chcieć przejść. Ustaw <xref:System.Windows.Forms.Label.UseMnemonic%2A> Właściwość Labels na `true`, tak aby fokus został ustawiony na następną kontrolkę w kolejności tabulacji, gdy użytkownik naciśnie klawisz dostępu.
+- Dodaj klucz dostępu przy użyciu znaku "&" do właściwości <xref:System.Windows.Forms.Control.Text%2A> etykiety, która poprzedza kontrolkę, do której użytkownik może chcieć przejść. Ustaw właściwość Labels "<xref:System.Windows.Forms.Label.UseMnemonic%2A>" na `true`, tak aby fokus został ustawiony na następną kontrolkę w kolejności tabulacji, gdy użytkownik naciśnie klawisz dostępu.
 
 - Dodaj klucze dostępu do wszystkich elementów menu.
 
@@ -71,77 +71,77 @@ Podczas dodawania kontrolek do formularza należy wziąć pod uwagę następują
 
 - Dodaj kontrolki do formularza i ustaw właściwości zgodnie z poniższym opisem. Zapoznaj się z obrazem na końcu tabeli, aby zapoznać się z modelem jak rozmieścić kontrolki w formularzu.
 
-   |Object|Właściwość|Value|
+   |Obiekt|Właściwość|Wartość|
    |------------|--------------|-----------|
    |Formularz|AccessibleDescription|Formularz zamówienia|
-   ||AccessibleName|Formularz zamówienia|
+   ||Dostępname|Formularz zamówienia|
    ||Rozmiar czcionki|10|
-   ||Text|Formularz zamówienia Pizza|
-   |Elemencie|Name|logo|
+   ||Tekst|Formularz zamówienia Pizza|
+   |Elemencie|Nazwa|Znaku|
    ||AccessibleDescription|Wycinek elementu Pizza|
-   ||AccessibleName|Logo firmy|
-   ||Image|Dowolna ikona lub mapa bitowa|
-   |Etykieta|Name|companyLabel|
-   ||Text|Dobre Pizza|
+   ||Dostępname|Logo firmy|
+   ||Image (Obraz)|Dowolna ikona lub mapa bitowa|
+   |Etykieta|Nazwa|companyLabel|
+   ||Tekst|Dobre Pizza|
    ||TabIndex|1|
    ||AccessibleDescription|Nazwa firmy|
-   ||AccessibleName|Nazwa firmy|
+   ||Dostępname|Nazwa firmy|
    ||BackColor|Niebieski|
-   ||ForeColor|Kryje|
+   ||ForeColor|Żółty|
    ||Rozmiar czcionki|18|
-   |Etykieta|Name|customerLabel|
-   ||Text|Nazwa &|
+   |Etykieta|Nazwa|customerLabel|
+   ||Tekst|Nazwa &|
    ||TabIndex|2|
    ||AccessibleDescription|Etykieta nazwy klienta|
-   ||AccessibleName|Etykieta nazwy klienta|
-   ||UseMnemonic|Prawda|
-   |TextBox|Name|customerName|
-   ||Text|dawaj|
+   ||Dostępname|Etykieta nazwy klienta|
+   ||UseMnemonic|True|
+   |TextBox|Nazwa|customerName|
+   ||Tekst|dawaj|
    ||TabIndex|3|
    ||AccessibleDescription|Nazwa klienta|
-   ||AccessibleName|Nazwa klienta|
-   |GroupBox|Name|sizeOptions|
+   ||Dostępname|Nazwa klienta|
+   |Używane|Nazwa|sizeOptions|
    ||AccessibleDescription|Opcje rozmiaru Pizza|
-   ||AccessibleName|Opcje rozmiaru Pizza|
-   ||Text|Rozmiar Pizza|
+   ||Dostępname|Opcje rozmiaru Pizza|
+   ||Tekst|Rozmiar Pizza|
    ||TabIndex|4|
-   |RadioButton|Name|smallPizza|
-   ||Text|& mała $6,00|
-   ||Zaznaczone|Prawda|
+   |Składniki|Nazwa|smallPizza|
+   ||Tekst|& mała $6,00|
+   ||Zaznaczone|True|
    ||TabIndex|0|
    ||AccessibleDescription|Mały Pizza|
-   ||AccessibleName|Mały Pizza|
-   |RadioButton|Name|largePizza|
-   ||Text|& duże $10,00|
+   ||Dostępname|Mały Pizza|
+   |Składniki|Nazwa|largePizza|
+   ||Tekst|& duże $10,00|
    ||TabIndex|1|
    ||AccessibleDescription|Duże Pizza|
-   ||AccessibleName|Duże Pizza|
-   |Etykieta|Name|toppingsLabel|
-   ||Text|& toppings ($0,75)|
+   ||Dostępname|Duże Pizza|
+   |Etykieta|Nazwa|toppingsLabel|
+   ||Tekst|& toppings ($0,75)|
    ||TabIndex|5|
    ||AccessibleDescription|Etykieta toppings|
-   ||AccessibleName|Etykieta toppings|
-   ||UseMnemonic|Prawda|
-   |CheckedListBox|Name|toppings|
+   ||Dostępname|Etykieta toppings|
+   ||UseMnemonic|True|
+   |CheckedListBox|Nazwa|toppings|
    ||TabIndex|6|
    ||AccessibleDescription|Dostępne toppings|
-   ||AccessibleName|Dostępne toppings|
-   ||Elementy|Pepperoni, kiełbasy, grzyby|
-   |Przycisk|Name|kolejność|
-   ||Text|Kolejność &|
+   ||Dostępname|Dostępne toppings|
+   ||Items|Pepperoni, kiełbasy, grzyby|
+   |Button|Nazwa|Porządek|
+   ||Tekst|Kolejność &|
    ||TabIndex|7|
    ||AccessibleDescription|Suma zamówienia|
-   ||AccessibleName|Suma zamówień|
-   |Przycisk|Name|Anuluj|
-   ||Text|& Anuluj|
+   ||Dostępname|Suma zamówień|
+   |Button|Nazwa|Anuluj|
+   ||Tekst|& Anuluj|
    ||TabIndex|8|
    ||AccessibleDescription|Anulowanie zamówienia|
-   ||AccessibleName|Anuluj zamówienie|
-   |MainMenu|Name|theMainMenu|
-   |MenuItem|Name|fileCommands|
-   ||Text|Plik &|
-   |MenuItem|Name|exitApp|
-   ||Text|E & kończ|
+   ||Dostępname|Anulowanie zamówienia|
+   |MainMenu|Nazwa|theMainMenu|
+   |Elementem|Nazwa|fileCommands|
+   ||Tekst|Plik &|
+   |Elementem|Nazwa|exitApp|
+   ||Tekst|E & kończ|
 
    Formularz będzie wyglądać podobnie jak na poniższym obrazie:
 
@@ -149,9 +149,9 @@ Podczas dodawania kontrolek do formularza należy wziąć pod uwagę następują
 
 ## <a name="supporting-high-contrast-mode"></a>Tryb obsługi duży kontrast
 
-Tryb duży kontrast to ustawienie systemu Windows, które zwiększa czytelność przy użyciu kolorów kontrastu i rozmiarów czcionek, które są korzystne dla użytkowników niedowidzących. <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> Właściwość jest dostarczana, aby określić, czy tryb duży kontrast jest ustawiony.
+Tryb duży kontrast to ustawienie systemu Windows, które zwiększa czytelność przy użyciu kolorów kontrastu i rozmiarów czcionek, które są korzystne dla użytkowników niedowidzących. Właściwość <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> jest dostarczana, aby określić, czy tryb duży kontrast jest ustawiony.
 
-Jeśli SystemInformation. HighContrast ma `true`wartość, aplikacja powinna:
+Jeśli SystemInformation. HighContrast jest `true`, aplikacja powinna:
 
 - Wyświetlanie wszystkich elementów interfejsu użytkownika przy użyciu schematu kolorów systemu
 
@@ -159,9 +159,9 @@ Jeśli SystemInformation. HighContrast ma `true`wartość, aplikacja powinna:
 
 - Pomiń wszystkie obrazy lub wzorce w tle tekstu
 
-Aplikacja powinna sprawdzić ustawienie <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> podczas uruchamiania aplikacji i reagować na zdarzenie <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>systemowe. Zdarzenie jest zgłaszane przy każdej <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> wartości zmiany. <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>
+Aplikacja powinna sprawdzić ustawienie <xref:System.Windows.Forms.SystemInformation.HighContrast%2A>, gdy aplikacja zostanie uruchomiona i odpowie na zdarzenie systemowe <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>. Zdarzenie <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> jest zgłaszane przy każdej zmianie wartości <xref:System.Windows.Forms.SystemInformation.HighContrast%2A>.
 
-W naszej aplikacji jedynym elementem, który nie korzysta z ustawień systemowych dla koloru jest `lblCompanyName`. <xref:System.Drawing.SystemColors> Klasa służy do zmiany ustawień koloru etykiety na kolory systemu wybrane przez użytkownika.
+W naszej aplikacji jedynym elementem, który nie korzysta z ustawień systemowych dla koloru jest `lblCompanyName`. Klasa <xref:System.Drawing.SystemColors> służy do zmiany ustawień koloru etykiety na kolory systemu wybrane przez użytkownika.
 
 #### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>Aby włączyć tryb duży kontrast w skuteczny sposób
 
@@ -195,7 +195,7 @@ W naszej aplikacji jedynym elementem, który nie korzysta z ustawień systemowyc
     }
     ```
 
-2. Wywołaj`Public Sub New()` `public Form1()` C#procedurę w konstruktorze formularzy (w Visual Basic i w wizualizacji). `SetColorScheme` Aby uzyskać dostęp do konstruktora w Visual Basic, należy rozwinąć region o nazwie **kod wygenerowany przez projektanta formularzy systemu Windows**.
+2. Wywołaj procedurę `SetColorScheme` w konstruktorze formularzy (`Public Sub New()` w Visual Basic i `public Form1()` w wizualizacji C#). Aby uzyskać dostęp do konstruktora w Visual Basic, należy rozwinąć region o nazwie **kod wygenerowany przez projektanta formularzy systemu Windows**.
 
     ```vb
     Public Sub New()
@@ -213,7 +213,7 @@ W naszej aplikacji jedynym elementem, który nie korzysta z ustawień systemowyc
     }
     ```
 
-3. Utwórz procedurę zdarzenia z odpowiednim podpisem, aby odpowiedzieć na <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> zdarzenie.
+3. Utwórz procedurę zdarzenia z odpowiednim podpisem, aby odpowiedzieć na zdarzenie <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>.
 
     ```vb
     Protected Sub UserPreferenceChanged(sender As Object, _
@@ -230,7 +230,7 @@ W naszej aplikacji jedynym elementem, który nie korzysta z ustawień systemowyc
     }
     ```
 
-4. Dodaj kod do konstruktora formularzy po wywołaniu do `InitializeComponents`, aby podłączyć procedurę zdarzenia do zdarzenia systemowego. Ta metoda wywołuje `SetColorScheme` procedurę.
+4. Dodaj kod do konstruktora formularzy po wywołaniu do `InitializeComponents`, aby podłączyć procedurę zdarzenia do zdarzenia systemowego. Ta metoda wywołuje procedurę `SetColorScheme`.
 
     ```vb
     Public Sub New()
@@ -253,7 +253,7 @@ W naszej aplikacji jedynym elementem, który nie korzysta z ustawień systemowyc
     }
     ```
 
-5. Dodaj kod do metody formularza <xref:System.Windows.Forms.Control.Dispose%2A> przed wywołaniem <xref:System.Windows.Forms.Control.Dispose%2A> metody klasy bazowej, aby zwolnić zdarzenie po zamknięciu aplikacji. Aby uzyskać dostęp <xref:System.Windows.Forms.Control.Dispose%2A> do metody w Visual Basic, należy rozwinąć region o nazwie kod wygenerowany przez projektanta formularzy systemu Windows.
+5. Dodaj kod do metody <xref:System.Windows.Forms.Control.Dispose%2A> przed wywołaniem metody <xref:System.Windows.Forms.Control.Dispose%2A> klasy bazowej, aby zwolnić zdarzenie po zamknięciu aplikacji. Aby uzyskać dostęp do metody <xref:System.Windows.Forms.Control.Dispose%2A> w Visual Basic, należy rozwinąć region o nazwie kod wygenerowany przez projektanta formularzy systemu Windows.
 
     > [!NOTE]
     > Kod zdarzenia systemowego uruchamia wątek oddzielony od głównej aplikacji. Jeśli nie zwolnisz zdarzenia, kod, który zostanie poddany do zdarzenia, zostanie uruchomiony nawet po zamknięciu programu.
@@ -291,7 +291,7 @@ W tej aplikacji żadne informacje nie są przekazywane przez sam dźwięk. Jeśl
 
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>Aby podać informacje w inny sposób niż dźwięk
 
-1. Zmień pasek tytułu na Flash przy użyciu funkcji interfejsu API systemu Windows FlashWindow. Aby zapoznać się z przykładem sposobu wywoływania funkcji interfejsu API systemu [Windows, zobacz Przewodnik: Wywoływanie interfejsów](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)API systemu Windows.
+1. Zmień pasek tytułu na Flash przy użyciu funkcji interfejsu API systemu Windows FlashWindow. Przykład sposobu wywoływania funkcji interfejsu API systemu Windows można znaleźć w [przewodniku: wywoływanie interfejsów API systemu Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).
 
     > [!NOTE]
     > Użytkownik może mieć włączoną usługę Windows WartownikDźwięków, co spowoduje również, że okno zostanie wybłyskowe, gdy dźwięki systemu są odtwarzane za pomocą wbudowanego głośnika komputera.

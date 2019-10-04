@@ -8,17 +8,18 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 410c8bdb63b56a78dbfa64c21344fdcd6a6656c3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2a5449b4fa77ba99a18595077081089e80bd32df
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051609"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833620"
 ---
 # <a name="specifying-an-entry-point"></a>Określanie punktu wejścia
+
 Punkt wejścia określa lokalizację funkcji w bibliotece DLL. W obrębie zarządzanego projektu, oryginalna nazwa lub porządkowy punkt wejścia docelowej funkcji określa tę funkcję wewnątrz międzyoperacyjnej granicy. Co więcej, możesz zmapować punkt wejścia do innej nazwy, efektywnie zmieniając nazwę funkcji.  
   
- Poniższa lista zawiera możliwe powody zmiany nazwy funkcji DLL:  
+ Poniżej znajduje się lista możliwych przyczyn zmiany nazwy funkcji DLL:  
   
 - Aby uniknąć używania nazw funkcji API wrażliwych na wielkość liter  
   
@@ -31,7 +32,8 @@ Punkt wejścia określa lokalizację funkcji w bibliotece DLL. W obrębie zarzą
  Ten temat demonstruje, w jaki sposób zmienić nazwę funkcji DLL w kodzie zarządzanym.  
   
 ## <a name="renaming-a-function-in-visual-basic"></a>Zmiana nazwy funkcji w języku Visual Basic  
- Visual Basic używa słowa kluczowego **Function** w instrukcji **DECLARE** <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> do ustawienia pola. Poniższy przykład pokazuje podstawową deklarację.  
+ 
+Visual Basic używa słowa kluczowego **Function** w instrukcji **DECLARE** , aby ustawić pole <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType>. Poniższy przykład pokazuje podstawową deklarację.  
   
 ```vb
 Friend Class NativeMethods
@@ -43,7 +45,7 @@ Friend Class NativeMethods
 End Class
 ```
   
- Punkt wejścia **MessageBox** można zastąpić za pomocą **OknoKomunikatu** , dołączając słowo kluczowe **alias** w definicji, jak pokazano w poniższym przykładzie. W obu przykładach słowo kluczowe " **Autouzupełnianie** " eliminuje konieczność określenia wersji zestawu znaków punktu wejścia. Aby uzyskać więcej informacji na temat wybierania zestawu znaków, zobacz [Określanie zestawu znaków](specifying-a-character-set.md).  
+Punkt wejścia **MessageBox** można zastąpić za pomocą **OknoKomunikatu** , dołączając słowo kluczowe **alias** w definicji, jak pokazano w poniższym przykładzie. W obu przykładach słowo kluczowe " **Autouzupełnianie** " eliminuje konieczność określenia wersji zestawu znaków punktu wejścia. Aby uzyskać więcej informacji na temat wybierania zestawu znaków, zobacz [Określanie zestawu znaków](specifying-a-character-set.md).  
   
 ```vb
 Friend Class NativeMethods

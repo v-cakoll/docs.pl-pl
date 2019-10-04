@@ -2,12 +2,12 @@
 title: 'Usługa: Odbiorniki kanałów i kanały'
 ms.date: 03/30/2017
 ms.assetid: 8ccbe0e8-7e55-441d-80de-5765f67542fa
-ms.openlocfilehash: 0a740f5dcf682c3c140adb9c4c7c9678c4eae132
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4367d844867db7fdad013e30d047f9385addbce5
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797181"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834802"
 ---
 # <a name="service-channel-listeners-and-channels"></a>Usługa: Odbiorniki kanałów i kanały
 
@@ -23,23 +23,23 @@ Na poniższym diagramie przedstawiono proces otrzymywania komunikatów i dostarc
 
 Odbiornik kanału odbiera komunikaty i dostarcza do warstwy powyżej za pośrednictwem kanałów.
 
-Ten proces może być koncepcyjnie modelowany jako kolejka w każdym kanale, chociaż implementacja nie może w rzeczywistości korzystać z kolejki. Odbiornik kanału jest odpowiedzialny za otrzymywanie komunikatów z warstwy poniżej lub z sieci i umieszczanie ich w kolejce. Kanał jest odpowiedzialny za pobieranie komunikatów z kolejki i umieszczanie ich w powyższej warstwie, gdy ta warstwa pyta o komunikat, na przykład przez wywołanie `Receive` kanału.
+Ten proces może być koncepcyjnie modelowany jako kolejka w każdym kanale, chociaż implementacja nie może w rzeczywistości korzystać z kolejki. Odbiornik kanału jest odpowiedzialny za otrzymywanie komunikatów z warstwy poniżej lub z sieci i umieszczanie ich w kolejce. Kanał jest odpowiedzialny za pobieranie komunikatów z kolejki i umieszczanie ich w powyższej warstwie, gdy ta warstwa pyta o komunikat, na przykład przez wywołanie `Receive` w kanale.
 
-Funkcja WCF udostępnia pomocników klasy bazowej dla tego procesu. (Aby zapoznać się z diagramem klas pomocnika kanału omawianych w tym artykule, zobacz temat [model kanału — Omówienie](channel-model-overview.md)).
+Funkcja WCF udostępnia pomocników klasy bazowej dla tego procesu. Aby zapoznać się z diagramem klas pomocnika kanału omawianych w tym artykule, zobacz [Omówienie modelu kanału](channel-model-overview.md).
 
-- Klasa implementuje <xref:System.ServiceModel.ICommunicationObject> i wymusza komputer stanu opisany w kroku 2 [tworzenia kanałów.](developing-channels.md) <xref:System.ServiceModel.Channels.CommunicationObject>
+- Klasa <xref:System.ServiceModel.Channels.CommunicationObject> implementuje <xref:System.ServiceModel.ICommunicationObject> i wymusza komputer stanu opisany w kroku 2 [tworzenia kanałów](developing-channels.md).
 
-- Klasa implementuje <xref:System.ServiceModel.Channels.CommunicationObject> i udostępnia ujednoliconą klasę bazową dla <xref:System.ServiceModel.Channels.ChannelFactoryBase> i <xref:System.ServiceModel.Channels.ChannelListenerBase>. <xref:System.ServiceModel.Channels.ChannelManagerBase> Klasa działa w połączeniu z <xref:System.ServiceModel.Channels.ChannelBase>, która jest klasą bazową implementującą <xref:System.ServiceModel.Channels.IChannel>. <xref:System.ServiceModel.Channels.ChannelManagerBase>
+- Klasa <xref:System.ServiceModel.Channels.ChannelManagerBase> implementuje <xref:System.ServiceModel.Channels.CommunicationObject> i zapewnia ujednoliconą klasę bazową dla <xref:System.ServiceModel.Channels.ChannelFactoryBase> i <xref:System.ServiceModel.Channels.ChannelListenerBase>. Klasa <xref:System.ServiceModel.Channels.ChannelManagerBase> działa w połączeniu z <xref:System.ServiceModel.Channels.ChannelBase>, która jest klasą bazową implementującą <xref:System.ServiceModel.Channels.IChannel>.
 
-- <xref:System.ServiceModel.Channels.ChannelFactoryBase> Klasa implementuje <xref:System.ServiceModel.Channels.ChannelManagerBase> i<xref:System.ServiceModel.Channels.IChannelFactory> konsoliduje przeciążeniaw`OnCreateChannel` jedną metodę abstrakcyjną. `CreateChannel`
+- Klasa <xref:System.ServiceModel.Channels.ChannelFactoryBase> implementuje <xref:System.ServiceModel.Channels.ChannelManagerBase> i <xref:System.ServiceModel.Channels.IChannelFactory> i konsoliduje przeciążenia `CreateChannel` do jednej metody abstrakcyjnej `OnCreateChannel`.
 
-- <xref:System.ServiceModel.Channels.ChannelListenerBase> Klasa implementuje<xref:System.ServiceModel.Channels.IChannelListener>. Dział IT zajmuje się podstawowym zarządzaniem stanem.
+- Klasa <xref:System.ServiceModel.Channels.ChannelListenerBase> implementuje <xref:System.ServiceModel.Channels.IChannelListener>. Dział IT zajmuje się podstawowym zarządzaniem stanem.
 
-Następująca dyskusja jest oparta [na transporcie: Przykład](../samples/transport-udp.md) protokołu UDP.
+Następująca dyskusja jest oparta na przykładowej [transportowej: UDP](../samples/transport-udp.md) .
 
 ## <a name="creating-a-channel-listener"></a>Tworzenie odbiornika kanału
 
-To, że Przykładowa implementacja jest pochodną <xref:System.ServiceModel.Channels.ChannelListenerBase> klasy. `UdpChannelListener` Do odbierania datagramów jest stosowane pojedyncze gniazdo UDP. `OnOpen` Metoda odbiera dane przy użyciu gniazda UDP w pętli asynchronicznej. Dane są następnie konwertowane na komunikaty przy użyciu systemu kodowania komunikatów:
+@No__t-0 implementacja próbki pochodzi od klasy <xref:System.ServiceModel.Channels.ChannelListenerBase>. Do odbierania datagramów jest stosowane pojedyncze gniazdo UDP. Metoda `OnOpen` odbiera dane przy użyciu gniazda UDP w pętli asynchronicznej. Dane są następnie konwertowane na komunikaty przy użyciu systemu kodowania komunikatów:
 
 ```csharp
 message = UdpConstants.MessageEncoder.ReadMessage(
@@ -48,8 +48,8 @@ message = UdpConstants.MessageEncoder.ReadMessage(
 );
 ```
 
-Ponieważ ten sam kanał datagramu reprezentuje komunikaty, które docierają do różnych źródeł `UdpChannelListener` , jest to pojedynczy odbiornik. W danym momencie istnieje najwyżej <xref:System.ServiceModel.Channels.IChannel> jedna aktywna skojarzona z tym odbiornikiem. Przykład generuje inny, tylko wtedy, gdy kanał, który jest zwracany przez <xref:System.ServiceModel.Channels.ChannelListenerBase%601.AcceptChannel%2A> metodę, zostaje następnie usunięty. Po odebraniu komunikatu jest on dodawany do kolejki pojedynczego tego kanału.
+Ponieważ ten sam kanał datagramu reprezentuje komunikaty przychodzące z kilku źródeł, `UdpChannelListener` jest pojedynczym odbiornikiem. Istnieje co najwyżej jedna aktywna <xref:System.ServiceModel.Channels.IChannel> skojarzona z tym odbiornikiem. Przykład generuje inny, tylko wtedy, gdy kanał zwracany przez metodę <xref:System.ServiceModel.Channels.ChannelListenerBase%601.AcceptChannel%2A> jest następnie usuwany. Po odebraniu komunikatu jest on dodawany do kolejki pojedynczego tego kanału.
 
 ### <a name="udpinputchannel"></a>UdpInputChannel
 
-`UdpInputChannel` Klasa implementuje<xref:System.ServiceModel.Channels.IInputChannel>. Składa się z kolejki komunikatów przychodzących wypełnianych przez `UdpChannelListener`gniazdo. Te komunikaty są dekolejkowane przez <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A> metodę.
+Klasa `UdpInputChannel` implementuje <xref:System.ServiceModel.Channels.IInputChannel>. Składa się z kolejki komunikatów przychodzących wypełnianych przez gniazdo `UdpChannelListener`. Te komunikaty są dekolejkowane przez metodę <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A>.

@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Sortuj elementy (Visual Basic)'
+title: 'Instrukcje: sortowanie elementów (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c2c09279-6c8a-482e-8e71-b1453a815052
-ms.openlocfilehash: f92d8ca36d1b322bb8d1538fd199e7256c982b85
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 1bd76ade02f8f891e98b048ac866b6b9de65062f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710483"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835096"
 ---
-# <a name="how-to-sort-elements-visual-basic"></a>Instrukcje: Sortuj elementy (Visual Basic)
+# <a name="how-to-sort-elements-visual-basic"></a>Instrukcje: sortowanie elementów (Visual Basic)
 Ten przykład pokazuje, jak napisać zapytanie, które sortuje jego wyniki.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Dane liczbowe (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Ten przykład używa następującego dokumentu XML: [przykładowy plik XML: dane liczbowe (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("Data.xml")  
@@ -29,7 +29,7 @@ Next
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```console  
 0.99  
 4.95  
 6.99  
@@ -42,7 +42,7 @@ Next
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano to samo zapytanie dla kodu XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw — omówienie (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Dane liczbowe w przestrzeni nazw](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ Ten przykład używa następującego dokumentu XML: [przykładowy plik XML: dane liczbowe w przestrzeni nazw](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -64,7 +64,7 @@ End Module
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```console  
 0.99  
 4.95  
 6.99  

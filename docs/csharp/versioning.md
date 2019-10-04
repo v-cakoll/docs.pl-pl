@@ -3,12 +3,12 @@ title: C#Obsługa wersji — C# Przewodnik
 description: Informacje o C# działaniu wersji i programie .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 4c0d5b5c2ac40cb27c90b4908623dc75b26a80cc
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: dcfe373312b88c8ddd8587e27c566a90b25e3c13
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699924"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834055"
 ---
 # <a name="versioning-in-c"></a>Przechowywanie wersji w języku C @ no__t-0
 
@@ -110,5 +110,4 @@ Derived Method One: Derived Method One
 
 Modyfikator `override` jest oceniany w czasie kompilacji, a kompilator zgłosi błąd, jeśli nie znajdzie wirtualnego elementu członkowskiego do przesłonięcia.
 
-Wiedza na temat omawianych technik, a także zrozumienie, jakie sytuacje ich używania, będzie zbyt długim sposobem, aby zwiększyć łatwość przechodzenia między wersjami biblioteki.
- 
+Wiedza o omawianych technikach i zrozumieniu sytuacji, w których można z nich korzystać, będzie mieć na celu szybkie przechodzenie między wersjami biblioteki.

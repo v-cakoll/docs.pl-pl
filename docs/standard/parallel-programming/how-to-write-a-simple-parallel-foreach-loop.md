@@ -1,5 +1,5 @@
 ---
-title: Napisać prosty program równoległego za pomocą Parallel.ForEach
+title: Napisz prosty program równoległy używający metody Parallel. ForEach
 ms.date: 02/14/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,47 +11,47 @@ helpviewer_keywords:
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 599432af178031a85dea4155a8fd2923f879a600
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d54f06c1fc774a2e73b3b99a7d5bb24dd8baf3f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769216"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835262"
 ---
-# <a name="how-to-write-a-simple-parallelforeach-loop"></a>Instrukcje: Zapisywanie prostej pętli Parallel.ForEach
+# <a name="how-to-write-a-simple-parallelforeach-loop"></a>Instrukcje: zapisywanie prostej pętli Parallel. ForEach
 
-W tym przykładzie pokazano, jak używać <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> pętli, aby włączyć równoległość danych przez dowolny <xref:System.Collections.IEnumerable?displayProperty=nameWithType> lub <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> źródła danych.
+W tym przykładzie pokazano, jak używać pętli <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>, aby umożliwić równoległość danych na dowolnym <xref:System.Collections.IEnumerable?displayProperty=nameWithType> lub <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> źródle danych.
 
 > [!NOTE]
-> Ta dokumentacja używa wyrażeń lambda do definiowania delegatów w PLINQ. Jeśli nie znasz wyrażeń lambda w C# lub Visual Basic, zobacz [wyrażeń Lambda w PLINQ i TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
+> Ta dokumentacja używa wyrażeń lambda do definiowania delegatów w PLINQ. Jeśli nie znasz wyrażeń lambda w C# lub Visual Basic, zobacz [wyrażenia lambda w PLINQ i TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie przyjęto założenie, masz kilka plików .jpg w *obrazy C:\Users\Public\Pictures\Sample* folder i tworzy nowy folder podrzędny o nazwie *zmodyfikowane*. Po uruchomieniu tego przykładu, obraca się każdy obraz jpg w *przykładowe obrazy* i zapisuje go do *zmodyfikowane*. Można modyfikować tych dwóch ścieżek, zgodnie z potrzebami.
+W tym przykładzie założono, że masz kilka plików jpg w folderze *C:\Users\Public\Pictures\Sample obrazy* i utworzysz nowy podfolder o nazwie *zmodyfikowano*. Gdy uruchamiasz ten przykład, obraca każdy obraz jpg w *przykładowych* obrazach i zapisuje je do *zmodyfikowania*. W razie potrzeby można zmodyfikować dwie ścieżki.
 
 [!code-csharp[TPL_Parallel#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/simpleforeach.cs#03)]
 [!code-vb[TPL_Parallel#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/simpleforeach.vb#03)]
 
-A <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> pętli działa jak <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> pętli. Pętla partycje kolekcji źródłowej oraz planowanie zadań w wielu wątkach, w zależności od środowiska systemu. Więcej procesorów w systemie, tym szybciej parallel — metoda jest uruchamiany. W niektórych kolekcjach źródła pętli sekwencyjnej może być szybsze, w zależności od rozmiaru źródła i rodzaj pracy, który wykonuje pętlę. Aby uzyskać więcej informacji o wydajności, zobacz [potencjalne pułapki związane z równoległości danych i zadań](../../../docs/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md)
+Pętla <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> działa jak pętla <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Pętla jest partycją źródłową kolekcji i planuje prace na wielu wątkach na podstawie środowiska systemowego. Im więcej procesorów w systemie, tym szybsze jest uruchamianie metody równoległej. W przypadku niektórych kolekcji źródłowych pętla sekwencyjna może być szybsza, w zależności od rozmiaru źródła i rodzaju pracy wykonywanej przez pętlę. Aby uzyskać więcej informacji o wydajności, zobacz [potencjalne pułapek w zakresie danych i równoległości zadań](potential-pitfalls-in-data-and-task-parallelism.md).
 
-Aby uzyskać więcej informacji na temat pętli równoległych zobacz [jak: Zapisywanie prostej pętli Parallel.For](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md).
+Aby uzyskać więcej informacji na temat pętli równoległych, zobacz [How to: Write a Simple Parallel. for](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md).
 
-Aby użyć <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> z nieogólna kolekcja, możesz użyć <xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType> metodę rozszerzenia, aby przekonwertować kolekcji do kolekcji ogólnej, jak pokazano w poniższym przykładzie:
+Aby użyć <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> z kolekcją nieogólną, można użyć metody rozszerzenia <xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType> do przekonwertowania kolekcji na kolekcję ogólną, jak pokazano w następującym przykładzie:
 
 [!code-csharp[TPL_Parallel#07](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/nongeneric.cs#07)]
 [!code-vb[TPL_Parallel#07](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/nongeneric.vb#07)]
 
-Umożliwia także Parallel LINQ (PLINQ) do zrównoleglenia przetwarzania <xref:System.Collections.Generic.IEnumerable%601> źródeł danych. PLINQ umożliwia użycie składni zapytań deklaratywne określenie zachowania pętli. Aby uzyskać więcej informacji, zobacz [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).
+Można również użyć równoległego LINQ (PLINQ) do zrównoleglanie przetwarzania źródeł danych <xref:System.Collections.Generic.IEnumerable%601>. PLINQ umożliwia użycie deklaracyjnej składni zapytań, aby wyrazić zachowanie pętli. Aby uzyskać więcej informacji, zobacz [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).
 
-## <a name="compile-and-run-the-code"></a>Kompilowanie i uruchamianie kodu
+## <a name="compile-and-run-the-code"></a>Kompiluj i uruchamiaj kod
 
-Można skompilować kod jako aplikację konsolową w języku .NET Framework lub aplikacji konsoli dla platformy .NET Core.
+Można skompilować kod jako aplikację konsolową dla .NET Framework lub jako aplikację konsolową dla platformy .NET Core.
 
-W programie Visual Studio są Visual Basic i C# konsoli szablonów aplikacji dla Windows Desktop i .NET Core.
+W programie Visual Studio istnieją Visual Basic i C# szablony aplikacji konsolowych dla systemów Windows Desktop i .NET Core.
 
-W wierszu polecenia można użyć platformy .NET Core i jego narzędzi interfejsu wiersza polecenia (na przykład `dotnet new console` lub `dotnet new console -lang vb`), lub można utworzyć pliku i używania kompilatora wiersza polecenia dla aplikacji .NET Framework.
+W wierszu polecenia można użyć programu .NET Core i jego narzędzi interfejsu wiersza polecenia (na przykład `dotnet new console` lub `dotnet new console -lang vb`) albo utworzyć plik i użyć kompilatora z wierszem poleceń dla aplikacji .NET Framework.
 
-Dla projektu .NET Core, należy odwołać **System.Drawing.Common** pakietu NuGet. W programie Visual Studio Użyj Menedżera pakietów NuGet, aby zainstalować pakiet. Alternatywnie, można dodać odwołania do pakietu w swojej \*.csproj lub \*pliku vbproj:
+W przypadku projektu .NET Core należy odwołać się do pakietu NuGet **System. Drawing. Common** . W programie Visual Studio Użyj Menedżera pakietów NuGet, aby zainstalować pakiet. Alternatywnie można dodać odwołanie do pakietu w pliku @no__t -0. csproj lub @no__t -1. vbproj:
  
 ```xml
 <ItemGroup>
@@ -59,9 +59,9 @@ Dla projektu .NET Core, należy odwołać **System.Drawing.Common** pakietu NuGe
 </ItemGroup>
 ```
 
-Aby uruchomić aplikację konsoli .NET Core z poziomu wiersza polecenia, użyj `dotnet run` z folderu, który zawiera aplikację.
+Aby uruchomić aplikację konsolową .NET Core z poziomu wiersza polecenia, należy użyć `dotnet run` z folderu, który zawiera aplikację.
 
-Aby uruchomić aplikację konsoli w programie Visual Studio, naciśnij klawisz **F5**.
+Aby uruchomić aplikację konsolową z poziomu programu Visual Studio, naciśnij klawisz **F5**.
 
 ## <a name="see-also"></a>Zobacz także
 

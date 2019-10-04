@@ -11,15 +11,15 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-ms.openlocfilehash: 1cb4d372d3ac228f29c6fa45f124796e5dfb6709
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: a52f598c8a7c7a79b0f2436f1add7b3eb5d5261b
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859883"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835228"
 ---
 # <a name="andalso-operator-visual-basic"></a>AndAlso — Operator (Visual Basic)
-Wykonuje zwarcie logicznego połączenia dwóch wyrażeń.  
+Wykonuje krótkie koniunkcje logiczne dla dwóch wyrażeń.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -31,44 +31,44 @@ result = expression1 AndAlso expression2
   
 |Termin|Definicja|  
 |---|---|  
-|`result`|Wymagany. Wszelkie `Boolean` wyrażenia. Wynik jest `Boolean` wynik porównania dwóch wyrażeń.|  
-|`expression1`|Wymagana. Wszelkie `Boolean` wyrażenia.|  
-|`expression2`|Wymagane. Wszelkie `Boolean` wyrażenia.|  
+|`result`|Wymagany. Dowolne wyrażenie `Boolean`. Wynikiem porównania dwóch wyrażeń jest wynik `Boolean`.|  
+|`expression1`|Wymagany. Dowolne wyrażenie `Boolean`.|  
+|`expression2`|Wymagany. Dowolne wyrażenie `Boolean`.|  
   
 ## <a name="remarks"></a>Uwagi  
- Operacja logiczna jest nazywany *zwarcie* Jeśli skompilowany kod może obejść przedziały oceny jedno wyrażenie w zależności od wyniku innego wyrażenia. Jeśli wynik pierwsze wyrażenie obliczane określi ostateczny wynik operacji, nie ma potrzeby do oceny, drugie wyrażenie, ponieważ nie można zmienić, wynik końcowy. Zwarcie może poprawić wydajność, jeśli pominięto wyrażenie jest złożone, czy obejmuje wywołania procedur.  
+ Operacja logiczna jest uznawana za *krótką obwód* , jeśli skompilowany kod może pominąć Obliczanie jednego wyrażenia w zależności od wyniku innego wyrażenia. Jeśli wynikiem obliczenia pierwszego wyrażenia jest określenie końcowego wyniku operacji, nie ma potrzeby oceniania drugiego wyrażenia, ponieważ nie można zmienić wyniku końcowego. Krótkie obwody mogą zwiększyć wydajność, jeśli pominięte wyrażenie jest złożone lub jeśli obejmuje wywołania procedur.  
   
- Jeśli oba wyrażenia mają `True`, `result` jest `True`. W poniższej tabeli przedstawiono sposób `result` jest określana.  
+ Jeśli oba wyrażenia są szacowane do `True`, `result` jest `True`. W poniższej tabeli przedstawiono sposób określania `result`.  
   
-|Jeśli `expression1` jest|I `expression2` jest|Wartość `result` jest|  
+|Jeśli `expression1` to|I `expression2` to|Wartość `result` to|  
 |---|---|---|  
 |`True`|`True`|`True`|  
 |`True`|`False`|`False`|  
 |`False`|(nie oceniono)|`False`|  
   
 ## <a name="data-types"></a>Typy danych  
- `AndAlso` Operator jest zdefiniowany tylko w przypadku [typ danych Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic konwertuje każdy argument konieczny do `Boolean` przed obliczając wartość wyrażenia. Jeśli wynik jest przypisany do typu numerycznego, Visual Basic konwertuje go z `Boolean` do tego typu tak, aby `False` staje się `0` i `True` staje się `-1`.
-Aby uzyskać więcej informacji, zobacz [logiczna konwersje typów](../data-types/boolean-data-type.md#type-conversions)
+ Operator `AndAlso` jest zdefiniowany tylko dla [typu danych Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic konwertuje każdy operand w miarę potrzeb, aby `Boolean` przed szacowaniem wyrażenia. Jeśli wynik zostanie przypisany do typu liczbowego, Visual Basic konwertuje go z `Boolean` na ten typ, który `False` będzie `0` i `True` staje się `-1`.
+Aby uzyskać więcej informacji, zobacz [konwersje typów logicznych](../data-types/boolean-data-type.md#type-conversions).
   
 ## <a name="overloading"></a>Przeciążenie  
- [Operatora](../../../visual-basic/language-reference/operators/and-operator.md) i [IsFalse Operator](../../../visual-basic/language-reference/operators/isfalse-operator.md) może być *przeciążone*, co oznacza, że klasa lub Struktura można ponownie zdefiniować ich zachowania, gdy argument operacji ma typ, który klasy lub struktury. Przeciążanie `And` i `IsFalse` operatory wpływa na zachowanie `AndAlso` operatora. Jeśli kod używa `AndAlso` dla klasy lub struktury, która przeciążenia `And` i `IsFalse`, należy zrozumieć ich zachowanie zmieniony. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Operator [and](../../../visual-basic/language-reference/operators/and-operator.md) i [operator IsFalse](../../../visual-basic/language-reference/operators/isfalse-operator.md) mogą być *przeciążone*, co oznacza, że Klasa lub struktura mogą definiować ich zachowanie, gdy operand ma typ tej klasy lub struktury. Przeciążanie operatorów `And` i `IsFalse` wpływa na zachowanie operatora `AndAlso`. Jeśli kod używa `AndAlso` na klasie lub strukturze, która przeciąża `And` i `IsFalse`, należy zrozumieć swoje ponownie zdefiniowane zachowanie. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto `AndAlso` operator przeprowadzić logicznego połączenia dwóch wyrażeń. Wynik jest `Boolean` wartość wskazującą, czy cały conjoined wyrażenie ma wartość true. Jeśli pierwsze wyrażenie jest `False`, drugi nie jest oceniany.  
+ Poniższy przykład używa operatora `AndAlso` do wykonywania logicznego połączenia dwóch wyrażeń. Wynikiem jest wartość `Boolean`, która reprezentuje, czy całe przyłączone wyrażenie ma wartość true. Jeśli pierwsze wyrażenie jest `False`, sekunda nie jest szacowana.  
   
  [!code-vb[VbVbalrOperators#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#24)]  
   
- Poprzedni przykład generuje wyniki `True`, `False`, i `False`, odpowiednio. Podczas obliczania `secondCheck`, drugie wyrażenie nie jest oceniany, ponieważ pierwszy jest już `False`. Jednak drugie wyrażenie jest obliczane w obliczeniach kluczowych `thirdCheck`.  
+ W powyższym przykładzie wyniki są odpowiednio `True`, `False` i `False`. W obliczeniach `secondCheck` drugie wyrażenie nie jest oceniane, ponieważ pierwszy jest już `False`. Drugie wyrażenie jest jednak oceniane przy obliczaniu wartości `thirdCheck`.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono `Function` procedury, która wyszukuje danej wartości wśród elementów tablicy. Jeśli tablica jest pusta lub przekroczeniu długość tablicy `While` instrukcji Testuj elementu tablicy względem wartości wyszukiwania.  
+ Poniższy przykład pokazuje procedurę `Function`, która wyszukuje daną wartość wśród elementów tablicy. Jeśli tablica jest pusta lub długość tablicy została przekroczona, instrukcja `While` nie przetestuje elementu Array względem wartości wyszukiwania.  
   
  [!code-vb[VbVbalrOperators#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#25)]  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Operatory logiczne/bitowe (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
-- [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Pierwszeństwo operatorów w Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [And, operator](../../../visual-basic/language-reference/operators/and-operator.md)
 - [IsFalse, operator](../../../visual-basic/language-reference/operators/isfalse-operator.md)

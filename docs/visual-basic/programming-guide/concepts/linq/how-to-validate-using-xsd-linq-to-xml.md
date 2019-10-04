@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Weryfikowanie przy użyciu XSD (LINQ to XML) (Visual Basic)'
+title: 'Instrukcje: sprawdzanie poprawności przy użyciu XSD (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a0fe88d4-4e77-49e7-90de-8953feeccc21
-ms.openlocfilehash: a29473b871961af0de033b77076686cc5b9dde0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67b197d3c92e7f72b7bda444f307b191eaec8304
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613359"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835064"
 ---
-# <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>Instrukcje: Weryfikowanie przy użyciu XSD (LINQ to XML) (Visual Basic)
-<xref:System.Xml.Schema> Przestrzeń nazw zawiera metody rozszerzenia, które ułatwiają sprawdzanie poprawności drzewa XML plik języka definicji schematu XML (XSD). Aby uzyskać więcej informacji, zobacz <xref:System.Xml.Schema.Extensions.Validate%2A> metoda dokumentacji.  
+# <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>Instrukcje: sprawdzanie poprawności przy użyciu XSD (LINQ to XML) (Visual Basic)
+Przestrzeń nazw <xref:System.Xml.Schema> zawiera metody rozszerzające, które ułatwiają Weryfikowanie drzewa XML względem pliku języka definicji schematu XML (XSD). Aby uzyskać więcej informacji, zobacz dokumentację metody <xref:System.Xml.Schema.Extensions.Validate%2A>.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy <xref:System.Xml.Schema.XmlSchemaSet>, następnie weryfikuje dwa <xref:System.Xml.Linq.XDocument> obiektów względem zestawie schematów. Jeden z dokumentów jest prawidłowy, druga nie.  
+ Poniższy przykład tworzy <xref:System.Xml.Schema.XmlSchemaSet>, a następnie sprawdza poprawność dwóch obiektów <xref:System.Xml.Linq.XDocument> względem zestawu schematów. Jeden z dokumentów jest prawidłowy, drugi nie jest.  
   
 ```vb  
 Dim errors As Boolean = False  
@@ -67,7 +67,7 @@ End Sub
   
  Ten przykład generuje następujące wyniki:  
   
-```  
+```console  
 Validating doc1  
 doc1 validated  
   
@@ -77,11 +77,11 @@ doc2 did not validate
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład sprawdza, czy z dokumentu XML [przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) nadaje się na schemat z [przykładowy plik XSD: Klienci i zamówienia](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md). Modyfikuje dokumencie źródłowym XML. Zmienia `CustomerID` atrybutu pierwszego klienta. Po zmianie zamówienia będzie następnie odnosił się do klienta, który nie istnieje, więc dokumentu XML, nie zostanie przeprowadzona Weryfikacja.  
+ Poniższy przykład sprawdza, czy dokument XML z [przykładowego pliku XML: klienci i zamówienia (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) są prawidłowe dla schematu z [przykładowego pliku XSD: klienci i zamówienia](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md). Następnie modyfikuje źródłowy dokument XML. Zmienia atrybut `CustomerID` pierwszego klienta. Po zmianie zamówienia odwołują się do klienta, który nie istnieje, więc dokument XML nie zostanie już zweryfikowany.  
   
- W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
- W tym przykładzie użyto następujących schematu XSD: [Przykładowy plik XSD: Klienci i zamówienia](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).  
+ W tym przykładzie zastosowano następujący schemat XSD: [przykładowy plik XSD: klienci i zamówienia](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).  
   
 ```vb  
 Dim errors As Boolean = False  
@@ -113,7 +113,7 @@ End Sub
   
  Ten przykład generuje następujące wyniki:  
   
-```  
+```console  
 Attempting to validate  
 custOrdDoc validated  
   

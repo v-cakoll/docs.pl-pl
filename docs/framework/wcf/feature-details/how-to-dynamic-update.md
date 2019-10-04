@@ -2,12 +2,12 @@
 title: 'Instrukcje: Aktualizacja dynamiczna'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 0a103e980d0d1be08f3ae6850c6af64405582c7b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 95d99afd09daf4d9bf3937a71d7773332ff1bc14
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972077"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834723"
 ---
 # <a name="how-to-dynamic-update"></a>Instrukcje: Aktualizacja dynamiczna
 W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia i dynamicznej aktualizacji konfiguracji routingu. W tym przykładzie początkowa konfiguracja routingu jest uzyskiwana z pliku konfiguracji i kieruje wszystkie komunikaty do usługi kalkulatora regularCalc. jest to jednak aktualizowane programowo w celu zmiany docelowego punktu końcowego usługi roundingCalc.  
@@ -18,7 +18,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia i dynamiczne
 > [!NOTE]
 > Aktualizacje dynamiczne są wykonywane tylko w pamięci i nie powodują modyfikacji plików konfiguracji.  
   
- Zarówno regularCalc, jak i roundingCalc obsługują te same operacje operacji dodawania, odejmowania, mnożenia i dzielenia; jednak roundingCalc zaokrągla wszystkie obliczenia do najbliższej wartości całkowitej przed zwróceniem. Plik konfiguracji służy do konfigurowania usługi do kierowania wszystkich komunikatów do usługi regularCalc. Po uruchomieniu <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> usługi routingu jest używana do ponownego skonfigurowania usługi do przesyłania komunikatów do usługi roundingCalc.  
+ Zarówno regularCalc, jak i roundingCalc obsługują te same operacje operacji dodawania, odejmowania, mnożenia i dzielenia; jednak roundingCalc zaokrągla wszystkie obliczenia do najbliższej wartości całkowitej przed zwróceniem. Plik konfiguracji służy do konfigurowania usługi do kierowania wszystkich komunikatów do usługi regularCalc. Po uruchomieniu usługi routingu <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> służy do ponownego skonfigurowania usługi do przesyłania komunikatów do usługi roundingCalc.  
   
 ### <a name="implement-initial-configuration"></a>Zaimplementuj konfigurację początkową  
   
@@ -78,7 +78,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia i dynamiczne
     ```  
   
 ## <a name="implement-dynamic-configuration"></a>Zaimplementuj konfigurację dynamiczną  
- Konfigurację dynamiczną usługi routingu można wykonać tylko w kodzie, tworząc nowe <xref:System.ServiceModel.Routing.RoutingConfiguration> i używając <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> , aby zastąpić bieżącą konfigurację.  W tym przykładzie usługa routingu jest samodzielna w aplikacji konsolowej. Po uruchomieniu aplikacji można zmodyfikować konfigurację routingu, wprowadzając wartość "Regular" lub "rounding" w oknie konsoli, aby skonfigurować docelowy punkt końcowy, do którego są kierowane komunikaty. regularCalc, gdy wprowadzono wartość "Regular", w przeciwnym razie roundingCalc, gdy zostanie wprowadzone "zaokrąglenie".  
+ Konfigurację dynamiczną usługi routingu można wykonać tylko w kodzie, tworząc nową <xref:System.ServiceModel.Routing.RoutingConfiguration> i używając <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A>, aby zastąpić bieżącą konfigurację.  W tym przykładzie usługa routingu jest samodzielna w aplikacji konsolowej. Po uruchomieniu aplikacji można zmodyfikować konfigurację routingu, wprowadzając wartość "Regular" lub "rounding" w oknie konsoli, aby skonfigurować docelowy punkt końcowy, do którego są kierowane komunikaty. regularCalc, gdy wprowadzono wartość "Regular", w przeciwnym razie roundingCalc, gdy zostanie wprowadzone "zaokrąglenie".  
   
 1. Aby można było obsługiwać usługę routingu, należy dodać następujące instrukcje using.  
   
@@ -163,7 +163,8 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia i dynamiczne
     > Ponieważ metoda udostępniania nowego zastosowano jest zawarta w rozszerzeniu usługi RoutingExtension, nowe obiekty zastosowano mogą być udostępniane w dowolnym miejscu w modelu rozszerzalności WCF, który ma lub może uzyskać odwołanie do ServiceHost lub Rozszerzenia serviceextension (na przykład w innym rozszerzeniu serviceextension).
   
 ## <a name="example"></a>Przykład  
- Poniżej znajduje się kompletna lista aplikacji konsolowej użyta w tym przykładzie.  
+
+Poniżej przedstawiono pełną listę aplikacji konsolowej używanej w tym przykładzie:
   
 ```csharp
 //-----------------------------------------------------------------  
@@ -241,7 +242,8 @@ namespace Microsoft.Samples.AdvancedFilters
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniżej znajduje się kompletna lista plików konfiguracyjnych użytych w tym przykładzie.  
+ 
+Poniżej znajduje się kompletna lista plików konfiguracyjnych użytych w tym przykładzie:
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -298,4 +300,4 @@ namespace Microsoft.Samples.AdvancedFilters
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Usługi routingu](../../../../docs/framework/wcf/samples/routing-services.md)
+- [Usługi routingu](../samples/routing-services.md)

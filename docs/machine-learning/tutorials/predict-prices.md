@@ -4,12 +4,12 @@ description: W tym samouczku przedstawiono sposób tworzenia modelu regresji prz
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 8db6b0c9ae1fd98724eda285423960546be8bac6
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 51617d14e84fa46464d7b44dbdb20afaf196924f
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700947"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957384"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Samouczek: prognozowanie cen przy użyciu regresji z ML.NET
 
@@ -188,7 +188,7 @@ Załaduj zestaw danych testowych przy użyciu metody [LoadFromTextFile ()](xref:
 
 [!code-csharp[LoadTestDataset](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#15 "Load the test dataset")]
 
-Następnie Przekształć dane `Test`, dodając następujący kod do `EvaluateModel()`:
+Następnie Przekształć dane `Test`, dodając następujący kod do `Evaluate()`:
 
 [!code-csharp[PredictWithTransformer](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#16 "Predict using the Transformer")]
 

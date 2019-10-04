@@ -8,24 +8,24 @@ dev_langs:
 ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08919e05f8396d37cb50ca24989b86000c854411
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 272c224c8a1c5061392856685f374237f8a10579
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921644"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956876"
 ---
 # <a name="accessing-attributes-in-the-dom"></a>Uzyskiwanie dostępu do atrybutów w modelu DOM
 
-Atrybuty to właściwości elementu, nie elementów podrzędnych elementu. Ważne jest wykonywania tego rozróżnienia ze względu na metody służące do nawigacji element równorzędny, nadrzędny i węzły podrzędne węzła XML Document Object Model (DOM). Na przykład **PreviousSibling** i **NextSibling** metod nie są używane do nawigacji z elementu, atrybutu lub między atrybutami. Zamiast tego atrybutu jest właściwością elementu i należące do elementu, ma **OwnerElement** właściwości i nie **parentNode** właściwości i ma różnych metod nawigacji.
+Atrybuty są właściwościami elementu, a nie elementem podrzędnym elementu. Ta różnica jest ważna ze względu na metody używane do nawigowania w węzłach elementów równorzędnych, nadrzędnych i podrzędnych Document Object Model XML (DOM). Na przykład metody **PreviousSibling** i **NextSibling** nie są używane do nawigowania po elemencie do atrybutu lub między atrybutami. Zamiast tego atrybut jest właściwością elementu i jest własnością elementu, ma właściwość **OwnerElement** , a nie Właściwość **ParentNode** i ma odrębne metody nawigacji.
 
-Jeśli bieżący węzeł jest elementem, użyj **HasAttribute** metodę, aby zobaczyć, czy istnieją jakiekolwiek atrybuty skojarzone z elementem. Gdy wiadomo, że element ma atrybuty, istnieje kilka metod uzyskania dostępu do atrybutów. Aby pobrać jeden atrybut z elementu, można użyć **GetAttribute** i **GetAttributeNode** metody **XmlElement** lub możesz uzyskać wszystkie atrybuty do kolekcji. Uzyskiwanie kolekcji jest przydatne, jeśli potrzebujesz do iteracji w kolekcji. Jeśli chcesz, aby wszystkie atrybuty z elementu, użyj **atrybuty** właściwość elementu, aby pobrać wszystkie atrybuty w kolekcji.
+Gdy bieżącym węzłem jest element, użyj metody **HasAttribute** , aby sprawdzić, czy istnieją atrybuty skojarzone z elementem. Gdy wiadomo, że element ma atrybuty, istnieje wiele metod uzyskiwania dostępu do atrybutów. Aby pobrać pojedynczy atrybut z elementu, można użyć metody **GetAttribute** i **GetAttributeNode** w elemencie **XmlElement** lub można uzyskać wszystkie atrybuty do kolekcji. Uzyskanie kolekcji jest przydatne, jeśli trzeba wykonać iterację w kolekcji. Jeśli chcesz uzyskać wszystkie atrybuty z elementu, użyj właściwości **atrybuty** elementu, aby pobrać wszystkie atrybuty do kolekcji.
 
 ## <a name="retrieving-all-attributes-into-a-collection"></a>Pobieranie wszystkich atrybutów do kolekcji
 
-Jeśli chcesz, aby wszystkie atrybuty węzła elementu to wprowadzane do kolekcji, należy wywołać **XmlElement.Attributes** właściwości. Spowoduje pobranie **XmlAttributeCollection** zawiera wszystkie atrybuty elementu. **XmlAttributeCollection** klasa dziedziczy **XmlNamedNode** mapy. W związku z tym, metody i właściwości dostępne w kolekcji obejmują te, które są dostępne na mapie nazwany węzeł dodatkowo do metod i właściwości specyficzne dla **XmlAttributeCollection** klasy, takie jak **ItemOf**  właściwości lub **Append** metody. Reprezentuje każdego elementu w kolekcji atrybutów **XmlAttribute** węzła. Aby znaleźć liczby atrybutów w elemencie, Uzyskaj **XmlAttributeCollection**i użyj **liczba** właściwości, aby zobaczyć, ile **XmlAttribute** węzły znajdują się w kolekcji.
+Jeśli chcesz, aby wszystkie atrybuty węzła elementu zostały umieszczone w kolekcji, wywołaj Właściwość **XmlElement. Attributes** . Spowoduje to pobranie **XmlAttributeCollection** , który zawiera wszystkie atrybuty elementu. Klasa **XmlAttributeCollection** dziedziczy z mapy **XmlNamedNode** . W związku z tym metody i właściwości dostępne w kolekcji obejmują te, które są dostępne na mapie nazwanych węzłów, a także metody i właściwości specyficzne dla klasy **XmlAttributeCollection** , takie jak Właściwość **ItemOf** lub **append** Metoda. Każdy element w kolekcji atrybutów reprezentuje węzeł **XmlAttribute** . Aby znaleźć liczbę atrybutów dla elementu, należy pobrać **XmlAttributeCollection**i użyć właściwości **Count** , aby zobaczyć, ile węzłów **XmlAttribute** znajduje się w kolekcji.
 
-Poniższy przykład kodu pokazuje, jak pobrać atrybut, kolekcji i przy użyciu **liczba** metodę indeksem pętli iteracji nad nim. Następnie kod pokazuje, jak pobieranie pojedynczego atrybutu z kolekcji i wyświetlić jego wartość.
+Poniższy przykład kodu przedstawia sposób pobierania kolekcji atrybutów i, przy użyciu metody **Count** dla indeksu pętli, iteracji nad nim. Następnie kod pokazuje, jak pobrać pojedynczy atrybut z kolekcji i wyświetlić jego wartość.
 
 ```vb
 Imports System
@@ -116,13 +116,13 @@ public class Sample
 }
 ```
 
-W tym przykładzie są wyświetlane następujące wyniki:
+W tym przykładzie są wyświetlane następujące dane wyjściowe:
 
 **Output**
 
 Wyświetl wszystkie atrybuty w kolekcji.
 
-```
+```console
 genre = novel
 ISBN = 1-861001-57-5
 misc = sale item
@@ -130,9 +130,9 @@ Display the attribute information.
 sale item
 ```
 
-Informacje przedstawione w kolekcji atrybutów można pobrać według nazwy lub numer indeksu. W powyższym przykładzie pokazano, jak można pobrać danych według nazwy. Następny przykład pokazuje, jak pobierać dane za pomocą numeru indeksu.
+Informacje w kolekcji atrybutów można pobrać według nazwy lub numeru indeksu. Powyższy przykład pokazuje, jak pobrać dane według nazwy. W następnym przykładzie pokazano, jak pobrać dane według numeru indeksu.
 
-Ponieważ **XmlAttributeCollection** jest kolekcją i można przez nazwę lub indeks, w tym przykładzie przedstawiono, zaznaczając pierwszy atrybut z kolekcji, a następnie używając następującego pliku liczony od zera indeks **baseuri.xml**, jako danych wejściowych.
+Ponieważ **XmlAttributeCollection** jest kolekcją i można ją powtórzyć według nazwy lub indeksu, w tym przykładzie pokazano, jak wybrać pierwszy atrybut z kolekcji przy użyciu indeksu opartego na zero i przy użyciu następującego pliku, **baseUri. XML**, jako dane wejściowe.
 
 ### <a name="input"></a>Dane wejściowe
 
@@ -192,9 +192,9 @@ public class Sample
 }
 ```
 
-## <a name="retrieving-an-individual-attribute-node"></a>Trwa pobieranie węzłem poszczególne atrybuty
+## <a name="retrieving-an-individual-attribute-node"></a>Pobieranie pojedynczego węzła atrybutu
 
-Można pobrać węzła jeden atrybut z elementu <xref:System.Xml.XmlElement.GetAttributeNode%2A?displayProperty=nameWithType> metoda jest używana. Zwraca obiekt typu **XmlAttribute**. Po utworzeniu **XmlAttribute**, wszystkie metody i właściwości dostępnych w <xref:System.Xml.XmlAttribute?displayProperty=nameWithType> klasy są dostępne dla tego obiektu, takie jak wyszukiwanie **OwnerElement**.
+Aby pobrać pojedynczy węzeł atrybutu z elementu, używana jest metoda <xref:System.Xml.XmlElement.GetAttributeNode%2A?displayProperty=nameWithType>. Zwraca obiekt typu **XmlAttribute**. Po utworzeniu elementu **XmlAttribute**wszystkie metody i właściwości dostępne w klasie <xref:System.Xml.XmlAttribute?displayProperty=nameWithType> są dostępne dla tego obiektu, takie jak znalezienie elementu **OwnerElement**.
 
 ```vb
 Imports System
@@ -257,7 +257,7 @@ using System.Xml;
 }
 ```
 
-Możesz również tworzyć jak pokazano w poprzednim przykładzie, gdzie węzeł jeden atrybut jest pobierana z kolekcji atrybutów. Poniższy przykład kodu pokazuje sposób jeden wiersz kodu mogą być zapisywane na pobieranie pojedynczego atrybutu przez numer indeksu z katalogu głównego dokumentu XML drzewa, znanego również jako **elementu DocumentElement** właściwości.
+Można również jak pokazano w poprzednim przykładzie, gdzie jeden węzeł atrybutu jest pobierany z kolekcji atrybutów. Poniższy przykład kodu pokazuje, jak można napisać jeden wiersz kodu w celu pobrania pojedynczego atrybutu według numeru indeksu z katalogu głównego drzewa dokumentu XML, znanego również jako właściwość **DocumentElement** .
 
 ```csharp
 XmlAttribute attr = doc.DocumentElement.Attributes[0];

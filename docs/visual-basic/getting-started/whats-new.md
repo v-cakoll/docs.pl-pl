@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 3638deeafc052a2da3b438de2c504a9955a15ad3
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: d286cc811c87f2d45d5a9e6d4e8acd9c430ff346
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895262"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835250"
 ---
 # <a name="whats-new-for-visual-basic"></a>Co nowego w Visual Basic
 
@@ -22,19 +22,19 @@ Ten temat zawiera listę najważniejszych nazw funkcji dla każdej wersji Visual
 ## <a name="current-version"></a>Bieżąca wersja
 
 Visual Basic 16,0/Visual Studio 2019 wersja 16,0  
-Aby poznać nowe funkcje, zobacz [Visual Basic 16,0](#visual-basic-160)
+Aby poznać nowe funkcje, zobacz [Visual Basic 16,0](#visual-basic-160).
 
 ## <a name="previous-versions"></a>Poprzednie wersje
 
-Visual Basic 15,8/Visual Studio 2017 wersja 15,8 dla nowych funkcji, zobacz [Visual Basic 15,8](#visual-basic-158)
+Visual Basic 15,8/Visual Studio 2017 wersja 15,8 dla nowych funkcji, zobacz [Visual Basic 15,8](#visual-basic-158).
 
-Visual Basic 15,5/Visual Studio 2017 wersja 15,5 dla nowych funkcji, zobacz [Visual Basic 15,5](#visual-basic-155)
+Visual Basic 15,5/Visual Studio 2017 wersja 15,5 dla nowych funkcji, zobacz [Visual Basic 15,5](#visual-basic-155).
 
-Visual Basic 15,3/Visual Studio 2017 wersja 15,3 dla nowych funkcji, zobacz [Visual Basic 15,3](#visual-basic-153)
+Visual Basic 15,3/Visual Studio 2017 wersja 15,3 dla nowych funkcji, zobacz [Visual Basic 15,3](#visual-basic-153).
 
-Visual Basic 2017/Visual Studio 2017 dla nowych funkcji, zobacz [Visual Basic 2017](#visual-basic-2017)
+Visual Basic 2017/Visual Studio 2017 dla nowych funkcji, zobacz [Visual Basic 2017](#visual-basic-2017).
 
-Visual Basic/Visual Studio 2015 dla nowych funkcji, zobacz [Visual Basic 14](#visual-basic-14)
+Visual Basic/Visual Studio 2015 dla nowych funkcji, zobacz [Visual Basic 14](#visual-basic-14).
 
 Wersje zapoznawcze Visual Basic/Visual Studio 2013 technologii .NET Compiler Platform ("Roslyn")
 
@@ -42,9 +42,9 @@ Visual Basic/Visual Studio 2012 `Async` i `await` słowa kluczowe, Iteratory, at
 
 Visual Basic, zaimplementowane przez program Visual Studio 2010 właściwości, Inicjatory kolekcji, niejawne kontynuacje wierszy, dynamiczne, ogólne odchylenie co/przeciwstawne, globalny dostęp do przestrzeni nazw
 
-Visual Basic/Visual Studio 2008 Language Integrated Query (LINQ), literały XML, wnioskowanie o typie lokalnym, Inicjatory obiektów, typy anonimowe, metody rozszerzające, wnioskowanie typu lokalnego `var` , wyrażenia lambda, `if` operator, częściowy metody, typy wartości null
+Visual Basic/Visual Studio 2008 Language Integrated Query (LINQ), literały XML, wnioskowanie o typie lokalnym, Inicjatory obiektów, typy anonimowe, metody rozszerzające, lokalne `var` wnioskowanie, wyrażenia lambda, operator `if`, metody częściowe, nullable typy wartości
 
-Visual Basic/Visual Studio 2005 `My` typ i typy pomocników (dostęp do aplikacji, komputera, systemu plików, sieci)
+Visual Basic/Visual Studio 2005 typ `My` i typy pomocników (dostęp do aplikacji, komputera, systemu plików, sieci)
 
 Visual Basic/operatory programu Visual Studio .NET 2003 bit Shift, deklaracja zmiennej pętli
 
@@ -98,11 +98,11 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 
 Należy zauważyć, że to obcina zamiast zaokrąglania wartości zmiennoprzecinkowych.
 
-## <a name="visual-basic-155"></a>Visual Basic 15.5
+## <a name="visual-basic-155"></a>Visual Basic 15,5
 
 [Argumenty nazwane inne niż końcowe](../programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md#mixing-arguments-by-position-and-by-name)
 
-W wersji Visual Basic 15.3 i starszych wersjach gdy wywołanie metody uwzględniało argumenty zarówno według pozycji, jak i według nazwy, argumenty pozycyjne musiały poprzedzać argumenty nazwane. W wersji Visual Basic 15.5 i nowszych argumenty pozycyjne i argumenty nazwane mogą występować w dowolnej kolejności, pod warunkiem że wszystkie argumenty (do ostatniego argumentu pozycyjnego) znajdują się we właściwych pozycjach. Jest to szczególnie przydatne, gdy argumenty nazwane są stosowane w celu poprawy czytelności kodu.
+W Visual Basic 15,3 i starszych wersjach, gdy wywołanie metody zawierało argumenty w obu położeniach i według nazwy, argumenty pozycyjne musiały poprzedzać nazwane argumenty. Począwszy od Visual Basic 15,5, argumenty pozycyjne i nazwane mogą pojawiać się w dowolnej kolejności, tak długo, jak wszystkie argumenty do ostatniego argumentu pozycyjnego znajdują się w poprawnej pozycji. Jest to szczególnie przydatne w przypadku, gdy nazwane argumenty są używane w celu łatwiejszego odczytywania kodu.
 
 Na przykład następujące wywołanie metody ma dwa argumenty pozycyjne między nazwanym argumentem. Nazwany argument sprawia, że wartość 19 reprezentuje wiek.
 
@@ -110,19 +110,19 @@ Na przykład następujące wywołanie metody ma dwa argumenty pozycyjne między 
 StudentInfo.Display("Mary", age:=19, #9/21/1998#)
 ```
 
-[`Private Protected`Modyfikator dostępu składowej](../language-reference/modifiers/private-protected.md)
+[Modyfikator dostępu składowej `Private Protected`](../language-reference/modifiers/private-protected.md)
 
-Ta nowa kombinacja słów kluczowych definiuje element członkowski, który jest dostępny dla wszystkich elementów członkowskich w jego klasie zawierającej, a także typów pochodzących od klasy zawierającej, ale tylko wtedy, gdy znajdują się one również w zawierającym go zestawie. Ponieważ struktury nie mogą być dziedziczone `Private Protected` , można je stosować tylko do elementów członkowskich klasy.
+Ta nowa kombinacja słów kluczowych definiuje element członkowski, który jest dostępny dla wszystkich elementów członkowskich w jego klasie zawierającej, a także typów pochodzących od klasy zawierającej, ale tylko wtedy, gdy znajdują się one również w zawierającym go zestawie. Ponieważ struktury nie mogą być dziedziczone, `Private Protected` może być stosowane tylko do elementów członkowskich klasy.
 
-**Wiodący znak separatora szesnastkowy/binarny/ósemkowy**
+**Wiodący separator szesnastkowy/binarny**
 
-W wersji +Visual Basic 2017 dodano obsługę znaku podkreślenia (`_`) jako separatora cyfr. Począwszy od wersji Visual Basic 15.5, można używać znaku podkreślenia jako separatora wiodącego między prefiksem a cyframi szesnastkowymi, binarnymi lub ósemkowymi. W poniższym przykładzie użyto separatora wiodącego cyfr, aby zdefiniować liczbę 3 271 948 384 w postaci szesnastkowej:
+Visual Basic 2017 dodano obsługę znaku podkreślenia (`_`) jako separator cyfr. Począwszy od Visual Basic 15,5, można użyć znaku podkreślenia jako wiodącego separatora między cyframi prefiksu i szesnastkowym, dwójkowym lub ósemkowym. W poniższym przykładzie zastosowano wiodący separator cyfr, aby zdefiniować 3 271 948 384 jako liczbę szesnastkową:
 
 ```vb
 Dim number As Integer = &H_C305_F860
 ```
 
-Aby użyć znaku podkreślenia jako separatora wiodącego, należy dodać następujący element do pliku projektu Visual Basic (\*.vbproj):
+Aby użyć znaku podkreślenia jako separatora wiodącego, należy dodać następujący element do pliku projektu Visual Basic (@no__t -0. vbproj):
 
 ```xml
 <PropertyGroup>
@@ -130,17 +130,17 @@ Aby użyć znaku podkreślenia jako separatora wiodącego, należy dodać nastę
 </PropertyGroup>
 ```
 
-## <a name="visual-basic-153"></a>Visual Basic 15.3
+## <a name="visual-basic-153"></a>Visual Basic 15,3
 
 [**Wnioskowanie o nazwie krotki**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
 
-Podczas przypisywania wartości elementów krotki ze zmiennych, Visual Basic wnioskuje nazwę elementów krotki z odpowiednich nazw zmiennych; nie ma potrzeby jawnej nazwy elementu krotki. Poniższy przykład używa wnioskowania, aby utworzyć krotkę z trzema nazwanymi `state`elementami `stateName`,, `capital`i.
+Podczas przypisywania wartości elementów krotki ze zmiennych, Visual Basic wnioskuje nazwę elementów krotki z odpowiednich nazw zmiennych; nie ma potrzeby jawnej nazwy elementu krotki. Poniższy przykład używa wnioskowania, aby utworzyć krotkę z trzema nazwanymi elementami, `state`, `stateName` i `capital`.
 
 [!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
 **Dodatkowe przełączniki kompilatora**
 
-Kompilator wiersza polecenia Visual Basic obsługuje teraz opcje kompilatora [ **-opcji refout**](../reference/command-line-compiler/refout-compiler-option.md) i [ **-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) , aby kontrolować dane wyjściowe zestawów referencyjnych. **-opcji refout** definiuje katalog wyjściowy zestawu referencyjnego i **-refonly** określa, że tylko zestaw odwołania ma być wyprowadzany przez kompilację.
+Kompilator wiersza polecenia Visual Basic obsługuje teraz opcje kompilatora [**-opcji refout**](../reference/command-line-compiler/refout-compiler-option.md) i [**-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) , aby kontrolować dane wyjściowe zestawów referencyjnych. **-opcji refout** definiuje katalog wyjściowy zestawu referencyjnego i **-refonly** określa, że tylko zestaw odwołania ma być wyprowadzany przez kompilację.
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
@@ -148,11 +148,11 @@ Kompilator wiersza polecenia Visual Basic obsługuje teraz opcje kompilatora [ *
 
 Krotki są prostą strukturą danych, najczęściej używaną do zwracania wielu wartości z pojedynczego wywołania metody. Zwykle, aby zwrócić wiele wartości z metody, należy wykonać jedną z następujących czynności:
 
-- Zdefiniuj typ niestandardowy (a `Class` `Structure`lub). Jest to bardzo ciężki rozwiązanie.
+- Zdefiniuj typ niestandardowy (`Class` lub `Structure`). Jest to bardzo ciężki rozwiązanie.
 
-- Zdefiniuj co najmniej jeden `ByRef` parametr, oprócz zwracania wartości z metody.
+- Zdefiniuj co najmniej jeden `ByRef` parametrów (oprócz zwracania wartości z metody).
 
-Obsługa Visual Basic kroteks umożliwia szybkie Definiowanie krotek, opcjonalnie przypisanie nazw semantycznych do wartości i szybkie pobranie wartości. Poniższy przykład otacza wywołanie <xref:System.Int32.TryParse%2A> metody i zwraca spójną krotkę.
+Obsługa Visual Basic kroteks umożliwia szybkie Definiowanie krotek, opcjonalnie przypisanie nazw semantycznych do wartości i szybkie pobranie wartości. Poniższy przykład otacza wywołanie metody <xref:System.Int32.TryParse%2A> i zwraca spójną krotkę.
 
 [!code-vb[Tuple](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#2)]
 
@@ -162,17 +162,17 @@ Następnie można wywołać metodę i obsłużyć zwróconą krotkę z kodem pod
 
 **Literały binarne i separatory cyfr**
 
-Można zdefiniować literał binarny przy użyciu prefiksu `&B` lub. `&b` Ponadto można użyć znaku podkreślenia, `_`jako separatora cyfr, aby zwiększyć czytelność. Poniższy przykład używa obu funkcji do przypisywania `Byte` wartości i wyświetlania jej jako liczby dziesiętnej, szesnastkowej i binarnej.
+Można zdefiniować literał binarny przy użyciu prefiksu `&B` lub `&b`. Ponadto można użyć znaku podkreślenia, `_`, jako separatora cyfr, aby zwiększyć czytelność. Poniższy przykład używa obu funkcji, aby przypisać wartość `Byte` i wyświetlić ją jako liczbę dziesiętną, szesnastkową i binarną.
 
 [!code-vb[Binary](../../../samples/snippets/visualbasic/getting-started/bin-example.vb#1)]
 
 Aby uzyskać więcej informacji, zobacz sekcję "przypisania literałów" dla typów danych [Byte](../language-reference/data-types/byte-data-type.md#literal-assignments), [Integer](../language-reference/data-types/integer-data-type.md#literal-assignments), [Long](../language-reference/data-types/long-data-type.md#literal-assignments), [](../language-reference/data-types/sbyte-data-type.md#literal-assignments) [Short](../language-reference/data-types/short-data-type.md#literal-assignments), [UInteger —](../language-reference/data-types/uinteger-data-type.md#literal-assignments), [ULONG](../language-reference/data-types/ulong-data-type.md#literal-assignments)i [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments) .
 
-[Obsługa wartości C# zwracanych przez odwołanie](../programming-guide/language-features/procedures/ref-return-values.md)
+[**Obsługa wartości C# zwracanych przez odwołanie**](../programming-guide/language-features/procedures/ref-return-values.md)
 
 Począwszy od C# 7,0, C# program obsługuje wartości zwracane przez odwołanie. Oznacza to, że gdy metoda wywołująca otrzymuje wartość zwracaną przez odwołanie, może zmienić wartość odwołania. Visual Basic nie pozwala na tworzenie metod za pomocą zwracanych wartości, ale pozwala na używanie i modyfikowanie wartości zwracanych przez odwołanie.
 
-Na przykład następująca `Sentence` Klasa zapisywana w C# obejmuje `FindNext` metodę, która umożliwia znalezienie następnego wyrazu w zdaniu rozpoczynającym się od określonego podciągu. Ciąg jest zwracany jako wartość zwracana przez odwołanie, a `Boolean` zmienna przekazana przez odwołanie do metody wskazuje, czy wyszukiwanie zakończyło się pomyślnie. Oznacza to, że obiekt wywołujący nie może odczytać tylko zwracanej wartości; może również go zmodyfikować, a modyfikacja jest odzwierciedlana w `Sentence` klasie.
+Na przykład następująca Klasa `Sentence` zapisywana w C# systemie zawiera metodę `FindNext`, która umożliwia znalezienie następnego wyrazu w zdaniu rozpoczynającym się od określonego podciągu. Ciąg jest zwracany jako wartość zwracana przez odwołanie, a zmienna `Boolean` przekazana przez odwołanie do metody wskazuje, czy wyszukiwanie zakończyło się pomyślnie. Oznacza to, że obiekt wywołujący nie może odczytać tylko zwracanej wartości; może również go modyfikować, a modyfikacja jest odzwierciedlana w klasie `Sentence`.
 
 [!code-csharp[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 
@@ -180,7 +180,7 @@ W najprostszej postaci można modyfikować wyraz znaleziony w zdaniu przy użyci
 
 [!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-return.vb#1)]
 
-Wystąpił problem z tym kodem, chociaż jest to, że jeśli dopasowanie nie zostanie znalezione, metoda zwraca pierwszy wyraz. Ponieważ przykład nie sprawdza wartości `Boolean` argumentu, aby określić, czy dopasowanie zostanie znalezione, modyfikuje pierwsze słowo, jeśli nie ma żadnego dopasowania. Poniższy przykład rozwiązuje ten problem, zastępując pierwszy wyraz własnym, jeśli nie ma żadnego dopasowania.
+Wystąpił problem z tym kodem, chociaż jest to, że jeśli dopasowanie nie zostanie znalezione, metoda zwraca pierwszy wyraz. Ponieważ przykład nie sprawdza wartości argumentu `Boolean` w celu ustalenia, czy dopasowanie zostanie znalezione, modyfikuje pierwszy wyraz, jeśli nie ma żadnego dopasowania. Poniższy przykład rozwiązuje ten problem, zastępując pierwszy wyraz własnym, jeśli nie ma żadnego dopasowania.
 
 [!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-return.vb#2)]
 
@@ -202,11 +202,11 @@ Do konstruowania ciągów można użyć wyrażeń interpolacji ciągów.  Wyraż
 
 [Dostęp warunkowy do elementu członkowskiego o wartości null i indeksowanie](../language-reference/operators/null-conditional-operators.md)
 
-Można testować pod kątem wartości null w bardzo jasny sposób składni przed wykonaniem operacji dostępu`?.`do elementu członkowskiego`?[]`() lub indeksu ().  Operatory te pomagają ograniczyć ilość kodu potrzebnego do sprawdzenia wystąpień wartości „null”, zwłaszcza w przypadku wchodzenia głębiej w struktury danych.  Jeśli lewy operand lub odwołanie do obiektu ma wartość null, operacje zwracają wartość null.
+Można testować pod kątem wartości null w bardzo jasny sposób składni przed wykonaniem operacji dostępu do elementu członkowskiego (`?.`) lub indeksu (`?[]`).  Te operatory pomagają pisać mniej kodu do obsługi kontroli wartości null, szczególnie w przypadku malejących struktur danych.  Jeśli lewy operand lub odwołanie do obiektu ma wartość null, operacje zwracają wartość null.
 
 [Wielowierszowe literały ciągów](../../visual-basic/programming-guide/language-features/strings/string-basics.md)
 
-Literały ciągu mogą zawierać sekwencje nowego wiersza.  Nie potrzebujesz już starego obejścia z używania`<xml><![CDATA[...text with newlines...]]></xml>.Value`
+Literały ciągu mogą zawierać sekwencje nowego wiersza.  Nie potrzebujesz już starego obejścia z używania `<xml><![CDATA[...text with newlines...]]></xml>.Value`
 
 **Komentarze**
 
@@ -214,27 +214,27 @@ Komentarze można umieszczać po niejawnej kontynuacji wierszy, wewnątrz wyraż
 
 **Inteligentniejsze w pełni kwalifikowane rozpoznawanie nazw**
 
-Podany kod, taki `Threading.Thread.Sleep(1000)`jak, Visual Basic używany do wyszukiwania przestrzeni nazw "Threading", odkrywał, że był niejednoznaczny między system. Threading i system. Windows. Threading, a następnie zgłasza błąd.  Visual Basic teraz traktuje jednocześnie wszystkie możliwe przestrzenie nazw.  Jeśli zostanie wyświetlona lista uzupełniania, Edytor programu Visual Studio Wyświetla listę członków z obu typów na liście uzupełniania.
+Podany kod, taki jak `Threading.Thread.Sleep(1000)`, Visual Basic używany do wyszukiwania przestrzeni nazw "Threading", odkrywał, że był niejednoznaczny między system. Threading i system. Windows. Threading, a następnie Zgłoś błąd.  Visual Basic teraz traktuje jednocześnie wszystkie możliwe przestrzenie nazw.  Jeśli zostanie wyświetlona lista uzupełniania, Edytor programu Visual Studio Wyświetla listę członków z obu typów na liście uzupełniania.
 
 **Literały daty od początku roku**
 
-Możesz mieć literały dat w formacie `#2015-03-17 16:10 PM#`rrrr-mm-dd.
+Możesz mieć literały dat w formacie RRRR-MM-DD, `#2015-03-17 16:10 PM#`.
 
 **Właściwości interfejsu tylko do odczytu**
 
 Właściwości interfejsu ReadOnly można zaimplementować przy użyciu właściwości ReadWrite.  Interfejs gwarantuje minimalną funkcjonalność i nie zatrzymuje klasy implementującej, umożliwiając ustawienie właściwości.
 
-[Wyrażenie \<typeof > typ \<IsNot >](../../visual-basic/language-reference/operators/typeof-operator.md)
+[TypeOf \<expr > IsNot @no__t 2type >](../../visual-basic/language-reference/operators/typeof-operator.md)
 
-Aby zwiększyć czytelność kodu, można teraz użyć `TypeOf` programu z. `IsNot`
+Aby zwiększyć czytelność kodu, można teraz używać `TypeOf` z `IsNot`.
 
-[#Disable identyfikator \<ostrzeżenia > i #Enable identyfikator \<ostrzeżenia >](../../visual-basic/language-reference/directives/index.md)
+[#Disable ostrzeżenie \<ID > i #Enable ostrzeżenie \<ID >](../../visual-basic/language-reference/directives/index.md)
 
 Można wyłączyć i włączyć określone ostrzeżenia dla regionów w pliku źródłowym.
 
 **Ulepszenia komentarzy w dokumencie XML**
 
-Podczas pisania komentarzy do dokumentu uzyskasz Inteligentny edytor i kompilację do walidacji nazw parametrów, prawidłowej obsługi `crefs` (typów ogólnych, operatorów itp.), kolorowania i refaktoryzacji.
+Podczas pisania komentarzy do dokumentu uzyskasz Inteligentny edytor i kompilację do walidacji nazw parametrów, prawidłowej obsługi `crefs` (rodzajowe, operatory itp.), kolorowanie i Refaktoryzacja.
 
 [Częściowe definicje modułów i interfejsów](../../visual-basic/language-reference/modifiers/partial.md)
 
@@ -246,7 +246,7 @@ Można umieścić #Region... #End ograniczników regionów w dowolnym miejscu w 
 
 [Definicje zastąpień są niejawnie przeciążeń](../../visual-basic/language-reference/modifiers/overrides.md)
 
-Jeśli dodasz `Overrides` modyfikator do definicji, kompilator niejawnie doda `Overloads` , tak aby można było wpisać mniej kodu w typowych przypadkach.
+Jeśli dodasz modyfikator `Overrides` do definicji, kompilator niejawnie doda `Overloads`, aby można było wpisać mniej kodu w typowych przypadkach.
 
 **CObj dozwolone w argumentach atrybutów**
 
@@ -254,7 +254,7 @@ Kompilator używany do wydawania błędu, który CObj (...) nie był stałą, gd
 
 **Deklarowanie i używanie niejednoznacznych metod z różnych interfejsów**
 
-Wcześniej Poniższy kod zgłosił błędy, które uniemożliwiły zadeklarowanie `IMock` lub wywołanie `GetDetails` (jeśli zostały zadeklarowane w C#):
+Wcześniej Poniższy kod zgłosił błędy, które uniemożliwiły zadeklarowanie `IMock` lub wywołania `GetDetails` (jeśli zostały zadeklarowane w C#):
 
 ```vb
 Interface ICustomer
@@ -273,7 +273,7 @@ Interface IMock2 : Inherits ICustomer, ITime
 End Interface
 ```
 
-Teraz kompilator będzie używać normalnych reguł rozpoznawania przeciążenia, aby wybrać najbardziej odpowiednie `GetDetails` do wywołania i można zadeklarować relacje interfejsu w Visual Basic jak te, które przedstawiono w przykładzie.
+Teraz kompilator użyje zasad normalnego rozpoznawania przeciążenia, aby wybrać najbardziej odpowiednie `GetDetails` do wywołania i można zadeklarować relacje interfejsu w Visual Basic, jak te, które przedstawiono w przykładzie.
 
 ## <a name="see-also"></a>Zobacz także
 

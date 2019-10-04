@@ -3,12 +3,12 @@ title: Tworzenie gry do aplikacji z listą z programowaniem Infer.NET i probabil
 description: Dowiedz się, w jaki sposób używać programowania probabilistyczne z Infer.NET do tworzenia aplikacji listy rozgrywki gry na podstawie uproszczonej wersji programu TrueSkill.
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: edb747355f2d41d0400c6a989eea37423bbda2b4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: f6f91aecfe7fdeffb7e8913309046c7942ecbab7
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117987"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957211"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Tworzenie gry do aplikacji z listą z programowaniem Infer.NET i probabilistyczne
 
@@ -33,11 +33,11 @@ dotnet new console -o myApp
 cd myApp
 ```
 
-Polecenie tworzy aplikację typu`console`. `new` `dotnet` Parametr tworzy katalog o nazwie `myApp` , w którym jest przechowywana aplikacja, i wypełnia je wymaganymi plikami. `-o` `cd myApp` Polecenie przełączy Cię do nowo utworzonego katalogu aplikacji.
+Polecenie `dotnet` tworzy aplikację `new` typu `console`. Parametr `-o` tworzy katalog o nazwie `myApp`, w którym jest przechowywana aplikacja i wypełnia je wymaganymi plikami. Polecenie `cd myApp` przełączy Cię do nowo utworzonego katalogu aplikacji.
 
 ## <a name="install-infernet-package"></a>Zainstaluj pakiet Infer.NET
 
-Aby korzystać z Infer.NET, należy zainstalować `Microsoft.ML.Probabilistic.Compiler` pakiet. W wierszu polecenia Uruchom następujące polecenie:
+Aby korzystać z Infer.NET, należy zainstalować pakiet `Microsoft.ML.Probabilistic.Compiler`. W wierszu polecenia Uruchom następujące polecenie:
 
 ```dotnetcli
 dotnet add package Microsoft.ML.Probabilistic.Compiler
@@ -138,7 +138,7 @@ dotnet run
 
 Wyniki powinny wyglądać podobnie do następujących:
 
-```
+```console
 Compiling model...done.
 Iterating:
 .........|.........|.........|.........|.........| 50

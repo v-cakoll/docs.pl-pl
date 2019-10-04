@@ -1,5 +1,5 @@
 ---
-title: Międzynarodowe czcionki w formularzach Windows i kontrolek
+title: Międzynarodowe czcionki w Windows Forms i kontrolki
 ms.date: 03/30/2017
 helpviewer_keywords:
 - fonts [Windows Forms], international
@@ -13,22 +13,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c3066df-9bac-479a-82b2-79e484b346a3
-ms.openlocfilehash: 1f9afd575e2de04e0b11556ad34436839e13d968
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ddbd6d7a1b614d588a2572b410957a5ed3b768c
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942899"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956917"
 ---
-# <a name="international-fonts-in-windows-forms-and-controls"></a>Międzynarodowe czcionki w formularzach Windows i kontrolek
+# <a name="international-fonts-in-windows-forms-and-controls"></a>Międzynarodowe czcionki w Windows Forms i kontrolki
 
-W aplikacjach międzynarodowych wybierania czcionek zaleca się użyć rezerwa czcionek, tam gdzie to możliwe. Czcionka rezerwowego oznacza, że system określi, co skrypt znak należy do.
+W aplikacjach międzynarodowych zalecaną metodą wybierania czcionek jest użycie opcji powrotu do czcionki wszędzie tam, gdzie jest to możliwe. Powrót do czcionki oznacza, że system Określa, do jakiego skryptu należy znak.
 
-## <a name="using-font-fallback"></a>Przy użyciu czcionki rezerwowe
+## <a name="using-font-fallback"></a>Używanie powrotu do czcionek
 
-Aby móc korzystać z tej funkcji, nie należy ustawiać <xref:System.Drawing.Font> właściwości dla formularza lub innego elementu. Aplikacja będzie automatycznie używać domyślnej czcionki systemowej, która różni się od jednego zlokalizowanego języka systemu operacyjnego do innego. Gdy aplikacja zostanie uruchomiona, system automatycznie zapewnić poprawną czcionkę dla kultury wybrane w systemie operacyjnym.
+Aby skorzystać z tej funkcji, nie ustawiaj właściwości <xref:System.Drawing.Font> dla formularza ani innego elementu. Aplikacja automatycznie użyje domyślnej czcionki systemowej, która różni się od jednego zlokalizowanego języka systemu operacyjnego do innego. Gdy aplikacja zostanie uruchomiona, system automatycznie poda poprawną czcionkę dla kultury wybranej w systemie operacyjnym.
 
-Występuje wyjątek do reguły nie ustawienia czcionki, której dotyczy zmiana styl czcionki. Może to być ważne dla aplikacji, w którym użytkownik kliknie przycisk, aby tekst w polu tekstowym, są wyświetlane pogrubioną czcionką. Aby to zrobić, należy napisać funkcję, aby zmienić styl czcionki pole tekstowe do pogrubienie, oparciu o dowolnej formie czcionki. Ważne jest, aby wywołać tę funkcję w dwóch miejscach: przycisku <xref:System.Windows.Forms.Control.Click> programu obsługi zdarzeń i <xref:System.Windows.Forms.Control.FontChanged> programu obsługi zdarzeń. Jeśli funkcja jest wywoływana tylko w <xref:System.Windows.Forms.Control.Click> program obsługi zdarzeń i innych fragment kodu zmienia rodzinę czcionek cały formularz, pole tekstowe nie zmienia się w pozostałej części formularza.
+Istnieje wyjątek od reguły, która nie ustawia czcionki, która umożliwia zmianę stylu czcionki. Może to być ważne w przypadku aplikacji, w której użytkownik klika przycisk, aby tekst w polu tekstowym był wyświetlany jako pogrubiony. W tym celu należy napisać funkcję, aby zmienić styl czcionki pola tekstowego na pogrubioną, w zależności od rodzaju czcionki formularza. Ważne jest, aby wywołać tę funkcję w dwóch miejscach: w obsłudze zdarzeń <xref:System.Windows.Forms.Control.Click> i w obsłudze zdarzeń <xref:System.Windows.Forms.Control.FontChanged>. Jeśli funkcja jest wywoływana tylko w obsłudze zdarzeń <xref:System.Windows.Forms.Control.Click>, a niektóre inne fragmenty kodu zmieniają rodzinę czcionek całego formularza, pole tekstowe nie zmieni się na resztę formularza.
 
 ```vb
 Private Sub MakeBold()
@@ -74,7 +74,7 @@ private void Form1_FontChanged(object sender, System.EventArgs e)
 }
 ```
 
-Jednak gdy możesz zlokalizować aplikację, pogrubioną czcionką mogą być wyświetlane nieprawidłowo w przypadku niektórych języków. Jeśli jest to niepożądane, chcesz lokalizatorzy dostępna będzie opcja przełączania czcionki pogrubioną czcionką na zwykły tekst. Ponieważ lokalizatorzy nie są zwykle deweloperzy i nie mają dostępu do kodu źródłowego, tylko do plików zasobów, ta opcja musi być ustawiona w plikach zasobów. Aby to zrobić, należy ustawić <xref:System.Drawing.Font.Bold%2A> właściwość `true`. Powoduje to ustawienie czcionki, są zapisywane w plikach zasobów, w którym lokalizatorzy można go edytować. Następnie napisać kod po `InitializeComponent` metodę, aby zresetować czcionki na podstawie informacji o dowolnej formie czcionki, ale za pomocą styl czcionki określonych w pliku zasobów.
+Jednak podczas lokalizowania aplikacji czcionka pogrubiona może być wyświetlana w niewłaściwy sposób w przypadku niektórych języków. Jeśli jest to problem, chcemy, aby lokalizatory miały możliwość przełączania czcionki z pogrubionej do zwykłego tekstu. Ponieważ lokalizatory zazwyczaj nie są deweloperami i nie mają dostępu do kodu źródłowego, tylko w przypadku plików zasobów, ta opcja musi być ustawiona w plikach zasobów. W tym celu należy ustawić właściwość <xref:System.Drawing.Font.Bold%2A> na `true`. Powoduje to zapisanie ustawienia czcionki do plików zasobów, gdzie lokalizatory mogą go edytować. Następnie napiszesz kod po metodzie `InitializeComponent`, aby zresetować czcionkę w oparciu o zawartość czcionki formularza, ale używając stylu czcionki określonego w pliku zasobów.
 
 ```vb
 TextBox1.Font = New System.Drawing.Font(Me.Font, TextBox1.Font.Style)
@@ -86,5 +86,4 @@ textBox1.Font = new System.Drawing.Font(this.Font, textBox1.Font.Style);
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Globalizowanie aplikacji Windows Forms](globalizing-windows-forms.md)
 - [Używanie czcionek i tekstu](using-fonts-and-text.md)

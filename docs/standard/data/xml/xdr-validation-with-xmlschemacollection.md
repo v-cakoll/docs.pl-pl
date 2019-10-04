@@ -8,24 +8,28 @@ dev_langs:
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83eabbccfa2116142e9ee5889e3368ad4273b541
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: ce0777ba71e5433b42b51ef1530e7a1a46905b25
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306394"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957015"
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>Weryfikacja XDR przy użyciu klasy XmlSchemaCollection
 
 Jeśli sprawdzany schemat danych XML (XDR) jest przechowywany w elemencie **XmlSchemaCollection**, jest on SKOJARZONY z identyfikatorem URI przestrzeni nazw określonym podczas dodawania schematu do kolekcji. **XmlValidatingReader** MAPUJE identyfikator URI przestrzeni nazw w dokumencie XML do schematu, który odnosi się do tego identyfikatora URI w kolekcji.
 
 > [!IMPORTANT]
-> Klasa jest obecnie przestarzała i została zastąpiona <xref:System.Xml.Schema.XmlSchemaSet> klasą. <xref:System.Xml.Schema.XmlSchemaCollection> Aby uzyskać więcej informacji na <xref:System.Xml.Schema.XmlSchemaSet> temat klasy, zobacz zestaw [XmlSchemaSet dla kompilacji schematu](xmlschemaset-for-schema-compilation.md).
+> Klasa <xref:System.Xml.Schema.XmlSchemaCollection> jest obecnie przestarzała i została zastąpiona klasą <xref:System.Xml.Schema.XmlSchemaSet>. Aby uzyskać więcej informacji na temat klasy <xref:System.Xml.Schema.XmlSchemaSet>, zobacz zestaw [XmlSchemaSet dla kompilacji schematu](xmlschemaset-for-schema-compilation.md).
 
-Na przykład, jeśli element główny dokumentu XML to `<bookstore xmlns="urn:newbooks-schema">`, gdy schemat zostanie dodany do obiektu **XmlSchemaCollection** , odwołuje się do tej samej przestrzeni nazw, co następuje:
+Na przykład, jeśli element główny dokumentu XML jest `<bookstore xmlns="urn:newbooks-schema">`, gdy schemat zostanie dodany do obiektu **XmlSchemaCollection** , odwołuje się do tej samej przestrzeni nazw, co następuje:
 
-```
+```vb
 xsc.Add("urn:newbooks-schema", "newbooks.xdr")
+```
+
+```csharp
+xsc.Add("urn:newbooks-schema", "newbooks.xdr");
 ```
 
 Poniższy przykład kodu tworzy element **XmlValidatingReader** , który pobiera **XmlTextReader** i dodaje schemat XDR, wartość osobowy. XDR do obiektu **XmlSchemaCollection**:

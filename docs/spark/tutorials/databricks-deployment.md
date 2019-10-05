@@ -4,12 +4,12 @@ description: Dowiedz się, jak wdrożyć aplikację platformy .NET dla Apache Sp
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f90d0fa4bdefe94dcf8390698e6445fad77a1bc2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 035a3c36337413153ee0370aec154d48b84a4711
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117940"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957254"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>Wdrażanie aplikacji platformy .NET dla Apache Spark w kostkach
 
@@ -37,9 +37,9 @@ Przed rozpoczęciem wykonaj następujące czynności:
 
 1. Wybierz wersję [Microsoft. Spark. Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp, która ma zostać wdrożona w klastrze.
 
-   Jeśli na przykład chcesz `.NET for Apache Spark v0.1.0` użyć `netcoreapp2.1`, Pobierz [pakiet Microsoft. Spark. Worker. netcoreapp 2.1. linux-x64-0.1.0. tar. gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz).
+   Na przykład jeśli chcesz, aby `.NET for Apache Spark v0.1.0` przy użyciu `netcoreapp2.1`, należy pobrać [Microsoft. Spark. Worker. netcoreapp 2.1. linux-x64-0.1.0. tar. gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz).
 
-2. Przekazuj `Microsoft.Spark.Worker.<release>.tar.gz` i [Install-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) do rozproszonego systemu plików (na przykład DBFS), do którego ma dostęp klaster.
+2. Przekaż `Microsoft.Spark.Worker.<release>.tar.gz` i [Install-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) do rozproszonego systemu plików (na przykład DBFS), do którego klaster ma dostęp.
 
 ## <a name="prepare-your-net-for-apache-spark-app"></a>Przygotowywanie aplikacji .NET dla Apache Spark
 
@@ -53,9 +53,9 @@ Przed rozpoczęciem wykonaj następujące czynności:
    dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
    ```
 
-3. Twórz `<your app>.zip` pliki do opublikowania.
+3. Wygeneruj `<your app>.zip` dla publikowanych plików.
 
-   Następujące polecenie można uruchomić w systemie Linux przy użyciu `zip`polecenia.
+   Następujące polecenie można uruchomić w systemie Linux przy użyciu `zip`.
 
    ```bash
    zip -r <your app>.zip .
@@ -63,11 +63,11 @@ Przed rozpoczęciem wykonaj następujące czynności:
 
 4. Przekaż następujące polecenie do rozproszonego systemu plików (na przykład DBFS), do którego klaster ma dostęp:
 
-   - `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: Ten plik JAR jest dołączany jako część pakietu NuGet [Microsoft. Spark](https://www.nuget.org/packages/Microsoft.Spark/) i znajduje się w katalogu danych wyjściowych kompilacji aplikacji.
+   - `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: ten jar jest dołączony jako część pakietu NuGet [Microsoft. Spark](https://www.nuget.org/packages/Microsoft.Spark/) i znajduje się w katalogu danych wyjściowych kompilacji aplikacji.
    - `<your app>.zip`
    - Pliki (takie jak pliki zależności lub typowe dane dostępne dla każdego pracownika) lub zestawy (takie jak biblioteki DLL, które zawierają zdefiniowane przez użytkownika funkcje lub biblioteki, od których zależy aplikacja), zostaną umieszczone w katalogu roboczym każdego wykonawcy.
 
-## <a name="deploy-to-databricks"></a>Wdrażanie w usłudze Databricks
+## <a name="deploy-to-databricks"></a>Wdróż w kostkach
 
 [Datakostki](https://databricks.com) to platforma, która zapewnia oparte na chmurze przetwarzanie danych Big Data przy użyciu Apache Spark.
 
@@ -97,7 +97,7 @@ Ten krok jest wymagany tylko raz dla klastra.
    databricks fs cp install-worker.sh dbfs:/spark-dotnet/install-worker.sh
    ```
 
-6. Przejdź do obszaru roboczego usługi Databricks. Wybierz pozycję **klastry** z menu po lewej stronie, a następnie wybierz pozycję **Utwórz klaster**.
+6. Przejdź do obszaru roboczego kostki danych. Wybierz pozycję **klastry** z menu po lewej stronie, a następnie wybierz pozycję **Utwórz klaster**.
 
 7. Po odpowiednim skonfigurowaniu klastra Ustaw **skrypt init** i Utwórz klaster.
 
@@ -105,7 +105,7 @@ Ten krok jest wymagany tylko raz dla klastra.
 
 ## <a name="run-your-app"></a>Uruchamianie aplikacji 
 
-Możesz użyć `set JAR` lub `spark-submit` , aby przesłać zadanie do datakostki.
+Aby przesłać zadanie do danych, można użyć `set JAR` lub `spark-submit`.
 
 ### <a name="use-set-jar"></a>Użyj ustawienia JAR
 
@@ -115,15 +115,15 @@ Możesz użyć `set JAR` lub `spark-submit` , aby przesłać zadanie do datakost
 
 1. Przejdź do klastra datakosteks i wybierz pozycję **Jobs (zadania** ) z menu po lewej stronie. Następnie wybierz pozycję **Ustaw jar**.
 
-2. Przekaż odpowiedni `microsoft-spark-<spark-version>-<spark-dotnet-version>.jar` plik.
+2. Przekaż odpowiedni plik `microsoft-spark-<spark-version>-<spark-dotnet-version>.jar`.
 
 3. Ustaw odpowiednio parametry.
 
-   ```
-   Main Class: org.apache.spark.deploy.dotnet.DotnetRunner
-   Arguments /dbfs/apps/<your-app-name>.zip <your-app-main-class>
-   ```
- 
+   | Parametr   | Wartość                                                |
+   |-------------|------------------------------------------------------|
+   | Klasa główna  | org. Apache. Spark. deploy. dotnet. DotnetRunner          |
+   | Argumenty   | /dBfs/Apps/< nazwę aplikacji >. zip < Twojej klasy głównej aplikacji > |
+
 4. Skonfiguruj **klaster** tak, aby wskazywał istniejący klaster, który utworzył **skrypt init** dla programu w poprzedniej sekcji.
 
 #### <a name="publish-and-run-your-app"></a>Publikowanie i uruchamianie aplikacji
@@ -161,7 +161,7 @@ Polecenie [Spark-Submit](https://spark.apache.org/docs/latest/submitting-applica
 
 1. [Utwórz zadanie](https://docs.databricks.com/user-guide/jobs.html) i wybierz pozycję **Skonfiguruj platformę Spark-Submit**.
 
-2. Skonfiguruj `spark-submit` przy użyciu następujących parametrów:
+2. Skonfiguruj `spark-submit` z następującymi parametrami:
 
       ```bash
       ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]

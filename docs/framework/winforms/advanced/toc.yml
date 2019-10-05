@@ -334,8 +334,6 @@
     - name: Globalizacja formularzy systemu Windows
       href: globalizing-windows-forms.md
       items:
-        - name: Kodowanie i globalizacja formularzy systemu Windows
-          href: encoding-and-windows-forms-globalization.md
         - name: Międzynarodowe czcionki w formularzach i kontrolkach systemu Windows
           href: international-fonts-in-windows-forms-and-controls.md
         - name: Dwukierunkowa obsługa aplikacji Windows Forms

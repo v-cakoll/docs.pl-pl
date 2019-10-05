@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 53dcbcfdcc9a8d04840bc91a563b6514153b9577
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f6d96d14a4d05178a8f90c15edecb1318e8c5a36
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963431"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957201"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Klasy znaków w wyrażeniach regularnych
 
@@ -30,7 +30,7 @@ Klasa znaków definiuje zestaw znaków, z którego każdy jeden znak może wyst�
   
 - Grupy znaków negatywnych. Znak w ciągu wejściowym nie może odpowiadać żadnemu ze znaków z określonego zestawu znaków. Aby uzyskać więcej informacji, zobacz [Grupa znaków negatywnych](#NegativeGroup).  
   
-- Dowolny znak. Znak (kropka lub kropka) w wyrażeniu regularnym jest symbolem wieloznacznym, który pasuje do dowolnego znaku z wyjątkiem `\n`. `.` Aby uzyskać więcej informacji, zobacz [dowolny znak](#AnyCharacter).  
+- Dowolny znak. Znak `.` (kropka lub kropka) w wyrażeniu regularnym jest symbolem wieloznacznym, który pasuje do dowolnego znaku z wyjątkiem `\n`. Aby uzyskać więcej informacji, zobacz [dowolny znak](#AnyCharacter).  
   
 - Ogólna kategoria Unicode lub blok nazwany. Aby dopasowanie zakończyło się sukcesem, znak w ciągu wejściowym musi być elementem członkowskim określonej kategorii Unicode lub musi należeć do ciągłego zakresu znaków Unicode. Aby uzyskać więcej informacji, zobacz [Kategoria Unicode lub blok Unicode](#CategoryOrBlock).  
   
@@ -38,11 +38,11 @@ Klasa znaków definiuje zestaw znaków, z którego każdy jeden znak może wyst�
   
 - Znak słowa. Znak w ciągu wejściowym może należeć do dowolnej kategorii Unicode, która jest odpowiednia dla znaków w wyrazach. Aby uzyskać więcej informacji, zobacz [znak słowa](#WordCharacter).  
   
-- Znak niebędący znakiem słowa. Znak w ciągu wejściowym może należeć do dowolnej kategorii Unicode, która nie jest znakiem słowa. Aby uzyskać więcej informacji, zobacz [znak](#NonWordCharacter)niebędący słowem.  
+- Znak niebędący znakiem słowa. Znak w ciągu wejściowym może należeć do dowolnej kategorii Unicode, która nie jest znakiem słowa. Aby uzyskać więcej informacji, zobacz [znak niebędący słowem](#NonWordCharacter).  
   
 - Znak odstępu. Znak w ciągu wejściowym może być dowolnym znakiem separatora Unicode, a także dowolnym ze znaków kontrolnych. Aby uzyskać więcej informacji, zobacz [znak](#WhitespaceCharacter)odstępu.  
   
-- Znak niebędący odstępem. Znak w ciągu wejściowym może być dowolnym znakiem, który nie jest znakiem odstępu. Aby uzyskać więcej informacji, zobacz [znak](#NonWhitespaceCharacter)niebędący odstępem.  
+- Znak niebędący odstępem. Znak w ciągu wejściowym może być dowolnym znakiem, który nie jest znakiem odstępu. Aby uzyskać więcej informacji, zobacz [znak niebędący odstępem](#NonWhitespaceCharacter).  
   
 - Cyfra dziesiętna. Znak w ciągu wejściowym może być dowolnym ze znaków klasyfikowanych jako cyfry dziesiętne Unicode. Aby uzyskać więcej informacji, zobacz [znak cyfr dziesiętnych](#DigitCharacter).  
   
@@ -51,7 +51,7 @@ Klasa znaków definiuje zestaw znaków, z którego każdy jeden znak może wyst�
  Platforma .NET obsługuje wyrażenia odejmowania klas znaków, które umożliwiają zdefiniowanie zestawu znaków jako wyniku wykluczenia jednej klasy znaków z innej klasy znaków. Aby uzyskać więcej informacji, zobacz [odejmowanie klasy znaków](#CharacterClassSubtraction).  
   
 > [!NOTE]
-> Klasy znaków, które pasują do znaków według kategorii, takich jak [\w](#WordCharacter) , aby dopasować znaki wyrazu lub [\p{} ](#CategoryOrBlock) w celu dopasowania do <xref:System.Globalization.CharUnicodeInfo> kategorii Unicode, polegają na klasie w celu podania informacji o kategoriach znaków.  Począwszy od .NET Framework 4.6.2, kategorie znaków są oparte na [standardzie Unicode w wersji 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). W .NET Framework 4 za pośrednictwem .NET Framework 4.6.1 są one oparte na [standardzie Unicode w wersji 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
+> Klasy znaków, które pasują do znaków według kategorii, takich jak [\w](#WordCharacter) , aby dopasować znaki słowa lub [\p @ no__t-2](#CategoryOrBlock) w celu dopasowania do kategorii Unicode, polegają na klasie <xref:System.Globalization.CharUnicodeInfo>, aby podać informacje o kategoriach znaków.  Począwszy od .NET Framework 4.6.2, kategorie znaków są oparte na [standardzie Unicode w wersji 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). W .NET Framework 4 za pośrednictwem .NET Framework 4.6.1 są one oparte na [standardzie Unicode w wersji 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>Grupa znaków pozytywnych: []  
@@ -59,17 +59,13 @@ Klasa znaków definiuje zestaw znaków, z którego każdy jeden znak może wyst�
   
  Składnia służąca do określenia listy indywidualnych znaków jest następująca:  
 
-```  
-[*character_group*]  
-```
+`[*character_group*]`
 
  gdzie *character_group* jest listą pojedynczych znaków, które mogą być wyświetlane w ciągu wejściowym, aby dopasowanie zakończyło się pomyślnie. *character_group* może składać się z dowolnej kombinacji jednego lub większej liczby znaków literału, [znaków ucieczki](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)lub klasy znaków.  
   
  Składnia służąca do określania zakresu znaków jest następująca:  
   
-```  
-[firstCharacter-lastCharacter]  
-```  
+`[firstCharacter-lastCharacter]`  
   
  gdzie *firstCharacter* jest znakiem, który rozpoczyna zakres, a *lastCharacter* jest znakiem kończącym zakres. Zakres znaków jest ciągłą serią znaków definiowaną przez określenie pierwszego znaku w serii, łącznika (-), a następnie ostatniego znaku w serii. Dwa znaki są ciągłe, jeśli mają sąsiadujące punkty kodowe Unicode. *firstCharacter* musi być znakiem z dolnym punktem kodu, a *lastCharacter* musi być znakiem z wyższym punktem kodu.
 
@@ -89,7 +85,7 @@ W poniższej tabeli wymieniono niektóre typowe wzorce wyrażeń regularnych zaw
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/positivecharclasses.cs#1)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/positivecharclasses.vb#1)]  
   
- Wyrażenie `gr[ae]y\s\S+?[\s|\p{P}]` regularne jest zdefiniowane w następujący sposób:  
+ Wyrażenie regularne `gr[ae]y\s\S+?[\s|\p{P}]` jest zdefiniowane w następujący sposób:  
   
 |Wzorzec|Opis|  
 |-------------|-----------------|  
@@ -99,12 +95,12 @@ W poniższej tabeli wymieniono niektóre typowe wzorce wyrażeń regularnych zaw
 |`\S+?`|Dopasowuje jeden lub więcej znaków, które nie są znakami odstępu, jednak możliwie najmniej.|  
 |`[\s\p{P}]`|Dopasowuje znak odstępu lub znak interpunkcyjny.|  
   
- W poniższym przykładzie dopasowywane są wyrazy zaczynające się od wielkiej litery. Używa podwyrażenia `[A-Z]` do reprezentowania zakresu wielkich liter od A do z.  
+ W poniższym przykładzie dopasowywane są wyrazy zaczynające się od wielkiej litery. Używa podwyrażenia `[A-Z]` do reprezentowania zakresu wielkich liter od A do Z.  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/range.cs#3)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/range.vb#3)]  
   
- Wyrażenie `\b[A-Z]\w*\b` regularne jest zdefiniowane, jak pokazano w poniższej tabeli.  
+ Wyrażenie regularne `\b[A-Z]\w*\b` jest zdefiniowane, jak pokazano w poniższej tabeli.  
   
 |Wzorzec|Opis|  
 |-------------|-----------------|  
@@ -119,17 +115,13 @@ W poniższej tabeli wymieniono niektóre typowe wzorce wyrażeń regularnych zaw
   
 Składnia służąca do określenia listy indywidualnych znaków jest następująca:  
 
-```
-[*^character_group*]  
-```
+`[*^character_group*]`
 
  gdzie *character_group* jest listą pojedynczych znaków, które nie mogą być wyświetlane w ciągu wejściowym, aby dopasowanie zakończyło się pomyślnie. *character_group* może składać się z dowolnej kombinacji jednego lub większej liczby znaków literału, [znaków ucieczki](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)lub klasy znaków.  
   
  Składnia służąca do określania zakresu znaków jest następująca:  
 
-```
-[^*firstCharacter*-*lastCharacter*]  
-```
+`[^*firstCharacter*-*lastCharacter*]`
 
 gdzie *firstCharacter* jest znakiem, który rozpoczyna zakres, a *lastCharacter* jest znakiem kończącym zakres. Zakres znaków jest ciągłą serią znaków definiowaną przez określenie pierwszego znaku w serii, łącznika (-), a następnie ostatniego znaku w serii. Dwa znaki są ciągłe, jeśli mają sąsiadujące punkty kodowe Unicode. *firstCharacter* musi być znakiem z dolnym punktem kodu, a *lastCharacter* musi być znakiem z wyższym punktem kodu.
 
@@ -138,7 +130,7 @@ gdzie *firstCharacter* jest znakiem, który rozpoczyna zakres, a *lastCharacter*
   
  Można połączyć co najmniej dwa zakresy znaków. Na przykład, aby określić zakres cyfr dziesiętnych od "0" do "9", zakres małych liter od "a" do "f" oraz zakres wielkich liter od "A" do "F", użyj `[0-9a-fA-F]`.  
   
- Wiodący znak daszka`^`() w grupie znaków negatywnych jest obowiązkowy i wskazuje, że Grupa znaków jest grupą znaków negatywnych zamiast grupy znaków pozytywnych.  
+ Wiodący znak daszka (`^`) w grupie znaków negatywnych jest obowiązkowy i wskazuje, że Grupa znaków jest grupą znaków negatywnych zamiast grupy znaków pozytywnych.  
   
 > [!IMPORTANT]
 > Grupa znaków negatywnych w większym wzorcu wyrażenia regularnego nie jest asercją o zerowej szerokości. Czyli po dokonaniu oceny grupy znaków negatywnych aparat wyrażeń regularnych postępuje o jeden znak do przodu w ciągu wejściowym.  
@@ -155,7 +147,7 @@ gdzie *firstCharacter* jest znakiem, który rozpoczyna zakres, a *lastCharacter*
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/negativecharclasses.cs#2)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/negativecharclasses.vb#2)]  
   
- Wyrażenie `\bth[^o]\w+\b` regularne jest zdefiniowane, jak pokazano w poniższej tabeli.  
+ Wyrażenie regularne `\bth[^o]\w+\b` jest zdefiniowane, jak pokazano w poniższej tabeli.  
   
 |Wzorzec|Opis|  
 |-------------|-----------------|  
@@ -167,42 +159,42 @@ gdzie *firstCharacter* jest znakiem, który rozpoczyna zakres, a *lastCharacter*
   
 <a name="AnyCharacter"></a>   
 ## <a name="any-character-"></a>Dowolny znak:.  
- Znak kropki (.) dopasowuje dowolny znak `\n` z wyjątkiem (znak nowego wiersza, \u000A), z następującymi dwoma kwalifikacjami:  
+ Znak kropki (.) dopasowuje dowolny znak z wyjątkiem `\n` (znak nowego wiersza, \u000A), z następującymi dwoma kwalifikacjami:  
   
-- Jeśli wzorzec wyrażenia regularnego jest modyfikowany przez <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> opcję lub część wzorca, która `.` zawiera `s` klasę znaku, jest modyfikowana przez opcję, `.` dopasowuje dowolny znak. Aby uzyskać więcej informacji, zobacz [Opcje wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-options.md).  
+- Jeśli wzorzec wyrażenia regularnego jest modyfikowany przez opcję <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> lub, jeśli część wzorca, która zawiera klasę znaków `.` jest modyfikowana przez `s` opcji, `.` dopasowuje dowolny znak. Aby uzyskać więcej informacji, zobacz [Opcje wyrażenia regularnego](../../../docs/standard/base-types/regular-expression-options.md).  
   
-     Poniższy przykład ilustruje różne zachowanie `.` klasy znaku domyślnie i <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> z opcją. Wyrażenie `^.+` regularne rozpoczyna się od początku ciągu i dopasowuje każdy znak. Domyślnie dopasowanie kończy się na końcu pierwszego wiersza; wzorzec wyrażenia regularnego dopasowuje znak `\r` powrotu karetki lub \u000D, ale nie jest zgodny. `\n` Ponieważ opcja interpretuje cały ciąg wejściowy jako pojedynczy wiersz, dopasowuje każdy znak w ciągu wejściowym, w tym `\n`. <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>  
+     Poniższy przykład ilustruje różne zachowanie klasy znaku `.` domyślnie i z opcją <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>. Wyrażenie regularne `^.+` rozpoczyna się na początku ciągu i dopasowuje każdy znak. Domyślnie dopasowanie kończy się na końcu pierwszego wiersza; wzorzec wyrażenia regularnego dopasowuje znak powrotu karetki, `\r` lub \u000D, ale nie pasuje do `\n`. Ponieważ opcja <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> interpretuje cały ciąg wejściowy jako pojedynczy wiersz, dopasowuje każdy znak w ciągu wejściowym, w tym `\n`.  
   
      [!code-csharp[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any2.cs#5)]
      [!code-vb[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any2.vb#5)]  
   
 > [!NOTE]
-> Ponieważ dopasowuje dowolny znak z `\n`wyjątkiem `.` , Klasa znaku również dopasowuje `\r` (znak powrotu karetki, \u000D).  
+> Ponieważ dopasowuje dowolny znak z wyjątkiem `\n`, Klasa znaku `.` dopasowuje także `\r` (znak powrotu karetki, \u000D).  
   
-- W grupie znaków pozytywnych lub negatywnych kropka jest traktowana jako znak kropki literału, a nie jako klasa znaków. Aby uzyskać więcej informacji, zobacz [Grupa znaków pozytywnych](#PositiveGroup) i [Grupa znaków negatywnych](#NegativeGroup) wcześniej w tym temacie. Poniższy przykład przedstawia ilustrację definiując wyrażenie regularne, które zawiera znak kropki (`.`) zarówno jako klasę znaku, jak i jako element członkowski grupy znaków pozytywnych. Wyrażenie `\b.*[.?!;:](\s|\z)` regularne rozpoczyna się od granicy słowa, dopasowuje dowolny znak, dopóki nie napotka jeden z pięciu znaków interpunkcyjnych, łącznie z kropką, a następnie dopasowuje znak odstępu lub koniec ciągu.  
+- W grupie znaków pozytywnych lub negatywnych kropka jest traktowana jako znak kropki literału, a nie jako klasa znaków. Aby uzyskać więcej informacji, zobacz [Grupa znaków pozytywnych](#PositiveGroup) i [Grupa znaków negatywnych](#NegativeGroup) wcześniej w tym temacie. Poniższy przykład przedstawia ilustrację definiując wyrażenie regularne, które zawiera znak kropki (`.`) zarówno jako klasę znaku, jak i element członkowski grupy znaków pozytywnych. Wyrażenie regularne `\b.*[.?!;:](\s|\z)` zaczyna się od granicy słowa, dopasowuje dowolny znak do momentu napotkania jednego z pięciu znaków interpunkcyjnych, łącznie z kropką, a następnie dopasowuje znak odstępu lub koniec ciągu.  
   
      [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any1.cs#4)]
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
-> Ponieważ dopasowuje dowolny znak, element `.` Language jest często używany z kwantyfikatorem z opóźnieniem, Jeśli wzorzec wyrażenia regularnego próbuje dopasować dowolny znak wielokrotnie. Aby uzyskać więcej informacji, [](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)zobacz Kwantyfikatory.  
+> Ponieważ dopasowuje dowolny znak, element języka `.` jest często używany z kwantyfikatorem z opóźnieniem, Jeśli wzorzec wyrażenia regularnego próbuje dopasować dowolny znak wielokrotnie. Aby uzyskać więcej informacji, zobacz [Kwantyfikatory](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
 <a name="CategoryOrBlock"></a>   
-## <a name="unicode-category-or-unicode-block-p"></a>Kategoria Unicode lub blok Unicode: \p{}  
- W standardzie Unicode każdemu znakowi przypisuje się kategorię ogólną. Na przykład konkretny znak może `Lu` być wielką literą (reprezentowana przez kategorię), cyfrą dziesiętną `Nd` (kategorią), symbolem matematycznym ( `Sm` kategorią `Zl` ) lub separatorem akapitu (kategorii). Określone zestawy znaków w standardzie Unicode zajmują również określony zakres lub blok kolejnych kodów znaku. Na przykład podstawowy zestaw znaków łacińskich można znaleźć w zakresie od \u0000 do \u007F, podczas gdy zestaw znaków arabskich znajduje się w zakresie od \u0600 do \u06FF.  
+## <a name="unicode-category-or-unicode-block-p"></a>Kategoria Unicode lub blok Unicode: \p @ no__t-0  
+ W standardzie Unicode każdemu znakowi przypisuje się kategorię ogólną. Na przykład konkretny znak może być wielką literą (reprezentowaną przez kategorię `Lu`), cyfrą dziesiętną (kategorią `Nd`), symbolem matematycznym (kategorią `Sm`) lub separatorem akapitu (kategoria `Zl`). Określone zestawy znaków w standardzie Unicode zajmują również określony zakres lub blok kolejnych kodów znaku. Na przykład podstawowy zestaw znaków łacińskich można znaleźć w zakresie od \u0000 do \u007F, podczas gdy zestaw znaków arabskich znajduje się w zakresie od \u0600 do \u06FF.  
   
  Konstrukcja wyrażenia regularnego  
   
- `\p{`*Nazwa*`}`  
+ `\p{` *nazwa* `}`  
   
  Dopasowuje dowolny znak, który należy do ogólnej kategorii Unicode lub bloku nazwanego, gdzie *name* jest skrótem kategorii lub nazwą bloku nazwanego. Aby zapoznać się z listą skrótów kategorii, zobacz sekcję [obsługiwane ogólne kategorie Unicode](#SupportedUnicodeGeneralCategories) w dalszej części tego tematu. Aby uzyskać listę nazwanych bloków, zobacz sekcję [obsługiwane bloki nazwane](#SupportedNamedBlocks) w dalszej części tego tematu.  
   
- Poniższy `\p{`przykład używa konstrukcji *name* `}` , aby dopasować do ogólnej `Pd`kategorii Unicode (w tym przypadku, lub interpunkcji `IsGreek` , kreski) i nazwanego bloku (i `IsBasicLatin` nazwanego bloki).  
+ W poniższym przykładzie zastosowano `\p{`*nazwa*`}` konstrukcja, aby dopasować do ogólnej kategorii Unicode (w tym przypadku `Pd`, lub interpunkcji, kreski) i nazwanego bloku (bloki o nazwie `IsGreek` i `IsBasicLatin`).  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/category1.cs#6)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/category1.vb#6)]  
   
- Wyrażenie `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` regularne jest zdefiniowane, jak pokazano w poniższej tabeli.  
+ Wyrażenie regularne `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` jest zdefiniowane, jak pokazano w poniższej tabeli.  
   
 |Wzorzec|Opis|  
 |-------------|-----------------|  
@@ -217,25 +209,25 @@ gdzie *firstCharacter* jest znakiem, który rozpoczyna zakres, a *lastCharacter*
 |`(\p{IsBasicLatin}+(\s)?)+`|Dopasowuje wzorzec jednego lub większej liczby podstawowych znaków łacińskich, po których co najmniej raz następuje zero lub jeden znak odstępu.|  
   
 <a name="NegativeCategoryOrBlock"></a>   
-## <a name="negative-unicode-category-or-unicode-block-p"></a>Ujemna kategoria Unicode lub blok Unicode: \p{}  
- W standardzie Unicode każdemu znakowi przypisuje się kategorię ogólną. Na przykład konkretny znak może `Lu` być wielką literą (reprezentowana przez kategorię), cyfrą dziesiętną `Nd` (kategorią), symbolem matematycznym ( `Sm` kategorią `Zl` ) lub separatorem akapitu (kategorii). Określone zestawy znaków w standardzie Unicode zajmują również określony zakres lub blok kolejnych kodów znaku. Na przykład podstawowy zestaw znaków łacińskich można znaleźć w zakresie od \u0000 do \u007F, podczas gdy zestaw znaków arabskich znajduje się w zakresie od \u0600 do \u06FF.  
+## <a name="negative-unicode-category-or-unicode-block-p"></a>Ujemna kategoria Unicode lub blok Unicode: \p @ no__t-0  
+ W standardzie Unicode każdemu znakowi przypisuje się kategorię ogólną. Na przykład konkretny znak może być wielką literą (reprezentowaną przez kategorię `Lu`), cyfrą dziesiętną (kategorią `Nd`), symbolem matematycznym (kategorią `Sm`) lub separatorem akapitu (kategoria `Zl`). Określone zestawy znaków w standardzie Unicode zajmują również określony zakres lub blok kolejnych kodów znaku. Na przykład podstawowy zestaw znaków łacińskich można znaleźć w zakresie od \u0000 do \u007F, podczas gdy zestaw znaków arabskich znajduje się w zakresie od \u0600 do \u06FF.  
   
  Konstrukcja wyrażenia regularnego  
   
- `\P{`*Nazwa*`}`  
+ `\P{` *nazwa* `}`  
   
  Dopasowuje dowolny znak, który nie należy do ogólnej kategorii Unicode lub bloku nazwanego, gdzie *name* jest skrótem kategorii lub nazwą bloku nazwanego. Aby zapoznać się z listą skrótów kategorii, zobacz sekcję [obsługiwane ogólne kategorie Unicode](#SupportedUnicodeGeneralCategories) w dalszej części tego tematu. Aby uzyskać listę nazwanych bloków, zobacz sekcję [obsługiwane bloki nazwane](#SupportedNamedBlocks) w dalszej części tego tematu.  
   
- Poniższy przykład używa konstrukcji `\P{` *nazwy* `}` , aby usunąć wszelkie `Sc`symbole walut (w tym przypadku, symbol, kategorię waluty) z ciągów liczbowych.  
+ W poniższym przykładzie zastosowano `\P{`*nazwa*`}` konstrukcja do usuwania symboli walut (w tym przypadku `Sc` lub symbol, Kategoria waluty) z ciągów liczbowych.  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/notcategory1.cs#7)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/notcategory1.vb#7)]  
   
- Wzorzec `(\P{Sc})+` wyrażenia regularnego dopasowuje co najmniej jeden znak, który nie jest symbolem waluty; efektywnie przyciąga dowolny symbol waluty z ciągu wynikowego.  
+ Wzorzec wyrażenia regularnego `(\P{Sc})+` dopasowuje co najmniej jeden znak, który nie jest symbolem waluty; efektywnie przyłączają dowolny symbol waluty z ciągu wynikowego.  
   
 <a name="WordCharacter"></a>   
 ## <a name="word-character-w"></a>Znak wyrazu: \w  
- `\w`Dopasowuje dowolny znak słowa. Znak słowa jest elementem członkowskim każdej z kategorii Unicode wymienionej w poniższej tabeli.  
+ `\w` dopasowuje dowolny znak słowa. Znak słowa jest elementem członkowskim każdej z kategorii Unicode wymienionej w poniższej tabeli.  
   
 |Kategoria|Opis|  
 |--------------|-----------------|  
@@ -248,28 +240,26 @@ gdzie *firstCharacter* jest znakiem, który rozpoczyna zakres, a *lastCharacter*
 |Nd|Liczba, Cyfra dziesiętna|  
 |Pc|Znak interpunkcyjny, Łącznik. Ta kategoria obejmuje dziesięć znaków, z których najczęściej używany jest znak LOWLINE (_), u+005F.|  
   
- Jeśli określono zachowanie zgodne ze standardem ECMAScript `\w` , jest `[a-zA-Z_0-9]`równoważne. Aby uzyskać informacje na temat wyrażeń regularnych języka ECMAScript, zobacz sekcję "zachowanie zgodne z językiem ECMAScript" w [opcjach wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-options.md).  
+ Jeśli określono zachowanie zgodne ze standardem ECMAScript, `\w` jest równoważne z `[a-zA-Z_0-9]`. Aby uzyskać informacje na temat wyrażeń regularnych języka ECMAScript, zobacz sekcję "zachowanie zgodne z językiem ECMAScript" w [opcjach wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
-> Ponieważ dopasowuje dowolny znak słowa, element `\w` języka jest często używany z kwantyfikatorem z opóźnieniem, Jeśli wzorzec wyrażenia regularnego próbuje dopasować dowolny znak wyrazu wielokrotnie, po którym następują znaki określonego wyrazu. Aby uzyskać więcej informacji, [](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)zobacz Kwantyfikatory.  
+> Ponieważ dopasowuje dowolny znak słowa, element języka `\w` jest często używany z kwantyfikatorem z opóźnieniem, Jeśli wzorzec wyrażenia regularnego próbuje dopasować dowolny znak wyrazu wielokrotnie, po którym następuje określony znak słowa. Aby uzyskać więcej informacji, zobacz [Kwantyfikatory](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
- W poniższym przykładzie użyto elementu `\w` języka, aby dopasować zduplikowane znaki w wyrazie. W przykładzie zdefiniowano wzorzec `(\w)\1`wyrażenia regularnego, który może być interpretowany w następujący sposób.  
+ W poniższym przykładzie użyto elementu języka `\w`, aby dopasować zduplikowane znaki w wyrazie. W przykładzie zdefiniowano wzorzec wyrażenia regularnego, `(\w)\1`, który może być interpretowany w następujący sposób.  
   
 |Element|Opis|  
 |-------------|-----------------|  
 |(\w)|Dopasowuje znak słowa. Jest to pierwsza grupa przechwytywania.|  
-|\1|Dopasowuje wartość pierwszego przechwycenia.|  
+|\ 1|Dopasowuje wartość pierwszego przechwycenia.|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/wordchar1.cs#8)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/wordchar1.vb#8)]  
   
 <a name="NonWordCharacter"></a>   
 ## <a name="non-word-character-w"></a>Znak niebędący słowem: \w  
- `\W`Dopasowuje dowolny znak niebędący słowem. Element języka \W jest równoważny z następującą klasą znaków:  
+ `\W` dopasowuje dowolny znak niebędący słowem. Element języka \W jest równoważny z następującą klasą znaków:  
   
-```  
-[^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]  
-```  
+`[^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]`  
   
  Innymi słowy, dopasowuje dowolny znak z wyjątkiem tych w kategoriach Unicode wymienionych w poniższej tabeli.  
   
@@ -284,27 +274,27 @@ gdzie *firstCharacter* jest znakiem, który rozpoczyna zakres, a *lastCharacter*
 |Nd|Liczba, Cyfra dziesiętna|  
 |Pc|Znak interpunkcyjny, Łącznik. Ta kategoria obejmuje dziesięć znaków, z których najczęściej używany jest znak LOWLINE (_), u+005F.|  
   
- Jeśli określono zachowanie zgodne ze standardem ECMAScript `\W` , jest `[^a-zA-Z_0-9]`równoważne. Aby uzyskać informacje na temat wyrażeń regularnych języka ECMAScript, zobacz sekcję "zachowanie zgodne z językiem ECMAScript" w [opcjach wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-options.md).  
+ Jeśli określono zachowanie zgodne ze standardem ECMAScript, `\W` jest równoważne z `[^a-zA-Z_0-9]`. Aby uzyskać informacje na temat wyrażeń regularnych języka ECMAScript, zobacz sekcję "zachowanie zgodne z językiem ECMAScript" w [opcjach wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
-> Ponieważ dopasowuje dowolny znak niebędący słowem `\W` , element Language jest często używany z kwantyfikatorem z opóźnieniem, Jeśli wzorzec wyrażenia regularnego próbuje dopasować dowolny znak nienależący do słowa, po którym następuje określony znak niebędący słowem. Aby uzyskać więcej informacji, [](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)zobacz Kwantyfikatory.  
+> Ponieważ dopasowuje dowolny znak niebędący słowem, element języka `\W` jest często używany z kwantyfikatorem z opóźnieniem, Jeśli wzorzec wyrażenia regularnego próbuje dopasować dowolny znak niebędący słowem, po którym następuje określony znak niebędący słowem. Aby uzyskać więcej informacji, zobacz [Kwantyfikatory](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
- Poniższy przykład ilustruje `\W` klasę Character.  Definiuje wzorzec `\b(\w+)(\W){1,2}`wyrażenia regularnego, który pasuje do wyrazu, po którym następuje jeden lub dwa znaki niebędące znakami słowa, takie jak odstępy czy interpunkcja. Wyrażenie regularne jest interpretowane tak jak pokazano w poniższej tabeli.  
+ Poniższy przykład ilustruje klasę znaków `\W`.  Definiuje wzorzec wyrażenia regularnego, `\b(\w+)(\W){1,2}`, który pasuje do wyrazu, po którym następuje jeden lub dwa znaki niebędące słowami, takie jak odstępy czy interpunkcja. Wyrażenie regularne jest interpretowane tak jak pokazano w poniższej tabeli.  
   
 |Element|Opis|  
 |-------------|-----------------|  
 |\b|Rozpoczyna dopasowanie na granicy wyrazu.|  
 |(\w+)|Dopasowuje co najmniej jeden znak słowa. Jest to pierwsza grupa przechwytywania.|  
-|\W{1,2}|Dopasowuje znak niebędący znakiem słowa jeden lub dwa razy. Jest to druga grupa przechwytywania.|  
+|(\W) {1,2}|Dopasowuje znak niebędący znakiem słowa jeden lub dwa razy. Jest to druga grupa przechwytywania.|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nonwordchar1.cs#9)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nonwordchar1.vb#9)]  
   
- Ponieważ obiekt dla drugiej grupy przechwytywania zawiera tylko jeden przechwycony znak niebędący słowem, w przykładzie pobiera wszystkie przechwycone znaki niebędące słowami <xref:System.Text.RegularExpressions.CaptureCollection> z obiektu, <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> który jest zwracany przez właściwość. <xref:System.Text.RegularExpressions.Group>  
+ Ponieważ obiekt <xref:System.Text.RegularExpressions.Group> dla drugiej grupy przechwytywania zawiera tylko jeden przechwycony znak niebędący słowem, to przykład pobiera wszystkie przechwycone znaki niebędące słowami z obiektu <xref:System.Text.RegularExpressions.CaptureCollection>, który jest zwracany przez właściwość <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.  
   
 <a name="WhitespaceCharacter"></a>   
 ## <a name="whitespace-character-s"></a>Znak odstępu: \s  
- `\s`Dopasowuje dowolny znak odstępu. Jest to równoważne z sekwencjami ucieczki oraz kategoriami Unicode wymienionymi w poniższej tabeli.  
+ `\s` dopasowuje dowolny znak odstępu. Jest to równoważne z sekwencjami ucieczki oraz kategoriami Unicode wymienionymi w poniższej tabeli.  
   
 |Kategoria|Opis|  
 |--------------|-----------------|  
@@ -316,9 +306,9 @@ gdzie *firstCharacter* jest znakiem, który rozpoczyna zakres, a *lastCharacter*
 |`\x85`|Wielokropek lub znak NEXT LINE (NEL) (...), \u0085.|  
 |`\p{Z}`|Dopasowuje dowolny znak separatora.|  
   
- Jeśli określono zachowanie zgodne ze standardem ECMAScript `\s` , jest `[ \f\n\r\t\v]`równoważne. Aby uzyskać informacje na temat wyrażeń regularnych języka ECMAScript, zobacz sekcję "zachowanie zgodne z językiem ECMAScript" w [opcjach wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-options.md).  
+ Jeśli określono zachowanie zgodne ze standardem ECMAScript, `\s` jest równoważne z `[ \f\n\r\t\v]`. Aby uzyskać informacje na temat wyrażeń regularnych języka ECMAScript, zobacz sekcję "zachowanie zgodne z językiem ECMAScript" w [opcjach wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-options.md).  
   
- Poniższy przykład ilustruje `\s` klasę Character. Definiuje wzorzec wyrażenia regularnego, który `\b\w+(e)?s(\s|$)`pasuje do wyrazu kończącego się na "s" lub "es", po którym następuje znak odstępu lub koniec ciągu wejściowego. Wyrażenie regularne jest interpretowane tak jak pokazano w poniższej tabeli.  
+ Poniższy przykład ilustruje klasę znaków `\s`. Definiuje wzorzec wyrażenia regularnego, `\b\w+(e)?s(\s|$)`, który pasuje do wyrazu kończącego się na "s" lub "es", po którym następuje znak odstępu lub koniec ciągu wejściowego. Wyrażenie regularne jest interpretowane tak jak pokazano w poniższej tabeli.  
   
 |Element|Opis|  
 |-------------|-----------------|  
@@ -333,11 +323,11 @@ gdzie *firstCharacter* jest znakiem, który rozpoczyna zakres, a *lastCharacter*
   
 <a name="NonWhitespaceCharacter"></a>   
 ## <a name="non-whitespace-character-s"></a>Znak niebędący odstępem: \s  
- `\S`Dopasowuje dowolny znak niebędący odstępem. Jest odpowiednikiem `[^\f\n\r\t\v\x85\p{Z}]` wzorca wyrażenia regularnego lub przeciwieństwem wzorca wyrażenia regularnego, który jest odpowiednikiem, który `\s`jest zgodny ze znakami odstępu. Aby uzyskać więcej informacji, zobacz znak odstępu [: \s](#WhitespaceCharacter).  
+ `\S` dopasowuje dowolny znak niebędący odstępem. Jest on odpowiednikiem wzorca wyrażenia regularnego `[^\f\n\r\t\v\x85\p{Z}]` lub przeciwieństwem wzorca wyrażenia regularnego, który jest odpowiednikiem `\s`, który jest zgodny ze znakami odstępu. Aby uzyskać więcej informacji, zobacz znak odstępu [: \s](#WhitespaceCharacter).  
   
- Jeśli określono zachowanie zgodne ze standardem ECMAScript `\S` , jest `[^ \f\n\r\t\v]`równoważne. Aby uzyskać informacje na temat wyrażeń regularnych języka ECMAScript, zobacz sekcję "zachowanie zgodne z językiem ECMAScript" w [opcjach wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-options.md).  
+ Jeśli określono zachowanie zgodne ze standardem ECMAScript, `\S` jest równoważne z `[^ \f\n\r\t\v]`. Aby uzyskać informacje na temat wyrażeń regularnych języka ECMAScript, zobacz sekcję "zachowanie zgodne z językiem ECMAScript" w [opcjach wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-options.md).  
   
- Poniższy przykład ilustruje `\S` element języka. Wzorzec `\b(\S+)\s?` wyrażenia regularnego dopasowuje ciągi, które są rozdzielane znakami odstępu. Drugi element w <xref:System.Text.RegularExpressions.GroupCollection> obiekcie Matcher zawiera dopasowany ciąg. Wyrażenie regularne może być interpretowane tak jak pokazano w poniższej tabeli.  
+ Poniższy przykład ilustruje element języka `\S`. Wzorzec wyrażenia regularnego `\b(\S+)\s?` dopasowuje ciągi, które są rozdzielane znakami odstępu. Drugi element w obiekcie <xref:System.Text.RegularExpressions.GroupCollection> elementu Match zawiera dopasowany ciąg. Wyrażenie regularne może być interpretowane tak jak pokazano w poniższej tabeli.  
   
 |Element|Opis|  
 |-------------|-----------------|  
@@ -350,11 +340,11 @@ gdzie *firstCharacter* jest znakiem, który rozpoczyna zakres, a *lastCharacter*
   
 <a name="DigitCharacter"></a>   
 ## <a name="decimal-digit-character-d"></a>Znak cyfry dziesiętnej: \d  
- `\d`Dopasowuje dowolną cyfrę dziesiętną. Jest to odpowiednik `\p{Nd}` wzorca wyrażenia regularnego, który zawiera standardowe cyfry dziesiętne 0-9, a także cyfry dziesiętne wielu innych zestawów znaków.  
+ `\d` dopasowuje dowolną cyfrę dziesiętną. Jest to odpowiednik wzorca wyrażenia regularnego `\p{Nd}`, który zawiera standardowe cyfry dziesiętne 0-9, a także cyfry dziesiętne wielu innych zestawów znaków.  
   
- Jeśli określono zachowanie zgodne ze standardem ECMAScript `\d` , jest `[0-9]`równoważne. Aby uzyskać informacje na temat wyrażeń regularnych języka ECMAScript, zobacz sekcję "zachowanie zgodne z językiem ECMAScript" w [opcjach wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-options.md).  
+ Jeśli określono zachowanie zgodne ze standardem ECMAScript, `\d` jest równoważne z `[0-9]`. Aby uzyskać informacje na temat wyrażeń regularnych języka ECMAScript, zobacz sekcję "zachowanie zgodne z językiem ECMAScript" w [opcjach wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-options.md).  
   
- Poniższy przykład ilustruje `\d` element języka. Sprawdza, czy ciąg wejściowy reprezentuje prawidłowy numeru telefonu w Stanach Zjednoczonych i Kanadzie. Wzorzec `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` wyrażenia regularnego jest zdefiniowany, jak pokazano w poniższej tabeli.  
+ Poniższy przykład ilustruje element języka `\d`. Sprawdza, czy ciąg wejściowy reprezentuje prawidłowy numeru telefonu w Stanach Zjednoczonych i Kanadzie. Wzorzec wyrażenia regularnego `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` jest zdefiniowany, jak pokazano w poniższej tabeli.  
   
 |Element|Opis|  
 |-------------|-----------------|  
@@ -372,11 +362,11 @@ gdzie *firstCharacter* jest znakiem, który rozpoczyna zakres, a *lastCharacter*
   
 <a name="NonDigitCharacter"></a>   
 ## <a name="non-digit-character-d"></a>Znak niebędący cyfrą: \d  
- `\D`Dopasowuje dowolny znak niebędący cyfrą. Jest to odpowiednik `\P{Nd}` wzorca wyrażenia regularnego.  
+ `\D` dopasowuje dowolny znak niebędący cyfrą. Jest to odpowiednik wzorca wyrażenia regularnego `\P{Nd}`.  
   
- Jeśli określono zachowanie zgodne ze standardem ECMAScript `\D` , jest `[^0-9]`równoważne. Aby uzyskać informacje na temat wyrażeń regularnych języka ECMAScript, zobacz sekcję "zachowanie zgodne z językiem ECMAScript" w [opcjach wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-options.md).  
+ Jeśli określono zachowanie zgodne ze standardem ECMAScript, `\D` jest równoważne z `[^0-9]`. Aby uzyskać informacje na temat wyrażeń regularnych języka ECMAScript, zobacz sekcję "zachowanie zgodne z językiem ECMAScript" w [opcjach wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-options.md).  
   
- W poniższym przykładzie pokazano element języka \D. Sprawdza, czy ciąg, taki jak numer części, zawiera odpowiednią kombinację znaków dziesiętnych oraz niebędących dziesiętnymi. Wzorzec `^\D\d{1,5}\D*$` wyrażenia regularnego jest zdefiniowany, jak pokazano w poniższej tabeli.  
+ W poniższym przykładzie pokazano element języka \D. Sprawdza, czy ciąg, taki jak numer części, zawiera odpowiednią kombinację znaków dziesiętnych oraz niebędących dziesiętnymi. Wzorzec wyrażenia regularnego `^\D\d{1,5}\D*$` jest zdefiniowany, jak pokazano w poniższej tabeli.  
   
 |Element|Opis|  
 |-------------|-----------------|  
@@ -400,15 +390,15 @@ gdzie *firstCharacter* jest znakiem, który rozpoczyna zakres, a *lastCharacter*
 |`Lt`|Litera, Duże litery na początku wyrazu|  
 |`Lm`|Litera, Modyfikator|  
 |`Lo`|Litera, Inne|  
-|`L`|Wszystkie znaki liter. Zawiera `Lu`znaki, `Ll`, `Lt` ,i`Lo` . `Lm`|  
+|`L`|Wszystkie znaki liter. Obejmuje to `Lu`, `Ll`, `Lt`, `Lm` i `Lo` znaków.|  
 |`Mn`|Znak, Brak odstępów|  
 |`Mc`|Znak, Odstępy mieszane|  
 |`Me`|Znak, Dołączenie|  
-|`M`|Wszystkie znaki diakrytyczne. Obejmuje `Mn`to kategorie, `Mc`i `Me` .|  
+|`M`|Wszystkie znaki diakrytyczne. Dotyczy to zarówno kategorii `Mn`, `Mc`, jak i `Me`.|  
 |`Nd`|Liczba, Cyfra dziesiętna|  
 |`Nl`|Liczba, Litera|  
 |`No`|Liczba, Inne|  
-|`N`|Wszystkie liczby. Obejmuje `Nd`to kategorie, `Nl`i `No` .|  
+|`N`|Wszystkie liczby. Dotyczy to zarówno kategorii `Nd`, `Nl`, jak i `No`.|  
 |`Pc`|Znak interpunkcyjny, Łącznik|  
 |`Pd`|Znak interpunkcyjny, Kreska|  
 |`Ps`|Znak interpunkcyjny, Otwarcie|  
@@ -416,24 +406,24 @@ gdzie *firstCharacter* jest znakiem, który rozpoczyna zakres, a *lastCharacter*
 |`Pi`|Znak interpunkcyjny, Cudzysłów początkowy (może zachowywać się jak Ps i Pe w zależności od użycia)|  
 |`Pf`|Znak interpunkcyjny, Cudzysłów końcowy (może zachowywać się jak Ps i Pe w zależności od użycia)|  
 |`Po`|Znak interpunkcyjny, Inne|  
-|`P`|Wszystkie znaki interpunkcyjne. Obejmuje `Pc`to kategorie, `Pd`, `Ps` ,,`Pe`, i .`Po` `Pi` `Pf`|  
+|`P`|Wszystkie znaki interpunkcyjne. Obejmuje to `Pc`, `Pd`, `Ps`, `Pe`, `Pi`, `Pf` i `Po` kategorii.|  
 |`Sm`|Symbol, Matematyczne|  
 |`Sc`|Symbol, Waluta|  
 |`Sk`|Symbol, Modyfikator|  
 |`So`|Symbol, Inne|  
-|`S`|Wszystkie symbole. Obejmuje `Sm`to kategorie, `Sc`, `Sk`i. `So`|  
+|`S`|Wszystkie symbole. Obejmuje to `Sm`, `Sc`, `Sk` i `So` kategorii.|  
 |`Zs`|Separator, Spacja|  
 |`Zl`|Separator, Wiersz|  
 |`Zp`|Separator, Akapit|  
-|`Z`|Wszystkie znaki separatora. Obejmuje `Zs`to kategorie, `Zl`i `Zp` .|  
+|`Z`|Wszystkie znaki separatora. Dotyczy to zarówno kategorii `Zs`, `Zl`, jak i `Zp`.|  
 |`Cc`|Inne, Sterowanie|  
 |`Cf`|Inne, Format|  
 |`Cs`|Inne, Zastępcze|  
 |`Co`|Inne, Do użytku prywatnego|  
 |`Cn`|Inne, Nieprzypisane (żadne znaki nie mają tej właściwości)|  
-|`C`|Wszystkie znaki kontrolne. Obejmuje `Cc`to kategorie, `Cf`, `Cs`,i. `Co` `Cn`|  
+|`C`|Wszystkie znaki kontrolne. Obejmuje to `Cc`, `Cf`, `Cs`, `Co` i `Cn` kategorii.|  
   
- Możesz określić kategorię Unicode dowolnego określonego znaku, przekazując ten znak do <xref:System.Char.GetUnicodeCategory%2A> metody. W poniższym przykładzie zastosowano <xref:System.Char.GetUnicodeCategory%2A> metodę, aby określić kategorię każdego elementu w tablicy, która zawiera wybrane znaki łacińskie.  
+ Możesz określić kategorię Unicode dowolnego określonego znaku, przekazując ten znak do metody <xref:System.Char.GetUnicodeCategory%2A>. W poniższym przykładzie zastosowano metodę <xref:System.Char.GetUnicodeCategory%2A>, aby określić kategorię każdego elementu w tablicy, która zawiera wybrane znaki łacińskie.  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/getunicodecategory1.cs#14)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/getunicodecategory1.vb#14)]  
@@ -441,7 +431,7 @@ gdzie *firstCharacter* jest znakiem, który rozpoczyna zakres, a *lastCharacter*
 <a name="SupportedNamedBlocks"></a>   
 ## <a name="supported-named-blocks"></a>Obsługiwane nazwane bloki
 
-Platforma .NET udostępnia nazwane bloki wymienione w poniższej tabeli. Zestaw obsługiwanych bloków nazwanych jest oparty na standardach Unicode 4.0 i Perl 5.6. W przypadku wyrażenia regularnego, które używa nazwanych bloków, zobacz sekcję [Kategoria Unicode lub \\blok{} Unicode: p](#unicode-category-or-unicode-block-p) .  
+Platforma .NET udostępnia nazwane bloki wymienione w poniższej tabeli. Zestaw obsługiwanych bloków nazwanych jest oparty na standardach Unicode 4.0 i Perl 5.6. W przypadku wyrażenia regularnego, które używa nazwanych bloków, zobacz sekcję [Kategoria Unicode lub blok Unicode: \\p @ no__t-2](#unicode-category-or-unicode-block-p) .  
   
 |Zakres kodów znaków|Nazwa bloku|  
 |----------------------|----------------|  
@@ -557,19 +547,19 @@ Platforma .NET udostępnia nazwane bloki wymienione w poniższej tabeli. Zestaw 
   
  Wyrażenie odejmowania klas znaków ma następującą formę:  
   
- `[`*Base_group* `-[` *Excluded_group*`]]`  
+ `[` *base_group* `-[` *Excluded_group* `]]`  
   
- Nawiasy kwadratowe`[]`() i łącznik`-`() są obowiązkowe. *Base_group* jest grupą [znaków pozytywnych](#PositiveGroup) lub [grupą znaków negatywnych](#NegativeGroup). Składnik *Excluded_group* jest kolejną dodatnią lub ujemną grupą znaków lub innym wyrażeniem odejmowania klasy znaków (to oznacza, że można zagnieżdżać wyrażenia odejmowania klas znaków).  
+ Nawiasy kwadratowe (`[]`) i łącznik (`-`) są obowiązkowe. *Base_group* jest [grupą znaków pozytywnych](#PositiveGroup) lub [grupą znaków negatywnych](#NegativeGroup). Składnik *Excluded_group* jest kolejną dodatnią lub ujemną grupą znaków lub innym wyrażeniem odejmowania klasy znaków (to oznacza, że można zagnieżdżać wyrażenia odejmowania klas znaków).  
   
- Na przykład załóżmy że grupa podstawowa składa się z zakresu znaków od „a” do „z”. Aby zdefiniować zestaw znaków, który składa się z grupy podstawowej z wyjątkiem znaku "m", użyj `[a-z-[m]]`. Aby zdefiniować zestaw znaków, który składa się z grupy podstawowej, z wyjątkiem zestawu znaków "d", "j" i "p", użyj `[a-z-[djp]]`. Aby zdefiniować zestaw znaków, który składa się z grupy podstawowej z wyjątkiem zakresu znaków od "m" do "p", użyj `[a-z-[m-p]]`.  
+ Na przykład załóżmy że grupa podstawowa składa się z zakresu znaków od „a” do „z”. Aby zdefiniować zestaw znaków, który składa się z grupy podstawowej z wyjątkiem znaku "m", użyj `[a-z-[m]]`. Aby zdefiniować zestaw znaków, który składa się z grupy podstawowej z wyjątkiem zestawu znaków "d", "j" i "p", użyj `[a-z-[djp]]`. Aby zdefiniować zestaw znaków, który składa się z grupy podstawowej z wyjątkiem zakresu znaków od "m" do "p", użyj `[a-z-[m-p]]`.  
   
  Rozważ wyrażenie odejmowania klasy znaków zagnieżdżonych, `[a-z-[d-w-[m-o]]]`. To wyrażenie jest wykonywane począwszy od najbardziej wewnętrznego zakresu znaków na zewnątrz. Najpierw zakres znaków od „m” do „o” jest odejmowany od zakresu znaków od „d” do „w”, wynikiem czego jest zestaw znaków od „d” do „l” oraz od „p” do „w”. Ten zestaw jest następnie odejmowany od zakresu znaków od "a" do "z", który daje zestaw znaków `[abcmnoxyz]`.  
   
- Można odejmować dowolne klasy znaków. Aby zdefiniować zestaw znaków, który składa się ze wszystkich znaków Unicode od \u0000 do \uFFFF, z wyjątkiem białych znaków`\s`(), znaków w ogólnej kategorii (`\p{P}`) `IsGreek` , znaków w nazwie Block (`\p{IsGreek}`) i znak kontrolny następnej linii Unicode (\x85), użyj `[\u0000-\uFFFF-[\s\p{P}\p{IsGreek}\x85]]`.  
+ Można odejmować dowolne klasy znaków. Aby zdefiniować zestaw znaków, który składa się ze wszystkich znaków Unicode od \u0000 do \uFFFF, z wyjątkiem białych znaków (`\s`), znaków w ogólnej kategorii (`\p{P}`), znaki w `IsGreek` nazwany blok (`\p{IsGreek}`), i znak kontrolny następnej linii Unicode (\x85), użyj `[\u0000-\uFFFF-[\s\p{P}\p{IsGreek}\x85]]`.  
   
- W wyrażeniach odejmowania klas znaków należy używać klas znaków umożliwiających zwrócenie przydatnych wyników. Należy unikać wyrażeń, które zwracają puste zestawy znaków, które nie mogą nic dopasować, oraz wyrażeń, które są równoważne oryginalnej grupie podstawowej. Na przykład pusty zestaw jest wynikiem wyrażenia `[\p{IsBasicLatin}-[\x00-\x7F]]`, które odejmuje wszystkie znaki `IsBasicLatin` w zakresie znaków od `IsBasicLatin` kategorii Ogólne. Analogicznie, oryginalna Grupa podstawowa jest wynikiem wyrażenia `[a-z-[0-9]]`.  Dzieje się tak, ponieważ grupa podstawowa, czyli zakres znaków od „a” do „z”, nie zawiera żadnych znaków z grupy wykluczanej, która jest zakresem cyfr dziesiętnych od „0” do „9”.  
+ W wyrażeniach odejmowania klas znaków należy używać klas znaków umożliwiających zwrócenie przydatnych wyników. Należy unikać wyrażeń, które zwracają puste zestawy znaków, które nie mogą nic dopasować, oraz wyrażeń, które są równoważne oryginalnej grupie podstawowej. Na przykład pusty zestaw jest wynikiem wyrażenia `[\p{IsBasicLatin}-[\x00-\x7F]]`, które odejmuje wszystkie znaki w zakresie `IsBasicLatin` od kategorii ogólnej `IsBasicLatin`. Analogicznie, oryginalna Grupa podstawowa jest wynikiem wyrażenia `[a-z-[0-9]]`.  Dzieje się tak, ponieważ grupa podstawowa, czyli zakres znaków od „a” do „z”, nie zawiera żadnych znaków z grupy wykluczanej, która jest zakresem cyfr dziesiętnych od „0” do „9”.  
   
- Poniższy przykład definiuje wyrażenie regularne, `^[0-9-[2468]]+$`które dopasowuje zero i nieparzystą cyfr w ciągu wejściowym.  Wyrażenie regularne jest interpretowane tak jak pokazano w poniższej tabeli.  
+ W poniższym przykładzie zdefiniowano wyrażenie regularne, `^[0-9-[2468]]+$`, które dopasowuje zero i nieparzystą cyfr w ciągu wejściowym.  Wyrażenie regularne jest interpretowane tak jak pokazano w poniższej tabeli.  
   
 |Element|Opis|  
 |-------------|-----------------|  

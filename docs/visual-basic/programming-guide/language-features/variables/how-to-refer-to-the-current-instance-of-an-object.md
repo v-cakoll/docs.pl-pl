@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Odwoływanie się do bieżącego wystąpienia obiektu (Visual Basic)'
+title: 'Porady: odwoływanie się do bieżącego wystąpienia obiektu (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], object
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - current instance
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
-ms.openlocfilehash: 70955cd55dfb91d4111e59ae58bfe409a4470433
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6c216dbc59bcad7a9f24bb01f856c3d29c288dbb
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663530"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005653"
 ---
-# <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a><span data-ttu-id="1e98d-102">Instrukcje: Odwoływanie się do bieżącego wystąpienia obiektu (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1e98d-102">How to: Refer to the Current Instance of an Object (Visual Basic)</span></span>
-<span data-ttu-id="1e98d-103">*Bieżącego wystąpienia* obiektu zasady jest wystąpienie, w którym aktualnie wykonuje kod.</span><span class="sxs-lookup"><span data-stu-id="1e98d-103">The *current instance* of an object is the instance in which the code is currently executing.</span></span>  
+# <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a><span data-ttu-id="1d8ab-102">Porady: odwoływanie się do bieżącego wystąpienia obiektu (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1d8ab-102">How to: Refer to the Current Instance of an Object (Visual Basic)</span></span>
+<span data-ttu-id="1d8ab-103">*Bieżące wystąpienie* obiektu to wystąpienie, w którym kod jest aktualnie wykonywany.</span><span class="sxs-lookup"><span data-stu-id="1d8ab-103">The *current instance* of an object is the instance in which the code is currently executing.</span></span>  
   
- <span data-ttu-id="1e98d-104">Możesz użyć `Me` — słowo kluczowe do odwoływania się do bieżącego wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="1e98d-104">You use the `Me` keyword to refer to the current instance.</span></span>  
+ <span data-ttu-id="1d8ab-104">Użyj słowa kluczowego `Me`, aby odwołać się do bieżącego wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="1d8ab-104">You use the `Me` keyword to refer to the current instance.</span></span>  
   
-### <a name="to-refer-to-the-current-instance"></a><span data-ttu-id="1e98d-105">Aby odwołać się do bieżącego wystąpienia</span><span class="sxs-lookup"><span data-stu-id="1e98d-105">To refer to the current instance</span></span>  
+### <a name="to-refer-to-the-current-instance"></a><span data-ttu-id="1d8ab-105">Aby odwołać się do bieżącego wystąpienia</span><span class="sxs-lookup"><span data-stu-id="1d8ab-105">To refer to the current instance</span></span>  
   
-- <span data-ttu-id="1e98d-106">Użyj `Me` — słowo kluczowe, których nazwa zmiennej obiektu zwykle są używane.</span><span class="sxs-lookup"><span data-stu-id="1e98d-106">Use the `Me` keyword where you would normally use the name of an object variable.</span></span>  
+- <span data-ttu-id="1d8ab-106">Użyj słowa kluczowego `Me`, gdzie normalnie używasz nazwy zmiennej obiektu.</span><span class="sxs-lookup"><span data-stu-id="1d8ab-106">Use the `Me` keyword where you would normally use the name of an object variable.</span></span>  
   
-    ```  
+    ```vb  
     Me.ForeColor = System.Drawing.Color.Crimson  
     Me.Close()  
     ```  
   
-     <span data-ttu-id="1e98d-107">Mimo że `Me` zachowuje się jak obiekt zmiennej, nie można zadeklarować ją lub przypisać niczego do niej.</span><span class="sxs-lookup"><span data-stu-id="1e98d-107">Although `Me` behaves like an object variable, you cannot declare it or assign anything to it.</span></span> <span data-ttu-id="1e98d-108">`Me` zawsze odwołuje się do bieżącego wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="1e98d-108">`Me` always refers to the current instance.</span></span>  
+     <span data-ttu-id="1d8ab-107">Chociaż `Me` zachowuje się jak zmienna obiektu, nie można jej zadeklarować ani przypisać do niej niczego.</span><span class="sxs-lookup"><span data-stu-id="1d8ab-107">Although `Me` behaves like an object variable, you cannot declare it or assign anything to it.</span></span> <span data-ttu-id="1d8ab-108">`Me` zawsze odwołuje się do bieżącego wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="1d8ab-108">`Me` always refers to the current instance.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1e98d-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1e98d-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1d8ab-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1d8ab-109">See also</span></span>
 
-- [<span data-ttu-id="1e98d-110">Zmienne obiektów</span><span class="sxs-lookup"><span data-stu-id="1e98d-110">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [<span data-ttu-id="1e98d-111">Przypisanie zmiennej obiektu</span><span class="sxs-lookup"><span data-stu-id="1e98d-111">Object Variable Assignment</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
-- [<span data-ttu-id="1e98d-112">Me, My, MyBase i MyClass</span><span class="sxs-lookup"><span data-stu-id="1e98d-112">Me, My, MyBase, and MyClass</span></span>](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+- [<span data-ttu-id="1d8ab-110">Zmienne obiektów</span><span class="sxs-lookup"><span data-stu-id="1d8ab-110">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [<span data-ttu-id="1d8ab-111">Przypisanie zmiennej obiektu</span><span class="sxs-lookup"><span data-stu-id="1d8ab-111">Object Variable Assignment</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
+- [<span data-ttu-id="1d8ab-112">Me, My, MyBase i MyClass</span><span class="sxs-lookup"><span data-stu-id="1d8ab-112">Me, My, MyBase, and MyClass</span></span>](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

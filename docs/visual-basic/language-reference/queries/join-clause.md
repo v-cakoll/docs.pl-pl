@@ -10,63 +10,63 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: 21432b95b30ae38ac2cbc9e55b5a3066f0bef665
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8eab7db00515f55b086b5e1beddd149f966cb27a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945291"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72001939"
 ---
-# <a name="join-clause-visual-basic"></a><span data-ttu-id="e8673-102">Join — Klauzula (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e8673-102">Join Clause (Visual Basic)</span></span>
-<span data-ttu-id="e8673-103">Łączy dwie kolekcje w jedną kolekcję.</span><span class="sxs-lookup"><span data-stu-id="e8673-103">Combines two collections into a single collection.</span></span> <span data-ttu-id="e8673-104">Operacja łączenia jest oparta na zgodności kluczy i używa `Equals` operatora.</span><span class="sxs-lookup"><span data-stu-id="e8673-104">The join operation is based on matching keys and uses the `Equals` operator.</span></span>  
+# <a name="join-clause-visual-basic"></a><span data-ttu-id="97dbc-102">Join — Klauzula (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="97dbc-102">Join Clause (Visual Basic)</span></span>
+<span data-ttu-id="97dbc-103">Łączy dwie kolekcje w jedną kolekcję.</span><span class="sxs-lookup"><span data-stu-id="97dbc-103">Combines two collections into a single collection.</span></span> <span data-ttu-id="97dbc-104">Operacja join jest oparta na zgodnych kluczach i używa operatora `Equals`.</span><span class="sxs-lookup"><span data-stu-id="97dbc-104">The join operation is based on matching keys and uses the `Equals` operator.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e8673-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="e8673-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="97dbc-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="97dbc-105">Syntax</span></span>  
   
-```  
+```vb  
 Join element In collection _  
   [ joinClause _ ]   
   [ groupJoinClause ... _ ]   
 On key1 Equals key2 [ And key3 Equals key4 [... ]  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="e8673-106">Części</span><span class="sxs-lookup"><span data-stu-id="e8673-106">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="97dbc-106">Części</span><span class="sxs-lookup"><span data-stu-id="97dbc-106">Parts</span></span>  
  `element`  
- <span data-ttu-id="e8673-107">Wymagana.</span><span class="sxs-lookup"><span data-stu-id="e8673-107">Required.</span></span> <span data-ttu-id="e8673-108">Zmienna sterująca dla kolekcji jest dołączony.</span><span class="sxs-lookup"><span data-stu-id="e8673-108">The control variable for the collection being joined.</span></span>  
+ <span data-ttu-id="97dbc-107">Wymagany.</span><span class="sxs-lookup"><span data-stu-id="97dbc-107">Required.</span></span> <span data-ttu-id="97dbc-108">Zmienna kontroli dla połączonej kolekcji.</span><span class="sxs-lookup"><span data-stu-id="97dbc-108">The control variable for the collection being joined.</span></span>  
   
  `collection`  
- <span data-ttu-id="e8673-109">Wymagana.</span><span class="sxs-lookup"><span data-stu-id="e8673-109">Required.</span></span> <span data-ttu-id="e8673-110">Kolekcja do łączenia z tą kolekcją identyfikowane w lewej części `Join` operatora.</span><span class="sxs-lookup"><span data-stu-id="e8673-110">The collection to combine with the collection identified on the left side of the `Join` operator.</span></span> <span data-ttu-id="e8673-111">A `Join` klauzuli może być zagnieżdżona w innej `Join` klauzuli lub `Group Join` klauzuli.</span><span class="sxs-lookup"><span data-stu-id="e8673-111">A `Join` clause can be nested in another `Join` clause, or in a `Group Join` clause.</span></span>  
+ <span data-ttu-id="97dbc-109">Wymagany.</span><span class="sxs-lookup"><span data-stu-id="97dbc-109">Required.</span></span> <span data-ttu-id="97dbc-110">Kolekcja do połączenia z kolekcją zidentyfikowaną po lewej stronie operatora `Join`.</span><span class="sxs-lookup"><span data-stu-id="97dbc-110">The collection to combine with the collection identified on the left side of the `Join` operator.</span></span> <span data-ttu-id="97dbc-111">Klauzula `Join` może być zagnieżdżona w innej klauzuli `Join` lub w klauzuli `Group Join`.</span><span class="sxs-lookup"><span data-stu-id="97dbc-111">A `Join` clause can be nested in another `Join` clause, or in a `Group Join` clause.</span></span>  
   
  `joinClause`  
- <span data-ttu-id="e8673-112">Opcjonalna.</span><span class="sxs-lookup"><span data-stu-id="e8673-112">Optional.</span></span> <span data-ttu-id="e8673-113">Jeden lub więcej dodatkowych `Join` klauzul, aby jeszcze bardziej zawęzić zapytanie.</span><span class="sxs-lookup"><span data-stu-id="e8673-113">One or more additional `Join` clauses to further refine the query.</span></span>  
+ <span data-ttu-id="97dbc-112">Opcjonalny.</span><span class="sxs-lookup"><span data-stu-id="97dbc-112">Optional.</span></span> <span data-ttu-id="97dbc-113">Co najmniej jednej z dodatkowych klauzul `Join` w celu dodatkowego uściślenia zapytania.</span><span class="sxs-lookup"><span data-stu-id="97dbc-113">One or more additional `Join` clauses to further refine the query.</span></span>  
   
  `groupJoinClause`  
- <span data-ttu-id="e8673-114">Opcjonalna.</span><span class="sxs-lookup"><span data-stu-id="e8673-114">Optional.</span></span> <span data-ttu-id="e8673-115">Jeden lub więcej dodatkowych `Group Join` klauzul, aby jeszcze bardziej zawęzić zapytanie.</span><span class="sxs-lookup"><span data-stu-id="e8673-115">One or more additional `Group Join` clauses to further refine the query.</span></span>  
+ <span data-ttu-id="97dbc-114">Opcjonalny.</span><span class="sxs-lookup"><span data-stu-id="97dbc-114">Optional.</span></span> <span data-ttu-id="97dbc-115">Co najmniej jednej z dodatkowych klauzul `Group Join` w celu dodatkowego uściślenia zapytania.</span><span class="sxs-lookup"><span data-stu-id="97dbc-115">One or more additional `Group Join` clauses to further refine the query.</span></span>  
   
- <span data-ttu-id="e8673-116">`key1` `Equals` `key2`</span><span class="sxs-lookup"><span data-stu-id="e8673-116">`key1` `Equals` `key2`</span></span>  
- <span data-ttu-id="e8673-117">Wymagana.</span><span class="sxs-lookup"><span data-stu-id="e8673-117">Required.</span></span> <span data-ttu-id="e8673-118">Określa klucze dla kolekcji jest dołączony.</span><span class="sxs-lookup"><span data-stu-id="e8673-118">Identifies keys for the collections being joined.</span></span> <span data-ttu-id="e8673-119">Należy użyć `Equals` operatora do porównywania kluczy z kolekcji jest dołączony.</span><span class="sxs-lookup"><span data-stu-id="e8673-119">You must use the `Equals` operator to compare keys from the collections being joined.</span></span> <span data-ttu-id="e8673-120">Warunki sprzężenia można połączyć za pomocą `And` operatora, aby zidentyfikować wielu kluczy.</span><span class="sxs-lookup"><span data-stu-id="e8673-120">You can combine join conditions by using the `And` operator to identify multiple keys.</span></span> <span data-ttu-id="e8673-121">`key1` musi mieć długość od kolekcji w lewej części `Join` operatora.</span><span class="sxs-lookup"><span data-stu-id="e8673-121">`key1` must be from the collection on the left side of the `Join` operator.</span></span> <span data-ttu-id="e8673-122">`key2` musi mieć długość od kolekcji na prawej krawędzi `Join` operatora.</span><span class="sxs-lookup"><span data-stu-id="e8673-122">`key2` must be from the collection on the right side of the `Join` operator.</span></span>  
+ <span data-ttu-id="97dbc-116">`key1` `Equals` `key2`</span><span class="sxs-lookup"><span data-stu-id="97dbc-116">`key1` `Equals` `key2`</span></span>  
+ <span data-ttu-id="97dbc-117">Wymagany.</span><span class="sxs-lookup"><span data-stu-id="97dbc-117">Required.</span></span> <span data-ttu-id="97dbc-118">Identyfikuje klucze dla kolekcji, które są sprzężone.</span><span class="sxs-lookup"><span data-stu-id="97dbc-118">Identifies keys for the collections being joined.</span></span> <span data-ttu-id="97dbc-119">Należy użyć operatora `Equals`, aby porównać klucze z kolekcji, które są sprzężone.</span><span class="sxs-lookup"><span data-stu-id="97dbc-119">You must use the `Equals` operator to compare keys from the collections being joined.</span></span> <span data-ttu-id="97dbc-120">Możesz połączyć warunki sprzężenia przy użyciu operatora `And`, aby zidentyfikować wiele kluczy.</span><span class="sxs-lookup"><span data-stu-id="97dbc-120">You can combine join conditions by using the `And` operator to identify multiple keys.</span></span> <span data-ttu-id="97dbc-121">`key1` musi znajdować się w kolekcji po lewej stronie operatora `Join`.</span><span class="sxs-lookup"><span data-stu-id="97dbc-121">`key1` must be from the collection on the left side of the `Join` operator.</span></span> <span data-ttu-id="97dbc-122">`key2` musi pochodzić z kolekcji po prawej stronie operatora `Join`.</span><span class="sxs-lookup"><span data-stu-id="97dbc-122">`key2` must be from the collection on the right side of the `Join` operator.</span></span>  
   
- <span data-ttu-id="e8673-123">Klucze używane w warunek sprzężenia, może być wyrażeń, które zawierają więcej niż jeden element z kolekcji.</span><span class="sxs-lookup"><span data-stu-id="e8673-123">The keys used in the join condition can be expressions that include more than one item from the collection.</span></span> <span data-ttu-id="e8673-124">Jednak każde wyrażenie kluczy może zawierać tylko elementy z jego odpowiednich kolekcji.</span><span class="sxs-lookup"><span data-stu-id="e8673-124">However, each key expression can contain only items from its respective collection.</span></span>  
+ <span data-ttu-id="97dbc-123">Klucze używane w warunku sprzężenia mogą być wyrażeniami, które zawierają więcej niż jeden element z kolekcji.</span><span class="sxs-lookup"><span data-stu-id="97dbc-123">The keys used in the join condition can be expressions that include more than one item from the collection.</span></span> <span data-ttu-id="97dbc-124">Jednak każde wyrażenie klucza może zawierać tylko elementy z odpowiedniej kolekcji.</span><span class="sxs-lookup"><span data-stu-id="97dbc-124">However, each key expression can contain only items from its respective collection.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e8673-125">Uwagi</span><span class="sxs-lookup"><span data-stu-id="e8673-125">Remarks</span></span>  
- <span data-ttu-id="e8673-126">`Join` Klauzuli łączy dwie kolekcje, w oparciu o dopasowanie wartości kluczy z kolekcji jest dołączony.</span><span class="sxs-lookup"><span data-stu-id="e8673-126">The `Join` clause combines two collections based on matching key values from the collections being joined.</span></span> <span data-ttu-id="e8673-127">Wynikowy Kolekcja może zawierać dowolną kombinację wartości z kolekcji identyfikowane w lewej części `Join` operatora i kolekcji w `Join` klauzuli.</span><span class="sxs-lookup"><span data-stu-id="e8673-127">The resulting collection can contain any combination of values from the collection identified on the left side of the `Join` operator and the collection identified in the `Join` clause.</span></span> <span data-ttu-id="e8673-128">Kwerenda będzie zwracać tylko wyniki, dla których warunek określony przez `Equals` operator jest spełniony.</span><span class="sxs-lookup"><span data-stu-id="e8673-128">The query will return only results for which the condition specified by the `Equals` operator is met.</span></span> <span data-ttu-id="e8673-129">Jest to równoważne `INNER JOIN` w języku SQL.</span><span class="sxs-lookup"><span data-stu-id="e8673-129">This is equivalent to an `INNER JOIN` in SQL.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="97dbc-125">Uwagi</span><span class="sxs-lookup"><span data-stu-id="97dbc-125">Remarks</span></span>  
+ <span data-ttu-id="97dbc-126">Klauzula `Join` łączy dwie kolekcje na podstawie pasujących wartości klucza z kolekcji, które są sprzężone.</span><span class="sxs-lookup"><span data-stu-id="97dbc-126">The `Join` clause combines two collections based on matching key values from the collections being joined.</span></span> <span data-ttu-id="97dbc-127">Kolekcja wyników może zawierać dowolną kombinację wartości z kolekcji identyfikowanej po lewej stronie operatora `Join` i kolekcji identyfikowanej w klauzuli `Join`.</span><span class="sxs-lookup"><span data-stu-id="97dbc-127">The resulting collection can contain any combination of values from the collection identified on the left side of the `Join` operator and the collection identified in the `Join` clause.</span></span> <span data-ttu-id="97dbc-128">Zapytanie zwróci tylko wyniki, dla których spełniony jest warunek określony przez operator `Equals`.</span><span class="sxs-lookup"><span data-stu-id="97dbc-128">The query will return only results for which the condition specified by the `Equals` operator is met.</span></span> <span data-ttu-id="97dbc-129">Jest to odpowiednik `INNER JOIN` w SQL.</span><span class="sxs-lookup"><span data-stu-id="97dbc-129">This is equivalent to an `INNER JOIN` in SQL.</span></span>  
   
- <span data-ttu-id="e8673-130">Możesz użyć wielu `Join` klauzul zapytania do dołączenia do co najmniej dwóch kolekcje w jedną kolekcję.</span><span class="sxs-lookup"><span data-stu-id="e8673-130">You can use multiple `Join` clauses in a query to join two or more collections into a single collection.</span></span>  
+ <span data-ttu-id="97dbc-130">W zapytaniu można użyć wielu klauzul `Join` w celu dołączenia dwóch lub większej liczby kolekcji do pojedynczej kolekcji.</span><span class="sxs-lookup"><span data-stu-id="97dbc-130">You can use multiple `Join` clauses in a query to join two or more collections into a single collection.</span></span>  
   
- <span data-ttu-id="e8673-131">Można wykonać sprzężenie niejawne połączyć kolekcji bez `Join` klauzuli.</span><span class="sxs-lookup"><span data-stu-id="e8673-131">You can perform an implicit join to combine collections without the `Join` clause.</span></span> <span data-ttu-id="e8673-132">Aby to zrobić, należy dołączyć wiele `In` klauzul swoje `From` klauzuli i określ `Where` klauzulę identyfikującą klucze, które chcesz użyć w celu utworzenia sprzężenia.</span><span class="sxs-lookup"><span data-stu-id="e8673-132">To do this, include multiple `In` clauses in your `From` clause and specify a `Where` clause that identifies the keys that you want to use for the join.</span></span>  
+ <span data-ttu-id="97dbc-131">Można wykonać niejawne sprzężenie w celu łączenia kolekcji bez klauzuli `Join`.</span><span class="sxs-lookup"><span data-stu-id="97dbc-131">You can perform an implicit join to combine collections without the `Join` clause.</span></span> <span data-ttu-id="97dbc-132">W tym celu należy uwzględnić wiele klauzul `In` w klauzuli `From` i określić klauzulę `Where`, która identyfikuje klucze, które mają być używane dla sprzężenia.</span><span class="sxs-lookup"><span data-stu-id="97dbc-132">To do this, include multiple `In` clauses in your `From` clause and specify a `Where` clause that identifies the keys that you want to use for the join.</span></span>  
   
- <span data-ttu-id="e8673-133">Możesz użyć `Group Join` klauzuli połączyć kolekcje w jedną hierarchiczną kolekcję.</span><span class="sxs-lookup"><span data-stu-id="e8673-133">You can use the `Group Join` clause to combine collections into a single hierarchical collection.</span></span> <span data-ttu-id="e8673-134">Formuła ta przypomina `LEFT OUTER JOIN` w języku SQL.</span><span class="sxs-lookup"><span data-stu-id="e8673-134">This is like a `LEFT OUTER JOIN` in SQL.</span></span>  
+ <span data-ttu-id="97dbc-133">Można użyć klauzuli `Group Join`, aby połączyć kolekcje w jedną hierarchiczną kolekcję.</span><span class="sxs-lookup"><span data-stu-id="97dbc-133">You can use the `Group Join` clause to combine collections into a single hierarchical collection.</span></span> <span data-ttu-id="97dbc-134">Jest to podobne do `LEFT OUTER JOIN` w SQL.</span><span class="sxs-lookup"><span data-stu-id="97dbc-134">This is like a `LEFT OUTER JOIN` in SQL.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e8673-135">Przykład</span><span class="sxs-lookup"><span data-stu-id="e8673-135">Example</span></span>  
- <span data-ttu-id="e8673-136">Poniższy kod wykonuje sprzężenie niejawne połączyć listę klientów z jego zamówienia.</span><span class="sxs-lookup"><span data-stu-id="e8673-136">The following code example performs an implicit join to combine a list of customers with their orders.</span></span>  
+## <a name="example"></a><span data-ttu-id="97dbc-135">Przykład</span><span class="sxs-lookup"><span data-stu-id="97dbc-135">Example</span></span>  
+ <span data-ttu-id="97dbc-136">Poniższy przykład kodu wykonuje niejawne sprzężenie w celu połączenia listy klientów z ich zamówieniami.</span><span class="sxs-lookup"><span data-stu-id="97dbc-136">The following code example performs an implicit join to combine a list of customers with their orders.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#13)]  
   
-## <a name="example"></a><span data-ttu-id="e8673-137">Przykład</span><span class="sxs-lookup"><span data-stu-id="e8673-137">Example</span></span>  
- <span data-ttu-id="e8673-138">Poniższy kod łączy dwie kolekcje przy użyciu `Join` klauzuli.</span><span class="sxs-lookup"><span data-stu-id="e8673-138">The following code example joins two collections by using the `Join` clause.</span></span>  
+## <a name="example"></a><span data-ttu-id="97dbc-137">Przykład</span><span class="sxs-lookup"><span data-stu-id="97dbc-137">Example</span></span>  
+ <span data-ttu-id="97dbc-138">Poniższy przykład kodu łączy dwie kolekcje przy użyciu klauzuli `Join`.</span><span class="sxs-lookup"><span data-stu-id="97dbc-138">The following code example joins two collections by using the `Join` clause.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples2.vb#12)]  
   
- <span data-ttu-id="e8673-139">Ten przykład generuje dane wyjściowe podobne do następujących:</span><span class="sxs-lookup"><span data-stu-id="e8673-139">This example will produce output similar to the following:</span></span>  
+ <span data-ttu-id="97dbc-139">Ten przykład generuje dane wyjściowe podobne do następujących:</span><span class="sxs-lookup"><span data-stu-id="97dbc-139">This example will produce output similar to the following:</span></span>  
   
  `winlogon (968), Windows Logon`  
   
@@ -74,12 +74,12 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
  `cmd (5136), Command Window`  
   
-## <a name="example"></a><span data-ttu-id="e8673-140">Przykład</span><span class="sxs-lookup"><span data-stu-id="e8673-140">Example</span></span>  
- <span data-ttu-id="e8673-141">Poniższy kod łączy dwie kolekcje przy użyciu `Join` klauzulę zawierającą dwie kolumny klucza.</span><span class="sxs-lookup"><span data-stu-id="e8673-141">The following code example joins two collections by using the `Join` clause with two key columns.</span></span>  
+## <a name="example"></a><span data-ttu-id="97dbc-140">Przykład</span><span class="sxs-lookup"><span data-stu-id="97dbc-140">Example</span></span>  
+ <span data-ttu-id="97dbc-141">Poniższy przykład kodu łączy dwie kolekcje przy użyciu klauzuli `Join` z dwiema kolumnami klucza.</span><span class="sxs-lookup"><span data-stu-id="97dbc-141">The following code example joins two collections by using the `Join` clause with two key columns.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples3.vb#17)]  
   
- <span data-ttu-id="e8673-142">Przykład generuje dane wyjściowe podobne do następujących:</span><span class="sxs-lookup"><span data-stu-id="e8673-142">The example will produce output similar to the following:</span></span>  
+ <span data-ttu-id="97dbc-142">Przykład generuje dane wyjściowe podobne do następujących:</span><span class="sxs-lookup"><span data-stu-id="97dbc-142">The example will produce output similar to the following:</span></span>  
   
  `winlogon (968), Windows Logon, Priority = 13`  
   
@@ -87,11 +87,11 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
  `explorer (2424), File Explorer, Priority = 8`  
   
-## <a name="see-also"></a><span data-ttu-id="e8673-143">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e8673-143">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="97dbc-143">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="97dbc-143">See also</span></span>
 
-- [<span data-ttu-id="e8673-144">Wprowadzenie do LINQ w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e8673-144">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [<span data-ttu-id="e8673-145">Zapytania</span><span class="sxs-lookup"><span data-stu-id="e8673-145">Queries</span></span>](../../../visual-basic/language-reference/queries/index.md)
-- [<span data-ttu-id="e8673-146">Select, klauzula</span><span class="sxs-lookup"><span data-stu-id="e8673-146">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)
-- [<span data-ttu-id="e8673-147">From, klauzula</span><span class="sxs-lookup"><span data-stu-id="e8673-147">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)
-- [<span data-ttu-id="e8673-148">Klauzula Group Join</span><span class="sxs-lookup"><span data-stu-id="e8673-148">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)
-- [<span data-ttu-id="e8673-149">Where, klauzula</span><span class="sxs-lookup"><span data-stu-id="e8673-149">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)
+- [<span data-ttu-id="97dbc-144">Wprowadzenie do LINQ w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="97dbc-144">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [<span data-ttu-id="97dbc-145">Zapytania</span><span class="sxs-lookup"><span data-stu-id="97dbc-145">Queries</span></span>](../../../visual-basic/language-reference/queries/index.md)
+- [<span data-ttu-id="97dbc-146">Select, klauzula</span><span class="sxs-lookup"><span data-stu-id="97dbc-146">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)
+- [<span data-ttu-id="97dbc-147">From, klauzula</span><span class="sxs-lookup"><span data-stu-id="97dbc-147">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)
+- [<span data-ttu-id="97dbc-148">Group Join, klauzula</span><span class="sxs-lookup"><span data-stu-id="97dbc-148">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [<span data-ttu-id="97dbc-149">Where, klauzula</span><span class="sxs-lookup"><span data-stu-id="97dbc-149">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)

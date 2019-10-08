@@ -1,44 +1,44 @@
 ---
-title: -imports (Visual Basic)
+title: -Imports (Visual Basic)
 ms.date: 03/10/2018
 helpviewer_keywords:
 - /imports compiler option [Visual Basic]
 - imports compiler option [Visual Basic]
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
-ms.openlocfilehash: 075eeccc7d80943d2757a97b9a355bbea3ef9d4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 929e24a1ffd02d4e21ab1b925ddd59050b5d3cc4
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663248"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005562"
 ---
-# <a name="-imports-visual-basic"></a><span data-ttu-id="f98f8-102">-imports (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f98f8-102">-imports (Visual Basic)</span></span>
-<span data-ttu-id="f98f8-103">Importuje przestrzenie nazw z określonego zestawu.</span><span class="sxs-lookup"><span data-stu-id="f98f8-103">Imports namespaces from a specified assembly.</span></span>  
+# <a name="-imports-visual-basic"></a><span data-ttu-id="666b6-102">-Imports (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="666b6-102">-imports (Visual Basic)</span></span>
+<span data-ttu-id="666b6-103">Importuje przestrzenie nazw z określonego zestawu.</span><span class="sxs-lookup"><span data-stu-id="666b6-103">Imports namespaces from a specified assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f98f8-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="f98f8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="666b6-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="666b6-104">Syntax</span></span>  
   
-```  
+```console  
 -imports:namespaceList  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="f98f8-105">Argumenty</span><span class="sxs-lookup"><span data-stu-id="f98f8-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="666b6-105">Argumenty</span><span class="sxs-lookup"><span data-stu-id="666b6-105">Arguments</span></span>  
   
-|<span data-ttu-id="f98f8-106">Termin</span><span class="sxs-lookup"><span data-stu-id="f98f8-106">Term</span></span>|<span data-ttu-id="f98f8-107">Definicja</span><span class="sxs-lookup"><span data-stu-id="f98f8-107">Definition</span></span>|  
+|<span data-ttu-id="666b6-106">Termin</span><span class="sxs-lookup"><span data-stu-id="666b6-106">Term</span></span>|<span data-ttu-id="666b6-107">Definicja</span><span class="sxs-lookup"><span data-stu-id="666b6-107">Definition</span></span>|  
 |---|---|  
-|`namespaceList`|<span data-ttu-id="f98f8-108">Wymagana.</span><span class="sxs-lookup"><span data-stu-id="f98f8-108">Required.</span></span> <span data-ttu-id="f98f8-109">Rozdzielana przecinkami lista przestrzeni nazw do zaimportowania.</span><span class="sxs-lookup"><span data-stu-id="f98f8-109">Comma-delimited list of namespaces to be imported.</span></span>|  
+|`namespaceList`|<span data-ttu-id="666b6-108">Wymagany.</span><span class="sxs-lookup"><span data-stu-id="666b6-108">Required.</span></span> <span data-ttu-id="666b6-109">Rozdzielana przecinkami lista przestrzeni nazw do zaimportowania.</span><span class="sxs-lookup"><span data-stu-id="666b6-109">Comma-delimited list of namespaces to be imported.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f98f8-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="f98f8-110">Remarks</span></span>  
- <span data-ttu-id="f98f8-111">`-imports` Opcja importuje dowolnego obszaru nazw, zdefiniowany w ramach bieżącego zestawu plików źródłowych lub z dowolnym przywoływanego zestawu.</span><span class="sxs-lookup"><span data-stu-id="f98f8-111">The `-imports` option imports any namespace defined within the current set of source files or from any referenced assembly.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="666b6-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="666b6-110">Remarks</span></span>  
+ <span data-ttu-id="666b6-111">Opcja `-imports` importuje wszystkie przestrzenie nazw zdefiniowane w bieżącym zestawie plików źródłowych lub z dowolnego przywoływanego zestawu.</span><span class="sxs-lookup"><span data-stu-id="666b6-111">The `-imports` option imports any namespace defined within the current set of source files or from any referenced assembly.</span></span>  
   
- <span data-ttu-id="f98f8-112">Członkowie w przestrzeni nazw określony za pomocą `-imports` są dostępne dla wszystkich plików kodu źródłowego w kompilacji.</span><span class="sxs-lookup"><span data-stu-id="f98f8-112">The members in a namespace specified with `-imports` are available to all source-code files in the compilation.</span></span> <span data-ttu-id="f98f8-113">Użyj [Importy — instrukcja (.NET Namespace i Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) do korzystania z przestrzeni nazw w pliku kodu źródłowego w jednym.</span><span class="sxs-lookup"><span data-stu-id="f98f8-113">Use the [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to use a namespace in a single source-code file.</span></span>  
+ <span data-ttu-id="666b6-112">Elementy członkowskie w przestrzeni nazw określonej przy użyciu `-imports` są dostępne dla wszystkich plików kodu źródłowego w kompilacji.</span><span class="sxs-lookup"><span data-stu-id="666b6-112">The members in a namespace specified with `-imports` are available to all source-code files in the compilation.</span></span> <span data-ttu-id="666b6-113">Użyj [instrukcji Imports (przestrzeń nazw i typ .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) , aby użyć przestrzeni nazw w jednym pliku kodu źródłowego.</span><span class="sxs-lookup"><span data-stu-id="666b6-113">Use the [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to use a namespace in a single source-code file.</span></span>  
   
-|<span data-ttu-id="f98f8-114">Aby ustawić/Import w programie Visual Studio zintegrowanego środowiska programistycznego</span><span class="sxs-lookup"><span data-stu-id="f98f8-114">To set /imports in the Visual Studio integrated development environment</span></span>|  
+|<span data-ttu-id="666b6-114">Aby ustawić/Imports — w zintegrowanym środowisku programistycznym programu Visual Studio</span><span class="sxs-lookup"><span data-stu-id="666b6-114">To set /imports in the Visual Studio integrated development environment</span></span>|  
 |---|  
-|<span data-ttu-id="f98f8-115">1.  Projekt wybrany w **Eksploratora rozwiązań**.</span><span class="sxs-lookup"><span data-stu-id="f98f8-115">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="f98f8-116">Na **projektu** menu, kliknij przycisk **właściwości**.</span><span class="sxs-lookup"><span data-stu-id="f98f8-116">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="f98f8-117">2.  Kliknij przycisk **odwołania** kartę.</span><span class="sxs-lookup"><span data-stu-id="f98f8-117">2.  Click the **References** tab.</span></span><br /><span data-ttu-id="f98f8-118">3.  Wprowadź nazwę przestrzeni nazw w polu obok **dodać Import użytkownika** przycisku.</span><span class="sxs-lookup"><span data-stu-id="f98f8-118">3.  Enter the namespace name in the box beside the **Add User Import** button.</span></span><br /><span data-ttu-id="f98f8-119">4.  Kliknij przycisk **dodać Import użytkownika** przycisku.</span><span class="sxs-lookup"><span data-stu-id="f98f8-119">4.  Click the **Add User Import** button.</span></span>|  
+|<span data-ttu-id="666b6-115">1. zaznaczono projekt w **Eksplorator rozwiązań**.</span><span class="sxs-lookup"><span data-stu-id="666b6-115">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="666b6-116">W menu **projekt** kliknij polecenie **Właściwości**.</span><span class="sxs-lookup"><span data-stu-id="666b6-116">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="666b6-117">2. Kliknij kartę **odwołania** .</span><span class="sxs-lookup"><span data-stu-id="666b6-117">2.  Click the **References** tab.</span></span><br /><span data-ttu-id="666b6-118">3. Wprowadź nazwę przestrzeni nazw w polu obok przycisku **Dodaj użytkownika importowania** .</span><span class="sxs-lookup"><span data-stu-id="666b6-118">3.  Enter the namespace name in the box beside the **Add User Import** button.</span></span><br /><span data-ttu-id="666b6-119">4. kliknij przycisk **Dodaj Import użytkownika** .</span><span class="sxs-lookup"><span data-stu-id="666b6-119">4.  Click the **Add User Import** button.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="f98f8-120">Przykład</span><span class="sxs-lookup"><span data-stu-id="f98f8-120">Example</span></span>  
- <span data-ttu-id="f98f8-121">Poniższy kod kompiluje, kiedy `/imports:system.globalization` jest określony.</span><span class="sxs-lookup"><span data-stu-id="f98f8-121">The following code compiles when `/imports:system.globalization` is specified.</span></span> <span data-ttu-id="f98f8-122">Bez tego pomyślnej kompilacji wymaga obu `Imports System.Globalization` instrukcja być uwzględniona na początku pliku kodu źródłowego, lub właściwości można w pełni kwalifikowana jako `System.Globalization.CultureInfo.CurrentCulture.Name`.</span><span class="sxs-lookup"><span data-stu-id="f98f8-122">Without it, successful compilation requires either that an `Imports System.Globalization` statement be included at the beginning of the source code file, or that the property be fully qualified as `System.Globalization.CultureInfo.CurrentCulture.Name`.</span></span>
+## <a name="example"></a><span data-ttu-id="666b6-120">Przykład</span><span class="sxs-lookup"><span data-stu-id="666b6-120">Example</span></span>  
+ <span data-ttu-id="666b6-121">Poniższy kod kompiluje, gdy zostanie określony `/imports:system.globalization`.</span><span class="sxs-lookup"><span data-stu-id="666b6-121">The following code compiles when `/imports:system.globalization` is specified.</span></span> <span data-ttu-id="666b6-122">Niepowodzenie kompilacji wymaga, aby instrukcja `Imports System.Globalization` była uwzględniona na początku pliku kodu źródłowego lub że właściwość jest w pełni kwalifikowana jako `System.Globalization.CultureInfo.CurrentCulture.Name`.</span><span class="sxs-lookup"><span data-stu-id="666b6-122">Without it, successful compilation requires either that an `Imports System.Globalization` statement be included at the beginning of the source code file, or that the property be fully qualified as `System.Globalization.CultureInfo.CurrentCulture.Name`.</span></span>
 
 ```vb
 Module Example
@@ -48,8 +48,8 @@ Module Example
 End Module
 ```
 
-## <a name="see-also"></a><span data-ttu-id="f98f8-123">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f98f8-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="666b6-123">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="666b6-123">See also</span></span>
 
-- [<span data-ttu-id="f98f8-124">Kompilator wiersza polecenia programu Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f98f8-124">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="f98f8-125">Referencje i instrukcja Imports</span><span class="sxs-lookup"><span data-stu-id="f98f8-125">References and the Imports Statement</span></span>](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
-- [<span data-ttu-id="f98f8-126">Przykłady kompilacji — wiersze poleceń</span><span class="sxs-lookup"><span data-stu-id="f98f8-126">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="666b6-124">Kompilator wiersza polecenia Visual Basic</span><span class="sxs-lookup"><span data-stu-id="666b6-124">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="666b6-125">Referencje i instrukcja Imports</span><span class="sxs-lookup"><span data-stu-id="666b6-125">References and the Imports Statement</span></span>](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
+- [<span data-ttu-id="666b6-126">Przykłady kompilacji — wiersze poleceń</span><span class="sxs-lookup"><span data-stu-id="666b6-126">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

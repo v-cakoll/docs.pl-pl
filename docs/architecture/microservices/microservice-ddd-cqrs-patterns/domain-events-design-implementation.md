@@ -2,12 +2,12 @@
 title: Zdarzenia domeny. Projektowanie i implementacja
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Uzyskaj szczegółowy widok zdarzeń domeny, kluczową koncepcję do ustanowienia komunikacji między agregacjami.
 ms.date: 10/08/2018
-ms.openlocfilehash: 46341bbc3ee3e5713707cc6a18b678d51102b64d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4fe0c1fa04bbecb64783e070838ab796de4f90d6
+ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926549"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72031841"
 ---
 # <a name="domain-events-design-and-implementation"></a>Zdarzenia w domenie: projektowanie i implementacja
 
@@ -21,9 +21,9 @@ Ważną zaletą zdarzeń domeny jest to, że efekty uboczne mogą być wyrażone
 
 Na przykład jeśli korzystasz tylko z Entity Framework, a musisz być odpowiedzią na niektóre zdarzenie, prawdopodobnie kod, którego potrzebujesz blisko, co spowoduje Wyzwalanie zdarzenia. W związku z tym reguła jest połączona, niejawnie do kodu i trzeba będzie przyjrzeć się do kodu, miejmy nadzieję, aby zrealizować regułę.
 
-Z drugiej strony, korzystanie z zdarzeń domeny czyni koncepcję jawną, ponieważ istnieje i `DomainEvent` co najmniej jeden `DomainEventHandler` element.
+Z drugiej strony, korzystanie z zdarzeń domeny czyni koncepcję jawną, ponieważ występuje `DomainEvent` i co najmniej jeden `DomainEventHandler`.
 
-Na przykład w aplikacji eShopOnContainers, gdy zamówienie zostanie utworzone, użytkownik zostaje kupujący, więc `OrderStartedDomainEvent` zostaje zgłoszony i obsłużony `ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler`w, więc koncepcja bazowa jest oczywista.
+Na przykład w aplikacji eShopOnContainers, gdy zamówienie zostanie utworzone, użytkownik zostaje kupujący, więc `OrderStartedDomainEvent` jest zgłaszane i obsługiwane w `ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler`, więc koncepcja bazowa jest oczywista.
 
 W skrócie zdarzenia domeny pomagają w jawnym wykorzystaniu zasad domeny, w oparciu o język powszechny udostępniony przez ekspertów domeny. Zdarzenia domeny umożliwiają również lepsze rozdzielenie problemów między klasami w tej samej domenie.
 
@@ -61,7 +61,7 @@ Obsługa zdarzeń domeny jest problemem aplikacji. Warstwa modelu domeny powinna
 
 Zdarzenia domeny mogą również służyć do wyzwalania dowolnej liczby akcji aplikacji i co ważniejsze, muszą być otwarte, aby zwiększyć tę liczbę w przyszłości w niezależny sposób. Na przykład po rozpoczęciu zamówienia można opublikować zdarzenie domeny, aby propagować te informacje do innych agregacji, a nawet wywołać akcje aplikacji, takie jak powiadomienia.
 
-Punkt klucza to otwarta liczba akcji do wykonania w przypadku wystąpienia zdarzenia domeny. Ostatecznie akcje i reguły w domenie i aplikacji zostaną rozrastane. Złożoność lub liczba akcji związanych ze skutkami ubocznymi, gdy wystąpi coś, ale jeśli kod został połączony z "klejem" (to jest tworzenie określonych obiektów przy użyciu `new`), a następnie za każdym razem, gdy trzeba dodać nową akcję, należy również zmienić pracę i testowany kod.
+Punkt klucza to otwarta liczba akcji do wykonania w przypadku wystąpienia zdarzenia domeny. Ostatecznie akcje i reguły w domenie i aplikacji zostaną rozrastane. Złożoność lub liczba akcji związanych z efektem ubocznym, gdy wystąpi coś, ale jeśli kod został połączony z "klejem" (czyli tworzeniem określonych obiektów z `new`), a następnie za każdym razem, gdy trzeba dodać nową akcję, należy również zmienić pracę i kod przetestowany.
 
 Ta zmiana może spowodować nowe błędy, a podejście to również odnosi się do [zasady otwarte/zamknięte](https://en.wikipedia.org/wiki/Open/closed_principle) z [pełnych](https://en.wikipedia.org/wiki/SOLID). Nie tylko, Oryginalna klasa, która była w trakcie organizowania operacji, rośnie i rośnie, która jest zgodna z [pojedynczą zasadą odpowiedzialności (SRP)](https://en.wikipedia.org/wiki/Single_responsibility_principle).
 
@@ -84,7 +84,7 @@ Jak pokazano na rysunku 7-15, rozpoczynając od tego samego zdarzenia domeny, mo
 
 Programy obsługi zdarzeń zwykle znajdują się w warstwie aplikacji, ponieważ będziesz używać obiektów infrastruktury, takich jak repozytoria lub interfejs API aplikacji dla zachowania mikrousługi. W tym sensie programy obsługi zdarzeń są podobne do programów obsługi poleceń, więc obie są częścią warstwy aplikacji. Istotną różnicą jest to, że polecenie powinno być przetwarzane tylko raz. Zdarzenie domeny może być przetwarzane zero lub *n* razy, ponieważ może zostać odebrane przez wielu odbiorników lub obsługę zdarzeń z innym przeznaczeniem dla każdej procedury obsługi.
 
-Posiadanie otwartej liczby programów obsługi na domenę umożliwia dodanie dowolnej liczby reguł domeny bez wpływu na bieżący kod. Na przykład wdrożenie następującej reguły biznesowej może być równie proste, jak dodanie kilku programów obsługi zdarzeń (lub nawet jednego z nich):
+Posiadanie otwartej liczby programów obsługi na domenę umożliwia dodanie możliwie największej liczby reguł domeny bez wpływu na bieżący kod. Na przykład wdrożenie następującej reguły biznesowej może być równie proste, jak dodanie kilku programów obsługi zdarzeń (lub nawet jednego z nich):
 
 > Gdy łączna kwota zakupiona przez klienta w sklepie w ramach dowolnej liczby zamówień przekracza $6 000, należy zastosować 10% rabatu na każde nowe zamówienie i powiadomić klienta za pośrednictwem wiadomości e-mail o tym rabatie dla przyszłych zamówień.
 
@@ -130,7 +130,7 @@ Należy tu zaznaczyć, że jeśli zdarzenia domeny mają być obsługiwane async
 
 Następnym pytaniem jest to, jak podnieść zdarzenie domeny, aby docierał do jego powiązanych programów obsługi zdarzeń. Można użyć wielu metod.
 
-UDI Dahan pierwotnie proponowane (na przykład w kilku powiązanych wpisach, takich jak [zdarzenia domeny — Zrób 2](http://udidahan.com/2008/08/25/domain-events-take-2/)) przy użyciu klasy statycznej do zarządzania i wywoływania zdarzeń. Może to obejmować klasę statyczną o nazwie DomainEvents, która wywołuje zdarzenia domeny natychmiast po wywołaniu, przy użyciu składni podobnej do `DomainEvents.Raise(Event myEvent)`. Jimmy Bogard zapisał wpis w blogu[(wzmacnianie domeny: Zdarzenia](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)domeny), które zalecają podobne podejście.
+UDI Dahan pierwotnie proponowane (na przykład w kilku powiązanych wpisach, takich jak [zdarzenia domeny — Zrób 2](http://udidahan.com/2008/08/25/domain-events-take-2/)) przy użyciu klasy statycznej do zarządzania i wywoływania zdarzeń. Może to obejmować klasę statyczną o nazwie DomainEvents, która mogłaby podnieść zdarzenia domeny natychmiast po wywołaniu, używając składni takiej jak `DomainEvents.Raise(Event myEvent)`. Jimmy Bogard zapisał wpis w blogu ([wzmacnianie domeny: zdarzenia domeny](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)), która zaleca podobne podejście.
 
 Jednak gdy klasa zdarzenia domeny jest statyczna, to również natychmiast wysyła do programów obsługi. Dzięki temu testy i debugowanie są trudniejsze, ponieważ programy obsługi zdarzeń z logiką efektów ubocznych są wykonywane natychmiast po wywołaniu zdarzenia. Podczas testowania i debugowania należy skoncentrować się na tym, co dzieje się w przypadku bieżących klas agregujących; nie chcesz nagle przekierowywać do innych programów obsługi zdarzeń w przypadku efektów ubocznych związanych z innymi agregacjami lub logiką aplikacji. Jest to dlatego, że inne podejścia zostały rozwinięte, jak wyjaśniono w następnej sekcji.
 
@@ -216,15 +216,15 @@ Pytanie, czy wykonać pojedynczą transakcję w ramach agregacji, w przeciwieńs
 
 > Wszystkie reguły, które rozciągają się na agregacje, nie będą zawsze aktualne. W przypadku przetwarzania zdarzeń, przetwarzania wsadowego lub innych mechanizmów aktualizacji inne zależności można rozpoznać w określonym czasie. (strona 128)
 
-Vaughn Vernon jest następująca w [skutecznym, zagregowanym projekcie. Część II: Wykonywanie agregacji współdziała](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf):
+Vaughn Vernon jest następująca w [skutecznym, zagregowanym projekcie. Część II: wykonywanie zagregowanych zadań jednocześnie](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf):
 
-> W takim przypadku, jeśli wykonanie polecenia w jednym wystąpieniu agregującym wymaga, aby dodatkowe reguły biznesowe były wykonywane na co najmniej jednej agregacji \[, użyj spójności ostatecznej...\] Istnieje praktyczny sposób zapewnienia spójności ostatecznej w modelu DDD. Metoda agregująca publikuje zdarzenie domeny, które jest w czasie dostarczane do co najmniej jednego subskrybenta asynchronicznego.
+> W takim przypadku, jeśli wykonanie polecenia w jednym wystąpieniu agregującym wymaga, aby dodatkowe reguły biznesowe były wykonywane na co najmniej jednej agregacji, należy użyć spójności ostatecznej \[... \] istnieje praktyczny sposób zapewnienia spójności ostatecznej w modelu DDD. Metoda agregująca publikuje zdarzenie domeny, które jest w czasie dostarczane do co najmniej jednego subskrybenta asynchronicznego.
 
 To uzasadnienie opiera się na uwzględnieniu szczegółowych transakcji zamiast transakcji obejmujących wiele zagregowanych lub jednostek. Dobrym pomysłem jest to, że w drugim przypadku liczba blokad baz danych będzie znacząca w aplikacjach o dużej skali o wysokiej skalowalności. W przypadku, gdy wysoce skalowalne aplikacje nie muszą mieć natychmiastowej spójności transakcyjnej między wieloma agregacjami, pomaga zaakceptować koncepcję spójności ostatecznej. Zmiany niepodzielne często nie są wymagane przez firmę, a w każdym przypadku odpowiedzialność ekspertów domeny może powiedzieć, czy określone operacje wymagają niepodzielnych transakcji. Jeśli operacja zawsze wymaga niepodzielnej transakcji między wieloma agregacjami, może wystąpić pytanie, czy wartość zagregowana powinna być większa czy nie została prawidłowo zaprojektowana.
 
 Jednak inni deweloperzy i architekty, takie jak Jimmy Bogard, są w trakcie łączenia jednej transakcji z wieloma agregacjami, ale tylko wtedy, gdy te dodatkowe agregaty są powiązane z efektami ubocznymi tego samego oryginalnego polecenia. Przykładowo w przypadku [lepszego wzorca zdarzeń domeny](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)Bogard brzmi:
 
-> Zazwyczaj chcę, aby skutki uboczne zdarzenia domeny miały miejsce w ramach tej samej transakcji logicznej, ale niekoniecznie w tym samym zakresie do podniesienia poziomu \[zdarzenia domeny...\] Tuż przed zatwierdzeniem naszej transakcji Wysyłamy nasze zdarzenia do odpowiednich programów obsługi.
+> Zazwyczaj chcę, aby skutki uboczne zdarzenia domeny miały miejsce w ramach tej samej transakcji logicznej, ale niekoniecznie w tym samym zakresie do podniesienia poziomu zdarzenia domeny \[... \] przed zatwierdzeniem naszej transakcji, wysyłamy nasze zdarzenia do odpowiednich programy obsługi.
 
 Jeśli wysyłasz zdarzenia domeny bezpośrednio *przed* zatwierdzeniem oryginalnej transakcji, jest to spowodowane tym, że efekty uboczne tych zdarzeń mają być uwzględnione w tej samej transakcji. Na przykład jeśli metoda EF DbContext metody SaveChanges nie powiedzie się, transakcja wycofa wszystkie zmiany, w tym wynik wszelkich operacji ubocznych wdrożonych przez powiązane procedury obsługi zdarzeń domeny. Wynika to z faktu, że zakres istnienia kontekstu DbContext jest domyślnie zdefiniowany jako "objęty zakresem". W związku z tym obiekt DbContext jest współużytkowany przez wiele obiektów repozytorium, które są tworzone w ramach tego samego zakresu lub grafu obiektów. Ta sama zbieżność z zakresem HttpRequest podczas opracowywania aplikacji sieci Web API lub MVC.
 
@@ -234,7 +234,7 @@ Sposobem zezwalania na akcje kompensacyjne będzie przechowywanie zdarzeń domen
 
 W każdym przypadku można wybrać potrzebną metodę. Ale początkowe podejście odroczone — podnoszenie zdarzeń przed zatwierdzeniem, dlatego należy użyć jednej transakcji — najprostszym podejściem jest użycie EF Core i relacyjnej bazy danych. Jest to łatwiejsze do zaimplementowania i prawidłowego w wielu przypadkach firmy. Jest to również podejście używane w mikrousłudze porządkowania w eShopOnContainers.
 
-Ale jak faktycznie wysyłać te zdarzenia do odpowiednich programów obsługi zdarzeń? Co to jest `_mediator` obiekt widoczny w poprzednim przykładzie? Należy to zrobić przy użyciu technik i artefaktów używanych do mapowania między zdarzeniami a ich programami obsługi zdarzeń.
+Ale jak faktycznie wysyłać te zdarzenia do odpowiednich programów obsługi zdarzeń? Co to jest obiekt `_mediator` widoczny w poprzednim przykładzie? Należy to zrobić przy użyciu technik i artefaktów używanych do mapowania między zdarzeniami a ich programami obsługi zdarzeń.
 
 ### <a name="the-domain-event-dispatcher-mapping-from-events-to-event-handlers"></a>Dyspozytor zdarzeń domeny: mapowanie ze zdarzeń do programów obsługi zdarzeń
 
@@ -353,30 +353,30 @@ Jak wspomniano, użyj zdarzeń domeny w celu jawnego implementowania efektów ub
 - **Jimmy Bogard. Lepszy wzorzec zdarzeń domeny** \
   <https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/>
 
-- **Vaughn Vernon. Efektywna agregowana część II: Wykonywanie zagregowanych zadań** \
+- **Vaughn Vernon. Efektywna agregowana część II: wykonywanie zagregowanych współdziałania** \
   [https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
-- **Jimmy Bogard. Wzmacnianie domeny: Zdarzenia domeny** \
+- **Jimmy Bogard. Wzmacnianie domeny: zdarzenia domeny** \
   <https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/>
 
 - **Której należy Tony Truong. Przykład wzorca zdarzeń domeny** \
   <https://www.tonytruong.net/domain-events-pattern-example/>
 
-- **Udi Dahan. Jak utworzyć w pełni hermetyzowane modele domen** \
+- **UDI Dahan. Jak utworzyć w pełni hermetyzowane modele domen** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
-- **Udi Dahan. Zdarzenia domeny — wykonaj 2** \
+- **UDI Dahan. Zdarzenia domeny — zajmiemy 2** \
   <http://udidahan.com/2008/08/25/domain-events-take-2/>
 
-- **Udi Dahan. Zdarzenia domeny — Salvation** \
+- **UDI Dahan. Zdarzenia domeny — Salvation** \
   <http://udidahan.com/2009/06/14/domain-events-salvation/>
 
 - **Jan Kronquist. Nie Publikuj zdarzeń domeny, zwróć je!** \
   <https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/>
 
-- **Cesar de La Torre. Zdarzenia domeny a Zdarzenia integracji w architekturach DDD i mikrousług** \
+- **Cesar de La Torre. Zdarzenia domeny a zdarzenia integracji w architekturze DDD i mikrousług** \
   <https://devblogs.microsoft.com/cesardelatorre/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/>
 
 >[!div class="step-by-step"]
->[Poprzedni](client-side-validation.md)Następny
->[](infrastructure-persistence-layer-design.md)
+>[Poprzedni](client-side-validation.md)
+>[Następny](infrastructure-persistence-layer-design.md)

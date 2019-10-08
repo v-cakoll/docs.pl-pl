@@ -1,6 +1,6 @@
 ---
 title: Co nowego w programie .NET Core 3.0
-description: Dowiedz się więcej o nowych funkcjach dostępnych w programie .NET Core 3,0.
+description: Dowiedz się więcej o nowych funkcjach dostępnych w programie .NET Core 3.0.
 dev_langs:
 - csharp
 - vb
@@ -16,29 +16,29 @@ ms.locfileid: "71216264"
 ---
 # <a name="whats-new-in-net-core-30"></a>Co nowego w programie .NET Core 3.0
 
-W tym artykule opisano nowości w programie .NET Core 3,0. Jednym z największych ulepszeń jest obsługa aplikacji klasycznych systemu Windows (tylko system Windows). Korzystając z pulpitu systemu Windows składnika zestawu SDK platformy .NET Core 3,0, można przenieść aplikacje Windows Forms i Windows Presentation Foundation (WPF). Aby można było wyczyścić, składnik pulpitu systemu Windows jest obsługiwany i uwzględniany w systemie Windows. Aby uzyskać więcej informacji, zobacz sekcję [pulpitu systemu Windows](#windows-desktop) w dalszej części tego artykułu.
+W tym artykule opisano nowości w programie .NET Core 3.0. Jednym z największych ulepszeń jest obsługa aplikacji klasycznych systemu Windows (tylko system Windows). Korzystając z pulpitu systemu Windows składnika zestawu SDK platformy .NET Core 3.0, można przenieść aplikacje Windows Forms i Windows Presentation Foundation (WPF). Aby można było wyczyścić, składnik pulpitu systemu Windows jest obsługiwany i uwzględniany w systemie Windows. Aby uzyskać więcej informacji, zobacz sekcję [pulpitu systemu Windows](#windows-desktop) w dalszej części tego artykułu.
 
-Program .NET Core 3,0 dodaje obsługę C# 8,0. Zdecydowanie zaleca się używanie [programu Visual Studio 2019 16,3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), [Visual Studio dla komputerów Mac 8,3](/visualstudio/mac/install-preview)lub [Visual Studio Code](https://code.visualstudio.com/) z  **C# rozszerzeniem**.
+Program .NET Core 3.0 dodaje obsługę C# 8.0. Zdecydowanie zaleca się używanie [programu Visual Studio 2019 16.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), [Visual Studio dla komputerów Mac 8.3](/visualstudio/mac/install-preview)lub [Visual Studio Code](https://code.visualstudio.com/) z  **C# rozszerzeniem**.
 
-[Pobierz i Rozpocznij pracę z platformą .NET Core 3,0](https://aka.ms/netcore3download) teraz w systemie Windows, MacOS lub Linux.
+[Pobierz i Rozpocznij pracę z platformą .NET Core 3.0](https://aka.ms/netcore3download) teraz w systemie Windows, MacOS lub Linux.
 
-Aby uzyskać więcej informacji o wersji, zobacz [anons programu .NET Core 3,0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/).
+Aby uzyskać więcej informacji o wersji, zobacz [anons programu .NET Core 3.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/).
 
 Środowisko .NET Core RC1 zostało uznane za gotowe do produkcji przez firmę Microsoft i zostało w pełni obsługiwane. Jeśli korzystasz z wersji zapoznawczej, musisz przejść do wersji RTM, aby uzyskać pomoc techniczną.
 
 ## <a name="net-core-sdk-windows-installer"></a>Zestaw .NET Core SDK Instalator Windows
 
-Instalator MSI dla systemu Windows został zmieniony począwszy od platformy .NET Core 3,0. Instalatorzy zestawu SDK teraz uaktualniają wersje funkcji zestawu SDK na miejscu. Paski funkcji są zdefiniowane w grupach *setek* w sekcji *poprawka* numeru wersji. Na przykład **3,0. _101_**  i **3,0. _201_**  są wersje w dwóch różnych warstwach funkcji podczas **3,0. _101_**  i **3,0. _199_**  znajdują się w tej samej paśmie funkcji. I, w przypadku zestaw .NET Core SDK **3,0. _101_**  jest zainstalowana, zestaw .NET Core SDK **3,0. _100_**  zostanie usunięta z komputera, jeśli istnieje. Gdy zestaw .NET Core SDK **3,0. _200_**  jest zainstalowana na tym samym komputerze, zestaw .NET Core SDK **3,0. _101_**  nie zostanie usunięta.
+Instalator MSI dla systemu Windows został zmieniony począwszy od platformy .NET Core 3.0. Instalatorzy zestawu SDK teraz uaktualniają wersje funkcji zestawu SDK na miejscu. Paski funkcji są zdefiniowane w grupach *setek* w sekcji *poprawka* numeru wersji. Na przykład **3.0. _101_**  i **3.0. _201_**  są wersje w dwóch różnych warstwach funkcji podczas **3.0. _101_**  i **3.0. _199_**  znajdują się w tej samej paśmie funkcji. I, w przypadku zestaw .NET Core SDK **3.0. _101_**  jest zainstalowana, zestaw .NET Core SDK **3.0. _100_**  zostanie usunięta z komputera, jeśli istnieje. Gdy zestaw .NET Core SDK **3.0. _200_**  jest zainstalowana na tym samym komputerze, zestaw .NET Core SDK **3.0. _101_**  nie zostanie usunięta.
 
 Aby uzyskać więcej informacji na temat przechowywania wersji, zobacz [Omówienie wersji platformy .NET Core](../versions/index.md).
 
-## <a name="c-80"></a>C#8,0
+## <a name="c-80"></a>C#8.0
 
-C#8,0 jest również częścią tej wersji, która obejmuje funkcję typów referencyjnych dopuszczających wartość null, strumienie asynchroniczne i więcej wzorców. Aby uzyskać więcej informacji C# o funkcjach 8,0, zobacz [co nowego C# w programie 8,0](../../csharp/whats-new/csharp-8.md).
+C#8.0 jest również częścią tej wersji, która obejmuje funkcję typów referencyjnych dopuszczających wartość null, strumienie asynchroniczne i więcej wzorców. Aby uzyskać więcej informacji C# o funkcjach 8.0, zobacz [co nowego C# w programie 8.0](../../csharp/whats-new/csharp-8.md).
 
-## <a name="net-standard-21"></a>.NET Standard 2,1
+## <a name="net-standard-21"></a>.NET Standard 2.1
 
-Mimo że program .NET Core 3,0 obsługuje **.NET Standard 2,1**, szablon `dotnet new classlib` domyślny generuje projekt, który nadal jest celem **.NET Standard 2,0**. Aby docelowa **.NET Standard 2,1**, edytuj plik projektu i Zmień `TargetFramework` właściwość na `netstandard2.1`:
+Mimo że program .NET Core 3.0 obsługuje **.NET Standard 2.1**, szablon `dotnet new classlib` domyślny generuje projekt, który nadal jest celem **.NET Standard 2.0**. Aby docelowa **.NET Standard 2.1**, edytuj plik projektu i Zmień `TargetFramework` właściwość na `netstandard2.1`:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -50,11 +50,11 @@ Mimo że program .NET Core 3,0 obsługuje **.NET Standard 2,1**, szablon `dotnet
 </Project>
 ```
 
-Jeśli używasz programu Visual Studio, potrzebujesz [programu Visual studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), ponieważ program visual Studio 2017 nie obsługuje **.NET Standard 2,1** ani **.NET Core 3,0**.
+Jeśli używasz programu Visual Studio, potrzebujesz [programu Visual studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), ponieważ program visual Studio 2017 nie obsługuje **.NET Standard 2.1** ani **.NET Core 3.0**.
 
 ## <a name="improved-net-core-version-apis"></a>Ulepszone interfejsy API wersji platformy .NET Core
 
-Począwszy od platformy .NET Core 3,0, interfejsy API wersji dostarczone z platformą .NET Core teraz zwracają oczekiwane informacje. Na przykład:
+Począwszy od platformy .NET Core 3.0, interfejsy API wersji dostarczone z platformą .NET Core teraz zwracają oczekiwane informacje. Na przykład:
 
 ```csharp
 System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");
@@ -119,7 +119,7 @@ Aby uzyskać więcej informacji o publikowaniu jednoplikowym, zapoznaj się z [d
 
 ## <a name="assembly-linking"></a>Łączenie zestawów
 
-Zestaw SDK platformy .NET Core 3,0 zawiera narzędzie, które pozwala zmniejszyć rozmiar aplikacji przez analizowanie IL i przycinanie nieużywanych zestawów.
+Zestaw SDK platformy .NET Core 3.0 zawiera narzędzie, które pozwala zmniejszyć rozmiar aplikacji przez analizowanie IL i przycinanie nieużywanych zestawów.
 
 Aplikacje samodzielne obejmują wszystko, co jest potrzebne do uruchomienia kodu, bez konieczności instalowania programu .NET na komputerze-hoście. Jednak wiele razy aplikacja wymaga tylko małego podzestawu platformy do działania, a inne nieużywane biblioteki mogą zostać usunięte.
 
@@ -147,7 +147,7 @@ Aby uzyskać więcej informacji na temat narzędzia konsolidatora IL, zapoznaj s
 
 ## <a name="tiered-compilation"></a>Kompilacja warstwowa
 
-[Kompilacja warstwowa](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) (TC) jest domyślnie włączona z platformą .NET Core 3,0. Ta funkcja umożliwia środowisku uruchomieniowemu wydajniejsze używanie kompilatora just-in-Time (JIT) w celu uzyskania lepszej wydajności.
+[Kompilacja warstwowa](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) (TC) jest domyślnie włączona z platformą .NET Core 3.0. Ta funkcja umożliwia środowisku uruchomieniowemu wydajniejsze używanie kompilatora just-in-Time (JIT) w celu uzyskania lepszej wydajności.
 
 Główną zaletą TC jest włączenie (re-) metod jitting z niską jakością, ale szybszym lub wyższą warstwą. Pozwala to zwiększyć wydajność aplikacji, która przechodzi przez różne etapy wykonywania, od uruchamiania do stanu stałego. Jest to kontrast z podejściem innym niż TC, gdzie każda metoda jest skompilowana w jeden sposób (taka sama jak warstwa wysokiej jakości), która jest obciążona niestabilnym stanem w porównaniu z wydajnością uruchamiania.
 
@@ -205,10 +205,10 @@ Istnieją pewne operacje, takie jak łączenie i publikowanie stron Razor, któr
 
 ## <a name="local-tools"></a>Narzędzia lokalne
 
-Środowisko .NET Core 3,0 zawiera wprowadzenie do narzędzi lokalnych. Narzędzia lokalne są podobne do [narzędzi globalnych](../tools/global-tools.md) , ale są skojarzone z konkretną lokalizacją na dysku. Narzędzia lokalne nie są dostępne globalnie i są dystrybuowane jako pakiety NuGet.
+Środowisko .NET Core 3.0 zawiera wprowadzenie do narzędzi lokalnych. Narzędzia lokalne są podobne do [narzędzi globalnych](../tools/global-tools.md) , ale są skojarzone z konkretną lokalizacją na dysku. Narzędzia lokalne nie są dostępne globalnie i są dystrybuowane jako pakiety NuGet.
 
 > [!WARNING]
-> Jeśli podjęto próbę skorzystania z narzędzi lokalnych w programie .NET Core 3,0 `dotnet tool restore` w `dotnet tool install`wersji zapoznawczej 1, takiej jak uruchamianie lub, Usuń folder pamięci podręcznej narzędzi lokalnych W przeciwnym razie narzędzia lokalne nie będą działały w żadnej nowszej wersji. Ten folder znajduje się w lokalizacji:
+> Jeśli podjęto próbę skorzystania z narzędzi lokalnych w programie .NET Core 3.0 `dotnet tool restore` w `dotnet tool install`wersji zapoznawczej 1, takiej jak uruchamianie lub, Usuń folder pamięci podręcznej narzędzi lokalnych W przeciwnym razie narzędzia lokalne nie będą działały w żadnej nowszej wersji. Ten folder znajduje się w lokalizacji:
 >
 > W systemie macOS, Linux:`rm -r $HOME/.dotnet/toolResolverCache`
 >
@@ -216,11 +216,11 @@ Istnieją pewne operacje, takie jak łączenie i publikowanie stron Razor, któr
 
 Narzędzia lokalne są zależne od nazwy `dotnet-tools.json` pliku manifestu w bieżącym katalogu. Ten plik manifestu definiuje narzędzia do udostępnienia w tym folderze i poniżej. Plik manifestu można dystrybuować z kodem, aby upewnić się, że każda osoba, która współpracuje z kodem, będzie mogła przywrócić i korzystać z tych samych narzędzi.
 
-W przypadku narzędzi globalnych i lokalnych wymagana jest zgodna wersja środowiska uruchomieniowego. Wiele narzędzi obecnie na NuGet.org docelowym środowiska uruchomieniowego .NET Core 2,1. Aby zainstalować te narzędzia globalnie lub lokalnie, nadal trzeba zainstalować [środowisko uruchomieniowe NET Core 2,1](https://dotnet.microsoft.com/download/dotnet-core/2.1).
+W przypadku narzędzi globalnych i lokalnych wymagana jest zgodna wersja środowiska uruchomieniowego. Wiele narzędzi obecnie na NuGet.org docelowym środowiska uruchomieniowego .NET Core 2.1. Aby zainstalować te narzędzia globalnie lub lokalnie, nadal trzeba zainstalować [środowisko uruchomieniowe NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1).
 
 ## <a name="major-version-roll-forward"></a>Wersja główna — przekazanie do przodu
 
-W programie .NET Core 3,0 wprowadzono funkcję wyboru, która pozwala aplikacji na przewinięcie do najnowszej wersji programu .NET Core. Ponadto zostało dodane nowe ustawienie służące do kontrolowania sposobu, w jaki przenoszone do przodu jest stosowane do aplikacji. Tę konfigurację można skonfigurować w następujący sposób:
+W programie .NET Core 3.0 wprowadzono funkcję wyboru, która pozwala aplikacji na przewinięcie do najnowszej wersji programu .NET Core. Ponadto zostało dodane nowe ustawienie służące do kontrolowania sposobu, w jaki przenoszone do przodu jest stosowane do aplikacji. Tę konfigurację można skonfigurować w następujący sposób:
 
 - Właściwość pliku projektu:`RollForward`
 - Właściwość pliku konfiguracji środowiska uruchomieniowego:`rollForward`
@@ -246,9 +246,9 @@ Oprócz ustawienia **Wyłącz** wszystkie ustawienia będą używać najwyższej
 
 ## <a name="windows-desktop"></a>Pulpit systemu Windows
 
-Program .NET Core 3,0 obsługuje aplikacje klasyczne systemu Windows przy użyciu Windows Presentation Foundation (WPF) i Windows Forms. Te struktury obsługują również korzystanie z nowoczesnych kontrolek i stylów Fluent z poziomu biblioteki XAML interfejsu użytkownika systemu Windows (WinUI) za pośrednictwem [wysp XAML](/windows/uwp/xaml-platform/xaml-host-controls).
+Program .NET Core 3.0 obsługuje aplikacje klasyczne systemu Windows przy użyciu Windows Presentation Foundation (WPF) i Windows Forms. Te struktury obsługują również korzystanie z nowoczesnych kontrolek i stylów Fluent z poziomu biblioteki XAML interfejsu użytkownika systemu Windows (WinUI) za pośrednictwem [wysp XAML](/windows/uwp/xaml-platform/xaml-host-controls).
 
-Składnik pulpitu systemu Windows jest częścią zestawu SDK systemu Windows .NET Core 3,0.
+Składnik pulpitu systemu Windows jest częścią zestawu SDK systemu Windows .NET Core 3.0.
 
 Nową aplikację WPF lub Windows Forms można utworzyć przy użyciu następujących `dotnet` poleceń:
 
@@ -257,7 +257,7 @@ dotnet new wpf
 dotnet new winforms
 ```
 
-Program Visual Studio 2019 dodaje **nowe szablony projektów** dla platformy .net Core 3,0 Windows Forms i WPF.
+Program Visual Studio 2019 dodaje **nowe szablony projektów** dla platformy .NET Core 3.0 Windows Forms i WPF.
 
 Aby uzyskać więcej informacji na temat sposobu przenoszenia istniejącej aplikacji .NET Framework, zobacz [port WPF projekty](../porting/wpf.md) i [projekty Windows Forms portów](../porting/winforms.md).
 
@@ -271,7 +271,7 @@ Przykład sposobu tworzenia składnika modelu COM i korzystania z niego można z
 
 ## <a name="msix-deployment---windows-desktop"></a>Wdrażanie MSIX — Windows Desktop
 
-[MSIX](https://docs.microsoft.com/windows/msix/) to nowy format pakietu aplikacji systemu Windows. Można go użyć do wdrożenia aplikacji klasycznych platformy .NET Core 3,0 w systemie Windows 10.
+[MSIX](https://docs.microsoft.com/windows/msix/) to nowy format pakietu aplikacji systemu Windows. Można go użyć do wdrożenia aplikacji klasycznych platformy .NET Core 3.0 w systemie Windows 10.
 
 [Projekt pakietu aplikacji systemu Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), dostępny w programie Visual Studio 2019, umożliwia tworzenie pakietów MSIX przy użyciu [samodzielnych](../deploying/index.md#self-contained-deployments-scd) aplikacji .NET Core.
 
@@ -336,7 +336,7 @@ Aby uzyskać więcej informacji, zobacz [Samouczek dotyczący strumieni asynchro
 
 ## <a name="ieee-floating-point-improvements"></a>Udoskonalenia zmiennoprzecinkowe IEEE
 
-Interfejsy API zmiennoprzecinkowe są aktualizowane w celu zapewnienia zgodności z [poprawką IEEE 754-2008](https://en.wikipedia.org/wiki/IEEE_754-2008_revision). Celem tych zmian jest uwidocznienie wszystkich **wymaganych** operacji i upewnienie się, że są one zgodne z specyfikacją IEEE. Aby uzyskać więcej informacji na temat ulepszeń zmiennoprzecinkowych, zobacz [udoskonalenia analizy i formatowania zmiennoprzecinkowe w wpisie na blogu programu .NET Core 3,0](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/) .
+Interfejsy API zmiennoprzecinkowe są aktualizowane w celu zapewnienia zgodności z [poprawką IEEE 754-2008](https://en.wikipedia.org/wiki/IEEE_754-2008_revision). Celem tych zmian jest uwidocznienie wszystkich **wymaganych** operacji i upewnienie się, że są one zgodne z specyfikacją IEEE. Aby uzyskać więcej informacji na temat ulepszeń zmiennoprzecinkowych, zobacz [udoskonalenia analizy i formatowania zmiennoprzecinkowe w wpisie na blogu programu .NET Core 3.0](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/) .
 
 Poprawki dotyczące analizowania i formatowania obejmują:
 
@@ -371,7 +371,7 @@ Odpowiada operacji `x`IEEE, zwraca wartość, `y`ale ze znakiem. `copySign`
 
 Użytkownicy platformy .NET mogą w dużym stopniu korzystać z [**JSON.NET**](https://www.newtonsoft.com/json) i innych popularnych bibliotek JSON, które nadal są dobrym wybórem. **JSON.NET** używa ciągów .NET jako podstawowego elementu DataType, który jest UTF-16 pod okapem.
 
-Nowa Wbudowana obsługa JSON to wysoka wydajność, niska alokacja i oparta na `Span<byte>`. Do programu .NET Core 3,0 <xref:System.Text.Json?displayProperty=nameWithType> przestrzeń nazw dodano trzy nowe główne typy powiązane z JSON. Te typy nie obsługują *jeszcze* zwykłych serializacji i deserializacji obiektu CLR (POCO).
+Nowa Wbudowana obsługa JSON to wysoka wydajność, niska alokacja i oparta na `Span<byte>`. Do programu .NET Core 3.0 <xref:System.Text.Json?displayProperty=nameWithType> przestrzeń nazw dodano trzy nowe główne typy powiązane z JSON. Te typy nie obsługują *jeszcze* zwykłych serializacji i deserializacji obiektu CLR (POCO).
 
 ### <a name="utf8jsonreader"></a>Utf8JsonReader
 
@@ -413,7 +413,7 @@ Oto przykład deserializacji ciągu JSON do obiektu. Można użyć ciągu JSON u
 
 ## <a name="interop-improvements"></a>Udoskonalenia międzyoperacyjności
 
-Program .NET Core 3,0 zwiększa natywną międzyoperacyjność interfejsu API.
+Program .NET Core 3.0 zwiększa natywną międzyoperacyjność interfejsu API.
 
 ### <a name="type-nativelibrary"></a>Wpisz: NativeLibrary
 
@@ -421,7 +421,7 @@ Program .NET Core 3,0 zwiększa natywną międzyoperacyjność interfejsu API.
 
 ### <a name="windows-native-interop"></a>Windows Native Interop
 
-System Windows oferuje bogaty natywny interfejs API w postaci prostych interfejsów API języka C, COM i WinRT. Podczas gdy platforma .NET Core obsługuje funkcję **P/Invoke**, program .net Core 3,0 dodaje możliwość **CoCreate interfejsów API modelu COM** i **aktywowania interfejsów API WinRT**. Aby zapoznać się z przykładem kodu, zobacz [Demonstracja programu Excel](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).
+System Windows oferuje bogaty natywny interfejs API w postaci prostych interfejsów API języka C, COM i WinRT. Podczas gdy platforma .NET Core obsługuje funkcję **P/Invoke**, program .NET Core 3.0 dodaje możliwość **CoCreate interfejsów API modelu COM** i **aktywowania interfejsów API WinRT**. Aby zapoznać się z przykładem kodu, zobacz [Demonstracja programu Excel](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).
 
 ## <a name="http2-support"></a>Obsługa protokołu HTTP/2
 
@@ -439,25 +439,25 @@ W wielu przypadkach podczas tworzenia aplikacji chcesz użyć nieszyfrowanego po
 
 [!CODE-csharp[Http2Context](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#AppContext)]
 
-## <a name="tls-13--openssl-111-on-linux"></a>TLS 1,3 & OpenSSL 1.1.1 w systemie Linux
+## <a name="tls-13--openssl-111-on-linux"></a>TLS 1.3 & OpenSSL 1.1.1 w systemie Linux
 
-Platforma .NET Core wykorzystuje teraz zalety [protokołu TLS 1,3 w OpenSSL 1.1.1](https://www.openssl.org/blog/blog/2018/09/11/release111/), gdy jest on dostępny w danym środowisku. Z protokołem TLS 1,3:
+Platforma .NET Core wykorzystuje teraz zalety [protokołu TLS 1.3 w OpenSSL 1.1.1](https://www.openssl.org/blog/blog/2018/09/11/release111/), gdy jest on dostępny w danym środowisku. Z protokołem TLS 1.3:
 
 - Czas połączenia jest ulepszony ze zredukowanymi przedziałami rundy między klientem i serwerem.
 - Ulepszone zabezpieczenia spowodowane usuwaniem różnych przestarzałych i niezabezpieczonych algorytmów kryptograficznych.
 
-Jeśli jest dostępny, program .NET Core 3,0 używa **OpenSSL 1.1.1**, **OpenSSL 1.1.0**lub **OpenSSL 1.0.2** w systemie Linux. Gdy **OpenSSL 1.1.1** jest dostępny, oba <xref:System.Net.Security.SslStream?displayProperty=nameWithType> typy <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> i używają **protokołu TLS 1,3** (przy założeniu, że zarówno klient, jak i serwer obsługują **protokół TLS 1,3**).
+Jeśli jest dostępny, program .NET Core 3.0 używa **OpenSSL 1.1.1**, **OpenSSL 1.1.0**lub **OpenSSL 1.0.2** w systemie Linux. Gdy **OpenSSL 1.1.1** jest dostępny, oba <xref:System.Net.Security.SslStream?displayProperty=nameWithType> typy <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> i używają **protokołu TLS 1.3** (przy założeniu, że zarówno klient, jak i serwer obsługują **protokół TLS 1.3**).
 
 >[!IMPORTANT]
->Systemy Windows i macOS nie obsługują jeszcze **protokołu TLS 1,3**. Platforma .NET Core 3,0 będzie obsługiwać **protokół TLS 1,3** w tych systemach operacyjnych, gdy będzie dostępna pomoc techniczna.
+>Systemy Windows i macOS nie obsługują jeszcze **protokołu TLS 1.3**. Platforma .NET Core 3.0 będzie obsługiwać **protokół TLS 1.3** w tych systemach operacyjnych, gdy będzie dostępna pomoc techniczna.
 
-Poniższy C# przykład 8,0 ilustruje platformę .net Core 3,0 na Ubuntu 18,10 <https://www.cloudflare.com>z:
+Poniższy C# przykład 8,0 ilustruje platformę .NET Core 3.0 na Ubuntu 18.10 <https://www.cloudflare.com>z:
 
 [!CODE-csharp[TLSExample](~/samples/snippets/core/whats-new/whats-new-in-30/cs/TLS.cs#TLS)]
 
 ## <a name="cryptography-ciphers"></a>Szyfrowanie kryptografii
 
-Program .NET 3,0 dodaje obsługę szyfrów **AES-GCM** i **AES-CCM** , implementowanych <xref:System.Security.Cryptography.AesGcm?displayProperty=nameWithType> za <xref:System.Security.Cryptography.AesCcm?displayProperty=nameWithType> pomocą i odpowiednio. Te algorytmy są [uwierzytelnianiem uwierzytelnianym przy użyciu algorytmów danych skojarzenia (AEAD)](https://en.wikipedia.org/wiki/Authenticated_encryption).
+Program .NET 3.0 dodaje obsługę szyfrów **AES-GCM** i **AES-CCM** , implementowanych <xref:System.Security.Cryptography.AesGcm?displayProperty=nameWithType> za <xref:System.Security.Cryptography.AesCcm?displayProperty=nameWithType> pomocą i odpowiednio. Te algorytmy są [uwierzytelnianiem uwierzytelnianym przy użyciu algorytmów danych skojarzenia (AEAD)](https://en.wikipedia.org/wiki/Authenticated_encryption).
 
 Poniższy kod ilustruje użycie `AesGcm` szyfru do szyfrowania i odszyfrowywania danych losowych.
 
@@ -465,7 +465,7 @@ Poniższy kod ilustruje użycie `AesGcm` szyfru do szyfrowania i odszyfrowywania
 
 ## <a name="cryptographic-key-importexport"></a>Import/Eksport klucza kryptograficznego
 
-Program .NET Core 3,0 obsługuje importowanie i eksportowanie asymetrycznych kluczy publicznych i prywatnych z formatów standardowych. Nie musisz używać certyfikatu X. 509.
+Program .NET Core 3.0 obsługuje importowanie i eksportowanie asymetrycznych kluczy publicznych i prywatnych z formatów standardowych. Nie musisz używać certyfikatu X. 509.
 
 Wszystkie typy kluczy, takie jak *RSA*, *DSA*, *ECDSA*i *ECDiffieHellman*, obsługują następujące formaty:
 
@@ -492,7 +492,7 @@ Można sprawdzać <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo?di
 
 ## <a name="serialport-for-linux"></a>Klasy SerialPort dla systemu Linux
 
-Program .NET Core 3,0 zapewnia podstawową pomoc <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> techniczną dla systemu Linux.
+Program .NET Core 3.0 zapewnia podstawową pomoc <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> techniczną dla systemu Linux.
 
 Wcześniej platforma .NET Core jest obsługiwana `SerialPort` tylko w systemie Windows.
 
@@ -500,7 +500,7 @@ Aby uzyskać więcej informacji o ograniczonej obsłudze portu szeregowego w sys
 
 ## <a name="docker-and-cgroup-memory-limits"></a>Limity pamięci Docker i cgroup
 
-Uruchamianie programu .NET Core 3,0 w systemie Linux przy użyciu platformy Docker działa lepiej z limitami pamięci cgroup. Uruchamianie kontenera Docker z limitami pamięci, na przykład z `docker run -m`, zmienia sposób działania programu .NET Core.
+Uruchamianie programu .NET Core 3.0 w systemie Linux przy użyciu platformy Docker działa lepiej z limitami pamięci cgroup. Uruchamianie kontenera Docker z limitami pamięci, na przykład z `docker run -m`, zmienia sposób działania programu .NET Core.
 
 - Domyślny rozmiar sterty modułu wyrzucania elementów bezużytecznych (GC): maksymalnie 20 MB lub 75% limitu pamięci w kontenerze.
 - Rozmiar jawny można ustawić jako liczbę bezwzględną lub procent limitu cgroup.
@@ -527,7 +527,7 @@ Pakiety GPIO obejmują interfejsy API dla urządzeń z interfejsem *GPIO*, *SPI*
 
 ## <a name="arm64-linux-support"></a>Obsługa systemu Linux ARM64
 
-Program .NET Core 3,0 dodaje obsługę ARM64 dla systemu Linux. Podstawowy przypadek użycia dla ARM64 jest obecnie z scenariuszami IoT. Aby uzyskać więcej informacji, zobacz temat [stan arm64 programu .NET Core](https://github.com/dotnet/announcements/issues/82).
+Program .NET Core 3.0 dodaje obsługę ARM64 dla systemu Linux. Podstawowy przypadek użycia dla ARM64 jest obecnie z scenariuszami IoT. Aby uzyskać więcej informacji, zobacz temat [stan arm64 programu .NET Core](https://github.com/dotnet/announcements/issues/82).
 
 [Obrazy Docker dla platformy .NET Core w systemie arm64](https://hub.docker.com/r/microsoft/dotnet/) są dostępne dla Alpine, Debian i Ubuntu.
 

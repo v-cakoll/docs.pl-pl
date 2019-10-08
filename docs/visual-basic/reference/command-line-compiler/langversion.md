@@ -1,44 +1,44 @@
 ---
-title: -langversion — (Visual Basic)
+title: -langversion (Visual Basic)
 ms.date: 03/10/2018
 helpviewer_keywords:
 - /langversion compiler option [Visual Basic]
 - langversion compiler option [Visual Basic]
 - -langversion compiler option [Visual Basic]
 ms.assetid: 59b7b0c8-2dde-4e9b-94e7-0237f7e0bafb
-ms.openlocfilehash: db2cb1eb107973e9ce60ecb0d669c677d4fa2c51
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 15f334f280c2aca83ba5b628a1137464c31c6282
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793961"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005554"
 ---
-# <a name="-langversion-visual-basic"></a>-langversion — (Visual Basic)
-Powoduje, że kompilator akceptuje tylko w przypadku składni, która znajduje się w określonej wersji języka Visual Basic.  
+# <a name="-langversion-visual-basic"></a>-langversion (Visual Basic)
+Powoduje, że kompilator akceptuje tylko składnię, która jest uwzględniona w określonej Visual Basic wersji językowej.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console  
 -langversion:version  
 ```  
   
 ## <a name="arguments"></a>Argumenty  
  `version`  
- Wymagana. Wersja języka, który ma być używany podczas kompilacji. Akceptowane wartości to `9`, `10`, `11`, `12`, `14`, `15`, `15.3`, `15.5`, `default` i `latest`.
+ Wymagany. Wersja języka do użycia podczas kompilacji. Akceptowane wartości to `9`, `10`, `11`, `12`, `14`, `15`, `15.3`, `15.5`, `default` i `latest`.
 
- Dowolnej liczby całkowite mogą być również określone przy użyciu `.0` jako wersję pomocniczą, na przykład `11.0`.
+ Wszystkie liczby całkowite można także określić przy użyciu `.0` jako wersji pomocniczej, na przykład `11.0`.
 
- Można wyświetlić listę wszystkich możliwych wartości, określając `-langversion:?` w wierszu polecenia.  
+ Możesz wyświetlić listę wszystkich możliwych wartości, określając `-langversion:?` w wierszu polecenia.  
   
 ## <a name="remarks"></a>Uwagi  
- `-langversion` Opcja określa, jakie składni, kompilator akceptuje. Na przykład jeśli określisz, że wersja językowa jest 9.0, kompilator generuje błędy składni, która jest prawidłowy tylko w wersji 10.0 lub nowszy.  
+ Opcja `-langversion` określa składnię akceptowaną przez kompilator. Na przykład jeśli określisz, że wersja językowa to 9,0, kompilator generuje błędy dla składni, która jest prawidłowa tylko w wersji 10,0 lub nowszej.  
   
- Można użyć tej opcji, podczas tworzenia aplikacji, że kierują do różnych wersji programu .NET Framework. Na przykład jeśli są przeznaczone dla .NET Framework 3.5, można tę opcję, aby upewnić się, że nie używasz składnię języka w wersji 10.0.  
+ Tej opcji można użyć podczas tworzenia aplikacji przeznaczonych dla różnych wersji .NET Framework. Na przykład jeśli jesteś celem .NET Framework 3,5, możesz użyć tej opcji, aby upewnić się, że nie używasz składni z wersji językowej 10,0.  
   
- Możesz ustawić `-langversion` bezpośrednio tylko przy użyciu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [przeznaczonych dla określonej wersji programu .NET Framework](/visualstudio/ide/targeting-a-specific-dotnet-framework-version).  
+ Można ustawić wartość `-langversion` bezpośrednio tylko przy użyciu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [Określanie konkretnej wersji .NET Framework](/visualstudio/ide/targeting-a-specific-dotnet-framework-version).  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `sample.vb` 9.0 Visual Basic.  
+ Poniższy kod kompiluje `sample.vb` dla Visual Basic 9,0.  
   
 ```console  
 vbc -langversion:9.0 sample.vb  
@@ -46,6 +46,6 @@ vbc -langversion:9.0 sample.vb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Określanie konkretnej wersji programu .NET Framework jako docelowej](/visualstudio/ide/targeting-a-specific-dotnet-framework-version)

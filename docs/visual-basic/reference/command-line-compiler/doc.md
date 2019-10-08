@@ -6,21 +6,25 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-ms.openlocfilehash: c3bff4e44ddee1c4dfb6ab366464ad54e991b595
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3da049b912d791f26814bb4b6cbb70998803726a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624281"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005650"
 ---
 # <a name="-doc"></a>-doc
 Przetwarza komentarze dokumentacji do pliku XML.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console  
 -doc[+ | -]  
-' -or-  
+```
+
+lub  
+
+```console
 -doc:file  
 ```  
   
@@ -28,32 +32,32 @@ Przetwarza komentarze dokumentacji do pliku XML.
   
 |Termin|Definicja|  
 |---|---|  
-|`+` &#124; `-`|Opcjonalna. Określanie +, lub po prostu `-doc`, powoduje, że kompilator do generowania informacji o dokumentacji i umieść go w pliku XML. Określanie `-` jest odpowiednikiem nie został podany `-doc`, powodując Brak informacji o dokumentacji, ma zostać utworzony.|  
-|`file`|Jeśli wymagane `-doc:` jest używany. Określa wyjściowy plik XML, który jest wypełniana przy użyciu komentarzy z plików kodu źródłowego, kompilacji. Jeśli nazwa pliku zawiera spację, należy ująć nazwę ze znakami cudzysłowu ("").|  
+|`+` &#124; `-`|Opcjonalny. Określenie wartości + lub po prostu `-doc` powoduje, że kompilator generuje informacje dokumentacji i umieszcza je w pliku XML. Określenie `-` jest odpowiednikiem nieokreślenia `-doc`, co nie powoduje utworzenia informacji o dokumentacji.|  
+|`file`|Wymagane, jeśli użyto `-doc:`. Określa wyjściowy plik XML, który jest wypełniany komentarzami z plików kodu źródłowego kompilacji. Jeśli nazwa pliku zawiera spację, należy ująć ją w cudzysłów ("").|  
   
 ## <a name="remarks"></a>Uwagi  
- `-doc` Opcji kontrolki, czy kompilator generuje plik XML zawierający komentarze dokumentacji. Jeśli używasz `-doc:file` składni `file` parametr określa nazwę pliku XML. Jeśli używasz `-doc` lub `-doc+`, kompilator przyjmuje nazwę pliku XML z pliku wykonywalnego lub biblioteki, która tworzy kompilator. Jeśli używasz `-doc-` lub nie określaj `-doc` opcja, kompilator nie tworzy pliku XML.  
+ Opcja `-doc` Określa, czy kompilator generuje plik XML zawierający komentarze dokumentacji. Jeśli używasz składni `-doc:file`, parametr `file` określa nazwę pliku XML. Jeśli używasz `-doc` lub `-doc+`, kompilator Pobiera nazwę pliku XML z pliku wykonywalnego lub biblioteki tworzonego przez kompilator. Jeśli używasz `-doc-` lub nie określisz opcji `-doc`, kompilator nie utworzy pliku XML.  
   
- W plikach kodu źródłowego komentarze dokumentacji może poprzedzać następujące definicje:  
+ W plikach kodu źródłowego Komentarze do dokumentacji mogą poprzedzać następujące definicje:  
   
-- Zdefiniowane przez użytkownika typy, takie jak [klasy](../../../visual-basic/language-reference/statements/class-statement.md) lub [interfejsu](../../../visual-basic/language-reference/statements/interface-statement.md)  
+- Typy zdefiniowane przez użytkownika, takie jak [Klasa](../../../visual-basic/language-reference/statements/class-statement.md) lub [interfejs](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
-- Elementy członkowskie, takie jak pola, [zdarzeń](../../../visual-basic/language-reference/statements/event-statement.md), [właściwość](../../../visual-basic/language-reference/statements/property-statement.md), [funkcja](../../../visual-basic/language-reference/statements/function-statement.md), lub [podprocedury](../../../visual-basic/language-reference/statements/sub-statement.md).  
+- Elementy członkowskie, takie jak pole, [zdarzenie](../../../visual-basic/language-reference/statements/event-statement.md), [Właściwość](../../../visual-basic/language-reference/statements/property-statement.md), [Funkcja](../../../visual-basic/language-reference/statements/function-statement.md)lub [podprocedura](../../../visual-basic/language-reference/statements/sub-statement.md).  
   
- Wygenerowany plik XML za pomocą programu Visual Studio [IntelliSense](/visualstudio/ide/using-intellisense) funkcji, niech nazwę pliku pliku XML, być taka sama jak zestawu mają być obsługiwane. Upewnij się, że plik XML jest w tym samym katalogu co zestaw, dzięki czemu w przypadku zestawu odwołuje się do projektu programu Visual Studio, pliku XML, który znajduje się także. Pliki dokumentacji XML nie są wymagane, aby technologia IntelliSense działała dla kodu w projekcie lub w obrębie projektów odwołuje się projekt.  
+ Aby użyć wygenerowanego pliku XML z funkcją [IntelliSense](/visualstudio/ide/using-intellisense) programu Visual Studio, Zezwól, aby nazwa pliku XML była taka sama jak zestaw, który ma być obsługiwany. Upewnij się, że plik XML znajduje się w tym samym katalogu, co zestaw, aby w przypadku odwołania do zestawu w projekcie programu Visual Studio również znaleźć plik. XML. Pliki dokumentacji XML nie są wymagane, aby funkcja IntelliSense mogła korzystać z kodu w projekcie lub w obrębie projektów, do których odwołuje się projekt.  
   
- Jeśli kompilujesz z `/target:module`, plik XML zawiera tagi `<assembly></assembly>`. Te znaczniki, określ nazwę pliku zawierającego manifest zestawu dla pliku wyjściowego kompilacji.  
+ Chyba że kompilujesz z `/target:module`, plik XML zawiera Tagi `<assembly></assembly>`. Te znaczniki określają nazwę pliku zawierającego manifest zestawu dla pliku wyjściowego kompilacji.  
   
- Zobacz [tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/index.md) sposobów generować dokumentację z komentarzy w kodzie.  
+ Zobacz [Tagi komentarzy XML](../../../visual-basic/language-reference/xmldoc/index.md) , aby poznać sposoby generowania dokumentacji z komentarzy w kodzie.  
   
-|Aby ustawić - dokumentu w programie Visual Studio zintegrowane środowisko projektowe|  
+|Aby ustawić doc w zintegrowanym środowisku programistycznym programu Visual Studio|  
 |---|  
-|1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**. <br />2.  Kliknij przycisk **skompilować** kartę.<br />3.  Ustaw wartość w **soubor dokumentace XML do generowania** pole.|  
+|1. zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**. <br />2. Kliknij kartę **kompilacja** .<br />3. Ustaw wartość w polu **Generuj plik dokumentacji XML** .|  
   
 ## <a name="example"></a>Przykład  
- Zobacz [dokumentowanie kodu za pomocą XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md) dla próbki.  
+ Zobacz [dokumentowanie kodu za pomocą XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md) dla przykładu.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Dokumentowanie kodu za pomocą XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)

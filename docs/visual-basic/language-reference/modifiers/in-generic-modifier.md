@@ -1,5 +1,5 @@
 ---
-title: In (modyfikator ogólny) (Visual Basic)
+title: In (modyfikator ogólny) — Visual Basic
 ms.date: 07/20/2015
 f1_keywords:
 - vb.VarianceIn
@@ -7,46 +7,52 @@ helpviewer_keywords:
 - contravariance, In keyword [Visual Basic]
 - In keyword [Visual Basic]
 ms.assetid: 59bb13c5-fe96-42b8-8286-86293d1661c5
-ms.openlocfilehash: d8d503f0814a89c977cdc208eced026b2d8cb1fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c0f7d454767112e1e309af81407b5fdef22eee9
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802476"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004870"
 ---
 # <a name="in-generic-modifier-visual-basic"></a>In (modyfikator ogólny) (Visual Basic)
-Dla parametrów typu genetycznego `In` — słowo kluczowe Określa, że parametr typu jest kontrawariantny.  
+
+W przypadku parametrów typu ogólnego słowo kluczowe `In` Określa, że parametr typu jest kontrawariantne.
+
+## <a name="remarks"></a>Uwagi
+
+Kontrawariancja umożliwia użycie mniej pochodnego typu niż określony przez parametr generyczny. Pozwala to na niejawną konwersję klas, które implementują interfejsy wariantów i niejawną konwersję typów delegatów.
+
+Aby uzyskać więcej informacji, zobacz [Kowariancja i kontrawariancja](../../programming-guide/concepts/covariance-contravariance/index.md).
+
+## <a name="rules"></a>Przepisy
+
+Możesz użyć słowa kluczowego `In` w interfejsach ogólnych i delegatach.
   
-## <a name="remarks"></a>Uwagi  
- Kontrawariancja umożliwia używania typu mniej pochodnego niż określona przez parametr ogólny. Umożliwia to niejawna konwersja klasy, które implementują interfejsów typu variant i niejawnej konwersji typów obiektów delegowanych.  
-  
- Aby uzyskać więcej informacji, zobacz [kowariancji i kontrawariancji](../../programming-guide/concepts/covariance-contravariance/index.md).  
-  
-## <a name="rules"></a>reguły  
- Możesz użyć `In` — słowo kluczowe w interfejsach ogólnych i delegatach.  
-  
- Parametr typu mogą być deklarowane kontrawariantnego w ogólny interfejs lub delegat, jeśli jest używany tylko jako typ argumentów metody i nie jest używana jako zwracany typ metody. `ByRef` Parametry nie mogą być kowariantny lub kontrawariantny.  
-  
- Kowariancja i kontrawariancja są obsługiwane dla typów odwołań i nie jest obsługiwane dla typów wartości.  
-  
- W języku Visual Basic nie można zadeklarować zdarzenia w interfejsach kontrawariantnego bez określania typu delegata. Ponadto kontrawariantnego interfejsy nie mogą zagnieżdżać klas, wyliczeń lub struktur, ale mogą być zagnieżdżone interfejsów.  
-  
-## <a name="behavior"></a>Zachowanie  
- Interfejs, który ma kontrawariantnego parametru typu umożliwia jego metod przyjmowały argumenty mniej pochodne typy niż określony przez parametr typu interfejsu. Na przykład ponieważ w programie .NET Framework 4 w <xref:System.Collections.Generic.IComparer%601> interfejsu typu T jest kontrawariantny, można przypisać obiektu `IComparer(Of Person)` typ obiektu `IComparer(Of Employee)` typu bez przy użyciu dowolnej metody konwersji specjalne, jeśli `Person` dziedziczy `Employee`.  
-  
- Kontrawariantnego delegata można przypisać inną delegata tego samego typu, ale mniej pochodnego parametr typu ogólnego.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak deklarować, rozszerzanie i implementować interfejs ogólny kontrawariantny. Pokazuje również, jak można użyć niejawna konwersja dla klas, które implementują ten interfejs.  
-  
- [!code-vb[vbVarianceKeywords#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#1)]  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak deklarować, Utwórz wystąpienie i wywołania to delegat generyczny kontrawariantny. Pokazuje również, jak można niejawnie przekonwertować typu delegata.  
-  
- [!code-vb[vbVarianceKeywords#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#2)]  
-  
+Parametr typu może być zadeklarowany jako kontrawariantne w interfejsie generycznym lub delegatze, jeśli jest używany tylko jako typ argumentów metody i nie jest używany jako zwracany typ metody. parametry `ByRef` nie mogą być typu współvariant ani kontrawariantne.
+
+Kowariancja i kontrawariancja są obsługiwane dla typów referencyjnych i nie są obsługiwane w przypadku typów wartości.
+
+W Visual Basic nie można zadeklarować zdarzeń w interfejsach kontrawariantne bez określania typu delegata. Interfejsy kontrawariantne nie mogą również zawierać klas zagnieżdżonych, wyliczeniowych ani struktur, ale mogą mieć zagnieżdżone interfejsy.
+
+## <a name="behavior"></a>Zachowanie
+
+Interfejs, który ma parametr typu kontrawariantne, umożliwia jej metodom akceptowanie argumentów o mniejszych typach pochodnych niż te określone przez parametr typu interfejsu. Na przykład, ponieważ w .NET Framework 4, w interfejsie <xref:System.Collections.Generic.IComparer%601> typ T to kontrawariantne, można przypisać obiekt typu `IComparer(Of Person)` do obiektu typu `IComparer(Of Employee)` bez użycia żadnych specjalnych metod konwersji, jeśli `Employee` dziedziczy po `Person`.
+
+Delegatowi kontrawariantne można przypisać inny delegat tego samego typu, ale przy użyciu mniej pochodnego parametru typu ogólnego.
+
+## <a name="example---contravariant-generic-interface"></a>Przykład — kontrawariantne Generic Interface
+
+Poniższy przykład pokazuje, jak zadeklarować, zwiększyć i zaimplementować interfejs ogólny kontrawariantne. Pokazano również, jak można użyć niejawnej konwersji dla klas implementujących ten interfejs.
+
+[!code-vb[vbVarianceKeywords#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#1)]
+
+## <a name="example---contravariant-generic-delegate"></a>Przykład — Delegat ogólny kontrawariantne
+
+Poniższy przykład pokazuje, jak zadeklarować, utworzyć wystąpienie i wywołać delegata generycznego kontrawariantne. Pokazuje również, jak można niejawnie skonwertować typ delegata.
+
+[!code-vb[vbVarianceKeywords#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#2)]
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Wariancje w interfejsach ogólnych](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [limit](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+- [Określoną](out-generic-modifier.md)

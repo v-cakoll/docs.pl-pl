@@ -1,5 +1,5 @@
 ---
-title: -optionstrict —
+title: -optionstrict
 ms.date: 07/20/2015
 f1_keywords:
 - -optionstrict
@@ -8,49 +8,49 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: 22423877325806e6e6abe535ad98530eb924780e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d281fe07754f0471f8d6c0e31cf3ea890060504
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625909"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005352"
 ---
-# <a name="-optionstrict"></a>-optionstrict —
-Wymusza semantykę typów ścisłych w celu ograniczenia niejawnych konwersji typów.  
+# <a name="-optionstrict"></a>-optionstrict
+Wymusza ścisłą semantykę typu w celu ograniczenia niejawnych konwersji typów.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console  
 -optionstrict[+ | -]  
 -optionstrict[:custom]  
 ```  
   
 ## <a name="arguments"></a>Argumenty  
  `+` &#124; `-`  
- Opcjonalna. `-optionstrict+` Opcja ogranicza niejawna konwersja typu. Wartość domyślna tej opcji to `-optionstrict-`. `-optionstrict+` Opcja jest taka sama jak `-optionstrict`. Można użyć obu tych opcji dla semantyka typów ograniczająca.  
+ Opcjonalny. Opcja `-optionstrict+` ogranicza niejawną konwersję typu. Wartość domyślna dla tej opcji to `-optionstrict-`. Opcja `-optionstrict+` jest taka sama jak `-optionstrict`. Można użyć obu typów jako nieograniczającej semantyki typu.  
   
  `custom`  
- Wymagana. Ostrzegaj, gdy nie są przestrzegane ścisłą semantykę języka.  
+ Wymagany. Ostrzegaj w przypadku nieprzestrzegania ścisłej semantyki języka.  
   
 ## <a name="remarks"></a>Uwagi  
- Gdy `-optionstrict+` obowiązuje, tylko konwersje rozszerzające możliwe niejawnie. Niejawne zawężanie konwersji typów, takich jak przypisywanie `Decimal` typ obiektu do obiektu typu Liczba całkowita, są zgłaszane jako błędy.  
+ Gdy `-optionstrict+`, tylko rozszerzone konwersje typów mogą być wykonywane niejawnie. Niejawne konwersje typów, takie jak przypisanie obiektu typu `Decimal` do obiektu typu Integer, są raportowane jako błędy.  
   
- Aby wygenerować ostrzeżeń dotyczących niejawnych konwersji zawężających typu, należy użyć `-optionstrict:custom`. Użyj `-nowarn:numberlist` ignorowania ostrzeżeń dotyczących określonego i `-warnaserror:numberlist` do traktowania określonego ostrzeżenia jako błędy.  
+ Aby wygenerować ostrzeżenia dla niejawnych konwersji typów zawężających, użyj `-optionstrict:custom`. Użyj `-nowarn:numberlist` do ignorowania określonych ostrzeżeń i `-warnaserror:numberlist` do traktowania określonych ostrzeżeń jako błędów.  
   
-### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>Aby ustawić - optionstrict — w środowisku IDE programu Visual Studio  
+### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>Aby ustawić-optionstrict w środowisku IDE programu Visual Studio  
   
-1. Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości.**   
+1. Zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **właściwości.**   
   
-2. Kliknij przycisk **skompilować** kartę.  
+2. Kliknij kartę **kompilacja** .  
   
-3. Zmodyfikuj wartość w **Option Strict** pole.  
+3. Zmodyfikuj wartość w polu **Option Strict** .  
   
-### <a name="to-set--optionstrict-programmatically"></a>Aby programowo ustawić - optionstrict —  
+### <a name="to-set--optionstrict-programmatically"></a>Aby programowo ustawić — optionstrict  
   
-- Zobacz [Option Strict — instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
+- Zobacz [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `Test.vb` semantykę typów ścisłych w użyciu.  
+ Poniższy kod kompiluje `Test.vb` przy użyciu semantyki typu Strict.  
   
 ```console
 vbc -optionstrict+ test.vb  
@@ -58,7 +58,7 @@ vbc -optionstrict+ test.vb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
 - [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)

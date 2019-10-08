@@ -7,19 +7,19 @@ helpviewer_keywords:
 - optimization [Visual Basic], enabling
 - -optimize compiler option [Visual Basic]
 ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
-ms.openlocfilehash: eb84e0a7038e7ff8cb399ac7222b6ac1661b5bc1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8daf4a49123623b6470bc3c6281869f1b9b3d0f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788976"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005372"
 ---
 # <a name="-optimize"></a>-optimize
 Włącza lub wyłącza optymalizacje kompilatora.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console  
 -optimize[ + | - ]  
 ```  
   
@@ -27,21 +27,21 @@ Włącza lub wyłącza optymalizacje kompilatora.
   
 |Termin|Definicja|  
 |---|---|  
-|`+` &#124; `-`|Opcjonalna. `-optimize-` Opcja wyłącza optymalizacje kompilatora. `-optimize+` Opcja włącza optymalizacje. Domyślnie są wyłączone optymalizacje.|  
+|`+` &#124; `-`|Opcjonalny. Opcja `-optimize-` wyłącza optymalizacje kompilatora. Opcja `-optimize+` umożliwia optymalizacje. Optymalizacje są domyślnie wyłączone.|  
   
 ## <a name="remarks"></a>Uwagi  
- Plik wyjściowy był optymalizacje kompilatora, mniejszy, szybszy i bardziej wydajne. Jednakże, ponieważ optymalizacje powoduje modyfikacji kodu w pliku wyjściowym `-optimize+` może utrudnić debugowanie.  
+ Optymalizacje kompilatora sprawiają, że plik wyjściowy jest mniejszy, szybszy i bardziej wydajny. Jednakże, ponieważ optymalizacje powodują zmianę układu kodu w pliku wyjściowym, `-optimize+` może utrudniać debugowanie.  
   
- Wszystkie moduły, wygenerowane za pomocą `-target:module` dla zestawu musi używać tego samego `-optimize` ustawienia zgodnie z zestawu. Aby uzyskać więcej informacji, zobacz [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).  
+ Wszystkie moduły wygenerowane z `-target:module` dla zestawu muszą używać tych samych ustawień `-optimize` jako zestawu. Aby uzyskać więcej informacji, zobacz [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).  
   
- Można połączyć `-optimize` i `-debug` opcje.  
+ Można połączyć opcje `-optimize` i `-debug`.  
   
-|Aby ustawić - optymalizacji w programie Visual Studio zintegrowanego środowiska programistycznego|  
+|Aby ustawić-optymalizować w zintegrowanym środowisku programistycznym programu Visual Studio|  
 |---|  
-|1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**.<br />     <br />2.  Kliknij przycisk **skompilować** kartę.<br />3.  Kliknij przycisk **zaawansowane** przycisku.<br />4.  Modyfikowanie **Włącz optymalizacje** pole wyboru.|  
+|1. zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**.<br />     <br />2. Kliknij kartę **kompilacja** .<br />3. kliknij przycisk **Zaawansowane** .<br />4. Zmodyfikuj pole wyboru **Włącz optymalizacje** .|  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `T2.vb` i umożliwia optymalizacje kompilatora.  
+ Poniższy kod kompiluje `T2.vb` i włącza optymalizacje kompilatora.  
   
 ```console
 vbc t2.vb -optimize  
@@ -49,7 +49,7 @@ vbc t2.vb -optimize
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-Debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)

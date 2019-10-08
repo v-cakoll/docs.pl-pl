@@ -7,35 +7,35 @@ helpviewer_keywords:
 - Continue statement [Visual Basic]
 - loops, transferring to next iteration
 ms.assetid: 3ad00103-358b-4af3-a3a8-1b9ea0e995d3
-ms.openlocfilehash: 5523be69f2901851c86f6c0263548e3577507ff9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ee5fb19db6eafeb7e4bed12935d0b950d6368d6
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638249"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005106"
 ---
 # <a name="continue-statement-visual-basic"></a>Continue — Instrukcja (Visual Basic)
-Kontrolka transferu bezpośrednio do następnej iteracji pętli.  
+Natychmiast przenosi kontrolę do następnej iteracji pętli.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 Continue { Do | For | While }  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Można przenieść z wewnątrz `Do`, `For`, lub `While` pętli do następnej iteracji pętli tego. Kontrola przechodzi bezpośrednio do testu warunek pętli, który jest odpowiednikiem przesyłania do `For` lub `While` instrukcji lub `Do` lub `Loop` instrukcji, która zawiera `Until` lub `While` klauzuli.  
+ Można dokonać transferu z wewnątrz pętli `Do`, `For` lub `While` do następnej iteracji tej pętli. Kontrolka natychmiast przechodzi do testu warunku pętli, który jest równoważny do przenoszenia do instrukcji `For` lub `While` lub do instrukcji `Do` lub `Loop`, która zawiera klauzulę `Until` lub `While`.  
   
- Możesz użyć `Continue` w dowolnym miejscu w pętli, która umożliwia transfer. Zasady umożliwiające przekazywanie sterowania są takie same jak za pomocą [instrukcji GoTo](../../../visual-basic/language-reference/statements/goto-statement.md).  
+ Można użyć `Continue` w dowolnej lokalizacji w pętli, która umożliwia transfery. Reguły zezwalające na transfer kontroli są takie same jak w przypadku [instrukcji goto](../../../visual-basic/language-reference/statements/goto-statement.md).  
   
- Na przykład, jeśli pętla jest całkowicie zawarte w ramach `Try` bloku, `Catch` bloku lub `Finally` bloku, możesz użyć `Continue` na przesyłanie wyjścia z pętli. Jeśli z drugiej strony, `Try`... `End Try` struktury jest zawarty w pętli, nie można użyć `Continue` Aby przekazać sterowanie z `Finally` bloku i służy do przeniesienia poza `Try` lub `Catch` zablokować tylko wtedy, gdy przeniesiesz całkowicie z `Try`... `End Try` struktury.  
+ Na przykład jeśli pętla jest całkowicie zawarta w bloku `Try`, blok `Catch` lub blok `Finally`, można użyć `Continue` do przetransferowania z pętli. Jeśli z drugiej strony, struktura `Try`... `End Try` jest zawarta w pętli, nie można użyć `Continue` do transferowania kontroli z bloku `Finally` i można jej użyć do przetransferowania z `Try` lub `Catch` bloków tylko wtedy, gdy transfer jest całkowicie z @no_ Struktura _T-6... `End Try`.  
   
- Jeśli na przykład masz zagnieżdżonej pętli tego samego typu `Do` pętli w innym `Do` pętli, `Continue Do` instrukcji przejdzie do następnej iteracji najbardziej wewnętrzną funkcją `Do` pętli, która go zawiera. Nie można użyć `Continue` aby przejść do następnej iteracji pętli zawierającego tego samego typu.  
+ Jeśli istnieją zagnieżdżone pętle tego samego typu, na przykład pętla `Do` w innej pętli `Do`, instrukcja `Continue Do` przeskakuje do następnej iteracji wewnętrznej pętli `Do`, która ją zawiera. Nie można użyć `Continue`, aby przejść do następnej iteracji zawierającej pętlę tego samego typu.  
   
- Jeśli na przykład masz zagnieżdżonej pętli różnych typów, `Do` pętli w ramach `For` pętli, możesz przejść do następnej iteracji pętli albo przy użyciu `Continue Do` lub `Continue For`.  
+ Jeśli istnieją zagnieżdżone pętle różnych typów, na przykład pętla `Do` w pętli `For`, można przejść do następnej iteracji każdej pętli, używając `Continue Do` lub `Continue For`.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu wykorzystuje `Continue While` instrukcję, aby przejść do następnej kolumny tablicy, jeśli dzielnik jest równa zero. `Continue While` Znajduje się wewnątrz `For` pętli. Przesyłania do `While col < lastcol` instrukcji, co jest kolejną iterację najbardziej wewnętrzną funkcją `While` pętli, która zawiera `For` pętli.  
+ Poniższy przykład kodu używa instrukcji `Continue While`, aby przejść do następnej kolumny tablicy, Jeśli dzielnik jest równy zero. @No__t-0 jest wewnątrz pętli `For`. Przesyła do `While col < lastcol` instrukcji, która jest następną iteracją wewnętrznej pętli `While`, która zawiera pętlę `For`.  
   
  [!code-vb[VbVbalrStatements#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#14)]  
   

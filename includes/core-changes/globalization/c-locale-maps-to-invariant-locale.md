@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9e9e443be9ea51d214e95c676fc28f0d8790af8b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: d2f24ab746c425199b5a3e0c79835da372fe8e14
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117189"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002901"
 ---
 ### <a name="c-locale-maps-to-the-invariant-locale"></a>Ustawienia regionalne "C" są mapowane na niezmienne ustawienia regionalne
 
@@ -18,7 +18,7 @@ Mapowanie "C" na kulturę en_US_POSIX spowodowało pomyłkę klienta, ponieważ 
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
-.NET Core 3.0
+3.0
 
 ### <a name="recommended-action"></a>Zalecana akcja
 

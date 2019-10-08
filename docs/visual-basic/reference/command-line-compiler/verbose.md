@@ -6,34 +6,34 @@ helpviewer_keywords:
 - -verbose compiler option [Visual Basic]
 - /verbose compiler option [Visual Basic]
 ms.assetid: d1aec0c1-0261-421d-9adc-5b13756100be
-ms.openlocfilehash: 5b3899462af7c4aa8e0f77377a8d7485975f9867
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8c5bc1d2ce331b8fe9461f91d64fbeab5a070b59
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937259"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004971"
 ---
 # <a name="-verbose"></a>-verbose
 Powoduje, że kompilator tworzy pełny stan i komunikaty o błędach.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console  
 -verbose[+ | -]  
 ```  
   
 ## <a name="arguments"></a>Argumenty  
  `+` &#124; `-`  
- Opcjonalny. Określanie `-verbose` jest takie samo jak określanie `-verbose+`, co powoduje, że kompilator emituje pełne komunikaty. Wartość domyślna dla tej opcji to `-verbose-`.  
+ Opcjonalny. Określanie `-verbose` jest taka sama jak określanie `-verbose+`, co powoduje, że kompilator emituje pełne komunikaty. Wartość domyślna dla tej opcji to `-verbose-`.  
   
 ## <a name="remarks"></a>Uwagi  
- `-verbose` Opcja wyświetla informacje o całkowitej liczbie błędów wydanych przez kompilator, raporty, które zestawy są ładowane przez moduł, i wyświetla pliki, które są obecnie kompilowane.  
+ Opcja `-verbose` wyświetla informacje o całkowitej liczbie błędów wydanych przez kompilator, raporty, które zestawy są ładowane przez moduł, i wyświetla pliki, które są obecnie kompilowane.  
   
 > [!NOTE]
-> `-verbose` Opcja jest niedostępna w środowisku deweloperskim programu Visual Studio. jest ona dostępna tylko podczas kompilowania z wiersza polecenia.  
+> Opcja `-verbose` nie jest dostępna w środowisku deweloperskim programu Visual Studio. jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `In.vb` i kieruje kompilator, aby wyświetlić pełne informacje o stanie.  
+ Poniższy kod kompiluje `In.vb` i instruuje kompilator, aby wyświetlał pełne informacje o stanie.  
   
 ```console  
 vbc -verbose in.vb  

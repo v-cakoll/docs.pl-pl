@@ -1,5 +1,5 @@
 ---
-title: -vbruntime —
+title: -vbruntime
 ms.date: 03/13/2018
 f1_keywords:
 - vbruntime
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - -vbruntime compiler option [Visual Basic]
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
-ms.openlocfilehash: 56ea692d6e65d94c497fbc9406e03b40648c55a2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8c7789c6af7b82ecb40ecd73d09f64aa1da3fd4b
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663500"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005055"
 ---
-# <a name="-vbruntime"></a>-vbruntime —
-Określa, czy kompilator powinien kompilować się bez odwołania do biblioteki środowiska uruchomieniowego Visual Basic lub odwołanie do biblioteki środowiska uruchomieniowego określonych.  
+# <a name="-vbruntime"></a>-vbruntime
+Określa, że kompilator ma kompilować bez odwołania do biblioteki środowiska uruchomieniowego Visual Basic lub z odwołaniem do określonej biblioteki środowiska uruchomieniowego.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console  
 -vbruntime:{ - | + | * | path }  
 ```  
   
@@ -30,65 +30,65 @@ Określa, czy kompilator powinien kompilować się bez odwołania do biblioteki 
  Kompiluj bez odwołania do biblioteki środowiska uruchomieniowego Visual Basic.  
   
  \+  
- Skompiluj z odwołaniem do domyślnej biblioteki środowiska uruchomieniowego Visual Basic.  
+ Kompiluj z odwołaniem do domyślnej biblioteki środowiska uruchomieniowego Visual Basic.  
   
  \*  
- Skompilować bez odwołania do biblioteki środowiska uruchomieniowego Visual Basic, a następnie osadź podstawowe funkcje z biblioteki środowiska uruchomieniowego Visual Basic w zestawie.  
+ Kompiluj bez odwołania do biblioteki środowiska uruchomieniowego Visual Basic i Osadź podstawowe funkcje z biblioteki środowiska uruchomieniowego Visual Basic do zestawu.  
   
  `path`  
- Skompiluj z odwołaniem do określonej biblioteki (DLL).  
+ Kompiluj z odwołaniem do określonej biblioteki (DLL).  
   
 ## <a name="remarks"></a>Uwagi  
- `-vbruntime` — Opcja kompilatora umożliwia określenie, czy kompilator powinien kompilować się bez odwołania do biblioteki środowiska uruchomieniowego Visual Basic. W przypadku kompilacji bez odwołania do biblioteki środowiska uruchomieniowego Visual Basic, błędy lub ostrzeżenia są rejestrowane w konstrukcji kodu lub języka, które generuje wywołanie pomocnika środowiska uruchomieniowego języka Visual Basic. (A *pomocnika środowiska uruchomieniowego Visual Basic* jest funkcją zdefiniowaną w pliku Microsoft.VisualBasic.dll, która jest wywoływana w czasie wykonywania do wykonania określonego języka semantycznego.)  
+ Opcja kompilatora `-vbruntime` pozwala określić, że kompilator ma kompilować bez odwołania do biblioteki środowiska uruchomieniowego Visual Basic. Jeśli kompilujesz bez odniesienia do biblioteki środowiska uruchomieniowego Visual Basic, błędy lub ostrzeżenia są rejestrowane dla kodu lub konstrukcje języka, które generują wywołanie do pomocnika Visual Basic środowiska uruchomieniowego. ( *Pomocnik środowiska uruchomieniowego Visual Basic* jest funkcją zdefiniowaną w pliku Microsoft. VisualBasic. dll, która jest wywoływana w czasie wykonywania, aby wykonać określoną semantykę języka).  
   
- `-vbruntime+` Opcja zapewnia takie samo zachowanie, który występuje, jeśli nie `-vbruntime` określono przełącznik. Możesz użyć `-vbruntime+` możliwości zastąpienia poprzedniego `-vbruntime` przełączników.  
+ Opcja `-vbruntime+` daje takie samo zachowanie, które występuje, jeśli nie określono przełącznika `-vbruntime`. Możesz użyć opcji `-vbruntime+`, aby zastąpić poprzednie przełączniki `-vbruntime`.  
   
- Większość obiektów `My` typu są niedostępne, gdy używasz `-vbruntime-` lub `-vbruntime:path` opcje.  
+ Większość obiektów typu `My` jest niedostępna w przypadku korzystania z opcji `-vbruntime-` lub `-vbruntime:path`.  
   
-## <a name="embedding-visual-basic-runtime-core-functionality"></a>Osadzanie środowiska uruchomieniowego Visual Basic podstawowe funkcje  
- `-vbruntime*` Opcja umożliwia kompilowanie bez odwołania do biblioteki środowiska uruchomieniowego. Zamiast tego podstawowe funkcje z biblioteki środowiska uruchomieniowego Visual Basic jest osadzony w zestawie użytkownika. Można użyć tej opcji, jeśli aplikacja działa na platformach, które nie zawierają środowisko uruchomieniowe języka Visual Basic.  
+## <a name="embedding-visual-basic-runtime-core-functionality"></a>Osadzanie podstawowych funkcji środowiska uruchomieniowego Visual Basic  
+ Opcja `-vbruntime*` umożliwia skompilowanie bez odwołania do biblioteki środowiska uruchomieniowego. Zamiast tego, podstawowe funkcje z biblioteki środowiska uruchomieniowego Visual Basic są osadzane w zestawie użytkownika. Tej opcji można użyć, jeśli aplikacja działa na platformach, które nie zawierają środowiska uruchomieniowego Visual Basic.  
   
- Następujące składniki środowiska uruchomieniowego są osadzone:  
+ Następujące elementy członkowskie środowiska uruchomieniowego są osadzone:  
   
-- <xref:Microsoft.VisualBasic.CompilerServices.Conversions> Klasa  
+- Klasa <xref:Microsoft.VisualBasic.CompilerServices.Conversions>  
   
-- <xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29> — Metoda  
+- Metoda <xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29>  
   
-- <xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29> — Metoda  
+- Metoda <xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29>  
   
-- <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29> — Metoda  
+- Metoda <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29>  
   
-- <xref:Microsoft.VisualBasic.Constants.vbBack> Stałe  
+- stała <xref:Microsoft.VisualBasic.Constants.vbBack>  
   
-- <xref:Microsoft.VisualBasic.Constants.vbCr> Stałe  
+- stała <xref:Microsoft.VisualBasic.Constants.vbCr>  
   
-- <xref:Microsoft.VisualBasic.Constants.vbCrLf> Stałe  
+- stała <xref:Microsoft.VisualBasic.Constants.vbCrLf>  
   
-- <xref:Microsoft.VisualBasic.Constants.vbFormFeed> Stałe  
+- stała <xref:Microsoft.VisualBasic.Constants.vbFormFeed>  
   
-- <xref:Microsoft.VisualBasic.Constants.vbLf> Stałe  
+- stała <xref:Microsoft.VisualBasic.Constants.vbLf>  
   
-- <xref:Microsoft.VisualBasic.Constants.vbNewLine> Stałe  
+- stała <xref:Microsoft.VisualBasic.Constants.vbNewLine>  
   
-- <xref:Microsoft.VisualBasic.Constants.vbNullChar> Stałe  
+- stała <xref:Microsoft.VisualBasic.Constants.vbNullChar>  
   
-- <xref:Microsoft.VisualBasic.Constants.vbNullString> Stałe  
+- stała <xref:Microsoft.VisualBasic.Constants.vbNullString>  
   
-- <xref:Microsoft.VisualBasic.Constants.vbTab> Stałe  
+- stała <xref:Microsoft.VisualBasic.Constants.vbTab>  
   
-- <xref:Microsoft.VisualBasic.Constants.vbVerticalTab> Stałe  
+- stała <xref:Microsoft.VisualBasic.Constants.vbVerticalTab>  
   
-- Niektóre obiekty `My` typu  
+- Niektóre obiekty typu `My`  
   
- Jeśli kompilujesz przy użyciu `-vbruntime*` opcji, a kod odwołuje się do elementu członkowskiego z biblioteki środowiska uruchomieniowego Visual Basic, który nie jest osadzony z podstawowych funkcji, kompilator zwraca komunikat o błędzie wskazujący, że element członkowski nie jest dostępna.  
+ Jeśli kompilujesz przy użyciu opcji `-vbruntime*`, a kod odwołuje się do elementu członkowskiego z biblioteki środowiska uruchomieniowego Visual Basic, która nie jest osadzona w funkcji podstawowych, kompilator zwróci błąd wskazujący, że element członkowski nie jest dostępny.  
   
 ## <a name="referencing-a-specified-library"></a>Odwoływanie się do określonej biblioteki  
- Możesz użyć `path` argument do kompilowania za pomocą odwołania do biblioteki niestandardowego środowiska uruchomieniowego zamiast domyślnego języka Visual Basic Runtime Library.  
+ Można użyć argumentu `path` do kompilowania z odwołaniem do niestandardowej biblioteki środowiska uruchomieniowego zamiast domyślnej biblioteki środowiska uruchomieniowego Visual Basic.  
   
- Jeśli wartość `path` argument jest w pełni kwalifikowaną ścieżkę do biblioteki DLL, kompilator użyje tego pliku jako biblioteka środowiska uruchomieniowego. Jeśli wartość `path` argument nie jest w pełni kwalifikowana ścieżka do biblioteki DLL, kompilator Visual Basic umożliwia wyszukiwanie określonych bibliotek DLL w bieżącym folderze najpierw. Następnie zostanie wyszukany w ścieżce zostali zdefiniowani za pomocą [- sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md) — opcja kompilatora. Jeśli `-sdkpath` — opcja kompilatora nie jest używany, kompilator będzie wyszukiwał określonych bibliotek DLL w folderze .NET Framework (`%systemroot%\Microsoft.NET\Framework\versionNumber`).  
+ Jeśli wartość argumentu `path` jest w pełni kwalifikowana ścieżka do biblioteki DLL, kompilator użyje tego pliku jako biblioteki środowiska uruchomieniowego. Jeśli wartość argumentu `path` nie jest w pełni kwalifikowaną ścieżką do biblioteki DLL, kompilator Visual Basic przeszuka najpierw zidentyfikowaną bibliotekę DLL w bieżącym folderze. Następnie wyszukuje ścieżkę określoną przy użyciu opcji kompilatora [-SdkPath](../../../visual-basic/reference/command-line-compiler/sdkpath.md) . Jeśli opcja kompilatora `-sdkpath` nie jest używana, kompilator wyszuka zidentyfikowaną bibliotekę DLL w folderze .NET Framework (`%systemroot%\Microsoft.NET\Framework\versionNumber`).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak używać `-vbruntime` opcji, aby skompilować z odwołaniem do niestandardową biblioteką.  
+ Poniższy przykład pokazuje, jak używać opcji `-vbruntime` do kompilowania z odwołaniem do biblioteki niestandardowej.  
   
 ```console
 vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll  
@@ -96,7 +96,7 @@ vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Podstawowe języka Visual Basic — nowy tryb kompilacji w Visual Studio 2010 z dodatkiem SP1](https://devblogs.microsoft.com/vbteam/vb-core-new-compilation-mode-in-visual-studio-2010-sp1/)
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic Core — nowy tryb kompilacji w programie Visual Studio 2010 z dodatkiem SP1](https://devblogs.microsoft.com/vbteam/vb-core-new-compilation-mode-in-visual-studio-2010-sp1/)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)

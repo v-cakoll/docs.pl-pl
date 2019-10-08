@@ -1,6 +1,6 @@
 ---
-title: Zmiennoprzecinkowe typy liczbowe - C# odwołania
-description: Omówienie języka C# zmiennoprzecinkowych typów wbudowanych
+title: Typy liczbowe zmiennoprzecinkowe — C# odwołanie
+description: Przegląd wbudowanych typów C# zmiennoprzecinkowych
 ms.date: 06/30/2019
 f1_keywords:
 - float
@@ -12,68 +12,69 @@ f1_keywords:
 helpviewer_keywords:
 - floating-point numbers [C#]
 - ranges of floating-point types [C#]
+- size of floating-point types [C#]
 - types [C#], floating-point types
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 0d97b3ffd587e8398e5572706a47937716a6e709
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 17ae154780679dd1f42f43f1ec345cdc722815d3
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68236061"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002197"
 ---
-# <a name="floating-point-numeric-types-c-reference"></a>Zmiennoprzecinkowe typy liczbowe (C# odwołania)
+# <a name="floating-point-numeric-types-c-reference"></a>Zmiennoprzecinkowe typy liczbowe (C# odwołanie)
 
-**Typów zmiennoprzecinkowych** stanowią podzestaw **typów prostych** i mogą być zainicjowane z [ *literały*](#floating-point-literals). Wszystkie typy zmiennoprzecinkowe są również typy wartości. Obsługa wszystkich typów liczbowych zmiennoprzecinkowych [arytmetyczne](../operators/arithmetic-operators.md), [porównania i równości](../operators/equality-operators.md) operatorów.
+**Typy zmiennoprzecinkowe** są podzbiorem **typów prostych** i mogą być inicjowane za pomocą [*literałów*](#floating-point-literals). Wszystkie typy zmiennoprzecinkowe są również typami wartości. Wszystkie zmiennoprzecinkowe typy liczbowe obsługują operatory [arytmetyczne](../operators/arithmetic-operators.md), [porównania i równości](../operators/equality-operators.md) .
 
-## <a name="characteristics-of-the-floating-point-types"></a>Właściwości typów zmiennoprzecinkowych
+## <a name="characteristics-of-the-floating-point-types"></a>Charakterystyki typów zmiennoprzecinkowych
 
-C#obsługuje następujące typy zmiennoprzecinkowe wstępnie zdefiniowane:
+C#obsługuje następujące wstępnie zdefiniowane typy zmiennoprzecinkowe:
   
-|C#Wpisz/słowo kluczowe|Przybliżony zakres|Dokładność|Typ architektury .NET|
-|----------|-----------------------|---------------|--------------|
-|`float`|±1.5 x 10<sup>−45</sup> do ±3.4 x 10<sup>38</sup>|~ 6 – 9 cyfr|<xref:System.Single?displayProperty=nameWithType>|
-|`double`|±5.0 x 10<sup>−324</sup> do ±1.7 x 10<sup>308</sup>|około 15 – 17 cyfr|<xref:System.Double?displayProperty=nameWithType>|
-|`decimal`|±1.0 x 10<sup>-28</sup> do ±7.9228 x 10<sup>28</sup>|28 – 29 cyfr|<xref:System.Decimal?displayProperty=nameWithType>|
+|C#Type/słowo kluczowe|Przybliżony zakres|Dokładność|Rozmiar|Typ .NET|
+|----------|-----------------------|---------------|--------------|--------------|
+|`float`|± 1,5 x 10<sup>− 45</sup> do ± 3,4 x 10<sup>38</sup>|~ 6-9 cyfr|4 bajty|<xref:System.Single?displayProperty=nameWithType>|
+|`double`|± 5,0 × 10<sup>− 324</sup> do ± 1,7 × 10<sup>308</sup>|~ 15-17 cyfr|8 bajtów|<xref:System.Double?displayProperty=nameWithType>|
+|`decimal`|1,0 x 10<sup>-28</sup> do ± 7,9228 x 10<sup>28</sup>|28-29 cyfr|16 bajtów|<xref:System.Decimal?displayProperty=nameWithType>|
 
-W powyższej tabeli każdego C# wpisz słowo kluczowe z lewej strony kolumny jest aliasem dla danego typu platformy .NET. Są one wymienne. Na przykład następujące deklaracje deklarowanie zmiennych tego samego typu:
+W powyższej tabeli każde C# słowo kluczowe type z lewej kolumny jest aliasem odpowiadającego typu .NET. Są one zamienne. Na przykład następujące deklaracje deklarują zmienne tego samego typu:
 
 ```csharp
 double a = 12.3;
 System.Double b = 12.3;
 ```
 
-Wartością domyślną każdego typu zmiennoprzecinkowego wynosi zero, `0`. Każdy z typów zmiennoprzecinkowych ma `MinValue` i `MaxValue` stałe, które zapewniają minimalną i maksymalną wartość skończoną tego typu. `float` i `double` typy zapewniają również stałe, które reprezentują wartości not a liczbą i nieskończoność. Na przykład `double` typu zawiera następujące stałe: <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>, i <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>.
+Wartość domyślna każdego typu zmiennoprzecinkowego wynosi zero, `0`. Każdy z typów zmiennoprzecinkowych ma stałe `MinValue` i `MaxValue`, które zapewniają minimalną i maksymalną skończoną wartość tego typu. Typy `float` i `double` zawierają również stałe, które reprezentują wartości nieliczbowe i nieskończone. Na przykład typ `double` zawiera następujące stałe: <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> i <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>.
 
-Ponieważ `decimal` typ ma większą dokładność i mniejszy zakres niż zarówno `float` i `double`, jest odpowiedni do obliczeń finansowych i walutowych.
+Ponieważ typ `decimal` ma większą precyzję i mniejszy zakres niż `float` i `double`, jest to odpowiednie dla obliczeń finansowych i pieniężnych.
 
-Możesz mieszać [całkowitego](integral-numeric-types.md) typów i typów zmiennoprzecinkowych w wyrażeniu. W tym przypadku typów całkowitych są konwertowane do typów zmiennoprzecinkowych. Obliczania wyrażenia odbywa się zgodnie z następującymi zasadami:
+W wyrażeniu można mieszać typy [całkowite](integral-numeric-types.md) i typy zmiennoprzecinkowe. W takim przypadku typy całkowite są konwertowane na typy zmiennoprzecinkowe. Obliczanie wyrażenia jest wykonywane zgodnie z następującymi regułami:
 
-- Po spełnieniu jednego z typów zmiennoprzecinkowych `double`, wyrażenie ma `double`, lub [bool](../keywords/bool.md) w porównania relacyjne i porównania dla równości.
-- Jeśli ma nie `double` wpisz wyrażenie wyrażenie daje w wyniku `float`, lub [bool](../keywords/bool.md) w porównania relacyjne i porównania dla równości.
+- Jeśli jeden z typów zmiennoprzecinkowych ma wartość `double`, wyrażenie oblicza do `double` lub do wartości [logicznej](../keywords/bool.md) w porównaniach relacyjnych lub porównaniach dla równości.
+- Jeśli w wyrażeniu nie ma żadnego typu `double`, wyrażenie zwróci wartość `float` lub do wartości [logicznej](../keywords/bool.md) w porównaniach relacyjnych lub porównaniach dla równości.
 
-Wyrażenie typu zmiennoprzecinkowego może zawierać następujące zestawy wartości:
+Wyrażenie zmiennoprzecinkowe może zawierać następujące zestawy wartości:
 
-- Zero dodatnie i ujemne
-- Dodatnie i ujemne nieskończoność.
-- Wartość nie a liczbą (NaN)
-- Ograniczone zbiór wartości wartość różną od zera
+- Dodatnie i ujemne zero
+- Dodatnia i ujemna nieskończoność
+- Wartość niebędąca liczbą (NaN)
+- Skończoną zbiór niezerowych wartości
 
-Aby uzyskać więcej informacji na temat tych wartości, zobacz Standard IEEE binarne zmiennopozycyjna operacje arytmetyczne, dostępne na [IEEE](https://www.ieee.org) witryny sieci Web.
+Aby uzyskać więcej informacji na temat tych wartości, zobacz IEEE Standard for Binary-zmiennoprzecinkowej arytmetycznej, dostępny w witrynie sieci Web [IEEE](https://www.ieee.org) .
 
-Można użyć dowolnego [standardowe ciągi formatujące liczby](../../../standard/base-types/standard-numeric-format-strings.md) lub [ciągi niestandardowego formatu liczb](../../../standard/base-types/custom-numeric-format-strings.md) sformatować wartość zmiennoprzecinkową.
+Aby sformatować wartość zmiennoprzecinkową, można użyć [standardowych ciągów formatu liczb](../../../standard/base-types/standard-numeric-format-strings.md) lub [niestandardowych ciągów formatu liczbowego](../../../standard/base-types/custom-numeric-format-strings.md) .
 
-## <a name="floating-point-literals"></a>Literały zmiennoprzecinkowych
+## <a name="floating-point-literals"></a>Literały zmiennoprzecinkowe
 
-Domyślnie, literał liczbowy zmiennoprzecinkowych po prawej stronie operatora przypisania jest traktowany jako `double`. Sufiksy umożliwia konwertowanie zmiennoprzecinkowego lub całkowitego literał dla określonego typu:
+Domyślnie literał liczbowy zmiennoprzecinkowy po prawej stronie operatora przypisania jest traktowany jako `double`. Można użyć sufiksów do przekonwertowania literału zmiennoprzecinkowego lub całkowitego na określony typ:
 
-- `d` Lub `D` sufiks konwertuje literału do `double`.
-- `f` Lub `F` sufiks konwertuje literału do `float`.
-- `m` Lub `M` sufiks konwertuje literału do `decimal`.
+- Sufiks `d` lub `D` konwertuje literał na `double`.
+- Sufiks `f` lub `F` konwertuje literał na `float`.
+- Sufiks `m` lub `M` konwertuje literał na `decimal`.
 
-W poniższych przykładach pokazano każdego sufiksu:
+W poniższych przykładach pokazano każdy sufiks:
 
 ```csharp
 double d = 3D;
@@ -86,17 +87,17 @@ myMoney = 400.75M;
 
 ## <a name="conversions"></a>Konwersje
 
-Istnieje niejawna konwersja (o nazwie *poszerzenie konwersji*) z `float` do `double` ponieważ zakres `float` wartości jest podzestawem odpowiednie `double` i bez utraty precyzji z `float` do `double`.
+Istnieje niejawna konwersja (nazywana *konwersją rozszerzającą*) z `float` do `double`, ponieważ zakres `float` wartości jest prawidłowym podzbiorem `double` i nie ma żadnej utraty dokładności od `float` do `double`.
 
-Aby przekonwertować jednego typu zmiennoprzecinkowego na inny typ zmiennoprzecinkowy, gdy niejawna konwersja nie jest zdefiniowana z typu źródłowego na typ docelowy należy użyć jawnego rzutowania. Jest to nazywane *konwersja zawężająca*. Jawne przypadek jest wymagana, ponieważ konwersja może spowodować utratę danych. Istnieje niejawna konwersja między innymi typami zmiennoprzecinkowymi a `decimal` typu, ponieważ `decimal` typ ma większą precyzję niż albo `float` lub `double`.
+Należy użyć jawnego rzutowania do przekonwertowania jednego typu zmiennoprzecinkowego na inny typ zmiennoprzecinkowy, gdy niejawna konwersja nie jest zdefiniowana z typu źródłowego na typ docelowy. Jest to tzw. *Konwersja na wąskie*. Jawny przypadek jest wymagany, ponieważ konwersja może spowodować utratę danych. Nie istnieje niejawna konwersja między innymi typami zmiennoprzecinkowymi a typem `decimal`, ponieważ typ `decimal` ma większą precyzję niż `float` lub `double`.
 
-Aby uzyskać więcej informacji dotyczących niejawnych konwersji liczbowych, zobacz [Implicit Numeric Conversions Table](../keywords/implicit-numeric-conversions-table.md).
+Aby uzyskać więcej informacji na temat niejawnych konwersji liczbowych, zobacz [tabela niejawnych konwersji liczbowych](../keywords/implicit-numeric-conversions-table.md).
 
-Aby uzyskać więcej informacji dotyczących jawnych konwersji liczbowych, zobacz [Explicit Numeric Conversions Table](../keywords/explicit-numeric-conversions-table.md).
+Aby uzyskać więcej informacji na temat jawnych konwersji liczbowych, zobacz [jawna tabela konwersji liczbowych](../keywords/explicit-numeric-conversions-table.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
+- [C#Odwoła](../index.md)
 - [Typy całkowite](integral-numeric-types.md)
 - [Tabela typów wbudowanych](../keywords/built-in-types-table.md)
 - [Wartości numeryczne na platformie .NET](../../../standard/numerics.md)

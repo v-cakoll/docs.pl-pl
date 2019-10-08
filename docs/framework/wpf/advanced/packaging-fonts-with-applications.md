@@ -10,24 +10,24 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: f7d69f299b0b7638d6f8052e6aa0e77fac39c8e4
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 18a8037b6b4433a4a83860eae205174f3036d6e8
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016097"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005014"
 ---
 # <a name="packaging-fonts-with-applications"></a>Pakowanie czcionek z aplikacjami
-Ten temat zawiera omówienie sposobu tworzenia pakietów czcionek w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.  
+Ten temat zawiera omówienie tworzenia pakietów czcionek z aplikacją [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 > [!NOTE]
 > Podobnie jak w przypadku większości typów oprogramowania, pliki czcionek są licencjonowane, a nie sprzedawane. Licencje, które regulują korzystanie z czcionek, różnią się od dostawcy do dostawcy, ale ogólnie w większości licencji, łącznie z tymi, które obejmują czcionki firmy Microsoft w aplikacjach i Windows, nie umożliwiają osadzania czcionek w aplikacjach ani redystrybucji. W związku z tym deweloper jest odpowiedzialny za zapewnienie, że masz wymagane prawa do licencji dla dowolnej czcionki osadzonej w aplikacji lub w inny sposób.  
 
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>Wprowadzenie do tworzenia pakietów czcionek  
- Możesz łatwo spakować czcionki jako zasoby w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacjach, aby wyświetlić tekst interfejsu użytkownika i inne typy zawartości na podstawie tekstu. Czcionki mogą być oddzielone od lub osadzone w plikach zestawu aplikacji. Można również utworzyć bibliotekę czcionek tylko do zasobów, do której aplikacja może się odwoływać.  
+ Możesz łatwo spakować czcionki jako zasoby w aplikacjach [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], aby wyświetlić tekst interfejsu użytkownika i inne typy zawartości na podstawie tekstu. Czcionki mogą być oddzielone od lub osadzone w plikach zestawu aplikacji. Można również utworzyć bibliotekę czcionek tylko do zasobów, do której aplikacja może się odwoływać.  
   
- OpenType i [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] Fonts zawierają flagę typu fsType, która wskazuje prawa licencjonowania osadzania czcionek dla czcionki. Jednak ta flaga typu odnosi się tylko do czcionek osadzonych przechowywanych w dokumencie — nie odnosi się do czcionek osadzonych w aplikacji. Możesz pobrać prawa osadzania czcionek dla czcionki, tworząc <xref:System.Windows.Media.GlyphTypeface> obiekt i przywołując jego <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A> właściwość. Zapoznaj się z sekcją "system operacyjny/2 i metryki systemu Windows" [specyfikacji OpenType](https://www.microsoft.com/typography/otspec/os2.htm) , aby uzyskać więcej informacji na temat flagi fsType.  
+ Czcionki OpenType i® TrueType zawierają flagę typu fsType, która wskazuje prawa licencjonowania osadzania czcionek dla czcionki. Jednak ta flaga typu odnosi się tylko do czcionek osadzonych przechowywanych w dokumencie — nie odnosi się do czcionek osadzonych w aplikacji. Możesz pobrać prawa osadzania czcionek dla czcionki, tworząc obiekt <xref:System.Windows.Media.GlyphTypeface> i przywołując Właściwość <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A>. Zapoznaj się z sekcją "system operacyjny/2 i metryki systemu Windows" [specyfikacji OpenType](https://www.microsoft.com/typography/otspec/os2.htm) , aby uzyskać więcej informacji na temat flagi fsType.  
   
  Witryna sieci Web [Microsoft Typografia](https://docs.microsoft.com/typography/) zawiera informacje kontaktowe, które mogą pomóc w znalezieniu konkretnego dostawcy czcionki lub znalezieniu dostawcy czcionki dla pracy niestandardowej.  
   
@@ -47,7 +47,7 @@ Ten temat zawiera omówienie sposobu tworzenia pakietów czcionek w [!INCLUDE[TL
 </Project>  
 ```  
   
- W celu zapewnienia, że aplikacja może używać czcionek w czasie wykonywania, czcionki muszą być dostępne w katalogu wdrożenia aplikacji. `<CopyToOutputDirectory>` Element w pliku projektu aplikacji pozwala automatycznie skopiować czcionki do katalogu wdrożenia aplikacji podczas procesu kompilacji. Poniższy przykład pliku projektu pokazuje, jak skopiować czcionki do katalogu wdrożenia.  
+ W celu zapewnienia, że aplikacja może używać czcionek w czasie wykonywania, czcionki muszą być dostępne w katalogu wdrożenia aplikacji. Element `<CopyToOutputDirectory>` w pliku projektu aplikacji pozwala automatycznie skopiować czcionki do katalogu wdrożenia aplikacji podczas procesu kompilacji. Poniższy przykład pliku projektu pokazuje, jak skopiować czcionki do katalogu wdrożenia.  
   
 ```xml  
 <ItemGroup>  
@@ -81,19 +81,19 @@ Ten temat zawiera omówienie sposobu tworzenia pakietów czcionek w [!INCLUDE[TL
 ```  
   
 > [!NOTE]
-> Gdy dodajesz czcionki jako zasoby do aplikacji, upewnij się, że ustawiasz `<Resource>` element, a `<EmbeddedResource>` nie element w pliku projektu aplikacji. `<EmbeddedResource>` Element dla akcji kompilacji nie jest obsługiwany.  
+> Gdy dodajesz czcionki jako zasoby do aplikacji, upewnij się, że ustawiasz element `<Resource>`, a nie element `<EmbeddedResource>` w pliku projektu aplikacji. Element `<EmbeddedResource>` dla akcji kompilacji nie jest obsługiwany.  
   
  Poniższy przykład znacznika pokazuje, jak odwoływać się do zasobów czcionki aplikacji.  
   
  [!code-xaml[FontSnippets#FontPackageSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet1)]  
   
 ### <a name="referencing-font-resource-items-from-code"></a>Odwoływanie się do elementów zasobów czcionki z kodu  
- Aby odwoływać się do elementów zasobów czcionki z kodu, należy podać dwa częściowe odwołanie do zasobu czcionki: Base [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]; i informacje o lokalizacji czcionki. Te wartości są używane jako parametry dla <xref:System.Windows.Media.FontFamily.%23ctor%2A> metody. Poniższy przykład kodu pokazuje, jak odwoływać się do zasobów czcionki aplikacji w podkatalogu projektu o nazwie `resources`.  
+ Aby można było odwoływać się do elementów zasobów czcionki z kodu, należy podać dwa częściowe odwołanie do zasobu czcionki: Base [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]; i informacje o lokalizacji czcionki. Te wartości są używane jako parametry metody <xref:System.Windows.Media.FontFamily.%23ctor%2A>. Poniższy przykład kodu pokazuje, jak odwoływać się do zasobów czcionki aplikacji w podkatalogu projektu o nazwie `resources`.  
   
  [!code-csharp[FontSnippets#FontPackageSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet2)]
  [!code-vb[FontSnippets#FontPackageSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet2)]  
   
- Baza [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] może obejmować podkatalog aplikacji, w którym znajduje się zasób czcionki. W takim przypadku odwołanie do lokalizacji czcionki nie musi określać katalogu, ale musi zawierać wiodący znak "`./`", który wskazuje, że zasób czcionki znajduje się w tym samym katalogu określonym przez bazę. [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] Poniższy przykład kodu pokazuje alternatywny sposób odwoływania się do elementu zasobu czcionki — jest to odpowiednik poprzedniego przykładu kodu.  
+ Podstawowy [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] może zawierać podkatalog aplikacji, w którym znajduje się zasób czcionki. W takim przypadku odwołanie do lokalizacji czcionki nie musi określać katalogu, ale musi zawierać wiodącą "`./`", co oznacza, że zasób czcionki znajduje się w tym samym katalogu określonym przez @no__t podstawowy-1. Poniższy przykład kodu pokazuje alternatywny sposób odwoływania się do elementu zasobu czcionki — jest to odpowiednik poprzedniego przykładu kodu.  
   
  [!code-csharp[FontSnippets#FontPackageSnippet5](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet5)]
  [!code-vb[FontSnippets#FontPackageSnippet5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet5)]  
@@ -119,12 +119,12 @@ Ten temat zawiera omówienie sposobu tworzenia pakietów czcionek w [!INCLUDE[TL
  [!code-vb[FontSnippets#FontPackageSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/pages/homepage.xaml.vb#fontpackagesnippet4)]  
   
 ### <a name="enumerating-fonts-in-an-application"></a>Wyliczanie czcionek w aplikacji  
- Aby wyliczyć czcionki jako elementy zasobów w aplikacji, użyj <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> metody lub. <xref:System.Windows.Media.Fonts.GetTypefaces%2A> Poniższy przykład pokazuje, <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> jak używać metody do zwracania <xref:System.Windows.Media.FontFamily> kolekcji obiektów z lokalizacji czcionki aplikacji. W takim przypadku aplikacja zawiera podkatalog o nazwie "Resources" (zasoby).  
+ Aby wyliczyć czcionki jako elementy zasobów w aplikacji, należy użyć metody <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> lub <xref:System.Windows.Media.Fonts.GetTypefaces%2A>. Poniższy przykład pokazuje, jak używać metody <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> w celu zwrócenia kolekcji obiektów <xref:System.Windows.Media.FontFamily> z lokalizacji czcionki aplikacji. W takim przypadku aplikacja zawiera podkatalog o nazwie "Resources" (zasoby).  
   
  [!code-csharp[FontSnippets#FontsSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet3)]
  [!code-vb[FontSnippets#FontsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet3)]  
   
- Poniższy przykład pokazuje, <xref:System.Windows.Media.Fonts.GetTypefaces%2A> jak używać metody do zwracania <xref:System.Windows.Media.Typeface> kolekcji obiektów z lokalizacji czcionki aplikacji. W takim przypadku aplikacja zawiera podkatalog o nazwie "Resources" (zasoby).  
+ Poniższy przykład pokazuje, jak używać metody <xref:System.Windows.Media.Fonts.GetTypefaces%2A> w celu zwrócenia kolekcji obiektów <xref:System.Windows.Media.Typeface> z lokalizacji czcionki aplikacji. W takim przypadku aplikacja zawiera podkatalog o nazwie "Resources" (zasoby).  
   
  [!code-csharp[FontSnippets#FontsSnippet7](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet7)]
  [!code-vb[FontSnippets#FontsSnippet7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet7)]  
@@ -152,21 +152,21 @@ Ten temat zawiera omówienie sposobu tworzenia pakietów czcionek w [!INCLUDE[TL
  [!code-xaml[OpenTypeFontsSample#OpenTypeFontsSample1](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontsSample/CS/Kootenay.xaml#opentypefontssample1)]  
   
 > [!NOTE]
-> Ten zestaw SDK zawiera zestaw przykładowych czcionek OpenType, których można używać z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacjami. Czcionki są zdefiniowane w bibliotece tylko do zasobów. Aby uzyskać więcej informacji, zobacz [przykładowy pakiet czcionek OpenType](sample-opentype-font-pack.md).  
+> Ten zestaw SDK zawiera zestaw przykładowych czcionek OpenType, których można używać z aplikacjami [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Czcionki są zdefiniowane w bibliotece tylko do zasobów. Aby uzyskać więcej informacji, zobacz [przykładowy pakiet czcionek OpenType](sample-opentype-font-pack.md).  
   
 <a name="limitations_on_font_usage"></a>   
 ## <a name="limitations-on-font-usage"></a>Ograniczenia dotyczące użycia czcionek  
- Na poniższej liście opisano niektóre ograniczenia dotyczące pakowania i używania czcionek w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacjach:  
+ Na poniższej liście opisano niektóre ograniczenia dotyczące pakowania i używania czcionek w aplikacjach [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
-- **Bity uprawnień osadzania czcionek:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje nie sprawdzają ani nie wymuszają żadnych bitów uprawnień osadzania czcionek. Aby uzyskać więcej informacji, zobacz sekcję [Introduction_to_Packing Fonts (czcionki](#introduction_to_packaging_fonts) ).  
+- **Bity uprawnień osadzania czcionek:** aplikacje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie sprawdzają ani nie wymuszają żadnych bitów uprawnień osadzania czcionek. Aby uzyskać więcej informacji, zobacz sekcję [Introduction_to_Packing Fonts (czcionki](#introduction_to_packaging_fonts) ).  
   
-- **Witryna z czcionkami pochodzenia:** aplikacje nie zezwalają na odwołanie do czcionki do protokołu HTTP lub [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]FTP. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
+- **Lokacja czcionek pochodzenia:** aplikacje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie zezwalają na odwołanie do czcionki w przypadku protokołu HTTP lub FTP [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  
   
-- **Bezwzględny identyfikator URI przy użyciu pakietu:** aplikacje nie umożliwiają programistycznego <xref:System.Windows.Media.FontFamily> tworzenia obiektu za pomocą "Pack:" jako części bezwzględnego [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] odwołania do czcionki. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Na przykład `"pack://application:,,,/resources/#Pericles Light"` jest nieprawidłowym odwołaniem do czcionki.  
+- **Bezwzględny identyfikator URI przy użyciu pakietu: w przypadku** aplikacji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie można utworzyć obiektu <xref:System.Windows.Media.FontFamily> programowo przy użyciu "Pack:" jako części bezwzględnego odwołania [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] do czcionki. Na przykład `"pack://application:,,,/resources/#Pericles Light"` jest nieprawidłowym odwołaniem do czcionki.  
   
 - **Automatyczne Osadzanie czcionek:** W czasie projektowania nie ma obsługi wyszukiwania czcionek używanych przez aplikację i automatycznego osadzania czcionek w zasobach aplikacji.  
   
-- **Podzestawy czcionek:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje nie obsługują tworzenia podzestawów czcionek dla nieustalonych dokumentów.  
+- **Podzestawy czcionek:** aplikacje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie obsługują tworzenia podzestawów czcionek dla nieustalonych dokumentów.  
   
 - W przypadkach, gdy występuje nieprawidłowe odwołanie, aplikacja powraca do korzystania z dostępnej czcionki.  
   
@@ -174,7 +174,7 @@ Ten temat zawiera omówienie sposobu tworzenia pakietów czcionek w [!INCLUDE[TL
 
 - <xref:System.Windows.Documents.Typography>
 - <xref:System.Windows.Media.FontFamily>
-- [Typografia firmy Microsoft: Linki, wiadomości i kontakty](https://docs.microsoft.com/typography/)
+- [Typografia firmy Microsoft: linki, wiadomości i kontakty](https://docs.microsoft.com/typography/)
 - [Specyfikacja OpenType](https://www.microsoft.com/typography/otspec/)
 - [Funkcje czcionki OpenType](opentype-font-features.md)
 - [Przykład pakietu czcionek OpenType](sample-opentype-font-pack.md)

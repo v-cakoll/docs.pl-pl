@@ -5,25 +5,25 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 1ef18802ab3568df00e29eb4ccaf717f4bdf4863
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 4f9c2700d8163988b7ea1e75bec1427778cf571c
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68330999"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004892"
 ---
 # <a name="localization-attributes-and-comments"></a>Lokalizacja atrybutów i komentarzy
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Komentarze do lokalizacji to właściwości [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] w kodzie źródłowym dostarczanym przez deweloperów w celu zapewnienia zasad i wskazówek dotyczących lokalizacji. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Komentarze dotyczące lokalizacji zawierają dwa zestawy informacji: atrybuty lokalizowania i komentarze do lokalizacji w dowolnej postaci. Atrybuty umożliwiające zlokalizowanie są używane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] interfejs API lokalizacji, aby wskazać, które zasoby mają być lokalizowane. Komentarze w formie bezpłatnej są dowolnymi informacjami, które autor aplikacji chce uwzględnić.  
+Komentarze do lokalizacji [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] to właściwości, w obrębie kodu źródłowego XAML dostarczone przez deweloperów, które zapewniają reguły i wskazówki dotyczące lokalizacji. Komentarze dotyczące lokalizacji [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zawierają dwa zestawy informacji: atrybuty lokalizowania i komentarze do lokalizacji w dowolnej postaci. Atrybuty umożliwiające zlokalizowanie są używane przez interfejs API lokalizacji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], aby wskazać, które zasoby mają być lokalizowane. Komentarze w formie bezpłatnej są dowolnymi informacjami, które autor aplikacji chce uwzględnić.  
 
 <a name="Localizer_Comments_"></a>   
 ## <a name="localization-comments"></a>Komentarze dotyczące lokalizacji  
- Jeśli autorzy aplikacji znaczników mają wymagania dotyczące określonych elementów [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]w, takich jak ograniczenia dotyczące długości tekstu, rodziny czcionek lub rozmiaru czcionki, mogą przekazać te informacje do lokalizatorów z komentarzami [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] w kodzie. Proces dodawania komentarzy do kodu źródłowego jest następujący:  
+ Jeśli autorzy aplikacji znaczników mają wymagania dotyczące określonych elementów w języku XAML, takich jak ograniczenia dotyczące długości tekstu, rodziny czcionek lub rozmiaru czcionki, mogą przekazać te informacje do lokalizatorów z komentarzami w kodzie XAML. Proces dodawania komentarzy do kodu źródłowego jest następujący:  
   
-1. Deweloper aplikacji dodaje Komentarze do [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] lokalizacji kodu źródłowego.  
+1. Deweloper aplikacji dodaje Komentarze do lokalizacji kodu źródłowego XAML.  
   
-2. W trakcie procesu kompilowania można określić w pliku. proj, czy pozostawić Komentarze do lokalizacji dowolnego formularza w zestawie, przydzielić część komentarzy lub wszystkie komentarze. Usunięte komentarze są umieszczane w osobnym pliku. Należy określić opcję przy użyciu `LocalizationDirectivesToLocFile` znacznika, np.:  
+2. W trakcie procesu kompilowania można określić w pliku. proj, czy pozostawić Komentarze do lokalizacji dowolnego formularza w zestawie, przydzielić część komentarzy lub wszystkie komentarze. Usunięte komentarze są umieszczane w osobnym pliku. Należy określić opcję przy użyciu znacznika `LocalizationDirectivesToLocFile`, np.:  
   
-     `<LocalizationDirectivesToLocFile>`*wartość*`</LocalizationDirectivesToLocFile>`  
+     *wartość* `<LocalizationDirectivesToLocFile>` `</LocalizationDirectivesToLocFile>`  
   
 3. Wartości, które można przypisać:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68330999"
   
 5. Pliki komentarzy do lokalizacji zawierające tylko komentarze w formie dowolnego formularza są włączane w procesie lokalizowania w późniejszym czasie.  
   
- Poniższy przykład pokazuje, jak dodać komentarze do lokalizacji do [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] pliku.  
+ Poniższy przykład pokazuje, jak dodać komentarze do lokalizacji do pliku XAML.  
   
  `<TextBlock x:Id = "text01"`  
   
@@ -90,12 +90,12 @@ ms.locfileid: "68330999"
 |--------------|-------------|  
 |Brak|Wartość domowa nie ma zdefiniowanej kategorii.|  
 |Odziedziczony|Wartość docelowa dziedziczy jej kategorię z jej elementu nadrzędnego.|  
-|Zignoruj|Wartość domowa jest ignorowana w procesie lokalizacji. Wartość Ignoruj dotyczy tylko bieżącej wartości. Nie wpłynie to na węzły podrzędne.|  
+|Ignoruj|Wartość domowa jest ignorowana w procesie lokalizacji. Wartość Ignoruj dotyczy tylko bieżącej wartości. Nie wpłynie to na węzły podrzędne.|  
 |NeverLocalize|Nie można lokalizować bieżącej wartości. Ta kategoria jest dziedziczona przez elementy podrzędne elementu.|  
   
 <a name="Localization_Comments"></a>   
 ## <a name="localization-comments"></a>Komentarze dotyczące lokalizacji  
- Lokalizacja. Komentarze zawierają ciągi o dowolnej postaci dotyczące wartości dostosowanej. Deweloperzy aplikacji mogą dodawać informacje w celu uzyskania wskazówek dla lokalizatorów o sposobie tłumaczenia tekstu aplikacji. Format komentarzy może być dowolnym ciągiem, który jest ujęty w znak "()". Użyj znaku\\"" do znaków ucieczki.  
+ Lokalizacja. Komentarze zawierają ciągi o dowolnej postaci dotyczące wartości dostosowanej. Deweloperzy aplikacji mogą dodawać informacje w celu uzyskania wskazówek dla lokalizatorów o sposobie tłumaczenia tekstu aplikacji. Format komentarzy może być dowolnym ciągiem, który jest ujęty w znak "()". Użyj znaku "\\" do znaków ucieczki.  
   
 ## <a name="see-also"></a>Zobacz także
 

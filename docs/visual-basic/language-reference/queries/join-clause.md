@@ -10,19 +10,19 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: 21432b95b30ae38ac2cbc9e55b5a3066f0bef665
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8eab7db00515f55b086b5e1beddd149f966cb27a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945291"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72001939"
 ---
 # <a name="join-clause-visual-basic"></a>Join — Klauzula (Visual Basic)
-Łączy dwie kolekcje w jedną kolekcję. Operacja łączenia jest oparta na zgodności kluczy i używa `Equals` operatora.  
+Łączy dwie kolekcje w jedną kolekcję. Operacja join jest oparta na zgodnych kluczach i używa operatora `Equals`.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 Join element In collection _  
   [ joinClause _ ]   
   [ groupJoinClause ... _ ]   
@@ -31,38 +31,38 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
 ## <a name="parts"></a>Części  
  `element`  
- Wymagana. Zmienna sterująca dla kolekcji jest dołączony.  
+ Wymagany. Zmienna kontroli dla połączonej kolekcji.  
   
  `collection`  
- Wymagana. Kolekcja do łączenia z tą kolekcją identyfikowane w lewej części `Join` operatora. A `Join` klauzuli może być zagnieżdżona w innej `Join` klauzuli lub `Group Join` klauzuli.  
+ Wymagany. Kolekcja do połączenia z kolekcją zidentyfikowaną po lewej stronie operatora `Join`. Klauzula `Join` może być zagnieżdżona w innej klauzuli `Join` lub w klauzuli `Group Join`.  
   
  `joinClause`  
- Opcjonalna. Jeden lub więcej dodatkowych `Join` klauzul, aby jeszcze bardziej zawęzić zapytanie.  
+ Opcjonalny. Co najmniej jednej z dodatkowych klauzul `Join` w celu dodatkowego uściślenia zapytania.  
   
  `groupJoinClause`  
- Opcjonalna. Jeden lub więcej dodatkowych `Group Join` klauzul, aby jeszcze bardziej zawęzić zapytanie.  
+ Opcjonalny. Co najmniej jednej z dodatkowych klauzul `Group Join` w celu dodatkowego uściślenia zapytania.  
   
  `key1` `Equals` `key2`  
- Wymagana. Określa klucze dla kolekcji jest dołączony. Należy użyć `Equals` operatora do porównywania kluczy z kolekcji jest dołączony. Warunki sprzężenia można połączyć za pomocą `And` operatora, aby zidentyfikować wielu kluczy. `key1` musi mieć długość od kolekcji w lewej części `Join` operatora. `key2` musi mieć długość od kolekcji na prawej krawędzi `Join` operatora.  
+ Wymagany. Identyfikuje klucze dla kolekcji, które są sprzężone. Należy użyć operatora `Equals`, aby porównać klucze z kolekcji, które są sprzężone. Możesz połączyć warunki sprzężenia przy użyciu operatora `And`, aby zidentyfikować wiele kluczy. `key1` musi znajdować się w kolekcji po lewej stronie operatora `Join`. `key2` musi pochodzić z kolekcji po prawej stronie operatora `Join`.  
   
- Klucze używane w warunek sprzężenia, może być wyrażeń, które zawierają więcej niż jeden element z kolekcji. Jednak każde wyrażenie kluczy może zawierać tylko elementy z jego odpowiednich kolekcji.  
+ Klucze używane w warunku sprzężenia mogą być wyrażeniami, które zawierają więcej niż jeden element z kolekcji. Jednak każde wyrażenie klucza może zawierać tylko elementy z odpowiedniej kolekcji.  
   
 ## <a name="remarks"></a>Uwagi  
- `Join` Klauzuli łączy dwie kolekcje, w oparciu o dopasowanie wartości kluczy z kolekcji jest dołączony. Wynikowy Kolekcja może zawierać dowolną kombinację wartości z kolekcji identyfikowane w lewej części `Join` operatora i kolekcji w `Join` klauzuli. Kwerenda będzie zwracać tylko wyniki, dla których warunek określony przez `Equals` operator jest spełniony. Jest to równoważne `INNER JOIN` w języku SQL.  
+ Klauzula `Join` łączy dwie kolekcje na podstawie pasujących wartości klucza z kolekcji, które są sprzężone. Kolekcja wyników może zawierać dowolną kombinację wartości z kolekcji identyfikowanej po lewej stronie operatora `Join` i kolekcji identyfikowanej w klauzuli `Join`. Zapytanie zwróci tylko wyniki, dla których spełniony jest warunek określony przez operator `Equals`. Jest to odpowiednik `INNER JOIN` w SQL.  
   
- Możesz użyć wielu `Join` klauzul zapytania do dołączenia do co najmniej dwóch kolekcje w jedną kolekcję.  
+ W zapytaniu można użyć wielu klauzul `Join` w celu dołączenia dwóch lub większej liczby kolekcji do pojedynczej kolekcji.  
   
- Można wykonać sprzężenie niejawne połączyć kolekcji bez `Join` klauzuli. Aby to zrobić, należy dołączyć wiele `In` klauzul swoje `From` klauzuli i określ `Where` klauzulę identyfikującą klucze, które chcesz użyć w celu utworzenia sprzężenia.  
+ Można wykonać niejawne sprzężenie w celu łączenia kolekcji bez klauzuli `Join`. W tym celu należy uwzględnić wiele klauzul `In` w klauzuli `From` i określić klauzulę `Where`, która identyfikuje klucze, które mają być używane dla sprzężenia.  
   
- Możesz użyć `Group Join` klauzuli połączyć kolekcje w jedną hierarchiczną kolekcję. Formuła ta przypomina `LEFT OUTER JOIN` w języku SQL.  
+ Można użyć klauzuli `Group Join`, aby połączyć kolekcje w jedną hierarchiczną kolekcję. Jest to podobne do `LEFT OUTER JOIN` w SQL.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod wykonuje sprzężenie niejawne połączyć listę klientów z jego zamówienia.  
+ Poniższy przykład kodu wykonuje niejawne sprzężenie w celu połączenia listy klientów z ich zamówieniami.  
   
  [!code-vb[VbSimpleQuerySamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#13)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod łączy dwie kolekcje przy użyciu `Join` klauzuli.  
+ Poniższy przykład kodu łączy dwie kolekcje przy użyciu klauzuli `Join`.  
   
  [!code-vb[VbSimpleQuerySamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples2.vb#12)]  
   
@@ -75,7 +75,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
  `cmd (5136), Command Window`  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod łączy dwie kolekcje przy użyciu `Join` klauzulę zawierającą dwie kolumny klucza.  
+ Poniższy przykład kodu łączy dwie kolekcje przy użyciu klauzuli `Join` z dwiema kolumnami klucza.  
   
  [!code-vb[VbSimpleQuerySamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples3.vb#17)]  
   
@@ -93,5 +93,5 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 - [Zapytania](../../../visual-basic/language-reference/queries/index.md)
 - [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)
 - [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)
-- [Klauzula Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [Group Join, klauzula](../../../visual-basic/language-reference/queries/group-join-clause.md)
 - [Where, klauzula](../../../visual-basic/language-reference/queries/where-clause.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-ms.openlocfilehash: a9c4c9d597f5cc1b172213d49a3dd5b8f1c1f671
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: e9ef32912c2afb3c99e46e1e14bb3daa5a2e99af
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991377"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005712"
 ---
 # <a name="getcustomui"></a>GetCustomUI
 Wywoływane przez PresentationHost. exe w celu uzyskania niestandardowych postępów i komunikatów o błędach z hosta, jeśli zostały zaimplementowane.  
@@ -27,7 +27,7 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
   
  `pwzProgressClassName`  
   
- określoną Nazwa klasy, która jest interfejsem użytkownika postępu dostarczonego przez hosta, najlepiej do [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] pliku z <xref:System.Windows.Controls.Page> jest elementem najwyższego poziomu. Ta klasa znajduje się w zestawie, który jest określony przez `pwzProgressAssemblyName`.  
+ określoną Nazwa klasy, która jest interfejsem użytkownika postępu dostarczonego przez hosta, najlepiej plik XAML z <xref:System.Windows.Controls.Page> jest elementem najwyższego poziomu. Ta klasa znajduje się w zestawie, który jest określony przez `pwzProgressAssemblyName`.  
   
  `pwzErrorAssemblyName`  
   
@@ -35,10 +35,10 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
   
  `pwzErrorClassName`  
   
- określoną Nazwa klasy, która jest interfejsem użytkownika o błędzie dostarczonym przez hosta, najlepiej do pliku XAML z <xref:System.Windows.Controls.Page> jest jego elementem najwyższego poziomu. Ta klasa znajduje się w zestawie, który jest określony przez `pwzErrorAssemblyName`.  
+ określoną Nazwa klasy, która jest interfejsem użytkownika o błędzie dostarczonym przez hosta, najlepiej do pliku XAML z <xref:System.Windows.Controls.Page> jest elementem najwyższego poziomu. Ta klasa znajduje się w zestawie, który jest określony przez `pwzErrorAssemblyName`.  
   
 ## <a name="property-valuereturn-value"></a>Wartość właściwości/Zwracana wartość  
- WYNIK Ignorowane.  
+ HRESULT: zignorowano.  
   
 ## <a name="remarks"></a>Uwagi  
  Aplikacja hosta może mieć określony motyw, który PresentationHost. exe domyślne interfejsy użytkownika mogą nie być zgodne. W takim przypadku aplikacja hosta może zaimplementować [GetCustomUI](getcustomui.md) , aby zwracać interfejs użytkownika postępu i błędów do PresentationHost. exe. PresentationHost. exe zawsze będzie wywoływał [GetCustomUI](getcustomui.md) przed użyciem jego domyślnych interfejsów użytkownika.  

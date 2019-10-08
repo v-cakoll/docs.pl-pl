@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: 580a6e1caa78ea981b6d2be68a6e7c61e2ad55d7
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 18c309e22cccfa5d835394996fc6974d95825b65
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433823"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003118"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic — Konwencje kodowania
 Firma Microsoft opracowuje przykłady i dokumentację, które są zgodne z wytycznymi w tym temacie. Jeśli przestrzegasz tych samych konwencji kodowania, możesz uzyskać następujące korzyści:  
@@ -26,9 +26,9 @@ Firma Microsoft opracowuje przykłady i dokumentację, które są zgodne z wytyc
   
 ## <a name="naming-conventions"></a>Konwencje nazewnictwa  
   
-- Aby uzyskać informacje na temat określania zasad [Wskazówki](../../../standard/design-guidelines/naming-guidelines.md) nazewnictwa, zobacz temat Omówienie nazewnictwa.  
+- Aby uzyskać informacje na temat określania zasad nazewnictwa, zobacz temat Omówienie [nazewnictwa](../../../standard/design-guidelines/naming-guidelines.md) .  
   
-- Nie należy używać "my" ani "my" jako części nazwy zmiennej. To rozwiązanie tworzy pomyłkę z `My` obiektami.  
+- Nie należy używać "my" ani "my" jako części nazwy zmiennej. To rozwiązanie tworzy pomyłkę z obiektami `My`.  
   
 - Nie trzeba zmieniać nazw obiektów w generowanym automatycznie kodzie, aby dopasować je do wytycznych.  
   
@@ -46,7 +46,7 @@ Firma Microsoft opracowuje przykłady i dokumentację, które są zgodne z wytyc
   
 - Jeśli podczas tworzenia **listy (ponowne formatowanie) kodu** nie są automatycznie formatowane linie kontynuacji, ręcznie Zwiększ wcięcie wierszy kontynuacji o jeden tabulator. Jednak zawsze należy wyrównać elementy na liście.  
   
-    ```  
+    ```vb  
     a As Integer,  
     b As Integer  
     ```  
@@ -67,7 +67,7 @@ Firma Microsoft opracowuje przykłady i dokumentację, które są zgodne z wytyc
   
 ## <a name="program-structure"></a>Struktura programu  
   
-- Korzystając z `Main` metody, należy użyć domyślnej konstrukcji dla nowych aplikacji konsolowych i użyć `My` dla argumentów wiersza polecenia.  
+- Korzystając z metody `Main`, Użyj domyślnej konstrukcji dla nowych aplikacji konsolowych i użyj `My` dla argumentów wiersza polecenia.  
   
      [!code-vb[VbVbalrGuidelines#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#3)]  
   
@@ -81,7 +81,7 @@ Firma Microsoft opracowuje przykłady i dokumentację, które są zgodne z wytyc
      MsgBox($"hello{vbCrLf}goodbye")
      ```
   
-- Aby dołączyć ciągi w pętlach, użyj <xref:System.Text.StringBuilder> obiektu.  
+- Aby dołączyć ciągi w pętlach, użyj obiektu <xref:System.Text.StringBuilder>.  
   
      [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
@@ -92,7 +92,7 @@ Firma Microsoft opracowuje przykłady i dokumentację, które są zgodne z wytyc
   
 ### <a name="unsigned-data-type"></a>Typ danych bez znaku  
   
-- Używaj `Integer` zamiast niepodpisanych typów, z wyjątkiem sytuacji, w których jest to konieczne.  
+- Użyj `Integer`, a nie typów niepodpisanych, z wyjątkiem tego, gdzie są niezbędne.  
   
 ### <a name="arrays"></a>Tablice  
   
@@ -121,7 +121,7 @@ Firma Microsoft opracowuje przykłady i dokumentację, które są zgodne z wytyc
      [!code-vb[VbVbalrGuidelines#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#13)]  
   
 ### <a name="use-the-with-keyword"></a>Używanie słowa kluczowego with  
- Podczas wykonywania serii wywołań do jednego obiektu, rozważ użycie `With` słowa kluczowego:  
+ Podczas wykonywania serii wywołań do jednego obiektu Rozważ użycie słowa kluczowego `With`:  
   
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
@@ -129,7 +129,7 @@ Firma Microsoft opracowuje przykłady i dokumentację, które są zgodne z wytyc
  Nie należy używać `On Error Goto`.  
   
 ### <a name="use-the-isnot-keyword"></a>Użycie słowa kluczowego IsNot  
- Użyj słowa kluczowego zamiast `Not...Is Nothing`. `IsNot`  
+ Użyj słowa kluczowego `IsNot` zamiast `Not...Is Nothing`.  
   
 ### <a name="new-keyword"></a>New — słowo kluczowe  
   
@@ -147,11 +147,11 @@ Firma Microsoft opracowuje przykłady i dokumentację, które są zgodne z wytyc
   
 ### <a name="event-handling"></a>Obsługa zdarzeń  
   
-- `Handles` Użyj`AddHandler`zamiast:  
+- Użyj `Handles`, a nie `AddHandler`:  
   
      [!code-vb[VbVbalrGuidelines#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#24)]  
   
-- Użyj `AddressOf`i nie twórz wystąpienia delegata jawnie:  
+- Użyj `AddressOf` i nie określaj wystąpienia delegata jawnie:  
   
      [!code-vb[VbVbalrGuidelines#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#25)]  
   
@@ -159,7 +159,7 @@ Firma Microsoft opracowuje przykłady i dokumentację, które są zgodne z wytyc
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
-- Nie sprawdzaj, `RaiseEvent` czy zdarzenie jest `Nothing` (null) przed wywołaniem metody. `RaiseEvent``Nothing` sprawdza przed podjęciem zdarzenia.  
+- Nie sprawdzaj, czy przed wywołaniem metody `RaiseEvent` dla zdarzenia `Nothing` (null). `RaiseEvent` sprawdza, czy `Nothing` przed wyjęciem zdarzenia.  
   
 ### <a name="using-shared-members"></a>Korzystanie z udostępnionych elementów członkowskich  
  Wywołaj `Shared` członków przy użyciu nazwy klasy, a nie z zmiennej wystąpienia.  
@@ -173,7 +173,7 @@ Firma Microsoft opracowuje przykłady i dokumentację, które są zgodne z wytyc
   
 - Użyj właściwości osi XML, aby uzyskać dostęp do elementów i atrybutów w dokumencie XML.  
   
-- Użyj osadzonych wyrażeń, aby dołączyć wartości i utworzyć XML z istniejących wartości zamiast używać wywołań interfejsu API, takich `Add` jak metoda:  
+- Użyj osadzonych wyrażeń, aby dołączyć wartości i utworzyć XML z istniejących wartości zamiast używać wywołań interfejsu API, takich jak Metoda `Add`:  
   
      [!code-vb[VbVbalrGuidelines#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#27)]  
   
@@ -187,7 +187,7 @@ Firma Microsoft opracowuje przykłady i dokumentację, które są zgodne z wytyc
   
      [!code-vb[VbVbalrGuidelines#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#29)]  
   
-- Zmień nazwę właściwości, gdy nazwy właściwości w wyniku byłyby niejednoznaczne. Na przykład, jeśli zapytanie zwraca nazwę klienta i identyfikator zamówienia, zmień ich nazwy zamiast opuszczania ich jako `Name` i `ID` w wyniku:  
+- Zmień nazwę właściwości, gdy nazwy właściwości w wyniku byłyby niejednoznaczne. Na przykład, jeśli zapytanie zwróci nazwę klienta i identyfikator zamówienia, zmień ich nazwy zamiast pozostawić je jako `Name` i `ID` w wyniku:  
   
      [!code-vb[VbVbalrGuidelines#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#30)]  
   
@@ -195,15 +195,15 @@ Firma Microsoft opracowuje przykłady i dokumentację, które są zgodne z wytyc
   
      [!code-vb[VbVbalrGuidelines#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#31)]  
   
-- Wyrównaj klauzule zapytania w `From` instrukcji:  
+- Wyrównaj klauzule zapytania w instrukcji `From`:  
   
      [!code-vb[VbVbalrGuidelines#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#32)]  
   
-- Klauzule USE `Where` przed innymi klauzulami zapytań, tak aby późniejsze klauzule zapytań działały na filtrowanym zestawie danych:  
+- Użyj klauzul `Where` przed innymi klauzulami zapytania, tak aby późniejsze klauzule zapytań działały na filtrowanym zestawie danych:  
   
      [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   
-- Użyj klauzuli `Join` , aby jawnie zdefiniować operację Join zamiast `Where` używać klauzuli do niejawnego definiowania operacji JOIN:  
+- Użyj klauzuli `Join` w celu jawnego zdefiniowania operacji JOIN zamiast używania klauzuli `Where` do niejawnie zdefiniowanej operacji JOIN:  
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   

@@ -1,5 +1,5 @@
 ---
-title: -rootnamespace —
+title: -rootnamespace
 ms.date: 03/13/2018
 f1_keywords:
 - /rootnamespace
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - -rootnamespace compiler option [Visual Basic]
 - rootnamespace compiler option [Visual Basic]
 ms.assetid: e9245edf-6bef-420d-a7c7-324117752783
-ms.openlocfilehash: ff4b1729f1b9fb1d698b4b5b1e3711ce3d27b4db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4df4e74fc13c922f51f5b74c3c152bdea28b4431
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61639038"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005211"
 ---
-# <a name="-rootnamespace"></a>-rootnamespace —
-Określa obszar nazw dla wszystkich deklaracji typów.  
+# <a name="-rootnamespace"></a>-rootnamespace
+Określa przestrzeń nazw dla wszystkich deklaracji typu.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console  
 -rootnamespace:namespace  
 ```  
   
@@ -29,19 +29,19 @@ Określa obszar nazw dla wszystkich deklaracji typów.
   
 |Termin|Definicja|  
 |---|---|  
-|`namespace`|Nazwa przestrzeni nazw, w której chcesz umieścić wszystkie deklaracje typu dla bieżącego projektu.|  
+|`namespace`|Nazwa przestrzeni nazw, w której należy ująć wszystkie deklaracje typu dla bieżącego projektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli używasz pliku wykonywalnego w programie Visual Studio (Devenv.exe) aby skompilować projekt utworzony w programie Visual Studio zintegrowanego środowiska programistycznego, użyj `-rootnamespace` można określić wartość <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> właściwości. Zobacz [przełączników wiersza polecenia Devenv](/visualstudio/ide/reference/devenv-command-line-switches) Aby uzyskać więcej informacji.  
+ Jeśli używasz pliku wykonywalnego programu Visual Studio (devenv. exe) do kompilowania projektu utworzonego w zintegrowanym środowisku programistycznym programu Visual Studio, użyj `-rootnamespace`, aby określić wartość właściwości <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A>. Zobacz [przełączniki wiersza polecenia devenv](/visualstudio/ide/reference/devenv-command-line-switches) , aby uzyskać więcej informacji.  
   
- Użyj środowiska uruchomieniowego języka wspólnego MSIL Disassembler (`Ildasm.exe`) aby wyświetlić nazwy przestrzeni nazw w pliku danych wyjściowych.  
+ Użyj Dezasembler MSIL (`Ildasm.exe`) środowiska uruchomieniowego języka wspólnego, aby wyświetlić nazwy przestrzeni nazw w pliku wyjściowym.  
   
-|Aby ustawić - rootnamespace — w programie Visual Studio zintegrowane środowisko projektowe|  
+|Aby ustawić-RootNamespace w zintegrowanym środowisku programistycznym programu Visual Studio|  
 |---|  
-|1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**. <br />2.  Kliknij przycisk **aplikacji** kartę.<br />3.  Zmodyfikuj wartość w **Namespace głównego** pole.|  
+|1. zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**. <br />2. Kliknij kartę **aplikacja** .<br />3. Zmodyfikuj wartość w polu **główna przestrzeń nazw** .|  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `In.vb` i umieszcza wszystkie deklaracje typów w przestrzeni nazw `mynamespace`.  
+ Poniższy kod kompiluje `In.vb` i ujmuje wszystkie deklaracje typów w przestrzeni nazw `mynamespace`.  
   
 ```console
 vbc -rootnamespace:mynamespace in.vb  
@@ -49,6 +49,6 @@ vbc -rootnamespace:mynamespace in.vb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Ildasm.exe (dezasembler IL)](../../../framework/tools/ildasm-exe-il-disassembler.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

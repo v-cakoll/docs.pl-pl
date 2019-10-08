@@ -1,27 +1,27 @@
 ---
-title: 'Instrukcje: Używanie funkcji skalarnej zdefiniowanej przez użytkownika'
+title: 'Instrukcje: korzystanie z funkcji zdefiniowanych przez użytkownika z wartościami skalarnymi'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 714e252f-c053-4bbb-b1f3-924111cd4d97
-ms.openlocfilehash: da4e5e8fe4682191a0c8e2b0ce6a7b945fe63deb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dfe82fd50eb3eedeaff9082a4288901f72197795
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781474"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003236"
 ---
-# <a name="how-to-use-scalar-valued-user-defined-functions"></a>Instrukcje: Używanie funkcji skalarnej zdefiniowanej przez użytkownika
-Można zmapować metodę klienta zdefiniowaną w klasie do funkcji zdefiniowanej przez użytkownika przy użyciu <xref:System.Data.Linq.Mapping.FunctionAttribute> atrybutu. Należy zauważyć, że treść metody konstruuje wyrażenie, które przechwytuje zamiar wywołania metody i przekazuje to wyrażenie do <xref:System.Data.Linq.DataContext> translacji i wykonywania.  
+# <a name="how-to-use-scalar-valued-user-defined-functions"></a>Instrukcje: korzystanie z funkcji zdefiniowanych przez użytkownika z wartościami skalarnymi
+Można zmapować metodę klienta zdefiniowaną w klasie do funkcji zdefiniowanej przez użytkownika przy użyciu atrybutu <xref:System.Data.Linq.Mapping.FunctionAttribute>. Należy zauważyć, że treść metody konstruuje wyrażenie, które przechwytuje zamiar wywołania metody i przekazuje to wyrażenie do <xref:System.Data.Linq.DataContext> do translacji i wykonywania.  
   
 > [!NOTE]
-> Bezpośrednie wykonanie odbywa się tylko wtedy, gdy funkcja jest wywoływana poza zapytaniem. Aby uzyskać więcej informacji, zobacz [jak: Wywołaj wbudowane](how-to-call-user-defined-functions-inline.md)funkcje zdefiniowane przez użytkownika.  
+> Bezpośrednie wykonanie odbywa się tylko wtedy, gdy funkcja jest wywoływana poza zapytaniem. Aby uzyskać więcej informacji, zobacz [How to: Call User-Defined Functions inline](how-to-call-user-defined-functions-inline.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod SQL przedstawia funkcję `ReverseCustName()`skalarną zdefiniowaną przez użytkownika.  
+ Poniższy kod SQL przedstawia Skalarną funkcję zdefiniowaną przez użytkownika `ReverseCustName()`.  
   
-```  
+```sql  
 CREATE FUNCTION ReverseCustName(@string varchar(100))  
 RETURNS varchar(100)  
 AS  

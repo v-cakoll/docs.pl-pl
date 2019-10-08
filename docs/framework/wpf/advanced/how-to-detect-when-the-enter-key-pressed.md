@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wykryć kiedy wciśnięto klawisz Enter'
+title: Jak wykryć kiedy wciśnięto klawisz Enter
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - Enter key [WPF], detecting
 - keys [WPF], Enter
 ms.assetid: a66f39d2-ef4a-43a5-b454-a4ea0fe88655
-ms.openlocfilehash: a99da5804bbc31897198b9b6d9e21da9f17dfe26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e2337826077c836696937f91541d6d261f1270aa
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051419"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004822"
 ---
-# <a name="how-to-detect-when-the-enter-key-pressed"></a>Instrukcje: Wykryć kiedy wciśnięto klawisz Enter
-W tym przykładzie pokazano, jak wykryć kiedy <xref:System.Windows.Input.Key.Enter> zostanie naciśnięty klawisz na klawiaturze.  
+# <a name="how-to-detect-when-the-enter-key-pressed"></a>Jak wykryć kiedy wciśnięto klawisz Enter
+Ten przykład pokazuje, jak wykryć, kiedy naciśnięto klawisz <xref:System.Windows.Input.Key.Enter> na klawiaturze.  
   
- W tym przykładzie składa się z [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] oraz plik CodeBehind.  
+ Ten przykład składa się z pliku [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] i pliku związanego z kodem.  
   
 ## <a name="example"></a>Przykład  
- Gdy użytkownik naciśnie <xref:System.Windows.Input.Key.Enter> w <xref:System.Windows.Controls.TextBox>, danych wejściowych w polu tekstowym zostanie wyświetlony w innym obszarze [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
+ Gdy użytkownik naciśnie klawisz <xref:System.Windows.Input.Key.Enter> w <xref:System.Windows.Controls.TextBox>, dane wejściowe w polu tekstowym pojawiają się w innym obszarze [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
   
- Następujące [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)] tworzy interfejs użytkownika, który składa się z <xref:System.Windows.Controls.StackPanel>, <xref:System.Windows.Controls.TextBlock>, a <xref:System.Windows.Controls.TextBox>.  
+ Poniższy kod XAML tworzy interfejs użytkownika, który składa się z <xref:System.Windows.Controls.StackPanel>, <xref:System.Windows.Controls.TextBlock> i <xref:System.Windows.Controls.TextBox>.  
   
  [!code-xaml[keydown#KeyDownUI](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyDown/CSharp/Window1.xaml#keydownui)]  
   
- Poniższy kod tworzy <xref:System.Windows.UIElement.KeyDown> programu obsługi zdarzeń.  W przypadku naciśnięcia klawisza <xref:System.Windows.Input.Key.Enter> klucza, zostanie wyświetlony komunikat w <xref:System.Windows.Controls.TextBlock>.  
+ Poniższy kod w tle tworzy procedurę obsługi zdarzeń <xref:System.Windows.UIElement.KeyDown>.  Jeśli klawisz, który jest wciśnięty, jest kluczem <xref:System.Windows.Input.Key.Enter>, zostanie wyświetlony komunikat w <xref:System.Windows.Controls.TextBlock>.  
   
  [!code-csharp[keydown#KeyDownSample](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyDown/CSharp/Window1.xaml.cs#keydownsample)]
  [!code-vb[keydown#KeyDownSample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyDown/VisualBasic/Window1.xaml.vb#keydownsample)]  

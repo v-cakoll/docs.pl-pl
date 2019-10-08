@@ -6,28 +6,28 @@ helpviewer_keywords:
 - nowin32manifest compiler option [Visual Basic]
 - -nowin32manifest compiler option [Visual Basic]
 ms.assetid: c0528aae-83b3-4425-99f0-19448e9843e3
-ms.openlocfilehash: 2d14da2d0c24f3bd833503c73374d26ee73c5629
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df05ff6caeae2fb2db6a8d7c8fec1b81774a9fa4
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789015"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005389"
 ---
 # <a name="-nowin32manifest-visual-basic"></a>-nowin32manifest (Visual Basic)
-Instruuje kompilator, nie można osadzić manifest dowolnej aplikacji w pliku wykonywalnego.  
+Instruuje kompilator, aby nie osadzał żadnego manifestu aplikacji w pliku wykonywalnym.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console  
 -nowin32manifest  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Gdy ta opcja jest używana, aplikacja będzie wirtualizacji w systemie Windows Vista, chyba że zapewniasz manifest aplikacji w pliku zasobów Win32 lub w późniejszym kroku kompilacji. Aby uzyskać więcej informacji na temat wirtualizacji, zobacz [wdrażania ClickOnce w systemie Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).  
+ Gdy ta opcja jest używana, aplikacja będzie podlegać wirtualizacji w systemie Windows Vista, o ile nie podajesz manifestu aplikacji w pliku zasobów Win32 lub w późniejszym kroku kompilacji. Aby uzyskać więcej informacji na temat wirtualizacji, zobacz [wdrażanie ClickOnce w systemie Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).  
   
- Aby uzyskać więcej informacji o tworzeniu manifestu, zobacz [-win32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/win32manifest.md).  
+ Aby uzyskać więcej informacji na temat tworzenia manifestu, zobacz [-WIN32MANIFEST (Visual Basic)](../../../visual-basic/reference/command-line-compiler/win32manifest.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

@@ -6,55 +6,55 @@ helpviewer_keywords:
 - /errorreport compiler option [Visual Basic]
 - errorreport compiler option [Visual Basic]
 ms.assetid: a7fe83a2-a6d8-460c-8dad-79a8f433f501
-ms.openlocfilehash: 5471f0783eee5e2c14cf0f140094d5c292a73756
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8e193a8cb4d4dbc7515c32139bad9dce8b48ed7
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663261"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005614"
 ---
 # <a name="-errorreport"></a>-errorreport
 
-Określa, jak kompilator języka Visual Basic powinno zgłosić wewnętrzne błędy kompilatora.
+Określa sposób, w jaki kompilator Visual Basic powinien raportować wewnętrzne błędy kompilatora.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```console
 -errorreport:{ prompt | queue | send | none }
 ```
 
 ## <a name="remarks"></a>Uwagi
 
-Ta opcja zapewnia wygodny sposób, aby zgłosić błąd wewnętrzny kompilatora Visual Basic (ICE) do zespołu języka Visual Basic w firmie Microsoft. Domyślnie kompilator wysyła żadnych informacji do firmy Microsoft. Jednak jeśli wystąpi błąd wewnętrzny kompilatora, ta opcja umożliwia raportowanie błędów firmie Microsoft. Te informacje pomagają inżynierów firmy Microsoft, zidentyfikować przyczynę i może poprawić kolejnej wersji programu Visual Basic.
+Ta opcja zapewnia wygodny sposób raportowania Visual Basic wewnętrznego błędu kompilatora (lodem) do zespołu Visual Basic w firmie Microsoft. Domyślnie kompilator nie wysyła żadnych informacji do firmy Microsoft. Jeśli jednak wystąpi błąd wewnętrzny kompilatora, ta opcja pozwala zgłosić błąd do firmy Microsoft. Te informacje ułatwią inżynierom firmy Microsoft Identyfikowanie przyczyny i mogą pomóc w ulepszaniu kolejnej wersji Visual Basic.
 
-Zdolność użytkownika do wysyłania raportów zależy od uprawnienia zasad komputera i użytkownika.
+Możliwość wysyłania raportów przez użytkownika zależy od uprawnień zasad komputera i użytkownika.
 
-W poniższej tabeli przedstawiono efekt `-errorreport` opcji.
+Poniższa tabela zawiera podsumowanie wpływu opcji `-errorreport`.
 
 |Opcja|Zachowanie|
 |---|---|
-|`prompt`|Jeśli wystąpi błąd wewnętrzny kompilatora, okno dialogowe funkcjonuje tak, aby wyświetlić dokładnych danych zebranych przez kompilator. Można określić, czy ma żadnych poufnych informacji w raporcie o błędach i decyzji od tego, czy wysyłać je do firmy Microsoft. Jeśli zdecydujesz się wysłać go i zezwalają na to ustawienia zasad komputera i użytkownika, kompilator wysyła dane do firmy Microsoft.|
-|`queue`|Kolejkuje raport o błędach. Po zalogowaniu się przy użyciu uprawnień administratora, możesz zgłaszać błędów od czasu ostatniego zostały zarejestrowane w (użytkownik nie jest monitowany o wysłanie raportu błędów więcej niż raz na trzy dni). Jest to domyślne zachowanie podczas `-errorreport` opcja nie jest określona.|
-|`send`|Jeśli wystąpi błąd wewnętrzny kompilatora i zezwalają na to ustawienia zasad komputera i użytkownika, kompilator wysyła dane do firmy Microsoft.<br /><br /> Opcja `-errorreport:send` próbuje automatycznie wysyłać informacje o błędach do firmy Microsoft, jeśli raportowania został włączony przez [Windows Error Reporting](/windows/desktop/wer/windows-error-reporting) ustawienia systemu. |
-|`none`|Jeśli wystąpi błąd wewnętrzny kompilatora, go będzie nie być zbierane lub wysyłane do firmy Microsoft.|
+|`prompt`|Jeśli wystąpi wewnętrzny błąd kompilatora, pojawi się okno dialogowe, które umożliwia wyświetlenie dokładnych danych zebranych przez kompilator. Można określić, czy w raporcie o błędach znajdują się informacje poufne i podjąć decyzję o tym, czy wysłać ją do firmy Microsoft. Jeśli użytkownik zdecyduje się ją wysłać, a ustawienia zasad komputera i użytkownika zezwalają na to, kompilator wysyła dane do firmy Microsoft.|
+|`queue`|Kolejkuje raport o błędach. Gdy logujesz się przy użyciu uprawnień administratora, możesz zgłosić błędy od momentu ostatniego logowania (nie będzie wyświetlany monit o wysłanie raportów dla błędów więcej niż raz na trzy dni). Jest to zachowanie domyślne, gdy opcja `-errorreport` nie została określona.|
+|`send`|Jeśli wystąpi wewnętrzny błąd kompilatora, a ustawienia zasad komputera i użytkownika zezwalają na to, kompilator wysyła dane do firmy Microsoft.<br /><br /> Opcja `-errorreport:send` próbuje automatycznie wysłać informacje o błędzie do firmy Microsoft, jeśli raportowanie jest włączone przez ustawienia systemu [raportowanie błędów systemu Windows](/windows/desktop/wer/windows-error-reporting) . |
+|`none`|W przypadku wystąpienia wewnętrznego błędu kompilatora nie będzie on zbierany ani wysyłany do firmy Microsoft.|
 
-Kompilator wysyła dane, która zawiera stos w momencie wystąpienia błędu, który zwykle zawiera niektóre kody źródłowe. Jeśli `-errorreport` jest używana z [- bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) opcji, a następnie wysłaniu całego pliku źródłowego.
+Kompilator wysyła dane, które obejmują stos w momencie błędu, co zwykle zawiera kod źródłowy. Jeśli `-errorreport` jest używany z opcją [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) , zostanie wysłany cały plik źródłowy.
 
-Ta opcja jest optymalna dla [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) opcji, ponieważ zezwala ona na inżynierów firmy Microsoft, aby łatwo odtworzyć błąd.
+Ta opcja jest najlepiej używana z opcją [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) , ponieważ umożliwia inżynierom firmy Microsoft łatwiejsze odtwarzanie błędu.
 
 > [!NOTE]
-> `-errorreport` Opcja nie jest dostępne w środowisku programowania Visual Studio; jest dostępna tylko podczas kompilowania kodu w wierszu polecenia.
+> Opcja `-errorreport` nie jest dostępna w środowisku deweloperskim programu Visual Studio. jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod próbuje skompilować `T2.vb`, i gdy kompilator napotka błąd wewnętrzny kompilatora, jednak monituje o wysłanie raportu o błędach do firmy Microsoft.
+Poniższy kod próbuje skompilować `T2.vb`, a jeśli kompilator napotyka wewnętrzny błąd kompilatora, zostanie wyświetlony komunikat z prośbą o wysłanie raportu o błędach do firmy Microsoft.
 
-```
+```console
 vbc -errorreport:prompt t2.vb
 ```
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)

@@ -6,98 +6,98 @@ f1_keywords:
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: 9d2e0c7b2b81a79f95fa852b3975f4512d87f8e0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 522ac71767707ae90a3f1d11d45ef8b29471ae6c
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623992"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005120"
 ---
 # <a name="const-statement-visual-basic"></a>Const — Instrukcja (Visual Basic)
 Deklaruje i definiuje co najmniej jedną stałą.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 [ <attributelist> ] [ accessmodifier ] [ Shadows ]   
 Const constantlist  
 ```  
   
 ## <a name="parts"></a>Części  
  `attributelist`  
- Opcjonalna. Lista atrybutów, które są stosowane do wszystkich stałych zadeklarowanych w tej instrukcji. Zobacz [listę atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md) w nawiasy ("`<`"i"`>`").  
+ Opcjonalny. Lista atrybutów, które są stosowane do wszystkich stałych zadeklarowanych w tej instrukcji. Zobacz [listę atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md) w nawiasach kątowych ("`<`" i "`>`").  
   
  `accessmodifier`  
- Opcjonalna. Umożliwia określenie, jaki kod mogą uzyskiwać dostęp do tych stałych. Może być [publicznych](../../../visual-basic/language-reference/modifiers/public.md), [chronione](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), [Protected Friend](../modifiers/protected-friend.md), [prywatnej](../../../visual-basic/language-reference/modifiers/private.md), lub [Prywatny chroniony](../../language-reference/modifiers/private-protected.md).
+ Opcjonalny. Użyj tego, aby określić, jaki kod może uzyskać dostęp do tych stałych. Może być [publiczna](../../../visual-basic/language-reference/modifiers/public.md), [chroniona](../../../visual-basic/language-reference/modifiers/protected.md), [zaprzyjaźniona](../../../visual-basic/language-reference/modifiers/friend.md), [chroniona zaprzyjaźniona](../modifiers/protected-friend.md), [prywatna](../../../visual-basic/language-reference/modifiers/private.md)lub [prywatna](../../language-reference/modifiers/private-protected.md).
   
  `Shadows`  
- Opcjonalna. Umożliwia to ponownie zadeklarować i ukrywanie elementu programistycznego w klasie bazowej. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+ Opcjonalny. Użyj tego, aby ponownie zadeklarować i ukryć element programowania w klasie bazowej. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
  `constantlist`  
- Wymagana. Lista stałe został zadeklarowany w tej instrukcji.  
+ Wymagany. Lista stałych, które są zadeklarowane w tej instrukcji.  
   
  `constant` `[ ,` `constant` `... ]`  
   
- Każdy `constant` ma następujące składni i części:  
+ Każda `constant` ma następującą składnię i części:  
   
  `constantname` `[ As` `datatype` `] =` `initializer`  
   
-|Część|Opis|  
+|Części|Opis|  
 |----------|-----------------|  
-|`constantname`|Wymagana. Nazwa tej stałej. Zobacz [Zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`datatype`|Jeśli wymagane `Option Strict` jest `On`. Typ danych stałej.|  
-|`initializer`|Wymagana. Wyrażenie jest obliczane w czasie kompilacji i przypisanym do stałej.|  
+|`constantname`|Wymagany. Nazwa stałej. Zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`datatype`|Wymagane, jeśli `Option Strict` jest `On`. Typ danych stałej.|  
+|`initializer`|Wymagany. Wyrażenie, które jest oceniane w czasie kompilacji i przypisane do stałej.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli masz wartość, która nigdy się nie zmienia w aplikacji, można zdefiniować stałej nazwanej i zastępującą wartości literału. Nazwa jest łatwiejsze do zapamiętania niż określona wartość. Można zdefiniować stałą tylko raz i użyć go w wielu miejscach w kodzie. Jeśli w nowszej wersji. musisz ponownie definiować wartości, `Const` instrukcja jest jedynym miejscem, musisz wprowadzić zmiany.  
+ Jeśli masz wartość, która nigdy nie zmienia się w aplikacji, można zdefiniować nazwaną stałą i użyć jej zamiast wartości literału. Nazwa jest łatwiejsza do zapamiętania niż wartość. Możesz zdefiniować stałą tylko raz i użyć jej w wielu miejscach w kodzie. Jeśli w nowszej wersji należy ponownie zdefiniować wartość, instrukcja `Const` jest jedynym miejscem, w którym należy wprowadzić zmianę.  
   
- Możesz użyć `Const` tylko na poziomie modułu lub procedury. Oznacza to, że *kontekst deklaracji* zmiennej musi być klasy, struktury, moduł, procedurę lub blok i nie może być plikiem źródłowym, przestrzeń nazw lub interfejsu. Aby uzyskać więcej informacji, zobacz [Kontekst deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ @No__t-0 można używać tylko na poziomie modułu lub procedury. Oznacza to, że *kontekst deklaracji* dla zmiennej musi być klasą, strukturą, modułem, procedurą lub blokiem i nie może być plikiem źródłowym, przestrzenią nazw ani interfejsem. Aby uzyskać więcej informacji, zobacz [konteksty deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Domyślnie lokalnym stałymi (wewnątrz procedury) publicznego dostępu, a nie można użyć dowolnego modyfikatory dostępu na nich. Klasy i moduł domyślny — stałe (poza dowolnej procedury) elementu członkowskiego o dostępie prywatnym i domyślnie stałe elementu członkowskiego struktury dostępu publicznego. Poziomy dostępu można zmienić za pomocą modyfikatorów dostępu.  
+ Lokalne stałe (wewnątrz procedury) domyślnie mają dostęp publiczny i nie można używać żadnych modyfikatorów dostępu. Stałe elementu członkowskiego klasy i modułu (poza jakąkolwiek procedurą) domyślnie są dostępem prywatnym, a stałe elementów członkowskich struktury domyślnie mają dostęp publiczny. Możesz dostosować ich poziomy dostępu za pomocą modyfikatorów dostępu.  
   
-## <a name="rules"></a>reguły  
+## <a name="rules"></a>Przepisy  
   
-- **Kontekst deklaracji.** Stałą zadeklarowane na poziomie modułu, poza każda procedura jest *członek stałej*; jest członkiem klasy, struktury lub modułu, deklaruje ją.  
+- **Kontekst deklaracji.** Stała zadeklarowana na poziomie modułu, poza żadną procedurą, jest *stałą członkowską*; jest członkiem klasy, struktury lub modułu, który go deklaruje.  
   
-     Stałe zadeklarowane na poziomie procedury są *stała lokalna*; jest ono kontem lokalnym procedurę lub blok, który deklaruje ją.  
+     Stała zadeklarowana na poziomie procedury jest *stałą lokalną*; jest on lokalny dla procedury lub bloku, który deklaruje go.  
   
-- **Atrybuty.** Atrybuty można zastosować tylko do elementu członkowskiego stałych, a nie do lokalnego stałe. Atrybut przyczynia się informacji metadanych zestawu, które nie są istotne dla magazynów tymczasowych, takich jak lokalne stałe.  
+- **Attributes.** Atrybuty można stosować tylko do stałych elementów członkowskich, nie do stałych lokalnych. Atrybut zawiera informacje dotyczące metadanych zestawu, który nie ma znaczenia dla tymczasowego magazynu, takiego jak stałe lokalne.  
   
-- **Modyfikatory.** Domyślnie są stałymi `Shared`, `Static`, i `ReadOnly`. Nie można użyć dowolnego z tych słów kluczowych, podczas deklarowania stałą.  
+- **Modyfikatory.** Domyślnie wszystkie stałe są `Shared`, `Static` i `ReadOnly`. Nie można użyć żadnego z tych słów kluczowych podczas deklarowania stałej.  
   
-     Na poziomie procedury nie można użyć `Shadows` lub dowolne dostępu Modyfikatory do deklarowania lokalnym stałymi.  
+     Na poziomie procedury nie można używać `Shadows` ani modyfikatorów dostępu do deklarowania stałych lokalnych.  
   
-- **Kilka stałych.** Możesz zadeklarować kilka stałych w tej samej instrukcji deklaracji, określając `constantname` wchodzi w skład dla każdej z nich. Kilka stałych są oddzielone przecinkami.  
+- **Wiele stałych.** Można zadeklarować kilka stałych w tej samej instrukcji deklaracji, określając `constantname` części dla każdej z nich. Wiele stałych jest oddzielonych przecinkami.  
   
-## <a name="data-type-rules"></a>Zasady dla typu danych  
+## <a name="data-type-rules"></a>Reguły typu danych  
   
-- **Typy danych.** `Const` Instrukcji może zadeklarować zmienną typu danych. Można określić dowolny typ danych lub nazwę wyliczenia.  
+- **Typy danych.** Instrukcja `Const` może deklarować typ danych zmiennej. Można określić dowolny typ danych lub nazwę wyliczenia.  
   
-- **Domyślny typ.** Jeśli nie określisz `datatype`, stałej ma typ danych `initializer`. Jeśli określisz zarówno `datatype` i `initializer`, typ danych `initializer` musi być konwertowany na `datatype`. Jeśli żadna `datatype` ani `initializer` jest obecny, wartość domyślna to typ danych `Object`.  
+- **Typ domyślny.** Jeśli nie określisz wartości `datatype`, stała Pobiera typ danych `initializer`. W przypadku określenia obydwu wartości `datatype` i `initializer` typ danych `initializer` musi być konwertowany na `datatype`. Jeśli nie `datatype` ani `initializer`, typ danych jest wartością domyślną `Object`.  
   
-- **Różne typy.** Można określić różne typy danych dla różnych stałych przy użyciu oddzielnego `As` klauzula dla każdej zmiennej można zadeklarować. Jednak nie można zadeklarować kilka stałych do tego samego typu przy użyciu wspólnego `As` klauzuli.  
+- **Różne typy.** Można określić różne typy danych dla różnych stałych przy użyciu oddzielnej klauzuli `As` dla każdej zadeklarowanej zmiennej. Nie można jednak zadeklarować kilku stałych jako tego samego typu przy użyciu wspólnej klauzuli `As`.  
   
-- **Inicjowanie.** Należy zainicjować wartość każdego stała `constantlist`. Możesz użyć `initializer` dostarczyć wyrażenie ma być przypisany do stałej. Wyrażenie może być dowolną kombinacją literały, inne stałe, które są już zdefiniowane i elementów członkowskich wyliczenia, które są już zdefiniowane. Za pomocą operatorów arytmetycznych i logicznych połączyć takie elementy.  
+- **Zainicjować.** Należy zainicjować wartość każdej stałej w `constantlist`. Użyj `initializer`, aby podać wyrażenie, które ma zostać przypisane do stałej. Wyrażenie może być dowolną kombinacją literałów, innych stałych, które są już zdefiniowane, oraz składowych wyliczenia, które są już zdefiniowane. Do łączenia takich elementów można używać operatorów arytmetycznych i logicznych.  
   
-     Nie można używać zmiennych lub funkcji w `initializer`. Jednak można użyć słowa kluczowe konwersji takich jak `CByte` i `CShort`. Można również użyć `AscW` Jeśli wywołasz ze stałą `String` lub `Char` argumentu, ponieważ mogą być obliczane w czasie kompilacji.  
+     Nie można używać zmiennych ani funkcji w `initializer`. Można jednak użyć słów kluczowych konwersji, takich jak `CByte` i `CShort`. Można również użyć `AscW`, jeśli wywołasz ją ze stałą `String` lub `Char`, ponieważ można ją ocenić w czasie kompilacji.  
   
 ## <a name="behavior"></a>Zachowanie  
   
-- **Zakres.** Lokalnym stałymi jest dostępny tylko w obrębie ich procedurą lub blokiem. Element członkowski stałe będą dostępne w dowolnym miejscu ich klasy, struktury lub modułu.  
+- **Scope.** Stałe lokalne są dostępne tylko z poziomu ich procedury lub bloku. Stałe składowe są dostępne z dowolnego miejsca w swojej klasie, strukturze lub module.  
   
-- **Kwalifikacja.** Kod poza klasą, struktury lub modułu musi kwalifikować nazwy stałą element członkowski o nazwie tej klasy, struktury lub modułu. Kod poza terenem procedurą lub blokiem nie może odwoływać się do dowolnego lokalnego stałych w ramach tej procedury lub bloku.  
+- **Branego.** Kod poza klasą, strukturą lub modułem musi kwalifikować nazwę stałej elementu członkowskiego o nazwie tej klasy, struktury lub modułu. Kod poza procedurą lub blok nie może odwoływać się do żadnych stałych lokalnych w ramach tej procedury lub bloku.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto `Const` instrukcję, aby zadeklarować stałych do użycia zamiast wartości literału.  
+ W poniższym przykładzie użyto instrukcji `Const`, aby zadeklarować stałe do użycia zamiast wartości literału.  
   
  [!code-vb[VbVbalrStatements#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#13)]  
   
 ## <a name="example"></a>Przykład  
- Po zdefiniowaniu stałej z typem danych `Object`, kompilator Visual Basic nadaje jej typ `initializer`, zamiast `Object`. W poniższym przykładzie stała `naturalLogBase` ma typu run-time `Decimal`.  
+ W przypadku zdefiniowania stałej z typem danych `Object` kompilator Visual Basic daje typ `initializer`, a nie `Object`. W poniższym przykładzie, stała `naturalLogBase` ma typ czasu wykonywania `Decimal`.  
   
  [!code-vb[VbVbalrStatements#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#87)]  
   
- W poprzednim przykładzie użyto <xref:System.Type.ToString%2A> metody <xref:System.Type> obiektu zwróconego przez [GetType Operator](../../../visual-basic/language-reference/operators/gettype-operator.md), ponieważ <xref:System.Type> nie można przekonwertować na `String` przy użyciu `CStr`.  
+ W poprzednim przykładzie użyto metody <xref:System.Type.ToString%2A> dla obiektu <xref:System.Type> zwróconego przez [operator GetType](../../../visual-basic/language-reference/operators/gettype-operator.md), ponieważ <xref:System.Type> nie można przekonwertować na `String` przy użyciu `CStr`.  
   
 ## <a name="see-also"></a>Zobacz także
 

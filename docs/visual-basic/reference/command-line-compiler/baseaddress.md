@@ -9,19 +9,19 @@ helpviewer_keywords:
 - /baseaddress compiler option [Visual Basic]
 - baseaddress compiler option [Visual Basic]
 ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
-ms.openlocfilehash: e8dfe95ef3385635f5839ecc96047911544a256e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6ee842dbe65cbd9d147e77ec523a2b031d303738
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591448"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002389"
 ---
 # <a name="-baseaddress"></a>-baseaddress
-Określa domyślny adres podstawowy, podczas tworzenia biblioteki DLL.  
+Określa domyślny adres podstawowy podczas tworzenia biblioteki DLL.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console  
 -baseaddress:address  
 ```  
   
@@ -29,24 +29,24 @@ Określa domyślny adres podstawowy, podczas tworzenia biblioteki DLL.
   
 |Termin|Definicja|  
 |---|---|  
-|`address`|Wymagana. Adres podstawowy DLL. Ten adres należy określić jako liczbę szesnastkową.|  
+|`address`|Wymagany. Adres podstawowy biblioteki DLL. Ten adres musi być określony jako liczba szesnastkowa.|  
   
 ## <a name="remarks"></a>Uwagi  
  Domyślny adres podstawowy dla biblioteki DLL jest ustawiany przez .NET Framework.  
   
- Należy pamiętać, że wyraz niższego rzędu ten adres jest zaokrąglana. Na przykład jeśli określisz 0x11110001, jest zaokrąglana do 0x11110000.  
+ Należy pamiętać, że w tym adresie znajduje się wyraz o niższej kolejności. Na przykład, jeśli określisz 0x11110001, zostanie zaokrąglona do 0x11110000.  
   
- Aby ukończyć proces podpisywania dla biblioteki DLL, użyj `–R` opcji narzędzie silnych nazw (Sn.exe).  
+ Aby ukończyć proces podpisywania dla biblioteki DLL, użyj opcji `–R` narzędzia silnego nazewnictwa (SN. exe).  
   
- Ta opcja jest ignorowana, jeśli element docelowy nie jest biblioteką DLL.  
+ Ta opcja jest ignorowana, jeśli obiekt docelowy nie jest biblioteką DLL.  
   
-|Aby ustawić - baseaddress — w środowisku IDE programu Visual Studio|  
+|Aby ustawić-BaseAddress w środowisku IDE programu Visual Studio|  
 |---|  
-|1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**. <br />2.  Kliknij przycisk **skompilować** kartę.<br />3.  Kliknij przycisk **zaawansowane**.<br />4.  Zmodyfikuj wartość w **adres podstawowy DLL:** pole. **Uwaga:**      **Adres podstawowy DLL:** pole jest tylko do odczytu, chyba że obiekt docelowy jest biblioteką DLL.|  
+|1. zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**. <br />2. Kliknij kartę **kompilacja** .<br />3. kliknij pozycję **Zaawansowane**.<br />4. Zmodyfikuj wartość w polu **adres podstawowy biblioteki dll:** . **Uwaga:**      **Adres podstawowy biblioteki dll:** pole jest tylko do odczytu, chyba że obiekt docelowy jest biblioteką DLL.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [SN.exe (narzędzie silnych nazw)](../../../framework/tools/sn-exe-strong-name-tool.md))
+- [SN. exe (Narzędzie silnej nazwy)](../../../framework/tools/sn-exe-strong-name-tool.md))

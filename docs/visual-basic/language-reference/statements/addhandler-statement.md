@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - AddHandler statement [Visual Basic]
 ms.assetid: cfe69799-2a0f-42c0-a99e-09fed954da01
-ms.openlocfilehash: a9913cd682e52562422ba140e27187d37c592684
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 95277f532488b0cf56114e5ee94dc3528e3a2e02
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928939"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004542"
 ---
 # <a name="addhandler-statement"></a>AddHandler — Instrukcja
 Kojarzy zdarzenie z programem obsługi zdarzeń w czasie wykonywania.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 AddHandler event, AddressOf eventhandler  
 ```  
   
@@ -32,14 +32,14 @@ AddHandler event, AddressOf eventhandler
 |||
   
 ## <a name="remarks"></a>Uwagi  
- Instrukcje `AddHandler` i `RemoveHandler` umożliwiają uruchamianie i zatrzymywanie obsługi zdarzeń w dowolnym czasie podczas wykonywania programu.  
+ Instrukcje `AddHandler` i `RemoveHandler` umożliwiają uruchamianie i zatrzymywanie obsługi zdarzeń w dowolnym momencie podczas wykonywania programu.  
   
- Podpis procedury `eventhandler` musi być zgodny z podpisem zdarzenia `event`.  
+ Sygnatura procedury `eventhandler` musi być zgodna z sygnaturą zdarzenia `event`.  
   
- Zarówno słowo kluczowe `Handles`, jak i instrukcja `AddHandler` umożliwiają określenie konkretnych procedur do obsługi konkretnych zdarzeń, ale występują tu pewne różnice. Instrukcja `AddHandler` łączy procedury ze zdarzeniami w czasie wykonywania. Słowa kluczowego `Handles` należy użyć podczas definiowania procedury, aby określić, że ma ona obsługiwać konkretne zdarzenie. Aby uzyskać więcej informacji, zobacz artykuł [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)  
+ Słowo kluczowe `Handles` i instrukcja `AddHandler` umożliwiają określenie, że konkretne procedury obsługują określone zdarzenia, ale istnieją różnice. Instrukcja `AddHandler` łączy procedury ze zdarzeniami w czasie wykonywania. Użyj słowa kluczowego `Handles` podczas definiowania procedury, aby określić, że obsługuje określone zdarzenie. Aby uzyskać więcej informacji, zobacz [Handles](../../../visual-basic/language-reference/statements/handles-clause.md).  
   
 > [!NOTE]
-> W przypadku zdarzeń niestandardowych instrukcja `AddHandler` wywołuje metodę dostępu zdarzenia `AddHandler`. Aby uzyskać więcej informacji na temat zdarzeń niestandardowych, zobacz artykuł [Instrukcja Event](../../../visual-basic/language-reference/statements/event-statement.md)  
+> W przypadku zdarzeń niestandardowych instrukcja `AddHandler` wywołuje metodę dostępu `AddHandler` zdarzenia. Aby uzyskać więcej informacji na temat zdarzeń niestandardowych, zobacz [instrukcja zdarzenia](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Przykład  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  
@@ -47,6 +47,6 @@ AddHandler event, AddressOf eventhandler
 ## <a name="see-also"></a>Zobacz także
 
 - [RemoveHandler, instrukcja](../../../visual-basic/language-reference/statements/removehandler-statement.md)
-- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [Realizuj](../../../visual-basic/language-reference/statements/handles-clause.md)
 - [Event, instrukcja](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Zdarzenia](../../../visual-basic/programming-guide/language-features/events/index.md)

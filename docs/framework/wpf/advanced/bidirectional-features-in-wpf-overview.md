@@ -1,22 +1,22 @@
 ---
-title: Omówienie funkcji dwukierunkowych w WPF
+title: Przegląd Dwukierunkowe funkcje WPF
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 2a599322ef955b9f702f8960f294f5d093ede74a
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 6cd16f4d5586dcee54152b430f14911f5a9c5682
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834745"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005138"
 ---
-# <a name="bidirectional-features-in-wpf-overview"></a>Omówienie funkcji dwukierunkowych w WPF
+# <a name="bidirectional-features-in-wpf-overview"></a>Przegląd Dwukierunkowe funkcje WPF
 
 W przeciwieństwie do żadnej innej platformy deweloperskiej, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ma wiele funkcji, które obsługują szybkie opracowywanie zawartości dwukierunkowej, na przykład mieszane od lewej do prawej i od prawej do lewej w tym samym dokumencie. W tym samym czasie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tworzy doskonałe środowisko dla użytkowników, którzy wymagają funkcji dwukierunkowych, takich jak arabski i hebrajski.
 
-W poniższych sekcjach opisano wiele funkcji dwukierunkowych wraz z Przykładami ilustrującymi sposób osiągnięcia najlepszego sposobu wyświetlania zawartości dwukierunkowej. Większość przykładów używa [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], chociaż można łatwo zastosować koncepcje do C# kodu lub Microsoft Visual Basic Code.
+W poniższych sekcjach opisano wiele funkcji dwukierunkowych wraz z Przykładami ilustrującymi sposób osiągnięcia najlepszego sposobu wyświetlania zawartości dwukierunkowej. Większość przykładów używa języka XAML, chociaż można łatwo zastosować koncepcje do C# kodu programu lub Microsoft Visual Basic Code.
 
 <a name="FlowDirection"></a>
 
@@ -136,7 +136,7 @@ Istnieje kilka przypadków, w których <xref:System.Windows.FlowDirection> nie z
 
 **Obraz**
 
-@No__t-0 reprezentuje kontrolkę wyświetlającą obraz. W [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] może być używany z właściwością <xref:System.Windows.Controls.Image.Source%2A>, która definiuje [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] <xref:System.Windows.Controls.Image> do wyświetlenia.
+@No__t-0 reprezentuje kontrolkę wyświetlającą obraz. W języku XAML można go użyć z właściwością <xref:System.Windows.Controls.Image.Source%2A>, która definiuje [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] <xref:System.Windows.Controls.Image> do wyświetlenia.
 
 W przeciwieństwie do innych elementów [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], <xref:System.Windows.Controls.Image> nie dziedziczy <xref:System.Windows.FlowDirection> z kontenera. Jeśli jednak <xref:System.Windows.FlowDirection> jest jawnie ustawiona do <xref:System.Windows.FlowDirection.RightToLeft>, zostanie wyświetlony komunikat <xref:System.Windows.Controls.Image> w poziomie. Jest to funkcja zaimplementowana jako wygodna dla deweloperów zawartości dwukierunkowej. ponieważ w niektórych przypadkach w poziomie Przerzucanie obrazu skutkuje żądanym efektem.
 
@@ -198,7 +198,7 @@ Właściwość <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A>
 
 Ta właściwość określa typ podstawiania numerów do wykonania. Przyjmuje jedną z następujących wartości wyliczenia <xref:System.Windows.Media.NumberSubstitutionMethod>:
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: Metoda podstawienia jest określana na podstawie właściwości <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> kultury. Jest to wartość domyślna.
+- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: Metoda podstawienia jest określana na podstawie właściwości <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> kultury. Domyślnie włączone.
 
 - <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: Jeśli kultura liczbowa jest kulturą arabską lub perski, określa, że cyfry są zależne od kontekstu.
 
@@ -249,7 +249,7 @@ text1.Language = System.Windows.Markup.XmlLanguage.GetLanguage(System.Globalizat
 
 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> reprezentuje bieżącą kulturę używaną przez bieżący wątek w czasie wykonywania.
 
-Ostatni przykład [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] powinien wyglądać podobnie do poniższego przykładu.
+Końcowy przykład XAML powinien wyglądać podobnie do poniższego przykładu.
 
 [!code-xaml[Numbers2#Numbers2](~/samples/snippets/csharp/VS_Snippets_Wpf/Numbers2/CS/Window1.xaml#numbers2)]
 

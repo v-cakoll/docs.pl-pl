@@ -6,19 +6,19 @@ helpviewer_keywords:
 - -out compiler option [Visual Basic]
 - out compiler option [Visual Basic]
 ms.assetid: 9f148c15-0909-4cb8-a2db-777f8a8b45ae
-ms.openlocfilehash: 5dcf9dc5cc0987e965aba7fd2b8821252e19a655
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b005ac26e3fffad350cb4ce52f7757c9fff2ac1
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788898"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005335"
 ---
 # <a name="-out-visual-basic"></a>-out (Visual Basic)
 Określa nazwę pliku wyjściowego.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console  
 -out:filename  
 ```  
   
@@ -26,16 +26,16 @@ Określa nazwę pliku wyjściowego.
   
 |Termin|Definicja|  
 |---|---|  
-|`filename`|Wymagana. Nazwa pliku wyjściowego, kompilator tworzy. Jeśli nazwa pliku zawiera spację, nazwę należy ująć w znaki cudzysłowu ("").|  
+|`filename`|Wymagany. Nazwa pliku wyjściowego tworzonego przez kompilator. Jeśli nazwa pliku zawiera spację, należy ująć ją w cudzysłów ("").|  
   
 ## <a name="remarks"></a>Uwagi  
- Podaj pełną nazwę i rozszerzenie pliku do utworzenia. Jeśli tego nie zrobisz, plik .exe przyjmuje nazwy z kodu źródłowego pliku zawierającego `Sub Main` procedury i plik .dll pobiera jego nazwę pierwszego pliku kodu źródłowego.  
+ Określ pełną nazwę i rozszerzenie pliku do utworzenia. W przeciwnym razie plik. exe przyjmuje swoją nazwę z pliku kodu źródłowego zawierającego procedurę `Sub Main`, a plik. dll przyjmuje swoją nazwę z pierwszego pliku kodu źródłowego.  
   
- Jeśli określisz nazwę pliku bez rozszerzenia .exe lub .dll, kompilator automatycznie dodaje rozszerzenia, w zależności od wartości określonej dla `-target` — opcja kompilatora.  
+ Jeśli określisz nazwę pliku bez rozszerzenia exe lub dll, kompilator automatycznie doda rozszerzenie dla Ciebie, w zależności od wartości określonej dla opcji kompilatora `-target`.  
   
-|Aby ustawić - out w programie Visual Studio zintegrowanego środowiska programistycznego|  
+|Aby skonfigurować w zintegrowanym środowisku programistycznym programu Visual Studio|  
 |---|  
-|1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**. <br />2.  Kliknij przycisk **aplikacji** kartę.<br />3.  Zmodyfikuj wartość w **nazwy zestawu** pole.|  
+|1. zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**. <br />2. Kliknij kartę **aplikacja** .<br />3. Zmodyfikuj wartość w polu **Nazwa zestawu** .|  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod kompiluje `T2.vb` i tworzy plik wyjściowy `T2.exe`.  
@@ -46,6 +46,6 @@ vbc t2.vb -out:t3.exe
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

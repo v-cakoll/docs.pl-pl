@@ -8,37 +8,37 @@ helpviewer_keywords:
 - Skip statement [Visual Basic]
 - Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
-ms.openlocfilehash: db2d79596895505ddaa7778e831082a94c7ad44e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e52de186e1475bfabd02821a0cd2384d8350eed3
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945252"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004769"
 ---
 # <a name="skip-clause-visual-basic"></a>Skip — Klauzula (Visual Basic)
 Pomija określoną liczbę elementów w kolekcji, a następnie zwraca pozostałe elementy.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 Skip count  
 ```  
   
 ## <a name="parts"></a>Części  
  `count`  
- Wymagana. Wartość lub wyrażenie zwracające liczbę elementów w sekwencji, aby pominąć.  
+ Wymagany. Wartość lub wyrażenie, które oblicza liczbę elementów sekwencji do pominięcia.  
   
 ## <a name="remarks"></a>Uwagi  
- `Skip` Klauzuli powoduje, że zapytanie w celu obejścia elementów na początku listy wyników i zwracać wszystkie pozostałe elementy. Liczba elementów do pominięcia, które jest identyfikowane za pomocą `count` parametru.  
+ Klauzula `Skip` powoduje, że zapytanie pomija elementy na początku listy wyników i zwróci pozostałe elementy. Liczba elementów do pominięcia jest identyfikowana przez parametr `count`.  
   
- Możesz użyć `Skip` klauzula `Take` klauzuli, która zwraca zakres danych z dowolnego segmentu zapytania. Aby to zrobić, należy przekazać indeksu pierwszego elementu zakresu `Skip` klauzuli i rozmiar zakresu `Take` klauzuli.  
+ Można użyć klauzuli `Skip` z klauzulą `Take`, aby zwrócić zakres danych z dowolnego segmentu zapytania. W tym celu Przekaż indeks pierwszego elementu zakresu do klauzuli `Skip` i rozmiaru zakresu do klauzuli `Take`.  
   
- Kiedy używasz `Skip` w klauzuli kwerendy, może być również konieczne upewnij się, że wyniki są zwracane w kolejności, która umożliwi `Skip` klauzulę, aby pominąć zamierzone wyniki. Aby uzyskać więcej informacji na temat kolejności wyników zapytania, zobacz [klauzula Order By](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ Jeśli używasz klauzuli `Skip` w zapytaniu, możesz również upewnić się, że wyniki są zwracane w kolejności, w której zostanie włączona klauzula `Skip`, aby pominąć zamierzone wyniki. Aby uzyskać więcej informacji na temat porządkowania wyników zapytania, zobacz [klauzula Order by](../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- Możesz użyć `SkipWhile` klauzulę, aby określić, że tylko niektóre elementy są ignorowane, w zależności od podanym warunku.  
+ Można użyć klauzuli `SkipWhile`, aby określić, że tylko niektóre elementy są ignorowane, w zależności od podanego warunku.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu wykorzystuje `Skip` klauzuli wraz z `Take` klauzulę, aby zwrócić dane z zapytania na stronach. `GetCustomers` Używa funkcji `Skip` klauzuli, aby pominąć klienci na liście do momentu podany początkowy indeks wartości i używa `Take` klauzuli zwracane strony klientów, począwszy od tej wartości indeksu.  
+ Poniższy przykład kodu używa klauzuli `Skip` razem z klauzulą `Take` do zwracania danych z zapytania na stronach. Funkcja `GetCustomers` używa klauzuli `Skip` do obejścia klientów na liście do momentu podanej wartości indeksu początkowego i użycia klauzuli `Take` do zwrócenia strony klientów zaczynających się od tej wartości indeksu.  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   

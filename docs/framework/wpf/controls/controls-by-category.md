@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: b86684bab6c552102af7486b2c9ab49ea703a175
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 41cbe57f1e3711bb4e18b2b4da28c26ebbd2bc60
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627301"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005692"
 ---
 # <a name="controls-by-category"></a>Kontrolki według kategorii
-Formanty Windows Presentation Foundation (WPF) może być logicznie pogrupowane w różne kategorie. Kategorie te mogą służyć do Wybieranie właściwej opcji kontroli dla danego scenariusza, pomagając możesz zobaczyć, które kontrolki mają podobne wzorce użycia lub funkcji.  
+Formanty Windows Presentation Foundation (WPF) można logicznie grupować w kilka kategorii. Te kategorie mogą służyć do wybrania odpowiedniej kontrolki dla danego scenariusza, pomagając zobaczyć, które kontrolki mają podobne wzorce użycia lub funkcje.  
   
 ## <a name="layout"></a>Układ  
- Układ kontrolki są używane do zarządzania, rozmiar, wymiary, stanowisko i rozmieszczenie elementów podrzędnych.  
+ Kontrolki układu służą do zarządzania rozmiarem, wymiarami, pozycją i rozmieszczeniem elementów podrzędnych.  
   
 - <xref:System.Windows.Controls.Border>  
   
@@ -56,14 +56,14 @@ Formanty Windows Presentation Foundation (WPF) może być logicznie pogrupowane 
 - <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>Przyciski  
- Przyciski są jednymi z najbardziej podstawowym kontrolek interfejsu użytkownika. Aplikacje zazwyczaj wykonywać niektóre zadania w <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzenie, kiedy użytkownik kliknie na nich.  
+ Przyciski są jednym z najbardziej podstawowych formantów interfejsu użytkownika. Aplikacje zwykle wykonują kilka zadań w zdarzeniu <xref:System.Windows.Controls.Primitives.ButtonBase.Click> po kliknięciu przez użytkownika.  
   
 - <xref:System.Windows.Controls.Button>  
   
 - <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
 ## <a name="data-display"></a>Wyświetlanie danych  
- Formanty wyświetlania danych są używane do wyświetlenia informacji ze źródła danych.  
+ Kontrolki wyświetlania danych służą do wyświetlania informacji ze źródła danych.  
   
 - <xref:System.Windows.Controls.DataGrid>  
   
@@ -71,15 +71,15 @@ Formanty Windows Presentation Foundation (WPF) może być logicznie pogrupowane 
   
 - <xref:System.Windows.Controls.TreeView>  
   
-## <a name="date-display-and-selection"></a>Wyświetlanie dat i wybór  
- Formanty daty są używane do wyświetlania i wybierania informacji z kalendarza.  
+## <a name="date-display-and-selection"></a>Wyświetlanie i wybór daty  
+ Kontrolki Date są używane do wyświetlania i wybierania informacji o kalendarzu.  
   
 - <xref:System.Windows.Controls.Calendar>  
   
 - <xref:System.Windows.Controls.DatePicker>  
   
 ## <a name="menus"></a>Menu  
- Menu są używane do grupowania powiązanych akcji lub zapewnianie pomocy kontekstowej.  
+ Menu służą do grupowania powiązanych akcji lub do zapewnienia pomocy kontekstowej.  
   
 - <xref:System.Windows.Controls.ContextMenu>  
   
@@ -88,7 +88,7 @@ Formanty Windows Presentation Foundation (WPF) może być logicznie pogrupowane 
 - <xref:System.Windows.Controls.ToolBar>  
   
 ## <a name="selection"></a>Wybór  
- Kontrolki wyboru umożliwia użytkownikowi wybranie co najmniej jedną opcję.  
+ Kontrolki wyboru umożliwiają użytkownikowi wybranie jednej lub kilku opcji.  
   
 - <xref:System.Windows.Controls.CheckBox>  
   
@@ -101,7 +101,7 @@ Formanty Windows Presentation Foundation (WPF) może być logicznie pogrupowane 
 - <xref:System.Windows.Controls.Slider>  
   
 ## <a name="navigation"></a>Nawigacja  
- Kontrolki poprawić lub rozszerzyć środowisko nawigacji w aplikacji, tworząc ramek określania wartości docelowej lub wyglądu aplikacji na kartach.  
+ Kontrolki nawigacji rozszerzają lub rozszerzają środowisko nawigacji aplikacji przez tworzenie ramek docelowych lub wyglądu aplikacji z kartami.  
   
 - <xref:System.Windows.Controls.Frame>  
   
@@ -114,7 +114,7 @@ Formanty Windows Presentation Foundation (WPF) może być logicznie pogrupowane 
 - <xref:System.Windows.Controls.TabControl>  
   
 ## <a name="dialog-boxes"></a>Okna dialogowe  
- Okna dialogowe zapewniają docelowych obsługę typowych scenariuszy interakcji użytkownika, takich jak drukowanie.  
+ Okna dialogowe zapewniają zamierzone wsparcie dla typowych scenariuszy interakcji z użytkownikami, takich jak drukowanie.  
   
 - <xref:Microsoft.Win32.OpenFileDialog>  
   
@@ -123,7 +123,7 @@ Formanty Windows Presentation Foundation (WPF) może być logicznie pogrupowane 
 - <xref:Microsoft.Win32.SaveFileDialog>  
   
 ## <a name="user-information"></a>Informacje o użytkowniku  
- Formanty informacji użytkownika kontekstowe opinii lub wyjaśnić interfejsu użytkownika aplikacji. Użytkownik zwykle nie może korzystać z tych kontrolek.  
+ Kontrolki informacji o użytkowniku zapewniają Opinie kontekstowe lub wyjaśniają interfejs użytkownika aplikacji. Użytkownik zazwyczaj nie może korzystać z tych kontrolek.  
   
 - <xref:System.Windows.Controls.AccessText>  
   
@@ -140,7 +140,7 @@ Formanty Windows Presentation Foundation (WPF) może być logicznie pogrupowane 
 - <xref:System.Windows.Controls.ToolTip>  
   
 ## <a name="documents"></a>Dokumenty  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] obejmuje kilka specjalistycznych formantów na wyświetlanie dokumentów. Te kontrolki zoptymalizować czytanie na podstawie scenariusza użytkownika docelowego.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawiera kilka wyspecjalizowanych formantów do wyświetlania dokumentów. Te kontrolki optymalizują środowisko czytania w oparciu o scenariusz użytkownika Target.  
   
 - <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -153,7 +153,7 @@ Formanty Windows Presentation Foundation (WPF) może być logicznie pogrupowane 
 - <xref:System.Windows.Controls.StickyNoteControl>  
   
 ## <a name="input"></a>Dane wejściowe  
- Kontrolki wejściowe umożliwić użytkownikowi wprowadzanie tekstu i innej zawartości.  
+ Kontrolki wprowadzania umożliwiają użytkownikowi wprowadzanie tekstu i innej zawartości.  
   
 - <xref:System.Windows.Controls.TextBox>  
   
@@ -161,8 +161,8 @@ Formanty Windows Presentation Foundation (WPF) może być logicznie pogrupowane 
   
 - <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="media"></a>Nośnik  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawiera zintegrowane funkcje obsługi do hostowania zawartości audio i wideo, a także [kodery-dekodery] dla aktualnie najpopularniejszych formatów obrazu.  
+## <a name="media"></a>Multimedialny  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] obejmuje zintegrowaną obsługę obsługiwania zawartości audio i wideo, a także [kodery-dekoder] dla najpopularniejszych formatów obrazów.  
   
 - <xref:System.Windows.Controls.Image>  
   
@@ -171,7 +171,7 @@ Formanty Windows Presentation Foundation (WPF) może być logicznie pogrupowane 
 - <xref:System.Windows.Controls.SoundPlayerAction>  
   
 ## <a name="digital-ink"></a>Cyfrowy atrament  
- Cyfrowy atrament elementy sterujące udostępniają zintegrowane funkcje obsługi [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] funkcje, takie jak wyświetlanie pisma odręcznego i danych wejściowych pisma odręcznego.  
+ Kontrolki cyfrowego atramentu zapewniają zintegrowaną obsługę funkcji komputera typu Tablet, takich jak wyświetlanie atramentu i wprowadzanie atramentu.  
   
 - <xref:System.Windows.Controls.InkCanvas>  
   

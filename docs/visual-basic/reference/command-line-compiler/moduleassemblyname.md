@@ -6,19 +6,19 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: dc4c0336c8a67a1b4e70f71ba5f5406da1fbb2ff
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5b26e36346858d95526f5d5ce7d4645bea1dbe05
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972377"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005479"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 Określa nazwę zestawu, którego częścią ma być ten moduł.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console  
 -moduleassemblyname:assembly_name  
 ```  
   
@@ -29,22 +29,22 @@ Określa nazwę zestawu, którego częścią ma być ten moduł.
 |`assembly_name`|Nazwa zestawu, którego częścią ma być ten moduł.|  
   
 ## <a name="remarks"></a>Uwagi  
- Kompilator przetwarza `-moduleassemblyname` opcję tylko wtedy, `-target:module` gdy została określona opcja. Powoduje to, że kompilator tworzy moduł. Moduł utworzony przez kompilator jest prawidłowy tylko dla zestawu określonego przy użyciu `-moduleassemblyname` opcji. Jeśli umieścisz moduł w innym zestawie, wystąpią błędy w czasie wykonywania.  
+ Kompilator przetwarza opcję `-moduleassemblyname` tylko wtedy, gdy została określona opcja `-target:module`. Powoduje to, że kompilator tworzy moduł. Moduł utworzony przez kompilator jest prawidłowy tylko dla zestawu określonego przy użyciu opcji `-moduleassemblyname`. Jeśli umieścisz moduł w innym zestawie, wystąpią błędy w czasie wykonywania.  
   
- Ta `-moduleassemblyname` opcja jest wymagana tylko wtedy, gdy są spełnione następujące warunki:  
+ Opcja `-moduleassemblyname` jest wymagana tylko wtedy, gdy są spełnione następujące warunki:  
   
-- Typ danych w module wymaga dostępu do `Friend` typu w przywoływanym zestawie.  
+- Typ danych w module wymaga dostępu do typu `Friend` w przywoływanym zestawie.  
   
 - Przywoływany zestaw ma udzielony dostęp do zestawu, do którego zostanie skompilowany moduł.  
   
  Aby uzyskać więcej informacji na temat tworzenia modułu, zobacz [/Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Aby uzyskać więcej informacji na temat znajomych zestawów, zobacz [zaprzyjaźnione zestawy](../../../standard/assembly/friend.md).  
   
 > [!NOTE]
-> `-moduleassemblyname` Opcja jest niedostępna w środowisku deweloperskim programu Visual Studio. jest ona dostępna tylko podczas kompilowania z wiersza polecenia.  
+> Opcja `-moduleassemblyname` nie jest dostępna w środowisku deweloperskim programu Visual Studio. jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Kompilowanie zestawu wieloplikowego](../../../framework/app-domains/build-multifile-assembly.md)
+- [Instrukcje: kompilacja zestawów wieloplikowych](../../../framework/app-domains/build-multifile-assembly.md)
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)

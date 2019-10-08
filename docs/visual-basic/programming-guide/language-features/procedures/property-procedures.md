@@ -13,36 +13,36 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-ms.openlocfilehash: b637f6a5f3ef367dfe769c2878878eeb938e3c81
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3b57ae45815fbd91cad17cddbed4d01037eb92f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638815"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002087"
 ---
 # <a name="property-procedures-visual-basic"></a>Procedury własności (Visual Basic)
-Procedury właściwości jest szereg instrukcji, które manipulowania właściwości niestandardowych dla modułu, klasy lub struktury. Procedury własności są również nazywane *Akcesory właściwości*.  
+Procedura właściwości to seria Visual Basic instrukcji, które manipulują właściwością niestandardową w module, klasie lub strukturze. Procedury właściwości są również znane jako metody *dostępu do właściwości*.  
   
- Visual Basic zawiera następujące procedury właściwości:  
+ Visual Basic zapewnia następujące procedury właściwości:  
   
-- A `Get` procedura zwraca wartość właściwości. Jest ona wywoływana, gdy uzyskujesz dostęp do właściwości w wyrażeniu.  
+- Procedura `Get` zwraca wartość właściwości. Jest wywoływana, gdy uzyskujesz dostęp do właściwości w wyrażeniu.  
   
-- A `Set` procedury ustawia właściwość na wartość, w tym odwołanie do obiektu. Jest ona wywoływana podczas przypisywania wartości do właściwości.  
+- Procedura `Set` ustawia właściwość na wartość, łącznie z odwołaniem do obiektu. Jest wywoływana, gdy przypiszesz wartość do właściwości.  
   
- Zazwyczaj definiowanie procedury właściwości w parach, za pomocą `Get` i `Set` instrukcji, ale można zdefiniować tych procedurach, tylko, jeśli właściwość jest tylko do odczytu ([instrukcja Get](../../../../visual-basic/language-reference/statements/get-statement.md)) lub tylko do zapisu ([zestawu Instrukcja](../../../../visual-basic/language-reference/statements/set-statement.md)).  
+ Zazwyczaj definiuje się procedury właściwości w parach przy użyciu instrukcji `Get` i `Set`, ale można zdefiniować pojedynczą procedurę, jeśli właściwość jest tylko do odczytu ([instrukcja GET](../../../../visual-basic/language-reference/statements/get-statement.md)) lub tylko do zapisu ([instrukcja set](../../../../visual-basic/language-reference/statements/set-statement.md)).  
   
- Możesz pominąć `Get` i `Set` procedury w przypadku przy użyciu automatycznie implementowanych właściwości. Aby uzyskać więcej informacji, zobacz [implemented Properties](./auto-implemented-properties.md).  
+ Możesz pominąć procedurę `Get` i `Set` w przypadku używania właściwości, która jest implementowana. Aby uzyskać więcej informacji, zobacz [zaimplementowane właściwości](./auto-implemented-properties.md).  
   
- Można zdefiniować właściwości klas, struktur i modułów. Właściwości są `Public` domyślnie, co oznacza, że można go wywołać z dowolnego miejsca w aplikacji, które mogą uzyskiwać dostęp do właściwości kontenera.  
+ Można definiować właściwości w klasach, strukturach i modułach. Właściwości są domyślnie `Public`, co oznacza, że można je wywoływać z dowolnego miejsca w aplikacji, która może uzyskiwać dostęp do kontenera właściwości.  
   
- Dla porównania z właściwościami i zmiennymi, zobacz [różnice między właściwościami i zmiennymi w Visual Basic](./differences-between-properties-and-variables.md).  
+ Porównanie właściwości i zmiennych można znaleźć [w temacie różnice między właściwościami i zmiennymi w Visual Basic](./differences-between-properties-and-variables.md).  
   
 ## <a name="declaration-syntax"></a>Składnia deklaracji  
- Sama właściwość jest definiowany przez blok kodu ujęte w [Property — instrukcja](../../../../visual-basic/language-reference/statements/property-statement.md) i `End Property` instrukcji. Wewnątrz tego bloku każdej procedury właściwość pojawia się jako wewnętrzny blok ujęte w instrukcji deklaracji (`Get` lub `Set`) i dopasowywania `End` deklaracji.  
+ Sama właściwość jest definiowana przez blok kodu ujęty w [instrukcji Property](../../../../visual-basic/language-reference/statements/property-statement.md) i instrukcji `End Property`. Wewnątrz tego bloku każda procedura właściwości jest wyświetlana jako wewnętrzny blok ujęty w instrukcji deklaracji (`Get` lub `Set`) i zgodna deklaracja `End`.  
   
- Składnia deklaracji właściwości i jej procedury jest następująca:  
+ Składnia do deklarowania właściwości i jej procedur jest następująca:  
   
-```  
+```vb  
 [Default] [Modifiers] Property PropertyName[(ParameterList)] [As DataType]  
     [AccessLevel] Get  
         ' Statements of the Get procedure.  
@@ -59,49 +59,49 @@ End Property
 [Default] [Modifiers] Property PropertyName [(ParameterList)] [As DataType]  
 ```  
   
- `Modifiers` Można określić poziom dostępu i informacji dotyczących przeciążenia, zastępowanie, udostępnianie i przesłanianie, a także tego, czy właściwość jest tylko do odczytu lub tylko do zapisu. `AccessLevel` Na `Get` lub `Set` procedura może być dowolny poziom, który jest bardziej restrykcyjny niż poziom dostępu, określony dla samej właściwości. Aby uzyskać więcej informacji, zobacz [Property — instrukcja](../../../../visual-basic/language-reference/statements/property-statement.md).  
+ @No__t-0 może określić poziom dostępu i informacje dotyczące przeciążania, przesłaniania, udostępniania i przesłaniania, a także określić, czy właściwość jest tylko do odczytu, czy tylko do zapisu. @No__t-0 w procedurze `Get` lub `Set` może być poziomem, który jest bardziej restrykcyjny niż poziom dostępu określony dla samej właściwości. Aby uzyskać więcej informacji, zobacz [instrukcja właściwości](../../../../visual-basic/language-reference/statements/property-statement.md).  
   
 ### <a name="data-type"></a>Typ danych  
- Typ danych właściwości i poziom dostępu jednostki są definiowane w `Property` instrukcji, a nie w procedurach właściwości. Właściwość może mieć tylko jednego typu danych. Na przykład nie można zdefiniować właściwości w celu przechowywania `Decimal` wartość, ale pobieranie `Double` wartość.  
+ Typ danych właściwości i poziom dostępu podmiotu zabezpieczeń są zdefiniowane w instrukcji `Property`, a nie w procedurach właściwości. Właściwość może mieć tylko jeden typ danych. Na przykład nie można zdefiniować właściwości, aby zachować wartość `Decimal`, ale pobrać wartość `Double`.  
   
 ### <a name="access-level"></a>Poziom dostępu  
- Można jednak określić poziom dostępu jednostki dla właściwości i bardziej ograniczyć poziomu dostępu na jeden z jego procedury właściwości. Na przykład można zdefiniować `Public` właściwości, a następnie zdefiniować `Private Set` procedury. `Get` Pozostaje procedury `Public`. Można zmienić poziomu dostępu tylko w jednym procedury właściwości i można tworzyć tylko je bardziej restrykcyjny niż poziom dostępu podmiotu zabezpieczeń. Aby uzyskać więcej informacji, zobacz [jak: Deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md).  
+ Można jednak zdefiniować poziom dostępu podmiotu zabezpieczeń dla właściwości i jeszcze bardziej ograniczyć poziom dostępu w jednej z jej procedur dotyczących właściwości. Na przykład można zdefiniować Właściwość `Public`, a następnie zdefiniować procedurę `Private Set`. Procedura `Get` pozostanie `Public`. Poziom dostępu można zmienić tylko w jednej z procedur dotyczących właściwości i można uczynić go bardziej restrykcyjnym niż główny poziom dostępu. Aby uzyskać więcej informacji, zobacz [jak: deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md).  
   
 ## <a name="parameter-declaration"></a>Deklaracja parametru  
- Zadeklaruj taki sam sposób jak w przypadku każdego parametru [procedury Sub](./sub-procedures.md), z tą różnicą, że mechanizm przekazywania musi być `ByVal`.  
+ Każdy parametr należy zadeklarować w taki sam sposób jak [procedury Sub](./sub-procedures.md), z tą różnicą, że mechanizm przekazywania musi być `ByVal`.  
   
- Składnia dla każdego parametru na liście parametrów jest w następujący sposób:  
+ Składnia każdego parametru na liście parametrów jest następująca:  
   
  `[Optional] ByVal [ParamArray] parametername As datatype`  
   
- Jeśli parametr jest opcjonalny, należy również podać wartości domyślnej w ramach swojej deklaracji. Składnia określająca wartość domyślna jest następująca:  
+ Jeśli parametr jest opcjonalny, należy również podać wartość domyślną w ramach swojej deklaracji. Składnia określająca wartość domyślną jest następująca:  
   
  `Optional ByVal parametername As datatype = defaultvalue`  
   
 ## <a name="property-value"></a>Wartość właściwości  
- W `Get` procedury, wartość zwracana jest dostarczany do wywoływania wyrażenia jako wartości właściwości.  
+ W procedurze `Get` wartość zwracana jest przekazywana do wyrażenia wywołującego jako wartość właściwości.  
   
- W `Set` procedury, nowa wartość właściwości jest przekazywana do parametru `Set` instrukcji. Jeśli parametr jest jawnie deklarować, należy zadeklarować ją za pomocą tego samego typu danych, ponieważ właściwość. Jeśli nie deklaruj parametru, kompilator używa niejawny parametr `Value` do reprezentowania nową wartość do przypisania do właściwości.  
+ W procedurze `Set` nowa wartość właściwości jest przenoszona do parametru instrukcji `Set`. Jeśli jawnie deklarujesz parametr, musisz zadeklarować go przy użyciu tego samego typu danych co właściwość. Jeśli parametr nie zostanie zadeklarowany, kompilator używa niejawnego parametru `Value` do reprezentowania nowej wartości, która ma zostać przypisana do właściwości.  
   
-## <a name="calling-syntax"></a>Składnia wywoływania  
- Wywoływanie procedury właściwości są niejawnie, wprowadzając odwołanie do właściwości. Możesz użyć nazwy właściwości taki sam sposób użyje nazwę zmiennej, z tą różnicą, że należy podać wartości w argumentach, które nie są opcjonalne i listy argumentów należy ująć w nawiasy. Jeśli zostały dostarczone żadne argumenty, opcjonalnie można pominąć nawiasów.  
+## <a name="calling-syntax"></a>Składnia wywołania  
+ Wywoływanie procedury właściwości niejawnie przez utworzenie odwołania do właściwości. Nazwa właściwości jest używana w taki sam sposób, jak przy użyciu nazwy zmiennej, z tą różnicą, że należy podać wartości dla wszystkich argumentów, które nie są opcjonalne, i należy ująć listę argumentów w nawiasach. Jeśli nie podano argumentów, można opcjonalnie pominąć nawiasy.  
   
- Składnia wywołanie niejawne `Set` procedura jest następująca:  
+ Składnia niejawnego wywołania procedury `Set` jest następująca:  
   
  `propertyname[(argumentlist)] = expression`  
   
- Składnia wywołanie niejawne `Get` procedura jest następująca:  
+ Składnia niejawnego wywołania procedury `Get` jest następująca:  
   
  `lvalue = propertyname[(argumentlist)]`  
   
  `Do While (propertyname[(argumentlist)] > expression)`  
   
-### <a name="illustration-of-declaration-and-call"></a>Ilustracja deklaracji i wywołanie  
- Następująca właściwość przechowuje pełną nazwę w postaci dwie nazwy składowych, imię i nazwisko. Podczas wywoływania kodu odczytuje `fullName`, `Get` procedury łączy dwie nazwy składowych i zwraca pełną nazwę. Gdy kod wywołujący przypisuje nową pełną nazwę, `Set` procedury próbuje podzielenie go na dwie nazwy składowych. Jeśli nie znajdzie spację, przechowuje on wszystkie jako imię.  
+### <a name="illustration-of-declaration-and-call"></a>Ilustracja deklaracji i wywołania  
+ Następująca właściwość przechowuje pełną nazwę jako dwie nazwy składników, imię i nazwisko. Gdy wywołujący kod odczytuje `fullName`, procedura `Get` łączy dwa nazwy składników i zwraca pełną nazwę. Gdy wywołujący kod przypisze nową pełną nazwę, procedura `Set` próbuje podzielić ją na dwie nazwy składników. Jeśli nie znajdzie miejsca, będzie ono przechowywane jako imię i nazwisko.  
   
  [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
- W poniższym przykładzie przedstawiono typowe wywołania procedur właściwość `fullName`.  
+ W poniższym przykładzie przedstawiono typowe wywołania procedur właściwości `fullName`.  
   
  [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
@@ -112,8 +112,8 @@ End Property
 - [Procedury operatorów](./operator-procedures.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
 - [Różnice między właściwościami i zmiennymi w Visual Basic](./differences-between-properties-and-variables.md)
-- [Instrukcje: Tworzenie właściwości](./how-to-create-a-property.md)
-- [Instrukcje: Wywoływanie procedury właściwości](./how-to-call-a-property-procedure.md)
-- [Instrukcje: Deklarowanie i wywoływanie w właściwości domyślnej w języku Visual Basic](./how-to-declare-and-call-a-default-property.md)
-- [Instrukcje: Umieszczanie wartości we właściwości](./how-to-put-a-value-in-a-property.md)
-- [Instrukcje: Pobieranie wartości z właściwości](./how-to-get-a-value-from-a-property.md)
+- [Instrukcje: tworzenie właściwości](./how-to-create-a-property.md)
+- [Instrukcje: wywoływanie procedury właściwości](./how-to-call-a-property-procedure.md)
+- [Instrukcje: deklarowanie i wywoływanie właściwości domyślnej w Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Instrukcje: umieszczanie wartości we właściwości](./how-to-put-a-value-in-a-property.md)
+- [Instrukcje: pobieranie wartości z właściwości](./how-to-get-a-value-from-a-property.md)

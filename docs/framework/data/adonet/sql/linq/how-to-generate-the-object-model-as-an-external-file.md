@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Generowanie modelu obiektu jako zewnętrznego pliku'
+title: 'Instrukcje: Generowanie modelu obiektu jako pliku zewnętrznego'
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 3fd84d878ab07411bba41a13ff3eef91b2425e8a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 915c02de55211efa24a4aa9f21ddc2c7e60fa41a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793587"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002743"
 ---
-# <a name="how-to-generate-the-object-model-as-an-external-file"></a>Instrukcje: Generowanie modelu obiektu jako zewnętrznego pliku
+# <a name="how-to-generate-the-object-model-as-an-external-file"></a>Instrukcje: Generowanie modelu obiektu jako pliku zewnętrznego
 Alternatywą dla mapowania opartego na atrybutach jest generowanie modelu obiektu jako zewnętrznego pliku XML przy użyciu narzędzia wiersza polecenia SQLMetal. Aby uzyskać więcej informacji, zobacz [SQLMetal. exe (Narzędzie generowania kodu)](../../../../tools/sqlmetal-exe-code-generation-tool.md). Przy użyciu zewnętrznego pliku mapowania XML można zmniejszyć ilość bałaganu w kodzie. Możesz również zmienić zachowanie, modyfikując plik zewnętrzny bez ponownego kompilowania plików binarnych aplikacji. Aby uzyskać więcej informacji, zobacz [Mapowanie zewnętrzne](external-mapping.md).  
   
 > [!NOTE]
@@ -18,7 +18,7 @@ Alternatywą dla mapowania opartego na atrybutach jest generowanie modelu obiekt
 ## <a name="example"></a>Przykład  
  Następujące polecenie generuje zewnętrzny plik mapowania z przykładowej bazy danych Northwind.  
   
-```  
+```console  
 sqlmetal /server:myserver /database:northwind /map:externalfile.xml  
 ```  
   
@@ -52,4 +52,4 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 
 - [Tworzenie modelu obiektu](creating-the-object-model.md)
 - [Mapowanie zewnętrzne](external-mapping.md)
-- [Instrukcje: Generuj model obiektów w Visual Basic lubC#](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [Instrukcje: Generowanie modelu obiektu w języku Visual Basic lub C#](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)

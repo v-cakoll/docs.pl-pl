@@ -10,19 +10,19 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: 21781db637c71abbbe9366bc95b6ee4c89ac2246
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 50a53cd45cc428541c90fbf82089518be2212fae
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61712633"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004806"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate — Klauzula (Visual Basic)
-Stosuje jedną lub więcej funkcji agregujących do kolekcji.  
+Stosuje co najmniej jedną funkcję agregującą do kolekcji.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 Aggregate element [As type] In collection _  
   [, element2 [As type2] In collection2, [...]]  
   [ clause ]  
@@ -33,88 +33,88 @@ Aggregate element [As type] In collection _
   
 |Termin|Definicja|  
 |---|---|  
-|`element`|Wymagana. Zmienna jest używana do iteracji przez elementy kolekcji.|  
-|`type`|Opcjonalna. Typ `element`. Jeśli nie określono typu, typu `element` wynika z `collection`.|  
-|`collection`|Wymagana. Odnosi się do kolekcji do wykonywania operacji.|  
-|`clause`|Opcjonalna. Jeden lub więcej klauzul zapytania, takie jak `Where` klauzulę, aby udoskonalić wynik zapytania, aby zastosować aggregate — klauzula lub klauzule.|  
-|`expressionList`|Wymagana. Co najmniej jednego rozdzielonych przecinkami wyrażenia, które identyfikują funkcję agregacji, aby zastosować do kolekcji. Alias można zastosować do funkcji agregującej, aby określić nazwę elementu członkowskiego dla wyniku kwerendy. Jeśli nie dostarczono Brak aliasu, nazwa funkcji agregującej jest używana. Aby uzyskać przykłady zobacz sekcję dotyczącą funkcji agregujących w dalszej części tego tematu.|  
+|`element`|Wymagany. Zmienna używana do iteracji elementów kolekcji.|  
+|`type`|Opcjonalny. Typ `element`. Jeśli typ nie zostanie określony, typ `element` jest wywnioskowany z `collection`.|  
+|`collection`|Wymagany. Odwołuje się do kolekcji, w której ma działać.|  
+|`clause`|Opcjonalny. Co najmniej jedna klauzula zapytania, taka jak klauzula `Where`, do uściślenia wyniku zapytania, aby zastosować klauzulę agregującą lub klauzulę do.|  
+|`expressionList`|Wymagany. Jedno lub więcej wyrażeń rozdzielanych przecinkami, które identyfikują funkcję agregującą, która ma zostać zastosowana do kolekcji. Można zastosować alias do funkcji agregującej, aby określić nazwę elementu członkowskiego dla wyniku zapytania. Jeśli nie podano aliasu, używana jest nazwa funkcji agregującej. Przykłady zawiera sekcja dotycząca funkcji agregujących w dalszej części tego tematu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `Aggregate` Klauzuli może służyć do uwzględnienia funkcji agregujących w zapytaniach. Funkcje agregujące wykonują zbiór wartości kontroli i obliczeń i zwracać pojedynczą wartość. Obliczona wartość dostęp przy użyciu członka typu wyniku zapytania. Standardowe funkcje agregujące, których można użyć są `All`, `Any`, `Average`, `Count`, `LongCount`, `Max`, `Min`, i `Sum` funkcji. Te funkcje są znane deweloperom, którzy są zaznajomieni z wartości zagregowanych w języku SQL. Zostały one opisane w poniższej sekcji tego tematu.  
+ Klauzula `Aggregate` umożliwia uwzględnienie funkcji agregujących w zapytaniach. Funkcje agregujące wykonują operacje sprawdzania i obliczeń na zestawie wartości i zwracają pojedynczą wartość. Możesz uzyskać dostęp do obliczonej wartości przy użyciu elementu członkowskiego typu wyników zapytania. Standardowe funkcje agregujące, których można użyć, to `All`, `Any`, `Average`, `Count`, `LongCount`, `Max`, `Min` i `Sum` funkcji. Te funkcje są znane dla deweloperów, którzy znają agregacje w programie SQL Server. Opisano je w poniższej sekcji tego tematu.  
   
- Wynik funkcji agregującej znajduje się w wyniku kwerendy jako pole typu wyniku zapytania. Możesz podać alias wyniku funkcji agregującej do określenia nazwy elementu członkowskiego typu wyniku zapytania, który będzie przechowywać wartości zagregowanej. Jeśli nie dostarczono Brak aliasu, nazwa funkcji agregującej jest używana.  
+ Wynik funkcji agregującej jest uwzględniany w wyniku zapytania jako pole typu wyniku zapytania. Można podać alias dla wyniku funkcji agregującej, aby określić nazwę elementu członkowskiego typu wyników zapytania, który będzie przechowywać wartość zagregowaną. Jeśli nie podano aliasu, używana jest nazwa funkcji agregującej.  
   
- `Aggregate` Klauzuli można rozpocząć zapytania lub może być uwzględniany jako dodatkową klauzulę w zapytaniu. Jeśli `Aggregate` klauzuli rozpoczyna się zapytanie, wynik jest pojedynczą wartość, która jest wynikiem funkcji agregującej, określone w `Into` klauzuli. Jeśli określono więcej niż jedną funkcję agregacji w `Into` klauzuli zapytanie zwraca jeden typ z właściwością oddzielne k odkazu wynik każdego w funkcji agregującej `Into` klauzuli. Jeśli `Aggregate` klauzula jest dołączony jako dodatkową klauzulę w zapytaniu, typ zwracany w kolekcji zapytanie będzie miał oddzielny właściwości, aby odwoływać się do wyniku każdej funkcji agregującej w `Into` klauzuli.  
+ Klauzula `Aggregate` może rozpoczynać zapytanie lub może być dołączana jako dodatkowa klauzula w zapytaniu. Jeśli klauzula `Aggregate` rozpoczyna zapytanie, wynikiem jest pojedyncza wartość, która jest wynikiem funkcji agregującej określonej w klauzuli `Into`. Jeśli w klauzuli `Into` określono więcej niż jedną funkcję agregującą, zapytanie zwróci pojedynczy typ z oddzielną właściwością, aby odwołać się do wyniku każdej funkcji agregującej w klauzuli `Into`. Jeśli klauzula `Aggregate` jest dołączana jako klauzula dodatkowa w zapytaniu, typ zwracany w kolekcji zapytań będzie miał osobną właściwość, aby odwołać się do wyniku każdej funkcji agregującej w klauzuli `Into`.  
   
 ## <a name="aggregate-functions"></a>Funkcje agregujące
 
-Poniżej przedstawiono standardowe funkcje agregujące, które mogą być używane z `Aggregate` klauzuli.  
+Poniżej znajdują się standardowe funkcje agregujące, które mogą być używane z klauzulą `Aggregate`.  
   
 ### <a name="all"></a>Wszystkie
 
-Zwraca `true` , gdy wszystkie elementy w kolekcji spełniają określony warunek; w przeciwnym razie zwraca `false`. Oto przykład:
+Zwraca `true`, jeśli wszystkie elementy w kolekcji spełniają określony warunek; w przeciwnym razie zwraca `false`. Oto przykład:
 
  [!code-vb[VbSimpleQuerySamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#5)]
 
-### <a name="any"></a>Dowolne
+### <a name="any"></a>Ile
 
-Zwraca `true` , jeżeli dowolny element w kolekcji spełnia określony warunek; w przeciwnym razie zwraca `false`. Oto przykład:
+Zwraca `true`, jeśli dowolny element w kolekcji spełnia określony warunek; w przeciwnym razie zwraca `false`. Oto przykład:
 
  [!code-vb[VbSimpleQuerySamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#6)]
 
-### <a name="average"></a>Średnia
+### <a name="average"></a>Obliczon
 
-Oblicza średnią wszystkich elementów w kolekcji, lub oblicza wyrażenie podane dla wszystkich elementów w kolekcji. Oto przykład:
+Oblicza średnią wszystkich elementów w kolekcji lub oblicza dostarczone wyrażenie dla wszystkich elementów w kolekcji. Oto przykład:
 
  [!code-vb[VbSimpleQuerySamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#7)]
 
-### <a name="count"></a>Count
+### <a name="count"></a>Liczbą
 
-Zlicza liczbę elementów w kolekcji. Można podać opcjonalny `Boolean` wyrażenia do obliczania tylko liczby elementów w kolekcji, które spełniają warunek. Oto przykład:
+Zlicza elementy w kolekcji. Możesz podać opcjonalne wyrażenie `Boolean`, aby obliczyć tylko liczbę elementów w kolekcji, które spełniają warunek. Oto przykład:
 
  [!code-vb[VbSimpleQuerySamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#8)]
 
 ### <a name="group"></a>Grupa
 
-Odwołuje się do wyników zapytania, które są grupowane w `Group By` lub `Group Join` klauzuli. `Group` Funkcja jest prawidłowa tylko w `Into` klauzuli `Group By` lub `Group Join` klauzuli. Aby uzyskać więcej informacji i przykładów, zobacz [grupy przez klauzulę](../../../visual-basic/language-reference/queries/group-by-clause.md) i [Group Join — klauzula](../../../visual-basic/language-reference/queries/group-join-clause.md).
+Odwołuje się do wyników zapytania, które są pogrupowane w wyniku klauzuli `Group By` lub `Group Join`. Funkcja `Group` jest prawidłowa tylko w klauzuli `Into` w klauzuli `Group By` lub `Group Join`. Aby uzyskać więcej informacji i przykładów, zobacz klauzule Group [by](../../../visual-basic/language-reference/queries/group-by-clause.md) i Group [Join](../../../visual-basic/language-reference/queries/group-join-clause.md).
 
 ### <a name="longcount"></a>LongCount
 
-Zlicza liczbę elementów w kolekcji. Można podać opcjonalny `Boolean` wyrażenia do obliczania tylko liczby elementów w kolekcji, które spełniają warunek. Zwraca wynik w postaci `Long`. Aby uzyskać przykład, zobacz `Count` funkcję agregacji.
+Zlicza elementy w kolekcji. Możesz podać opcjonalne wyrażenie `Boolean`, aby obliczyć tylko liczbę elementów w kolekcji, które spełniają warunek. Zwraca wynik jako `Long`. Aby zapoznać się z przykładem, zobacz funkcję agregującą `Count`.
 
-### <a name="max"></a>Maks.
+### <a name="max"></a>Maksymalny
 
-Oblicza maksymalną wartość z kolekcji, lub oblicza wyrażenie podane dla wszystkich elementów w kolekcji. Oto przykład:
+Oblicza wartość maksymalną z kolekcji lub oblicza dostarczone wyrażenie dla wszystkich elementów w kolekcji. Oto przykład:
 
  [!code-vb[VbSimpleQuerySamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#9)]
 
-### <a name="min"></a>Min.
+### <a name="min"></a>Długości
 
-Oblicza minimalną wartość z kolekcji, lub oblicza wyrażenie podane dla wszystkich elementów w kolekcji. Oto przykład:
+Oblicza wartość minimalną kolekcji lub oblicza dostarczone wyrażenie dla wszystkich elementów w kolekcji. Oto przykład:
 
  [!code-vb[VbSimpleQuerySamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#10)]
 
-### <a name="sum"></a>Suma
+### <a name="sum"></a>Należności
 
-Oblicza sumę wszystkich elementów w kolekcji, lub oblicza wyrażenie podane dla wszystkich elementów w kolekcji. Oto przykład:
+Oblicza sumę wszystkich elementów w kolekcji lub oblicza dostarczone wyrażenie dla wszystkich elementów w kolekcji. Oto przykład:
 
  [!code-vb[VbSimpleQuerySamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#15)]
 
 ## <a name="example"></a>Przykład  
 
-Poniższy przykład pokazuje, jak używać `Aggregate` klauzuli w celu zastosowanie funkcji agregujących do wyniku zapytania.  
+Poniższy przykład pokazuje, jak używać klauzuli `Aggregate` do zastosowania funkcji agregujących do wyniku zapytania.  
   
  [!code-vb[VbSimpleQuerySamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#4)]  
   
 ## <a name="creating-user-defined-aggregate-functions"></a>Tworzenie funkcji agregujących zdefiniowanych przez użytkownika
 
- W wyrażeniu zapytania może zawierać własne niestandardowe funkcje agregujące, dodając metody rozszerzenia umożliwiające <xref:System.Collections.Generic.IEnumerable%601> typu. Metoda niestandardowych można wykonywać obliczenia lub operacja wyliczalny kolekcję, do której istnieje odwołanie do funkcji agregującej. Aby uzyskać więcej informacji dotyczących metod rozszerzających, zobacz [metody rozszerzenia](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
+ W wyrażeniu zapytania można uwzględnić własne niestandardowe funkcje agregujące, dodając metody rozszerzające do typu <xref:System.Collections.Generic.IEnumerable%601>. Metoda niestandardowa może następnie wykonać obliczenia lub operacje na wyliczalnej kolekcji, która przywołuje funkcję agregującą. Aby uzyskać więcej informacji na temat metod rozszerzających, zobacz [metody rozszerzenia](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
   
- Na przykład poniższy kod przedstawia niestandardowych funkcji agregującej, który oblicza wartość mediany zbioru liczb. Istnieją dwa przeciążenia `Median` — metoda rozszerzenia. Pierwsze przeciążenie przyjmuje jako dane wejściowe, Kolekcja typu `IEnumerable(Of Double)`. Jeśli `Median` funkcji agregującej jest wywoływana dla pola zapytania typu `Double`, ta metoda zostanie wywołana. Drugie przeciążenie `Median` metody mogą być przekazywane do dowolnego typu ogólnego. Przeciążenie ogólne `Median` metoda przyjmuje drugi parametr, który odwołuje się do `Func(Of T, Double)` wyrażenia lambda do projektu wartość dla typu (z kolekcji) jako wartość odpowiedniego typu `Double`. Następnie deleguje ona obliczenia wartość mediany, aby inne przeciążenia `Median` metody. Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [wyrażeń Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Na przykład poniższy przykład pokazuje niestandardową funkcję agregującą, która oblicza wartość mediany kolekcji liczb. Istnieją dwa przeciążenia metody rozszerzenia `Median`. Pierwsze Przeciążenie akceptuje jako dane wejściowe, Kolekcja typu `IEnumerable(Of Double)`. Jeśli funkcja agregująca `Median` jest wywoływana dla pola zapytania typu `Double`, ta metoda zostanie wywołana. Drugie Przeciążenie metody `Median` może być przekazanie dowolnego typu ogólnego. Ogólne Przeciążenie metody `Median` przyjmuje drugi parametr, który odwołuje się do wyrażenia lambda `Func(Of T, Double)` do zaprojektowania wartości dla typu (z kolekcji) jako odpowiadającej wartości typu `Double`. Następnie przydeleguje obliczenie wartości mediany do innego przeciążenia metody `Median`. Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
  [!code-vb[VbSimpleQuerySamples#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#18)]  
   
- W poniższym przykładzie przedstawiono przykładowe zapytania, które wywołują `Median` funkcję zbierania typu agregacji `Integer`, a kolekcja typu `Double`. Zapytanie, które wywołuje `Median` funkcję na kolekcję typu agregacji `Double` wywołuje przeciążenia `Median` metodę, która przyjmuje jako dane wejściowe, Kolekcja typu `Double`. Zapytanie, które wywołuje `Median` funkcję na kolekcję typu agregacji `Integer` wywołuje przeciążenia ogólne `Median` metody.  
+ W poniższym przykładzie pokazano przykładowe zapytania, które wywołują funkcję agregującą `Median` w kolekcji typu `Integer` i kolekcji typu `Double`. Zapytanie, które wywołuje funkcję agregującą `Median` w kolekcji typu `Double` wywołuje Przeciążenie metody `Median`, która akceptuje jako dane wejściowe, Kolekcja typu `Double`. Zapytanie, które wywołuje funkcję agregującą `Median` w kolekcji typu `Integer` wywołuje ogólne Przeciążenie metody `Median`.  
   
  [!code-vb[VbSimpleQuerySamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#19)]  
   
@@ -125,4 +125,4 @@ Poniższy przykład pokazuje, jak używać `Aggregate` klauzuli w celu zastosowa
 - [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)
 - [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)
 - [Where, klauzula](../../../visual-basic/language-reference/queries/where-clause.md)
-- [Klauzula Group By](../../../visual-basic/language-reference/queries/group-by-clause.md)
+- [Group By, klauzula](../../../visual-basic/language-reference/queries/group-by-clause.md)

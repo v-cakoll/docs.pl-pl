@@ -18,48 +18,48 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 9ad992a53618fa2f410e0b0fb23886c30136384f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 30c02cf367c461c3896a01538d03380627de294f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917920"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004855"
 ---
 # <a name="shadowing-in-visual-basic"></a>Przesłanianie w Visual Basic
-Gdy dwa elementy programowania mają taką samą nazwę, jeden z nich można ukryć, lub *w tle*, jeden z nich. W takiej sytuacji zasłonięte element nie jest dostępne do użytku; Zamiast tego gdy kod używa nazwy elementu, kompilator Visual Basic jest rozpoznawany jako jej przesłaniania elementu.  
+Gdy dwa elementy programistyczne współdzielą tę samą nazwę, jeden z nich może ukryć lub *Zacień*, drugi. W takiej sytuacji cień elementu nie jest dostępny do celów referencyjnych. Zamiast tego, gdy kod używa nazwy elementu, kompilator Visual Basic rozpoznaje ją jako element przesłaniania.  
   
 ## <a name="purpose"></a>Cel  
- Głównym celem przesłanianie jest ochrona definicji usługi składowych klasy. Klasy bazowej może przechodzić zmianę, która tworzy element o takiej samej nazwie jako jeden, który został już zdefiniowany. W takim przypadku `Shadows` wymusza modyfikator odwołuje się do swojej klasy, które mają zostać rozwiązane do elementu członkowskiego zdefiniowane, zamiast na nowy element klasy bazowej.  
+ Głównym celem przesłaniania jest ochrona definicji elementów członkowskich klasy. Klasa bazowa może ulec zmianie, która tworzy element o takiej samej nazwie jak już zdefiniowany. W takim przypadku modyfikator `Shadows` wymusza odwołania za pomocą klasy, aby można było rozpoznać element członkowski zdefiniowany przez użytkownika, a nie do nowego elementu klasy bazowej.  
   
-## <a name="types-of-shadowing"></a>Typy cieniowania  
- Element można w tle innego elementu na dwa różne sposoby. Można zadeklarować elementu przesłaniania wewnątrz Podobszar regionu zawierającego element zasłonięte, w której odbywa sprawy przesłanianie *przez zakres*. I Klasa pochodna można ponownie zdefiniować składowej klasy bazowej, w którym odbywa sprawy przesłanianie *poprzez dziedziczenie*.  
+## <a name="types-of-shadowing"></a>Typy przesłaniania  
+ Element może zasłaniać inny element na dwa różne sposoby. Element shadower może być zadeklarowany wewnątrz podregionu regionu zawierającego element shadowd, w takim przypadku przesłanianie jest realizowane *przez zakres*. Lub Klasa pochodna może przedefiniować składową klasy bazowej, w tym przypadku przesłanianie odbywa się *przez dziedziczenie*.  
   
-### <a name="shadowing-through-scope"></a>Cieniowania przez zakres  
- Istnieje możliwość programowania elementów w tej samej modułu, klasy lub struktury, aby mieć takiej samej nazwie, ale inny zakres. Jeśli dwa elementy są deklarowane w ten sposób, kod odwołuje się do nazwy mają element z węższy zakres zasłania innego elementu (zakres bloku jest najmniejsza).  
+### <a name="shadowing-through-scope"></a>Przesłanianie przez zakres  
+ Istnieje możliwość, że elementy programistyczne w tym samym module, klasie lub strukturze mają taką samą nazwę, ale różne zakresy. Gdy dwa elementy są zadeklarowane w ten sposób, a kod odnosi się do współużytkowanej nazwy, element z węższym zakresem zasłania inny element (zakres blokowy jest najwęższy).  
   
- Na przykład można zdefiniować moduł `Public` zmiennej o nazwie `temp`, oraz procedury w module można zadeklarować zmiennej lokalnej o nazwie `temp`. Odwołuje się do `temp` z poziomu procedury dostępu do zmiennej lokalnej podczas odwołania do `temp` z poza dostępu procedury `Public` zmiennej. W tym przypadku zmienna procedury `temp` zasłania zmiennej modułu `temp`.  
+ Na przykład moduł może zdefiniować zmienną `Public` o nazwie `temp`, a procedura w module może zadeklarować zmienną lokalną także o nazwie `temp`. Odwołania do `temp` z procedury uzyskują dostęp do zmiennej lokalnej, natomiast odwołania do `temp` z zewnątrz procedury uzyskują dostęp do zmiennej `Public`. W takim przypadku zmienna procedury `temp` Cieniuje zmienną modułu `temp`.  
   
- Na poniższej ilustracji przedstawiono dwie zmienne, o nazwie `temp`. Zmienna lokalna `temp` zasłania zmiennej składowej `temp` podczas uzyskiwania dostępu do z, w ramach własnej procedury `p`. Jednak `MyClass` — słowo kluczowe pomija przesłanianiem i uzyskuje dostęp do zmiennej elementu członkowskiego.  
+ Na poniższej ilustracji przedstawiono dwie zmienne: o nazwie `temp`. Zmienna lokalna `temp` Cieniuje zmienną członkowską `temp` w przypadku dostępu z własnej procedury `p`. Jednak słowo kluczowe `MyClass` pomija cieniowanie i uzyskuje dostęp do zmiennej składowej.  
   
- ![Grafika przedstawiająca cieniowania przez zakres.](./media/shadowing/shadow-scope-diagram.gif)
+ ![Grafika pokazująca cieniowanie przez zakres.](./media/shadowing/shadow-scope-diagram.gif)
   
- Na przykład cieniowania przez zakres zobacz [jak: Ukrywanie zmiennej o tej samej nazwie jako zmiennej użytkownika](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md).  
+ Aby zapoznać się z przykładem przesłaniania przez zakres, zobacz [How to: Hide a Variable o takiej samej nazwie jak zmienna](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md).  
   
-### <a name="shadowing-through-inheritance"></a>Przesłanianie poprzez dziedziczenie  
- Jeśli klasa pochodna redefiniuje elementu programistycznego dziedziczone z klasy bazowej, redefining element zasłania oryginalnego elementu. Można w tle dowolnego typu element zadeklarowany lub zestaw przeciążonych elementów z żadnym innym typem. Na przykład `Integer` zmiennej może w tle `Function` procedury. Jeśli w tle procedury z innej procedury można użyć inną listą parametrów i innym typie zwracanym.  
+### <a name="shadowing-through-inheritance"></a>Przesłanianie przez dziedziczenie  
+ Jeśli klasa pochodna ponownie definiuje element programistyczny Dziedziczony z klasy bazowej, element, który ponownie definiuje, zasłania element oryginalny. Można obsłużyć dowolny typ zadeklarowanego elementu lub zestawu przeciążonych elementów przy użyciu dowolnego innego typu. Na przykład zmienna `Integer` może obsłużyć procedurę `Function`. W przypadku wykonania procedury z inną procedurą można użyć innej listy parametrów i innego typu zwracanego.  
   
- Na poniższej ilustracji przedstawiono klasę bazową `b` i Klasa pochodna `d` tej, która dziedziczy `b`. Klasa bazowa definiuje procedurę o nazwie `proc`, i Klasa pochodna zasłania go przy użyciu innej procedury o takiej samej nazwie. Pierwszy `Call` uzyskuje dostęp do instrukcji, przesłanianie `proc` w klasie pochodnej. Jednak `MyBase` — słowo kluczowe pomija przesłanianiem i uzyskuje dostęp do zasłonięte procedury w klasie bazowej.  
+ Na poniższej ilustracji przedstawiono klasę bazową `b` i klasę pochodną `d`, która dziedziczy po `b`. Klasa bazowa definiuje procedurę o nazwie `proc`, a Klasa pochodna zasłania ją z inną procedurą o tej samej nazwie. Pierwsza instrukcja `Call` uzyskuje dostęp do obserwowania `proc` w klasie pochodnej. Jednak słowo kluczowe `MyBase` pomija cieniowanie i uzyskuje dostęp do procedury obserwowania w klasie bazowej.  
   
- ![Diagram graficzny cieniowania poprzez dziedziczenie](./media/shadowing/shadowing-inherit-diagram.gif)  
+ ![Diagram grafiki przesłaniania przez dziedziczenie](./media/shadowing/shadowing-inherit-diagram.gif)  
   
- Na przykład cieniowania przez dziedziczenie zobacz [jak: Ukrywanie zmiennej o tej samej nazwie jako zmiennej użytkownika](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md) i [jak: Ukrywanie dziedziczonej zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md).  
+ Aby zapoznać się z przykładem przesłaniania poprzez dziedziczenie, zobacz [jak: ukrywanie zmiennej o tej samej nazwie co zmienna](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md) i [instrukcje: ukrywanie dziedziczonej zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md).  
   
-#### <a name="shadowing-and-access-level"></a>Przesłanianie i poziom dostępu  
- Element przesłaniania nie zawsze jest dostępne z kodu za pomocą klasy pochodnej. Na przykład może być zadeklarowana `Private`. W takim przypadku przesłanianie jest bezcelowe i kompilator rozwiązuje wszelkie odwołania do tego samego elementu, gdyż miałoby Jeśli nastąpiła nie przesłanianie. Ten element jest dostępnego elementu najmniejszą liczbę derivational kroki wstecz od klasy przesłaniania. Jeśli element zasłonięte jest procedurą, rozwiązanie jest do najbliższej dostępnej wersji o takiej samej nazwie, lista parametrów i zwracany typ.  
+#### <a name="shadowing-and-access-level"></a>Cień i poziom dostępu  
+ Element Shadow nie zawsze jest dostępny z kodu przy użyciu klasy pochodnej. Na przykład może być zadeklarowany `Private`. W takim przypadku przesłanianie jest zakłócane, a kompilator rozpoznaje wszelkie odwołania do tego samego elementu, jeśli nie wystąpiły żadne cieniowanie. Ten element jest dostępnym elementem z najmniejszą liczbą czynności pochodnych z tyłu klasy przesłaniania. Jeśli element Shadow jest procedurą, rozdzielczość jest do najbliższej dostępnej wersji z tą samą nazwą, listą parametrów i zwracanym typem.  
   
- Poniższy przykład pokazuje hierarchię dziedziczenia trzech klas. Każda klasa definiuje `Sub` procedury `display`, i każdy pochodne klasy cieni `display` procedury w swojej klasie bazowej.  
+ W poniższym przykładzie przedstawiono hierarchię dziedziczenia trzech klas. Każda klasa definiuje procedurę `Sub` `display`, a każda klasa pochodna zasłania procedurę `display` w swojej klasie podstawowej.  
   
-```  
+```vb  
 Public Class firstClass  
     Public Sub display()  
         MsgBox("This is firstClass")  
@@ -92,25 +92,25 @@ Module callDisplay
 End Module  
 ```  
   
- W poprzednim przykładzie Klasa pochodna `secondClass` cieni `display` z `Private` procedury. Gdy moduł `callDisplay` wywołania `display` w `secondClass`, kod wywołujący znajduje się poza `secondClass` i dlatego nie może uzyskiwać dostęp do prywatnego `display` procedury. Przesłanianie jest bezcelowe, a kompilator jest rozpoznawana jako odwołanie do klasy bazowej `display` procedury.  
+ W poprzednim przykładzie Klasa pochodna `secondClass` Cieniuje `display` za pomocą procedury `Private`. Gdy moduł `callDisplay` wywołuje `display` w `secondClass`, kod wywołujący jest poza `secondClass` i w związku z tym nie może uzyskać dostępu do prywatnej procedury `display`. Trwa obniżanie poziomu przesłaniania, a kompilator rozpoznaje odwołanie do klasy bazowej `display` procedury.  
   
- Jednak dalsze klasy pochodnej `thirdClass` deklaruje `display` jako `Public`, dlatego ten kod w `callDisplay` do niego dostęp.  
+ Jednak dodatkowo Klasa pochodna `thirdClass` deklaruje `display` jako `Public`, więc kod w `callDisplay` może uzyskać do niego dostęp.  
   
-## <a name="shadowing-and-overriding"></a>Przesłanianiem i zastępowaniem  
- Nie należy mylić przesłanianie z nadpisaniem. Oba są używane, gdy klasa pochodna dziedziczy z klasy bazowej, a jednocześnie ponownie zdefiniować jeden element zadeklarowany z innym. Jednak istnieją znaczne różnice między nimi. Dla porównania, zobacz [różnice między przesłanianiem i przesłanianie](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md).  
+## <a name="shadowing-and-overriding"></a>Przesłanianie i zastępowanie  
+ Nie należy mylić przesłaniania z zastępowaniem. Oba są używane, gdy Klasa pochodna dziedziczy z klasy bazowej, i obie przedefiniują jeden zadeklarowany element z innym. Istnieją jednak znaczące różnice między nimi. Aby zapoznać się z porównaniem, zobacz [różnice między przesłanianiem i zastępowaniem](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md).  
   
-## <a name="shadowing-and-overloading"></a>Przesłanianie i przeciążenie  
- Jeśli w klasie pochodnej w tle tego samego elementu klasy bazowej z więcej niż jeden element, przesłaniania elementy stają się przeciążone wersje tego elementu. Aby uzyskać więcej informacji, zobacz [przeciążanie procedury](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).  
+## <a name="shadowing-and-overloading"></a>Przesłanianie i Przeciążenie  
+ Jeśli ten sam element klasy bazowej zostanie zasłonięty przez więcej niż jeden element w klasie pochodnej, elementy przesłaniania staną się przeciążonymi wersjami tego elementu. Aby uzyskać więcej informacji, zobacz [przeciążanie procedur](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).  
   
-## <a name="accessing-a-shadowed-element"></a>Uzyskiwanie dostępu do elementu tekst z cieniem  
- Gdy uzyskujesz dostęp do elementu z klasy pochodnej, możesz normalnie to zrobić przez bieżące wystąpienie tej klasy pochodnej kwalifikując nazwę elementu z `Me` — słowo kluczowe. Klasy pochodne cieni elementów w klasie bazowej, można przejść do elementu klasy podstawowej kwalifikując ją za pomocą `MyBase` — słowo kluczowe.  
+## <a name="accessing-a-shadowed-element"></a>Uzyskiwanie dostępu do obserwowania elementu  
+ Gdy uzyskujesz dostęp do elementu z klasy pochodnej, zazwyczaj odbywa się to za pośrednictwem bieżącego wystąpienia tej klasy pochodnej, kwalifikując nazwę elementu za pomocą słowa kluczowego `Me`. Jeśli klasa pochodna zasłania element w klasie bazowej, można uzyskać dostęp do elementu klasy bazowej poprzez kwalifikowanie go za pomocą słowa kluczowego `MyBase`.  
   
- Na przykład uzyskiwania dostępu do elementu zasłonięte zobacz [jak: Dostęp do zmiennej ukrytej przez klasę pochodną](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md).  
+ Aby zapoznać się z przykładem uzyskiwania dostępu do obserwowania elementu, zobacz [How to: Access a zmienna ukryta przez klasę pochodną](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md).  
   
 ### <a name="declaration-of-the-object-variable"></a>Deklaracja zmiennej obiektu  
- Jak utworzyć zmienną obiektu może również wpływać na czy klasy pochodnej uzyskuje dostęp do przesłaniania element lub tekst z cieniem elementu. Poniższy przykład tworzy dwa obiekty z klasy pochodnej, ale jeden obiekt jest zadeklarowany jako klasę bazową, a drugi jako klasy pochodnej.  
+ Sposób tworzenia zmiennej obiektu może również mieć wpływ na to, czy Klasa pochodna uzyskuje dostęp do elementu obserwowania lub cieniowania. Poniższy przykład tworzy dwa obiekty z klasy pochodnej, ale jeden obiekt jest zadeklarowany jako klasa bazowa, a drugi jako Klasa pochodna.  
   
-```  
+```vb  
 Public Class baseCls  
     ' The following statement declares the element that is to be shadowed.  
     Public z As Integer = 100  
@@ -135,7 +135,7 @@ Public Class useClasses
 End Class  
 ```  
   
- W poprzednim przykładzie, zmienna `basObj` jest zadeklarowany jako klasa bazowa. Przypisywanie `dervCls` obiektu do niego stanowi konwersją rozszerzającą, a w związku z tym jest prawidłowy. Jednak klasy bazowej nie może uzyskiwać dostęp do wersji przesłaniania w zmiennej `z` w klasie pochodnej, dlatego kompilator rozpoznaje `basObj.z` do oryginalnej wartości klasy bazowej.  
+ W poprzednim przykładzie zmienna `basObj` jest zadeklarowana jako klasa bazowa. Przypisanie do niego obiektu `dervCls` stanowi konwersję rozszerzającą i dlatego jest prawidłowy. Jednak Klasa bazowa nie może uzyskać dostępu do wersji przesłaniania zmiennej `z` w klasie pochodnej, więc kompilator rozpoznaje `basObj.z` do oryginalnej wartości klasy bazowej.  
   
 ## <a name="see-also"></a>Zobacz także
 

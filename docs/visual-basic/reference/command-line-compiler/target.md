@@ -1,55 +1,55 @@
 ---
-title: -target (Visual Basic)
+title: -Target (Visual Basic)
 ms.date: 03/13/2018
 helpviewer_keywords:
 - target compiler options [Visual Basic]
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: f4b9533adbcc6b8e656281a1dae2bb166df5d038
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2d7ccfc6b033a9021e683a4a2501ca2ccc29956d
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586286"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004936"
 ---
-# <a name="-target-visual-basic"></a>-target (Visual Basic)
+# <a name="-target-visual-basic"></a>-Target (Visual Basic)
 Określa format danych wyjściowych kompilatora.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console  
 -target:{exe | library | module | winexe | appcontainerexe | winmdobj}  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- W poniższej tabeli przedstawiono efekt `-target` opcji.  
+ Poniższa tabela zawiera podsumowanie wpływu opcji `-target`.  
   
-|**Option**|**Behavior**|  
+|**Zaznaczyć**|**Domyślnie**|  
 |----------------|------------------|  
-|`-target:exe`|Powoduje, że kompilator, aby utworzyć aplikację konsoli pliku wykonywalnego.<br /><br /> Jest to opcja domyślna, gdy nie `-target` określono opcję. Plik wykonywalny jest tworzony z rozszerzeniem .exe.<br /><br /> Chyba że określono inaczej, za pomocą `/out` opcji Nazwa pliku wyjściowego przyjmuje nazwę pliku wejściowego, który zawiera `Sub Main` procedury.<br /><br /> Tylko jeden `Sub Main` procedura jest wymagana w plikach kodu źródłowego, które są kompilowane do pliku .exe. Użyj `-main` opcję kompilatora, aby określić, która klasa zawiera `Sub Main` procedury.|  
-|`-target:library`|Powoduje, że kompilator do tworzenia biblioteki dołączanej (dynamicznie DLL).<br /><br /> Plik biblioteki dołączanej jest tworzony z rozszerzeniem dll.<br /><br /> Chyba że określono inaczej, za pomocą `-out` opcji Nazwa pliku wyjściowego przyjmuje nazwę pierwszego pliku wejściowego.<br /><br /> Podczas tworzenia biblioteki DLL, `Sub Main` procedura nie jest wymagana.|  
-|`-target:module`|Powoduje, że kompilator do generowania modułu, który można dodać do zestawu.<br /><br /> Plik wyjściowy został utworzony z rozszerzeniem .netmodule.<br /><br /> .NET CLR nie można załadować pliku, który nie ma zestawu. Jednak można zastosować takiego pliku do manifestu zestawu zestawu przy użyciu `-reference`.<br /><br /> Gdy kod w jednym module odwołuje się do wewnętrznych typów w innym module, oba moduły musi być włączona do manifestu zestawu przy użyciu `-reference`.<br /><br /> [- Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) opcja importuje metadane z modułu.|  
-|`-target:winexe`|Powoduje, że kompilator do utworzenia pliku wykonywalnego aplikacji systemu Windows.<br /><br /> Plik wykonywalny jest tworzony z rozszerzeniem .exe. Windows aplikacji to taki, który zapewnia interfejs użytkownika z obu biblioteki klas .NET Framework lub za pomocą interfejsów API Windows.<br /><br /> Chyba że określono inaczej, za pomocą `-out` opcji Nazwa pliku wyjściowego przyjmuje nazwę pliku wejściowego, który zawiera `Sub Main` procedury.<br /><br /> Tylko jeden `Sub Main` procedura jest wymagana w plikach kodu źródłowego, które są kompilowane do pliku .exe. W przypadkach, gdy kod ma więcej niż jedną klasę, która ma `Sub Main` procedurę, użyj `-main` opcję kompilatora, aby określić, która klasa zawiera `Sub Main` procedury|  
-|`-target:appcontainerexe`|Powoduje, że kompilator tworzenia pliku wykonywalnego aplikacji opartych na Windows, która musi być uruchamiany w kontenerze aplikacji. To ustawienie jest przeznaczone do użytku z [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplikacji.<br /><br /> **Appcontainerexe** ustawienie ustawia bit w polu właściwości [przenośny plik wykonywalny](/windows/desktop/Debug/pe-format) pliku. Ten bit wskazuje, że aplikacja musi zostać uruchomiony w kontenerze aplikacji. Jeśli ten bit jest ustawiony, wystąpi błąd, jeśli `CreateProcess` metoda próbuje uruchomić aplikację poza kontenerem aplikacji. Oprócz tego bit ustawienie **-target: appcontainerexe** jest odpowiednikiem **-target: winexe**.<br /><br /> Plik wykonywalny jest tworzony z rozszerzeniem .exe.<br /><br /> Chyba że określono inaczej używając `-out` opcji Nazwa pliku wyjściowego przyjmuje nazwę pliku wejściowego, który zawiera `Sub Main` procedury.<br /><br /> Tylko jeden `Sub Main` procedura jest wymagana w plikach kodu źródłowego, które są kompilowane do pliku .exe. Jeśli kod zawiera więcej niż jedną klasę, która ma `Sub Main` procedurę, użyj `-main` opcję kompilatora, aby określić, która klasa zawiera `Sub Main` procedury|  
-|`-target:winmdobj`|Powoduje, że kompilator, aby utworzyć plik pośredni, który można przekonwertować na plik binarny (.winmd) środowiska wykonawczego Windows. Plik .winmd mogą być używane przez programy JavaScript i C++, oprócz programów zarządzanych języka.<br /><br /> Pośredni plik jest tworzony z rozszerzeniem .winmdobj.<br /><br /> Chyba że określono inaczej używając `-out` opcji Nazwa pliku wyjściowego przyjmuje nazwę pierwszego pliku wejściowego. A `Sub Main` procedura nie jest wymagana.<br /><br /> Plik .winmdobj jest przeznaczony do użycia jako dane wejściowe dla <xref:Microsoft.Build.Tasks.WinMDExp> wyeksportować narzędzie w celu utworzenia pliku metadanych (WinMD) Windows. Plik WinMD ma rozszerzenie winmd i zawiera kod z oryginalnej biblioteki i definicje WinMD przez język JavaScript, C++ i użyj środowiska wykonawczego Windows.|  
+|`-target:exe`|Powoduje, że kompilator tworzy wykonywalną aplikację konsolową.<br /><br /> Jest to opcja domyślna, gdy nie jest określona opcja `-target`. Plik wykonywalny jest tworzony z rozszerzeniem. exe.<br /><br /> O ile nie określono inaczej z opcją `/out`, nazwa pliku wyjściowego przyjmuje nazwę pliku wejściowego, który zawiera procedurę `Sub Main`.<br /><br /> Tylko jedna procedura `Sub Main` jest wymagana w plikach kodu źródłowego, które są kompilowane w pliku. exe. Użyj opcji kompilatora `-main`, aby określić, która Klasa zawiera procedurę `Sub Main`.|  
+|`-target:library`|Powoduje, że kompilator tworzy bibliotekę dołączaną dynamicznie (DLL).<br /><br /> Plik biblioteki dołączanej dynamicznie jest tworzony z rozszerzeniem dll.<br /><br /> O ile nie określono inaczej z opcją `-out`, nazwa pliku wyjściowego przyjmuje nazwę pierwszego pliku wejściowego.<br /><br /> Podczas kompilowania biblioteki DLL nie jest wymagana procedura `Sub Main`.|  
+|`-target:module`|Powoduje, że kompilator generuje moduł, który można dodać do zestawu.<br /><br /> Plik wyjściowy jest tworzony z rozszerzeniem modułu.<br /><br /> Środowisko uruchomieniowe języka wspólnego .NET nie może załadować pliku, który nie ma zestawu. Można jednak dołączyć taki plik do manifestu zestawu przy użyciu `-reference`.<br /><br /> Gdy kod w jednym module odwołuje się do typów wewnętrznych w innym module, oba moduły muszą być włączone do manifestu zestawu przy użyciu `-reference`.<br /><br /> Opcja [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) Importuje metadane z modułu.|  
+|`-target:winexe`|Powoduje, że kompilator tworzy wykonywalną aplikację opartą na systemie Windows.<br /><br /> Plik wykonywalny jest tworzony z rozszerzeniem. exe. Aplikacja oparta na systemie Windows to taka, która udostępnia interfejs użytkownika z biblioteki klas .NET Framework lub interfejsów API systemu Windows.<br /><br /> O ile nie określono inaczej z opcją `-out`, nazwa pliku wyjściowego przyjmuje nazwę pliku wejściowego, który zawiera procedurę `Sub Main`.<br /><br /> Tylko jedna procedura `Sub Main` jest wymagana w plikach kodu źródłowego, które są kompilowane w pliku. exe. W przypadkach, gdy kod ma więcej niż jedną klasę, która ma procedurę `Sub Main`, użyj opcji kompilatora `-main`, aby określić, która Klasa zawiera procedurę `Sub Main`|  
+|`-target:appcontainerexe`|Powoduje, że kompilator tworzy wykonywalną aplikację opartą na systemie Windows, która musi być uruchomiona w kontenerze aplikacji. To ustawienie jest przeznaczone do użycia dla aplikacji [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].<br /><br /> Ustawienie **appcontainerexe** ustawia bit w polu charakterystyki [przenośnego pliku wykonywalnego](/windows/desktop/Debug/pe-format) . Ten bit wskazuje, że aplikacja musi być uruchomiona w kontenerze aplikacji. Gdy ten bit jest ustawiony, występuje błąd, jeśli metoda `CreateProcess` podejmie próbę uruchomienia aplikacji poza kontenerem aplikacji. Poza tym ustawieniem bitu **-target: appcontainerexe** jest odpowiednikiem **-target: winexe**.<br /><br /> Plik wykonywalny jest tworzony z rozszerzeniem. exe.<br /><br /> O ile nie określono inaczej przy użyciu opcji `-out`, nazwa pliku wyjściowego przyjmuje nazwę pliku wejściowego, który zawiera procedurę `Sub Main`.<br /><br /> Tylko jedna procedura `Sub Main` jest wymagana w plikach kodu źródłowego, które są kompilowane w pliku. exe. Jeśli kod zawiera więcej niż jedną klasę, która ma procedurę `Sub Main`, użyj opcji kompilatora `-main`, aby określić, która Klasa zawiera procedurę `Sub Main`|  
+|`-target:winmdobj`|Powoduje, że kompilator tworzy plik pośredni, który można przekonwertować na środowisko wykonawcze systemu Windows plik binarny (. winmd). Plik. winmd może być używany przez JavaScript i C++ programy, oprócz programów języka zarządzanego.<br /><br /> Plik pośredni jest tworzony przy użyciu rozszerzenia. winmdobj.<br /><br /> O ile nie określono inaczej przy użyciu opcji `-out`, nazwa pliku wyjściowego przyjmuje nazwę pierwszego pliku wejściowego. Procedura `Sub Main` nie jest wymagana.<br /><br /> Plik winmdobj jest przeznaczony do użycia jako dane wejściowe dla narzędzia eksportu <xref:Microsoft.Build.Tasks.WinMDExp> w celu utworzenia pliku metadanych (WinMD) systemu Windows. Plik WinMD ma rozszerzenie WINMD i zawiera zarówno kod z oryginalnej biblioteki, jak i definicje WinMD, które są używane w języku JavaScript C++, i środowisko wykonawcze systemu Windows.|  
   
- Jeśli nie określisz `-target:module`, `-target` powoduje, że manifest zestawu .NET Framework, mają zostać dodane do pliku wyjściowego.  
+ O ile nie określono `-target:module`, `-target` powoduje dodanie manifestu zestawu .NET Framework do pliku wyjściowego.  
   
- Każde wystąpienie Vbc.exe tworzy, co najwyżej jeden plik wyjściowy. Jeśli określisz opcję kompilatora takich jak `-out` lub `-target` więcej niż jeden raz, ostatni z nich procesów kompilatora zacznie obowiązywać. Informacje o wszystkich plików w kompilacji są dodawane do manifestu. Wszystkie pliki, z wyjątkiem tych utworzonych za pomocą wyjściowe `-target:module` zawierać metadane zestawu w manifeście. Użyj [Ildasm.exe (dezasembler IL)](../../../framework/tools/ildasm-exe-il-disassembler.md) wyświetlanie metadanych w pliku wyjściowym.  
+ Każde wystąpienie programu VBC. exe tworzy co najwyżej jeden plik wyjściowy. Jeśli określisz opcję kompilatora, taką jak `-out` lub `-target` więcej niż jeden raz, ostatni proces kompilatora zostanie włączony. Informacje o wszystkich plikach w kompilacji są dodawane do manifestu. Wszystkie pliki wyjściowe z wyjątkiem tych utworzonych za pomocą `-target:module` zawierają metadane zestawu w manifeście. Użyj [Ildasm. exe (Il dezasembler)](../../../framework/tools/ildasm-exe-il-disassembler.md) do wyświetlania metadanych w pliku wyjściowym.  
   
- Krótkiej formy `-target` jest `-t`.  
+ Krótka forma `-target` jest `-t`.  
   
-### <a name="to-set--target-in-the-visual-studio-ide"></a>Aby ustawić - docelowy w środowisku IDE programu Visual Studio  
+### <a name="to-set--target-in-the-visual-studio-ide"></a>Aby ustawić element docelowy w środowisku IDE programu Visual Studio  
   
-1. Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**.   
+1. Zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**.   
   
-2. Kliknij przycisk **aplikacji** kartę.  
+2. Kliknij kartę **aplikacja** .  
   
-3. Zmodyfikuj wartość w **typ aplikacji** pole.  
+3. Zmodyfikuj wartość w polu **Typ aplikacji** .  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `in.vb`, tworzenie `in.dll`:  
+ Poniższy kod kompiluje `in.vb`, tworząc `in.dll`:  
   
 ```console
 vbc -target:library in.vb  
@@ -57,10 +57,10 @@ vbc -target:library in.vb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
 - [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)
-- [— Odwołanie (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)
 - [Zestawy w środowisku .NET](../../../standard/assembly/index.md)

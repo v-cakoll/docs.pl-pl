@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 6ff20af1ef439e27cffaf306c7917dbc98a419ce
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e839fe14c360229fbe0350fd7878c7a844056e8b
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662915"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005092"
 ---
 # <a name="declare-statement"></a>Declare — Instrukcja
 
@@ -40,7 +40,7 @@ Deklaruje odwołanie do procedury zaimplementowanej w zewnętrznym pliku.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```vb
 [ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Overloads ] _
 Declare [ charsetmodifier ] [ Sub ] name Lib "libname" _
 [ Alias "aliasname" ] [ ([ parameterlist ]) ]
@@ -54,92 +54,92 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 
 |Termin|Definicja|
 |---|---|
-|`attributelist`|Opcjonalna. Zobacz temat [Lista atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md).|
-|`accessmodifier`|Opcjonalna. Może to być jeden z następujących elementów:<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private protected](../../language-reference/modifiers/private-protected.md)<br /><br /> Zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|
-|`Shadows`|Opcjonalna. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|
-|`charsetmodifier`|Opcjonalna. Określa zestaw znaków i plik wyszukiwania informacji. Może to być jeden z następujących elementów:<br /><br /> -   [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) (ustawienie domyślne)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Automatycznie](../../../visual-basic/language-reference/modifiers/auto.md)|
-|`Sub`|Opcjonalne, ale albo `Sub` lub `Function` musi znajdować się. Wskazuje, że procedura zewnętrzna nie zwraca wartości.|
-|`Function`|Opcjonalne, ale albo `Sub` lub `Function` musi znajdować się. Wskazuje, że procedura zewnętrzna, zwraca wartość.|
-|`name`|Wymagana. Nazwa tego odwołania zewnętrznego. Aby uzyskać więcej informacji, zobacz [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) (Deklarowane nazwy elementów).|
-|`Lib`|Wymagana. Wprowadza `Lib` klauzula, która identyfikuje zewnętrzny plik (DLL lub zasób kodu) zawierający zewnętrzną procedurę.|
-|`libname`|Wymagana. Nazwa pliku, który zawiera zadeklarowanej procedury.|
-|`Alias`|Opcjonalna. Wskazuje, że procedura deklarowanej nie identyfikowany w jego pliku według nazwy określonej w `name`. Należy określić jego identyfikacji w `aliasname`.|
-|`aliasname`|Wymagane w przypadku użycia `Alias` — słowo kluczowe. Ciąg, który identyfikuje procedurę opisaną w jeden z dwóch sposobów:<br /><br /> Nazwa punktu wejścia procedury w jego pliku w cudzysłowie (`""`)<br /><br /> —lub—<br /><br /> Znak numeru (`#`) następuje całkowitą określającą liczbę porządkową punktu wejścia procedury w ramach jego pliku|
-|`parameterlist`|Wymagane, jeśli parametry przyjmowane przez procedurę. Zobacz [listy parametrów](../../../visual-basic/language-reference/statements/parameter-list.md).|
-|`returntype`|Jeśli wymagane `Function` jest określona i `Option Strict` jest `On`. Typ danych wartości zwracanej przez tę procedurę.|
+|`attributelist`|Opcjonalny. Zobacz [listę atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md).|
+|`accessmodifier`|Opcjonalny. Może być jedną z następujących czynności:<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Ochrona](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />- [chroniony znajomy](../../language-reference/modifiers/protected-friend.md)<br />- [Private Protected](../../language-reference/modifiers/private-protected.md)<br /><br /> Zobacz [poziomy dostępu w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|
+|`Shadows`|Opcjonalny. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|
+|`charsetmodifier`|Opcjonalny. Określa zestaw znaków i informacje o przeszukiwaniu plików. Może być jedną z następujących czynności:<br /><br /> -   [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) (wartość domyślna)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />@no__t[— 0](../../../visual-basic/language-reference/modifiers/auto.md)|
+|`Sub`|Opcjonalna, ale musi być wyświetlana wartość `Sub` lub `Function`. Wskazuje, że procedura zewnętrzna nie zwraca wartości.|
+|`Function`|Opcjonalna, ale musi być wyświetlana wartość `Sub` lub `Function`. Wskazuje, że procedura zewnętrzna zwraca wartość.|
+|`name`|Wymagany. Nazwa tego odwołania zewnętrznego. Aby uzyskać więcej informacji, zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
+|`Lib`|Wymagany. Wprowadza klauzulę `Lib`, która identyfikuje zewnętrzny plik (DLL lub zasób kodu) zawierający zewnętrzną procedurę.|
+|`libname`|Wymagany. Nazwa pliku, który zawiera zadeklarowaną procedurę.|
+|`Alias`|Opcjonalny. Wskazuje, że zadeklarowana procedura nie może być identyfikowana w pliku o nazwie określonej w `name`. Tożsamość należy określić w `aliasname`.|
+|`aliasname`|Wymagane w przypadku użycia słowa kluczowego `Alias`. Ciąg, który identyfikuje procedurę na jeden z dwóch sposobów:<br /><br /> Nazwa punktu wejścia procedury w obrębie pliku w cudzysłowie (`""`)<br /><br /> —lub—<br /><br /> Znak numeru (`#`), a następnie liczba całkowita określająca numer porządkowy punktu wejścia procedury w jego pliku|
+|`parameterlist`|Wymagane, jeśli procedura pobiera parametry. Zobacz [listę parametrów](../../../visual-basic/language-reference/statements/parameter-list.md).|
+|`returntype`|Wymagany, jeśli określono `Function` i `Option Strict` jest `On`. Typ danych wartości zwracanej przez procedurę.|
 
 ## <a name="remarks"></a>Uwagi
 
-Czasami zachodzi potrzeba wywoływanie procedury zdefiniowane w pliku (np. biblioteki DLL lub zasób kodu) poza projektem. Gdy to zrobisz, kompilator Visual Basic nie ma dostęp do informacji wymaganych do wywołania tej procedury poprawnie, w którym znajduje się procedura, sposób jego identyfikacji, jego sekwencja wywoływania i zwracany typ i zestaw znaków ciągu, który używa. `Declare` Instrukcja tworzy odwołanie do zewnętrznej procedury i dostarcza to informacje niezbędne.
+Czasami konieczne jest wywołanie procedury zdefiniowanej w pliku (na przykład DLL lub zasobu kodu) poza projektem. Gdy to zrobisz, kompilator Visual Basic nie ma dostępu do informacji potrzebnych do poprawnego wywołania procedury, takich jak miejsce, w którym znajduje się procedura, sposób jej identyfikacji, wywołanie sekwencji wywołań i zwracany typ oraz użyty znak ciągu. Instrukcja `Declare` tworzy odwołanie do zewnętrznej procedury i dostarcza te niezbędne informacje.
 
-Możesz użyć `Declare` tylko na poziomie modułu. Oznacza to, że *kontekst deklaracji* odwołanie zewnętrzne musi być klasy, struktury lub modułu i nie może być plik źródłowy, przestrzeń nazw, interfejsu, procedurę lub blok. Aby uzyskać więcej informacji, zobacz [Kontekst deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
+@No__t-0 można używać tylko na poziomie modułu. Oznacza to, że *kontekst deklaracji* dla odwołania zewnętrznego musi być klasą, strukturą lub modułem, i nie może być plikiem źródłowym, przestrzenią nazw, interfejsem, procedurą lub blokiem. Aby uzyskać więcej informacji, zobacz [konteksty deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
 
-Domyślnie odwołuje się do zewnętrznego [publicznych](../../../visual-basic/language-reference/modifiers/public.md) dostępu. Poziomy dostępu można zmienić za pomocą modyfikatorów dostępu.
+Odwołania zewnętrzne są domyślne dla dostępu [publicznego](../../../visual-basic/language-reference/modifiers/public.md) . Możesz dostosować ich poziomy dostępu za pomocą modyfikatorów dostępu.
 
-## <a name="rules"></a>reguły
+## <a name="rules"></a>Przepisy
 
-- **Atrybuty.** Atrybuty można zastosować do odwołania zewnętrznego. Każdego atrybutu, który należy zastosować obowiązuje tylko w projekcie, a nie w pliku zewnętrznym.
+- **Attributes.** Atrybuty można zastosować do odwołania zewnętrznego. Każdy stosowany atrybut ma wpływ tylko na projekt, a nie w pliku zewnętrznym.
 
-- **Modyfikatory.** Procedury zewnętrzne są niejawnie [Shared](../../../visual-basic/language-reference/modifiers/shared.md). Nie można użyć `Shared` — słowo kluczowe podczas deklarowania odwołanie zewnętrzne, a nie można zmienić jego stan udostępnionych.
+- **Modyfikatory.** Procedury zewnętrzne są niejawnie [udostępniane](../../../visual-basic/language-reference/modifiers/shared.md). Nie można użyć słowa kluczowego `Shared` podczas deklarowania odwołania zewnętrznego i nie można zmienić jego stanu udostępnionego.
 
-  Zewnętrzna procedura nie może uczestniczyć w zastępowanie, implementowanie elementów interfejsu lub obsługi zdarzeń. W związku z tym nie można użyć `Overrides`, `Overridable`, `NotOverridable`, `MustOverride`, `Implements`, lub `Handles` — słowo kluczowe w `Declare` instrukcji.
+  Procedura zewnętrzna nie może uczestniczyć w zastępowaniu, implementować składowych interfejsu ani obsługiwać zdarzeń. Z tego powodu nie można użyć słowa kluczowego `Overrides`, `Overridable`, `NotOverridable`, `MustOverride`, `Implements` lub `Handles` w instrukcji `Declare`.
 
-- **Nazwę procedury zewnętrznej.** Nie trzeba nadać tym odwołania zewnętrznego taką samą nazwę (w `name`) jako nazwa punktu wejścia procedury w ramach jego plik zewnętrzny (`aliasname`). Możesz użyć `Alias` klauzulę, aby określić nazwę punktu wejścia. Może to być przydatne, jeśli procedura zewnętrzna ma taką samą nazwę jak zastrzeżone Modyfikatory języka Visual Basic lub zmienną, procedura lub innego elementu programowania, w tym samym zakresie.
-
-  > [!NOTE]
-  > Nazwy punktu wejścia w większości biblioteki DLL jest rozróżniana wielkość liter.
-
-- **Liczba zewnętrzną procedurę.** Alternatywnie, można użyć `Alias` klauzulę, aby określić liczbę porządkową punktu wejścia w tabeli eksportu pliku zewnętrznego. Aby to zrobić, możesz rozpocząć `aliasname` znakiem numeru (`#`). Może to być przydatne, jeśli dowolny znak nazwę procedury zewnętrznej jest niedozwolone w języku Visual Basic lub zewnętrznego pliku Eksportuje procedury bez nazwy.
-
-## <a name="data-type-rules"></a>Zasady dla typu danych
-
-- **Typ danych parametru.** Jeśli `Option Strict` jest `On`, należy określić typ danych każdego parametru w `parameterlist`. Może to być dowolny typ danych lub nazwa wyliczenia, struktury, klasy lub interfejsu. W ramach `parameterlist`, możesz użyć `As` klauzuli, aby określić typ danych argumentu, które mają być przekazane do każdego parametru.
+- **Nazwa procedury zewnętrznej.** Nie musisz podawać tego odwołania zewnętrznego o tej samej nazwie (w `name`) jako nazwy punktu wejścia procedury w pliku zewnętrznym (`aliasname`). Aby określić nazwę punktu wejścia, można użyć klauzuli `Alias`. Może to być przydatne, jeśli procedura zewnętrzna ma taką samą nazwę jak zastrzeżony modyfikator Visual Basic lub zmiennej, procedury lub dowolnego innego elementu programistycznego w tym samym zakresie.
 
   > [!NOTE]
-  > Jeśli procedura zewnętrzna nie został napisany dla programu .NET Framework, możesz należy zadbać o odpowiadające typy danych. Na przykład, jeśli deklaruje odwołanie zewnętrzne do procedury języka Visual Basic 6.0 z `Integer` parametru (16 bitów w języku Visual Basic 6.0), należy zidentyfikować odpowiedni argument jako `Short` w `Declare` instrukcji, ponieważ jest to 16 - bit integer — typ w języku Visual Basic. Podobnie `Long` ma różną szerokość danych w Visual Basic 6.0 i `Date` implementowane w inny sposób.
+  > Nazwy punktów wejścia w większości bibliotek DLL są rozróżniane wielkości liter.
 
-- **Zwracany typ danych.** Jeśli procedura zewnętrzna jest `Function` i `Option Strict` jest `On`, należy określić typ danych wartości zwracanej do wywołującego kodu. Może to być dowolny typ danych lub nazwa wyliczenia, struktury, klasy lub interfejsu.
+- **Numer procedury zewnętrznej.** Alternatywnie można użyć klauzuli `Alias` w celu określenia numeru porządkowego punktu wejścia w tabeli eksportu pliku zewnętrznego. Aby to zrobić, zacznij `aliasname` z znakiem numeru (`#`). Może to być przydatne, jeśli dowolny znak w nazwie procedury zewnętrznej nie jest dozwolony w Visual Basic lub jeśli plik zewnętrzny eksportuje procedurę bez nazwy.
+
+## <a name="data-type-rules"></a>Reguły typu danych
+
+- **Typ danych parametru.** Jeśli `Option Strict` jest `On`, należy określić typ danych każdego parametru w `parameterlist`. Może to być dowolny typ danych lub nazwa wyliczenia, struktury, klasy lub interfejsu. W `parameterlist` należy użyć klauzuli `As`, aby określić typ danych argumentu, który ma zostać przesłany do każdego parametru.
 
   > [!NOTE]
-  > Kompilator Visual Basic nie sprawdza, czy Twoje typy danych są zgodne z tymi zewnętrzną procedurę. Jeśli występuje niezgodność, środowisko uruchomieniowe języka wspólnego generuje <xref:System.Runtime.InteropServices.MarshalDirectiveException> wyjątek w czasie wykonywania.
+  > Jeśli procedura zewnętrzna nie została zapisywana dla .NET Framework, należy zwrócić uwagę na to, że typy danych odpowiadają. Na przykład, Jeśli zadeklarujesz odwołanie zewnętrzne do procedury Visual Basic 6,0 z parametrem `Integer` (16 bitów w Visual Basic 6,0), należy zidentyfikować odpowiedni argument jako `Short` w instrukcji `Declare`, ponieważ to jest 16-bitowa liczba całkowita w Visual Basic. Podobnie `Long` ma inną szerokość danych w Visual Basic 6,0, a `Date` jest zaimplementowana inaczej.
 
-- **Domyślne typy danych.** Jeśli `Option Strict` jest `Off` i nie określisz typ danych parametru w `parameterlist`, kompilator Visual Basic konwertuje odpowiadający argument do [Object — typ danych](../../../visual-basic/language-reference/data-types/object-data-type.md). Podobnie jeśli nie określisz `returntype`, kompilator przyjmuje zwracany typ danych jako `Object`.
+- **Zwraca typ danych.** Jeśli zewnętrzna procedura to `Function` i `Option Strict` jest `On`, należy określić typ danych wartości zwracanej do kodu wywołującego. Może to być dowolny typ danych lub nazwa wyliczenia, struktury, klasy lub interfejsu.
 
   > [!NOTE]
-  > Masz do czynienia z zewnętrzną procedurę, która może być napisana na innej platformie, dlatego jest niebezpieczne, należy czynić żadnych założeń dotyczących typów danych lub zezwolić im na domyślne. Jest znacznie bezpieczniejsze, określ typ danych, każdy parametr i wartość zwracana, jeśli istnieje. Zwiększa to czytelność kodu.
+  > Kompilator Visual Basic nie sprawdza, czy typy danych są zgodne z procedurami zewnętrznymi. Jeśli wystąpi niezgodność, środowisko uruchomieniowe języka wspólnego generuje wyjątek <xref:System.Runtime.InteropServices.MarshalDirectiveException> w czasie wykonywania.
+
+- **Domyślne typy danych.** Jeśli `Option Strict` jest `Off` i nie określisz typu danych parametru w `parameterlist`, kompilator Visual Basic konwertuje odpowiedni argument na [Typ danych obiektu](../../../visual-basic/language-reference/data-types/object-data-type.md). Analogicznie, jeśli nie określisz wartości `returntype`, kompilator Pobiera typ danych zwrotnych na `Object`.
+
+  > [!NOTE]
+  > Ponieważ pracujesz z procedurą zewnętrzną, która mogła zostać zapisywana na innej platformie, nie jest to niebezpieczne dla wprowadzania wszelkich założeń dotyczących typów danych lub zezwalania na ich domyślne. Określenie typu danych każdego parametru i wartości zwracanej jest znacznie bezpieczniejsze. Poprawia to również czytelność kodu.
 
 ## <a name="behavior"></a>Zachowanie
 
-- **Zakres.** Odwołanie zewnętrzne znajduje się w zakresie w całej swojej klasy, struktury lub modułu.
+- **Scope.** Odwołanie zewnętrzne znajduje się w zakresie w całej jego klasy, strukturze lub module.
 
-- **Okres istnienia.** Odwołanie zewnętrzne ma ten sam okres istnienia jako klasy, struktury lub modułu, w którym jest zdeklarowana.
+- **Okres istnienia.** Odwołanie zewnętrzne ma ten sam okres istnienia co Klasa, struktura lub moduł, w którym jest zadeklarowany.
 
-- **Wywoływanie zewnętrzną procedurę.** Wywoływanie procedury zewnętrznej taki sam sposób, należy wywołać `Function` lub `Sub` procedury — przy użyciu w wyrażeniu, jeśli zostanie zwrócona wartość lub określając ją w [instrukcji Call](../../../visual-basic/language-reference/statements/call-statement.md) Jeśli nie zwraca wartości.
+- **Wywoływanie procedury zewnętrznej.** Procedurę zewnętrzną można wywołać w taki sam sposób, jak wywołanie procedury `Function` lub `Sub` — przy użyciu jej w wyrażeniu, jeśli zwraca wartość lub przez określenie jej w [instrukcji Call](../../../visual-basic/language-reference/statements/call-statement.md) , jeśli nie zwróci wartości.
 
-  Przekazywanie argumentów do procedury zewnętrznego dokładnie określany przez `parameterlist` w `Declare` instrukcji. Nie uwzględnia jak parametry zostały pierwotnie zadeklarowana w pliku zewnętrznego. Podobnie w przypadku wartości zwracanej, użyj go dokładnie określonych przez `returntype` w `Declare` instrukcji.
+  Argumenty do procedury zewnętrznej należy przekazać dokładnie tak, jak określono przez `parameterlist` w instrukcji `Declare`. Nie należy uwzględniać sposobu, w jaki parametry zostały pierwotnie zadeklarowane w pliku zewnętrznym. Podobnie, jeśli istnieje wartość zwracana, należy użyć jej dokładnie tak, jak określono przez `returntype` w instrukcji `Declare`.
 
-- **Zestawy znaków.** Można określić w `charsetmodifier` jak Visual Basic powinien kierować ciągi wywoływanych przez nią zewnętrzną procedurę. `Ansi` Modyfikator kieruje Visual Basic, aby kierować wszystkie ciągi jako wartości ANSI i `Unicode` modyfikator kieruje go do kierować wszystkie ciągi jako wartości Unicode. `Auto` Modyfikator kieruje Visual Basic, aby przeprowadzanie marshalingu ciągów zgodnie z .NET Framework reguł na podstawie odwołania zewnętrzne `name`, lub `aliasname` Jeśli zostanie określony. Wartość domyślna to `Ansi`.
+- **Zestawy znaków.** Można określić w `charsetmodifier` sposób, w jaki Visual Basic powinny organizować ciągi podczas wywoływania procedury zewnętrznej. Modyfikator `Ansi` kieruje Visual Basic do kierowania wszystkich ciągów do wartości ANSI, a modyfikator `Unicode` kieruje go do kierowania wszystkich ciągów do wartości Unicode. Modyfikator `Auto` kieruje Visual Basic do organizowania ciągów zgodnie z regułami .NET Framework na podstawie odwołania zewnętrznego `name` lub `aliasname`, jeśli określono. Wartość domyślna to `Ansi`.
 
-  `charsetmodifier` Określa również, jak Visual Basic powinna wyszukiwać zewnętrzną procedurę w jego pliku zewnętrznego. `Ansi` i `Unicode` bezpośrednie zarówno Visual Basic, aby wyszukać bez modyfikowania jej nazwy podczas wyszukiwania. `Auto` Określa, że Visual Basic, aby ustalić podstawowy zestaw znaków platformy uruchomieniowej i możliwie zmodyfikować nazwę procedury zewnętrznej w następujący sposób:
+  `charsetmodifier` określa również sposób, w jaki Visual Basic powinien wyszukiwać procedurę zewnętrzną w pliku zewnętrznym. `Ansi` i `Unicode` bezpośrednie Visual Basic do wyszukania, bez modyfikowania jego nazwy podczas wyszukiwania. `Auto` kieruje Visual Basic, aby określić podstawowy zestaw znaków platformy wykonawczej i prawdopodobnie zmodyfikować nazwę procedury zewnętrznej w następujący sposób:
 
-  - Na platformie ANSI, takich jak Windows 95, Windows 98 lub Windows Millennium Edition Pierwsze spojrzenie procedura zewnętrzna, bez żadnych modyfikacji nazwy. W przypadku niepowodzenia należy dołączyć "A" na końcu nazwę procedury zewnętrznej, i wyszukaj ją ponownie.
+  - Na platformie ANSI, takiej jak Windows 95, Windows 98 lub Windows Millennium Edition, należy najpierw wyszukać zewnętrzną procedurę bez modyfikacji nazwy. Jeśli to się nie powiedzie, Dołącz wartość "A" na końcu nazwy procedury zewnętrznej i sprawdź ją ponownie.
 
-  - Na platformie Unicode, takich jak Windows NT, Windows 2000 lub Windows XP Pierwsze spojrzenie procedura zewnętrzna, bez żadnych modyfikacji nazwy. W przypadku niepowodzenia dołączenia "W" na końcu zewnętrzną procedurę nazwę i wyszukaj ją ponownie.
+  - Na platformie Unicode, takiej jak Windows NT, Windows 2000 lub Windows XP, należy najpierw wyszukać zewnętrzną procedurę bez modyfikacji nazwy. Jeśli to się nie powiedzie, Dołącz literę "W" do końca nazwy procedury zewnętrznej i sprawdź ją ponownie.
 
-- **Mechanizm.** Visual Basic używa programu .NET Framework *wywołania platformy* (funkcja PInvoke) mechanizm rozwiązywania i dostęp do zewnętrznej procedury. `Declare` Instrukcji i <xref:System.Runtime.InteropServices.DllImportAttribute> klasy zarówno automatycznie używać tego mechanizmu, a nie potrzebujesz żadnej wiedzy PInvoke. Aby uzyskać więcej informacji, zobacz [instruktażu: Wywoływanie Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).
+- **Ustanawia.** Visual Basic używa mechanizmu *wywołania platformy* .NET Framework (PInvoke) do rozwiązywania i uzyskiwania dostępu do zewnętrznych procedur. W instrukcji `Declare` i klasie <xref:System.Runtime.InteropServices.DllImportAttribute> automatycznie jest używany ten mechanizm, a użytkownik nie potrzebuje żadnej znajomości funkcji PInvoke. Aby uzyskać więcej informacji, zobacz [Przewodnik: wywoływanie interfejsów API systemu Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).
 
 > [!IMPORTANT]
-> Jeśli procedura zewnętrzna działa poza środowisko uruchomieniowe języka wspólnego (CLR), to *kod niezarządzany*. Podczas wywoływania takiej procedury, na przykład funkcja interfejsu API Windows lub metodę modelu COM może narazić aplikację na zagrożenia bezpieczeństwa. Aby uzyskać więcej informacji, zobacz [bezpiecznego kodowania wytyczne dla niezarządzanego kodu](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).
+> Jeśli procedura zewnętrzna działa poza środowiskiem uruchomieniowym języka wspólnego (CLR), jest to *kod niezarządzany*. W przypadku wywołania takiej procedury, na przykład funkcji interfejsu API systemu Windows lub metody COM, można uwidocznić swoją aplikację pod kątem zagrożeń bezpieczeństwa. Aby uzyskać więcej informacji, zobacz [zasady bezpiecznego kodowania dla niezarządzanego kodu](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład deklaruje odwołanie zewnętrzne do `Function` procedury, która zwraca bieżącą nazwę użytkownika. Następnie wywołuje zewnętrzną procedurę `GetUserNameA` jako część `getUser` procedury.
+Poniższy przykład deklaruje odwołanie zewnętrzne do procedury `Function`, która zwraca bieżącą nazwę użytkownika. Następnie wywołuje procedurę zewnętrzną `GetUserNameA` w ramach procedury `getUser`.
 
 [!code-vb[VbVbalrStatements#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#15)]
 
 ## <a name="example"></a>Przykład
 
-<xref:System.Runtime.InteropServices.DllImportAttribute> Zapewnia alternatywny sposób korzystania z funkcji w niezarządzanym kodzie. Poniższy przykład deklaruje funkcję importowanych bez użycia `Declare` instrukcji.
+@No__t-0 zapewnia alternatywny sposób używania funkcji w kodzie niezarządzanym. Poniższy przykład deklaruje zaimportowaną funkcję bez użycia instrukcji `Declare`.
 
 [!code-vb[VbVbalrStatements#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#16)]
 

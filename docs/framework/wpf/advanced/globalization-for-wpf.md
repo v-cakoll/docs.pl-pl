@@ -7,23 +7,23 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: f1147bf090af23c2f27bac14ab895657ccee60e3
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 1ab372f69792a00160edb2542762298114d3f8b4
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991556"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003443"
 ---
 # <a name="globalization-for-wpf"></a>Globalizacja dla WPF
-Ten temat zawiera informacje o problemach, które należy wziąć pod [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uwagę podczas pisania aplikacji dla globalnego rynku. Elementy programistyczne globalizacji są zdefiniowane w programie .NET w <xref:System.Globalization> przestrzeni nazw.
+Ten temat zawiera informacje o problemach, które należy wziąć pod uwagę podczas pisania aplikacji [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] na globalnym rynku. Elementy programistyczne globalizacji są zdefiniowane w .NET w przestrzeni nazw <xref:System.Globalization>.
 
 <a name="xaml_globalization"></a>
 ## <a name="xaml-globalization"></a>Globalizacja XAML
- [!INCLUDE[TLA#tla_xaml#initcap](../../../../includes/tlasharptla-xamlsharpinitcap-md.md)]jest oparta na [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] i wykorzystuje obsługę globalizacji zdefiniowaną [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] w specyfikacji. W poniższych sekcjach opisano [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] niektóre funkcje, których należy wiedzieć.
+ Extensible Application Markup Language (XAML) bazuje na [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] i wykorzystuje obsługę globalizacji zdefiniowaną w specyfikacji [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. W poniższych sekcjach opisano niektóre funkcje [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], o których należy wiedzieć.
 
 <a name="char_reference"></a>
 ### <a name="character-references"></a>Odwołania do znaków
-Odwołanie znaku daje jednostkę kodu UTF16 dla określonego [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] znaku, który reprezentuje, w postaci dziesiętnej lub szesnastkowej. W poniższym przykładzie pokazano odwołanie do znaku dziesiętnego dla COPTIC wielkiej litery, lub "Ϩ":
+Odwołanie do znaku daje jednostkę kodu UTF16 określonego znaku [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)], który reprezentuje, w postaci dziesiętnej lub szesnastkowej. W poniższym przykładzie pokazano odwołanie do znaku dziesiętnego dla COPTIC wielkiej litery, lub "Ϩ":
 
 ```
 &#1000;
@@ -36,8 +36,8 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 ```
 
 <a name="encoding"></a>
-### <a name="encoding"></a>Kodowanie
- Kodowanie obsługiwane przez [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] są ASCII, [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] UTF-16 i UTF-8. Instrukcja kodowania znajduje się na początku [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dokumentu. Jeśli żaden atrybut kodowania nie istnieje i nie ma kolejności bajtów, Analizator domyślnie używa kodowania UTF-8. Kodowanie UTF-8 i UTF-16 są preferowanymi kodowaniami. Kodowanie UTF-7 nie jest obsługiwane. W poniższym przykładzie pokazano, jak określić kodowanie UTF-8 w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku.
+### <a name="encoding"></a>Kody
+ Kodowanie obsługiwane przez [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] to ASCII, [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] UTF-16 i UTF-8. Instrukcja Encoding znajduje się na początku dokumentu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Jeśli żaden atrybut kodowania nie istnieje i nie ma kolejności bajtów, Analizator domyślnie używa kodowania UTF-8. Kodowanie UTF-8 i UTF-16 są preferowanymi kodowaniami. Kodowanie UTF-7 nie jest obsługiwane. Poniższy przykład ilustruje sposób określania kodowania UTF-8 w pliku [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
 
 ```xaml
 ?xml encoding="UTF-8"?
@@ -45,11 +45,11 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
 <a name="lang_attrib"></a>
 ### <a name="language-attribute"></a>Atrybut Language
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]używa [XML: lang](../../xaml-services/xml-lang-handling-in-xaml.md) do reprezentowania atrybutu języka elementu.  Aby skorzystać z <xref:System.Globalization.CultureInfo> klasy, wartość atrybutu języka musi być jedną z nazw kultur wstępnie zdefiniowanych przez <xref:System.Globalization.CultureInfo>. [XML: lang](../../xaml-services/xml-lang-handling-in-xaml.md) można dziedziczyć w drzewie elementów (według reguł XML, niekoniecznie ze względu na dziedziczenie właściwości zależności), a jego wartość domyślna to pusty ciąg, jeśli nie jest on jawnie przypisany.
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] używa [XML: lang](../../xaml-services/xml-lang-handling-in-xaml.md) do reprezentowania atrybutu języka elementu.  Aby skorzystać z klasy <xref:System.Globalization.CultureInfo>, wartość atrybutu języka musi być jedną z nazw kultur wstępnie zdefiniowanych przez <xref:System.Globalization.CultureInfo>. [XML: lang](../../xaml-services/xml-lang-handling-in-xaml.md) można dziedziczyć w drzewie elementów (według reguł XML, niekoniecznie ze względu na dziedziczenie właściwości zależności), a jego wartość domyślna to pusty ciąg, jeśli nie jest on jawnie przypisany.
 
- Atrybut Language jest bardzo przydatny do określania dialektów. Na przykład francuski ma inną pisownię, słownictwo i wymowę w Francji, Quebec, Belgii i Szwajcarii. Ponadto w [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]języku chińskim, japońskim i koreańskim można przydzielić punkty kodu, ale kształty ideograficzne różnią się od siebie i używają całkowicie różnych czcionek.
+ Atrybut Language jest bardzo przydatny do określania dialektów. Na przykład francuski ma inną pisownię, słownictwo i wymowę w Francji, Quebec, Belgii i Szwajcarii. W [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] można także użyć języka chińskiego, japońskiego i koreańskiego, ale kształty ideograficzne różnią się od siebie i używają całkowicie różnych czcionek.
 
- W poniższym [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] przykładzie zastosowano `fr-CA` atrybut Language, aby określić kanadyjski francuski.
+ Poniższy [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] przykład używa atrybutu języka `fr-CA` w celu określenia kanadyjskiej wartości francuskiej.
 
 ```xaml
 <TextBlock xml:lang="fr-CA">Découvrir la France</TextBlock>
@@ -57,15 +57,15 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
 <a name="unicode"></a>
 ### <a name="unicode"></a>Unicode
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]obsługuje wszystkie [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] funkcje, w tym surogaty. Tak długo, jak zestaw znaków może być zamapowany na [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], jest obsługiwany. Na przykład GB18030 wprowadza pewne znaki, które są mapowane na rozszerzenia w języku chińskim, japońskim i koreańskim (CFK) a i B i pary dwuskładnikowe, dlatego jest w pełni obsługiwane. Aplikacja może używać <xref:System.Globalization.StringInfo> do manipulowania ciągami bez względu na to, czy mają pary dwuskładnikowe, czy łączące znaki. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] obsługuje wszystkie funkcje [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], w tym surogaty. Tak długo, jak zestaw znaków można zamapować na [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], jest obsługiwany. Na przykład GB18030 wprowadza pewne znaki, które są mapowane na rozszerzenia w języku chińskim, japońskim i koreańskim (CFK) a i B i pary dwuskładnikowe, dlatego jest w pełni obsługiwane. Aplikacja [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] może używać <xref:System.Globalization.StringInfo> do manipulowania ciągami bez względu na to, czy mają one pary dwuskładnikowe, czy łączenia znaków.
 
 <a name="design_intl_ui_with_xaml"></a>
 ## <a name="designing-an-international-user-interface-with-xaml"></a>Projektowanie międzynarodowego interfejsu użytkownika przy użyciu języka XAML
- W tej sekcji [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] opisano funkcje, które należy wziąć pod uwagę podczas pisania aplikacji.
+ W tej sekcji opisano funkcje [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], które należy wziąć pod uwagę podczas pisania aplikacji.
 
 <a name="intl_text"></a>
 ### <a name="international-text"></a>Tekst Międzynarodowy
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]obejmuje wbudowane przetwarzanie dla wszystkich obsługiwanych systemów Microsoft .NET Framework.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obejmuje wbudowane przetwarzanie dla wszystkich systemów Microsoft .NET obsługiwanych przez platformę.
 
  Obecnie obsługiwane są następujące skrypty:
 
@@ -89,13 +89,13 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
 - Kannada
 
-- Lao
+- -
 
 - Wielka
 
-- Malajalam
+- Malayalam
 
-- Mongolian
+- Mongolski
 
 - Odia
 
@@ -125,13 +125,13 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
  Wszystkie aparaty systemu pisania obsługują czcionki OpenType. Czcionki OpenType mogą zawierać tabele układu OpenType, które umożliwiają twórcom czcionek projektowanie lepszych, międzynarodowych i wysokiej klasy czcionek typograficznych. Tabele układu czcionek OpenType zawierają informacje dotyczące podstawiania glifów, pozycjonowania glifów, justowania i pozycjonowania linii bazowej, umożliwiając aplikacjom do przetwarzania tekstu ulepszanie układu tekstu.
 
- Czcionki OpenType umożliwiają obsługę dużych zestawów glifów przy użyciu [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] kodowania. Takie kodowanie włącza szeroką pomoc techniczną, a także dla wariantów symboli typograficznych.
+ Czcionki OpenType umożliwiają obsługę dużych zestawów glifów przy użyciu kodowania [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]. Takie kodowanie włącza szeroką pomoc techniczną, a także dla wariantów symboli typograficznych.
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]renderowanie tekstu jest obsługiwane przez technologię Microsoft ClearType w pikselach, która obsługuje niezależność rozwiązań. Znacznie poprawia to czytelność i zapewnia możliwość obsługi dokumentów w stylu magazynu o wysokiej jakości dla wszystkich skryptów.
+ renderowanie tekstu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jest obsługiwane przez technologię Microsoft ClearType w pikselach, która obsługuje niezależność rozwiązań. Znacznie poprawia to czytelność i zapewnia możliwość obsługi dokumentów w stylu magazynu o wysokiej jakości dla wszystkich skryptów.
 
 <a name="intl_layout"></a>
 ### <a name="international-layout"></a>Układ Międzynarodowy
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zapewnia bardzo wygodny sposób obsługi układów poziomych, dwukierunkowych i pionowych. W strukturze <xref:System.Windows.FrameworkElement.FlowDirection%2A> prezentacji właściwość może służyć do definiowania układu. Wzorce kierunku przepływu są następujące:
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zapewnia bardzo wygodny sposób obsługi układów poziomych, dwukierunkowych i pionowych. W środowisku prezentacji Właściwość <xref:System.Windows.FrameworkElement.FlowDirection%2A> może służyć do definiowania układu. Wzorce kierunku przepływu są następujące:
 
 - *LeftToRight* — układ poziomy dla języków łacińskich, wschodnioazjatyckich i tak dalej.
 
@@ -143,35 +143,35 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>Wielojęzyczny interfejs użytkownika
- Wielojęzycznego interfejsu użytkownika (MUI) to pomoc techniczna firmy Microsoft do [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] przełączania się z jednego języka do innego. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aplikacja używa modelu zestawu do obsługi interfejsu MUI. Jedna aplikacja zawiera zestawy, które są niezależne od języka, a także zestawy zasobów satelitarnych zależne od języka. Punkt wejścia jest zarządzany. EXE w zestawie głównym.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]moduł ładujący zasoby korzysta z [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]Menedżera zasobów do obsługi wyszukiwania i powrotu zasobów. Zestawy satelickie dla wielu języków współpracują z tym samym zestawem głównym. Załadowany zestaw zasobów zależy <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> od bieżącego wątku.
+ Wielojęzycznego interfejsu użytkownika (MUI) to pomoc techniczna firmy Microsoft do przełączania [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] z jednego języka do innego. Aplikacja [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używa modelu zestawu do obsługi interfejsu MUI. Jedna aplikacja zawiera zestawy, które są niezależne od języka, a także zestawy zasobów satelitarnych zależne od języka. Punkt wejścia jest zarządzany. EXE w zestawie głównym.  moduł ładujący zasobów [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] korzysta z Menedżera zasobów [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] do obsługi wyszukiwania i powrotu zasobów. Zestawy satelickie dla wielu języków współpracują z tym samym zestawem głównym. Załadowany zestaw zasobów zależy od <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> bieżącego wątku.
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>Lokalizowalny interfejs użytkownika
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]aplikacje używają [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] do definiowania ich [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]umożliwia deweloperom określenie hierarchii obiektów z zestawem właściwości i logiki. Głównym zastosowaniem programu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest programowanie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, ale może służyć do określania hierarchii dowolnego obiektu środowiska uruchomieniowego języka wspólnego (CLR). Większość deweloperów używa [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] do określania [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] aplikacji i używania języka programowania, takiego jak C# w celu reagowania na interakcję użytkownika.
+ aplikacje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używają [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] do definiowania [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] umożliwia deweloperom określenie hierarchii obiektów z zestawem właściwości i logiki. Podstawowym zastosowaniem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest programowanie aplikacji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], ale może służyć do określania hierarchii dowolnego obiektu środowiska uruchomieniowego języka wspólnego (CLR). Większość deweloperów używa [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], aby określić [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] aplikacji i użyć języka programowania, takiego jak C# w celu reagowania na interakcję z użytkownikiem.
 
- Z punktu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] widzenia zasobów plik zaprojektowany do opisywania zależnego od [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] języka jest elementem zasobów i dlatego jego końcowy format dystrybucji musi być Lokalizowalny do obsługi języków międzynarodowych. Ponieważ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] nie obsługuje zdarzeń, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] wiele aplikacji zawiera bloki kodu, aby to zrobić. Aby uzyskać więcej informacji, zobacz [XAML — Omówienie (WPF)](xaml-overview-wpf.md). Kod jest usuwany i kompilowany do różnych plików binarnych, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] gdy plik jest w postaci tokenu do formy BAML języka XAML. Forma BAML plików XAML, obrazów i innych typów obiektów zasobów zarządzanych jest osadzona w zestawie zasobów satelitarnych, który można lokalizować w innych językach lub głównym zestawie, gdy lokalizacja nie jest wymagana.
+ Z punktu widzenia zasobów plik [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] przeznaczony do opisywania [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] jest elementem zasobów, dlatego jego końcowy format dystrybucji musi być Lokalizowalny do obsługi języków międzynarodowych. Ponieważ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] nie obsługuje zdarzeń, wiele aplikacji [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] zawiera bloki kodu, aby to zrobić. Aby uzyskać więcej informacji, zobacz [XAML — Omówienie (WPF)](xaml-overview-wpf.md). Kod jest usuwany i kompilowany do różnych plików binarnych, gdy plik [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest oparty na postaci tokenu w formie BAML języka XAML. Forma BAML plików XAML, obrazów i innych typów obiektów zasobów zarządzanych jest osadzona w zestawie zasobów satelitarnych, który można lokalizować w innych językach lub głównym zestawie, gdy lokalizacja nie jest wymagana.
 
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]aplikacje obsługują wszystkie [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]zasoby środowiska CLR, w tym tabele ciągów, obrazy i tak dalej.
+> aplikacje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obsługują wszystkie zasoby [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]CLR, w tym tabele ciągów, obrazy i tak dalej.
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>Kompilowanie aplikacji lokalizowalnych
- Lokalizacja oznacza adaptację [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] do różnych kultur. Aby nawiązać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikację, deweloperzy muszą kompilować wszystkie zasoby lokalizowalne w zestawie zasobów. Zestaw zasobów jest zlokalizowany w różnych językach, a związany z nim kod używa interfejsu API zarządzania zasobami do załadowania. Jednym z plików wymaganych dla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji jest plik projektu (. proj). Wszystkie zasoby, które są używane w aplikacji, powinny być uwzględnione w pliku projektu. Poniższy przykład z pliku. csproj pokazuje, jak to zrobić.
+ Lokalizacja oznacza dostosowanie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] do różnych kultur. Aby aplikacja [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] była lokalizowalna, deweloperzy muszą kompilować wszystkie zasoby lokalizowalne w zestawie zasobów. Zestaw zasobów jest zlokalizowany w różnych językach, a związany z nim kod używa interfejsu API zarządzania zasobami do załadowania. Jednym z plików wymaganych dla aplikacji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jest plik projektu (. proj). Wszystkie zasoby, które są używane w aplikacji, powinny być uwzględnione w pliku projektu. Poniższy przykład z pliku. csproj pokazuje, jak to zrobić.
 
 ```xml
 <Resource Include="data\picture1.jpg"/>
 <EmbeddedResource Include="data\stringtable.en-US.restext"/>
 ```
 
- Aby użyć zasobu z wystąpieniami <xref:System.Resources.ResourceManager> aplikacji a i załadować zasobu, którego chcesz użyć. Poniższy przykład demonstruje, jak to zrobić.
+ Aby użyć zasobu w aplikacji, Utwórz wystąpienie <xref:System.Resources.ResourceManager> i Załaduj zasób, którego chcesz użyć. Poniższy przykład demonstruje, jak to zrobić.
 
  [!code-csharp[LocalizationResources#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]
 
 <a name="using_clickonce"></a>
 ## <a name="using-clickonce-with-localized-applications"></a>Używanie technologii ClickOnce z zlokalizowanymi aplikacjami
- ClickOnce to nowa technologia wdrażania Windows Forms, która będzie dostarczana z programem Visual Studio 2005. Umożliwia instalowanie aplikacji i Uaktualnianie aplikacji sieci Web. Gdy aplikacja, która została wdrożona przy użyciu technologii ClickOnce, jest zlokalizowana, może być wyświetlana tylko w zlokalizowanej kulturze. Na przykład jeśli wdrożona aplikacja jest zlokalizowana w języku japońskim, można ją wyświetlać tylko [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] w języku japońskim, a nie w angielskiej wersji systemu Windows. Jest to problem, ponieważ typowym scenariuszem dla użytkowników japońskich jest uruchomienie angielskiej wersji systemu Windows.
+ ClickOnce to nowa technologia wdrażania Windows Forms, która będzie dostarczana z programem Visual Studio 2005. Umożliwia instalowanie aplikacji i Uaktualnianie aplikacji sieci Web. Gdy aplikacja, która została wdrożona przy użyciu technologii ClickOnce, jest zlokalizowana, może być wyświetlana tylko w zlokalizowanej kulturze. Na przykład jeśli wdrożona aplikacja jest zlokalizowana w języku japońskim, można ją wyświetlać tylko w języku japońskim [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)], a nie w angielskiej wersji systemu Windows. Jest to problem, ponieważ typowym scenariuszem dla użytkowników japońskich jest uruchomienie angielskiej wersji systemu Windows.
 
- Rozwiązanie tego problemu powoduje ustawienie atrybutu rezerwy języka neutralnego. Deweloper aplikacji może opcjonalnie usunąć zasoby z głównego zestawu i określić, że zasoby można znaleźć w zestawie satelickim odpowiadającym określonej kulturze. Aby sterować tym procesem, <xref:System.Resources.NeutralResourcesLanguageAttribute>Użyj. Konstruktor <xref:System.Resources.NeutralResourcesLanguageAttribute> klasy ma dwa podpisy, jeden, który <xref:System.Resources.UltimateResourceFallbackLocation> przyjmuje parametr, aby <xref:System.Resources.ResourceManager> określić lokalizację, w której powinny zostać wyodrębnione zasoby rezerwowe: zestaw główny lub zestaw satelicki. Poniższy przykład pokazuje, jak używać atrybutu. W przypadku ostatecznej lokalizacji rezerwowej kod powoduje <xref:System.Resources.ResourceManager> wyszukanie zasobów w podkatalogu "de" katalogu aktualnie wykonywanego zestawu.
+ Rozwiązanie tego problemu powoduje ustawienie atrybutu rezerwy języka neutralnego. Deweloper aplikacji może opcjonalnie usunąć zasoby z głównego zestawu i określić, że zasoby można znaleźć w zestawie satelickim odpowiadającym określonej kulturze. Aby kontrolować ten proces, użyj <xref:System.Resources.NeutralResourcesLanguageAttribute>. Konstruktor klasy <xref:System.Resources.NeutralResourcesLanguageAttribute> ma dwa podpisy, jeden, który przyjmuje parametr <xref:System.Resources.UltimateResourceFallbackLocation>, aby określić lokalizację, w której <xref:System.Resources.ResourceManager> powinien wyodrębnić zasoby rezerwowe: zestaw główny lub zestaw satelicki. Poniższy przykład pokazuje, jak używać atrybutu. W przypadku ostatecznej lokalizacji rezerwowej kod powoduje, że <xref:System.Resources.ResourceManager> szuka zasobów w podkatalogu "de" katalogu aktualnie wykonywanego zestawu.
 
 ```csharp
 [assembly: NeutralResourcesLanguageAttribute(

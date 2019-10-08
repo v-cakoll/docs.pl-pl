@@ -8,19 +8,19 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: 4848dec148bc528e7a30940643e3364f1bb5f805
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c6fc7e9dcfbce938ad75b0f357c2bfa9cd10703a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939202"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005320"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 Umożliwia korzystanie z wnioskowania o typie lokalnym w deklaracjach zmiennych.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console  
 -optioninfer[+ | -]  
 ```  
   
@@ -28,19 +28,19 @@ Umożliwia korzystanie z wnioskowania o typie lokalnym w deklaracjach zmiennych.
   
 |Termin|Definicja|  
 |---|---|  
-|`+` &#124; `-`|Opcjonalna. Określ `-optioninfer+` , aby włączyć wnioskowanie o typie lokalnym `-optioninfer-` lub je zablokować. Opcja bez określonej wartości jest taka sama jak `-optioninfer+`. `-optioninfer` Wartość domyślna, gdy przełącznik `-optioninfer` nie jest obecny, jest również `-optioninfer+`. Wartość domyślna jest ustawiana w pliku odpowiedzi VBC. rsp.|  
+|`+` &#124; `-`|Opcjonalny. Określ `-optioninfer+`, aby włączyć wnioskowanie o typie lokalnym lub `-optioninfer-`, aby go zablokować. Opcja `-optioninfer` bez określonej wartości jest taka sama jak wartość `-optioninfer+`. Wartość domyślna w przypadku nieobecności przełącznika `-optioninfer` jest również `-optioninfer+`. Wartość domyślna jest ustawiana w pliku odpowiedzi VBC. rsp.|  
   
 > [!NOTE]
-> Można użyć `-noconfig` opcji, aby zachować wewnętrzne wartości domyślne kompilatora zamiast opcji określonych w vbc. rsp. Wartość domyślna kompilatora dla tej opcji to `-optioninfer-`.  
+> Możesz użyć opcji `-noconfig`, aby zachować wewnętrzne wartości domyślne kompilatora zamiast opcji określonych w vbc. rsp. Wartość domyślna kompilatora dla tej opcji to `-optioninfer-`.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli plik kodu źródłowego zawiera [instrukcję opcji wnioskowania](../../../visual-basic/language-reference/statements/option-infer-statement.md), instrukcja zastępuje `-optioninfer` ustawienie kompilatora wiersza polecenia.  
+ Jeśli plik kodu źródłowego zawiera [instrukcję opcji wnioskowania](../../../visual-basic/language-reference/statements/option-infer-statement.md), instrukcja zastępuje ustawienia kompilatora wiersza polecenia `-optioninfer`.  
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Aby ustawić-optioninfer w środowisku IDE programu Visual Studio  
   
 1. Wybierz projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**.  
   
-2. Na karcie **kompilacja** Zmień wartość w polu wnioskowanie o **opcji** .  
+2. Na karcie **kompilacja** Zmień wartość w polu **wnioskowanie o opcji** .  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod kompiluje `test.vb` z włączonym wnioskem o typie lokalnym.  

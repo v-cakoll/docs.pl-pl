@@ -6,19 +6,19 @@ helpviewer_keywords:
 - -win32icon compiler option [Visual Basic]
 - /win32icon compiler option [Visual Basic]
 ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
-ms.openlocfilehash: dc48a8f79aa04892c514917da00b8fd6489695b1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6b4b69d227c857442de6857fac023090b3698e81
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593089"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004634"
 ---
 # <a name="-win32icon"></a>-win32icon
-Wstawia plik .ico, w pliku wyjściowym. Ten plik .ico, który reprezentuje plik wyjściowy w **Eksploratora plików**.  
+Wstawia plik. ico w pliku wyjściowym. Ten plik. ico reprezentuje plik wyjściowy w **Eksploratorze plików**.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console  
 -win32icon:filename  
 ```  
   
@@ -26,19 +26,19 @@ Wstawia plik .ico, w pliku wyjściowym. Ten plik .ico, który reprezentuje plik 
   
 |Termin|Definicja|  
 |---|---|  
-|`filename`|Plik .ico, należy dodać do pliku wyjściowego. Nazwę pliku należy ująć w znaki cudzysłowu ("") zawiera spację.|  
+|`filename`|Plik. ico, który ma zostać dodany do pliku wyjściowego. Nazwa pliku należy ująć w cudzysłów (""), jeśli zawiera spację.|  
   
 ## <a name="remarks"></a>Uwagi  
- Plik .ico, który można utworzyć przy użyciu kompilatora zasobów Windows firmy Microsoft (RC). Kompilator zasobów jest wywoływane, gdy kompilujesz program Visual C++; plik .ico, który jest tworzony z pliku .rc. `-win32icon` i `-win32resource` opcje wykluczają się wzajemnie.  
+ Plik. ico można utworzyć za pomocą kompilatora zasobów systemu Microsoft Windows (RC). Kompilator zasobów jest wywoływany podczas kompilowania programu Visual C++ ; plik. ico jest tworzony na podstawie pliku. rc. Opcje `-win32icon` i `-win32resource` wykluczają się wzajemnie.  
   
- Zobacz [- linkresource — (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) k odkazu plikiem zasobów .NET Framework lub [-zasobów (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) można dołączyć plik zasobu .NET Framework. Zobacz [-win32resource —](../../../visual-basic/reference/command-line-compiler/win32resource.md) można zaimportować plik res.  
+ Zobacz [-linkresource — (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) , aby odwołać się do .NET Framework pliku zasobów, lub [-Resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) , aby dołączyć plik zasobów .NET Framework. Aby zaimportować plik. res, zobacz temat [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) .  
   
-|Aby ustawić - win32icon w środowisku IDE programu Visual Studio|  
+|Aby ustawić-win32icon w środowisku IDE programu Visual Studio|  
 |---|  
-|1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**. <br />2.  Kliknij przycisk **aplikacji** kartę.<br />3.  Zmodyfikuj wartość w **ikonę** pole.|  
+|1. zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**. <br />2. Kliknij kartę **aplikacja** .<br />3. Zmodyfikuj wartość w polu **ikony** .|  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `In.vb` i dołącza plik .ico `Rf.ico`.  
+ Poniższy kod kompiluje `In.vb` i dołącza plik ICO, `Rf.ico`.  
   
 ```console
 vbc -win32icon:rf.ico in.vb  
@@ -46,5 +46,5 @@ vbc -win32icon:rf.ico in.vb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

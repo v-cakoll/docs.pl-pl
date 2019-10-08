@@ -8,19 +8,19 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-ms.openlocfilehash: ff298f001a2d865446436e8099a2fbbef593a00a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 88166a040823cfefe623f672e556c364d652a7fc
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054201"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004731"
 ---
 # <a name="let-clause-visual-basic"></a>Let — Klauzula (Visual Basic)
-Oblicza wartość i przypisuje go do nowej zmiennej w ramach zapytania.  
+Oblicza wartość i przypisuje ją do nowej zmiennej w zapytaniu.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 Let variable = expression [, ...]  
 ```  
   
@@ -28,16 +28,16 @@ Let variable = expression [, ...]
   
 |Termin|Definicja|  
 |---|---|  
-|`variable`|Wymagana. Alias, który może służyć do odwołania wyniki podane wyrażenie.|  
-|`expression`|Wymagana. Wyrażenie, które będą oceniane i przypisane do określonej zmiennej.|  
+|`variable`|Wymagany. Alias, który może służyć do odwoływania się do wyników podanego wyrażenia.|  
+|`expression`|Wymagany. Wyrażenie, które zostanie obliczone i przypisane do określonej zmiennej.|  
   
 ## <a name="remarks"></a>Uwagi  
- `Let` Klauzuli pozwala do obliczenia wartości dla każdej wynik zapytania i odwoływać się do nich za pomocą aliasu. Alias mogą być używane w innych klauzul takich jak `Where` klauzuli. `Let` Klauzuli pozwala na tworzenie instrukcji zapytań, która jest łatwiejsza do odczytania, ponieważ możesz określić alias dla klauzuli wyrażenie uwzględnione w zapytaniu i Zastąp alias zawsze jest używana klauzula wyrażenia.  
+ Klauzula `Let` umożliwia obliczanie wartości dla każdego wyniku zapytania i odwoływanie się do nich za pomocą aliasu. Alias może być używany w innych klauzulach, takich jak klauzula `Where`. Klauzula `Let` umożliwia utworzenie instrukcji zapytania, która jest łatwiejsza do odczytania, ponieważ można określić alias dla klauzuli Expression zawartej w zapytaniu i zastąpić alias za każdym razem, gdy zostanie użyta klauzula wyrażenia.  
   
- Może zawierać dowolną liczbę `variable` i `expression` przydziały w `Let` klauzuli. Każdego przypisania należy oddzielić przecinkami (,).  
+ W klauzuli `Let` można uwzględnić dowolną liczbę przypisań `variable` i `expression`. Każde przypisanie należy oddzielić przecinkami (,).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu wykorzystuje `Let` klauzuli do obliczenia 10 procent rabatu na produkty.  
+ Poniższy przykład kodu używa klauzuli `Let` w celu obliczenia rabatu w wysokości 10% na produkty.  
   
  [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  
   

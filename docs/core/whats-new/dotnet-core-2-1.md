@@ -1,5 +1,5 @@
 ---
-title: Co nowego w programie .NET Core 2.1
+title: Co nowego w programie .NET Core 2,1
 description: Dowiedz się więcej o nowych funkcjach dostępnych w programie .NET Core 2,1.
 dev_langs:
 - csharp
@@ -7,25 +7,25 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: ace8c644fd5aa13e29961b7eb44e923556571c75
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 18c8d566c3b79c131a3d031e5bdf3b37996d9115
+ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834260"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72031849"
 ---
-# <a name="whats-new-in-net-core-21"></a>Co nowego w programie .NET Core 2.1
+# <a name="whats-new-in-net-core-21"></a>Co nowego w programie .NET Core 2,1
 
 Program .NET Core 2,1 zawiera ulepszenia i nowe funkcje w następujących obszarach:
 
 - [Narzędzi](#tooling)
 - [Przewinięcie do przodu](#roll-forward)
-- [Wdrażanie](#deployment)
+- [Wdrożenie](#deployment)
 - [Pakiet zgodności systemu Windows](#windows-compatibility-pack)
 - [Ulepszenia kompilacji JIT](#jit-compiler-improvements)
 - [Zmiany interfejsu API](#api-changes)
 
-## <a name="tooling"></a>Narzędzia
+## <a name="tooling"></a>Narzędzi
 
 Zestaw .NET Core 2,1 SDK (v 2.1.300), narzędzia dołączone do programu .NET Core 2,1, obejmują następujące zmiany i ulepszenia:
 
@@ -45,7 +45,7 @@ Głównym fokusem platformy .NET Core 2,1 jest poprawa wydajności czasu kompila
 
 ### <a name="new-cli-commands"></a>Polecenia nowej infrastruktury CLI
 
-Kilka narzędzi, które były dostępne tylko dla każdego projektu, przy użyciu [`DotnetCliToolReference`](../tools/extensibility.md) , są teraz dostępne jako część zestaw .NET Core SDK. Dostępne są następujące narzędzia:
+Kilka narzędzi, które były dostępne tylko dla każdego projektu, przy użyciu [`DotnetCliToolReference`](../tools/extensibility.md) , są teraz dostępne jako część zestaw .NET Core SDK. Do tych narzędzi należą:
 
 - `dotnet watch` udostępnia obserwatora systemu plików, który czeka na zmianę pliku przed wykonaniem określonego zestawu poleceń. Na przykład następujące polecenie automatycznie ponownie kompiluje bieżący projekt i generuje pełne dane wyjściowe za każdym razem, gdy plik zostanie zmieniony:
 
@@ -122,7 +122,7 @@ To ustawienie można zmienić na jeden z trzech sposobów:
 
 Wersja poprawki do przodu jest niezależna od tego ustawienia i jest wykonywana po zastosowaniu dowolnych dodatkowych lub głównych wersji do przodu.
 
-## <a name="deployment"></a>wdrażania
+## <a name="deployment"></a>Wdrażanie
 
 ### <a name="self-contained-application-servicing"></a>Obsługa aplikacji samodzielnych
 
@@ -213,7 +213,7 @@ Program .NET Core 2,1 zawiera liczne ulepszenia interfejsów API kryptografii:
 
 - Metoda static <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=nameWithType> wypełnia <xref:System.Span%601> losowo wartościami.
 
-- @No__t-0 jest teraz obsługiwana w systemach Linux i maxOS.
+- @No__t-0 jest teraz obsługiwana w systemach Linux i macOS.
 
 - Krzywa eliptyczna — Diffie-Hellmana (ECDH) jest teraz dostępna w rodzinie klasy <xref:System.Security.Cryptography.ECDiffieHellman?displayProperty=nameWithType>. Powierzchnia obszaru jest taka sama jak w .NET Framework.
 

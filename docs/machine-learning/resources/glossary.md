@@ -1,21 +1,21 @@
 ---
-title: Glosariusz uczenia maszynowego
+title: Słownik uczenia maszynowego
 description: Słownik ważnych warunków uczenia maszynowego, które są przydatne podczas tworzenia niestandardowych modeli w programie ML.NET.
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: 4d4bb80c6582facbcb11664309fde230bcfa4e7b
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cb5681f1f72776ec9a8cbcfe45519befe02b8caf
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929264"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180173"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Słownik uczenia maszynowego ważnych warunków
 
 Poniższa lista zawiera kompilację ważnych warunków uczenia maszynowego, które są przydatne podczas tworzenia niestandardowych modeli w programie ML.NET.
 
-## <a name="accuracy"></a>odpowiedni
+## <a name="accuracy"></a>Odpowiedni
 
 W [klasyfikacji](#classification)dokładność jest liczbą poprawnie sklasyfikowanych elementów podzielona przez łączną liczbę elementów w zestawie testów. Zakresy od 0 (najmniej dokładne) do 1 (najdokładniejsze). Dokładność jest jedną z metryk oceny wydajności modelu. Należy wziąć pod uwagę w połączeniu z [dokładnością](#precision), [odwołaniem](#recall)i [wynikiem](#f-score).
 
@@ -29,7 +29,7 @@ Przypadek [klasyfikacji](#classification) , gdzie [etykieta](#label) jest tylko 
 
 ## <a name="calibration"></a>Krzyw
 
-Kalibracja jest procesem mapowania nieprzetworzonego wyniku na członkostwo klasy w przypadku klasyfikacji binarnej i wieloklasowej. Niektóre instruktorzy ml.NET mają `NonCalibrated` sufiks. Te algorytmy tworzą nieprzetworzony wynik, który następnie musi być zamapowany na prawdopodobieństwo klasy. 
+Kalibracja jest procesem mapowania nieprzetworzonego wyniku na członkostwo klasy w przypadku klasyfikacji binarnej i wieloklasowej. Niektóre instruktorzy ML.NET mają sufiks `NonCalibrated`. Te algorytmy tworzą nieprzetworzony wynik, który następnie musi być zamapowany na prawdopodobieństwo klasy. 
 
 ## <a name="catalog"></a>Wykaz 
 
@@ -47,7 +47,7 @@ W [regresji](#regression)Metryka oceny, która wskazuje, jak dobre dane pasują 
 
 ## <a name="data"></a>Dane
 
-Dane są centralne dla każdej aplikacji uczenia maszynowego. W danych ml.NET są reprezentowane przez <xref:Microsoft.ML.IDataView> obiekty. Obiekty widoku danych:
+Dane są centralne dla każdej aplikacji uczenia maszynowego. W danych ML.NET są reprezentowane przez obiekty <xref:Microsoft.ML.IDataView>. Obiekty widoku danych:
 
 - składają się z kolumn i wierszy
 - Czy opóźnieniem są oceniane, czyli ładują dane tylko wtedy, gdy operacja wywołuje ją.
@@ -55,9 +55,9 @@ Dane są centralne dla każdej aplikacji uczenia maszynowego. W danych ml.NET s�
 
 ## <a name="estimator"></a>Szacowania
 
-Klasa w ml.NET, która implementuje <xref:Microsoft.ML.IEstimator%601> interfejs.
+Klasa w ML.NET implementująca interfejs <xref:Microsoft.ML.IEstimator%601>.
 
-Szacowania to specyfikacja transformacji (transformacja przygotowywania danych i transformacja szkoleń modelu uczenia maszynowego). Szacowania można łączyć razem z potokiem transformacji. Parametry szacowania lub potoku szacowania są znane, gdy <xref:Microsoft.ML.IEstimator`1.Fit*> jest wywoływana. Wynik <xref:Microsoft.ML.IEstimator`1.Fit*> to [transformator](#transformer).
+Szacowania to specyfikacja transformacji (transformacja przygotowywania danych i transformacja szkoleń modelu uczenia maszynowego). Szacowania można łączyć razem z potokiem transformacji. Parametry szacowania lub potoku szacowania są znane, gdy zostanie wywołane <xref:Microsoft.ML.IEstimator`1.Fit*>. Wynik <xref:Microsoft.ML.IEstimator`1.Fit*> jest [transformatorem](#transformer).
 
 ## <a name="extension-method"></a>Metoda rozszerzenia
 
@@ -111,7 +111,7 @@ Przypadek [klasyfikacji](#classification) , gdzie [etykieta](#label) jest jedną
 
 Schemat wyodrębniania funkcji dla danych tekstowych: każda sekwencja N wyrazów włącza wartość [funkcji](#feature) .
 
-## <a name="normalization"></a>Normalizacja
+## <a name="normalization"></a>Normalizacji
 
 Normalizacja to proces skalowania danych zmiennoprzecinkowych do wartości z zakresu od 0 do 1. Wiele algorytmów szkoleniowych używanych w ML.NET Wymagaj znormalizowane dane funkcji wejściowych. ML.NET zawiera serię [transformacji do normalizacji](transforms.md#normalization-and-scaling)
 
@@ -123,11 +123,11 @@ Wektor [funkcji](#feature) składający się tylko z wartości liczbowych. Jest 
 
 Wszystkie operacje, które są konieczne do dopasowania modelu do zestawu danych. Potok składa się z kroków importowania, przekształcania, cechowania i uczenia danych. Po przeszkoleniu potoku zostanie on przekształcony w model.
 
-## <a name="precision"></a>Dokładność
+## <a name="precision"></a>Dokładne
 
 W [klasyfikacji](#classification)precyzja dla klasy jest liczbą elementów prawidłowo przewidywanych jako należące do tej klasy podzielona przez łączną liczbę elementów przewidywanych jako należące do klasy.
 
-## <a name="recall"></a>Odwołaj
+## <a name="recall"></a>Wycofaniu
 
 W [klasyfikacji](#classification)odwołanie dla klasy jest liczbą elementów prawidłowo przewidywanych jako należące do tej klasy podzielona przez łączną liczbę elementów, które faktycznie należą do klasy.
 
@@ -136,9 +136,9 @@ W [klasyfikacji](#classification)odwołanie dla klasy jest liczbą elementów pr
  Uregulowanie nakłada się na model liniowy za zbyt skomplikowany. Istnieją dwa typy uregulowania:
 
 - $L _1 $ uregulowania zerowej wagi dla nieznaczących funkcji. Rozmiar zapisanego modelu może być mniejszy po tym typie uregulowania.
-- $L _2 $ uregulowanie ogranicza zakres wagi dla nieznaczących funkcji, jest to bardziej ogólny proces i jest mniej wrażliwy na wartości odstające.
+- $L _2 $ uregulowanie ogranicza zakres wagi dla nieznaczących funkcji. Jest to bardziej ogólny proces i jest mniej wrażliwy na wartości odstające.
 
-## <a name="regression"></a>Regresji
+## <a name="regression"></a>Ubytk
 
 [Nadzorowane zadanie uczenia maszynowego](#supervised-machine-learning) , gdzie wyjście jest wartością rzeczywistą, na przykład Double. Przykłady obejmują przewidywanie cen giełdowych. Aby uzyskać więcej informacji, zobacz sekcję [regresja](tasks.md#regression) w temacie [zadań uczenia maszynowego](tasks.md) .
 
@@ -162,15 +162,15 @@ Ocenianie to proces stosowania nowych danych do przeszkolonego modelu uczenia ma
 
 Podklasa uczenia maszynowego, w której żądany model przewiduje etykietę dla jeszcze niewidocznych danych. Przykłady obejmują klasyfikację, regresję i prognozowanie strukturalne. Aby uzyskać więcej informacji, zapoznaj się z artykułem [nadzorowane uczenie](https://en.wikipedia.org/wiki/Supervised_learning) w witrynie Wikipedia.
 
-## <a name="training"></a>Szkolenia
+## <a name="training"></a>Szkolenie
 
 Proces identyfikacji [modelu](#model) dla danego zestawu danych szkoleniowych. W przypadku modelu liniowego oznacza to znalezienie wag. Dla drzewa obejmuje identyfikację punktów podziału.
 
 ## <a name="transformer"></a>Funkcja
 
-Klasa ml.NET, która implementuje <xref:Microsoft.ML.ITransformer> interfejs.
+Klasa ML.NET implementująca interfejs <xref:Microsoft.ML.ITransformer>.
 
-Transformator przekształceń jeden <xref:Microsoft.ML.IDataView> do drugiego. Transformator jest tworzony przez szkolenie [szacowania](#estimator)lub potoku szacowania. 
+Transformator przekształca jeden <xref:Microsoft.ML.IDataView> na inny. Transformator jest tworzony przez szkolenie [szacowania](#estimator)lub potoku szacowania. 
 
 ## <a name="unsupervised-machine-learning"></a>Nienadzorowane Uczenie maszynowe
 

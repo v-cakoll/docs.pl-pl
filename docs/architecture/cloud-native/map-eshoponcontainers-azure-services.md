@@ -2,12 +2,12 @@
 title: Mapowanie eShopOnContainers do usług platformy Azure
 description: Mapowanie eShopOnContainers do usług platformy Azure, takich jak usługa Azure Kubernetes, Brama interfejsu API i Azure Service Bus.
 ms.date: 06/30/2019
-ms.openlocfilehash: feb6d8f5ca05ab55ce4695d1200766a18b8f744a
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 67430da18c0a12c694426214de33e85c2113e454
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182819"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275815"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>Mapowanie eShopOnContainers do usług platformy Azure
 
@@ -17,8 +17,7 @@ Chociaż nie jest to wymagane, platforma Azure dobrze nadaje się do obsługi eS
 
 Architektura aplikacji jest pokazana na rysunku 2-5. Po lewej stronie znajdują się aplikacje klienckie, które zostały podzielone na urządzenia przenośne, tradycyjne sieci Web i aplikacje jednostronicowe (SPA). Po prawej stronie są składniki serwera, które składają się na system, z których każdy może być hostowany w kontenerach platformy Docker i klastrach Kubernetes. Tradycyjna aplikacja sieci Web jest obsługiwana przez aplikację ASP.NET Core MVC poświetloną na żółto. Ta aplikacja oraz aplikacje mobilne i sieci Web SPA komunikują się z indywidualnymi mikrousługami za pomocą co najmniej jednej bramy interfejsu API. Bramy interfejsu API są zgodne ze wzorcem "zaplecze frontonu" (BFF), co oznacza, że każda Brama jest zaprojektowana do obsługi danego klienta frontonu. Poszczególne mikrousługi są wyświetlane z prawej strony bram interfejsu API i obejmują zarówno logikę biznesową, jak i pewien rodzaj magazynu trwałości. Różne usługi wykorzystują SQL Server baz danych, wystąpień pamięci podręcznej Redis i magazynów MongoDB/CosmosDB. Po prawej stronie jest magistrala zdarzeń systemu, która jest używana do komunikacji między mikrousługami.
 
-![Rysunek architektury](./media/eshoponcontainers-architecture.png)
-eShopOnContainers**2-5**. Architektura eShopOnContainers.
+![eShopOnContainers Architecture @ no__t-1**rysunek 2-5**. Architektura eShopOnContainers.
 
 Składniki po stronie serwera tej architektury są łatwo mapowane do usług platformy Azure.
 
@@ -26,9 +25,9 @@ Składniki po stronie serwera tej architektury są łatwo mapowane do usług pla
 
 Usługi hostowane w kontenerach aplikacji, z ASP.NET Core aplikacje MVC do poszczególnych katalogów i mikrousług, mogą być hostowane i zarządzane w usłudze Azure Kubernetes Service (AKS). Aplikacja może działać lokalnie na platformie Docker i Kubernetes, a następnie można wdrożyć te same kontenery w środowiskach przejściowych i produkcyjnych hostowanych w AKS. Ten proces może być zautomatyzowany, ponieważ będziemy widzieć w następnej sekcji.
 
-AKS zapewnia usługi zarządzania dla poszczególnych klastrów kontenerów. Aplikacja będzie wdrażać oddzielne klastry AKS dla każdej mikrousługi pokazanej na diagramie architektury powyżej. Takie podejście umożliwia osobom indywidualnym poszczególnych usług, niezależnie od ich zapotrzebowania na zasoby. Każdą mikrousługi można również wdrożyć niezależnie, a w związku z tym takie wdrożenia powinny spowodować zero przestojów systemu.
+AKS zapewnia usługi zarządzania dla poszczególnych klastrów kontenerów. Aplikacja będzie wdrażać oddzielne klastry AKS dla każdej mikrousługi pokazanej na diagramie architektury powyżej. Takie podejście umożliwia niezależne skalowanie poszczególnych usług zgodnie z wymaganiami zasobów. Każdą mikrousługi można również wdrożyć niezależnie, a w związku z tym takie wdrożenia powinny spowodować zero przestojów systemu.
 
-## <a name="api-gateway"></a>Brama interfejsu API
+## <a name="api-gateway"></a>API Gateway
 
 Aplikacja eShopOnContainers ma wielu klientów frontonu i wiele różnych usług zaplecza. Nie istnieje jeden do jednego między aplikacjami klienckimi i mikrousługami, które je obsługują. W takim scenariuszu może wystąpić bardzo duże zmniejszenie złożoności w przypadku pisania oprogramowania klienckiego do interfejsu z różnymi usługami zaplecza w bezpieczny sposób. Każdy klient musi obsłużyć tę złożoność samodzielnie, co spowoduje duplikowanie i wiele miejsc, w których aktualizacje są wprowadzane po zmianie usług lub implementacji nowych zasad.
 
@@ -60,21 +59,21 @@ Dane rozproszone w aplikacjach natywnych w chmurze zostały omówione bardziej s
 
 Aplikacja używa zdarzeń do przekazywania zmian między różnymi usługami. Tę funkcję można zaimplementować przy użyciu różnych implementacji, a lokalnie aplikacja eShopOnContainers używa funkcji [RabbitMQ](https://www.rabbitmq.com/). Gdy aplikacja jest hostowana na platformie Azure, będzie ona używać [Azure Service Bus](https://docs.microsoft.com/azure/service-bus/) do obsługi komunikatów. Azure Service Bus to w pełni zarządzany Broker komunikatów integracji, który umożliwia aplikacjom i usługom komunikowanie się ze sobą w niezależny, niezawodny i asynchroniczny sposób. Azure Service Bus obsługuje poszczególne kolejki oraz oddzielne *Tematy* obsługujące scenariusze dla subskrybentów wydawcy. Aplikacja eShopOnContainers będzie używać tematów z Azure Service Bus do obsługi dystrybuowania komunikatów z jednej mikrousługi do dowolnej innej mikrousług, która wymagała reakcji na daną wiadomość.
 
-## <a name="resiliency"></a>Odporności
+## <a name="resiliency"></a>Odporność
 
 Po wdrożeniu w środowisku produkcyjnym aplikacja eShopOnContainers może korzystać z kilku dostępnych usług platformy Azure w celu poprawy jej odporności. Aplikacja publikuje kontrolę kondycji, którą można zintegrować z Application Insights w celu zapewnienia raportów i alertów na podstawie dostępności aplikacji. Zasoby platformy Azure dostarczają również dzienników diagnostycznych, które mogą służyć do identyfikowania i poprawiania błędów i problemów z wydajnością. Dzienniki zasobów zawierają szczegółowe informacje o tym, kiedy i w jaki sposób są używane różne zasoby platformy Azure. Dowiesz się więcej na temat funkcji odporności natywnych w chmurze w [rozdziale 6](resiliency.md).
 
-## <a name="references"></a>Odwołania
+## <a name="references"></a>Informacje
 
 - [Architektura eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Architecture)
-- [Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności](https://docs.microsoft.com/dotnet/architecture/microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications)
-- [API Management platformy Azure](https://docs.microsoft.com/azure/api-management/api-management-key-concepts)
+- [Organizowanie mikrousług i aplikacji wielokontenerowych w celu zapewnienia wysokiej skalowalności i dostępności](https://docs.microsoft.com/dotnet/architecture/microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications)
+- [Azure API Management](https://docs.microsoft.com/azure/api-management/api-management-key-concepts)
 - [Przegląd Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)
-- [Pamięć podręczna platformy Azure dla usługi Redis](https://azure.microsoft.com/services/cache/)
+- [Azure Cache for Redis](https://azure.microsoft.com/services/cache/)
 - [Interfejs API Azure Cosmos DB dla MongoDB](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
 - [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)
-- [Przegląd Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview)
+- [Omówienie usługi Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview)
 
 >[!div class="step-by-step"]
 >[Poprzedni](introduce-eshoponcontainers-reference-app.md)
->[Następny](deploy-eshoponcontainers-azure.md)
+>[dalej](deploy-eshoponcontainers-azure.md)

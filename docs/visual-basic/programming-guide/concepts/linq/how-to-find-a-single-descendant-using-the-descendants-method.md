@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Znajdź pojedynczy element podrzędny przy użyciu metody Descendants (Visual Basic)'
+title: 'Instrukcje: Znajdowanie pojedynczego elementu podrzędnego przy użyciu metody Descendants (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 0c03468c-efc8-4140-98f3-fb67acd9e8e1
-ms.openlocfilehash: 7e90e7e8c4a6cd4c91b15037be0fa422dd2108e3
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: dbde5686d1b7670290d434c0a04515cbc10622fd
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709076"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249965"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>Instrukcje: Znajdź pojedynczy element podrzędny przy użyciu metody Descendants (Visual Basic)
-Możesz użyć metody osi <xref:System.Xml.Linq.XContainer.Descendants%2A> , aby szybko napisać kod w celu znalezienia pojedynczego elementu z unikatowymi nazwami. Ta technika jest szczególnie przydatna, gdy chcesz znaleźć konkretny element podrzędny o określonej nazwie. Można napisać kod, aby przejść do żądanego elementu, ale jest on często szybszy i łatwiejszy w pisaniu kodu przy użyciu <xref:System.Xml.Linq.XContainer.Descendants%2A> osi.  
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>Instrukcje: Znajdowanie pojedynczego elementu podrzędnego przy użyciu metody Descendants (Visual Basic)
+Można użyć metody osi <xref:System.Xml.Linq.XContainer.Descendants%2A>, aby szybko napisać kod w celu znalezienia pojedynczego unikatowego elementu nazwanego. Ta technika jest szczególnie przydatna, gdy chcesz znaleźć konkretny element podrzędny o określonej nazwie. Można napisać kod, aby przejść do żądanego elementu, ale jest on często szybszy i łatwiejszy w pisaniu kodu przy użyciu osi <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
 ## <a name="example"></a>Przykład  
- W <xref:System.Linq.Enumerable.First%2A> tym przykładzie użyto standardowego operatora zapytania.  
+ W tym przykładzie użyto standardowego operatora kwerendy <xref:System.Linq.Enumerable.First%2A>.  
   
 ```vb  
 Dim root As XElement = _  
@@ -39,7 +39,7 @@ Console.WriteLine(grandChild3)
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```console  
 GC3 Value  
 ```  
   
@@ -76,7 +76,7 @@ End Module
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```console  
 GC3 Value  
 ```  
   

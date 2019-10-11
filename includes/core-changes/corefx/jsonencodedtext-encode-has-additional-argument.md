@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: 377f22409558c21d1c57f6214c13572dedf9e419
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 375a6f57a867c2a11fe95753c1085d6d708db2bd
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71217074"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237432"
 ---
 ### <a name="jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument"></a>Metody JsonEncodedText. Encode mają dodatkowy argument JavaScriptEncoder
 
-Począwszy od programu .NET Core 3,0 w wersji zapoznawczej 8 <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> , <xref:System.Text.Encodings.Web.JavaScriptEncoder> metody zawierają opcjonalny argument.
+Począwszy od platformy .NET Core 3,0 w wersji zapoznawczej 8, metody <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> zawierają opcjonalny argument <xref:System.Text.Encodings.Web.JavaScriptEncoder>.
 
-#### <a name="details"></a>Szczegóły
+#### <a name="change-description"></a>Zmień opis
 
-Program .NET Core 3,0 zawiera nowy typ linki XREF: System. Text. JSON. JsonEncodedText. Encode% 2A? displayProperty = nameWithType >. Począwszy od programu .NET Core 3,0 w wersji zapoznawczej 8 <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> , sygnatura wszystkich przeciążeń metody <xref:System.Text.Encodings.Web.JavaScriptEncoder> została zmieniona w celu uwzględnienia opcjonalnego parametru. Ta zmiana została wprowadzona w celu zezwalania na inny lub niestandardowy koder.
+Program .NET Core 3,0 zawiera nowy typ linki XREF: System. Text. JSON. JsonEncodedText. Encode% 2A? displayProperty = nameWithType >. Począwszy od programu .NET Core 3,0 w wersji zapoznawczej 8, sygnatura wszystkich przeciążeń metody <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> zmieniła się na dołączenie opcjonalnego parametru <xref:System.Text.Encodings.Web.JavaScriptEncoder>. Ta zmiana została wprowadzona w celu zezwalania na inny lub niestandardowy koder.
 
-Sygnatura `Encode` metod w programie .NET Core 3,0 Preview 7 to:
+Sygnatura metod `Encode` w programie .NET Core 3,0 Preview 7 to:
 
 ```csharp
 namespace System.Text.Json
@@ -28,7 +28,7 @@ namespace System.Text.Json
 }
 ```
 
-Podpis tych samych `Encode` metod w programie .NET Core 3,0 w wersji zapoznawczej 8 i nowszych to:
+Podpis tych samych metod `Encode` w programie .NET Core 3,0 w wersji zapoznawczej 8 i jego nowszych wersjach:
 
 ```csharp
 namespace System.Text.Json
@@ -54,7 +54,7 @@ Jest to tylko zmiana w postaci binarnej. ponowna kompilacja względem programu .
 
 CoreFx
 
-#### <a name="affected-apis"></a>Dotyczy interfejsów API
+#### <a name="affected-apis"></a>Narażone interfejsy API
 
 <xref:System.Text.Json.JsonEncodedText.Encode(System.ReadOnlySpan%7BSystem.Byte%7D,System.Text.Encodings.Web.JavaScriptEncoder)?displayProperty=nameWithType>
 <xref:System.Text.Json.JsonEncodedText.Encode(System.ReadOnlySpan%7BSystem.Char%7D,System.Text.Encodings.Web.JavaScriptEncoder)?displayProperty=nameWithType>

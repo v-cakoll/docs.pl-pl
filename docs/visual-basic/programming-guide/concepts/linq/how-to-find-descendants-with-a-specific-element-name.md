@@ -1,16 +1,16 @@
 ---
-title: 'Instrukcje: Znajdź elementy podrzędne z określoną nazwą elementu (Visual Basic)'
+title: 'Instrukcje: Znajdowanie elementów podrzędnych z określoną nazwą elementu (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-ms.openlocfilehash: 0084f04db5af7b012748b66187e029c77d0cfce5
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 5c4556ae7bf4c7560618781be51e066f659b0b4c
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710260"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249684"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>Instrukcje: Znajdź elementy podrzędne z określoną nazwą elementu (Visual Basic)
-Czasami chcesz znaleźć wszystkie elementy podrzędne o określonej nazwie. Można napisać kod do iteracji przez wszystkie elementy podrzędne, ale łatwiej jest użyć <xref:System.Xml.Linq.XContainer.Descendants%2A> osi.  
+# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>Instrukcje: Znajdowanie elementów podrzędnych z określoną nazwą elementu (Visual Basic)
+Czasami chcesz znaleźć wszystkie elementy podrzędne o określonej nazwie. Można napisać kod do iteracji przez wszystkie elementy podrzędne, ale łatwiej jest użyć osi <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak znaleźć elementy podrzędne na podstawie nazwy elementu.  
@@ -49,7 +49,7 @@ Console.WriteLine(str)
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```console  
 Some text that is broken up into multiple segments.  
 ```  
   
@@ -96,7 +96,7 @@ End Module
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```console  
 Some text that is broken up into multiple segments.  
 ```  
   

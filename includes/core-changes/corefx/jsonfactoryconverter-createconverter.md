@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: e16f0c8ede5e1a24d4fc4606c3c25225ea72e750
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: f5b0064f9f01923c6353fd8e2b274bd7407ccbd8
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117146"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237431"
 ---
 ### <a name="jsonfactoryconvertercreateconverter-signature-changed"></a>Zmieniono sygnaturę JsonFactoryConverter. isconverter
 
-Aby ułatwić składanie <xref:System.Text.Json.Serialization.JsonConverterFactory> klas <xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter%2A> , metoda została udostępniona jako publiczna i podano drugi argument typu <xref:System.Text.Json.JsonSerializerOptions>.
+Aby ułatwić składanie klas <xref:System.Text.Json.Serialization.JsonConverterFactory>, Metoda <xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter%2A> została udostępniona jako publiczna i podano drugi argument typu <xref:System.Text.Json.JsonSerializerOptions>.
 
-#### <a name="details"></a>Szczegóły
+#### <a name="change-description"></a>Zmień opis
 
-Sygnatura `CreateConverter` metody w programie .NET Core wcześniejsza niż wersja 3,0 Preview 8 była: 
+Sygnatura metody `CreateConverter` w programie .NET Core wcześniejszym niż wersja 3,0 Preview 8 to: 
 
 ```csharp
 namespace System.Text.Json.Serialization
@@ -36,7 +36,7 @@ namespace System.Text.Json.Serialization
 }
 ```
 
-Przed wprowadzeniem tej zmiany trudno było tworzyć zapieczętowane konwertery fabryk, ponieważ nie było to łatwe <xref:System.Text.Json.Serialization.JsonConverter%601> w użyciu. Uczynienie metody fabryki jako publiczną, a także <xref:System.Text.Json.JsonSerializerOptions> przekazanie bieżącego zezwolenia na znacznie bardziej elastyczne składanie.
+Przed wprowadzeniem tej zmiany trudno było tworzyć zapieczętowane konwertery fabryk, ponieważ nie było możliwości łatwego uzyskania <xref:System.Text.Json.Serialization.JsonConverter%601>. Dzięki temu Metoda fabryki powinna być publiczna, a także przekazywać bieżące <xref:System.Text.Json.JsonSerializerOptions> Zezwalaj na znacznie bardziej elastyczne składanie.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -46,7 +46,7 @@ Przed wprowadzeniem tej zmiany trudno było tworzyć zapieczętowane konwertery 
 
 Klasy pochodne muszą zostać zaktualizowane i ponownie skompilowane.
 
-#### <a name="affected-apis"></a>Dotyczy interfejsów API
+#### <a name="affected-apis"></a>Narażone interfejsy API
 
 <xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter(System.Type,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType>.
 

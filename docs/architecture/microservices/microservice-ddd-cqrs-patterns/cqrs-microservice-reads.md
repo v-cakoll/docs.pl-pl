@@ -1,13 +1,13 @@
 ---
-title: Implementowanie odczytów i zapytań w mikrousłudze CQRS
+title: Implementowanie operacji odczytu/zapytań w CQRS mikrousługi
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z implementacją zapytania CQRS na mikrousłudze porządkowania w eShopOnContainers przy użyciu Dapper.
 ms.date: 10/08/2018
-ms.openlocfilehash: f791546e2fc00e276ab55302802a5534465ace58
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c39a42b7f5200208a0f812665a2d1c87b4433ba9
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295990"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275788"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementowanie operacji odczytu/zapytań w CQRS mikrousługi
 
@@ -45,17 +45,17 @@ Dapper to projekt typu "open source" (oryginalny utworzony przez sam Saffron) i 
 
 Należy również dodać instrukcję using, aby kod miał dostęp do metod rozszerzenia Dapper.
 
-Gdy używasz Dapper w kodzie, możesz bezpośrednio użyć <xref:System.Data.SqlClient.SqlConnection> klasy dostępnej <xref:System.Data.SqlClient> w przestrzeni nazw. Za pomocą metody QueryAsync i innych metod rozszerzenia, które rozszerzają <xref:System.Data.SqlClient.SqlConnection> klasę, można po prostu uruchamiać zapytania w sposób prosty i wydajny.
+W przypadku używania Dapper w kodzie należy bezpośrednio użyć klasy <xref:System.Data.SqlClient.SqlConnection> dostępnej w przestrzeni nazw <xref:System.Data.SqlClient>. Za pomocą metody QueryAsync i innych metod rozszerzenia, które rozszerzają klasę <xref:System.Data.SqlClient.SqlConnection>, można po prostu uruchamiać zapytania w sposób prosty i wydajny.
 
 ## <a name="dynamic-versus-static-viewmodels"></a>Dynamiczny a statyczny modele widoków
 
 Po powrocie modele widoków z serwera do aplikacji klienckich można myśleć o tych modele widoków jako DTO (Transfer danych obiektów), które mogą być różne dla wewnętrznych jednostek domeny modelu jednostki, ponieważ modele widoków przechowuje dane w sposób, w jaki aplikacja kliencka konieczne. Z tego względu w wielu przypadkach można agregować dane pochodzące z wielu jednostek domeny i precyzyjnie redagować modele widoków według sposobu, w jaki aplikacja kliencka wymaga tych danych.
 
-Te modele widoków lub DTO można jawnie zdefiniować (jako klasy posiadaczy danych), takie `OrderSummary` jak Klasa pokazana w późniejszym fragmencie kodu, lub po prostu zwrócić dynamiczną modele widoków lub dynamiczną DTO na podstawie atrybutów zwracanych przez zapytania jako dynamiczne Wprowadź.
+Te modele widoków lub DTO mogą być zdefiniowane jawnie (jako klasy posiadaczy danych), takie jak Klasa `OrderSummary` pokazana w późniejszym fragmencie kodu lub po prostu zwracają dynamiczne modele widoków lub dynamiczne DTO na podstawie atrybutów zwracanych przez zapytania jako typ dynamiczny.
 
 ### <a name="viewmodel-as-dynamic-type"></a>ViewModel jako typ dynamiczny
 
-Jak pokazano w poniższym kodzie, `ViewModel` można zwrócić bezpośrednio przez zapytania, zwracając typ *dynamiczny* , który wewnętrznie jest oparty na atrybutach zwracanych przez zapytanie. Oznacza to, że podzbiór atrybutów do zwrócenia jest oparty na zapytaniu. W związku z tym, jeśli dodasz nową kolumnę do zapytania lub sprzężenia, dane te są dynamicznie dodawane do `ViewModel`zwracanego.
+Jak pokazano w poniższym kodzie, wartość `ViewModel` może być zwracana bezpośrednio przez zapytania przez zwrócenie samego typu *dynamicznego* , który wewnętrznie opiera się na atrybutach zwracanych przez zapytanie. Oznacza to, że podzbiór atrybutów do zwrócenia jest oparty na zapytaniu. W związku z tym, jeśli dodasz nową kolumnę do zapytania lub sprzężenia, dane te są dynamicznie dodawane do zwróconego `ViewModel`.
 
 ```csharp
 using Dapper;
@@ -87,19 +87,19 @@ public class OrderQueries : IOrderQueries
 
 Ważnym punktem jest to, że za pomocą typu dynamicznego, zwrócona kolekcja danych jest dynamicznie zmontowany jako ViewModel.
 
-**Formaty** Takie podejście zmniejsza konieczność modyfikacji statycznych klas ViewModel za każdym razem, gdy aktualizujesz zdanie SQL zapytania, dzięki czemu ten projekt podejścia jest dość Agile podczas kodowania, bezpośrednie i szybkiej ewolucji w odniesieniu do przyszłych zmian.
+**Specjaliści:** Takie podejście zmniejsza konieczność modyfikacji statycznych klas ViewModel za każdym razem, gdy aktualizujesz zdanie SQL zapytania, dzięki czemu ten projekt podejścia jest dość Agile podczas kodowania, bezpośrednie i szybkiej ewolucji w odniesieniu do przyszłych zmian.
 
-**Wada** W długim okresie typy dynamiczne mogą mieć negatywny wpływ na przejrzystość i zgodność usługi z aplikacjami klienckimi. Ponadto oprogramowanie pośredniczące, takie jak Swashbuckle, nie może zapewnić tego samego poziomu dokumentacji dla zwracanych typów, jeśli są używane typy dynamiczne.
+**Wady:** W długim okresie typy dynamiczne mogą mieć negatywny wpływ na przejrzystość i zgodność usługi z aplikacjami klienckimi. Ponadto oprogramowanie pośredniczące, takie jak Swashbuckle, nie może zapewnić tego samego poziomu dokumentacji dla zwracanych typów, jeśli są używane typy dynamiczne.
 
 ### <a name="viewmodel-as-predefined-dto-classes"></a>ViewModel jako wstępnie zdefiniowane klasy DTO
 
-**Specjaliści**: Posiadanie statycznych wstępnie zdefiniowanych klas ViewModel, na przykład "umów" opartych na jawnych klasach DTO, jest w znacznym zakresie lepszym rozwiązaniem dla publicznych interfejsów API, ale także dla mikrousług długoterminowych, nawet jeśli są one używane tylko przez tę samą aplikację.
+**Specjaliści**: posiadanie statycznych wstępnie zdefiniowanych klas ViewModel, na przykład "umów" opartych na jawnych klasach DTO, jest w znacznym zakresie lepsze dla publicznych interfejsów API, ale również dla mikrousług długoterminowych, nawet jeśli są one używane tylko przez tę samą aplikację.
 
 Jeśli chcesz określić typy odpowiedzi dla struktury Swagger, musisz użyć jawnych klas DTO jako typu zwracanego. W związku z tym wstępnie zdefiniowane klasy DTO umożliwiają oferowanie bardziej szczegółowych informacji z struktury Swagger. Poprawia to dokumentację interfejsu API i zgodność przy korzystaniu z interfejsu API.
 
-**Wady**: Jak wspomniano wcześniej, podczas aktualizowania kodu potrzebne są kilka kroków pozwalające zaktualizować klasy DTO.
+**Wady**: jak wspomniano wcześniej, podczas aktualizowania kodu należy wykonać kilka kroków, aby zaktualizować klasy DTO.
 
-*Porada oparta na naszym doświadczeniu*: W zapytaniach zaimplementowanych w mikrousłudze porządkowania w programie eShopOnContainers rozpoczynamy Programowanie przy użyciu dynamicznego modele widoków, ponieważ było bardzo proste i elastyczne na wczesnych etapach tworzenia oprogramowania. Jednak po ustabilizowaniu rozwoju wybieramy do refaktoryzacji interfejsy API i używają statycznego lub wstępnie zdefiniowanego DTO dla modele widoków, ponieważ jest to wyraźniejsze dla konsumentów mikrousług, aby znać jawne typy DTO, używane jako "kontrakty".
+*Porada oparta na naszym doświadczeniu*: w zapytaniach zaimplementowanych w mikrousłudze porządkowania w eShopOnContainers rozpoczynamy Programowanie przy użyciu dynamicznych modele widoków, ponieważ było to bardzo proste i elastyczne na wczesnych etapach tworzenia oprogramowania. Jednak po ustabilizowaniu rozwoju wybieramy do refaktoryzacji interfejsy API i używają statycznego lub wstępnie zdefiniowanego DTO dla modele widoków, ponieważ jest to wyraźniejsze dla konsumentów mikrousług, aby znać jawne typy DTO, używane jako "kontrakty".
 
 W poniższym przykładzie można zobaczyć, jak zapytanie zwraca dane przy użyciu jawnej klasy ViewModel DTO: klasy OrderSummary.
 
@@ -118,7 +118,7 @@ public class OrderQueries : IOrderQueries
         using (var connection = new SqlConnection(_connectionString))
         {
             connection.Open();
-            var result = await connection.QueryAsync<OrderSummary>(
+            return await connection.QueryAsync<OrderSummary>(
                   @"SELECT o.[Id] as ordernumber, 
                   o.[OrderDate] as [date],os.[Name] as [status], 
                   SUM(oi.units*oi.unitprice) as total
@@ -161,7 +161,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.API.Controllers
 }
 ```
 
-Jednak atrybut nie może używać elementu dynamicznego jako typu, ale wymaga użycia jawnych typów, `OrderSummary` takich jak ViewModel DTO, pokazany w poniższym przykładzie: `ProducesResponseType`
+Jednak atrybut `ProducesResponseType` nie może używać wartości dynamicznej jako typu, ale wymaga użycia jawnych typów, takich jak `OrderSummary` ViewModel DTO, jak pokazano w następującym przykładzie:
 
 ```csharp
 public class OrderSummary
@@ -173,7 +173,7 @@ public class OrderSummary
 }
 ```
 
-Jest to kolejny powód, dla którego jawne zwracane typy są lepsze niż typy dynamiczne w długim okresie. Przy użyciu `ProducesResponseType` atrybutu można także określić oczekiwany wynik w odniesieniu do możliwych błędów/kodów http, takich jak 200, 400 itd.
+Jest to kolejny powód, dla którego jawne zwracane typy są lepsze niż typy dynamiczne w długim okresie. Korzystając z atrybutu `ProducesResponseType`, można również określić, jaki jest oczekiwany wynik w odniesieniu do możliwych błędów/kodów HTTP, takich jak 200, 400 itd.
 
 Na poniższej ilustracji widać, jak interfejs użytkownika struktury Swagger wyświetla informacje o odpowiedzi.
 
@@ -183,17 +183,17 @@ Na poniższej ilustracji widać, jak interfejs użytkownika struktury Swagger wy
 
 Na obrazie można zobaczyć więcej przykładowych wartości na podstawie typów ViewModel oraz możliwych kodów stanu HTTP, które mogą być zwracane.
 
-## <a name="additional-resources"></a>Dodatkowe zasoby
+## <a name="additional-resources"></a>Zasoby dodatkowe
 
-- **Dapper** \
+- **Dapper**  
  <https://github.com/StackExchange/dapper-dot-net>
 
-- **Julie Lerman. Punkty danych — Dapper, Entity Framework i aplikacje hybrydowe (MSDN mag. article)**  \
-  <https://msdn.microsoft.com/magazine/mt703432.aspx>
+- **Julie Lerman. Punkty danych — Dapper, Entity Framework i aplikacje hybrydowe (artykuł z magazynu MSDN)**  
+  <https://msdn.microsoft.com/magazine/mt703432>
 
-- **ASP.NET Core stronach pomocy interfejsu API sieci Web przy użyciu programu Swagger** \
+- **ASP.NET Core stronach pomocy interfejsu API sieci Web przy użyciu programu Swagger**  
   <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>
 
 >[!div class="step-by-step"]
->[Poprzedni](eshoponcontainers-cqrs-ddd-microservice.md)Następny
->[](ddd-oriented-microservice.md)
+>[Poprzedni](eshoponcontainers-cqrs-ddd-microservice.md)
+>[dalej](ddd-oriented-microservice.md)

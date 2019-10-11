@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 78d2ec6fb505573ad36d55a9ca0a20452b7fa244
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: b50a108d2efbfd3da0d690cb02537a12f766b26b
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002851"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237426"
 ---
 ### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a>Wartość domyślna HttpRequestMessage. Version została zmieniona na 1,1 
 
@@ -12,9 +12,9 @@ Wartość domyślna właściwości <xref:System.Net.Http.HttpRequestMessage.Vers
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
-.NET Core 3.0
+.NET Core 3,0
 
-#### <a name="details"></a>Szczegóły
+#### <a name="change-description"></a>Zmień opis
 
 W przypadku platformy .NET Core 1,0 do 2,0 wartość domyślna właściwości <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> to 1,1. Począwszy od platformy .NET Core 2,1, zmieniono ją na 2,1. 
 
@@ -26,9 +26,9 @@ Zaktualizuj swój kod, jeśli zależy od właściwości <xref:System.Net.Http.Ht
 
 #### <a name="category"></a>Kategoria
 
-Obsługa sieci
+Networking
 
-#### <a name="affected-apis"></a>Dotyczy interfejsów API
+#### <a name="affected-apis"></a>Narażone interfejsy API
 
 - <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName>
 

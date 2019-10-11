@@ -2,47 +2,44 @@
 title: Zadanie 1. Tworzenie nowej aplikacji Windows Presentation Foundation
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-ms.openlocfilehash: 44152f0af73b134218cd975d93e186166b1e57ae
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3205840da575041b449eb841fc8084e89937fca7
+ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665312"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72031897"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Zadanie 1. Tworzenie nowej aplikacji Windows Presentation Foundation
-W tym zadaniu utworzysz pustą aplikację Windows Presentation Foundation (WPF) za pomocą szablonu programu Visual Studio w aplikacji WPF i dodać odwołania do odpowiednich [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] zestawy przepływu pracy.  
+
+W tym zadaniu utworzysz pustą aplikację Windows Presentation Foundation (WPF) za pomocą szablonu aplikacji WPF programu Visual Studio i dodasz odwołania do odpowiednich zestawów przepływów pracy [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)].  
   
-### <a name="to-create-the-wpf-application-project"></a>Aby utworzyć projekt aplikacji WPF  
-  
-1. Otwórz program Visual Studio i **pliku** menu wskaż **New**, a następnie kliknij przycisk **projektu**.  
-  
-2. W **nowy projekt** okna dialogowego wybierz opcję **Visual C#**  lub **języka Visual Basic** z **zainstalowane szablony** w okienku po lewej stronie strony pola. Jeśli nie ma preferowanego języka, sprawdź w obszarze **inne języki**.  
-  
-3. Wybierz **Windows** w **zainstalowane szablony** okienka.  
-  
-4. W górnym okienku upewnij się, że (wartość domyślna) **.NET Framework 4** zostało wybrane w polu listy rozwijanej, a następnie wybierz **aplikacji WPF**.  
-  
-5. Ustaw nazwę projektu, aby **HostingApplication** w dolnej części okna.  
-  
-6. Ustaw nazwę rozwiązania na **RehostingTheDesigner**.  
-  
-7. Kliknij przycisk **OK** utworzenie projektu aplikacji. Visual Studio tworzy podstawowe WPF UI dla aplikacji i obejmuje odpowiednie XAML i plikami CodeBehind.  
-  
-8. Dodaj odwołania do **WorkflowModel** zestawów. Aby to zrobić, w **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **HostingApplication** projektu, a następnie wybierz **Dodaj odwołanie**.  
-  
-9. W **Dodaj odwołanie** okno dialogowe, kliknij przycisk **.NET** kartę, naciśnij i przytrzymaj klawisz CTRL, wybierz następujące zestawy, a następnie kliknij **OK**:  
-  
-    - System.Activities  
-  
-    - System.Activities.Presentation  
-  
-    - System.Activities.Core.Presentation  
-  
-10. Kliknij przycisk **OK**.  
-  
-11. Zobacz [zadanie 2: Hostowanie projektanta przepływu pracy](task-2-host-the-workflow-designer.md) Aby dowiedzieć się, jak hostować na kanwie projektanta projektu przepływu pracy.  
-  
+## <a name="to-create-the-wpf-application-project"></a>Aby utworzyć projekt aplikacji WPF
+
+1. Otwórz program Visual Studio i w menu **plik** wskaż polecenie **Nowy**, a następnie kliknij pozycję **projekt**.
+
+2. W oknie dialogowym **Nowy projekt** wybierz pozycję **Wizualizacja C#**  lub **Visual Basic** w okienku **zainstalowane szablony** po lewej stronie pola. Jeśli wybrany język nie jest wyświetlany, zapoznaj się z **innymi językami**.
+
+3. W okienku **zainstalowane szablony** wybierz pozycję **Windows** .
+
+4. W górnym okienku upewnij się, że (wartość domyślna) **.NET Framework 4** została wybrana w polu listy rozwijanej, a następnie wybierz pozycję **Aplikacja WPF**.
+
+5. Ustaw nazwę projektu na **HostingApplication** w dolnej części okna.
+
+6. Ustaw nazwę rozwiązania na **RehostingTheDesigner**.
+
+7. Kliknij przycisk **OK** , aby utworzyć projekt aplikacji. Program Visual Studio tworzy podstawowy interfejs użytkownika WPF dla aplikacji i zawiera odpowiednie pliki XAML i powiązane z kodem.
+
+8. Dodaj odwołania do zestawów **WorkflowModel** . W tym celu w **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **HostingApplication** i wybierz polecenie **Dodaj odwołanie**.
+
+9. W oknie dialogowym **Dodaj odwołanie** kliknij kartę **.NET** , przytrzymaj wciśnięty klawisz CTRL, wybierz następujące zestawy, a następnie kliknij przycisk **OK**:
+
+    - System. Activities
+    - System. Activities. Presentation
+    - System. Activities. Core. Presentation
+
+10. Zobacz [zadanie 2: hostowanie Projektant przepływu pracy,](task-2-host-the-workflow-designer.md) aby dowiedzieć się, jak hostować kanwę projektu projektanta przepływu pracy.
+
 ## <a name="see-also"></a>Zobacz także
 
-- [Rehostowanie projektanta przepływu pracy](rehosting-the-workflow-designer.md)
-- [Zadanie 2. Hostowanie projektanta przepływu pracy](task-2-host-the-workflow-designer.md)
+- [Hostowanie Projektant przepływu pracy](rehosting-the-workflow-designer.md)
+- [Zadanie 2. hostowanie Projektant przepływu pracy](task-2-host-the-workflow-designer.md)

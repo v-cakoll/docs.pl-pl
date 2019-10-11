@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Gałęzie i pętle wC#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: af06d938f86841620784909b16e72d000452fc2a
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: 5ea939172b35e4380ed3f32d7d06b5749d2005a0
+  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850673"
+  ms.lasthandoff: 10/09/2019
+  ms.locfileid: "72179865"
 items:
 - durationInMinutes: 1
   content: >
@@ -40,14 +40,17 @@ items:
     ```
 
 
-    Właśnie zaobserwowano jedną z podstawowych operacji matematycznych z liczbami całkowitymi. Typ reprezentuje liczbę całkowitą, dodatnią lub ujemną. **** `int` `+` Symbol można użyć do dodania. Inne typowe operacje matematyczne na liczbach całkowitych obejmują:
+    Jeśli używasz tego środowiska w środowisku, należy postępować zgodnie z instrukcjami dotyczącymi [wersji lokalnej](numbers-in-csharp-local.md) .
 
 
-    - `-`na potrzeby odejmowania
+    Właśnie zaobserwowano jedną z podstawowych operacji matematycznych z liczbami całkowitymi. Typ `int` reprezentuje liczbę **całkowitą**, dodatnią lub ujemną. Użyj symbolu `+` do dodania. Inne typowe operacje matematyczne na liczbach całkowitych obejmują:
 
-    - `*`dla mnożenia
 
-    - `/`dla dzielenia
+    - `-` w przypadku odejmowania
+
+    - `*` dla mnożenia
+
+    - `/` dla dzielenia
 
 
     > [!TIP]
@@ -189,7 +192,7 @@ items:
   content: >
     Ten ostatni przykład wskazuje, że dzielenie liczby całkowitej obcina wynik.
 
-    **Resztę** można uzyskać za pomocą `%` operatora **modulo** , znaku:
+    **Resztę** można uzyskać za pomocą operatora **modulo** , znaku `%`:
 
 
     ```csharp
@@ -211,7 +214,7 @@ items:
     ```
 
 
-    Typ C# Integer różni się od matematycznych liczb całkowitych w jeden inny sposób `int` : typ ma minimalne i maksymalne limity. Uruchom ten kod w oknie interaktywnym, aby zobaczyć te limity:
+    Typ C# Integer różni się od matematycznych liczb całkowitych w jeden inny sposób: typ `int` ma limity minimalne i maksymalne. Uruchom ten kod w oknie interaktywnym, aby zobaczyć te limity:
 
 
     ```csharp
@@ -244,7 +247,7 @@ items:
     Odpowiedź to bardzo duża liczba ujemna, ponieważ przepełnienie "zawija" z największej możliwej wartości całkowitej do najmniejszej.
 
 
-    Istnieją inne typy liczbowe z różnymi limitami i dokładnością, których można użyć, `int` gdy typ nie spełnia Twoich potrzeb. Eksplorujmy te informacje dalej.
+    Istnieją inne typy liczbowe z różnymi limitami i dokładnością, których można użyć, gdy typ `int` nie spełnia Twoich potrzeb. Eksplorujmy te informacje dalej.
 
 
     > [!NOTE]
@@ -253,7 +256,7 @@ items:
 - title: Pracuj z typem Double
   durationInMinutes: 5
   content: >
-    Typ `double` liczbowy reprezentuje liczbę zmiennoprzecinkową o podwójnej precyzji. Te warunki mogą być nowe dla Ciebie. Liczba **zmiennoprzecinkowa** jest przydatna do reprezentowania numerów niecałkowitych, które mogą być bardzo duże lub małe. **Podwójne precyzja** oznacza, że te liczby są przechowywane z większą dokładnością niż **Pojedyncza precyzja**. Na nowoczesnych komputerach, bardziej powszechne jest użycie podwójnej precyzji niż pojedyncze numery precyzji.
+    Typ liczbowy `double` reprezentuje liczbę zmiennoprzecinkową o podwójnej precyzji. Te warunki mogą być nowe dla Ciebie. Liczba **zmiennoprzecinkowa** jest przydatna do reprezentowania numerów niecałkowitych, które mogą być bardzo duże lub małe. **Podwójne precyzja** oznacza, że te liczby są przechowywane z większą dokładnością niż **Pojedyncza precyzja**. Na nowoczesnych komputerach, bardziej powszechne jest użycie podwójnej precyzji niż pojedyncze numery precyzji.
 
     Eksplorujmy. Wypróbuj następujący kod w oknie interaktywnym i zobacz wynik:
 
@@ -320,13 +323,13 @@ items:
     ```
 
 
-    Wiadomo, że `0.3` powtarzanie nie jest dokładnie takie samo `1/3`jak.
+    Wiadomo, że powtarzające się `0.3` nie są dokładnie takie same, jak `1/3`.
 
 
     ***Sprawdz***
 
 
-    Wypróbuj inne obliczenia z dużymi liczbami, małymi liczbami, mnożeniem i dzieleniem przy użyciu `double` typu.  Wypróbuj bardziej skomplikowane obliczenia.
+    Wypróbuj inne obliczenia z dużymi liczbami, małymi liczbami, mnożeniem i dzieleniem przy użyciu typu `double`.  Wypróbuj bardziej skomplikowane obliczenia.
 
 
     > [!NOTE]
@@ -335,7 +338,7 @@ items:
 - title: Pracuj z stałymi typami punktów
   durationInMinutes: 8
   content: >
-    Wykorzystano podstawowe typy liczbowe w C#: liczby całkowite i podwaja.  Istnieje jeden inny typ do poznania: `decimal` typ. Typ ma mniejszy zakres, ale większą precyzję niż `double`. `decimal` Termin " **stała** " oznacza, że punkt dziesiętny (lub punkt binarny) nie jest przenoszony. Przyjrzyjmy się:
+    Wykorzystano podstawowe typy liczbowe w C#: liczby całkowite i podwaja.  Istnieje jeden inny typ do poznania: typ `decimal`. Typ `decimal` ma mniejszy zakres, ale większą precyzję niż `double`. Termin " **stała** " oznacza, że punkt dziesiętny (lub punkt binarny) nie jest przenoszony. Przyjrzyjmy się:
 
 
     ```csharp
@@ -349,7 +352,7 @@ items:
     ```
 
 
-    Zauważ, że zakres jest mniejszy niż `double` typ. Większą precyzję typu dziesiętnego można zobaczyć, próbując wykonać następujący kod:
+    Należy zauważyć, że zakres jest mniejszy niż typ `double`. Większą precyzję typu dziesiętnego można zobaczyć, próbując wykonać następujący kod:
 
 
     ```csharp
@@ -370,7 +373,7 @@ items:
     ```
 
 
-    Sufiks na liczbie wskazuje, że należy `decimal` użyć typu. `M`
+    Sufiks `M` na liczbie wskazuje, że w przypadku stałej należy użyć typu `decimal`.
 
 
     Zauważ, że zapis matematyczny przy użyciu typu dziesiętnego ma więcej cyfr po prawej stronie przecinka dziesiętnego.
@@ -379,7 +382,7 @@ items:
     ***Sprawdz***
 
 
-    Teraz, gdy widzisz różne typy liczbowe, napisz kod, który oblicza obszar okręgu, którego promień to 2,50 cm. Należy pamiętać, że obszar okręgu to promień kwadratowy pomnożony przez PI. Jedna Wskazówka: .NET zawiera stałą dla liczby pi, <xref:System.Math.PI?displayProperty=nameWithType> której można użyć dla tej wartości.
+    Teraz, gdy widzisz różne typy liczbowe, napisz kod, który oblicza obszar okręgu, którego promień to 2,50 cm. Należy pamiętać, że obszar okręgu to promień kwadratowy pomnożony przez PI. Jedna Wskazówka: .NET zawiera stałą dla liczby PI, <xref:System.Math.PI?displayProperty=nameWithType>, której można użyć dla tej wartości.
 
 
     > [!NOTE]

@@ -1,27 +1,27 @@
 ---
-title: 'Instrukcje: Wyszukiwanie elementów powiązanych (XPath-LINQ to XML) (Visual Basic)'
+title: 'Instrukcje: Znajdowanie powiązanych elementów (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 6b0ef058-d704-48a5-98cd-33f00d088af9
-ms.openlocfilehash: 58137a1bca93c0281424ba457569631a4b513a55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a430291925037f16883a27ca9deea5a4ec7a8175
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780435"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250079"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>Instrukcje: Wyszukiwanie elementów powiązanych (XPath-LINQ to XML) (Visual Basic)
-W tym temacie pokazano, jak można pobrać elementu, wybierając na atrybut, który odwołuje się do wartości innego elementu.  
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>Instrukcje: Znajdowanie powiązanych elementów (XPath-LINQ to XML) (Visual Basic)
+W tym temacie pokazano, jak uzyskać element, wybierając atrybut, który jest określany przez wartość innego elementu.  
   
- Wyrażenie XPath jest:  
+ Wyrażenie XPath:  
   
  `.//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]`  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie wyszukuje 12 `Order` elementu, a następnie znalezienie klienta dla tej kolejności.  
+ Ten przykład znajduje 12 `Order` elementu, a następnie wyszukuje klienta dla tej kolejności.  
   
- Należy pamiętać, że indeksowanie w liście .NET "zero" na podstawie. Indeksowanie w kolekcji węzłów w predykatu języka XPath jest "jeden" na podstawie. W tym przykładzie odzwierciedla tę różnicę.  
+ Należy zauważyć, że indeksowanie do listy w .NET jest oparte na "zero". Indeksowanie do kolekcji węzłów w predykacie XPath jest oparte na "jednej". Ten przykład odzwierciedla tę różnicę.  
   
- W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XDocument = XDocument.Load("CustomersOrders.xml")  
@@ -53,9 +53,9 @@ End If
 Console.WriteLine(customer1)  
 ```  
   
- Ten przykład generuje następujące wyniki:  
+ Ten przykład generuje następujące dane wyjściowe:  
   
-```  
+```console
 Results are identical  
 <Customer CustomerID="HUNGC">  
   <CompanyName>Hungry Coyote Import Store</CompanyName>  
@@ -75,4 +75,4 @@ Results are identical
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ to XML dla użytkowników metody XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML dla użytkowników XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

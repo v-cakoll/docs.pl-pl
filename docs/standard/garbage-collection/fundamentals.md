@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ba6c46116d809e2881eee37b080e1952e2eb6a0
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 0c0fa0e2c59856beda65ec5804b8896352db98b3
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895270"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180194"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Podstawowe informacje dotyczące wyrzucania elementów bezużytecznych
 
@@ -50,7 +50,7 @@ Poniższa lista zawiera podsumowanie ważnych pojęć dotyczących pamięci śro
 
 - Pamięć wirtualna może mieć trzy stany:
 
-  - Zwolniony. Blok pamięci nie ma odwołań do niego i jest dostępny do alokacji.
+  - Bezpłatnie. Blok pamięci nie ma odwołań do niego i jest dostępny do alokacji.
 
   - Rezerwacj. Blok pamięci jest dostępny do użycia i nie może być używany w żadnym innym żądaniu alokacji. Nie można jednak przechowywać danych w tym bloku pamięci, dopóki nie zostanie on zatwierdzony.
 
@@ -74,7 +74,7 @@ Odzyskiwanie pamięci występuje, gdy spełniony jest jeden z następujących wa
 
 - Pamięć używana przez przydzielone obiekty na zarządzanej stercie przekracza akceptowalny próg. Ten próg jest ciągle dostosowywany podczas uruchamiania procesu.
 
-- <xref:System.GC.Collect%2A?displayProperty=nameWithType> Metoda jest wywoływana. W prawie wszystkich przypadkach nie trzeba wywoływać tej metody, ponieważ moduł wyrzucania elementów bezużytecznych działa w sposób ciągły. Ta metoda jest używana głównie do unikatowych sytuacji i testowania.
+- Metoda <xref:System.GC.Collect%2A?displayProperty=nameWithType> jest wywoływana. W prawie wszystkich przypadkach nie trzeba wywoływać tej metody, ponieważ moduł wyrzucania elementów bezużytecznych działa w sposób ciągły. Ta metoda jest używana głównie do unikatowych sytuacji i testowania.
 
 [Powrót do początku](#top)
 
@@ -135,7 +135,7 @@ Pokoleń tymczasowych należy przydzielić w segmencie pamięci, który jest zna
 
 Rozmiar segmentu tymczasowych różni się w zależności od tego, czy system jest 32-czy 64-bitowy, i na typie modułu wyrzucania elementów bezużytecznych, który jest uruchomiony. Wartości domyślne są pokazane w poniższej tabeli.
 
-||32-bitowa|64-bitowy|
+||32 — bit|64 — bit|
 |-|-------------|-------------|
 |Stacja robocza GC|16 MB|256 MB|
 |Serwer GC|64 MB|4 GB|
@@ -162,7 +162,7 @@ Wyrzucanie elementów bezużytecznych ma następujące fazy:
 
   Ponieważ kolekcje generacji 2 mogą zajmować wiele segmentów, obiekty, które są promowane do generacji 2 można przenieść do starszego segmentu. Zarówno osoby przestające 1, jak i 2 mogą zostać przeniesione do innego segmentu, ponieważ są one podwyższane do generacji 2.
 
-  Zwykle sterta dużego obiektu nie jest kompaktowa, ponieważ kopiowanie dużych obiektów nakłada spadek wydajności. Jednak rozpoczynając od .NET Framework 4.5.1, można użyć <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> właściwości, aby skompaktować stertę dużego obiektu na żądanie.
+  Zwykle sterta dużego obiektu nie jest kompaktowa, ponieważ kopiowanie dużych obiektów nakłada spadek wydajności. Jednak rozpoczynając od .NET Framework 4.5.1, można użyć właściwości <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType>, aby skompaktować stertę dużego obiektu na żądanie.
 
 Moduł wyrzucania elementów bezużytecznych używa następujących informacji, aby określić, czy obiekty są aktywne:
 
@@ -176,7 +176,7 @@ Przed uruchomieniem odzyskiwania pamięci wszystkie zarządzane wątki są zawie
 
 Na poniższej ilustracji przedstawiono wątek wyzwalający wyrzucanie elementów bezużytecznych i powoduje zawieszenie innych wątków.
 
-![Gdy wątek wyzwala odzyskiwanie pamięci](../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered") Wątek wyzwalający odzyskiwanie pamięci
+![Gdy wątek wyzwala wyrzucanie elementów bezużytecznych],(../../../docs/standard/garbage-collection/media/gc-triggered.png "gdy wątek wyzwala wyrzucanie elementów bezużytecznych")
 
 [Powrót do początku](#top)
 
@@ -198,7 +198,7 @@ Gdy odnaleziony obiekt jest niemartwy, jego finalizator jest umieszczany w kolej
 
 Moduł wyrzucania elementów bezużytecznych jest samodostrajania i może współpracować w wielu różnych scenariuszach. Możesz użyć ustawienia pliku konfiguracji, aby ustawić typ wyrzucania elementów bezużytecznych na podstawie charakterystyki obciążenia. Środowisko CLR udostępnia następujące typy wyrzucania elementów bezużytecznych:
 
-- Wyrzucanie elementów bezużytecznych stacji roboczej dla wszystkich stacji roboczych klienta i komputerów autonomicznych. Jest to ustawienie domyślne dla [ \<elementu gcServer >](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) w schemacie konfiguracji środowiska uruchomieniowego.
+- Wyrzucanie elementów bezużytecznych stacji roboczej dla wszystkich stacji roboczych klienta i komputerów autonomicznych. Jest to ustawienie domyślne dla [elementu \<gcServer >](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) w schemacie konfiguracji środowiska uruchomieniowego.
 
   Wyrzucanie elementów bezużytecznych stacji roboczej może być współbieżne lub niewspółbieżne. Współbieżne wyrzucanie elementów bezużytecznych umożliwia zarządzanym wątkom kontynuowanie operacji podczas odzyskiwania pamięci.
 
@@ -208,13 +208,13 @@ Moduł wyrzucania elementów bezużytecznych jest samodostrajania i może wspó�
 
 Na poniższej ilustracji przedstawiono dedykowane wątki, które wykonują wyrzucanie elementów bezużytecznych na serwerze.
 
-![Wątki odzyskiwania pamięci serwera](../../../docs/standard/garbage-collection/media/gc-server.png "GC_Server") Odzyskiwanie pamięci serwera
+Wątki odzyskiwania ![pamięci serwera wątki](../../../docs/standard/garbage-collection/media/gc-server.png "odzyskiwania pamięci serwera")
 
 ### <a name="configuring-garbage-collection"></a>Konfigurowanie wyrzucania elementów bezużytecznych
 
-Można użyć [ \<elementu gcServer >](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) schematu konfiguracji środowiska uruchomieniowego, aby określić typ wyrzucania elementów bezużytecznych, które mają być wykonywane przez środowisko CLR. Gdy `enabled` atrybut tego elementu jest ustawiony na `false` (wartość domyślna), środowisko CLR wykonuje wyrzucanie elementów bezużytecznych stacji roboczej. Po ustawieniu `enabled` atrybutu na `true`, środowisko CLR wykonuje wyrzucanie elementów bezużytecznych serwera.
+Można użyć [elementu \<gcServer >](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) schematu konfiguracji środowiska uruchomieniowego, aby określić typ wyrzucania elementów bezużytecznych, które ma wykonywać środowisko CLR. Gdy atrybut `enabled` tego elementu ma ustawioną wartość `false` (wartość domyślna), środowisko CLR wykonuje wyrzucanie elementów bezużytecznych stacji roboczej. Po ustawieniu atrybutu `enabled` na `true` środowisko CLR wykonuje wyrzucanie elementów bezużytecznych serwera.
 
-Współbieżne wyrzucanie elementów bezużytecznych jest określone za pomocą [ \<elementu gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) schematu konfiguracji środowiska uruchomieniowego. Ustawieniem domyślnym jest `enabled`. To ustawienie określa współbieżne i wyrzucanie elementów bezużytecznych w tle.
+Współbieżne wyrzucanie elementów bezużytecznych jest określone za pomocą [elementu \<gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) schemacie konfiguracji środowiska uruchomieniowego. Ustawieniem domyślnym jest `enabled`. To ustawienie określa współbieżne i wyrzucanie elementów bezużytecznych w tle.
 
 Można również określić wyrzucanie elementów bezużytecznych serwera za pomocą niezarządzanych interfejsów hostingu. Należy pamiętać, że ASP.NET i SQL Server Włącz automatyczne odzyskiwanie serwera, jeśli aplikacja jest hostowana w jednym z tych środowisk.
 
@@ -226,11 +226,11 @@ Poniżej przedstawiono zagadnienia dotyczące wątkowości i wydajności dotycz�
 
   Wątki, na których działa kod natywny, nie są wstrzymane.
 
-- Wyrzucanie elementów bezużytecznych stacji roboczej jest zawsze używane na komputerze z tylko jednym procesorem, bez względu na [ \<ustawienie > gcServer](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) . W przypadku określenia wyrzucania elementów bezużytecznych serwera środowisko CLR używa wyrzucania elementów bezużytecznych stacji roboczej z wyłączonym
+- Wyrzucanie elementów bezużytecznych stacji roboczej jest zawsze używane na komputerze, który ma tylko jeden procesor, niezależnie od ustawienia [> \<gcServer](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) . W przypadku określenia wyrzucania elementów bezużytecznych serwera środowisko CLR używa wyrzucania elementów bezużytecznych stacji roboczej z wyłączonym
 
 Poniżej przedstawiono zagadnienia związane z wątkami i wydajnością dla wyrzucania elementów bezużytecznych serwera:
 
-- Kolekcja odbywa się na wielu dedykowanych wątkach, które `THREAD_PRIORITY_HIGHEST` są uruchomione na poziomie priorytetu.
+- Kolekcja odbywa się na wielu dedykowanych wątkach, które są uruchomione na poziomie priorytetu `THREAD_PRIORITY_HIGHEST`.
 
 - Sterta i dedykowany wątek służący do wykonywania wyrzucania elementów bezużytecznych są udostępniane dla każdego procesora, a sterty są zbierane w tym samym czasie. Każda sterta zawiera niewielką stertę obiektu i stertę dużego obiektu, a wszystkie sterty są dostępne przez kod użytkownika. Obiekty na różnych stertach mogą odwoływać się do siebie nawzajem.
 
@@ -252,7 +252,7 @@ W systemie stacja robocza lub wyrzucanie elementów bezużytecznych serwera moż
 
 Współbieżne wyrzucanie elementów bezużytecznych umożliwia lepsze reagowanie aplikacji interaktywnych przez zminimalizowanie przerw w kolekcji. Zarządzane wątki mogą nadal uruchamiać większość czasu, gdy wątek współbieżnego odzyskiwania pamięci jest uruchomiony. Powoduje to krótsze pauzy podczas wyrzucania elementów bezużytecznych.
 
-Aby zwiększyć wydajność w przypadku uruchomienia kilku procesów, należy wyłączyć współbieżne wyrzucanie elementów bezużytecznych. Można to zrobić przez dodanie [ \<elementu gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) do pliku konfiguracji aplikacji i ustawienie wartości jego `enabled` atrybutu na `"false"`.
+Aby zwiększyć wydajność w przypadku uruchomienia kilku procesów, należy wyłączyć współbieżne wyrzucanie elementów bezużytecznych. Można to zrobić przez dodanie [elementu \<gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) do pliku konfiguracji aplikacji i ustawienie wartości jego atrybutu `enabled` do `"false"`.
 
 Współbieżne wyrzucanie elementów bezużytecznych jest wykonywane w ramach dedykowanego wątku. Domyślnie środowisko CLR uruchamia odzyskiwanie pamięci stacji roboczej z włączonym współbieżnym wyrzucaniem elementów bezużytecznych. Dotyczy to komputerów z pojedynczym procesorem i wieloprocesorem.
 
@@ -262,7 +262,7 @@ Współbieżne wyrzucanie elementów bezużytecznych ma nieco większy zestaw ro
 
 Na poniższej ilustracji przedstawiono współbieżne wyrzucanie elementów bezużytecznych wykonywane w osobnym dedykowanym wątku.
 
-![Współbieżne wątki odzyskiwania pamięci](../../../docs/standard/garbage-collection/media/gc-concurrent.png "GC_Concurrent") Jednoczesne wyrzucanie elementów bezużytecznych
+Współbieżne wątki ![wyrzucania elementów bezużytecznych],(../../../docs/standard/garbage-collection/media/gc-concurrent.png "współbieżne odzyskiwanie pamięci")
 
 [Powrót do początku](#top)
 
@@ -270,7 +270,7 @@ Na poniższej ilustracji przedstawiono współbieżne wyrzucanie elementów bezu
 
 ## <a name="background-workstation-garbage-collection"></a>Wyrzucanie elementów bezużytecznych stacji roboczej
 
-Wyrzucanie elementów bezużytecznych w tle zastępuje współbieżne wyrzucanie elementów bezużytecznych stacji roboczej, rozpoczynając od .NET Framework 4 i zastępuje współbieżne wyrzucanie elementów bez4,5 .NET Framework użytecznych serwera  W wyrzucaniu elementów bezużytecznych w tle generacje tymczasowe (0 i 1) są zbierane zgodnie z wymaganiami, gdy trwa zbieranie danych generacji 2. Jest wykonywane w ramach dedykowanego wątku i ma zastosowanie tylko do kolekcji generacji 2. Automatyczne wyrzucanie elementów bezużytecznych w tle jest domyślnie włączone i można je włączyć [ \<](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) lub wyłączyć za pomocą ustawienia konfiguracji > gcConcurrent w aplikacjach .NET Framework. 
+Wyrzucanie elementów bezużytecznych w tle zastępuje współbieżne wyrzucanie elementów bezużytecznych stacji roboczej, rozpoczynając od .NET Framework 4 i zastępuje współbieżne wyrzucanie elementów bez4,5 .NET Framework użytecznych serwera  W wyrzucaniu elementów bezużytecznych w tle generacje tymczasowe (0 i 1) są zbierane zgodnie z wymaganiami, gdy trwa zbieranie danych generacji 2. Jest wykonywane w ramach dedykowanego wątku i ma zastosowanie tylko do kolekcji generacji 2. Automatyczne wyrzucanie elementów bezużytecznych w tle jest domyślnie włączone i można je włączyć lub wyłączyć za pomocą ustawienia konfiguracji [> \<gcConcurrent](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) w .NET Framework aplikacjach. 
 
 > [!NOTE]
 > Wyrzucanie elementów bezużytecznych w tle jest dostępne tylko w .NET Framework 4 i nowszych wersjach. W .NET Framework 4 jest obsługiwana tylko w przypadku wyrzucania elementów bezużytecznych stacji roboczej. Począwszy od .NET Framework 4,5, wyrzucanie elementów bezużytecznych w tle jest dostępne zarówno dla stacji roboczej, jak i serwera.
@@ -283,7 +283,7 @@ Wyrzucanie elementów bezużytecznych w tle usuwa ograniczenia alokacji narzucon
 
 Poniższa ilustracja przedstawia wyrzucanie elementów bezużytecznych w tle wykonywane w osobnym dedykowanym wątku na stacji roboczej:
 
-![Diagram przedstawiający wyrzucanie elementów bezużytecznych stacji roboczej.](./media/fundamentals/background-workstation-garbage-collection.png)
+![Diagram przedstawiający wyrzucanie elementów bezużytecznych stacji roboczej.](./media/fundamentals/background-workstation-garbage-collection.png "Diagram przedstawiający wyrzucanie elementów bezużytecznych stacji roboczej.")
 
 [Powrót do początku](#top)
 
@@ -291,11 +291,11 @@ Poniższa ilustracja przedstawia wyrzucanie elementów bezużytecznych w tle wyk
 
 ## <a name="background-server-garbage-collection"></a>Odzyskiwanie pamięci serwera w tle
 
-Począwszy od .NET Framework 4,5, wyrzucanie elementów bezużytecznych serwera w tle jest trybem domyślnym dla wyrzucania elementów bezużytecznych serwera. Aby wybrać ten tryb, ustaw `enabled` atrybut [ \<elementu gcServer >](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) na `true` w schemacie konfiguracji środowiska uruchomieniowego. Ten tryb działa podobnie do wyrzucania elementów bezużytecznych stacji roboczej w tle, opisanych w poprzedniej sekcji, ale istnieje kilka różnic. Wyrzucanie elementów bezużytecznych stacji roboczej w tle używa jednego dedykowanego wątku wyrzucania elementów bezużytecznych w tle, natomiast wyrzucanie elementów bezużytecznych serwera w tle używa wielu wątków, zwykle W przeciwieństwie do wątku wyrzucania elementów bezużytecznych w tle stacji roboczej te wątki nie przekroczą limitu czasu.
+Począwszy od .NET Framework 4,5, wyrzucanie elementów bezużytecznych serwera w tle jest trybem domyślnym dla wyrzucania elementów bezużytecznych serwera. Aby wybrać ten tryb, ustaw atrybut `enabled` [> elementu \<gcServer](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) na `true` w schemacie konfiguracji środowiska uruchomieniowego. Ten tryb działa podobnie do wyrzucania elementów bezużytecznych stacji roboczej w tle, opisanych w poprzedniej sekcji, ale istnieje kilka różnic. Wyrzucanie elementów bezużytecznych stacji roboczej w tle używa jednego dedykowanego wątku wyrzucania elementów bezużytecznych w tle, natomiast wyrzucanie elementów bezużytecznych serwera w tle używa wielu wątków, zwykle W przeciwieństwie do wątku wyrzucania elementów bezużytecznych w tle stacji roboczej te wątki nie przekroczą limitu czasu.
 
 Poniższa ilustracja przedstawia wyrzucanie elementów bezużytecznych w tle wykonywane w osobnym dedykowanym wątku na serwerze:
 
-![Diagram przedstawiający wyrzucanie elementów bezużytecznych serwera w tle.](./media/fundamentals/background-server-garbage-collection.png)
+![Diagram przedstawiający wyrzucanie elementów bezużytecznych serwera w tle.](./media/fundamentals/background-server-garbage-collection.png "Diagram przedstawiający wyrzucanie elementów bezużytecznych serwera w tle.")
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: <proceduresignature1> nie jest zgodny ze specyfikacją CLS, ponieważ przeciąża <proceduresignature2> który różni się od niego tylko tablicą typów parametrów tablicowych lub rangą typów parametrów tablicowych
+title: <proceduresignature1> jest niezgodna ze specyfikacją CLS, ponieważ przeciążania <proceduresignature2>, które różnią się tylko tablicą typów parametrów tablicowych lub według rangi typów parametrów tablicy
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40035
@@ -7,41 +7,41 @@ f1_keywords:
 helpviewer_keywords:
 - BC40035
 ms.assetid: 50a66dbe-2c1e-41bf-96bc-369301c891ac
-ms.openlocfilehash: 9006e12838581a98c7e7945278c7d767a3074259
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6143ebfbe7f131b0e196e531ed4282c8333be4ea
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661784"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250182"
 ---
-# <a name="proceduresignature1-is-not-cls-compliant-because-it-overloads-proceduresignature2-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>\<proceduresignature1 > nie jest zgodny ze specyfikacją CLS, ponieważ przeciąża \<proceduresignature2 > który różni się od niego tylko tablicą typów parametrów tablicowych lub rangą typów parametrów tablicowych
-Procedura lub właściwość jest oznaczona jako `<CLSCompliant(True)>` po zastępuje ona inny procedura lub właściwość, a jedyną różnicą między swoimi listami parametr jest poziom zagnieżdżenia tablicy nieregularnej lub rangę tablicy.  
+# <a name="proceduresignature1-is-not-cls-compliant-because-it-overloads-proceduresignature2-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>\<proceduresignature1 > jest niezgodna ze specyfikacją CLS, ponieważ przeciąż \<proceduresignature2 >, które różnią się tylko tablicą typów parametrów tablicowych lub według rangi typów parametrów tablicy
+
+Procedura lub właściwość jest oznaczona jako `<CLSCompliant(True)>`, gdy zastępuje inną procedurę lub właściwość i jedyną różnicą między ich listami parametrów jest poziom zagnieżdżenia tablicy nieregularnej lub rangi tablicy.
   
- W następujące deklaracje deklaracje drugi i trzeci generuje ten błąd.  
+ W poniższych deklaracjach druga i trzecia deklaracja generują ten błąd:
   
- `Overloads Sub processArray(ByVal arrayParam() As Integer)`  
+ `Overloads Sub ProcessArray(arrayParam() As Integer)`  
   
- `Overloads Sub processArray(ByVal arrayParam()() As Integer)`  
+ `Overloads Sub ProcessArray(arrayParam()() As Integer)`  
   
- `Overloads Sub processArray(ByVal arrayParam(,) As Integer)`  
+ `Overloads Sub ProcessArray(arrayParam(,) As Integer)`  
   
- Drugi deklaracja zmienia pierwotny parametr jednowymiarowa `arrayParam` do tablicy tablic. Trzeci zmiany deklaracji `arrayParam` dwuwymiarowej tablicy (ranga 2). Chociaż Visual Basic umożliwia przeciążenia, które mogą się różnić tylko przez jeden z tych zmian, takich przeciążenie nie jest zgodne z [niezależność od języka i składniki niezależne od języka](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
+ Druga deklaracja zmienia oryginalny jednowymiarowy parametr `arrayParam` na tablicę tablic. Trzecia deklaracja zmienia `arrayParam` na tablicę dwuwymiarową (ranga 2). Chociaż Visual Basic zezwala na przeciążenia tylko jednej z tych zmian, takie Przeciążenie nie jest zgodne z [niezależnymi od języka i składnikami niezależnymi od języka](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
   
- Po zastosowaniu <xref:System.CLSCompliantAttribute> elementu programistycznego, ten atrybut zostanie ustawiony `isCompliant` albo parametr `True` lub `False` aby wskazać, zgodności ani niezgodności. Nie istnieje domyślny dla tego parametru. Ponadto należy podać wartość.  
+ Po zastosowaniu <xref:System.CLSCompliantAttribute> do elementu programistycznego, należy ustawić parametr `isCompliant` atrybutu na `True` lub `False`, aby wskazać zgodność lub niezgodność. Dla tego parametru nie ma wartości domyślnej i należy podać wartość.  
   
- Jeśli nie zastosujesz <xref:System.CLSCompliantAttribute> elementu, jest uznawane za niezgodne.  
+ Jeśli nie zastosujesz <xref:System.CLSCompliantAttribute> do elementu, jest on uznawany za niezgodny.  
   
- Domyślnie ta wiadomość jest ostrzeżenie. Uzyskać informacje o ukrywaniu ostrzeżenia lub traktowanie ostrzeżeń jako błędy, zobacz [Konfigurowanie ostrzeżeń w języku Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Domyślnie ten komunikat jest ostrzeżeniem. Aby uzyskać informacje na temat ukrywania ostrzeżeń lub leczenia ostrzeżeń jako błędy, zobacz [Konfigurowanie ostrzeżeń w Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Identyfikator błędu:** BC40035  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Jeśli wymagana jest zgodność ze specyfikacją CLS, należy zdefiniować swoje przeciążenia mogą się różnić od siebie nawzajem na więcej sposobów niż tylko zmiany wymienione na tej stronie pomocy.  
-  
-- Jeśli potrzebujesz, że przeciążenia różnią się tylko przez zmiany wymienione w tej pomocy strony, Usuń <xref:System.CLSCompliantAttribute> ze swojej definicji lub oznaczyć je jako `<CLSCompliant(False)>`.  
+- Jeśli jest wymagana zgodność ze specyfikacją CLS, zdefiniuj przeciążenia tak, aby różnią się od siebie na więcej sposobów niż zmiany wprowadzone na tej stronie pomocy.
+- Jeśli wymagane jest, aby przeciążenia różniły się tylko zmianami wprowadzonymi na tej stronie pomocy, Usuń <xref:System.CLSCompliantAttribute> z ich definicji lub Oznacz je jako `<CLSCompliant(False)>`.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przeciążanie procedury](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
-- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Przeciążanie procedury](../../programming-guide/language-features/procedures/procedure-overloading.md)
+- [Przeciążenia](../modifiers/overloads.md)

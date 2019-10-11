@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 6dfbbbb6ef64b3dbb83d15ba66860acb7c5b3585
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: fb08cef284a016dd65c99a1efb0a661624a731f1
+  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850742"
+  ms.lasthandoff: 10/09/2019
+  ms.locfileid: "72179007"
 items:
 - durationInMinutes: 1
   content: >
@@ -22,7 +22,7 @@ items:
 - title: Tworzenie list
   durationInMinutes: 2
   content: >
-    Uruchom następujący kod w oknie interaktywnym. W tym celu wpisz poniższy blok kodu w oknie interaktywnym (Zamień `<name>` na nazwę) i kliknij przycisk **Uruchom** :
+    Uruchom następujący kod w oknie interaktywnym. Aby to zrobić, wpisz poniższy blok kodu w oknie interaktywnym (Zastąp `<name>` nazwą użytkownika), a następnie kliknij przycisk **Uruchom** :
 
 
     ```csharp
@@ -38,10 +38,13 @@ items:
     ```
 
 
+    Jeśli używasz tego środowiska w środowisku, należy postępować zgodnie z instrukcjami dotyczącymi [wersji lokalnej](arrays-and-collections.md) .
+
+
     Utworzono listę ciągów, dodano trzy nazwy do tej listy i wydrukowanych nazw we wszystkich WERSALIKach. Są używane koncepcje, które zostały uzyskane we wcześniejszych samouczkach, aby przepętlać listę.
 
 
-    Kod do wyświetlania nazw korzysta z funkcji [interpolacji ciągów](../../language-reference/tokens/interpolated.md) . Gdy poprzedzasz `string` `$` znak, możesz osadzić C# kod w deklaracji ciągu. Rzeczywisty ciąg zastępuje ten C# kod wartością, którą generuje. W tym przykładzie zastępuje `{name.ToUpper()}` on każdą nazwę, przekonwertowane na wielkie litery, ponieważ <xref:System.String.ToUpper%2A?displayProperty=nameWithType> wywołano metodę.
+    Kod do wyświetlania nazw korzysta z funkcji [interpolacji ciągów](../../language-reference/tokens/interpolated.md) . Gdy poprzedzasz `string` znakiem `$`, możesz osadzić C# kod w deklaracji ciągu. Rzeczywisty ciąg zastępuje ten C# kod wartością, którą generuje. W tym przykładzie zastępuje `{name.ToUpper()}` z każdą nazwą, konwertowana na wielkie litery, ponieważ wywołana została Metoda <xref:System.String.ToUpper%2A?displayProperty=nameWithType>.
 
 
     Kontynuujmy Eksplorowanie.
@@ -53,10 +56,10 @@ items:
 - title: Modyfikuj zawartość listy
   durationInMinutes: 3
   content: >
-    Utworzona kolekcja używa <xref:System.Collections.Generic.List%601> typu. Ten typ przechowuje sekwencje elementów. Należy określić typ elementów między nawiasami kątowymi.
+    Utworzona kolekcja używa typu <xref:System.Collections.Generic.List%601>. Ten typ przechowuje sekwencje elementów. Należy określić typ elementów między nawiasami kątowymi.
 
 
-    Jednym z ważnych aspektów <xref:System.Collections.Generic.List%601> tego typu jest to, że można go zwiększyć lub zmniejszyć, umożliwiając dodawanie lub usuwanie elementów. Wyniki można zobaczyć, modyfikując zawartość po wyświetleniu jej zawartości. Dodaj następujący kod poniżej kodu, który został już zapisany (poniżej pętli, która drukuje zawartość):
+    Jednym ważnym aspektem tego typu <xref:System.Collections.Generic.List%601> jest to, że można go zwiększyć lub zmniejszyć, umożliwiając dodawanie lub usuwanie elementów. Wyniki można zobaczyć, modyfikując zawartość po wyświetleniu jej zawartości. Dodaj następujący kod poniżej kodu, który został już zapisany (poniżej pętli, która drukuje zawartość):
 
 
     ```csharp
@@ -81,7 +84,7 @@ items:
     Dodano dwie więcej nazw na końcu listy. Również został także usunięty. Dane wyjściowe z tego bloku kodu pokazują zawartość początkową, a następnie drukuje pusty wiersz i nową zawartość.
 
 
-    Umożliwia także odwoływanie się do poszczególnych elementów według **indeksu.** <xref:System.Collections.Generic.List%601> Masz dostęp do elementów przy `[` użyciu `]` tokenów i. Dodaj poniższy kod poniżej tego, co zostało już zrobione, i wypróbuj go:
+    @No__t-0 umożliwia odwoływanie się do poszczególnych elementów według **indeksu** . Masz dostęp do elementów przy użyciu tokenów `[` i `]`. Dodaj poniższy kod poniżej tego, co zostało już zrobione, i wypróbuj go:
 
 
     ```csharp
@@ -93,7 +96,7 @@ items:
     ```
 
 
-    Nie masz zezwolenia na dostęp poza końcem listy. Możesz sprawdzić, jak długo lista używa <xref:System.Collections.Generic.List%601.Count%2A> właściwości. Dodaj następujący kod, aby go wypróbować:
+    Nie masz zezwolenia na dostęp poza końcem listy. Możesz sprawdzić, jak długo lista używa właściwości <xref:System.Collections.Generic.List%601.Count%2A>. Dodaj następujący kod, aby go wypróbować:
 
 
     ```csharp
@@ -112,7 +115,7 @@ items:
 - title: Wyszukiwanie i sortowanie list
   durationInMinutes: 5
   content: >
-    Nasze przykłady używają stosunkowo małych list, ale aplikacje mogą często tworzyć listy z wieloma elementami, czasami numerowania w tysiącach. Aby znaleźć elementy w tych większych kolekcjach, należy przeszukać listę pod kątem różnych elementów. <xref:System.Collections.Generic.List%601.IndexOf%2A> Metoda wyszukuje element i zwraca indeks elementu. Wypróbuj go, aby zobaczyć, jak to działa.  Dodaj poniższy kod poniżej tego, co zostało wcześniej zrobione:
+    Nasze przykłady używają stosunkowo małych list, ale aplikacje mogą często tworzyć listy z wieloma elementami, czasami numerowania w tysiącach. Aby znaleźć elementy w tych większych kolekcjach, należy przeszukać listę pod kątem różnych elementów. Metoda <xref:System.Collections.Generic.List%601.IndexOf%2A> wyszukuje element i zwraca indeks elementu. Wypróbuj go, aby zobaczyć, jak to działa.  Dodaj poniższy kod poniżej tego, co zostało wcześniej zrobione:
 
 
     ```csharp
@@ -130,7 +133,7 @@ items:
     Użytkownik może nie wiedzieć, czy element znajduje się na liście, więc zawsze należy sprawdzać indeks zwracany przez <xref:System.Collections.Generic.List%601.IndexOf%2A>. Jeśli wartość to-1, element nie został znaleziony.
 
 
-    Elementy na liście można także sortować. <xref:System.Collections.Generic.List%601.Sort%2A> Metoda sortuje wszystkie elementy na liście w ich normalnej kolejności (alfabetycznie w przypadku ciągów). Dodaj ten kod i uruchom ponownie:
+    Elementy na liście można także sortować. Metoda <xref:System.Collections.Generic.List%601.Sort%2A> sortuje wszystkie elementy na liście w ich normalnej kolejności (alfabetycznie w przypadku ciągów). Dodaj ten kod i uruchom ponownie:
 
 
     ```csharp
@@ -152,7 +155,7 @@ items:
 - title: Listy innych typów
   durationInMinutes: 5
   content: >
-    `string` Używasz typu na listach do tej pory. <xref:System.Collections.Generic.List%601> Użyjmy innego typu. Utwórzmy zestaw numerów. Usuń kod, który zapisano do tej pory, i zastąp go następującym kodem:
+    W tej chwili używasz typu `string` na listach. Przyjrzyjmy się <xref:System.Collections.Generic.List%601> przy użyciu innego typu. Utwórzmy zestaw numerów. Usuń kod, który zapisano do tej pory, i zastąp go następującym kodem:
 
 
     ```csharp

@@ -1,5 +1,5 @@
 ---
-title: 'Samouczek: Generowanie modelu klasyfikacji obrazów ML.NET na podstawie wstępnie nauczonego modelu TensorFlow'
+title: 'Samouczek: Generuj model klasyfikacji obrazów ML.NET na podstawie wstępnie nauczonego modelu TensorFlow'
 description: Dowiedz się, jak przenieść wiedzę z istniejącego modelu TensorFlow do nowego modelu klasyfikacji obrazów ML.NET. Model TensorFlow został przeszkolony do klasyfikowania obrazów do tysięcy kategorii. Model ML.NET wykorzystuje uczenie transferu do klasyfikowania obrazów do mniejszej liczby szerszej kategorii.
 ms.date: 09/30/2019
 ms.topic: tutorial
@@ -13,7 +13,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71698650"
 ---
-# <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Samouczek: Generowanie modelu klasyfikacji obrazów ML.NET na podstawie wstępnie nauczonego modelu TensorFlow
+# <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Samouczek: Generuj model klasyfikacji obrazów ML.NET na podstawie wstępnie nauczonego modelu TensorFlow
 
 Dowiedz się, jak przenieść wiedzę z istniejącego modelu TensorFlow do nowego modelu klasyfikacji obrazów ML.NET.
 
@@ -21,7 +21,7 @@ Model TensorFlow został przeszkolony do klasyfikowania obrazów do tysięcy kat
 
 Uczenie modelu [klasyfikacji obrazów](https://en.wikipedia.org/wiki/Outline_of_object_recognition) od podstaw wymaga ustawienia milionów parametrów, moc z etykietami danych szkoleniowych i ogromną ilość zasobów obliczeniowych (setki godzin procesora GPU). Chociaż nie jest tak wydajny, jak uczenie modelu niestandardowego od podstaw, uczenie przenoszenia pozwala na podjęcie tego procesu przez pracę z tysiącami obrazów i milionów obrazów z etykietami, a następnie szybko utworzyć dostosowany model (w ciągu godziny na maszynie bez PROCESOR GPU). Ten samouczek skaluje się jeszcze bardziej dokładnie przy użyciu dziesiątych obrazów szkoleniowych.
 
-Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
+Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 >
 > * Omówienie problemu
@@ -72,13 +72,13 @@ Klasyfikacja obrazu to typowe zadanie Machine Learning, które pozwala nam na au
 >[!Note]
 > Powyższe obrazy należą do Wikimedia Commons Attribution i są przypisywane w następujący sposób:
 >
-> * Domena publiczna "220px-Pepperoni_pizza. jpg", https://commons.wikimedia.org/w/index.php?curid=79505,
+> * "220px-Pepperoni_pizza.jpg" Public Domain, https://commons.wikimedia.org/w/index.php?curid=79505,
 > * "119px-Nalle_-_a_small_brown_teddy_bear. jpg" przez [Jonik](https://commons.wikimedia.org/wiki/User:Jonik) — własne grafy, CC przez-sa 2,0, https://commons.wikimedia.org/w/index.php?curid=48166.
 > * "193px-Broodrooster. jpg" przez [M. Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) -własne, CC według-sa 3,0, https://commons.wikimedia.org/w/index.php?curid=27403
 
 @No__t-0 jest przeszkolony do klasyfikowania obrazów do tysięcy kategorii, ale w tym samouczku należy sklasyfikować obrazy w mniejszym zestawie kategorii i tylko te kategorie. Wprowadź `transfer` część `transfer learning`. Można przetransferować możliwości `Inception model` w celu rozpoznawania i klasyfikowania obrazów do nowych, ograniczonych kategorii klasyfikatora niestandardowego obrazu.
 
-* Żywności
+* Żywność
 * Zabawki
 * Wprowadzony
 
@@ -98,7 +98,7 @@ Konkretny Trainer używany w tym przypadku jest [algorytmem regresji logistyczne
 
 Algorytm wdrożony przez ten Trainer działa dobrze w przypadku problemów z dużą liczbą funkcji, czyli dla modelu uczenia głębokiego działającego na danych obrazu.
 
-### <a name="data"></a>Dane
+### <a name="data"></a>Data
 
 Istnieją dwa źródła danych: plik `.tsv` i pliki obrazów.  Plik `tags.tsv` zawiera dwie kolumny: pierwszy jest zdefiniowany jako `ImagePath`, a drugi to `Label` odpowiadający obrazowi. Następujący przykładowy plik nie ma wiersza nagłówka i wygląda następująco:
 
@@ -340,7 +340,7 @@ Potok modelu ML.NET jest łańcuchem szacowania. Należy pamiętać, że podczas
     Następujące metryki są oceniane pod kątem klasyfikacji obrazów:
 
     * `Log-loss`-zobacz [utrata dzienników](../resources/glossary.md#log-loss). Utrata dziennika powinna być jak najbliżej zera.
-    * `Per class Log-loss`., Dla każdej klasy Dziennik ma być zbliżony do zera, jak to możliwe.
+    * `Per class Log-loss`. Dla każdej klasy Dziennik ma być zbliżony do zera, jak to możliwe.
 
 1. Dodaj następujący kod, aby zwrócić przeszkolony model jako następny wiersz:
 
@@ -378,11 +378,11 @@ Potok modelu ML.NET jest łańcuchem szacowania. Należy pamiętać, że podczas
     Press any key to close this window . . .
     ```
 
-Nabycia! Pomyślnie skompilowano model uczenia maszynowego na potrzeby klasyfikacji obrazów przez zastosowanie uczenia przeniesienia do modelu `TensorFlow` w ML.NET.
+Gratulacje! Pomyślnie skompilowano model uczenia maszynowego na potrzeby klasyfikacji obrazów przez zastosowanie uczenia przeniesienia do modelu `TensorFlow` w ML.NET.
 
 Kod źródłowy dla tego samouczka można znaleźć w repozytorium [dotnet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF) .
 
-W tym samouczku przedstawiono sposób wykonywania tych instrukcji:
+W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 >
 > * Omówienie problemu

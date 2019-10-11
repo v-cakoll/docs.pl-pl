@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 497ac09e5c9a10470d3ae1932d7e3dc114d121dd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 47811d3fab2e4fa531d383dfe818e3cac5613eb3
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632011"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179985"
 ---
 > [!NOTE]
-> Począwszy od programu .NET Core 2.0, nie trzeba uruchamiać [ `dotnet restore` ](~/docs/core/tools/dotnet-restore.md) , ponieważ jest ona uruchamiana niejawnie przez wszystkie polecenia, takie jak `dotnet build` i `dotnet run`, przywracanie wystąpienia, które wymagają. Nadal jest prawidłowe polecenie, w niektórych scenariuszach, gdzie wykonując jawne przywracanie ma sens, takich jak [kompilacje ciągłej integracji w usługach Azure DevOps Services](/azure/devops/build-release/apps/aspnet/build-aspnet-core) lub w systemach kompilacji, które wymagają, aby jawnie kontrolować czas, w którym występuje, przywracania.
+> Począwszy od platformy .NET Core 2,0, nie trzeba uruchamiać [`dotnet restore`](~/docs/core/tools/dotnet-restore.md) , ponieważ jest ona uruchamiana niejawnie przez wszystkie polecenia, które wymagają wykonania przywracania, takie jak `dotnet build` i `dotnet run`. Nadal jest to prawidłowe polecenie w niektórych scenariuszach, w których wykonywanie jawnego przywracania ma sens, na przykład [w przypadku kompilacji ciągłej integracji w Azure DevOps Services](/azure/devops/build-release/apps/aspnet/build-aspnet-core) lub w systemach kompilacji, które muszą jawnie kontrolować czas, w którym następuje przywracanie.
 >
-> To polecenie obsługuje również `dotnet restore` opcji, gdy dane są przekazywane w długich fragmentów (na przykład `--source`). Krótkie Opcje formularza, takie jak `-s`, nie są obsługiwane.
+> To polecenie obsługuje również opcje `dotnet restore`, gdy są przesyłane w postaci długiej (na przykład `--source`). Opcje krótkiej formy, takie jak `-s`, nie są obsługiwane.

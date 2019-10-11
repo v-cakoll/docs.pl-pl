@@ -3,12 +3,12 @@ title: Aplikacje kandydujące dla chmury natywnej
 description: Dowiedz się, które typy aplikacji korzystają z podejścia natywnego w chmurze
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: a06ecdd9bfb3bd50757c484115eb123862a1bb9e
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 6da531397e6103e5c59accf321bc5ae82153dded
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214007"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275819"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>Aplikacje kandydujące dla chmury natywnej
 
@@ -36,8 +36,7 @@ Następnie istnieją starsze systemy. Mimo że chcielibyśmy utworzyć nowe apli
 
 Bezpłatna książka elektroniczna firmy Microsoft umożliwia [modernizację istniejących aplikacji .NET w chmurze platformy Azure i kontenery systemu Windows](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook) zapewniają wskazówki dotyczące migrowania obciążeń lokalnych do chmury. Rysunek 1-8 pokazuje, że dla modernizacji starszych aplikacji nie istnieje jedna, jednokrotna strategia dopasowania.
 
-![Strategie migracji starszych obciążeń](./media/strategies-for-migrating-legacy-workloads.png)
-**rysunek 1-8**. Strategie migracji starszych obciążeń
+@no__t 0Strategies do migrowania starszych obciążeń @ no__t-1**rysunek 1-8**. Strategie migracji starszych obciążeń
 
 Wbudowane aplikacje, które nie mają krytycznego znaczenia, korzystają z szybkiej migracji podnoszenia i przesunięć ([gotowej do infrastruktury w chmurze](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas)). W tym miejscu obciążenie lokalne jest hostowane na maszynie wirtualnej opartej na chmurze bez zmian. To podejście używa [modelu IaaS (infrastruktura jako usługa)](https://azure.microsoft.com/overview/what-is-iaas/). Platforma Azure oferuje kilka narzędzi, takich jak ([Azure Migrate](https://aka.ms/azuremigrate), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)i [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/)), aby ułatwić takie przenoszenie. Chociaż ta strategia może przynieść pewne oszczędności, takie aplikacje zwykle nie zostały zaprojektowane w celu odblokowania i wykorzystania zalet chmury obliczeniowej. 
 
@@ -69,11 +68,11 @@ W tym rozdziale wprowadziliśmy przetwarzanie natywne w chmurze. Firma Microsoft
 
 Po wprowadzeniu tych informacji szczegółowemy bardziej szczegółowy wgląd w chmurę w chmurze.
 
-### <a name="references"></a>Odwołania
+### <a name="references"></a>Informacje
 
 - [Natywna platforma obliczeniowa w chmurze](https://www.cncf.io/)
 
-- [Mikrousługi .NET: Architektura dla kontenerów aplikacji .NET](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
+- [Mikrousługi platformy .NET: architektura dla kontenerów aplikacji .NET](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
 
 - [Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook)
 
@@ -83,7 +82,7 @@ Po wprowadzeniu tych informacji szczegółowemy bardziej szczegółowy wgląd w 
 
 - [Co to jest infrastruktura jako kod](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)
 
-- [MikroUber inżynierów inżynieryjnych: Wdrażanie codziennie z pewnością](https://eng.uber.com/micro-deploy/)
+- [Micro Deploying inżyniera Uber: wdrażanie codziennie z pewnością](https://eng.uber.com/micro-deploy/)
 
 - [Jak Netflix wdraża kod](https://www.infoq.com/news/2013/06/netflix/)
 
@@ -93,4 +92,4 @@ Po wprowadzeniu tych informacji szczegółowemy bardziej szczegółowy wgląd w 
 
 >[!div class="step-by-step"]
 >[Poprzedni](definition.md)
->[Następny](introduce-eshoponcontainers-reference-app.md)
+>[dalej](introduce-eshoponcontainers-reference-app.md)

@@ -2,16 +2,16 @@
 title: Tworzenie złożonego interfejsu użytkownika opartego na mikrousługach
 description: Architektura mikrousług nie tylko dla zaplecza. Uzyskaj wgląd w widok, który będzie używany w frontonie.
 ms.date: 09/20/2018
-ms.openlocfilehash: 60e0e6d59738f3f1fec31226cb842ceb1af303e4
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1861d3bb6e5d4a0226aa8f3f72a2e0d3e83be56f
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834376"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275744"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>Tworzenie złożonego interfejsu użytkownika opartego na mikrousługach
 
-Architektura mikrousług często zaczyna się od danych i logiki obsługi po stronie serwera. Jednak bardziej zaawansowane podejście polega na zaprojektowaniu interfejsu użytkownika aplikacji na podstawie mikrousług. Oznacza to posiadanie złożonego interfejsu użytkownika utworzonego przez mikrousługi, a nie za pomocą mikrousług na serwerze i tylko monolitycznej aplikacji klienckiej, która korzysta z mikrousług. Dzięki tej metodzie kompilacje mikrousług można zakończyć przy użyciu zarówno logiki, jak i wizualnej reprezentacji.
+Architektura mikrousług często zaczyna się od danych i logiki obsługi po stronie serwera, ale w wielu przypadkach interfejs użytkownika jest nadal obsługiwany jako monolitu. Jednak bardziej zaawansowane podejście o nazwie [Micro frontonów](https://martinfowler.com/articles/micro-frontends.html)polega na zaprojektowaniu interfejsu użytkownika aplikacji na podstawie mikrousług. Oznacza to posiadanie złożonego interfejsu użytkownika utworzonego przez mikrousługi, a nie za pomocą mikrousług na serwerze i tylko monolitycznej aplikacji klienckiej, która korzysta z mikrousług. Dzięki tej metodzie kompilacje mikrousług można zakończyć przy użyciu zarówno logiki, jak i wizualnej reprezentacji.
 
 Rysunek 4-20 przedstawia prostsze podejście do korzystania z mikrousług z monolitycznej aplikacji klienckiej. Oczywiście może istnieć usługa ASP.NET MVC między wytwarzaniem kodu HTML i JavaScript. Na rysunku przedstawiono uproszczenie, które oznacza, że masz pojedynczy (monolityczny) interfejs użytkownika, który korzysta z mikrousług, które koncentrują się na logice i danych, a nie w kształcie interfejsu użytkownika (HTML i JavaScript).
 
@@ -39,19 +39,25 @@ Zachęcamy jednak do korzystania z następujących odwołań, aby dowiedzieć si
 
 ## <a name="additional-resources"></a>Zasoby dodatkowe
 
-- **Złożony interfejs użytkownika korzystający z usługi ASP.NET (w szczególności warsztat)**  \
+- **Micro frontony (blog Martin Fowlera)**  
+  <https://martinfowler.com/articles/micro-frontends.html>
+  
+- **Micro frontony (Michael Geers Site)**  
+  <https://micro-frontends.org/>
+  
+- **Złożony interfejs użytkownika korzystający z ASP.NET (warsztat)**  
   <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
-- **Ruben Oostinga. Fronton monolityczny w architekturze mikrousług** \
+- **Ruben Oostinga. Monolityczny fronton w architekturze mikrousług**  
   <https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/>
 
-- **Mauro Servienti. Klucz tajny lepszej kompozycji interfejsu użytkownika** \
+- **Mauro Servienti. Wpis tajny lepszej kompozycji interfejsu użytkownika**  
   <https://particular.net/blog/secret-of-better-ui-composition>
 
-- **Viktor Farcic. Dołączanie składników sieci Web frontonu do mikrousług** \
+- **Viktor Farcic. Dołączanie składników sieci Web frontonu do mikrousług**  
   <https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/>
 
-- **Zarządzanie frontonem w architekturze mikrousług** \
+- **Zarządzanie frontonem w architekturze mikrousług**  
   <https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html>
 
 >[!div class="step-by-step"]

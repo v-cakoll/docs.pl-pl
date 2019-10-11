@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Znajdź element z określonym elementem podrzędnym (Visual Basic)'
+title: 'Instrukcje: Znajdowanie elementu z określonym elementem podrzędnym (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b0d0a463-6a85-46c3-8453-ad25b0ecf93c
-ms.openlocfilehash: af8667b6aa6870accb62fa22bd5243ce029b32c9
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 4df2f8f55a516665c02d12c3bdf6569601db30c2
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709073"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249908"
 ---
-# <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>Instrukcje: Znajdź element z określonym elementem podrzędnym (Visual Basic)
+# <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>Instrukcje: Znajdowanie elementu z określonym elementem podrzędnym (Visual Basic)
 W tym temacie pokazano, jak znaleźć konkretny element, który ma element podrzędny o określonej wartości.  
   
 ## <a name="example"></a>Przykład  
- Przykład znajduje `Test` element, który `CommandLine` ma element podrzędny o wartości "Examp2. exe".  
+ Przykład znajduje element `Test`, który ma element podrzędny `CommandLine` o wartości "Examp2. EXE".  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Konfiguracja testu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Konfiguracja testu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("TestConfig.xml")  
@@ -30,7 +30,7 @@ Next
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```console  
 0002  
 0006  
 ```  
@@ -40,7 +40,7 @@ Next
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano to samo zapytanie dla kodu XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw — omówienie (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Konfiguracja testowa w przestrzeni nazw](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Konfiguracja testowa w przestrzeni nazw](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -61,7 +61,7 @@ End Module
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```console  
 0002  
 0006  
 ```  

@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Znajdź wszystkie węzły w Namespace (Visual Basic)'
+title: 'Instrukcje: Znajdowanie wszystkich węzłów w przestrzeni nazw (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
-ms.openlocfilehash: c04447df1d4a3e29558a3bad172715d2bdee340b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ccc996aa986c97fdffb3deeea36346da726a588
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855676"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249930"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Instrukcje: Znajdź wszystkie węzły w Namespace (Visual Basic)
-Można filtrować według przestrzeni nazw każdego elementu lub atrybutu, aby znaleźć wszystkie węzły w tej określonej przestrzeni nazw.  
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Instrukcje: Znajdowanie wszystkich węzłów w przestrzeni nazw (Visual Basic)
+Można filtrować według przestrzeni nazw każdego elementu lub atrybutu, aby znaleźć wszystkie węzły w danej przestrzeni nazw.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy drzewa XML z dwie przestrzeni nazw. Następnie wykonuje iterację przez drzewo i wyświetla nazwy wszystkich elementów i atrybutów w jednym z tych obszarów nazw.  
+ Poniższy przykład tworzy drzewo XML z dwoma przestrzeniami nazw. Następnie wykonuje iterację w drzewie i drukuje nazwy wszystkich elementów i atrybutów w jednej z tych przestrzeni nazw.  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -45,16 +45,16 @@ End Module
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```console  
 Nodes in the http://www.adventure-works.com namespace  
 {http://www.adventure-works.com}Child3  
 {http://www.adventure-works.com}GrandChild2  
 ```  
   
 ## <a name="example"></a>Przykład  
- Plik XML, uzyskują następujące zapytanie zawiera zamówienia zakupu w dwóch różnych obszarach nazw. Zapytanie tworzy nowego drzewa za pomocą tylko elementy w jednym z przestrzeni nazw.  
+ Plik XML, do którego uzyskuje się następujące zapytanie, zawiera zamówienia zakupu w dwóch różnych przestrzeniach nazw. Zapytanie tworzy nowe drzewo zawierające tylko elementy w jednej z przestrzeni nazw.  
   
- W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Skonsolidowane zamówienia zakupu](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: skonsolidowane zamówienia zakupu](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -111,4 +111,4 @@ End Module
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Podstawowe zapytania (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Zapytania podstawowe (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -4,14 +4,14 @@ description: Dowiedz się, jak uruchomić aplikację .NET dla Apache Spark przy 
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 004256a2fe369b026b15151dfc72ae379da0be8e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: c4dbce74d0d8c0a682250a8021d983ef2990971f
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928489"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250324"
 ---
-# <a name="tutorial-get-started-with-net-for-apache-spark"></a>Samouczek: Wprowadzenie do platformy .NET dla Apache Spark
+# <a name="tutorial-get-started-with-net-for-apache-spark"></a>Samouczek: Rozpoczynanie pracy z platformą .NET dla Apache Spark
 
 W tym samouczku przedstawiono sposób uruchamiania aplikacji platformy .NET dla Apache Spark przy użyciu platformy .NET Core w systemie Windows.
 
@@ -25,9 +25,9 @@ Ten samouczek zawiera informacje na temat wykonywania następujących czynności
 
 ## <a name="prepare-your-environment"></a>Przygotowywanie środowiska
 
-Przed rozpoczęciem upewnij się, że można uruchomić `dotnet` `mvn`polecenie `java`, `spark-shell` , z wiersza polecenia. Jeśli środowisko jest już przygotowane, możesz przejść do następnej sekcji. Jeśli nie można uruchomić żadnego lub wszystkich poleceń, wykonaj poniższe kroki.
+Przed rozpoczęciem upewnij się, że można uruchomić `dotnet`, `java`, `mvn`, `spark-shell` z poziomu wiersza polecenia. Jeśli środowisko jest już przygotowane, możesz przejść do następnej sekcji. Jeśli nie można uruchomić żadnego lub wszystkich poleceń, wykonaj poniższe kroki.
 
-1. Pobierz i zainstaluj [zestaw .NET Core 2.1 x SDK](https://dotnet.microsoft.com/download/dotnet-core/2.1). Zainstalowanie zestawu SDK dodaje `dotnet` łańcucha narzędzi do ścieżki. Aby sprawdzić instalację, `dotnet --version` Użyj polecenia programu PowerShell.
+1. Pobierz i zainstaluj [zestaw .NET Core 2.1 x SDK](https://dotnet.microsoft.com/download/dotnet-core/2.1). Zainstalowanie zestawu SDK dodaje `dotnet` łańcucha narzędzi do ścieżki. Aby zweryfikować instalację, użyj polecenia programu PowerShell `dotnet --version`.
 
 2. Zainstaluj [program Visual studio 2017](https://www.visualstudio.com/downloads/) lub [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/) z najnowszymi aktualizacjami. Możesz użyć społeczności, Professional lub Enterprise. Wersja społeczności jest bezpłatna.
 
@@ -35,39 +35,39 @@ Przed rozpoczęciem upewnij się, że można uruchomić `dotnet` `mvn`polecenie 
       * Programowanie aplikacji klasycznych dla platformy .NET
           * Wszystkie wymagane składniki
           * Narzędzia programistyczne .NET Framework 4.6.1
-      * Programowanie dla wielu platform .NET core
+      * Tworzenie aplikacji dla wielu platform w środowisku .NET Core
           * Wszystkie wymagane składniki
 
 3. Zainstaluj [środowisko Java 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
     * Wybierz odpowiednią wersję systemu operacyjnego. Na przykład wybierz **JDK-8u201-Windows-x64. exe** dla komputera z systemem Windows x64.
-    * Aby sprawdzić instalację, `java -version` Użyj polecenia programu PowerShell.
+    * Aby zweryfikować instalację, użyj polecenia programu PowerShell `java -version`.
 
 4. Zainstaluj program [Apache Maven 3.6.0 +](https://maven.apache.org/download.cgi).
     * Pobierz [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip).
     * Wyodrębnij do katalogu lokalnego. Na przykład `c:\bin\apache-maven-3.6.0\`.
-    * Dodaj Maven Apache do [zmiennej środowiskowej PATH](https://www.java.com/en/download/help/path.xml). W przypadku wyodrębnienia `c:\bin\apache-maven-3.6.0\`do programu należy dodać `c:\bin\apache-maven-3.6.0\bin` do swojej ścieżki.
-    * Aby sprawdzić instalację, `mvn -version` Użyj polecenia programu PowerShell.
+    * Dodaj Maven Apache do [zmiennej środowiskowej PATH](https://www.java.com/en/download/help/path.xml). W przypadku wyodrębnienia do `c:\bin\apache-maven-3.6.0\` należy dodać do ścieżki `c:\bin\apache-maven-3.6.0\bin`.
+    * Aby zweryfikować instalację, użyj polecenia programu PowerShell `mvn -version`.
 
 5. Zainstaluj [Apache Spark 2.3 +](https://spark.apache.org/downloads.html). Apache Spark 2.4 + nie jest obsługiwana.
     * Pobierz [Apache Spark 2.3 +](https://spark.apache.org/downloads.html) i wyodrębnij go do folderu lokalnego przy użyciu narzędzia, takiego jak [7-zip](https://www.7-zip.org/) lub [WinZip](https://www.winzip.com/). Na przykład można wyodrębnić go do `c:\bin\spark-2.3.2-bin-hadoop2.7\`.
-    * Dodaj Apache Spark do [zmiennej środowiskowej PATH](https://www.java.com/en/download/help/path.xml). W przypadku wyodrębnienia `c:\bin\spark-2.3.2-bin-hadoop2.7\`do programu należy dodać `c:\bin\spark-2.3.2-bin-hadoop2.7\bin` do swojej ścieżki.
-    * Dodaj [nową zmienną środowiskową](https://www.java.com/en/download/help/path.xml) o `SPARK_HOME`nazwie. W przypadku wyodrębnienia `C:\bin\spark-2.3.2-bin-hadoop2.7\`do programu `C:\bin\spark-2.3.2-bin-hadoop2.7\` Użyj **wartości zmiennej**.
-    * Upewnij się, że można uruchomić `spark-shell` z poziomu wiersza polecenia.
+    * Dodaj Apache Spark do [zmiennej środowiskowej PATH](https://www.java.com/en/download/help/path.xml). W przypadku wyodrębnienia do `c:\bin\spark-2.3.2-bin-hadoop2.7\` należy dodać do ścieżki `c:\bin\spark-2.3.2-bin-hadoop2.7\bin`.
+    * Dodaj [nową zmienną środowiskową](https://www.java.com/en/download/help/path.xml) o nazwie `SPARK_HOME`. W przypadku wyodrębnienia do `C:\bin\spark-2.3.2-bin-hadoop2.7\` należy użyć **wartości zmiennej**`C:\bin\spark-2.3.2-bin-hadoop2.7\`.
+    * Sprawdź, czy można uruchomić `spark-shell` z poziomu wiersza polecenia.
 
 6. Skonfiguruj [WinUtils](https://github.com/steveloughran/winutils).
     * Pobierz plik binarny **winutils. exe** z [repozytorium winutils](https://github.com/steveloughran/winutils). Wybierz wersję usługi Hadoop, z którą została skompilowana dystrybucja platformy Spark. Na przykład użyjesz usługi **Hadoop-2.7.1** dla **platformy Spark 2.3.2**. Wersja usługi Hadoop znajduje się na końcu nazwy folderu instalacji platformy Spark.
     * Zapisz plik binarny **winutils. exe** w wybranym katalogu. Na przykład `c:\hadoop\bin`.
-    * Ustaw `HADOOP_HOME` , aby odzwierciedlał katalog z **winutils. exe** bez `bin`. Na przykład `c:\hadoop`.
-    * Ustaw zmienną środowiskową PATH do uwzględnienia `%HADOOP_HOME%\bin`.
+    * Ustaw `HADOOP_HOME`, aby odzwierciedlić katalog z **winutils. exe** bez `bin`. Na przykład `c:\hadoop`.
+    * Ustaw zmienną środowiskową PATH, aby uwzględnić `%HADOOP_HOME%\bin`.
 
-Przed przejściem do następnej sekcji `dotnet`Sprawdź `java`, czy `spark-shell` można uruchomić,, `mvn`, z wiersza polecenia.
+Przed przejściem do następnej sekcji Sprawdź, czy można uruchomić `dotnet`, `java`, `mvn`, `spark-shell` z poziomu wiersza polecenia.
 
 ## <a name="download-the-microsoftsparkworker-release"></a>Pobierz wersję Microsoft. Spark. Worker
 
 1. Pobierz wersję [Microsoft. Spark. Worker](https://github.com/dotnet/spark/releases) z strony .net for Apache Spark Release releases na komputer lokalny. Na przykład możesz pobrać go do ścieżki, `c:\bin\Microsoft.Spark.Worker\`.
 
-2. Utwórz [nową zmienną środowiskową](https://www.java.com/en/download/help/path.xml) o `DotnetWorkerPath` nazwie i ustaw ją na katalog, w którym został pobrany i wyodrębniony element **Microsoft. Spark. Worker**. Na przykład `c:\bin\Microsoft.Spark.Worker`.
+2. Utwórz [nową zmienną środowiskową](https://www.java.com/en/download/help/path.xml) o nazwie `DOTNET_WORKER_DIR` i ustaw ją na katalog, w którym został pobrany i wyodrębniony element **Microsoft. Spark. Worker**. Na przykład `c:\bin\Microsoft.Spark.Worker`.
 
 ## <a name="clone-the-net-for-apache-spark-github-repo"></a>Klonowanie repozytorium programu .NET dla Apache Spark GitHub
 

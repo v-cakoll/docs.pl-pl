@@ -3,18 +3,18 @@ title: Projektowanie przy użyciu typów referencyjnych dopuszczających wartoś
 description: Ten zaawansowany samouczek zawiera wprowadzenie do typów referencyjnych dopuszczających wartość null. Dowiesz się, w jaki sposób projekt zostanie zastosowany, gdy wartości odniesienia mogą mieć wartość null, i że kompilator wymusi, gdy nie mogą mieć wartości null.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 914a1eeee2d3d1843bf597f94761e39d16331b5c
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: beecab2be57367dc0a200ff4f6067549cf1e7c51
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956647"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179789"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Samouczek: wyraźny cel projektowania dokładniej z typami referencyjnymi nullable i niedopuszczających wartości null
 
 C#8 wprowadza **typy odwołań do wartości null**, które uzupełniają typy odwołań w taki sam sposób, jak typy wartości null uzupełniają typy wartości. Należy zadeklarować zmienną jako **typ referencyjny dopuszczający wartość null** , dołączając `?` do typu. Na przykład `string?` reprezentuje wartość null `string`. Możesz użyć tych nowych typów, aby dokładniej wyznaczać intencje projektowania: niektóre zmienne *muszą zawsze mieć wartość*, inne *mogą nie mieć wartości*.
 
-W tym samouczku dowiesz się, jak:
+Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 
 > [!div class="checklist"]
 >
@@ -25,7 +25,7 @@ W tym samouczku dowiesz się, jak:
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Musisz skonfigurować maszynę do uruchamiania programu .NET Core, w tym kompilatora C# 8,0. C# 8 kompilator jest dostępny w programie [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)lub [.NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+Musisz skonfigurować maszynę do uruchamiania programu .NET Core, w tym kompilatora C# 8,0. Kompilator C# 8,0 jest dostępny w programie [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)lub [.NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
 W C# tym samouczku założono, że wiesz już, jak i .NET, w tym Visual Studio lub interfejs wiersza polecenia platformy .NET Core.
 
@@ -37,7 +37,7 @@ Kod, który napiszesz dla tego przykładu, oznacza, że zamiar, a kompilator wym
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>Tworzenie aplikacji i włączanie typów referencyjnych dopuszczających wartość null
 
-Utwórz nową aplikację konsolową w programie Visual Studio lub z wiersza polecenia, używając `dotnet new console`. Nadaj aplikacji nazwę `NullableIntroduction`. Po utworzeniu aplikacji należy określić, że cały projekt zostanie skompilowany w **kontekście adnotacji `enabled` dopuszcza wartość null**. Otwórz plik `csproj` i Dodaj element `Nullable` do elementu `PropertyGroup`. Ustaw jej wartość na `enabled`. Należy wybrać funkcję **typów referencyjnych dopuszczających wartość null** , nawet C# w 8 projektach. Dzieje się tak, ponieważ po włączeniu tej funkcji istniejące deklaracje zmiennej odwołania stają się **typami odwołań niedopuszczających wartości null**. Chociaż ta decyzja pomoże w znalezieniu problemów, w których istniejący kod może nie mieć odpowiednich testów o wartości null, może nie dokładnie odzwierciedlać pierwotny cel projektowania:
+Utwórz nową aplikację konsolową w programie Visual Studio lub z wiersza polecenia, używając `dotnet new console`. Nadaj aplikacji nazwę `NullableIntroduction`. Po utworzeniu aplikacji należy określić, że cały projekt zostanie skompilowany w włączonym **kontekście dopuszczającym wartość null**. Otwórz plik *. csproj* i dodaj element `Nullable` do elementu `PropertyGroup`. Ustaw dla niej wartość `enable`. Należy wybrać funkcję **typów referencyjnych dopuszczających wartość null** , nawet C# w projektach 8,0. Dzieje się tak, ponieważ po włączeniu tej funkcji istniejące deklaracje zmiennej odwołania stają się **typami odwołań niedopuszczających wartości null**. Chociaż ta decyzja pomoże w znalezieniu problemów, w których istniejący kod może nie mieć odpowiednich testów o wartości null, może nie dokładnie odzwierciedlać pierwotny cel projektowania:
 
 ```xml
 <Nullable>enable</Nullable>
@@ -84,7 +84,7 @@ namespace NullableIntroduction
 }
 ```
 
-Kompilator interpretuje każdą deklarację zmiennej typu odwołania jako typ referencyjny **niedopuszczający wartości null** dla kodu w kontekście, w którym włączono wartość null. Pierwsze ostrzeżenie można zobaczyć, dodając właściwości dla tekstu pytania i typ pytania, jak pokazano w poniższym kodzie:
+Kompilator interpretuje każdą deklarację zmiennej typu odwołania jako typ referencyjny **niedopuszczający wartości null** dla kodu w włączonym kontekście dopuszczającym wartość null. Pierwsze ostrzeżenie można zobaczyć, dodając właściwości dla tekstu pytania i typ pytania, jak pokazano w poniższym kodzie:
 
 ```csharp
 namespace NullableIntroduction
@@ -134,7 +134,7 @@ Przejdź do *program.cs* w edytorze i Zastąp zawartość `Main` następującymi
 
 [!code-csharp[AddQuestions](~/samples/csharp/NullableIntroduction/NullableIntroduction/Program.cs#AddQuestions)]
 
-Ponieważ cały projekt jest w kontekście, w którym włączono wartość null, podczas przekazywania `null` do dowolnej metody oczekiwano typu referencyjnego, który nie dopuszcza wartości null. Wypróbuj go, dodając następujący wiersz do `Main`:
+Ponieważ cały projekt jest w włączonym kontekście adnotacji dopuszczający wartość null, podczas przekazywania `null` do dowolnej metody oczekiwano typu referencyjnego, który nie dopuszcza wartości null. Wypróbuj go, dodając następujący wiersz do `Main`:
 
 ```csharp
 surveyRun.AddQuestion(QuestionType.Text, default);
@@ -209,7 +209,7 @@ Na koniec Dodaj następującą pętlę w dolnej części metody `Main`:
 
 Nie jest potrzebne żadne `null` checks w tym kodzie, ponieważ zostały zaprojektowane podstawowe interfejsy, aby wszystkie zwracały typy odwołań niedopuszczające wartości null.
 
-## <a name="get-the-code"></a>Pobierz kod
+## <a name="get-the-code"></a>Uzyskaj kod
 
 Możesz uzyskać kod gotowego samouczka z naszego repozytorium [przykładów](https://github.com/dotnet/samples) w folderze [CSharp/NullableIntroduction](https://github.com/dotnet/samples/tree/master/csharp/NullableIntroduction) .
 

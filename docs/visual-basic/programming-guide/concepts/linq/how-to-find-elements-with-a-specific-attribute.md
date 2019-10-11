@@ -1,23 +1,23 @@
 ---
-title: 'Instrukcje: Znajdowanie elementów o określonym atrybucie (XPath-LINQ to XML) (Visual Basic)'
+title: 'Instrukcje: Znajdowanie elementów z określonym atrybutem (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 4bb38d2c-bc7c-4196-8909-aaf41fb86b28
-ms.openlocfilehash: 17c5e9abf607df7311ff2552b7e9c54cbf30fd59
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39d635eb3d80a4a72647397313c77dac09777206
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780487"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250101"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>Instrukcje: Znajdowanie elementów o określonym atrybucie (XPath-LINQ to XML) (Visual Basic)
-Czasami chcesz znaleźć wszystkie elementy, które mają określony atrybut. Nie masz zajmującym się ochroną zawartości atrybutu. Zamiast tego chcesz wybrać na podstawie istnienia atrybutu.  
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>Instrukcje: Znajdowanie elementów z określonym atrybutem (XPath-LINQ to XML) (Visual Basic)
+Czasami chcesz znaleźć wszystkie elementy, które mają określony atrybut. Nie dotyczy zawartości atrybutu. Zamiast tego należy wybrać opcję na podstawie istnienia atrybutu.  
   
- Wyrażenie XPath jest:  
+ Wyrażenie XPath:  
   
  `./*[@Select]`  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod wybiera tylko elementy, które mają `Select` atrybutu.  
+ Poniższy kod wybiera tylko elementy, które mają atrybut `Select`.  
   
 ```vb  
 Dim doc As XElement = _   
@@ -51,9 +51,9 @@ For Each el As XElement In list1
 Next  
 ```  
   
- Ten przykład generuje następujące wyniki:  
+ Ten przykład generuje następujące dane wyjściowe:  
   
-```  
+```console
 Results are identical  
 <Child2 Select="true">2</Child2>  
 <Child4 Select="true">4</Child4>  
@@ -61,4 +61,4 @@ Results are identical
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ to XML dla użytkowników metody XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML dla użytkowników XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

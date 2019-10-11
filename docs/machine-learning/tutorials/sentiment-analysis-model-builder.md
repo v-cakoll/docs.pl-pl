@@ -1,17 +1,17 @@
 ---
 title: 'Samouczek: analizowanie klasyfikacji tonacji-Binary'
 description: W tym samouczku przedstawiono sposób tworzenia aplikacji Razor Pages, która klasyfikuje tonacji z komentarzy w witrynie sieci Web i podejmuje odpowiednie działania. Tonacji klasyfikator binarny używa konstruktora modelu w programie Visual Studio.
-ms.date: 09/30/2019
+ms.date: 10/08/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: ce64f0d11b1da65e460235fdabc2b07e05ffcbe4
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4a97fb70caafd7b0003830259ddbb0ec72a2ca8a
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700913"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180267"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Samouczek: analizowanie tonacji komentarzy witryny internetowej w aplikacji sieci Web przy użyciu konstruktora modelu ML.NET
 
@@ -19,7 +19,7 @@ Dowiedz się, jak analizować tonacji z komentarzy w czasie rzeczywistym w aplik
 
 W tym samouczku pokazano, jak utworzyć aplikację Razor Pages ASP.NET Core, która klasyfikuje tonacji z komentarzy w witrynie sieci Web w czasie rzeczywistym.
 
-Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
+Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 
 > [!div class="checklist"]
 >
@@ -27,8 +27,8 @@ Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 > - Przygotuj i poznanie danych
 > - Wybierz scenariusz
 > - Ładowanie danych
-> - Uczenie modelu
-> - Oceń model
+> - Trenowanie modelu
+> - Ocenianie modelu
 > - Używanie modelu dla prognoz
 
 > [!NOTE]
@@ -49,7 +49,7 @@ Listę wymagań wstępnych i instrukcji instalacji można znaleźć w [podręczn
     1. Następnie wybierz szablon projektu **aplikacji sieci Web ASP.NET Core** .
     1. W polu tekstowym **Nazwa** wpisz "SentimentRazor".
     1. Pole wyboru **Utwórz katalog dla rozwiązania** powinno być domyślnie zaznaczone. Jeśli tak nie jest, należy go sprawdzić.
-    1. Wybierz przycisk **OK** .
+    1. Wybierz przycisk **OK**.
     1. W oknie Wybierz **aplikację sieci Web** , która wyświetla różne typy projektów ASP.NET Core, a następnie wybierz przycisk **OK** .
 
 ## <a name="prepare-and-understand-the-data"></a>Przygotuj i poznanie danych
@@ -58,7 +58,7 @@ Pobierz [zestaw danych detox Wikipedia](https://raw.githubusercontent.com/dotnet
 
 Każdy wiersz w zestawie danych *Wikipedia-detox-250-line-Data. tsv* reprezentuje inny przegląd, który został pozostawiony przez użytkownika w witrynie Wikipedia. Pierwsza kolumna reprezentuje tonacji tekstu (0 to nietoksyczne, 1 jest toksyczny), a druga kolumna reprezentuje komentarz, który został pozostawiony przez użytkownika. Kolumny są oddzielane znakami tabulacji. Dane wyglądają następująco:
 
-| Tonacji | SentimentText |
+| Opinia | SentimentText |
 | :---: | :---: |
 1 | = = Prosta = = informatyku, prosta to Carl Picture lub else.
 1 | = = OK! = = BŁYSKAWICZNE PRZECHODZENIE DO VANDALIZE DZIKICH WITRYN TYPU WIKI, A NASTĘPNIE!!!
@@ -83,9 +83,9 @@ Konstruktor modelu akceptuje dane z dwóch źródeł, bazy danych SQL Server lub
 1. Pozostaw wartości domyślne dla listy rozwijanej **kolumny wejściowe (Features)** .
 1. Wybierz łącze **uczenie** , aby przejść do następnego kroku w narzędziu model Builder.
 
-## <a name="train-the-model"></a>Uczenie modelu
+## <a name="train-the-model"></a>Trenowanie modelu
 
-Zadanie uczenia maszynowego używane do uczenia modelu prognozowania cen w tym samouczku jest klasyfikacją binarną. Podczas procesu uczenia modelowego, Konstruktor modelu pociąga za siebie różne modele przy użyciu różnych binarnych algorytmów klasyfikacji i ustawień, aby znaleźć najlepszy model dla zestawu danych.
+Zadanie uczenia maszynowego używane do uczenia modelu analizy tonacji w tym samouczku jest klasyfikacją binarną. Podczas procesu uczenia modelowego, Konstruktor modelu pociąga za siebie różne modele przy użyciu różnych binarnych algorytmów klasyfikacji i ustawień, aby znaleźć najlepszy model dla zestawu danych.
 
 Czas wymagany przez model do uczenia jest proporcjonalny do ilości danych. Konstruktor modelu automatycznie wybiera wartość domyślną dla **czasu do uczenia (w sekundach)** na podstawie rozmiaru źródła danych.
 
@@ -101,7 +101,7 @@ Czas wymagany przez model do uczenia jest proporcjonalny do ilości danych. Kons
 
 1. Po zakończeniu szkolenia wybierz łącze **Oceń** , aby przejść do następnego kroku.
 
-## <a name="evaluate-the-model"></a>Oceń model
+## <a name="evaluate-the-model"></a>Ocenianie modelu
 
 Wynikiem kroku szkolenia będzie jeden model, który miał najlepszą wydajność. W kroku szacowania narzędzia model Builder sekcja Output zawiera algorytm używany przez model najlepiej działający w najlepszym wpisie **modelu** oraz metryki o **najwyższej dokładności modelu**. Ponadto tabela podsumowująca zawierająca pięć najważniejszych modeli i ich metryki.
 
@@ -275,7 +275,7 @@ Wyniki zwrócone przez `OnGetAnalyzeSentiment` będą dynamicznie wyświetlane n
 
         [!code-javascript [UpdateSentimentEvtHandler](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L36)]
 
-## <a name="run-the-application"></a>Uruchom aplikację
+## <a name="run-the-application"></a>Uruchamianie aplikacji
 
 Teraz, gdy aplikacja jest skonfigurowana, uruchom aplikację, która powinna być uruchamiana w przeglądarce.
 
@@ -287,18 +287,18 @@ Jeśli musisz odwołać się do projektów wygenerowanych przez konstruktora mod
 
 ## <a name="next-steps"></a>Następne kroki
 
-W tym samouczku przedstawiono sposób wykonywania tych instrukcji:
+W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 >
 > - Tworzenie aplikacji Razor Pages ASP.NET Core
 > - Przygotuj i poznanie danych
 > - Wybierz scenariusz
 > - Ładowanie danych
-> - Uczenie modelu
-> - Oceń model
+> - Trenowanie modelu
+> - Ocenianie modelu
 > - Używanie modelu dla prognoz
 
-### <a name="additional-resources"></a>Dodatkowe zasoby
+### <a name="additional-resources"></a>Zasoby dodatkowe
 
 Aby dowiedzieć się więcej na temat tematów wymienionych w tym samouczku, odwiedź następujące zasoby:
 

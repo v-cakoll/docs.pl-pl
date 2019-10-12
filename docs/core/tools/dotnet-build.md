@@ -1,13 +1,13 @@
 ---
 title: polecenie kompilacji dotnet
 description: Polecenie kompilacji dotnet kompiluje projekt i wszystkie jego zależności.
-ms.date: 08/08/2019
-ms.openlocfilehash: 6194d70a8a14e63adbcad39c7dabbbd220ca329d
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
-ms.translationtype: HT
+ms.date: 10/07/2019
+ms.openlocfilehash: db353feebab920dc8f63b9854d14f050adeb0b79
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179984"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250192"
 ---
 # <a name="dotnet-build"></a>Kompilacja dotnet
 
@@ -66,9 +66,9 @@ Plik projektu lub rozwiązania do skompilowania. Jeśli plik projektu lub rozwi�
 
 ## <a name="options"></a>Opcje
 
-* **`-c|--configuration {Debug|Release}`**
+* **`-c|--configuration {CONFIGURATION}`**
 
-  Definiuje konfigurację kompilacji. Wartość domyślna to `Debug`.
+  Definiuje konfigurację kompilacji. Wartość domyślna dla większości projektów to `Debug`, ale można zastąpić ustawienia konfiguracji kompilacji w projekcie.
 
 * **`-f|--framework <FRAMEWORK>`**
 

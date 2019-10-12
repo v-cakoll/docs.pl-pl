@@ -2,19 +2,19 @@
 title: Co nowego w C# 8,0 — C# Przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8,0.
 ms.date: 09/20/2019
-ms.openlocfilehash: d948db0523684c998425bc22ab6fd245d65a8045
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 6b5602db6ee61b1d9db4c906d6a14ea2f918ad0a
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736701"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275782"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego w C# 8,0
 
 C#8,0 dodaje do C# języka następujące funkcje i ulepszenia:
 
 - [Elementy członkowskie tylko do odczytu](#readonly-members)
-- [Domyślne elementy członkowskie interfejsu](#default-interface-members)
+- [Domyślne metody interfejsu](#default-interface-methods)
 - [Ulepszenia dopasowania wzorców](#more-patterns-in-more-places):
   - [Przełącz wyrażenia](#switch-expressions)
   - [Wzorce właściwości](#property-patterns)
@@ -23,7 +23,7 @@ C#8,0 dodaje do C# języka następujące funkcje i ulepszenia:
 - [Korzystanie z deklaracji](#using-declarations)
 - [Statyczne funkcje lokalne](#static-local-functions)
 - [Nierozporządzalne struktury ref](#disposable-ref-structs)
-- [Typy referencyjne dopuszczające wartość null](#nullable-reference-types)
+- [Typy odwołań dopuszczających wartość null](#nullable-reference-types)
 - [Strumienie asynchroniczne](#asynchronous-streams)
 - [Indeksy i zakresy](#indices-and-ranges)
 - [Przypisanie do łączenia o wartości null](#null-coalescing-assignment)
@@ -36,7 +36,7 @@ W pozostałej części tego artykułu krótko opisano te funkcje. Tam, gdzie są
 1. Zainstaluj narzędzie [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) Global.
 1. Sklonuj repozytorium [dotnet/try-Samples](https://github.com/dotnet/try-samples) .
 1. Ustaw bieżący katalog na podkatalog *csharp8* dla repozytorium *try-Samples* .
-1. Uruchom `dotnet try`.
+1. Uruchom polecenie `dotnet try`.
 
 ## <a name="readonly-members"></a>Elementy członkowskie tylko do odczytu
 
@@ -85,11 +85,11 @@ public readonly void Translate(int xOffset, int yOffset)
 
 Ta funkcja umożliwia określenie zamierzonego projektu, aby kompilator mógł go wymusić i dokonać optymalizacji na podstawie tego zamiaru.
 
-## <a name="default-interface-members"></a>Domyślne elementy członkowskie interfejsu
+## <a name="default-interface-methods"></a>Domyślne metody interfejsu
 
-Teraz można dodawać członków do interfejsów i dostarczać implementację dla tych członków. Ta funkcja języka umożliwia autorom interfejsu API dodawanie metod do interfejsu w nowszych wersjach, bez podzielenia zgodności źródłowej lub binarnej z istniejącymi implementacjami tego interfejsu. Istniejące implementacje *dziedziczą* implementację domyślną. Ta funkcja umożliwia C# również współdziałanie z interfejsami API przeznaczonymi dla systemu Android lub SWIFT, które obsługują podobne funkcje. Domyślne elementy członkowskie interfejsu umożliwiają również scenariusze podobne do funkcji języka "cechy".
+Teraz można dodawać członków do interfejsów i dostarczać implementację dla tych członków. Ta funkcja języka umożliwia autorom interfejsu API dodawanie metod do interfejsu w nowszych wersjach, bez podzielenia zgodności źródłowej lub binarnej z istniejącymi implementacjami tego interfejsu. Istniejące implementacje *dziedziczą* implementację domyślną. Ta funkcja umożliwia C# również współdziałanie z interfejsami API przeznaczonymi dla systemu Android lub SWIFT, które obsługują podobne funkcje. Domyślne metody interfejsu zapewniają również scenariusze podobne do funkcji języka "cechy".
 
-Domyślne elementy członkowskie interfejsu mają wpływ na wiele scenariuszy i elementów języka. W pierwszym samouczku omówiono [aktualizowanie interfejsu przy użyciu domyślnych implementacji](../tutorials/default-interface-members-versions.md). Inne samouczki i aktualizacje referencyjne są dostępne w czasie do wydania ogólnego.
+Domyślne metody interfejsu mają wpływ na wiele scenariuszy i elementów języka. W pierwszym samouczku omówiono [aktualizowanie interfejsu przy użyciu domyślnych implementacji](../tutorials/default-interface-methods-versions.md). Inne samouczki i aktualizacje referencyjne są dostępne w czasie do wydania ogólnego.
 
 ## <a name="more-patterns-in-more-places"></a>Więcej wzorców w większej liczbie miejsc
 
@@ -331,7 +331,7 @@ int M()
 
 @No__t-0 zadeklarowana za pomocą modyfikatora `ref` nie może implementować żadnych interfejsów i dlatego nie może implementować <xref:System.IDisposable>. W związku z tym, aby umożliwić pozbycie `ref struct`, musi on mieć dostępną metodę `void Dispose()`. Dotyczy to również deklaracji `readonly ref struct`.
 
-## <a name="nullable-reference-types"></a>Typy referencyjne dopuszczające wartość null
+## <a name="nullable-reference-types"></a>Typy odwołań dopuszczających wartość null
 
 Wewnątrz bezwartościowego kontekstu adnotacji Każda zmienna typu referencyjnego jest uważana za **typ referencyjny, który nie ma wartości null**. Aby wskazać, że zmienna może mieć wartość null, należy dołączyć nazwę typu z `?`, aby zadeklarować zmienną jako **typ referencyjny dopuszczający wartość null**.
 

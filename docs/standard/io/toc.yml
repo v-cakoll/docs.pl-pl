@@ -62,5 +62,7 @@
           href: how-to-use-anonymous-pipes-for-local-interprocess-communication.md
         - name: 'Instrukcje: Stosowanie nazwanych potoków do sieciowej komunikacji międzyprocesowej'
           href: how-to-use-named-pipes-for-network-interprocess-communication.md
+    - name: Potoki
+      href: pipelines.md
     - name: Pliki mapowane w pamięci
       href: memory-mapped-files.md

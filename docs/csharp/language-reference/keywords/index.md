@@ -1,5 +1,5 @@
 ---
-title: Słowa kluczowe języka C#
+title: C#Służąc
 ms.date: 03/07/2017
 f1_keywords:
 - cs.keywords
@@ -9,58 +9,59 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: f325d8ba09e3c3d1c1b3436f758e8fc1696c7f49
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 2bdaa2f4cdb19d01948effd599177f68859cb82c
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167852"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291061"
 ---
-# <a name="c-keywords"></a>Słowa kluczowe języka C#
+# <a name="c-keywords"></a>C#Służąc
 
-Słowa kluczowe są wstępnie zdefiniowanymi, zarezerwowanymi identyfikatorami, które mają specjalne znaczenie dla kompilatora. Nie można ich używać jako identyfikatorów w programie, chyba że zawierają `@` one jako prefiks. Na przykład, `@if` jest prawidłowym identyfikatorem, `if` ale nie jest `if` , ponieważ jest słowem kluczowym.  
+Słowa kluczowe są wstępnie zdefiniowanymi, zarezerwowanymi identyfikatorami, które mają specjalne znaczenie dla kompilatora. Nie mogą być używane jako identyfikatory w programie, chyba że zawierają `@` jako prefiks. Na przykład `@if` jest prawidłowym identyfikatorem, ale `if` nie jest, ponieważ `if` jest słowem kluczowym.  
   
  W pierwszej tabeli w tym temacie wymieniono słowa kluczowe, które są zarezerwowane identyfikatory w C# dowolnej części programu. W drugiej tabeli w tym temacie wymieniono kontekstowe słowa C#kluczowe w. Kontekstowe słowa kluczowe mają specjalne znaczenie tylko w ograniczonym kontekście programu i mogą być używane jako identyfikatory poza tym kontekstem. Ogólnie rzecz biorąc, w miarę dodawania nowych słów C# kluczowych do języka są one dodawane jako kontekstowe słowa kluczowe, aby uniknąć przerywania programów pisanych we wcześniejszych wersjach.  
   
 |||||  
 |---|---|---|---|  
-|[abstract](abstract.md)|[as](../operators/type-testing-and-cast.md#as-operator)|[base](base.md)|[bool](bool.md)|  
-|[break](break.md)|[byte](../builtin-types/integral-numeric-types.md)|[case](switch.md)|[catch](try-catch.md)|  
-|[char](char.md)|[checked](checked.md)|[class](class.md)|[const](const.md)|  
-|[continue](continue.md)|[decimal](../builtin-types/floating-point-numeric-types.md)|[default](default.md)|[delegate](delegate.md)|  
-|[do](do.md)|[double](../builtin-types/floating-point-numeric-types.md)|[Przejmi](if-else.md)|[enum](enum.md)|  
-|[event](event.md)|[explicit](../operators/user-defined-conversion-operators.md)|[extern](extern.md)|[false](false-literal.md)|  
-|[finally](try-finally.md)|[FIXED](fixed-statement.md)|[float](../builtin-types/floating-point-numeric-types.md)|[for](for.md)|  
-|[spowodował](foreach-in.md)|[goto](goto.md)|[if](if-else.md)|[implicit](../operators/user-defined-conversion-operators.md)|  
-|[in](in.md)|[int](../builtin-types/integral-numeric-types.md)|[interface](interface.md)|[internal](internal.md)|
-|[is](is.md)|[lock](lock-statement.md)|[long](../builtin-types/integral-numeric-types.md)|[namespace](namespace.md)|
-|[new](../operators/new-operator.md)|[null](null.md)|[object](object.md)|[operator](../operators/operator-overloading.md)|
-|[out](out.md)|[override](override.md)|[params](params.md)|[private](private.md)|
-|[protected](protected.md)|[public](public.md)|[readonly](readonly.md)|[ref](ref.md)|
-|[return](return.md)|[sbyte](../builtin-types/integral-numeric-types.md)|[sealed](sealed.md)|[short](../builtin-types/integral-numeric-types.md)||
-[sizeof](../operators/sizeof.md)|[stackalloc](../operators/stackalloc.md)|[static](static.md)|[string](string.md)|
-|[struct](struct.md)|[switch](switch.md)|[this](this.md)|[throw](throw.md)|
-|[true](true-literal.md)|[spróbował](try-catch.md)|[typeof](../operators/type-testing-and-cast.md#typeof-operator)|[uint](../builtin-types/integral-numeric-types.md)|
-|[ulong](../builtin-types/integral-numeric-types.md)|[unchecked](unchecked.md)|[unsafe](unsafe.md)|[ushort](../builtin-types/integral-numeric-types.md)|
-|[using](using.md)|[Używanie static](using-static.md)|[virtual](virtual.md)|[void](void.md)|
-|[volatile](volatile.md)|[while](while.md)|
+|[streszczeń](abstract.md)|[definicj](../operators/type-testing-and-cast.md#as-operator)|[opiera](base.md)|[logiczna](bool.md)|  
+|[Przerwij](break.md)|[Bajc](../builtin-types/integral-numeric-types.md)|[spraw](switch.md)|[efektywn](try-catch.md)|  
+|[delikatn](char.md)|[dane](checked.md)|[określonej](class.md)|[stała](const.md)|  
+|[utrzymać](continue.md)|[dokładności](../builtin-types/floating-point-numeric-types.md)|[wartooć](default.md)|[Wierz](delegate.md)|  
+|[nie](do.md)|[Double](../builtin-types/floating-point-numeric-types.md)|[Przejmi](if-else.md)|[podstawowe](enum.md)|  
+|[wydarzen](event.md)|[wprost](../operators/user-defined-conversion-operators.md)|[modyfikator](extern.md)|[false](false-literal.md)|  
+|[Ostateczny](try-finally.md)|[FIXED](fixed-statement.md)|[float](../builtin-types/floating-point-numeric-types.md)|[dla](for.md)|  
+|[spowodował](foreach-in.md)|[chodzenie](goto.md)|[przypadku](if-else.md)|[Konwersja](../operators/user-defined-conversion-operators.md)|  
+|[podczas](in.md)|[ZAOKR](../builtin-types/integral-numeric-types.md)|[interfejsu](interface.md)|[wewnętrz](internal.md)|
+|[była](is.md)|[skręt](lock-statement.md)|[długo](../builtin-types/integral-numeric-types.md)|[obszaru](namespace.md)|
+|[Nowy](../operators/new-operator.md)|[null](null.md)|[Stream](object.md)|[operator](../operators/operator-overloading.md)|
+|[określoną](out.md)|[mapowań](override.md)|[Krocz](params.md)|[użytek](private.md)|
+|[chronione](protected.md)|[społeczeństwo](public.md)|[trybie](readonly.md)|[umieszczone](ref.md)|
+|[przesłać](return.md)|[SByte](../builtin-types/integral-numeric-types.md)|[zamyka](sealed.md)|[wybierak](../builtin-types/integral-numeric-types.md)||
+[sizeof](../operators/sizeof.md)|[stackalloc](../operators/stackalloc.md)|[ruchom](static.md)|[parametry](string.md)|
+|[konstrukcja](struct.md)|[przełącznika](switch.md)|[Ta](this.md)|[generować](throw.md)|
+|[oznacza](true-literal.md)|[spróbował](try-catch.md)|[typeof](../operators/type-testing-and-cast.md#typeof-operator)|[uint](../builtin-types/integral-numeric-types.md)|
+|[ulong](../builtin-types/integral-numeric-types.md)|[unchecked](unchecked.md)|[niebezpieczne](unsafe.md)|[UShort](../builtin-types/integral-numeric-types.md)|
+|[użyciu](using.md)|[Używanie static](using-static.md)|[wirtualnej](virtual.md)|[pozycję](void.md)|
+|[volatile](volatile.md)|[czekać](while.md)|
 
 ## <a name="contextual-keywords"></a>Kontekstowe słowa kluczowe
 
- Kontekstowe słowo kluczowe jest używane do zapewnienia określonego znaczenia w kodzie, ale nie jest to słowo zastrzeżone w C#. Niektóre kontekstowe słowa kluczowe, `partial` takie `where`jak i, mają specjalne znaczenie w co najmniej dwóch kontekstach.  
+ Kontekstowe słowo kluczowe jest używane do zapewnienia określonego znaczenia w kodzie, ale nie jest to słowo zastrzeżone w C#. Niektóre kontekstowe słowa kluczowe, takie jak `partial` i `where`, mają specjalne znaczenie w co najmniej dwóch kontekstach.  
   
 ||||  
 |---|---|---|  
-|[add](add.md)|[alias](extern-alias.md)|[ascending](ascending.md)|
-|[async](async.md)|[await](../operators/await.md)|[by](by.md)|
-|[descending](descending.md)|[dynamic](dynamic.md)|[equals](equals.md)|
-|[from](from-clause.md)|[get](get.md)|[global](../operators/namespace-alias-qualifier.md)|
-|[Group](group-clause.md)|[into](into.md)|[join](join-clause.md)|
-|[wpuść](let-clause.md)|[nameof](../operators/nameof.md)|[on](on.md)|
-|[orderby](orderby-clause.md)|[częściowy (typ)](partial-type.md)|[częściowe (Metoda)](partial-method.md)|
-|[remove](remove.md)|[zaznaczenia](select-clause.md)|[set](set.md)|
-|[value](value.md)|[var](var.md)|[when (warunek filtru)](when.md)|
-|[where (ograniczenie typu ogólnego)](where-generic-type-constraint.md)|[WHERE (klauzula zapytania)](where-clause.md)|[yield](yield.md)|
+|[dodana](add.md)|[alias](extern-alias.md)|[rosnąco](ascending.md)|
+|[asynchroniczne](async.md)|[kart](../operators/await.md)|[naciskając](by.md)|
+|[Najważniejsze](descending.md)|[dynamicznych](dynamic.md)|[ubiegł](equals.md)|
+|[wniosek](from-clause.md)|[Pobierz](get.md)|[globalne](../operators/namespace-alias-qualifier.md)|
+|[Group](group-clause.md)|[przekształca](into.md)|[join](join-clause.md)|
+|[wpuść](let-clause.md)|[nameof](../operators/nameof.md)|[z](on.md)|
+|[OrderBy](orderby-clause.md)|[częściowy (typ)](partial-type.md)|[częściowe (Metoda)](partial-method.md)|
+|[usuwa](remove.md)|[zaznaczenia](select-clause.md)|[zbiór](set.md)|
+|[niezarządzane (ograniczenie typu ogólnego)](where-generic-type-constraint.md)|[value](value.md)|[funkcję](var.md)|
+|[When (warunek filtru)](when.md)|[WHERE (ograniczenie typu ogólnego)](where-generic-type-constraint.md)|[WHERE (klauzula zapytania)](where-clause.md)|
+|[zbiór](yield.md)| | |
   
 ## <a name="see-also"></a>Zobacz także
 

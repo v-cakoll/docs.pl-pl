@@ -5,16 +5,16 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 0253c57f080705b648d9f416368d0fe974ac83ab
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 2fe473da3eeabef3852e3003e61b3b9604332855
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834670"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291271"
 ---
 # <a name="use-automatic-layout-overview"></a>Korzystanie z automatycznego układu — Omówienie
 
-W tym temacie przedstawiono wskazówki dla deweloperów dotyczące pisania aplikacji [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] z lokalizowalną [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. W przeszłości lokalizacja interfejsu użytkownika była czasochłonna. Każdy język, który został dostosowany przez interfejs użytkownika, musi być dopasowany piksel po piksel. Obecnie w przypadku właściwych standardów kodowania i odpowiednich wzorów można utworzyć [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], tak aby lokalizatory miały mniejszą zmianę rozmiarów i zmiany położenia. Podejście do pisania aplikacji, które mogą być łatwiejsze w zmianie rozmiaru i zmiany położenia, jest nazywane automatycznym układem i można je osiągnąć przy użyciu projektu aplikacji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
+W tym temacie przedstawiono wskazówki dla deweloperów dotyczące pisania aplikacji [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] z lokalizowalnymi interfejsami użytkownika (interfejsów użytkownika). W przeszłości lokalizacja interfejsu użytkownika była czasochłonna. Każdy język, który został dostosowany przez interfejs użytkownika, musi być dopasowany piksel po piksel. Obecnie w przypadku właściwych standardów kodowania i odpowiednich wzorów interfejsów użytkownika można skonstruować, tak aby lokalizatory miały mniejszą zmianę rozmiarów i zmiany położenia. Podejście do pisania aplikacji, które mogą być łatwiejsze w zmianie rozmiaru i zmiany położenia, jest nazywane automatycznym układem i można je osiągnąć przy użyciu projektu aplikacji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
 <a name="advantages_of_autolayout"></a>
 

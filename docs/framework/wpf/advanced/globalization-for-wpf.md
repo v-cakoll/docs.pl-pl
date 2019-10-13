@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 1ab372f69792a00160edb2542762298114d3f8b4
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 32caf87435e23008f9f300d231c2705e7894280f
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003443"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291465"
 ---
 # <a name="globalization-for-wpf"></a>Globalizacja dla WPF
 Ten temat zawiera informacje o problemach, które należy wziąć pod uwagę podczas pisania aplikacji [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] na globalnym rynku. Elementy programistyczne globalizacji są zdefiniowane w .NET w przestrzeni nazw <xref:System.Globalization>.
@@ -36,7 +36,7 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 ```
 
 <a name="encoding"></a>
-### <a name="encoding"></a>Kody
+### <a name="encoding"></a>Encoding
  Kodowanie obsługiwane przez [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] to ASCII, [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] UTF-16 i UTF-8. Instrukcja Encoding znajduje się na początku dokumentu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Jeśli żaden atrybut kodowania nie istnieje i nie ma kolejności bajtów, Analizator domyślnie używa kodowania UTF-8. Kodowanie UTF-8 i UTF-16 są preferowanymi kodowaniami. Kodowanie UTF-7 nie jest obsługiwane. Poniższy przykład ilustruje sposób określania kodowania UTF-8 w pliku [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
 
 ```xaml
@@ -77,7 +77,7 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
 - Pisanych
 
-- grecki
+- Grecki
 
 - Gudżarati
 
@@ -119,7 +119,7 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
 - Stary Hangul koreański
 
-- Mjanma
+- Myanmar
 
 - Syngaleski
 
@@ -143,7 +143,7 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>Wielojęzyczny interfejs użytkownika
- Wielojęzycznego interfejsu użytkownika (MUI) to pomoc techniczna firmy Microsoft do przełączania [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] z jednego języka do innego. Aplikacja [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używa modelu zestawu do obsługi interfejsu MUI. Jedna aplikacja zawiera zestawy, które są niezależne od języka, a także zestawy zasobów satelitarnych zależne od języka. Punkt wejścia jest zarządzany. EXE w zestawie głównym.  moduł ładujący zasobów [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] korzysta z Menedżera zasobów [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] do obsługi wyszukiwania i powrotu zasobów. Zestawy satelickie dla wielu języków współpracują z tym samym zestawem głównym. Załadowany zestaw zasobów zależy od <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> bieżącego wątku.
+ Wielojęzycznego interfejsu użytkownika (MUI) to pomoc techniczna firmy Microsoft dla przełączania interfejsów użytkownika z jednego języka do innego. Aplikacja [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używa modelu zestawu do obsługi interfejsu MUI. Jedna aplikacja zawiera zestawy, które są niezależne od języka, a także zestawy zasobów satelitarnych zależne od języka. Punkt wejścia jest zarządzany. EXE w zestawie głównym.  moduł ładujący zasobów [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] korzysta z Menedżera zasobów [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] do obsługi wyszukiwania i powrotu zasobów. Zestawy satelickie dla wielu języków współpracują z tym samym zestawem głównym. Załadowany zestaw zasobów zależy od <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> bieżącego wątku.
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>Lokalizowalny interfejs użytkownika
@@ -180,4 +180,4 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Przeglądanie globalizacji i lokalizacji WPF](wpf-globalization-and-localization-overview.md)
+- [Przegląd globalizacji i lokalizacji WPF](wpf-globalization-and-localization-overview.md)

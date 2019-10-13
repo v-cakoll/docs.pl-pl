@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Przechowywanie kluczy asymetrycznych w kontenerze kluczy'
+title: 'Instrukcje: przechowywanie kluczy asymetrycznych w kontenerze kluczy'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,36 +17,36 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c6fada360eda46dc695ab732a2573b135d823f0a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8edb88d13732650e00292d63ad4e1975a97ac704
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018752"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291631"
 ---
-# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Instrukcje: Przechowywanie kluczy asymetrycznych w kontenerze kluczy
-Klucze asymetryczne prywatnej nigdy nie powinny być przechowywane, verbatim lub w postaci zwykłego tekstu, na komputerze lokalnym. Jeśli musisz przechować klucz prywatny, należy użyć kontenera kluczy. Aby uzyskać więcej informacji na temat kontenerów kluczy, zobacz [kontenery kluczy RSA poziomie użytkownika i na poziomie maszyny opis](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).  
+# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Instrukcje: przechowywanie kluczy asymetrycznych w kontenerze kluczy
+Asymetryczne klucze prywatne nigdy nie powinny być przechowywane Verbatim ani w postaci zwykłego tekstu na komputerze lokalnym. Jeśli musisz przechowywać klucz prywatny, należy użyć kontenera kluczy. Aby uzyskać więcej informacji na temat kontenerów kluczy, zobacz temat [Omówienie kontenerów kluczy RSA na poziomie komputera i użytkownika](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).  
   
-### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Aby utworzyć to klucz asymetryczny i zapisać ją w kontenerze kluczy  
+### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Aby utworzyć klucz asymetryczny i zapisać go w kontenerze kluczy  
   
-1. Utwórz nowe wystąpienie klasy <xref:System.Security.Cryptography.CspParameters> klasy i przekazywać nazwę jednostki, którą chcesz wywołać kontener klucza do <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> pola.  
+1. Utwórz nowe wystąpienie klasy <xref:System.Security.Cryptography.CspParameters> i przekaż nazwę, która ma być wywoływana przez kontener kluczy do pola <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType>.  
   
-2. Utwórz nowe wystąpienie klasy, która jest pochodną <xref:System.Security.Cryptography.AsymmetricAlgorithm> klasy (zazwyczaj **RSACryptoServiceProvider** lub **DSACryptoServiceProvider**) i przekaż utworzony wcześniej  **CspParameters** obiektu dla jego konstruktora.  
+2. Utwórz nowe wystąpienie klasy, która dziedziczy z klasy <xref:System.Security.Cryptography.AsymmetricAlgorithm> (zazwyczaj **RSACryptoServiceProvider** lub **DSACryptoServiceProvider**) i przekaż poprzednio utworzony obiekt **CspParameters** do jego konstruktora.  
   
-### <a name="to-delete-the-key-from-a-key-container"></a>Aby usunąć klucz przy użyciu kontenera kluczy  
+### <a name="to-delete-the-key-from-a-key-container"></a>Aby usunąć klucz z kontenera kluczy  
   
-1. Utwórz nowe wystąpienie klasy **CspParameters** klasy i przekazywać nazwę jednostki, którą chcesz wywołać kontener klucza do **CspParameters.KeyContainerName** pola.  
+1. Utwórz nowe wystąpienie klasy **CspParameters** i przekaż nazwę, która ma być wywoływana z kontenera kluczy do pola **CspParameters. ContainerName** .  
   
-2. Utwórz nowe wystąpienie klasy, która jest pochodną **AsymmetricAlgorithm** klasy (zazwyczaj **RSACryptoServiceProvider** lub **DSACryptoServiceProvider**) i przekaż utworzone wcześniej **CspParameters** obiektu dla jego konstruktora.  
+2. Utwórz nowe wystąpienie klasy, która dziedziczy z klasy **AsymmetricAlgorithm** (zazwyczaj **RSACryptoServiceProvider** lub **DSACryptoServiceProvider**) i przekaż wcześniej utworzony obiekt **CspParameters** do jego konstruktora .  
   
-3. Ustaw **PersistKeyInCSP** właściwość klasy, która pochodzi od klasy **AsymmetricAlgorithm** do **false** (**False** w języku Visual Basic).  
+3. Ustaw właściwość **PersistKeyInCSP** klasy, która dziedziczy z **AsymmetricAlgorithm** na **false** (**false** w Visual Basic).  
   
-4. Wywołaj **wyczyść** metody klasy, która pochodzi od klasy **AsymmetricAlgorithm**. Ta metoda zwalnia wszystkie zasoby klasy i czyści kontenera kluczy.  
+4. Wywołaj metodę **Clear** klasy, która pochodzi od **AsymmetricAlgorithm**. Ta metoda zwalnia wszystkie zasoby klasy i czyści kontener kluczy.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak utworzyć klucza asymetrycznego, zapisz go w kontenerze kluczy, pobieranie klucza w późniejszym czasie i Usuń klucz z kontenera.  
+ Poniższy przykład ilustruje sposób tworzenia klucza asymetrycznego, zapisywania go w kontenerze kluczy, pobierania klucza w późniejszym czasie i usuwania klucza z kontenera.  
   
- Należy zauważyć, że kod w `GenKey_SaveInContainer` metody i `GetKeyFromContainer` metoda jest podobna.  Po określeniu nazwę kontenera kluczy <xref:System.Security.Cryptography.CspParameters> obiektu i przekazać ją do <xref:System.Security.Cryptography.AsymmetricAlgorithm> obiekt z <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> właściwości lub <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> ustawioną na wartość true, zostaną wykonane następujące zadania.  Jeśli kontener kluczy o podanej nazwie nie istnieje, następnie jest tworzona i klucz jest trwały.  Jeśli kontener kluczy o podanej nazwie istnieje, a następnie klawisz w kontenerze jest automatycznie ładowany do bieżącej <xref:System.Security.Cryptography.AsymmetricAlgorithm> obiektu.  W związku z tym, kod w `GenKey_SaveInContainer` metoda będzie się powtarzać klucza, ponieważ jest uruchamiany podczas kod najpierw `GetKeyFromContainer` metoda ładuje klucza, ponieważ jest uruchamiany w drugiej.  
+ Zwróć uwagę, że kod w metodzie `GenKey_SaveInContainer` i Metoda `GetKeyFromContainer` są podobne.  Jeśli określisz nazwę kontenera kluczy dla obiektu <xref:System.Security.Cryptography.CspParameters> i przekażesz go do obiektu <xref:System.Security.Cryptography.AsymmetricAlgorithm> z właściwością <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> lub właściwością <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> ustawioną na true, wystąpią poniższe.  Jeśli kontener kluczy o podanej nazwie nie istnieje, zostanie utworzony jeden i klucz zostanie utrwalony.  Jeśli istnieje kontener kluczy o podanej nazwie, klucz w kontenerze zostanie automatycznie załadowany do bieżącego obiektu <xref:System.Security.Cryptography.AsymmetricAlgorithm>.  W związku z tym kod w metodzie `GenKey_SaveInContainer` utrzymuje klucz, ponieważ jest uruchamiany jako pierwszy, podczas gdy kod w metodzie `GetKeyFromContainer` ładuje klucz, ponieważ jest uruchamiany drugi.  
   
 ```vb  
 Imports System  
@@ -212,7 +212,7 @@ public class StoreKey
 }  
 ```  
   
-```Output  
+```console  
 Key added to container:  
 <RSAKeyValue> Key Information A</RSAKeyValue>  
 Key retrieved from container :  

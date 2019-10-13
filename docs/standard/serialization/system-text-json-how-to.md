@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 3c988a0151f57b67db19f41aeb88c6fb9b808cb3
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 22c2fd5fc5eaf7a5dc9b71a7335b0b844fa92b51
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179202"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291603"
 ---
 # <a name="how-to-serialize-and-deserialize-json-in-net"></a>Jak serializować i deserializować kod JSON w programie .NET
 
@@ -22,7 +22,7 @@ ms.locfileid: "72179202"
 
 W tym artykule pokazano, jak używać przestrzeni nazw <xref:System.Text.Json> do serializacji i deserializacji do i z JavaScript Object Notation (JSON). Instrukcje i przykładowy kod używają biblioteki bezpośrednio, a nie za pomocą struktury, takiej jak [ASP.NET Core](/aspnet/core/).
 
-## <a name="namespaces"></a>Namespaces
+## <a name="namespaces"></a>Przestrzenie nazw
 
 Przestrzeń nazw <xref:System.Text.Json> zawiera wszystkie punkty wejścia i typy główne. Przestrzeń nazw <xref:System.Text.Json.Serialization> zawiera atrybuty i interfejsy API dla zaawansowanych scenariuszy i dostosowań specyficznych dla serializacji i deserializacji. W związku z tym przykłady kodu przedstawione w tym artykule wymagają jednej lub obu następujących dyrektyw `using`:
 
@@ -237,7 +237,7 @@ var options = new JsonSerializerOptions
     ReadCommentHandling = JsonCommentHandling.Skip,
     AllowTrailingCommas = true
 };
-var weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(json);
+var weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(json, options);
 ```
 
 Oto przykładowy kod JSON z komentarzami i końcowym przecinkiem:
@@ -399,8 +399,8 @@ Oto przykład obiektu do serializacji i danych wyjściowych JSON:
 |Właściwość |Wartość  |
 |---------|---------|
 | Data    | 8/1/2019 12:00:00 AM – 07:00|
-| TemperatureC| 6,25 |
-| Podsumowanie| Ręczne|
+| TemperatureC| 25 |
+| Podsumowanie| Gorąca|
 | TemperatureRanges | Zimna, 20<br>Gorąca, 40|
 
 ```json
@@ -501,8 +501,8 @@ Oto przykład obiektu do serializacji i danych wyjściowych JSON:
 |Właściwość |Wartość  |
 |---------|---------|
 | Data    | 8/1/2019 12:00:00 AM – 07:00|
-| TemperatureC| 6,25 |
-| Podsumowanie| wartość null|
+| TemperatureC| 25 |
+| Podsumowanie| null|
 
 ```json
 {
@@ -661,10 +661,10 @@ Podczas deserializacji kodu JSON pokazanego wcześniej w tym typie przykładowym
 |---------|---------|---------|
 | Data    | 8/1/2019 12:00:00 AM – 07:00||
 | TemperatureC| 0 | Niezgodność z wielkością liter (`temperatureC` w formacie JSON), więc właściwość nie jest ustawiona. |
-| Podsumowanie | Ręczne ||
+| Podsumowanie | Gorąca ||
 | ExtensionData — | temperatureC: 25 |Ponieważ przypadek nie jest zgodny, ta właściwość JSON jest dodatkową i jest parą klucz-wartość w słowniku.|
 || DatesAvailable:<br>  8/1/2019 12:00:00 AM – 07:00<br>8/2/2019 12:00:00 AM – 07:00 |Dodatkowa Właściwość JSON zmieni się na parę klucz-wartość, z tablicą jako obiektem wartości.|
-| |SummaryWords:<br>Ochłodzenia<br>Wiatr<br>Humid |Dodatkowa Właściwość JSON zmieni się na parę klucz-wartość, z tablicą jako obiektem wartości.|
+| |SummaryWords:<br>Chłodna<br>Wiatr<br>Humid |Dodatkowa Właściwość JSON zmieni się na parę klucz-wartość, z tablicą jako obiektem wartości.|
 
 Gdy obiekt docelowy jest serializowany, pary wartości klucza danych rozszerzenia stają się właściwościami JSON tak samo jak w przychodzących danych JSON:
 
@@ -755,7 +755,7 @@ while (reader.Read())
 }
 ```
 
-## <a name="additional-resources"></a>Dodatkowe zasoby
+## <a name="additional-resources"></a>Zasoby dodatkowe
 
 * [System. Text. JSON — Omówienie](system-text-json-overview.md)
 * [Dokumentacja interfejsu API System. Text. JSON](xref:System.Text.Json)

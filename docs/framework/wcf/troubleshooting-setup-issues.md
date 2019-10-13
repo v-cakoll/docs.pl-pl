@@ -1,19 +1,19 @@
 ---
-title: Rozwiązywanie problemów dotyczących konfiguracji
+title: Rozwiązywanie problemów z instalacją
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 358897917fff7097bc2907456f295d98ad6d431f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 326daab1f7df5f8a4ea4f74fd8890031f243f7f5
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645174"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291512"
 ---
-# <a name="troubleshooting-setup-issues"></a>Rozwiązywanie problemów dotyczących konfiguracji
-W tym temacie opisano, jak rozwiązywać problemy z Windows Communication Foundation (WCF), skonfigurować problemów.  
+# <a name="troubleshooting-setup-issues"></a>Rozwiązywanie problemów z instalacją
+W tym temacie opisano sposób rozwiązywania problemów z konfigurowaniem programu Windows Communication Foundation (WCF).  
   
-## <a name="some-windows-communication-foundation-registry-keys-are-not-repaired-by-performing-an-msi-repair-operation-on-the-net-framework-30"></a>Niektóre klucze rejestru systemu Windows Communication Foundation nie są naprawiona przez wykonanie operacji naprawy MSI na .NET Framework 3.0  
- Jeśli usuniesz żadnego z następujących kluczy rejestru:  
+## <a name="some-windows-communication-foundation-registry-keys-are-not-repaired-by-performing-an-msi-repair-operation-on-the-net-framework-30"></a>Niektóre Windows Communication Foundation klucze rejestru nie są naprawiane przez wykonanie operacji naprawy MSI na .NET Framework 3,0  
+ W przypadku usunięcia dowolnego z następujących kluczy rejestru:  
   
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelService 3.0.0.0  
   
@@ -23,56 +23,56 @@ W tym temacie opisano, jak rozwiązywać problemy z Windows Communication Founda
   
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SMSvcHost 3.0.0.0  
   
-- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC Bridge 3.0.0.0  
+- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC mostek 3.0.0.0  
   
- Klucze nie są ponownie tworzone po uruchomieniu naprawy za pomocą Instalatora programu .NET Framework 3.0 uruchomionego z **Dodaj/Usuń programy** aplet **Panelu sterowania**. Aby ponownie utworzyć te klucze poprawnie, użytkownik musi odinstalowanie i ponowne zainstalowanie programu .NET Framework 3.0.  
+ Klucze nie są ponownie tworzone w przypadku uruchomienia naprawy przy użyciu Instalatora .NET Framework 3,0 uruchomionego z apletu **Dodaj/Usuń programy** w **Panelu sterowania**. Aby poprawnie utworzyć te klucze, użytkownik musi odinstalować i ponownie zainstalować .NET Framework 3,0.  
   
-## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>Instalacja bloki uszkodzenie usługi WMI podczas instalacji pakietu .NET Framework 3.0 dostawcy WMI programu Windows Communication Foundation  
- Uszkodzenie usługi WMI mogą blokować instalację dostawcy usługi WMI do programu Windows Communication Foundation. Podczas instalacji programu Windows Communication Foundation Instalator nie mógł zarejestrować plik MOF programu WCF za pomocą składnika mofcomp.exe. Oto lista objawy:  
+## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>Usługa WMI blokuje instalację dostawcy usługi WMI Windows Communication Foundation podczas instalacji pakietu .NET Framework 3,0  
+ Uszkodzenie usługi WMI może blokować instalację dostawcy Windows Communication Foundation WMI. Podczas instalacji Instalator Windows Communication Foundation nie może zarejestrować pliku WCF. MOF przy użyciu składnika mofcomp. exe. Poniżej znajduje się lista objawów:  
   
-1. Instalacja środowiska .NET framework 3.0 zakończy się pomyślnie, ale dostawca WMI usługi WCF nie jest zarejestrowany.  
+1. Instalacja .NET Framework 3,0 zakończyła się pomyślnie, ale dostawca WMI WCF nie jest zarejestrowany.  
   
-2. Zdarzenie błędu pojawia się w dzienniku zdarzeń aplikacji, która odwołuje się problemy dotyczące rejestrowania dostawcy WMI dla usług WCF lub systemem mofcomp.exe.  
+2. W dzienniku zdarzeń aplikacji pojawia się zdarzenie błędu, które odwołuje się do problemów dotyczących rejestrowania dostawcy WMI dla programu WCF lub uruchamiania programu mofcomp. exe.  
   
-3. W pliku dziennika Instalatora o nazwie dd_wcf_retCA * w katalogu temp % % użytkownika zawiera odwołania do błędów, aby zarejestrować dostawcę WMI usługi WCF.  
+3. Plik dziennika Instalatora o nazwie dd_wcf_retCA * w katalogu% Temp% użytkownika zawiera odwołania do błędu rejestracji dostawcy WMI usługi WCF.  
   
-4. Wyjątek taki poniżej mogą być wymienione w pliku dziennika śledzenia dziennika zdarzeń lub instalacji:  
+4. Wyjątek, taki jak jeden z poniższych, może zostać wyświetlony w dzienniku zdarzeń lub w pliku dziennika śledzenia konfiguracji:  
   
-     ServiceModelReg [11:09:59:046]: System.ApplicationException: Nieoczekiwany wynik 3 wykonywania E:\WINDOWS\system32\wbem\mofcomp.exe za pomocą "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows komunikacji Foundation\ServiceModel.mof"  
+     ServiceModelReg [11:09:59:046]: System. ApplicationException: nieoczekiwany wynik 3 wykonywania E:\WINDOWS\system32\wbem\mofcomp.exe przy użyciu "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof"  
   
-     lub:  
+     oraz  
   
-     ServiceModelReg [07:19:33:843]: System.TypeInitializationException: Inicjator typu "System.Management.ManagementPath" zgłosiła wyjątek. ---> System.Runtime.InteropServices.COMException (0x80040154): Trwa pobieranie fabryki klasy COM dla składnika o identyfikatorze CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} nie powiodło się z powodu następującego błędu: 80040154.  
+     ServiceModelReg [07:19:33:843]: System. TypeInitializationException: inicjator typu dla elementu "System. Management. ManagementPath" zgłosił wyjątek. ---> System. Runtime. InteropServices. COMException (0x80040154): pobieranie fabryki klas COM dla składnika o identyfikatorze CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} nie powiodło się z powodu następującego błędu: 80040154.  
   
-     lub:  
+     oraz  
   
-     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: Nie można załadować pliku lub zestawu "C:\WINDOWS\system32\wbem\mofcomp.exe" lub jednej z jego zależności. W systemie nie można odnaleźć określonego pliku.  
+     ServiceModelReg [07:19:32:750]: System. IO. FileNotFoundException: nie można załadować pliku lub zestawu "C:\WINDOWS\system32\wbem\mofcomp.exe" lub jednej z jego zależności. System nie może znaleźć określonego pliku.  
   
-     Nazwa pliku: 'C:\WINDOWS\system32\wbem\mofcomp.exe  
+     Nazwa pliku: "C:\WINDOWS\system32\wbem\mofcomp.exe  
   
- Poniższe kroki musi występować w celu rozwiązania problemu opisanego wcześniej.  
+ Należy postępować zgodnie z poniższymi krokami, aby rozwiązać opisany wcześniej problem.  
   
-1. Uruchom [narzędzie diagnostyczne WMI, wersja 2.0](https://go.microsoft.com/fwlink/?LinkId=94685) naprawy usługi WMI. Aby uzyskać więcej informacji dotyczących używania tego narzędzia, zobacz [narzędzie diagnostyczne WMI](https://go.microsoft.com/fwlink/?LinkId=94686) tematu.  
+1. Uruchom [Narzędzie diagnostyczne WMI w wersji 2,0,](https://go.microsoft.com/fwlink/?LinkId=94685) aby naprawić usługę WMI. Aby uzyskać więcej informacji na temat korzystania z tego narzędzia, zobacz temat [Narzędzie diagnostyczne WMI](https://go.microsoft.com/fwlink/?LinkId=94686) .  
   
- Napraw instalację programu .NET Framework 3.0 za pomocą **Dodaj/Usuń programy** apletu znajduje się w **Panelu sterowania**, lub odinstalowanie/ponownie zainstalowanie programu .NET Framework 3.0.  
+ Napraw instalację .NET Framework 3,0 przy użyciu apletu **Dodaj/Usuń programy** znajdującego się w **Panelu sterowania**lub odinstaluj/ponownie zainstaluj .NET Framework 3,0.  
   
-## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>Naprawianie .NET Framework 3.0 po instalacji programu .NET Framework 3.5 spowoduje usunięcie elementów konfiguracji, które wprowadzono w programie .NET Framework 3.5 w pliku machine.config  
- Jeśli po zainstalowaniu Wykonaj naprawę środowiska .NET Framework 3.0 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], elementy konfiguracji, wynikające z [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] w pliku machine.config są usuwane. Jednak pliku web.config pozostaje bez zmian. Obejście polega na napraw [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] później za pomocą protokołu ARP lub użyj [narzędzie rejestracji usług przepływu pracy (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) z `/c` przełącznika.  
+## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>Naprawianie .NET Framework 3,0 po zainstalowaniu .NET Framework 3,5 usuwa elementy konfiguracji wprowadzone przez .NET Framework 3,5 w pliku Machine. config  
+ Jeśli nastąpi naprawa .NET Framework 3,0 po zainstalowaniu [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], elementy konfiguracji wprowadzone przez [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] w pliku Machine. config zostaną usunięte. Plik Web. config pozostaje jednak nienaruszony. Obejście polega na naprawieniu [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] po tym za pośrednictwem protokołu ARP lub użyciu [narzędzia rejestracji usługi przepływu pracy (WFServicesReg. exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) z przełącznikiem `/c`.  
   
- [Narzędzie rejestracji usług przepływu pracy (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) znajduje się w temacie %windir%\Microsoft.NET\framework\v3.5\ lub %windir%\Microsoft.NET\framework64\v3.5\  
+ [Narzędzie rejestracji usługi przepływu pracy (WFServicesReg. exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) można znaleźć pod adresem%windir%\Microsoft.NET\framework\v3.5\ lub%windir%\Microsoft.NET\framework64\v3.5\  
   
-## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>Skonfigurować usługi IIS prawidłowo hostem sieci Web WCF/WF po zainstalowaniu środowiska .NET Framework 3.5  
- Gdy [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] instalacja nie powiedzie się skonfigurować dodatkowe ustawienia konfiguracji związane z WCF IIS, rejestruje błąd w dzienniku instalacji i jest kontynuowane. Każda próba uruchomienia aplikacji WorkflowServices zakończy się niepowodzeniem, ponieważ brakuje wymaganych ustawień konfiguracji. Na przykład podczas ładowania pliku xoml lub zasady usługi może zakończyć się niepowodzeniem.  
+## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>Skonfiguruj prawidłowo usługi IIS dla programu WCF/WF webhost po zainstalowaniu .NET Framework 3,5  
+ W przypadku instalacji [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] nie można skonfigurować dodatkowych ustawień konfiguracji usług IIS związanych z usługą WCF, rejestruje błąd w dzienniku instalacji i kontynuuje działanie. Każda próba uruchomienia aplikacji obiektów WorkflowService zakończy się niepowodzeniem, ponieważ brakuje wymaganych ustawień konfiguracji. Na przykład ładowanie usługi xoml lub reguł może zakończyć się niepowodzeniem.  
   
- Aby obejść ten problem, użyj [narzędzie rejestracji usług przepływu pracy (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) z `/c` przełącznik, aby poprawnie skonfigurować mapy skryptów usług IIS na komputerze. [Narzędzie rejestracji usług przepływu pracy (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) znajduje się w temacie %windir%\Microsoft.NET\framework\v3.5\ lub %windir%\Microsoft.NET\framework64\v3.5\  
+ Aby obejść ten problem, użyj [narzędzia rejestracji usługi przepływu pracy (WFServicesReg. exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) z przełącznikiem `/c`, aby prawidłowo skonfigurować mapy skryptów usług IIS na tym komputerze. [Narzędzie rejestracji usługi przepływu pracy (WFServicesReg. exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) można znaleźć pod adresem%windir%\Microsoft.NET\framework\v3.5\ lub%windir%\Microsoft.NET\framework64\v3.5\  
   
-## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>Nie można załadować typu "System.ServiceModel.Activation.HttpModule" z zestawu "System.ServiceModel, wersja 3.0.0.0, kulturze = neutral, PublicKeyToken = b77a5c561934e089"  
- Ten błąd występuje, jeśli [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] jest zainstalowany i Aktywacja HTTP programu WCF jest włączone. Aby rozwiązać ten problem, uruchom następujące polecenie wiersza polecenia z wewnątrz wiersz polecenia programisty dla programu Visual Studio:  
+## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>Nie można załadować typu "System. ServiceModel. Activation. HttpModule" z zestawu "System. ServiceModel, Version 3.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089"  
+ Ten błąd występuje, gdy zainstalowano [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], a następnie Aktywacja HTTP WCF jest włączona. Aby rozwiązać problem, uruchom następujący wiersz polecenia z wewnątrz wiersz polecenia dla deweloperów programu Visual Studio:  
   
-```Output  
+```console
 aspnet_regiis.exe -i -enable  
 ```  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje dotyczące konfiguracji](../../../docs/framework/wcf/samples/set-up-instructions.md)
+- [Instrukcje konfiguracji](../../../docs/framework/wcf/samples/set-up-instructions.md)

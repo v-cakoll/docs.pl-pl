@@ -2,33 +2,40 @@
 title: Debugowanie przepływów pracy
 ms.date: 03/30/2017
 ms.assetid: b23b4814-ebb1-4c51-b7a9-469f4da7a96d
-ms.openlocfilehash: 12b85260f8eab87fc9b98a99ca1192fd307313d9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3947e61161b0e2108fa48fbc7e33fb7601645a1b
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915411"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291491"
 ---
 # <a name="debugging-workflows"></a>Debugowanie przepływów pracy
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]oferuje kilka opcji debugowania uruchomionych przepływów pracy w środowisku deweloperskim. Przepływy pracy mogą być debugowane w projektancie, w języku XAML i w kodzie.  
-  
-## <a name="debugging-in-the-workflow-designer"></a>Debugowanie w Projektant przepływu pracy  
- Punkty przerwania można ustawić dla działań w Projektancie przepływu pracy przez wyróżnienie działania i naciśnięcie klawisza **F9** lub menu kontekstowego działania. Wykonywanie przepływu pracy jest przerywane, gdy host przepływu pracy jest uruchamiany w trybie debugowania. Na poniższym zrzucie ekranu wykonywanie przepływu pracy jest wstrzymywane w punkcie przerwania. Aby uzyskać więcej informacji, zobacz [debugowanie przepływów pracy za pomocą Projektant przepływu pracy](/visualstudio/workflow-designer/debugging-workflows-with-the-workflow-designer).  
-  
-## <a name="debugging-in-xaml"></a>Debugowanie w języku XAML  
- Jeśli przepływ pracy został wstrzymany w punkcie przerwania w projektancie, można go również debugować w języku XAML. Aby wyświetlić punkt wykonywania w języku XAML, wybierz opcję **Widok XAML** w Projektancie przepływów pracy, gdy wykonywanie przepływu pracy jest wstrzymane. Debugowanie można przełączyć z powrotem do projektanta, otwierając ponownie przepływ pracy w Projektancie z Eksploratora rozwiązań. Aby uzyskać więcej informacji, zobacz [jak: Debuguj kod XAML przy użyciu](/visualstudio/workflow-designer/how-to-debug-xaml-with-the-workflow-designer)Projektant przepływu pracy.  
-  
-## <a name="debugging-in-code"></a>Debugowanie w kodzie  
- Punkty przerwania kodu mogą być używane [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] w taki sam sposób, w jaki mogą być używane w innych bezwzględnych aplikacjach. Kliknij lewy margines okienka kod, aby utworzyć punkt przerwania kodu, lub naciśnij klawisz **F9** , aby umieścić punkt przerwania w lokalizacji kursora.  
-  
-## <a name="attaching-to-a-workflow-process"></a>Dołączanie do procesu przepływu pracy  
- Debugowanie przepływu pracy obsługuje również korzystanie z infrastruktury programu Visual Studio w celu dołączenia do procesu. Umożliwia to autorowi przepływu pracy debugowanie przepływu pracy działającego w innym środowisku hosta, takim jak Internet Information Services (IIS) 7,0.  
-  
-## <a name="remote-debugging"></a>Debugowanie zdalne  
- Debugowanie zdalne Windows Workflow Foundation (WF) działa tak samo jak debugowanie zdalne dla innych składników programu Visual Studio. Aby uzyskać informacje na temat korzystania z debugowania [zdalnego, zobacz How to: Włącz debugowanie](https://go.microsoft.com/fwlink/?LinkId=196257)zdalne.  
-  
+
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] oferuje kilka opcji debugowania uruchomionych przepływów pracy w środowisku deweloperskim. Przepływy pracy mogą być debugowane w projektancie, w języku XAML i w kodzie.
+
+## <a name="debugging-in-the-workflow-designer"></a>Debugowanie w Projektant przepływu pracy
+
+Punkty przerwania można ustawić dla działań w Projektancie przepływu pracy przez wyróżnienie działania i naciśnięcie klawisza <kbd>F9</kbd> lub menu kontekstowego działania. Wykonywanie przepływu pracy jest przerywane, gdy host przepływu pracy jest uruchamiany w trybie debugowania. Na poniższym zrzucie ekranu wykonywanie przepływu pracy jest wstrzymywane w punkcie przerwania. Aby uzyskać więcej informacji, zobacz [debugowanie przepływów pracy za pomocą Projektant przepływu pracy](/visualstudio/workflow-designer/debugging-workflows-with-the-workflow-designer).
+
+## <a name="debugging-in-xaml"></a>Debugowanie w języku XAML
+
+Jeśli przepływ pracy został wstrzymany w punkcie przerwania w projektancie, można go również debugować w języku XAML. Aby wyświetlić punkt wykonywania w języku XAML, wybierz opcję **Widok XAML** w Projektancie przepływów pracy, gdy wykonywanie przepływu pracy jest wstrzymane. Debugowanie można przełączyć z powrotem do projektanta, otwierając ponownie przepływ pracy w Projektancie z Eksploratora rozwiązań. Aby uzyskać więcej informacji, zobacz [How to: Debug XAML with Projektant przepływu pracy](/visualstudio/workflow-designer/how-to-debug-xaml-with-the-workflow-designer).
+
+## <a name="debugging-in-code"></a>Debugowanie w kodzie
+
+Aby ustawić punkt przerwania, kliknij lewy margines okienka kod lub naciśnij klawisz <kbd>F9</kbd> z kursorem w wierszu, w którym chcesz go ustawić.
+
+## <a name="attaching-to-a-workflow-process"></a>Dołączanie do procesu przepływu pracy
+
+Debugowanie przepływu pracy obsługuje również korzystanie z infrastruktury programu Visual Studio w celu dołączenia do procesu. Umożliwia to autorowi przepływu pracy debugowanie przepływu pracy działającego w innym środowisku hosta, takim jak Internet Information Services (IIS) 7,0.
+
+## <a name="remote-debugging"></a>Debugowanie zdalne
+
+Debugowanie zdalne Windows Workflow Foundation (WF) działa tak samo jak debugowanie zdalne dla innych składników programu Visual Studio. Aby uzyskać informacje na temat korzystania z debugowania zdalnego, zobacz [How to: Enable Remote Debug](https://go.microsoft.com/fwlink/?LinkId=196257).
+
 > [!NOTE]
-> Jeśli aplikacja przepływu pracy jest ukierunkowana na architekturę x86 i jest hostowana na komputerze z 64-bitowym systemem operacyjnym, debugowanie zdalne nie będzie działać, jeśli program Visual Studio nie jest zainstalowany na komputerze zdalnym lub obiekt docelowy dla aplikacji przepływu pracy zostanie zmieniony na **Dowolny procesor**.  
-  
-## <a name="extending-the-workflow-debugging-service"></a>Rozszerzanie usługi debugowania przepływu pracy  
- Usługa debuggera przepływu pracy jest teraz publiczna i może służyć do tworzenia niestandardowych aplikacji, takich jak monitorowanie, Symulacja i debugowanie w środowisku, w którym jest ponownie hostowany. Aby uzyskać więcej informacji, zobacz <xref:System.Activities.Presentation.Debug.DebuggerService> temat.
+> Jeśli aplikacja przepływu pracy jest ukierunkowana na architekturę x86 i jest hostowana na komputerze z 64-bitowym systemem operacyjnym, debugowanie zdalne nie będzie działać, jeśli program Visual Studio nie jest zainstalowany na komputerze zdalnym lub obiekt docelowy dla aplikacji przepływu pracy zostanie zmieniony na **Dowolny procesor**.
+
+## <a name="extending-the-workflow-debugging-service"></a>Rozszerzanie usługi debugowania przepływu pracy
+
+Usługa debuggera przepływu pracy jest teraz publiczna i może służyć do tworzenia niestandardowych aplikacji, takich jak monitorowanie, Symulacja i debugowanie w środowisku, w którym jest ponownie hostowany. Aby uzyskać więcej informacji, zobacz artykuł <xref:System.Activities.Presentation.Debug.DebuggerService>.

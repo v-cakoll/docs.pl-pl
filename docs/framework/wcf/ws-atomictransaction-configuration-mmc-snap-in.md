@@ -1,23 +1,23 @@
 ---
-title: Przystawka programu MMC do konfigurowania elementu WS-AtomicTransaction
+title: Przystawka programu MMC do konfiguracji protokołu WS-AtomicTransaction
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 1fa0548e2d63562ddcb85fc6392bf5c99d67d6c7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 926332ac1873db89ce9332075380effdfdc1fc37
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916819"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291508"
 ---
-# <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Przystawka programu MMC do konfigurowania elementu WS-AtomicTransaction
+# <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Przystawka programu MMC do konfiguracji protokołu WS-AtomicTransaction
 Przystawka programu MMC Konfiguracja protokołu WS-AtomicTransaction służy do konfigurowania części ustawień protokołu WS-AtomicTransaction na maszynach lokalnych i zdalnych.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli używasz [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]programulub, przystawka MMC można znaleźć, przechodząc do **Panelu sterowania/narzędzia administracyjne/Składniki usługi/** , klikając prawym przyciskiem myszy pozycję mój komputer, a następnie wybierając pozycję Właściwości. [!INCLUDE[wxp](../../../includes/wxp-md.md)] Jest to ta sama lokalizacja, w której można skonfigurować usługę MSDTC. Opcje dostępne dla konfiguracji są pogrupowane pod kartą **WS-AT** .  
+ Jeśli używasz [!INCLUDE[wxp](../../../includes/wxp-md.md)] lub [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], przystawka MMC można znaleźć, przechodząc do **Panelu sterowania/narzędzia administracyjne/Składniki usługi/** , klikając prawym przyciskiem myszy pozycję **mój komputer**, a następnie wybierając polecenie **Właściwości**. Jest to ta sama lokalizacja, w której można skonfigurować usługę MSDTC. Opcje dostępne dla konfiguracji są pogrupowane pod kartą **WS-AT** .  
   
- W przypadku korzystania z systemu Windows Vista [!INCLUDE[lserver](../../../includes/lserver-md.md)]lub przystawki programu MMC można znaleźć, klikając przycisk **Start** `dcomcnfg.exe` , a następnie wpisując w polu **wyszukiwania** . Po otwarciu programu MMC przejdź do węzła **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** , kliknij prawym przyciskiem myszy i wybierz pozycję **Właściwości**. Opcje dostępne dla konfiguracji są pogrupowane pod kartą **WS-AT** .  
+ W przypadku korzystania z systemu Windows Vista lub [!INCLUDE[lserver](../../../includes/lserver-md.md)] można znaleźć przystawkę programu MMC, klikając przycisk **Start** i wpisując ciąg w `dcomcnfg.exe` w polu **wyszukiwania** . Po otwarciu programu MMC przejdź do węzła **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** , kliknij prawym przyciskiem myszy i wybierz pozycję **Właściwości**. Opcje dostępne dla konfiguracji są pogrupowane pod kartą **WS-AT** .  
   
- Poprzednie kroki służą do uruchomienia przystawki do konfigurowania komputera lokalnego. Jeśli chcesz skonfigurować maszynę zdalną, należy zlokalizować nazwę maszyny zdalnej w **Panelu sterowania/narzędzia administracyjne/usługi składowe/** , a następnie wykonać podobne kroki, jeśli jest uruchomiony [!INCLUDE[wxp](../../../includes/wxp-md.md)] program lub. [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] Jeśli korzystasz z systemu Windows Vista [!INCLUDE[lserver](../../../includes/lserver-md.md)]lub, wykonaj poprzednie kroki dla systemu Vista [!INCLUDE[lserver](../../../includes/lserver-md.md)]i, ale Użyj węzła **usługi Distributed Transaction Coordinator\Local DTC** w węźle komputera zdalnego.  
+ Poprzednie kroki służą do uruchomienia przystawki do konfigurowania komputera lokalnego. Aby skonfigurować maszynę zdalną, należy zlokalizować nazwę maszyny zdalnej w **Panelu sterowania/narzędzia administracyjne/usługi składowe/** , a następnie wykonać podobne czynności, jeśli jest uruchomiony program [!INCLUDE[wxp](../../../includes/wxp-md.md)] lub [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. W przypadku korzystania z systemu Windows Vista lub [!INCLUDE[lserver](../../../includes/lserver-md.md)] wykonaj poprzednie kroki dla systemu Vista i [!INCLUDE[lserver](../../../includes/lserver-md.md)], ale Użyj węzła **usługi Distributed Transaction Coordinator\Local DTC** w węźle komputera zdalnego.  
   
  Aby użyć interfejsu użytkownika dostarczonego przez narzędzie, należy zarejestrować plik WsatUI. dll, który znajduje się w następującej ścieżce:  
   
@@ -25,7 +25,7 @@ Przystawka programu MMC Konfiguracja protokołu WS-AtomicTransaction służy do 
   
  Rejestrację można wykonać za pomocą następującego polecenia.  
   
-```Output  
+```console
 regasm.exe /codebase WsatUI.dll  
 ```  
   
@@ -63,7 +63,7 @@ regasm.exe /codebase WsatUI.dll
   
  **Autoryzowane konta**  
   
- Kliknięcie przycisku **Wybierz** wywołuje edytor listy Access Control systemu Windows, w którym można określić użytkownika lub grupę, która może uczestniczyć w transakcjach WS-Atom, zaznaczając pole **Zezwalaj** lub **Odmów** w obszarze uczestnictwo. Grupa uprawnień.  
+ Kliknięcie przycisku **Wybierz** wywołuje edytor listy Access Control systemu Windows, w którym można określić użytkownika lub grupę, która może uczestniczyć w transakcjach WS-Atom, zaznaczając pole **Zezwalaj** lub **Odmów** w obszarze **uczestnictwo** . Grupa uprawnień.  
   
  **Autoryzowane certyfikaty**  
   
@@ -77,7 +77,7 @@ regasm.exe /codebase WsatUI.dll
   
  Kliknięcie przycisku **Opcje** powoduje wywołanie strony, na której można określić dodatkowe ustawienia.  
   
- Pole kombinacja **poziomu śledzenia** umożliwia wybór z dowolnej prawidłowej wartości <xref:System.Diagnostics.TraceLevel> wyliczenia. Możesz również użyć pól wyboru, aby określić, czy chcesz przeprowadzić śledzenie działań, propagację działań czy zbierać informacje osobiste.  
+ Pole kombinacja **poziomu śledzenia** umożliwia wybranie dowolnej prawidłowej wartości wyliczenia <xref:System.Diagnostics.TraceLevel>. Możesz również użyć pól wyboru, aby określić, czy chcesz przeprowadzić śledzenie działań, propagację działań czy zbierać informacje osobiste.  
   
  Możesz również określić sesje rejestrowania w polu Grupa **sesji rejestrowania** .  
   
@@ -88,6 +88,6 @@ regasm.exe /codebase WsatUI.dll
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Konfigurowanie obsługi protokołu WS-Atomic Transaction](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
-- [Narzędzie do konfiguracji elementu WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
-- [Administracja i diagnostyka](../../../docs/framework/wcf/diagnostics/index.md)
+- [Konfigurowanie obsługi transakcji WS-AT](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
+- [Narzędzie konfiguracji protokołu WS-AtomicTransaction (wsatConfig. exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [Administracja i Diagnostyka](../../../docs/framework/wcf/diagnostics/index.md)

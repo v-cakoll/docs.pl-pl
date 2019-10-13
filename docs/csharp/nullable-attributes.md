@@ -2,14 +2,14 @@
 title: Uaktualnij interfejsy API z atrybutami, aby zdefiniować oczekiwania o wartości null
 description: W tym artykule wyjaśniono motywacje i techniki umożliwiające dodawanie opisowych atrybutów do opisu stanu wartości null argumentów oraz zwracanie wartości z interfejsów API
 ms.date: 07/31/2019
-ms.openlocfilehash: b6c6be213cb920459e5f1adbe3ee822ff6ddbf33
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: fedd701fb7a3bcdff96fc1abc5451cc59c01f34f
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834195"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291318"
 ---
-# <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Aktualizowanie bibliotek do używania typów referencyjnych dopuszczających wartości null i przekazywanie reguł dopuszczających wartość null do wywoływania.
+# <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Aktualizowanie bibliotek do używania typów referencyjnych dopuszczających wartości null i przekazywanie reguł dopuszczających wartość null do wywoływania
 
 Dodanie [typów referencyjnych dopuszczających wartość null](nullable-references.md) oznacza, czy można zadeklarować, czy wartość `null` jest dozwolona dla każdej zmiennej. Zapewnia to doskonałe środowisko podczas pisania kodu. Pojawiają się ostrzeżenia, jeśli zmienna niedopuszczające wartości null może być ustawiona na `null`. Są wyświetlane ostrzeżenia, jeśli zmienna dopuszczająca wartość null nie jest sprawdzana przed usunięciem odwołania do niej. Aktualizowanie bibliotek może zająć trochę czasu, ale Payoffs. Więcej informacji udostępnianych kompilatorowi o tym, *kiedy* wartość `null` jest dozwolona lub zabroniona, będzie można uzyskać lepszych ostrzeżeń dotyczących użytkowników interfejsu API. Zacznijmy od znanego przykładu. Wyobraź sobie, że biblioteka zawiera następujący interfejs API do pobrania ciągu zasobu:
 
@@ -290,7 +290,7 @@ Oznacza to, że nie można użyć `T?` w ogólnej klasie lub deklaracji metody b
 
 Możesz chcieć ograniczyć typy używane dla argumentu typu ogólnego jako niedopuszczające wartości null. Można to zrobić przez dodanie ograniczenia `notnull` dla tego argumentu typu. Po zastosowaniu tego ograniczenia argument typu nie może być typem dopuszczającym wartość null.
 
-## <a name="conclusions"></a>Wnioski
+## <a name="conclusions"></a>Zawarte
 
 Dodanie typów referencyjnych dopuszczających wartość null zapewnia wstępne słownictwo do opisywania oczekiwań interfejsów API dla zmiennych, które mogą być `null`. Dodatkowe atrybuty zapewniają bogatszy słownictwo do opisania stanu wartości null zmiennych jako warunków wstępnych i warunki końcowe. Te atrybuty bardziej wyraźnie opisują oczekiwania i zapewniają lepszy komfort używania interfejsów API przez deweloperów.
 

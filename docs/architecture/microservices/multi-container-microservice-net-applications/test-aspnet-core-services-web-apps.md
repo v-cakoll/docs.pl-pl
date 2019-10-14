@@ -1,15 +1,15 @@
 ---
-title: Testowanie aplikacji internetowych i usług ASP.NET Core
+title: Testowanie usług ASP.NET Core i aplikacji sieci Web
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Poznaj architekturę testowania ASP.NET Core usług i aplikacji sieci Web w kontenerach.
 ms.date: 10/02/2018
-ms.openlocfilehash: 0a741fca84f456d635e1790d6be1c72e70345a24
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 042f7a6171a88025d3d4a8e37c4deceb416e5711
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296541"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291284"
 ---
-# <a name="testing-aspnet-core-services-and-web-apps"></a>Testowanie aplikacji internetowych i usług ASP.NET Core
+# <a name="testing-aspnet-core-services-and-web-apps"></a>Testowanie usług ASP.NET Core i aplikacji sieci Web
 
 Kontrolery są centralną częścią dowolnych ASP.NET Core usługi interfejsu API i aplikacji sieci Web ASP.NET MVC. W związku z tym należy mieć pewność, że zachowanie jest zamierzone dla aplikacji. Testy automatyczne mogą zapewnić Ci pewność i wykryć błędy przed osiągnięciem ich w środowisku produkcyjnym.
 
@@ -31,7 +31,7 @@ Podczas testowania jednostek akcji kontrolera Pamiętaj, aby skoncentrować się
 
 Testy jednostkowe są implementowane na podstawie platform testowych, takich jak xUnit.net, MSTest, MOQ lub NUnit. W przypadku przykładowej aplikacji eShopOnContainers korzystamy z xUnit.
 
-Podczas pisania testu jednostkowego dla kontrolera interfejsu API sieci Web, można utworzyć wystąpienie klasy kontrolera bezpośrednio przy użyciu słowa kluczowego new\#w języku C, aby test działał tak szybko, jak to możliwe. Poniższy przykład pokazuje, jak to zrobić przy użyciu [xUnit](https://xunit.github.io/) jako środowiska testowego.
+Podczas pisania testu jednostkowego dla kontrolera interfejsu API sieci Web, można utworzyć wystąpienie klasy kontrolera bezpośrednio przy użyciu słowa kluczowego New w C @ no__t-0, aby test działał tak szybko, jak to możliwe. Poniższy przykład pokazuje, jak to zrobić przy użyciu [xUnit](https://xunit.github.io/) jako środowiska testowego.
 
 ```csharp
 [Fact]
@@ -99,27 +99,27 @@ public class PrimeWebDefaultRequestShould
 }
 ```
 
-#### <a name="additional-resources"></a>Dodatkowe zasoby
+#### <a name="additional-resources"></a>Zasoby dodatkowe
 
-- **Steve Smith. Kontrolery** testowania (ASP.NET Core) \
+- **Steve Smith. Kontrolery testowania** (ASP.NET Core) \
     [https://docs.microsoft.com/aspnet/core/mvc/controllers/testing](/aspnet/core/mvc/controllers/testing)
 
-- **Steve Smith. Testowanie** integracji (ASP.NET Core) \
+- **Steve Smith. Testowanie integracji** (ASP.NET Core) \
     [https://docs.microsoft.com/aspnet/core/test/integration-tests](/aspnet/core/test/integration-tests)
 
 - **Testowanie jednostkowe w programie .NET Core przy użyciu testu dotnet** \
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
-- **xUnit.net**. Oficjalna lokacja. \
+- **xUnit.NET**. Oficjalna lokacja. \
     <https://xunit.github.io/>
 
 - **Podstawowe informacje o teście jednostkowym.** \
     [https://docs.microsoft.com/visualstudio/test/unit-test-basics](/visualstudio/test/unit-test-basics)
 
-- **Moq**. Repozytorium GitHub. \
+- **MOQ**. Repozytorium GitHub. \
     <https://github.com/moq/moq>
 
-- **NUnit**. Oficjalna lokacja. \
+- **Nunit**. Oficjalna lokacja. \
     <https://www.nunit.org/>
 
 ### <a name="implementing-service-tests-on-a-multi-container-application"></a>Implementowanie testów usługi w aplikacji wielokontenera
@@ -144,7 +144,7 @@ Testy aplikacji referencyjnych (eShopOnContainers) zostały niedawno rozbudowane
 
 Test jednostkowy i integracji na mikrousług są zawarte w folderze testowym w każdej mikrousłudze i aplikacji testy obciążenia są zawarte w folderze testowym w folderze rozwiązania, jak pokazano na rysunku 6-25.
 
-![Struktura testów w eShopOnContainers: Każda usługa ma folder "test", który zawiera testy jednostkowe i funkcjonalne. W folderze "test" rozwiązania istnieją testy funkcjonalne i test obciążenia na poziomie aplikacji.](./media/image42.png)
+![Struktura testów w eShopOnContainers: każda usługa ma folder "test", który zawiera testy jednostkowe i funkcjonalne. W folderze "test" rozwiązania istnieją testy funkcjonalne i test obciążenia na poziomie aplikacji.](./media/image42.png)
 
 **Rysunek 6-25**. Testuj strukturę folderów w eShopOnContainers
 
@@ -166,7 +166,7 @@ services:
     image: mongo
 ```
 
-**docker-compose-test.override.yml**
+**Docker-Compose-test. override. yml**
 
 ```yml
 version: '3.4'
@@ -192,13 +192,13 @@ services:
 
 Aby uruchomić testy funkcjonalne/integracji, należy najpierw uruchomić to polecenie z folderu test rozwiązania:
 
-``` console
+```console
 docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
 ```
 
 Jak widać, te pliki tworzące platformę Docker umożliwiają uruchamianie tylko mikrousług Redis, RabbitMQ, SQL Server i MongoDB.
 
-### <a name="additional-resources"></a>Dodatkowe zasoby
+### <a name="additional-resources"></a>Zasoby dodatkowe
 
 - **Testuje plik Readme** w repozytorium eShopOnContainers w witrynie GitHub \
     <https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test>
@@ -207,5 +207,5 @@ Jak widać, te pliki tworzące platformę Docker umożliwiają uruchamianie tylk
     <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/>
 
 > [!div class="step-by-step"]
-> [Poprzedni](subscribe-events.md)Następny
-> [](background-tasks-with-ihostedservice.md)
+> [Poprzedni](subscribe-events.md)
+> [dalej](background-tasks-with-ihostedservice.md)

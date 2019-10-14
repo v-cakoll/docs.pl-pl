@@ -1,17 +1,17 @@
 ---
-title: Korzystanie z serwera bazy danych uruchomionego jako kontener
+title: Korzystanie z serwera bazy danych działającego jako kontener
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Korzystasz z serwera bazy danych działającego jako kontener? tylko na potrzeby programowania! Dowiedz się, dlaczego.
 ms.date: 10/02/2018
-ms.openlocfilehash: 3e655e26be2d6132577b0494db39d9c2e8b9aacd
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a508ba734525b24e2f3f00408e2c59c8c00f1898
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039837"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291306"
 ---
-# <a name="using-a-database-server-running-as-a-container"></a>Korzystanie z serwera bazy danych uruchomionego jako kontener
+# <a name="using-a-database-server-running-as-a-container"></a>Korzystanie z serwera bazy danych działającego jako kontener
 
-Możesz mieć bazy danych (SQL Server, PostgreSQL, MySQL itp.) na zwykłych serwerach autonomicznych, w klastrach lokalnych lub w usługach PaaS Services w chmurze, takich jak Azure SQL DB. Jednak w środowiskach deweloperskich i testowych, które bazy danych działają jako kontenery są wygodne, ponieważ nie istnieje żadna zależność zewnętrzna i po prostu uruchomienie `docker-compose up` polecenia uruchamia całą aplikację. Posiadanie tych baz danych jako kontenerów jest również doskonałe dla testów integracji, ponieważ baza danych została uruchomiona w kontenerze i jest zawsze wypełniana tymi samymi przykładowymi danymi, dzięki czemu testy mogą być bardziej przewidywalne.
+Możesz mieć bazy danych (SQL Server, PostgreSQL, MySQL itp.) na zwykłych serwerach autonomicznych, w klastrach lokalnych lub w usługach PaaS Services w chmurze, takich jak Azure SQL DB. Jednak w środowiskach deweloperskich i testowych, które bazy danych działają jako kontenery są wygodne, ponieważ nie istnieje żadna zależność zewnętrzna i po prostu uruchomienie `docker-compose up` polecenie uruchamia całą aplikację. Posiadanie tych baz danych jako kontenerów jest również doskonałe dla testów integracji, ponieważ baza danych została uruchomiona w kontenerze i jest zawsze wypełniana tymi samymi przykładowymi danymi, dzięki czemu testy mogą być bardziej przewidywalne.
 
 ### <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a>SQL Server działa jako kontener z bazą danych z mikrousługą
 
@@ -29,26 +29,26 @@ Kontener SQL Server w aplikacji przykładowej jest konfigurowany przy użyciu na
       - "5434:1433"
 ```
 
-W podobny sposób, zamiast przy użyciu `docker-compose`, następujące `docker run` polecenie może uruchomić ten kontener:
+W podobny sposób, zamiast używać `docker-compose`, następujące polecenie `docker run` może uruchomić ten kontener:
 
 ```console
-  docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d microsoft/mssql-server-linux:2017-latest
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d microsoft/mssql-server-linux:2017-latest
 ```
 
-Jednak w przypadku wdrażania aplikacji z wieloma kontenerami, takich jak eShopOnContainers, wygodniejsze jest użycie `docker-compose up` polecenia, aby wdrożyć wszystkie wymagane kontenery dla aplikacji.
+Jednak w przypadku wdrażania aplikacji z wieloma kontenerami, takich jak eShopOnContainers, wygodniejsze jest używanie `docker-compose up` polecenia, aby wdrożyć wszystkie wymagane kontenery dla aplikacji.
 
-Po pierwszym uruchomieniu tego kontenera SQL Server Kontener inicjuje SQL Server przy użyciu podania hasła. Gdy SQL Server jest uruchomiony jako kontener, możesz zaktualizować bazę danych, łącząc się za pośrednictwem dowolnego zwykłego połączenia SQL, takiego jak z SQL Server Management Studio, Visual Studio lub\# C Code.
+Po pierwszym uruchomieniu tego kontenera SQL Server Kontener inicjuje SQL Server przy użyciu podania hasła. Gdy SQL Server jest uruchomiony jako kontener, możesz zaktualizować bazę danych, łącząc się za pośrednictwem dowolnego zwykłego połączenia SQL, takiego jak z SQL Server Management Studio, Visual Studio lub C @ no__t-0 Code.
 
 Aplikacja eShopOnContainers inicjuje każdą mikrousługą bazę danych z przykładowymi danymi, umieszczając je w danych podczas uruchamiania, jak wyjaśniono w poniższej sekcji.
 
 Posiadanie SQL Server działającego jako kontenera nie jest samo przydatne w przypadku pokazu, w którym może nie mieć dostępu do wystąpienia SQL Server. Jak zauważono, jest to również idealne rozwiązanie w środowiskach deweloperskich i testowych, dzięki czemu można łatwo uruchomić testy integracji zaczynające się od czystego obrazu SQL Server i znanych danych, umieszczając nowe przykładowe dane.
 
-#### <a name="additional-resources"></a>Dodatkowe zasoby
+#### <a name="additional-resources"></a>Zasoby dodatkowe
 
 - **Uruchamianie obrazu SQL Server Docker w systemie Linux, Mac lub Windows** \
     [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](/sql/linux/sql-server-linux-setup-docker)
 
-- **Łączenie i SQL Server on Linux zapytań przy użyciu narzędzia sqlcmd** \
+- **Łączenie i SQL Server on Linux zapytań za pomocą narzędzia sqlcmd** \
     [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>Umieszczanie danych testowych przy uruchamianiu aplikacji sieci Web
@@ -167,7 +167,7 @@ Redis udostępnia obraz platformy Docker z Redis. Ten obraz jest dostępny z poz
 Można bezpośrednio uruchomić kontener Docker Redis, wykonując następujące polecenie Docker CLI w wierszu polecenia:
 
 ```console
-  docker run --name some-redis -d redis
+docker run --name some-redis -d redis
 ```
 
 Obraz Redis obejmuje Uwidacznianie: 6379 (port używany przez Redis), więc łączenie kontenerów standardowych będzie automatycznie dostępne dla połączonych kontenerów.
@@ -198,5 +198,5 @@ Na koniec w pliku Docker-Compose. override. yml, The koszyk. API mikrousługi dl
 Jak wspomniano wcześniej, nazwa "koszyka mikrousług" jest rozpoznawana przez system DNS w sieci wewnętrznej platformy Docker.
 
 >[!div class="step-by-step"]
->[Poprzedni](multi-container-applications-docker-compose.md)Następny
->[](integration-event-based-microservice-communications.md)
+>[Poprzedni](multi-container-applications-docker-compose.md)
+>[dalej](integration-event-based-microservice-communications.md)

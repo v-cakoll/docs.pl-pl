@@ -3,12 +3,12 @@ title: REST i gRPC
 description: Dowiedz się więcej na temat gRPC, jego roli w aplikacjach natywnych w chmurze i jak różni się od protokołu HTTP REST
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: d888069168aee1fcfb13354f4b6f9ae2c8d1f233
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: fed8e7d86a8ddc268f1264728d9631a561c1b310
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214546"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291321"
 ---
 # <a name="rest-and-grpc"></a>REST i gRPC
 
@@ -28,7 +28,7 @@ gRPC to nowoczesne środowisko RPC, które jest lekkie i wysoce wydajne. Protok�
 - Transmisja strumieniowa jest wbudowana w protokół HTTP/2, co oznacza, że oba żądania i odpowiedzi mogą asynchronicznie przesyłać strumieniowo duże zestawy danych.
 - Łączenie gRPC i HTTP/2 powoduje znaczne zwiększenie wydajności. W [Windows Communication Foundation (WCF)](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) sprzężeniem wydajność gPRC jest zgodna i przekracza szybkość i wydajność [powiązań NetTCP](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8). Jednak w przeciwieństwie do NetTCP, gRPC nie jest ograniczone do języków firmy Microsoft, C# takich jak lub VB.NET.
 
-gRPC jest obsługiwany na większości popularnych platform, w tym Java C#, golang i NodeJS. 
+gRPC jest obsługiwany na większości popularnych platform, w tym Java C#,, golang i NodeJS. 
 
 ## <a name="protocol-buffers"></a>Bufory protokołu
 
@@ -61,7 +61,7 @@ gRPC są odpowiednie dla następujących scenariuszy:
 - Środowiska Polyglot — narzędzia gRPC obsługują większość popularnych języków programistycznych, co sprawia, że jest to dobry wybór w środowiskach wielojęzycznych.
 - Środowiska ograniczone przez sieć — komunikaty gRPC są serializowane z protobuf, formatem uproszczonego komunikatu. Komunikat gRPC jest zawsze krótszy niż odpowiedni komunikat JSON.
 
-W przypadku tworzenia tej książki większość przeglądarek ma ograniczoną obsługę gRPC. gRPC intensywnie używa funkcji protokołu HTTP/2 i żadna przeglądarka nie zapewnia poziomu kontroli wymaganego w przypadku żądań sieci Web do obsługi klienta gRPC. gRPC jest zazwyczaj używany do komunikacji wewnętrznej mikrousługi z mikrousługą. Rysunek 4-22 pokazuje prosty, ale typowy wzorzec użycia.
+W momencie pisania tej książki większość przeglądarek ma ograniczoną obsługę gRPC. gRPC intensywnie używa funkcji protokołu HTTP/2 i żadna przeglądarka nie zapewnia poziomu kontroli wymaganego w przypadku żądań sieci Web do obsługi klienta gRPC. gRPC jest zazwyczaj używany do komunikacji wewnętrznej mikrousługi z mikrousługą. Rysunek 4-22 pokazuje prosty, ale typowy wzorzec użycia.
 
 ![Wzorce użycia gRPC](./media/grpc-usage.png)
 
@@ -73,4 +73,4 @@ Patrząc na przyszłość, gRPC może odgrywać główną rolę w dethroning dom
 
 >[!div class="step-by-step"]
 >[Poprzedni](service-to-service-communication.md)
->[Następny](service-mesh-communication-infrastructure.md)
+>[dalej](service-mesh-communication-infrastructure.md)

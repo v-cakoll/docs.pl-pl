@@ -3,12 +3,12 @@ title: Definiowanie natywnego chmury
 description: Poznaj filary podstawowe, które zapewniają nimi dla systemów natywnych w chmurze
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 6a4a63f003c8ff0c7381d29f4e569838e45bd669
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 4236f0d6aca9d4348d4ead33f552f9a8a2c8c461
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183470"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291202"
 ---
 # <a name="defining-cloud-native"></a>Definiowanie natywnego chmury
 
@@ -32,7 +32,7 @@ Natywna Chmura zapewnia dużą *szybkość* i *elastyczność*. Systemy biznesow
 
 Oto kilka firm, które wdrożyły te techniki. Pomyśl o szybkości, elastyczności i skalowalności, które zostały osiągnięte.
 
-| Firmy | Systemu | 
+| Firma | Systemu | 
 | :-------- | :-------- |
 | [Netflix](https://www.infoq.com/news/2013/06/netflix/) | Ma ponad 600 usług w środowisku produkcyjnym. Wdraża setki razy dziennie. |
 | [Uber](https://eng.uber.com/micro-deploy/) | Ma 1000 usług przechowywanych w środowisku produkcyjnym. Wdraża kilka tysięcy kompilacji w każdym tygodniu. | 
@@ -40,11 +40,11 @@ Oto kilka firm, które wdrożyły te techniki. Pomyśl o szybkości, elastyczno�
 
 Jak widzisz, Netflix, Uber i WeChat uwidaczniają systemy, które składają się z setek niezależnych mikrousług. Ten styl architektoniczny umożliwia im szybkie reagowanie na warunki rynkowe. Mogą natychmiast aktualizować małe obszary aplikacji działającej na żywo, złożonej i indywidualnie skalować te obszary zgodnie z wymaganiami.
 
-Szybkość i elastyczność natywnych postanowień w chmurze na podstawie różnych czynników. Na przedniej rolę infrastruktury chmurowej. Pięć dodatkowych filarów podstawowych przedstawionych na rysunku 1-1 udostępnia również nimi dla systemów natywnych w chmurze.
+Szybkość i elastyczność natywnych postanowień w chmurze na podstawie różnych czynników. Na przedniej rolę infrastruktury chmurowej. Pięć dodatkowych filarów podstawowych przedstawionych na rysunku 1-3 udostępnia również nimi dla systemów natywnych w chmurze.
 
 ![Natywne filary w chmurze](./media/cloud-native-foundational-pillars.png)
 
-**Rysunek 1-1**. Natywne filary w chmurze
+**Rysunek 1-3**. Natywne filary w chmurze
 
 Poświęć trochę czasu, aby lepiej zrozumieć znaczenie każdego filaru.
 
@@ -54,7 +54,7 @@ Systemy natywne w chmurze w pełni wykorzystują model usługi w chmurze.
 
 Systemy, które zaprojektowano w celu rozbudowania w dynamicznym, zwirtualizowanym środowisku chmurowym, umożliwiają rozległe wykorzystanie infrastruktury obliczeniowej [platformy jako usługi (PaaS)](https://azure.microsoft.com/overview/what-is-paas/) i usług zarządzanych. Potraktują podstawową infrastrukturę jako *jednorazową* i w ciągu kilku minut, przeskalowane, przenoszone lub zniszczone na żądanie — za pośrednictwem automatyzacji.
 
-Rozważ ogólnie zaakceptowaną koncepcję [DevOps zwierząt domowych a. Bydło](https://medium.com/@Joachim8675309/devops-concepts-pets-vs-cattle-2380b5aab313). W tradycyjnym centrum danych serwery są traktowane jako *zwierzęta domowe*: maszyna fizyczna, z uwzględnieniem zrozumiałej nazwy i jej stanowiska. Możesz skalować, dodając więcej zasobów do tego samego komputera (skalowanie w górę). Jeśli serwer stanie się chory, użytkownik zostanie powracał do kondycji. Czy serwer stanie się niedostępny, wszystkie powiadomienia.
+Rozważmy powszechnie zaakceptowaną koncepcję DevOps [zwierząt domowych a bydłem](https://medium.com/@Joachim8675309/devops-concepts-pets-vs-cattle-2380b5aab313). W tradycyjnym centrum danych serwery są traktowane jako *zwierzęta domowe*: maszyna fizyczna, z uwzględnieniem zrozumiałej nazwy i jej stanowiska. Możesz skalować, dodając więcej zasobów do tego samego komputera (skalowanie w górę). Jeśli serwer stanie się chory, użytkownik zostanie powracał do kondycji. Czy serwer stanie się niedostępny, wszystkie powiadomienia.
 
 Model usługi *bydła* jest inny. Każde wystąpienie jest inicjowane w ramach maszyny wirtualnej lub kontenera. Są one identyczne i mają przypisane identyfikatory systemu, takie jak Service-01, Service-02 i tak dalej. Skalowanie następuje przez utworzenie większej liczby z nich (skalowanie w poziomie). Gdy jedna z nich jest niedostępna, nikt nie zauważy.
 
@@ -76,7 +76,7 @@ W przypadku aplikacji opartych na sieci Web wiele lekarzy traktuje ją jako soli
 
 W poniższej tabeli przedstawiono metodologię 12-czynnikową:
 
-|    |  współczynnik | Wyjaśnienie  |
+|    |  1U | Wyjaśnienie  |
 | :-------- | :-------- | :-------- |
 | 1 | Baza kodu | Pojedyncza baza kodu dla każdej mikrousługi, przechowywana we własnym repozytorium. Śledzone przy użyciu kontroli wersji, można je wdrożyć w wielu środowiskach (pytań i odpowiedzi, w środowisku produkcyjnym). |
 | 2 | Zależności | Każda mikrousługa izoluje i pakuje własne zależności, wdrażając zmiany bez wpływu na cały system. |
@@ -113,7 +113,7 @@ Jak usługa zaplecza będzie komunikować się ze sobą. Czy dozwolone są bezpo
 
 Komunikacja obejmuje szczegółowo rozdział 4, *natywne wzorce komunikacji w chmurze*.
 
-*Odporności*
+*Odporność*
 
 Architektura mikrousług przenosi system z procesu do komunikacji sieciowej. Co robią w środowisku rozproszonym, gdy usługa B nie odpowiada na wywołanie z usługi A? Co się stanie, gdy usługa C stanie się tymczasowo niedostępna, a inne usługi wywołujące stos IT stosują i obniżają wydajność systemu?
 
@@ -146,11 +146,11 @@ Zbudowany jako rozproszony zestaw małych, niezależnych usług, które współp
 
 - Składają się one ze sobą, tworząc aplikację.
 
-Rysunek 1-2 kontrast podejścia aplikacji monolitycznej z podejściem mikrousług. Należy zauważyć, jak monolitu składa się ze architektury warstwowej, która jest wykonywana w pojedynczym procesie. Zwykle zużywa relacyjną bazę danych. Podejście mikrousługowe umożliwia jednak segregowanie funkcji w niezależnych usługach obejmujących logikę i dane. Każda mikrousługa hostuje swój własny magazyn danych.
+Rysunek 1-4 kontrast podejścia aplikacji monolitycznej z podejściem mikrousług. Należy zauważyć, jak monolitu składa się ze architektury warstwowej, która jest wykonywana w pojedynczym procesie. Zwykle zużywa relacyjną bazę danych. Podejście mikrousługowe umożliwia jednak segregowanie funkcji w niezależnych usługach obejmujących logikę i dane. Każda mikrousługa hostuje swój własny magazyn danych.
 
 ![Niemonolityczne wdrożenie a mikrousługi](./media/monolithic-vs-microservices.png)
 
-**Rysunek 1-2.** Niemonolityczne wdrożenie a mikrousługi
+**Rysunek 1-4.** Niemonolityczne wdrożenie a mikrousługi
 
 Należy zauważyć, jak mikrousługi promują zasadę "jedna baza kodu, jedna aplikacja" z [aplikacji 12-składnikowej](https://12factor.net/)omówionej wcześniej w rozdziale.
 
@@ -166,7 +166,7 @@ Wcześniej w rozdziale porównano aplikację handlu elektronicznego utworzoną j
 
 - Każda mikrousługa może być skalowana niezależnie. Zamiast skalować całą aplikację jako pojedynczą jednostkę, można skalować tylko te usługi, które wymagają większej mocy obliczeniowej lub przepustowości sieci. To precyzyjne podejście do skalowania zapewnia większą kontrolę nad systemem i pomaga w zmniejszeniu kosztów ogólnych podczas skalowania części systemu, a nie wszystkich.
 
-Doskonały przewodnik dotyczący poznania mikrousług to [platforma .NET: Architektura dla kontenerów aplikacji](https://docs.microsoft.com/dotnet/standard/microservices-architecture/).NET. Książka omówieniach głębokie projektowanie i architektura mikrousług. Jest to pomocnik dla [architektury referencyjnej mikrousług](https://github.com/dotnet-architecture/eShopOnContainers) , dostępnej bezpłatnie do pobrania od firmy Microsoft.
+Doskonały przewodnik dotyczący znajomości mikrousług to [.NET mikrousługi: architektura dla kontenerów aplikacji .NET](https://docs.microsoft.com/dotnet/standard/microservices-architecture/). Książka omówieniach głębokie projektowanie i architektura mikrousług. Jest to pomocnik dla [architektury referencyjnej mikrousług](https://github.com/dotnet-architecture/eShopOnContainers) , dostępnej bezpłatnie do pobrania od firmy Microsoft.
 
 ### <a name="developing-microservices"></a>Tworzenie mikrousług
 
@@ -178,7 +178,7 @@ Program .NET Core jest wysoce wydajny i został dobrze osiągnięty w porównani
 
 Platforma .NET Core jest obsługiwana przez firmę Microsoft i społeczność programu .NET w witrynie GitHub. 
 
-## <a name="containers"></a>Kontenery
+## <a name="containers"></a>Containers
 
 Obecnie, że jest to naturalne, aby słyszeć termin *kontenera* wymieniony w dowolnej konwersacji dotyczącej *natywnej chmury*. W książce, [wzorce natywne chmury](https://www.manning.com/books/cloud-native-patterns), autor Cornelia Davis obserwuje, że "kontenery są doskonałym rozwiązaniem w przypadku oprogramowania natywnego w chmurze". Natywna platforma obliczeniowa w chmurze wprowadza mikrousługi kontenerach jako pierwszy krok w swojej [natywnej mapie w chmurze](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png) — wskazówki dla przedsiębiorstw, które rozpoczynają podróż w chmurze.
 
@@ -186,17 +186,17 @@ Konteneryzowania mikrousługa jest prosta i prosta. Kod, jego zależności i śr
 
 W razie konieczności można przekształcić obraz w uruchomione wystąpienie kontenera. Wystąpienie jest uruchamiane na dowolnym komputerze, na którym jest zainstalowany aparat [środowiska uruchomieniowego kontenera](https://kubernetes.io/docs/setup/production-environment/container-runtimes/) . W razie konieczności można korzystać z dowolnej liczby wystąpień usługi kontenera.
 
-Rysunek 1-3 przedstawia trzy różne mikrousługi, z których każdy w własnym kontenerze działa na jednym hoście.
+Rysunek 1-5 przedstawia trzy różne mikrousługi, z których każdy w własnym kontenerze działa na jednym hoście.
 
 ![Wiele kontenerów uruchomionych na hoście kontenera](./media/hosting-mulitple-containers.png)  
 
-**Rysunek 1-3**. Wiele kontenerów uruchomionych na hoście kontenera
+**Rysunek 1-5**. Wiele kontenerów uruchomionych na hoście kontenera
 
 Zwróć uwagę na to, jak każdy kontener utrzymuje własny zestaw zależności i środowiska uruchomieniowego, które mogą być różne. W tym miejscu widzimy różne wersje mikrousługi produktu uruchomione na tym samym hoście. Każdy kontener udostępnia wycinek bazowego systemu operacyjnego hosta, pamięci i procesora, ale jest odizolowany od siebie. 
 
 Zwróć uwagę na to, jak dobrze model kontenera obejmuje zasadę "zależności" z [aplikacji 12-składnikowej](https://12factor.net/).
 
-> *Współczynnik \#2 określa, że każda mikrousług izoluje i pakuje własne zależności, wdrażając zmiany bez wpływu na cały system ".*
+> *Współczynnik \#2 określa, że "Każda mikrousług izoluje i pakuje własne zależności, a zmiany nie wpływają na cały system".*
 
 Kontenery obsługują obciążenia dla systemów Linux i Windows. Chmura platformy Azure jest otwarta jednocześnie. Jest to w ciekawej postaci system Linux, a nie system Windows Server, który stał się najpopularniejszym systemem operacyjnym na platformie Azure.
 
@@ -214,30 +214,30 @@ Udostępniając podstawowy system operacyjny i zasoby hosta, kontenery mają zna
 
 Chociaż narzędzia takie jak Docker umożliwiają tworzenie obrazów i uruchamianie kontenerów, potrzebne są również narzędzia do zarządzania nimi. Zarządzanie kontenerami odbywa się przy użyciu specjalnego programu oprogramowania zwanego koordynatorem kontenera. W przypadku działania na dużą skalę organizacja kontenera jest istotna. 
 
-Rysunek 1-4 przedstawia zadania zarządzania, które zapewnia koordynatorów kontenerów.
+Rysunek 1-6 przedstawia zadania zarządzania, które zapewnia koordynatorów kontenerów.
 
 ![Co to są Koordynatory kontenerów](./media/what-container-orchestrators-do.png)
 
-**Rysunek 1-4**. Co to są Koordynatory kontenerów
+**Rysunek 1-6**. Co to są Koordynatory kontenerów
 
 W poniższej tabeli opisano typowe zadania aranżacji.
 
 |  Zadania | Wyjaśnienie  |
 | :-------- | :-------- |
-| Harmonogram | Automatyczne Inicjowanie obsługi wystąpień kontenerów.|
+| Planowanie | Automatyczne Inicjowanie obsługi wystąpień kontenerów.|
 | Koligacja/ochrona przed koligacją | Udostępniaj kontenery w pobliżu lub daleko od siebie, ułatwiając dostępność i wydajność. |
 | Monitorowanie kondycji | Automatycznie wykrywaj i Poprawiaj błędy.|
-| Pracy | Automatyczne ponowne Inicjowanie obsługi administracyjnej wystąpienia nie powiodło się.|
+| Tryb failover | Automatyczne ponowne Inicjowanie obsługi administracyjnej wystąpienia nie powiodło się.|
 | Skalowanie | Automatyczne dodanie lub usunięcie wystąpienia kontenera w celu spełnienia wymagań.|
-| Obsługa sieci | Zarządzanie nakładką sieciową na potrzeby komunikacji kontenerowej.|
+| Networking | Zarządzanie nakładką sieciową na potrzeby komunikacji kontenerowej.|
 | Odnajdowanie usług | Włącz kontenery, aby zlokalizować siebie nawzajem.|
 | Uaktualnienia stopniowe | Koordynuj uaktualnienia przyrostowe bez przestojów. Automatycznie przywracaj problematyczne zmiany.|
 
 Należy zauważyć, jak usługi Orchestrator wdrażają zasady disposability i współbieżności z [aplikacji 12-składnikowej](https://12factor.net/)omówionej wcześniej w rozdziale.
 
-> *Czynnik \#9 określa, że wystąpienia usługi powinny być jednorazowe, dzięki czemu można uzyskać szybkie uruchomienia w celu zwiększenia możliwości skalowalności i bezpiecznego zamykania systemu, aby pozostawić system w prawidłowym stanie. Kontenery platformy Docker wraz z koordynatorem niezgodne z tym wymaganiem ".*
+> *Współczynnik \#9 określa, że "wystąpienia usługi powinny być jednorazowe, dzięki czemu można uzyskać szybkie uruchomienia w celu zwiększenia możliwości skalowalności i bezpiecznego zamykania systemu, aby pozostawić system w prawidłowym stanie. Kontenery platformy Docker wraz z koordynatorem niezgodne z tym wymaganiem ".*
 
-> *Fabryka \#8 określa, że "usługi są skalowane w ramach dużej liczby niewielkich identycznych procesów (kopii), a nie do skalowania pojedynczego dużego wystąpienia na najbardziej wydajny dostępną maszynę".*
+> *Współczynnik \#8 określa, że "usługi są skalowane w ramach dużej liczby niewielkich identycznych procesów (kopii), a nie skalowanie pojedynczego dużego wystąpienia na najbardziej wydajny dostępną maszynę".*
 
 Chociaż istnieje kilka koordynatorów kontenerów, [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) stał się de facto standardem dla świata natywnego w chmurze. Jest to przenośna, rozszerzalna platforma typu "open source" do zarządzania obciążeniami kontenera. 
 
@@ -249,15 +249,15 @@ Usługa Azure Kubernetes Services zawiera szczegółowy rozdział 2, *skalowanie
 
 Systemy natywne w chmurze zależą od wielu różnych zasobów pomocniczych, takich jak magazyny danych, brokerzy komunikatów, monitorowanie i usługi tożsamości. Te usługi są znane jako [usługi zapasowe](https://12factor.net/backing-services).
 
- Rysunek 1-5 przedstawia wiele typowych usług zapasowych, których używają systemy natywne w chmurze.
+ Rysunek 1-7 przedstawia wiele typowych usług zapasowych, których używają systemy natywne w chmurze.
 
 ![Wspólne usługi zapasowe](./media/common-backing-services.png)
 
-**Rysunek 1-5**. Wspólne usługi zapasowe
+**Rysunek 1-7**. Wspólne usługi zapasowe
 
 Usługi zapasowe promują zasadę "bezstanowe" z [aplikacji 12-składnikowej](https://12factor.net/)omówionej wcześniej w rozdziale.
 
->*Współczynnik\#6* określa, że "Każda mikrousługa powinna być wykonywana we własnym procesie, odizolowana od innych uruchomionych usług. Externalize stan wymagany do usługi zapasowej, na przykład rozproszonej pamięci podręcznej lub magazynu danych ".
+>*Współczynnik \#6* określa, że "Każda mikrousługa powinna być wykonywana we własnym procesie, odizolowana od innych uruchomionych usług. Externalize stan wymagany do usługi zapasowej, na przykład rozproszonej pamięci podręcznej lub magazynu danych ".
 
 Możesz obsługiwać własne usługi zapasowe, ale następnie ponosisz odpowiedzialność za Licencjonowanie, Inicjowanie obsługi administracyjnej i zarządzanie tymi zasobami.
 
@@ -267,9 +267,9 @@ Systemy natywne w chmurze preferują zarządzane usługi zapasowe od dostawców 
 
 Najlepszym rozwiązaniem jest traktowanie usługi zapasowej jako *dołączonego zasobu*, dynamicznie powiązanej z mikrousługą z informacjami (adresem URL i poświadczeniami) przechowywanymi w konfiguracji zewnętrznej. Wskazówki te są opisane w części [12-składnikowej aplikacji](https://12factor.net/)omówionej wcześniej w rozdziale.
 
->*Fabryka\#4* określa, że usługi zapasowe powinny być udostępniane za pośrednictwem adresu URL z adresami. W ten sposób można oddzielić zasób od aplikacji, co umożliwi jego zmianę.
+>*Współczynnik \#4* określa, że usługi zapasowe powinny być udostępniane za pośrednictwem adresu URL z adresami. W ten sposób można oddzielić zasób od aplikacji, co umożliwi jego zmianę.
 
->*Współczynnik\#3* określa, że "informacje o konfiguracji są przenoszone z mikrousługi i zewnętrznie za pomocą narzędzia do zarządzania konfiguracją poza kodem".
+>*Współczynnik \#3* określa, że "informacje o konfiguracji są przenoszone z mikrousługi i zewnętrznie za pomocą narzędzia do zarządzania konfiguracją poza kodem".
 
 Za pomocą tego wzorca można dołączać i odłączać usługę zapasową bez wprowadzania zmian w kodzie. Mikrousługa można promować z poziomu funkcji pytań i odpowiedzi w środowisku przejściowym. Konfigurację mikrousług należy zaktualizować, aby wskazywała usługi zapasowe w trakcie przemieszczania i wstrzyknąć ustawienia do kontenera za pomocą zmiennej środowiskowej.
 
@@ -277,7 +277,7 @@ Dostawcy chmury dostarczają interfejsy API umożliwiające komunikowanie się z
 
 Usługi zapasowe zostały omówione szczegółowo w rozdziale 5, *wzorcach danych natywnych w chmurze*i rozdziale 4 w *natywnych wzorcach komunikacji w chmurze*.
 
-## <a name="automation"></a>Automatyzacja
+## <a name="automation"></a>Automation
 
 Jak widać, systemy natywne w chmurze uwzględniają mikrousługi, kontenery i nowoczesne projektowanie systemu, aby osiągnąć szybkość i elastyczność. Ale jest to tylko część wątku. Jak można zainicjować obsługę środowisk w chmurze, na których są uruchamiane te systemy? Jak szybko wdrażać funkcje i aktualizacje aplikacji? Jak zaokrąglić pełny obraz?
 
@@ -297,15 +297,15 @@ W artykule [co to jest infrastruktura jako kod](https://docs.microsoft.com/azure
 
 [Aplikacja 12-czynnikowa](https://12factor.net/), omówiona wcześniej, wywołuje oddzielne kroki podczas przekształcania wykonanego kodu w uruchomioną aplikację.
 
-> *Współczynnik\#5* określa, że "Każde wydanie musi wymusić ścisłe oddzielenie między kompilacją, wydaniem i etapami uruchomienia. Każdy z nich powinien być oznaczony unikatowym IDENTYFIKATORem i obsługiwać możliwość wycofywania ".
+> *Współczynnik \#5* określa, że "Każde wydanie musi wymusić ścisłe oddzielenie między kompilacją, wydaniem i etapami uruchomienia. Każdy z nich powinien być oznaczony unikatowym IDENTYFIKATORem i obsługiwać możliwość wycofywania ".
 
 Nowoczesne systemy ciągłej integracji/ciągłego wdrażania pomagają spełnić tę zasadę. Zapewniają one oddzielne kroki wdrażania i zapewniają spójny i jakościowy kod, który jest łatwo dostępny dla użytkowników. 
 
-Rysunek 1,6 pokazuje separację w procesie wdrażania.
+Rysunek 1-8 pokazuje separację w procesie wdrażania.
 
 ![Kroki wdrożenia w potoku ciągłej integracji/ciągłego wdrażania](./media/build-release-run-pipeline.png)
 
-**Rysunek 1-6**. Kroki wdrażania w potoku ciągłej integracji/ciągłego dostarczania
+**Rysunek 1-8**. Kroki wdrażania w potoku ciągłej integracji/ciągłego dostarczania
 
 Na powyższym rysunku należy zwrócić szczególną uwagę na rozdzielenie zadań. 
 
@@ -321,11 +321,11 @@ Stosując te praktyki, organizacje mają radykalnie rozwój oprogramowania. Wiel
 
 ### <a name="azure-pipelines"></a>Azure Pipelines
 
-Chmura platformy Azure obejmuje nową usługę ciągłej integracji/ciągłego dostarczania [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/), która jest częścią oferty [usługi Azure DevOps](https://azure.microsoft.com/services/devops/) pokazanej na rysunku 1-7.
+Chmura platformy Azure obejmuje nową usługę ciągłej integracji/ciągłego dostarczania [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/), która jest częścią oferty [usługi Azure DevOps](https://azure.microsoft.com/services/devops/) pokazanej na rysunku 1-9.
 
 ![Azure Pipelines w DevOps](./media/devops-components.png)
 
-**Rysunek 1-7**. Oferty usługi Azure DevOps
+**Rysunek 1-9**. Oferty usługi Azure DevOps
 
 Azure Pipelines to usługa w chmurze, która łączy ciągłą integrację (CI) i ciągłe dostarczanie (CD). Możesz automatycznie testować, kompilować i dostarczać kod do dowolnego celu.
 
@@ -340,4 +340,4 @@ Usługa Azure Pipelines obsługuje większość dostawców git i może generowa�
 
 >[!div class="step-by-step"]
 >[Poprzedni](introduction.md)
->[Następny](candidate-apps.md)
+>[dalej](candidate-apps.md)

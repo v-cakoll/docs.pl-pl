@@ -3,12 +3,12 @@ title: Aplikacje kandydujące dla chmury natywnej
 description: Dowiedz się, które typy aplikacji korzystają z podejścia natywnego w chmurze
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 6da531397e6103e5c59accf321bc5ae82153dded
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: e8d520e0a1ad5ab8854d0628daa56a390de523cd
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275819"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291223"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>Aplikacje kandydujące dla chmury natywnej
 
@@ -34,9 +34,11 @@ Następnie istnieją starsze systemy. Mimo że chcielibyśmy utworzyć nowe apli
 
 ### <a name="modernizing-legacy-apps"></a>Modernizacja starszych aplikacji
 
-Bezpłatna książka elektroniczna firmy Microsoft umożliwia [modernizację istniejących aplikacji .NET w chmurze platformy Azure i kontenery systemu Windows](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook) zapewniają wskazówki dotyczące migrowania obciążeń lokalnych do chmury. Rysunek 1-8 pokazuje, że dla modernizacji starszych aplikacji nie istnieje jedna, jednokrotna strategia dopasowania.
+Bezpłatna książka elektroniczna firmy Microsoft umożliwia [modernizację istniejących aplikacji .NET w chmurze platformy Azure i kontenery systemu Windows](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook) zapewniają wskazówki dotyczące migrowania obciążeń lokalnych do chmury. Rysunek 1-10 pokazuje, że dla modernizacji starszych aplikacji nie istnieje jedna, jednokrotna strategia dopasowania.
 
-@no__t 0Strategies do migrowania starszych obciążeń @ no__t-1**rysunek 1-8**. Strategie migracji starszych obciążeń
+![Strategie migracji starszych obciążeń](./media/strategies-for-migrating-legacy-workloads.png)
+
+**Rysunek 1-10**. Strategie migracji starszych obciążeń
 
 Wbudowane aplikacje, które nie mają krytycznego znaczenia, korzystają z szybkiej migracji podnoszenia i przesunięć ([gotowej do infrastruktury w chmurze](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas)). W tym miejscu obciążenie lokalne jest hostowane na maszynie wirtualnej opartej na chmurze bez zmian. To podejście używa [modelu IaaS (infrastruktura jako usługa)](https://azure.microsoft.com/overview/what-is-iaas/). Platforma Azure oferuje kilka narzędzi, takich jak ([Azure Migrate](https://aka.ms/azuremigrate), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)i [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/)), aby ułatwić takie przenoszenie. Chociaż ta strategia może przynieść pewne oszczędności, takie aplikacje zwykle nie zostały zaprojektowane w celu odblokowania i wykorzystania zalet chmury obliczeniowej. 
 

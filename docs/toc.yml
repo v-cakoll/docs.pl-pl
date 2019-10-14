@@ -140,7 +140,7 @@
       href: standard/design-guidelines/
     - name: Dokumenty i dane XML
       href: standard/data/xml/
-    - name: Bezpieczeństwo
+    - name: Zabezpieczenia
       href: standard/security/
     - name: Serializacja
       href: standard/serialization/
@@ -151,7 +151,7 @@
   items:
     - name: Informacje o platformie .NET Core
       href: core/about.md
-    - name: Rozpoczęcie pracy
+    - name: Wprowadzenie
       href: core/get-started.md
       items:
         - name: 'Wprowadzenie do języka C# i programu Visual Studio Code'
@@ -302,7 +302,7 @@
           href: /visualstudio/test/live-unit-testing-start
     - name: Ciągła integracja
       href: core/tools/using-ci-with-cli.md
-    - name: Obsługa wersji
+    - name: Przechowywanie wersji
       href: core/versions/index.md
       items:
         - name: Wybieranie wersji platformy .NET Core
@@ -473,9 +473,9 @@
 - name: .NET framework — przewodnik
   href: framework/index.md
   items:
-    - name: Co nowego
+    - name: Nowości
       href: framework/whats-new/
-    - name: Rozpoczęcie pracy
+    - name: Rozpocznij
       href: framework/get-started/
     - name: Przewodnik instalacji
       href: framework/install/
@@ -519,7 +519,7 @@
           href: framework/security/
         - name: 'Debugowanie, śledzenie i profilowanie'
           href: framework/debug-trace-profile/
-        - name: Wdrożenie
+        - name: wdrażania
           href: framework/deployment/
         - name: Wydajność
           href: framework/performance/
@@ -542,7 +542,7 @@
 - name: 'Przewodnik dla języka C#'
   href: csharp/index.md
   items:
-    - name: Rozpoczęcie pracy
+    - name: Rozpocznij
       href: csharp/getting-started/
     - name: Samouczki
       items:
@@ -552,7 +552,7 @@
           items:
             - name: Wybieranie pierwszej lekcji
               href: csharp/tutorials/intro-to-csharp/index.md
-            - name: Witaj świecie
+            - name: Hello world
               href: csharp/tutorials/intro-to-csharp/hello-world.yml
             - name: 'Liczby w języku C#'
               href: csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml
@@ -580,8 +580,8 @@
           href: csharp/tutorials/exploration/interpolated-strings-local.md
         - name: Zaawansowane scenariusze dotyczące interpolacji ciągów
           href: csharp/tutorials/string-interpolation.md
-        - name: Bezpieczne aktualizowanie interfejsów przy użyciu domyślnych elementów członkowskich interfejsu
-          href: csharp/tutorials/default-interface-members-versions.md
+        - name: Bezpieczne aktualizowanie interfejsów przy użyciu domyślnych metod interfejsu
+          href: csharp/tutorials/default-interface-methods-versions.md
         - name: Eksplorowanie indeksów i zakresów
           href: csharp/tutorials/ranges-indexes.md
         - name: Praca z typami referencyjnymi dopuszczającymi wartość null
@@ -592,7 +592,7 @@
           href: csharp/tutorials/generate-consume-asynchronous-stream.md
         - name: Zwiększanie możliwości danych za pomocą dopasowania wzorca
           href: csharp/tutorials/pattern-matching.md
-        - name: Aplikacja konsolowa
+        - name: Aplikacja konsoli
           href: csharp/tutorials/console-teleprompter.md
         - name: Klient REST
           href: csharp/tutorials/console-webapiclient.md
@@ -632,7 +632,7 @@
           href: csharp/nullable-references.md
         - name: Opisywanie interfejsów API dopuszczających wartość null przy użyciu atrybutów i ograniczeń
           href: csharp/nullable-attributes.md
-        - name: Przestrzenie nazw
+        - name: Namespaces
           href: csharp/programming-guide/namespaces/index.md
         - name: Typy podstawowe
           href: csharp/basic-types.md
@@ -652,7 +652,7 @@
           href: csharp/programming-guide/statements-expressions-operators/lambda-expressions.md
         - name: Właściwości
           href: csharp/properties.md
-        - name: Indexers (Indeksatory)
+        - name: Indeksatory
           href: csharp/indexers.md
         - name: Odrzucenia
           href: csharp/discards.md
@@ -708,7 +708,7 @@
           href: csharp/programming-guide/interop/index.md
         - name: Dokumentowanie kodu
           href: csharp/codedoc.md
-        - name: Obsługa wersji
+        - name: Przechowywanie wersji
           href: csharp/versioning.md
     - name: 'Tematy z instrukcjami dotyczącymi języka C#'
       items:
@@ -739,7 +739,7 @@
 - name: 'Podręcznik języka F#'
   href: fsharp/index.md
   items:
-    - name: Rozpoczęcie pracy
+    - name: Rozpocznij
       href: fsharp/get-started/index.md
       items:
         - name: 'Instalowanie języka F#'
@@ -947,7 +947,7 @@
           href: fsharp/language-reference/attributes.md
         - name: 'Zarządzanie zasobami: use — Słowo kluczowe'
           href: fsharp/language-reference/resource-management-the-use-keyword.md
-        - name: Przestrzenie nazw
+        - name: Namespaces
           href: fsharp/language-reference/namespaces.md
         - name: Moduły
           href: fsharp/language-reference/modules.md
@@ -1014,7 +1014,7 @@
   items:
     - name: Co nowego w języku Visual Basic
       href: visual-basic/getting-started/whats-new.md
-    - name: Rozpoczęcie pracy
+    - name: Rozpocznij
       href: visual-basic/getting-started/index.md
       items:
         - name: Visual Basic — przełomowe zmiany w Visual Studio
@@ -1108,7 +1108,7 @@
           href: visual-basic/programming-guide/program-structure/main-procedure.md
         - name: Referencje i instrukcja Imports
           href: visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md
-        - name: Przestrzenie nazw
+        - name: Namespaces
           href: visual-basic/programming-guide/program-structure/namespaces.md
         - name: Konwencje nazewnictwa
           href: visual-basic/programming-guide/program-structure/naming-conventions.md
@@ -1391,7 +1391,7 @@
               href: visual-basic/language-reference/modifiers/byref.md
             - name: ByVal
               href: visual-basic/language-reference/modifiers/byval.md
-            - name: Domyślne
+            - name: Domyślny
               href: visual-basic/language-reference/modifiers/default.md
             - name: Friend
               href: visual-basic/language-reference/modifiers/friend.md
@@ -1399,7 +1399,7 @@
               href: visual-basic/language-reference/modifiers/in-generic-modifier.md
             - name: Iterator
               href: visual-basic/language-reference/modifiers/iterator.md
-            - name: Klucz
+            - name: Key
               href: visual-basic/language-reference/modifiers/key.md
             - name: Moduł
               href: visual-basic/language-reference/modifiers/module-keyword.md
@@ -1425,7 +1425,7 @@
               href: visual-basic/language-reference/modifiers/overrides.md
             - name: ParamArray
               href: visual-basic/language-reference/modifiers/paramarray.md
-            - name: Częściowo
+            - name: Częściowe
               href: visual-basic/language-reference/modifiers/partial.md
             - name: Private
               href: visual-basic/language-reference/modifiers/private.md
@@ -1441,9 +1441,9 @@
               href: visual-basic/language-reference/modifiers/readonly.md
             - name: Shadows
               href: visual-basic/language-reference/modifiers/shadows.md
-            - name: Udostępnione
+            - name: Shared
               href: visual-basic/language-reference/modifiers/shared.md
-            - name: Statyczny
+            - name: Static
               href: visual-basic/language-reference/modifiers/static.md
             - name: Unicode
               href: visual-basic/language-reference/modifiers/unicode.md
@@ -1635,7 +1635,7 @@
                   href: visual-basic/language-reference/operators/xor-operator.md
         - name: Właściwości
           href: visual-basic/language-reference/properties.md
-        - name: Zapytania
+        - name: Kwerendy
           href: visual-basic/language-reference/queries/index.md
           items:
             - name: 'Aggregate, klauzula'

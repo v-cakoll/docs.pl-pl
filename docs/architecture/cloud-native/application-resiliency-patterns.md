@@ -2,12 +2,12 @@
 title: Wzorce odporności aplikacji
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Wzorce odporności aplikacji
 ms.date: 06/30/2019
-ms.openlocfilehash: 8455584fe1d5b02f6d9543c3bad32cca7369c158
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 67ae20f14a67f3a96d6c74cad727afe680ff3178
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183722"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315946"
 ---
 # <a name="application-resiliency-patterns"></a>Wzorce odporności aplikacji
 
@@ -27,7 +27,7 @@ Zwróć uwagę na to, jak na poprzednim rysunku zasady odporności dotyczą komu
 
 **Rysunek 6-3**. Kody stanu HTTP do ponowienia próby
 
-Zainteresowany Czy chcesz ponowić próbę wykonania kodu stanu HTTP 403 — Dostęp zabroniony? Nie. W tym miejscu system działa prawidłowo, ale informuje obiekt wywołujący, że nie ma uprawnień do wykonywania żądanych operacji. Należy zachować ostrożność, aby ponowić próbę tylko operacji spowodowanych błędami.
+Pytanie: Czy chcesz ponowić próbę wykonania kodu stanu HTTP 403 — Dostęp zabroniony? Nie. W tym miejscu system działa prawidłowo, ale informuje obiekt wywołujący, że nie ma uprawnień do wykonywania żądanych operacji. Należy zachować ostrożność, aby ponowić próbę tylko operacji spowodowanych błędami.
 
 Zgodnie z zaleceniami w rozdziale 1 programiści firmy Microsoft tworzący aplikacje natywne w chmurze powinni kierować platformą .NET Core. W wersji 2,1 wprowadzono bibliotekę [HTTPClientFactory](https://www.stevejgordon.co.uk/introduction-to-httpclientfactory-aspnetcore) do tworzenia wystąpień klienta http na potrzeby współpracy z zasobami opartymi na adresach URL. Zastąpienie oryginalnej klasy HTTPClient, Klasa Factory obsługuje wiele ulepszonych funkcji, jednym z nich jest [ścisła integracja](../microservices/implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md) z biblioteką odporności Polly. Dzięki niej można łatwo definiować zasady odporności w klasie uruchamiania aplikacji w celu obsługi częściowych awarii i problemów z łącznością.
 
@@ -45,7 +45,7 @@ W rozproszonym środowisku natywnym w chmurze wywołania usług i zasobów w chm
 
 Na poprzednim rysunku został zaimplementowany wzorzec ponawiania prób dla operacji żądania. Jest skonfigurowany tak, aby zezwalał do czterech ponownych prób przed niepowodzeniem z interwałem wycofywania (czas oczekiwania), zaczynając od dwóch sekund, co wykładniczo podwaja się dla każdej kolejnej próby.
 
-- Pierwsze wywołanie nie powiodło się i zwraca kod stanu HTTP 500. Aplikacja czeka dwie sekundy i rozwiąże wywołanie.
+- Pierwsze wywołanie nie powiodło się i zwraca kod stanu HTTP 500. Aplikacja czeka dwie sekundy i ponawia próbę wywołania.
 - Drugie wywołanie kończy się niepowodzeniem i zwraca kod stanu HTTP 500. Aplikacja teraz podwaja interwał wycofywania do czterech sekund i ponawia próbę wywołania.
 - Na koniec trzecie wywołanie powiodło się.
 - W tym scenariuszu próba wykonania operacji ponawiania próbuje się do czterech ponownych prób podczas podwajania czasu trwania wycofywania przed zakończeniem wywołania.

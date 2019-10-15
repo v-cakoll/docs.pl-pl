@@ -3,12 +3,12 @@ title: Komunikacja między usługami
 description: Dowiedz się, jak mikrousługi zaplecza w chmurze komunikują się z innymi mikrousługami zaplecza.
 author: robvet
 ms.date: 09/09/2019
-ms.openlocfilehash: e9f27309fd6b03830ab3098d0fb08a7ecf5c0eaa
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 0917ae8bf38b117619cec63411ea8f4f084ae6f2
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214391"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315865"
 ---
 # <a name="service-to-service-communication"></a>Komunikacja między usługami
 
@@ -50,7 +50,7 @@ Wykonywanie sporadycznego żądania, które powoduje, że jedno bezpośrednie wy
 
 **Rysunek 4-9**. Łączenie kwerend HTTP
 
-Można wyobrazić ryzyko związane z projektem pokazanym na powyższym obrazie. Co się stanie w \#przypadku niepowodzenia kroku 3? Lub krok \#8 kończy się niepowodzeniem? Jak odzyskać? Co zrobić, \#Jeśli krok 6 jest wolny, ponieważ podstawowa usługa jest zajęta? Jak kontynuować? Nawet jeśli wszystkie działania działają prawidłowo, należy wziąć pod uwagę opóźnienie tego wywołania, czyli sumę opóźnienia każdego kroku.
+Można wyobrazić ryzyko związane z projektem pokazanym na powyższym obrazie. Co się stanie w przypadku niepowodzenia kroku \#3? Lub krok \#8 kończy się niepowodzeniem? Jak odzyskać? Co zrobić, jeśli krok \#6 jest wolny, ponieważ podstawowa usługa jest zajęta? Jak kontynuować? Nawet jeśli wszystkie działania działają prawidłowo, należy wziąć pod uwagę opóźnienie tego wywołania, czyli sumę opóźnienia każdego kroku.
 
 Duży stopień sprzęgania w poprzednim obrazie sugeruje, że usługi nie były optymalnie modelowane. Behoove zespół do ponownego odwiedzania projektu.
 
@@ -90,7 +90,7 @@ Najczęściej producenci nie wymagają odpowiedzi i mogą ją *uruchamiać i zap
 
 Kolejka komunikatów to pośrednik pośredniczący, za pomocą którego producent i odbiorca przekazują komunikat. Kolejki implementują wzorzec komunikatów typu punkt-punkt. Producent wie, gdzie należy odpowiednio wysłać polecenie i trasy. Kolejka gwarantuje, że komunikat jest przetwarzany dokładnie jednym z wystąpień konsumenta odczytywanych z kanału. W tym scenariuszu Usługa producent lub konsument może skalować w poziomie bez wpływu na inne. Technologie te mogą być również różne po obu stronach, co oznacza, że firma Microsoft może korzystać z mikrousługi w języku Java wywołującej mikrousługę [golang](https://golang.org) . 
 
-W rozdziale 1 zostały omówione *usługi zapasowe*. Usługi zapasowe są zasobami dodatkowymi, na których zależą systemy natywne w chmurze. Kolejki komunikatów to usługi zapasowe. Chmura systemu Azure obsługuje dwa typy kolejek komunikatów, których systemy natywne w chmurze mogą wykorzystać do implementacji komunikatów poleceń: Kolejki usługi Azure Storage i kolejki Azure Service Bus.
+W rozdziale 1 zostały omówione *usługi zapasowe*. Usługi zapasowe są zasobami dodatkowymi, na których zależą systemy natywne w chmurze. Kolejki komunikatów to usługi zapasowe. Chmura systemu Azure obsługuje dwa typy kolejek komunikatów, których systemy natywne w chmurze mogą wykorzystać do implementacji komunikatów poleceń: kolejki usługi Azure Storage i kolejki Azure Service Bus.
 
 ### <a name="azure-storage-queues"></a>Kolejki usługi Azure Storage
 
@@ -134,7 +134,7 @@ Dwie więcej funkcji przedsiębiorstwa to partycjonowanie i sesje. Kolejka konwe
 
 [Sesje Service Bus](https://codingcanvas.com/azure-service-bus-sessions/) zapewniają sposób grupowania komunikatów związanych z grupą. Wyobraź sobie scenariusz przepływu pracy, w którym wiadomości muszą być przetwarzane razem, a operacja zakończona na końcu. Aby skorzystać z zalet, należy jawnie włączyć sesje dla kolejki, a każdy powiązany komunikat musi zawierać ten sam identyfikator sesji.
 
-Istnieją jednak pewne istotne zastrzeżenia: Rozmiar kolejek Service Bus jest ograniczony do 80 GB, co jest znacznie mniejsze niż dostępne w kolejkach magazynu. Ponadto kolejki Service Bus powodują koszt podstawowy i opłaty za operację.
+Istnieją jednak pewne istotne zastrzeżenia: rozmiar kolejek Service Bus jest ograniczony do 80 GB, co jest znacznie mniejsze niż dostępne w kolejkach magazynu. Ponadto kolejki Service Bus powodują koszt podstawowy i opłaty za operację.
 
 Rysunek 4-14 przedstawia architekturę wysokiego poziomu kolejki Service Bus.
 
@@ -166,9 +166,9 @@ Dzięki zdarzeniom przechodźmy od technologii kolejkowania do *tematów*. [Tema
 
 **Rysunek 4-16**. Architektura tematu
 
-Na powyższym rysunku wydawcy wysyłają komunikaty do tematu. Na koniec Subskrybenci odbierają wiadomości z subskrypcji. W środku tematu przekazuje komunikaty do subskrypcji na podstawie zestawu *reguł*, które są wyświetlane w ciemnych polach. Reguły działają jako filtr, który przekazuje dalej określone wiadomości do subskrypcji. W tym miejscu zostanie wysłane zdarzenie "Zamów" do subskrypcji \#1 i subskrypcji \#3, ale nie do subskrypcji \#2. Do subskrypcji \#2 i subskrypcji \#3 zostanie wysłane zdarzenie "OrderCompleted".
+Na powyższym rysunku wydawcy wysyłają komunikaty do tematu. Na koniec Subskrybenci odbierają wiadomości z subskrypcji. W środku tematu przekazuje komunikaty do subskrypcji na podstawie zestawu *reguł*, które są wyświetlane w ciemnych polach. Reguły działają jako filtr, który przekazuje dalej określone wiadomości do subskrypcji. W tym miejscu zostanie wysłane zdarzenie "onOrder" do subskrypcji \#1 i subskrypcji \#3, ale nie do subskrypcji \#2. Zdarzenie "OrderCompleted" zostanie wysłane do subskrypcji \#2 i subskrypcji \#3.
 
-Chmura platformy Azure obsługuje dwie różne usługi tematu: Tematy Azure Service Bus i Azure EventGrid.
+Chmura systemu Azure obsługuje dwie różne usługi tematu: Tematy Azure Service Bus i Azure EventGrid.
 
 ### <a name="azure-service-bus-topics"></a>Tematy Azure Service Bus
 
@@ -208,19 +208,19 @@ Event Grid to w pełni zarządzana usługa w chmurze bezserwerowej. Dynamicznie 
 
 ### <a name="streaming-messages-in-the-azure-cloud"></a>Przesyłanie strumieniowe komunikatów w chmurze platformy Azure
 
-Azure Service Bus i Event Grid zapewniają doskonałą pomoc techniczną dla aplikacji, które uwidaczniają pojedyncze, dyskretne zdarzenia, takie jak nowy dokument został wstawiony do Cosmos DB). Ale co zrobić, jeśli system natywny w chmurze musi przetworzyć *strumień powiązanych zdarzeń*? [Strumienie zdarzeń](https://msdn.microsoft.com/magazine/dn904671.aspx?f=255&MSPPError=-2147217396) są bardziej skomplikowane. Są one zazwyczaj uporządkowane według czasu, wzajemnie powiązane i muszą być przetwarzane jako Grupa.
+Azure Service Bus i Event Grid zapewniają doskonałą pomoc techniczną dla aplikacji, które uwidaczniają pojedyncze, dyskretne zdarzenia, takie jak nowy dokument został wstawiony do Cosmos DB. Ale co zrobić, jeśli system natywny w chmurze musi przetworzyć *strumień powiązanych zdarzeń*? [Strumienie zdarzeń](https://msdn.microsoft.com/magazine/dn904671) są bardziej skomplikowane. Są one zazwyczaj uporządkowane według czasu, wzajemnie powiązane i muszą być przetwarzane jako Grupa.
 
 [Azure Event Hub](https://azure.microsoft.com/services/event-hubs/) to usługa przesyłania strumieniowego danych i usługi pozyskiwania zdarzeń, która gromadzi, przekształca i zapisuje zdarzenia. Jest to dostrajane do przechwytywania danych przesyłanych strumieniowo, takich jak ciągłe powiadomienia o zdarzeniach emitowane z kontekstu telemetrii. Usługa jest wysoce skalowalna i może przechowywać i [przetwarzać miliony zdarzeń na sekundę](https://docs.microsoft.com/azure/event-hubs/event-hubs-about). Pokazano na rysunku 4-18, często są to drzwi czołowe dla potoku zdarzeń, oddzielania strumienia pozyskiwania od zużycia zdarzeń.
 
-![Azure Event Hub](./media/azure-event-hub.png)
+![Centrum zdarzeń platformy Azure](./media/azure-event-hub.png)
 
-**Rysunek 4-18**. Azure Event Hub
+**Rysunek 4-18**. Centrum zdarzeń platformy Azure
 
 Centrum zdarzeń obsługuje małe opóźnienia i konfigurowalne przechowywanie czasu. W przeciwieństwie do kolejek i tematów Event Hubs zachować dane zdarzenia po ich odczytaniu przez konsumenta. Ta funkcja umożliwia innym usługom analitycznym danych, zarówno wewnętrznym, jak i zewnętrznym, odtwarzanie danych w celu dalszej analizy. Zdarzenia przechowywane w centrum zdarzeń są usuwane dopiero po upływie okresu przechowywania, który jest domyślnie jeden dzień, ale konfigurowalne.
 
 Centrum zdarzeń obsługuje typowe protokoły publikowania zdarzeń, w tym HTTPS i AMQP. Obsługuje także Kafka 1,0. [Istniejące aplikacje Kafka mogą komunikować się z centrum zdarzeń](https://docs.microsoft.com/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) przy użyciu protokołu Kafka, co zapewnia alternatywę dla zarządzania dużymi klastrami Kafka. Wiele systemów natywnych dla chmury "open source" obejmuje Kafka.
 
-Event Hubs implementuje przesyłanie strumieniowe komunikatów za pomocą [partycjonowanego modelu konsumenta](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) , w którym każdy odbiorca odczytuje tylko konkretny podzbiór lub partycję strumienia komunikatów. Ten wzorzec zapewnia nieogromne skalowanie w poziomie na potrzeby przetwarzania zdarzeń oraz udostępnia inne funkcje ukierunkowane na przesyłanie strumieniowe, które są niedostępne w kolejkach i tematach. Partycja to uporządkowana sekwencja zdarzeń przechowywana w centrum zdarzeń. Po nadejściu nowszych zdarzeń są one dodawane na końcu tej sekwencji. Rysunek 4-19 pokazuje partycjonowanie w centrum zdarzeń.
+Event Hubs implementuje przesyłanie strumieniowe komunikatów za pomocą [partycjonowanego modelu konsumenta](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) , w którym każdy odbiorca odczytuje tylko konkretny podzbiór lub partycję strumienia komunikatów. Ten wzorzec zapewnia nieogromne skalowanie w poziomie na potrzeby przetwarzania zdarzeń oraz udostępnia inne funkcje ukierunkowane na przesyłanie strumieniowe, które są niedostępne w kolejkach i tematach. Partycja to uporządkowana sekwencja zdarzeń, które są przechowywane w centrum zdarzeń. Po nadejściu nowszych zdarzeń są one dodawane na końcu tej sekwencji. Rysunek 4-19 pokazuje partycjonowanie w centrum zdarzeń.
 
 ![Partycjonowanie centrum zdarzeń](./media/event-hub-partitioning.png)
 

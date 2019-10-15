@@ -2,12 +2,12 @@
 title: Modernizowanie cyklu życia aplikacji za pomocą potoków ciągłej integracji/ciągłego wdrażania i metodyki DevOps w chmurze
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Modernizacja cyklu życia aplikacji za pomocą potoków ciągłej integracji i ciągłego wdrażania oraz narzędzi DevOps w chmurze
 ms.date: 04/30/2018
-ms.openlocfilehash: 4e4436ac4a622a82cc990b977b03eeae95ca9368
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 75ac3fa06f442570a0a5043a88409b3fdebb5810
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181907"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318567"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Modernizowanie cyklu życia aplikacji za pomocą potoków ciągłej integracji/ciągłego wdrażania i metodyki DevOps w chmurze
 
@@ -27,7 +27,7 @@ Aby nadal ułatwiać elastyczność wdrażania, narzędzia te zapewniają doskon
 
 Rysunek 4-12 przedstawia potok ciągłego wdrażania, który jest wdrażany w klastrze Kubernetes w Azure Container Service.
 
-![Azure DevOps Services potok ciągłego wdrażania, wdrażanie w klastrze Kubernetes](./media/image12.png)
+![Zrzut ekranu przedstawiający Azure DevOps Services wdrożenie w klastrze Kubernetes.](./media/modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud/deploy-mvc-app-container-kubernetes.png)
 
 **Rysunek 4-12.** Azure DevOps Services potok ciągłego wdrażania, wdrażanie w klastrze Kubernetes
 

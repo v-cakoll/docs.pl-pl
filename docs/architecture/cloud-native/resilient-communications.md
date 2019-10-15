@@ -2,12 +2,12 @@
 title: Komunikacja odporna
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Komunikacja odporna
 ms.date: 06/30/2019
-ms.openlocfilehash: d7fd4552059f527ad5166dcb6be04248bfad8e4a
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 324f5426af1c892db73aa6fc2336a19b7a8e499e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214495"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315803"
 ---
 # <a name="resilient-communications"></a>Komunikacja odporna
 
@@ -20,7 +20,7 @@ W tej książce evangelized się korzyści związane z przechodzeniem poza trady
 - *Odporności.* Jak zarządzać awariami krótko-i zachować stabilność systemu?
 - *Równoważenie obciążenia.* Jak ruch przychodzący jest dystrybuowany między wieloma wystąpieniami usługi?
 - *Bezpieczeństw.* Jak są problemy z bezpieczeństwem, takie jak szyfrowanie na poziomie transportu i zarządzanie certyfikatami?
-- \* Monitorowanie rozproszone. -Jak skorelować i przechwytywać możliwości śledzenia i monitorowania pojedynczego żądania w wielu usługach korzystających z usług?
+- *Monitorowanie rozproszone.* -Jak skorelować i przechwytywać możliwości śledzenia i monitorowania pojedynczego żądania w wielu usługach korzystających z usług?
 
 Chociaż te problemy mogą być rozwiązywane z różnymi bibliotekami i strukturami, implementacja ich wewnątrz bazy kodu może być kosztowna, złożona i czasochłonna. Ponadto można dokończyć rozwiązanie, w którym zagadnienia dotyczące infrastruktury są połączone z logiką biznesową.
 
@@ -34,7 +34,7 @@ Lepszym rozwiązaniem jest uwzględnienie nowej i szybko rozwijanej technologii 
 
 Na poprzedniej ilustracji należy zwrócić uwagę na to, jak serwer proxy przechwytuje i zarządza komunikacją między mikrousługami i klastrem.
 
-Siatka usługi jest logicznie dzielona na dwa różne składniki: Płaszczyzna [danych](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc) i [płaszczyzna kontroli](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc). Na rysunku 6-10 przedstawiono te składniki i ich obowiązki.
+Siatka usługi jest logicznie dzielona na dwa różne składniki: [płaszczyzna danych](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc) i [płaszczyzna kontroli](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc). Na rysunku 6-10 przedstawiono te składniki i ich obowiązki.
 
 ![Sterowanie siatką usług i płaszczyzna danych](./media/istio-control-and-data-plane.png)
 

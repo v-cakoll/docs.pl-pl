@@ -2,12 +2,12 @@
 title: Scenariusze migracji do chmury hybrydowej
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Migrowanie do scenariuszy chmury hybrydowej
 ms.date: 04/30/2018
-ms.openlocfilehash: 313608c41427b3833bbc873398595ceb37bd7c7d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 5f0819495080bc29ed1239b4a7ab8af31141881b
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373948"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318465"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Scenariusze migracji do chmury hybrydowej
 
@@ -25,21 +25,21 @@ Azure Stack to platforma chmury hybrydowej, która umożliwia dostarczanie usłu
 
 Rysunek 4-13 zawiera omówienie prawdziwej platformy chmury hybrydowej oferowanej przez firmę Microsoft.
 
-![Platforma firmy Microsoft w chmurze hybrydowej z Azure Stack i platformą Azure](./media/image13.jpg)
+![Diagram platformy firmy Microsoft w chmurze hybrydowej z Azure Stack i platformą Azure.](./media/migrate-to-hybrid-cloud-scenarios/microsoft-hybrid-cloud-platform.png)
 
 **Rysunek 4-13.** Platforma firmy Microsoft w chmurze hybrydowej z Azure Stack i platformą Azure
 
 Azure Stack jest oferowana w dwóch opcjach wdrażania, aby zaspokoić Twoje potrzeby:
 
-- Zintegrowane systemy usługi Azure Stack
+- Systemy Azure Stack zintegrowane
 
-- Zestaw Azure Stack Development Kit
+- Azure Stack Development Kit
 
-### <a name="azure-stack-integrated-systems"></a>Zintegrowane systemy usługi Azure Stack
+### <a name="azure-stack-integrated-systems"></a>Systemy Azure Stack zintegrowane
 
 Systemy Azure Stack zintegrowane są oferowane przez partnerstwo partnerów firmy Microsoft i sprzętu. Partnerstwo tworzy rozwiązanie, które oferuje innowacyjność w chmurze, która jest zrównoważona prostoty zarządzania. Ponieważ Azure Stack jest oferowana jako zintegrowany system sprzętu i oprogramowania, uzyskuje się odpowiednią ilość elastyczności i kontroli, a jednocześnie wdraża innowacje z chmury. Azure Stack zakres zintegrowanych systemów w rozmiarze od 4 do 12 węzłów i są wspólnie obsługiwane przez partnera sprzętowego i firmę Microsoft. Użyj Azure Stack zintegrowanych systemów, aby zaimplementować nowe scenariusze dla obciążeń produkcyjnych.
 
-### <a name="azure-stack-development-kit"></a>Zestaw Azure Stack Development Kit
+### <a name="azure-stack-development-kit"></a>Azure Stack Development Kit
 
 Microsoft Azure Stack Development Kit to wdrożenie z jednym węzłem Azure Stack, którego można użyć do obliczenia i poznania Azure Stack. Możesz również użyć Azure Stack Development Kit jako środowiska deweloperskiego, w którym można opracowywać przy użyciu interfejsów API i narzędzi, które są spójne z platformą Azure. Azure Stack Development Kit nie jest przeznaczona do użycia w środowisku produkcyjnym.
 
@@ -66,5 +66,5 @@ Microsoft Azure Stack Development Kit to wdrożenie z jednym węzłem Azure Stac
     <https://azure.microsoft.com/pricing/hybrid-benefit/>
 
 >[!div class="step-by-step"]
->[Poprzedni](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)Następny
->[](../walkthroughs-technical-get-started-overview.md)
+>[Poprzedni](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
+>[Następny](../walkthroughs-technical-get-started-overview.md)

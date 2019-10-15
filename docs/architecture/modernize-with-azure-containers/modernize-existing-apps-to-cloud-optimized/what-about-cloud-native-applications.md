@@ -2,12 +2,12 @@
 title: A może natywne aplikacje w chmurze?
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Co z aplikacjami natywnymi w chmurze?
 ms.date: 04/28/2018
-ms.openlocfilehash: 86153b04790eb21276e58b3fe33c0a680d9ea1c4
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: cf4c3b24a4eeb62ed84a5fccb294b675d38fcc36
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373917"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318437"
 ---
 # <a name="what-about-cloud-native-applications"></a>A może natywne aplikacje w chmurze?
 
@@ -15,7 +15,7 @@ Chociaż aplikacje [natywne w chmurze](https://azure.microsoft.com/overview/clou
 
 Rysunek 4-3. rozmieszczenie aplikacji natywnych w chmurze w ramach poziomów dojrzałości dla modernizacji aplikacji:
 
-![Pozycjonowanie aplikacji natywnych w chmurze](./media/image3.png)
+![Diagram przedstawiający sposób pozycjonowania aplikacji natywnych w chmurze.](./media/what-about-cloud-native-applications/positioning-cloud-native-applications.png)
 
 **Rysunek 4-3.** Pozycjonowanie aplikacji natywnych w chmurze
 
@@ -25,7 +25,7 @@ Główne filary natywnych aplikacji w chmurze opierają się na architekturze mi
 
 Rysunek 4-4 przedstawia główne właściwości modelu natywnego w chmurze.
 
-![Cechy natywne w chmurze to mikrousługi, kontenery, odporne na chmurę, koordynatorzy i bezserwerowe](./media/image4.png)
+![Diagram zawierający listę głównych cech natywnych w chmurze.](./media/what-about-cloud-native-applications/cloud-native-characteristics.png)
 
 **Rysunek 4-4.** Charakterystyki natywne w chmurze
 
@@ -41,7 +41,7 @@ Chmura w chmurze to bardziej zaawansowany lub dojrzały stan dla aplikacji o du�
 
 [Natywna platforma obliczeniowa w chmurze (CNCF)](https://www.cncf.io/) to podstawowy stymulator zasad natywnych w chmurze. Firma Microsoft jest [członkiem CNCF](https://azure.microsoft.com/blog/announcing-cncf/).
 
-Aby zapoznać się z przykładową definicją i uzyskać więcej informacji na temat cech aplikacji natywnych w chmurze, zobacz artykuł [dotyczący tworzenia i projektowania aplikacji natywnych dla chmury](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Aby uzyskać szczegółowe wskazówki od firmy Microsoft dotyczące implementowania aplikacji natywnej w chmurze, [Zobacz mikrousługi platformy .NET: Architektura dla kontenerów aplikacji](https://aka.ms/microservicesebook).NET.
+Aby zapoznać się z przykładową definicją i uzyskać więcej informacji na temat cech aplikacji natywnych w chmurze, zobacz artykuł [dotyczący tworzenia i projektowania aplikacji natywnych dla chmury](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Aby uzyskać szczegółowe wskazówki od firmy Microsoft dotyczące implementowania aplikacji natywnej w chmurze, zobacz [.NET mikrousługi: architektura dla kontenerów aplikacji .NET](https://aka.ms/microservicesebook).
 
 Najważniejszym czynnikiem, które należy wziąć pod uwagę w przypadku migrowania pełnej aplikacji do modelu natywnego w chmurze, jest konieczność przeprowadzenia ponownej architektury na architekturę opartą na mikrousługach. To wyraźnie wymaga znaczących inwestycji w rozwój z powodu dużego procesu refaktoryzacji. Ta opcja jest zwykle wybierana dla aplikacji o krytycznym znaczeniu, które wymagają nowych poziomów skalowalności i długoterminowej elastyczności. Można jednak zacząć poruszać się w chmurze, dodając mikrousługi dla zaledwie kilku nowych scenariuszy, a ostatecznie refaktoryzację aplikacji w pełni jako mikrousługi. Jest to przyrostowe podejście, które jest najlepszą opcją dla niektórych scenariuszy.
 
@@ -55,7 +55,7 @@ Jednak mikrousługi nie są obowiązkowe dla żadnej nowej lub nowoczesnej aplik
 
 Architektura mikrousług jest preferowanym podejściem dla rozproszonych i dużych lub złożonych aplikacji o znaczeniu strategicznym, które są oparte na wielu niezależnych podsystemach w formie usług autonomicznych. W architekturze opartej na mikrousługach aplikacja jest zbudowana jako kolekcja usług, które mogą być osobno opracowane, przetestowane, w wersji, wdrożone i skalowane. Może to obejmować wszystkie powiązane, autonomiczną bazę danych na mikrousługi.
 
-Aby zapoznać się z szczegółowym opisem architektury mikrousług, którą można zaimplementować przy użyciu platformy .NET Core, zobacz artykuł z możliwością pobierania PDF [-książka usługi .NET: Architektura dla kontenerów aplikacji](https://aka.ms/microservicesebook).NET. Przewodnik jest również dostępny w [trybie online](../../microservices/index.md).
+Aby zapoznać się z szczegółowym opisem architektury mikrousług, którą można zaimplementować przy użyciu platformy .NET Core, zobacz artykuł z możliwością pobierania w formacie PDF-książka [dla aplikacji platformy .NET](https://aka.ms/microservicesebook). Przewodnik jest również dostępny w [trybie online](../../microservices/index.md).
 
 Jednak nawet w scenariuszach, w których mikrousługi oferują zaawansowane funkcje, niezależne wdrożenie, ścisłe granice podsystemu i różnorodność technologii — powodują także wiele nowych wyzwań. Wyzwania dotyczą tworzenia aplikacji rozproszonych, takich jak pofragmentowane i niezależne modele danych; osiągnięcie odpornej komunikacji między mikrousługami; konieczność zapewnienia spójności ostatecznej; i złożoność operacyjna. Mikrousługi wprowadzają wyższy poziom złożoności w porównaniu z tradycyjnymi aplikacjami monolitycznymi.
 
@@ -66,5 +66,5 @@ W ostatecznej uwadze, nawet w przypadku ryzyka powtarzania tego pojęcia, nie na
 W każdym przypadku pozostała część niniejszych wskazówek koncentruje się na większości wszystkich "aplikacji opartych na mikrousługach", ponieważ te wskazówki odnoszą się głównie do modernizacji istniejących aplikacji, które zwykle mają warstwy monolityczne lub N-warstwowe.
 
 > [!div class="step-by-step"]
-> [Poprzedni](microsoft-technologies-in-cloud-optimized-applications.md)Następny
-> [](deploy-existing-net-apps-as-windows-containers.md)
+> [Poprzedni](microsoft-technologies-in-cloud-optimized-applications.md)
+> [Następny](deploy-existing-net-apps-as-windows-containers.md)

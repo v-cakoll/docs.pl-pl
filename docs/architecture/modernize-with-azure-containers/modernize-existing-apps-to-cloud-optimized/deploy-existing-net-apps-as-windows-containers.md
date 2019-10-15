@@ -2,12 +2,12 @@
 title: Wdrażanie istniejących aplikacji .NET jako kontenerów systemu Windows
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Wdrażanie istniejących aplikacji .NET jako kontenerów systemu Windows
 ms.date: 04/29/2018
-ms.openlocfilehash: d48acbb2e1c4858bf3146318f70dd7b8a7b62918
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 997b32e51272be2126bd824de1f8f026d77ca203
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926486"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318661"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Wdrażanie istniejących aplikacji .NET jako kontenerów systemu Windows
 
@@ -51,7 +51,7 @@ Znaczące ulepszenia elastyczności, przenośności i kontroli mogą ostatecznie
 
 [Docker](https://www.docker.com/) to [projekt typu "open source"](https://github.com/docker/docker) , który automatyzuje wdrażanie aplikacji jako przenośnych, samowystarczalnych kontenerów, które mogą działać w chmurze lub lokalnie. Platforma Docker to również [firma](https://www.docker.com/) , która wspiera i rozwija tę technologię. Firma współpracuje z dostawcami chmury, Linux i Windows, w tym z firmą Microsoft.
 
-![Platforma Docker wdraża kontenery we wszystkich warstwach chmury hybrydowej](./media/image6.png)
+![Diagram przedstawiający sposób wdrażania kontenerów w chmurze hybrydowej przez platformę Docker.](./media/deploy-existing-net-apps-as-windows-containers/docker-deploys-containers-all-layers.png)
 
 **Rysunek 4-6.** Platforma Docker wdraża kontenery we wszystkich warstwach chmury hybrydowej
 
@@ -83,7 +83,7 @@ W przypadku systemu Linux dostępne są wiele dystrybucje i są obsługiwane w o
 
 Rysunek 4-7 zawiera wersje systemu operacyjnego, które można wybrać, w zależności od wersji .NET Framework aplikacji.
 
-![Systemy operacyjne przeznaczone do celów opartych na wersji .NET Framework](./media/image7.png)
+![Diagram przedstawiający system operacyjny, który ma być przeznaczony na podstawie wersji .NET Framework.](./media/deploy-existing-net-apps-as-windows-containers/dotnet-framework-operating-systems.png)
 
 **Rysunek 4-7.** Systemy operacyjne przeznaczone do celów opartych na wersji .NET Framework
 
@@ -93,15 +93,15 @@ Po dodaniu nazwy obrazu do pliku pliku dockerfile można wybrać system operacyj
 
 > | **Seryjn** | **System i wersja** |
 > |---|---|
-> | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET Framework 4. x w systemie Windows Server Core |
-> | **microsoft/aspnet:4.x-windowsservercore** | .NET Framework 4. x z dodatkowym ASP.NET dostosowania w systemie Windows Server Core |
+> | **Microsoft/dotnet-Framework: 4. x-windowsservercore** | .NET Framework 4. x w systemie Windows Server Core |
+> | **Microsoft/ASPNET: 4. x-windowsservercore** | .NET Framework 4. x z dodatkowym ASP.NET dostosowania w systemie Windows Server Core |
 
 W przypadku platformy .NET Core (międzyplatformowego dla systemów Linux i Windows) Tagi będą wyglądać następująco:
 
 > | **Seryjn** | **System i wersja**
 > |---|---|
-> | **microsoft/dotnet:2.0.0-runtime** | .NET Core 2.0 runtime-only on Linux |
-> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | Środowisko uruchomieniowe programu .NET Core 2,0 — tylko w systemie Windows nano Server |
+> | **Microsoft/dotnet: 2.0.0 — środowisko uruchomieniowe** | Środowisko uruchomieniowe programu .NET Core 2,0 — tylko w systemie Linux |
+> | **Microsoft/dotnet: 2.0.0-Runtime-nanoserver** | Środowisko uruchomieniowe programu .NET Core 2,0 — tylko w systemie Windows nano Server |
 
 ### <a name="multi-arch-images"></a>Obrazy z obsługą wielodostępności
 
@@ -113,9 +113,9 @@ W przypadku obrazów .NET Framework, ponieważ tradycyjny .NET Framework obsług
 
 Podobnie jak kontenery systemu Linux, kontenery Windows Server są zarządzane przy użyciu aparatu Docker. W przeciwieństwie do kontenerów systemu Linux, kontenery Windows obejmują dwa różne typy kontenerów lub czasy uruchamiania — kontenery systemu Windows Server i izolacja funkcji Hyper-V.
 
-**Kontenery systemu Windows Server**: Zapewnia izolację aplikacji za poorednictwem technologii izolacji procesów i przestrzeni nazw. Kontener systemu Windows Server udostępnia jądro z hostem kontenera i wszystkimi kontenerami uruchomionymi na hoście. Te kontenery nie zapewniają niezaufanej granicy zabezpieczeń i nie powinny być używane do izolowania niezaufanych kodów. Ze względu na współużytkowaną przestrzeń jądra te kontenery wymagają takiej samej wersji jądra i konfiguracji.
+**Kontenery systemu Windows Server**: zapewnia izolację aplikacji za poorednictwem technologii izolacji procesów i przestrzeni nazw. Kontener systemu Windows Server udostępnia jądro z hostem kontenera i wszystkimi kontenerami uruchomionymi na hoście. Te kontenery nie zapewniają niezaufanej granicy zabezpieczeń i nie powinny być używane do izolowania niezaufanych kodów. Ze względu na współużytkowaną przestrzeń jądra te kontenery wymagają takiej samej wersji jądra i konfiguracji.
 
-**Izolacja funkcji Hyper-V**: Rozwija izolację zapewnianą przez kontenery systemu Windows Server przez uruchomienie każdego kontenera na wysoce zoptymalizowanej maszynie wirtualnej. W tej konfiguracji jądro hosta kontenera nie jest współużytkowane z innymi kontenerami na tym samym hoście. Te kontenery zostały zaprojektowane w celu zagwarantowania niedostępności hostingu wielodostępnego z zachowaniem zabezpieczeń maszyny wirtualnej. Ponieważ te kontenery nie współdzielą jądra z hostem lub innymi kontenerami na hoście, mogą uruchamiać jądra z różnymi wersjami i konfiguracjami (z obsługiwanymi wersjami). Na przykład wszystkie kontenery systemu Windows w systemie Windows 10 używają izolacji funkcji Hyper-V, aby korzystać z wersji i konfiguracji jądra systemu Windows Server.
+**Izolacja funkcji Hyper-V**: rozszerza na izolację zapewnianą przez kontenery systemu Windows Server przez uruchomienie każdego kontenera na wysoce ZOPTYMALIZOWANEJ maszynie wirtualnej. W tej konfiguracji jądro hosta kontenera nie jest współużytkowane z innymi kontenerami na tym samym hoście. Te kontenery zostały zaprojektowane w celu zagwarantowania niedostępności hostingu wielodostępnego z zachowaniem zabezpieczeń maszyny wirtualnej. Ponieważ te kontenery nie współdzielą jądra z hostem lub innymi kontenerami na hoście, mogą uruchamiać jądra z różnymi wersjami i konfiguracjami (z obsługiwanymi wersjami). Na przykład wszystkie kontenery systemu Windows w systemie Windows 10 używają izolacji funkcji Hyper-V, aby korzystać z wersji i konfiguracji jądra systemu Windows Server.
 
 Uruchamianie kontenera w systemie Windows z izolacją funkcji Hyper-V lub bez niej jest podjęciem decyzji w czasie wykonywania. Można najpierw utworzyć kontener z izolacją funkcji Hyper-V, a w czasie wykonywania wybrać opcję uruchomienia zamiast niego kontenera systemu Windows Server.
 
@@ -129,7 +129,7 @@ Uruchamianie kontenera w systemie Windows z izolacją funkcji Hyper-V lub bez ni
 
     <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
-- **Grafika informacyjna Microsoft i kontenery**
+- **Grafika informacyjna: Microsoft i kontenery**
 
     <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
@@ -138,21 +138,21 @@ Uruchamianie kontenera w systemie Windows z izolacją funkcji Hyper-V lub bez ni
 W poprzednich sekcjach wyjaśniono, jakie korzyści z kontenerów platformy Docker są również szczegółowe w przypadku określonych obrazów kontenerów dla aplikacji .NET. Wszystkie informacje ogólne są podstawowe w celu opracowania lub konteneryzowanie aplikacji.
 Jednak w przypadku środowiska wdrażania produkcyjnego, a nawet środowisk do tworzenia i testowania, Microsoft Azure zapewnia otwarte i szeroki wybór różnych opcji, a pełny ekosystem kontenera w chmurze (pokazano na poniższym diagramie). W zależności od potrzeb aplikacji należy wybrać jeden lub inny produkt platformy Azure.
 
-![Ekosystem kontenera na platformie Azure](./media/image7.5.png)
+![Diagram ekosystemu kontenerów na platformie Azure.](./media/deploy-existing-net-apps-as-windows-containers/azure-container-ecosystem.png)
 
 **Rysunek 4.7.5.** Ekosystem kontenera na platformie Azure
 
 Z ekosystemu kontenerów na platformie Azure następujące produkty obsługujące kontenery, które są uważane za infrastrukturę:
 
-- **Usługa Azure Container Instances (ACI)**
-- **Virtual Machines platformy Azure** (Z obsługą kontenera)
-- **Virtual Machine Scale Sets platformy Azure** (Z obsługą kontenera)
+- **Azure Container Instances (ACI)**
+- **Virtual Machines platformy Azure** (z obsługą kontenera)
+- **Virtual Machine Scale Sets platformy Azure** (z obsługą kontenera)
 
 Z tych trzech ACI zapewnia znakomitą korzyść, która jest faktem, że nie musisz obsługiwać bazowego systemu operacyjnego, bez konieczności uaktualniania/poprawek itd., ale ACI nadal znajduje się na poziomie infrastruktury, jak lepiej wyjaśniono w kolejnych sekcjach tej książki.
 
 Produkty na platformie Azure obsługujące kontenery, które w tym samym czasie są rozmieszczone więcej na poziomie PaaS (platforma jako usługa):
 
-- **Usługa Azure App Service**
+- **Azure App Service**
 - **Usługa Azure Kubernetes Service (AKS i ACS)**
 - **Azure Batch** 
 
@@ -163,5 +163,5 @@ Ponadto z kontenerów można korzystać z innych usług zarządzanych na platfor
 W następnych sekcjach można zapoznać się z zaleceniami firmy Microsoft dotyczącymi używania poszczególnych produktów i rozwiązań platformy Azure, które są przeznaczone dla kontenerów systemu Windows.
 
 >[!div class="step-by-step"]
->[Poprzedni](what-about-cloud-native-applications.md)Następny
->[](when-not-to-deploy-to-windows-containers.md)
+>[Poprzedni](what-about-cloud-native-applications.md)
+>[Następny](when-not-to-deploy-to-windows-containers.md)

@@ -2,22 +2,22 @@
 title: Rejestrowanie przy użyciu elastycznego stosu
 description: Rejestrowanie przy użyciu Elastic Stack, logstash i Kibana
 ms.date: 09/23/2019
-ms.openlocfilehash: b3fd3ea30f46914e6513be79f7d949499142b381
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 62115edc3f64d87d2c3e84a7b5319ce42cbe729b
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182833"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315797"
 ---
 # <a name="logging-with-elastic-stack"></a>Rejestrowanie przy użyciu elastycznego stosu 
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Istnieje wiele dobrych narzędzi do rejestrowania, które różnią się kosztami od bezpłatnych, dostępnych narzędzi "open source" do bardziej kosztownych opcji. W wielu przypadkach bezpłatne narzędzia są tak dobre, jak w przypadku płatnych ofert. Jedno z tych narzędzi jest kombinacją trzech składników typu "open source": Wyszukiwanie elastyczne, logstash i Kibana. Zbiorowo te narzędzia są nazywane stosem elastycznym lub stosem ELK.
+Istnieje wiele dobrych narzędzi do rejestrowania, które różnią się kosztami od bezpłatnych, dostępnych narzędzi "open source" do bardziej kosztownych opcji. W wielu przypadkach bezpłatne narzędzia są tak dobre, jak w przypadku płatnych ofert. Jedno z tych narzędzi jest kombinacją trzech składników typu "open source": Elastic Search, logstash i Kibana. Zbiorowo te narzędzia są nazywane stosem elastycznym lub stosem ELK.
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>Jakie są zalety elastycznego stosu?
 
-Elastyczny stos umożliwia scentralizowane rejestrowanie w niedrogim, skalowalnym, przyjaznym dla chmury. Interfejs użytkownika usprawnia analizę danych, dzięki czemu można poświęcać czas na zastosują wglądu w dane na podstawie danych, zamiast zwalczać interfejs clunky. Obsługuje szeroką gamę danych wejściowych, dlatego w przypadku, gdy aplikacja rozproszona obejmuje więcej i różne rodzaje usług, można oczekiwać, że dane dziennika i metryk są dostępne w systemie. Elastyczny stos obsługuje również szybkie wyszukiwania nawet w dużych zestawach danych, dzięki czemu możliwe jest, że nawet duże aplikacje mogą rejestrować szczegółowe dane i nadal mieć możliwość wglądu w nie w sposób w pełni.
+Elastyczny stos umożliwia scentralizowane rejestrowanie w niedrogim, skalowalnym, przyjaznym dla chmury. Interfejs użytkownika usprawnia analizę danych, dzięki czemu można poświęcać czas na zastosują wglądu w dane na podstawie danych, zamiast zwalczać interfejs clunky. Obsługuje szeroką gamę danych wejściowych, dlatego w przypadku, gdy aplikacja rozproszona obejmuje więcej i różne rodzaje usług, można oczekiwać, że dane dziennika i metryk są dostępne w systemie. Elastyczny stos obsługuje również szybkie wyszukiwania nawet w dużych zestawach danych, dzięki czemu można nawet w przypadku dużych aplikacji rejestrować szczegółowe dane i nadal mieć możliwość wglądu w nie w sposób w pełni.
 
 ## <a name="logstash"></a>Logstash
 
@@ -63,7 +63,7 @@ Wyszukiwanie elastyczne to zaawansowany aparat wyszukiwania, który umożliwia i
 
 Komunikaty dziennika, które zostały spreparowane w celu zawierają parametry lub które zostały poddane podzielenia między nimi za pośrednictwem przetwarzania logstash, można zbadać bezpośrednio, ponieważ Elasticsearch zachowuje te informacje.
 
-Zapytanie, które wyszukuje 10 najważniejszych stron odwiedzonych przez `jill@example.com`, pojawia się na rysunku 7-4.
+Zapytanie wyszukujące 10 najważniejszych stron odwiedzonych przez `jill@example.com` pojawia się na rysunku 7-4.
 
 ```
 "query": {

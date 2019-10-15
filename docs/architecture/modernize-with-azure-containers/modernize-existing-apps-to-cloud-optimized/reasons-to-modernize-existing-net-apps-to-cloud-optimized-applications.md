@@ -2,12 +2,12 @@
 title: Przyczyny modernizacji istniejących aplikacji .NET do aplikacji zoptymalizowanych pod kątem chmury
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Przyczyny modernizacji istniejących aplikacji .NET do aplikacji zoptymalizowanych pod kątem chmury
 ms.date: 04/28/2018
-ms.openlocfilehash: aabce73efaae520a3b59c70d53519b847f2c6a94
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: c86b9ec4d4a92b8daa0fceef0531ed955b9bb2bf
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373932"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318536"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Przyczyny modernizacji istniejących aplikacji .NET do aplikacji zoptymalizowanych pod kątem chmury
 
@@ -21,7 +21,7 @@ Dolna linia polega na tym, że gdy organizacja kompiluje i zarządza aplikacjami
 
 ## <a name="cloud-optimized-application-principles-and-tenets"></a>Zasady aplikacji zoptymalizowane pod kątem chmury i założenia 
 
-Ulepszenia w chmurze są głównie skoncentrowane na spełnieniu dwóch celów: Zmniejsz koszty i popraw rozwój działalności, zwiększając elastyczność. Cele te są osiągane przez uproszczenie procesów i zmniejszenie liczby problemów podczas dostarczania i wysyłania aplikacji.
+Ulepszenia w chmurze są głównie skoncentrowane na spełnieniu dwóch celów: redukcja kosztów i poprawa rozwoju firmy dzięki ulepszaniu elastyczności. Cele te są osiągane przez uproszczenie procesów i zmniejszenie liczby problemów podczas dostarczania i wysyłania aplikacji.
 
 Twoja aplikacja jest zoptymalizowana pod kątem chmury, jeśli możesz w sposób Agile — opracowywać aplikację autonomicznie z innych aplikacji lokalnych, a następnie wydawanie, wdrażanie, automatyczne skalowanie, monitorowanie i rozwiązywanie problemów z aplikacją w chmurze.
 
@@ -41,7 +41,7 @@ Poniższa lista zawiera opis głównych założenia lub praktyk dla aplikacji zo
 
 Rysunek 4-2 przedstawia główne, opcjonalne filary aplikacji zoptymalizowanej pod kątem chmury. Im więcej filarów zaimplementowano, tym readier, że aplikacja będzie działać pomyślnie w zaspokajaniu oczekiwań klientów.
 
-![Główne filary aplikacji zoptymalizowanej pod kątem chmury](./media/image2.png)
+![Tworzenie diagramów z nazwami głównych filarów aplikacji zoptymalizowanej pod kątem chmury.](./media/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications/main-pillars-cloud-optimized-application.png)
 
 **Rysunek 4-2.** Główne filary aplikacji zoptymalizowanej pod kątem chmury
 
@@ -66,5 +66,5 @@ Wszystkie te korzyści ostatecznie zapewniają kluczowe obniżenie kosztów dla 
 W poniższych sekcjach te korzyści zostały omówione bardziej szczegółowo i są one połączone z konkretnymi technologiami.
 
 >[!div class="step-by-step"]
->[Poprzedni](index.md)Następny
->[](microsoft-technologies-in-cloud-optimized-applications.md)
+>[Poprzedni](index.md)
+>[Następny](microsoft-technologies-in-cloud-optimized-applications.md)

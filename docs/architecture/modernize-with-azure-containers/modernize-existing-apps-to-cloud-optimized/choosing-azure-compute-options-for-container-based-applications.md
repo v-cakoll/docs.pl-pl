@@ -2,12 +2,12 @@
 title: Wybieranie platform obliczeniowych platformy Azure dla aplikacji opartych na kontenerach
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Wybieranie platform obliczeniowych platformy Azure dla aplikacji opartych na kontenerach
 ms.date: 05/04/2018
-ms.openlocfilehash: 54c5945326fb8a50a39c50552a413580926da2c7
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 2262d2cf4e69e19e8b78c07c239602dd5dccc3cd
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71331961"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318663"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Wybieranie platform obliczeniowych platformy Azure dla aplikacji opartych na kontenerach
 
@@ -17,8 +17,8 @@ Zgodnie z zaleceniami *domyślnymi* , poniżej przedstawiono główne kryteria z
 
 - **Jednolite aplikacje:** Wybierz Azure App Service
 - **Aplikacja N-warstwowa:** Wybierz usługi Orchestrator, takie jak Azure Kubernetes Service (AKS) lub App Service, jeśli masz jedną lub kilka usług zaplecza
-- **Mikrousług** Wybierz AKS lub Web Apps platformy Azure dla kontenerów
-- **Funkcje bezserwerowe & obsługi zdarzeń:** Wybierz Azure Functions
+- **Mikrousługi:** Wybierz AKS lub Web Apps platformy Azure dla kontenerów
+- **Funkcje Bezserwerowe & obsługi zdarzeń:** Wybierz Azure Functions
 - **Partia o dużej skali:** Wybierz Azure Batch
 
 Jednakże to zalecenie powinno być podjęte z szczypania soli, ponieważ wybór produktu będzie zależeć od potrzeb i cech określonych aplikacji. Nie wszystkie aplikacje są takie same, nawet gdy początkowo mogą wyglądać podobnie.

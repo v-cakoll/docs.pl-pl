@@ -1,14 +1,14 @@
 ---
-title: Definiowanie natywnego chmury
+title: Definiowanie rozwiązań natywnych dla chmury
 description: Poznaj filary podstawowe, które zapewniają nimi dla systemów natywnych w chmurze
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 4236f0d6aca9d4348d4ead33f552f9a8a2c8c461
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: c99a99ec2cd7a8c4263ae3321d5a836bc40da087
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291202"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315943"
 ---
 # <a name="defining-cloud-native"></a>Definiowanie natywnego chmury
 
@@ -32,7 +32,7 @@ Natywna Chmura zapewnia dużą *szybkość* i *elastyczność*. Systemy biznesow
 
 Oto kilka firm, które wdrożyły te techniki. Pomyśl o szybkości, elastyczności i skalowalności, które zostały osiągnięte.
 
-| Firma | Systemu | 
+| Przedsiębiorstwo | Systemu | 
 | :-------- | :-------- |
 | [Netflix](https://www.infoq.com/news/2013/06/netflix/) | Ma ponad 600 usług w środowisku produkcyjnym. Wdraża setki razy dziennie. |
 | [Uber](https://eng.uber.com/micro-deploy/) | Ma 1000 usług przechowywanych w środowisku produkcyjnym. Wdraża kilka tysięcy kompilacji w każdym tygodniu. | 
@@ -96,8 +96,8 @@ W książce [poza aplikacją 12-składnikową](https://content.pivotal.io/blog/
 |    |  Nowy czynnik | Wyjaśnienie  |
 | :-------- | :-------- | :-------- |
 | 13 | Najpierw interfejs API | Utwórz wszystko jako usługę. Załóżmy, że kod będzie używany przez klienta frontonu. Brama lub inna usługa. |
-| 14 | Telemetria | Na stacji roboczej masz wgląd w aplikację i jej zachowanie. W chmurze nie masz. Upewnij się, że projekt zawiera kolekcję monitorowanie, specyficzne dla domeny i kondycję/dane systemowe. |
-| 15 | Uwierzytelnianie/autoryzacja  | Zaimplementuj tożsamość z poziomu uruchomienia. Zapoznaj się z funkcjami [RBAC (kontrola dostępu opartą na rolach)](https://docs.microsoft.com/azure/role-based-access-control/overview) dostępnymi w chmurach publicznych.  |
+| 14,5 | Telemetria | Na stacji roboczej masz wgląd w aplikację i jej zachowanie. W chmurze nie masz. Upewnij się, że projekt zawiera kolekcję monitorowanie, specyficzne dla domeny i kondycję/dane systemowe. |
+| 15000 | Uwierzytelnianie/autoryzacja  | Zaimplementuj tożsamość z poziomu uruchomienia. Zapoznaj się z funkcjami [RBAC (kontrola dostępu opartą na rolach)](https://docs.microsoft.com/azure/role-based-access-control/overview) dostępnymi w chmurach publicznych.  |
 
 Odwołujemy się do wielu czynników 12 + w tym rozdziale i w całej książce.
 
@@ -113,7 +113,7 @@ Jak usługa zaplecza będzie komunikować się ze sobą. Czy dozwolone są bezpo
 
 Komunikacja obejmuje szczegółowo rozdział 4, *natywne wzorce komunikacji w chmurze*.
 
-*Odporność*
+*Odporności*
 
 Architektura mikrousług przenosi system z procesu do komunikacji sieciowej. Co robią w środowisku rozproszonym, gdy usługa B nie odpowiada na wywołanie z usługi A? Co się stanie, gdy usługa C stanie się tymczasowo niedostępna, a inne usługi wywołujące stos IT stosują i obniżają wydajność systemu?
 
@@ -131,7 +131,7 @@ Jak usługa będzie identyfikować użytkowników, którzy mają do nich dostęp
 
 Tożsamość jest szczegółowo omówione w rozdziale 8, *tożsamość*.
 
-## <a name="microservices"></a>Mikrousługi
+## <a name="microservices"></a>Mikrousług
 Systemy natywne w chmurze uwzględniają mikrousługi, popularny styl architektoniczny służący do konstruowania nowoczesnych aplikacji.
 
 Zbudowany jako rozproszony zestaw małych, niezależnych usług, które współpracują ze wspólną siecią szkieletową, mikrousługi mają następujące cechy:
@@ -154,7 +154,7 @@ Rysunek 1-4 kontrast podejścia aplikacji monolitycznej z podejściem mikrousłu
 
 Należy zauważyć, jak mikrousługi promują zasadę "jedna baza kodu, jedna aplikacja" z [aplikacji 12-składnikowej](https://12factor.net/)omówionej wcześniej w rozdziale.
 
-> *Współczynnik \#1 określa "pojedynczą bazę kodu dla każdej mikrousługi, która jest przechowywana we własnym repozytorium. Śledzone przy użyciu kontroli wersji, można je wdrożyć w wielu środowiskach "*
+> *Współczynnik \#1 określa "pojedynczą bazę kodu dla każdej mikrousługi, która jest przechowywana we własnym repozytorium. Śledzone przy użyciu kontroli wersji, można je wdrożyć w wielu środowiskach ".*
 
 ### <a name="why-microservices"></a>Dlaczego mikrousługi?
 
@@ -174,13 +174,13 @@ Mikrousługi można tworzyć przy użyciu dowolnej nowoczesnej platformy program
 
 Platforma Microsoft .NET Core to doskonały wybór. Bezpłatna i open source ma wiele wbudowanych funkcji upraszczających programowanie mikrousług. Platforma .NET Core jest dla wielu platform. Aplikacje można budować i uruchamiać w systemach Windows, macOS i większości systemów Linux.
 
-Program .NET Core jest wysoce wydajny i został dobrze osiągnięty w porównaniu do środowiska Node. js i innych platform. Z tego względu [TechEmpower](https://www.techempower.com/) przeprowadził rozbudowany zestaw [testów wydajności](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) na wielu platformach aplikacji sieci Web i strukturach. Platforma .NET Core została oceniona w 10 najlepszych ponad platformie Node. js i innych konkurencyjnych platformach. 
+Program .NET Core jest wysoce wydajny i został dobrze oceniony w porównaniu do środowiska Node. js i innych konkurujących platform. Z tego względu [TechEmpower](https://www.techempower.com/) przeprowadził rozbudowany zestaw [testów wydajności](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) na wielu platformach aplikacji sieci Web i strukturach. Platforma .NET Core została oceniona w 10 najlepszych ponad platformie Node. js i innych konkurencyjnych platformach. 
 
 Platforma .NET Core jest obsługiwana przez firmę Microsoft i społeczność programu .NET w witrynie GitHub. 
 
-## <a name="containers"></a>Containers
+## <a name="containers"></a>Kontenery
 
-Obecnie, że jest to naturalne, aby słyszeć termin *kontenera* wymieniony w dowolnej konwersacji dotyczącej *natywnej chmury*. W książce, [wzorce natywne chmury](https://www.manning.com/books/cloud-native-patterns), autor Cornelia Davis obserwuje, że "kontenery są doskonałym rozwiązaniem w przypadku oprogramowania natywnego w chmurze". Natywna platforma obliczeniowa w chmurze wprowadza mikrousługi kontenerach jako pierwszy krok w swojej [natywnej mapie w chmurze](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png) — wskazówki dla przedsiębiorstw, które rozpoczynają podróż w chmurze.
+Obecnie, że jest to naturalne, aby poznać termin *kontenera* wymieniony w dowolnej konwersacji dotyczącej *natywnej chmury*. W książce, [wzorce natywne chmury](https://www.manning.com/books/cloud-native-patterns), autor Cornelia Davis obserwuje, że "kontenery są doskonałym rozwiązaniem w przypadku oprogramowania natywnego w chmurze". Natywna platforma obliczeniowa w chmurze wprowadza mikrousługi kontenerach jako pierwszy krok w swojej [natywnej mapie w chmurze](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png) — wskazówki dla przedsiębiorstw, które rozpoczynają podróż w chmurze.
 
 Konteneryzowania mikrousługa jest prosta i prosta. Kod, jego zależności i środowisko uruchomieniowe są pakowane w plik binarny o nazwie [obraz kontenera](https://docs.docker.com/glossary/?term=image). Obrazy są przechowywane w [rejestrze kontenerów](https://caylent.com/container-registries/), który działa jako repozytorium lub biblioteka dla obrazów. Rejestr może znajdować się na komputerze deweloperskim, w centrum danych lub w chmurze publicznej. Platforma Docker utrzymuje rejestr publiczny za pośrednictwem narzędzia [Docker Hub](https://hub.docker.com/). Usługa Azure Cloud zawiera [Rejestr kontenerów](https://azure.microsoft.com/services/container-registry/) w celu przechowywania obrazów kontenerów blisko aplikacji w chmurze, które będą je uruchamiać.
 
@@ -224,12 +224,12 @@ W poniższej tabeli opisano typowe zadania aranżacji.
 
 |  Zadania | Wyjaśnienie  |
 | :-------- | :-------- |
-| Planowanie | Automatyczne Inicjowanie obsługi wystąpień kontenerów.|
+| Harmonogram | Automatyczne Inicjowanie obsługi wystąpień kontenerów.|
 | Koligacja/ochrona przed koligacją | Udostępniaj kontenery w pobliżu lub daleko od siebie, ułatwiając dostępność i wydajność. |
 | Monitorowanie kondycji | Automatycznie wykrywaj i Poprawiaj błędy.|
-| Tryb failover | Automatyczne ponowne Inicjowanie obsługi administracyjnej wystąpienia nie powiodło się.|
-| Skalowanie | Automatyczne dodanie lub usunięcie wystąpienia kontenera w celu spełnienia wymagań.|
-| Networking | Zarządzanie nakładką sieciową na potrzeby komunikacji kontenerowej.|
+| Pracy | Automatyczne ponowne Inicjowanie obsługi administracyjnej wystąpienia nie powiodło się.|
+| Ponowne | Automatyczne dodanie lub usunięcie wystąpienia kontenera w celu spełnienia wymagań.|
+| Obsługa sieci | Zarządzanie nakładką sieciową na potrzeby komunikacji kontenerowej.|
 | Odnajdowanie usług | Włącz kontenery, aby zlokalizować siebie nawzajem.|
 | Uaktualnienia stopniowe | Koordynuj uaktualnienia przyrostowe bez przestojów. Automatycznie przywracaj problematyczne zmiany.|
 
@@ -277,7 +277,7 @@ Dostawcy chmury dostarczają interfejsy API umożliwiające komunikowanie się z
 
 Usługi zapasowe zostały omówione szczegółowo w rozdziale 5, *wzorcach danych natywnych w chmurze*i rozdziale 4 w *natywnych wzorcach komunikacji w chmurze*.
 
-## <a name="automation"></a>Automation
+## <a name="automation"></a>Automatyzacja
 
 Jak widać, systemy natywne w chmurze uwzględniają mikrousługi, kontenery i nowoczesne projektowanie systemu, aby osiągnąć szybkość i elastyczność. Ale jest to tylko część wątku. Jak można zainicjować obsługę środowisk w chmurze, na których są uruchamiane te systemy? Jak szybko wdrażać funkcje i aktualizacje aplikacji? Jak zaokrąglić pełny obraz?
 
@@ -287,7 +287,7 @@ Przy użyciu IaC można zautomatyzować Inicjowanie obsługi platformy i wdraża
 
 ### <a name="automating-infrastructure"></a>Automatyzacja infrastruktury
 
-Narzędzia, takie jak [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/), [Terraform i [interfejs wiersza polecenia platformy Azure](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest), umożliwiają deklaratywne skrypt wymaganej infrastruktury chmurowej. Nazwy zasobów, lokalizacje, pojemności i wpisy tajne są sparametryzowane i dynamiczne. Skrypt ma wersję i zaewidencjonowano kontrolę źródła jako artefakt projektu. Skrypt jest wywoływany w celu zapewnienia spójnej i powtarzalnej infrastruktury w środowiskach systemowych, takich jak pytania i odpowiedzi, przygotowanie i produkcja. 
+Narzędzia, takie jak [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/), Terraform i [interfejs wiersza polecenia platformy Azure](https://docs.microsoft.com/cli/azure/), umożliwiają deklaratywne skrypt wymaganej infrastruktury chmurowej. Nazwy zasobów, lokalizacje, pojemności i wpisy tajne są sparametryzowane i dynamiczne. Skrypt ma wersję i zaewidencjonowano kontrolę źródła jako artefakt projektu. Skrypt jest wywoływany w celu zapewnienia spójnej i powtarzalnej infrastruktury w środowiskach systemowych, takich jak pytania i odpowiedzi, przygotowanie i produkcja. 
 
 Pod okapem, IaC to idempotentne, co oznacza, że można uruchomić ten sam skrypt w czasie, bez efektów ubocznych. Jeśli zespół musi wprowadzić zmianę, edytuje i ponownie uruchamia skrypt. Dotyczy to tylko zaktualizowanych zasobów.
 
@@ -340,4 +340,4 @@ Usługa Azure Pipelines obsługuje większość dostawców git i może generowa�
 
 >[!div class="step-by-step"]
 >[Poprzedni](introduction.md)
->[dalej](candidate-apps.md)
+>[Następny](candidate-apps.md)

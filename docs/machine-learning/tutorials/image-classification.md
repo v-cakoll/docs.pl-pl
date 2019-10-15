@@ -67,7 +67,9 @@ Klasyfikacja obrazu to typowe zadanie Machine Learning, które pozwala nam na au
 
  Lub jak na następujących ilustracjach, określenie, czy obraz jest (n) jedzeniem, Zabawka lub urządzeniem:
 
-![pizza Image @ no__t-1 @ no__t-2teddy Bear Image @ no__t-3 @ no__t-4toaster Image @ no__t-5
+![pizza image](./media/image-classification/220px-Pepperoni_pizza.jpg)
+![teddy bear image](./media/image-classification/119px-Nalle_-_a_small_brown_teddy_bear.jpg)
+![toaster image](./media/image-classification/193px-Broodrooster.jpg)
 
 >[!Note]
 > Powyższe obrazy należą do Wikimedia Commons Attribution i są przypisywane w następujący sposób:

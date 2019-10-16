@@ -2,12 +2,12 @@
 title: Modernizowanie aplikacji za pomocą monitorowania i telemetrii
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Modernizacja aplikacji dzięki monitorowaniu i telemetrii
 ms.date: 04/30/2018
-ms.openlocfilehash: cdd7738606b086e980c4a50348166a7e23e15fa5
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 3d629e89a73c870d4b6396c6b1d0ecbe95b79ead
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318490"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393855"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernizowanie aplikacji za pomocą monitorowania i telemetrii
 
@@ -89,4 +89,4 @@ Rozwiązania do monitorowania kontenerów Log Analytics można użyć do:
 
 >[!div class="step-by-step"]
 >[Poprzedni](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
->[Następny](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
+>[Następny](life-cycle-ci-cd-pipelines-devops-tools.md)

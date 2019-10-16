@@ -2,12 +2,12 @@
 title: Natywna DevOps w chmurze
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Natywna DevOps w chmurze
 ms.date: 06/30/2019
-ms.openlocfilehash: a056da833d7c6da11ab956337b77deab5e9bd159
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 84d37d14af8a68a51088568ded05ceef2e5e11fb
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183190"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393726"
 ---
 # <a name="cloud-native-devops"></a>Natywna DevOps w chmurze
 
@@ -15,7 +15,7 @@ ms.locfileid: "71183190"
 
 Ulubiony mantrą konsultantów oprogramowania ma na celu odpowiedzenie "jest to zależne" z wszelkimi powodowanymi pytaniami. Nie wynika to z faktu, że konsultanci Fond nie pobierają pozycji. Wynika to z faktu, że nie ma żadnej prawdziwej odpowiedzi na pytania w oprogramowaniu. Nie ma bezwzględnych praw i nieprawidłowych, ale raczej równowagi między przeciwieństwem.
 
-Na przykład dwa główne szkoły tworzenia aplikacji sieci Web: Aplikacje jednostronicowe (aplikacji jednostronicowych) a aplikacje po stronie serwera. Z jednej strony środowisko użytkownika będzie lepiej aplikacji jednostronicowych i ilość ruchu sieciowego do serwera sieci Web może być zminimalizowana, co umożliwia hostowanie ich w taki sposób, jak hosting statyczny. Z drugiej strony aplikacji jednostronicowych się coraz wolniej, aby rozwijać i utrudniać ich testowanie. Który z nich jest odpowiedni wybór? Jest to również zależne od sytuacji.
+Na przykład dwa główne szkoły tworzenia aplikacji sieci Web: aplikacje jednostronicowe (aplikacji jednostronicowych) i aplikacje po stronie serwera. Z jednej strony środowisko użytkownika będzie lepiej aplikacji jednostronicowych i ilość ruchu sieciowego do serwera sieci Web może być zminimalizowana, co umożliwia hostowanie ich w taki sposób, jak hosting statyczny. Z drugiej strony aplikacji jednostronicowych się coraz wolniej, aby rozwijać i utrudniać ich testowanie. Który z nich jest odpowiedni wybór? Jest to również zależne od sytuacji.
 
 Aplikacje natywne w chmurze nie są odporne na te same dichotomy. Mają jasne zalety w zakresie rozwoju, stabilności i skalowalności, ale zarządzanie nimi może być nieco trudniejsze.
 
@@ -78,9 +78,9 @@ Na pierwszy rzut oka wygląda to najbardziej logiczne podejście do dzielenia ko
 
 Jednym z kluczowych koncepcji związanych z mikrousługą jest to, że usługi powinny być przesłonięte i oddzielone od siebie. W przypadku korzystania z projektu opartego na domenie w celu określenia granic dla usług usługi działają jako granice transakcyjne. Aktualizacje bazy danych nie mogą obejmować wielu usług. Ta kolekcja powiązanych danych jest nazywana kontekstem ograniczonym.  Ten pomysł jest odzwierciedlony przez izolację danych mikrousług w oddzielnym i niezależnym od reszty usług. Jest to bardzo duże rozwiązanie do przeprowadzenia tego pomysłu w sposób umożliwiający przechodzenie do kodu źródłowego.
 
-Jednak takie podejście nie ma żadnych problemów. Jednym z bardziej gnarlyych problemów programistycznych jest zarządzanie zależnościami. Weź pod uwagę liczbę plików, które składają się na `node_modules` średni katalog. Nowa instalacja tego elementu jest prawdopodobnie `create-react-app` taka sama jak tysiące pakietów. Pytanie, jak zarządzać tymi zależnościami, jest trudne. 
+Jednak takie podejście nie ma żadnych problemów. Jednym z bardziej gnarlyych problemów programistycznych jest zarządzanie zależnościami. Weź pod uwagę liczbę plików, które składają się na średni katalog `node_modules`. Nowa instalacja czegoś takiego jak `create-react-app` może przynieść tysiące pakietów. Pytanie, jak zarządzać tymi zależnościami, jest trudne. 
 
-W przypadku zaktualizowania zależności, pakiety podrzędne muszą także aktualizować Tę zależność. Niestety, dzięki czemu Praca programistyczna niezmiennie, `node_modules` katalog zostaje zakończony z wieloma wersjami jednego pakietu, każda z nich jest zależna od innego pakietu, który jest w niewielkim stopniu różny erze. W przypadku wdrażania aplikacji należy użyć wersji zależności? Wersja, która jest obecnie w środowisku produkcyjnym? Wersja, która jest obecnie w wersji beta, ale może być w środowisku produkcyjnym przez czas, przez który odbiorca wprowadza do produkcji? Trudne problemy, które nie są rozwiązywane przez użycie mikrousług.
+W przypadku zaktualizowania zależności, pakiety podrzędne muszą także aktualizować Tę zależność. Niestety, dzięki czemu Praca programistyczna niezmiennie, katalog `node_modules` zostaje zakończony z wieloma wersjami jednego pakietu, a każda z nich jest zależna od innego pakietu, który ma wersję w nieco innym erze. W przypadku wdrażania aplikacji należy użyć wersji zależności? Wersja, która jest obecnie w środowisku produkcyjnym? Wersja, która jest obecnie w wersji beta, ale może być w środowisku produkcyjnym przez czas, przez który odbiorca wprowadza do produkcji? Trudne problemy, które nie są rozwiązywane przez użycie mikrousług.
 
 Istnieją biblioteki, które są zależne od wielu różnych projektów. Dzieląc mikrousługi z jednym w każdym repozytorium, można najlepiej rozwiązać wewnętrzne zależności przy użyciu wewnętrznego repozytorium, Azure Artifacts. Kompilacje dla bibliotek spowodują wypchnięcie najnowszych wersji do Azure Artifacts na użytek wewnętrzny. Projekt podrzędny należy nadal zaktualizować ręcznie, aby wziąć zależność od nowo zaktualizowanych pakietów.
 
@@ -128,7 +128,7 @@ Zarządzanie zadaniami w dowolnym projekcie może być trudne. Na bieżąco są 
 
 Aplikacje natywne w chmurze mogą być mniejsze niż tradycyjne produkty lub co najmniej te, które są podzielone na mniejsze usługi. Śledzenie problemów lub zadań związanych z tymi usługami pozostaje tak ważne jak w przypadku każdego innego projektu oprogramowania. Nikt nie chce utracić śledzenia niektórych elementów roboczych lub wyjaśnić klientowi, że ich problem nie został poprawnie zarejestrowany. Tablice są konfigurowane na poziomie projektu, ale w poszczególnych projektach można definiować obszary. Umożliwiają one rozbicie problemów między kilka składników. Zalety utrzymywania całej pracy dla całej aplikacji w jednym miejscu polega na tym, że można łatwo przenieść elementy robocze z jednego zespołu do drugiego, jeśli są one lepiej zrozumiałe.
 
-Usługa Azure DevOps udostępnia wiele popularnych szablonów, które zostały wstępnie skonfigurowane. W najbardziej podstawowej konfiguracji wszystko, co jest potrzebne do uzyskania informacji, to to, co znajduje się w zaległościach, do czego pracują. Ważne jest, aby mieć wgląd w proces tworzenia oprogramowania, dzięki czemu można określić priorytety pracy i zadania zgłoszone dla klienta. Oczywiście bardzo kilka projektów oprogramowania jest przygotowanych do procesu tak proste jak `to do`, `doing`, i `done`. Rozpoczęcie dodawania kroków takich jak `QA` lub `Detailed Specification` do procesu nie zajmie dużo czasu.
+Usługa Azure DevOps udostępnia wiele popularnych szablonów, które zostały wstępnie skonfigurowane. W najbardziej podstawowej konfiguracji wszystko, co jest potrzebne do uzyskania informacji, to to, co znajduje się w zaległościach, do czego pracują. Ważne jest, aby mieć wgląd w proces tworzenia oprogramowania, dzięki czemu można określić priorytety pracy i zadania zgłoszone dla klienta. Oczywiście bardzo kilka projektów oprogramowania jest opartych na procesie tak proste jak `to do`, `doing` i `done`. Rozpoczęcie dodawania kroków, takich jak `QA` lub `Detailed Specification` do procesu, nie trwa długo.
 
 Jedną z ważniejszych części metodologii Agile jest samodzielne introspekcji w regularnych odstępach czasu. Te przeglądy mają na celu zapewnienie wglądu w informacje o problemach zespołu i sposobach ich udoskonalania. Często oznacza to zmianę przepływu problemów i funkcji za pośrednictwem procesu tworzenia oprogramowania. Tak więc doskonale dobra powiększanie układów tablic z dodatkowymi etapami.
 
@@ -166,7 +166,7 @@ Automatyzacja procesu kompilowania i dostarczania jest accentuated przez aplikac
 
 Usługa Azure DevOps udostępnia zestaw narzędzi umożliwiających ciągłą integrację i wdrażanie. Te narzędzia znajdują się w obszarze Azure Pipelines. Pierwsze z nich to kompilacje platformy Azure, czyli narzędzie do uruchamiania definicji kompilacji opartych na YAML na dużą skalę. Użytkownicy mogą albo przenieść własne maszyny do kompilacji (doskonałe dla sytuacji, gdy kompilacja wymaga środowiska konfiguracji lubiane), albo użyć maszyny z stale odświeżanej puli hostowanych maszyn wirtualnych platformy Azure. Te hostowane agenci kompilacji są wstępnie zainstalowani z szeroką gamę narzędzi programistycznych, a nie tylko na platformie .NET.
 
-DevOps zawiera szeroką gamę definicji kompilacji pól, które można dostosować dla każdej kompilacji. Definicje kompilacji są zdefiniowane w pliku o nazwie `azure-pipelines.yml` i zaewidencjonowane do repozytorium, dzięki czemu mogą być poddane wersji wraz z kodem źródłowym. Dzięki temu można znacznie łatwiej wprowadzać zmiany w potoku kompilacji w gałęzi, ponieważ zmiany mogą zostać zaewidencjonowane tylko do tej gałęzi. Przykładem `azure-pipelines.yml` tworzenia aplikacji sieci Web ASP.NET na platformie Full przedstawiono na rysunku 11-8.
+DevOps zawiera szeroką gamę definicji kompilacji pól, które można dostosować dla każdej kompilacji. Definicje kompilacji są zdefiniowane w pliku o nazwie `azure-pipelines.yml` i zaewidencjonowane do repozytorium, dzięki czemu mogą być poddane wersji wraz z kodem źródłowym. Dzięki temu można znacznie łatwiej wprowadzać zmiany w potoku kompilacji w gałęzi, ponieważ zmiany mogą zostać zaewidencjonowane tylko do tej gałęzi. Przykład `azure-pipelines.yml` do kompilowania aplikacji sieci Web ASP.NET w pełnej strukturze przedstawiono na rysunku 11-8.
 
 ```yml
 name: $(rev:r)
@@ -200,7 +200,7 @@ steps:
   displayName: 'Build solution'
   inputs:
     solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactstagingdirectory)\\"'
+    msbuildArgs: '-p:DeployOnBuild=true -p:WebPublishMethod=Package -p:PackageAsSingleFile=true -p:SkipInvalidConfigurations=true -p:PackageLocation="$(build.artifactstagingdirectory)\\"'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
@@ -250,7 +250,7 @@ Nie ma kosztu konfigurowania wielu potoków kompilacji, więc korzystne jest pos
 
 ### <a name="versioning-releases"></a>Wersje wersji
 
-Jedną z wad korzystania z funkcji wydań jest to, że nie można jej zdefiniować w `azure-pipelines.yml` pliku zaewidencjonowania. Istnieje wiele powodów, dla których warto wykonać te czynności, aby można było dołączać do nich szkielet wydania w szablonie projektu. Na szczęście przesuniemy niektóre etapy obsługi do składnika kompilacji. Ta wartość będzie znana jako kompilacja wieloetapowa, a [Pierwsza wersja jest teraz dostępna](https://devblogs.microsoft.com/devops/whats-new-with-azure-pipelines/)!
+Jedną z wad korzystania z funkcji wydań jest to, że nie można jej zdefiniować w pliku zaewidencjonowanych `azure-pipelines.yml`. Istnieje wiele powodów, dla których warto wykonać te czynności, aby można było dołączać do nich szkielet wydania w szablonie projektu. Na szczęście przesuniemy niektóre etapy obsługi do składnika kompilacji. Ta wartość będzie znana jako kompilacja wieloetapowa, a [Pierwsza wersja jest teraz dostępna](https://devblogs.microsoft.com/devops/whats-new-with-azure-pipelines/)!
 
 >[!div class="step-by-step"]
 >[Poprzedni](azure-security.md)

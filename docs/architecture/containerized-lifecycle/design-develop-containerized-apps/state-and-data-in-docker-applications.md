@@ -2,12 +2,12 @@
 title: Stan i dane w aplikacjach platformy Docker
 description: Poznaj dostępną opcję zapisywania stanu w aplikacjach kontenerowych.
 ms.date: 02/15/2019
-ms.openlocfilehash: bc171a419632f2ac61c7c9bf6b201b84e0691c3a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b2368efb0eff2bdce48b77b2addcc4de89822c74
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295692"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394636"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Stan i dane w aplikacjach platformy Docker
 
@@ -43,11 +43,11 @@ Woluminy mogą mieć nazwy lub anonimowe (domyślnie). Nazwane woluminy są ewol
 
 **Instalacje wiązania** są dostępne przez długi czas i umożliwiają mapowanie dowolnego folderu do punktu instalacji w kontenerze. Instalacje powiązań mają więcej ograniczeń niż woluminy i niektóre ważne problemy z zabezpieczeniami, dlatego zalecaną opcją są woluminy.
 
-instalacje są folderami wirtualnymi, które znajdują się na żywo tylko w pamięci hosta i nigdy nie są zapisywane w systemie plików. **`tmpfs`** Są one szybkie i bezpieczne, ale wykorzystują pamięć i są przeznaczone wyłącznie dla danych nietrwałych.
+**instalacje `tmpfs`** to foldery wirtualne, które znajdują się na żywo tylko w pamięci hosta i nigdy nie są zapisywane w systemie plików. Są one szybkie i bezpieczne, ale wykorzystują pamięć i są przeznaczone wyłącznie dla danych nietrwałych.
 
 Jak pokazano na rysunku 4-5, regularne woluminy platformy Docker mogą być przechowywane poza kontenerami, ale w granicach fizycznych serwera hosta lub maszyny wirtualnej. Kontenery platformy Docker nie mogą jednak uzyskać dostępu do woluminu z jednego serwera hosta lub maszyny wirtualnej do innej. Innymi słowy, z tymi woluminami nie jest możliwe zarządzanie danymi udostępnionymi między kontenerami, które działają na różnych hostach platformy Docker, chociaż można je osiągnąć za pomocą sterownika woluminu obsługującego hosty zdalne.
 
-![Woluminy mogą być udostępniane między kontenerami, ale tylko na tym samym hoście, chyba że używany jest sterownik zdalny obsługujący hosty zdalne. ](./media/image5.png)
+![Diagram przedstawiający woluminy platformy Docker przechowywane poza kontenerami.](./media/state-and-data-in-docker-applications/container-based-application-external-data-sources.png)
 
 **Rysunek 4-5**. Woluminy i zewnętrzne źródła danych dla aplikacji opartych na kontenerach
 
@@ -66,5 +66,5 @@ Ponadto, gdy kontenery platformy Docker są zarządzane przez program Orchestrat
 **Relacyjne bazy danych i bazy danych NoSQL.** Istnieje wiele opcji zewnętrznych baz danych, z relacyjnych baz danych, takich jak SQL Server, PostgreSQL, Oracle lub NoSQL, takich jak Azure Cosmos DB, MongoDB itd. Te bazy danych nie są wyjaśnione jako część tego przewodnika, ponieważ są one jeszcze inne.
 
 >[!div class="step-by-step"]
->[Poprzedni](monolithic-applications.md)Następny
->[](soa-applications.md)
+>[Poprzedni](monolithic-applications.md)
+>[Następny](soa-applications.md)

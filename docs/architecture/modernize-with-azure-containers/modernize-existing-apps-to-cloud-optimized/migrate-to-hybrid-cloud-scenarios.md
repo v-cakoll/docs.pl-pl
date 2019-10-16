@@ -2,12 +2,12 @@
 title: Scenariusze migracji do chmury hybrydowej
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Migrowanie do scenariuszy chmury hybrydowej
 ms.date: 04/30/2018
-ms.openlocfilehash: 5f0819495080bc29ed1239b4a7ab8af31141881b
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 4348a9b538042fee7ebd9c08f480491f17425937
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318465"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394545"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Scenariusze migracji do chmury hybrydowej
 
@@ -66,5 +66,5 @@ Microsoft Azure Stack Development Kit to wdrożenie z jednym węzłem Azure Stac
     <https://azure.microsoft.com/pricing/hybrid-benefit/>
 
 >[!div class="step-by-step"]
->[Poprzedni](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
+>[Poprzedni](life-cycle-ci-cd-pipelines-devops-tools.md)
 >[Następny](../walkthroughs-technical-get-started-overview.md)

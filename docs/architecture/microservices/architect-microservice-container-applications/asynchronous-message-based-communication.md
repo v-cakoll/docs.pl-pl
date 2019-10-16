@@ -2,12 +2,12 @@
 title: Asynchroniczna komunikacja oparta na komunikatach
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Asynchroniczna komunikacja oparta na komunikatach to podstawowe koncepcje w architekturze mikrousług, ponieważ jest to najlepszy sposób, aby mikrousługi były niezależne od siebie, a także ostatecznie zsynchronizowane.
 ms.date: 09/20/2018
-ms.openlocfilehash: 109737a04eac8cfc30c746d283ca71c697f5b29d
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 58fe387c6bc9e1dcca519a200d3f8988f327a39c
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834485"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394575"
 ---
 # <a name="asynchronous-message-based-communication"></a>Asynchroniczna komunikacja oparta na komunikatach
 
@@ -81,10 +81,10 @@ Wyzwanie w przypadku implementowania architektury opartej na zdarzeniach w wielu
 
 Dodatkowe tematy, które należy wziąć pod uwagę podczas korzystania z komunikacji asynchronicznej, to idempotentność komunikatów i Deduplikacja komunikatów. Te tematy zostały omówione w sekcji [implementowanie komunikacji opartej na zdarzeniach między mikrousługami (zdarzenia integracji)](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md) w dalszej części tego przewodnika.
 
-## <a name="additional-resources"></a>Zasoby dodatkowe
+## <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Obsługa komunikatów opartych na zdarzeniach** \
-  <http://soapatterns.org/design_patterns/event_driven_messaging>
+  <https://soapatterns.org/design_patterns/event_driven_messaging>
 
 - **Kanał publikowania/subskrybowania** \
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
@@ -106,4 +106,4 @@ Dodatkowe tematy, które należy wziąć pod uwagę podczas korzystania z komuni
 
 > [!div class="step-by-step"]
 > [Poprzedni](communication-in-microservice-architecture.md)
-> [dalej](maintain-microservice-apis.md)
+> [Następny](maintain-microservice-apis.md)

@@ -33,7 +33,7 @@
         - name: Modernizowanie aplikacji za pomocą monitorowania i telemetrii
           href: ./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-with-monitoring-and-telemetry.md
         - name: Modernizowanie cyklu życia aplikacji za pomocą potoków ciągłej integracji/ciągłego wdrażania i metodyki DevOps w chmurze
-          href: ./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md
+          href: ./modernize-existing-apps-to-cloud-optimized/life-cycle-ci-cd-pipelines-devops-tools.md
         - name: Scenariusze migracji do chmury hybrydowej
           href: ./modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md
     - name: Omówienie przewodników i wprowadzającej dokumentacji technicznej

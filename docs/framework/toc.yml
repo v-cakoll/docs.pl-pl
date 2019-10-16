@@ -1,0 +1,66 @@
+- name: .NET framework — przewodnik
+  href: index.md
+- name: Nowości
+  href: whats-new/
+- name: Rozpocznij
+  href: get-started/
+- name: Przewodnik instalacji
+  href: install/
+- name: Przewodnik migracji
+  href: migration-guide/
+- name: Podręcznik programowania
+  href: development-guide.md
+  items:
+    - name: Domeny aplikacji i zestawy
+      href: app-domains/
+    - name: Zasoby w aplikacjach klasycznych
+      href: resources/
+    - name: Ułatwienia dostępu
+      href: ui-automation/
+    - name: Dane i modelowanie
+      href: data/
+    - name: Aplikacje klienckie
+      href: develop-client-apps.md
+      items:
+        - name: Windows Presentation Foundation
+          href: wpf/
+        - name: Windows Forms
+          href: winforms/
+    - name: Zorientowane na usługę aplikacje z usługą WCF
+      href: wcf/
+    - name: Windows Workflow Foundation
+      href: windows-workflow-foundation/
+    - name: Aplikacje usług systemu Windows
+      href: windows-services/
+    - name: Aplikacje 64-bitowe
+      href: 64-bit-apps.md
+    - name: Aplikacje internetowe wykorzystujące technologie ASP.NET
+      href: develop-web-apps-with-aspnet.md
+    - name: Programowanie dla sieci w .NET Framework
+      href: network-programming/
+    - name: Konfigurowanie aplikacji
+      href: configure-apps/
+    - name: Kompilowanie aplikacji z architekturą .NET Native
+      href: net-native/
+    - name: Windows Identity Foundation
+      href: security/
+    - name: 'Debugowanie, śledzenie i profilowanie'
+      href: debug-trace-profile/
+    - name: wdrażania
+      href: deployment/
+    - name: Wydajność
+      href: performance/
+    - name: Programowanie dynamiczne
+      href: reflection-and-codedom/
+    - name: Managed Extensibility Framework (MEF)
+      href: mef/
+    - name: Współdziałanie z kodem niezarządzanym
+      href: interop/
+    - name: Niezarządzany wykaz interfejsów API
+      href: unmanaged-api/
+    - name: Usługi XAML
+      href: xaml-services/
+- name: Narzędzia
+  href: tools/
+- name: Dodatkowe biblioteki klas i interfejsy API
+  href: additional-apis/

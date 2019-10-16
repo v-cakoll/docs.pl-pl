@@ -1,47 +1,47 @@
 ---
 title: Instalowanie programu .NET Framework 3.5 w systemie Windows 10, Windows 8.1 lub Windows 8
-description: Dowiedz się, jak zainstalować program .NET Framework 3.5 w systemie Windows 10, Windows 8.1 i Windows 8.
+description: Dowiedz się, jak zainstalować .NET Framework 3,5 w systemie Windows 10, Windows 8.1 i Windows 8.
 author: rlander
 ms.author: mairaw
 ms.date: 07/16/2018
-ms.openlocfilehash: 7b3b7ca5709008260ea284602a3ed8d2b288c410
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 949f73febe2eb2ad7155bddd2b7b7514eddfe6c9
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644203"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319121"
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Instalowanie programu .NET Framework 3.5 w systemie Windows 10, Windows 8.1 lub Windows 8
 
-Uruchamianie aplikacji w systemie Windows 10, Windows 8.1 i Windows 8 w programie .NET Framework 3.5, może być konieczne. Umożliwia także te instrukcje dla wcześniejszych wersji Windows.
+Aby uruchomić aplikację w systemie Windows 10, Windows 8.1 i Windows 8, może być konieczne .NET Framework 3,5. Możesz również użyć tych instrukcji dla wcześniejszych wersji systemu Windows.
 
-## <a name="install-the-net-framework-35-on-demand"></a>Instalowanie programu .NET Framework 3.5 na żądanie
+## <a name="install-the-net-framework-35-on-demand"></a>Instalowanie .NET Framework 3,5 na żądanie
 
-Następujące okno dialogowe konfiguracji może zostać wyświetlony, jeśli zostanie podjęta próba uruchomienia aplikacji, która wymaga programu .NET Framework 3.5. Wybierz **Zainstaluj tę funkcję** Aby włączyć program .NET Framework 3.5. Ta opcja wymaga połączenia internetowego.
+Jeśli spróbujesz uruchomić aplikację, która wymaga .NET Framework 3,5, może zostać wyświetlone następujące okno dialogowe konfiguracji. Wybierz pozycję **Zainstaluj tę funkcję** , aby włączyć .NET Framework 3,5. Ta opcja wymaga połączenia internetowego.
 
-![.NET framework w instalacji w oknie dialogowym](./media/dotnet-framework-installation-dialog.jpg)
+![Zrzut ekranu przedstawiający okno dialogowe instalacji .NET Framework.](./media/dotnet-35-windows-10/dotnet-framework-installation-dialog.png)
 
-### <a name="why-am-i-getting-this-pop-up"></a>Dlaczego otrzymuję to wyskakujące?
+### <a name="why-am-i-getting-this-pop-up"></a>Dlaczego otrzymuję ten wyskakujące okienko?
 
-.NET Framework jest tworzony przez firmę Microsoft i zapewnia środowisko do uruchamiania aplikacji. Dostępne są różne wersje. Wiele firm twórz swoje aplikacje do uruchamiania przy użyciu programu .NET Framework, a te aplikacje są przeznaczone dla określonej wersji. Jeśli zobaczysz to okno, próbuje uruchomić aplikację, która wymaga .NET Framework w wersji 3.5, ale ta wersja nie jest zainstalowany w systemie.
+.NET Framework jest tworzony przez firmę Microsoft i udostępnia środowisko do uruchamiania aplikacji. Dostępne są różne wersje. Wiele firm opracowuje aplikacje do uruchamiania przy użyciu .NET Framework i aplikacje te są przeznaczone dla konkretnej wersji. Jeśli zobaczysz to okno podręczne, próbujesz uruchomić aplikację, która wymaga .NET Framework w wersji 3,5, ale ta wersja nie jest zainstalowana w systemie.
 
-## <a name="enable-the-net-framework-35-in-control-panel"></a>Włączanie programu .NET Framework 3.5 w Panelu sterowania
+## <a name="enable-the-net-framework-35-in-control-panel"></a>Włączanie .NET Framework 3,5 w panelu sterowania
 
-Można włączyć program .NET Framework 3.5 za pomocą Panelu sterowania Windows. Ta opcja wymaga połączenia internetowego.
+.NET Framework 3,5 można włączyć za pomocą panelu sterowania systemu Windows. Ta opcja wymaga połączenia internetowego.
 
-1. Naciśnij klawisz Windows, Windows ![Windows logo](https://i-msdn.sec.s-msft.com/dynimg/IC721376.jpeg) na klawiaturze, wpisz "Windows funkcji", a następnie naciśnij klawisz Enter. **Windows Włącz lub wyłącz funkcje** pojawi się okno dialogowe.
+1. Naciśnij klawisz Windows ![Screenshot logo Key systemu Windows. ](./media/dotnet-35-windows-10/windows-keyboard-logo.png) na klawiaturze wpisz "funkcje systemu Windows", a następnie naciśnij klawisz ENTER. Zostanie wyświetlone okno dialogowe **Włączanie lub wyłączanie funkcji systemu Windows** .
 
-2. Wybierz **.NET Framework 3.5 (w tym .NET 2.0 i 3.0)** pole wyboru, wybierz opcję **OK**i ponownie uruchomić komputer, jeśli zostanie wyświetlony monit.
+2. Zaznacz pole wyboru **.NET Framework 3,5 (zawiera .net 2,0 i 3,0)** , wybierz **przycisk OK**, a następnie uruchom ponownie komputer po wyświetleniu monitu.
 
-   ![Instalowanie platformy .NET przy użyciu Panelu sterowania](./media/dotnet-control-panel.png)
+   ![Zrzut ekranu przedstawiający instalację platformy .NET przy użyciu panelu sterowania.](./media/dotnet-35-windows-10/dotnet-control-panel.png)
 
-   Nie ma potrzeby wybierania elementów podrzędnych dla **Aktywacja HTTP Windows Communication Foundation (WCF)** i **Aktywacja bez HTTP Windows Communication Foundation (WCF)** chyba, że jesteś deweloperem lub administrator serwera, który wymaga tej funkcji.
+   Nie musisz wybierać elementów podrzędnych dla **Windows Communication Foundation (WCF) Aktywacja HTTP** i **Windows Communication Foundation (WCF) Aktywacja bez http** , chyba że jesteś deweloperem lub administratorem serwera, który wymaga tego zestaw.
 
-## <a name="troubleshoot-the-installation-of-the-net-framework-35"></a>Rozwiązywanie problemów z instalacją programu .NET Framework 3.5
+## <a name="troubleshoot-the-installation-of-the-net-framework-35"></a>Rozwiązywanie problemów z instalacją .NET Framework 3,5
 
-Podczas instalacji, możesz napotkać błąd 0x800f0906, 0x800f0907, 0x800f081f lub 0x800F0922, w którym to przypadku odnoszą się do [błąd instalacji programu .NET Framework 3.5: 0x800f0906, 0x800f0907 lub 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09) na temat sposobu rozwiązania tych problemów.
+Podczas instalacji może wystąpić błąd 0x800f0906, 0x800f0907, 0x800F081F lub 0x800F0922, a w tym przypadku wystąpił [błąd instalacji .NET Framework 3,5:0x800f0906, 0x800f0907 lub 0x800F081F](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09) , aby zobaczyć, jak rozwiązać te problemy.
 
-Jeśli nadal nie możesz rozwiązać problem z instalacją lub nie masz dostępu do Internetu, możesz spróbować zainstalować je przy użyciu nośnika instalacyjnego Windows. Aby uzyskać więcej informacji, zobacz [wdrażania .NET Framework 3.5 przy użyciu Deployment Image Servicing i zarządzanie (DISM)](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism). Jeśli nie masz na nośniku instalacyjnym, zobacz [Utwórz nośnik instalacyjny dla Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).
+Jeśli nadal nie możesz rozwiązać problemu z instalacją lub nie masz połączenia z Internetem, możesz spróbować go zainstalować przy użyciu nośnika instalacyjnego systemu Windows. Aby uzyskać więcej informacji, zobacz [wdrażanie .NET Framework 3,5 przy użyciu narzędzia do obsługi i zarządzania obrazami wdrażania (DISM)](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism). Jeśli nie masz nośnika instalacyjnego, zobacz [Tworzenie nośnika instalacyjnego dla systemu Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).
 
 > [!WARNING]
-> Jeśli nie jesteś jednostki uzależnionej w usłudze Windows Update jako źródła do instalowania programu .NET Framework 3.5, należy używać źródła z tej samej odpowiedniej wersji systemu operacyjnego Windows. Przy użyciu ścieżki źródłowej, która nie jest zgodny z tej samej wersji systemu Windows nie będzie zapobiec instalowanego niezgodną wersję programu .NET Framework 3.5. Jednak to spowoduje, że system będzie w stanie nieobsługiwane i niezdatny do użytku.
+> Jeśli nie korzystasz z Windows Update jako źródła do zainstalowania .NET Framework 3,5, musisz upewnić się, że źródła są używane z tej samej wersji systemu operacyjnego Windows. Użycie ścieżki źródłowej, która nie jest zgodna z tą samą wersją systemu Windows, nie uniemożliwi instalacji niezgodnej wersji .NET Framework 3,5. Spowoduje to jednak, że system będzie w stanie nieobsługiwanym i nieobsługowym.

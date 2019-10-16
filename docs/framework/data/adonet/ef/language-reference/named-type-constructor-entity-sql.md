@@ -2,19 +2,19 @@
 title: Konstruktor nazwanego typu (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 549dea04-d93d-4c87-a292-f81b1598dbfd
-ms.openlocfilehash: c7027614e5667acedb02d871a09df1ac9d799405
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f40adce1a9e031ed0b7cd5d03d9c63db255aa610
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250006"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319572"
 ---
 # <a name="named-type-constructor-entity-sql"></a>Konstruktor nazwanego typu (Entity SQL)
 Służy do tworzenia wystąpień typów nominalnych modelu koncepcyjnego, takich jak jednostki lub typy złożone.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```sql  
 [{identifier. }] identifier( [expression [{, expression }]] )  
 ```  
   
@@ -31,7 +31,7 @@ Służy do tworzenia wystąpień typów nominalnych modelu koncepcyjnego, takich
 ## <a name="remarks"></a>Uwagi  
  W poniższych przykładach pokazano, jak utworzyć typy nominalne i złożone:  
   
- Poniższe wyrażenie tworzy wystąpienie `Person` typu:  
+ Poniższe wyrażenie tworzy wystąpienie typu `Person`:  
   
  `Person("abc", 12)`  
   
@@ -47,16 +47,16 @@ Służy do tworzenia wystąpień typów nominalnych modelu koncepcyjnego, takich
   
  `MyModel.Person("Bill", MyModel.AddressInfo('My street address', 'Seattle', 'WA', MyModel.ZipCode('98118', '4567')))`  
   
- Poniższy przykład pokazuje, jak zainicjować właściwość typu złożonego do wartości null:`MyModel.ZipCode(‘98118’, null)`  
+ Poniższy przykład pokazuje, jak zainicjować właściwość typu złożonego na null: `MyModel.ZipCode(‘98118’, null)`  
   
 ## <a name="example"></a>Przykład  
  Poniższe zapytanie Entity SQL używa konstruktora nazwanego typu w celu utworzenia wystąpienia typu modelu koncepcyjnego. Zapytanie jest oparte na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
   
-1. Wykonaj czynności opisane w [temacie How to: Wykonaj zapytanie zwracające wyniki](../how-to-execute-a-query-that-returns-structuraltype-results.md)StructuralType.  
+1. Postępuj zgodnie z procedurą w temacie [How to: Execute a Query zwracającej wyniki StructuralType](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2. Przekaż następujące zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
+2. Przekaż następujące zapytanie jako argument do metody `ExecuteStructuralTypeQuery`:  
   
- [!code-csharp[DP EntityServices Concepts 2#NAMED_TYPE_CONSTRUCTOR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#named_type_constructor)]  
+ [!code-sql[DP EntityServices Concepts#NAMED_TYPE_CONSTRUCTOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#named_type_constructor)]  
   
 ## <a name="see-also"></a>Zobacz także
 

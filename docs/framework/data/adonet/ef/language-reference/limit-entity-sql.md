@@ -2,19 +2,19 @@
 title: LIMIT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c22ffede-0a52-44d1-99b9-4a91e651e1b9
-ms.openlocfilehash: 432dfe2c8b2b87daf885be6de4da9bbeaaa37638
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 275b22686c6c932b2a9e4b20973ac07e99d47e14
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250446"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319629"
 ---
 # <a name="limit-entity-sql"></a>LIMIT (Entity SQL)
 Stronicowanie fizyczne można wykonać za pomocą klauzuli LIMIT w klauzuli ORDER BY. Nie można użyć limitu niezależnie od klauzuli ORDER BY.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```sql  
 [ LIMIT n ]  
 ```  
   
@@ -30,11 +30,11 @@ Stronicowanie fizyczne można wykonać za pomocą klauzuli LIMIT w klauzuli ORDE
 ## <a name="example"></a>Przykład  
  Poniższe zapytanie Entity SQL używa operatora ORDER BY z LIMITem, aby określić kolejność sortowania używaną dla obiektów zwracanych w instrukcji SELECT. Zapytanie jest oparte na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
   
-1. Wykonaj czynności opisane w [temacie How to: Wykonaj zapytanie zwracające wyniki](../how-to-execute-a-query-that-returns-structuraltype-results.md)StructuralType.  
+1. Postępuj zgodnie z procedurą w temacie [How to: Execute a Query zwracającej wyniki StructuralType](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2. Przekaż następujące zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
+2. Przekaż następujące zapytanie jako argument do metody `ExecuteStructuralTypeQuery`:  
   
- [!code-csharp[DP EntityServices Concepts 2#LIMIT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#limit)]  
+ [!code-sql[DP EntityServices Concepts#LIMIT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#limit)]  
   
 ## <a name="see-also"></a>Zobacz także
 

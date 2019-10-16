@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: f711bd04aeadb584eac1ecb0b644a36e2e496d08
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: e355a89e27ea5bd6e4335b39c4e669610c4b0553
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72290946"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319107"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Logiczna operatory logiczne (C# odwołanie)
 
@@ -55,7 +55,7 @@ Prefiks jednoargumentowy `!` oblicza logiczne Negacja operandu. Oznacza to, że 
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
-Począwszy od C# 8,0, jednoargumentowy przyrostek `!` jest [operatorem o wartości null-łagodniejszej](null-forgiving.md).
+Począwszy od C# 8,0, jednoargumentowy przyrostek `!` jest [operatorem null-łagodniejszej](null-forgiving.md).
 
 ## <a name="logical-and-operator-"></a>Operatory logiczne i &amp;
 
@@ -117,17 +117,17 @@ W poniższym przykładzie operand z prawej strony operatora `||` jest wywołanie
 
 W przypadku operandów `bool?` operatory `&` i `|` obsługują logikę z trzema wartościami. Semantyka tych operatorów jest definiowana przez następującą tabelę:  
   
-|x|T|x & y|x&#124;y|  
+|x|t|x & y|x&#124;y|  
 |----|----|----|----|  
 |true|true|true|true|  
 |true|false|false|true|  
-|true|null|null|true|  
+|true|wartość null|wartość null|true|  
 |false|true|false|true|  
 |false|false|false|false|  
-|false|null|false|null|  
-|null|true|null|true|  
-|null|false|false|null|  
-|null|null|null|null|  
+|false|wartość null|false|wartość null|  
+|wartość null|true|wartość null|true|  
+|wartość null|false|false|wartość null|  
+|wartość null|wartość null|wartość null|wartość null|  
 
 Zachowanie tych operatorów różni się od typowego zachowania operatora z zerowymi typami wartości. Zazwyczaj operator, który jest zdefiniowany dla operandów typu wartości, może być również używany z operandami odpowiadającego typu wartości null. Taki operator wytwarza `null`, jeśli którykolwiek z jego operandów jest `null`. Jednak operatory `&` i `|` mogą generować wartości inne niż null, nawet jeśli jeden z operandów jest `null`. Aby uzyskać więcej informacji o zachowaniu operatora z typami wartości null, zobacz sekcję [operatorów](../../programming-guide/nullable-types/using-nullable-types.md#operators) w artykule [używanie typów wartości dopuszczających wartość null](../../programming-guide/nullable-types/using-nullable-types.md) .
 
@@ -145,7 +145,7 @@ Dla operatora binarnego `op` wyrażenie złożonego przypisania formularza
 x op= y
 ```
 
-jest równoważne
+jest równoważny
 
 ```csharp
 x = x op y
@@ -182,7 +182,7 @@ Typ zdefiniowany przez użytkownika może [przeciążać](operator-overloading.m
 
 Typ zdefiniowany przez użytkownika nie może przeciążać warunkowych operatorów logicznych `&&` i `||`. Jednakże, jeśli typ zdefiniowany przez użytkownika przeciążuje [Operatory prawdy i FAŁSZ](true-false-operators.md) oraz operator `&` lub `|` w określony sposób, można również ocenić operacje `&&` lub `||` dla operandów tego typu. Aby uzyskać więcej informacji, zapoznaj się z sekcją [Operatory logiczne warunkowe](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) w [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
-## <a name="c-language-specification"></a>C#Specyfikacja języka
+## <a name="c-language-specification"></a>specyfikacja języka C#
 
 Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji języka](~/_csharplang/spec/introduction.md):
 
@@ -194,5 +194,5 @@ Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji j
 ## <a name="see-also"></a>Zobacz także
 
 - [C#odwoła](../index.md)
-- [C#zainteresowanych](index.md)
+- [Operatory języka C#](index.md)
 - [Operatory bitowe i przesunięcia](bitwise-and-shift-operators.md)

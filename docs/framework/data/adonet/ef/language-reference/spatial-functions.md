@@ -2,18 +2,18 @@
 title: Funkcje przestrzenne
 ms.date: 03/30/2017
 ms.assetid: 90cb177d-88a0-45be-97e8-3b306283c6e0
-ms.openlocfilehash: 09402633c5e7f591a534992fc92655e6a2d1d88d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eba384e77389f82006479f165178e80fcac244b1
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797699"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319301"
 ---
 # <a name="spatial-functions"></a>Funkcje przestrzenne
-Istnieje nie literału format dla typów przestrzennych. Można jednak użyć wywołać za pomocą ciągów w formacie tekstowym dobrze znane funkcje canonical Entity Framework. Na przykład poniższe wywołanie funkcji tworzy punkt geometrii:  
+Nie ma formatu literału dla typów przestrzennych. Można jednak używać kanonicznych funkcji Entity Framework, które są wywoływane za pomocą ciągów w formacie dobrze znanego tekstu. Na przykład następujące wywołanie funkcji tworzy punkt geometrii:  
   
-```  
+```sql  
 GeometryFromText('POINT (43 -73)')  
 ```  
   
- <xref:System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions> Metody mają przestrzenne canonical metod programu Entity Framework. Kliknij metodę, aby wyświetlić parametry powinien zostać przekazany do funkcji.
+ Metody <xref:System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions> mają wszystkie jednoEntity Frameworkowe metody kanoniczne. Kliknij metodę zainteresowania, aby zobaczyć, jakie parametry mają być przenoszone do funkcji.

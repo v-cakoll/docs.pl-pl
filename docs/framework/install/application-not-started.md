@@ -4,12 +4,12 @@ description: Dowiedz się, co zrobić, Jeśli zobaczysz okno dialogowe "nie moż
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/05/2019
-ms.openlocfilehash: 2534979e8dea886c2d7298c57e12b66d7a962c69
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 8fa8381f1b05445f259b4e4af5cc17fa487b2ce0
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71401705"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319168"
 ---
 # <a name="troubleshooting-a-this-application-could-not-be-started-error-message"></a>Rozwiązywanie problemów z komunikatem o błędzie "nie można uruchomić tej aplikacji"
 
@@ -37,7 +37,7 @@ Aby rozwiązać ten problem, możesz uruchomić aplikację, wykonując następuj
 
 1. Jeśli aplikacja zostanie uruchomiona pomyślnie, wybierz przycisk **Zakończ** . W przeciwnym razie wybierz przycisk **dalej** .
 
-1. W przypadku wybrania przycisku **dalej** narzędzie .NET Framework Repair wyświetli okno dialogowe, takie jak poniższe. Wybierz przycisk **Zakończ** , aby wysłać informacje diagnostyczne do firmy Microsoft.
+1. W przypadku wybrania przycisku **dalej** narzędzie .NET Framework Repair wyświetli okno dialogowe podobne do poniższych. Wybierz przycisk **Zakończ** , aby wysłać informacje diagnostyczne do firmy Microsoft.
 
    ![Nie można rozwiązać problemu](media/application-not-started/repair-tool-no-resolution.png)
 
@@ -50,10 +50,10 @@ Aby rozwiązać ten problem, możesz uruchomić aplikację, wykonując następuj
    |Windows 8.1|[Środowisko uruchomieniowe .NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
    |Windows 8|[.NET Framework 4.6.1](https://www.microsoft.com/download/details.aspx?id=49981)|
    |Windows 7 z dodatkiem SP1|[Środowisko uruchomieniowe .NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
-   |Windows Vista z dodatkiem SP2|[.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=48130)|
+   |Windows Vista z dodatkiem SP2|[.NET Framework 4,6](https://www.microsoft.com/download/details.aspx?id=48130)|
 
    > [!NOTE]
-   >  .NET Framework 4,8 jest preinstalowany w systemie Windows 10 maja 2019 Update.
+   > .NET Framework 4,8 jest preinstalowany w systemie Windows 10 maja 2019 Update.
 
 1. Podjęto próbę uruchomienia aplikacji.
 

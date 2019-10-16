@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Projektowanie nowego typu (LINQ to XML) (Visual Basic)'
+title: 'Instrukcje: Tworzenie projektu nowego typu (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 8cfb24f5-89b2-4cfb-b85d-e7963f8f1845
-ms.openlocfilehash: a94180705674c8aee3ce45607f89fdbba1c873b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64b563c57406caae7869905c417db9e6439e6157
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757134"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318370"
 ---
-# <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a>Instrukcje: Projektowanie nowego typu (LINQ to XML) (Visual Basic)
-Inne przykłady w tej sekcji wykazały zapytań, które zwracają wyniki w postaci <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> z `string`, i <xref:System.Collections.Generic.IEnumerable%601> z `int`. Są to typowe typy wyników, ale nie są odpowiednie dla każdego scenariusza. W wielu przypadkach można zapytania do zwrócenia <xref:System.Collections.Generic.IEnumerable%601> z innego typu.  
+# <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a>Instrukcje: Tworzenie projektu nowego typu (LINQ to XML) (Visual Basic)
+W innych przykładach w tej sekcji przedstawiono zapytania, które zwracają wyniki jako <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> z `string` i <xref:System.Collections.Generic.IEnumerable%601> z `int`. Są to typowe typy wyników, ale nie są one odpowiednie dla każdego scenariusza. W wielu przypadkach zapytania będą zwracać <xref:System.Collections.Generic.IEnumerable%601> innego typu.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie przedstawiono sposób tworzenia wystąpień obiektów w `Select` klauzuli. Ten kod najpierw definiuje nową klasę za pomocą konstruktora, a następnie modyfikuje `Select` instrukcji, aby wyrażenie jest nowe wystąpienie klasy nowej klasy.  
+ Ten przykład pokazuje, jak utworzyć wystąpienie obiektów w klauzuli `Select`. Kod najpierw definiuje nową klasę z konstruktorem, a następnie modyfikuje `Select` instrukcji tak, że wyrażenie jest nowym wystąpieniem nowej klasy.  
   
- W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Typowe zamówienie zakupu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: typowe zamówienie zakupu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Public Class NameQty  
@@ -43,11 +43,11 @@ Public Class Program
 End Class  
 ```  
   
- W tym przykładzie użyto `M:System.Xml.Linq.XElement.Element` metody, która została wprowadzona w temacie [jak: Pobierz jeden typ elementów podrzędnych (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md). Korzysta również rzutowania można pobrać wartości elementów, które są zwracane przez `M:System.Xml.Linq.XElement.Element` metody.  
+ W tym przykładzie użyto metody `M:System.Xml.Linq.XElement.Element`, która została wprowadzona w temacie [jak: Pobieranie pojedynczego elementu podrzędnego (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md). Używa również rzutowania do pobrania wartości elementów, które są zwracane przez metodę `M:System.Xml.Linq.XElement.Element`.  
   
  Ten przykład generuje następujące wyniki:  
   
-```  
+```console  
 Lawnmower:1  
 Baby Monitor:2  
 ```  

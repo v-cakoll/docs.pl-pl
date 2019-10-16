@@ -4,13 +4,13 @@ description: Obsługiwane wersje macOS i zależności programu .NET Core umożli
 author: thraka
 ms.author: adegeo
 ms.custom: updateeachvsrelease
-ms.date: 09/27/2019
-ms.openlocfilehash: 13eea0043be9cf5d5574d6b38f144853c22e8d07
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.date: 10/11/2019
+ms.openlocfilehash: 2d4fc0b37be08988440325db8b507124c36bf053
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591686"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318319"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>Wymagania wstępne dotyczące platformy .NET Core w systemie macOS
 
@@ -28,7 +28,7 @@ Pobierz i Zainstaluj zestaw .NET Core SDK ze strony [plików do pobrania w progr
 
 Listę znanych problemów można znaleźć w artykule [znane problemy dotyczące programu .NET Core](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-known-issues.md).
 
-# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2,2](#tab/netcore22)
 
 Platforma .NET Core 2,2 jest obsługiwana w **macOS Sierra (wersja 10,12)** i nowszych wersjach. Wymagana jest architektura procesora **x64** .
 
@@ -36,7 +36,7 @@ Pobierz i Zainstaluj zestaw .NET Core SDK ze strony [plików do pobrania w progr
 
 Listę znanych problemów można znaleźć w artykule [znane problemy dotyczące programu .NET Core](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-known-issues.md).
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2,1](#tab/netcore21)
 
 Platforma .NET Core 2,1 jest obsługiwana w **macOS Sierra (wersja 10,12)** i nowszych wersjach. Wymagana jest architektura procesora **x64** .
 
@@ -45,6 +45,17 @@ Pobierz i Zainstaluj zestaw .NET Core SDK ze strony [plików do pobrania w progr
 Listę znanych problemów można znaleźć w artykule [znane problemy dotyczące programu .NET Core](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-known-issues.md).
 
 ---
+
+## <a name="libgdiplus"></a>libgdiplus
+
+Aplikacje .NET Core używające zestawu *System. Drawing. Common* wymagają zainstalowania libgdiplus.
+
+Łatwym sposobem uzyskania libgdiplus jest użycie Menedżera pakietów [oprogramowania homebrew ("rozwiązania brew")](https://brew.sh/) dla macOS. Po zainstalowaniu *rozwiązania brew*Zainstaluj libgdiplus, wykonując następujące polecenia w wierszu terminalu (polecenie):
+
+```console
+brew update
+brew install libgdiplus
+```
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio for Mac
 

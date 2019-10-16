@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: cf941e5e3fa3fc6313ef8b2ff5c176aec68c1e6b
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 865e55a28e2f3db85d50a81f6ab29c354ee3c62a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291726"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319097"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (null-łagodniejszej) — operatorC# (odwołanie)
 
@@ -37,7 +37,7 @@ Można również użyć operatora o wartości null-łagodniejszej, gdy wiadomo, 
 
 [!code-csharp[Use null-forgiving operator](~/samples/csharp/language-reference/operators/NullForgivingOperator.cs#UseNullForgiving)]
 
-Bez operatora null łagodniejszej kompilator generuje następujące ostrzeżenie dla kodu `p.Name`: `Warning CS8602: Dereference of a possibly null reference.`.
+Bez operatora null łagodniejszej kompilator generuje następujące ostrzeżenie dla kodu `p.Name`: `Warning CS8602: Dereference of a possibly null reference`.
 
 Jeśli można zmodyfikować metodę `IsValid`, można użyć atrybutu [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute) , aby dać kompilatorowi, że argument metody `IsValid` nie może być `null`, gdy metoda zwraca `true`:
 
@@ -45,8 +45,12 @@ Jeśli można zmodyfikować metodę `IsValid`, można użyć atrybutu [NotNullWh
 
 W poprzednim przykładzie nie trzeba używać operatora łagodniejszej o wartości null, ponieważ kompilator ma wystarczającą ilość informacji, aby dowiedzieć się, że `p` nie może być `null` w instrukcji `if`. Aby uzyskać więcej informacji o atrybutach, które umożliwiają określenie dodatkowych informacji o stanie null zmiennej, zobacz [uaktualnianie interfejsów API z atrybutami w celu zdefiniowania oczekiwań o wartości null](../../nullable-attributes.md).
 
+## <a name="c-language-specification"></a>specyfikacja języka C#
+
+Aby uzyskać więcej informacji, zobacz sekcję [operator null-łagodniejszej](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) w [wersji roboczej specyfikacji typów odwołań dopuszczających wartość null](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md).
+
 ## <a name="see-also"></a>Zobacz także
 
 - [C#odwoła](../index.md)
-- [C#zainteresowanych](index.md)
+- [Operatory języka C#](index.md)
 - [Samouczek: Projektowanie przy użyciu typów referencyjnych dopuszczających wartość null](../../tutorials/nullable-reference-types.md)

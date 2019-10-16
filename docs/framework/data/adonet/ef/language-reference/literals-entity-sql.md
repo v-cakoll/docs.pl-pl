@@ -2,15 +2,15 @@
 title: Literały (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 9aba737b522f75f1f81cc054fb87b414b06f9611
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e07dd3217e133fff98beb11ecad47e1474e4974a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250334"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319663"
 ---
 # <a name="literals-entity-sql"></a>Literały (Entity SQL)
-W tym temacie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] opisano obsługę literałów.  
+W tym temacie opisano obsługę [!INCLUDE[esql](../../../../../../includes/esql-md.md)] dla literałów.  
   
 ## <a name="null"></a>Null  
  Literał null jest używany do reprezentowania wartości null dla dowolnego typu. Literał o wartości null jest zgodny z dowolnym typem.  
@@ -23,7 +23,7 @@ W tym temacie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] opisano ob
  Literały logiczne są reprezentowane przez słowa kluczowe `true` i `false`.  
   
 ## <a name="integer"></a>Liczba całkowita  
- Literały całkowite mogą być typu <xref:System.Int32> lub. <xref:System.Int64> <xref:System.Int32> Literał jest serią znaków numerycznych. <xref:System.Int64> Literał to seria znaków liczbowych, po których następuje wielkie litery L.  
+ Literały całkowite mogą być typu <xref:System.Int32> lub <xref:System.Int64>. @No__t-0 Literal to seria znaków numerycznych. Literał <xref:System.Int64> to seria znaków liczbowych, po których następuje Wielka litera L.  
   
 ## <a name="decimal"></a>Wartość dziesiętna  
  Liczba stałych punktów (Decimal) to seria znaków numerycznych, kropki (.) i kolejnej serii znaków liczbowych, po których występuje wielkie litery "M".  
@@ -32,9 +32,9 @@ W tym temacie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] opisano ob
  Liczba zmiennoprzecinkowa o podwójnej precyzji to seria znaków liczbowych, kropki (.) i kolejnej serii znaków numerycznych, które mogą być stosowane w wykładniku. Liczba zmiennoprzecinkowa o pojedynczej precyzji (lub zmiennoprzecinkowa) to składnia liczb zmiennoprzecinkowych o podwójnej precyzji, po której następuje mała litera f.  
   
 ## <a name="string"></a>String  
- Ciąg jest serią znaków ujętych w znaki cudzysłowu. Cudzysłowy mogą być zarówno pojedynczymi cudzysłowami`'`(), jak i dwoma cudzysłowami ("). Literały ciągu znaków mogą być w formacie Unicode lub innym niż Unicode. Aby zadeklarować literał ciągu znaków jako Unicode, poprzedź literał literałem "N". Wartość domyślna to literały ciągu znaków inne niż Unicode. Nie może zawierać spacji między znakiem N i ładunkiem literału ciągu, a N musi być wielką literą.  
+ Ciąg jest serią znaków ujętych w znaki cudzysłowu. Cudzysłowy mogą być zarówno pojedynczymi cudzysłowami (`'`), jak i podwójnych cudzysłowów ("). Literały ciągu znaków mogą być w formacie Unicode lub innym niż Unicode. Aby zadeklarować literał ciągu znaków jako Unicode, poprzedź literał literałem "N". Wartość domyślna to literały ciągu znaków inne niż Unicode. Nie może zawierać spacji między znakiem N i ładunkiem literału ciągu, a N musi być wielką literą.  
   
-```  
+```sql  
 'hello' -- non-Unicode character string literal  
 N'hello' -- Unicode character string literal  
 "x"  
@@ -45,13 +45,13 @@ N"This is a string!"
 ## <a name="datetime"></a>DataGodzina  
  Literał DateTime jest niezależny od ustawień regionalnych i składa się z części daty i części czasu. Części daty i godziny są obowiązkowe i nie ma wartości domyślnych.  
   
- `YYYY`Część daty musi mieć format: - `DD` `MM` , gdzie jest`YYYY` czwartą wartością roku z zakresu od 0,001 do 9999, jest miesiącem od 1 `MM`do12 i-jest `DD` wartość dnia, która jest ważna dla danego miesiąca `MM`.  
+ Część daty musi mieć format: `YYYY` @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4, gdzie `YYYY` jest wartością czterech cyfr rok od 0,001 do 9999, `MM` jest miesiącem od 1 do 12, a `DD` to wartość dnia obowiązująca dla danego miesiąca `MM`.  
   
- Część godziny musi mieć format: `HH`:`MM`[:`SS`[. fffffff]], gdzie `HH` jest wartością godziny z przedziału od 0 do 23 `MM` , jest wartością minutową z zakresu od 0 `SS` do 59, to druga wartość z przedziału od 0 do 59 i fffffff to ułamkowa druga wartość z zakresu od 0 do 9999999. Wszystkie zakresy wartości są włącznie. Ułamki sekund są opcjonalne. Sekundy są opcjonalne, chyba że określono ułamki sekund; w takim przypadku wymagane są sekundy. Gdy nie określono sekund lub ułamków sekund, zamiast tego zostanie użyta wartość domyślna zero.  
+ Część godziny musi mieć format: `HH`: `MM` [: `SS` [. fffffff]], gdzie `HH` jest wartością godzinową z zakresu od 0 do 23, `MM` jest wartością minutową z przedziału od 0 do 59, `SS` to druga wartość z zakresu od 0 do 59, a fffffff jest wartością ułamkową drugiej od 0 do 9999999. Wszystkie zakresy wartości są włącznie. Ułamki sekund są opcjonalne. Sekundy są opcjonalne, chyba że określono ułamki sekund; w takim przypadku wymagane są sekundy. Gdy nie określono sekund lub ułamków sekund, zamiast tego zostanie użyta wartość domyślna zero.  
   
  Między symbolem DATETIME i ładunkiem literału może być dowolna liczba spacji, ale nie ma żadnych nowych wierszy.  
   
-```  
+```sql  
 DATETIME'2006-10-1 23:11'  
 DATETIME'2006-12-25 01:01:00.0000000' -- same as DATETIME'2006-12-25 01:01'  
 ```  
@@ -61,7 +61,7 @@ DATETIME'2006-12-25 01:01:00.0000000' -- same as DATETIME'2006-12-25 01:01'
   
  Między symbolem czasu a ładunkiem literału może być dowolna liczba spacji, ale nie ma żadnych nowych wierszy.  
   
-```  
+```sql  
 TIME‘23:11’  
 TIME‘01:01:00.1234567’  
 ```  
@@ -71,7 +71,7 @@ TIME‘01:01:00.1234567’
   
  Między symbolem DATETIMEOFFSET a ładunkiem literału może być dowolna liczba spacji, ale nie ma żadnych nowych wierszy.  
   
-```  
+```sql  
 DATETIMEOFFSET‘2006-10-1 23:11 +02:00’  
 DATETIMEOFFSET‘2006-12-25 01:01:00.0000000 -08:30’  
 ```  
@@ -80,23 +80,23 @@ DATETIMEOFFSET‘2006-12-25 01:01:00.0000000 -08:30’
 > Prawidłowa wartość literału Entity SQL może przypadać poza obsługiwane zakresy dla środowiska CLR lub źródła danych. Może to spowodować powstanie wyjątku  
   
 ## <a name="binary"></a>plików binarnych  
- Binarny literał ciągu jest sekwencją cyfr szesnastkowych, które są rozdzielane pojedynczymi cudzysłowami po słowie kluczowym `x`słowo kluczowe lub symbolem `X` skrótu lub. Symbol `X` skrótu nie uwzględnia wielkości liter. Między słowem kluczowym `binary` a wartością ciągu binarnego jest dozwolona zero lub więcej spacji.  
+ Binarny literał ciągu jest sekwencją cyfr szesnastkowych, które są rozdzielane pojedynczymi cudzysłowami po słowie kluczowym słowo kluczowe lub symbolem skrótu `X` lub `x`. Symbol skrótu `X` uwzględnia wielkość liter. Między słowem kluczowym `binary` i wartością ciągu binarnego jest dozwolona zero lub więcej spacji.  
   
  W znakach szesnastkowych również jest rozróżniana wielkość liter. Jeśli literał składa się z nieparzystej liczby cyfr szesnastkowych, literał zostanie wyrównany do następnej parzystej cyfry szesnastkowej przez prefiks literału z szesnastkową cyfrą zero. Brak formalnego limitu rozmiaru ciągu binarnego.  
   
-```  
+```sql  
 Binary'00ffaabb'  
 X'ABCabc'  
 BINARY    '0f0f0f0F0F0F0F0F0F0F'  
 X'' –- empty binary string  
 ```  
   
-## <a name="guid"></a>Guid  
- `GUID` Literał reprezentuje unikatowy identyfikator globalny. Jest to sekwencja utworzona za pomocą słowa kluczowego `GUID` , po którym następuje cyfra szesnastkowa w formularzu znanym jako format *rejestru* : 8-4-4-4-12 ujęte w apostrofy. W przypadku cyfr szesnastkowych wielkość liter nie jest rozróżniana.  
+## <a name="guid"></a>Ident  
+ Literał `GUID` reprezentuje globalnie unikatowy identyfikator. Jest to sekwencja utworzona przez słowo kluczowe `GUID`, po którym następuje cyfra szesnastkowa w postaci znanej jako format *rejestru* : 8-4-4-4-12 ujęty w apostrofy. W przypadku cyfr szesnastkowych wielkość liter nie jest rozróżniana.  
   
  Między symbolem GUID a ładunkiem literału może być dowolna liczba spacji, ale nie ma żadnych nowych wierszy.  
   
-```  
+```sql  
 Guid'1afc7f5c-ffa0-4741-81cf-f12eAAb822bf'  
 GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'  
 ```  

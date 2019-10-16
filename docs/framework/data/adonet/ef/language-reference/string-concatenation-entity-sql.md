@@ -2,19 +2,19 @@
 title: + (Łączenie ciągów) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 580130fa-6c7c-4f76-a47d-d22c27ccadf6
-ms.openlocfilehash: ef482a1206dea98cfb5a0ba5071acc130ef0cd18
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9c078e193eeecd4d331c5e3c04c66dee2c4a1daa
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249032"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319313"
 ---
 # <a name="-string-concatenation-entity-sql"></a>+ (Łączenie ciągów) (Entity SQL)
 Łączy dwa ciągi.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```sql  
 expression + expression  
 ```  
   
@@ -28,11 +28,11 @@ expression + expression
 ## <a name="example"></a>Przykład  
  Poniższe zapytanie Entity SQL używa operatora + do łączenia dwóch ciągów. Zapytanie jest oparte na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
   
-1. Wykonaj czynności opisane w [temacie How to: Wykonaj zapytanie zwracające wyniki](../how-to-execute-a-query-that-returns-primitivetype-results.md)typu pierwotnego.  
+1. Postępuj zgodnie z procedurą w [instrukcje: wykonywanie zapytania, które zwraca wyniki typu pierwotnego](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
-2. Przekaż następujące zapytanie jako argument do `ExecutePrimitiveTypeQuery` metody:  
+2. Przekaż następujące zapytanie jako argument do metody `ExecutePrimitiveTypeQuery`:  
   
- [!code-csharp[DP EntityServices Concepts 2#CONCAT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#concat)]  
+ [!code-sql[DP EntityServices Concepts#CONCAT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#concat)]  
   
 ## <a name="see-also"></a>Zobacz także
 

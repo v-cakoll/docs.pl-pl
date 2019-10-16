@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4c505c679c46494f7dc2534c2bbe9f50243a7dd
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1c69d4bb370087dddafbfed41cbfb1fef229677c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790067"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318972"
 ---
 # <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Instrukcje: Określanie, które .NET Framework aktualizacje zabezpieczeń i poprawki są zainstalowane
 
@@ -29,7 +29,7 @@ W tym artykule opisano, jak dowiedzieć się, które .NET Framework aktualizacje
 
 Zainstalowane aktualizacje zabezpieczeń i poprawki dla każdej wersji .NET Framework zainstalowanej na komputerze są wymienione w rejestrze systemu Windows. Aby wyświetlić te informacje, można użyć programu edytora rejestru (*regedit. exe*).
 
-1. Otwórz program **regedit. exe**. W systemie Windows 8 i nowszych wersjach kliknij prawym przyciskiem myszy pozycję **Uruchom** ![logo systemu Windows](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo"), a następnie wybierz polecenie **Uruchom**. W polu **Otwórz** wprowadź ciąg **regedit** , a następnie wybierz **przycisk OK**.
+1. Otwórz program **regedit. exe**. W systemie Windows 8 i nowszych wersjach kliknij prawym przyciskiem myszy **Start** ![zrzut ekranu logo klucza systemu Windows.](./media/how-to-determine-which-net-framework-updates-are-installed/windows-keyboard-logo.png "Windowskeyboardlogo"), a następnie wybierz pozycję **Uruchom**. W polu **Otwórz** wprowadź ciąg **regedit** , a następnie wybierz **przycisk OK**.
 
 2. W Edytorze rejestru otwórz następujący podklucz:
 
@@ -37,7 +37,7 @@ Zainstalowane aktualizacje zabezpieczeń i poprawki dla każdej wersji .NET Fram
 
      Zainstalowane aktualizacje są wymienione w obszarze podkluczy, które identyfikują .NET Framework wersji, do których mają zastosowanie. Każda aktualizacja jest identyfikowana przez numer bazy wiedzy (KB).
 
-W Edytorze rejestru wersje .NET Framework i zainstalowane aktualizacje dla każdej wersji są przechowywane w różnych podkluczach. Informacje o wykrywaniu zainstalowanych numerów wersji znajdują się [w temacie How to: Ustal, które wersje .NET Framework są](how-to-determine-which-versions-are-installed.md)zainstalowane.
+W Edytorze rejestru wersje .NET Framework i zainstalowane aktualizacje dla każdej wersji są przechowywane w różnych podkluczach. Informacje o wykrywaniu zainstalowanych numerów wersji znajdują się w temacie [How to: Określanie, które wersje .NET Framework są zainstalowane](how-to-determine-which-versions-are-installed.md).
 
 ## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>Aby znaleźć zainstalowane aktualizacje, badając rejestr w kodzie
 
@@ -108,6 +108,6 @@ KB2600217
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Ustal, które wersje .NET Framework są zainstalowane](how-to-determine-which-versions-are-installed.md)
+- [Instrukcje: Określanie, które wersje .NET Framework są zainstalowane](how-to-determine-which-versions-are-installed.md)
 - [Zainstaluj .NET Framework dla deweloperów](../install/guide-for-developers.md)
 - [Wersje i zależności](versions-and-dependencies.md)

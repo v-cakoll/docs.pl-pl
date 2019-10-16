@@ -2,19 +2,19 @@
 title: . (Dostęp do elementów członkowskich) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4733e3b2-3efa-4b96-b591-ac31350e96ad
-ms.openlocfilehash: 1db6be632da90eaa7a761bb213e395182ae42347
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8e63caba9e9efb91d5c4629b9da0b1feca905ace
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250294"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319650"
 ---
 # <a name="-member-access-entity-sql"></a>. (Dostęp do elementów członkowskich) (Entity SQL)
-Operator kropki (.) jest [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatorem dostępu elementu członkowskiego. Operator dostępu do elementu członkowskiego jest używany do uzyskania wartości właściwości lub pola wystąpienia typu modelu koncepcyjnego koncepcyjny.  
+Operator kropki (.) to operator dostępu do składowej [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Operator dostępu do elementu członkowskiego jest używany do uzyskania wartości właściwości lub pola wystąpienia typu modelu koncepcyjnego koncepcyjny.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```sql  
 expression.identifier  
 ```  
   

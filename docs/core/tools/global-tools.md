@@ -4,12 +4,12 @@ description: Omówienie narzędzi globalnych platformy .NET Core i dostępnych d
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 40a0aabcf523e8dac9a3ad226064bbb3c1b3ce5b
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 116739f80d5157632a8e44a19cbef6ba7971d339
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332022"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318301"
 ---
 # <a name="net-core-global-tools-overview"></a>Globalne narzędzia platformy .NET Core — Omówienie
 
@@ -31,13 +31,12 @@ Jeśli chcesz użyć globalnego narzędzia platformy .NET Core:
 
 ## <a name="find-a-net-core-global-tool"></a>Znajdź narzędzie globalne platformy .NET Core
 
-Obecnie nie istnieje funkcja globalnego wyszukiwania narzędzi w interfejsie wiersza polecenia (CLI) platformy .NET Core.
+Obecnie nie istnieje funkcja globalnego wyszukiwania narzędzi w interfejsie wiersza polecenia (CLI) platformy .NET Core. Poniżej przedstawiono kilka zaleceń dotyczących znajdowania narzędzi:
 
-Narzędzia platformy .NET Core można znaleźć na platformie [NuGet](https://www.nuget.org). Jednak pakiet NuGet nie zezwala jeszcze na wyszukiwanie dla narzędzi globalnych platformy .NET Core.
-
-Zalecenia dotyczące narzędzi można także znaleźć w wpisach w blogu lub w repozytorium GitHub [natemcmaster/dotnet-Tools](https://github.com/natemcmaster/dotnet-tools) .
-
-Możesz również wyświetlić kod źródłowy narzędzi globalnych utworzonych przez zespół ASP.NET w repozytorium GitHub [/DotNetTools](https://github.com/aspnet/DotNetTools/) .
+* Narzędzia platformy .NET Core można znaleźć na platformie [NuGet](https://www.nuget.org). Jednak pakiet NuGet nie zezwala jeszcze na wyszukiwanie dla narzędzi globalnych platformy .NET Core.
+* Zalecenia dotyczące narzędzi można znaleźć w wpisach w blogu lub w repozytorium GitHub [natemcmaster/dotnet-Tools](https://github.com/natemcmaster/dotnet-tools) .
+* Kod źródłowy narzędzi globalnych utworzonych przez zespół ASP.NET można zobaczyć w repozytorium GitHub [/DotNetTools](https://github.com/aspnet/DotNetTools/) .
+* Informacje o narzędziach diagnostycznych można znaleźć w [narzędziach diagnostycznych diagnostyki dotnet programu .NET Core](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools).
 
 ## <a name="check-the-author-and-statistics"></a>Sprawdź autora i statystyki
 
@@ -70,7 +69,7 @@ Tool 'dotnetsay' (version '2.0.0') was successfully installed.
 
 Narzędzia globalne można zainstalować w katalogu domyślnym lub w określonej lokalizacji. Domyślne katalogi są następujące:
 
-| OS          | Path                          |
+| Macintosh          | Ścieżka                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -86,13 +85,13 @@ W takim przypadku interfejs wiersza polecenia platformy .NET Core nie dodaje aut
 
 Po zainstalowaniu narzędzia można wywołać je za pomocą polecenia. Należy pamiętać, że polecenie nie może być takie samo jak nazwa pakietu.
 
-Jeśli polecenie jest `dotnetsay`, należy je wywołać z:
+Jeśli polecenie jest `dotnetsay`, nastąpi wywołanie z:
 
 ```console
 dotnetsay
 ```
 
-Jeśli narzędzie ma być wyświetlane w kontekście `dotnet` monitu, może napisać je w taki sposób, aby była wywoływana `dotnet <command>`w taki sposób, jak:
+Jeśli narzędzie ma być wyświetlane w kontekście monitu `dotnet`, być może zapisały je w taki sposób, że jest on wywoływany jako `dotnet <command>`, na przykład:
 
 ```dotnetcli
 dotnet doc
@@ -109,10 +108,10 @@ dotnet <command> --help
 
 ## <a name="other-cli-commands"></a>Inne polecenia interfejsu CLI
 
-Zestaw .NET Core SDK zawiera inne polecenia, które obsługują narzędzia platformy .NET Core. Użyj dowolnego `dotnet tool` polecenia z jedną z następujących opcji:
+Zestaw .NET Core SDK zawiera inne polecenia, które obsługują narzędzia platformy .NET Core. Użyj dowolnego z poleceń `dotnet tool` z jedną z następujących opcji:
 
-* `--global`lub `-g` określa, że polecenie ma zastosowanie do narzędzi globalnych na poziomie użytkownika.
-* `--tool-path`Określa niestandardową lokalizację dla narzędzi globalnych.
+* `--global` lub `-g` określa, że polecenie ma zastosowanie do narzędzi globalnych na poziomie użytkownika.
+* `--tool-path` określa niestandardową lokalizację dla narzędzi globalnych.
 
 Aby dowiedzieć się, które polecenia są dostępne dla narzędzi globalnych:
 

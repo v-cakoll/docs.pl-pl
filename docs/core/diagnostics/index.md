@@ -3,14 +3,14 @@ title: Omówienie narzędzi diagnostycznych — .NET Core
 description: Przegląd narzędzi i technik dostępnych do diagnozowania aplikacji .NET Core.
 author: sdmaclea
 ms.author: stmaclea
-ms.date: 08/05/2019
+ms.date: 10/14/2019
 ms.topic: overview
-ms.openlocfilehash: f107d15fa5584bb5a4834b5f11f1096bec7eb749
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: c0a45a1bfe866ad42890db576b5dd5098b1dbc3d
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68974127"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318349"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>Jakie narzędzia diagnostyczne są dostępne w środowisku .NET Core?
 
@@ -18,11 +18,28 @@ Oprogramowanie nie zawsze zachowuje się w oczekiwany sposób, ale .NET Core ma 
 
 Ten artykuł ułatwia znalezienie różnych potrzebnych narzędzi.
 
-## <a name="managed-debuggersmanaged-debuggersmd"></a>[Zarządzane debugery](managed-debuggers.md)
-Zarządzane debugery umożliwiają korzystanie z programu. Wstrzymywanie, przyrostowe wykonywanie, badanie i wznawianie zawiera szczegółowe informacje o zachowaniu kodu. Debuger to pierwszy wybór służący do diagnozowania problemów funkcjonalnych, które można łatwo odtworzyć.
+## <a name="managed-debuggers"></a>Debugery zarządzane
 
-## <a name="logging-and-tracinglogging-tracingmd"></a>[Rejestrowanie i śledzenie](logging-tracing.md)
-Rejestrowanie i śledzenie to powiązane techniki. Odnoszą się one do kodu instrumentacji do tworzenia plików dziennika. Pliki rejestrują szczegóły działania programu. Te szczegółowe informacje mogą służyć do diagnozowania najbardziej złożonych problemów. W połączeniu z sygnaturami czasowymi te techniki są również przydatne w badaniach wydajności.
+[Zarządzane debugery](managed-debuggers.md) umożliwiają korzystanie z programu. Wstrzymywanie, przyrostowe wykonywanie, badanie i wznawianie zawiera szczegółowe informacje o zachowaniu kodu. Debuger to pierwszy wybór służący do diagnozowania problemów funkcjonalnych, które można łatwo odtworzyć.
 
-## <a name="unit-testingtestingindexmd"></a>[Testowanie jednostek](../testing/index.md)
-Testowanie jednostkowe to kluczowy składnik ciągłej integracji i wdrażania wysokiej jakości oprogramowania. Testy jednostkowe zostały zaprojektowane w celu zapewnienia wczesnego ostrzegania w przypadku wystąpienia elementu.
+## <a name="logging-and-tracing"></a>Rejestrowanie i śledzenie
+
+[Rejestrowanie i śledzenie](logging-tracing.md) to powiązane techniki. Odnoszą się one do kodu instrumentacji do tworzenia plików dziennika. Pliki rejestrują szczegóły działania programu. Te szczegółowe informacje mogą służyć do diagnozowania najbardziej złożonych problemów. W połączeniu z sygnaturami czasowymi te techniki są również przydatne w badaniach wydajności.
+
+## <a name="unit-testing"></a>Testowanie jednostek
+
+[Testowanie jednostkowe](../testing/index.md) to kluczowy składnik ciągłej integracji i wdrażania wysokiej jakości oprogramowania. Testy jednostkowe zostały zaprojektowane w celu zapewnienia wczesnego ostrzegania w przypadku wystąpienia elementu.
+
+## <a name="net-core-dotnet-diagnostic-global-tools"></a>Narzędzia diagnostyczne programu .NET Core dotnet Diagnostic
+
+### <a name="dotnet-counters"></a>dotnet-liczniki
+
+[dotnet-Counters](dotnet-counters.md) to narzędzie do monitorowania wydajności służące do monitorowania kondycji pierwszego poziomu i badania wydajności. Obserwuje wartości liczników wydajności publikowane za pośrednictwem interfejsu API <xref:System.Diagnostics.Tracing.EventCounter>. Można na przykład szybko monitorować elementy, takie jak użycie procesora CPU, lub częstotliwość zgłaszania wyjątków w aplikacji .NET Core.
+
+### <a name="dotnet-dump"></a>dotnet — zrzut
+
+Narzędzie [dotnet-dump](dotnet-dump.md) to sposób zbierania i analizowania zrzutów podstawowych systemów Windows i Linux bez natywnego debugera.
+
+### <a name="dotnet-trace"></a>Śledzenie dotnet
+
+Program .NET Core zawiera informacje o tym, co jest nazywane `EventPipe`, za pomocą którego są ujawniane dane diagnostyczne. Narzędzie do [śledzenia dotnet](dotnet-trace.md) umożliwia korzystanie z interesujących danych profilowania z poziomu aplikacji, które mogą pomóc w scenariuszach, w których konieczne jest powolne działanie aplikacji.

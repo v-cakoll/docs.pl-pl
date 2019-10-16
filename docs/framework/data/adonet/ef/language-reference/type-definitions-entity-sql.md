@@ -2,15 +2,15 @@
 title: Definicje typów (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 471964266c290d5eba95804dbe1c2bc5225e3f83
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 35f660a66fd706b37187056830af5e06ac586caa
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248950"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319249"
 ---
 # <a name="type-definitions-entity-sql"></a>Definicje typów (Entity SQL)
-Definicja typu jest używana w instrukcji [!INCLUDE[esql](../../../../../../includes/esql-md.md)] deklaracji funkcji wbudowanej.  
+Definicja typu jest używana w instrukcji deklaracji funkcji wbudowanej [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 ## <a name="remarks"></a>Uwagi  
  Instrukcja deklaracji dla wbudowanej funkcji składa się ze słowa kluczowego [Function](function-entity-sql.md) , po którym następuje identyfikator reprezentujący nazwę funkcji (na przykład "myavg"), po której następuje lista definicji parametrów w nawiasie (na przykład "Kolekcja opłat ( Decimal) ").  
@@ -21,7 +21,7 @@ Definicja typu jest używana w instrukcji [!INCLUDE[esql](../../../../../../incl
   
 - Typ identyfikatora (na przykład "Int32" lub "AdventureWorks. Order").  
   
-- Słowo kluczowe `COLLECTION` , po którym następuje inna definicja typu w nawiasie (na przykład "Kolekcja (AdventureWorks. Order)").  
+- Słowo kluczowe `COLLECTION` następuje przez inną definicję typu w nawiasie (na przykład "Kolekcja (AdventureWorks. Order)").  
   
 - WIERSZ słowa kluczowego, po którym następuje lista definicji właściwości w nawiasie (na przykład "wiersz (x AdventureWorks. Order)"). Definicje właściwości mają format, taki jak "`identifier type_definition`, `identifier type_definition`,...".  
   
@@ -31,15 +31,15 @@ Definicja typu jest używana w instrukcji [!INCLUDE[esql](../../../../../../incl
   
  Opcje definicji typu są następujące:  
   
-- `IdentifierName supported_type`lub  
+- `IdentifierName supported_type` lub  
   
-- `IdentifierName`Kolekcja (`type_definition`) lub  
+- Kolekcja `IdentifierName` (`type_definition`) lub  
   
-- `IdentifierName`Wiersz (`property_definition`) lub  
+- `IdentifierName` wiersz (`property_definition`) lub  
   
-- `IdentifierName` REF(`supported_entity_type`)  
+- `IdentifierName` REF (`supported_entity_type`)  
   
- Opcja definicji właściwości to `IdentifierName type_definition`.  
+ Opcja definicji właściwości jest `IdentifierName type_definition`.  
   
  Obsługiwane typy to wszystkie typy w bieżącej przestrzeni nazw. Obejmują one zarówno pierwotne, jak i typy jednostek.  
   
@@ -48,7 +48,7 @@ Definicja typu jest używana w instrukcji [!INCLUDE[esql](../../../../../../incl
 ## <a name="examples"></a>Przykłady  
  Poniżej znajduje się przykład definicji typu prostego.  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function MyRound(p1 EDM.Decimal) AS (  
    Round(p1)  
@@ -58,7 +58,7 @@ MyRound(CAST(1.7 as EDM.Decimal))
   
  Poniżej znajduje się przykład definicji typu kolekcji.  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function MyRound(p1 Collection(EDM.Decimal)) AS (  
    Select Round(p1) from p1  
@@ -68,7 +68,7 @@ MyRound({CAST(1.7 as EDM.Decimal), CAST(2.7 as EDM.Decimal)})
   
  Poniżej znajduje się przykład definicji typu wiersza.  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function MyRound(p1 Row(x EDM.Decimal)) AS (  
    Round(p1.x)  
@@ -78,7 +78,7 @@ select MyRound(row(a as x)) from {CAST(1.7 as EDM.Decimal), CAST(2.7 as EDM.Deci
   
  Poniżej znajduje się przykład definicji typu odwołania.  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function UnReference(p1 Ref(AdventureWorks.Order)) AS (  
    Deref(p1)  

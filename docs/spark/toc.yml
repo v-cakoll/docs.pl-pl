@@ -3,6 +3,8 @@
 - name: Omówienie
   expanded: true
   items:
+    - name: Co to jest platforma Apache Spark?
+      href: what-is-spark.md
     - name: Co to jest platforma .NET dla platformy Apache Spark?
       href: what-is-apache-spark-dotnet.md
 - name: Samouczki
